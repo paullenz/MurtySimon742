@@ -1,0 +1,48 @@
+{
+  "schema_version": 1,
+  "batch": "2026-09-06-upload-02",
+  "status": "COMPLETE_MANIFEST_PAYLOAD_RECOVERY",
+  "archive_filename": "delta14_checkpoint-2.zip",
+  "archive_bytes": 319171345,
+  "archive_sha256": "27d4a632dc8bc2262def45b0a3ea0650adb8fb5d7e831e19839d14a3f8af9dfe",
+  "original_full_checkpoint_container_hash_matches": false,
+  "manifest_sha256": "91eb0390cf8d79022a0dbd9dafdf53182fdf852e3ad9fba2e5908234b04e88ed",
+  "payload_files_matched": 773,
+  "payload_files_missing": 0,
+  "payload_files_mismatched": 0,
+  "previously_missing_files_recovered": 755,
+  "zip_crc_passed": true,
+  "macos_metadata_files_excluded_from_payload": 802,
+  "active_proof_integrity": {
+    "k5": {
+      "passed": 304,
+      "failed": 0
+    },
+    "k6": {
+      "passed": 345,
+      "failed": 0
+    }
+  },
+  "catalogues_freshly_regenerated": 16,
+  "catalogue_records_byte_identical": 62023,
+  "coverage_arithmetic_audit": "PASS_WITH_ARCHIVED_FUNCTION_BODIES_AND_EXPLICIT_DEPENDENCY_ADAPTER",
+  "arithmetic_rejections_recomputed": 233187,
+  "screening_calls_accounted_for": 57569,
+  "screening_unsat_calls_not_certified_here": 56920,
+  "full_stage_case_proof_and_historical_replay_manifest_links": "649_OF_649_MATCH",
+  "cpp_checker_regression_cases_passed": 4,
+  "intake_checker_regression_cases_passed": 9,
+  "python_files_syntax_checked": 23,
+  "fresh_historical_proof_replays": 0,
+  "fresh_cnf_hash_rebuilds": 0,
+  "replay_blocker": "PySAT not installed; dependency installation failed at DNS/network resolution",
+  "nested_k7_tools_original_zip_sha256": "62812bc3edc640befd095f89b63c983960f36204fae3b648308401e9c66e2f25",
+  "nested_k7_tools_original_zip_matches_prior_repository_pin": true,
+  "exact_source_payloads_published_to_github": 8,
+  "source_publication_commit": "add33739ba927c27b4b1c947b028b13ac77a7be3",
+  "full_binary_archive_published_to_github": false,
+  "whole_branch_certificate_complete": false,
+  "theorem_status_changed": false,
+  "delta15_v4_recovered": false,
+  "latest_connected_k2_corpus_recovered": false
+}
