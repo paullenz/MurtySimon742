@@ -1,0 +1,35 @@
+{
+  "schema_version": 1,
+  "project": "Erdos Problem 742, n=25",
+  "as_of": "2026-09-06",
+  "status_definitions": {
+    "PUBLISHED": "external theorem used as an input",
+    "PROJECT_CERTIFIED": "project hand proof rederived from audited rules, or exact finite argument with complete independent cross-check/certificates",
+    "REPRODUCED": "fresh complete reconstruction has no survivors but certificate/independence requirement remains",
+    "REPORTED_ONLY": "historical/chat claim lacking adequate retained evidence",
+    "OPEN": "not eliminated at governing evidence level",
+    "INADMISSIBLE": "excluded by elementary parameter bounds before the branch computation"
+  },
+  "branches": [
+    {"id":"D15","delta":15,"k":"all","r":"all","status":"PROJECT_CERTIFIED","theorem_dependency_allowed":true,"evidence":["evidence/reports/erdos_742_n25_audited_reductions_v5_2026-09-06.pdf"]},
+    {"id":"D14-K8","delta":14,"k":8,"r":"1..2","status":"PROJECT_CERTIFIED","theorem_dependency_allowed":true,"evidence":["evidence/reports/erdos_742_n25_audited_reductions_v5_2026-09-06.pdf"]},
+    {"id":"D14-K7","delta":14,"k":7,"r":"2..7","status":"PROJECT_CERTIFIED","theorem_dependency_allowed":true,"evidence":["evidence/archives/delta14_code_and_results_2026-09-06.zip"]},
+    {"id":"D14-K6","delta":14,"k":6,"r":"3..12","status":"REPRODUCED","theorem_dependency_allowed":false,"evidence":["evidence/archives/delta14_code_and_results_2026-09-06.zip","external/delta14_full_checkpoint_2026-09-06.zip"]},
+    {"id":"D14-K5-R9-12-17","delta":14,"k":5,"r":"9,12..17","status":"REPRODUCED","theorem_dependency_allowed":false,"evidence":["evidence/archives/delta14_code_and_results_2026-09-06.zip","external/delta14_full_checkpoint_2026-09-06.zip"]},
+    {"id":"D14-K5-R4-8","delta":14,"k":5,"r":"4..8","status":"REPORTED_ONLY","theorem_dependency_allowed":false,"evidence":[]},
+    {"id":"D14-K5-R10-11","delta":14,"k":5,"r":"10..11","status":"OPEN","theorem_dependency_allowed":false,"evidence":[]},
+    {"id":"D14-K4-R20-22","delta":14,"k":4,"r":"20..22","status":"PROJECT_CERTIFIED","theorem_dependency_allowed":true,"evidence":["evidence/hand_proofs/DELTA14_K4_DENSE_PROOF.md","evidence/archives/delta14_k4_dense_code_and_results_2026-09-06.zip"]},
+    {"id":"D14-K4-R5-19","delta":14,"k":4,"r":"5..19","status":"OPEN","theorem_dependency_allowed":false,"evidence":[]},
+    {"id":"D14-K3","delta":14,"k":3,"r":"6..27","status":"OPEN","theorem_dependency_allowed":false,"evidence":[]},
+    {"id":"D14-K2-8+2","delta":14,"k":2,"profile":"8+2","r":"admissible","status":"PROJECT_CERTIFIED","theorem_dependency_allowed":true,"evidence":["evidence/archives/delta14_k2_audit_capsule_2026-09-06.zip"]},
+    {"id":"D14-K2-8+1+1","delta":14,"k":2,"profile":"8+1+1","r":"admissible","status":"PROJECT_CERTIFIED","theorem_dependency_allowed":true,"evidence":["evidence/archives/delta14_k2_audit_capsule_2026-09-06.zip"]},
+    {"id":"D14-K2-CONN-7-16","delta":14,"k":2,"profile":"connected","r":"7..16","status":"PROJECT_CERTIFIED","theorem_dependency_allowed":true,"evidence":["evidence/archives/delta14_k2_audit_capsule_2026-09-06.zip"]},
+    {"id":"D14-K2-CONN-17-26","delta":14,"k":2,"profile":"connected","r":"17..26","status":"REPRODUCED","theorem_dependency_allowed":false,"evidence":["evidence/archives/delta14_k2_audit_capsule_2026-09-06.zip"]},
+    {"id":"D14-K2-CONN-27-32","delta":14,"k":2,"profile":"connected","r":"27..32","status":"PROJECT_CERTIFIED","theorem_dependency_allowed":true,"evidence":["evidence/archives/delta14_k2_audit_capsule_2026-09-06.zip"]},
+    {"id":"D14-K2-9+1-R7","delta":14,"k":2,"profile":"9+1","r":"7","status":"PROJECT_CERTIFIED","theorem_dependency_allowed":true,"evidence":["evidence/archives/delta14_k2_audit_capsule_2026-09-06.zip"]},
+    {"id":"D14-K2-9+1-R8-28","delta":14,"k":2,"profile":"9+1","r":"8..28","status":"OPEN","theorem_dependency_allowed":false,"evidence":["evidence/archives/delta14_k2_audit_capsule_2026-09-06.zip"]},
+    {"id":"D14-K2-9+1-R29-32","delta":14,"k":2,"profile":"9+1","r":"29..32","status":"INADMISSIBLE","theorem_dependency_allowed":true,"evidence":["evidence/archives/delta14_k2_audit_capsule_2026-09-06.zip"]},
+    {"id":"D14-K1","delta":14,"k":1,"r":"8..37","status":"PROJECT_CERTIFIED","theorem_dependency_allowed":true,"evidence":["evidence/hand_proofs/delta14_k1_hand_proof_2026-09-06.md"]},
+    {"id":"D14-K0","delta":14,"k":0,"r":"9..42","status":"PROJECT_CERTIFIED","theorem_dependency_allowed":true,"evidence":["evidence/hand_proofs/delta14_k0_hand_proof_2026-09-06.md"]}
+  ]
+}
