@@ -1,24 +1,29 @@
-# Erdős Problem #742, n=25 — reproducibility release v1
+# Erdős Problem #742, n=25 — reproducibility scaffold v1
 
-**Release date:** 6 September 2026  
-**Scope:** canonical audit/reproduction scaffold for the current n=25 project, with Delta=14 evidence incorporated through the k=2 audit capsule.
+**Original release date:** 6 September 2026  
+**Readiness review:** 6 September 2026  
+**Status:** INCOMPLETE CHECKOUT — not yet an executable external-audit release.
 
-This is **not** a claim that the n=25 case is solved. It is a trust-boundary release: the repository makes it mechanically difficult to confuse project-certified proofs with reproducible but uncertified solver exclusions.
+This is **not** a claim that the n=25 case is solved. The current repository records mathematical status but still lacks much of the source evidence and several modules/manifests required by its advertised entry point. See [the canonical review](../project/CANONICAL_N25_REVIEW_2026-09-06.md) and [task backlog](../project/CANONICAL_TASKS.json).
 
-## One command
+## Intended command, after restoration
 
 ```bash
 bash scripts/reproduce_all.sh --fast
 ```
 
-For the large proof checkpoint, place the pinned full archive under `external/` and use `--full`. See `THIRD_PARTY_AUDIT.md`.
+At the reviewed baseline this command fails because `scripts/verify_artifacts.py` is missing; other required modules are also absent. Do not report reproduction as successful merely because the entry-point shell script exists.
+
+The large checkpoint is expected under `external/`. The `--full` mode explicitly omits full proof replay, which requires a separate documented and tested command. `THIRD_PARTY_AUDIT.md` describes the intended audit protocol, not a claim that all its dependencies are currently present.
 
 ## Governing files
 
-- `ledger/theorem_ledger.json` — canonical branch status.
-- `ledger/paper_import_manifest.json` — branches currently permitted as theorem dependencies.
-- `ledger/proof_obligations.json` — every known promotion/open obligation.
-- `ledger/artifacts.lock.json` — hashes for bundled and external evidence.
-- `proof_migration/` — plan to replace solver trust with replayable LRAT.
+- `ledger/theorem_ledger.json` — recorded mathematical branch status.
+- `ledger/proof_obligations.json` — original six-item obligation list, to be expanded against the canonical backlog.
+- `ledger/paper_import_manifest.json` — expected but missing at baseline.
+- `ledger/artifacts.lock.json` — expected but missing at baseline.
+- `proof_migration/` — expected source/plan area, missing at baseline.
 
-The strongest rule is simple: **an UNSAT exit code is not a proof certificate.**
+A completed external-audit package must distinguish mathematical status, internal certificate/replay status, actual artifact availability and independent external review.
+
+**An UNSAT exit code is not a proof certificate.**
