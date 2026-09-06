@@ -1,0 +1,24 @@
+{
+  "archive": "N25_Reviewer_Package_v1_2026-09-06.zip",
+  "assembly": "Concatenate part1 followed by part2 byte for byte.",
+  "bytes": 13002402,
+  "manifest_sha256": "9434d7e24feee2e356befa32cae583c493a8899f1750dec927fcbbfea4a2d42a",
+  "mathematical_status": "CANDIDATE_EXTERNAL_REVIEW_OPEN",
+  "parts": [
+    {
+      "bytes": 6000000,
+      "git_blob_sha1": "ddccc66042b5faebe86d88d12d0dcbf4653ce329",
+      "offset": 0,
+      "path": "N25_Reviewer_Package_v1_2026-09-06.zip.part1",
+      "sha256": "7a36995d700639fc4ee6a1f8d37d55618f64f5374a2eaf6a10bd682ad47d0230"
+    },
+    {
+      "bytes": 7002402,
+      "git_blob_sha1": "03078c7b42babe6d4055fb3f81c20b2b725b29a0",
+      "offset": 6000000,
+      "path": "N25_Reviewer_Package_v1_2026-09-06.zip.part2",
+      "sha256": "1f9f84f42ddd21f2da03b1c8cb26cac103187291c5cdfcc682097a9054ed0db4"
+    }
+  ],
+  "sha256": "ff5a88f4202fb1e201f52e7e6ec0b50f88248cd43493eee78f120a3c1de15c3d"
+}

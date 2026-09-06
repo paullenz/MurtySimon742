@@ -1,0 +1,11 @@
+{
+  "editorial_changes": [
+    "PDF typography and inline mathematical notation",
+    "Explicit Section 3 witness-set names D and S",
+    "Reviewer abstract, provenance, references and result map"
+  ],
+  "external_mathematical_review": false,
+  "frozen_proof_sha256": "9f4daa246f794ab9e2de29fb968911ecdbb7b8698982dc6af234db6ba18b2aa9",
+  "new_mathematical_claims": false,
+  "source_commit": "20f059a03b2f5e2b34b3e0fa5d2373ae65b14300"
+}

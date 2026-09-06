@@ -1,0 +1,14 @@
+{
+  "candidate_files": 55,
+  "external_mathematical_review": false,
+  "frozen_candidate_sha256": "0588c85900762184040dfb313c89d36349f2a8183db5cbc91a1ee50915cb4e95",
+  "independent_machine_reproduction": false,
+  "new_scopes": [
+    "d15_157",
+    "d15_156"
+  ],
+  "original_delta14_replayed": true,
+  "original_review_files": 30,
+  "status": "PARTIAL_NUMERICAL_ROUTE_REPRODUCED",
+  "top_level_files": 14
+}

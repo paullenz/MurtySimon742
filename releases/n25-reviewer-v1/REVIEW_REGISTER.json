@@ -1,0 +1,14 @@
+{
+  "version": "n25-reviewer-v1",
+  "date": "2026-09-06",
+  "candidate_commit": "20f059a03b2f5e2b34b3e0fa5d2373ae65b14300",
+  "mathematical_review_status": "OPEN",
+  "independent_computational_review_status": "OPEN",
+  "arithmetic_evidence_status": "REPRODUCED",
+  "novelty_confirmed": false,
+  "formal_verification": false,
+  "theorem_ledger_promoted": false,
+  "invitations_sent": [],
+  "external_reports": [],
+  "open_mathematical_obligations": ["M1", "M2", "M3", "M4", "M5", "M6", "M7", "M8"]
+}

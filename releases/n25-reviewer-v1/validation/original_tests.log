@@ -1,0 +1,17 @@
+test_column_enumeration (__main__.VerificationTests.test_column_enumeration) ... ok
+test_final_neighbourhood_contradiction (__main__.VerificationTests.test_final_neighbourhood_contradiction) ... ok
+test_integrity_accepts_exact_bytes (__main__.VerificationTests.test_integrity_accepts_exact_bytes) ... ok
+test_integrity_rejects_altered_bytes (__main__.VerificationTests.test_integrity_rejects_altered_bytes) ... ok
+test_integrity_rejects_missing_file (__main__.VerificationTests.test_integrity_rejects_missing_file) ... ok
+test_integrity_rejects_unsafe_and_duplicate_paths (__main__.VerificationTests.test_integrity_rejects_unsafe_and_duplicate_paths) ... ok
+test_matching_against_bruteforce (__main__.VerificationTests.test_matching_against_bruteforce) ... ok
+test_multiset_domains_against_brute_force (__main__.VerificationTests.test_multiset_domains_against_brute_force) ... ok
+test_positive_residual_shift (__main__.VerificationTests.test_positive_residual_shift) ... ok
+test_saved_complete_results (__main__.VerificationTests.test_saved_complete_results) ... ok
+test_sorted_matching_equivalence (__main__.VerificationTests.test_sorted_matching_equivalence) ... ok
+test_source_caps_agree_on_final_columns (__main__.VerificationTests.test_source_caps_agree_on_final_columns) ... ok
+
+----------------------------------------------------------------------
+Ran 12 tests in 0.047s
+
+OK

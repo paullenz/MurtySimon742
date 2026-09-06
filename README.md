@@ -1,49 +1,56 @@
-# Murty–Simon n=25 / Erdős Problem #742
+# Murty–Simon at n=25 / Erdős Problem #742
 
-Private working repository for the n=25 Murty–Simon project.
+**Current status: complete candidate proof, awaiting independent mathematical review.**
 
-## Canonical coordination and review
+The proposed result is that every simple diameter-2 edge-critical graph on 25 vertices has at most **156 edges**, with equality exactly for **K₁₂,₁₃**. The argument and finite calculations have been examined internally and reproduced. Independent mathematical review, independent reproduction by another researcher and formal verification remain outstanding. This repository does not announce the case as settled.
 
-The user designated the 6 September 2026 chat opened with “make this now the canonical chat for N=25” as the canonical coordination chat. GitHub remains the durable record.
+## Start here
 
-- [Canonical review and consolidated branch status](project/CANONICAL_N25_REVIEW_2026-09-06.md)
-- [Canonical 40-task backlog](project/CANONICAL_TASKS.json)
+1. Read the [reviewer manuscript](releases/n25-reviewer-v1/N25_Reviewer_Manuscript_v1.pdf).
+2. Follow the [review guide and complete replay instructions](releases/n25-reviewer-v1/REVIEW_GUIDE.md).
+3. Inspect the [frozen candidate proof](project/reviews/n25/2026-09-06-full-chain-candidate-v1/PROOF.md) and [exact result tables](project/reviews/n25/2026-09-06-full-chain-candidate-v1/RESULTS.md).
+4. Read the [literature and attribution check](releases/n25-reviewer-v1/LITERATURE_AND_ATTRIBUTION.md) and [relationship to earlier project work](project/reviews/n25/2026-09-06-full-chain-candidate-v1/RECONCILIATION.md).
+
+## Reviewer edition 1
+
+The [versioned reviewer package](releases/n25-reviewer-v1/README.md) includes a PDF manuscript, editable TeX and Markdown, the unchanged complete evidence archive, checksums, a wrapper covering the entire numerical route, and forms for reporting review findings. Package assembly instructions are provided alongside the archive parts. A GitHub Release page is a separate distribution step; its prepared instructions and text are in [RELEASE_UPLOAD_GUIDE.md](releases/n25-reviewer-v1/RELEASE_UPLOAD_GUIDE.md).
+
+From the extracted reviewer package:
+
+```sh
+python3 -I -B review_package.py --verify-only
+python3 -I -B review_package.py --replay --output /absolute/path/to/new-n25-replay
+```
+
+The first command checks manifests and all final equality certificates. The second also reruns the original Δ14/157-edge checks and all new numerical scopes. Python 3.10 or later and its standard library suffice. The largest replay needs several gigabytes of temporary memory and disk space. The expanded column JSON files are losslessly reconstructable from the compressed ledgers.
+
+## What the candidate contains
+
+- Published reductions, including Fan's strict bound reducing a counterexample to exactly 157 edges.
+- A witness-count argument for maximum degree 13, including the equality case.
+- Residual-edge arguments for maximum degrees 14, 15 and 16, plus the published high-degree bound.
+- Explicit finite checks for both 157-edge exclusion and 156-edge equality. All **1,959** final numerical equality columns have checked rejection certificates.
+
+The complete general Murty–Simon conjecture is outside this project's scope. The literature check did not locate a published full order-25 resolution, but it does not establish novelty or priority.
+
+## Attribution and review status
+
+Paul Lenz directed the project. ChatGPT/Codex supplied substantial mathematical development, code and internal checking. Both arithmetic implementations were produced with the same assistant; agreement between them is a software cross-check, not independent mathematical authorship or expert endorsement. Published inputs are cited in the manuscript.
+
+The [external review register](releases/n25-reviewer-v1/REVIEW_REGISTER.json) currently records both mathematical and independent computational review as **OPEN**. The [review-request draft](releases/n25-reviewer-v1/REVIEW_REQUEST_DRAFT.md) has not been sent. No prospective reviewer is represented as having agreed to participate.
+
+## Historical work and governed status
+
+The earlier Audit v5, parked Delta=15 proof and legacy SAT/reproduction work remain preserved. The new candidate supplies replacement arguments where documented; it does not retrospectively certify unresolved historical steps. The [earlier README](project/reviews/history/README_before_reviewer_v1.md) is retained verbatim.
+
+- [Project standing orders](project/N25_PROJECT_STANDING_ORDERS.md)
+- [Canonical review and dated updates](project/CANONICAL_N25_REVIEW_2026-09-06.md)
+- [Governed theorem ledger](repro-v1/ledger/theorem_ledger.json)
+- [Historical task backlog](project/CANONICAL_TASKS.json)
 - [Evidence-recovery manifest](project/EVIDENCE_RECOVERY_MANIFEST.json)
-- [Inspected baseline inventory](project/BASELINE_REPOSITORY_INVENTORY_2026-09-06.json)
 
-## Governing mathematical status
+The governed theorem ledger is unchanged by this reviewer edition. Under the standing orders, promotion requires an explicit audited argument or replayable proof evidence; packaging alone does not change mathematical status. The legacy `repro-v1/scripts/reproduce_all.sh` is not the entry point for this candidate's numerical replay.
 
-The existing project mathematical baseline is **Audit v5 (6 September 2026)** plus the preserved Delta=16 and Delta=17 notes. It does **not** claim that n=25 is solved.
+## Preservation
 
-The current theorem ledger records:
-
-- any order-25 counterexample is reduced to `e(G)=157` and `Delta(G)=14`;
-- `Delta=17`, `Delta=16` and `Delta=15` are PROJECT_CERTIFIED impossible;
-- in `Delta=14`, `k=8`, `k=7`, `k=1`, and `k=0` are PROJECT_CERTIFIED impossible;
-- `Delta=14, k=4, r=20,21,22` is PROJECT_CERTIFIED impossible;
-- the remaining branch-level statuses, including partial k=2 and k=5 results and reproduced k=6, are exactly those in `repro-v1/ledger/theorem_ledger.json`.
-
-Later reported connected-k=2 certificate completion is recorded in the canonical review as pending evidence reconciliation. It has not been silently promoted in the theorem ledger.
-
-## External-audit readiness: NOT YET COMPLETE
-
-The baseline review found 23 named, hash-pinned original artifacts absent from the repository, as well as unlocated Delta=15/v4 and later k=2 certification packages. In particular, the Delta=15 status currently refers to an Audit-v5 PDF whose bytes are not yet present. The mathematical status is retained, but the repository alone does not yet substantiate every claimed closure.
-
-The current `repro-v1/scripts/reproduce_all.sh` cannot run from a clean checkout: required modules and manifests are missing. Its `--full` mode also deliberately excludes full proof replay. Follow the canonical backlog; do not describe this checkout as a completed external-audit release.
-
-## Repository layout
-
-- `project/` — standing orders, canonical review, tasks and recovery inventories.
-- `repro-v1/` — reproducibility scaffold and currently preserved hand proofs; evidence restoration is outstanding.
-- `releases/` — expected release metadata and hashes; no complete binary release was present at the reviewed baseline.
-- `paper/` — planned location for the current manuscript and rendered documents; not yet populated at the reviewed baseline.
-
-The canonical machine-readable **mathematical status** is `repro-v1/ledger/theorem_ledger.json`; the canonical **work backlog** is `project/CANONICAL_TASKS.json`.
-
-## Preservation rule
-
-A chat transcript must never be the sole record of material work. Code, inputs, outputs, certificates, hashes, commands, provenance, corrections, and paper dependencies must be preserved before a result is promoted.
-
-Keep mathematical status, certificate completion, available evidence bytes and independent external review distinct. A hash or an LFS configuration is not an uploaded proof package.
-
-**An UNSAT exit code is not a proof certificate.**
+Keep code, inputs, exact outputs, provenance, corrections and review reports. Preserve each reviewer version and make later corrections through a new dated version. Computation, mathematical justification, evidence availability and external review are recorded separately.

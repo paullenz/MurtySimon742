@@ -1,0 +1,311 @@
+---
+title: "A candidate proof of the Murty–Simon conjecture at order 25"
+subtitle: "Reviewer edition 1 — independent mathematical review pending"
+author: "Prepared for Paul Lenz's N=25 research project"
+date: "6 September 2026"
+documentclass: article
+fontsize: 11pt
+geometry: [a4paper, margin=25mm]
+mainfont: "Latin Modern Roman"
+sansfont: "DejaVu Sans"
+monofont: "DejaVu Sans Mono"
+mathfont: "Latin Modern Math"
+colorlinks: true
+linkcolor: "black"
+urlcolor: "blue"
+header-includes:
+  - \usepackage{fancyhdr}
+  - \pagestyle{fancy}
+  - \fancyhf{}
+  - \fancyhead[L]{\small N=25 Murty--Simon candidate}
+  - \fancyhead[R]{\small Reviewer edition 1}
+  - \fancyfoot[C]{\thepage}
+  - \setlength{\headheight}{14pt}
+  - \setlength{\emergencystretch}{3em}
+---
+
+\begin{abstract}
+We present a candidate argument that every simple diameter-2 edge-critical graph on 25 vertices has at most 156 edges, with equality exactly for the complete bipartite graph $K_{12,13}$. Published reductions are combined with residual-edge injections and exhaustive integer necessary-condition checks. The computations have been reproduced using separately implemented programs, and explicit certificates exclude every final numerical equality case. Independent mathematical review remains pending. The argument and code were developed with substantial ChatGPT/Codex assistance; both arithmetic implementations were produced by the same assistant and are not checks by independent researchers.
+\end{abstract}
+
+**Provenance.** This is an editorial rendering of the frozen candidate at [commit 20f059a](https://github.com/paullenz/MurtySimon25/commit/20f059a03b2f5e2b34b3e0fa5d2373ae65b14300). Equation and section numbers are retained. Typesetting and the explicit names of the Section 3 witness sets are editorial clarifications. The original proof, source, evidence and historical audits remain unchanged in the accompanying archive. No theorem-ledger promotion, external endorsement or novelty claim is made.
+
+## 1. Statement and scope
+
+The target statement is: every simple diameter-2 edge-critical graph G on 25 vertices satisfies
+
+$$
+e(G)\le156,
+$$
+
+with equality exactly for the complete bipartite graph \ensuremath{K_{12,13}}. Diameter-2 edge-critical means that G has diameter two and deleting any edge increases its diameter, with disconnected pairs assigned infinite distance.
+
+Both the upper-bound and equality chains are complete as candidate arguments. The equality chain uses the new subset-capacity certificates described below; all required cases have been eliminated and cross-checked, with exact numerical records in the accompanying `RESULTS.md`. No mathematical conclusion is inferred merely from a program terminating successfully.
+
+## 2. Published reductions and their exact numerical effect
+
+Fan's bound, valid for n at least 25, is
+
+$$
+e(G)<\frac{n^2}{4}+\frac{n^2-16.2n+56}{320}.
+$$
+
+At n=25 its right side is 157.1125 = 12569/80. Thus integrality gives e(G) at most 157: a counterexample to the upper bound has **exactly 157 edges**. This is a direct numerical reduction and requires no deletion of edges while preserving criticality. The formula appears in the primary publisher abstract of G. Fan, *On diameter 2-critical graphs*, Discrete Mathematics 67 (1987), 235–240, [DOI 10.1016/0012-365X(87)90174-9](https://www.sciencedirect.com/science/article/pii/0012365X87901749), and is explicitly stated on page 2 of [Tao Wang, *On Murty-Simon Conjecture*](https://arxiv.org/pdf/1205.4397).
+
+A bipartite graph of diameter two must be complete bipartite: a missing cross-part edge would have odd distance at least three. Therefore such graphs have at most 12 times 13 = 156 edges, with equality only for \ensuremath{K_{12,13}}.
+
+Henceforth, when considering 156 or 157 edges, assume G is non-bipartite. By Theorem 4 of [Dailly, Foucaud and Hansberg, *Strengthening the Murty–Simon conjecture on diameter 2 critical graphs*](https://arxiv.org/pdf/1812.08420), a non-bipartite diameter-2-critical graph with a dominating edge has at most floor(\ensuremath{n^2}/4)-2 edges, except for their six-vertex graph \ensuremath{H_5}. At order 25 the exception is irrelevant and the bound is 154. Consequently our G has **no dominating edge**.
+
+Let H be the complement of G. A universal vertex in a diameter-2-critical graph forces the graph to be a star, since any edge between other vertices could be deleted while retaining diameter at most two. This sparse case is excluded. The complement correspondence now gives that H is 3-total-domination-edge-critical, or 4-total-domination-supercritical. The latter case is the disjoint union of two nontrivial cliques, already covered by complete bipartite G. We use the former case. Theorem 3.6(a) of [Haynes, Henning, van der Merwe and Yeo, *A maximum degree theorem for diameter-2-critical graphs*](https://d-nb.info/1372516379/34) states that minimum degree \ensuremath{\delta (H)} at most 0.3n implies e(H)>ceil(n(n-2)/4). At n=25, \ensuremath{\delta (H)} at most 7 implies e(H) at least 145 and e(G) at most 155. Thus maximum degree \ensuremath{\Delta (G)} at least 17 is excluded. The complement correspondence and exceptional characterization are that paper's Theorems 3.1 and 3.2. For the odd-order complement-diameter-three case mentioned in its proof, Wang's Theorem 2.1 explicitly supplies the strict bound for odd as well as even orders.
+
+Finally, \ensuremath{\Delta (G)} at most 12 implies 2e(G) at most 25 times 12 = 300. For either dense edge count, it remains to consider **\ensuremath{\Delta (G)}=13,14,15,16**.
+
+## 3. A direct witness proof for \ensuremath{\Delta (G)}=13, including equality
+
+Call an edge a direct witness if its endpoints have no common neighbour; let D denote the set of such edges. Call a nonedge a two-step witness if its endpoints have exactly one common neighbour; let S denote the set of such nonedges. Notation introduced in this section is local to this section. Every critical edge is either a direct witness itself or belongs to the unique length-two path of a two-step witness. Indeed, choose a vertex pair whose distance becomes greater than two on deleting the edge. If that pair was adjacent, it is the deleted edge and has no common neighbour. Otherwise every length-two path between the pair used the deleted edge, and there is exactly one such path. A two-step witness can account for at most two critical edges.
+
+Each witness pair uv satisfies \ensuremath{d_G(u)}+\ensuremath{d_G(v)} at most 24. For a two-step witness, its neighbourhood union lies in the other 23 vertices and their intersection has size one. For a direct witness, the neighbourhoods are disjoint; a union of all 25 vertices would make uv a dominating edge, already excluded.
+
+Write \ensuremath{\varepsilon _u}=13-\ensuremath{d_G(u)}. Set L={u:\ensuremath{\varepsilon _u} at least 2}, O={u:\ensuremath{\varepsilon _u}=1}, and R=V(G) minus L; let h=|L| and o=|O|. A witness pair lying wholly in R must have both endpoints in O, because \ensuremath{\varepsilon _u}+\ensuremath{\varepsilon _v} must be at least two. If T=325-2e(G), then
+
+$$
+2h+o\le T.
+$$
+
+Let a=e(G[L]), b=\ensuremath{e_G(L,R)}, and c=e(G[R]). Any edge counted by c can have one of only three sorts of witnesses: a direct witness within O; a two-step witness within O, whose path accounts for at most two R-edges; or a two-step witness with one endpoint in each of L and R, whose path accounts for at most one R-edge. A pair within L cannot witness an R-edge. There are at most h(25-h)-b cross-part nonedges. Hence
+
+$$
+c\le 2\binom{o}{2}+h(25-h)-b,
+\qquad
+e(G)\le \binom h2+h(25-h)+2\binom o2. \tag{3.1}
+$$
+
+The estimates deliberately overcount direct witnesses in O and need no injective assignment between different witness classes.
+
+For 157 edges T=11. For 156 edges T=13. The right side of (3.1) increases with o, so substitute o=T-2h:
+
+| h | Upper bound when e=157 | Upper bound when e=156 |
+|---:|---:|---:|
+| 0 | 110 | 156 |
+| 1 | 96 | 134 |
+| 2 | 89 | 119 |
+| 3 | 89 | 111 |
+| 4 | 96 | 110 |
+| 5 | 110 | 116 |
+| 6 | impossible | 129 |
+
+This excludes 157 edges. At 156 edges it forces h=0, o=13. Every witness lies within the 13-vertex set O, so the sharper direct count gives
+
+$$
+156=e(G)\le |D[O]|+2|S[O]|
+\le e(G[O])+2\bigl(\binom{13}{2}-e(G[O])\bigr)
+=156-e(G[O]).
+$$
+
+Thus O is independent. Each of its vertices has degree 12 and must be adjacent to all the other 12 vertices. These cross edges already number 156, leaving no edges within the other part. Therefore G=\ensuremath{K_{12,13}}. Under our non-bipartite assumption this is a contradiction, completing this degree case.
+
+## 4. Complement notation and the general residual ledger
+
+For \ensuremath{\Delta (G)} in {14,15,16}, put a=\ensuremath{\delta (H)}=24-\ensuremath{\Delta (G)}, b=\ensuremath{\Delta (G)}, M=e(H)=300-e(G). Choose v of H-degree a, put A=\ensuremath{N_H(v)}, B=V(H) minus \ensuremath{N_H}[v], C=H[A], and F the complement of C on A. Thus |A|=a, |B|=b. Let k=\ensuremath{\delta (C)}, and write \ensuremath{d_i}=\ensuremath{d_F(i)}.
+
+For a nonedge uw of H whose endpoints miss some third vertex, 3-total-domination-edge-criticality gives an existing edge uz, after possibly interchanging u,w, whose endpoints dominate every vertex except w. Write uz\ensuremath{\to}w. Its exception w is unique, and both uw and zw are absent. To derive this, choose an adjacent total dominating pair after adding uw. It must use an endpoint of the new edge; it cannot be exactly {u,w}, which misses a third vertex. Its other edge already existed and the only newly dominated vertex is the opposite endpoint of the added edge.
+
+For each missing unordered pair bw in H[B], this observation applies because the pair misses v. Choose one cross-edge bi\ensuremath{\to}w, where i is in A since it must dominate v. Different missing B-pairs select different cross-edges: a cross-edge fixes its B-endpoint and its unique exception. Call these edges selected and all other A–B edges residual. At a fixed B-source, supplements of different selected edges are distinct, since only one edge was selected for each unordered B-pair.
+
+Write r for the number of residual edges, \ensuremath{\rho _b} for their B-degrees, \ensuremath{R_i} for their A-degrees, \ensuremath{q_b} for the selected degree at a B-source, and Q for the total selected edges. Define
+
+$$
+L=M-a-\binom b2,\qquad t=\binom a2-L.
+$$
+
+Selected cross-edges and existing B-edges together number binom(b,2). Consequently
+
+$$
+e(C)+r=L,\quad e(F)=r+t,\quad
+\sum_i d_i=2(r+t),\quad \sum_b\rho _b=\sum_iR_i=r. \tag{4.1}
+$$
+
+Minimum degree a in H gives a\ensuremath{\le}1+\ensuremath{d_C(i)}+\ensuremath{d_B(i)}=a-\ensuremath{d_i}+\ensuremath{d_B(i)}, hence
+
+$$
+d_B(i)\ge d_i,\qquad Q\ge r+2t. \tag{4.2}
+$$
+
+The exact parameters are:
+
+| e(G) | \ensuremath{\Delta (G)} | a | b | L | t |
+|---:|---:|---:|---:|---:|---:|
+| 157 | 14 | 10 | 14 | 42 | 3 |
+| 156 | 14 | 10 | 14 | 43 | 2 |
+| 157 | 15 | 9 | 15 | 29 | 7 |
+| 156 | 15 | 9 | 15 | 30 | 6 |
+| 157 | 16 | 8 | 16 | 15 | 13 |
+| 156 | 16 | 8 | 16 | 16 | 12 |
+
+## 5. All B-vertices are residual-active
+
+This is the dimension-independent form of the frozen Delta=14 dossier's inactive-vertex lemma. Suppose \ensuremath{\rho _b}=0, and write S=\ensuremath{N_A(b)}, T=A minus S. Every bi with i in S is selected. An F-edge from S to T would leave an A-vertex undominated by a selected edge whose unique exception belongs to B. Thus F has no S–T edge.
+
+For i in S, let \ensuremath{w_i} be the supplement of bi. These \ensuremath{w_i} are distinct. For each F-edge ij within S, the selected edge bj must dominate \ensuremath{w_i}, since its exception \ensuremath{w_j} is different. Since b\ensuremath{w_i} is absent, j\ensuremath{w_i} is an edge. It is residual because j and \ensuremath{w_i} both miss the A-vertex i. Similarly i\ensuremath{w_j} is residual. All 2e(F[S]) such edges are distinct, determined by their A-endpoints and distinct supplement labels.
+
+For each F-edge uw within T, the pair misses b, so a quasi-edge uz\ensuremath{\to}w or wz\ensuremath{\to}u exists. Its auxiliary z must dominate b. It cannot be v or b; if in A it would be in S, but every S–T pair is a C-edge, contradicting its failure to dominate the exception in T. Thus z lies in B. The quasi-edge is residual, since its exception belongs to A. Distinct F-edges give distinct cross-edges, their A-endpoint and unique exception identifying the missing F-edge. These e(F[T]) edges have A-endpoints in T and are disjoint from the first family.
+
+Therefore
+
+$$
+r\ge2e(F[S])+e(F[T])=e(F)+e(F[S])\ge r+t.
+$$
+
+All six rows above have t>0, a contradiction. Consequently every B-vertex has \ensuremath{\rho _b}\ensuremath{\ge}1, so **r\ensuremath{\ge}b**. This proof also covers S empty and assumes no diameter bound on H.
+
+## 6. Small and large k, and \ensuremath{\Delta (G)}=16
+
+Since e(C)\ensuremath{\ge}ceil(ak/2), the ledger implies
+
+$$
+b\le r\le L-\lceil ak/2\rceil. \tag{6.1}
+$$
+
+For small k choose x in A with C-degree k, write Y=\ensuremath{N_C(x)}, and X=A minus ({x} union Y). Any missing pair uw inside X misses x. Its quasi-edge auxiliary lies in Y or B: it must dominate x, and v is adjacent to the exception and hence cannot serve as auxiliary. A B auxiliary yields a distinct residual cross-edge with A-endpoint in X.
+
+Let P be the family of these B-auxiliary edges, of size m. Each B-endpoint z used by P forces an edge xz to dominate x. This edge is residual: if selected, it would miss the exceptional X-vertex of the original member of P. The edge xz is outside P. For every unused B-vertex choose an incident residual edge, available by Section 5 and also outside P. Distinct B-endpoints distinguish these b extra edges. Thus
+
+$$
+b\le r-m. \tag{6.2}
+$$
+
+For k=0, all missing pairs in X have B auxiliaries, so
+
+$$
+m=\binom{a-1}{2}-L+r,
+\qquad b\le L-\binom{a-1}{2}. \tag{6.3}
+$$
+
+For k=1 let Y={y} and s=\ensuremath{e_C(y,X)}. There are binom(a-2,2)-L+1+s+r missing X-pairs, and at most s can have auxiliary y: the relevant y–X edges are distinct quasi-edges. Hence
+
+$$
+b\le L-1-\binom{a-2}{2}. \tag{6.4}
+$$
+
+For \ensuremath{\Delta =16} and e=157, Section 5 gives r\ensuremath{\ge}16 while the ledger gives r\ensuremath{\le}15, impossible. For \ensuremath{\Delta =16} and e=156 it forces r=16 and e(C)=0; now k=0 and (6.3) gives 16\ensuremath{\le}16-21=-5, again impossible.
+
+For \ensuremath{\Delta =15,} (6.3) and (6.4) exclude k=0,1 at both edge counts. Equation (6.1) excludes k\ensuremath{\ge}4. Remaining bands are k=2 with r=15,...,20 and k=3 with r=15 at 157 edges; and k=2 with r=15,...,21 and k=3 with r=15,16 at 156 edges.
+
+For \ensuremath{\Delta =14} at 157 edges the same inequalities exclude k=0,1 and k\ensuremath{\ge}6, leaving k=2,...,5 with 14\ensuremath{\le}r\ensuremath{\le}42-5k, exactly the frozen Delta=14 dossier's domain. At 156 edges they exclude k=0 and k\ensuremath{\ge}6, leaving **k=1,...,5 with 14\ensuremath{\le}r\ensuremath{\le}43-5k**. In particular the k=1 equality case must be scanned; the old k=1 contradiction would only give 14\ensuremath{\le}14 and must not be reused.
+
+## 7. Necessary bounds for selected edges
+
+For every selected bi\ensuremath{\to}w,
+
+$$
+d_i\le \rho _b+\rho _w,\qquad d_i\le \rho _b+R_i,
+\qquad d_i\le \rho _b+q_b-1,\qquad q_b+\rho _b\le a. \tag{7.1}
+$$
+
+For the first bound, each F-neighbour u of i must be adjacent to b. If bu is residual, charge it at b. Otherwise bu is selected with a supplement different from w, so it must dominate w; thus uw exists. It is residual since u and w both miss i. Distinct u give distinct charges at b or w.
+
+For the second, again at most \ensuremath{\rho _b} F-neighbours u of i yield residual bu. Every remaining selected bu has a distinct supplement \ensuremath{w_u}, different from w. Selected bi must dominate \ensuremath{w_u}, forcing i\ensuremath{w_u}. This edge is residual because i and \ensuremath{w_u} miss u. The distinct supplements give at least \ensuremath{d_i}-\ensuremath{\rho _b} residual edges at i.
+
+The third bound follows because b is adjacent to i and all its F-neighbours, and \ensuremath{d_A(b)}=\ensuremath{\rho _b}+\ensuremath{q_b}. The fourth is the size of A.
+
+Let \ensuremath{S_j}={i:\ensuremath{d_i}\ensuremath{\ge}j}. From \ensuremath{d_B(i)}\ensuremath{\ge}\ensuremath{d_i}, at least
+
+$$
+\ell_j=\sum_{i\in S_j}d_i-\sum_b\min(\rho _b,|S_j|)
+$$
+
+selected incidences have labels in \ensuremath{S_j}. Each uses a distinct unordered B-pair with residual sum at least j. Therefore
+
+$$
+\ell_j\le |\{\{b,w\}:b\ne w,\ \rho _b+\rho _w\ge j\}|. \tag{7.2}
+$$
+
+For \ensuremath{\Delta =15} this bound alone eliminates every remaining numerical state: 108 states at 157 edges and 211 at 156 edges. Both separately implemented enumerators give the same complete state sets and per-band counts. No old Delta=15 exceptional-column hand argument is needed for this new route.
+
+## 8. Exhaustive finite relaxation for \ensuremath{\Delta (G)}=14
+
+Enumerate every nondecreasing A-degree list d of length a, with entries between zero and D=a-1-k, maximum exactly D, and sum 2(r+t). Independently enumerate every nondecreasing positive B-residual list \ensuremath{\rho} of length b, entries at most a and sum r. Sorting is justified by independent relabelling of A and B. Nongraphical degree lists are retained; this is a necessary-condition relaxation, not a graph catalogue.
+
+First apply (7.2). Next, for each B-source b and trial q from 1 through a-\ensuremath{\rho _b}, allow labels satisfying \ensuremath{d_i}\ensuremath{\le}\ensuremath{\rho _b}+q-1. Its q selected labels must match distinct supplements w\ensuremath{\ne}b satisfying \ensuremath{d_i}\ensuremath{\le}\ensuremath{\rho _b}+\ensuremath{\rho _w}. Let \ensuremath{c_b} be the largest possible q in this relaxed matching problem, including q=0. Then \ensuremath{q_b}\ensuremath{\le}\ensuremath{c_b}, and sum \ensuremath{c_b} must reach r+2t. The primary verifier uses the q easiest labels and strongest suppliers; the second uses augmenting-path maximum matching with separate copies for repeated values. Both are safe upper bounds on the same requirement.
+
+For each \ensuremath{S_j}, apply the matching bound again, using label eligibility \ensuremath{d_i}\ensuremath{\le}\ensuremath{\rho _b}+\ensuremath{c_b}-1. At most \ensuremath{c_b} such labels can be selected at source b. The sum of these source upper bounds must reach \ensuremath{\ell _j}. All supplier identities within each matching are distinct, although consistency between different sources is deliberately relaxed.
+
+Set
+
+$$
+h_\rho =\max\{j:|\{b:\rho _b\ge j\}|\ge j\}.
+$$
+
+If i has \ensuremath{R_i} residual incidences, it needs at least \ensuremath{d_i}-\ensuremath{R_i} selected incidences whenever this is positive. Their distinct B-sources each have residual degree at least \ensuremath{d_i}-\ensuremath{R_i} by (7.1). Hence \ensuremath{R_i}\ensuremath{\ge}max(0,\ensuremath{d_i}-\ensuremath{h_\rho}). Reject if these lower bounds sum to more than r. Otherwise enumerate **all labelled** integer column vectors R satisfying those lower bounds, \ensuremath{R_i}\ensuremath{\le}b and sum \ensuremath{R_i}=r. Positions with equal \ensuremath{d_i} are not identified.
+
+For fixed R, repeat the source-capacity calculation, additionally requiring \ensuremath{d_i}\ensuremath{\le}\ensuremath{\rho _b}+\ensuremath{R_i}. The selected total now has the lower bound
+
+$$
+Q_{\min}(R)=\sum_i\max(0,d_i-R_i).
+$$
+
+One further necessary refinement is used. If b selects q labels, the supplement of any selected label is adjacent to the other q-1 labels: each of those other selected edges must dominate that supplement. Thus b needs q distinct supplements with \ensuremath{d_A(w)}\ensuremath{\ge}q-1. Since \ensuremath{d_A(w)}\ensuremath{\le}\ensuremath{\rho _w}+\ensuremath{c_w}, reduce \ensuremath{c_b} to the largest q\ensuremath{\le}\ensuremath{c_b} having at least q distinct w\ensuremath{\ne}b with \ensuremath{\rho _w}+\ensuremath{c_w}\ensuremath{\ge}q-1. Use the previous bounds for all sources simultaneously. The refined sum must still reach \ensuremath{Q_{min}(R)}.
+
+At 157 edges, these tests already eliminate all 59,264 outer states in 46 bands and all 1,480 labelled columns reached. These are the frozen Delta=14 dossier's unchanged computations, fully reproduced in the preceding document review. Its two final patterns also have the hand contradiction printed in that dossier. The reconstructed source and fresh evidence are preserved with this package.
+
+At 156 edges, the same general tests are applied to k=1,...,5 with the changed ledger and surplus. Their separately enumerated outputs, state-set hashes, band counts and every labelled-column capacity are compared. Surviving numerical columns are passed to the following additional necessary test. They are never interpreted as actual graphs.
+
+## 9. New subset-capacity test for the equality columns
+
+Fix a labelled R and any already justified upper bounds \ensuremath{c_b} on \ensuremath{q_b}, such as the refined bounds above. For a nonempty subset S of A define
+
+$$
+E_b(S)=\{i\in S:d_i\le\rho _b+c_b-1\text{ and }d_i\le\rho _b+R_i\}.
+$$
+
+The number of selected incidences with A-endpoint in S is at least
+
+$$
+\sum_{i\in S}\max(0,d_i-R_i).
+$$
+
+At source b, every selected label in S belongs to \ensuremath{E_b(S)}, by the closure and column bounds (7.1) and \ensuremath{q_b}\ensuremath{\le}\ensuremath{c_b}. There is at most one selected edge to each label, and at most \ensuremath{c_b} in total. Consequently every real configuration satisfies
+
+$$
+\boxed{\quad
+\sum_{i\in S}\max(0,d_i-R_i)
+\le \sum_b\min\bigl(c_b,|E_b(S)|\bigr).
+\quad} \tag{9.1}
+$$
+
+The program `column_hall.py` enumerates the 1,023 nonempty subsets of the ten A-labels and records the first strict violation for each surviving column. Each certificate contains the original outer-state key, labelled R, prior source caps, subset, selected demand and every source's upper bound. The separate `check_column_certificates.py` imports neither the search nor either scanner; it checks input identity, exact coverage of all previously surviving columns, the provenance of the caps, and every strict integer inequality. The prior caps themselves were compared against the second arithmetic implementation.
+
+For k=2,...,5 at 156 edges, the first-stage scan has 82,452 outer states, 188,520 labelled column vectors, and 28 surviving outer states containing 171 labelled columns. All 171 violate (9.1), and the separate certificate check confirms complete coverage. The k=1 boundary has 401,543 outer states and 3,252,212 labelled columns. Its 130 surviving outer states contain 1,788 surviving labelled columns; all 1,788 also violate (9.1). A separate comparison confirms every state key, band disposition and column capacity against the second implementation, and the separate certificate checker verifies all 1,788 inequalities and complete coverage. Thus the entire k=1,...,5 equality domain is excluded.
+
+## 10. Assembly, attainment and review obligations
+
+Fan reduces any upper-bound counterexample to 157 edges. The degree-sum bound covers \ensuremath{\Delta}\ensuremath{\le}12; Section 3 covers \ensuremath{\Delta =13}; the original reviewed finite argument covers \ensuremath{\Delta =14}; Sections 4–7 cover \ensuremath{\Delta =15,16}; and the published maximum-degree input covers \ensuremath{\Delta}\ensuremath{\ge}17. The bipartite and star cases were settled before taking complements. Thus these candidate deductions imply e(G)\ensuremath{\le}156 for every 25-vertex diameter-2-critical graph.
+
+The analogous equality exclusions use the same degree partition: Section 3 yields \ensuremath{K_{12,13}} for \ensuremath{\Delta =13}; Sections 4–7 exclude \ensuremath{\Delta =15,16} at 156 edges; and the complete k=1,...,5 scan and the certificates in Section 9 and the accompanying `RESULTS.md` exclude \ensuremath{\Delta =14}. Equality is therefore restricted to \ensuremath{K_{12,13}}. This graph has diameter two, and deleting any cross edge makes its endpoints have distance three, so it attains the bound and is critical.
+
+The argument's graph-theoretic premises and necessary directions were read and rederived internally. Two implementations agreeing is computational corroboration, not independent mathematical authorship. External mathematical scrutiny should concentrate on the witness classification in Section 3, the residual injections in Sections 5–6, the generalized parameter domain and the source-capacity arguments in Sections 7–9. No graph catalogue, SAT encoding, DRAT/LRAT certificate, floating-point optimization, or old residual-component lemma is a dependency of this route. No novelty or priority claim is made.
+
+\newpage
+
+## Appendix. Review and reproduction map
+
+The accompanying reviewer package contains the unchanged original evidence ZIP, its SHA256, a top-level verification/replay wrapper, the literature and attribution check, and review forms. The original detailed band tables remain in RESULTS.md inside the evidence archive.
+
+| Finite scope | Outer states | Labelled columns checked | Final subset certificates | Remaining |
+|---|---:|---:|---:|---:|
+| Delta 14, 157 edges | 59,264 | 1,480 | 0 | 0 |
+| Delta 15, 157 edges | 108 | 0 | 0 | 0 |
+| Delta 15, 156 edges | 211 | 0 | 0 | 0 |
+| Delta 14, 156 edges, k=2–5 | 82,452 | 188,520 | 171 | 0 |
+| Delta 14, 156 edges, k=1 | 401,543 | 3,252,212 | 1,788 | 0 |
+
+The counts certify execution of the stated finite tests, conditional on their mathematical necessity. They do not establish the graph-theoretic lemmas by themselves.
+
+The first mathematical review should focus on Sections 3, 5, 6, 7 and 9. The computational review should check exhaustive domain generation, both matching implementations, labelled-column enumeration and all subset-certificate coverage. Reports should identify precisely which statements were checked and record objections with a section or equation reference.
+
+## References used in the argument
+
+1. Genghua Fan, *On diameter 2-critical graphs*, Discrete Mathematics **67** (1987), 235–240. [DOI](https://doi.org/10.1016/0012-365X(87)90174-9). The exact bound used here is also stated on page 2 of reference 2. The publisher's full text was not available for this audit.
+2. Tao Wang, *On Murty-Simon Conjecture*, arXiv:1205.4397v1 (20 May 2012). [Primary text](https://arxiv.org/pdf/1205.4397v1). Theorem 2.1 explicitly covers the odd-order complement-diameter-three case.
+3. Teresa W. Haynes, Michael A. Henning, Lucas C. van der Merwe and Anders Yeo, *A maximum degree theorem for diameter-2-critical graphs*, Central European Journal of Mathematics **12** (2014), 1882–1889. [DOI](https://doi.org/10.2478/s11533-014-0449-3). [Primary text](https://d-nb.info/1372516379/34). Theorems 3.1, 3.2 and 3.6(a), with the odd-order point cross-checked against reference 2.
+4. Antoine Dailly, Florent Foucaud and Adriana Hansberg, *Strengthening the Murty–Simon conjecture on diameter 2 critical graphs*, Discrete Mathematics **342** (2019), 3142–3159. [DOI](https://doi.org/10.1016/j.disc.2019.06.023). [Primary manuscript](https://arxiv.org/pdf/1812.08420). Theorem 4 is the dominating-edge input; its exceptional graph has six vertices.

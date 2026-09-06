@@ -1,0 +1,4 @@
+{"files": 55, "status": "MANIFEST_MATCH"}
+{"scope": "d15_157", "status": "FRESH_EXACT_REPLAY_MATCH"}
+{"scope": "d15_156", "status": "FRESH_EXACT_REPLAY_MATCH"}
+{"mathematical_proof_verified": false, "scopes": ["d15_157", "d15_156"], "status": "REQUESTED_NEW_SCOPES_REPRODUCED"}
