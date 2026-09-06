@@ -1,0 +1,11 @@
+{
+  "schema_version": 1,
+  "proof_obligations": [
+    {"id":"PO-K2-CONN-17-26","branch_id":"D14-K2-CONN-17-26","current_status":"REPRODUCED","upgrade_required":"For every terminal finite state: hand proof or proof-producing SAT/ILP certificate with independent replay. Preferred target: DIMACS + LRAT, checked by an independently maintained/formally verified checker."},
+    {"id":"PO-K6","branch_id":"D14-K6","current_status":"REPRODUCED","upgrade_required":"Eliminate screening-stage terminal UNSAT trust gap: certificate every screening exclusion or remove screening as terminal exclusion; retain full proof trace for every leaf."},
+    {"id":"PO-K5","branch_id":"D14-K5-R9-12-17","current_status":"REPRODUCED","upgrade_required":"As for k=6: all terminal exclusions must have replayable certificates or hand proofs; independent catalogue generation also required."},
+    {"id":"PO-K2-9+1","branch_id":"D14-K2-9+1-R8-28","current_status":"OPEN","upgrade_required":"Mathematical elimination first; then preserve proof/certificates in an audit capsule."},
+    {"id":"PO-K4-LOW","branch_id":"D14-K4-R5-19","current_status":"OPEN","upgrade_required":"Reconstruct/eliminate and preserve complete auditable evidence."},
+    {"id":"PO-K3","branch_id":"D14-K3","current_status":"OPEN","upgrade_required":"Eliminate and preserve complete auditable evidence."}
+  ]
+}
