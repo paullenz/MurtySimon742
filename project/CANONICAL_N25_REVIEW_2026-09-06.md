@@ -1,3 +1,5 @@
+> **Later update — 6 September 2026:** A [complete N=25 candidate proof and full-chain audit](reviews/n25/2026-09-06-full-chain-candidate-v1/PROOF.md) now covers both the 156-edge upper bound and equality exactly for K_{12,13}. The new [reconciliation](reviews/n25/2026-09-06-full-chain-candidate-v1/RECONCILIATION.md) explains the published reduction, replacement Delta=15/16 arguments and complete equality checks. This is an internally reviewed candidate with reproduced arithmetic; external mathematical review remains outstanding and the governed theorem ledger is not promoted. The earlier review below is retained verbatim as historical evidence.
+
 # N=25 canonical review and external-audit backlog
 
 **Date:** 6 September 2026  

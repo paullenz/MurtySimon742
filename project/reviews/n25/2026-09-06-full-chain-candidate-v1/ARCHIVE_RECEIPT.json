@@ -1,0 +1,29 @@
+{
+  "bytes": 12850017,
+  "complete_candidate_equality": true,
+  "complete_candidate_upper_bound": true,
+  "external_mathematical_review": false,
+  "file": "N25_Full_Chain_Candidate_Evidence_2026-09-06_v1.zip",
+  "formal_verification": false,
+  "git_blob_sha1": "f2456c68246ceaf53c2affc08c5c2350f8a3a7ab",
+  "github_storage": "Concatenate part1 then part2 to recover the byte-identical ZIP",
+  "manifest_sha256": "a75351dc454f70b0c077cc89be97b58361d784131fb1665530f552b9b13a2240",
+  "manifested_files": 55,
+  "parts": [
+    {
+      "bytes": 6000000,
+      "file": "N25_Full_Chain_Candidate_Evidence_2026-09-06_v1.zip.part1",
+      "git_blob_sha1": "b3e8fe2308fe641c529967715e0a7c2707925806",
+      "sha256": "706fb6db1e21705e68dd0ec1b9171b8a6b2eeccea391e608c7652ea5dc42309d"
+    },
+    {
+      "bytes": 6850017,
+      "file": "N25_Full_Chain_Candidate_Evidence_2026-09-06_v1.zip.part2",
+      "git_blob_sha1": "719e3b4c1ab687af4e5c9b0ba181bbbad2e754b9",
+      "sha256": "4cc4e8cb83adcc09f6f202795a8841c399e944a71cca44a7e2a039aba508b2c9"
+    }
+  ],
+  "prior_main": "3f84b2471f70fb5a552669ff312c2eba634e8dca",
+  "redundant_column_json_losslessly_reconstructable": true,
+  "sha256": "0588c85900762184040dfb313c89d36349f2a8183db5cbc91a1ee50915cb4e95"
+}
