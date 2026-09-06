@@ -11,6 +11,8 @@
     "INADMISSIBLE": "excluded by elementary parameter bounds before the branch computation"
   },
   "branches": [
+    {"id":"D17","delta":17,"k":"all","r":"all","status":"PROJECT_CERTIFIED","theorem_dependency_allowed":true,"evidence":["evidence/hand_proofs/delta17_elimination.md"],"basis":"direct integer-boundary application of the published Haynes-Henning-van der Merwe-Yeo minimum-degree theorem to the complement"},
+    {"id":"D16","delta":16,"k":"all","r":"all","status":"PROJECT_CERTIFIED","theorem_dependency_allowed":true,"evidence":["evidence/hand_proofs/delta16_elimination.md"],"basis":"streamlined residual-component/connectivity proof"},
     {"id":"D15","delta":15,"k":"all","r":"all","status":"PROJECT_CERTIFIED","theorem_dependency_allowed":true,"evidence":["evidence/reports/erdos_742_n25_audited_reductions_v5_2026-09-06.pdf"]},
     {"id":"D14-K8","delta":14,"k":8,"r":"1..2","status":"PROJECT_CERTIFIED","theorem_dependency_allowed":true,"evidence":["evidence/reports/erdos_742_n25_audited_reductions_v5_2026-09-06.pdf"]},
     {"id":"D14-K7","delta":14,"k":7,"r":"2..7","status":"PROJECT_CERTIFIED","theorem_dependency_allowed":true,"evidence":["evidence/archives/delta14_code_and_results_2026-09-06.zip"]},
