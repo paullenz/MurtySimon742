@@ -1,0 +1,39 @@
+{
+  "repository":"paullenz/MurtySimon25",
+  "commit":"0269ebd5d80beb4be8a9d395352371cc51e1a64d",
+  "as_of":"2026-09-06",
+  "source":"GitHub recursive tree and individual file reads",
+  "tracked_files":19,
+  "branches":["main"],
+  "releases":[],
+  "files":[
+    {"path":".gitattributes","git_blob_sha1":"4f40b76d2f4e3856b79221a6022d291d486e5f23","size_bytes":273},
+    {"path":"LICENSE","git_blob_sha1":"b8d9376da4ea6abd71fc88b23830ea9d11214cba","size_bytes":1065},
+    {"path":"README.md","git_blob_sha1":"37a1aaf3902b1a84ccbe5c835ab65da4c7e13cd3","size_bytes":1699},
+    {"path":"project/N25_PROJECT_STANDING_ORDERS.md","git_blob_sha1":"d180dd6d491c4319ce9e39b9052fe28bd951f9e5","size_bytes":1533},
+    {"path":"project/REPO_SYNC_POLICY.md","git_blob_sha1":"da40d7512037cca578433044d75079cba091a4f1","size_bytes":1670},
+    {"path":"releases/MANUAL_UPLOAD_SHA256SUMS.txt","git_blob_sha1":"448b1139ddf9ea083f3041df167861af6746d6c7","size_bytes":1639},
+    {"path":"releases/UPLOAD_TO_GITHUB.md","git_blob_sha1":"cc4eec2d3d488a7bdf1831ac5fa2f6766f42db63","size_bytes":1134},
+    {"path":"repro-v1/README.md","git_blob_sha1":"420164dddd1baf989fb3a6717b8e930ee0df86fa","size_bytes":1148},
+    {"path":"repro-v1/THIRD_PARTY_AUDIT.md","git_blob_sha1":"91a937fef4dbbcad164fd90df3b2c19251fdc7ac","size_bytes":1411},
+    {"path":"repro-v1/evidence/hand_proofs/delta14_k0_hand_proof_2026-09-06.md","git_blob_sha1":"3be5f59af66a6465b189adbb3e856a115369b4ca","size_bytes":4541},
+    {"path":"repro-v1/evidence/hand_proofs/delta14_k1_hand_proof_2026-09-06.md","git_blob_sha1":"916fefcd68317978f3431a6a9940b43629cd3ab2","size_bytes":3365},
+    {"path":"repro-v1/evidence/hand_proofs/delta16_elimination.md","git_blob_sha1":"5618c4e19beec9762dae61a1c006403009951016","size_bytes":2791},
+    {"path":"repro-v1/evidence/hand_proofs/delta17_elimination.md","git_blob_sha1":"a9b2f3cd891eee634f9ea93ca1208b80c5517bef","size_bytes":1460},
+    {"path":"repro-v1/evidence/reports/history/HISTORY_SHA256SUMS.txt","git_blob_sha1":"44752f31290ba4389de79a831427b8d47962a368","size_bytes":928},
+    {"path":"repro-v1/evidence/reports/history/README.md","git_blob_sha1":"1b0372d39a79796e23f298d3f0ac3c61792953fc","size_bytes":939},
+    {"path":"repro-v1/ledger/proof_obligations.json","git_blob_sha1":"849c35a35e1352c959d1fb32df2d50df5195c1ef","size_bytes":1360},
+    {"path":"repro-v1/ledger/theorem_ledger.json","git_blob_sha1":"7b2b00f804c25534a7ca4b1604a193da11f6958f","size_bytes":5084},
+    {"path":"repro-v1/scripts/reproduce_all.sh","git_blob_sha1":"c0bd4a46806ae441dbef86e3ea75e23279e1b168","size_bytes":1066},
+    {"path":"repro-v1/scripts/verify_ledger.py","git_blob_sha1":"3d4204294ce7c241bf4e0feb962a36e8bddefdb1","size_bytes":1079}
+  ],
+  "entry_point_check":{
+    "method":"Ran a local copy matched to the repository Git blob SHA in a reconstructed directory. The repository tree independently confirms the first required module is absent. Not a complete clone or proof replay.",
+    "command":"bash repro-v1/scripts/reproduce_all.sh --fast",
+    "script_git_blob_sha1":"c0bd4a46806ae441dbef86e3ea75e23279e1b168",
+    "exit_code":2,
+    "stdout":"Erdos #742 n=25 reproducibility release v1\n",
+    "missing_file":"repro-v1/scripts/verify_artifacts.py",
+    "checker_second_missing_dependency":"repro-v1/ledger/paper_import_manifest.json"
+  }
+}
