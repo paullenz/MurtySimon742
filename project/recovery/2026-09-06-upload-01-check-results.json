@@ -1,0 +1,24 @@
+{
+  "batch": "2026-09-06-upload-01",
+  "byte_checker_exit_code": 2,
+  "byte_checker_regression_tests_passed": 9,
+  "counts": {
+    "match": 18,
+    "mismatch": 0,
+    "missing": 755
+  },
+  "declared_bytes": 386118499,
+  "declared_entries": 773,
+  "incoming_bytes": 255102,
+  "incoming_files_including_manifest": 19,
+  "manifest_sha256": "91eb0390cf8d79022a0dbd9dafdf53182fdf852e3ad9fba2e5908234b04e88ed",
+  "missing_declared_bytes": 386008773,
+  "original_archive_container_hash_verified": false,
+  "original_payload_import_into_github": "PENDING",
+  "proof_replay_performed": false,
+  "python_scripts_syntax_compiled_without_execution": 13,
+  "scope": "Delta=14 k=5 r=12..17; k=6 r=3..12",
+  "source_archive_claims_full_proof_files": true,
+  "status": "PARTIAL",
+  "theorem_status_changed": false
+}
