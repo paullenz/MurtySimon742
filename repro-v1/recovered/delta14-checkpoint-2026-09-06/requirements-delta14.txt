@@ -1,0 +1,5 @@
+# Tested with CPython 3.12.13 on Linux.
+python-sat==1.9.dev15
+pynauty==2.8.8.1
+numpy==2.3.5
+scipy==1.17.0

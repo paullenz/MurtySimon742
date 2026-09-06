@@ -1,0 +1,29 @@
+{
+  "created_utc": "2026-09-06T10:02:58.881490+00:00",
+  "scope": "Delta=14: k=5 r=12..17, k=6 r=3..12",
+  "search_result": "No survivor of the encoded necessary conditions",
+  "catalogue_records": 62023,
+  "target_branch_records": 61922,
+  "catalogue_and_partition_coverage_audit": "passed",
+  "recorded_cnf_hashes_rebuilt": 4542,
+  "proof_replay": [
+    {
+      "k": 5,
+      "full_stage_traces_produced": 304,
+      "full_stage_traces_replayed": 304
+    },
+    {
+      "k": 6,
+      "full_stage_traces_produced": 345,
+      "full_stage_traces_replayed": 345
+    }
+  ],
+  "whole_branch_certificate_complete": false,
+  "journal_grade_claim": false,
+  "remaining": [
+    "Certificates or audited hand proofs for screening-SAT exclusions",
+    "Reproduce historical k=5 r=4..11 exclusions",
+    "Independent mathematical audit of encoded necessity and lemmas",
+    "Remaining Delta=14 cases k<=4"
+  ]
+}
