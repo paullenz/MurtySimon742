@@ -1,0 +1,765 @@
+{
+  "counts": {
+    "Fan_exact_arithmetic": 1,
+    "all_k_r_bands_covered": 6,
+    "certificate_caps_rederived": 1959,
+    "certificate_input_hash": 2,
+    "certificate_strict_contradiction_recomputed": 1959,
+    "certificate_subset_valid": 1959,
+    "certificate_totals": 2,
+    "certificate_unique_coverage": 1959,
+    "column_domain_membership": 3442212,
+    "column_lower_prune_recomputed": 5401,
+    "column_lower_vector_recomputed": 8759,
+    "complete_band_coverage": 137,
+    "degree_domain_membership": 543578,
+    "every_column_cap_recomputed_by_min_cut": 3442212,
+    "every_column_margin_recomputed": 3442212,
+    "independent_labelled_column_cardinality": 3358,
+    "independent_outer_cardinality": 137,
+    "min_cut_vs_exhaustive_injections": 4900,
+    "outer_band_membership": 543578,
+    "outer_key_fingerprint": 5,
+    "pair_prune_recomputed": 492204,
+    "recognized_final_kind": 3358,
+    "residual_domain_membership": 543578,
+    "scope_needs_no_additional_certificates": 3,
+    "source_threshold_prune_recomputed": 14207,
+    "source_total_prune_recomputed": 28408,
+    "surviving_column_list_recomputed": 3358,
+    "total_column_count": 5,
+    "total_outer_count": 5,
+    "unique_labelled_column": 3442212,
+    "unique_outer_key": 543578,
+    "witness_table_exact": 1,
+    "zero_uncertified_survivors": 2
+  },
+  "domains": [
+    {
+      "L": 16,
+      "a": 8,
+      "b": 16,
+      "edges": 156,
+      "low_k_exclusions": [
+        {
+          "k": 0,
+          "reason": "low_k",
+          "upper": -5
+        },
+        {
+          "k": 1,
+          "reason": "low_k",
+          "upper": 0
+        }
+      ],
+      "retained_bands": [],
+      "t": 12
+    },
+    {
+      "L": 30,
+      "a": 9,
+      "b": 15,
+      "edges": 156,
+      "low_k_exclusions": [
+        {
+          "k": 0,
+          "reason": "low_k",
+          "upper": 2
+        },
+        {
+          "k": 1,
+          "reason": "low_k",
+          "upper": 8
+        }
+      ],
+      "retained_bands": [
+        [
+          2,
+          15
+        ],
+        [
+          2,
+          16
+        ],
+        [
+          2,
+          17
+        ],
+        [
+          2,
+          18
+        ],
+        [
+          2,
+          19
+        ],
+        [
+          2,
+          20
+        ],
+        [
+          2,
+          21
+        ],
+        [
+          3,
+          15
+        ],
+        [
+          3,
+          16
+        ]
+      ],
+      "t": 6
+    },
+    {
+      "L": 43,
+      "a": 10,
+      "b": 14,
+      "edges": 156,
+      "low_k_exclusions": [
+        {
+          "k": 0,
+          "reason": "low_k",
+          "upper": 7
+        }
+      ],
+      "retained_bands": [
+        [
+          1,
+          14
+        ],
+        [
+          1,
+          15
+        ],
+        [
+          1,
+          16
+        ],
+        [
+          1,
+          17
+        ],
+        [
+          1,
+          18
+        ],
+        [
+          1,
+          19
+        ],
+        [
+          1,
+          20
+        ],
+        [
+          1,
+          21
+        ],
+        [
+          1,
+          22
+        ],
+        [
+          1,
+          23
+        ],
+        [
+          1,
+          24
+        ],
+        [
+          1,
+          25
+        ],
+        [
+          1,
+          26
+        ],
+        [
+          1,
+          27
+        ],
+        [
+          1,
+          28
+        ],
+        [
+          1,
+          29
+        ],
+        [
+          1,
+          30
+        ],
+        [
+          1,
+          31
+        ],
+        [
+          1,
+          32
+        ],
+        [
+          1,
+          33
+        ],
+        [
+          1,
+          34
+        ],
+        [
+          1,
+          35
+        ],
+        [
+          1,
+          36
+        ],
+        [
+          1,
+          37
+        ],
+        [
+          1,
+          38
+        ],
+        [
+          2,
+          14
+        ],
+        [
+          2,
+          15
+        ],
+        [
+          2,
+          16
+        ],
+        [
+          2,
+          17
+        ],
+        [
+          2,
+          18
+        ],
+        [
+          2,
+          19
+        ],
+        [
+          2,
+          20
+        ],
+        [
+          2,
+          21
+        ],
+        [
+          2,
+          22
+        ],
+        [
+          2,
+          23
+        ],
+        [
+          2,
+          24
+        ],
+        [
+          2,
+          25
+        ],
+        [
+          2,
+          26
+        ],
+        [
+          2,
+          27
+        ],
+        [
+          2,
+          28
+        ],
+        [
+          2,
+          29
+        ],
+        [
+          2,
+          30
+        ],
+        [
+          2,
+          31
+        ],
+        [
+          2,
+          32
+        ],
+        [
+          2,
+          33
+        ],
+        [
+          3,
+          14
+        ],
+        [
+          3,
+          15
+        ],
+        [
+          3,
+          16
+        ],
+        [
+          3,
+          17
+        ],
+        [
+          3,
+          18
+        ],
+        [
+          3,
+          19
+        ],
+        [
+          3,
+          20
+        ],
+        [
+          3,
+          21
+        ],
+        [
+          3,
+          22
+        ],
+        [
+          3,
+          23
+        ],
+        [
+          3,
+          24
+        ],
+        [
+          3,
+          25
+        ],
+        [
+          3,
+          26
+        ],
+        [
+          3,
+          27
+        ],
+        [
+          3,
+          28
+        ],
+        [
+          4,
+          14
+        ],
+        [
+          4,
+          15
+        ],
+        [
+          4,
+          16
+        ],
+        [
+          4,
+          17
+        ],
+        [
+          4,
+          18
+        ],
+        [
+          4,
+          19
+        ],
+        [
+          4,
+          20
+        ],
+        [
+          4,
+          21
+        ],
+        [
+          4,
+          22
+        ],
+        [
+          4,
+          23
+        ],
+        [
+          5,
+          14
+        ],
+        [
+          5,
+          15
+        ],
+        [
+          5,
+          16
+        ],
+        [
+          5,
+          17
+        ],
+        [
+          5,
+          18
+        ]
+      ],
+      "t": 2
+    },
+    {
+      "L": 15,
+      "a": 8,
+      "b": 16,
+      "edges": 157,
+      "low_k_exclusions": [
+        {
+          "k": 0,
+          "reason": "low_k",
+          "upper": -6
+        },
+        {
+          "k": 1,
+          "reason": "low_k",
+          "upper": -1
+        }
+      ],
+      "retained_bands": [],
+      "t": 13
+    },
+    {
+      "L": 29,
+      "a": 9,
+      "b": 15,
+      "edges": 157,
+      "low_k_exclusions": [
+        {
+          "k": 0,
+          "reason": "low_k",
+          "upper": 1
+        },
+        {
+          "k": 1,
+          "reason": "low_k",
+          "upper": 7
+        }
+      ],
+      "retained_bands": [
+        [
+          2,
+          15
+        ],
+        [
+          2,
+          16
+        ],
+        [
+          2,
+          17
+        ],
+        [
+          2,
+          18
+        ],
+        [
+          2,
+          19
+        ],
+        [
+          2,
+          20
+        ],
+        [
+          3,
+          15
+        ]
+      ],
+      "t": 7
+    },
+    {
+      "L": 42,
+      "a": 10,
+      "b": 14,
+      "edges": 157,
+      "low_k_exclusions": [
+        {
+          "k": 0,
+          "reason": "low_k",
+          "upper": 6
+        },
+        {
+          "k": 1,
+          "reason": "low_k",
+          "upper": 13
+        }
+      ],
+      "retained_bands": [
+        [
+          2,
+          14
+        ],
+        [
+          2,
+          15
+        ],
+        [
+          2,
+          16
+        ],
+        [
+          2,
+          17
+        ],
+        [
+          2,
+          18
+        ],
+        [
+          2,
+          19
+        ],
+        [
+          2,
+          20
+        ],
+        [
+          2,
+          21
+        ],
+        [
+          2,
+          22
+        ],
+        [
+          2,
+          23
+        ],
+        [
+          2,
+          24
+        ],
+        [
+          2,
+          25
+        ],
+        [
+          2,
+          26
+        ],
+        [
+          2,
+          27
+        ],
+        [
+          2,
+          28
+        ],
+        [
+          2,
+          29
+        ],
+        [
+          2,
+          30
+        ],
+        [
+          2,
+          31
+        ],
+        [
+          2,
+          32
+        ],
+        [
+          3,
+          14
+        ],
+        [
+          3,
+          15
+        ],
+        [
+          3,
+          16
+        ],
+        [
+          3,
+          17
+        ],
+        [
+          3,
+          18
+        ],
+        [
+          3,
+          19
+        ],
+        [
+          3,
+          20
+        ],
+        [
+          3,
+          21
+        ],
+        [
+          3,
+          22
+        ],
+        [
+          3,
+          23
+        ],
+        [
+          3,
+          24
+        ],
+        [
+          3,
+          25
+        ],
+        [
+          3,
+          26
+        ],
+        [
+          3,
+          27
+        ],
+        [
+          4,
+          14
+        ],
+        [
+          4,
+          15
+        ],
+        [
+          4,
+          16
+        ],
+        [
+          4,
+          17
+        ],
+        [
+          4,
+          18
+        ],
+        [
+          4,
+          19
+        ],
+        [
+          4,
+          20
+        ],
+        [
+          4,
+          21
+        ],
+        [
+          4,
+          22
+        ],
+        [
+          5,
+          14
+        ],
+        [
+          5,
+          15
+        ],
+        [
+          5,
+          16
+        ],
+        [
+          5,
+          17
+        ]
+      ],
+      "t": 3
+    }
+  ],
+  "imports_existing_verifiers": false,
+  "scope": "Third arithmetic audit; graph-theoretic lemmas remain external premises",
+  "scopes": [
+    {
+      "columns": 1480,
+      "elapsed_seconds": 1.78,
+      "final_certificates": 0,
+      "outer_states": 59264,
+      "scope": "d14_157"
+    },
+    {
+      "columns": 0,
+      "elapsed_seconds": 0.01,
+      "final_certificates": 0,
+      "outer_states": 108,
+      "scope": "d15_157"
+    },
+    {
+      "columns": 0,
+      "elapsed_seconds": 0.01,
+      "final_certificates": 0,
+      "outer_states": 211,
+      "scope": "d15_156"
+    },
+    {
+      "columns": 188520,
+      "elapsed_seconds": 5.73,
+      "final_certificates": 171,
+      "outer_states": 82452,
+      "scope": "d14_156"
+    },
+    {
+      "columns": 3252212,
+      "elapsed_seconds": 64.37,
+      "final_certificates": 1788,
+      "outer_states": 401543,
+      "scope": "d14_156_k1"
+    }
+  ],
+  "status": "PASS",
+  "witness_tables": {
+    "11": [
+      110,
+      96,
+      89,
+      89,
+      96,
+      110
+    ],
+    "13": [
+      156,
+      134,
+      119,
+      111,
+      110,
+      116,
+      129
+    ]
+  }
+}

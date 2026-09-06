@@ -1,0 +1,240 @@
+{
+  "counts": {
+    "bipartite_inputs": 17,
+    "column_residual_bound": 6960,
+    "edge_addition_total_domination": 5741,
+    "exhaustive_bases": 17,
+    "h_index_column_bound": 2632,
+    "inactive_inequality": 640,
+    "inactive_missed_auxiliary_location": 60,
+    "inactive_missed_injection": 640,
+    "inactive_no_F_crossing": 640,
+    "inactive_seen_injection": 640,
+    "input_criticality": 196,
+    "low_k_P_injection": 2424,
+    "low_k_auxiliary_location": 1160,
+    "low_k_extra_edge_injection": 2135,
+    "low_k_extra_x_edges": 2424,
+    "low_k_final_inequality": 2135,
+    "low_k_residual_budget": 2135,
+    "minimum_degree_column_demand": 2632,
+    "no_total_dominating_pair": 179,
+    "pair_residual_bound": 6960,
+    "residual_ledger": 2643,
+    "sampled_bases": 328,
+    "section3_partition_bound": 15,
+    "section3_total_bound": 15,
+    "selected_assignments": 2643,
+    "selected_edge_exists": 875,
+    "selected_pair_injection": 2643,
+    "selected_pair_threshold": 8103,
+    "selected_total_demand": 2632,
+    "small_assignment_exhaustiveness_budget": 17,
+    "source_closure_bound": 6960,
+    "subset_capacity_with_actual_q": 51374,
+    "supplement_degree_bound": 6960,
+    "supplement_other_labels": 6960,
+    "total_dominating_triple": 179,
+    "witness_degree_sum": 161,
+    "witness_edge_coverage": 196
+  },
+  "generated_graphs": 185,
+  "labelled_search": {
+    "3": {
+      "diameter2critical": 3,
+      "graphs": 8
+    },
+    "4": {
+      "diameter2critical": 7,
+      "graphs": 64
+    },
+    "5": {
+      "diameter2critical": 27,
+      "graphs": 1024
+    },
+    "6": {
+      "diameter2critical": 571,
+      "graphs": 32768
+    }
+  },
+  "negative_controls": {
+    "low_k_needs_all_active": {
+      "B": 4,
+      "context": {
+        "base": 0,
+        "edges": [
+          [
+            0,
+            1
+          ],
+          [
+            0,
+            2
+          ],
+          [
+            0,
+            4
+          ],
+          [
+            0,
+            5
+          ],
+          [
+            1,
+            3
+          ],
+          [
+            1,
+            5
+          ],
+          [
+            2,
+            3
+          ],
+          [
+            2,
+            4
+          ]
+        ],
+        "graph": "exhaustive_n6_mask1883",
+        "n": 6,
+        "selected": [
+          [
+            3,
+            5,
+            1
+          ],
+          [
+            3,
+            4,
+            2
+          ]
+        ]
+      },
+      "k": 0,
+      "m": 0,
+      "r": 0
+    },
+    "minimum_base_is_necessary": {
+      "context": {
+        "base": 2,
+        "edges": [
+          [
+            0,
+            3
+          ],
+          [
+            0,
+            4
+          ],
+          [
+            0,
+            5
+          ],
+          [
+            1,
+            2
+          ],
+          [
+            1,
+            4
+          ],
+          [
+            1,
+            5
+          ],
+          [
+            2,
+            3
+          ]
+        ],
+        "graph": "exhaustive_n6_mask956",
+        "n": 6,
+        "selected": []
+      },
+      "cross_degrees": {
+        "0": 1,
+        "4": 1,
+        "5": 1
+      },
+      "degrees_F": {
+        "0": 2,
+        "4": 1,
+        "5": 1
+      }
+    },
+    "no_dominating_edge_premise_is_necessary": {
+      "claimed_without_premise_upper": 24,
+      "critical": true,
+      "direct_witness_degree_sum": 25,
+      "edges": 156,
+      "graph": "K12,13"
+    },
+    "positive_surplus_is_necessary": {
+      "F_edges": 0,
+      "context": {
+        "base": 0,
+        "edges": [
+          [
+            0,
+            1
+          ],
+          [
+            0,
+            2
+          ],
+          [
+            0,
+            4
+          ],
+          [
+            0,
+            5
+          ],
+          [
+            1,
+            3
+          ],
+          [
+            1,
+            5
+          ],
+          [
+            2,
+            3
+          ],
+          [
+            2,
+            4
+          ]
+        ],
+        "graph": "exhaustive_n6_mask1883",
+        "n": 6,
+        "selected": [
+          [
+            3,
+            5,
+            1
+          ],
+          [
+            3,
+            4,
+            2
+          ]
+        ]
+      },
+      "inactive": 1,
+      "r": 0,
+      "t": 0
+    }
+  },
+  "nonisomorphic_small_representatives": 11,
+  "profile": {
+    "inactive_missed_forced_edges": 60,
+    "inactive_seen_forced_edges": 80,
+    "largest_selected_source_degree": 4
+  },
+  "scope": "Finite falsification only, not proof or independent external review",
+  "seed": 250906,
+  "status": "PASS"
+}

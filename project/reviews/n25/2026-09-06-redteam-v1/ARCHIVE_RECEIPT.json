@@ -1,0 +1,9 @@
+{
+  "archive": "N25_Red_Team_Evidence_2026-09-06_v1.zip",
+  "bytes": 37537,
+  "sha256": "6e0b92a9edddbc75cf1b35094de20c8371cf5e5a4f5cc06fbb7830273aa725f1",
+  "payload_files": 16,
+  "requires_reviewer_archive": "N25_Reviewer_Package_v1_2026-09-06.zip",
+  "requires_reviewer_sha256": "ff5a88f4202fb1e201f52e7e6ec0b50f88248cd43493eee78f120a3c1de15c3d",
+  "external_review_complete": false
+}

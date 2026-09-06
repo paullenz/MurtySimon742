@@ -28,14 +28,17 @@ The first command checks manifests and all final equality certificates. The seco
 
 - Published reductions, including Fan's strict bound reducing a counterexample to exactly 157 edges.
 - A witness-count argument for maximum degree 13, including the equality case.
-- Residual-edge arguments for maximum degrees 14, 15 and 16, plus the published high-degree bound.
+- Residual-edge arguments for maximum degrees 14, 15 and 16.
+- **Maximum degree Δ≥17:** [Section 2 of the proof](project/reviews/n25/2026-09-06-full-chain-candidate-v1/PROOF.md#2-published-reductions-and-their-exact-numerical-effect) applies Haynes–Henning–van der Merwe–Yeo Theorem 3.6(a) to the complement. At n=25 this gives **e(G)≤155** in the remaining non-bipartite case. Stars and complete bipartite graphs are handled separately.
 - Explicit finite checks for both 157-edge exclusion and 156-edge equality. All **1,959** final numerical equality columns have checked rejection certificates.
 
 The complete general Murty–Simon conjecture is outside this project's scope. The literature check did not locate a published full order-25 resolution, but it does not establish novelty or priority.
 
 ## Attribution and review status
 
-Paul Lenz directed the project. ChatGPT/Codex supplied substantial mathematical development, code and internal checking. Both arithmetic implementations were produced with the same assistant; agreement between them is a software cross-check, not independent mathematical authorship or expert endorsement. Published inputs are cited in the manuscript.
+Paul Lenz directed the project. ChatGPT/Codex supplied substantial mathematical development, code and internal checking. The initial two arithmetic implementations were produced with the same assistant; agreement between them is a software cross-check, not independent mathematical authorship or expert endorsement. Published inputs are cited in the manuscript.
+
+A further [internal red-team audit](project/reviews/n25/2026-09-06-redteam-v1/N25_Red_Team_Report_2026-09-06.md) examines the lemmas and their assumptions and uses a third arithmetic checker to recalculate all stored numerical exclusions. It found no blocking failure in the audited candidate, but records a helper defect outside the parameter ranges used in this proof. This remains a same-assistant check; external review is still open.
 
 The [external review register](releases/n25-reviewer-v1/REVIEW_REGISTER.json) currently records both mathematical and independent computational review as **OPEN**. The [review-request draft](releases/n25-reviewer-v1/REVIEW_REQUEST_DRAFT.md) has not been sent. No prospective reviewer is represented as having agreed to participate.
 

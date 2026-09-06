@@ -1,0 +1,80 @@
+{
+  "files": [
+    {
+      "bytes": 3347,
+      "path": "AUDIT_INPUTS.json",
+      "sha256": "6baef47e3cee54f1f799eba0d9b51fa6c26c9efbb04fadb7d25bf8ecd7bf4152"
+    },
+    {
+      "bytes": 16402,
+      "path": "N25_Red_Team_Report_2026-09-06.md",
+      "sha256": "ea12c2c71cfbe521d9006ef59300d061c4bf1f96190eb346de4121678a289bdf"
+    },
+    {
+      "bytes": 2822,
+      "path": "PROPOSED_CLARIFICATIONS.md",
+      "sha256": "0c52060440ad5c826a7c9a0251caff297963107c109da31a664d26afb45b2870"
+    },
+    {
+      "bytes": 2492,
+      "path": "README.md",
+      "sha256": "c8968af223d7cf52539ed663eba881ea9e0d89f05937b5a9433716751926b012"
+    },
+    {
+      "bytes": 12464,
+      "path": "arithmetic_attack.py",
+      "sha256": "379e2906102eea50304d3315174a98f55e77540823376e7939da128baec2e6de"
+    },
+    {
+      "bytes": 10855,
+      "path": "arithmetic_results.json",
+      "sha256": "492cb6a47518268296d316dc550cb76a8c49783b8a6b9b04f6f14a6a1d5e12a3"
+    },
+    {
+      "bytes": 3554,
+      "path": "arithmetic_run.log",
+      "sha256": "4aae3772a29e556a8f4cee2426696da6fb0f18f80938eb38fa39ccc9b26f8e7a"
+    },
+    {
+      "bytes": 1901,
+      "path": "helper_boundary_attack.py",
+      "sha256": "271eb1220d4dd7d0f02d17d2035cec3ef2f68d98c29ad915c38edcd14bac172e"
+    },
+    {
+      "bytes": 922,
+      "path": "helper_boundary_results.json",
+      "sha256": "55965790d88521a6b602740eb3b39e383c78f3efaab25fe680647f30e87bebe8"
+    },
+    {
+      "bytes": 692,
+      "path": "helper_boundary_run.log",
+      "sha256": "b248972ab397fcfcbcdae51169d828e05050a187d93ec391c9b25ff7679639ab"
+    },
+    {
+      "bytes": 3375,
+      "path": "run_redteam.py",
+      "sha256": "b54b0779a5f09214064be30577e3fba251f50333f86d28c556d15780e38e4591"
+    },
+    {
+      "bytes": 13953,
+      "path": "structural_attack.py",
+      "sha256": "209f2dacb12f01eee1a5f28c336771e7047a88b6322194c6b8c87440ecd8f5f6"
+    },
+    {
+      "bytes": 4615,
+      "path": "structural_results.json",
+      "sha256": "d758271c44ed3d5d475e788bb093ba0d818d77e69c1625835be3c5cfc062a5a1"
+    },
+    {
+      "bytes": 2575,
+      "path": "structural_run.log",
+      "sha256": "08ce6b87f2caebb06484d63958821ff06f3d96686ec04339b8b405d93adc3d08"
+    },
+    {
+      "bytes": 43031,
+      "path": "tested_graphs.json",
+      "sha256": "f0ffe40b4e03053538d74741f3a538bd2ea0a0180ae5e89f8727dbd2728d2c07"
+    }
+  ],
+  "version": "n25-redteam-2026-09-06-v1"
+}

@@ -1,0 +1,84 @@
+{
+  "candidate_zip_sha256": "0588c85900762184040dfb313c89d36349f2a8183db5cbc91a1ee50915cb4e95",
+  "files": [
+    {
+      "bytes": 20555,
+      "path": "N25_Full_Chain_Candidate_2026-09-06_v1/PROOF.md",
+      "sha256": "9f4daa246f794ab9e2de29fb968911ecdbb7b8698982dc6af234db6ba18b2aa9"
+    },
+    {
+      "bytes": 134827,
+      "path": "N25_Full_Chain_Candidate_2026-09-06_v1/d14_156/hall_certificates.json",
+      "sha256": "61580d6c49b861e258a2e864ff2b5ab8936351a8b2192386b752e7ea49aec0ed"
+    },
+    {
+      "bytes": 1239557,
+      "path": "N25_Full_Chain_Candidate_2026-09-06_v1/d14_156/primary_ledger.jsonl.gz",
+      "sha256": "d420ca2bf9e326fce5cbc7b09d534999e54d74869fafc05c59d4079452a736dd"
+    },
+    {
+      "bytes": 10939,
+      "path": "N25_Full_Chain_Candidate_2026-09-06_v1/d14_156/primary_summary.json",
+      "sha256": "2fe5fd16f7655e425fca1d325f38971a922bf61d5dfe1c002c00608f67ae5e23"
+    },
+    {
+      "bytes": 1367349,
+      "path": "N25_Full_Chain_Candidate_2026-09-06_v1/d14_156_k1/hall_certificates.json",
+      "sha256": "d770ed0c6f5f38c8e0488b205e1a618e8b8409ba83707f5563b09d87d1211abb"
+    },
+    {
+      "bytes": 14937846,
+      "path": "N25_Full_Chain_Candidate_2026-09-06_v1/d14_156_k1/primary_ledger.jsonl.gz",
+      "sha256": "54ebcba8ce313f7e6489f264e06aed8bb92da927be21d57b0b5a4417cb2eed97"
+    },
+    {
+      "bytes": 6483,
+      "path": "N25_Full_Chain_Candidate_2026-09-06_v1/d14_156_k1/primary_summary.json",
+      "sha256": "e7122e13d830b8278079779b1fcae3ea504f68023a62787a6753841d7e22885e"
+    },
+    {
+      "bytes": 1330,
+      "path": "N25_Full_Chain_Candidate_2026-09-06_v1/d15_156/primary_ledger.jsonl.gz",
+      "sha256": "d36655e1fc8e9516cd4490034fc0c6e8de3a83278c94659c8c0cd61f5538a2a5"
+    },
+    {
+      "bytes": 1836,
+      "path": "N25_Full_Chain_Candidate_2026-09-06_v1/d15_156/primary_summary.json",
+      "sha256": "ed4ef20e6ccf97c3484d1767815013effef7b783bc093e26fd09bdb5c6d424f5"
+    },
+    {
+      "bytes": 762,
+      "path": "N25_Full_Chain_Candidate_2026-09-06_v1/d15_157/primary_ledger.jsonl.gz",
+      "sha256": "97e90f62533d9ef7b6e55e5e81912b84b193b8c6973f3ad6a442b29a6254c0e4"
+    },
+    {
+      "bytes": 1562,
+      "path": "N25_Full_Chain_Candidate_2026-09-06_v1/d15_157/primary_summary.json",
+      "sha256": "562bc8ace8364c0f3cd4990cb049f76599252d5f13656351c71ee2b15204e05d"
+    },
+    {
+      "bytes": 9364,
+      "path": "N25_Full_Chain_Candidate_2026-09-06_v1/general_independent.py",
+      "sha256": "e2a39ce238aee4f35a6157214485ec17a44ac90d7bf5b15cc827a939b399ff1d"
+    },
+    {
+      "bytes": 9310,
+      "path": "N25_Full_Chain_Candidate_2026-09-06_v1/general_primary.py",
+      "sha256": "12c216c66aa6ddab298dbe58507027f21d0690deaa36c528077f1a6bb476ab6e"
+    },
+    {
+      "bytes": 317755,
+      "path": "review_evidence/results/primary_ledger.jsonl.gz",
+      "sha256": "70a441208917666a9db50bb3b389ff48d4fc4a8525ce1c8895bdb87637005730"
+    },
+    {
+      "bytes": 8776,
+      "path": "review_evidence/results/primary_summary.json",
+      "sha256": "445704d80236caa197c58a2a5fb6d908af44059bf33e36002d0b4a7d523aab49"
+    }
+  ],
+  "platform": "Linux-6.18.35-x86_64-with-glibc2.39",
+  "python_version": "3.12.13",
+  "reviewer_commit": "448e4bc3c5f0493b1f553343a4484fd232cb202e",
+  "reviewer_zip_sha256": "ff5a88f4202fb1e201f52e7e6ec0b50f88248cd43493eee78f120a3c1de15c3d"
+}

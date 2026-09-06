@@ -1,0 +1,22 @@
+{"scope": "d14_157", "outer_states": 59264, "columns": 1480, "final_certificates": 0, "elapsed_seconds": 1.78}
+{"scope": "d15_157", "outer_states": 108, "columns": 0, "final_certificates": 0, "elapsed_seconds": 0.01}
+{"scope": "d15_156", "outer_states": 211, "columns": 0, "final_certificates": 0, "elapsed_seconds": 0.01}
+{"scope": "d14_156", "outer": 35360, "columns": 121477, "elapsed": 2.6}
+{"scope": "d14_156", "outer": 49724, "columns": 161043, "elapsed": 3.9}
+{"scope": "d14_156", "outer": 63570, "columns": 164168, "elapsed": 4.3}
+{"scope": "d14_156", "outer_states": 82452, "columns": 188520, "final_certificates": 171, "elapsed_seconds": 5.73}
+{"scope": "d14_156_k1", "outer": 38579, "columns": 135709, "elapsed": 2.9}
+{"scope": "d14_156_k1", "outer": 56336, "columns": 171876, "elapsed": 4.2}
+{"scope": "d14_156_k1", "outer": 76910, "columns": 222863, "elapsed": 5.8}
+{"scope": "d14_156_k1", "outer": 80066, "columns": 243808, "elapsed": 6.7}
+{"scope": "d14_156_k1", "outer": 103172, "columns": 269631, "elapsed": 8.2}
+{"scope": "d14_156_k1", "outer": 107542, "columns": 273800, "elapsed": 8.5}
+{"scope": "d14_156_k1", "outer": 109096, "columns": 284800, "elapsed": 8.8}
+{"scope": "d14_156_k1", "outer": 137849, "columns": 287394, "elapsed": 9.8}
+{"scope": "d14_156_k1", "outer": 139956, "columns": 289394, "elapsed": 9.9}
+{"scope": "d14_156_k1", "outer": 141577, "columns": 291394, "elapsed": 10.1}
+{"scope": "d14_156_k1", "outer": 174358, "columns": 683420, "elapsed": 17.9}
+{"scope": "d14_156_k1", "outer": 176258, "columns": 1053128, "elapsed": 25.4}
+{"scope": "d14_156_k1", "outer": 210834, "columns": 1404223, "elapsed": 32.3}
+{"scope": "d14_156_k1", "outer_states": 401543, "columns": 3252212, "final_certificates": 1788, "elapsed_seconds": 64.37}
+{"status": "PASS", "counts": {"min_cut_vs_exhaustive_injections": 4900, "Fan_exact_arithmetic": 1, "witness_table_exact": 1, "independent_outer_cardinality": 137, "unique_outer_key": 543578, "outer_band_membership": 543578, "degree_domain_membership": 543578, "residual_domain_membership": 543578, "pair_prune_recomputed": 492204, "source_total_prune_recomputed": 28408, "source_threshold_prune_recomputed": 14207, "column_lower_vector_recomputed": 8759, "column_lower_prune_recomputed": 5401, "recognized_final_kind": 3358, "independent_labelled_column_cardinality": 3358, "unique_labelled_column": 3442212, "column_domain_membership": 3442212, "every_column_cap_recomputed_by_min_cut": 3442212, "every_column_margin_recomputed": 3442212, "surviving_column_list_recomputed": 3358, "total_outer_count": 5, "outer_key_fingerprint": 5, "complete_band_coverage": 137, "total_column_count": 5, "scope_needs_no_additional_certificates": 3, "certificate_input_hash": 2, "certificate_unique_coverage": 1959, "certificate_caps_rederived": 1959, "certificate_subset_valid": 1959, "certificate_strict_contradiction_recomputed": 1959, "zero_uncertified_survivors": 2, "certificate_totals": 2, "all_k_r_bands_covered": 6}, "scopes": [{"scope": "d14_157", "outer_states": 59264, "columns": 1480, "final_certificates": 0, "elapsed_seconds": 1.78}, {"scope": "d15_157", "outer_states": 108, "columns": 0, "final_certificates": 0, "elapsed_seconds": 0.01}, {"scope": "d15_156", "outer_states": 211, "columns": 0, "final_certificates": 0, "elapsed_seconds": 0.01}, {"scope": "d14_156", "outer_states": 82452, "columns": 188520, "final_certificates": 171, "elapsed_seconds": 5.73}, {"scope": "d14_156_k1", "outer_states": 401543, "columns": 3252212, "final_certificates": 1788, "elapsed_seconds": 64.37}]}

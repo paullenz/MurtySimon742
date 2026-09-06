@@ -1,0 +1,66 @@
+{
+  "a": 15,
+  "affects_audited_candidate": false,
+  "audited_candidate_a": [
+    8,
+    9,
+    10
+  ],
+  "available_distinct_suppliers": 8,
+  "b": 9,
+  "degrees": [
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0
+  ],
+  "direction": "Overestimates capacity; cannot by itself cause an unsound rejection",
+  "independent_caps": [
+    8,
+    8,
+    8,
+    8,
+    8,
+    8,
+    8,
+    8,
+    8
+  ],
+  "primary_caps": [
+    14,
+    14,
+    14,
+    14,
+    14,
+    14,
+    14,
+    14,
+    14
+  ],
+  "proposed_length_guard_tested": true,
+  "reason": "zip() in matches() silently truncates when there are too few suppliers",
+  "residuals": [
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1
+  ],
+  "scope_explanation": "In every audited scope, q<=a-1<=9 and b-1>=13, so supplier exhaustion cannot occur.",
+  "status": "OUT_OF_SCOPE_HELPER_DEFECT_REPRODUCED"
+}
