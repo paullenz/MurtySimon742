@@ -1,0 +1,99 @@
+{
+  "audit": "n28 direct candidate redteam v1",
+  "date": "2026-09-07",
+  "outcome": "NO_BLOCKING_DEFECT_FOUND_IN_AUDITED_DIRECT_ROUTE",
+  "mathematical_status": "complete candidate; independent mathematical review OPEN",
+  "independent_external_review": false,
+  "full_original_component_replays": {
+    "v3": true,
+    "v4": true,
+    "v5": true,
+    "v6": true,
+    "LocalIncidence_v7": true,
+    "direct197_v8": true
+  },
+  "original_archive_payloads_unchanged": 400,
+  "equality_handoffs_byte_identical": 5,
+  "scope_196": {
+    "Delta": 15,
+    "charging_tuples": 18645,
+    "retained_demands": 1976,
+    "residual_rows": 17669896,
+    "row_survivors": 24411,
+    "projected_survivors": 13196,
+    "v5_survivors": 6918,
+    "v6_survivors": 388,
+    "v7_rejections": [
+      22,
+      19,
+      347
+    ],
+    "final_survivors": 0
+  },
+  "scope_197": {
+    "Delta": 15,
+    "charging_tuples": 12012,
+    "retained_demands": 1229,
+    "residual_rows": 8216928,
+    "row_survivors": 5154,
+    "projected_survivors": 2959,
+    "joint_survivors": 1584,
+    "final_rejections": [
+      787,
+      790,
+      7
+    ],
+    "final_survivors": 0,
+    "weak_core_reduction_used": false,
+    "old_t1_survivors_used_as_t2_domain": false
+  },
+  "additional_kernel": {
+    "v6_leaves": 7011,
+    "v7_leaves": 388,
+    "v8_leaves": 1584,
+    "total_leaves": 8983,
+    "constraint_terms": 833923,
+    "v6_branch_roots": 91,
+    "v6_branch_leaves": 572,
+    "uses_original_model_constructors": true,
+    "uses_original_certificate_or_branch_verifier": false,
+    "third_independent_mathematical_model": false,
+    "negative_certificate_controls": 18,
+    "additional_branch_controls": 6
+  },
+  "fresh_graph_sample": {
+    "graphs": 107,
+    "nonbipartite_graphs": 102,
+    "selected_system_occurrences": 462,
+    "selected_incidences": 1659,
+    "local_source_instances": 3147,
+    "positive_surplus_systems": 0,
+    "sample_exhaustive": false
+  },
+  "findings": [
+    {
+      "id": "RT-01",
+      "severity": "NONBLOCKING_HARDENING",
+      "summary": "Standalone v8 C++ helper lacks input range guards; authenticated complete proof driver excludes malformed input",
+      "original_proof_inputs_affected": false,
+      "additive_guard_patch_tested": true,
+      "hardened_full_domain_rows": 8216928,
+      "valid_reports_and_survivor_band_bytes_unchanged": true,
+      "invalid_controls_rejected": 4
+    },
+    {
+      "id": "RT-02",
+      "severity": "RESOLVED_PRESERVATION",
+      "summary": "Original V6/LocalIncidence-V7/V8 archives located and relocated unchanged with verified readback"
+    }
+  ],
+  "all_order28_degrees_scope_arithmetic_pass": true,
+  "Fan_strict_bound": "78883/400",
+  "Fan_original_proof_reaudited": false,
+  "alternative_degree_load_v7_complete_binary_replayed": false,
+  "formal_kernel_verification": false,
+  "new_orders_or_uniform_coefficient_claimed": false,
+  "complete_combined_audit_driver_pass": true,
+  "combined_driver_jobs": 13,
+  "combined_driver_seconds": 457.410673806
+}

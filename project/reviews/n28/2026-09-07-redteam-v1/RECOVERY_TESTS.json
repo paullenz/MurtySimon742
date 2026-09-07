@@ -1,0 +1,14 @@
+{
+  "tampered_storage": {
+    "rejected": true,
+    "error": "Audit recovery FAILED: Storage checksum mismatch: storage/audit.tar.xz.b64.part01"
+  },
+  "changed_mirror": {
+    "rejected": true,
+    "error": "Audit recovery FAILED: Readable mirror differs: REPORT.md"
+  },
+  "existing_output": {
+    "rejected": true,
+    "error": "Audit recovery FAILED: Output must be a new directory"
+  }
+}

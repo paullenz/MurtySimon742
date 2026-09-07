@@ -1,0 +1,38 @@
+{
+  "parts": [
+    {
+      "path": "storage/audit.tar.xz.b64.part00",
+      "bytes": 15001,
+      "sha256": "d6ff62c9fea3327b111af6fe2a1e57959c631688b6ffb6dfd7f2e7c970b23e59",
+      "git_blob": "c5f6be45205a79ed98063c7afc38e423b576f483"
+    },
+    {
+      "path": "storage/audit.tar.xz.b64.part01",
+      "bytes": 15001,
+      "sha256": "6dbbb678a82998bc90b097d254af569391fa7c447298e403af32d3a07384ee2b",
+      "git_blob": "391fd2f77c1143cecc722dbe04070dd5642606fb"
+    },
+    {
+      "path": "storage/audit.tar.xz.b64.part02",
+      "bytes": 15001,
+      "sha256": "98db8f8c5b4ffad02b15af948c8f95850cc460e9bd5dbf544ce9918e530d9645",
+      "git_blob": "e29c527259ccb0a83572c8f8a174e3c629347d86"
+    },
+    {
+      "path": "storage/audit.tar.xz.b64.part03",
+      "bytes": 14501,
+      "sha256": "0f6f357e6930482e4d4d9bde1e63e89bef959c6cca734bb92b30f6dd0d15d17b",
+      "git_blob": "5ace0568dbedc9b494c79e1b740668cb5b69337d"
+    }
+  ],
+  "archive_sha256": "912a38a6fe692086dfa2104d1446a4eb15420003d1e1394e23425832fe03070f",
+  "archive_bytes": 44624,
+  "payload_files": 76,
+  "root": "MurtySimon_N28_RedTeam_v1",
+  "format": "base64 split tar.xz; exact original payloads, not a byte reconstruction of the distribution ZIP",
+  "distribution_zip": {
+    "filename": "MurtySimon_N28_RedTeam_v1.zip",
+    "bytes": 83873,
+    "sha256": "054b1f02ad07208e41b4bf1498d2fb52d027fb66f1372e4b5d2c3f2f51137b8c"
+  }
+}
