@@ -1,0 +1,50 @@
+{
+  "schema": "murty-simon-readable-publication-receipt-v1",
+  "date": "2026-09-07",
+  "repository": "paullenz/MurtySimon25",
+  "branch": "main",
+  "publication_commit": "544f098d8a21381ef0d69256b74a02f6f0499b70",
+  "parent_commit": "00ad1a511971397fcd8a4341b021493c2383252e",
+  "publication_tree": "ff8c1316cc65948f82ed4a19535f56b3ab4c2ffe",
+  "publication_scope": "readable v7 candidate proof, core-scope audit, results, reports and README; not complete binary evidence",
+  "readable_publication_complete": true,
+  "complete_binary_audit_archive_attached_to_repository": false,
+  "branch_readback_after_nonforced_update": "544f098d8a21381ef0d69256b74a02f6f0499b70",
+  "verified_blobs": {
+    "README.md": "bda159662c4524710d3b40712b3287a076dcf6d2",
+    "project/reviews/history/README_before_n28_candidate_v7.md": "af5b8fb4f7c2162e5e668a4c51022141d920d180",
+    "checkpoint": {
+      "N28_CANDIDATE.md": "f6016b72e6852a9d3934614b054e596f6f92cfdd",
+      "CORE_SCOPE_AUDIT.md": "0a2153e8bd00bb5fcc444432502cdfe298fd018c",
+      "PROOF.md": "36f937b9c92c382e5e3cfe419c3283b32cec5b09",
+      "README.md": "98a3a5392d49d75b99d89d7232f81ab2fd749b58",
+      "RESULTS.json": "4cce79d0770fbc02950ee7cb1d4e9c8b54716fdc",
+      "DEPENDENCIES.json": "fed3accee3086356202d73cf13c837f7f2d39c4a",
+      "PUBLICATION_SCOPE.json": "33bc8f4c678c6ed2f8f60dbe1aa25df8f2ea32bf",
+      "evidence/EXACT_CHECK_REPORT.json": "0aeb06a191ee34053c4bccfcf9c2052512771c53",
+      "evidence/V7_FRESH_CHECK_REPORT.json": "5be19db29bacab4bcf5f82b7a8f182753e48a2e7"
+    }
+  },
+  "checks_completed": {
+    "nonforced_branch_update": true,
+    "main_readback": true,
+    "committed_checkpoint_directory_and_evidence_tree_hashes_match_local_files": true,
+    "root_readme_and_candidate_theorem_read_back_at_publication_commit": true,
+    "commit_comparison_only_expected_eleven_paths": true,
+    "previous_readme_preserved_using_identical_git_blob": true,
+    "only_existing_file_modified_is_root_readme": true,
+    "no_frozen_proof_or_governed_ledger_changes": true,
+    "full_audit_bundle_integrity_verified_locally": true
+  },
+  "complete_audit_bundle": {
+    "bundle_filename": "MurtySimon_N28_Complete_Candidate_Audit_v7.zip",
+    "bytes": 21975757,
+    "sha256": "7e8440aee4d4e566b94937f6d2b927b216c1064eb2a4d40d4153c80e399c8005",
+    "outer_payload_files": 14,
+    "all_outer_zip_members_verified_byte_for_byte": true,
+    "nested_payload_count": 285,
+    "v7_zip_sha256": "ba2fe44a116b754be75b40ee2302feeef5ca0b11d35bcab740d60e4e3bd408d8"
+  },
+  "mathematical_status": "complete candidate order-28 route; independent mathematical review OPEN",
+  "receipt_scope": "Records the preceding readable-document publication. This receipt is added in a subsequent documentation-only commit whose branch attachment is checked separately."
+}
