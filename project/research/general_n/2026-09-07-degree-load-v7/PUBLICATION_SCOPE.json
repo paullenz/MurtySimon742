@@ -1,0 +1,25 @@
+{
+  "schema": "murty-simon-v7-readable-record-publication-v1",
+  "date": "2026-09-07",
+  "repository_baseline": "00ad1a511971397fcd8a4341b021493c2383252e",
+  "publication_scope": "readable proofs, scope audit, result summary, integrity/check reports and root README; binary evidence archives not included",
+  "complete_binary_audit_archive_attached_to_repository": false,
+  "full_archive": {
+    "bundle_filename": "MurtySimon_N28_Complete_Candidate_Audit_v7.zip",
+    "bytes": 21975757,
+    "sha256": "7e8440aee4d4e566b94937f6d2b927b216c1064eb2a4d40d4153c80e399c8005",
+    "outer_payload_files": 14,
+    "all_outer_zip_members_verified_byte_for_byte": true,
+    "nested_payload_count": 285,
+    "v7_zip_sha256": "ba2fe44a116b754be75b40ee2302feeef5ca0b11d35bcab740d60e4e3bd408d8"
+  },
+  "mathematical_status": "complete candidate n=28 proof route; independent mathematical review OPEN",
+  "no_frozen_proof_or_theorem_ledger_change": true,
+  "source_document_git_blobs": {
+    "N28_CANDIDATE.md": "f6016b72e6852a9d3934614b054e596f6f92cfdd",
+    "PROOF.md": "36f937b9c92c382e5e3cfe419c3283b32cec5b09",
+    "CORE_SCOPE_AUDIT.md": "0a2153e8bd00bb5fcc444432502cdfe298fd018c",
+    "RESULTS.json": "4cce79d0770fbc02950ee7cb1d4e9c8b54716fdc"
+  },
+  "branch_attachment_verified": "Recorded in a subsequent receipt after commit and read-back; this file is preflight only."
+}

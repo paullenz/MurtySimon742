@@ -1,0 +1,58 @@
+{
+  "status": "complete candidate n=28 proof route; independent mathematical review OPEN",
+  "scope": {
+    "order": 28,
+    "upper_bound": 196,
+    "equality_graph": "K_14,14"
+  },
+  "finite_core_scope": {
+    "a": 12,
+    "b": 15,
+    "t": 1,
+    "positive_C_minimum_degree": true
+  },
+  "input_v6_rows": 388,
+  "input_v6_demand_patterns": 167,
+  "new_joint_exclusions": 173,
+  "new_load_exclusions": 215,
+  "final_survivors": 0,
+  "higher_edge_counts": "covered by new weak-core density reduction plus explicit core-scope audit",
+  "full_conjecture_proved": false,
+  "governed_theorem_ledger_promoted": false,
+  "independent_external_review": "OPEN",
+  "formal_verification": "OPEN",
+  "global_coefficient_changed": false,
+  "upstream_replayed": [
+    "v3 n28/Delta16 scope",
+    "v4 full arithmetic",
+    "v5 full separate checking route",
+    "v6 full separate checking route"
+  ],
+  "new_exact_check": {
+    "joint_rejections": 173,
+    "load_rejections": 215,
+    "input_rows": 388,
+    "survivors": 0
+  },
+  "new_model_lift_tests": {
+    "lifts": 4394,
+    "exact_constraint_checks": 3421141,
+    "fractional_values": 62930,
+    "nonzero_joint_arc_events": 3883,
+    "nonzero_two_sided_source_events": 338,
+    "singleton_lifts": 1646,
+    "broad_lifts": 1646,
+    "deleted_lifts": 1102,
+    "nonempty_F_deletions": 1102,
+    "all_active_deleted_cores": 1090,
+    "systems": 916,
+    "positive_surplus_originals": 0
+  },
+  "deduplicated_core_reduction_tests": {
+    "input_selected_systems": 916,
+    "nonempty_deletions": 672,
+    "all_active_deletions": 665,
+    "minimum_C_degree_preserved": 182,
+    "reduced_complement_not_diameter_two": 672
+  }
+}

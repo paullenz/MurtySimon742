@@ -1,0 +1,34 @@
+{
+  "repository_baseline": "00ad1a511971397fcd8a4341b021493c2383252e",
+  "original_archives": [
+    {
+      "version": "v3",
+      "filename": "MurtySimon_GeneralN_DemandSupport_v3.zip",
+      "bytes": 1258114,
+      "sha256": "4d5e06a85f2e9112776205a632436a8e9224bc9f14055ceabf5a67dd83d89fd1"
+    },
+    {
+      "version": "v4",
+      "filename": "MurtySimon_GeneralN_LabelTail_v4.zip",
+      "bytes": 566681,
+      "sha256": "3944e786fb0ea5322ae3e18dd177ef8b01046d903076a4ca61caf89fdc5ae184"
+    },
+    {
+      "version": "v5",
+      "filename": "MurtySimon_GeneralN_ColumnPropagation_v5.zip",
+      "bytes": 1035233,
+      "sha256": "79bdbdf02b23b9eef38e964b54eb300921b24d539014f07b476655d1575e63b6"
+    },
+    {
+      "version": "v6",
+      "filename": "MurtySimon_GeneralN_SharedAdjacency_v6.zip",
+      "bytes": 17940219,
+      "sha256": "d00a9627e9ed4d8a6f22ae1f2b194791412ee2d16d502b1968be16e02aa30496"
+    }
+  ],
+  "mathematical_primary_sources": [
+    "Haynes-Henning-van der Merwe-Yeo 2014 Theorems 3.1-3.2 and Observation 3.4",
+    "Dailly-Foucaud-Hansberg 2019 Theorem 4"
+  ],
+  "frozen_n25_n27_not_modified": true
+}

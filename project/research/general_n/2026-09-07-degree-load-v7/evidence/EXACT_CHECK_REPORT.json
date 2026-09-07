@@ -1,0 +1,29 @@
+{
+  "all_exact_checks_pass": true,
+  "counts": {
+    "joint_rejections": 173,
+    "load_rejections": 215,
+    "input_rows": 388,
+    "survivors": 0
+  },
+  "input_sha256": "1c40232b777578b5616e630e86fde2cf815c1a19c6304f3d317983fe94a9f679",
+  "negative_controls_rejected": [
+    "zero_dual",
+    "forged_rhs",
+    "wrong_constraint_hash",
+    "duplicate_multiplier",
+    "negative_inequality_weight",
+    "noninteger_weight",
+    "omitted_disposition",
+    "repeated_disposition"
+  ],
+  "seconds": 154.4084916114807,
+  "solver_imported": false,
+  "scope": {
+    "n": 28,
+    "b": 15,
+    "t": 1,
+    "m": 196
+  },
+  "mathematical_status": "candidate; independent mathematical review OPEN"
+}

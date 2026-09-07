@@ -1,0 +1,28 @@
+{
+  "integrity": {
+    "payload_files": 62,
+    "all_hashes_pass": true
+  },
+  "full_v7_check_performed": true,
+  "mathematical_review": "OPEN",
+  "jobs": [
+    {
+      "script": "check_all.py",
+      "exit_code": 0,
+      "fresh_report_matches_ignoring_seconds_only": true
+    },
+    {
+      "script": "test_lifts.py",
+      "exit_code": 0,
+      "fresh_report_matches_ignoring_seconds_only": true
+    },
+    {
+      "script": "test_core_reduction.py",
+      "exit_code": 0,
+      "fresh_report_matches_ignoring_seconds_only": true
+    }
+  ],
+  "seconds": 384.44825131900006,
+  "frozen_checkpoint_unchanged": true,
+  "all_checks_pass": true
+}

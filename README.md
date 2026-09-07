@@ -1,138 +1,75 @@
 # Murty–Simon / Erdős Problem #742
 
-**n=25 and n=27 candidate proofs; active general-order research.**
+**Candidate proofs at n=25, n=27 and now n=28; active general-order research.**
 
-**Status updated: 7 September 2026.** The complete order-25 and order-27 arguments remain **candidate proofs awaiting independent mathematical review**. The general-order programme has additional candidate inequalities and profile exclusions, but **no complete order above 27 is claimed resolved**. Internal arithmetic reproduction, preservation of evidence and independent review are separate status questions. This repository does not announce the conjecture as settled.
+**Status updated: 7 September 2026. Independent mathematical review remains OPEN.** The new [order-28 candidate](project/research/general_n/2026-09-07-degree-load-v7/N28_CANDIDATE.md) proposes **at most 196 edges, with equality exactly for K(14,14)**. The final 388 numerical rows are excluded with exact checked certificates; a new weak-core reduction supplies the higher-edge-count scope. This is a complete candidate route, not an announcement of independent acceptance or a solution of the full conjecture.
+
+**Evidence availability:** the readable v7 proof, scope audit, results and check reports are recorded here. The complete **21,975,757-byte audit ZIP**, containing the original v3–v6 archives and the full v7 code/certificates, was supplied separately in the research chat and **is not yet attached to this repository**. Its filename and SHA-256 are pinned in the [v7 publication-scope record](project/research/general_n/2026-09-07-degree-load-v7/PUBLICATION_SCOPE.json). Readable-document publication must not be confused with complete binary-evidence publication. The latest fully archived repository research checkpoint remains [v5](project/research/general_n/2026-09-07-column-propagation-v5/README.md).
 
 ## Current position
 
-| Workstream | Preserved position | Remaining obligation |
+| Workstream | Candidate result | Review or preservation obligation |
 |---|---|---|
-| n=25 | Complete candidate bound of 156 edges, with equality only for K₁₂,₁₃ | Independent mathematical review and external computational reproduction OPEN |
-| n=27 | Complete candidate bound of 182 edges, with equality only for K₁₃,₁₄ | Independent mathematical review and external computational reproduction OPEN |
-| General order | Candidate high-degree theorem, coupled resource and activation inequalities, and infinite families of excluded numerical profiles | Middle-degree region remains open; no full general proof |
-| n=28, Δ=15 | At m=196, **6,918 numerical rows in 830 demand patterns** remain after the v5 tests | One common column assignment across multiple sources, shared adjacency, and higher-edge-count coverage for the new tests |
+| n=25 | At most 156 edges; equality only K(12,13) | Independent mathematical review and external reproduction OPEN |
+| n=27 | At most 182 edges; equality only K(13,14) | Independent mathematical review and external reproduction OPEN |
+| n=28 | At most 196 edges; equality only K(14,14) | Independent review OPEN; complete audit ZIP awaits repository attachment |
+| General order | Candidate high-degree result, coupled degree/label constraints and weak-core density reduction | No complete all-order proof or new uniform coefficient |
 
-For the active research, start with the [general-order overview below](#general-order-research) and the [latest preserved column-propagation v5 checkpoint](project/research/general_n/2026-09-07-column-propagation-v5/README.md). For external review of the frozen n=25 candidate, use the following reviewer entry points.
+The frozen n=25/n=27 editions and governed theorem ledger are unchanged. A candidate mathematical proof, exact arithmetic reproduction, evidence availability and independent review are separate status questions.
 
-## Start here: n=25 review
+## Start here: n=28 candidate
 
-The proposed order-25 result is that every simple diameter-2 edge-critical graph has at most **156 edges**, with equality exactly for **K₁₂,₁₃**. The argument and finite calculations have been examined internally and reproduced. Independent mathematical review, independent reproduction by another researcher and formal verification remain outstanding.
+Read the [assembled candidate theorem](project/research/general_n/2026-09-07-degree-load-v7/N28_CANDIDATE.md), the [new model and density-reduction proofs](project/research/general_n/2026-09-07-degree-load-v7/PROOF.md), and especially the [core-scope audit](project/research/general_n/2026-09-07-degree-load-v7/CORE_SCOPE_AUDIT.md). The [v7 directory guide](project/research/general_n/2026-09-07-degree-load-v7/README.md) explains the separately supplied complete replay bundle.
 
-1. Read the [reviewer manuscript](releases/n25-reviewer-v1/N25_Reviewer_Manuscript_v1.pdf).
-2. Follow the [review guide and complete replay instructions](releases/n25-reviewer-v1/REVIEW_GUIDE.md).
-3. Inspect the [frozen candidate proof](project/reviews/n25/2026-09-06-full-chain-candidate-v1/PROOF.md) and [exact result tables](project/reviews/n25/2026-09-06-full-chain-candidate-v1/RESULTS.md).
-4. Read the [literature and attribution check](releases/n25-reviewer-v1/LITERATURE_AND_ATTRIBUTION.md) and [relationship to earlier project work](project/reviews/n25/2026-09-06-full-chain-candidate-v1/RECONCILIATION.md).
+The new degree-15 calculation at 196 edges closes the v6 frontier:
 
-## Reviewer edition 1
+| Stage | Inputs | Exact exclusions | Remaining |
+|---|---:|---:|---:|
+| Joint arc / column-option / endpoint-degree events | 388 | 173 | 215 |
+| Source incoming/outgoing degree and actual label-load consistency | 215 | 215 | **0** |
 
-The [versioned reviewer package](releases/n25-reviewer-v1/README.md) includes a PDF manuscript, editable TeX and Markdown, the unchanged complete evidence archive, checksums, a wrapper covering the entire numerical route, and forms for reporting review findings. Package assembly instructions are provided alongside the archive parts. A GitHub Release page is a separate distribution step; its prepared instructions and text are in [RELEASE_UPLOAD_GUIDE.md](releases/n25-reviewer-v1/RELEASE_UPLOAD_GUIDE.md).
+These are necessary-condition rows, not graphs. Every row has an exact integer contradiction checked against separately reconstructed constraints. The v4 full arithmetic and v5/v6 full separate-checking routes were rerun, their handoff bytes compared, and v3's complete n28/Delta16 scope rechecked. The new v7 checker and graph/core tests also passed in a fresh copy. Both implementations are by the same assistant, not independent research authors.
 
-From the extracted reviewer package:
+The upper-bound and equality claims need more than a zero equality-level frontier. The new proof weakens critical graphs to **active B-quasi-edge cores**, a class preserved by adding edges inside the complement's A-part. This lowers the surplus to the tested level while preserving exactly the structural premises of the finite route. The reduced complement need not have diameter two. **No deletion-preserves-criticality assertion and no unproved monotonicity of the old column tests is used.** The scope audit is therefore a central external-review target.
 
-```sh
-python3 -I -B review_package.py --verify-only
-python3 -I -B review_package.py --replay --output /absolute/path/to/new-n25-replay
-```
+The complete audit bundle's `replay_chain.py --check --output ...` reruns all required numerical stages from the original archives. Its default `--verify-only` checks integrity and stage identity, not arithmetic. Full-chain checking needs Python and a C++17 compiler with Boost headers for the inherited v5 program; v7's exact checker itself uses only Python's standard library. The bundle records which component checks were executed and distinguishes these from testing the new combined wrapper in integrity mode.
 
-The first command checks manifests and all final equality certificates. The second also reruns the original Δ14/157-edge checks and all new numerical scopes. Python 3.10 or later and its standard library suffice. The largest replay needs several gigabytes of temporary memory and disk space. The expanded column JSON files are losslessly reconstructable from the compressed ledgers.
+## Frozen n=25 review entry points
 
-## What the n=25 candidate contains
+Start with the [reviewer manuscript](releases/n25-reviewer-v1/N25_Reviewer_Manuscript_v1.pdf), [review guide](releases/n25-reviewer-v1/REVIEW_GUIDE.md), [frozen candidate proof](project/reviews/n25/2026-09-06-full-chain-candidate-v1/PROOF.md), and [exact result tables](project/reviews/n25/2026-09-06-full-chain-candidate-v1/RESULTS.md). The [reviewer package](releases/n25-reviewer-v1/README.md) contains the unchanged evidence, sources, checksums and replay wrapper.
 
-- Published reductions, including Fan's strict bound reducing a counterexample to exactly 157 edges.
-- A witness-count argument for maximum degree 13, including the equality case.
-- Residual-edge arguments for maximum degrees 14, 15 and 16.
-- **Maximum degree Δ≥17:** [Section 2 of the proof](project/reviews/n25/2026-09-06-full-chain-candidate-v1/PROOF.md#2-published-reductions-and-their-exact-numerical-effect) applies Haynes–Henning–van der Merwe–Yeo Theorem 3.6(a) to the complement. At n=25 this gives **e(G)≤155** in the remaining non-bipartite case. Stars and complete bipartite graphs are handled separately.
-- Explicit finite checks for both 157-edge exclusion and 156-edge equality. All **1,959** final numerical equality columns have checked rejection certificates.
+The candidate includes the degree-13 witness proof, degree-14/15/16 residual arguments, the published complement minimum-degree reduction for Delta>=17, and 1,959 checked final equality-column certificates. See the [reconciliation](project/reviews/n25/2026-09-06-full-chain-candidate-v1/RECONCILIATION.md), [literature/attribution note](releases/n25-reviewer-v1/LITERATURE_AND_ATTRIBUTION.md) and [internal red-team report](project/reviews/n25/2026-09-06-redteam-v1/N25_Red_Team_Report_2026-09-06.md).
 
-The complete general Murty–Simon conjecture is not proved by this repository. General-order research is now active, but it is not part of the frozen n=25 candidate's theorem claim. The literature check did not locate a published full order-25 resolution, but it does not establish novelty or priority.
+The [external review register](releases/n25-reviewer-v1/REVIEW_REGISTER.json) remains OPEN. Paul [reported sending a review invitation to Dr Florent Foucaud](project/reviews/n25/outreach/2026-09-07-foucaud-sent-user-report.md). No completed external assessment is asserted here.
 
-## Attribution and review status
+## Frozen n=27 review entry points
 
-Paul Lenz directed the project. ChatGPT/Codex supplied substantial mathematical development, code and internal checking. The initial two arithmetic implementations were produced with the same assistant; agreement between them is a software cross-check, not independent mathematical authorship or expert endorsement. Published inputs are cited in the manuscript.
-
-A further [internal red-team audit](project/reviews/n25/2026-09-06-redteam-v1/N25_Red_Team_Report_2026-09-06.md) examines the lemmas and their assumptions and uses a third arithmetic checker to recalculate all stored numerical exclusions. It found no blocking failure in the audited candidate, but records a helper defect outside the parameter ranges used in this proof. This remains a same-assistant check; external review is still open.
-
-The [external review register](releases/n25-reviewer-v1/REVIEW_REGISTER.json) records both mathematical and independent computational review as **OPEN**. Paul [reported sending an n=25 review invitation to Dr Florent Foucaud](project/reviews/n25/outreach/2026-09-07-foucaud-sent-user-report.md) on 7 September 2026. No acceptance or completed external assessment has been reported.
-
-## Larger-order extension: n=27
-
-A separate [n=27 candidate proof and review package](project/reviews/n27/2026-09-07-candidate-v1/README.md) extends the residual method and proposes the bound **182 edges**, with equality only for **K₁₃,₁₄**. Its complete internal arithmetic checks leave no surviving configurations. The [full evidence archive](releases/n27-candidate-v1/README.md) includes source code, all ledgers, certificates and replay instructions. Independent mathematical review and external computational reproduction remain **OPEN**. This extension does not alter the frozen n=25 editions or the governed n=25 theorem ledger.
+The [n=27 candidate proof](project/reviews/n27/2026-09-07-candidate-v1/README.md) proposes 182 edges with equality only K(13,14). Its [full evidence package](releases/n27-candidate-v1/README.md) provides the complete numerical route and replay instructions. Independent mathematical review and external computational reproduction remain OPEN.
 
 ## General-order research
 
-**Candidate mathematics; exact internal arithmetic REPRODUCED; independent review OPEN.** The latest preserved research checkpoint is [column propagation and supplement activation v5](project/research/general_n/2026-09-07-column-propagation-v5/README.md). It contains the complete original ZIP plus readable proof, results, review notes and integrity/extraction instructions. Earlier [label-tail v4](project/research/general_n/2026-09-07-label-tail-v4/README.md), committed at `a96711534b47e12c597d826dcf23896cf396f9e6`, remains unchanged.
-
-### General maximum-degree result
-
-The [coupled-resource v2 derivation](project/research/general_n/2026-09-07-coupled-resource-v2/PROOF.md) gives the candidate implication, for diameter-two edge-critical graphs and n≥4,
+The [coupled-resource v2 derivation](project/research/general_n/2026-09-07-coupled-resource-v2/PROOF.md) gives the candidate implication, for n>=4,
 
 ```text
-Delta(G) >= beta*n  ==>  e(G) < floor(n^2/4),
-beta = (10 - sqrt(2))/14 = 0.6132704598...
+Delta(G) >= ((10-sqrt(2))/14)*n  ==>  e(G) < floor(n^2/4),
+(10-sqrt(2))/14 = 0.6132704598...
 ```
 
-This improves the earlier project's coefficient `0.630601937...` from the [residual h-index checkpoint](project/research/general_n/2026-09-07-residual-hindex-v1/README.md). It is a general mathematical argument conditional on its stated graph-theoretic inputs, not an extrapolation from finite tests. The v3, v4 and v5 checkpoints do **not** improve this coefficient. The middle-degree region above the near-half-degree reduction remains open.
+The v7 work does not improve that coefficient. The middle-degree region remains open in general. The [residual h-index v1](project/research/general_n/2026-09-07-residual-hindex-v1/README.md), [pair budgets v2](project/research/general_n/2026-09-07-pair-budgets-v2/README.md), [demand-support v3](project/research/general_n/2026-09-07-demand-support-v3/PROOF.md), [overlapping demand-stability v3](project/research/general_n/2026-09-07-demand-stability-v3/README.md), [label-tail v4](project/research/general_n/2026-09-07-label-tail-v4/README.md), and [column-propagation v5](project/research/general_n/2026-09-07-column-propagation-v5/README.md) remain preserved unchanged.
 
-### Fixed-degree exclusions, not complete new orders
+The two v3 workstreams cover the same three degree cases and are not counted twice. Their exclusions at (n,Delta)=(30,17) and (33,19) do not complete those orders. Their (28,16) exclusion is one branch of the new order-28 assembly. The v4/v5 historical frontiers of 13,196 and 6,918 rows were superseded in the new research; their original reports are not rewritten. Excluded infinite profile families are not whole-order theorems.
 
-The [demand-support v3 proof](project/research/general_n/2026-09-07-demand-support-v3/PROOF.md) proposes the following exclusions at and above the equality edge counts. The [demand-stability v3 checkpoint](project/research/general_n/2026-09-07-demand-stability-v3/README.md) covers the same three degree cases through alternative arguments and internally reproduced calculations; these are **not counted twice**.
-
-| Order n | Excluded maximum degree | Edge-count scope | Remaining dense non-bipartite degree after the inherited reductions |
-|---|---|---|---|
-| 28 | 16 | m≥196 | 15 |
-| 30 | 17 | m≥225 | 16 |
-| 33 | 19 | m≥272 | 18 |
-
-The proof explicitly justifies higher-edge-count coverage for these v3 exclusions through monotonicity of the necessary conditions. That coverage is not automatically inherited by new tests.
-
-### What label-tail v4 adds
-
-The label-tail inequality couples each label's actual neighbourhood capacity to one global budget for extra selected incidences. It gives a hand contradiction for the previously retained **(n, Δ, m)=(64,33,1025) numerical profile**, and extends to an infinite two-parameter family of excluded profiles. **Neither that one profile nor the infinite family constitutes a proof for every graph at the corresponding orders.** The [pair-budgets v2 work](project/research/general_n/2026-09-07-pair-budgets-v2/README.md) records the earlier inequalities and the stress-test profile from which this continuation developed.
-
-At **n=28, Δ=15, m=196**, v4 reproduces the initial 18,645-demand screen, leaving 1,976 demand patterns for full residual-row expansion. That specified expansion covers **17,669,896 numerical rows**, retains **24,411**, and then leaves **13,196 rows in 1,119 demand patterns** after the additional projected tests. These are the preserved historical v4 results and the input to v5, not the current frontier. The survivors are necessary-condition rows, **not constructed graphs**.
-
-### What column propagation and activation v5 adds
-
-The [v5 proof](project/research/general_n/2026-09-07-column-propagation-v5/PROOF.md) couples individual degree/residual-column options to one source row at a time, including the missing-neighbour restriction. Its general supplement-activation inequality charges the additional outgoing selections that mandatory connections force at their supplements, using incoming-capacity normalization to avoid double counting. A solver-free corollary gives **78 > 57** for one retained row and excludes a specified infinite family of demand/residual patterns at n=4p+4, p≥10. These are pattern exclusions, not whole-order theorems.
-
-The [exact v5 results](project/research/general_n/2026-09-07-column-propagation-v5/RESULTS.json) are:
-
-| Stage at n=28, Δ=15, m=196 | Rows remaining |
-|---|---:|
-| Preserved v4 input | 13,196 |
-| Joint column, matching and one-source-row tests | 7,725 |
-| After 663 activation-cost and 144 activation-cut certificates | **6,918** |
-
-The 6,918 survivors occupy **830 demand patterns**. The 47 additional short block certificates overlap those exclusions and are not added to the totals. Every surviving row, individual option domain, source bound and forced-label set is preserved in `evidence/FINAL_SURVIVORS.json` inside the complete archive.
-
-**The structural gap remains:** different source rows may be witnessed by different complete column assignments. The next target is one common assignment across multiple sources, then the individual-label tail and shared-neighbourhood restrictions. The degree case and order 28 remain **OPEN**. The v4/v5 finite tests cover **196 edges only**; they do not claim coverage of 197 edges or every larger edge count. The bound and equality characterization remain separate proof obligations.
-
-### Recovery, replay and limits
-
-Follow the [v5 archive verification and replay instructions](project/research/general_n/2026-09-07-column-propagation-v5/README.md). The original ZIP contains **54 payload files plus their manifest**, is **1,035,233 bytes**, and has SHA-256 `79bdbdf02b23b9eef38e964b54eb300921b24d539014f07b476655d1575e63b6`. Paul uploaded it in commit `ff96063742208920e14526546d178b5c2cef4a6b`; the same Git blob was relocated into the dated checkpoint directory without recompression. It does not depend on the previously unfinished multipart uploads. The readable proof, results and review notes match the archive byte-for-byte.
-
-Publication checks verify integrity and extraction, not mathematical validity. The original creation-session discovery and separate-checker reports remain unchanged in the archive. From the extracted package, `replay.py --verify-only` checks hashes, `--check` runs the full separate checking route, and `--replay` additionally regenerates discovery results. Full arithmetic checking needs Python and g++ with C++17 and Boost headers; no optimisation solver or network is required. A 100-row smoke test is not a full-domain check.
-
-The [v4 recovery instructions](project/research/general_n/2026-09-07-label-tail-v4/README.md) remain available for the previous checkpoint. Its original ZIP SHA-256 is `3944e786fb0ea5322ae3e18dd177ef8b01046d903076a4ca61caf89fdc5ae184`.
-
-Separate checker implementations are software cross-checks by the same assistant, not independent researchers. Actual-graph tests in these checkpoints found **no positive-surplus examples**; v5's saved actual-graph sample also has no positive activation-cost example. Finite tests do not establish the universal dense-case contradiction. The mathematical necessity of the lemmas still requires review.
-
-**Arithmetic checks through n=1,000 are not proofs of every order through 1,000. No complete new order above 27, complete shared-adjacency search, improved v5 degree coefficient, novelty determination, or formal-kernel verification is claimed.** Committing a checkpoint preserves evidence; it does not promote its mathematical status.
+**No complete order above 28, proof through n=1,000, full general conjecture, novelty/priority determination, independent endorsement or formal-kernel verification is claimed.** Actual-graph samples contain no positive-surplus example. Universal correctness rests on the structural proofs and finite-domain exclusion, not extrapolation from those samples.
 
 ## Historical work and governed status
 
-The earlier Audit v5, parked Delta=15 proof and legacy SAT/reproduction work remain preserved. The new candidate supplies replacement arguments where documented; it does not retrospectively certify unresolved historical steps. The [earlier README](project/reviews/history/README_before_reviewer_v1.md) is retained verbatim.
+The parked historical Delta=15 proof, Audit v5 and legacy SAT/reproduction tasks remain preserved; replacement routes do not retroactively certify unresolved historical arguments. The [README immediately before this update](project/reviews/history/README_before_n28_candidate_v7.md) is retained byte-for-byte, including its earlier v5 scope and detailed replay notes.
 
 - [Project standing orders](project/N25_PROJECT_STANDING_ORDERS.md)
 - [Repository synchronization and commit-completion policy](project/REPO_SYNC_POLICY.md)
-- [Canonical review and dated updates](project/CANONICAL_N25_REVIEW_2026-09-06.md)
+- [Canonical n=25 review](project/CANONICAL_N25_REVIEW_2026-09-06.md)
 - [Governed theorem ledger](repro-v1/ledger/theorem_ledger.json)
 - [Historical task backlog](project/CANONICAL_TASKS.json)
 - [Evidence-recovery manifest](project/EVIDENCE_RECOVERY_MANIFEST.json)
 
-The governed theorem ledger is unchanged by the reviewer editions and research-checkpoint publication. Under the standing orders, promotion requires an explicit audited argument or replayable proof evidence; packaging alone does not change mathematical status. The legacy `repro-v1/scripts/reproduce_all.sh` is not the entry point for the candidate's numerical replay; each checkpoint documents its own entry point.
-
-## Preservation
-
-Keep code, inputs, exact outputs, provenance, corrections and review reports. Preserve each reviewer version and research checkpoint, and make later corrections through a new dated version. Computation, mathematical justification, evidence availability and external review are recorded separately. The [commit-completion policy](project/REPO_SYNC_POLICY.md) requires branch attachment and read-back verification before publication is reported as complete.
+The theorem ledger is not promoted by research or document publication. Keep code, exact inputs/outputs, provenance, corrections and review reports; preserve each edition and label later changes separately. Branch attachment and read-back verification are required before any commit is called complete.
