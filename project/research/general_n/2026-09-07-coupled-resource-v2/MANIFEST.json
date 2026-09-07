@@ -1,0 +1,56 @@
+{
+  "date": "2026-09-07",
+  "scope": "Core repository package; expanded evidence files are checked through REPORT.json. Manifest excludes itself and preservation metadata.",
+  "files": {
+    "README.md": {
+      "bytes": 3761,
+      "sha256": "b024cac2e42f29e84c3c2a12b2196961aadaada8fbe10d66872390674dd587b6",
+      "git_blob_sha": "79042a103b757ac061d183a627f382d314d45261"
+    },
+    "PROOF.md": {
+      "bytes": 20555,
+      "sha256": "e7a5efd228240c5436979995639b6fd11fd64d71a60dce53e922f06b428ff7af",
+      "git_blob_sha": "3d3b4ab5b2da8207f17a3a2afcce49e7119d78e2"
+    },
+    "coupled.py": {
+      "bytes": 10604,
+      "sha256": "0f4585258fe473a2ed8dd2812aee5321534a3281e5e7f34409962c01c4ae57d0",
+      "git_blob_sha": "e2b6a4cc21d356e40b0f69ad915de3987a27c045"
+    },
+    "verify_certificate.py": {
+      "bytes": 4433,
+      "sha256": "687e7684abd22f9f56774d2a8b2ed75258a46f6e0b7deb32b9e1022cc7b81043",
+      "git_blob_sha": "99d6bd025665dff5a09ddaf06dca575d1367c082"
+    },
+    "test_coupled.py": {
+      "bytes": 8683,
+      "sha256": "f2ed2ab285fe044fe18f89e2398ef214415aeaeb054addeb8a0c3d52641e309d",
+      "git_blob_sha": "4b8d79d332e16d79256c57d52322111b73f3c66e"
+    },
+    "replay.py": {
+      "bytes": 3443,
+      "sha256": "95b9a89cc8231cf90ecf34228cb633d443b876024a771cc56e9531e002f225bf",
+      "git_blob_sha": "c5c66e77b953e1f77c50fe264ac22a80a1c26108"
+    },
+    "explore_scalar.py": {
+      "bytes": 995,
+      "sha256": "fb02eeeb0bab266c56ad64c9d61d3bfa5c6b30be6457a1fd6cdf822de955c09c",
+      "git_blob_sha": "36e5c0475a7ce2b4d6b7371e62c5caf2365d8ee6"
+    },
+    "REPORT.json": {
+      "bytes": 5833,
+      "sha256": "41316161ed2050e78a6ae9354481745bc0b512efd986042d7dc33723892bf5b4",
+      "git_blob_sha": "e1bb941e26adf9857eb71464dc3a8efdd8314e6d"
+    },
+    "EVIDENCE.json.gz.b64": {
+      "bytes": 15194,
+      "sha256": "483afec8038b9dea2a5b9a04f67117c527aee15dcb52d1a7dbedbad4a559e73e",
+      "git_blob_sha": "babc7b2b09cd0ff3b8aed38b33effbf51f15bebd"
+    },
+    "FULL_REPLAY.json": {
+      "bytes": 1196,
+      "sha256": "5efa61c09e84f34f19e7368a9350ef26cc937ef517f852cb9b5b4044a65aaab0",
+      "git_blob_sha": "65fac3b5c3fbaf0f5600a589e22b7a18081cd9de"
+    }
+  }
+}
