@@ -1,0 +1,1 @@
+f202091423e9b650a4e2e14ec8a335470ec054de79c722ccd754dc99ded10d40  project/research/general_n/2026-09-07-stability-spare-sources-v9/formal/QuasiCore.lean

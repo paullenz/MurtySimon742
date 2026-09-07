@@ -1,0 +1,1 @@
+Floating-point exploration of possible constants, including a looser first budget. Optional SciPy dependency. These proposed real values are not certificates and are not used by the final exact theorem or checking route. The final eta=1/5000, L=6/25 and theta=9/125 are checked independently with rational arithmetic.

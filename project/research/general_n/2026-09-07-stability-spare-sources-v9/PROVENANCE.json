@@ -1,0 +1,37 @@
+{
+  "date": "2026-09-07",
+  "repository": "paullenz/MurtySimon25",
+  "baseline": "ccbd6b178b305340020512c9071ce2c6b38c92d5",
+  "parent_charge_blob": "3d3b4ab5b2da8207f17a3a2afcce49e7119d78e2",
+  "inherited_v7_archive_sha256": "0637c6b91d7e0c311025bf68dc7a373f57f6230e271588bd6693d8ffc17eb6cf",
+  "inherited_actual_graph_data_sha256": "24bb0823a5b69884ff0b694c8f58785d657b5893e3300a545419232b257f68ae",
+  "formal_source_commit": "93a7cdc5ff2a3677d9985941a5df0c4ad08bd1f6",
+  "formal_run": 34166620020,
+  "formal_job": 101878802995,
+  "formal_artifact": 10034353505,
+  "formal_artifact_sha256": "fe39ef465ef4b96909db8a9bad44dc8c89932f1fe919f6f4146aee5513b28f7e",
+  "formal_source_sha256": "f202091423e9b650a4e2e14ec8a335470ec054de79c722ccd754dc99ded10d40",
+  "toolchain_sha256": "6fe3ce97a58f44e2b3567d455b994eacec5bfe9ae7774f2a573444480ba813fe",
+  "formal_theorems": 5,
+  "full_theorems_formalised": false,
+  "external_outreach": "Paul handles specialist review; no message sent",
+  "novelty_or_priority_claimed": false,
+  "authors": {
+    "research_direction": "Paul Lenz",
+    "mathematics_code_drafting_internal_checks": "ChatGPT/Geeps"
+  },
+  "runtime": "3.13.5 (main, Jul 15 2026, 20:25:40) [GCC 14.2.0]",
+  "frozen_proofs_modified": false,
+  "test_transport": {
+    "inherited_actual_graph_instances.json": {
+      "decompressed_sha256": "d9b70589ef95e08e10f56a1c55383f5b434ae956c5f807882f1905e488e3b02a",
+      "source_gzip_sha256": "24bb0823a5b69884ff0b694c8f58785d657b5893e3300a545419232b257f68ae",
+      "note": "Uncompressed JSON bytes preserved exactly for compact joint transport compression; no test data changed."
+    },
+    "generated_graph_systems.json": {
+      "decompressed_sha256": "6e554b10708039e944c808aa80e0d51bbb9ad22a6c9bffc8aafb64dbebe17dc6",
+      "source_gzip_sha256": "65cb5894fd90bf52f001781596e8263c1659771564d5f667f086d704b7b89c9c",
+      "note": "Uncompressed JSON bytes preserved exactly for compact joint transport compression; no test data changed."
+    }
+  }
+}

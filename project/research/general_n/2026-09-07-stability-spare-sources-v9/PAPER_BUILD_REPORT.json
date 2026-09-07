@@ -1,0 +1,12 @@
+{
+  "paper": "General_Structural_Theorems_v9.pdf",
+  "pages": 9,
+  "bytes": 265781,
+  "sha256": "5f7cd6fbc0938f793dfcf6b90497ac28ff799c33e918a4bb88ffe9148a41cf4c",
+  "tex_sha256": "d43b8171010b42f68602192851cc8fb16c2c598d93526ee1a060b12aacbb758e",
+  "readable_proof_sha256": "0c9578b3205ecee7fdc47e6189d224adc931c1cfaecc41e83dfc454f97e3690d",
+  "three_pass_build": true,
+  "overfull_or_unresolved_reference_warnings": false,
+  "tex_version": "pdfTeX 3.141592653-2.6-1.40.25 (TeX Live 2023/Debian)",
+  "mathematical_replay_performed_by_build": false
+}

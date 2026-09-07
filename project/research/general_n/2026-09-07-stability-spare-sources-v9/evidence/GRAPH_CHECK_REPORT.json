@@ -1,0 +1,34 @@
+{
+  "all_checks_pass": true,
+  "inherited_systems": 916,
+  "generated_systems": 3778,
+  "distinct_labelled_graphs": 781,
+  "counts": {
+    "systems": 4694,
+    "positive_surplus": 0,
+    "nonempty_selected_systems": 4186,
+    "nonempty_demands": 191,
+    "a_at_least_25": 4,
+    "pair_capacity_thresholds": 194,
+    "nonempty_spare_classes": 0,
+    "nonempty_two_spare_classes": 0
+  },
+  "generation": {
+    "atlas_graphs": 1253,
+    "critical_atlas_graphs": 21,
+    "extra_graphs": 124,
+    "roots": 223,
+    "exhaustive_selection_roots": 218,
+    "sampled_selection_roots": 5,
+    "largest_selection_product": 49152,
+    "networkx_version": "3.6.1"
+  },
+  "negative_controls_rejected": [
+    "omitted_pair",
+    "duplicate_pair",
+    "self_supplement"
+  ],
+  "positive_surplus_actual_graphs_tested": 0,
+  "near_saturation_actual_graphs_present": false,
+  "limitation": "Finite regressions only. No positive-surplus example, no empirical universal proof; larger selections may be sampled."
+}

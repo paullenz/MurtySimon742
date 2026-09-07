@@ -1,0 +1,11 @@
+{
+  "paper": "General_Structural_Theorems_v9.pdf",
+  "pages": 9,
+  "renderer": "pdftoppm via skill render_pdf.py at 130 dpi",
+  "all_pages_visually_inspected": true,
+  "overlaps_or_clipping_detected": false,
+  "three_pass_build_overfull_warnings": false,
+  "source_sha256": "d43b8171010b42f68602192851cc8fb16c2c598d93526ee1a060b12aacbb758e",
+  "local_pdf_sha256": "4166839ba4dd3031c1996b5e956d2c3bba2c05f1ea35e6f549b767fb9545cc13",
+  "layout_notes": "Kept the pair-capacity statement and 24-case table unbroken. Build output bytes can differ across TeX distributions; compare sources and raster content."
+}

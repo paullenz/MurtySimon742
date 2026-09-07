@@ -1,0 +1,57 @@
+{
+  "all_checks_pass": true,
+  "random_seed": 74220260907,
+  "reduced_attempts": 11200,
+  "valid_reduced_systems": 7435,
+  "valid_systems_with_exceptional_arcs": 3555,
+  "accepted_input_stream_sha256": "80862389ea1d56f6e0ff0ae372cd39afdacdc1378b88613d136132053990bb65",
+  "first_exceptional_example": {
+    "h": 1,
+    "z": 2,
+    "labels": [
+      [
+        [
+          0,
+          1
+        ],
+        false
+      ],
+      [
+        [
+          1
+        ],
+        true
+      ]
+    ],
+    "arcs": [
+      [
+        1,
+        0,
+        1
+      ]
+    ]
+  },
+  "oriented_graphs_exhausted": 59809,
+  "pair_capacity_threshold_checks": 358058,
+  "invalid_uncompensated_local_bound_falsified": true,
+  "uncompensated_counterexample": {
+    "h": 1,
+    "z": 2,
+    "ordinary_sources": [
+      0,
+      1
+    ],
+    "exceptional_sources": [
+      1
+    ],
+    "exceptional_arc": [
+      1,
+      0
+    ],
+    "weighted_loads": [
+      "1/2",
+      "3/2"
+    ]
+  },
+  "limitation": "Reduced local incidence/arc systems only; not actual critical graphs or proof of universal mathematical statements."
+}

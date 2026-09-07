@@ -1,0 +1,169 @@
+{
+  "files": {
+    "General_Structural_Theorems_v9.pdf": {
+      "bytes": 265781,
+      "sha256": "5f7cd6fbc0938f793dfcf6b90497ac28ff799c33e918a4bb88ffe9148a41cf4c"
+    },
+    "General_Structural_Theorems_v9.tex": {
+      "bytes": 28181,
+      "sha256": "d43b8171010b42f68602192851cc8fb16c2c598d93526ee1a060b12aacbb758e"
+    },
+    "PAPER_BUILD_REPORT.json": {
+      "bytes": 551,
+      "sha256": "39cdc5684403bbef034e16342173779f9a62228cabdf75e408fcb103a2dde7a8"
+    },
+    "PROOF.md": {
+      "bytes": 23813,
+      "sha256": "0c9578b3205ecee7fdc47e6189d224adc931c1cfaecc41e83dfc454f97e3690d"
+    },
+    "PROVENANCE.json": {
+      "bytes": 1999,
+      "sha256": "e8fa2a2186991ffafd2fbf31f149ece80d882559c5b9e9faac9a0bba4d8b4c1b"
+    },
+    "PUBLICATION_CAPSULE.json": {
+      "bytes": 1459,
+      "sha256": "80d2bf706d8bf64505c38604c07e189c362d60f8b6eab6d8646143b2bfb1eb10"
+    },
+    "PUBLICATION_CAPSULE.part00.b64": {
+      "bytes": 16001,
+      "sha256": "c36d9acd9b8a59da123af54fc3390eea9238e4b54744357d28d7308eb272a440"
+    },
+    "PUBLICATION_CAPSULE.part01.b64": {
+      "bytes": 16001,
+      "sha256": "f2e8dd2d8d68a963cf68dd774ab188452c0e468a5efd28d4fc8157ce47632536"
+    },
+    "PUBLICATION_CAPSULE.part02.b64": {
+      "bytes": 16001,
+      "sha256": "9e04ab8ef321a83889f61ab62019a5957b266afca3f8a3d00ba140383902edec"
+    },
+    "PUBLICATION_CAPSULE.part03.b64": {
+      "bytes": 16001,
+      "sha256": "4a12cf4637b851130d764e7b4eac4514a15b3011f5a7a6375c89482c5a6357af"
+    },
+    "PUBLICATION_CAPSULE.part04.b64": {
+      "bytes": 13757,
+      "sha256": "0996829563c0ccfdfaa017d578e9975198143e3ef02d835bec613f147e70a5de"
+    },
+    "README.md": {
+      "bytes": 3639,
+      "sha256": "736dcc8864b657fdc32e701793a15b25375b999a5581bf561aa715f63c9a45a0"
+    },
+    "RESULTS.json": {
+      "bytes": 1354,
+      "sha256": "afd058f4d8a752d1d492ad3e992fbecc183c744d5efd71d1416647e85cd5977e"
+    },
+    "REVIEW_AND_HANDOFF.md": {
+      "bytes": 6797,
+      "sha256": "57a347332c7b1302c6b9e87083aa27915f38da50823f742a7632f66dc642d27f"
+    },
+    "SOURCE_MANIFEST.json": {
+      "bytes": 4423,
+      "sha256": "07f2bdd0cbb726e15947daddeb0ae536169ad0f83a1f7571f2eb274e03d5ebf2"
+    },
+    "build_paper.py": {
+      "bytes": 2292,
+      "sha256": "a64dd792a62b7202ea6e71093f82292783b75368716aebe697feb0756e901cb7"
+    },
+    "evidence/ABSTRACT_CHECK_REPORT.json": {
+      "bytes": 1098,
+      "sha256": "166b9fc14c57ccfe5f881dbec901fe96b331762f4f916ebff14f835164f862a2"
+    },
+    "evidence/EXACT_ALGEBRA_REPORT.json": {
+      "bytes": 55234,
+      "sha256": "1190ec5595a6072cc3e6db7cf9a55911f83f20a2b87eedef1b7e080f219a7c9f"
+    },
+    "evidence/FULL_REPLAY_REPORT.json": {
+      "bytes": 1298,
+      "sha256": "dab5373bfec9d0f529785f1f2ce96b3aa9ba58c16dd1c9f312bbf0dbc63fe1c7"
+    },
+    "evidence/GRAPH_CHECK_REPORT.json": {
+      "bytes": 993,
+      "sha256": "39a5195e38c9ed09322e4608dbf0fedcd4204e0f06b1369045176e0305af42ff"
+    },
+    "evidence/INTERVAL_CHECK_REPORT.json": {
+      "bytes": 1410,
+      "sha256": "318421ddd47e605ce964fb26ea166311b373adefbb2c9244910428e55a5dc8df"
+    },
+    "evidence/PDF_VISUAL_REVIEW.json": {
+      "bytes": 607,
+      "sha256": "c9df42969f4c29d93c0a919642c4ac4a266b57cc05583f00ca625b2dc8a2ea8c"
+    },
+    "evidence/REMOTE_REPLAY_REPORT.json": {
+      "bytes": 1300,
+      "sha256": "28ff598aa0e980098103bdff2be22328f658722d8ed989244b187321646d2174"
+    },
+    "evidence/checked-source-sha256.txt": {
+      "bytes": 153,
+      "sha256": "fc8cb1e674fa71d6bd3809ddb702ded006c843d892b988a464ddee5dff36aca5"
+    },
+    "evidence/lean-check.log": {
+      "bytes": 459,
+      "sha256": "2713e0b07009c5206122933b93430d0b5c6feb204c0a49b5eff623922c56bacf"
+    },
+    "evidence/lean-toolchain-sha256.txt": {
+      "bytes": 103,
+      "sha256": "7e1039eaea7f435b79c5c2dfb725ae88d36adcae1c7112d975c2b6297f2a3cbe"
+    },
+    "evidence/lean-version.txt": {
+      "bytes": 78,
+      "sha256": "5362a246ce2545424db10a77de8fd4694f4cf8b0170dfd43fa727acf7f7f259b"
+    },
+    "exploratory/README.md": {
+      "bytes": 318,
+      "sha256": "6f4f552a71959c8a993fc91ccc94f39403b61925144c21deb3015da659a0c4ad"
+    },
+    "exploratory/optimise_gap.py": {
+      "bytes": 1006,
+      "sha256": "c6bbc02401a867a5ce9423e50883fa7280fa83e812ae4c4c8404846bcb410576"
+    },
+    "formal/QuasiCore.lean": {
+      "bytes": 2207,
+      "sha256": "f202091423e9b650a4e2e14ec8a335470ec054de79c722ccd754dc99ded10d40"
+    },
+    "formal/workflow_source.yml": {
+      "bytes": 1687,
+      "sha256": "3b34897474dac52f1b1bb1f462e2ecaf009d2e3a6c42169c14ab35179256a4ec"
+    },
+    "literature/COMPARISON.md": {
+      "bytes": 4741,
+      "sha256": "d052295585bdd2dc617b39647bdecf9ef6c7486939dae8f8660c9b8a34fb94af"
+    },
+    "pdf_header.tex": {
+      "bytes": 446,
+      "sha256": "ca9c802ed068266d2cb073f44301ea13a3fdf7193a9b6b8e98a47f02e99e87af"
+    },
+    "replay.py": {
+      "bytes": 3407,
+      "sha256": "0b5381d06053068d44bb0b478a416de7301e9cdb9c002036ce2beadf8a1e5a2b"
+    },
+    "restore_checkpoint.py": {
+      "bytes": 3040,
+      "sha256": "fb1a97e68641374bbe3dc48cccd1a8250707cb78bfc86cc4d2539b91af964413"
+    },
+    "src/abstract_checks.py": {
+      "bytes": 5098,
+      "sha256": "a253e17e757fe5a0dbacd90476d928822cc445c99bf5805981713fdc78dff20b"
+    },
+    "src/exact_checks.py": {
+      "bytes": 6511,
+      "sha256": "d29d518ae941f4fd05c6fa9bfbc663b9d03943c57efe60ef6452df3cf044920f"
+    },
+    "src/graph_checks.py": {
+      "bytes": 10026,
+      "sha256": "157452ed8083f15fc66d6aebf22050b367fec3ea1af247e9cbc13495cc9ac814"
+    },
+    "src/interval_check.py": {
+      "bytes": 2271,
+      "sha256": "cb8cb9edda3681d965068a583ddb2025b45b51b2a97b833e2c0db066f494ea6c"
+    },
+    "tests/generated_graph_systems.json": {
+      "bytes": 721993,
+      "sha256": "6e554b10708039e944c808aa80e0d51bbb9ad22a6c9bffc8aafb64dbebe17dc6"
+    },
+    "tests/inherited_actual_graph_instances.json": {
+      "bytes": 113202,
+      "sha256": "d9b70589ef95e08e10f56a1c55383f5b434ae956c5f807882f1905e488e3b02a"
+    }
+  },
+  "schema": "v9-checkpoint-manifest-v1"
+}

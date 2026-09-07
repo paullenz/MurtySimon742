@@ -1,0 +1,46 @@
+{
+  "all_checks_pass": true,
+  "jobs": [
+    {
+      "script": "exact_checks",
+      "exit_code": 0,
+      "matches_recorded_report": true,
+      "seconds": 4.163722803000155
+    },
+    {
+      "script": "interval_check",
+      "exit_code": 0,
+      "matches_recorded_report": true,
+      "seconds": 1.0612538069999573
+    },
+    {
+      "script": "graph_checks",
+      "exit_code": 0,
+      "matches_recorded_report": true,
+      "seconds": 4.694712205999849
+    },
+    {
+      "script": "abstract_checks",
+      "exit_code": 0,
+      "matches_recorded_report": true,
+      "seconds": 9.09238845599998
+    }
+  ],
+  "seconds": 19.014630170999908,
+  "integrity": {
+    "payload_files": 33,
+    "all_sha256_match": true,
+    "formal_record_matches_source": true
+  },
+  "original_payloads_unchanged": true,
+  "actual_graph_systems": 4694,
+  "actual_distinct_labelled_graphs": 781,
+  "actual_positive_surplus_graphs": 0,
+  "actual_nonempty_spare_classes": 0,
+  "reduced_systems_with_exceptional_arcs": 3555,
+  "independent_specialist_review": "OPEN",
+  "universal_mathematical_proof_formally_verified": false,
+  "lean_replayed": false,
+  "recorded_lean_local_theorems": 5,
+  "scope": "Supporting finite algebra and regression checks only; not universal proof by enumeration; no n28 replay performed"
+}
