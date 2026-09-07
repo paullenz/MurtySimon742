@@ -4,7 +4,7 @@ on:
   push:
     branches: [main]
     paths:
-      - 'releases/n28-reviewer-v1/PUBLICATION_CAPSULE.b64'
+      - 'releases/n28-reviewer-v1/PUBLICATION_CAPSULE*.b64'
       - 'releases/n28-reviewer-v1/PUBLICATION_CAPSULE.json'
       - 'releases/n28-reviewer-v1/restore_release.py'
   workflow_dispatch:
@@ -33,6 +33,13 @@ jobs:
           sudo apt-get install -y --no-install-recommends texlive-latex-recommended texlive-latex-extra texlive-fonts-recommended lmodern
       - name: Build papers and record source/output hashes
         run: python3 -I -B releases/n28-reviewer-v1/build_papers.py
+      - name: Preserve built reviewer release for read-back
+        uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02
+        with:
+          name: n28-reviewer-release
+          path: releases/n28-reviewer-v1/
+          if-no-files-found: error
+          retention-days: 7
       - name: Commit only the reviewer release
         run: |
           set -euo pipefail

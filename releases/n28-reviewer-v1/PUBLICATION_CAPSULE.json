@@ -1,0 +1,33 @@
+{
+  "schema": "n28-reviewer-source-capsule-v1",
+  "compressed_bytes": 37660,
+  "compressed_sha256": "fd4901cb38b4864b88cf539b5fb9a74d54d068c6ff47b2f14cc81d909c758b39",
+  "source_manifest_sha256": "37a1fd007f042b4d61614b01bdffd2e0b7fc7b9b2a731ba3f78e5b1356a74249",
+  "source_files_including_manifest": 41,
+  "parts": [
+    {
+      "path": "PUBLICATION_CAPSULE.part00.b64",
+      "bytes": 12557,
+      "sha256": "81f88e18e5283da85dacb5506832413db81b4923f731411c8c4a4f9f0d9f47b3",
+      "git_blob": "0829a2e5ec804603e0b368adf56480a3559f121e"
+    },
+    {
+      "path": "PUBLICATION_CAPSULE.part01.b64",
+      "bytes": 12557,
+      "sha256": "8baa73fb03d120a2fc9513d168d23b1cf4ed09589a5db8cdf67663a545d0a067",
+      "git_blob": "b61215b767a892d377d82f4cc8dc1c11984d212d"
+    },
+    {
+      "path": "PUBLICATION_CAPSULE.part02.b64",
+      "bytes": 12557,
+      "sha256": "8f2e02b853a2ca7b142db9170756cebb3a0763cee0b56c949822e6a6f590d941",
+      "git_blob": "e54fa4010bb819bbde3866d5005a09e79f6c7800"
+    },
+    {
+      "path": "PUBLICATION_CAPSULE.part03.b64",
+      "bytes": 12549,
+      "sha256": "4ac53d1357927b95d4776c4c6ab83c4f85a8843890e8db644a499cab99359610",
+      "git_blob": "551d6eea2008fab6223589eeea52ca3bd7686f2a"
+    }
+  ]
+}
