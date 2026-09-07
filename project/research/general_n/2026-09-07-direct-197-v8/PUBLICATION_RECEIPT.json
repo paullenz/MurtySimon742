@@ -1,0 +1,62 @@
+{
+  "schema": "murty-simon-documentation-publication-receipt-v1",
+  "date": "2026-09-07",
+  "repository": "paullenz/MurtySimon25",
+  "branch": "main",
+  "publication_commit": "27eb1e0acc301b7a35f2950308e086cb7d984641",
+  "parent_commit": "0928816678af1d2628920a967129faa194603035",
+  "publication_tree": "01152e00ed2a8c41138ad48f075c4f883f5bb93f",
+  "branch_readback": "27eb1e0acc301b7a35f2950308e086cb7d984641",
+  "documentation_publication_complete": true,
+  "binary_archive_publication_complete": false,
+  "verified_document_blobs": {
+    "ALL_DEGREES_AND_FAN.json": "a6b76a65b3a3f716916e57826a9a30206649b7a9",
+    "DIRECT_197_SUMMARY.md": "a166a92597ba09799569ff56120dad93aa658f7d",
+    "EXACT_CHECK_REPORT.json": "7bbfaf53541f13b5201694a889a768f70485517d",
+    "FULL_REPLAY_REPORT.json": "3e1ffff173e8e883e3ec3fa9bcf3952d1c41c64e",
+    "README.md": "806f5a4a45260fc713d92f2851be38ab0458ce52",
+    "RESULTS.json": "8e0ebde395053e47fc9bdf0b68b221fe79274ff3",
+    "ROOT_README.md": "375c2b90295ddf192674a0ec84b05363fccb2a3f"
+  },
+  "archived_previous_readme": {
+    "path": "project/reviews/history/README_before_direct197_v8_2026-09-07.md",
+    "blob": "792e89f118434cb93814b6ddab6ea4e0d2e94d66"
+  },
+  "checks": {
+    "nonforced_main_update_and_readback": true,
+    "all_six_new_document_blobs_match_local": true,
+    "root_and_checkpoint_readme_readback": true,
+    "previous_readme_preserved_byte_exact": true,
+    "comparison_exactly_eight_expected_paths": true,
+    "no_frozen_proof_or_governed_ledger_changed": true
+  },
+  "new_research": {
+    "n": 28,
+    "maximum_degree": 15,
+    "edges": 197,
+    "t": 2,
+    "fresh_charging_tuples": 12012,
+    "residual_rows": 8216928,
+    "final_exact_certificates": 1584,
+    "final_survivors": 0,
+    "weak_core_reduction_used": false,
+    "full_fresh_direct197_separate_check_pass": true,
+    "old_t1_survivors_used_as_t2_domain": false
+  },
+  "local_archive": {
+    "filename": "MurtySimon_N28_197_Direct_v8.zip",
+    "bytes": 5677524,
+    "sha256": "b753076ffc755066a0c57756be91cc5b265c163d869244d3aa65e3943799347b",
+    "payload_files": 90,
+    "all_final_payload_and_archive_checks_pass": true
+  },
+  "earlier_review": {
+    "shared_adjacency_v6_full_separate_check_pass": true,
+    "local_incidence_v7_full_separate_check_pass": true,
+    "v3_n28_delta16_equality_check_pass": true,
+    "every_v3_v4_v5_equality_ancestor_replayed_here": false
+  },
+  "binary_availability": "Reported V6/V7 uploads were not exposed by repository read-back; referencing the local V6 blob returned HTTP 422. No V6/V7 relocation or V8 ZIP attachment is asserted.",
+  "mathematical_status": "candidate; independent researcher mathematical and computational review OPEN",
+  "receipt_scope": "This receipt records the preceding documentation commit. Its own later documentation-only commit is verified separately and is not self-embedded."
+}
