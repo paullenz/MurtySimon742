@@ -1,0 +1,281 @@
+{
+  "date": "2026-09-07",
+  "mathematical_status": "CANDIDATE; independent mathematical review OPEN",
+  "numerical_status": "REPRODUCED; same-assistant checks; not formal verification",
+  "prior_checkpoint": "4bd48b12c6f5953af92adcb614f509b2aa06391a",
+  "source_proof_blob": "83e09e02918adf461470bf7e70177bad275b57d9",
+  "n27_fixture_blob": "39d9425b8209ecd1c447905279a56b4d64214dc5",
+  "candidate_coefficient": "(10-sqrt(2))/14 = 0.613270459830493...",
+  "environment": {
+    "python": "3.13.5",
+    "scipy": "1.17.0"
+  },
+  "scalar_rows": [
+    {
+      "n": 27,
+      "target": 182,
+      "remaining_degrees": [
+        15
+      ]
+    },
+    {
+      "n": 28,
+      "target": 196,
+      "remaining_degrees": [
+        15,
+        16
+      ]
+    },
+    {
+      "n": 29,
+      "target": 210,
+      "remaining_degrees": [
+        16
+      ]
+    },
+    {
+      "n": 30,
+      "target": 225,
+      "remaining_degrees": [
+        16,
+        17
+      ]
+    },
+    {
+      "n": 31,
+      "target": 240,
+      "remaining_degrees": [
+        17
+      ]
+    },
+    {
+      "n": 32,
+      "target": 256,
+      "remaining_degrees": [
+        17,
+        18
+      ]
+    },
+    {
+      "n": 33,
+      "target": 272,
+      "remaining_degrees": [
+        18,
+        19
+      ]
+    },
+    {
+      "n": 34,
+      "target": 289,
+      "remaining_degrees": [
+        18,
+        19
+      ]
+    },
+    {
+      "n": 35,
+      "target": 306,
+      "remaining_degrees": [
+        19,
+        20
+      ]
+    },
+    {
+      "n": 40,
+      "target": 400,
+      "remaining_degrees": [
+        21,
+        22,
+        23
+      ]
+    },
+    {
+      "n": 50,
+      "target": 625,
+      "remaining_degrees": [
+        26,
+        27,
+        28,
+        29
+      ]
+    },
+    {
+      "n": 100,
+      "target": 2500,
+      "remaining_degrees": [
+        51,
+        52,
+        53,
+        54,
+        55,
+        56,
+        57,
+        58,
+        59,
+        60
+      ]
+    }
+  ],
+  "arithmetic_tests": {
+    "pointwise_irrational_bound_checks": 125250,
+    "strict_equality_maximizer_checks": 496,
+    "high_degree_checks_through_n1000": 192060,
+    "status": "PASS"
+  },
+  "graph_tests": {
+    "exhaustive_n3_to_n6": {
+      "graphs": 33864,
+      "critical": 608,
+      "nonbipartite": 552,
+      "selections": 780,
+      "positive_surplus": 0,
+      "charging_checks": 780,
+      "active_charging_checks": 420,
+      "strict_scalar_checks": 0,
+      "triple_domain_checks": 720
+    },
+    "seeded_n7_to_n18": {
+      "graphs": 240,
+      "critical": 174,
+      "nonbipartite": 171,
+      "selections": 296,
+      "positive_surplus": 0,
+      "charging_checks": 296,
+      "active_charging_checks": 274,
+      "strict_scalar_checks": 161,
+      "triple_domain_checks": 813
+    },
+    "seed": 74220260907
+  },
+  "abstract_matrix_tests": {
+    "examined": 551853,
+    "eligible": 70039,
+    "all_sources_residual_active": 51563,
+    "status": "PASS"
+  },
+  "certificate_tests": {
+    "n27_regression": {
+      "status": "EXACT_CERTIFICATE_PASS",
+      "weighted_demand": 4,
+      "weighted_capacity": 0,
+      "margin": 4,
+      "allowed_triples_checked": 246,
+      "source_caps": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        5,
+        5,
+        5,
+        6,
+        6,
+        6,
+        6
+      ],
+      "supplement_caps": [
+        4,
+        4,
+        4,
+        4,
+        4,
+        4,
+        4,
+        4,
+        6,
+        6,
+        6,
+        7,
+        7,
+        8,
+        8
+      ]
+    },
+    "forged_certificate_rejected": true
+  },
+  "separate_checker_tests": {
+    "profile_domain_comparisons": 250,
+    "seed": 613270459,
+    "n27_separate_check": {
+      "status": "SEPARATE_EXACT_CHECK_PASS",
+      "weighted_demand": 4,
+      "weighted_capacity": 0,
+      "allowed_triples": 246,
+      "source_caps": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        5,
+        5,
+        5,
+        6,
+        6,
+        6,
+        6
+      ],
+      "supplement_caps": [
+        4,
+        4,
+        4,
+        4,
+        4,
+        4,
+        4,
+        4,
+        6,
+        6,
+        6,
+        7,
+        7,
+        8,
+        8
+      ]
+    },
+    "scope": "Two algorithms written by the same assistant; not external review."
+  },
+  "same_environment_scalar_discovery_rerun": "complete RESULTS.json matched byte-for-byte",
+  "evidence": {
+    "encoding": "base64 of gzip of UTF-8 JSON mapping filenames to exact text contents",
+    "file": "EVIDENCE.json.gz.b64",
+    "gzip_sha256": "1fec42690f4257d1293342a93857205d6c20f50617b0bc521c5a29b5fac50e66",
+    "files": {
+      "RESULTS.json": {
+        "bytes": 44624,
+        "sha256": "13392f957ec291994a3fe2809cf04c5b52884b2b3ac127f2aeff670037986148"
+      },
+      "TEST_RESULTS.json": {
+        "bytes": 49299,
+        "sha256": "cf69742bfdf1cf182433326a718511c2b177f739aa60ffe4fa8058ca62b1d585"
+      },
+      "run.log": {
+        "bytes": 2138,
+        "sha256": "ecd5e8a15d145b0c87a5bf51db75cc5a001e6968ec853954b86937f32d7316ad"
+      },
+      "tests.log": {
+        "bytes": 2322,
+        "sha256": "bdf585d35ec2e045035749058d6e1afa971e10a6d53c7e6ed96fef8cf5aafa4f"
+      },
+      "separate_check.log": {
+        "bytes": 380,
+        "sha256": "6dcf9f4f0b216560a3e290bbf7bf6bb238867402ebd6727dba042c3028289d0d"
+      }
+    }
+  },
+  "limitations": [
+    "No complete order above 27 proved.",
+    "No complete profile enumeration was run.",
+    "No positive-surplus actual graph occurred in the tests.",
+    "Certificate engine is a relaxation separator, not a complete integer-branching solver.",
+    "Both algorithms and all checking were produced by the same assistant.",
+    "No novelty or priority determination. Frozen n25/n27 packages and governed theorem ledger unchanged."
+  ]
+}
