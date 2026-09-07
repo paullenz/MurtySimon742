@@ -1,0 +1,15 @@
+{
+  "input_sha256": "a4aca0b5dc20b8f4800736922a35f2df8e668616b553e07ca12529b547eca006",
+  "checked": 35245,
+  "eliminated": 35241,
+  "surviving_columns": 4,
+  "threshold_counts": {
+    "5": 69,
+    "6": 23573,
+    "7": 8490,
+    "8": 2921,
+    "9": 188
+  },
+  "status": "SURVIVORS_RETAINED",
+  "external_review": false
+}

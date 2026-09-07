@@ -1,0 +1,15 @@
+{"stage": "exhaustive", "n": 3, "counts": {"graphs": 8, "diameter2critical": 3}}
+{"stage": "exhaustive", "n": 4, "counts": {"graphs": 64, "diameter2critical": 7}}
+{"stage": "exhaustive", "n": 5, "counts": {"graphs": 1024, "diameter2critical": 27}}
+{"stage": "exhaustive", "n": 6, "counts": {"graphs": 32768, "diameter2critical": 571}}
+{"stage": "generated", "n": 7, "selected_assignments": 467}
+{"stage": "generated", "n": 8, "selected_assignments": 675}
+{"stage": "generated", "n": 9, "selected_assignments": 891}
+{"stage": "generated", "n": 10, "selected_assignments": 1075}
+{"stage": "generated", "n": 12, "selected_assignments": 1307}
+{"stage": "generated", "n": 14, "selected_assignments": 1531}
+{"stage": "generated", "n": 16, "selected_assignments": 1771}
+{"stage": "generated", "n": 20, "selected_assignments": 1987}
+{"stage": "generated", "n": 25, "selected_assignments": 2219}
+{"stage": "generated", "n": 27, "selected_assignments": 2459}
+{"counts": {"bipartite_inputs": 17, "column_residual_bound": 9208, "edge_addition_total_domination": 7567, "exhaustive_bases": 17, "fixed_column_pair_threshold": 9711, "forced_source_lower_bound": 8616, "h_index_column_bound": 2872, "inactive_inequality": 640, "inactive_missed_auxiliary_location": 60, "inactive_missed_injection": 640, "inactive_no_F_crossing": 640, "inactive_seen_injection": 640, "input_criticality": 216, "low_k_P_injection": 2424, "low_k_auxiliary_location": 1160, "low_k_extra_edge_injection": 2135, "low_k_extra_x_edges": 2424, "low_k_final_inequality": 2135, "low_k_residual_budget": 2135, "minimum_degree_column_demand": 2872, "new_label_capacity": 8616, "no_total_dominating_pair": 199, "pair_residual_bound": 9208, "residual_ledger": 2883, "sampled_bases": 358, "section3_partition_bound": 16, "section3_total_bound": 16, "selected_assignments": 2883, "selected_edge_exists": 1156, "selected_pair_injection": 2883, "selected_pair_threshold": 9711, "selected_pairs_retained_by_new_filter": 8616, "selected_total_demand": 2872, "small_assignment_exhaustiveness_budget": 17, "source_closure_bound": 9208, "subset_capacity_with_actual_q": 57134, "supplement_degree_bound": 9208, "supplement_other_labels": 9208, "supplement_pair_budget": 8616, "total_dominating_triple": 199, "witness_degree_sum": 181, "witness_edge_coverage": 216}, "generated_graphs": 205, "labelled_search": {"3": {"diameter2critical": 3, "graphs": 8}, "4": {"diameter2critical": 7, "graphs": 64}, "5": {"diameter2critical": 27, "graphs": 1024}, "6": {"diameter2critical": 571, "graphs": 32768}}, "nonisomorphic_small_representatives": 11, "profile": {"inactive_missed_forced_edges": 60, "inactive_seen_forced_edges": 80, "largest_selected_source_degree": 4}, "scope": "Finite falsification only, not proof or independent external review", "seed": 250906, "status": "PASS"}

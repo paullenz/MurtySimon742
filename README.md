@@ -40,7 +40,11 @@ Paul Lenz directed the project. ChatGPT/Codex supplied substantial mathematical 
 
 A further [internal red-team audit](project/reviews/n25/2026-09-06-redteam-v1/N25_Red_Team_Report_2026-09-06.md) examines the lemmas and their assumptions and uses a third arithmetic checker to recalculate all stored numerical exclusions. It found no blocking failure in the audited candidate, but records a helper defect outside the parameter ranges used in this proof. This remains a same-assistant check; external review is still open.
 
-The [external review register](releases/n25-reviewer-v1/REVIEW_REGISTER.json) currently records both mathematical and independent computational review as **OPEN**. The [review-request draft](releases/n25-reviewer-v1/REVIEW_REQUEST_DRAFT.md) has not been sent. No prospective reviewer is represented as having agreed to participate.
+The [external review register](releases/n25-reviewer-v1/REVIEW_REGISTER.json) records both mathematical and independent computational review as **OPEN**. Paul [reported sending an n=25 review invitation to Dr Florent Foucaud](project/reviews/n25/outreach/2026-09-07-foucaud-sent-user-report.md) on 7 September 2026. No acceptance or completed external assessment has been reported.
+
+## Larger-order extension: n=27
+
+A separate [n=27 candidate proof and review package](project/reviews/n27/2026-09-07-candidate-v1/README.md) extends the residual method and proposes the bound **182 edges**, with equality only for **K₁₃,₁₄**. Its complete internal arithmetic checks leave no surviving configurations. The [full evidence archive](releases/n27-candidate-v1/README.md) includes source code, all ledgers, certificates and replay instructions. Independent mathematical review and external computational reproduction remain **OPEN**. This extension does not alter the frozen n=25 editions or the governed n=25 theorem ledger.
 
 ## Historical work and governed status
 

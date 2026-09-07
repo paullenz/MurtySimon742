@@ -1,0 +1,14 @@
+{
+  "order": 27,
+  "edition": 1,
+  "date": "2026-09-07",
+  "mathematical_status": "COMPLETE_CANDIDATE_ARGUMENT",
+  "internal_arithmetic": "PASS",
+  "external_mathematical_review": "OPEN",
+  "external_computational_reproduction": "OPEN",
+  "formal_verification": "NOT_PERFORMED",
+  "novelty_and_priority": "NOT_ESTABLISHED",
+  "reviewer_acceptances": [],
+  "n27_invitations_sent": [],
+  "attribution": "Paul Lenz directed the work. ChatGPT/Codex supplied substantial mathematical development, software and internal checking."
+}

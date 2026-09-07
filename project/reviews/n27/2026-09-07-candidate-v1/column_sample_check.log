@@ -1,0 +1,1 @@
+{"status": "PASS", "states": 6, "fully_labelled_columns": 2071, "canonical_columns": 281, "matching": "augmenting paths", "subsets": "exhaustive", "scope": "selected six-state cross-language validation; full replay separate"}

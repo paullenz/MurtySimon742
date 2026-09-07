@@ -1,0 +1,6 @@
+{"state":0,"canonical":1,"labelled":1,"total_reject":0,"cut_reject":1,"survives":0,"sha256":"d3f4fc845a9af1e810347f9c75f79c09484dd5fd17c647f26221188f53b32555"}
+{"state":1,"canonical":109,"labelled":1001,"total_reject":109,"cut_reject":0,"survives":0,"sha256":"7c2c38ddf7397b4f321a4252a2b1db82f31b78766ff2c8482ef5238146dd1eaf"}
+{"state":2,"canonical":1,"labelled":1,"total_reject":1,"cut_reject":0,"survives":0,"sha256":"bfb23ea2eb539620e03c3695c33eff6bae3f389f61af9c3da972b80aed62c1df"}
+{"state":3,"canonical":1,"labelled":1,"total_reject":1,"cut_reject":0,"survives":0,"sha256":"c50e919a2618ee10d1f4e0ccdaa2b221f59405be3d58c4cdb0d83d3d87a57d3b"}
+{"state":4,"canonical":150,"labelled":1001,"total_reject":150,"cut_reject":0,"survives":0,"sha256":"586c154ed371089c07f5a285caf382d2763a18ab69e85fa3563346402c0c70bd"}
+{"state":5,"canonical":19,"labelled":66,"total_reject":19,"cut_reject":0,"survives":0,"sha256":"acc2dd8b33777092c499d97a4c2de5a9e249f6b70fd66f8d6dd8473b1c813370"}

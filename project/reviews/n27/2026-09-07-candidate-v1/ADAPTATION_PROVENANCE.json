@@ -1,0 +1,21 @@
+[
+  {
+    "file": "general_primary.py",
+    "source_path": "N25_Full_Chain_Candidate_2026-09-06_v1/general_primary.py",
+    "source_sha256": "12c216c66aa6ddab298dbe58507027f21d0690deaa36c528077f1a6bb476ab6e",
+    "adapted_sha256": "d6cfdeb66a2a78ee9dec41b4f4ef6112070f6269621f4a2373620e3d06147637"
+  },
+  {
+    "file": "general_independent.py",
+    "source_path": "N25_Full_Chain_Candidate_2026-09-06_v1/general_independent.py",
+    "source_sha256": "e2a39ce238aee4f35a6157214485ec17a44ac90d7bf5b15cc827a939b399ff1d",
+    "adapted_sha256": "a44e19eb03cc1579cac6bf29ae6b3b6f5e58c04d69495e5399ec382a6bd67da0"
+  },
+  {
+    "file": "structural_validation.py",
+    "source_path": "redteam_v1/structural_attack.py",
+    "source_sha256": "209f2dacb12f01eee1a5f28c336771e7047a88b6322194c6b8c87440ecd8f5f6",
+    "adapted_sha256": "942e1f6972795465aecb11da976298df8e851671a2fb2706dcf0f93a28acad39",
+    "changes": "Add n=27 samples and actual-graph tests of fixed-column pair, forced-source and supplement-pair bounds."
+  }
+]

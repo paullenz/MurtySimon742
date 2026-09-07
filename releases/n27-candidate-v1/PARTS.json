@@ -1,0 +1,62 @@
+{
+  "archive": "N27_Candidate_Evidence_2026-09-07_v1.zip",
+  "bytes": 71778093,
+  "sha256": "8381ed450859b9efa54fa6ec3c76bda786ec3fc31ec52732637c5346224caf3c",
+  "archive_entries": 116,
+  "parts": [
+    {
+      "name": "N27_Candidate_Evidence_2026-09-07_v1.zip.part01",
+      "bytes": 8388608,
+      "sha256": "1488ef49eeb6f66d6b28181d56824d09759df68d02d065800948e33e4e8ef4e0",
+      "git_blob_sha1": "a6b9055125b0c2acbfa79c09cafe1a50dcb196fa"
+    },
+    {
+      "name": "N27_Candidate_Evidence_2026-09-07_v1.zip.part02",
+      "bytes": 8388608,
+      "sha256": "c94efa4dce70b2c08546163ec3c66081981a5be17bbe817191a824ee0c0713a5",
+      "git_blob_sha1": "6ad93cb038e9d4fcd87c5b6ed0d0c0f1a769b544"
+    },
+    {
+      "name": "N27_Candidate_Evidence_2026-09-07_v1.zip.part03",
+      "bytes": 8388608,
+      "sha256": "1450718a76213009cc1b761de2087deac0215b157fcf0bca151d2f4b6ac88b63",
+      "git_blob_sha1": "282244b3062f8188e0c0ab1792382b502c7b8179"
+    },
+    {
+      "name": "N27_Candidate_Evidence_2026-09-07_v1.zip.part04",
+      "bytes": 8388608,
+      "sha256": "a164840aacd973c791a7aa598cf8c75445d01151b999743b96eacebe55f7b985",
+      "git_blob_sha1": "3b8c820ff40e8719a2ca66f68a4b9f627fd0c109"
+    },
+    {
+      "name": "N27_Candidate_Evidence_2026-09-07_v1.zip.part05",
+      "bytes": 8388608,
+      "sha256": "14ce3b5b39d0e68c38e8ac02038b175022f6ca417c39c83ab6b578150f904654",
+      "git_blob_sha1": "3c070d8f8118e6014fe8996152fd5d8a06f525e2"
+    },
+    {
+      "name": "N27_Candidate_Evidence_2026-09-07_v1.zip.part06",
+      "bytes": 8388608,
+      "sha256": "cf631b06a9534df43c2cf683fc286b81cb5927332f7e4b25ce245dc3f4cb87de",
+      "git_blob_sha1": "b9fe75734acfb0b70e67639e4d3f595368e504fc"
+    },
+    {
+      "name": "N27_Candidate_Evidence_2026-09-07_v1.zip.part07",
+      "bytes": 8388608,
+      "sha256": "29724e131b0338697071dbe4954d7cf5204acd3336791cbb68814ca9ea37afa1",
+      "git_blob_sha1": "93f9a5ca7e58738d34709175475353c30d74062b"
+    },
+    {
+      "name": "N27_Candidate_Evidence_2026-09-07_v1.zip.part08",
+      "bytes": 8388608,
+      "sha256": "e383351af5b4cdf7c32bfb603f800703e3b08b37e8be4bdedcb9226da6df9950",
+      "git_blob_sha1": "3971bd33c7c526681aecabbcd37eab0cf6b75d9d"
+    },
+    {
+      "name": "N27_Candidate_Evidence_2026-09-07_v1.zip.part09",
+      "bytes": 4669229,
+      "sha256": "eccb8bd5d0d78c6e98f2340513e6cef33ead54154205638d18716d85f0d5f8c7",
+      "git_blob_sha1": "3d6a28e315a9ebcb60e226ae78afc75e7633084a"
+    }
+  ]
+}

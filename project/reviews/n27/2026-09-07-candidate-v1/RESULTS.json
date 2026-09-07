@@ -1,0 +1,78 @@
+{
+  "date": "2026-09-07",
+  "n": 27,
+  "candidate_statement": "e(G)<=182, equality exactly K13,14",
+  "mathematical_status": "COMPLETE_CANDIDATE_ARGUMENT",
+  "internal_arithmetic": "PASS",
+  "independent_mathematical_review": "OPEN",
+  "independent_reproduction_by_another_researcher": "OPEN",
+  "formal_verification": "NOT_PERFORMED",
+  "novelty_or_priority": "NOT_ESTABLISHED",
+  "scopes": [
+    {
+      "delta": 16,
+      "edges": 183,
+      "outer_states": 5802,
+      "canonical_columns": 0,
+      "labelled_columns_represented": 0,
+      "final_survivors": 0
+    },
+    {
+      "delta": 15,
+      "edges": 183,
+      "outer_states": 5547774,
+      "outer_dispositions": [
+        5095049,
+        241788,
+        122116,
+        63512,
+        25309
+      ],
+      "canonical_columns": 8495391,
+      "labelled_columns_represented": 130442305,
+      "subset_certificates": 20344,
+      "after_subset_cuts": 190,
+      "pair_certificates": 190,
+      "after_pair_cuts": 0,
+      "supplement_certificates": 0,
+      "final_survivors": 0
+    },
+    {
+      "delta": 16,
+      "edges": 182,
+      "outer_states": 8970,
+      "canonical_columns": 0,
+      "labelled_columns_represented": 0,
+      "final_survivors": 0
+    },
+    {
+      "delta": 15,
+      "edges": 182,
+      "outer_states": 7047851,
+      "outer_dispositions": [
+        5932815,
+        482490,
+        317758,
+        193478,
+        121310
+      ],
+      "canonical_columns": 72483155,
+      "labelled_columns_represented": 1320569120,
+      "subset_certificates": 762589,
+      "after_subset_cuts": 35245,
+      "pair_certificates": 35241,
+      "after_pair_cuts": 4,
+      "supplement_certificates": 4,
+      "final_survivors": 0
+    }
+  ],
+  "totals": {
+    "outer_states": 12610397,
+    "canonical_columns": 80978546,
+    "labelled_columns_represented": 1451011425,
+    "subset_certificates": 782933,
+    "pair_certificates": 35431,
+    "supplement_certificates": 4,
+    "final_survivors": 0
+  }
+}
