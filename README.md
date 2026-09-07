@@ -10,10 +10,10 @@
 |---|---|---|
 | n=25 | Complete candidate bound of 156 edges, with equality only for K₁₂,₁₃ | Independent mathematical review and external computational reproduction OPEN |
 | n=27 | Complete candidate bound of 182 edges, with equality only for K₁₃,₁₄ | Independent mathematical review and external computational reproduction OPEN |
-| General order | Candidate high-degree theorem, coupled resource inequalities and an infinite family of excluded numerical profiles | Middle-degree region remains open; no full general proof |
-| n=28, Δ=15 | At m=196, 13,196 numerical rows in 1,119 demand patterns remain after the v4 tests | Individual degree/residual-column and shared-adjacency analysis; higher-edge-count coverage for the new tests |
+| General order | Candidate high-degree theorem, coupled resource and activation inequalities, and infinite families of excluded numerical profiles | Middle-degree region remains open; no full general proof |
+| n=28, Δ=15 | At m=196, **6,918 numerical rows in 830 demand patterns** remain after the v5 tests | One common column assignment across multiple sources, shared adjacency, and higher-edge-count coverage for the new tests |
 
-For the active research, start with the [general-order overview below](#general-order-research) and the [latest preserved label-tail v4 checkpoint](project/research/general_n/2026-09-07-label-tail-v4/README.md). For external review of the frozen n=25 candidate, use the following reviewer entry points.
+For the active research, start with the [general-order overview below](#general-order-research) and the [latest preserved column-propagation v5 checkpoint](project/research/general_n/2026-09-07-column-propagation-v5/README.md). For external review of the frozen n=25 candidate, use the following reviewer entry points.
 
 ## Start here: n=25 review
 
@@ -61,7 +61,7 @@ A separate [n=27 candidate proof and review package](project/reviews/n27/2026-09
 
 ## General-order research
 
-**Candidate mathematics; exact internal arithmetic REPRODUCED; independent review OPEN.** The latest preserved research checkpoint is [label-tail v4](project/research/general_n/2026-09-07-label-tail-v4/README.md), committed at `a96711534b47e12c597d826dcf23896cf396f9e6`. The directory includes the recovery program and lossless storage for the original proof, code, certificates, reports, exact survivor lists and unfinished work.
+**Candidate mathematics; exact internal arithmetic REPRODUCED; independent review OPEN.** The latest preserved research checkpoint is [column propagation and supplement activation v5](project/research/general_n/2026-09-07-column-propagation-v5/README.md). It contains the complete original ZIP plus readable proof, results, review notes and integrity/extraction instructions. Earlier [label-tail v4](project/research/general_n/2026-09-07-label-tail-v4/README.md), committed at `a96711534b47e12c597d826dcf23896cf396f9e6`, remains unchanged.
 
 ### General maximum-degree result
 
@@ -72,7 +72,7 @@ Delta(G) >= beta*n  ==>  e(G) < floor(n^2/4),
 beta = (10 - sqrt(2))/14 = 0.6132704598...
 ```
 
-This improves the earlier project's coefficient `0.630601937...` from the [residual h-index checkpoint](project/research/general_n/2026-09-07-residual-hindex-v1/README.md). It is a general mathematical argument conditional on its stated graph-theoretic inputs, not an extrapolation from finite tests. The v3 and v4 checkpoints do **not** improve this coefficient. The middle-degree region above the near-half-degree reduction remains open.
+This improves the earlier project's coefficient `0.630601937...` from the [residual h-index checkpoint](project/research/general_n/2026-09-07-residual-hindex-v1/README.md). It is a general mathematical argument conditional on its stated graph-theoretic inputs, not an extrapolation from finite tests. The v3, v4 and v5 checkpoints do **not** improve this coefficient. The middle-degree region above the near-half-degree reduction remains open.
 
 ### Fixed-degree exclusions, not complete new orders
 
@@ -88,25 +88,44 @@ The proof explicitly justifies higher-edge-count coverage for these v3 exclusion
 
 ### What label-tail v4 adds
 
-The new label-tail inequality couples each label's actual neighbourhood capacity to one global budget for extra selected incidences. It gives a hand contradiction for the previously retained **(n, Δ, m)=(64,33,1025) numerical profile**, and extends to an infinite two-parameter family of excluded profiles. **Neither that one profile nor the infinite family constitutes a proof for every graph at the corresponding orders.** The [pair-budgets v2 work](project/research/general_n/2026-09-07-pair-budgets-v2/README.md) records the earlier inequalities and the stress-test profile from which this continuation developed.
+The label-tail inequality couples each label's actual neighbourhood capacity to one global budget for extra selected incidences. It gives a hand contradiction for the previously retained **(n, Δ, m)=(64,33,1025) numerical profile**, and extends to an infinite two-parameter family of excluded profiles. **Neither that one profile nor the infinite family constitutes a proof for every graph at the corresponding orders.** The [pair-budgets v2 work](project/research/general_n/2026-09-07-pair-budgets-v2/README.md) records the earlier inequalities and the stress-test profile from which this continuation developed.
 
-At **n=28, Δ=15, m=196**, v4 reproduces the initial 18,645-demand screen, leaving 1,976 demand patterns for full residual-row expansion. That specified expansion covers **17,669,896 numerical rows**, retains **24,411**, and then leaves **13,196 rows in 1,119 demand patterns** after the additional projected tests. The survivors are saved explicitly. These are necessary-condition rows, **not constructed graphs**.
+At **n=28, Δ=15, m=196**, v4 reproduces the initial 18,645-demand screen, leaving 1,976 demand patterns for full residual-row expansion. That specified expansion covers **17,669,896 numerical rows**, retains **24,411**, and then leaves **13,196 rows in 1,119 demand patterns** after the additional projected tests. These are the preserved historical v4 results and the input to v5, not the current frontier. The survivors are necessary-condition rows, **not constructed graphs**.
 
-The next target is to lift those rows to consistent individual degree and residual-column assignments, apply the stronger label-capacity and pair constraints, and enforce shared adjacency where needed. The degree case and order 28 remain **OPEN**. This v4 numerical scope is at **196 edges only**; the new tests do not claim coverage of 197 edges or every larger edge count. The bound and equality characterization remain separate proof obligations.
+### What column propagation and activation v5 adds
+
+The [v5 proof](project/research/general_n/2026-09-07-column-propagation-v5/PROOF.md) couples individual degree/residual-column options to one source row at a time, including the missing-neighbour restriction. Its general supplement-activation inequality charges the additional outgoing selections that mandatory connections force at their supplements, using incoming-capacity normalization to avoid double counting. A solver-free corollary gives **78 > 57** for one retained row and excludes a specified infinite family of demand/residual patterns at n=4p+4, p≥10. These are pattern exclusions, not whole-order theorems.
+
+The [exact v5 results](project/research/general_n/2026-09-07-column-propagation-v5/RESULTS.json) are:
+
+| Stage at n=28, Δ=15, m=196 | Rows remaining |
+|---|---:|
+| Preserved v4 input | 13,196 |
+| Joint column, matching and one-source-row tests | 7,725 |
+| After 663 activation-cost and 144 activation-cut certificates | **6,918** |
+
+The 6,918 survivors occupy **830 demand patterns**. The 47 additional short block certificates overlap those exclusions and are not added to the totals. Every surviving row, individual option domain, source bound and forced-label set is preserved in `evidence/FINAL_SURVIVORS.json` inside the complete archive.
+
+**The structural gap remains:** different source rows may be witnessed by different complete column assignments. The next target is one common assignment across multiple sources, then the individual-label tail and shared-neighbourhood restrictions. The degree case and order 28 remain **OPEN**. The v4/v5 finite tests cover **196 edges only**; they do not claim coverage of 197 edges or every larger edge count. The bound and equality characterization remain separate proof obligations.
 
 ### Recovery, replay and limits
 
-Follow the [v4 recovery and replay instructions](project/research/general_n/2026-09-07-label-tail-v4/README.md). Recovery restores **40 original payload files plus their manifest**, reusing four hash-checked dependencies from the already preserved demand-support v3 package. The original ZIP is **566,681 bytes**, SHA-256 `3944e786fb0ea5322ae3e18dd177ef8b01046d903076a4ca61caf89fdc5ae184`. The publication record reports byte-exact recovery of every original file and the original ZIP. In the recovered package, read `PROOF.md` and `REVIEW_AND_HANDOFF.md`; full arithmetic replay uses Python and a C++17 compiler, with no optimisation solver required for verification.
+Follow the [v5 archive verification and replay instructions](project/research/general_n/2026-09-07-column-propagation-v5/README.md). The original ZIP contains **54 payload files plus their manifest**, is **1,035,233 bytes**, and has SHA-256 `79bdbdf02b23b9eef38e964b54eb300921b24d539014f07b476655d1575e63b6`. Paul uploaded it in commit `ff96063742208920e14526546d178b5c2cef4a6b`; the same Git blob was relocated into the dated checkpoint directory without recompression. It does not depend on the previously unfinished multipart uploads. The readable proof, results and review notes match the archive byte-for-byte.
 
-Separate checker implementations are software cross-checks by the same assistant, not independent researchers. Actual-graph tests in these checkpoints found **no positive-surplus examples**; finite tests do not establish the universal dense-case contradiction. The mathematical necessity of the lemmas still requires review.
+Publication checks verify integrity and extraction, not mathematical validity. The original creation-session discovery and separate-checker reports remain unchanged in the archive. From the extracted package, `replay.py --verify-only` checks hashes, `--check` runs the full separate checking route, and `--replay` additionally regenerates discovery results. Full arithmetic checking needs Python and g++ with C++17 and Boost headers; no optimisation solver or network is required. A 100-row smoke test is not a full-domain check.
 
-**Arithmetic checks through n=1,000 are not proofs of every order through 1,000. No complete new order above 27, complete shared-adjacency search, improved v4 degree coefficient, novelty determination, or formal-kernel verification is claimed.** Committing a checkpoint preserves evidence; it does not promote its mathematical status.
+The [v4 recovery instructions](project/research/general_n/2026-09-07-label-tail-v4/README.md) remain available for the previous checkpoint. Its original ZIP SHA-256 is `3944e786fb0ea5322ae3e18dd177ef8b01046d903076a4ca61caf89fdc5ae184`.
+
+Separate checker implementations are software cross-checks by the same assistant, not independent researchers. Actual-graph tests in these checkpoints found **no positive-surplus examples**; v5's saved actual-graph sample also has no positive activation-cost example. Finite tests do not establish the universal dense-case contradiction. The mathematical necessity of the lemmas still requires review.
+
+**Arithmetic checks through n=1,000 are not proofs of every order through 1,000. No complete new order above 27, complete shared-adjacency search, improved v5 degree coefficient, novelty determination, or formal-kernel verification is claimed.** Committing a checkpoint preserves evidence; it does not promote its mathematical status.
 
 ## Historical work and governed status
 
 The earlier Audit v5, parked Delta=15 proof and legacy SAT/reproduction work remain preserved. The new candidate supplies replacement arguments where documented; it does not retrospectively certify unresolved historical steps. The [earlier README](project/reviews/history/README_before_reviewer_v1.md) is retained verbatim.
 
 - [Project standing orders](project/N25_PROJECT_STANDING_ORDERS.md)
+- [Repository synchronization and commit-completion policy](project/REPO_SYNC_POLICY.md)
 - [Canonical review and dated updates](project/CANONICAL_N25_REVIEW_2026-09-06.md)
 - [Governed theorem ledger](repro-v1/ledger/theorem_ledger.json)
 - [Historical task backlog](project/CANONICAL_TASKS.json)
@@ -116,4 +135,4 @@ The governed theorem ledger is unchanged by the reviewer editions and research-c
 
 ## Preservation
 
-Keep code, inputs, exact outputs, provenance, corrections and review reports. Preserve each reviewer version and research checkpoint, and make later corrections through a new dated version. Computation, mathematical justification, evidence availability and external review are recorded separately.
+Keep code, inputs, exact outputs, provenance, corrections and review reports. Preserve each reviewer version and research checkpoint, and make later corrections through a new dated version. Computation, mathematical justification, evidence availability and external review are recorded separately. The [commit-completion policy](project/REPO_SYNC_POLICY.md) requires branch attachment and read-back verification before publication is reported as complete.

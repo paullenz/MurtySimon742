@@ -1,0 +1,32 @@
+{
+  "schema": "murty-simon-v5-archive-publication-v1",
+  "date": "2026-09-07",
+  "repository": "paullenz/MurtySimon25",
+  "branch": "main",
+  "source_upload_commit": "ff96063742208920e14526546d178b5c2cef4a6b",
+  "source_path": "MurtySimon_GeneralN_ColumnPropagation_v5.zip",
+  "destination_path": "project/research/general_n/2026-09-07-column-propagation-v5/MurtySimon_GeneralN_ColumnPropagation_v5.zip",
+  "archive_git_blob": "032bdf75157a8898f3e5381e18fdb42dd8e9ff02",
+  "archive_sha256": "79bdbdf02b23b9eef38e964b54eb300921b24d539014f07b476655d1575e63b6",
+  "archive_bytes": 1035233,
+  "preserved_payload_files": 54,
+  "original_manifest_preserved_in_zip": true,
+  "prepublication_checks": {
+    "local_git_blob_matches_uploaded_git_blob": true,
+    "archive_crc_pass": true,
+    "exact_manifest_coverage_54_payloads_plus_manifest": true,
+    "every_original_payload_sha256_matches": true,
+    "readable_mirrors_byte_identical": true,
+    "safe_extraction_test_pass": true,
+    "original_replay_verify_only_pass": true
+  },
+  "full_arithmetic_replay_performed_this_publication": false,
+  "historical_creation_reports_unchanged": true,
+  "mathematical_status": "candidate; independent review OPEN",
+  "scope": {"n": 28, "maximum_degree": 15, "edges": 196},
+  "final_survivors": 6918,
+  "final_demand_patterns": 830,
+  "above_196_edge_count_coverage": false,
+  "prior_partial_multipart_uploads_required": false,
+  "branch_attachment_and_readback": "Recorded separately after the publication commit; this preflight record does not itself claim completed branch attachment."
+}

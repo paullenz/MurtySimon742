@@ -1,0 +1,31 @@
+{
+  "scope": {
+    "n": 28,
+    "maximum_degree": 15,
+    "edges": 196
+  },
+  "input_rows": 13196,
+  "input_patterns": 1119,
+  "joint_rejected": 5471,
+  "joint_survivors": 7725,
+  "activation_cost_rejected": 663,
+  "activation_cut_rejected": 144,
+  "activation_total_rejected": 807,
+  "new_total_rejected": 6278,
+  "final_survivors": 6918,
+  "final_patterns": 830,
+  "overlapping_block_certificates": 47,
+  "joint_checker_report": "evidence/CHECK_JOINT_13196.json",
+  "activation_checker_report": "evidence/CHECK_ACTIVATION.json",
+  "mathematical_tests": "evidence/MATHEMATICAL_TEST_REPORT.json",
+  "new_general_arguments": [
+    "Missing-neighbour degree restriction",
+    "Normalized supplement-activation inequality",
+    "Forced-block activation corollary",
+    "Infinite family p>=10 of demand/residual-row exclusions"
+  ],
+  "mathematical_status": "candidate; independent review OPEN",
+  "whole_order_resolved": false,
+  "above_196_edge_count_coverage": false,
+  "global_degree_coefficient_improved": false
+}
