@@ -1,0 +1,51 @@
+{
+  "schema": "murty-simon-publication-receipt-v1",
+  "date": "2026-09-07",
+  "repository": "paullenz/MurtySimon25",
+  "branch": "main",
+  "publication_commit": "d346ec6d01c49de9a082866ceda6a65efe180b05",
+  "publication_parent": "ff96063742208920e14526546d178b5c2cef4a6b",
+  "publication_tree": "0e79f333461679d731eebb8f5435219b890eee54",
+  "branch_readback_after_nonforced_update": "d346ec6d01c49de9a082866ceda6a65efe180b05",
+  "publication_complete": true,
+  "checkpoint_directory": "project/research/general_n/2026-09-07-column-propagation-v5",
+  "root_readme_blob": "af5b8fb4f7c2162e5e668a4c51022141d920d180",
+  "verified_checkpoint_blobs": {
+    "MurtySimon_GeneralN_ColumnPropagation_v5.zip": "032bdf75157a8898f3e5381e18fdb42dd8e9ff02",
+    "PROOF.md": "5f10e3a1887a9421b5b942989c3523e7faa05769",
+    "PUBLICATION.json": "2bde0121da867bdc14000a4eeee6e69812c08462",
+    "README.md": "53799638b97aace31da25ca6ff882ab999d5bfda",
+    "RESULTS.json": "3fd385e77d2206eb1e6a33a30deeca30c2eb5122",
+    "REVIEW_AND_HANDOFF.md": "47a56b21cfca346c9c8e0bb75ad65d3f4cef16b6",
+    "verify_archive.py": "3d932c2e5c96885f1c5afd242a9ea7900792cfe3"
+  },
+  "archive_bytes": 1035233,
+  "archive_sha256": "79bdbdf02b23b9eef38e964b54eb300921b24d539014f07b476655d1575e63b6",
+  "checks_completed": {
+    "nonforced_branch_update_succeeded": true,
+    "main_read_back_at_publication_commit": true,
+    "committed_directory_and_all_seven_entries_inspected": true,
+    "archive_matches_original_local_git_blob_and_byte_count": true,
+    "all_54_original_payload_sha256_values_verified": true,
+    "zip_crc_and_manifest_coverage_verified": true,
+    "three_readable_original_documents_match_archive": true,
+    "committed_extraction_helper_matches_locally_tested_blob": true,
+    "safe_extraction_and_original_verify_only_wrapper_tested": true,
+    "root_and_checkpoint_readmes_read_back": true,
+    "readme_links_resolve_to_committed_checkpoint": true,
+    "readme_scope_matches_n28_delta15_m196_results": true,
+    "commit_comparison_only_expected_paths": true,
+    "zip_move_reported_as_rename_with_zero_content_changes": true,
+    "no_frozen_proof_or_theorem_ledger_modified": true
+  },
+  "expected_change_summary": {
+    "root_readme_modified": true,
+    "archive_moved_from_repository_root": true,
+    "new_checkpoint_text_files": 6,
+    "other_existing_files_modified_or_deleted": false
+  },
+  "research_frontier": {"rows": 6918, "demand_patterns": 830, "n": 28, "maximum_degree": 15, "edges": 196},
+  "full_arithmetic_replay_performed_this_publication": false,
+  "mathematical_status": "candidate; independent mathematical review OPEN",
+  "receipt_scope": "This receipt records the verified publication commit above. It is added in a subsequent documentation-only commit, whose branch attachment is checked separately; it does not embed its own commit hash."
+}
