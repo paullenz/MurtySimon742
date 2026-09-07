@@ -1,0 +1,58 @@
+{
+  "negative_controls": {
+    "forged_caps": "REJECTED",
+    "missing_demand_profile": "REJECTED",
+    "missing_residual_row": "REJECTED",
+    "zero_dual": "REJECTED"
+  },
+  "scopes": [
+    {
+      "all_exact_certificates_pass": true,
+      "b": 16,
+      "complete_arithmetic_coverage": true,
+      "demand_profiles": 39,
+      "external_review": "OPEN",
+      "graph_theoretic_lemmas_formally_verified": false,
+      "kinds": {
+        "dual": 3,
+        "residual_rows": 1,
+        "source_count": 1,
+        "support": 34
+      },
+      "n": 28,
+      "residual_profiles": 604
+    },
+    {
+      "all_exact_certificates_pass": true,
+      "b": 17,
+      "complete_arithmetic_coverage": true,
+      "demand_profiles": 1155,
+      "external_review": "OPEN",
+      "graph_theoretic_lemmas_formally_verified": false,
+      "kinds": {
+        "dual": 216,
+        "residual_rows": 18,
+        "source_count": 517,
+        "support": 404
+      },
+      "n": 30,
+      "residual_profiles": 13545
+    },
+    {
+      "all_exact_certificates_pass": true,
+      "b": 19,
+      "complete_arithmetic_coverage": true,
+      "demand_profiles": 630,
+      "external_review": "OPEN",
+      "graph_theoretic_lemmas_formally_verified": false,
+      "kinds": {
+        "dual": 77,
+        "source_count": 94,
+        "support": 459
+      },
+      "n": 33,
+      "residual_profiles": 0
+    }
+  ],
+  "seconds": 4.223370730999932
+}

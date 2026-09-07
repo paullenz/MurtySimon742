@@ -1,0 +1,73 @@
+{
+  "format": "murty-demand-support-lossless-capsule-v1",
+  "parts": [
+    {
+      "name": "CAPSULE.part01.b64",
+      "sha256": "4e0d9dbc66e39c52ac3d21e666fb2630a7b0da01729b1876679fcb28d487815b",
+      "bytes": 8001,
+      "git_blob": "1b3463fa47e6b6abfb55cedad7097ff2a3442ed7"
+    },
+    {
+      "name": "CAPSULE.part02.b64",
+      "sha256": "461744b80f41cf3d42031ce3dfe17758656be0f598641b2c21b9e80979d5abe7",
+      "bytes": 8001,
+      "git_blob": "a7014e3ed0a88695b013d3dfd138b086e58751c2"
+    },
+    {
+      "name": "CAPSULE.part03.b64",
+      "sha256": "9eb4571e909d11761c5ccb3bdeaab12492f1c2af7a8b8d88a745f219e9178ca0",
+      "bytes": 8001,
+      "git_blob": "abc22435dcb0e24cae8fb0f2e5023a3f462e19f4"
+    },
+    {
+      "name": "CAPSULE.part04.b64",
+      "sha256": "89f1dd696c23fa8f557cf6e8d3e92479d5b8c4a972eb5fe0bbaef4f4d8a6f202",
+      "bytes": 8001,
+      "git_blob": "641558da15cd3f5fea7233b7a21bbb65aa362a03"
+    },
+    {
+      "name": "CAPSULE.part05.b64",
+      "sha256": "aa5cdf370d21df3eb15d6b62bdd683b600c658950b09dc95b2025b80022d76b8",
+      "bytes": 8001,
+      "git_blob": "539c521fcfc2d9d1b745c5384495b85bd3727bc2"
+    },
+    {
+      "name": "CAPSULE.part06.b64",
+      "sha256": "7c23179d1fc0866cbb0aa6bc4d83a109b03a501ddc818ae83085f5f9665b24e2",
+      "bytes": 8001,
+      "git_blob": "24db97867c3a5c31c13c09cc75bd44f1a42c9205"
+    },
+    {
+      "name": "CAPSULE.part07.b64",
+      "sha256": "cdaf8df4bb088699774fb4b3125682ecbe7bba4826ca997337979a30aabe03ed",
+      "bytes": 8001,
+      "git_blob": "662fe0e4e1a279d376ec777fdae6375a0d192ddf"
+    },
+    {
+      "name": "CAPSULE.part08.b64",
+      "sha256": "40b6988357f4d32d4ae4980cb71919e2de9c198504e1ab8782642dd405d0012e",
+      "bytes": 8001,
+      "git_blob": "6def7d5633c7d821e5a7e9e39c02dcd7a371334a"
+    },
+    {
+      "name": "CAPSULE.part09.b64",
+      "sha256": "b161b3cb4ebdb496bf92ad38f47e189920deee3648c16e64698ceae26a1e5478",
+      "bytes": 8001,
+      "git_blob": "55a051a2056a11a2343f2ac63801672434d09889"
+    },
+    {
+      "name": "CAPSULE.part10.b64",
+      "sha256": "b2d84ee742d9944f25f137d2916fcd00ab023ab6a6ad9dde59d654117399066f",
+      "bytes": 8001,
+      "git_blob": "21f982f772cce64ebe27bf378385dda511ddcc03"
+    },
+    {
+      "name": "CAPSULE.part11.b64",
+      "sha256": "0ad8810768fad9e80effa849a3d9a5c8f99b9614738e70ea93d179be2ba373ef",
+      "bytes": 4397,
+      "git_blob": "e8b245643637adb1aaee5bc900917af8ba7fce9a"
+    }
+  ],
+  "decoded_xz_sha256": "def279b312a7246121e3e0fd92bef8384a1dbba1cb89b7e98d0fb8b3713bfc04",
+  "json_sha256": "33927b57ac6735d3d1421c16172074d81310a7d55d005a2e9e29c1c7997a3639"
+}
