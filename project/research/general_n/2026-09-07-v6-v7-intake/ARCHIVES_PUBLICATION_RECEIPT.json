@@ -1,0 +1,38 @@
+{
+  "schema": "murty-simon-archive-publication-receipt-v1",
+  "date": "2026-09-07",
+  "repository": "paullenz/MurtySimon25",
+  "branch": "main",
+  "parent": "9698513eb20817ebfa9556e79b11d5f538280065",
+  "publication_commit": "d72fe669c906bed3ffeb8847913e13d49f7a3ef7",
+  "tree": "e43d447acb866e5f38caf45ea0841849bcca5ca7",
+  "branch_readback": "d72fe669c906bed3ffeb8847913e13d49f7a3ef7",
+  "complete": true,
+  "archives": [
+    {"directory":"2026-09-07-shared-adjacency-v6","filename":"MurtySimon_GeneralN_SharedAdjacency_v6.zip","bytes":17940219,"git_blob":"40d3067484d2b1efc61e12781f9b545f1a96f166","sha256":"d00a9627e9ed4d8a6f22ae1f2b194791412ee2d16d502b1968be16e02aa30496","payload_files":88},
+    {"directory":"2026-09-07-local-incidence-v7","filename":"MurtySimon_GeneralN_LocalIncidence_v7.zip","bytes":15943487,"git_blob":"8aaf3028d9af6d4d854d5a25b3728763a49fe3e6","sha256":"0637c6b91d7e0c311025bf68dc7a373f57f6230e271588bd6693d8ffc17eb6cf","payload_files":87},
+    {"directory":"2026-09-07-direct-197-v8","filename":"MurtySimon_N28_197_Direct_v8.zip","bytes":5677524,"git_blob":"45889e1b36f0bc395f9f39b9c18035b52ce74dbb","sha256":"b753076ffc755066a0c57756be91cc5b265c163d869244d3aa65e3943799347b","payload_files":90}
+  ],
+  "archive_parent_directory":"project/research/general_n",
+  "checks": {
+    "original_local_archive_git_blobs_match_uploaded_objects": true,
+    "all_original_crc_safe_path_manifest_length_and_sha256_checks_pass": true,
+    "same_three_git_blobs_and_sizes_read_back_at_destinations": true,
+    "comparison_reports_three_renames_without_content_changes": true,
+    "nonforced_branch_update_and_readback_pass": true,
+    "root_readme_read_back_in_n25_n27_n28_order": true,
+    "comparison_contains_only_nine_intended_paths": true,
+    "no_frozen_proof_original_evidence_or_governed_ledger_changed": true
+  },
+  "root_readme_blob":"285c974974ee3bc511ab1a85f3b58e3dd178ab8d",
+  "archive_guides": {
+    "v6":"560dbf6a624a93f6413976e8703e446735e02446",
+    "local_v7":"1964553917a4785903c53d168e4e17cc723dee53",
+    "v8":"0c606485c09d8393bdcfe4775b1f3206cc5ede41"
+  },
+  "supersedes":"Earlier intake and documentation receipts' statements that these three ZIPs were unavailable; those historical records are unchanged.",
+  "separate_degree_load_v7_bundle_included":false,
+  "redteam_audit":"In progress at archive publication; this receipt records preservation, not an audit conclusion.",
+  "mathematical_status":"candidate; independent mathematical review OPEN",
+  "receipt_note":"The publication commit is verified above. This receipt is added in a later documentation-only commit, checked separately without self-embedding its hash."
+}
