@@ -1,0 +1,271 @@
+{
+  "date": "2026-09-07",
+  "mathematical_status": "Candidate derivations; independent review OPEN; no theorem-ledger promotion",
+  "arithmetic_status": "REPRODUCED; rerun matched complete RESULTS.json byte-for-byte",
+  "environment": {
+    "python": "3.13.5",
+    "implementation": "CPython"
+  },
+  "arithmetic_checks": {
+    "integer_quadratic_maxima": 1500,
+    "odd_witness_endpoint_cases": 63248,
+    "high_degree_integer_checks": 183386,
+    "status": "PASS; finite algebra regression tests, not universal proof"
+  },
+  "small_graph_checks": {
+    "status": "PASS",
+    "coverage": "all labelled simple graphs of orders 3 through 6; all selected-quasi-edge choices at all minimum-degree complement roots of the non-bipartite critical graphs",
+    "counts": {
+      "graphs": 33864,
+      "diameter_two_critical": 608,
+      "non_bipartite_critical": 552,
+      "root_instances": 780,
+      "selection_instances": 780,
+      "largest_selection_product": 1,
+      "positive_surplus_instances": 0,
+      "all_B_residual_active_instances": 420,
+      "local_vertex_inequality_checks": 840
+    },
+    "limitations": "No positive-surplus graph occurred. These finite tests do not prove residual activity for arbitrary positive surplus, nor the universal theorem. Same-assistant implementation, not external review."
+  },
+  "orders": [
+    {
+      "n": 27,
+      "target_edges": 182,
+      "above_bound_edge_counts": [
+        183
+      ],
+      "remaining_degrees_at_equality": [
+        15,
+        16
+      ],
+      "scalar_band_count": 20
+    },
+    {
+      "n": 28,
+      "target_edges": 196,
+      "above_bound_edge_counts": [
+        197
+      ],
+      "remaining_degrees_at_equality": [
+        15,
+        16
+      ],
+      "scalar_band_count": 38
+    },
+    {
+      "n": 29,
+      "target_edges": 210,
+      "above_bound_edge_counts": [
+        211
+      ],
+      "remaining_degrees_at_equality": [
+        16,
+        17
+      ],
+      "scalar_band_count": 31
+    },
+    {
+      "n": 30,
+      "target_edges": 225,
+      "above_bound_edge_counts": [
+        226
+      ],
+      "remaining_degrees_at_equality": [
+        16,
+        17
+      ],
+      "scalar_band_count": 49
+    },
+    {
+      "n": 31,
+      "target_edges": 240,
+      "above_bound_edge_counts": [
+        241
+      ],
+      "remaining_degrees_at_equality": [
+        17,
+        18
+      ],
+      "scalar_band_count": 47
+    },
+    {
+      "n": 32,
+      "target_edges": 256,
+      "above_bound_edge_counts": [
+        257
+      ],
+      "remaining_degrees_at_equality": [
+        17,
+        18,
+        19
+      ],
+      "scalar_band_count": 72
+    },
+    {
+      "n": 33,
+      "target_edges": 272,
+      "above_bound_edge_counts": [
+        273,
+        274
+      ],
+      "remaining_degrees_at_equality": [
+        18,
+        19
+      ],
+      "scalar_band_count": 61
+    },
+    {
+      "n": 34,
+      "target_edges": 289,
+      "above_bound_edge_counts": [
+        290,
+        291
+      ],
+      "remaining_degrees_at_equality": [
+        18,
+        19,
+        20
+      ],
+      "scalar_band_count": 94
+    },
+    {
+      "n": 35,
+      "target_edges": 306,
+      "above_bound_edge_counts": [
+        307,
+        308
+      ],
+      "remaining_degrees_at_equality": [
+        19,
+        20,
+        21
+      ],
+      "scalar_band_count": 78
+    },
+    {
+      "n": 40,
+      "target_edges": 400,
+      "above_bound_edge_counts": [
+        401,
+        402,
+        403
+      ],
+      "remaining_degrees_at_equality": [
+        21,
+        22,
+        23,
+        24
+      ],
+      "scalar_band_count": 207
+    },
+    {
+      "n": 50,
+      "target_edges": 625,
+      "above_bound_edge_counts": [
+        626,
+        627,
+        628,
+        629,
+        630
+      ],
+      "remaining_degrees_at_equality": [
+        26,
+        27,
+        28,
+        29,
+        30
+      ],
+      "scalar_band_count": 507
+    },
+    {
+      "n": 100,
+      "target_edges": 2500,
+      "above_bound_edge_counts": [
+        2501,
+        2502,
+        2503,
+        2504,
+        2505,
+        2506,
+        2507,
+        2508,
+        2509,
+        2510,
+        2511,
+        2512,
+        2513,
+        2514,
+        2515,
+        2516,
+        2517,
+        2518,
+        2519,
+        2520,
+        2521,
+        2522,
+        2523,
+        2524,
+        2525,
+        2526
+      ],
+      "remaining_degrees_at_equality": [
+        51,
+        52,
+        53,
+        54,
+        55,
+        56,
+        57,
+        58,
+        59,
+        60,
+        61,
+        62
+      ],
+      "scalar_band_count": 6167
+    }
+  ],
+  "total_scalar_bands": 7371,
+  "commands": [
+    "python3 screen.py --output RESULTS.json",
+    "python3 test_small_graphs.py"
+  ],
+  "source_proof_git_blob": "83e09e02918adf461470bf7e70177bad275b57d9",
+  "files": {
+    "ATTACK.md": {
+      "bytes": 19056,
+      "sha256": "3efd54a8827fdc4d3bba83936a5d4aa4bd619fc7b285076abaa22421e378dde7"
+    },
+    "RESULTS.json": {
+      "bytes": 866443,
+      "sha256": "752737cbf82a4e62feac7e7c0070f1d975266770aef585bb3e476bbb329abde5"
+    },
+    "SMALL_GRAPH_TESTS.json": {
+      "bytes": 742,
+      "sha256": "f22482f8dbb59b71a7fa2a0f8991f52040c3a871cf4a17ad6f2abbddadc3e382"
+    },
+    "SUMMARY.json": {
+      "bytes": 5427,
+      "sha256": "2003c0e7e14ea18fa8e7803df5ff839fc9072058ca90c9dda68929921f823083"
+    },
+    "screen.py": {
+      "bytes": 5313,
+      "sha256": "d2e446f451c741a5e0b8e9cd76d286f3c3d1c9506abfd2384a1c452e91bcddcc"
+    },
+    "test_small_graphs.py": {
+      "bytes": 5699,
+      "sha256": "32a77fda653ce35d9fb746e7b0a912dea3eb4ce493636677a71afefdcde57910"
+    }
+  },
+  "preservation": "Repository contains self-contained proof note, both code files and this report. Full RESULTS.json is included in the downloadable ZIP and exactly reconstructable with the retained source, inputs and environment. No frozen n=25/n=27 artifacts changed.",
+  "corrections": [
+    "README replay environment initially transcribed as CPython 3.11.8; corrected to actual CPython 3.13.5 in commit dce7fa1a363117b8271bfc69cd55cf1da7129d17. No mathematical or output change."
+  ],
+  "limitations": [
+    "No full residual-profile sweep was run.",
+    "No order above 27 is claimed resolved.",
+    "Positive-surplus counterexamples are not supplied by this test.",
+    "The candidate 0.630601937... cutoff is proved algebraically in ATTACK.md; tests are supporting checks only."
+  ]
+}
