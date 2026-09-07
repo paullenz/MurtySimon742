@@ -1,0 +1,22 @@
+{
+  "date": "2026-09-07",
+  "checkpoint": "2026-09-07-label-tail-v4",
+  "baseline_commit": "85e04173d5a2b29641bad1a71867cdf7fa15cfd6",
+  "original_zip_bytes": 566681,
+  "original_zip_sha256": "3944e786fb0ea5322ae3e18dd177ef8b01046d903076a4ca61caf89fdc5ae184",
+  "capsule_format": "label-tail-v4-lossless-1",
+  "capsule_compressed_bytes": 51712,
+  "capsule_sha256": "21c137f3ff75c6d79eab69925fc09d71c47f4a7940291cf3ba9c0ca724cf71f8",
+  "parts": 5,
+  "manifested_payload_files": 40,
+  "all_original_file_hashes_match": true,
+  "full_original_zip_hash_matches": true,
+  "recovery_solver_used": false,
+  "recovery_network_used": false,
+  "recovery_python": "3.13.5",
+  "unchanged_dependency_checkpoint": "2026-09-07-demand-support-v3",
+  "pinned_v3_restore_git_blob": "f6b82ac8a8977c3a0454dae7365fcd63f2c69023",
+  "mathematical_status": "candidate",
+  "independent_mathematical_review": "OPEN",
+  "theorem_ledger_changed": false
+}
