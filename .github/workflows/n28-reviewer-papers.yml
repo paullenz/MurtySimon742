@@ -4,6 +4,7 @@ on:
   push:
     branches: [main]
     paths:
+      - '.github/workflows/n28-reviewer-papers.yml'
       - 'releases/n28-reviewer-v1/PUBLICATION_CAPSULE*.b64'
       - 'releases/n28-reviewer-v1/PUBLICATION_CAPSULE.json'
       - 'releases/n28-reviewer-v1/restore_release.py'
@@ -25,6 +26,14 @@ jobs:
         uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262
         with:
           fetch-depth: 0
+      - name: Preserve ordinary archive blobs in this temporary checkout
+        run: |
+          git config --local filter.lfs.process ''
+          git config --local filter.lfs.clean cat
+          git config --local filter.lfs.smudge cat
+          git config --local filter.lfs.required false
+          git update-index --refresh
+          git diff --exit-code
       - name: Recover hash-pinned reviewer sources
         run: python3 -I -B releases/n28-reviewer-v1/restore_release.py
       - name: Install document-build dependencies
