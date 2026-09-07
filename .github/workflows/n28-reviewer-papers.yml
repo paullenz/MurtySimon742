@@ -1,0 +1,46 @@
+name: Build n28 reviewer papers
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - 'releases/n28-reviewer-v1/PUBLICATION_CAPSULE.b64'
+      - 'releases/n28-reviewer-v1/PUBLICATION_CAPSULE.json'
+      - 'releases/n28-reviewer-v1/restore_release.py'
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: n28-reviewer-papers
+  cancel-in-progress: false
+
+jobs:
+  build-papers:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 20
+    steps:
+      - name: Check out the source publication
+        uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262
+        with:
+          fetch-depth: 0
+      - name: Recover hash-pinned reviewer sources
+        run: python3 -I -B releases/n28-reviewer-v1/restore_release.py
+      - name: Install document-build dependencies
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y --no-install-recommends texlive-latex-recommended texlive-latex-extra texlive-fonts-recommended lmodern
+      - name: Build papers and record source/output hashes
+        run: python3 -I -B releases/n28-reviewer-v1/build_papers.py
+      - name: Commit only the reviewer release
+        run: |
+          set -euo pipefail
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add -- releases/n28-reviewer-v1
+          if git diff --cached --quiet; then exit 0; fi
+          git commit -m 'Publish hash-verified n28 reviewer sources and compiled papers'
+          git fetch origin main
+          git rebase origin/main
+          git push origin HEAD:main
