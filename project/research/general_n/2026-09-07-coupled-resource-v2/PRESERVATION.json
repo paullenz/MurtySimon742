@@ -1,0 +1,17 @@
+{
+  "date": "2026-09-07",
+  "repository": "paullenz/MurtySimon25",
+  "path": "project/research/general_n/2026-09-07-coupled-resource-v2",
+  "complete_core_checkpoint": "49fc1a0176f225f79caf78d653add836a24149c4",
+  "prior_checkpoint": "4bd48b12c6f5953af92adcb614f509b2aa06391a",
+  "authorization": "User said Go for it after the general-order attack proposal; project standing orders require preservation.",
+  "core_files": "All ten core file blob hashes read back from GitHub match MANIFEST.json. Manifest itself is blob acd25a2bd2989809c909dd86344b8dec6748b45f.",
+  "replay": "Full replay after reconciliation passed; TEST_RESULTS.json and full replay report matched their stored outputs byte-for-byte.",
+  "frozen_artifacts": "Commit comparison from prior checkpoint showed only additions inside this new research folder. No frozen n25/n27 package or governed theorem-ledger change.",
+  "transport_corrections": [
+    "The first compressed-evidence upload contained a four-character insertion. Its initial correction introduced a separate one-character substitution. Both transport errors were resolved in commit 74a3b7981512151150aa7a32de553f84266c8921; final archive blob babc7b2b09cd0ff3b8aed38b33effbf51f15bebd matches the tested local bytes. Mathematical work and actual outputs were unchanged.",
+    "The uploaded test_coupled.py had one additional blank line before separate_checker_tests. The local copy was reconciled to that byte-identical repository version, the manifest updated, and the full test replay repeated successfully. No executable statement or result changed."
+  ],
+  "status": "Candidate mathematics; internally reproduced arithmetic; independent mathematical and computational review OPEN.",
+  "limits": "No completed order above 27, no full profile enumeration, no novelty or priority claim."
+}
