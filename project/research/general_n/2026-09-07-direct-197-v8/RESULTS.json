@@ -1,0 +1,43 @@
+{
+  "scope": {
+    "n": 28,
+    "a": 12,
+    "b": 15,
+    "m": 197,
+    "t": 2
+  },
+  "fresh_charging_demand_tuples": 12012,
+  "demand_rejections": {
+    "source_count": 9146,
+    "support": 67,
+    "integer_duals": 1570
+  },
+  "retained_demands": 1229,
+  "residual_rows_enumerated": 8216928,
+  "residual_row_survivors": 5154,
+  "projected_rejections": {
+    "zero_slack": 2033,
+    "pair_threshold": 162
+  },
+  "projected_survivors": 2959,
+  "projected_demand_patterns": 497,
+  "joint_rejections": 1375,
+  "joint_survivors": 1584,
+  "joint_demand_patterns": 359,
+  "LP_rejections": {
+    "shared": 787,
+    "source_degree_typed": 790,
+    "actual_endpoint_typed": 7
+  },
+  "final_survivors": 0,
+  "final_demand_patterns": 0,
+  "integer_branching_used": false,
+  "all_maximum_degrees_at_197_candidate_excluded": true,
+  "Fan_strict_bound_at_28": "78883/400 = 197.2075",
+  "candidate_order28_assembly": "m<=196; equality only K(14,14), using inherited equality chain",
+  "full_197_domain_check_completed": true,
+  "independent_mathematical_review": "OPEN",
+  "weak_core_reduction_used": false,
+  "old_t1_survivors_reused_as_t2_input": false,
+  "formal_kernel_verification": false
+}

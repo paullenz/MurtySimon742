@@ -1,0 +1,81 @@
+{
+  "LP_exact_rejections": {
+    "endpoint": 7,
+    "shared": 787,
+    "typed": 790
+  },
+  "LP_inputs": 1584,
+  "all_joint_survivor_columns_caps_forced_labels_reconstructed": true,
+  "charging_domain": 12012,
+  "complete_fresh_domain_and_disjoint_handoffs": true,
+  "discovery_or_optimisation_imported": false,
+  "every_LP_constraint_rebuilt_by_separate_checker": true,
+  "final_survivors": 0,
+  "full_upstream_equality_chain_replayed_here": false,
+  "initial_counts": {
+    "OPEN": 1229,
+    "dual": 1570,
+    "source_count": 9146,
+    "support": 67
+  },
+  "joint": {
+    "exact_rejections": 1375,
+    "inputs": 2959,
+    "surviving_demand_patterns": 359,
+    "survivors": 1584
+  },
+  "mathematical_status": "candidate; independent mathematical review OPEN",
+  "negative_controls": {
+    "duplicate_LP_disposition": "REJECTED",
+    "duplicate_LP_multiplier": "REJECTED",
+    "duplicate_demand": "REJECTED",
+    "empty_LP_contradiction": "REJECTED",
+    "forged_LP_rhs": "REJECTED",
+    "negative_inequality_multiplier": "REJECTED",
+    "omitted_LP_disposition": "REJECTED",
+    "omitted_demand": "REJECTED",
+    "unknown_LP_constraint": "REJECTED",
+    "wrong_LP_input_row": "REJECTED",
+    "wrong_edge_scope": "REJECTED",
+    "wrong_t_scope": "REJECTED",
+    "zero_initial_dual": "REJECTED"
+  },
+  "old_t1_survivors_used_as_t2_domain": false,
+  "projected": {
+    "complete_partition": true,
+    "negative_controls": {
+      "forged_pair_count_rejected": true,
+      "omitted_survivor_detected": true
+    },
+    "projected_pair_certificates": 162,
+    "rows_checked": 5154,
+    "surviving_demands": 497,
+    "surviving_rows": 2959,
+    "zero_slack_certificates": 2033
+  },
+  "residual_domain": {
+    "fnv64": "16479821321584091042",
+    "initial_source_rejections": 8194665,
+    "low_k_rejections": 0,
+    "refined_source_rejections": 17109,
+    "states": 8216928,
+    "survivors": 5154
+  },
+  "retained_demands": 1229,
+  "scope": {
+    "a": 12,
+    "b": 15,
+    "m": 197,
+    "n": 28,
+    "t": 2
+  },
+  "seconds": 118.0112499559998,
+  "stage_seconds": {
+    "LP": 21.353939716000014,
+    "initial": 1.2517029109999385,
+    "joint": 92.313489936,
+    "projected": 0.6093683980000151,
+    "residual_enumeration": 1.2512035390000165
+  },
+  "weak_core_reduction_used": false
+}

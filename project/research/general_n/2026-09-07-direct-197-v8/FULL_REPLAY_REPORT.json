@@ -1,0 +1,44 @@
+{
+  "196_edge_full_ancestor_chain_replayed": false,
+  "LP_exact_rejections": {
+    "endpoint": 7,
+    "shared": 787,
+    "typed": 790
+  },
+  "all_checks_pass": true,
+  "charging_domain": 12012,
+  "final_survivors": 0,
+  "integrity_before": {
+    "all_sha256_match": true,
+    "manifest_sha256": "cf29db93b558880191092c0ef95041917e897809cadd24964707093e45e4d353",
+    "payload_files": 79
+  },
+  "jobs": [
+    {
+      "exit_code": 0,
+      "log": "direct197_check.log",
+      "name": "direct197_check",
+      "seconds": 122.20866712899988
+    },
+    {
+      "exit_code": 0,
+      "log": "all_degree_scope.log",
+      "name": "all_degree_scope",
+      "seconds": 0.6669479820000106
+    }
+  ],
+  "mathematical_status": "candidate; independent review OPEN",
+  "mode": "full-separate-check",
+  "optimisation_required_for_check": false,
+  "original_payloads_unchanged": true,
+  "residual_rows": 8216928,
+  "scope": {
+    "a": 12,
+    "b": 15,
+    "m": 197,
+    "n": 28,
+    "t": 2
+  },
+  "seconds": 122.91854645800004,
+  "weak_core_reduction_used": false
+}
