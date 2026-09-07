@@ -1,0 +1,86 @@
+{
+  "schema": "n28-reviewer-release-publication-receipt-v1",
+  "date": "2026-09-07",
+  "repository": "paullenz/MurtySimon25",
+  "branch": "main",
+  "baseline_commit": "cd3c22411911280624a8223035e6de2343abbb7c",
+  "source_capsule_commit": "a2d65690c4a5eca098193d0022ddf0cae0bb85ab",
+  "workflow_repair_commit": "6c4f74139e4da33ca92a9ce42ad6a46552e54798",
+  "compiled_release_commit": "79a6c69fb671fb6c0b6d2993d2175edd5e399273",
+  "readme_commit": "5dda1e59b30511d4b1eae62f2980a4ed52803a42",
+  "branch_readback": "5dda1e59b30511d4b1eae62f2980a4ed52803a42",
+  "publication_complete": true,
+  "release_directory": "releases/n28-reviewer-v1",
+  "entire_51_file_release_git_tree": "648c2c0a81a1bba774e3f380c69911b9871a1cd5",
+  "downloaded_artifact_recomputed_git_tree_matches": true,
+  "successful_build_run": 34164477095,
+  "downloaded_artifact_id": 10033715955,
+  "downloaded_artifact_sha256": "28ddd7f2ee066c398512d3bc6db882fd43b72919e8cfc54d0aa79d52e775b4f8",
+  "all_50_manifested_payloads_plus_manifest_verified": true,
+  "all_40_authored_source_files_match_capsule": true,
+  "papers": [
+    {
+      "filename": "N28_Reviewer_Manuscript_v1.pdf",
+      "pages": 12,
+      "bytes": 391826,
+      "git_blob": "b09b96adf6bcb2a2649c957f8c5df0f35e909e79",
+      "sha256": "905bdcc7ff0c90ffad372a25639d7d1381bed8c1ad3d1cbd45ded930ecfa8482",
+      "source_sha256": "d222f2c23c0be12c33b7ab100558427b02640ed518d4a799186e342b6fbc9e9b"
+    },
+    {
+      "filename": "N28_Verification_Companion_v1.pdf",
+      "pages": 7,
+      "bytes": 289150,
+      "git_blob": "5ead670d4898217e3b31005a56f692d34563b856",
+      "sha256": "38dd81d3f478ffdeb5009c9037556f4ffa876a149081f8f5fcde3768e796a41e",
+      "source_sha256": "8afeea1877989229efd0fad34d86d047d3cafac54dd2bdf016baba90908dddf7"
+    }
+  ],
+  "pdf_checks": {
+    "local_all_page_visual_review": true,
+    "remote_all_page_text_matches_reviewed_local_build": true,
+    "remote_all_page_rasters_identical_at_comparison_resolution": true,
+    "three_pass_build_without_overfull_or_unresolved_reference_warnings": true,
+    "document_build_is_not_a_mathematical_check": true
+  },
+  "readme": {
+    "git_blob": "b9ba6807ae0e9b7adfa2da68e8708e92da26b243",
+    "ascending_order_n25_n27_n28": true,
+    "all_four_direct_paper_links_present_and_targets_verified": true,
+    "n25_paper_format": "PDF, with existing readable Markdown mirror",
+    "n27_paper_format": "existing full Markdown proof, not a newly claimed PDF",
+    "n28_paper_formats": "two PDFs and editable LaTeX sources",
+    "previous_readme_preserved_as": "project/reviews/history/README_before_n28_reviewer_release_v1.md",
+    "previous_readme_git_blob": "898d96c6f1bc77b4fdc1c0858d2b83d9c07320f2"
+  },
+  "hardened_default_check": {
+    "actually_run_in_full": true,
+    "jobs_passed": 8,
+    "component_routes": 6,
+    "equality_handoffs_byte_identical": 5,
+    "malformed_helper_inputs_rejected_before_output_creation": 13,
+    "valid_197_residual_rows": 8216928,
+    "valid_report_survivor_and_band_bytes_unchanged": true,
+    "final_survivors_196": 0,
+    "final_survivors_197": 0,
+    "original_archives_unchanged": 6,
+    "original_extracted_payloads_unchanged": 400,
+    "full_arithmetic_default_integrity_only_explicit": true,
+    "report": "validation/REVIEW_CHECK_REPORT.json"
+  },
+  "publication_retry": {
+    "first_run": 34164306443,
+    "first_build_and_artifact_passed": true,
+    "first_publication_error": "git rebase refused unstaged changes caused by legacy LFS attributes on ordinary archive blobs",
+    "repair": "disabled LFS filtering only in the temporary workflow checkout; repository attributes and archives unchanged",
+    "subsequent_complete_build_and_push_passed": true
+  },
+  "scope_checks": {
+    "baseline_to_compiled_release_only_adds_workflow_and_51_release_files": true,
+    "readme_commit_only_changes_root_readme_and_adds_history_copy": true,
+    "no_frozen_proof_original_archive_or_governed_ledger_changed": true,
+    "no_review_invitation_sent": true
+  },
+  "mathematical_status": "complete direct order-28 candidate; independent mathematical review and external computational reproduction OPEN",
+  "receipt_scope": "Records the preceding verified commits. This receipt is added by a later documentation-only commit whose branch attachment is checked separately."
+}
