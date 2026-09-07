@@ -1,0 +1,14 @@
+{
+  "name": "degree_scope",
+  "command": [
+    "/opt/pyvenv/bin/python",
+    "-I",
+    "-B",
+    "/mnt/data/n28_review_release/validation/hardened_v8/src/check_scope197.py",
+    "--output",
+    "/mnt/data/n28_review_release/validation/ALL_DEGREES_AND_FAN.json"
+  ],
+  "exit_code": 0,
+  "seconds": 0.6132457940000222,
+  "log": "/mnt/data/n28_review_release/validation/logs/degree_scope.log"
+}

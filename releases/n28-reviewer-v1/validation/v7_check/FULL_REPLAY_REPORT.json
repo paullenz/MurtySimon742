@@ -1,0 +1,78 @@
+{
+  "all_pass": true,
+  "mode": "check",
+  "input_integrity": {
+    "all_pass": true,
+    "payload_files_verified": 87,
+    "manifest_sha256": "fb3bb60dc4808b207b406fe01de1242344c196f502dd72d1debd39685b350e8a"
+  },
+  "scripts": [
+    {
+      "script": "src/check.py",
+      "exit_code": 0,
+      "seconds": 61.83284105199999,
+      "log": "01_check.log"
+    },
+    {
+      "script": "src/test_local.py",
+      "exit_code": 0,
+      "seconds": 3.1254093759999932,
+      "log": "02_test_local.log"
+    },
+    {
+      "script": "src/test_ledger_lift.py",
+      "exit_code": 0,
+      "seconds": 3.7412852420000036,
+      "log": "03_test_ledger_lift.log"
+    },
+    {
+      "script": "src/test_total_lift.py",
+      "exit_code": 0,
+      "seconds": 5.190849631999981,
+      "log": "04_test_total_lift.log"
+    },
+    {
+      "script": "src/one_spare.py",
+      "exit_code": 0,
+      "seconds": 1.2364542000000256,
+      "log": "05_one_spare.log"
+    },
+    {
+      "script": "src/one_spare_strong.py",
+      "exit_code": 0,
+      "seconds": 0.6887310790000356,
+      "log": "06_one_spare_strong.log"
+    },
+    {
+      "script": "src/check_scope.py",
+      "exit_code": 0,
+      "seconds": 0.5837394789999735,
+      "log": "07_check_scope.log"
+    }
+  ],
+  "stable_reports_match": [
+    "EXACT_CHECK_REPORT.json",
+    "ACTUAL_LOCAL_LIFT_REPORT.json",
+    "ACTUAL_LEDGER_LIFT_REPORT.json",
+    "ACTUAL_TOTAL_LIFT_REPORT.json",
+    "ONE_SPARE_REPORT.json",
+    "ONE_SPARE_STRONG_REPORT.json",
+    "SCOPE_CHECK_REPORT.json"
+  ],
+  "only_timing_fields_ignored_in_report_comparisons": true,
+  "preserved_source_package_unchanged": true,
+  "final_survivor_content_identical": true,
+  "final_survivor_compressed_bytes_identical": true,
+  "new_exact_exclusions": 388,
+  "final_survivors": 0,
+  "scope": {
+    "n": 28,
+    "Delta": 15,
+    "m": 196
+  },
+  "m197_covered": false,
+  "upstream_full_arithmetic_replayed": false,
+  "optimisation_solver_used": false,
+  "independent_external_review": false,
+  "seconds": 76.42007211099997
+}

@@ -1,0 +1,11 @@
+{
+  "schema": "n28-external-review-register-v1",
+  "date": "2026-09-07",
+  "mathematical_review": "OPEN",
+  "external_computational_reproduction": "OPEN",
+  "formal_verification": "NOT_CLAIMED",
+  "invitations_sent_by_this_release": false,
+  "assessments": [],
+  "internal_release_check": "PASS; see validation/REVIEW_CHECK_REPORT.json",
+  "status_note": "Internal checking and paper publication do not change independent review status."
+}

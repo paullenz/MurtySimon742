@@ -1,0 +1,25 @@
+{
+  "schema": "n28-reviewer-paper-build-v1",
+  "mathematical_check_performed_by_this_script": false,
+  "source_manifest_sha256": "37a1fd007f042b4d61614b01bdffd2e0b7fc7b9b2a731ba3f78e5b1356a74249",
+  "source_commit": "6c4f74139e4da33ca92a9ce42ad6a46552e54798",
+  "papers": {
+    "N28_Reviewer_Manuscript_v1": {
+      "source_sha256": "d222f2c23c0be12c33b7ab100558427b02640ed518d4a799186e342b6fbc9e9b",
+      "pdf_sha256": "905bdcc7ff0c90ffad372a25639d7d1381bed8c1ad3d1cbd45ded930ecfa8482",
+      "pdf_bytes": 391826,
+      "pages": 12,
+      "three_pass_build": true,
+      "overfull_or_unresolved_reference_warnings": false
+    },
+    "N28_Verification_Companion_v1": {
+      "source_sha256": "8afeea1877989229efd0fad34d86d047d3cafac54dd2bdf016baba90908dddf7",
+      "pdf_sha256": "38dd81d3f478ffdeb5009c9037556f4ffa876a149081f8f5fcde3768e796a41e",
+      "pdf_bytes": 289150,
+      "pages": 7,
+      "three_pass_build": true,
+      "overfull_or_unresolved_reference_warnings": false
+    }
+  },
+  "all_pass": true
+}

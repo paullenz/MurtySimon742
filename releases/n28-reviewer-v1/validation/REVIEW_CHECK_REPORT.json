@@ -1,0 +1,201 @@
+{
+  "schema": "n28-reviewer-check-v1",
+  "mode": "full_hardened_check",
+  "original_integrity": {
+    "v3": {
+      "files": 41,
+      "manifest_sha256": "a317c70d8f589a768f4cfed210e0b1cfd85f909d3f45a0dbc224da0409059fc7",
+      "all_pass": true
+    },
+    "v4": {
+      "files": 40,
+      "manifest_sha256": "744a7a49fa1c98754259f55969d8a522ffdcabf4db30138147bf4db0cb4a87a2",
+      "all_pass": true
+    },
+    "v5": {
+      "files": 54,
+      "manifest_sha256": "1aaa9fc6ab091258c7f893b9bbc13ba91ed706db91be7b2698fea2fee3258f8f",
+      "all_pass": true
+    },
+    "v6": {
+      "files": 88,
+      "manifest_sha256": "c46237c4303f992240e93e2920ba1536db1bb1017ce2d38317b77d7ccabb3671",
+      "all_pass": true
+    },
+    "v7": {
+      "files": 87,
+      "manifest_sha256": "fb3bb60dc4808b207b406fe01de1242344c196f502dd72d1debd39685b350e8a",
+      "all_pass": true
+    },
+    "v8": {
+      "files": 90,
+      "manifest_sha256": "5a92811f70bac0efa6774d2daec948c2598c16ef8075b7344a49763b065922c0",
+      "all_pass": true
+    }
+  },
+  "mathematical_status": "candidate; independent mathematical review OPEN",
+  "independent_external_review": false,
+  "all_pass": true,
+  "arithmetic_replayed": true,
+  "hardened_helper_default": true,
+  "scope": {
+    "n": 28,
+    "equality_edges": 196,
+    "counterexample_edges": 197
+  },
+  "jobs": [
+    {
+      "name": "degree_scope",
+      "command": [
+        "/opt/pyvenv/bin/python",
+        "-I",
+        "-B",
+        "/mnt/data/n28_review_release/validation/hardened_v8/src/check_scope197.py",
+        "--output",
+        "/mnt/data/n28_review_release/validation/ALL_DEGREES_AND_FAN.json"
+      ],
+      "exit_code": 0,
+      "seconds": 0.6132457940000222,
+      "log": "/mnt/data/n28_review_release/validation/logs/degree_scope.log"
+    },
+    {
+      "name": "helper_regressions",
+      "command": [
+        "/opt/pyvenv/bin/python",
+        "-I",
+        "-B",
+        "/mnt/data/n28_review_release/release/test_helper.py",
+        "--original-v8",
+        "/mnt/data/n28_review_release/validation/originals/MurtySimon_N28_197_Direct_v8",
+        "--output",
+        "/mnt/data/n28_review_release/validation/helper_regressions"
+      ],
+      "exit_code": 0,
+      "seconds": 1.955833245000008,
+      "log": "/mnt/data/n28_review_release/validation/logs/helper_regressions.log"
+    },
+    {
+      "name": "v3",
+      "command": [
+        "/opt/pyvenv/bin/python",
+        "-I",
+        "-B",
+        "/mnt/data/n28_review_release/validation/originals/MurtySimon_GeneralN_DemandSupport_v3/check.py"
+      ],
+      "exit_code": 0,
+      "seconds": 5.347895816000005,
+      "log": "/mnt/data/n28_review_release/validation/logs/v3.log"
+    },
+    {
+      "name": "v4",
+      "command": [
+        "/opt/pyvenv/bin/python",
+        "-I",
+        "-B",
+        "/mnt/data/n28_review_release/validation/originals/MurtySimon_GeneralN_LabelTail_v4/replay.py",
+        "--replay",
+        "--output",
+        "/mnt/data/n28_review_release/validation/v4_check"
+      ],
+      "exit_code": 0,
+      "seconds": 10.25109532600004,
+      "log": "/mnt/data/n28_review_release/validation/logs/v4.log"
+    },
+    {
+      "name": "v5",
+      "command": [
+        "/opt/pyvenv/bin/python",
+        "-I",
+        "-B",
+        "/mnt/data/n28_review_release/validation/originals/MurtySimon_GeneralN_ColumnPropagation_v5/replay.py",
+        "--check",
+        "--output",
+        "/mnt/data/n28_review_release/validation/v5_check"
+      ],
+      "exit_code": 0,
+      "seconds": 458.473259493,
+      "log": "/mnt/data/n28_review_release/validation/logs/v5.log"
+    },
+    {
+      "name": "v6",
+      "command": [
+        "/opt/pyvenv/bin/python",
+        "-I",
+        "-B",
+        "/mnt/data/n28_review_release/validation/originals/MurtySimon_GeneralN_SharedAdjacency_v6/replay.py",
+        "--check",
+        "--output",
+        "/mnt/data/n28_review_release/validation/v6_check"
+      ],
+      "exit_code": 0,
+      "seconds": 170.33485447600003,
+      "log": "/mnt/data/n28_review_release/validation/logs/v6.log"
+    },
+    {
+      "name": "v7",
+      "command": [
+        "/opt/pyvenv/bin/python",
+        "-I",
+        "-B",
+        "/mnt/data/n28_review_release/validation/originals/MurtySimon_GeneralN_LocalIncidence_v7/replay.py",
+        "--check",
+        "--output",
+        "/mnt/data/n28_review_release/validation/v7_check"
+      ],
+      "exit_code": 0,
+      "seconds": 77.13520565299996,
+      "log": "/mnt/data/n28_review_release/validation/logs/v7.log"
+    },
+    {
+      "name": "v8_hardened",
+      "command": [
+        "/opt/pyvenv/bin/python",
+        "-I",
+        "-B",
+        "/mnt/data/n28_review_release/validation/hardened_v8/src/check197.py",
+        "--output",
+        "/mnt/data/n28_review_release/validation/v8_check"
+      ],
+      "exit_code": 0,
+      "seconds": 124.83408622500008,
+      "log": "/mnt/data/n28_review_release/validation/logs/v8_hardened.log"
+    }
+  ],
+  "handoffs": [
+    {
+      "from": "v3/exploration/extra_n28_b15.json",
+      "to": "v4/dependencies/v3_n28_demand_frontier.json",
+      "decoded_sha256": "820421bdc2151ec3507bd8346b71a1fcde29ece06aca8352134f4126ee4e4d39",
+      "byte_identical": true
+    },
+    {
+      "from": "v4/evidence/n28_demands.json",
+      "to": "v5/dependencies/n28_demands.json",
+      "decoded_sha256": "c1e5e0f0ab48c0970abe0502081465d2032ba340015335fb80a5660580e5b9f9",
+      "byte_identical": true
+    },
+    {
+      "from": "v4/evidence/n28_projected_survivors.json",
+      "to": "v5/dependencies/n28_projected_survivors.json",
+      "decoded_sha256": "ee8b473c4f98aff439734921b2cb34aa129d3e88c532f258682ef8bc04e46f90",
+      "byte_identical": true
+    },
+    {
+      "from": "v5/evidence/FINAL_SURVIVORS.json",
+      "to": "v6/dependencies/v5_FINAL_SURVIVORS.json.gz",
+      "decoded_sha256": "72d511eeb75c40262649cbc2d08c94c40862bba0a2790d24185f5e54ea320f4b",
+      "byte_identical": true
+    },
+    {
+      "from": "v6/evidence/FINAL_SURVIVORS.json.gz",
+      "to": "v7/dependencies/v6_FINAL_SURVIVORS.json.gz",
+      "decoded_sha256": "1c40232b777578b5616e630e86fde2cf815c1a19c6304f3d317983fe94a9f679",
+      "byte_identical": true
+    }
+  ],
+  "original_archives_unchanged": true,
+  "original_extracted_packages_unchanged": true,
+  "final_197_survivors": 0,
+  "new_196_survivors": 0,
+  "seconds": 461.936498652
+}

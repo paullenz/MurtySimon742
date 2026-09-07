@@ -1,0 +1,18 @@
+{
+  "schema": "n28-checker-overlay-v1",
+  "original_path": "src/check_rows.cpp",
+  "original_sha256": "1726946358549437c9b4e92e2a204e01ee731419c4fd7e04383efaab73d44ee2",
+  "hardened_file": "check_rows_hardened.cpp",
+  "hardened_sha256": "198927eddfffde5ae4aec53a32cac07f1d99f7c932b1ff3f674b6b5294c02fa4",
+  "scope": {
+    "n": 28,
+    "Delta": 15,
+    "m": 197,
+    "a": 12,
+    "b": 15,
+    "t": 2
+  },
+  "original_archive_modified": false,
+  "derivation": "New reviewer-release implementation of the documented RT-01 guard fix; not claimed byte-identical to the earlier audit patch. All enumeration/arithmetic loops are unchanged.",
+  "default": true
+}

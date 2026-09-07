@@ -1,0 +1,18 @@
+{
+  "schema": "n28-reviewer-editorial-provenance-v1",
+  "date": "2026-09-07",
+  "baseline_commit": "cd3c22411911280624a8223035e6de2343abbb7c",
+  "project_direction": "Paul Lenz",
+  "mathematical_development_code_drafting_internal_checking": "ChatGPT / Geeps",
+  "scope": "direct order-28 candidate; LocalIncidence-v7 equality plus direct197-v8",
+  "independent_review": "OPEN",
+  "original_archives_modified": false,
+  "governed_ledger_modified": false,
+  "new_hardened_default_check": "PASS; 8 jobs, 5 exact handoffs; 13 malformed-input controls",
+  "recorded_environment": {
+    "python": "3.13.5 (main, Jul 15 2026, 20:25:40) [GCC 14.2.0]",
+    "platform": "Linux-6.18.35-x86_64-with-glibc2.41"
+  },
+  "original_theorem_arguments": "consolidated from versioned proof notes, not replaced by the alternate weak-core reduction",
+  "preliminary_wrapper_errors_disclosed": "validation/PRELIMINARY_TEST_NOTE.json"
+}

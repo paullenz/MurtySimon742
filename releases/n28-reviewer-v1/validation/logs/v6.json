@@ -1,0 +1,15 @@
+{
+  "name": "v6",
+  "command": [
+    "/opt/pyvenv/bin/python",
+    "-I",
+    "-B",
+    "/mnt/data/n28_review_release/validation/originals/MurtySimon_GeneralN_SharedAdjacency_v6/replay.py",
+    "--check",
+    "--output",
+    "/mnt/data/n28_review_release/validation/v6_check"
+  ],
+  "exit_code": 0,
+  "seconds": 170.33485447600003,
+  "log": "/mnt/data/n28_review_release/validation/logs/v6.log"
+}

@@ -1,0 +1,40 @@
+{
+  "mode": "check",
+  "payload_files_verified": 54,
+  "every_payload_sha256_matches": true,
+  "mathematical_review": "OPEN",
+  "steps": [
+    {
+      "script": "check_joint.py",
+      "arguments": [],
+      "exit_code": 0,
+      "seconds": 453.570786732,
+      "log": "00_check_joint.py.log"
+    },
+    {
+      "script": "check_activation.py",
+      "arguments": [],
+      "exit_code": 0,
+      "seconds": 2.325740929999938,
+      "log": "01_check_activation.py.log"
+    },
+    {
+      "script": "test_mathematics.py",
+      "arguments": [],
+      "exit_code": 0,
+      "seconds": 1.8940435540000635,
+      "log": "02_test_mathematics.py.log"
+    }
+  ],
+  "compared": [
+    "CHECK_JOINT_13196.json (ignoring seconds only)",
+    "CHECK_ACTIVATION.json (ignoring seconds only)",
+    "MATHEMATICAL_TEST_REPORT.json (ignoring seconds only)",
+    "abstract_activation_systems.json.gz",
+    "brute_joint_instances.json.gz",
+    "family_small_bases.json"
+  ],
+  "all_requested_checks_pass": true,
+  "frozen_checkpoint_unchanged": true,
+  "full_input_domain_checked": true
+}

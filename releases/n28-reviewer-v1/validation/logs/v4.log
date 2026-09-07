@@ -1,0 +1,77 @@
+{
+  "manifest": {
+    "files_checked": 40,
+    "all_hashes_pass": true
+  },
+  "initial": {
+    "demand_patterns": 18645,
+    "counts": {
+      "source_count": 14183,
+      "OPEN": 1976,
+      "support": 19,
+      "dual": 2467
+    },
+    "complete_domain": true
+  },
+  "label_tail": {
+    "Q_values": 51,
+    "permitted_types_checked": 3159,
+    "all_exact_certificates_pass": true,
+    "negative_control_rejected": true
+  },
+  "rows": {
+    "states": 17669896,
+    "low_k_rejections": 617145,
+    "initial_source_rejections": 16978478,
+    "refined_source_rejections": 49862,
+    "survivors": 24411,
+    "fnv64": "3299880332045017683"
+  },
+  "projected": {
+    "rows_checked": 24411,
+    "zero_slack_certificates": 10796,
+    "projected_pair_certificates": 419,
+    "surviving_rows": 13196,
+    "surviving_demands": 1119,
+    "complete_partition": true,
+    "negative_controls": {
+      "forged_pair_count_rejected": true,
+      "omitted_survivor_detected": true
+    }
+  },
+  "mathematics": {
+    "source_floor_pointwise_tests": 430032,
+    "knapsack_bruteforce_tests": 600,
+    "family_parameter_regressions": 7744,
+    "abstract": {
+      "tail_checks": 11213,
+      "nonzero_tail_checks": 10001,
+      "above_max_base_checks": 1414,
+      "source_floor_checks": 2132,
+      "systems": 1200,
+      "nonzero_above_max_base_checks": 205
+    },
+    "actual": {
+      "tail_checks": 1509,
+      "systems": 916,
+      "positive_surplus_systems": 0,
+      "selected_incidences": 1190,
+      "nonzero_tail_checks": 569,
+      "above_max_base_checks": 730,
+      "nonzero_above_max_base_checks": 362,
+      "source_floor_checks": 485,
+      "distinct_labelled_graphs_rechecked": 639
+    },
+    "negative_controls": {
+      "omitted_excess_term": "FALSE: one arc, s=R=0, E=1, T1=1>W1=0",
+      "omitted_source_floor": "FALSE: L=P=3,j=2,q=1,p=3 gives 11>9",
+      "omitted_incoming_endpoints": "FALSE: directed four-leaf star, L=4,P=1,j=1 needs z=5, not z=1"
+    },
+    "seed": 2026090704,
+    "all_tests_pass": true,
+    "seconds": 2.155898595999986,
+    "limits": "Finite tests, no positive-surplus actual graph examples, no independent expert review."
+  },
+  "complete_arithmetic_replay": true,
+  "independent_mathematical_review": "OPEN"
+}

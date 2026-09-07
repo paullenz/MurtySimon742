@@ -1,0 +1,54 @@
+{
+  "schema": "n28-reviewer-archive-dependencies-v1",
+  "archives": [
+    {
+      "version": "v3",
+      "filename": "MurtySimon_GeneralN_DemandSupport_v3.zip",
+      "root": "MurtySimon_GeneralN_DemandSupport_v3",
+      "bytes": 1258114,
+      "sha256": "4d5e06a85f2e9112776205a632436a8e9224bc9f14055ceabf5a67dd83d89fd1",
+      "manifest_sha256": "a317c70d8f589a768f4cfed210e0b1cfd85f909d3f45a0dbc224da0409059fc7"
+    },
+    {
+      "version": "v4",
+      "filename": "MurtySimon_GeneralN_LabelTail_v4.zip",
+      "root": "MurtySimon_GeneralN_LabelTail_v4",
+      "bytes": 566681,
+      "sha256": "3944e786fb0ea5322ae3e18dd177ef8b01046d903076a4ca61caf89fdc5ae184",
+      "manifest_sha256": "744a7a49fa1c98754259f55969d8a522ffdcabf4db30138147bf4db0cb4a87a2"
+    },
+    {
+      "version": "v5",
+      "filename": "MurtySimon_GeneralN_ColumnPropagation_v5.zip",
+      "root": "MurtySimon_GeneralN_ColumnPropagation_v5",
+      "bytes": 1035233,
+      "sha256": "79bdbdf02b23b9eef38e964b54eb300921b24d539014f07b476655d1575e63b6",
+      "manifest_sha256": "1aaa9fc6ab091258c7f893b9bbc13ba91ed706db91be7b2698fea2fee3258f8f"
+    },
+    {
+      "version": "v6",
+      "filename": "MurtySimon_GeneralN_SharedAdjacency_v6.zip",
+      "root": "MurtySimon_GeneralN_SharedAdjacency_v6",
+      "bytes": 17940219,
+      "sha256": "d00a9627e9ed4d8a6f22ae1f2b194791412ee2d16d502b1968be16e02aa30496",
+      "manifest_sha256": "c46237c4303f992240e93e2920ba1536db1bb1017ce2d38317b77d7ccabb3671"
+    },
+    {
+      "version": "v7",
+      "filename": "MurtySimon_GeneralN_LocalIncidence_v7.zip",
+      "root": "MurtySimon_GeneralN_LocalIncidence_v7",
+      "bytes": 15943487,
+      "sha256": "0637c6b91d7e0c311025bf68dc7a373f57f6230e271588bd6693d8ffc17eb6cf",
+      "manifest_sha256": "fb3bb60dc4808b207b406fe01de1242344c196f502dd72d1debd39685b350e8a"
+    },
+    {
+      "version": "v8",
+      "filename": "MurtySimon_N28_197_Direct_v8.zip",
+      "root": "MurtySimon_N28_197_Direct_v8",
+      "bytes": 5677524,
+      "sha256": "b753076ffc755066a0c57756be91cc5b265c163d869244d3aa65e3943799347b",
+      "manifest_sha256": "5a92811f70bac0efa6774d2daec948c2598c16ef8075b7344a49763b065922c0"
+    }
+  ],
+  "baseline_commit": "cd3c22411911280624a8223035e6de2343abbb7c"
+}

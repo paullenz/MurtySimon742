@@ -1,0 +1,6 @@
+{
+  "status": "DEVELOPMENT_CORRECTIONS",
+  "initial": "First launch stopped after noticing .json/.json.gz handoff spelling mismatch.",
+  "second": "Second run launched with an assumed v3 filename. Exact matching source located by SHA-256 as exploration/extra_n28_b15.json. All five handoffs now validated before final launch.",
+  "proof_or_certificate_changed": false
+}

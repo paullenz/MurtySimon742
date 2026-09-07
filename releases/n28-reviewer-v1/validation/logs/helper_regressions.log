@@ -1,0 +1,69 @@
+{
+  "all_pass": true,
+  "malformed_inputs": {
+    "interval_64": {
+      "exit_code": 4,
+      "rejected_before_output_creation": true
+    },
+    "interval_below15": {
+      "exit_code": 4,
+      "rejected_before_output_creation": true
+    },
+    "inverted_interval": {
+      "exit_code": 4,
+      "rejected_before_output_creation": true
+    },
+    "negative_count": {
+      "exit_code": 2,
+      "rejected_before_output_creation": true
+    },
+    "zero_count": {
+      "exit_code": 2,
+      "rejected_before_output_creation": true
+    },
+    "huge_count": {
+      "exit_code": 2,
+      "rejected_before_output_creation": true
+    },
+    "too_many_records": {
+      "exit_code": 2,
+      "rejected_before_output_creation": true
+    },
+    "truncated": {
+      "exit_code": 4,
+      "rejected_before_output_creation": true
+    },
+    "negative_demand": {
+      "exit_code": 4,
+      "rejected_before_output_creation": true
+    },
+    "oversized_demand": {
+      "exit_code": 4,
+      "rejected_before_output_creation": true
+    },
+    "unsorted": {
+      "exit_code": 4,
+      "rejected_before_output_creation": true
+    },
+    "duplicate": {
+      "exit_code": 4,
+      "rejected_before_output_creation": true
+    },
+    "trailing": {
+      "exit_code": 4,
+      "rejected_before_output_creation": true
+    }
+  },
+  "valid_scope": {
+    "states": 8216928,
+    "low_k_rejections": 0,
+    "initial_source_rejections": 8194665,
+    "refined_source_rejections": 17109,
+    "survivors": 5154,
+    "fnv64": "16479821321584091042"
+  },
+  "survivor_bytes_identical": true,
+  "band_bytes_identical": true,
+  "hardened_sha256": "198927eddfffde5ae4aec53a32cac07f1d99f7c932b1ff3f674b6b5294c02fa4",
+  "original_archives_modified": false
+}

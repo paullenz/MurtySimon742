@@ -1,0 +1,441 @@
+\documentclass[11pt,a4paper]{article}
+\usepackage[margin=27mm]{geometry}
+\usepackage[T1]{fontenc}
+\usepackage{lmodern,amsmath,amssymb,amsthm,mathtools,booktabs,longtable,array,microtype}
+\usepackage[hidelinks]{hyperref}
+\usepackage{fancyhdr}
+\pagestyle{fancy}\fancyhf{}\fancyhead[L]{Murty--Simon at order 28}\fancyhead[R]{Reviewer edition 1}\fancyfoot[C]{\thepage}
+\setlength{\headheight}{14pt}\setlength{\emergencystretch}{2em}
+\newtheorem{theorem}{Theorem}[section]\newtheorem{lemma}[theorem]{Lemma}\newtheorem{proposition}[theorem]{Proposition}\newtheorem{corollary}[theorem]{Corollary}\theoremstyle{definition}\newtheorem{definition}[theorem]{Definition}
+\newcommand{\ind}[1]{\mathbf1_{\{#1\}}}\newcommand{\pos}[1]{[#1]_+}\newcommand{\floor}[1]{\left\lfloor#1\right\rfloor}\newcommand{\ceil}[1]{\left\lceil#1\right\rceil}
+\DeclareMathOperator{\diam}{diam}
+\title{The Murty--Simon bound at order 28\\\large A computer-assisted candidate proof}
+\author{Paul Lenz\thanks{Project direction: Paul Lenz. Mathematical development, software, manuscript drafting and internal checking: ChatGPT (``Geeps''). This attribution describes the work performed; it does not assert independent human verification.}}
+\date{7 September 2026\\\small Reviewer edition 1; independent mathematical review open}
+\hypersetup{pdftitle={The Murty-Simon bound at order 28: a computer-assisted candidate proof},pdfauthor={Paul Lenz},pdfsubject={Candidate proof; independent mathematical review open}}
+\begin{document}\maketitle
+\begin{abstract}
+We present a computer-assisted candidate proof that a simple diameter-two edge-critical graph on 28 vertices has at most 196 edges, with equality precisely for $K_{14,14}$. A complement-based selection of quasi-edges gives residual degree, demand, and source--supplement constraints. Two separate finite calculations handle 196 edges and 197 edges; the latter uses a newly generated domain, not a transfer of equality-level certificates. Exact integer linear-combination certificates and complete branching proofs exclude the retained necessary-condition systems. Fan's published strict estimate reduces the upper-bound problem to 197 edges. This edition consolidates the direct LocalIncidence-v7/direct197-v8 route and identifies its complete computational dependencies. An internal red-team audit found no blocking defect in that route. Independent mathematical review, external reproduction, and formal verification remain open. No novelty or general-order resolution is claimed.
+\end{abstract}
+\paragraph{Reading this edition.} Sections 1--5 establish the structural and finite-domain framework; Sections 6--8 explain the stronger numerical systems and exact certificates; Section 9 assembles all degree cases; Section 10 records reproducibility and review limits. The accompanying \emph{Computational verification and reviewer guide} specifies immutable evidence, executable entry points, the hardened checking release, and outstanding review questions. The full finite systems are specified by the pinned source constructors and certificates, not by the displayed summary counts alone. Original historical notes and archives are preserved unchanged.
+\bigskip
+\section{Statement, conventions and external input}
+A graph is simple and finite. Distance between disconnected vertices is infinite. A graph $G$ is diameter-two edge-critical when $\diam(G)=2$ and $\diam(G-e)>2$ for every edge $e$. Write $n=|V(G)|$, $m=e(G)$ and $b=\Delta(G)$. The Murty--Simon conjecture asserts $m\le\floor{n^2/4}$, with equality only for the balanced complete bipartite graph \cite{wang,fan}.
+\begin{theorem}[Order-28 candidate]\label{thm:main}
+Every simple diameter-two edge-critical graph on 28 vertices has at most 196 edges. Equality holds if and only if the graph is $K_{14,14}$.
+\end{theorem}
+The proof below uses the verified computational propositions in Section~\ref{sec:computation}. The word \emph{candidate} records the review status of the mathematical derivations and graph-to-system implication; it does not turn numerical solver messages into proofs.
+
+The external density input is Fan's strict estimate, as reported by Wang \cite[p.~2]{wang}:
+\begin{equation}\label{eq:fan}
+m<\frac{n^2}{4}+\frac{n^2-(81/5)n+56}{320}\qquad(n\ge25).
+\end{equation}
+At $n=28$ the right side is $78883/400=197.2075$. Thus $m\le197$. The original proof of Fan's theorem is not re-proved or newly audited here. The fixed-197-edge calculation itself does not depend on this estimate; the deduction that no larger edge count needs examination does.
+
+A bipartite diameter-two graph is complete bipartite: an absent cross-part edge would have odd distance at least three. Its edge count is at most 196, with equality only for $K_{14,14}$. A universal vertex forces an edge-critical graph to be a star, since an edge between other vertices would be redundant. That case has only 27 edges. These exceptions are handled explicitly.
+
+\section{Complement selection and residual identities}\label{sec:setup}
+Put $H=\overline G$. An adjacent pair totally dominates a graph when every vertex has a neighbour in that pair. The complement of any graph has diameter greater than two exactly when the graph has such an adjacent pair: the endpoints are nonadjacent in the complement and have no common neighbour there. This direct observation, also recorded in the complement literature \cite{wang,haynes}, suffices for the quasi-edge argument; no bound on $\diam(H)$ is assumed.
+\begin{lemma}[Quasi-edge with a prescribed exceptional endpoint]\label{lem:quasi}
+Suppose $uw$ is a nonedge of $H$ and $u,w$ both miss a third vertex. There is an existing edge $ui$, or symmetrically $wi$, whose endpoints totally dominate every vertex of $H$ except the opposite endpoint. Write $ui\to w$ in the former case. The exception of that existing edge is unique.
+\end{lemma}
+\begin{proof}
+Deleting $uw$ from $G$ makes some distance exceed two. Hence $H+uw$ has an adjacent total dominating pair, while $H$ has none. The pair cannot be $\{u,w\}$ because it still misses the third vertex. It must use an endpoint of the newly added edge; otherwise its domination is unchanged. Its edge already existed. The only newly dominated vertex is the opposite endpoint of $uw$, which is therefore its unique exception in $H$.
+\end{proof}
+Choose $v$ of minimum $H$-degree and define
+\[
+ a=n-1-b,\quad A=N_H(v),\quad B=V(H)\setminus N_H[v],\quad
+ C=H[A],\quad F=\overline C.
+\]
+Thus $|A|=a$, $|B|=b$, and $d_i=d_F(i)$ for $i\in A$. Every missing unordered $B$-pair misses $v$. Choose exactly one edge $ui\to w$ for that pair. Its auxiliary $i$ is in $A$ because it must dominate $v$. Call these cross-edges \emph{selected}; all other edges of $H[A,B]$ are \emph{residual}. The missing pair is oriented $u\to w$; $u$ is its source and $w$ its supplement.
+
+Distinct missing $B$-pairs select distinct cross-edges: the $B$-endpoint and unique exception recover the pair. At a fixed source, labels and supplements are distinct. Each unordered $B$-pair supports at most one selected arc, not one in each orientation.
+
+The notation used throughout is
+\begin{center}\begin{tabular}{ll}\toprule
+Quantity & Meaning\\\midrule
+$\rho_u,R_i,r$ & Residual degrees at $B$, at $A$, and their common total\\
+$q_u,p_u,\sigma_u$ & Selected outdegree, indegree, and $q_u+p_u$\\
+$x_i,Q$ & Actual selected degree at label $i$; total selected incidences\\
+$t$ & Surplus $m-b(n-b)$\\
+$\ell$ & $b-a-1=2b-n$\\
+$s_i,S$ & Minimum demand $\max(0,d_i-R_i)$; its sum\\\bottomrule
+\end{tabular}\end{center}
+Selected cross-edges and existing $H[B]$-edges together number $\binom b2$. Counting all edges of $H$ gives
+\begin{align}
+ e(C)+r&=\binom a2-t,& e(F)&=r+t,\label{eq:ledger}\\
+ \sum_i d_i&=2(r+t),&\sum_iR_i=\sum_u\rho_u&=r.\nonumber
+\end{align}
+Minimum $H$-degree gives $d_H(i)=a-d_i+R_i+x_i\ge a$ and
+$d_H(u)=b-1+\rho_u-p_u\ge a$. Therefore
+\begin{gather}
+ x_i\ge s_i,\qquad S\ge r+2t,\qquad q_u+\rho_u\le a,\label{eq:basic}\\
+ p_u\le\rho_u+\ell,\qquad q_u+p_u\le b-1,\qquad Q\le r+\ell b.\nonumber
+\end{gather}
+\emph{Actual selected degree is not minimum demand}: $x_i$ may exceed $s_i$, including when $s_i=0$. All finite tests retain that possibility.
+
+\section{Structural injections}\label{sec:structural}
+\begin{lemma}[Selected-edge constraints]\label{lem:selected}
+For every selected $ui\to w$,
+\begin{align}
+ d_i&\le\rho_u+R_i,&d_i&\le\rho_u+\rho_w,\label{eq:selected}\\
+ d_i&\le\rho_u+q_u-1,&\rho_w+q_w&\ge q_u-1,\nonumber\\
+ R_i+x_i&\ge q_u+p_u.&&\nonumber
+\end{align}
+In particular $s_i\le\rho_u$ at every selected incidence.
+\end{lemma}
+\begin{proof}
+Every $F$-neighbour $j$ of $i$ must neighbour $u$. At most $\rho_u$ of the edges $uj$ are residual. A remaining $uj$ is selected and has a distinct supplement $w_j\ne w$. Since $ui$ must dominate $w_j$ and $uw_j$ is absent, $iw_j$ exists. It is residual: $i,w_j$ both miss the $A$-vertex $j$, while a selected edge's exception is in $B$. Distinct supplements give $d_i-\rho_u\le R_i$.
+
+For the pair bound, each of those selected $uj$ must dominate $w$, forcing $jw$. This edge is residual because $j,w$ both miss $i$. Distinct $j$ give $d_i-\rho_u\le\rho_w$. The source neighbours $i$ and all its $F$-neighbours, giving the third inequality. Every other selected label at $u$ neighbours $w$, giving the fourth.
+
+Finally, $i$ neighbours $u$ and every missing-$B$-pair neighbour of $u$ except $w$. These are $q_u+p_u$ distinct vertices, so $d_H(i,B)=R_i+x_i\ge q_u+p_u$.
+\end{proof}
+\begin{lemma}[Residual activity]\label{lem:activity}
+If $t>0$, then every $u\in B$ has $\rho_u\ge1$.
+\end{lemma}
+\begin{proof}
+Suppose $\rho_u=0$ and set $U=N_H(u)\cap A$, $T=A\setminus U$. Every $ui$ with $i\in U$ is selected. No $F$-edge joins $U$ and $T$, since such an edge would give a selected quasi-edge an $A$-exception as well as its $B$-exception.
+
+Let $w_i$ be the distinct supplements at $u$. An $F$-edge $ij$ within $U$ forces $jw_i$ and $iw_j$, by domination of the other selected edge's supplement. Both are residual. Their $A$-endpoints and supplement labels distinguish all $2e_F(U)$ such edges.
+
+An $F$-edge within $T$ misses $u$. Its quasi-edge auxiliary must dominate $u$. It cannot be $u$ or $v$; if in $A$ it lies in $U$ and is adjacent in $C$ to both exceptional-pair endpoints, impossible. It therefore lies in $B$ and gives a residual cross-edge with $A$-endpoint in $T$. The $A$-endpoint and unique exception identify the original missing pair, so these $e_F(T)$ edges are distinct. The two families are disjoint. Thus $r\ge2e_F(U)+e_F(T)\ge e(F)=r+t$, a contradiction. Empty sets cause no exception.
+\end{proof}
+\begin{lemma}[No isolated $C$-vertex in the degree-15 scopes]\label{lem:lowk}
+For $(a,b,t)=(12,15,1)$ or $(12,15,2)$, $\delta(C)\ge1$. Consequently $d_i\le10$ and $r\le59$ or $58$, respectively.
+\end{lemma}
+\begin{proof}
+If $x$ is isolated in $C$, put $X=A\setminus\{x\}$. Every missing pair inside $X$ misses $x$; its quasi-edge auxiliary lies in $B$. This gives a family $P$ of distinct residual edges, with
+$|P|=\binom{a-1}{2}-e(C)$. Every $B$-endpoint $u$ used by $P$ must neighbour $x$ to dominate it. The edge $xu$ is residual: $x,u$ both miss the original $A$-exception. It lies outside $P$. Each unused $B$-vertex supplies another residual edge by Lemma~\ref{lem:activity}. Distinct $B$-endpoints distinguish these $b$ extra edges. Hence
+\[
+ b\le r-|P|=\binom a2-t-\binom{a-1}{2}=a-1-t,
+\]
+requiring $15\le10$ or $15\le9$. Finally $e(C)\ge\ceil{a/2}=6$ and use \eqref{eq:ledger}.
+\end{proof}
+\begin{lemma}[Source-local restrictions]\label{lem:local}
+Fix $u\in B$ and partition $A$ into selected neighbours $S_u$, residual neighbours $T_u$, and missing neighbours $M_u$. Then $F(S_u,M_u)$ is empty, and
+\begin{align}
+ d_j&\le a-q_u-1\quad(j\in M_u),\label{eq:missing}\\
+ R_i&\ge |N_F(i)\cap S_u|\quad(i\in S_u),\label{eq:internal}\\
+ \rho_u+2e_F(S_u)+e_F(M_u)-e_C(T_u,M_u)&\le r.\label{eq:local}
+\end{align}
+\end{lemma}
+\begin{proof}
+Every selected edge at $u$ must dominate each $j\in M_u$ through its label. Thus $j$ has at least $q_u$ neighbours in $C$, proving \eqref{eq:missing} and the absence of $F(S_u,M_u)$. For \eqref{eq:internal}, a selected $ui$ must dominate the distinct supplements $w_j$ of selected $uj$ for $j\in N_F(i)\cap S_u$. The forced $iw_j$ are residual and distinct.
+
+For \eqref{eq:local}, internal $F$-edges in $S_u$ force $2e_F(S_u)$ residual edges with $A$-endpoints in $S_u$, as above. A missing pair in $M_u$ misses $u$. Its quasi-edge auxiliary lies in $T_u$ or $B$: it cannot be in $S_u$, because every $S_u$--$M_u$ pair is a $C$-edge. At most $e_C(T_u,M_u)$ missing pairs use auxiliaries in $T_u$, since those quasi-edges are distinct. Every remaining pair gives a distinct residual cross-edge with an $A$-exception and $A$-endpoint in $M_u$. Finally the $\rho_u$ residual edges at $u$ have endpoints in $T_u$. The three endpoint classes are disjoint, proving the inequality (in fact with the $M_u$ contribution replaced by its positive part).
+\end{proof}
+The last injection uses full edge-criticality for missing pairs in $A$. It is applied here to the original graph, not to a weakened object retaining only selected $B$-quasi-edges.
+
+Using $|T_u|=\rho_u$, $|S_u|=q_u$, $|M_u|=a-q_u-\rho_u$ and \eqref{eq:ledger}, \eqref{eq:local} gives
+\begin{align}
+ \sum_{i\in S_u}d_i&\le\rho_u(2a-\rho_u-3+q_u)-2t,\label{eq:localdegree}\\
+ \sum_{i\in S_u}R_i&\le r-\rho_u.\label{eq:localR}
+\end{align}
+Indeed $t+\rho_u+e_F(S_u)\le e_F(T_u)+e_F(S_u,T_u)+\rho_u|M_u|$; multiply by two and add $e_F(S_u,T_u)$, then bound $2e_F(T_u)\le\rho_u(\rho_u-1)$ and $e_F(S_u,T_u)\le q_u\rho_u$. The source's residual edges have no endpoints in $S_u$, proving \eqref{eq:localR}.
+
+\section{Complete demand and residual domains}\label{sec:domain}
+A positive demand needs a selected source, so Lemma~\ref{lem:selected} and $q_u+\rho_u\le a$ give $0\le s_i\le a-1$. Put
+\[
+ g_a(s)=\frac{s(s-1)}{a-s},\qquad f_a(s)=s-g_a(s)=\frac{s(a+1-2s)}{a-s}.
+\]
+\begin{lemma}[Charging]\label{lem:charge}
+At positive surplus,
+\begin{equation}\label{eq:charge}
+ r-b\ge\sum_i g_a(s_i),\qquad \sum_i f_a(s_i)\ge b+2t.
+\end{equation}
+\end{lemma}
+\begin{proof}
+Choose exactly $s_i$ actual selected incidences at label $i$. At a source with residual degree $\rho<a$, charge $(\rho-1)/(a-\rho)$ per chosen incidence. At most $a-\rho$ incidences are present, so their total charge is at most $\rho-1$. A source with $\rho=a$ has no selections. The charged function is increasing on $[1,a)$, and every selected demand has $s_i\le\rho$, so the total charge at label $i$ is at least $g_a(s_i)$. Sum and apply $S\ge r+2t$.
+\end{proof}
+Every possible graph therefore gives a nondecreasing length-$a$ tuple in $\{0,\ldots,a-1\}$ obeying \eqref{eq:charge}. For each tuple the residual total lies in
+\begin{equation}\label{eq:rinterval}
+ r_{\min}=b+\ceil{\sum_i g_a(s_i)},\qquad
+ r_{\max}=\min\{S-2t,\binom a2-t\}.
+\end{equation}
+An empty interval is impossible. Sorting demands and residual rows separately only relabels $A$ and $B$. It does \emph{not} sort the subsequently paired $d_i,R_i$ columns independently.
+
+The checker determines the full demand-domain size independently, verifies every listed tuple's membership and uniqueness, and checks equality of cardinalities. Residual rows are every nondecreasing list of $b$ integers in $[1,a]$ with total in \eqref{eq:rinterval}. A multiplicity recursion and the coefficients of
+\[
+ \prod_{j=1}^{a}(1-XY^j)^{-1}
+\]
+independently enumerate and count these multisets. Non-graphical degree sequences are retained. Thus the domain is a superset of all actual graphs.
+
+\subsection{Demand support and exact source cuts}
+These initial tests are inherited from the preserved demand-support-v3 notes \cite{v3}. Their formulas are included to make the early numerical reductions auditable.
+For $2\le h\le a-1$, put $I=\{i:s_i\ge h\}$, $k=|I|$, $D=\sum_{i\in I}s_i$, and $Z=\{u:\rho_u\ge h\}$ of size $z$. Activity gives
+\[
+ z\le z_{\max}=\min\left(b,\floor{\frac{r_{\max}-b}{h-1}}\right).
+\]
+If $I\ne\varnothing$, its largest demand cannot exceed $z_{\max}$. Outside $Z$ at most $a-k$ labels can be selected, so $d_H(u,A)\le a-k+h-1$. Write $K=a-k+h$. A source in $Z$ with $q_u\ge K+1$ must therefore use only supplements in $Z$. If $p$ sources are this large, their pair budget is
+\[
+ P(z,p)=\binom z2-\binom{z-p}2.
+\]
+Necessarily either $p=0$, or $a-h\ge K+1$ and $p(K+1)\le P(z,p)$. The $I$-incidences obey
+\begin{equation}\label{eq:support}
+D\le\max_{z,p}\left\{(z-p)\min(k,K,a-h)+\min\bigl(p\min(k,a-h),P(z,p)\bigr)\right\},
+\end{equation}
+where $0\le z\le z_{\max}$ and only the stated $p$ values are admitted. Non-large sources contribute the first term; large sources are limited by both labels and distinct unordered pairs. A strict violation is an exact rejection.
+
+For descending demands $s_{(i)}$, set $D_k=\sum_{i\le k}s_{(i)}$ and
+$A_{kj}=\min(a-j,|\{i\le k:s_{(i)}\le j\}|)$. If $n_j$ sources have residual degree $j$, then
+\[
+ D_k\le\sum_jA_{kj}n_j,\quad\sum_jn_j=b,\quad\sum_j(j-1)n_j=r-b.
+\]
+Integer weights $y_k\ge0$, $\mu\in\mathbb Z$, $\Lambda>0$ satisfying
+$\mu+\sum_ky_kA_{kj}\le\Lambda(j-1)$ for each $j$ imply
+\begin{equation}\label{eq:dual}
+ b\mu+\sum_ky_kD_k\le\Lambda(r_{\max}-b).
+\end{equation}
+Every saved dual rejection checks these integer inequalities and a strict reverse of \eqref{eq:dual}; no optimisation status is trusted.
+
+For a residual row, start with
+\[
+ c_u=\min(a-\rho_u,b-1,|\{i:s_i\le\rho_u\}|).
+\]
+Refine $c_u$ to the largest $q\le c_u$ having at least $q$ other vertices $w$ with $\rho_w+c_w\ge q-1$, using old caps simultaneously. Every actual $q_u$ remains possible by Lemma~\ref{lem:selected}. Decreasing integer caps terminate. Every prefix then satisfies
+\begin{equation}\label{eq:prefix}
+ D_k\le\sum_u\min(c_u,|\{i\le k:s_{(i)}\le\rho_u\}|).
+\end{equation}
+The checker reconstructs the iterations and any violated prefix. Zero-demand labels are included.
+
+\section{Columns, one-source projections and activation}\label{sec:columns}
+An individual column option is $(d_i,R_i,z_i)$ with
+\[
+ s_i=\max(0,d_i-R_i),\quad z_i=R_i+s_i-d_i\ge0,\quad
+ \sum_iR_i=r,\quad\sum_i z_i=S-r-2t.
+\]
+In the degree-15 cases $0\le d_i\le10$, $0\le R_i\le b$, and $R_i+s_i\le b$. For positive demand $z_i=0$; zero-demand labels may have positive slack and selected degree. A multichoice generating product retains exactly the options participating in a collection with the two fixed sums. Each option remains paired with its label and demand.
+
+A safely overestimated eligible-source set $E_i$ has $|E_i|\ge s_i$. If equality holds and $s_i>0$, all its sources are forced to select $i$. A supplement cannot be one of those forced sources, because it must miss $i$.
+
+For each source $u$ and trial $q$, the one-source projection assigns every label an option and one of the statuses selected, residual, or missing. Counts are exactly $q$, $\rho_u$, and $a-q-\rho_u$; both global column sums are fixed. Selected status requires the selected-edge inequalities, a distinct allowed supplement, and $R_i+\max(1,s_i)\le b$. Residual status requires $R_i\ge1$. Missing status requires \eqref{eq:missing} and $R_i+s_i\le b-1$. Forced selections prohibit the other statuses. Label--supplement matchings have distinct endpoints and contain all mandatory labels.
+
+A dynamic program tests these finite choices. A value of $q$ is discarded only when no witness exists; an option is removed only when it has no witness for at least one source at any remaining $q$. Each real graph continues to witness every projection, so iterative pruning is sound. Different sources may still use different witnesses: survival is not a graph-realisation claim. The separately written checker reconstructs all remaining options, caps and forced sets \cite{v5}.
+
+For fixed columns the distinct-pair injection also gives, for every integer $j$,
+\begin{equation}\label{eq:paircut}
+ \sum_{i:d_i\ge j}s_i\le |\{\{u,w\}\subset B:\rho_u+\rho_w\ge j\}|.
+\end{equation}
+Projected zero-slack and pair cuts are checked before or during refinement. Their precise finite domains are specified by the pinned checking source, including the identities above, rather than an assumption of independent column sorting.
+
+\begin{lemma}[Activation budget]\label{lem:activation}
+Let $l_u\le q_u$ and $P_w\ge p_w$ be proved bounds. For any subset $\mathcal T$ of actual selected arcs,
+\begin{equation}\label{eq:activation}
+ \sum_{(u,w)\in\mathcal T}\frac{\pos{l_u-1-\rho_w-l_w}}{P_w}
+ \le Q-\sum_wl_w.
+\end{equation}
+A term with $P_w=0$ cannot occur.
+\end{lemma}
+\begin{proof}
+For each selected $u\to w$, Lemma~\ref{lem:selected} gives
+$q_w-l_w\ge\pos{l_u-1-\rho_w-l_w}$. At most $P_w$ terms enter $w$, and each is at most $q_w-l_w$. Division by $P_w$ prevents charging the same forced increase once for every incoming arc. Sum over $w$.
+\end{proof}
+Choose exactly $s_i$ actual incidences at each label. Their possible placement is relaxed to a capacitated network through label, source--label, ordered-pair and supplement nodes. Capacities enforce label demands, distinct source--label and ordered-pair incidences, and incoming caps. Some opposite-orientation and outgoing-total constraints are intentionally omitted; that enlarges the feasible set and cannot cause a false rejection. Costs are the terms of \eqref{eq:activation}, scaled to integers; the available budget is a proved upper bound on $Q-\sum l$.
+
+A cut below total demand rejects the flow. Alternatively integer vertex potentials $\pi$ give the exact cost lower bound
+\begin{equation}\label{eq:flowdual}
+ S(\pi_{\rm sink}-\pi_{\rm source})-
+ \sum_{e=(u,w)}C_e\pos{\pi_w-\pi_u-c_e}.
+\end{equation}
+For a feasible flow $f_e$, use
+$c_ef_e\ge(\pi_w-\pi_u)f_e-C_e\pos{\pi_w-\pi_u-c_e}$ and sum; conservation cancels interior potentials. A value exceeding the available budget is an integer contradiction. The verifier rebuilds the network, capacities, costs and inequality; it does not trust the discovery flow result.
+
+\section{Shared fractional systems and safe symmetry}\label{sec:models}
+Later tests force different sources to share the same column marginals, $F$-adjacencies and pair usage. These are necessary fractional systems, not full graph constructions. The complete named-variable constraints are specified in the preserved v6 and LocalIncidence-v7 source and proof notes \cite{v6,v7}; this section states their graph-to-system interpretation and principal identities.
+
+Group labels only when demands, full option domains and forced-source masks agree. Group sources only when residual degree, safe cap and forced-label patterns agree. Denote class sizes by $N_g$ and $M_k$. Average labelled indicators over permutations within these classes. This averages relabelled copies; it does not assert that the unknown graph has any corresponding automorphism. Every linear, invariant necessary inequality remains valid. Average coordinates may be fractional for an actual integral graph.
+
+Let $y_{go}$ be the probability of option $o$ at a label of class $g$. Let $S_{kgo},T_{kgo}$ be joint selected and residual event probabilities with that option, and use $S_{kg},T_{kg}$ for their sums over $o$. Write $d_g=\sum_od(o)y_{go}$, $R_g=\sum_oR(o)y_{go}$. Basic equations include
+\begin{gather}
+ \sum_o y_{go}=1,\quad \sum_gN_gR_g=r,\quad\sum_gN_gd_g=2(r+t),\label{eq:margins}\\
+ \sum_gN_gT_{kg}=\rho_k,\quad q_k=\sum_gN_gS_{kg}\le c_k,\quad
+ \sum_kM_kT_{kg}=R_g,\quad x_g=\sum_kM_kS_{kg}\ge s_g.\nonumber
+\end{gather}
+All event coordinates lie in $[0,1]$, $S_{kgo}+T_{kgo}\le y_{go}$, and safe impossible statuses are omitted. Forced selections have $S_{kg}=1$.
+
+The common edge probability $F_{gh}$ is for two \emph{distinct} labels, with
+\[
+ \sum_h(N_h-\ind{g=h})F_{gh}=d_g.
+\]
+For a source and a distinct label pair, selected domination gives
+$F_{gh}+S_{kg}\le S_{kh}+T_{kh}+1$ and its reverse-label version. A joint auxiliary $V_{kgh}$ can be chosen to equal the indicator of an $F$-edge with both labels selected. The relaxation requires
+\[
+ V_{kgh}\ge F_{gh}+S_{kg}+S_{kh}-2,\qquad
+ \sum_h(N_h-\ind{g=h})V_{kgh}\le R_g.
+\]
+These are averaged consequences of Lemma~\ref{lem:local}; they do not impose nonlinear independence.
+
+\subsection{Selected triple and source-degree types}
+Let $U_{klg}$ represent $ui\to w$ with $u\ne w$ in classes $k,l$ and label class $g$. Then
+\begin{gather}
+ \sum_l(M_l-\ind{k=l})U_{klg}=S_{kg},\qquad
+ \sum_gN_g(U_{klg}+U_{lkg})\le1,\label{eq:triples}\\
+ U_{klg}+S_{lg}+T_{lg}\le1.\nonumber
+\end{gather}
+When $k=l$ both orientations still count; there is no loop. Domination of every other selected label supplies
+$U_{klg}+S_{kh}-S_{lh}-T_{lh}\le1$ and
+$U_{klg}+F_{gh}+S_{kh}-T_{lh}\le2$ for distinct labels. The base model also retains safe linear implications of \eqref{eq:selected} and \eqref{eq:missing}, using bounds valid in each unselected case.
+
+To stop incompatible source degrees sharing optimistic capacities, use $w_{kq}=\Pr(q_u=q)$ over actual integer values $f_k\le q\le c_k$, and
+$A^X_{kgoq}$ for the joint event of option $o$, source degree $q$ and status $X\in\{S,T,M\}$. Their marginals recover the same $y_{go}$ and status variables at every source class. Their weighted label counts are $q w_{kq}$, $\rho_k w_{kq}$, and $(a-q-\rho_k)w_{kq}$.
+
+Typed oriented-pair events $P_{klqv}$ require $q\ge1$ and $v+\rho_l\ge q-1$. Their sums recover \eqref{eq:triples}, and their outgoing total is $q w_{kq}$; incoming total is at most $(\rho_k+\ell)w_{kq}$. These are joint events, not products of marginals.
+
+\subsection{Source-local pair events}
+The first LocalIncidence-v7 model additionally records $J_{kqghXYe}$ for a source degree, two distinct labels' statuses and their $F$-adjacency $e\in\{0,1\}$. Let $c_S=q$, $c_T=\rho_k$, $c_M=a-q-\rho_k$. Marginal identities give
+\begin{align}
+ \sum_h(N_h-\ind{g=h})\sum_eJ_{kqghXYe}
+ &=(c_Y-\ind{X=Y})\sum_oA^X_{kgoq},\label{eq:J}\\
+ \sum_h(N_h-\ind{g=h})\sum_YJ_{kqghXY1}
+ &=\sum_od(o)A^X_{kgoq},\nonumber\\
+ \sum_h(N_h-\ind{g=h})J_{kqghSS1}
+ &\le\sum_oR(o)A^S_{kgoq}.\nonumber
+\end{align}
+Events with an $F$-edge across $S,M$ are omitted. Averaging \eqref{eq:local} adds the local residual inequality; unordered pair multiplicities are $N_gN_h$ or $\binom{N_g}{2}$, with both orders for different statuses in one class. Summing over the source degree and statuses gives the same common $F_{gh}$.
+
+\section{Actual endpoint consistency}\label{sec:endpoints}
+A fixed column total remains fixed conditional on $q_u=q$. Thus
+\begin{align}
+ \sum_{g,o,X}N_gR(o)A^X_{kgoq}&=r w_{kq},&
+ \sum_{g,o,X}N_gd(o)A^X_{kgoq}&=2(r+t)w_{kq},\label{eq:conditional}\\
+ \sum_{g,o}N_gR(o)A^S_{kgoq}&\le(r-\rho_k)w_{kq},&
+ \sum_{g,o}N_gd(o)A^S_{kgoq}&\le[\rho_k(2a-\rho_k-3+q)-2t]w_{kq}.\nonumber
+\end{align}
+These use \eqref{eq:localdegree}--\eqref{eq:localR}, not an independence assumption.
+
+Finally retain actual selected label degree $x$ and source indegree $p$. Set
+\[
+ V_{gox}=\Pr(o_i=o,x_i=x),\quad
+ W_{kqp}=\Pr(q_u=q,p_u=p),
+\]
+where $\max(s_g,f_g)\le x\le b-R(o)$ and
+$0\le p\le\min(\rho_k+\ell,b-1-q)$; $f_g$ counts forced sources for a label. Require $\sum_xV_{gox}=y_{go}$, $\sum_pW_{kqp}=w_{kq}$ and
+\[
+ \sum_ppW_{kqp}=\sum_{l,v}(M_l-\ind{l=k})P_{lkvq}.
+\]
+The same selected incidence has a joint coordinate
+\[
+ Z_{kgoqpx}=\Pr(ui\text{ selected},o_i=o,q_u=q,p_u=p,x_i=x).
+\]
+It is admitted only for permitted selected status, $x\ge1$, and
+\begin{equation}\label{eq:endpoint}
+ R(o)+x\ge q+p.
+\end{equation}
+Both endpoints' incidence counts agree:
+\begin{align}
+ \sum_{p,x}Z_{kgoqpx}&=A^S_{kgoq},&
+ \sum_{o,x}Z_{kgoqpx}&\le W_{kqp}\quad\text{for each }g,\label{eq:Z}\\
+ \sum_{g,o,x}N_gZ_{kgoqpx}&=qW_{kqp},&
+ \sum_{q,p}Z_{kgoqpx}&\le V_{gox}\quad\text{for each }k,\nonumber\\
+ \sum_{k,q,p}M_kZ_{kgoqpx}&=xV_{gox}.&&\nonumber
+\end{align}
+Every equation counts actual incidences; every inequality expresses simplicity. Equation~\eqref{eq:endpoint} is the actual-type version of Lemma~\ref{lem:selected}, stronger than applying it only to averages.
+
+The final production model uses the source-degree model, \eqref{eq:conditional} and \eqref{eq:endpoint}--\eqref{eq:Z}, but omits the larger $J$ extension. The three LocalIncidence stages therefore need not be nested. Each rejection has a certificate for its own necessary system, and all stage dispositions are checked. The final seven 197-edge rows are rejected by this endpoint model without integer branching.
+
+\section{Exact certificates and complete computation}\label{sec:computation}
+\begin{proposition}[Certificate rule]\label{prop:certificate}
+Let a necessary system be $Ay\le b$, $Ey=f$, $y\ge0$. Nonnegative integer inequality multipliers $\lambda$ and signed integer equality multipliers $\mu$ with
+\[
+ \lambda A+\mu E\ge0\quad\text{coefficientwise},\qquad
+ \lambda b+\mu f<0
+\]
+prove infeasibility.
+\end{proposition}
+\begin{proof}
+Their linear combination requires a nonnegative expression in $y$ to be at most a strictly negative number.
+\end{proof}
+The checking implementation reconstructs named-variable constraints and accumulates exact integers. It verifies multiplier types and signs, constraint identities, the final coefficients, and the strict negative right side. Numerical optimisation proposes multipliers only. Unknown or duplicate certificate records, missing inputs, unsupported scope, timeouts, and unclosed trees are not accepted as proofs.
+
+The equality calculation also uses 91 complete binary proof trees. A split is permitted only on an integral count for every lifted graph: $N_gy_{go}$; $N_gN_hF_{gh}$ or $\binom{N_g}{2}F_{gg}$; $M_kN_gS_{kg}$ or $M_kN_gT_{kg}$; or $M_kw_{kq}$. Children $L\le h$ and $L\ge h+1$ cover every integer $L$. The verifier reconstructs the class-size factors and checks both children at every node. It never branches on a raw average as though it were Boolean. All 572 leaves have exact certificates.
+
+\begin{proposition}[Recorded finite exclusions]\label{prop:finite}
+The complete specified necessary-condition domains at $(n,\Delta,m)=(28,15,196)$ and $(28,15,197)$ are excluded by the pinned v3--v8 direct-route evidence. The separately specified $(28,16,196)$ domain is likewise excluded.
+\end{proposition}
+The exact executed partitions are shown below. The full checking route regenerates the initial domains and the intermediate data, reconstructs all retained column domains, and checks disjoint, complete disposition lists. It compares five equality-stage handoffs byte-for-byte (decompressing where specified). Cardinalities alone are not the coverage proof.
+\begin{center}\small
+\begin{tabular}{lrr}\toprule
+Degree-15 equality stage ($m=196$, $t=1$) & Input & Retained\\\midrule
+Charging demand tuples & 18,645 & 1,976\\
+Residual rows of retained intervals & 17,669,896 & 24,411\\
+Projected slack and pair tests & 24,411 & 13,196\\
+Joint columns and one-source constraints & 13,196 & 7,725\\
+Activation cuts and costs & 7,725 & 6,918\\
+Shared-adjacency model & 6,918 & 4,617\\
+Source-degree-type model & 4,617 & 479\\
+Complete branching proofs & 479 & 388\\
+Source-local incidence model & 388 & 366\\
+Conditional global ledgers & 366 & 347\\
+Actual endpoint-degree model & 347 & 0\\\bottomrule
+\end{tabular}
+\end{center}
+\begin{center}\small
+\begin{tabular}{lrr}\toprule
+Degree-15 upper-bound stage ($m=197$, $t=2$) & Input & Retained\\\midrule
+Fresh charging demand tuples & 12,012 & 1,229\\
+Residual rows of retained intervals & 8,216,928 & 5,154\\
+Projected slack and pair tests & 5,154 & 2,959\\
+Joint columns and one-source constraints & 2,959 & 1,584\\
+Shared-adjacency model & 1,584 & 797\\
+Source-degree-type model & 797 & 7\\
+Actual endpoint-degree model & 7 & 0\\\bottomrule
+\end{tabular}
+\end{center}
+For $\Delta=16,m=196$, $a=11,t=4$. The initial domain has 39 demand tuples: 35 are rejected by support/source counts, three by integer duals, and one by all 604 residual rows. A useful hand explanation appears in the v3 proof \cite[Section 8]{v3}; no graph construction is inferred from its intermediate tuples.
+
+The independent checking route is separate from coefficient discovery, but both implementations were developed by the same assistant. The additional audit kernel checked 8,983 final certificate leaves and 833,923 cited constraint terms \cite{audit}. That kernel reuses the preserved model constructors: it is a further arithmetic and branching check, not a third independent derivation of the graph constraints.
+
+\section{All degree cases and the equality boundary}\label{sec:assembly}
+\subsection{Excluding 197 edges}
+For $\Delta\le14$, the degree sum gives $2m\le28\cdot14=392$. Degree 15 is excluded by Proposition~\ref{prop:finite}.
+
+For $\Delta=16$, $a=11$ and $t=5$. Equation~\eqref{eq:charge} requires a sum of eleven scores to be at least $b+2t=26$. For every integer $0\le s\le10$,
+\[
+ \frac{s(12-2s)}{11-s}\le\frac{16}{7},\qquad
+ \frac{16}{7}-\frac{s(12-2s)}{11-s}
+ =\frac{2(s-4)(7s-22)}{7(11-s)}\ge0.
+\]
+The two numerator factors have the same sign at every permitted integer (including the zero at $s=4$). Thus the sum is at most $176/7<26$, impossible.
+
+For larger degrees use the residual $h$-index: the largest $h$ for which at least $h$ residual degrees are at least $h$. A demand $s_i$ requires $s_i$ distinct sources of residual degree at least $s_i$, so $s_i\le h$. Activity gives $r\ge b+h(h-1)$. Hence
+\begin{equation}\label{eq:hindex}
+ b+2t\le(a+1)h-h^2\le\floor{\frac{(n-b)^2}{4}}.
+\end{equation}
+At $m=197$ it fails for every $b=17,\ldots,26$:
+\begin{center}\begin{tabular}{rrrrrrrrrrr}\toprule
+$b$&17&18&19&20&21&22&23&24&25&26\\
+$b+2t$&37&52&71&94&121&152&187&226&269&316\\
+Permitted maximum&30&25&20&16&12&9&6&4&2&1\\\bottomrule
+\end{tabular}\end{center}
+Degree 27 is the star case. Thus 197 edges are impossible at every maximum degree. Equation~\eqref{eq:fan} now gives $m\le196$.
+
+\subsection{Characterising 196 edges}
+If $m=196$ and $\Delta\le14$, every vertex has degree 14. For nonadjacent vertices the two 14-element neighbourhoods lie among the other 26 vertices, and so have at least two common vertices. An edge in a triangle could be deleted without increasing the diameter: its endpoints retain their two-edge path, and any other nonadjacent pair loses at most one of its two common neighbours. This contradicts edge-criticality. The graph is triangle-free.
+
+Choose a vertex. Its 14 neighbours form an independent set, each of whose vertices has degree 14 and therefore neighbours every vertex outside that set. The resulting 196 cross-edges exhaust the graph. It is $K_{14,14}$.
+
+At degree 15 use the equality calculation in Proposition~\ref{prop:finite}; at degree 16 use the separate v3 exclusion. At degrees 17--26 the left sides of the preceding table decrease by two when $m$ decreases by one, and remain greater than the right sides. Degree 27 is a star. Conversely $K_{14,14}$ has 196 edges and diameter two; deleting a cross-edge makes its endpoints' distance three. This proves Theorem~\ref{thm:main}, through the stated structural lemmas and computational propositions.
+
+\section{Reproducibility, audit limits and reviewer questions}\label{sec:review}
+The six immutable archives are v3 demand-support, v4 label-tail, v5 column-propagation, v6 shared-adjacency, LocalIncidence-v7, and direct197-v8. Their 400 original payload files and six manifests are hash-pinned in the companion and release inventory. The separate degree-load-v7 weak-core route is \emph{not} a dependency. No n=25 or n=27 frozen theorem is needed as a black box in the direct order-28 assembly; inherited residual arguments are restated here.
+
+The committed internal audit reran all six components, compared the handoffs, and checked the final certificates with an additional kernel \cite{audit}. It found a non-blocking input-validation defect in the standalone v8 C++ helper: an unsupported interval could give a successful empty report. The full proof driver rejects that input first. The new reviewer release makes a guarded derivative of the helper mandatory, verifies the original source hash before substitution, and leaves original archives unchanged. The companion reports the new release's own tests separately from the historical audit.
+
+Actual-graph regressions and abstract systems test local constraints and implementations, including fractional averages and zero-demand selections. They contain no positive-surplus critical graph. That fact limits what those tests demonstrate; universal necessity must follow from the arguments, not from the sample. The additional kernel's reuse of model constructors is another explicit trust boundary.
+
+Reviewers should examine: uniqueness in the residual injections; the completeness of the sorted domains and paired column choices; preservation of actual witnesses under cap and option pruning; both-endpoint event normalisations and distinct-endpoint class factors; licensing of integer branch expressions; and the exact statement and applicability of the external Fan bound. Computational reproduction and mathematical review should be reported separately. No author external to this project has yet certified this manuscript, and no formal proof assistant has checked it.
+
+\begin{thebibliography}{10}\small\setlength{\itemsep}{2pt}
+\bibitem{fan} G. Fan, \emph{On diameter 2-critical graphs}, Discrete Mathematics 67 (1987), 235--240. DOI: \href{https://doi.org/10.1016/0012-365X(87)90174-9}{10.1016/0012-365X(87)90174-9}. Original theorem input; its full proof is not re-audited here.
+\bibitem{wang} T. Wang, \emph{On Murty-Simon Conjecture}, arXiv:1205.4397 (2012), especially p.~2. \url{https://arxiv.org/abs/1205.4397}. The strict Fan estimate used here is the one stated in this manuscript.
+\bibitem{haynes} T. W. Haynes, M. A. Henning, L. C. van der Merwe and A. Yeo, \emph{A maximum degree theorem for diameter-2-critical graphs}, Central European Journal of Mathematics 12 (2014), 1882--1889. DOI: \href{https://doi.org/10.2478/s11533-014-0449-3}{10.2478/s11533-014-0449-3}. Background complement and quasi-edge framework; the observation required here is proved in Section~\ref{sec:setup}.
+\bibitem{v3} P. Lenz project / ChatGPT, \emph{General-order demand--support cuts}, checkpoint 2026-09-07-demand-support-v3, original PROOF.md, source and certificates. Repository \texttt{paullenz/MurtySimon25}; exact archive in the companion inventory.
+\bibitem{v4} Same project, \emph{Label-tail v4}, checkpoint 2026-09-07-label-tail-v4, original proof and complete equality-domain replay.
+\bibitem{v5} Same project, \emph{Column propagation and supplement activation v5}, checkpoint 2026-09-07-column-propagation-v5, original proof and source/checking programs.
+\bibitem{v6} Same project, \emph{Shared columns, degree-type transport and threshold activation v6}, checkpoint 2026-09-07-shared-adjacency-v6, especially original PROOF.md Sections 3--6 and named-constraint checking source.
+\bibitem{v7} Same project, \emph{Local incidence and endpoint-degree consistency v7}, checkpoint 2026-09-07-local-incidence-v7, especially original PROOF.md Sections 3--6. This is distinct from degree-load-v7.
+\bibitem{v8} Same project, \emph{Direct exclusion of the 197-edge case at order 28 v8}, checkpoint 2026-09-07-direct-197-v8, original proof, exact inputs, source, and certificates.
+\bibitem{audit} Same project, \emph{Red-team audit of the direct order-28 candidate}, 2026-09-07-redteam-v1. Publication commit \texttt{6176ce6428c105b791d9129682cbacd55137edd1}; receipt commit \texttt{cd3c22411911280624a8223035e6de2343abbb7c}. Same-assistant internal review; independent review open.
+\end{thebibliography}
+\end{document}

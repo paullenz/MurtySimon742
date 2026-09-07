@@ -1,0 +1,15 @@
+{
+  "name": "v5",
+  "command": [
+    "/opt/pyvenv/bin/python",
+    "-I",
+    "-B",
+    "/mnt/data/n28_review_release/validation/originals/MurtySimon_GeneralN_ColumnPropagation_v5/replay.py",
+    "--check",
+    "--output",
+    "/mnt/data/n28_review_release/validation/v5_check"
+  ],
+  "exit_code": 0,
+  "seconds": 458.473259493,
+  "log": "/mnt/data/n28_review_release/validation/logs/v5.log"
+}

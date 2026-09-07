@@ -1,0 +1,112 @@
+{
+  "Fan_decimal": "197.2075",
+  "Fan_integer_consequence": "m<=197",
+  "Fan_original_proof_reaudited": false,
+  "Fan_source": "Tao Wang, On Murty-Simon Conjecture, arXiv:1205.4397, page 2, reporting Fan\u2019s theorem for n>=25",
+  "Fan_strict_bound": "78883/400",
+  "all_degrees_covered_conditionally_on_structural_inputs": true,
+  "degree_0_through_14": "degree sum <=196",
+  "degree_15": "complete fresh t=2 numerical chain in check197.py",
+  "degree_16": {
+    "a": 11,
+    "exact_gap": "6/7",
+    "max_score": "16/7",
+    "rejected": true,
+    "required_sum": 26,
+    "scores_by_s": [
+      "0",
+      "1",
+      "16/9",
+      "9/4",
+      "16/7",
+      "5/3",
+      "0",
+      "-7/2",
+      "-32/3",
+      "-27",
+      "-80"
+    ],
+    "t": 5,
+    "upper_sum": "176/7"
+  },
+  "degree_27": "universal-vertex critical graphs are stars with 27 edges",
+  "degrees_17_through_26": [
+    {
+      "Delta": 17,
+      "permitted_right": 30,
+      "rejected": true,
+      "required_left": 37,
+      "t": 10
+    },
+    {
+      "Delta": 18,
+      "permitted_right": 25,
+      "rejected": true,
+      "required_left": 52,
+      "t": 17
+    },
+    {
+      "Delta": 19,
+      "permitted_right": 20,
+      "rejected": true,
+      "required_left": 71,
+      "t": 26
+    },
+    {
+      "Delta": 20,
+      "permitted_right": 16,
+      "rejected": true,
+      "required_left": 94,
+      "t": 37
+    },
+    {
+      "Delta": 21,
+      "permitted_right": 12,
+      "rejected": true,
+      "required_left": 121,
+      "t": 50
+    },
+    {
+      "Delta": 22,
+      "permitted_right": 9,
+      "rejected": true,
+      "required_left": 152,
+      "t": 65
+    },
+    {
+      "Delta": 23,
+      "permitted_right": 6,
+      "rejected": true,
+      "required_left": 187,
+      "t": 82
+    },
+    {
+      "Delta": 24,
+      "permitted_right": 4,
+      "rejected": true,
+      "required_left": 226,
+      "t": 101
+    },
+    {
+      "Delta": 25,
+      "permitted_right": 2,
+      "rejected": true,
+      "required_left": 269,
+      "t": 122
+    },
+    {
+      "Delta": 26,
+      "permitted_right": 1,
+      "rejected": true,
+      "required_left": 316,
+      "t": 145
+    }
+  ],
+  "equality_at_196": "separate inherited LocalIncidence-v7 and Delta16/equality chain",
+  "mathematical_status": "candidate; independent mathematical review OPEN",
+  "scope": {
+    "m": 197,
+    "n": 28
+  },
+  "weak_core_density_reduction_used": false
+}

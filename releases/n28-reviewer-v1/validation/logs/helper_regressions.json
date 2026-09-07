@@ -1,0 +1,16 @@
+{
+  "name": "helper_regressions",
+  "command": [
+    "/opt/pyvenv/bin/python",
+    "-I",
+    "-B",
+    "/mnt/data/n28_review_release/release/test_helper.py",
+    "--original-v8",
+    "/mnt/data/n28_review_release/validation/originals/MurtySimon_N28_197_Direct_v8",
+    "--output",
+    "/mnt/data/n28_review_release/validation/helper_regressions"
+  ],
+  "exit_code": 0,
+  "seconds": 1.955833245000008,
+  "log": "/mnt/data/n28_review_release/validation/logs/helper_regressions.log"
+}

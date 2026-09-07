@@ -1,0 +1,15 @@
+{
+  "name": "v7",
+  "command": [
+    "/opt/pyvenv/bin/python",
+    "-I",
+    "-B",
+    "/mnt/data/n28_review_release/validation/originals/MurtySimon_GeneralN_LocalIncidence_v7/replay.py",
+    "--check",
+    "--output",
+    "/mnt/data/n28_review_release/validation/v7_check"
+  ],
+  "exit_code": 0,
+  "seconds": 77.13520565299996,
+  "log": "/mnt/data/n28_review_release/validation/logs/v7.log"
+}

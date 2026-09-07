@@ -1,0 +1,15 @@
+{
+  "name": "v4",
+  "command": [
+    "/opt/pyvenv/bin/python",
+    "-I",
+    "-B",
+    "/mnt/data/n28_review_release/validation/originals/MurtySimon_GeneralN_LabelTail_v4/replay.py",
+    "--replay",
+    "--output",
+    "/mnt/data/n28_review_release/validation/v4_check"
+  ],
+  "exit_code": 0,
+  "seconds": 10.25109532600004,
+  "log": "/mnt/data/n28_review_release/validation/logs/v4.log"
+}

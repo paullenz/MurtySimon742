@@ -1,0 +1,49 @@
+{
+  "all_checks_pass": true,
+  "integrity_before_check": {
+    "verified_payload_files": 88,
+    "every_sha256_matches": true,
+    "manifest_sha256": "c46237c4303f992240e93e2920ba1536db1bb1017ce2d38317b77d7ccabb3671"
+  },
+  "jobs": [
+    {
+      "script": "check_all.py",
+      "typed": null,
+      "exit_code": 0
+    },
+    {
+      "script": "test_lift.py",
+      "typed": "0",
+      "exit_code": 0
+    },
+    {
+      "script": "test_lift.py",
+      "typed": "1",
+      "exit_code": 0
+    },
+    {
+      "script": "test_threshold_family.py",
+      "typed": null,
+      "exit_code": 0
+    },
+    {
+      "script": "test_certificate_controls.py",
+      "typed": null,
+      "exit_code": 0
+    }
+  ],
+  "counts": {
+    "base_rejections": 2301,
+    "typed_rejections": 4138,
+    "branch_leaves": 572,
+    "branch_rejections": 91,
+    "overlapping_threshold_checks": 14,
+    "final_survivors": 388,
+    "final_demand_patterns": 167
+  },
+  "seconds": 169.68874669075012,
+  "solver_used": false,
+  "new_reports_in": "/mnt/data/n28_review_release/validation/v6_check/work/evidence",
+  "original_package_unchanged": true,
+  "mathematical_status": "candidate; independent external review OPEN"
+}
