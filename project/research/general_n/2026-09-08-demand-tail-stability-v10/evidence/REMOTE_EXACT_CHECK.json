@@ -1,0 +1,19 @@
+{
+  "schema": "murty-simon-v10-exact-check-v1",
+  "date": "2026-09-08",
+  "workflow_run": 34185775160,
+  "job": 101933689998,
+  "head_commit": "e0e9b9e08be37a79268f277db8383bac5b133dd3",
+  "runner": "ubuntu-24.04",
+  "status": "PASS",
+  "artifact_id": 10040435126,
+  "artifact_sha256": "1da68f84df4dc00f8a3ad4a737203243ea08e9b56145e71a5a7fd2e906d33721",
+  "epsilon": "1/750",
+  "theta": "227/1000",
+  "Q_lower_endpoint": "81744504311/927522000000",
+  "Q_upper_endpoint": "2090899511/927522000000",
+  "degree_ratio_squared": "316969/3751969",
+  "small_a_cases": 24,
+  "small_a_min_margin": "6/3125",
+  "scope": "Exact rational arithmetic only. This does not independently verify the graph-to-selected-system construction or universal counting lemmas."
+}
