@@ -4,6 +4,7 @@ on:
     branches: [main]
     paths:
       - 'project/reviews/n29/2026-09-08-redteam-restart-v1/independent_threshold_model.py'
+      - 'project/reviews/n29/2026-09-08-redteam-restart-v1/independent_threshold_model_v2.py'
       - 'project/reviews/n29/2026-09-08-redteam-restart-v1/run_independent_threshold.py'
       - 'project/reviews/n29/2026-09-08-redteam-restart-v1/INDEPENDENT_THRESHOLD_MODEL.md'
       - '.github/workflows/n29-independent-threshold.yml'
@@ -85,7 +86,7 @@ jobs:
           set -euo pipefail
           python3 -m venv .venv
           .venv/bin/python -m pip install --disable-pip-version-check --only-binary=:all: scipy==1.17.0
-      - name: Run standalone exact-certificate shard
+      - name: Run corrected v2 standalone exact-certificate shard
         run: |
           set -euo pipefail
           D=project/reviews/n29/2026-09-08-redteam-restart-v1
@@ -120,15 +121,15 @@ jobs:
           set -euo pipefail
           python3 -m venv .venv
           .venv/bin/python -m pip install --disable-pip-version-check --only-binary=:all: scipy==1.17.0
-      - name: Aggregate and independently re-verify every exact certificate
+      - name: Aggregate and independently re-verify every v2 exact certificate
         run: |
           set -euo pipefail
           D=project/reviews/n29/2026-09-08-redteam-restart-v1
           D="$D" .venv/bin/python -I - <<'PY'
-          import gzip,hashlib,json,multiprocessing as mp,os,sys
+          import gzip,hashlib,json,os,sys
           from pathlib import Path
           D=Path(os.environ['D']);sys.path.insert(0,str(D))
-          from independent_threshold_model import build,verify_certificate
+          from independent_threshold_model_v2 import build,verify_certificate
           outdir=D
           summaries={}
           for t,expected in [(3,118),(2,1225)]:
@@ -146,11 +147,11 @@ jobs:
               raw=(json.dumps(records,separators=(',',':'))+'\n').encode();gz=gzip.compress(raw,mtime=0)
               name=outdir/f'INDEPENDENT_THRESHOLD_T{t}_CERTIFICATES.json.gz';name.write_bytes(gz)
               summaries[str(208+t)]={'t':t,'projected_rows':expected,'exact_rejections':expected,'final_survivors':0,'rhs_min':min(rhs),'rhs_max':max(rhs),'json_sha256':hashlib.sha256(raw).hexdigest(),'gzip_sha256':hashlib.sha256(gz).hexdigest(),'json_bytes':len(raw),'gzip_bytes':len(gz)}
-          report={'schema':'n29-independent-threshold-flow-complete-v1','date':'2026-09-08','status':'PASS','scope':'n=29 Delta=16; standalone final-stage cumulative-threshold/source-q-flow LP','results':summaries,'projected_frontier_source':'regenerated published N29 projected frontier; 118 at m=211 and 1225 at m=210','independent_model_imports_inherited_final_code':False,'every_exclusion_exact_integer_farkas_reverified_after_aggregation':True,'final_survivors':0,'external_independence':False,'mathematical_status':'CANDIDATE; independent expert review remains OPEN'}
+          report={'schema':'n29-independent-threshold-flow-complete-v2','date':'2026-09-08','status':'PASS','scope':'n=29 Delta=16; corrected cumulative-threshold/source-q-flow LP','results':summaries,'normalization_fix':'label-side Z/T equations are per-label; no extra label-group multiplicity','projected_frontier_source':'regenerated published N29 projected frontier; 118 at m=211 and 1225 at m=210','independent_model_imports_inherited_final_code':False,'every_exclusion_exact_integer_farkas_reverified_after_aggregation':True,'final_survivors':0,'external_independence':False,'mathematical_status':'CANDIDATE; independent expert review remains OPEN'}
           (outdir/'INDEPENDENT_THRESHOLD_REPORT.json').write_text(json.dumps(report,indent=2)+'\n')
           print(json.dumps(report,indent=2))
           PY
-      - name: Commit independent certificate evidence
+      - name: Commit corrected independent certificate evidence
         run: |
           set -euo pipefail
           D=project/reviews/n29/2026-09-08-redteam-restart-v1
@@ -158,8 +159,8 @@ jobs:
           git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
           git add "$D/INDEPENDENT_THRESHOLD_T2_CERTIFICATES.json.gz" "$D/INDEPENDENT_THRESHOLD_T3_CERTIFICATES.json.gz" "$D/INDEPENDENT_THRESHOLD_REPORT.json"
           if git diff --cached --quiet; then
-            echo 'Independent evidence already identical.'
+            echo 'Corrected independent evidence already identical.'
             exit 0
           fi
-          git commit -m 'Preserve independent n29 Delta16 threshold-flow certificates'
+          git commit -m 'Preserve corrected v2 n29 threshold-flow certificates'
           git push
