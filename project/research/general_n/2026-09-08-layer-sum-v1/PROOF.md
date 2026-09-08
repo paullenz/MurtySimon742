@@ -2,7 +2,7 @@
 
 8 September 2026. Paul Lenz: research direction. ChatGPT/Geeps: mathematical development, code, drafting and internal checks.
 
-**Status: candidate hand proof; finite internal checks REPRODUCED; independent mathematical review OPEN.** This is not a certified replacement for a frozen finite-order proof, a novelty determination, or a solution of the whole Murty-Simon conjecture. No part of this new argument has been checked in Lean.
+**Status: candidate hand proof; finite internal checks REPRODUCED; independent mathematical review OPEN.** This is not a certified replacement for a frozen finite-order proof, a novelty determination, or a solution of the whole Murty-Simon conjecture. A local quasi-edge/edge-insertion slice is checked in Lean 4.19.0; the threshold-capacity counting lemma, layer sum and 13/22 consequence are not formally verified.
 
 ## Main statements
 
@@ -62,16 +62,30 @@ For an integer h>=1 define
 
 Every selection of a label in I_h has its source in Z_h. A vertex outside Z_h selects no heavy label, so all its neighbours in I_h are residual, and there are at most h-1 of them.
 
-Let ell_u count actual heavy selections at source u. If ell_u>h, every heavy selection there has its supplement inside Z_h: that supplement must neighbour the other ell_u-1>=h heavy labels. Let j sources have ell_u>h. The other z_h-j sources contribute at most (z_h-j)h heavy selections. Heavy arcs from the j sources occupy distinct unordered pairs in Z_h incident with those sources, of which there are at most j z_h-j(j+1)/2. Therefore
+Let ell_u count actual heavy selections at source u. If ell_u>h, every heavy selection there has its supplement inside Z_h: that supplement must neighbour the other ell_u-1>=h heavy labels. Let j sources have ell_u>h. The other z_h-j sources contribute at most (z_h-j)h heavy selections. Heavy arcs from the j sources occupy distinct unordered pairs in Z_h incident with those sources, of which there are at most
 
-    W_h <= (z_h-j)h + j z_h-j(j+1)/2.
+    j(z_h-j)+binom(j,2)=j z_h-j(j+1)/2.
 
-If W_h>0, a heavy label needs at least h distinct selected sources, so z_h>=h. Maximising the integer quadratic in j gives
+Therefore
+
+    W_h <= (z_h-j)h + j z_h-j(j+1)/2.                (6a)
+
+If W_h>0, a heavy label has s_i>=h and x_i>=s_i, so it is incident with at least h distinct selected cross-edges and hence at least h distinct sources. Source demand puts those sources in Z_h, giving z_h>=h.
+
+Now put q=z_h-h>=0. There is no approximation or continuous optimisation in the remaining step. Subtracting the right side of (6a) from the proposed bound gives the exact integer identity
+
+    h z_h + binom(q,2)
+      - [(z_h-j)h + j z_h-j(j+1)/2]
+      = (q-j)(q-j-1)/2 >= 0.                         (6b)
+
+The last inequality holds for every integer q-j because the product of two consecutive integers is nonnegative. Equality is possible only when j=q or j=q-1. Thus
 
     W_h <= h z_h + binom(z_h-h,2),
     2W_h <= z_h^2-z_h+h(h+1).                       (6)
 
-If z_h<h, W_h=0. In particular W_h<=z_h^2 in all cases. This is the threshold lemma preserved in the earlier continuation, restated with its graph proof rather than assumed from a test suite.
+If z_h<h, then W_h=0 by the preceding distinct-source argument. In particular W_h<=z_h^2 in all cases.
+
+This proof exposes exactly where both structural premises enter: (i) a source with more than h heavy selections may use only supplements in Z_h, and (ii) each unordered B-pair supports at most one selected orientation. Dropping either premise admits explicit abstract counterexamples. A separate adversarial checker enumerates marked partial orientations and includes both failures as negative controls.
 
 ## 4. Summing the demand levels
 
@@ -158,13 +172,13 @@ The default replay rebuilds all 33,864 labelled simple graphs with 3<=n<=6. Two 
 
 All 1,059 checked systems pass the graph construction, residual injections, exact threshold count, layer identities, (1) and (2). The run makes 2,119 threshold tests, but only 13 have nonempty demand tails, from 12 systems. No positive-surplus graph occurs. This is an important limitation: the samples do not test the dense contradiction nonvacuously. The 2,353 abstract demand multisets and 10,200 scalar-identity cases test algebra, not graph realisability. Missing, duplicate and self-supplement selections are rejected. K(2,3) is an explicit negative control for overbroad small-order strictness.
 
-The inherited continuation's separate regression also passes: 99 rounding cases, 2,550 integer maximisations and 1,728,186 admitted checks on 59,809 labelled oriented graphs. These are fresh executions in this response, not a recovery of earlier claimed execution results.
+The inherited continuation's separate regression also passes: 99 rounding cases, 2,550 integer maximisations and 1,728,186 admitted checks on 59,809 labelled oriented graphs. These are fresh executions in this response, not a recovery of earlier claimed execution results. A new independent adversarial threshold checker separately verifies the exact identity (6b), enumerates marked partial orientations with outside-Z endpoints, and confirms that removing either unordered-pair uniqueness or high-source confinement breaks the bound.
 
-No complete new graph order, proof through n=1,000, formal verification, independent researcher reproduction, literature priority or external endorsement is asserted. The source, output and authorship are internal to this project. Frozen n25/n27/n28 papers, original archives and the governed theorem ledger are unchanged.
+No complete new graph order, proof through n=1,000, full formal verification, independent researcher reproduction, literature priority or external endorsement is asserted. The source, output and authorship are internal to this project. Frozen n25/n27/n28 papers, original archives and the governed theorem ledger are unchanged.
 
-**Independent-review priorities:** verify the unique-exception construction and residual injection; verify the heavy-supplement confinement and unordered-pair count; verify that H0 is a maximum demand and so z_h>=H0; check the two Cauchy-Schwarz steps and the exact small-a assembly. These are the dependencies of the new candidate, not an assumption that earlier manuscript status already settled them.
+**Independent-review priorities:** verify the heavy-supplement confinement and unordered-pair injection used in (6a); then verify the layer sum. The graph-to-quasi-edge bridge now has a checked local Lean slice, and the residual injection has separate computational assurance, but neither fact makes the global 13/22 statement externally verified.
 
-**Research next step:** audit this shorter graph-to-layer proof before optimising further. A later sharpening could retain the full residual-tail distribution instead of replacing r0 and H0^2 by r. There is no claim yet that this closes the middle-degree gap.
+**Research next step:** audit/formalise the graph-to-threshold reduction before optimising further. A later sharpening could retain the full residual-tail distribution instead of replacing r0 and H0^2 by r. There is no claim yet that this closes the middle-degree gap.
 
 ## Provenance and literature limits
 
