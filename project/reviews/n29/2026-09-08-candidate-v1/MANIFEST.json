@@ -1,0 +1,18 @@
+{
+  "schema": "n29-candidate-manifest-v1",
+  "files": {
+    "ALL_DEGREES_CHECK.json": {"bytes":2586,"git_blob":"bfce4aaae0485b407e5e9353988c5c5648b9d81c"},
+    "AUDIT.md": {"bytes":4204,"git_blob":"1e0ff2a270953a5c638b5710a3c8e94de8abe7ea"},
+    "FAILURE_HISTORY.json": {"bytes":1105,"git_blob":"d31b8520a68b7c1bfdd88126cd140eaee02797da"},
+    "PROOF.md": {"bytes":16476,"git_blob":"f93fe793308a470fd3201e2b35447d9c49f7a71b"},
+    "PROVENANCE.json": {"bytes":1107,"git_blob":"81828e9e6e91e512dd14db7dc8601351def2acc0"},
+    "README.md": {"bytes":3622,"git_blob":"23aa294f714e633d9ed071cddf74ae65e65cf29e"},
+    "check_all_degrees.py": {"bytes":2901,"git_blob":"3b4e074437656adfb3860d12ef3912dbdd523027"},
+    "evidence/DELTA16_REMOTE_REPLAY.json": {"bytes":1827,"git_blob":"a8e4f0efc4c35cd7533a4d2c7ab674b0a5856747"},
+    "evidence/N29_D16_REPLAY.json": {"bytes":1005,"git_blob":"50817636a7c5e4407e295ba718cf1585b3f08fb5"}
+  },
+  "excludes": ["MANIFEST.json","evidence/REMOTE_CANDIDATE_CHECK.json","PUBLICATION_RECEIPT.json"],
+  "root_readme_before_blob": "d1bc385e5baac65bb67c8e0e3954a1edb470d325",
+  "delta16_successful_run": 34220977858,
+  "note": "Git blob IDs are the point-in-time content hashes for this repository payload; self and later receipts are excluded to avoid recursive manifests."
+}
