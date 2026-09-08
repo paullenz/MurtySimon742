@@ -1,0 +1,51 @@
+{
+  "schema": "n25-reaudit-publication-receipt-v1",
+  "date": "2026-09-08",
+  "repository": "paullenz/MurtySimon25",
+  "branch": "main",
+  "baseline_before_reaudit": "af5a05689bee9bdbc50ee5a54974fe5c2a853f8f",
+  "first_attempt_commit": "3ffe7a409750d5688b574f73027652cb35f1ee17",
+  "partition_driver_commit": "77dcf450c4b96ef1559d6bd3d362988e016322a8",
+  "final_report_commit": "603b6550326f61bc1366e152b4392577277d46f9",
+  "successful_run": {
+    "run_id": 34216192059,
+    "status": "completed",
+    "conclusion": "success",
+    "band_jobs": 16,
+    "assurance_job": "success",
+    "aggregate_job": "success",
+    "outer_states": 543578,
+    "labelled_columns": 3442212,
+    "terminal_certificates": 1959,
+    "every_shard_matched_both_original_generators_and_classifiers": true
+  },
+  "first_attempt": {
+    "run_id": 34212897538,
+    "job_id": 102017807363,
+    "conclusion": "failure",
+    "exit_code": 143,
+    "reason": "runner shutdown signal",
+    "not_reclassified_as_success": true
+  },
+  "complete_records_artifact": {
+    "id": 10052070289,
+    "name": "n25-reaudit-complete-records",
+    "bytes": 67406,
+    "sha256": "8761ff3296c48d9c5f9b86b86e23f6015c812df3c660ce528938b596b51d2b55"
+  },
+  "frozen_inputs": {
+    "reviewer_package_sha256": "ff5a88f4202fb1e201f52e7e6ec0b50f88248cd43493eee78f120a3c1de15c3d",
+    "candidate_evidence_sha256": "0588c85900762184040dfb313c89d36349f2a8183db5cbc91a1ee50915cb4e95",
+    "changed": false
+  },
+  "governance": {
+    "theorem_ledger_changed": false,
+    "later_general_degree_results_used": false,
+    "mathematical_status": "CANDIDATE; no blocking defect found in internal re-audit",
+    "internal_computation": "REPRODUCED by complete partitioned replay",
+    "independent_specialist_review": "OPEN",
+    "full_formal_verification": false,
+    "independent_authorship": false
+  },
+  "note": "The successful result is an exhaustive partitioned replay of the original finite domains. It must not be described as successful completion of the earlier monolithic review_package.py replay process, which was interrupted."
+}
