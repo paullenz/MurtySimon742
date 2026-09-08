@@ -4,6 +4,7 @@ on:
     branches: [main]
     paths:
       - 'project/research/general_n/2026-09-08-layer-sum-v1/src/check_construction_independent.py'
+      - 'project/research/general_n/2026-09-08-layer-sum-v1/src/check_residual_injection_independent.py'
       - '.github/workflows/layer-sum-construction.yml'
   workflow_dispatch:
 permissions:
@@ -24,12 +25,24 @@ jobs:
           grep -F '"status": "PASS"' construction-check.json
           grep -F '"missing_B_pairs": 720' construction-check.json
           grep -F '1f2b1bb5bd91d54937f166abd0c26badd8ddd105441cd37a6d0150c557d46c5e' construction-check.json
+      - name: Run independent residual-injection audit
+        run: |
+          set -euo pipefail
+          F=project/research/general_n/2026-09-08-layer-sum-v1/src/check_residual_injection_independent.py
+          sha256sum "$F" | tee residual-source-sha256.txt
+          python3 -I -B "$F" | tee residual-injection-check.json
+          grep -F '"status": "PASS"' residual-injection-check.json
+          grep -F '"sample_forced_targets": 588' residual-injection-check.json
+          grep -F '"sample_nonzero_forced_systems": 163' residual-injection-check.json
+          grep -F '5e33b3ad7d7fc8d1276ebab7de09dc03026346779d41e1a4411032dd9acc069a' residual-injection-check.json
       - uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02
         with:
           name: layer-sum-construction-check
           path: |
             construction-check.json
+            residual-injection-check.json
             python-version.txt
             checked-source-sha256.txt
+            residual-source-sha256.txt
           if-no-files-found: error
           retention-days: 7
