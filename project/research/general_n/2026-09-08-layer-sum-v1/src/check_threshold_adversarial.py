@@ -33,62 +33,51 @@ def arithmetic_sweep(limit=250):
 
 
 def enumerate_marked_orientations(max_n=6):
-    # Vertices 0..z-1 are Z_h. A counted arc is an oriented unordered pair
-    # whose source lies in Z_h. If a source has load > h, every endpoint of
-    # its counted arcs must also lie in Z_h. This is exactly the abstract
-    # consequence used in the pair-capacity proof; outside-source arcs are
-    # irrelevant and omitted.
-    admitted = states = 0
+    # Enumerate each partial orientation once. For every initial segment Z and
+    # every h<=|Z|, count arcs sourced in Z. If such a source has load > h,
+    # require all of its counted endpoints to remain in Z. This directly
+    # models the two graph consequences used by the threshold proof.
+    admitted = checks = orientation_states = 0
     worst_gap = None
     equality_hits = 0
     for n in range(1, max_n+1):
         pairs = list(combinations(range(n),2))
-        for z in range(1,n+1):
-            for h in range(z+1):
-                opts = []
-                for u,v in pairs:
-                    choices = [0]
-                    if u < z:
-                        choices.append(1)  # u -> v
-                    if v < z:
-                        choices.append(2)  # v -> u
-                    opts.append(choices)
-                for choice_vec in product(*opts):
-                    states += 1
-                    load = [0]*z
-                    endpoints = [[] for _ in range(z)]
-                    used = set()
-                    for (u,v),c in zip(pairs,choice_vec):
-                        if c == 1:
-                            require((u,v) not in used, 'pair reuse')
-                            used.add((u,v)); load[u] += 1; endpoints[u].append(v)
-                        elif c == 2:
-                            require((u,v) not in used, 'pair reuse')
-                            used.add((u,v)); load[v] += 1; endpoints[v].append(u)
-                    if any(load[u] > h and any(v >= z for v in endpoints[u]) for u in range(z)):
+        for choice_vec in product(range(3), repeat=len(pairs)):
+            orientation_states += 1
+            out = [set() for _ in range(n)]
+            for (u,v), c in zip(pairs, choice_vec):
+                if c == 1:
+                    out[u].add(v)
+                elif c == 2:
+                    out[v].add(u)
+            for z in range(1,n+1):
+                Z = set(range(z))
+                load = [len(out[u]) for u in range(z)]
+                total = sum(load)
+                for h in range(z+1):
+                    checks += 1
+                    if any(load[u] > h and not out[u].issubset(Z) for u in range(z)):
                         continue
                     admitted += 1
                     j = sum(load[u] > h for u in range(z))
-                    total = sum(load)
                     pair_count = j*z - j*(j+1)//2
                     direct = (z-j)*h + pair_count
                     bound = h*z + (z-h)*(z-h-1)//2
-                    require(total <= direct, ('direct',n,z,h,j,total,direct,load,endpoints))
+                    require(total <= direct, ('direct',n,z,h,j,total,direct,load))
                     require(direct <= bound, ('quadratic',n,z,h,j,direct,bound))
                     gap = bound-total
                     worst_gap = gap if worst_gap is None else min(worst_gap,gap)
                     equality_hits += (gap == 0)
-    return {"max_n":max_n,"states":states,"admitted":admitted,
+    return {"max_n":max_n,"orientation_states":orientation_states,
+            "checks":checks,"admitted":admitted,
             "minimum_bound_gap":worst_gap,"equality_hits":equality_hits}
 
 
 def negative_controls():
-    # Allowing both orientations of an unordered pair destroys the premise.
     z,h = 4,1
-    illegal_total = 12  # complete bidirected graph on four sources
+    illegal_total = 12
     bound = h*z + (z-h)*(z-h-1)//2
     require(illegal_total > bound, (illegal_total,bound))
-    # Allowing a >h source to spend arcs outside Z also destroys the proof.
     z,h = 2,1
     illegal_total = 4
     bound = h*z + (z-h)*(z-h-1)//2
@@ -99,7 +88,7 @@ def negative_controls():
 
 def main():
     out = {
-        "schema":"threshold-capacity-adversarial-v1",
+        "schema":"threshold-capacity-adversarial-v2",
         "arithmetic": arithmetic_sweep(),
         "marked_orientation_model": enumerate_marked_orientations(),
         "negative_controls": negative_controls(),
