@@ -1,0 +1,26 @@
+{
+  "schema": "n29-candidate-remote-check-v1",
+  "date": "2026-09-08",
+  "repository": "paullenz/MurtySimon25",
+  "workflow": ".github/workflows/n29-candidate.yml",
+  "run_id": 34222928385,
+  "job_id": 102050069661,
+  "head_commit": "76330725fd00c7a7f028b5f53594a3c6fd51d1d2",
+  "status": "completed",
+  "conclusion": "success",
+  "created_at": "2026-09-08T11:51:51Z",
+  "updated_at": "2026-09-08T11:52:26Z",
+  "checks": {
+    "non_delta16_exact_arithmetic_reproduced": true,
+    "saved_all_degree_json_parsed_equal": true,
+    "delta16_aggregate_counts_and_zero_survivors_verified": true,
+    "delta16_source_git_blobs_verified": true,
+    "manifest_payload_git_blobs_and_sizes_verified": true
+  },
+  "delta16_successful_run": 34220977858,
+  "candidate_statement": "n=29: e(G)<=210, equality exactly K(14,15)",
+  "mathematics": "CANDIDATE",
+  "independent_specialist_review": "OPEN",
+  "formal_verification": false,
+  "independence_scope": "Clean execution environment only; same-assistant proof and implementations."
+}
