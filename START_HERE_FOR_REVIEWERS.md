@@ -17,7 +17,8 @@ The repository currently contains candidate fixed-order Murty–Simon results fo
 - `n=25`: `e(G) <= 156`, equality only `K(12,13)`;
 - `n=27`: `e(G) <= 182`, equality only `K(13,14)`;
 - `n=28`: `e(G) <= 196`, equality only `K(14,14)`;
-- `n=29`: `e(G) <= 210`, equality only `K(14,15)`.
+- `n=29`: `e(G) <= 210`, equality only `K(14,15)`;
+- `n=30`: `e(G) <= 225`, equality only `K(15,15)`.
 
 It also contains a general structural programme, including the candidate implication
 
@@ -27,32 +28,22 @@ n >= 6 and Delta(G) >= (293/500)n  ==>  e(G) < floor(n^2/4).
 
 No unrestricted all-order proof is claimed.
 
-## Recommended first review: n=29
+## Recommended first review: the universal bridge via n=29
 
-The n=29 candidate is the cleanest current place to audit the programme because most degree ranges are eliminated by short hand arguments and the difficult `Delta=16` case now has a deliberately reduced trusted kernel.
+The n=29 candidate remains the cleanest place to audit the universal graph-to-demand machinery because most degree ranges are eliminated by short hand arguments and the difficult `Delta=16` case has a deliberately reduced trusted kernel. The same bridge is then parameterised at n=30.
 
 Main proof:
 
 - [`project/reviews/n29/2026-09-08-candidate-v1/PROOF.md`](project/reviews/n29/2026-09-08-candidate-v1/PROOF.md)
 
-Restarted hostile audit:
+Standalone bridge and hostile audit:
 
-- [`project/reviews/n29/2026-09-08-redteam-restart-v1/N29_RED_TEAM_RESTART.md`](project/reviews/n29/2026-09-08-redteam-restart-v1/N29_RED_TEAM_RESTART.md)
-- [`project/reviews/n29/2026-09-08-redteam-restart-v1/SOURCE_AND_CERTIFICATE_AUDIT.md`](project/reviews/n29/2026-09-08-redteam-restart-v1/SOURCE_AND_CERTIFICATE_AUDIT.md)
+- [`project/reviews/n29/2026-09-09-bridge-standalone-v1/GRAPH_TO_MODEL_BRIDGE.md`](project/reviews/n29/2026-09-09-bridge-standalone-v1/GRAPH_TO_MODEL_BRIDGE.md)
+- [`project/reviews/n29/2026-09-09-bridge-standalone-v1/THRESHOLD_CAPACITY_LEMMA.md`](project/reviews/n29/2026-09-09-bridge-standalone-v1/THRESHOLD_CAPACITY_LEMMA.md)
+- [`project/reviews/n29/2026-09-09-bridge-standalone-v1/BRIDGE_REDTEAM.md`](project/reviews/n29/2026-09-09-bridge-standalone-v1/BRIDGE_REDTEAM.md)
 - [`project/reviews/n29/2026-09-08-redteam-restart-v1/PUBLIC_RELEASE_AUDIT.md`](project/reviews/n29/2026-09-08-redteam-restart-v1/PUBLIC_RELEASE_AUDIT.md)
 
-### n=29 proof structure
-
-For a 29-vertex diameter-two edge-critical graph `G`:
-
-1. Published reductions and degree sum leave a small number of dense degree cases.
-2. `Delta=15` is handled by a witness/deficit hand count; at 210 edges equality forces `K(14,15)`.
-3. `Delta=16` is excluded by the finite trusted kernel described below.
-4. `Delta=17` is excluded by a short pointwise charging inequality.
-5. `Delta=18,...,27` are excluded by the residual h-index inequality.
-6. `Delta=28` gives a universal vertex and hence a star.
-
-The highest-value mathematical review is therefore the **graph-to-demand bridge for `Delta=16`**, not another rerun of the arithmetic.
+The highest-value mathematical review is therefore the **graph-to-demand bridge**, not another rerun of the arithmetic.
 
 ## Minimal trusted kernel for n=29, Delta=16
 
@@ -92,7 +83,30 @@ Relevant source:
 - [`run_minimal_kernel.py`](project/reviews/n29/2026-09-08-redteam-restart-v1/run_minimal_kernel.py)
 - [clean GitHub Actions workflow](.github/workflows/n29-minimal-kernel.yml)
 
-## Important audit history: a real bug was found
+## New n=30 complete candidate
+
+The n=30 candidate is assembled at:
+
+- [`project/reviews/n30/2026-09-09-candidate-v1/README.md`](project/reviews/n30/2026-09-09-candidate-v1/README.md)
+- [`project/reviews/n30/2026-09-09-candidate-v1/PROOF.md`](project/reviews/n30/2026-09-09-candidate-v1/PROOF.md)
+- [`project/reviews/n30/2026-09-09-candidate-v1/ASSEMBLY_AUDIT.md`](project/reviews/n30/2026-09-09-candidate-v1/ASSEMBLY_AUDIT.md)
+
+Its candidate statement is
+
+```text
+e(G) <= 225,
+with equality exactly K(15,15).
+```
+
+Fan's cited strict bound leaves only 226 edges as an upper-bound counterexample. The dense non-bipartite proof reduces to `Delta=16` and `Delta=17`; the remaining degree ranges are hand/charging exclusions.
+
+For `Delta=17`, no residual-row or final LP model is needed. At 226 edges all 250 charging-feasible profiles are rejected by threshold capacity. At 225 edges, 1,137 of 1,155 profiles are rejected by threshold/source-count inequalities and the remaining 18 by exact Hall duals. Clean replay: `34292054922`.
+
+For `Delta=16`, the bridge is genuinely parameterised to `(a,b)=(13,16)`. Clean workflows `34286806474`, `34287440190`, and `34287739057` leave 9 final rows at 226 edges and 272 at 225 edges, all exactly Farkas-rejected. The isolated-`C` step used to obtain `d_i<=11` is expanded separately at [`ISOLATED_C_PARAMETERIC_LEMMA.md`](project/research/n30/2026-09-08-minimal-kernel-recon-v1/ISOLATED_C_PARAMETERIC_LEMMA.md).
+
+The final lightweight assembly replay `34292557008` is green. This is still same-assistant evidence, not external validation.
+
+## Important audit history: a real n=29 bug was found
 
 During the hostile n=29 bridge audit, an error was found in the first version of the *additional* cumulative-threshold verifier, `independent_threshold_model.py`.
 
@@ -115,7 +129,8 @@ Accordingly:
 - the error did not affect the original n=29 direct route or the separate fully fresh implementation, which use different machinery;
 - [`independent_threshold_model_v2.py`](project/reviews/n29/2026-09-08-redteam-restart-v1/independent_threshold_model_v2.py) fixes the normalization;
 - corrected v2 was replayed cleanly and again produced zero survivors;
-- the later minimal trusted-kernel replay also uses the corrected v2 model and produced zero survivors.
+- the later minimal trusted-kernel replay also uses the corrected v2 model and produced zero survivors;
+- the n=30 Delta=16 grouped model was written fresh with the corrected normalization.
 
 This history is intentionally public. Finding such an error is evidence that the red-team process is doing useful work; it is not being silently edited out of the record.
 
@@ -129,10 +144,11 @@ A useful hostile review would try to break these points in roughly this order:
 4. **Demand implication.** Does `s_i=max(0,d_i-R_i)` genuinely require `s_i` distinct selected sources with enough residual degree?
 5. **Charging inequality.** Check the per-source charge budget and the passage to the summed demand inequality.
 6. **Threshold-capacity lemma.** Check the high-demand/high-residual source counting and unordered-pair capacity.
-7. **Exact source-capacity dual.** Verify that it is only a necessary Hall relaxation and that the saved integer dual inequality proves each rejection.
-8. **Residual-row scanner.** Check that every pruning operation enlarges or preserves the graph-realizable set before rejection.
-9. **Corrected v2 LP normalization.** Track every grouped variable dimensionally: per label, per source, or per possible pair.
-10. **Exact Farkas checker.** Confirm multiplier signs, equality treatment, coefficientwise nonnegativity and strictly negative combined RHS.
+7. **Parameteric isolated-C lemma.** Check the auxiliary-location argument and disjoint residual-edge families.
+8. **Exact source-capacity dual.** Verify that it is only a necessary Hall relaxation and that the saved integer dual inequality proves each rejection.
+9. **Residual-row scanner.** Check that every pruning operation enlarges or preserves the graph-realizable set before rejection.
+10. **Corrected grouped LP normalization.** Track every grouped variable dimensionally: per label, per source, or per possible pair.
+11. **Exact Farkas checker.** Confirm multiplier signs, equality treatment, coefficientwise nonnegativity and strictly negative combined RHS.
 
 A single valid counterexample to any universal lemma is enough to invalidate the dependent route and should be reported immediately.
 
