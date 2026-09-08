@@ -24,13 +24,48 @@ The parameterised early kernel gives the following picture.
 
 For Delta=16 at `m=225`, the 54,843 figure consists of 47,098 source-count contradictions and 7,745 threshold contradictions; one additional profile has an empty exact residual interval. For Delta=16 at `m=226`, it consists of 30,780 source-count contradictions and 9,835 threshold contradictions.
 
-Thus the new n=30 computational frontier is sharply concentrated at
+Thus the n=30 frontier is sharply concentrated at `Delta=16`.
 
-`Delta=16`,
+## Strengthened Delta=16 preparation and clean residual-row scan
 
-with 2,596 early demand profiles at 226 edges and 5,386 at 225 edges.
+The next checkpoint uses two further consequences already proved in the n=29 bridge rather than adding any new graph lemma.
 
-No residual-row enumeration or corrected-v2 LP has yet been run for those scopes in this checkpoint.
+First, the isolated-`C` contradiction gives
+
+`b <= a-1-t`
+
+if `C=H[A]` has an isolated vertex. For `(a,b)=(13,16)` this is impossible at both `t=1` and `t=2`. Hence `delta(C)>=1`, so
+
+`d_i<=11`, `e(C)>=ceil(13/2)=7`,
+
+and therefore
+
+`r<=C(13,2)-t-7`.
+
+Second, the existing threshold-capacity inequalities and exact source-capacity Hall duals can be used not only as rejection certificates but as **certified lower bounds on `r`**. The implementation uses floating point only to propose dual weights; every bound used to raise `r_min` is checked with exact rational arithmetic.
+
+The strengthened preparation gives:
+
+| m | t | charging domain | basic empty | threshold empty | dual empty | retained demands |
+|---:|---:|---:|---:|---:|---:|---:|
+| 226 | 2 | 48,046 | 50 | 40,607 | 4,799 | **2,590** |
+| 225 | 1 | 67,050 | 167 | 54,854 | 6,650 | **5,379** |
+
+The clean residual scanner then enumerates every sorted length-16 residual row within the certified total interval and uses only the same two necessary rules as the n=29 minimal scanner: source-capacity Hall and monotone supplement-cap refinement.
+
+Clean GitHub Actions run `34286806474` completed both jobs successfully.
+
+| m | raw residual states | initial Hall rejects | refinement rejects | residual-row survivors |
+|---:|---:|---:|---:|---:|
+| 226 | **50,690,620** | 50,561,364 | 93,726 | **35,530** |
+| 225 | **158,314,695** | 157,894,303 | 269,496 | **150,896** |
+
+The saved clean artifacts are:
+
+- `m=226`: artifact `10079792637`, artifact-ZIP SHA-256 `0c5ada3ff72d18c4e4c0768e9648b5672157063d6ed91112b1bf112830afcd14`;
+- `m=225`: artifact `10079799176`, artifact-ZIP SHA-256 `39d08ee88568f5944947e267b866d369503a96ff65461464af178bf1c348dfe4`.
+
+These rows are necessary-condition states, not graphs.
 
 ## Delta=17 is already closed by the early kernel
 
@@ -63,7 +98,19 @@ But in a 15-regular graph every pair has degree sum 30, contradiction. Therefore
 
 A bipartite diameter-two graph is complete bipartite, and 225 edges on 30 vertices forces `K(15,15)`.
 
-Thus equality uniqueness at n=30 will reduce to excluding the remaining Delta=16, m=225 scope.
+Thus equality uniqueness at n=30 will reduce to excluding the remaining Delta=16, `m=225` scope.
+
+## Current next stage
+
+A fresh n=30 version of the corrected cumulative-threshold/source-flow relaxation has now been written as `n30_threshold_model.py`. It is parameterised directly at `(a,b)=(13,16)` and does **not** import either historical n=29 threshold builder. In particular it retains the corrected per-label normalization
+
+`sum_k n_k Z = sum_h T_h`
+
+with no extra label-group multiplicity.
+
+`n30_threshold_scan.py` provides shardable numerical reconnaissance and optional exact integer-Farkas certification.
+
+The next step is to measure how strongly this model cuts the 35,530 / 150,896 residual-row frontiers, then run exact certificates only where the numerical pilot shows the route is effective. No Delta=16 exclusion is claimed at this checkpoint.
 
 ## What remains for n=30
 
@@ -72,16 +119,20 @@ A complete n=30 candidate now appears to require only:
 1. exclude `Delta=16, m=226`;
 2. exclude non-bipartite `Delta=16, m=225`.
 
-The next research step should **parameterise the residual-row scanner and corrected-v2 cumulative-threshold LP to `(a,b)=(13,16)`**, not invent a new n=30-specific model.
-
-The existing early survivors are small enough to make that a plausible direct continuation, but no completion is claimed here.
+No completion is claimed here.
 
 ## Replay
 
-Run:
+Early-kernel reconnaissance:
 
 ```bash
 python n30_recon.py
 ```
 
-The script uses exact rational arithmetic for every saved mathematical inequality. SciPy/HiGHS is used only to propose source-capacity dual weights; a dual rejection is counted only after the rational/integer inequalities are checked directly.
+Strengthened Delta=16 preparation and row scan are replayed by:
+
+```text
+.github/workflows/n30-d16-rows.yml
+```
+
+The scripts use exact rational arithmetic for every saved mathematical inequality. SciPy/HiGHS is used only to propose source-capacity dual weights or later Farkas rays; an exact rejection is counted only after the corresponding rational/integer inequalities are checked directly.
