@@ -1,0 +1,11 @@
+{
+  "schema": "n29-d16-failure-history-v1",
+  "date": "2026-09-08",
+  "failed_runs": [
+    {"run_id":34219349207,"commit":"ecddc7fba7ef4bca9bbc883ea8473f5040b2df98","conclusion":"failure","failed_stage":"prepare demand certificates","cause":"scipy was not installed","mathematical_counterexample":false},
+    {"run_id":34220473129,"commit":"67346a93bb2220487162448f9b0803bd6d56ec60","conclusion":"failure","failed_stage":"prepare demand certificates","cause":"scipy was installed to the user site but python -I intentionally hid the user site","mathematical_counterexample":false},
+    {"run_id":34220800516,"commit":"1a5ed5214ff6a67739489aadf02ea2e1ae418f8f","conclusion":"failure","failed_stage":"independent joint checker compilation","cause":"Boost multiprecision headers were absent from the runner image","mathematical_counterexample":false}
+  ],
+  "successful_run": {"run_id":34220977858,"commit":"42954d3094860a218e6ba8a418c35b7061449b31","conclusion":"success"},
+  "policy": "Failures are preserved as execution history and are not retrospectively described as successful mathematical checks."
+}
