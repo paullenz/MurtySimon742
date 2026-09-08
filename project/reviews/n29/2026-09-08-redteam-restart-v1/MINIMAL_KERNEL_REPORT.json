@@ -1,0 +1,38 @@
+{
+  "schema": "n29-minimal-trusted-kernel-v1",
+  "date": "2026-09-08",
+  "status": "PASS",
+  "scope": "n=29 Delta=16 at m=211 and 210",
+  "results": {
+    "211": {
+      "t": 3,
+      "retained_demands": 72,
+      "residual_rows": 126,
+      "exact_rejections": 126,
+      "final_survivors": 0,
+      "rhs_min": -999605,
+      "rhs_max": -1,
+      "json_sha256": "90aee5b72c72c058f77f09fdaa917e5a9452437c2a059563a1fe30f74030eed0",
+      "gzip_sha256": "f3b730c98a8f09a82f781188b22042de20d5c5da81e79b77fc71850e71d6b10a"
+    },
+    "210": {
+      "t": 2,
+      "retained_demands": 367,
+      "residual_rows": 1467,
+      "exact_rejections": 1467,
+      "final_survivors": 0,
+      "rhs_min": -999881,
+      "rhs_max": -1,
+      "json_sha256": "9a879876505d8f42e0fd0742ee470b3cc7f86b8127bc55e5c78de94430e83631",
+      "gzip_sha256": "73d93de23e03b3f916a546608f1a42c3d42ced1a196208d871e7205ee118380c"
+    }
+  },
+  "uses_projected_screen": false,
+  "uses_joint_propagator": false,
+  "uses_old_shared_typed_endpoint_models": false,
+  "uses_old_pair_capacity_support_formula": false,
+  "all_late_exclusions_exact_integer_farkas_reverified": true,
+  "final_survivors": 0,
+  "external_independence": false,
+  "mathematical_status": "CANDIDATE; independent expert review remains OPEN"
+}
