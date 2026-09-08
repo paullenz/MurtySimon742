@@ -69,7 +69,7 @@ that is, j=z-h or j=z-h-1. Any equality in the full graph inequality would addit
 
 A new checker, `src/check_threshold_adversarial.py`, was written separately from the inherited threshold script. It enumerates every partial orientation of every unordered pair through n=5, marks each initial segment as a candidate Z, checks every h<=|Z|, and admits exactly those states satisfying the abstract high-source confinement rule. It then verifies both the direct j-source bound and the exact extremal bound.
 
-Fresh local run of the committed v3 logic:
+Fresh local and clean-runner result for committed v3 logic:
 
     orientation states: 59,809
     marked (Z,h) checks: 1,191,446
@@ -78,6 +78,14 @@ Fresh local run of the committed v3 logic:
     equality hits: 60,251
 
 The separate exact arithmetic sweep checked 5,302,626 triples (z,h,j) with z<=250 and found 63,001 equality instances, all at j=z-h or j=z-h-1.
+
+GitHub Actions run `34200648279` on Ubuntu 24.04 / Python 3.12.3 completed successfully. The checked threshold source SHA-256 was
+
+    cedadf5b0f7cde4f10d54525fd28ca0bfbb906cc0bfdcba5d9a361b09bf6418e
+
+and the workflow artifact containing the construction, residual-injection and threshold reports had SHA-256
+
+    749a0260e995f373f4b78de1f8b9b27edaf5060e4a686be441cb9e431b6b4521.
 
 These computations are evidence against implementation/arithmetic mistakes, not a universal proof; the displayed identity and graph reduction carry the universal claim.
 
