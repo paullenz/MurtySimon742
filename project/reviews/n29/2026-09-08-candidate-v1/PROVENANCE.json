@@ -1,0 +1,24 @@
+{
+  "schema": "n29-candidate-provenance-v1",
+  "date": "2026-09-08",
+  "repository": "paullenz/MurtySimon25",
+  "starting_main": "42954d3094860a218e6ba8a418c35b7061449b31",
+  "starting_tree": "300710b2dd3d1fbe8eb6b23e897c876658f2c663",
+  "root_readme_before_blob": "d1bc385e5baac65bb67c8e0e3954a1edb470d325",
+  "delta16_source_path": "project/research/n29/2026-09-08-delta16-direct-v1/",
+  "delta16_source_blobs": {
+    "run.py": "3dfb0c63fcc3e8b2e874df2932a4e46e579ad909",
+    "scan_rows.cpp": "a76a03a897a66178eac654182325e9bfa29a7715",
+    "check_rows.cpp": "6ee1e890b14a053268847cca3509d0306e11a533",
+    ".github/workflows/n29-d16.yml": "d43001253314fd4546aed665a861389f1c25fce1"
+  },
+  "delta16_implementation_antecedent": {
+    "path": "project/research/general_n/2026-09-07-direct-197-v8/MurtySimon_N28_197_Direct_v8.zip",
+    "sha256": "b753076ffc755066a0c57756be91cc5b265c163d869244d3aa65e3943799347b"
+  },
+  "later_293_over_500_theorem_used": false,
+  "frozen_n25_n27_n28_proofs_changed": false,
+  "theorem_ledger_changed": false,
+  "formal_verification": false,
+  "independent_review": "OPEN"
+}
