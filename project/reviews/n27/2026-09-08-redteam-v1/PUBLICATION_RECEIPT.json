@@ -1,0 +1,74 @@
+{
+  "schema": "n27-redteam-publication-receipt-v1",
+  "date": "2026-09-08",
+  "repository": "paullenz/MurtySimon25",
+  "branch": "main",
+  "baseline_commit": "7cd8a2ad562d69afe29634d1b888215750cb5e93",
+  "initial_workflow_commit": "41a945037fcd67944c7b7ff27f080e3622fdde8c",
+  "successful_audit_source_commit": "6114d4ec70afa779a3a8335b939c50b6ca5d9e92",
+  "report_parent": "6114d4ec70afa779a3a8335b939c50b6ca5d9e92",
+  "report_commit": "08259c1d5556503259a7e030a7184bce80cf65e7",
+  "report_repository_tree": "8421de15aef7f724ce0c87e92d07ea449d495c47",
+  "audit_directory_tree": "cf64ffbd132403448331497893dfd5b251df7521",
+  "audit_prefix": "project/reviews/n27/2026-09-08-redteam-v1/",
+  "manifest": {
+    "path": "MANIFEST.json",
+    "git_blob": "1e25d9b462c28b7390872198ecefdeaa92bc9064",
+    "sha256": "ede0a5ef8f3720ed1f51af4b93a76a897f841a8d18db71d4cdcc943d94c2c971",
+    "payloads": 15,
+    "scope": "All audit proof, source, evidence and history payloads; self and publication receipt excluded."
+  },
+  "other_paths": {
+    ".github/workflows/n27-redteam.yml": "New hardened full-replay workflow, verified in successful source commit",
+    "README.md": "d1bc385e5baac65bb67c8e0e3954a1edb470d325",
+    "project/reviews/history/README_before_n27_redteam_2026-09-08.md": "c70d7589f88a26db840145c57e869e4baba12ac7"
+  },
+  "checks_completed_before_receipt": {
+    "nonforced_branch_updates": true,
+    "main_read_back_at_report_commit": true,
+    "baseline_to_report_exactly_19_intended_paths": true,
+    "added_paths": 18,
+    "modified_existing_paths": ["README.md"],
+    "deleted_paths": 0,
+    "audit_tree_recomputed_from_local_bytes_matches_remote": true,
+    "all_15_manifest_payload_sizes_sha256_and_git_blobs_match": true,
+    "full_report_read_back_at_report_commit": true,
+    "remote_replay_record_read_back_at_report_commit": true,
+    "root_readme_n27_links_counts_and_status_read_back": true,
+    "original_n27_proof_blob_read_back_unchanged": true,
+    "prior_root_readme_preserved_verbatim": true,
+    "frozen_proofs_release_archives_general_research_and_theorem_ledger_unchanged": true
+  },
+  "frozen_n27_proof_blob": "83e09e02918adf461470bf7e70177bad275b57d9",
+  "frozen_archive_sha256": "8381ed450859b9efa54fa6ec3c76bda786ec3fc31ec52732637c5346224caf3c",
+  "successful_run": {
+    "run_id": 34209842203,
+    "job_id": 102007953539,
+    "conclusion": "success",
+    "canonical_columns_replayed": 80978546,
+    "strict_input_rows": 13596058,
+    "terminal_cap_vectors_independently_rederived": 35435,
+    "complete_data_source_comparisons": 59,
+    "final_survivors": 0,
+    "details": "evidence/REMOTE_REPLAY.json"
+  },
+  "first_run": {
+    "run_id": 34208483684,
+    "conclusion": "failure",
+    "arithmetic_replay": "completed successfully",
+    "reason": "Added comparator did not account for a gzip-timestamp-dependent input hash; explicitly reconciled, not hidden."
+  },
+  "findings": [
+    "Frozen raw C++ digit scanner accepts a negative cap as positive. Original manifest and new strict JSON guard protect the audited route; frozen sources remain unchanged.",
+    "Initial added comparator failed on one compression-dependent input link. Both raw links and equal decompressed data are verified before that specific field is normalized."
+  ],
+  "status": {
+    "mathematics": "Complete CANDIDATE; no blocking mathematical defect found in internal red-team",
+    "internal_computation": "REPRODUCED",
+    "independent_specialist_review": "OPEN",
+    "full_formal_verification": false,
+    "independent_authorship": false,
+    "later_general_degree_results_used": false
+  },
+  "receipt_scope": "Records checks already completed on the report commit. This receipt is added in a following commit whose branch attachment and one-file change set are verified separately. No recursive self-hash is claimed."
+}
