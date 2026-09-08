@@ -1,0 +1,26 @@
+{"status": "FROZEN_FILES_AND_FINAL_CERTIFICATES_VERIFIED", "files": 115, "full_arithmetic_replayed_in_this_call": false, "external_review": false}
+{"running": ["g++", "-O3", "-std=c++17", "survey.cpp", "-lz", "-o", "survey"], "log": "survey_build.log"}
+{"running": ["g++", "-O3", "-std=c++17", "check_survey.cpp", "-lz", "-o", "check_survey"], "log": "check_survey_build.log"}
+{"running": ["g++", "-O3", "-std=c++17", "columns.cpp", "-lz", "-lcrypto", "-o", "columns"], "log": "columns_build.log"}
+{"running": ["/usr/bin/python3", "-I", "-B", "general_primary.py", "--n", "27", "--a", "10", "--edges", "183", "--ks", "2", "3", "4", "--output", "d16_183"], "log": "d16_183_primary.log"}
+{"running": ["/usr/bin/python3", "-I", "-B", "general_independent.py", "--n", "27", "--a", "10", "--edges", "183", "--ks", "2", "3", "4", "--reference", "d16_183", "--output", "d16_183"], "log": "d16_183_independent.log"}
+{"running": ["./survey", "27", "15", "183", "d15_183"], "log": "d15_183_survey.log"}
+{"running": ["./check_survey", "27", "15", "183", "d15_183"], "log": "d15_183_outer_check.log"}
+{"running": ["./columns", "scan", "27", "15", "183", "d15_183_frontier.jsonl.gz", "d15_183", "d15_183"], "log": "d15_183_columns.log"}
+{"running": ["./columns", "check", "27", "15", "183", "d15_183_frontier.jsonl.gz", "d15_183", "d15_183_check"], "log": "d15_183_check.log"}
+{"running": ["/usr/bin/python3", "-I", "-B", "pair_column.py", "d15_183_survivors.jsonl.gz", "d15_183"], "log": "d15_183_pair.log"}
+{"running": ["/usr/bin/python3", "-I", "-B", "general_primary.py", "--n", "27", "--a", "10", "--edges", "182", "--ks", "2", "3", "4", "--output", "d16_182"], "log": "d16_182_primary.log"}
+{"running": ["/usr/bin/python3", "-I", "-B", "general_independent.py", "--n", "27", "--a", "10", "--edges", "182", "--ks", "2", "3", "4", "--reference", "d16_182", "--output", "d16_182"], "log": "d16_182_independent.log"}
+{"running": ["./survey", "27", "15", "182", "d15_182"], "log": "d15_182_survey.log"}
+{"running": ["./check_survey", "27", "15", "182", "d15_182"], "log": "d15_182_outer_check.log"}
+{"running": ["./columns", "scan", "27", "15", "182", "d15_182_frontier.jsonl.gz", "d15_182", "d15_182"], "log": "d15_182_columns.log"}
+{"running": ["./columns", "check", "27", "15", "182", "d15_182_frontier.jsonl.gz", "d15_182", "d15_182_check"], "log": "d15_182_check.log"}
+{"running": ["/usr/bin/python3", "-I", "-B", "pair_column.py", "d15_182_survivors.jsonl.gz", "d15_182"], "log": "d15_182_pair.log"}
+{"running": ["/usr/bin/python3", "-I", "-B", "supplement_pair.py", "d15_182_pair_survivors.jsonl.gz", "d15_182"], "log": "d15_182_supplement.log"}
+{"running": ["/usr/bin/python3", "-I", "-B", "check_final.py"], "log": "final_check.log"}
+{"running": ["/usr/bin/python3", "-I", "-B", "preflight.py"], "log": "preflight.log"}
+{"running": ["./columns", "scan", "27", "15", "0", "validation_frontier.jsonl.gz", "validation", "validation"], "log": "validation_scan.log"}
+{"running": ["./columns", "check", "27", "15", "0", "validation_frontier.jsonl.gz", "validation", "validation_check"], "log": "validation_check.log"}
+{"running": ["/usr/bin/python3", "-I", "-B", "check_column_sample.py"], "log": "column_sample_check.log"}
+{"running": ["/usr/bin/python3", "-I", "-B", "structural_validation.py"], "log": "structural_validation.log"}
+{"status": "COMPLETE_INTERNAL_REPLAY_PASS", "output": "/home/runner/work/MurtySimon25/MurtySimon25/fresh-n27", "external_review": false}

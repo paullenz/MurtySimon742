@@ -1,0 +1,19 @@
+{
+  "command": [
+    "/opt/pyvenv/bin/python",
+    "-I",
+    "-B",
+    "/mnt/data/n27-redteam/checkpoint/audit_n27.py",
+    "/mnt/data/n27-redteam/original-small/N27_Candidate_2026-09-07_v1",
+    "--output",
+    "/mnt/data/n27-redteam/evidence/local-terminal-repeat.json"
+  ],
+  "python": "3.13.5 (main, Jul 15 2026, 20:25:40) [GCC 14.2.0]",
+  "platform": "Linux-6.18.35-x86_64-with-glibc2.41",
+  "elapsed_seconds": 11.811865176000083,
+  "exit_code": 0,
+  "stdout": "{\n  \"status\": \"PASS\",\n  \"input_manifest_present_files\": 108,\n  \"input_manifest_omitted_files\": 7,\n  \"scopes\": [\n    {\n      \"edges\": 183,\n      \"terminal_rows\": 190,\n      \"recomputed_source_cap_vectors\": 190,\n      \"dispositions\": {\n        \"pair\": 190\n      }\n    },\n    {\n      \"edges\": 182,\n      \"terminal_rows\": 35245,\n      \"recomputed_source_cap_vectors\": 35245,\n      \"dispositions\": {\n        \"pair\": 35241,\n        \"supplement\": 4\n      }\n    }\n  ],\n  \"ordered_audit_sha256\": \"d85844f7555b1bbe28a247d97d97a5c5b6222a681ac0de530b067b367bf19a93\",\n  \"strict_integer_negative_controls\": [\n    [\n      -1\n    ],\n    [\n      true\n    ],\n    [\n      1.0\n    ],\n    [\n      2147483648\n    ]\n  ],\n  \"source_cap_algorithm\": \"augmenting paths plus synchronous fixed point\",\n  \"full_outer_or_column_replay_in_this_program\": false,\n  \"external_independent_authorship\": false\n}\n",
+  "stderr": "",
+  "source_sha256": "84f0a529a878b820153f1d9372c09730a5f7de87952b16e22016a2a8debb9e95",
+  "scope": "Local partial transfer: 108 original payloads, seven large files omitted. Full original replay runs on GitHub."
+}

@@ -18,8 +18,6 @@ The [complete reviewer package](releases/n25-reviewer-v1/README.md), [frozen pro
 
 **Status:** complete candidate; internal arithmetic reproduced; independent review OPEN. The n=25 frozen edition is unchanged.
 
-**8 September internal red-team audit:** [full report](project/reviews/n27/2026-09-08-redteam-v1/REPORT.md) and [replay guide](project/reviews/n27/2026-09-08-redteam-v1/README.md). No blocking mathematical defect found. A clean-runner rebuild replayed all 80,978,546 canonical columns; a separate augmenting-path implementation rederived all 35,435 terminal source-cap vectors. Strict JSON validation covers 13,596,058 input rows. The audit records a permissive raw C++ digit parser, now guarded without changing frozen sources, and the initial audit-comparison failure caused by gzip timestamps, now explicitly reconciled. These are internal checks, not external acceptance or full formal verification; the original n=27 proof and evidence archive remain unchanged.
-
 ## n=28 — candidate proof and reviewer release
 
 **Proposed result:** at most **196 edges**, with equality only for **K(14,14)**.

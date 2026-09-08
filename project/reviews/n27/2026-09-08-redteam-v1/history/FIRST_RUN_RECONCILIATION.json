@@ -1,0 +1,32 @@
+{
+  "status": "PASS",
+  "only_differing_field": "d15_182_supplement_certificates.json/input_sha256",
+  "old_raw": "19b7bb2579306a75f1259380493d0446cdd0ba233bde6f7f123d474211587e5a",
+  "new_raw": "5bca790c08500e841f9c3d700fd8dbbe677a84132f15b445afa6852df85af7ab",
+  "common_decompressed_sha256": "358c90f4d10e9e2f9b81a503aec79ba804d001d79ed27e83d72195687c3483ec",
+  "all_other_certificate_content_equal": true,
+  "both_compressed_file_links_valid": true,
+  "schema": "n27-first-run-reconciliation-v1",
+  "run_id": 34208483684,
+  "job_id": 102003567831,
+  "commit": "41a945037fcd67944c7b7ff27f080e3622fdde8c",
+  "workflow_conclusion": "failure",
+  "full_original_arithmetic_replay": "completed successfully",
+  "initial_comparison_files": 39,
+  "initial_nonmatching_files": [
+    "d15_182_supplement_certificates.json"
+  ],
+  "gzip_bytes": 152,
+  "only_differing_byte_offsets": [
+    4,
+    5,
+    6
+  ],
+  "all_bytes_outside_timestamp_identical": true,
+  "original_gzip_mtime": 1788739169,
+  "first_run_gzip_mtime": 1788858843,
+  "frozen_archive_already_documents_gzip_timestamp_caveat": true,
+  "raw_records_artifact_id": 10048923084,
+  "raw_records_artifact_sha256": "f7eef18383e93d7486d257caf9884ab0369d0fbb0cac6a42d1c1728053405779",
+  "artifact_downloaded_and_hash_verified": true
+}

@@ -1,0 +1,86 @@
+{
+  "schema": "n27-redteam-manifest-v1",
+  "files": {
+    "README.md": {
+      "bytes": 3008,
+      "sha256": "926ebbff0def004e85c3e7c1dc8a6faca902c9e443c4ed1df6c925d1bdef5553",
+      "git_blob": "01394e89d2c46496d7f528d443f5520920a2f14c"
+    },
+    "REPORT.md": {
+      "bytes": 17769,
+      "sha256": "273edbde8fc71605ead057650ea3c508bb0f8dc36e98ad27f49c7759e50a6468",
+      "git_blob": "771150a981140a23f11b57652822c0743f70f256"
+    },
+    "audit_n27.py": {
+      "bytes": 6131,
+      "sha256": "84f0a529a878b820153f1d9372c09730a5f7de87952b16e22016a2a8debb9e95",
+      "git_blob": "6d19611f52083ce38fc7b5680405a432dcd4db4f"
+    },
+    "check_raw_inputs.py": {
+      "bytes": 2879,
+      "sha256": "b83589bfed88e79f1864a26077cc9f0307cf75b5e506bca3084c680a5f6353a9",
+      "git_blob": "86e39e9612f30f762443e1def3b454f327ac0d2b"
+    },
+    "compare_replay.py": {
+      "bytes": 3302,
+      "sha256": "f01358c1e7b90205f24f2ca14415d2e667083b29499f880e454c69dde9cc0981",
+      "git_blob": "06cd078ef68eb113b54e6b6865abb9d5d5104bce"
+    },
+    "evidence/COMPARISON.json": {
+      "bytes": 15614,
+      "sha256": "1818fb9aab88adeda560217a619b7db1efb9cffa7e68f6bdb3585575e6b5a83b",
+      "git_blob": "4ba1c1f8c60f29683044e158a79ff701f2953333"
+    },
+    "evidence/FINAL_SOURCE_CAP_AUDIT.json": {
+      "bytes": 2292,
+      "sha256": "668879abb0d7af5139b5d0f3dd36322f6198243ce5d81542689cf5487c0b45ff",
+      "git_blob": "358ee8b1aa9e0562eab08f21d391328babac7b54"
+    },
+    "evidence/FULL_REPLAY.log": {
+      "bytes": 3462,
+      "sha256": "832d206c77ed6b9961bea2b015215bbf03defe366d4aee8ee65f9809be0855d0",
+      "git_blob": "d3efa1c4caacb05ee150f4e31d8e155ddd2cab94"
+    },
+    "evidence/MUTATION_LOGS.json": {
+      "bytes": 3590,
+      "sha256": "b6a0fdea7c4c1ad96b4d5171ae9bf3c2bceebdd30aadc1d4c9ba33dc603b9f37",
+      "git_blob": "86c83d91347f0b66658c9a702dcc1fe1262171b1"
+    },
+    "evidence/MUTATION_RESULTS.json": {
+      "bytes": 888,
+      "sha256": "0fcfddb3913ed3a9ca8f437fbd0703d4764010f6cf609d51fdd9b4e44263a4f2",
+      "git_blob": "d8b3526b8c0a998724212526f6819467eede6f34"
+    },
+    "evidence/REMOTE_REPLAY.json": {
+      "bytes": 2822,
+      "sha256": "2a2ab4aba51902744e2a238fd52c5cce11250d1889e210273b6ab2f0dbb7afc6",
+      "git_blob": "8f504abf709e507e6042e411e982d6b57cbd14d1"
+    },
+    "evidence/STRICT_INPUTS.json": {
+      "bytes": 1962,
+      "sha256": "09de3ca27bcb1b28a2ed110c55f5db5b494d86fd49ad4f7b1417b099b846bb97",
+      "git_blob": "3851b82710d90b637cfc49d684ea5edee40da7ed"
+    },
+    "history/FIRST_RUN_RECONCILIATION.json": {
+      "bytes": 1286,
+      "sha256": "9fb3b5c83d2be58a710e5e1e2a401d264d4ecd8031aa85530cabb6120661d3e8",
+      "git_blob": "a57607385d989bb1eec325e816a6c728e923412d"
+    },
+    "history/LOCAL_EXECUTION.json": {
+      "bytes": 1661,
+      "sha256": "7b56d6ee83869745b628703bac1c61a6124a9024a76b20ecb299baefa08bba49",
+      "git_blob": "ccd107e707d332a234a5d1e668d40489b1bde570"
+    },
+    "mutation_tests.py": {
+      "bytes": 5014,
+      "sha256": "e3d3a1ee4f6ec55b1ef4f3874197b7bfa934325e5b2f199feeabf0511500dcb0",
+      "git_blob": "b3c6902caed99b014896aa29359784eacbd86094"
+    }
+  },
+  "excluded": [
+    "MANIFEST.json",
+    "PUBLICATION_RECEIPT.json"
+  ],
+  "original_archive_sha256": "8381ed450859b9efa54fa6ec3c76bda786ec3fc31ec52732637c5346224caf3c",
+  "scope": "Point-in-time new audit payloads. Original full evidence remains in the frozen n27 release; raw downloaded Actions artifacts accompany the downloadable audit bundle."
+}
