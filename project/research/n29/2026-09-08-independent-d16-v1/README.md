@@ -1,66 +1,90 @@
-# n=29 Delta=16 — independent late-stage verifier v1
+# n=29 Delta=16 — fully fresh finite verifier v1
 
 8 September 2026. Prepared during the restarted red-team audit requested by Paul Lenz.
 
-**Status: PASS in the development run; clean-runner publication workflow supplied. Same-assistant independent implementation, not independent researcher reproduction, peer review, or formal verification. The n=29 theorem remains a CANDIDATE.**
+**Status: PASS in the development run; clean-runner replay supplied. Same-assistant independent implementation, not independent researcher reproduction, peer review, or formal verification. The n=29 theorem remains a CANDIDATE.**
 
 ## Purpose
 
-The original n=29 Delta=16 exclusion reuses the hash-pinned n=28 direct197 implementation. Its production run is exact and internally checked, but common implementation ancestry is a material trust boundary.
+The original n=29 Delta=16 exclusion reused the hash-pinned n=28 direct197 implementation. Its production replay is exact and heavily checked, but common implementation ancestry remained a material trust boundary.
 
-This directory supplies a second implementation of the load-bearing **joint-state and strongest endpoint-certificate stages**. The new runtime source imports no module from the inherited Murty-Simon verifier/model. It was written directly from the graph-theoretic inequalities rederived in the restarted red team.
+This directory now supplies a second, end-to-end finite implementation for the two N=29 Delta=16 scopes. **The clean runtime uses no inherited Murty-Simon verifier/model module and no inherited prepared input.** It starts from the audited mathematical inequalities and independently generates the finite domains, propagates the joint states, builds the strongest endpoint relaxation, and verifies exact integer Farkas contradictions.
 
-The aim is not to obtain a different numerical theorem. It is to ask whether the same n=29 Delta=16 contradiction survives a materially different implementation and whether every late-stage exclusion can be preserved as an exact proof object.
+The point is not to claim a new theorem. It is to test whether the same candidate contradiction survives a materially separate implementation.
 
-## Files
+## Source
 
-- `fresh_joint.py` — pure-Python independent joint-state engine. Standard library only.
-- `fresh_endpoint.py` — independently coded strongest endpoint LP plus exact integer Farkas checker. SciPy is used only to propose a dual ray.
-- `run_independent.py` — orchestration, independent boundary recounts, complete joint replay, exact certificate generation and evidence packaging.
-- `N29_INDEPENDENT_D16_STATES.json.gz` — generated fresh joint survivors, after the clean workflow publishes evidence.
-- `N29_INDEPENDENT_D16_CERTIFICATES.json.gz` — every exact fresh endpoint certificate, after publication.
-- `MANIFEST.json` — source/evidence hashes and result summary, after publication.
+- `fresh_prepare.py` — exact charging-domain enumeration, residual-total bounds, source-count/support cuts, and exact-checked dual pruning.
+- `fresh_rows.cpp` — third independently written residual-row enumerator and source-capacity scanner.
+- `fresh_joint.py` — pure-Python joint-state engine: column DP, matching, Hall flow, pair Hall, and row-feasibility recurrence.
+- `fresh_endpoint.py` — independently coded strongest endpoint LP and exact integer Farkas checker.
+- `run_independent.py` — end-to-end orchestration, redundant boundary recounts, certificate generation and evidence packaging.
 
-The generated binary evidence is intentionally not hand-written into GitHub through the text connector. The workflow generates and commits it on the runner so connector payload limits cannot truncate it.
+Generated evidence:
 
-## Independence boundary
+- `N29_INDEPENDENT_D16_STATES.json.gz` — all fresh joint survivors;
+- `N29_INDEPENDENT_D16_CERTIFICATES.json.gz` — all accepted exact endpoint certificates;
+- `MANIFEST.json` — source/evidence hashes and exact result summary.
 
-The fresh runtime verifier does **not** import or execute the inherited implementations of:
+The binary evidence is generated and committed by the clean workflow rather than being routed through the text connector, preventing payload truncation.
 
-- joint propagation;
-- independent joint checking;
-- row-support C++;
-- shared LP;
-- source-degree-type LP;
-- endpoint/total-degree LP;
-- named Farkas-system reconstruction.
+## Fresh early finite domain
 
-Instead it independently implements the corresponding combinatorics and endpoint relaxation.
+For `a=12`, `b=16`, the fresh demand generator enumerates every nondecreasing demand tuple satisfying
 
-There is still an explicit upstream dependency. The workflow uses the existing n=29 preparation route to obtain the retained demand intervals and the initial residual-row survivor file. That early preparation already has separate exact checking and two independent residual scanners in the candidate package, but this v1 does not claim to replace it.
+`sum s_i(13-2s_i)/(12-s_i) >= 16+2t`
 
-Before trusting those prepared inputs, `run_independent.py` independently checks three large boundaries:
+using exact rational arithmetic.
 
-1. it regenerates the complete charging-domain counts using exact rational arithmetic;
-2. it independently counts every raw sorted residual profile in the retained demand bands using an integer-partition dynamic program;
-3. it independently recomputes the projected filter and requires the actual survivor rows to equal the saved projected set exactly.
+It independently reproduces the full charging domains and early dispositions:
 
-Thus the fresh late-stage verifier is not fed a hand-picked list of final cases.
+| scope | charging domain | source-count | support | dual | retained |
+|---|---:|---:|---:|---:|---:|
+| `m=211`, `t=3` | 4,867 | 3,488 | 261 | 779 | 339 |
+| `m=210`, `t=2` | 9,251 | 6,990 | 116 | 1,244 | 901 |
+
+The support cut is implemented directly from the high-demand source/supplement pair budget. The dual LP is used only to propose weights; every accepted dual rejection is converted to rational/integer data and checked exactly against all residual-degree types.
+
+In development, the fresh retained demand files were **byte-for-byte identical** to the production retained demand files.
+
+## Fresh residual-row scan
+
+`fresh_rows.cpp` independently enumerates sorted length-16 residual profiles with entries in `1,...,12`. It applies the source-capacity Hall condition and iterated supplement-cap refinement from scratch.
+
+The complete raw domains and survivor counts are:
+
+| scope | raw residual profiles | row survivors |
+|---|---:|---:|
+| `m=211`, `t=3` | 1,848,957 | 206 |
+| `m=210`, `t=2` | 5,765,218 | 2,087 |
+
+In development, both the survivor files and per-demand band files were **byte-for-byte identical** to the two previously preserved production scanners. The hard `r<=60-t` guard rejected zero rows in these retained bands; its mathematical justification remains documented separately as red-team finding `RT-N29-001`.
+
+`run_independent.py` independently recounts the raw residual-profile totals again using an integer-partition dynamic program, so the C++ enumerator is not the sole count authority.
+
+## Fresh projected filter
+
+The projected zero-slack and pair-threshold cuts are independently recomputed by `run_independent.py`, yielding:
+
+- `m=211`: 206 -> **118** projected rows;
+- `m=210`: 2,087 -> **1,225** projected rows.
+
+The development implementation previously matched the production projected survivor sets exactly row-for-row. The clean fully fresh workflow no longer needs the production projected files.
 
 ## Fresh joint-state engine
 
-`fresh_joint.py` reimplements the finite propagation using different source code and only Python's standard library. Its ingredients include:
+`fresh_joint.py` uses only Python's standard library. It independently implements:
 
 - exact column-total dynamic programming;
 - source-to-supplement distinct matching;
-- an independently implemented Dinic max-flow for source Hall;
+- Dinic max-flow for source Hall;
 - pair Hall over label subsets;
-- a selected/residual/missing three-state row feasibility recurrence using exact bitset dynamic programming;
+- selected/residual/missing three-state row feasibility using exact bitset DP;
 - iterative source-cap, forced-incidence and column-domain propagation.
 
-The development run reproduced the production joint partition exactly.
+The resulting partitions are:
 
-At `m=211` (`t=3`), all 118 projected rows divide as:
+### `m=211`, 118 projected rows
 
 | disposition | count |
 |---|---:|
@@ -69,7 +93,7 @@ At `m=211` (`t=3`), all 118 projected rows divide as:
 | source Hall | 2 |
 | joint total source | 42 |
 
-At `m=210` (`t=2`), all 1,225 projected rows divide as:
+### `m=210`, 1,225 projected rows
 
 | disposition | count |
 |---|---:|
@@ -81,96 +105,80 @@ At `m=210` (`t=2`), all 1,225 projected rows divide as:
 | joint total source | 222 |
 | pair Hall | 6 |
 
-The agreement is row-by-row, not only an aggregate-count comparison.
+These exactly reproduce the production joint disposition counts; the development comparison also matched the states row-by-row.
 
 ## Fresh endpoint model
 
-`fresh_endpoint.py` independently encodes the strongest continuous endpoint relaxation directly from the audited graph constraints. Among its variables and constraints are:
+`fresh_endpoint.py` independently encodes one strongest continuous endpoint relaxation for every fresh joint survivor. It does not reproduce the production 213/378/2 staging; all survivors are sent through the same strongest model.
+
+The model contains, among other things:
 
 - selected/residual/missing source-label incidences;
 - residual column totals and F-edge incidences;
 - selected source-to-supplement arcs and pair injection;
 - supplement forcing;
-- exact source selected-degree types;
-- source/supplement pair-degree flow;
-- source-conditioned residual and F-degree ledgers;
-- the source-local criticality bound;
+- exact source selected-degree types and source/supplement pair-degree flow;
+- source-conditioned residual/F-degree ledgers and source-local criticality bound;
 - actual column selected degrees `x_i`;
 - source supplement indegrees `p_u`;
-- selected-incidence coupling requiring `R_i+x_i >= q_u+p_u`.
+- selected-incidence coupling `R_i+x_i >= q_u+p_u`.
 
-The code does not call the production builders or their checkers. It also avoids repeated duplicate `x<=1` rows that arise from the layered construction of the older builder; this changes redundant inequality counts, not the mathematical relaxation.
+The source imports no production LP builder or checker.
 
-During development, the two deepest `m=210` rows reproduced the same variable and equality dimensions as the production endpoint model and independently gave exact contradictions with right-hand sides `-830` and `-355`.
+During development, the two deepest old endpoint cases reproduced the same variable and equality dimensions as the production endpoint model and independently gave exact RHS contradictions `-830` and `-355`.
 
 ## Exact certificate rule
 
-SciPy/HiGHS is allowed to propose a dual ray. A row is not excluded by numerical solver status.
+SciPy/HiGHS may propose a dual ray. Numerical infeasibility alone is never an exclusion.
 
-For every alleged contradiction, the fresh checker constructs integer multipliers and verifies exactly that:
+For each row, the fresh checker constructs integer multipliers and verifies exactly that:
 
-- inequality multipliers are nonnegative integers;
+- every inequality multiplier is a nonnegative integer;
 - equality multipliers are signed integers;
-- the combined coefficient of every nonnegative primal variable is nonnegative;
+- every combined primal-variable coefficient is nonnegative;
 - the combined right-hand side is strictly negative.
 
-Only then is the row counted as rejected.
-
-The development run generated exact certificates for **all 629 fresh joint survivors**:
+The development run produced exact certificates for **all 629 fresh joint survivors**:
 
 - 36/36 at `m=211`;
 - 593/593 at `m=210`;
-- unresolved rows: **0**.
+- unresolved: **0**.
 
-The least-negative exact right-hand side encountered in the development run was `-10`, so even the tightest accepted contradiction remained an exact strict inequality.
+The least-negative exact RHS in development was `-10`, so even the tightest accepted contradiction was strictly exact.
 
-## Independent boundary counts
+## Clean replay
 
-The orchestration requires the following exact counts before running the fresh joint engine:
+The workflow is `.github/workflows/n29-independent-d16.yml`.
 
-| scope | charging tuples | raw residual profiles | projected rows |
-|---|---:|---:|---:|
-| `m=211`, `t=3` | 4,867 | 1,848,957 | 118 |
-| `m=210`, `t=2` | 9,251 | 5,765,218 | 1,225 |
+It starts from a clean Ubuntu 24.04 checkout and:
 
-The charging counts are recomputed from
+1. pins SciPy 1.17.0;
+2. compiles only this directory's `fresh_rows.cpp`;
+3. generates both demand domains with `fresh_prepare.py`;
+4. enumerates and screens all residual profiles with `fresh_rows.cpp`;
+5. independently rechecks the charging counts, preparation classifications and raw-profile counts;
+6. recomputes the projected filter;
+7. runs the pure-Python joint engine;
+8. builds the fresh strongest endpoint model for every joint survivor;
+9. requires an exact integer Farkas certificate for every endpoint exclusion;
+10. uploads and commits the complete states/certificate bundles and hash manifest.
 
-`sum s_i(13-2s_i)/(12-s_i) >= 16+2t`
+No n=28 archive, production N=29 wrapper, production row scanner, production joint checker or production LP builder is used by this clean finite replay.
 
-with exact `Fraction` arithmetic. The residual-profile counts are independently reconstructed by integer partition DP over sorted 16-tuples in `1,...,12`. The projected rows are reconstructed and compared as complete ordered lists.
+## What this improves
 
-## Replay
+This removes the largest same-implementation computational trust boundary in the N=29 Delta=16 candidate. The finite contradiction is now supported by a separate source tree from demand generation through the final exact certificates.
 
-The clean workflow is `.github/workflows/n29-independent-d16.yml`.
-
-It:
-
-1. checks out the repository on Ubuntu 24.04;
-2. pins SciPy 1.17.0 and the compiler/checker dependencies used only for preparing the upstream input;
-3. verifies the SHA-256 of the inherited direct197 archive before using it for preparation;
-4. rebuilds the n=29 prepared `t=3` and `t=2` inputs using the existing preparation/scanner route;
-5. invokes only this directory's fresh source for the independent late-stage run;
-6. requires every expected joint count and every exact endpoint certificate;
-7. writes gzip evidence and a hash manifest;
-8. uploads the evidence as a workflow artifact and commits the generated evidence files back to this directory.
-
-The evidence commit is additive. It does not alter the original n=29 candidate proof or governed theorem ledger.
-
-## What this materially improves
-
-This v1 substantially reduces the risk that the n=29 Delta=16 result is an artefact of one inherited joint/LP implementation. It independently reconstructs the joint partition and then proves every one of the 629 late-stage rows infeasible with separately generated exact proof objects.
-
-It also mitigates red-team finding `RT-N29-002`: unlike the original production shard reports, this run preserves every accepted late-stage Farkas certificate in a complete bundle. The historical preservation limitation of the original production artifacts remains accurately recorded; it is not retroactively rewritten.
+It also materially mitigates `RT-N29-002`: the new run preserves **all 629** accepted endpoint Farkas certificates, rather than only aggregate phase counts. The historical preservation limitation of the original production artifacts remains recorded and is not retroactively rewritten.
 
 ## What remains open
 
-This is still the same assistant's mathematical and software work. It is therefore **not independent researcher reproduction**.
+This is still work written and checked by the same assistant, so it is **not independent researcher reproduction**. It also does not formally prove the graph-theoretic lifting from a hypothetical D2C graph into the finite constraints; that remains a mathematical review obligation.
 
-The principal remaining assurance steps are:
+Highest-value remaining assurance:
 
-- a separate researcher or independently authored program reproducing the result;
-- specialist review of the graph-to-model necessity arguments;
-- if desired, a further independent replacement of the *early* demand-support/residual-row preparation so that no inherited prepared input is used at all;
-- formal verification of the structural lemmas and/or exact finite certificates.
+- specialist reconstruction of the graph-to-model necessity;
+- a separately authored program/researcher replay;
+- formalisation of the structural lemmas and/or finite certificate checker.
 
-No theorem-ledger promotion is justified merely by this same-assistant independent implementation.
+The n=29 statement should remain labelled **CANDIDATE** until that external assurance exists.
