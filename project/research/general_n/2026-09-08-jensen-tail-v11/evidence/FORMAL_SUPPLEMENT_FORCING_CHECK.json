@@ -1,0 +1,16 @@
+{
+  "schema": "murty-simon-v11-formal-local-premise-v1",
+  "date": "2026-09-08",
+  "lean_version": "4.19.0",
+  "workflow_run": 34185985986,
+  "job": 101934287345,
+  "head_commit": "c2cc180b2697a3596bec3cbd27421a6f755da349",
+  "artifact_id": 10040506896,
+  "artifact_sha256": "7e3cf35b48a8c587a435e50d4b531fec56ae1711c2afab3fc44100f0c5beed37",
+  "source": "project/research/general_n/2026-09-07-stability-spare-sources-v9/formal/QuasiCore.lean",
+  "newly_checked_theorem": "supplement_neighbours_other_label",
+  "newly_checked_theorem_axioms": [],
+  "total_local_theorems_printed": 6,
+  "status": "PASS",
+  "scope": "This formally checks the local implication that two selected quasi-edges with the same source and different exceptions force each exception to neighbour the other label. It does not formalise quasi-edge existence, source-pair injectivity, demand-tail cardinality counting, charging, Jensen stability, or the v11 maximum-degree theorem."
+}
