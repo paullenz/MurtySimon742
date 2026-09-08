@@ -1,15 +1,15 @@
 #!/usr/bin/env python3
-"""Shardable runner for the standalone n=29 Delta=16 threshold-flow LP.
+"""Shardable runner for the corrected standalone n=29 Delta=16 threshold-flow LP.
 Consumes only demands.json + projected_survivors.json. Every exclusion requires an
-integer Farkas certificate verified by independent_threshold_model.verify_certificate.
+integer Farkas certificate verified by exact integer arithmetic.
 """
 import argparse,gzip,hashlib,json,multiprocessing as mp,sys,time
 from pathlib import Path
 # Python -I deliberately omits the script directory from sys.path. Pin this runner's
-# own directory explicitly so the sibling standalone model is still the only model
-# imported, while preserving isolated-mode protection from ambient PYTHONPATH/user site.
+# own directory explicitly while preserving isolated-mode protection from ambient
+# PYTHONPATH/user site.
 sys.path.insert(0,str(Path(__file__).resolve().parent))
-from independent_threshold_model import build,exact_certificate,verify_certificate
+from independent_threshold_model_v2 import build,exact_certificate,verify_certificate
 D=None;ROWS=None;T=None
 
 def init_worker(demands,rows,t):
@@ -30,6 +30,6 @@ def main():
         for rec in pool.imap_unordered(work,positions,chunksize=1):out.append(rec)
     out.sort(key=lambda x:x['position']);assert [x['position'] for x in out]==positions;assert all(x['certificate'] is not None for x in out)
     rhs=[x['certificate']['rhs'] for x in out];raw=(json.dumps(out,separators=(',',':'))+'\n').encode();gz=gzip.compress(raw,mtime=0);a.output.parent.mkdir(parents=True,exist_ok=True);a.output.write_bytes(gz)
-    report={'schema':'n29-independent-threshold-flow-shard-v1','t':a.t,'m':208+a.t,'shard':a.shard,'shards':a.shards,'positions':positions,'input_rows':len(out),'exact_rejections':len(out),'final_survivors':0,'rhs_min':min(rhs) if rhs else None,'rhs_max':max(rhs) if rhs else None,'certificate_json_sha256':hashlib.sha256(raw).hexdigest(),'certificate_gzip_sha256':hashlib.sha256(gz).hexdigest(),'seconds':time.time()-start}
+    report={'schema':'n29-independent-threshold-flow-shard-v2','t':a.t,'m':208+a.t,'shard':a.shard,'shards':a.shards,'positions':positions,'input_rows':len(out),'exact_rejections':len(out),'final_survivors':0,'rhs_min':min(rhs) if rhs else None,'rhs_max':max(rhs) if rhs else None,'certificate_json_sha256':hashlib.sha256(raw).hexdigest(),'certificate_gzip_sha256':hashlib.sha256(gz).hexdigest(),'seconds':time.time()-start}
     (a.output.with_suffix(a.output.suffix+'.report.json')).write_text(json.dumps(report,indent=2)+'\n');print(json.dumps({k:v for k,v in report.items() if k!='positions'}))
 if __name__=='__main__':main()
