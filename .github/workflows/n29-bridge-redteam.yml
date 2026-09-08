@@ -1,0 +1,26 @@
+name: N29 Delta16 standalone bridge red team
+
+on:
+  workflow_dispatch:
+  push:
+    paths:
+      - 'project/reviews/n29/2026-09-08-redteam-restart-v1/N29_D16_STANDALONE_BRIDGE.md'
+      - 'project/reviews/n29/2026-09-08-redteam-restart-v1/bridge_exact_sanity.py'
+      - 'project/reviews/n29/2026-09-08-redteam-restart-v1/bridge_smallgraph_attack.py'
+      - '.github/workflows/n29-bridge-redteam.yml'
+
+permissions:
+  contents: read
+
+jobs:
+  bridge-redteam:
+    runs-on: ubuntu-24.04
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Exact bridge identities
+        run: python project/reviews/n29/2026-09-08-redteam-restart-v1/bridge_exact_sanity.py
+      - name: Exhaustive labelled graphs through n=6
+        run: python project/reviews/n29/2026-09-08-redteam-restart-v1/bridge_smallgraph_attack.py
