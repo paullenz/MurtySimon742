@@ -73,7 +73,8 @@ q0=F(516,6250)
 require(q==F(77841,942841) and q>q0,'degree ratio')
 require(F(3,2)-sqrt_lo-eps<q0,'improved coefficient')
 cup=F(8579,100000)
-require(F(3,2)-sqrt_lo<cup,'original c upper')
+# sqrt(2)>sqrt_lo strictly, while 3/2-sqrt_lo equals cup.
+require(F(3,2)-sqrt_lo==cup,'original c rational envelope')
 small=[]
 for a in range(2,50):
     d=q0*(a+1)**2-F(1,4)-cup*a*a
