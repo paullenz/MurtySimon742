@@ -1,0 +1,25 @@
+{
+  "schema": "murty-simon-v11-exact-check-v1",
+  "date": "2026-09-08",
+  "successful_workflow_run": 34186382209,
+  "successful_job": 101935433807,
+  "head_commit": "e13a5d7b19593fd10615a4d14bbee9dc76e2390f",
+  "runner": "ubuntu-24.04",
+  "status": "PASS",
+  "artifact_id": 10040628575,
+  "artifact_sha256": "68f288ac584e4b53945705e17e0ab83554151437ee925b3c6f7eeb3a2ba33b2e",
+  "epsilon": "1/300",
+  "y_interval": ["121/500", "341/1000"],
+  "sturm_sequence_length": 8,
+  "sturm_variations": [4,4],
+  "roots_in_interval": 0,
+  "P_at_3_over_10": "4661739/20",
+  "degree_ratio_squared": "77841/942841",
+  "small_a_cases": 48,
+  "small_a_min_margin": "3747/25000",
+  "earlier_failed_run": {
+    "run": 34186329637,
+    "reason": "The checker encoded the strict implication c<0.08579 as the false rational comparison 3/2-1.41421<0.08579; those rationals are equal. The mathematical inference is strict because sqrt(2)>1.41421. The checker was corrected to verify equality of the rational envelope plus the already checked strict square-root bracket. No theorem constant or proof inequality changed."
+  },
+  "scope": "Exact algebra and Sturm root count only. Universal graph-to-selected-system and demand-tail lemmas remain hand proofs."
+}
