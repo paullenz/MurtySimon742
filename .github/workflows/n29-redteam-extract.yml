@@ -1,0 +1,33 @@
+name: N29 red-team extract inherited v8 source
+on:
+  push:
+    branches: [main]
+    paths:
+      - '.github/workflows/n29-redteam-extract.yml'
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  extract:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 5
+    steps:
+      - uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262
+        with: {persist-credentials: false}
+      - name: Verify and extract hash-pinned inherited direct197 archive
+        run: |
+          set -euo pipefail
+          P=project/research/general_n/2026-09-07-direct-197-v8/MurtySimon_N28_197_Direct_v8.zip
+          echo 'b753076ffc755066a0c57756be91cc5b265c163d869244d3aa65e3943799347b  '"$P" | sha256sum -c -
+          mkdir extracted
+          unzip -q "$P" -d extracted
+          find extracted -type f -printf '%P\n' | LC_ALL=C sort > extracted/REDTEAM_FILE_LIST.txt
+          printf 'archive_sha256=%s\n' 'b753076ffc755066a0c57756be91cc5b265c163d869244d3aa65e3943799347b' > extracted/REDTEAM_EXTRACTION.txt
+          printf 'head_sha=%s\n' "$GITHUB_SHA" >> extracted/REDTEAM_EXTRACTION.txt
+          cat extracted/REDTEAM_FILE_LIST.txt
+      - uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02
+        with:
+          name: n29-redteam-inherited-v8-source
+          path: extracted/
+          if-no-files-found: error
+          retention-days: 30
