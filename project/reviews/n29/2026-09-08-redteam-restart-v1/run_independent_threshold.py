@@ -3,8 +3,12 @@
 Consumes only demands.json + projected_survivors.json. Every exclusion requires an
 integer Farkas certificate verified by independent_threshold_model.verify_certificate.
 """
-import argparse,gzip,hashlib,json,multiprocessing as mp,time
+import argparse,gzip,hashlib,json,multiprocessing as mp,sys,time
 from pathlib import Path
+# Python -I deliberately omits the script directory from sys.path. Pin this runner's
+# own directory explicitly so the sibling standalone model is still the only model
+# imported, while preserving isolated-mode protection from ambient PYTHONPATH/user site.
+sys.path.insert(0,str(Path(__file__).resolve().parent))
 from independent_threshold_model import build,exact_certificate,verify_certificate
 D=None;ROWS=None;T=None
 
