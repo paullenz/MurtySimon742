@@ -4,7 +4,7 @@
 
 ## Result
 
-No defect was found in the complement edge-insertion construction used by the layer-sum proof. The argument was reconstructed from first principles, compared with the standard quasi-edge observation in the total-domination literature, checked by a second exhaustive implementation, and partially formalised in Lean.
+No defect was found in the complement edge-insertion construction used by the layer-sum proof. The argument was reconstructed from first principles, compared with the standard quasi-edge observation in the total-domination literature, checked by a second exhaustive implementation on a clean GitHub runner, and its local edge-insertion bridge was checked in Lean 4.19.0.
 
 ## 1. First-principles reconstruction
 
@@ -26,9 +26,9 @@ This establishes the particular properties subsequently used in the edge ledger,
 
 ## 2. Literature cross-check
 
-The standard total-domination formulation describes exactly the same mechanism. In the published/quasi-edge literature on Murty-Simon, adding a missing edge to a 3-total-domination-edge-critical complement creates an adjacent dominating pair called a quasi-edge; the quasi-edge must contain at least one endpoint of the added edge, need not be unique, and a quasi-edge has a unique undominated vertex before insertion. The frequently used observation is that for a missing edge uv either {u,v} already dominates, or there is z with uz having unique exception v (or zv having unique exception u).
+The standard total-domination formulation describes the same mechanism: adding a missing edge to the relevant complement creates an adjacent dominating pair called a quasi-edge; it uses an endpoint of the added edge, need not be unique, and has a unique undominated vertex before insertion. The usual observation says that for a missing edge uv either {u,v} dominates, or there is z with uz having unique exception v (or zv having unique exception u).
 
-Our root v and B-pair setup explicitly rules out the first alternative because both B endpoints miss v. Thus the project's construction is a specialization of this standard quasi-edge observation, not a novel unreferenced equivalence. This comparison supports the logic but is not a substitute for checking the later new inequalities.
+Our root v and B-pair setup explicitly rules out the first alternative because both B endpoints miss v. Thus the project's construction is a specialization of the standard quasi-edge observation. This comparison supports the logic but is not a substitute for checking the later new inequalities.
 
 References consulted in this audit include the Haynes-Henning-van der Merwe-Yeo maximum-degree paper and the Murty-Simon total-domination papers indexed in the project literature notes. No claim of exhaustive literature priority follows.
 
@@ -43,7 +43,7 @@ References consulted in this audit include the Haynes-Henning-van der Merwe-Yeo 
 5. enumerates *every* adjacent total-dominating pair in H+uw;
 6. verifies that {u,w} is excluded by the root, that every new pair is incident with exactly one of u,w, that the other endpoint lies in A, that the cross-edge existed before insertion, and that its old open-neighbourhood union is exactly V\{supplement}.
 
-Fresh recorded result:
+Recorded result:
 
     labelled simple graphs:              33,864
     diameter-two edge-critical graphs:      608
@@ -54,25 +54,29 @@ Fresh recorded result:
     ordered-case SHA-256:
       1f2b1bb5bd91d54937f166abd0c26badd8ddd105441cd37a6d0150c557d46c5e
 
-All assertions passed. In this small exhaustive domain each insertion happened to have one adjacent total-dominating pair, but the proof and checker do not assume uniqueness generally.
+All assertions passed locally and again in GitHub Actions run `34194951298` on Ubuntu 24.04, commit `604ce7b16d559d35386960b2d6d9d50be5aee319`. In this small exhaustive domain each insertion happened to have one adjacent total-dominating pair, but the proof and checker do not assume uniqueness generally.
 
 This is a second implementation by the same assistant, not external reproduction and not a universal proof by enumeration.
 
 ## 4. Lean extension
 
-The existing `formal/QuasiCore.lean` slice previously began *after* the quasi-edge premises. It has now been extended with explicit local definitions of adding one edge and an adjacent total-dominating pair, plus lemmas intended to formalise:
+The existing `formal/QuasiCore.lean` slice previously began *after* the quasi-edge premises. It now includes explicit local definitions of adding one edge and an adjacent total-dominating pair, plus four bridge lemmas formalising:
 
 - an added edge cannot affect an ordered adjacency whose left endpoint avoids both inserted endpoints;
 - a genuinely new adjacent total-dominating pair must be incident with the added edge;
 - the newly added endpoint-pair cannot totally dominate when the two endpoints have a common missed vertex;
 - an adjacent total-dominating pair `u,i` created by adding `u,w`, under the stated distinctness/missing-edge hypotheses and absence of an old pair, yields `Quasi adj u i w`.
 
-The GitHub Lean 4.19.0 workflow was triggered by commit `799410e5bebe290e73b72d306c260bd6812fe18b`. Until the workflow completes successfully, these four new lemmas must be described as *submitted for formal checking*, not as verified. Existing six local quasi-edge lemmas retain their prior checked status.
+The first GitHub Lean run, `34194781386` at commit `799410e5bebe290e73b72d306c260bd6812fe18b`, failed because the proof script for the common-miss endpoint lemma used the wrong equality component/direction in four cases. The other new bridge lemmas elaborated. The case handling was corrected without changing the mathematical statement.
+
+The corrected source at commit `60f943d5aeed683cc520e043a1b6b26f581a750c` passed GitHub Actions run `34194930796` using Lean 4.19.0 on Ubuntu 24.04. The workflow explicitly rejects `sorryAx`, warnings and errors. The log reports no `sorryAx`; together with the six existing local lemmas, ten local quasi-edge/edge-insertion lemmas now check in this scoped file.
+
+This does **not** formalise diameter-two edge-criticality, the finite selection/injection construction, the residual ledger, threshold pair counting, the layer-sum inequality, or the 13/22 consequence.
 
 ## 5. Remaining gap after this audit
 
-If the new Lean run passes, the major unformalised pieces before the numerical layer theorem are then primarily finite-cardinality selection/injection statements and the threshold/layer counting. The minimum-degree edge ledger is elementary and independently re-derived. The most valuable next formal target would be the residual injection or an abstract finite version of the threshold pair-capacity lemma.
+The major unformalised pieces before the numerical layer theorem are primarily finite-cardinality selection/injection statements and the threshold/layer counting. The minimum-degree edge ledger is elementary and independently re-derived. The highest-value next formal target is the residual injection or an abstract finite version of the threshold pair-capacity lemma.
 
 The absence of positive-surplus actual graph examples is not resolved by this audit. Any counterexample to the Murty-Simon density bound in the relevant maximum-degree range would necessarily have positive surplus, so existing actual-graph samples cannot exercise that hypothetical regime.
 
-**Verdict:** the graph-to-selected-system bridge is materially better supported than at the start of this audit; no blocking logical defect has been found. Do not promote the full 13/22 candidate to theorem status until the new formal run and independent mathematical review are complete.
+**Verdict:** the graph-to-selected-system bridge is materially better supported than at the start of this audit; no blocking logical defect has been found. The full 13/22 result remains a candidate until the remaining new counting argument receives independent mathematical review (and, ideally, broader formalisation).
