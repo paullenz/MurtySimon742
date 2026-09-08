@@ -34,47 +34,46 @@ The separate [degree-load-v7 route](project/research/general_n/2026-09-07-degree
 
 ### v9 — standalone structural paper
 
-The [nine-page v9 paper](project/research/general_n/2026-09-07-stability-spare-sources-v9/General_Structural_Theorems_v9.pdf), [full proof](project/research/general_n/2026-09-07-stability-spare-sources-v9/PROOF.md), [review guide](project/research/general_n/2026-09-07-stability-spare-sources-v9/README.md) and [literature comparison](project/research/general_n/2026-09-07-stability-spare-sources-v9/literature/COMPARISON.md) isolate the charging and source-supplement mechanisms from finite-order computations. The complete standard-library replay passed locally and in a clean GitHub runner.
+The [nine-page v9 paper](project/research/general_n/2026-09-07-stability-spare-sources-v9/General_Structural_Theorems_v9.pdf), [full proof](project/research/general_n/2026-09-07-stability-spare-sources-v9/PROOF.md), [review guide](project/research/general_n/2026-09-07-stability-spare-sources-v9/README.md) and [literature comparison](project/research/general_n/2026-09-07-stability-spare-sources-v9/literature/COMPARISON.md) isolate the charging and source-supplement mechanisms from the finite-order computations. The complete standard-library replay passed locally and in a clean GitHub runner. Five local quasi-edge logical lemmas have passed Lean 4.19.0; graph-wide existence, counting injections, charging and the general theorem are not formally verified.
 
-The local quasi-edge Lean slice now checks **six** logical lemmas in Lean 4.19.0, including the supplement-forcing fact used by the demand-tail proof. Quasi-edge existence, cardinality injections, charging, demand-tail counting and the general theorem are not formally verified.
+### v10 — current candidate maximum-degree threshold
 
-### v10 — first explicit demand-tail improvement
-
-The [v10 proof](project/research/general_n/2026-09-08-demand-tail-stability-v10/PROOF.md) derives the candidate fixed loss `1/750` for `a>=25` and the conservative maximum-degree implication `Delta>=0.6126n`. Its [exact rational checker](project/research/general_n/2026-09-08-demand-tail-stability-v10/check_v10.py) passed in a clean Ubuntu 24.04 runner. V10 also records the general demand-tail capacity inequality and all-k spare-source bound.
-
-### v11 — current candidate maximum-degree threshold
-
-The [v11 Jensen-tail proof](project/research/general_n/2026-09-08-jensen-tail-v11/PROOF.md) adds an exact second stability identity centred at the **actual mean demand**, rather than only at `alpha=1-1/sqrt(2)`. Combining that Jensen defect with the same source-supplement pair capacity gives
+The [v10 demand-tail stability proof](project/research/general_n/2026-09-08-demand-tail-stability-v10/PROOF.md) sharpens the general pair-capacity argument. With
 
 ```text
 a = n-1-Delta,
 t = e(G)-Delta(n-Delta),
 c = (3-2*sqrt(2))/2,
-
-a >= 50  ==>  t < (c-1/300) a^2.
 ```
 
-Together with the original charging bound for `2<=a<=49` and a direct `a=1` observation, the current conservative candidate implication is
+it gives the candidate fixed loss
 
 ```text
-n >= 4 and Delta(G) >= 0.6116 n
+a >= 25  ==>  t < (c-1/750) a^2.
+```
+
+Together with 24 explicit small-a inequalities this yields the conservative candidate implication
+
+```text
+n >= 4 and Delta(G) >= 0.6126 n
     ==> e(G) < floor(n^2/4).
 ```
 
-The remaining algebra reduces to positivity of one explicit degree-seven polynomial on a rational interval. The [standard-library exact checker](project/research/general_n/2026-09-08-jensen-tail-v11/check_v11.py) uses a rational Sturm sequence and passed in a clean Ubuntu 24.04 GitHub runner; see the [verification record](project/research/general_n/2026-09-08-jensen-tail-v11/evidence/REMOTE_EXACT_CHECK.json). The first runner attempt exposed and corrected a checker-only strict-inequality encoding error; no theorem constant or proof inequality changed.
+The [exact rational checker](project/research/general_n/2026-09-08-demand-tail-stability-v10/check_v10.py) passed in a clean Ubuntu 24.04 GitHub runner; its [record](project/research/general_n/2026-09-08-demand-tail-stability-v10/evidence/REMOTE_EXACT_CHECK.json) pins the endpoint margins. That check verifies arithmetic only. The universal graph-to-selected-system lemmas remain hand arguments awaiting specialist scrutiny.
 
-No finite-order enumeration, Fan bound, weak-core reduction or positive-surplus residual-activity lemma is used by v11. The universal graph-to-selected-system and demand-tail lemmas remain hand proofs awaiting specialist scrutiny. **No best-known, novelty or priority claim is made pending specialist review.** Paul is arranging that review; no new outreach has been sent by the assistant.
+The same continuation gives a general demand-tail capacity inequality and an all-k spare-source bound. A [multi-threshold numerical relaxation](project/research/general_n/2026-09-08-demand-tail-stability-v10/EXPLORATORY_MULTI_THRESHOLD.md) suggests substantially more room may exist, but it is explicitly **not a proof or claimed stronger bound**.
+
+No best-known, novelty or priority claim is made for v9/v10 pending specialist literature review. Paul is arranging specialist external review; no new outreach has been sent by the assistant.
 
 ## Review-paper index
 
-| Scope | Direct paper / proof | Companion / evidence |
+| Scope | Direct paper | Companion / evidence |
 |---|---|---|
 | n=25 | [Reviewer manuscript — PDF](releases/n25-reviewer-v1/N25_Reviewer_Manuscript_v1.pdf) | [Review guide](releases/n25-reviewer-v1/REVIEW_GUIDE.md) |
 | n=27 | [Full proof manuscript — Markdown](project/reviews/n27/2026-09-07-candidate-v1/PROOF.md) | [Evidence package](releases/n27-candidate-v1/README.md) |
 | n=28 | [Mathematical manuscript — PDF](releases/n28-reviewer-v1/N28_Reviewer_Manuscript_v1.pdf) | [Verification companion — PDF](releases/n28-reviewer-v1/N28_Verification_Companion_v1.pdf) |
 | General v9 | [Structural paper — PDF](project/research/general_n/2026-09-07-stability-spare-sources-v9/General_Structural_Theorems_v9.pdf) | [Proof and replay guide](project/research/general_n/2026-09-07-stability-spare-sources-v9/README.md) |
-| General v10 | [Demand-tail proof — Markdown](project/research/general_n/2026-09-08-demand-tail-stability-v10/PROOF.md) | [Clean-runner arithmetic record](project/research/general_n/2026-09-08-demand-tail-stability-v10/README.md) |
-| General v11 | [Current Jensen-tail proof — Markdown](project/research/general_n/2026-09-08-jensen-tail-v11/PROOF.md) | [Guide and exact Sturm record](project/research/general_n/2026-09-08-jensen-tail-v11/README.md) |
+| General v10 | [Current proof note — Markdown](project/research/general_n/2026-09-08-demand-tail-stability-v10/PROOF.md) | [Guide and clean-runner arithmetic record](project/research/general_n/2026-09-08-demand-tail-stability-v10/README.md) |
 
 ## Scope, evidence and governance
 
@@ -84,4 +83,4 @@ The middle-degree region remains open. Degree-case exclusions at selected larger
 
 Paul Lenz directed the project; ChatGPT/Geeps supplied mathematical development, software, manuscripts and internal checks. Frozen finite-order proofs, original archives and the governed theorem ledger remain unchanged by the general research programme.
 
-The [README immediately before the v11 update](project/reviews/history/README_before_v11_2026-09-08.md) is preserved verbatim. See the [standing orders](project/N25_PROJECT_STANDING_ORDERS.md), [commit-completion policy](project/REPO_SYNC_POLICY.md), [canonical review](project/CANONICAL_N25_REVIEW_2026-09-06.md), [theorem ledger](repro-v1/ledger/theorem_ledger.json), [task backlog](project/CANONICAL_TASKS.json) and [evidence-recovery manifest](project/EVIDENCE_RECOVERY_MANIFEST.json). Publication preserves evidence; it does not promote mathematical status.
+The [README immediately before the v10 update](project/reviews/history/README_before_v10_2026-09-08.md) is preserved verbatim. See the [standing orders](project/N25_PROJECT_STANDING_ORDERS.md), [commit-completion policy](project/REPO_SYNC_POLICY.md), [canonical review](project/CANONICAL_N25_REVIEW_2026-09-06.md), [theorem ledger](repro-v1/ledger/theorem_ledger.json), [task backlog](project/CANONICAL_TASKS.json) and [evidence-recovery manifest](project/EVIDENCE_RECOVERY_MANIFEST.json). Publication preserves evidence; it does not promote mathematical status.
