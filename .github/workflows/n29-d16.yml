@@ -1,0 +1,104 @@
+name: N29 Delta16 direct replay
+on:
+  push:
+    branches: [main]
+    paths:
+      - 'project/research/n29/2026-09-08-delta16-direct-v1/**'
+      - '.github/workflows/n29-d16.yml'
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  prepare:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262
+        with: {persist-credentials: false}
+      - name: Extract hash-pinned n28 machinery
+        run: |
+          set -euo pipefail
+          P=project/research/general_n/2026-09-07-direct-197-v8/MurtySimon_N28_197_Direct_v8.zip
+          echo 'b753076ffc755066a0c57756be91cc5b265c163d869244d3aa65e3943799347b  '"$P" | sha256sum -c -
+          unzip -q "$P" -d base
+          mv base/* basepkg
+      - name: Generate and independently check demand/residual/projected domains
+        run: |
+          set -euo pipefail
+          A=project/research/n29/2026-09-08-delta16-direct-v1
+          g++ -O3 -std=c++17 "$A/scan_rows.cpp" -o scan_rows
+          g++ -O3 -std=c++17 "$A/check_rows.cpp" -o check_rows
+          for t in 3 2; do
+            mkdir -p prepared/t$t
+            python3 -I -B "$A/run.py" prepare --base basepkg --t $t --output prepared/t$t
+            ./scan_rows prepared/t$t/demands.txt prepared/t$t/row_survivors.txt prepared/t$t/row_bands.txt $t > prepared/t$t/SCAN_REPORT.json
+            ./check_rows prepared/t$t/demands.txt prepared/t$t/check_row_survivors.txt prepared/t$t/check_row_bands.txt $t > prepared/t$t/CHECK_ROWS_REPORT.json
+            cmp prepared/t$t/row_survivors.txt prepared/t$t/check_row_survivors.txt
+            cmp prepared/t$t/row_bands.txt prepared/t$t/check_row_bands.txt
+            python3 -I -B "$A/run.py" projected --t $t --root prepared/t$t
+          done
+      - uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02
+        with:
+          name: n29-d16-prepared
+          path: prepared/
+          if-no-files-found: error
+          retention-days: 30
+  final:
+    needs: prepare
+    runs-on: ubuntu-24.04
+    timeout-minutes: 15
+    strategy:
+      fail-fast: false
+      matrix:
+        include:
+          - {t: 3, shard: 0, shards: 1}
+          - {t: 2, shard: 0, shards: 4}
+          - {t: 2, shard: 1, shards: 4}
+          - {t: 2, shard: 2, shards: 4}
+          - {t: 2, shard: 3, shards: 4}
+    steps:
+      - uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262
+        with: {persist-credentials: false}
+      - uses: actions/download-artifact@d3f86a106a0bac45b974a628896c90dbdf5c8093
+        with: {name: n29-d16-prepared, path: prepared}
+      - name: Extract inherited machinery
+        run: |
+          set -euo pipefail
+          P=project/research/general_n/2026-09-07-direct-197-v8/MurtySimon_N28_197_Direct_v8.zip
+          echo 'b753076ffc755066a0c57756be91cc5b265c163d869244d3aa65e3943799347b  '"$P" | sha256sum -c -
+          unzip -q "$P" -d base && mv base/* basepkg
+      - name: Joint-column and exact LP shard
+        run: |
+          set -euo pipefail
+          A=project/research/n29/2026-09-08-delta16-direct-v1
+          mkdir reports
+          python3 -I -B "$A/run.py" final --base basepkg --t ${{ matrix.t }} --root prepared/t${{ matrix.t }} --shard ${{ matrix.shard }} --shards ${{ matrix.shards }} --output reports/t${{ matrix.t }}-${{ matrix.shard }}.json
+      - uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02
+        if: always()
+        with:
+          name: n29-d16-final-t${{ matrix.t }}-${{ matrix.shard }}
+          path: reports/
+          if-no-files-found: error
+          retention-days: 30
+  aggregate:
+    needs: [prepare, final]
+    runs-on: ubuntu-24.04
+    timeout-minutes: 5
+    steps:
+      - uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262
+        with: {persist-credentials: false}
+      - uses: actions/download-artifact@d3f86a106a0bac45b974a628896c90dbdf5c8093
+        with: {name: n29-d16-prepared, path: prepared}
+      - uses: actions/download-artifact@d3f86a106a0bac45b974a628896c90dbdf5c8093
+        with: {pattern: 'n29-d16-final-*', path: final-reports, merge-multiple: true}
+      - name: Require exact complete coverage and zero survivors
+        run: |
+          set -euo pipefail
+          A=project/research/n29/2026-09-08-delta16-direct-v1
+          python3 -I -B "$A/run.py" aggregate --root prepared --reports final-reports --output N29_D16_REPLAY.json
+          cat N29_D16_REPLAY.json
+      - uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02
+        with:
+          name: n29-d16-complete
+          path: N29_D16_REPLAY.json
+          retention-days: 30
