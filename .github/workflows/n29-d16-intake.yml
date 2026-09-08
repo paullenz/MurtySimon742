@@ -1,0 +1,40 @@
+name: N29 Delta16 intake
+on:
+  push:
+    branches: [main]
+    paths: ['.github/workflows/n29-d16-intake.yml']
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  extract:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 5
+    steps:
+      - uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262
+        with:
+          persist-credentials: false
+      - name: Verify and extract n28 direct197 archive
+        run: |
+          set -euo pipefail
+          P=project/research/general_n/2026-09-07-direct-197-v8/MurtySimon_N28_197_Direct_v8.zip
+          echo 'b753076ffc755066a0c57756be91cc5b265c163d869244d3aa65e3943799347b  '"$P" | sha256sum -c -
+          mkdir extracted source-out
+          unzip -q "$P" -d extracted
+          find extracted -type f | sort > source-out/files.txt
+          python3 - <<'PY'
+          from pathlib import Path
+          import shutil
+          src=next(p for p in Path('extracted').iterdir() if p.is_dir())
+          out=Path('source-out/source');out.mkdir()
+          for p in src.rglob('*'):
+              if p.is_file() and p.stat().st_size < 2000000 and p.suffix in {'.py','.cpp','.hpp','.h','.md','.json','.txt'}:
+                  q=out/p.relative_to(src);q.parent.mkdir(parents=True,exist_ok=True);shutil.copy2(p,q)
+          print('small source files',sum(x.is_file() for x in out.rglob('*')))
+          PY
+      - uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02
+        with:
+          name: n29-d16-intake-source
+          path: source-out/
+          if-no-files-found: error
+          retention-days: 30
