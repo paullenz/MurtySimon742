@@ -21,7 +21,7 @@ n >= 4 and Delta(G) >= 0.6126 n
 
 The previous continuation gave 0.6129. The improvement is small numerically but the proof is shorter and has explicit rational margins. No best-known or priority claim is made pending specialist literature review.
 
-Read [PROOF.md](PROOF.md). Run `python3 -I -B check_v10.py` to verify every displayed rational comparison and the small-a inequalities. That script checks arithmetic only; it does not prove the graph-to-selected-system lemmas.
+Read [PROOF.md](PROOF.md). Run `python3 -I -B check_v10.py` to verify every displayed rational comparison and the small-a inequalities. The exact checker also passed in a clean GitHub Ubuntu 24.04 runner; see [REMOTE_EXACT_CHECK.json](evidence/REMOTE_EXACT_CHECK.json). It verifies arithmetic only and does not prove the graph-to-selected-system lemmas.
 
 [EXPLORATORY_MULTI_THRESHOLD.md](EXPLORATORY_MULTI_THRESHOLD.md) records a deliberately non-rigorous discretised relaxation suggesting that simultaneous thresholds may permit a materially larger quadratic loss. It is a research lead, not evidence for a stronger theorem.
 
