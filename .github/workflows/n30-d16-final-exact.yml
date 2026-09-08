@@ -1,0 +1,59 @@
+name: N30 Delta16 final exact replay
+
+on:
+  workflow_dispatch:
+  push:
+    paths:
+      - '.github/workflows/n30-d16-final-exact.yml'
+
+permissions:
+  contents: read
+  actions: read
+
+jobs:
+  final-exact:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 20
+    strategy:
+      fail-fast: false
+      matrix:
+        m: [225,226]
+    steps:
+      - uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262
+      - uses: actions/download-artifact@d3f86a106a0bac45b974a628896c90dbdf5c8093
+        with:
+          name: n30-d16-m${{ matrix.m }}-row-threshold
+          path: frontier
+          github-token: ${{ github.token }}
+          run-id: 34287440190
+      - name: Pin solver dependency
+        run: |
+          set -euo pipefail
+          python3 -m venv .venv
+          .venv/bin/python -m pip install --disable-pip-version-check --only-binary=:all: scipy==1.17.0
+      - name: Exactly reject every final row
+        run: |
+          set -euo pipefail
+          D=project/research/n30/2026-09-08-minimal-kernel-recon-v1
+          time .venv/bin/python -I -B "$D/n30_threshold_scan.py" \
+            --demands frontier/demands.txt --rows frontier/threshold_survivors.txt \
+            --m ${{ matrix.m }} --exact --output certificates.json.gz > FINAL_EXACT_REPORT.json
+          cat FINAL_EXACT_REPORT.json
+          python3 - <<'PY'
+          import json
+          r=json.load(open('FINAL_EXACT_REPORT.json'))
+          c=r['counts']
+          assert c['numerical_other']==0
+          assert c['exact_missing']==0
+          assert c['exact_rejected']==c['rows_in_shard']
+          assert not r['survivors']
+          print('all final rows exactly rejected')
+          PY
+      - uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02
+        with:
+          name: n30-d16-m${{ matrix.m }}-final-exact
+          path: |
+            FINAL_EXACT_REPORT.json
+            certificates.json.gz
+          if-no-files-found: error
+          retention-days: 30
