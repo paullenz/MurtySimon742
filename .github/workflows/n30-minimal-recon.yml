@@ -1,0 +1,45 @@
+name: N30 minimal early-kernel reconnaissance
+
+on:
+  workflow_dispatch:
+  push:
+    paths:
+      - 'project/research/n30/2026-09-08-minimal-kernel-recon-v1/n30_recon.py'
+      - 'project/research/n30/2026-09-08-minimal-kernel-recon-v1/README.md'
+      - '.github/workflows/n30-minimal-recon.yml'
+
+permissions:
+  contents: read
+
+jobs:
+  replay:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262
+      - name: Pin solver dependency
+        run: |
+          set -euo pipefail
+          python3 -m venv .venv
+          .venv/bin/python -m pip install --disable-pip-version-check --only-binary=:all: scipy==1.17.0
+      - name: Replay n30 early kernel
+        run: |
+          set -euo pipefail
+          .venv/bin/python -I -B project/research/n30/2026-09-08-minimal-kernel-recon-v1/n30_recon.py > n30_recon_report.json
+          python3 - <<'PY'
+          import json
+          r=json.load(open('n30_recon_report.json'))
+          assert r['status']=='PASS'
+          by={(x['Delta'],x['m']):x for x in r['scopes']}
+          assert by[17,226]['early_survivors']==0
+          assert by[17,225]['early_survivors']==0
+          assert by[16,226]['early_survivors']==2596
+          assert by[16,225]['early_survivors']==5386
+          print('n30 early-kernel replay: PASS')
+          PY
+      - uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02
+        with:
+          name: n30-minimal-recon-report
+          path: n30_recon_report.json
+          if-no-files-found: error
+          retention-days: 30
