@@ -1,0 +1,49 @@
+name: N30 candidate assembly replay
+
+on:
+  workflow_dispatch:
+  push:
+    paths:
+      - 'project/reviews/n30/2026-09-09-candidate-v1/**'
+      - 'project/research/n30/2026-09-09-delta17-v1/verify_committed.py'
+      - 'project/research/n30/2026-09-09-delta17-v1/D17_EXACT_DUAL_CERTIFICATES.json'
+      - 'project/research/n30/2026-09-09-delta17-v1/D17_KERNEL_REPORT.json'
+      - '.github/workflows/n30-candidate-assembly.yml'
+
+permissions:
+  contents: read
+
+jobs:
+  assembly:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262
+      - name: Exact outer arithmetic
+        run: |
+          set -euo pipefail
+          python3 -S project/reviews/n30/2026-09-09-candidate-v1/check_outer.py > /tmp/N30_OUTER_REPORT.json
+          cat /tmp/N30_OUTER_REPORT.json
+      - name: Exact committed Delta17 certificate verification
+        run: |
+          set -euo pipefail
+          D=project/research/n30/2026-09-09-delta17-v1
+          python3 -S "$D/verify_committed.py" "$D/D17_EXACT_DUAL_CERTIFICATES.json" "$D/D17_KERNEL_REPORT.json" > /tmp/N30_D17_VERIFY.json
+          cat /tmp/N30_D17_VERIFY.json
+      - name: Record heavy Delta16 evidence boundary
+        run: |
+          cat <<'EOF'
+          Delta16 heavy clean evidence is preserved in prior green workflows:
+            34286806474  prepare + complete residual-row scan
+            34287440190  exact row-threshold screen
+            34287739057  final exact Farkas replay
+          This assembly workflow does not substitute a partial rerun for those complete runs.
+          EOF
+      - uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02
+        with:
+          name: n30-candidate-assembly
+          path: |
+            /tmp/N30_OUTER_REPORT.json
+            /tmp/N30_D17_VERIFY.json
+          if-no-files-found: error
+          retention-days: 30
