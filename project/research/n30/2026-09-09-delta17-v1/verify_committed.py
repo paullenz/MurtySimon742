@@ -70,8 +70,9 @@ def main():
     if len(sys.argv)!=3:
         raise SystemExit("verify_committed.py D17_EXACT_DUAL_CERTIFICATES.json D17_KERNEL_REPORT.json")
     cp=Path(sys.argv[1]); rp=Path(sys.argv[2])
-    raw=cp.read_bytes(); doc=json.loads(raw); report=json.loads(rp.read_text())
-    assert hashlib.sha256(raw).hexdigest()==report["dual_certificate_sha256"]
+    doc=json.loads(cp.read_text()); report=json.loads(rp.read_text())
+    semantic=json.dumps(doc,sort_keys=True,separators=(",",":"))
+    assert hashlib.sha256(semantic.encode()).hexdigest()==report["dual_certificate_semantic_sha256"]
     pending=[]
     domain=0
     for s in profiles():
