@@ -6,6 +6,7 @@ on:
       - 'project/research/general_n/2026-09-08-layer-sum-v1/src/check_construction_independent.py'
       - 'project/research/general_n/2026-09-08-layer-sum-v1/src/check_residual_injection_independent.py'
       - 'project/research/general_n/2026-09-08-layer-sum-v1/src/check_threshold_adversarial.py'
+      - 'project/research/general_n/2026-09-08-layer-sum-v1/src/check_layer_aggregation_adversarial.py'
       - '.github/workflows/layer-sum-construction.yml'
   workflow_dispatch:
 permissions:
@@ -46,6 +47,17 @@ jobs:
           grep -F '"minimum_bound_gap": 0' threshold-adversarial-check.json
           grep -F '"opposite_orientations": "violate as expected"' threshold-adversarial-check.json
           grep -F '"high_source_outside_Z": "violate as expected"' threshold-adversarial-check.json
+      - name: Run adversarial layer-aggregation audit
+        run: |
+          set -euo pipefail
+          F=project/research/general_n/2026-09-08-layer-sum-v1/src/check_layer_aggregation_adversarial.py
+          sha256sum "$F" | tee aggregation-source-sha256.txt
+          python3 -I -B "$F" | tee layer-aggregation-check.json
+          grep -F '"status": "PASS"' layer-aggregation-check.json
+          grep -F '"complete_sorted_demand_profiles": 478192' layer-aggregation-check.json
+          grep -F '"nonzero_profiles": 478181' layer-aggregation-check.json
+          grep -F '"threshold_levels_checked": 4215632' layer-aggregation-check.json
+          grep -F '"worst_rhs_over_lhs": "13301/11000"' layer-aggregation-check.json
       - uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02
         with:
           name: layer-sum-construction-check
@@ -53,9 +65,11 @@ jobs:
             construction-check.json
             residual-injection-check.json
             threshold-adversarial-check.json
+            layer-aggregation-check.json
             python-version.txt
             checked-source-sha256.txt
             residual-source-sha256.txt
             threshold-source-sha256.txt
+            aggregation-source-sha256.txt
           if-no-files-found: error
           retention-days: 7
