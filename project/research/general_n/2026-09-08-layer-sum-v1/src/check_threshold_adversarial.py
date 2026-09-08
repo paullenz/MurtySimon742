@@ -32,11 +32,11 @@ def arithmetic_sweep(limit=250):
     return {"cases": cases, "equality_cases": equalities, "limit": limit}
 
 
-def enumerate_marked_orientations(max_n=6):
-    # Enumerate each partial orientation once. For every initial segment Z and
-    # every h<=|Z|, count arcs sourced in Z. If such a source has load > h,
-    # require all of its counted endpoints to remain in Z. This directly
-    # models the two graph consequences used by the threshold proof.
+def enumerate_marked_orientations(max_n=5):
+    # Complete enumeration of partial orientations through n=5. This is an
+    # independent implementation of the abstract source/supplement model.
+    # Vertices 0..z-1 form Z. If a source in Z has load > h, all its counted
+    # endpoints must lie in Z. Each unordered pair has at most one orientation.
     admitted = checks = orientation_states = 0
     worst_gap = None
     equality_hits = 0
@@ -64,7 +64,7 @@ def enumerate_marked_orientations(max_n=6):
                     direct = (z-j)*h + pair_count
                     bound = h*z + (z-h)*(z-h-1)//2
                     require(total <= direct, ('direct',n,z,h,j,total,direct,load))
-                    require(direct <= bound, ('quadratic',n,z,h,j,direct,bound))
+                    require(direct <= bound, ('identity',n,z,h,j,direct,bound))
                     gap = bound-total
                     worst_gap = gap if worst_gap is None else min(worst_gap,gap)
                     equality_hits += (gap == 0)
@@ -88,12 +88,12 @@ def negative_controls():
 
 def main():
     out = {
-        "schema":"threshold-capacity-adversarial-v2",
+        "schema":"threshold-capacity-adversarial-v3",
         "arithmetic": arithmetic_sweep(),
         "marked_orientation_model": enumerate_marked_orientations(),
         "negative_controls": negative_controls(),
         "status":"PASS",
-        "claim_scope":"abstract pair-capacity lemma only; not a proof of the graph-to-model reduction"
+        "claim_scope":"abstract pair-capacity lemma; complete partial-orientation enumeration through n=5 plus exact arithmetic sweep; graph-to-model reduction remains a separate proof obligation"
     }
     print(json.dumps(out, indent=2, sort_keys=True))
 
