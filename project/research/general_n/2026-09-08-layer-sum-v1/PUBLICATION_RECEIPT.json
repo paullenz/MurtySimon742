@@ -1,0 +1,82 @@
+{
+  "schema": "layer-sum-publication-receipt-v1",
+  "repository": "paullenz/MurtySimon25",
+  "branch": "main",
+  "date": "2026-09-08",
+  "research_parent": "ac90a88de6e0548a3c52976095e3cbbf8641606f",
+  "research_commit": "a2471d9d82d643978c927380ab8411232a94fe70",
+  "research_tree": "21dcdcc2296dd88fa34e29297bb8901289c7e19b",
+  "checkpoint_tree": "28f2f02fc9f1129a2032f050526510f1496dc8d6",
+  "checkpoint_prefix": "project/research/general_n/2026-09-08-layer-sum-v1/",
+  "checkpoint_blobs": {
+    "EVIDENCE.json": "72080100bbb0ede1b73f48e373992e7fbb4614fc",
+    "HISTORY.json": "8b7030b8ab4b2271489f054d8f7d151a272d38f3",
+    "PROOF.md": "565de0b30ab4c320913ac7aac152debccff607be",
+    "PROVENANCE.json": "9f052ce849bfc76b31efcb8e5265f55280708d21",
+    "README.md": "f44227222250df28a5d533430155819669a2db7c",
+    "RECONCILIATION.md": "e73fded7e8c802c6f62cdb650fc73c7aa6c5aee0",
+    "RESULTS.md": "7dc1dd64ace627e5d9f16179b912314dfeba92bd",
+    "history/initial-to-final.patch": "35b7a205a537ac09b83912a01edae6f13761e723",
+    "history/make_atlas7.py": "5990175eba943a25523bfb022b1b6f5209b71227",
+    "src/check_layers.py": "7d480359398bf0235ec11ae85a2a6316ae308658",
+    "src/check_threshold_capacity.py": "695c7e4e1d54f4476f99f25e46e7011088b8e5ed",
+    "MANIFEST.json": "0da61c2d23a8fc3cc4074c489c9626e3aa51bfa1"
+  },
+  "other_changed_blobs": {
+    "README.md": "be83d897efcf49aa3ce1a442337c7acfb20963cf",
+    "project/reviews/history/README_before_layer_sum_2026-09-08.md": "f595ff34f685d7910a7ea03c72366f56454e2237"
+  },
+  "sha256_manifest": {
+    "file": "MANIFEST.json",
+    "sha256": "4ef736ba937d22aa969bb06726103047110388459ef139ca9e89a56382e9d0fd",
+    "scope": "All checkpoint proof/source/evidence/history payloads and merged root README; manifest and receipt excluded from recursive self-hashing."
+  },
+  "checks_completed": {
+    "main_read_back_as_research_commit": true,
+    "nonforced_branch_update": true,
+    "comparison_to_parent_exactly_14_intended_paths": true,
+    "added_paths": 13,
+    "modified_existing_paths": [
+      "README.md"
+    ],
+    "all_14_committed_path_blob_hashes_match_expected": true,
+    "key_content_readbacks_at_commit": [
+      "PROOF.md",
+      "RESULTS.md",
+      "README.md at repository root",
+      "preserved preceding README"
+    ],
+    "frozen_proofs_original_archives_theorem_ledger_unchanged": true,
+    "concurrent_v10_v11_files_and_workflows_unchanged": true,
+    "prior_readme_preserved_verbatim": true,
+    "merged_readme_links_and_scope_checked": true
+  },
+  "publication_replay_validation": {
+    "status": "PASS",
+    "checkpoint_files_hashed": 12,
+    "new_program_output_matches_original": true,
+    "original_pretty_output_hash_matches": true,
+    "inherited_program_output_matches_original": true,
+    "initial_source_reverse_patch_hash_matches": true,
+    "initial_report_reconstruction_hash_matches": true,
+    "optional_atlas_regeneration": "3.6.1 10",
+    "remote_ci": false,
+    "new_mathematical_claim": false
+  },
+  "concurrent_rebase": {
+    "started_at": "f332e47ae4c32dd28ff0c7765130fff2770b20e0",
+    "reconciled_parent": "ac90a88de6e0548a3c52976095e3cbbf8641606f",
+    "concurrent_commits_preserved": 16,
+    "details": "RECONCILIATION.md"
+  },
+  "status": {
+    "publication": "Research checkpoint verified on main",
+    "mathematics": "CANDIDATE",
+    "internal_finite_replay": "REPRODUCED",
+    "independent_mathematical_review": "OPEN",
+    "novelty_assessment": "OPEN",
+    "formal_verification_of_layer_sum": false,
+    "remote_CI_of_layer_sum": false
+  },
+  "receipt_scope": "This receipt records checks completed for the research commit above. It is added in a following commit; the receipt-containing commit and its branch attachment are verified separately, avoiding a recursive self-hash."
+}
