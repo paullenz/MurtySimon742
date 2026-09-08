@@ -1,7 +1,7 @@
 import Std
 
 /-
-First formalisation slice only. No numerical or graph-wide theorem is
+Local formalisation slice only. No numerical or graph-wide theorem is
 claimed formalised here. No sorry, axiom declaration, or native_decide.
 The relation, actual quasi-edge premises, and symmetry are explicit.
 -/
@@ -30,6 +30,14 @@ theorem missing_source_forces_label_neighbour {adj : V → V → Prop}
     (hmiss : ¬ adj u j) : adj i j := by
   exact (q.dominates j hj).resolve_left hmiss
 
+/-- If two selected quasi-edges have the same source and different
+exceptions, the exception of either one is adjacent to the other label.
+This is the local supplement-forcing fact used in the demand-tail proof. -/
+theorem supplement_neighbours_other_label {adj : V → V → Prop}
+    {u i j w z : V} (qi : Quasi adj u i w) (qj : Quasi adj u j z)
+    (hwz : w ≠ z) : adj j w := by
+  exact (qj.dominates w hwz).resolve_left qi.source_misses
+
 theorem cross_forcing_with_common_miss {adj : V → V → Prop}
     (symm : ∀ x y, adj x y → adj y x) {u i j w z : V}
     (qi : Quasi adj u i w) (qj : Quasi adj u j z)
@@ -53,6 +61,7 @@ theorem forced_cross_edge_cannot_have_other_exception {adj : V → V → Prop}
 #print axioms common_miss_is_exception
 #print axioms exception_unique
 #print axioms missing_source_forces_label_neighbour
+#print axioms supplement_neighbours_other_label
 #print axioms cross_forcing_with_common_miss
 #print axioms forced_cross_edge_cannot_have_other_exception
 end MurtySimon
