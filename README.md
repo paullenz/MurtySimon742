@@ -1,6 +1,6 @@
 # Murty–Simon / Erdős Problem #742
 
-Candidate proofs and reproducible research. **Updated 8 September 2026. Independent mathematical review, novelty assessment and independent computational reproduction remain OPEN.** Repository publication and internal replay are not external acceptance or a proof of the unrestricted conjecture.
+Candidate proofs and reproducible research. **Updated 9 September 2026. Independent mathematical review, novelty assessment and independent computational reproduction remain OPEN.** Repository publication and internal replay are not external acceptance or a proof of the unrestricted conjecture.
 
 **External reviewers:** please start with [`START_HERE_FOR_REVIEWERS.md`](START_HERE_FOR_REVIEWERS.md). The project actively welcomes hostile review, counterexamples, literature corrections and independent reproduction. GitHub Issues are the preferred place to report a suspected flaw.
 
@@ -35,7 +35,7 @@ e(G) <= 210 = floor(29^2/4),
 with equality exactly K(14,15).
 ```
 
-[Full proof and replay guide](project/reviews/n29/2026-09-08-candidate-v1/README.md) · [candidate manuscript](project/reviews/n29/2026-09-08-candidate-v1/PROOF.md) · [restarted red-team audit](project/reviews/n29/2026-09-08-redteam-restart-v1/N29_RED_TEAM_RESTART.md) · [public-release audit](project/reviews/n29/2026-09-08-redteam-restart-v1/PUBLIC_RELEASE_AUDIT.md).
+[Full proof and replay guide](project/reviews/n29/2026-09-08-candidate-v1/README.md) · [candidate manuscript](project/reviews/n29/2026-09-08-candidate-v1/PROOF.md) · [standalone Delta=16 graph-to-model bridge](project/reviews/n29/2026-09-09-bridge-standalone-v1/GRAPH_TO_MODEL_BRIDGE.md) · [bridge hostile audit](project/reviews/n29/2026-09-09-bridge-standalone-v1/BRIDGE_REDTEAM.md) · [restarted red-team audit](project/reviews/n29/2026-09-08-redteam-restart-v1/N29_RED_TEAM_RESTART.md) · [public-release audit](project/reviews/n29/2026-09-08-redteam-restart-v1/PUBLIC_RELEASE_AUDIT.md).
 
 The proof does **not** depend on the later general `293/500` candidate theorem. Fan's cited strict bound leaves only 211 edges to exclude. `Delta=15` is handled by a witness-deficit count, which also forces `K(14,15)` at 210. `Delta=17` is excluded by a short pointwise charging bound, `Delta=18..27` by the residual h-index inequality, and a universal vertex gives a star.
 
@@ -54,6 +54,17 @@ quasi-edge / selected-residual construction
 Its clean replay retains 72 demand profiles and 126 residual rows at 211 edges, and 367 demand profiles and 1,467 residual rows at 210 edges. All 1,593 late residual rows receive exact Farkas contradictions and final survivors are zero. This route does **not** use the old projected screen, joint propagator, shared LP, typed LP, old endpoint LP or older pair-capacity support formula.
 
 **Status: complete candidate; independent mathematical review OPEN.**
+
+## n=30 reconnaissance
+
+A first symbolic parameterisation pass has been recorded at [`project/research/n30/2026-09-09-recon-v1/README.md`](project/research/n30/2026-09-09-recon-v1/README.md). It is **not** an n=30 candidate theorem. The hand reductions narrow the dense non-bipartite n=30 problem to four scopes only:
+
+```text
+m=226: Delta=16,17
+m=225: Delta=16,17
+```
+
+The `Delta=17` scopes keep the same `a=12` label-side dimension as the difficult n=29 case and are therefore the preferred first test of whether the stripped trusted kernel genuinely parameterises.
 
 ## General structural programme
 
@@ -78,7 +89,7 @@ The [13/22 layer-sum proof](project/research/general_n/2026-09-08-layer-sum-v1/P
 | n=25 | [Reviewer manuscript](releases/n25-reviewer-v1/N25_Reviewer_Manuscript_v1.pdf) | [Reviewer package](releases/n25-reviewer-v1/README.md) |
 | n=27 | [Proof](project/reviews/n27/2026-09-07-candidate-v1/PROOF.md) | [Evidence](releases/n27-candidate-v1/README.md) |
 | n=28 | [Mathematical manuscript](releases/n28-reviewer-v1/N28_Reviewer_Manuscript_v1.pdf) | [Verification companion](releases/n28-reviewer-v1/N28_Verification_Companion_v1.pdf) |
-| n=29 | [Candidate proof](project/reviews/n29/2026-09-08-candidate-v1/PROOF.md) | [Minimal-kernel audit](project/reviews/n29/2026-09-08-redteam-restart-v1/PUBLIC_RELEASE_AUDIT.md) |
+| n=29 | [Candidate proof](project/reviews/n29/2026-09-08-candidate-v1/PROOF.md) | [Standalone bridge](project/reviews/n29/2026-09-09-bridge-standalone-v1/GRAPH_TO_MODEL_BRIDGE.md) |
 | General 293/500 | [Proof](project/research/general_n/2026-09-08-profile-integral-v1/PROOF.md) | [Audit](project/research/general_n/2026-09-08-profile-integral-v1/AUDIT.md) |
 
 ## Governance and limits
