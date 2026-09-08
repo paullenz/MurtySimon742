@@ -107,12 +107,12 @@ theorem added_endpoint_pair_fails_with_common_miss
   rcases q.dominates v with h | h
   · rcases h with h | h | h
     · exact hu h
-    · exact huv h.1
-    · exact hwv h.2
+    · exact hwv h.2.symm
+    · exact huv h.2.symm
   · rcases h with h | h | h
     · exact hw h
-    · exact huv h.1
-    · exact hwv h.2
+    · exact hwv h.2.symm
+    · exact huv h.2.symm
 
 theorem quasi_from_added_total_pair
     {adj : V → V → Prop} {u i w : V}
