@@ -1,0 +1,35 @@
+name: Check layer-sum construction bridge
+on:
+  push:
+    branches: [main]
+    paths:
+      - 'project/research/general_n/2026-09-08-layer-sum-v1/src/check_construction_independent.py'
+      - '.github/workflows/layer-sum-construction.yml'
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  check-construction:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262
+      - name: Run independent construction census
+        run: |
+          set -euo pipefail
+          python3 --version | tee python-version.txt
+          F=project/research/general_n/2026-09-08-layer-sum-v1/src/check_construction_independent.py
+          sha256sum "$F" | tee checked-source-sha256.txt
+          python3 -I -B "$F" | tee construction-check.json
+          grep -F '"status": "PASS"' construction-check.json
+          grep -F '"missing_B_pairs": 720' construction-check.json
+          grep -F '1f2b1bb5bd91d54937f166abd0c26badd8ddd105441cd37a6d0150c557d46c5e' construction-check.json
+      - uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02
+        with:
+          name: layer-sum-construction-check
+          path: |
+            construction-check.json
+            python-version.txt
+            checked-source-sha256.txt
+          if-no-files-found: error
+          retention-days: 7
