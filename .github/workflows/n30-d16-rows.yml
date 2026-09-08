@@ -1,0 +1,48 @@
+name: N30 Delta16 strengthened prepare and rows
+
+on:
+  workflow_dispatch:
+  push:
+    paths:
+      - 'project/research/n30/2026-09-08-minimal-kernel-recon-v1/n30_prepare.py'
+      - 'project/research/n30/2026-09-08-minimal-kernel-recon-v1/n30_rows.cpp'
+      - '.github/workflows/n30-d16-rows.yml'
+
+permissions:
+  contents: read
+
+jobs:
+  rows:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 20
+    strategy:
+      fail-fast: false
+      matrix:
+        m: [225,226]
+    steps:
+      - uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262
+      - name: Pin solver dependency
+        run: |
+          set -euo pipefail
+          python3 -m venv .venv
+          .venv/bin/python -m pip install --disable-pip-version-check --only-binary=:all: scipy==1.17.0
+      - name: Prepare demand frontier
+        run: |
+          set -euo pipefail
+          D=project/research/n30/2026-09-08-minimal-kernel-recon-v1
+          mkdir -p out
+          .venv/bin/python -I -B "$D/n30_prepare.py" --m ${{ matrix.m }} --output out > out/prepare_stdout.json
+      - name: Compile and scan residual rows
+        run: |
+          set -euo pipefail
+          D=project/research/n30/2026-09-08-minimal-kernel-recon-v1
+          g++ -O3 -std=c++17 "$D/n30_rows.cpp" -o n30_rows
+          ./n30_rows out/demands.txt out/row_survivors.txt out/row_bands.txt > out/ROWS_REPORT.json
+          cat out/PREPARE_REPORT.json
+          cat out/ROWS_REPORT.json
+      - uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02
+        with:
+          name: n30-d16-m${{ matrix.m }}-rows
+          path: out/
+          if-no-files-found: error
+          retention-days: 30
