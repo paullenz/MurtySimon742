@@ -192,6 +192,8 @@ def main():
     dual_text=json.dumps(dual_doc,indent=2,sort_keys=True)+"\n"
     dual_path=z.output/"D17_EXACT_DUAL_CERTIFICATES.json"
     dual_path.write_text(dual_text)
+    # Informational hash of this run's proposed exact rays only.  It is not a
+    # proof invariant: another solver run may produce different valid rays.
     semantic=json.dumps(dual_doc,sort_keys=True,separators=(",",":"))
 
     report={
@@ -209,7 +211,7 @@ def main():
         report["results"][m]={
             k:v for k,v in rec.items() if k not in ("duals","opens")
         }
-    report["dual_certificate_semantic_sha256"]=hashlib.sha256(semantic.encode()).hexdigest()
+    report["generated_dual_semantic_sha256"]=hashlib.sha256(semantic.encode()).hexdigest()
     (z.output/"D17_KERNEL_REPORT.json").write_text(
         json.dumps(report,indent=2,sort_keys=True)+"\n"
     )
