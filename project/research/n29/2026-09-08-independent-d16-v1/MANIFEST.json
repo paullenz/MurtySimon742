@@ -1,0 +1,81 @@
+{
+  "schema": "n29-independent-d16-manifest-v1",
+  "date": "2026-09-08",
+  "scope": "n=29 Delta=16 at m=211 and m=210",
+  "summary": {
+    "211": {
+      "charging_domain": 4867,
+      "prepare_counts": {
+        "support": 261,
+        "dual": 779,
+        "OPEN": 339,
+        "source_count": 3488
+      },
+      "retained_demands": 339,
+      "raw_residual_profiles": 1848957,
+      "row_survivors": 206,
+      "projected_rows": 118,
+      "joint_counts": {
+        "survivor": 36,
+        "source_matching": 38,
+        "source_hall": 2,
+        "joint_total_source": 42
+      },
+      "exact_endpoint_certificates": 36,
+      "rhs_min": -997,
+      "rhs_max": -50,
+      "seconds": 26.34459686279297
+    },
+    "210": {
+      "charging_domain": 9251,
+      "prepare_counts": {
+        "OPEN": 901,
+        "source_count": 6990,
+        "support": 116,
+        "dual": 1244
+      },
+      "retained_demands": 901,
+      "raw_residual_profiles": 5765218,
+      "row_survivors": 2087,
+      "projected_rows": 1225,
+      "joint_counts": {
+        "survivor": 593,
+        "source_matching": 311,
+        "source_hall": 29,
+        "label_domain": 6,
+        "total_source": 58,
+        "joint_total_source": 222,
+        "pair_hall": 6
+      },
+      "exact_endpoint_certificates": 593,
+      "rhs_min": -999,
+      "rhs_max": -10,
+      "seconds": 628.7296168804169
+    }
+  },
+  "source_sha256": {
+    "fresh_prepare.py": "aa19667843c0b5e100fc4ae14c0bf5f43507c4734182447efe63599109be066b",
+    "fresh_rows.cpp": "5d44c6ac0413d29d74b30c51a5bf460fb6b41c26f5c27e8d9ac11eee6e124b56",
+    "fresh_joint.py": "61a4e64eee7b6c3f2d3685b3172313794b6b2f8d4e8e4232b48ebe835662da33",
+    "fresh_endpoint.py": "4e414cd2bb44c4c703ceecb8c5010ce0adb61beb43d035b8bc1c748cc351d6b6",
+    "run_independent.py": "7366b9233c911032658ddc388bd9c33b69c8d7afd17800895bbcedb3361431a7"
+  },
+  "evidence": {
+    "states": {
+      "file": "N29_INDEPENDENT_D16_STATES.json.gz",
+      "bytes": 12284,
+      "sha256": "15ed09b9ccbce4fae5b98a87bebc41aed8fe924c3bf7787abba43ea5bf4402ab",
+      "json_bytes": 533029,
+      "json_sha256": "34d163d48c5178acb9896c69d9e665c48d32de1ba4e029da8adc069a6c82e98b"
+    },
+    "certificates": {
+      "file": "N29_INDEPENDENT_D16_CERTIFICATES.json.gz",
+      "bytes": 174857,
+      "sha256": "5e9c35e8d6d688d37c3ac47a353d8df6aff3e35f25d62b1f5c602cbf105c48cd",
+      "json_bytes": 1176248,
+      "json_sha256": "1a6cf1f2a7813b83cf1a414eff4ef6558fb5a79cdffc53028281db30a9f9a9d0"
+    }
+  },
+  "independence": "Complete fresh finite implementation: demand generation/support/dual pruning, residual-row enumeration/screening, projected filter, joint propagation, strongest endpoint LP and exact certificate verification use only this directory source. No inherited Murty-Simon verifier/model module or prepared input is used at runtime.",
+  "status": "PASS; same-assistant independent implementation, not independent researcher reproduction or formal verification"
+}
