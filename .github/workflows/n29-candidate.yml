@@ -1,0 +1,80 @@
+name: Check n29 candidate hand arithmetic
+on:
+  push:
+    branches: [main]
+    paths:
+      - 'project/reviews/n29/2026-09-08-candidate-v1/PROOF.md'
+      - 'project/reviews/n29/2026-09-08-candidate-v1/README.md'
+      - 'project/reviews/n29/2026-09-08-candidate-v1/AUDIT.md'
+      - 'project/reviews/n29/2026-09-08-candidate-v1/check_all_degrees.py'
+      - 'project/reviews/n29/2026-09-08-candidate-v1/ALL_DEGREES_CHECK.json'
+      - 'project/reviews/n29/2026-09-08-candidate-v1/evidence/N29_D16_REPLAY.json'
+      - 'project/reviews/n29/2026-09-08-candidate-v1/evidence/DELTA16_REMOTE_REPLAY.json'
+      - 'project/reviews/n29/2026-09-08-candidate-v1/PROVENANCE.json'
+      - 'project/reviews/n29/2026-09-08-candidate-v1/MANIFEST.json'
+      - '.github/workflows/n29-candidate.yml'
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  exact-hand-arithmetic:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 5
+    steps:
+      - uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262
+        with: {persist-credentials: false}
+      - name: Reproduce exact non-Delta16 arithmetic
+        run: |
+          set -euo pipefail
+          P=project/reviews/n29/2026-09-08-candidate-v1
+          python3 --version
+          python3 -I -B "$P/check_all_degrees.py" > /tmp/n29-all-degrees.json
+          python3 - <<'PY'
+          import json
+          from pathlib import Path
+          p=Path('project/reviews/n29/2026-09-08-candidate-v1')
+          assert json.loads(Path('/tmp/n29-all-degrees.json').read_text()) == json.loads((p/'ALL_DEGREES_CHECK.json').read_text())
+          print('all-degree exact arithmetic: PASS')
+          PY
+      - name: Verify preserved Delta16 aggregate and source identities
+        run: |
+          set -euo pipefail
+          P=project/reviews/n29/2026-09-08-candidate-v1
+          python3 - <<'PY'
+          import json,subprocess
+          from pathlib import Path
+          p=Path('project/reviews/n29/2026-09-08-candidate-v1')
+          r=json.loads((p/'evidence/N29_D16_REPLAY.json').read_text())
+          q=json.loads((p/'evidence/DELTA16_REMOTE_REPLAY.json').read_text())
+          assert r['status']=='PASS' and r['final_survivors']==0
+          assert r['results']['211']['residual_rows']==1848957
+          assert r['results']['210']['residual_rows']==5765218
+          assert r['results']['211']['lp_counts']=={'typed':23,'shared':13}
+          assert r['results']['210']['lp_counts']=={'typed':378,'shared':213,'endpoint':2}
+          assert q['run_id']==34220977858 and q['conclusion']=='success'
+          expected={
+            'project/research/n29/2026-09-08-delta16-direct-v1/run.py':'3dfb0c63fcc3e8b2e874df2932a4e46e579ad909',
+            'project/research/n29/2026-09-08-delta16-direct-v1/scan_rows.cpp':'a76a03a897a66178eac654182325e9bfa29a7715',
+            'project/research/n29/2026-09-08-delta16-direct-v1/check_rows.cpp':'6ee1e890b14a053268847cca3509d0306e11a533',
+            '.github/workflows/n29-d16.yml':'d43001253314fd4546aed665a861389f1c25fce1'
+          }
+          for path,want in expected.items():
+              got=subprocess.check_output(['git','hash-object',path],text=True).strip()
+              assert got==want,(path,got,want)
+          print('Delta16 preserved aggregate/source identities: PASS')
+          PY
+      - name: Verify manifest payload blobs and sizes
+        run: |
+          set -euo pipefail
+          python3 - <<'PY'
+          import json,subprocess
+          from pathlib import Path
+          p=Path('project/reviews/n29/2026-09-08-candidate-v1')
+          m=json.loads((p/'MANIFEST.json').read_text())
+          for name,rec in m['files'].items():
+              q=p/name
+              assert q.stat().st_size==rec['bytes'],name
+              got=subprocess.check_output(['git','hash-object',str(q)],text=True).strip()
+              assert got==rec['git_blob'],(name,got,rec['git_blob'])
+          print('manifest payload identities: PASS')
+          PY
