@@ -1,0 +1,39 @@
+{
+  "schema": "n29-d16-remote-replay-v1",
+  "date": "2026-09-08",
+  "repository": "paullenz/MurtySimon25",
+  "workflow": ".github/workflows/n29-d16.yml",
+  "run_id": 34220977858,
+  "head_commit": "42954d3094860a218e6ba8a418c35b7061449b31",
+  "status": "completed",
+  "conclusion": "success",
+  "created_at": "2026-09-08T11:29:39Z",
+  "updated_at": "2026-09-08T11:32:04Z",
+  "runner": "ubuntu-24.04",
+  "dependencies": {
+    "scipy": "1.17.0 in isolated virtualenv",
+    "boost": "libboost-dev; multiprecision header explicitly checked",
+    "n28_antecedent_archive_sha256": "b753076ffc755066a0c57756be91cc5b265c163d869244d3aa65e3943799347b"
+  },
+  "artifact": {
+    "id": 10053791145,
+    "name": "n29-d16-complete",
+    "bytes": 598,
+    "digest": "sha256:f12315e31e46f1dc71760eb52bab23da0a915c80edee8c1190a0bfccb3f45ea2",
+    "downloaded_and_inspected_in_creation_session": true
+  },
+  "aggregate_sha256": "67a0d8219b30946602933c275b298a242c2c3fd77555979f1bf01cf11406a89e",
+  "aggregate": {
+    "status": "PASS",
+    "scope": "n=29 Delta=16 at m=211 and m=210",
+    "results": {
+      "211": {"demand_domain":4867,"residual_rows":1848957,"row_survivors":206,"projected_survivors":118,"joint_survivors":36,"lp_counts":{"shared":13,"typed":23},"final_survivors":0},
+      "210": {"demand_domain":9251,"residual_rows":5765218,"row_survivors":2087,"projected_survivors":1225,"joint_survivors":593,"lp_counts":{"shared":213,"typed":378,"endpoint":2},"final_survivors":0}
+    },
+    "all_partition_positions_exactly_covered": true,
+    "independent_row_scanner_agreement": true,
+    "final_survivors": 0
+  },
+  "independence_scope": "Clean execution environment and separate checking implementations, but same-assistant authorship.",
+  "mathematical_status": "CANDIDATE; graph lemmas remain hand proofs; independent review OPEN"
+}
