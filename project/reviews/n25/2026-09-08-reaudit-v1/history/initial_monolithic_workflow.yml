@@ -1,0 +1,92 @@
+name: Reaudit original n25 candidate
+on:
+  push:
+    branches: [main]
+    paths: ['.github/workflows/n25-reaudit.yml']
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  full-original:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 25
+    steps:
+      - uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262
+        with:
+          ref: af5a05689bee9bdbc50ee5a54974fe5c2a853f8f
+          persist-credentials: false
+      - name: Assemble pinned reviewer package
+        run: |
+          set -euo pipefail
+          mkdir audit-evidence
+          python3 --version | tee audit-evidence/python-version.txt
+          python3 - <<'PY'
+          import hashlib,json,zipfile
+          from pathlib import Path
+          p=Path('releases/n25-reviewer-v1')
+          r=json.loads((p/'ARCHIVE_RECEIPT.json').read_text())
+          parts=[]
+          for e in r['parts']:
+              b=(p/e['path']).read_bytes()
+              assert len(b)==e['bytes'] and hashlib.sha256(b).hexdigest()==e['sha256']
+              parts.append(b)
+          data=b''.join(parts)
+          assert len(data)==13002402 and hashlib.sha256(data).hexdigest()=='ff5a88f4202fb1e201f52e7e6ec0b50f88248cd43493eee78f120a3c1de15c3d'
+          archive=Path('audit-evidence/original-reviewer.zip');archive.write_bytes(data)
+          with zipfile.ZipFile(archive) as z:
+              for i in z.infolist():
+                  q=Path(i.filename)
+                  assert not q.is_absolute() and '..' not in q.parts and '\\' not in i.filename
+                  assert (i.external_attr>>16)&0o170000!=0o120000
+              assert z.testzip() is None
+              z.extractall('original')
+          with zipfile.ZipFile('audit-evidence/prior-audit-sources.zip','w',zipfile.ZIP_DEFLATED) as z:
+              p=Path('project/reviews/n25/2026-09-06-redteam-v1')
+              for f in sorted(p.rglob('*')):
+                  if f.is_file() and f.suffix!='.zip':z.write(f,f.relative_to(p))
+          print('Pinned reviewer archive: PASS')
+          PY
+      - uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02
+        with:
+          name: n25-reaudit-originals
+          path: |
+            audit-evidence/original-reviewer.zip
+            audit-evidence/prior-audit-sources.zip
+          retention-days: 30
+      - name: Replay complete original numerical route
+        run: |
+          set -euo pipefail
+          python3 -I -B original/N25_Reviewer_Package_v1/review_package.py --replay --output "$GITHUB_WORKSPACE/fresh-n25" | tee audit-evidence/full-replay.log
+      - name: Re-run earlier third arithmetic audit on original data
+        run: |
+          set -euo pipefail
+          mkdir -p third/audit
+          cp project/reviews/n25/2026-09-06-redteam-v1/arithmetic_attack.py third/audit/
+          ln -s "$GITHUB_WORKSPACE/fresh-n25/unpacked/N25_Full_Chain_Candidate_2026-09-06_v1" third/N25_Full_Chain_Candidate_2026-09-06_v1
+          ln -s "$GITHUB_WORKSPACE/fresh-n25/original/N25_Delta14_Document_Review" third/review_evidence
+          python3 -I -B third/audit/arithmetic_attack.py | tee audit-evidence/third-arithmetic.log
+          cp third/audit/arithmetic_results.json audit-evidence/third-arithmetic.json
+      - name: Preserve complete and partial small records
+        if: always()
+        run: |
+          python3 - <<'PY'
+          import zipfile
+          from pathlib import Path
+          with zipfile.ZipFile('audit-evidence/replay-records.zip','w',zipfile.ZIP_DEFLATED) as z:
+              if Path('fresh-n25').exists():
+                  for p in sorted(Path('fresh-n25').rglob('*')):
+                      if p.is_file() and p.stat().st_size<2000000 and p.suffix in ('.json','.log','.txt'):
+                          z.write(p,p.relative_to('fresh-n25'))
+          PY
+      - uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02
+        if: always()
+        with:
+          name: n25-reaudit-replay-records
+          path: |
+            audit-evidence/full-replay.log
+            audit-evidence/python-version.txt
+            audit-evidence/third-arithmetic.log
+            audit-evidence/third-arithmetic.json
+            audit-evidence/replay-records.zip
+          if-no-files-found: error
+          retention-days: 30

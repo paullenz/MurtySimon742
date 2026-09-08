@@ -1,0 +1,19 @@
+{
+  "run_id": 34212897538,
+  "job_id": 102017807363,
+  "workflow_commit": "3ffe7a409750d5688b574f73027652cb35f1ee17",
+  "checked_out_commit": "af5a05689bee9bdbc50ee5a54974fe5c2a853f8f",
+  "conclusion": "failure",
+  "exit_code": 143,
+  "completed": ["reviewer archive assembly and integrity", "three manifests and equality certificate checks", "original Delta14/157 exact replay and tests"],
+  "uncompleted": ["unpartitioned full newer-scope replay", "hosted third arithmetic step", "final logs artifact upload"],
+  "log_excerpts": [
+    "2026-09-08T09:58:25.7379474Z ALL_MANIFESTS_AND_EQUALITY_CERTIFICATES_CHECKED; top_level_files=23, candidate_files=55, original_review_files=30",
+    "2026-09-08T09:58:33.2517258Z original_delta14_157 EXACT_REPLAY_AND_TESTS_MATCH",
+    "2026-09-08T10:08:58.4464540Z ##[error]The runner has received a shutdown signal. This can happen when the runner service is stopped, or a manually started runner is canceled.",
+    "2026-09-08T10:08:58.4467266Z ##[error]Process completed with exit code 143."
+  ],
+  "first_two_excerpts_are_condensed_JSON": true,
+  "cause": "Runner shutdown; specific cause not established. Not evidence of a mathematical counterexample or successful full replay.",
+  "preserved_originals_artifact": {"id":10050531796,"bytes":13021145,"sha256":"88327cd62d00b533a2a197bf9230c6b053ee357cebfcd2b88e978dc9fc6ce9d5","downloaded_and_hash_checked":true}
+}
