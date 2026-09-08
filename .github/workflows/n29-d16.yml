@@ -15,6 +15,16 @@ jobs:
     steps:
       - uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262
         with: {persist-credentials: false}
+      - name: Pin discovery dependency
+        run: |
+          set -euo pipefail
+          python3 -m pip install --disable-pip-version-check --only-binary=:all: scipy==1.17.0
+          python3 - <<'PY'
+          import scipy,sys
+          print(sys.version)
+          print('scipy',scipy.__version__)
+          assert scipy.__version__=='1.17.0'
+          PY
       - name: Extract hash-pinned n28 machinery
         run: |
           set -euo pipefail
@@ -61,6 +71,15 @@ jobs:
         with: {persist-credentials: false}
       - uses: actions/download-artifact@d3f86a106a0bac45b974a628896c90dbdf5c8093
         with: {name: n29-d16-prepared, path: prepared}
+      - name: Pin discovery dependency
+        run: |
+          set -euo pipefail
+          python3 -m pip install --disable-pip-version-check --only-binary=:all: scipy==1.17.0
+          python3 - <<'PY'
+          import scipy
+          print('scipy',scipy.__version__)
+          assert scipy.__version__=='1.17.0'
+          PY
       - name: Extract inherited machinery
         run: |
           set -euo pipefail
