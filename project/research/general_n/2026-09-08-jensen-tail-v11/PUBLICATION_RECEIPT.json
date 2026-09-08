@@ -1,0 +1,54 @@
+{
+  "schema": "murty-simon-jensen-tail-v11-publication-receipt-v1",
+  "date": "2026-09-08",
+  "repository": "paullenz/MurtySimon25",
+  "branch": "main",
+  "proof_commit": "a755b0cd310e9f0b76b24e9ae763b1efad0805c2",
+  "checker_fix_commit": "e13a5d7b19593fd10615a4d14bbee9dc76e2390f",
+  "successful_exact_check_run": 34186382209,
+  "successful_exact_check_job": 101935433807,
+  "exact_check_artifact": 10040628575,
+  "exact_check_artifact_sha256": "68f288ac584e4b53945705e17e0ab83554151437ee925b3c6f7eeb3a2ba33b2e",
+  "readme_promotion_commit": "d5f40b4896f3451e03dce82f4acd0ce96d264777",
+  "literature_note_commit": "110e0dbeabac429da86210130cfbd5e33bdb6227",
+  "formal_local_premise_record_commit": "53f766895fc54864f83c0b8bfdc4b9720111ef1e",
+  "branch_readback_before_receipt": "53f766895fc54864f83c0b8bfdc4b9720111ef1e",
+  "candidate_results": {
+    "fixed_loss_scope": "a>=50",
+    "fixed_loss": "1/300",
+    "maximum_degree_implication": "n>=4 and Delta(G)>=0.6116 n implies e(G)<floor(n^2/4)"
+  },
+  "exact_algebra": {
+    "status": "PASS",
+    "sturm_sequence_length": 8,
+    "sturm_variations": [4,4],
+    "roots_in_target_interval": 0,
+    "small_a_cases": 48
+  },
+  "checker_correction": "The first workflow run failed because the checker encoded c<0.08579 as 3/2-1.41421<0.08579, although those rationals are equal. The strict mathematical inequality follows from sqrt(2)>1.41421. The corrected checker verifies the equality envelope plus the strict square-root bracket. No theorem constant or proof inequality changed.",
+  "formal_local_premise": {
+    "lean_version": "4.19.0",
+    "workflow_run": 34185985986,
+    "artifact_id": 10040506896,
+    "supplement_neighbours_other_label": "PASS",
+    "graph_wide_theorem_formalised": false
+  },
+  "targeted_literature": {
+    "published_2014_all_n_threshold": "0.7",
+    "published_2014_n_ge_2000_threshold": "0.6789",
+    "arxiv_2016_2018_v2_all_n_threshold": "approximately 0.6755",
+    "search_exhaustive": false,
+    "best_known_or_novelty_claimed": false
+  },
+  "scope": {
+    "finite_order_computations_used": false,
+    "fan_numerical_bound_used": false,
+    "weak_core_used": false,
+    "positive_surplus_residual_activity_used": false,
+    "frozen_finite_order_proofs_changed": false,
+    "governed_theorem_ledger_changed": false,
+    "independent_mathematical_review": "OPEN",
+    "novelty_assessment": "OPEN"
+  },
+  "receipt_note": "This receipt records preceding verified commits. Its own subsequent documentation-only commit is not self-embedded."
+}
