@@ -1,34 +1,102 @@
-name: N29 red-team endpoint certificate integrity
+name: N29 red-team preserve endpoint certificates
 on:
   push:
     branches: [main]
     paths:
-      - 'project/reviews/n29/2026-09-08-redteam-restart-v1/N29_ENDPOINT_CERTIFICATES.json.gz.b64'
       - '.github/workflows/n29-redteam-cert.yml'
   workflow_dispatch:
 permissions:
-  contents: read
+  contents: write
 jobs:
-  verify:
+  preserve:
     runs-on: ubuntu-24.04
-    timeout-minutes: 5
+    timeout-minutes: 10
     steps:
       - uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262
-        with: {persist-credentials: false}
-      - name: Decode and verify preserved endpoint certificates
+      - name: Pin solver dependency
+        run: |
+          set -euo pipefail
+          python3 -m venv .venv
+          .venv/bin/python -m pip install --disable-pip-version-check --only-binary=:all: scipy==1.17.0
+          .venv/bin/python -I - <<'PY'
+          import scipy
+          assert scipy.__version__=='1.17.0'
+          print('scipy',scipy.__version__)
+          PY
+      - name: Extract hash-pinned inherited source
+        run: |
+          set -euo pipefail
+          P=project/research/general_n/2026-09-07-direct-197-v8/MurtySimon_N28_197_Direct_v8.zip
+          echo 'b753076ffc755066a0c57756be91cc5b265c163d869244d3aa65e3943799347b  '"$P" | sha256sum -c -
+          unzip -q "$P" -d base
+          mv base/* basepkg
+      - name: Regenerate and exact-check the two endpoint-only cases
+        run: |
+          set -euo pipefail
+          .venv/bin/python -I - <<'PY'
+          from pathlib import Path
+          import sys,json,gzip,hashlib
+          base=Path('basepkg')
+          sys.path[:0]=[str(base/'exploration'),str(base/'src'),str(base/'dependencies')]
+          import joint,check_joint
+          from total_degree import build_total
+          from check_total import rebuild_total
+          from common_lp import certificate,verify
+          from check_constraints import translate,verify_named
+
+          specs=[
+            {'position':68,'s':[1]*4+[3]*8,'rho':[1]*12+[3]*4,'expected_rhs':-830},
+            {'position':801,'s':[3]*5+[4]*7,'rho':[1]*7+[3]*4+[4]*5,'expected_rhs':-355},
+          ]
+          cases=[]
+          for spec in specs:
+            s=spec['s'];rho=spec['rho'];t=2
+            state=joint.propagate(s,rho,t=t,dmax=10)
+            chk=check_joint.verify_row(s,rho,t=t,maxd=10)
+            assert state['kind']=='survivor' and chk is not None
+            for key,value in chk.items():
+              assert json.loads(json.dumps(state[key]))==value
+            m=build_total(s,rho,state,t=t)
+            ans=m.solve(); assert ans.status==2
+            c=certificate(m); assert c is not None
+            verify(m,c)
+            named=translate(m,c)
+            other=rebuild_total(s,rho,state,t=t)
+            assert set(m.names)==other.variables
+            verify_named(other,named)
+            assert named['rhs']==spec['expected_rhs']
+            cases.append({'position':spec['position'],'s':s,'rho':rho,'state':state,'certificate':named})
+            print('endpoint',spec['position'],'PASS rhs',named['rhs'])
+
+          bundle={'schema':'n29-redteam-endpoint-certificates-v1','date':'2026-09-08','cases':cases}
+          raw=(json.dumps(bundle,sort_keys=True,separators=(',',':'))+'\n').encode()
+          gz=gzip.compress(raw,mtime=0)
+          out=Path('project/reviews/n29/2026-09-08-redteam-restart-v1')
+          (out/'N29_ENDPOINT_CERTIFICATES.json.gz').write_bytes(gz)
+          manifest={
+            'schema':'n29-redteam-endpoint-certificate-manifest-v1',
+            'generator_head':None,
+            'archive_sha256':'b753076ffc755066a0c57756be91cc5b265c163d869244d3aa65e3943799347b',
+            'scipy':'1.17.0',
+            'cases':[{'position':68,'rhs':-830},{'position':801,'rhs':-355}],
+            'json_bytes':len(raw),'gzip_bytes':len(gz),
+            'json_sha256':hashlib.sha256(raw).hexdigest(),
+            'gzip_sha256':hashlib.sha256(gz).hexdigest(),
+            'verification':'joint state independently checked; endpoint Farkas certificate exactly verified against separately rebuilt named system'
+          }
+          (out/'N29_ENDPOINT_CERTIFICATES_MANIFEST.json').write_text(json.dumps(manifest,indent=2)+'\n')
+          print(json.dumps(manifest,indent=2))
+          PY
+      - name: Commit preserved evidence
         run: |
           set -euo pipefail
           D=project/reviews/n29/2026-09-08-redteam-restart-v1
-          base64 -d "$D/N29_ENDPOINT_CERTIFICATES.json.gz.b64" > /tmp/n29-endpoint.json.gz
-          echo 'e506de04c3f8f3e347721cecb934963e7300b5ca6f3a39b9fa894b1787ea85c4  /tmp/n29-endpoint.json.gz' | sha256sum -c -
-          gzip -dc /tmp/n29-endpoint.json.gz > /tmp/n29-endpoint.json
-          echo '7f43ab2413700044e9d5753c7a65a2cb0654fec2bc1f0a4edb8958c342dda938  /tmp/n29-endpoint.json' | sha256sum -c -
-          test "$(wc -c < /tmp/n29-endpoint.json.gz)" -eq 31151
-          test "$(wc -c < /tmp/n29-endpoint.json)" -eq 56595
-          python3 - <<'PY'
-          import json
-          d=json.load(open('/tmp/n29-endpoint.json'))
-          assert d['schema']=='n29-redteam-endpoint-certificates-v1'
-          assert len(d['cases'])==2
-          print('PASS: two preserved endpoint certificates; hashes and sizes verified')
-          PY
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add "$D/N29_ENDPOINT_CERTIFICATES.json.gz" "$D/N29_ENDPOINT_CERTIFICATES_MANIFEST.json"
+          if git diff --cached --quiet; then
+            echo 'Evidence already identical; nothing to commit.'
+            exit 0
+          fi
+          git commit -m 'Preserve clean-runner n29 endpoint certificates'
+          git push
