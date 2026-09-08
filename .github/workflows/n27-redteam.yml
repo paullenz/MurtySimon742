@@ -1,0 +1,101 @@
+name: Red-team original n27 candidate
+on:
+  push:
+    branches: [main]
+    paths: ['.github/workflows/n27-redteam.yml']
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  replay-original:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 25
+    steps:
+      - uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262
+        with:
+          ref: 7cd8a2ad562d69afe29634d1b888215750cb5e93
+          persist-credentials: false
+      - name: Assemble and inspect pinned original evidence
+        run: |
+          set -euo pipefail
+          mkdir audit-evidence
+          python3 --version | tee audit-evidence/python-version.txt
+          g++ --version > audit-evidence/compiler-version.txt
+          python3 -I -B releases/n27-candidate-v1/assemble_archive.py | tee audit-evidence/assembly.log
+          python3 - <<'PY'
+          import hashlib, json, zipfile
+          from pathlib import Path
+          archive=Path('releases/n27-candidate-v1/N27_Candidate_Evidence_2026-09-07_v1.zip')
+          assert hashlib.sha256(archive.read_bytes()).hexdigest()=='8381ed450859b9efa54fa6ec3c76bda786ec3fc31ec52732637c5346224caf3c'
+          with zipfile.ZipFile(archive) as z:
+              for i in z.infolist():
+                  p=Path(i.filename)
+                  assert not p.is_absolute() and '..' not in p.parts and not '\\' in i.filename
+                  assert (i.external_attr >> 16) & 0o170000 != 0o120000
+              assert z.testzip() is None
+              z.extractall('original')
+          with zipfile.ZipFile('audit-evidence/original-small-files.zip','w',zipfile.ZIP_DEFLATED) as z:
+              for p in sorted(Path('original').rglob('*')):
+                  if p.is_file() and p.stat().st_size < 2000000:
+                      z.write(p,p.relative_to('original'))
+          print('Original archive hash and safe extraction: PASS')
+          PY
+      - uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02
+        with:
+          name: n27-original-small-files
+          path: audit-evidence/original-small-files.zip
+          retention-days: 30
+      - name: Verify originals and rebuild complete arithmetic
+        run: |
+          set -euo pipefail
+          P=original/N27_Candidate_2026-09-07_v1
+          python3 -I -B "$P/replay.py" --verify-only | tee audit-evidence/verify-original.log
+          python3 -I -B "$P/replay.py" --replay --output "$GITHUB_WORKSPACE/fresh-n27" | tee audit-evidence/full-replay.log
+      - name: Compare regenerated evidence against frozen evidence
+        run: |
+          set -euo pipefail
+          python3 - <<'PY'
+          import hashlib,json,gzip
+          from pathlib import Path
+          old=Path('original/N27_Candidate_2026-09-07_v1'); new=Path('fresh-n27')
+          def digest(p):
+              h=hashlib.sha256()
+              op=gzip.open if p.suffix=='.gz' else open
+              with op(p,'rb') as f:
+                  for b in iter(lambda:f.read(1048576),b''):h.update(b)
+              return h.hexdigest()
+          records=[]
+          for p in sorted(new.iterdir()):
+              q=old/p.name
+              if not p.is_file() or not q.is_file() or p.suffix in ('.log','.py','.cpp') or not p.suffix:continue
+              if p.suffix=='.json':
+                  x=json.loads(p.read_text());y=json.loads(q.read_text())
+                  same=x==y
+                  mode='parsed JSON'
+              else:
+                  same=digest(p)==digest(q);mode='decompressed SHA256' if p.suffix=='.gz' else 'SHA256'
+              records.append({'path':p.name,'comparison':mode,'equal':same,'new_sha256':digest(p),'original_sha256':digest(q)})
+          result={'source_commit':'7cd8a2ad562d69afe29634d1b888215750cb5e93','comparisons':records,'all_equal':all(x['equal'] for x in records),'independent_authorship':False,'graph_lemmas_formally_verified':False}
+          Path('audit-evidence/comparison.json').write_text(json.dumps(result,indent=2)+'\n')
+          print(json.dumps(result,indent=2))
+          assert records and result['all_equal'], 'A regenerated output differs; inspect before assigning status'
+          PY
+      - name: Preserve completed and partial logs
+        if: always()
+        run: |
+          python3 - <<'PY'
+          import zipfile
+          from pathlib import Path
+          with zipfile.ZipFile('audit-evidence/replay-small-records.zip','w',zipfile.ZIP_DEFLATED) as z:
+              if Path('fresh-n27').exists():
+                  for p in sorted(Path('fresh-n27').rglob('*')):
+                      if p.is_file() and p.stat().st_size<2000000 and (p.suffix or p.name.endswith('.log')):
+                          z.write(p,p.relative_to('fresh-n27'))
+          PY
+      - uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02
+        if: always()
+        with:
+          name: n27-redteam-replay-records
+          path: audit-evidence/
+          if-no-files-found: error
+          retention-days: 30
