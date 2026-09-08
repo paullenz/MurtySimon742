@@ -110,7 +110,7 @@ Exact counts:
 
 For every one of the 250 charging-feasible profiles, combine its exact `rmax` from (3.2) with (2.1) and the threshold inequality `(T_h)`.
 
-Every profile violates `(T_h)` at some threshold. The exact split is not needed for the proof event; what matters is that all 250 are rejected by direct integer inequalities. The smallest strict threshold margin
+Every profile violates `(T_h)` at some threshold. The smallest strict threshold margin
 
 ```text
 2W_h - [zmax^2-zmax+h(h+1)]
@@ -202,22 +202,46 @@ m=225, Delta=16  -> (a,b,t)=(13,16,1).
 
 So the parameterisation experiment succeeds in a strong sense: increasing the source side from 16 to 17 does not require the n=29 residual-row or final LP machinery at all. The stronger surplus values `t=5,4` make the early structural inequalities sufficient.
 
-## 7. Reproduction
+## 7. Clean reproduction
 
-Run
+The clean GitHub Actions workflow
+
+```text
+.github/workflows/n30-d17.yml
+```
+
+completed successfully in run
+
+```text
+34292054922
+```
+
+at head commit
+
+```text
+6b9dc96487c4333c8846e778cf3a7fd59507548f.
+```
+
+That run:
+
+1. regenerated both complete demand domains;
+2. regenerated exact dual proposals for the 18 `m=225` residual profiles;
+3. verified the regenerated duals with a standard-library-only exact checker;
+4. independently reconstructed the 18-profile frontier and verified the committed 18 dual certificates exactly;
+5. asserted the exact 250 / 1,155 domain counts and zero final survivors.
+
+Different solver runs are not required to produce the same dual ray. The proof invariant is exact coverage of the 18-profile frontier plus direct verification of every integer dual. Earlier failed CI attempts that exposed this distinction, and one stale piece of certificate metadata, are preserved in [`CI_PROVENANCE_NOTE.md`](CI_PROVENANCE_NOTE.md).
+
+Local replay:
 
 ```bash
 python project/research/n30/2026-09-09-delta17-v1/delta17_kernel.py --output /tmp/n30-d17
+python -S project/research/n30/2026-09-09-delta17-v1/verify_committed.py \
+  /tmp/n30-d17/D17_EXACT_DUAL_CERTIFICATES.json \
+  /tmp/n30-d17/D17_KERNEL_REPORT.json
 ```
 
-The script writes:
-
-- `D17_KERNEL_REPORT.json`;
-- `D17_EXACT_DUAL_CERTIFICATES.json`.
-
-The committed report records zero survivors in both scopes and the SHA-256 of the exact dual file.
-
-A clean GitHub Actions workflow is supplied separately. Same-assistant replay is not external independent reproduction.
+Same-assistant clean replay is not external independent reproduction.
 
 ## 8. Review priority
 
