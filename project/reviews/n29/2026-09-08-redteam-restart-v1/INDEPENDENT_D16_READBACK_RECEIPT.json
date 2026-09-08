@@ -1,0 +1,44 @@
+{
+  "schema": "n29-independent-d16-readback-receipt-v1",
+  "date": "2026-09-08",
+  "repository": "paullenz/MurtySimon25",
+  "workflow": ".github/workflows/n29-independent-d16.yml",
+  "run_id": 34244187889,
+  "run_head": "ac7ed309740e8d56ac84a7dd9816729464091139",
+  "run_conclusion": "success",
+  "evidence_commit": "536b6a2c365d387d6b9c5729c4cd402ffb613c7d",
+  "artifact": {
+    "id": 10063767946,
+    "name": "n29-independent-d16-v1",
+    "bytes": 184981,
+    "sha256": "fb93fa713e35dd3b2ef72ec40acb3a1dbe3b672e482ea496c1ee0481779cfed7",
+    "downloaded_and_verified_in_audit_session": true
+  },
+  "states_payload": {
+    "file": "N29_INDEPENDENT_D16_STATES.json.gz",
+    "gzip_bytes": 12284,
+    "gzip_sha256": "15ed09b9ccbce4fae5b98a87bebc41aed8fe924c3bf7787abba43ea5bf4402ab",
+    "json_bytes": 533029,
+    "json_sha256": "34d163d48c5178acb9896c69d9e665c48d32de1ba4e029da8adc069a6c82e98b",
+    "gzip_integrity_checked": true,
+    "lfs_pointer_oid_and_size_match": true
+  },
+  "certificate_payload": {
+    "file": "N29_INDEPENDENT_D16_CERTIFICATES.json.gz",
+    "gzip_bytes": 174857,
+    "gzip_sha256": "5e9c35e8d6d688d37c3ac47a353d8df6aff3e35f25d62b1f5c602cbf105c48cd",
+    "json_bytes": 1176248,
+    "json_sha256": "1a6cf1f2a7813b83cf1a414eff4ef6558fb5a79cdffc53028281db30a9f9a9d0",
+    "gzip_integrity_checked": true,
+    "lfs_pointer_oid_and_size_match": true
+  },
+  "manifest_sha256_in_artifact": "45a4d250af96ad2d7d7f926cb0a09c5c3421acd59fb040dc175ef1cfdf49b27a",
+  "cross_checks": {
+    "artifact_digest_matches_download": true,
+    "artifact_payload_hashes_match_manifest": true,
+    "decompressed_json_hashes_match_manifest": true,
+    "git_lfs_oids_match_manifest_payload_hashes": true
+  },
+  "status": "PASS",
+  "scope_note": "This receipt verifies preservation/read-back of the fully fresh finite Delta=16 evidence. It does not convert same-assistant implementation into independent researcher reproduction or formal verification."
+}
