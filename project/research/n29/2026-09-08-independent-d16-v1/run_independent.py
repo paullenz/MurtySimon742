@@ -39,7 +39,11 @@ def projected(s,rho,r,t):
         if not bounds or min(bounds)>pairs:return False
     return True
 
-def worker(arg):
+def joint_worker(arg):
+    t,pos,row,s=arg
+    return {'position':pos,'row':row,'s':s,'state':propagate(s,row[2:],t)}
+
+def cert_worker(arg):
     t,rec=arg;m=build(rec['s'],rec['row'][2:],rec['state'],t);res=m.solve()
     if res.status!=2:return {'position':rec['position'],'error':'endpoint LP not infeasible','status':int(res.status)}
     c=certificate(m)
@@ -50,7 +54,7 @@ def worker(arg):
 def main():
     ap=argparse.ArgumentParser();ap.add_argument('--prepared',type=Path,required=True);ap.add_argument('--output',type=Path,required=True);ap.add_argument('--jobs',type=int,default=4);a=ap.parse_args();a.output.mkdir(parents=True,exist_ok=True)
     expected={3:{'domain':4867,'prep':{'support':261,'dual':779,'OPEN':339,'source_count':3488},'raw':1848957,'rows':206,'projected':118,'joint':{'survivor':36,'source_matching':38,'source_hall':2,'joint_total_source':42}},2:{'domain':9251,'prep':{'OPEN':901,'source_count':6990,'support':116,'dual':1244},'raw':5765218,'rows':2087,'projected':1225,'joint':{'survivor':593,'source_matching':311,'source_hall':29,'label_domain':6,'total_source':58,'joint_total_source':222,'pair_hall':6}}}
-    pc=profile_counts();allstates={};allcerts={};summary={}
+    pc=profile_counts();allstates={};allcerts={};summary={};ctx=get_context('fork')
     for t in (3,2):
         P=a.prepared/f't{t}';D=json.loads((P/'demands.json').read_text());rows=[];prep=json.loads((P/'FRESH_PREPARE_REPORT.json').read_text());scan=json.loads((P/'FRESH_ROWS_REPORT.json').read_text())
         assert charging_count(t)==expected[t]['domain']==prep['demand_domain'];assert prep['counts']==expected[t]['prep']
@@ -59,12 +63,11 @@ def main():
             row=list(map(int,line.split()));s=D[row[0]]['s']
             if projected(s,row[2:],row[1],t):rows.append(row)
         assert len(rows)==expected[t]['projected'];(P/'projected_survivors.json').write_text(json.dumps(rows,separators=(',',':'))+'\n')
-        counts=Counter();surv=[];start=time.time()
-        for pos,row in enumerate(rows):
-            s=D[row[0]]['s'];st=propagate(s,row[2:],t);counts[st['kind']]+=1
-            if st['kind']=='survivor':surv.append({'position':pos,'row':row,'s':s,'state':st})
-        assert dict(counts)==expected[t]['joint'],(t,counts);allstates[str(208+t)]=surv
-        with get_context('fork').Pool(a.jobs) as pool:cert=pool.map(worker,[(t,x) for x in surv])
+        start=time.time();args=[(t,pos,row,D[row[0]]['s']) for pos,row in enumerate(rows)]
+        with ctx.Pool(a.jobs) as pool:states=pool.map(joint_worker,args,chunksize=4)
+        counts=Counter(x['state']['kind'] for x in states);assert dict(counts)==expected[t]['joint'],(t,counts)
+        surv=[x for x in states if x['state']['kind']=='survivor'];allstates[str(208+t)]=surv
+        with ctx.Pool(a.jobs) as pool:cert=pool.map(cert_worker,[(t,x) for x in surv],chunksize=2)
         bad=[x for x in cert if 'error' in x];assert not bad,bad;allcerts[str(208+t)]=cert
         summary[str(208+t)]={'charging_domain':expected[t]['domain'],'prepare_counts':prep['counts'],'retained_demands':prep['retained_demands'],'raw_residual_profiles':raw,'row_survivors':scan['survivors'],'projected_rows':len(rows),'joint_counts':dict(counts),'exact_endpoint_certificates':len(cert),'rhs_min':min(x['rhs'] for x in cert),'rhs_max':max(x['rhs'] for x in cert),'seconds':time.time()-start}
         print(t,summary[str(208+t)],flush=True)
