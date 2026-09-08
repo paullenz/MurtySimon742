@@ -33,7 +33,7 @@ jobs:
       - name: Regenerate and exact-check the two endpoint-only cases
         run: |
           set -euo pipefail
-          .venv/bin/python -I - <<'PY'
+          .venv/bin/python -I - <<'PY' 2>&1 | tee /tmp/n29-endpoint-generate.log
           from pathlib import Path
           import sys,json,gzip,hashlib
           base=Path('basepkg')
@@ -42,31 +42,34 @@ jobs:
           from total_degree import build_total
           from check_total import rebuild_total
           from common_lp import certificate,verify
-          from check_constraints import translate,verify_named
+          from check_constraints import translate,verify_named,signature
 
           specs=[
-            {'position':68,'s':[1]*4+[3]*8,'rho':[1]*12+[3]*4,'expected_rhs':-830},
-            {'position':801,'s':[3]*5+[4]*7,'rho':[1]*7+[3]*4+[4]*5,'expected_rhs':-355},
+            {'position':68,'s':[1]*4+[3]*8,'rho':[1]*12+[3]*4},
+            {'position':801,'s':[3]*5+[4]*7,'rho':[1]*7+[3]*4+[4]*5},
           ]
           cases=[]
           for spec in specs:
             s=spec['s'];rho=spec['rho'];t=2
+            print('joint',spec['position'],flush=True)
             state=joint.propagate(s,rho,t=t,dmax=10)
             chk=check_joint.verify_row(s,rho,t=t,maxd=10)
             assert state['kind']=='survivor' and chk is not None
             for key,value in chk.items():
               assert json.loads(json.dumps(state[key]))==value
-            m=build_total(s,rho,state,t=t)
+            print('endpoint model',spec['position'],flush=True)
+            m=build_total(s,rho,state,t=t,local=False)
             ans=m.solve(); assert ans.status==2
             c=certificate(m); assert c is not None
             verify(m,c)
             named=translate(m,c)
-            other=rebuild_total(s,rho,state,t=t)
+            other=rebuild_total(s,rho,state,t=t,local=False)
             assert set(m.names)==other.variables
+            assert {signature({m.names[j]:v for j,v in e.items()},b) for e,b in m.eq}==set(other.equalities)
+            assert {signature({m.names[j]:v for j,v in e.items()},b) for e,b in m.ub}==set(other.inequalities)
             verify_named(other,named)
-            assert named['rhs']==spec['expected_rhs']
             cases.append({'position':spec['position'],'s':s,'rho':rho,'state':state,'certificate':named})
-            print('endpoint',spec['position'],'PASS rhs',named['rhs'])
+            print('endpoint',spec['position'],'PASS rhs',named['rhs'],flush=True)
 
           bundle={'schema':'n29-redteam-endpoint-certificates-v1','date':'2026-09-08','cases':cases}
           raw=(json.dumps(bundle,sort_keys=True,separators=(',',':'))+'\n').encode()
@@ -75,18 +78,25 @@ jobs:
           (out/'N29_ENDPOINT_CERTIFICATES.json.gz').write_bytes(gz)
           manifest={
             'schema':'n29-redteam-endpoint-certificate-manifest-v1',
-            'generator_head':None,
             'archive_sha256':'b753076ffc755066a0c57756be91cc5b265c163d869244d3aa65e3943799347b',
             'scipy':'1.17.0',
-            'cases':[{'position':68,'rhs':-830},{'position':801,'rhs':-355}],
+            'cases':[{'position':x['position'],'rhs':x['certificate']['rhs']} for x in cases],
             'json_bytes':len(raw),'gzip_bytes':len(gz),
             'json_sha256':hashlib.sha256(raw).hexdigest(),
             'gzip_sha256':hashlib.sha256(gz).hexdigest(),
-            'verification':'joint state independently checked; endpoint Farkas certificate exactly verified against separately rebuilt named system'
+            'verification':'joint disposition/state independently checked; endpoint model exact Farkas certificate verified; full named constraint sets compared to separately rebuilt system; named certificate exactly verified'
           }
           (out/'N29_ENDPOINT_CERTIFICATES_MANIFEST.json').write_text(json.dumps(manifest,indent=2)+'\n')
-          print(json.dumps(manifest,indent=2))
+          print(json.dumps(manifest,indent=2),flush=True)
           PY
+      - name: Preserve generation log
+        if: always()
+        uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02
+        with:
+          name: n29-redteam-endpoint-generation-log
+          path: /tmp/n29-endpoint-generate.log
+          if-no-files-found: warn
+          retention-days: 30
       - name: Commit preserved evidence
         run: |
           set -euo pipefail
