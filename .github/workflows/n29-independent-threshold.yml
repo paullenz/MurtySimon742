@@ -1,0 +1,165 @@
+name: N29 independent Delta16 threshold-flow replay
+on:
+  push:
+    branches: [main]
+    paths:
+      - 'project/reviews/n29/2026-09-08-redteam-restart-v1/independent_threshold_model.py'
+      - 'project/reviews/n29/2026-09-08-redteam-restart-v1/run_independent_threshold.py'
+      - 'project/reviews/n29/2026-09-08-redteam-restart-v1/INDEPENDENT_THRESHOLD_MODEL.md'
+      - '.github/workflows/n29-independent-threshold.yml'
+  workflow_dispatch:
+permissions:
+  contents: write
+jobs:
+  prepare-inputs:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262
+      - name: Pin early-stage discovery dependency
+        run: |
+          set -euo pipefail
+          python3 -m venv .venv
+          .venv/bin/python -m pip install --disable-pip-version-check --only-binary=:all: scipy==1.17.0
+          .venv/bin/python -I - <<'PY'
+          import scipy
+          assert scipy.__version__=='1.17.0'
+          print('scipy',scipy.__version__)
+          PY
+      - name: Extract hash-pinned early-stage machinery
+        run: |
+          set -euo pipefail
+          P=project/research/general_n/2026-09-07-direct-197-v8/MurtySimon_N28_197_Direct_v8.zip
+          echo 'b753076ffc755066a0c57756be91cc5b265c163d869244d3aa65e3943799347b  '"$P" | sha256sum -c -
+          unzip -q "$P" -d base
+          mv base/* basepkg
+      - name: Regenerate published projected frontier
+        run: |
+          set -euo pipefail
+          A=project/research/n29/2026-09-08-delta16-direct-v1
+          g++ -O3 -std=c++17 "$A/scan_rows.cpp" -o scan_rows
+          g++ -O3 -std=c++17 "$A/check_rows.cpp" -o check_rows
+          for t in 3 2; do
+            mkdir -p prepared/t$t
+            .venv/bin/python -I -B "$A/run.py" prepare --base basepkg --t $t --output prepared/t$t
+            ./scan_rows prepared/t$t/demands.txt prepared/t$t/row_survivors.txt prepared/t$t/row_bands.txt $t > prepared/t$t/SCAN_REPORT.json
+            ./check_rows prepared/t$t/demands.txt prepared/t$t/check_row_survivors.txt prepared/t$t/check_row_bands.txt $t > prepared/t$t/CHECK_ROWS_REPORT.json
+            cmp prepared/t$t/row_survivors.txt prepared/t$t/check_row_survivors.txt
+            cmp prepared/t$t/row_bands.txt prepared/t$t/check_row_bands.txt
+            .venv/bin/python -I -B "$A/run.py" projected --t $t --root prepared/t$t
+          done
+          python3 - <<'PY'
+          import json
+          assert json.load(open('prepared/t3/PROJECTED_REPORT.json'))['survivors']==118
+          assert json.load(open('prepared/t2/PROJECTED_REPORT.json'))['survivors']==1225
+          print('published projected frontier reproduced: 118 / 1225')
+          PY
+      - uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02
+        with:
+          name: n29-independent-threshold-inputs
+          path: prepared/
+          if-no-files-found: error
+          retention-days: 30
+  independent-shards:
+    needs: prepare-inputs
+    runs-on: ubuntu-24.04
+    timeout-minutes: 15
+    strategy:
+      fail-fast: false
+      matrix:
+        include:
+          - {t: 3, shard: 0, shards: 1}
+          - {t: 2, shard: 0, shards: 5}
+          - {t: 2, shard: 1, shards: 5}
+          - {t: 2, shard: 2, shards: 5}
+          - {t: 2, shard: 3, shards: 5}
+          - {t: 2, shard: 4, shards: 5}
+    steps:
+      - uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262
+      - uses: actions/download-artifact@d3f86a106a0bac45b974a628896c90dbdf5c8093
+        with:
+          name: n29-independent-threshold-inputs
+          path: prepared
+      - name: Pin independent-model solver dependency
+        run: |
+          set -euo pipefail
+          python3 -m venv .venv
+          .venv/bin/python -m pip install --disable-pip-version-check --only-binary=:all: scipy==1.17.0
+      - name: Run standalone exact-certificate shard
+        run: |
+          set -euo pipefail
+          D=project/reviews/n29/2026-09-08-redteam-restart-v1
+          mkdir -p reports
+          .venv/bin/python -I -B "$D/run_independent_threshold.py" \
+            --root prepared/t${{ matrix.t }} --t ${{ matrix.t }} \
+            --shard ${{ matrix.shard }} --shards ${{ matrix.shards }} --workers 4 \
+            --output reports/cert-t${{ matrix.t }}-s${{ matrix.shard }}.json.gz
+      - uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02
+        with:
+          name: n29-independent-threshold-t${{ matrix.t }}-s${{ matrix.shard }}
+          path: reports/
+          if-no-files-found: error
+          retention-days: 30
+  aggregate-and-preserve:
+    needs: [prepare-inputs, independent-shards]
+    runs-on: ubuntu-24.04
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262
+      - uses: actions/download-artifact@d3f86a106a0bac45b974a628896c90dbdf5c8093
+        with:
+          name: n29-independent-threshold-inputs
+          path: prepared
+      - uses: actions/download-artifact@d3f86a106a0bac45b974a628896c90dbdf5c8093
+        with:
+          pattern: 'n29-independent-threshold-t*-s*'
+          path: shard-reports
+          merge-multiple: true
+      - name: Install checker dependency
+        run: |
+          set -euo pipefail
+          python3 -m venv .venv
+          .venv/bin/python -m pip install --disable-pip-version-check --only-binary=:all: scipy==1.17.0
+      - name: Aggregate and independently re-verify every exact certificate
+        run: |
+          set -euo pipefail
+          D=project/reviews/n29/2026-09-08-redteam-restart-v1
+          D="$D" .venv/bin/python -I - <<'PY'
+          import gzip,hashlib,json,multiprocessing as mp,os,sys
+          from pathlib import Path
+          D=Path(os.environ['D']);sys.path.insert(0,str(D))
+          from independent_threshold_model import build,verify_certificate
+          outdir=D
+          summaries={}
+          for t,expected in [(3,118),(2,1225)]:
+              demands=json.load(open(f'prepared/t{t}/demands.json'));rows=json.load(open(f'prepared/t{t}/projected_survivors.json'))
+              records=[]
+              for p in sorted(Path('shard-reports').glob(f'cert-t{t}-s*.json.gz')):
+                  records.extend(json.loads(gzip.decompress(p.read_bytes())))
+              records.sort(key=lambda x:x['position'])
+              assert len(records)==expected==len(rows)
+              assert [x['position'] for x in records]==list(range(expected))
+              for rec in records:
+                  assert rec['certificate'] is not None
+                  row=rows[rec['position']];m=build(demands[row[0]]['s'],row[2:],t);verify_certificate(m,rec['certificate'])
+              rhs=[x['certificate']['rhs'] for x in records]
+              raw=(json.dumps(records,separators=(',',':'))+'\n').encode();gz=gzip.compress(raw,mtime=0)
+              name=outdir/f'INDEPENDENT_THRESHOLD_T{t}_CERTIFICATES.json.gz';name.write_bytes(gz)
+              summaries[str(208+t)]={'t':t,'projected_rows':expected,'exact_rejections':expected,'final_survivors':0,'rhs_min':min(rhs),'rhs_max':max(rhs),'json_sha256':hashlib.sha256(raw).hexdigest(),'gzip_sha256':hashlib.sha256(gz).hexdigest(),'json_bytes':len(raw),'gzip_bytes':len(gz)}
+          report={'schema':'n29-independent-threshold-flow-complete-v1','date':'2026-09-08','status':'PASS','scope':'n=29 Delta=16; standalone final-stage cumulative-threshold/source-q-flow LP','results':summaries,'projected_frontier_source':'regenerated published N29 projected frontier; 118 at m=211 and 1225 at m=210','independent_model_imports_inherited_final_code':False,'every_exclusion_exact_integer_farkas_reverified_after_aggregation':True,'final_survivors':0,'external_independence':False,'mathematical_status':'CANDIDATE; independent expert review remains OPEN'}
+          (outdir/'INDEPENDENT_THRESHOLD_REPORT.json').write_text(json.dumps(report,indent=2)+'\n')
+          print(json.dumps(report,indent=2))
+          PY
+      - name: Commit independent certificate evidence
+        run: |
+          set -euo pipefail
+          D=project/reviews/n29/2026-09-08-redteam-restart-v1
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add "$D/INDEPENDENT_THRESHOLD_T2_CERTIFICATES.json.gz" "$D/INDEPENDENT_THRESHOLD_T3_CERTIFICATES.json.gz" "$D/INDEPENDENT_THRESHOLD_REPORT.json"
+          if git diff --cached --quiet; then
+            echo 'Independent evidence already identical.'
+            exit 0
+          fi
+          git commit -m 'Preserve independent n29 Delta16 threshold-flow certificates'
+          git push
