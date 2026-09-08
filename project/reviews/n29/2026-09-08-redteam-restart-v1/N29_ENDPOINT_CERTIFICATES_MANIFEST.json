@@ -1,0 +1,20 @@
+{
+  "schema": "n29-redteam-endpoint-certificate-manifest-v1",
+  "archive_sha256": "b753076ffc755066a0c57756be91cc5b265c163d869244d3aa65e3943799347b",
+  "scipy": "1.17.0",
+  "cases": [
+    {
+      "position": 68,
+      "rhs": -830
+    },
+    {
+      "position": 801,
+      "rhs": -355
+    }
+  ],
+  "json_bytes": 56591,
+  "gzip_bytes": 31152,
+  "json_sha256": "8e6e96df7b953e9875fd55c93bdecbdfa27971f4a86d3aefa5f0f383e6422e34",
+  "gzip_sha256": "38e9573c690a535b096c6a75b1c6a96c573b67d5e7582160b46dc35ae053a524",
+  "verification": "joint disposition/state independently checked; endpoint model exact Farkas certificate verified; full named constraint sets compared to separately rebuilt system; named certificate exactly verified"
+}
