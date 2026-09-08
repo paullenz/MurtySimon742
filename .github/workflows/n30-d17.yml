@@ -1,0 +1,68 @@
+name: N30 Delta17 early-kernel replay
+
+on:
+  push:
+    paths:
+      - 'project/research/n30/2026-09-09-delta17-v1/**'
+      - '.github/workflows/n30-d17.yml'
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  replay:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.13'
+
+      - name: Install pinned proposal solver
+        run: python -m pip install --disable-pip-version-check 'scipy==1.17.0'
+
+      - name: Regenerate both Delta17 scopes
+        run: |
+          mkdir -p /tmp/n30-d17
+          python project/research/n30/2026-09-09-delta17-v1/delta17_kernel.py --output /tmp/n30-d17
+
+      - name: Standard-library exact verification of regenerated duals
+        run: |
+          python -S project/research/n30/2026-09-09-delta17-v1/verify_committed.py \
+            /tmp/n30-d17/D17_EXACT_DUAL_CERTIFICATES.json \
+            /tmp/n30-d17/D17_KERNEL_REPORT.json
+
+      - name: Standard-library exact verification of committed duals
+        run: |
+          python -S project/research/n30/2026-09-09-delta17-v1/verify_committed.py \
+            project/research/n30/2026-09-09-delta17-v1/D17_EXACT_DUAL_CERTIFICATES.json \
+            project/research/n30/2026-09-09-delta17-v1/D17_KERNEL_REPORT.json
+
+      - name: Assert exact scope counts
+        run: |
+          python - <<'PY'
+          import json
+          p='/tmp/n30-d17/D17_KERNEL_REPORT.json'
+          r=json.load(open(p))
+          assert r['results']['226']['charging_feasible_profiles']==250
+          assert r['results']['226']['counts']=={'threshold':250}
+          assert r['results']['226']['final_survivors']==0
+          assert r['results']['225']['charging_feasible_profiles']==1155
+          assert r['results']['225']['counts']=={'dual':18,'source_count':67,'threshold':1070}
+          assert r['results']['225']['final_survivors']==0
+          assert r['results']['225']['minimum_dual_margin']>=3
+          assert r['results']['225']['minimum_threshold_margin']>=2
+          assert r['results']['226']['minimum_threshold_margin']>=2
+          print('N30 Delta17 exact early-kernel replay PASS')
+          PY
+
+      - name: Upload clean replay evidence
+        uses: actions/upload-artifact@v4
+        with:
+          name: n30-d17-early-kernel
+          path: |
+            /tmp/n30-d17/D17_KERNEL_REPORT.json
+            /tmp/n30-d17/D17_EXACT_DUAL_CERTIFICATES.json
