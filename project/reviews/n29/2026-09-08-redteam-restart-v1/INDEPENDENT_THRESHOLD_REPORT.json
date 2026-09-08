@@ -1,0 +1,38 @@
+{
+  "schema": "n29-independent-threshold-flow-complete-v1",
+  "date": "2026-09-08",
+  "status": "PASS",
+  "scope": "n=29 Delta=16; standalone final-stage cumulative-threshold/source-q-flow LP",
+  "results": {
+    "211": {
+      "t": 3,
+      "projected_rows": 118,
+      "exact_rejections": 118,
+      "final_survivors": 0,
+      "rhs_min": -999503,
+      "rhs_max": -42,
+      "json_sha256": "f2288176bea04570c0edb5cc043618dd0d423191e99537248ce76b37a0d87b0c",
+      "gzip_sha256": "f20e0d36cfe88c5bb455d8942d32f7ccf20b8bbb83c5e5ae8a7166d5deacf977",
+      "json_bytes": 472676,
+      "gzip_bytes": 129527
+    },
+    "210": {
+      "t": 2,
+      "projected_rows": 1225,
+      "exact_rejections": 1225,
+      "final_survivors": 0,
+      "rhs_min": -999874,
+      "rhs_max": -2,
+      "json_sha256": "8cbbae35598a07092c61d7433247708f6132bd816c663e0e3a10f38e661b36cc",
+      "gzip_sha256": "9b608313fb731639d0cba5e4d8a059027cb25703322d90710b7dbef3e16e0230",
+      "json_bytes": 5097077,
+      "gzip_bytes": 1402482
+    }
+  },
+  "projected_frontier_source": "regenerated published N29 projected frontier; 118 at m=211 and 1225 at m=210",
+  "independent_model_imports_inherited_final_code": false,
+  "every_exclusion_exact_integer_farkas_reverified_after_aggregation": true,
+  "final_survivors": 0,
+  "external_independence": false,
+  "mathematical_status": "CANDIDATE; independent expert review remains OPEN"
+}
