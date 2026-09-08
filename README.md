@@ -2,6 +2,16 @@
 
 Candidate proofs and reproducible research. **Updated 8 September 2026. Independent mathematical review, novelty assessment and independent computational reproduction remain OPEN.** Repository publication and internal replay are not external acceptance or a proof of the unrestricted conjecture.
 
+**External reviewers:** please start with [`START_HERE_FOR_REVIEWERS.md`](START_HERE_FOR_REVIEWERS.md). The project actively welcomes hostile review, counterexamples, literature corrections and independent reproduction. GitHub Issues are the preferred place to report a suspected flaw.
+
+## Public-review note
+
+The repository intentionally preserves failed approaches and audit findings rather than silently rewriting them.
+
+During the restarted hostile audit of the additional n=29 `Delta=16` cumulative-threshold verifier, a **real normalization bug** was found in its first version: a label-group multiplicity was counted twice. The v1 cumulative-threshold certificates are therefore **invalid as proof evidence** and the historical v1 source is retained only for auditability. The defect did not affect the original n=29 direct route or the separate fully fresh implementation.
+
+A corrected `v2` model was then replayed cleanly and again produced zero survivors. The audit subsequently reduced the proof-critical `Delta=16` computation to a smaller trusted kernel, whose clean replay also produced zero survivors with every late exclusion rechecked by exact integer Farkas arithmetic. See the [public-release audit](project/reviews/n29/2026-09-08-redteam-restart-v1/PUBLIC_RELEASE_AUDIT.md) and [minimal-kernel report](project/reviews/n29/2026-09-08-redteam-restart-v1/MINIMAL_KERNEL_REPORT.json).
+
 ## Fixed-order candidate results
 
 ### n=25
@@ -16,7 +26,7 @@ Candidate proofs and reproducible research. **Updated 8 September 2026. Independ
 
 **Candidate:** `e(G) <= 196`, equality only `K(14,14)`. [Reviewer release](releases/n28-reviewer-v1/README.md) · [direct 197-edge exclusion](project/research/general_n/2026-09-07-direct-197-v8/README.md) · [red-team report](project/reviews/n28/2026-09-07-redteam-v1/REPORT.md). Independent review remains open.
 
-### n=29 — new complete candidate
+### n=29 — complete candidate
 
 **Candidate:**
 
@@ -25,9 +35,25 @@ e(G) <= 210 = floor(29^2/4),
 with equality exactly K(14,15).
 ```
 
-[Full proof and replay guide](project/reviews/n29/2026-09-08-candidate-v1/README.md) · [candidate manuscript](project/reviews/n29/2026-09-08-candidate-v1/PROOF.md).
+[Full proof and replay guide](project/reviews/n29/2026-09-08-candidate-v1/README.md) · [candidate manuscript](project/reviews/n29/2026-09-08-candidate-v1/PROOF.md) · [restarted red-team audit](project/reviews/n29/2026-09-08-redteam-restart-v1/N29_RED_TEAM_RESTART.md) · [public-release audit](project/reviews/n29/2026-09-08-redteam-restart-v1/PUBLIC_RELEASE_AUDIT.md).
 
-The proof does **not** depend on the later general `293/500` candidate theorem. Fan's cited strict bound leaves only 211 edges to exclude. `Delta=15` is handled by a witness-deficit count, which also forces `K(14,15)` at 210. A fresh `Delta=16` direct calculation excludes both 211 and 210: its clean-runner replay examines 1,848,957 and 5,765,218 residual rows respectively, with two independent row scanners and exact integer Farkas certificates; final survivors are zero. `Delta=17` is excluded by a short pointwise charging bound, `Delta=18..27` by the residual h-index inequality, and a universal vertex gives a star. **Status: complete candidate; independent mathematical review OPEN.**
+The proof does **not** depend on the later general `293/500` candidate theorem. Fan's cited strict bound leaves only 211 edges to exclude. `Delta=15` is handled by a witness-deficit count, which also forces `K(14,15)` at 210. `Delta=17` is excluded by a short pointwise charging bound, `Delta=18..27` by the residual h-index inequality, and a universal vertex gives a star.
+
+The difficult `Delta=16` case has several same-assistant computational routes. The preferred proof-critical route is now the **minimal trusted kernel**:
+
+```text
+quasi-edge / selected-residual construction
+  -> residual activity
+  -> charging and threshold-capacity inequalities
+  -> exact source-capacity dual pruning
+  -> simple residual-row Hall/refinement scan
+  -> corrected cumulative-threshold/source-q-flow LP
+  -> exact integer Farkas verification
+```
+
+Its clean replay retains 72 demand profiles and 126 residual rows at 211 edges, and 367 demand profiles and 1,467 residual rows at 210 edges. All 1,593 late residual rows receive exact Farkas contradictions and final survivors are zero. This route does **not** use the old projected screen, joint propagator, shared LP, typed LP, old endpoint LP or older pair-capacity support formula.
+
+**Status: complete candidate; independent mathematical review OPEN.**
 
 ## General structural programme
 
@@ -39,7 +65,7 @@ The [profile-integral proof](project/research/general_n/2026-09-08-profile-integ
 n >= 6 and Delta(G) >= (293/500)n  ==>  e(G) < floor(n^2/4).
 ```
 
-It proves `t < a^2/24+a/8` by retaining the demand profile across thresholds. [Replay and audit](project/research/general_n/2026-09-08-profile-integral-v1/README.md). This remains a general structural candidate, not a dependency of the new n=29 proof.
+It proves `t < a^2/24+a/8` by retaining the demand profile across thresholds. [Replay and audit](project/research/general_n/2026-09-08-profile-integral-v1/README.md). This remains a general structural candidate, not a dependency of the n=29 proof.
 
 ### Layer-sum 13/22 and earlier structural checkpoints
 
@@ -52,13 +78,21 @@ The [13/22 layer-sum proof](project/research/general_n/2026-09-08-layer-sum-v1/P
 | n=25 | [Reviewer manuscript](releases/n25-reviewer-v1/N25_Reviewer_Manuscript_v1.pdf) | [Reviewer package](releases/n25-reviewer-v1/README.md) |
 | n=27 | [Proof](project/reviews/n27/2026-09-07-candidate-v1/PROOF.md) | [Evidence](releases/n27-candidate-v1/README.md) |
 | n=28 | [Mathematical manuscript](releases/n28-reviewer-v1/N28_Reviewer_Manuscript_v1.pdf) | [Verification companion](releases/n28-reviewer-v1/N28_Verification_Companion_v1.pdf) |
-| n=29 | [Candidate proof](project/reviews/n29/2026-09-08-candidate-v1/PROOF.md) | [Replay guide](project/reviews/n29/2026-09-08-candidate-v1/README.md) |
+| n=29 | [Candidate proof](project/reviews/n29/2026-09-08-candidate-v1/PROOF.md) | [Minimal-kernel audit](project/reviews/n29/2026-09-08-redteam-restart-v1/PUBLIC_RELEASE_AUDIT.md) |
 | General 293/500 | [Proof](project/research/general_n/2026-09-08-profile-integral-v1/PROOF.md) | [Audit](project/research/general_n/2026-09-08-profile-integral-v1/AUDIT.md) |
 
 ## Governance and limits
 
 **No complete order above 29, proof through n=1,000, unrestricted all-order solution, novelty determination, full formal verification or external endorsement is claimed.** Numerical states are necessary-condition systems, not graphs. Saved actual-graph regressions contain no positive-surplus graph, so universal correctness depends on the written structural proofs, not extrapolation from samples.
 
-Paul Lenz directed the project; ChatGPT/Geeps supplied mathematical development, software, manuscripts and internal checks. Frozen n=25/n=27/n=28 proofs, original archives and the governed theorem ledger remain unchanged by the n=29 work.
+Paul Lenz directed the project; ChatGPT/Geeps supplied mathematical development, software, manuscripts and internal checks. Same-assistant independent implementations are explicitly **not** described as external independent review. Frozen n=25/n=27/n=28 proofs, original archives and the governed theorem ledger remain preserved.
 
 The README immediately preceding the n=29 publication is preserved verbatim at `project/reviews/history/README_before_n29_candidate_2026-09-08.md`. See [standing orders](project/N25_PROJECT_STANDING_ORDERS.md), [repository sync policy](project/REPO_SYNC_POLICY.md), and the [theorem ledger](repro-v1/ledger/theorem_ledger.json).
+
+## Review and corrections
+
+Please use the [reviewer starting point](START_HERE_FOR_REVIEWERS.md) and open a GitHub Issue for suspected errors. The repository includes a mathematical-review issue template. Corrections should preserve the original failure evidence and state clearly which downstream claims are affected.
+
+## Licence
+
+MIT — see [`LICENSE`](LICENSE).
