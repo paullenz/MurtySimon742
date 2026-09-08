@@ -1,0 +1,34 @@
+{
+  "status": "PASS",
+  "groups": [
+    "control",
+    "equality_k2to5",
+    "k1_early",
+    "k1_late",
+    "k1_r26_s0",
+    "k1_r26_s1",
+    "k1_r26_s2",
+    "k1_r27_s0",
+    "k1_r27_s1",
+    "k1_r27_s2",
+    "k1_r28_s0",
+    "k1_r28_s1",
+    "k1_r28_s2",
+    "k1_r29_s0",
+    "k1_r29_s1",
+    "k1_r29_s2"
+  ],
+  "scopes": {
+    "d14_157": {"states": 59264, "columns": 1480},
+    "d15_157": {"states": 108, "columns": 0},
+    "d15_156": {"states": 211, "columns": 0},
+    "d14_156": {"states": 82452, "columns": 188520},
+    "d14_156_k1": {"states": 401543, "columns": 3252212}
+  },
+  "outer_states": 543578,
+  "labelled_columns": 3442212,
+  "every_shard_matched_both_generators_and_classifiers": true,
+  "partition": "disjoint scope/r bands, or exhaustive SHA256(key) modulo 3",
+  "unpartitioned_original_wrapper_completed": false,
+  "external_review": false
+}
