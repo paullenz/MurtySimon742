@@ -1,9 +1,14 @@
 #!/usr/bin/env python3
-"""Standard-library verifier for committed n30 Delta17 exact duals."""
+"""Standard-library verifier for committed n30 Delta17 exact duals.
+
+The proof invariant is semantic coverage + exact validity, not identity with a
+fresh solver-proposed dual ray. Different valid Farkas/Hall duals may be found
+on different solver runs for the same infeasible profile.
+"""
 from fractions import Fraction
 from math import comb
 from pathlib import Path
-import hashlib,json,math,sys
+import json,math,sys
 
 A=12
 B=17
@@ -71,8 +76,10 @@ def main():
         raise SystemExit("verify_committed.py D17_EXACT_DUAL_CERTIFICATES.json D17_KERNEL_REPORT.json")
     cp=Path(sys.argv[1]); rp=Path(sys.argv[2])
     doc=json.loads(cp.read_text()); report=json.loads(rp.read_text())
-    semantic=json.dumps(doc,sort_keys=True,separators=(",",":"))
-    assert hashlib.sha256(semantic.encode()).hexdigest()==report["dual_certificate_semantic_sha256"]
+    assert report["schema"]=="n30-d17-early-kernel-v1"
+    assert report["results"]["225"]["charging_feasible_profiles"]==1155
+    assert report["results"]["225"]["final_survivors"]==0
+
     pending=[]
     domain=0
     for s in profiles():
@@ -82,10 +89,16 @@ def main():
             pending.append(tuple(s))
     assert domain==1155
     assert len(pending)==18
+
     certs=doc["certificates"]
     assert len(certs)==18
-    assert sorted(tuple(c["s"]) for c in certs)==sorted(pending)
+    # Coverage, not ray identity: exactly one committed certificate per exact
+    # residual profile left by the hand/threshold cuts.
+    cert_profiles=[tuple(c["s"]) for c in certs]
+    assert len(set(cert_profiles))==18
+    assert sorted(cert_profiles)==sorted(pending)
     for c in certs: verify(c)
+
     print(json.dumps({
         "status":"PASS",
         "charging_domain":domain,
