@@ -160,7 +160,9 @@ The only two `m=210` rows that survive both the shared and degree-type LPs were 
 - endpoint model infeasible;
 - exact independently named Farkas certificate right-hand side: **-355**.
 
-The two complete regenerated named certificate objects are preserved in `N29_ENDPOINT_CERTIFICATES.json.gz.b64`; recovery and hashes are documented below.
+The two complete regenerated named certificate objects are preserved in `N29_ENDPOINT_CERTIFICATES.json.gz`; the machine-readable hashes and verification description are preserved in `N29_ENDPOINT_CERTIFICATES_MANIFEST.json`.
+
+A clean Ubuntu 24.04 runner (`34237731866`) regenerated the joint states, ran the independent joint checker, rebuilt the endpoint model, obtained the exact Farkas certificates, compared the complete named equality/inequality signature sets with the separately rebuilt endpoint system, and ran the exact named-certificate verifier. Every step and the evidence commit succeeded. The resulting evidence commit is `1fd34594d130c09a9518d87bf0f9530737aeb9c4`.
 
 ## 10. Finding RT-N29-002 — production certificate retention
 
@@ -172,28 +174,32 @@ The n=29 production wrapper does the right mathematical thing at runtime: for ea
 
 However, after verification the shard report increments only the phase counter (`shared`, `typed`, or `endpoint`) and discards the certificate object. The GitHub Actions artifacts therefore preserve the final phase counts and the fact that exact verification succeeded, but not the 629 exact certificate objects accepted in that original run.
 
-A fresh replay deterministically regenerates and rechecks them, so this is not a proof failure. It is nevertheless a real preservation weakness for external auditing: an auditor wishing to inspect the originally accepted exact certificates must rerun the discovery/checking pipeline.
+A fresh replay regenerates and rechecks them, so this is not a proof failure. It is nevertheless a real preservation weakness for external auditing: an auditor wishing to inspect the originally accepted exact certificates must rerun the discovery/checking pipeline.
+
+The two deepest endpoint certificates have now been separately regenerated, exactly verified and preserved, but `RT-N29-002` remains open for the other 627 LP exclusions from the original production run.
 
 **Recommended repair for a future proof edition:** make the final harness save every named exact certificate, its projected position/state key, exact checker/system signature, and hash; publish a complete certificate bundle. Do not retroactively rewrite the currently audited candidate artifacts.
 
-## 11. Endpoint certificate bundle recovery
+## 11. Endpoint certificate bundle integrity
 
-`N29_ENDPOINT_CERTIFICATES.json.gz.b64` is base64 text containing a deterministic gzip stream (`mtime=0`) whose uncompressed payload is canonical compact JSON followed by a newline.
+The preserved clean-runner bundle is the binary gzip file `N29_ENDPOINT_CERTIFICATES.json.gz`; its uncompressed payload is canonical compact JSON followed by a newline. The companion manifest records:
 
-Expected hashes:
+- cases: projected position 68, exact RHS `-830`; projected position 801, exact RHS `-355`;
+- uncompressed JSON SHA-256: `8e6e96df7b953e9875fd55c93bdecbdfa27971f4a86d3aefa5f0f383e6422e34`;
+- gzip SHA-256: `38e9573c690a535b096c6a75b1c6a96c573b67d5e7582160b46dc35ae053a524`;
+- uncompressed bytes: 56,591;
+- gzip bytes: 31,152;
+- inherited archive SHA-256: `b753076ffc755066a0c57756be91cc5b265c163d869244d3aa65e3943799347b`;
+- SciPy: `1.17.0`.
 
-- uncompressed JSON SHA-256: `7f43ab2413700044e9d5753c7a65a2cb0654fec2bc1f0a4edb8958c342dda938`;
-- gzip SHA-256: `e506de04c3f8f3e347721cecb934963e7300b5ca6f3a39b9fa894b1787ea85c4`;
-- uncompressed bytes: 56,595;
-- gzip bytes: 31,151.
+An earlier connector-mediated attempt to preserve the gzip as one base64 text file was detected by its integrity workflow to have been truncated at exactly 20,000 bytes. That corrupt partial file was deleted before the final evidence path was accepted. The final bundle above was generated and committed directly by the successful clean runner, avoiding that connector payload limit.
 
-Recovery example:
+Integrity check example:
 
 ```sh
-base64 -d N29_ENDPOINT_CERTIFICATES.json.gz.b64 > N29_ENDPOINT_CERTIFICATES.json.gz
-printf '%s  %s\n' e506de04c3f8f3e347721cecb934963e7300b5ca6f3a39b9fa894b1787ea85c4 N29_ENDPOINT_CERTIFICATES.json.gz | sha256sum -c -
 gzip -dc N29_ENDPOINT_CERTIFICATES.json.gz > N29_ENDPOINT_CERTIFICATES.json
-printf '%s  %s\n' 7f43ab2413700044e9d5753c7a65a2cb0654fec2bc1f0a4edb8958c342dda938 N29_ENDPOINT_CERTIFICATES.json | sha256sum -c -
+printf '%s  %s\n' 38e9573c690a535b096c6a75b1c6a96c573b67d5e7582160b46dc35ae053a524 N29_ENDPOINT_CERTIFICATES.json.gz | sha256sum -c -
+printf '%s  %s\n' 8e6e96df7b953e9875fd55c93bdecbdfa27971f4a86d3aefa5f0f383e6422e34 N29_ENDPOINT_CERTIFICATES.json | sha256sum -c -
 ```
 
 ## 12. Updated restarted-audit verdict
@@ -204,8 +210,8 @@ At this checkpoint:
 - the complement/quasi-edge ledger, residual activity, charging, Delta=17 pointwise bound and Delta>=18 h-index closure have survived rederivation;
 - the Delta=16 demand domain, full residual-domain counts and projected survivor sets have independent fresh reconstructions;
 - the inherited row-support, joint, shared, typed and endpoint source has been line-audited against the hand model;
-- the two deepest endpoint contradictions have independent exact named certificates;
+- the two deepest endpoint contradictions have independent exact named certificates and a successful clean-runner preservation replay;
 - `RT-N29-001` is a repairable proof-traceability gap, not a mathematical failure;
-- `RT-N29-002` is a repairable certificate-preservation gap, not a mathematical failure.
+- `RT-N29-002` is a repairable certificate-preservation gap for the production run, not a mathematical failure.
 
 **No blocking mathematical defect has been found. The n=29 candidate is materially stronger after this restarted red team, but it should remain labelled CANDIDATE until genuinely independent expert mathematical review and independent computational reproduction are obtained.**
