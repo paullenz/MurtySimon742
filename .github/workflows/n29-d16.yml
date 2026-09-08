@@ -15,11 +15,12 @@ jobs:
     steps:
       - uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262
         with: {persist-credentials: false}
-      - name: Pin discovery dependency
+      - name: Pin discovery dependency in isolated virtual environment
         run: |
           set -euo pipefail
-          python3 -m pip install --disable-pip-version-check --only-binary=:all: scipy==1.17.0
-          python3 - <<'PY'
+          python3 -m venv .venv
+          .venv/bin/python -m pip install --disable-pip-version-check --only-binary=:all: scipy==1.17.0
+          .venv/bin/python -I - <<'PY'
           import scipy,sys
           print(sys.version)
           print('scipy',scipy.__version__)
@@ -40,12 +41,12 @@ jobs:
           g++ -O3 -std=c++17 "$A/check_rows.cpp" -o check_rows
           for t in 3 2; do
             mkdir -p prepared/t$t
-            python3 -I -B "$A/run.py" prepare --base basepkg --t $t --output prepared/t$t
+            .venv/bin/python -I -B "$A/run.py" prepare --base basepkg --t $t --output prepared/t$t
             ./scan_rows prepared/t$t/demands.txt prepared/t$t/row_survivors.txt prepared/t$t/row_bands.txt $t > prepared/t$t/SCAN_REPORT.json
             ./check_rows prepared/t$t/demands.txt prepared/t$t/check_row_survivors.txt prepared/t$t/check_row_bands.txt $t > prepared/t$t/CHECK_ROWS_REPORT.json
             cmp prepared/t$t/row_survivors.txt prepared/t$t/check_row_survivors.txt
             cmp prepared/t$t/row_bands.txt prepared/t$t/check_row_bands.txt
-            python3 -I -B "$A/run.py" projected --t $t --root prepared/t$t
+            .venv/bin/python -I -B "$A/run.py" projected --t $t --root prepared/t$t
           done
       - uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02
         with:
@@ -71,11 +72,12 @@ jobs:
         with: {persist-credentials: false}
       - uses: actions/download-artifact@d3f86a106a0bac45b974a628896c90dbdf5c8093
         with: {name: n29-d16-prepared, path: prepared}
-      - name: Pin discovery dependency
+      - name: Pin discovery dependency in isolated virtual environment
         run: |
           set -euo pipefail
-          python3 -m pip install --disable-pip-version-check --only-binary=:all: scipy==1.17.0
-          python3 - <<'PY'
+          python3 -m venv .venv
+          .venv/bin/python -m pip install --disable-pip-version-check --only-binary=:all: scipy==1.17.0
+          .venv/bin/python -I - <<'PY'
           import scipy
           print('scipy',scipy.__version__)
           assert scipy.__version__=='1.17.0'
@@ -91,7 +93,7 @@ jobs:
           set -euo pipefail
           A=project/research/n29/2026-09-08-delta16-direct-v1
           mkdir reports
-          python3 -I -B "$A/run.py" final --base basepkg --t ${{ matrix.t }} --root prepared/t${{ matrix.t }} --shard ${{ matrix.shard }} --shards ${{ matrix.shards }} --output reports/t${{ matrix.t }}-${{ matrix.shard }}.json
+          .venv/bin/python -I -B "$A/run.py" final --base basepkg --t ${{ matrix.t }} --root prepared/t${{ matrix.t }} --shard ${{ matrix.shard }} --shards ${{ matrix.shards }} --output reports/t${{ matrix.t }}-${{ matrix.shard }}.json
       - uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02
         if: always()
         with:
