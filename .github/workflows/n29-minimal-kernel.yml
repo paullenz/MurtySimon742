@@ -1,0 +1,142 @@
+name: N29 minimal Delta16 trusted-kernel replay
+on:
+  push:
+    branches: [main]
+    paths:
+      - 'project/reviews/n29/2026-09-08-redteam-restart-v1/minimal_prepare.py'
+      - 'project/reviews/n29/2026-09-08-redteam-restart-v1/minimal_rows.cpp'
+      - 'project/reviews/n29/2026-09-08-redteam-restart-v1/run_minimal_kernel.py'
+      - 'project/reviews/n29/2026-09-08-redteam-restart-v1/independent_threshold_model_v2.py'
+      - '.github/workflows/n29-minimal-kernel.yml'
+  workflow_dispatch:
+permissions:
+  contents: write
+jobs:
+  prepare:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262
+      - name: Pin solver dependency
+        run: |
+          set -euo pipefail
+          python3 -m venv .venv
+          .venv/bin/python -m pip install --disable-pip-version-check --only-binary=:all: scipy==1.17.0
+      - name: Generate minimal demand and residual frontiers
+        run: |
+          set -euo pipefail
+          D=project/reviews/n29/2026-09-08-redteam-restart-v1
+          g++ -O3 -std=c++17 "$D/minimal_rows.cpp" -o minimal_rows
+          for t in 3 2; do
+            mkdir -p prepared/t$t
+            .venv/bin/python -I -B "$D/minimal_prepare.py" --t $t --output prepared/t$t
+            ./minimal_rows prepared/t$t/demands.txt prepared/t$t/row_survivors.txt prepared/t$t/row_bands.txt $t > prepared/t$t/MINIMAL_ROWS_REPORT.json
+          done
+          python3 - <<'PY'
+          import json
+          assert json.load(open('prepared/t3/MINIMAL_PREPARE_REPORT.json'))['retained_demands']==72
+          assert json.load(open('prepared/t2/MINIMAL_PREPARE_REPORT.json'))['retained_demands']==367
+          assert json.load(open('prepared/t3/MINIMAL_ROWS_REPORT.json'))['survivors']==126
+          assert json.load(open('prepared/t2/MINIMAL_ROWS_REPORT.json'))['survivors']==1467
+          print('minimal frontiers reproduced: demands 72/367, rows 126/1467')
+          PY
+      - uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02
+        with:
+          name: n29-minimal-kernel-inputs
+          path: prepared/
+          if-no-files-found: error
+          retention-days: 30
+  exact-shards:
+    needs: prepare
+    runs-on: ubuntu-24.04
+    timeout-minutes: 15
+    strategy:
+      fail-fast: false
+      matrix:
+        include:
+          - {t: 3, shard: 0, shards: 1}
+          - {t: 2, shard: 0, shards: 6}
+          - {t: 2, shard: 1, shards: 6}
+          - {t: 2, shard: 2, shards: 6}
+          - {t: 2, shard: 3, shards: 6}
+          - {t: 2, shard: 4, shards: 6}
+          - {t: 2, shard: 5, shards: 6}
+    steps:
+      - uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262
+      - uses: actions/download-artifact@d3f86a106a0bac45b974a628896c90dbdf5c8093
+        with:
+          name: n29-minimal-kernel-inputs
+          path: prepared
+      - name: Pin solver dependency
+        run: |
+          set -euo pipefail
+          python3 -m venv .venv
+          .venv/bin/python -m pip install --disable-pip-version-check --only-binary=:all: scipy==1.17.0
+      - name: Produce exact certificate shard
+        run: |
+          set -euo pipefail
+          D=project/reviews/n29/2026-09-08-redteam-restart-v1
+          mkdir -p reports
+          .venv/bin/python -I -B "$D/run_minimal_kernel.py" \
+            --root prepared/t${{ matrix.t }} --t ${{ matrix.t }} \
+            --shard ${{ matrix.shard }} --shards ${{ matrix.shards }} --workers 4 \
+            --output reports/minimal-t${{ matrix.t }}-s${{ matrix.shard }}.json.gz
+      - uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02
+        with:
+          name: n29-minimal-t${{ matrix.t }}-s${{ matrix.shard }}
+          path: reports/
+          if-no-files-found: error
+          retention-days: 30
+  aggregate:
+    needs: [prepare,exact-shards]
+    runs-on: ubuntu-24.04
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262
+      - uses: actions/download-artifact@d3f86a106a0bac45b974a628896c90dbdf5c8093
+        with:
+          name: n29-minimal-kernel-inputs
+          path: prepared
+      - uses: actions/download-artifact@d3f86a106a0bac45b974a628896c90dbdf5c8093
+        with:
+          pattern: 'n29-minimal-t*-s*'
+          path: shards
+          merge-multiple: true
+      - name: Pin checker dependency
+        run: |
+          set -euo pipefail
+          python3 -m venv .venv
+          .venv/bin/python -m pip install --disable-pip-version-check --only-binary=:all: scipy==1.17.0
+      - name: Rebuild every model and exactly re-verify every certificate
+        run: |
+          set -euo pipefail
+          D=project/reviews/n29/2026-09-08-redteam-restart-v1
+          D="$D" .venv/bin/python -I - <<'PY'
+          import gzip,hashlib,json,os,sys
+          from pathlib import Path
+          D=Path(os.environ['D']);sys.path.insert(0,str(D))
+          from independent_threshold_model_v2 import build,verify_certificate
+          results={}
+          for t,expected in [(3,126),(2,1467)]:
+            root=Path(f'prepared/t{t}');demands=json.load(open(root/'demands.json'))
+            rows=[list(map(int,x.split())) for x in open(root/'row_survivors.txt') if x.strip()]
+            rec=[]
+            for p in sorted(Path('shards').glob(f'minimal-t{t}-s*.json.gz')):rec.extend(json.loads(gzip.decompress(p.read_bytes())))
+            rec.sort(key=lambda x:x['position']);assert len(rec)==expected==len(rows);assert [x['position'] for x in rec]==list(range(expected))
+            for x in rec:
+              row=rows[x['position']];m=build(demands[row[0]]['s'],row[2:],t);verify_certificate(m,x['certificate'])
+            rhs=[x['certificate']['rhs'] for x in rec];raw=(json.dumps(rec,separators=(',',':'))+'\n').encode();gz=gzip.compress(raw,mtime=0)
+            (D/f'MINIMAL_KERNEL_T{t}_CERTIFICATES.json.gz').write_bytes(gz)
+            results[str(208+t)]={'t':t,'retained_demands':json.load(open(root/'MINIMAL_PREPARE_REPORT.json'))['retained_demands'],'residual_rows':expected,'exact_rejections':expected,'final_survivors':0,'rhs_min':min(rhs),'rhs_max':max(rhs),'json_sha256':hashlib.sha256(raw).hexdigest(),'gzip_sha256':hashlib.sha256(gz).hexdigest()}
+          report={'schema':'n29-minimal-trusted-kernel-v1','date':'2026-09-08','status':'PASS','scope':'n=29 Delta=16 at m=211 and 210','results':results,'uses_projected_screen':False,'uses_joint_propagator':False,'uses_old_shared_typed_endpoint_models':False,'uses_old_pair_capacity_support_formula':False,'all_late_exclusions_exact_integer_farkas_reverified':True,'final_survivors':0,'external_independence':False,'mathematical_status':'CANDIDATE; independent expert review remains OPEN'}
+          (D/'MINIMAL_KERNEL_REPORT.json').write_text(json.dumps(report,indent=2)+'\n');print(json.dumps(report,indent=2))
+          PY
+      - name: Commit minimal-kernel evidence
+        run: |
+          set -euo pipefail
+          D=project/reviews/n29/2026-09-08-redteam-restart-v1
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add "$D/MINIMAL_KERNEL_T2_CERTIFICATES.json.gz" "$D/MINIMAL_KERNEL_T3_CERTIFICATES.json.gz" "$D/MINIMAL_KERNEL_REPORT.json"
+          git commit -m 'Preserve minimal n29 Delta16 trusted-kernel certificates'
+          git push
