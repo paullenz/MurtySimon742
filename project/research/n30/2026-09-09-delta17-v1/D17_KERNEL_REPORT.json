@@ -1,0 +1,35 @@
+{
+  "all_duals_exact_integer_verified": true,
+  "date": "2026-09-09",
+  "dual_certificate_sha256": "ad0cc678cfa927a291f4427a38beb1c09bf058e1d1ca201cba8c5eb0789f09bd",
+  "mathematical_status": "CANDIDATE; independent expert review remains OPEN",
+  "results": {
+    "225": {
+      "charging_feasible_profiles": 1155,
+      "counts": {
+        "dual": 18,
+        "source_count": 67,
+        "threshold": 1070
+      },
+      "final_survivors": 0,
+      "minimum_dual_margin": 3,
+      "minimum_threshold_margin": 2,
+      "t": 4
+    },
+    "226": {
+      "charging_feasible_profiles": 250,
+      "counts": {
+        "threshold": 250
+      },
+      "final_survivors": 0,
+      "minimum_dual_margin": null,
+      "minimum_threshold_margin": 2,
+      "t": 5
+    }
+  },
+  "schema": "n30-d17-early-kernel-v1",
+  "scope": "n=30, Delta=17 at m=226 and m=225",
+  "uses_exact_source_capacity_dual": true,
+  "uses_lp_endpoint_model": false,
+  "uses_residual_row_enumeration": false
+}
