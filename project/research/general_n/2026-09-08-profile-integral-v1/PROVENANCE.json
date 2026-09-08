@@ -1,0 +1,18 @@
+{
+  "date": "2026-09-08",
+  "repository": "paullenz/MurtySimon25",
+  "branch": "main",
+  "starting_commit": "8e676ae8fac0a7894c649e797a58124ad5a1062d",
+  "antecedent_proof_path": "project/research/general_n/2026-09-08-layer-sum-v1/PROOF.md",
+  "antecedent_proof_blob": "019bf9377d548aaf2990289752c307790149eadb",
+  "root_readme_before_blob": "be83d897efcf49aa3ce1a442337c7acfb20963cf",
+  "candidate_status": "Complete candidate hand argument, independent review OPEN",
+  "computation_status": "REPRODUCED internally, fresh execution in this session",
+  "new_actual_graph_enumeration": false,
+  "formal_verification_of_new_result": false,
+  "frozen_papers_or_theorem_ledger_changed": false,
+  "outreach_sent": false,
+  "optional_Jensen_reference": "https://leanprover-community.github.io/mathlib4_docs/Mathlib/Analysis/Convex/Jensen.html",
+  "literature_priority_audit": "Not performed; no best-known or novelty claim",
+  "note": "This completes the previously reported-only 0.586 route, with a new Jensen-free final assembly. It does not treat an earlier unfinished write-up as preserved evidence."
+}

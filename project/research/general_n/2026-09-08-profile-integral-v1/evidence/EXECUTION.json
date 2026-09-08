@@ -1,0 +1,17 @@
+{
+  "command": [
+    "/opt/pyvenv/bin/python",
+    "-I",
+    "-B",
+    "/mnt/data/ms-profile-work/checkpoint/src/check_profile_integral.py",
+    "--output",
+    "/mnt/data/ms-profile-work/checkpoint/evidence/RESULTS.json"
+  ],
+  "python": "3.13.5 (main, Jul 15 2026, 20:25:40) [GCC 14.2.0]",
+  "platform": "Linux-6.18.35-x86_64-with-glibc2.41",
+  "exit_code": 0,
+  "elapsed_seconds": 18.027738562999957,
+  "stdout": "",
+  "stderr": "",
+  "source_sha256": "93fd04506fc8968267267c0dec1c2de47de4891a2371bb07bdd1f7e9c01cae20"
+}

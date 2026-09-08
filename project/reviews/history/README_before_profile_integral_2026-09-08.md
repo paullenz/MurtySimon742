@@ -32,20 +32,7 @@ The separate [degree-load-v7 route](project/research/general_n/2026-09-07-degree
 
 ## General structural programme
 
-### Profile-integral continuation — current candidate for n>=6
-
-The [completed profile-integral argument](project/research/general_n/2026-09-08-profile-integral-v1/PROOF.md) gives the candidate implication
-
-```text
-n >= 6 and Delta(G) >= (293/500)*n  ==>  e(G) < floor(n^2/4).
-293/500 = 0.586 exactly.
-```
-
-It proves `t < a^2/24+a/8`, with `a=n-1-Delta` and `t=e(G)-Delta*(n-Delta)`, by retaining the individual demand profile across thresholds. A shifted midpoint estimate controls the finite sum-to-integral error; an exact scalar polynomial bound makes Jensen unnecessary. The old 13/22 cubic is not a dependency. A 640-case integer certificate closes the two small-a exceptions. This excludes the `n=29, Delta=17` 210-edge case, **not every maximum degree at n=29**. The strict statement still requires n>=6 because of K(2,3).
-
-The [replay guide](project/research/general_n/2026-09-08-profile-integral-v1/README.md), [adversarial audit](project/research/general_n/2026-09-08-profile-integral-v1/AUDIT.md) and [exact output](project/research/general_n/2026-09-08-profile-integral-v1/evidence/RESULTS.json) preserve 478,192 abstract demand profiles, 4,215,632 threshold levels, 833,250 rational midpoint checks and 5,173,536 eligible degree-pair checks through n=5,000. These are not actual graph enumerations or a proof of all graphs through n=5,000. **Complete candidate hand argument; internal computations REPRODUCED; independent specialist review OPEN. The new profile-integral theorem is not formally verified or PROJECT-CERTIFIED.** Earlier frozen proofs and the governed theorem ledger are unchanged.
-
-### Layer-sum continuation — retained 13/22 candidate for n>=6
+### Layer-sum continuation — current candidate for n>=6
 
 The [layer-sum candidate proof](project/research/general_n/2026-09-08-layer-sum-v1/PROOF.md) gives the exact rational implication
 
@@ -56,7 +43,7 @@ n >= 6 and Delta(G) >= (13/22)*n  ==>  e(G) < floor(n^2/4).
 
 It derives `3*S^3 <= a^2*r*(2*r+1)` and `t < 4*a^2/81 + 1/8`, where `a=n-1-Delta`, `t=m-Delta*(n-Delta)`, `r` counts residual edges and `S` is total minimum label demand. The proof combines the exact threshold-pair count across all demand levels through a common residual budget. It has no large-a cutoff. **The n>=6 qualification is essential for strictness: K(2,3) is a small-order exception.** This is not a complete general-conjecture solution or a new whole-order proof.
 
-The [replay guide](project/research/general_n/2026-09-08-layer-sum-v1/README.md) and [fresh evidence](project/research/general_n/2026-09-08-layer-sum-v1/RESULTS.md) preserve 1,059 checked selected systems, the full labelled-graph census through six vertices, 2,353 abstract demand multisets and 10,200 scalar identities. The two criticality implementations agree on all 33,864 graphs in that small domain. Only 12 systems have nonzero demand, and none has positive surplus; finite tests are not a proof of the dense case. **Candidate mathematics; internal finite replay REPRODUCED; independent review OPEN. Only a local quasi-edge/edge-insertion slice is formally checked; the full layer-sum result is not.**
+The [replay guide](project/research/general_n/2026-09-08-layer-sum-v1/README.md) and [fresh evidence](project/research/general_n/2026-09-08-layer-sum-v1/RESULTS.md) preserve 1,059 checked selected systems, the full labelled-graph census through six vertices, 2,353 abstract demand multisets and 10,200 scalar identities. The two criticality implementations agree on all 33,864 graphs in that small domain. Only 12 systems have nonzero demand, and none has positive surplus; finite tests are not a proof of the dense case. **Candidate mathematics; internal finite replay REPRODUCED; independent review OPEN. No Lean check of this continuation is claimed.**
 
 The preceding [threshold-capacity note](project/research/general_n/2026-09-07-stability-spare-sources-v9/THRESHOLD_CAPACITY_CONTINUATION.md), with its 0.6129 candidate coefficient, remains unchanged. Its supplied regression has now actually run successfully: 99 rounding cases, 2,550 integer maximisations and 1,728,186 oriented-graph checks. The new graph-to-layer proof is self-contained and does not depend on the older charging-deficit constants. The concurrent demand-tail v10 and Jensen-tail v11 checkpoints are preserved in full; this layer-sum argument does not depend on their new constants. The unreferenced weighted-spare v10 blobs from the previous turn are a different workstream and are not silently adopted as evidence. Frozen papers and the theorem ledger remain untouched.
 
@@ -66,7 +53,7 @@ The publication was rebased onto the concurrent v11 checkpoint; see the [reconci
 
 The [nine-page v9 paper](project/research/general_n/2026-09-07-stability-spare-sources-v9/General_Structural_Theorems_v9.pdf), [full proof](project/research/general_n/2026-09-07-stability-spare-sources-v9/PROOF.md), [review guide](project/research/general_n/2026-09-07-stability-spare-sources-v9/README.md) and [literature comparison](project/research/general_n/2026-09-07-stability-spare-sources-v9/literature/COMPARISON.md) isolate the charging and source-supplement mechanisms from finite-order computations. The complete standard-library replay passed locally and in a clean GitHub runner.
 
-The local quasi-edge Lean slice now checks **ten** logical lemmas in Lean 4.19.0, including four local edge-insertion bridge lemmas. Global finite selection/injection, charging, threshold counting and the general theorems are not formally verified. The later [construction assurance record](project/research/general_n/2026-09-08-layer-sum-v1/evidence/CONSTRUCTION_ASSURANCE_2026-09-08.json) gives the exact scope and preserves the corrected first attempt.
+The local quasi-edge Lean slice now checks **six** logical lemmas in Lean 4.19.0, including the supplement-forcing fact used by the demand-tail proof. Quasi-edge existence, cardinality injections, charging, demand-tail counting and the general theorem are not formally verified.
 
 ### v10 — first explicit demand-tail improvement
 
@@ -102,7 +89,6 @@ No finite-order enumeration, Fan bound, weak-core reduction or positive-surplus 
 | n=25 | [Reviewer manuscript — PDF](releases/n25-reviewer-v1/N25_Reviewer_Manuscript_v1.pdf) | [Review guide](releases/n25-reviewer-v1/REVIEW_GUIDE.md) |
 | n=27 | [Full proof manuscript — Markdown](project/reviews/n27/2026-09-07-candidate-v1/PROOF.md) | [Evidence package](releases/n27-candidate-v1/README.md) |
 | n=28 | [Mathematical manuscript — PDF](releases/n28-reviewer-v1/N28_Reviewer_Manuscript_v1.pdf) | [Verification companion — PDF](releases/n28-reviewer-v1/N28_Verification_Companion_v1.pdf) |
-| General profile-integral | [293/500 candidate proof — Markdown](project/research/general_n/2026-09-08-profile-integral-v1/PROOF.md) | [Replay and audit](project/research/general_n/2026-09-08-profile-integral-v1/README.md) |
 | General layer-sum | [Full candidate proof — Markdown](project/research/general_n/2026-09-08-layer-sum-v1/PROOF.md) | [Replay and evidence](project/research/general_n/2026-09-08-layer-sum-v1/README.md) |
 | General v9 | [Structural paper — PDF](project/research/general_n/2026-09-07-stability-spare-sources-v9/General_Structural_Theorems_v9.pdf) | [Proof and replay guide](project/research/general_n/2026-09-07-stability-spare-sources-v9/README.md) |
 | General v10 | [Demand-tail proof — Markdown](project/research/general_n/2026-09-08-demand-tail-stability-v10/PROOF.md) | [Clean-runner arithmetic record](project/research/general_n/2026-09-08-demand-tail-stability-v10/README.md) |
@@ -116,4 +102,4 @@ The middle-degree region remains open. Degree-case exclusions at selected larger
 
 Paul Lenz directed the project; ChatGPT/Geeps supplied mathematical development, software, manuscripts and internal checks. Frozen finite-order proofs, original archives and the governed theorem ledger remain unchanged by the general research programme.
 
-The [README before the profile-integral update](project/reviews/history/README_before_profile_integral_2026-09-08.md), the [README immediately before the layer-sum update](project/reviews/history/README_before_layer_sum_2026-09-08.md) and the [README immediately before the v11 update](project/reviews/history/README_before_v11_2026-09-08.md) are preserved verbatim. See the [standing orders](project/N25_PROJECT_STANDING_ORDERS.md), [commit-completion policy](project/REPO_SYNC_POLICY.md), [canonical review](project/CANONICAL_N25_REVIEW_2026-09-06.md), [theorem ledger](repro-v1/ledger/theorem_ledger.json), [task backlog](project/CANONICAL_TASKS.json) and [evidence-recovery manifest](project/EVIDENCE_RECOVERY_MANIFEST.json). Publication preserves evidence; it does not promote mathematical status.
+The [README immediately before the layer-sum update](project/reviews/history/README_before_layer_sum_2026-09-08.md) and the [README immediately before the v11 update](project/reviews/history/README_before_v11_2026-09-08.md) is preserved verbatim. See the [standing orders](project/N25_PROJECT_STANDING_ORDERS.md), [commit-completion policy](project/REPO_SYNC_POLICY.md), [canonical review](project/CANONICAL_N25_REVIEW_2026-09-06.md), [theorem ledger](repro-v1/ledger/theorem_ledger.json), [task backlog](project/CANONICAL_TASKS.json) and [evidence-recovery manifest](project/EVIDENCE_RECOVERY_MANIFEST.json). Publication preserves evidence; it does not promote mathematical status.

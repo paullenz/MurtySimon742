@@ -1,0 +1,61 @@
+{
+  "excludes": [
+    "MANIFEST.json",
+    "evidence/REMOTE_REPLAY.json",
+    "PUBLICATION_RECEIPT.json"
+  ],
+  "files": {
+    "AUDIT.md": {
+      "bytes": 5394,
+      "git_blob": "c5e494bac94e3adad9147d44e913810dc10db216",
+      "sha256": "488fc63e930f3afbec0da8859b1bbe1947e8869526dc02fd597208ef719ebb95"
+    },
+    "PROOF.md": {
+      "bytes": 14860,
+      "git_blob": "c96c2398cbf4eccba363e5f6a98f1ba53de18712",
+      "sha256": "b52978e1c12489a4f4d003b05651573d0e5d8b7c7e7060310064632c1661e200"
+    },
+    "PROVENANCE.json": {
+      "bytes": 1101,
+      "git_blob": "ab533bcdf0db0b5a9a19949ac1166cf4c6184421",
+      "sha256": "5cd869fc69750f20817dd844c329dffa9b63f99d59acade7aff3a5db8d70b1bb"
+    },
+    "README.md": {
+      "bytes": 2216,
+      "git_blob": "653197e753404fa07878bf9fa55e5cb497ecca4d",
+      "sha256": "ef358607016ef56364ff07d376047b2aaf7b458590685a123ce4cd5dbd4fa63a"
+    },
+    "evidence/EXECUTION.json": {
+      "bytes": 524,
+      "git_blob": "c8087ac2b60fa991ac0f1f2abeb96bf3b4898656",
+      "sha256": "fa3c456eeec9fe65535d65898e99bcdf866b6aa2a2c614a58b4a9d0b67f7f063"
+    },
+    "evidence/OUTPUT_ENCODING.json": {
+      "bytes": 309,
+      "git_blob": "5c3e0ea590c4c5a402a69548da9fa104f0208335",
+      "sha256": "263c28de31482672fa63db35acf2b228cf38fde8cbc80ecd648ff40e8d46029d"
+    },
+    "evidence/RESULTS.json": {
+      "bytes": 7144,
+      "git_blob": "1ca974980ce0e9cde9887d03311d83ca0961deb4",
+      "sha256": "334e78348cf72bc40e361a683c251e9a793d5a85511e4fa08af89aa7d36ce1e4"
+    },
+    "history/explore_exception.py": {
+      "bytes": 1017,
+      "git_blob": "f8e16cb711007fd1d51790d6d42279091f9d6108",
+      "sha256": "9d33682e3d44f9207b6804db57a8cbbe926603fc032d30a896ab7230d43632ab"
+    },
+    "history/explore_exception_replay.txt": {
+      "bytes": 124,
+      "git_blob": "bfaea2152566c973124a45420de7fcac5329b649",
+      "sha256": "e53fda614bfa57b04c627d4b3c132a23ed2bfd98be9303f1d960422ff9c1fa71"
+    },
+    "src/check_profile_integral.py": {
+      "bytes": 13531,
+      "git_blob": "fb529c8d3faf1a389014a0faf8a3b00e1444f5ac",
+      "sha256": "93fd04506fc8968267267c0dec1c2de47de4891a2371bb07bdd1f7e9c01cae20"
+    }
+  },
+  "note": "Point-in-time payload manifest; later run/publication receipts are separately committed.",
+  "schema": "profile-integral-manifest-v1"
+}

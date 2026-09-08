@@ -1,0 +1,64 @@
+name: Check profile-integral 293 over 500 candidate
+on:
+  push:
+    branches: [main]
+    paths:
+      - 'project/research/general_n/2026-09-08-profile-integral-v1/**'
+      - '.github/workflows/profile-integral.yml'
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  exact-audit:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 5
+    steps:
+      - uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262
+      - name: Verify checkpoint payload hashes
+        run: |
+          set -euo pipefail
+          python3 --version | tee python-version.txt
+          python3 - <<'PY'
+          import hashlib, json
+          from pathlib import Path
+          p=Path('project/research/general_n/2026-09-08-profile-integral-v1')
+          m=json.loads((p/'MANIFEST.json').read_text())
+          for name, expected in m['files'].items():
+              b=(p/name).read_bytes()
+              assert len(b)==expected['bytes'], name
+              assert hashlib.sha256(b).hexdigest()==expected['sha256'], name
+          print('Checkpoint payload hashes: PASS')
+          PY
+      - name: Reproduce complete exact output
+        run: |
+          set -euo pipefail
+          P=project/research/general_n/2026-09-08-profile-integral-v1
+          sha256sum "$P/src/check_profile_integral.py" | tee checked-source-sha256.txt
+          python3 -I -B "$P/src/check_profile_integral.py" --output actual-results.json
+          python3 - <<'PY'
+          import json
+          from pathlib import Path
+          p=Path('project/research/general_n/2026-09-08-profile-integral-v1')
+          actual=json.loads(Path('actual-results.json').read_text())
+          expected=json.loads((p/'evidence/RESULTS.json').read_text())
+          assert actual==expected, 'Exact replay output mismatch'
+          assert actual['status']=='PASS'
+          print('Exact output equality: PASS')
+          print(json.dumps({'profiles':actual['profiles']['profiles'],
+              'profile_sha256':actual['profiles']['ordered_sha256'],
+              'midpoint_cases':actual['midpoint']['midpoint_cases'],
+              'degree_pairs':actual['degree_assembly']['degree_pairs_checked'],
+              'formal_verification':actual['formal_verification']},sort_keys=True))
+          PY
+          sha256sum actual-results.json | tee checked-output-sha256.txt
+      - uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02
+        if: always()
+        with:
+          name: profile-integral-exact-audit
+          path: |
+            actual-results.json
+            python-version.txt
+            checked-source-sha256.txt
+            checked-output-sha256.txt
+          if-no-files-found: error
+          retention-days: 30
