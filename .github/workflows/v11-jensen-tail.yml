@@ -1,0 +1,28 @@
+name: Check v11 Jensen-tail stability
+on:
+  push:
+    branches: [main]
+    paths:
+      - 'project/research/general_n/2026-09-08-jensen-tail-v11/**'
+      - '.github/workflows/v11-jensen-tail.yml'
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  exact-algebra:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 5
+    steps:
+      - uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262
+      - name: Run exact rational and Sturm regression
+        run: |
+          set -euo pipefail
+          python3 -I -B project/research/general_n/2026-09-08-jensen-tail-v11/check_v11.py | tee v11-check.log
+          grep -q '"status": "PASS"' v11-check.log
+          grep -q '"roots_in_interval": 0' v11-check.log
+      - uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02
+        with:
+          name: v11-jensen-tail-exact-check
+          path: v11-check.log
+          if-no-files-found: error
+          retention-days: 7
