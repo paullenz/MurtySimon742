@@ -1,0 +1,80 @@
+{
+  "schema": "n29-candidate-publication-receipt-v1",
+  "date": "2026-09-08",
+  "repository": "paullenz/MurtySimon25",
+  "branch": "main",
+  "fixed_order_baseline": "42954d3094860a218e6ba8a418c35b7061449b31",
+  "candidate_workflow_commit": "76330725fd00c7a7f028b5f53594a3c6fd51d1d2",
+  "index_publication_commit": "35b3e6cb2ce146593be779236205bd3ec9cf7557",
+  "remote_check_commit": "887e1f9723638dd416cc89da5e594f262b2db653",
+  "candidate_statement": "Every 29-vertex simple diameter-two edge-critical graph has at most 210 edges, with equality exactly K(14,15).",
+  "review_prefix": "project/reviews/n29/2026-09-08-candidate-v1/",
+  "review_payload_git_blobs": {
+    "ALL_DEGREES_CHECK.json": "bfce4aaae0485b407e5e9353988c5c5648b9d81c",
+    "AUDIT.md": "1e0ff2a270953a5c638b5710a3c8e94de8abe7ea",
+    "FAILURE_HISTORY.json": "d31b8520a68b7c1bfdd88126cd140eaee02797da",
+    "MANIFEST.json": "2a86a69608505ea39a7e4fb4f81b8174402db8dc",
+    "PROOF.md": "f93fe793308a470fd3201e2b35447d9c49f7a71b",
+    "PROVENANCE.json": "81828e9e6e91e512dd14db7dc8601351def2acc0",
+    "README.md": "23aa294f714e633d9ed071cddf74ae65e65cf29e",
+    "check_all_degrees.py": "3b4e074437656adfb3860d12ef3912dbdd523027",
+    "evidence/DELTA16_REMOTE_REPLAY.json": "a8e4f0efc4c35cd7533a4d2c7ab674b0a5856747",
+    "evidence/N29_D16_REPLAY.json": "50817636a7c5e4407e295ba718cf1585b3f08fb5",
+    "evidence/REMOTE_CANDIDATE_CHECK.json": "51cc6890143d12e9b72de7e1affb0ffb721cabf8"
+  },
+  "navigation_and_workflow_blobs": {
+    ".github/workflows/n29-candidate.yml": "bd8b656742668914a3fe51f3be015bcbc03cdd16",
+    "README.md": "36a7c826af582fbbcde7c154e340ad3f43f1ad54",
+    "project/reviews/history/README_before_n29_candidate_2026-09-08.md": "d1bc385e5baac65bb67c8e0e3954a1edb470d325"
+  },
+  "delta16_source_blobs": {
+    "project/research/n29/2026-09-08-delta16-direct-v1/run.py": "3dfb0c63fcc3e8b2e874df2932a4e46e579ad909",
+    "project/research/n29/2026-09-08-delta16-direct-v1/scan_rows.cpp": "a76a03a897a66178eac654182325e9bfa29a7715",
+    "project/research/n29/2026-09-08-delta16-direct-v1/check_rows.cpp": "6ee1e890b14a053268847cca3509d0306e11a533",
+    ".github/workflows/n29-d16.yml": "d43001253314fd4546aed665a861389f1c25fce1"
+  },
+  "delta16_clean_replay": {
+    "run_id": 34220977858,
+    "head_commit": "42954d3094860a218e6ba8a418c35b7061449b31",
+    "conclusion": "success",
+    "m211_residual_rows": 1848957,
+    "m210_residual_rows": 5765218,
+    "m211_final_survivors": 0,
+    "m210_final_survivors": 0,
+    "two_independent_row_scanners_agree": true,
+    "exact_integer_farkas_verification": true
+  },
+  "assembled_candidate_clean_check": {
+    "run_id": 34222928385,
+    "job_id": 102050069661,
+    "head_commit": "76330725fd00c7a7f028b5f53594a3c6fd51d1d2",
+    "conclusion": "success",
+    "non_delta16_arithmetic_reproduced": true,
+    "delta16_saved_aggregate_and_source_identities_verified": true,
+    "manifest_payloads_verified": true
+  },
+  "failed_delta16_runs_preserved": [34219349207,34220473129,34220800516],
+  "publication_checks": {
+    "main_read_back_at_index_publication_commit": true,
+    "baseline_to_index_is_fast_forward": true,
+    "baseline_to_index_changed_paths": 13,
+    "baseline_to_index_deleted_paths": 0,
+    "only_existing_file_modified": "README.md",
+    "prior_root_readme_preserved_verbatim": true,
+    "n29_proof_read_back_from_repository": true,
+    "n29_root_index_read_back": true,
+    "frozen_n25_n27_n28_proofs_changed": false,
+    "original_archives_changed": false,
+    "governed_theorem_ledger_changed": false,
+    "remote_candidate_check_added_as_single_file_after_index_commit": true
+  },
+  "status": {
+    "mathematics": "COMPLETE CANDIDATE",
+    "fixed_order_computation": "REPRODUCED internally and on clean runner",
+    "independent_mathematical_review": "OPEN",
+    "independent_computational_reproduction": "OPEN",
+    "full_formal_verification": false,
+    "theorem_ledger_promotion": false
+  },
+  "receipt_scope": "This receipt records checks already completed on preceding commits. This receipt is added in a final following commit; its branch attachment is verified separately and no recursive self-hash is claimed."
+}
