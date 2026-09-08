@@ -1,7 +1,7 @@
 {
   "all_duals_exact_integer_verified": true,
   "date": "2026-09-09",
-  "dual_certificate_sha256": "ad0cc678cfa927a291f4427a38beb1c09bf058e1d1ca201cba8c5eb0789f09bd",
+  "dual_certificate_semantic_sha256": "1561c2d3dab6d69cbcbbe50cb8dd6663449352bad5de241f91bb5df625470782",
   "mathematical_status": "CANDIDATE; independent expert review remains OPEN",
   "results": {
     "225": {
