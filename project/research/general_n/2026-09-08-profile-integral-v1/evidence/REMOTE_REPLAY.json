@@ -1,0 +1,56 @@
+{
+  "schema": "profile-integral-remote-replay-v1",
+  "date": "2026-09-08",
+  "repository": "paullenz/MurtySimon25",
+  "workflow": ".github/workflows/profile-integral.yml",
+  "workflow_blob": "52a6e40ee39ebf34d23775fa575045dce8d06dc8",
+  "head_commit": "3824f0b87f9155e19ef328e0e52b893d715d0f6b",
+  "run_id": 34207256010,
+  "job_id": 101999559991,
+  "run_attempt": 1,
+  "status": "completed",
+  "conclusion": "success",
+  "runner": "ubuntu-24.04",
+  "operating_system": "Ubuntu 24.04.4",
+  "image_version": "20260831.293.1",
+  "python": "3.12.3",
+  "run_created_at": "2026-09-08T08:56:36Z",
+  "run_updated_at": "2026-09-08T08:57:09Z",
+  "source_sha256": "93fd04506fc8968267267c0dec1c2de47de4891a2371bb07bdd1f7e9c01cae20",
+  "output_sha256": "c263d55747a8711f995e18df0c360f8d1887f0f33bbf764a75f15f7dac9aa013",
+  "checks": {
+    "checkpoint_payload_sha256_match": true,
+    "complete_parsed_output_equals_saved_results": true,
+    "original_pretty_output_sha256_match": true,
+    "all_job_steps_success": true
+  },
+  "recorded_counts": {
+    "demand_profiles": 478192,
+    "threshold_levels": 4215632,
+    "midpoint_cases": 833250,
+    "small_certificate_HS_cases": 640,
+    "eligible_degree_pairs": 5173536
+  },
+  "profile_digest": "4d31d2ca7ef631caad3554a3fc145684d6ad15f2bea046ebeb23c41fce2a4ad0",
+  "preserved_expected_output": "evidence/RESULTS.json",
+  "pretty_output_reconstruction": "json.dumps(parsed_results, indent=2, sort_keys=True)+newline; UTF-8",
+  "artifact": {
+    "id": 10048277642,
+    "name": "profile-integral-exact-audit",
+    "bytes": 2861,
+    "zip_sha256_reported_by_runner": "aea8ff9d5654fbf3b1e50c6a123e1bc004f73b1d1721c07d4c1350dcf7062b2e",
+    "retention_days": 30,
+    "artifact_zip_downloaded_in_this_session": false
+  },
+  "log_excerpts": [
+    "2026-09-08T08:56:45.3294883Z Python 3.12.3",
+    "2026-09-08T08:56:45.3563534Z Checkpoint payload hashes: PASS",
+    "2026-09-08T08:57:06.5725407Z Exact output equality: PASS",
+    "2026-09-08T08:57:06.5789109Z c263d55747a8711f995e18df0c360f8d1887f0f33bbf764a75f15f7dac9aa013  actual-results.json"
+  ],
+  "nonblocking_environment_notices": "Checkout reported pre-existing ZIP/LFS pointer mismatches; actions emitted Node deprecation notices. All audit steps succeeded. No warning-free-run claim.",
+  "mathematics": "Complete CANDIDATE hand argument, not PROJECT-CERTIFIED",
+  "formal_verification_of_new_result": false,
+  "independent_specialist_review": "OPEN",
+  "independence_scope": "Independent execution environment only; same-assistant source and expected output."
+}

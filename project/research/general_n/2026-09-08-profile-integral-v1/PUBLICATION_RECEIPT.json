@@ -1,0 +1,60 @@
+{
+  "schema": "profile-integral-publication-receipt-v1",
+  "date": "2026-09-08",
+  "repository": "paullenz/MurtySimon25",
+  "branch": "main",
+  "research_parent": "8e676ae8fac0a7894c649e797a58124ad5a1062d",
+  "research_commit": "3824f0b87f9155e19ef328e0e52b893d715d0f6b",
+  "research_tree": "30373cf79f64e6f905ceebc438de1d9dcc83a60c",
+  "checkpoint_tree": "7093088c033c11f80f15c98c1c8aecdc934fecf8",
+  "changed_paths_and_blobs": {
+    "project/research/general_n/2026-09-08-profile-integral-v1/AUDIT.md": "c5e494bac94e3adad9147d44e913810dc10db216",
+    "project/research/general_n/2026-09-08-profile-integral-v1/PROOF.md": "c96c2398cbf4eccba363e5f6a98f1ba53de18712",
+    "project/research/general_n/2026-09-08-profile-integral-v1/PROVENANCE.json": "ab533bcdf0db0b5a9a19949ac1166cf4c6184421",
+    "project/research/general_n/2026-09-08-profile-integral-v1/README.md": "653197e753404fa07878bf9fa55e5cb497ecca4d",
+    "project/research/general_n/2026-09-08-profile-integral-v1/evidence/EXECUTION.json": "c8087ac2b60fa991ac0f1f2abeb96bf3b4898656",
+    "project/research/general_n/2026-09-08-profile-integral-v1/evidence/OUTPUT_ENCODING.json": "5c3e0ea590c4c5a402a69548da9fa104f0208335",
+    "project/research/general_n/2026-09-08-profile-integral-v1/evidence/RESULTS.json": "1ca974980ce0e9cde9887d03311d83ca0961deb4",
+    "project/research/general_n/2026-09-08-profile-integral-v1/history/explore_exception.py": "f8e16cb711007fd1d51790d6d42279091f9d6108",
+    "project/research/general_n/2026-09-08-profile-integral-v1/history/explore_exception_replay.txt": "bfaea2152566c973124a45420de7fcac5329b649",
+    "project/research/general_n/2026-09-08-profile-integral-v1/src/check_profile_integral.py": "fb529c8d3faf1a389014a0faf8a3b00e1444f5ac",
+    "project/research/general_n/2026-09-08-profile-integral-v1/MANIFEST.json": "514e17c4904338cc14000cde6dec5c1a3545d858",
+    ".github/workflows/profile-integral.yml": "52a6e40ee39ebf34d23775fa575045dce8d06dc8",
+    "README.md": "c70d7589f88a26db840145c57e869e4baba12ac7",
+    "project/reviews/history/README_before_profile_integral_2026-09-08.md": "be83d897efcf49aa3ce1a442337c7acfb20963cf"
+  },
+  "manifest_sha256": "13cd36cb8cd806fcb196837e6ad468044902635c397286a13ad484d5cef5052e",
+  "checks_completed": {
+    "nonforced_main_update": true,
+    "main_read_back_at_research_commit": true,
+    "exactly_14_intended_changed_paths": true,
+    "added_paths": 13,
+    "modified_existing_paths": [
+      "README.md"
+    ],
+    "no_deletions": true,
+    "checkpoint_tree_recomputed_from_local_bytes_matches_remote": true,
+    "manifest_payload_hashes_checked_locally_and_by_runner": true,
+    "proof_and_root_readme_content_read_at_pinned_commit": true,
+    "workflow_and_archived_readme_content_read_at_pinned_commit": true,
+    "prior_readme_preserved_verbatim": true,
+    "root_readme_indexes_new_candidate_with_exact_scope": true,
+    "frozen_proofs_original_archives_and_theorem_ledger_unchanged": true,
+    "clean_runner_complete_output_equality": true,
+    "pretty_output_reconstruction_byte_for_byte": true
+  },
+  "clean_runner": {
+    "run_id": 34207256010,
+    "job_id": 101999559991,
+    "conclusion": "success",
+    "details": "evidence/REMOTE_REPLAY.json"
+  },
+  "status": {
+    "mathematics": "Complete CANDIDATE hand argument",
+    "internal_computation": "REPRODUCED",
+    "independent_mathematical_review": "OPEN",
+    "novelty_assessment": "OPEN",
+    "full_formal_verification": false
+  },
+  "receipt_scope": "This records completed checks on the research commit. This receipt and the remote replay record are added in a following commit whose branch attachment is checked separately. Neither record is recursively self-hashed."
+}
