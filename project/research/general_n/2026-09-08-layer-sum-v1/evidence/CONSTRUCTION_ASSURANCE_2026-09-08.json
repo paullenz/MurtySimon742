@@ -1,16 +1,17 @@
 {
-  "schema": "layer-sum-construction-assurance-v1",
+  "schema": "layer-sum-construction-assurance-v2",
   "date": "2026-09-08",
   "candidate_result": "n>=6 and Delta(G)>=13n/22 implies e(G)<floor(n^2/4)",
   "mathematical_status": "CANDIDATE; independent mathematical review OPEN",
   "independent_construction_checker": {
     "source": "project/research/general_n/2026-09-08-layer-sum-v1/src/check_construction_independent.py",
     "source_commit": "d795f677207dcc0e4689325070af505bc62d711f",
-    "workflow": ".github/workflows/layer-sum-construction.yml",
-    "workflow_commit": "604ce7b16d559d35386960b2d6d9d50be5aee319",
-    "run_id": 34194951298,
+    "first_clean_run_id": 34194951298,
+    "first_clean_run_conclusion": "success",
+    "combined_clean_run_id": 34195268327,
+    "combined_clean_run_commit": "163dd1cd1c5a866e5d0e146f92f797f539a41555",
+    "combined_clean_run_conclusion": "success",
     "runner": "ubuntu-24.04",
-    "conclusion": "success",
     "scope": "All labelled simple graphs for 3<=n<=6; every minimum-complement-degree root; every missing H[B] pair; every adjacent total-dominating pair created by insertion.",
     "counts": {
       "labelled_graphs": 33864,
@@ -21,6 +22,43 @@
       "valid_quasi_edge_characterisations": 720
     },
     "ordered_case_sha256": "1f2b1bb5bd91d54937f166abd0c26badd8ddd105441cd37a6d0150c557d46c5e",
+    "external_independence": false,
+    "universal_proof_by_enumeration": false
+  },
+  "independent_residual_injection_checker": {
+    "source": "project/research/general_n/2026-09-08-layer-sum-v1/src/check_residual_injection_independent.py",
+    "source_commit": "23f63804c799dbc0a3df1b53011c50db32b7546c",
+    "workflow_commit": "163dd1cd1c5a866e5d0e146f92f797f539a41555",
+    "run_id": 34195268327,
+    "runner": "ubuntu-24.04",
+    "conclusion": "success",
+    "ordered_case_sha256": "5e33b3ad7d7fc8d1276ebab7de09dc03026346779d41e1a4411032dd9acc069a",
+    "exhaustive_small_scope": {
+      "labelled_graphs": 33864,
+      "critical_graphs": 608,
+      "minimum_degree_roots": 920,
+      "selection_systems": 920,
+      "selected_edges_checked": 720,
+      "forced_residual_targets": 0
+    },
+    "deterministic_larger_scope": {
+      "critical_graphs": 160,
+      "minimum_degree_roots": 258,
+      "selection_systems": 450,
+      "selected_edges_checked": 2133,
+      "forced_residual_targets": 588,
+      "systems_with_nonzero_forced_targets": 163,
+      "orders": [7,8,10,12,16,20,25,30],
+      "seeds_per_order": 20,
+      "choice_scope": "first and last available quasi-edge selection systems only"
+    },
+    "checks": [
+      "d_i <= rho_u + R_i for every selected edge in scope",
+      "each selected F-neighbour at the same source has a distinct supplement",
+      "the forced label-supplement cross-edge is present",
+      "the forcing F-neighbour misses that supplement",
+      "the forced cross-edge belongs to the residual set"
+    ],
     "external_independence": false,
     "universal_proof_by_enumeration": false
   },
@@ -50,13 +88,13 @@
       "diameter-two edge-criticality as a finite graph structure",
       "global choice/injection of selected quasi-edges",
       "residual edge ledger",
-      "residual injection counting statement",
+      "residual injection cardinality theorem",
       "threshold source-supplement pair capacity",
       "layer-sum inequality",
       "13/22 maximum-degree consequence"
     ]
   },
-  "research_decision": "Keep 13/22 coefficient fixed while assurance is prioritised. Next highest-value formal target is the residual injection or abstract threshold pair-capacity lemma.",
+  "research_decision": "Keep 13/22 coefficient fixed while assurance is prioritised. The next highest-value target is formal or independently reconstructed threshold pair-capacity/layer counting.",
   "frozen_finite_order_proofs_changed": false,
   "theorem_ledger_changed": false,
   "external_endorsement_claimed": false
