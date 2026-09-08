@@ -55,16 +55,22 @@ Its clean replay retains 72 demand profiles and 126 residual rows at 211 edges, 
 
 **Status: complete candidate; independent mathematical review OPEN.**
 
-## n=30 reconnaissance
+### n=30 — complete candidate
 
-A first symbolic parameterisation pass has been recorded at [`project/research/n30/2026-09-09-recon-v1/README.md`](project/research/n30/2026-09-09-recon-v1/README.md). It is **not** an n=30 candidate theorem. The hand reductions narrow the dense non-bipartite n=30 problem to four scopes only:
+**Candidate:**
 
 ```text
-m=226: Delta=16,17
-m=225: Delta=16,17
+e(G) <= 225 = floor(30^2/4),
+with equality exactly K(15,15).
 ```
 
-The `Delta=17` scopes keep the same `a=12` label-side dimension as the difficult n=29 case and are therefore the preferred first test of whether the stripped trusted kernel genuinely parameterises.
+[Candidate package](project/reviews/n30/2026-09-09-candidate-v1/README.md) · [assembled proof](project/reviews/n30/2026-09-09-candidate-v1/PROOF.md) · [hostile assembly audit](project/reviews/n30/2026-09-09-candidate-v1/ASSEMBLY_AUDIT.md).
+
+Fan's cited strict bound leaves only 226 edges as a possible upper-bound counterexample. The 225-edge `Delta=15` equality case is handled by a short witness-degree argument and forces `K(15,15)`. The `Delta=17` scopes close before residual-row enumeration: 250/250 charging-feasible profiles are threshold-rejected at 226 edges, while at 225 edges 1,137 profiles are rejected by threshold/source-count cuts and the remaining 18 by exact Hall duals. Clean replay `34292054922` verifies the committed duals exactly.
+
+The `Delta=16` scopes use a genuine parameterisation of the stripped graph-to-demand kernel at `(a,b)=(13,16)`. Clean runs `34286806474`, `34287440190` and `34287739057` reduce the complete residual frontiers to 9 rows at 226 edges and 272 rows at 225 edges, then reject every final row by exact integer Farkas certificates. `Delta=18,...,28` have empty exact charging domains and `Delta=29` gives a star. The final assembly replay `34292557008` is green.
+
+**Status: complete candidate; independent mathematical review OPEN.**
 
 ## General structural programme
 
@@ -76,7 +82,7 @@ The [profile-integral proof](project/research/general_n/2026-09-08-profile-integ
 n >= 6 and Delta(G) >= (293/500)n  ==>  e(G) < floor(n^2/4).
 ```
 
-It proves `t < a^2/24+a/8` by retaining the demand profile across thresholds. [Replay and audit](project/research/general_n/2026-09-08-profile-integral-v1/README.md). This remains a general structural candidate, not a dependency of the n=29 proof.
+It proves `t < a^2/24+a/8` by retaining the demand profile across thresholds. [Replay and audit](project/research/general_n/2026-09-08-profile-integral-v1/README.md). This remains a general structural candidate, not a dependency of the n=29 or n=30 proofs.
 
 ### Layer-sum 13/22 and earlier structural checkpoints
 
@@ -90,11 +96,12 @@ The [13/22 layer-sum proof](project/research/general_n/2026-09-08-layer-sum-v1/P
 | n=27 | [Proof](project/reviews/n27/2026-09-07-candidate-v1/PROOF.md) | [Evidence](releases/n27-candidate-v1/README.md) |
 | n=28 | [Mathematical manuscript](releases/n28-reviewer-v1/N28_Reviewer_Manuscript_v1.pdf) | [Verification companion](releases/n28-reviewer-v1/N28_Verification_Companion_v1.pdf) |
 | n=29 | [Candidate proof](project/reviews/n29/2026-09-08-candidate-v1/PROOF.md) | [Standalone bridge](project/reviews/n29/2026-09-09-bridge-standalone-v1/GRAPH_TO_MODEL_BRIDGE.md) |
+| n=30 | [Candidate proof](project/reviews/n30/2026-09-09-candidate-v1/PROOF.md) | [Assembly audit](project/reviews/n30/2026-09-09-candidate-v1/ASSEMBLY_AUDIT.md) |
 | General 293/500 | [Proof](project/research/general_n/2026-09-08-profile-integral-v1/PROOF.md) | [Audit](project/research/general_n/2026-09-08-profile-integral-v1/AUDIT.md) |
 
 ## Governance and limits
 
-**No complete order above 29, proof through n=1,000, unrestricted all-order solution, novelty determination, full formal verification or external endorsement is claimed.** Numerical states are necessary-condition systems, not graphs. Saved actual-graph regressions contain no positive-surplus graph, so universal correctness depends on the written structural proofs, not extrapolation from samples.
+**No complete order above 30, proof through n=1,000, unrestricted all-order solution, novelty determination, full formal verification or external endorsement is claimed.** Numerical states are necessary-condition systems, not graphs. Saved actual-graph regressions contain no positive-surplus graph, so universal correctness depends on the written structural proofs, not extrapolation from samples.
 
 Paul Lenz directed the project; ChatGPT/Geeps supplied mathematical development, software, manuscripts and internal checks. Same-assistant independent implementations are explicitly **not** described as external independent review. Frozen n=25/n=27/n=28 proofs, original archives and the governed theorem ledger remain preserved.
 
