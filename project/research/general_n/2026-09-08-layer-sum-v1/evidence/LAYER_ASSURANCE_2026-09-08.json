@@ -1,0 +1,69 @@
+{
+  "schema": "layer-assurance-2026-09-08-v1",
+  "repository": "paullenz/MurtySimon25",
+  "date": "2026-09-08",
+  "mathematical_status": "CANDIDATE; independent mathematical review OPEN",
+  "clean_runner": {
+    "workflow": ".github/workflows/layer-sum-construction.yml",
+    "run_id": 34201993470,
+    "head_sha": "5f4eb41ca4d8a937a6666b58f72c0ed605d93295",
+    "runner": "ubuntu-24.04",
+    "conclusion": "success"
+  },
+  "checks": {
+    "construction": {
+      "labelled_graphs_3_to_6": 33864,
+      "critical_graphs": 608,
+      "minimum_degree_roots": 920,
+      "missing_B_pairs": 720,
+      "status": "PASS"
+    },
+    "residual_injection": {
+      "small_systems": 920,
+      "larger_sample_graphs": 160,
+      "larger_sample_systems": 450,
+      "sample_forced_targets": 588,
+      "sample_nonzero_forced_systems": 163,
+      "status": "PASS"
+    },
+    "threshold_capacity": {
+      "partial_orientation_states": 59809,
+      "marked_checks": 1191446,
+      "admitted_checks": 783955,
+      "exact_arithmetic_triples": 5302626,
+      "negative_controls": [
+        "opposite orientations violate as expected",
+        "high source outside Z_h violates as expected"
+      ],
+      "status": "PASS"
+    },
+    "layer_aggregation": {
+      "complete_sorted_demand_profiles_through_a_11": 478192,
+      "nonzero_profiles": 478181,
+      "threshold_levels": 4215632,
+      "stronger_statement": "3 S^3 <= a^2 r_H(2 r_H+1), r_H=sum_{h<=H} z_h",
+      "worst_rhs_over_lhs_observed": "13301/11000",
+      "status": "PASS"
+    },
+    "surplus_scalar": {
+      "complete_cases_through_a_200": 2666600,
+      "minimum_scaled_strict_margin": 17,
+      "sharp_family": "a=27k, S=216k^2, r=144k^2, t=36k^2 gives t/a^2=4/81",
+      "status": "PASS"
+    },
+    "degree_assembly": {
+      "complete_integer_cases_n_6_to_5000_under_13_over_22": 5107274,
+      "boundary_negative_control": "K(2,3) at n=5",
+      "status": "PASS"
+    }
+  },
+  "scope_limits": {
+    "external_reproduction": false,
+    "full_Lean_formalisation": false,
+    "positive_surplus_actual_graph_example": false,
+    "graph_realisability_of_abstract_profiles": false,
+    "novelty_or_priority_claim": false,
+    "full_Murty_Simon_solution": false
+  },
+  "interpretation": "The internal assurance chain now separately exercises the graph construction, residual injection, threshold pair-capacity, layer aggregation, scalar surplus optimisation and degree assembly. The clean-run checks are evidence against implementation and arithmetic mistakes; the universal result still rests on the candidate hand proofs and awaits independent specialist review."
+}
