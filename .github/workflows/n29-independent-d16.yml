@@ -1,14 +1,19 @@
-name: N29 independent Delta16 late-stage verifier
+name: N29 fully independent-code Delta16 verifier
 on:
   push:
     branches: [main]
     paths:
+      - 'project/research/n29/2026-09-08-independent-d16-v1/fresh_prepare.py'
+      - 'project/research/n29/2026-09-08-independent-d16-v1/fresh_rows.cpp'
       - 'project/research/n29/2026-09-08-independent-d16-v1/fresh_joint.py'
       - 'project/research/n29/2026-09-08-independent-d16-v1/fresh_endpoint.py'
       - 'project/research/n29/2026-09-08-independent-d16-v1/run_independent.py'
       - 'project/research/n29/2026-09-08-independent-d16-v1/README.md'
       - '.github/workflows/n29-independent-d16.yml'
   workflow_dispatch:
+concurrency:
+  group: n29-independent-d16
+  cancel-in-progress: true
 permissions:
   contents: write
 jobs:
@@ -22,42 +27,44 @@ jobs:
       NUMEXPR_NUM_THREADS: '1'
     steps:
       - uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262
-      - name: Pin dependencies
+      - name: Pin numerical dependency
         run: |
           set -euo pipefail
           python3 -m venv .venv
           .venv/bin/python -m pip install --disable-pip-version-check --only-binary=:all: scipy==1.17.0
-          sudo apt-get update -qq
-          sudo apt-get install -y --no-install-recommends libboost-dev
           .venv/bin/python - <<'PY'
           import scipy
           assert scipy.__version__ == '1.17.0'
           print('scipy', scipy.__version__)
           PY
-          test -f /usr/include/boost/multiprecision/cpp_int.hpp
-      - name: Verify and extract upstream preparation archive
+      - name: Fresh demand generation and residual-row scan
         run: |
           set -euo pipefail
-          P=project/research/general_n/2026-09-07-direct-197-v8/MurtySimon_N28_197_Direct_v8.zip
-          echo 'b753076ffc755066a0c57756be91cc5b265c163d869244d3aa65e3943799347b  '"$P" | sha256sum -c -
-          unzip -q "$P" -d base
-          mv base/* basepkg
-      - name: Rebuild upstream prepared inputs
-        run: |
-          set -euo pipefail
-          A=project/research/n29/2026-09-08-delta16-direct-v1
-          g++ -O3 -std=c++17 "$A/scan_rows.cpp" -o scan_rows
-          g++ -O3 -std=c++17 "$A/check_rows.cpp" -o check_rows
+          I=project/research/n29/2026-09-08-independent-d16-v1
+          g++ -O3 -std=c++17 "$I/fresh_rows.cpp" -o fresh_rows
+          rm -rf prepared
           for t in 3 2; do
             mkdir -p prepared/t$t
-            .venv/bin/python "$A/run.py" prepare --base basepkg --t $t --output prepared/t$t
-            ./scan_rows prepared/t$t/demands.txt prepared/t$t/row_survivors.txt prepared/t$t/row_bands.txt $t > prepared/t$t/SCAN_REPORT.json
-            ./check_rows prepared/t$t/demands.txt prepared/t$t/check_row_survivors.txt prepared/t$t/check_row_bands.txt $t > prepared/t$t/CHECK_ROWS_REPORT.json
-            cmp prepared/t$t/row_survivors.txt prepared/t$t/check_row_survivors.txt
-            cmp prepared/t$t/row_bands.txt prepared/t$t/check_row_bands.txt
-            .venv/bin/python "$A/run.py" projected --t $t --root prepared/t$t
+            .venv/bin/python "$I/fresh_prepare.py" --t $t --output prepared/t$t
+            ./fresh_rows prepared/t$t/demands.txt prepared/t$t/row_survivors.txt prepared/t$t/row_bands.txt $t > prepared/t$t/FRESH_ROWS_REPORT.json
           done
-      - name: Run fresh independent verifier and exact certificate generation
+          python3 - <<'PY'
+          import json
+          from pathlib import Path
+          expected={
+            3:({'support':261,'dual':779,'OPEN':339,'source_count':3488},1848957,206),
+            2:({'OPEN':901,'source_count':6990,'support':116,'dual':1244},5765218,2087),
+          }
+          for t,(pc,raw,surv) in expected.items():
+            p=Path(f'prepared/t{t}')
+            a=json.loads((p/'FRESH_PREPARE_REPORT.json').read_text())
+            b=json.loads((p/'FRESH_ROWS_REPORT.json').read_text())
+            assert a['counts']==pc
+            assert b['states']==raw and b['survivors']==surv
+            assert b['low_k_rejections']==0
+          print('fresh early finite domains: PASS')
+          PY
+      - name: Run fresh joint and endpoint verifier with exact certificates
         run: |
           set -euo pipefail
           I=project/research/n29/2026-09-08-independent-d16-v1
@@ -74,9 +81,10 @@ jobs:
           assert m['summary']['211']['joint_counts']=={'survivor':36,'source_matching':38,'source_hall':2,'joint_total_source':42}
           assert m['summary']['210']['joint_counts']=={'survivor':593,'source_matching':311,'source_hall':29,'label_domain':6,'total_source':58,'joint_total_source':222,'pair_hall':6}
           assert m['summary']['211']['rhs_max'] < 0 and m['summary']['210']['rhs_max'] < 0
-          print('independent manifest: PASS')
+          assert 'No inherited' in m['independence']
+          print('fully fresh finite replay: PASS')
           PY
-      - name: Upload independent evidence
+      - name: Upload complete independent evidence
         uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02
         with:
           name: n29-independent-d16-v1
@@ -84,6 +92,10 @@ jobs:
             project/research/n29/2026-09-08-independent-d16-v1/N29_INDEPENDENT_D16_STATES.json.gz
             project/research/n29/2026-09-08-independent-d16-v1/N29_INDEPENDENT_D16_CERTIFICATES.json.gz
             project/research/n29/2026-09-08-independent-d16-v1/MANIFEST.json
+            prepared/t3/FRESH_PREPARE_REPORT.json
+            prepared/t3/FRESH_ROWS_REPORT.json
+            prepared/t2/FRESH_PREPARE_REPORT.json
+            prepared/t2/FRESH_ROWS_REPORT.json
             /tmp/n29-independent-d16.log
           if-no-files-found: error
           retention-days: 30
@@ -98,5 +110,6 @@ jobs:
             echo 'Generated evidence is already identical.'
             exit 0
           fi
-          git commit -m 'Preserve independent n29 Delta16 exact evidence'
+          git commit -m 'Preserve fully fresh n29 Delta16 exact evidence'
+          git pull --rebase origin main
           git push
