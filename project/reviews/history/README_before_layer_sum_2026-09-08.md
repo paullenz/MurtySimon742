@@ -32,23 +32,6 @@ The separate [degree-load-v7 route](project/research/general_n/2026-09-07-degree
 
 ## General structural programme
 
-### Layer-sum continuation — current candidate for n>=6
-
-The [layer-sum candidate proof](project/research/general_n/2026-09-08-layer-sum-v1/PROOF.md) gives the exact rational implication
-
-```text
-n >= 6 and Delta(G) >= (13/22)*n  ==>  e(G) < floor(n^2/4).
-13/22 = 0.59090909...
-```
-
-It derives `3*S^3 <= a^2*r*(2*r+1)` and `t < 4*a^2/81 + 1/8`, where `a=n-1-Delta`, `t=m-Delta*(n-Delta)`, `r` counts residual edges and `S` is total minimum label demand. The proof combines the exact threshold-pair count across all demand levels through a common residual budget. It has no large-a cutoff. **The n>=6 qualification is essential for strictness: K(2,3) is a small-order exception.** This is not a complete general-conjecture solution or a new whole-order proof.
-
-The [replay guide](project/research/general_n/2026-09-08-layer-sum-v1/README.md) and [fresh evidence](project/research/general_n/2026-09-08-layer-sum-v1/RESULTS.md) preserve 1,059 checked selected systems, the full labelled-graph census through six vertices, 2,353 abstract demand multisets and 10,200 scalar identities. The two criticality implementations agree on all 33,864 graphs in that small domain. Only 12 systems have nonzero demand, and none has positive surplus; finite tests are not a proof of the dense case. **Candidate mathematics; internal finite replay REPRODUCED; independent review OPEN. No Lean check of this continuation is claimed.**
-
-The preceding [threshold-capacity note](project/research/general_n/2026-09-07-stability-spare-sources-v9/THRESHOLD_CAPACITY_CONTINUATION.md), with its 0.6129 candidate coefficient, remains unchanged. Its supplied regression has now actually run successfully: 99 rounding cases, 2,550 integer maximisations and 1,728,186 oriented-graph checks. The new graph-to-layer proof is self-contained and does not depend on the older charging-deficit constants. The concurrent demand-tail v10 and Jensen-tail v11 checkpoints are preserved in full; this layer-sum argument does not depend on their new constants. The unreferenced weighted-spare v10 blobs from the previous turn are a different workstream and are not silently adopted as evidence. Frozen papers and the theorem ledger remain untouched.
-
-The publication was rebased onto the concurrent v11 checkpoint; see the [reconciliation note](project/research/general_n/2026-09-08-layer-sum-v1/RECONCILIATION.md). V11 retains its stated n>=4 scope; the stronger layer-sum threshold above is deliberately limited to n>=6.
-
 ### v9 — standalone structural paper
 
 The [nine-page v9 paper](project/research/general_n/2026-09-07-stability-spare-sources-v9/General_Structural_Theorems_v9.pdf), [full proof](project/research/general_n/2026-09-07-stability-spare-sources-v9/PROOF.md), [review guide](project/research/general_n/2026-09-07-stability-spare-sources-v9/README.md) and [literature comparison](project/research/general_n/2026-09-07-stability-spare-sources-v9/literature/COMPARISON.md) isolate the charging and source-supplement mechanisms from finite-order computations. The complete standard-library replay passed locally and in a clean GitHub runner.
@@ -59,7 +42,7 @@ The local quasi-edge Lean slice now checks **six** logical lemmas in Lean 4.19.0
 
 The [v10 proof](project/research/general_n/2026-09-08-demand-tail-stability-v10/PROOF.md) derives the candidate fixed loss `1/750` for `a>=25` and the conservative maximum-degree implication `Delta>=0.6126n`. Its [exact rational checker](project/research/general_n/2026-09-08-demand-tail-stability-v10/check_v10.py) passed in a clean Ubuntu 24.04 runner. V10 also records the general demand-tail capacity inequality and all-k spare-source bound.
 
-### v11 — Jensen-tail candidate (retained)
+### v11 — current candidate maximum-degree threshold
 
 The [v11 Jensen-tail proof](project/research/general_n/2026-09-08-jensen-tail-v11/PROOF.md) adds an exact second stability identity centred at the **actual mean demand**, rather than only at `alpha=1-1/sqrt(2)`. Combining that Jensen defect with the same source-supplement pair capacity gives
 
@@ -71,7 +54,7 @@ c = (3-2*sqrt(2))/2,
 a >= 50  ==>  t < (c-1/300) a^2.
 ```
 
-Together with the original charging bound for `2<=a<=49` and a direct `a=1` observation, the v11 conservative candidate implication is
+Together with the original charging bound for `2<=a<=49` and a direct `a=1` observation, the current conservative candidate implication is
 
 ```text
 n >= 4 and Delta(G) >= 0.6116 n
@@ -89,10 +72,9 @@ No finite-order enumeration, Fan bound, weak-core reduction or positive-surplus 
 | n=25 | [Reviewer manuscript — PDF](releases/n25-reviewer-v1/N25_Reviewer_Manuscript_v1.pdf) | [Review guide](releases/n25-reviewer-v1/REVIEW_GUIDE.md) |
 | n=27 | [Full proof manuscript — Markdown](project/reviews/n27/2026-09-07-candidate-v1/PROOF.md) | [Evidence package](releases/n27-candidate-v1/README.md) |
 | n=28 | [Mathematical manuscript — PDF](releases/n28-reviewer-v1/N28_Reviewer_Manuscript_v1.pdf) | [Verification companion — PDF](releases/n28-reviewer-v1/N28_Verification_Companion_v1.pdf) |
-| General layer-sum | [Full candidate proof — Markdown](project/research/general_n/2026-09-08-layer-sum-v1/PROOF.md) | [Replay and evidence](project/research/general_n/2026-09-08-layer-sum-v1/README.md) |
 | General v9 | [Structural paper — PDF](project/research/general_n/2026-09-07-stability-spare-sources-v9/General_Structural_Theorems_v9.pdf) | [Proof and replay guide](project/research/general_n/2026-09-07-stability-spare-sources-v9/README.md) |
 | General v10 | [Demand-tail proof — Markdown](project/research/general_n/2026-09-08-demand-tail-stability-v10/PROOF.md) | [Clean-runner arithmetic record](project/research/general_n/2026-09-08-demand-tail-stability-v10/README.md) |
-| General v11 | [Jensen-tail proof — Markdown](project/research/general_n/2026-09-08-jensen-tail-v11/PROOF.md) | [Guide and exact Sturm record](project/research/general_n/2026-09-08-jensen-tail-v11/README.md) |
+| General v11 | [Current Jensen-tail proof — Markdown](project/research/general_n/2026-09-08-jensen-tail-v11/PROOF.md) | [Guide and exact Sturm record](project/research/general_n/2026-09-08-jensen-tail-v11/README.md) |
 
 ## Scope, evidence and governance
 
@@ -102,4 +84,4 @@ The middle-degree region remains open. Degree-case exclusions at selected larger
 
 Paul Lenz directed the project; ChatGPT/Geeps supplied mathematical development, software, manuscripts and internal checks. Frozen finite-order proofs, original archives and the governed theorem ledger remain unchanged by the general research programme.
 
-The [README immediately before the layer-sum update](project/reviews/history/README_before_layer_sum_2026-09-08.md) and the [README immediately before the v11 update](project/reviews/history/README_before_v11_2026-09-08.md) is preserved verbatim. See the [standing orders](project/N25_PROJECT_STANDING_ORDERS.md), [commit-completion policy](project/REPO_SYNC_POLICY.md), [canonical review](project/CANONICAL_N25_REVIEW_2026-09-06.md), [theorem ledger](repro-v1/ledger/theorem_ledger.json), [task backlog](project/CANONICAL_TASKS.json) and [evidence-recovery manifest](project/EVIDENCE_RECOVERY_MANIFEST.json). Publication preserves evidence; it does not promote mathematical status.
+The [README immediately before the v11 update](project/reviews/history/README_before_v11_2026-09-08.md) is preserved verbatim. See the [standing orders](project/N25_PROJECT_STANDING_ORDERS.md), [commit-completion policy](project/REPO_SYNC_POLICY.md), [canonical review](project/CANONICAL_N25_REVIEW_2026-09-06.md), [theorem ledger](repro-v1/ledger/theorem_ledger.json), [task backlog](project/CANONICAL_TASKS.json) and [evidence-recovery manifest](project/EVIDENCE_RECOVERY_MANIFEST.json). Publication preserves evidence; it does not promote mathematical status.

@@ -1,0 +1,70 @@
+{
+  "schema": "layer-sum-manifest-v1",
+  "files": {
+    "EVIDENCE.json": {
+      "bytes": 11408,
+      "sha256": "870cf3d99e7835097553d4f7a0a89e5e190d7ba98b6b55584b48b37a9a5e020c",
+      "git_blob_sha": "72080100bbb0ede1b73f48e373992e7fbb4614fc"
+    },
+    "HISTORY.json": {
+      "bytes": 2698,
+      "sha256": "20fdb82fc20ded88bf6f061b9920f75a4be2b5df38ba6f829a93a47290e10592",
+      "git_blob_sha": "8b7030b8ab4b2271489f054d8f7d151a272d38f3"
+    },
+    "PROOF.md": {
+      "bytes": 11644,
+      "sha256": "5e9f799790269d95caa6a4e9b962422087e409b2a16d0c2a5a47e4ea2a2d2535",
+      "git_blob_sha": "565de0b30ab4c320913ac7aac152debccff607be"
+    },
+    "PROVENANCE.json": {
+      "bytes": 2608,
+      "sha256": "1c140bbf86bed5b054efb887508730a1a5f8f2c45b54da6d0d1658cd57de8076",
+      "git_blob_sha": "9f052ce849bfc76b31efcb8e5265f55280708d21"
+    },
+    "README.md": {
+      "bytes": 2582,
+      "sha256": "3eea6f6d66f6714f9fde50faf49643f56ce49d058590fe72e863cd50065cbc8f",
+      "git_blob_sha": "f44227222250df28a5d533430155819669a2db7c"
+    },
+    "RECONCILIATION.md": {
+      "bytes": 2169,
+      "sha256": "b407e3ba13dfd6964fb690bb0f962059acb33616e4d73ac6f9dcb0ed7ef84467",
+      "git_blob_sha": "e73fded7e8c802c6f62cdb650fc73c7aa6c5aee0"
+    },
+    "RESULTS.md": {
+      "bytes": 2390,
+      "sha256": "457a095f9a9b25d4305968145be729c6354e428342309bbc47049e0c4b2cb2e4",
+      "git_blob_sha": "7dc1dd64ace627e5d9f16179b912314dfeba92bd"
+    },
+    "history/initial-to-final.patch": {
+      "bytes": 8540,
+      "sha256": "d106bc1853948f0bdc1f51aafcf9fa2be256a22b4e3c5d258b023ed81b40f13f",
+      "git_blob_sha": "35b7a205a537ac09b83912a01edae6f13761e723"
+    },
+    "history/make_atlas7.py": {
+      "bytes": 646,
+      "sha256": "e4d640692ea5b047f2d8bd252c2657d150660b3b60620e9eeff37ec6b7611bd9",
+      "git_blob_sha": "5990175eba943a25523bfb022b1b6f5209b71227"
+    },
+    "src/check_layers.py": {
+      "bytes": 16434,
+      "sha256": "aad6320a4b1395ac1ad4e33edf09beface3e2a7c4de97629990d93f850ca8034",
+      "git_blob_sha": "7d480359398bf0235ec11ae85a2a6316ae308658"
+    },
+    "src/check_threshold_capacity.py": {
+      "bytes": 3377,
+      "sha256": "e2a85218d331d5fa4451bd4268d133fa7ead89a10643415a6b775e4d0e2571ad",
+      "git_blob_sha": "695c7e4e1d54f4476f99f25e46e7011088b8e5ed"
+    }
+  },
+  "root_readme": {
+    "bytes": 12490,
+    "sha256": "e3ec770b573ce02979b24cc5b6a744596846af319ad7c7f73b438549056507e1",
+    "git_blob_sha": "be83d897efcf49aa3ce1a442337c7acfb20963cf"
+  },
+  "excludes": [
+    "MANIFEST.json",
+    "PUBLICATION_RECEIPT.json"
+  ],
+  "note": "Manifest and receipt are not self-hashed; verify their committed Git blobs separately."
+}

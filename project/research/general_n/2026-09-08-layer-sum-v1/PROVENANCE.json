@@ -1,0 +1,37 @@
+{
+  "repository": "paullenz/MurtySimon25",
+  "branch": "main",
+  "date": "2026-09-08",
+  "source_parent": "f332e47ae4c32dd28ff0c7765130fff2770b20e0",
+  "source_base_tree": "a4b1eaa5c960d88ae352a9497f0916be84f3ac15",
+  "source_readme_blob": "d99f3e614edf1c109648aed592dcba79571bb253",
+  "source_threshold_note_blob": "c2a478de88c7bd68dc02fdface2f3458e40a189e",
+  "source_threshold_script_lines": "217-294, excluding closing Markdown fence",
+  "mathematical_status": "CANDIDATE; independent mathematical review OPEN",
+  "computational_status": "REPRODUCED internally, fresh execution in this response",
+  "formal_verification": false,
+  "remote_CI_claimed": false,
+  "outreach_sent": false,
+  "frozen_proofs_or_theorem_ledger_changed": false,
+  "local_readme_baseline_git_blob_verified": true,
+  "preservation": "Ordinary UTF-8 source, proof and JSON. EVIDENCE.json contains the complete parsed outputs; original pretty JSON is reconstructable and hashed. Initial source recovers from the reverse patch, verified byte-for-byte. Publication receipt and manifest are not recursive self-hashes.",
+  "uncompleted_previous_turn_uploads": {
+    "status": "NOT adopted as evidence; earlier archive recovery remains OPEN",
+    "main_at_start": "f332e47ae4c32dd28ff0c7765130fff2770b20e0",
+    "observed_unattached_blob_ids": [
+      "1b5036ec754a53282ef1c8e750137997a5e98644",
+      "9302c751961e25d1866f31d09b1a68a752c437dc",
+      "20d6a468197aaba18d345116e1e3a80363fe333c",
+      "20a50d003fd7c3b36d6bea860a103dbc0d74d396",
+      "0ea09c5f4b001d018eb891b064d2c851beb4209b",
+      "06f9b4a787c2aa6909db2c2f592f45d343d67a50"
+    ],
+    "note": "These IDs occur in prior tool history; their large storage payloads were not recovered or verified in this response. Blob creation alone was not completed publication."
+  },
+  "io_limitations": "Container git clone failed DNS lookup. Connector repository reads remained successful; no loss of GitHub permission was inferred.",
+  "literature_search_scope": "A limited fresh search found the author-institution maximum-degree paper record and arXiv 1812.08420 and 2409.17491; no exhaustive novelty or best-known claim. No external theorem is used in the proof.",
+  "publication_parent_after_concurrent_update": "ac90a88de6e0548a3c52976095e3cbbf8641606f",
+  "publication_base_tree": "9d56440a10b7610713a89f9b61a864e520f67ecb",
+  "concurrent_readme_blob": "f595ff34f685d7910a7ea03c72366f56454e2237",
+  "concurrent_reconciliation": "RECONCILIATION.md; preserve the 16 concurrent commits, rebase additively, do not confuse demand-tail v10 with unreferenced weighted-spare v10"
+}

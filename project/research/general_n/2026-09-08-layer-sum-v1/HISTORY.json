@@ -1,0 +1,61 @@
+{
+  "schema": "layer-sum-history-v1",
+  "initial_code_sha256": "1d13aa1abf9603920fe00ff066511d29e018177b0a0195938dad8b2c9034032d",
+  "final_code_sha256": "aad6320a4b1395ac1ad4e33edf09beface3e2a7c4de97629990d93f850ca8034",
+  "initial_report_sha256": "25b5e93f027c04b002dfedcfe400f3b9f63ee157244a8b5ceff739b9811618ec",
+  "initial_report_reconstruction": {
+    "start_with": "EVIDENCE.json layers_report",
+    "remove": [
+      "atlas7_input",
+      "small_order_boundary_control"
+    ],
+    "replace": {
+      "counts": {
+        "graphs_considered": 33864,
+        "critical_graphs": 608,
+        "criticality_crosschecks": 1667,
+        "small_systems": 920,
+        "sample_systems": 107,
+        "nonzero_demand_systems": 10,
+        "positive_surplus_systems": 0,
+        "tail_checks": 2048,
+        "nonempty_tail_checks": 11,
+        "degree_premise_systems": 422
+      },
+      "system_sha256": "ce5f3fd360561af4b84e8b861413b01ef307fe13ccfcc2f7e03082ff798a4d23",
+      "algebra": {
+        "demand_multisets": 2353,
+        "scalar_identity_cases": 10200,
+        "coefficient": "2/27",
+        "cubic": "S^3 <= a^2 r^2",
+        "formal_proof": false
+      }
+    },
+    "serialize": "json.dumps(report, indent=2)+newline; retain key order"
+  },
+  "initial_code_recovery": "patch -R -o /new/path/check_layers_initial.py src/check_layers.py history/initial-to-final.patch",
+  "recovery_checked_byte_for_byte": true,
+  "initial_run": {
+    "exit_code": 0,
+    "duration_seconds": 0.9981677439999999,
+    "stdout": "",
+    "stderr": "",
+    "status": "PASS for the weaker intermediate theorem"
+  },
+  "weaker_candidate": {
+    "exact": "(1/2+sqrt(2/27))/(1+sqrt(2/27))",
+    "decimal_60_digit": "0.606969384566990685891837044482353483517956848839400207705961",
+    "decimal_is_explanatory_only": true
+  },
+  "mathematical_change": "First S^3<=a^2 r^2, t<=2a^2/27, then retained the integer pair correction and used weighted Cauchy-Schwarz to obtain 3S^3<=a^2 r(2r+1) and t<4a^2/81+1/8. No failed mathematical execution occurred. K(2,3) was identified before claiming the stronger degree scope.",
+  "preliminary_uniform_exploration": {
+    "code": "x=np.linspace(.00001,.99999,100000); r=(x*np.sqrt(2*x-x*x)+2*x*np.arcsin(np.sqrt(x/2)))/2; v=(x-r)/2; i=v.argmax()",
+    "results": {
+      "uniform_optimum": 0.23811761887618876,
+      "c_integrated": 0.038557351940533696,
+      "beta": 0.582065690019027
+    },
+    "scope": "floating-point exploration for a uniform continuous profile only; not a universal theorem, not used in the proof"
+  },
+  "atlas_regeneration": "history/make_atlas7.py records the generation recipe, requiring NetworkX 3.6.1; default replay uses saved literal inputs."
+}
