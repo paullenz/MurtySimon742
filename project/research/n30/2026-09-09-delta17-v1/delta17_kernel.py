@@ -192,6 +192,7 @@ def main():
     dual_text=json.dumps(dual_doc,indent=2,sort_keys=True)+"\n"
     dual_path=z.output/"D17_EXACT_DUAL_CERTIFICATES.json"
     dual_path.write_text(dual_text)
+    semantic=json.dumps(dual_doc,sort_keys=True,separators=(",",":"))
 
     report={
         "schema":"n30-d17-early-kernel-v1",
@@ -208,7 +209,7 @@ def main():
         report["results"][m]={
             k:v for k,v in rec.items() if k not in ("duals","opens")
         }
-    report["dual_certificate_sha256"]=hashlib.sha256(dual_text.encode()).hexdigest()
+    report["dual_certificate_semantic_sha256"]=hashlib.sha256(semantic.encode()).hexdigest()
     (z.output/"D17_KERNEL_REPORT.json").write_text(
         json.dumps(report,indent=2,sort_keys=True)+"\n"
     )
