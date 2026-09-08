@@ -1,0 +1,73 @@
+{
+  "schema": "n25-reaudit-remote-v1",
+  "date": "2026-09-08",
+  "repository": "paullenz/MurtySimon25",
+  "candidate": "n=25, e(G)<=156, equality exactly K(12,13)",
+  "baseline_before_reaudit": "af5a05689bee9bdbc50ee5a54974fe5c2a853f8f",
+  "partition_driver_commit": "77dcf450c4b96ef1559d6bd3d362988e016322a8",
+  "workflow": ".github/workflows/n25-reaudit.yml",
+  "successful_run": {
+    "run_id": 34216192059,
+    "head_sha": "77dcf450c4b96ef1559d6bd3d362988e016322a8",
+    "status": "completed",
+    "conclusion": "success",
+    "created_at": "2026-09-08T10:34:43Z",
+    "updated_at": "2026-09-08T10:40:59Z",
+    "band_jobs": 16,
+    "assurance_job": "success",
+    "aggregate_job": "success"
+  },
+  "aggregate": {
+    "outer_states": 543578,
+    "labelled_columns": 3442212,
+    "every_shard_matched_both_generators_and_classifiers": true,
+    "partition": "disjoint scope/r bands, or exhaustive SHA256(key) modulo 3",
+    "unpartitioned_original_wrapper_completed": false
+  },
+  "scope_counts": {
+    "d14_157": {"states": 59264, "columns": 1480},
+    "d15_157": {"states": 108, "columns": 0},
+    "d15_156": {"states": 211, "columns": 0},
+    "d14_156": {"states": 82452, "columns": 188520},
+    "d14_156_k1": {"states": 401543, "columns": 3252212}
+  },
+  "assurance": {
+    "prior_redteam_suite_reproduced": true,
+    "terminal_certificates_independently_rederived": 1959,
+    "d14_156_terminal_columns": 171,
+    "d14_156_k1_terminal_columns": 1788,
+    "minimum_strict_subset_slack": 1,
+    "terminal_matching_algorithm": "reachable labelled-subset dynamic program",
+    "imports_frozen_terminal_verifier": false,
+    "mutation_status": "COMPLETED_WITH_DECLARED_TRUST_BOUNDARIES"
+  },
+  "complete_records_artifact": {
+    "id": 10052070289,
+    "name": "n25-reaudit-complete-records",
+    "bytes": 67406,
+    "sha256": "8761ff3296c48d9c5f9b86b86e23f6015c812df3c660ce528938b596b51d2b55",
+    "downloaded_in_audit_session": true
+  },
+  "first_monolithic_attempt": {
+    "run_id": 34212897538,
+    "job_id": 102017807363,
+    "commit": "3ffe7a409750d5688b574f73027652cb35f1ee17",
+    "conclusion": "failure",
+    "exit_code": 143,
+    "reason": "runner shutdown signal",
+    "completed_before_shutdown": [
+      "reviewer archive assembly and integrity",
+      "three manifest/equality-certificate checks",
+      "original Delta14/157 exact replay and tests"
+    ],
+    "full_newer_scope_replay_completed": false
+  },
+  "frozen_reviewer_zip_sha256": "ff5a88f4202fb1e201f52e7e6ec0b50f88248cd43493eee78f120a3c1de15c3d",
+  "frozen_candidate_evidence_sha256": "0588c85900762184040dfb313c89d36349f2a8183db5cbc91a1ee50915cb4e95",
+  "mathematical_status": "CANDIDATE; no blocking defect found in internal re-audit",
+  "independent_specialist_review": "OPEN",
+  "full_formal_verification": false,
+  "independent_authorship": false,
+  "later_general_degree_results_used": false,
+  "frozen_proof_or_theorem_ledger_changed": false
+}
