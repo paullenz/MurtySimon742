@@ -1,0 +1,28 @@
+{
+  "schema": "n29-t3-bc-hinge-scan-v1",
+  "profiles": 94,
+  "floating_point_reconnaissance_only": true,
+  "family": "min",
+  "features": 192,
+  "active_count": 9,
+  "active_features": [
+    {"kind":"min","param":[0,0],"weight":0.018779914265146882},
+    {"kind":"min","param":[0,2],"weight":0.024972964932704098},
+    {"kind":"min","param":[1,7],"weight":0.08657636785466294},
+    {"kind":"min","param":[1,8],"weight":0.037559828530293604},
+    {"kind":"min","param":[1,9],"weight":0.04994592986540799},
+    {"kind":"min","param":[1,10],"weight":0.026552812972376955},
+    {"kind":"min","param":[1,11],"weight":0.2890235027523381},
+    {"kind":"min","param":[2,0],"weight":0.043288183927331275},
+    {"kind":"min","param":[4,0],"weight":0.007382624208050133}
+  ],
+  "objective": 1.6103380959227178,
+  "rows": 30646,
+  "variables": 2264,
+  "status": 0,
+  "success": true,
+  "solver_message": "Optimization terminated successfully. (HiGHS Status 7: Optimal)",
+  "diag_only_result": {"success":false,"status":2,"message":"The problem is infeasible. (HiGHS Status 8: model_status is Infeasible; primal_status is None)"},
+  "interpretation": "Floating proposal for a BC-only analytic potential F(d,v)=sum c_DV min((d-D)_+,(v-V)_+) across all 94 n29 t=3 hard profiles. Exactification required before theorem use.",
+  "provenance": {"workflow_run":34383764035,"artifact_id":10116903001,"artifact_sha256":"782e541f46226d67533d6603bbc8edc462bae6cf3012de759f0349fc5a7ba17e"}
+}
