@@ -1,0 +1,32 @@
+{
+  "Delta": 15,
+  "close": {
+    "all_model_rejections_exact_integer_farkas_verified": true,
+    "counts": {"model_exact_missing":0,"model_exact_rejected":0,"model_noninfeasible":0,"rows":418,"source_count":0,"threshold":418},
+    "final_survivors": 0,
+    "floating_infeasibility_alone_accepted": false,
+    "gzip_sha256": "f7f181e12ecbe91296c48dd3e991eb305ba623c5384da39eed79240cb4bfdda4",
+    "json_sha256": "156f38a9b7b432cc826441b9366fd199150c4c45ed9866084ba184f2fbe7b10c",
+    "parameterized_model_source": "project/research/n30/2026-09-08-minimal-kernel-recon-v1/n30_threshold_model.py",
+    "schema": "fan-free-n28-d15-upper-close-v1",
+    "scope": {"Delta":15,"a":12,"b":15,"dmax":10,"m":198,"n":28,"t":3}
+  },
+  "final_survivors": 0,
+  "m": 198,
+  "n": 28,
+  "prepare": {
+    "counts": {"basic_empty":1,"domain":6859,"dual_empty":508,"retained":186,"threshold_empty":6164},
+    "dual_lower_bounds_exactly_checked": true,
+    "frozen_source_modified": false,
+    "parameterized_source": "project/research/n30/2026-09-08-minimal-kernel-recon-v1/n30_prepare.py",
+    "retained": 186,
+    "schema": "fan-free-n28-d15-prepare-v1",
+    "scope": {"Delta":15,"a":12,"b":15,"m":198,"n":28,"t":3},
+    "uses_deltaC_positive": true
+  },
+  "rows": {"initial_source_rejections":648130,"refined_source_rejections":832,"states":649380,"survivors":418},
+  "schema": "fan-free-n28-d15-scope-v1",
+  "status": "candidate fixed-order proof component; independent review open",
+  "t": 3,
+  "provenance": {"workflow_run":34396969425,"artifact_id":10121891946,"artifact_sha256":"cf71339f83d49fc1a53bfaee66e73061bebbc8e9cbb7488c0655da7a76c1b4bd","publication_recovery":"all mathematical stages and artifact upload succeeded; final Git push raced"}
+}
