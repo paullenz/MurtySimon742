@@ -1,0 +1,112 @@
+name: General RX-Hall n29 boundary-specialised nine-shape transfer
+
+on:
+  workflow_dispatch:
+  push:
+    paths:
+      - 'project/research/general_n/2026-09-09-rx-hall-v1/n29_boundary_specialize_transfer.py'
+      - '.github/workflows/general-rx-hall-n29-boundary-specialize.yml'
+
+permissions:
+  contents: write
+
+jobs:
+  scan:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 20
+    strategy:
+      fail-fast: false
+      matrix:
+        shard: [0,1,2,3,4,5]
+    steps:
+      - uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262
+      - name: Pin solver
+        run: |
+          python3 -m venv .venv
+          .venv/bin/python -m pip install --disable-pip-version-check --only-binary=:all: scipy==1.17.0
+      - name: Regenerate n29 t2 minimal frontier
+        run: |
+          set -euo pipefail
+          D=project/reviews/n29/2026-09-08-redteam-restart-v1
+          mkdir -p inputs out
+          g++ -O3 -std=c++17 "$D/minimal_rows.cpp" -o minimal_rows
+          .venv/bin/python -I -B "$D/minimal_prepare.py" --t 2 --output inputs
+          ./minimal_rows inputs/demands.txt inputs/row_survivors.txt inputs/row_bands.txt 2 > inputs/MINIMAL_ROWS_REPORT.json
+      - name: Compare baseline with dmax-specialised shapes
+        run: |
+          set -euo pipefail
+          R=project/research/general_n/2026-09-09-rx-hall-v1
+          .venv/bin/python -I -B "$R/n29_boundary_specialize_transfer.py" \
+            --demands-json inputs/demands.json --rows inputs/row_survivors.txt \
+            --support-json "$R/checkpoints/N30_SHARED_MIN_SUPPORT_RUN_34361230390.json" \
+            --a 12 --b 16 --dmax 10 --t 2 --shard ${{ matrix.shard }} --shards 6 \
+            --output out/BOUNDARY.json
+      - uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02
+        with:
+          name: n29-boundary-specialise-s${{ matrix.shard }}
+          path: out/BOUNDARY.json
+          if-no-files-found: error
+          retention-days: 30
+
+  aggregate:
+    needs: scan
+    runs-on: ubuntu-24.04
+    steps:
+      - uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262
+        with:
+          fetch-depth: 0
+      - uses: actions/download-artifact@d3f86a106a0bac45b974a628896c90dbdf5c8093
+        with:
+          pattern: 'n29-boundary-specialise-*'
+          path: reports
+      - name: Aggregate and preserve survivors
+        run: |
+          set -euo pipefail
+          python3 - <<'PY'
+          import json,pathlib
+          docs=[json.load(open(p)) for p in pathlib.Path('reports').rglob('BOUNDARY.json')]
+          assert len(docs)==6,len(docs)
+          records=sum((d['records'] for d in docs),[])
+          assert len(records)==902,len(records)
+          records.sort(key=lambda r:r['hard_position'])
+          out={
+            'schema':'n29-nine-shape-boundary-specialisation-aggregate-v1',
+            'status':'PASS_RECONNAISSANCE',
+            'hard_rows':902,
+            'baseline_separated':sum(r['baseline_separated'] for r in records),
+            'baseline_survivors':sum(not r['baseline_separated'] for r in records),
+            'trimmed_separated':sum(r['trimmed_separated'] for r in records),
+            'trimmed_survivors':sum(not r['trimmed_separated'] for r in records),
+            'newly_separated_by_trim':sum((not r['baseline_separated']) and r['trimmed_separated'] for r in records),
+            'lost_by_trim':sum(r['baseline_separated'] and (not r['trimmed_separated']) for r in records),
+            'changed_BC_indices':docs[0]['changed_BC_indices'],
+            'trimmed_survivor_records':[r for r in records if not r['trimmed_separated']],
+            'floating_point_reconnaissance_only':True,
+          }
+          pathlib.Path('out').mkdir(exist_ok=True)
+          pathlib.Path('out/AGGREGATE.json').write_text(json.dumps(out,indent=2,sort_keys=True)+'\n')
+          print(json.dumps({k:v for k,v in out.items() if k!='trimmed_survivor_records'},indent=2,sort_keys=True))
+          PY
+      - uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02
+        with:
+          name: n29-boundary-specialisation-aggregate
+          path: out/AGGREGATE.json
+          if-no-files-found: error
+          retention-days: 30
+      - name: Commit aggregate checkpoint with retry
+        run: |
+          set -euo pipefail
+          R=project/research/general_n/2026-09-09-rx-hall-v1/checkpoints
+          P="$R/N29_BOUNDARY_SPECIALISATION_RUN_${GITHUB_RUN_ID}.json"
+          cp out/AGGREGATE.json "$P"
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add "$P"
+          git commit -m "Preserve n29 boundary-specialisation run ${GITHUB_RUN_ID}"
+          git restore . || true
+          for attempt in 1 2 3 4 5; do
+            if git push origin HEAD:main; then exit 0; fi
+            git pull --rebase --autostash origin main
+            sleep $((attempt*2))
+          done
+          exit 1
