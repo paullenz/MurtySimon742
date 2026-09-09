@@ -1,0 +1,143 @@
+{
+  "floating_point_reconnaissance_only": true,
+  "results": {
+    "all.json": {
+      "SH_count": 0,
+      "SH_mode": "none",
+      "active_SH": [],
+      "active_SH_count": 0,
+      "active_step_count": 4,
+      "active_steps": [
+        {
+          "K": 13,
+          "weight": 0.06304001228575502
+        },
+        {
+          "K": 14,
+          "weight": 0.03741044559278657
+        },
+        {
+          "K": 15,
+          "weight": 0.1126848217542492
+        },
+        {
+          "K": 16,
+          "weight": 0.07504763367351788
+        }
+      ],
+      "floating_point_reconnaissance_only": true,
+      "interpretation": "Tests G(d,v)+phi(d+v), where G is monotone supermodular and phi is nonnegative nondecreasing via diagonal threshold steps. Positive results are floating proposals until exactified.",
+      "message": "Optimization terminated successfully. (HiGHS Status 7: Optimal)",
+      "mode": "hard38",
+      "objective": 105.21692117596193,
+      "profiles": 38,
+      "rows": 18176,
+      "schema": "n29-t2-bc-diagonal-step-v1",
+      "seconds": 1.6786932945251465,
+      "status": 0,
+      "step_levels": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14,
+        15,
+        16,
+        17,
+        18,
+        19,
+        20,
+        21,
+        22,
+        23,
+        24,
+        25,
+        26,
+        27
+      ],
+      "step_mode": "all",
+      "success": true,
+      "variables": 1117
+    },
+    "b.json": {
+      "SH_count": 0,
+      "SH_mode": "none",
+      "active_SH": [],
+      "active_SH_count": 0,
+      "active_step_count": 1,
+      "active_steps": [
+        {
+          "K": 16,
+          "weight": 0.3834673031334506
+        }
+      ],
+      "floating_point_reconnaissance_only": true,
+      "interpretation": "Tests G(d,v)+phi(d+v), where G is monotone supermodular and phi is nonnegative nondecreasing via diagonal threshold steps. Positive results are floating proposals until exactified.",
+      "message": "Optimization terminated successfully. (HiGHS Status 7: Optimal)",
+      "mode": "hard38",
+      "objective": 385.60845723930566,
+      "profiles": 38,
+      "rows": 18176,
+      "schema": "n29-t2-bc-diagonal-step-v1",
+      "seconds": 1.0240676403045654,
+      "status": 0,
+      "step_levels": [
+        16
+      ],
+      "step_mode": "b",
+      "success": true,
+      "variables": 1091
+    },
+    "near.json": {
+      "SH_count": 0,
+      "SH_mode": "none",
+      "active_SH": [],
+      "active_SH_count": 0,
+      "active_step_count": 3,
+      "active_steps": [
+        {
+          "K": 14,
+          "weight": 0.05976092264855822
+        },
+        {
+          "K": 15,
+          "weight": 0.08911398730790049
+        },
+        {
+          "K": 16,
+          "weight": 0.13367098096185076
+        }
+      ],
+      "floating_point_reconnaissance_only": true,
+      "interpretation": "Tests G(d,v)+phi(d+v), where G is monotone supermodular and phi is nonnegative nondecreasing via diagonal threshold steps. Positive results are floating proposals until exactified.",
+      "message": "Optimization terminated successfully. (HiGHS Status 7: Optimal)",
+      "mode": "hard38",
+      "objective": 120.13755986420269,
+      "profiles": 38,
+      "rows": 18176,
+      "schema": "n29-t2-bc-diagonal-step-v1",
+      "seconds": 1.3771145343780518,
+      "status": 0,
+      "step_levels": [
+        14,
+        15,
+        16,
+        17,
+        18
+      ],
+      "step_mode": "near",
+      "success": true,
+      "variables": 1095
+    }
+  },
+  "schema": "n29-t2-bc-diagonal-hard38-v1"
+}
