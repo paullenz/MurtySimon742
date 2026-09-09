@@ -1,0 +1,103 @@
+{
+  "floating_point_reconnaissance_only": true,
+  "interpretation": "Nonnegative monomial coefficients make F and G coordinatewise monotone on the finite pairwise order. Degree-1 is the scalar/first-moment class; higher degree tests smooth analytic alternatives to staircase lists.",
+  "results": {
+    "both": [
+      {
+        "degree": 1,
+        "monomials_per_family": 2,
+        "objective": null,
+        "success": false
+      },
+      {
+        "degree": 2,
+        "monomials_per_family": 5,
+        "objective": null,
+        "success": false
+      },
+      {
+        "degree": 3,
+        "monomials_per_family": 9,
+        "objective": null,
+        "success": false
+      },
+      {
+        "degree": 4,
+        "monomials_per_family": 14,
+        "objective": null,
+        "success": false
+      },
+      {
+        "degree": 5,
+        "monomials_per_family": 20,
+        "objective": null,
+        "success": false
+      }
+    ],
+    "n29": [
+      {
+        "degree": 1,
+        "monomials_per_family": 2,
+        "objective": null,
+        "success": false
+      },
+      {
+        "degree": 2,
+        "monomials_per_family": 5,
+        "objective": null,
+        "success": false
+      },
+      {
+        "degree": 3,
+        "monomials_per_family": 9,
+        "objective": null,
+        "success": false
+      },
+      {
+        "degree": 4,
+        "monomials_per_family": 14,
+        "objective": null,
+        "success": false
+      },
+      {
+        "degree": 5,
+        "monomials_per_family": 20,
+        "objective": null,
+        "success": false
+      }
+    ],
+    "n30": [
+      {
+        "degree": 1,
+        "monomials_per_family": 2,
+        "objective": null,
+        "success": false
+      },
+      {
+        "degree": 2,
+        "monomials_per_family": 5,
+        "objective": null,
+        "success": false
+      },
+      {
+        "degree": 3,
+        "monomials_per_family": 9,
+        "objective": null,
+        "success": false
+      },
+      {
+        "degree": 4,
+        "monomials_per_family": 14,
+        "objective": null,
+        "success": false
+      },
+      {
+        "degree": 5,
+        "monomials_per_family": 20,
+        "objective": null,
+        "success": false
+      }
+    ]
+  },
+  "schema": "pairwise-monotone-polynomial-potential-scan-v1"
+}
