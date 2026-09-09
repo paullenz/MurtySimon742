@@ -86,21 +86,21 @@ def build_n28():
     src=ROOT/'releases/n28-reviewer-v1/N28_Reviewer_Manuscript_v1.tex'
     s=src.read_text(); h=sha_text(s)
     s=s.replace('Reviewer edition 1','Reviewer edition 2')
-    s=s.replace('7 September 2026\\\\\\small Reviewer edition 2; independent mathematical review open',
-                '9 September 2026\\\\\\small Fan-free reviewer edition 2; independent mathematical review open')
+    s=s.replace(r'7 September 2026\\\small Reviewer edition 2; independent mathematical review open',
+                r'9 September 2026\\\small Fan-free reviewer edition 2; independent mathematical review open')
     s=once(s,
       "Fan's published strict estimate reduces the upper-bound problem to 197 edges.",
       "Fan's published strict estimate is retained for historical attribution, but edition 2 replaces it logically by a direct Fan-free exclusion of every edge count above 197.",'n28 abstract')
     pat=r"The external density input is Fan's strict estimate, as reported by Wang \\cite\[p\.~2\]\{wang\}:.*?needs examination does\."
-    new=("Historically, reviewer edition 1 used Fan's strict estimate, as reported by Wang \\cite[p.~2]{wang}, to deduce $m\\le197$. "
-         "Fan remains cited for attribution, but his theorem is \\emph{not} a logical dependency of edition 2. "
-         "The replacement is the project note \\texttt{"+FF.replace('_','\\_')+"}: the existing 197-edge calculation remains unchanged, while every $m\\ge198$ is excluded directly. "
-         "Degree sum handles $\\Delta\\le14$; fresh exact arithmetic closes $\\Delta=15$ for $m=198,\\ldots,210$; the pointwise charging bound at $\\Delta=16$ and residual h-index bounds at $\\Delta=17,\\ldots,26$ only strengthen as $m$ increases; and $\\Delta=27$ is the star case. "
-         "The historical Fan-based reviewer-v1 manuscript remains preserved unchanged.")
-    s,n=re.subn(pat,new,s,flags=re.S)
+    new=(r"Historically, reviewer edition 1 used Fan's strict estimate, as reported by Wang \cite[p.~2]{wang}, to deduce $m\le197$. "
+         r"Fan remains cited for attribution, but his theorem is \emph{not} a logical dependency of edition 2. "
+         "The replacement is the project note \\texttt{"+FF.replace('_','\\_')+r"}: the existing 197-edge calculation remains unchanged, while every $m\ge198$ is excluded directly. "
+         r"Degree sum handles $\Delta\le14$; fresh exact arithmetic closes $\Delta=15$ for $m=198,\ldots,210$; the pointwise charging bound at $\Delta=16$ and residual h-index bounds at $\Delta=17,\ldots,26$ only strengthen as $m$ increases; and $\Delta=27$ is the star case. "
+         r"The historical Fan-based reviewer-v1 manuscript remains preserved unchanged.")
+    s,n=re.subn(pat,lambda _m:new,s,flags=re.S)
     if n!=1: raise SystemExit(f'n28 Fan block replacements={n}')
-    s=s.replace('Fan supplies the global reduction to $m\le197$.',
-                'The Fan-free upper-range reduction supplies the global reduction to $m\le197$; Fan is cited historically only.')
+    s=s.replace(r'Fan supplies the global reduction to $m\le197$.',
+                r'The Fan-free upper-range reduction supplies the global reduction to $m\le197$; Fan is cited historically only.')
     s=s.replace("Fan's theorem", "Fan's historical theorem")
     out=ROOT/'project/reviews/n28/2026-09-09-fan-free-v2'; out.mkdir(parents=True,exist_ok=True)
     (out/'PROOF.tex').write_text(s)
