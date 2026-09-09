@@ -1,0 +1,84 @@
+{
+  "candidate_BC": 75,
+  "candidate_SH": 12,
+  "demand45_id": 45,
+  "demand45_position": 0,
+  "floating_milp_reconnaissance_only": true,
+  "interpretation": "A witness with optimum 14 at M=200 and M=1000 is a compact computational lower-bound witness against common support 13 under both coefficient caps; exact mathematical infeasibility is not claimed.",
+  "pairs_tested": 1,
+  "profiles_total": 38,
+  "records": [
+    {
+      "BC_count": 8,
+      "SH_count": 6,
+      "active_BC": [
+        {"index": 1, "weight": 14.977649632755595},
+        {"index": 2, "weight": 9.92972574853105},
+        {"index": 3, "weight": 15.412016428506353},
+        {"index": 6, "weight": 12.293946164848341},
+        {"index": 13, "weight": 14.676783912815019},
+        {"index": 14, "weight": 9.621645384182935},
+        {"index": 69, "weight": 4.255596749370041},
+        {"index": 72, "weight": 20.41201838686605}
+      ],
+      "active_SH": [
+        {"index": 1, "weight": 14.185322497901248},
+        {"index": 3, "weight": 13.316540971079885},
+        {"index": 4, "weight": 32.884299441498754},
+        {"index": 6, "weight": 16.51111511981372},
+        {"index": 9, "weight": 15.555932821826568},
+        {"index": 10, "weight": 9.929725748530862}
+      ],
+      "big_m": 200,
+      "message": "Optimization terminated successfully. (HiGHS Status 7: Optimal)",
+      "mip_gap": 0.0,
+      "mip_node_count": 5114,
+      "objective": 14.0,
+      "other_demand_id": 68,
+      "other_position": 1,
+      "rows": 1024,
+      "seconds": 31.915311813354492,
+      "status": 0,
+      "success": true,
+      "support_count": 14,
+      "validation_M1000": {
+        "BC_count": 8,
+        "SH_count": 6,
+        "active_BC": [
+          {"index": 1, "weight": 13.361102925015977},
+          {"index": 2, "weight": 11.229954394303725},
+          {"index": 3, "weight": 16.726361219419246},
+          {"index": 6, "weight": 13.341504086873126},
+          {"index": 8, "weight": 2.3559601843864804},
+          {"index": 13, "weight": 12.612986389710276},
+          {"index": 16, "weight": 12.894708535076981},
+          {"index": 72, "weight": 18.13458156126983}
+        ],
+        "active_SH": [
+          {"index": 1, "weight": 11.229954394303798},
+          {"index": 3, "weight": 17.56543172163272},
+          {"index": 4, "weight": 34.43965739959818},
+          {"index": 6, "weight": 18.404296440351473},
+          {"index": 9, "weight": 20.104154387623502},
+          {"index": 10, "weight": 11.229954394303885}
+        ],
+        "big_m": 1000,
+        "message": "Optimization terminated successfully. (HiGHS Status 7: Optimal)",
+        "mip_gap": 0.0,
+        "mip_node_count": 3710,
+        "objective": 13.999999999999977,
+        "other_demand_id": 68,
+        "other_position": 1,
+        "rows": 1024,
+        "seconds": 23.37608051300049,
+        "status": 0,
+        "success": true,
+        "support_count": 14,
+        "variables": 220
+      },
+      "variables": 220
+    }
+  ],
+  "schema": "n29-demand45-pair-min-support-scan-v1",
+  "witness": {"M1000_support": 14, "M200_support": 14, "other_demand_id": 68, "other_position": 1}
+}
