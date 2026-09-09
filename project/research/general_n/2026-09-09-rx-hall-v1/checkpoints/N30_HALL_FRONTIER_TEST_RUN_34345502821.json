@@ -1,0 +1,505 @@
+{
+  "interpretation": "Exact test using only already-generated Hall cuts with canonical maximal-neighbourhood frontier size <=K. Non-rejection does not exclude undiscovered K-frontier cuts.",
+  "records": [
+    {
+      "demand_id": 2094,
+      "frontier_histogram": {
+        "1": 1,
+        "2": 1,
+        "3": 12,
+        "4": 35,
+        "5": 63,
+        "6": 79,
+        "7": 43,
+        "8": 40,
+        "9": 8
+      },
+      "generated_cuts": 282,
+      "hard_position": 0,
+      "tests": {
+        "1": {
+          "certificate_rhs": null,
+          "cuts_kept": 1,
+          "rejected_exactly": false
+        },
+        "10": {
+          "certificate_rhs": -464,
+          "cuts_kept": 282,
+          "rejected_exactly": true
+        },
+        "2": {
+          "certificate_rhs": null,
+          "cuts_kept": 2,
+          "rejected_exactly": false
+        },
+        "3": {
+          "certificate_rhs": null,
+          "cuts_kept": 14,
+          "rejected_exactly": false
+        },
+        "4": {
+          "certificate_rhs": null,
+          "cuts_kept": 49,
+          "rejected_exactly": false
+        },
+        "5": {
+          "certificate_rhs": null,
+          "cuts_kept": 112,
+          "rejected_exactly": false
+        },
+        "6": {
+          "certificate_rhs": null,
+          "cuts_kept": 191,
+          "rejected_exactly": false
+        },
+        "7": {
+          "certificate_rhs": null,
+          "cuts_kept": 234,
+          "rejected_exactly": false
+        },
+        "8": {
+          "certificate_rhs": -464,
+          "cuts_kept": 274,
+          "rejected_exactly": true
+        }
+      }
+    },
+    {
+      "demand_id": 2309,
+      "frontier_histogram": {
+        "1": 2,
+        "2": 6,
+        "3": 26,
+        "4": 23,
+        "5": 23,
+        "6": 19,
+        "7": 2
+      },
+      "generated_cuts": 101,
+      "hard_position": 1,
+      "tests": {
+        "1": {
+          "certificate_rhs": null,
+          "cuts_kept": 2,
+          "rejected_exactly": false
+        },
+        "10": {
+          "certificate_rhs": -597,
+          "cuts_kept": 101,
+          "rejected_exactly": true
+        },
+        "2": {
+          "certificate_rhs": null,
+          "cuts_kept": 8,
+          "rejected_exactly": false
+        },
+        "3": {
+          "certificate_rhs": null,
+          "cuts_kept": 34,
+          "rejected_exactly": false
+        },
+        "4": {
+          "certificate_rhs": null,
+          "cuts_kept": 57,
+          "rejected_exactly": false
+        },
+        "5": {
+          "certificate_rhs": null,
+          "cuts_kept": 80,
+          "rejected_exactly": false
+        },
+        "6": {
+          "certificate_rhs": null,
+          "cuts_kept": 99,
+          "rejected_exactly": false
+        },
+        "7": {
+          "certificate_rhs": -597,
+          "cuts_kept": 101,
+          "rejected_exactly": true
+        },
+        "8": {
+          "certificate_rhs": -597,
+          "cuts_kept": 101,
+          "rejected_exactly": true
+        }
+      }
+    },
+    {
+      "demand_id": 2596,
+      "frontier_histogram": {
+        "10": 5,
+        "2": 3,
+        "3": 15,
+        "4": 23,
+        "5": 45,
+        "6": 45,
+        "7": 36,
+        "8": 17,
+        "9": 6
+      },
+      "generated_cuts": 195,
+      "hard_position": 2,
+      "tests": {
+        "1": {
+          "certificate_rhs": null,
+          "cuts_kept": 0,
+          "rejected_exactly": false
+        },
+        "10": {
+          "certificate_rhs": -459,
+          "cuts_kept": 195,
+          "rejected_exactly": true
+        },
+        "2": {
+          "certificate_rhs": null,
+          "cuts_kept": 3,
+          "rejected_exactly": false
+        },
+        "3": {
+          "certificate_rhs": null,
+          "cuts_kept": 18,
+          "rejected_exactly": false
+        },
+        "4": {
+          "certificate_rhs": null,
+          "cuts_kept": 41,
+          "rejected_exactly": false
+        },
+        "5": {
+          "certificate_rhs": null,
+          "cuts_kept": 86,
+          "rejected_exactly": false
+        },
+        "6": {
+          "certificate_rhs": null,
+          "cuts_kept": 131,
+          "rejected_exactly": false
+        },
+        "7": {
+          "certificate_rhs": null,
+          "cuts_kept": 167,
+          "rejected_exactly": false
+        },
+        "8": {
+          "certificate_rhs": null,
+          "cuts_kept": 184,
+          "rejected_exactly": false
+        }
+      }
+    },
+    {
+      "demand_id": 2701,
+      "frontier_histogram": {
+        "2": 3,
+        "3": 12,
+        "4": 26,
+        "5": 34,
+        "6": 56,
+        "7": 27,
+        "8": 15
+      },
+      "generated_cuts": 173,
+      "hard_position": 3,
+      "tests": {
+        "1": {
+          "certificate_rhs": null,
+          "cuts_kept": 0,
+          "rejected_exactly": false
+        },
+        "10": {
+          "certificate_rhs": -499,
+          "cuts_kept": 173,
+          "rejected_exactly": true
+        },
+        "2": {
+          "certificate_rhs": null,
+          "cuts_kept": 3,
+          "rejected_exactly": false
+        },
+        "3": {
+          "certificate_rhs": null,
+          "cuts_kept": 15,
+          "rejected_exactly": false
+        },
+        "4": {
+          "certificate_rhs": null,
+          "cuts_kept": 41,
+          "rejected_exactly": false
+        },
+        "5": {
+          "certificate_rhs": null,
+          "cuts_kept": 75,
+          "rejected_exactly": false
+        },
+        "6": {
+          "certificate_rhs": null,
+          "cuts_kept": 131,
+          "rejected_exactly": false
+        },
+        "7": {
+          "certificate_rhs": null,
+          "cuts_kept": 158,
+          "rejected_exactly": false
+        },
+        "8": {
+          "certificate_rhs": -499,
+          "cuts_kept": 173,
+          "rejected_exactly": true
+        }
+      }
+    },
+    {
+      "demand_id": 2812,
+      "frontier_histogram": {
+        "10": 2,
+        "2": 5,
+        "3": 21,
+        "4": 20,
+        "5": 40,
+        "6": 27,
+        "7": 20,
+        "8": 6
+      },
+      "generated_cuts": 141,
+      "hard_position": 4,
+      "tests": {
+        "1": {
+          "certificate_rhs": null,
+          "cuts_kept": 0,
+          "rejected_exactly": false
+        },
+        "10": {
+          "certificate_rhs": -538,
+          "cuts_kept": 141,
+          "rejected_exactly": true
+        },
+        "2": {
+          "certificate_rhs": null,
+          "cuts_kept": 5,
+          "rejected_exactly": false
+        },
+        "3": {
+          "certificate_rhs": null,
+          "cuts_kept": 26,
+          "rejected_exactly": false
+        },
+        "4": {
+          "certificate_rhs": null,
+          "cuts_kept": 46,
+          "rejected_exactly": false
+        },
+        "5": {
+          "certificate_rhs": null,
+          "cuts_kept": 86,
+          "rejected_exactly": false
+        },
+        "6": {
+          "certificate_rhs": null,
+          "cuts_kept": 113,
+          "rejected_exactly": false
+        },
+        "7": {
+          "certificate_rhs": null,
+          "cuts_kept": 133,
+          "rejected_exactly": false
+        },
+        "8": {
+          "certificate_rhs": null,
+          "cuts_kept": 139,
+          "rejected_exactly": false
+        }
+      }
+    },
+    {
+      "demand_id": 2984,
+      "frontier_histogram": {
+        "1": 1,
+        "2": 10,
+        "3": 29,
+        "4": 25,
+        "5": 14,
+        "6": 14,
+        "7": 1
+      },
+      "generated_cuts": 94,
+      "hard_position": 5,
+      "tests": {
+        "1": {
+          "certificate_rhs": null,
+          "cuts_kept": 1,
+          "rejected_exactly": false
+        },
+        "10": {
+          "certificate_rhs": -673,
+          "cuts_kept": 94,
+          "rejected_exactly": true
+        },
+        "2": {
+          "certificate_rhs": null,
+          "cuts_kept": 11,
+          "rejected_exactly": false
+        },
+        "3": {
+          "certificate_rhs": null,
+          "cuts_kept": 40,
+          "rejected_exactly": false
+        },
+        "4": {
+          "certificate_rhs": null,
+          "cuts_kept": 65,
+          "rejected_exactly": false
+        },
+        "5": {
+          "certificate_rhs": null,
+          "cuts_kept": 79,
+          "rejected_exactly": false
+        },
+        "6": {
+          "certificate_rhs": -747,
+          "cuts_kept": 93,
+          "rejected_exactly": true
+        },
+        "7": {
+          "certificate_rhs": -673,
+          "cuts_kept": 94,
+          "rejected_exactly": true
+        },
+        "8": {
+          "certificate_rhs": -673,
+          "cuts_kept": 94,
+          "rejected_exactly": true
+        }
+      }
+    },
+    {
+      "demand_id": 2984,
+      "frontier_histogram": {
+        "2": 7,
+        "3": 19,
+        "4": 23,
+        "5": 32,
+        "6": 22,
+        "7": 7,
+        "8": 3
+      },
+      "generated_cuts": 113,
+      "hard_position": 6,
+      "tests": {
+        "1": {
+          "certificate_rhs": null,
+          "cuts_kept": 0,
+          "rejected_exactly": false
+        },
+        "10": {
+          "certificate_rhs": -999647,
+          "cuts_kept": 113,
+          "rejected_exactly": true
+        },
+        "2": {
+          "certificate_rhs": null,
+          "cuts_kept": 7,
+          "rejected_exactly": false
+        },
+        "3": {
+          "certificate_rhs": null,
+          "cuts_kept": 26,
+          "rejected_exactly": false
+        },
+        "4": {
+          "certificate_rhs": null,
+          "cuts_kept": 49,
+          "rejected_exactly": false
+        },
+        "5": {
+          "certificate_rhs": null,
+          "cuts_kept": 81,
+          "rejected_exactly": false
+        },
+        "6": {
+          "certificate_rhs": null,
+          "cuts_kept": 103,
+          "rejected_exactly": false
+        },
+        "7": {
+          "certificate_rhs": null,
+          "cuts_kept": 110,
+          "rejected_exactly": false
+        },
+        "8": {
+          "certificate_rhs": -999647,
+          "cuts_kept": 113,
+          "rejected_exactly": true
+        }
+      }
+    }
+  ],
+  "schema": "rz-hall-bounded-frontier-test-v1",
+  "source_checkpoint": "project/research/general_n/2026-09-09-rx-hall-v1/checkpoints/N30_HALL_CUTGEN_RUN_34345029651.json",
+  "summary": {
+    "1": {
+      "exact_rejections": 0,
+      "rejected_positions": [],
+      "survivors": 7
+    },
+    "10": {
+      "exact_rejections": 7,
+      "rejected_positions": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6
+      ],
+      "survivors": 0
+    },
+    "2": {
+      "exact_rejections": 0,
+      "rejected_positions": [],
+      "survivors": 7
+    },
+    "3": {
+      "exact_rejections": 0,
+      "rejected_positions": [],
+      "survivors": 7
+    },
+    "4": {
+      "exact_rejections": 0,
+      "rejected_positions": [],
+      "survivors": 7
+    },
+    "5": {
+      "exact_rejections": 0,
+      "rejected_positions": [],
+      "survivors": 7
+    },
+    "6": {
+      "exact_rejections": 1,
+      "rejected_positions": [
+        5
+      ],
+      "survivors": 6
+    },
+    "7": {
+      "exact_rejections": 2,
+      "rejected_positions": [
+        1,
+        5
+      ],
+      "survivors": 5
+    },
+    "8": {
+      "exact_rejections": 5,
+      "rejected_positions": [
+        0,
+        1,
+        3,
+        5,
+        6
+      ],
+      "survivors": 2
+    }
+  }
+}
