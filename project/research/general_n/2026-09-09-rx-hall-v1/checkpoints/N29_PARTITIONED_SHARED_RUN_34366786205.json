@@ -1,0 +1,2520 @@
+{
+  "candidate_BC": 60,
+  "candidate_SH": 12,
+  "floating_point_reconnaissance_only": true,
+  "interpretation": "Tests whether the pooled pairwise staircase dictionary admits shared coefficients within natural scalar/threshold-statistic parameter layers. Feasible is numerical reconnaissance only.",
+  "profiles": 38,
+  "results": {
+    "H": {
+      "all_groups_feasible": false,
+      "failed_groups": 1,
+      "groups": 2,
+      "records": [
+        {
+          "active_BC": null,
+          "active_SH": null,
+          "key": "4",
+          "objective": null,
+          "positions": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            16,
+            21,
+            22,
+            23,
+            24,
+            29,
+            30,
+            31
+          ],
+          "profiles": 16,
+          "success": false
+        },
+        {
+          "active_BC": 14,
+          "active_SH": 4,
+          "key": "5",
+          "objective": 0.7896197927571939,
+          "positions": [
+            8,
+            9,
+            10,
+            25,
+            32,
+            33,
+            34,
+            35,
+            36,
+            38,
+            39,
+            40,
+            41,
+            42,
+            43,
+            45,
+            46,
+            47,
+            55,
+            63,
+            68,
+            72
+          ],
+          "profiles": 22,
+          "success": true
+        }
+      ]
+    },
+    "H_rhomax": {
+      "all_groups_feasible": false,
+      "failed_groups": 1,
+      "groups": 4,
+      "records": [
+        {
+          "active_BC": null,
+          "active_SH": null,
+          "key": "(4, 4)",
+          "objective": null,
+          "positions": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            6,
+            7,
+            16,
+            22,
+            23,
+            24,
+            30,
+            31
+          ],
+          "profiles": 13,
+          "success": false
+        },
+        {
+          "active_BC": 15,
+          "active_SH": 6,
+          "key": "(4, 5)",
+          "objective": 0.6345715947347182,
+          "positions": [
+            5,
+            21,
+            29
+          ],
+          "profiles": 3,
+          "success": true
+        },
+        {
+          "active_BC": 14,
+          "active_SH": 4,
+          "key": "(5, 5)",
+          "objective": 0.7896197927571921,
+          "positions": [
+            8,
+            9,
+            10,
+            25,
+            32,
+            34,
+            35,
+            36,
+            38,
+            39,
+            40,
+            41,
+            42,
+            43,
+            45,
+            46,
+            47,
+            55,
+            63,
+            68,
+            72
+          ],
+          "profiles": 21,
+          "success": true
+        },
+        {
+          "active_BC": 12,
+          "active_SH": 4,
+          "key": "(5, 6)",
+          "objective": 0.3648361881612768,
+          "positions": [
+            33
+          ],
+          "profiles": 1,
+          "success": true
+        }
+      ]
+    },
+    "W2": {
+      "all_groups_feasible": false,
+      "failed_groups": 1,
+      "groups": 12,
+      "records": [
+        {
+          "active_BC": null,
+          "active_SH": null,
+          "key": "36",
+          "objective": null,
+          "positions": [
+            0,
+            1
+          ],
+          "profiles": 2,
+          "success": false
+        },
+        {
+          "active_BC": 14,
+          "active_SH": 8,
+          "key": "37",
+          "objective": 0.6377372269314184,
+          "positions": [
+            2,
+            3,
+            4
+          ],
+          "profiles": 3,
+          "success": true
+        },
+        {
+          "active_BC": 16,
+          "active_SH": 8,
+          "key": "38",
+          "objective": 1.0291066401472329,
+          "positions": [
+            5,
+            6,
+            7,
+            16
+          ],
+          "profiles": 4,
+          "success": true
+        },
+        {
+          "active_BC": 15,
+          "active_SH": 5,
+          "key": "39",
+          "objective": 0.8149817747135732,
+          "positions": [
+            21,
+            22,
+            23,
+            24
+          ],
+          "profiles": 4,
+          "success": true
+        },
+        {
+          "active_BC": 18,
+          "active_SH": 6,
+          "key": "40",
+          "objective": 1.094439120611753,
+          "positions": [
+            29,
+            30,
+            31
+          ],
+          "profiles": 3,
+          "success": true
+        },
+        {
+          "active_BC": 13,
+          "active_SH": 6,
+          "key": "45",
+          "objective": 0.5222036004721425,
+          "positions": [
+            8,
+            25,
+            32
+          ],
+          "profiles": 3,
+          "success": true
+        },
+        {
+          "active_BC": 14,
+          "active_SH": 5,
+          "key": "46",
+          "objective": 0.578301093355761,
+          "positions": [
+            33,
+            34,
+            35,
+            41,
+            46
+          ],
+          "profiles": 5,
+          "success": true
+        },
+        {
+          "active_BC": 16,
+          "active_SH": 4,
+          "key": "47",
+          "objective": 0.7821804305857722,
+          "positions": [
+            9,
+            36,
+            38,
+            39,
+            40,
+            42,
+            43,
+            47
+          ],
+          "profiles": 8,
+          "success": true
+        },
+        {
+          "active_BC": 11,
+          "active_SH": 4,
+          "key": "48",
+          "objective": 0.51284409099688,
+          "positions": [
+            10,
+            45
+          ],
+          "profiles": 2,
+          "success": true
+        },
+        {
+          "active_BC": 17,
+          "active_SH": 5,
+          "key": "49",
+          "objective": 0.4212026196727474,
+          "positions": [
+            55,
+            63
+          ],
+          "profiles": 2,
+          "success": true
+        },
+        {
+          "active_BC": 15,
+          "active_SH": 2,
+          "key": "50",
+          "objective": 0.36617247947930764,
+          "positions": [
+            68
+          ],
+          "profiles": 1,
+          "success": true
+        },
+        {
+          "active_BC": 15,
+          "active_SH": 2,
+          "key": "51",
+          "objective": 0.287430683918669,
+          "positions": [
+            72
+          ],
+          "profiles": 1,
+          "success": true
+        }
+      ]
+    },
+    "W3": {
+      "all_groups_feasible": false,
+      "failed_groups": 1,
+      "groups": 15,
+      "records": [
+        {
+          "active_BC": 15,
+          "active_SH": 9,
+          "key": "32",
+          "objective": 0.7105694251654291,
+          "positions": [
+            1
+          ],
+          "profiles": 1,
+          "success": true
+        },
+        {
+          "active_BC": 14,
+          "active_SH": 8,
+          "key": "33",
+          "objective": 0.6377372269314172,
+          "positions": [
+            2,
+            3
+          ],
+          "profiles": 2,
+          "success": true
+        },
+        {
+          "active_BC": 15,
+          "active_SH": 6,
+          "key": "35",
+          "objective": 0.5460235785628587,
+          "positions": [
+            4
+          ],
+          "profiles": 1,
+          "success": true
+        },
+        {
+          "active_BC": null,
+          "active_SH": null,
+          "key": "36",
+          "objective": null,
+          "positions": [
+            0,
+            5,
+            6,
+            7
+          ],
+          "profiles": 4,
+          "success": false
+        },
+        {
+          "active_BC": 15,
+          "active_SH": 6,
+          "key": "38",
+          "objective": 0.5923378928395969,
+          "positions": [
+            16
+          ],
+          "profiles": 1,
+          "success": true
+        },
+        {
+          "active_BC": 15,
+          "active_SH": 5,
+          "key": "39",
+          "objective": 0.8149817747135732,
+          "positions": [
+            21,
+            22,
+            23,
+            24
+          ],
+          "profiles": 4,
+          "success": true
+        },
+        {
+          "active_BC": 18,
+          "active_SH": 6,
+          "key": "40",
+          "objective": 1.094439120611753,
+          "positions": [
+            29,
+            30,
+            31
+          ],
+          "profiles": 3,
+          "success": true
+        },
+        {
+          "active_BC": 11,
+          "active_SH": 5,
+          "key": "43",
+          "objective": 0.503713113214863,
+          "positions": [
+            8
+          ],
+          "profiles": 1,
+          "success": true
+        },
+        {
+          "active_BC": 16,
+          "active_SH": 7,
+          "key": "45",
+          "objective": 0.502528566093339,
+          "positions": [
+            9,
+            25,
+            32
+          ],
+          "profiles": 3,
+          "success": true
+        },
+        {
+          "active_BC": 13,
+          "active_SH": 5,
+          "key": "46",
+          "objective": 0.5783010933557605,
+          "positions": [
+            10,
+            33,
+            34,
+            35,
+            41,
+            46
+          ],
+          "profiles": 6,
+          "success": true
+        },
+        {
+          "active_BC": 14,
+          "active_SH": 4,
+          "key": "47",
+          "objective": 0.7821804305857747,
+          "positions": [
+            36,
+            38,
+            39,
+            40,
+            42,
+            43,
+            47
+          ],
+          "profiles": 7,
+          "success": true
+        },
+        {
+          "active_BC": 13,
+          "active_SH": 4,
+          "key": "48",
+          "objective": 0.5128440909968798,
+          "positions": [
+            45
+          ],
+          "profiles": 1,
+          "success": true
+        },
+        {
+          "active_BC": 17,
+          "active_SH": 5,
+          "key": "49",
+          "objective": 0.4212026196727474,
+          "positions": [
+            55,
+            63
+          ],
+          "profiles": 2,
+          "success": true
+        },
+        {
+          "active_BC": 15,
+          "active_SH": 2,
+          "key": "50",
+          "objective": 0.36617247947930764,
+          "positions": [
+            68
+          ],
+          "profiles": 1,
+          "success": true
+        },
+        {
+          "active_BC": 15,
+          "active_SH": 2,
+          "key": "51",
+          "objective": 0.287430683918669,
+          "positions": [
+            72
+          ],
+          "profiles": 1,
+          "success": true
+        }
+      ]
+    },
+    "W3_z3": {
+      "all_groups_feasible": false,
+      "failed_groups": 1,
+      "groups": 18,
+      "records": [
+        {
+          "active_BC": 15,
+          "active_SH": 9,
+          "key": "(32, 6)",
+          "objective": 0.7105694251654291,
+          "positions": [
+            1
+          ],
+          "profiles": 1,
+          "success": true
+        },
+        {
+          "active_BC": 15,
+          "active_SH": 8,
+          "key": "(33, 6)",
+          "objective": 0.6180198131651631,
+          "positions": [
+            2
+          ],
+          "profiles": 1,
+          "success": true
+        },
+        {
+          "active_BC": 15,
+          "active_SH": 7,
+          "key": "(33, 7)",
+          "objective": 0.622838858125584,
+          "positions": [
+            3
+          ],
+          "profiles": 1,
+          "success": true
+        },
+        {
+          "active_BC": 15,
+          "active_SH": 6,
+          "key": "(35, 7)",
+          "objective": 0.5460235785628587,
+          "positions": [
+            4
+          ],
+          "profiles": 1,
+          "success": true
+        },
+        {
+          "active_BC": null,
+          "active_SH": null,
+          "key": "(36, 7)",
+          "objective": null,
+          "positions": [
+            0,
+            5,
+            6,
+            7
+          ],
+          "profiles": 4,
+          "success": false
+        },
+        {
+          "active_BC": 15,
+          "active_SH": 6,
+          "key": "(38, 7)",
+          "objective": 0.5923378928395969,
+          "positions": [
+            16
+          ],
+          "profiles": 1,
+          "success": true
+        },
+        {
+          "active_BC": 18,
+          "active_SH": 5,
+          "key": "(39, 7)",
+          "objective": 0.8149817747135671,
+          "positions": [
+            21,
+            22,
+            24
+          ],
+          "profiles": 3,
+          "success": true
+        },
+        {
+          "active_BC": 14,
+          "active_SH": 6,
+          "key": "(39, 8)",
+          "objective": 0.7589379306744015,
+          "positions": [
+            23
+          ],
+          "profiles": 1,
+          "success": true
+        },
+        {
+          "active_BC": 18,
+          "active_SH": 6,
+          "key": "(40, 8)",
+          "objective": 1.094439120611753,
+          "positions": [
+            29,
+            30,
+            31
+          ],
+          "profiles": 3,
+          "success": true
+        },
+        {
+          "active_BC": 11,
+          "active_SH": 5,
+          "key": "(43, 8)",
+          "objective": 0.503713113214863,
+          "positions": [
+            8
+          ],
+          "profiles": 1,
+          "success": true
+        },
+        {
+          "active_BC": 16,
+          "active_SH": 7,
+          "key": "(45, 8)",
+          "objective": 0.502528566093339,
+          "positions": [
+            9,
+            25,
+            32
+          ],
+          "profiles": 3,
+          "success": true
+        },
+        {
+          "active_BC": 13,
+          "active_SH": 5,
+          "key": "(46, 8)",
+          "objective": 0.5783010933557605,
+          "positions": [
+            10,
+            33,
+            34,
+            35,
+            41,
+            46
+          ],
+          "profiles": 6,
+          "success": true
+        },
+        {
+          "active_BC": 16,
+          "active_SH": 5,
+          "key": "(47, 8)",
+          "objective": 0.7821804305857719,
+          "positions": [
+            36,
+            38,
+            40,
+            42,
+            43,
+            47
+          ],
+          "profiles": 6,
+          "success": true
+        },
+        {
+          "active_BC": 14,
+          "active_SH": 5,
+          "key": "(47, 9)",
+          "objective": 0.7269728653223775,
+          "positions": [
+            39
+          ],
+          "profiles": 1,
+          "success": true
+        },
+        {
+          "active_BC": 13,
+          "active_SH": 4,
+          "key": "(48, 8)",
+          "objective": 0.5128440909968798,
+          "positions": [
+            45
+          ],
+          "profiles": 1,
+          "success": true
+        },
+        {
+          "active_BC": 17,
+          "active_SH": 5,
+          "key": "(49, 8)",
+          "objective": 0.4212026196727474,
+          "positions": [
+            55,
+            63
+          ],
+          "profiles": 2,
+          "success": true
+        },
+        {
+          "active_BC": 15,
+          "active_SH": 2,
+          "key": "(50, 8)",
+          "objective": 0.36617247947930764,
+          "positions": [
+            68
+          ],
+          "profiles": 1,
+          "success": true
+        },
+        {
+          "active_BC": 15,
+          "active_SH": 2,
+          "key": "(51, 9)",
+          "objective": 0.287430683918669,
+          "positions": [
+            72
+          ],
+          "profiles": 1,
+          "success": true
+        }
+      ]
+    },
+    "low_high_r": {
+      "all_groups_feasible": false,
+      "failed_groups": 1,
+      "groups": 2,
+      "records": [
+        {
+          "active_BC": 14,
+          "active_SH": 4,
+          "key": "high",
+          "objective": 0.7896197927571939,
+          "positions": [
+            8,
+            9,
+            10,
+            25,
+            32,
+            33,
+            34,
+            35,
+            36,
+            38,
+            39,
+            40,
+            41,
+            42,
+            43,
+            45,
+            46,
+            47,
+            55,
+            63,
+            68,
+            72
+          ],
+          "profiles": 22,
+          "success": true
+        },
+        {
+          "active_BC": null,
+          "active_SH": null,
+          "key": "low",
+          "objective": null,
+          "positions": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            16,
+            21,
+            22,
+            23,
+            24,
+            29,
+            30,
+            31
+          ],
+          "profiles": 16,
+          "success": false
+        }
+      ]
+    },
+    "r": {
+      "all_groups_feasible": false,
+      "failed_groups": 1,
+      "groups": 12,
+      "records": [
+        {
+          "active_BC": 15,
+          "active_SH": 9,
+          "key": "33",
+          "objective": 0.7105694251654291,
+          "positions": [
+            1
+          ],
+          "profiles": 1,
+          "success": true
+        },
+        {
+          "active_BC": null,
+          "active_SH": null,
+          "key": "34",
+          "objective": null,
+          "positions": [
+            0,
+            2,
+            3,
+            4
+          ],
+          "profiles": 4,
+          "success": false
+        },
+        {
+          "active_BC": 16,
+          "active_SH": 8,
+          "key": "35",
+          "objective": 1.0291066401472329,
+          "positions": [
+            5,
+            6,
+            7,
+            16
+          ],
+          "profiles": 4,
+          "success": true
+        },
+        {
+          "active_BC": 15,
+          "active_SH": 5,
+          "key": "36",
+          "objective": 0.8149817747135732,
+          "positions": [
+            21,
+            22,
+            23,
+            24
+          ],
+          "profiles": 4,
+          "success": true
+        },
+        {
+          "active_BC": 18,
+          "active_SH": 6,
+          "key": "37",
+          "objective": 1.094439120611753,
+          "positions": [
+            29,
+            30,
+            31
+          ],
+          "profiles": 3,
+          "success": true
+        },
+        {
+          "active_BC": 13,
+          "active_SH": 6,
+          "key": "42",
+          "objective": 0.5222036004721425,
+          "positions": [
+            8,
+            25,
+            32
+          ],
+          "profiles": 3,
+          "success": true
+        },
+        {
+          "active_BC": 14,
+          "active_SH": 5,
+          "key": "43",
+          "objective": 0.578301093355761,
+          "positions": [
+            33,
+            34,
+            35,
+            41,
+            46
+          ],
+          "profiles": 5,
+          "success": true
+        },
+        {
+          "active_BC": 16,
+          "active_SH": 4,
+          "key": "44",
+          "objective": 0.7821804305857722,
+          "positions": [
+            9,
+            36,
+            38,
+            39,
+            40,
+            42,
+            43,
+            47
+          ],
+          "profiles": 8,
+          "success": true
+        },
+        {
+          "active_BC": 11,
+          "active_SH": 4,
+          "key": "45",
+          "objective": 0.51284409099688,
+          "positions": [
+            10,
+            45
+          ],
+          "profiles": 2,
+          "success": true
+        },
+        {
+          "active_BC": 17,
+          "active_SH": 5,
+          "key": "46",
+          "objective": 0.4212026196727474,
+          "positions": [
+            55,
+            63
+          ],
+          "profiles": 2,
+          "success": true
+        },
+        {
+          "active_BC": 15,
+          "active_SH": 2,
+          "key": "47",
+          "objective": 0.36617247947930764,
+          "positions": [
+            68
+          ],
+          "profiles": 1,
+          "success": true
+        },
+        {
+          "active_BC": 15,
+          "active_SH": 2,
+          "key": "48",
+          "objective": 0.287430683918669,
+          "positions": [
+            72
+          ],
+          "profiles": 1,
+          "success": true
+        }
+      ]
+    },
+    "r_H": {
+      "all_groups_feasible": false,
+      "failed_groups": 1,
+      "groups": 12,
+      "records": [
+        {
+          "active_BC": 15,
+          "active_SH": 9,
+          "key": "(33, 4)",
+          "objective": 0.7105694251654291,
+          "positions": [
+            1
+          ],
+          "profiles": 1,
+          "success": true
+        },
+        {
+          "active_BC": null,
+          "active_SH": null,
+          "key": "(34, 4)",
+          "objective": null,
+          "positions": [
+            0,
+            2,
+            3,
+            4
+          ],
+          "profiles": 4,
+          "success": false
+        },
+        {
+          "active_BC": 16,
+          "active_SH": 8,
+          "key": "(35, 4)",
+          "objective": 1.0291066401472329,
+          "positions": [
+            5,
+            6,
+            7,
+            16
+          ],
+          "profiles": 4,
+          "success": true
+        },
+        {
+          "active_BC": 15,
+          "active_SH": 5,
+          "key": "(36, 4)",
+          "objective": 0.8149817747135732,
+          "positions": [
+            21,
+            22,
+            23,
+            24
+          ],
+          "profiles": 4,
+          "success": true
+        },
+        {
+          "active_BC": 18,
+          "active_SH": 6,
+          "key": "(37, 4)",
+          "objective": 1.094439120611753,
+          "positions": [
+            29,
+            30,
+            31
+          ],
+          "profiles": 3,
+          "success": true
+        },
+        {
+          "active_BC": 13,
+          "active_SH": 6,
+          "key": "(42, 5)",
+          "objective": 0.5222036004721425,
+          "positions": [
+            8,
+            25,
+            32
+          ],
+          "profiles": 3,
+          "success": true
+        },
+        {
+          "active_BC": 14,
+          "active_SH": 5,
+          "key": "(43, 5)",
+          "objective": 0.578301093355761,
+          "positions": [
+            33,
+            34,
+            35,
+            41,
+            46
+          ],
+          "profiles": 5,
+          "success": true
+        },
+        {
+          "active_BC": 16,
+          "active_SH": 4,
+          "key": "(44, 5)",
+          "objective": 0.7821804305857722,
+          "positions": [
+            9,
+            36,
+            38,
+            39,
+            40,
+            42,
+            43,
+            47
+          ],
+          "profiles": 8,
+          "success": true
+        },
+        {
+          "active_BC": 11,
+          "active_SH": 4,
+          "key": "(45, 5)",
+          "objective": 0.51284409099688,
+          "positions": [
+            10,
+            45
+          ],
+          "profiles": 2,
+          "success": true
+        },
+        {
+          "active_BC": 17,
+          "active_SH": 5,
+          "key": "(46, 5)",
+          "objective": 0.4212026196727474,
+          "positions": [
+            55,
+            63
+          ],
+          "profiles": 2,
+          "success": true
+        },
+        {
+          "active_BC": 15,
+          "active_SH": 2,
+          "key": "(47, 5)",
+          "objective": 0.36617247947930764,
+          "positions": [
+            68
+          ],
+          "profiles": 1,
+          "success": true
+        },
+        {
+          "active_BC": 15,
+          "active_SH": 2,
+          "key": "(48, 5)",
+          "objective": 0.287430683918669,
+          "positions": [
+            72
+          ],
+          "profiles": 1,
+          "success": true
+        }
+      ]
+    },
+    "r_W2_W3_z3": {
+      "all_groups_feasible": false,
+      "failed_groups": 1,
+      "groups": 21,
+      "records": [
+        {
+          "active_BC": 15,
+          "active_SH": 9,
+          "key": "(33, 36, 32, 6)",
+          "objective": 0.7105694251654291,
+          "positions": [
+            1
+          ],
+          "profiles": 1,
+          "success": true
+        },
+        {
+          "active_BC": null,
+          "active_SH": null,
+          "key": "(34, 36, 36, 7)",
+          "objective": null,
+          "positions": [
+            0
+          ],
+          "profiles": 1,
+          "success": false
+        },
+        {
+          "active_BC": 15,
+          "active_SH": 8,
+          "key": "(34, 37, 33, 6)",
+          "objective": 0.6180198131651631,
+          "positions": [
+            2
+          ],
+          "profiles": 1,
+          "success": true
+        },
+        {
+          "active_BC": 15,
+          "active_SH": 7,
+          "key": "(34, 37, 33, 7)",
+          "objective": 0.622838858125584,
+          "positions": [
+            3
+          ],
+          "profiles": 1,
+          "success": true
+        },
+        {
+          "active_BC": 15,
+          "active_SH": 6,
+          "key": "(34, 37, 35, 7)",
+          "objective": 0.5460235785628587,
+          "positions": [
+            4
+          ],
+          "profiles": 1,
+          "success": true
+        },
+        {
+          "active_BC": 15,
+          "active_SH": 8,
+          "key": "(35, 38, 36, 7)",
+          "objective": 1.0291066401472309,
+          "positions": [
+            5,
+            6,
+            7
+          ],
+          "profiles": 3,
+          "success": true
+        },
+        {
+          "active_BC": 15,
+          "active_SH": 6,
+          "key": "(35, 38, 38, 7)",
+          "objective": 0.5923378928395969,
+          "positions": [
+            16
+          ],
+          "profiles": 1,
+          "success": true
+        },
+        {
+          "active_BC": 18,
+          "active_SH": 5,
+          "key": "(36, 39, 39, 7)",
+          "objective": 0.8149817747135671,
+          "positions": [
+            21,
+            22,
+            24
+          ],
+          "profiles": 3,
+          "success": true
+        },
+        {
+          "active_BC": 14,
+          "active_SH": 6,
+          "key": "(36, 39, 39, 8)",
+          "objective": 0.7589379306744015,
+          "positions": [
+            23
+          ],
+          "profiles": 1,
+          "success": true
+        },
+        {
+          "active_BC": 18,
+          "active_SH": 6,
+          "key": "(37, 40, 40, 8)",
+          "objective": 1.094439120611753,
+          "positions": [
+            29,
+            30,
+            31
+          ],
+          "profiles": 3,
+          "success": true
+        },
+        {
+          "active_BC": 11,
+          "active_SH": 5,
+          "key": "(42, 45, 43, 8)",
+          "objective": 0.503713113214863,
+          "positions": [
+            8
+          ],
+          "profiles": 1,
+          "success": true
+        },
+        {
+          "active_BC": 16,
+          "active_SH": 6,
+          "key": "(42, 45, 45, 8)",
+          "objective": 0.5025285660933405,
+          "positions": [
+            25,
+            32
+          ],
+          "profiles": 2,
+          "success": true
+        },
+        {
+          "active_BC": 14,
+          "active_SH": 5,
+          "key": "(43, 46, 46, 8)",
+          "objective": 0.578301093355761,
+          "positions": [
+            33,
+            34,
+            35,
+            41,
+            46
+          ],
+          "profiles": 5,
+          "success": true
+        },
+        {
+          "active_BC": 13,
+          "active_SH": 2,
+          "key": "(44, 47, 45, 8)",
+          "objective": 0.41207370589803727,
+          "positions": [
+            9
+          ],
+          "profiles": 1,
+          "success": true
+        },
+        {
+          "active_BC": 16,
+          "active_SH": 5,
+          "key": "(44, 47, 47, 8)",
+          "objective": 0.7821804305857719,
+          "positions": [
+            36,
+            38,
+            40,
+            42,
+            43,
+            47
+          ],
+          "profiles": 6,
+          "success": true
+        },
+        {
+          "active_BC": 14,
+          "active_SH": 5,
+          "key": "(44, 47, 47, 9)",
+          "objective": 0.7269728653223775,
+          "positions": [
+            39
+          ],
+          "profiles": 1,
+          "success": true
+        },
+        {
+          "active_BC": 13,
+          "active_SH": 1,
+          "key": "(45, 48, 46, 8)",
+          "objective": 0.34674580022130624,
+          "positions": [
+            10
+          ],
+          "profiles": 1,
+          "success": true
+        },
+        {
+          "active_BC": 13,
+          "active_SH": 4,
+          "key": "(45, 48, 48, 8)",
+          "objective": 0.5128440909968798,
+          "positions": [
+            45
+          ],
+          "profiles": 1,
+          "success": true
+        },
+        {
+          "active_BC": 17,
+          "active_SH": 5,
+          "key": "(46, 49, 49, 8)",
+          "objective": 0.4212026196727474,
+          "positions": [
+            55,
+            63
+          ],
+          "profiles": 2,
+          "success": true
+        },
+        {
+          "active_BC": 15,
+          "active_SH": 2,
+          "key": "(47, 50, 50, 8)",
+          "objective": 0.36617247947930764,
+          "positions": [
+            68
+          ],
+          "profiles": 1,
+          "success": true
+        },
+        {
+          "active_BC": 15,
+          "active_SH": 2,
+          "key": "(48, 51, 51, 9)",
+          "objective": 0.287430683918669,
+          "positions": [
+            72
+          ],
+          "profiles": 1,
+          "success": true
+        }
+      ]
+    },
+    "r_W3": {
+      "all_groups_feasible": false,
+      "failed_groups": 1,
+      "groups": 18,
+      "records": [
+        {
+          "active_BC": 15,
+          "active_SH": 9,
+          "key": "(33, 32)",
+          "objective": 0.7105694251654291,
+          "positions": [
+            1
+          ],
+          "profiles": 1,
+          "success": true
+        },
+        {
+          "active_BC": 14,
+          "active_SH": 8,
+          "key": "(34, 33)",
+          "objective": 0.6377372269314172,
+          "positions": [
+            2,
+            3
+          ],
+          "profiles": 2,
+          "success": true
+        },
+        {
+          "active_BC": 15,
+          "active_SH": 6,
+          "key": "(34, 35)",
+          "objective": 0.5460235785628587,
+          "positions": [
+            4
+          ],
+          "profiles": 1,
+          "success": true
+        },
+        {
+          "active_BC": null,
+          "active_SH": null,
+          "key": "(34, 36)",
+          "objective": null,
+          "positions": [
+            0
+          ],
+          "profiles": 1,
+          "success": false
+        },
+        {
+          "active_BC": 15,
+          "active_SH": 8,
+          "key": "(35, 36)",
+          "objective": 1.0291066401472309,
+          "positions": [
+            5,
+            6,
+            7
+          ],
+          "profiles": 3,
+          "success": true
+        },
+        {
+          "active_BC": 15,
+          "active_SH": 6,
+          "key": "(35, 38)",
+          "objective": 0.5923378928395969,
+          "positions": [
+            16
+          ],
+          "profiles": 1,
+          "success": true
+        },
+        {
+          "active_BC": 15,
+          "active_SH": 5,
+          "key": "(36, 39)",
+          "objective": 0.8149817747135732,
+          "positions": [
+            21,
+            22,
+            23,
+            24
+          ],
+          "profiles": 4,
+          "success": true
+        },
+        {
+          "active_BC": 18,
+          "active_SH": 6,
+          "key": "(37, 40)",
+          "objective": 1.094439120611753,
+          "positions": [
+            29,
+            30,
+            31
+          ],
+          "profiles": 3,
+          "success": true
+        },
+        {
+          "active_BC": 11,
+          "active_SH": 5,
+          "key": "(42, 43)",
+          "objective": 0.503713113214863,
+          "positions": [
+            8
+          ],
+          "profiles": 1,
+          "success": true
+        },
+        {
+          "active_BC": 16,
+          "active_SH": 6,
+          "key": "(42, 45)",
+          "objective": 0.5025285660933405,
+          "positions": [
+            25,
+            32
+          ],
+          "profiles": 2,
+          "success": true
+        },
+        {
+          "active_BC": 14,
+          "active_SH": 5,
+          "key": "(43, 46)",
+          "objective": 0.578301093355761,
+          "positions": [
+            33,
+            34,
+            35,
+            41,
+            46
+          ],
+          "profiles": 5,
+          "success": true
+        },
+        {
+          "active_BC": 13,
+          "active_SH": 2,
+          "key": "(44, 45)",
+          "objective": 0.41207370589803727,
+          "positions": [
+            9
+          ],
+          "profiles": 1,
+          "success": true
+        },
+        {
+          "active_BC": 14,
+          "active_SH": 4,
+          "key": "(44, 47)",
+          "objective": 0.7821804305857747,
+          "positions": [
+            36,
+            38,
+            39,
+            40,
+            42,
+            43,
+            47
+          ],
+          "profiles": 7,
+          "success": true
+        },
+        {
+          "active_BC": 13,
+          "active_SH": 1,
+          "key": "(45, 46)",
+          "objective": 0.34674580022130624,
+          "positions": [
+            10
+          ],
+          "profiles": 1,
+          "success": true
+        },
+        {
+          "active_BC": 13,
+          "active_SH": 4,
+          "key": "(45, 48)",
+          "objective": 0.5128440909968798,
+          "positions": [
+            45
+          ],
+          "profiles": 1,
+          "success": true
+        },
+        {
+          "active_BC": 17,
+          "active_SH": 5,
+          "key": "(46, 49)",
+          "objective": 0.4212026196727474,
+          "positions": [
+            55,
+            63
+          ],
+          "profiles": 2,
+          "success": true
+        },
+        {
+          "active_BC": 15,
+          "active_SH": 2,
+          "key": "(47, 50)",
+          "objective": 0.36617247947930764,
+          "positions": [
+            68
+          ],
+          "profiles": 1,
+          "success": true
+        },
+        {
+          "active_BC": 15,
+          "active_SH": 2,
+          "key": "(48, 51)",
+          "objective": 0.287430683918669,
+          "positions": [
+            72
+          ],
+          "profiles": 1,
+          "success": true
+        }
+      ]
+    },
+    "r_W3_z3": {
+      "all_groups_feasible": false,
+      "failed_groups": 1,
+      "groups": 21,
+      "records": [
+        {
+          "active_BC": 15,
+          "active_SH": 9,
+          "key": "(33, 32, 6)",
+          "objective": 0.7105694251654291,
+          "positions": [
+            1
+          ],
+          "profiles": 1,
+          "success": true
+        },
+        {
+          "active_BC": 15,
+          "active_SH": 8,
+          "key": "(34, 33, 6)",
+          "objective": 0.6180198131651631,
+          "positions": [
+            2
+          ],
+          "profiles": 1,
+          "success": true
+        },
+        {
+          "active_BC": 15,
+          "active_SH": 7,
+          "key": "(34, 33, 7)",
+          "objective": 0.622838858125584,
+          "positions": [
+            3
+          ],
+          "profiles": 1,
+          "success": true
+        },
+        {
+          "active_BC": 15,
+          "active_SH": 6,
+          "key": "(34, 35, 7)",
+          "objective": 0.5460235785628587,
+          "positions": [
+            4
+          ],
+          "profiles": 1,
+          "success": true
+        },
+        {
+          "active_BC": null,
+          "active_SH": null,
+          "key": "(34, 36, 7)",
+          "objective": null,
+          "positions": [
+            0
+          ],
+          "profiles": 1,
+          "success": false
+        },
+        {
+          "active_BC": 15,
+          "active_SH": 8,
+          "key": "(35, 36, 7)",
+          "objective": 1.0291066401472309,
+          "positions": [
+            5,
+            6,
+            7
+          ],
+          "profiles": 3,
+          "success": true
+        },
+        {
+          "active_BC": 15,
+          "active_SH": 6,
+          "key": "(35, 38, 7)",
+          "objective": 0.5923378928395969,
+          "positions": [
+            16
+          ],
+          "profiles": 1,
+          "success": true
+        },
+        {
+          "active_BC": 18,
+          "active_SH": 5,
+          "key": "(36, 39, 7)",
+          "objective": 0.8149817747135671,
+          "positions": [
+            21,
+            22,
+            24
+          ],
+          "profiles": 3,
+          "success": true
+        },
+        {
+          "active_BC": 14,
+          "active_SH": 6,
+          "key": "(36, 39, 8)",
+          "objective": 0.7589379306744015,
+          "positions": [
+            23
+          ],
+          "profiles": 1,
+          "success": true
+        },
+        {
+          "active_BC": 18,
+          "active_SH": 6,
+          "key": "(37, 40, 8)",
+          "objective": 1.094439120611753,
+          "positions": [
+            29,
+            30,
+            31
+          ],
+          "profiles": 3,
+          "success": true
+        },
+        {
+          "active_BC": 11,
+          "active_SH": 5,
+          "key": "(42, 43, 8)",
+          "objective": 0.503713113214863,
+          "positions": [
+            8
+          ],
+          "profiles": 1,
+          "success": true
+        },
+        {
+          "active_BC": 16,
+          "active_SH": 6,
+          "key": "(42, 45, 8)",
+          "objective": 0.5025285660933405,
+          "positions": [
+            25,
+            32
+          ],
+          "profiles": 2,
+          "success": true
+        },
+        {
+          "active_BC": 14,
+          "active_SH": 5,
+          "key": "(43, 46, 8)",
+          "objective": 0.578301093355761,
+          "positions": [
+            33,
+            34,
+            35,
+            41,
+            46
+          ],
+          "profiles": 5,
+          "success": true
+        },
+        {
+          "active_BC": 13,
+          "active_SH": 2,
+          "key": "(44, 45, 8)",
+          "objective": 0.41207370589803727,
+          "positions": [
+            9
+          ],
+          "profiles": 1,
+          "success": true
+        },
+        {
+          "active_BC": 16,
+          "active_SH": 5,
+          "key": "(44, 47, 8)",
+          "objective": 0.7821804305857719,
+          "positions": [
+            36,
+            38,
+            40,
+            42,
+            43,
+            47
+          ],
+          "profiles": 6,
+          "success": true
+        },
+        {
+          "active_BC": 14,
+          "active_SH": 5,
+          "key": "(44, 47, 9)",
+          "objective": 0.7269728653223775,
+          "positions": [
+            39
+          ],
+          "profiles": 1,
+          "success": true
+        },
+        {
+          "active_BC": 13,
+          "active_SH": 1,
+          "key": "(45, 46, 8)",
+          "objective": 0.34674580022130624,
+          "positions": [
+            10
+          ],
+          "profiles": 1,
+          "success": true
+        },
+        {
+          "active_BC": 13,
+          "active_SH": 4,
+          "key": "(45, 48, 8)",
+          "objective": 0.5128440909968798,
+          "positions": [
+            45
+          ],
+          "profiles": 1,
+          "success": true
+        },
+        {
+          "active_BC": 17,
+          "active_SH": 5,
+          "key": "(46, 49, 8)",
+          "objective": 0.4212026196727474,
+          "positions": [
+            55,
+            63
+          ],
+          "profiles": 2,
+          "success": true
+        },
+        {
+          "active_BC": 15,
+          "active_SH": 2,
+          "key": "(47, 50, 8)",
+          "objective": 0.36617247947930764,
+          "positions": [
+            68
+          ],
+          "profiles": 1,
+          "success": true
+        },
+        {
+          "active_BC": 15,
+          "active_SH": 2,
+          "key": "(48, 51, 9)",
+          "objective": 0.287430683918669,
+          "positions": [
+            72
+          ],
+          "profiles": 1,
+          "success": true
+        }
+      ]
+    },
+    "r_rhomax": {
+      "all_groups_feasible": false,
+      "failed_groups": 1,
+      "groups": 16,
+      "records": [
+        {
+          "active_BC": 15,
+          "active_SH": 9,
+          "key": "(33, 4)",
+          "objective": 0.7105694251654291,
+          "positions": [
+            1
+          ],
+          "profiles": 1,
+          "success": true
+        },
+        {
+          "active_BC": null,
+          "active_SH": null,
+          "key": "(34, 4)",
+          "objective": null,
+          "positions": [
+            0,
+            2,
+            3,
+            4
+          ],
+          "profiles": 4,
+          "success": false
+        },
+        {
+          "active_BC": 15,
+          "active_SH": 8,
+          "key": "(35, 4)",
+          "objective": 1.0291066401472295,
+          "positions": [
+            6,
+            7,
+            16
+          ],
+          "profiles": 3,
+          "success": true
+        },
+        {
+          "active_BC": 14,
+          "active_SH": 6,
+          "key": "(35, 5)",
+          "objective": 0.5092511173009492,
+          "positions": [
+            5
+          ],
+          "profiles": 1,
+          "success": true
+        },
+        {
+          "active_BC": 16,
+          "active_SH": 5,
+          "key": "(36, 4)",
+          "objective": 0.8149817747135724,
+          "positions": [
+            22,
+            23,
+            24
+          ],
+          "profiles": 3,
+          "success": true
+        },
+        {
+          "active_BC": 14,
+          "active_SH": 4,
+          "key": "(36, 5)",
+          "objective": 0.5815909637106458,
+          "positions": [
+            21
+          ],
+          "profiles": 1,
+          "success": true
+        },
+        {
+          "active_BC": 17,
+          "active_SH": 6,
+          "key": "(37, 4)",
+          "objective": 1.0944391206117459,
+          "positions": [
+            30,
+            31
+          ],
+          "profiles": 2,
+          "success": true
+        },
+        {
+          "active_BC": 15,
+          "active_SH": 6,
+          "key": "(37, 5)",
+          "objective": 0.63457159473472,
+          "positions": [
+            29
+          ],
+          "profiles": 1,
+          "success": true
+        },
+        {
+          "active_BC": 13,
+          "active_SH": 6,
+          "key": "(42, 5)",
+          "objective": 0.5222036004721425,
+          "positions": [
+            8,
+            25,
+            32
+          ],
+          "profiles": 3,
+          "success": true
+        },
+        {
+          "active_BC": 14,
+          "active_SH": 5,
+          "key": "(43, 5)",
+          "objective": 0.5783010933557605,
+          "positions": [
+            34,
+            35,
+            41,
+            46
+          ],
+          "profiles": 4,
+          "success": true
+        },
+        {
+          "active_BC": 12,
+          "active_SH": 4,
+          "key": "(43, 6)",
+          "objective": 0.3648361881612768,
+          "positions": [
+            33
+          ],
+          "profiles": 1,
+          "success": true
+        },
+        {
+          "active_BC": 16,
+          "active_SH": 4,
+          "key": "(44, 5)",
+          "objective": 0.7821804305857722,
+          "positions": [
+            9,
+            36,
+            38,
+            39,
+            40,
+            42,
+            43,
+            47
+          ],
+          "profiles": 8,
+          "success": true
+        },
+        {
+          "active_BC": 11,
+          "active_SH": 4,
+          "key": "(45, 5)",
+          "objective": 0.51284409099688,
+          "positions": [
+            10,
+            45
+          ],
+          "profiles": 2,
+          "success": true
+        },
+        {
+          "active_BC": 17,
+          "active_SH": 5,
+          "key": "(46, 5)",
+          "objective": 0.4212026196727474,
+          "positions": [
+            55,
+            63
+          ],
+          "profiles": 2,
+          "success": true
+        },
+        {
+          "active_BC": 15,
+          "active_SH": 2,
+          "key": "(47, 5)",
+          "objective": 0.36617247947930764,
+          "positions": [
+            68
+          ],
+          "profiles": 1,
+          "success": true
+        },
+        {
+          "active_BC": 15,
+          "active_SH": 2,
+          "key": "(48, 5)",
+          "objective": 0.287430683918669,
+          "positions": [
+            72
+          ],
+          "profiles": 1,
+          "success": true
+        }
+      ]
+    },
+    "r_z3": {
+      "all_groups_feasible": false,
+      "failed_groups": 1,
+      "groups": 15,
+      "records": [
+        {
+          "active_BC": 15,
+          "active_SH": 9,
+          "key": "(33, 6)",
+          "objective": 0.7105694251654291,
+          "positions": [
+            1
+          ],
+          "profiles": 1,
+          "success": true
+        },
+        {
+          "active_BC": 15,
+          "active_SH": 8,
+          "key": "(34, 6)",
+          "objective": 0.6180198131651631,
+          "positions": [
+            2
+          ],
+          "profiles": 1,
+          "success": true
+        },
+        {
+          "active_BC": null,
+          "active_SH": null,
+          "key": "(34, 7)",
+          "objective": null,
+          "positions": [
+            0,
+            3,
+            4
+          ],
+          "profiles": 3,
+          "success": false
+        },
+        {
+          "active_BC": 16,
+          "active_SH": 8,
+          "key": "(35, 7)",
+          "objective": 1.0291066401472329,
+          "positions": [
+            5,
+            6,
+            7,
+            16
+          ],
+          "profiles": 4,
+          "success": true
+        },
+        {
+          "active_BC": 18,
+          "active_SH": 5,
+          "key": "(36, 7)",
+          "objective": 0.8149817747135671,
+          "positions": [
+            21,
+            22,
+            24
+          ],
+          "profiles": 3,
+          "success": true
+        },
+        {
+          "active_BC": 14,
+          "active_SH": 6,
+          "key": "(36, 8)",
+          "objective": 0.7589379306744015,
+          "positions": [
+            23
+          ],
+          "profiles": 1,
+          "success": true
+        },
+        {
+          "active_BC": 18,
+          "active_SH": 6,
+          "key": "(37, 8)",
+          "objective": 1.094439120611753,
+          "positions": [
+            29,
+            30,
+            31
+          ],
+          "profiles": 3,
+          "success": true
+        },
+        {
+          "active_BC": 13,
+          "active_SH": 6,
+          "key": "(42, 8)",
+          "objective": 0.5222036004721425,
+          "positions": [
+            8,
+            25,
+            32
+          ],
+          "profiles": 3,
+          "success": true
+        },
+        {
+          "active_BC": 14,
+          "active_SH": 5,
+          "key": "(43, 8)",
+          "objective": 0.578301093355761,
+          "positions": [
+            33,
+            34,
+            35,
+            41,
+            46
+          ],
+          "profiles": 5,
+          "success": true
+        },
+        {
+          "active_BC": 13,
+          "active_SH": 5,
+          "key": "(44, 8)",
+          "objective": 0.7821804305857718,
+          "positions": [
+            9,
+            36,
+            38,
+            40,
+            42,
+            43,
+            47
+          ],
+          "profiles": 7,
+          "success": true
+        },
+        {
+          "active_BC": 14,
+          "active_SH": 5,
+          "key": "(44, 9)",
+          "objective": 0.7269728653223775,
+          "positions": [
+            39
+          ],
+          "profiles": 1,
+          "success": true
+        },
+        {
+          "active_BC": 11,
+          "active_SH": 4,
+          "key": "(45, 8)",
+          "objective": 0.51284409099688,
+          "positions": [
+            10,
+            45
+          ],
+          "profiles": 2,
+          "success": true
+        },
+        {
+          "active_BC": 17,
+          "active_SH": 5,
+          "key": "(46, 8)",
+          "objective": 0.4212026196727474,
+          "positions": [
+            55,
+            63
+          ],
+          "profiles": 2,
+          "success": true
+        },
+        {
+          "active_BC": 15,
+          "active_SH": 2,
+          "key": "(47, 8)",
+          "objective": 0.36617247947930764,
+          "positions": [
+            68
+          ],
+          "profiles": 1,
+          "success": true
+        },
+        {
+          "active_BC": 15,
+          "active_SH": 2,
+          "key": "(48, 9)",
+          "objective": 0.287430683918669,
+          "positions": [
+            72
+          ],
+          "profiles": 1,
+          "success": true
+        }
+      ]
+    },
+    "rho_max": {
+      "all_groups_feasible": false,
+      "failed_groups": 1,
+      "groups": 3,
+      "records": [
+        {
+          "active_BC": null,
+          "active_SH": null,
+          "key": "4",
+          "objective": null,
+          "positions": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            6,
+            7,
+            16,
+            22,
+            23,
+            24,
+            30,
+            31
+          ],
+          "profiles": 13,
+          "success": false
+        },
+        {
+          "active_BC": 15,
+          "active_SH": 4,
+          "key": "5",
+          "objective": 0.8403785644595199,
+          "positions": [
+            5,
+            8,
+            9,
+            10,
+            21,
+            25,
+            29,
+            32,
+            34,
+            35,
+            36,
+            38,
+            39,
+            40,
+            41,
+            42,
+            43,
+            45,
+            46,
+            47,
+            55,
+            63,
+            68,
+            72
+          ],
+          "profiles": 24,
+          "success": true
+        },
+        {
+          "active_BC": 12,
+          "active_SH": 4,
+          "key": "6",
+          "objective": 0.3648361881612768,
+          "positions": [
+            33
+          ],
+          "profiles": 1,
+          "success": true
+        }
+      ]
+    },
+    "z2": {
+      "all_groups_feasible": false,
+      "failed_groups": 1,
+      "groups": 4,
+      "records": [
+        {
+          "active_BC": 18,
+          "active_SH": 3,
+          "key": "10",
+          "objective": 0.7883945709209164,
+          "positions": [
+            40,
+            68
+          ],
+          "profiles": 2,
+          "success": true
+        },
+        {
+          "active_BC": null,
+          "active_SH": null,
+          "key": "7",
+          "objective": null,
+          "positions": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5,
+            6
+          ],
+          "profiles": 7,
+          "success": false
+        },
+        {
+          "active_BC": 17,
+          "active_SH": 8,
+          "key": "8",
+          "objective": 1.1831677119021244,
+          "positions": [
+            7,
+            8,
+            9,
+            10,
+            16,
+            21,
+            22,
+            23,
+            25,
+            29,
+            30,
+            32,
+            33,
+            34,
+            36,
+            41,
+            42,
+            43,
+            46,
+            47
+          ],
+          "profiles": 20,
+          "success": true
+        },
+        {
+          "active_BC": 17,
+          "active_SH": 3,
+          "key": "9",
+          "objective": 1.3885369347025336,
+          "positions": [
+            24,
+            31,
+            35,
+            38,
+            39,
+            45,
+            55,
+            63,
+            72
+          ],
+          "profiles": 9,
+          "success": true
+        }
+      ]
+    },
+    "z3": {
+      "all_groups_feasible": false,
+      "failed_groups": 1,
+      "groups": 4,
+      "records": [
+        {
+          "active_BC": 15,
+          "active_SH": 9,
+          "key": "6",
+          "objective": 0.710569425165428,
+          "positions": [
+            1,
+            2
+          ],
+          "profiles": 2,
+          "success": true
+        },
+        {
+          "active_BC": null,
+          "active_SH": null,
+          "key": "7",
+          "objective": null,
+          "positions": [
+            0,
+            3,
+            4,
+            5,
+            6,
+            7,
+            16,
+            21,
+            22,
+            24
+          ],
+          "profiles": 10,
+          "success": false
+        },
+        {
+          "active_BC": 15,
+          "active_SH": 3,
+          "key": "8",
+          "objective": 1.399334607395271,
+          "positions": [
+            8,
+            9,
+            10,
+            23,
+            25,
+            29,
+            30,
+            31,
+            32,
+            33,
+            34,
+            35,
+            36,
+            38,
+            40,
+            41,
+            42,
+            43,
+            45,
+            46,
+            47,
+            55,
+            63,
+            68
+          ],
+          "profiles": 24,
+          "success": true
+        },
+        {
+          "active_BC": 18,
+          "active_SH": 5,
+          "key": "9",
+          "objective": 0.7270345798271329,
+          "positions": [
+            39,
+            72
+          ],
+          "profiles": 2,
+          "success": true
+        }
+      ]
+    }
+  },
+  "schema": "n29-partitioned-shared-correction-scan-v3"
+}
