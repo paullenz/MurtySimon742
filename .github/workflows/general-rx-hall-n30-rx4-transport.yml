@@ -1,0 +1,72 @@
+name: General RX-Hall n30 RX4 exact transport
+
+on:
+  workflow_dispatch:
+  push:
+    paths:
+      - 'project/research/general_n/2026-09-09-rx-hall-v1/rx_hall_rx4_transport_core_exact.py'
+      - 'project/research/general_n/2026-09-09-rx-hall-v1/rx_hall_exact.py'
+      - 'project/research/n30/2026-09-08-minimal-kernel-recon-v1/n30_prepare.py'
+      - 'project/research/n30/2026-09-08-minimal-kernel-recon-v1/n30_rows.cpp'
+      - 'project/research/n30/2026-09-08-minimal-kernel-recon-v1/n30_row_threshold.py'
+      - '.github/workflows/general-rx-hall-n30-rx4-transport.yml'
+permissions:
+  contents: read
+jobs:
+  test:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 30
+    steps:
+      - uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262
+      - name: Pin solver
+        run: |
+          python3 -m venv .venv
+          .venv/bin/python -m pip install --disable-pip-version-check --only-binary=:all: scipy==1.17.0
+      - name: Regenerate m225 threshold frontier
+        run: |
+          set -euo pipefail
+          D=project/research/n30/2026-09-08-minimal-kernel-recon-v1
+          mkdir -p inputs
+          .venv/bin/python -I -B "$D/n30_prepare.py" --m 225 --output inputs
+          g++ -O3 -std=c++17 "$D/n30_rows.cpp" -o n30_rows
+          ./n30_rows inputs/demands.txt inputs/raw_rows.txt inputs/bands.txt > inputs/ROWS.json
+          .venv/bin/python -I -B "$D/n30_row_threshold.py" --demands inputs/demands.txt --rows inputs/raw_rows.txt --output inputs/rows.txt --m 225 > inputs/THRESHOLD.json
+          python3 - <<'PY'
+          import json
+          from pathlib import Path
+          z=Path('inputs/demands.txt').read_text().splitlines(); D=[]
+          for line in z[1:]: D.append({'s':list(map(int,line.split()))[:13]})
+          assert int(z[0])==len(D)==5379
+          assert json.load(open('inputs/ROWS.json'))['survivors']==150896
+          assert json.load(open('inputs/THRESHOLD.json'))['counts']['survivors']==272
+          Path('inputs/demands.json').write_text(json.dumps(D,separators=(',',':'))+'\n')
+          PY
+      - name: Exact RX4 transport Hall core
+        id: core
+        continue-on-error: true
+        run: |
+          D=project/research/general_n/2026-09-09-rx-hall-v1
+          mkdir -p out
+          .venv/bin/python -I -B "$D/rx_hall_rx4_transport_core_exact.py" --demands-json inputs/demands.json --rows inputs/rows.txt --a 13 --b 16 --dmax 11 --t 1 --output out/certificates.json.gz
+      - name: Classify
+        if: always()
+        run: |
+          python3 - <<'PY'
+          import json,pathlib
+          r=json.load(open('out/certificates.json.gz.report.json')); assert r['hard_rows']==207
+          o={'schema':'n30-rx4-transport-falsification-v1','hard_rows':207,'exact_integer_farkas_rejections':r['exact_integer_farkas_rejections'],'unresolved_count':len(r['unresolved']),'unresolved':r['unresolved'],'status':'PASS_ALL_REJECTED' if not r['unresolved'] else 'SURVIVORS','exact_grouped_transport':True,'removes_R_and_Z':True}
+          pathlib.Path('out/CLASSIFICATION.json').write_text(json.dumps(o,indent=2,sort_keys=True)+'\n'); print(json.dumps(o,indent=2,sort_keys=True))
+          PY
+      - uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02
+        if: always()
+        with:
+          name: n30-rx4-exact-transport-m225
+          path: out/
+          if-no-files-found: error
+          retention-days: 30
+      - name: Require zero survivors
+        run: |
+          python3 - <<'PY'
+          import json
+          assert json.load(open('out/CLASSIFICATION.json'))['unresolved_count']==0
+          PY
