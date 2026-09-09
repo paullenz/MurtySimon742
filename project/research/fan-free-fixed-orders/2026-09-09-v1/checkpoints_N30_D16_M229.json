@@ -1,0 +1,64 @@
+{
+  "Delta": 16,
+  "close": {
+    "all_model_rejections_exact_integer_farkas_verified": true,
+    "counts": {
+      "model_exact_missing": 0,
+      "model_exact_rejected": 0,
+      "model_noninfeasible": 0,
+      "rows": 29,
+      "source_count": 0,
+      "threshold": 29
+    },
+    "final_survivors": 0,
+    "floating_infeasibility_alone_accepted": false,
+    "gzip_sha256": "3a1d529c678880e5b77f5fe8d6ce4ae32b3464dade0578df685ac0145fb37746",
+    "json_sha256": "d72ffeddb90368bd9d3a196675a79086103448daf7f217be269235b9b0ec855f",
+    "parameterized_model_source": "project/research/n30/2026-09-08-minimal-kernel-recon-v1/n30_threshold_model.py",
+    "schema": "fan-free-n30-d16-upper-close-v1",
+    "scope": {
+      "Delta": 16,
+      "a": 13,
+      "b": 16,
+      "dmax": 11,
+      "m": 229,
+      "n": 30,
+      "t": 5
+    }
+  },
+  "final_survivors": 0,
+  "m": 229,
+  "n": 30,
+  "prepare": {
+    "counts": {
+      "basic_empty": 0,
+      "domain": 10037,
+      "dual_empty": 522,
+      "retained": 59,
+      "threshold_empty": 9456
+    },
+    "dual_lower_bounds_exactly_checked": true,
+    "frozen_source_modified": false,
+    "parameterized_source": "project/research/n30/2026-09-08-minimal-kernel-recon-v1/n30_prepare.py",
+    "retained": 59,
+    "schema": "fan-free-n30-d16-prepare-v1",
+    "scope": {
+      "Delta": 16,
+      "a": 13,
+      "b": 16,
+      "m": 229,
+      "n": 30,
+      "t": 5
+    },
+    "uses_deltaC_positive": true
+  },
+  "rows": {
+    "initial_source_rejections": 245325,
+    "refined_source_rejections": 312,
+    "states": 245666,
+    "survivors": 29
+  },
+  "schema": "fan-free-n30-d16-upper-scope-v1",
+  "status": "candidate fixed-order proof component; independent review open",
+  "t": 5
+}
