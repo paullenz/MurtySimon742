@@ -1,0 +1,116 @@
+name: General RX-Hall n29 t2 BC function-cone scan
+
+on:
+  workflow_dispatch:
+  push:
+    paths:
+      - '.github/workflows/general-rx-hall-n29-t2-bc-function-cones.yml'
+      - 'project/research/general_n/2026-09-09-rx-hall-v1/n29_t2_bc_function_cone_scan.py'
+
+permissions:
+  contents: write
+
+jobs:
+  scan:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 45
+    steps:
+      - uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262
+        with:
+          fetch-depth: 0
+      - name: Pin solver
+        run: |
+          python3 -m venv .venv
+          .venv/bin/python -m pip install --disable-pip-version-check --only-binary=:all: scipy==1.17.0
+      - name: Regenerate n29 t2 frontier
+        run: |
+          set -euo pipefail
+          D=project/reviews/n29/2026-09-08-redteam-restart-v1
+          mkdir -p inputs out
+          g++ -O3 -std=c++17 "$D/minimal_rows.cpp" -o minimal_rows
+          .venv/bin/python -I -B "$D/minimal_prepare.py" --t 2 --output inputs
+          ./minimal_rows inputs/demands.txt inputs/row_survivors.txt inputs/row_bands.txt 2 > inputs/MINIMAL_ROWS_REPORT.json
+      - name: Scan demand45 and hard38 cones
+        run: |
+          set -euo pipefail
+          R=project/research/general_n/2026-09-09-rx-hall-v1
+          B="$R/checkpoints/N29_BOUNDARY_SPECIALISATION_RUN_34364666552.json"
+          for MODE in demand45 hard38; do
+            for CONE in supermodular monotone; do
+              for SH in none full; do
+                echo "=== $MODE $CONE $SH ==="
+                .venv/bin/python -I -B "$R/n29_t2_bc_function_cone_scan.py" \
+                  --mode "$MODE" --cone "$CONE" --sh-mode "$SH" \
+                  --dictionary-json "$R/N29_CANONICAL_DICTIONARY.json" \
+                  --boundary-json "$B" --output "out/${MODE}_${CONE}_${SH}.json"
+              done
+            done
+          done
+      - name: Escalate successful hard38 cones to all 902
+        run: |
+          set -euo pipefail
+          R=project/research/general_n/2026-09-09-rx-hall-v1
+          for CONE in supermodular monotone; do
+            for SH in none full; do
+              P="out/hard38_${CONE}_${SH}.json"
+              if python3 - "$P" <<'PY'
+import json,sys
+raise SystemExit(0 if json.load(open(sys.argv[1]))['success'] else 1)
+PY
+              then
+                echo "Escalating $CONE $SH to all 902"
+                .venv/bin/python -I -B "$R/n29_t2_bc_function_cone_scan.py" \
+                  --mode t2 --cone "$CONE" --sh-mode "$SH" \
+                  --dictionary-json "$R/N29_CANONICAL_DICTIONARY.json" \
+                  --demands-json inputs/demands.json --rows inputs/row_survivors.txt \
+                  --output "out/all902_${CONE}_${SH}.json"
+              else
+                echo "Skipping all902 $CONE $SH because hard38 failed"
+              fi
+            done
+          done
+      - name: Summarize
+        run: |
+          python3 - <<'PY' > out/SUMMARY.json
+import glob,json
+R={}
+for p in sorted(glob.glob('out/*.json')):
+    if p.endswith('SUMMARY.json'): continue
+    j=json.load(open(p))
+    q={k:j.get(k) for k in ['mode','cone','SH_mode','SH_count','profiles','success','status','objective','rows','variables','seconds']}
+    if j.get('success'):
+        s=j.get('surface',{})
+        q.update({'negative_mixed_count':s.get('negative_mixed_count'),'positive_mixed_count':s.get('positive_mixed_count'),'distinct_positive_levels':s.get('distinct_positive_levels'),'active_SH_count':j.get('active_SH_count')})
+        q['negative_mixed_top']=s.get('negative_mixed_top',[])[:10]
+        q['level_frontier_generator_counts']=[x.get('generator_count') for x in s.get('level_frontiers',[])]
+    R[p.split('/')[-1]]=q
+print(json.dumps({'schema':'n29-t2-bc-function-cone-batch-v1','floating_point_reconnaissance_only':True,'results':R},indent=2,sort_keys=True))
+PY
+          cat out/SUMMARY.json
+      - uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02
+        if: always()
+        with:
+          name: n29-t2-bc-function-cones
+          path: out/*.json
+          if-no-files-found: error
+          retention-days: 30
+      - name: Commit durable summary
+        if: always()
+        run: |
+          set -euo pipefail
+          test -s out/SUMMARY.json || exit 0
+          R=project/research/general_n/2026-09-09-rx-hall-v1/checkpoints
+          P="$R/N29_T2_BC_FUNCTION_CONES_RUN_${GITHUB_RUN_ID}.json"
+          cp out/SUMMARY.json "$P"
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add "$P"
+          git commit -m "Preserve n29 t2 BC function-cone scan ${GITHUB_RUN_ID}" || exit 0
+          git restore . || true
+          for attempt in 1 2 3 4 5; do
+            if git push origin HEAD:main; then exit 0; fi
+            git reset --hard HEAD
+            git pull --rebase origin main
+            sleep $((attempt*2))
+          done
+          exit 1
