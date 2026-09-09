@@ -1,0 +1,107 @@
+name: General RX-Hall n30 Hall-core falsification
+
+on:
+  workflow_dispatch:
+  push:
+    paths:
+      - 'project/research/general_n/2026-09-09-rx-hall-v1/rx_hall_t3_hall_core_exact.py'
+      - 'project/research/general_n/2026-09-09-rx-hall-v1/rx_hall_exact.py'
+      - 'project/research/general_n/2026-09-09-rx-hall-v1/rx_hall_scan.py'
+      - 'project/research/n30/2026-09-08-minimal-kernel-recon-v1/n30_prepare.py'
+      - 'project/research/n30/2026-09-08-minimal-kernel-recon-v1/n30_rows.cpp'
+      - '.github/workflows/general-rx-hall-n30-hall-core.yml'
+
+permissions:
+  contents: read
+
+jobs:
+  test:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 30
+    strategy:
+      fail-fast: false
+      matrix:
+        include:
+          - {m: 226, t: 2, expected_demands: 2590, expected_rows: 35530, expected_hard: 8}
+          - {m: 225, t: 1, expected_demands: 5379, expected_rows: 150896, expected_hard: 207}
+    steps:
+      - uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262
+      - name: Pin certificate proposer
+        run: |
+          set -euo pipefail
+          python3 -m venv .venv
+          .venv/bin/python -m pip install --disable-pip-version-check --only-binary=:all: scipy==1.17.0
+      - name: Regenerate n30 Delta16 frontier
+        run: |
+          set -euo pipefail
+          D=project/research/n30/2026-09-08-minimal-kernel-recon-v1
+          mkdir -p inputs
+          .venv/bin/python -I -B "$D/n30_prepare.py" --m ${{ matrix.m }} --output inputs
+          g++ -O3 -std=c++17 "$D/n30_rows.cpp" -o n30_rows
+          ./n30_rows inputs/demands.txt inputs/row_survivors.txt inputs/row_bands.txt > inputs/ROWS_REPORT.json
+          python3 - <<'PY'
+          import json
+          from pathlib import Path
+          p=Path('inputs/demands.txt')
+          z=p.read_text().splitlines(); n=int(z[0]); rows=[]
+          for line in z[1:]:
+              a=list(map(int,line.split()))
+              rows.append({'s':a[:13]})
+          assert len(rows)==n==${{ matrix.expected_demands }}
+          Path('inputs/demands.json').write_text(json.dumps(rows,separators=(',',':'))+'\n')
+          rr=json.load(open('inputs/ROWS_REPORT.json'))
+          assert rr['survivors']==${{ matrix.expected_rows }}
+          print('regenerated demand/row frontier',n,rr['survivors'])
+          PY
+      - name: Run exact two-rectangle Hall core
+        id: hall
+        continue-on-error: true
+        run: |
+          set -euo pipefail
+          D=project/research/general_n/2026-09-09-rx-hall-v1
+          mkdir -p out
+          .venv/bin/python -I -B "$D/rx_hall_t3_hall_core_exact.py" \
+            --demands-json inputs/demands.json \
+            --rows inputs/row_survivors.txt \
+            --a 13 --b 16 --dmax 11 --t ${{ matrix.t }} \
+            --output out/hall_core_certificates.json.gz
+      - name: Preserve and classify result
+        if: always()
+        run: |
+          set -euo pipefail
+          python3 - <<'PY'
+          import json,pathlib
+          p=pathlib.Path('out/hall_core_certificates.json.gz.report.json')
+          if not p.exists():
+              raise SystemExit('Hall-core report missing')
+          r=json.load(open(p))
+          assert r['hard_rows']==${{ matrix.expected_hard }}
+          out={
+              'schema':'general-rx-hall-n30-hall-core-falsification-v1',
+              'm':${{ matrix.m }},'t':${{ matrix.t }},
+              'hard_rows':r['hard_rows'],
+              'exact_integer_farkas_rejections':r['exact_integer_farkas_rejections'],
+              'unresolved_count':len(r['unresolved']),
+              'unresolved':r['unresolved'],
+              'uses_rx2':r['uses_rx2'],
+              'uses_all_staircase_hall_cuts':r['uses_all_staircase_hall_cuts'],
+              'uses_hall_unions_of_at_most_two_rectangles':r['uses_hall_unions_of_at_most_two_rectangles'],
+              'status':'PASS_ALL_REJECTED' if not r['unresolved'] else 'FALSIFICATION_SURVIVORS',
+          }
+          pathlib.Path('out/CLASSIFICATION.json').write_text(json.dumps(out,indent=2,sort_keys=True)+'\n')
+          print(json.dumps(out,indent=2,sort_keys=True))
+          PY
+      - uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02
+        if: always()
+        with:
+          name: n30-hall-core-m${{ matrix.m }}
+          path: out/
+          if-no-files-found: error
+          retention-days: 30
+      - name: Require complete rejection for green status
+        run: |
+          python3 - <<'PY'
+          import json
+          r=json.load(open('out/CLASSIFICATION.json'))
+          assert r['unresolved_count']==0, r
+          PY
