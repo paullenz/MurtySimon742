@@ -1,0 +1,91 @@
+name: General RX-Hall n29 nine-shape cross-order transfer
+
+on:
+  workflow_dispatch:
+  push:
+    paths:
+      - 'project/research/general_n/2026-09-09-rx-hall-v1/n29_nine_shape_transfer.py'
+      - '.github/workflows/general-rx-hall-n29-nine-shape-transfer.yml'
+
+jobs:
+  transfer:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 20
+    strategy:
+      fail-fast: false
+      matrix:
+        include:
+          - {t: 3, shard: 0, shards: 1, expected: 94}
+          - {t: 2, shard: 0, shards: 6, expected: 902}
+          - {t: 2, shard: 1, shards: 6, expected: 902}
+          - {t: 2, shard: 2, shards: 6, expected: 902}
+          - {t: 2, shard: 3, shards: 6, expected: 902}
+          - {t: 2, shard: 4, shards: 6, expected: 902}
+          - {t: 2, shard: 5, shards: 6, expected: 902}
+    steps:
+      - uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262
+      - name: Pin solver
+        run: |
+          python3 -m venv .venv
+          .venv/bin/python -m pip install --disable-pip-version-check --only-binary=:all: scipy==1.17.0
+      - name: Regenerate n29 minimal frontier
+        run: |
+          set -euo pipefail
+          D=project/reviews/n29/2026-09-08-redteam-restart-v1
+          mkdir -p inputs out
+          g++ -O3 -std=c++17 "$D/minimal_rows.cpp" -o minimal_rows
+          .venv/bin/python -I -B "$D/minimal_prepare.py" --t ${{ matrix.t }} --output inputs
+          ./minimal_rows inputs/demands.txt inputs/row_survivors.txt inputs/row_bands.txt ${{ matrix.t }} > inputs/MINIMAL_ROWS_REPORT.json
+      - name: Scan fixed nine-shape dictionary
+        run: |
+          set -euo pipefail
+          R=project/research/general_n/2026-09-09-rx-hall-v1
+          .venv/bin/python -I -B "$R/n29_nine_shape_transfer.py" \
+            --demands-json inputs/demands.json --rows inputs/row_survivors.txt \
+            --support-json "$R/checkpoints/N30_SHARED_MIN_SUPPORT_RUN_34361230390.json" \
+            --a 12 --b 16 --dmax 10 --t ${{ matrix.t }} \
+            --shard ${{ matrix.shard }} --shards ${{ matrix.shards }} \
+            --output out/TRANSFER.json
+          python3 - <<'PY'
+          import json
+          r=json.load(open('out/TRANSFER.json'))
+          assert r['hard_rows_total']==${{ matrix.expected }}
+          print('transfer shard',r['numerically_separated'],'/',r['rows_in_shard'])
+          PY
+      - uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02
+        with:
+          name: n29-nine-shape-transfer-t${{ matrix.t }}-s${{ matrix.shard }}
+          path: out/TRANSFER.json
+          if-no-files-found: error
+          retention-days: 30
+
+  aggregate:
+    needs: transfer
+    if: always()
+    runs-on: ubuntu-24.04
+    steps:
+      - uses: actions/download-artifact@d3f86a106a0bac45b974a628896c90dbdf5c8093
+        with:
+          pattern: 'n29-nine-shape-transfer-*'
+          path: reports
+      - name: Aggregate transfer coverage
+        run: |
+          python3 - <<'PY'
+          import json,pathlib
+          docs=[json.load(open(p)) for p in pathlib.Path('reports').rglob('TRANSFER.json')]
+          assert len(docs)==7,len(docs)
+          out={'schema':'n29-nine-shape-cross-order-transfer-aggregate-v1','floating_point_reconnaissance_only':True,'results':{}}
+          for t,expected in [(3,94),(2,902)]:
+              z=[r for r in docs if r['scope']['t']==t]
+              tested=sum(r['rows_in_shard'] for r in z);sep=sum(r['numerically_separated'] for r in z)
+              assert tested==expected,(t,tested,expected)
+              out['results'][str(t)]={'hard_rows':tested,'same_n30_nine_shape_dictionary_separated':sep,'not_separated':tested-sep,'coverage':sep/tested}
+          out['total_hard_rows']=996;out['total_separated']=sum(v['same_n30_nine_shape_dictionary_separated'] for v in out['results'].values());out['total_coverage']=out['total_separated']/996
+          pathlib.Path('N29_NINE_SHAPE_TRANSFER_AGGREGATE.json').write_text(json.dumps(out,indent=2,sort_keys=True)+'\n');print(json.dumps(out,indent=2,sort_keys=True))
+          PY
+      - uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02
+        with:
+          name: n29-nine-shape-transfer-aggregate
+          path: N29_NINE_SHAPE_TRANSFER_AGGREGATE.json
+          if-no-files-found: error
+          retention-days: 30
