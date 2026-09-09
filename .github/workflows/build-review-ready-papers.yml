@@ -36,6 +36,11 @@ jobs:
           # generated LaTeX only; canonical proof Markdown is not edited.
           sed -i '/"--pdf-engine=xelatex",/a\        "--lua-filter=project/reviews/reviewer-paper-build/v1/fix_aligned_tags.lua",' "$BUILDER"
           test -s "$FILTER"
+          # The front-matter abstract is emitted inside a raw LaTeX abstract
+          # environment. Keep those two general-theorem summaries verbal; the
+          # exact formulae are reproduced immediately below in the proof body.
+          sed -i 's/proving t < a\^2\/24 + a\/8 in the selected\/residual framework/proving the profile-integral surplus bound in the selected\/residual framework/' "$BUILDER"
+          sed -i 's/yielding the cubic residual inequality 3S\^3 <= a\^2 r(2r+1), the surplus bound t < (4\/81)a\^2 + 1\/8, and/yielding a cubic residual inequality, its resulting surplus bound, and/' "$BUILDER"
           # FreeSerif covers the Greek and mathematical relation/set symbols that
           # occur in prose outside TeX math blocks across the current papers.
           sed -i '/"-V", "fontsize=11pt",/a\        "-V", "mainfont=FreeSerif",\n        "-V", "sansfont=FreeSans",\n        "-V", "monofont=FreeMono",' "$BUILDER"
