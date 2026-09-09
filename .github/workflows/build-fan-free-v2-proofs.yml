@@ -1,0 +1,54 @@
+name: Build Fan-free n25/n27 proof editions
+
+on:
+  workflow_dispatch:
+  push:
+    paths:
+      - 'project/research/fan-free-fixed-orders/2026-09-09-v1/build_fan_free_v2.py'
+      - 'project/research/fan-free-fixed-orders/2026-09-09-v1/FAN_FREE_REDUCTION.md'
+      - '.github/workflows/build-fan-free-v2-proofs.yml'
+
+permissions:
+  contents: write
+
+jobs:
+  build:
+    runs-on: ubuntu-24.04
+    steps:
+      - uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262
+        with:
+          fetch-depth: 0
+      - name: Build deterministic v2 proof texts
+        run: python3 -I -B project/research/fan-free-fixed-orders/2026-09-09-v1/build_fan_free_v2.py
+      - name: Semantic assertions
+        run: |
+          python3 - <<'PY'
+          from pathlib import Path
+          for n in (25,27):
+              p=Path(f'project/reviews/n{n}/2026-09-09-fan-free-v2/PROOF.md')
+              s=p.read_text()
+              assert 'not a logical dependency of this edition' in s
+              assert 'exactly one' in s and 'unordered B-pair' in s
+              assert 'Fan-free upper-range reduction' in s
+          s=Path('project/reviews/n27/2026-09-09-fan-free-v2/PROOF.md').read_text()
+          assert 'opposite orientations of the same pair' in s
+          print('SEMANTIC_ASSERTIONS_OK')
+          PY
+      - name: Commit new proof editions without modifying frozen history
+        run: |
+          set -euo pipefail
+          git config user.name 'github-actions[bot]'
+          git config user.email '4189823+github-actions[bot]@users.noreply.github.com'
+          git add project/reviews/n25/2026-09-09-fan-free-v2 project/reviews/n27/2026-09-09-fan-free-v2
+          git commit -m 'Publish Fan-free n25 and n27 proof editions' || exit 0
+          git restore . || true
+          for attempt in 1 2 3 4 5; do
+            if git push origin HEAD:main; then exit 0; fi
+            git reset --hard HEAD
+            git pull --rebase origin main
+            python3 -I -B project/research/fan-free-fixed-orders/2026-09-09-v1/build_fan_free_v2.py
+            git add project/reviews/n25/2026-09-09-fan-free-v2 project/reviews/n27/2026-09-09-fan-free-v2
+            git commit -m 'Publish Fan-free n25 and n27 proof editions' || true
+            sleep $((attempt*2))
+          done
+          exit 1
