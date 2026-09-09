@@ -1,0 +1,21 @@
+{
+  "schema": "cross-order-n30-single-obstruction-matrix-v1",
+  "workflow_run": 34380314207,
+  "n29_profiles_in_each_test": 996,
+  "support": "exact n29 9 BC + 7 SH shape family with one common staircase-weight vector per 997-profile test",
+  "floating_point_reconnaissance_only": true,
+  "result": "ALL_SEVEN_INDIVIDUALLY_INCOMPATIBLE_WITH_N29_COMMON_WEIGHT_CONE",
+  "feasible_indices": [],
+  "infeasible_indices": [0,1,2,3,4,5,6],
+  "records": [
+    {"n30_index":0,"status":2,"seconds":166.3477349281311,"s":[1,1,2,2,3,3,3,3,3,3,3,3,3],"rho":[1,1,1,1,1,1,1,1,2,3,3,3,3,3,3,3]},
+    {"n30_index":1,"status":2,"seconds":271.58102583885193,"s":[1,1,3,3,3,3,3,3,3,3,3,3,3],"rho":[1,1,1,1,1,1,1,2,3,3,3,3,3,3,3,3]},
+    {"n30_index":2,"status":2,"seconds":172.82651710510254,"s":[1,2,2,2,2,2,3,3,3,3,3,3,3],"rho":[1,1,1,1,1,1,1,1,2,2,3,3,3,3,3,3]},
+    {"n30_index":3,"status":2,"seconds":194.6158480644226,"s":[1,2,2,2,3,3,3,3,3,3,3,3,3],"rho":[1,1,1,1,1,1,1,2,2,3,3,3,3,3,3,3]},
+    {"n30_index":4,"status":2,"seconds":169.5701494216919,"s":[1,2,2,3,3,3,3,3,3,3,3,3,3],"rho":[1,1,1,1,1,1,1,2,3,3,3,3,3,3,3,3]},
+    {"n30_index":5,"status":2,"seconds":203.81448101997375,"s":[1,2,3,3,3,3,3,3,3,3,3,3,3],"rho":[1,1,1,1,1,1,1,3,3,3,3,3,3,3,3,3]},
+    {"n30_index":6,"status":2,"seconds":204.0112955570221,"s":[1,2,3,3,3,3,3,3,3,3,3,3,3],"rho":[1,1,1,1,1,1,2,2,3,3,3,3,3,3,3,3]}
+  ],
+  "solver_message": "Each test returned HiGHS model_status Infeasible (status 2).",
+  "interpretation": "The cross-order failure is not caused by one exceptional n30 profile: every n30 hard profile, when added separately to all 996 n29 profiles, destroys feasibility of a single shared numerical weight vector on the raw n29 exact16 shapes. This does not rule out parameter-dependent weights or boundary-dependent shape templates."
+}
