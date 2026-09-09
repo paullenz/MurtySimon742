@@ -1,0 +1,58 @@
+name: General RX-Hall weighted RX2 profile screen
+
+on:
+  workflow_dispatch:
+  push:
+    paths:
+      - 'project/research/general_n/2026-09-09-rx-hall-v1/weighted_rx2_profile_check.py'
+      - '.github/workflows/general-rx-hall-weighted-rx2.yml'
+
+permissions:
+  contents: write
+
+jobs:
+  test:
+    runs-on: ubuntu-24.04
+    strategy:
+      fail-fast: false
+      matrix:
+        include:
+          - {m: 226, t: 2, demands: 2590, raw: 35530, threshold: 9, hard: 8}
+          - {m: 225, t: 1, demands: 5379, raw: 150896, threshold: 272, hard: 207}
+    steps:
+      - uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262
+      - name: Regenerate exact threshold frontier
+        run: |
+          set -euo pipefail
+          D=project/research/n30/2026-09-08-minimal-kernel-recon-v1
+          mkdir -p inputs out
+          python3 -I -B "$D/n30_prepare.py" --m ${{ matrix.m }} --output inputs
+          g++ -O3 -std=c++17 "$D/n30_rows.cpp" -o n30_rows
+          ./n30_rows inputs/demands.txt inputs/raw_rows.txt inputs/bands.txt > inputs/ROWS.json
+          python3 -I -B "$D/n30_row_threshold.py" --demands inputs/demands.txt --rows inputs/raw_rows.txt --output inputs/rows.txt --m ${{ matrix.m }} > inputs/THRESHOLD.json
+          python3 - <<'PY'
+          import json
+          from pathlib import Path
+          z=Path('inputs/demands.txt').read_text().splitlines(); D=[]
+          for line in z[1:]: D.append({'s':list(map(int,line.split()))[:13]})
+          assert int(z[0])==len(D)==${{ matrix.demands }}
+          assert json.load(open('inputs/ROWS.json'))['survivors']==${{ matrix.raw }}
+          assert json.load(open('inputs/THRESHOLD.json'))['counts']['survivors']==${{ matrix.threshold }}
+          Path('inputs/demands.json').write_text(json.dumps(D,separators=(',',':'))+'\n')
+          PY
+      - name: Apply exact weighted RX2 screen
+        run: |
+          python3 -I -B project/research/general_n/2026-09-09-rx-hall-v1/weighted_rx2_profile_check.py --demands-json inputs/demands.json --rows inputs/rows.txt --a 13 --dmax 11 --t ${{ matrix.t }} --output out/REPORT.json
+          python3 - <<'PY'
+          import json
+          r=json.load(open('out/REPORT.json')); assert r['hard_rows']==${{ matrix.hard }}
+          print('weighted RX2:',r['rejected'],'rejected,',r['survivors'],'survive')
+          PY
+      - name: Publish unique checkpoint
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          set -euo pipefail
+          P="project/research/general_n/2026-09-09-rx-hall-v1/checkpoints/WEIGHTED_RX2_N30_M${{ matrix.m }}_RUN_${GITHUB_RUN_ID}.json"
+          C=$(base64 -w0 out/REPORT.json)
+          gh api --method PUT "repos/${GITHUB_REPOSITORY}/contents/${P}" -f message="Preserve weighted RX2 n30 m${{ matrix.m }} run ${GITHUB_RUN_ID}" -f content="$C" -f branch=main
