@@ -1,0 +1,1916 @@
+{
+  "demand_id": 2094,
+  "hard_position": 0,
+  "interpretation": "All subsets of the four generated ambient SH correction cuts are tested on top of the full preserved BC library. Exact integer-Farkas acceptance only; v2 records proof-active BC/SH staircase weights.",
+  "minimum_certificates": [
+    {
+      "active_bc": [
+        {
+          "cut_index": 4,
+          "generator_size": 4,
+          "generators": [
+            [
+              1,
+              -1
+            ],
+            [
+              2,
+              -2
+            ],
+            [
+              3,
+              -6
+            ],
+            [
+              7,
+              -10
+            ]
+          ],
+          "weight": 26
+        },
+        {
+          "cut_index": 5,
+          "generator_size": 4,
+          "generators": [
+            [
+              1,
+              -1
+            ],
+            [
+              2,
+              -2
+            ],
+            [
+              4,
+              -6
+            ],
+            [
+              6,
+              -8
+            ]
+          ],
+          "weight": 105
+        },
+        {
+          "cut_index": 7,
+          "generator_size": 2,
+          "generators": [
+            [
+              2,
+              -3
+            ],
+            [
+              4,
+              -4
+            ]
+          ],
+          "weight": 293
+        },
+        {
+          "cut_index": 11,
+          "generator_size": 5,
+          "generators": [
+            [
+              1,
+              -2
+            ],
+            [
+              3,
+              -4
+            ],
+            [
+              4,
+              -6
+            ],
+            [
+              6,
+              -8
+            ],
+            [
+              9,
+              -9
+            ]
+          ],
+          "weight": 190
+        },
+        {
+          "cut_index": 13,
+          "generator_size": 5,
+          "generators": [
+            [
+              1,
+              -1
+            ],
+            [
+              2,
+              -2
+            ],
+            [
+              3,
+              -6
+            ],
+            [
+              5,
+              -7
+            ],
+            [
+              8,
+              -8
+            ]
+          ],
+          "weight": 70
+        },
+        {
+          "cut_index": 16,
+          "generator_size": 5,
+          "generators": [
+            [
+              1,
+              -1
+            ],
+            [
+              2,
+              -4
+            ],
+            [
+              5,
+              -5
+            ],
+            [
+              8,
+              -8
+            ],
+            [
+              9,
+              -12
+            ]
+          ],
+          "weight": 66
+        },
+        {
+          "cut_index": 21,
+          "generator_size": 8,
+          "generators": [
+            [
+              1,
+              -1
+            ],
+            [
+              2,
+              -2
+            ],
+            [
+              3,
+              -4
+            ],
+            [
+              4,
+              -6
+            ],
+            [
+              6,
+              -7
+            ],
+            [
+              7,
+              -8
+            ],
+            [
+              8,
+              -9
+            ],
+            [
+              9,
+              -10
+            ]
+          ],
+          "weight": 75
+        },
+        {
+          "cut_index": 23,
+          "generator_size": 4,
+          "generators": [
+            [
+              1,
+              -1
+            ],
+            [
+              2,
+              -2
+            ],
+            [
+              3,
+              -4
+            ],
+            [
+              4,
+              -10
+            ]
+          ],
+          "weight": 28
+        },
+        {
+          "cut_index": 26,
+          "generator_size": 7,
+          "generators": [
+            [
+              1,
+              -1
+            ],
+            [
+              2,
+              -2
+            ],
+            [
+              3,
+              -5
+            ],
+            [
+              4,
+              -6
+            ],
+            [
+              5,
+              -7
+            ],
+            [
+              6,
+              -8
+            ],
+            [
+              7,
+              -11
+            ]
+          ],
+          "weight": 222
+        },
+        {
+          "cut_index": 29,
+          "generator_size": 5,
+          "generators": [
+            [
+              1,
+              -2
+            ],
+            [
+              2,
+              -4
+            ],
+            [
+              3,
+              -5
+            ],
+            [
+              4,
+              -11
+            ],
+            [
+              9,
+              -12
+            ]
+          ],
+          "weight": 39
+        },
+        {
+          "cut_index": 35,
+          "generator_size": 4,
+          "generators": [
+            [
+              1,
+              -1
+            ],
+            [
+              2,
+              -4
+            ],
+            [
+              3,
+              -9
+            ],
+            [
+              4,
+              -13
+            ]
+          ],
+          "weight": 51
+        },
+        {
+          "cut_index": 36,
+          "generator_size": 4,
+          "generators": [
+            [
+              1,
+              -2
+            ],
+            [
+              2,
+              -3
+            ],
+            [
+              3,
+              -4
+            ],
+            [
+              4,
+              -5
+            ]
+          ],
+          "weight": 464
+        },
+        {
+          "cut_index": 37,
+          "generator_size": 2,
+          "generators": [
+            [
+              1,
+              -1
+            ],
+            [
+              2,
+              -4
+            ]
+          ],
+          "weight": 227
+        },
+        {
+          "cut_index": 41,
+          "generator_size": 5,
+          "generators": [
+            [
+              1,
+              -2
+            ],
+            [
+              2,
+              -4
+            ],
+            [
+              5,
+              -8
+            ],
+            [
+              8,
+              -9
+            ],
+            [
+              10,
+              -10
+            ]
+          ],
+          "weight": 423
+        },
+        {
+          "cut_index": 44,
+          "generator_size": 5,
+          "generators": [
+            [
+              1,
+              -1
+            ],
+            [
+              2,
+              -3
+            ],
+            [
+              5,
+              -5
+            ],
+            [
+              6,
+              -6
+            ],
+            [
+              11,
+              -11
+            ]
+          ],
+          "weight": 31
+        },
+        {
+          "cut_index": 49,
+          "generator_size": 4,
+          "generators": [
+            [
+              1,
+              -2
+            ],
+            [
+              3,
+              -3
+            ],
+            [
+              10,
+              -10
+            ],
+            [
+              11,
+              -12
+            ]
+          ],
+          "weight": 145
+        },
+        {
+          "cut_index": 51,
+          "generator_size": 3,
+          "generators": [
+            [
+              1,
+              -3
+            ],
+            [
+              9,
+              -9
+            ],
+            [
+              11,
+              -11
+            ]
+          ],
+          "weight": 119
+        },
+        {
+          "cut_index": 52,
+          "generator_size": 7,
+          "generators": [
+            [
+              1,
+              -1
+            ],
+            [
+              2,
+              -2
+            ],
+            [
+              3,
+              -5
+            ],
+            [
+              6,
+              -6
+            ],
+            [
+              7,
+              -7
+            ],
+            [
+              8,
+              -10
+            ],
+            [
+              11,
+              -12
+            ]
+          ],
+          "weight": 136
+        },
+        {
+          "cut_index": 54,
+          "generator_size": 3,
+          "generators": [
+            [
+              1,
+              -1
+            ],
+            [
+              2,
+              -2
+            ],
+            [
+              3,
+              -3
+            ]
+          ],
+          "weight": 134
+        },
+        {
+          "cut_index": 55,
+          "generator_size": 4,
+          "generators": [
+            [
+              1,
+              -2
+            ],
+            [
+              6,
+              -8
+            ],
+            [
+              8,
+              -9
+            ],
+            [
+              9,
+              -11
+            ]
+          ],
+          "weight": 75
+        },
+        {
+          "cut_index": 60,
+          "generator_size": 1,
+          "generators": [
+            [
+              1,
+              -3
+            ]
+          ],
+          "weight": 388
+        }
+      ],
+      "active_bc_count": 21,
+      "active_sh": [
+        {
+          "cut_index": 1,
+          "generator_size": 3,
+          "generators": [
+            [
+              1,
+              -1
+            ],
+            [
+              2,
+              -5
+            ],
+            [
+              3,
+              -6
+            ]
+          ],
+          "weight": 420
+        },
+        {
+          "cut_index": 2,
+          "generator_size": 2,
+          "generators": [
+            [
+              1,
+              -1
+            ],
+            [
+              2,
+              -7
+            ]
+          ],
+          "weight": 525
+        },
+        {
+          "cut_index": 3,
+          "generator_size": 3,
+          "generators": [
+            [
+              1,
+              -1
+            ],
+            [
+              2,
+              -2
+            ],
+            [
+              3,
+              -11
+            ]
+          ],
+          "weight": 713
+        }
+      ],
+      "active_sh_count": 3,
+      "certificate_rhs": -658,
+      "rejected_exactly": true,
+      "size": 3,
+      "subset": [
+        1,
+        2,
+        3
+      ]
+    }
+  ],
+  "minimum_rejecting_subset_size": 3,
+  "minimum_rejecting_subsets": [
+    [
+      1,
+      2,
+      3
+    ]
+  ],
+  "schema": "n30-exception-sh-subset-minimization-v2",
+  "sh_cuts": [
+    {
+      "generator_size": 2,
+      "generators": [
+        [
+          2,
+          -2
+        ],
+        [
+          3,
+          -6
+        ]
+      ],
+      "index": 0
+    },
+    {
+      "generator_size": 3,
+      "generators": [
+        [
+          1,
+          -1
+        ],
+        [
+          2,
+          -5
+        ],
+        [
+          3,
+          -6
+        ]
+      ],
+      "index": 1
+    },
+    {
+      "generator_size": 2,
+      "generators": [
+        [
+          1,
+          -1
+        ],
+        [
+          2,
+          -7
+        ]
+      ],
+      "index": 2
+    },
+    {
+      "generator_size": 3,
+      "generators": [
+        [
+          1,
+          -1
+        ],
+        [
+          2,
+          -2
+        ],
+        [
+          3,
+          -11
+        ]
+      ],
+      "index": 3
+    }
+  ],
+  "tests": [
+    {
+      "certificate_rhs": null,
+      "rejected_exactly": false,
+      "size": 0,
+      "subset": []
+    },
+    {
+      "certificate_rhs": null,
+      "rejected_exactly": false,
+      "size": 1,
+      "subset": [
+        0
+      ]
+    },
+    {
+      "certificate_rhs": null,
+      "rejected_exactly": false,
+      "size": 1,
+      "subset": [
+        1
+      ]
+    },
+    {
+      "certificate_rhs": null,
+      "rejected_exactly": false,
+      "size": 1,
+      "subset": [
+        2
+      ]
+    },
+    {
+      "certificate_rhs": null,
+      "rejected_exactly": false,
+      "size": 1,
+      "subset": [
+        3
+      ]
+    },
+    {
+      "certificate_rhs": null,
+      "rejected_exactly": false,
+      "size": 2,
+      "subset": [
+        0,
+        1
+      ]
+    },
+    {
+      "certificate_rhs": null,
+      "rejected_exactly": false,
+      "size": 2,
+      "subset": [
+        0,
+        2
+      ]
+    },
+    {
+      "certificate_rhs": null,
+      "rejected_exactly": false,
+      "size": 2,
+      "subset": [
+        0,
+        3
+      ]
+    },
+    {
+      "certificate_rhs": null,
+      "rejected_exactly": false,
+      "size": 2,
+      "subset": [
+        1,
+        2
+      ]
+    },
+    {
+      "certificate_rhs": null,
+      "rejected_exactly": false,
+      "size": 2,
+      "subset": [
+        1,
+        3
+      ]
+    },
+    {
+      "certificate_rhs": null,
+      "rejected_exactly": false,
+      "size": 2,
+      "subset": [
+        2,
+        3
+      ]
+    },
+    {
+      "certificate_rhs": null,
+      "rejected_exactly": false,
+      "size": 3,
+      "subset": [
+        0,
+        1,
+        2
+      ]
+    },
+    {
+      "certificate_rhs": null,
+      "rejected_exactly": false,
+      "size": 3,
+      "subset": [
+        0,
+        1,
+        3
+      ]
+    },
+    {
+      "certificate_rhs": null,
+      "rejected_exactly": false,
+      "size": 3,
+      "subset": [
+        0,
+        2,
+        3
+      ]
+    },
+    {
+      "active_bc": [
+        {
+          "cut_index": 4,
+          "generator_size": 4,
+          "generators": [
+            [
+              1,
+              -1
+            ],
+            [
+              2,
+              -2
+            ],
+            [
+              3,
+              -6
+            ],
+            [
+              7,
+              -10
+            ]
+          ],
+          "weight": 26
+        },
+        {
+          "cut_index": 5,
+          "generator_size": 4,
+          "generators": [
+            [
+              1,
+              -1
+            ],
+            [
+              2,
+              -2
+            ],
+            [
+              4,
+              -6
+            ],
+            [
+              6,
+              -8
+            ]
+          ],
+          "weight": 105
+        },
+        {
+          "cut_index": 7,
+          "generator_size": 2,
+          "generators": [
+            [
+              2,
+              -3
+            ],
+            [
+              4,
+              -4
+            ]
+          ],
+          "weight": 293
+        },
+        {
+          "cut_index": 11,
+          "generator_size": 5,
+          "generators": [
+            [
+              1,
+              -2
+            ],
+            [
+              3,
+              -4
+            ],
+            [
+              4,
+              -6
+            ],
+            [
+              6,
+              -8
+            ],
+            [
+              9,
+              -9
+            ]
+          ],
+          "weight": 190
+        },
+        {
+          "cut_index": 13,
+          "generator_size": 5,
+          "generators": [
+            [
+              1,
+              -1
+            ],
+            [
+              2,
+              -2
+            ],
+            [
+              3,
+              -6
+            ],
+            [
+              5,
+              -7
+            ],
+            [
+              8,
+              -8
+            ]
+          ],
+          "weight": 70
+        },
+        {
+          "cut_index": 16,
+          "generator_size": 5,
+          "generators": [
+            [
+              1,
+              -1
+            ],
+            [
+              2,
+              -4
+            ],
+            [
+              5,
+              -5
+            ],
+            [
+              8,
+              -8
+            ],
+            [
+              9,
+              -12
+            ]
+          ],
+          "weight": 66
+        },
+        {
+          "cut_index": 21,
+          "generator_size": 8,
+          "generators": [
+            [
+              1,
+              -1
+            ],
+            [
+              2,
+              -2
+            ],
+            [
+              3,
+              -4
+            ],
+            [
+              4,
+              -6
+            ],
+            [
+              6,
+              -7
+            ],
+            [
+              7,
+              -8
+            ],
+            [
+              8,
+              -9
+            ],
+            [
+              9,
+              -10
+            ]
+          ],
+          "weight": 75
+        },
+        {
+          "cut_index": 23,
+          "generator_size": 4,
+          "generators": [
+            [
+              1,
+              -1
+            ],
+            [
+              2,
+              -2
+            ],
+            [
+              3,
+              -4
+            ],
+            [
+              4,
+              -10
+            ]
+          ],
+          "weight": 28
+        },
+        {
+          "cut_index": 26,
+          "generator_size": 7,
+          "generators": [
+            [
+              1,
+              -1
+            ],
+            [
+              2,
+              -2
+            ],
+            [
+              3,
+              -5
+            ],
+            [
+              4,
+              -6
+            ],
+            [
+              5,
+              -7
+            ],
+            [
+              6,
+              -8
+            ],
+            [
+              7,
+              -11
+            ]
+          ],
+          "weight": 222
+        },
+        {
+          "cut_index": 29,
+          "generator_size": 5,
+          "generators": [
+            [
+              1,
+              -2
+            ],
+            [
+              2,
+              -4
+            ],
+            [
+              3,
+              -5
+            ],
+            [
+              4,
+              -11
+            ],
+            [
+              9,
+              -12
+            ]
+          ],
+          "weight": 39
+        },
+        {
+          "cut_index": 35,
+          "generator_size": 4,
+          "generators": [
+            [
+              1,
+              -1
+            ],
+            [
+              2,
+              -4
+            ],
+            [
+              3,
+              -9
+            ],
+            [
+              4,
+              -13
+            ]
+          ],
+          "weight": 51
+        },
+        {
+          "cut_index": 36,
+          "generator_size": 4,
+          "generators": [
+            [
+              1,
+              -2
+            ],
+            [
+              2,
+              -3
+            ],
+            [
+              3,
+              -4
+            ],
+            [
+              4,
+              -5
+            ]
+          ],
+          "weight": 464
+        },
+        {
+          "cut_index": 37,
+          "generator_size": 2,
+          "generators": [
+            [
+              1,
+              -1
+            ],
+            [
+              2,
+              -4
+            ]
+          ],
+          "weight": 227
+        },
+        {
+          "cut_index": 41,
+          "generator_size": 5,
+          "generators": [
+            [
+              1,
+              -2
+            ],
+            [
+              2,
+              -4
+            ],
+            [
+              5,
+              -8
+            ],
+            [
+              8,
+              -9
+            ],
+            [
+              10,
+              -10
+            ]
+          ],
+          "weight": 423
+        },
+        {
+          "cut_index": 44,
+          "generator_size": 5,
+          "generators": [
+            [
+              1,
+              -1
+            ],
+            [
+              2,
+              -3
+            ],
+            [
+              5,
+              -5
+            ],
+            [
+              6,
+              -6
+            ],
+            [
+              11,
+              -11
+            ]
+          ],
+          "weight": 31
+        },
+        {
+          "cut_index": 49,
+          "generator_size": 4,
+          "generators": [
+            [
+              1,
+              -2
+            ],
+            [
+              3,
+              -3
+            ],
+            [
+              10,
+              -10
+            ],
+            [
+              11,
+              -12
+            ]
+          ],
+          "weight": 145
+        },
+        {
+          "cut_index": 51,
+          "generator_size": 3,
+          "generators": [
+            [
+              1,
+              -3
+            ],
+            [
+              9,
+              -9
+            ],
+            [
+              11,
+              -11
+            ]
+          ],
+          "weight": 119
+        },
+        {
+          "cut_index": 52,
+          "generator_size": 7,
+          "generators": [
+            [
+              1,
+              -1
+            ],
+            [
+              2,
+              -2
+            ],
+            [
+              3,
+              -5
+            ],
+            [
+              6,
+              -6
+            ],
+            [
+              7,
+              -7
+            ],
+            [
+              8,
+              -10
+            ],
+            [
+              11,
+              -12
+            ]
+          ],
+          "weight": 136
+        },
+        {
+          "cut_index": 54,
+          "generator_size": 3,
+          "generators": [
+            [
+              1,
+              -1
+            ],
+            [
+              2,
+              -2
+            ],
+            [
+              3,
+              -3
+            ]
+          ],
+          "weight": 134
+        },
+        {
+          "cut_index": 55,
+          "generator_size": 4,
+          "generators": [
+            [
+              1,
+              -2
+            ],
+            [
+              6,
+              -8
+            ],
+            [
+              8,
+              -9
+            ],
+            [
+              9,
+              -11
+            ]
+          ],
+          "weight": 75
+        },
+        {
+          "cut_index": 60,
+          "generator_size": 1,
+          "generators": [
+            [
+              1,
+              -3
+            ]
+          ],
+          "weight": 388
+        }
+      ],
+      "active_bc_count": 21,
+      "active_sh": [
+        {
+          "cut_index": 1,
+          "generator_size": 3,
+          "generators": [
+            [
+              1,
+              -1
+            ],
+            [
+              2,
+              -5
+            ],
+            [
+              3,
+              -6
+            ]
+          ],
+          "weight": 420
+        },
+        {
+          "cut_index": 2,
+          "generator_size": 2,
+          "generators": [
+            [
+              1,
+              -1
+            ],
+            [
+              2,
+              -7
+            ]
+          ],
+          "weight": 525
+        },
+        {
+          "cut_index": 3,
+          "generator_size": 3,
+          "generators": [
+            [
+              1,
+              -1
+            ],
+            [
+              2,
+              -2
+            ],
+            [
+              3,
+              -11
+            ]
+          ],
+          "weight": 713
+        }
+      ],
+      "active_sh_count": 3,
+      "certificate_rhs": -658,
+      "rejected_exactly": true,
+      "size": 3,
+      "subset": [
+        1,
+        2,
+        3
+      ]
+    },
+    {
+      "active_bc": [
+        {
+          "cut_index": 3,
+          "generator_size": 3,
+          "generators": [
+            [
+              1,
+              -2
+            ],
+            [
+              3,
+              -5
+            ],
+            [
+              11,
+              -11
+            ]
+          ],
+          "weight": 141
+        },
+        {
+          "cut_index": 7,
+          "generator_size": 2,
+          "generators": [
+            [
+              2,
+              -3
+            ],
+            [
+              4,
+              -4
+            ]
+          ],
+          "weight": 272
+        },
+        {
+          "cut_index": 11,
+          "generator_size": 5,
+          "generators": [
+            [
+              1,
+              -2
+            ],
+            [
+              3,
+              -4
+            ],
+            [
+              4,
+              -6
+            ],
+            [
+              6,
+              -8
+            ],
+            [
+              9,
+              -9
+            ]
+          ],
+          "weight": 184
+        },
+        {
+          "cut_index": 13,
+          "generator_size": 5,
+          "generators": [
+            [
+              1,
+              -1
+            ],
+            [
+              2,
+              -2
+            ],
+            [
+              3,
+              -6
+            ],
+            [
+              5,
+              -7
+            ],
+            [
+              8,
+              -8
+            ]
+          ],
+          "weight": 175
+        },
+        {
+          "cut_index": 18,
+          "generator_size": 6,
+          "generators": [
+            [
+              1,
+              -1
+            ],
+            [
+              2,
+              -2
+            ],
+            [
+              3,
+              -3
+            ],
+            [
+              8,
+              -9
+            ],
+            [
+              10,
+              -10
+            ],
+            [
+              11,
+              -11
+            ]
+          ],
+          "weight": 66
+        },
+        {
+          "cut_index": 19,
+          "generator_size": 4,
+          "generators": [
+            [
+              1,
+              -1
+            ],
+            [
+              2,
+              -4
+            ],
+            [
+              3,
+              -7
+            ],
+            [
+              4,
+              -9
+            ]
+          ],
+          "weight": 88
+        },
+        {
+          "cut_index": 20,
+          "generator_size": 7,
+          "generators": [
+            [
+              1,
+              -1
+            ],
+            [
+              2,
+              -2
+            ],
+            [
+              3,
+              -4
+            ],
+            [
+              4,
+              -6
+            ],
+            [
+              7,
+              -7
+            ],
+            [
+              8,
+              -9
+            ],
+            [
+              9,
+              -11
+            ]
+          ],
+          "weight": 270
+        },
+        {
+          "cut_index": 22,
+          "generator_size": 4,
+          "generators": [
+            [
+              1,
+              -1
+            ],
+            [
+              2,
+              -4
+            ],
+            [
+              3,
+              -5
+            ],
+            [
+              9,
+              -12
+            ]
+          ],
+          "weight": 104
+        },
+        {
+          "cut_index": 26,
+          "generator_size": 7,
+          "generators": [
+            [
+              1,
+              -1
+            ],
+            [
+              2,
+              -2
+            ],
+            [
+              3,
+              -5
+            ],
+            [
+              4,
+              -6
+            ],
+            [
+              5,
+              -7
+            ],
+            [
+              6,
+              -8
+            ],
+            [
+              7,
+              -11
+            ]
+          ],
+          "weight": 143
+        },
+        {
+          "cut_index": 35,
+          "generator_size": 4,
+          "generators": [
+            [
+              1,
+              -1
+            ],
+            [
+              2,
+              -4
+            ],
+            [
+              3,
+              -9
+            ],
+            [
+              4,
+              -13
+            ]
+          ],
+          "weight": 51
+        },
+        {
+          "cut_index": 36,
+          "generator_size": 4,
+          "generators": [
+            [
+              1,
+              -2
+            ],
+            [
+              2,
+              -3
+            ],
+            [
+              3,
+              -4
+            ],
+            [
+              4,
+              -5
+            ]
+          ],
+          "weight": 284
+        },
+        {
+          "cut_index": 37,
+          "generator_size": 2,
+          "generators": [
+            [
+              1,
+              -1
+            ],
+            [
+              2,
+              -4
+            ]
+          ],
+          "weight": 218
+        },
+        {
+          "cut_index": 40,
+          "generator_size": 8,
+          "generators": [
+            [
+              1,
+              -2
+            ],
+            [
+              2,
+              -3
+            ],
+            [
+              3,
+              -5
+            ],
+            [
+              6,
+              -6
+            ],
+            [
+              7,
+              -8
+            ],
+            [
+              9,
+              -9
+            ],
+            [
+              10,
+              -10
+            ],
+            [
+              11,
+              -11
+            ]
+          ],
+          "weight": 157
+        },
+        {
+          "cut_index": 41,
+          "generator_size": 5,
+          "generators": [
+            [
+              1,
+              -2
+            ],
+            [
+              2,
+              -4
+            ],
+            [
+              5,
+              -8
+            ],
+            [
+              8,
+              -9
+            ],
+            [
+              10,
+              -10
+            ]
+          ],
+          "weight": 318
+        },
+        {
+          "cut_index": 42,
+          "generator_size": 5,
+          "generators": [
+            [
+              1,
+              -2
+            ],
+            [
+              4,
+              -4
+            ],
+            [
+              5,
+              -5
+            ],
+            [
+              6,
+              -6
+            ],
+            [
+              9,
+              -11
+            ]
+          ],
+          "weight": 9
+        },
+        {
+          "cut_index": 49,
+          "generator_size": 4,
+          "generators": [
+            [
+              1,
+              -2
+            ],
+            [
+              3,
+              -3
+            ],
+            [
+              10,
+              -10
+            ],
+            [
+              11,
+              -12
+            ]
+          ],
+          "weight": 117
+        },
+        {
+          "cut_index": 51,
+          "generator_size": 3,
+          "generators": [
+            [
+              1,
+              -3
+            ],
+            [
+              9,
+              -9
+            ],
+            [
+              11,
+              -11
+            ]
+          ],
+          "weight": 6
+        },
+        {
+          "cut_index": 55,
+          "generator_size": 4,
+          "generators": [
+            [
+              1,
+              -2
+            ],
+            [
+              6,
+              -8
+            ],
+            [
+              8,
+              -9
+            ],
+            [
+              9,
+              -11
+            ]
+          ],
+          "weight": 75
+        },
+        {
+          "cut_index": 60,
+          "generator_size": 1,
+          "generators": [
+            [
+              1,
+              -3
+            ]
+          ],
+          "weight": 628
+        }
+      ],
+      "active_bc_count": 19,
+      "active_sh": [
+        {
+          "cut_index": 0,
+          "generator_size": 2,
+          "generators": [
+            [
+              2,
+              -2
+            ],
+            [
+              3,
+              -6
+            ]
+          ],
+          "weight": 21
+        },
+        {
+          "cut_index": 1,
+          "generator_size": 3,
+          "generators": [
+            [
+              1,
+              -1
+            ],
+            [
+              2,
+              -5
+            ],
+            [
+              3,
+              -6
+            ]
+          ],
+          "weight": 420
+        },
+        {
+          "cut_index": 2,
+          "generator_size": 2,
+          "generators": [
+            [
+              1,
+              -1
+            ],
+            [
+              2,
+              -7
+            ]
+          ],
+          "weight": 525
+        },
+        {
+          "cut_index": 3,
+          "generator_size": 3,
+          "generators": [
+            [
+              1,
+              -1
+            ],
+            [
+              2,
+              -2
+            ],
+            [
+              3,
+              -11
+            ]
+          ],
+          "weight": 692
+        }
+      ],
+      "active_sh_count": 4,
+      "certificate_rhs": -784,
+      "rejected_exactly": true,
+      "size": 4,
+      "subset": [
+        0,
+        1,
+        2,
+        3
+      ]
+    }
+  ]
+}
