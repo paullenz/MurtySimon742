@@ -1,0 +1,31 @@
+{
+  "BC_candidate_shapes": 262,
+  "SH_candidate_shapes": 4,
+  "active_BC": [
+    {"generators": [[1,-3]], "index": 1, "weight": 1.4328105129271629},
+    {"generators": [[1,-2],[2,-4],[3,-6],[7,-8],[8,-9],[11,-11]], "index": 14, "weight": 0.5538363713430615},
+    {"generators": [[1,-2],[3,-5],[11,-11]], "index": 42, "weight": 0.924544298430428},
+    {"generators": [[1,-2],[3,-3],[4,-4]], "index": 48, "weight": 1.054260279779645},
+    {"generators": [[1,-1],[2,-4],[4,-5],[6,-7],[7,-8]], "index": 88, "weight": 1.0358202628219948},
+    {"generators": [[1,-1],[2,-3],[4,-4],[5,-9],[10,-10]], "index": 107, "weight": 0.6256888512072076}
+  ],
+  "active_BC_count": 6,
+  "active_SH": [
+    {"generators": [[1,-1],[2,-5],[3,-6]], "index": 1, "weight": 0.7948283170827487},
+    {"generators": [[1,-1],[2,-7]], "index": 2, "weight": 0.9245442984309505},
+    {"generators": [[1,-1],[2,-2],[3,-11]], "index": 3, "weight": 1.3810936837628824}
+  ],
+  "active_SH_count": 3,
+  "big_m": 100.0,
+  "floating_point_reconnaissance_only": true,
+  "message": "Optimization terminated successfully. (HiGHS Status 7: Optimal)",
+  "mip_gap": 0.0,
+  "mip_node_count": 5537,
+  "objective": 9.000000000000005,
+  "schema": "n30-shared-min-support-milp-v1",
+  "status": 0,
+  "success": true,
+  "support_count": 9,
+  "time_limit": 900.0,
+  "provenance": {"workflow_run": 34361230390, "artifact_id": 10108104376, "artifact_sha256": "0276bd9d5acc9fcf1dce036a7b728e5a100d8f43b9590a1f10e2874c799144fc"}
+}
