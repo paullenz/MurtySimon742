@@ -1,0 +1,56 @@
+name: General RX-Hall n30 boundary lift n29 fixed16
+
+on:
+  workflow_dispatch:
+  push:
+    paths:
+      - '.github/workflows/general-rx-hall-n30-boundary-lift-n29-fixed16.yml'
+
+permissions:
+  contents: write
+
+jobs:
+  scan:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262
+        with:
+          fetch-depth: 0
+      - name: Pin solver
+        run: |
+          python3 -m venv .venv
+          .venv/bin/python -m pip install --disable-pip-version-check --only-binary=:all: scipy==1.17.0
+      - name: Test boundary-lifted n29 exact16 family on n30
+        run: |
+          set -euo pipefail
+          R=project/research/general_n/2026-09-09-rx-hall-v1
+          mkdir -p out
+          .venv/bin/python -I -B "$R/n30_boundary_lift_n29_fixed16.py" \
+            --n30-json "$R/checkpoints/N30_BC_UPPER_CUTGEN_RUN_34348486247.json" \
+            --support-json "$R/checkpoints/N29_COMMON_ACTIVE_EXACT_RUN_34371839791.json" \
+            --output out/N30_BOUNDARY_LIFT_FIXED16.json
+      - uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02
+        with:
+          name: n30-boundary-lift-n29-fixed16
+          path: out/N30_BOUNDARY_LIFT_FIXED16.json
+          if-no-files-found: error
+          retention-days: 30
+      - name: Commit durable checkpoint
+        run: |
+          set -euo pipefail
+          R=project/research/general_n/2026-09-09-rx-hall-v1/checkpoints
+          P="$R/N30_BOUNDARY_LIFT_N29_FIXED16_RUN_${GITHUB_RUN_ID}.json"
+          cp out/N30_BOUNDARY_LIFT_FIXED16.json "$P"
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add "$P"
+          git commit -m "Preserve n30 boundary-lift fixed16 run ${GITHUB_RUN_ID}" || exit 0
+          git restore . || true
+          for attempt in 1 2 3 4 5; do
+            if git push origin HEAD:main; then exit 0; fi
+            git reset --hard HEAD
+            git pull --rebase origin main
+            sleep $((attempt*2))
+          done
+          exit 1
