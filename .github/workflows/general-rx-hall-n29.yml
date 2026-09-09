@@ -5,6 +5,7 @@ on:
   push:
     paths:
       - 'project/research/general_n/2026-09-09-rx-hall-v1/rx_hall_scan.py'
+      - 'project/research/general_n/2026-09-09-rx-hall-v1/rx_hall_scan_hardened.py'
       - '.github/workflows/general-rx-hall-n29.yml'
 
 permissions:
@@ -50,7 +51,7 @@ jobs:
           set -euo pipefail
           D=project/research/general_n/2026-09-09-rx-hall-v1
           mkdir -p out
-          .venv/bin/python -I -B "$D/rx_hall_scan.py" \
+          .venv/bin/python -I -B "$D/rx_hall_scan_hardened.py" \
             --demands-json inputs/t${{ matrix.t }}/demands.json \
             --rows inputs/t${{ matrix.t }}/row_survivors.txt \
             --a 12 --b 16 --dmax 10 --t ${{ matrix.t }} \
@@ -66,6 +67,7 @@ jobs:
           print('RX-Hall shard has no numerical survivor')
           PY
       - uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02
+        if: always()
         with:
           name: rx-hall-t${{ matrix.t }}-s${{ matrix.shard }}
           path: out/report.json
@@ -74,6 +76,7 @@ jobs:
 
   aggregate:
     needs: scan
+    if: always()
     runs-on: ubuntu-24.04
     steps:
       - uses: actions/download-artifact@d3f86a106a0bac45b974a628896c90dbdf5c8093
