@@ -1,0 +1,57 @@
+name: Fan-free n27 delta15 column closure
+
+on:
+  workflow_dispatch:
+  push:
+    paths:
+      - '.github/workflows/fan-free-n27-d15-columns.yml'
+
+jobs:
+  close:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 60
+    strategy:
+      fail-fast: false
+      matrix:
+        edges: [184, 185]
+    steps:
+      - uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262
+      - name: Build inherited exact programs
+        run: |
+          D=project/reviews/n27/2026-09-07-candidate-v1
+          g++ -O3 -std=c++17 "$D/survey.cpp" -lz -o survey
+          g++ -O3 -std=c++17 "$D/columns.cpp" -lz -lcrypto -o columns
+      - name: Regenerate the complete outer frontier
+        run: |
+          ./survey 27 15 ${{ matrix.edges }} out_${{ matrix.edges }} | tee survey_${{ matrix.edges }}.log
+      - name: Scan residual columns and generate strict subset certificates
+        run: |
+          ./columns scan 27 15 ${{ matrix.edges }} out_${{ matrix.edges }}_frontier.jsonl.gz cert_${{ matrix.edges }} col_${{ matrix.edges }} | tee columns_scan_${{ matrix.edges }}.log
+      - name: Independently replay every generated subset certificate
+        run: |
+          ./columns check 27 15 ${{ matrix.edges }} out_${{ matrix.edges }}_frontier.jsonl.gz cert_${{ matrix.edges }} chk_${{ matrix.edges }} | tee columns_check_${{ matrix.edges }}.log
+      - name: Require zero column survivors
+        run: |
+          python3 - <<'PY'
+          import json
+          e=${{ matrix.edges }}
+          a=json.load(open(f'col_{e}_column_summary.json'))
+          b=json.load(open(f'chk_{e}_column_summary.json'))
+          assert a=={**b,'checking':False} or (a['states']==b['states'] and a['canonical_columns']==b['canonical_columns'] and a['labelled_columns']==b['labelled_columns'] and a['surviving_columns']==b['surviving_columns'] and a['details_sha256']==b['details_sha256'])
+          print(json.dumps({'edges':e,'scan':a,'check':b},sort_keys=True))
+          assert a['surviving_columns']==0, a
+          PY
+      - uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02
+        if: always()
+        with:
+          name: fan-free-n27-d15-${{ matrix.edges }}
+          path: |
+            survey_${{ matrix.edges }}.log
+            columns_scan_${{ matrix.edges }}.log
+            columns_check_${{ matrix.edges }}.log
+            out_${{ matrix.edges }}_frontier.jsonl.gz
+            out_${{ matrix.edges }}_summary.jsonl
+            cert_${{ matrix.edges }}_cuts.jsonl.gz
+            col_${{ matrix.edges }}_column_summary.json
+            chk_${{ matrix.edges }}_column_summary.json
+          retention-days: 30
