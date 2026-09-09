@@ -1,0 +1,44 @@
+{
+  "BC_count": 9,
+  "BC_weights": [
+    0.0,
+    0.02419910887342045,
+    0.011629132148863124,
+    0.008992910103390208,
+    0.017155384351721342,
+    0.014564664956123638,
+    0.023544593845362026,
+    0.020322731490466102,
+    0.0055900830030908245
+  ],
+  "SH_count": 7,
+  "SH_weights": [
+    0.017219215151953952,
+    0.015505509531817339,
+    0.0,
+    0.0040469512737499255,
+    0.028356468867804865,
+    0.007453444004121207,
+    0.011629132148863144
+  ],
+  "active_BC": 8,
+  "active_SH": 6,
+  "floating_point_reconnaissance_only": true,
+  "interpretation": "Success means one staircase-weight vector works across all n29 t=2 hard profiles, with profile-specific scalar multipliers/envelopes. It is not proof evidence until exactified.",
+  "message": "Optimization terminated successfully. (HiGHS Status 7: Optimal)",
+  "objective": 0.3646618897689493,
+  "profiles": 94,
+  "rows": 30646,
+  "schema": "n29-all-t2-common-16-shape-v1",
+  "scope": {
+    "a": 12,
+    "b": 16,
+    "dmax": 10,
+    "t": 3
+  },
+  "seconds": 3.777338743209839,
+  "status": 0,
+  "success": true,
+  "support_count": 16,
+  "variables": 2088
+}
