@@ -66,6 +66,9 @@ jobs:
           git commit -m "Preserve n30 BC upper-set cutgen run ${GITHUB_RUN_ID}"
           for attempt in 1 2 3 4 5; do
             if git push origin HEAD:main;then exit 0;fi
+            # The checkout can be dirty because legacy large files are not clean LFS pointers.
+            # Reset only uncommitted working-tree noise; the checkpoint commit remains HEAD.
+            git reset --hard HEAD
             git pull --rebase origin main
             sleep $((attempt*2))
           done
