@@ -1,0 +1,69 @@
+name: Build Fan-free reviewer v2 packages
+
+on:
+  workflow_dispatch:
+  push:
+    paths:
+      - 'project/research/fan-free-fixed-orders/2026-09-09-v1/build_reviewer_v2.py'
+      - 'project/reviews/n25/2026-09-09-fan-free-v2/**'
+      - 'project/reviews/n27/2026-09-09-fan-free-v2/**'
+      - '.github/workflows/build-fan-free-reviewer-v2.yml'
+
+permissions:
+  contents: write
+
+jobs:
+  build:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 30
+    steps:
+      - uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262
+        with:
+          fetch-depth: 0
+      - name: Install paper toolchain
+        run: |
+          sudo apt-get update -qq
+          sudo DEBIAN_FRONTEND=noninteractive apt-get install -y -qq pandoc texlive-xetex texlive-latex-extra texlive-fonts-recommended lmodern fonts-freefont-otf poppler-utils
+      - name: Build v2 reviewer packages
+        run: |
+          set -euo pipefail
+          python3 -I -B project/research/fan-free-fixed-orders/2026-09-09-v1/build_reviewer_v2.py | tee FAN_FREE_REVIEWER_V2_BUILD.log
+      - name: PDF preflight and render smoke
+        run: |
+          set -euo pipefail
+          mkdir -p fan-free-review-renders
+          for p in releases/n25-reviewer-v2/*.pdf releases/n27-reviewer-v2/*.pdf; do
+            pdfinfo "$p" | grep -E '^(Pages|Page size):' >> fan-free-review-renders/PDFINFO.txt
+            pdftotext "$p" /dev/null
+            base=$(basename "$p" .pdf)
+            pdftoppm -f 1 -singlefile -png -r 140 "$p" "fan-free-review-renders/${base}" >/dev/null 2>&1
+          done
+          test -s fan-free-review-renders/PDFINFO.txt
+      - uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02
+        with:
+          name: fan-free-reviewer-v2-${{ github.run_id }}
+          path: |
+            releases/n25-reviewer-v2/
+            releases/n27-reviewer-v2/
+            releases/REVIEW_READY_INDEX.md
+            fan-free-review-renders/
+            FAN_FREE_REVIEWER_V2_BUILD.log
+          retention-days: 30
+      - name: Commit reviewer v2 surfaces
+        run: |
+          set -euo pipefail
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add releases/n25-reviewer-v2 releases/n27-reviewer-v2 releases/REVIEW_READY_INDEX.md
+          git commit -m 'Publish Fan-free n25 and n27 reviewer v2 packages' || exit 0
+          git restore . || true
+          for attempt in 1 2 3 4 5; do
+            if git push origin HEAD:main; then exit 0; fi
+            git reset --hard HEAD
+            git pull --rebase origin main
+            python3 -I -B project/research/fan-free-fixed-orders/2026-09-09-v1/build_reviewer_v2.py
+            git add releases/n25-reviewer-v2 releases/n27-reviewer-v2 releases/REVIEW_READY_INDEX.md
+            git commit -m 'Publish Fan-free n25 and n27 reviewer v2 packages' || true
+            sleep $((attempt*2))
+          done
+          exit 1
