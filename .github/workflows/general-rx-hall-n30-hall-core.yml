@@ -5,10 +5,12 @@ on:
   push:
     paths:
       - 'project/research/general_n/2026-09-09-rx-hall-v1/rx_hall_t3_hall_core_exact.py'
+      - 'project/research/general_n/2026-09-09-rx-hall-v1/rx_hall_t3_hall_core_verify.py'
       - 'project/research/general_n/2026-09-09-rx-hall-v1/rx_hall_exact.py'
       - 'project/research/general_n/2026-09-09-rx-hall-v1/rx_hall_scan.py'
       - 'project/research/n30/2026-09-08-minimal-kernel-recon-v1/n30_prepare.py'
       - 'project/research/n30/2026-09-08-minimal-kernel-recon-v1/n30_rows.cpp'
+      - 'project/research/n30/2026-09-08-minimal-kernel-recon-v1/n30_row_threshold.py'
       - '.github/workflows/general-rx-hall-n30-hall-core.yml'
 
 permissions:
@@ -22,8 +24,8 @@ jobs:
       fail-fast: false
       matrix:
         include:
-          - {m: 226, t: 2, expected_demands: 2590, expected_rows: 35530, expected_hard: 8}
-          - {m: 225, t: 1, expected_demands: 5379, expected_rows: 150896, expected_hard: 207}
+          - {m: 226, t: 2, expected_demands: 2590, expected_raw_rows: 35530, expected_threshold_rows: 9, expected_hard: 8}
+          - {m: 225, t: 1, expected_demands: 5379, expected_raw_rows: 150896, expected_threshold_rows: 272, expected_hard: 207}
     steps:
       - uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262
       - name: Pin certificate proposer
@@ -31,14 +33,19 @@ jobs:
           set -euo pipefail
           python3 -m venv .venv
           .venv/bin/python -m pip install --disable-pip-version-check --only-binary=:all: scipy==1.17.0
-      - name: Regenerate n30 Delta16 frontier
+      - name: Regenerate audited n30 Delta16 threshold frontier
         run: |
           set -euo pipefail
           D=project/research/n30/2026-09-08-minimal-kernel-recon-v1
           mkdir -p inputs
           .venv/bin/python -I -B "$D/n30_prepare.py" --m ${{ matrix.m }} --output inputs
           g++ -O3 -std=c++17 "$D/n30_rows.cpp" -o n30_rows
-          ./n30_rows inputs/demands.txt inputs/row_survivors.txt inputs/row_bands.txt > inputs/ROWS_REPORT.json
+          ./n30_rows inputs/demands.txt inputs/raw_row_survivors.txt inputs/row_bands.txt > inputs/ROWS_REPORT.json
+          .venv/bin/python -I -B "$D/n30_row_threshold.py" \
+            --demands inputs/demands.txt \
+            --rows inputs/raw_row_survivors.txt \
+            --output inputs/row_survivors.txt \
+            --m ${{ matrix.m }} > inputs/ROW_THRESHOLD_REPORT.json
           python3 - <<'PY'
           import json
           from pathlib import Path
@@ -50,8 +57,10 @@ jobs:
           assert len(rows)==n==${{ matrix.expected_demands }}
           Path('inputs/demands.json').write_text(json.dumps(rows,separators=(',',':'))+'\n')
           rr=json.load(open('inputs/ROWS_REPORT.json'))
-          assert rr['survivors']==${{ matrix.expected_rows }}
-          print('regenerated demand/row frontier',n,rr['survivors'])
+          tr=json.load(open('inputs/ROW_THRESHOLD_REPORT.json'))
+          assert rr['survivors']==${{ matrix.expected_raw_rows }}
+          assert tr['counts']['survivors']==${{ matrix.expected_threshold_rows }}
+          print('regenerated audited frontier',n,rr['survivors'],'->',tr['counts']['survivors'])
           PY
       - name: Run exact two-rectangle Hall core
         id: hall
@@ -75,10 +84,11 @@ jobs:
           if not p.exists():
               raise SystemExit('Hall-core report missing')
           r=json.load(open(p))
-          assert r['hard_rows']==${{ matrix.expected_hard }}
+          assert r['hard_rows']==${{ matrix.expected_hard }}, r['hard_rows']
           out={
-              'schema':'general-rx-hall-n30-hall-core-falsification-v1',
+              'schema':'general-rx-hall-n30-hall-core-falsification-v2',
               'm':${{ matrix.m }},'t':${{ matrix.t }},
+              'threshold_frontier_rows':${{ matrix.expected_threshold_rows }},
               'hard_rows':r['hard_rows'],
               'exact_integer_farkas_rejections':r['exact_integer_farkas_rejections'],
               'unresolved_count':len(r['unresolved']),
@@ -91,10 +101,31 @@ jobs:
           pathlib.Path('out/CLASSIFICATION.json').write_text(json.dumps(out,indent=2,sort_keys=True)+'\n')
           print(json.dumps(out,indent=2,sort_keys=True))
           PY
+      - name: Independently verify exact certificates
+        if: steps.hall.outcome == 'success'
+        run: |
+          set -euo pipefail
+          D=project/research/general_n/2026-09-09-rx-hall-v1
+          python3 -I -B "$D/rx_hall_t3_hall_core_verify.py" \
+            --demands-json inputs/demands.json \
+            --rows inputs/row_survivors.txt \
+            --certificates out/hall_core_certificates.json.gz \
+            --a 13 --b 16 --dmax 11 --t ${{ matrix.t }} \
+            > out/independent_check.json
+          cat out/independent_check.json
+          python3 - <<'PY'
+          import json
+          r=json.load(open('out/independent_check.json'))
+          assert r['status']=='PASS'
+          assert r['records_checked']==${{ matrix.expected_hard }}
+          assert r['standard_library_only'] is True
+          assert r['imports_generator'] is False
+          assert r['imports_scipy'] is False
+          PY
       - uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02
         if: always()
         with:
-          name: n30-hall-core-m${{ matrix.m }}
+          name: n30-hall-core-v2-m${{ matrix.m }}
           path: out/
           if-no-files-found: error
           retention-days: 30
