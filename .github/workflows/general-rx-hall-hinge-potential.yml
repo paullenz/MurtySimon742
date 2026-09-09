@@ -1,0 +1,56 @@
+name: General RX-Hall monotone hinge potential scan
+
+on:
+  workflow_dispatch:
+  push:
+    paths:
+      - 'project/research/general_n/2026-09-09-rx-hall-v1/hinge_potential_scan.py'
+      - '.github/workflows/general-rx-hall-hinge-potential.yml'
+
+permissions:
+  contents: write
+
+jobs:
+  scan:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 25
+    steps:
+      - uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262
+        with:
+          fetch-depth: 0
+      - name: Pin solver
+        run: |
+          python3 -m venv .venv
+          .venv/bin/python -m pip install --disable-pip-version-check --only-binary=:all: scipy==1.17.0
+      - name: Search monotone hinge cones
+        run: |
+          set -euo pipefail
+          R=project/research/general_n/2026-09-09-rx-hall-v1
+          mkdir -p out
+          .venv/bin/python -I -B "$R/hinge_potential_scan.py" \
+            --n30-json "$R/checkpoints/N30_BC_UPPER_CUTGEN_RUN_34348486247.json" \
+            --n29-json "$R/checkpoints/N29_BOUNDARY_SPECIALISATION_RUN_34364666552.json" \
+            --output out/HINGE.json
+      - uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02
+        with:
+          name: pairwise-monotone-hinge-potential
+          path: out/HINGE.json
+          if-no-files-found: error
+          retention-days: 30
+      - name: Commit durable checkpoint
+        run: |
+          set -euo pipefail
+          R=project/research/general_n/2026-09-09-rx-hall-v1/checkpoints
+          P="$R/HINGE_POTENTIAL_RUN_${GITHUB_RUN_ID}.json"
+          cp out/HINGE.json "$P"
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add "$P"
+          git commit -m "Preserve hinge potential run ${GITHUB_RUN_ID}"
+          git restore . || true
+          for attempt in 1 2 3 4 5; do
+            if git push origin HEAD:main; then exit 0; fi
+            git pull --rebase --autostash origin main
+            sleep $((attempt*2))
+          done
+          exit 1
