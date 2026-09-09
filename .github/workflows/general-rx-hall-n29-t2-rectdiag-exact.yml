@@ -1,0 +1,59 @@
+name: General RX-Hall n29 t2 rectdiag exactification
+
+on:
+  workflow_dispatch:
+  push:
+    paths:
+      - '.github/workflows/general-rx-hall-n29-t2-rectdiag-exact.yml'
+      - 'project/research/general_n/2026-09-09-rx-hall-v1/n29_t2_rectdiag_exactify.py'
+      - 'project/research/general_n/2026-09-09-rx-hall-v1/n29_t2_rectdiag_verify_exact.py'
+
+permissions:
+  contents: write
+
+jobs:
+  exact:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 20
+    steps:
+      - uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262
+        with:
+          fetch-depth: 0
+      - run: |
+          python3 -m venv .venv
+          .venv/bin/python -m pip install --disable-pip-version-check --only-binary=:all: scipy==1.17.0
+      - name: Exactify fixed 10 rectangle plus Jb support
+        run: |
+          set -euo pipefail
+          R=project/research/general_n/2026-09-09-rx-hall-v1
+          B="$R/checkpoints/N29_BOUNDARY_SPECIALISATION_RUN_34364666552.json"
+          S="$R/checkpoints/N29_T2_RECTDIAG_SPARSE_RUN_34418936688.json"
+          mkdir -p out
+          .venv/bin/python -I -B "$R/n29_t2_rectdiag_exactify.py" \
+            --boundary-json "$B" --support-json "$S" --output out/EXACT.json
+          .venv/bin/python -I -B "$R/n29_t2_rectdiag_verify_exact.py" \
+            --boundary-json "$B" --exact-json out/EXACT.json --output out/REPLAY.json
+      - uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02
+        with:
+          name: n29-t2-rectdiag-exact
+          path: out/*.json
+          if-no-files-found: error
+          retention-days: 30
+      - name: Commit exact checkpoint and replay
+        run: |
+          set -euo pipefail
+          R=project/research/general_n/2026-09-09-rx-hall-v1/checkpoints
+          cp out/EXACT.json "$R/N29_T2_RECTDIAG_EXACT_RUN_${GITHUB_RUN_ID}.json"
+          cp out/REPLAY.json "$R/N29_T2_RECTDIAG_EXACT_REPLAY_RUN_${GITHUB_RUN_ID}.json"
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add "$R/N29_T2_RECTDIAG_EXACT_RUN_${GITHUB_RUN_ID}.json" "$R/N29_T2_RECTDIAG_EXACT_REPLAY_RUN_${GITHUB_RUN_ID}.json"
+          git commit -m "Preserve exact n29 t2 rectdiag certificate ${GITHUB_RUN_ID}"
+          git restore . || true
+          for a in 1 2 3 4 5; do
+            if git push origin HEAD:main; then exit 0; fi
+            git reset --hard HEAD
+            git pull --rebase origin main
+            sleep $((a*2))
+          done
+          exit 1
