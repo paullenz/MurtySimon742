@@ -1,0 +1,34 @@
+name: General RX-Hall n30 greedy shared support prune
+
+on:
+  workflow_dispatch:
+  push:
+    paths:
+      - 'project/research/general_n/2026-09-09-rx-hall-v1/shared_greedy_prune.py'
+      - '.github/workflows/general-rx-hall-n30-shared-greedy-prune.yml'
+
+jobs:
+  prune:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 20
+    steps:
+      - uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262
+      - name: Pin solver
+        run: |
+          python3 -m venv .venv
+          .venv/bin/python -m pip install --disable-pip-version-check --only-binary=:all: scipy==1.17.0
+      - name: Run greedy prune
+        run: |
+          set -euo pipefail
+          R=project/research/general_n/2026-09-09-rx-hall-v1
+          mkdir -p out
+          .venv/bin/python -I -B "$R/shared_greedy_prune.py" \
+            --bc-json "$R/checkpoints/N30_BC_UPPER_CUTGEN_RUN_34348486247.json" \
+            --shared-json "$R/checkpoints/N30_SHARED_SPARSE_RUN_34359336581.json" \
+            --a 13 --b 16 --dmax 11 --output out/SHARED_GREEDY_PRUNE.json
+      - uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02
+        with:
+          name: n30-shared-greedy-prune
+          path: out/SHARED_GREEDY_PRUNE.json
+          if-no-files-found: error
+          retention-days: 30
