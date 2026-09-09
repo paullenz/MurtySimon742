@@ -1,0 +1,17 @@
+# Review-ready proof index
+Updated 9 September 2026. This index identifies the canonical reviewer-facing paper for every current theorem-level candidate claim in the top-level project status. Historical failed or superseded development checkpoints remain preserved but are not promoted to separate theorem papers.
+| Scope | Claim | Reviewer manuscript | Verification companion | Status |
+|---|---|---|---|---|
+| n=25 | `e(G) <= 156`, equality `K(12,13)` | [PDF](n25-reviewer-v1/N25_Reviewer_Manuscript_v1.pdf) | package audit material in [n25 reviewer release](n25-reviewer-v1/README.md) | independent review open |
+| n=28 | `e(G) <= 196`, equality `K(14,14)` | [PDF](n28-reviewer-v1/N28_Reviewer_Manuscript_v1.pdf) | [PDF](n28-reviewer-v1/N28_Verification_Companion_v1.pdf) | independent review open |
+| n27 | `e(G) <= 182, with equality exactly K(13,14)` | [PDF](n27-reviewer-v1/N27_Reviewer_Manuscript_v1.pdf) | [PDF](n27-reviewer-v1/N27_Verification_Companion_v1.pdf) | complete candidate; independent mathematical and computational review OPEN |
+| n29 | `e(G) <= 210, with equality exactly K(14,15)` | [PDF](n29-reviewer-v1/N29_Reviewer_Manuscript_v1.pdf) | [PDF](n29-reviewer-v1/N29_Verification_Companion_v1.pdf) | complete candidate; independent mathematical review OPEN |
+| n30 | `e(G) <= 225, with equality exactly K(15,15)` | [PDF](n30-reviewer-v1/N30_Reviewer_Manuscript_v1.pdf) | [PDF](n30-reviewer-v1/N30_Verification_Companion_v1.pdf) | complete candidate; independent mathematical review OPEN |
+| general-293-500 | `n >= 6 and Delta(G) >= (293/500)n imply e(G) < floor(n^2/4)` | [PDF](general-293-500-reviewer-v1/General_293_500_Reviewer_Manuscript_v1.pdf) | [PDF](general-293-500-reviewer-v1/General_293_500_Verification_Companion_v1.pdf) | complete candidate hand argument; independent review and novelty assessment OPEN |
+| general-13-22 | `n >= 6 and Delta(G) >= (13/22)n imply e(G) < floor(n^2/4)` | [PDF](general-13-22-reviewer-v1/General_13_22_Reviewer_Manuscript_v1.pdf) | [PDF](general-13-22-reviewer-v1/General_13_22_Verification_Companion_v1.pdf) | candidate hand proof; independent mathematical review OPEN |
+
+## Scope rule
+
+This index covers the project's current **theorem-level candidate claims**: the fixed-order candidates at n=25,27,28,29,30 and the two retained general structural theorems (13/22 and 293/500). Earlier residual-h-index, v9/v10/v11 and other superseded research checkpoints remain available in their original directories as development history and supporting lemmas; they are not separately advertised as current headline theorems. The ongoing RX-Hall/R+Z work is research in progress and is not yet a theorem paper.
+
+No item in this index is represented as externally accepted. Same-assistant independent implementations are not external independent verification.

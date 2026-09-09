@@ -1,0 +1,41 @@
+{
+  "built": "9 September 2026",
+  "canonical_proof": "project/reviews/n30/2026-09-09-candidate-v1/PROOF.md",
+  "claim": "e(G) <= 225, with equality exactly K(15,15)",
+  "companion_sources": [
+    "project/reviews/n30/2026-09-09-candidate-v1/README.md",
+    "project/reviews/n30/2026-09-09-candidate-v1/ASSEMBLY_AUDIT.md"
+  ],
+  "editorial_only": true,
+  "external_review_complete": false,
+  "files": [
+    {
+      "bytes": 13980,
+      "path": "releases/n30-reviewer-v1/N30_Reviewer_Manuscript_v1.md",
+      "sha256": "c57a4c25aec5828317a7fd8f81f95ae0f2f9cfa2ce2868ca686fbfb515ac224d"
+    },
+    {
+      "bytes": 42021,
+      "path": "releases/n30-reviewer-v1/N30_Reviewer_Manuscript_v1.pdf",
+      "sha256": "d164074abd36531499aa98b4ed04ecdb7e68af8c6fd973b7f2ea8bc31dc2ce70"
+    },
+    {
+      "bytes": 14763,
+      "path": "releases/n30-reviewer-v1/N30_Verification_Companion_v1.md",
+      "sha256": "7007c21f5bae0228ad323c8e93c99df33a307ec15069919c936046fd19e535a9"
+    },
+    {
+      "bytes": 48238,
+      "path": "releases/n30-reviewer-v1/N30_Verification_Companion_v1.pdf",
+      "sha256": "bf27c7b4c3ce0af5c48ba8cb12e5b3c74f038c92a70ba8648aeef0f3b14aa8c5"
+    },
+    {
+      "bytes": 804,
+      "path": "releases/n30-reviewer-v1/README.md",
+      "sha256": "0de38296e93d55f29eb362b5e53ee7b5f2c73790260196663d452b25d9e97de1"
+    }
+  ],
+  "key": "n30",
+  "schema": "murty-simon-reviewer-package-v1",
+  "status": "complete candidate; independent mathematical review OPEN"
+}

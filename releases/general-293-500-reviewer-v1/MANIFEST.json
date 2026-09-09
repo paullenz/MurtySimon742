@@ -1,0 +1,41 @@
+{
+  "built": "9 September 2026",
+  "canonical_proof": "project/research/general_n/2026-09-08-profile-integral-v1/PROOF.md",
+  "claim": "n >= 6 and Delta(G) >= (293/500)n imply e(G) < floor(n^2/4)",
+  "companion_sources": [
+    "project/research/general_n/2026-09-08-profile-integral-v1/README.md",
+    "project/research/general_n/2026-09-08-profile-integral-v1/AUDIT.md"
+  ],
+  "editorial_only": true,
+  "external_review_complete": false,
+  "files": [
+    {
+      "bytes": 16612,
+      "path": "releases/general-293-500-reviewer-v1/General_293_500_Reviewer_Manuscript_v1.md",
+      "sha256": "ca24125a595045b00365ef64e9b01aac6c4b4d2602496adae9307601b414e8ba"
+    },
+    {
+      "bytes": 48438,
+      "path": "releases/general-293-500-reviewer-v1/General_293_500_Reviewer_Manuscript_v1.pdf",
+      "sha256": "4d1033c06debd11f472a5d906bd9435023c0774f1338cd20017e80d1f71c8f37"
+    },
+    {
+      "bytes": 9271,
+      "path": "releases/general-293-500-reviewer-v1/General_293_500_Verification_Companion_v1.md",
+      "sha256": "11f05003d84ef411307537a286f77d52b9ac82686c94c12e50e4d6c96006fdb4"
+    },
+    {
+      "bytes": 38633,
+      "path": "releases/general-293-500-reviewer-v1/General_293_500_Verification_Companion_v1.pdf",
+      "sha256": "0dd103926a9338db149d6100e39c1f878c813538d07d5fb1bb4efb089ee25c6f"
+    },
+    {
+      "bytes": 922,
+      "path": "releases/general-293-500-reviewer-v1/README.md",
+      "sha256": "229f4f99af8542f845578c789916eafe63e1085af4f23dbdc30d96a115ef4fba"
+    }
+  ],
+  "key": "general-293-500",
+  "schema": "murty-simon-reviewer-package-v1",
+  "status": "complete candidate hand argument; independent review and novelty assessment OPEN"
+}

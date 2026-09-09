@@ -1,0 +1,44 @@
+{
+  "built": "9 September 2026",
+  "canonical_proof": "project/research/general_n/2026-09-08-layer-sum-v1/PROOF.md",
+  "claim": "n >= 6 and Delta(G) >= (13/22)n imply e(G) < floor(n^2/4)",
+  "companion_sources": [
+    "project/research/general_n/2026-09-08-layer-sum-v1/README.md",
+    "project/research/general_n/2026-09-08-layer-sum-v1/CONSTRUCTION_AUDIT_2026-09-08.md",
+    "project/research/general_n/2026-09-08-layer-sum-v1/LAYER_AGGREGATION_AUDIT_2026-09-08.md",
+    "project/research/general_n/2026-09-08-layer-sum-v1/RED_TEAM_2026-09-08.md",
+    "project/research/general_n/2026-09-08-layer-sum-v1/RECONCILIATION.md"
+  ],
+  "editorial_only": true,
+  "external_review_complete": false,
+  "files": [
+    {
+      "bytes": 14517,
+      "path": "releases/general-13-22-reviewer-v1/General_13_22_Reviewer_Manuscript_v1.md",
+      "sha256": "1b199324732c4845b406becbe73d39a0b80ee7c719f03b9ef13536291203b3c8"
+    },
+    {
+      "bytes": 43912,
+      "path": "releases/general-13-22-reviewer-v1/General_13_22_Reviewer_Manuscript_v1.pdf",
+      "sha256": "b2fb522e3e39b2951b1a4f5562ade266ade87201f15b34b4d88598e74846a1ce"
+    },
+    {
+      "bytes": 31857,
+      "path": "releases/general-13-22-reviewer-v1/General_13_22_Verification_Companion_v1.md",
+      "sha256": "e91b80499fad014f0fc3f10aef1f9b79036d3c129e32a65d6282e35c425afc68"
+    },
+    {
+      "bytes": 75966,
+      "path": "releases/general-13-22-reviewer-v1/General_13_22_Verification_Companion_v1.pdf",
+      "sha256": "6294ec105dc42949ace3717d15dd448b97a75536db109d14df15dfe0d1c4535b"
+    },
+    {
+      "bytes": 870,
+      "path": "releases/general-13-22-reviewer-v1/README.md",
+      "sha256": "c16324504a425ba5268bd8171e2b13d51e1331ff858cc45d8826d1464c4b80c5"
+    }
+  ],
+  "key": "general-13-22",
+  "schema": "murty-simon-reviewer-package-v1",
+  "status": "candidate hand proof; independent mathematical review OPEN"
+}

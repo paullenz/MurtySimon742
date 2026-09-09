@@ -1,0 +1,17 @@
+{
+  "all_current_theorem_level_claims_have_reviewer_papers": true,
+  "built": "9 September 2026",
+  "existing_review_ready": [
+    "n25",
+    "n28"
+  ],
+  "external_review_complete": false,
+  "packages": [
+    "n27",
+    "n29",
+    "n30",
+    "general-293-500",
+    "general-13-22"
+  ],
+  "schema": "review-ready-build-report-v1"
+}

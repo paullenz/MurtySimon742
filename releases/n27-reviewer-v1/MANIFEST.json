@@ -1,0 +1,41 @@
+{
+  "built": "9 September 2026",
+  "canonical_proof": "project/reviews/n27/2026-09-07-candidate-v1/PROOF.md",
+  "claim": "e(G) <= 182, with equality exactly K(13,14)",
+  "companion_sources": [
+    "releases/n27-candidate-v1/README.md",
+    "project/reviews/n27/2026-09-08-redteam-v1/REPORT.md"
+  ],
+  "editorial_only": true,
+  "external_review_complete": false,
+  "files": [
+    {
+      "bytes": 25416,
+      "path": "releases/n27-reviewer-v1/N27_Reviewer_Manuscript_v1.md",
+      "sha256": "314c73a29cfae3ab34ba20b9c0e1018144425a4f30dcdbc4ec84a66b2c7bccc7"
+    },
+    {
+      "bytes": 67748,
+      "path": "releases/n27-reviewer-v1/N27_Reviewer_Manuscript_v1.pdf",
+      "sha256": "0663c1c029690b9226d9091a352c08a66ace20d476db52b31786859b67230e67"
+    },
+    {
+      "bytes": 21232,
+      "path": "releases/n27-reviewer-v1/N27_Verification_Companion_v1.md",
+      "sha256": "8bf886a13f5e17edd71f7515d42b07adc75bdacbe4f25d2b749cdf45fc07748a"
+    },
+    {
+      "bytes": 59968,
+      "path": "releases/n27-reviewer-v1/N27_Verification_Companion_v1.pdf",
+      "sha256": "e45c3d69540411eaa228fe1e160784272e22c7dadbb0492e43f0679f92a2a0e8"
+    },
+    {
+      "bytes": 822,
+      "path": "releases/n27-reviewer-v1/README.md",
+      "sha256": "f7c34fe3e0432a80f2c128700dbc10f089cd359bf66edce89c80f63d9715edf9"
+    }
+  ],
+  "key": "n27",
+  "schema": "murty-simon-reviewer-package-v1",
+  "status": "complete candidate; independent mathematical and computational review OPEN"
+}
