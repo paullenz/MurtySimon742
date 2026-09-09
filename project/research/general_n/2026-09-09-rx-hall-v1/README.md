@@ -225,14 +225,58 @@ This is currently the clearest general-N signal in the RX-Hall programme:
 
 The next general theorem should therefore not assume a fixed literal BC dictionary. It should seek a symbolic rule generating the BC envelope from `(a,b,dmax,t)` and/or the demand/source distributions.
 
-## 10. Highest-priority next steps
+## 10. Current analytic frontier
 
-1. test how much of n=29 can be handled with the **three exact n=30 SH shapes only**, allowing the full canonical BC family; this measures whether SH dependence also changes with surplus `t` or can collapse to a universal core;
-2. catalog the breakpoints/slopes of exact n=29 and n=30 BC staircases and seek a low-dimensional parameterized rule in the native coordinates `(R+s, -(R+x))`;
-3. test simple affine/hinge/majorization-generated BC template families rather than adding new order-specific staircase cuts;
-4. if a compact parameterized BC rule emerges, test it across n=29 and n=30 with order-dependent weights, then scan the unresolved `Delta/n < 293/500` band;
-5. use n=31 primarily as a falsification laboratory only after exploiting the n29/n30 BC parameterization clue;
-6. strengthen the computational 14-support lower-bound side only if useful for publication; it is not the highest-value route toward a general theorem;
-7. continue external review of the universal graph-to-demand bridge, still the principal mathematical trust boundary.
+Subsequent work has compressed the finite potential mechanism substantially beyond the staircase-dictionary comparison.
 
-No unrestricted Murty-Simon theorem, external validation, novelty determination, complete order above 30, or full formal verification is claimed here.
+For the complete regenerated n=29 `t=3` frontier (94 hard profiles), the full canonical BC family needs **no SH correction**. The resulting BC potential was first exactified as a pure staircase surface and then replaced by the analytic min-hinge family
+
+```text
+H_{D,V}(d,v)=min((d-D)_+,(v-V)_+).
+```
+
+A single exact rational potential using only nine hinges works across all 94 profiles. The exact support is
+
+```text
+(0,0), (0,2),
+(1,7),(1,8),(1,9),(1,10),(1,11),
+(2,0),(4,0).
+```
+
+See [`MIN_HINGE_ANALYTIC_REDUCTION.md`](MIN_HINGE_ANALYTIC_REDUCTION.md) and
+[`checkpoints/N29_T3_MIN_HINGE_EXACT_RUN_34384549422.json`](checkpoints/N29_T3_MIN_HINGE_EXACT_RUN_34384549422.json).
+The latter checks 30,646 inequalities by integer arithmetic, with no row or bound violations and worst profile margin nearly twice the required margin.
+
+The hinge has the exact discrete Hall-chain identity
+
+```text
+H_{D,V}(d,v)=sum_{k>=1} 1[d>=D+k and v>=V+k],
+```
+
+so this analytic form is a weighted chain of nested Hall rectangles rather than an unrelated fitted nonlinearity.
+
+On the difficult n=29 `t=2` post-specialization core, all 75 canonical BC staircases solve 37 of the 38 profiles individually without SH; demand 45 is the unique BC-only obstruction. With all BC shapes available, a common hard38 potential needs only three SH shapes in the current zero-gap support-minimization experiment. Those minimum-support statements are computational/MILP evidence; positive common potentials are exactified separately before being used as proof evidence.
+
+The nine exact `t=3` hinge locations admit the parameter-only description
+
+```text
+(0,0),
+(0,t-1),
+(t-2,V) for V=a-t-2,...,a-1,
+(t-1,0),
+(t+1,0),
+```
+
+specialized at `(a,t)=(12,3)` (with duplicates/nonnegative boundary handling for small `t`). This is now the principal falsification target, not a theorem.
+
+## 11. Highest-priority next steps
+
+1. test the parameterized min-hinge template on the n=29 `t=2` hard38 core with and without the full SH correction dictionary;
+2. if it survives, test the same template on all 902 `t=2` profiles and exactify any positive result;
+3. isolate and symbolically explain the demand-45 correction rather than increasing the feature dictionary indiscriminately;
+4. test the resulting parameter rule on the n=30 `t=1` laboratory and then on new synthetic/fixed-order falsification domains;
+5. derive closed source/label envelopes for the min-hinges, exploiting the cancellation in `min(u,v) <= (u+v)/2`;
+6. combine the analytic potential with charging/demand bounds to seek a maximum-degree theorem below `7/12`;
+7. continue external review of the universal graph-to-demand/RX-Hall bridge, which remains the main mathematical trust boundary.
+
+No complete order above 30, unrestricted solution, novelty determination, full formal verification or external endorsement is claimed here.
