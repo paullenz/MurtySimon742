@@ -1,0 +1,161 @@
+name: General RX-Hall t3 exact ablation
+
+on:
+  workflow_dispatch:
+  push:
+    paths:
+      - 'project/research/general_n/2026-09-09-rx-hall-v1/rx_hall_ablation_exact.py'
+      - 'project/research/general_n/2026-09-09-rx-hall-v1/rx_hall_exact.py'
+      - 'project/research/general_n/2026-09-09-rx-hall-v1/rx_hall_scan.py'
+      - 'project/reviews/n29/2026-09-08-redteam-restart-v1/minimal_prepare.py'
+      - 'project/reviews/n29/2026-09-08-redteam-restart-v1/minimal_rows.cpp'
+      - '.github/workflows/general-rx-hall-t3-ablation.yml'
+
+permissions:
+  contents: read
+
+jobs:
+  prepare:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262
+      - name: Pin frontier solver dependency
+        run: |
+          set -euo pipefail
+          python3 -m venv .venv
+          .venv/bin/python -m pip install --disable-pip-version-check --only-binary=:all: scipy==1.17.0
+      - name: Regenerate t3 frontier from committed source
+        run: |
+          set -euo pipefail
+          D=project/reviews/n29/2026-09-08-redteam-restart-v1
+          g++ -O3 -std=c++17 "$D/minimal_rows.cpp" -o minimal_rows
+          mkdir -p inputs/t3
+          .venv/bin/python -I -B "$D/minimal_prepare.py" --t 3 --output inputs/t3
+          ./minimal_rows inputs/t3/demands.txt inputs/t3/row_survivors.txt inputs/t3/row_bands.txt 3 > inputs/t3/MINIMAL_ROWS_REPORT.json
+          python3 - <<'PY'
+          import json
+          assert json.load(open('inputs/t3/MINIMAL_PREPARE_REPORT.json'))['retained_demands']==72
+          assert json.load(open('inputs/t3/MINIMAL_ROWS_REPORT.json'))['survivors']==126
+          print('t3 frontier regenerated: 72 demands, 126 residual rows')
+          PY
+      - uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02
+        with:
+          name: rx-hall-t3-ablation-inputs
+          path: inputs/t3/
+          if-no-files-found: error
+          retention-days: 30
+
+  ablation:
+    needs: prepare
+    runs-on: ubuntu-24.04
+    timeout-minutes: 15
+    strategy:
+      fail-fast: false
+      matrix:
+        variant: [stripped, no-rx2]
+    steps:
+      - uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262
+      - uses: actions/download-artifact@d3f86a106a0bac45b974a628896c90dbdf5c8093
+        with:
+          name: rx-hall-t3-ablation-inputs
+          path: inputs/t3
+      - name: Pin certificate proposer
+        run: |
+          set -euo pipefail
+          python3 -m venv .venv
+          .venv/bin/python -m pip install --disable-pip-version-check --only-binary=:all: scipy==1.17.0
+      - name: Run exact ablation
+        run: |
+          set -euo pipefail
+          D=project/research/general_n/2026-09-09-rx-hall-v1
+          mkdir -p out
+          .venv/bin/python -I -B "$D/rx_hall_ablation_exact.py" \
+            --demands-json inputs/t3/demands.json \
+            --rows inputs/t3/row_survivors.txt \
+            --a 12 --b 16 --dmax 10 --t 3 \
+            --variant '${{ matrix.variant }}' \
+            --output out/${{ matrix.variant }}.json.gz
+          python3 - <<'PY'
+          import json
+          v='${{ matrix.variant }}'
+          r=json.load(open(f'out/{v}.json.gz.report.json'))
+          assert r['hard_rows']==94
+          assert r['deletes_residual_budget'] is True
+          assert r['deletes_source_label_caps'] is True
+          assert r['retains_rx1'] is True and r['retains_rx3'] is True
+          assert r['retains_source_supplement_transport'] is True
+          assert r['uses_unordered_pair_aggregate_capacity'] is False
+          assert r['uses_cumulative_tail_variables'] is False
+          assert not r['unresolved']
+          if v=='stripped':
+              assert r['retains_rx2'] is True
+              assert r['exact_integer_farkas_rejections']==94
+              assert not r['numerical_survivors']
+          else:
+              assert r['retains_rx2'] is False
+              assert r['exact_integer_farkas_rejections']==93
+              assert len(r['numerical_survivors'])==1
+              s=r['numerical_survivors'][0]
+              assert s['hard_position']==0
+              assert s['s']==[1,3,3,3,3,3,4,4,4,4,4,4]
+              assert s['rho']==[1,1,1,1,1,1,1,1,1,3,3,3,4,4,4,4]
+          print('ablation expectation verified')
+          PY
+      - uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02
+        with:
+          name: rx-hall-t3-ablation-${{ matrix.variant }}
+          path: out/
+          if-no-files-found: error
+          retention-days: 30
+
+  aggregate:
+    needs: ablation
+    runs-on: ubuntu-24.04
+    steps:
+      - uses: actions/download-artifact@d3f86a106a0bac45b974a628896c90dbdf5c8093
+        with:
+          pattern: 'rx-hall-t3-ablation-*'
+          path: reports
+      - name: Aggregate t3 ablation
+        run: |
+          set -euo pipefail
+          python3 - <<'PY'
+          import json,pathlib
+          docs={}
+          for p in pathlib.Path('reports').rglob('*.report.json'):
+              r=json.load(open(p)); docs[r['variant']]=r
+          assert set(docs)=={'stripped','no-rx2'}
+          a=docs['stripped']; b=docs['no-rx2']
+          assert a['exact_integer_farkas_rejections']==94 and not a['numerical_survivors'] and not a['unresolved']
+          assert b['exact_integer_farkas_rejections']==93 and len(b['numerical_survivors'])==1 and not b['unresolved']
+          out={
+              'schema':'general-rx-hall-t3-ablation-aggregate-v1',
+              'status':'PASS',
+              'hard_rows':94,
+              'stripped':{
+                  'deletes_residual_budget':True,
+                  'deletes_source_label_caps':True,
+                  'retains_rx1_rx2_rx3_transport':True,
+                  'exact_integer_farkas_rejections':94,
+                  'survivors':0
+              },
+              'no_rx2':{
+                  'deletes_residual_budget':True,
+                  'deletes_source_label_caps':True,
+                  'retains_rx1_rx3_transport':True,
+                  'exact_integer_farkas_rejections':93,
+                  'numerical_survivors':b['numerical_survivors']
+              },
+              'interpretation':'For this t=3 frontier, the residual-column budget and source-label cap inequalities are unnecessary. RX1+RX3+source/supplement transport already exclude 93/94 rows exactly; RX2 is needed for the retained exceptional relaxation row.',
+              'unrestricted_theorem':False
+          }
+          pathlib.Path('RX_HALL_T3_ABLATION_REPORT.json').write_text(json.dumps(out,indent=2,sort_keys=True)+'\n')
+          print(json.dumps(out,indent=2,sort_keys=True))
+          PY
+      - uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02
+        with:
+          name: rx-hall-t3-ablation-aggregate
+          path: RX_HALL_T3_ABLATION_REPORT.json
+          if-no-files-found: error
+          retention-days: 30
