@@ -1,14 +1,16 @@
 #!/usr/bin/env python3
-"""Falsify the parameterized BC min-hinge template on n29 t=2/t=3 frontiers.
+"""Falsify BC min-hinge families on n29 t=2/t=3 frontiers.
 
 BC coordinates:
   label  : d=R+s,         v=b-(R+x)
   source : d=rho+q-1,     v=b-(q+p)
 
-Template (duplicates removed):
-  (0,0), (0,t-1),
-  (max(0,t-2),V) for V=max(0,a-t-2),...,a-1,
-  (max(0,t-1),0), (t+1,0).
+Two hinge modes are supported:
+  template : parameter-only candidate
+             (0,0), (0,t-1),
+             (max(0,t-2),V) for V=max(0,a-t-2),...,a-1,
+             (max(0,t-1),0), (t+1,0), duplicates removed.
+  full     : every H_{D,V} on 0<=D<=dmax, 0<=V<=b.
 
 Each BC feature is H_{D,V}(d,v)=min((d-D)_+,(v-V)_+).
 Optional SH correction uses the canonical staircase dictionary in coordinates
@@ -40,6 +42,11 @@ def template(a,t):
     for V in range(max(0,a-t-2),a): pts.add((D,V))
     return sorted(pts)
 
+def hinge_family(a,b,dmax,t,mode):
+    if mode=='template': return template(a,t)
+    if mode=='full': return [(D,V) for D in range(dmax+1) for V in range(b+1)]
+    raise ValueError(mode)
+
 class LP:
     def __init__(self):
         self.names=[];self.idx={};self.rows=[];self.rhs=[];self.c=[];self.bounds=[]
@@ -52,8 +59,8 @@ class LP:
             for j,v in r.items(): A[i,j]=v
         return linprog(np.array(self.c),A_ub=A.tocsr(),b_ub=np.array(self.rhs),bounds=self.bounds,method='highs')
 
-def build(P,a,b,dmax,t,shapes):
-    H=template(a,t)
+def build(P,a,b,dmax,t,shapes,features=None):
+    H=list(features if features is not None else template(a,t))
     M=LP()
     hw=[M.var(('H',D,V),(0,None),1.0) for D,V in H]
     sw=[M.var(('SH',i),(0,None),1.0) for i in range(len(shapes))]
@@ -113,6 +120,7 @@ def main():
     ap=argparse.ArgumentParser()
     ap.add_argument('--mode',choices=['hard38','demand45','t2','t3'],required=True)
     ap.add_argument('--t',type=int,required=True);ap.add_argument('--a',type=int,default=12);ap.add_argument('--b',type=int,default=16);ap.add_argument('--dmax',type=int,default=10)
+    ap.add_argument('--hinge-mode',choices=['template','full'],default='template')
     ap.add_argument('--sh-mode',choices=['none','full'],default='none')
     ap.add_argument('--dictionary-json',type=Path,required=True)
     ap.add_argument('--boundary-json',type=Path);ap.add_argument('--demands-json',type=Path);ap.add_argument('--rows',type=Path)
@@ -120,11 +128,11 @@ def main():
     if z.mode in ('hard38','demand45') and not z.boundary_json:raise SystemExit('--boundary-json required')
     if z.mode in ('t2','t3') and (not z.demands_json or not z.rows):raise SystemExit('--demands-json/--rows required')
     D=json.loads(z.dictionary_json.read_text());sh=[] if z.sh_mode=='none' else [tup(x['generators']) for x in D['SH']]
-    P=load_profiles(z);T=template(z.a,z.t)
+    P=load_profiles(z);H=hinge_family(z.a,z.b,z.dmax,z.t,z.hinge_mode)
     known=[(0,0),(0,2),(1,7),(1,8),(1,9),(1,10),(1,11),(2,0),(4,0)]
-    identity_ok=(T==known) if (z.a,z.t)==(12,3) else None
-    st=time.time();M,H=build(P,z.a,z.b,z.dmax,z.t,sh);res=M.solve()
-    out={'schema':'parametric-min-hinge-template-scan-v1','mode':z.mode,'a':z.a,'b':z.b,'t':z.t,'dmax':z.dmax,'profiles':len(P),'template':H,'template_count':len(H),'known_t3_identity_ok':identity_ok,'SH_mode':z.sh_mode,'SH_count':len(sh),'success':bool(res.success),'status':int(res.status),'message':res.message,'objective':float(res.fun) if res.success else None,'rows':len(M.rows),'variables':len(M.names),'seconds':time.time()-st,'floating_point_reconnaissance_only':True}
+    identity_ok=(H==known) if (z.a,z.t,z.hinge_mode)==(12,3,'template') else None
+    st=time.time();M,H=build(P,z.a,z.b,z.dmax,z.t,sh,H);res=M.solve()
+    out={'schema':'min-hinge-family-scan-v2','mode':z.mode,'a':z.a,'b':z.b,'t':z.t,'dmax':z.dmax,'profiles':len(P),'hinge_mode':z.hinge_mode,'hinges':H,'hinge_count':len(H),'known_t3_identity_ok':identity_ok,'SH_mode':z.sh_mode,'SH_count':len(sh),'success':bool(res.success),'status':int(res.status),'message':res.message,'objective':float(res.fun) if res.success else None,'rows':len(M.rows),'variables':len(M.names),'seconds':time.time()-st,'floating_point_reconnaissance_only':True}
     if res.success:
         ah=[]
         for D,V in H:
@@ -135,7 +143,7 @@ def main():
             w=res.x[M.idx[('SH',i)]]
             if w>1e-8:ash.append({'index':i,'weight':float(w),'generators':[list(p) for p in sh[i]]})
         out.update({'active_hinges':ah,'active_hinge_count':len(ah),'active_SH':ash,'active_SH_count':len(ash)})
-    out['interpretation']='Tests the parameter-only BC min-hinge template. Positive results are floating proposals until exactified; negative results falsify only this stated template/correction family.'
+    out['interpretation']='Tests an analytic BC min-hinge family with optional canonical SH staircases. Positive results are floating proposals until exactified; negative results falsify only the stated family.'
     z.output.parent.mkdir(parents=True,exist_ok=True);z.output.write_text(json.dumps(out,indent=2,sort_keys=True)+'\n')
-    print(json.dumps({k:v for k,v in out.items() if k not in ('active_hinges','active_SH')},indent=2,sort_keys=True))
+    print(json.dumps({k:v for k,v in out.items() if k not in ('hinges','active_hinges','active_SH')},indent=2,sort_keys=True))
 if __name__=='__main__':main()
