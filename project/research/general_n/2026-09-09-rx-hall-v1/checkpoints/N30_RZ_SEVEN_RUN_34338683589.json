@@ -1,0 +1,13 @@
+{
+  "exact_integer_farkas_rejections": 7,
+  "exact_residual_budget": true,
+  "hard_rows": 7,
+  "interpretation": "Necessary-condition relaxation; isolates whether exact residual budget plus source-label incidence closes the seven states without exact supplement transport.",
+  "removes_P": true,
+  "run_id": "34338683589",
+  "schema": "n30-rz-seven-v1",
+  "status": "PASS_ALL_REJECTED",
+  "unresolved": [],
+  "unresolved_count": 0,
+  "uses_Z_incidence": true
+}
