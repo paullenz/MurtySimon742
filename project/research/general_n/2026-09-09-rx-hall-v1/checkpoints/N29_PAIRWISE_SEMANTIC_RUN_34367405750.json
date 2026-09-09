@@ -1,0 +1,900 @@
+{
+  "integer_farkas_acceptance": true,
+  "interpretation": "Threshold rows are the original source threshold-transport inequalities in build_master, before any Hall/base rows. Certificates are recomputed and verified exactly.",
+  "profiles": 38,
+  "records": [
+    {
+      "certificate_rhs": -508,
+      "demand_id": 45,
+      "hard_position": 0,
+      "structural_equalities": {
+        "H0_incidence": -7900,
+        "R_total": 8000,
+        "q_minus_p": 9300
+      },
+      "threshold_count": 5,
+      "thresholds": [
+        {
+          "h": 2,
+          "weight": 350
+        },
+        {
+          "h": 3,
+          "weight": 350
+        },
+        {
+          "h": 4,
+          "weight": 4320
+        },
+        {
+          "h": 5,
+          "weight": 1014
+        },
+        {
+          "h": 6,
+          "weight": 667
+        }
+      ],
+      "unit_bound_rows_active": 15
+    },
+    {
+      "certificate_rhs": -928,
+      "demand_id": 68,
+      "hard_position": 1,
+      "structural_equalities": {
+        "H0_incidence": -2370,
+        "R_total": 1365,
+        "q_minus_p": 1126
+      },
+      "threshold_count": 3,
+      "thresholds": [
+        {
+          "h": 3,
+          "weight": 470
+        },
+        {
+          "h": 4,
+          "weight": 410
+        },
+        {
+          "h": 6,
+          "weight": 15
+        }
+      ],
+      "unit_bound_rows_active": 10
+    },
+    {
+      "certificate_rhs": -903,
+      "demand_id": 70,
+      "hard_position": 2,
+      "structural_equalities": {
+        "H0_incidence": -1288,
+        "R_total": 570,
+        "q_minus_p": 504
+      },
+      "threshold_count": 2,
+      "thresholds": [
+        {
+          "h": 3,
+          "weight": 292
+        },
+        {
+          "h": 4,
+          "weight": 263
+        }
+      ],
+      "unit_bound_rows_active": 7
+    },
+    {
+      "certificate_rhs": -909,
+      "demand_id": 70,
+      "hard_position": 3,
+      "structural_equalities": {
+        "H0_incidence": -3619,
+        "R_total": 1829,
+        "q_minus_p": 1630
+      },
+      "threshold_count": 2,
+      "thresholds": [
+        {
+          "h": 3,
+          "weight": 806
+        },
+        {
+          "h": 4,
+          "weight": 687
+        }
+      ],
+      "unit_bound_rows_active": 12
+    },
+    {
+      "certificate_rhs": -906,
+      "demand_id": 82,
+      "hard_position": 4,
+      "structural_equalities": {
+        "H0_incidence": -738,
+        "R_total": 417,
+        "q_minus_p": 287
+      },
+      "threshold_count": 1,
+      "thresholds": [
+        {
+          "h": 3,
+          "weight": 329
+        }
+      ],
+      "unit_bound_rows_active": 12
+    },
+    {
+      "certificate_rhs": -785,
+      "demand_id": 85,
+      "hard_position": 5,
+      "structural_equalities": {
+        "H0_incidence": -789,
+        "R_total": 449,
+        "q_minus_p": 312
+      },
+      "threshold_count": 2,
+      "thresholds": [
+        {
+          "h": 3,
+          "weight": 259
+        },
+        {
+          "h": 4,
+          "weight": 89
+        }
+      ],
+      "unit_bound_rows_active": 13
+    },
+    {
+      "certificate_rhs": -932,
+      "demand_id": 85,
+      "hard_position": 6,
+      "structural_equalities": {
+        "H0_incidence": -1525,
+        "R_total": 1188,
+        "q_minus_p": 791
+      },
+      "threshold_count": 1,
+      "thresholds": [
+        {
+          "h": 3,
+          "weight": 565
+        }
+      ],
+      "unit_bound_rows_active": 9
+    },
+    {
+      "certificate_rhs": -946,
+      "demand_id": 85,
+      "hard_position": 7,
+      "structural_equalities": {
+        "H0_incidence": -1064,
+        "R_total": 567,
+        "q_minus_p": 369
+      },
+      "threshold_count": 3,
+      "thresholds": [
+        {
+          "h": 3,
+          "weight": 367
+        },
+        {
+          "h": 4,
+          "weight": 208
+        },
+        {
+          "h": 5,
+          "weight": 75
+        }
+      ],
+      "unit_bound_rows_active": 14
+    },
+    {
+      "certificate_rhs": -744,
+      "demand_id": 92,
+      "hard_position": 8,
+      "structural_equalities": {
+        "H0_incidence": -1116,
+        "R_total": 325,
+        "q_minus_p": 321
+      },
+      "threshold_count": 2,
+      "thresholds": [
+        {
+          "h": 3,
+          "weight": 280
+        },
+        {
+          "h": 4,
+          "weight": 307
+        }
+      ],
+      "unit_bound_rows_active": 14
+    },
+    {
+      "certificate_rhs": -878,
+      "demand_id": 97,
+      "hard_position": 9,
+      "structural_equalities": {
+        "H0_incidence": -470,
+        "R_total": 133,
+        "q_minus_p": 118
+      },
+      "threshold_count": 2,
+      "thresholds": [
+        {
+          "h": 3,
+          "weight": 158
+        },
+        {
+          "h": 4,
+          "weight": 62
+        }
+      ],
+      "unit_bound_rows_active": 7
+    },
+    {
+      "certificate_rhs": -817,
+      "demand_id": 101,
+      "hard_position": 10,
+      "structural_equalities": {
+        "H0_incidence": -809,
+        "R_total": 135,
+        "q_minus_p": 162
+      },
+      "threshold_count": 2,
+      "thresholds": [
+        {
+          "h": 3,
+          "weight": 357
+        },
+        {
+          "h": 5,
+          "weight": 25
+        }
+      ],
+      "unit_bound_rows_active": 11
+    },
+    {
+      "certificate_rhs": -904,
+      "demand_id": 108,
+      "hard_position": 16,
+      "structural_equalities": {
+        "H0_incidence": -2167,
+        "R_total": 1372,
+        "q_minus_p": 1014
+      },
+      "threshold_count": 2,
+      "thresholds": [
+        {
+          "h": 3,
+          "weight": 465
+        },
+        {
+          "h": 4,
+          "weight": 441
+        }
+      ],
+      "unit_bound_rows_active": 8
+    },
+    {
+      "certificate_rhs": -854,
+      "demand_id": 112,
+      "hard_position": 21,
+      "structural_equalities": {
+        "H0_incidence": -1537,
+        "R_total": 1150,
+        "q_minus_p": 769
+      },
+      "threshold_count": 3,
+      "thresholds": [
+        {
+          "h": 3,
+          "weight": 324
+        },
+        {
+          "h": 4,
+          "weight": 232
+        },
+        {
+          "h": 5,
+          "weight": 52
+        }
+      ],
+      "unit_bound_rows_active": 14
+    },
+    {
+      "certificate_rhs": -910,
+      "demand_id": 112,
+      "hard_position": 22,
+      "structural_equalities": {
+        "H0_incidence": -1967,
+        "R_total": 1481,
+        "q_minus_p": 986
+      },
+      "threshold_count": 2,
+      "thresholds": [
+        {
+          "h": 3,
+          "weight": 418
+        },
+        {
+          "h": 4,
+          "weight": 269
+        }
+      ],
+      "unit_bound_rows_active": 10
+    },
+    {
+      "certificate_rhs": -842,
+      "demand_id": 112,
+      "hard_position": 23,
+      "structural_equalities": {
+        "H0_incidence": -27556,
+        "R_total": 14212,
+        "q_minus_p": 9182
+      },
+      "threshold_count": 1,
+      "thresholds": [
+        {
+          "h": 3,
+          "weight": 15051
+        }
+      ],
+      "unit_bound_rows_active": 12
+    },
+    {
+      "certificate_rhs": -903,
+      "demand_id": 112,
+      "hard_position": 24,
+      "structural_equalities": {
+        "H0_incidence": -459,
+        "R_total": 240,
+        "q_minus_p": 174
+      },
+      "threshold_count": 3,
+      "thresholds": [
+        {
+          "h": 3,
+          "weight": 112
+        },
+        {
+          "h": 4,
+          "weight": 98
+        },
+        {
+          "h": 5,
+          "weight": 22
+        }
+      ],
+      "unit_bound_rows_active": 13
+    },
+    {
+      "certificate_rhs": -877,
+      "demand_id": 116,
+      "hard_position": 25,
+      "structural_equalities": {
+        "H0_incidence": -1519,
+        "R_total": 511,
+        "q_minus_p": 437
+      },
+      "threshold_count": 2,
+      "thresholds": [
+        {
+          "h": 3,
+          "weight": 302
+        },
+        {
+          "h": 4,
+          "weight": 317
+        }
+      ],
+      "unit_bound_rows_active": 12
+    },
+    {
+      "certificate_rhs": -713,
+      "demand_id": 117,
+      "hard_position": 29,
+      "structural_equalities": {
+        "H0_incidence": -3324,
+        "R_total": 2369,
+        "q_minus_p": 1598
+      },
+      "threshold_count": 1,
+      "thresholds": [
+        {
+          "h": 3,
+          "weight": 1670
+        }
+      ],
+      "unit_bound_rows_active": 17
+    },
+    {
+      "certificate_rhs": -659,
+      "demand_id": 117,
+      "hard_position": 30,
+      "structural_equalities": {
+        "H0_incidence": -1259,
+        "R_total": 701,
+        "q_minus_p": 507
+      },
+      "threshold_count": 2,
+      "thresholds": [
+        {
+          "h": 3,
+          "weight": 402
+        },
+        {
+          "h": 4,
+          "weight": 194
+        }
+      ],
+      "unit_bound_rows_active": 9
+    },
+    {
+      "certificate_rhs": -946,
+      "demand_id": 117,
+      "hard_position": 31,
+      "structural_equalities": {
+        "H0_incidence": -12528,
+        "R_total": 6133,
+        "q_minus_p": 4333
+      },
+      "threshold_count": 3,
+      "thresholds": [
+        {
+          "h": 3,
+          "weight": 3786
+        },
+        {
+          "h": 4,
+          "weight": 2558
+        },
+        {
+          "h": 7,
+          "weight": 341
+        }
+      ],
+      "unit_bound_rows_active": 9
+    },
+    {
+      "certificate_rhs": -783,
+      "demand_id": 121,
+      "hard_position": 32,
+      "structural_equalities": {
+        "H0_incidence": -680,
+        "R_total": 241,
+        "q_minus_p": 214
+      },
+      "threshold_count": 2,
+      "thresholds": [
+        {
+          "h": 3,
+          "weight": 137
+        },
+        {
+          "h": 4,
+          "weight": 142
+        }
+      ],
+      "unit_bound_rows_active": 15
+    },
+    {
+      "certificate_rhs": -938,
+      "demand_id": 122,
+      "hard_position": 33,
+      "structural_equalities": {
+        "H0_incidence": -4666,
+        "R_total": 1341,
+        "q_minus_p": 1159
+      },
+      "threshold_count": 1,
+      "thresholds": [
+        {
+          "h": 3,
+          "weight": 1761
+        }
+      ],
+      "unit_bound_rows_active": 7
+    },
+    {
+      "certificate_rhs": -745,
+      "demand_id": 122,
+      "hard_position": 34,
+      "structural_equalities": {
+        "H0_incidence": -3599,
+        "R_total": 1031,
+        "q_minus_p": 879
+      },
+      "threshold_count": 1,
+      "thresholds": [
+        {
+          "h": 3,
+          "weight": 1465
+        }
+      ],
+      "unit_bound_rows_active": 8
+    },
+    {
+      "certificate_rhs": -691,
+      "demand_id": 122,
+      "hard_position": 35,
+      "structural_equalities": {
+        "H0_incidence": -1019,
+        "R_total": 449,
+        "q_minus_p": 289
+      },
+      "threshold_count": 2,
+      "thresholds": [
+        {
+          "h": 3,
+          "weight": 107
+        },
+        {
+          "h": 4,
+          "weight": 349
+        }
+      ],
+      "unit_bound_rows_active": 10
+    },
+    {
+      "certificate_rhs": -915,
+      "demand_id": 123,
+      "hard_position": 36,
+      "structural_equalities": {
+        "H0_incidence": -1786,
+        "R_total": 633,
+        "q_minus_p": 511
+      },
+      "threshold_count": 2,
+      "thresholds": [
+        {
+          "h": 3,
+          "weight": 317
+        },
+        {
+          "h": 4,
+          "weight": 255
+        }
+      ],
+      "unit_bound_rows_active": 8
+    },
+    {
+      "certificate_rhs": -755,
+      "demand_id": 123,
+      "hard_position": 38,
+      "structural_equalities": {
+        "H0_incidence": -924,
+        "R_total": 254,
+        "q_minus_p": 251
+      },
+      "threshold_count": 2,
+      "thresholds": [
+        {
+          "h": 3,
+          "weight": 185
+        },
+        {
+          "h": 4,
+          "weight": 187
+        }
+      ],
+      "unit_bound_rows_active": 15
+    },
+    {
+      "certificate_rhs": -831,
+      "demand_id": 123,
+      "hard_position": 39,
+      "structural_equalities": {
+        "H0_incidence": -3690,
+        "R_total": 1271,
+        "q_minus_p": 798
+      },
+      "threshold_count": 2,
+      "thresholds": [
+        {
+          "h": 3,
+          "weight": 1255
+        },
+        {
+          "h": 4,
+          "weight": 913
+        }
+      ],
+      "unit_bound_rows_active": 14
+    },
+    {
+      "certificate_rhs": -952,
+      "demand_id": 123,
+      "hard_position": 40,
+      "structural_equalities": {
+        "H0_incidence": -1842,
+        "R_total": 442,
+        "q_minus_p": 394
+      },
+      "threshold_count": 3,
+      "thresholds": [
+        {
+          "h": 3,
+          "weight": 195
+        },
+        {
+          "h": 4,
+          "weight": 372
+        },
+        {
+          "h": 5,
+          "weight": 278
+        }
+      ],
+      "unit_bound_rows_active": 8
+    },
+    {
+      "certificate_rhs": -620,
+      "demand_id": 127,
+      "hard_position": 41,
+      "structural_equalities": {
+        "H0_incidence": -1626,
+        "R_total": 587,
+        "q_minus_p": 478
+      },
+      "threshold_count": 2,
+      "thresholds": [
+        {
+          "h": 3,
+          "weight": 501
+        },
+        {
+          "h": 6,
+          "weight": 47
+        }
+      ],
+      "unit_bound_rows_active": 15
+    },
+    {
+      "certificate_rhs": -842,
+      "demand_id": 128,
+      "hard_position": 42,
+      "structural_equalities": {
+        "H0_incidence": -1786,
+        "R_total": 633,
+        "q_minus_p": 511
+      },
+      "threshold_count": 4,
+      "thresholds": [
+        {
+          "h": 3,
+          "weight": 243
+        },
+        {
+          "h": 4,
+          "weight": 117
+        },
+        {
+          "h": 5,
+          "weight": 142
+        },
+        {
+          "h": 6,
+          "weight": 69
+        }
+      ],
+      "unit_bound_rows_active": 8
+    },
+    {
+      "certificate_rhs": -967,
+      "demand_id": 128,
+      "hard_position": 43,
+      "structural_equalities": {
+        "H0_incidence": -2234,
+        "R_total": 752,
+        "q_minus_p": 617
+      },
+      "threshold_count": 2,
+      "thresholds": [
+        {
+          "h": 3,
+          "weight": 676
+        },
+        {
+          "h": 4,
+          "weight": 23
+        }
+      ],
+      "unit_bound_rows_active": 12
+    },
+    {
+      "certificate_rhs": -908,
+      "demand_id": 129,
+      "hard_position": 45,
+      "structural_equalities": {
+        "H0_incidence": -618,
+        "R_total": 146,
+        "q_minus_p": 146
+      },
+      "threshold_count": 3,
+      "thresholds": [
+        {
+          "h": 3,
+          "weight": 97
+        },
+        {
+          "h": 4,
+          "weight": 85
+        },
+        {
+          "h": 5,
+          "weight": 87
+        }
+      ],
+      "unit_bound_rows_active": 7
+    },
+    {
+      "certificate_rhs": -926,
+      "demand_id": 132,
+      "hard_position": 46,
+      "structural_equalities": {
+        "H0_incidence": -521,
+        "R_total": 198,
+        "q_minus_p": 155
+      },
+      "threshold_count": 3,
+      "thresholds": [
+        {
+          "h": 3,
+          "weight": 62
+        },
+        {
+          "h": 4,
+          "weight": 122
+        },
+        {
+          "h": 6,
+          "weight": 7
+        }
+      ],
+      "unit_bound_rows_active": 12
+    },
+    {
+      "certificate_rhs": -831,
+      "demand_id": 133,
+      "hard_position": 47,
+      "structural_equalities": {
+        "H0_incidence": -473,
+        "R_total": 180,
+        "q_minus_p": 141
+      },
+      "threshold_count": 3,
+      "thresholds": [
+        {
+          "h": 3,
+          "weight": 56
+        },
+        {
+          "h": 4,
+          "weight": 111
+        },
+        {
+          "h": 5,
+          "weight": 7
+        }
+      ],
+      "unit_bound_rows_active": 16
+    },
+    {
+      "certificate_rhs": -860,
+      "demand_id": 139,
+      "hard_position": 55,
+      "structural_equalities": {
+        "H0_incidence": -1832,
+        "R_total": 628,
+        "q_minus_p": 411
+      },
+      "threshold_count": 3,
+      "thresholds": [
+        {
+          "h": 3,
+          "weight": 360
+        },
+        {
+          "h": 4,
+          "weight": 127
+        },
+        {
+          "h": 5,
+          "weight": 128
+        }
+      ],
+      "unit_bound_rows_active": 10
+    },
+    {
+      "certificate_rhs": -780,
+      "demand_id": 143,
+      "hard_position": 63,
+      "structural_equalities": {
+        "H0_incidence": -1323,
+        "R_total": 433,
+        "q_minus_p": 298
+      },
+      "threshold_count": 3,
+      "thresholds": [
+        {
+          "h": 3,
+          "weight": 140
+        },
+        {
+          "h": 4,
+          "weight": 138
+        },
+        {
+          "h": 5,
+          "weight": 183
+        }
+      ],
+      "unit_bound_rows_active": 16
+    },
+    {
+      "certificate_rhs": -964,
+      "demand_id": 144,
+      "hard_position": 68,
+      "structural_equalities": {
+        "H0_incidence": -1111,
+        "R_total": 356,
+        "q_minus_p": 244
+      },
+      "threshold_count": 3,
+      "thresholds": [
+        {
+          "h": 3,
+          "weight": 200
+        },
+        {
+          "h": 4,
+          "weight": 98
+        },
+        {
+          "h": 5,
+          "weight": 80
+        }
+      ],
+      "unit_bound_rows_active": 4
+    },
+    {
+      "certificate_rhs": -920,
+      "demand_id": 145,
+      "hard_position": 72,
+      "structural_equalities": {
+        "H0_incidence": -745,
+        "R_total": 166,
+        "q_minus_p": 164
+      },
+      "threshold_count": 1,
+      "thresholds": [
+        {
+          "h": 3,
+          "weight": 314
+        }
+      ],
+      "unit_bound_rows_active": 8
+    }
+  ],
+  "schema": "n29-pairwise-semantic-threshold-decode-v1",
+  "threshold_profile_counts": {
+    "2": 1,
+    "3": 38,
+    "4": 29,
+    "5": 12,
+    "6": 5,
+    "7": 1
+  },
+  "threshold_total_weights": {
+    "2": 350,
+    "3": 34834,
+    "4": 13494,
+    "5": 2093,
+    "6": 805,
+    "7": 341
+  }
+}
