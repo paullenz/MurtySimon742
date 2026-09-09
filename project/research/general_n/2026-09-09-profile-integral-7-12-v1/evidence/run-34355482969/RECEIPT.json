@@ -1,0 +1,14 @@
+{
+  "files": {
+    "EXACT_CHECK.json": {
+      "bytes": 3359,
+      "sha256": "aa8f445276d6c0f2f39ae3ac02c3d39c00a5ea6434405c1bba924462a38f32e7"
+    },
+    "INDEPENDENT_AUDIT.json": {
+      "bytes": 3077,
+      "sha256": "19200edb90c10765dba2bddafebb00e5aa5700a897ab0f42d945a93518036377"
+    }
+  },
+  "run_id": "34355482969",
+  "schema": "profile-integral-7-12-audit-receipt-v1"
+}
