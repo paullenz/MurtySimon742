@@ -6,6 +6,7 @@ on:
     paths:
       - '.github/workflows/fan-free-n29-d16-m212.yml'
       - 'project/research/fan-free-fixed-orders/2026-09-09-v1/n29_t4_prepare.py'
+      - 'project/research/fan-free-fixed-orders/2026-09-09-v1/n29_t4_rows.cpp'
       - 'project/research/fan-free-fixed-orders/2026-09-09-v1/n29_t4_run_kernel.py'
 
 permissions:
@@ -26,12 +27,11 @@ jobs:
       - name: Generate complete t=4 minimal frontier
         run: |
           set -euo pipefail
-          D=project/reviews/n29/2026-09-08-redteam-restart-v1
           F=project/research/fan-free-fixed-orders/2026-09-09-v1
           mkdir -p prepared reports
-          g++ -O3 -std=c++17 "$D/minimal_rows.cpp" -o minimal_rows
+          g++ -O3 -std=c++17 "$F/n29_t4_rows.cpp" -o n29_t4_rows
           .venv/bin/python -I -B "$F/n29_t4_prepare.py" --output prepared
-          ./minimal_rows prepared/demands.txt prepared/row_survivors.txt prepared/row_bands.txt 4 > prepared/MINIMAL_ROWS_REPORT.json
+          ./n29_t4_rows prepared/demands.txt prepared/row_survivors.txt prepared/row_bands.txt 4 > prepared/MINIMAL_ROWS_REPORT.json
           cat prepared/MINIMAL_PREPARE_REPORT.json
           cat prepared/MINIMAL_ROWS_REPORT.json
       - name: Generate exact certificate set
@@ -65,7 +65,7 @@ jobs:
                'rhs_min':min(rhs) if rhs else None,'rhs_max':max(rhs) if rhs else None,
                'minimal_prepare_report':prep,'minimal_rows_report':rr,
                'all_late_exclusions_exact_integer_farkas_reverified':True,
-               'frozen_sources_modified':False,'cli_only_wrappers_used':True,
+               'frozen_sources_modified':False,'cli_guard_only_wrappers_used':True,
                'status':'candidate fixed-order proof component; independent review open'}
           Path('FAN_FREE_N29_D16_M212.json').write_text(json.dumps(out,indent=2,sort_keys=True)+'\n')
           print(json.dumps({k:v for k,v in out.items() if k not in ('minimal_prepare_report','minimal_rows_report')},sort_keys=True))
