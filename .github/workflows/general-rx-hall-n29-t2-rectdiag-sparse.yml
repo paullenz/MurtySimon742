@@ -1,0 +1,76 @@
+name: General RX-Hall n29 t2 sparse rectangle diagonal
+
+on:
+  workflow_dispatch:
+  push:
+    paths:
+      - '.github/workflows/general-rx-hall-n29-t2-rectdiag-sparse.yml'
+      - 'project/research/general_n/2026-09-09-rx-hall-v1/n29_t2_rectdiag_sparse_scan.py'
+
+permissions:
+  contents: write
+
+jobs:
+  scan:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 45
+    steps:
+      - uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262
+        with:
+          fetch-depth: 0
+      - run: |
+          python3 -m venv .venv
+          .venv/bin/python -m pip install --disable-pip-version-check --only-binary=:all: scipy==1.17.0
+      - name: Sparse hard38 scan
+        run: |
+          set -euo pipefail
+          R=project/research/general_n/2026-09-09-rx-hall-v1
+          B="$R/checkpoints/N29_BOUNDARY_SPECIALISATION_RUN_34364666552.json"
+          mkdir -p out
+          .venv/bin/python -I -B "$R/n29_t2_rectdiag_sparse_scan.py" \
+            --mode hard38 --boundary-json "$B" --output out/hard38_l1.json
+          .venv/bin/python -I -B "$R/n29_t2_rectdiag_sparse_scan.py" \
+            --mode hard38 --boundary-json "$B" --greedy --output out/hard38_greedy.json
+          .venv/bin/python -I -B "$R/n29_t2_rectdiag_sparse_scan.py" \
+            --mode demand45 --boundary-json "$B" --output out/demand45_l1.json
+      - name: Combine
+        run: |
+          python3 - <<'PY' > out/FULL.json
+          import glob,json
+          R={p.split('/')[-1]:json.load(open(p)) for p in sorted(glob.glob('out/*.json')) if not p.endswith('FULL.json')}
+          print(json.dumps({'schema':'n29-t2-rectdiag-sparse-batch-v1','floating_point_reconnaissance_only':True,'results':R},indent=2,sort_keys=True))
+          PY
+          python3 - <<'PY'
+          import json
+          j=json.load(open('out/FULL.json'))
+          for k,v in j['results'].items():
+            print(k,'success=',v['success'],'initial=',v.get('active_rectangle_count_initial'),'greedy=',v.get('active_rectangle_count_greedy'),'diag=',v.get('diag_weight_greedy',v.get('diag_weight')))
+            print('  rects=',v.get('active_rectangles_greedy',v.get('active_rectangles_initial')))
+          PY
+      - uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02
+        if: always()
+        with:
+          name: n29-t2-rectdiag-sparse
+          path: out/*.json
+          if-no-files-found: error
+          retention-days: 30
+      - name: Commit durable result
+        if: always()
+        run: |
+          set -euo pipefail
+          test -s out/FULL.json || exit 0
+          R=project/research/general_n/2026-09-09-rx-hall-v1/checkpoints
+          P="$R/N29_T2_RECTDIAG_SPARSE_RUN_${GITHUB_RUN_ID}.json"
+          cp out/FULL.json "$P"
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add "$P"
+          git commit -m "Preserve n29 t2 sparse rectdiag ${GITHUB_RUN_ID}" || exit 0
+          git restore . || true
+          for a in 1 2 3 4 5; do
+            if git push origin HEAD:main; then exit 0; fi
+            git reset --hard HEAD
+            git pull --rebase origin main
+            sleep $((a*2))
+          done
+          exit 1
