@@ -5,6 +5,7 @@ on:
   push:
     paths:
       - 'project/reviews/reviewer-paper-build/v1/**'
+      - 'project/research/general_n/2026-09-09-profile-integral-7-12-v1/**'
       - '.github/workflows/build-review-ready-papers.yml'
 
 permissions:
