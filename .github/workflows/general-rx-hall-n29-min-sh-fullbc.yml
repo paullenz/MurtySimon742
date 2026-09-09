@@ -1,0 +1,68 @@
+name: General RX-Hall n29 minimum SH with full BC
+
+on:
+  workflow_dispatch:
+  push:
+    paths:
+      - '.github/workflows/general-rx-hall-n29-min-sh-fullbc.yml'
+
+permissions:
+  contents: read
+
+jobs:
+  hard38:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 20
+    steps:
+      - uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262
+      - name: Pin solver
+        run: |
+          python3 -m venv .venv
+          .venv/bin/python -m pip install --disable-pip-version-check --only-binary=:all: scipy==1.17.0
+      - name: Minimize SH support on hard38
+        run: |
+          set -euo pipefail
+          R=project/research/general_n/2026-09-09-rx-hall-v1
+          mkdir -p out
+          .venv/bin/python -I -B "$R/n29_min_sh_fullbc.py" \
+            --mode hard38 --dictionary-json "$R/N29_CANONICAL_DICTIONARY.json" \
+            --boundary-json "$R/checkpoints/N29_BOUNDARY_SPECIALISATION_RUN_34364666552.json" \
+            --time-limit 300 --output out/HARD38.json
+      - uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02
+        with:
+          name: n29-min-sh-fullbc-hard38
+          path: out/HARD38.json
+          if-no-files-found: error
+          retention-days: 30
+
+  t3:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 20
+    steps:
+      - uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262
+      - name: Pin solver
+        run: |
+          python3 -m venv .venv
+          .venv/bin/python -m pip install --disable-pip-version-check --only-binary=:all: scipy==1.17.0
+      - name: Regenerate t3 frontier
+        run: |
+          set -euo pipefail
+          D=project/reviews/n29/2026-09-08-redteam-restart-v1
+          mkdir -p inputs out
+          g++ -O3 -std=c++17 "$D/minimal_rows.cpp" -o minimal_rows
+          .venv/bin/python -I -B "$D/minimal_prepare.py" --t 3 --output inputs
+          ./minimal_rows inputs/demands.txt inputs/row_survivors.txt inputs/row_bands.txt 3 > inputs/MINIMAL_ROWS_REPORT.json
+      - name: Minimize SH support on t3
+        run: |
+          set -euo pipefail
+          R=project/research/general_n/2026-09-09-rx-hall-v1
+          .venv/bin/python -I -B "$R/n29_min_sh_fullbc.py" \
+            --mode t3 --dictionary-json "$R/N29_CANONICAL_DICTIONARY.json" \
+            --demands-json inputs/demands.json --rows inputs/row_survivors.txt \
+            --time-limit 300 --output out/T3.json
+      - uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02
+        with:
+          name: n29-min-sh-fullbc-t3
+          path: out/T3.json
+          if-no-files-found: error
+          retention-days: 30
