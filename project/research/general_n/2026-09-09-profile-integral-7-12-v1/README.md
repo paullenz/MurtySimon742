@@ -1,8 +1,8 @@
 # Profile-integral strengthening to 7/12
 
-**Status: candidate theorem under internal hostile audit; not yet promoted to the repository review-paper index. Independent mathematical review and novelty assessment OPEN.**
+**Status: complete candidate hand argument; internal exact audits green and reviewer package published. Independent mathematical review, novelty assessment and external computational reproduction remain OPEN.**
 
-This directory tests and documents a strengthening of the existing profile-integral maximum-degree result.
+This directory documents the current strongest reviewer-packaged profile-integral maximum-degree candidate.
 
 Candidate statements:
 
@@ -30,17 +30,25 @@ x - Phi(x) < 5/64,
 
 which yields the improved surplus coefficient `5/128`.
 
-Files:
+Reviewer entry point: [`../../../../releases/general-7-12-reviewer-v1/README.md`](../../../../releases/general-7-12-reviewer-v1/README.md).
+
+Files and evidence:
 
 - [`PROOF.md`](PROOF.md): standalone candidate hand proof;
-- [`src/check_7_12.py`](src/check_7_12.py): exact standard-library algebra and degree-assembly checker;
-- `AUDIT.md`: hostile audit record, to be completed before promotion;
-- `evidence/`: durable exact run reports.
+- [`AUDIT.md`](AUDIT.md): completed internal hostile audit record;
+- [`src/check_7_12.py`](src/check_7_12.py): primary exact standard-library algebra and degree-assembly checker;
+- [`src/audit_7_12_independent.py`](src/audit_7_12_independent.py): separately structured exact audit with no imports from the primary checker;
+- [`evidence/run-34355073705/`](evidence/run-34355073705/): durable exact reports and SHA-256 receipt;
+- [`PROFILE_INTEGRAL_CEILING.md`](PROFILE_INTEGRAL_CEILING.md): strategic note on the intrinsic asymptotic ceiling of the scalar-uniform profile-integral architecture.
 
-Promotion gate:
+Audit summary:
 
-1. exact checker green;
-2. independently structured assembly/scalar audit green;
-3. hostile proof audit records no unresolved logical defect;
-4. reviewer manuscript and verification companion built;
-5. top-level README and reviewer index synchronized.
+- primary exact checker: green;
+- separately structured exact audit: green;
+- both reconstruct the same eleven finite assembly exceptions and the same exact threshold caps;
+- primary degree-pair regression through `n=5000`: 5,207,079 eligible pairs;
+- separate regression through `n=3000`: 1,874,246 eligible pairs;
+- reviewer manuscript and verification companion: built, PDF/text/render preflight green, published to `main`;
+- top-level README and review-paper index: synchronized.
+
+The degree-pair regressions are consistency checks rather than proof by exhaustion. The principal trust boundary remains the shared graph-to-demand/profile-integral argument inherited from the 293/500 candidate. Same-assistant implementations are not external independent review.
