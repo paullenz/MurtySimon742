@@ -2,7 +2,7 @@
 
 9 September 2026. Paul Lenz: research direction. ChatGPT/Geeps: derivation, drafting and internal checking.
 
-**Status: candidate hand proof under hostile internal audit. Independent mathematical review and novelty assessment remain OPEN. This is not an unrestricted solution of Murty–Simon.**
+**Status: complete candidate hand proof; internal exact audits green. Independent mathematical review, novelty assessment and external computational reproduction remain OPEN. This is not an unrestricted solution of Murty–Simon.**
 
 ## Statement
 
@@ -364,9 +364,9 @@ t\ge \frac{(a+1)^2}{25}-\frac14.
 
 Subtracting the upper bound (P+) from the right side of (15) gives
 
-\[
-D(a)=\frac{(a+1)^2}{25}-\frac14-rac{5a^2}{128}-\frac a8.
-\]
+```text
+D(a) = (a+1)^2/25 - 1/4 - 5a^2/128 - a/8.
+```
 
 Its quadratic coefficient is
 
