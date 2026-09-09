@@ -1,0 +1,96 @@
+name: General RX-Hall n30 residual-budget core
+
+on:
+  workflow_dispatch:
+  push:
+    paths:
+      - 'project/research/general_n/2026-09-09-rx-hall-v1/rx_hall_r_core_exact.py'
+      - '.github/workflows/general-rx-hall-n30-r-core.yml'
+
+permissions:
+  contents: write
+
+jobs:
+  test:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 30
+    steps:
+      - uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262
+      - name: Pin solver
+        run: |
+          python3 -m venv .venv
+          .venv/bin/python -m pip install --disable-pip-version-check --only-binary=:all: scipy==1.17.0
+      - name: Regenerate audited n30 m225 threshold frontier
+        run: |
+          set -euo pipefail
+          D=project/research/n30/2026-09-08-minimal-kernel-recon-v1
+          mkdir -p inputs out
+          .venv/bin/python -I -B "$D/n30_prepare.py" --m 225 --output inputs
+          g++ -O3 -std=c++17 "$D/n30_rows.cpp" -o n30_rows
+          ./n30_rows inputs/demands.txt inputs/raw_rows.txt inputs/bands.txt > inputs/ROWS.json
+          .venv/bin/python -I -B "$D/n30_row_threshold.py" --demands inputs/demands.txt --rows inputs/raw_rows.txt --output inputs/rows.txt --m 225 > inputs/THRESHOLD.json
+          python3 - <<'PY'
+          import json
+          from pathlib import Path
+          z=Path('inputs/demands.txt').read_text().splitlines(); n=int(z[0]); D=[]
+          for line in z[1:]: D.append({'s':list(map(int,line.split()))[:13]})
+          assert n==len(D)==5379
+          assert json.load(open('inputs/ROWS.json'))['survivors']==150896
+          assert json.load(open('inputs/THRESHOLD.json'))['counts']['survivors']==272
+          Path('inputs/demands.json').write_text(json.dumps(D,separators=(',',':'))+'\n')
+          PY
+      - name: Run exact residual-budget Hall core
+        id: rcore
+        continue-on-error: true
+        run: |
+          D=project/research/general_n/2026-09-09-rx-hall-v1
+          .venv/bin/python -I -B "$D/rx_hall_r_core_exact.py" --demands-json inputs/demands.json --rows inputs/rows.txt --a 13 --b 16 --dmax 11 --t 1 --output out/certificates.json.gz
+      - name: Classify and preserve
+        if: always()
+        run: |
+          python3 - <<'PY'
+          import json,pathlib
+          p=pathlib.Path('out/certificates.json.gz.report.json'); assert p.exists()
+          r=json.load(open(p)); assert r['hard_rows']==207
+          o={
+            'schema':'n30-r-core-falsification-v1','m':225,'t':1,
+            'hard_rows':r['hard_rows'],
+            'exact_integer_farkas_rejections':r['exact_integer_farkas_rejections'],
+            'unresolved_count':len(r['unresolved']),'unresolved':r['unresolved'],
+            'status':'PASS_ALL_REJECTED' if not r['unresolved'] else 'SURVIVORS',
+            'uses_exact_residual_budget':True,'uses_rx1_rx2_rx3':True,
+            'removes_P_and_Z':True,'uses_full_hall_closure':True,
+            'interpretation':'Necessary-condition relaxation; unresolved states are not graphs.'
+          }
+          q=pathlib.Path('project/research/general_n/2026-09-09-rx-hall-v1/checkpoints/N30_R_CORE_LATEST.json')
+          q.parent.mkdir(parents=True,exist_ok=True); q.write_text(json.dumps(o,indent=2,sort_keys=True)+'\n')
+          print(json.dumps(o,indent=2,sort_keys=True))
+          PY
+      - uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02
+        if: always()
+        with:
+          name: n30-r-core-m225
+          path: out/
+          if-no-files-found: error
+          retention-days: 30
+      - name: Commit durable checkpoint
+        if: always()
+        run: |
+          set -euo pipefail
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add project/research/general_n/2026-09-09-rx-hall-v1/checkpoints/N30_R_CORE_LATEST.json
+          if git diff --cached --quiet; then
+            echo 'checkpoint unchanged'
+          else
+            git commit -m 'Preserve n30 residual-budget Hall-core checkpoint'
+            git pull --rebase origin main
+            git push origin HEAD:main
+          fi
+      - name: Require zero survivors
+        run: |
+          python3 - <<'PY'
+          import json
+          r=json.load(open('project/research/general_n/2026-09-09-rx-hall-v1/checkpoints/N30_R_CORE_LATEST.json'))
+          assert r['unresolved_count']==0,r
+          PY
