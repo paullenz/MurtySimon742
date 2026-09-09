@@ -1,0 +1,69 @@
+name: General RX-Hall n29 all-t23 exact common potential
+
+on:
+  workflow_dispatch:
+  push:
+    paths:
+      - 'project/research/general_n/2026-09-09-rx-hall-v1/n29_all_t23_exactify.py'
+      - '.github/workflows/general-rx-hall-n29-all-t23-exact.yml'
+
+permissions:
+  contents: write
+
+jobs:
+  exactify:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 30
+    steps:
+      - uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262
+        with:
+          fetch-depth: 0
+      - name: Pin proposal solver
+        run: |
+          python3 -m venv .venv
+          .venv/bin/python -m pip install --disable-pip-version-check --only-binary=:all: scipy==1.17.0
+      - name: Regenerate n29 t2 and t3 frontiers
+        run: |
+          set -euo pipefail
+          D=project/reviews/n29/2026-09-08-redteam-restart-v1
+          mkdir -p inputs/t2 inputs/t3 out
+          g++ -O3 -std=c++17 "$D/minimal_rows.cpp" -o minimal_rows
+          for t in 2 3; do
+            .venv/bin/python -I -B "$D/minimal_prepare.py" --t $t --output inputs/t$t
+            ./minimal_rows inputs/t$t/demands.txt inputs/t$t/row_survivors.txt inputs/t$t/row_bands.txt $t > inputs/t$t/MINIMAL_ROWS_REPORT.json
+          done
+      - name: Exactify all-996 common potential
+        run: |
+          set -euo pipefail
+          R=project/research/general_n/2026-09-09-rx-hall-v1
+          .venv/bin/python -I -B "$R/n29_all_t23_exactify.py" \
+            --t2-demands inputs/t2/demands.json --t2-rows inputs/t2/row_survivors.txt \
+            --t3-demands inputs/t3/demands.json --t3-rows inputs/t3/row_survivors.txt \
+            --support-json "$R/checkpoints/N29_COMMON_ACTIVE_EXACT_RUN_34371839791.json" \
+            --a 12 --b 16 --dmax 10 --boost 2 --output out/ALL_T23_EXACT.json
+      - uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02
+        if: always()
+        with:
+          name: n29-all-t23-exact-common-potential
+          path: out/ALL_T23_EXACT.json
+          if-no-files-found: warn
+          retention-days: 30
+      - name: Commit exact checkpoint
+        if: always()
+        run: |
+          set -euo pipefail
+          test -s out/ALL_T23_EXACT.json || exit 0
+          R=project/research/general_n/2026-09-09-rx-hall-v1/checkpoints
+          P="$R/N29_ALL_T23_EXACT_RUN_${GITHUB_RUN_ID}.json"
+          cp out/ALL_T23_EXACT.json "$P"
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add "$P"
+          git commit -m "Preserve exact n29 all-t23 common potential ${GITHUB_RUN_ID}" || exit 0
+          git restore . || true
+          for attempt in 1 2 3 4 5; do
+            if git push origin HEAD:main; then exit 0; fi
+            git pull --rebase --autostash origin main
+            sleep $((attempt*2))
+          done
+          exit 1
