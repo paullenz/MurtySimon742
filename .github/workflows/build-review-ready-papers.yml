@@ -22,19 +22,26 @@ jobs:
       - name: Install paper toolchain
         run: |
           sudo apt-get update -qq
-          sudo DEBIAN_FRONTEND=noninteractive apt-get install -y -qq pandoc texlive-xetex texlive-fonts-recommended poppler-utils
+          sudo DEBIAN_FRONTEND=noninteractive apt-get install -y -qq pandoc texlive-xetex texlive-latex-extra texlive-fonts-recommended lmodern poppler-utils
 
       - name: Build reviewer editions
+        id: build
+        continue-on-error: true
         run: |
-          set -euo pipefail
-          python3 project/reviews/reviewer-paper-build/v1/build_review_papers.py
+          set -o pipefail
+          mkdir -p review-build-diagnostics
+          python3 project/reviews/reviewer-paper-build/v1/build_review_papers.py 2>&1 | tee review-build-diagnostics/BUILD.log
 
       - name: PDF preflight and render smoke check
+        id: preflight
+        if: steps.build.outcome == 'success'
+        continue-on-error: true
         run: |
           set -euo pipefail
           mkdir -p review-renders
           find releases -maxdepth 2 -type f \( -name '*Reviewer_Manuscript_v1.pdf' -o -name '*Verification_Companion_v1.pdf' \) | sort > review-renders/PDFS.txt
           while IFS= read -r p; do
+            echo "== $p ==" >> review-renders/PDFINFO.txt
             pdfinfo "$p" | grep -E '^(Pages|Page size):' >> review-renders/PDFINFO.txt
             pdftotext "$p" /dev/null
             base=$(basename "$p" .pdf)
@@ -49,8 +56,9 @@ jobs:
           PY
 
       - uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02
+        if: always()
         with:
-          name: review-ready-papers-2026-09-09
+          name: review-ready-papers-2026-09-09-run-${{ github.run_id }}
           path: |
             releases/n27-reviewer-v1/
             releases/n29-reviewer-v1/
@@ -60,8 +68,14 @@ jobs:
             releases/REVIEW_READY_INDEX.md
             project/reviews/reviewer-paper-build/v1/BUILD_REPORT.json
             review-renders/
-          if-no-files-found: error
+            review-build-diagnostics/
+          if-no-files-found: warn
           retention-days: 30
+
+      - name: Require successful build and preflight
+        run: |
+          test '${{ steps.build.outcome }}' = 'success'
+          test '${{ steps.preflight.outcome }}' = 'success'
 
       - name: Commit canonical reviewer layer
         run: |
