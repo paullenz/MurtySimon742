@@ -1,0 +1,21 @@
+{
+  "Delta": 17,
+  "a": 12,
+  "all_duals_exact_integer_verified_during_generation": true,
+  "b": 17,
+  "charging_feasible_profiles": 15,
+  "counts": {
+    "threshold": 15
+  },
+  "duals": [],
+  "final_survivors": 0,
+  "m": 227,
+  "minimum_dual_margin": null,
+  "minimum_threshold_margin": 10,
+  "n": 30,
+  "opens": [],
+  "schema": "fan-free-n30-d17-m227-v1",
+  "status": "candidate fixed-order proof component; independent review open",
+  "t": 6,
+  "uses_established_n30_d17_kernel": true
+}
