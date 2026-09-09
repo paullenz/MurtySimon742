@@ -54,9 +54,9 @@ jobs:
             for SH in none full; do
               P="out/hard38_${CONE}_${SH}.json"
               if python3 - "$P" <<'PY'
-import json,sys
-raise SystemExit(0 if json.load(open(sys.argv[1]))['success'] else 1)
-PY
+          import json,sys
+          raise SystemExit(0 if json.load(open(sys.argv[1]))['success'] else 1)
+          PY
               then
                 echo "Escalating $CONE $SH to all 902"
                 .venv/bin/python -I -B "$R/n29_t2_bc_function_cone_scan.py" \
@@ -72,20 +72,20 @@ PY
       - name: Summarize
         run: |
           python3 - <<'PY' > out/SUMMARY.json
-import glob,json
-R={}
-for p in sorted(glob.glob('out/*.json')):
-    if p.endswith('SUMMARY.json'): continue
-    j=json.load(open(p))
-    q={k:j.get(k) for k in ['mode','cone','SH_mode','SH_count','profiles','success','status','objective','rows','variables','seconds']}
-    if j.get('success'):
-        s=j.get('surface',{})
-        q.update({'negative_mixed_count':s.get('negative_mixed_count'),'positive_mixed_count':s.get('positive_mixed_count'),'distinct_positive_levels':s.get('distinct_positive_levels'),'active_SH_count':j.get('active_SH_count')})
-        q['negative_mixed_top']=s.get('negative_mixed_top',[])[:10]
-        q['level_frontier_generator_counts']=[x.get('generator_count') for x in s.get('level_frontiers',[])]
-    R[p.split('/')[-1]]=q
-print(json.dumps({'schema':'n29-t2-bc-function-cone-batch-v1','floating_point_reconnaissance_only':True,'results':R},indent=2,sort_keys=True))
-PY
+          import glob,json
+          R={}
+          for p in sorted(glob.glob('out/*.json')):
+              if p.endswith('SUMMARY.json'): continue
+              j=json.load(open(p))
+              q={k:j.get(k) for k in ['mode','cone','SH_mode','SH_count','profiles','success','status','objective','rows','variables','seconds']}
+              if j.get('success'):
+                  s=j.get('surface',{})
+                  q.update({'negative_mixed_count':s.get('negative_mixed_count'),'positive_mixed_count':s.get('positive_mixed_count'),'distinct_positive_levels':s.get('distinct_positive_levels'),'active_SH_count':j.get('active_SH_count')})
+                  q['negative_mixed_top']=s.get('negative_mixed_top',[])[:10]
+                  q['level_frontier_generator_counts']=[x.get('generator_count') for x in s.get('level_frontiers',[])]
+              R[p.split('/')[-1]]=q
+          print(json.dumps({'schema':'n29-t2-bc-function-cone-batch-v1','floating_point_reconnaissance_only':True,'results':R},indent=2,sort_keys=True))
+          PY
           cat out/SUMMARY.json
       - uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02
         if: always()
