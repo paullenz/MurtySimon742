@@ -1,0 +1,37 @@
+{
+  "built": "9 September 2026",
+  "claim": "e(G) <= 182, equality exactly K(13,14)",
+  "external_review_complete": false,
+  "fan_logical_dependency": false,
+  "files": [
+    {
+      "bytes": 26723,
+      "path": "releases/n27-reviewer-v2/N27_Reviewer_Manuscript_v2.md",
+      "sha256": "9eb96bd2e02e6270c478985a97c16d5fa266b890240c4ed2a88f2b971c6cb4fc"
+    },
+    {
+      "bytes": 72574,
+      "path": "releases/n27-reviewer-v2/N27_Reviewer_Manuscript_v2.pdf",
+      "sha256": "95d563d8d95eb5df190f85256fd2798eef1bb6020ac4f929c4bfca19b51ad5fc"
+    },
+    {
+      "bytes": 38150,
+      "path": "releases/n27-reviewer-v2/N27_Verification_Companion_v2.md",
+      "sha256": "f374a4d2999ea32c249b3d495226dfaf95b0f5d7e39af1c281967b9dbef4c9fb"
+    },
+    {
+      "bytes": 88575,
+      "path": "releases/n27-reviewer-v2/N27_Verification_Companion_v2.pdf",
+      "sha256": "93f1de3d32c4533ae3913e97ef4c1646606a0a2b2a794746db42ef7f15829bb3"
+    },
+    {
+      "bytes": 735,
+      "path": "releases/n27-reviewer-v2/README.md",
+      "sha256": "ac78b4aad38b5a243fcd97c6fdbc6c8f97e91e6c387f4fa1bf31c96a39b1e7bb"
+    }
+  ],
+  "historical_reviewer_v1": "releases/n27-reviewer-v1/README.md",
+  "logical_proof": "project/reviews/n27/2026-09-09-fan-free-v2/PROOF.md",
+  "n": 27,
+  "schema": "murty-simon-fan-free-reviewer-v2"
+}
