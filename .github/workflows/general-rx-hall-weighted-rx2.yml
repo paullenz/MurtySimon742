@@ -21,15 +21,19 @@ jobs:
           - {m: 225, t: 1, demands: 5379, raw: 150896, threshold: 272, hard: 207}
     steps:
       - uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262
+      - name: Pin solver
+        run: |
+          python3 -m venv .venv
+          .venv/bin/python -m pip install --disable-pip-version-check --only-binary=:all: scipy==1.17.0
       - name: Regenerate exact threshold frontier
         run: |
           set -euo pipefail
           D=project/research/n30/2026-09-08-minimal-kernel-recon-v1
           mkdir -p inputs out
-          python3 -I -B "$D/n30_prepare.py" --m ${{ matrix.m }} --output inputs
+          .venv/bin/python -I -B "$D/n30_prepare.py" --m ${{ matrix.m }} --output inputs
           g++ -O3 -std=c++17 "$D/n30_rows.cpp" -o n30_rows
           ./n30_rows inputs/demands.txt inputs/raw_rows.txt inputs/bands.txt > inputs/ROWS.json
-          python3 -I -B "$D/n30_row_threshold.py" --demands inputs/demands.txt --rows inputs/raw_rows.txt --output inputs/rows.txt --m ${{ matrix.m }} > inputs/THRESHOLD.json
+          .venv/bin/python -I -B "$D/n30_row_threshold.py" --demands inputs/demands.txt --rows inputs/raw_rows.txt --output inputs/rows.txt --m ${{ matrix.m }} > inputs/THRESHOLD.json
           python3 - <<'PY'
           import json
           from pathlib import Path
