@@ -1,0 +1,17 @@
+{
+  "schema": "general-rx-hall-n29-numerical-preserved-v1",
+  "date": "2026-09-09",
+  "workflow_run": 34325826929,
+  "head_sha": "504751c27152ef8d00ee78317bb1af28226d6348",
+  "aggregate_artifact_id": 10093722528,
+  "aggregate_artifact_digest": "sha256:b7389e9d9d0f8356241f224885f45e25822595b24905ebc137e2865296bbd1d1",
+  "status": "PASS_RECONNAISSANCE",
+  "results": {
+    "2": {"hard_rows": 902, "numerical_infeasible": 902, "survivors": 0},
+    "3": {"hard_rows": 94, "numerical_infeasible": 94, "survivors": 0}
+  },
+  "uses_unordered_pair_capacity": false,
+  "uses_cumulative_tail_variables": false,
+  "numerical_infeasibility_is_proof": false,
+  "status4_history": "The preceding run 34295699108 was red because six states returned SciPy status 4 / HiGHS model_status Unknown with primal_status Infeasible. All six returned standard infeasible status under the unchanged-model HiGHS-IPM retry and later received exact integer Farkas contradictions. See NUMERICAL_STATUS4_DIAGNOSIS.md."
+}
