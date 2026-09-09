@@ -12,19 +12,27 @@ During the restarted hostile audit of the additional n=29 `Delta=16` cumulative-
 
 A corrected `v2` model was then replayed cleanly and again produced zero survivors. The audit subsequently reduced the proof-critical `Delta=16` computation to a smaller trusted kernel, whose clean replay also produced zero survivors with every late exclusion rechecked by exact integer Farkas arithmetic. See the [public-release audit](project/reviews/n29/2026-09-08-redteam-restart-v1/PUBLIC_RELEASE_AUDIT.md) and [minimal-kernel report](project/reviews/n29/2026-09-08-redteam-restart-v1/MINIMAL_KERNEL_REPORT.json).
 
+### Robustness milestone — Fan dependency removed from the current project fixed-order proofs
+
+A later external-AI critique raised three concrete objections: two possible collision/double-counting issues in the selected/residual construction, and the fact that the fixed-order papers used G. Fan's 1987 upper-density theorem to cap the edge search. The two local semantic objections did **not** survive re-audit: selection is one representative per missing **unordered** `B`-pair, and the forced cross-edges in the residual injection cannot themselves be selected because their endpoints miss an `A`-vertex. The current editions now state those points explicitly. See the [cross-cutting feedback audit](project/reviews/cross-cutting/2026-09-09-external-ai-feedback-audit-v1/REPORT.md).
+
+For the Fan point, the project deliberately went further than defending the citation. It constructed direct order-specific upper-range reductions for **all five current project fixed-order candidates `n=25,27,28,29,30`**, so Fan's theorem is now **historical attribution only**, not a logical dependency of those proofs. Every historical reviewer-v1/proof source is retained unchanged; the current reviewer-facing surfaces are new **Fan-free v2** editions. The unified replacement is documented in [`FAN_FREE_REDUCTION.md`](project/research/fan-free-fixed-orders/2026-09-09-v1/FAN_FREE_REDUCTION.md).
+
+The assembled replacement then passed a fresh [hostile coverage/integrity audit](project/research/fan-free-fixed-orders/2026-09-09-v1/FAN_FREE_AUDIT.md): the required upper edge ranges are complete, every proof-event checkpoint has zero survivors under exact acceptance, the v2 proof surfaces contain no residual logical invocation of Fan, and the frozen historical source hashes still match their recorded v2 provenance. This is **internal** robustness evidence, not external acceptance; the graph-to-residual lemmas and short hand monotonicity arguments remain important review targets.
+
 ## Fixed-order candidate results
 
 ### n=25
 
-**Candidate:** `e(G) <= 156`, equality only `K(12,13)`. [Reviewer release](releases/n25-reviewer-v1/README.md) · [frozen proof](project/reviews/n25/2026-09-06-full-chain-candidate-v1/PROOF.md) · [8 September re-audit](project/reviews/n25/2026-09-08-reaudit-v1/README.md). The complete finite domain has now been replayed again in 16 disjoint clean-runner shards: 543,578 outer states, 3,442,212 labelled columns and 1,959 independently reconstructed final equality certificates. Independent specialist review remains open.
+**Candidate:** `e(G) <= 156`, equality only `K(12,13)`. [**Fan-free reviewer v2**](releases/n25-reviewer-v2/README.md) · [current Fan-free proof](project/reviews/n25/2026-09-09-fan-free-v2/PROOF.md) · [historical reviewer v1](releases/n25-reviewer-v1/README.md) · [8 September re-audit](project/reviews/n25/2026-09-08-reaudit-v1/README.md). The complete finite domain has now been replayed again in 16 disjoint clean-runner shards: 543,578 outer states, 3,442,212 labelled columns and 1,959 independently reconstructed final equality certificates. Independent specialist review remains open.
 
 ### n=27
 
-**Candidate:** `e(G) <= 182`, equality only `K(13,14)`. [Reviewer release](releases/n27-reviewer-v1/README.md) · [proof](project/reviews/n27/2026-09-07-candidate-v1/PROOF.md) · [evidence release](releases/n27-candidate-v1/README.md) · [8 September red-team audit](project/reviews/n27/2026-09-08-redteam-v1/REPORT.md). The hardened replay checks 80,978,546 canonical columns and independently reconstructs all 35,435 terminal source-cap vectors. Independent review remains open.
+**Candidate:** `e(G) <= 182`, equality only `K(13,14)`. [**Fan-free reviewer v2**](releases/n27-reviewer-v2/README.md) · [current Fan-free proof](project/reviews/n27/2026-09-09-fan-free-v2/PROOF.md) · [historical reviewer v1](releases/n27-reviewer-v1/README.md) · [evidence release](releases/n27-candidate-v1/README.md) · [8 September red-team audit](project/reviews/n27/2026-09-08-redteam-v1/REPORT.md). The hardened replay checks 80,978,546 canonical columns and independently reconstructs all 35,435 terminal source-cap vectors. Independent review remains open.
 
 ### n=28
 
-**Candidate:** `e(G) <= 196`, equality only `K(14,14)`. [Reviewer release](releases/n28-reviewer-v1/README.md) · [direct 197-edge exclusion](project/research/general_n/2026-09-07-direct-197-v8/README.md) · [red-team report](project/reviews/n28/2026-09-07-redteam-v1/REPORT.md). Independent review remains open.
+**Candidate:** `e(G) <= 196`, equality only `K(14,14)`. [**Fan-free reviewer v2**](releases/n28-reviewer-v2/README.md) · [current Fan-free proof](project/reviews/n28/2026-09-09-fan-free-v2/PROOF.tex) · [historical reviewer v1](releases/n28-reviewer-v1/README.md) · [direct 197-edge exclusion](project/research/general_n/2026-09-07-direct-197-v8/README.md) · [red-team report](project/reviews/n28/2026-09-07-redteam-v1/REPORT.md). Independent review remains open.
 
 ### n=29 — complete candidate
 
@@ -35,9 +43,9 @@ e(G) <= 210 = floor(29^2/4),
 with equality exactly K(14,15).
 ```
 
-[Reviewer release](releases/n29-reviewer-v1/README.md) · [full proof and replay guide](project/reviews/n29/2026-09-08-candidate-v1/README.md) · [candidate manuscript](project/reviews/n29/2026-09-08-candidate-v1/PROOF.md) · [standalone Delta=16 graph-to-model bridge](project/reviews/n29/2026-09-09-bridge-standalone-v1/GRAPH_TO_MODEL_BRIDGE.md) · [bridge hostile audit](project/reviews/n29/2026-09-09-bridge-standalone-v1/BRIDGE_REDTEAM.md) · [restarted red-team audit](project/reviews/n29/2026-09-08-redteam-restart-v1/N29_RED_TEAM_RESTART.md) · [public-release audit](project/reviews/n29/2026-09-08-redteam-restart-v1/PUBLIC_RELEASE_AUDIT.md).
+[**Fan-free reviewer v2**](releases/n29-reviewer-v2/README.md) · [current Fan-free proof](project/reviews/n29/2026-09-09-fan-free-v2/PROOF.md) · [historical reviewer v1](releases/n29-reviewer-v1/README.md) · [historical proof/replay guide](project/reviews/n29/2026-09-08-candidate-v1/README.md) · [standalone Delta=16 graph-to-model bridge](project/reviews/n29/2026-09-09-bridge-standalone-v1/GRAPH_TO_MODEL_BRIDGE.md) · [bridge hostile audit](project/reviews/n29/2026-09-09-bridge-standalone-v1/BRIDGE_REDTEAM.md) · [restarted red-team audit](project/reviews/n29/2026-09-08-redteam-restart-v1/N29_RED_TEAM_RESTART.md) · [public-release audit](project/reviews/n29/2026-09-08-redteam-restart-v1/PUBLIC_RELEASE_AUDIT.md).
 
-The proof does **not** depend on the later general profile-integral candidates. Fan's cited strict bound leaves only 211 edges to exclude. `Delta=15` is handled by a witness-deficit count, which also forces `K(14,15)` at 210. `Delta=17` is excluded by a short pointwise charging bound, `Delta=18..27` by the residual h-index inequality, and a universal vertex gives a star.
+The proof does **not** depend on the later general profile-integral candidates or on Fan's density theorem. The direct Fan-free upper-range reduction excludes every `m>=212`, leaving 211 edges as the sole upper-bound counterexample scope. `Delta=15` is handled by a witness-deficit count, which also forces `K(14,15)` at 210. `Delta=17` is excluded by a short pointwise charging bound, `Delta=18..27` by the residual h-index inequality, and a universal vertex gives a star.
 
 The difficult `Delta=16` case has several same-assistant computational routes. The preferred proof-critical route is now the **minimal trusted kernel**:
 
@@ -64,9 +72,9 @@ e(G) <= 225 = floor(30^2/4),
 with equality exactly K(15,15).
 ```
 
-[Reviewer release](releases/n30-reviewer-v1/README.md) · [candidate package](project/reviews/n30/2026-09-09-candidate-v1/README.md) · [assembled proof](project/reviews/n30/2026-09-09-candidate-v1/PROOF.md) · [hostile assembly audit](project/reviews/n30/2026-09-09-candidate-v1/ASSEMBLY_AUDIT.md).
+[**Fan-free reviewer v2**](releases/n30-reviewer-v2/README.md) · [current Fan-free proof](project/reviews/n30/2026-09-09-fan-free-v2/PROOF.md) · [historical reviewer v1](releases/n30-reviewer-v1/README.md) · [historical candidate package](project/reviews/n30/2026-09-09-candidate-v1/README.md) · [hostile assembly audit](project/reviews/n30/2026-09-09-candidate-v1/ASSEMBLY_AUDIT.md).
 
-Fan's cited strict bound leaves only 226 edges as a possible upper-bound counterexample. The 225-edge `Delta=15` equality case is handled by a short witness-degree argument and forces `K(15,15)`. The `Delta=17` scopes close before residual-row enumeration: 250/250 charging-feasible profiles are threshold-rejected at 226 edges, while at 225 edges 1,137 profiles are rejected by threshold/source-count cuts and the remaining 18 by exact Hall duals. Clean replay `34292054922` verifies the committed duals exactly.
+Fan's density theorem is no longer used logically. The direct Fan-free upper-range reduction excludes every `m>=227`, leaving 226 edges as the sole upper-bound counterexample scope. The 225-edge `Delta=15` equality case is handled by a short witness-degree argument and forces `K(15,15)`. The `Delta=17` scopes close before residual-row enumeration: 250/250 charging-feasible profiles are threshold-rejected at 226 edges, while at 225 edges 1,137 profiles are rejected by threshold/source-count cuts and the remaining 18 by exact Hall duals. Clean replay `34292054922` verifies the committed duals exactly.
 
 The `Delta=16` scopes use a genuine parameterisation of the stripped graph-to-demand kernel at `(a,b)=(13,16)`. Clean runs `34286806474`, `34287440190` and `34287739057` reduce the complete residual frontiers to 9 rows at 226 edges and 272 rows at 225 edges, then reject every final row by exact integer Farkas certificates. `Delta=18,...,28` have empty exact charging domains and `Delta=29` gives a star. The final assembly replay `34292557008` is green.
 

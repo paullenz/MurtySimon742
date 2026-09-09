@@ -8,6 +8,12 @@ Nothing here should be treated as externally accepted mathematics merely because
 
 Paul Lenz directed the project and chose the research priorities. ChatGPT/Geeps supplied the mathematical development, implementations, manuscripts and internal audits.
 
+## Robustness milestone: Fan-free fixed-order v2 editions
+
+A hostile external-AI critique questioned both selected/residual semantics and the use of G. Fan's 1987 density theorem as an edge-count cap. The semantic objections were re-audited and resolved explicitly in the current proof text. The project then removed Fan as a **logical dependency** from its current fixed-order candidate proofs at `n=25,27,28,29,30`, while retaining Fan's theorem as historical attribution and preserving every reviewer-v1/proof source unchanged.
+
+Reviewers should therefore use the **Fan-free reviewer-v2 packages** listed in [`releases/REVIEW_READY_INDEX.md`](releases/REVIEW_READY_INDEX.md). The direct replacement is [`FAN_FREE_REDUCTION.md`](project/research/fan-free-fixed-orders/2026-09-09-v1/FAN_FREE_REDUCTION.md), and its assembled edge-range/source-integrity checks are recorded in [`FAN_FREE_AUDIT.md`](project/research/fan-free-fixed-orders/2026-09-09-v1/FAN_FREE_AUDIT.md). The audit is internal; independent review of the graph-theoretic bridge remains open.
+
 If you find an error, please open a GitHub Issue. A short counterexample or a precise identification of the first invalid implication is more valuable than a general assessment.
 
 ## Headline candidate results
@@ -34,7 +40,7 @@ The n=29 candidate remains the cleanest place to audit the universal graph-to-de
 
 Main proof:
 
-- [`project/reviews/n29/2026-09-08-candidate-v1/PROOF.md`](project/reviews/n29/2026-09-08-candidate-v1/PROOF.md)
+- [`project/reviews/n29/2026-09-09-fan-free-v2/PROOF.md`](project/reviews/n29/2026-09-09-fan-free-v2/PROOF.md) — current Fan-free edition; [historical v1](project/reviews/n29/2026-09-08-candidate-v1/PROOF.md)
 
 Standalone bridge and hostile audit:
 
@@ -88,7 +94,7 @@ Relevant source:
 The n=30 candidate is assembled at:
 
 - [`project/reviews/n30/2026-09-09-candidate-v1/README.md`](project/reviews/n30/2026-09-09-candidate-v1/README.md)
-- [`project/reviews/n30/2026-09-09-candidate-v1/PROOF.md`](project/reviews/n30/2026-09-09-candidate-v1/PROOF.md)
+- [`project/reviews/n30/2026-09-09-fan-free-v2/PROOF.md`](project/reviews/n30/2026-09-09-fan-free-v2/PROOF.md) — current Fan-free edition; [historical v1](project/reviews/n30/2026-09-09-candidate-v1/PROOF.md)
 - [`project/reviews/n30/2026-09-09-candidate-v1/ASSEMBLY_AUDIT.md`](project/reviews/n30/2026-09-09-candidate-v1/ASSEMBLY_AUDIT.md)
 
 Its candidate statement is
@@ -98,7 +104,7 @@ e(G) <= 225,
 with equality exactly K(15,15).
 ```
 
-Fan's cited strict bound leaves only 226 edges as an upper-bound counterexample. The dense non-bipartite proof reduces to `Delta=16` and `Delta=17`; the remaining degree ranges are hand/charging exclusions.
+The current edition does not use Fan's density theorem logically: the direct Fan-free upper-range reduction excludes every edge count above 226. The dense non-bipartite proof then reduces the 226-edge scope to `Delta=16` and `Delta=17`; the remaining degree ranges are hand/charging exclusions.
 
 For `Delta=17`, no residual-row or final LP model is needed. At 226 edges all 250 charging-feasible profiles are rejected by threshold capacity. At 225 edges, 1,137 of 1,155 profiles are rejected by threshold/source-count inequalities and the remaining 18 by exact Hall duals. Clean replay: `34292054922`.
 
