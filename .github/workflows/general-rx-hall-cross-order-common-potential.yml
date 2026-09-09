@@ -1,0 +1,58 @@
+name: General RX-Hall cross-order common staircase potential
+
+on:
+  workflow_dispatch:
+  push:
+    paths:
+      - 'project/research/general_n/2026-09-09-rx-hall-v1/cross_order_common_potential.py'
+      - '.github/workflows/general-rx-hall-cross-order-common-potential.yml'
+
+permissions:
+  contents: write
+
+jobs:
+  scan:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 25
+    steps:
+      - uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262
+        with:
+          fetch-depth: 0
+      - name: Pin solver
+        run: |
+          python3 -m venv .venv
+          .venv/bin/python -m pip install --disable-pip-version-check --only-binary=:all: scipy==1.17.0
+      - name: Solve one common potential across n29 and n30
+        run: |
+          set -euo pipefail
+          R=project/research/general_n/2026-09-09-rx-hall-v1
+          mkdir -p out
+          .venv/bin/python -I -B "$R/cross_order_common_potential.py" \
+            --n30-bc-json "$R/checkpoints/N30_BC_UPPER_CUTGEN_RUN_34348486247.json" \
+            --n30-sh-json "$R/checkpoints/N30_EXCEPTION_SH_SUBSETS_RUN_34351236992.json" \
+            --n29-boundary-json "$R/checkpoints/N29_BOUNDARY_SPECIALISATION_RUN_34364666552.json" \
+            --n29-correction-json "$R/checkpoints/N29_PAIRWISE_CORRECTION_RUN_34365472773.json" \
+            --output out/CROSS_ORDER.json
+      - uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02
+        with:
+          name: cross-order-common-staircase-potential
+          path: out/CROSS_ORDER.json
+          if-no-files-found: error
+          retention-days: 30
+      - name: Commit durable checkpoint
+        run: |
+          set -euo pipefail
+          R=project/research/general_n/2026-09-09-rx-hall-v1/checkpoints
+          P="$R/CROSS_ORDER_COMMON_POTENTIAL_RUN_${GITHUB_RUN_ID}.json"
+          cp out/CROSS_ORDER.json "$P"
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add "$P"
+          git commit -m "Preserve cross-order common potential run ${GITHUB_RUN_ID}"
+          git restore . || true
+          for attempt in 1 2 3 4 5; do
+            if git push origin HEAD:main; then exit 0; fi
+            git pull --rebase --autostash origin main
+            sleep $((attempt*2))
+          done
+          exit 1
