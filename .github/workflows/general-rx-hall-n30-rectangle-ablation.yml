@@ -1,0 +1,69 @@
+name: General RX-Hall n30 rectangle-only dominance ablation
+
+on:
+  workflow_dispatch:
+  push:
+    paths:
+      - 'project/research/general_n/2026-09-09-rx-hall-v1/rz_rectangle_ablation.py'
+      - '.github/workflows/general-rx-hall-n30-rectangle-ablation.yml'
+
+permissions:
+  contents: write
+
+jobs:
+  test:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 30
+    steps:
+      - uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262
+      - name: Pin solver
+        run: |
+          python3 -m venv .venv
+          .venv/bin/python -m pip install --disable-pip-version-check --only-binary=:all: scipy==1.17.0
+      - name: Regenerate seven preserved states
+        run: |
+          set -euo pipefail
+          D=project/research/n30/2026-09-08-minimal-kernel-recon-v1
+          mkdir -p inputs out
+          .venv/bin/python -I -B "$D/n30_prepare.py" --m 225 --output inputs
+          g++ -O3 -std=c++17 "$D/n30_rows.cpp" -o n30_rows
+          ./n30_rows inputs/demands.txt inputs/raw_rows.txt inputs/bands.txt > inputs/ROWS.json
+          .venv/bin/python -I -B "$D/n30_row_threshold.py" --demands inputs/demands.txt --rows inputs/raw_rows.txt --output inputs/all_rows.txt --m 225 > inputs/THRESHOLD.json
+          python3 - <<'PY'
+          import json
+          from pathlib import Path
+          z=Path('inputs/demands.txt').read_text().splitlines();D=[]
+          for line in z[1:]:D.append({'s':list(map(int,line.split()))[:13]})
+          Path('inputs/demands.json').write_text(json.dumps(D,separators=(',',':'))+'\n')
+          cp=json.load(open('project/research/general_n/2026-09-09-rx-hall-v1/checkpoints/N30_RESIDUAL_BUDGET_RUN_34338075220.json'))
+          target={(x['demand_id'],tuple(x['rho'])) for x in cp['unresolved']};keep=[]
+          for line in Path('inputs/all_rows.txt').read_text().splitlines():
+              if not line.strip():continue
+              v=list(map(int,line.split()))
+              if (v[0],tuple(v[2:])) in target:keep.append(line)
+          assert len(keep)==7
+          Path('inputs/seven_rows.txt').write_text('\n'.join(keep)+'\n')
+          PY
+      - name: Exact rectangle-only ablation
+        run: |
+          R=project/research/general_n/2026-09-09-rx-hall-v1
+          .venv/bin/python -I -B "$R/rz_rectangle_ablation.py" --demands-json inputs/demands.json --rows inputs/seven_rows.txt --a 13 --b 16 --dmax 11 --t 1 --output out/RECTANGLE_ABLATION.json
+      - uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02
+        with:
+          name: n30-rectangle-only-dominance-ablation
+          path: out/RECTANGLE_ABLATION.json
+          if-no-files-found: error
+          retention-days: 30
+      - name: Commit durable checkpoint with push retries
+        run: |
+          set -euo pipefail
+          P="project/research/general_n/2026-09-09-rx-hall-v1/checkpoints/N30_RECTANGLE_ABLATION_RUN_${GITHUB_RUN_ID}.json"
+          cp out/RECTANGLE_ABLATION.json "$P"; test -s "$P"
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add "$P"; git commit -m "Preserve n30 rectangle ablation run ${GITHUB_RUN_ID}"
+          for attempt in 1 2 3 4 5; do
+            if git push origin HEAD:main; then exit 0; fi
+            git reset --hard HEAD; git pull --rebase origin main; sleep $((attempt*2))
+          done
+          exit 1
