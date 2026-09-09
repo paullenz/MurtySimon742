@@ -37,10 +37,12 @@ jobs:
           sed -i '/"--pdf-engine=xelatex",/a\        "--lua-filter=project/reviews/reviewer-paper-build/v1/fix_aligned_tags.lua",' "$BUILDER"
           test -s "$FILTER"
           # The front-matter abstract is emitted inside a raw LaTeX abstract
-          # environment. Keep those two general-theorem summaries verbal; the
+          # environment. Keep the two general-theorem summaries entirely verbal;
           # exact formulae are reproduced immediately below in the proof body.
           sed -i 's/proving t < a\^2\/24 + a\/8 in the selected\/residual framework/proving the profile-integral surplus bound in the selected\/residual framework/' "$BUILDER"
+          sed -i 's/deriving the exact rational consequence that, for n at least 6, maximum degree at least (293\/500)n forces strictly fewer than floor(n\^2\/4) edges/deriving an exact rational maximum-degree threshold which, for orders at least six, forces a strict improvement over the balanced complete-bipartite edge bound/' "$BUILDER"
           sed -i 's/yielding the cubic residual inequality 3S\^3 <= a\^2 r(2r+1), the surplus bound t < (4\/81)a\^2 + 1\/8, and/yielding a cubic residual inequality, its resulting surplus bound, and/' "$BUILDER"
+          sed -i 's/the consequence that, for n at least 6, maximum degree at least (13\/22)n forces strictly fewer than floor(n\^2\/4) edges/the consequence that, for orders at least six, the stated rational maximum-degree threshold forces a strict improvement over the balanced complete-bipartite edge bound/' "$BUILDER"
           # FreeSerif covers the Greek and mathematical relation/set symbols that
           # occur in prose outside TeX math blocks across the current papers.
           sed -i '/"-V", "fontsize=11pt",/a\        "-V", "mainfont=FreeSerif",\n        "-V", "sansfont=FreeSans",\n        "-V", "monofont=FreeMono",' "$BUILDER"
