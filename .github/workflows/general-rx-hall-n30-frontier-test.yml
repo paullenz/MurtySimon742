@@ -20,14 +20,14 @@ jobs:
         run: |
           python3 -m venv .venv
           .venv/bin/python -m pip install --disable-pip-version-check --only-binary=:all: scipy==1.17.0
-      - name: Exact bounded-frontier tests
+      - name: Exact frontier-size-nine test
         run: |
           set -euo pipefail
           R=project/research/general_n/2026-09-09-rx-hall-v1
           mkdir -p out
           .venv/bin/python -I -B "$R/rz_hall_frontier_test.py" \
             --hall-json "$R/checkpoints/N30_HALL_CUTGEN_RUN_34345029651.json" \
-            --a 13 --b 16 --dmax 11 --t 1 --output out/FRONTIER_TEST.json
+            --a 13 --b 16 --dmax 11 --t 1 --ks 9 --output out/FRONTIER_TEST.json
       - uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02
         with:
           name: n30-bounded-hall-frontier-test
@@ -43,7 +43,7 @@ jobs:
           git config user.name 'github-actions[bot]'
           git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
           git add "$P"
-          git commit -m "Preserve n30 bounded Hall-frontier run ${GITHUB_RUN_ID}"
+          git commit -m "Preserve n30 Hall-frontier-nine run ${GITHUB_RUN_ID}"
           for attempt in 1 2 3 4 5; do
             if git push origin HEAD:main; then exit 0; fi
             git pull --rebase origin main
