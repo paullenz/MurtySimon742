@@ -1,0 +1,72 @@
+name: Fan-free n25/n27 upper-range scan
+
+on:
+  workflow_dispatch:
+  push:
+    paths:
+      - 'project/research/fan-free-fixed-orders/2026-09-09-v1/fan_free_outer.cpp'
+      - '.github/workflows/fan-free-fixed-order-upper-scan.yml'
+
+jobs:
+  scan:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 60
+    strategy:
+      fail-fast: false
+      matrix:
+        include:
+          - n: 25
+            delta: 14
+            first: 158
+            last: 175
+          - n: 25
+            delta: 15
+            first: 158
+            last: 187
+          - n: 25
+            delta: 16
+            first: 158
+            last: 200
+          - n: 27
+            delta: 15
+            first: 184
+            last: 202
+          - n: 27
+            delta: 16
+            first: 184
+            last: 216
+          - n: 27
+            delta: 17
+            first: 184
+            last: 229
+    steps:
+      - uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262
+      - name: Build exact verifier
+        run: |
+          g++ -O3 -std=c++17 project/research/fan-free-fixed-orders/2026-09-09-v1/fan_free_outer.cpp -o fan_free_outer
+      - name: Scan every larger edge count
+        shell: bash
+        run: |
+          set -uo pipefail
+          : > fan-free-${{ matrix.n }}-${{ matrix.delta }}.jsonl
+          bad=0
+          for m in $(seq ${{ matrix.first }} ${{ matrix.last }}); do
+            set +e
+            row=$(./fan_free_outer ${{ matrix.n }} ${{ matrix.delta }} "$m")
+            rc=$?
+            set -e
+            printf '%s\n' "$row" | tee -a fan-free-${{ matrix.n }}-${{ matrix.delta }}.jsonl
+            if [ "$rc" -eq 1 ]; then
+              echo "verifier error at m=$m" >&2
+              exit 1
+            fi
+            if [ "$rc" -eq 2 ]; then bad=1; fi
+          done
+          echo "bad=$bad" >> "$GITHUB_ENV"
+      - uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02
+        with:
+          name: fan-free-${{ matrix.n }}-${{ matrix.delta }}
+          path: fan-free-${{ matrix.n }}-${{ matrix.delta }}.jsonl
+          retention-days: 30
+      - name: Require zero outer survivors
+        run: test "${bad}" = 0
