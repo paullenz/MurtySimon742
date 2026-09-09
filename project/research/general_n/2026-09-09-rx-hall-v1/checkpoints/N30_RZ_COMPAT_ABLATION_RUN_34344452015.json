@@ -1,0 +1,64 @@
+{
+  "interpretation": "Exact integer-Farkas ablation of the three Z-edge compatibility conditions, with source-group caps absent throughout.",
+  "modes": {
+    "A": {
+      "exact_rejections": 0,
+      "rejected_positions": [],
+      "survivors": 7
+    },
+    "AB": {
+      "exact_rejections": 0,
+      "rejected_positions": [],
+      "survivors": 7
+    },
+    "ABC": {
+      "exact_rejections": 7,
+      "rejected_positions": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6
+      ],
+      "survivors": 0
+    },
+    "AC": {
+      "exact_rejections": 2,
+      "rejected_positions": [
+        2,
+        5
+      ],
+      "survivors": 5
+    },
+    "B": {
+      "exact_rejections": 0,
+      "rejected_positions": [],
+      "survivors": 7
+    },
+    "BC": {
+      "exact_rejections": 6,
+      "rejected_positions": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6
+      ],
+      "survivors": 1
+    },
+    "C": {
+      "exact_rejections": 0,
+      "rejected_positions": [],
+      "survivors": 7
+    },
+    "NONE": {
+      "exact_rejections": 0,
+      "rejected_positions": [],
+      "survivors": 7
+    }
+  },
+  "schema": "rz-compatibility-edge-ablation-summary-v1"
+}
