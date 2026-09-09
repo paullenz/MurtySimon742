@@ -1,0 +1,86 @@
+{
+  "attempts": [
+    {
+      "bound_violations": [],
+      "correct_scaled_rhs_rule": true,
+      "denominator_scale": 1000000,
+      "proposal_boost": 2,
+      "repair_count": 436,
+      "repair_max": 18,
+      "repair_total": 4352,
+      "required_profile_margin_numerator": -1000000,
+      "row_violations": [],
+      "worst_margin_numerator": -1999745,
+      "zero_rhs_max_lhs": 0
+    }
+  ],
+  "bound_violations": [],
+  "correct_scaled_rhs_rule": true,
+  "denominator_scale": 1000000,
+  "feature_count": 9,
+  "features": [
+    [
+      0,
+      0
+    ],
+    [
+      0,
+      2
+    ],
+    [
+      1,
+      7
+    ],
+    [
+      1,
+      8
+    ],
+    [
+      1,
+      9
+    ],
+    [
+      1,
+      10
+    ],
+    [
+      1,
+      11
+    ],
+    [
+      2,
+      0
+    ],
+    [
+      4,
+      0
+    ]
+  ],
+  "floating_point_proposal_only": true,
+  "integer_arithmetic_only_acceptance": true,
+  "integer_feature_numerators": {
+    "('H', 0, 0)": 37560,
+    "('H', 0, 2)": 49946,
+    "('H', 1, 10)": 53106,
+    "('H', 1, 11)": 578047,
+    "('H', 1, 7)": 173153,
+    "('H', 1, 8)": 75120,
+    "('H', 1, 9)": 99892,
+    "('H', 2, 0)": 86576,
+    "('H', 4, 0)": 14765
+  },
+  "interpretation": "PASS gives one exact rational BC-only analytic min-hinge potential across all 94 regenerated n29 t=3 hard profiles. Finite evidence conditional on the RX-Hall bridge/frontier preparation.",
+  "profiles": 94,
+  "proposal_boost": 2,
+  "repair_count": 436,
+  "repair_max": 18,
+  "repair_total": 4352,
+  "required_profile_margin_numerator": -1000000,
+  "row_violations": [],
+  "rows": 30646,
+  "schema": "n29-t3-min-hinge-exact-v1",
+  "status": "PASS",
+  "variables": 2081,
+  "worst_margin_numerator": -1999745,
+  "zero_rhs_max_lhs": 0
+}
