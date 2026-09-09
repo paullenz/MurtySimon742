@@ -64,7 +64,7 @@ jobs:
           import json,pathlib
           p=pathlib.Path('out/certificates.json.gz.report.json'); assert p.exists()
           r=json.load(open(p)); assert r['hard_rows']==${{ matrix.hard }}
-          o={'schema':'n30-rx4-hall-core-falsification-v2','m':${{ matrix.m }},'t':${{ matrix.t }},'hard_rows':r['hard_rows'],'exact_integer_farkas_rejections':r['exact_integer_farkas_rejections'],'unresolved_count':len(r['unresolved']),'unresolved':r['unresolved'],'status':'PASS_ALL_REJECTED' if not r['unresolved'] else 'SURVIVORS','uses_rx4':True,'removes_R_P_Z':True,'two_rectangle_hall_only':True}
+          o={'schema':'n30-rx4-hall-core-falsification-v3','m':${{ matrix.m }},'t':${{ matrix.t }},'hard_rows':r['hard_rows'],'exact_integer_farkas_rejections':r['exact_integer_farkas_rejections'],'unresolved_count':len(r['unresolved']),'unresolved':r['unresolved'],'status':'PASS_ALL_REJECTED' if not r['unresolved'] else 'SURVIVORS','uses_rx4':True,'removes_R_P_Z':True,'two_rectangle_hall_only':True}
           pathlib.Path('out/CLASSIFICATION.json').write_text(json.dumps(o,indent=2,sort_keys=True)+'\n'); print(json.dumps(o,indent=2,sort_keys=True))
           PY
       - uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02
@@ -86,9 +86,6 @@ jobs:
     if: always()
     runs-on: ubuntu-24.04
     steps:
-      - uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262
-        with:
-          ref: main
       - uses: actions/download-artifact@d3f86a106a0bac45b974a628896c90dbdf5c8093
         with:
           pattern: 'n30-rx4-core-m*'
@@ -96,7 +93,7 @@ jobs:
       - name: Consolidate durable checkpoint
         run: |
           set -euo pipefail
-          mkdir -p project/research/general_n/2026-09-09-rx-hall-v1/checkpoints
+          mkdir -p out
           python3 - <<'PY'
           import json,pathlib
           docs=[]
@@ -104,26 +101,15 @@ jobs:
               docs.append(json.load(open(p)))
           docs=sorted(docs,key=lambda d:d['m'],reverse=True)
           assert [d['m'] for d in docs]==[226,225],docs
-          out={
-            'schema':'n30-rx4-hall-core-checkpoint-v1',
-            'status':'COMPLETE_REJECTION' if all(d['unresolved_count']==0 for d in docs) else 'SURVIVORS_PRESERVED',
-            'results':docs,
-            'interpretation':'Necessary-condition Hall core only; survivors are relaxation states, not graphs. Existing n30 proof is unaffected.'
-          }
-          q=pathlib.Path('project/research/general_n/2026-09-09-rx-hall-v1/checkpoints/N30_RX4_CORE_LATEST.json')
-          q.write_text(json.dumps(out,indent=2,sort_keys=True)+'\n')
+          out={'schema':'n30-rx4-hall-core-checkpoint-v2','run_id':'${{ github.run_id }}','status':'COMPLETE_REJECTION' if all(d['unresolved_count']==0 for d in docs) else 'SURVIVORS_PRESERVED','results':docs,'interpretation':'Necessary-condition Hall core only; survivors are relaxation states, not graphs. Existing n30 proof is unaffected.'}
+          pathlib.Path('out/checkpoint.json').write_text(json.dumps(out,indent=2,sort_keys=True)+'\n')
           print(json.dumps(out,indent=2,sort_keys=True))
           PY
-      - name: Commit checkpoint
+      - name: Publish unique checkpoint through contents API
+        env:
+          GH_TOKEN: ${{ github.token }}
         run: |
           set -euo pipefail
-          git config user.name 'github-actions[bot]'
-          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
-          git add project/research/general_n/2026-09-09-rx-hall-v1/checkpoints/N30_RX4_CORE_LATEST.json
-          if git diff --cached --quiet; then
-            echo 'checkpoint unchanged'
-          else
-            git commit -m 'Preserve n30 RX4 Hall-core checkpoint'
-            git pull --rebase origin main
-            git push origin HEAD:main
-          fi
+          P="project/research/general_n/2026-09-09-rx-hall-v1/checkpoints/N30_RX4_CORE_RUN_${GITHUB_RUN_ID}.json"
+          C=$(base64 -w0 out/checkpoint.json)
+          gh api --method PUT "repos/${GITHUB_REPOSITORY}/contents/${P}" -f message="Preserve n30 RX4 Hall-core run ${GITHUB_RUN_ID}" -f content="$C" -f branch=main
