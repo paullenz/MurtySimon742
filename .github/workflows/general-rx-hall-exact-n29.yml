@@ -1,0 +1,144 @@
+name: General RX-Hall n29 exact certificates
+
+on:
+  workflow_dispatch:
+  push:
+    paths:
+      - 'project/research/general_n/2026-09-09-rx-hall-v1/rx_hall_scan.py'
+      - 'project/research/general_n/2026-09-09-rx-hall-v1/rx_hall_exact.py'
+      - '.github/workflows/general-rx-hall-exact-n29.yml'
+
+permissions:
+  contents: read
+  actions: read
+
+jobs:
+  exact:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 20
+    strategy:
+      fail-fast: false
+      matrix:
+        include:
+          - {t: 3, shard: 0, shards: 1, expected: 94}
+          - {t: 2, shard: 0, shards: 12, expected: 902}
+          - {t: 2, shard: 1, shards: 12, expected: 902}
+          - {t: 2, shard: 2, shards: 12, expected: 902}
+          - {t: 2, shard: 3, shards: 12, expected: 902}
+          - {t: 2, shard: 4, shards: 12, expected: 902}
+          - {t: 2, shard: 5, shards: 12, expected: 902}
+          - {t: 2, shard: 6, shards: 12, expected: 902}
+          - {t: 2, shard: 7, shards: 12, expected: 902}
+          - {t: 2, shard: 8, shards: 12, expected: 902}
+          - {t: 2, shard: 9, shards: 12, expected: 902}
+          - {t: 2, shard: 10, shards: 12, expected: 902}
+          - {t: 2, shard: 11, shards: 12, expected: 902}
+    steps:
+      - uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262
+      - uses: actions/download-artifact@d3f86a106a0bac45b974a628896c90dbdf5c8093
+        with:
+          name: n29-minimal-kernel-inputs
+          path: inputs
+          github-token: ${{ github.token }}
+          run-id: 34274211354
+      - name: Pin certificate proposer
+        run: |
+          set -euo pipefail
+          python3 -m venv .venv
+          .venv/bin/python -m pip install --disable-pip-version-check --only-binary=:all: scipy==1.17.0
+      - name: Generate and verify exact RX-Hall certificates
+        run: |
+          set -euo pipefail
+          D=project/research/general_n/2026-09-09-rx-hall-v1
+          mkdir -p out
+          .venv/bin/python -I -B "$D/rx_hall_exact.py" \
+            --demands-json inputs/t${{ matrix.t }}/demands.json \
+            --rows inputs/t${{ matrix.t }}/row_survivors.txt \
+            --a 12 --b 16 --dmax 10 --t ${{ matrix.t }} \
+            --shard ${{ matrix.shard }} --shards ${{ matrix.shards }} \
+            --output out/certificates.json.gz
+          python3 - <<'PY'
+          import json
+          p='out/certificates.json.gz.report.json'
+          r=json.load(open(p))
+          assert r['hard_rows_total']==${{ matrix.expected }}
+          assert r['exact_rejections']==r['rows_in_shard']
+          assert not r['unresolved']
+          assert r['unit_density_bounds'] is True
+          assert r['uses_unordered_pair_aggregate_capacity'] is False
+          assert r['uses_cumulative_tail_variables'] is False
+          assert r['floating_point_is_proposal_only'] is True
+          assert r['integer_farkas_is_acceptance'] is True
+          print('exact RX-Hall shard verified')
+          PY
+      - uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02
+        if: always()
+        with:
+          name: rx-hall-exact-t${{ matrix.t }}-s${{ matrix.shard }}
+          path: |
+            out/certificates.json.gz
+            out/certificates.json.gz.report.json
+          if-no-files-found: error
+          retention-days: 30
+
+  aggregate:
+    needs: exact
+    if: always()
+    runs-on: ubuntu-24.04
+    steps:
+      - uses: actions/download-artifact@d3f86a106a0bac45b974a628896c90dbdf5c8093
+        with:
+          pattern: 'rx-hall-exact-t*-s*'
+          path: reports
+      - name: Aggregate complete exact replay
+        run: |
+          set -euo pipefail
+          python3 - <<'PY'
+          import json,pathlib
+          docs=[]
+          for p in pathlib.Path('reports').rglob('certificates.json.gz.report.json'):
+              docs.append(json.load(open(p)))
+          assert len(docs)==13, len(docs)
+          result={}
+          for t,expected in [(3,94),(2,902)]:
+              z=[r for r in docs if r['scope']['t']==t]
+              assert len(z)==(1 if t==3 else 12), (t,len(z))
+              assert all(r['hard_rows_total']==expected for r in z)
+              tested=sum(r['rows_in_shard'] for r in z)
+              rejected=sum(r['exact_rejections'] for r in z)
+              unresolved=sum(len(r['unresolved']) for r in z)
+              assert tested==expected, (t,tested,expected)
+              assert rejected==expected, (t,rejected,expected)
+              assert unresolved==0, (t,unresolved)
+              assert all(r['unit_density_bounds'] is True for r in z)
+              assert all(r['uses_unordered_pair_aggregate_capacity'] is False for r in z)
+              assert all(r['uses_cumulative_tail_variables'] is False for r in z)
+              result[str(t)]={
+                  'hard_rows':expected,
+                  'exact_integer_farkas_rejections':rejected,
+                  'unresolved':0,
+                  'rhs_min':min(r['rhs_min'] for r in z),
+                  'rhs_max':max(r['rhs_max'] for r in z),
+              }
+          out={
+              'schema':'general-rx-hall-n29-exact-aggregate-v1',
+              'status':'PASS_EXACT_REPLAY',
+              'results':result,
+              'total_hard_rows':996,
+              'total_exact_integer_farkas_rejections':996,
+              'final_unresolved':0,
+              'unit_density_bounds':True,
+              'uses_unordered_pair_aggregate_capacity':False,
+              'uses_cumulative_tail_variables':False,
+              'floating_point_is_proposal_only':True,
+              'integer_farkas_is_acceptance':True,
+          }
+          pathlib.Path('RX_HALL_N29_EXACT_REPORT.json').write_text(json.dumps(out,indent=2,sort_keys=True)+'\n')
+          print(json.dumps(out,indent=2,sort_keys=True))
+          PY
+      - uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02
+        with:
+          name: rx-hall-n29-exact-aggregate
+          path: RX_HALL_N29_EXACT_REPORT.json
+          if-no-files-found: error
+          retention-days: 30
