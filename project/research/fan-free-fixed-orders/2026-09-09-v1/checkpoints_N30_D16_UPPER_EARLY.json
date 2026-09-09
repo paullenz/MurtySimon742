@@ -1,0 +1,28 @@
+{
+  "Delta": 16,
+  "a": 13,
+  "all_final_survivors_zero": true,
+  "b": 16,
+  "dual_acceptance": "exact integer/rational checks inside established source-capacity implementation",
+  "n": 30,
+  "results": {
+    "231": {"charging_feasible_profiles":1360,"counts":{"dual":2,"source_count":12,"threshold":1346},"exact_dual_count":2,"final_survivors":0,"minimum_dual_margin":30,"minimum_threshold_margin":2,"t":7},
+    "232": {"charging_feasible_profiles":238,"counts":{"threshold":238},"exact_dual_count":0,"final_survivors":0,"minimum_dual_margin":null,"minimum_threshold_margin":2,"t":8},
+    "233": {"charging_feasible_profiles":9,"counts":{"threshold":9},"exact_dual_count":0,"final_survivors":0,"minimum_dual_margin":null,"minimum_threshold_margin":6,"t":9},
+    "234": {"charging_feasible_profiles":0,"counts":{},"exact_dual_count":0,"final_survivors":0,"minimum_dual_margin":null,"minimum_threshold_margin":null,"t":10},
+    "235": {"charging_feasible_profiles":0,"counts":{},"exact_dual_count":0,"final_survivors":0,"minimum_dual_margin":null,"minimum_threshold_margin":null,"t":11},
+    "236": {"charging_feasible_profiles":0,"counts":{},"exact_dual_count":0,"final_survivors":0,"minimum_dual_margin":null,"minimum_threshold_margin":null,"t":12},
+    "237": {"charging_feasible_profiles":0,"counts":{},"exact_dual_count":0,"final_survivors":0,"minimum_dual_margin":null,"minimum_threshold_margin":null,"t":13},
+    "238": {"charging_feasible_profiles":0,"counts":{},"exact_dual_count":0,"final_survivors":0,"minimum_dual_margin":null,"minimum_threshold_margin":null,"t":14},
+    "239": {"charging_feasible_profiles":0,"counts":{},"exact_dual_count":0,"final_survivors":0,"minimum_dual_margin":null,"minimum_threshold_margin":null,"t":15},
+    "240": {"charging_feasible_profiles":0,"counts":{},"exact_dual_count":0,"final_survivors":0,"minimum_dual_margin":null,"minimum_threshold_margin":null,"t":16}
+  },
+  "schema": "fan-free-n30-d16-upper-early-v1",
+  "status": "candidate fixed-order proof component; independent review open",
+  "provenance": {
+    "workflow_run": 34396592020,
+    "artifact_id": 10121747486,
+    "artifact_sha256": "b92efe1f4afe87ec1e3fa7d912713b9e84d98a07f4a953fba5efcd9df2020157",
+    "publication_recovery": "workflow computation and artifact upload succeeded; only final concurrent Git push failed"
+  }
+}
