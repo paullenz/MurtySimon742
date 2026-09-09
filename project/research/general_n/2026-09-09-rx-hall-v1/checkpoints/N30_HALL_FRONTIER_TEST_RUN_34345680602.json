@@ -1,0 +1,173 @@
+{
+  "interpretation": "Exact test using only already-generated Hall cuts with canonical maximal-neighbourhood frontier size <=K. Non-rejection does not exclude undiscovered K-frontier cuts.",
+  "records": [
+    {
+      "demand_id": 2094,
+      "frontier_histogram": {
+        "1": 1,
+        "2": 1,
+        "3": 12,
+        "4": 35,
+        "5": 63,
+        "6": 79,
+        "7": 43,
+        "8": 40,
+        "9": 8
+      },
+      "generated_cuts": 282,
+      "hard_position": 0,
+      "tests": {
+        "9": {
+          "certificate_rhs": -464,
+          "cuts_kept": 282,
+          "rejected_exactly": true
+        }
+      }
+    },
+    {
+      "demand_id": 2309,
+      "frontier_histogram": {
+        "1": 2,
+        "2": 6,
+        "3": 26,
+        "4": 23,
+        "5": 23,
+        "6": 19,
+        "7": 2
+      },
+      "generated_cuts": 101,
+      "hard_position": 1,
+      "tests": {
+        "9": {
+          "certificate_rhs": -597,
+          "cuts_kept": 101,
+          "rejected_exactly": true
+        }
+      }
+    },
+    {
+      "demand_id": 2596,
+      "frontier_histogram": {
+        "10": 5,
+        "2": 3,
+        "3": 15,
+        "4": 23,
+        "5": 45,
+        "6": 45,
+        "7": 36,
+        "8": 17,
+        "9": 6
+      },
+      "generated_cuts": 195,
+      "hard_position": 2,
+      "tests": {
+        "9": {
+          "certificate_rhs": -459,
+          "cuts_kept": 190,
+          "rejected_exactly": true
+        }
+      }
+    },
+    {
+      "demand_id": 2701,
+      "frontier_histogram": {
+        "2": 3,
+        "3": 12,
+        "4": 26,
+        "5": 34,
+        "6": 56,
+        "7": 27,
+        "8": 15
+      },
+      "generated_cuts": 173,
+      "hard_position": 3,
+      "tests": {
+        "9": {
+          "certificate_rhs": -499,
+          "cuts_kept": 173,
+          "rejected_exactly": true
+        }
+      }
+    },
+    {
+      "demand_id": 2812,
+      "frontier_histogram": {
+        "10": 2,
+        "2": 5,
+        "3": 21,
+        "4": 20,
+        "5": 40,
+        "6": 27,
+        "7": 20,
+        "8": 6
+      },
+      "generated_cuts": 141,
+      "hard_position": 4,
+      "tests": {
+        "9": {
+          "certificate_rhs": null,
+          "cuts_kept": 139,
+          "rejected_exactly": false
+        }
+      }
+    },
+    {
+      "demand_id": 2984,
+      "frontier_histogram": {
+        "1": 1,
+        "2": 10,
+        "3": 29,
+        "4": 25,
+        "5": 14,
+        "6": 14,
+        "7": 1
+      },
+      "generated_cuts": 94,
+      "hard_position": 5,
+      "tests": {
+        "9": {
+          "certificate_rhs": -673,
+          "cuts_kept": 94,
+          "rejected_exactly": true
+        }
+      }
+    },
+    {
+      "demand_id": 2984,
+      "frontier_histogram": {
+        "2": 7,
+        "3": 19,
+        "4": 23,
+        "5": 32,
+        "6": 22,
+        "7": 7,
+        "8": 3
+      },
+      "generated_cuts": 113,
+      "hard_position": 6,
+      "tests": {
+        "9": {
+          "certificate_rhs": -999647,
+          "cuts_kept": 113,
+          "rejected_exactly": true
+        }
+      }
+    }
+  ],
+  "schema": "rz-hall-bounded-frontier-test-v1",
+  "source_checkpoint": "project/research/general_n/2026-09-09-rx-hall-v1/checkpoints/N30_HALL_CUTGEN_RUN_34345029651.json",
+  "summary": {
+    "9": {
+      "exact_rejections": 6,
+      "rejected_positions": [
+        0,
+        1,
+        2,
+        3,
+        5,
+        6
+      ],
+      "survivors": 1
+    }
+  }
+}
