@@ -1,0 +1,54 @@
+name: Build Fan-free v2 proofs for n28-n30
+
+on:
+  workflow_dispatch:
+  push:
+    paths:
+      - 'project/research/fan-free-fixed-orders/2026-09-09-v1/build_fixed_order_fan_free_v2.py'
+      - 'project/research/fan-free-fixed-orders/2026-09-09-v1/FAN_FREE_REDUCTION.md'
+      - '.github/workflows/build-fixed-order-fan-free-v2.yml'
+
+permissions:
+  contents: write
+
+jobs:
+  build:
+    runs-on: ubuntu-24.04
+    steps:
+      - uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262
+        with:
+          fetch-depth: 0
+      - name: Build deterministic proof editions
+        run: python3 -I -B project/research/fan-free-fixed-orders/2026-09-09-v1/build_fixed_order_fan_free_v2.py
+      - name: Semantic checks
+        run: |
+          set -euo pipefail
+          grep -q 'not a logical dependency' project/reviews/n29/2026-09-09-fan-free-v2/PROOF.md
+          grep -q 'not a logical dependency' project/reviews/n30/2026-09-09-fan-free-v2/PROOF.md
+          grep -q 'not.*logical dependency' project/reviews/n28/2026-09-09-fan-free-v2/PROOF.tex
+          ! grep -q "Fan's strict bound leaves" project/reviews/n29/2026-09-09-fan-free-v2/PROOF.md
+          ! grep -q "Fan's strict bound gives" project/reviews/n30/2026-09-09-fan-free-v2/PROOF.md
+          echo '--- n28 Fan references ---'
+          grep -n -i Fan project/reviews/n28/2026-09-09-fan-free-v2/PROOF.tex || true
+          echo '--- n29 Fan references ---'
+          grep -n -i Fan project/reviews/n29/2026-09-09-fan-free-v2/PROOF.md || true
+          echo '--- n30 Fan references ---'
+          grep -n -i Fan project/reviews/n30/2026-09-09-fan-free-v2/PROOF.md || true
+      - name: Commit proof editions
+        run: |
+          set -euo pipefail
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add project/reviews/n28/2026-09-09-fan-free-v2 project/reviews/n29/2026-09-09-fan-free-v2 project/reviews/n30/2026-09-09-fan-free-v2
+          git commit -m 'Publish Fan-free v2 proofs for n28 n29 n30' || exit 0
+          git restore . || true
+          for attempt in 1 2 3 4 5; do
+            if git push origin HEAD:main; then exit 0; fi
+            git reset --hard HEAD
+            git pull --rebase origin main
+            python3 -I -B project/research/fan-free-fixed-orders/2026-09-09-v1/build_fixed_order_fan_free_v2.py
+            git add project/reviews/n28/2026-09-09-fan-free-v2 project/reviews/n29/2026-09-09-fan-free-v2 project/reviews/n30/2026-09-09-fan-free-v2
+            git commit -m 'Publish Fan-free v2 proofs for n28 n29 n30' || true
+            sleep $((attempt*2))
+          done
+          exit 1
