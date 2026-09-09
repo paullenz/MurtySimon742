@@ -1,0 +1,30 @@
+{
+  "Delta": 15,
+  "a": 12,
+  "all_final_survivors_zero": true,
+  "b": 15,
+  "dual_acceptance": "exact integer/rational checks inside established source-capacity implementation",
+  "n": 28,
+  "parameterized_source": "project/research/n30/2026-09-09-delta17-v1/delta17_kernel.py",
+  "results": {
+    "200": {"charging_feasible_profiles":1155,"counts":{"dual":18,"source_count":67,"threshold":1070},"exact_dual_count":18,"final_survivors":0,"minimum_dual_margin":3,"minimum_threshold_margin":2,"t":5},
+    "201": {"charging_feasible_profiles":250,"counts":{"threshold":250},"exact_dual_count":0,"final_survivors":0,"minimum_dual_margin":null,"minimum_threshold_margin":2,"t":6},
+    "202": {"charging_feasible_profiles":15,"counts":{"threshold":15},"exact_dual_count":0,"final_survivors":0,"minimum_dual_margin":null,"minimum_threshold_margin":10,"t":7},
+    "203": {"charging_feasible_profiles":0,"counts":{},"exact_dual_count":0,"final_survivors":0,"minimum_dual_margin":null,"minimum_threshold_margin":null,"t":8},
+    "204": {"charging_feasible_profiles":0,"counts":{},"exact_dual_count":0,"final_survivors":0,"minimum_dual_margin":null,"minimum_threshold_margin":null,"t":9},
+    "205": {"charging_feasible_profiles":0,"counts":{},"exact_dual_count":0,"final_survivors":0,"minimum_dual_margin":null,"minimum_threshold_margin":null,"t":10},
+    "206": {"charging_feasible_profiles":0,"counts":{},"exact_dual_count":0,"final_survivors":0,"minimum_dual_margin":null,"minimum_threshold_margin":null,"t":11},
+    "207": {"charging_feasible_profiles":0,"counts":{},"exact_dual_count":0,"final_survivors":0,"minimum_dual_margin":null,"minimum_threshold_margin":null,"t":12},
+    "208": {"charging_feasible_profiles":0,"counts":{},"exact_dual_count":0,"final_survivors":0,"minimum_dual_margin":null,"minimum_threshold_margin":null,"t":13},
+    "209": {"charging_feasible_profiles":0,"counts":{},"exact_dual_count":0,"final_survivors":0,"minimum_dual_margin":null,"minimum_threshold_margin":null,"t":14},
+    "210": {"charging_feasible_profiles":0,"counts":{},"exact_dual_count":0,"final_survivors":0,"minimum_dual_margin":null,"minimum_threshold_margin":null,"t":15}
+  },
+  "schema": "fan-free-n28-d15-upper-early-v1",
+  "status": "candidate fixed-order proof component; independent review open",
+  "provenance": {
+    "workflow_run": 34397027512,
+    "artifact_id": 10121913044,
+    "artifact_sha256": "aef829a157de26e2c92ca3ea131778e290026988c079142d37c00023e0d17108",
+    "publication_recovery": "workflow computation and artifact upload succeeded; only final concurrent Git push failed"
+  }
+}
