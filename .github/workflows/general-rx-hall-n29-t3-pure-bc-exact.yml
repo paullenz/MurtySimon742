@@ -1,0 +1,71 @@
+name: General RX-Hall n29 t3 exact pure-BC common potential
+
+on:
+  workflow_dispatch:
+  push:
+    paths:
+      - '.github/workflows/general-rx-hall-n29-t3-pure-bc-exact.yml'
+
+permissions:
+  contents: write
+
+jobs:
+  exactify:
+    strategy:
+      fail-fast: false
+      matrix:
+        candidate: [M200,M1000,union]
+    runs-on: ubuntu-24.04
+    timeout-minutes: 20
+    steps:
+      - uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262
+        with:
+          fetch-depth: 0
+      - name: Pin proposal solver
+        run: |
+          python3 -m venv .venv
+          .venv/bin/python -m pip install --disable-pip-version-check --only-binary=:all: scipy==1.17.0
+      - name: Regenerate n29 t3 frontier
+        run: |
+          set -euo pipefail
+          D=project/reviews/n29/2026-09-08-redteam-restart-v1
+          mkdir -p inputs out
+          g++ -O3 -std=c++17 "$D/minimal_rows.cpp" -o minimal_rows
+          .venv/bin/python -I -B "$D/minimal_prepare.py" --t 3 --output inputs
+          ./minimal_rows inputs/demands.txt inputs/row_survivors.txt inputs/row_bands.txt 3 > inputs/MINIMAL_ROWS_REPORT.json
+      - name: Exactify ${{ matrix.candidate }} pure-BC support
+        run: |
+          set -euo pipefail
+          R=project/research/general_n/2026-09-09-rx-hall-v1
+          .venv/bin/python -I -B "$R/n29_t3_pure_bc_exactify.py" \
+            --demands inputs/demands.json --rows inputs/row_survivors.txt \
+            --dictionary-json "$R/N29_CANONICAL_DICTIONARY.json" \
+            --min-sh-json "$R/checkpoints/N29_MIN_SH_FULLBC_T3_RUN_34382374167.json" \
+            --candidate ${{ matrix.candidate }} \
+            --output out/${{ matrix.candidate }}.json
+      - uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02
+        if: always()
+        with:
+          name: n29-t3-pure-bc-exact-${{ matrix.candidate }}
+          path: out/${{ matrix.candidate }}.json
+          if-no-files-found: error
+          retention-days: 30
+      - name: Commit exact checkpoint
+        if: success()
+        run: |
+          set -euo pipefail
+          R=project/research/general_n/2026-09-09-rx-hall-v1/checkpoints
+          P="$R/N29_T3_PURE_BC_EXACT_${{ matrix.candidate }}_RUN_${GITHUB_RUN_ID}.json"
+          cp out/${{ matrix.candidate }}.json "$P"
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add "$P"
+          git commit -m "Preserve exact n29 t3 pure-BC ${{ matrix.candidate }} run ${GITHUB_RUN_ID}" || exit 0
+          git restore . || true
+          for attempt in 1 2 3 4 5; do
+            if git push origin HEAD:main; then exit 0; fi
+            git reset --hard HEAD
+            git pull --rebase origin main
+            sleep $((attempt*2))
+          done
+          exit 1
