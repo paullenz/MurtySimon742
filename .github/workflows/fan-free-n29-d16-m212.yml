@@ -1,0 +1,92 @@
+name: Fan-free n29 Delta16 m212 trusted-kernel closure
+
+on:
+  workflow_dispatch:
+  push:
+    paths:
+      - '.github/workflows/fan-free-n29-d16-m212.yml'
+
+permissions:
+  contents: write
+
+jobs:
+  close:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 30
+    steps:
+      - uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262
+        with:
+          fetch-depth: 0
+      - name: Pin solver dependency
+        run: |
+          python3 -m venv .venv
+          .venv/bin/python -m pip install --disable-pip-version-check --only-binary=:all: scipy==1.17.0
+      - name: Generate complete t=4 minimal frontier
+        run: |
+          set -euo pipefail
+          D=project/reviews/n29/2026-09-08-redteam-restart-v1
+          mkdir -p prepared reports
+          g++ -O3 -std=c++17 "$D/minimal_rows.cpp" -o minimal_rows
+          .venv/bin/python -I -B "$D/minimal_prepare.py" --t 4 --output prepared
+          ./minimal_rows prepared/demands.txt prepared/row_survivors.txt prepared/row_bands.txt 4 > prepared/MINIMAL_ROWS_REPORT.json
+          cat prepared/MINIMAL_PREPARE_REPORT.json
+          cat prepared/MINIMAL_ROWS_REPORT.json
+      - name: Generate exact certificate set
+        run: |
+          D=project/reviews/n29/2026-09-08-redteam-restart-v1
+          .venv/bin/python -I -B "$D/run_minimal_kernel.py" --root prepared --t 4 --shard 0 --shards 1 --workers 4 --output reports/t4.json.gz
+      - name: Independently rebuild and exactly verify every certificate
+        run: |
+          set -euo pipefail
+          D=project/reviews/n29/2026-09-08-redteam-restart-v1
+          D="$D" .venv/bin/python -I - <<'PY'
+          import gzip,json,os,sys,hashlib
+          from pathlib import Path
+          D=Path(os.environ['D']);sys.path.insert(0,str(D))
+          from independent_threshold_model_v2 import build,verify_certificate
+          demands=json.load(open('prepared/demands.json'))
+          rows=[list(map(int,x.split())) for x in open('prepared/row_survivors.txt') if x.strip()]
+          rec=json.loads(gzip.decompress(Path('reports/t4.json.gz').read_bytes()))
+          rec.sort(key=lambda x:x['position'])
+          assert len(rec)==len(rows)
+          assert [x['position'] for x in rec]==list(range(len(rows)))
+          for x in rec:
+              row=rows[x['position']]
+              m=build(demands[row[0]]['s'],row[2:],4)
+              verify_certificate(m,x['certificate'])
+          prep=json.load(open('prepared/MINIMAL_PREPARE_REPORT.json'))
+          rr=json.load(open('prepared/MINIMAL_ROWS_REPORT.json'))
+          rhs=[x['certificate']['rhs'] for x in rec]
+          out={'schema':'fan-free-n29-d16-m212-v1','n':29,'Delta':16,'m':212,'a':12,'b':16,'t':4,
+               'retained_demands':prep['retained_demands'],'residual_rows':len(rows),'exact_rejections':len(rec),'final_survivors':0,
+               'rhs_min':min(rhs) if rhs else None,'rhs_max':max(rhs) if rhs else None,
+               'minimal_prepare_report':prep,'minimal_rows_report':rr,
+               'all_late_exclusions_exact_integer_farkas_reverified':True,
+               'status':'candidate fixed-order proof component; independent review open'}
+          Path('FAN_FREE_N29_D16_M212.json').write_text(json.dumps(out,indent=2,sort_keys=True)+'\n')
+          print(json.dumps({k:v for k,v in out.items() if k not in ('minimal_prepare_report','minimal_rows_report')},sort_keys=True))
+          PY
+      - uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02
+        with:
+          name: fan-free-n29-d16-m212
+          path: |
+            FAN_FREE_N29_D16_M212.json
+            prepared/MINIMAL_PREPARE_REPORT.json
+            prepared/MINIMAL_ROWS_REPORT.json
+            reports/t4.json.gz
+          retention-days: 30
+      - name: Commit durable checkpoint
+        run: |
+          set -euo pipefail
+          cp FAN_FREE_N29_D16_M212.json project/research/fan-free-fixed-orders/2026-09-09-v1/checkpoints_N29_D16_M212.json
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add project/research/fan-free-fixed-orders/2026-09-09-v1/checkpoints_N29_D16_M212.json
+          git commit -m "Preserve Fan-free n29 Delta16 m212 closure ${GITHUB_RUN_ID}" || exit 0
+          for attempt in 1 2 3 4 5; do
+            if git push origin HEAD:main; then exit 0; fi
+            git reset --hard HEAD
+            git pull --rebase origin main
+            sleep $((attempt*2))
+          done
+          exit 1
