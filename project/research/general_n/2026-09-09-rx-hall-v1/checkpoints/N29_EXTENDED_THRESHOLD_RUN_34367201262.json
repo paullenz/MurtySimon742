@@ -1,0 +1,37 @@
+{
+  "floating_point_reconnaissance_only": true,
+  "interpretation": "Restores tau_h for all source threshold-transport layers. Tests whether n29 cross-order failure was caused by the n30-specific tau2/tau3 restriction rather than by pairwise staircase geometry.",
+  "modes": {
+    "base": {
+      "BC_shapes": 6,
+      "SH_shapes": 3,
+      "objective": null,
+      "success": false
+    },
+    "base_position0": {
+      "active_thresholds": [],
+      "objective": null,
+      "success": false
+    },
+    "full": {
+      "BC_shapes": 75,
+      "SH_shapes": 12,
+      "objective": null,
+      "success": false
+    },
+    "full_position0": {
+      "active_thresholds": [
+        2,
+        3,
+        4,
+        5,
+        6,
+        7
+      ],
+      "objective": 9.012121212121446,
+      "success": true
+    }
+  },
+  "profiles": 38,
+  "schema": "n29-extended-threshold-envelope-v1"
+}
