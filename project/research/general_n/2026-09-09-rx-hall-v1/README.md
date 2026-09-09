@@ -1,12 +1,12 @@
-# General-N RX-Hall / Hall-core programme
+# General-N RX-Hall / staircase-potential programme
 
 9 September 2026. Research direction: Paul Lenz. Mathematical development and internal checking: ChatGPT/Geeps.
 
-**Status: exact finite evidence plus candidate structural reduction. Not an unrestricted theorem. Independent mathematical review remains OPEN.**
+**Status: exact finite evidence plus candidate structural reductions. Not an unrestricted theorem. Independent mathematical review remains OPEN.**
 
 ## 1. Current position
 
-Mining the exact n=29 and n=30 Delta=16 certificates exposed a much smaller endpoint mechanism than the original cumulative-threshold LP.
+Mining the exact n=29 and n=30 Delta=16 certificates exposed a much smaller endpoint mechanism than the original cumulative-threshold LP. The project has now moved beyond profile-by-profile Farkas rejection into a search for reusable **BC/SH staircase potentials**.
 
 In the positive-demand zero-slack sector,
 
@@ -14,31 +14,18 @@ In the positive-demand zero-slack sector,
 S=sum_i s_i=r+2t.
 ```
 
-The stripped RX-Hall system keeps source/supplement compatibility and endpoint Hall structure while deleting the old cumulative-tail variables and unordered-pair aggregate capacity.
-
-The n=29 hard frontiers are now **exact**, not merely numerical:
-
-```text
-(a,b,t,dmax)=(12,16,3,10): 94/94 exact integer Farkas rejections;
-(a,b,t,dmax)=(12,16,2,10): 902/902 exact integer Farkas rejections.
-```
-
-All 996 certificates were checked by a separate standard-library verifier which imports neither SciPy nor the certificate generator. The preserved aggregate is `RX_HALL_N29_EXACT_REPLAY.json` (clean run `34326568879`). Numerical LP is proposal-only; exact integer arithmetic is the acceptance layer.
-
-The early red sharded numerical run is therefore **not** evidence of a graph survivor. It was superseded by regenerated-input hardened replays and exact proof-producing checks. Historical failures remain preserved rather than rewritten.
-
-## 2. RX inequalities
-
 For a selected incidence from B-source `u` to A-label `i`, write
 
-- `rho_u` for source residual degree;
-- `q_u` for selected outdegree;
-- `p_u` for supplement indegree;
-- `s_i>0` for label demand;
-- `R_i` for residual column degree;
-- `x_i` for selected label degree.
+```text
+rho_u  source residual degree
+q_u    selected outdegree
+p_u    supplement indegree
+s_i>0  label demand
+R_i    residual column degree
+x_i    selected label degree.
+```
 
-The existing bridge gives
+The graph-to-model bridge gives
 
 ```text
 s_i <= rho_u,                                      (RX1)
@@ -46,95 +33,206 @@ R_i+s_i <= rho_u+q_u-1,                           (RX2)
 R_i+x_i >= q_u+p_u.                               (RX3)
 ```
 
-The full stripped RX-Hall model uses source/supplement transportation, label distributions, residual budget and selected incidence, but no cumulative tails and no unordered-pair aggregate capacity.
+The stripped RX-Hall model keeps source/supplement compatibility, endpoint Hall structure, selected incidence and residual bookkeeping while deleting the old cumulative-tail machinery and unordered-pair aggregate capacity.
 
-## 3. Exact n=29 RX-Hall replay
+## 2. Exact n=29 RX-Hall frontier
 
-The preserved exact aggregate records:
-
-```text
-t=3: 94 hard rows, 94 exact Farkas contradictions, 0 unresolved;
-t=2: 902 hard rows, 902 exact Farkas contradictions, 0 unresolved;
-total: 996 exact contradictions, 996 independently rechecked.
-```
-
-The exact model has explicit unit-density bounds because its W/P/L/Z variables are normalized fractions. Floating point only proposes multipliers; every accepted contradiction is verified against integer coefficient dictionaries.
-
-This result remains conditional on the universal graph-to-demand/RX-Hall bridge and on the earlier exact frontier preparation.
-
-## 4. Further collapse: the t=3 Hall core
-
-The n=29 `t=3` frontier has now been reduced to an even weaker exact model which deletes
-
-- all P transport variables;
-- all R residual variables and the residual budget;
-- all Z incidence variables;
-- RX2;
-- grouped source-label caps;
-- cumulative tails;
-- unordered-pair aggregate capacity.
-
-It retains only
+The n=29 hard frontiers are exact finite results:
 
 ```text
-RX1 pointwise source-degree capacity
-+ source/supplement threshold transport
-+ RX3 extra-load consequence
-+ total selected-incidence balance
-+ Hall inequalities for unions of at most two compatibility rectangles.
+(a,b,t,dmax)=(12,16,3,10): 94/94 exact integer Farkas rejections;
+(a,b,t,dmax)=(12,16,2,10): 902/902 exact integer Farkas rejections.
 ```
 
-All **94/94** hard t=3 rows still receive exact integer Farkas contradictions. Clean workflow `General RX-Hall t3 Hall core`, run `34329608225`, independently verifies all 94 certificates with a standard-library-only checker. The Hall-domain family has only 6 to 40 candidate domains per row.
+All 996 profile certificates were independently replayed with standard-library-only arithmetic. Numerical LP is proposal-only; integer coefficient dictionaries are the acceptance layer. This remains conditional on the graph-to-demand/RX-Hall bridge and the earlier exact frontier preparation.
 
-The graph-level version of this reduction is recorded in [`HALL_CORE_SYMBOLIC_LEMMAS.md`](HALL_CORE_SYMBOLIC_LEMMAS.md).
+The earlier t=3 Hall-core reduction also remains preserved: all 94 t=3 rows are rejected by a much weaker model retaining essentially RX1, RX3, selected-incidence balance, source/supplement threshold transport and Hall inequalities for unions of at most two compatibility rectangles. See [`HALL_CORE_SYMBOLIC_LEMMAS.md`](HALL_CORE_SYMBOLIC_LEMMAS.md).
 
-## 5. Symbolic Hall-core formulation
+## 3. Exact order-wide n=29 common potential
 
-Put
+A major compression is now exact.
+
+One fixed **9 BC + 7 SH** staircase support admits one common staircase-weight vector across **all 996 n=29 hard profiles simultaneously**: all 902 t=2 profiles and all 94 t=3 profiles. Scalar dual bookkeeping remains profile-specific.
+
+The exactifier checked
 
 ```text
-y_i=x_i-s_i,
-h_u=max(0,q_u+p_u-dmax).
+profiles: 996
+rows:     364,805
+variables:22,586
+row violations:   0
+bound violations: 0
 ```
 
-RX1 and RX3 imply that every selected incidence `u -> i` obeys
+with deterministic scaling/repair followed by integer-only verification. Canonical checkpoint:
+
+`checkpoints/N29_ALL_T23_EXACT_RUN_34375129207.json`
+
+The successful workflow artifact was manually republished after only its final Git push raced; publication commit: `704eeb0fb05ae31bc5e1d04607f826eb07d38631`.
+
+This is an exact finite **order-wide n=29 potential**, not an unrestricted theorem.
+
+## 4. Boundary specialization and the 38 difficult t=2 profiles
+
+The original n=30 nine-shape dictionary separates 932 of the 996 n=29 profiles profile-by-profile. In the t=2 sector it separates 838/902. Specializing the two dmax-sensitive BC staircases from dmax=11 to dmax=10 separates 26 more, leaving exactly **38** difficult t=2 profiles.
+
+Those 38 admit an exact common **8 BC + 6 SH** potential. The integer exactifier reports zero row and bound violations at scale 1,000,000.
+
+Canonical checkpoint:
+
+`checkpoints/N29_COMMON_14_EXACT_RUN_34369583832.json`
+
+Thus 14 shapes are an exact finite **upper/existence** bound for this generated common-potential problem.
+
+## 5. Support compression: computationally 14 in the canonical dictionary
+
+The canonical generated n=29 staircase dictionary is now materialized explicitly as
 
 ```text
-s_i <= rho_u,
-y_i >= h_u.
+75 BC shapes + 12 SH shapes = 87 total shapes.
 ```
 
-Thus each source has a rectangular compatibility neighborhood
+Canonical catalog:
+
+`N29_CANONICAL_DICTIONARY.json`
+
+It is the dmax=10 specialization of `N30_SHARED_MIN_SUPPORT_RUN_34361230390.json` plus every generated n=29 pairwise correction in `N29_PAIRWISE_CORRECTION_RUN_34365472773.json`. This provenance matters: an earlier diagnostic accidentally reconstructed an 84-shape dictionary and is retained only as superseded audit history.
+
+### Demand 45
+
+Demand 45 is the single-profile bottleneck:
 
 ```text
-N(u)={(s,y):s<=rho_u, y>=h_u}.
+s   = (1,1,3,3,3,3,4,4,4,4,4,4)
+rho = (1,1,1,1,1,1,1,1,1,3,3,3,4,4,4,4).
 ```
 
-Direct counting then yields pointwise source caps, nested source/supplement transport inequalities, and ordinary Hall-capacity inequalities for threshold rectangles and their unions. These are graph-level necessary conditions, not LP artefacts.
-
-The next target is to combine those inequalities with charging/demand bounds and eliminate the `y` profile symbolically.
-
-## 6. Cross-order falsification
-
-The strongest immediate test of the proposed simplification is **not** another fixed-order proof. It is whether the same two-rectangle Hall core survives unchanged on the n=30 Delta=16 hard frontiers and then on n=31.
-
-A clean n=30 falsification workflow has been added at `.github/workflows/general-rx-hall-n30-hall-core.yml`. It regenerates the n=30 frontiers from committed source, preserves any unresolved Hall-core rows as artifacts, and tests
+Across the full 75+12 dictionary its zero-gap minimum-support MILP is
 
 ```text
-n=30, m=226: (a,b,t,dmax)=(13,16,2,11), expected 8 hard rows;
-n=30, m=225: (a,b,t,dmax)=(13,16,1,11), expected 207 hard rows.
+13 = 7 BC + 6 SH.
 ```
 
-A survivor here would narrow or falsify the two-rectangle sufficiency conjecture without affecting the already assembled n=30 candidate proof.
+Checkpoint: `checkpoints/N29_DEMAND45_FULL_MIN_RUN_34374650328.json`.
 
-## 7. Highest-priority next steps
+Fixing those 13 shapes and allowing new common weights over all 38 profiles is LP-infeasible. Moreover, adding each of the other 74 generated shapes one at a time still gives no common 14-shape repair. Therefore the exact common 14-shape basis genuinely requires BC substitutions rather than simply “demand45 + one extra cut.”
 
-1. finish the n=30 Hall-core falsification and inspect any preserved survivors;
-2. if the same tiny core survives, independently exact-check the n=30 Hall-core certificates;
-3. mine exact Hall weights to seek a one- or two-threshold symbolic inequality;
-4. test whether every relevant Hall staircase can be compressed to at most two rectangles;
-5. apply the proposed inequality parametrically across the unresolved `Delta/n < 293/500` band;
-6. use n=31 primarily as a falsification laboratory rather than as a brute-force trophy;
-7. continue external review of the universal graph-to-demand bridge, which remains the principal mathematical trust boundary.
+### Demand 45 + demand 68
 
-No complete order above 30, unrestricted solution, novelty determination, full formal verification or external endorsement is claimed here.
+Demand 68 differs from demand 45 by a tiny smoothing move:
+
+```text
+label side:  1 + 4  ->  2 + 2
+source side: one residual degree 3 -> 2.
+```
+
+In the full canonical 75+12 dictionary, the two-profile system `{45,68}` has zero-gap minimum common support **14** at both coefficient caps `M=200` and `M=1000`.
+
+Checkpoint:
+
+`checkpoints/N29_DEMAND45_PAIR_MIN_RUN_34379676403.json`
+
+This is strong **computational** support-minimality evidence, not an exact mathematical support-exclusion certificate. Accordingly the safe description is:
+
+> the 38-profile common support is computationally pinned to 14 in the canonical generated dictionary; the 14-shape existence side is exact, while the lower-bound side is zero-gap big-M MILP evidence.
+
+The detailed checkpoint and trust distinction are summarized in [`N29_COMMON_POTENTIAL_COMPRESSION.md`](N29_COMMON_POTENTIAL_COMPRESSION.md).
+
+## 6. Structural lesson inside n=29: SH stable, BC adaptive
+
+The demand-45 optimum, the demand45+68 pair solutions and the exact 38-profile common solution all retain the same six SH correction shapes. The basis movement occurs in BC.
+
+Across the pair and 38-profile solutions there is a substantial stable BC core, with two BC slots moving on a small face of alternatives. The very small demand45 -> demand68 majorization move is enough to force that BC switch while leaving the SH family unchanged.
+
+This makes a **parameterized BC transport envelope** a much better symbolic target than fourteen unrelated inequalities.
+
+## 7. Recovered exact n=30 nine-shape potential
+
+The n=30 hard equality-frontier states also possess an exact common potential. An earlier workflow had succeeded mathematically but lost only its final Git push; the exact artifact has now been recovered and republished.
+
+Exact n=30 support:
+
+```text
+6 BC + 3 SH = 9 shapes
+profiles: 7
+rows: 2,775
+variables: 55
+row violations: 0
+bound violations: 0
+integer-only acceptance: PASS
+```
+
+Every profile margin is approximately twice the required exact margin.
+
+Canonical checkpoint:
+
+`checkpoints/N30_SHARED_NINE_EXACT_RUN_34371786328.json`
+
+Recovery commit: `dda9b36a68c24736709d928b6183e5c53ec9f1ea`.
+
+This exact 6-BC basis is **not** the same as the earlier floating n=30 minimum-support basis. The exact checkpoint above is canonical for exact-support comparisons.
+
+## 8. Cross-order falsification: fixed n=29 geometry does not extend literally
+
+Several increasingly permissive cross-order hypotheses have now been falsified.
+
+First, one identical 16-shape numerical weight vector across all 996 n=29 profiles plus all seven n=30 hard profiles is LP-infeasible:
+
+`checkpoints/CROSS_ORDER_ALL1003_FIXED16_RUN_34375647941.json`.
+
+Second, even when n=30 receives completely **fresh weights**, the raw exact n=29 9-BC + 7-SH shapes are still infeasible for the seven n=30 states:
+
+`checkpoints/N30_REWEIGHT_N29_FIXED16_RUN_34380758859.json`.
+
+Third, restoring `(11,-11)` to the two BC shapes known to change under dmax=10 -> 11 specialization is still insufficient:
+
+`checkpoints/N30_BOUNDARY_LIFT_N29_FIXED16_RUN_34380884815.json`.
+
+Finally, adding each n=30 hard profile separately to the all-996 n=29 common-weight cone makes the raw n=29 16-shape system infeasible in **all seven cases**, so there is no single exceptional n=30 row to patch:
+
+`checkpoints/CROSS_ORDER_N30_SINGLE_OBSTRUCTION_MATRIX_RUN_34380314207.json`.
+
+These are finite LP falsifications of the stated hypotheses, not graph-theoretic counterexamples.
+
+## 9. Exact n=29 versus n=30 support geometry
+
+The strongest structural comparison is now deterministic rather than impressionistic.
+
+Each of the six exact n=30 BC shapes was specialized to dmax=10 and compared against **all 75 canonical n=29 BC shapes**. Each of the three exact n=30 SH shapes was compared literally against all 12 n=29 SH shapes.
+
+Result:
+
+```text
+BC exact matches: 1 / 6
+SH exact matches: 3 / 3
+```
+
+Canonical comparison:
+
+`N30_EXACT_VS_N29_DICTIONARY.json`.
+
+Only the BC staircase `((1,-3),)` survives literally across the exact supports. By contrast, all three exact n=30 SH staircases already occur in the n=29 SH dictionary:
+
+```text
+((1,-1),(2,-5),(3,-6))
+((1,-1),(2,-7))
+((1,-1),(2,-2),(3,-11)).
+```
+
+This is currently the clearest general-N signal in the RX-Hall programme:
+
+> **SH correction geometry is strongly cross-order stable; BC geometry changes substantially with order/surplus parameters.**
+
+The next general theorem should therefore not assume a fixed literal BC dictionary. It should seek a symbolic rule generating the BC envelope from `(a,b,dmax,t)` and/or the demand/source distributions.
+
+## 10. Highest-priority next steps
+
+1. test how much of n=29 can be handled with the **three exact n=30 SH shapes only**, allowing the full canonical BC family; this measures whether SH dependence also changes with surplus `t` or can collapse to a universal core;
+2. catalog the breakpoints/slopes of exact n=29 and n=30 BC staircases and seek a low-dimensional parameterized rule in the native coordinates `(R+s, -(R+x))`;
+3. test simple affine/hinge/majorization-generated BC template families rather than adding new order-specific staircase cuts;
+4. if a compact parameterized BC rule emerges, test it across n=29 and n=30 with order-dependent weights, then scan the unresolved `Delta/n < 293/500` band;
+5. use n=31 primarily as a falsification laboratory only after exploiting the n29/n30 BC parameterization clue;
+6. strengthen the computational 14-support lower-bound side only if useful for publication; it is not the highest-value route toward a general theorem;
+7. continue external review of the universal graph-to-demand bridge, still the principal mathematical trust boundary.
+
+No unrestricted Murty-Simon theorem, external validation, novelty determination, complete order above 30, or full formal verification is claimed here.
