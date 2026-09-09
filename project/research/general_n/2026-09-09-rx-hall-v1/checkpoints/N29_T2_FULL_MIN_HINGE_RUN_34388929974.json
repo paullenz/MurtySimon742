@@ -1,0 +1,66 @@
+{
+  "floating_point_reconnaissance_only": true,
+  "results": {
+    "demand45_full.json": {
+      "SH_count": 12,
+      "SH_mode": "full",
+      "active_SH_count": null,
+      "active_hinge_count": null,
+      "hinge_count": 187,
+      "hinge_mode": "full",
+      "mode": "demand45",
+      "objective": null,
+      "profiles": 1,
+      "seconds": 0.07767200469970703,
+      "status": 2,
+      "success": false,
+      "t": 2
+    },
+    "demand45_none.json": {
+      "SH_count": 0,
+      "SH_mode": "none",
+      "active_SH_count": null,
+      "active_hinge_count": null,
+      "hinge_count": 187,
+      "hinge_mode": "full",
+      "mode": "demand45",
+      "objective": null,
+      "profiles": 1,
+      "seconds": 0.06854391098022461,
+      "status": 2,
+      "success": false,
+      "t": 2
+    },
+    "hard38_full.json": {
+      "SH_count": 12,
+      "SH_mode": "full",
+      "active_SH_count": null,
+      "active_hinge_count": null,
+      "hinge_count": 187,
+      "hinge_mode": "full",
+      "mode": "hard38",
+      "objective": null,
+      "profiles": 38,
+      "seconds": 3.8774516582489014,
+      "status": 2,
+      "success": false,
+      "t": 2
+    },
+    "hard38_none.json": {
+      "SH_count": 0,
+      "SH_mode": "none",
+      "active_SH_count": null,
+      "active_hinge_count": null,
+      "hinge_count": 187,
+      "hinge_mode": "full",
+      "mode": "hard38",
+      "objective": null,
+      "profiles": 38,
+      "seconds": 3.1472349166870117,
+      "status": 2,
+      "success": false,
+      "t": 2
+    }
+  },
+  "schema": "n29-t2-full-min-hinge-batch-v1"
+}
