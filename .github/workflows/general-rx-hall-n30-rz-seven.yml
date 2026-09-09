@@ -1,0 +1,86 @@
+name: General RX-Hall n30 R+Z seven
+
+on:
+  workflow_dispatch:
+  push:
+    paths:
+      - 'project/research/general_n/2026-09-09-rx-hall-v1/rx_hall_rz_core_exact.py'
+      - '.github/workflows/general-rx-hall-n30-rz-seven.yml'
+
+permissions:
+  contents: write
+
+jobs:
+  test:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 30
+    steps:
+      - uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262
+      - name: Pin solver
+        run: |
+          python3 -m venv .venv
+          .venv/bin/python -m pip install --disable-pip-version-check --only-binary=:all: scipy==1.17.0
+      - name: Regenerate and isolate seven preserved states
+        run: |
+          set -euo pipefail
+          D=project/research/n30/2026-09-08-minimal-kernel-recon-v1
+          R=project/research/general_n/2026-09-09-rx-hall-v1
+          mkdir -p inputs out
+          .venv/bin/python -I -B "$D/n30_prepare.py" --m 225 --output inputs
+          g++ -O3 -std=c++17 "$D/n30_rows.cpp" -o n30_rows
+          ./n30_rows inputs/demands.txt inputs/raw_rows.txt inputs/bands.txt > inputs/ROWS.json
+          .venv/bin/python -I -B "$D/n30_row_threshold.py" --demands inputs/demands.txt --rows inputs/raw_rows.txt --output inputs/all_rows.txt --m 225 > inputs/THRESHOLD.json
+          python3 - <<'PY'
+          import json
+          from pathlib import Path
+          z=Path('inputs/demands.txt').read_text().splitlines(); D=[]
+          for line in z[1:]: D.append({'s':list(map(int,line.split()))[:13]})
+          assert int(z[0])==len(D)==5379
+          Path('inputs/demands.json').write_text(json.dumps(D,separators=(',',':'))+'\n')
+          cp=json.load(open('project/research/general_n/2026-09-09-rx-hall-v1/checkpoints/N30_RESIDUAL_BUDGET_RUN_34338075220.json'))
+          target={(x['demand_id'],tuple(x['rho'])) for x in cp['unresolved']}; assert len(target)==7
+          keep=[]
+          for line in Path('inputs/all_rows.txt').read_text().splitlines():
+              if not line.strip(): continue
+              v=list(map(int,line.split()))
+              if (v[0],tuple(v[2:])) in target: keep.append(line)
+          assert len(keep)==7
+          Path('inputs/seven_rows.txt').write_text('\n'.join(keep)+'\n')
+          PY
+      - name: Exact R plus Z core
+        id: core
+        continue-on-error: true
+        run: |
+          R=project/research/general_n/2026-09-09-rx-hall-v1
+          .venv/bin/python -I -B "$R/rx_hall_rz_core_exact.py" --demands-json inputs/demands.json --rows inputs/seven_rows.txt --a 13 --b 16 --dmax 11 --t 1 --output out/certificates.json.gz
+      - name: Classify
+        if: always()
+        run: |
+          python3 - <<'PY'
+          import json,pathlib
+          r=json.load(open('out/certificates.json.gz.report.json')); assert r['hard_rows']==7
+          o={'schema':'n30-rz-seven-v1','run_id':'${{ github.run_id }}','hard_rows':7,'exact_integer_farkas_rejections':r['exact_integer_farkas_rejections'],'unresolved_count':len(r['unresolved']),'unresolved':r['unresolved'],'status':'PASS_ALL_REJECTED' if not r['unresolved'] else 'SURVIVORS','exact_residual_budget':True,'uses_Z_incidence':True,'removes_P':True,'interpretation':'Necessary-condition relaxation; isolates whether exact residual budget plus source-label incidence closes the seven states without exact supplement transport.'}
+          pathlib.Path('out/CLASSIFICATION.json').write_text(json.dumps(o,indent=2,sort_keys=True)+'\n'); print(json.dumps(o,indent=2,sort_keys=True))
+          PY
+      - uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02
+        if: always()
+        with:
+          name: n30-rz-seven
+          path: out/
+          if-no-files-found: error
+          retention-days: 30
+      - name: Publish unique checkpoint
+        if: always()
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          set -euo pipefail
+          P="project/research/general_n/2026-09-09-rx-hall-v1/checkpoints/N30_RZ_SEVEN_RUN_${GITHUB_RUN_ID}.json"
+          C=$(base64 -w0 out/CLASSIFICATION.json)
+          gh api --method PUT "repos/${GITHUB_REPOSITORY}/contents/${P}" -f message="Preserve n30 R+Z seven run ${GITHUB_RUN_ID}" -f content="$C" -f branch=main
+      - name: Require zero survivors
+        run: |
+          python3 - <<'PY'
+          import json
+          assert json.load(open('out/CLASSIFICATION.json'))['unresolved_count']==0
+          PY
