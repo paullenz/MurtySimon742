@@ -5,6 +5,8 @@ on:
   push:
     paths:
       - '.github/workflows/fan-free-n30-d16-m227-230.yml'
+      - 'project/research/fan-free-fixed-orders/2026-09-09-v1/n30_upper_prepare.py'
+      - 'project/research/fan-free-fixed-orders/2026-09-09-v1/n30_upper_close.py'
 
 permissions:
   contents: write
@@ -29,45 +31,24 @@ jobs:
         run: |
           set -euo pipefail
           D=project/research/n30/2026-09-08-minimal-kernel-recon-v1
+          F=project/research/fan-free-fixed-orders/2026-09-09-v1
           mkdir -p out
-          .venv/bin/python -I -B "$D/n30_prepare.py" --m ${{ matrix.m }} --output out > out/prepare_stdout.json
+          .venv/bin/python -I -B "$F/n30_upper_prepare.py" --m ${{ matrix.m }} --output out
           g++ -O3 -std=c++17 "$D/n30_rows.cpp" -o n30_rows
           ./n30_rows out/demands.txt out/row_survivors.txt out/row_bands.txt > out/ROWS_REPORT.json
           cat out/PREPARE_REPORT.json
           cat out/ROWS_REPORT.json
-      - name: Apply exact row-threshold theorem
+      - name: Apply exact row-threshold and Farkas closure
         run: |
-          set -euo pipefail
-          D=project/research/n30/2026-09-08-minimal-kernel-recon-v1
-          python3 -I -B "$D/n30_row_threshold.py" --demands out/demands.txt --rows out/row_survivors.txt --m ${{ matrix.m }} --output out/threshold_survivors.txt > out/ROW_THRESHOLD_REPORT.json
-          cat out/ROW_THRESHOLD_REPORT.json
-      - name: Exactly reject every final row
-        run: |
-          set -euo pipefail
-          D=project/research/n30/2026-09-08-minimal-kernel-recon-v1
-          if [ -s out/threshold_survivors.txt ]; then
-            .venv/bin/python -I -B "$D/n30_threshold_scan.py" --demands out/demands.txt --rows out/threshold_survivors.txt --m ${{ matrix.m }} --exact --output out/certificates.json.gz > out/FINAL_EXACT_REPORT.json
-            python3 - <<'PY'
-          import json
-          r=json.load(open('out/FINAL_EXACT_REPORT.json'))
-          c=r['counts']
-          assert c['numerical_other']==0 and c['exact_missing']==0
-          assert c['exact_rejected']==c['rows_in_shard']
-          assert not r['survivors']
-          PY
-          else
-            printf '{"counts":{"rows_in_shard":0,"exact_rejected":0},"survivors":[],"note":"row-threshold stage already closed scope"}\n' > out/FINAL_EXACT_REPORT.json
-          fi
-          cat out/FINAL_EXACT_REPORT.json
+          F=project/research/fan-free-fixed-orders/2026-09-09-v1
+          .venv/bin/python -I -B "$F/n30_upper_close.py" --m ${{ matrix.m }} --demands out/demands.txt --rows out/row_survivors.txt --output out/CERTIFICATES.json.gz | tee out/CLOSE_REPORT.json
       - name: Build scope receipt
         run: |
           python3 - <<'PY'
           import json,pathlib
           m=${{ matrix.m }}
-          p=json.load(open('out/PREPARE_REPORT.json')); r=json.load(open('out/ROWS_REPORT.json')); th=json.load(open('out/ROW_THRESHOLD_REPORT.json')); f=json.load(open('out/FINAL_EXACT_REPORT.json'))
-          out={'schema':'fan-free-n30-d16-upper-scope-v1','n':30,'Delta':16,'m':m,'t':m-224,
-               'prepare':p,'rows':r,'threshold':th,'final':f,'final_survivors':0,
-               'status':'candidate fixed-order proof component; independent review open'}
+          p=json.load(open('out/PREPARE_REPORT.json')); r=json.load(open('out/ROWS_REPORT.json')); c=json.load(open('out/CLOSE_REPORT.json'))
+          out={'schema':'fan-free-n30-d16-upper-scope-v1','n':30,'Delta':16,'m':m,'t':m-224,'prepare':p,'rows':r,'close':c,'final_survivors':0,'status':'candidate fixed-order proof component; independent review open'}
           pathlib.Path(f'FAN_FREE_N30_D16_M{m}.json').write_text(json.dumps(out,indent=2,sort_keys=True)+'\n')
           PY
       - uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02
@@ -77,11 +58,8 @@ jobs:
             FAN_FREE_N30_D16_M${{ matrix.m }}.json
             out/PREPARE_REPORT.json
             out/ROWS_REPORT.json
-            out/ROW_THRESHOLD_REPORT.json
-            out/FINAL_EXACT_REPORT.json
-            out/threshold_survivors.txt
-            out/certificates.json.gz
-          if-no-files-found: warn
+            out/CLOSE_REPORT.json
+            out/CERTIFICATES.json.gz
           retention-days: 30
       - name: Commit durable receipt
         run: |
