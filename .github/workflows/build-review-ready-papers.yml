@@ -29,8 +29,13 @@ jobs:
           set -euo pipefail
           mkdir -p review-build-diagnostics
           BUILDER=project/reviews/reviewer-paper-build/v1/build_review_papers.py
+          FILTER=project/reviews/reviewer-paper-build/v1/fix_aligned_tags.lua
           # Match the documented n=25 Markdown mode for TeX-style \[...\] maths.
           sed -i 's/--from=markdown+raw_tex/--from=markdown+raw_tex+tex_math_single_backslash/' "$BUILDER"
+          # Move amsmath equation tags outside nested `aligned` blocks in the
+          # generated LaTeX only; canonical proof Markdown is not edited.
+          sed -i '/"--pdf-engine=xelatex",/a\        "--lua-filter=project/reviews/reviewer-paper-build/v1/fix_aligned_tags.lua",' "$BUILDER"
+          test -s "$FILTER"
           # Use a Unicode-complete prose font so Greek letters and relation symbols
           # appearing outside maths are never silently dropped by XeLaTeX.
           sed -i '/"-V", "fontsize=11pt",/a\        "-V", "mainfont=DejaVu Serif",\n        "-V", "sansfont=DejaVu Sans",\n        "-V", "monofont=DejaVu Sans Mono",' "$BUILDER"
