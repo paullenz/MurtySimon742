@@ -1,0 +1,329 @@
+{
+  "BC_exact_matches": 1,
+  "BC_records": [
+    {
+      "exact_match": true,
+      "n29_exact_index": 1,
+      "n30_generators": [
+        [
+          1,
+          -3
+        ]
+      ],
+      "n30_position": 0,
+      "specialized_dmax10": [
+        [
+          1,
+          -3
+        ]
+      ]
+    },
+    {
+      "exact_match": false,
+      "n29_exact_index": null,
+      "n30_generators": [
+        [
+          1,
+          -2
+        ],
+        [
+          2,
+          -4
+        ],
+        [
+          5,
+          -8
+        ],
+        [
+          8,
+          -9
+        ]
+      ],
+      "n30_position": 1,
+      "specialized_dmax10": [
+        [
+          1,
+          -2
+        ],
+        [
+          2,
+          -4
+        ],
+        [
+          5,
+          -8
+        ],
+        [
+          8,
+          -9
+        ]
+      ]
+    },
+    {
+      "exact_match": false,
+      "n29_exact_index": null,
+      "n30_generators": [
+        [
+          1,
+          -2
+        ],
+        [
+          2,
+          -3
+        ],
+        [
+          3,
+          -4
+        ]
+      ],
+      "n30_position": 2,
+      "specialized_dmax10": [
+        [
+          1,
+          -2
+        ],
+        [
+          2,
+          -3
+        ],
+        [
+          3,
+          -4
+        ]
+      ]
+    },
+    {
+      "exact_match": false,
+      "n29_exact_index": null,
+      "n30_generators": [
+        [
+          1,
+          -2
+        ],
+        [
+          2,
+          -3
+        ],
+        [
+          3,
+          -4
+        ],
+        [
+          4,
+          -5
+        ]
+      ],
+      "n30_position": 3,
+      "specialized_dmax10": [
+        [
+          1,
+          -2
+        ],
+        [
+          2,
+          -3
+        ],
+        [
+          3,
+          -4
+        ],
+        [
+          4,
+          -5
+        ]
+      ]
+    },
+    {
+      "exact_match": false,
+      "n29_exact_index": null,
+      "n30_generators": [
+        [
+          1,
+          -1
+        ],
+        [
+          2,
+          -4
+        ],
+        [
+          3,
+          -6
+        ],
+        [
+          5,
+          -7
+        ],
+        [
+          6,
+          -8
+        ],
+        [
+          9,
+          -9
+        ],
+        [
+          10,
+          -10
+        ],
+        [
+          11,
+          -11
+        ]
+      ],
+      "n30_position": 4,
+      "specialized_dmax10": [
+        [
+          1,
+          -1
+        ],
+        [
+          2,
+          -4
+        ],
+        [
+          3,
+          -6
+        ],
+        [
+          5,
+          -7
+        ],
+        [
+          6,
+          -8
+        ],
+        [
+          9,
+          -9
+        ],
+        [
+          10,
+          -10
+        ]
+      ]
+    },
+    {
+      "exact_match": false,
+      "n29_exact_index": null,
+      "n30_generators": [
+        [
+          1,
+          -1
+        ],
+        [
+          2,
+          -2
+        ],
+        [
+          3,
+          -5
+        ],
+        [
+          6,
+          -6
+        ],
+        [
+          7,
+          -7
+        ],
+        [
+          8,
+          -10
+        ],
+        [
+          11,
+          -12
+        ]
+      ],
+      "n30_position": 5,
+      "specialized_dmax10": [
+        [
+          1,
+          -1
+        ],
+        [
+          2,
+          -2
+        ],
+        [
+          3,
+          -5
+        ],
+        [
+          6,
+          -6
+        ],
+        [
+          7,
+          -7
+        ],
+        [
+          8,
+          -10
+        ]
+      ]
+    }
+  ],
+  "SH_exact_matches": 3,
+  "SH_records": [
+    {
+      "exact_match": true,
+      "generators": [
+        [
+          1,
+          -1
+        ],
+        [
+          2,
+          -5
+        ],
+        [
+          3,
+          -6
+        ]
+      ],
+      "n29_exact_index": 2,
+      "n30_position": 0
+    },
+    {
+      "exact_match": true,
+      "generators": [
+        [
+          1,
+          -1
+        ],
+        [
+          2,
+          -7
+        ]
+      ],
+      "n29_exact_index": 1,
+      "n30_position": 1
+    },
+    {
+      "exact_match": true,
+      "generators": [
+        [
+          1,
+          -1
+        ],
+        [
+          2,
+          -2
+        ],
+        [
+          3,
+          -11
+        ]
+      ],
+      "n29_exact_index": 3,
+      "n30_position": 2
+    }
+  ],
+  "interpretation": "BC comparison first specializes n30 generators to dmax=10; SH comparison is literal.",
+  "n29_BC_count": 75,
+  "n29_SH_count": 12,
+  "n30_BC_count": 6,
+  "n30_SH_count": 3,
+  "schema": "n30-exact-vs-n29-canonical-dictionary-v1"
+}
