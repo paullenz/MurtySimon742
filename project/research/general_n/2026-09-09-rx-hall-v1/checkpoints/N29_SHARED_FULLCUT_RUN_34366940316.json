@@ -1,0 +1,9 @@
+{
+  "candidate_BC": 75,
+  "candidate_SH": 12,
+  "floating_point_reconnaissance_only": true,
+  "profiles": 38,
+  "raw_generated_cuts": 89,
+  "schema": "n29-shared-fullcut-scan-v1",
+  "success": false
+}
