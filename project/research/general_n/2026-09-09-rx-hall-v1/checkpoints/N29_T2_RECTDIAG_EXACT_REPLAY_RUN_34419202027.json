@@ -1,0 +1,21 @@
+{
+  "bound_violation_count": 0,
+  "bound_violations": [],
+  "generator_count": 11,
+  "integer_arithmetic_only": true,
+  "interpretation": "Independent arithmetic replay of the fixed finite rectdiag certificate. Same state-model constructor is reused, but certificate checking code is separate from the exactifier.",
+  "margin_count": 38,
+  "missing_variables": [],
+  "profiles": 38,
+  "rectangle_count": 10,
+  "required_margin_numerator": -1000000,
+  "row_violation_count": 0,
+  "row_violations": [],
+  "rows": 17621,
+  "scale": 1000000,
+  "schema": "n29-t2-rectdiag-independent-replay-v1",
+  "status": "PASS",
+  "variables": 1091,
+  "worst_margin_numerator": -1999819,
+  "zero_rhs_max_lhs": 0
+}
