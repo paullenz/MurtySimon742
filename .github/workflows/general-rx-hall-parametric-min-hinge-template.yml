@@ -1,0 +1,110 @@
+name: General RX-Hall parameterized min-hinge template
+
+on:
+  workflow_dispatch:
+  push:
+    paths:
+      - 'project/research/general_n/2026-09-09-rx-hall-v1/parametric_min_hinge_template_scan.py'
+      - '.github/workflows/general-rx-hall-parametric-min-hinge-template.yml'
+
+permissions:
+  contents: write
+
+jobs:
+  scan:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 30
+    steps:
+      - uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262
+        with:
+          fetch-depth: 0
+      - name: Pin solver
+        run: |
+          python3 -m venv .venv
+          .venv/bin/python -m pip install --disable-pip-version-check --only-binary=:all: scipy==1.17.0
+      - name: Regenerate n29 t2 and t3 frontiers
+        run: |
+          set -euo pipefail
+          D=project/reviews/n29/2026-09-08-redteam-restart-v1
+          mkdir -p inputs/t2 inputs/t3 out
+          g++ -O3 -std=c++17 "$D/minimal_rows.cpp" -o minimal_rows
+          .venv/bin/python -I -B "$D/minimal_prepare.py" --t 2 --output inputs/t2
+          ./minimal_rows inputs/t2/demands.txt inputs/t2/row_survivors.txt inputs/t2/row_bands.txt 2 > inputs/t2/MINIMAL_ROWS_REPORT.json
+          .venv/bin/python -I -B "$D/minimal_prepare.py" --t 3 --output inputs/t3
+          ./minimal_rows inputs/t3/demands.txt inputs/t3/row_survivors.txt inputs/t3/row_bands.txt 3 > inputs/t3/MINIMAL_ROWS_REPORT.json
+      - name: Test exact-known t3 template geometry
+        run: |
+          set -euo pipefail
+          R=project/research/general_n/2026-09-09-rx-hall-v1
+          .venv/bin/python -I -B "$R/parametric_min_hinge_template_scan.py" \
+            --mode t3 --t 3 --sh-mode none --dictionary-json "$R/N29_CANONICAL_DICTIONARY.json" \
+            --demands-json inputs/t3/demands.json --rows inputs/t3/row_survivors.txt \
+            --output out/T3_NONE.json
+      - name: Test t2 hard38 without and with full SH
+        run: |
+          set -euo pipefail
+          R=project/research/general_n/2026-09-09-rx-hall-v1
+          B="$R/checkpoints/N29_BOUNDARY_SPECIALISATION_RUN_34364666552.json"
+          .venv/bin/python -I -B "$R/parametric_min_hinge_template_scan.py" \
+            --mode hard38 --t 2 --sh-mode none --dictionary-json "$R/N29_CANONICAL_DICTIONARY.json" \
+            --boundary-json "$B" --output out/T2_HARD38_NONE.json
+          .venv/bin/python -I -B "$R/parametric_min_hinge_template_scan.py" \
+            --mode hard38 --t 2 --sh-mode full --dictionary-json "$R/N29_CANONICAL_DICTIONARY.json" \
+            --boundary-json "$B" --output out/T2_HARD38_FULLSH.json
+          .venv/bin/python -I -B "$R/parametric_min_hinge_template_scan.py" \
+            --mode demand45 --t 2 --sh-mode full --dictionary-json "$R/N29_CANONICAL_DICTIONARY.json" \
+            --boundary-json "$B" --output out/T2_DEMAND45_FULLSH.json
+      - name: Test all t2 only if hard38 template survives
+        run: |
+          set -euo pipefail
+          python3 - <<'PY'
+          import json,subprocess
+          j=json.load(open('out/T2_HARD38_FULLSH.json'))
+          if not j['success']:
+              print('HARD38_TEMPLATE_FAILED_SKIP_ALL902')
+              raise SystemExit(0)
+          R='project/research/general_n/2026-09-09-rx-hall-v1'
+          cmd=['.venv/bin/python','-I','-B',f'{R}/parametric_min_hinge_template_scan.py',
+               '--mode','t2','--t','2','--sh-mode','full','--dictionary-json',f'{R}/N29_CANONICAL_DICTIONARY.json',
+               '--demands-json','inputs/t2/demands.json','--rows','inputs/t2/row_survivors.txt',
+               '--output','out/T2_ALL_FULLSH.json']
+          subprocess.check_call(cmd)
+          PY
+      - name: Summarize
+        run: |
+          python3 - <<'PY' > out/SUMMARY.json
+          import glob,json
+          r={}
+          for p in sorted(glob.glob('out/T*.json')):
+              j=json.load(open(p));r[p.split('/')[-1]]={k:j.get(k) for k in ['mode','t','profiles','template','template_count','SH_mode','SH_count','success','status','objective','active_hinge_count','active_SH_count','seconds','known_t3_identity_ok']}
+          out={'schema':'parametric-min-hinge-template-batch-v1','floating_point_reconnaissance_only':True,'results':r,'interpretation':'Cross-surplus falsification of the parameter-only min-hinge BC template; positive cases require exactification.'}
+          print(json.dumps(out,indent=2,sort_keys=True))
+          PY
+          cat out/SUMMARY.json
+      - uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02
+        if: always()
+        with:
+          name: parametric-min-hinge-template
+          path: out/*.json
+          if-no-files-found: error
+          retention-days: 30
+      - name: Commit durable summary
+        if: always()
+        run: |
+          set -euo pipefail
+          test -s out/SUMMARY.json || exit 0
+          R=project/research/general_n/2026-09-09-rx-hall-v1/checkpoints
+          P="$R/PARAMETRIC_MIN_HINGE_TEMPLATE_RUN_${GITHUB_RUN_ID}.json"
+          cp out/SUMMARY.json "$P"
+          git config user.name 'github-actions[bot]'
+          git config user.email '4189823+github-actions[bot]@users.noreply.github.com'
+          git add "$P"
+          git commit -m "Preserve parameterized min-hinge scan ${GITHUB_RUN_ID}" || exit 0
+          git restore . || true
+          for attempt in 1 2 3 4 5; do
+            if git push origin HEAD:main; then exit 0; fi
+            git reset --hard HEAD
+            git pull --rebase origin main
+            sleep $((attempt*2))
+          done
+          exit 1
