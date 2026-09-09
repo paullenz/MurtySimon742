@@ -1,0 +1,16 @@
+{
+  "BC_count": 7,
+  "SH_count": 6,
+  "demand45_lower_bound_support": 13,
+  "floating_point_reconnaissance_only": true,
+  "interpretation": "The 13 support shapes are fixed from demand 45; staircase weights are common across all 38 profiles, while scalar dual bookkeeping is profile-specific.",
+  "message": "The problem is infeasible. (HiGHS Status 8: model_status is Infeasible; primal_status is None)",
+  "objective": null,
+  "profiles": 38,
+  "rows": 17621,
+  "schema": "n29-demand45-support-common38-v1",
+  "seconds": 0.8224081993103027,
+  "status": 2,
+  "success": false,
+  "support_count": 13
+}
