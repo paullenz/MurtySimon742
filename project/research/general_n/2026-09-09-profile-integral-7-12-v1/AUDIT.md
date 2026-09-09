@@ -2,11 +2,11 @@
 
 9 September 2026.
 
-**Current status: audit in progress. Do not promote the 7/12 implication until both exact workflows are green and the checks below have been reconciled.**
+**Current status: internal hostile audit PASS for the new scalar and degree-assembly layers. Candidate theorem promoted for reviewer packaging; independent mathematical review, novelty assessment and external computational reproduction remain OPEN.**
 
 ## Claim under audit
 
-The proposed strengthening is
+The strengthening is
 
 ```text
 t < 5a^2/128 + a/8,
@@ -20,66 +20,91 @@ n>=6 and Delta(G)>=(7/12)n  ==>  e(G)<floor(n^2/4).
 
 The graph-to-demand, threshold-capacity and shifted-midpoint ingredients are inherited unchanged from the earlier 293/500 candidate. The new attack surface is therefore concentrated in the scalar `5/64` estimate and the new degree assembly.
 
+## Audit outcome
+
+Workflow `General profile-integral 7/12 candidate audit`, run `34355073705`, completed green.
+
+Two separately written standard-library implementations agree exactly:
+
+- `src/check_7_12.py`;
+- `src/audit_7_12_independent.py`.
+
+Durable evidence is preserved in `evidence/run-34355073705/` with SHA-256 receipt. The primary checker regressed 5,207,079 eligible `(n,b)` pairs through `n=5000`; the independently structured audit regressed 1,874,246 eligible pairs through `n=3000`. These regressions are consistency checks, not proof by extrapolation.
+
+Both implementations reconstruct the same eleven direct-assembly exceptions and the same threshold caps:
+
+| a | least b | required t | exact upper bound on S-r |
+|---:|---:|---:|---:|
+| 4 | 7 | 1 | 1 |
+| 6 | 10 | 2 | 2 |
+| 9 | 14 | 4 | 5 |
+| 11 | 17 | 6 | 8 |
+| 14 | 21 | 9 | 13 |
+| 19 | 28 | 16 | 26 |
+| 24 | 35 | 25 | 43 |
+| 29 | 42 | 36 | 64 |
+| 34 | 49 | 49 | 90 |
+| 39 | 56 | 64 | 121 |
+| 44 | 63 | 81 | 155 |
+
+Every final column is strictly less than `2t_required`.
+
 ## Scalar red-team checklist
 
-1. **Domain shrink:** verify that `u=y^2/(2x)` really satisfies `u<=1/2`. Since the profile integral has `0<=y<=x<=1`, indeed `u<=x/2<=1/2`. This is essential; the new cubic minorant is not asserted on `[0,1]`.
-2. **Minorant sign:** verify `B(u)>=0` before taking square roots. `B` is decreasing and `B(1/2)=181/256>0`.
-3. **Square gap:** exact expansion must give
+1. **Domain shrink — PASS.** `u=y^2/(2x)` satisfies `u<=1/2` because `0<=y<=x<=1`. The cubic minorant is used only on this restricted interval.
+2. **Minorant sign — PASS.** `B(u)=1-u/2-u^2/8-3u^3/32` is decreasing and `B(1/2)=181/256>0`.
+3. **Square gap — PASS.** Both checkers reconstruct
 
    ```text
    1-u-B(u)^2 = u^3(64-112u-24u^2-9u^3)/1024.
    ```
 
    The cubic factor is decreasing and equals `7/8` at `u=1/2`.
-4. **Integrated coefficients:** independently recheck `x^2/12`, `x^3/160`, `3x^4/1792`.
-5. **q substitution:** independently recheck
+4. **Integrated coefficients — PASS.** Independent hand re-expansion gives `x^2/12`, `x^3/160`, `3x^4/1792`.
+5. **q substitution — PASS.** Both derivations give
 
    ```text
    P(q)=2q^2-4q^3+(2/3)q^5+(1/10)q^7+(3/56)q^9.
    ```
-6. **Three interval cover:** `[0,1/3]`, `[1/3,7/20]`, `[7/20,1/sqrt(2)]` cover the full domain with no gap.
-7. **Low interval:** `P'>=0` follows because `Q>=4-12q>=0`.
-8. **Middle interval:** the base `2q^2-4q^3` decreases, the positive tail increases, and the exact rational tail at `7/20` is below `1/250`.
-9. **High interval:** `Q'<=-365/64<0` on the entire interval and `Q(7/20)<0`, hence `P` decreases.
-10. **Strictness:** the middle rational margin `11/216000` is strictly positive, so the resulting surplus bound is strict.
+6. **Three interval cover — PASS.** `[0,1/3]`, `[1/3,7/20]`, `[7/20,1/sqrt(2)]` cover the complete q-domain.
+7. **Low interval — PASS.** `P'>=0` because `Q>=4-12q>=0`.
+8. **Middle interval — PASS.** The cubic base decreases, the positive tail increases, and exact arithmetic gives the tail at `7/20` below `1/250`.
+9. **High interval — PASS.** `Q'<=-365/64<0` and `Q(7/20)=-1631127391/30720000000<0`.
+10. **Strictness — PASS.** The final scalar margin is exactly `11/216000>0`.
 
 ## Profile-integral inheritance checklist
 
-1. Recheck that the Cauchy--Schwarz direction in the pointwise threshold estimate is unchanged.
-2. Recheck the indispensable lower bound `z_h>=H0>=h`.
-3. Recheck the nested budget `sum_h z_h<=r`.
-4. Recheck the shifted-midpoint inequality and the endpoint loss `<=a/4`.
-5. Confirm `s_i/a in [0,1]` including `s_i=0`.
+1. Cauchy–Schwarz direction — rechecked; unchanged from the 293/500 proof.
+2. Lower bound `z_h>=H0>=h` — rechecked and still explicitly required.
+3. Nested budget `sum_h z_h<=r` — unchanged.
+4. Shifted-midpoint argument and endpoint loss `<=a/4` — re-expanded; unchanged.
+5. Domain `s_i/a in [0,1]` — valid, including `s_i=0` separately.
 
-Any failure here affects the previous 293/500 candidate as well and overrides this strengthening.
+**Trust boundary:** these inherited points remain same-assistant candidate mathematics. A later flaw in the shared graph-to-demand or exact threshold-capacity lemma would affect both this 7/12 result and the earlier 293/500 result.
 
 ## Degree-assembly red-team checklist
 
-1. From `b>=7n/12` and `n=a+b+1`, verify `5b>=7(a+1)` and `(b-a-1)/2 >= (a+1)/5`.
-2. Verify the parity identity
+1. From `b>=7n/12`, exact algebra gives `5b>=7(a+1)` and `(b-a-1)/2 >= (a+1)/5` — PASS.
+2. Parity identity `floor(n^2/4)-b(n-b)=floor((b-a-1)^2/4)` — exact regression PASS.
+3. Floor loss at most `1/4` — PASS.
+4. Large-a difference
 
    ```text
-   floor(n^2/4)-b(n-b)=floor((b-a-1)^2/4).
-   ```
-3. Verify the floor loss is at most `1/4`.
-4. Large-a difference:
-
-   ```text
-   D(a)=(a+1)^2/25-1/4-5a^2/128-a/8.
+   D(a)=(a+1)^2/25-1/4-5a^2/128-a/8
    ```
 
-   Check coefficient `3/3200`, `D(53)=123/3200`, and first forward difference `177/3200`.
-5. For `2<=a<=52`, verify the least eligible degree is `ceil(7(a+1)/5)` and required surplus is nondecreasing thereafter.
-6. Reconstruct the direct-bound exception list from scratch. Expected:
+   has coefficient `3/3200`, `D(53)=123/3200`, and first forward difference `177/3200` — PASS in both implementations.
+5. Least eligible degree `ceil(7(a+1)/5)` and monotone required surplus — PASS.
+6. Direct-bound exception list reconstructed independently as
 
    ```text
    4,6,9,11,14,19,24,29,34,39,44.
    ```
-7. For each exception, rederive the `K_h,w_h,L_h` threshold certificate and verify its maximum `S-r` upper bound is strictly below `2T0`.
-8. Check `a=0` star and `a=1` edgeless-F cases separately.
+7. Every exception is closed by the `K_h,w_h,L_h` threshold certificate — PASS, exact table above.
+8. `a=0` star and `a=1` edgeless-F cases remain separate — PASS.
 
 ## Independence / evidence policy
 
-`src/check_7_12.py` and `src/audit_7_12_independent.py` share no code. They intentionally use different data flow and least-threshold implementations. Both remain same-assistant implementations and therefore are **not external independent reproduction**.
+The two checker implementations share no code, but both were produced within the same AI-assisted project. They are therefore **not external independent reproduction**. The green checks promote the result only to the repository's candidate-theorem status.
 
-A green finite checker cannot validate the graph-to-demand bridge by itself. Promotion requires preserving both reports, documenting any discrepancy, and then building a reviewer manuscript/verification companion under the repository review-readiness policy.
+The next required steps are reviewer manuscript/verification companion generation, top-level README synchronization, and external specialist review.
