@@ -1,0 +1,207 @@
+{
+  "floating_point_reconnaissance_only": true,
+  "interpretation": "Cross-surplus falsification of the parameter-only min-hinge BC template; positive cases require exactification.",
+  "results": {
+    "T2_DEMAND45_FULLSH.json": {
+      "SH_count": 12,
+      "SH_mode": "full",
+      "active_SH_count": null,
+      "active_hinge_count": null,
+      "known_t3_identity_ok": null,
+      "mode": "demand45",
+      "objective": null,
+      "profiles": 1,
+      "seconds": 0.0225980281829834,
+      "status": 2,
+      "success": false,
+      "t": 2,
+      "template": [
+        [
+          0,
+          0
+        ],
+        [
+          0,
+          1
+        ],
+        [
+          0,
+          8
+        ],
+        [
+          0,
+          9
+        ],
+        [
+          0,
+          10
+        ],
+        [
+          0,
+          11
+        ],
+        [
+          1,
+          0
+        ],
+        [
+          3,
+          0
+        ]
+      ],
+      "template_count": 8
+    },
+    "T2_HARD38_FULLSH.json": {
+      "SH_count": 12,
+      "SH_mode": "full",
+      "active_SH_count": null,
+      "active_hinge_count": null,
+      "known_t3_identity_ok": null,
+      "mode": "hard38",
+      "objective": null,
+      "profiles": 38,
+      "seconds": 1.2523605823516846,
+      "status": 2,
+      "success": false,
+      "t": 2,
+      "template": [
+        [
+          0,
+          0
+        ],
+        [
+          0,
+          1
+        ],
+        [
+          0,
+          8
+        ],
+        [
+          0,
+          9
+        ],
+        [
+          0,
+          10
+        ],
+        [
+          0,
+          11
+        ],
+        [
+          1,
+          0
+        ],
+        [
+          3,
+          0
+        ]
+      ],
+      "template_count": 8
+    },
+    "T2_HARD38_NONE.json": {
+      "SH_count": 0,
+      "SH_mode": "none",
+      "active_SH_count": null,
+      "active_hinge_count": null,
+      "known_t3_identity_ok": null,
+      "mode": "hard38",
+      "objective": null,
+      "profiles": 38,
+      "seconds": 0.5575056076049805,
+      "status": 2,
+      "success": false,
+      "t": 2,
+      "template": [
+        [
+          0,
+          0
+        ],
+        [
+          0,
+          1
+        ],
+        [
+          0,
+          8
+        ],
+        [
+          0,
+          9
+        ],
+        [
+          0,
+          10
+        ],
+        [
+          0,
+          11
+        ],
+        [
+          1,
+          0
+        ],
+        [
+          3,
+          0
+        ]
+      ],
+      "template_count": 8
+    },
+    "T3_NONE.json": {
+      "SH_count": 0,
+      "SH_mode": "none",
+      "active_SH_count": 0,
+      "active_hinge_count": 9,
+      "known_t3_identity_ok": true,
+      "mode": "t3",
+      "objective": 1.6103380959226707,
+      "profiles": 94,
+      "seconds": 2.126781463623047,
+      "status": 0,
+      "success": true,
+      "t": 3,
+      "template": [
+        [
+          0,
+          0
+        ],
+        [
+          0,
+          2
+        ],
+        [
+          1,
+          7
+        ],
+        [
+          1,
+          8
+        ],
+        [
+          1,
+          9
+        ],
+        [
+          1,
+          10
+        ],
+        [
+          1,
+          11
+        ],
+        [
+          2,
+          0
+        ],
+        [
+          4,
+          0
+        ]
+      ],
+      "template_count": 9
+    }
+  },
+  "schema": "parametric-min-hinge-template-batch-v1"
+}
