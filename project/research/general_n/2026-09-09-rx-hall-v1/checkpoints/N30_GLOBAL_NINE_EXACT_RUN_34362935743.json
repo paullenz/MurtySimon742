@@ -1,0 +1,178 @@
+{
+  "BC_count": 6,
+  "BC_shapes": [
+    [
+      [
+        1,
+        -3
+      ]
+    ],
+    [
+      [
+        1,
+        -2
+      ],
+      [
+        2,
+        -4
+      ],
+      [
+        3,
+        -6
+      ],
+      [
+        7,
+        -8
+      ],
+      [
+        8,
+        -9
+      ],
+      [
+        11,
+        -11
+      ]
+    ],
+    [
+      [
+        1,
+        -2
+      ],
+      [
+        3,
+        -5
+      ],
+      [
+        11,
+        -11
+      ]
+    ],
+    [
+      [
+        1,
+        -2
+      ],
+      [
+        3,
+        -3
+      ],
+      [
+        4,
+        -4
+      ]
+    ],
+    [
+      [
+        1,
+        -1
+      ],
+      [
+        2,
+        -4
+      ],
+      [
+        4,
+        -5
+      ],
+      [
+        6,
+        -7
+      ],
+      [
+        7,
+        -8
+      ]
+    ],
+    [
+      [
+        1,
+        -1
+      ],
+      [
+        2,
+        -3
+      ],
+      [
+        4,
+        -4
+      ],
+      [
+        5,
+        -9
+      ],
+      [
+        10,
+        -10
+      ]
+    ]
+  ],
+  "SH_count": 3,
+  "SH_shapes": [
+    [
+      [
+        1,
+        -1
+      ],
+      [
+        2,
+        -5
+      ],
+      [
+        3,
+        -6
+      ]
+    ],
+    [
+      [
+        1,
+        -1
+      ],
+      [
+        2,
+        -7
+      ]
+    ],
+    [
+      [
+        1,
+        -1
+      ],
+      [
+        2,
+        -2
+      ],
+      [
+        3,
+        -11
+      ]
+    ]
+  ],
+  "bound_violations": [],
+  "continuous_objective": 18.756252649425196,
+  "floating_point_proposal_only": true,
+  "integer_arithmetic_only_acceptance": true,
+  "interpretation": "PASS is an exact integer feasible point for one shared selected-support staircase envelope across all seven n30 hard profiles. Finite evidence only; not a universal theorem.",
+  "pre_repair_positive_zero_rows": 33,
+  "profile_margin_lhs": [
+    -999957,
+    -999998,
+    -999980,
+    -999994,
+    -999992,
+    -1000002,
+    -1000001
+  ],
+  "repair_max": 4,
+  "repair_total": 35,
+  "repair_variable_count": 14,
+  "row_violations": [],
+  "rows": 2775,
+  "scale": 1000000,
+  "schema": "n30-shared-selected-support-exact-v1",
+  "source_support_schema": "n30-shared-min-support-milp-v1",
+  "status": "PASS",
+  "support_count": 9,
+  "variables": 55,
+  "worst_margin_lhs": -999957,
+  "zero_rhs_max_lhs": 0
+}
