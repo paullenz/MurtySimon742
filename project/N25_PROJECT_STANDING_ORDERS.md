@@ -40,6 +40,23 @@ Audit the entire workstream, including hand arguments, finite arithmetic, experi
 
 Only PROJECT-CERTIFIED material is safe to fold into the theorem chain. REPRODUCED computation may be reported as evidence but remains outside the proof until promoted by a complete audited argument or replayable proof evidence. An external-audit release additionally requires available and checked supporting artifacts and closed dependencies.
 
+## README frontier-synchronisation standing order
+
+The repository README must keep pace with the effective research frontier. README synchronisation is a required follow-up whenever material progress changes what an informed reviewer should regard as the current state of the project.
+
+Update the README when any of the following occurs:
+
+- a new theorem-level candidate proof or fixed-order result is added;
+- a reviewer-ready manuscript, release, verification companion or audit package is created;
+- a result is materially promoted, weakened, falsified, corrected or superseded;
+- a new canonical checkpoint becomes important to understanding the current frontier;
+- the active general-order research programme changes direction materially;
+- a dependency or non-dependency relationship changes in a way reviewers should know.
+
+The README must remain a concise current map rather than an exhaustive changelog. It should link to canonical proof/reviewer packages, distinguish theorem-level candidate results from exploratory/reconnaissance work, state material limitations and open review boundaries, and preserve visible corrections where they affect trust. Experimental checkpoints should be linked only when they are important for understanding the active frontier and must never be presented as theorem status.
+
+Before treating a major research checkpoint or reviewer package as fully preserved, check whether the README needs a corresponding update. If it does, update it in the same repository-writing pass whenever practicable.
+
 ## GitHub standing order
 
-The repository `paullenz/MurtySimon25` is the durable project home. Future material work should be preserved here (or in an explicitly hash-pinned external artifact referenced here) rather than left only in chat history.
+The repository `paullenz/MurtySimon742` is the durable project home. Future material work should be preserved here (or in an explicitly hash-pinned external artifact referenced here) rather than left only in chat history.
