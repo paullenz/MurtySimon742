@@ -1,0 +1,173 @@
+{
+  "candidate_BC": 73,
+  "candidate_SH": 11,
+  "demand45_id": 45,
+  "demand45_position": 0,
+  "floating_milp_reconnaissance_only": true,
+  "interpretation": "A witness with optimum 14 at M=200 and M=1000 is a compact computational lower-bound witness against common support 13 under both coefficient caps; exact mathematical infeasibility is not claimed.",
+  "pairs_tested": 1,
+  "profiles_total": 38,
+  "records": [
+    {
+      "BC_count": 8,
+      "SH_count": 6,
+      "active_BC": [
+        {
+          "index": 1,
+          "weight": 26.4748762776808
+        },
+        {
+          "index": 2,
+          "weight": 16.74047542213085
+        },
+        {
+          "index": 3,
+          "weight": 27.069216139935975
+        },
+        {
+          "index": 4,
+          "weight": 19.368694003188143
+        },
+        {
+          "index": 11,
+          "weight": 21.90304763492097
+        },
+        {
+          "index": 34,
+          "weight": 10.476400993910685
+        },
+        {
+          "index": 47,
+          "weight": 18.94305028697709
+        },
+        {
+          "index": 70,
+          "weight": 23.273138921299612
+        }
+      ],
+      "active_SH": [
+        {
+          "index": 1,
+          "weight": 16.740475422131134
+        },
+        {
+          "index": 2,
+          "weight": 27.19144748283993
+        },
+        {
+          "index": 3,
+          "weight": 53.8816994927142
+        },
+        {
+          "index": 5,
+          "weight": 22.466789087613105
+        },
+        {
+          "index": 8,
+          "weight": 30.42687376398585
+        },
+        {
+          "index": 9,
+          "weight": 16.74047542213065
+        }
+      ],
+      "big_m": 200,
+      "message": "Optimization terminated successfully. (HiGHS Status 7: Optimal)",
+      "mip_gap": 0.0,
+      "mip_node_count": 450,
+      "objective": 14.0,
+      "other_demand_id": 68,
+      "other_position": 1,
+      "rows": 1021,
+      "seconds": 8.550590515136719,
+      "status": 0,
+      "success": true,
+      "support_count": 14,
+      "validation_M1000": {
+        "BC_count": 8,
+        "SH_count": 6,
+        "active_BC": [
+          {
+            "index": 1,
+            "weight": 3.6779579027452334
+          },
+          {
+            "index": 2,
+            "weight": 2.526450516753978
+          },
+          {
+            "index": 3,
+            "weight": 2.9455410301229454
+          },
+          {
+            "index": 4,
+            "weight": 2.994252462019162
+          },
+          {
+            "index": 6,
+            "weight": 1.119710692356602
+          },
+          {
+            "index": 11,
+            "weight": 2.953304734912761
+          },
+          {
+            "index": 15,
+            "weight": 3.202392252691469
+          },
+          {
+            "index": 70,
+            "weight": 3.6541919419171496
+          }
+        ],
+        "active_SH": [
+          {
+            "index": 1,
+            "weight": 2.5264505167539646
+          },
+          {
+            "index": 2,
+            "weight": 4.034418061511771
+          },
+          {
+            "index": 3,
+            "weight": 7.625067166601693
+          },
+          {
+            "index": 5,
+            "weight": 4.602535244916434
+          },
+          {
+            "index": 8,
+            "weight": 4.633810520139005
+          },
+          {
+            "index": 9,
+            "weight": 2.526450516753983
+          }
+        ],
+        "big_m": 1000,
+        "message": "Optimization terminated successfully. (HiGHS Status 7: Optimal)",
+        "mip_gap": 0.0,
+        "mip_node_count": 409,
+        "objective": 14.0,
+        "other_demand_id": 68,
+        "other_position": 1,
+        "rows": 1021,
+        "seconds": 6.090747117996216,
+        "status": 0,
+        "success": true,
+        "support_count": 14,
+        "variables": 214
+      },
+      "variables": 214
+    }
+  ],
+  "schema": "n29-demand45-pair-min-support-scan-v1",
+  "witness": {
+    "M1000_support": 14,
+    "M200_support": 14,
+    "other_demand_id": 68,
+    "other_position": 1
+  }
+}
