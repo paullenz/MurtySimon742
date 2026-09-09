@@ -1,0 +1,38 @@
+{
+  "schema": "general-rx-hall-n29-exact-preserved-v1",
+  "date": "2026-09-09",
+  "workflow_run": 34326568879,
+  "head_sha": "687bc065a5e10b73db061329f3cb498bd6a1e5d7",
+  "aggregate_artifact_id": 10094029118,
+  "aggregate_artifact_digest": "sha256:597f913b38115c6c08110b0da041dae7d9be0742ce3cafb137129f5d13b2b409",
+  "status": "PASS_EXACT_REPLAY_AND_INDEPENDENT_CHECK",
+  "results": {
+    "2": {
+      "hard_rows": 902,
+      "exact_integer_farkas_rejections": 902,
+      "independently_verified_certificates": 902,
+      "unresolved": 0,
+      "rhs_min": -999824,
+      "rhs_max": -3
+    },
+    "3": {
+      "hard_rows": 94,
+      "exact_integer_farkas_rejections": 94,
+      "independently_verified_certificates": 94,
+      "unresolved": 0,
+      "rhs_min": -999786,
+      "rhs_max": -5
+    }
+  },
+  "total_hard_rows": 996,
+  "total_exact_integer_farkas_rejections": 996,
+  "total_independently_verified_certificates": 996,
+  "final_unresolved": 0,
+  "unit_density_bounds": true,
+  "uses_unordered_pair_aggregate_capacity": false,
+  "uses_cumulative_tail_variables": false,
+  "floating_point_is_proposal_only": true,
+  "integer_farkas_is_acceptance": true,
+  "independent_checker_standard_library_only": true,
+  "trust_boundary": "Every finite certificate is exact, but application to graphs remains conditional on the universal graph-to-demand/RX-Hall bridge and the earlier frontier preparation. This is not an unrestricted theorem or external review."
+}
