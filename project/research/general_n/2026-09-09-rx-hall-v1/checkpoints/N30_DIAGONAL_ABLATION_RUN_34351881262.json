@@ -1,0 +1,255 @@
+{
+  "interpretation": "Exact test of all lower-tail inequalities for y>=delta and z>=gamma. Failure shows general staircase geometry is stronger than these natural diagonal one-dimensional projections.",
+  "records": [
+    {
+      "demand_id": 2094,
+      "hard_position": 0,
+      "modes": {
+        "BCDIAG": {
+          "cdf_cuts_added": {
+            "BCDIAG": 18
+          },
+          "certificate_rhs": null,
+          "rejected_exactly": false
+        },
+        "BOTH": {
+          "cdf_cuts_added": {
+            "BCDIAG": 18,
+            "SHDIAG": 18
+          },
+          "certificate_rhs": null,
+          "rejected_exactly": false
+        },
+        "NONE": {
+          "cdf_cuts_added": {},
+          "certificate_rhs": null,
+          "rejected_exactly": false
+        },
+        "SHDIAG": {
+          "cdf_cuts_added": {
+            "SHDIAG": 18
+          },
+          "certificate_rhs": null,
+          "rejected_exactly": false
+        }
+      }
+    },
+    {
+      "demand_id": 2309,
+      "hard_position": 1,
+      "modes": {
+        "BCDIAG": {
+          "cdf_cuts_added": {
+            "BCDIAG": 18
+          },
+          "certificate_rhs": null,
+          "rejected_exactly": false
+        },
+        "BOTH": {
+          "cdf_cuts_added": {
+            "BCDIAG": 18,
+            "SHDIAG": 18
+          },
+          "certificate_rhs": null,
+          "rejected_exactly": false
+        },
+        "NONE": {
+          "cdf_cuts_added": {},
+          "certificate_rhs": null,
+          "rejected_exactly": false
+        },
+        "SHDIAG": {
+          "cdf_cuts_added": {
+            "SHDIAG": 18
+          },
+          "certificate_rhs": null,
+          "rejected_exactly": false
+        }
+      }
+    },
+    {
+      "demand_id": 2596,
+      "hard_position": 2,
+      "modes": {
+        "BCDIAG": {
+          "cdf_cuts_added": {
+            "BCDIAG": 18
+          },
+          "certificate_rhs": null,
+          "rejected_exactly": false
+        },
+        "BOTH": {
+          "cdf_cuts_added": {
+            "BCDIAG": 18,
+            "SHDIAG": 18
+          },
+          "certificate_rhs": null,
+          "rejected_exactly": false
+        },
+        "NONE": {
+          "cdf_cuts_added": {},
+          "certificate_rhs": null,
+          "rejected_exactly": false
+        },
+        "SHDIAG": {
+          "cdf_cuts_added": {
+            "SHDIAG": 18
+          },
+          "certificate_rhs": null,
+          "rejected_exactly": false
+        }
+      }
+    },
+    {
+      "demand_id": 2701,
+      "hard_position": 3,
+      "modes": {
+        "BCDIAG": {
+          "cdf_cuts_added": {
+            "BCDIAG": 18
+          },
+          "certificate_rhs": null,
+          "rejected_exactly": false
+        },
+        "BOTH": {
+          "cdf_cuts_added": {
+            "BCDIAG": 18,
+            "SHDIAG": 18
+          },
+          "certificate_rhs": null,
+          "rejected_exactly": false
+        },
+        "NONE": {
+          "cdf_cuts_added": {},
+          "certificate_rhs": null,
+          "rejected_exactly": false
+        },
+        "SHDIAG": {
+          "cdf_cuts_added": {
+            "SHDIAG": 18
+          },
+          "certificate_rhs": null,
+          "rejected_exactly": false
+        }
+      }
+    },
+    {
+      "demand_id": 2812,
+      "hard_position": 4,
+      "modes": {
+        "BCDIAG": {
+          "cdf_cuts_added": {
+            "BCDIAG": 18
+          },
+          "certificate_rhs": null,
+          "rejected_exactly": false
+        },
+        "BOTH": {
+          "cdf_cuts_added": {
+            "BCDIAG": 18,
+            "SHDIAG": 18
+          },
+          "certificate_rhs": null,
+          "rejected_exactly": false
+        },
+        "NONE": {
+          "cdf_cuts_added": {},
+          "certificate_rhs": null,
+          "rejected_exactly": false
+        },
+        "SHDIAG": {
+          "cdf_cuts_added": {
+            "SHDIAG": 18
+          },
+          "certificate_rhs": null,
+          "rejected_exactly": false
+        }
+      }
+    },
+    {
+      "demand_id": 2984,
+      "hard_position": 5,
+      "modes": {
+        "BCDIAG": {
+          "cdf_cuts_added": {
+            "BCDIAG": 18
+          },
+          "certificate_rhs": null,
+          "rejected_exactly": false
+        },
+        "BOTH": {
+          "cdf_cuts_added": {
+            "BCDIAG": 18,
+            "SHDIAG": 18
+          },
+          "certificate_rhs": null,
+          "rejected_exactly": false
+        },
+        "NONE": {
+          "cdf_cuts_added": {},
+          "certificate_rhs": null,
+          "rejected_exactly": false
+        },
+        "SHDIAG": {
+          "cdf_cuts_added": {
+            "SHDIAG": 18
+          },
+          "certificate_rhs": null,
+          "rejected_exactly": false
+        }
+      }
+    },
+    {
+      "demand_id": 2984,
+      "hard_position": 6,
+      "modes": {
+        "BCDIAG": {
+          "cdf_cuts_added": {
+            "BCDIAG": 18
+          },
+          "certificate_rhs": null,
+          "rejected_exactly": false
+        },
+        "BOTH": {
+          "cdf_cuts_added": {
+            "BCDIAG": 18,
+            "SHDIAG": 18
+          },
+          "certificate_rhs": null,
+          "rejected_exactly": false
+        },
+        "NONE": {
+          "cdf_cuts_added": {},
+          "certificate_rhs": null,
+          "rejected_exactly": false
+        },
+        "SHDIAG": {
+          "cdf_cuts_added": {
+            "SHDIAG": 18
+          },
+          "certificate_rhs": null,
+          "rejected_exactly": false
+        }
+      }
+    }
+  ],
+  "schema": "n30-pairwise-diagonal-cdf-ablation-v1",
+  "summary": {
+    "BCDIAG": {
+      "exact_rejections": 0,
+      "rejected_positions": []
+    },
+    "BOTH": {
+      "exact_rejections": 0,
+      "rejected_positions": []
+    },
+    "NONE": {
+      "exact_rejections": 0,
+      "rejected_positions": []
+    },
+    "SHDIAG": {
+      "exact_rejections": 0,
+      "rejected_positions": []
+    }
+  }
+}
