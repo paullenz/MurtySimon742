@@ -1,0 +1,52 @@
+name: General RX-Hall n30 unit-bound-free minimized certificate
+
+on:
+  workflow_dispatch:
+  push:
+    paths:
+      - 'project/research/general_n/2026-09-09-rx-hall-v1/rz_exception_remove_unit_bounds.py'
+      - '.github/workflows/general-rx-hall-n30-exception-no-unit.yml'
+
+permissions:
+  contents: write
+
+jobs:
+  verify:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 30
+    steps:
+      - uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262
+      - name: Pin solver
+        run: |
+          python3 -m venv .venv
+          .venv/bin/python -m pip install --disable-pip-version-check --only-binary=:all: scipy==1.17.0
+      - name: Verify exact transformed certificate
+        run: |
+          set -euo pipefail
+          R=project/research/general_n/2026-09-09-rx-hall-v1
+          mkdir -p out
+          .venv/bin/python -I -B "$R/rz_exception_remove_unit_bounds.py" \
+            --bc-json "$R/checkpoints/N30_BC_UPPER_CUTGEN_RUN_34348486247.json" \
+            --subset-json "$R/checkpoints/N30_EXCEPTION_SH_SUBSETS_RUN_34351236992.json" \
+            --min-json "$R/checkpoints/N30_EXCEPTION_BC_MINIMIZE_RUN_34352194549.json" \
+            --semantic-json "$R/checkpoints/N30_MINIMAL_PAIRWISE_MINE_RUN_34356725228.json" \
+            --a 13 --b 16 --dmax 11 --output out/NO_UNIT.json
+      - uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02
+        with:
+          name: n30-unit-bound-free-minimized-certificate
+          path: out/NO_UNIT.json
+          if-no-files-found: error
+          retention-days: 90
+      - name: Preserve durable checkpoint
+        run: |
+          set -euo pipefail
+          P="project/research/general_n/2026-09-09-rx-hall-v1/checkpoints/N30_NO_UNIT_PAIRWISE_RUN_${GITHUB_RUN_ID}.json"
+          cp out/NO_UNIT.json "$P"; test -s "$P"
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add "$P"; git commit -m "Preserve n30 unit-bound-free pairwise certificate run ${GITHUB_RUN_ID}"
+          for attempt in 1 2 3 4 5; do
+            if git push origin HEAD:main; then exit 0; fi
+            git reset --hard HEAD; git pull --rebase origin main; sleep $((attempt*2))
+          done
+          exit 1
