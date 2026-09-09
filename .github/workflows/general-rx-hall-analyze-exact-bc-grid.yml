@@ -1,0 +1,44 @@
+name: General RX-Hall analyze exact BC grid
+
+on:
+  workflow_dispatch:
+  push:
+    paths:
+      - '.github/workflows/general-rx-hall-analyze-exact-bc-grid.yml'
+
+permissions:
+  contents: write
+
+jobs:
+  analyze:
+    runs-on: ubuntu-24.04
+    steps:
+      - uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262
+        with:
+          fetch-depth: 0
+      - name: Analyze exact surface
+        run: |
+          set -euo pipefail
+          R=project/research/general_n/2026-09-09-rx-hall-v1
+          python3 -I -B "$R/analyze_exact_bc_grid.py" \
+            --exact-json "$R/checkpoints/N29_T3_PURE_BC_EXACT_M200_RUN_34383214636.json" \
+            --output "$R/N29_T3_EXACT_BC_GRID_ANALYSIS.json"
+      - name: Commit analysis
+        run: |
+          set -euo pipefail
+          P=project/research/general_n/2026-09-09-rx-hall-v1/N29_T3_EXACT_BC_GRID_ANALYSIS.json
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add "$P"
+          git commit -m "Analyze exact n29 t3 BC potential grid" || exit 0
+          git restore . || true
+          for attempt in 1 2 3 4 5; do
+            if git push origin HEAD:main; then exit 0; fi
+            git reset --hard HEAD
+            git pull --rebase origin main
+            python3 -I -B project/research/general_n/2026-09-09-rx-hall-v1/analyze_exact_bc_grid.py \
+              --exact-json project/research/general_n/2026-09-09-rx-hall-v1/checkpoints/N29_T3_PURE_BC_EXACT_M200_RUN_34383214636.json \
+              --output "$P"
+            git add "$P" && git commit -m "Analyze exact n29 t3 BC potential grid" || true
+          done
+          exit 1
