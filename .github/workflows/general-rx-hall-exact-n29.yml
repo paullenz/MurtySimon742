@@ -6,6 +6,7 @@ on:
     paths:
       - 'project/research/general_n/2026-09-09-rx-hall-v1/rx_hall_scan.py'
       - 'project/research/general_n/2026-09-09-rx-hall-v1/rx_hall_exact.py'
+      - 'project/research/general_n/2026-09-09-rx-hall-v1/rx_hall_verify_exact.py'
       - '.github/workflows/general-rx-hall-exact-n29.yml'
 
 permissions:
@@ -69,7 +70,29 @@ jobs:
           assert r['uses_cumulative_tail_variables'] is False
           assert r['floating_point_is_proposal_only'] is True
           assert r['integer_farkas_is_acceptance'] is True
-          print('exact RX-Hall shard verified')
+          print('exact RX-Hall shard verified by generator')
+          PY
+      - name: Independently verify saved integer certificates
+        run: |
+          set -euo pipefail
+          D=project/research/general_n/2026-09-09-rx-hall-v1
+          python3 -I -B "$D/rx_hall_verify_exact.py" \
+            --demands-json inputs/t${{ matrix.t }}/demands.json \
+            --rows inputs/t${{ matrix.t }}/row_survivors.txt \
+            --certificates out/certificates.json.gz \
+            --a 12 --b 16 --dmax 10 --t ${{ matrix.t }} \
+            --shard ${{ matrix.shard }} --shards ${{ matrix.shards }} \
+            > out/independent_check.json
+          cat out/independent_check.json
+          python3 - <<'PY'
+          import json
+          r=json.load(open('out/independent_check.json'))
+          assert r['status']=='PASS'
+          assert r['hard_rows_total']==${{ matrix.expected }}
+          assert r['standard_library_only'] is True
+          assert r['imports_generator'] is False
+          assert r['imports_scipy'] is False
+          print('independent standard-library verification passed')
           PY
       - uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02
         if: always()
@@ -78,6 +101,7 @@ jobs:
           path: |
             out/certificates.json.gz
             out/certificates.json.gz.report.json
+            out/independent_check.json
           if-no-files-found: error
           retention-days: 30
 
@@ -96,19 +120,29 @@ jobs:
           python3 - <<'PY'
           import json,pathlib
           docs=[]
+          independent=[]
           for p in pathlib.Path('reports').rglob('certificates.json.gz.report.json'):
               docs.append(json.load(open(p)))
+          for p in pathlib.Path('reports').rglob('independent_check.json'):
+              independent.append(json.load(open(p)))
           assert len(docs)==13, len(docs)
+          assert len(independent)==13, len(independent)
+          assert all(r['status']=='PASS' for r in independent)
+          assert all(r['standard_library_only'] is True for r in independent)
           result={}
           for t,expected in [(3,94),(2,902)]:
               z=[r for r in docs if r['scope']['t']==t]
+              q=[r for r in independent if r['scope']['t']==t]
               assert len(z)==(1 if t==3 else 12), (t,len(z))
-              assert all(r['hard_rows_total']==expected for r in z)
+              assert len(q)==len(z), (t,len(q),len(z))
+              assert all(r['hard_rows_total']==expected for r in z+q)
               tested=sum(r['rows_in_shard'] for r in z)
               rejected=sum(r['exact_rejections'] for r in z)
+              independently_checked=sum(r['records_checked'] for r in q)
               unresolved=sum(len(r['unresolved']) for r in z)
               assert tested==expected, (t,tested,expected)
               assert rejected==expected, (t,rejected,expected)
+              assert independently_checked==expected, (t,independently_checked,expected)
               assert unresolved==0, (t,unresolved)
               assert all(r['unit_density_bounds'] is True for r in z)
               assert all(r['uses_unordered_pair_aggregate_capacity'] is False for r in z)
@@ -116,22 +150,25 @@ jobs:
               result[str(t)]={
                   'hard_rows':expected,
                   'exact_integer_farkas_rejections':rejected,
+                  'independently_verified_certificates':independently_checked,
                   'unresolved':0,
                   'rhs_min':min(r['rhs_min'] for r in z),
                   'rhs_max':max(r['rhs_max'] for r in z),
               }
           out={
-              'schema':'general-rx-hall-n29-exact-aggregate-v1',
-              'status':'PASS_EXACT_REPLAY',
+              'schema':'general-rx-hall-n29-exact-aggregate-v2',
+              'status':'PASS_EXACT_REPLAY_AND_INDEPENDENT_CHECK',
               'results':result,
               'total_hard_rows':996,
               'total_exact_integer_farkas_rejections':996,
+              'total_independently_verified_certificates':996,
               'final_unresolved':0,
               'unit_density_bounds':True,
               'uses_unordered_pair_aggregate_capacity':False,
               'uses_cumulative_tail_variables':False,
               'floating_point_is_proposal_only':True,
               'integer_farkas_is_acceptance':True,
+              'independent_checker_standard_library_only':True,
           }
           pathlib.Path('RX_HALL_N29_EXACT_REPORT.json').write_text(json.dumps(out,indent=2,sort_keys=True)+'\n')
           print(json.dumps(out,indent=2,sort_keys=True))
