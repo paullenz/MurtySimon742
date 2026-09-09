@@ -52,18 +52,8 @@ jobs:
           import json,pathlib
           p=pathlib.Path('out/certificates.json.gz.report.json'); assert p.exists()
           r=json.load(open(p)); assert r['hard_rows']==207
-          o={
-            'schema':'n30-r-core-falsification-v1','m':225,'t':1,
-            'hard_rows':r['hard_rows'],
-            'exact_integer_farkas_rejections':r['exact_integer_farkas_rejections'],
-            'unresolved_count':len(r['unresolved']),'unresolved':r['unresolved'],
-            'status':'PASS_ALL_REJECTED' if not r['unresolved'] else 'SURVIVORS',
-            'uses_exact_residual_budget':True,'uses_rx1_rx2_rx3':True,
-            'removes_P_and_Z':True,'uses_full_hall_closure':True,
-            'interpretation':'Necessary-condition relaxation; unresolved states are not graphs.'
-          }
-          q=pathlib.Path('project/research/general_n/2026-09-09-rx-hall-v1/checkpoints/N30_R_CORE_LATEST.json')
-          q.parent.mkdir(parents=True,exist_ok=True); q.write_text(json.dumps(o,indent=2,sort_keys=True)+'\n')
+          o={'schema':'n30-r-core-falsification-v2','run_id':'${{ github.run_id }}','m':225,'t':1,'hard_rows':r['hard_rows'],'exact_integer_farkas_rejections':r['exact_integer_farkas_rejections'],'unresolved_count':len(r['unresolved']),'unresolved':r['unresolved'],'status':'PASS_ALL_REJECTED' if not r['unresolved'] else 'SURVIVORS','uses_exact_residual_budget':True,'uses_rx1_rx2_rx3':True,'removes_P_and_Z':True,'uses_full_hall_closure':True,'interpretation':'Necessary-condition relaxation; unresolved states are not graphs. Existing n30 proof is unaffected.'}
+          pathlib.Path('out/CLASSIFICATION.json').write_text(json.dumps(o,indent=2,sort_keys=True)+'\n')
           print(json.dumps(o,indent=2,sort_keys=True))
           PY
       - uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02
@@ -73,24 +63,18 @@ jobs:
           path: out/
           if-no-files-found: error
           retention-days: 30
-      - name: Commit durable checkpoint
+      - name: Publish unique checkpoint through contents API
         if: always()
+        env:
+          GH_TOKEN: ${{ github.token }}
         run: |
           set -euo pipefail
-          git config user.name 'github-actions[bot]'
-          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
-          git add project/research/general_n/2026-09-09-rx-hall-v1/checkpoints/N30_R_CORE_LATEST.json
-          if git diff --cached --quiet; then
-            echo 'checkpoint unchanged'
-          else
-            git commit -m 'Preserve n30 residual-budget Hall-core checkpoint'
-            git pull --rebase origin main
-            git push origin HEAD:main
-          fi
+          P="project/research/general_n/2026-09-09-rx-hall-v1/checkpoints/N30_R_CORE_RUN_${GITHUB_RUN_ID}.json"
+          C=$(base64 -w0 out/CLASSIFICATION.json)
+          gh api --method PUT "repos/${GITHUB_REPOSITORY}/contents/${P}" -f message="Preserve n30 residual-budget Hall-core run ${GITHUB_RUN_ID}" -f content="$C" -f branch=main
       - name: Require zero survivors
         run: |
           python3 - <<'PY'
           import json
-          r=json.load(open('project/research/general_n/2026-09-09-rx-hall-v1/checkpoints/N30_R_CORE_LATEST.json'))
-          assert r['unresolved_count']==0,r
+          r=json.load(open('out/CLASSIFICATION.json')); assert r['unresolved_count']==0,r
           PY
