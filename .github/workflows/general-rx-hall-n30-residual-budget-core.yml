@@ -11,7 +11,7 @@ on:
       - 'project/research/n30/2026-09-08-minimal-kernel-recon-v1/n30_row_threshold.py'
       - '.github/workflows/general-rx-hall-n30-residual-budget-core.yml'
 permissions:
-  contents: read
+  contents: write
 jobs:
   test:
     runs-on: ubuntu-24.04
@@ -54,7 +54,7 @@ jobs:
           python3 - <<'PY'
           import json,pathlib
           r=json.load(open('out/certificates.json.gz.report.json')); assert r['hard_rows']==207
-          o={'schema':'n30-residual-budget-core-falsification-v1','hard_rows':207,'exact_integer_farkas_rejections':r['exact_integer_farkas_rejections'],'unresolved_count':len(r['unresolved']),'unresolved':r['unresolved'],'status':'PASS_ALL_REJECTED' if not r['unresolved'] else 'SURVIVORS','exact_residual_budget':True,'removes_Z_and_P':True}
+          o={'schema':'n30-residual-budget-core-falsification-v2','run_id':'${{ github.run_id }}','hard_rows':207,'exact_integer_farkas_rejections':r['exact_integer_farkas_rejections'],'unresolved_count':len(r['unresolved']),'unresolved':r['unresolved'],'status':'PASS_ALL_REJECTED' if not r['unresolved'] else 'SURVIVORS','exact_residual_budget':True,'removes_Z_and_P':True,'interpretation':'Necessary-condition relaxation; unresolved states are not graphs. Existing n30 proof is unaffected.'}
           pathlib.Path('out/CLASSIFICATION.json').write_text(json.dumps(o,indent=2,sort_keys=True)+'\n'); print(json.dumps(o,indent=2,sort_keys=True))
           PY
       - uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02
@@ -64,6 +64,15 @@ jobs:
           path: out/
           if-no-files-found: error
           retention-days: 30
+      - name: Publish unique checkpoint through contents API
+        if: always()
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          set -euo pipefail
+          P="project/research/general_n/2026-09-09-rx-hall-v1/checkpoints/N30_RESIDUAL_BUDGET_RUN_${GITHUB_RUN_ID}.json"
+          C=$(base64 -w0 out/CLASSIFICATION.json)
+          gh api --method PUT "repos/${GITHUB_REPOSITORY}/contents/${P}" -f message="Preserve n30 residual-budget core run ${GITHUB_RUN_ID}" -f content="$C" -f branch=main
       - name: Require zero survivors
         run: |
           python3 - <<'PY'
