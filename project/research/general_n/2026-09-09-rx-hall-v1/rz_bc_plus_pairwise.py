@@ -69,9 +69,9 @@ def separate(sol,sources,labels,fam):
     sig=(fam,tuple(sorted((v['g'],v['R'],v['x']) for v in UA)),tuple(sorted((u['k'],u['q'],u['p']) for u in N)))
     return row,lhs,sig,UA,N
 
-def generator_size(U,fam):
+def generator_points(U,fam):
     pts=sorted(set(coords(v,fam) for v in U))
-    return len([p for p in pts if not any(q!=p and leq(q,p) for q in pts)])
+    return [p for p in pts if not any(q!=p and leq(q,p) for q in pts)]
 
 def solve(old,a,b,dmax,families,maxcuts):
     m,sources,labels=cg.build_master(a,b,dmax,old['s'],old['rho'])
@@ -89,14 +89,16 @@ def solve(old,a,b,dmax,families,maxcuts):
         fam,(row,lhs,sig,U,N)=found
         if sig in sigs:raise RuntimeError(f'duplicate {fam} pairwise upper-set cut')
         sigs.add(sig);m.le(row,0)
-        cuts.append({'family':fam,'iteration':it,'violation':lhs,'generator_size':generator_size(U,fam)})
+        gens=generator_points(U,fam)
+        cuts.append({'family':fam,'iteration':it,'violation':lhs,'generator_size':len(gens),'generators':[list(p) for p in gens]})
     pair_end=len(m.ub);ex.add_unit_density_bounds(m);cert=ex.exact_certificate(m)
     active=[]
     if cert:
         for i,w in cert['ub']:
             if pair_start<=i<pair_end:
-                c=cuts[i-pair_start];active.append({'cut_index':i-pair_start,'weight':w,'family':c['family'],'generator_size':c['generator_size']})
-    return {'rejected_exactly':cert is not None,'certificate_rhs':None if cert is None else cert['rhs'],'pairwise_cuts_added':len(cuts),'pairwise_cut_counts':{f:sum(c['family']==f for c in cuts) for f in families},'proof_active_pairwise':active,'numerical_status_before_exact':numerical_status}
+                c=cuts[i-pair_start]
+                active.append({'cut_index':i-pair_start,'weight':w,'family':c['family'],'generator_size':c['generator_size'],'generators':c['generators']})
+    return {'rejected_exactly':cert is not None,'certificate_rhs':None if cert is None else cert['rhs'],'pairwise_cuts_added':len(cuts),'pairwise_cut_counts':{f:sum(c['family']==f for c in cuts) for f in families},'pairwise_cuts':cuts,'proof_active_pairwise':active,'numerical_status_before_exact':numerical_status}
 
 def main():
     p=argparse.ArgumentParser();p.add_argument('--bc-json',type=Path,required=True);p.add_argument('--a',type=int,required=True);p.add_argument('--b',type=int,required=True);p.add_argument('--dmax',type=int,required=True);p.add_argument('--output',type=Path,required=True);p.add_argument('--max-cuts',type=int,default=1000);a=p.parse_args();H=json.loads(a.bc_json.read_text());records=[]
@@ -105,12 +107,11 @@ def main():
         rec={'hard_position':old['hard_position'],'demand_id':old['demand_id'],'modes':{}}
         for name,fams in modes.items():
             if not fams:
-                # Reuse known exact BC status from source checkpoint.
                 rec['modes'][name]={'rejected_exactly':bool(old['rejected_exactly']),'pairwise_cuts_added':0}
             else:
                 rec['modes'][name]=solve(old,a.a,a.b,a.dmax,fams,a.max_cuts)
         records.append(rec)
     summary={name:{'exact_rejections':sum(r['modes'][name]['rejected_exactly'] for r in records),'rejected_positions':[r['hard_position'] for r in records if r['modes'][name]['rejected_exactly']]} for name in modes}
-    out={'schema':'rz-bc-plus-pairwise-dominance-v1','source_checkpoint':str(a.bc_json),'summary':summary,'records':records,'interpretation':'Exact ablation of whether BC 2D staircases plus SD and/or SH pairwise upper-set dominance suffice. No full 3D upper sets are added.'}
+    out={'schema':'rz-bc-plus-pairwise-dominance-v2','source_checkpoint':str(a.bc_json),'summary':summary,'records':records,'interpretation':'Exact ablation of whether BC 2D staircases plus SD and/or SH pairwise upper-set dominance suffice. Pairwise generator antichains are recorded explicitly. No full 3D upper sets are added.'}
     a.output.parent.mkdir(parents=True,exist_ok=True);a.output.write_text(json.dumps(out,indent=2,sort_keys=True)+'\n');print(json.dumps(summary,indent=2,sort_keys=True))
 if __name__=='__main__':main()
