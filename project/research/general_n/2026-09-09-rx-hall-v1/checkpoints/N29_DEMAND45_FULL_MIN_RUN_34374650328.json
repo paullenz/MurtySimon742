@@ -1,0 +1,279 @@
+{
+  "H0": 4,
+  "S": 38,
+  "candidate_BC": 75,
+  "candidate_SH": 12,
+  "demand_id": 45,
+  "floating_point_reconnaissance_only": true,
+  "minimum": {
+    "BC_count": 7,
+    "SH_count": 6,
+    "active_BC": [
+      {
+        "generators": [
+          [
+            1,
+            -3
+          ]
+        ],
+        "index": 1,
+        "weight": 8.499999999985096
+      },
+      {
+        "generators": [
+          [
+            1,
+            -2
+          ],
+          [
+            2,
+            -4
+          ],
+          [
+            3,
+            -6
+          ],
+          [
+            7,
+            -8
+          ],
+          [
+            8,
+            -9
+          ]
+        ],
+        "index": 2,
+        "weight": 3.7499999999920464
+      },
+      {
+        "generators": [
+          [
+            1,
+            -2
+          ],
+          [
+            3,
+            -5
+          ]
+        ],
+        "index": 3,
+        "weight": 6.249999999988295
+      },
+      {
+        "generators": [
+          [
+            2,
+            -5
+          ],
+          [
+            3,
+            -14
+          ]
+        ],
+        "index": 13,
+        "weight": 2.9999999999950333
+      },
+      {
+        "generators": [
+          [
+            2,
+            -2
+          ],
+          [
+            3,
+            -4
+          ],
+          [
+            4,
+            -8
+          ],
+          [
+            9,
+            -10
+          ]
+        ],
+        "index": 15,
+        "weight": 3.999999999994081
+      },
+      {
+        "generators": [
+          [
+            4,
+            -9
+          ],
+          [
+            9,
+            -13
+          ]
+        ],
+        "index": 71,
+        "weight": 3.9999999999931126
+      },
+      {
+        "generators": [
+          [
+            4,
+            -4
+          ],
+          [
+            5,
+            -5
+          ],
+          [
+            6,
+            -6
+          ],
+          [
+            7,
+            -7
+          ],
+          [
+            8,
+            -10
+          ],
+          [
+            9,
+            -13
+          ]
+        ],
+        "index": 72,
+        "weight": 5.74999999999041
+      }
+    ],
+    "active_SH": [
+      {
+        "generators": [
+          [
+            1,
+            -1
+          ],
+          [
+            2,
+            -7
+          ]
+        ],
+        "index": 1,
+        "weight": 3.7499999999936717
+      },
+      {
+        "generators": [
+          [
+            1,
+            -1
+          ],
+          [
+            2,
+            -2
+          ],
+          [
+            3,
+            -11
+          ]
+        ],
+        "index": 3,
+        "weight": 4.9999999999911315
+      },
+      {
+        "generators": [
+          [
+            1,
+            -1
+          ],
+          [
+            4,
+            -16
+          ]
+        ],
+        "index": 4,
+        "weight": 14.749999999973186
+      },
+      {
+        "generators": [
+          [
+            3,
+            -8
+          ],
+          [
+            4,
+            -12
+          ]
+        ],
+        "index": 6,
+        "weight": 3.7499999999944977
+      },
+      {
+        "generators": [
+          [
+            3,
+            -4
+          ],
+          [
+            4,
+            -6
+          ],
+          [
+            5,
+            -12
+          ]
+        ],
+        "index": 9,
+        "weight": 6.249999999989553
+      },
+      {
+        "generators": [
+          [
+            3,
+            -3
+          ],
+          [
+            4,
+            -8
+          ]
+        ],
+        "index": 10,
+        "weight": 3.7499999999950715
+      }
+    ],
+    "message": "Optimization terminated successfully. (HiGHS Status 7: Optimal)",
+    "mip_gap": 0.0,
+    "mip_node_count": 5034,
+    "objective": 13.0,
+    "status": 0,
+    "success": true,
+    "support_count": 13
+  },
+  "occurrence": 0,
+  "rho": [
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    3,
+    3,
+    3,
+    4,
+    4,
+    4,
+    4
+  ],
+  "s": [
+    1,
+    1,
+    3,
+    3,
+    3,
+    3,
+    4,
+    4,
+    4,
+    4,
+    4,
+    4
+  ],
+  "schema": "n29-single-full-min-support-v1"
+}
