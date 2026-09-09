@@ -1,0 +1,30 @@
+name: Inspect n28 direct197 archive for Fan-free reuse
+
+on:
+  workflow_dispatch:
+  push:
+    paths:
+      - '.github/workflows/inspect-n28-direct197-archive.yml'
+
+jobs:
+  inspect:
+    runs-on: ubuntu-24.04
+    steps:
+      - uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262
+      - name: Extract archive and inventory parameter interfaces
+        run: |
+          set -euo pipefail
+          Z=project/research/general_n/2026-09-07-direct-197-v8/MurtySimon_N28_197_Direct_v8.zip
+          mkdir x
+          unzip -q "$Z" -d x
+          ROOT=$(find x -maxdepth 2 -type f -name replay.py -printf '%h\n' | head -1)
+          test -n "$ROOT"
+          echo "ROOT=$ROOT" | tee INVENTORY.txt
+          find "$ROOT" -maxdepth 2 -type f \( -name '*.py' -o -name '*.cpp' -o -name '*.hpp' -o -name '*.md' \) -printf '%P\n' | sort | tee -a INVENTORY.txt
+          echo '--- parameter-related excerpts ---' | tee -a INVENTORY.txt
+          grep -RniE '197|196|target|surplus|\bt\b|edges|Delta|delta|m=' "$ROOT" --include='*.py' --include='*.cpp' --include='*.hpp' | head -n 500 | tee -a INVENTORY.txt || true
+      - uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02
+        with:
+          name: n28-direct197-interface-inventory
+          path: INVENTORY.txt
+          retention-days: 30
