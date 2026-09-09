@@ -1,9 +1,9 @@
 #!/usr/bin/env python3
 """Build canonical reviewer manuscripts and verification companions.
 
-This script deliberately does not alter the underlying proof/audit sources.  It
-creates editorial reviewer editions by concatenating a transparent front matter
-layer with the canonical proof and audit files, then renders PDFs with pandoc.
+The script does not alter canonical proof/audit sources. It creates editorial
+reviewer editions, renders them with the repository's audited Pandoc/XeLaTeX
+settings, and rebuilds the review-ready index.
 """
 from __future__ import annotations
 
@@ -15,6 +15,8 @@ import subprocess
 
 ROOT = Path(__file__).resolve().parents[4]
 TODAY = "9 September 2026"
+FILTER = "project/reviews/reviewer-paper-build/v1/fix_aligned_tags.lua"
+
 
 @dataclass(frozen=True)
 class Spec:
@@ -29,6 +31,7 @@ class Spec:
     companion_sources: tuple[str, ...]
     status: str
     claim: str
+
 
 SPECS = (
     Spec(
@@ -87,15 +90,34 @@ SPECS = (
         manuscript_name="General_293_500_Reviewer_Manuscript_v1",
         companion_name="General_293_500_Verification_Companion_v1",
         title="A profile-integral maximum-degree bound for diameter-2 edge-critical graphs",
-        subtitle="Reviewer edition 1 - candidate general structural theorem",
-        abstract=("We present the current candidate profile-integral argument proving t < a^2/24 + a/8 in the selected/residual framework and deriving the exact rational consequence that, for n at least 6, maximum degree at least (293/500)n forces strictly fewer than floor(n^2/4) edges. The argument is a general structural candidate rather than a proof of the unrestricted Murty-Simon conjecture. Its finite integer checks are retained and replayed internally; independent mathematical review and novelty assessment remain open."),
+        subtitle="Reviewer edition 1 - retained candidate general structural theorem",
+        abstract=("We present the retained candidate profile-integral argument establishing its original surplus bound and the rational maximum-degree threshold 293/500. This result is superseded in threshold strength by the later 7/12 profile-integral strengthening, but remains preserved as an independently reviewable development checkpoint. Independent mathematical review and novelty assessment remain open."),
         proof="project/research/general_n/2026-09-08-profile-integral-v1/PROOF.md",
         companion_sources=(
             "project/research/general_n/2026-09-08-profile-integral-v1/README.md",
             "project/research/general_n/2026-09-08-profile-integral-v1/AUDIT.md",
         ),
-        status="complete candidate hand argument; independent review and novelty assessment OPEN",
+        status="retained candidate hand argument; superseded in threshold strength by 7/12; independent review OPEN",
         claim="n >= 6 and Delta(G) >= (293/500)n imply e(G) < floor(n^2/4)",
+    ),
+    Spec(
+        key="general-7-12",
+        release_dir="releases/general-7-12-reviewer-v1",
+        manuscript_name="General_7_12_Reviewer_Manuscript_v1",
+        companion_name="General_7_12_Verification_Companion_v1",
+        title="A strengthened profile-integral maximum-degree bound for diameter-2 edge-critical graphs",
+        subtitle="Reviewer edition 1 - current strongest profile-integral candidate",
+        abstract=("We present a strengthened candidate profile-integral argument. A sharper elementary square-root minorant improves the universal surplus estimate, and an exact finite threshold certificate completes the degree assembly at the rational threshold 7/12. Two separately written standard-library checkers agree on the scalar arithmetic and every finite exception. The argument remains candidate mathematics: independent specialist review, novelty assessment and external computational reproduction are open."),
+        proof="project/research/general_n/2026-09-09-profile-integral-7-12-v1/PROOF.md",
+        companion_sources=(
+            "project/research/general_n/2026-09-09-profile-integral-7-12-v1/README.md",
+            "project/research/general_n/2026-09-09-profile-integral-7-12-v1/AUDIT.md",
+            "project/research/general_n/2026-09-09-profile-integral-7-12-v1/evidence/run-34355073705/EXACT_CHECK.json",
+            "project/research/general_n/2026-09-09-profile-integral-7-12-v1/evidence/run-34355073705/INDEPENDENT_AUDIT.json",
+            "project/research/general_n/2026-09-09-profile-integral-7-12-v1/evidence/run-34355073705/RECEIPT.json",
+        ),
+        status="complete candidate hand argument; internal exact audits green; independent review and novelty assessment OPEN",
+        claim="n >= 6 and Delta(G) >= (7/12)n imply e(G) < floor(n^2/4)",
     ),
     Spec(
         key="general-13-22",
@@ -103,8 +125,8 @@ SPECS = (
         manuscript_name="General_13_22_Reviewer_Manuscript_v1",
         companion_name="General_13_22_Verification_Companion_v1",
         title="A layer-sum residual bound for diameter-2 edge-critical graphs",
-        subtitle="Reviewer edition 1 - candidate general structural theorem",
-        abstract=("We present the current candidate layer-sum argument yielding the cubic residual inequality 3S^3 <= a^2 r(2r+1), the surplus bound t < (4/81)a^2 + 1/8, and the consequence that, for n at least 6, maximum degree at least (13/22)n forces strictly fewer than floor(n^2/4) edges. The result is retained as a useful structural theorem even though the later 293/500 argument improves the degree threshold. Independent mathematical review remains open."),
+        subtitle="Reviewer edition 1 - retained candidate general structural theorem",
+        abstract=("We present the retained candidate layer-sum argument yielding a cubic residual inequality, its resulting surplus bound, and the rational maximum-degree threshold 13/22. The result remains useful structural history even though later profile-integral arguments improve the threshold. Independent mathematical review remains open."),
         proof="project/research/general_n/2026-09-08-layer-sum-v1/PROOF.md",
         companion_sources=(
             "project/research/general_n/2026-09-08-layer-sum-v1/README.md",
@@ -113,7 +135,7 @@ SPECS = (
             "project/research/general_n/2026-09-08-layer-sum-v1/RED_TEAM_2026-09-08.md",
             "project/research/general_n/2026-09-08-layer-sum-v1/RECONCILIATION.md",
         ),
-        status="candidate hand proof; independent mathematical review OPEN",
+        status="retained candidate hand proof; independent mathematical review OPEN",
         claim="n >= 6 and Delta(G) >= (13/22)n imply e(G) < floor(n^2/4)",
     ),
 )
@@ -143,11 +165,15 @@ def companion_front(spec: Spec) -> str:
 def run_pandoc(md: Path, pdf: Path) -> None:
     cmd = [
         "pandoc", str(md),
-        "--from=markdown+raw_tex",
+        "--from=markdown+raw_tex+tex_math_single_backslash",
+        f"--lua-filter={FILTER}",
         "--pdf-engine=xelatex",
         "-V", "geometry:a4paper",
         "-V", "geometry:margin=25mm",
         "-V", "fontsize=11pt",
+        "-V", "mainfont=FreeSerif",
+        "-V", "sansfont=FreeSans",
+        "-V", "monofont=FreeMono",
         "-V", "colorlinks=true",
         "-V", "urlcolor=blue",
         "-o", str(pdf),
@@ -180,9 +206,7 @@ def build(spec: Spec) -> dict:
     run_pandoc(manuscript_md, manuscript_pdf)
     run_pandoc(companion_md, companion_pdf)
 
-    readme = f'''# {spec.title}\n\n**Reviewer package v1 - {TODAY}.**\n\nCanonical claim: `{spec.claim}`.\n\nStatus: **{spec.status}.**\n\nStart with [{spec.manuscript_name}.pdf]({spec.manuscript_name}.pdf). For computational scope, replay instructions, hostile audits and provenance, read [{spec.companion_name}.pdf]({spec.companion_name}.pdf). The Markdown sources are committed beside the PDFs.\n\nThe mathematical proof remains canonical at [`{spec.proof}`](../../{spec.proof} if False else "#"). This package is editorial: it does not silently alter the underlying proof, and it does not represent internal or same-assistant checking as external independent verification.\n'''
-    # Replace the intentionally inert Markdown construction above with a stable relative GitHub-root path.
-    readme = readme.replace(f'[`{spec.proof}`](../../{spec.proof} if False else "#")', f'`{spec.proof}`')
+    readme = f'''# {spec.title}\n\n**Reviewer package v1 - {TODAY}.**\n\nCanonical claim: `{spec.claim}`.\n\nStatus: **{spec.status}.**\n\nStart with [{spec.manuscript_name}.pdf]({spec.manuscript_name}.pdf). For computational scope, replay instructions, hostile audits and provenance, read [{spec.companion_name}.pdf]({spec.companion_name}.pdf). The Markdown sources are committed beside the PDFs.\n\nCanonical mathematical source: `{spec.proof}`. This package is editorial: it does not silently alter the underlying proof, and it does not represent internal or same-assistant checking as external independent verification.\n'''
     (out / "README.md").write_text(readme, encoding="utf-8")
 
     files = [manuscript_md, manuscript_pdf, companion_md, companion_pdf, out / "README.md"]
@@ -205,7 +229,7 @@ def build(spec: Spec) -> dict:
 def build_index(manifests: list[dict]) -> None:
     lines = [
         "# Review-ready proof index\n",
-        f"Updated {TODAY}. This index identifies the canonical reviewer-facing paper for every current theorem-level candidate claim in the top-level project status. Historical failed or superseded development checkpoints remain preserved but are not promoted to separate theorem papers.\n",
+        f"Updated {TODAY}. This index identifies the canonical reviewer-facing paper for every current theorem-level candidate claim in the top-level project status. Historical failed or superseded development checkpoints remain preserved rather than silently rewritten.\n",
         "| Scope | Claim | Reviewer manuscript | Verification companion | Status |\n",
         "|---|---|---|---|---|\n",
         "| n=25 | `e(G) <= 156`, equality `K(12,13)` | [PDF](n25-reviewer-v1/N25_Reviewer_Manuscript_v1.pdf) | package audit material in [n25 reviewer release](n25-reviewer-v1/README.md) | independent review open |\n",
@@ -216,7 +240,7 @@ def build_index(manifests: list[dict]) -> None:
         lines.append(f"| {spec.key} | `{spec.claim}` | [PDF]({d}/{spec.manuscript_name}.pdf) | [PDF]({d}/{spec.companion_name}.pdf) | {spec.status} |\n")
     lines += [
         "\n## Scope rule\n\n",
-        "This index covers the project's current **theorem-level candidate claims**: the fixed-order candidates at n=25,27,28,29,30 and the two retained general structural theorems (13/22 and 293/500). Earlier residual-h-index, v9/v10/v11 and other superseded research checkpoints remain available in their original directories as development history and supporting lemmas; they are not separately advertised as current headline theorems. The ongoing RX-Hall/R+Z work is research in progress and is not yet a theorem paper.\n\n",
+        "This index covers the project's current **theorem-level candidate claims**: the fixed-order candidates at n=25,27,28,29,30 and the retained general structural candidates 13/22, 293/500 and 7/12. The 7/12 profile-integral strengthening is the strongest current maximum-degree threshold among these three. Earlier residual-h-index, v9/v10/v11 and other development checkpoints remain available in their original directories as history and supporting lemmas. The ongoing RX-Hall / pairwise-staircase programme is research in progress and is not yet a theorem paper.\n\n",
         "No item in this index is represented as externally accepted. Same-assistant independent implementations are not external independent verification.\n",
     ]
     (ROOT / "releases/REVIEW_READY_INDEX.md").write_text("".join(lines), encoding="utf-8")
@@ -236,6 +260,7 @@ def main() -> None:
     report_path = ROOT / "project/reviews/reviewer-paper-build/v1/BUILD_REPORT.json"
     report_path.write_text(json.dumps(report, indent=2, sort_keys=True) + "\n", encoding="utf-8")
     print(json.dumps(report, indent=2, sort_keys=True))
+
 
 if __name__ == "__main__":
     main()
