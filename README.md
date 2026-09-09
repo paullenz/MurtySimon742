@@ -20,7 +20,7 @@ A corrected `v2` model was then replayed cleanly and again produced zero survivo
 
 ### n=27
 
-**Candidate:** `e(G) <= 182`, equality only `K(13,14)`. [Proof](project/reviews/n27/2026-09-07-candidate-v1/PROOF.md) · [evidence release](releases/n27-candidate-v1/README.md) · [8 September red-team audit](project/reviews/n27/2026-09-08-redteam-v1/REPORT.md). The hardened replay checks 80,978,546 canonical columns and independently reconstructs all 35,435 terminal source-cap vectors. Independent review remains open.
+**Candidate:** `e(G) <= 182`, equality only `K(13,14)`. [Reviewer release](releases/n27-reviewer-v1/README.md) · [proof](project/reviews/n27/2026-09-07-candidate-v1/PROOF.md) · [evidence release](releases/n27-candidate-v1/README.md) · [8 September red-team audit](project/reviews/n27/2026-09-08-redteam-v1/REPORT.md). The hardened replay checks 80,978,546 canonical columns and independently reconstructs all 35,435 terminal source-cap vectors. Independent review remains open.
 
 ### n=28
 
@@ -35,7 +35,7 @@ e(G) <= 210 = floor(29^2/4),
 with equality exactly K(14,15).
 ```
 
-[Full proof and replay guide](project/reviews/n29/2026-09-08-candidate-v1/README.md) · [candidate manuscript](project/reviews/n29/2026-09-08-candidate-v1/PROOF.md) · [standalone Delta=16 graph-to-model bridge](project/reviews/n29/2026-09-09-bridge-standalone-v1/GRAPH_TO_MODEL_BRIDGE.md) · [bridge hostile audit](project/reviews/n29/2026-09-09-bridge-standalone-v1/BRIDGE_REDTEAM.md) · [restarted red-team audit](project/reviews/n29/2026-09-08-redteam-restart-v1/N29_RED_TEAM_RESTART.md) · [public-release audit](project/reviews/n29/2026-09-08-redteam-restart-v1/PUBLIC_RELEASE_AUDIT.md).
+[Reviewer release](releases/n29-reviewer-v1/README.md) · [full proof and replay guide](project/reviews/n29/2026-09-08-candidate-v1/README.md) · [candidate manuscript](project/reviews/n29/2026-09-08-candidate-v1/PROOF.md) · [standalone Delta=16 graph-to-model bridge](project/reviews/n29/2026-09-09-bridge-standalone-v1/GRAPH_TO_MODEL_BRIDGE.md) · [bridge hostile audit](project/reviews/n29/2026-09-09-bridge-standalone-v1/BRIDGE_REDTEAM.md) · [restarted red-team audit](project/reviews/n29/2026-09-08-redteam-restart-v1/N29_RED_TEAM_RESTART.md) · [public-release audit](project/reviews/n29/2026-09-08-redteam-restart-v1/PUBLIC_RELEASE_AUDIT.md).
 
 The proof does **not** depend on the later general `293/500` candidate theorem. Fan's cited strict bound leaves only 211 edges to exclude. `Delta=15` is handled by a witness-deficit count, which also forces `K(14,15)` at 210. `Delta=17` is excluded by a short pointwise charging bound, `Delta=18..27` by the residual h-index inequality, and a universal vertex gives a star.
 
@@ -64,7 +64,7 @@ e(G) <= 225 = floor(30^2/4),
 with equality exactly K(15,15).
 ```
 
-[Candidate package](project/reviews/n30/2026-09-09-candidate-v1/README.md) · [assembled proof](project/reviews/n30/2026-09-09-candidate-v1/PROOF.md) · [hostile assembly audit](project/reviews/n30/2026-09-09-candidate-v1/ASSEMBLY_AUDIT.md).
+[Reviewer release](releases/n30-reviewer-v1/README.md) · [candidate package](project/reviews/n30/2026-09-09-candidate-v1/README.md) · [assembled proof](project/reviews/n30/2026-09-09-candidate-v1/PROOF.md) · [hostile assembly audit](project/reviews/n30/2026-09-09-candidate-v1/ASSEMBLY_AUDIT.md).
 
 Fan's cited strict bound leaves only 226 edges as a possible upper-bound counterexample. The 225-edge `Delta=15` equality case is handled by a short witness-degree argument and forces `K(15,15)`. The `Delta=17` scopes close before residual-row enumeration: 250/250 charging-feasible profiles are threshold-rejected at 226 edges, while at 225 edges 1,137 profiles are rejected by threshold/source-count cuts and the remaining 18 by exact Hall duals. Clean replay `34292054922` verifies the committed duals exactly.
 
@@ -76,7 +76,7 @@ The `Delta=16` scopes use a genuine parameterisation of the stripped graph-to-de
 
 ### Profile-integral continuation — 293/500 candidate
 
-The [profile-integral proof](project/research/general_n/2026-09-08-profile-integral-v1/PROOF.md) gives the candidate implication
+The [reviewer release](releases/general-293-500-reviewer-v1/README.md) and [profile-integral proof](project/research/general_n/2026-09-08-profile-integral-v1/PROOF.md) give the candidate implication
 
 ```text
 n >= 6 and Delta(G) >= (293/500)n  ==>  e(G) < floor(n^2/4).
@@ -84,20 +84,27 @@ n >= 6 and Delta(G) >= (293/500)n  ==>  e(G) < floor(n^2/4).
 
 It proves `t < a^2/24+a/8` by retaining the demand profile across thresholds. [Replay and audit](project/research/general_n/2026-09-08-profile-integral-v1/README.md). This remains a general structural candidate, not a dependency of the n=29 or n=30 proofs.
 
+### RX-Hall / Hall-projection continuation — research programme, not theorem
+
+The current post-`293/500` attack is preserved under [`project/research/general_n/2026-09-09-rx-hall-v1/`](project/research/general_n/2026-09-09-rx-hall-v1/README.md). It is a **necessary-condition research programme**, not a new all-order theorem and not a dependency of the completed n=29 or n=30 candidate packages.
+
+The most useful current reductions are the [exact Hall projection](project/research/general_n/2026-09-09-rx-hall-v1/HALL_PROJECTION.md) and [Hall neighbourhood-closure / staircase reduction](project/research/general_n/2026-09-09-rx-hall-v1/HALL_STAIRCASE_REDUCTION.md). On the seven hardest preserved n=30 equality-frontier states, deleting all per-demand-group source-capacity inequalities still gives 7/7 exact integer-Farkas contradictions; the [compatibility ablation](project/research/general_n/2026-09-09-rx-hall-v1/checkpoints/N30_RZ_COMPAT_ABLATION_RUN_34344452015.json) shows that the two opposing threshold conditions carry almost all of the obstruction. The resulting `Z` incidence layer can be projected exactly to ordinary weighted Hall inequalities, and a Z-free Hall-cut implementation closes all seven hard states exactly. These finite experiments motivate a weighted staircase/majorization inequality, but no universal version is claimed yet.
+
 ### Layer-sum 13/22 and earlier structural checkpoints
 
-The [13/22 layer-sum proof](project/research/general_n/2026-09-08-layer-sum-v1/PROOF.md) and the preserved [v9](project/research/general_n/2026-09-07-stability-spare-sources-v9/README.md), [v10](project/research/general_n/2026-09-08-demand-tail-stability-v10/README.md), and [v11](project/research/general_n/2026-09-08-jensen-tail-v11/README.md) checkpoints document the preceding general-order programme. The local Lean slice checks ten scoped quasi-edge/edge-insertion lemmas; the complete universal theorems are not formally verified.
+The [13/22 reviewer release](releases/general-13-22-reviewer-v1/README.md), [13/22 layer-sum proof](project/research/general_n/2026-09-08-layer-sum-v1/PROOF.md), and the preserved [v9](project/research/general_n/2026-09-07-stability-spare-sources-v9/README.md), [v10](project/research/general_n/2026-09-08-demand-tail-stability-v10/README.md), and [v11](project/research/general_n/2026-09-08-jensen-tail-v11/README.md) checkpoints document the preceding general-order programme. The local Lean slice checks ten scoped quasi-edge/edge-insertion lemmas; the complete universal theorems are not formally verified.
 
 ## Review-paper index
 
 | Scope | Proof / paper | Evidence / review |
 |---|---|---|
 | n=25 | [Reviewer manuscript](releases/n25-reviewer-v1/N25_Reviewer_Manuscript_v1.pdf) | [Reviewer package](releases/n25-reviewer-v1/README.md) |
-| n=27 | [Proof](project/reviews/n27/2026-09-07-candidate-v1/PROOF.md) | [Evidence](releases/n27-candidate-v1/README.md) |
+| n=27 | [Reviewer manuscript](releases/n27-reviewer-v1/N27_Reviewer_Manuscript_v1.pdf) | [Verification companion](releases/n27-reviewer-v1/N27_Verification_Companion_v1.pdf) |
 | n=28 | [Mathematical manuscript](releases/n28-reviewer-v1/N28_Reviewer_Manuscript_v1.pdf) | [Verification companion](releases/n28-reviewer-v1/N28_Verification_Companion_v1.pdf) |
-| n=29 | [Candidate proof](project/reviews/n29/2026-09-08-candidate-v1/PROOF.md) | [Standalone bridge](project/reviews/n29/2026-09-09-bridge-standalone-v1/GRAPH_TO_MODEL_BRIDGE.md) |
-| n=30 | [Candidate proof](project/reviews/n30/2026-09-09-candidate-v1/PROOF.md) | [Assembly audit](project/reviews/n30/2026-09-09-candidate-v1/ASSEMBLY_AUDIT.md) |
-| General 293/500 | [Proof](project/research/general_n/2026-09-08-profile-integral-v1/PROOF.md) | [Audit](project/research/general_n/2026-09-08-profile-integral-v1/AUDIT.md) |
+| n=29 | [Reviewer manuscript](releases/n29-reviewer-v1/N29_Reviewer_Manuscript_v1.pdf) | [Verification companion](releases/n29-reviewer-v1/N29_Verification_Companion_v1.pdf) |
+| n=30 | [Reviewer manuscript](releases/n30-reviewer-v1/N30_Reviewer_Manuscript_v1.pdf) | [Verification companion](releases/n30-reviewer-v1/N30_Verification_Companion_v1.pdf) |
+| General 13/22 | [Reviewer manuscript](releases/general-13-22-reviewer-v1/General_13_22_Reviewer_Manuscript_v1.pdf) | [Verification companion](releases/general-13-22-reviewer-v1/General_13_22_Verification_Companion_v1.pdf) |
+| General 293/500 | [Reviewer manuscript](releases/general-293-500-reviewer-v1/General_293_500_Reviewer_Manuscript_v1.pdf) | [Verification companion](releases/general-293-500-reviewer-v1/General_293_500_Verification_Companion_v1.pdf) |
 
 ## Governance and limits
 
