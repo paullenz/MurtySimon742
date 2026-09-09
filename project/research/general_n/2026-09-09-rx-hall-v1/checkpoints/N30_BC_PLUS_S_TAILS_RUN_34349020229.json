@@ -1,0 +1,245 @@
+{
+  "interpretation": "Tests whether full 2D BC staircase library plus only 1D s/rho tail dominance closes the exceptional n30 hard state. Exact integer-Farkas acceptance only.",
+  "records": [
+    {
+      "demand_id": 2094,
+      "hard_position": 0,
+      "modes": {
+        "BC": {
+          "bc_cuts": 65,
+          "certificate_rhs": null,
+          "rejected_exactly": false,
+          "s_tail_thresholds": []
+        },
+        "BCS": {
+          "bc_cuts": 65,
+          "certificate_rhs": null,
+          "rejected_exactly": false,
+          "s_tail_thresholds": [
+            2,
+            3
+          ]
+        },
+        "S": {
+          "bc_cuts": 0,
+          "certificate_rhs": null,
+          "rejected_exactly": false,
+          "s_tail_thresholds": [
+            2,
+            3
+          ]
+        }
+      }
+    },
+    {
+      "demand_id": 2309,
+      "hard_position": 1,
+      "modes": {
+        "BC": {
+          "bc_cuts": 35,
+          "certificate_rhs": -782,
+          "rejected_exactly": true,
+          "s_tail_thresholds": []
+        },
+        "BCS": {
+          "bc_cuts": 35,
+          "certificate_rhs": -751,
+          "rejected_exactly": true,
+          "s_tail_thresholds": [
+            2,
+            3
+          ]
+        },
+        "S": {
+          "bc_cuts": 0,
+          "certificate_rhs": null,
+          "rejected_exactly": false,
+          "s_tail_thresholds": [
+            2,
+            3
+          ]
+        }
+      }
+    },
+    {
+      "demand_id": 2596,
+      "hard_position": 2,
+      "modes": {
+        "BC": {
+          "bc_cuts": 26,
+          "certificate_rhs": -937,
+          "rejected_exactly": true,
+          "s_tail_thresholds": []
+        },
+        "BCS": {
+          "bc_cuts": 26,
+          "certificate_rhs": -865,
+          "rejected_exactly": true,
+          "s_tail_thresholds": [
+            2,
+            3
+          ]
+        },
+        "S": {
+          "bc_cuts": 0,
+          "certificate_rhs": null,
+          "rejected_exactly": false,
+          "s_tail_thresholds": [
+            2,
+            3
+          ]
+        }
+      }
+    },
+    {
+      "demand_id": 2701,
+      "hard_position": 3,
+      "modes": {
+        "BC": {
+          "bc_cuts": 40,
+          "certificate_rhs": -736,
+          "rejected_exactly": true,
+          "s_tail_thresholds": []
+        },
+        "BCS": {
+          "bc_cuts": 40,
+          "certificate_rhs": -627,
+          "rejected_exactly": true,
+          "s_tail_thresholds": [
+            2,
+            3
+          ]
+        },
+        "S": {
+          "bc_cuts": 0,
+          "certificate_rhs": null,
+          "rejected_exactly": false,
+          "s_tail_thresholds": [
+            2,
+            3
+          ]
+        }
+      }
+    },
+    {
+      "demand_id": 2812,
+      "hard_position": 4,
+      "modes": {
+        "BC": {
+          "bc_cuts": 31,
+          "certificate_rhs": -839,
+          "rejected_exactly": true,
+          "s_tail_thresholds": []
+        },
+        "BCS": {
+          "bc_cuts": 31,
+          "certificate_rhs": -725,
+          "rejected_exactly": true,
+          "s_tail_thresholds": [
+            2,
+            3
+          ]
+        },
+        "S": {
+          "bc_cuts": 0,
+          "certificate_rhs": null,
+          "rejected_exactly": false,
+          "s_tail_thresholds": [
+            2,
+            3
+          ]
+        }
+      }
+    },
+    {
+      "demand_id": 2984,
+      "hard_position": 5,
+      "modes": {
+        "BC": {
+          "bc_cuts": 33,
+          "certificate_rhs": -772,
+          "rejected_exactly": true,
+          "s_tail_thresholds": []
+        },
+        "BCS": {
+          "bc_cuts": 33,
+          "certificate_rhs": -716,
+          "rejected_exactly": true,
+          "s_tail_thresholds": [
+            2,
+            3
+          ]
+        },
+        "S": {
+          "bc_cuts": 0,
+          "certificate_rhs": null,
+          "rejected_exactly": false,
+          "s_tail_thresholds": [
+            2,
+            3
+          ]
+        }
+      }
+    },
+    {
+      "demand_id": 2984,
+      "hard_position": 6,
+      "modes": {
+        "BC": {
+          "bc_cuts": 37,
+          "certificate_rhs": -571,
+          "rejected_exactly": true,
+          "s_tail_thresholds": []
+        },
+        "BCS": {
+          "bc_cuts": 37,
+          "certificate_rhs": -682,
+          "rejected_exactly": true,
+          "s_tail_thresholds": [
+            2,
+            3
+          ]
+        },
+        "S": {
+          "bc_cuts": 0,
+          "certificate_rhs": null,
+          "rejected_exactly": false,
+          "s_tail_thresholds": [
+            2,
+            3
+          ]
+        }
+      }
+    }
+  ],
+  "schema": "rz-bc-plus-s-tail-ablation-v1",
+  "source_checkpoint": "project/research/general_n/2026-09-09-rx-hall-v1/checkpoints/N30_BC_UPPER_CUTGEN_RUN_34348486247.json",
+  "summary": {
+    "BC": {
+      "exact_rejections": 6,
+      "rejected_positions": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6
+      ]
+    },
+    "BCS": {
+      "exact_rejections": 6,
+      "rejected_positions": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6
+      ]
+    },
+    "S": {
+      "exact_rejections": 0,
+      "rejected_positions": []
+    }
+  }
+}
