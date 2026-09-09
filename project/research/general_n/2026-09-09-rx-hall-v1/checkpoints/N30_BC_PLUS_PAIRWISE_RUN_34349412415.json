@@ -1,0 +1,580 @@
+{
+  "interpretation": "Exact ablation of whether BC 2D staircases plus SD and/or SH pairwise upper-set dominance suffice. Pairwise generator antichains are recorded explicitly. No full 3D upper sets are added.",
+  "records": [
+    {
+      "demand_id": 2094,
+      "hard_position": 0,
+      "modes": {
+        "BC": {
+          "pairwise_cuts_added": 0,
+          "rejected_exactly": false
+        },
+        "BC+SD": {
+          "certificate_rhs": null,
+          "numerical_status_before_exact": 0,
+          "pairwise_cut_counts": {
+            "SD": 1
+          },
+          "pairwise_cuts": [
+            {
+              "family": "SD",
+              "generator_size": 1,
+              "generators": [
+                [
+                  2,
+                  2
+                ]
+              ],
+              "iteration": 0,
+              "violation": 4.0000000000000195
+            }
+          ],
+          "pairwise_cuts_added": 1,
+          "proof_active_pairwise": [],
+          "rejected_exactly": false
+        },
+        "BC+SD+SH": {
+          "certificate_rhs": -822,
+          "numerical_status_before_exact": 2,
+          "pairwise_cut_counts": {
+            "SD": 1,
+            "SH": 1
+          },
+          "pairwise_cuts": [
+            {
+              "family": "SD",
+              "generator_size": 1,
+              "generators": [
+                [
+                  2,
+                  2
+                ]
+              ],
+              "iteration": 0,
+              "violation": 4.0000000000000195
+            },
+            {
+              "family": "SH",
+              "generator_size": 2,
+              "generators": [
+                [
+                  1,
+                  -4
+                ],
+                [
+                  3,
+                  -6
+                ]
+              ],
+              "iteration": 1,
+              "violation": 10.646300969584285
+            }
+          ],
+          "pairwise_cuts_added": 2,
+          "proof_active_pairwise": [
+            {
+              "cut_index": 0,
+              "family": "SD",
+              "generator_size": 1,
+              "generators": [
+                [
+                  2,
+                  2
+                ]
+              ],
+              "weight": 1349
+            },
+            {
+              "cut_index": 1,
+              "family": "SH",
+              "generator_size": 2,
+              "generators": [
+                [
+                  1,
+                  -4
+                ],
+                [
+                  3,
+                  -6
+                ]
+              ],
+              "weight": 204
+            }
+          ],
+          "rejected_exactly": true
+        },
+        "BC+SH": {
+          "certificate_rhs": -784,
+          "numerical_status_before_exact": 2,
+          "pairwise_cut_counts": {
+            "SH": 4
+          },
+          "pairwise_cuts": [
+            {
+              "family": "SH",
+              "generator_size": 2,
+              "generators": [
+                [
+                  2,
+                  -2
+                ],
+                [
+                  3,
+                  -6
+                ]
+              ],
+              "iteration": 0,
+              "violation": 7.836734693877621
+            },
+            {
+              "family": "SH",
+              "generator_size": 3,
+              "generators": [
+                [
+                  1,
+                  -1
+                ],
+                [
+                  2,
+                  -5
+                ],
+                [
+                  3,
+                  -6
+                ]
+              ],
+              "iteration": 1,
+              "violation": 6.907776006815078
+            },
+            {
+              "family": "SH",
+              "generator_size": 2,
+              "generators": [
+                [
+                  1,
+                  -1
+                ],
+                [
+                  2,
+                  -7
+                ]
+              ],
+              "iteration": 2,
+              "violation": 6.036197552332253
+            },
+            {
+              "family": "SH",
+              "generator_size": 3,
+              "generators": [
+                [
+                  1,
+                  -1
+                ],
+                [
+                  2,
+                  -2
+                ],
+                [
+                  3,
+                  -11
+                ]
+              ],
+              "iteration": 3,
+              "violation": 6.690177812280481
+            }
+          ],
+          "pairwise_cuts_added": 4,
+          "proof_active_pairwise": [
+            {
+              "cut_index": 0,
+              "family": "SH",
+              "generator_size": 2,
+              "generators": [
+                [
+                  2,
+                  -2
+                ],
+                [
+                  3,
+                  -6
+                ]
+              ],
+              "weight": 21
+            },
+            {
+              "cut_index": 1,
+              "family": "SH",
+              "generator_size": 3,
+              "generators": [
+                [
+                  1,
+                  -1
+                ],
+                [
+                  2,
+                  -5
+                ],
+                [
+                  3,
+                  -6
+                ]
+              ],
+              "weight": 420
+            },
+            {
+              "cut_index": 2,
+              "family": "SH",
+              "generator_size": 2,
+              "generators": [
+                [
+                  1,
+                  -1
+                ],
+                [
+                  2,
+                  -7
+                ]
+              ],
+              "weight": 525
+            },
+            {
+              "cut_index": 3,
+              "family": "SH",
+              "generator_size": 3,
+              "generators": [
+                [
+                  1,
+                  -1
+                ],
+                [
+                  2,
+                  -2
+                ],
+                [
+                  3,
+                  -11
+                ]
+              ],
+              "weight": 692
+            }
+          ],
+          "rejected_exactly": true
+        }
+      }
+    },
+    {
+      "demand_id": 2309,
+      "hard_position": 1,
+      "modes": {
+        "BC": {
+          "pairwise_cuts_added": 0,
+          "rejected_exactly": true
+        },
+        "BC+SD": {
+          "certificate_rhs": -782,
+          "numerical_status_before_exact": 2,
+          "pairwise_cut_counts": {
+            "SD": 0
+          },
+          "pairwise_cuts": [],
+          "pairwise_cuts_added": 0,
+          "proof_active_pairwise": [],
+          "rejected_exactly": true
+        },
+        "BC+SD+SH": {
+          "certificate_rhs": -782,
+          "numerical_status_before_exact": 2,
+          "pairwise_cut_counts": {
+            "SD": 0,
+            "SH": 0
+          },
+          "pairwise_cuts": [],
+          "pairwise_cuts_added": 0,
+          "proof_active_pairwise": [],
+          "rejected_exactly": true
+        },
+        "BC+SH": {
+          "certificate_rhs": -782,
+          "numerical_status_before_exact": 2,
+          "pairwise_cut_counts": {
+            "SH": 0
+          },
+          "pairwise_cuts": [],
+          "pairwise_cuts_added": 0,
+          "proof_active_pairwise": [],
+          "rejected_exactly": true
+        }
+      }
+    },
+    {
+      "demand_id": 2596,
+      "hard_position": 2,
+      "modes": {
+        "BC": {
+          "pairwise_cuts_added": 0,
+          "rejected_exactly": true
+        },
+        "BC+SD": {
+          "certificate_rhs": -937,
+          "numerical_status_before_exact": 2,
+          "pairwise_cut_counts": {
+            "SD": 0
+          },
+          "pairwise_cuts": [],
+          "pairwise_cuts_added": 0,
+          "proof_active_pairwise": [],
+          "rejected_exactly": true
+        },
+        "BC+SD+SH": {
+          "certificate_rhs": -937,
+          "numerical_status_before_exact": 2,
+          "pairwise_cut_counts": {
+            "SD": 0,
+            "SH": 0
+          },
+          "pairwise_cuts": [],
+          "pairwise_cuts_added": 0,
+          "proof_active_pairwise": [],
+          "rejected_exactly": true
+        },
+        "BC+SH": {
+          "certificate_rhs": -937,
+          "numerical_status_before_exact": 2,
+          "pairwise_cut_counts": {
+            "SH": 0
+          },
+          "pairwise_cuts": [],
+          "pairwise_cuts_added": 0,
+          "proof_active_pairwise": [],
+          "rejected_exactly": true
+        }
+      }
+    },
+    {
+      "demand_id": 2701,
+      "hard_position": 3,
+      "modes": {
+        "BC": {
+          "pairwise_cuts_added": 0,
+          "rejected_exactly": true
+        },
+        "BC+SD": {
+          "certificate_rhs": -736,
+          "numerical_status_before_exact": 2,
+          "pairwise_cut_counts": {
+            "SD": 0
+          },
+          "pairwise_cuts": [],
+          "pairwise_cuts_added": 0,
+          "proof_active_pairwise": [],
+          "rejected_exactly": true
+        },
+        "BC+SD+SH": {
+          "certificate_rhs": -736,
+          "numerical_status_before_exact": 2,
+          "pairwise_cut_counts": {
+            "SD": 0,
+            "SH": 0
+          },
+          "pairwise_cuts": [],
+          "pairwise_cuts_added": 0,
+          "proof_active_pairwise": [],
+          "rejected_exactly": true
+        },
+        "BC+SH": {
+          "certificate_rhs": -736,
+          "numerical_status_before_exact": 2,
+          "pairwise_cut_counts": {
+            "SH": 0
+          },
+          "pairwise_cuts": [],
+          "pairwise_cuts_added": 0,
+          "proof_active_pairwise": [],
+          "rejected_exactly": true
+        }
+      }
+    },
+    {
+      "demand_id": 2812,
+      "hard_position": 4,
+      "modes": {
+        "BC": {
+          "pairwise_cuts_added": 0,
+          "rejected_exactly": true
+        },
+        "BC+SD": {
+          "certificate_rhs": -839,
+          "numerical_status_before_exact": 2,
+          "pairwise_cut_counts": {
+            "SD": 0
+          },
+          "pairwise_cuts": [],
+          "pairwise_cuts_added": 0,
+          "proof_active_pairwise": [],
+          "rejected_exactly": true
+        },
+        "BC+SD+SH": {
+          "certificate_rhs": -839,
+          "numerical_status_before_exact": 2,
+          "pairwise_cut_counts": {
+            "SD": 0,
+            "SH": 0
+          },
+          "pairwise_cuts": [],
+          "pairwise_cuts_added": 0,
+          "proof_active_pairwise": [],
+          "rejected_exactly": true
+        },
+        "BC+SH": {
+          "certificate_rhs": -839,
+          "numerical_status_before_exact": 2,
+          "pairwise_cut_counts": {
+            "SH": 0
+          },
+          "pairwise_cuts": [],
+          "pairwise_cuts_added": 0,
+          "proof_active_pairwise": [],
+          "rejected_exactly": true
+        }
+      }
+    },
+    {
+      "demand_id": 2984,
+      "hard_position": 5,
+      "modes": {
+        "BC": {
+          "pairwise_cuts_added": 0,
+          "rejected_exactly": true
+        },
+        "BC+SD": {
+          "certificate_rhs": -772,
+          "numerical_status_before_exact": 2,
+          "pairwise_cut_counts": {
+            "SD": 0
+          },
+          "pairwise_cuts": [],
+          "pairwise_cuts_added": 0,
+          "proof_active_pairwise": [],
+          "rejected_exactly": true
+        },
+        "BC+SD+SH": {
+          "certificate_rhs": -772,
+          "numerical_status_before_exact": 2,
+          "pairwise_cut_counts": {
+            "SD": 0,
+            "SH": 0
+          },
+          "pairwise_cuts": [],
+          "pairwise_cuts_added": 0,
+          "proof_active_pairwise": [],
+          "rejected_exactly": true
+        },
+        "BC+SH": {
+          "certificate_rhs": -772,
+          "numerical_status_before_exact": 2,
+          "pairwise_cut_counts": {
+            "SH": 0
+          },
+          "pairwise_cuts": [],
+          "pairwise_cuts_added": 0,
+          "proof_active_pairwise": [],
+          "rejected_exactly": true
+        }
+      }
+    },
+    {
+      "demand_id": 2984,
+      "hard_position": 6,
+      "modes": {
+        "BC": {
+          "pairwise_cuts_added": 0,
+          "rejected_exactly": true
+        },
+        "BC+SD": {
+          "certificate_rhs": -571,
+          "numerical_status_before_exact": 2,
+          "pairwise_cut_counts": {
+            "SD": 0
+          },
+          "pairwise_cuts": [],
+          "pairwise_cuts_added": 0,
+          "proof_active_pairwise": [],
+          "rejected_exactly": true
+        },
+        "BC+SD+SH": {
+          "certificate_rhs": -571,
+          "numerical_status_before_exact": 2,
+          "pairwise_cut_counts": {
+            "SD": 0,
+            "SH": 0
+          },
+          "pairwise_cuts": [],
+          "pairwise_cuts_added": 0,
+          "proof_active_pairwise": [],
+          "rejected_exactly": true
+        },
+        "BC+SH": {
+          "certificate_rhs": -571,
+          "numerical_status_before_exact": 2,
+          "pairwise_cut_counts": {
+            "SH": 0
+          },
+          "pairwise_cuts": [],
+          "pairwise_cuts_added": 0,
+          "proof_active_pairwise": [],
+          "rejected_exactly": true
+        }
+      }
+    }
+  ],
+  "schema": "rz-bc-plus-pairwise-dominance-v2",
+  "source_checkpoint": "project/research/general_n/2026-09-09-rx-hall-v1/checkpoints/N30_BC_UPPER_CUTGEN_RUN_34348486247.json",
+  "summary": {
+    "BC": {
+      "exact_rejections": 6,
+      "rejected_positions": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6
+      ]
+    },
+    "BC+SD": {
+      "exact_rejections": 6,
+      "rejected_positions": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6
+      ]
+    },
+    "BC+SD+SH": {
+      "exact_rejections": 7,
+      "rejected_positions": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6
+      ]
+    },
+    "BC+SH": {
+      "exact_rejections": 7,
+      "rejected_positions": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6
+      ]
+    }
+  }
+}
