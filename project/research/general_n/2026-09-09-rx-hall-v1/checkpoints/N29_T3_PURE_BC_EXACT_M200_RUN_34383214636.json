@@ -1,0 +1,382 @@
+{
+  "BC_count": 18,
+  "BC_indices": [
+    2,
+    3,
+    4,
+    5,
+    6,
+    13,
+    14,
+    15,
+    17,
+    31,
+    44,
+    45,
+    47,
+    48,
+    50,
+    56,
+    58,
+    70
+  ],
+  "BC_shapes": [
+    [
+      [
+        1,
+        -2
+      ],
+      [
+        2,
+        -4
+      ],
+      [
+        3,
+        -6
+      ],
+      [
+        7,
+        -8
+      ],
+      [
+        8,
+        -9
+      ]
+    ],
+    [
+      [
+        1,
+        -2
+      ],
+      [
+        3,
+        -5
+      ]
+    ],
+    [
+      [
+        1,
+        -2
+      ],
+      [
+        3,
+        -3
+      ],
+      [
+        4,
+        -4
+      ]
+    ],
+    [
+      [
+        1,
+        -1
+      ],
+      [
+        2,
+        -4
+      ],
+      [
+        4,
+        -5
+      ],
+      [
+        6,
+        -7
+      ],
+      [
+        7,
+        -8
+      ]
+    ],
+    [
+      [
+        1,
+        -1
+      ],
+      [
+        2,
+        -3
+      ],
+      [
+        4,
+        -4
+      ],
+      [
+        5,
+        -9
+      ],
+      [
+        10,
+        -10
+      ]
+    ],
+    [
+      [
+        2,
+        -5
+      ],
+      [
+        3,
+        -14
+      ]
+    ],
+    [
+      [
+        2,
+        -2
+      ],
+      [
+        3,
+        -8
+      ],
+      [
+        7,
+        -10
+      ],
+      [
+        9,
+        -16
+      ]
+    ],
+    [
+      [
+        2,
+        -2
+      ],
+      [
+        3,
+        -4
+      ],
+      [
+        4,
+        -8
+      ],
+      [
+        9,
+        -10
+      ]
+    ],
+    [
+      [
+        2,
+        -2
+      ],
+      [
+        3,
+        -3
+      ],
+      [
+        4,
+        -7
+      ],
+      [
+        8,
+        -8
+      ],
+      [
+        9,
+        -10
+      ],
+      [
+        10,
+        -12
+      ]
+    ],
+    [
+      [
+        2,
+        -2
+      ],
+      [
+        3,
+        -3
+      ],
+      [
+        6,
+        -6
+      ],
+      [
+        7,
+        -7
+      ],
+      [
+        10,
+        -12
+      ]
+    ],
+    [
+      [
+        3,
+        -13
+      ]
+    ],
+    [
+      [
+        3,
+        -12
+      ]
+    ],
+    [
+      [
+        3,
+        -5
+      ],
+      [
+        6,
+        -6
+      ],
+      [
+        8,
+        -13
+      ],
+      [
+        10,
+        -15
+      ]
+    ],
+    [
+      [
+        3,
+        -4
+      ],
+      [
+        4,
+        -8
+      ],
+      [
+        5,
+        -9
+      ],
+      [
+        10,
+        -14
+      ]
+    ],
+    [
+      [
+        3,
+        -4
+      ],
+      [
+        6,
+        -8
+      ],
+      [
+        8,
+        -10
+      ],
+      [
+        10,
+        -13
+      ]
+    ],
+    [
+      [
+        3,
+        -3
+      ],
+      [
+        4,
+        -7
+      ],
+      [
+        9,
+        -10
+      ],
+      [
+        10,
+        -12
+      ]
+    ],
+    [
+      [
+        3,
+        -3
+      ],
+      [
+        4,
+        -4
+      ],
+      [
+        6,
+        -8
+      ],
+      [
+        9,
+        -9
+      ],
+      [
+        10,
+        -12
+      ]
+    ],
+    [
+      [
+        4,
+        -12
+      ],
+      [
+        5,
+        -15
+      ]
+    ]
+  ],
+  "SH_count": 0,
+  "attempts": [
+    {
+      "bound_violations": [],
+      "correct_scaled_rhs_rule": true,
+      "denominator_scale": 1000000,
+      "proposal_boost": 2,
+      "repair_count": 236,
+      "repair_max": 11,
+      "repair_total": 981,
+      "required_profile_margin_numerator": -1000000,
+      "row_violations": [],
+      "worst_margin_numerator": -1999880,
+      "zero_rhs_max_lhs": 0
+    }
+  ],
+  "bound_violations": [],
+  "candidate": "M200",
+  "correct_scaled_rhs_rule": true,
+  "denominator_scale": 1000000,
+  "floating_point_proposal_only": true,
+  "integer_BC_numerators": {
+    "('BC', 0)": 33784,
+    "('BC', 1)": 47458,
+    "('BC', 10)": 0,
+    "('BC', 11)": 36724,
+    "('BC', 12)": 16892,
+    "('BC', 13)": 6130,
+    "('BC', 14)": 8044,
+    "('BC', 15)": 16892,
+    "('BC', 16)": 0,
+    "('BC', 17)": 13197,
+    "('BC', 2)": 33307,
+    "('BC', 3)": 33784,
+    "('BC', 4)": 30067,
+    "('BC', 5)": 48617,
+    "('BC', 6)": 38813,
+    "('BC', 7)": 37501,
+    "('BC', 8)": 22733,
+    "('BC', 9)": 16892
+  },
+  "integer_arithmetic_only_acceptance": true,
+  "interpretation": "PASS gives an exact rational pure-BC common staircase potential across all 94 regenerated n29 t=3 hard profiles. No SH correction is used. Finite evidence conditional on the RX-Hall bridge/frontier preparation.",
+  "profiles": 94,
+  "proposal_boost": 2,
+  "repair_count": 236,
+  "repair_max": 11,
+  "repair_total": 981,
+  "required_profile_margin_numerator": -1000000,
+  "row_violations": [],
+  "rows": 30646,
+  "schema": "n29-t3-pure-bc-exact-v1",
+  "status": "PASS",
+  "support_count": 18,
+  "variables": 2090,
+  "worst_margin_numerator": -1999880,
+  "zero_rhs_max_lhs": 0
+}
