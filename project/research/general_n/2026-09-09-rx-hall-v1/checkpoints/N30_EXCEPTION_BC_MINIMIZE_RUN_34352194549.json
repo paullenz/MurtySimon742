@@ -1,0 +1,6260 @@
+{
+  "best": {
+    "bc_indices": [
+      11,
+      35,
+      36,
+      37,
+      52,
+      60
+    ],
+    "certificate": {
+      "active_bc": [
+        {
+          "cut_index": 11,
+          "generator_size": 5,
+          "generators": [
+            [
+              1,
+              -2
+            ],
+            [
+              3,
+              -4
+            ],
+            [
+              4,
+              -6
+            ],
+            [
+              6,
+              -8
+            ],
+            [
+              9,
+              -9
+            ]
+          ],
+          "weight": 2322
+        },
+        {
+          "cut_index": 35,
+          "generator_size": 4,
+          "generators": [
+            [
+              1,
+              -1
+            ],
+            [
+              2,
+              -4
+            ],
+            [
+              3,
+              -9
+            ],
+            [
+              4,
+              -13
+            ]
+          ],
+          "weight": 955
+        },
+        {
+          "cut_index": 36,
+          "generator_size": 4,
+          "generators": [
+            [
+              1,
+              -2
+            ],
+            [
+              2,
+              -3
+            ],
+            [
+              3,
+              -4
+            ],
+            [
+              4,
+              -5
+            ]
+          ],
+          "weight": 1566
+        },
+        {
+          "cut_index": 37,
+          "generator_size": 2,
+          "generators": [
+            [
+              1,
+              -1
+            ],
+            [
+              2,
+              -4
+            ]
+          ],
+          "weight": 2215
+        },
+        {
+          "cut_index": 52,
+          "generator_size": 7,
+          "generators": [
+            [
+              1,
+              -1
+            ],
+            [
+              2,
+              -2
+            ],
+            [
+              3,
+              -5
+            ],
+            [
+              6,
+              -6
+            ],
+            [
+              7,
+              -7
+            ],
+            [
+              8,
+              -10
+            ],
+            [
+              11,
+              -12
+            ]
+          ],
+          "weight": 1190
+        },
+        {
+          "cut_index": 60,
+          "generator_size": 1,
+          "generators": [
+            [
+              1,
+              -3
+            ]
+          ],
+          "weight": 2826
+        }
+      ],
+      "active_sh": [
+        {
+          "generator_size": 3,
+          "generators": [
+            [
+              1,
+              -1
+            ],
+            [
+              2,
+              -5
+            ],
+            [
+              3,
+              -6
+            ]
+          ],
+          "slot": 0,
+          "source_cut_index": 1,
+          "weight": 1459
+        },
+        {
+          "generator_size": 2,
+          "generators": [
+            [
+              1,
+              -1
+            ],
+            [
+              2,
+              -7
+            ]
+          ],
+          "slot": 1,
+          "source_cut_index": 2,
+          "weight": 1674
+        },
+        {
+          "generator_size": 3,
+          "generators": [
+            [
+              1,
+              -1
+            ],
+            [
+              2,
+              -2
+            ],
+            [
+              3,
+              -11
+            ]
+          ],
+          "slot": 2,
+          "source_cut_index": 3,
+          "weight": 1998
+        }
+      ],
+      "rhs": -881
+    },
+    "order": "random_7",
+    "size": 6,
+    "tests": 21
+  },
+  "demand_id": 2094,
+  "fixed_sh_subset": [
+    1,
+    2,
+    3
+  ],
+  "hard_position": 0,
+  "interpretation": "Greedy deletion from the 21 proof-active BC rows with the unique minimum three-SH correction fixed. Every accepted deletion preserves an exact integer-Farkas contradiction. The best subset is irreducible for its tested order, not certified globally minimum.",
+  "schema": "n30-exception-bc-greedy-minimization-v1",
+  "starting_active_bc_count": 21,
+  "trials": [
+    {
+      "bc_indices": [
+        13,
+        21,
+        36,
+        37,
+        41,
+        52,
+        60
+      ],
+      "certificate": {
+        "active_bc": [
+          {
+            "cut_index": 13,
+            "generator_size": 5,
+            "generators": [
+              [
+                1,
+                -1
+              ],
+              [
+                2,
+                -2
+              ],
+              [
+                3,
+                -6
+              ],
+              [
+                5,
+                -7
+              ],
+              [
+                8,
+                -8
+              ]
+            ],
+            "weight": 422
+          },
+          {
+            "cut_index": 21,
+            "generator_size": 8,
+            "generators": [
+              [
+                1,
+                -1
+              ],
+              [
+                2,
+                -2
+              ],
+              [
+                3,
+                -4
+              ],
+              [
+                4,
+                -6
+              ],
+              [
+                6,
+                -7
+              ],
+              [
+                7,
+                -8
+              ],
+              [
+                8,
+                -9
+              ],
+              [
+                9,
+                -10
+              ]
+            ],
+            "weight": 698
+          },
+          {
+            "cut_index": 36,
+            "generator_size": 4,
+            "generators": [
+              [
+                1,
+                -2
+              ],
+              [
+                2,
+                -3
+              ],
+              [
+                3,
+                -4
+              ],
+              [
+                4,
+                -5
+              ]
+            ],
+            "weight": 1125
+          },
+          {
+            "cut_index": 37,
+            "generator_size": 2,
+            "generators": [
+              [
+                1,
+                -1
+              ],
+              [
+                2,
+                -4
+              ]
+            ],
+            "weight": 1255
+          },
+          {
+            "cut_index": 41,
+            "generator_size": 5,
+            "generators": [
+              [
+                1,
+                -2
+              ],
+              [
+                2,
+                -4
+              ],
+              [
+                5,
+                -8
+              ],
+              [
+                8,
+                -9
+              ],
+              [
+                10,
+                -10
+              ]
+            ],
+            "weight": 675
+          },
+          {
+            "cut_index": 52,
+            "generator_size": 7,
+            "generators": [
+              [
+                1,
+                -1
+              ],
+              [
+                2,
+                -2
+              ],
+              [
+                3,
+                -5
+              ],
+              [
+                6,
+                -6
+              ],
+              [
+                7,
+                -7
+              ],
+              [
+                8,
+                -10
+              ],
+              [
+                11,
+                -12
+              ]
+            ],
+            "weight": 871
+          },
+          {
+            "cut_index": 60,
+            "generator_size": 1,
+            "generators": [
+              [
+                1,
+                -3
+              ]
+            ],
+            "weight": 1834
+          }
+        ],
+        "active_sh": [
+          {
+            "generator_size": 3,
+            "generators": [
+              [
+                1,
+                -1
+              ],
+              [
+                2,
+                -5
+              ],
+              [
+                3,
+                -6
+              ]
+            ],
+            "slot": 0,
+            "source_cut_index": 1,
+            "weight": 996
+          },
+          {
+            "generator_size": 2,
+            "generators": [
+              [
+                1,
+                -1
+              ],
+              [
+                2,
+                -7
+              ]
+            ],
+            "slot": 1,
+            "source_cut_index": 2,
+            "weight": 1125
+          },
+          {
+            "generator_size": 3,
+            "generators": [
+              [
+                1,
+                -1
+              ],
+              [
+                2,
+                -2
+              ],
+              [
+                3,
+                -11
+              ]
+            ],
+            "slot": 2,
+            "source_cut_index": 3,
+            "weight": 1910
+          }
+        ],
+        "rhs": -739
+      },
+      "order": "index_up",
+      "size": 7,
+      "tests": 21
+    },
+    {
+      "bc_indices": [
+        11,
+        13,
+        16,
+        36,
+        37,
+        52,
+        60
+      ],
+      "certificate": {
+        "active_bc": [
+          {
+            "cut_index": 11,
+            "generator_size": 5,
+            "generators": [
+              [
+                1,
+                -2
+              ],
+              [
+                3,
+                -4
+              ],
+              [
+                4,
+                -6
+              ],
+              [
+                6,
+                -8
+              ],
+              [
+                9,
+                -9
+              ]
+            ],
+            "weight": 18338
+          },
+          {
+            "cut_index": 13,
+            "generator_size": 5,
+            "generators": [
+              [
+                1,
+                -1
+              ],
+              [
+                2,
+                -2
+              ],
+              [
+                3,
+                -6
+              ],
+              [
+                5,
+                -7
+              ],
+              [
+                8,
+                -8
+              ]
+            ],
+            "weight": 3849
+          },
+          {
+            "cut_index": 16,
+            "generator_size": 5,
+            "generators": [
+              [
+                1,
+                -1
+              ],
+              [
+                2,
+                -4
+              ],
+              [
+                5,
+                -5
+              ],
+              [
+                8,
+                -8
+              ],
+              [
+                9,
+                -12
+              ]
+            ],
+            "weight": 1067
+          },
+          {
+            "cut_index": 36,
+            "generator_size": 4,
+            "generators": [
+              [
+                1,
+                -2
+              ],
+              [
+                2,
+                -3
+              ],
+              [
+                3,
+                -4
+              ],
+              [
+                4,
+                -5
+              ]
+            ],
+            "weight": 15524
+          },
+          {
+            "cut_index": 37,
+            "generator_size": 2,
+            "generators": [
+              [
+                1,
+                -1
+              ],
+              [
+                2,
+                -4
+              ]
+            ],
+            "weight": 18131
+          },
+          {
+            "cut_index": 52,
+            "generator_size": 7,
+            "generators": [
+              [
+                1,
+                -1
+              ],
+              [
+                2,
+                -2
+              ],
+              [
+                3,
+                -5
+              ],
+              [
+                6,
+                -6
+              ],
+              [
+                7,
+                -7
+              ],
+              [
+                8,
+                -10
+              ],
+              [
+                11,
+                -12
+              ]
+            ],
+            "weight": 16301
+          },
+          {
+            "cut_index": 60,
+            "generator_size": 1,
+            "generators": [
+              [
+                1,
+                -3
+              ]
+            ],
+            "weight": 33973
+          }
+        ],
+        "active_sh": [
+          {
+            "generator_size": 3,
+            "generators": [
+              [
+                1,
+                -1
+              ],
+              [
+                2,
+                -5
+              ],
+              [
+                3,
+                -6
+              ]
+            ],
+            "slot": 0,
+            "source_cut_index": 1,
+            "weight": 15311
+          },
+          {
+            "generator_size": 2,
+            "generators": [
+              [
+                1,
+                -1
+              ],
+              [
+                2,
+                -7
+              ]
+            ],
+            "slot": 1,
+            "source_cut_index": 2,
+            "weight": 16061
+          },
+          {
+            "generator_size": 3,
+            "generators": [
+              [
+                1,
+                -1
+              ],
+              [
+                2,
+                -2
+              ],
+              [
+                3,
+                -11
+              ]
+            ],
+            "slot": 2,
+            "source_cut_index": 3,
+            "weight": 33494
+          }
+        ],
+        "rhs": -853
+      },
+      "order": "index_down",
+      "size": 7,
+      "tests": 21
+    },
+    {
+      "bc_indices": [
+        11,
+        13,
+        36,
+        37,
+        41,
+        52,
+        60
+      ],
+      "certificate": {
+        "active_bc": [
+          {
+            "cut_index": 11,
+            "generator_size": 5,
+            "generators": [
+              [
+                1,
+                -2
+              ],
+              [
+                3,
+                -4
+              ],
+              [
+                4,
+                -6
+              ],
+              [
+                6,
+                -8
+              ],
+              [
+                9,
+                -9
+              ]
+            ],
+            "weight": 1389
+          },
+          {
+            "cut_index": 13,
+            "generator_size": 5,
+            "generators": [
+              [
+                1,
+                -1
+              ],
+              [
+                2,
+                -2
+              ],
+              [
+                3,
+                -6
+              ],
+              [
+                5,
+                -7
+              ],
+              [
+                8,
+                -8
+              ]
+            ],
+            "weight": 267
+          },
+          {
+            "cut_index": 36,
+            "generator_size": 4,
+            "generators": [
+              [
+                1,
+                -2
+              ],
+              [
+                2,
+                -3
+              ],
+              [
+                3,
+                -4
+              ],
+              [
+                4,
+                -5
+              ]
+            ],
+            "weight": 1125
+          },
+          {
+            "cut_index": 37,
+            "generator_size": 2,
+            "generators": [
+              [
+                1,
+                -1
+              ],
+              [
+                2,
+                -4
+              ]
+            ],
+            "weight": 1255
+          },
+          {
+            "cut_index": 41,
+            "generator_size": 5,
+            "generators": [
+              [
+                1,
+                -2
+              ],
+              [
+                2,
+                -4
+              ],
+              [
+                5,
+                -8
+              ],
+              [
+                8,
+                -9
+              ],
+              [
+                10,
+                -10
+              ]
+            ],
+            "weight": 447
+          },
+          {
+            "cut_index": 52,
+            "generator_size": 7,
+            "generators": [
+              [
+                1,
+                -1
+              ],
+              [
+                2,
+                -2
+              ],
+              [
+                3,
+                -5
+              ],
+              [
+                6,
+                -6
+              ],
+              [
+                7,
+                -7
+              ],
+              [
+                8,
+                -10
+              ],
+              [
+                11,
+                -12
+              ]
+            ],
+            "weight": 564
+          },
+          {
+            "cut_index": 60,
+            "generator_size": 1,
+            "generators": [
+              [
+                1,
+                -3
+              ]
+            ],
+            "weight": 1834
+          }
+        ],
+        "active_sh": [
+          {
+            "generator_size": 3,
+            "generators": [
+              [
+                1,
+                -1
+              ],
+              [
+                2,
+                -5
+              ],
+              [
+                3,
+                -6
+              ]
+            ],
+            "slot": 0,
+            "source_cut_index": 1,
+            "weight": 996
+          },
+          {
+            "generator_size": 2,
+            "generators": [
+              [
+                1,
+                -1
+              ],
+              [
+                2,
+                -7
+              ]
+            ],
+            "slot": 1,
+            "source_cut_index": 2,
+            "weight": 1125
+          },
+          {
+            "generator_size": 3,
+            "generators": [
+              [
+                1,
+                -1
+              ],
+              [
+                2,
+                -2
+              ],
+              [
+                3,
+                -11
+              ]
+            ],
+            "slot": 2,
+            "source_cut_index": 3,
+            "weight": 1910
+          }
+        ],
+        "rhs": -855
+      },
+      "order": "weight_up",
+      "size": 7,
+      "tests": 21
+    },
+    {
+      "bc_indices": [
+        4,
+        5,
+        13,
+        16,
+        29,
+        36,
+        37,
+        44,
+        52,
+        60
+      ],
+      "certificate": {
+        "active_bc": [
+          {
+            "cut_index": 4,
+            "generator_size": 4,
+            "generators": [
+              [
+                1,
+                -1
+              ],
+              [
+                2,
+                -2
+              ],
+              [
+                3,
+                -6
+              ],
+              [
+                7,
+                -10
+              ]
+            ],
+            "weight": 5795
+          },
+          {
+            "cut_index": 5,
+            "generator_size": 4,
+            "generators": [
+              [
+                1,
+                -1
+              ],
+              [
+                2,
+                -2
+              ],
+              [
+                4,
+                -6
+              ],
+              [
+                6,
+                -8
+              ]
+            ],
+            "weight": 9884
+          },
+          {
+            "cut_index": 13,
+            "generator_size": 5,
+            "generators": [
+              [
+                1,
+                -1
+              ],
+              [
+                2,
+                -2
+              ],
+              [
+                3,
+                -6
+              ],
+              [
+                5,
+                -7
+              ],
+              [
+                8,
+                -8
+              ]
+            ],
+            "weight": 6548
+          },
+          {
+            "cut_index": 16,
+            "generator_size": 5,
+            "generators": [
+              [
+                1,
+                -1
+              ],
+              [
+                2,
+                -4
+              ],
+              [
+                5,
+                -5
+              ],
+              [
+                8,
+                -8
+              ],
+              [
+                9,
+                -12
+              ]
+            ],
+            "weight": 1164
+          },
+          {
+            "cut_index": 29,
+            "generator_size": 5,
+            "generators": [
+              [
+                1,
+                -2
+              ],
+              [
+                2,
+                -4
+              ],
+              [
+                3,
+                -5
+              ],
+              [
+                4,
+                -11
+              ],
+              [
+                9,
+                -12
+              ]
+            ],
+            "weight": 7839
+          },
+          {
+            "cut_index": 36,
+            "generator_size": 4,
+            "generators": [
+              [
+                1,
+                -2
+              ],
+              [
+                2,
+                -3
+              ],
+              [
+                3,
+                -4
+              ],
+              [
+                4,
+                -5
+              ]
+            ],
+            "weight": 13548
+          },
+          {
+            "cut_index": 37,
+            "generator_size": 2,
+            "generators": [
+              [
+                1,
+                -1
+              ],
+              [
+                2,
+                -4
+              ]
+            ],
+            "weight": 16363
+          },
+          {
+            "cut_index": 44,
+            "generator_size": 5,
+            "generators": [
+              [
+                1,
+                -1
+              ],
+              [
+                2,
+                -3
+              ],
+              [
+                5,
+                -5
+              ],
+              [
+                6,
+                -6
+              ],
+              [
+                11,
+                -11
+              ]
+            ],
+            "weight": 1651
+          },
+          {
+            "cut_index": 52,
+            "generator_size": 7,
+            "generators": [
+              [
+                1,
+                -1
+              ],
+              [
+                2,
+                -2
+              ],
+              [
+                3,
+                -5
+              ],
+              [
+                6,
+                -6
+              ],
+              [
+                7,
+                -7
+              ],
+              [
+                8,
+                -10
+              ],
+              [
+                11,
+                -12
+              ]
+            ],
+            "weight": 9685
+          },
+          {
+            "cut_index": 60,
+            "generator_size": 1,
+            "generators": [
+              [
+                1,
+                -3
+              ]
+            ],
+            "weight": 28949
+          }
+        ],
+        "active_sh": [
+          {
+            "generator_size": 3,
+            "generators": [
+              [
+                1,
+                -1
+              ],
+              [
+                2,
+                -5
+              ],
+              [
+                3,
+                -6
+              ]
+            ],
+            "slot": 0,
+            "source_cut_index": 1,
+            "weight": 12623
+          },
+          {
+            "generator_size": 2,
+            "generators": [
+              [
+                1,
+                -1
+              ],
+              [
+                2,
+                -7
+              ]
+            ],
+            "slot": 1,
+            "source_cut_index": 2,
+            "weight": 14596
+          },
+          {
+            "generator_size": 3,
+            "generators": [
+              [
+                1,
+                -1
+              ],
+              [
+                2,
+                -2
+              ],
+              [
+                3,
+                -11
+              ]
+            ],
+            "slot": 2,
+            "source_cut_index": 3,
+            "weight": 19134
+          }
+        ],
+        "rhs": -613
+      },
+      "order": "weight_down",
+      "size": 10,
+      "tests": 21
+    },
+    {
+      "bc_indices": [
+        5,
+        13,
+        36,
+        37,
+        41,
+        52,
+        60
+      ],
+      "certificate": {
+        "active_bc": [
+          {
+            "cut_index": 5,
+            "generator_size": 4,
+            "generators": [
+              [
+                1,
+                -1
+              ],
+              [
+                2,
+                -2
+              ],
+              [
+                4,
+                -6
+              ],
+              [
+                6,
+                -8
+              ]
+            ],
+            "weight": 1083
+          },
+          {
+            "cut_index": 13,
+            "generator_size": 5,
+            "generators": [
+              [
+                1,
+                -1
+              ],
+              [
+                2,
+                -2
+              ],
+              [
+                3,
+                -6
+              ],
+              [
+                5,
+                -7
+              ],
+              [
+                8,
+                -8
+              ]
+            ],
+            "weight": 478
+          },
+          {
+            "cut_index": 36,
+            "generator_size": 4,
+            "generators": [
+              [
+                1,
+                -2
+              ],
+              [
+                2,
+                -3
+              ],
+              [
+                3,
+                -4
+              ],
+              [
+                4,
+                -5
+              ]
+            ],
+            "weight": 2102
+          },
+          {
+            "cut_index": 37,
+            "generator_size": 2,
+            "generators": [
+              [
+                1,
+                -1
+              ],
+              [
+                2,
+                -4
+              ]
+            ],
+            "weight": 2185
+          },
+          {
+            "cut_index": 41,
+            "generator_size": 5,
+            "generators": [
+              [
+                1,
+                -2
+              ],
+              [
+                2,
+                -4
+              ],
+              [
+                5,
+                -8
+              ],
+              [
+                8,
+                -9
+              ],
+              [
+                10,
+                -10
+              ]
+            ],
+            "weight": 1497
+          },
+          {
+            "cut_index": 52,
+            "generator_size": 7,
+            "generators": [
+              [
+                1,
+                -1
+              ],
+              [
+                2,
+                -2
+              ],
+              [
+                3,
+                -5
+              ],
+              [
+                6,
+                -6
+              ],
+              [
+                7,
+                -7
+              ],
+              [
+                8,
+                -10
+              ],
+              [
+                11,
+                -12
+              ]
+            ],
+            "weight": 1949
+          },
+          {
+            "cut_index": 60,
+            "generator_size": 1,
+            "generators": [
+              [
+                1,
+                -3
+              ]
+            ],
+            "weight": 4153
+          }
+        ],
+        "active_sh": [
+          {
+            "generator_size": 3,
+            "generators": [
+              [
+                1,
+                -1
+              ],
+              [
+                2,
+                -5
+              ],
+              [
+                3,
+                -6
+              ]
+            ],
+            "slot": 0,
+            "source_cut_index": 1,
+            "weight": 1873
+          },
+          {
+            "generator_size": 2,
+            "generators": [
+              [
+                1,
+                -1
+              ],
+              [
+                2,
+                -7
+              ]
+            ],
+            "slot": 1,
+            "source_cut_index": 2,
+            "weight": 2102
+          },
+          {
+            "generator_size": 3,
+            "generators": [
+              [
+                1,
+                -1
+              ],
+              [
+                2,
+                -2
+              ],
+              [
+                3,
+                -11
+              ]
+            ],
+            "slot": 2,
+            "source_cut_index": 3,
+            "weight": 3726
+          }
+        ],
+        "rhs": -906
+      },
+      "order": "random_0",
+      "size": 7,
+      "tests": 21
+    },
+    {
+      "bc_indices": [
+        4,
+        11,
+        16,
+        36,
+        37,
+        41,
+        44,
+        55,
+        60
+      ],
+      "certificate": {
+        "active_bc": [
+          {
+            "cut_index": 4,
+            "generator_size": 4,
+            "generators": [
+              [
+                1,
+                -1
+              ],
+              [
+                2,
+                -2
+              ],
+              [
+                3,
+                -6
+              ],
+              [
+                7,
+                -10
+              ]
+            ],
+            "weight": 3705
+          },
+          {
+            "cut_index": 11,
+            "generator_size": 5,
+            "generators": [
+              [
+                1,
+                -2
+              ],
+              [
+                3,
+                -4
+              ],
+              [
+                4,
+                -6
+              ],
+              [
+                6,
+                -8
+              ],
+              [
+                9,
+                -9
+              ]
+            ],
+            "weight": 5043
+          },
+          {
+            "cut_index": 16,
+            "generator_size": 5,
+            "generators": [
+              [
+                1,
+                -1
+              ],
+              [
+                2,
+                -4
+              ],
+              [
+                5,
+                -5
+              ],
+              [
+                8,
+                -8
+              ],
+              [
+                9,
+                -12
+              ]
+            ],
+            "weight": 798
+          },
+          {
+            "cut_index": 36,
+            "generator_size": 4,
+            "generators": [
+              [
+                1,
+                -2
+              ],
+              [
+                2,
+                -3
+              ],
+              [
+                3,
+                -4
+              ],
+              [
+                4,
+                -5
+              ]
+            ],
+            "weight": 4665
+          },
+          {
+            "cut_index": 37,
+            "generator_size": 2,
+            "generators": [
+              [
+                1,
+                -1
+              ],
+              [
+                2,
+                -4
+              ]
+            ],
+            "weight": 6827
+          },
+          {
+            "cut_index": 41,
+            "generator_size": 5,
+            "generators": [
+              [
+                1,
+                -2
+              ],
+              [
+                2,
+                -4
+              ],
+              [
+                5,
+                -8
+              ],
+              [
+                8,
+                -9
+              ],
+              [
+                10,
+                -10
+              ]
+            ],
+            "weight": 3035
+          },
+          {
+            "cut_index": 44,
+            "generator_size": 5,
+            "generators": [
+              [
+                1,
+                -1
+              ],
+              [
+                2,
+                -3
+              ],
+              [
+                5,
+                -5
+              ],
+              [
+                6,
+                -6
+              ],
+              [
+                11,
+                -11
+              ]
+            ],
+            "weight": 1479
+          },
+          {
+            "cut_index": 55,
+            "generator_size": 4,
+            "generators": [
+              [
+                1,
+                -2
+              ],
+              [
+                6,
+                -8
+              ],
+              [
+                8,
+                -9
+              ],
+              [
+                9,
+                -11
+              ]
+            ],
+            "weight": 685
+          },
+          {
+            "cut_index": 60,
+            "generator_size": 1,
+            "generators": [
+              [
+                1,
+                -3
+              ]
+            ],
+            "weight": 7606
+          }
+        ],
+        "active_sh": [
+          {
+            "generator_size": 3,
+            "generators": [
+              [
+                1,
+                -1
+              ],
+              [
+                2,
+                -5
+              ],
+              [
+                3,
+                -6
+              ]
+            ],
+            "slot": 0,
+            "source_cut_index": 1,
+            "weight": 3299
+          },
+          {
+            "generator_size": 2,
+            "generators": [
+              [
+                1,
+                -1
+              ],
+              [
+                2,
+                -7
+              ]
+            ],
+            "slot": 1,
+            "source_cut_index": 2,
+            "weight": 5577
+          },
+          {
+            "generator_size": 3,
+            "generators": [
+              [
+                1,
+                -1
+              ],
+              [
+                2,
+                -2
+              ],
+              [
+                3,
+                -11
+              ]
+            ],
+            "slot": 2,
+            "source_cut_index": 3,
+            "weight": 7555
+          }
+        ],
+        "rhs": -912
+      },
+      "order": "random_1",
+      "size": 9,
+      "tests": 21
+    },
+    {
+      "bc_indices": [
+        5,
+        7,
+        13,
+        16,
+        29,
+        36,
+        41,
+        49,
+        52,
+        60
+      ],
+      "certificate": {
+        "active_bc": [
+          {
+            "cut_index": 5,
+            "generator_size": 4,
+            "generators": [
+              [
+                1,
+                -1
+              ],
+              [
+                2,
+                -2
+              ],
+              [
+                4,
+                -6
+              ],
+              [
+                6,
+                -8
+              ]
+            ],
+            "weight": 161014
+          },
+          {
+            "cut_index": 7,
+            "generator_size": 2,
+            "generators": [
+              [
+                2,
+                -3
+              ],
+              [
+                4,
+                -4
+              ]
+            ],
+            "weight": 265899
+          },
+          {
+            "cut_index": 13,
+            "generator_size": 5,
+            "generators": [
+              [
+                1,
+                -1
+              ],
+              [
+                2,
+                -2
+              ],
+              [
+                3,
+                -6
+              ],
+              [
+                5,
+                -7
+              ],
+              [
+                8,
+                -8
+              ]
+            ],
+            "weight": 71772
+          },
+          {
+            "cut_index": 16,
+            "generator_size": 5,
+            "generators": [
+              [
+                1,
+                -1
+              ],
+              [
+                2,
+                -4
+              ],
+              [
+                5,
+                -5
+              ],
+              [
+                8,
+                -8
+              ],
+              [
+                9,
+                -12
+              ]
+            ],
+            "weight": 23597
+          },
+          {
+            "cut_index": 29,
+            "generator_size": 5,
+            "generators": [
+              [
+                1,
+                -2
+              ],
+              [
+                2,
+                -4
+              ],
+              [
+                3,
+                -5
+              ],
+              [
+                4,
+                -11
+              ],
+              [
+                9,
+                -12
+              ]
+            ],
+            "weight": 96498
+          },
+          {
+            "cut_index": 36,
+            "generator_size": 4,
+            "generators": [
+              [
+                1,
+                -2
+              ],
+              [
+                2,
+                -3
+              ],
+              [
+                3,
+                -4
+              ],
+              [
+                4,
+                -5
+              ]
+            ],
+            "weight": 273959
+          },
+          {
+            "cut_index": 41,
+            "generator_size": 5,
+            "generators": [
+              [
+                1,
+                -2
+              ],
+              [
+                2,
+                -4
+              ],
+              [
+                5,
+                -8
+              ],
+              [
+                8,
+                -9
+              ],
+              [
+                10,
+                -10
+              ]
+            ],
+            "weight": 211204
+          },
+          {
+            "cut_index": 49,
+            "generator_size": 4,
+            "generators": [
+              [
+                1,
+                -2
+              ],
+              [
+                3,
+                -3
+              ],
+              [
+                10,
+                -10
+              ],
+              [
+                11,
+                -12
+              ]
+            ],
+            "weight": 123143
+          },
+          {
+            "cut_index": 52,
+            "generator_size": 7,
+            "generators": [
+              [
+                1,
+                -1
+              ],
+              [
+                2,
+                -2
+              ],
+              [
+                3,
+                -5
+              ],
+              [
+                6,
+                -6
+              ],
+              [
+                7,
+                -7
+              ],
+              [
+                8,
+                -10
+              ],
+              [
+                11,
+                -12
+              ]
+            ],
+            "weight": 243268
+          },
+          {
+            "cut_index": 60,
+            "generator_size": 1,
+            "generators": [
+              [
+                1,
+                -3
+              ]
+            ],
+            "weight": 460463
+          }
+        ],
+        "active_sh": [
+          {
+            "generator_size": 3,
+            "generators": [
+              [
+                1,
+                -1
+              ],
+              [
+                2,
+                -5
+              ],
+              [
+                3,
+                -6
+              ]
+            ],
+            "slot": 0,
+            "source_cut_index": 1,
+            "weight": 281727
+          },
+          {
+            "generator_size": 2,
+            "generators": [
+              [
+                1,
+                -1
+              ],
+              [
+                2,
+                -7
+              ]
+            ],
+            "slot": 1,
+            "source_cut_index": 2,
+            "weight": 305325
+          },
+          {
+            "generator_size": 3,
+            "generators": [
+              [
+                1,
+                -1
+              ],
+              [
+                2,
+                -2
+              ],
+              [
+                3,
+                -11
+              ]
+            ],
+            "slot": 2,
+            "source_cut_index": 3,
+            "weight": 449635
+          }
+        ],
+        "rhs": -869
+      },
+      "order": "random_2",
+      "size": 10,
+      "tests": 21
+    },
+    {
+      "bc_indices": [
+        5,
+        13,
+        36,
+        37,
+        41,
+        52,
+        60
+      ],
+      "certificate": {
+        "active_bc": [
+          {
+            "cut_index": 5,
+            "generator_size": 4,
+            "generators": [
+              [
+                1,
+                -1
+              ],
+              [
+                2,
+                -2
+              ],
+              [
+                4,
+                -6
+              ],
+              [
+                6,
+                -8
+              ]
+            ],
+            "weight": 1083
+          },
+          {
+            "cut_index": 13,
+            "generator_size": 5,
+            "generators": [
+              [
+                1,
+                -1
+              ],
+              [
+                2,
+                -2
+              ],
+              [
+                3,
+                -6
+              ],
+              [
+                5,
+                -7
+              ],
+              [
+                8,
+                -8
+              ]
+            ],
+            "weight": 478
+          },
+          {
+            "cut_index": 36,
+            "generator_size": 4,
+            "generators": [
+              [
+                1,
+                -2
+              ],
+              [
+                2,
+                -3
+              ],
+              [
+                3,
+                -4
+              ],
+              [
+                4,
+                -5
+              ]
+            ],
+            "weight": 2102
+          },
+          {
+            "cut_index": 37,
+            "generator_size": 2,
+            "generators": [
+              [
+                1,
+                -1
+              ],
+              [
+                2,
+                -4
+              ]
+            ],
+            "weight": 2185
+          },
+          {
+            "cut_index": 41,
+            "generator_size": 5,
+            "generators": [
+              [
+                1,
+                -2
+              ],
+              [
+                2,
+                -4
+              ],
+              [
+                5,
+                -8
+              ],
+              [
+                8,
+                -9
+              ],
+              [
+                10,
+                -10
+              ]
+            ],
+            "weight": 1497
+          },
+          {
+            "cut_index": 52,
+            "generator_size": 7,
+            "generators": [
+              [
+                1,
+                -1
+              ],
+              [
+                2,
+                -2
+              ],
+              [
+                3,
+                -5
+              ],
+              [
+                6,
+                -6
+              ],
+              [
+                7,
+                -7
+              ],
+              [
+                8,
+                -10
+              ],
+              [
+                11,
+                -12
+              ]
+            ],
+            "weight": 1949
+          },
+          {
+            "cut_index": 60,
+            "generator_size": 1,
+            "generators": [
+              [
+                1,
+                -3
+              ]
+            ],
+            "weight": 4153
+          }
+        ],
+        "active_sh": [
+          {
+            "generator_size": 3,
+            "generators": [
+              [
+                1,
+                -1
+              ],
+              [
+                2,
+                -5
+              ],
+              [
+                3,
+                -6
+              ]
+            ],
+            "slot": 0,
+            "source_cut_index": 1,
+            "weight": 1873
+          },
+          {
+            "generator_size": 2,
+            "generators": [
+              [
+                1,
+                -1
+              ],
+              [
+                2,
+                -7
+              ]
+            ],
+            "slot": 1,
+            "source_cut_index": 2,
+            "weight": 2102
+          },
+          {
+            "generator_size": 3,
+            "generators": [
+              [
+                1,
+                -1
+              ],
+              [
+                2,
+                -2
+              ],
+              [
+                3,
+                -11
+              ]
+            ],
+            "slot": 2,
+            "source_cut_index": 3,
+            "weight": 3726
+          }
+        ],
+        "rhs": -906
+      },
+      "order": "random_3",
+      "size": 7,
+      "tests": 21
+    },
+    {
+      "bc_indices": [
+        11,
+        13,
+        23,
+        36,
+        37,
+        52,
+        60
+      ],
+      "certificate": {
+        "active_bc": [
+          {
+            "cut_index": 11,
+            "generator_size": 5,
+            "generators": [
+              [
+                1,
+                -2
+              ],
+              [
+                3,
+                -4
+              ],
+              [
+                4,
+                -6
+              ],
+              [
+                6,
+                -8
+              ],
+              [
+                9,
+                -9
+              ]
+            ],
+            "weight": 1948
+          },
+          {
+            "cut_index": 13,
+            "generator_size": 5,
+            "generators": [
+              [
+                1,
+                -1
+              ],
+              [
+                2,
+                -2
+              ],
+              [
+                3,
+                -6
+              ],
+              [
+                5,
+                -7
+              ],
+              [
+                8,
+                -8
+              ]
+            ],
+            "weight": 489
+          },
+          {
+            "cut_index": 23,
+            "generator_size": 4,
+            "generators": [
+              [
+                1,
+                -1
+              ],
+              [
+                2,
+                -2
+              ],
+              [
+                3,
+                -4
+              ],
+              [
+                4,
+                -10
+              ]
+            ],
+            "weight": 974
+          },
+          {
+            "cut_index": 36,
+            "generator_size": 4,
+            "generators": [
+              [
+                1,
+                -2
+              ],
+              [
+                2,
+                -3
+              ],
+              [
+                3,
+                -4
+              ],
+              [
+                4,
+                -5
+              ]
+            ],
+            "weight": 1742
+          },
+          {
+            "cut_index": 37,
+            "generator_size": 2,
+            "generators": [
+              [
+                1,
+                -1
+              ],
+              [
+                2,
+                -4
+              ]
+            ],
+            "weight": 2216
+          },
+          {
+            "cut_index": 52,
+            "generator_size": 7,
+            "generators": [
+              [
+                1,
+                -1
+              ],
+              [
+                2,
+                -2
+              ],
+              [
+                3,
+                -5
+              ],
+              [
+                6,
+                -6
+              ],
+              [
+                7,
+                -7
+              ],
+              [
+                8,
+                -10
+              ],
+              [
+                11,
+                -12
+              ]
+            ],
+            "weight": 1481
+          },
+          {
+            "cut_index": 60,
+            "generator_size": 1,
+            "generators": [
+              [
+                1,
+                -3
+              ]
+            ],
+            "weight": 3387
+          }
+        ],
+        "active_sh": [
+          {
+            "generator_size": 3,
+            "generators": [
+              [
+                1,
+                -1
+              ],
+              [
+                2,
+                -5
+              ],
+              [
+                3,
+                -6
+              ]
+            ],
+            "slot": 0,
+            "source_cut_index": 1,
+            "weight": 1620
+          },
+          {
+            "generator_size": 2,
+            "generators": [
+              [
+                1,
+                -1
+              ],
+              [
+                2,
+                -7
+              ]
+            ],
+            "slot": 1,
+            "source_cut_index": 2,
+            "weight": 1843
+          },
+          {
+            "generator_size": 3,
+            "generators": [
+              [
+                1,
+                -1
+              ],
+              [
+                2,
+                -2
+              ],
+              [
+                3,
+                -11
+              ]
+            ],
+            "slot": 2,
+            "source_cut_index": 3,
+            "weight": 2319
+          }
+        ],
+        "rhs": -945
+      },
+      "order": "random_4",
+      "size": 7,
+      "tests": 21
+    },
+    {
+      "bc_indices": [
+        4,
+        11,
+        36,
+        37,
+        44,
+        52,
+        60
+      ],
+      "certificate": {
+        "active_bc": [
+          {
+            "cut_index": 4,
+            "generator_size": 4,
+            "generators": [
+              [
+                1,
+                -1
+              ],
+              [
+                2,
+                -2
+              ],
+              [
+                3,
+                -6
+              ],
+              [
+                7,
+                -10
+              ]
+            ],
+            "weight": 530
+          },
+          {
+            "cut_index": 11,
+            "generator_size": 5,
+            "generators": [
+              [
+                1,
+                -2
+              ],
+              [
+                3,
+                -4
+              ],
+              [
+                4,
+                -6
+              ],
+              [
+                6,
+                -8
+              ],
+              [
+                9,
+                -9
+              ]
+            ],
+            "weight": 3669
+          },
+          {
+            "cut_index": 36,
+            "generator_size": 4,
+            "generators": [
+              [
+                1,
+                -2
+              ],
+              [
+                2,
+                -3
+              ],
+              [
+                3,
+                -4
+              ],
+              [
+                4,
+                -5
+              ]
+            ],
+            "weight": 3150
+          },
+          {
+            "cut_index": 37,
+            "generator_size": 2,
+            "generators": [
+              [
+                1,
+                -1
+              ],
+              [
+                2,
+                -4
+              ]
+            ],
+            "weight": 4459
+          },
+          {
+            "cut_index": 44,
+            "generator_size": 5,
+            "generators": [
+              [
+                1,
+                -1
+              ],
+              [
+                2,
+                -3
+              ],
+              [
+                5,
+                -5
+              ],
+              [
+                6,
+                -6
+              ],
+              [
+                11,
+                -11
+              ]
+            ],
+            "weight": 630
+          },
+          {
+            "cut_index": 52,
+            "generator_size": 7,
+            "generators": [
+              [
+                1,
+                -1
+              ],
+              [
+                2,
+                -2
+              ],
+              [
+                3,
+                -5
+              ],
+              [
+                6,
+                -6
+              ],
+              [
+                7,
+                -7
+              ],
+              [
+                8,
+                -10
+              ],
+              [
+                11,
+                -12
+              ]
+            ],
+            "weight": 2823
+          },
+          {
+            "cut_index": 60,
+            "generator_size": 1,
+            "generators": [
+              [
+                1,
+                -3
+              ]
+            ],
+            "weight": 5056
+          }
+        ],
+        "active_sh": [
+          {
+            "generator_size": 3,
+            "generators": [
+              [
+                1,
+                -1
+              ],
+              [
+                2,
+                -5
+              ],
+              [
+                3,
+                -6
+              ]
+            ],
+            "slot": 0,
+            "source_cut_index": 1,
+            "weight": 2420
+          },
+          {
+            "generator_size": 2,
+            "generators": [
+              [
+                1,
+                -1
+              ],
+              [
+                2,
+                -7
+              ]
+            ],
+            "slot": 1,
+            "source_cut_index": 2,
+            "weight": 3249
+          },
+          {
+            "generator_size": 3,
+            "generators": [
+              [
+                1,
+                -1
+              ],
+              [
+                2,
+                -2
+              ],
+              [
+                3,
+                -11
+              ]
+            ],
+            "slot": 2,
+            "source_cut_index": 3,
+            "weight": 6200
+          }
+        ],
+        "rhs": -899
+      },
+      "order": "random_5",
+      "size": 7,
+      "tests": 21
+    },
+    {
+      "bc_indices": [
+        5,
+        7,
+        16,
+        35,
+        36,
+        41,
+        52,
+        60
+      ],
+      "certificate": {
+        "active_bc": [
+          {
+            "cut_index": 5,
+            "generator_size": 4,
+            "generators": [
+              [
+                1,
+                -1
+              ],
+              [
+                2,
+                -2
+              ],
+              [
+                4,
+                -6
+              ],
+              [
+                6,
+                -8
+              ]
+            ],
+            "weight": 936
+          },
+          {
+            "cut_index": 7,
+            "generator_size": 2,
+            "generators": [
+              [
+                2,
+                -3
+              ],
+              [
+                4,
+                -4
+              ]
+            ],
+            "weight": 1371
+          },
+          {
+            "cut_index": 16,
+            "generator_size": 5,
+            "generators": [
+              [
+                1,
+                -1
+              ],
+              [
+                2,
+                -4
+              ],
+              [
+                5,
+                -5
+              ],
+              [
+                8,
+                -8
+              ],
+              [
+                9,
+                -12
+              ]
+            ],
+            "weight": 112
+          },
+          {
+            "cut_index": 35,
+            "generator_size": 4,
+            "generators": [
+              [
+                1,
+                -1
+              ],
+              [
+                2,
+                -4
+              ],
+              [
+                3,
+                -9
+              ],
+              [
+                4,
+                -13
+              ]
+            ],
+            "weight": 554
+          },
+          {
+            "cut_index": 36,
+            "generator_size": 4,
+            "generators": [
+              [
+                1,
+                -2
+              ],
+              [
+                2,
+                -3
+              ],
+              [
+                3,
+                -4
+              ],
+              [
+                4,
+                -5
+              ]
+            ],
+            "weight": 1507
+          },
+          {
+            "cut_index": 41,
+            "generator_size": 5,
+            "generators": [
+              [
+                1,
+                -2
+              ],
+              [
+                2,
+                -4
+              ],
+              [
+                5,
+                -8
+              ],
+              [
+                8,
+                -9
+              ],
+              [
+                10,
+                -10
+              ]
+            ],
+            "weight": 1117
+          },
+          {
+            "cut_index": 52,
+            "generator_size": 7,
+            "generators": [
+              [
+                1,
+                -1
+              ],
+              [
+                2,
+                -2
+              ],
+              [
+                3,
+                -5
+              ],
+              [
+                6,
+                -6
+              ],
+              [
+                7,
+                -7
+              ],
+              [
+                8,
+                -10
+              ],
+              [
+                11,
+                -12
+              ]
+            ],
+            "weight": 1815
+          },
+          {
+            "cut_index": 60,
+            "generator_size": 1,
+            "generators": [
+              [
+                1,
+                -3
+              ]
+            ],
+            "weight": 2866
+          }
+        ],
+        "active_sh": [
+          {
+            "generator_size": 3,
+            "generators": [
+              [
+                1,
+                -1
+              ],
+              [
+                2,
+                -5
+              ],
+              [
+                3,
+                -6
+              ]
+            ],
+            "slot": 0,
+            "source_cut_index": 1,
+            "weight": 1484
+          },
+          {
+            "generator_size": 2,
+            "generators": [
+              [
+                1,
+                -1
+              ],
+              [
+                2,
+                -7
+              ]
+            ],
+            "slot": 1,
+            "source_cut_index": 2,
+            "weight": 1617
+          },
+          {
+            "generator_size": 3,
+            "generators": [
+              [
+                1,
+                -1
+              ],
+              [
+                2,
+                -2
+              ],
+              [
+                3,
+                -11
+              ]
+            ],
+            "slot": 2,
+            "source_cut_index": 3,
+            "weight": 2741
+          }
+        ],
+        "rhs": -861
+      },
+      "order": "random_6",
+      "size": 8,
+      "tests": 21
+    },
+    {
+      "bc_indices": [
+        11,
+        35,
+        36,
+        37,
+        52,
+        60
+      ],
+      "certificate": {
+        "active_bc": [
+          {
+            "cut_index": 11,
+            "generator_size": 5,
+            "generators": [
+              [
+                1,
+                -2
+              ],
+              [
+                3,
+                -4
+              ],
+              [
+                4,
+                -6
+              ],
+              [
+                6,
+                -8
+              ],
+              [
+                9,
+                -9
+              ]
+            ],
+            "weight": 2322
+          },
+          {
+            "cut_index": 35,
+            "generator_size": 4,
+            "generators": [
+              [
+                1,
+                -1
+              ],
+              [
+                2,
+                -4
+              ],
+              [
+                3,
+                -9
+              ],
+              [
+                4,
+                -13
+              ]
+            ],
+            "weight": 955
+          },
+          {
+            "cut_index": 36,
+            "generator_size": 4,
+            "generators": [
+              [
+                1,
+                -2
+              ],
+              [
+                2,
+                -3
+              ],
+              [
+                3,
+                -4
+              ],
+              [
+                4,
+                -5
+              ]
+            ],
+            "weight": 1566
+          },
+          {
+            "cut_index": 37,
+            "generator_size": 2,
+            "generators": [
+              [
+                1,
+                -1
+              ],
+              [
+                2,
+                -4
+              ]
+            ],
+            "weight": 2215
+          },
+          {
+            "cut_index": 52,
+            "generator_size": 7,
+            "generators": [
+              [
+                1,
+                -1
+              ],
+              [
+                2,
+                -2
+              ],
+              [
+                3,
+                -5
+              ],
+              [
+                6,
+                -6
+              ],
+              [
+                7,
+                -7
+              ],
+              [
+                8,
+                -10
+              ],
+              [
+                11,
+                -12
+              ]
+            ],
+            "weight": 1190
+          },
+          {
+            "cut_index": 60,
+            "generator_size": 1,
+            "generators": [
+              [
+                1,
+                -3
+              ]
+            ],
+            "weight": 2826
+          }
+        ],
+        "active_sh": [
+          {
+            "generator_size": 3,
+            "generators": [
+              [
+                1,
+                -1
+              ],
+              [
+                2,
+                -5
+              ],
+              [
+                3,
+                -6
+              ]
+            ],
+            "slot": 0,
+            "source_cut_index": 1,
+            "weight": 1459
+          },
+          {
+            "generator_size": 2,
+            "generators": [
+              [
+                1,
+                -1
+              ],
+              [
+                2,
+                -7
+              ]
+            ],
+            "slot": 1,
+            "source_cut_index": 2,
+            "weight": 1674
+          },
+          {
+            "generator_size": 3,
+            "generators": [
+              [
+                1,
+                -1
+              ],
+              [
+                2,
+                -2
+              ],
+              [
+                3,
+                -11
+              ]
+            ],
+            "slot": 2,
+            "source_cut_index": 3,
+            "weight": 1998
+          }
+        ],
+        "rhs": -881
+      },
+      "order": "random_7",
+      "size": 6,
+      "tests": 21
+    },
+    {
+      "bc_indices": [
+        11,
+        13,
+        23,
+        36,
+        37,
+        52,
+        60
+      ],
+      "certificate": {
+        "active_bc": [
+          {
+            "cut_index": 11,
+            "generator_size": 5,
+            "generators": [
+              [
+                1,
+                -2
+              ],
+              [
+                3,
+                -4
+              ],
+              [
+                4,
+                -6
+              ],
+              [
+                6,
+                -8
+              ],
+              [
+                9,
+                -9
+              ]
+            ],
+            "weight": 1948
+          },
+          {
+            "cut_index": 13,
+            "generator_size": 5,
+            "generators": [
+              [
+                1,
+                -1
+              ],
+              [
+                2,
+                -2
+              ],
+              [
+                3,
+                -6
+              ],
+              [
+                5,
+                -7
+              ],
+              [
+                8,
+                -8
+              ]
+            ],
+            "weight": 489
+          },
+          {
+            "cut_index": 23,
+            "generator_size": 4,
+            "generators": [
+              [
+                1,
+                -1
+              ],
+              [
+                2,
+                -2
+              ],
+              [
+                3,
+                -4
+              ],
+              [
+                4,
+                -10
+              ]
+            ],
+            "weight": 974
+          },
+          {
+            "cut_index": 36,
+            "generator_size": 4,
+            "generators": [
+              [
+                1,
+                -2
+              ],
+              [
+                2,
+                -3
+              ],
+              [
+                3,
+                -4
+              ],
+              [
+                4,
+                -5
+              ]
+            ],
+            "weight": 1742
+          },
+          {
+            "cut_index": 37,
+            "generator_size": 2,
+            "generators": [
+              [
+                1,
+                -1
+              ],
+              [
+                2,
+                -4
+              ]
+            ],
+            "weight": 2216
+          },
+          {
+            "cut_index": 52,
+            "generator_size": 7,
+            "generators": [
+              [
+                1,
+                -1
+              ],
+              [
+                2,
+                -2
+              ],
+              [
+                3,
+                -5
+              ],
+              [
+                6,
+                -6
+              ],
+              [
+                7,
+                -7
+              ],
+              [
+                8,
+                -10
+              ],
+              [
+                11,
+                -12
+              ]
+            ],
+            "weight": 1481
+          },
+          {
+            "cut_index": 60,
+            "generator_size": 1,
+            "generators": [
+              [
+                1,
+                -3
+              ]
+            ],
+            "weight": 3387
+          }
+        ],
+        "active_sh": [
+          {
+            "generator_size": 3,
+            "generators": [
+              [
+                1,
+                -1
+              ],
+              [
+                2,
+                -5
+              ],
+              [
+                3,
+                -6
+              ]
+            ],
+            "slot": 0,
+            "source_cut_index": 1,
+            "weight": 1620
+          },
+          {
+            "generator_size": 2,
+            "generators": [
+              [
+                1,
+                -1
+              ],
+              [
+                2,
+                -7
+              ]
+            ],
+            "slot": 1,
+            "source_cut_index": 2,
+            "weight": 1843
+          },
+          {
+            "generator_size": 3,
+            "generators": [
+              [
+                1,
+                -1
+              ],
+              [
+                2,
+                -2
+              ],
+              [
+                3,
+                -11
+              ]
+            ],
+            "slot": 2,
+            "source_cut_index": 3,
+            "weight": 2319
+          }
+        ],
+        "rhs": -945
+      },
+      "order": "random_8",
+      "size": 7,
+      "tests": 21
+    },
+    {
+      "bc_indices": [
+        4,
+        13,
+        36,
+        37,
+        41,
+        52,
+        60
+      ],
+      "certificate": {
+        "active_bc": [
+          {
+            "cut_index": 4,
+            "generator_size": 4,
+            "generators": [
+              [
+                1,
+                -1
+              ],
+              [
+                2,
+                -2
+              ],
+              [
+                3,
+                -6
+              ],
+              [
+                7,
+                -10
+              ]
+            ],
+            "weight": 537
+          },
+          {
+            "cut_index": 13,
+            "generator_size": 5,
+            "generators": [
+              [
+                1,
+                -1
+              ],
+              [
+                2,
+                -2
+              ],
+              [
+                3,
+                -6
+              ],
+              [
+                5,
+                -7
+              ],
+              [
+                8,
+                -8
+              ]
+            ],
+            "weight": 377
+          },
+          {
+            "cut_index": 36,
+            "generator_size": 4,
+            "generators": [
+              [
+                1,
+                -2
+              ],
+              [
+                2,
+                -3
+              ],
+              [
+                3,
+                -4
+              ],
+              [
+                4,
+                -5
+              ]
+            ],
+            "weight": 1051
+          },
+          {
+            "cut_index": 37,
+            "generator_size": 2,
+            "generators": [
+              [
+                1,
+                -1
+              ],
+              [
+                2,
+                -4
+              ]
+            ],
+            "weight": 1267
+          },
+          {
+            "cut_index": 41,
+            "generator_size": 5,
+            "generators": [
+              [
+                1,
+                -2
+              ],
+              [
+                2,
+                -4
+              ],
+              [
+                5,
+                -8
+              ],
+              [
+                8,
+                -9
+              ],
+              [
+                10,
+                -10
+              ]
+            ],
+            "weight": 822
+          },
+          {
+            "cut_index": 52,
+            "generator_size": 7,
+            "generators": [
+              [
+                1,
+                -1
+              ],
+              [
+                2,
+                -2
+              ],
+              [
+                3,
+                -5
+              ],
+              [
+                6,
+                -6
+              ],
+              [
+                7,
+                -7
+              ],
+              [
+                8,
+                -10
+              ],
+              [
+                11,
+                -12
+              ]
+            ],
+            "weight": 817
+          },
+          {
+            "cut_index": 60,
+            "generator_size": 1,
+            "generators": [
+              [
+                1,
+                -3
+              ]
+            ],
+            "weight": 1638
+          }
+        ],
+        "active_sh": [
+          {
+            "generator_size": 3,
+            "generators": [
+              [
+                1,
+                -1
+              ],
+              [
+                2,
+                -5
+              ],
+              [
+                3,
+                -6
+              ]
+            ],
+            "slot": 0,
+            "source_cut_index": 1,
+            "weight": 914
+          },
+          {
+            "generator_size": 2,
+            "generators": [
+              [
+                1,
+                -1
+              ],
+              [
+                2,
+                -7
+              ]
+            ],
+            "slot": 1,
+            "source_cut_index": 2,
+            "weight": 1051
+          },
+          {
+            "generator_size": 3,
+            "generators": [
+              [
+                1,
+                -1
+              ],
+              [
+                2,
+                -2
+              ],
+              [
+                3,
+                -11
+              ]
+            ],
+            "slot": 2,
+            "source_cut_index": 3,
+            "weight": 1587
+          }
+        ],
+        "rhs": -959
+      },
+      "order": "random_9",
+      "size": 7,
+      "tests": 21
+    },
+    {
+      "bc_indices": [
+        4,
+        5,
+        36,
+        37,
+        41,
+        52,
+        60
+      ],
+      "certificate": {
+        "active_bc": [
+          {
+            "cut_index": 4,
+            "generator_size": 4,
+            "generators": [
+              [
+                1,
+                -1
+              ],
+              [
+                2,
+                -2
+              ],
+              [
+                3,
+                -6
+              ],
+              [
+                7,
+                -10
+              ]
+            ],
+            "weight": 313
+          },
+          {
+            "cut_index": 5,
+            "generator_size": 4,
+            "generators": [
+              [
+                1,
+                -1
+              ],
+              [
+                2,
+                -2
+              ],
+              [
+                4,
+                -6
+              ],
+              [
+                6,
+                -8
+              ]
+            ],
+            "weight": 512
+          },
+          {
+            "cut_index": 36,
+            "generator_size": 4,
+            "generators": [
+              [
+                1,
+                -2
+              ],
+              [
+                2,
+                -3
+              ],
+              [
+                3,
+                -4
+              ],
+              [
+                4,
+                -5
+              ]
+            ],
+            "weight": 1359
+          },
+          {
+            "cut_index": 37,
+            "generator_size": 2,
+            "generators": [
+              [
+                1,
+                -1
+              ],
+              [
+                2,
+                -4
+              ]
+            ],
+            "weight": 1400
+          },
+          {
+            "cut_index": 41,
+            "generator_size": 5,
+            "generators": [
+              [
+                1,
+                -2
+              ],
+              [
+                2,
+                -4
+              ],
+              [
+                5,
+                -8
+              ],
+              [
+                8,
+                -9
+              ],
+              [
+                10,
+                -10
+              ]
+            ],
+            "weight": 1022
+          },
+          {
+            "cut_index": 52,
+            "generator_size": 7,
+            "generators": [
+              [
+                1,
+                -1
+              ],
+              [
+                2,
+                -2
+              ],
+              [
+                3,
+                -5
+              ],
+              [
+                6,
+                -6
+              ],
+              [
+                7,
+                -7
+              ],
+              [
+                8,
+                -10
+              ],
+              [
+                11,
+                -12
+              ]
+            ],
+            "weight": 1427
+          },
+          {
+            "cut_index": 60,
+            "generator_size": 1,
+            "generators": [
+              [
+                1,
+                -3
+              ]
+            ],
+            "weight": 2550
+          }
+        ],
+        "active_sh": [
+          {
+            "generator_size": 3,
+            "generators": [
+              [
+                1,
+                -1
+              ],
+              [
+                2,
+                -5
+              ],
+              [
+                3,
+                -6
+              ]
+            ],
+            "slot": 0,
+            "source_cut_index": 1,
+            "weight": 1174
+          },
+          {
+            "generator_size": 2,
+            "generators": [
+              [
+                1,
+                -1
+              ],
+              [
+                2,
+                -7
+              ]
+            ],
+            "slot": 1,
+            "source_cut_index": 2,
+            "weight": 1359
+          },
+          {
+            "generator_size": 3,
+            "generators": [
+              [
+                1,
+                -1
+              ],
+              [
+                2,
+                -2
+              ],
+              [
+                3,
+                -11
+              ]
+            ],
+            "slot": 2,
+            "source_cut_index": 3,
+            "weight": 2110
+          }
+        ],
+        "rhs": -883
+      },
+      "order": "random_10",
+      "size": 7,
+      "tests": 21
+    },
+    {
+      "bc_indices": [
+        5,
+        21,
+        35,
+        36,
+        37,
+        52,
+        60
+      ],
+      "certificate": {
+        "active_bc": [
+          {
+            "cut_index": 5,
+            "generator_size": 4,
+            "generators": [
+              [
+                1,
+                -1
+              ],
+              [
+                2,
+                -2
+              ],
+              [
+                4,
+                -6
+              ],
+              [
+                6,
+                -8
+              ]
+            ],
+            "weight": 7143
+          },
+          {
+            "cut_index": 21,
+            "generator_size": 8,
+            "generators": [
+              [
+                1,
+                -1
+              ],
+              [
+                2,
+                -2
+              ],
+              [
+                3,
+                -4
+              ],
+              [
+                4,
+                -6
+              ],
+              [
+                6,
+                -7
+              ],
+              [
+                7,
+                -8
+              ],
+              [
+                8,
+                -9
+              ],
+              [
+                9,
+                -10
+              ]
+            ],
+            "weight": 7714
+          },
+          {
+            "cut_index": 35,
+            "generator_size": 4,
+            "generators": [
+              [
+                1,
+                -1
+              ],
+              [
+                2,
+                -4
+              ],
+              [
+                3,
+                -9
+              ],
+              [
+                4,
+                -13
+              ]
+            ],
+            "weight": 2905
+          },
+          {
+            "cut_index": 36,
+            "generator_size": 4,
+            "generators": [
+              [
+                1,
+                -2
+              ],
+              [
+                2,
+                -3
+              ],
+              [
+                3,
+                -4
+              ],
+              [
+                4,
+                -5
+              ]
+            ],
+            "weight": 10000
+          },
+          {
+            "cut_index": 37,
+            "generator_size": 2,
+            "generators": [
+              [
+                1,
+                -1
+              ],
+              [
+                2,
+                -4
+              ]
+            ],
+            "weight": 10238
+          },
+          {
+            "cut_index": 52,
+            "generator_size": 7,
+            "generators": [
+              [
+                1,
+                -1
+              ],
+              [
+                2,
+                -2
+              ],
+              [
+                3,
+                -5
+              ],
+              [
+                6,
+                -6
+              ],
+              [
+                7,
+                -7
+              ],
+              [
+                8,
+                -10
+              ],
+              [
+                11,
+                -12
+              ]
+            ],
+            "weight": 8000
+          },
+          {
+            "cut_index": 60,
+            "generator_size": 1,
+            "generators": [
+              [
+                1,
+                -3
+              ]
+            ],
+            "weight": 22143
+          }
+        ],
+        "active_sh": [
+          {
+            "generator_size": 3,
+            "generators": [
+              [
+                1,
+                -1
+              ],
+              [
+                2,
+                -5
+              ],
+              [
+                3,
+                -6
+              ]
+            ],
+            "slot": 0,
+            "source_cut_index": 1,
+            "weight": 9429
+          },
+          {
+            "generator_size": 2,
+            "generators": [
+              [
+                1,
+                -1
+              ],
+              [
+                2,
+                -7
+              ]
+            ],
+            "slot": 1,
+            "source_cut_index": 2,
+            "weight": 10571
+          },
+          {
+            "generator_size": 3,
+            "generators": [
+              [
+                1,
+                -1
+              ],
+              [
+                2,
+                -2
+              ],
+              [
+                3,
+                -11
+              ]
+            ],
+            "slot": 2,
+            "source_cut_index": 3,
+            "weight": 17810
+          }
+        ],
+        "rhs": -891
+      },
+      "order": "random_11",
+      "size": 7,
+      "tests": 21
+    },
+    {
+      "bc_indices": [
+        11,
+        13,
+        16,
+        36,
+        37,
+        52,
+        60
+      ],
+      "certificate": {
+        "active_bc": [
+          {
+            "cut_index": 11,
+            "generator_size": 5,
+            "generators": [
+              [
+                1,
+                -2
+              ],
+              [
+                3,
+                -4
+              ],
+              [
+                4,
+                -6
+              ],
+              [
+                6,
+                -8
+              ],
+              [
+                9,
+                -9
+              ]
+            ],
+            "weight": 18338
+          },
+          {
+            "cut_index": 13,
+            "generator_size": 5,
+            "generators": [
+              [
+                1,
+                -1
+              ],
+              [
+                2,
+                -2
+              ],
+              [
+                3,
+                -6
+              ],
+              [
+                5,
+                -7
+              ],
+              [
+                8,
+                -8
+              ]
+            ],
+            "weight": 3849
+          },
+          {
+            "cut_index": 16,
+            "generator_size": 5,
+            "generators": [
+              [
+                1,
+                -1
+              ],
+              [
+                2,
+                -4
+              ],
+              [
+                5,
+                -5
+              ],
+              [
+                8,
+                -8
+              ],
+              [
+                9,
+                -12
+              ]
+            ],
+            "weight": 1067
+          },
+          {
+            "cut_index": 36,
+            "generator_size": 4,
+            "generators": [
+              [
+                1,
+                -2
+              ],
+              [
+                2,
+                -3
+              ],
+              [
+                3,
+                -4
+              ],
+              [
+                4,
+                -5
+              ]
+            ],
+            "weight": 15524
+          },
+          {
+            "cut_index": 37,
+            "generator_size": 2,
+            "generators": [
+              [
+                1,
+                -1
+              ],
+              [
+                2,
+                -4
+              ]
+            ],
+            "weight": 18131
+          },
+          {
+            "cut_index": 52,
+            "generator_size": 7,
+            "generators": [
+              [
+                1,
+                -1
+              ],
+              [
+                2,
+                -2
+              ],
+              [
+                3,
+                -5
+              ],
+              [
+                6,
+                -6
+              ],
+              [
+                7,
+                -7
+              ],
+              [
+                8,
+                -10
+              ],
+              [
+                11,
+                -12
+              ]
+            ],
+            "weight": 16301
+          },
+          {
+            "cut_index": 60,
+            "generator_size": 1,
+            "generators": [
+              [
+                1,
+                -3
+              ]
+            ],
+            "weight": 33973
+          }
+        ],
+        "active_sh": [
+          {
+            "generator_size": 3,
+            "generators": [
+              [
+                1,
+                -1
+              ],
+              [
+                2,
+                -5
+              ],
+              [
+                3,
+                -6
+              ]
+            ],
+            "slot": 0,
+            "source_cut_index": 1,
+            "weight": 15311
+          },
+          {
+            "generator_size": 2,
+            "generators": [
+              [
+                1,
+                -1
+              ],
+              [
+                2,
+                -7
+              ]
+            ],
+            "slot": 1,
+            "source_cut_index": 2,
+            "weight": 16061
+          },
+          {
+            "generator_size": 3,
+            "generators": [
+              [
+                1,
+                -1
+              ],
+              [
+                2,
+                -2
+              ],
+              [
+                3,
+                -11
+              ]
+            ],
+            "slot": 2,
+            "source_cut_index": 3,
+            "weight": 33494
+          }
+        ],
+        "rhs": -853
+      },
+      "order": "random_12",
+      "size": 7,
+      "tests": 21
+    },
+    {
+      "bc_indices": [
+        5,
+        13,
+        16,
+        23,
+        26,
+        29,
+        35,
+        36,
+        37,
+        52,
+        60
+      ],
+      "certificate": {
+        "active_bc": [
+          {
+            "cut_index": 5,
+            "generator_size": 4,
+            "generators": [
+              [
+                1,
+                -1
+              ],
+              [
+                2,
+                -2
+              ],
+              [
+                4,
+                -6
+              ],
+              [
+                6,
+                -8
+              ]
+            ],
+            "weight": 5915
+          },
+          {
+            "cut_index": 13,
+            "generator_size": 5,
+            "generators": [
+              [
+                1,
+                -1
+              ],
+              [
+                2,
+                -2
+              ],
+              [
+                3,
+                -6
+              ],
+              [
+                5,
+                -7
+              ],
+              [
+                8,
+                -8
+              ]
+            ],
+            "weight": 2476
+          },
+          {
+            "cut_index": 16,
+            "generator_size": 5,
+            "generators": [
+              [
+                1,
+                -1
+              ],
+              [
+                2,
+                -4
+              ],
+              [
+                5,
+                -5
+              ],
+              [
+                8,
+                -8
+              ],
+              [
+                9,
+                -12
+              ]
+            ],
+            "weight": 634
+          },
+          {
+            "cut_index": 23,
+            "generator_size": 4,
+            "generators": [
+              [
+                1,
+                -1
+              ],
+              [
+                2,
+                -2
+              ],
+              [
+                3,
+                -4
+              ],
+              [
+                4,
+                -10
+              ]
+            ],
+            "weight": 2439
+          },
+          {
+            "cut_index": 26,
+            "generator_size": 7,
+            "generators": [
+              [
+                1,
+                -1
+              ],
+              [
+                2,
+                -2
+              ],
+              [
+                3,
+                -5
+              ],
+              [
+                4,
+                -6
+              ],
+              [
+                5,
+                -7
+              ],
+              [
+                6,
+                -8
+              ],
+              [
+                7,
+                -11
+              ]
+            ],
+            "weight": 3049
+          },
+          {
+            "cut_index": 29,
+            "generator_size": 5,
+            "generators": [
+              [
+                1,
+                -2
+              ],
+              [
+                2,
+                -4
+              ],
+              [
+                3,
+                -5
+              ],
+              [
+                4,
+                -11
+              ],
+              [
+                9,
+                -12
+              ]
+            ],
+            "weight": 2043
+          },
+          {
+            "cut_index": 35,
+            "generator_size": 4,
+            "generators": [
+              [
+                1,
+                -1
+              ],
+              [
+                2,
+                -4
+              ],
+              [
+                3,
+                -9
+              ],
+              [
+                4,
+                -13
+              ]
+            ],
+            "weight": 2317
+          },
+          {
+            "cut_index": 36,
+            "generator_size": 4,
+            "generators": [
+              [
+                1,
+                -2
+              ],
+              [
+                2,
+                -3
+              ],
+              [
+                3,
+                -4
+              ],
+              [
+                4,
+                -5
+              ]
+            ],
+            "weight": 7756
+          },
+          {
+            "cut_index": 37,
+            "generator_size": 2,
+            "generators": [
+              [
+                1,
+                -1
+              ],
+              [
+                2,
+                -4
+              ]
+            ],
+            "weight": 8390
+          },
+          {
+            "cut_index": 52,
+            "generator_size": 7,
+            "generators": [
+              [
+                1,
+                -1
+              ],
+              [
+                2,
+                -2
+              ],
+              [
+                3,
+                -5
+              ],
+              [
+                6,
+                -6
+              ],
+              [
+                7,
+                -7
+              ],
+              [
+                8,
+                -10
+              ],
+              [
+                11,
+                -12
+              ]
+            ],
+            "weight": 5854
+          },
+          {
+            "cut_index": 60,
+            "generator_size": 1,
+            "generators": [
+              [
+                1,
+                -3
+              ]
+            ],
+            "weight": 18323
+          }
+        ],
+        "active_sh": [
+          {
+            "generator_size": 3,
+            "generators": [
+              [
+                1,
+                -1
+              ],
+              [
+                2,
+                -5
+              ],
+              [
+                3,
+                -6
+              ]
+            ],
+            "slot": 0,
+            "source_cut_index": 1,
+            "weight": 8390
+          },
+          {
+            "generator_size": 2,
+            "generators": [
+              [
+                1,
+                -1
+              ],
+              [
+                2,
+                -7
+              ]
+            ],
+            "slot": 1,
+            "source_cut_index": 2,
+            "weight": 9024
+          },
+          {
+            "generator_size": 3,
+            "generators": [
+              [
+                1,
+                -1
+              ],
+              [
+                2,
+                -2
+              ],
+              [
+                3,
+                -11
+              ]
+            ],
+            "slot": 2,
+            "source_cut_index": 3,
+            "weight": 8177
+          }
+        ],
+        "rhs": -773
+      },
+      "order": "random_13",
+      "size": 11,
+      "tests": 21
+    },
+    {
+      "bc_indices": [
+        11,
+        13,
+        23,
+        36,
+        37,
+        52,
+        60
+      ],
+      "certificate": {
+        "active_bc": [
+          {
+            "cut_index": 11,
+            "generator_size": 5,
+            "generators": [
+              [
+                1,
+                -2
+              ],
+              [
+                3,
+                -4
+              ],
+              [
+                4,
+                -6
+              ],
+              [
+                6,
+                -8
+              ],
+              [
+                9,
+                -9
+              ]
+            ],
+            "weight": 1948
+          },
+          {
+            "cut_index": 13,
+            "generator_size": 5,
+            "generators": [
+              [
+                1,
+                -1
+              ],
+              [
+                2,
+                -2
+              ],
+              [
+                3,
+                -6
+              ],
+              [
+                5,
+                -7
+              ],
+              [
+                8,
+                -8
+              ]
+            ],
+            "weight": 489
+          },
+          {
+            "cut_index": 23,
+            "generator_size": 4,
+            "generators": [
+              [
+                1,
+                -1
+              ],
+              [
+                2,
+                -2
+              ],
+              [
+                3,
+                -4
+              ],
+              [
+                4,
+                -10
+              ]
+            ],
+            "weight": 974
+          },
+          {
+            "cut_index": 36,
+            "generator_size": 4,
+            "generators": [
+              [
+                1,
+                -2
+              ],
+              [
+                2,
+                -3
+              ],
+              [
+                3,
+                -4
+              ],
+              [
+                4,
+                -5
+              ]
+            ],
+            "weight": 1742
+          },
+          {
+            "cut_index": 37,
+            "generator_size": 2,
+            "generators": [
+              [
+                1,
+                -1
+              ],
+              [
+                2,
+                -4
+              ]
+            ],
+            "weight": 2216
+          },
+          {
+            "cut_index": 52,
+            "generator_size": 7,
+            "generators": [
+              [
+                1,
+                -1
+              ],
+              [
+                2,
+                -2
+              ],
+              [
+                3,
+                -5
+              ],
+              [
+                6,
+                -6
+              ],
+              [
+                7,
+                -7
+              ],
+              [
+                8,
+                -10
+              ],
+              [
+                11,
+                -12
+              ]
+            ],
+            "weight": 1481
+          },
+          {
+            "cut_index": 60,
+            "generator_size": 1,
+            "generators": [
+              [
+                1,
+                -3
+              ]
+            ],
+            "weight": 3387
+          }
+        ],
+        "active_sh": [
+          {
+            "generator_size": 3,
+            "generators": [
+              [
+                1,
+                -1
+              ],
+              [
+                2,
+                -5
+              ],
+              [
+                3,
+                -6
+              ]
+            ],
+            "slot": 0,
+            "source_cut_index": 1,
+            "weight": 1620
+          },
+          {
+            "generator_size": 2,
+            "generators": [
+              [
+                1,
+                -1
+              ],
+              [
+                2,
+                -7
+              ]
+            ],
+            "slot": 1,
+            "source_cut_index": 2,
+            "weight": 1843
+          },
+          {
+            "generator_size": 3,
+            "generators": [
+              [
+                1,
+                -1
+              ],
+              [
+                2,
+                -2
+              ],
+              [
+                3,
+                -11
+              ]
+            ],
+            "slot": 2,
+            "source_cut_index": 3,
+            "weight": 2319
+          }
+        ],
+        "rhs": -945
+      },
+      "order": "random_14",
+      "size": 7,
+      "tests": 21
+    },
+    {
+      "bc_indices": [
+        5,
+        21,
+        35,
+        36,
+        37,
+        52,
+        60
+      ],
+      "certificate": {
+        "active_bc": [
+          {
+            "cut_index": 5,
+            "generator_size": 4,
+            "generators": [
+              [
+                1,
+                -1
+              ],
+              [
+                2,
+                -2
+              ],
+              [
+                4,
+                -6
+              ],
+              [
+                6,
+                -8
+              ]
+            ],
+            "weight": 7143
+          },
+          {
+            "cut_index": 21,
+            "generator_size": 8,
+            "generators": [
+              [
+                1,
+                -1
+              ],
+              [
+                2,
+                -2
+              ],
+              [
+                3,
+                -4
+              ],
+              [
+                4,
+                -6
+              ],
+              [
+                6,
+                -7
+              ],
+              [
+                7,
+                -8
+              ],
+              [
+                8,
+                -9
+              ],
+              [
+                9,
+                -10
+              ]
+            ],
+            "weight": 7714
+          },
+          {
+            "cut_index": 35,
+            "generator_size": 4,
+            "generators": [
+              [
+                1,
+                -1
+              ],
+              [
+                2,
+                -4
+              ],
+              [
+                3,
+                -9
+              ],
+              [
+                4,
+                -13
+              ]
+            ],
+            "weight": 2905
+          },
+          {
+            "cut_index": 36,
+            "generator_size": 4,
+            "generators": [
+              [
+                1,
+                -2
+              ],
+              [
+                2,
+                -3
+              ],
+              [
+                3,
+                -4
+              ],
+              [
+                4,
+                -5
+              ]
+            ],
+            "weight": 10000
+          },
+          {
+            "cut_index": 37,
+            "generator_size": 2,
+            "generators": [
+              [
+                1,
+                -1
+              ],
+              [
+                2,
+                -4
+              ]
+            ],
+            "weight": 10238
+          },
+          {
+            "cut_index": 52,
+            "generator_size": 7,
+            "generators": [
+              [
+                1,
+                -1
+              ],
+              [
+                2,
+                -2
+              ],
+              [
+                3,
+                -5
+              ],
+              [
+                6,
+                -6
+              ],
+              [
+                7,
+                -7
+              ],
+              [
+                8,
+                -10
+              ],
+              [
+                11,
+                -12
+              ]
+            ],
+            "weight": 8000
+          },
+          {
+            "cut_index": 60,
+            "generator_size": 1,
+            "generators": [
+              [
+                1,
+                -3
+              ]
+            ],
+            "weight": 22143
+          }
+        ],
+        "active_sh": [
+          {
+            "generator_size": 3,
+            "generators": [
+              [
+                1,
+                -1
+              ],
+              [
+                2,
+                -5
+              ],
+              [
+                3,
+                -6
+              ]
+            ],
+            "slot": 0,
+            "source_cut_index": 1,
+            "weight": 9429
+          },
+          {
+            "generator_size": 2,
+            "generators": [
+              [
+                1,
+                -1
+              ],
+              [
+                2,
+                -7
+              ]
+            ],
+            "slot": 1,
+            "source_cut_index": 2,
+            "weight": 10571
+          },
+          {
+            "generator_size": 3,
+            "generators": [
+              [
+                1,
+                -1
+              ],
+              [
+                2,
+                -2
+              ],
+              [
+                3,
+                -11
+              ]
+            ],
+            "slot": 2,
+            "source_cut_index": 3,
+            "weight": 17810
+          }
+        ],
+        "rhs": -891
+      },
+      "order": "random_15",
+      "size": 7,
+      "tests": 21
+    },
+    {
+      "bc_indices": [
+        4,
+        13,
+        36,
+        37,
+        41,
+        52,
+        60
+      ],
+      "certificate": {
+        "active_bc": [
+          {
+            "cut_index": 4,
+            "generator_size": 4,
+            "generators": [
+              [
+                1,
+                -1
+              ],
+              [
+                2,
+                -2
+              ],
+              [
+                3,
+                -6
+              ],
+              [
+                7,
+                -10
+              ]
+            ],
+            "weight": 537
+          },
+          {
+            "cut_index": 13,
+            "generator_size": 5,
+            "generators": [
+              [
+                1,
+                -1
+              ],
+              [
+                2,
+                -2
+              ],
+              [
+                3,
+                -6
+              ],
+              [
+                5,
+                -7
+              ],
+              [
+                8,
+                -8
+              ]
+            ],
+            "weight": 377
+          },
+          {
+            "cut_index": 36,
+            "generator_size": 4,
+            "generators": [
+              [
+                1,
+                -2
+              ],
+              [
+                2,
+                -3
+              ],
+              [
+                3,
+                -4
+              ],
+              [
+                4,
+                -5
+              ]
+            ],
+            "weight": 1051
+          },
+          {
+            "cut_index": 37,
+            "generator_size": 2,
+            "generators": [
+              [
+                1,
+                -1
+              ],
+              [
+                2,
+                -4
+              ]
+            ],
+            "weight": 1267
+          },
+          {
+            "cut_index": 41,
+            "generator_size": 5,
+            "generators": [
+              [
+                1,
+                -2
+              ],
+              [
+                2,
+                -4
+              ],
+              [
+                5,
+                -8
+              ],
+              [
+                8,
+                -9
+              ],
+              [
+                10,
+                -10
+              ]
+            ],
+            "weight": 822
+          },
+          {
+            "cut_index": 52,
+            "generator_size": 7,
+            "generators": [
+              [
+                1,
+                -1
+              ],
+              [
+                2,
+                -2
+              ],
+              [
+                3,
+                -5
+              ],
+              [
+                6,
+                -6
+              ],
+              [
+                7,
+                -7
+              ],
+              [
+                8,
+                -10
+              ],
+              [
+                11,
+                -12
+              ]
+            ],
+            "weight": 817
+          },
+          {
+            "cut_index": 60,
+            "generator_size": 1,
+            "generators": [
+              [
+                1,
+                -3
+              ]
+            ],
+            "weight": 1638
+          }
+        ],
+        "active_sh": [
+          {
+            "generator_size": 3,
+            "generators": [
+              [
+                1,
+                -1
+              ],
+              [
+                2,
+                -5
+              ],
+              [
+                3,
+                -6
+              ]
+            ],
+            "slot": 0,
+            "source_cut_index": 1,
+            "weight": 914
+          },
+          {
+            "generator_size": 2,
+            "generators": [
+              [
+                1,
+                -1
+              ],
+              [
+                2,
+                -7
+              ]
+            ],
+            "slot": 1,
+            "source_cut_index": 2,
+            "weight": 1051
+          },
+          {
+            "generator_size": 3,
+            "generators": [
+              [
+                1,
+                -1
+              ],
+              [
+                2,
+                -2
+              ],
+              [
+                3,
+                -11
+              ]
+            ],
+            "slot": 2,
+            "source_cut_index": 3,
+            "weight": 1587
+          }
+        ],
+        "rhs": -959
+      },
+      "order": "random_16",
+      "size": 7,
+      "tests": 21
+    },
+    {
+      "bc_indices": [
+        5,
+        35,
+        36,
+        37,
+        41,
+        52,
+        60
+      ],
+      "certificate": {
+        "active_bc": [
+          {
+            "cut_index": 5,
+            "generator_size": 4,
+            "generators": [
+              [
+                1,
+                -1
+              ],
+              [
+                2,
+                -2
+              ],
+              [
+                4,
+                -6
+              ],
+              [
+                6,
+                -8
+              ]
+            ],
+            "weight": 726
+          },
+          {
+            "cut_index": 35,
+            "generator_size": 4,
+            "generators": [
+              [
+                1,
+                -1
+              ],
+              [
+                2,
+                -4
+              ],
+              [
+                3,
+                -9
+              ],
+              [
+                4,
+                -13
+              ]
+            ],
+            "weight": 609
+          },
+          {
+            "cut_index": 36,
+            "generator_size": 4,
+            "generators": [
+              [
+                1,
+                -2
+              ],
+              [
+                2,
+                -3
+              ],
+              [
+                3,
+                -4
+              ],
+              [
+                4,
+                -5
+              ]
+            ],
+            "weight": 1452
+          },
+          {
+            "cut_index": 37,
+            "generator_size": 2,
+            "generators": [
+              [
+                1,
+                -1
+              ],
+              [
+                2,
+                -4
+              ]
+            ],
+            "weight": 1452
+          },
+          {
+            "cut_index": 41,
+            "generator_size": 5,
+            "generators": [
+              [
+                1,
+                -2
+              ],
+              [
+                2,
+                -4
+              ],
+              [
+                5,
+                -8
+              ],
+              [
+                8,
+                -9
+              ],
+              [
+                10,
+                -10
+              ]
+            ],
+            "weight": 1144
+          },
+          {
+            "cut_index": 52,
+            "generator_size": 7,
+            "generators": [
+              [
+                1,
+                -1
+              ],
+              [
+                2,
+                -2
+              ],
+              [
+                3,
+                -5
+              ],
+              [
+                6,
+                -6
+              ],
+              [
+                7,
+                -7
+              ],
+              [
+                8,
+                -10
+              ],
+              [
+                11,
+                -12
+              ]
+            ],
+            "weight": 1665
+          },
+          {
+            "cut_index": 60,
+            "generator_size": 1,
+            "generators": [
+              [
+                1,
+                -3
+              ]
+            ],
+            "weight": 2423
+          }
+        ],
+        "active_sh": [
+          {
+            "generator_size": 3,
+            "generators": [
+              [
+                1,
+                -1
+              ],
+              [
+                2,
+                -5
+              ],
+              [
+                3,
+                -6
+              ]
+            ],
+            "slot": 0,
+            "source_cut_index": 1,
+            "weight": 1368
+          },
+          {
+            "generator_size": 2,
+            "generators": [
+              [
+                1,
+                -1
+              ],
+              [
+                2,
+                -7
+              ]
+            ],
+            "slot": 1,
+            "source_cut_index": 2,
+            "weight": 1536
+          },
+          {
+            "generator_size": 3,
+            "generators": [
+              [
+                1,
+                -1
+              ],
+              [
+                2,
+                -2
+              ],
+              [
+                3,
+                -11
+              ]
+            ],
+            "slot": 2,
+            "source_cut_index": 3,
+            "weight": 2262
+          }
+        ],
+        "rhs": -835
+      },
+      "order": "random_17",
+      "size": 7,
+      "tests": 21
+    },
+    {
+      "bc_indices": [
+        11,
+        35,
+        36,
+        37,
+        52,
+        60
+      ],
+      "certificate": {
+        "active_bc": [
+          {
+            "cut_index": 11,
+            "generator_size": 5,
+            "generators": [
+              [
+                1,
+                -2
+              ],
+              [
+                3,
+                -4
+              ],
+              [
+                4,
+                -6
+              ],
+              [
+                6,
+                -8
+              ],
+              [
+                9,
+                -9
+              ]
+            ],
+            "weight": 2322
+          },
+          {
+            "cut_index": 35,
+            "generator_size": 4,
+            "generators": [
+              [
+                1,
+                -1
+              ],
+              [
+                2,
+                -4
+              ],
+              [
+                3,
+                -9
+              ],
+              [
+                4,
+                -13
+              ]
+            ],
+            "weight": 955
+          },
+          {
+            "cut_index": 36,
+            "generator_size": 4,
+            "generators": [
+              [
+                1,
+                -2
+              ],
+              [
+                2,
+                -3
+              ],
+              [
+                3,
+                -4
+              ],
+              [
+                4,
+                -5
+              ]
+            ],
+            "weight": 1566
+          },
+          {
+            "cut_index": 37,
+            "generator_size": 2,
+            "generators": [
+              [
+                1,
+                -1
+              ],
+              [
+                2,
+                -4
+              ]
+            ],
+            "weight": 2215
+          },
+          {
+            "cut_index": 52,
+            "generator_size": 7,
+            "generators": [
+              [
+                1,
+                -1
+              ],
+              [
+                2,
+                -2
+              ],
+              [
+                3,
+                -5
+              ],
+              [
+                6,
+                -6
+              ],
+              [
+                7,
+                -7
+              ],
+              [
+                8,
+                -10
+              ],
+              [
+                11,
+                -12
+              ]
+            ],
+            "weight": 1190
+          },
+          {
+            "cut_index": 60,
+            "generator_size": 1,
+            "generators": [
+              [
+                1,
+                -3
+              ]
+            ],
+            "weight": 2826
+          }
+        ],
+        "active_sh": [
+          {
+            "generator_size": 3,
+            "generators": [
+              [
+                1,
+                -1
+              ],
+              [
+                2,
+                -5
+              ],
+              [
+                3,
+                -6
+              ]
+            ],
+            "slot": 0,
+            "source_cut_index": 1,
+            "weight": 1459
+          },
+          {
+            "generator_size": 2,
+            "generators": [
+              [
+                1,
+                -1
+              ],
+              [
+                2,
+                -7
+              ]
+            ],
+            "slot": 1,
+            "source_cut_index": 2,
+            "weight": 1674
+          },
+          {
+            "generator_size": 3,
+            "generators": [
+              [
+                1,
+                -1
+              ],
+              [
+                2,
+                -2
+              ],
+              [
+                3,
+                -11
+              ]
+            ],
+            "slot": 2,
+            "source_cut_index": 3,
+            "weight": 1998
+          }
+        ],
+        "rhs": -881
+      },
+      "order": "random_18",
+      "size": 6,
+      "tests": 21
+    },
+    {
+      "bc_indices": [
+        11,
+        13,
+        16,
+        36,
+        37,
+        52,
+        60
+      ],
+      "certificate": {
+        "active_bc": [
+          {
+            "cut_index": 11,
+            "generator_size": 5,
+            "generators": [
+              [
+                1,
+                -2
+              ],
+              [
+                3,
+                -4
+              ],
+              [
+                4,
+                -6
+              ],
+              [
+                6,
+                -8
+              ],
+              [
+                9,
+                -9
+              ]
+            ],
+            "weight": 18338
+          },
+          {
+            "cut_index": 13,
+            "generator_size": 5,
+            "generators": [
+              [
+                1,
+                -1
+              ],
+              [
+                2,
+                -2
+              ],
+              [
+                3,
+                -6
+              ],
+              [
+                5,
+                -7
+              ],
+              [
+                8,
+                -8
+              ]
+            ],
+            "weight": 3849
+          },
+          {
+            "cut_index": 16,
+            "generator_size": 5,
+            "generators": [
+              [
+                1,
+                -1
+              ],
+              [
+                2,
+                -4
+              ],
+              [
+                5,
+                -5
+              ],
+              [
+                8,
+                -8
+              ],
+              [
+                9,
+                -12
+              ]
+            ],
+            "weight": 1067
+          },
+          {
+            "cut_index": 36,
+            "generator_size": 4,
+            "generators": [
+              [
+                1,
+                -2
+              ],
+              [
+                2,
+                -3
+              ],
+              [
+                3,
+                -4
+              ],
+              [
+                4,
+                -5
+              ]
+            ],
+            "weight": 15524
+          },
+          {
+            "cut_index": 37,
+            "generator_size": 2,
+            "generators": [
+              [
+                1,
+                -1
+              ],
+              [
+                2,
+                -4
+              ]
+            ],
+            "weight": 18131
+          },
+          {
+            "cut_index": 52,
+            "generator_size": 7,
+            "generators": [
+              [
+                1,
+                -1
+              ],
+              [
+                2,
+                -2
+              ],
+              [
+                3,
+                -5
+              ],
+              [
+                6,
+                -6
+              ],
+              [
+                7,
+                -7
+              ],
+              [
+                8,
+                -10
+              ],
+              [
+                11,
+                -12
+              ]
+            ],
+            "weight": 16301
+          },
+          {
+            "cut_index": 60,
+            "generator_size": 1,
+            "generators": [
+              [
+                1,
+                -3
+              ]
+            ],
+            "weight": 33973
+          }
+        ],
+        "active_sh": [
+          {
+            "generator_size": 3,
+            "generators": [
+              [
+                1,
+                -1
+              ],
+              [
+                2,
+                -5
+              ],
+              [
+                3,
+                -6
+              ]
+            ],
+            "slot": 0,
+            "source_cut_index": 1,
+            "weight": 15311
+          },
+          {
+            "generator_size": 2,
+            "generators": [
+              [
+                1,
+                -1
+              ],
+              [
+                2,
+                -7
+              ]
+            ],
+            "slot": 1,
+            "source_cut_index": 2,
+            "weight": 16061
+          },
+          {
+            "generator_size": 3,
+            "generators": [
+              [
+                1,
+                -1
+              ],
+              [
+                2,
+                -2
+              ],
+              [
+                3,
+                -11
+              ]
+            ],
+            "slot": 2,
+            "source_cut_index": 3,
+            "weight": 33494
+          }
+        ],
+        "rhs": -853
+      },
+      "order": "random_19",
+      "size": 7,
+      "tests": 21
+    }
+  ]
+}
