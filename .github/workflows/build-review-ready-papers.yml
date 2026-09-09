@@ -25,17 +25,15 @@ jobs:
           sudo DEBIAN_FRONTEND=noninteractive apt-get install -y -qq pandoc texlive-xetex texlive-latex-extra texlive-fonts-recommended lmodern poppler-utils
 
       - name: Build reviewer editions
-        id: build
-        continue-on-error: true
         run: |
-          set -o pipefail
+          set -euo pipefail
           mkdir -p review-build-diagnostics
-          python3 project/reviews/reviewer-paper-build/v1/build_review_papers.py 2>&1 | tee review-build-diagnostics/BUILD.log
+          # The canonical proof sources use TeX-style \[...\] display maths.
+          # Match the n=25 documented Pandoc mode rather than rewriting proofs.
+          sed -i 's/--from=markdown+raw_tex/--from=markdown+raw_tex+tex_math_single_backslash/' project/reviews/reviewer-paper-build/v1/build_review_papers.py
+          python3 project/reviews/reviewer-paper-build/v1/build_review_papers.py > >(tee review-build-diagnostics/BUILD.log) 2>&1
 
       - name: PDF preflight and render smoke check
-        id: preflight
-        if: steps.build.outcome == 'success'
-        continue-on-error: true
         run: |
           set -euo pipefail
           mkdir -p review-renders
@@ -71,11 +69,6 @@ jobs:
             review-build-diagnostics/
           if-no-files-found: warn
           retention-days: 30
-
-      - name: Require successful build and preflight
-        run: |
-          test '${{ steps.build.outcome }}' = 'success'
-          test '${{ steps.preflight.outcome }}' = 'success'
 
       - name: Commit canonical reviewer layer
         run: |
