@@ -6,6 +6,8 @@ on:
     paths:
       - 'project/research/general_n/2026-09-09-rx-hall-v1/rx_hall_scan.py'
       - 'project/research/general_n/2026-09-09-rx-hall-v1/rx_hall_scan_hardened.py'
+      - 'project/reviews/n29/2026-09-08-redteam-restart-v1/minimal_prepare.py'
+      - 'project/reviews/n29/2026-09-08-redteam-restart-v1/minimal_rows.cpp'
       - '.github/workflows/general-rx-hall-n29.yml'
 
 permissions:
@@ -13,7 +15,43 @@ permissions:
   actions: read
 
 jobs:
+  prepare:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262
+      - name: Pin frontier solver dependency
+        run: |
+          set -euo pipefail
+          python3 -m venv .venv
+          .venv/bin/python -m pip install --disable-pip-version-check --only-binary=:all: scipy==1.17.0
+      - name: Regenerate pinned minimal frontiers
+        run: |
+          set -euo pipefail
+          D=project/reviews/n29/2026-09-08-redteam-restart-v1
+          g++ -O3 -std=c++17 "$D/minimal_rows.cpp" -o minimal_rows
+          for t in 3 2; do
+            mkdir -p inputs/t$t
+            .venv/bin/python -I -B "$D/minimal_prepare.py" --t $t --output inputs/t$t
+            ./minimal_rows inputs/t$t/demands.txt inputs/t$t/row_survivors.txt inputs/t$t/row_bands.txt $t > inputs/t$t/MINIMAL_ROWS_REPORT.json
+          done
+          python3 - <<'PY'
+          import json
+          assert json.load(open('inputs/t3/MINIMAL_PREPARE_REPORT.json'))['retained_demands']==72
+          assert json.load(open('inputs/t2/MINIMAL_PREPARE_REPORT.json'))['retained_demands']==367
+          assert json.load(open('inputs/t3/MINIMAL_ROWS_REPORT.json'))['survivors']==126
+          assert json.load(open('inputs/t2/MINIMAL_ROWS_REPORT.json'))['survivors']==1467
+          print('frontiers regenerated from committed source: demands 72/367, rows 126/1467')
+          PY
+      - uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02
+        with:
+          name: rx-hall-regenerated-inputs
+          path: inputs/
+          if-no-files-found: error
+          retention-days: 30
+
   scan:
+    needs: prepare
     runs-on: ubuntu-24.04
     timeout-minutes: 15
     strategy:
@@ -37,10 +75,8 @@ jobs:
       - uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262
       - uses: actions/download-artifact@d3f86a106a0bac45b974a628896c90dbdf5c8093
         with:
-          name: n29-minimal-kernel-inputs
+          name: rx-hall-regenerated-inputs
           path: inputs
-          github-token: ${{ github.token }}
-          run-id: 34274211354
       - name: Pin reconnaissance solver
         run: |
           set -euo pipefail
@@ -75,7 +111,7 @@ jobs:
           retention-days: 30
 
   aggregate:
-    needs: scan
+    needs: [prepare,scan]
     if: always()
     runs-on: ubuntu-24.04
     steps:
@@ -104,11 +140,12 @@ jobs:
               assert tested==expected and infeas==expected and feasible==0 and other==0
               result[str(t)]={'hard_rows':expected,'numerical_infeasible':infeas,'survivors':0}
           out={
-              'schema':'general-rx-hall-n29-clean-recon-v1',
-              'status':'PASS_RECONNAISSANCE',
+              'schema':'general-rx-hall-n29-clean-recon-v2',
+              'status':'PASS_RECONNAISSANCE_REGENERATED_INPUTS',
               'results':result,
-              'uses_unordered_pair_capacity':False,
+              'inputs_regenerated_from_committed_source':True,
               'uses_cumulative_tail_variables':False,
+              'uses_unordered_pair_capacity':False,
               'numerical_infeasibility_is_proof':False,
           }
           pathlib.Path('RX_HALL_N29_REPORT.json').write_text(json.dumps(out,indent=2,sort_keys=True)+'\n')
