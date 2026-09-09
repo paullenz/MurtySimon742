@@ -1,0 +1,52 @@
+name: General RX-Hall n30 exceptional SH subset minimization
+
+on:
+  workflow_dispatch:
+  push:
+    paths:
+      - 'project/research/general_n/2026-09-09-rx-hall-v1/rz_exception_sh_subset_test.py'
+      - '.github/workflows/general-rx-hall-n30-exception-sh-subsets.yml'
+
+permissions:
+  contents: write
+
+jobs:
+  test:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 30
+    steps:
+      - uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262
+      - name: Pin solver
+        run: |
+          python3 -m venv .venv
+          .venv/bin/python -m pip install --disable-pip-version-check --only-binary=:all: scipy==1.17.0
+      - name: Exact subset minimization
+        run: |
+          set -euo pipefail
+          R=project/research/general_n/2026-09-09-rx-hall-v1
+          B="$R/checkpoints/N30_BC_UPPER_CUTGEN_RUN_34348486247.json"
+          P="$R/checkpoints/N30_BC_PLUS_PAIRWISE_RUN_34349412415.json"
+          test -s "$B"; test -s "$P"
+          mkdir -p out
+          .venv/bin/python -I -B "$R/rz_exception_sh_subset_test.py" \
+            --bc-json "$B" --pair-json "$P" --a 13 --b 16 --dmax 11 \
+            --output out/EXCEPTION_SH_SUBSETS.json
+      - uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02
+        with:
+          name: n30-exception-sh-subset-minimization
+          path: out/EXCEPTION_SH_SUBSETS.json
+          if-no-files-found: error
+          retention-days: 30
+      - name: Commit durable checkpoint with push retries
+        run: |
+          set -euo pipefail
+          P="project/research/general_n/2026-09-09-rx-hall-v1/checkpoints/N30_EXCEPTION_SH_SUBSETS_RUN_${GITHUB_RUN_ID}.json"
+          cp out/EXCEPTION_SH_SUBSETS.json "$P"; test -s "$P"
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add "$P"; git commit -m "Preserve n30 exceptional SH subset run ${GITHUB_RUN_ID}"
+          for attempt in 1 2 3 4 5; do
+            if git push origin HEAD:main; then exit 0; fi
+            git reset --hard HEAD; git pull --rebase origin main; sleep $((attempt*2))
+          done
+          exit 1
