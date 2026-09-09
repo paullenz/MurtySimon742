@@ -96,7 +96,28 @@ Y = (s, R+s, -(R+x)) <= X = (rho, rho+q-1, -(q+p)).
 
 Thus the stripped transport layer is exactly a finite multivariate stochastic-dominance problem: equal total incidence mass plus all coordinatewise upper-set inequalities. On the seven hardest preserved n=30 equality-frontier states, ordinary ambient upper-set separation closes **7/7** states with exact integer-Farkas certificates, without `Z` variables or support-specific closure. Restricting the generated ambient upper sets to minimal antichains of size at most **8** still closes all seven exactly. The stronger support-adapted closed-cut normal form needs only 24–43 generated cuts per state, and restricting those cuts to staircase frontier size at most **7** still closes all seven exactly.
 
-The earlier [compatibility ablation](project/research/general_n/2026-09-09-rx-hall-v1/checkpoints/N30_RZ_COMPAT_ABLATION_RUN_34344452015.json) shows that the two opposing threshold coordinates carry almost all of the obstruction: the `BC` transport slice rejects six of the seven hard states exactly, while the `s <= rho` coordinate is needed for the remaining exceptional state. The active target is therefore a weighted two-dimensional staircase / majorization inequality for the dominant six-state geometry, plus a small three-dimensional correction for the exceptional case. These are finite research reductions only; no universal staircase bound or unrestricted theorem is claimed.
+The frontier has since compressed further. The [pairwise staircase reduction](project/research/general_n/2026-09-09-rx-hall-v1/PAIRWISE_STAIRCASE_REDUCTION.md) shows that full three-dimensional Hall geometry is unnecessary on this n=30 laboratory. The two-dimensional `BC` order
+
+```text
+(d, -h) <= (alpha, -beta),
+where d=R+s, h=R+x, alpha=rho+q-1, beta=q+p,
+```
+
+closes six of the seven hard states exactly, using generated staircase antichains of size at most **7**. One-dimensional `s`-tail dominance and the alternative pairwise `(s,d)` order do not close the exceptional state. Adding instead the second two-dimensional order
+
+```text
+(s, -h) <= (rho, -beta)
+```
+
+closes **7/7** exactly. For the exceptional state, an exhaustive exact subset test of the four generated `(s,-h)` correction cuts finds a unique minimal rejecting subset of size **3**; the three required staircase generator sets have sizes `3,2,3`. See the [pairwise exact checkpoint](project/research/general_n/2026-09-09-rx-hall-v1/checkpoints/N30_BC_PLUS_PAIRWISE_RUN_34349412415.json) and [subset-minimisation checkpoint](project/research/general_n/2026-09-09-rx-hall-v1/checkpoints/N30_EXCEPTION_SH_SUBSETS_RUN_34349585850.json).
+
+The present symbolic target is therefore no longer a general 3D Hall inequality. It is to derive a parameterised increasing potential of the schematic form
+
+```text
+Phi(s,d,h) = F(d,h) + G(s,h),
+```
+
+or an equivalent pair of coupled two-dimensional staircase-majorization inequalities, and prove enough analytic control to improve the existing `293/500` maximum-degree threshold. These are finite research reductions only; no universal staircase bound or unrestricted theorem is claimed.
 
 ### Layer-sum 13/22 and earlier structural checkpoints
 
