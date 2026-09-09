@@ -1,0 +1,432 @@
+{
+  "floating_point_reconnaissance_only": true,
+  "results": {
+    "demand45_l1.json": {
+      "active_rectangle_count_initial": 12,
+      "active_rectangles_initial": [
+        {
+          "D": 3,
+          "V": 0,
+          "weight": 0.2527472527472528
+        },
+        {
+          "D": 3,
+          "V": 1,
+          "weight": 0.08398744113029832
+        },
+        {
+          "D": 3,
+          "V": 4,
+          "weight": 0.16326530612244905
+        },
+        {
+          "D": 3,
+          "V": 6,
+          "weight": 0.07142857142857129
+        },
+        {
+          "D": 3,
+          "V": 7,
+          "weight": 0.03571428571428559
+        },
+        {
+          "D": 3,
+          "V": 8,
+          "weight": 0.0357142857142857
+        },
+        {
+          "D": 3,
+          "V": 9,
+          "weight": 0.07142857142857145
+        },
+        {
+          "D": 3,
+          "V": 10,
+          "weight": 0.07142857142857148
+        },
+        {
+          "D": 3,
+          "V": 11,
+          "weight": 0.047619047619047894
+        },
+        {
+          "D": 3,
+          "V": 12,
+          "weight": 0.09523809523809519
+        },
+        {
+          "D": 7,
+          "V": 2,
+          "weight": 0.03571428571428572
+        },
+        {
+          "D": 8,
+          "V": 0,
+          "weight": 0.03571428571428579
+        }
+      ],
+      "diag_weight": 0.07142857142857166,
+      "floating_point_reconnaissance_only": true,
+      "message": "Optimization terminated successfully. (HiGHS Status 7: Optimal)",
+      "mode": "demand45",
+      "objective": 1.075714285714286,
+      "profiles": 1,
+      "rows": 406,
+      "schema": "n29-t2-rectdiag-sparse-v1",
+      "seconds": 0.0518794059753418,
+      "status": 0,
+      "success": true,
+      "variables": 227,
+      "with_diag": true
+    },
+    "hard38_greedy.json": {
+      "active_rectangle_count_greedy": 10,
+      "active_rectangle_count_initial": 17,
+      "active_rectangles_greedy": [
+        {
+          "D": 2,
+          "V": 11,
+          "weight": 0.6931046802429464
+        },
+        {
+          "D": 2,
+          "V": 12,
+          "weight": 0.6931046802429357
+        },
+        {
+          "D": 2,
+          "V": 13,
+          "weight": 1.2129331904251521
+        },
+        {
+          "D": 3,
+          "V": 0,
+          "weight": 3.5231587811973504
+        },
+        {
+          "D": 3,
+          "V": 5,
+          "weight": 0.5871931301995584
+        },
+        {
+          "D": 3,
+          "V": 6,
+          "weight": 0.46206978682862654
+        },
+        {
+          "D": 3,
+          "V": 7,
+          "weight": 0.4620697868286268
+        },
+        {
+          "D": 3,
+          "V": 8,
+          "weight": 0.4620697868286265
+        },
+        {
+          "D": 3,
+          "V": 9,
+          "weight": 0.5198285101822058
+        },
+        {
+          "D": 3,
+          "V": 10,
+          "weight": 0.693104680242941
+        }
+      ],
+      "active_rectangles_initial": [
+        {
+          "D": 2,
+          "V": 0,
+          "weight": 0.05773859485405861
+        },
+        {
+          "D": 2,
+          "V": 6,
+          "weight": 0.04811549571171551
+        },
+        {
+          "D": 2,
+          "V": 11,
+          "weight": 0.2389320071282854
+        },
+        {
+          "D": 2,
+          "V": 12,
+          "weight": 0.08162417112184468
+        },
+        {
+          "D": 2,
+          "V": 13,
+          "weight": 0.2631619265722149
+        },
+        {
+          "D": 3,
+          "V": 0,
+          "weight": 1.0285753766284056
+        },
+        {
+          "D": 3,
+          "V": 1,
+          "weight": 0.534341149927622
+        },
+        {
+          "D": 3,
+          "V": 5,
+          "weight": 0.2845108020549311
+        },
+        {
+          "D": 3,
+          "V": 6,
+          "weight": 0.10978166023161406
+        },
+        {
+          "D": 3,
+          "V": 7,
+          "weight": 0.1813648569101629
+        },
+        {
+          "D": 3,
+          "V": 8,
+          "weight": 0.14039361464792638
+        },
+        {
+          "D": 3,
+          "V": 9,
+          "weight": 0.19737144492916062
+        },
+        {
+          "D": 3,
+          "V": 10,
+          "weight": 0.3282295001330511
+        },
+        {
+          "D": 3,
+          "V": 11,
+          "weight": 0.02422991944392942
+        },
+        {
+          "D": 3,
+          "V": 12,
+          "weight": 0.22250899771260593
+        },
+        {
+          "D": 5,
+          "V": 8,
+          "weight": 0.04097124226223653
+        },
+        {
+          "D": 7,
+          "V": 1,
+          "weight": 0.08640969091950053
+        }
+      ],
+      "diag_weight": 0.3720099236907967,
+      "diag_weight_greedy": 0.8663808503036753,
+      "floating_point_reconnaissance_only": true,
+      "greedy_attempts": [
+        {
+          "D": 3,
+          "V": 11,
+          "success": true
+        },
+        {
+          "D": 2,
+          "V": 6,
+          "success": true
+        },
+        {
+          "D": 5,
+          "V": 8,
+          "success": true
+        },
+        {
+          "D": 3,
+          "V": 1,
+          "success": true
+        },
+        {
+          "D": 7,
+          "V": 1,
+          "success": true
+        },
+        {
+          "D": 3,
+          "V": 12,
+          "success": true
+        },
+        {
+          "D": 2,
+          "V": 0,
+          "success": true
+        },
+        {
+          "D": 3,
+          "V": 8,
+          "success": false
+        },
+        {
+          "D": 3,
+          "V": 6,
+          "success": false
+        },
+        {
+          "D": 3,
+          "V": 7,
+          "success": false
+        },
+        {
+          "D": 3,
+          "V": 9,
+          "success": false
+        },
+        {
+          "D": 3,
+          "V": 5,
+          "success": false
+        },
+        {
+          "D": 2,
+          "V": 12,
+          "success": false
+        },
+        {
+          "D": 3,
+          "V": 10,
+          "success": false
+        },
+        {
+          "D": 2,
+          "V": 11,
+          "success": false
+        },
+        {
+          "D": 2,
+          "V": 13,
+          "success": false
+        },
+        {
+          "D": 3,
+          "V": 0,
+          "success": false
+        }
+      ],
+      "message": "Optimization terminated successfully. (HiGHS Status 7: Optimal)",
+      "mode": "hard38",
+      "objective": 4.7715079194129,
+      "objective_greedy": 11.685594514690832,
+      "profiles": 38,
+      "rows": 17621,
+      "schema": "n29-t2-rectdiag-sparse-v1",
+      "seconds": 2.702929735183716,
+      "status": 0,
+      "success": true,
+      "variables": 1091,
+      "with_diag": true
+    },
+    "hard38_l1.json": {
+      "active_rectangle_count_initial": 17,
+      "active_rectangles_initial": [
+        {
+          "D": 2,
+          "V": 0,
+          "weight": 0.05773859485405861
+        },
+        {
+          "D": 2,
+          "V": 6,
+          "weight": 0.04811549571171551
+        },
+        {
+          "D": 2,
+          "V": 11,
+          "weight": 0.2389320071282854
+        },
+        {
+          "D": 2,
+          "V": 12,
+          "weight": 0.08162417112184468
+        },
+        {
+          "D": 2,
+          "V": 13,
+          "weight": 0.2631619265722149
+        },
+        {
+          "D": 3,
+          "V": 0,
+          "weight": 1.0285753766284056
+        },
+        {
+          "D": 3,
+          "V": 1,
+          "weight": 0.534341149927622
+        },
+        {
+          "D": 3,
+          "V": 5,
+          "weight": 0.2845108020549311
+        },
+        {
+          "D": 3,
+          "V": 6,
+          "weight": 0.10978166023161406
+        },
+        {
+          "D": 3,
+          "V": 7,
+          "weight": 0.1813648569101629
+        },
+        {
+          "D": 3,
+          "V": 8,
+          "weight": 0.14039361464792638
+        },
+        {
+          "D": 3,
+          "V": 9,
+          "weight": 0.19737144492916062
+        },
+        {
+          "D": 3,
+          "V": 10,
+          "weight": 0.3282295001330511
+        },
+        {
+          "D": 3,
+          "V": 11,
+          "weight": 0.02422991944392942
+        },
+        {
+          "D": 3,
+          "V": 12,
+          "weight": 0.22250899771260593
+        },
+        {
+          "D": 5,
+          "V": 8,
+          "weight": 0.04097124226223653
+        },
+        {
+          "D": 7,
+          "V": 1,
+          "weight": 0.08640969091950053
+        }
+      ],
+      "diag_weight": 0.3720099236907967,
+      "floating_point_reconnaissance_only": true,
+      "message": "Optimization terminated successfully. (HiGHS Status 7: Optimal)",
+      "mode": "hard38",
+      "objective": 4.7715079194129,
+      "profiles": 38,
+      "rows": 17621,
+      "schema": "n29-t2-rectdiag-sparse-v1",
+      "seconds": 2.7136600017547607,
+      "status": 0,
+      "success": true,
+      "variables": 1091,
+      "with_diag": true
+    }
+  },
+  "schema": "n29-t2-rectdiag-sparse-batch-v1"
+}
