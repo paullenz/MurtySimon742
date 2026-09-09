@@ -1,0 +1,46 @@
+name: General RX-Hall compare n30 exact to n29 dictionary
+
+on:
+  workflow_dispatch:
+  push:
+    paths:
+      - '.github/workflows/general-rx-hall-compare-n30-exact-n29-dictionary.yml'
+
+permissions:
+  contents: write
+
+jobs:
+  compare:
+    runs-on: ubuntu-24.04
+    steps:
+      - uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262
+        with:
+          fetch-depth: 0
+      - name: Compare exact supports
+        run: |
+          set -euo pipefail
+          R=project/research/general_n/2026-09-09-rx-hall-v1
+          python3 -I -B "$R/compare_n30_exact_to_n29_dictionary.py" \
+            --n29-dictionary "$R/N29_CANONICAL_DICTIONARY.json" \
+            --n30-exact "$R/checkpoints/N30_SHARED_NINE_EXACT_RUN_34371786328.json" \
+            --dmax29 10 --output "$R/N30_EXACT_VS_N29_DICTIONARY.json"
+      - name: Commit comparison
+        run: |
+          set -euo pipefail
+          P=project/research/general_n/2026-09-09-rx-hall-v1/N30_EXACT_VS_N29_DICTIONARY.json
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add "$P"
+          git commit -m "Compare exact n30 support with n29 dictionary" || exit 0
+          git restore . || true
+          for attempt in 1 2 3 4 5; do
+            if git push origin HEAD:main; then exit 0; fi
+            git reset --hard HEAD
+            git pull --rebase origin main
+            python3 -I -B project/research/general_n/2026-09-09-rx-hall-v1/compare_n30_exact_to_n29_dictionary.py \
+              --n29-dictionary project/research/general_n/2026-09-09-rx-hall-v1/N29_CANONICAL_DICTIONARY.json \
+              --n30-exact project/research/general_n/2026-09-09-rx-hall-v1/checkpoints/N30_SHARED_NINE_EXACT_RUN_34371786328.json \
+              --dmax29 10 --output "$P"
+            git add "$P" && git commit -m "Compare exact n30 support with n29 dictionary" || true
+          done
+          exit 1
