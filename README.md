@@ -84,11 +84,19 @@ n >= 6 and Delta(G) >= (293/500)n  ==>  e(G) < floor(n^2/4).
 
 It proves `t < a^2/24+a/8` by retaining the demand profile across thresholds. [Replay and audit](project/research/general_n/2026-09-08-profile-integral-v1/README.md). This remains a general structural candidate, not a dependency of the n=29 or n=30 proofs.
 
-### RX-Hall / Hall-projection continuation — research programme, not theorem
+### RX-Hall / monotone-coupling continuation — research programme, not theorem
 
 The current post-`293/500` attack is preserved under [`project/research/general_n/2026-09-09-rx-hall-v1/`](project/research/general_n/2026-09-09-rx-hall-v1/README.md). It is a **necessary-condition research programme**, not a new all-order theorem and not a dependency of the completed n=29 or n=30 candidate packages.
 
-The most useful current reductions are the [exact Hall projection](project/research/general_n/2026-09-09-rx-hall-v1/HALL_PROJECTION.md) and [Hall neighbourhood-closure / staircase reduction](project/research/general_n/2026-09-09-rx-hall-v1/HALL_STAIRCASE_REDUCTION.md). On the seven hardest preserved n=30 equality-frontier states, deleting all per-demand-group source-capacity inequalities still gives 7/7 exact integer-Farkas contradictions; the [compatibility ablation](project/research/general_n/2026-09-09-rx-hall-v1/checkpoints/N30_RZ_COMPAT_ABLATION_RUN_34344452015.json) shows that the two opposing threshold conditions carry almost all of the obstruction. The resulting `Z` incidence layer can be projected exactly to ordinary weighted Hall inequalities, and a Z-free Hall-cut implementation closes all seven hard states exactly. These finite experiments motivate a weighted staircase/majorization inequality, but no universal version is claimed yet.
+The incidence layer has now been reduced substantially. The [exact Hall projection](project/research/general_n/2026-09-09-rx-hall-v1/HALL_PROJECTION.md) removes the `Z` variables, the [neighbourhood-closure / staircase reduction](project/research/general_n/2026-09-09-rx-hall-v1/HALL_STAIRCASE_REDUCTION.md) identifies the finite staircase geometry, and the [finite monotone-coupling reduction](project/research/general_n/2026-09-09-rx-hall-v1/MONOTONE_COUPLING_REDUCTION.md) puts the remaining transport problem in the common coordinatewise order
+
+```text
+Y = (s, R+s, -(R+x)) <= X = (rho, rho+q-1, -(q+p)).
+```
+
+Thus the stripped transport layer is exactly a finite multivariate stochastic-dominance problem: equal total incidence mass plus all coordinatewise upper-set inequalities. On the seven hardest preserved n=30 equality-frontier states, ordinary ambient upper-set separation closes **7/7** states with exact integer-Farkas certificates, without `Z` variables or support-specific closure. Restricting the generated ambient upper sets to minimal antichains of size at most **8** still closes all seven exactly. The stronger support-adapted closed-cut normal form needs only 24–43 generated cuts per state, and restricting those cuts to staircase frontier size at most **7** still closes all seven exactly.
+
+The earlier [compatibility ablation](project/research/general_n/2026-09-09-rx-hall-v1/checkpoints/N30_RZ_COMPAT_ABLATION_RUN_34344452015.json) shows that the two opposing threshold coordinates carry almost all of the obstruction: the `BC` transport slice rejects six of the seven hard states exactly, while the `s <= rho` coordinate is needed for the remaining exceptional state. The active target is therefore a weighted two-dimensional staircase / majorization inequality for the dominant six-state geometry, plus a small three-dimensional correction for the exceptional case. These are finite research reductions only; no universal staircase bound or unrestricted theorem is claimed.
 
 ### Layer-sum 13/22 and earlier structural checkpoints
 
