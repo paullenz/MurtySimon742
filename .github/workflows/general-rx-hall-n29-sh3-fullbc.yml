@@ -1,0 +1,78 @@
+name: General RX-Hall n29 three-SH full-BC scan
+
+on:
+  workflow_dispatch:
+  push:
+    paths:
+      - '.github/workflows/general-rx-hall-n29-sh3-fullbc.yml'
+
+permissions:
+  contents: read
+
+jobs:
+  hard38:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262
+      - name: Pin solver
+        run: |
+          python3 -m venv .venv
+          .venv/bin/python -m pip install --disable-pip-version-check --only-binary=:all: scipy==1.17.0
+      - name: Test hard38
+        run: |
+          set -euo pipefail
+          R=project/research/general_n/2026-09-09-rx-hall-v1
+          mkdir -p out
+          .venv/bin/python -I -B "$R/n29_sh3_fullbc_scan.py" \
+            --mode hard38 \
+            --dictionary-json "$R/N29_CANONICAL_DICTIONARY.json" \
+            --n30-exact "$R/checkpoints/N30_SHARED_NINE_EXACT_RUN_34371786328.json" \
+            --boundary-json "$R/checkpoints/N29_BOUNDARY_SPECIALISATION_RUN_34364666552.json" \
+            --output out/HARD38.json
+      - uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02
+        with:
+          name: n29-sh3-fullbc-hard38
+          path: out/HARD38.json
+          if-no-files-found: error
+          retention-days: 30
+
+  frontier:
+    strategy:
+      fail-fast: false
+      matrix:
+        mode: [t2,t3]
+    runs-on: ubuntu-24.04
+    timeout-minutes: 20
+    steps:
+      - uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262
+      - name: Pin solver
+        run: |
+          python3 -m venv .venv
+          .venv/bin/python -m pip install --disable-pip-version-check --only-binary=:all: scipy==1.17.0
+      - name: Regenerate frontier
+        run: |
+          set -euo pipefail
+          D=project/reviews/n29/2026-09-08-redteam-restart-v1
+          mkdir -p inputs out
+          g++ -O3 -std=c++17 "$D/minimal_rows.cpp" -o minimal_rows
+          T=${{ matrix.mode }}
+          if [ "$T" = "t2" ]; then N=2; else N=3; fi
+          .venv/bin/python -I -B "$D/minimal_prepare.py" --t $N --output inputs
+          ./minimal_rows inputs/demands.txt inputs/row_survivors.txt inputs/row_bands.txt $N > inputs/MINIMAL_ROWS_REPORT.json
+      - name: Test ${{ matrix.mode }}
+        run: |
+          set -euo pipefail
+          R=project/research/general_n/2026-09-09-rx-hall-v1
+          .venv/bin/python -I -B "$R/n29_sh3_fullbc_scan.py" \
+            --mode ${{ matrix.mode }} \
+            --dictionary-json "$R/N29_CANONICAL_DICTIONARY.json" \
+            --n30-exact "$R/checkpoints/N30_SHARED_NINE_EXACT_RUN_34371786328.json" \
+            --demands-json inputs/demands.json --rows inputs/row_survivors.txt \
+            --output out/${{ matrix.mode }}.json
+      - uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02
+        with:
+          name: n29-sh3-fullbc-${{ matrix.mode }}
+          path: out/${{ matrix.mode }}.json
+          if-no-files-found: error
+          retention-days: 30
