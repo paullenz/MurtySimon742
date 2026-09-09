@@ -1,0 +1,64 @@
+name: General RX-Hall n29 t2 rectdiag minimum support
+
+on:
+  workflow_dispatch:
+  push:
+    paths:
+      - '.github/workflows/general-rx-hall-n29-t2-rectdiag-min-support.yml'
+      - 'project/research/general_n/2026-09-09-rx-hall-v1/n29_t2_rectdiag_min_support.py'
+
+permissions:
+  contents: write
+
+jobs:
+  min-support:
+    strategy:
+      fail-fast: false
+      matrix:
+        cap: [100, 1000]
+    runs-on: ubuntu-24.04
+    timeout-minutes: 35
+    steps:
+      - uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262
+        with:
+          fetch-depth: 0
+      - run: |
+          python3 -m venv .venv
+          .venv/bin/python -m pip install --disable-pip-version-check --only-binary=:all: scipy==1.17.0
+      - name: Solve support MILP
+        run: |
+          set -euo pipefail
+          R=project/research/general_n/2026-09-09-rx-hall-v1
+          B="$R/checkpoints/N29_BOUNDARY_SPECIALISATION_RUN_34364666552.json"
+          mkdir -p out
+          .venv/bin/python -I -B "$R/n29_t2_rectdiag_min_support.py" \
+            --boundary-json "$B" --M '${{ matrix.cap }}' --time-limit 1500 \
+            --output "out/M${{ matrix.cap }}.json"
+      - uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02
+        if: always()
+        with:
+          name: n29-t2-rectdiag-min-support-M${{ matrix.cap }}
+          path: out/*.json
+          if-no-files-found: error
+          retention-days: 30
+      - name: Commit durable result
+        if: always()
+        run: |
+          set -euo pipefail
+          P=out/M${{ matrix.cap }}.json
+          test -s "$P" || exit 0
+          R=project/research/general_n/2026-09-09-rx-hall-v1/checkpoints
+          Q="$R/N29_T2_RECTDIAG_MIN_SUPPORT_M${{ matrix.cap }}_RUN_${GITHUB_RUN_ID}.json"
+          cp "$P" "$Q"
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add "$Q"
+          git commit -m "Preserve n29 t2 rectdiag M${{ matrix.cap }} support ${GITHUB_RUN_ID}" || exit 0
+          git restore . || true
+          for a in 1 2 3 4 5; do
+            if git push origin HEAD:main; then exit 0; fi
+            git reset --hard HEAD
+            git pull --rebase origin main
+            sleep $((a*2))
+          done
+          exit 1
