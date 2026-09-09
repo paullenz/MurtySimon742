@@ -1,0 +1,74 @@
+name: General RX-Hall n30 exact nine-shape shared potential
+
+on:
+  workflow_dispatch:
+  push:
+    paths:
+      - 'project/research/general_n/2026-09-09-rx-hall-v1/shared_exactify_support.py'
+      - '.github/workflows/general-rx-hall-n30-shared-nine-exact.yml'
+
+permissions:
+  contents: write
+
+jobs:
+  exactify:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 20
+    steps:
+      - uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262
+      - name: Pin solver
+        run: |
+          python3 -m venv .venv
+          .venv/bin/python -m pip install --disable-pip-version-check --only-binary=:all: scipy==1.17.0
+      - name: Regenerate sparse shared solution and active-library minimum support
+        run: |
+          set -euo pipefail
+          R=project/research/general_n/2026-09-09-rx-hall-v1
+          mkdir -p out
+          .venv/bin/python -I -B "$R/shared_sparse_staircase_scan.py" \
+            --bc-json "$R/checkpoints/N30_BC_UPPER_CUTGEN_RUN_34348486247.json" \
+            --sh-json "$R/checkpoints/N30_EXCEPTION_SH_SUBSETS_RUN_34351236992.json" \
+            --a 13 --b 16 --dmax 11 --output out/SHARED_SPARSE.json
+          .venv/bin/python -I -B "$R/shared_min_support_active.py" \
+            --bc-json "$R/checkpoints/N30_BC_UPPER_CUTGEN_RUN_34348486247.json" \
+            --shared-json out/SHARED_SPARSE.json \
+            --a 13 --b 16 --dmax 11 --big-m 200 --time-limit 300 --output out/ACTIVE_MIN_SUPPORT.json
+          python3 - <<'PY'
+          import json
+          z=json.load(open('out/ACTIVE_MIN_SUPPORT.json'))
+          assert z['success'] and z['support_count']==9 and z['mip_gap']==0.0
+          PY
+      - name: Exactify the nine-shape support
+        run: |
+          set -euo pipefail
+          R=project/research/general_n/2026-09-09-rx-hall-v1
+          .venv/bin/python -I -B "$R/shared_exactify_support.py" \
+            --bc-json "$R/checkpoints/N30_BC_UPPER_CUTGEN_RUN_34348486247.json" \
+            --support-json out/ACTIVE_MIN_SUPPORT.json \
+            --a 13 --b 16 --dmax 11 --scale 1000000 --output out/NINE_EXACT.json
+      - uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02
+        with:
+          name: n30-nine-shape-shared-exact
+          path: |
+            out/ACTIVE_MIN_SUPPORT.json
+            out/NINE_EXACT.json
+          if-no-files-found: error
+          retention-days: 30
+      - name: Commit exact checkpoint
+        run: |
+          set -euo pipefail
+          P="project/research/general_n/2026-09-09-rx-hall-v1/checkpoints/N30_SHARED_NINE_EXACT_RUN_${GITHUB_RUN_ID}.json"
+          cp out/NINE_EXACT.json "$P"
+          test -s "$P"
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add "$P"
+          git commit -m "Preserve exact nine-shape shared potential run ${GITHUB_RUN_ID}"
+          git stash push -u -m workflow-dirty || true
+          for attempt in 1 2 3 4 5; do
+            git fetch origin main
+            git rebase origin/main || { git rebase --abort || true; }
+            if git push origin HEAD:main; then exit 0; fi
+            sleep $((attempt*2))
+          done
+          exit 1
