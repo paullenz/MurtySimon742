@@ -1,0 +1,50 @@
+name: General RX-Hall n30 direct pairwise envelope
+
+on:
+  workflow_dispatch:
+  push:
+    paths:
+      - 'project/research/general_n/2026-09-09-rx-hall-v1/check_pairwise_envelope_n30.py'
+      - 'project/research/general_n/2026-09-09-rx-hall-v1/PAIRWISE_ENVELOPE_LEMMA.md'
+      - '.github/workflows/general-rx-hall-n30-direct-envelope.yml'
+
+permissions:
+  contents: write
+
+jobs:
+  check:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262
+      - name: Run exact standard-library envelope check
+        run: |
+          set -euo pipefail
+          R=project/research/general_n/2026-09-09-rx-hall-v1
+          mkdir -p out
+          python3 -I -B "$R/check_pairwise_envelope_n30.py" > out/DIRECT_ENVELOPE.json
+          python3 - <<'PY'
+          import json
+          z=json.load(open('out/DIRECT_ENVELOPE.json'))
+          assert z['status']=='PASS'
+          assert z['contradiction_margin']==964
+          PY
+      - uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02
+        with:
+          name: n30-direct-pairwise-envelope
+          path: out/DIRECT_ENVELOPE.json
+          if-no-files-found: error
+          retention-days: 90
+      - name: Preserve durable checkpoint
+        run: |
+          set -euo pipefail
+          P="project/research/general_n/2026-09-09-rx-hall-v1/checkpoints/N30_DIRECT_ENVELOPE_RUN_${GITHUB_RUN_ID}.json"
+          cp out/DIRECT_ENVELOPE.json "$P"; test -s "$P"
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add "$P"; git commit -m "Preserve n30 direct envelope run ${GITHUB_RUN_ID}"
+          for attempt in 1 2 3 4 5; do
+            if git push origin HEAD:main; then exit 0; fi
+            git reset --hard HEAD; git pull --rebase origin main; sleep $((attempt*2))
+          done
+          exit 1
