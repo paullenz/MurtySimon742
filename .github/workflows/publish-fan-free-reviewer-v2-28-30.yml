@@ -1,0 +1,71 @@
+name: Publish validated Fan-free n28-n30 reviewer v2 packages
+
+on:
+  workflow_dispatch:
+  push:
+    paths:
+      - '.github/workflows/publish-fan-free-reviewer-v2-28-30.yml'
+
+permissions:
+  contents: write
+  actions: read
+
+jobs:
+  publish:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262
+        with:
+          fetch-depth: 0
+          lfs: false
+      - uses: actions/download-artifact@d3f86a106a0bac45b974a628896c90dbdf5c8093
+        with:
+          name: fan-free-reviewer-v2-28-30-34407183149
+          path: /tmp/fan-free-v2
+          github-token: ${{ github.token }}
+          run-id: 34407183149
+      - name: Verify recovered artifact and stage public surfaces
+        run: |
+          set -euo pipefail
+          test -f /tmp/fan-free-v2/releases/n28-reviewer-v2/N28_Reviewer_Manuscript_v2.pdf
+          test -f /tmp/fan-free-v2/releases/n29-reviewer-v2/N29_Reviewer_Manuscript_v2.pdf
+          test -f /tmp/fan-free-v2/releases/n30-reviewer-v2/N30_Reviewer_Manuscript_v2.pdf
+          test -f /tmp/fan-free-v2/releases/REVIEW_READY_INDEX.md
+          rm -rf releases/n28-reviewer-v2 releases/n29-reviewer-v2 releases/n30-reviewer-v2
+          cp -a /tmp/fan-free-v2/releases/n28-reviewer-v2 releases/
+          cp -a /tmp/fan-free-v2/releases/n29-reviewer-v2 releases/
+          cp -a /tmp/fan-free-v2/releases/n30-reviewer-v2 releases/
+          cp /tmp/fan-free-v2/releases/REVIEW_READY_INDEX.md releases/REVIEW_READY_INDEX.md
+          python3 -I -B project/research/fan-free-fixed-orders/2026-09-09-v1/update_public_surfaces_fan_free.py
+          grep -q 'Robustness milestone — Fan dependency removed' README.md
+          grep -q 'Fan-free reviewer-v2 packages' START_HERE_FOR_REVIEWERS.md
+          grep -q 'n28-reviewer-v2' releases/REVIEW_READY_INDEX.md
+          grep -q 'n29-reviewer-v2' releases/REVIEW_READY_INDEX.md
+          grep -q 'n30-reviewer-v2' releases/REVIEW_READY_INDEX.md
+      - name: Publish atomically with race-safe retry
+        run: |
+          set -euo pipefail
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          publish() {
+            git add README.md START_HERE_FOR_REVIEWERS.md releases/REVIEW_READY_INDEX.md \
+              releases/n28-reviewer-v2 releases/n29-reviewer-v2 releases/n30-reviewer-v2
+            git commit -m 'Publish Fan-free reviewer v2 frontier and robustness note' || true
+            git push origin HEAD:main
+          }
+          if publish; then exit 0; fi
+          for attempt in 1 2 3 4 5; do
+            git fetch origin main
+            git reset --hard origin/main
+            git clean -fd
+            rm -rf releases/n28-reviewer-v2 releases/n29-reviewer-v2 releases/n30-reviewer-v2
+            cp -a /tmp/fan-free-v2/releases/n28-reviewer-v2 releases/
+            cp -a /tmp/fan-free-v2/releases/n29-reviewer-v2 releases/
+            cp -a /tmp/fan-free-v2/releases/n30-reviewer-v2 releases/
+            cp /tmp/fan-free-v2/releases/REVIEW_READY_INDEX.md releases/REVIEW_READY_INDEX.md
+            python3 -I -B project/research/fan-free-fixed-orders/2026-09-09-v1/update_public_surfaces_fan_free.py
+            if publish; then exit 0; fi
+            sleep $((attempt*2))
+          done
+          exit 1
