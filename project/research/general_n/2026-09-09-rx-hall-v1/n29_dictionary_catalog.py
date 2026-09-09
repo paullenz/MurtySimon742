@@ -2,20 +2,23 @@
 """Materialize the canonical n29 generated BC/SH staircase dictionary.
 
 The canonical full dictionary is the dmax=10 specialization of the n30 shared
-base support plus every generated n29 pairwise correction shape.  This utility
-writes stable sorted indices to generators so support records can be interpreted
-without reconstructing the dictionary mentally.
+base support plus every generated n29 pairwise correction shape. This utility is
+pure Python and writes stable sorted indices to generators so support records can
+be interpreted without rebuilding the dictionary mentally.
 """
 from pathlib import Path
-from importlib.util import spec_from_file_location,module_from_spec
 import argparse,json,hashlib
-HERE=Path(__file__).resolve().parent
-sp=spec_from_file_location('pc',HERE/'n29_common_potential_profile_scalars.py');pc=module_from_spec(sp);sp.loader.exec_module(pc)
+
+def leq(a,b):return all(x<=y for x,y in zip(a,b))
+def min_gens(g):
+    pts=sorted(set(tuple(p) for p in g))
+    return tuple(p for p in pts if not any(q!=p and leq(q,p) for q in pts))
+def trim(g,dmax):return min_gens(p for p in g if p[0]<=dmax)
 
 def main():
     ap=argparse.ArgumentParser();ap.add_argument('--base-json',type=Path,required=True);ap.add_argument('--correction-json',type=Path,required=True);ap.add_argument('--dmax',type=int,default=10);ap.add_argument('--output',type=Path,required=True);z=ap.parse_args()
     B=json.loads(z.base_json.read_text());C=json.loads(z.correction_json.read_text())
-    bc={pc.trim(tuple(tuple(p) for p in x['generators']),z.dmax) for x in B['active_BC']};sh={tuple(tuple(p) for p in x['generators']) for x in B['active_SH']}
+    bc={trim(tuple(tuple(p) for p in x['generators']),z.dmax) for x in B['active_BC']};sh={tuple(tuple(p) for p in x['generators']) for x in B['active_SH']}
     for r in C['records']:
         for x in r['cuts']:
             g=tuple(tuple(p) for p in x['generators']);(bc if x['family']=='BC' else sh).add(g)
