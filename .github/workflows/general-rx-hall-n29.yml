@@ -1,0 +1,119 @@
+name: General RX-Hall n29 reconnaissance
+
+on:
+  workflow_dispatch:
+  push:
+    paths:
+      - 'project/research/general_n/2026-09-09-rx-hall-v1/rx_hall_scan.py'
+      - '.github/workflows/general-rx-hall-n29.yml'
+
+permissions:
+  contents: read
+  actions: read
+
+jobs:
+  scan:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 15
+    strategy:
+      fail-fast: false
+      matrix:
+        include:
+          - {t: 3, shard: 0, shards: 1, expected: 94}
+          - {t: 2, shard: 0, shards: 12, expected: 902}
+          - {t: 2, shard: 1, shards: 12, expected: 902}
+          - {t: 2, shard: 2, shards: 12, expected: 902}
+          - {t: 2, shard: 3, shards: 12, expected: 902}
+          - {t: 2, shard: 4, shards: 12, expected: 902}
+          - {t: 2, shard: 5, shards: 12, expected: 902}
+          - {t: 2, shard: 6, shards: 12, expected: 902}
+          - {t: 2, shard: 7, shards: 12, expected: 902}
+          - {t: 2, shard: 8, shards: 12, expected: 902}
+          - {t: 2, shard: 9, shards: 12, expected: 902}
+          - {t: 2, shard: 10, shards: 12, expected: 902}
+          - {t: 2, shard: 11, shards: 12, expected: 902}
+    steps:
+      - uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262
+      - uses: actions/download-artifact@d3f86a106a0bac45b974a628896c90dbdf5c8093
+        with:
+          name: n29-minimal-kernel-inputs
+          path: inputs
+          github-token: ${{ github.token }}
+          run-id: 34274211354
+      - name: Pin reconnaissance solver
+        run: |
+          set -euo pipefail
+          python3 -m venv .venv
+          .venv/bin/python -m pip install --disable-pip-version-check --only-binary=:all: scipy==1.17.0
+      - name: Run weakened RX-Hall shard
+        run: |
+          set -euo pipefail
+          D=project/research/general_n/2026-09-09-rx-hall-v1
+          mkdir -p out
+          .venv/bin/python -I -B "$D/rx_hall_scan.py" \
+            --demands-json inputs/t${{ matrix.t }}/demands.json \
+            --rows inputs/t${{ matrix.t }}/row_survivors.txt \
+            --a 12 --b 16 --dmax 10 --t ${{ matrix.t }} \
+            --shard ${{ matrix.shard }} --shards ${{ matrix.shards }} \
+            --output out/report.json
+          python3 - <<'PY'
+          import json
+          r=json.load(open('out/report.json')); c=r['counts']
+          assert c['positive_zero_slack_total']==${{ matrix.expected }}
+          assert c['numerical_feasible']==0
+          assert c['numerical_other']==0
+          assert not r['survivors']
+          print('RX-Hall shard has no numerical survivor')
+          PY
+      - uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02
+        with:
+          name: rx-hall-t${{ matrix.t }}-s${{ matrix.shard }}
+          path: out/report.json
+          if-no-files-found: error
+          retention-days: 30
+
+  aggregate:
+    needs: scan
+    runs-on: ubuntu-24.04
+    steps:
+      - uses: actions/download-artifact@d3f86a106a0bac45b974a628896c90dbdf5c8093
+        with:
+          pattern: 'rx-hall-t*-s*'
+          path: reports
+      - name: Aggregate complete reconnaissance
+        run: |
+          set -euo pipefail
+          python3 - <<'PY'
+          import json,pathlib
+          docs=[]
+          for p in pathlib.Path('reports').rglob('report.json'):
+              docs.append(json.load(open(p)))
+          assert len(docs)==13
+          result={}
+          for t,expected in [(3,94),(2,902)]:
+              z=[r for r in docs if r['scope']['t']==t]
+              assert z
+              assert all(r['counts']['positive_zero_slack_total']==expected for r in z)
+              infeas=sum(r['counts']['numerical_infeasible'] for r in z)
+              tested=sum(r['counts']['rows_in_shard'] for r in z)
+              feasible=sum(r['counts']['numerical_feasible'] for r in z)
+              other=sum(r['counts']['numerical_other'] for r in z)
+              assert tested==expected and infeas==expected and feasible==0 and other==0
+              result[str(t)]={'hard_rows':expected,'numerical_infeasible':infeas,'survivors':0}
+          out={
+              'schema':'general-rx-hall-n29-clean-recon-v1',
+              'status':'PASS_RECONNAISSANCE',
+              'results':result,
+              'uses_unordered_pair_capacity':False,
+              'uses_cumulative_tail_variables':False,
+              'numerical_infeasibility_is_proof':False,
+          }
+          pathlib.Path('RX_HALL_N29_REPORT.json').write_text(json.dumps(out,indent=2,sort_keys=True)+'\n')
+          print(json.dumps(out,indent=2,sort_keys=True))
+          PY
+      - uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02
+        with:
+          name: rx-hall-n29-aggregate
+          path: RX_HALL_N29_REPORT.json
+          if-no-files-found: error
+          retention-days: 30
