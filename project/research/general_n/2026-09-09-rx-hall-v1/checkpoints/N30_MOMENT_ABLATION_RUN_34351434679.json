@@ -1,0 +1,306 @@
+{
+  "interpretation": "Exact ablation of the three first-moment inequalities implied by BC/SH coordinatewise dominance. Non-rejection shows only that these scalar moments are too weak for this relaxation.",
+  "records": [
+    {
+      "demand_id": 2094,
+      "hard_position": 0,
+      "modes": {
+        "D": {
+          "certificate_rhs": null,
+          "rejected_exactly": false
+        },
+        "DH": {
+          "certificate_rhs": null,
+          "rejected_exactly": false
+        },
+        "DHS": {
+          "certificate_rhs": null,
+          "rejected_exactly": false
+        },
+        "DS": {
+          "certificate_rhs": null,
+          "rejected_exactly": false
+        },
+        "H": {
+          "certificate_rhs": null,
+          "rejected_exactly": false
+        },
+        "HS": {
+          "certificate_rhs": null,
+          "rejected_exactly": false
+        },
+        "NONE": {
+          "certificate_rhs": null,
+          "rejected_exactly": false
+        },
+        "S": {
+          "certificate_rhs": null,
+          "rejected_exactly": false
+        }
+      }
+    },
+    {
+      "demand_id": 2309,
+      "hard_position": 1,
+      "modes": {
+        "D": {
+          "certificate_rhs": null,
+          "rejected_exactly": false
+        },
+        "DH": {
+          "certificate_rhs": null,
+          "rejected_exactly": false
+        },
+        "DHS": {
+          "certificate_rhs": null,
+          "rejected_exactly": false
+        },
+        "DS": {
+          "certificate_rhs": null,
+          "rejected_exactly": false
+        },
+        "H": {
+          "certificate_rhs": null,
+          "rejected_exactly": false
+        },
+        "HS": {
+          "certificate_rhs": null,
+          "rejected_exactly": false
+        },
+        "NONE": {
+          "certificate_rhs": null,
+          "rejected_exactly": false
+        },
+        "S": {
+          "certificate_rhs": null,
+          "rejected_exactly": false
+        }
+      }
+    },
+    {
+      "demand_id": 2596,
+      "hard_position": 2,
+      "modes": {
+        "D": {
+          "certificate_rhs": null,
+          "rejected_exactly": false
+        },
+        "DH": {
+          "certificate_rhs": null,
+          "rejected_exactly": false
+        },
+        "DHS": {
+          "certificate_rhs": null,
+          "rejected_exactly": false
+        },
+        "DS": {
+          "certificate_rhs": null,
+          "rejected_exactly": false
+        },
+        "H": {
+          "certificate_rhs": null,
+          "rejected_exactly": false
+        },
+        "HS": {
+          "certificate_rhs": null,
+          "rejected_exactly": false
+        },
+        "NONE": {
+          "certificate_rhs": null,
+          "rejected_exactly": false
+        },
+        "S": {
+          "certificate_rhs": null,
+          "rejected_exactly": false
+        }
+      }
+    },
+    {
+      "demand_id": 2701,
+      "hard_position": 3,
+      "modes": {
+        "D": {
+          "certificate_rhs": null,
+          "rejected_exactly": false
+        },
+        "DH": {
+          "certificate_rhs": null,
+          "rejected_exactly": false
+        },
+        "DHS": {
+          "certificate_rhs": null,
+          "rejected_exactly": false
+        },
+        "DS": {
+          "certificate_rhs": null,
+          "rejected_exactly": false
+        },
+        "H": {
+          "certificate_rhs": null,
+          "rejected_exactly": false
+        },
+        "HS": {
+          "certificate_rhs": null,
+          "rejected_exactly": false
+        },
+        "NONE": {
+          "certificate_rhs": null,
+          "rejected_exactly": false
+        },
+        "S": {
+          "certificate_rhs": null,
+          "rejected_exactly": false
+        }
+      }
+    },
+    {
+      "demand_id": 2812,
+      "hard_position": 4,
+      "modes": {
+        "D": {
+          "certificate_rhs": null,
+          "rejected_exactly": false
+        },
+        "DH": {
+          "certificate_rhs": null,
+          "rejected_exactly": false
+        },
+        "DHS": {
+          "certificate_rhs": null,
+          "rejected_exactly": false
+        },
+        "DS": {
+          "certificate_rhs": null,
+          "rejected_exactly": false
+        },
+        "H": {
+          "certificate_rhs": null,
+          "rejected_exactly": false
+        },
+        "HS": {
+          "certificate_rhs": null,
+          "rejected_exactly": false
+        },
+        "NONE": {
+          "certificate_rhs": null,
+          "rejected_exactly": false
+        },
+        "S": {
+          "certificate_rhs": null,
+          "rejected_exactly": false
+        }
+      }
+    },
+    {
+      "demand_id": 2984,
+      "hard_position": 5,
+      "modes": {
+        "D": {
+          "certificate_rhs": null,
+          "rejected_exactly": false
+        },
+        "DH": {
+          "certificate_rhs": null,
+          "rejected_exactly": false
+        },
+        "DHS": {
+          "certificate_rhs": null,
+          "rejected_exactly": false
+        },
+        "DS": {
+          "certificate_rhs": null,
+          "rejected_exactly": false
+        },
+        "H": {
+          "certificate_rhs": null,
+          "rejected_exactly": false
+        },
+        "HS": {
+          "certificate_rhs": null,
+          "rejected_exactly": false
+        },
+        "NONE": {
+          "certificate_rhs": null,
+          "rejected_exactly": false
+        },
+        "S": {
+          "certificate_rhs": null,
+          "rejected_exactly": false
+        }
+      }
+    },
+    {
+      "demand_id": 2984,
+      "hard_position": 6,
+      "modes": {
+        "D": {
+          "certificate_rhs": null,
+          "rejected_exactly": false
+        },
+        "DH": {
+          "certificate_rhs": null,
+          "rejected_exactly": false
+        },
+        "DHS": {
+          "certificate_rhs": null,
+          "rejected_exactly": false
+        },
+        "DS": {
+          "certificate_rhs": null,
+          "rejected_exactly": false
+        },
+        "H": {
+          "certificate_rhs": null,
+          "rejected_exactly": false
+        },
+        "HS": {
+          "certificate_rhs": null,
+          "rejected_exactly": false
+        },
+        "NONE": {
+          "certificate_rhs": null,
+          "rejected_exactly": false
+        },
+        "S": {
+          "certificate_rhs": null,
+          "rejected_exactly": false
+        }
+      }
+    }
+  ],
+  "schema": "n30-pairwise-first-moment-ablation-v1",
+  "summary": {
+    "D": {
+      "exact_rejections": 0,
+      "rejected_positions": []
+    },
+    "DH": {
+      "exact_rejections": 0,
+      "rejected_positions": []
+    },
+    "DHS": {
+      "exact_rejections": 0,
+      "rejected_positions": []
+    },
+    "DS": {
+      "exact_rejections": 0,
+      "rejected_positions": []
+    },
+    "H": {
+      "exact_rejections": 0,
+      "rejected_positions": []
+    },
+    "HS": {
+      "exact_rejections": 0,
+      "rejected_positions": []
+    },
+    "NONE": {
+      "exact_rejections": 0,
+      "rejected_positions": []
+    },
+    "S": {
+      "exact_rejections": 0,
+      "rejected_positions": []
+    }
+  }
+}
