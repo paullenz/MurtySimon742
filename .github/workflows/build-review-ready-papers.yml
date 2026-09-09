@@ -29,7 +29,7 @@ jobs:
         run: |
           set -euo pipefail
           mkdir -p review-build-diagnostics
-          BUILDER=project/reviews/reviewer-paper-build/v1/build_review_papers.py
+          BUILDER=project/reviews/reviewer-paper-build/v1/build_review_papers_companionfix.py
           FILTER=project/reviews/reviewer-paper-build/v1/fix_aligned_tags.lua
           test -s "$BUILDER"; test -s "$FILTER"
           python3 "$BUILDER" > >(tee review-build-diagnostics/BUILD.log) 2>&1
