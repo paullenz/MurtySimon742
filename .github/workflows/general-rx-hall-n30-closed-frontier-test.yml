@@ -1,0 +1,55 @@
+name: General RX-Hall n30 closed frontier test
+
+on:
+  workflow_dispatch:
+  push:
+    paths:
+      - '.github/workflows/general-rx-hall-n30-closed-frontier-test.yml'
+
+permissions:
+  contents: write
+
+jobs:
+  test:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 30
+    steps:
+      - uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262
+      - name: Pin solver
+        run: |
+          python3 -m venv .venv
+          .venv/bin/python -m pip install --disable-pip-version-check --only-binary=:all: scipy==1.17.0
+      - name: Exact bounded-frontier tests on canonical closed cuts
+        run: |
+          set -euo pipefail
+          R=project/research/general_n/2026-09-09-rx-hall-v1
+          H="$R/checkpoints/N30_CLOSED_HALL_CUTGEN_RUN_34345782072.json"
+          test -s "$H"
+          mkdir -p out
+          .venv/bin/python -I -B "$R/rz_hall_frontier_test.py" \
+            --hall-json "$H" \
+            --a 13 --b 16 --dmax 11 --t 1 \
+            --ks 1,2,3,4,5,6,7,8 \
+            --output out/CLOSED_FRONTIER_TEST.json
+      - uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02
+        with:
+          name: n30-closed-hall-frontier-test
+          path: out/CLOSED_FRONTIER_TEST.json
+          if-no-files-found: error
+          retention-days: 30
+      - name: Commit durable checkpoint with push retries
+        run: |
+          set -euo pipefail
+          P="project/research/general_n/2026-09-09-rx-hall-v1/checkpoints/N30_CLOSED_HALL_FRONTIER_TEST_RUN_${GITHUB_RUN_ID}.json"
+          cp out/CLOSED_FRONTIER_TEST.json "$P"
+          test -s "$P"
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add "$P"
+          git commit -m "Preserve n30 closed Hall frontier run ${GITHUB_RUN_ID}"
+          for attempt in 1 2 3 4 5; do
+            if git push origin HEAD:main; then exit 0; fi
+            git pull --rebase origin main
+            sleep $((attempt*2))
+          done
+          exit 1
