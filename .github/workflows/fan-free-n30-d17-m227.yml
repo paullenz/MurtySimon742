@@ -17,9 +17,12 @@ jobs:
       - uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262
         with:
           fetch-depth: 0
-      - run: python3 -m pip install --disable-pip-version-check 'scipy==1.17.0'
+      - name: Pin solver dependency
+        run: |
+          python3 -m venv .venv
+          .venv/bin/python -m pip install --disable-pip-version-check --only-binary=:all: scipy==1.17.0
       - name: Run established exact early kernel at t=6
-        run: python3 -I -B project/research/fan-free-fixed-orders/2026-09-09-v1/n30_d17_m227.py --output FAN_FREE_N30_D17_M227.json
+        run: .venv/bin/python -I -B project/research/fan-free-fixed-orders/2026-09-09-v1/n30_d17_m227.py --output FAN_FREE_N30_D17_M227.json
       - uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02
         with:
           name: fan-free-n30-d17-m227
