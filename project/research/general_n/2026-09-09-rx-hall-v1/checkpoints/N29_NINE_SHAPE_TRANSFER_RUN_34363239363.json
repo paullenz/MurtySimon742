@@ -1,0 +1,13 @@
+{
+  "schema": "n29-nine-shape-cross-order-transfer-aggregate-v1",
+  "floating_point_reconnaissance_only": true,
+  "results": {
+    "3": {"hard_rows":94,"same_n30_nine_shape_dictionary_separated":94,"not_separated":0,"coverage":1.0},
+    "2": {"hard_rows":902,"same_n30_nine_shape_dictionary_separated":838,"not_separated":64,"coverage":0.9290465631929047}
+  },
+  "total_hard_rows":996,
+  "total_separated":932,
+  "total_coverage":0.9357429718875502,
+  "provenance":{"workflow_run":34363239363,"artifact_id":10108747833,"artifact_sha256":"d2b744df79798bc81e0d2f67b901318aa757f54145fa110f52874d860bfbd7e4"},
+  "interpretation":"The globally minimum n30 six-BC plus three-SH staircase dictionary is held fixed while continuous coefficients/envelopes are refit separately on each independently regenerated n29 hard profile. Numerical reconnaissance only; this tests cross-order shape transfer, not proof status."
+}
