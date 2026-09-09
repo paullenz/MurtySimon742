@@ -1,0 +1,93 @@
+name: Build review-ready proof papers
+
+on:
+  workflow_dispatch:
+  push:
+    paths:
+      - 'project/reviews/reviewer-paper-build/v1/**'
+      - '.github/workflows/build-review-ready-papers.yml'
+
+permissions:
+  contents: write
+
+jobs:
+  build:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 30
+    steps:
+      - uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262
+        with:
+          fetch-depth: 0
+
+      - name: Install paper toolchain
+        run: |
+          sudo apt-get update -qq
+          sudo DEBIAN_FRONTEND=noninteractive apt-get install -y -qq pandoc texlive-xetex texlive-fonts-recommended poppler-utils
+
+      - name: Build reviewer editions
+        run: |
+          set -euo pipefail
+          python3 project/reviews/reviewer-paper-build/v1/build_review_papers.py
+
+      - name: PDF preflight and render smoke check
+        run: |
+          set -euo pipefail
+          mkdir -p review-renders
+          find releases -maxdepth 2 -type f \( -name '*Reviewer_Manuscript_v1.pdf' -o -name '*Verification_Companion_v1.pdf' \) | sort > review-renders/PDFS.txt
+          while IFS= read -r p; do
+            pdfinfo "$p" | grep -E '^(Pages|Page size):' >> review-renders/PDFINFO.txt
+            pdftotext "$p" /dev/null
+            base=$(basename "$p" .pdf)
+            pdftoppm -f 1 -singlefile -png -r 120 "$p" "review-renders/${base}" >/dev/null 2>&1
+          done < review-renders/PDFS.txt
+          test -s review-renders/PDFINFO.txt
+          python3 - <<'PY'
+          import json
+          r=json.load(open('project/reviews/reviewer-paper-build/v1/BUILD_REPORT.json'))
+          assert r['all_current_theorem_level_claims_have_reviewer_papers'] is True
+          assert set(r['packages']) == {'n27','n29','n30','general-293-500','general-13-22'}
+          PY
+
+      - uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02
+        with:
+          name: review-ready-papers-2026-09-09
+          path: |
+            releases/n27-reviewer-v1/
+            releases/n29-reviewer-v1/
+            releases/n30-reviewer-v1/
+            releases/general-293-500-reviewer-v1/
+            releases/general-13-22-reviewer-v1/
+            releases/REVIEW_READY_INDEX.md
+            project/reviews/reviewer-paper-build/v1/BUILD_REPORT.json
+            review-renders/
+          if-no-files-found: error
+          retention-days: 30
+
+      - name: Commit canonical reviewer layer
+        run: |
+          set -euo pipefail
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add \
+            releases/n27-reviewer-v1 \
+            releases/n29-reviewer-v1 \
+            releases/n30-reviewer-v1 \
+            releases/general-293-500-reviewer-v1 \
+            releases/general-13-22-reviewer-v1 \
+            releases/REVIEW_READY_INDEX.md \
+            project/reviews/reviewer-paper-build/v1/BUILD_REPORT.json
+          if git diff --cached --quiet; then
+            echo 'Reviewer layer already current.'
+            exit 0
+          fi
+          git commit -m 'Publish review-ready papers for all current candidate proofs'
+          for attempt in 1 2 3 4 5; do
+            if git push origin HEAD:main; then
+              exit 0
+            fi
+            echo "Push race on attempt ${attempt}; rebasing and retrying"
+            git pull --rebase origin main
+            sleep $((attempt * 2))
+          done
+          echo 'Unable to publish reviewer layer after retries' >&2
+          exit 1
