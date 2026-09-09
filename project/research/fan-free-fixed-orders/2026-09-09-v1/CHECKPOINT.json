@@ -1,0 +1,39 @@
+{
+  "schema": "fan-free-fixed-order-reduction-v1",
+  "date": "2026-09-09",
+  "fan_logical_dependency_removed_for": [25, 27],
+  "historical_fan_citation": {
+    "author": "G. Fan",
+    "title": "On diameter 2-critical graphs",
+    "journal": "Discrete Mathematics 67 (1987), 235-240",
+    "doi": "10.1016/0012-365X(87)90174-9",
+    "status": "historical attribution only in v2 fixed-order assembly"
+  },
+  "outer_scan": {
+    "workflow_run": 34393554788,
+    "head_commit": "efe189ad911a3968e5b7d63a3de43a05c664bfb2",
+    "bands": [
+      {"n":25,"delta":14,"edges":[158,175],"states":128666,"outer_survivors":0,"artifact":"fan-free-25-14","artifact_sha256":"3f2e38c5d6cdf4895a77e3c9aaf2980ff2899a8565019af265264a7c18d9deb9"},
+      {"n":25,"delta":15,"edges":[158,187],"states":88,"outer_survivors":0,"artifact":"fan-free-25-15","artifact_sha256":"17087194b6cb13720051e335847eb0c4819bdb171d4ece4f234ba3c776f32fba"},
+      {"n":25,"delta":16,"edges":[158,200],"states":0,"outer_survivors":0,"artifact":"fan-free-25-16","artifact_sha256":"4e3c28d2a93798e8e307cffad14a0c02ab41b78f25e263481d8b9d20576e7c62"},
+      {"n":27,"delta":15,"edges":[184,202],"states":2858079,"outer_survivors":661,"nonzero_frontier":[{"edges":184,"states":772670,"survivors":651},{"edges":185,"states":579204,"survivors":10}],"artifact":"fan-free-27-15","artifact_sha256":"03fbb10af9505fc4115a874cdba975e74eb8a8a5dbc5348c63919cf845aadf21"},
+      {"n":27,"delta":16,"edges":[184,216],"states":8880,"outer_survivors":0,"artifact":"fan-free-27-16","artifact_sha256":"96544a8f570cb54780e6496fac0411a035efc94e894e7abc4533d054f6d43178"},
+      {"n":27,"delta":17,"edges":[184,229],"states":0,"outer_survivors":0,"artifact":"fan-free-27-17","artifact_sha256":"2130aca03ca9738531800698b6b5dfe34e30ff7e46c7a0f66d9b5dbc69b8f179"}
+    ]
+  },
+  "n27_delta15_column_closure": {
+    "workflow_run": 34393710385,
+    "head_commit": "7cc1971604efdf8fea5ec11bbc3b8826868c55ff",
+    "scopes": [
+      {"edges":184,"outer_states":651,"canonical_columns":49073,"labelled_orbit_mass":1175094,"flow_columns":1,"surviving_columns":0,"details_sha256":"89e4e1d033ef0edd98aa557cb6df8d5fd2eea145b036c8604d0ac66c44f364be","artifact":"fan-free-n27-d15-184","artifact_sha256":"3cb20da5f70ece0990f665e4f6a35e13b5baaabdeb9b61cf37009af534ec63ac"},
+      {"edges":185,"outer_states":10,"canonical_columns":388,"labelled_orbit_mass":10036,"flow_columns":0,"surviving_columns":0,"details_sha256":"162403cef4b12375be6c442c91471fdd63aea9a2d3d04412ecc99f6ee723391f","artifact":"fan-free-n27-d15-185","artifact_sha256":"b9c2086cbc15f97ef61b494df340aaf9d04e543a123dfdd716d0c23ec76dbaa2"}
+    ],
+    "scan_check_agreement": true,
+    "check_mode_uses_max_flow": false
+  },
+  "logical_assembly": {
+    "n25": "degree sum for Delta<=12; witness monotonicity for Delta=13; existing complement theorem for Delta>=17; frozen m=157 residual proof for Delta=14..16; Fan-free exact scan for every m>=158",
+    "n27": "degree sum for Delta<=13; witness monotonicity for Delta=14; existing complement theorem for Delta>=18; frozen m=183 proof for Delta=15..17; Fan-free exact scan/column closure for every m>=184"
+  },
+  "status": "candidate proof component; internal exact arithmetic green; independent external review open"
+}
