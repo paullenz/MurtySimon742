@@ -1,0 +1,2178 @@
+{
+  "base_support": 13,
+  "candidate_count": 74,
+  "candidates_tested": 74,
+  "floating_point_reconnaissance_only": true,
+  "interpretation": "A winner is a 14-shape support obtained by adding one generated staircase to the demand-45 optimum; common weights are shared across all 38 profiles.",
+  "profiles": 38,
+  "records": [
+    {
+      "candidate_number": 0,
+      "family": "BC",
+      "generators": [
+        [
+          1,
+          -4
+        ],
+        [
+          3,
+          -9
+        ],
+        [
+          4,
+          -14
+        ]
+      ],
+      "message": "The problem is infeasible. (HiGHS Status 8: model_status is Infeasible; primal_status is None)",
+      "objective": null,
+      "seconds": 1.1946570873260498,
+      "status": 2,
+      "success": false
+    },
+    {
+      "candidate_number": 1,
+      "family": "BC",
+      "generators": [
+        [
+          1,
+          -2
+        ],
+        [
+          3,
+          -3
+        ],
+        [
+          4,
+          -4
+        ]
+      ],
+      "message": "The problem is infeasible. (HiGHS Status 8: model_status is Infeasible; primal_status is None)",
+      "objective": null,
+      "seconds": 1.3336374759674072,
+      "status": 2,
+      "success": false
+    },
+    {
+      "candidate_number": 2,
+      "family": "BC",
+      "generators": [
+        [
+          1,
+          -1
+        ],
+        [
+          2,
+          -4
+        ],
+        [
+          4,
+          -5
+        ],
+        [
+          6,
+          -7
+        ],
+        [
+          7,
+          -8
+        ]
+      ],
+      "message": "The problem is infeasible. (HiGHS Status 8: model_status is Infeasible; primal_status is None)",
+      "objective": null,
+      "seconds": 1.2835078239440918,
+      "status": 2,
+      "success": false
+    },
+    {
+      "candidate_number": 3,
+      "family": "BC",
+      "generators": [
+        [
+          1,
+          -1
+        ],
+        [
+          2,
+          -3
+        ],
+        [
+          4,
+          -4
+        ],
+        [
+          5,
+          -9
+        ],
+        [
+          10,
+          -10
+        ]
+      ],
+      "message": "The problem is infeasible. (HiGHS Status 8: model_status is Infeasible; primal_status is None)",
+      "objective": null,
+      "seconds": 1.2981641292572021,
+      "status": 2,
+      "success": false
+    },
+    {
+      "candidate_number": 4,
+      "family": "BC",
+      "generators": [
+        [
+          1,
+          -1
+        ],
+        [
+          2,
+          -2
+        ],
+        [
+          3,
+          -5
+        ],
+        [
+          4,
+          -8
+        ],
+        [
+          7,
+          -13
+        ],
+        [
+          9,
+          -16
+        ]
+      ],
+      "message": "The problem is infeasible. (HiGHS Status 8: model_status is Infeasible; primal_status is None)",
+      "objective": null,
+      "seconds": 1.2736117839813232,
+      "status": 2,
+      "success": false
+    },
+    {
+      "candidate_number": 5,
+      "family": "BC",
+      "generators": [
+        [
+          1,
+          -1
+        ],
+        [
+          3,
+          -5
+        ],
+        [
+          7,
+          -9
+        ],
+        [
+          8,
+          -12
+        ],
+        [
+          10,
+          -16
+        ]
+      ],
+      "message": "The problem is infeasible. (HiGHS Status 8: model_status is Infeasible; primal_status is None)",
+      "objective": null,
+      "seconds": 1.306807041168213,
+      "status": 2,
+      "success": false
+    },
+    {
+      "candidate_number": 6,
+      "family": "BC",
+      "generators": [
+        [
+          1,
+          -1
+        ],
+        [
+          3,
+          -4
+        ],
+        [
+          6,
+          -6
+        ],
+        [
+          7,
+          -7
+        ],
+        [
+          8,
+          -12
+        ],
+        [
+          9,
+          -14
+        ]
+      ],
+      "message": "The problem is infeasible. (HiGHS Status 8: model_status is Infeasible; primal_status is None)",
+      "objective": null,
+      "seconds": 1.3582899570465088,
+      "status": 2,
+      "success": false
+    },
+    {
+      "candidate_number": 7,
+      "family": "BC",
+      "generators": [
+        [
+          1,
+          -1
+        ],
+        [
+          3,
+          -3
+        ],
+        [
+          4,
+          -4
+        ],
+        [
+          5,
+          -7
+        ],
+        [
+          8,
+          -8
+        ],
+        [
+          9,
+          -10
+        ],
+        [
+          10,
+          -12
+        ]
+      ],
+      "message": "The problem is infeasible. (HiGHS Status 8: model_status is Infeasible; primal_status is None)",
+      "objective": null,
+      "seconds": 1.384812831878662,
+      "status": 2,
+      "success": false
+    },
+    {
+      "candidate_number": 8,
+      "family": "BC",
+      "generators": [
+        [
+          1,
+          -1
+        ],
+        [
+          3,
+          -3
+        ],
+        [
+          4,
+          -4
+        ],
+        [
+          5,
+          -5
+        ],
+        [
+          7,
+          -13
+        ],
+        [
+          9,
+          -14
+        ]
+      ],
+      "message": "The problem is infeasible. (HiGHS Status 8: model_status is Infeasible; primal_status is None)",
+      "objective": null,
+      "seconds": 1.2675468921661377,
+      "status": 2,
+      "success": false
+    },
+    {
+      "candidate_number": 9,
+      "family": "BC",
+      "generators": [
+        [
+          1,
+          -1
+        ],
+        [
+          10,
+          -12
+        ]
+      ],
+      "message": "The problem is infeasible. (HiGHS Status 8: model_status is Infeasible; primal_status is None)",
+      "objective": null,
+      "seconds": 1.263148307800293,
+      "status": 2,
+      "success": false
+    },
+    {
+      "candidate_number": 10,
+      "family": "BC",
+      "generators": [
+        [
+          2,
+          -2
+        ],
+        [
+          3,
+          -8
+        ],
+        [
+          7,
+          -10
+        ],
+        [
+          9,
+          -16
+        ]
+      ],
+      "message": "The problem is infeasible. (HiGHS Status 8: model_status is Infeasible; primal_status is None)",
+      "objective": null,
+      "seconds": 1.3332304954528809,
+      "status": 2,
+      "success": false
+    },
+    {
+      "candidate_number": 11,
+      "family": "BC",
+      "generators": [
+        [
+          2,
+          -2
+        ],
+        [
+          3,
+          -3
+        ],
+        [
+          4,
+          -7
+        ],
+        [
+          6,
+          -8
+        ],
+        [
+          9,
+          -12
+        ]
+      ],
+      "message": "The problem is infeasible. (HiGHS Status 8: model_status is Infeasible; primal_status is None)",
+      "objective": null,
+      "seconds": 1.3951292037963867,
+      "status": 2,
+      "success": false
+    },
+    {
+      "candidate_number": 12,
+      "family": "BC",
+      "generators": [
+        [
+          2,
+          -2
+        ],
+        [
+          3,
+          -3
+        ],
+        [
+          4,
+          -7
+        ],
+        [
+          8,
+          -8
+        ],
+        [
+          9,
+          -10
+        ],
+        [
+          10,
+          -12
+        ]
+      ],
+      "message": "The problem is infeasible. (HiGHS Status 8: model_status is Infeasible; primal_status is None)",
+      "objective": null,
+      "seconds": 1.4029455184936523,
+      "status": 2,
+      "success": false
+    },
+    {
+      "candidate_number": 13,
+      "family": "BC",
+      "generators": [
+        [
+          2,
+          -2
+        ],
+        [
+          3,
+          -3
+        ],
+        [
+          4,
+          -7
+        ],
+        [
+          9,
+          -10
+        ],
+        [
+          10,
+          -12
+        ]
+      ],
+      "message": "The problem is infeasible. (HiGHS Status 8: model_status is Infeasible; primal_status is None)",
+      "objective": null,
+      "seconds": 1.2697815895080566,
+      "status": 2,
+      "success": false
+    },
+    {
+      "candidate_number": 14,
+      "family": "BC",
+      "generators": [
+        [
+          2,
+          -2
+        ],
+        [
+          3,
+          -3
+        ],
+        [
+          4,
+          -4
+        ],
+        [
+          5,
+          -5
+        ],
+        [
+          6,
+          -6
+        ],
+        [
+          8,
+          -8
+        ],
+        [
+          9,
+          -12
+        ]
+      ],
+      "message": "The problem is infeasible. (HiGHS Status 8: model_status is Infeasible; primal_status is None)",
+      "objective": null,
+      "seconds": 1.390193223953247,
+      "status": 2,
+      "success": false
+    },
+    {
+      "candidate_number": 15,
+      "family": "BC",
+      "generators": [
+        [
+          2,
+          -2
+        ],
+        [
+          3,
+          -3
+        ],
+        [
+          4,
+          -4
+        ],
+        [
+          6,
+          -6
+        ],
+        [
+          7,
+          -7
+        ],
+        [
+          8,
+          -8
+        ],
+        [
+          9,
+          -12
+        ]
+      ],
+      "message": "The problem is infeasible. (HiGHS Status 8: model_status is Infeasible; primal_status is None)",
+      "objective": null,
+      "seconds": 1.319563388824463,
+      "status": 2,
+      "success": false
+    },
+    {
+      "candidate_number": 16,
+      "family": "BC",
+      "generators": [
+        [
+          2,
+          -2
+        ],
+        [
+          3,
+          -3
+        ],
+        [
+          4,
+          -4
+        ],
+        [
+          6,
+          -6
+        ],
+        [
+          7,
+          -7
+        ],
+        [
+          8,
+          -8
+        ],
+        [
+          9,
+          -10
+        ],
+        [
+          10,
+          -12
+        ]
+      ],
+      "message": "The problem is infeasible. (HiGHS Status 8: model_status is Infeasible; primal_status is None)",
+      "objective": null,
+      "seconds": 1.2899999618530273,
+      "status": 2,
+      "success": false
+    },
+    {
+      "candidate_number": 17,
+      "family": "BC",
+      "generators": [
+        [
+          2,
+          -2
+        ],
+        [
+          3,
+          -3
+        ],
+        [
+          4,
+          -4
+        ],
+        [
+          6,
+          -6
+        ],
+        [
+          7,
+          -7
+        ],
+        [
+          9,
+          -10
+        ],
+        [
+          10,
+          -12
+        ]
+      ],
+      "message": "The problem is infeasible. (HiGHS Status 8: model_status is Infeasible; primal_status is None)",
+      "objective": null,
+      "seconds": 1.3681013584136963,
+      "status": 2,
+      "success": false
+    },
+    {
+      "candidate_number": 18,
+      "family": "BC",
+      "generators": [
+        [
+          2,
+          -2
+        ],
+        [
+          3,
+          -3
+        ],
+        [
+          4,
+          -4
+        ],
+        [
+          6,
+          -6
+        ],
+        [
+          8,
+          -8
+        ],
+        [
+          9,
+          -10
+        ],
+        [
+          10,
+          -12
+        ]
+      ],
+      "message": "The problem is infeasible. (HiGHS Status 8: model_status is Infeasible; primal_status is None)",
+      "objective": null,
+      "seconds": 1.2826199531555176,
+      "status": 2,
+      "success": false
+    },
+    {
+      "candidate_number": 19,
+      "family": "BC",
+      "generators": [
+        [
+          2,
+          -2
+        ],
+        [
+          3,
+          -3
+        ],
+        [
+          5,
+          -6
+        ],
+        [
+          6,
+          -7
+        ],
+        [
+          8,
+          -8
+        ],
+        [
+          9,
+          -10
+        ],
+        [
+          10,
+          -14
+        ]
+      ],
+      "message": "The problem is infeasible. (HiGHS Status 8: model_status is Infeasible; primal_status is None)",
+      "objective": null,
+      "seconds": 1.3266088962554932,
+      "status": 2,
+      "success": false
+    },
+    {
+      "candidate_number": 20,
+      "family": "BC",
+      "generators": [
+        [
+          2,
+          -2
+        ],
+        [
+          3,
+          -3
+        ],
+        [
+          5,
+          -5
+        ],
+        [
+          6,
+          -6
+        ],
+        [
+          7,
+          -7
+        ],
+        [
+          9,
+          -10
+        ],
+        [
+          10,
+          -12
+        ]
+      ],
+      "message": "The problem is infeasible. (HiGHS Status 8: model_status is Infeasible; primal_status is None)",
+      "objective": null,
+      "seconds": 1.303314208984375,
+      "status": 2,
+      "success": false
+    },
+    {
+      "candidate_number": 21,
+      "family": "BC",
+      "generators": [
+        [
+          2,
+          -2
+        ],
+        [
+          3,
+          -3
+        ],
+        [
+          5,
+          -5
+        ],
+        [
+          6,
+          -6
+        ],
+        [
+          8,
+          -8
+        ],
+        [
+          9,
+          -10
+        ],
+        [
+          10,
+          -12
+        ]
+      ],
+      "message": "The problem is infeasible. (HiGHS Status 8: model_status is Infeasible; primal_status is None)",
+      "objective": null,
+      "seconds": 1.3072946071624756,
+      "status": 2,
+      "success": false
+    },
+    {
+      "candidate_number": 22,
+      "family": "BC",
+      "generators": [
+        [
+          2,
+          -2
+        ],
+        [
+          3,
+          -3
+        ],
+        [
+          6,
+          -8
+        ],
+        [
+          9,
+          -12
+        ],
+        [
+          10,
+          -13
+        ]
+      ],
+      "message": "The problem is infeasible. (HiGHS Status 8: model_status is Infeasible; primal_status is None)",
+      "objective": null,
+      "seconds": 1.2586047649383545,
+      "status": 2,
+      "success": false
+    },
+    {
+      "candidate_number": 23,
+      "family": "BC",
+      "generators": [
+        [
+          2,
+          -2
+        ],
+        [
+          3,
+          -3
+        ],
+        [
+          6,
+          -7
+        ],
+        [
+          9,
+          -10
+        ],
+        [
+          10,
+          -12
+        ]
+      ],
+      "message": "The problem is infeasible. (HiGHS Status 8: model_status is Infeasible; primal_status is None)",
+      "objective": null,
+      "seconds": 1.2428789138793945,
+      "status": 2,
+      "success": false
+    },
+    {
+      "candidate_number": 24,
+      "family": "BC",
+      "generators": [
+        [
+          2,
+          -2
+        ],
+        [
+          3,
+          -3
+        ],
+        [
+          6,
+          -6
+        ],
+        [
+          7,
+          -7
+        ],
+        [
+          8,
+          -8
+        ],
+        [
+          9,
+          -10
+        ],
+        [
+          10,
+          -12
+        ]
+      ],
+      "message": "The problem is infeasible. (HiGHS Status 8: model_status is Infeasible; primal_status is None)",
+      "objective": null,
+      "seconds": 1.4095330238342285,
+      "status": 2,
+      "success": false
+    },
+    {
+      "candidate_number": 25,
+      "family": "BC",
+      "generators": [
+        [
+          2,
+          -2
+        ],
+        [
+          3,
+          -3
+        ],
+        [
+          6,
+          -6
+        ],
+        [
+          7,
+          -7
+        ],
+        [
+          9,
+          -10
+        ],
+        [
+          10,
+          -12
+        ]
+      ],
+      "message": "The problem is infeasible. (HiGHS Status 8: model_status is Infeasible; primal_status is None)",
+      "objective": null,
+      "seconds": 1.332878828048706,
+      "status": 2,
+      "success": false
+    },
+    {
+      "candidate_number": 26,
+      "family": "BC",
+      "generators": [
+        [
+          2,
+          -2
+        ],
+        [
+          3,
+          -3
+        ],
+        [
+          6,
+          -6
+        ],
+        [
+          7,
+          -7
+        ],
+        [
+          10,
+          -12
+        ]
+      ],
+      "message": "The problem is infeasible. (HiGHS Status 8: model_status is Infeasible; primal_status is None)",
+      "objective": null,
+      "seconds": 1.278400182723999,
+      "status": 2,
+      "success": false
+    },
+    {
+      "candidate_number": 27,
+      "family": "BC",
+      "generators": [
+        [
+          2,
+          -2
+        ],
+        [
+          3,
+          -3
+        ],
+        [
+          7,
+          -7
+        ],
+        [
+          8,
+          -10
+        ],
+        [
+          9,
+          -12
+        ]
+      ],
+      "message": "The problem is infeasible. (HiGHS Status 8: model_status is Infeasible; primal_status is None)",
+      "objective": null,
+      "seconds": 1.289555549621582,
+      "status": 2,
+      "success": false
+    },
+    {
+      "candidate_number": 28,
+      "family": "BC",
+      "generators": [
+        [
+          2,
+          -2
+        ],
+        [
+          4,
+          -8
+        ],
+        [
+          7,
+          -9
+        ],
+        [
+          10,
+          -12
+        ]
+      ],
+      "message": "The problem is infeasible. (HiGHS Status 8: model_status is Infeasible; primal_status is None)",
+      "objective": null,
+      "seconds": 1.2832679748535156,
+      "status": 2,
+      "success": false
+    },
+    {
+      "candidate_number": 29,
+      "family": "BC",
+      "generators": [
+        [
+          2,
+          -2
+        ],
+        [
+          4,
+          -8
+        ],
+        [
+          10,
+          -13
+        ]
+      ],
+      "message": "The problem is infeasible. (HiGHS Status 8: model_status is Infeasible; primal_status is None)",
+      "objective": null,
+      "seconds": 1.2691013813018799,
+      "status": 2,
+      "success": false
+    },
+    {
+      "candidate_number": 30,
+      "family": "BC",
+      "generators": [
+        [
+          2,
+          -2
+        ],
+        [
+          4,
+          -7
+        ],
+        [
+          5,
+          -12
+        ]
+      ],
+      "message": "The problem is infeasible. (HiGHS Status 8: model_status is Infeasible; primal_status is None)",
+      "objective": null,
+      "seconds": 1.2887051105499268,
+      "status": 2,
+      "success": false
+    },
+    {
+      "candidate_number": 31,
+      "family": "BC",
+      "generators": [
+        [
+          2,
+          -2
+        ],
+        [
+          4,
+          -4
+        ],
+        [
+          5,
+          -6
+        ],
+        [
+          6,
+          -7
+        ],
+        [
+          8,
+          -8
+        ],
+        [
+          9,
+          -10
+        ]
+      ],
+      "message": "The problem is infeasible. (HiGHS Status 8: model_status is Infeasible; primal_status is None)",
+      "objective": null,
+      "seconds": 1.2664709091186523,
+      "status": 2,
+      "success": false
+    },
+    {
+      "candidate_number": 32,
+      "family": "BC",
+      "generators": [
+        [
+          2,
+          -2
+        ],
+        [
+          4,
+          -4
+        ],
+        [
+          5,
+          -5
+        ],
+        [
+          6,
+          -6
+        ],
+        [
+          7,
+          -7
+        ],
+        [
+          9,
+          -12
+        ]
+      ],
+      "message": "The problem is infeasible. (HiGHS Status 8: model_status is Infeasible; primal_status is None)",
+      "objective": null,
+      "seconds": 1.2828831672668457,
+      "status": 2,
+      "success": false
+    },
+    {
+      "candidate_number": 33,
+      "family": "BC",
+      "generators": [
+        [
+          2,
+          -2
+        ],
+        [
+          4,
+          -4
+        ],
+        [
+          5,
+          -5
+        ],
+        [
+          6,
+          -6
+        ],
+        [
+          9,
+          -10
+        ]
+      ],
+      "message": "The problem is infeasible. (HiGHS Status 8: model_status is Infeasible; primal_status is None)",
+      "objective": null,
+      "seconds": 1.2996242046356201,
+      "status": 2,
+      "success": false
+    },
+    {
+      "candidate_number": 34,
+      "family": "BC",
+      "generators": [
+        [
+          2,
+          -2
+        ],
+        [
+          4,
+          -4
+        ],
+        [
+          6,
+          -6
+        ],
+        [
+          7,
+          -7
+        ],
+        [
+          9,
+          -10
+        ],
+        [
+          10,
+          -12
+        ]
+      ],
+      "message": "The problem is infeasible. (HiGHS Status 8: model_status is Infeasible; primal_status is None)",
+      "objective": null,
+      "seconds": 1.2782902717590332,
+      "status": 2,
+      "success": false
+    },
+    {
+      "candidate_number": 35,
+      "family": "BC",
+      "generators": [
+        [
+          2,
+          -2
+        ],
+        [
+          4,
+          -4
+        ],
+        [
+          6,
+          -6
+        ],
+        [
+          8,
+          -8
+        ],
+        [
+          9,
+          -12
+        ]
+      ],
+      "message": "The problem is infeasible. (HiGHS Status 8: model_status is Infeasible; primal_status is None)",
+      "objective": null,
+      "seconds": 1.293933391571045,
+      "status": 2,
+      "success": false
+    },
+    {
+      "candidate_number": 36,
+      "family": "BC",
+      "generators": [
+        [
+          2,
+          -2
+        ],
+        [
+          5,
+          -7
+        ],
+        [
+          8,
+          -8
+        ],
+        [
+          9,
+          -10
+        ],
+        [
+          10,
+          -12
+        ]
+      ],
+      "message": "The problem is infeasible. (HiGHS Status 8: model_status is Infeasible; primal_status is None)",
+      "objective": null,
+      "seconds": 1.2944104671478271,
+      "status": 2,
+      "success": false
+    },
+    {
+      "candidate_number": 37,
+      "family": "BC",
+      "generators": [
+        [
+          2,
+          -2
+        ],
+        [
+          5,
+          -5
+        ],
+        [
+          6,
+          -6
+        ],
+        [
+          8,
+          -8
+        ],
+        [
+          9,
+          -10
+        ],
+        [
+          10,
+          -13
+        ]
+      ],
+      "message": "The problem is infeasible. (HiGHS Status 8: model_status is Infeasible; primal_status is None)",
+      "objective": null,
+      "seconds": 1.283252239227295,
+      "status": 2,
+      "success": false
+    },
+    {
+      "candidate_number": 38,
+      "family": "BC",
+      "generators": [
+        [
+          2,
+          -2
+        ],
+        [
+          6,
+          -6
+        ],
+        [
+          8,
+          -10
+        ],
+        [
+          9,
+          -12
+        ]
+      ],
+      "message": "The HiGHS status code was not recognized. (HiGHS Status 15: model_status is Unknown; primal_status is Infeasible)",
+      "objective": null,
+      "seconds": 1.3393220901489258,
+      "status": 4,
+      "success": false
+    },
+    {
+      "candidate_number": 39,
+      "family": "BC",
+      "generators": [
+        [
+          3,
+          -13
+        ]
+      ],
+      "message": "The problem is infeasible. (HiGHS Status 8: model_status is Infeasible; primal_status is None)",
+      "objective": null,
+      "seconds": 1.2554380893707275,
+      "status": 2,
+      "success": false
+    },
+    {
+      "candidate_number": 40,
+      "family": "BC",
+      "generators": [
+        [
+          3,
+          -12
+        ]
+      ],
+      "message": "The problem is infeasible. (HiGHS Status 8: model_status is Infeasible; primal_status is None)",
+      "objective": null,
+      "seconds": 1.295330286026001,
+      "status": 2,
+      "success": false
+    },
+    {
+      "candidate_number": 41,
+      "family": "BC",
+      "generators": [
+        [
+          3,
+          -9
+        ],
+        [
+          4,
+          -13
+        ]
+      ],
+      "message": "The problem is infeasible. (HiGHS Status 8: model_status is Infeasible; primal_status is None)",
+      "objective": null,
+      "seconds": 1.247389793395996,
+      "status": 2,
+      "success": false
+    },
+    {
+      "candidate_number": 42,
+      "family": "BC",
+      "generators": [
+        [
+          3,
+          -5
+        ],
+        [
+          6,
+          -6
+        ],
+        [
+          8,
+          -13
+        ],
+        [
+          10,
+          -15
+        ]
+      ],
+      "message": "The problem is infeasible. (HiGHS Status 8: model_status is Infeasible; primal_status is None)",
+      "objective": null,
+      "seconds": 1.2896804809570312,
+      "status": 2,
+      "success": false
+    },
+    {
+      "candidate_number": 43,
+      "family": "BC",
+      "generators": [
+        [
+          3,
+          -4
+        ],
+        [
+          4,
+          -8
+        ],
+        [
+          5,
+          -9
+        ],
+        [
+          10,
+          -14
+        ]
+      ],
+      "message": "The problem is infeasible. (HiGHS Status 8: model_status is Infeasible; primal_status is None)",
+      "objective": null,
+      "seconds": 1.3052704334259033,
+      "status": 2,
+      "success": false
+    },
+    {
+      "candidate_number": 44,
+      "family": "BC",
+      "generators": [
+        [
+          3,
+          -4
+        ],
+        [
+          4,
+          -7
+        ],
+        [
+          6,
+          -8
+        ],
+        [
+          9,
+          -9
+        ],
+        [
+          10,
+          -12
+        ]
+      ],
+      "message": "The problem is infeasible. (HiGHS Status 8: model_status is Infeasible; primal_status is None)",
+      "objective": null,
+      "seconds": 1.3577499389648438,
+      "status": 2,
+      "success": false
+    },
+    {
+      "candidate_number": 45,
+      "family": "BC",
+      "generators": [
+        [
+          3,
+          -4
+        ],
+        [
+          6,
+          -8
+        ],
+        [
+          8,
+          -10
+        ],
+        [
+          10,
+          -13
+        ]
+      ],
+      "message": "The problem is infeasible. (HiGHS Status 8: model_status is Infeasible; primal_status is None)",
+      "objective": null,
+      "seconds": 1.3706071376800537,
+      "status": 2,
+      "success": false
+    },
+    {
+      "candidate_number": 46,
+      "family": "BC",
+      "generators": [
+        [
+          3,
+          -4
+        ],
+        [
+          7,
+          -7
+        ],
+        [
+          8,
+          -8
+        ],
+        [
+          10,
+          -12
+        ]
+      ],
+      "message": "The problem is infeasible. (HiGHS Status 8: model_status is Infeasible; primal_status is None)",
+      "objective": null,
+      "seconds": 1.367445945739746,
+      "status": 2,
+      "success": false
+    },
+    {
+      "candidate_number": 47,
+      "family": "BC",
+      "generators": [
+        [
+          3,
+          -4
+        ],
+        [
+          8,
+          -8
+        ],
+        [
+          9,
+          -9
+        ],
+        [
+          10,
+          -13
+        ]
+      ],
+      "message": "The problem is infeasible. (HiGHS Status 8: model_status is Infeasible; primal_status is None)",
+      "objective": null,
+      "seconds": 1.2970094680786133,
+      "status": 2,
+      "success": false
+    },
+    {
+      "candidate_number": 48,
+      "family": "BC",
+      "generators": [
+        [
+          3,
+          -4
+        ],
+        [
+          8,
+          -8
+        ],
+        [
+          10,
+          -12
+        ]
+      ],
+      "message": "The problem is infeasible. (HiGHS Status 8: model_status is Infeasible; primal_status is None)",
+      "objective": null,
+      "seconds": 1.2910113334655762,
+      "status": 2,
+      "success": false
+    },
+    {
+      "candidate_number": 49,
+      "family": "BC",
+      "generators": [
+        [
+          3,
+          -3
+        ],
+        [
+          4,
+          -8
+        ],
+        [
+          9,
+          -12
+        ]
+      ],
+      "message": "The problem is infeasible. (HiGHS Status 8: model_status is Infeasible; primal_status is None)",
+      "objective": null,
+      "seconds": 1.3448665142059326,
+      "status": 2,
+      "success": false
+    },
+    {
+      "candidate_number": 50,
+      "family": "BC",
+      "generators": [
+        [
+          3,
+          -3
+        ],
+        [
+          4,
+          -8
+        ],
+        [
+          9,
+          -10
+        ],
+        [
+          10,
+          -12
+        ]
+      ],
+      "message": "The problem is infeasible. (HiGHS Status 8: model_status is Infeasible; primal_status is None)",
+      "objective": null,
+      "seconds": 1.277897834777832,
+      "status": 2,
+      "success": false
+    },
+    {
+      "candidate_number": 51,
+      "family": "BC",
+      "generators": [
+        [
+          3,
+          -3
+        ],
+        [
+          4,
+          -7
+        ],
+        [
+          9,
+          -10
+        ],
+        [
+          10,
+          -12
+        ]
+      ],
+      "message": "The problem is infeasible. (HiGHS Status 8: model_status is Infeasible; primal_status is None)",
+      "objective": null,
+      "seconds": 1.3550896644592285,
+      "status": 2,
+      "success": false
+    },
+    {
+      "candidate_number": 52,
+      "family": "BC",
+      "generators": [
+        [
+          3,
+          -3
+        ],
+        [
+          4,
+          -4
+        ],
+        [
+          5,
+          -5
+        ],
+        [
+          7,
+          -7
+        ],
+        [
+          8,
+          -13
+        ]
+      ],
+      "message": "The problem is infeasible. (HiGHS Status 8: model_status is Infeasible; primal_status is None)",
+      "objective": null,
+      "seconds": 1.3466284275054932,
+      "status": 2,
+      "success": false
+    },
+    {
+      "candidate_number": 53,
+      "family": "BC",
+      "generators": [
+        [
+          3,
+          -3
+        ],
+        [
+          4,
+          -4
+        ],
+        [
+          6,
+          -8
+        ],
+        [
+          9,
+          -9
+        ],
+        [
+          10,
+          -12
+        ]
+      ],
+      "message": "The problem is infeasible. (HiGHS Status 8: model_status is Infeasible; primal_status is None)",
+      "objective": null,
+      "seconds": 1.2956018447875977,
+      "status": 2,
+      "success": false
+    },
+    {
+      "candidate_number": 54,
+      "family": "BC",
+      "generators": [
+        [
+          3,
+          -3
+        ],
+        [
+          4,
+          -4
+        ],
+        [
+          6,
+          -6
+        ],
+        [
+          7,
+          -7
+        ],
+        [
+          9,
+          -10
+        ],
+        [
+          10,
+          -12
+        ]
+      ],
+      "message": "The problem is infeasible. (HiGHS Status 8: model_status is Infeasible; primal_status is None)",
+      "objective": null,
+      "seconds": 1.3538589477539062,
+      "status": 2,
+      "success": false
+    },
+    {
+      "candidate_number": 55,
+      "family": "BC",
+      "generators": [
+        [
+          3,
+          -3
+        ],
+        [
+          5,
+          -5
+        ],
+        [
+          6,
+          -6
+        ],
+        [
+          7,
+          -7
+        ],
+        [
+          8,
+          -9
+        ],
+        [
+          9,
+          -12
+        ]
+      ],
+      "message": "The problem is infeasible. (HiGHS Status 8: model_status is Infeasible; primal_status is None)",
+      "objective": null,
+      "seconds": 1.257361888885498,
+      "status": 2,
+      "success": false
+    },
+    {
+      "candidate_number": 56,
+      "family": "BC",
+      "generators": [
+        [
+          3,
+          -3
+        ],
+        [
+          5,
+          -5
+        ],
+        [
+          6,
+          -6
+        ],
+        [
+          7,
+          -7
+        ],
+        [
+          8,
+          -8
+        ],
+        [
+          9,
+          -10
+        ],
+        [
+          10,
+          -12
+        ]
+      ],
+      "message": "The problem is infeasible. (HiGHS Status 8: model_status is Infeasible; primal_status is None)",
+      "objective": null,
+      "seconds": 1.3062739372253418,
+      "status": 2,
+      "success": false
+    },
+    {
+      "candidate_number": 57,
+      "family": "BC",
+      "generators": [
+        [
+          3,
+          -3
+        ],
+        [
+          5,
+          -5
+        ],
+        [
+          7,
+          -7
+        ],
+        [
+          8,
+          -10
+        ]
+      ],
+      "message": "The problem is infeasible. (HiGHS Status 8: model_status is Infeasible; primal_status is None)",
+      "objective": null,
+      "seconds": 1.3591208457946777,
+      "status": 2,
+      "success": false
+    },
+    {
+      "candidate_number": 58,
+      "family": "BC",
+      "generators": [
+        [
+          3,
+          -3
+        ],
+        [
+          5,
+          -5
+        ],
+        [
+          7,
+          -7
+        ],
+        [
+          9,
+          -10
+        ],
+        [
+          10,
+          -13
+        ]
+      ],
+      "message": "The problem is infeasible. (HiGHS Status 8: model_status is Infeasible; primal_status is None)",
+      "objective": null,
+      "seconds": 1.3622722625732422,
+      "status": 2,
+      "success": false
+    },
+    {
+      "candidate_number": 59,
+      "family": "BC",
+      "generators": [
+        [
+          3,
+          -3
+        ],
+        [
+          6,
+          -7
+        ],
+        [
+          8,
+          -8
+        ],
+        [
+          9,
+          -12
+        ]
+      ],
+      "message": "The problem is infeasible. (HiGHS Status 8: model_status is Infeasible; primal_status is None)",
+      "objective": null,
+      "seconds": 1.2815704345703125,
+      "status": 2,
+      "success": false
+    },
+    {
+      "candidate_number": 60,
+      "family": "BC",
+      "generators": [
+        [
+          3,
+          -3
+        ],
+        [
+          6,
+          -6
+        ],
+        [
+          7,
+          -7
+        ],
+        [
+          8,
+          -8
+        ],
+        [
+          9,
+          -10
+        ],
+        [
+          10,
+          -12
+        ]
+      ],
+      "message": "The problem is infeasible. (HiGHS Status 8: model_status is Infeasible; primal_status is None)",
+      "objective": null,
+      "seconds": 1.3020744323730469,
+      "status": 2,
+      "success": false
+    },
+    {
+      "candidate_number": 61,
+      "family": "BC",
+      "generators": [
+        [
+          3,
+          -3
+        ],
+        [
+          6,
+          -6
+        ],
+        [
+          7,
+          -7
+        ],
+        [
+          9,
+          -10
+        ],
+        [
+          10,
+          -13
+        ]
+      ],
+      "message": "The problem is infeasible. (HiGHS Status 8: model_status is Infeasible; primal_status is None)",
+      "objective": null,
+      "seconds": 1.336015224456787,
+      "status": 2,
+      "success": false
+    },
+    {
+      "candidate_number": 62,
+      "family": "BC",
+      "generators": [
+        [
+          3,
+          -3
+        ],
+        [
+          7,
+          -9
+        ],
+        [
+          8,
+          -12
+        ]
+      ],
+      "message": "The problem is infeasible. (HiGHS Status 8: model_status is Infeasible; primal_status is None)",
+      "objective": null,
+      "seconds": 1.2533082962036133,
+      "status": 2,
+      "success": false
+    },
+    {
+      "candidate_number": 63,
+      "family": "BC",
+      "generators": [
+        [
+          3,
+          -3
+        ],
+        [
+          7,
+          -7
+        ],
+        [
+          8,
+          -8
+        ],
+        [
+          9,
+          -10
+        ],
+        [
+          10,
+          -13
+        ]
+      ],
+      "message": "The problem is infeasible. (HiGHS Status 8: model_status is Infeasible; primal_status is None)",
+      "objective": null,
+      "seconds": 1.2517673969268799,
+      "status": 2,
+      "success": false
+    },
+    {
+      "candidate_number": 64,
+      "family": "BC",
+      "generators": [
+        [
+          3,
+          -3
+        ],
+        [
+          8,
+          -10
+        ],
+        [
+          10,
+          -12
+        ]
+      ],
+      "message": "The problem is infeasible. (HiGHS Status 8: model_status is Infeasible; primal_status is None)",
+      "objective": null,
+      "seconds": 1.33314847946167,
+      "status": 2,
+      "success": false
+    },
+    {
+      "candidate_number": 65,
+      "family": "BC",
+      "generators": [
+        [
+          4,
+          -12
+        ],
+        [
+          5,
+          -15
+        ]
+      ],
+      "message": "The HiGHS status code was not recognized. (HiGHS Status 15: model_status is Unknown; primal_status is Infeasible)",
+      "objective": null,
+      "seconds": 1.4758617877960205,
+      "status": 4,
+      "success": false
+    },
+    {
+      "candidate_number": 66,
+      "family": "BC",
+      "generators": [
+        [
+          7,
+          -7
+        ],
+        [
+          8,
+          -13
+        ]
+      ],
+      "message": "The problem is infeasible. (HiGHS Status 8: model_status is Infeasible; primal_status is None)",
+      "objective": null,
+      "seconds": 1.2570326328277588,
+      "status": 2,
+      "success": false
+    },
+    {
+      "candidate_number": 67,
+      "family": "BC",
+      "generators": [
+        [
+          9,
+          -10
+        ],
+        [
+          10,
+          -12
+        ]
+      ],
+      "message": "The problem is infeasible. (HiGHS Status 8: model_status is Infeasible; primal_status is None)",
+      "objective": null,
+      "seconds": 1.2635729312896729,
+      "status": 2,
+      "success": false
+    },
+    {
+      "candidate_number": 68,
+      "family": "SH",
+      "generators": [
+        [
+          1,
+          -2
+        ],
+        [
+          4,
+          -14
+        ]
+      ],
+      "message": "The problem is infeasible. (HiGHS Status 8: model_status is Infeasible; primal_status is None)",
+      "objective": null,
+      "seconds": 1.280510425567627,
+      "status": 2,
+      "success": false
+    },
+    {
+      "candidate_number": 69,
+      "family": "SH",
+      "generators": [
+        [
+          1,
+          -1
+        ],
+        [
+          2,
+          -5
+        ],
+        [
+          3,
+          -6
+        ]
+      ],
+      "message": "The problem is infeasible. (HiGHS Status 8: model_status is Infeasible; primal_status is None)",
+      "objective": null,
+      "seconds": 1.272965431213379,
+      "status": 2,
+      "success": false
+    },
+    {
+      "candidate_number": 70,
+      "family": "SH",
+      "generators": [
+        [
+          2,
+          -2
+        ],
+        [
+          3,
+          -7
+        ],
+        [
+          4,
+          -12
+        ]
+      ],
+      "message": "The problem is infeasible. (HiGHS Status 8: model_status is Infeasible; primal_status is None)",
+      "objective": null,
+      "seconds": 1.2698469161987305,
+      "status": 2,
+      "success": false
+    },
+    {
+      "candidate_number": 71,
+      "family": "SH",
+      "generators": [
+        [
+          3,
+          -7
+        ],
+        [
+          5,
+          -12
+        ]
+      ],
+      "message": "The problem is infeasible. (HiGHS Status 8: model_status is Infeasible; primal_status is None)",
+      "objective": null,
+      "seconds": 1.2545647621154785,
+      "status": 2,
+      "success": false
+    },
+    {
+      "candidate_number": 72,
+      "family": "SH",
+      "generators": [
+        [
+          3,
+          -5
+        ],
+        [
+          4,
+          -7
+        ],
+        [
+          5,
+          -12
+        ]
+      ],
+      "message": "The problem is infeasible. (HiGHS Status 8: model_status is Infeasible; primal_status is None)",
+      "objective": null,
+      "seconds": 1.2725379467010498,
+      "status": 2,
+      "success": false
+    },
+    {
+      "candidate_number": 73,
+      "family": "SH",
+      "generators": [
+        [
+          4,
+          -12
+        ]
+      ],
+      "message": "The problem is infeasible. (HiGHS Status 8: model_status is Infeasible; primal_status is None)",
+      "objective": null,
+      "seconds": 1.2360601425170898,
+      "status": 2,
+      "success": false
+    }
+  ],
+  "schema": "n29-demand45-one-addition-scan-v1",
+  "winner": null
+}
