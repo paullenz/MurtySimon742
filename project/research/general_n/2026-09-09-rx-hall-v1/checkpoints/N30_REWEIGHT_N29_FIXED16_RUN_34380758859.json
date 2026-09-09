@@ -1,0 +1,16 @@
+{
+  "BC_count": 9,
+  "SH_count": 7,
+  "floating_point_reconnaissance_only": true,
+  "interpretation": "The n29 16 staircase shapes are fixed, but n30 receives a fresh single common staircase-weight vector; scalar bookkeeping remains profile-specific.",
+  "message": "The problem is infeasible. (HiGHS Status 8: model_status is Infeasible; primal_status is None)",
+  "objective": null,
+  "profiles": 7,
+  "rows": 2775,
+  "schema": "n30-reweight-n29-fixed16-v1",
+  "seconds": 0.1396012306213379,
+  "status": 2,
+  "success": false,
+  "support_count": 16,
+  "variables": 175
+}
