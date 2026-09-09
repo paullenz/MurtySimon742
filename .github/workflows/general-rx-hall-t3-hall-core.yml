@@ -1,0 +1,72 @@
+name: General RX-Hall t3 Hall core
+
+on:
+  workflow_dispatch:
+  push:
+    paths:
+      - 'project/research/general_n/2026-09-09-rx-hall-v1/rx_hall_t3_hall_core_exact.py'
+      - 'project/research/general_n/2026-09-09-rx-hall-v1/rx_hall_exact.py'
+      - 'project/reviews/n29/2026-09-08-redteam-restart-v1/minimal_prepare.py'
+      - 'project/reviews/n29/2026-09-08-redteam-restart-v1/minimal_rows.cpp'
+      - '.github/workflows/general-rx-hall-t3-hall-core.yml'
+
+permissions:
+  contents: read
+
+jobs:
+  hall-core:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262
+      - name: Pin dependencies
+        run: |
+          set -euo pipefail
+          python3 -m venv .venv
+          .venv/bin/python -m pip install --disable-pip-version-check --only-binary=:all: scipy==1.17.0
+      - name: Regenerate t3 frontier from committed source
+        run: |
+          set -euo pipefail
+          D=project/reviews/n29/2026-09-08-redteam-restart-v1
+          g++ -O3 -std=c++17 "$D/minimal_rows.cpp" -o minimal_rows
+          mkdir -p inputs/t3
+          .venv/bin/python -I -B "$D/minimal_prepare.py" --t 3 --output inputs/t3
+          ./minimal_rows inputs/t3/demands.txt inputs/t3/row_survivors.txt inputs/t3/row_bands.txt 3 > inputs/t3/MINIMAL_ROWS_REPORT.json
+          python3 - <<'PY'
+          import json
+          assert json.load(open('inputs/t3/MINIMAL_PREPARE_REPORT.json'))['retained_demands']==72
+          assert json.load(open('inputs/t3/MINIMAL_ROWS_REPORT.json'))['survivors']==126
+          PY
+      - name: Generate exact Hall-core certificates
+        run: |
+          set -euo pipefail
+          D=project/research/general_n/2026-09-09-rx-hall-v1
+          mkdir -p out
+          .venv/bin/python -I -B "$D/rx_hall_t3_hall_core_exact.py" \
+            --demands-json inputs/t3/demands.json \
+            --rows inputs/t3/row_survivors.txt \
+            --a 12 --b 16 --dmax 10 --t 3 \
+            --output out/hall_core_certificates.json.gz
+          python3 - <<'PY'
+          import json
+          r=json.load(open('out/hall_core_certificates.json.gz.report.json'))
+          assert r['hard_rows']==94
+          assert r['exact_integer_farkas_rejections']==94
+          assert not r['unresolved']
+          assert r['removes_P_transport_variables'] is True
+          assert r['removes_R_residual_variables_and_budget'] is True
+          assert r['removes_Z_incidence_variables'] is True
+          assert r['uses_rx2'] is False
+          assert r['uses_rx1_pointwise_q_cap'] is True
+          assert r['uses_rx3_load_consequence'] is True
+          assert r['uses_nested_transport_threshold_cuts'] is True
+          assert r['uses_hall_unions_of_at_most_two_rectangles'] is True
+          assert r['uses_all_staircase_hall_cuts'] is False
+          print(json.dumps(r,indent=2,sort_keys=True))
+          PY
+      - uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02
+        with:
+          name: rx-hall-t3-hall-core
+          path: out/
+          if-no-files-found: error
+          retention-days: 30
