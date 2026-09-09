@@ -1,11 +1,11 @@
 {
-  "schema": "general-rx-hall-n29-exact-preserved-v1",
+  "schema": "general-rx-hall-n29-exact-preserved-v2",
   "date": "2026-09-09",
-  "workflow_run": 34326568879,
-  "head_sha": "687bc065a5e10b73db061329f3cb498bd6a1e5d7",
-  "aggregate_artifact_id": 10094029118,
-  "aggregate_artifact_digest": "sha256:597f913b38115c6c08110b0da041dae7d9be0742ce3cafb137129f5d13b2b409",
-  "status": "PASS_EXACT_REPLAY_AND_INDEPENDENT_CHECK",
+  "workflow_run": 34327139200,
+  "head_sha": "20e5b4123504218c67448e2215b815af338f5464",
+  "aggregate_artifact_id": 10094266617,
+  "aggregate_artifact_digest": "sha256:f05f9c601491f64cddfc5724ed5496df1606b870287a88070898394a5c98fea5",
+  "status": "PASS_EXACT_REPLAY_REGENERATED_INPUTS_AND_INDEPENDENT_CHECK",
   "results": {
     "2": {
       "hard_rows": 902,
@@ -28,11 +28,18 @@
   "total_exact_integer_farkas_rejections": 996,
   "total_independently_verified_certificates": 996,
   "final_unresolved": 0,
+  "inputs_regenerated_from_committed_source": true,
+  "frontier_source": {
+    "minimal_prepare": "project/reviews/n29/2026-09-08-redteam-restart-v1/minimal_prepare.py",
+    "minimal_rows": "project/reviews/n29/2026-09-08-redteam-restart-v1/minimal_rows.cpp",
+    "retained_demands_t3_t2": [72, 367],
+    "residual_rows_t3_t2": [126, 1467]
+  },
   "unit_density_bounds": true,
   "uses_unordered_pair_aggregate_capacity": false,
   "uses_cumulative_tail_variables": false,
   "floating_point_is_proposal_only": true,
   "integer_farkas_is_acceptance": true,
   "independent_checker_standard_library_only": true,
-  "trust_boundary": "Every finite certificate is exact, but application to graphs remains conditional on the universal graph-to-demand/RX-Hall bridge and the earlier frontier preparation. This is not an unrestricted theorem or external review."
+  "trust_boundary": "Every finite certificate is exact and the frontier is regenerated from committed source, but application to graphs remains conditional on the universal graph-to-demand/RX-Hall bridge and the earlier frontier-preparation mathematics. This is not an unrestricted theorem or external review."
 }
