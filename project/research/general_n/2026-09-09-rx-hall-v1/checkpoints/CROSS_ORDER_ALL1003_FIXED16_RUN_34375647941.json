@@ -1,0 +1,21 @@
+{
+  "BC_count": 9,
+  "SH_count": 7,
+  "floating_point_reconnaissance_only": true,
+  "interpretation": "Success means one fixed 16-shape F+G staircase-weight vector works across all 996 n29 and seven n30 hard profiles; scalar bookkeeping remains profile-specific.",
+  "message": "The problem is infeasible. (HiGHS Status 8: model_status is Infeasible; primal_status is None)",
+  "objective": null,
+  "profile_counts": {
+    "n29t2": 902,
+    "n29t3": 94,
+    "n30t1": 7
+  },
+  "profiles": 1003,
+  "rows": 367580,
+  "schema": "cross-order-all1003-fixed16-v1",
+  "seconds": 134.94166350364685,
+  "status": 2,
+  "success": false,
+  "support_count": 16,
+  "variables": 22745
+}
