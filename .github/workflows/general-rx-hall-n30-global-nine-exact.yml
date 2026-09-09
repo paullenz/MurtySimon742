@@ -1,0 +1,55 @@
+name: General RX-Hall n30 exact global nine-shape support
+
+on:
+  workflow_dispatch:
+  push:
+    paths:
+      - 'project/research/general_n/2026-09-09-rx-hall-v1/checkpoints/N30_SHARED_MIN_SUPPORT_RUN_34361230390.json'
+      - '.github/workflows/general-rx-hall-n30-global-nine-exact.yml'
+
+permissions:
+  contents: write
+
+jobs:
+  exactify:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262
+      - name: Pin solver
+        run: |
+          python3 -m venv .venv
+          .venv/bin/python -m pip install --disable-pip-version-check --only-binary=:all: scipy==1.17.0
+      - name: Exactify global minimum support
+        run: |
+          set -euo pipefail
+          R=project/research/general_n/2026-09-09-rx-hall-v1
+          mkdir -p out
+          .venv/bin/python -I -B "$R/shared_exactify_support.py" \
+            --bc-json "$R/checkpoints/N30_BC_UPPER_CUTGEN_RUN_34348486247.json" \
+            --support-json "$R/checkpoints/N30_SHARED_MIN_SUPPORT_RUN_34361230390.json" \
+            --a 13 --b 16 --dmax 11 --scale 1000000 --output out/GLOBAL_NINE_EXACT.json
+      - uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02
+        with:
+          name: n30-global-nine-shape-exact
+          path: out/GLOBAL_NINE_EXACT.json
+          if-no-files-found: error
+          retention-days: 30
+      - name: Commit exact checkpoint
+        run: |
+          set -euo pipefail
+          P="project/research/general_n/2026-09-09-rx-hall-v1/checkpoints/N30_GLOBAL_NINE_EXACT_RUN_${GITHUB_RUN_ID}.json"
+          cp out/GLOBAL_NINE_EXACT.json "$P"
+          test -s "$P"
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add "$P"
+          git commit -m "Preserve exact global nine-shape support run ${GITHUB_RUN_ID}"
+          git stash push -u -m workflow-dirty || true
+          for attempt in 1 2 3 4 5; do
+            git fetch origin main
+            git rebase origin/main || { git rebase --abort || true; }
+            if git push origin HEAD:main; then exit 0; fi
+            sleep $((attempt*2))
+          done
+          exit 1
