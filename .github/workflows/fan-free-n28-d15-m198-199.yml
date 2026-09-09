@@ -1,0 +1,80 @@
+name: Fan-free n28 Delta15 m198-199 trusted closure
+
+on:
+  workflow_dispatch:
+  push:
+    paths:
+      - 'project/research/fan-free-fixed-orders/2026-09-09-v1/n28_upper_prepare.py'
+      - 'project/research/fan-free-fixed-orders/2026-09-09-v1/n28_upper_rows.cpp'
+      - 'project/research/fan-free-fixed-orders/2026-09-09-v1/n28_upper_close.py'
+      - '.github/workflows/fan-free-n28-d15-m198-199.yml'
+
+permissions:
+  contents: write
+
+jobs:
+  close:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 45
+    strategy:
+      fail-fast: false
+      matrix:
+        m: [198,199]
+    steps:
+      - uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262
+        with:
+          fetch-depth: 0
+      - name: Pin solver dependency
+        run: |
+          python3 -m venv .venv
+          .venv/bin/python -m pip install --disable-pip-version-check --only-binary=:all: scipy==1.17.0
+      - name: Generate complete strengthened demand and row frontier
+        run: |
+          set -euo pipefail
+          F=project/research/fan-free-fixed-orders/2026-09-09-v1
+          mkdir -p out
+          .venv/bin/python -I -B "$F/n28_upper_prepare.py" --m ${{ matrix.m }} --output out
+          g++ -O3 -std=c++17 "$F/n28_upper_rows.cpp" -o n28_upper_rows
+          ./n28_upper_rows out/demands.txt out/row_survivors.txt out/row_bands.txt > out/ROWS_REPORT.json
+          cat out/PREPARE_REPORT.json
+          cat out/ROWS_REPORT.json
+      - name: Apply exact row threshold and Farkas closure
+        run: |
+          F=project/research/fan-free-fixed-orders/2026-09-09-v1
+          .venv/bin/python -I -B "$F/n28_upper_close.py" --m ${{ matrix.m }} --demands out/demands.txt --rows out/row_survivors.txt --output out/CERTIFICATES.json.gz | tee out/CLOSE_REPORT.json
+      - name: Build durable scope receipt
+        run: |
+          python3 - <<'PY'
+          import json,pathlib
+          m=${{ matrix.m }}
+          p=json.load(open('out/PREPARE_REPORT.json'));r=json.load(open('out/ROWS_REPORT.json'));c=json.load(open('out/CLOSE_REPORT.json'))
+          out={'schema':'fan-free-n28-d15-scope-v1','n':28,'Delta':15,'m':m,'t':m-195,'prepare':p,'rows':r,'close':c,'final_survivors':0,'status':'candidate fixed-order proof component; independent review open'}
+          pathlib.Path(f'FAN_FREE_N28_D15_M{m}.json').write_text(json.dumps(out,indent=2,sort_keys=True)+'\n')
+          PY
+      - uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02
+        with:
+          name: fan-free-n28-d15-m${{ matrix.m }}
+          path: |
+            FAN_FREE_N28_D15_M${{ matrix.m }}.json
+            out/PREPARE_REPORT.json
+            out/ROWS_REPORT.json
+            out/CLOSE_REPORT.json
+            out/CERTIFICATES.json.gz
+          retention-days: 30
+      - name: Commit durable receipt
+        run: |
+          set -euo pipefail
+          cp FAN_FREE_N28_D15_M${{ matrix.m }}.json project/research/fan-free-fixed-orders/2026-09-09-v1/checkpoints_N28_D15_M${{ matrix.m }}.json
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add project/research/fan-free-fixed-orders/2026-09-09-v1/checkpoints_N28_D15_M${{ matrix.m }}.json
+          git commit -m "Preserve Fan-free n28 Delta15 m${{ matrix.m }} closure ${GITHUB_RUN_ID}" || exit 0
+          for attempt in 1 2 3 4 5; do
+            if git push origin HEAD:main; then exit 0; fi
+            git reset --hard HEAD
+            git pull --rebase origin main
+            git add project/research/fan-free-fixed-orders/2026-09-09-v1/checkpoints_N28_D15_M${{ matrix.m }}.json || true
+            git commit -m "Preserve Fan-free n28 Delta15 m${{ matrix.m }} closure ${GITHUB_RUN_ID}" || true
+            sleep $((attempt*2))
+          done
+          exit 1
