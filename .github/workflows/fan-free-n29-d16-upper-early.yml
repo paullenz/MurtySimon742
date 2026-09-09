@@ -1,0 +1,42 @@
+name: Fan-free n29 Delta16 m213-215 early kernel
+
+on:
+  workflow_dispatch:
+  push:
+    paths:
+      - 'project/research/fan-free-fixed-orders/2026-09-09-v1/n29_d16_upper_early.py'
+      - '.github/workflows/fan-free-n29-d16-upper-early.yml'
+
+permissions:
+  contents: write
+
+jobs:
+  close:
+    runs-on: ubuntu-24.04
+    steps:
+      - uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262
+        with:
+          fetch-depth: 0
+      - run: python3 -m pip install --disable-pip-version-check 'scipy==1.17.0'
+      - name: Run parameterized exact-acceptance early kernel
+        run: python3 -I -B project/research/fan-free-fixed-orders/2026-09-09-v1/n29_d16_upper_early.py --output FAN_FREE_N29_D16_UPPER_EARLY.json
+      - uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02
+        with:
+          name: fan-free-n29-d16-upper-early
+          path: FAN_FREE_N29_D16_UPPER_EARLY.json
+          retention-days: 30
+      - name: Commit durable checkpoint
+        run: |
+          set -euo pipefail
+          cp FAN_FREE_N29_D16_UPPER_EARLY.json project/research/fan-free-fixed-orders/2026-09-09-v1/checkpoints_N29_D16_UPPER_EARLY.json
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add project/research/fan-free-fixed-orders/2026-09-09-v1/checkpoints_N29_D16_UPPER_EARLY.json
+          git commit -m "Preserve Fan-free n29 Delta16 upper early closure ${GITHUB_RUN_ID}" || exit 0
+          for attempt in 1 2 3 4 5; do
+            if git push origin HEAD:main; then exit 0; fi
+            git reset --hard HEAD
+            git pull --rebase origin main
+            sleep $((attempt*2))
+          done
+          exit 1
