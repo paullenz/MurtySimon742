@@ -1,0 +1,17 @@
+{
+  "BC_count": 75,
+  "SH_count": 3,
+  "floating_point_reconnaissance_only": true,
+  "interpretation": "All 75 canonical n29 BC shapes are available, but SH is restricted to the three exact n30 SH shapes; staircase weights are common within the selected profile set.",
+  "message": "The problem is infeasible. (HiGHS Status 8: model_status is Infeasible; primal_status is None)",
+  "mode": "t2",
+  "objective": null,
+  "profiles": 902,
+  "rows": 334159,
+  "schema": "n29-sh3-fullbc-scan-v1",
+  "seconds": 377.9019966125488,
+  "status": 2,
+  "success": false,
+  "variables": 20576,
+  "provenance": {"workflow_run":34382052963,"artifact_id":10116499834,"artifact_sha256":"74d13a3873afaf4c89687a4fcf2c5654d2abb1bd1e69713cce1edd9638e2b958"}
+}
