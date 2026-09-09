@@ -1,0 +1,45 @@
+name: Hostile Fan-free fixed-order coverage audit
+
+on:
+  workflow_dispatch:
+  push:
+    paths:
+      - 'project/research/fan-free-fixed-orders/2026-09-09-v1/audit_fan_free_frontier.py'
+      - 'project/research/fan-free-fixed-orders/2026-09-09-v1/FAN_FREE_REDUCTION.md'
+      - 'project/research/fan-free-fixed-orders/2026-09-09-v1/checkpoints_*.json'
+      - 'project/reviews/n25/2026-09-09-fan-free-v2/**'
+      - 'project/reviews/n27/2026-09-09-fan-free-v2/**'
+      - 'project/reviews/n28/2026-09-09-fan-free-v2/**'
+      - 'project/reviews/n29/2026-09-09-fan-free-v2/**'
+      - 'project/reviews/n30/2026-09-09-fan-free-v2/**'
+      - '.github/workflows/audit-fan-free-frontier.yml'
+
+permissions:
+  contents: write
+
+jobs:
+  audit:
+    runs-on: ubuntu-24.04
+    steps:
+      - uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262
+        with:
+          fetch-depth: 0
+      - name: Run standard-library hostile assembly audit
+        run: python3 -I -B project/research/fan-free-fixed-orders/2026-09-09-v1/audit_fan_free_frontier.py
+      - name: Show audit report
+        run: cat project/research/fan-free-fixed-orders/2026-09-09-v1/FAN_FREE_AUDIT_REPORT.json
+      - name: Commit durable audit report
+        run: |
+          set -euo pipefail
+          D=project/research/fan-free-fixed-orders/2026-09-09-v1
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add "$D/FAN_FREE_AUDIT.md" "$D/FAN_FREE_AUDIT_REPORT.json"
+          git commit -m "Preserve hostile Fan-free frontier audit ${GITHUB_RUN_ID}" || exit 0
+          for attempt in 1 2 3 4 5; do
+            if git push origin HEAD:main; then exit 0; fi
+            git fetch origin main
+            git rebase origin/main || { git rebase --abort || true; }
+            sleep $((attempt*2))
+          done
+          exit 1
