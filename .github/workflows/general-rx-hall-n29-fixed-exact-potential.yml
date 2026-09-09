@@ -1,0 +1,106 @@
+name: General RX-Hall n29 fixed exact potential full-frontier scan
+
+on:
+  workflow_dispatch:
+  push:
+    paths:
+      - 'project/research/general_n/2026-09-09-rx-hall-v1/n29_fixed_exact_potential_scan.py'
+      - '.github/workflows/general-rx-hall-n29-fixed-exact-potential.yml'
+
+permissions:
+  contents: write
+
+jobs:
+  scan:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 20
+    strategy:
+      fail-fast: false
+      matrix:
+        include:
+          - {t: 3, shard: 0, shards: 1}
+          - {t: 2, shard: 0, shards: 6}
+          - {t: 2, shard: 1, shards: 6}
+          - {t: 2, shard: 2, shards: 6}
+          - {t: 2, shard: 3, shards: 6}
+          - {t: 2, shard: 4, shards: 6}
+          - {t: 2, shard: 5, shards: 6}
+    steps:
+      - uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262
+      - name: Pin solver
+        run: |
+          python3 -m venv .venv
+          .venv/bin/python -m pip install --disable-pip-version-check --only-binary=:all: scipy==1.17.0
+      - name: Regenerate minimal frontier
+        run: |
+          set -euo pipefail
+          D=project/reviews/n29/2026-09-08-redteam-restart-v1
+          mkdir -p inputs out
+          g++ -O3 -std=c++17 "$D/minimal_rows.cpp" -o minimal_rows
+          .venv/bin/python -I -B "$D/minimal_prepare.py" --t ${{ matrix.t }} --output inputs
+          ./minimal_rows inputs/demands.txt inputs/row_survivors.txt inputs/row_bands.txt ${{ matrix.t }} > inputs/MINIMAL_ROWS_REPORT.json
+      - name: Scan fixed exact F+G
+        run: |
+          set -euo pipefail
+          R=project/research/general_n/2026-09-09-rx-hall-v1
+          .venv/bin/python -I -B "$R/n29_fixed_exact_potential_scan.py" \
+            --demands-json inputs/demands.json --rows inputs/row_survivors.txt \
+            --exact-json "$R/checkpoints/N29_COMMON_14_EXACT_RUN_34369583832.json" \
+            --a 12 --b 16 --dmax 10 --t ${{ matrix.t }} \
+            --shard ${{ matrix.shard }} --shards ${{ matrix.shards }} \
+            --output out/SCAN.json
+      - uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02
+        with:
+          name: n29-fixed-exact-t${{ matrix.t }}-s${{ matrix.shard }}
+          path: out/SCAN.json
+          if-no-files-found: error
+          retention-days: 30
+
+  aggregate:
+    needs: scan
+    runs-on: ubuntu-24.04
+    steps:
+      - uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262
+        with:
+          fetch-depth: 0
+      - uses: actions/download-artifact@d3f86a106a0bac45b974a628896c90dbdf5c8093
+        with:
+          pattern: 'n29-fixed-exact-t*-s*'
+          path: reports
+      - name: Aggregate fixed-potential reach
+        run: |
+          set -euo pipefail
+          python3 - <<'PY'
+          import json,pathlib
+          docs=[json.load(open(p)) for p in pathlib.Path('reports').rglob('SCAN.json')]
+          assert len(docs)==7,len(docs)
+          out={'schema':'n29-fixed-exact-potential-aggregate-v1','results':{}}
+          for t,expected in [(3,94),(2,902)]:
+              z=[d for d in docs if d['scope']['t']==t];sep=sum(d['separated'] for d in z);sv=sum(d['survivors'] for d in z);rows=sum(d['rows_in_shard'] for d in z);assert rows==expected,(t,rows)
+              out['results'][str(t)]={'hard_rows':rows,'separated':sep,'survivors':sv,'coverage':sep/rows}
+          out['total_hard_rows']=996;out['total_separated']=sum(q['separated'] for q in out['results'].values());out['total_survivors']=996-out['total_separated'];out['total_coverage']=out['total_separated']/996;out['frozen_FG_weights_from_exact_checkpoint']=True;out['floating_scalar_reconnaissance_only']=True
+          pathlib.Path('out').mkdir(exist_ok=True);pathlib.Path('out/AGGREGATE.json').write_text(json.dumps(out,indent=2,sort_keys=True)+'\n');print(json.dumps(out,indent=2,sort_keys=True))
+          PY
+      - uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02
+        with:
+          name: n29-fixed-exact-potential-aggregate
+          path: out/AGGREGATE.json
+          if-no-files-found: error
+          retention-days: 30
+      - name: Commit aggregate checkpoint
+        run: |
+          set -euo pipefail
+          R=project/research/general_n/2026-09-09-rx-hall-v1/checkpoints
+          P="$R/N29_FIXED_EXACT_POTENTIAL_RUN_${GITHUB_RUN_ID}.json"
+          cp out/AGGREGATE.json "$P"
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add "$P"
+          git commit -m "Preserve fixed n29 exact-potential scan ${GITHUB_RUN_ID}"
+          git restore . || true
+          for attempt in 1 2 3 4 5; do
+            if git push origin HEAD:main; then exit 0; fi
+            git pull --rebase --autostash origin main
+            sleep $((attempt*2))
+          done
+          exit 1
