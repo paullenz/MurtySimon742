@@ -4,6 +4,7 @@ on:
   workflow_dispatch:
   push:
     paths:
+      - 'project/research/general_n/2026-09-09-rx-hall-v1/n29_dictionary_catalog.py'
       - '.github/workflows/general-rx-hall-n29-dictionary-catalog.yml'
 
 permissions:
