@@ -5,6 +5,7 @@ on:
   push:
     paths:
       - 'project/research/general_n/2026-09-09-rx-hall-v1/rx_hall_t3_hall_core_exact.py'
+      - 'project/research/general_n/2026-09-09-rx-hall-v1/rx_hall_t3_hall_core_verify.py'
       - 'project/research/general_n/2026-09-09-rx-hall-v1/rx_hall_exact.py'
       - 'project/reviews/n29/2026-09-08-redteam-restart-v1/minimal_prepare.py'
       - 'project/reviews/n29/2026-09-08-redteam-restart-v1/minimal_rows.cpp'
@@ -63,6 +64,26 @@ jobs:
           assert r['uses_hall_unions_of_at_most_two_rectangles'] is True
           assert r['uses_all_staircase_hall_cuts'] is False
           print(json.dumps(r,indent=2,sort_keys=True))
+          PY
+      - name: Independently verify every integer certificate
+        run: |
+          set -euo pipefail
+          D=project/research/general_n/2026-09-09-rx-hall-v1
+          python3 -I -B "$D/rx_hall_t3_hall_core_verify.py" \
+            --demands-json inputs/t3/demands.json \
+            --rows inputs/t3/row_survivors.txt \
+            --certificates out/hall_core_certificates.json.gz \
+            --a 12 --b 16 --dmax 10 --t 3 \
+            > out/independent_check.json
+          cat out/independent_check.json
+          python3 - <<'PY'
+          import json
+          r=json.load(open('out/independent_check.json'))
+          assert r['status']=='PASS'
+          assert r['records_checked']==94
+          assert r['standard_library_only'] is True
+          assert r['imports_generator'] is False
+          assert r['imports_scipy'] is False
           PY
       - uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02
         with:
