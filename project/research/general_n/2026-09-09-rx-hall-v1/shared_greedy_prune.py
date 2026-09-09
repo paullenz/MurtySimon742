@@ -27,7 +27,7 @@ class LP:
             for j,v in r.items():A[i,j]=v
         return linprog(np.array(self.c),A_ub=A.tocsr(),b_ub=np.array(self.rhs),bounds=self.bounds,method='highs')
 
-def solve(P,bcshapes,shshapes,a,b,dmax):
+def build(P,bcshapes,shshapes,a,b,dmax):
     M=LP();lam=M.var(('coef','lambda'),(0,None),1);cc=M.var(('coef','c'),(0,None),1);mp=M.var(('coef','mu+'),(0,None),1);mm=M.var(('coef','mu-'),(0,None),1);t2=M.var(('coef','tau2'),(0,None),1);t3=M.var(('coef','tau3'),(0,None),1)
     bw=[M.var(('BC',i),(0,None),1) for i in range(len(bcshapes))];sw=[M.var(('SH',i),(0,None),1) for i in range(len(shshapes))]
     def addpot(row,coord_bc,coord_sh,factor,sign):
@@ -35,7 +35,6 @@ def solve(P,bcshapes,shshapes,a,b,dmax):
             if inside(coord_bc,g):row[bw[i]]=row.get(bw[i],0)+sign*factor
         for i,g in enumerate(shshapes):
             if inside(coord_sh,g):row[sw[i]]=row.get(sw[i],0)+sign*factor
-    ells_by=[];sigs_by=[]
     for pi,p in enumerate(P):
         sc=Counter(p['s']);rc=Counter(p['rho']);ells={};sigs={}
         for s,n in sorted(sc.items()):
@@ -52,9 +51,11 @@ def solve(P,bcshapes,shshapes,a,b,dmax):
         r=sum(p['rho']);row={lam:r}
         for s,n in sc.items():row[ells[s]]=row.get(ells[s],0)-n
         for rho,n in rc.items():row[sigs[rho]]=row.get(sigs[rho],0)-n
-        M.le(row,-1);ells_by.append(ells);sigs_by.append(sigs)
-    res=M.solve()
-    return res
+        M.le(row,-1)
+    return M
+
+def solve(P,bcshapes,shshapes,a,b,dmax):
+    M=build(P,bcshapes,shshapes,a,b,dmax);return M,M.solve()
 
 def main():
     ap=argparse.ArgumentParser();ap.add_argument('--bc-json',type=Path,required=True);ap.add_argument('--shared-json',type=Path,required=True);ap.add_argument('--a',type=int,required=True);ap.add_argument('--b',type=int,required=True);ap.add_argument('--dmax',type=int,required=True);ap.add_argument('--output',type=Path,required=True);z=ap.parse_args()
@@ -66,11 +67,12 @@ def main():
         candidates=[('BC',i) for i in range(len(bc))]+[('SH',i) for i in range(len(sh))]
         for fam,i in candidates:
             bc2=bc[:i]+bc[i+1:] if fam=='BC' else list(bc);sh2=sh[:i]+sh[i+1:] if fam=='SH' else list(sh)
-            res=solve(P,bc2,sh2,z.a,z.b,z.dmax)
+            _,res=solve(P,bc2,sh2,z.a,z.b,z.dmax)
             if res.success:
                 history.append({'deleted_family':fam,'deleted_index':i,'remaining_BC':len(bc2),'remaining_SH':len(sh2),'objective':float(res.fun)})
                 bc,sh=bc2,sh2;changed=True;break
-    final=solve(P,bc,sh,z.a,z.b,z.dmax)
-    out={'schema':'n30-shared-greedy-prune-v1','success':bool(final.success),'floating_point_reconnaissance_only':True,'initial_BC':len(J['active_BC']),'initial_SH':len(J['active_SH']),'final_BC_count':len(bc),'final_SH_count':len(sh),'support_count':len(bc)+len(sh),'BC_shapes':[[list(p) for p in g] for g in bc],'SH_shapes':[[list(p) for p in g] for g in sh],'history':history,'final_objective':float(final.fun) if final.success else None}
-    z.output.parent.mkdir(parents=True,exist_ok=True);z.output.write_text(json.dumps(out,indent=2,sort_keys=True)+'\n');print(json.dumps({k:v for k,v in out.items() if k not in ('BC_shapes','SH_shapes','history')},indent=2,sort_keys=True))
+    M,final=solve(P,bc,sh,z.a,z.b,z.dmax)
+    vals={str(name):float(final.x[i]) for i,name in enumerate(M.names)} if final.success else {}
+    out={'schema':'n30-shared-greedy-prune-v2','success':bool(final.success),'floating_point_reconnaissance_only':True,'initial_BC':len(J['active_BC']),'initial_SH':len(J['active_SH']),'final_BC_count':len(bc),'final_SH_count':len(sh),'support_count':len(bc)+len(sh),'BC_shapes':[[list(p) for p in g] for g in bc],'SH_shapes':[[list(p) for p in g] for g in sh],'history':history,'final_objective':float(final.fun) if final.success else None,'variables':vals}
+    z.output.parent.mkdir(parents=True,exist_ok=True);z.output.write_text(json.dumps(out,indent=2,sort_keys=True)+'\n');print(json.dumps({k:v for k,v in out.items() if k not in ('BC_shapes','SH_shapes','history','variables')},indent=2,sort_keys=True))
 if __name__=='__main__':main()
