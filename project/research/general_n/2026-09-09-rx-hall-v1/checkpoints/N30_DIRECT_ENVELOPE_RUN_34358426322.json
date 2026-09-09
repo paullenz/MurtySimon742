@@ -1,0 +1,82 @@
+{
+  "contradiction_margin": 964,
+  "envelope_left_lower_bound": 146602,
+  "labels": [
+    {
+      "first_minimizer": {
+        "R": 1,
+        "x": 1
+      },
+      "minimum": 21030,
+      "multiplicity": 2,
+      "psi_at_minimizer": 11074,
+      "s": 1,
+      "states_checked": 121
+    },
+    {
+      "first_minimizer": {
+        "R": 4,
+        "x": 2
+      },
+      "minimum": 41590,
+      "multiplicity": 2,
+      "psi_at_minimizer": 6141,
+      "s": 2,
+      "states_checked": 105
+    },
+    {
+      "first_minimizer": {
+        "R": 5,
+        "x": 3
+      },
+      "minimum": 58659,
+      "multiplicity": 9,
+      "psi_at_minimizer": 6465,
+      "s": 3,
+      "states_checked": 90
+    }
+  ],
+  "lambda": 4698,
+  "lambda_r": 145638,
+  "r": 31,
+  "schema": "n30-direct-pairwise-envelope-check-v1",
+  "sources": [
+    {
+      "first_minimizer": {
+        "p": 1,
+        "q": 2
+      },
+      "minimum": -19922,
+      "multiplicity": 8,
+      "psi_at_minimizer": 7562,
+      "qmax": 2,
+      "rho": 1,
+      "states_checked": 12
+    },
+    {
+      "first_minimizer": {
+        "p": 2,
+        "q": 3
+      },
+      "minimum": -37093,
+      "multiplicity": 1,
+      "psi_at_minimizer": 9166,
+      "qmax": 4,
+      "rho": 2,
+      "states_checked": 25
+    },
+    {
+      "first_minimizer": {
+        "p": 4,
+        "q": 2
+      },
+      "minimum": -44300,
+      "multiplicity": 7,
+      "psi_at_minimizer": 8408,
+      "qmax": 10,
+      "rho": 3,
+      "states_checked": 66
+    }
+  ],
+  "status": "PASS"
+}
