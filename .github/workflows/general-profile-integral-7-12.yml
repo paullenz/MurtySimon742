@@ -1,0 +1,82 @@
+name: General profile-integral 7/12 candidate audit
+
+on:
+  workflow_dispatch:
+  push:
+    paths:
+      - 'project/research/general_n/2026-09-09-profile-integral-7-12-v1/**'
+      - '.github/workflows/general-profile-integral-7-12.yml'
+
+permissions:
+  contents: write
+
+jobs:
+  audit:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 30
+    steps:
+      - uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262
+      - name: Run primary exact checker
+        run: |
+          set -euo pipefail
+          D=project/research/general_n/2026-09-09-profile-integral-7-12-v1
+          mkdir -p out
+          python3 -I -B "$D/src/check_7_12.py" > out/EXACT_CHECK.json
+          test -s out/EXACT_CHECK.json
+      - name: Run independently structured audit
+        run: |
+          set -euo pipefail
+          D=project/research/general_n/2026-09-09-profile-integral-7-12-v1
+          python3 -I -B "$D/src/audit_7_12_independent.py" > out/INDEPENDENT_AUDIT.json
+          test -s out/INDEPENDENT_AUDIT.json
+      - name: Cross-check reports
+        run: |
+          python3 - <<'PY'
+          import json
+          A=json.load(open('out/EXACT_CHECK.json'))
+          B=json.load(open('out/INDEPENDENT_AUDIT.json'))
+          ea=A['degree_assembly']['exceptions']
+          eb=B['assembly']['exceptions']
+          assert [x['a'] for x in ea]==[x['a'] for x in eb]
+          assert [x['upper_S_minus_r'] for x in ea]==[x['cap_S_minus_r'] for x in eb]
+          assert A['scalar']['middle_margin']==B['scalar']['margin']=='11/216000'
+          assert A['degree_assembly']['D53']==B['assembly']['D53']=='123/3200'
+          print(json.dumps({'status':'PASS','exceptions':[x['a'] for x in ea],
+            'caps':[x['upper_S_minus_r'] for x in ea],
+            'primary_pairs':A['regression']['eligible_degree_pairs_checked'],
+            'independent_pairs':B['degree_pairs_regressed']},sort_keys=True))
+          PY
+      - uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02
+        with:
+          name: profile-integral-7-12-audit
+          path: out/*.json
+          if-no-files-found: error
+          retention-days: 90
+      - name: Preserve durable evidence
+        run: |
+          set -euo pipefail
+          D=project/research/general_n/2026-09-09-profile-integral-7-12-v1/evidence/run-${GITHUB_RUN_ID}
+          mkdir -p "$D"
+          cp out/EXACT_CHECK.json "$D/EXACT_CHECK.json"
+          cp out/INDEPENDENT_AUDIT.json "$D/INDEPENDENT_AUDIT.json"
+          python3 - <<PY > "$D/RECEIPT.json"
+          import hashlib,json,pathlib,os
+          d=pathlib.Path('$D')
+          out={'schema':'profile-integral-7-12-audit-receipt-v1','run_id':os.environ['GITHUB_RUN_ID'],'files':{}}
+          for p in sorted(d.glob('*.json')):
+              if p.name=='RECEIPT.json': continue
+              out['files'][p.name]={'sha256':hashlib.sha256(p.read_bytes()).hexdigest(),'bytes':p.stat().st_size}
+          print(json.dumps(out,indent=2,sort_keys=True))
+          PY
+          test -s "$D/EXACT_CHECK.json"; test -s "$D/INDEPENDENT_AUDIT.json"; test -s "$D/RECEIPT.json"
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add "$D"
+          git commit -m "Preserve 7/12 profile-integral audit run ${GITHUB_RUN_ID}"
+          for attempt in 1 2 3 4 5; do
+            if git push origin HEAD:main; then exit 0; fi
+            git reset --hard HEAD
+            git pull --rebase origin main
+            sleep $((attempt*2))
+          done
+          exit 1
