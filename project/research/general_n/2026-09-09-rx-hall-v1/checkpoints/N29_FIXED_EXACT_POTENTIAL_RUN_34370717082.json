@@ -1,0 +1,23 @@
+{
+  "floating_scalar_reconnaissance_only": true,
+  "frozen_FG_weights_from_exact_checkpoint": true,
+  "results": {
+    "2": {
+      "coverage": 0.9977827050997783,
+      "hard_rows": 902,
+      "separated": 900,
+      "survivors": 2
+    },
+    "3": {
+      "coverage": 1.0,
+      "hard_rows": 94,
+      "separated": 94,
+      "survivors": 0
+    }
+  },
+  "schema": "n29-fixed-exact-potential-aggregate-v1",
+  "total_coverage": 0.9979919678714859,
+  "total_hard_rows": 996,
+  "total_separated": 994,
+  "total_survivors": 2
+}
