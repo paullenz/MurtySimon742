@@ -5,6 +5,10 @@ This reconstructs the residual-budget + source-label-incidence relaxation with
 semantic tags on every equality/inequality, proposes and exactly verifies the
 same integer Farkas certificates, then aggregates nonzero multiplier support by
 constraint family. It is a research diagnostic, not a new theorem.
+
+2026-09-09: canonical rerun requested after the review-ready proof-paper gate;
+the durable checkpoint produced by the workflow is the input to the next
+partition-capacity ablation.
 """
 from collections import Counter,defaultdict
 from importlib.util import module_from_spec,spec_from_file_location
