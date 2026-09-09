@@ -37,7 +37,7 @@ with equality exactly K(14,15).
 
 [Reviewer release](releases/n29-reviewer-v1/README.md) · [full proof and replay guide](project/reviews/n29/2026-09-08-candidate-v1/README.md) · [candidate manuscript](project/reviews/n29/2026-09-08-candidate-v1/PROOF.md) · [standalone Delta=16 graph-to-model bridge](project/reviews/n29/2026-09-09-bridge-standalone-v1/GRAPH_TO_MODEL_BRIDGE.md) · [bridge hostile audit](project/reviews/n29/2026-09-09-bridge-standalone-v1/BRIDGE_REDTEAM.md) · [restarted red-team audit](project/reviews/n29/2026-09-08-redteam-restart-v1/N29_RED_TEAM_RESTART.md) · [public-release audit](project/reviews/n29/2026-09-08-redteam-restart-v1/PUBLIC_RELEASE_AUDIT.md).
 
-The proof does **not** depend on the later general `293/500` candidate theorem. Fan's cited strict bound leaves only 211 edges to exclude. `Delta=15` is handled by a witness-deficit count, which also forces `K(14,15)` at 210. `Delta=17` is excluded by a short pointwise charging bound, `Delta=18..27` by the residual h-index inequality, and a universal vertex gives a star.
+The proof does **not** depend on the later general profile-integral candidates. Fan's cited strict bound leaves only 211 edges to exclude. `Delta=15` is handled by a witness-deficit count, which also forces `K(14,15)` at 210. `Delta=17` is excluded by a short pointwise charging bound, `Delta=18..27` by the residual h-index inequality, and a universal vertex gives a star.
 
 The difficult `Delta=16` case has several same-assistant computational routes. The preferred proof-critical route is now the **minimal trusted kernel**:
 
@@ -74,19 +74,41 @@ The `Delta=16` scopes use a genuine parameterisation of the stripped graph-to-de
 
 ## General structural programme
 
-### Profile-integral continuation — 293/500 candidate
+### Strengthened profile-integral — 7/12 candidate
 
-The [reviewer release](releases/general-293-500-reviewer-v1/README.md) and [profile-integral proof](project/research/general_n/2026-09-08-profile-integral-v1/PROOF.md) give the candidate implication
+The current strongest reviewer-packaged maximum-degree candidate is
+
+```text
+n >= 6 and Delta(G) >= (7/12)n  ==>  e(G) < floor(n^2/4).
+```
+
+[Reviewer release](releases/general-7-12-reviewer-v1/README.md) · [standalone proof](project/research/general_n/2026-09-09-profile-integral-7-12-v1/PROOF.md) · [hostile audit](project/research/general_n/2026-09-09-profile-integral-7-12-v1/AUDIT.md) · [exact evidence](project/research/general_n/2026-09-09-profile-integral-7-12-v1/evidence/run-34355073705/RECEIPT.json).
+
+The new scalar estimate strengthens the universal surplus bound to
+
+```text
+t < 5a^2/128 + a/8.
+```
+
+The improvement uses the actual substitution domain `u<=1/2` to obtain a sharper exact square-root minorant; the resulting scalar loss is `<5/64`. Two separately written standard-library checkers agree exactly on the scalar arithmetic, the eleven finite degree-assembly exceptions and their threshold certificates. The primary checker regressed 5,207,079 eligible degree pairs through `n=5000`; the separately structured audit regressed 1,874,246 pairs through `n=3000`. Those regressions are consistency checks, not proof by extrapolation. The main trust boundary remains the shared graph-to-demand/profile-integral lemmas inherited from the earlier profile-integral work.
+
+A [strategic ceiling note](project/research/general_n/2026-09-09-profile-integral-7-12-v1/PROFILE_INTEGRAL_CEILING.md) shows that the current scalar-uniform profile-integral architecture has an asymptotic degree threshold near `0.582066`, so the clean `7/12 = 0.583333...` result is already fairly close to that route's intrinsic limit. Substantial further progress is therefore expected to require retaining more joint profile information.
+
+**Status: complete candidate hand argument; internal exact audits green; independent mathematical review, novelty assessment and external reproduction OPEN.**
+
+### Profile-integral 293/500 — retained predecessor
+
+The [293/500 reviewer release](releases/general-293-500-reviewer-v1/README.md) and [profile-integral proof](project/research/general_n/2026-09-08-profile-integral-v1/PROOF.md) give the earlier candidate implication
 
 ```text
 n >= 6 and Delta(G) >= (293/500)n  ==>  e(G) < floor(n^2/4).
 ```
 
-It proves `t < a^2/24+a/8` by retaining the demand profile across thresholds. [Replay and audit](project/research/general_n/2026-09-08-profile-integral-v1/README.md). This remains a general structural candidate, not a dependency of the n=29 or n=30 proofs.
+It proves `t < a^2/24+a/8` by retaining the demand profile across thresholds. [Replay and audit](project/research/general_n/2026-09-08-profile-integral-v1/README.md). It remains preserved and reviewable, but is **superseded in threshold strength by the 7/12 candidate**. Neither profile-integral result is a dependency of the n=29 or n=30 fixed-order proofs.
 
-### RX-Hall / monotone-coupling continuation — research programme, not theorem
+### RX-Hall / pairwise-staircase continuation — research programme, not theorem
 
-The current post-`293/500` attack is preserved under [`project/research/general_n/2026-09-09-rx-hall-v1/`](project/research/general_n/2026-09-09-rx-hall-v1/README.md). It is a **necessary-condition research programme**, not a new all-order theorem and not a dependency of the completed n=29 or n=30 candidate packages.
+The active route below the profile-integral frontier is preserved under [`project/research/general_n/2026-09-09-rx-hall-v1/`](project/research/general_n/2026-09-09-rx-hall-v1/README.md). It is a **necessary-condition research programme**, not a new all-order theorem and not a dependency of the completed n=29 or n=30 candidate packages.
 
 The incidence layer has now been reduced substantially. The [exact Hall projection](project/research/general_n/2026-09-09-rx-hall-v1/HALL_PROJECTION.md) removes the `Z` variables, the [neighbourhood-closure / staircase reduction](project/research/general_n/2026-09-09-rx-hall-v1/HALL_STAIRCASE_REDUCTION.md) identifies the finite staircase geometry, and the [finite monotone-coupling reduction](project/research/general_n/2026-09-09-rx-hall-v1/MONOTONE_COUPLING_REDUCTION.md) puts the remaining transport problem in the common coordinatewise order
 
@@ -94,30 +116,24 @@ The incidence layer has now been reduced substantially. The [exact Hall projecti
 Y = (s, R+s, -(R+x)) <= X = (rho, rho+q-1, -(q+p)).
 ```
 
-Thus the stripped transport layer is exactly a finite multivariate stochastic-dominance problem: equal total incidence mass plus all coordinatewise upper-set inequalities. On the seven hardest preserved n=30 equality-frontier states, ordinary ambient upper-set separation closes **7/7** states with exact integer-Farkas certificates, without `Z` variables or support-specific closure. Restricting the generated ambient upper sets to minimal antichains of size at most **8** still closes all seven exactly. The stronger support-adapted closed-cut normal form needs only 24–43 generated cuts per state, and restricting those cuts to staircase frontier size at most **7** still closes all seven exactly.
-
-The frontier has since compressed further. The [pairwise staircase reduction](project/research/general_n/2026-09-09-rx-hall-v1/PAIRWISE_STAIRCASE_REDUCTION.md) shows that full three-dimensional Hall geometry is unnecessary on this n=30 laboratory. The two-dimensional `BC` order
+On the seven hardest preserved n=30 equality-frontier states, full 3D Hall geometry is not needed. The [pairwise staircase reduction](project/research/general_n/2026-09-09-rx-hall-v1/PAIRWISE_STAIRCASE_REDUCTION.md) reduces the obstruction to the two coupled 2D orders
 
 ```text
-(d, -h) <= (alpha, -beta),
-where d=R+s, h=R+x, alpha=rho+q-1, beta=q+p,
+(d,-h) <= (alpha,-beta)
+(s,-h) <= (rho,-beta),
 ```
 
-closes six of the seven hard states exactly, using generated staircase antichains of size at most **7**. One-dimensional `s`-tail dominance and the alternative pairwise `(s,d)` order do not close the exceptional state. Adding instead the second two-dimensional order
+where `d=R+s`, `h=R+x`, `alpha=rho+q-1`, `beta=q+p`. The first family alone closes six of seven states exactly; the second supplies the correction for the exceptional state. The [staircase-potential note](project/research/general_n/2026-09-09-rx-hall-v1/PAIRWISE_STAIRCASE_POTENTIAL.md) expresses their nonnegative weighted sums as a potential of the form
 
 ```text
-(s, -h) <= (rho, -beta)
+Phi(s,d,h) = F(d,h) + G(s,h).
 ```
 
-closes **7/7** exactly. For the exceptional state, an exhaustive exact subset test of the four generated `(s,-h)` correction cuts finds a unique minimal rejecting subset of size **3**; the three required staircase generator sets have sizes `3,2,3`. See the [pairwise exact checkpoint](project/research/general_n/2026-09-09-rx-hall-v1/checkpoints/N30_BC_PLUS_PAIRWISE_RUN_34349412415.json) and [subset-minimisation checkpoint](project/research/general_n/2026-09-09-rx-hall-v1/checkpoints/N30_EXCEPTION_SH_SUBSETS_RUN_34349585850.json).
+Several tempting simplifications have been falsified exactly: all first-moment dominance inequalities together close `0/7`; the natural diagonal-CDF subfamilies close `0/7`; and even all single-corner rectangle inequalities close only `2/7`. Thus genuine multistep staircase shape is doing mathematical work in this relaxation.
 
-The present symbolic target is therefore no longer a general 3D Hall inequality. It is to derive a parameterised increasing potential of the schematic form
+For the exceptional n=30 state, the exact certificate has been reduced from a large incidence LP to **6 BC staircases + 3 SH staircases**. An exhaustive subset test proves that the three SH corrections form the unique minimum rejecting subset within the generated SH family. The semantic exact dual then shows that only source threshold-transport rows `h=2,3` are used. Finally, all explicit density upper bounds `z<=1` have been eliminated exactly as redundant with group normalisation and nonnegativity: the [unit-bound-free checkpoint](project/research/general_n/2026-09-09-rx-hall-v1/checkpoints/N30_NO_UNIT_PAIRWISE_RUN_34357560084.json) retains the exact contradiction with RHS `-881` and nonnegative coefficients for every variable.
 
-```text
-Phi(s,d,h) = F(d,h) + G(s,h),
-```
-
-or an equivalent pair of coupled two-dimensional staircase-majorization inequalities, and prove enough analytic control to improve the existing `293/500` maximum-degree threshold. These are finite research reductions only; no universal staircase bound or unrestricted theorem is claimed.
+The present symbolic target is therefore to replace the finite `6+3` staircase prototype by parameterised pairwise-majorization potentials and derive universal label-side lower / source-side upper envelopes strong enough to push below the new `7/12` candidate frontier. No universal staircase theorem is claimed yet.
 
 ### Layer-sum 13/22 and earlier structural checkpoints
 
@@ -132,14 +148,15 @@ The [13/22 reviewer release](releases/general-13-22-reviewer-v1/README.md), [13/
 | n=28 | [Mathematical manuscript](releases/n28-reviewer-v1/N28_Reviewer_Manuscript_v1.pdf) | [Verification companion](releases/n28-reviewer-v1/N28_Verification_Companion_v1.pdf) |
 | n=29 | [Reviewer manuscript](releases/n29-reviewer-v1/N29_Reviewer_Manuscript_v1.pdf) | [Verification companion](releases/n29-reviewer-v1/N29_Verification_Companion_v1.pdf) |
 | n=30 | [Reviewer manuscript](releases/n30-reviewer-v1/N30_Reviewer_Manuscript_v1.pdf) | [Verification companion](releases/n30-reviewer-v1/N30_Verification_Companion_v1.pdf) |
-| General 13/22 | [Reviewer manuscript](releases/general-13-22-reviewer-v1/General_13_22_Reviewer_Manuscript_v1.pdf) | [Verification companion](releases/general-13-22-reviewer-v1/General_13_22_Verification_Companion_v1.pdf) |
+| **General 7/12** | [Reviewer manuscript](releases/general-7-12-reviewer-v1/General_7_12_Reviewer_Manuscript_v1.pdf) | [Verification companion](releases/general-7-12-reviewer-v1/General_7_12_Verification_Companion_v1.pdf) |
 | General 293/500 | [Reviewer manuscript](releases/general-293-500-reviewer-v1/General_293_500_Reviewer_Manuscript_v1.pdf) | [Verification companion](releases/general-293-500-reviewer-v1/General_293_500_Verification_Companion_v1.pdf) |
+| General 13/22 | [Reviewer manuscript](releases/general-13-22-reviewer-v1/General_13_22_Reviewer_Manuscript_v1.pdf) | [Verification companion](releases/general-13-22-reviewer-v1/General_13_22_Verification_Companion_v1.pdf) |
 
 ## Governance and limits
 
 **No complete order above 30, proof through n=1,000, unrestricted all-order solution, novelty determination, full formal verification or external endorsement is claimed.** Numerical states are necessary-condition systems, not graphs. Saved actual-graph regressions contain no positive-surplus graph, so universal correctness depends on the written structural proofs, not extrapolation from samples.
 
-Paul Lenz directed the project; ChatGPT/Geeps supplied mathematical development, software, manuscripts and internal checks. Same-assistant independent implementations are explicitly **not** described as external independent review. Frozen n=25/n=27/n=28 proofs, original archives and the governed theorem ledger remain preserved.
+Paul Lenz directed the project; ChatGPT/Geeps supplied mathematical development, software, manuscripts and internal checks. Same-assistant independent implementations are explicitly **not** described as external independent review. Frozen fixed-order proofs, original archives and the governed theorem ledger remain preserved.
 
 The README immediately preceding the n=29 publication is preserved verbatim at `project/reviews/history/README_before_n29_candidate_2026-09-08.md`. See [standing orders](project/N25_PROJECT_STANDING_ORDERS.md), [repository sync policy](project/REPO_SYNC_POLICY.md), and the [theorem ledger](repro-v1/ledger/theorem_ledger.json).
 
