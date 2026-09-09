@@ -1,0 +1,98 @@
+{
+  "checks": {
+    "fan_semantics": {
+      "historical_citation_retained": true,
+      "logical_dependency": false,
+      "status": "PASS"
+    },
+    "history_integrity": {
+      "orders": [
+        25,
+        27,
+        28,
+        29,
+        30
+      ],
+      "status": "PASS"
+    },
+    "n25": {
+      "status": "PASS",
+      "upper_ranges": [
+        [
+          158,
+          175
+        ],
+        [
+          158,
+          187
+        ],
+        [
+          158,
+          200
+        ]
+      ]
+    },
+    "n27": {
+      "deep_scopes": [
+        184,
+        185
+      ],
+      "status": "PASS",
+      "upper_ranges": [
+        [
+          184,
+          202
+        ],
+        [
+          184,
+          216
+        ],
+        [
+          184,
+          229
+        ]
+      ]
+    },
+    "n28": {
+      "direct_scope": 197,
+      "fresh_upper_range": [
+        198,
+        210
+      ],
+      "status": "PASS"
+    },
+    "n29": {
+      "fresh_upper_range": [
+        212,
+        232
+      ],
+      "status": "PASS"
+    },
+    "n30": {
+      "delta16_range": [
+        227,
+        240
+      ],
+      "delta17_range": [
+        227,
+        255
+      ],
+      "status": "PASS"
+    }
+  },
+  "date": "2026-09-09",
+  "limitations": [
+    "This audit checks assembly coverage, exact-checkpoint acceptance semantics, and source integrity; it is not external independent review.",
+    "Hand graph-to-residual lemmas and monotonicity arguments remain mathematical trust boundaries and require independent specialist review.",
+    "The published n=26 result is historical literature context and is not re-proved by this Fan-free project layer."
+  ],
+  "schema": "fan-free-fixed-order-hostile-audit-v1",
+  "scope_orders": [
+    25,
+    27,
+    28,
+    29,
+    30
+  ],
+  "status": "PASS"
+}
