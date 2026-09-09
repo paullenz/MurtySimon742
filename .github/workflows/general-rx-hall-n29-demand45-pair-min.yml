@@ -28,7 +28,7 @@ jobs:
           mkdir -p out
           .venv/bin/python -I -B "$R/n29_demand45_pair_min_support_scan.py" \
             --boundary-json "$R/checkpoints/N29_BOUNDARY_SPECIALISATION_RUN_34364666552.json" \
-            --support-json "$R/checkpoints/N29_COMMON_MIN_SUPPORT_RUN_34368079621.json" \
+            --support-json "$R/checkpoints/N30_SHARED_MIN_SUPPORT_RUN_34361230390.json" \
             --correction-json "$R/checkpoints/N29_PAIRWISE_CORRECTION_RUN_34365472773.json" \
             --time-limit 90 \
             --output out/DEMAND45_PAIR_MIN.json
