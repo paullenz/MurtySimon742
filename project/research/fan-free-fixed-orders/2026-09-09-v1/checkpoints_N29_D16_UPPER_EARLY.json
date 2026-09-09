@@ -1,0 +1,45 @@
+{
+  "Delta": 16,
+  "a": 12,
+  "all_final_survivors_zero": true,
+  "b": 16,
+  "dual_acceptance": "exact integer/rational checks inside established source-capacity implementation",
+  "n": 29,
+  "results": {
+    "213": {
+      "charging_feasible_profiles": 586,
+      "counts": {"dual": 3, "source_count": 7, "threshold": 576},
+      "exact_dual_count": 3,
+      "final_survivors": 0,
+      "minimum_dual_margin": 7,
+      "minimum_threshold_margin": 2,
+      "t": 5
+    },
+    "214": {
+      "charging_feasible_profiles": 79,
+      "counts": {"threshold": 79},
+      "exact_dual_count": 0,
+      "final_survivors": 0,
+      "minimum_dual_margin": null,
+      "minimum_threshold_margin": 4,
+      "t": 6
+    },
+    "215": {
+      "charging_feasible_profiles": 1,
+      "counts": {"threshold": 1},
+      "exact_dual_count": 0,
+      "final_survivors": 0,
+      "minimum_dual_margin": null,
+      "minimum_threshold_margin": 12,
+      "t": 7
+    }
+  },
+  "schema": "fan-free-n29-d16-upper-early-v1",
+  "status": "candidate fixed-order proof component; independent review open",
+  "provenance": {
+    "workflow_run": 34396555260,
+    "artifact_id": 10121735443,
+    "artifact_sha256": "a2f94dd6a81941ba767c68a2d5dc89a14cda8dab01b4b96c5391e0369a473827",
+    "publication_recovery": "workflow computation and artifact upload succeeded; only final concurrent Git push failed"
+  }
+}
