@@ -1,0 +1,280 @@
+{
+  "Delta": 17,
+  "a": 12,
+  "all_final_survivors_zero": true,
+  "b": 17,
+  "dual_acceptance": "exact integer/rational checks inside established source-capacity implementation",
+  "edge_range": [
+    227,
+    255
+  ],
+  "n": 30,
+  "parameterized_source": "project/research/n30/2026-09-09-delta17-v1/delta17_kernel.py",
+  "results": {
+    "227": {
+      "charging_feasible_profiles": 15,
+      "counts": {
+        "threshold": 15
+      },
+      "exact_dual_count": 0,
+      "final_survivors": 0,
+      "minimum_dual_margin": null,
+      "minimum_threshold_margin": 10,
+      "t": 6
+    },
+    "228": {
+      "charging_feasible_profiles": 0,
+      "counts": {},
+      "exact_dual_count": 0,
+      "final_survivors": 0,
+      "minimum_dual_margin": null,
+      "minimum_threshold_margin": null,
+      "t": 7
+    },
+    "229": {
+      "charging_feasible_profiles": 0,
+      "counts": {},
+      "exact_dual_count": 0,
+      "final_survivors": 0,
+      "minimum_dual_margin": null,
+      "minimum_threshold_margin": null,
+      "t": 8
+    },
+    "230": {
+      "charging_feasible_profiles": 0,
+      "counts": {},
+      "exact_dual_count": 0,
+      "final_survivors": 0,
+      "minimum_dual_margin": null,
+      "minimum_threshold_margin": null,
+      "t": 9
+    },
+    "231": {
+      "charging_feasible_profiles": 0,
+      "counts": {},
+      "exact_dual_count": 0,
+      "final_survivors": 0,
+      "minimum_dual_margin": null,
+      "minimum_threshold_margin": null,
+      "t": 10
+    },
+    "232": {
+      "charging_feasible_profiles": 0,
+      "counts": {},
+      "exact_dual_count": 0,
+      "final_survivors": 0,
+      "minimum_dual_margin": null,
+      "minimum_threshold_margin": null,
+      "t": 11
+    },
+    "233": {
+      "charging_feasible_profiles": 0,
+      "counts": {},
+      "exact_dual_count": 0,
+      "final_survivors": 0,
+      "minimum_dual_margin": null,
+      "minimum_threshold_margin": null,
+      "t": 12
+    },
+    "234": {
+      "charging_feasible_profiles": 0,
+      "counts": {},
+      "exact_dual_count": 0,
+      "final_survivors": 0,
+      "minimum_dual_margin": null,
+      "minimum_threshold_margin": null,
+      "t": 13
+    },
+    "235": {
+      "charging_feasible_profiles": 0,
+      "counts": {},
+      "exact_dual_count": 0,
+      "final_survivors": 0,
+      "minimum_dual_margin": null,
+      "minimum_threshold_margin": null,
+      "t": 14
+    },
+    "236": {
+      "charging_feasible_profiles": 0,
+      "counts": {},
+      "exact_dual_count": 0,
+      "final_survivors": 0,
+      "minimum_dual_margin": null,
+      "minimum_threshold_margin": null,
+      "t": 15
+    },
+    "237": {
+      "charging_feasible_profiles": 0,
+      "counts": {},
+      "exact_dual_count": 0,
+      "final_survivors": 0,
+      "minimum_dual_margin": null,
+      "minimum_threshold_margin": null,
+      "t": 16
+    },
+    "238": {
+      "charging_feasible_profiles": 0,
+      "counts": {},
+      "exact_dual_count": 0,
+      "final_survivors": 0,
+      "minimum_dual_margin": null,
+      "minimum_threshold_margin": null,
+      "t": 17
+    },
+    "239": {
+      "charging_feasible_profiles": 0,
+      "counts": {},
+      "exact_dual_count": 0,
+      "final_survivors": 0,
+      "minimum_dual_margin": null,
+      "minimum_threshold_margin": null,
+      "t": 18
+    },
+    "240": {
+      "charging_feasible_profiles": 0,
+      "counts": {},
+      "exact_dual_count": 0,
+      "final_survivors": 0,
+      "minimum_dual_margin": null,
+      "minimum_threshold_margin": null,
+      "t": 19
+    },
+    "241": {
+      "charging_feasible_profiles": 0,
+      "counts": {},
+      "exact_dual_count": 0,
+      "final_survivors": 0,
+      "minimum_dual_margin": null,
+      "minimum_threshold_margin": null,
+      "t": 20
+    },
+    "242": {
+      "charging_feasible_profiles": 0,
+      "counts": {},
+      "exact_dual_count": 0,
+      "final_survivors": 0,
+      "minimum_dual_margin": null,
+      "minimum_threshold_margin": null,
+      "t": 21
+    },
+    "243": {
+      "charging_feasible_profiles": 0,
+      "counts": {},
+      "exact_dual_count": 0,
+      "final_survivors": 0,
+      "minimum_dual_margin": null,
+      "minimum_threshold_margin": null,
+      "t": 22
+    },
+    "244": {
+      "charging_feasible_profiles": 0,
+      "counts": {},
+      "exact_dual_count": 0,
+      "final_survivors": 0,
+      "minimum_dual_margin": null,
+      "minimum_threshold_margin": null,
+      "t": 23
+    },
+    "245": {
+      "charging_feasible_profiles": 0,
+      "counts": {},
+      "exact_dual_count": 0,
+      "final_survivors": 0,
+      "minimum_dual_margin": null,
+      "minimum_threshold_margin": null,
+      "t": 24
+    },
+    "246": {
+      "charging_feasible_profiles": 0,
+      "counts": {},
+      "exact_dual_count": 0,
+      "final_survivors": 0,
+      "minimum_dual_margin": null,
+      "minimum_threshold_margin": null,
+      "t": 25
+    },
+    "247": {
+      "charging_feasible_profiles": 0,
+      "counts": {},
+      "exact_dual_count": 0,
+      "final_survivors": 0,
+      "minimum_dual_margin": null,
+      "minimum_threshold_margin": null,
+      "t": 26
+    },
+    "248": {
+      "charging_feasible_profiles": 0,
+      "counts": {},
+      "exact_dual_count": 0,
+      "final_survivors": 0,
+      "minimum_dual_margin": null,
+      "minimum_threshold_margin": null,
+      "t": 27
+    },
+    "249": {
+      "charging_feasible_profiles": 0,
+      "counts": {},
+      "exact_dual_count": 0,
+      "final_survivors": 0,
+      "minimum_dual_margin": null,
+      "minimum_threshold_margin": null,
+      "t": 28
+    },
+    "250": {
+      "charging_feasible_profiles": 0,
+      "counts": {},
+      "exact_dual_count": 0,
+      "final_survivors": 0,
+      "minimum_dual_margin": null,
+      "minimum_threshold_margin": null,
+      "t": 29
+    },
+    "251": {
+      "charging_feasible_profiles": 0,
+      "counts": {},
+      "exact_dual_count": 0,
+      "final_survivors": 0,
+      "minimum_dual_margin": null,
+      "minimum_threshold_margin": null,
+      "t": 30
+    },
+    "252": {
+      "charging_feasible_profiles": 0,
+      "counts": {},
+      "exact_dual_count": 0,
+      "final_survivors": 0,
+      "minimum_dual_margin": null,
+      "minimum_threshold_margin": null,
+      "t": 31
+    },
+    "253": {
+      "charging_feasible_profiles": 0,
+      "counts": {},
+      "exact_dual_count": 0,
+      "final_survivors": 0,
+      "minimum_dual_margin": null,
+      "minimum_threshold_margin": null,
+      "t": 32
+    },
+    "254": {
+      "charging_feasible_profiles": 0,
+      "counts": {},
+      "exact_dual_count": 0,
+      "final_survivors": 0,
+      "minimum_dual_margin": null,
+      "minimum_threshold_margin": null,
+      "t": 33
+    },
+    "255": {
+      "charging_feasible_profiles": 0,
+      "counts": {},
+      "exact_dual_count": 0,
+      "final_survivors": 0,
+      "minimum_dual_margin": null,
+      "minimum_threshold_margin": null,
+      "t": 34
+    }
+  },
+  "schema": "fan-free-n30-d17-upper-v1",
+  "status": "candidate fixed-order proof component; independent review open"
+}
