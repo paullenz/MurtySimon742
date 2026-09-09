@@ -1,0 +1,48 @@
+{
+  "Delta": 16,
+  "a": 12,
+  "all_late_exclusions_exact_integer_farkas_reverified": true,
+  "b": 16,
+  "cli_guard_only_wrappers_used": true,
+  "exact_rejections": 2,
+  "final_survivors": 0,
+  "frozen_sources_modified": false,
+  "m": 212,
+  "minimal_prepare_report": {
+    "all_nontrivial_saved_cuts_exactly_checked": true,
+    "cli_restriction_removed": true,
+    "counts": {
+      "OPEN": 3,
+      "dual": 65,
+      "source_count": 258,
+      "threshold": 1706
+    },
+    "demand_domain": 2032,
+    "formula_changes": false,
+    "frozen_function_source": "project/reviews/n29/2026-09-08-redteam-restart-v1/minimal_prepare.py",
+    "retained_demands": 3,
+    "schema": "fan-free-n29-t4-minimal-demand-v1",
+    "scope": {
+      "Delta": 16,
+      "a": 12,
+      "b": 16,
+      "m": 212,
+      "n": 29,
+      "t": 4
+    }
+  },
+  "minimal_rows_report": {
+    "initial_source_rejections": 19617,
+    "refined_source_rejections": 11,
+    "states": 19630,
+    "survivors": 2
+  },
+  "n": 29,
+  "residual_rows": 2,
+  "retained_demands": 3,
+  "rhs_max": -434,
+  "rhs_min": -499,
+  "schema": "fan-free-n29-d16-m212-v1",
+  "status": "candidate fixed-order proof component; independent review open",
+  "t": 4
+}
