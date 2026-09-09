@@ -3,7 +3,8 @@
 
 Uses the same pooled candidate dictionary as n29_shared_correction_scan. Tests
 shared-envelope feasibility after partitioning the 38 profiles by natural scalar
-invariants, especially r=sum(rho)=S-4. Floating reconnaissance only.
+invariants, including the threshold statistics W_h and z_h already present in
+the graph-to-profile argument. Floating reconnaissance only.
 """
 from pathlib import Path
 from importlib.util import spec_from_file_location,module_from_spec
@@ -16,6 +17,8 @@ def leq(a,b):return all(x<=y for x,y in zip(a,b))
 def min_gens(g):
     pts=sorted(set(tuple(p) for p in g));return tuple(p for p in pts if not any(q!=p and leq(q,p) for q in pts))
 def trim(g,dmax):return min_gens(p for p in g if p[0]<=dmax)
+def W(p,h):return sum(x for x in p['s'] if x>=h)
+def zh(p,h):return sum(x>=h for x in p['rho'])
 
 def main():
     ap=argparse.ArgumentParser();ap.add_argument('--boundary-json',type=Path,required=True);ap.add_argument('--support-json',type=Path,required=True);ap.add_argument('--correction-json',type=Path,required=True);ap.add_argument('--a',type=int,required=True);ap.add_argument('--b',type=int,required=True);ap.add_argument('--dmax',type=int,required=True);ap.add_argument('--output',type=Path,required=True);z=ap.parse_args()
@@ -32,6 +35,15 @@ def main():
       'r_rhomax':lambda p:(sum(p['rho']),max(p['rho'])),
       'H_rhomax':lambda p:(max(p['s']),max(p['rho'])),
       'low_high_r':lambda p:'low' if sum(p['rho'])<=37 else 'high',
+      'W2':lambda p:W(p,2),
+      'W3':lambda p:W(p,3),
+      'z2':lambda p:zh(p,2),
+      'z3':lambda p:zh(p,3),
+      'W3_z3':lambda p:(W(p,3),zh(p,3)),
+      'r_W3':lambda p:(sum(p['rho']),W(p,3)),
+      'r_z3':lambda p:(sum(p['rho']),zh(p,3)),
+      'r_W3_z3':lambda p:(sum(p['rho']),W(p,3),zh(p,3)),
+      'r_W2_W3_z3':lambda p:(sum(p['rho']),W(p,2),W(p,3),zh(p,3)),
     }
     results={}
     for name,f in funcs.items():
@@ -44,6 +56,6 @@ def main():
             active_sh=int(sum(bool(res.success and res.x[M.idx[('SH',i)]]>1e-8) for i in range(len(sh)))) if res.x is not None else None
             grecs.append({'key':key,'profiles':int(len(G)),'positions':[int(p['hard_position']) for p in G],'success':bool(res.success),'active_BC':active_bc,'active_SH':active_sh,'objective':float(res.fun) if res.success else None})
         results[name]={'groups':int(len(grecs)),'all_groups_feasible':bool(all(g['success'] for g in grecs)),'failed_groups':int(sum(not g['success'] for g in grecs)),'records':grecs}
-    out={'schema':'n29-partitioned-shared-correction-scan-v2','profiles':int(len(P)),'candidate_BC':int(len(bc)),'candidate_SH':int(len(sh)),'floating_point_reconnaissance_only':True,'results':results,'interpretation':'Tests whether the pooled pairwise staircase dictionary admits shared coefficients within natural scalar parameter layers. Feasible is numerical reconnaissance only.'}
+    out={'schema':'n29-partitioned-shared-correction-scan-v3','profiles':int(len(P)),'candidate_BC':int(len(bc)),'candidate_SH':int(len(sh)),'floating_point_reconnaissance_only':True,'results':results,'interpretation':'Tests whether the pooled pairwise staircase dictionary admits shared coefficients within natural scalar/threshold-statistic parameter layers. Feasible is numerical reconnaissance only.'}
     z.output.parent.mkdir(parents=True,exist_ok=True);z.output.write_text(json.dumps(out,indent=2,sort_keys=True)+'\n');print(json.dumps({k:{'groups':v['groups'],'all_groups_feasible':v['all_groups_feasible'],'failed_groups':v['failed_groups']} for k,v in results.items()},indent=2,sort_keys=True))
 if __name__=='__main__':main()
