@@ -1,0 +1,11 @@
+{
+  "candidate_BC": 333,
+  "candidate_SH": 13,
+  "floating_point_reconnaissance_only": true,
+  "n29_profiles": 38,
+  "n30_profiles": 7,
+  "objective": null,
+  "profiles": 45,
+  "schema": "cross-order-common-potential-v1",
+  "success": false
+}
