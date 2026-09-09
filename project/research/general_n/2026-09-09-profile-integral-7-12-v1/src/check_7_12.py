@@ -35,7 +35,6 @@ def mul(p,q):
     for i,x in enumerate(p):
         for j,y in enumerate(q):r[i+j]+=x*y
     return trim(r)
-
 def value(p,x):
     r=Q(0)
     for c in reversed(p):r=r*x+c
@@ -43,7 +42,6 @@ def value(p,x):
 
 
 def scalar_certificate():
-    # B(u)=1-u/2-u^2/8-3u^3/32.
     B=[Q(1),-Q(1,2),-Q(1,8),-Q(3,32)]
     one_minus_u=[Q(1),Q(-1)]
     gap=add(one_minus_u,scale(mul(B,B),Q(-1)))
@@ -53,27 +51,17 @@ def scalar_certificate():
     require(value(B,Q(1,2))==Q(181,256)>0,'B endpoint')
     core=[Q(64),Q(-112),Q(-24),Q(-9)]
     require(value(core,Q(1,2))==Q(7,8)>0,'core endpoint')
-    # B' and core' have strictly negative coefficients on u>=0, so both
-    # functions are decreasing; endpoint positivity proves B>=0 and gap>=0
-    # throughout [0,1/2].
 
-    # After x=2q^2, x-Phi(x) is bounded above by
-    # P(q)=2q^2-4q^3+(2/3)q^5+(1/10)q^7+(3/56)q^9.
     P=[Q(0),Q(0),Q(2),Q(-4),Q(0),Q(2,3),Q(0),Q(1,10),Q(0),Q(3,56)]
-    # P'(q)=q Qpoly(q), Qpoly=4-12q+(10/3)q^3+(7/10)q^5+(27/56)q^7.
     Qpoly=[Q(4),Q(-12),Q(0),Q(10,3),Q(0),Q(7,10),Q(0),Q(27,56)]
     q0=Q(7,20)
     require(value(Qpoly,q0)==Q(-1631127391,30720000000)<0,'Q(7/20)')
-    # On [7/20,1/sqrt(2)], Qpoly' <= -12+10/2+(7/2)/4+(27/8)/8.
     derivative_upper=-Q(12)+Q(10,2)+Q(7,8)+Q(27,64)
     require(derivative_upper==Q(-365,64)<0,'Q derivative upper')
-    # On [1/3,7/20], 2q^2-4q^3 is decreasing, so <=2/27;
-    # the positive tail is increasing and is <1/250 at 7/20.
     tail=Q(2,3)*q0**5+Q(1,10)*q0**7+Q(3,56)*q0**9
     require(tail==Q(43868404489,12288000000000)<Q(1,250),'tail bound')
     middle_upper=Q(2,27)+Q(1,250)
     require(Q(5,64)-middle_upper==Q(11,216000)>0,'5/64 margin')
-    # On [0,1/3], Qpoly>=4-12q>=0, so P increases to the middle interval.
     return {
         'sqrt_minorant_B_at_half':str(value(B,Q(1,2))),
         'sqrt_minorant_core_at_half':str(value(core,Q(1,2))),
@@ -100,6 +88,7 @@ def least_z(W,h,H):
     return z
 
 
+@lru_cache(maxsize=None)
 def small_certificate(a):
     best=0; best_HS=None; cases=levels=0
     rows=[]
@@ -121,8 +110,6 @@ def small_certificate(a):
 
 
 def degree_assembly():
-    # b >= 7n/12 iff 5b >= 7(a+1), so least b is ceil(7(a+1)/5).
-    # For a>=53, the continuous lower t bound exceeds the new strict upper.
     D53=Q(54*54,25)-Q(1,4)-Q(5*53*53,128)-Q(53,8)
     step53=Q(6*53-141,3200)
     require(D53==Q(123,3200)>0,('D53',D53))
