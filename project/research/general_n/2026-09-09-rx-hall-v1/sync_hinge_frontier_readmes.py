@@ -30,18 +30,21 @@ if old_top not in t:
 TOP.write_text(t.replace(old_top,new_top,1))
 
 s=SUB.read_text()
-anchor='## 7. Highest-priority next steps\n'
-if anchor not in s:
+anchors=['## 10. Highest-priority next steps\n','## 7. Highest-priority next steps\n']
+anchor=next((x for x in anchors if x in s),None)
+if anchor is None:
     raise SystemExit('RX-Hall README next-steps anchor not found')
 prefix=s.split(anchor,1)[0]
-new_sub="""## 7. Current analytic frontier
+section_no='10' if anchor.startswith('## 10.') else '7'
+next_no='11' if section_no=='10' else '8'
+new_sub=f"""## {section_no}. Current analytic frontier
 
-Subsequent work has compressed the finite potential mechanism substantially beyond the original two-rectangle Hall-core experiment.
+Subsequent work has compressed the finite potential mechanism substantially beyond the staircase-dictionary comparison.
 
 For the complete regenerated n=29 `t=3` frontier (94 hard profiles), the full canonical BC family needs **no SH correction**. The resulting BC potential was first exactified as a pure staircase surface and then replaced by the analytic min-hinge family
 
 ```text
-H_{D,V}(d,v)=min((d-D)_+,(v-V)_+).
+H_{{D,V}}(d,v)=min((d-D)_+,(v-V)_+).
 ```
 
 A single exact rational potential using only nine hinges works across all 94 profiles. The exact support is
@@ -54,12 +57,12 @@ A single exact rational potential using only nine hinges works across all 94 pro
 
 See [`MIN_HINGE_ANALYTIC_REDUCTION.md`](MIN_HINGE_ANALYTIC_REDUCTION.md) and
 [`checkpoints/N29_T3_MIN_HINGE_EXACT_RUN_34384549422.json`](checkpoints/N29_T3_MIN_HINGE_EXACT_RUN_34384549422.json).
-The latter checks 30,646 inequalities by integer arithmetic, with no row or bound violations.
+The latter checks 30,646 inequalities by integer arithmetic, with no row or bound violations and worst profile margin nearly twice the required margin.
 
 The hinge has the exact discrete Hall-chain identity
 
 ```text
-H_{D,V}(d,v)=sum_{k>=1} 1[d>=D+k and v>=V+k],
+H_{{D,V}}(d,v)=sum_{{k>=1}} 1[d>=D+k and v>=V+k],
 ```
 
 so this analytic form is a weighted chain of nested Hall rectangles rather than an unrelated fitted nonlinearity.
@@ -78,7 +81,7 @@ The nine exact `t=3` hinge locations admit the parameter-only description
 
 specialized at `(a,t)=(12,3)` (with duplicates/nonnegative boundary handling for small `t`). This is now the principal falsification target, not a theorem.
 
-## 8. Highest-priority next steps
+## {next_no}. Highest-priority next steps
 
 1. test the parameterized min-hinge template on the n=29 `t=2` hard38 core with and without the full SH correction dictionary;
 2. if it survives, test the same template on all 902 `t=2` profiles and exactify any positive result;
