@@ -63,4 +63,10 @@ jobs:
           set -euo pipefail
           P="project/research/general_n/2026-09-09-rx-hall-v1/checkpoints/N30_RZ_CERTIFICATE_MINING_RUN_${GITHUB_RUN_ID}.json"
           C=$(base64 -w0 out/RZ_CERTIFICATE_MINING.json)
-          gh api --method PUT "repos/${GITHUB_REPOSITORY}/contents/${P}" -f message="Preserve n30 R+Z certificate mining run ${GITHUB_RUN_ID}" -f content="$C" -f branch=main
+          for attempt in 1 2 3 4 5; do
+            if gh api --method PUT "repos/${GITHUB_REPOSITORY}/contents/${P}" -f message="Preserve n30 R+Z certificate mining run ${GITHUB_RUN_ID}" -f content="$C" -f branch=main; then
+              exit 0
+            fi
+            sleep $((attempt*2))
+          done
+          exit 1
