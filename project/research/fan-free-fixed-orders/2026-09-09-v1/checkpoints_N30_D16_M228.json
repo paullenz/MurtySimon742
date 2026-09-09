@@ -1,0 +1,8 @@
+{
+  "Delta":16,"n":30,"m":228,"t":4,"final_survivors":0,
+  "prepare":{"counts":{"basic_empty":0,"domain":19260,"dual_empty":1466,"retained":285,"threshold_empty":17509},"dual_lower_bounds_exactly_checked":true,"frozen_source_modified":false,"retained":285,"scope":{"Delta":16,"a":13,"b":16,"m":228,"n":30,"t":4},"uses_deltaC_positive":true},
+  "rows":{"initial_source_rejections":2029752,"refined_source_rejections":4087,"states":2034522,"survivors":683},
+  "close":{"all_model_rejections_exact_integer_farkas_verified":true,"counts":{"model_exact_missing":0,"model_exact_rejected":0,"model_noninfeasible":0,"rows":683,"source_count":0,"threshold":683},"final_survivors":0,"floating_infeasibility_alone_accepted":false,"gzip_sha256":"57c23302a9bc4410aea993d27cb748d6507dd7f278cb72cfa66a4f8f4836ddb5","json_sha256":"9e164b49451584c3c49f324f912aaf7706ffb14bd5346af270c304752927226a","scope":{"Delta":16,"a":13,"b":16,"dmax":11,"m":228,"n":30,"t":4}},
+  "schema":"fan-free-n30-d16-upper-scope-v1","status":"candidate fixed-order proof component; independent review open",
+  "provenance":{"workflow_run":34397132809,"artifact_id":10121960452,"artifact_sha256":"f89c840db7a3a4df3e3e5a1ff9746ae66beb9e5e80a205b3d3e2170e825417a5","publication_recovery":"mathematical stages and artifact upload succeeded; final Git push raced"}
+}
