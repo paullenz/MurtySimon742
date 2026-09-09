@@ -1,0 +1,66 @@
+name: Fan-free n28-n30 remaining upper bands
+
+on:
+  workflow_dispatch:
+  push:
+    paths:
+      - '.github/workflows/fan-free-n28-n30-upper-scan.yml'
+      - 'project/research/fan-free-fixed-orders/2026-09-09-v1/fan_free_outer.cpp'
+
+jobs:
+  scan:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 60
+    strategy:
+      fail-fast: false
+      matrix:
+        include:
+          - n: 28
+            delta: 15
+            first: 198
+            last: 210
+          - n: 29
+            delta: 16
+            first: 212
+            last: 232
+          - n: 30
+            delta: 16
+            first: 227
+            last: 240
+          - n: 30
+            delta: 17
+            first: 227
+            last: 227
+    steps:
+      - uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262
+      - name: Build exact necessary-condition verifier
+        run: g++ -O3 -std=c++17 project/research/fan-free-fixed-orders/2026-09-09-v1/fan_free_outer.cpp -o fan_free_outer
+      - name: Scan every edge count in band
+        shell: bash
+        run: |
+          set -uo pipefail
+          out=fan-free-${{ matrix.n }}-${{ matrix.delta }}.jsonl
+          : > "$out"
+          bad=0
+          for m in $(seq ${{ matrix.first }} ${{ matrix.last }}); do
+            set +e
+            row=$(./fan_free_outer ${{ matrix.n }} ${{ matrix.delta }} "$m")
+            rc=$?
+            set -e
+            printf '%s\n' "$row" | tee -a "$out"
+            if [ "$rc" -eq 1 ]; then exit 1; fi
+            if [ "$rc" -eq 2 ]; then bad=1; fi
+          done
+          echo "bad=$bad" >> "$GITHUB_ENV"
+      - uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02
+        with:
+          name: fan-free-${{ matrix.n }}-${{ matrix.delta }}-upper
+          path: fan-free-${{ matrix.n }}-${{ matrix.delta }}.jsonl
+          retention-days: 30
+      - name: Report whether deeper closure is required
+        run: |
+          if [ "$bad" = 0 ]; then
+            echo 'ZERO_OUTER_SURVIVORS'
+          else
+            echo 'DEEPER_CLOSURE_REQUIRED'
+          fi
