@@ -30,22 +30,7 @@ jobs:
           mkdir -p review-build-diagnostics
           BUILDER=project/reviews/reviewer-paper-build/v1/build_review_papers.py
           FILTER=project/reviews/reviewer-paper-build/v1/fix_aligned_tags.lua
-          # Match the documented n=25 Markdown mode for TeX-style \[...\] maths.
-          sed -i 's/--from=markdown+raw_tex/--from=markdown+raw_tex+tex_math_single_backslash/' "$BUILDER"
-          # Move amsmath equation tags outside nested `aligned` blocks in the
-          # generated LaTeX only; canonical proof Markdown is not edited.
-          sed -i '/"--pdf-engine=xelatex",/a\        "--lua-filter=project/reviews/reviewer-paper-build/v1/fix_aligned_tags.lua",' "$BUILDER"
-          test -s "$FILTER"
-          # The front-matter abstract is emitted inside a raw LaTeX abstract
-          # environment. Keep the two general-theorem summaries entirely verbal;
-          # exact formulae are reproduced immediately below in the proof body.
-          sed -i 's/proving t < a\^2\/24 + a\/8 in the selected\/residual framework/proving the profile-integral surplus bound in the selected\/residual framework/' "$BUILDER"
-          sed -i 's/deriving the exact rational consequence that, for n at least 6, maximum degree at least (293\/500)n forces strictly fewer than floor(n\^2\/4) edges/deriving an exact rational maximum-degree threshold which, for orders at least six, forces a strict improvement over the balanced complete-bipartite edge bound/' "$BUILDER"
-          sed -i 's/yielding the cubic residual inequality 3S\^3 <= a\^2 r(2r+1), the surplus bound t < (4\/81)a\^2 + 1\/8, and/yielding a cubic residual inequality, its resulting surplus bound, and/' "$BUILDER"
-          sed -i 's/the consequence that, for n at least 6, maximum degree at least (13\/22)n forces strictly fewer than floor(n\^2\/4) edges/the consequence that, for orders at least six, the stated rational maximum-degree threshold forces a strict improvement over the balanced complete-bipartite edge bound/' "$BUILDER"
-          # FreeSerif covers the Greek and mathematical relation/set symbols that
-          # occur in prose outside TeX math blocks across the current papers.
-          sed -i '/"-V", "fontsize=11pt",/a\        "-V", "mainfont=FreeSerif",\n        "-V", "sansfont=FreeSans",\n        "-V", "monofont=FreeMono",' "$BUILDER"
+          test -s "$BUILDER"; test -s "$FILTER"
           python3 "$BUILDER" > >(tee review-build-diagnostics/BUILD.log) 2>&1
           if grep -q 'Missing character:' review-build-diagnostics/BUILD.log; then
             echo 'Reviewer PDF build emitted missing-glyph warnings.' >&2
@@ -69,7 +54,7 @@ jobs:
           import json
           r=json.load(open('project/reviews/reviewer-paper-build/v1/BUILD_REPORT.json'))
           assert r['all_current_theorem_level_claims_have_reviewer_papers'] is True
-          assert set(r['packages']) == {'n27','n29','n30','general-293-500','general-13-22'}
+          assert set(r['packages']) == {'n27','n29','n30','general-293-500','general-7-12','general-13-22'}
           PY
 
       - uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02
@@ -81,6 +66,7 @@ jobs:
             releases/n29-reviewer-v1/
             releases/n30-reviewer-v1/
             releases/general-293-500-reviewer-v1/
+            releases/general-7-12-reviewer-v1/
             releases/general-13-22-reviewer-v1/
             releases/REVIEW_READY_INDEX.md
             project/reviews/reviewer-paper-build/v1/BUILD_REPORT.json
@@ -99,6 +85,7 @@ jobs:
             releases/n29-reviewer-v1 \
             releases/n30-reviewer-v1 \
             releases/general-293-500-reviewer-v1 \
+            releases/general-7-12-reviewer-v1 \
             releases/general-13-22-reviewer-v1 \
             releases/REVIEW_READY_INDEX.md \
             project/reviews/reviewer-paper-build/v1/BUILD_REPORT.json
@@ -108,10 +95,9 @@ jobs:
           fi
           git commit -m 'Publish review-ready papers for all current candidate proofs'
           for attempt in 1 2 3 4 5; do
-            if git push origin HEAD:main; then
-              exit 0
-            fi
+            if git push origin HEAD:main; then exit 0; fi
             echo "Push race on attempt ${attempt}; rebasing and retrying"
+            git reset --hard HEAD
             git pull --rebase origin main
             sleep $((attempt * 2))
           done
