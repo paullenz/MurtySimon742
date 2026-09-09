@@ -22,7 +22,7 @@ jobs:
       - name: Install paper toolchain
         run: |
           sudo apt-get update -qq
-          sudo DEBIAN_FRONTEND=noninteractive apt-get install -y -qq pandoc texlive-xetex texlive-latex-extra texlive-fonts-recommended lmodern fonts-dejavu-core poppler-utils
+          sudo DEBIAN_FRONTEND=noninteractive apt-get install -y -qq pandoc texlive-xetex texlive-latex-extra texlive-fonts-recommended lmodern fonts-freefont-otf poppler-utils
 
       - name: Build reviewer editions
         run: |
@@ -36,9 +36,9 @@ jobs:
           # generated LaTeX only; canonical proof Markdown is not edited.
           sed -i '/"--pdf-engine=xelatex",/a\        "--lua-filter=project/reviews/reviewer-paper-build/v1/fix_aligned_tags.lua",' "$BUILDER"
           test -s "$FILTER"
-          # Use a Unicode-complete prose font so Greek letters and relation symbols
-          # appearing outside maths are never silently dropped by XeLaTeX.
-          sed -i '/"-V", "fontsize=11pt",/a\        "-V", "mainfont=DejaVu Serif",\n        "-V", "sansfont=DejaVu Sans",\n        "-V", "monofont=DejaVu Sans Mono",' "$BUILDER"
+          # FreeSerif covers the Greek and mathematical relation/set symbols that
+          # occur in prose outside TeX math blocks across the current papers.
+          sed -i '/"-V", "fontsize=11pt",/a\        "-V", "mainfont=FreeSerif",\n        "-V", "sansfont=FreeSans",\n        "-V", "monofont=FreeMono",' "$BUILDER"
           python3 "$BUILDER" > >(tee review-build-diagnostics/BUILD.log) 2>&1
           if grep -q 'Missing character:' review-build-diagnostics/BUILD.log; then
             echo 'Reviewer PDF build emitted missing-glyph warnings.' >&2
