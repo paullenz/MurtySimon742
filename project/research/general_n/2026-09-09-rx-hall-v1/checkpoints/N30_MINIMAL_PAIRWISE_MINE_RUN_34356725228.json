@@ -1,0 +1,348 @@
+{
+  "active_equalities": [
+    {
+      "family": "source_norm",
+      "k": 0,
+      "multiplicity": 8,
+      "rho": 1,
+      "row": 0,
+      "weight": 159372
+    },
+    {
+      "family": "source_norm",
+      "k": 1,
+      "multiplicity": 1,
+      "rho": 2,
+      "row": 1,
+      "weight": 37091
+    },
+    {
+      "family": "source_norm",
+      "k": 2,
+      "multiplicity": 7,
+      "rho": 3,
+      "row": 2,
+      "weight": 310083
+    },
+    {
+      "family": "qp_balance",
+      "row": 3,
+      "weight": 6640
+    },
+    {
+      "family": "label_norm",
+      "g": 0,
+      "multiplicity": 2,
+      "row": 4,
+      "s": 1,
+      "weight": -42062
+    },
+    {
+      "family": "label_norm",
+      "g": 1,
+      "multiplicity": 2,
+      "row": 5,
+      "s": 2,
+      "weight": -83182
+    },
+    {
+      "family": "label_norm",
+      "g": 2,
+      "multiplicity": 9,
+      "row": 6,
+      "s": 3,
+      "weight": -527950
+    },
+    {
+      "family": "residual_budget",
+      "row": 7,
+      "weight": 4698
+    },
+    {
+      "family": "incidence_mass",
+      "row": 8,
+      "weight": -5258
+    }
+  ],
+  "active_inequalities": [
+    {
+      "family": "transport_threshold",
+      "row": 1,
+      "threshold": 2,
+      "weight": 461
+    },
+    {
+      "family": "transport_threshold",
+      "row": 2,
+      "threshold": 3,
+      "weight": 461
+    },
+    {
+      "family": "BC_staircase",
+      "generator_size": 5,
+      "row": 13,
+      "source_cut_index": 11,
+      "weight": 2322
+    },
+    {
+      "family": "BC_staircase",
+      "generator_size": 4,
+      "row": 14,
+      "source_cut_index": 35,
+      "weight": 955
+    },
+    {
+      "family": "BC_staircase",
+      "generator_size": 4,
+      "row": 15,
+      "source_cut_index": 36,
+      "weight": 1566
+    },
+    {
+      "family": "BC_staircase",
+      "generator_size": 2,
+      "row": 16,
+      "source_cut_index": 37,
+      "weight": 2215
+    },
+    {
+      "family": "BC_staircase",
+      "generator_size": 7,
+      "row": 17,
+      "source_cut_index": 52,
+      "weight": 1190
+    },
+    {
+      "family": "BC_staircase",
+      "generator_size": 1,
+      "row": 18,
+      "source_cut_index": 60,
+      "weight": 2826
+    },
+    {
+      "family": "SH_staircase",
+      "generator_size": 3,
+      "generators": [
+        [
+          1,
+          -1
+        ],
+        [
+          2,
+          -5
+        ],
+        [
+          3,
+          -6
+        ]
+      ],
+      "row": 19,
+      "source_cut_index": 1,
+      "weight": 1459
+    },
+    {
+      "family": "SH_staircase",
+      "generator_size": 2,
+      "generators": [
+        [
+          1,
+          -1
+        ],
+        [
+          2,
+          -7
+        ]
+      ],
+      "row": 20,
+      "source_cut_index": 2,
+      "weight": 1674
+    },
+    {
+      "family": "SH_staircase",
+      "generator_size": 3,
+      "generators": [
+        [
+          1,
+          -1
+        ],
+        [
+          2,
+          -2
+        ],
+        [
+          3,
+          -11
+        ]
+      ],
+      "row": 21,
+      "source_cut_index": 3,
+      "weight": 1998
+    },
+    {
+      "family": "unit_bound",
+      "row": 31,
+      "variable_index": 9,
+      "variable_name": "('W', 0, 2, 1)",
+      "weight": 4
+    },
+    {
+      "family": "unit_bound",
+      "row": 33,
+      "variable_index": 11,
+      "variable_name": "('W', 0, 2, 3)",
+      "weight": 4
+    },
+    {
+      "family": "unit_bound",
+      "row": 49,
+      "variable_index": 27,
+      "variable_name": "('W', 1, 3, 0)",
+      "weight": 1
+    },
+    {
+      "family": "unit_bound",
+      "row": 51,
+      "variable_index": 29,
+      "variable_name": "('W', 1, 3, 2)",
+      "weight": 2
+    },
+    {
+      "family": "unit_bound",
+      "row": 75,
+      "variable_index": 53,
+      "variable_name": "('W', 2, 2, 4)",
+      "weight": 17
+    },
+    {
+      "family": "unit_bound",
+      "row": 76,
+      "variable_index": 54,
+      "variable_name": "('W', 2, 2, 5)",
+      "weight": 17
+    },
+    {
+      "family": "unit_bound",
+      "row": 83,
+      "variable_index": 61,
+      "variable_name": "('W', 2, 4, 0)",
+      "weight": 17
+    },
+    {
+      "family": "unit_bound",
+      "row": 85,
+      "variable_index": 63,
+      "variable_name": "('W', 2, 4, 2)",
+      "weight": 17
+    },
+    {
+      "family": "unit_bound",
+      "row": 89,
+      "variable_index": 67,
+      "variable_name": "('W', 2, 5, 0)",
+      "weight": 17
+    },
+    {
+      "family": "unit_bound",
+      "row": 91,
+      "variable_index": 69,
+      "variable_name": "('W', 2, 5, 2)",
+      "weight": 10
+    },
+    {
+      "family": "unit_bound",
+      "row": 141,
+      "variable_index": 119,
+      "variable_name": "('L', 0, 1, 1)",
+      "weight": 2
+    },
+    {
+      "family": "unit_bound",
+      "row": 300,
+      "variable_index": 278,
+      "variable_name": "('L', 1, 4, 2)",
+      "weight": 2
+    },
+    {
+      "family": "unit_bound",
+      "row": 411,
+      "variable_index": 389,
+      "variable_name": "('L', 2, 5, 3)",
+      "weight": 19
+    }
+  ],
+  "bc_indices": [
+    11,
+    35,
+    36,
+    37,
+    52,
+    60
+  ],
+  "certificate_rhs": -881,
+  "certificate_rounding_scale": 1000,
+  "demand_id": 2094,
+  "family_abs_weight": {
+    "BC_staircase": 11074,
+    "SH_staircase": 5131,
+    "incidence_mass": 5258,
+    "label_norm": 653194,
+    "qp_balance": 6640,
+    "residual_budget": 4698,
+    "source_norm": 506546,
+    "transport_threshold": 922,
+    "unit_bound": 129
+  },
+  "family_active_rows": {
+    "BC_staircase": 6,
+    "SH_staircase": 3,
+    "incidence_mass": 1,
+    "label_norm": 3,
+    "qp_balance": 1,
+    "residual_budget": 1,
+    "source_norm": 3,
+    "transport_threshold": 2,
+    "unit_bound": 13
+  },
+  "hard_position": 0,
+  "interpretation": "Exact semantic decomposition of the minimized 6-BC + 3-SH certificate. Floating point proposes the ray only; integer multiplier arithmetic is independently verified.",
+  "rho": [
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    2,
+    3,
+    3,
+    3,
+    3,
+    3,
+    3,
+    3
+  ],
+  "s": [
+    1,
+    1,
+    2,
+    2,
+    3,
+    3,
+    3,
+    3,
+    3,
+    3,
+    3,
+    3,
+    3
+  ],
+  "schema": "n30-exception-minimal-pairwise-certificate-semantic-v1",
+  "sh_indices": [
+    1,
+    2,
+    3
+  ],
+  "unit_bound_active_count": 13
+}
