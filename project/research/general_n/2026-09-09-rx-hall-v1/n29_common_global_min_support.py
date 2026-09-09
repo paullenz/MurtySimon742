@@ -3,10 +3,10 @@
 
 Unlike n29_common_active_min_support.py, this does not restrict to the 25 shapes
 that happened to receive positive weight in the first L1 common solution.
-It uses all candidate BC/SH shapes recorded in N29_COMMON_POTENTIAL_RUN and asks
-for minimum support for one common staircase potential across the 38 trimmed
-n29 t=2 transfer-survivor profiles. Floating/MILP reconnaissance only until a
-selected support is exactified separately.
+It rebuilds the full dictionary exactly from the specialised n30 base support
+plus every BC/SH correction shape generated for the 38 n29 trimmed survivors,
+then asks for minimum support for one common staircase potential across all 38
+profiles. Floating/MILP reconnaissance only until exactified separately.
 """
 from pathlib import Path
 from importlib.util import spec_from_file_location,module_from_spec
@@ -18,16 +18,13 @@ HERE=Path(__file__).resolve().parent
 sp=spec_from_file_location('cp',HERE/'n29_common_potential_profile_scalars.py');cp=module_from_spec(sp);sp.loader.exec_module(cp)
 
 def main():
-    ap=argparse.ArgumentParser();ap.add_argument('--boundary-json',type=Path,required=True);ap.add_argument('--common-json',type=Path,required=True);ap.add_argument('--a',type=int,required=True);ap.add_argument('--b',type=int,required=True);ap.add_argument('--dmax',type=int,required=True);ap.add_argument('--big-m',type=float,default=200);ap.add_argument('--time-limit',type=float,default=600);ap.add_argument('--output',type=Path,required=True);z=ap.parse_args()
-    B=json.loads(z.boundary_json.read_text());J=json.loads(z.common_json.read_text());P=[{'s':r['s'],'rho':r['rho'],'demand_id':r['demand_id']} for r in B['trimmed_survivor_records']];q=J['modes']['full'];assert q['success']
-    # Full candidate shapes are stored by the common scan as deterministic libraries.
-    if 'candidate_BC_shapes' in q: bc=[tuple(tuple(p) for p in g) for g in q['candidate_BC_shapes']]
-    else:
-        # Backward-compatible recovery: import the library constructor and rebuild it
-        # from the 38 profiles exactly as the common scan did.
-        raise SystemExit('common checkpoint lacks full candidate shape lists; regenerate with library recording')
-    if 'candidate_SH_shapes' in q: sh=[tuple(tuple(p) for p in g) for g in q['candidate_SH_shapes']]
-    else: raise SystemExit('common checkpoint lacks full SH candidate shape lists; regenerate with library recording')
+    ap=argparse.ArgumentParser();ap.add_argument('--boundary-json',type=Path,required=True);ap.add_argument('--support-json',type=Path,required=True);ap.add_argument('--correction-json',type=Path,required=True);ap.add_argument('--a',type=int,required=True);ap.add_argument('--b',type=int,required=True);ap.add_argument('--dmax',type=int,required=True);ap.add_argument('--big-m',type=float,default=200);ap.add_argument('--time-limit',type=float,default=600);ap.add_argument('--output',type=Path,required=True);z=ap.parse_args()
+    B=json.loads(z.boundary_json.read_text());S=json.loads(z.support_json.read_text());C=json.loads(z.correction_json.read_text());P=[{'s':r['s'],'rho':r['rho'],'demand_id':r['demand_id']} for r in B['trimmed_survivor_records']]
+    basebc={cp.trim(tuple(tuple(p) for p in x['generators']),z.dmax) for x in S['active_BC']};basesh={tuple(tuple(p) for p in x['generators']) for x in S['active_SH']};bc=set(basebc);sh=set(basesh)
+    for r in C['records']:
+        for x in r['cuts']:
+            g=tuple(tuple(p) for p in x['generators']);(bc if x['family']=='BC' else sh).add(g)
+    bc=sorted(bc);sh=sorted(sh)
     base=cp.build(P,bc,sh,z.a,z.b,z.dmax);names=list(base.names);lb=[];ub=[];integ=[];cost=[]
     for lo,hi in base.bounds:lb.append(-np.inf if lo is None else lo);ub.append(np.inf if hi is None else hi);integ.append(0);cost.append(0.0)
     rows=[dict(r) for r in base.rows];los=[-np.inf]*len(rows);his=list(base.rhs);selectors=[]
@@ -38,7 +35,7 @@ def main():
     for i,r in enumerate(rows):
         for j,v in r.items():A[i,j]=v
     res=milp(np.array(cost),integrality=np.array(integ),bounds=Bounds(np.array(lb),np.array(ub)),constraints=LinearConstraint(A.tocsr(),np.array(los),np.array(his)),options={'time_limit':z.time_limit,'mip_rel_gap':0.0})
-    out={'schema':'n29-common-global-min-support-v1','success':bool(res.success),'status':int(res.status),'message':res.message,'profiles':len(P),'candidate_BC':len(bc),'candidate_SH':len(sh),'big_m':z.big_m,'time_limit':z.time_limit,'floating_point_reconnaissance_only':True,'mip_gap':getattr(res,'mip_gap',None),'mip_node_count':getattr(res,'mip_node_count',None)}
+    out={'schema':'n29-common-global-min-support-v2','success':bool(res.success),'status':int(res.status),'message':res.message,'profiles':len(P),'candidate_BC':len(bc),'candidate_SH':len(sh),'big_m':z.big_m,'time_limit':z.time_limit,'floating_point_reconnaissance_only':True,'mip_gap':getattr(res,'mip_gap',None),'mip_node_count':getattr(res,'mip_node_count',None)}
     if res.x is not None:
         ab=[];ash=[]
         for fam,i,y in selectors:
