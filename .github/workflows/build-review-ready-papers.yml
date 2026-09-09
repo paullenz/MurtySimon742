@@ -22,16 +22,23 @@ jobs:
       - name: Install paper toolchain
         run: |
           sudo apt-get update -qq
-          sudo DEBIAN_FRONTEND=noninteractive apt-get install -y -qq pandoc texlive-xetex texlive-latex-extra texlive-fonts-recommended lmodern poppler-utils
+          sudo DEBIAN_FRONTEND=noninteractive apt-get install -y -qq pandoc texlive-xetex texlive-latex-extra texlive-fonts-recommended lmodern fonts-dejavu-core poppler-utils
 
       - name: Build reviewer editions
         run: |
           set -euo pipefail
           mkdir -p review-build-diagnostics
-          # The canonical proof sources use TeX-style \[...\] display maths.
-          # Match the n=25 documented Pandoc mode rather than rewriting proofs.
-          sed -i 's/--from=markdown+raw_tex/--from=markdown+raw_tex+tex_math_single_backslash/' project/reviews/reviewer-paper-build/v1/build_review_papers.py
-          python3 project/reviews/reviewer-paper-build/v1/build_review_papers.py > >(tee review-build-diagnostics/BUILD.log) 2>&1
+          BUILDER=project/reviews/reviewer-paper-build/v1/build_review_papers.py
+          # Match the documented n=25 Markdown mode for TeX-style \[...\] maths.
+          sed -i 's/--from=markdown+raw_tex/--from=markdown+raw_tex+tex_math_single_backslash/' "$BUILDER"
+          # Use a Unicode-complete prose font so Greek letters and relation symbols
+          # appearing outside maths are never silently dropped by XeLaTeX.
+          sed -i '/"-V", "fontsize=11pt",/a\        "-V", "mainfont=DejaVu Serif",\n        "-V", "sansfont=DejaVu Sans",\n        "-V", "monofont=DejaVu Sans Mono",' "$BUILDER"
+          python3 "$BUILDER" > >(tee review-build-diagnostics/BUILD.log) 2>&1
+          if grep -q 'Missing character:' review-build-diagnostics/BUILD.log; then
+            echo 'Reviewer PDF build emitted missing-glyph warnings.' >&2
+            exit 1
+          fi
 
       - name: PDF preflight and render smoke check
         run: |
