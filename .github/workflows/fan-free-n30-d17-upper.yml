@@ -1,0 +1,47 @@
+name: Fan-free n30 Delta17 m227-255 upper closure
+
+on:
+  workflow_dispatch:
+  push:
+    paths:
+      - 'project/research/fan-free-fixed-orders/2026-09-09-v1/n30_d17_upper.py'
+      - '.github/workflows/fan-free-n30-d17-upper.yml'
+
+permissions:
+  contents: write
+
+jobs:
+  close:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 20
+    steps:
+      - uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262
+        with:
+          fetch-depth: 0
+      - name: Pin solver dependency
+        run: |
+          python3 -m venv .venv
+          .venv/bin/python -m pip install --disable-pip-version-check --only-binary=:all: scipy==1.17.0
+      - name: Run complete Delta17 upper-range exact-acceptance kernel
+        run: .venv/bin/python -I -B project/research/fan-free-fixed-orders/2026-09-09-v1/n30_d17_upper.py --output FAN_FREE_N30_D17_UPPER.json
+      - uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02
+        with:
+          name: fan-free-n30-d17-upper
+          path: FAN_FREE_N30_D17_UPPER.json
+          retention-days: 30
+      - name: Commit durable checkpoint
+        run: |
+          set -euo pipefail
+          cp FAN_FREE_N30_D17_UPPER.json project/research/fan-free-fixed-orders/2026-09-09-v1/checkpoints_N30_D17_UPPER.json
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add project/research/fan-free-fixed-orders/2026-09-09-v1/checkpoints_N30_D17_UPPER.json
+          git commit -m "Preserve complete Fan-free n30 Delta17 upper closure ${GITHUB_RUN_ID}" || exit 0
+          git restore . || true
+          for attempt in 1 2 3 4 5; do
+            if git push origin HEAD:main; then exit 0; fi
+            git reset --hard HEAD
+            git pull --rebase origin main
+            sleep $((attempt*2))
+          done
+          exit 1
