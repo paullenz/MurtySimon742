@@ -19,9 +19,10 @@ This companion collects the principal replay instructions, audits, graph-to-mode
 
 **Claim under review.** `n >= 6 and Delta(G) >= (293/500)n imply e(G) < floor(n^2/4)`.
 
-**Status.** complete candidate hand argument; independent review and novelty assessment OPEN.
+**Status.** retained candidate hand argument; superseded in threshold strength by 7/12; independent review OPEN.
 
 **Sources assembled verbatim below:**
+
 - `project/research/general_n/2026-09-08-profile-integral-v1/README.md`
 - `project/research/general_n/2026-09-08-profile-integral-v1/AUDIT.md`
 

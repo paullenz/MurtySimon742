@@ -22,6 +22,7 @@ This companion collects the principal replay instructions, audits, graph-to-mode
 **Status.** complete candidate; independent mathematical review OPEN.
 
 **Sources assembled verbatim below:**
+
 - `project/reviews/n30/2026-09-09-candidate-v1/README.md`
 - `project/reviews/n30/2026-09-09-candidate-v1/ASSEMBLY_AUDIT.md`
 

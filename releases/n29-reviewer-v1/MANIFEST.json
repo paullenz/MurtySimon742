@@ -17,24 +17,24 @@
       "sha256": "fd316bd60823aedcdcfd11337a1fee4d14305a8b1b434bea23026e2d1007f6d4"
     },
     {
-      "bytes": 61862,
+      "bytes": 61869,
       "path": "releases/n29-reviewer-v1/N29_Reviewer_Manuscript_v1.pdf",
-      "sha256": "5e9273e5132275fcdecda03d5dfd631d9444e1a51631e0982638e1e50d388ecd"
+      "sha256": "19e798260f4777bd8ed6dfd87e1f65100e59786ba65c34986ce8046f072a17e7"
     },
     {
-      "bytes": 36022,
+      "bytes": 36023,
       "path": "releases/n29-reviewer-v1/N29_Verification_Companion_v1.md",
-      "sha256": "e28d1c7fa472620b3db641a433c9212a4b0954f8657946dd02bb9e603040760e"
+      "sha256": "5d1fd1ac80e31533efe799a8d33c75d608d64a9a93bd2ce54c40fdd524655672"
     },
     {
-      "bytes": 86753,
+      "bytes": 86722,
       "path": "releases/n29-reviewer-v1/N29_Verification_Companion_v1.pdf",
-      "sha256": "1bb19a5f2a4cac982088f8de0484693a743e931ef49abc39f578a288ad0cc27a"
+      "sha256": "f08c5f77e132b557c8865eca144b6d3aaaedb68c56f8e93ca6634a27045a979a"
     },
     {
-      "bytes": 804,
+      "bytes": 791,
       "path": "releases/n29-reviewer-v1/README.md",
-      "sha256": "fbae9ab9f56c1a37b015f9417c6869fc2a12094da3742b61ee41f3f13427c5ab"
+      "sha256": "2790f7cdc22e5bed747c944cb78426e01f53121881e588b741f820e940f02e9b"
     }
   ],
   "key": "n29",

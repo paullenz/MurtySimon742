@@ -1,6 +1,6 @@
 ---
 title: "A layer-sum residual bound for diameter-2 edge-critical graphs"
-subtitle: "Reviewer edition 1 - candidate general structural theorem"
+subtitle: "Reviewer edition 1 - retained candidate general structural theorem"
 author: "Paul Lenz research project; mathematical development and drafting with ChatGPT/Geeps"
 date: "9 September 2026"
 documentclass: article
@@ -12,10 +12,10 @@ urlcolor: "blue"
 ---
 
 \begin{abstract}
-We present the current candidate layer-sum argument yielding a cubic residual inequality, its resulting surplus bound, and the consequence that, for orders at least six, the stated rational maximum-degree threshold forces a strict improvement over the balanced complete-bipartite edge bound. The result is retained as a useful structural theorem even though the later 293/500 argument improves the degree threshold. Independent mathematical review remains open.
+We present the retained candidate layer-sum argument yielding a cubic residual inequality, its resulting surplus bound, and the rational maximum-degree threshold 13/22. The result remains useful structural history even though later profile-integral arguments improve the threshold. Independent mathematical review remains open.
 \end{abstract}
 
-**Reviewer status.** candidate hand proof; independent mathematical review OPEN. This reviewer edition is an editorial rendering of the canonical source proof listed below. It does not convert same-assistant checking into external independence, does not make a novelty or priority claim, and does not claim the unrestricted Murty-Simon conjecture unless the source proof itself proves such a statement.
+**Reviewer status.** retained candidate hand proof; independent mathematical review OPEN. This reviewer edition is an editorial rendering of the canonical source proof listed below. It does not convert same-assistant checking into external independence, does not make a novelty or priority claim, and does not claim the unrestricted Murty-Simon conjecture unless the source proof itself proves such a statement.
 
 **Canonical claim.** `n >= 6 and Delta(G) >= (13/22)n imply e(G) < floor(n^2/4)`.
 

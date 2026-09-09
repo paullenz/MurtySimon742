@@ -17,22 +17,22 @@
     {
       "bytes": 67748,
       "path": "releases/n27-reviewer-v1/N27_Reviewer_Manuscript_v1.pdf",
-      "sha256": "0663c1c029690b9226d9091a352c08a66ace20d476db52b31786859b67230e67"
+      "sha256": "257b944be2bc4e374443a17e5604dd77df3110ac62984170687c1f3e3492dd6b"
     },
     {
-      "bytes": 21232,
+      "bytes": 21233,
       "path": "releases/n27-reviewer-v1/N27_Verification_Companion_v1.md",
-      "sha256": "8bf886a13f5e17edd71f7515d42b07adc75bdacbe4f25d2b749cdf45fc07748a"
+      "sha256": "805e125d0a64dff6ae9020e2d5e1d969c38e7cc0ee5d97dc5df1a07df84e77db"
     },
     {
-      "bytes": 59968,
+      "bytes": 59949,
       "path": "releases/n27-reviewer-v1/N27_Verification_Companion_v1.pdf",
-      "sha256": "e45c3d69540411eaa228fe1e160784272e22c7dadbb0492e43f0679f92a2a0e8"
+      "sha256": "7875966ff905ce1c2fce2624ed7b53b5d90df012a93e27d9b2e6d6277ce63262"
     },
     {
-      "bytes": 822,
+      "bytes": 809,
       "path": "releases/n27-reviewer-v1/README.md",
-      "sha256": "f7c34fe3e0432a80f2c128700dbc10f089cd359bf66edce89c80f63d9715edf9"
+      "sha256": "7dcb886ea0ef0878f1a28ab4a000ade8e839fafbe16965c99dc7b24cd0f72f60"
     }
   ],
   "key": "n27",

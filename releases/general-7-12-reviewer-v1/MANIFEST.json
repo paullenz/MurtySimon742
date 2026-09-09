@@ -1,0 +1,44 @@
+{
+  "built": "9 September 2026",
+  "canonical_proof": "project/research/general_n/2026-09-09-profile-integral-7-12-v1/PROOF.md",
+  "claim": "n >= 6 and Delta(G) >= (7/12)n imply e(G) < floor(n^2/4)",
+  "companion_sources": [
+    "project/research/general_n/2026-09-09-profile-integral-7-12-v1/README.md",
+    "project/research/general_n/2026-09-09-profile-integral-7-12-v1/AUDIT.md",
+    "project/research/general_n/2026-09-09-profile-integral-7-12-v1/evidence/run-34355073705/EXACT_CHECK.json",
+    "project/research/general_n/2026-09-09-profile-integral-7-12-v1/evidence/run-34355073705/INDEPENDENT_AUDIT.json",
+    "project/research/general_n/2026-09-09-profile-integral-7-12-v1/evidence/run-34355073705/RECEIPT.json"
+  ],
+  "editorial_only": true,
+  "external_review_complete": false,
+  "files": [
+    {
+      "bytes": 11302,
+      "path": "releases/general-7-12-reviewer-v1/General_7_12_Reviewer_Manuscript_v1.md",
+      "sha256": "3e84b7eb05cf78bed2820a2bc9ae7b89ad4f1b39512072ad64a4466c403412e1"
+    },
+    {
+      "bytes": 55858,
+      "path": "releases/general-7-12-reviewer-v1/General_7_12_Reviewer_Manuscript_v1.pdf",
+      "sha256": "0482352dca92a48e6a5aae429d3b3d42b88b221d0da89298df5da293f8c0ba57"
+    },
+    {
+      "bytes": 15629,
+      "path": "releases/general-7-12-reviewer-v1/General_7_12_Verification_Companion_v1.md",
+      "sha256": "cb657852c44bdd0cb004d252d95056cc90f74602d122225cd1a0af86b1979159"
+    },
+    {
+      "bytes": 46023,
+      "path": "releases/general-7-12-reviewer-v1/General_7_12_Verification_Companion_v1.pdf",
+      "sha256": "5aefa925486ecbd536dedd51da31e8bac180127e42f2afeff99bca2c6b442212"
+    },
+    {
+      "bytes": 941,
+      "path": "releases/general-7-12-reviewer-v1/README.md",
+      "sha256": "0149049442ed35c66eea2fa9b48974696e773dc2b33618114bc8c1332e07eec8"
+    }
+  ],
+  "key": "general-7-12",
+  "schema": "murty-simon-reviewer-package-v1",
+  "status": "complete candidate hand argument; internal exact audits green; independent review and novelty assessment OPEN"
+}

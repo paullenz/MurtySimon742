@@ -1,6 +1,6 @@
 ---
 title: "A profile-integral maximum-degree bound for diameter-2 edge-critical graphs"
-subtitle: "Reviewer edition 1 - candidate general structural theorem"
+subtitle: "Reviewer edition 1 - retained candidate general structural theorem"
 author: "Paul Lenz research project; mathematical development and drafting with ChatGPT/Geeps"
 date: "9 September 2026"
 documentclass: article
@@ -12,10 +12,10 @@ urlcolor: "blue"
 ---
 
 \begin{abstract}
-We present the current candidate profile-integral argument proving the profile-integral surplus bound in the selected/residual framework and deriving an exact rational maximum-degree threshold which, for orders at least six, forces a strict improvement over the balanced complete-bipartite edge bound. The argument is a general structural candidate rather than a proof of the unrestricted Murty-Simon conjecture. Its finite integer checks are retained and replayed internally; independent mathematical review and novelty assessment remain open.
+We present the retained candidate profile-integral argument establishing its original surplus bound and the rational maximum-degree threshold 293/500. This result is superseded in threshold strength by the later 7/12 profile-integral strengthening, but remains preserved as an independently reviewable development checkpoint. Independent mathematical review and novelty assessment remain open.
 \end{abstract}
 
-**Reviewer status.** complete candidate hand argument; independent review and novelty assessment OPEN. This reviewer edition is an editorial rendering of the canonical source proof listed below. It does not convert same-assistant checking into external independence, does not make a novelty or priority claim, and does not claim the unrestricted Murty-Simon conjecture unless the source proof itself proves such a statement.
+**Reviewer status.** retained candidate hand argument; superseded in threshold strength by 7/12; independent review OPEN. This reviewer edition is an editorial rendering of the canonical source proof listed below. It does not convert same-assistant checking into external independence, does not make a novelty or priority claim, and does not claim the unrestricted Murty-Simon conjecture unless the source proof itself proves such a statement.
 
 **Canonical claim.** `n >= 6 and Delta(G) >= (293/500)n imply e(G) < floor(n^2/4)`.
 

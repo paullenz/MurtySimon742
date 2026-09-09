@@ -22,6 +22,7 @@ This companion collects the principal replay instructions, audits, graph-to-mode
 **Status.** complete candidate; independent mathematical and computational review OPEN.
 
 **Sources assembled verbatim below:**
+
 - `releases/n27-candidate-v1/README.md`
 - `project/reviews/n27/2026-09-08-redteam-v1/REPORT.md`
 

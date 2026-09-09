@@ -22,6 +22,7 @@ This companion collects the principal replay instructions, audits, graph-to-mode
 **Status.** complete candidate; independent mathematical review OPEN.
 
 **Sources assembled verbatim below:**
+
 - `project/reviews/n29/2026-09-08-candidate-v1/README.md`
 - `project/reviews/n29/2026-09-09-bridge-standalone-v1/GRAPH_TO_MODEL_BRIDGE.md`
 - `project/reviews/n29/2026-09-09-bridge-standalone-v1/BRIDGE_REDTEAM.md`

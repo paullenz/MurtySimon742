@@ -10,32 +10,32 @@
   "external_review_complete": false,
   "files": [
     {
-      "bytes": 16612,
+      "bytes": 16489,
       "path": "releases/general-293-500-reviewer-v1/General_293_500_Reviewer_Manuscript_v1.md",
-      "sha256": "ca24125a595045b00365ef64e9b01aac6c4b4d2602496adae9307601b414e8ba"
+      "sha256": "7ffe4b1042fab26a75856c62b1bdbc8536c67aa3f10dc4d5d78511366c35cf46"
     },
     {
-      "bytes": 48438,
+      "bytes": 48305,
       "path": "releases/general-293-500-reviewer-v1/General_293_500_Reviewer_Manuscript_v1.pdf",
-      "sha256": "4d1033c06debd11f472a5d906bd9435023c0774f1338cd20017e80d1f71c8f37"
+      "sha256": "80172ea1157c818326bc4c7a91c850d8ce7677bba135304145543ba7969a567d"
     },
     {
-      "bytes": 9271,
+      "bytes": 9291,
       "path": "releases/general-293-500-reviewer-v1/General_293_500_Verification_Companion_v1.md",
-      "sha256": "11f05003d84ef411307537a286f77d52b9ac82686c94c12e50e4d6c96006fdb4"
+      "sha256": "ce078141739503cc333494045b85d5d68e57d576de90ff547b2a78d871ed89e6"
     },
     {
-      "bytes": 38633,
+      "bytes": 38704,
       "path": "releases/general-293-500-reviewer-v1/General_293_500_Verification_Companion_v1.pdf",
-      "sha256": "0dd103926a9338db149d6100e39c1f878c813538d07d5fb1bb4efb089ee25c6f"
+      "sha256": "69ea055a3d8b93e24e6375e9362b18657cfff2b955cd1a0cbaf676080c1116b5"
     },
     {
-      "bytes": 922,
+      "bytes": 928,
       "path": "releases/general-293-500-reviewer-v1/README.md",
-      "sha256": "229f4f99af8542f845578c789916eafe63e1085af4f23dbdc30d96a115ef4fba"
+      "sha256": "5c23891bddfe515638aa594df0f17d9386f040042e80d1c9754eaead7c3ab966"
     }
   ],
   "key": "general-293-500",
   "schema": "murty-simon-reviewer-package-v1",
-  "status": "complete candidate hand argument; independent review and novelty assessment OPEN"
+  "status": "retained candidate hand argument; superseded in threshold strength by 7/12; independent review OPEN"
 }

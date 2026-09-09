@@ -13,32 +13,32 @@
   "external_review_complete": false,
   "files": [
     {
-      "bytes": 14517,
+      "bytes": 14401,
       "path": "releases/general-13-22-reviewer-v1/General_13_22_Reviewer_Manuscript_v1.md",
-      "sha256": "1b199324732c4845b406becbe73d39a0b80ee7c719f03b9ef13536291203b3c8"
+      "sha256": "6e320e1d31b0f82892e2944dbdbefad3a4be75fd7281055f48fe167750e1b8e5"
     },
     {
-      "bytes": 43912,
+      "bytes": 43823,
       "path": "releases/general-13-22-reviewer-v1/General_13_22_Reviewer_Manuscript_v1.pdf",
-      "sha256": "b2fb522e3e39b2951b1a4f5562ade266ade87201f15b34b4d88598e74846a1ce"
+      "sha256": "bcf3205ffabef9c6dd1cedf4395dc2c58b6bdf966c16733140866649000bd34e"
     },
     {
-      "bytes": 31857,
+      "bytes": 31867,
       "path": "releases/general-13-22-reviewer-v1/General_13_22_Verification_Companion_v1.md",
-      "sha256": "e91b80499fad014f0fc3f10aef1f9b79036d3c129e32a65d6282e35c425afc68"
+      "sha256": "7d884e03b1374f1114e9709c04fc9f979dcfa16b451ba215cd36447361e96858"
     },
     {
-      "bytes": 75966,
+      "bytes": 75956,
       "path": "releases/general-13-22-reviewer-v1/General_13_22_Verification_Companion_v1.pdf",
-      "sha256": "6294ec105dc42949ace3717d15dd448b97a75536db109d14df15dfe0d1c4535b"
+      "sha256": "5ba89f89049b9c7bafeb5085915a528d6c72c817e718ea1d4d70640962d4b660"
     },
     {
-      "bytes": 870,
+      "bytes": 866,
       "path": "releases/general-13-22-reviewer-v1/README.md",
-      "sha256": "c16324504a425ba5268bd8171e2b13d51e1331ff858cc45d8826d1464c4b80c5"
+      "sha256": "f6d1dff79df252cc81a6560946c82c4923238c125d3b9168d64c9fac34393583"
     }
   ],
   "key": "general-13-22",
   "schema": "murty-simon-reviewer-package-v1",
-  "status": "candidate hand proof; independent mathematical review OPEN"
+  "status": "retained candidate hand proof; independent mathematical review OPEN"
 }

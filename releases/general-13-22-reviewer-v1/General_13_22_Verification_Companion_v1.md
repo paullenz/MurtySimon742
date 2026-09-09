@@ -19,9 +19,10 @@ This companion collects the principal replay instructions, audits, graph-to-mode
 
 **Claim under review.** `n >= 6 and Delta(G) >= (13/22)n imply e(G) < floor(n^2/4)`.
 
-**Status.** candidate hand proof; independent mathematical review OPEN.
+**Status.** retained candidate hand proof; independent mathematical review OPEN.
 
 **Sources assembled verbatim below:**
+
 - `project/research/general_n/2026-09-08-layer-sum-v1/README.md`
 - `project/research/general_n/2026-09-08-layer-sum-v1/CONSTRUCTION_AUDIT_2026-09-08.md`
 - `project/research/general_n/2026-09-08-layer-sum-v1/LAYER_AGGREGATION_AUDIT_2026-09-08.md`

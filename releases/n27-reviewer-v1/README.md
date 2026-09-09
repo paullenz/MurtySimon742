@@ -8,4 +8,4 @@ Status: **complete candidate; independent mathematical and computational review 
 
 Start with [N27_Reviewer_Manuscript_v1.pdf](N27_Reviewer_Manuscript_v1.pdf). For computational scope, replay instructions, hostile audits and provenance, read [N27_Verification_Companion_v1.pdf](N27_Verification_Companion_v1.pdf). The Markdown sources are committed beside the PDFs.
 
-The mathematical proof remains canonical at `project/reviews/n27/2026-09-07-candidate-v1/PROOF.md`. This package is editorial: it does not silently alter the underlying proof, and it does not represent internal or same-assistant checking as external independent verification.
+Canonical mathematical source: `project/reviews/n27/2026-09-07-candidate-v1/PROOF.md`. This package is editorial: it does not silently alter the underlying proof, and it does not represent internal or same-assistant checking as external independent verification.
