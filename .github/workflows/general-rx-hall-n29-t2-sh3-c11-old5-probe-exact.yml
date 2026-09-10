@@ -1,0 +1,44 @@
+name: General RX-Hall n29 t2 SH3 C11 old5 exact probe
+
+on:
+  workflow_dispatch:
+  push:
+    paths:
+      - '.github/workflows/general-rx-hall-n29-t2-sh3-c11-old5-probe-exact.yml'
+      - 'project/research/general_n/2026-09-09-rx-hall-v1/n29_t2_sh3_c11_old5_probe_exact.py'
+
+permissions:
+  contents: read
+
+jobs:
+  exact:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 20
+    steps:
+      - uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262
+      - run: |
+          python3 -m venv .venv
+          .venv/bin/python -m pip install --disable-pip-version-check --only-binary=:all: scipy==1.17.0
+      - name: Regenerate n29 t2 frontier
+        run: |
+          set -euo pipefail
+          D=project/reviews/n29/2026-09-08-redteam-restart-v1
+          mkdir -p inputs out
+          .venv/bin/python -I -B "$D/minimal_prepare.py" --t 2 --output inputs
+          g++ -O3 -std=c++17 "$D/minimal_rows.cpp" -o minimal_rows
+          ./minimal_rows inputs/demands.txt inputs/row_survivors.txt inputs/row_bands.txt 2 > inputs/MINIMAL_ROWS_REPORT.json
+      - name: Exact Fraction old-template probe
+        run: |
+          set -euo pipefail
+          R=project/research/general_n/2026-09-09-rx-hall-v1
+          /usr/bin/python3 -I -B "$R/n29_t2_sh3_c11_old5_probe_exact.py" \
+            --demands-json inputs/demands.json --rows inputs/row_survivors.txt \
+            --output out/t2-sh3-c11-old5-probe-exact.json
+          sha256sum out/*.json > out/SHA256SUMS.txt
+      - uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02
+        if: always()
+        with:
+          name: n29-t2-sh3-c11-old5-probe-exact
+          path: out/*
+          if-no-files-found: error
+          retention-days: 30
