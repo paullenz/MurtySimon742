@@ -1,0 +1,75 @@
+name: General RX-Hall n29 t2 fixed-integer support16 exact
+
+on:
+  workflow_dispatch:
+  push:
+    paths:
+      - 'project/research/general_n/2026-09-09-rx-hall-v1/n29_t2_support16_fixed_integer_exactify.py'
+      - '.github/workflows/general-rx-hall-n29-t2-support16-fixed-integer-exact.yml'
+
+permissions:
+  contents: write
+
+jobs:
+  exactify:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 30
+    steps:
+      - uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262
+        with:
+          fetch-depth: 0
+      - run: |
+          python3 -m venv .venv
+          .venv/bin/python -m pip install --disable-pip-version-check --only-binary=:all: scipy==1.17.0
+      - name: Regenerate n29 t2 frontier
+        run: |
+          set -euo pipefail
+          D=project/reviews/n29/2026-09-08-redteam-restart-v1
+          mkdir -p inputs out
+          .venv/bin/python -I -B "$D/minimal_prepare.py" --t 2 --output inputs
+          g++ -O3 -std=c++17 "$D/minimal_rows.cpp" -o minimal_rows
+          ./minimal_rows inputs/demands.txt inputs/row_survivors.txt inputs/row_bands.txt 2 > inputs/MINIMAL_ROWS_REPORT.json
+      - name: Exactify fixed integer potential
+        run: |
+          set -euo pipefail
+          R=project/research/general_n/2026-09-09-rx-hall-v1
+          .venv/bin/python -I -B "$R/n29_t2_support16_fixed_integer_exactify.py" \
+            --demands-json inputs/demands.json --rows inputs/row_survivors.txt --output out/EXACT.json
+      - name: Independent standard-library replay
+        run: |
+          set -euo pipefail
+          R=project/research/general_n/2026-09-09-rx-hall-v1
+          python3 -I -B "$R/n29_common_potential_verify_generic.py" --t 2 \
+            --demands-json inputs/demands.json --rows inputs/row_survivors.txt \
+            --exact-json out/EXACT.json --output out/REPLAY.json
+      - uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02
+        if: always()
+        with:
+          name: n29-t2-support16-fixed-integer-exact
+          path: out/*
+          if-no-files-found: warn
+          retention-days: 30
+      - name: Preserve strict PASS summary
+        run: |
+          set -euo pipefail
+          python3 - <<'PY'
+          import json, pathlib
+          e=json.load(open('out/EXACT.json')); r=json.load(open('out/REPLAY.json'))
+          assert e['status']=='PASS' and r['status']=='PASS'
+          keep={k:e[k] for k in ('schema','status','profiles','rows','variables','layers','diagonal_K','rectangle_support','primitive_integer_weights','scale','global_scale_factor','worst_margin_numerator','required_margin_numerator','zero_rhs_max_lhs','name_order_sha256','strict_primitive_interpretation')}
+          keep['independent_replay']=r
+          pathlib.Path('out/SUMMARY.json').write_text(json.dumps(keep,indent=2,sort_keys=True)+'\n')
+          PY
+          P="project/research/general_n/2026-09-09-rx-hall-v1/checkpoints/N29_T2_SUPPORT16_FIXED_INTEGER_EXACT_RUN_${GITHUB_RUN_ID}.json"
+          cp out/SUMMARY.json "$P"
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add "$P"
+          git commit -m "Preserve exact fixed-integer n29 t2 potential ${GITHUB_RUN_ID}"
+          git restore . || true
+          for attempt in 1 2 3 4 5; do
+            if git push origin HEAD:main; then exit 0; fi
+            git pull --rebase --autostash origin main
+            sleep $((attempt*2))
+          done
+          exit 1
