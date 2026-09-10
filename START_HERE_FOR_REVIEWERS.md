@@ -1,5 +1,7 @@
 # Start here for reviewers
 
+**Updated 10 September 2026.**
+
 ## What this repository is
 
 This repository contains **AI-assisted candidate mathematics** concerning the Murty–Simon conjecture / Erdős Problem #742, together with code, exact certificates, replay workflows, red-team reports and failed intermediate approaches.
@@ -8,17 +10,11 @@ Nothing here should be treated as externally accepted mathematics merely because
 
 Paul Lenz directed the project and chose the research priorities. ChatGPT/Geeps supplied the mathematical development, implementations, manuscripts and internal audits.
 
-## Robustness milestone: Fan-free fixed-order v2 editions
-
-A hostile external-AI critique questioned both selected/residual semantics and the use of G. Fan's 1987 density theorem as an edge-count cap. The semantic objections were re-audited and resolved explicitly in the current proof text. The project then removed Fan as a **logical dependency** from its current fixed-order candidate proofs at `n=25,27,28,29,30`, while retaining Fan's theorem as historical attribution and preserving every reviewer-v1/proof source unchanged.
-
-Reviewers should therefore use the **Fan-free reviewer-v2 packages** listed in [`releases/REVIEW_READY_INDEX.md`](releases/REVIEW_READY_INDEX.md). The direct replacement is [`FAN_FREE_REDUCTION.md`](project/research/fan-free-fixed-orders/2026-09-09-v1/FAN_FREE_REDUCTION.md), and its assembled edge-range/source-integrity checks are recorded in [`FAN_FREE_AUDIT.md`](project/research/fan-free-fixed-orders/2026-09-09-v1/FAN_FREE_AUDIT.md). The audit is internal; independent review of the graph-theoretic bridge remains open.
-
 If you find an error, please open a GitHub Issue. A short counterexample or a precise identification of the first invalid implication is more valuable than a general assessment.
 
 ## Headline candidate results
 
-The repository currently contains candidate fixed-order Murty–Simon results for:
+The repository currently contains complete candidate fixed-order Murty–Simon results for:
 
 - `n=25`: `e(G) <= 156`, equality only `K(12,13)`;
 - `n=27`: `e(G) <= 182`, equality only `K(13,14)`;
@@ -26,21 +22,47 @@ The repository currently contains candidate fixed-order Murty–Simon results fo
 - `n=29`: `e(G) <= 210`, equality only `K(14,15)`;
 - `n=30`: `e(G) <= 225`, equality only `K(15,15)`.
 
-It also contains a general structural programme, including the candidate implication
+The current fixed-order reviewer surfaces are the **Fan-free v2 editions** in [`releases/REVIEW_READY_INDEX.md`](releases/REVIEW_READY_INDEX.md). Historical v1 packages remain preserved for provenance.
+
+The strongest current reviewer-packaged general candidate is
 
 ```text
-n >= 6 and Delta(G) >= (293/500)n  ==>  e(G) < floor(n^2/4).
+n >= 6 and Delta(G) >= (7/12)n  ==>  e(G) < floor(n^2/4).
 ```
 
-No unrestricted all-order proof is claimed.
+Start with [`releases/general-7-12-reviewer-v1/README.md`](releases/general-7-12-reviewer-v1/README.md). This is a complete candidate hand argument with internal exact audits green; independent mathematical review, novelty assessment and external reproduction remain open.
 
-## Recommended first review: the universal bridge via n=29
+The active RX-Hall / 3-D potential programme is attempting to go below the `7/12` frontier by retaining more joint profile information. It has exact finite compression results, but **no unrestricted theorem is claimed from that programme yet**.
 
-The n=29 candidate remains the cleanest place to audit the universal graph-to-demand machinery because most degree ranges are eliminated by short hand arguments and the difficult `Delta=16` case has a deliberately reduced trusted kernel. The same bridge is then parameterised at n=30.
+No unrestricted all-order proof is claimed anywhere in the repository.
+
+## n=25: the natural fixed-order paper to inspect
+
+The project treats `n=25` as a candidate resolution of the conspicuous order-25 gap between Fan's published `n<=24` and `n=26` results.
+
+Current package:
+
+- [`releases/n25-reviewer-v2/README.md`](releases/n25-reviewer-v2/README.md)
+- [`project/reviews/n25/2026-09-09-fan-free-v2/PROOF.md`](project/reviews/n25/2026-09-09-fan-free-v2/PROOF.md)
+- [`project/reviews/n25/2026-09-08-reaudit-v1/README.md`](project/reviews/n25/2026-09-08-reaudit-v1/README.md)
+
+The complete finite domain was replayed in sixteen disjoint clean-runner shards covering 543,578 outer states and 3,442,212 labelled columns. A separately written terminal re-audit imported no frozen verifier and independently reconstructed all 1,959 final equality certificates. No blocking mathematical defect was found in that internal re-audit.
+
+The principal remaining question is therefore not whether the arithmetic replay terminates, but whether the graph-to-model reductions and their hypotheses are universally sound.
+
+## Robustness milestone: Fan-free fixed-order v2 editions
+
+A hostile external-AI critique questioned both selected/residual semantics and the use of G. Fan's 1987 density theorem as an edge-count cap. The semantic objections were re-audited and resolved explicitly in the current proof text. The project then removed Fan as a **logical dependency** from its current fixed-order candidate proofs at `n=25,27,28,29,30`, while retaining Fan's theorem as historical attribution and preserving every reviewer-v1/proof source unchanged.
+
+Reviewers should therefore use the **Fan-free reviewer-v2 packages** listed in [`releases/REVIEW_READY_INDEX.md`](releases/REVIEW_READY_INDEX.md). The direct replacement is [`FAN_FREE_REDUCTION.md`](project/research/fan-free-fixed-orders/2026-09-09-v1/FAN_FREE_REDUCTION.md), and its assembled edge-range/source-integrity checks are recorded in [`FAN_FREE_AUDIT.md`](project/research/fan-free-fixed-orders/2026-09-09-v1/FAN_FREE_AUDIT.md). The audit is internal; independent review of the graph-theoretic bridge remains open.
+
+## Recommended bridge audit: n=29
+
+The n=29 candidate remains a clean place to audit the universal graph-to-demand machinery because most degree ranges are eliminated by short hand arguments and the difficult `Delta=16` case has a deliberately reduced trusted kernel. The same bridge is then parameterised at n=30.
 
 Main proof:
 
-- [`project/reviews/n29/2026-09-09-fan-free-v2/PROOF.md`](project/reviews/n29/2026-09-09-fan-free-v2/PROOF.md) — current Fan-free edition; [historical v1](project/reviews/n29/2026-09-08-candidate-v1/PROOF.md)
+- [`project/reviews/n29/2026-09-09-fan-free-v2/PROOF.md`](project/reviews/n29/2026-09-09-fan-free-v2/PROOF.md)
 
 Standalone bridge and hostile audit:
 
@@ -49,7 +71,7 @@ Standalone bridge and hostile audit:
 - [`project/reviews/n29/2026-09-09-bridge-standalone-v1/BRIDGE_REDTEAM.md`](project/reviews/n29/2026-09-09-bridge-standalone-v1/BRIDGE_REDTEAM.md)
 - [`project/reviews/n29/2026-09-08-redteam-restart-v1/PUBLIC_RELEASE_AUDIT.md`](project/reviews/n29/2026-09-08-redteam-restart-v1/PUBLIC_RELEASE_AUDIT.md)
 
-The highest-value mathematical review is therefore the **graph-to-demand bridge**, not another rerun of the arithmetic.
+The highest-value mathematical review is the **graph-to-demand bridge**, not another rerun of the arithmetic.
 
 ## Minimal trusted kernel for n=29, Delta=16
 
@@ -66,11 +88,7 @@ quasi-edge / selected-residual construction
         -> exact integer Farkas verification
 ```
 
-The clean-runner result is recorded in:
-
-- [`project/reviews/n29/2026-09-08-redteam-restart-v1/MINIMAL_KERNEL_REPORT.json`](project/reviews/n29/2026-09-08-redteam-restart-v1/MINIMAL_KERNEL_REPORT.json)
-
-It reports:
+The clean-runner result is recorded in [`MINIMAL_KERNEL_REPORT.json`](project/reviews/n29/2026-09-08-redteam-restart-v1/MINIMAL_KERNEL_REPORT.json):
 
 | Edge count | `t` | Demand profiles retained | Residual rows | Exact late rejections | Final survivors |
 |---:|---:|---:|---:|---:|---:|
@@ -81,20 +99,11 @@ Every late exclusion is rechecked by exact integer arithmetic. Floating-point LP
 
 The minimal route does **not** use the old projected screen, joint propagator, shared LP, typed LP, old endpoint LP or the older pair-capacity support formula. Those remain in the repository as redundant evidence and research history.
 
-Relevant source:
+## n=30 complete candidate
 
-- [`minimal_prepare.py`](project/reviews/n29/2026-09-08-redteam-restart-v1/minimal_prepare.py)
-- [`minimal_rows.cpp`](project/reviews/n29/2026-09-08-redteam-restart-v1/minimal_rows.cpp)
-- [`independent_threshold_model_v2.py`](project/reviews/n29/2026-09-08-redteam-restart-v1/independent_threshold_model_v2.py)
-- [`run_minimal_kernel.py`](project/reviews/n29/2026-09-08-redteam-restart-v1/run_minimal_kernel.py)
-- [clean GitHub Actions workflow](.github/workflows/n29-minimal-kernel.yml)
+Current proof and audit:
 
-## New n=30 complete candidate
-
-The n=30 candidate is assembled at:
-
-- [`project/reviews/n30/2026-09-09-candidate-v1/README.md`](project/reviews/n30/2026-09-09-candidate-v1/README.md)
-- [`project/reviews/n30/2026-09-09-fan-free-v2/PROOF.md`](project/reviews/n30/2026-09-09-fan-free-v2/PROOF.md) — current Fan-free edition; [historical v1](project/reviews/n30/2026-09-09-candidate-v1/PROOF.md)
+- [`project/reviews/n30/2026-09-09-fan-free-v2/PROOF.md`](project/reviews/n30/2026-09-09-fan-free-v2/PROOF.md)
 - [`project/reviews/n30/2026-09-09-candidate-v1/ASSEMBLY_AUDIT.md`](project/reviews/n30/2026-09-09-candidate-v1/ASSEMBLY_AUDIT.md)
 
 Its candidate statement is
@@ -104,41 +113,61 @@ e(G) <= 225,
 with equality exactly K(15,15).
 ```
 
-The current edition does not use Fan's density theorem logically: the direct Fan-free upper-range reduction excludes every edge count above 226. The dense non-bipartite proof then reduces the 226-edge scope to `Delta=16` and `Delta=17`; the remaining degree ranges are hand/charging exclusions.
+The current edition does not use Fan's density theorem logically. For `Delta=17`, the difficult scopes close by threshold/source-count inequalities and exact Hall duals. For `Delta=16`, the bridge is genuinely parameterised to `(a,b)=(13,16)` and the remaining final rows are rejected by exact integer Farkas certificates. The final assembly replay is green. This is still same-assistant evidence, not external validation.
 
-For `Delta=17`, no residual-row or final LP model is needed. At 226 edges all 250 charging-feasible profiles are rejected by threshold capacity. At 225 edges, 1,137 of 1,155 profiles are rejected by threshold/source-count inequalities and the remaining 18 by exact Hall duals. Clean replay: `34292054922`.
+## General 7/12 candidate
 
-For `Delta=16`, the bridge is genuinely parameterised to `(a,b)=(13,16)`. Clean workflows `34286806474`, `34287440190`, and `34287739057` leave 9 final rows at 226 edges and 272 at 225 edges, all exactly Farkas-rejected. The isolated-`C` step used to obtain `d_i<=11` is expanded separately at [`ISOLATED_C_PARAMETERIC_LEMMA.md`](project/research/n30/2026-09-08-minimal-kernel-recon-v1/ISOLATED_C_PARAMETERIC_LEMMA.md).
+The current strongest reviewer-packaged maximum-degree candidate is
 
-The final lightweight assembly replay `34292557008` is green. This is still same-assistant evidence, not external validation.
+```text
+n >= 6 and Delta(G) >= (7/12)n  ==>  e(G) < floor(n^2/4).
+```
+
+Reviewer material:
+
+- [`releases/general-7-12-reviewer-v1/README.md`](releases/general-7-12-reviewer-v1/README.md)
+- [`project/research/general_n/2026-09-09-profile-integral-7-12-v1/PROOF.md`](project/research/general_n/2026-09-09-profile-integral-7-12-v1/PROOF.md)
+- [`project/research/general_n/2026-09-09-profile-integral-7-12-v1/AUDIT.md`](project/research/general_n/2026-09-09-profile-integral-7-12-v1/AUDIT.md)
+
+The scalar estimate gives
+
+```text
+t < 5a^2/128 + a/8.
+```
+
+Two separately written standard-library checkers agree on the exact scalar arithmetic and the finite assembly exceptions. The large `n` regressions are consistency checks, not proof by extrapolation. The main mathematical trust boundary is the shared graph-to-demand/profile-integral bridge.
+
+The associated ceiling analysis places the asymptotic limit of the current scalar-uniform profile-integral architecture near `0.582066`, close to `7/12 = 0.583333...`; further progress is therefore expected to require additional joint profile information.
+
+## 10 September RX-Hall / 3-D potential frontier
+
+The active continuation is documented under [`project/research/general_n/2026-09-09-rx-hall-v1/`](project/research/general_n/2026-09-09-rx-hall-v1/README.md).
+
+Three current finite compression milestones are particularly relevant:
+
+1. **n=29, t=3.** All 94 regenerated hard profiles admit one exact rational analytic min-hinge potential with nine breakpoints. See [`MIN_HINGE_ANALYTIC_REDUCTION.md`](project/research/general_n/2026-09-09-rx-hall-v1/MIN_HINGE_ANALYTIC_REDUCTION.md).
+2. **n=30, t=1.** A naive BC/diagonal parameter rule failed one of seven hard profiles. Restoring the first Hall coordinate with the single threshold `1[s>=2]` yields an exact 13-generator 3-D potential with two rational scalar templates covering all seven profiles and minimum exact strict gap `1/2`. See [`N30_T1_TWO_TEMPLATE_POTENTIAL.md`](project/research/general_n/2026-09-09-rx-hall-v1/N30_T1_TWO_TEMPLATE_POTENTIAL.md).
+3. **n=29, t=2.** A fixed 11-term primitive 3-D potential plus exactly three rational scalar templates covers all 902 regenerated profiles. An exact rational Farkas incompatibility triangle proves that, for this fixed potential, two templates cannot suffice. See [`N29_T2_3D_THREE_TEMPLATE_EXACT.md`](project/research/general_n/2026-09-09-rx-hall-v1/N29_T2_3D_THREE_TEMPLATE_EXACT.md).
+
+These are exact finite RX-Hall results conditional on the graph-to-profile bridge and the 3-D monotone transport/potential lemma. They are **not** unrestricted Murty–Simon theorems and are not dependencies of the current fixed-order proofs.
+
+The current high-value research target is to explain the three `t=2` scalar regimes by simple profile statistics and determine whether the resulting inequalities extend symbolically in `(n,t)`. That is the path being tested toward a genuinely reusable infinite-family theorem below the `7/12` frontier.
 
 ## Important audit history: a real n=29 bug was found
 
 During the hostile n=29 bridge audit, an error was found in the first version of the *additional* cumulative-threshold verifier, `independent_threshold_model.py`.
 
-The grouped selected-incidence equation multiplied label-side capacity by the label-group multiplicity twice. In normalized form the correct identity is per label, schematically
-
-```text
-sum_k n_k Z_kg = sum_h T_h,
-```
-
-not
-
-```text
-sum_k n_k Z_kg = n_g * sum_h T_h.
-```
-
-Accordingly:
+The grouped selected-incidence equation multiplied label-side capacity by the label-group multiplicity twice. Accordingly:
 
 - the **v1 cumulative-threshold certificates are not valid proof evidence**;
 - the flawed v1 source is retained for audit history and must not be cited as a verifier;
-- the error did not affect the original n=29 direct route or the separate fully fresh implementation, which use different machinery;
+- the error did not affect the original n=29 direct route or the separate fully fresh implementation;
 - [`independent_threshold_model_v2.py`](project/reviews/n29/2026-09-08-redteam-restart-v1/independent_threshold_model_v2.py) fixes the normalization;
 - corrected v2 was replayed cleanly and again produced zero survivors;
-- the later minimal trusted-kernel replay also uses the corrected v2 model and produced zero survivors;
-- the n=30 Delta=16 grouped model was written fresh with the corrected normalization.
+- the later minimal trusted-kernel replay uses the corrected v2 model and produced zero survivors;
+- the n=30 `Delta=16` grouped model was written fresh with the corrected normalization.
 
-This history is intentionally public. Finding such an error is evidence that the red-team process is doing useful work; it is not being silently edited out of the record.
+This history is intentionally public. It should not be silently edited out of the record.
 
 ## What to attack first
 
@@ -150,30 +179,18 @@ A useful hostile review would try to break these points in roughly this order:
 4. **Demand implication.** Does `s_i=max(0,d_i-R_i)` genuinely require `s_i` distinct selected sources with enough residual degree?
 5. **Charging inequality.** Check the per-source charge budget and the passage to the summed demand inequality.
 6. **Threshold-capacity lemma.** Check the high-demand/high-residual source counting and unordered-pair capacity.
-7. **Parameteric isolated-C lemma.** Check the auxiliary-location argument and disjoint residual-edge families.
+7. **Parameterized isolated-C lemma.** Check the auxiliary-location argument and disjoint residual-edge families.
 8. **Exact source-capacity dual.** Verify that it is only a necessary Hall relaxation and that the saved integer dual inequality proves each rejection.
 9. **Residual-row scanner.** Check that every pruning operation enlarges or preserves the graph-realizable set before rejection.
 10. **Corrected grouped LP normalization.** Track every grouped variable dimensionally: per label, per source, or per possible pair.
-11. **Exact Farkas checker.** Confirm multiplier signs, equality treatment, coefficientwise nonnegativity and strictly negative combined RHS.
+11. **3-D transport/potential lemma.** Check that every asserted coordinatewise incidence inequality is justified and that every used potential is coordinatewise nondecreasing on the required domain.
+12. **Exact Farkas checkers.** Confirm multiplier signs, equality treatment, coefficientwise conditions and strictly negative combined RHS where required.
 
 A single valid counterexample to any universal lemma is enough to invalidate the dependent route and should be reported immediately.
 
-## Other fixed-order packages
-
-For the older fixed-order cases, start from the root [`README.md`](README.md) and then use the release/review directories it links. Each scope has its own proof, replay artefacts and audit status.
-
-## General structural programme
-
-The current general candidate route is:
-
-- [`project/research/general_n/2026-09-08-profile-integral-v1/PROOF.md`](project/research/general_n/2026-09-08-profile-integral-v1/PROOF.md)
-- [`project/research/general_n/2026-09-08-profile-integral-v1/AUDIT.md`](project/research/general_n/2026-09-08-profile-integral-v1/AUDIT.md)
-
-Earlier structural checkpoints are preserved because failed or superseded approaches may still contain useful lemmas or ideas. Their presence should not be read as multiple independent proofs of the same statement.
-
 ## Reproduction philosophy
 
-The repository attempts to distinguish:
+The repository attempts to distinguish clearly between:
 
 - mathematical lemmas;
 - finite necessary-condition systems;
@@ -182,7 +199,7 @@ The repository attempts to distinguish:
 - same-assistant reimplementation;
 - genuinely independent external review.
 
-Only the first four can currently be supplied internally. External mathematical and computational review remains explicitly open.
+Only the first five can currently be supplied internally. External mathematical and computational review remains explicitly open.
 
 ## How to report a problem
 
