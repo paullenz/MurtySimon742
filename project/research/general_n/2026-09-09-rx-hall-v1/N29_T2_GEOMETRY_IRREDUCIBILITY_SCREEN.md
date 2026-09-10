@@ -77,7 +77,7 @@ So neither the natural diagonal slack cuts by themselves nor simply adding the n
 
 ## 6. Fast 107-obstruction family screen
 
-Workflow run **34500036709** then tested broader families on the 107 obstruction profiles only.
+Workflow run **34500036709** tested broader families on the 107 obstruction profiles only.
 
 Artifact id: **10161476255**
 
@@ -102,15 +102,38 @@ Here `Dk` means the complete rectangle layer `B(k,V)` over `V=0,...,16`; `J_c=1[
 
 The sole feasible family had 21 active generators in the returned optimum. The active support included all three d-layers and both diagonals.
 
-## 7. Structural interpretation
+## 7. Individual five-family ablation
 
-Within this tested two-coordinate BC/diagonal basis, the t=2 obstruction profiles strongly distinguish the full family
+The three one-family deletions missing from the first screen were then tested explicitly in workflow run **34500408371**.
+
+Artifact id: **10161625583**
+
+Artifact SHA-256: **3d6ace5431f9ec40ca0ac0f82c29cbc58bd95f066ccc38225b1d9fb6e739765a**
+
+Results on the same 107 obstruction profiles:
+
+| deletion from `D2+D3+D4+J0+J2` | result |
+|---|---|
+| drop D2 | infeasible |
+| drop D3 | infeasible (prior screen) |
+| drop D4 | infeasible (prior screen) |
+| drop J0 | infeasible |
+| drop J2 | infeasible |
+| drop nothing | feasible |
+
+Therefore **all five geometry families are individually indispensable within this complete-layer BC + two-diagonal basis on the bad107 obstruction set**.
+
+This statement is deliberately limited. It is not a proof that the trusted 16 individual generators are support-minimal; it is not a proof that a different 3-D Hall potential cannot replace one of these families; and it is not a graph-theoretic theorem. It is a clean irreducibility statement for the tested 2-D basis.
+
+## 8. Structural interpretation
+
+Within this tested two-coordinate BC/diagonal basis, the t=2 obstruction profiles sharply distinguish the full family
 
 \[
 D=\{2,3,4\},\qquad c=\{0,2\}
 \]
 
-from the natural simpler alternatives. This is exactly the **family language** used by the trusted exact primitive 16-generator potential:
+from all one-family deletions. This is exactly the **family language** used by the trusted exact primitive 16-generator potential:
 
 \[
 F=A_2(v)1[d\ge2]+A_3(v)1[d\ge3]+A_4(v)1[d\ge4]+15J_2+14J_0.
@@ -130,13 +153,8 @@ For comparison:
 - t=2, n=29: exact solution uses D={2,3,4}, c={0,2};
 - t=3, n=29: exact solution collapses further to three rectangles on D=3 and needs neither diagonal nor first-coordinate correction.
 
-## 8. What is not yet proved
+## 9. Next falsification step
 
-The screen does **not** prove that each of the five families `D2,D3,D4,J0,J2` is individually indispensable. The tested ablations already establish necessity of D3 and D4 within several broad combinations, and establish that some diagonal information is necessary when all three d-layers are present. The next targeted tests are:
+The two-coordinate basis is now understood much better. The next stronger test is to use the exact 3-D monotone coupling and ask whether one simple first-coordinate threshold, naturally `1[s>=t+1]=1[s>=3]` against `1[rho>=3]`, can replace any of D2, D3, D4, J0, or J2 on the obstruction set.
 
-1. `D2+D3+D4+J0` (drop J2);
-2. `D2+D3+D4+J2` (drop J0);
-3. `D3+D4+J0+J2` (drop D2);
-4. full family as a control.
-
-If the first three are infeasible already on the bad107 set, then all five family components are irreducible within this BC/DST basis on that obstruction set. That still would not imply individual-generator minimality or a universal graph theorem.
+A positive replacement would show that the apparent five-family irreducibility is an artefact of projecting away the first coordinate. A negative result would materially strengthen the case that the `D={t,t+1,t+2}, c={0,t}` language reflects genuine residual Hall geometry rather than certificate accident.
