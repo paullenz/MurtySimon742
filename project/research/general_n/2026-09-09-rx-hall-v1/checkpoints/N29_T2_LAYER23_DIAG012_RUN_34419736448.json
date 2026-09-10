@@ -1,0 +1,44 @@
+{
+  "schema": "n29-t2-layer23-diag012-batch-v1-recovered",
+  "run_id": 34419736448,
+  "artifact_id": 10130517186,
+  "artifact_sha256": "91013a195aa23e18469fa941e5fe08f85edee3f044b03c6d7f7999c6f05703d6",
+  "floating_point_reconnaissance_only": true,
+  "publication_note": "All computation and artifact upload steps succeeded. The original workflow's final Git push failed only because main advanced and the LFS checkout left unstaged pointer noise. This compact checkpoint is a direct recovery of the printed job results.",
+  "hard38": {
+    "profiles": 38,
+    "success": true,
+    "rows": 17621,
+    "variables": 923,
+    "objective": 1.8351620172992724,
+    "initial_generator_count": 20,
+    "greedy_generator_count": 10,
+    "greedy_rectangles": [
+      {"D": 3, "V": 0, "weight": 1.0721496204710848},
+      {"D": 3, "V": 7, "weight": 0.20478910712888204},
+      {"D": 3, "V": 8, "weight": 0.10239455356444321},
+      {"D": 3, "V": 9, "weight": 0.15359183034666263},
+      {"D": 3, "V": 10, "weight": 0.2047891071288835},
+      {"D": 3, "V": 11, "weight": 0.2047891071288835},
+      {"D": 3, "V": 12, "weight": 0.20478910712888343},
+      {"D": 3, "V": 13, "weight": 0.20478910712888312}
+    ],
+    "greedy_diagonals": [
+      {"K": 14, "c": 2, "weight": 0.24415055951169828},
+      {"K": 16, "c": 0, "weight": 0.213631739572736}
+    ]
+  },
+  "all902": {
+    "profiles": 902,
+    "success": false,
+    "status": 2,
+    "message": "The problem is infeasible. (HiGHS Status 8: model_status is Infeasible; primal_status is None)",
+    "rows": 334159,
+    "variables": 20535,
+    "layers": [2, 3],
+    "diagonal_K": [14, 15, 16],
+    "diagonal_c": [2, 1, 0],
+    "seconds": 173.72895431518555
+  },
+  "interpretation": "The exact hard-core observation that useful rectangle mass lives on D=2,3 does not transfer to all 902 regenerated n29 t=2 profiles, even after allowing all V thresholds on both layers and all three slack cuts c=0,1,2. The order-wide rectangle component therefore needs at least one additional d-threshold layer or a different generator family. No SH correction was present in this test."
+}
