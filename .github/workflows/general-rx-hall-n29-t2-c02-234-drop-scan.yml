@@ -16,7 +16,15 @@ jobs:
       fail-fast: false
       max-parallel: 8
       matrix:
-        drop: ['r:3:2','r:3:4','r:3:5','r:4:2','r:3:12','r:4:6','r:4:3','r:2:14']
+        include:
+          - { id: r3v2, drop: 'r:3:2' }
+          - { id: r3v4, drop: 'r:3:4' }
+          - { id: r3v5, drop: 'r:3:5' }
+          - { id: r4v2, drop: 'r:4:2' }
+          - { id: r3v12, drop: 'r:3:12' }
+          - { id: r4v6, drop: 'r:4:6' }
+          - { id: r4v3, drop: 'r:4:3' }
+          - { id: r2v14, drop: 'r:2:14' }
     runs-on: ubuntu-24.04
     timeout-minutes: 25
     steps:
@@ -36,14 +44,13 @@ jobs:
         run: |
           set -euo pipefail
           R=project/research/general_n/2026-09-09-rx-hall-v1
-          tag=$(echo '${{ matrix.drop }}' | tr ':' '-')
           .venv/bin/python -I -B "$R/n29_t2_c02_234_drop_scan.py" \
             --drop '${{ matrix.drop }}' --demands-json inputs/demands.json \
-            --rows inputs/row_survivors.txt --output "out/drop-${tag}.json"
+            --rows inputs/row_survivors.txt --output 'out/drop-${{ matrix.id }}.json'
       - uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02
         if: always()
         with:
-          name: n29-t2-c02-234-${{ matrix.drop }}
+          name: n29-t2-c02-234-${{ matrix.id }}
           path: out/*
           if-no-files-found: error
           retention-days: 30
