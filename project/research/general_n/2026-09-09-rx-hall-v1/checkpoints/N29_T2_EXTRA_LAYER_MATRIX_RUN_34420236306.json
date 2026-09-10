@@ -1,0 +1,33 @@
+{
+  "schema": "n29-t2-one-extra-layer-matrix-v1",
+  "run_id": 34420236306,
+  "scope": {
+    "n": 29,
+    "t": 2,
+    "profiles": 902,
+    "base_rectangle_layers": [2, 3],
+    "diagonal_K": [14, 15, 16],
+    "diagonal_c": [2, 1, 0],
+    "SH": false
+  },
+  "floating_point_reconnaissance_only": true,
+  "results": [
+    {"extra_D": 0, "layers": [0,2,3], "success": true, "objective": 33.476880553555766, "active_generator_count": 22, "active_by_D": {"0":7,"2":2,"3":10}, "seconds": 194.44113659858704, "artifact_id": 10130685687, "artifact_sha256": "cae5f58aa3e40765201b7938b074911e112423e282a7c6be7863960c4a99a8c3"},
+    {"extra_D": 1, "layers": [1,2,3], "success": true, "objective": 33.476880553555766, "active_generator_count": 22, "active_by_D": {"1":7,"2":2,"3":10}, "seconds": 167.21145725250244, "artifact_id": 10130669785, "artifact_sha256": "db2271c5a6e6e86c1595ebd19410ea10332e1d7b2887141585fb40ee70957ca3"},
+    {"extra_D": 4, "layers": [2,3,4], "success": true, "objective": 57.11877803414253, "active_generator_count": 20, "active_by_D": {"2":4,"3":8,"4":5}, "seconds": 179.31620836257935, "artifact_id": 10130675087, "artifact_sha256": "0ec568ac5d0dbc8afc72370e3a2304a15aff37c79f5868aa71d9a787207f7574"},
+    {"extra_D": 5, "layers": [2,3,5], "success": false, "status": 2, "seconds": 214.79207253456116, "artifact_id": 10130696991, "artifact_sha256": "f7b13cf7d89392fd43c26e24fd54523cee4ee94252508805af20e649110827e3"},
+    {"extra_D": 6, "layers": [2,3,6], "success": false, "status": 2, "seconds": 213.73573875427246, "artifact_id": 10130695750, "artifact_sha256": "cdfcc1c2038b9538879bca9575526220a5743762b485321d3d9063d73d9d1951"},
+    {"extra_D": 7, "layers": [2,3,7], "success": false, "status": 2, "seconds": 187.21143674850464, "artifact_id": 10130682688, "artifact_sha256": "0aa348db748e7cd89f59f1797c72686874f2e2aedf2f83b825f83cb3cc5372b5"},
+    {"extra_D": 8, "layers": [2,3,8], "success": false, "status": 2, "seconds": 195.32151055335999, "artifact_id": 10130688285, "artifact_sha256": "113e346c38bbbe8de0f9093464c7789ed9706f87b7f5389b14a5ac8b6527e0ae"},
+    {"extra_D": 9, "layers": [2,3,9], "success": false, "status": 2, "seconds": 180.2285816669464, "artifact_id": 10130678262, "artifact_sha256": "615722cf13eb848f34a804d5ba3e954c92e77e5bc6c25a074984abc23c5a3213"},
+    {"extra_D": 10, "layers": [2,3,10], "success": false, "status": 2, "seconds": 236.47678804397583, "artifact_id": 10130706686, "artifact_sha256": "8c0e35f581f62c02653524c1c19e6881759d2f7b1d0fa654d7e591b7b99906e8"},
+    {"extra_D": 11, "layers": [2,3,11], "success": false, "status": 2, "seconds": 162.10278153419495, "artifact_id": 10130669051, "artifact_sha256": "1d9f1fee0b9a296a373354811e01a89119bc63d96936cd6ac5d5bc49aca08b49"}
+  ],
+  "observations": [
+    "Exactly the low/base alternatives D=0 or D=1 and the adjacent high layer D=4 repair the failed {2,3} order-wide family among the ten one-extra-layer tests.",
+    "The D=0 and D=1 solutions are numerically identical except for relabelling the extra layer, consistent with D=0 and D=1 being equivalent on the relevant positive-d state support.",
+    "No single layer D>=5 repairs the all-902 system.",
+    "This points to compact consecutive-layer candidates {1,2,3} and {2,3,4}, rather than an arbitrary full 12-layer BC surface."
+  ],
+  "trust_boundary": "These are floating LP feasibility/infeasibility results for the finite common-potential model. Positive families require exactification; infeasibility only rules out this restricted generator architecture."
+}
