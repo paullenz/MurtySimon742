@@ -1,0 +1,71 @@
+{
+  "schema": "murty-simon-problems-science-submission-v1",
+  "problem": {
+    "collection": "erdos-problems",
+    "number": 742,
+    "name": "Murty-Simon conjecture"
+  },
+  "submission_type": "bounded_candidate_theorem",
+  "claim_scope": {
+    "orders": [25, 27, 28, 29, 30],
+    "asserts_all_n_le_30": false,
+    "asserts_unrestricted_conjecture": false,
+    "new_claim_for_n26": false,
+    "inequality": "e(G) <= floor(n^2/4) for every finite simple diameter-2-critical G of submitted order n",
+    "equality": "G is isomorphic to K(floor(n/2),ceil(n/2))"
+  },
+  "claims": [
+    {"n": 25, "max_edges": 156, "equality_graph": "K(12,13)"},
+    {"n": 27, "max_edges": 182, "equality_graph": "K(13,14)"},
+    {"n": 28, "max_edges": 196, "equality_graph": "K(14,14)"},
+    {"n": 29, "max_edges": 210, "equality_graph": "K(14,15)"},
+    {"n": 30, "max_edges": 225, "equality_graph": "K(15,15)"}
+  ],
+  "repository": {
+    "url": "https://github.com/paullenz/MurtySimon742",
+    "research_base_commit": "6b160b8736bd308bc9373dcc0ae37029712d81de",
+    "submission_branch": "submission/problems-science-742-v1"
+  },
+  "canonical_review_surfaces": {
+    "reviewer_guide": "START_HERE_FOR_REVIEWERS.md",
+    "review_index": "releases/REVIEW_READY_INDEX.md",
+    "n25": "releases/n25-reviewer-v2/README.md",
+    "n27": "releases/n27-reviewer-v2/README.md",
+    "n28": "releases/n28-reviewer-v2/README.md",
+    "n29": "releases/n29-reviewer-v2/README.md",
+    "n30": "releases/n30-reviewer-v2/README.md",
+    "fan_free_reduction": "project/research/fan-free-fixed-orders/2026-09-09-v1/FAN_FREE_REDUCTION.md",
+    "fan_free_audit": "project/research/fan-free-fixed-orders/2026-09-09-v1/FAN_FREE_AUDIT.md"
+  },
+  "submission_packet_files": [
+    "README.md",
+    "CLAIM.md",
+    "EVIDENCE_MAP.md",
+    "REVIEW_CHECKLIST.md",
+    "PASTE_READY_SUBMISSION.md",
+    "MANIFEST.json"
+  ],
+  "known_invalid_evidence": [
+    {
+      "scope": "n=29 additional cumulative-threshold verifier v1",
+      "reason": "grouped label multiplicity normalization error",
+      "use_as_proof_evidence": false,
+      "replacement": "corrected v2 plus minimal trusted kernel"
+    }
+  ],
+  "excluded_from_v1_claim_dependencies": [
+    "general 7/12 maximum-degree candidate",
+    "RX-Hall / pairwise-staircase research programme",
+    "n=29 t=2 five-template potential compression",
+    "exploratory floating-point scans"
+  ],
+  "status": {
+    "internal_exact_audits": "available",
+    "fan_free_fixed_order_assembly_audit": "PASS internally",
+    "independent_mathematical_review": "OPEN",
+    "independent_computational_reproduction": "OPEN",
+    "formal_verification": "not claimed",
+    "external_acceptance": "not claimed"
+  },
+  "authorship_note": "Paul Lenz directed the project and research priorities; ChatGPT/Geeps supplied much of the mathematical development, implementations, manuscripts and internal audits."
+}
