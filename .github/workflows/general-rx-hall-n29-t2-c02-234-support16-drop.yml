@@ -1,0 +1,62 @@
+name: General RX-Hall n29 t2 c02 234 support16 drop
+
+on:
+  workflow_dispatch:
+  push:
+    paths:
+      - '.github/workflows/general-rx-hall-n29-t2-c02-234-support16-drop.yml'
+      - 'project/research/general_n/2026-09-09-rx-hall-v1/n29_t2_c02_234_support16_drop_scan.py'
+
+permissions:
+  contents: read
+
+jobs:
+  scan:
+    strategy:
+      fail-fast: false
+      max-parallel: 14
+      matrix:
+        include:
+          - { id: r2v11, drop: 'r:2:11' }
+          - { id: r2v12, drop: 'r:2:12' }
+          - { id: r2v13, drop: 'r:2:13' }
+          - { id: r2v14, drop: 'r:2:14' }
+          - { id: r3v0, drop: 'r:3:0' }
+          - { id: r3v4, drop: 'r:3:4' }
+          - { id: r3v7, drop: 'r:3:7' }
+          - { id: r3v8, drop: 'r:3:8' }
+          - { id: r3v10, drop: 'r:3:10' }
+          - { id: r3v12, drop: 'r:3:12' }
+          - { id: r4v2, drop: 'r:4:2' }
+          - { id: r4v3, drop: 'r:4:3' }
+          - { id: r4v6, drop: 'r:4:6' }
+          - { id: r4v9, drop: 'r:4:9' }
+    runs-on: ubuntu-24.04
+    timeout-minutes: 25
+    steps:
+      - uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262
+      - run: |
+          python3 -m venv .venv
+          .venv/bin/python -m pip install --disable-pip-version-check --only-binary=:all: scipy==1.17.0
+      - name: Regenerate n29 t2 frontier
+        run: |
+          set -euo pipefail
+          D=project/reviews/n29/2026-09-08-redteam-restart-v1
+          mkdir -p inputs out
+          .venv/bin/python -I -B "$D/minimal_prepare.py" --t 2 --output inputs
+          g++ -O3 -std=c++17 "$D/minimal_rows.cpp" -o minimal_rows
+          ./minimal_rows inputs/demands.txt inputs/row_survivors.txt inputs/row_bands.txt 2 > inputs/MINIMAL_ROWS_REPORT.json
+      - name: Drop one support16 rectangle
+        run: |
+          set -euo pipefail
+          R=project/research/general_n/2026-09-09-rx-hall-v1
+          .venv/bin/python -I -B "$R/n29_t2_c02_234_support16_drop_scan.py" \
+            --drop '${{ matrix.drop }}' --demands-json inputs/demands.json \
+            --rows inputs/row_survivors.txt --output 'out/drop-${{ matrix.id }}.json'
+      - uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02
+        if: always()
+        with:
+          name: n29-t2-c02-support16-${{ matrix.id }}
+          path: out/*
+          if-no-files-found: error
+          retention-days: 30
