@@ -6,6 +6,7 @@ on:
     paths:
       - '.github/workflows/general-rx-hall-n29-t2-rectdiag-integer-pattern.yml'
       - 'project/research/general_n/2026-09-09-rx-hall-v1/n29_t2_rectdiag_integer_pattern.py'
+      - 'project/research/general_n/2026-09-09-rx-hall-v1/n29_t2_rectdiag_integer_pattern_verify.py'
 
 permissions:
   contents: write
@@ -27,7 +28,10 @@ jobs:
           R=project/research/general_n/2026-09-09-rx-hall-v1
           B="$R/checkpoints/N29_BOUNDARY_SPECIALISATION_RUN_34364666552.json"
           mkdir -p out
-          .venv/bin/python -I -B "$R/n29_t2_rectdiag_integer_pattern.py" --boundary-json "$B" --output out/RESULT.json
+          .venv/bin/python -I -B "$R/n29_t2_rectdiag_integer_pattern.py" \
+            --boundary-json "$B" --output out/RESULT.json
+          .venv/bin/python -I -B "$R/n29_t2_rectdiag_integer_pattern_verify.py" \
+            --boundary-json "$B" --certificate-json out/RESULT.json --output out/REPLAY.json
       - uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02
         if: always()
         with:
@@ -35,22 +39,28 @@ jobs:
           path: out/*.json
           if-no-files-found: error
           retention-days: 30
-      - name: Commit durable result
+      - name: Commit durable result and replay
         if: always()
         run: |
           set -euo pipefail
           test -s out/RESULT.json || exit 0
           R=project/research/general_n/2026-09-09-rx-hall-v1/checkpoints
           P="$R/N29_T2_RECTDIAG_INTEGER_PATTERN_RUN_${GITHUB_RUN_ID}.json"
+          Q="$R/N29_T2_RECTDIAG_INTEGER_PATTERN_REPLAY_RUN_${GITHUB_RUN_ID}.json"
           cp out/RESULT.json "$P"
+          test -s out/REPLAY.json && cp out/REPLAY.json "$Q" || true
           git config user.name 'github-actions[bot]'
           git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
           git add "$P"
+          test -f "$Q" && git add "$Q" || true
           git commit -m "Preserve hand integer rectdiag test ${GITHUB_RUN_ID}" || exit 0
           git restore . || true
+          git clean -fd -e .venv || true
           for a in 1 2 3 4 5; do
             if git push origin HEAD:main; then exit 0; fi
             git reset --hard HEAD
+            git restore . || true
+            git clean -fd -e .venv || true
             git pull --rebase origin main
             sleep $((a*2))
           done
