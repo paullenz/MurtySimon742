@@ -58,12 +58,13 @@ def exact_attempt(M,res,scale,boost):
         slo=None if lo is None else int(round(lo*scale)); shi=None if hi is None else int(round(hi*scale))
         if slo is not None and X[j]<slo: bviol.append((j,'lo',X[j],slo))
         if shi is not None and X[j]>shi: bviol.append((j,'hi',X[j],shi))
-    ok=(not rowviol and not bviol and len(margins)==902 and max(margins)<=-scale)
+    expected_margin_count=sum(1 for rhs in M.rhs if rhs!=0)
+    ok=(not rowviol and not bviol and len(margins)==expected_margin_count and max(margins)<=-scale)
     return (X if ok else None),{
       'scale':scale,'boost':boost,'repair_count':len(repairs),'repair_total':sum(repairs.values()),
       'repair_max':max(repairs.values()) if repairs else 0,'row_violation_count':len(rowviol),
       'row_violations':rowviol[:20],'bound_violation_count':len(bviol),'bound_violations':bviol[:20],
-      'zero_rhs_max_lhs':zero_max,'margin_count':len(margins),
+      'zero_rhs_max_lhs':zero_max,'margin_count':len(margins),'expected_margin_count':expected_margin_count,
       'worst_margin_numerator':max(margins) if margins else None,'best_margin_numerator':min(margins) if margins else None,
       'required_margin_numerator':-scale}
 
