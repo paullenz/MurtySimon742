@@ -1,0 +1,56 @@
+name: General RX-Hall n29 t2 exact 889 scalar template
+
+on:
+  workflow_dispatch:
+  push:
+    paths:
+      - 'project/research/general_n/2026-09-09-rx-hall-v1/n29_t2_common_scalar_889_exact.py'
+      - '.github/workflows/general-rx-hall-n29-t2-common-scalar-889-exact.yml'
+
+permissions:
+  contents: write
+
+jobs:
+  exact:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262
+        with:
+          fetch-depth: 0
+      - run: |
+          python3 -m venv .venv
+          .venv/bin/python -m pip install --disable-pip-version-check --only-binary=:all: scipy==1.17.0
+      - name: Regenerate n29 t2 frontier
+        run: |
+          set -euo pipefail
+          D=project/reviews/n29/2026-09-08-redteam-restart-v1
+          mkdir -p inputs out
+          .venv/bin/python -I -B "$D/minimal_prepare.py" --t 2 --output inputs
+          g++ -O3 -std=c++17 "$D/minimal_rows.cpp" -o minimal_rows
+          ./minimal_rows inputs/demands.txt inputs/row_survivors.txt inputs/row_bands.txt 2 > inputs/MINIMAL_ROWS_REPORT.json
+      - name: Exact rational template check
+        run: |
+          set -euo pipefail
+          R=project/research/general_n/2026-09-09-rx-hall-v1
+          python3 -I -B "$R/n29_t2_common_scalar_889_exact.py" \
+            --demands-json inputs/demands.json --rows inputs/row_survivors.txt --output out/EXACT_889.json
+      - uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02
+        with:
+          name: n29-t2-common-scalar-889-exact
+          path: out/EXACT_889.json
+          if-no-files-found: error
+          retention-days: 30
+      - name: Preserve exact checkpoint
+        run: |
+          set -euo pipefail
+          P="project/research/general_n/2026-09-09-rx-hall-v1/checkpoints/N29_T2_COMMON_SCALAR_889_EXACT_RUN_${GITHUB_RUN_ID}.json"
+          cp out/EXACT_889.json "$P"
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add "$P"
+          git commit -m "Preserve exact n29 t2 889 scalar template ${GITHUB_RUN_ID}"
+          git restore . || true
+          git fetch origin main
+          git rebase origin/main || { git rebase --abort || true; exit 1; }
+          git push origin HEAD:main
