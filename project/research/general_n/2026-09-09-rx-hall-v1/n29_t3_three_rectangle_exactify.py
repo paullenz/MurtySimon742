@@ -3,7 +3,9 @@
 
 Floating probe 34459663744 greedily reduced the t-parametric language to
 B(3,0), B(3,5), B(3,9), with no diagonal steps. Floating solve proposes;
-corrected scaled integer arithmetic accepts.
+corrected scaled integer arithmetic accepts. The shared exact_attempt helper
+now derives its strict-margin count from the matrix (the earlier inherited
+902-profile hard-code falsely labelled this 94-profile case FAIL_EXACT).
 """
 from pathlib import Path
 from importlib.util import spec_from_file_location,module_from_spec
@@ -18,9 +20,10 @@ def main():
  raw=rd.allx.load29(z.demands_json,z.rows,3);P=[{'s':p['s'],'rho':p['rho'],'demand_id':p.get('id')} for p in raw]
  if len(P)!=94:raise SystemExit(f'expected 94 t3 profiles, got {len(P)}')
  M,rect,diag=rd.build(P,12,16,10,(3,),())
+ if sum(1 for rhs in M.rhs if rhs!=0)!=94:raise SystemExit('expected exactly 94 strict profile-margin rows')
  for D,V,w in rect:
   if (D,V) not in RECT:M.bounds[w]=(0,0)
- res=M.solve();out={'schema':'n29-t3-three-rectangle-exact-v1','t':3,'profiles':len(P),'rows':len(M.rows),'variables':len(M.names),'layers':[3],'rectangle_support':[list(x) for x in sorted(RECT)],'diagonal_K':[],'generator_count_allowed':3,'floating_solve_success':bool(res.success),'floating_status':int(res.status),'floating_message':res.message,'floating_point_proposal_only':True,'integer_arithmetic_only_acceptance':True,'acceptance_rule':'all RHS=0 rows <=0 exactly; all 94 RHS=-1 margin rows <= -scale exactly; all bounds exact'}
+ res=M.solve();out={'schema':'n29-t3-three-rectangle-exact-v2','t':3,'profiles':len(P),'rows':len(M.rows),'variables':len(M.names),'layers':[3],'rectangle_support':[list(x) for x in sorted(RECT)],'diagonal_K':[],'generator_count_allowed':3,'floating_solve_success':bool(res.success),'floating_status':int(res.status),'floating_message':res.message,'floating_point_proposal_only':True,'integer_arithmetic_only_acceptance':True,'acceptance_rule':'all RHS=0 rows <=0 exactly; all 94 RHS=-1 margin rows <= -scale exactly; all bounds exact','prior_false_failure_run':34459995976,'prior_false_failure_cause':'shared exact_attempt inherited len(margins)==902 from t2 instead of deriving the matrix margin count'}
  if not res.success:
   out['status']='FAIL_FLOAT';z.output.write_text(json.dumps(out,indent=2,sort_keys=True)+'\n');raise SystemExit(1)
  attempts=[];chosen=None;meta=None
