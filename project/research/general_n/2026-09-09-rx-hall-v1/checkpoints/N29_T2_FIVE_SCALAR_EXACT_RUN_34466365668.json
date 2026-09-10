@@ -1,0 +1,29 @@
+{
+  "artifact": {
+    "artifact_id": 10147679978,
+    "artifact_sha256": "54ada1065e6cd30aad66c5c1287c8512b371646f5b2f16814da5cc088b2a601a",
+    "workflow_run_id": 34466365668
+  },
+  "coverage_multiplicity": {"1":52,"2":42,"3":36,"4":305,"5":467},
+  "covered": 902,
+  "exact_fraction_arithmetic": true,
+  "interpretation": "Five fixed rational scalar templates, together with one fixed exact primitive integer Hall/slack potential, give strict potential-certificate gap for every one of the 902 regenerated n29,t2 frontier profiles.",
+  "missing_indices": [],
+  "primitive_potential": {
+    "J0":14,"J2":15,
+    "rectangles":{"(2, 11)":11,"(2, 12)":12,"(2, 13)":28,"(2, 14)":8,"(3, 0)":41,"(3, 10)":11,"(3, 12)":5,"(3, 4)":8,"(3, 7)":8,"(3, 8)":8,"(4, 2)":5,"(4, 3)":5,"(4, 6)":6,"(4, 9)":8}
+  },
+  "profiles": 902,
+  "publication_note": "Recovered from the uploaded PASS artifact after only the final Git preservation/rebase step failed. Frontier regeneration, exact five-template Fraction check, and artifact upload all succeeded in workflow run 34466365668.",
+  "schema": "n29-t2-five-scalar-templates-exact-v1",
+  "status": "PASS",
+  "template_count": 5,
+  "templates": {
+    "A0":{"anchors":[0],"coverage":538,"minimum_positive_gap":[1,2],"anchor_gaps":{"0":[1,2]},"theta":{"c":[9,1],"lambda":[32,1],"mu+":[97,3],"tau2":[23,4],"tau3":[17,3],"tau4":[25,2]}},
+    "A1":{"anchors":[1,8,39],"coverage":857,"minimum_positive_gap":[15,28],"anchor_gaps":{"1":[23,28],"8":[772,7],"39":[15,28]},"theta":{"c":[71,4],"lambda":[32,1],"mu+":[15,2],"tau3":[232,7],"tau5":[17,2],"tau6":[3,1]}},
+    "A79":{"anchors":[79,145],"coverage":823,"minimum_positive_gap":[20,91],"anchor_gaps":{"79":[20,91],"145":[222,91]},"theta":{"c":[44,1],"lambda":[394,13],"tau2":[532,13],"tau3":[13,1],"tau4":[99,7]}},
+    "A82":{"anchors":[82],"coverage":759,"minimum_positive_gap":[1,3],"anchor_gaps":{"82":[1,3]},"theta":{"c":[209,3],"tau2":[424,9],"tau3":[115,4]}},
+    "A94":{"anchors":[94],"coverage":822,"minimum_positive_gap":[11,15],"anchor_gaps":{"94":[11,15]},"theta":{"c":[263,6],"lambda":[32,1],"tau2":[335,6],"tau3":[37,4],"tau5":[13,6],"tau7":[14,5]}}
+  },
+  "uses_lp_solver": false
+}
