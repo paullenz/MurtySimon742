@@ -1,0 +1,35 @@
+name: General RX-Hall n29 t3 frontier snapshot
+
+on:
+  workflow_dispatch:
+  push:
+    paths:
+      - '.github/workflows/general-rx-hall-n29-t3-frontier-snapshot.yml'
+
+permissions:
+  contents: read
+
+jobs:
+  snapshot:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262
+      - run: |
+          python3 -m venv .venv
+          .venv/bin/python -m pip install --disable-pip-version-check --only-binary=:all: scipy==1.17.0
+      - name: Regenerate and freeze n29 t3 frontier
+        run: |
+          set -euo pipefail
+          D=project/reviews/n29/2026-09-08-redteam-restart-v1
+          mkdir -p snapshot
+          .venv/bin/python -I -B "$D/minimal_prepare.py" --t 3 --output snapshot
+          g++ -O3 -std=c++17 "$D/minimal_rows.cpp" -o minimal_rows
+          ./minimal_rows snapshot/demands.txt snapshot/row_survivors.txt snapshot/row_bands.txt 3 > snapshot/MINIMAL_ROWS_REPORT.json
+          sha256sum snapshot/demands.json snapshot/demands.txt snapshot/row_survivors.txt snapshot/row_bands.txt snapshot/MINIMAL_ROWS_REPORT.json > snapshot/SHA256SUMS.txt
+      - uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02
+        with:
+          name: n29-t3-frontier-snapshot
+          path: snapshot/*
+          if-no-files-found: error
+          retention-days: 30
