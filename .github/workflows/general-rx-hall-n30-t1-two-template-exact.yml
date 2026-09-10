@@ -1,0 +1,34 @@
+name: General RX-Hall n30 t1 two-template exact replay
+
+on:
+  workflow_dispatch:
+  push:
+    paths:
+      - 'project/research/general_n/2026-09-09-rx-hall-v1/n30_t1_two_rational_templates_exact.py'
+      - 'project/research/general_n/2026-09-09-rx-hall-v1/POTENTIAL_CERTIFICATE_LEMMA_3D.md'
+      - 'project/research/general_n/2026-09-09-rx-hall-v1/N30_T1_TWO_TEMPLATE_POTENTIAL.md'
+      - '.github/workflows/general-rx-hall-n30-t1-two-template-exact.yml'
+
+permissions:
+  contents: read
+
+jobs:
+  exact-replay:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 5
+    steps:
+      - uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262
+      - name: Exact standard-library replay
+        run: |
+          set -euo pipefail
+          R=project/research/general_n/2026-09-09-rx-hall-v1
+          python3 -I -B "$R/n30_t1_two_rational_templates_exact.py" | tee N30_T1_TWO_TEMPLATE_EXACT_REPLAY.json
+          grep -q '"status": "PASS"' N30_T1_TWO_TEMPLATE_EXACT_REPLAY.json
+          grep -q '"minimum_gap": "1/2"' N30_T1_TWO_TEMPLATE_EXACT_REPLAY.json
+      - uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02
+        if: always()
+        with:
+          name: n30-t1-two-template-exact-replay
+          path: N30_T1_TWO_TEMPLATE_EXACT_REPLAY.json
+          if-no-files-found: error
+          retention-days: 30
