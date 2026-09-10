@@ -1,0 +1,80 @@
+name: General RX-Hall n29 t2 compact exact potentials
+
+on:
+  workflow_dispatch:
+  push:
+    paths:
+      - 'project/research/general_n/2026-09-09-rx-hall-v1/n29_t2_compact_exactify.py'
+      - 'project/research/general_n/2026-09-09-rx-hall-v1/n29_t2_compact_replay.py'
+      - '.github/workflows/general-rx-hall-n29-t2-compact-exact.yml'
+
+permissions:
+  contents: write
+
+jobs:
+  exact:
+    strategy:
+      fail-fast: false
+      matrix:
+        include:
+          - id: d123
+            layers: '1,2,3'
+          - id: d234
+            layers: '2,3,4'
+    runs-on: ubuntu-24.04
+    timeout-minutes: 30
+    steps:
+      - uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262
+        with:
+          fetch-depth: 0
+      - run: |
+          python3 -m venv .venv
+          .venv/bin/python -m pip install --disable-pip-version-check --only-binary=:all: scipy==1.17.0
+      - name: Regenerate n29 t2 frontier
+        run: |
+          set -euo pipefail
+          D=project/reviews/n29/2026-09-08-redteam-restart-v1
+          mkdir -p inputs out
+          g++ -O3 -std=c++17 "$D/minimal_rows.cpp" -o minimal_rows
+          .venv/bin/python -I -B "$D/minimal_prepare.py" --t 2 --output inputs
+          ./minimal_rows inputs/demands.txt inputs/row_survivors.txt inputs/row_bands.txt 2 > inputs/MINIMAL_ROWS_REPORT.json
+      - name: Exactify ${{ matrix.id }}
+        run: |
+          set -euo pipefail
+          R=project/research/general_n/2026-09-09-rx-hall-v1
+          .venv/bin/python -I -B "$R/n29_t2_compact_exactify.py" \
+            --demands-json inputs/demands.json --rows inputs/row_survivors.txt \
+            --layers '${{ matrix.layers }}' --boost 2 \
+            --output 'out/${{ matrix.id }}_EXACT.json' --certificate 'out/${{ matrix.id }}_CERT.json.gz'
+      - name: Independent integer replay ${{ matrix.id }}
+        run: |
+          set -euo pipefail
+          R=project/research/general_n/2026-09-09-rx-hall-v1
+          python3 -I -B "$R/n29_t2_compact_replay.py" \
+            --demands-json inputs/demands.json --rows inputs/row_survivors.txt \
+            --certificate 'out/${{ matrix.id }}_CERT.json.gz' --output 'out/${{ matrix.id }}_REPLAY.json'
+      - uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02
+        if: always()
+        with:
+          name: n29-t2-compact-exact-${{ matrix.id }}
+          path: out/*
+          if-no-files-found: warn
+          retention-days: 30
+      - name: Commit compact exact summaries
+        if: success()
+        run: |
+          set -euo pipefail
+          C=project/research/general_n/2026-09-09-rx-hall-v1/checkpoints
+          cp 'out/${{ matrix.id }}_EXACT.json' "$C/N29_T2_COMPACT_${{ matrix.id }}_EXACT_RUN_${GITHUB_RUN_ID}.json"
+          cp 'out/${{ matrix.id }}_REPLAY.json' "$C/N29_T2_COMPACT_${{ matrix.id }}_REPLAY_RUN_${GITHUB_RUN_ID}.json"
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add "$C"
+          git commit -m "Preserve exact n29 t2 compact ${{ matrix.id }} ${GITHUB_RUN_ID}" || exit 0
+          git restore . || true
+          for attempt in 1 2 3 4 5; do
+            if git push origin HEAD:main; then exit 0; fi
+            git pull --rebase --autostash origin main
+            sleep $((attempt*2))
+          done
+          exit 1
