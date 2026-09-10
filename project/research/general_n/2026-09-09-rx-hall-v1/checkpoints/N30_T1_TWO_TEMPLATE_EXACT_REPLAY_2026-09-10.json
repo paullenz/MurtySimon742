@@ -1,0 +1,28 @@
+{
+  "arithmetic": "fractions.Fraction exact rational",
+  "floating_point_used": false,
+  "global_potential_terms": 13,
+  "interpretation": "Exact finite certificate for the seven hard n=30,t=1 RX-Hall profiles, conditional on the 3D symbolic potential-certificate lemma and graph-to-profile bridge.",
+  "minimum_gap": "1/2",
+  "primitive_weight_sum": 206,
+  "profiles": 7,
+  "results": [
+    {"demand_id": 2094, "gap": "27/5", "hard_position": 0, "positive": true, "template": "A"},
+    {"demand_id": 2309, "gap": "1/2", "hard_position": 1, "positive": true, "template": "A"},
+    {"demand_id": 2596, "gap": "333/20", "hard_position": 2, "positive": true, "template": "B"},
+    {"demand_id": 2701, "gap": "7/10", "hard_position": 3, "positive": true, "template": "B"},
+    {"demand_id": 2812, "gap": "1369/20", "hard_position": 4, "positive": true, "template": "B"},
+    {"demand_id": 2984, "gap": "674/5", "hard_position": 5, "positive": true, "template": "B"},
+    {"demand_id": 2984, "gap": "11/20", "hard_position": 6, "positive": true, "template": "B"}
+  ],
+  "schema": "n30-t1-two-rational-templates-exact-replay-v1",
+  "solver_used": false,
+  "source_profile_artifact": {
+    "workflow_run_id": 34348486247,
+    "artifact_id": 10102703529,
+    "artifact_name": "n30-bc-upper-set-cut-generation",
+    "sha256": "399397f3bad85e6de6b6ae4c8b14342d538c03fd80ffe5e1289063c0ee0c57e6"
+  },
+  "status": "PASS",
+  "template_count": 2
+}
