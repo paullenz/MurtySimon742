@@ -16,19 +16,23 @@ jobs:
     timeout-minutes: 20
     steps:
       - uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262
+      - name: Install frontier-regeneration dependency
+        run: |
+          python3 -m venv .venv
+          .venv/bin/python -m pip install --disable-pip-version-check --only-binary=:all: scipy==1.17.0
       - name: Regenerate n29 t3 frontier
         run: |
           set -euo pipefail
           D=project/reviews/n29/2026-09-08-redteam-restart-v1
           mkdir -p inputs out
-          python3 -I -B "$D/minimal_prepare.py" --t 3 --output inputs
+          .venv/bin/python -I -B "$D/minimal_prepare.py" --t 3 --output inputs
           g++ -O3 -std=c++17 "$D/minimal_rows.cpp" -o minimal_rows
           ./minimal_rows inputs/demands.txt inputs/row_survivors.txt inputs/row_bands.txt 3 > inputs/MINIMAL_ROWS_REPORT.json
-      - name: Exact Fraction five-template replay
+      - name: Exact Fraction five-template replay (stdlib only)
         run: |
           set -euo pipefail
           R=project/research/general_n/2026-09-09-rx-hall-v1
-          python3 -I -B "$R/n29_t3_five_scalar_templates_exact.py" \
+          /usr/bin/python3 -I -B "$R/n29_t3_five_scalar_templates_exact.py" \
             --demands-json inputs/demands.json --rows inputs/row_survivors.txt \
             --output out/t3-five-scalar-exact.json
           sha256sum out/t3-five-scalar-exact.json > out/SHA256SUMS.txt
