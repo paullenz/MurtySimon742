@@ -4,10 +4,10 @@
 Previous run 34500939994 showed D3 remains necessary when one natural SH3
 threshold is restored, while D2,D4,J0,J2 can each be deleted individually.
 This scan fixes D3 and SH3 present, then enumerates every subset of the four
-optional families {D2,D4,J0,J2}.  Floating reconnaissance only.
+optional families {D2,D4,J0,J2}. Floating reconnaissance only.
 
 The output records all feasible subsets and the inclusion-minimal feasible
-subsets.  Any minimal survivor must be promoted to the full 902-profile set and
+subsets. Any minimal survivor must be promoted to the full 902-profile set and
 then exactified before proof use.
 """
 from pathlib import Path
@@ -64,19 +64,16 @@ def main():
  ap=argparse.ArgumentParser();ap.add_argument('--demands-json',type=Path,required=True);ap.add_argument('--rows',type=Path,required=True);ap.add_argument('--output',type=Path,required=True);z=ap.parse_args()
  raw=rd.allx.load29(z.demands_json,z.rows,2);P0=[{'s':p['s'],'rho':p['rho'],'demand_id':p.get('id')} for p in raw]
  if len(P0)!=902:raise SystemExit(f'expected 902 got {len(P0)}')
- P=[P0[i] for i in BAD];results=[]
- subsets=[]
- for r in range(5):
-  subsets.extend(combinations(OPTIONAL,r))
+ P=[P0[i] for i in BAD];results=[];subsets=[]
+ for r in range(5):subsets.extend(combinations(OPTIONAL,r))
  for opt in subsets:
-  st=time.time();M,rect,diag,sh,layers,steps=build(P,set(opt));res=M.solve();rec={'optional_families':list(opt),'family_count_including_D3_SH3':2+len(opt),'layers':list(layers),'diagonal_K':list(steps),'success':bool(res.success),'status':int(res.status),'message':res.message,'rows':len(M.rows),'variables':len(M.names),'seconds':time.time()-st}
+  st=time.time();M,rect,diag,sh,layers,steps=build(P,set(opt));res=M.solve();rec={'optional_families':list(opt),'family_count_including_D3_SH3':2+len(opt),'layers':list(layers),'diagonal_K':list(steps),'success':bool(res.success),'status':int(res.status),'message':res.message,'rows':len(M.rows),'variables':len(M.names),'seconds':float(time.time()-st)}
   if res.success:
-   rec['SH3_weight']=float(res.x[sh]);rec['objective']=float(res.fun);rec['active_generator_count']=sum(res.x[w]>1e-8 for _,_,w in rect)+sum(res.x[w]>1e-8 for _,w in diag)+(1 if res.x[sh]>1e-8 else 0)
+   rec['SH3_weight']=float(res.x[sh]);rec['objective']=float(res.fun);rec['active_generator_count']=int(sum(bool(res.x[w]>1e-8) for _,_,w in rect)+sum(bool(res.x[w]>1e-8) for _,w in diag)+(1 if res.x[sh]>1e-8 else 0))
   results.append(rec);print(json.dumps(rec,sort_keys=True),flush=True)
- feasible=[frozenset(r['optional_families']) for r in results if r['success']]
- minimal=[]
+ feasible=[frozenset(r['optional_families']) for r in results if r['success']];minimal=[]
  for s in feasible:
   if not any(t < s for t in feasible):minimal.append(sorted(s))
- out={'schema':'n29-t2-bad107-sh3-subset-lattice-v1','bad_profile_count':107,'mandatory_families':['D3','SH3'],'optional_families':list(OPTIONAL),'floating_point_reconnaissance_only':True,'results':results,'minimal_feasible_optional_sets':sorted(minimal,key=lambda x:(len(x),x)),'interpretation':'Inclusion-minimal feasible sets are minimal only within the family lattice D3+SH3+subset{D2,D4,J0,J2} on bad107. Promote survivors to all 902 profiles before exactification.'}
+ out={'schema':'n29-t2-bad107-sh3-subset-lattice-v2','bad_profile_count':107,'mandatory_families':['D3','SH3'],'optional_families':list(OPTIONAL),'floating_point_reconnaissance_only':True,'results':results,'minimal_feasible_optional_sets':sorted(minimal,key=lambda x:(len(x),x)),'prior_partial_run':34501297499,'prior_partial_run_failure':'JSON serialization of numpy integer after first feasible case; first six mathematical outcomes remain informative','interpretation':'Inclusion-minimal feasible sets are minimal only within the family lattice D3+SH3+subset{D2,D4,J0,J2} on bad107. Promote survivors to all 902 profiles before exactification.'}
  z.output.parent.mkdir(parents=True,exist_ok=True);z.output.write_text(json.dumps(out,indent=2,sort_keys=True)+'\n')
 if __name__=='__main__':main()
