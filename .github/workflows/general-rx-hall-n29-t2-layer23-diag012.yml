@@ -1,0 +1,91 @@
+name: General RX-Hall n29 t2 layer23 diag012
+
+on:
+  workflow_dispatch:
+  push:
+    paths:
+      - '.github/workflows/general-rx-hall-n29-t2-layer23-diag012.yml'
+      - 'project/research/general_n/2026-09-09-rx-hall-v1/n29_t2_layer23_diag012_scan.py'
+
+permissions:
+  contents: write
+
+jobs:
+  scan:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 45
+    steps:
+      - uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262
+        with:
+          fetch-depth: 0
+      - name: Pin solver
+        run: |
+          python3 -m venv .venv
+          .venv/bin/python -m pip install --disable-pip-version-check --only-binary=:all: scipy==1.17.0
+      - name: Regenerate n29 t2 frontier
+        run: |
+          set -euo pipefail
+          D=project/reviews/n29/2026-09-08-redteam-restart-v1
+          mkdir -p inputs out
+          g++ -O3 -std=c++17 "$D/minimal_rows.cpp" -o minimal_rows
+          .venv/bin/python -I -B "$D/minimal_prepare.py" --t 2 --output inputs
+          ./minimal_rows inputs/demands.txt inputs/row_survivors.txt inputs/row_bands.txt 2 > inputs/MINIMAL_ROWS_REPORT.json
+      - name: Test hard38 two-layer family
+        run: |
+          set -euo pipefail
+          R=project/research/general_n/2026-09-09-rx-hall-v1
+          B="$R/checkpoints/N29_BOUNDARY_SPECIALISATION_RUN_34364666552.json"
+          .venv/bin/python -I -B "$R/n29_t2_layer23_diag012_scan.py" \
+            --mode hard38 --boundary-json "$B" --greedy --output out/HARD38.json
+      - name: Escalate to all 902 if hard38 passes
+        run: |
+          set -euo pipefail
+          python3 -c "import json,sys;sys.exit(0 if json.load(open('out/HARD38.json'))['success'] else 1)"
+          R=project/research/general_n/2026-09-09-rx-hall-v1
+          .venv/bin/python -I -B "$R/n29_t2_layer23_diag012_scan.py" \
+            --mode t2 --demands-json inputs/demands.json --rows inputs/row_survivors.txt \
+            --output out/ALL902.json
+      - name: Combine
+        run: |
+          python3 - <<'PY' > out/FULL.json
+          import json,glob
+          R={p.split('/')[-1]:json.load(open(p)) for p in sorted(glob.glob('out/*.json')) if not p.endswith('FULL.json') and not p.endswith('MINIMAL_ROWS_REPORT.json')}
+          print(json.dumps({'schema':'n29-t2-layer23-diag012-batch-v1','floating_point_reconnaissance_only':True,'results':R},indent=2,sort_keys=True))
+          PY
+          python3 - <<'PY'
+          import json
+          j=json.load(open('out/FULL.json'))
+          for k,v in j['results'].items():
+              print(k,'success=',v['success'],'initial=',v.get('active_generator_count_initial'),'greedy=',v.get('active_generator_count_greedy'))
+              print('  rect=',v.get('active_rectangles_greedy',v.get('active_rectangles_initial')))
+              print('  diag=',v.get('active_diagonals_greedy',v.get('active_diagonals_initial')))
+          PY
+      - uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02
+        if: always()
+        with:
+          name: n29-t2-layer23-diag012
+          path: out/*.json
+          if-no-files-found: error
+          retention-days: 30
+      - name: Commit durable result
+        if: always()
+        run: |
+          set -euo pipefail
+          test -s out/FULL.json || exit 0
+          R=project/research/general_n/2026-09-09-rx-hall-v1/checkpoints
+          P="$R/N29_T2_LAYER23_DIAG012_RUN_${GITHUB_RUN_ID}.json"
+          cp out/FULL.json "$P"
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add "$P"
+          git commit -m "Preserve n29 t2 layer23 diag012 ${GITHUB_RUN_ID}" || exit 0
+          git restore . || true
+          for a in 1 2 3 4 5; do
+            if git push origin HEAD:main; then exit 0; fi
+            git reset --hard HEAD
+            git restore . || true
+            git clean -fd -e .venv || true
+            git pull --rebase origin main
+            sleep $((a*2))
+          done
+          exit 1
