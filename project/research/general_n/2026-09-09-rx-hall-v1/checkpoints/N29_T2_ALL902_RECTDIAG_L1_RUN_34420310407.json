@@ -1,0 +1,27 @@
+{
+  "schema": "n29-t2-all902-rectdiag-l1-v1-recovered",
+  "run_id": 34420310407,
+  "artifact_id": 10130735480,
+  "artifact_sha256": "f2cbbf299476ad44a015075790e478d9cd071fbbd569825ad755ac7f512d3a7d",
+  "profiles": 902,
+  "success": true,
+  "objective": 13.64911737470436,
+  "rows": 334538,
+  "variables": 20705,
+  "seconds": 243.31707191467285,
+  "diagonal_K": [14,15,16],
+  "diagonal_c": [2,1,0],
+  "active_diagonals": [
+    {"K":14,"c":2,"weight":0.213136744973641},
+    {"K":15,"c":1,"weight":0.2832119426729614},
+    {"K":16,"c":0,"weight":0.21683308040605898}
+  ],
+  "active_rectangle_count": 27,
+  "active_diagonal_count": 3,
+  "active_generator_count": 30,
+  "active_D_layers": [0,2,3,4,5,6,7,9],
+  "active_by_D_counts": {"0":7,"2":3,"3":9,"4":4,"5":1,"6":1,"7":1,"9":1},
+  "floating_point_reconnaissance_only": true,
+  "publication_note": "The solve and artifact upload succeeded; the workflow's final Git publication step failed after main advanced. This compact checkpoint recovers the validated artifact result.",
+  "interpretation": "The unrestricted L1 optimum spreads small rectangle mass over many d-layers, demonstrating tradeability among rectangle generators. For analytic compression the successful restricted consecutive-layer families {1,2,3} and {2,3,4} are preferable structural candidates despite a larger L1 objective."
+}
