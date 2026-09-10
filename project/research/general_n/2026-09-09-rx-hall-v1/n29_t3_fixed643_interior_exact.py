@@ -7,8 +7,8 @@ The fixed global potential is
 
 A prior zero-gap MILP showed this integer potential is floating-feasible for all
 94 profiles, but a proposal solved exactly at the -1 normalization boundary is
-numerically awkward to round.  Here floating LP is still proposal-only: we ask
-for successively stronger profile margins, then accept only by the corrected
+numerically awkward to round. Here floating LP is proposal-only: we ask for
+successively stronger profile margins, then accept only by the corrected
 integer arithmetic rule for the ORIGINAL normalized target -1.
 """
 from pathlib import Path
@@ -46,7 +46,8 @@ def main():
         attempts.append(rec)
         if chosen is not None: break
     M.rhs=base_rhs
-    out={'schema':'n29-t3-fixed643-interior-exact-v1','t':3,'profiles':len(P),'rows':len(M.rows),'variables':len(M.names),
+    out={'schema':'n29-t3-fixed643-interior-exact-v2','t':3,'profiles':len(P),'rows':len(M.rows),'variables':len(M.names),
+         'layers':[3],'rectangle_support':[[3,0],[3,5],[3,9]],'diagonal_K':[],
          'global_potential':'6 B(3,0) + 4 B(3,5) + 3 B(3,9)','fixed_integer_weights':{f'B({D},{V})':v for (D,V),v in sorted(WEIGHTS.items())},
          'integer_weight_sum':sum(WEIGHTS.values()),'floating_point_proposal_only':True,'integer_arithmetic_only_acceptance':True,
          'proof_target':'original normalized strict margin <= -1','proposal_margins':list(PROPOSAL_MARGINS),'attempts':attempts,
