@@ -1,0 +1,38 @@
+name: General RX-Hall n30 t1 template complexity exact
+
+on:
+  workflow_dispatch:
+  push:
+    paths:
+      - '.github/workflows/general-rx-hall-n30-t1-template-complexity-exact.yml'
+      - 'project/research/general_n/2026-09-09-rx-hall-v1/n30_t1_two_rational_templates_exact.py'
+      - 'project/research/general_n/2026-09-09-rx-hall-v1/n30_t1_two_template_lower_bound_exact.py'
+
+permissions:
+  contents: read
+
+jobs:
+  exact:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262
+      - name: Exact two-template sufficiency replay
+        run: |
+          set -euo pipefail
+          R=project/research/general_n/2026-09-09-rx-hall-v1
+          python3 -I -B "$R/n30_t1_two_rational_templates_exact.py" | tee n30-t1-two-template-sufficiency.json
+      - name: Exact one-template lower bound
+        run: |
+          set -euo pipefail
+          R=project/research/general_n/2026-09-09-rx-hall-v1
+          python3 -I -B "$R/n30_t1_two_template_lower_bound_exact.py" | tee n30-t1-two-template-lower-bound.json
+          sha256sum n30-t1-*.json > SHA256SUMS.txt
+      - uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02
+        with:
+          name: n30-t1-template-complexity-exact
+          path: |
+            n30-t1-*.json
+            SHA256SUMS.txt
+          if-no-files-found: error
+          retention-days: 30
