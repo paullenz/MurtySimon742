@@ -63,8 +63,11 @@ jobs:
           EOF
           tail -n +2 "$SRC/VERIFICATION_COMPANION.md" >> "$OUT/N29_Verification_Companion_v3.md"
 
-          pandoc "$OUT/N29_Reviewer_Manuscript_v3.md" -o "$OUT/N29_Reviewer_Manuscript_v3.pdf" --pdf-engine=xelatex
-          pandoc "$OUT/N29_Verification_Companion_v3.md" -o "$OUT/N29_Verification_Companion_v3.pdf" --pdf-engine=xelatex
+          # Canonical proof sources use LaTeX-style display delimiters \[ ... \].
+          # Enable Pandoc's single-backslash TeX-math extension explicitly so
+          # those delimiters are parsed as mathematics rather than literal text.
+          pandoc --from=markdown+tex_math_single_backslash "$OUT/N29_Reviewer_Manuscript_v3.md" -o "$OUT/N29_Reviewer_Manuscript_v3.pdf" --pdf-engine=xelatex
+          pandoc --from=markdown+tex_math_single_backslash "$OUT/N29_Verification_Companion_v3.md" -o "$OUT/N29_Verification_Companion_v3.pdf" --pdf-engine=xelatex
 
           cat > "$OUT/README.md" <<'EOF'
           # n=29 reviewer package v3
@@ -116,7 +119,7 @@ jobs:
         run: |
           set -euo pipefail
           git config user.name 'github-actions[bot]'
-          git config user.email '4189824+github-actions[bot]@users.noreply.github.com'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
           git add releases/n29-reviewer-v3
           if git diff --cached --quiet; then
             echo 'n29 reviewer-v3 package already current.'
