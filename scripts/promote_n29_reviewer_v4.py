@@ -14,7 +14,7 @@ p = Path("README.md")
 s = p.read_text()
 s = re.sub(
     r"^\| `n=29` \|.*$",
-    "| `n=29` | Complete candidate: `e(G) <= 210`, equality exactly `K(14,15)`; **reviewer-v4 package**; Delta=16 now closed by a hand threshold-tail proof with no proof-critical computation; historical minimal-kernel/Farkas replay retained as corroboration; external review open |",
+    "| `n=29` | Complete candidate: `e(G) <= 210`, equality exactly `K(14,15)`; **reviewer-v4 package**; Delta=16 closed by a hand threshold-tail proof with no proof-critical computation; dedicated reviewer-v4 hostile audit found no blocking flaw and exact red-team CI passed; external review open |",
     s,
     flags=re.M,
 )
@@ -34,6 +34,11 @@ marker = "A separate proof-text audit also found a **non-blocking sign/order typ
 note = "\nLater on 11 September, the threshold-capacity family was summed over residual-degree tails to obtain a stronger demand-only inequality. A new hand clipping argument proves `Q(s)<=18`, while the bridge gives `Q(s)>=16+2t` for `Delta=16`, hence `t<=1`. Therefore the entire `n=29, Delta=16, m>=210` branch is now excluded without proof-critical computation. Reviewer-v4 is the current review surface; reviewer-v3 and its corrected minimal-kernel/Farkas route remain frozen as independent corroboration and audit history.\n"
 if note.strip() not in s and marker in s:
     s = s.replace(marker, marker + note)
+redteam_note = "\nA dedicated hostile audit of reviewer-v4 subsequently reconstructed the full theorem chain without treating the old LP/Farkas route as proof support. It found **no blocking flaw**. A separately specified exact checker independently swept all 1,352,078 demand multisets, all clipping stages and the threshold-capacity integer parameter range; GitHub Actions run `34621982241` passed. The audit remains same-assistant internal evidence, not external validation. See the [reviewer-v4 hostile-audit report](project/reviews/n29/2026-09-11-reviewer-v4-redteam-v1/REPORT.md) and [hardening supplement](project/reviews/n29/2026-09-11-reviewer-v4/REDTEAM_HARDENING.md).\n"
+if redteam_note.strip() not in s:
+    anchor = "Reviewer-v4 is the current review surface; reviewer-v3 and its corrected minimal-kernel/Farkas route remain frozen as independent corroboration and audit history.\n"
+    if anchor in s:
+        s = s.replace(anchor, anchor + redteam_note)
 
 n29 = r'''### n=29 — complete candidate
 
@@ -44,7 +49,7 @@ e(G) <= 210 = floor(29^2/4),
 with equality exactly K(14,15).
 ```
 
-[**Current reviewer-v4 package**](releases/n29-reviewer-v4/README.md) · [reviewer-v4 manuscript PDF](releases/n29-reviewer-v4/N29_Reviewer_Manuscript_v4.pdf) · [reviewer-v4 verification companion PDF](releases/n29-reviewer-v4/N29_Verification_Companion_v4.pdf) · [canonical reviewer-v4 proof](project/reviews/n29/2026-09-11-reviewer-v4/PROOF.md) · [threshold-tail hand proof](project/research/general_n/2026-09-11-threshold-tail-collapse-v1/N29_DELTA16_THRESHOLD_TAIL_HAND_PROOF.md) · [frozen self-contained bridge](project/reviews/n29/2026-09-11-reviewer-v3/GRAPH_TO_MODEL_BRIDGE.md) · [historical reviewer-v3 package](releases/n29-reviewer-v3/README.md).
+[**Current reviewer-v4 package**](releases/n29-reviewer-v4/README.md) · [reviewer-v4 manuscript PDF](releases/n29-reviewer-v4/N29_Reviewer_Manuscript_v4.pdf) · [reviewer-v4 verification companion PDF](releases/n29-reviewer-v4/N29_Verification_Companion_v4.pdf) · [canonical reviewer-v4 proof](project/reviews/n29/2026-09-11-reviewer-v4/PROOF.md) · [hostile-audit report](project/reviews/n29/2026-09-11-reviewer-v4-redteam-v1/REPORT.md) · [red-team hardening](project/reviews/n29/2026-09-11-reviewer-v4/REDTEAM_HARDENING.md) · [threshold-tail hand proof](project/research/general_n/2026-09-11-threshold-tail-collapse-v1/N29_DELTA16_THRESHOLD_TAIL_HAND_PROOF.md) · [frozen self-contained bridge](project/reviews/n29/2026-09-11-reviewer-v3/GRAPH_TO_MODEL_BRIDGE.md) · [historical reviewer-v3 package](releases/n29-reviewer-v3/README.md).
 
 The proof does **not** depend on Fan's density theorem or on the active general-N/RX-Hall research. `Delta=15` is handled by a witness-deficit count, which also forces `K(14,15)` at 210. `Delta=17` is excluded by a short pointwise charging bound, `Delta=18..27` by the residual h-index inequality, and a universal vertex gives a star.
 
@@ -52,7 +57,7 @@ The former difficult `Delta=16` branch is now hand-reduced completely. With `t=m
 
 Accordingly, the historical demand enumeration, residual-row scan, Hall pruning, corrected cumulative-threshold/source-q-flow LP and exact Farkas certificates are no longer logical dependencies of the N29 theorem proof. The corrected minimal kernel remains preserved as independent corroboration: at 211 edges it rejected all 126 residual rows, and at 210 edges all 1,467 rows, by exact integer Farkas verification. The earlier v1 grouped-model normalization bug and its correction remain public audit history.
 
-The hand tail lemma has two independent exact regressions: a small local-obligation checker and a full 1,352,078-demand-multiset audit; both pass, but neither is a proof premise. The proof is therefore logically computation-free at N29 while retaining substantial computational cross-checks.
+The hand tail lemma has two retained exact regressions: a small local-obligation checker and a full 1,352,078-demand-multiset audit; neither is a proof premise. A further dedicated reviewer-v4 hostile audit reconstructed the theorem chain, globally tested every clipping map, checked 1,472 threshold-capacity parameter triples, independently reproduced the `Delta=15` maxima and the higher-degree scalar contradictions, and found **no blocking flaw**. Its exact CI run `34621982241` passed. This remains internal hostile evidence; independent mathematical review is still open.
 
 **Status: complete candidate; independent mathematical review OPEN.**'''
 s = replace_section(s, "### n=29 — complete candidate", "### n=30 — complete candidate", n29)
@@ -64,7 +69,7 @@ p = Path("START_HERE_FOR_REVIEWERS.md")
 s = p.read_text()
 s = s.replace(
     "The current fixed-order editions are Fan-free reviewer-v2 at `n=25,27,28,30` and **reviewer-v3 at `n=29`**, hardened after the blind external-assistant red-team.",
-    "The current fixed-order editions are Fan-free reviewer-v2 at `n=25,27,28,30` and **reviewer-v4 at `n=29`**, with the entire dense `Delta=16` branch now excluded by a hand threshold-tail argument.",
+    "The current fixed-order editions are Fan-free reviewer-v2 at `n=25,27,28,30` and **reviewer-v4 at `n=29`**, with the entire dense `Delta=16` branch now excluded by a hand threshold-tail argument and a dedicated v4 hostile audit finding no blocking flaw.",
 )
 s = s.replace(
     "- `n=29, Delta=16`: `m=215` is a hand threshold contradiction and every `m>=216` is a one-line hand exclusion;",
@@ -80,10 +85,12 @@ The n=29 candidate is now an especially clean place to audit the universal graph
 - [`releases/n29-reviewer-v4/N29_Reviewer_Manuscript_v4.pdf`](releases/n29-reviewer-v4/N29_Reviewer_Manuscript_v4.pdf)
 - [`releases/n29-reviewer-v4/N29_Verification_Companion_v4.pdf`](releases/n29-reviewer-v4/N29_Verification_Companion_v4.pdf)
 
-**Canonical sources:**
+**Canonical sources and audit:**
 
 - [`project/reviews/n29/2026-09-11-reviewer-v4/PROOF.md`](project/reviews/n29/2026-09-11-reviewer-v4/PROOF.md)
 - [`project/reviews/n29/2026-09-11-reviewer-v4/VERIFICATION_COMPANION.md`](project/reviews/n29/2026-09-11-reviewer-v4/VERIFICATION_COMPANION.md)
+- [`project/reviews/n29/2026-09-11-reviewer-v4-redteam-v1/REPORT.md`](project/reviews/n29/2026-09-11-reviewer-v4-redteam-v1/REPORT.md) — dedicated hostile audit: no blocking flaw found.
+- [`project/reviews/n29/2026-09-11-reviewer-v4/REDTEAM_HARDENING.md`](project/reviews/n29/2026-09-11-reviewer-v4/REDTEAM_HARDENING.md) — explicit endpoint table, parameterisation and citation hardening.
 - [`project/research/general_n/2026-09-11-threshold-tail-collapse-v1/N29_DELTA16_THRESHOLD_TAIL_HAND_PROOF.md`](project/research/general_n/2026-09-11-threshold-tail-collapse-v1/N29_DELTA16_THRESHOLD_TAIL_HAND_PROOF.md)
 - [`project/reviews/n29/2026-09-11-reviewer-v3/GRAPH_TO_MODEL_BRIDGE.md`](project/reviews/n29/2026-09-11-reviewer-v3/GRAPH_TO_MODEL_BRIDGE.md) — frozen self-contained bridge, appended to the v4 PDF.
 
@@ -91,7 +98,9 @@ For `Delta=16`, reviewer-v4 uses only the exact ledger/demand inequality, residu
 
 The corrected reviewer-v3 minimal kernel remains valuable independent evidence, but is no longer proof-critical. Its exact replays reject 126/126 rows at `m=211` and 1,467/1,467 rows at `m=210`. The old v1 grouped-model normalization bug remains quarantined and documented.
 
-The highest-value review is now the **universal bridge + threshold-capacity lemma + hand clipping argument**, followed by the short `Delta=15`, `Delta=17` and residual h-index branches. A rerun of the late LP/Farkas stack is optional corroboration, not a prerequisite to assess v4.
+A dedicated same-assistant hostile audit then rebuilt the v4 logic from scratch. Its separately specified exact checker passed run `34621982241`: all 1,352,078 demand multisets were swept, all clipping maps were globally regression-tested with zero counterexamples, the threshold-capacity algebra was checked over 1,472 integer parameter combinations, and the remaining degree branches were independently recomputed. This is strong internal evidence but is **not** external validation.
+
+The highest-value external review remains the **universal bridge + threshold-capacity lemma + hand clipping argument**, followed by the short `Delta=15`, `Delta=17` and residual h-index branches. A rerun of the late LP/Farkas stack is optional corroboration, not a prerequisite to assess v4.
 '''
 s = replace_section(s, "## Recommended bridge audit: n=29", "## n=30 complete candidate", sec)
 p.write_text(s)
@@ -106,7 +115,7 @@ s = s.replace(
 )
 s = re.sub(
     r"^\| n29 \|.*$",
-    "| n29 | `e(G) <= 210, with equality exactly K(14,15)` | [PDF v4](n29-reviewer-v4/N29_Reviewer_Manuscript_v4.pdf) | [PDF v4](n29-reviewer-v4/N29_Verification_Companion_v4.pdf) | **Reviewer-v4 hand-reduced** — [package](n29-reviewer-v4/README.md), [proof source](../project/reviews/n29/2026-09-11-reviewer-v4/PROOF.md), [threshold-tail lemma](../project/research/general_n/2026-09-11-threshold-tail-collapse-v1/N29_DELTA16_THRESHOLD_TAIL_HAND_PROOF.md), [frozen bridge](../project/reviews/n29/2026-09-11-reviewer-v3/GRAPH_TO_MODEL_BRIDGE.md); no proof-critical N29 computation; independent review OPEN; [v3 history](n29-reviewer-v3/README.md) |",
+    "| n29 | `e(G) <= 210, with equality exactly K(14,15)` | [PDF v4](n29-reviewer-v4/N29_Reviewer_Manuscript_v4.pdf) | [PDF v4](n29-reviewer-v4/N29_Verification_Companion_v4.pdf) | **Reviewer-v4 hand-reduced + hostile audit PASS** — [package](n29-reviewer-v4/README.md), [proof source](../project/reviews/n29/2026-09-11-reviewer-v4/PROOF.md), [red-team report](../project/reviews/n29/2026-09-11-reviewer-v4-redteam-v1/REPORT.md), [hardening](../project/reviews/n29/2026-09-11-reviewer-v4/REDTEAM_HARDENING.md), [threshold-tail lemma](../project/research/general_n/2026-09-11-threshold-tail-collapse-v1/N29_DELTA16_THRESHOLD_TAIL_HAND_PROOF.md), [frozen bridge](../project/reviews/n29/2026-09-11-reviewer-v3/GRAPH_TO_MODEL_BRIDGE.md); no proof-critical N29 computation; independent review OPEN; [v3 history](n29-reviewer-v3/README.md) |",
     s,
     flags=re.M,
 )
