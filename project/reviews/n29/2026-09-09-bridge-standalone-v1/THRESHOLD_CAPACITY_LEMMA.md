@@ -59,19 +59,19 @@ Put
 q=z_h-h.
 ```
 
-The difference between the right side of (1) and
+The difference between
 
 ```text
 h*z_h+C(q,2)
 ```
 
-is
+and the right side of (1) is
 
 ```text
 (q-j)(q-j-1)/2,
 ```
 
-which is nonnegative for every integer `q-j`. Therefore
+which is nonnegative for every integer `q-j`. Hence the right side of (1) is at most `h*z_h+C(z_h-h,2)`, and therefore
 
 ```text
 W_h <= h*z_h + C(z_h-h,2).
