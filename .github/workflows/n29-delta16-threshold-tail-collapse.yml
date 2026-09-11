@@ -22,3 +22,9 @@ jobs:
           D=project/research/general_n/2026-09-11-threshold-tail-collapse-v1
           /usr/bin/python3 -I -B "$D/n29_delta16_threshold_tail_collapse_exact.py" \
             --output /tmp/N29_DELTA16_THRESHOLD_TAIL_COLLAPSE_EXACT.json
+      - name: Audit hand reduction
+        run: |
+          set -euo pipefail
+          D=project/research/general_n/2026-09-11-threshold-tail-collapse-v1
+          /usr/bin/python3 -I -B "$D/n29_delta16_threshold_tail_hand_check.py" \
+            --output /tmp/N29_DELTA16_THRESHOLD_TAIL_HAND_CHECK.json
