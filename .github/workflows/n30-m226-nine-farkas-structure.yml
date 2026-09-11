@@ -1,4 +1,4 @@
-name: N30 m226 nine-row Farkas structure
+name: N30 threshold-tail structure
 
 on:
   workflow_dispatch:
@@ -16,7 +16,7 @@ jobs:
     timeout-minutes: 15
     steps:
       - uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262
-      - name: Check hand profile and residual-row reduction without solver
+      - name: Check hand m226 profile and residual-row reduction without solver
         run: |
           set -euo pipefail
           D=project/research/n30/2026-09-11-threshold-tail-v1
@@ -30,10 +30,10 @@ jobs:
           assert len(r['nine_residual_rows'])==9
           assert not r['solver_used'] and not r['floating_point_used']
           assert not r['full_5200300_profile_sweep_used']
-          print('hand profile/row reduction exact audit PASS')
+          print('hand m226 profile/row reduction exact audit PASS')
           print('Q values:', [x['Q'] for x in r['seven_profiles']])
           PY
-      - name: Check hand endpoint table without solver
+      - name: Check hand m226 endpoint table without solver
         run: |
           set -euo pipefail
           D=project/research/n30/2026-09-11-threshold-tail-v1
@@ -42,15 +42,34 @@ jobs:
           import json
           r=json.load(open('N30_M226_HAND_ENDPOINT_TABLE_EXACT.json'))
           assert r['status']=='PASS' and len(r['rows'])==8
-          print('hand Hall endpoint table exact audit PASS')
+          print('hand m226 Hall endpoint table exact audit PASS')
           for x in r['rows']:
               print(x['tag'],f"delta={x['delta_numerator']}/{x['delta_denominator']}")
+          PY
+      - name: Check m225 threshold-slack reconstruction without solver
+        run: |
+          set -euo pipefail
+          D=project/research/n30/2026-09-11-threshold-tail-v1
+          /usr/bin/python3 -I -B "$D/verify_m225_tail_slack_reduction.py" \
+            --profiles "$D/N30_M225_QGE18_PROFILES.txt" \
+            --output N30_M225_THRESHOLD_SLACK_REDUCTION_EXACT.json >/dev/null
+          python3 - <<'PY'
+          import json
+          r=json.load(open('N30_M225_THRESHOLD_SLACK_REDUCTION_EXACT.json'))
+          assert r['status']=='PASS'
+          assert r['profiles']==100 and r['rows']==272
+          assert r['positive_ledger_slack_rows']==61
+          assert r['ledger_tight_rows']==211
+          assert r['reconstructed_historical_row_sha256']==r['historical_row_artifact_normalized_sha256']
+          assert not r['solver_used'] and not r['floating_point_used']
+          print('m225 threshold-slack reconstruction exact audit PASS')
+          print('historical 272-row SHA-256:',r['reconstructed_historical_row_sha256'])
           PY
       - name: Pin solver dependency
         run: |
           python3 -m venv .venv
           .venv/bin/python -m pip install --disable-pip-version-check --only-binary=:all: scipy==1.17.0
-      - name: Analyse exact historical endpoint rays
+      - name: Analyse exact historical m226 endpoint rays
         run: |
           set -euo pipefail
           D=project/research/n30/2026-09-11-threshold-tail-v1
@@ -59,19 +78,19 @@ jobs:
           import json
           r=json.load(open('N30_M226_NINE_FARKAS_STRUCTURE.json'))
           assert len(r['rows'])==9 and all(x['rhs']<0 for x in r['rows'])
-          print('nine historical exact rays reconstructed')
+          print('nine historical exact m226 rays reconstructed')
           PY
-      - name: Ablate structural constraint families on eight nontrivial rows
+      - name: Ablate structural constraint families on eight nontrivial m226 rows
         run: |
           set -euo pipefail
           D=project/research/n30/2026-09-11-threshold-tail-v1
           .venv/bin/python -I -B "$D/ablate_eight_models.py" > N30_M226_EIGHT_MODEL_ABLATION.json
-      - name: Project onto selected-edge excess
+      - name: Project m226 onto selected-edge excess
         run: |
           set -euo pipefail
           D=project/research/n30/2026-09-11-threshold-tail-v1
           .venv/bin/python -I -B "$D/project_selected_excess.py" > N30_M226_SELECTED_EXCESS_PROJECTION.json
-      - name: Verify simplified two-transport relaxation exactly
+      - name: Verify simplified m226 two-transport relaxation exactly
         run: |
           set -euo pipefail
           D=project/research/n30/2026-09-11-threshold-tail-v1
@@ -81,14 +100,15 @@ jobs:
           r=json.load(open('N30_M226_SIMPLIFIED_TWO_TRANSPORT_EXACT.json'))
           assert len(r['rows'])==8
           assert all(x['status']==2 and x['certificate']['rhs']<0 for x in r['rows'])
-          print('all eight simplified two-transport systems exactly Farkas-rejected')
+          print('all eight simplified m226 two-transport systems exactly Farkas-rejected')
           PY
       - uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02
         with:
-          name: n30-m226-nine-farkas-structure
+          name: n30-threshold-tail-structure
           path: |
             N30_M226_HAND_PROFILE_REDUCTION_EXACT.json
             N30_M226_HAND_ENDPOINT_TABLE_EXACT.json
+            N30_M225_THRESHOLD_SLACK_REDUCTION_EXACT.json
             N30_M226_NINE_FARKAS_STRUCTURE.json
             N30_M226_EIGHT_MODEL_ABLATION.json
             N30_M226_SELECTED_EXCESS_PROJECTION.json
