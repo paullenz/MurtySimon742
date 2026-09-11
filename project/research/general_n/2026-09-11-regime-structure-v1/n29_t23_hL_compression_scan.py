@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Exact finite collision diagnostic for the adjacent t=1,2,3 RX-Hall regime labs.
+"""Exact finite regime-compression diagnostic for the adjacent t=1,2,3 RX-Hall labs.
 
 t=1 is read from the preserved n=30 exact two-template replay.
 t=2,3 are read from the regenerated n=29 audited frontiers.
@@ -127,7 +127,7 @@ def mixed_summary(rows):
     return {"cells":len(m),"profiles":sum(r["profiles"] for r in m)}
 
 
-def linear_test(P,label_fn,a,b):
+def linear_test_hL(P,label_fn,a,b):
     rows=census(P,label_fn,lambda p:key_hL(p)+(a*rho1(p)+b*nu1(p),))
     return mixed_summary(rows)
 
@@ -164,19 +164,27 @@ def main():
     if len(P3)!=94: raise SystemExit(f"expected 94 t=3 profiles, got {len(P3)}")
 
     labs=[("t1",P1,label_t1),("t2",P2,label_t2),("t3",P3,label_t3)]
-    hL={}; hLG={}
+    hL={}; Gonly={}; hG={}; hLG={}
     for name,P,lf in labs:
-        a=census(P,lf,key_hL)
-        b=census(P,lf,lambda p:key_hL(p)+(G(p),))
-        hL[name]={"summary":mixed_summary(a),"cells":a}
-        hLG[name]={"summary":mixed_summary(b),"cells":b}
+        rows_hL=census(P,lf,key_hL)
+        rows_G=census(P,lf,lambda p:(G(p),))
+        rows_hG=census(P,lf,lambda p:(h_res(p["rho"]),G(p)))
+        rows_hLG=census(P,lf,lambda p:key_hL(p)+(G(p),))
+        hL[name]={"summary":mixed_summary(rows_hL),"cells":rows_hL}
+        Gonly[name]={"summary":mixed_summary(rows_G),"cells":rows_G}
+        hG[name]={"summary":mixed_summary(rows_hG),"cells":rows_hG}
+        hLG[name]={"summary":mixed_summary(rows_hLG),"cells":rows_hLG}
 
-    small_linear={}
+    small_linear_h={}; small_linear_hL={}
     for a,b in [(1,0),(0,1),(1,1),(1,2),(2,1)]:
-        rec={"statistic":f"{a}*rho1+{b}*nu1"}
+        rec_h={"statistic":f"{a}*rho1+{b}*nu1"}
+        rec_hL={"statistic":f"{a}*rho1+{b}*nu1"}
         for name,P,lf in labs:
-            rec[name]=linear_test(P,lf,a,b)
-        small_linear[f"{a},{b}"]=rec
+            rows=census(P,lf,lambda p,a=a,b=b:(h_res(p["rho"]),a*rho1(p)+b*nu1(p)))
+            rec_h[name]=mixed_summary(rows)
+            rec_hL[name]=linear_test_hL(P,lf,a,b)
+        small_linear_h[f"{a},{b}"]=rec_h
+        small_linear_hL[f"{a},{b}"]=rec_hL
 
     triangle=[]
     for i in [0,3,77]:
@@ -197,12 +205,16 @@ def main():
 
     ok=(
         all(hL[name]["summary"]["cells"]>0 for name in ("t1","t2","t3")) and
+        Gonly["t1"]["summary"]["cells"]==0 and
+        Gonly["t2"]["summary"]["cells"]==0 and
+        Gonly["t3"]["summary"]["cells"]>0 and
+        all(hG[name]["summary"]["cells"]==0 for name in ("t1","t2","t3")) and
         all(hLG[name]["summary"]["cells"]==0 for name in ("t1","t2","t3")) and
         all((x["h_res"],x["L"])==(4,6) for x in triangle) and
-        all(small_linear["2,1"][name]["cells"]==0 for name in ("t1","t2","t3"))
+        all(small_linear_h["2,1"][name]["cells"]==0 for name in ("t1","t2","t3"))
     )
     out={
-        "schema":"adjacent-t123-hL-compression-falsification-v2",
+        "schema":"adjacent-t123-hG-compression-v3",
         "status":"PASS" if ok else "FAIL",
         "scope":{
             "t1":{"n":30,"a":13,"b":16,"profiles":len(P1)},
@@ -216,16 +228,19 @@ def main():
             "G":"2*#{u:rho_u=1}+#{i:s_i=1}",
         },
         "hL":hL,
+        "G_only":Gonly,
+        "hG":hG,
         "hLG":hLG,
         "t1_exact_profiles":t1_profiles,
         "t2_lower_bound_triangle":triangle,
-        "first_mixed_cell_profile_by_label":{
+        "first_mixed_hL_cell_profile_by_label":{
             "t1":first_by_label(P1,label_t1,(3,7)),
             "t2":first_by_label(P2,label_t2,(4,6)),
             "t3":first_by_label(P3,label_t3,(4,6)),
         },
-        "small_nonnegative_primitive_linear_comparison":small_linear,
-        "interpretation":"(h_res,L) is exactly falsified as a regime key in all three adjacent exact finite laboratories; adding G=2*rho1+nu1 makes every occupied cell regime-pure in t=1,2,3. This is a finite structural diagnostic, not a general-N theorem.",
+        "small_nonnegative_primitive_linear_comparison_with_h":small_linear_h,
+        "small_nonnegative_primitive_linear_comparison_with_hL":small_linear_hL,
+        "interpretation":"(h_res,L) is exactly falsified as a regime key in all three adjacent exact finite laboratories. The smaller pair (h_res,G), G=2*rho1+nu1, makes every occupied cell regime-pure in t=1,2,3; L is not needed for regime classification on these finite labs. This is not a general-N theorem.",
     }
     z.output.parent.mkdir(parents=True,exist_ok=True)
     z.output.write_text(json.dumps(out,indent=2,sort_keys=True)+"\n")
