@@ -57,6 +57,22 @@ The README must remain a concise current map rather than an exhaustive changelog
 
 Before treating a major research checkpoint or reviewer package as fully preserved, check whether the README needs a corresponding update. If it does, update it in the same repository-writing pass whenever practicable.
 
+### Reviewer-version and link consistency standing order
+
+Whenever any reviewer package, manuscript, verification companion, proof surface, audit release, or other canonical reviewer-facing artifact is created, superseded, renamed, or promoted, perform a repository-facing consistency sweep in the same update pass.
+
+At minimum, verify all of the following before the update is considered complete:
+
+- the README headline/status table names the current reviewer version;
+- the fixed-order/current-result section points to the same current version;
+- the Review-paper index points to the same current manuscript and verification companion;
+- `START_HERE_FOR_REVIEWERS.md` and any other reviewer entry point do not direct reviewers to a superseded package as current;
+- links resolve to files that actually exist on the default branch;
+- superseded packages remain clearly labelled historical rather than silently deleted;
+- version numbers, filenames, labels such as “current”, and prose descriptions agree across all reviewer-facing surfaces.
+
+A reviewer release is **not fully published/preserved** until this consistency sweep has been completed. When practical, re-open the README after the commit and verify the rendered/current paths rather than assuming the write succeeded.
+
 ## GitHub standing order
 
 The repository `paullenz/MurtySimon742` is the durable project home. Future material work should be preserved here (or in an explicitly hash-pinned external artifact referenced here) rather than left only in chat history.
