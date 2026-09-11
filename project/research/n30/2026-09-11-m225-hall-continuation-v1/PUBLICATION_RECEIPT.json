@@ -1,0 +1,219 @@
+{
+  "schema": "murtysimon-publication-receipt-v1",
+  "repository": "paullenz/MurtySimon742",
+  "repository_id": 1359206057,
+  "branch": "main",
+  "research_parent": "b104846d222f09cb0d8bbf25ff9f51f6d1165bdf",
+  "verified_research_commit": "b11c5c3083c228195d9b55df98bfcda813e5beea",
+  "verified_research_tree": "12032365c132a85c25b74991598c80e481c6e0c3",
+  "status": "COMPLETE: branch attachment and read-back verified",
+  "checked": {
+    "non_forced_branch_update": true,
+    "branch_read_back_at_research_commit": true,
+    "all_27_expected_git_blob_hashes_match": true,
+    "all_other_baseline_blobs_unchanged": true,
+    "readme_exact_content_read_back": true,
+    "lemma_exact_content_read_back": true,
+    "local_relative_links_checked": 187,
+    "current_reviewer_versions": {
+      "n25": 2,
+      "n27": 2,
+      "n28": 2,
+      "n29": 4,
+      "n30": 2
+    },
+    "frozen_bridge_preserved": true,
+    "governed_ledger_unchanged": true
+  },
+  "ci_runs": [
+    {
+      "conclusion": "success",
+      "head_sha": "b11c5c3083c228195d9b55df98bfcda813e5beea",
+      "html_url": "https://github.com/paullenz/MurtySimon742/actions/runs/34639943135",
+      "id": 34639943135,
+      "name": "N30 m225 scalar excess exact audit",
+      "status": "completed"
+    },
+    {
+      "conclusion": "success",
+      "head_sha": "b11c5c3083c228195d9b55df98bfcda813e5beea",
+      "html_url": "https://github.com/paullenz/MurtySimon742/actions/runs/34639943147",
+      "id": 34639943147,
+      "name": "N30 threshold-tail structure",
+      "status": "completed"
+    }
+  ],
+  "scope": {
+    "new_scalar_exclusions": 57,
+    "shared_scalar_templates": 7,
+    "remaining_positive_rows_requiring_stronger_methods": 150,
+    "zero_demand_rows_using_prior_certificates": 4,
+    "minimum_assigned_gap": "1/12",
+    "mathematical_status": "Candidate analytic reduction with REPRODUCED exact arithmetic; no theorem-ledger promotion; independent review open"
+  },
+  "expected_research_files": [
+    {
+      "bytes": 974,
+      "git_blob_sha": "18bc0a6ad44c2b2e22eef9a0bd1e19c0611ab31d",
+      "path": ".github/workflows/n30-m225-scalar-excess.yml",
+      "sha256": "ab287b72ea68e59c3b764427b4287586aa6afe583cafc1a017f26a6cc41b3dc9"
+    },
+    {
+      "bytes": 32547,
+      "git_blob_sha": "cf03e1d16add7f97056a82abb3d1376fe27e7cd8",
+      "path": "README.md",
+      "sha256": "bfc9ca5830abed5c74209b199821cd488a8df1f28113a813765e42a582395663"
+    },
+    {
+      "bytes": 18372,
+      "git_blob_sha": "9d66f264a0703b10f585bbb9282574d7f3b9d018",
+      "path": "START_HERE_FOR_REVIEWERS.md",
+      "sha256": "2a8d5279539578d6b6946bbdc9bfa76fae80404036f89b13740f5197e0eb7684"
+    },
+    {
+      "bytes": 5227,
+      "git_blob_sha": "bfcae99b00870ac0f7fc57b2cbac3a310dbfffce",
+      "path": "project/research/n30/2026-09-11-m225-hall-continuation-v1/EXACT_APPENDIX.md",
+      "sha256": "9dae434584f692b25ca235844e04e64cb0aaaadb857464f41847ddd7f7b324fa"
+    },
+    {
+      "bytes": 138111,
+      "git_blob_sha": "c1b7c16bbaa4573570b1d4606bc53769674e2050",
+      "path": "project/research/n30/2026-09-11-m225-hall-continuation-v1/EXACT_AUDIT.json",
+      "sha256": "be964ab34b5a89b97ab69ea595a542b793e9a875e95344d1003b64d81040bc60"
+    },
+    {
+      "bytes": 6754,
+      "git_blob_sha": "578e0791784a376c2e5c397ffe4871b741855e5d",
+      "path": "project/research/n30/2026-09-11-m225-hall-continuation-v1/HANDOVER.md",
+      "sha256": "f059390f64884061c0edc19c14fb9174eb10931417ebf56cdf9dd2720d354d19"
+    },
+    {
+      "bytes": 360,
+      "git_blob_sha": "7a4ebdc6a7b07f96eb6826d848e7cda1503421db",
+      "path": "project/research/n30/2026-09-11-m225-hall-continuation-v1/PUBLICATION_CHECKS.json",
+      "sha256": "90217d2bbef3bf19088c8db1b89adb587a0e8c685a836acc48be5d1ae82edd64"
+    },
+    {
+      "bytes": 3274,
+      "git_blob_sha": "694609029c75ef18d2e3c605e0b0d865b096d4a4",
+      "path": "project/research/n30/2026-09-11-m225-hall-continuation-v1/README.md",
+      "sha256": "84e2e0e9af894c435721378d3fe9d9d6fe63901311bdbcb199b467859bb8549f"
+    },
+    {
+      "bytes": 45753,
+      "git_blob_sha": "14bec99760f64738d632cd1056e1f64090caa571",
+      "path": "project/research/n30/2026-09-11-m225-hall-continuation-v1/REMAINING_150_POSITIVE_ROWS.json",
+      "sha256": "40ef9be10516a6f0cd19db72364f29b42dbb1a22b8ff3b651ef5e2cde8a4d9d1"
+    },
+    {
+      "bytes": 30889,
+      "git_blob_sha": "7f29b34f011839397c41ece8795174594e9b4975",
+      "path": "project/research/n30/2026-09-11-m225-hall-continuation-v1/SCALAR_CERTIFICATES.json",
+      "sha256": "e614bfe1d1e7728f6dc800a67775aec915e748f7ed564c3737ffe07efd5772cd"
+    },
+    {
+      "bytes": 17848,
+      "git_blob_sha": "fdd2506fe6752653b4c7b25c5c810baeb26de224",
+      "path": "project/research/n30/2026-09-11-m225-hall-continuation-v1/SCALAR_EXCESS_COVER.json",
+      "sha256": "7be791262c04a6d181cee637c0cbac04fe43e40b9c60eb17b635ecee6363d0f0"
+    },
+    {
+      "bytes": 175376,
+      "git_blob_sha": "24975ec17e3fdea58cdb7d40a446f75370c8c503",
+      "path": "project/research/n30/2026-09-11-m225-hall-continuation-v1/SCALAR_EXCESS_DISCOVERY.json",
+      "sha256": "75379fc3c4e8fe66b45812d3a42b793a37fa69c677beccb3adecd558ffbbdd13"
+    },
+    {
+      "bytes": 9269,
+      "git_blob_sha": "d6e5a4d2961cea3ae65b7476d9ccd1ef32852ff2",
+      "path": "project/research/n30/2026-09-11-m225-hall-continuation-v1/SCALAR_EXCESS_HALL_LEMMA.md",
+      "sha256": "3a0445e443f606fcde220d819cb65591bd9a03a3b110301c6a8237327b6f33d5"
+    },
+    {
+      "bytes": 7238,
+      "git_blob_sha": "2f610141345dfd9d1947cdd20698f9882ee3e1bc",
+      "path": "project/research/n30/2026-09-11-m225-hall-continuation-v1/SMALL_SCALAR_TEMPLATES.json",
+      "sha256": "4ba250c14a25bc9ac4b79ca73f3683095fc2ff2811c47a066c27339a91ab6d6a"
+    },
+    {
+      "bytes": 2787,
+      "git_blob_sha": "5c005c5d0baa8616c0ba5528b666b0d6713d899c",
+      "path": "project/research/n30/2026-09-11-m225-hall-continuation-v1/check_publication.py",
+      "sha256": "e00ff83178052add0f6366e745d1e247a0adbecc835c4b99d35dd09f5bcfa640"
+    },
+    {
+      "bytes": 3913,
+      "git_blob_sha": "7590e6d8839bec1d7c92c9beed4ce97ad38f1bd0",
+      "path": "project/research/n30/2026-09-11-m225-hall-continuation-v1/compress_scalar_excess.py",
+      "sha256": "ef025c17a66930d71a0b5e71b6dea898e79a86bd991edc1695bb95e4b7a84a21"
+    },
+    {
+      "bytes": 2649,
+      "git_blob_sha": "e86cc8d1f46c1c998153e143c87b4bb2fdf9c772",
+      "path": "project/research/n30/2026-09-11-m225-hall-continuation-v1/mine_scalar_excess.py",
+      "sha256": "f1ab69dbe31327b1196a1d9c62fe6e355e2e270aaa69088d0278a1e82b088afc"
+    },
+    {
+      "bytes": 7206,
+      "git_blob_sha": "e0b51e0d2dea9000c53090fee53fa2fcdc8a5928",
+      "path": "project/research/n30/2026-09-11-m225-hall-continuation-v1/recovery/ENDPOINT_REPLAY.json",
+      "sha256": "ea894522dcdccdc7b29de72d6f667436b2e521eabb81101ac378b4dced68df0e"
+    },
+    {
+      "bytes": 8253,
+      "git_blob_sha": "6fc0bda98b6fc585499f439af2cc2ab2515c68ca",
+      "path": "project/research/n30/2026-09-11-m225-hall-continuation-v1/recovery/PROFILE_REPLAY.json",
+      "sha256": "8e51f47df9c3d5b4bb5ece18326113429fcc507b00e5dced98d361bdde958c48"
+    },
+    {
+      "bytes": 484,
+      "git_blob_sha": "5545c3ce343803797535fb30135862f82405870b",
+      "path": "project/research/n30/2026-09-11-m225-hall-continuation-v1/recovery/RECOVERY_METADATA.json",
+      "sha256": "d391f805ef6f1db95aab40e782e13d208cea070ab7d21a4d65a999f3c8ac8d18"
+    },
+    {
+      "bytes": 994,
+      "git_blob_sha": "73019432afc919818b3e43f8dfa1fb4abbe58bff",
+      "path": "project/research/n30/2026-09-11-m225-hall-continuation-v1/recovery/TAIL_REPLAY.json",
+      "sha256": "095368f4a69bf8aa5d822f7ba0a152aa231ccf82e803ae947b9e2ba51235df79"
+    },
+    {
+      "bytes": 2789,
+      "git_blob_sha": "7d0912c7a67bd792d018b3b9a8546ea1b5321ec3",
+      "path": "project/research/n30/2026-09-11-m225-hall-continuation-v1/recovery/ZERO_REPLAY.json",
+      "sha256": "366c853addc9a30312d1ac5e89c1048a775e79752097d0a1563acbebc359d2f2"
+    },
+    {
+      "bytes": 7807,
+      "git_blob_sha": "fdae009e4bdc641a4c8d1915cedd2abfb2614715",
+      "path": "project/research/n30/2026-09-11-m225-hall-continuation-v1/verify_scalar_certificates.py",
+      "sha256": "ba86d710407c50b1d4f23b95a13d7ca5e54aa5394b6987e8d507102716814d1f"
+    },
+    {
+      "bytes": 7838,
+      "git_blob_sha": "ab50518bbd0176ae3cc44bdde8f63c6ef1a62726",
+      "path": "project/research/n30/2026-09-11-threshold-tail-v1/README.md",
+      "sha256": "dde18e7c15fabb5762b698f787a78d9020d0287c0112086a00d88cc2c54d1ef9"
+    },
+    {
+      "bytes": 2605,
+      "git_blob_sha": "053b2f3ac590c35d95135e1cb89d6d9e502b71c6",
+      "path": "project/reviews/cross-cutting/2026-09-11-source-degree-erratum-v1/ERRATUM.md",
+      "sha256": "c955b21c68b6d4895d682c3dfbd1af647160b96b47b76691520144d645a9fa09"
+    },
+    {
+      "bytes": 5638,
+      "git_blob_sha": "2331aeef83be279a3a8ab62c885bb0a687c18d87",
+      "path": "releases/REVIEW_READY_INDEX.md",
+      "sha256": "9ed029710aed042e6c139febcc61360a3113cc149181fadc6af2233d611b31be"
+    },
+    {
+      "bytes": 7421,
+      "git_blob_sha": "0e09a341cc6589751f1b20d6ac25911c032869f2",
+      "path": "project/research/n30/2026-09-11-m225-hall-continuation-v1/MANIFEST.json",
+      "sha256": "f02c830f20145ae56ae26f7856b6e29a218746028bef263b40dcb86ee811961c"
+    }
+  ],
+  "note": "This receipt records the verified research commit. Its own later commit is not recursively included in its content."
+}
