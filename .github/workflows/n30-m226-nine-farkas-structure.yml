@@ -43,11 +43,20 @@ jobs:
           set -euo pipefail
           D=project/research/n30/2026-09-11-threshold-tail-v1
           .venv/bin/python -I -B "$D/project_selected_excess.py" > N30_M226_SELECTED_EXCESS_PROJECTION.json
+      - name: Verify simplified two-transport relaxation
+        run: |
+          set -euo pipefail
+          D=project/research/n30/2026-09-11-threshold-tail-v1
+          .venv/bin/python -I -B "$D/simplified_two_transport.py" --output N30_M226_SIMPLIFIED_TWO_TRANSPORT.json
           python3 - <<'PY'
           import json
-          r=json.load(open('N30_M226_SELECTED_EXCESS_PROJECTION.json'))
+          r=json.load(open('N30_M226_SIMPLIFIED_TWO_TRANSPORT.json'))
+          assert len(r['rows'])==8
+          assert all(x['status']==2 for x in r['rows'])
+          assert all(x.get('certificate',{}).get('rhs',0)<0 for x in r['rows'])
+          print('all eight simplified two-transport systems exactly Farkas-rejected')
           for x in r['rows']:
-              print(x['tag'],x['cases'])
+              print(x['tag'],x['certificate'])
           PY
       - uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02
         with:
@@ -56,5 +65,6 @@ jobs:
             N30_M226_NINE_FARKAS_STRUCTURE.json
             N30_M226_EIGHT_MODEL_ABLATION.json
             N30_M226_SELECTED_EXCESS_PROJECTION.json
+            N30_M226_SIMPLIFIED_TWO_TRANSPORT.json
           if-no-files-found: error
           retention-days: 30
