@@ -1,0 +1,451 @@
+{
+  "schema": "n30-reviewer-v3-publication-receipt-v1",
+  "recorded_at_utc": "2026-09-11T22:33:28.835Z",
+  "repository": "paullenz/MurtySimon742",
+  "repository_id": 1359206057,
+  "branch": "main",
+  "baseline_commit": "81f37b80f643dd12f371680e673a95f6de793df2",
+  "baseline_tree": "4dcd2ac599f16489842893d559be9f0a347326f6",
+  "verified_publication_commit": "fb9ed4167da09727ee01a5b5ba805137fb8820d3",
+  "verified_publication_tree": "262ccbc8c8e4eed17f3172dfd2d9b99d49142720",
+  "branch_update": {
+    "force": false,
+    "readback": "PASS"
+  },
+  "exact_tree_verification": {
+    "all_pdf_zip_git_hashes_match": true,
+    "intended_files": 28,
+    "modified_baseline_files": 4,
+    "new_files": 24,
+    "status": "PASS",
+    "unchanged_baseline_blobs": 1440
+  },
+  "navigation_and_manifest_readbacks": [
+    {
+      "path": "refs/heads/main",
+      "sha": "fb9ed4167da09727ee01a5b5ba805137fb8820d3",
+      "status": "PASS"
+    },
+    {
+      "exact_utf8_match": true,
+      "path": "README.md",
+      "status": "PASS"
+    },
+    {
+      "exact_utf8_match": true,
+      "path": "START_HERE_FOR_REVIEWERS.md",
+      "status": "PASS"
+    },
+    {
+      "exact_utf8_match": true,
+      "path": "releases/REVIEW_READY_INDEX.md",
+      "status": "PASS"
+    },
+    {
+      "exact_utf8_match": true,
+      "path": "releases/n30-reviewer-v3/README.md",
+      "status": "PASS"
+    },
+    {
+      "exact_utf8_match": true,
+      "path": "releases/n30-reviewer-v3/MANIFEST.json",
+      "status": "PASS"
+    }
+  ],
+  "exact_fetched_commit_byte_verification": {
+    "all_sha256_match": true,
+    "binary_files": 3,
+    "commit": "fb9ed4167da09727ee01a5b5ba805137fb8820d3",
+    "files": 28,
+    "method": "Exact bytes from freshly fetched origin/main commit objects",
+    "status": "PASS"
+  },
+  "published_files": [
+    {
+      "bytes": 1435,
+      "encoding": "utf-8",
+      "git_blob_sha": "4b6e9116a916224c5036311cda496d6322de6e82",
+      "path": ".github/workflows/n30-reviewer-v3-package.yml",
+      "sha256": "3edc71ea6a67890d932fbd9cf8b59967b467a22b4cf07b7d98664c65da7fb99c"
+    },
+    {
+      "bytes": 33317,
+      "encoding": "utf-8",
+      "git_blob_sha": "d015eb15a50469640fd9dfb6664efce470daf38d",
+      "path": "README.md",
+      "sha256": "cb56a4621685f5090f0575bcee139e3339dfea312c9d23b59d197e79c9ee66a3"
+    },
+    {
+      "bytes": 18809,
+      "encoding": "utf-8",
+      "git_blob_sha": "077c46a5ab1f846614f9bb7864d2c0abf87127b2",
+      "path": "START_HERE_FOR_REVIEWERS.md",
+      "sha256": "825b87714239d88ee3df8317ab73e8e1e410bea0e69d0b64647e78d92b3784b5"
+    },
+    {
+      "bytes": 4188,
+      "encoding": "utf-8",
+      "git_blob_sha": "bf205a05cbf7a906f99fb696622588ab4a5db0a3",
+      "path": "project/research/n30/2026-09-11-assembled-hand-route-v1/README.md",
+      "sha256": "740c6ba350e3fd123433894c8dbefc6f6d7d3f0521a1791f557160b2e08bad1f"
+    },
+    {
+      "bytes": 575,
+      "encoding": "utf-8",
+      "git_blob_sha": "e4968d8fa3385bdaae13fb8edce65ecefaeb5169",
+      "path": "project/reviews/n30/2026-09-11-reviewer-v3/CURRENT_NAVIGATION_CHECK.json",
+      "sha256": "2dc31bbd7f0a13f721f085344661b3514e9b5bb29fa979b8548620adfa6a2cb4"
+    },
+    {
+      "bytes": 4652,
+      "encoding": "utf-8",
+      "git_blob_sha": "f4a4669e4cfb3f118284e4a6d8f2f107136fa25c",
+      "path": "project/reviews/n30/2026-09-11-reviewer-v3/EDITORIAL_REVIEW.md",
+      "sha256": "b02b5ecc6691d11e4ee7bda600fffe272e9442fa61291a6529f9d16ee9bb2704"
+    },
+    {
+      "bytes": 7236,
+      "encoding": "utf-8",
+      "git_blob_sha": "02d27580b1e753bdace726d34e3cf8af2b869ce5",
+      "path": "project/reviews/n30/2026-09-11-reviewer-v3/PDF_PREFLIGHT.json",
+      "sha256": "7a969425184f80ed4b704fa404b72f3011ac08e9995268dcbaf76990df1e9e99"
+    },
+    {
+      "bytes": 97274,
+      "encoding": "utf-8",
+      "git_blob_sha": "6c25bbd2e8827ba6b58739619d1dfa9c0c775949",
+      "path": "project/reviews/n30/2026-09-11-reviewer-v3/PROOF.md",
+      "sha256": "6ceaaf2567b8fdc9ae24074178daf079c1b0ed0792b98071aa4b4f4cae0ca0c7"
+    },
+    {
+      "bytes": 1041,
+      "encoding": "utf-8",
+      "git_blob_sha": "586ef5f7473593dd45660f182c60a69add48a767",
+      "path": "project/reviews/n30/2026-09-11-reviewer-v3/README.md",
+      "sha256": "778b450ee992a1b52e39468c374e58be9c53c03c1f05e4e77735e773cd33b498"
+    },
+    {
+      "bytes": 1469,
+      "encoding": "utf-8",
+      "git_blob_sha": "ffec23545bb782b8376976be3b9e17113b5e161e",
+      "path": "project/reviews/n30/2026-09-11-reviewer-v3/REVIEW_REPORT_TEMPLATE.md",
+      "sha256": "8447ec7303c6e353fe9f79f586410b2c3fe26e8a27c8efe487f557259263c2f6"
+    },
+    {
+      "bytes": 2282,
+      "encoding": "utf-8",
+      "git_blob_sha": "0037e54085d9e3e446db6d55bd46716499c7ec27",
+      "path": "project/reviews/n30/2026-09-11-reviewer-v3/SOURCE_MAP.json",
+      "sha256": "c9dd95d5774716fe5fa4f523396e3c5aa58af94cc091c0da1b485843977a4bee"
+    },
+    {
+      "bytes": 8102,
+      "encoding": "utf-8",
+      "git_blob_sha": "73f636f8679358b92f1cf41869d4932782d7eac1",
+      "path": "project/reviews/n30/2026-09-11-reviewer-v3/VERIFICATION_COMPANION.md",
+      "sha256": "18caec8c93fb0410e05ba6ffce2ff8f134d6f3936e00d7ebe8aff150d252e956"
+    },
+    {
+      "bytes": 1431,
+      "encoding": "utf-8",
+      "git_blob_sha": "45b24219720eedcc5aa4981886cd8bca6b2f34e0",
+      "path": "project/reviews/n30/2026-09-11-reviewer-v3/VISUAL_REVIEW.json",
+      "sha256": "58c8e253529ffb30ca1c2d2a7f13a8f4410a1f56003e980bd234123cdf8c63ee"
+    },
+    {
+      "bytes": 20623,
+      "encoding": "utf-8",
+      "git_blob_sha": "dea6870adc1499262ba89af1694cd79e0424c8de",
+      "path": "project/reviews/n30/2026-09-11-reviewer-v3/build_package.py",
+      "sha256": "6a0a24116d69c5aa2ea3397d8a8e5bd5e85039f500bf8b9e8dee0c25dc9ecd70"
+    },
+    {
+      "bytes": 5357,
+      "encoding": "utf-8",
+      "git_blob_sha": "1e6180145af1f2e3f5b966d2f660a55b95a2a3a0",
+      "path": "project/reviews/n30/2026-09-11-reviewer-v3/check_package.py",
+      "sha256": "898d1d36c8dd6955767cd83e53da946f0f48f63e6bd6dbdae3e7aebbf9d5c7ad"
+    },
+    {
+      "bytes": 1276,
+      "encoding": "utf-8",
+      "git_blob_sha": "fe146fc27d740f80d26978f6508c5459a14cfae4",
+      "path": "project/reviews/n30/2026-09-11-reviewer-v3/pdf_layout.lua",
+      "sha256": "96d66bc5ab4513ced401eed24a99f10b955a2e33f11fcd08b240a9b624ebe70b"
+    },
+    {
+      "bytes": 2876,
+      "encoding": "utf-8",
+      "git_blob_sha": "8ab26ead30ccee83e7fd9494505afb2eb5719bee",
+      "path": "project/reviews/n30/2026-09-11-reviewer-v3/pdf_preflight.py",
+      "sha256": "bc923c7419dc1f67ae1c977370f01bfa2083b59901a54c8bff8565b96a186ef4"
+    },
+    {
+      "bytes": 2195,
+      "encoding": "utf-8",
+      "git_blob_sha": "fb912cf08e726f4a886ce26830ebe0923b0abbaf",
+      "path": "project/reviews/n30/2026-09-11-reviewer-v3/replay_bundle.py",
+      "sha256": "a6f1df0158cfafbf3c2a27f0340f748521a9337d14c8b7fb01305f92990d23cd"
+    },
+    {
+      "bytes": 9126,
+      "encoding": "utf-8",
+      "git_blob_sha": "8205d8cd3874a7f9b5903411ca4e955854568390",
+      "path": "project/reviews/n30/2026-09-11-reviewer-v3/update_navigation.py",
+      "sha256": "0768493d493e934105d24c677538e58ed02ff2d71d105e65736d039c0d18622f"
+    },
+    {
+      "bytes": 5658,
+      "encoding": "utf-8",
+      "git_blob_sha": "c46aeca0a509fcb2b5246a268404b9ce762ed933",
+      "path": "releases/REVIEW_READY_INDEX.md",
+      "sha256": "a00e025f0ee41013cdec542a419557ae77e93b20a14d717cbc8fc9cd51b775f9"
+    },
+    {
+      "bytes": 8843,
+      "encoding": "utf-8",
+      "git_blob_sha": "d58a7adb4360325e753a40593141d81e45799e97",
+      "path": "releases/n30-reviewer-v3/BUNDLE_CONTENTS.json",
+      "sha256": "75cc505775abae402f00df3ffc16385254ec93f459bac35ff233e911c26b57ad"
+    },
+    {
+      "bytes": 1848,
+      "encoding": "utf-8",
+      "git_blob_sha": "ea0c07c1df6e170eb0f5c2f5aa3184ea53a24f06",
+      "path": "releases/n30-reviewer-v3/MANIFEST.json",
+      "sha256": "bcd6177c49682acd16ee3052006da21b638d4219cd1ce20636c8d6f1e09db591"
+    },
+    {
+      "bytes": 98014,
+      "encoding": "utf-8",
+      "git_blob_sha": "3978b02f3fcada3ecca1feb2d9333eab3ff4113b",
+      "path": "releases/n30-reviewer-v3/N30_Reviewer_Manuscript_v3.md",
+      "sha256": "5b5d6ac43b8dccc978c7b786f99d8a6f390e6300d54e18b210cac252105f6d9f"
+    },
+    {
+      "bytes": 161277,
+      "encoding": "base64",
+      "git_blob_sha": "c3752583f44be6fd3f125a12158791ae710099a8",
+      "path": "releases/n30-reviewer-v3/N30_Reviewer_Manuscript_v3.pdf",
+      "sha256": "285ce5ccdf0dd40be1fb15a1b835e59bf373eac4f5cff53760b0e2a514328134"
+    },
+    {
+      "bytes": 408999,
+      "encoding": "base64",
+      "git_blob_sha": "178c905f3e45afb7812c96283cf2882d1ccdca28",
+      "path": "releases/n30-reviewer-v3/N30_Reviewer_Package_v3.zip",
+      "sha256": "00b970a0c42eb70bff53b99bae55781f246fbd5bc37444688d4c74c094c2ffd2"
+    },
+    {
+      "bytes": 20129,
+      "encoding": "utf-8",
+      "git_blob_sha": "5f3097705f9b70fb2e2be5ff420c3791c4957ba3",
+      "path": "releases/n30-reviewer-v3/N30_Verification_Companion_v3.md",
+      "sha256": "5fd63ef0a6727a80fa0439d3adf769f596ab3163f88c6a9e6a8758611ec6624a"
+    },
+    {
+      "bytes": 73785,
+      "encoding": "base64",
+      "git_blob_sha": "c08004615a4c30887aa355d6d0687543b9707dc4",
+      "path": "releases/n30-reviewer-v3/N30_Verification_Companion_v3.pdf",
+      "sha256": "797d70d4c0471c890db883721a3779fe8f2fb0c199d918091beba65a0fb73dfb"
+    },
+    {
+      "bytes": 1977,
+      "encoding": "utf-8",
+      "git_blob_sha": "6c9c79ae5199115e533abc8f6dd5f6477c0e119f",
+      "path": "releases/n30-reviewer-v3/README.md",
+      "sha256": "27c0327b44e2cc4afe40d04e965550d290a534c175eeab4db29f8a964fb3ba3a"
+    }
+  ],
+  "local_portable_replay": {
+    "all_envelope_outputs_match": true,
+    "assembly_audit_matches": true,
+    "bundled_files_verified": 42,
+    "external_validation": false,
+    "profile_regression_exact_bytes_match": true,
+    "status": "PASS",
+    "written_transfer_tables_pass": true
+  },
+  "navigation_checks": {
+    "status": "PASS",
+    "source_hashes_checked": 11,
+    "all_required_table_lines_present": {
+      "PREIMAGE_ARITHMETIC.md": 365,
+      "EXACT_APPENDIX.md": 213,
+      "HAND_CLASSIFICATION.md": 67,
+      "N30_M226_HAND_ENDPOINT_REDUCTION.md": 10
+    },
+    "endpoint_rows_in_manuscript": 211,
+    "relative_links_checked": 196,
+    "current_versions": {
+      "n25": 2,
+      "n27": 2,
+      "n28": 2,
+      "n29": 4,
+      "n30": 3
+    },
+    "frozen_n29_bridge_unchanged": true,
+    "all_modified_baseline_files_within_scope": true,
+    "release_manifest_files_checked": null,
+    "external_review": "OPEN"
+  },
+  "pdf_review": {
+    "schema": "n30-reviewer-v3-visual-review-v1",
+    "status": "PASS",
+    "reviewer": "ChatGPT/Geeps; internal visual review",
+    "date": "2026-09-11",
+    "files": [
+      {
+        "path": "releases/n30-reviewer-v3/N30_Reviewer_Manuscript_v3.pdf",
+        "sha256": "285ce5ccdf0dd40be1fb15a1b835e59bf373eac4f5cff53760b0e2a514328134",
+        "pages_reviewed": 45
+      },
+      {
+        "path": "releases/n30-reviewer-v3/N30_Verification_Companion_v3.pdf",
+        "sha256": "797d70d4c0471c890db883721a3779fe8f2fb0c199d918091beba65a0fb73dfb",
+        "pages_reviewed": 7
+      }
+    ],
+    "total_pages_reviewed": 52,
+    "method": "All pages rendered with Poppler at maximum dimension 1200 pixels; every final page inspected in contact sheets, with full-page inspection of the coefficient table, source inventory and endpoint table. Geometry and all 211 histogram pairs also checked programmatically.",
+    "corrected_during_preflight": [
+      "Seven-column source certificate table had overlapping coefficient/minimum cells; column widths and break opportunities corrected.",
+      "Long source inventory paths exceeded the text margin; internal break opportunities added.",
+      "Markdown paired-carets misrendered histogram multiplicities; superscript extension disabled and all 211 histogram pairs checked exactly after PDF text extraction."
+    ],
+    "remaining_layout_defects": [],
+    "mathematical_acceptance": "Candidate; independent specialist review OPEN"
+  },
+  "ci_runs": [
+    {
+      "id": 34654357684,
+      "name": "N30 reviewer-v3 package integrity and portable replay",
+      "head_sha": "fb9ed4167da09727ee01a5b5ba805137fb8820d3",
+      "status": "completed",
+      "conclusion": "success",
+      "url": "https://github.com/paullenz/MurtySimon742/actions/runs/34654357684"
+    },
+    {
+      "id": 34654357799,
+      "name": "N30 assembled hand route independent audit",
+      "head_sha": "fb9ed4167da09727ee01a5b5ba805137fb8820d3",
+      "status": "completed",
+      "conclusion": "success",
+      "url": "https://github.com/paullenz/MurtySimon742/actions/runs/34654357799"
+    }
+  ],
+  "ci_jobs": [
+    {
+      "conclusion": "success",
+      "job_id": 103443403236,
+      "name": "package",
+      "run_id": 34654357684,
+      "steps": [
+        {
+          "conclusion": "success",
+          "name": "Set up job",
+          "status": "completed"
+        },
+        {
+          "conclusion": "success",
+          "name": "Run actions/checkout@11d5960a326750d5838078e36cf38b85af677262",
+          "status": "completed"
+        },
+        {
+          "conclusion": "success",
+          "name": "Check complete proof tables, current links and release hashes",
+          "status": "completed"
+        },
+        {
+          "conclusion": "success",
+          "name": "Extract and replay the exact reviewer ZIP",
+          "status": "completed"
+        },
+        {
+          "conclusion": "success",
+          "name": "Run actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02",
+          "status": "completed"
+        },
+        {
+          "conclusion": "success",
+          "name": "Post Run actions/checkout@11d5960a326750d5838078e36cf38b85af677262",
+          "status": "completed"
+        },
+        {
+          "conclusion": "success",
+          "name": "Complete job",
+          "status": "completed"
+        }
+      ]
+    },
+    {
+      "conclusion": "success",
+      "job_id": 103443403539,
+      "name": "independent",
+      "run_id": 34654357799,
+      "steps": [
+        {
+          "conclusion": "success",
+          "name": "Set up job",
+          "status": "completed"
+        },
+        {
+          "conclusion": "success",
+          "name": "Run actions/checkout@11d5960a326750d5838078e36cf38b85af677262",
+          "status": "completed"
+        },
+        {
+          "conclusion": "success",
+          "name": "Compile the independent integer profile regression",
+          "status": "completed"
+        },
+        {
+          "conclusion": "success",
+          "name": "Corroborate both hand tail arguments across their full demand domains",
+          "status": "completed"
+        },
+        {
+          "conclusion": "success",
+          "name": "Independently reconstruct and exclude every endpoint row",
+          "status": "completed"
+        },
+        {
+          "conclusion": "success",
+          "name": "Check the written transfer payment tables",
+          "status": "completed"
+        },
+        {
+          "conclusion": "success",
+          "name": "Run actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02",
+          "status": "completed"
+        },
+        {
+          "conclusion": "success",
+          "name": "Post Run actions/checkout@11d5960a326750d5838078e36cf38b85af677262",
+          "status": "completed"
+        },
+        {
+          "conclusion": "success",
+          "name": "Complete job",
+          "status": "completed"
+        }
+      ]
+    }
+  ],
+  "scope": {
+    "current_n30_reviewer_edition": 3,
+    "manuscript_pages": 45,
+    "companion_pages": 7,
+    "portable_zip_included": true,
+    "complete_candidate_proof_and_all_tables_in_manuscript": true,
+    "proof_critical_finite_tables_retained": true,
+    "internal_arithmetic": "REPRODUCED",
+    "independent_specialist_review": "OPEN",
+    "external_acceptance_claimed": false,
+    "governed_ledger_promotion": false,
+    "all_historical_proof_and_reviewer_bytes_preserved": true
+  },
+  "next_task": "Independent specialist review of the universal bridge, both clipping proofs, finite classification completeness and endpoint arithmetic; use the included review report template.",
+  "receipt_scope": "This receipt is published in a subsequent receipt-only commit. It pins the already verified reviewer publication above. Its own future commit hash is excluded to avoid self-reference; it does not alter the released PDFs or ZIP."
+}
