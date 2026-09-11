@@ -11,7 +11,7 @@ Candidate proofs and reproducible research. **Updated 11 September 2026. Indepen
 | `n=25` | Complete candidate: `e(G) <= 156`, equality exactly `K(12,13)`; Fan-free reviewer v2; complete partitioned replay and independent endpoint reconstruction green; external specialist review open |
 | `n=27` | Complete candidate: `e(G) <= 182`, equality exactly `K(13,14)`; Fan-free reviewer v2; hardened replay green; external review open |
 | `n=28` | Complete candidate: `e(G) <= 196`, equality exactly `K(14,14)`; Fan-free reviewer v2 plus 11 September analytic upper-range hardening; external review open |
-| `n=29` | Complete candidate: `e(G) <= 210`, equality exactly `K(14,15)`; **reviewer-v3 package**; minimal trusted `Delta=16` kernel; blind external-AI hostile pass found no fatal defect; external review open |
+| `n=29` | Complete candidate: `e(G) <= 210`, equality exactly `K(14,15)`; **reviewer-v4 package**; Delta=16 now closed by a hand threshold-tail proof with no proof-critical computation; historical minimal-kernel/Farkas replay retained as corroboration; external review open |
 | `n=30` | Complete candidate: `e(G) <= 225`, equality exactly `K(15,15)`; Fan-free reviewer v2 plus 11 September analytic upper-range hardening; exact finite endpoint certificates; external review open |
 | General maximum-degree result | Candidate theorem: `n >= 6` and `Delta(G) >= (7/12)n` imply `e(G) < floor(n^2/4)`; complete candidate hand argument with internal exact audits green; external review and novelty assessment open |
 | RX-Hall / 3-D potential programme | Active finite-to-symbolic research programme. Under the current fixed 3-D potentials the exact finite minimum scalar-template counts are `2` for `n=30,t=1`, `3` for `n=29,t=2`, and `4` for `n=29,t=3`. A non-circular exact audit now shows `J=2#{rho>=2}-#{s=1}` gives a common-template regime partition at `t=1,2`, while `(h_res,J)` does so at `t=3`. The suggestive `t+1` pattern remains a falsification target, **not a theorem** and not an unrestricted solution. |
@@ -26,15 +26,17 @@ During the restarted hostile audit of the additional n=29 `Delta=16` cumulative-
 
 A corrected `v2` model was replayed cleanly and again produced zero survivors. The audit subsequently reduced the proof-critical `Delta=16` computation to a smaller trusted kernel, whose clean replay also produced zero survivors with every late exclusion rechecked by exact integer Farkas arithmetic. See the [public-release audit](project/reviews/n29/2026-09-08-redteam-restart-v1/PUBLIC_RELEASE_AUDIT.md) and [minimal-kernel report](project/reviews/n29/2026-09-08-redteam-restart-v1/MINIMAL_KERNEL_REPORT.json).
 
-On 11 September, a separate ChatGPT instance with no project background performed a hostile n=29 review supplied by the user. It independently attacked the graph-to-model bridge, residual activity, threshold capacity, isolated-C, corrected LP normalization, exact Farkas semantics and the hand assembly and reported **no fatal flaw**. It independently recovered the complete n=29 charging-domain counts and a NetworkX graph-atlas bridge regression through order 7; both were reproduced again inside this project. The review also found a new pointwise charging bound that removes substantial upper-range computation from the logical proof chain. See the [blind external red-team follow-up](project/reviews/n29/2026-09-11-blind-external-ai-redteam-v1/FOLLOWUP.md), the [reviewer-v3 proof](project/reviews/n29/2026-09-11-reviewer-v3/PROOF.md), the [reviewer-v3 release package](releases/n29-reviewer-v3/README.md), and the [cross-order analytic caps](project/research/fan-free-fixed-orders/2026-09-11-pointwise-analytic-caps-v1/POINTWISE_CAPS.md).
+On 11 September, a separate ChatGPT instance with no project background performed a hostile n=29 review supplied by the user. It independently attacked the graph-to-model bridge, residual activity, threshold capacity, isolated-C, corrected LP normalization, exact Farkas semantics and the hand assembly and reported **no fatal flaw**. It independently recovered the complete n=29 charging-domain counts and a NetworkX graph-atlas bridge regression through order 7; both were reproduced again inside this project. The review also found a new pointwise charging bound that removes substantial upper-range computation from the logical proof chain. See the [blind external red-team follow-up](project/reviews/n29/2026-09-11-blind-external-ai-redteam-v1/FOLLOWUP.md), the [reviewer-v4 proof](project/reviews/n29/2026-09-11-reviewer-v4/PROOF.md), the [reviewer-v4 release package](releases/n29-reviewer-v4/README.md), and the [cross-order analytic caps](project/research/fan-free-fixed-orders/2026-09-11-pointwise-analytic-caps-v1/POINTWISE_CAPS.md).
 
 A separate proof-text audit also found a **non-blocking sign/order typo** in an intermediate explanatory sentence of the expanded threshold-capacity lemma. The corrected sign is exactly the direction needed to prove the already-used final inequality, so no numerical result or candidate status changed. The historical lemma records the correction explicitly; reviewer-v3 rewrites the proof self-contained.
+
+Later on 11 September, the threshold-capacity family was summed over residual-degree tails to obtain a stronger demand-only inequality. A new hand clipping argument proves `Q(s)<=18`, while the bridge gives `Q(s)>=16+2t` for `Delta=16`, hence `t<=1`. Therefore the entire `n=29, Delta=16, m>=210` branch is now excluded without proof-critical computation. Reviewer-v4 is the current review surface; reviewer-v3 and its corrected minimal-kernel/Farkas route remain frozen as independent corroboration and audit history.
 
 ### Robustness milestone — Fan dependency removed from the current fixed-order proofs
 
 A later external-AI critique raised three concrete objections: two possible collision/double-counting issues in the selected/residual construction, and the fact that the fixed-order papers used G. Fan's 1987 upper-density theorem to cap the edge search. The two local semantic objections did **not** survive re-audit: selection is one representative per missing **unordered** `B`-pair, and the forced cross-edges in the residual injection cannot themselves be selected because their endpoints miss an `A`-vertex. The current editions state those points explicitly. See the [cross-cutting feedback audit](project/reviews/cross-cutting/2026-09-09-external-ai-feedback-audit-v1/REPORT.md).
 
-For the Fan point, the project deliberately went further than defending the citation. It constructed direct order-specific upper-range reductions for **all five current fixed-order candidates `n=25,27,28,29,30`**, so Fan's theorem is now **historical attribution only**, not a logical dependency of those proofs. Every historical reviewer-v1/proof source is retained unchanged. The current reviewer-facing PDF packages are Fan-free v2 at `n=25,27,28,30` and reviewer-v3 at `n=29`. The unified Fan-free replacement is documented in [`FAN_FREE_REDUCTION.md`](project/research/fan-free-fixed-orders/2026-09-09-v1/FAN_FREE_REDUCTION.md), with later analytic simplifications in [`POINTWISE_CAPS.md`](project/research/fan-free-fixed-orders/2026-09-11-pointwise-analytic-caps-v1/POINTWISE_CAPS.md).
+For the Fan point, the project deliberately went further than defending the citation. It constructed direct order-specific upper-range reductions for **all five current fixed-order candidates `n=25,27,28,29,30`**, so Fan's theorem is now **historical attribution only**, not a logical dependency of those proofs. Every historical reviewer-v1/proof source is retained unchanged. The current reviewer-facing PDF packages are Fan-free v2 at `n=25,27,28,30` and reviewer-v4 at `n=29`. The unified Fan-free replacement is documented in [`FAN_FREE_REDUCTION.md`](project/research/fan-free-fixed-orders/2026-09-09-v1/FAN_FREE_REDUCTION.md), with later analytic simplifications in [`POINTWISE_CAPS.md`](project/research/fan-free-fixed-orders/2026-09-11-pointwise-analytic-caps-v1/POINTWISE_CAPS.md).
 
 The assembled replacement passed a fresh [hostile coverage/integrity audit](project/research/fan-free-fixed-orders/2026-09-09-v1/FAN_FREE_AUDIT.md): the required upper edge ranges are complete, every proof-event checkpoint has zero survivors under exact acceptance, the v2 proof surfaces contain no residual logical invocation of Fan, and the frozen historical source hashes still match their recorded v2 provenance. This is **internal** robustness evidence, not external acceptance; the graph-to-residual lemmas and short hand monotonicity arguments remain important review targets.
 
@@ -77,36 +79,15 @@ e(G) <= 210 = floor(29^2/4),
 with equality exactly K(14,15).
 ```
 
-[**Current reviewer-v3 package**](releases/n29-reviewer-v3/README.md) · [reviewer-v3 manuscript PDF](releases/n29-reviewer-v3/N29_Reviewer_Manuscript_v3.pdf) · [reviewer-v3 verification companion PDF](releases/n29-reviewer-v3/N29_Verification_Companion_v3.pdf) · [canonical reviewer-v3 proof](project/reviews/n29/2026-09-11-reviewer-v3/PROOF.md) · [self-contained reviewer-v3 bridge](project/reviews/n29/2026-09-11-reviewer-v3/GRAPH_TO_MODEL_BRIDGE.md) · [blind external red-team follow-up](project/reviews/n29/2026-09-11-blind-external-ai-redteam-v1/FOLLOWUP.md) · [historical reviewer-v2 package](releases/n29-reviewer-v2/README.md) · [minimal-kernel report](project/reviews/n29/2026-09-08-redteam-restart-v1/MINIMAL_KERNEL_REPORT.json).
+[**Current reviewer-v4 package**](releases/n29-reviewer-v4/README.md) · [reviewer-v4 manuscript PDF](releases/n29-reviewer-v4/N29_Reviewer_Manuscript_v4.pdf) · [reviewer-v4 verification companion PDF](releases/n29-reviewer-v4/N29_Verification_Companion_v4.pdf) · [canonical reviewer-v4 proof](project/reviews/n29/2026-09-11-reviewer-v4/PROOF.md) · [threshold-tail hand proof](project/research/general_n/2026-09-11-threshold-tail-collapse-v1/N29_DELTA16_THRESHOLD_TAIL_HAND_PROOF.md) · [frozen self-contained bridge](project/reviews/n29/2026-09-11-reviewer-v3/GRAPH_TO_MODEL_BRIDGE.md) · [historical reviewer-v3 package](releases/n29-reviewer-v3/README.md).
 
-The proof does **not** depend on the later general profile-integral candidates or on Fan's density theorem. `Delta=15` is handled by a witness-deficit count, which also forces `K(14,15)` at 210. `Delta=17` is excluded by a short pointwise charging bound, `Delta=18..27` by the residual h-index inequality, and a universal vertex gives a star.
+The proof does **not** depend on Fan's density theorem or on the active general-N/RX-Hall research. `Delta=15` is handled by a witness-deficit count, which also forces `K(14,15)` at 210. `Delta=17` is excluded by a short pointwise charging bound, `Delta=18..27` by the residual h-index inequality, and a universal vertex gives a star.
 
-The difficult `Delta=16` case now has a deliberately narrowed proof-critical route. At the two dense scopes the **minimal trusted kernel** is:
+The former difficult `Delta=16` branch is now hand-reduced completely. With `t=m-208`, the bridge gives residual activity, `S>=r+2t`, selected-incidence forcing and threshold capacity. Summing residual-degree tails gives a demand-only lower bound `Q(s)>=16+2t`. A hand monotone-clipping argument proves `Q(s)<=18`, so `t<=1`. Therefore **every `Delta=16` graph with `m>=210` is impossible**.
 
-```text
-quasi-edge / selected-residual construction
-  -> residual activity
-  -> charging and threshold-capacity inequalities
-  -> exact source-capacity dual pruning
-  -> simple residual-row Hall/refinement scan
-  -> corrected cumulative-threshold/source-q-flow LP
-  -> exact integer Farkas verification
-```
+Accordingly, the historical demand enumeration, residual-row scan, Hall pruning, corrected cumulative-threshold/source-q-flow LP and exact Farkas certificates are no longer logical dependencies of the N29 theorem proof. The corrected minimal kernel remains preserved as independent corroboration: at 211 edges it rejected all 126 residual rows, and at 210 edges all 1,467 rows, by exact integer Farkas verification. The earlier v1 grouped-model normalization bug and its correction remain public audit history.
 
-Its clean replay retains 72 demand profiles and 126 residual rows at 211 edges, and 367 demand profiles and 1,467 residual rows at 210 edges. All 1,593 late residual rows receive exact Farkas contradictions and final survivors are zero. This route does **not** use the old projected screen, joint propagator, shared LP, typed LP, old endpoint LP or older pair-capacity support formula.
-
-For the Fan-free Delta=16 upper range, reviewer-v3 reduces the computation further:
-
-```text
-m=212: exact trusted-kernel extension;
-m=213,214: exact threshold/source-count/Hall arithmetic;
-m=215: hand threshold-capacity contradiction;
-m>=216: one-line pointwise charging cap.
-```
-
-Thus the historical generic scan over `m=216..232` is no longer a logical dependency.
-
-The blind external pass independently reproduced the charging-domain census and reported 21 graph-atlas isomorphism types through order 7, 50 maximum-degree rooted cases and 58 selection configurations with no bridge failure; this atlas regression was independently rerun inside the project with the same counts. Those small examples have `t<=0`, so they do not test residual activity or charging.
+The hand tail lemma has two independent exact regressions: a small local-obligation checker and a full 1,352,078-demand-multiset audit; both pass, but neither is a proof premise. The proof is therefore logically computation-free at N29 while retaining substantial computational cross-checks.
 
 **Status: complete candidate; independent mathematical review OPEN.**
 

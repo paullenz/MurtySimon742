@@ -22,7 +22,7 @@ The repository currently contains complete candidate fixed-order Murty–Simon r
 - `n=29`: `e(G) <= 210`, equality only `K(14,15)`;
 - `n=30`: `e(G) <= 225`, equality only `K(15,15)`.
 
-The canonical PDF reviewer packages are indexed in [`releases/REVIEW_READY_INDEX.md`](releases/REVIEW_READY_INDEX.md). The current fixed-order editions are Fan-free reviewer-v2 at `n=25,27,28,30` and **reviewer-v3 at `n=29`**, hardened after the blind external-assistant red-team.
+The canonical PDF reviewer packages are indexed in [`releases/REVIEW_READY_INDEX.md`](releases/REVIEW_READY_INDEX.md). The current fixed-order editions are Fan-free reviewer-v2 at `n=25,27,28,30` and **reviewer-v4 at `n=29`**, with the entire dense `Delta=16` branch now excluded by a hand threshold-tail argument.
 
 The strongest current reviewer-packaged general candidate is
 
@@ -61,7 +61,7 @@ A second blind external-assistant red-team of `n=29`, supplied on 11 September w
 That review also found a useful pointwise charging bound which removes several historical computations from the **logical** dependency chain. The exact cross-order derivation is [`POINTWISE_CAPS.md`](project/research/fan-free-fixed-orders/2026-09-11-pointwise-analytic-caps-v1/POINTWISE_CAPS.md). In particular:
 
 - `n=28, Delta=15`: every `m>=203` is now a hand exclusion;
-- `n=29, Delta=16`: `m=215` is a hand threshold contradiction and every `m>=216` is a one-line hand exclusion;
+- `n=29, Delta=16`: the later reviewer-v4 threshold-tail proof is stronger and excludes **every `m>=210` by hand**; the earlier pointwise caps remain historical corroboration;
 - `n=30, Delta=17`: every `m>=228` is now a hand exclusion;
 - `n=30, Delta=16`: every `m>=234` is now a hand exclusion.
 
@@ -69,70 +69,26 @@ Historical workflows for those ranges remain preserved as corroborating evidence
 
 ## Recommended bridge audit: n=29
 
-The n=29 candidate remains a clean place to audit the universal graph-to-demand machinery because most degree ranges are eliminated by short hand arguments and the difficult `Delta=16` case has a deliberately reduced trusted kernel. The same bridge is then parameterised at n=30.
+The n=29 candidate is now an especially clean place to audit the universal graph-to-demand machinery because **no finite computation is logically required by reviewer-v4**.
 
-**Current reviewer-v3 package:**
+**Current reviewer-v4 package:**
 
-- [`releases/n29-reviewer-v3/README.md`](releases/n29-reviewer-v3/README.md)
-- [`releases/n29-reviewer-v3/N29_Reviewer_Manuscript_v3.pdf`](releases/n29-reviewer-v3/N29_Reviewer_Manuscript_v3.pdf)
-- [`releases/n29-reviewer-v3/N29_Verification_Companion_v3.pdf`](releases/n29-reviewer-v3/N29_Verification_Companion_v3.pdf)
+- [`releases/n29-reviewer-v4/README.md`](releases/n29-reviewer-v4/README.md)
+- [`releases/n29-reviewer-v4/N29_Reviewer_Manuscript_v4.pdf`](releases/n29-reviewer-v4/N29_Reviewer_Manuscript_v4.pdf)
+- [`releases/n29-reviewer-v4/N29_Verification_Companion_v4.pdf`](releases/n29-reviewer-v4/N29_Verification_Companion_v4.pdf)
 
-**Canonical reviewer-v3 sources:**
+**Canonical sources:**
 
-- [`project/reviews/n29/2026-09-11-reviewer-v3/README.md`](project/reviews/n29/2026-09-11-reviewer-v3/README.md)
-- [`project/reviews/n29/2026-09-11-reviewer-v3/PROOF.md`](project/reviews/n29/2026-09-11-reviewer-v3/PROOF.md)
-- [`project/reviews/n29/2026-09-11-reviewer-v3/GRAPH_TO_MODEL_BRIDGE.md`](project/reviews/n29/2026-09-11-reviewer-v3/GRAPH_TO_MODEL_BRIDGE.md)
-- [`project/reviews/n29/2026-09-11-reviewer-v3/VERIFICATION_COMPANION.md`](project/reviews/n29/2026-09-11-reviewer-v3/VERIFICATION_COMPANION.md)
+- [`project/reviews/n29/2026-09-11-reviewer-v4/PROOF.md`](project/reviews/n29/2026-09-11-reviewer-v4/PROOF.md)
+- [`project/reviews/n29/2026-09-11-reviewer-v4/VERIFICATION_COMPANION.md`](project/reviews/n29/2026-09-11-reviewer-v4/VERIFICATION_COMPANION.md)
+- [`project/research/general_n/2026-09-11-threshold-tail-collapse-v1/N29_DELTA16_THRESHOLD_TAIL_HAND_PROOF.md`](project/research/general_n/2026-09-11-threshold-tail-collapse-v1/N29_DELTA16_THRESHOLD_TAIL_HAND_PROOF.md)
+- [`project/reviews/n29/2026-09-11-reviewer-v3/GRAPH_TO_MODEL_BRIDGE.md`](project/reviews/n29/2026-09-11-reviewer-v3/GRAPH_TO_MODEL_BRIDGE.md) — frozen self-contained bridge, appended to the v4 PDF.
 
-**Blind external red-team follow-up:**
+For `Delta=16`, reviewer-v4 uses only the exact ledger/demand inequality, residual activity, selected-incidence forcing, selected-source capacity and threshold capacity. These give `Q(s)>=16+2t`; the hand tail-deficit argument gives `Q(s)<=18`, hence `t<=1` and excludes every `m>=210` in this degree branch.
 
-- [`project/reviews/n29/2026-09-11-blind-external-ai-redteam-v1/FOLLOWUP.md`](project/reviews/n29/2026-09-11-blind-external-ai-redteam-v1/FOLLOWUP.md)
+The corrected reviewer-v3 minimal kernel remains valuable independent evidence, but is no longer proof-critical. Its exact replays reject 126/126 rows at `m=211` and 1,467/1,467 rows at `m=210`. The old v1 grouped-model normalization bug remains quarantined and documented.
 
-Historical bridge/audit surfaces remain preserved:
-
-- [`project/reviews/n29/2026-09-09-bridge-standalone-v1/GRAPH_TO_MODEL_BRIDGE.md`](project/reviews/n29/2026-09-09-bridge-standalone-v1/GRAPH_TO_MODEL_BRIDGE.md)
-- [`project/reviews/n29/2026-09-09-bridge-standalone-v1/THRESHOLD_CAPACITY_LEMMA.md`](project/reviews/n29/2026-09-09-bridge-standalone-v1/THRESHOLD_CAPACITY_LEMMA.md)
-- [`project/reviews/n29/2026-09-09-bridge-standalone-v1/BRIDGE_REDTEAM.md`](project/reviews/n29/2026-09-09-bridge-standalone-v1/BRIDGE_REDTEAM.md)
-- [`project/reviews/n29/2026-09-08-redteam-restart-v1/PUBLIC_RELEASE_AUDIT.md`](project/reviews/n29/2026-09-08-redteam-restart-v1/PUBLIC_RELEASE_AUDIT.md)
-
-The highest-value mathematical review is the **graph-to-demand bridge**, not another rerun of the arithmetic.
-
-## Minimal trusted kernel for n=29, Delta=16
-
-The preferred current route deliberately removes several older layers of computation. Its logical chain is:
-
-```text
-quasi-edge / selected-residual construction
-        -> residual activity
-        -> demand and charging inequalities
-        -> exact threshold-capacity inequality
-        -> exact source-capacity dual pruning
-        -> simple residual-row Hall/refinement scan
-        -> corrected cumulative-threshold/source-q-flow LP
-        -> exact integer Farkas verification
-```
-
-The clean-runner result is recorded in [`MINIMAL_KERNEL_REPORT.json`](project/reviews/n29/2026-09-08-redteam-restart-v1/MINIMAL_KERNEL_REPORT.json):
-
-| Edge count | `t` | Demand profiles retained | Residual rows | Exact late rejections | Final survivors |
-|---:|---:|---:|---:|---:|---:|
-| 211 | 3 | 72 | 126 | 126 | 0 |
-| 210 | 2 | 367 | 1,467 | 1,467 | 0 |
-
-Every late exclusion is rechecked by exact integer arithmetic. Floating-point LP output is used only to propose a Farkas ray; solver status by itself is never a proof event.
-
-The minimal route does **not** use the old projected screen, joint propagator, shared LP, typed LP, old endpoint LP or the older pair-capacity support formula. Those remain in the repository as redundant evidence and research history.
-
-For the Fan-free `Delta=16` upper range, reviewer-v3 further reduces the necessary computation:
-
-```text
-m=212: exact trusted-kernel extension;
-m=213,214: exact threshold/source-count/Hall arithmetic;
-m=215: hand threshold-capacity contradiction;
-m>=216: hand pointwise charging cap.
-```
-
-Thus the old generic `m=216..232` scan is no longer logically required.
+The highest-value review is now the **universal bridge + threshold-capacity lemma + hand clipping argument**, followed by the short `Delta=15`, `Delta=17` and residual h-index branches. A rerun of the late LP/Farkas stack is optional corroboration, not a prerequisite to assess v4.
 
 ## n=30 complete candidate
 
