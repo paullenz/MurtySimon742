@@ -1,0 +1,24 @@
+name: N29 Delta16 threshold-tail collapse
+
+on:
+  workflow_dispatch:
+  push:
+    paths:
+      - '.github/workflows/n29-delta16-threshold-tail-collapse.yml'
+      - 'project/research/general_n/2026-09-11-threshold-tail-collapse-v1/**'
+
+permissions:
+  contents: read
+
+jobs:
+  exact-replay:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 5
+    steps:
+      - uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262
+      - name: Exhaust threshold-tail demand multisets
+        run: |
+          set -euo pipefail
+          D=project/research/general_n/2026-09-11-threshold-tail-collapse-v1
+          /usr/bin/python3 -I -B "$D/n29_delta16_threshold_tail_collapse_exact.py" \
+            --output /tmp/N29_DELTA16_THRESHOLD_TAIL_COLLAPSE_EXACT.json
