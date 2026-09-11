@@ -1,0 +1,54 @@
+name: Audit n29 t3 A1 complete hand reduction
+
+on:
+  workflow_dispatch:
+  push:
+    paths:
+      - 'project/research/general_n/2026-09-11-regime-structure-v1/N29_T3_A1_COMPLETE_HAND_REDUCTION.md'
+      - 'project/research/general_n/2026-09-11-regime-structure-v1/n29_t3_a1_complete_hand_check.py'
+      - '.github/workflows/n29-t3-a1-complete-hand.yml'
+
+permissions:
+  contents: write
+
+jobs:
+  check:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262
+        with:
+          fetch-depth: 0
+      - name: Run exact hand-reduction audit
+        run: python3 -I -B project/research/general_n/2026-09-11-regime-structure-v1/n29_t3_a1_complete_hand_check.py
+      - name: Validate receipt
+        run: |
+          python3 - <<'PY'
+          import json
+          p='project/research/general_n/2026-09-11-regime-structure-v1/N29_T3_A1_COMPLETE_HAND_CHECK.json'
+          r=json.load(open(p))
+          assert r['status']=='PASS'
+          z=r['D1_0_exact_audit']
+          assert z['post_one_label_states']==1102
+          assert z['total_capacity_failures']==1086
+          assert z['top7_Hall_failures']==5
+          assert z['survivors']==11
+          assert z['all_survivors_L']==[6]
+          assert z['all_survivor_nonunit_rho_support']==[3,4,5,6]
+          assert r['solver_used'] is False and r['floating_point_used'] is False
+          print(json.dumps(r,indent=2))
+          PY
+      - name: Commit receipt
+        run: |
+          set -euo pipefail
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add project/research/general_n/2026-09-11-regime-structure-v1/N29_T3_A1_COMPLETE_HAND_CHECK.json
+          if git diff --cached --quiet; then exit 0; fi
+          git commit -m 'Record complete A1 hand-reduction audit'
+          for attempt in 1 2 3 4 5; do
+            if git push origin HEAD:main; then exit 0; fi
+            git pull --rebase origin main
+            sleep $((attempt*2))
+          done
+          exit 1
