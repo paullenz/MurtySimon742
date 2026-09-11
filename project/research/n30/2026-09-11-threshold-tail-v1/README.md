@@ -89,4 +89,12 @@ Thus, conditional on the universal graph-to-model / threshold-tail lemmas alread
 
 All historical exact evidence remains preserved as independent corroboration and regression material.
 
+## Next target: m=225
+
+The equality branch remains the important computational frontier. [`N30_M225_RECONNAISSANCE.md`](N30_M225_RECONNAISSANCE.md) records a fresh decomposition of its 272 historical row-threshold survivors.
+
+A simple exact ledger identity now removes 61 of those rows analytically: every one of the 61 has all thirteen demands positive but nonzero ledger slack, whereas positivity forces `S=r+2t=r+2` exactly. This leaves 211 ledger-tight rows as the genuine target.
+
+The reconnaissance note also records and rejects an invalid exploratory tightening `p<=rho+1`; the correct local bound remains `p<=rho+2`. With that correct domain, neither the present scalar Hall template nor the stripped two-transport relaxation closes all 211 rows, so the historical exact `m=225` Farkas route remains proof-critical.
+
 This analytic hardening does **not** remove the exact finite work currently used at `m=225, Delta=16` for the equality classification of the full `n=30` candidate theorem, and it does not promote the project beyond candidate status. Independent specialist review remains open.
