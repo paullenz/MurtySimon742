@@ -38,13 +38,16 @@ jobs:
           set -euo pipefail
           D=project/research/n30/2026-09-11-threshold-tail-v1
           .venv/bin/python -I -B "$D/ablate_eight_models.py" > N30_M226_EIGHT_MODEL_ABLATION.json
+      - name: Project onto selected-edge excess
+        run: |
+          set -euo pipefail
+          D=project/research/n30/2026-09-11-threshold-tail-v1
+          .venv/bin/python -I -B "$D/project_selected_excess.py" > N30_M226_SELECTED_EXCESS_PROJECTION.json
           python3 - <<'PY'
           import json
-          r=json.load(open('N30_M226_EIGHT_MODEL_ABLATION.json'))
-          assert len(r['rows'])==8
-          print('eight-row category ablation complete')
+          r=json.load(open('N30_M226_SELECTED_EXCESS_PROJECTION.json'))
           for x in r['rows']:
-              print(x['tag'],x['single_drop_status'])
+              print(x['tag'],x['cases'])
           PY
       - uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02
         with:
@@ -52,5 +55,6 @@ jobs:
           path: |
             N30_M226_NINE_FARKAS_STRUCTURE.json
             N30_M226_EIGHT_MODEL_ABLATION.json
+            N30_M226_SELECTED_EXCESS_PROJECTION.json
           if-no-files-found: error
           retention-days: 30
