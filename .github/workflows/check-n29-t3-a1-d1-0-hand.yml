@@ -1,0 +1,23 @@
+name: Check N29 t3 A1 D1=0 hand reduction
+
+on:
+  workflow_dispatch:
+  push:
+    paths:
+      - 'project/research/general_n/2026-09-11-regime-structure-v1/N29_T3_A1_D1_0_HAND_REDUCTION.md'
+      - 'project/research/general_n/2026-09-11-regime-structure-v1/n29_t3_a1_d1_0_hand_audit.py'
+      - '.github/workflows/check-n29-t3-a1-d1-0-hand.yml'
+
+permissions:
+  contents: read
+
+jobs:
+  check:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262
+      - name: Run exact audit
+        run: |
+          set -euo pipefail
+          python3 project/research/general_n/2026-09-11-regime-structure-v1/n29_t3_a1_d1_0_hand_audit.py
