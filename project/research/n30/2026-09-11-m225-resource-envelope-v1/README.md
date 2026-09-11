@@ -10,7 +10,7 @@ The new route keeps the joint source/label constraints, the exact residual budge
 
 The earlier 61 positive-ledger-slack rows are already excluded by a short identity. Thus, **conditional on the complete 100-profile demand input**, the whole historical 272-row endpoint frontier can be excluded without its final LP/Farkas models. The current reviewer-v2 remains frozen and available with those original certificates.
 
-**The 100-profile completeness classification remains a finite dependency. This is not yet a fully hand-derived N30 proof.**
+**Later continuation:** the [hand classification of all 100 profiles](../2026-09-11-m225-hand-classification-v1/HAND_CLASSIFICATION.md) now supplies a candidate completeness argument with bounded arithmetic tables. It derives 70 cap-four profiles and 30 containing fives, rules out all higher preimages, and feeds its independently generated list into this checker with the same 211/211 result. The original files here retain their historical input boundary. The combined N30 route still needs envelope/assembly review and the separate Delta=17 work.
 
 ## Review and replay
 
@@ -31,4 +31,4 @@ Acceptance imports no solver or discovery program. It reconstructs the tail-slac
 
 The scripts prefixed `mine_`, `compress_` or `simplify_` are optional SciPy 1.17.0 discovery tools. Their output, including unsuccessful first attempts and a preliminary 210-row cover, is preserved with explicit provenance. Optimizer termination and optimality are not acceptance conditions; only the independently replayed integer certificate matters.
 
-The next target is a hand classification of the 100 `Q>=18` demand profiles, followed by an audit of the complete N30 proof assembly before any new reviewer PDF edition is prepared.
+The original next target, the 100-profile hand classification, is now addressed by that candidate continuation. The next target is an audit of the full supplementary Delta=16 assembly and the separate Delta=17 dependencies before any new reviewer PDF edition is prepared.

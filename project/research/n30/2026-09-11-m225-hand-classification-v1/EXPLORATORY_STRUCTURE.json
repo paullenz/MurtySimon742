@@ -1,0 +1,63 @@
+{
+  "status": "RECONSTRUCTED EXPLORATION; NOT A PROOF PREMISE",
+  "provenance": "Recreated from the interactive integer probes in this continuation; the new profile list is equivalent to the historical list used in the first histogram.",
+  "profile_counts_by_p_N2_max": {
+    "(12, 12, 3)": 2,
+    "(12, 12, 4)": 2,
+    "(13, 11, 3)": 2,
+    "(13, 12, 2)": 1,
+    "(13, 12, 3)": 5,
+    "(13, 12, 4)": 12,
+    "(13, 13, 2)": 1,
+    "(13, 13, 3)": 10,
+    "(13, 13, 4)": 35,
+    "(13, 13, 5)": 30
+  },
+  "cap4_max_D_by_N2": {
+    "0": 0,
+    "1": -1,
+    "2": 0,
+    "3": 0,
+    "4": 0,
+    "5": 0,
+    "6": 1,
+    "7": 1,
+    "8": 2,
+    "9": 3,
+    "10": 4,
+    "11": 5,
+    "12": 6,
+    "13": 8
+  },
+  "cap5_max_Q_by_N4_at_p_N2_13": {
+    "1": 13,
+    "2": 14,
+    "3": 16,
+    "4": 17,
+    "5": 17,
+    "6": 17,
+    "7": 17,
+    "8": 17,
+    "9": 17,
+    "10": 18,
+    "11": 18,
+    "12": 19,
+    "13": 19
+  },
+  "cap5_max_Q_at_p13_N2_12": 17,
+  "unused_larger_six_lift_box_max_Q_by_j": {
+    "1": 13,
+    "2": 14,
+    "3": 15,
+    "4": 16,
+    "5": 16,
+    "6": 16,
+    "7": 16,
+    "8": 16,
+    "9": 15,
+    "10": 15,
+    "11": 16,
+    "12": 15,
+    "13": 15
+  }
+}

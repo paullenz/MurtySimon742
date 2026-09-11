@@ -1,0 +1,19 @@
+{
+  "status": "PASS",
+  "written_cap4_cap5_cap6_tables_match": true,
+  "written_capacity_entries_checked": 50,
+  "written_score_distribution_match": true,
+  "baseline": "d063c25445671c2588f5a619ecbc468e9698806d",
+  "relative_links_checked": 216,
+  "broken_links": [],
+  "current_versions": {
+    "n25": 2,
+    "n27": 2,
+    "n28": 2,
+    "n29": 4,
+    "n30": 2
+  },
+  "frozen_bridge_unchanged": true,
+  "tracked_and_untracked_changes_within_scope": true,
+  "scope": "Current entry pages, three predecessor READMEs and new checkpoint; not all historical links."
+}

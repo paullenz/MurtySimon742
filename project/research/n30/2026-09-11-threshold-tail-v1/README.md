@@ -4,6 +4,8 @@
 
 **Status: candidate analytic hardening; the `n=30, Delta=16, m=226` endpoint now has a hand route after the universal bridge. The `m=225` equality branch has also been reduced sharply, but still retains exact finite dependencies. Independent mathematical review remains open.**
 
+**Current continuation:** the later [hand classification](../2026-09-11-m225-hand-classification-v1/HAND_CLASSIFICATION.md) derives all 100 equality profiles with bounded arithmetic tables, and its generated list reproduces all 211 tight-row exclusions under the [four-envelope reduction](../2026-09-11-m225-resource-envelope-v1/README.md). The earlier stages and next-step descriptions below are historical. The effective target is now review of the full supplementary Delta=16 assembly and the separate Delta=17 finite components; no new N30 reviewer edition or external acceptance is claimed.
+
 ## Target
 
 For `n=30, Delta=16`, put
@@ -165,7 +167,7 @@ This analytic hardening does **not** promote the project beyond candidate status
 
 ## Later continuation: seven scalar formulas for 57 positive rows
 
-**Historical intermediate checkpoint:** the subsequent [four-envelope reduction](../2026-09-11-m225-resource-envelope-v1/README.md) covers all 211 tight rows, including the four zero-demand rows. It replaces the final endpoint LP/Farkas models in the new supplementary route, conditional on the 100-profile completeness input and the universal bridge. The finite demand classification and explicit envelope arithmetic remain dependencies. The following paragraph preserves the earlier 57-row stage.
+**Historical intermediate checkpoint:** the subsequent [four-envelope reduction](../2026-09-11-m225-resource-envelope-v1/README.md) covers all 211 tight rows, including the four zero-demand rows. The still later [hand classification](../2026-09-11-m225-hand-classification-v1/HAND_CLASSIFICATION.md) supplies its 100-profile completeness premise with explicit bounded tables. The combined supplementary route retains the universal bridge and table/envelope review obligations. The following paragraphs preserve the earlier 57-row stage.
 
 The [recovered continuation checkpoint](../2026-09-11-m225-hall-continuation-v1/README.md) strengthens the hand selected-excess/Hall approach with the pointwise source cap `q<=#{i:s_i<=rho}` and an explicit reduction to three supplement-degree endpoints. Seven fixed integer-weight formulas exclude 57 of the 207 positive tight rows. All 57 inequalities are displayed in an exact appendix and checked by an independent standard-library program; the minimum assigned gap is `1/12`.
 

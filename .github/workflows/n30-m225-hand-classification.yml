@@ -1,0 +1,52 @@
+name: N30 m225 hand classification and endpoint replay
+
+on:
+  workflow_dispatch:
+  push:
+    paths:
+      - 'project/research/n30/2026-09-11-m225-hand-classification-v1/**'
+      - 'project/research/n30/2026-09-11-m225-resource-envelope-v1/verify_joint_certificates.py'
+      - 'project/research/n30/2026-09-11-m225-resource-envelope-v1/JOINT_CERTIFICATES.json'
+      - '.github/workflows/n30-m225-hand-classification.yml'
+
+permissions:
+  contents: read
+
+jobs:
+  exact:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 5
+    steps:
+      - uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262
+      - name: Derive profiles without the historical frontier
+        run: |
+          python3 -I -B project/research/n30/2026-09-11-m225-hand-classification-v1/verify_hand_classification.py --output N30_HAND_CLASSIFICATION_AUDIT.json --profiles-output N30_HAND_PROFILES.txt
+      - name: Feed the independently derived profiles into the four-envelope checker
+        run: |
+          python3 -I -B project/research/n30/2026-09-11-m225-resource-envelope-v1/verify_joint_certificates.py --profiles N30_HAND_PROFILES.txt --output N30_HAND_ENDPOINT_AUDIT.json
+          python3 - <<'PY'
+          import json
+          a=json.load(open('N30_HAND_CLASSIFICATION_AUDIT.json'))
+          b=json.load(open('N30_HAND_ENDPOINT_AUDIT.json'))
+          assert a['status']=='PASS' and a['total_profiles']==100
+          assert a['cap4_profiles']==70 and a['cap5_profiles']==30
+          assert not a['historical_profiles_used_for_derivation']
+          assert a['historical_comparison'] is None
+          assert b['status']=='PASS' and b['covered']==211 and not b['uncovered']
+          assert b['template_count']==4 and b['minimum_assigned_gap']==1
+          assert b['profile_sha256']==a['generated_profiles_sha256']
+          assert not b['solver_used'] and not b['floating_point_used']
+          PY
+      - name: Corroborate historical agreement after derivation
+        run: python3 -I -B project/research/n30/2026-09-11-m225-hand-classification-v1/verify_hand_classification.py --compare-historical
+      - name: Check every written classification table
+        run: python3 -I -B project/research/n30/2026-09-11-m225-hand-classification-v1/check_publication.py --tables-only
+      - uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02
+        with:
+          name: n30-hand-classification-and-endpoint
+          path: |
+            N30_HAND_CLASSIFICATION_AUDIT.json
+            N30_HAND_PROFILES.txt
+            N30_HAND_ENDPOINT_AUDIT.json
+          if-no-files-found: error
+          retention-days: 90

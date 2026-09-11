@@ -18,7 +18,7 @@ The new [scalar excess/Hall lemma](SCALAR_EXCESS_HALL_LEMMA.md) excludes **57 of
 
 The 150 rows are **not survivors of the full existing N30 proof**. They survive this new, deliberately weaker scalar test. The older complete candidate remains available and still has finite certificate dependencies.
 
-**Later successor:** the [four joint-envelope certificates](../2026-09-11-m225-resource-envelope-v1/README.md) now cover all 211 tight rows, including these 150 and the four zero-demand rows. This checkpoint and its remainder list are historical intermediate evidence. The complete 100-profile demand classification remains the principal next hand-reduction target for Delta=16; no fully hand-derived N30 proof is claimed.
+**Later successors:** the [four joint-envelope certificates](../2026-09-11-m225-resource-envelope-v1/README.md) cover all 211 tight rows, including these 150 and the four zero-demand rows. The subsequent [hand classification](../2026-09-11-m225-hand-classification-v1/HAND_CLASSIFICATION.md) derives all 100 demand profiles with bounded arithmetic tables. This checkpoint and its remainder list are historical intermediate evidence. The current target is review of the supplementary Delta=16 assembly and the separate Delta=17 finite components; no complete hand-derived N30 reviewer replacement is claimed.
 
 ## Files and replay
 

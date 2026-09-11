@@ -1,0 +1,135 @@
+{
+  "schema": "n30-hand-classification-manifest-v1",
+  "repository": "paullenz/MurtySimon742",
+  "branch": "main",
+  "baseline": "d063c25445671c2588f5a619ecbc468e9698806d",
+  "files": [
+    {
+      "path": ".github/workflows/n30-m225-hand-classification.yml",
+      "bytes": 2622,
+      "sha256": "077beddf787744bdb73173ebb4a97ceecd91af8571e982936b885fedaad8fd36",
+      "git_blob_sha": "32401b3d9f5838b1ddf3a847f1304e08879ab6a5"
+    },
+    {
+      "path": "README.md",
+      "bytes": 33781,
+      "sha256": "88bdbfc3f5bac00d1b70fd385e335c7e46a98d9bd4f7058f2db018ffe7d3beb6",
+      "git_blob_sha": "87dd9ceca467fbef407e73080747460c0da2b19d"
+    },
+    {
+      "path": "START_HERE_FOR_REVIEWERS.md",
+      "bytes": 18881,
+      "sha256": "a3315d009db82ca6688e430877a0eb7b3d08c8348ac9e1a61997047a5aa68726",
+      "git_blob_sha": "7a97cd0c85032116f201f52b266ac8077e75de61"
+    },
+    {
+      "path": "project/research/n30/2026-09-11-m225-hall-continuation-v1/README.md",
+      "bytes": 3883,
+      "sha256": "80d1e519dcfdd1ec3415d654c1118c4794ebab1a5f7f9648199e12dd110ece75",
+      "git_blob_sha": "591f9e6f920d888ebc157318ba5bddf7419c1af7"
+    },
+    {
+      "path": "project/research/n30/2026-09-11-m225-hand-classification-v1/ENDPOINT_REPLAY.json",
+      "bytes": 164629,
+      "sha256": "c10fc9aa558d36a9f5b86c6d2fd8b9ccb2417283befc6dec7243a6694bb5c049",
+      "git_blob_sha": "80866b577ad44c836125e112c0a59b5de276a522"
+    },
+    {
+      "path": "project/research/n30/2026-09-11-m225-hand-classification-v1/ENVIRONMENT.json",
+      "bytes": 343,
+      "sha256": "dd2775d4ae81c405912f9a468c6d5cf186f6d6e1d06b86330ca693a2acb488a0",
+      "git_blob_sha": "deebec016c196675a439194e0d2f38c8f3b198cb"
+    },
+    {
+      "path": "project/research/n30/2026-09-11-m225-hand-classification-v1/EXACT_AUDIT.json",
+      "bytes": 97432,
+      "sha256": "6e06a8dea7873acafe245bed6b7be019d85e7b51276727aa5393c10f8dd28428",
+      "git_blob_sha": "932d8eb23520ca3b409a16f002c62e8de5ed7f21"
+    },
+    {
+      "path": "project/research/n30/2026-09-11-m225-hand-classification-v1/EXPLORATORY_STRUCTURE.json",
+      "bytes": 1169,
+      "sha256": "9cb1ce9cc26876a3340a3420caefe0e44c4b4a0d70de522c83670b19b0dd7eb7",
+      "git_blob_sha": "c4267788f8e970235ca279d698f3d9bf34890521"
+    },
+    {
+      "path": "project/research/n30/2026-09-11-m225-hand-classification-v1/HANDOVER.md",
+      "bytes": 4598,
+      "sha256": "c289652c1586561ee5db3d06815b4c45d691959b17a4c8dab5c05d309861c160",
+      "git_blob_sha": "fba188f38946136d4a358c8d69a04aae776d043c"
+    },
+    {
+      "path": "project/research/n30/2026-09-11-m225-hand-classification-v1/HAND_CLASSIFICATION.md",
+      "bytes": 12938,
+      "sha256": "2c410a2a9c939441579d1d9ea1e899a18b79a2ed150ff112b2fb13dceae8ed70",
+      "git_blob_sha": "d223a3b96dc4d3cf3ff1bcd6e7197d58b651b414"
+    },
+    {
+      "path": "project/research/n30/2026-09-11-m225-hand-classification-v1/HAND_CLASSIFIED_PROFILES.txt",
+      "bytes": 3433,
+      "sha256": "13eeaf4a4af8836451131a65bb3f4e9cd5a6a33a473e687f20bbc069d49c4130",
+      "git_blob_sha": "0393edc3101a7b471882937ded8afcadd52c1d72"
+    },
+    {
+      "path": "project/research/n30/2026-09-11-m225-hand-classification-v1/INTERNAL_REVIEW.md",
+      "bytes": 4573,
+      "sha256": "68731776f09603b00c4dbe1da8eb8391b952e1bee095eb6f519252ec58166ee5",
+      "git_blob_sha": "c5da52b7185f11221fb0112c8e626ca3cd1c675e"
+    },
+    {
+      "path": "project/research/n30/2026-09-11-m225-hand-classification-v1/PREIMAGE_ARITHMETIC.md",
+      "bytes": 18250,
+      "sha256": "8fe4a58f3c472c1f3964f403be2a07f0e8fb574a4e3033f50d9b0f03a3950648",
+      "git_blob_sha": "819a9ff154bbddcb9b18293efc83b94b6fde4e65"
+    },
+    {
+      "path": "project/research/n30/2026-09-11-m225-hand-classification-v1/PUBLICATION_CHECKS.json",
+      "bytes": 563,
+      "sha256": "449fab3d12946cea5ab03e125faa36b505f460afe013e7abcde59f6988b589d2",
+      "git_blob_sha": "9cc4c4a785e3a147cda1d66df122c9e717cea853"
+    },
+    {
+      "path": "project/research/n30/2026-09-11-m225-hand-classification-v1/README.md",
+      "bytes": 3106,
+      "sha256": "2ab2c9387d8e31b9922b441403c8c74416abd3f96afb3f30ef62e95ad4f5ea4d",
+      "git_blob_sha": "34079dd330263d91f6ae9c7f43bddb3092b0fcd6"
+    },
+    {
+      "path": "project/research/n30/2026-09-11-m225-hand-classification-v1/check_publication.py",
+      "bytes": 5431,
+      "sha256": "ea9d77ff8562d9f92a0bc94b42507a350d3298520e99bd4540765f95ab150609",
+      "git_blob_sha": "effa3bd7bf0e038222d831d5f049ce1a0b65ab4d"
+    },
+    {
+      "path": "project/research/n30/2026-09-11-m225-hand-classification-v1/explore_structure.py",
+      "bytes": 1589,
+      "sha256": "dec062695ccf6e0d331481ac0140c68535bb336407edfefcffeffbe7b2564025",
+      "git_blob_sha": "86582c9c8d5295c82cb63bd0a95b2a03ae8821d6"
+    },
+    {
+      "path": "project/research/n30/2026-09-11-m225-hand-classification-v1/verify_hand_classification.py",
+      "bytes": 12529,
+      "sha256": "dcc88ec55941f84a1ecf989b69c0beff3fa0e164f9aa3ab509bc14dd055f7e11",
+      "git_blob_sha": "721faf140f520f7befcd6c00d917877eafde9631"
+    },
+    {
+      "path": "project/research/n30/2026-09-11-m225-resource-envelope-v1/README.md",
+      "bytes": 3545,
+      "sha256": "cac12b1aff0af16c091ab292e71e2c9ec03fc3f5ee8f5c11871c028cac79e5ea",
+      "git_blob_sha": "ef6d56435962a55dd277fa60e53803e6ba1744eb"
+    },
+    {
+      "path": "project/research/n30/2026-09-11-threshold-tail-v1/README.md",
+      "bytes": 8973,
+      "sha256": "10e15cce98d3fe1576181652cebf43fdaede3528bd2f56a69f531a7079efac2a",
+      "git_blob_sha": "648a068936278c4b05f309a7e5394965365bb35a"
+    },
+    {
+      "path": "releases/REVIEW_READY_INDEX.md",
+      "bytes": 6005,
+      "sha256": "9cff3b15688a685fac8081c53fcdfd483e3ec7061e4fd3df992ab720f2c13007",
+      "git_blob_sha": "fe771ddb06581460bf22c11fb28402f7ae7d78e9"
+    }
+  ],
+  "exclusion": "This manifest excludes its own hash. The subsequent publication receipt records the manifest hash and all remote verification results."
+}
