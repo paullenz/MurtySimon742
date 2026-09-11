@@ -63,7 +63,7 @@ That review also found a useful pointwise charging bound which removes several h
 - `n=28, Delta=15`: every `m>=203` is now a hand exclusion;
 - `n=29, Delta=16`: the later reviewer-v4 threshold-tail proof is stronger and excludes **every `m>=210` by hand**; the earlier pointwise caps remain historical corroboration;
 - `n=30, Delta=17`: every `m>=228` is now a hand exclusion;
-- `n=30, Delta=16`: every `m>=234` is now a hand exclusion.
+- `n=30, Delta=16`: the later [threshold-tail hand reduction](project/research/n30/2026-09-11-threshold-tail-v1/README.md) now excludes every `m>=226` in this degree branch; the earlier pointwise `m>=234` cap remains corroboration.
 
 Historical workflows for those ranges remain preserved as corroborating evidence only.
 
@@ -85,6 +85,7 @@ The n=29 candidate is now an especially clean place to audit the universal graph
 - [`project/reviews/n29/2026-09-11-reviewer-v4/REDTEAM_HARDENING.md`](project/reviews/n29/2026-09-11-reviewer-v4/REDTEAM_HARDENING.md) — explicit endpoint table, parameterisation and citation hardening.
 - [`project/research/general_n/2026-09-11-threshold-tail-collapse-v1/N29_DELTA16_THRESHOLD_TAIL_HAND_PROOF.md`](project/research/general_n/2026-09-11-threshold-tail-collapse-v1/N29_DELTA16_THRESHOLD_TAIL_HAND_PROOF.md)
 - [`project/reviews/n29/2026-09-11-reviewer-v3/GRAPH_TO_MODEL_BRIDGE.md`](project/reviews/n29/2026-09-11-reviewer-v3/GRAPH_TO_MODEL_BRIDGE.md) — frozen self-contained bridge, appended to the v4 PDF.
+- [Source-degree display erratum](project/reviews/cross-cutting/2026-09-11-source-degree-erratum-v1/ERRATUM.md) — restore the omitted `q_u` cross-degree in Section 5 of that frozen appendix. The resulting supplement bound and inspected models are unchanged.
 
 For `Delta=16`, reviewer-v4 uses only the exact ledger/demand inequality, residual activity, selected-incidence forcing, selected-source capacity and threshold capacity. These give `Q(s)>=16+2t`; the hand tail-deficit argument gives `Q(s)<=18`, hence `t<=1` and excludes every `m>=210` in this degree branch.
 
@@ -109,7 +110,9 @@ e(G) <= 225,
 with equality exactly K(15,15).
 ```
 
-The current edition does not use Fan's density theorem logically. For `Delta=17`, the difficult scopes close by threshold/source-count inequalities and exact Hall duals; the new analytic hardening removes every upper-range `Delta=17` scope with `m>=228` from the computational chain. For `Delta=16`, the bridge is genuinely parameterised to `(a,b)=(13,16)` and the remaining final rows are rejected by exact integer Farkas certificates; `m>=234` is now excluded analytically. The final assembly replay is green. This is still same-assistant evidence, not external validation.
+The frozen current edition does not use Fan's density theorem logically. For `Delta=17`, the difficult scopes close by threshold/source-count inequalities and exact Hall duals; analytic hardening removes every upper-range `Delta=17` scope with `m>=228` from the computational chain. For `Delta=16`, the bridge is parameterised to `(a,b)=(13,16)` and the frozen proof retains exact integer Farkas certificates. Its final assembly replay is green. This is same-assistant evidence, not external validation.
+
+The later [N30 threshold-tail research supplement](project/research/n30/2026-09-11-threshold-tail-v1/README.md) supplies a candidate hand route for `Delta=16,m>=226`, including the exact seven-profile/nine-row endpoint classification. At 225 edges, [seven scalar excess/Hall formulas](project/research/n30/2026-09-11-m225-hall-continuation-v1/README.md) now exclude 57 of 207 positive ledger-tight rows. Their validity has a hand derivation and a separate solver-free exact checker; 150 positive rows still use stronger preserved methods, four zero-demand rows retain exact Hall certificates, and the completeness of the 100-profile demand classification remains a finite input. No full hand equality proof or replacement reviewer edition is claimed.
 
 ## General 7/12 candidate
 

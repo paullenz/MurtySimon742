@@ -1,0 +1,28 @@
+name: N30 m225 scalar excess exact audit
+
+on:
+  workflow_dispatch:
+  push:
+    paths:
+      - 'project/research/n30/2026-09-11-m225-hall-continuation-v1/**'
+      - 'project/research/n30/2026-09-11-threshold-tail-v1/N30_M225_QGE18_PROFILES.txt'
+      - '.github/workflows/n30-m225-scalar-excess.yml'
+
+permissions:
+  contents: read
+
+jobs:
+  exact:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 5
+    steps:
+      - uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262
+      - name: Reconstruct frontier and verify all seven scalar certificates
+        run: |
+          python3 -I -B project/research/n30/2026-09-11-m225-hall-continuation-v1/verify_scalar_certificates.py --output N30_M225_SCALAR_EXACT_AUDIT.json
+      - uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02
+        with:
+          name: n30-m225-scalar-exact-audit
+          path: N30_M225_SCALAR_EXACT_AUDIT.json
+          if-no-files-found: error
+          retention-days: 90

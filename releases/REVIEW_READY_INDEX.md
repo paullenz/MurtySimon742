@@ -1,7 +1,9 @@
 # Review-ready proof index
 Updated 11 September 2026. This index identifies the canonical reviewer-facing paper for every current theorem-level candidate claim in the top-level project status. Historical failed or superseded development checkpoints remain preserved rather than silently rewritten.
 
-The current fixed-order PDF packages are Fan-free reviewer-v2 at `n=25,27,28,30` and **reviewer-v4 at `n=29`**. The n=28 and n=30 v2 packages remain mathematically valid but carry 11 September analytic-hardening annotations that remove several historical upper-range computations from the logical dependency chain.
+The current fixed-order PDF packages are Fan-free reviewer-v2 at `n=25,27,28,30` and **reviewer-v4 at `n=29`**. The n=28 and n=30 v2 packages remain the current candidate review surfaces, with 11 September analytic-hardening annotations that remove several historical upper-range computations from the logical dependency chain.
+
+**Current supplements:** reviewers of the frozen N29 bridge appendix should apply the [source-degree display erratum](../project/reviews/cross-cutting/2026-09-11-source-degree-erratum-v1/ERRATUM.md). For N30, the [threshold-tail hand reductions](../project/research/n30/2026-09-11-threshold-tail-v1/README.md) and [57-row scalar continuation](../project/research/n30/2026-09-11-m225-hall-continuation-v1/README.md) postdate the frozen v2 PDF. These are additive candidate research supplements; no new reviewer edition or external acceptance is claimed.
 
 | Scope | Claim | Reviewer manuscript | Verification companion | Status |
 |---|---|---|---|---|

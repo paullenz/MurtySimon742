@@ -1,0 +1,31 @@
+{
+  "Q_lambda_counts": {
+    "18,0": 64,
+    "19,0": 96,
+    "19,1": 29,
+    "20,0": 42,
+    "20,1": 18,
+    "20,2": 6,
+    "21,0": 9,
+    "21,1": 5,
+    "21,2": 2,
+    "21,3": 1
+  },
+  "conclusion": "The 100 Q>=18 demand profiles generate exactly 272 monotone residual-tail rows from at most three units of threshold/ledger slack; 61 have positive ledger slack and are analytically impossible because all their demands are positive, leaving 211 tight rows.",
+  "floating_point_used": false,
+  "historical_row_artifact_normalized_sha256": "ac02b654d672062421a67e0b07a4f1cbebbc688e83ad4723ea37af2b0542f16e",
+  "ledger_tight_rows": 211,
+  "positive_ledger_slack_rows": 61,
+  "profile_Q_counts": {
+    "18": 64,
+    "19": 29,
+    "20": 6,
+    "21": 1
+  },
+  "profiles": 100,
+  "reconstructed_historical_row_sha256": "ac02b654d672062421a67e0b07a4f1cbebbc688e83ad4723ea37af2b0542f16e",
+  "rows": 272,
+  "schema": "n30-m225-threshold-slack-reduction-v1",
+  "solver_used": false,
+  "status": "PASS"
+}

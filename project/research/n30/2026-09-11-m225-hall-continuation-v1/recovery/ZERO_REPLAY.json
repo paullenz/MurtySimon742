@@ -1,0 +1,189 @@
+{
+  "conclusion": "Ledger tightness extends d=R+s to the zero-demand labels, and all four zero-demand tight rows are exactly Farkas-rejected by the residual-budget two-neighborhood Hall core.",
+  "floating_point_used": false,
+  "rows": [
+    {
+      "certificate_rhs": -761,
+      "certificate_support": 65,
+      "equalities": 9,
+      "inequalities": 2205,
+      "metadata": {
+        "attrs": 74,
+        "domains": 1770,
+        "labels": 333
+      },
+      "rho": [
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        2,
+        3,
+        3,
+        3,
+        3,
+        3,
+        3,
+        3,
+        3
+      ],
+      "s": [
+        0,
+        2,
+        3,
+        3,
+        3,
+        3,
+        3,
+        3,
+        3,
+        3,
+        3,
+        3,
+        3
+      ],
+      "variables": 422
+    },
+    {
+      "certificate_rhs": -998782,
+      "certificate_support": 56,
+      "equalities": 7,
+      "inequalities": 1591,
+      "metadata": {
+        "attrs": 64,
+        "domains": 1276,
+        "labels": 228
+      },
+      "rho": [
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        3,
+        3,
+        3,
+        3,
+        3,
+        3,
+        3,
+        3,
+        3
+      ],
+      "s": [
+        0,
+        3,
+        3,
+        3,
+        3,
+        3,
+        3,
+        3,
+        3,
+        3,
+        3,
+        3,
+        3
+      ],
+      "variables": 302
+    },
+    {
+      "certificate_rhs": -450,
+      "certificate_support": 58,
+      "equalities": 9,
+      "inequalities": 2198,
+      "metadata": {
+        "attrs": 79,
+        "domains": 1785,
+        "labels": 304
+      },
+      "rho": [
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        3,
+        4,
+        4,
+        4,
+        4,
+        4,
+        4,
+        4,
+        4,
+        4
+      ],
+      "s": [
+        0,
+        3,
+        4,
+        4,
+        4,
+        4,
+        4,
+        4,
+        4,
+        4,
+        4,
+        4,
+        4
+      ],
+      "variables": 400
+    },
+    {
+      "certificate_rhs": -997665,
+      "certificate_support": 57,
+      "equalities": 7,
+      "inequalities": 1518,
+      "metadata": {
+        "attrs": 67,
+        "domains": 1213,
+        "labels": 214
+      },
+      "rho": [
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        4,
+        4,
+        4,
+        4,
+        4,
+        4,
+        4,
+        4,
+        4,
+        4
+      ],
+      "s": [
+        0,
+        4,
+        4,
+        4,
+        4,
+        4,
+        4,
+        4,
+        4,
+        4,
+        4,
+        4,
+        4
+      ],
+      "variables": 292
+    }
+  ],
+  "schema": "n30-m225-zero-demand-r-core-exact-v1",
+  "solver_used": false,
+  "status": "PASS"
+}
