@@ -1,0 +1,27 @@
+{
+  "schema": "n29-reviewer-v3-manifest",
+  "date": "2026-09-11",
+  "status": "candidate; independent review open",
+  "files": {
+    "N29_Reviewer_Manuscript_v3.md": {
+      "sha256": "6db6289c207cfd3bab8300a5735f11f1f8b6a0594c82d32937e0f6fc0432d386",
+      "bytes": 28919
+    },
+    "N29_Reviewer_Manuscript_v3.pdf": {
+      "sha256": "146add7d7cf919d9ef87eb8f9893a95c0710f71a32da9e84a4dd6ee7e99dec5e",
+      "bytes": 88657
+    },
+    "N29_Verification_Companion_v3.md": {
+      "sha256": "da9baca6a374f3537ed259479c1eb95c8fa82a3bf98b525e815989397e6bea0e",
+      "bytes": 9923
+    },
+    "N29_Verification_Companion_v3.pdf": {
+      "sha256": "7d0b997095e1c12ca2f0afb92fc31d66bf0dc4f82c4d6469cd71a735c3917ba1",
+      "bytes": 49481
+    },
+    "README.md": {
+      "sha256": "2b0e352b2a2696505c3538fa5cc8cd3b6529ede989f6d576b38a0a9c21a4af2c",
+      "bytes": 911
+    }
+  }
+}

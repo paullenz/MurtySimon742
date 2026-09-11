@@ -1,0 +1,951 @@
+---
+title: "The Murty-Simon bound at order 29"
+subtitle: "Reviewer-v3 computer-assisted candidate proof"
+author: "Paul Lenz"
+date: "11 September 2026"
+geometry: margin=27mm
+fontsize: 11pt
+header-includes:
+  - \usepackage{amsmath,amssymb,mathtools,booktabs,microtype}
+  - \setlength{\emergencystretch}{2em}
+---
+# Murty–Simon at n=29: reviewer-v3 candidate proof
+
+11 September 2026. Research directed by Paul Lenz; mathematical development, implementation and internal checking by ChatGPT/Geeps. Hardened after a blind external-assistant red-team.
+
+**Status: serious candidate proof; independent mathematical review, external computational reproduction and novelty assessment remain OPEN.** This edition reduces the computational dependency surface relative to the 9 September Fan-free v2 proof. It uses the minimal trusted Delta=16 kernel and new hand exclusions for the high Delta=16 upper range.
+
+Historical editions remain preserved unchanged.
+
+## 1. Statement
+
+Let G be a simple diameter-two edge-critical graph on 29 vertices. The candidate statement is
+
+\[
+e(G)\le210=\left\lfloor\frac{29^2}{4}\right\rfloor,
+\]
+
+with equality if and only if
+
+\[
+G\cong K_{14,15}.
+\]
+
+A bipartite graph of diameter two is complete bipartite, so the bipartite case is immediate. Hence only the non-bipartite dense case needs analysis.
+
+The published theorem of Dailly, Foucaud and Hansberg gives at most `floor(29^2/4)-2=208` edges for a non-bipartite diameter-two-critical graph with a dominating edge, apart from their order-six exception. Thus the dense cases below have no dominating edge.
+
+A universal vertex forces a star and is therefore sparse.
+
+## 2. Delta=15 witness argument and equality
+
+A **direct witness** is an edge uv whose endpoints have no common neighbour. A **two-step witness** is a nonedge uv whose endpoints have exactly one common neighbour. Every critical edge is covered by one such witness: deleting the edge produces a pair whose every path of length at most two used that edge.
+
+A direct witness covers one edge; a two-step witness covers at most the two edges of its unique length-two path.
+
+Because there is no dominating edge, every witness pair uv satisfies
+
+\[
+d(u)+d(v)\le28. \tag{2.1}
+\]
+
+Assume `Delta=15`. Put
+
+\[
+\varepsilon_x=15-d(x),
+\qquad L=\{x:\varepsilon_x\ge2\},
+\qquad O=\{x:\varepsilon_x=1\}.
+\]
+
+Let `h=|L|`, `o=|O|`, and
+
+\[
+T=29\cdot15-2e(G).
+\]
+
+Every witness has deficit sum at least two, so
+
+\[
+2h+o\le T. \tag{2.2}
+\]
+
+Count all edges incident with L directly. An edge entirely outside L is witnessed either by an O-O witness, of capacity at most two, or by a missing L-X pair, of capacity at most one. This gives
+
+\[
+e(G)\le \binom h2+h(29-h)+o(o-1). \tag{2.3}
+\]
+
+No injective map from graph edges to witness pairs is assumed; only witness capacities are used.
+
+At `e(G)=211`, `T=13`. The maximum right sides of (2.3) for `h=0,...,6` are
+
+```text
+156, 138, 127, 123, 126, 136, 153,
+```
+
+all below 211. Thus Delta=15 is impossible at 211 and therefore at every larger edge count as the deficit budget only shrinks.
+
+At `e(G)=210`, `T=15`. The corresponding maxima are
+
+```text
+210, 184, 165, 153, 148, 150, 159, 175.
+```
+
+Equality forces `h=0,o=15`. All witnesses then lie inside O. Separating direct O-edges from two-step O-nonedges gives
+
+\[
+210\le e(G[O])+2\left(\binom{15}{2}-e(G[O])\right)
+=210-e(G[O]),
+\]
+
+so O is independent. Its 15 vertices each have degree 14 and therefore meet all 14 vertices outside O. Those 210 cross edges exhaust the graph. Hence
+
+\[
+G=K_{15,14}.
+\]
+
+## 3. Self-contained Delta=16 bridge
+
+For `Delta=16`, put `H=complement(G)`, choose a minimum-degree vertex v, and set
+
+```text
+A=N_H(v),          |A|=a=12,
+B=V(H)\N_H[v],     |B|=b=16.
+```
+
+For every missing unordered B-pair choose exactly one cross quasi-edge representative `ui->w`, with exception w in B. Call these selected and all other A-B edges residual.
+
+The complete graph-to-model proof is now isolated self-contained in
+
+`project/reviews/n29/2026-09-11-reviewer-v3/GRAPH_TO_MODEL_BRIDGE.md`.
+
+Its necessary consequences include:
+
+```text
+e(F)=r+t,
+S>=r+2t,
+rho_u>=1 for every B-source when t>0,
+s_i<=rho_u at every selected incidence,
+r-b>=sum_i s_i(s_i-1)/(12-s_i),
+sum_i s_i(13-2s_i)/(12-s_i)>=16+2t,
+2W_h<=z_h^2-z_h+h(h+1),
+delta(C)>=1,
+d_i<=10,
+r<=60-t,
+```
+
+together with the selected-edge, supplement and endpoint-load constraints needed by the late relaxation.
+
+This v3 bridge expands the threshold-capacity proof in full rather than leaving it compressed in the main reviewer surface.
+
+## 4. Delta=16 at m=210 and 211: minimal trusted kernel
+
+The preferred proof-critical route is the minimal trusted kernel from the restarted hostile audit. It deliberately does **not** depend on the historical projected screen, joint propagator, old shared/typed/endpoint LP stack, or the old pair-capacity support formula.
+
+Its sequence is:
+
+```text
+graph-to-model bridge
+ -> exact charging demand domain
+ -> exact threshold/source-count pruning
+ -> exact source-capacity Hall dual pruning
+ -> complete sorted residual-row enumeration
+ -> monotone supplement-cap refinement
+ -> corrected cumulative-threshold/source-q-flow relaxation
+ -> exact integer Farkas verification.
+```
+
+### 4.1 m=211, t=3
+
+The minimal preparation retains 72 demand profiles. Complete residual-row enumeration and necessary Hall/refinement cuts leave 126 rows. Every one of those 126 rows has an exact integer Farkas contradiction in the corrected late model.
+
+```text
+retained demands:   72
+residual rows:     126
+exact rejections: 126
+final survivors:    0
+```
+
+### 4.2 m=210, t=2
+
+The same independently specified kernel gives
+
+```text
+retained demands:  367
+residual rows:     1467
+exact rejections: 1467
+final survivors:      0
+```
+
+The late model is the corrected v2 cumulative-threshold/source-q-flow relaxation. The historical v1 model contained a real label-group multiplicity normalization bug and is explicitly quarantined as invalid proof evidence.
+
+Floating-point LP output is never accepted as a proof event. It is used only to propose multipliers. The checker accepts a Farkas contradiction only after exact integer recombination with nonnegative multipliers on inequalities, signed multipliers on equalities, nonnegative resulting variable coefficients, and a strictly negative combined right-hand side.
+
+Therefore Delta=16 is impossible at both 211 and 210 edges.
+
+## 5. Delta=16 upper range without Fan
+
+For any positive-surplus Delta=16 scope the same bridge applies with
+
+```text
+t=m-208.
+```
+
+### 5.1 m=212, t=4
+
+The exact trusted-kernel extension gives
+
+```text
+charging-feasible demand profiles: 2032
+threshold rejects:                1706
+source-count rejects:              258
+exact early Hall-dual rejects:      65
+open demand profiles:                3
+residual numerical states:       19630
+row survivors:                       2
+exact late Farkas rejections:         2
+final survivors:                      0
+```
+
+Thus m=212 is excluded.
+
+### 5.2 m=213 and 214
+
+At `m=213` (`t=5`), the complete charging domain has 586 profiles:
+
+```text
+576 threshold rejects,
+  7 source-count rejects,
+  3 exact Hall-dual rejects,
+  0 survivors.
+```
+
+At `m=214` (`t=6`), all 79 charging-feasible profiles are threshold-rejected by exact integer arithmetic.
+
+Thus both scopes are excluded before residual-row enumeration.
+
+### 5.3 m=215 by hand
+
+For every integer `0<=s<=11`,
+
+\[
+\frac{s(13-2s)}{12-s}\le\frac52, \tag{5.1}
+\]
+
+because
+
+\[
+\frac52-\frac{s(13-2s)}{12-s}
+=\frac{(s-4)(4s-15)}{2(12-s)}\ge0. \tag{5.2}
+\]
+
+Equality occurs only at `s=4`.
+
+At `m=215`, `t=7`, the bridge requires the sum of the twelve terms in (5.1) to be at least 30. Since 30 is also their maximum possible total, all twelve demands must equal four. Thus `S=48`.
+
+The charging lower bound gives
+
+\[
+r-16\ge 12\frac{4\cdot3}{8}=18,
+\]
+
+so `r>=34`. But `S>=r+14` gives `r<=34`. Therefore `r=34`.
+
+Let `z_4` be the number of residual rows of degree at least four. Residual activity gives
+
+\[
+34=r\ge16+3z_4,
+\]
+
+so `z_4<=6`. Threshold capacity gives
+
+\[
+96=2W_4\le z_4^2-z_4+20\le50,
+\]
+
+contradiction. Hence m=215 is impossible.
+
+### 5.4 m>=216 by hand
+
+Summing (5.1) over twelve labels gives a universal upper bound 30. The bridge requires
+
+\[
+16+2t\le30,
+\]
+
+so `t<=7`, i.e.
+
+\[
+m\le215.
+\]
+
+Therefore every Delta=16 scope with `m>=216` is excluded analytically. The historical generic outer scan over `m=216..232` is retained only as corroborating evidence and is no longer a logical dependency.
+
+## 6. Delta=17 by a pointwise charging bound
+
+For Delta=17, `a=11`. The bridge requires
+
+\[
+17+2t\le\sum_{i=1}^{11}\frac{s_i(12-2s_i)}{11-s_i}.
+\]
+
+For every integer `0<=s<=10`,
+
+\[
+\frac{s(12-2s)}{11-s}\le\frac{16}{7},
+\]
+
+because
+
+\[
+\frac{16}{7}-\frac{s(12-2s)}{11-s}
+=\frac{2(s-4)(7s-22)}{7(11-s)}\ge0.
+\]
+
+Thus the right side is at most `176/7<29`. At 210 edges the required left side is already 29, and it only increases with m. Hence Delta=17 is impossible at every edge count relevant here.
+
+## 7. Delta=18 through 27 by residual h-index
+
+Let h be the largest integer for which at least h residual rows have degree at least h. A label of demand `s_i` needs `s_i` distinct selected sources with residual degree at least `s_i`, so `s_i<=h` and hence `S<=ah`.
+
+Residual activity gives
+
+\[
+r\ge h^2+(b-h)=b+h(h-1).
+\]
+
+Combining with `S>=r+2t`,
+
+\[
+b+2t\le(a+1)h-h^2
+\le\left\lfloor\frac{(a+1)^2}{4}\right\rfloor
+=\left\lfloor\frac{(29-b)^2}{4}\right\rfloor. \tag{7.1}
+\]
+
+Every `b=18,...,27` violates (7.1) already at 210 edges, and increasing m only strengthens the contradiction. Delta=28 is the universal-vertex/star case.
+
+## 8. Fan-free assembly
+
+We can now exclude every `m>=211` without Fan's theorem.
+
+For `m>=212`:
+
+- `Delta<=14` is impossible by degree sum;
+- `Delta=15` is excluded by the witness-deficit argument, monotone stronger above 211;
+- `Delta=16` is excluded by exact finite arithmetic at `m=212,213,214`, by the hand threshold contradiction at `m=215`, and by the pointwise `5/2` cap for every `m>=216`;
+- `Delta=17` is excluded by Section 6;
+- `Delta=18,...,27` are excluded by Section 7;
+- `Delta=28` gives a star.
+
+At `m=211`, the same degree split leaves only Delta=16 after the hand cases, and the minimal trusted kernel excludes it.
+
+Therefore
+
+\[
+e(G)\le210.
+\]
+
+At `m=210`, all non-Delta=15 cases are excluded by the minimal kernel or the hand degree arguments. Section 2 forces the unique equality graph
+
+\[
+K_{14,15}.
+\]
+
+This establishes the stated **candidate** order-29 result, subject to the review boundaries below.
+
+## 9. Independent hostile evidence
+
+A blind external-assistant red-team supplied on 11 September independently attacked the graph-to-model bridge, residual activity, threshold capacity, isolated-C, corrected LP normalization, exact Farkas semantics and the hand assembly, and reported no fatal defect.
+
+It also independently obtained the complete charging-domain census
+
+```text
+t=2: 9251
+t=3: 4867
+t=4: 2032
+t=5:  586
+t=6:   79
+t=7:    1
+t=8:    0,
+```
+
+which the project independently regenerated again.
+
+The blind reviewer also reported an exhaustive NetworkX graph-atlas bridge test through order seven. The project independently reproduced it:
+
+```text
+21 unlabeled diameter-two-edge-critical isomorphism types,
+50 maximum-degree rooted cases,
+58 admissible selection configurations,
+0 bridge failures.
+```
+
+These small examples have only `t in {-3,-2,-1,0}`, so they do not independently test positive-surplus residual activity or charging. They are evidence for the base quasi-edge/selected/residual bridge only.
+
+The preserved follow-up is
+
+`project/reviews/n29/2026-09-11-blind-external-ai-redteam-v1/FOLLOWUP.md`.
+
+## 10. Trust boundary
+
+The current highest-value independent review targets are:
+
+1. complement/quasi-edge construction and the one-representative-per-unordered-pair convention;
+2. residual activity for `t>0`;
+3. selected-source demand `s_i<=rho_u`;
+4. threshold capacity;
+5. isolated-C;
+6. the actual-graph-to-averaged-variable embedding of the corrected late model;
+7. exact Farkas checker semantics;
+8. independent reproduction of the finite frontiers;
+9. the cited Dailly-Foucaud-Hansberg dominating-edge theorem.
+
+A counterexample to any universal bridge lemma overrides every green computation downstream. No unrestricted Murty–Simon theorem, order above the proved fixed-order frontier, external endorsement or novelty determination is asserted here.
+
+## Key project dependencies
+
+- Self-contained v3 bridge: `project/reviews/n29/2026-09-11-reviewer-v3/GRAPH_TO_MODEL_BRIDGE.md`.
+- Minimal-kernel report: `project/reviews/n29/2026-09-08-redteam-restart-v1/MINIMAL_KERNEL_REPORT.json`.
+- Blind external red-team follow-up: `project/reviews/n29/2026-09-11-blind-external-ai-redteam-v1/FOLLOWUP.md`.
+- Cross-order pointwise caps: `project/research/fan-free-fixed-orders/2026-09-11-pointwise-analytic-caps-v1/POINTWISE_CAPS.md`.
+- Historical Fan-free v2 proof: `project/reviews/n29/2026-09-09-fan-free-v2/PROOF.md`.
+
+\newpage
+
+# Appendix A. Self-contained Delta=16 graph-to-model bridge
+
+
+11 September 2026. Reviewer-v3 bridge. Research directed by Paul Lenz; mathematical development and checking by ChatGPT/Geeps. Hardened after a blind external-assistant red-team.
+
+**Status: candidate mathematics; independent expert review remains open.** This version is deliberately self-contained at the main trust boundary. In particular, the threshold-capacity argument is proved here rather than merely cited from a companion note.
+
+## 1. Setup
+
+Let `G` be a simple diameter-two edge-critical graph on 29 vertices with `Delta(G)=16`. Put `H=complement(G)`. Choose a minimum-degree vertex `v` of `H`. Then
+
+```text
+d_H(v)=29-1-16=12.
+```
+
+Set
+
+```text
+A=N_H(v),             |A|=a=12,
+B=V(H)\N_H[v],        |B|=b=16.
+```
+
+Let `C=H[A]`, and let `F` be the complement of `C` on A. Write `d_i=d_F(i)`.
+
+For an edge count `m=e(G)`, define
+
+```text
+t=m-b(29-b)=m-208.
+```
+
+The proof-critical dense scopes are `t=2,3,4` for `m=210,211,212`; the upper-range hand arguments below also use larger t.
+
+## 2. Quasi-edges and one representative per missing unordered B-pair
+
+Take a missing pair `uw` of `H[B]`. Adding `uw` to H corresponds to deleting the critical edge `uw` from G. In `H+uw` a new adjacent total-dominating pair appears.
+
+That pair must use u or w because no other adjacency changed. It cannot be `{u,w}` because both still miss v. Hence, after interchanging u,w if necessary, there is an existing edge `ui` of H such that
+
+```text
+N_H(u) union N_H(i) = V(H)\{w}.
+```
+
+The auxiliary i lies in A because the pair must dominate v. Write
+
+```text
+ui -> w.
+```
+
+For every missing **unordered** pair `{u,w}` in `H[B]`, choose exactly one such cross-edge, after orienting the pair if necessary. Call it **selected**. Every other existing A-B edge is **residual**.
+
+A selected edge determines its B-source u and its unique exception w. Therefore it recovers its indexing missing unordered B-pair. Consequently:
+
+1. two different missing unordered B-pairs cannot choose the same selected cross-edge;
+2. opposite orientations of one unordered pair cannot both be designated selected;
+3. at a fixed source, selected labels and supplements are distinct.
+
+For `u in B`, define
+
+```text
+rho_u = residual degree into A,
+q_u   = selected outdegree,
+p_u   = selected indegree as supplement/exception.
+```
+
+For `i in A`, define
+
+```text
+R_i = residual degree into B,
+x_i = selected degree into B.
+```
+
+Let
+
+```text
+r=sum_u rho_u=sum_i R_i.
+```
+
+## 3. Exact ledger and label demand
+
+Selected cross-edges and existing edges of `H[B]` partition the unordered pairs of B, so
+
+```text
+#selected + e(H[B]) = C(b,2).
+```
+
+Direct edge counting gives
+
+```text
+e(F)=r+t,                                  (3.1)
+sum_i d_i=2(r+t).                          (3.2)
+```
+
+Minimum degree in H gives `d_H(i)>=a` for every `i in A`. Since
+
+```text
+d_H(i)=1+(a-1-d_i)+R_i+x_i,
+```
+
+we have
+
+```text
+x_i>=d_i-R_i.
+```
+
+Define
+
+```text
+s_i=max(0,d_i-R_i),
+S=sum_i s_i.
+```
+
+Then
+
+```text
+x_i>=s_i.                                  (3.3)
+```
+
+Also
+
+```text
+S >= sum_i(d_i-R_i)
+  = 2(r+t)-r
+  = r+2t.                                  (3.4)
+```
+
+Thus a label of demand `s_i` genuinely requires at least `s_i` distinct selected source incidences.
+
+## 4. Pointwise forcing from a selected edge
+
+Fix a selected edge `ui->w`.
+
+### 4.1 `d_i<=rho_u+R_i`
+
+Let j be an F-neighbour of i, so `ij` is absent from `H[A]`. Since `{u,i}` must dominate j, `uj` is an H-edge.
+
+If `uj` is residual, charge j to a residual source slot at u. Otherwise `uj` is selected, say `uj->z`. Distinct selected labels at u have distinct supplements, so `z!=w`. Since `ui->w` must dominate z and `uz` is missing in `H[B]`, `iz` is an H-edge.
+
+Moreover `iz` cannot be selected: i and z both miss the A-vertex j (`ij` is an F-edge and j is the unique exception of `uj->z`). A selected A-B edge has its unique exception in B and therefore must dominate every A-vertex. Hence `iz` is residual.
+
+Distinct selected j give distinct supplements z, so the non-residual `uj` cases inject into distinct residual edges at label i. Therefore
+
+```text
+d_i<=rho_u+R_i.                            (4.1)
+```
+
+In particular, at every selected incidence,
+
+```text
+s_i<=rho_u.                                (4.2)
+```
+
+### 4.2 `d_i<=rho_u+rho_w`
+
+For the same F-neighbour j, if `uj` is residual charge it to rho_u. Otherwise write `uj->z`. Since `{u,j}` must dominate w and `uw` is missing, `jw` is an H-edge.
+
+The edge `jw` cannot be selected from source w: j and w both miss the A-vertex i (`ij` is an F-edge and `iw` is missing because w is the exception of `ui->w`). Hence `jw` is residual. Distinct j give distinct residual edges at w. Therefore
+
+```text
+d_i<=rho_u+rho_w.                          (4.3)
+```
+
+### 4.3 Source degree and supplement forcing
+
+Every F-neighbour j of i is a cross-neighbour of u. Source u has exactly `rho_u+q_u` cross-neighbours, one of which is i, so
+
+```text
+d_i<=rho_u+q_u-1.                         (4.4)
+```
+
+For every other selected `uj->z` at u, the pair `{u,j}` must dominate w. Since `uw` is missing, `jw` is an H-edge. The `q_u-1` other selected labels are distinct, so w has at least `q_u-1` cross-neighbours among them. These are partitioned into residual and selected edges from w, hence
+
+```text
+rho_w+q_w>=q_u-1.                         (4.5)
+```
+
+## 5. Missing degree in B and endpoint load
+
+Every missing unordered B-pair incident with u is oriented exactly once, either outward from u or inward to u. Hence
+
+```text
+q_u+p_u = missing degree of u in H[B].    (5.1)
+```
+
+Since
+
+```text
+d_H(u)=rho_u+(b-1)-(q_u+p_u)>=a,
+```
+
+we obtain
+
+```text
+p_u<=rho_u+(b-a-1)=rho_u+3.               (5.2)
+```
+
+Also
+
+```text
+q_u+p_u<=15,
+q_u+rho_u<=12.                            (5.3)
+```
+
+For selected `ui->w`, label i is adjacent in B to:
+
+- u itself;
+- the `q_u-1` supplements of the other outward selected pairs at u;
+- the `p_u` sources of selected pairs oriented into u.
+
+These vertices are distinct. An incoming source cannot equal an outgoing supplement because that would orient the same missing unordered B-pair both ways. Therefore
+
+```text
+R_i+x_i>=q_u+p_u.                         (5.4)
+```
+
+## 6. Residual activity for positive surplus
+
+Assume `t>0`. We prove
+
+```text
+rho_u>=1 for every u in B.                (6.1)
+```
+
+Suppose instead `rho_u=0`. Put
+
+```text
+U=N_A(u),
+T=A\U.
+```
+
+Every cross-edge from u is then selected. There is no F-edge between U and T: if `i in U`, `j in T` and `ij in F`, the selected edge at `ui` would have to dominate j, forcing `uj in H`, contradiction.
+
+Now count forced residual edges.
+
+For every F-edge `ij` inside U, the selected edges from u to i and j have distinct supplements. Cross-domination forces two residual edges, one at each A-endpoint. They are residual because each forced edge has endpoints that jointly miss an A-vertex. The ordered F-edge endpoints inject into these residual cross-edges, giving `2e(F[U])` distinct residual edges with A-endpoint in U.
+
+Now take an F-edge `ij` inside T. Adding ij to H creates a quasi-edge with exception i or j. Its auxiliary cannot be v, because the pair with v already dominates the opposite A-endpoint; it cannot be u because u is adjacent to neither endpoint. If its auxiliary z lay in A, domination of u would force `z in U`. But a quasi-edge with exception in T would then require an absent U-T pair, contradicting `F(U,T)=empty`. Hence the auxiliary lies in B.
+
+That cross quasi-edge has its unique exception in A, so it cannot be one of the selected representatives whose exception lies in B; it is residual. Its A-endpoint together with the unique exception recovers the original F-edge, so distinct F[T]-edges give distinct residual cross-edges. Their A-endpoints lie in T and are therefore disjoint from the U-family.
+
+Thus
+
+```text
+r>=2e(F[U])+e(F[T])
+ >=e(F[U])+e(F[T])
+ =e(F)
+ =r+t,
+```
+
+contradicting `t>0`. Therefore (6.1) holds, and in particular
+
+```text
+r>=b=16.                                  (6.2)
+```
+
+## 7. Charging inequality
+
+For each label i choose exactly `s_i` of its actual selected incidences, possible by (3.3). By (4.2), a chosen source u for label i satisfies
+
+```text
+rho_u>=s_i.
+```
+
+Also `q_u<=a-rho_u`. Charge each chosen incidence from source u by
+
+```text
+(rho_u-1)/(a-rho_u).
+```
+
+A chosen source has `q_u>=1`, so `rho_u<=a-1` and the denominator is positive. Source u participates in at most `q_u<=a-rho_u` chosen incidences, so its total charge is at most `rho_u-1`. Summing over all B-sources gives total charge at most
+
+```text
+r-b.
+```
+
+The charge function is increasing in integer rho on `1<=rho<a`. A label with demand `s_i` therefore receives at least
+
+```text
+s_i(s_i-1)/(a-s_i).
+```
+
+Hence
+
+```text
+r-b >= sum_i s_i(s_i-1)/(a-s_i).         (7.1)
+```
+
+Combining (7.1) with `S>=r+2t` gives
+
+```text
+sum_i s_i(a+1-2s_i)/(a-s_i) >= b+2t.     (7.2)
+```
+
+At `a=12,b=16`,
+
+```text
+sum_i s_i(13-2s_i)/(12-s_i) >= 16+2t.    (7.3)
+```
+
+## 8. Threshold-capacity lemma — complete proof
+
+Fix an integer `h>=1` and define
+
+```text
+I_h={i:s_i>=h},
+W_h=sum_{i in I_h}s_i,
+Z_h={u:rho_u>=h},
+z_h=|Z_h|.
+```
+
+Choose `s_i` actual selected incidences for each `i in I_h`. By (4.2), every chosen source belongs to `Z_h`.
+
+Call a selected incidence **heavy** if its label lies in `I_h`. Let `ell_u` be the number of actual heavy selected incidences from source u. Then
+
+```text
+W_h<=sum_{u in Z_h} ell_u.                (8.1)
+```
+
+Let
+
+```text
+J={u in Z_h:ell_u>h},
+j=|J|.
+```
+
+Fix `u in J` and a heavy selected edge `ui->w`. For each other heavy selected label k at u, `{u,k}` must dominate w; because `uw` is missing, `kw` is an H-edge. There are `ell_u-1>=h` such distinct heavy labels k.
+
+We claim `w in Z_h`. If none of those forced edges `kw` is selected from source w, then all are residual and `rho_w>=ell_u-1>=h`. If at least one forced edge `kw` is selected from w, then its label k is heavy, so `s_k>=h`; applying (4.2) to that selected incidence gives `rho_w>=s_k>=h`. Thus every supplement of a heavy arc from J lies in `Z_h`.
+
+Therefore every heavy selected arc contributed by a source in J uses an unordered B-pair entirely inside `Z_h` and incident with J. Because selection is injective on unordered B-pairs, the number of such arcs is at most
+
+```text
+j(z_h-j)+C(j,2)=j*z_h-j(j+1)/2.          (8.2)
+```
+
+Every source in `Z_h\J` contributes at most h heavy arcs by definition of J. Combining with (8.1),
+
+```text
+W_h <= (z_h-j)h + j*z_h - j(j+1)/2.      (8.3)
+```
+
+If `W_h>0`, some label has demand at least h and therefore needs at least h distinct sources in `Z_h`; so `z_h>=h`. Put
+
+```text
+q=z_h-h.
+```
+
+Now
+
+```text
+[h*z_h+C(q,2)] - RHS(8.3)
+  = (q-j)(q-j-1)/2
+  >=0,                                    (8.4)
+```
+
+because `q-j` is an integer and the product of two consecutive integers is nonnegative. Thus
+
+```text
+W_h<=h*z_h+C(z_h-h,2),
+```
+
+or equivalently
+
+```text
+2W_h<=z_h^2-z_h+h(h+1).                  (8.5)
+```
+
+This is a necessary capacity bound only; no sufficiency is claimed.
+
+Two useful consequences are immediate. If `H0=max_i s_i>0`, then
+
+```text
+z_H0>=H0.                                 (8.6)
+```
+
+Also, residual activity gives every B-source baseline degree at least one, so for `h>=2`,
+
+```text
+r>=b+z_h(h-1).                            (8.7)
+```
+
+Hence any upper bound `r<=rmax` implies
+
+```text
+z_h<=floor((rmax-b)/(h-1)).               (8.8)
+```
+
+## 9. Excluding an isolated vertex of C
+
+Suppose x is isolated in `C=H[A]`. Put `X=A\{x}`.
+
+Because x is C-isolated,
+
+```text
+e(C)=e(C[X]).
+```
+
+From the exact ledger `e(C)+r=C(a,2)-t`, the number `P0` of missing H-edges inside X is
+
+```text
+P0=C(a-1,2)-e(C[X])
+   =r-(a-1-t).                             (9.1)
+```
+
+Take a missing pair ij inside X. Adding ij to H creates a new adjacent total-dominating pair using i or j. It cannot be `{i,j}` because both miss x. Suppose it is `iz->j`. The auxiliary z cannot be v: v already neighbours j, so adding ij does not newly make `{i,v}` total dominating. It cannot lie in A: every A-vertex other than x misses x or, if z=x, `ix` is not an edge. Hence `z in B`.
+
+Thus every missing X-pair gives a cross quasi-edge with auxiliary in B and exception in A. Such an edge cannot be selected, because selected representatives have their unique exception in B. Hence it is residual. Distinct missing X-pairs give distinct residual cross-edges because a cross quasi-edge has a unique exception. Let P be this family. Then
+
+```text
+|P|=P0=r-(a-1-t).                         (9.2)
+```
+
+Let Z be the set of B-endpoints used by P. For `z in Z`, choose `iz->j` from P. The pair `{i,z}` must dominate x, and i misses x, so `xz` is an H-edge. This edge is residual: if xz were selected for a missing B-pair, its selected pair would have to dominate every A-vertex, but `iz->j` implies z misses j while x is isolated in C and also misses j. Thus xz is residual. It lies outside P because its A-endpoint is x.
+
+For each `z in B\Z`, residual activity supplies a residual edge incident with z; it is outside P because no edge of P has B-endpoint z. Therefore every one of the b vertices of B supplies a distinct residual edge outside P. Hence
+
+```text
+r>=|P|+b.
+```
+
+Using (9.2),
+
+```text
+b<=a-1-t.                                 (9.3)
+```
+
+At `a=12,b=16`, (9.3) is impossible for every positive t of interest. Therefore
+
+```text
+delta(C)>=1.                              (9.4)
+```
+
+Consequently
+
+```text
+d_i<=10,
+e(C)>=6,
+r<=C(12,2)-t-6=60-t.                    (9.5)
+```
+
+## 10. The exact bridge passed to the finite kernel
+
+Every actual n=29, Delta=16 graph in a positive-surplus scope induces data satisfying:
+
+```text
+a=12, b=16;
+1<=rho_u<=12;
+0<=d_i<=10;
+r=sum rho=sum R;
+e(F)=r+t;
+s_i=max(0,d_i-R_i);
+S>=r+2t;
+q_u+rho_u<=12;
+p_u<=rho_u+3;
+q_u+p_u<=15;
+for selected ui->w:
+  d_i<=rho_u+R_i,
+  d_i<=rho_u+rho_w,
+  d_i<=rho_u+q_u-1,
+  rho_w+q_w>=q_u-1,
+  R_i+x_i>=q_u+p_u;
+charging inequality (7.3);
+threshold-capacity inequalities (8.5)-(8.8);
+r<=60-t.
+```
+
+The finite kernel deliberately enumerates a **superset** of graph-realizable arithmetic states satisfying necessary consequences of this bridge. Eliminating the relaxation is therefore safe provided every pruning rule is necessary and every terminal contradiction is checked exactly.
+
+## 11. Hand cap for the upper range
+
+For every integer `0<=s<=11`,
+
+```text
+s(13-2s)/(12-s)<=5/2,                    (11.1)
+```
+
+because
+
+```text
+5/2-s(13-2s)/(12-s)
+ =(s-4)(4s-15)/(2(12-s))>=0.             (11.2)
+```
+
+Equality occurs only at `s=4`. With twelve labels, (7.3) gives
+
+```text
+16+2t<=30,
+```
+
+so
+
+```text
+t<=7,
+m<=215.                                  (11.3)
+```
+
+Thus no Delta=16 graph exists at `m>=216`.
+
+At `m=215`, `t=7`, equality in (11.3) forces every demand to equal four. Hence `S=48`. Equation (7.1) gives
+
+```text
+r>=16+12*(4*3/8)=34,
+```
+
+while `S>=r+14` gives `r<=34`, so `r=34`. From residual activity,
+
+```text
+34>=16+3z_4,
+```
+
+hence `z_4<=6`. But threshold capacity gives
+
+```text
+96=2W_4<=z_4^2-z_4+20<=50,
+```
+
+contradiction. Therefore `m=215` is also excluded by hand.
+
+The only upper-range Delta=16 scopes above 211 that still require finite arithmetic are consequently
+
+```text
+m=212,213,214.
+```
+
+## 12. Review priorities
+
+The highest-value independent attacks remain:
+
+1. the quasi-edge construction and one-representative-per-unordered-pair convention;
+2. the residual/non-selected status of the forced cross-edges in Section 4;
+3. residual activity in Section 6;
+4. the charging budget in Section 7;
+5. threshold capacity in Section 8;
+6. the isolated-C injection in Section 9;
+7. the graph-to-averaged-LP embedding used after this bridge;
+8. exact certificate semantics.
+
+A single counterexample to a universal bridge lemma overrides every green computation downstream. This remains candidate mathematics until independent expert review is completed.
