@@ -11,7 +11,7 @@ from pathlib import Path
 import json, sys
 
 HERE=Path(__file__).resolve().parent
-PROD=HERE.parent.parent / '2026-09-08-minimal-kernel-recon-v1'
+PROD=HERE.parent / '2026-09-08-minimal-kernel-recon-v1'
 sys.path.insert(0,str(PROD))
 import n30_threshold_model as prod  # noqa:E402
 
