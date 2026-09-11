@@ -65,6 +65,22 @@ jobs:
           print('m225 threshold-slack reconstruction exact audit PASS')
           print('historical 272-row SHA-256:',r['reconstructed_historical_row_sha256'])
           PY
+      - name: Check m225 zero-demand Hall certificates without solver
+        run: |
+          set -euo pipefail
+          D=project/research/n30/2026-09-11-threshold-tail-v1
+          /usr/bin/python3 -I -B "$D/verify_m225_zero_demand_rcore_exact.py" \
+            --certificates "$D/N30_M225_ZERO_DEMAND_RCORE_CERTS.json" \
+            --output N30_M225_ZERO_DEMAND_RCORE_EXACT.json >/dev/null
+          python3 - <<'PY'
+          import json
+          r=json.load(open('N30_M225_ZERO_DEMAND_RCORE_EXACT.json'))
+          assert r['status']=='PASS' and len(r['rows'])==4
+          assert not r['solver_used'] and not r['floating_point_used']
+          assert all(x['certificate_rhs']<0 for x in r['rows'])
+          print('m225 zero-demand exact Hall certificate audit PASS')
+          print('rhs:',[x['certificate_rhs'] for x in r['rows']])
+          PY
       - name: Pin solver dependency
         run: |
           python3 -m venv .venv
@@ -109,6 +125,7 @@ jobs:
             N30_M226_HAND_PROFILE_REDUCTION_EXACT.json
             N30_M226_HAND_ENDPOINT_TABLE_EXACT.json
             N30_M225_THRESHOLD_SLACK_REDUCTION_EXACT.json
+            N30_M225_ZERO_DEMAND_RCORE_EXACT.json
             N30_M226_NINE_FARKAS_STRUCTURE.json
             N30_M226_EIGHT_MODEL_ABLATION.json
             N30_M226_SELECTED_EXCESS_PROJECTION.json
