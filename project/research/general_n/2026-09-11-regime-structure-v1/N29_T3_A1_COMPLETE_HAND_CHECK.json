@@ -1,0 +1,201 @@
+{
+  "D1_0_exact_audit": {
+    "all_survivor_nonunit_rho_support": [
+      3,
+      4,
+      5,
+      6
+    ],
+    "all_survivors_L": [
+      6
+    ],
+    "post_one_label_states": 1102,
+    "survivor_histograms": [
+      {
+        "D2": 0,
+        "D3": 6,
+        "D4": 6,
+        "L": 6,
+        "rho_nonunit": [
+          3,
+          3,
+          3,
+          4,
+          4,
+          4,
+          6
+        ]
+      },
+      {
+        "D2": 0,
+        "D3": 6,
+        "D4": 6,
+        "L": 6,
+        "rho_nonunit": [
+          3,
+          3,
+          3,
+          4,
+          4,
+          5,
+          5
+        ]
+      },
+      {
+        "D2": 0,
+        "D3": 6,
+        "D4": 6,
+        "L": 6,
+        "rho_nonunit": [
+          3,
+          3,
+          4,
+          4,
+          4,
+          4,
+          5
+        ]
+      },
+      {
+        "D2": 0,
+        "D3": 6,
+        "D4": 6,
+        "L": 6,
+        "rho_nonunit": [
+          3,
+          4,
+          4,
+          4,
+          4,
+          4,
+          4
+        ]
+      },
+      {
+        "D2": 0,
+        "D3": 7,
+        "D4": 5,
+        "L": 6,
+        "rho_nonunit": [
+          3,
+          3,
+          3,
+          4,
+          4,
+          4,
+          5
+        ]
+      },
+      {
+        "D2": 0,
+        "D3": 7,
+        "D4": 5,
+        "L": 6,
+        "rho_nonunit": [
+          3,
+          3,
+          4,
+          4,
+          4,
+          4,
+          4
+        ]
+      },
+      {
+        "D2": 0,
+        "D3": 8,
+        "D4": 4,
+        "L": 6,
+        "rho_nonunit": [
+          3,
+          3,
+          3,
+          4,
+          4,
+          4,
+          4
+        ]
+      },
+      {
+        "D2": 1,
+        "D3": 5,
+        "D4": 6,
+        "L": 6,
+        "rho_nonunit": [
+          3,
+          3,
+          3,
+          4,
+          4,
+          4,
+          5
+        ]
+      },
+      {
+        "D2": 1,
+        "D3": 5,
+        "D4": 6,
+        "L": 6,
+        "rho_nonunit": [
+          3,
+          3,
+          4,
+          4,
+          4,
+          4,
+          4
+        ]
+      },
+      {
+        "D2": 1,
+        "D3": 6,
+        "D4": 5,
+        "L": 6,
+        "rho_nonunit": [
+          3,
+          3,
+          3,
+          4,
+          4,
+          4,
+          4
+        ]
+      },
+      {
+        "D2": 2,
+        "D3": 4,
+        "D4": 6,
+        "L": 6,
+        "rho_nonunit": [
+          3,
+          3,
+          3,
+          4,
+          4,
+          4,
+          4
+        ]
+      }
+    ],
+    "survivors": 11,
+    "top7_Hall_failures": 5,
+    "total_capacity_failures": 1086
+  },
+  "D1_2_audit": "see N29_T3_A1_D1_2_HAND_CHECK.json (separate PASS receipt)",
+  "branch_checks": {
+    "D1_0_if_L_le_5_lower_S": 37,
+    "D1_0_if_L_le_5_total_cap": 35,
+    "D1_4_lower_S": 39,
+    "D1_4_upper_S": 36,
+    "charging_J_D1_values": [
+      0,
+      2,
+      4
+    ]
+  },
+  "floating_point_used": false,
+  "interpretation": "The hand branch reduction is independently consistent: D1 is restricted to 0,2,4; D1=4 is arithmetically impossible; in D1=0 the only states surviving total capacity plus Hall have exactly the stable A1 support and L=6. D1=2 is covered by its separate exact hand audit.",
+  "schema": "n29-t3-a1-complete-hand-check-v1",
+  "solver_used": false,
+  "status": "PASS"
+}
