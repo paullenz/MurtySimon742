@@ -1,6 +1,6 @@
 # Murty–Simon / Erdős Problem #742
 
-Candidate proofs and reproducible research. **Updated 10 September 2026. Independent mathematical review, novelty assessment and independent computational reproduction remain OPEN.** Repository publication and internal replay are not external acceptance or a proof of the unrestricted conjecture.
+Candidate proofs and reproducible research. **Updated 11 September 2026. Independent mathematical review, novelty assessment and independent computational reproduction remain OPEN.** Repository publication and internal replay are not external acceptance or a proof of the unrestricted conjecture.
 
 **External reviewers:** please start with [`START_HERE_FOR_REVIEWERS.md`](START_HERE_FOR_REVIEWERS.md). The project actively welcomes hostile review, counterexamples, literature corrections and independent reproduction. GitHub Issues are the preferred place to report a suspected flaw.
 
@@ -14,7 +14,7 @@ Candidate proofs and reproducible research. **Updated 10 September 2026. Indepen
 | `n=29` | Complete candidate: `e(G) <= 210`, equality exactly `K(14,15)`; Fan-free reviewer v2; minimal trusted `Delta=16` kernel and exact Farkas endpoint; external review open |
 | `n=30` | Complete candidate: `e(G) <= 225`, equality exactly `K(15,15)`; Fan-free reviewer v2; exact finite endpoint certificates and assembly replay green; external review open |
 | General maximum-degree result | Candidate theorem: `n >= 6` and `Delta(G) >= (7/12)n` imply `e(G) < floor(n^2/4)`; complete candidate hand argument with internal exact audits green; external review and novelty assessment open |
-| RX-Hall / 3-D potential programme | Active finite-to-symbolic research programme. Exact finite 3-D compression now covers the preserved `n=30,t=1` and `n=29,t=2` laboratories with small rational template families; **not yet an unrestricted theorem** |
+| RX-Hall / 3-D potential programme | Active finite-to-symbolic research programme. Under the current fixed 3-D potentials the exact finite minimum scalar-template counts are `2` for `n=30,t=1`, `3` for `n=29,t=2`, and `4` for `n=29,t=3`. The suggestive `t+1` pattern is an active falsification target, **not a theorem** and not an unrestricted solution. |
 
 The unrestricted Murty–Simon conjecture remains unsolved by this project.
 
@@ -172,11 +172,21 @@ works across all 94 profiles. The nine breakpoints are
 
 See the [analytic min-hinge reduction](project/research/general_n/2026-09-09-rx-hall-v1/MIN_HINGE_ANALYTIC_REDUCTION.md) and [exact checkpoint](project/research/general_n/2026-09-09-rx-hall-v1/checkpoints/N29_T3_MIN_HINGE_EXACT_RUN_34384549422.json). This is exact **finite** evidence conditional on the RX-Hall bridge/frontier preparation, not an unrestricted theorem.
 
+Separately, a simpler fixed 3-D potential
+
+```text
+F = 6 B(3,0) + 4 B(3,5) + 3 B(3,9)
+```
+
+admits an exact four-template cover of the same 94-profile `t=3` frontier. Profiles 0, 1, 38 and 30 form a four-vertex pairwise incompatibility clique for a single scalar template, with every pair excluded by an exact rational Farkas certificate. Hence **within this fixed-potential model the minimum scalar-template count is exactly four**. See [`n29_t3_four_template_lower_bound_exact.py`](project/research/general_n/2026-09-09-rx-hall-v1/n29_t3_four_template_lower_bound_exact.py) and [`n29_t3_count_tree_four_templates_exact.py`](project/research/general_n/2026-09-09-rx-hall-v1/n29_t3_count_tree_four_templates_exact.py).
+
 #### 10 September: n=30, t=1 falsification laboratory
 
 A naive parameter-derived BC/diagonal architecture failed one of the seven preserved `n=30,t=1` hard profiles, even after a deliberately generous BC enlargement. Restoring the first Hall coordinate with the single threshold `1[s>=2]` repaired the obstruction.
 
 The resulting [exact n=30 t=1 3-D potential](project/research/general_n/2026-09-09-rx-hall-v1/N30_T1_TWO_TEMPLATE_POTENTIAL.md) has **13 primitive nonnegative generators** and just **two rational scalar templates** covering all seven hard profiles, with minimum exact strict gap `1/2`. Its acceptance checker uses only Python's standard library and `fractions.Fraction`: no LP/MIP solver, floating point or saved dual vector participates in final acceptance.
+
+An exact rational Farkas certificate additionally proves that hard profiles 0 and 2 cannot share one nonnegative scalar template even when the required common gap is weakened to `>=0`. Combined with the exact two-template cover, **within this fixed-potential model the minimum scalar-template count is exactly two**. See [`n30_t1_two_template_lower_bound_exact.py`](project/research/general_n/2026-09-09-rx-hall-v1/n30_t1_two_template_lower_bound_exact.py).
 
 This was a useful falsification result: it shows that the first monotone-coupling coordinate contains genuine information, but the repair needed in this laboratory is extremely small.
 
@@ -188,7 +198,25 @@ The full regenerated `n=29, Delta=16, t=2` frontier contains 902 profiles. The c
 
 This is a finite certificate-compression theorem inside the RX-Hall model. It is **not** an unrestricted Murty–Simon theorem and does not replace the fixed-order n=29 reviewer proof chain.
 
-The most valuable next step is now to characterize the three exact `t=2` scalar regimes by simple statistics of the demand/source profiles and determine whether those regime inequalities extend symbolically in `(n,t)`. The goal is a parameterized analytic inequality capable of pushing below the `7/12` maximum-degree frontier, not further multiplication of finite certificates.
+#### 11 September working hypothesis — `t+1` scalar regimes
+
+The three current exact finite laboratories now give
+
+```text
+n=30, t=1: minimum 2 scalar templates;
+n=29, t=2: minimum 3 scalar templates;
+n=29, t=3: minimum 4 scalar templates.
+```
+
+This makes
+
+```text
+minimum regime count = t+1
+```
+
+a natural **falsification target**. It is not presently a theorem: the three results use different finite frontiers and different fixed 3-D potentials, and no extrapolation to general `(n,t)` is claimed.
+
+The immediate research priority is to characterize the exact scalar regimes by elementary statistics of the demand/source profiles `(s,rho)`, test whether the resulting regime boundaries can be generated from parameters rather than profile IDs, and then attack the proposed `t+1` rule on fresh finite domains. Only after surviving those tests would it be appropriate to seek a symbolic regime lemma and combine it with charging/demand bounds to push below the `7/12` maximum-degree frontier.
 
 ### Layer-sum 13/22 and earlier structural checkpoints
 
