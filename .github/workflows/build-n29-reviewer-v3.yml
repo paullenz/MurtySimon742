@@ -1,0 +1,132 @@
+name: Build n29 reviewer-v3 package
+
+on:
+  workflow_dispatch:
+  push:
+    paths:
+      - 'project/reviews/n29/2026-09-11-reviewer-v3/**'
+      - '.github/workflows/build-n29-reviewer-v3.yml'
+
+permissions:
+  contents: write
+
+jobs:
+  build:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 20
+    steps:
+      - uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262
+        with:
+          fetch-depth: 0
+
+      - name: Install paper toolchain
+        run: |
+          sudo apt-get update -qq
+          sudo DEBIAN_FRONTEND=noninteractive apt-get install -y -qq pandoc texlive-xetex texlive-latex-extra texlive-fonts-recommended lmodern poppler-utils
+
+      - name: Build v3 sources and PDFs
+        run: |
+          set -euo pipefail
+          SRC=project/reviews/n29/2026-09-11-reviewer-v3
+          OUT=releases/n29-reviewer-v3
+          mkdir -p "$OUT" n29-v3-renders
+
+          cat > "$OUT/N29_Reviewer_Manuscript_v3.md" <<'EOF'
+          ---
+          title: "The Murty-Simon bound at order 29"
+          subtitle: "Reviewer-v3 computer-assisted candidate proof"
+          author: "Paul Lenz"
+          date: "11 September 2026"
+          geometry: margin=27mm
+          fontsize: 11pt
+          header-includes:
+            - \usepackage{amsmath,amssymb,mathtools,booktabs,microtype}
+            - \setlength{\emergencystretch}{2em}
+          ---
+          EOF
+          cat "$SRC/PROOF.md" >> "$OUT/N29_Reviewer_Manuscript_v3.md"
+          printf '\n\\newpage\n\n# Appendix A. Self-contained Delta=16 graph-to-model bridge\n\n' >> "$OUT/N29_Reviewer_Manuscript_v3.md"
+          tail -n +2 "$SRC/GRAPH_TO_MODEL_BRIDGE.md" >> "$OUT/N29_Reviewer_Manuscript_v3.md"
+
+          cat > "$OUT/N29_Verification_Companion_v3.md" <<'EOF'
+          ---
+          title: "N=29 Murty-Simon candidate: verification companion"
+          subtitle: "Reviewer-v3 evidence, replay map, and audit boundaries"
+          author: "Paul Lenz"
+          date: "11 September 2026"
+          geometry: margin=27mm
+          fontsize: 11pt
+          header-includes:
+            - \usepackage{amsmath,amssymb,booktabs,microtype}
+            - \setlength{\emergencystretch}{2em}
+          ---
+          EOF
+          tail -n +2 "$SRC/VERIFICATION_COMPANION.md" >> "$OUT/N29_Verification_Companion_v3.md"
+
+          pandoc "$OUT/N29_Reviewer_Manuscript_v3.md" -o "$OUT/N29_Reviewer_Manuscript_v3.pdf" --pdf-engine=xelatex
+          pandoc "$OUT/N29_Verification_Companion_v3.md" -o "$OUT/N29_Verification_Companion_v3.pdf" --pdf-engine=xelatex
+
+          cat > "$OUT/README.md" <<'EOF'
+          # n=29 reviewer package v3
+
+          **Current reviewer-facing edition - 11 September 2026.**
+
+          Claim: `e(G) <= 210`, with equality exactly `K(14,15)`.
+
+          Start with [N29_Reviewer_Manuscript_v3.pdf](N29_Reviewer_Manuscript_v3.pdf), then [N29_Verification_Companion_v3.pdf](N29_Verification_Companion_v3.pdf).
+
+          This package supersedes reviewer-v2 as the canonical n=29 review surface. It incorporates the minimal trusted `Delta=16` kernel, a self-contained bridge with the full threshold-capacity proof, the corrected late-model normalization and exact Farkas semantics, the blind hostile review and independently rerun front-end checks, and the analytic upper-range hardening (`m=215` by hand and `m>=216` by the pointwise `5/2` charging cap).
+
+          The v2 package remains preserved unchanged as historical provenance. Independent mathematical review, independent computational reproduction, and novelty assessment remain open.
+          EOF
+
+          python3 - <<'PY'
+          from pathlib import Path
+          import hashlib, json
+          root=Path('releases/n29-reviewer-v3')
+          files=['N29_Reviewer_Manuscript_v3.md','N29_Reviewer_Manuscript_v3.pdf','N29_Verification_Companion_v3.md','N29_Verification_Companion_v3.pdf','README.md']
+          manifest={'schema':'n29-reviewer-v3-manifest','date':'2026-09-11','status':'candidate; independent review open','files':{}}
+          for fn in files:
+              b=(root/fn).read_bytes()
+              manifest['files'][fn]={'sha256':hashlib.sha256(b).hexdigest(),'bytes':len(b)}
+          (root/'MANIFEST.json').write_text(json.dumps(manifest,indent=2)+'\n')
+          PY
+
+      - name: PDF preflight and render smoke check
+        run: |
+          set -euo pipefail
+          for p in releases/n29-reviewer-v3/*.pdf; do
+            pdfinfo "$p" | grep -E '^(Pages|Page size):'
+            pdftotext "$p" /dev/null
+            base=$(basename "$p" .pdf)
+            pdftoppm -f 1 -singlefile -png -r 120 "$p" "n29-v3-renders/${base}" >/dev/null 2>&1
+          done
+          test -s n29-v3-renders/N29_Reviewer_Manuscript_v3.png
+          test -s n29-v3-renders/N29_Verification_Companion_v3.png
+
+      - uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02
+        with:
+          name: n29-reviewer-v3-${{ github.run_id }}
+          path: |
+            releases/n29-reviewer-v3/
+            n29-v3-renders/
+          retention-days: 30
+
+      - name: Commit canonical v3 package
+        run: |
+          set -euo pipefail
+          git config user.name 'github-actions[bot]'
+          git config user.email '4189824+github-actions[bot]@users.noreply.github.com'
+          git add releases/n29-reviewer-v3
+          if git diff --cached --quiet; then
+            echo 'n29 reviewer-v3 package already current.'
+            exit 0
+          fi
+          git commit -m 'Publish N29 reviewer-v3 package'
+          for attempt in 1 2 3 4 5; do
+            if git push origin HEAD:main; then exit 0; fi
+            git pull --rebase origin main
+            sleep $((attempt * 2))
+          done
+          echo 'Unable to publish n29 reviewer-v3 package after retries' >&2
+          exit 1
