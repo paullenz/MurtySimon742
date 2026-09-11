@@ -2,7 +2,7 @@
 
 11 September 2026. Research direction: Paul Lenz. Mathematical development and internal checking: ChatGPT/Geeps.
 
-**Status: candidate analytic hardening; the `n=30, Delta=16, m=226` endpoint now has a hand route after the universal bridge. Independent mathematical review remains open.**
+**Status: candidate analytic hardening; the `n=30, Delta=16, m=226` endpoint now has a hand route after the universal bridge. The `m=225` equality branch has also been reduced sharply, but still retains exact finite dependencies. Independent mathematical review remains open.**
 
 ## Target
 
@@ -65,7 +65,7 @@ t=2,
 Q>=20.
 ```
 
-## Exact nine rows
+## Exact nine m=226 rows
 
 ```text
 s=(2,2,3^11), rho=(1^7,2,3^8), r=33
@@ -89,12 +89,76 @@ Thus, conditional on the universal graph-to-model / threshold-tail lemmas alread
 
 All historical exact evidence remains preserved as independent corroboration and regression material.
 
-## Next target: m=225
+## m=225: direct threshold-slack reconstruction
 
-The equality branch remains the important computational frontier. [`N30_M225_RECONNAISSANCE.md`](N30_M225_RECONNAISSANCE.md) records a fresh decomposition of its 272 historical row-threshold survivors.
+The equality branch remains the important computational frontier, but its row-generation stage has now been simplified substantially.
 
-A simple exact ledger identity now removes 61 of those rows analytically: every one of the 61 has all thirteen demands positive but nonzero ledger slack, whereas positivity forces `S=r+2t=r+2` exactly. This leaves 211 ledger-tight rows as the genuine target.
+The preserved exact `Q>=18` frontier consists of exactly 100 demand profiles, listed in [`N30_M225_QGE18_PROFILES.txt`](N30_M225_QGE18_PROFILES.txt), with
 
-The reconnaissance note also records and rejects an invalid exploratory tightening `p<=rho+1`; the correct local bound remains `p<=rho+2`. With that correct domain, neither the present scalar Hall template nor the stripped two-transport relaxation closes all 211 rows, so the historical exact `m=225` Farkas route remains proof-critical.
+```text
+Q=18: 64
+Q=19: 29
+Q=20:  6
+Q=21:  1.
+```
 
-This analytic hardening does **not** remove the exact finite work currently used at `m=225, Delta=16` for the equality classification of the full `n=30` candidate theorem, and it does not promote the project beyond candidate status. Independent specialist review remains open.
+[`N30_M225_THRESHOLD_SLACK_REDUCTION.md`](N30_M225_THRESHOLD_SLACK_REDUCTION.md) uses the exact identity
+
+```text
+Q-18 = lambda
+       + sum_{h=2}^{12}(z_h-g_h)
+       + z_13,
+```
+
+where `lambda>=0` is ledger slack and `z_h` are the residual-degree tail counts. Since the hand upper bound gives `Q<=21`, at most three nonnegative integer slack units must be distributed. Monotone tail reconstruction from the 100 profiles produces exactly the historical 272 row-threshold survivors.
+
+The standard-library checker [`verify_m225_tail_slack_reduction.py`](verify_m225_tail_slack_reduction.py) reproduces the historical normalized survivor SHA-256
+
+```text
+ac02b654d672062421a67e0b07a4f1cbebbc688e83ad4723ea37af2b0542f16e
+```
+
+without an LP solver, graph enumeration, or the historical 158,314,695-state residual-row scan.
+
+The 272 rows split as
+
+```text
+ledger slack lambda=0: 211
+lambda>0:                61.
+```
+
+All 61 positive-slack rows have all thirteen demands positive. Positivity gives `s_i=d_i-R_i` pointwise, so `S=r+2t=r+2` exactly; hence `lambda=0`, a contradiction. Thus only the 211 ledger-tight rows survive analytically.
+
+## The four zero-demand tight rows
+
+Of the 211 tight rows, 207 have all demands positive and four contain one zero demand. [`N30_M225_ZERO_DEMAND_RCORE.md`](N30_M225_ZERO_DEMAND_RCORE.md) observes that ledger tightness actually forces
+
+```text
+d_i=R_i+s_i
+```
+
+for **every** label, including a zero-demand label. Therefore the residual-budget Hall model extends to these four rows without the earlier positivity restriction.
+
+All four are exactly Farkas-rejected. Their preserved rays are in [`N30_M225_ZERO_DEMAND_RCORE_CERTS.json`](N30_M225_ZERO_DEMAND_RCORE_CERTS.json), and [`verify_m225_zero_demand_rcore_exact.py`](verify_m225_zero_demand_rcore_exact.py) reconstructs the integer models and verifies all four certificates without a solver or floating point.
+
+This leaves the 207 positive ledger-tight rows as the substantive `m=225` endpoint sector.
+
+## The 207 positive tight rows
+
+The preserved residual-budget RX-Hall core already treats exactly these 207 rows. Its necessary-condition model uses:
+
+- grouped source types with the correct local supplement geometry `p<=rho+2`;
+- nested source/supplement transport;
+- grouped `(s,R,y)` label types;
+- the exact residual-column budget;
+- total selected-incidence balance;
+- RX1/RX2/RX3 compatibility;
+- Hall capacities for one or two source neighborhoods.
+
+It exactly rejects 200 of the 207 rows and leaves seven hard states. All seven have residual maximum three. The later exact 3-D potential programme rejects those seven with two fixed rational scalar templates.
+
+This is a much smaller and more structured endpoint dependency than the original full grouped model, but it remains computational/certificate-based. The current analytic target is to replace the 200 residual-budget Hall rejections, or a large uniform subclass of them, with one or a small family of explicit hand inequalities. A secondary target is a hand classification of the 100 `Q>=18` demand profiles.
+
+[`N30_M225_RECONNAISSANCE.md`](N30_M225_RECONNAISSANCE.md) also records and rejects an invalid exploratory tightening `p<=rho+1`; the correct local bound remains `p<=rho+2`.
+
+This analytic hardening does **not** promote the project beyond candidate status. Independent specialist review remains open, and the exact finite work at `m=225, Delta=16` remains a proof-critical dependency until the positive tight sector and the 100-profile classification are replaced analytically.
