@@ -22,7 +22,7 @@ jobs:
           set -euo pipefail
           curl --fail --location --retry 2 -o "$RUNNER_TEMP/lean.tar.zst" https://github.com/leanprover/lean4/releases/download/v4.19.0/lean-4.19.0-linux.tar.zst
           sha256sum "$RUNNER_TEMP/lean.tar.zst" > lean-toolchain-sha256.txt
-          tar --zstd -xf "$RUNNER_TEMP/lean.tar.zst" -C "$RUNNER_TEMP"
+          tar --zstd -xf "$RUNNER_TEMP/lean-4.19.0-linux.tar.zst" -C "$RUNNER_TEMP" 2>/dev/null || tar --zstd -xf "$RUNNER_TEMP/lean.tar.zst" -C "$RUNNER_TEMP"
           echo "$RUNNER_TEMP/lean-4.19.0-linux/bin" >> "$GITHUB_PATH"
       - name: Check existing core and canonical extension
         run: |
@@ -32,8 +32,10 @@ jobs:
           sha256sum "$D/QuasiCore.lean" "$D/CanonicalBridgeSlice.lean" > checked-source-sha256.txt
           (
             cd "$D"
-            lean QuasiCore.lean 2>&1 | tee "$GITHUB_WORKSPACE/quasi-core-check.log"
-            lean CanonicalBridgeSlice.lean 2>&1 | tee "$GITHUB_WORKSPACE/canonical-bridge-slice-check.log"
+            # The extension imports QuasiCore, so first compile the already
+            # checked core to an .olean module in the local search path.
+            lean -o QuasiCore.olean QuasiCore.lean 2>&1 | tee "$GITHUB_WORKSPACE/quasi-core-check.log"
+            LEAN_PATH=. lean CanonicalBridgeSlice.lean 2>&1 | tee "$GITHUB_WORKSPACE/canonical-bridge-slice-check.log"
           )
           if grep -E 'sorryAx|warning:|error:' quasi-core-check.log canonical-bridge-slice-check.log; then exit 1; fi
       - uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02
