@@ -1,0 +1,44 @@
+{
+  "all_nondecreasing_demand_multisets": 1352078,
+  "arithmetic": "integer; charging table regression uses exact Fraction arithmetic scaled by 210",
+  "checks": {
+    "all_multisets": true,
+    "extremals": true,
+    "maximum_threshold_tail_score": true,
+    "threshold_incompatible_multisets": true
+  },
+  "conclusion": "For every s in {0,...,11}^12 up to permutation, Q(s)=S-sum_h g_h(W_h)<=18. Any Delta=16 positive-surplus configuration with t>=2 would require Q(s)>=16+2t>=20, contradiction.",
+  "extremals": [
+    {
+      "charging_scaled_210": 5768,
+      "s": [2,3,3,3,3,3,3,3,3,3,3,3],
+      "threshold_tail_score": 18,
+      "zmin": {"2": 9, "3": 8}
+    },
+    {
+      "charging_scaled_210": 5880,
+      "s": [3,3,3,3,3,3,3,3,3,3,3,3],
+      "threshold_tail_score": 18,
+      "zmin": {"2": 9, "3": 9}
+    },
+    {
+      "charging_scaled_210": 6265,
+      "s": [3,4,4,4,4,4,4,4,4,4,4,4],
+      "threshold_tail_score": 18,
+      "zmin": {"2": 10, "3": 10, "4": 9}
+    },
+    {
+      "charging_scaled_210": 6300,
+      "s": [4,4,4,4,4,4,4,4,4,4,4,4],
+      "threshold_tail_score": 18,
+      "zmin": {"2": 10, "3": 10, "4": 10}
+    }
+  ],
+  "floating_point_used": false,
+  "maximum_threshold_tail_score": 18,
+  "schema": "n29-delta16-threshold-tail-collapse-exact-v2",
+  "scope": {"Delta": 16, "a": 12, "b": 16, "n": 29},
+  "solver_used": false,
+  "status": "PASS",
+  "threshold_incompatible_multisets": 67
+}
