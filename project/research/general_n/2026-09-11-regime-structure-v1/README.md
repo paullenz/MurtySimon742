@@ -2,7 +2,7 @@
 
 11 September 2026. Research direction: Paul Lenz. Mathematical development and internal checking: ChatGPT/Geeps.
 
-**Status: exact finite structural diagnostics inside the preserved RX-Hall 3-D model. Not a general-N theorem. Independent mathematical review remains open.**
+**Status: exact finite structural diagnostics inside the preserved RX-Hall 3-D model, with the first t=3 regime now reduced to a hand certificate. Not a general-N theorem. Independent mathematical review remains open.**
 
 ## Current headline
 
@@ -12,7 +12,30 @@ The adjacent exact laboratories require respectively 2, 3 and 4 scalar templates
 - `n=29,t=2`: 902 regenerated profiles, exactly 3 templates;
 - `n=29,t=3`: 94 regenerated profiles, exactly 4 templates.
 
-The earlier low-dimensional regime work has now been subjected to a **non-circular exact validity-mask audit**. The corrected conclusion has two parts that must be kept separate.
+A new symbolic milestone has now been reached at `t=3`: the complete `(h_res,J)=(4,14)` **A1 regime** no longer depends logically on the old 236,885-state histogram reduction. Its support and positive template gap are derived by hand from charging, zero slack, scalar cutoff and Hall inequalities; exact enumeration remains only as a falsification/audit layer. See:
+
+- [`N29_T3_A1_COMPLETE_HAND_REDUCTION.md`](N29_T3_A1_COMPLETE_HAND_REDUCTION.md)
+- [`N29_T3_A1_COMPLETE_HAND_CHECK.json`](N29_T3_A1_COMPLETE_HAND_CHECK.json)
+- [`N29_T3_A1_D1_2_HAND_ELIMINATION.md`](N29_T3_A1_D1_2_HAND_ELIMINATION.md)
+
+The hand route is now
+
+```text
+(h_res,J)=(4,14)
+ -> charging gives D1 in {0,2,4}
+ -> D1=4 impossible by mass
+ -> D1=2 impossible by scalar-cutoff + largest-eight Hall
+ -> D1=0 forces L=6 and support
+      s in {2,3,4}, rho in {1,3,4,5,6}, rho1=9
+ -> exact three-slack identity
+ -> gap_A1 >= 1.
+```
+
+This is the first current `t=3` scalar regime converted from a finite profile certificate into an essentially transparent symbolic proof. The next symbolic targets are the adjacent A530 cells `(h_res,J)=(4,16)` and `(4,18)`.
+
+## Non-circular regime conclusion
+
+The earlier low-dimensional regime work has been subjected to a **non-circular exact validity-mask audit**. The corrected conclusion has two parts that must be kept separate.
 
 ### 1. `(h_res,J)` does NOT determine the complete template geometry
 
@@ -37,7 +60,7 @@ Thus the detailed overlap geometry is genuinely joint in `(s,rho)`. A source-onl
 
 A proof does not need to reconstruct every template that happens to work. It only needs one template that works throughout each regime.
 
-The new audit therefore recomputes **every template gap first**, using exact `fractions.Fraction` arithmetic and no chosen assignment labels, and then asks whether each feature cell has a nonempty common-template intersection.
+The non-circular audit recomputes **every template gap first**, using exact `fractions.Fraction` arithmetic and no chosen assignment labels, and then asks whether each feature cell has a nonempty common-template intersection.
 
 That weaker and mathematically relevant test succeeds:
 
@@ -46,7 +69,7 @@ That weaker and mathematically relevant test succeeds:
 - `t=3`: `J` alone fails, but `(h_res,J)` suffices;
 - consequently every occupied `(h_res,J)` cell across all three laboratories has at least one template with positive exact gap on **every** profile in the cell.
 
-This rehabilitates the useful part of the earlier regime programme on a non-circular basis. What is **not** rehabilitated is the claim that `(h_res,J)` is intrinsic, minimal, or determines all certificate overlap.
+What is **not** claimed is that `(h_res,J)` is intrinsic, minimal, or determines all certificate overlap.
 
 Exact checker:
 
@@ -61,8 +84,6 @@ run id: 34592723477
 ```
 
 ## Exact finite assignment rules
-
-After the complete exact masks are independently recomputed, the following compact rules are checked directly against them.
 
 ### t=1
 
@@ -98,7 +119,7 @@ T1+T2            129
 T0+T1+T2         693
 ```
 
-so 862/902 profiles admit more than one template. The regime rule deliberately chooses one sufficient template; it does not pretend the cover is disjoint.
+so 862/902 profiles admit more than one template. The regime rule chooses one sufficient template; it does not pretend the cover is disjoint.
 
 ### t=3
 
@@ -138,24 +159,9 @@ A1+A38+A530               57
 A0+A1+A38+A530            11
 ```
 
-## Why the earlier classifier audit needed correction
-
-The exploratory assignment-classifier script had used labels that were themselves generated from the old count trees:
-
-- at `t=2`, the chosen label was defined from `D1`;
-- at `t=3`, it was defined from the count tree containing the `rho1<=8` split.
-
-Re-classifying those labels with related features was therefore circular as evidence about **intrinsic geometry**. That issue is documented in
-
-```text
-ASSIGNMENT_CLASSIFIER_AUDIT_CORRECTION.md
-```
-
-The new validity-mask audit removes this problem by computing all exact template gaps before any regime classification. The resulting common-template statement is therefore an independent finite verification of the assignment rules.
-
 ## Exact template counts remain intact
 
-The audit correction does not affect the exact minimum template counts:
+The audit correction and A1 symbolic compression do not affect the exact minimum template counts:
 
 - `t=1`: two explicit templates suffice, and an exact incompatibility certificate shows one cannot;
 - `t=2`: three explicit templates suffice, and profiles `0,3,77` form an exact pairwise-incompatible triangle;
@@ -232,32 +238,19 @@ artifact id: 10196135538
 
 This confirms that joint Hall compatibility is the right language for the **fine** geometry, while `(h_res,J)` remains enough for the **coarse sufficient regime cover**.
 
-## Relation to the original `(h,L)` test
-
-The original `(h_res,L)` compression remains exactly falsified. Historical exploratory files are retained for reproducibility:
-
-```text
-N29_T23_HL_COMPRESSION_FALSIFICATION.md
-n29_t23_hL_compression_scan.py
-adjacent_t123_regime_key_redteam.py
-```
-
-The last of these should be read as an assignment-rule compression/replay only; the non-circular acceptance path is now `adjacent_t123_validity_mask_audit_exact.py`.
-
 ## Current next target
 
 The programme now has a sharper division of labour:
 
-1. **For a general theorem, attack sufficient regime inequalities, not full mask reconstruction.** Try to prove that one parameterized template works throughout each `(h_res,J)` regime.
-2. Use the exact regime-margin census to identify the weakest cells and extremal profiles; those should be the first symbolic inequalities attacked.
-3. Retain cumulative demand/source tails and HC3/Ferrers compatibility only when `(h_res,J)` is insufficient to control the extremal gap.
-4. Falsify any proposed parameterized rule on fresh exact frontiers before promoting it.
-5. In parallel, continue hostile review of the graph-to-profile/RX-Hall bridge and the 3-D monotone potential lemma; those remain the universal mathematical trust boundary.
+1. **A530 symbolic compression:** repeat the A1 strategy for `(h_res,J)=(4,16)` and `(4,18)`, looking first for hand support restrictions and then for a positive slack decomposition of the A530 gap.
+2. **Parameterisation:** identify which A1/A530 coefficients and thresholds can be expressed in `(a,b,t,h,J)` rather than the fixed values `(12,16,3,4,J)`.
+3. **Fresh-frontier falsification:** once a candidate parameter rule exists, attack it on new exact frontiers (e.g. n=31/n=32) before claiming any infinite-family consequence.
+4. **Universal trust boundary:** continue independent red-team of the graph-to-profile/RX-Hall bridge and the 3-D monotone-potential lemma.
 
-The working hypothesis is therefore narrower and more defensible than before:
+The working hypothesis remains deliberately narrow:
 
-> **Finite hypothesis:** in the current `t=1,2,3` laboratories, a low-dimensional `(h_res,J)` partition selects one exact template per regime, while the number of templates is exactly `t+1`.
+> **Finite fact:** in the current `t=1,2,3` laboratories, a low-dimensional `(h_res,J)` partition selects one exact template per regime, while the number of templates is exactly `t+1`.
 >
-> **General-N question:** can that sufficient regime-wise structure, rather than the full overlap geometry, be proved symbolically and parameterized in `(n,t)`?
+> **General-N question:** can that sufficient regime-wise structure, rather than the full overlap geometry, be proved symbolically and parameterised in `(n,t)`?
 
 No affirmative general-N claim is made yet.
