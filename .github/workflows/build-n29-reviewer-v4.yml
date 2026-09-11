@@ -132,6 +132,7 @@ jobs:
             exit 0
           fi
           git commit -m 'Publish N29 reviewer-v4 hand-proof package'
+          rm -rf n29-v4-renders
           for attempt in 1 2 3 4 5; do
             if git push origin HEAD:main; then exit 0; fi
             git pull --rebase origin main
