@@ -1,0 +1,368 @@
+{
+  "schema": "n30-assembled-hand-route-publication-receipt-v1",
+  "recorded_at_utc": "2026-09-11T21:33:40.998Z",
+  "repository": "paullenz/MurtySimon742",
+  "repository_id": 1359206057,
+  "branch": "main",
+  "baseline_commit": "d680ddd208d338b019d00492f9498e6da2acfdbc",
+  "baseline_tree": "293dbec554e3b14b411ddc4efcd4c6a3ca8b0c4a",
+  "verified_research_commit": "01d1fb03d5b68ea4494a4ff29cedd0b49cb5dc16",
+  "verified_research_tree": "a150cf49dd34f4bffa1d8034646676adea04f73f",
+  "branch_update": {
+    "forced": false,
+    "readback_passed": true
+  },
+  "tree_verification": {
+    "exact_intended_blobs": 24,
+    "main_still_at_baseline": "d680ddd208d338b019d00492f9498e6da2acfdbc",
+    "modified_baseline_blobs": 8,
+    "new_blobs": 16,
+    "new_total_blobs": 1443,
+    "status": "PASS",
+    "unchanged_baseline_blobs": 1419
+  },
+  "exact_content_readbacks": [
+    {
+      "path": "refs/heads/main",
+      "sha": "01d1fb03d5b68ea4494a4ff29cedd0b49cb5dc16",
+      "status": "PASS"
+    },
+    {
+      "exact_utf8_match": true,
+      "path": "README.md",
+      "ref": "01d1fb03d5b68ea4494a4ff29cedd0b49cb5dc16",
+      "status": "PASS"
+    },
+    {
+      "exact_utf8_match": true,
+      "path": "project/research/n30/2026-09-11-assembled-hand-route-v1/ASSEMBLED_PROOF.md",
+      "ref": "01d1fb03d5b68ea4494a4ff29cedd0b49cb5dc16",
+      "status": "PASS"
+    },
+    {
+      "exact_utf8_match": true,
+      "path": "project/research/n30/2026-09-11-assembled-hand-route-v1/TWELVE_LABEL_TRANSFER.md",
+      "ref": "01d1fb03d5b68ea4494a4ff29cedd0b49cb5dc16",
+      "status": "PASS"
+    }
+  ],
+  "published_files": [
+    {
+      "bytes": 2603,
+      "git_blob_sha": "37d391913c6ab7580d7a6c12f5549bcf6593f8bb",
+      "path": ".github/workflows/n30-assembled-hand-route.yml",
+      "sha256": "7b94cd1ca814e001a5723d46d4aea601067f1c12d56ed136be3e6d2501270ca7"
+    },
+    {
+      "bytes": 33192,
+      "git_blob_sha": "aeeb56579221c54c17264646df058a613513752b",
+      "path": "README.md",
+      "sha256": "920448d9fd3cfb4f2460fb60f5bf19825e45f26c278162edbd8634f7b3bf89f2"
+    },
+    {
+      "bytes": 19361,
+      "git_blob_sha": "32fe6f0a32b370a0ba041a893562d23b8f124d2c",
+      "path": "START_HERE_FOR_REVIEWERS.md",
+      "sha256": "1adee3345d857970a1d46fb34b87fd3c313c19f25bb8634b2f33a656b97b2720"
+    },
+    {
+      "bytes": 7682,
+      "git_blob_sha": "777a06c7784c798b9e17f63a05576a28151dc7b6",
+      "path": "project/research/n30/2026-09-09-delta17-v1/README.md",
+      "sha256": "cec7ee408cdf7ebc2b3fdd924a1a0c773dfd127b13ad0914db8f33ea9a2070f4"
+    },
+    {
+      "bytes": 11175,
+      "git_blob_sha": "1efe2f2c17cb112d386d03447ad03a6888685830",
+      "path": "project/research/n30/2026-09-11-assembled-hand-route-v1/ASSEMBLED_PROOF.md",
+      "sha256": "d2a0b37ddccfa51204a817f0e9fff1537f58c4a0c789fc76e3681c9f6017f8ad"
+    },
+    {
+      "bytes": 7103,
+      "git_blob_sha": "833ffbbdf406af84b9a65e6b1a82386cd71be4c9",
+      "path": "project/research/n30/2026-09-11-assembled-hand-route-v1/ASSEMBLY_AUDIT.json",
+      "sha256": "9722c6417d54a0fbe248ec1fe89bac0fff286cff8efe1c94ca3fb0aed2e9e61a"
+    },
+    {
+      "bytes": 8978,
+      "git_blob_sha": "ac148157e2e30e1ce8897cd8840f747a16b43910",
+      "path": "project/research/n30/2026-09-11-assembled-hand-route-v1/BRIDGE_AUDIT.md",
+      "sha256": "042bd5113e2b3bd82dc3aa5e5625be3d537800b5d7220cf9a3e0bebe96d94395"
+    },
+    {
+      "bytes": 383,
+      "git_blob_sha": "7fcb95f4e5919173e12077cbe333aabbf1c40020",
+      "path": "project/research/n30/2026-09-11-assembled-hand-route-v1/ENVIRONMENT.json",
+      "sha256": "cad7415251768b4276033005a05494d1d10a53a8007e75a22896e25745441c05"
+    },
+    {
+      "bytes": 4788,
+      "git_blob_sha": "816d2c0202b82fb595d6f7f9c5324d2bea82d43a",
+      "path": "project/research/n30/2026-09-11-assembled-hand-route-v1/HANDOVER.md",
+      "sha256": "dcaf64df8435132b10893eedf21a5ae44d68f16e5c2e3b3e0b9d4a3de3dc0eae"
+    },
+    {
+      "bytes": 149813,
+      "git_blob_sha": "53752005399765fb5fdd474584f18a9f864475d3",
+      "path": "project/research/n30/2026-09-11-assembled-hand-route-v1/INDEPENDENT_ENVELOPES.json",
+      "sha256": "a0d6c07c2248b2f72eee3431cfc691122d2a130c3a9b52c9512d4bbe1aec22ab"
+    },
+    {
+      "bytes": 6417,
+      "git_blob_sha": "80e83415c5fd46cfde35f8c7ccbfa5ffc1076662",
+      "path": "project/research/n30/2026-09-11-assembled-hand-route-v1/MANIFEST.json",
+      "sha256": "71282788c261a87b3e831ea8adb570d70cde82ced770d014c3ad83c68414534a"
+    },
+    {
+      "bytes": 4803,
+      "git_blob_sha": "92b082007bdbae1c2d477588f531323b55575821",
+      "path": "project/research/n30/2026-09-11-assembled-hand-route-v1/PROFILE_REGRESSION.json",
+      "sha256": "fb6c81d6907fc256598e5213c0f12d2dace0171168d725bc74a9aa4fac083be6"
+    },
+    {
+      "bytes": 3339,
+      "git_blob_sha": "81b8a7080262fda0c313a2f9ed21d0c23ad0c44e",
+      "path": "project/research/n30/2026-09-11-assembled-hand-route-v1/PROOF_DEPENDENCIES.json",
+      "sha256": "b0fc60c3db81f09c7968b2ea29ca2860d452d456377b3c148dfc45c56cc0eac5"
+    },
+    {
+      "bytes": 483,
+      "git_blob_sha": "2e55c40ac126828b60416fe9eb7e5025a3e8788d",
+      "path": "project/research/n30/2026-09-11-assembled-hand-route-v1/PUBLICATION_CHECKS.json",
+      "sha256": "1b7f20feed7ad22a0ecef338edfd0cbf80754bb71db5af022e2dfc4328bb432d"
+    },
+    {
+      "bytes": 3913,
+      "git_blob_sha": "2b4c1e99673fad9032b4e7186544131e47bc5cc9",
+      "path": "project/research/n30/2026-09-11-assembled-hand-route-v1/README.md",
+      "sha256": "2392f9c681ad1817822319d2c9ad26a6227739eda91f06c88f2ea4d81286f597"
+    },
+    {
+      "bytes": 7197,
+      "git_blob_sha": "ae8d3259f8c96d56e4cf8e27390904c0e9fd1a2e",
+      "path": "project/research/n30/2026-09-11-assembled-hand-route-v1/TWELVE_LABEL_TRANSFER.md",
+      "sha256": "3eaf4b64c6e388823a0eca47fbdf646f6f7e0a71197124525a84651caf22512c"
+    },
+    {
+      "bytes": 10908,
+      "git_blob_sha": "8829e1ce15466568906781c2a7120207a767325f",
+      "path": "project/research/n30/2026-09-11-assembled-hand-route-v1/audit_assembly.py",
+      "sha256": "95f776443e043216f3a7aa414175717cba8f09ddf5814e6ce1b1c935ce351907"
+    },
+    {
+      "bytes": 4244,
+      "git_blob_sha": "1e7b78f3778750be0d3e251bfc2c7c6356a5811e",
+      "path": "project/research/n30/2026-09-11-assembled-hand-route-v1/check_publication.py",
+      "sha256": "204b12fea4df92a1aebb6845f60595daddca44c5fe9e6bc8354f86a7501a263b"
+    },
+    {
+      "bytes": 4273,
+      "git_blob_sha": "644f598a30a0de031ed136bc1e2a41b46018b6a8",
+      "path": "project/research/n30/2026-09-11-assembled-hand-route-v1/profile_regression.cpp",
+      "sha256": "1ca9e5982cba7d7b37e3a2a1ff7512f012724a83d0b1202a2f1a803891ea010b"
+    },
+    {
+      "bytes": 3835,
+      "git_blob_sha": "65d4b0494096e63051ebe2ff251adcc15b58c0bc",
+      "path": "project/research/n30/2026-09-11-m225-hall-continuation-v1/README.md",
+      "sha256": "9eb9d1be93891ee9f19b4438bbc72e6ea7bfbe7f44c1c8d3a20795d58ad8e95b"
+    },
+    {
+      "bytes": 3344,
+      "git_blob_sha": "aac8121773e48c0e3e6ec69c98523889cf0f3d53",
+      "path": "project/research/n30/2026-09-11-m225-hand-classification-v1/README.md",
+      "sha256": "d05478e4d0be21a522fbe87351f4ace0765caa7a0f349ea1651ab8bb9da555ea"
+    },
+    {
+      "bytes": 3728,
+      "git_blob_sha": "3d2887910a5f276e5c8d25d2cff9abca1cb05934",
+      "path": "project/research/n30/2026-09-11-m225-resource-envelope-v1/README.md",
+      "sha256": "4a8cd71dd7961fbc60b1a36eed19602c3962c52ba0f4d4dfff34516f7e11d42e"
+    },
+    {
+      "bytes": 8949,
+      "git_blob_sha": "baed962dca81312ea8f1b4688cb05360e9ca73a2",
+      "path": "project/research/n30/2026-09-11-threshold-tail-v1/README.md",
+      "sha256": "a357a8a968c557aac652b8ef26f2f9179c953710245f9ffa2d00fb29534bc482"
+    },
+    {
+      "bytes": 6000,
+      "git_blob_sha": "f3e9b55232e774a5941258cae22e26f06301cc02",
+      "path": "releases/REVIEW_READY_INDEX.md",
+      "sha256": "bb5358fffb7255f0025a2cd8a24c1a390e3573e01c1f29f5ec45be5a13063fe2"
+    }
+  ],
+  "publication_checks": {
+    "status": "PASS",
+    "written_transfer_payment_tables_match": true,
+    "baseline": "d680ddd208d338b019d00492f9498e6da2acfdbc",
+    "relative_links_checked": 247,
+    "broken_links": [],
+    "current_versions": {
+      "n25": 2,
+      "n27": 2,
+      "n28": 2,
+      "n29": 4,
+      "n30": 2
+    },
+    "frozen_bridge_unchanged": true,
+    "all_local_changes_within_scope": true,
+    "scope": "Three current entry points, five predecessor READMEs, and every new Markdown file; not all historical links."
+  },
+  "frozen_n29_bridge": {
+    "path": "project/reviews/n29/2026-09-11-reviewer-v3/GRAPH_TO_MODEL_BRIDGE.md",
+    "sha256": "4a2333802f011a51eca60041aeb412dc157bf8adf99807cb59581b4274152f42",
+    "unchanged": true
+  },
+  "audit_summary": {
+    "status": "PASS",
+    "earlier_checker_or_discovery_imports": false,
+    "solver_used": false,
+    "floating_point_used": false,
+    "profile_regression_is_corroboration_only": true,
+    "profile_regression_counts": [
+      5200300,
+      1352078
+    ],
+    "profile_list_match": true,
+    "m225_rows": 272,
+    "m225_ledger_exclusions": 61,
+    "m225_envelope_exclusions": 211,
+    "m225_assigned_counts": {
+      "B1": 195,
+      "B3": 2,
+      "B2": 13,
+      "C1": 1
+    },
+    "m225_minimum_gap": 1,
+    "m225_local_states": 12772,
+    "all_original_844_template_gaps_match": true,
+    "m226_rows": 9,
+    "m226_ledger_exclusions": 1,
+    "m226_hand_exclusions": 8,
+    "m226_source_states": 859,
+    "Delta16_m_ge_227": "Q>=22 contradicts hand Q<=21",
+    "Delta17_all_positive_surplus": "Q>=19 contradicts source-independent hand Q<=18; m<=221",
+    "Delta15_equality": "Direct regular-critical argument in ASSEMBLED_PROOF.md; no dominating-edge theorem premise",
+    "proof_critical_finite_arithmetic_retained": "The explicit 100-profile tables, residual-tail reconstruction and endpoint integer-envelope tables remain part of the written proof route."
+  },
+  "ci_runs": [
+    {
+      "id": 34649839004,
+      "name": "N30 m225 hand classification and endpoint replay",
+      "head_sha": "01d1fb03d5b68ea4494a4ff29cedd0b49cb5dc16",
+      "status": "completed",
+      "conclusion": "success",
+      "url": "https://github.com/paullenz/MurtySimon742/actions/runs/34649839004"
+    },
+    {
+      "id": 34649839054,
+      "name": "N30 assembled hand route independent audit",
+      "head_sha": "01d1fb03d5b68ea4494a4ff29cedd0b49cb5dc16",
+      "status": "completed",
+      "conclusion": "success",
+      "url": "https://github.com/paullenz/MurtySimon742/actions/runs/34649839054"
+    },
+    {
+      "id": 34649839167,
+      "name": "N30 m225 scalar excess exact audit",
+      "head_sha": "01d1fb03d5b68ea4494a4ff29cedd0b49cb5dc16",
+      "status": "completed",
+      "conclusion": "success",
+      "url": "https://github.com/paullenz/MurtySimon742/actions/runs/34649839167"
+    },
+    {
+      "id": 34649838978,
+      "name": "N30 threshold-tail structure",
+      "head_sha": "01d1fb03d5b68ea4494a4ff29cedd0b49cb5dc16",
+      "status": "completed",
+      "conclusion": "success",
+      "url": "https://github.com/paullenz/MurtySimon742/actions/runs/34649838978"
+    },
+    {
+      "id": 34649838954,
+      "name": "N30 m225 four-envelope exact audit",
+      "head_sha": "01d1fb03d5b68ea4494a4ff29cedd0b49cb5dc16",
+      "status": "completed",
+      "conclusion": "success",
+      "url": "https://github.com/paullenz/MurtySimon742/actions/runs/34649838954"
+    },
+    {
+      "id": 34649838959,
+      "name": "N30 Delta17 early-kernel replay",
+      "head_sha": "01d1fb03d5b68ea4494a4ff29cedd0b49cb5dc16",
+      "status": "completed",
+      "conclusion": "success",
+      "url": "https://github.com/paullenz/MurtySimon742/actions/runs/34649838959"
+    }
+  ],
+  "independent_audit_jobs": [
+    {
+      "id": 103429162469,
+      "name": "independent",
+      "conclusion": "success",
+      "steps": [
+        {
+          "name": "Set up job",
+          "status": "completed",
+          "conclusion": "success"
+        },
+        {
+          "name": "Run actions/checkout@11d5960a326750d5838078e36cf38b85af677262",
+          "status": "completed",
+          "conclusion": "success"
+        },
+        {
+          "name": "Compile the independent integer profile regression",
+          "status": "completed",
+          "conclusion": "success"
+        },
+        {
+          "name": "Corroborate both hand tail arguments across their full demand domains",
+          "status": "completed",
+          "conclusion": "success"
+        },
+        {
+          "name": "Independently reconstruct and exclude every endpoint row",
+          "status": "completed",
+          "conclusion": "success"
+        },
+        {
+          "name": "Check the written transfer payment tables",
+          "status": "completed",
+          "conclusion": "success"
+        },
+        {
+          "name": "Run actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02",
+          "status": "completed",
+          "conclusion": "success"
+        },
+        {
+          "name": "Post Run actions/checkout@11d5960a326750d5838078e36cf38b85af677262",
+          "status": "completed",
+          "conclusion": "success"
+        },
+        {
+          "name": "Complete job",
+          "status": "completed",
+          "conclusion": "success"
+        }
+      ]
+    }
+  ],
+  "scope": {
+    "complete_supplementary_candidate_argument": true,
+    "hand_higher_degree_closure": true,
+    "Delta17_edge_bound": 221,
+    "elementary_Delta15_equality": true,
+    "proof_critical_finite_tables_retained": true,
+    "independent_specialist_review": "OPEN",
+    "governed_ledger_promotion": false,
+    "new_reviewer_pdf_edition": false,
+    "external_acceptance_claimed": false,
+    "unrestricted_conjecture_claimed": false,
+    "corollary_novelty_assessed": false
+  },
+  "next_task": "Prepare a coherent new N30 reviewer edition after an editorial/dependency consistency pass, keeping all finite-table proof obligations and the universal bridge explicit.",
+  "receipt_scope": "This receipt records the preceding research commit. It is published in a subsequent receipt-only commit; that commit's own hash is intentionally excluded to avoid self-reference."
+}
