@@ -16,11 +16,24 @@ jobs:
     timeout-minutes: 15
     steps:
       - uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262
+      - name: Check hand endpoint table without solver
+        run: |
+          set -euo pipefail
+          D=project/research/n30/2026-09-11-threshold-tail-v1
+          /usr/bin/python3 -I -B "$D/verify_hand_endpoint_table.py" --output N30_M226_HAND_ENDPOINT_TABLE_EXACT.json >/dev/null
+          python3 - <<'PY'
+          import json
+          r=json.load(open('N30_M226_HAND_ENDPOINT_TABLE_EXACT.json'))
+          assert r['status']=='PASS' and len(r['rows'])==8
+          print('hand Hall endpoint table exact audit PASS')
+          for x in r['rows']:
+              print(x['tag'],f"delta={x['delta_numerator']}/{x['delta_denominator']}")
+          PY
       - name: Pin solver dependency
         run: |
           python3 -m venv .venv
           .venv/bin/python -m pip install --disable-pip-version-check --only-binary=:all: scipy==1.17.0
-      - name: Analyse exact endpoint rays
+      - name: Analyse exact historical endpoint rays
         run: |
           set -euo pipefail
           D=project/research/n30/2026-09-11-threshold-tail-v1
@@ -28,10 +41,8 @@ jobs:
           python3 - <<'PY'
           import json
           r=json.load(open('N30_M226_NINE_FARKAS_STRUCTURE.json'))
-          assert len(r['rows'])==9
-          assert all(x['rhs']<0 for x in r['rows'])
-          print('nine exact rays reconstructed and structurally classified')
-          print('common categories:',r['structural_categories_present_in_every_certificate'])
+          assert len(r['rows'])==9 and all(x['rhs']<0 for x in r['rows'])
+          print('nine historical exact rays reconstructed')
           PY
       - name: Ablate structural constraint families on eight nontrivial rows
         run: |
@@ -47,21 +58,19 @@ jobs:
         run: |
           set -euo pipefail
           D=project/research/n30/2026-09-11-threshold-tail-v1
-          .venv/bin/python -I -B "$D/simplified_two_transport_exact_v2.py" --output N30_M226_SIMPLIFIED_TWO_TRANSPORT_EXACT.json
+          .venv/bin/python -I -B "$D/simplified_two_transport_exact_v2.py" --output N30_M226_SIMPLIFIED_TWO_TRANSPORT_EXACT.json >/dev/null
           python3 - <<'PY'
           import json
           r=json.load(open('N30_M226_SIMPLIFIED_TWO_TRANSPORT_EXACT.json'))
           assert len(r['rows'])==8
-          assert all(x['status']==2 for x in r['rows'])
-          assert all(x['certificate']['rhs']<0 for x in r['rows'])
+          assert all(x['status']==2 and x['certificate']['rhs']<0 for x in r['rows'])
           print('all eight simplified two-transport systems exactly Farkas-rejected')
-          for x in r['rows']:
-              print(x['tag'],x['certificate']['rhs'],x['certificate']['support_counts'])
           PY
       - uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02
         with:
           name: n30-m226-nine-farkas-structure
           path: |
+            N30_M226_HAND_ENDPOINT_TABLE_EXACT.json
             N30_M226_NINE_FARKAS_STRUCTURE.json
             N30_M226_EIGHT_MODEL_ABLATION.json
             N30_M226_SELECTED_EXCESS_PROJECTION.json
