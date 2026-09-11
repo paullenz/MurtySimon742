@@ -1,0 +1,345 @@
+{
+  "schema": "n30-reviewer-v3-final-packaging-receipt-v1",
+  "recorded_at_utc": "2026-09-11T22:41:12.910Z",
+  "repository": "paullenz/MurtySimon742",
+  "branch": "main",
+  "final_verified_package_commit": "63b2e49b8b1761b7dcf2534ff4cd95e69802c1ce",
+  "final_verified_package_tree": "915575b5e24ac1e2d7f4dd17ec7066de633ac437",
+  "original_reviewed_pdf_publication": "fb9ed4167da09727ee01a5b5ba805137fb8820d3",
+  "original_publication_receipt": "974809f3cd2667e2dad8f06193c3b8cc08866f15",
+  "packaging_changes": [
+    {
+      "commit": "762fafebafa3e1e68d803b517e20b44566548a54",
+      "reason": "Path-specific ordinary-Git exception for the small reviewer ZIP; all historical archive rules preserved.",
+      "verification": {
+        "all_other_blobs_unchanged": 1462,
+        "intended_files": 7,
+        "manuscript_and_companion_bytes_unchanged": true,
+        "status": "PASS"
+      }
+    },
+    {
+      "commit": "63b2e49b8b1761b7dcf2534ff4cd95e69802c1ce",
+      "reason": "Preservation scope compares committed trees rather than LFS-filtered working files; exact source and release byte hashes remain mandatory.",
+      "verification": {
+        "all_other_blobs_unchanged": 1464,
+        "intended_files": 6,
+        "reviewed_pdfs_and_mathematical_sources_unchanged": true,
+        "status": "PASS"
+      }
+    }
+  ],
+  "intermediate_ci_failure": {
+    "run_id": 34654753599,
+    "conclusion": "failure",
+    "cause": "Working-tree diff applied Git LFS clean filters and falsely reported unchanged historical raw archives as edits.",
+    "mathematical_replay_ran": false,
+    "mathematical_evidence_changed": false,
+    "disposition": "Corrected by committed-tree scope comparison; final CI successful.",
+    "report": "project/reviews/n30/2026-09-11-reviewer-v3/PACKAGING_REVIEW.md"
+  },
+  "final_ci": [
+    {
+      "id": 34654962600,
+      "name": "N30 reviewer-v3 package integrity and portable replay",
+      "head_sha": "63b2e49b8b1761b7dcf2534ff4cd95e69802c1ce",
+      "status": "completed",
+      "conclusion": "success",
+      "url": "https://github.com/paullenz/MurtySimon742/actions/runs/34654962600"
+    }
+  ],
+  "final_ci_jobs": [
+    {
+      "id": 103445240109,
+      "name": "package",
+      "conclusion": "success",
+      "steps": [
+        {
+          "name": "Set up job",
+          "status": "completed",
+          "conclusion": "success"
+        },
+        {
+          "name": "Run actions/checkout@11d5960a326750d5838078e36cf38b85af677262",
+          "status": "completed",
+          "conclusion": "success"
+        },
+        {
+          "name": "Check complete proof tables, current links and release hashes",
+          "status": "completed",
+          "conclusion": "success"
+        },
+        {
+          "name": "Extract and replay the exact reviewer ZIP",
+          "status": "completed",
+          "conclusion": "success"
+        },
+        {
+          "name": "Run actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02",
+          "status": "completed",
+          "conclusion": "success"
+        },
+        {
+          "name": "Post Run actions/checkout@11d5960a326750d5838078e36cf38b85af677262",
+          "status": "completed",
+          "conclusion": "success"
+        },
+        {
+          "name": "Complete job",
+          "status": "completed",
+          "conclusion": "success"
+        }
+      ]
+    }
+  ],
+  "exact_byte_readback": {
+    "status": "PASS",
+    "method": "SHA-256 and byte equality against newly fetched GitHub commit objects",
+    "files": 30,
+    "binary_files": 3,
+    "commit": "63b2e49b8b1761b7dcf2534ff4cd95e69802c1ce"
+  },
+  "final_published_file_hashes": [
+    {
+      "bytes": 1435,
+      "encoding": "utf-8",
+      "git_blob_sha": "4b6e9116a916224c5036311cda496d6322de6e82",
+      "path": ".github/workflows/n30-reviewer-v3-package.yml",
+      "sha256": "3edc71ea6a67890d932fbd9cf8b59967b467a22b4cf07b7d98664c65da7fb99c"
+    },
+    {
+      "bytes": 33317,
+      "encoding": "utf-8",
+      "git_blob_sha": "d015eb15a50469640fd9dfb6664efce470daf38d",
+      "path": "README.md",
+      "sha256": "cb56a4621685f5090f0575bcee139e3339dfea312c9d23b59d197e79c9ee66a3"
+    },
+    {
+      "bytes": 18809,
+      "encoding": "utf-8",
+      "git_blob_sha": "077c46a5ab1f846614f9bb7864d2c0abf87127b2",
+      "path": "START_HERE_FOR_REVIEWERS.md",
+      "sha256": "825b87714239d88ee3df8317ab73e8e1e410bea0e69d0b64647e78d92b3784b5"
+    },
+    {
+      "bytes": 4188,
+      "encoding": "utf-8",
+      "git_blob_sha": "bf205a05cbf7a906f99fb696622588ab4a5db0a3",
+      "path": "project/research/n30/2026-09-11-assembled-hand-route-v1/README.md",
+      "sha256": "740c6ba350e3fd123433894c8dbefc6f6d7d3f0521a1791f557160b2e08bad1f"
+    },
+    {
+      "bytes": 673,
+      "git_blob_sha": "410d4dadf7b907936a114229d9aba48654f6cd73",
+      "path": "project/reviews/n30/2026-09-11-reviewer-v3/CURRENT_NAVIGATION_CHECK.json",
+      "sha256": "22b8c32b9bf1ba4c6948c9f9ea700a097d49d95d3c0c8ce6f47616518285275b"
+    },
+    {
+      "bytes": 4652,
+      "encoding": "utf-8",
+      "git_blob_sha": "f4a4669e4cfb3f118284e4a6d8f2f107136fa25c",
+      "path": "project/reviews/n30/2026-09-11-reviewer-v3/EDITORIAL_REVIEW.md",
+      "sha256": "b02b5ecc6691d11e4ee7bda600fffe272e9442fa61291a6529f9d16ee9bb2704"
+    },
+    {
+      "bytes": 7236,
+      "encoding": "utf-8",
+      "git_blob_sha": "02d27580b1e753bdace726d34e3cf8af2b869ce5",
+      "path": "project/reviews/n30/2026-09-11-reviewer-v3/PDF_PREFLIGHT.json",
+      "sha256": "7a969425184f80ed4b704fa404b72f3011ac08e9995268dcbaf76990df1e9e99"
+    },
+    {
+      "bytes": 97274,
+      "encoding": "utf-8",
+      "git_blob_sha": "6c25bbd2e8827ba6b58739619d1dfa9c0c775949",
+      "path": "project/reviews/n30/2026-09-11-reviewer-v3/PROOF.md",
+      "sha256": "6ceaaf2567b8fdc9ae24074178daf079c1b0ed0792b98071aa4b4f4cae0ca0c7"
+    },
+    {
+      "bytes": 1041,
+      "encoding": "utf-8",
+      "git_blob_sha": "586ef5f7473593dd45660f182c60a69add48a767",
+      "path": "project/reviews/n30/2026-09-11-reviewer-v3/README.md",
+      "sha256": "778b450ee992a1b52e39468c374e58be9c53c03c1f05e4e77735e773cd33b498"
+    },
+    {
+      "bytes": 1469,
+      "encoding": "utf-8",
+      "git_blob_sha": "ffec23545bb782b8376976be3b9e17113b5e161e",
+      "path": "project/reviews/n30/2026-09-11-reviewer-v3/REVIEW_REPORT_TEMPLATE.md",
+      "sha256": "8447ec7303c6e353fe9f79f586410b2c3fe26e8a27c8efe487f557259263c2f6"
+    },
+    {
+      "bytes": 2282,
+      "encoding": "utf-8",
+      "git_blob_sha": "0037e54085d9e3e446db6d55bd46716499c7ec27",
+      "path": "project/reviews/n30/2026-09-11-reviewer-v3/SOURCE_MAP.json",
+      "sha256": "c9dd95d5774716fe5fa4f523396e3c5aa58af94cc091c0da1b485843977a4bee"
+    },
+    {
+      "bytes": 8102,
+      "encoding": "utf-8",
+      "git_blob_sha": "73f636f8679358b92f1cf41869d4932782d7eac1",
+      "path": "project/reviews/n30/2026-09-11-reviewer-v3/VERIFICATION_COMPANION.md",
+      "sha256": "18caec8c93fb0410e05ba6ffce2ff8f134d6f3936e00d7ebe8aff150d252e956"
+    },
+    {
+      "bytes": 1431,
+      "encoding": "utf-8",
+      "git_blob_sha": "45b24219720eedcc5aa4981886cd8bca6b2f34e0",
+      "path": "project/reviews/n30/2026-09-11-reviewer-v3/VISUAL_REVIEW.json",
+      "sha256": "58c8e253529ffb30ca1c2d2a7f13a8f4410a1f56003e980bd234123cdf8c63ee"
+    },
+    {
+      "bytes": 20660,
+      "git_blob_sha": "f292fff7fe1749ca6478e456d0be79dae8d346b9",
+      "path": "project/reviews/n30/2026-09-11-reviewer-v3/build_package.py",
+      "sha256": "8b839fd10f4bf917ca9602e994c54004ddaf45a34305b85a600804c3823c01b7"
+    },
+    {
+      "bytes": 5960,
+      "git_blob_sha": "39239605563b77ab2c883e3ed994a4c927b5b342",
+      "path": "project/reviews/n30/2026-09-11-reviewer-v3/check_package.py",
+      "sha256": "0faa5f766cfadb89c3eb8cecae184377147aefff9cf9026887ca34c668881128"
+    },
+    {
+      "bytes": 1276,
+      "encoding": "utf-8",
+      "git_blob_sha": "fe146fc27d740f80d26978f6508c5459a14cfae4",
+      "path": "project/reviews/n30/2026-09-11-reviewer-v3/pdf_layout.lua",
+      "sha256": "96d66bc5ab4513ced401eed24a99f10b955a2e33f11fcd08b240a9b624ebe70b"
+    },
+    {
+      "bytes": 2876,
+      "encoding": "utf-8",
+      "git_blob_sha": "8ab26ead30ccee83e7fd9494505afb2eb5719bee",
+      "path": "project/reviews/n30/2026-09-11-reviewer-v3/pdf_preflight.py",
+      "sha256": "bc923c7419dc1f67ae1c977370f01bfa2083b59901a54c8bff8565b96a186ef4"
+    },
+    {
+      "bytes": 2195,
+      "encoding": "utf-8",
+      "git_blob_sha": "fb912cf08e726f4a886ce26830ebe0923b0abbaf",
+      "path": "project/reviews/n30/2026-09-11-reviewer-v3/replay_bundle.py",
+      "sha256": "a6f1df0158cfafbf3c2a27f0340f748521a9337d14c8b7fb01305f92990d23cd"
+    },
+    {
+      "bytes": 9126,
+      "encoding": "utf-8",
+      "git_blob_sha": "8205d8cd3874a7f9b5903411ca4e955854568390",
+      "path": "project/reviews/n30/2026-09-11-reviewer-v3/update_navigation.py",
+      "sha256": "0768493d493e934105d24c677538e58ed02ff2d71d105e65736d039c0d18622f"
+    },
+    {
+      "bytes": 5658,
+      "encoding": "utf-8",
+      "git_blob_sha": "c46aeca0a509fcb2b5246a268404b9ce762ed933",
+      "path": "releases/REVIEW_READY_INDEX.md",
+      "sha256": "a00e025f0ee41013cdec542a419557ae77e93b20a14d717cbc8fc9cd51b775f9"
+    },
+    {
+      "bytes": 9188,
+      "git_blob_sha": "b1e274361759e0aa61e5f08b677b2d660ebf8d78",
+      "path": "releases/n30-reviewer-v3/BUNDLE_CONTENTS.json",
+      "sha256": "d3c1b1c0986031669f5abde5d4e7bc6709da634c026c96aea1f0be38e921be29"
+    },
+    {
+      "bytes": 1848,
+      "git_blob_sha": "7d3e82051f92d86544c6faa47b9e24d34dbc37e7",
+      "path": "releases/n30-reviewer-v3/MANIFEST.json",
+      "sha256": "1ce650b402790f436acbd9ac38d0c2d66dacd936075a0a7e25adfeeabcf483fb"
+    },
+    {
+      "bytes": 98014,
+      "encoding": "utf-8",
+      "git_blob_sha": "3978b02f3fcada3ecca1feb2d9333eab3ff4113b",
+      "path": "releases/n30-reviewer-v3/N30_Reviewer_Manuscript_v3.md",
+      "sha256": "5b5d6ac43b8dccc978c7b786f99d8a6f390e6300d54e18b210cac252105f6d9f"
+    },
+    {
+      "bytes": 161277,
+      "encoding": "base64",
+      "git_blob_sha": "c3752583f44be6fd3f125a12158791ae710099a8",
+      "path": "releases/n30-reviewer-v3/N30_Reviewer_Manuscript_v3.pdf",
+      "sha256": "285ce5ccdf0dd40be1fb15a1b835e59bf373eac4f5cff53760b0e2a514328134"
+    },
+    {
+      "bytes": 410926,
+      "git_blob_sha": "056748c5438362ae6686496c9cb69bb0c53694cc",
+      "path": "releases/n30-reviewer-v3/N30_Reviewer_Package_v3.zip",
+      "sha256": "667e8cae03b109d8027028005348b4ceb2af27e95b6cb1b99ad73bfff560e2b7"
+    },
+    {
+      "bytes": 20129,
+      "encoding": "utf-8",
+      "git_blob_sha": "5f3097705f9b70fb2e2be5ff420c3791c4957ba3",
+      "path": "releases/n30-reviewer-v3/N30_Verification_Companion_v3.md",
+      "sha256": "5fd63ef0a6727a80fa0439d3adf769f596ab3163f88c6a9e6a8758611ec6624a"
+    },
+    {
+      "bytes": 73785,
+      "encoding": "base64",
+      "git_blob_sha": "c08004615a4c30887aa355d6d0687543b9707dc4",
+      "path": "releases/n30-reviewer-v3/N30_Verification_Companion_v3.pdf",
+      "sha256": "797d70d4c0471c890db883721a3779fe8f2fb0c199d918091beba65a0fb73dfb"
+    },
+    {
+      "bytes": 1977,
+      "encoding": "utf-8",
+      "git_blob_sha": "6c9c79ae5199115e533abc8f6dd5f6477c0e119f",
+      "path": "releases/n30-reviewer-v3/README.md",
+      "sha256": "27c0327b44e2cc4afe40d04e965550d290a534c175eeab4db29f8a964fb3ba3a"
+    },
+    {
+      "bytes": 429,
+      "git_blob_sha": "0f0ceed0a74e17283a827ad49fc110421e0c3fca",
+      "path": ".gitattributes",
+      "sha256": "94d8fb9178f1971e25d3f8646b5ab7b6c89e14045a71b7350c2351f52e752a07"
+    },
+    {
+      "bytes": 1708,
+      "git_blob_sha": "6c9aad4a75a7d6f25aff946e3b522f301f3d952f",
+      "path": "project/reviews/n30/2026-09-11-reviewer-v3/PACKAGING_REVIEW.md",
+      "sha256": "687f073837767470a9c0d2b0b274e6738823fa144e6c018c41516d811f3e7e45"
+    }
+  ],
+  "final_zip": {
+    "bytes": 410926,
+    "git_blob_sha": "056748c5438362ae6686496c9cb69bb0c53694cc",
+    "path": "releases/n30-reviewer-v3/N30_Reviewer_Package_v3.zip",
+    "sha256": "667e8cae03b109d8027028005348b4ceb2af27e95b6cb1b99ad73bfff560e2b7"
+  },
+  "pdfs": {
+    "manuscript": {
+      "pages": 45,
+      "sha256": "285ce5ccdf0dd40be1fb15a1b835e59bf373eac4f5cff53760b0e2a514328134"
+    },
+    "companion": {
+      "pages": 7,
+      "sha256": "797d70d4c0471c890db883721a3779fe8f2fb0c199d918091beba65a0fb73dfb"
+    },
+    "unchanged_since_visual_review": true,
+    "total_pages_visually_reviewed": 52
+  },
+  "navigation": {
+    "relative_links_checked": 196,
+    "current_versions": {
+      "n25": 2,
+      "n27": 2,
+      "n28": 2,
+      "n29": 4,
+      "n30": 3
+    },
+    "all_current_entry_points_updated": true
+  },
+  "scope": {
+    "complete_candidate": true,
+    "all_proof_critical_tables_in_manuscript": true,
+    "finite_tables_remain_proof_critical": true,
+    "internal_arithmetic": "REPRODUCED",
+    "independent_specialist_review": "OPEN",
+    "governed_ledger_promotion": false,
+    "unrestricted_conjecture_claimed": false
+  },
+  "receipt_scope": "This final receipt is a subsequent receipt-only commit. It supersedes the original receipt only as to the ZIP/build/packaging hashes and records the complete correction history. Both reviewed PDFs and every mathematical source are unchanged. No ZIP or PDF is rebuilt to include this self-referential receipt."
+}
