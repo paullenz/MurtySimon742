@@ -6,6 +6,7 @@ on:
     paths:
       - '.github/workflows/general-rx-hall-n29-t2-regime-structure.yml'
       - 'project/research/general_n/2026-09-11-regime-structure-v1/n29_t2_regime_structure_scan.py'
+      - 'project/research/general_n/2026-09-11-regime-structure-v1/n29_t2_unit_demand_regime_exact.py'
 
 permissions:
   contents: read
@@ -37,6 +38,16 @@ jobs:
             --rows inputs/row_survivors.txt \
             --exact-script "$R/n29_t2_sh3_c11_three_scalar_exact.py" \
             --output out/N29_T2_REGIME_STRUCTURE.json
+      - name: Exact unit-demand regime replay
+        run: |
+          set -euo pipefail
+          R=project/research/general_n/2026-09-09-rx-hall-v1
+          N=project/research/general_n/2026-09-11-regime-structure-v1
+          /usr/bin/python3 -I -B "$N/n29_t2_unit_demand_regime_exact.py" \
+            --demands-json inputs/demands.json \
+            --rows inputs/row_survivors.txt \
+            --exact-script "$R/n29_t2_sh3_c11_three_scalar_exact.py" \
+            --output out/N29_T2_UNIT_DEMAND_REGIME_EXACT.json
           sha256sum out/*.json > out/SHA256SUMS.txt
       - uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02
         if: always()
