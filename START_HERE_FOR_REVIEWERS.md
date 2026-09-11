@@ -77,10 +77,12 @@ The n=29 candidate is now an especially clean place to audit the universal graph
 - [`releases/n29-reviewer-v4/N29_Reviewer_Manuscript_v4.pdf`](releases/n29-reviewer-v4/N29_Reviewer_Manuscript_v4.pdf)
 - [`releases/n29-reviewer-v4/N29_Verification_Companion_v4.pdf`](releases/n29-reviewer-v4/N29_Verification_Companion_v4.pdf)
 
-**Canonical sources:**
+**Canonical sources and audit:**
 
 - [`project/reviews/n29/2026-09-11-reviewer-v4/PROOF.md`](project/reviews/n29/2026-09-11-reviewer-v4/PROOF.md)
 - [`project/reviews/n29/2026-09-11-reviewer-v4/VERIFICATION_COMPANION.md`](project/reviews/n29/2026-09-11-reviewer-v4/VERIFICATION_COMPANION.md)
+- [`project/reviews/n29/2026-09-11-reviewer-v4-redteam-v1/REPORT.md`](project/reviews/n29/2026-09-11-reviewer-v4-redteam-v1/REPORT.md) — dedicated hostile audit: no blocking flaw found.
+- [`project/reviews/n29/2026-09-11-reviewer-v4/REDTEAM_HARDENING.md`](project/reviews/n29/2026-09-11-reviewer-v4/REDTEAM_HARDENING.md) — explicit endpoint table, parameterisation and citation hardening.
 - [`project/research/general_n/2026-09-11-threshold-tail-collapse-v1/N29_DELTA16_THRESHOLD_TAIL_HAND_PROOF.md`](project/research/general_n/2026-09-11-threshold-tail-collapse-v1/N29_DELTA16_THRESHOLD_TAIL_HAND_PROOF.md)
 - [`project/reviews/n29/2026-09-11-reviewer-v3/GRAPH_TO_MODEL_BRIDGE.md`](project/reviews/n29/2026-09-11-reviewer-v3/GRAPH_TO_MODEL_BRIDGE.md) — frozen self-contained bridge, appended to the v4 PDF.
 
@@ -88,7 +90,9 @@ For `Delta=16`, reviewer-v4 uses only the exact ledger/demand inequality, residu
 
 The corrected reviewer-v3 minimal kernel remains valuable independent evidence, but is no longer proof-critical. Its exact replays reject 126/126 rows at `m=211` and 1,467/1,467 rows at `m=210`. The old v1 grouped-model normalization bug remains quarantined and documented.
 
-The highest-value review is now the **universal bridge + threshold-capacity lemma + hand clipping argument**, followed by the short `Delta=15`, `Delta=17` and residual h-index branches. A rerun of the late LP/Farkas stack is optional corroboration, not a prerequisite to assess v4.
+A dedicated same-assistant hostile audit then rebuilt the v4 logic from scratch. Its separately specified exact checker passed run `34621982241`: all 1,352,078 demand multisets were swept, all clipping maps were globally regression-tested with zero counterexamples, the threshold-capacity algebra was checked over 1,472 integer parameter combinations, and the remaining degree branches were independently recomputed. This is strong internal evidence but is **not** external validation.
+
+The highest-value external review remains the **universal bridge + threshold-capacity lemma + hand clipping argument**, followed by the short `Delta=15`, `Delta=17` and residual h-index branches. A rerun of the late LP/Farkas stack is optional corroboration, not a prerequisite to assess v4.
 
 ## n=30 complete candidate
 

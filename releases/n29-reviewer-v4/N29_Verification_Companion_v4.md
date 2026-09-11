@@ -195,3 +195,8 @@ No rerun of the LP/Farkas stack is required to assess reviewer-v4.
 ## 9. Provenance rule
 
 Reviewer-v3 and all earlier packages remain frozen. The old computational route, the normalization bug, its correction and every audit report stay public. Reviewer-v4 is a successor, not a rewrite of history.
+
+
+## Hostile-audit disposition
+
+The dedicated reviewer-v4 hostile audit found **no blocking flaw**. Its separately specified exact checker passed GitHub Actions run `34621982241`. The audit report is `project/reviews/n29/2026-09-11-reviewer-v4-redteam-v1/REPORT.md`. This is internal hostile review, not external validation.
