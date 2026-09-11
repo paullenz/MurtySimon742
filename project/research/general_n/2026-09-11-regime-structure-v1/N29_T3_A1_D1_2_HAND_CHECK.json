@@ -1,0 +1,126 @@
+{
+  "floating_point_used": false,
+  "interpretation": "The previously unresolved D1=2 A1 branch is eliminated by the hand L<=5/L=6/L=7 argument; the tiny 43-state post-one-label enumeration is retained only as an independent exact audit of that derivation.",
+  "post_one_label_exact_audit": {
+    "cutoff_census": {
+      "5": 30,
+      "6": 12,
+      "7": 1
+    },
+    "minimum_Hall_deficit": 2,
+    "minimum_gap_witness": [
+      0,
+      0,
+      10,
+      [
+        2,
+        2,
+        4,
+        4,
+        4,
+        4,
+        4,
+        4
+      ],
+      5,
+      32,
+      30
+    ],
+    "states": 43
+  },
+  "schema": "n29-t3-a1-d1-2-hand-check-v1",
+  "solver_used": false,
+  "status": "PASS",
+  "symbolic_case_rows": [
+    {
+      "D2": 0,
+      "D3": 0,
+      "D4": 10,
+      "L_6_bound": 30,
+      "L_le_5_bound": 30,
+      "budget_C": 12,
+      "top8_demand3": 0,
+      "top8_need": 32
+    },
+    {
+      "D2": 0,
+      "D3": 1,
+      "D4": 9,
+      "L_6_bound": 30,
+      "L_le_5_bound": 27,
+      "budget_C": 11,
+      "top8_demand3": 0,
+      "top8_need": 32
+    },
+    {
+      "D2": 0,
+      "D3": 2,
+      "D4": 8,
+      "L_6_bound": 30,
+      "L_le_5_bound": 25,
+      "budget_C": 10,
+      "top8_demand3": 0,
+      "top8_need": 32
+    },
+    {
+      "D2": 0,
+      "D3": 3,
+      "D4": 7,
+      "L_6_bound": 25,
+      "L_le_5_bound": 22,
+      "budget_C": 9,
+      "top8_demand3": 1,
+      "top8_need": 31
+    },
+    {
+      "D2": 0,
+      "D3": 4,
+      "D4": 6,
+      "L_6_bound": 24,
+      "L_le_5_bound": 20,
+      "budget_C": 8,
+      "top8_demand3": 2,
+      "top8_need": 30
+    },
+    {
+      "D2": 1,
+      "D3": 0,
+      "D4": 9,
+      "L_6_bound": 30,
+      "L_le_5_bound": 25,
+      "budget_C": 10,
+      "top8_demand3": 0,
+      "top8_need": 32
+    },
+    {
+      "D2": 1,
+      "D3": 1,
+      "D4": 8,
+      "L_6_bound": 24,
+      "L_le_5_bound": 22,
+      "budget_C": 9,
+      "top8_demand3": 0,
+      "top8_need": 32
+    },
+    {
+      "D2": 1,
+      "D3": 2,
+      "D4": 7,
+      "L_6_bound": 24,
+      "L_le_5_bound": 20,
+      "budget_C": 8,
+      "top8_demand3": 1,
+      "top8_need": 31
+    },
+    {
+      "D2": 2,
+      "D3": 0,
+      "D4": 8,
+      "L_6_bound": 24,
+      "L_le_5_bound": 20,
+      "budget_C": 8,
+      "top8_demand3": 0,
+      "top8_need": 32
+    }
+  ]
+}
