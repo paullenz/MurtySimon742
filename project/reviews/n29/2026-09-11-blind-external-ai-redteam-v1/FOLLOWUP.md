@@ -46,6 +46,8 @@ t=8:    0
 
 We independently regenerated the same census from scratch on 11 September and obtained exactly the same seven values. This is independent confirmation of the front end of the n=29 Delta=16 finite calculation.
 
+Reproduction script: [`charging_domain_census.py`](charging_domain_census.py). It uses only the Python standard library and exact `Fraction` arithmetic.
+
 ## Independent graph-atlas bridge regression
 
 The reviewer reported an exhaustive NetworkX graph-atlas check through order 7. We independently reproduced it.
@@ -81,6 +83,8 @@ t in {-3,-2,-1,0}.
 ```
 
 Therefore this regression does **not** independently exercise residual activity, charging, or threshold capacity, all of which rely on the positive-surplus dense regime. It is evidence for the base bridge only.
+
+Reproduction script: [`atlas_bridge_regression.py`](atlas_bridge_regression.py). It requires NetworkX and uses only `graph_atlas_g()`; no project verifier is imported.
 
 ## New analytic simplification supplied by the reviewer
 
@@ -142,6 +146,8 @@ Historical workflows remain preserved as corroborating evidence only.
 ## Threshold-capacity presentation
 
 The blind reviewer agreed that the compressed threshold paragraph in the original standalone bridge was not self-contained enough, even though the companion expanded lemma repairs it. The current project follow-up therefore treats self-contained expansion in the reviewer-facing bridge as a worthwhile editorial hardening step.
+
+That hardening is now implemented in [`../2026-09-11-reviewer-v3/GRAPH_TO_MODEL_BRIDGE.md`](../2026-09-11-reviewer-v3/GRAPH_TO_MODEL_BRIDGE.md).
 
 A separate 11 September cross-order re-audit also found and corrected a non-blocking sign/order typo in the explanatory algebra of the expanded threshold lemma. The corrected sign proves the same final inequality; no numerical result changed.
 
