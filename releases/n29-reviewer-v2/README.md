@@ -1,11 +1,13 @@
 # n=29 Fan-free reviewer package v2
 
-**Current reviewer-facing edition — 9 September 2026.**
+**Historical reviewer edition - superseded on 11 September 2026 by reviewer-v3.**
 
 Claim: `e(G) <= 210, equality exactly K(14,15)`.
 
-Start with [N29_Reviewer_Manuscript_v2.pdf](N29_Reviewer_Manuscript_v2.pdf), then [N29_Verification_Companion_v2.pdf](N29_Verification_Companion_v2.pdf).
+This package remains mathematically useful and is preserved unchanged as provenance, but it is **not the current recommended review surface**. Reviewers should now use [`../n29-reviewer-v3/README.md`](../n29-reviewer-v3/README.md) once available, together with the canonical reviewer-v3 source at [`../../project/reviews/n29/2026-09-11-reviewer-v3/README.md`](../../project/reviews/n29/2026-09-11-reviewer-v3/README.md).
 
-Fan's 1987 theorem is retained for historical attribution but is **not a logical dependency** of this edition. The replacement is [`FAN_FREE_REDUCTION.md`](../../project/research/fan-free-fixed-orders/2026-09-09-v1/FAN_FREE_REDUCTION.md), and the assembled replacement has passed the internal [`FAN_FREE_AUDIT.md`](../../project/research/fan-free-fixed-orders/2026-09-09-v1/FAN_FREE_AUDIT.md).
+Reviewer-v3 replaces the broader historical Delta=16 route with the minimal trusted kernel, makes threshold capacity self-contained, incorporates the blind hostile review, and removes the `m=215` and `m>=216` Delta=16 computations from the logical dependency chain by hand arguments.
 
-The previous [`n29-reviewer-v1`](../n29-reviewer-v1/README.md) package remains preserved unchanged as historical provenance. No external acceptance or formal verification is claimed.
+Fan's 1987 theorem was already historical attribution only in v2. The previous [`n29-reviewer-v1`](../n29-reviewer-v1/README.md) package is also preserved as earlier provenance.
+
+No external acceptance or formal verification is claimed.
