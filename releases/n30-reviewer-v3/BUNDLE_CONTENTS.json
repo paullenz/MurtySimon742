@@ -118,13 +118,18 @@
     },
     {
       "path": "project/reviews/n30/2026-09-11-reviewer-v3/CURRENT_NAVIGATION_CHECK.json",
-      "bytes": 631,
-      "sha256": "e282a23005a66c8ef42035521a9618f5b3735aaf4e959dfcaf791eb56f8a4240"
+      "bytes": 673,
+      "sha256": "22b8c32b9bf1ba4c6948c9f9ea700a097d49d95d3c0c8ce6f47616518285275b"
     },
     {
       "path": "project/reviews/n30/2026-09-11-reviewer-v3/EDITORIAL_REVIEW.md",
       "bytes": 4652,
       "sha256": "b02b5ecc6691d11e4ee7bda600fffe272e9442fa61291a6529f9d16ee9bb2704"
+    },
+    {
+      "path": "project/reviews/n30/2026-09-11-reviewer-v3/PACKAGING_REVIEW.md",
+      "bytes": 1708,
+      "sha256": "687f073837767470a9c0d2b0b274e6738823fa144e6c018c41516d811f3e7e45"
     },
     {
       "path": "project/reviews/n30/2026-09-11-reviewer-v3/PDF_PREFLIGHT.json",
@@ -168,8 +173,8 @@
     },
     {
       "path": "project/reviews/n30/2026-09-11-reviewer-v3/check_package.py",
-      "bytes": 5748,
-      "sha256": "bb1f362ae41721a333c166286b2100411a793b83eaf6a08e17de2dc6d97061f7"
+      "bytes": 5960,
+      "sha256": "0faa5f766cfadb89c3eb8cecae184377147aefff9cf9026887ca34c668881128"
     },
     {
       "path": "project/reviews/n30/2026-09-11-reviewer-v3/pdf_layout.lua",

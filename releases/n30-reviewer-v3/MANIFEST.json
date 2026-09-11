@@ -12,8 +12,8 @@
   "files": [
     {
       "path": "releases/n30-reviewer-v3/BUNDLE_CONTENTS.json",
-      "bytes": 8991,
-      "sha256": "3cc603a9bb1f4bbd8b87c2b9ca4f05bceff2d10c41006f246d705ecaa72d5715"
+      "bytes": 9188,
+      "sha256": "d3c1b1c0986031669f5abde5d4e7bc6709da634c026c96aea1f0be38e921be29"
     },
     {
       "path": "releases/n30-reviewer-v3/N30_Reviewer_Manuscript_v3.md",
@@ -27,8 +27,8 @@
     },
     {
       "path": "releases/n30-reviewer-v3/N30_Reviewer_Package_v3.zip",
-      "bytes": 409607,
-      "sha256": "053e32b6848f224fa7cf59cecfe52b5b2f43f06d391d2892c307bbe25e28aefc"
+      "bytes": 410926,
+      "sha256": "667e8cae03b109d8027028005348b4ceb2af27e95b6cb1b99ad73bfff560e2b7"
     },
     {
       "path": "releases/n30-reviewer-v3/N30_Verification_Companion_v3.md",
