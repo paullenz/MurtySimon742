@@ -2,6 +2,11 @@
   "schema": "n30-reviewer-v3-bundle-content-v1",
   "files": [
     {
+      "path": ".gitattributes",
+      "bytes": 429,
+      "sha256": "94d8fb9178f1971e25d3f8646b5ab7b6c89e14045a71b7350c2351f52e752a07"
+    },
+    {
       "path": "project/research/general_n/2026-09-11-canonical-bridge-v1/CANONICAL_BRIDGE.md",
       "bytes": 17501,
       "sha256": "c87068f40785baa790495aa5811b92370012845c0e592cfeacd6c03a3976dcd2"
@@ -113,8 +118,8 @@
     },
     {
       "path": "project/reviews/n30/2026-09-11-reviewer-v3/CURRENT_NAVIGATION_CHECK.json",
-      "bytes": 575,
-      "sha256": "2dc31bbd7f0a13f721f085344661b3514e9b5bb29fa979b8548620adfa6a2cb4"
+      "bytes": 631,
+      "sha256": "e282a23005a66c8ef42035521a9618f5b3735aaf4e959dfcaf791eb56f8a4240"
     },
     {
       "path": "project/reviews/n30/2026-09-11-reviewer-v3/EDITORIAL_REVIEW.md",
@@ -158,13 +163,13 @@
     },
     {
       "path": "project/reviews/n30/2026-09-11-reviewer-v3/build_package.py",
-      "bytes": 20623,
-      "sha256": "6a0a24116d69c5aa2ea3397d8a8e5bd5e85039f500bf8b9e8dee0c25dc9ecd70"
+      "bytes": 20660,
+      "sha256": "8b839fd10f4bf917ca9602e994c54004ddaf45a34305b85a600804c3823c01b7"
     },
     {
       "path": "project/reviews/n30/2026-09-11-reviewer-v3/check_package.py",
-      "bytes": 5357,
-      "sha256": "898d1d36c8dd6955767cd83e53da946f0f48f63e6bd6dbdae3e7aebbf9d5c7ad"
+      "bytes": 5748,
+      "sha256": "bb1f362ae41721a333c166286b2100411a793b83eaf6a08e17de2dc6d97061f7"
     },
     {
       "path": "project/reviews/n30/2026-09-11-reviewer-v3/pdf_layout.lua",

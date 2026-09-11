@@ -4,3 +4,6 @@
 *.drup filter=lfs diff=lfs merge=lfs -text
 *.drat filter=lfs diff=lfs merge=lfs -text
 *.lrat filter=lfs diff=lfs merge=lfs -text
+
+# Small, self-contained reviewer download; keep its bytes in ordinary Git.
+releases/n30-reviewer-v3/N30_Reviewer_Package_v3.zip -filter -diff -merge -text

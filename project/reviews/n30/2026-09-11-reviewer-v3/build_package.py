@@ -284,6 +284,7 @@ def finalize():
     source_map = json.loads((HERE/'SOURCE_MAP.json').read_text())
     paths = {ROOT/p for p in source_map['input_sha256']}
     paths.update(ROOT/p for p in extras)
+    paths.add(ROOT/'.gitattributes')
     paths.update(p for p in HERE.iterdir() if p.is_file() and p.name not in {'PUBLICATION_RECEIPT.json'})
     paths.update(p for p in OUT.iterdir() if p.is_file() and p.name not in {'MANIFEST.json','BUNDLE_CONTENTS.json','N30_Reviewer_Package_v3.zip'})
     records = inventory(paths)
