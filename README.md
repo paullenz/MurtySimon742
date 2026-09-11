@@ -262,14 +262,14 @@ The [13/22 reviewer release](releases/general-13-22-reviewer-v1/README.md), [13/
 
 ## Review-paper index
 
-The fixed-order PDF rows below point to the **current reviewer packages**. Historical packages remain preserved in their release directories. `n=29` is reviewer-v3; the other fixed orders remain Fan-free reviewer-v2, with 11 September analytic hardening annotations at `n=28` and `n=30`.
+The fixed-order PDF rows below point to the **current reviewer packages**. Historical packages remain preserved in their release directories. `n=29` is reviewer-v4; the other fixed orders remain Fan-free reviewer-v2, with 11 September analytic hardening annotations at `n=28` and `n=30`.
 
 | Scope | Proof / paper | Evidence / review |
 |---|---|---|
 | n=25 | [Reviewer manuscript v2](releases/n25-reviewer-v2/N25_Reviewer_Manuscript_v2.pdf) | [Verification companion v2](releases/n25-reviewer-v2/N25_Verification_Companion_v2.pdf) |
 | n=27 | [Reviewer manuscript v2](releases/n27-reviewer-v2/N27_Reviewer_Manuscript_v2.pdf) | [Verification companion v2](releases/n27-reviewer-v2/N27_Verification_Companion_v2.pdf) |
 | n=28 | [Reviewer manuscript v2](releases/n28-reviewer-v2/N28_Reviewer_Manuscript_v2.pdf) | [Verification companion v2](releases/n28-reviewer-v2/N28_Verification_Companion_v2.pdf) |
-| n=29 | [Reviewer manuscript v3](releases/n29-reviewer-v3/N29_Reviewer_Manuscript_v3.pdf) | [Verification companion v3](releases/n29-reviewer-v3/N29_Verification_Companion_v3.pdf) |
+| n=29 | [Reviewer manuscript v4](releases/n29-reviewer-v4/N29_Reviewer_Manuscript_v4.pdf) | [Verification companion v4](releases/n29-reviewer-v4/N29_Verification_Companion_v4.pdf) |
 | n=30 | [Reviewer manuscript v2](releases/n30-reviewer-v2/N30_Reviewer_Manuscript_v2.pdf) | [Verification companion v2](releases/n30-reviewer-v2/N30_Verification_Companion_v2.pdf) |
 | **General 7/12** | [Reviewer manuscript](releases/general-7-12-reviewer-v1/General_7_12_Reviewer_Manuscript_v1.pdf) | [Verification companion](releases/general-7-12-reviewer-v1/General_7_12_Verification_Companion_v1.pdf) |
 | General 293/500 | [Reviewer manuscript](releases/general-293-500-reviewer-v1/General_293_500_Reviewer_Manuscript_v1.pdf) | [Verification companion](releases/general-293-500-reviewer-v1/General_293_500_Verification_Companion_v1.pdf) |
