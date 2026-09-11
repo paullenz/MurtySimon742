@@ -1,0 +1,30 @@
+{
+  "schema": "n30-reviewer-v3-source-map",
+  "baseline_commit": "81f37b80f643dd12f371680e673a95f6de793df2",
+  "input_sha256": {
+    "project/research/n30/2026-09-11-assembled-hand-route-v1/ASSEMBLED_PROOF.md": "d2a0b37ddccfa51204a817f0e9fff1537f58c4a0c789fc76e3681c9f6017f8ad",
+    "project/research/general_n/2026-09-11-canonical-bridge-v1/CANONICAL_BRIDGE.md": "c87068f40785baa790495aa5811b92370012845c0e592cfeacd6c03a3976dcd2",
+    "project/research/n30/2026-09-11-assembled-hand-route-v1/TWELVE_LABEL_TRANSFER.md": "3eaf4b64c6e388823a0eca47fbdf646f6f7e0a71197124525a84651caf22512c",
+    "project/research/n30/2026-09-11-m225-hand-classification-v1/HAND_CLASSIFICATION.md": "2c410a2a9c939441579d1d9ea1e899a18b79a2ed150ff112b2fb13dceae8ed70",
+    "project/research/n30/2026-09-11-m225-hand-classification-v1/PREIMAGE_ARITHMETIC.md": "8fe4a58f3c472c1f3964f403be2a07f0e8fb574a4e3033f50d9b0f03a3950648",
+    "project/research/n30/2026-09-11-threshold-tail-v1/N30_M225_THRESHOLD_SLACK_REDUCTION.md": "641e300abea1959327b7f86c87863e91924e800b4ea8ca86ca949d4a5a5260dd",
+    "project/research/n30/2026-09-11-threshold-tail-v1/N30_M226_HAND_ENDPOINT_REDUCTION.md": "1bcd6da2e687149315461446c90a613ff7c54a6e7f369a2a4ac4fdd9575bb2c2",
+    "project/research/n30/2026-09-11-m225-resource-envelope-v1/FOUR_ENVELOPE_REDUCTION.md": "be1c5025c359a223ab8023a5940b07c96adf6132feb012156a1d55459ff945f7",
+    "project/research/n30/2026-09-11-m225-resource-envelope-v1/EXACT_APPENDIX.md": "c658de4f40e6382c48c71d16f438c093eb750388e3705e3a59b379ceca7a206a",
+    "project/reviews/n30/2026-09-11-reviewer-v3/VERIFICATION_COMPANION.md": "18caec8c93fb0410e05ba6ffce2ff8f134d6f3936e00d7ebe8aff150d252e956",
+    "project/research/n30/2026-09-11-assembled-hand-route-v1/BRIDGE_AUDIT.md": "042bd5113e2b3bd82dc3aa5e5625be3d537800b5d7220cf9a3e0bebe96d94395"
+  },
+  "appendices": {
+    "CANONICAL_BRIDGE.md": "A",
+    "TWELVE_LABEL_TRANSFER.md": "B",
+    "HAND_CLASSIFICATION.md": "C",
+    "PREIMAGE_ARITHMETIC.md": "D",
+    "N30_M225_THRESHOLD_SLACK_REDUCTION.md": "E",
+    "N30_M226_HAND_ENDPOINT_REDUCTION.md": "F",
+    "FOUR_ENVELOPE_REDUCTION.md": "G",
+    "EXACT_APPENDIX.md": "H"
+  },
+  "editorial_record": "EDITORIAL_REVIEW.md",
+  "frozen_inputs_modified": false,
+  "finite_tables_in_manuscript": true
+}

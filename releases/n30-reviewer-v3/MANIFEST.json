@@ -1,0 +1,49 @@
+{
+  "schema": "n30-reviewer-v3-manifest",
+  "date": "2026-09-11",
+  "baseline_commit": "81f37b80f643dd12f371680e673a95f6de793df2",
+  "claim": "e(G)<=225; equality exactly K(15,15)",
+  "status": "Complete candidate; internal arithmetic REPRODUCED; independent specialist review OPEN",
+  "proof_critical_finite_tables_retained": true,
+  "governed_ledger_promotion": false,
+  "external_review_complete": false,
+  "old_reviewer_v2_preserved": true,
+  "source_map": "project/reviews/n30/2026-09-11-reviewer-v3/SOURCE_MAP.json",
+  "files": [
+    {
+      "path": "releases/n30-reviewer-v3/BUNDLE_CONTENTS.json",
+      "bytes": 8843,
+      "sha256": "75cc505775abae402f00df3ffc16385254ec93f459bac35ff233e911c26b57ad"
+    },
+    {
+      "path": "releases/n30-reviewer-v3/N30_Reviewer_Manuscript_v3.md",
+      "bytes": 98014,
+      "sha256": "5b5d6ac43b8dccc978c7b786f99d8a6f390e6300d54e18b210cac252105f6d9f"
+    },
+    {
+      "path": "releases/n30-reviewer-v3/N30_Reviewer_Manuscript_v3.pdf",
+      "bytes": 161277,
+      "sha256": "285ce5ccdf0dd40be1fb15a1b835e59bf373eac4f5cff53760b0e2a514328134"
+    },
+    {
+      "path": "releases/n30-reviewer-v3/N30_Reviewer_Package_v3.zip",
+      "bytes": 408999,
+      "sha256": "00b970a0c42eb70bff53b99bae55781f246fbd5bc37444688d4c74c094c2ffd2"
+    },
+    {
+      "path": "releases/n30-reviewer-v3/N30_Verification_Companion_v3.md",
+      "bytes": 20129,
+      "sha256": "5fd63ef0a6727a80fa0439d3adf769f596ab3163f88c6a9e6a8758611ec6624a"
+    },
+    {
+      "path": "releases/n30-reviewer-v3/N30_Verification_Companion_v3.pdf",
+      "bytes": 73785,
+      "sha256": "797d70d4c0471c890db883721a3779fe8f2fb0c199d918091beba65a0fb73dfb"
+    },
+    {
+      "path": "releases/n30-reviewer-v3/README.md",
+      "bytes": 1977,
+      "sha256": "27c0327b44e2cc4afe40d04e965550d290a534c175eeab4db29f8a964fb3ba3a"
+    }
+  ]
+}

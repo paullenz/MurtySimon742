@@ -1,0 +1,27 @@
+{
+  "schema": "n30-reviewer-v3-visual-review-v1",
+  "status": "PASS",
+  "reviewer": "ChatGPT/Geeps; internal visual review",
+  "date": "2026-09-11",
+  "files": [
+    {
+      "path": "releases/n30-reviewer-v3/N30_Reviewer_Manuscript_v3.pdf",
+      "sha256": "285ce5ccdf0dd40be1fb15a1b835e59bf373eac4f5cff53760b0e2a514328134",
+      "pages_reviewed": 45
+    },
+    {
+      "path": "releases/n30-reviewer-v3/N30_Verification_Companion_v3.pdf",
+      "sha256": "797d70d4c0471c890db883721a3779fe8f2fb0c199d918091beba65a0fb73dfb",
+      "pages_reviewed": 7
+    }
+  ],
+  "total_pages_reviewed": 52,
+  "method": "All pages rendered with Poppler at maximum dimension 1200 pixels; every final page inspected in contact sheets, with full-page inspection of the coefficient table, source inventory and endpoint table. Geometry and all 211 histogram pairs also checked programmatically.",
+  "corrected_during_preflight": [
+    "Seven-column source certificate table had overlapping coefficient/minimum cells; column widths and break opportunities corrected.",
+    "Long source inventory paths exceeded the text margin; internal break opportunities added.",
+    "Markdown paired-carets misrendered histogram multiplicities; superscript extension disabled and all 211 histogram pairs checked exactly after PDF text extraction."
+  ],
+  "remaining_layout_defects": [],
+  "mathematical_acceptance": "Candidate; independent specialist review OPEN"
+}

@@ -1,5 +1,7 @@
 # N30: complete supplementary proof with hand lemmas and integer tables
 
+**Later reviewer edition:** this checkpoint is now consolidated in [N30 reviewer-v3](../../../../releases/n30-reviewer-v3/README.md), with a self-contained manuscript, verification companion and portable replay ZIP. The text below records the preceding assembly checkpoint.
+
 11 September 2026. Continuation from main `d680ddd208d338b019d00492f9498e6da2acfdbc` in `paullenz/MurtySimon742`.
 
 **Complete supplementary candidate argument; internal exact arithmetic REPRODUCED. Independent specialist review OPEN. Frozen reviewer-v2 and the governed ledger are unchanged.**

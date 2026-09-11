@@ -1,0 +1,220 @@
+{
+  "schema": "n30-reviewer-v3-bundle-content-v1",
+  "files": [
+    {
+      "path": "project/research/general_n/2026-09-11-canonical-bridge-v1/CANONICAL_BRIDGE.md",
+      "bytes": 17501,
+      "sha256": "c87068f40785baa790495aa5811b92370012845c0e592cfeacd6c03a3976dcd2"
+    },
+    {
+      "path": "project/research/n30/2026-09-11-assembled-hand-route-v1/ASSEMBLED_PROOF.md",
+      "bytes": 11175,
+      "sha256": "d2a0b37ddccfa51204a817f0e9fff1537f58c4a0c789fc76e3681c9f6017f8ad"
+    },
+    {
+      "path": "project/research/n30/2026-09-11-assembled-hand-route-v1/ASSEMBLY_AUDIT.json",
+      "bytes": 7103,
+      "sha256": "9722c6417d54a0fbe248ec1fe89bac0fff286cff8efe1c94ca3fb0aed2e9e61a"
+    },
+    {
+      "path": "project/research/n30/2026-09-11-assembled-hand-route-v1/BRIDGE_AUDIT.md",
+      "bytes": 8978,
+      "sha256": "042bd5113e2b3bd82dc3aa5e5625be3d537800b5d7220cf9a3e0bebe96d94395"
+    },
+    {
+      "path": "project/research/n30/2026-09-11-assembled-hand-route-v1/ENVIRONMENT.json",
+      "bytes": 383,
+      "sha256": "cad7415251768b4276033005a05494d1d10a53a8007e75a22896e25745441c05"
+    },
+    {
+      "path": "project/research/n30/2026-09-11-assembled-hand-route-v1/INDEPENDENT_ENVELOPES.json",
+      "bytes": 149813,
+      "sha256": "a0d6c07c2248b2f72eee3431cfc691122d2a130c3a9b52c9512d4bbe1aec22ab"
+    },
+    {
+      "path": "project/research/n30/2026-09-11-assembled-hand-route-v1/PROFILE_REGRESSION.json",
+      "bytes": 4803,
+      "sha256": "fb6c81d6907fc256598e5213c0f12d2dace0171168d725bc74a9aa4fac083be6"
+    },
+    {
+      "path": "project/research/n30/2026-09-11-assembled-hand-route-v1/PROOF_DEPENDENCIES.json",
+      "bytes": 3339,
+      "sha256": "b0fc60c3db81f09c7968b2ea29ca2860d452d456377b3c148dfc45c56cc0eac5"
+    },
+    {
+      "path": "project/research/n30/2026-09-11-assembled-hand-route-v1/PUBLICATION_RECEIPT.json",
+      "bytes": 14190,
+      "sha256": "e99a63cff85b7422ed8c22a5ddb4e7dfc2423ac33489416123e7ad18a724d432"
+    },
+    {
+      "path": "project/research/n30/2026-09-11-assembled-hand-route-v1/TWELVE_LABEL_TRANSFER.md",
+      "bytes": 7197,
+      "sha256": "3eaf4b64c6e388823a0eca47fbdf646f6f7e0a71197124525a84651caf22512c"
+    },
+    {
+      "path": "project/research/n30/2026-09-11-assembled-hand-route-v1/audit_assembly.py",
+      "bytes": 10908,
+      "sha256": "95f776443e043216f3a7aa414175717cba8f09ddf5814e6ce1b1c935ce351907"
+    },
+    {
+      "path": "project/research/n30/2026-09-11-assembled-hand-route-v1/check_publication.py",
+      "bytes": 4244,
+      "sha256": "204b12fea4df92a1aebb6845f60595daddca44c5fe9e6bc8354f86a7501a263b"
+    },
+    {
+      "path": "project/research/n30/2026-09-11-assembled-hand-route-v1/profile_regression.cpp",
+      "bytes": 4273,
+      "sha256": "1ca9e5982cba7d7b37e3a2a1ff7512f012724a83d0b1202a2f1a803891ea010b"
+    },
+    {
+      "path": "project/research/n30/2026-09-11-m225-hand-classification-v1/HAND_CLASSIFICATION.md",
+      "bytes": 12938,
+      "sha256": "2c410a2a9c939441579d1d9ea1e899a18b79a2ed150ff112b2fb13dceae8ed70"
+    },
+    {
+      "path": "project/research/n30/2026-09-11-m225-hand-classification-v1/HAND_CLASSIFIED_PROFILES.txt",
+      "bytes": 3433,
+      "sha256": "13eeaf4a4af8836451131a65bb3f4e9cd5a6a33a473e687f20bbc069d49c4130"
+    },
+    {
+      "path": "project/research/n30/2026-09-11-m225-hand-classification-v1/PREIMAGE_ARITHMETIC.md",
+      "bytes": 18250,
+      "sha256": "8fe4a58f3c472c1f3964f403be2a07f0e8fb574a4e3033f50d9b0f03a3950648"
+    },
+    {
+      "path": "project/research/n30/2026-09-11-m225-resource-envelope-v1/EXACT_APPENDIX.md",
+      "bytes": 22374,
+      "sha256": "c658de4f40e6382c48c71d16f438c093eb750388e3705e3a59b379ceca7a206a"
+    },
+    {
+      "path": "project/research/n30/2026-09-11-m225-resource-envelope-v1/EXACT_AUDIT.json",
+      "bytes": 164629,
+      "sha256": "bdcf5813b2646db34b411f4722a28f08bf36476753b3d33d22467c60e8fea05b"
+    },
+    {
+      "path": "project/research/n30/2026-09-11-m225-resource-envelope-v1/FOUR_ENVELOPE_REDUCTION.md",
+      "bytes": 11281,
+      "sha256": "be1c5025c359a223ab8023a5940b07c96adf6132feb012156a1d55459ff945f7"
+    },
+    {
+      "path": "project/research/n30/2026-09-11-m225-resource-envelope-v1/JOINT_CERTIFICATES.json",
+      "bytes": 1645,
+      "sha256": "20c8389036ee426b4d6b2589d41454546f9c823ff150ed6c9103da8c070aecc8"
+    },
+    {
+      "path": "project/research/n30/2026-09-11-threshold-tail-v1/N30_M225_THRESHOLD_SLACK_REDUCTION.md",
+      "bytes": 6364,
+      "sha256": "641e300abea1959327b7f86c87863e91924e800b4ea8ca86ca949d4a5a5260dd"
+    },
+    {
+      "path": "project/research/n30/2026-09-11-threshold-tail-v1/N30_M226_HAND_ENDPOINT_REDUCTION.md",
+      "bytes": 6506,
+      "sha256": "1bcd6da2e687149315461446c90a613ff7c54a6e7f369a2a4ac4fdd9575bb2c2"
+    },
+    {
+      "path": "project/reviews/n30/2026-09-11-reviewer-v3/CURRENT_NAVIGATION_CHECK.json",
+      "bytes": 575,
+      "sha256": "2dc31bbd7f0a13f721f085344661b3514e9b5bb29fa979b8548620adfa6a2cb4"
+    },
+    {
+      "path": "project/reviews/n30/2026-09-11-reviewer-v3/EDITORIAL_REVIEW.md",
+      "bytes": 4652,
+      "sha256": "b02b5ecc6691d11e4ee7bda600fffe272e9442fa61291a6529f9d16ee9bb2704"
+    },
+    {
+      "path": "project/reviews/n30/2026-09-11-reviewer-v3/PDF_PREFLIGHT.json",
+      "bytes": 7236,
+      "sha256": "7a969425184f80ed4b704fa404b72f3011ac08e9995268dcbaf76990df1e9e99"
+    },
+    {
+      "path": "project/reviews/n30/2026-09-11-reviewer-v3/PROOF.md",
+      "bytes": 97274,
+      "sha256": "6ceaaf2567b8fdc9ae24074178daf079c1b0ed0792b98071aa4b4f4cae0ca0c7"
+    },
+    {
+      "path": "project/reviews/n30/2026-09-11-reviewer-v3/README.md",
+      "bytes": 1041,
+      "sha256": "778b450ee992a1b52e39468c374e58be9c53c03c1f05e4e77735e773cd33b498"
+    },
+    {
+      "path": "project/reviews/n30/2026-09-11-reviewer-v3/REVIEW_REPORT_TEMPLATE.md",
+      "bytes": 1469,
+      "sha256": "8447ec7303c6e353fe9f79f586410b2c3fe26e8a27c8efe487f557259263c2f6"
+    },
+    {
+      "path": "project/reviews/n30/2026-09-11-reviewer-v3/SOURCE_MAP.json",
+      "bytes": 2282,
+      "sha256": "c9dd95d5774716fe5fa4f523396e3c5aa58af94cc091c0da1b485843977a4bee"
+    },
+    {
+      "path": "project/reviews/n30/2026-09-11-reviewer-v3/VERIFICATION_COMPANION.md",
+      "bytes": 8102,
+      "sha256": "18caec8c93fb0410e05ba6ffce2ff8f134d6f3936e00d7ebe8aff150d252e956"
+    },
+    {
+      "path": "project/reviews/n30/2026-09-11-reviewer-v3/VISUAL_REVIEW.json",
+      "bytes": 1431,
+      "sha256": "58c8e253529ffb30ca1c2d2a7f13a8f4410a1f56003e980bd234123cdf8c63ee"
+    },
+    {
+      "path": "project/reviews/n30/2026-09-11-reviewer-v3/build_package.py",
+      "bytes": 20623,
+      "sha256": "6a0a24116d69c5aa2ea3397d8a8e5bd5e85039f500bf8b9e8dee0c25dc9ecd70"
+    },
+    {
+      "path": "project/reviews/n30/2026-09-11-reviewer-v3/check_package.py",
+      "bytes": 5357,
+      "sha256": "898d1d36c8dd6955767cd83e53da946f0f48f63e6bd6dbdae3e7aebbf9d5c7ad"
+    },
+    {
+      "path": "project/reviews/n30/2026-09-11-reviewer-v3/pdf_layout.lua",
+      "bytes": 1276,
+      "sha256": "96d66bc5ab4513ced401eed24a99f10b955a2e33f11fcd08b240a9b624ebe70b"
+    },
+    {
+      "path": "project/reviews/n30/2026-09-11-reviewer-v3/pdf_preflight.py",
+      "bytes": 2876,
+      "sha256": "bc923c7419dc1f67ae1c977370f01bfa2083b59901a54c8bff8565b96a186ef4"
+    },
+    {
+      "path": "project/reviews/n30/2026-09-11-reviewer-v3/replay_bundle.py",
+      "bytes": 2195,
+      "sha256": "a6f1df0158cfafbf3c2a27f0340f748521a9337d14c8b7fb01305f92990d23cd"
+    },
+    {
+      "path": "project/reviews/n30/2026-09-11-reviewer-v3/update_navigation.py",
+      "bytes": 9126,
+      "sha256": "0768493d493e934105d24c677538e58ed02ff2d71d105e65736d039c0d18622f"
+    },
+    {
+      "path": "releases/n30-reviewer-v3/N30_Reviewer_Manuscript_v3.md",
+      "bytes": 98014,
+      "sha256": "5b5d6ac43b8dccc978c7b786f99d8a6f390e6300d54e18b210cac252105f6d9f"
+    },
+    {
+      "path": "releases/n30-reviewer-v3/N30_Reviewer_Manuscript_v3.pdf",
+      "bytes": 161277,
+      "sha256": "285ce5ccdf0dd40be1fb15a1b835e59bf373eac4f5cff53760b0e2a514328134"
+    },
+    {
+      "path": "releases/n30-reviewer-v3/N30_Verification_Companion_v3.md",
+      "bytes": 20129,
+      "sha256": "5fd63ef0a6727a80fa0439d3adf769f596ab3163f88c6a9e6a8758611ec6624a"
+    },
+    {
+      "path": "releases/n30-reviewer-v3/N30_Verification_Companion_v3.pdf",
+      "bytes": 73785,
+      "sha256": "797d70d4c0471c890db883721a3779fe8f2fb0c199d918091beba65a0fb73dfb"
+    },
+    {
+      "path": "releases/n30-reviewer-v3/README.md",
+      "bytes": 1977,
+      "sha256": "27c0327b44e2cc4afe40d04e965550d290a534c175eeab4db29f8a964fb3ba3a"
+    }
+  ],
+  "self_exclusions": [
+    "releases/n30-reviewer-v3/BUNDLE_CONTENTS.json",
+    "releases/n30-reviewer-v3/MANIFEST.json",
+    "releases/n30-reviewer-v3/N30_Reviewer_Package_v3.zip"
+  ]
+}

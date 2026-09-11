@@ -22,7 +22,7 @@ The repository currently contains complete candidate fixed-order Murty–Simon r
 - `n=29`: `e(G) <= 210`, equality only `K(14,15)`;
 - `n=30`: `e(G) <= 225`, equality only `K(15,15)`.
 
-The canonical PDF reviewer packages are indexed in [`releases/REVIEW_READY_INDEX.md`](releases/REVIEW_READY_INDEX.md). The current fixed-order editions are Fan-free reviewer-v2 at `n=25,27,28,30` and **reviewer-v4 at `n=29`**, with the entire dense `Delta=16` branch now excluded by a hand threshold-tail argument.
+The canonical PDF reviewer packages are indexed in [`releases/REVIEW_READY_INDEX.md`](releases/REVIEW_READY_INDEX.md). The current fixed-order editions are Fan-free reviewer-v2 at `n=25,27,28`, **reviewer-v4 at `n=29`**, and **reviewer-v3 at `n=30`**. N29 has no proof-critical computation; N30 combines hand lemmas with explicit finite integer tables.
 
 The strongest current reviewer-packaged general candidate is
 
@@ -62,8 +62,8 @@ That review also found a useful pointwise charging bound which removes several h
 
 - `n=28, Delta=15`: every `m>=203` is now a hand exclusion;
 - `n=29, Delta=16`: the later reviewer-v4 threshold-tail proof is stronger and excludes **every `m>=210` by hand**; the earlier pointwise caps remain historical corroboration;
-- `n=30, Delta=17`: every `m>=228` is now a hand exclusion;
-- `n=30, Delta=16`: the later [threshold-tail hand reduction](project/research/n30/2026-09-11-threshold-tail-v1/README.md) now excludes every `m>=226` in this degree branch; the earlier pointwise `m>=234` cap remains corroboration.
+- `n=30, Delta=17`: reviewer-v3 proves the stronger `m<=221` by a source-independent hand tail bound;
+- `n=30, Delta=16`: reviewer-v3 excludes every `m>=225` using the hand classification and explicit endpoint integer tables; the earlier pointwise caps remain corroboration.
 
 Historical workflows for those ranges remain preserved as corroborating evidence only.
 
@@ -97,28 +97,22 @@ The highest-value external review remains the **universal bridge + threshold-cap
 
 ## n=30 complete candidate
 
-Current frozen proof and audit, followed by the later supplementary assembly:
+**Current reviewer-v3 package:**
 
-- [`project/reviews/n30/2026-09-09-fan-free-v2/PROOF.md`](project/reviews/n30/2026-09-09-fan-free-v2/PROOF.md)
-- [`project/reviews/n30/2026-09-09-candidate-v1/ASSEMBLY_AUDIT.md`](project/reviews/n30/2026-09-09-candidate-v1/ASSEMBLY_AUDIT.md)
-- [`project/reviews/n30/2026-09-09-fan-free-v2/ANALYTIC_HARDENING_2026-09-11.md`](project/reviews/n30/2026-09-09-fan-free-v2/ANALYTIC_HARDENING_2026-09-11.md)
-- [Complete supplementary proof with hand lemmas and integer tables](project/research/n30/2026-09-11-assembled-hand-route-v1/ASSEMBLED_PROOF.md)
-- [New bridge audit](project/research/n30/2026-09-11-assembled-hand-route-v1/BRIDGE_AUDIT.md) and [independent complete arithmetic replay](project/research/n30/2026-09-11-assembled-hand-route-v1/ASSEMBLY_AUDIT.json)
+- [Self-contained manuscript PDF](releases/n30-reviewer-v3/N30_Reviewer_Manuscript_v3.pdf)
+- [Verification companion PDF](releases/n30-reviewer-v3/N30_Verification_Companion_v3.pdf)
+- [Complete portable review ZIP](releases/n30-reviewer-v3/N30_Reviewer_Package_v3.zip)
+- [Canonical proof source](project/reviews/n30/2026-09-11-reviewer-v3/PROOF.md), [editorial/dependency review](project/reviews/n30/2026-09-11-reviewer-v3/EDITORIAL_REVIEW.md), and [review report template](project/reviews/n30/2026-09-11-reviewer-v3/REVIEW_REPORT_TEMPLATE.md)
 
-Its candidate statement is
+The candidate statement is `e(G)<=225`, with equality exactly `K(15,15)`. The manuscript includes every needed graph lemma and every proof-critical table; there is no need to assemble the proof by following research links.
 
-```text
-e(G) <= 225,
-with equality exactly K(15,15).
-```
+Delta>=17 is closed by a source-independent twelve-label hand bound, with the stronger `m<=221` at Delta=17. Delta=15 equality has an elementary regularity/triangle-free proof. At Delta=16, a hand classification derives exactly 100 profiles and Q<=21; finite residual-tail reconstruction and eight source inequalities settle m226, while four explicit envelopes cover all 211 tight m225 rows after 61 ledger exclusions.
 
-The frozen current edition does not use Fan's density theorem logically. For `Delta=17`, the difficult scopes close by threshold/source-count inequalities and exact Hall duals; analytic hardening removes every upper-range `Delta=17` scope with `m>=228` from the computational chain. For `Delta=16`, the bridge is parameterised to `(a,b)=(13,16)` and the frozen proof retains exact integer Farkas certificates. Its final assembly replay is green. This is same-assistant evidence, not external validation.
+The historical large scans, grouped LPs, Farkas rays, higher-degree charging computations, isolated-C strengthening, Fan theorem and dominating-edge theorem are no longer premises. **The printed Delta=16 classification, residual-tail and endpoint tables remain proof-critical finite arithmetic.**
 
-The later supplementary assembly now covers **all** degree branches. For Delta=16, the [100-profile hand classification](project/research/n30/2026-09-11-m225-hand-classification-v1/HAND_CLASSIFICATION.md) and [four-envelope argument](project/research/n30/2026-09-11-m225-resource-envelope-v1/FOUR_ENVELOPE_REDUCTION.md) have a fresh independent replay: all 272 m225 rows and nine m226 rows are reconstructed, all 844 m225 template gaps agree, and all remaining endpoint contradictions pass.
+The preceding [assembly audit](project/research/n30/2026-09-11-assembled-hand-route-v1/ASSEMBLY_AUDIT.json) reproduced all 844 per-template m225 gaps and all eight m226 contradictions, and its [bridge audit](project/research/n30/2026-09-11-assembled-hand-route-v1/BRIDGE_AUDIT.md) found no blocking flaw. This is same-assistant internal evidence. The ZIP supports a one-command replay from its extracted root.
 
-For Delta>=17, the [source-independent twelve-label hand bound](project/research/n30/2026-09-11-assembled-hand-route-v1/TWELVE_LABEL_TRANSFER.md) eliminates every dense scope without the historical profile checks or Hall duals. Delta=15 equality has a direct regularity/triangle-free proof, so the dominating-edge theorem is no longer a premise of this route. No Fan theorem, charging scan or isolated-C strengthening is required either.
-
-**The explicit Delta=16 classification, tail reconstruction and envelope tables remain proof-critical finite arithmetic.** The universal bridge and those tables are the principal external review targets. A new PDF edition is not issued here; frozen N30 reviewer-v2 remains the current packaged edition, with this complete supplementary source available alongside it. Independent review is OPEN.
+The [historical reviewer-v2 package](releases/n30-reviewer-v2/README.md) and all original proof/certificate bytes remain preserved. Reviewer-v3 updates the reading surface; the governed theorem ledger is unchanged. Independent specialist review is OPEN.
 
 ## General 7/12 candidate
 

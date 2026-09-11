@@ -1,0 +1,23 @@
+{
+  "status": "PASS",
+  "source_hashes_checked": 11,
+  "all_required_table_lines_present": {
+    "PREIMAGE_ARITHMETIC.md": 365,
+    "EXACT_APPENDIX.md": 213,
+    "HAND_CLASSIFICATION.md": 67,
+    "N30_M226_HAND_ENDPOINT_REDUCTION.md": 10
+  },
+  "endpoint_rows_in_manuscript": 211,
+  "relative_links_checked": 196,
+  "current_versions": {
+    "n25": 2,
+    "n27": 2,
+    "n28": 2,
+    "n29": 4,
+    "n30": 3
+  },
+  "frozen_n29_bridge_unchanged": true,
+  "all_modified_baseline_files_within_scope": true,
+  "release_manifest_files_checked": null,
+  "external_review": "OPEN"
+}

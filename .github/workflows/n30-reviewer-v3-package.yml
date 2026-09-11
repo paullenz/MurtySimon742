@@ -1,0 +1,38 @@
+name: N30 reviewer-v3 package integrity and portable replay
+
+on:
+  workflow_dispatch:
+  push:
+    paths:
+      - 'project/reviews/n30/2026-09-11-reviewer-v3/**'
+      - 'releases/n30-reviewer-v3/**'
+      - 'README.md'
+      - 'START_HERE_FOR_REVIEWERS.md'
+      - 'releases/REVIEW_READY_INDEX.md'
+      - '.github/workflows/n30-reviewer-v3-package.yml'
+
+permissions:
+  contents: read
+
+jobs:
+  package:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262
+        with:
+          fetch-depth: 0
+      - name: Check complete proof tables, current links and release hashes
+        run: python3 -I -B project/reviews/n30/2026-09-11-reviewer-v3/check_package.py --release --output /tmp/n30-v3-package-check.json
+      - name: Extract and replay the exact reviewer ZIP
+        run: |
+          python3 -m zipfile -e releases/n30-reviewer-v3/N30_Reviewer_Package_v3.zip /tmp/n30-v3-review
+          python3 -I -B /tmp/n30-v3-review/N30_Reviewer_Package_v3/project/reviews/n30/2026-09-11-reviewer-v3/replay_bundle.py > /tmp/n30-v3-portable-replay.json
+      - uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02
+        with:
+          name: n30-reviewer-v3-package-checks
+          path: |
+            /tmp/n30-v3-package-check.json
+            /tmp/n30-v3-portable-replay.json
+          if-no-files-found: error
+          retention-days: 90

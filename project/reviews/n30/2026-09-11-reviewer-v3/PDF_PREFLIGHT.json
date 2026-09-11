@@ -1,0 +1,334 @@
+{
+  "schema": "n30-reviewer-v3-pdf-preflight-v1",
+  "geometry_and_text_status": "PASS",
+  "files": [
+    {
+      "path": "releases/n30-reviewer-v3/N30_Reviewer_Manuscript_v3.pdf",
+      "sha256": "285ce5ccdf0dd40be1fb15a1b835e59bf373eac4f5cff53760b0e2a514328134",
+      "pages": [
+        {
+          "page": 1,
+          "width": 595.28,
+          "height": 841.89,
+          "characters": 1804
+        },
+        {
+          "page": 2,
+          "width": 595.28,
+          "height": 841.89,
+          "characters": 1669
+        },
+        {
+          "page": 3,
+          "width": 595.28,
+          "height": 841.89,
+          "characters": 2388
+        },
+        {
+          "page": 4,
+          "width": 595.28,
+          "height": 841.89,
+          "characters": 2396
+        },
+        {
+          "page": 5,
+          "width": 595.28,
+          "height": 841.89,
+          "characters": 1789
+        },
+        {
+          "page": 6,
+          "width": 595.28,
+          "height": 841.89,
+          "characters": 997
+        },
+        {
+          "page": 7,
+          "width": 595.28,
+          "height": 841.89,
+          "characters": 1573
+        },
+        {
+          "page": 8,
+          "width": 595.28,
+          "height": 841.89,
+          "characters": 1162
+        },
+        {
+          "page": 9,
+          "width": 595.28,
+          "height": 841.89,
+          "characters": 1903
+        },
+        {
+          "page": 10,
+          "width": 595.28,
+          "height": 841.89,
+          "characters": 1193
+        },
+        {
+          "page": 11,
+          "width": 595.28,
+          "height": 841.89,
+          "characters": 2049
+        },
+        {
+          "page": 12,
+          "width": 595.28,
+          "height": 841.89,
+          "characters": 960
+        },
+        {
+          "page": 13,
+          "width": 595.28,
+          "height": 841.89,
+          "characters": 1634
+        },
+        {
+          "page": 14,
+          "width": 595.28,
+          "height": 841.89,
+          "characters": 1953
+        },
+        {
+          "page": 15,
+          "width": 595.28,
+          "height": 841.89,
+          "characters": 657
+        },
+        {
+          "page": 16,
+          "width": 595.28,
+          "height": 841.89,
+          "characters": 1713
+        },
+        {
+          "page": 17,
+          "width": 595.28,
+          "height": 841.89,
+          "characters": 1784
+        },
+        {
+          "page": 18,
+          "width": 595.28,
+          "height": 841.89,
+          "characters": 1359
+        },
+        {
+          "page": 19,
+          "width": 595.28,
+          "height": 841.89,
+          "characters": 1535
+        },
+        {
+          "page": 20,
+          "width": 595.28,
+          "height": 841.89,
+          "characters": 914
+        },
+        {
+          "page": 21,
+          "width": 595.28,
+          "height": 841.89,
+          "characters": 2251
+        },
+        {
+          "page": 22,
+          "width": 595.28,
+          "height": 841.89,
+          "characters": 2253
+        },
+        {
+          "page": 23,
+          "width": 595.28,
+          "height": 841.89,
+          "characters": 2305
+        },
+        {
+          "page": 24,
+          "width": 595.28,
+          "height": 841.89,
+          "characters": 2045
+        },
+        {
+          "page": 25,
+          "width": 595.28,
+          "height": 841.89,
+          "characters": 2194
+        },
+        {
+          "page": 26,
+          "width": 595.28,
+          "height": 841.89,
+          "characters": 424
+        },
+        {
+          "page": 27,
+          "width": 595.28,
+          "height": 841.89,
+          "characters": 1892
+        },
+        {
+          "page": 28,
+          "width": 595.28,
+          "height": 841.89,
+          "characters": 1102
+        },
+        {
+          "page": 29,
+          "width": 595.28,
+          "height": 841.89,
+          "characters": 1703
+        },
+        {
+          "page": 30,
+          "width": 595.28,
+          "height": 841.89,
+          "characters": 406
+        },
+        {
+          "page": 31,
+          "width": 595.28,
+          "height": 841.89,
+          "characters": 1596
+        },
+        {
+          "page": 32,
+          "width": 595.28,
+          "height": 841.89,
+          "characters": 1782
+        },
+        {
+          "page": 33,
+          "width": 595.28,
+          "height": 841.89,
+          "characters": 1397
+        },
+        {
+          "page": 34,
+          "width": 595.28,
+          "height": 841.89,
+          "characters": 1089
+        },
+        {
+          "page": 35,
+          "width": 841.89,
+          "height": 595.28,
+          "characters": 1924
+        },
+        {
+          "page": 36,
+          "width": 841.89,
+          "height": 595.28,
+          "characters": 1940
+        },
+        {
+          "page": 37,
+          "width": 841.89,
+          "height": 595.28,
+          "characters": 1920
+        },
+        {
+          "page": 38,
+          "width": 841.89,
+          "height": 595.28,
+          "characters": 1828
+        },
+        {
+          "page": 39,
+          "width": 841.89,
+          "height": 595.28,
+          "characters": 1686
+        },
+        {
+          "page": 40,
+          "width": 841.89,
+          "height": 595.28,
+          "characters": 1773
+        },
+        {
+          "page": 41,
+          "width": 841.89,
+          "height": 595.28,
+          "characters": 1754
+        },
+        {
+          "page": 42,
+          "width": 841.89,
+          "height": 595.28,
+          "characters": 1798
+        },
+        {
+          "page": 43,
+          "width": 841.89,
+          "height": 595.28,
+          "characters": 1627
+        },
+        {
+          "page": 44,
+          "width": 841.89,
+          "height": 595.28,
+          "characters": 408
+        },
+        {
+          "page": 45,
+          "width": 595.28,
+          "height": 841.89,
+          "characters": 334
+        }
+      ]
+    },
+    {
+      "path": "releases/n30-reviewer-v3/N30_Verification_Companion_v3.pdf",
+      "sha256": "797d70d4c0471c890db883721a3779fe8f2fb0c199d918091beba65a0fb73dfb",
+      "pages": [
+        {
+          "page": 1,
+          "width": 595.28,
+          "height": 841.89,
+          "characters": 2022
+        },
+        {
+          "page": 2,
+          "width": 595.28,
+          "height": 841.89,
+          "characters": 2954
+        },
+        {
+          "page": 3,
+          "width": 595.28,
+          "height": 841.89,
+          "characters": 2053
+        },
+        {
+          "page": 4,
+          "width": 595.28,
+          "height": 841.89,
+          "characters": 3031
+        },
+        {
+          "page": 5,
+          "width": 595.28,
+          "height": 841.89,
+          "characters": 2919
+        },
+        {
+          "page": 6,
+          "width": 595.28,
+          "height": 841.89,
+          "characters": 1592
+        },
+        {
+          "page": 7,
+          "width": 595.28,
+          "height": 841.89,
+          "characters": 1877
+        }
+      ]
+    }
+  ],
+  "python": "3.12.14",
+  "pandoc": "pandoc 3.1.3",
+  "xelatex": "XeTeX 3.141592653-2.6-0.999995 (TeX Live 2023/Debian)",
+  "visual_inspection_required": true
+}
