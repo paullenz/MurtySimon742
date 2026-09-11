@@ -6,6 +6,7 @@ on:
     paths:
       - 'project/research/general_n/2026-09-07-stability-spare-sources-v9/formal/QuasiCore.lean'
       - 'project/research/general_n/2026-09-07-stability-spare-sources-v9/formal/CanonicalBridgeSlice.lean'
+      - 'project/research/general_n/2026-09-07-stability-spare-sources-v9/formal/CanonicalBridgeSliceV2.lean'
       - '.github/workflows/canonical-bridge-lean-slice.yml'
 
 permissions:
@@ -24,20 +25,19 @@ jobs:
           sha256sum "$RUNNER_TEMP/lean.tar.zst" > lean-toolchain-sha256.txt
           tar --zstd -xf "$RUNNER_TEMP/lean-4.19.0-linux.tar.zst" -C "$RUNNER_TEMP" 2>/dev/null || tar --zstd -xf "$RUNNER_TEMP/lean.tar.zst" -C "$RUNNER_TEMP"
           echo "$RUNNER_TEMP/lean-4.19.0-linux/bin" >> "$GITHUB_PATH"
-      - name: Check existing core and canonical extension
+      - name: Check core and canonical extensions
         run: |
           set -euo pipefail
           D=project/research/general_n/2026-09-07-stability-spare-sources-v9/formal
           lean --version | tee lean-version.txt
-          sha256sum "$D/QuasiCore.lean" "$D/CanonicalBridgeSlice.lean" > checked-source-sha256.txt
+          sha256sum "$D/QuasiCore.lean" "$D/CanonicalBridgeSlice.lean" "$D/CanonicalBridgeSliceV2.lean" > checked-source-sha256.txt
           (
             cd "$D"
-            # The extension imports QuasiCore, so first compile the already
-            # checked core to an .olean module in the local search path.
             lean -o QuasiCore.olean QuasiCore.lean 2>&1 | tee "$GITHUB_WORKSPACE/quasi-core-check.log"
-            LEAN_PATH=. lean CanonicalBridgeSlice.lean 2>&1 | tee "$GITHUB_WORKSPACE/canonical-bridge-slice-check.log"
+            LEAN_PATH=. lean -o CanonicalBridgeSlice.olean CanonicalBridgeSlice.lean 2>&1 | tee "$GITHUB_WORKSPACE/canonical-bridge-slice-check.log"
+            LEAN_PATH=. lean CanonicalBridgeSliceV2.lean 2>&1 | tee "$GITHUB_WORKSPACE/canonical-bridge-slice-v2-check.log"
           )
-          if grep -E 'sorryAx|warning:|error:' quasi-core-check.log canonical-bridge-slice-check.log; then exit 1; fi
+          if grep -E 'sorryAx|warning:|error:' quasi-core-check.log canonical-bridge-slice-check.log canonical-bridge-slice-v2-check.log; then exit 1; fi
       - uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02
         if: always()
         with:
@@ -45,6 +45,7 @@ jobs:
           path: |
             quasi-core-check.log
             canonical-bridge-slice-check.log
+            canonical-bridge-slice-v2-check.log
             lean-version.txt
             lean-toolchain-sha256.txt
             checked-source-sha256.txt
