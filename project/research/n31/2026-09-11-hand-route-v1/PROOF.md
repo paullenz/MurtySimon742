@@ -2,7 +2,7 @@
 
 11 September 2026. Research direction: Paul Lenz. Mathematical development and internal checking: ChatGPT/Geeps.
 
-**Status: new candidate hand proof. Independent mathematical review and novelty assessment OPEN.** No large search, LP, Farkas certificate or proof-critical computation is used. The proof depends on the project's candidate canonical selected/residual bridge and candidate `7/12` maximum-degree theorem, both still awaiting independent review.
+**Status: new candidate hand proof. Independent mathematical review and novelty assessment OPEN.** No large search, LP, Farkas certificate or proof-critical computation is used. The proof depends on the project's candidate canonical selected/residual bridge and the hand twelve- and thirteen-label tail lemmas, all still awaiting independent review.
 
 ## 1. Statement
 
@@ -20,7 +20,7 @@ G\cong K_{15,16}.
 
 If `G` is bipartite, diameter two forces it to be complete bipartite, so the statement is immediate. We therefore consider the non-bipartite case in the dense range.
 
-Dailly-Foucaud-Hansberg prove that a non-bipartite D2C graph with a dominating edge has at most `floor(n^2/4)-2` edges, apart from their fixed small exception. At `n=31` this is at most 238. Hence any non-bipartite graph with at least 240 edges has no dominating edge.
+Dailly-Foucaud-Hansberg prove that a non-bipartite D2C graph with a dominating edge has at most `floor(n^2/4)-2` edges, apart from their six-vertex graph `H_5`. At `n=31` this is at most 238. Hence any non-bipartite graph with at least 240 edges has no dominating edge.
 
 Also, `2e(G)/31>=480/31>15` at 240 edges, so
 
@@ -28,36 +28,30 @@ Also, `2e(G)/31>=480/31>15` at 240 edges, so
 \Delta\ge16.
 \]
 
-The candidate `7/12` maximum-degree theorem gives
+The high-degree range will be handled directly by the source-independent twelve-label theorem, so the separate `7/12` maximum-degree theorem is not a dependency of this proof.
+
+## 2. Every Delta>=18 branch
+
+For `18<=Delta<=29`, put
 
 \[
-\Delta\ge19\Longrightarrow e(G)<240,
+a=31-1-\Delta,
+\qquad b=\Delta.
 \]
 
-because `19>7\cdot31/12`. Thus only
+Then `1<=a<=12` and `b>=18`. The source-independent twelve-label tail theorem says that no positive surplus over `b(n-b)` is possible, hence
 
 \[
-\Delta=16,17,18
+e(G)\le b(31-b).
 \]
 
-can occur at the Turan level or above.
-
-## 2. Delta=18
-
-Here
+The quadratic decreases throughout `b>=18`, so its largest value in this range is
 
 \[
-a=31-1-18=12,
-\qquad b=18.
+18(31-18)=234<240.
 \]
 
-The source-independent twelve-label tail theorem applies directly and says that for `1<=a<=12` and `b>=17`, no positive surplus over `b(n-b)` is possible. Therefore
-
-\[
-e(G)\le18(31-18)=234<240.
-\]
-
-So `Delta=18` is excluded from the target range by the existing hand theorem, with no new enumeration.
+The remaining case `Delta=30` has a universal vertex; a diameter-two edge-critical graph with a universal vertex is a star and is sparse. Thus every `Delta>=18` branch is excluded from the target range by hand, with no appeal to the `7/12` theorem and no new enumeration.
 
 ## 3. Delta=17
 
@@ -174,8 +168,7 @@ G=K_{16,15}.
 
 At 240 edges or above, average degree gives `Delta>=16`. The branches are:
 
-- `Delta>=19`: excluded by the candidate `7/12` theorem;
-- `Delta=18`: at most 234 by the twelve-label hand theorem;
+- `Delta>=18`: at most 234 (or the elementary star at `Delta=30`) by the twelve-label hand theorem;
 - `Delta=17`: at most 239 by the new thirteen-label hand theorem and equality contradiction;
 - `Delta=16`: at most 240 by the witness-deficit count, with equality only `K_{16,15}`.
 
