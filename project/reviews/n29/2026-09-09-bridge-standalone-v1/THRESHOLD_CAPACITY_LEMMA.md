@@ -2,6 +2,8 @@
 
 9 September 2026. Candidate mathematics; same-assistant rederivation, not external review.
 
+**11 September 2026 audit correction.** A fresh cross-order red-team found that an intermediate sentence in the earlier text had the algebraic difference in the final comparison written in the wrong order. The correct identity is that `h*z_h+C(z_h-h,2)` minus the right side of (1) equals `(q-j)(q-j-1)/2 >= 0`. This is exactly the direction needed to deduce (2), so the final threshold-capacity inequality and every downstream numerical test remain unchanged. The supplement step immediately below has also been expanded to expose its two cases explicitly.
+
 This file expands the threshold step that was too compressed in the first standalone bridge draft.
 
 Let
