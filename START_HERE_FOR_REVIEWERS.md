@@ -22,7 +22,7 @@ The repository currently contains complete candidate fixed-order Murty–Simon r
 - `n=29`: `e(G) <= 210`, equality only `K(14,15)`;
 - `n=30`: `e(G) <= 225`, equality only `K(15,15)`.
 
-The PDF reviewer packages in [`releases/REVIEW_READY_INDEX.md`](releases/REVIEW_READY_INDEX.md) are the **Fan-free v2 editions**. For `n=29`, the current text proof has since been hardened further as **reviewer-v3** after a blind external-assistant red-team; the v2 PDF remains preserved until a new reviewer PDF is built.
+The canonical PDF reviewer packages are indexed in [`releases/REVIEW_READY_INDEX.md`](releases/REVIEW_READY_INDEX.md). The current fixed-order editions are Fan-free reviewer-v2 at `n=25,27,28,30` and **reviewer-v3 at `n=29`**, hardened after the blind external-assistant red-team.
 
 The strongest current reviewer-packaged general candidate is
 
@@ -71,14 +71,18 @@ Historical workflows for those ranges remain preserved as corroborating evidence
 
 The n=29 candidate remains a clean place to audit the universal graph-to-demand machinery because most degree ranges are eliminated by short hand arguments and the difficult `Delta=16` case has a deliberately reduced trusted kernel. The same bridge is then parameterised at n=30.
 
-**Current reviewer-v3 text proof:**
+**Current reviewer-v3 package:**
+
+- [`releases/n29-reviewer-v3/README.md`](releases/n29-reviewer-v3/README.md)
+- [`releases/n29-reviewer-v3/N29_Reviewer_Manuscript_v3.pdf`](releases/n29-reviewer-v3/N29_Reviewer_Manuscript_v3.pdf)
+- [`releases/n29-reviewer-v3/N29_Verification_Companion_v3.pdf`](releases/n29-reviewer-v3/N29_Verification_Companion_v3.pdf)
+
+**Canonical reviewer-v3 sources:**
 
 - [`project/reviews/n29/2026-09-11-reviewer-v3/README.md`](project/reviews/n29/2026-09-11-reviewer-v3/README.md)
 - [`project/reviews/n29/2026-09-11-reviewer-v3/PROOF.md`](project/reviews/n29/2026-09-11-reviewer-v3/PROOF.md)
-
-**Current self-contained graph-to-model bridge:**
-
 - [`project/reviews/n29/2026-09-11-reviewer-v3/GRAPH_TO_MODEL_BRIDGE.md`](project/reviews/n29/2026-09-11-reviewer-v3/GRAPH_TO_MODEL_BRIDGE.md)
+- [`project/reviews/n29/2026-09-11-reviewer-v3/VERIFICATION_COMPANION.md`](project/reviews/n29/2026-09-11-reviewer-v3/VERIFICATION_COMPANION.md)
 
 **Blind external red-team follow-up:**
 
