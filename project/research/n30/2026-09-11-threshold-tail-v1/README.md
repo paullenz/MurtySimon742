@@ -4,7 +4,7 @@
 
 **Status: candidate analytic hardening; the `n=30, Delta=16, m=226` endpoint now has a hand route after the universal bridge. The `m=225` equality branch has also been reduced sharply, but still retains exact finite dependencies. Independent mathematical review remains open.**
 
-**Current continuation:** the later [hand classification](../2026-09-11-m225-hand-classification-v1/HAND_CLASSIFICATION.md) derives all 100 equality profiles with bounded arithmetic tables, and its generated list reproduces all 211 tight-row exclusions under the [four-envelope reduction](../2026-09-11-m225-resource-envelope-v1/README.md). The earlier stages and next-step descriptions below are historical. The effective target is now review of the full supplementary Delta=16 assembly and the separate Delta=17 finite components; no new N30 reviewer edition or external acceptance is claimed.
+**Current continuation:** the [complete supplementary assembly](../2026-09-11-assembled-hand-route-v1/ASSEMBLED_PROOF.md) combines the later 100-profile hand classification and four-envelope argument with a fresh independent Delta=16 audit. It also closes Delta>=17 by a source-independent hand tail bound and gives a direct Delta=15 equality proof. The earlier stages and next-step descriptions below are historical. Explicit Delta=16 finite tables remain proof-critical; the next target is a coherent reviewer edition. No new PDF or external acceptance is claimed here.
 
 ## Target
 

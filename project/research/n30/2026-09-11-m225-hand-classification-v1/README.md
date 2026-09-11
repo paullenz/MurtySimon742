@@ -30,6 +30,6 @@ python -I -B project/research/n30/2026-09-11-m225-resource-envelope-v1/verify_jo
 
 The optional `--compare-historical` flag compares against the old list only after the new list has been derived. Neither the historical list, a solver, floating point, nor the original full multiset sweep is needed to derive these profiles.
 
-## Next obligation
+## Later complete assembly
 
-Review the full Delta=16 supplementary assembly, especially the bridge and all 211 explicit envelope evaluations, then account for the separate finite Delta=17 components before considering a replacement N30 reviewer edition. No complete hand-derived N30 replacement edition is claimed. The frozen N30 reviewer-v2 package remains the current review surface.
+The [later complete supplementary proof](../2026-09-11-assembled-hand-route-v1/ASSEMBLED_PROOF.md) now incorporates this classification. Its fresh independent audit reproduces every Delta=16 endpoint contradiction, while a source-independent twelve-label hand bound removes the separate Delta=17 finite branches and all higher-degree charging scans. The Delta=15 equality argument is also direct. Explicit Delta=16 arithmetic tables and independent review remain obligations. The next task is a coherent new reviewer edition; frozen N30 reviewer-v2 is still the current packaged edition.

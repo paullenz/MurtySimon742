@@ -1,0 +1,50 @@
+name: N30 assembled hand route independent audit
+
+on:
+  workflow_dispatch:
+  push:
+    paths:
+      - 'project/research/n30/2026-09-11-assembled-hand-route-v1/**'
+      - 'project/research/n30/2026-09-11-m225-hand-classification-v1/HAND_CLASSIFIED_PROFILES.txt'
+      - 'project/research/n30/2026-09-11-m225-resource-envelope-v1/JOINT_CERTIFICATES.json'
+      - 'project/research/n30/2026-09-11-m225-resource-envelope-v1/EXACT_AUDIT.json'
+      - 'project/research/general_n/2026-09-11-canonical-bridge-v1/CANONICAL_BRIDGE.md'
+      - '.github/workflows/n30-assembled-hand-route.yml'
+
+permissions:
+  contents: read
+
+jobs:
+  independent:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262
+      - name: Compile the independent integer profile regression
+        run: g++ -O2 -std=c++17 project/research/n30/2026-09-11-assembled-hand-route-v1/profile_regression.cpp -o /tmp/n30-profile-regression
+      - name: Corroborate both hand tail arguments across their full demand domains
+        run: /tmp/n30-profile-regression project/research/n30/2026-09-11-assembled-hand-route-v1/PROFILE_REGRESSION.json
+      - name: Independently reconstruct and exclude every endpoint row
+        run: |
+          python3 -I -B project/research/n30/2026-09-11-assembled-hand-route-v1/audit_assembly.py --output N30_ASSEMBLY_AUDIT.json --envelopes-output N30_INDEPENDENT_ENVELOPES.json
+          python3 - <<'PY'
+          import json
+          d=json.load(open('N30_ASSEMBLY_AUDIT.json'))
+          assert d['status']=='PASS' and d['all_original_844_template_gaps_match']
+          assert d['m225_envelope_exclusions']==211 and d['m226_hand_exclusions']==8
+          assert d['m225_ledger_exclusions']==61 and d['m226_ledger_exclusions']==1
+          assert d['m225_minimum_gap']==1 and d['m225_local_states']==12772
+          assert not d['earlier_checker_or_discovery_imports']
+          assert not d['solver_used'] and not d['floating_point_used']
+          PY
+      - name: Check the written transfer payment tables
+        run: python3 -I -B project/research/n30/2026-09-11-assembled-hand-route-v1/check_publication.py --tables-only
+      - uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02
+        with:
+          name: n30-complete-supplementary-route-audit
+          path: |
+            N30_ASSEMBLY_AUDIT.json
+            N30_INDEPENDENT_ENVELOPES.json
+            project/research/n30/2026-09-11-assembled-hand-route-v1/PROFILE_REGRESSION.json
+          if-no-files-found: error
+          retention-days: 90

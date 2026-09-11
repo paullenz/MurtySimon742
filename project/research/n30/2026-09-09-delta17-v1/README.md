@@ -4,6 +4,8 @@
 
 **Status: candidate mathematics. Independent expert review remains OPEN.** This note eliminates the two dense `n=30, Delta=17` scopes within the graph-to-demand framework already isolated and hostile-audited for n=29. It does not by itself prove the complete n=30 theorem.
 
+**Later hand replacement, 11 September:** the [source-independent twelve-label tail bound](../2026-09-11-assembled-hand-route-v1/TWELVE_LABEL_TRANSFER.md) now excludes every positive-surplus Delta=17 scope, proving `m<=221`. Thus the calculations below are historical corroboration in the [complete supplementary N30 assembly](../2026-09-11-assembled-hand-route-v1/ASSEMBLED_PROOF.md), rather than proof premises. The frozen reviewer-v2 edition remains preserved with this original route; independent review remains OPEN.
+
 ## 1. Scopes
 
 For `n=30`, `Delta=17`, put

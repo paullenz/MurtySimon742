@@ -1,0 +1,17 @@
+{
+  "status": "PASS",
+  "written_transfer_payment_tables_match": true,
+  "baseline": "d680ddd208d338b019d00492f9498e6da2acfdbc",
+  "relative_links_checked": 247,
+  "broken_links": [],
+  "current_versions": {
+    "n25": 2,
+    "n27": 2,
+    "n28": 2,
+    "n29": 4,
+    "n30": 2
+  },
+  "frozen_bridge_unchanged": true,
+  "all_local_changes_within_scope": true,
+  "scope": "Three current entry points, five predecessor READMEs, and every new Markdown file; not all historical links."
+}

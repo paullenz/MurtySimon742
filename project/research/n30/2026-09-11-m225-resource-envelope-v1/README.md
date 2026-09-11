@@ -31,4 +31,4 @@ Acceptance imports no solver or discovery program. It reconstructs the tail-slac
 
 The scripts prefixed `mine_`, `compress_` or `simplify_` are optional SciPy 1.17.0 discovery tools. Their output, including unsuccessful first attempts and a preliminary 210-row cover, is preserved with explicit provenance. Optimizer termination and optimality are not acceptance conditions; only the independently replayed integer certificate matters.
 
-The original next target, the 100-profile hand classification, is now addressed by that candidate continuation. The next target is an audit of the full supplementary Delta=16 assembly and the separate Delta=17 dependencies before any new reviewer PDF edition is prepared.
+The [later complete supplementary assembly](../2026-09-11-assembled-hand-route-v1/ASSEMBLED_PROOF.md) now combines the hand classification with this endpoint argument. Its independent evaluator matches all 844 template gaps and every local minimum. A hand tail transfer removes the separate Delta=17 computational branches. The next task is a coherent reviewer edition, with the explicit Delta=16 arithmetic tables and external review boundary preserved.

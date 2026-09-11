@@ -1,0 +1,72 @@
+{
+  "schema": "n30-supplementary-proof-dependencies-v1",
+  "status": "CANDIDATE; independent specialist review OPEN",
+  "entry": "project/research/n30/2026-09-11-assembled-hand-route-v1/ASSEMBLED_PROOF.md",
+  "proof_dependencies": [
+    {
+      "path": "project/research/general_n/2026-09-11-canonical-bridge-v1/CANONICAL_BRIDGE.md",
+      "role": "Universal graph-to-selected/residual implications; Sections 1-9 and 11",
+      "sha256": "c87068f40785baa790495aa5811b92370012845c0e592cfeacd6c03a3976dcd2"
+    },
+    {
+      "path": "project/research/n30/2026-09-11-assembled-hand-route-v1/TWELVE_LABEL_TRANSFER.md",
+      "role": "Source-independent hand Q<=18 lemma and higher-degree transfer",
+      "sha256": "3eaf4b64c6e388823a0eca47fbdf646f6f7e0a71197124525a84651caf22512c"
+    },
+    {
+      "path": "project/research/n30/2026-09-11-m225-hand-classification-v1/HAND_CLASSIFICATION.md",
+      "role": "Complete hand classification with bounded arithmetic tables",
+      "sha256": "2c410a2a9c939441579d1d9ea1e899a18b79a2ed150ff112b2fb13dceae8ed70"
+    },
+    {
+      "path": "project/research/n30/2026-09-11-m225-hand-classification-v1/PREIMAGE_ARITHMETIC.md",
+      "role": "Printed proof-critical preimage intervals",
+      "sha256": "8fe4a58f3c472c1f3964f403be2a07f0e8fb574a4e3033f50d9b0f03a3950648"
+    },
+    {
+      "path": "project/research/n30/2026-09-11-threshold-tail-v1/N30_M225_THRESHOLD_SLACK_REDUCTION.md",
+      "role": "Tail-slack identity and positive-demand ledger exclusions",
+      "sha256": "641e300abea1959327b7f86c87863e91924e800b4ea8ca86ca949d4a5a5260dd"
+    },
+    {
+      "path": "project/research/n30/2026-09-11-threshold-tail-v1/N30_M226_HAND_ENDPOINT_REDUCTION.md",
+      "role": "Eight explicit hand source inequalities at m226; positivity wording clarified in assembled proof",
+      "sha256": "1bcd6da2e687149315461446c90a613ff7c54a6e7f369a2a4ac4fdd9575bb2c2"
+    },
+    {
+      "path": "project/research/n30/2026-09-11-m225-resource-envelope-v1/FOUR_ENVELOPE_REDUCTION.md",
+      "role": "Four written potentials, exact local domains and resource inequality",
+      "sha256": "be1c5025c359a223ab8023a5940b07c96adf6132feb012156a1d55459ff945f7"
+    },
+    {
+      "path": "project/research/n30/2026-09-11-m225-resource-envelope-v1/EXACT_APPENDIX.md",
+      "role": "211 printed proof-critical positive-gap rows",
+      "sha256": "c658de4f40e6382c48c71d16f438c093eb750388e3705e3a59b379ceca7a206a"
+    },
+    {
+      "path": "project/research/n30/2026-09-11-m225-resource-envelope-v1/JOINT_CERTIFICATES.json",
+      "role": "Exact coefficients matching the four printed formulas",
+      "sha256": "20c8389036ee426b4d6b2589d41454546f9c823ff150ed6c9103da8c070aecc8"
+    }
+  ],
+  "removed_historical_dependencies": [
+    "Full demand-profile sweeps",
+    "Large residual-row scans",
+    "Grouped LPs and Farkas rays",
+    "Delta17 profile and Hall-dual computations",
+    "Higher-degree charging scans",
+    "Isolated-C strengthening",
+    "Fan density theorem",
+    "Published dominating-edge theorem"
+  ],
+  "retained_review_obligations": [
+    "Universal graph bridge",
+    "Written finite classification and tail arithmetic",
+    "All explicit endpoint envelope/source tables"
+  ],
+  "corroboration_only": [
+    "PROFILE_REGRESSION.json",
+    "ASSEMBLY_AUDIT.json",
+    "INDEPENDENT_ENVELOPES.json"
+  ]
+}

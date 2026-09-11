@@ -97,11 +97,13 @@ The highest-value external review remains the **universal bridge + threshold-cap
 
 ## n=30 complete candidate
 
-Current proof and audit:
+Current frozen proof and audit, followed by the later supplementary assembly:
 
 - [`project/reviews/n30/2026-09-09-fan-free-v2/PROOF.md`](project/reviews/n30/2026-09-09-fan-free-v2/PROOF.md)
 - [`project/reviews/n30/2026-09-09-candidate-v1/ASSEMBLY_AUDIT.md`](project/reviews/n30/2026-09-09-candidate-v1/ASSEMBLY_AUDIT.md)
 - [`project/reviews/n30/2026-09-09-fan-free-v2/ANALYTIC_HARDENING_2026-09-11.md`](project/reviews/n30/2026-09-09-fan-free-v2/ANALYTIC_HARDENING_2026-09-11.md)
+- [Complete supplementary proof with hand lemmas and integer tables](project/research/n30/2026-09-11-assembled-hand-route-v1/ASSEMBLED_PROOF.md)
+- [New bridge audit](project/research/n30/2026-09-11-assembled-hand-route-v1/BRIDGE_AUDIT.md) and [independent complete arithmetic replay](project/research/n30/2026-09-11-assembled-hand-route-v1/ASSEMBLY_AUDIT.json)
 
 Its candidate statement is
 
@@ -112,9 +114,11 @@ with equality exactly K(15,15).
 
 The frozen current edition does not use Fan's density theorem logically. For `Delta=17`, the difficult scopes close by threshold/source-count inequalities and exact Hall duals; analytic hardening removes every upper-range `Delta=17` scope with `m>=228` from the computational chain. For `Delta=16`, the bridge is parameterised to `(a,b)=(13,16)` and the frozen proof retains exact integer Farkas certificates. Its final assembly replay is green. This is same-assistant evidence, not external validation.
 
-The later [N30 threshold-tail research supplement](project/research/n30/2026-09-11-threshold-tail-v1/README.md) supplies a candidate hand route for `Delta=16,m>=226`, including the exact seven-profile/nine-row endpoint classification. At 225 edges, the [four joint-envelope certificates](project/research/n30/2026-09-11-m225-resource-envelope-v1/README.md) exclude **all 211 tight rows**, including the four zero-demand rows; the other 61 historical rows die by ledger equality. Their validity has a written monotone-incidence/resource derivation and a separate solver-free checker.
+The later supplementary assembly now covers **all** degree branches. For Delta=16, the [100-profile hand classification](project/research/n30/2026-09-11-m225-hand-classification-v1/HAND_CLASSIFICATION.md) and [four-envelope argument](project/research/n30/2026-09-11-m225-resource-envelope-v1/FOUR_ENVELOPE_REDUCTION.md) have a fresh independent replay: all 272 m225 rows and nine m226 rows are reconstructed, all 844 m225 template gaps agree, and all remaining endpoint contradictions pass.
 
-The subsequent [hand demand classification](project/research/n30/2026-09-11-m225-hand-classification-v1/HAND_CLASSIFICATION.md) derives all **100 profiles as 70 cap-four cases plus 30 five-containing cases**, with no higher preimage. Its bounded arithmetic tables supply the completeness argument previously taken from the historical exhaustive list. The independently generated profiles reproduce all 211 four-envelope exclusions. Review of those tables, the envelope arithmetic, the full Delta=16 assembly and the separate Delta=17 finite pieces remains open; no fully hand-derived N30 reviewer replacement is claimed. The prior 57-row scalar checkpoint remains historical.
+For Delta>=17, the [source-independent twelve-label hand bound](project/research/n30/2026-09-11-assembled-hand-route-v1/TWELVE_LABEL_TRANSFER.md) eliminates every dense scope without the historical profile checks or Hall duals. Delta=15 equality has a direct regularity/triangle-free proof, so the dominating-edge theorem is no longer a premise of this route. No Fan theorem, charging scan or isolated-C strengthening is required either.
+
+**The explicit Delta=16 classification, tail reconstruction and envelope tables remain proof-critical finite arithmetic.** The universal bridge and those tables are the principal external review targets. A new PDF edition is not issued here; frozen N30 reviewer-v2 remains the current packaged edition, with this complete supplementary source available alongside it. Independent review is OPEN.
 
 ## General 7/12 candidate
 

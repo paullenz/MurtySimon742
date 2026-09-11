@@ -1,0 +1,147 @@
+{
+  "schema": "n30-assembled-route-manifest-v1",
+  "repository": "paullenz/MurtySimon742",
+  "branch": "main",
+  "baseline": "d680ddd208d338b019d00492f9498e6da2acfdbc",
+  "files": [
+    {
+      "path": ".github/workflows/n30-assembled-hand-route.yml",
+      "bytes": 2603,
+      "sha256": "7b94cd1ca814e001a5723d46d4aea601067f1c12d56ed136be3e6d2501270ca7",
+      "git_blob_sha": "37d391913c6ab7580d7a6c12f5549bcf6593f8bb"
+    },
+    {
+      "path": "README.md",
+      "bytes": 33192,
+      "sha256": "920448d9fd3cfb4f2460fb60f5bf19825e45f26c278162edbd8634f7b3bf89f2",
+      "git_blob_sha": "aeeb56579221c54c17264646df058a613513752b"
+    },
+    {
+      "path": "START_HERE_FOR_REVIEWERS.md",
+      "bytes": 19361,
+      "sha256": "1adee3345d857970a1d46fb34b87fd3c313c19f25bb8634b2f33a656b97b2720",
+      "git_blob_sha": "32fe6f0a32b370a0ba041a893562d23b8f124d2c"
+    },
+    {
+      "path": "project/research/n30/2026-09-09-delta17-v1/README.md",
+      "bytes": 7682,
+      "sha256": "cec7ee408cdf7ebc2b3fdd924a1a0c773dfd127b13ad0914db8f33ea9a2070f4",
+      "git_blob_sha": "777a06c7784c798b9e17f63a05576a28151dc7b6"
+    },
+    {
+      "path": "project/research/n30/2026-09-11-assembled-hand-route-v1/ASSEMBLED_PROOF.md",
+      "bytes": 11175,
+      "sha256": "d2a0b37ddccfa51204a817f0e9fff1537f58c4a0c789fc76e3681c9f6017f8ad",
+      "git_blob_sha": "1efe2f2c17cb112d386d03447ad03a6888685830"
+    },
+    {
+      "path": "project/research/n30/2026-09-11-assembled-hand-route-v1/ASSEMBLY_AUDIT.json",
+      "bytes": 7103,
+      "sha256": "9722c6417d54a0fbe248ec1fe89bac0fff286cff8efe1c94ca3fb0aed2e9e61a",
+      "git_blob_sha": "833ffbbdf406af84b9a65e6b1a82386cd71be4c9"
+    },
+    {
+      "path": "project/research/n30/2026-09-11-assembled-hand-route-v1/BRIDGE_AUDIT.md",
+      "bytes": 8978,
+      "sha256": "042bd5113e2b3bd82dc3aa5e5625be3d537800b5d7220cf9a3e0bebe96d94395",
+      "git_blob_sha": "ac148157e2e30e1ce8897cd8840f747a16b43910"
+    },
+    {
+      "path": "project/research/n30/2026-09-11-assembled-hand-route-v1/ENVIRONMENT.json",
+      "bytes": 383,
+      "sha256": "cad7415251768b4276033005a05494d1d10a53a8007e75a22896e25745441c05",
+      "git_blob_sha": "7fcb95f4e5919173e12077cbe333aabbf1c40020"
+    },
+    {
+      "path": "project/research/n30/2026-09-11-assembled-hand-route-v1/HANDOVER.md",
+      "bytes": 4788,
+      "sha256": "dcaf64df8435132b10893eedf21a5ae44d68f16e5c2e3b3e0b9d4a3de3dc0eae",
+      "git_blob_sha": "816d2c0202b82fb595d6f7f9c5324d2bea82d43a"
+    },
+    {
+      "path": "project/research/n30/2026-09-11-assembled-hand-route-v1/INDEPENDENT_ENVELOPES.json",
+      "bytes": 149813,
+      "sha256": "a0d6c07c2248b2f72eee3431cfc691122d2a130c3a9b52c9512d4bbe1aec22ab",
+      "git_blob_sha": "53752005399765fb5fdd474584f18a9f864475d3"
+    },
+    {
+      "path": "project/research/n30/2026-09-11-assembled-hand-route-v1/PROFILE_REGRESSION.json",
+      "bytes": 4803,
+      "sha256": "fb6c81d6907fc256598e5213c0f12d2dace0171168d725bc74a9aa4fac083be6",
+      "git_blob_sha": "92b082007bdbae1c2d477588f531323b55575821"
+    },
+    {
+      "path": "project/research/n30/2026-09-11-assembled-hand-route-v1/PROOF_DEPENDENCIES.json",
+      "bytes": 3339,
+      "sha256": "b0fc60c3db81f09c7968b2ea29ca2860d452d456377b3c148dfc45c56cc0eac5",
+      "git_blob_sha": "81b8a7080262fda0c313a2f9ed21d0c23ad0c44e"
+    },
+    {
+      "path": "project/research/n30/2026-09-11-assembled-hand-route-v1/PUBLICATION_CHECKS.json",
+      "bytes": 483,
+      "sha256": "1b7f20feed7ad22a0ecef338edfd0cbf80754bb71db5af022e2dfc4328bb432d",
+      "git_blob_sha": "2e55c40ac126828b60416fe9eb7e5025a3e8788d"
+    },
+    {
+      "path": "project/research/n30/2026-09-11-assembled-hand-route-v1/README.md",
+      "bytes": 3913,
+      "sha256": "2392f9c681ad1817822319d2c9ad26a6227739eda91f06c88f2ea4d81286f597",
+      "git_blob_sha": "2b4c1e99673fad9032b4e7186544131e47bc5cc9"
+    },
+    {
+      "path": "project/research/n30/2026-09-11-assembled-hand-route-v1/TWELVE_LABEL_TRANSFER.md",
+      "bytes": 7197,
+      "sha256": "3eaf4b64c6e388823a0eca47fbdf646f6f7e0a71197124525a84651caf22512c",
+      "git_blob_sha": "ae8d3259f8c96d56e4cf8e27390904c0e9fd1a2e"
+    },
+    {
+      "path": "project/research/n30/2026-09-11-assembled-hand-route-v1/audit_assembly.py",
+      "bytes": 10908,
+      "sha256": "95f776443e043216f3a7aa414175717cba8f09ddf5814e6ce1b1c935ce351907",
+      "git_blob_sha": "8829e1ce15466568906781c2a7120207a767325f"
+    },
+    {
+      "path": "project/research/n30/2026-09-11-assembled-hand-route-v1/check_publication.py",
+      "bytes": 4244,
+      "sha256": "204b12fea4df92a1aebb6845f60595daddca44c5fe9e6bc8354f86a7501a263b",
+      "git_blob_sha": "1e7b78f3778750be0d3e251bfc2c7c6356a5811e"
+    },
+    {
+      "path": "project/research/n30/2026-09-11-assembled-hand-route-v1/profile_regression.cpp",
+      "bytes": 4273,
+      "sha256": "1ca9e5982cba7d7b37e3a2a1ff7512f012724a83d0b1202a2f1a803891ea010b",
+      "git_blob_sha": "644f598a30a0de031ed136bc1e2a41b46018b6a8"
+    },
+    {
+      "path": "project/research/n30/2026-09-11-m225-hall-continuation-v1/README.md",
+      "bytes": 3835,
+      "sha256": "9eb9d1be93891ee9f19b4438bbc72e6ea7bfbe7f44c1c8d3a20795d58ad8e95b",
+      "git_blob_sha": "65d4b0494096e63051ebe2ff251adcc15b58c0bc"
+    },
+    {
+      "path": "project/research/n30/2026-09-11-m225-hand-classification-v1/README.md",
+      "bytes": 3344,
+      "sha256": "d05478e4d0be21a522fbe87351f4ace0765caa7a0f349ea1651ab8bb9da555ea",
+      "git_blob_sha": "aac8121773e48c0e3e6ec69c98523889cf0f3d53"
+    },
+    {
+      "path": "project/research/n30/2026-09-11-m225-resource-envelope-v1/README.md",
+      "bytes": 3728,
+      "sha256": "4a8cd71dd7961fbc60b1a36eed19602c3962c52ba0f4d4dfff34516f7e11d42e",
+      "git_blob_sha": "3d2887910a5f276e5c8d25d2cff9abca1cb05934"
+    },
+    {
+      "path": "project/research/n30/2026-09-11-threshold-tail-v1/README.md",
+      "bytes": 8949,
+      "sha256": "a357a8a968c557aac652b8ef26f2f9179c953710245f9ffa2d00fb29534bc482",
+      "git_blob_sha": "baed962dca81312ea8f1b4688cb05360e9ca73a2"
+    },
+    {
+      "path": "releases/REVIEW_READY_INDEX.md",
+      "bytes": 6000,
+      "sha256": "bb5358fffb7255f0025a2cd8a24c1a390e3573e01c1f29f5ec45be5a13063fe2",
+      "git_blob_sha": "f3e9b55232e774a5941258cae22e26f06301cc02"
+    }
+  ],
+  "exclusion": "This manifest excludes itself. A subsequent publication receipt records its hash and verified remote commit."
+}
