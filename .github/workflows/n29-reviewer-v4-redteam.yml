@@ -1,0 +1,32 @@
+name: N29 reviewer-v4 hostile audit
+
+on:
+  workflow_dispatch:
+  push:
+    paths:
+      - 'project/reviews/n29/2026-09-11-reviewer-v4/**'
+      - 'project/reviews/n29/2026-09-11-reviewer-v4-redteam-v1/**'
+      - '.github/workflows/n29-reviewer-v4-redteam.yml'
+
+permissions:
+  contents: read
+
+jobs:
+  exact-redteam:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262
+      - name: Run separately specified exact red-team
+        run: |
+          set -euo pipefail
+          mkdir -p out
+          /usr/bin/python3 -I -B project/reviews/n29/2026-09-11-reviewer-v4-redteam-v1/independent_exact_redteam.py \
+            > out/N29_REVIEWER_V4_INDEPENDENT_EXACT_REDTEAM.json
+          grep -q '"status": "PASS"' out/N29_REVIEWER_V4_INDEPENDENT_EXACT_REDTEAM.json
+          sha256sum out/N29_REVIEWER_V4_INDEPENDENT_EXACT_REDTEAM.json > out/SHA256SUMS.txt
+      - uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02
+        with:
+          name: n29-reviewer-v4-redteam-${{ github.run_id }}
+          path: out/*
+          retention-days: 30
