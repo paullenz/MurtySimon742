@@ -32,7 +32,11 @@ J={u in Z_h: ell_u>h},
 j=|J|.
 ```
 
-Fix `u in J`. For each heavy selected edge `ui->w`, the supplement `w` is adjacent in `H` to every other heavy selected label at source `u`. There are `ell_u-1>=h` such distinct labels, so `rho_w>=h` or, more generally, the source-demand/supplement count forces `w in Z_h`. Thus every heavy arc from a source in `J` uses an unordered `B`-pair entirely inside `Z_h` and incident with `J`.
+Fix `u in J` and a heavy selected edge `ui->w`. For every other heavy selected label `j` at source `u`, the pair `{u,j}` must dominate `w`; since `uw` is missing, this forces the cross-edge `jw` in `H`. There are `ell_u-1>=h` such distinct labels `j`.
+
+We claim that the supplement `w` lies in `Z_h`. There are two cases. If none of those `ell_u-1` forced edges `jw` is selected from source `w`, then all of them are residual and therefore `rho_w>=ell_u-1>=h`. If at least one forced edge `jw` is selected, then its label `j` is heavy, so `s_j>=h`; applying the source-demand implication `s_j<=rho_w` to that selected incidence gives `rho_w>=h`. Thus in every case `w in Z_h`.
+
+Consequently every heavy arc from a source in `J` uses an unordered `B`-pair entirely inside `Z_h` and incident with `J`.
 
 Selected orientations are injective on unordered `B`-pairs. Therefore the total number of heavy arcs contributed by sources in `J` is at most the number of unordered pairs of `Z_h` incident with `J`:
 
