@@ -1,0 +1,337 @@
+{
+  "schema": "n30-hand-classification-publication-receipt-v1",
+  "recorded_at_utc": "2026-09-11T21:00:59.419Z",
+  "repository": "paullenz/MurtySimon742",
+  "branch": "main",
+  "baseline_commit": "d063c25445671c2588f5a619ecbc468e9698806d",
+  "baseline_tree": "f50ca9fbe9b0f845ebdf770378560d4d0daec9e8",
+  "research_commit": "4a393a00d2ae27d45b3387eeb7207c250d991d22",
+  "research_tree": "439f1ea323f77a3200736b0f8402b0de4986173d",
+  "branch_update": {
+    "force": false,
+    "read_back_sha": "4a393a00d2ae27d45b3387eeb7207c250d991d22"
+  },
+  "remote_tree_verification": {
+    "all_intended_blob_hashes_match": true,
+    "all_other_blobs_unchanged": true,
+    "intended_blob_count": 22,
+    "unchanged_baseline_blob_count": 1404,
+    "unexpected_new_blobs": 0
+  },
+  "intended_files": [
+    {
+      "bytes": 2622,
+      "git_blob_sha": "32401b3d9f5838b1ddf3a847f1304e08879ab6a5",
+      "path": ".github/workflows/n30-m225-hand-classification.yml",
+      "sha256": "077beddf787744bdb73173ebb4a97ceecd91af8571e982936b885fedaad8fd36"
+    },
+    {
+      "bytes": 33781,
+      "git_blob_sha": "87dd9ceca467fbef407e73080747460c0da2b19d",
+      "path": "README.md",
+      "sha256": "88bdbfc3f5bac00d1b70fd385e335c7e46a98d9bd4f7058f2db018ffe7d3beb6"
+    },
+    {
+      "bytes": 18881,
+      "git_blob_sha": "7a97cd0c85032116f201f52b266ac8077e75de61",
+      "path": "START_HERE_FOR_REVIEWERS.md",
+      "sha256": "a3315d009db82ca6688e430877a0eb7b3d08c8348ac9e1a61997047a5aa68726"
+    },
+    {
+      "bytes": 3883,
+      "git_blob_sha": "591f9e6f920d888ebc157318ba5bddf7419c1af7",
+      "path": "project/research/n30/2026-09-11-m225-hall-continuation-v1/README.md",
+      "sha256": "80d1e519dcfdd1ec3415d654c1118c4794ebab1a5f7f9648199e12dd110ece75"
+    },
+    {
+      "bytes": 164629,
+      "git_blob_sha": "80866b577ad44c836125e112c0a59b5de276a522",
+      "path": "project/research/n30/2026-09-11-m225-hand-classification-v1/ENDPOINT_REPLAY.json",
+      "sha256": "c10fc9aa558d36a9f5b86c6d2fd8b9ccb2417283befc6dec7243a6694bb5c049"
+    },
+    {
+      "bytes": 343,
+      "git_blob_sha": "deebec016c196675a439194e0d2f38c8f3b198cb",
+      "path": "project/research/n30/2026-09-11-m225-hand-classification-v1/ENVIRONMENT.json",
+      "sha256": "dd2775d4ae81c405912f9a468c6d5cf186f6d6e1d06b86330ca693a2acb488a0"
+    },
+    {
+      "bytes": 97432,
+      "git_blob_sha": "932d8eb23520ca3b409a16f002c62e8de5ed7f21",
+      "path": "project/research/n30/2026-09-11-m225-hand-classification-v1/EXACT_AUDIT.json",
+      "sha256": "6e06a8dea7873acafe245bed6b7be019d85e7b51276727aa5393c10f8dd28428"
+    },
+    {
+      "bytes": 1169,
+      "git_blob_sha": "c4267788f8e970235ca279d698f3d9bf34890521",
+      "path": "project/research/n30/2026-09-11-m225-hand-classification-v1/EXPLORATORY_STRUCTURE.json",
+      "sha256": "9cb1ce9cc26876a3340a3420caefe0e44c4b4a0d70de522c83670b19b0dd7eb7"
+    },
+    {
+      "bytes": 4598,
+      "git_blob_sha": "fba188f38946136d4a358c8d69a04aae776d043c",
+      "path": "project/research/n30/2026-09-11-m225-hand-classification-v1/HANDOVER.md",
+      "sha256": "c289652c1586561ee5db3d06815b4c45d691959b17a4c8dab5c05d309861c160"
+    },
+    {
+      "bytes": 12938,
+      "git_blob_sha": "d223a3b96dc4d3cf3ff1bcd6e7197d58b651b414",
+      "path": "project/research/n30/2026-09-11-m225-hand-classification-v1/HAND_CLASSIFICATION.md",
+      "sha256": "2c410a2a9c939441579d1d9ea1e899a18b79a2ed150ff112b2fb13dceae8ed70"
+    },
+    {
+      "bytes": 3433,
+      "git_blob_sha": "0393edc3101a7b471882937ded8afcadd52c1d72",
+      "path": "project/research/n30/2026-09-11-m225-hand-classification-v1/HAND_CLASSIFIED_PROFILES.txt",
+      "sha256": "13eeaf4a4af8836451131a65bb3f4e9cd5a6a33a473e687f20bbc069d49c4130"
+    },
+    {
+      "bytes": 4573,
+      "git_blob_sha": "c5da52b7185f11221fb0112c8e626ca3cd1c675e",
+      "path": "project/research/n30/2026-09-11-m225-hand-classification-v1/INTERNAL_REVIEW.md",
+      "sha256": "68731776f09603b00c4dbe1da8eb8391b952e1bee095eb6f519252ec58166ee5"
+    },
+    {
+      "bytes": 6000,
+      "git_blob_sha": "b6f8f87a23b412b0ff15090e0919aa11e88114e3",
+      "path": "project/research/n30/2026-09-11-m225-hand-classification-v1/MANIFEST.json",
+      "sha256": "71b1530984b575362afc9a9824a71fbed215c6b1ca3224cc2cc9d094c2c59653"
+    },
+    {
+      "bytes": 18250,
+      "git_blob_sha": "819a9ff154bbddcb9b18293efc83b94b6fde4e65",
+      "path": "project/research/n30/2026-09-11-m225-hand-classification-v1/PREIMAGE_ARITHMETIC.md",
+      "sha256": "8fe4a58f3c472c1f3964f403be2a07f0e8fb574a4e3033f50d9b0f03a3950648"
+    },
+    {
+      "bytes": 563,
+      "git_blob_sha": "9cc4c4a785e3a147cda1d66df122c9e717cea853",
+      "path": "project/research/n30/2026-09-11-m225-hand-classification-v1/PUBLICATION_CHECKS.json",
+      "sha256": "449fab3d12946cea5ab03e125faa36b505f460afe013e7abcde59f6988b589d2"
+    },
+    {
+      "bytes": 3106,
+      "git_blob_sha": "34079dd330263d91f6ae9c7f43bddb3092b0fcd6",
+      "path": "project/research/n30/2026-09-11-m225-hand-classification-v1/README.md",
+      "sha256": "2ab2c9387d8e31b9922b441403c8c74416abd3f96afb3f30ef62e95ad4f5ea4d"
+    },
+    {
+      "bytes": 5431,
+      "git_blob_sha": "effa3bd7bf0e038222d831d5f049ce1a0b65ab4d",
+      "path": "project/research/n30/2026-09-11-m225-hand-classification-v1/check_publication.py",
+      "sha256": "ea9d77ff8562d9f92a0bc94b42507a350d3298520e99bd4540765f95ab150609"
+    },
+    {
+      "bytes": 1589,
+      "git_blob_sha": "86582c9c8d5295c82cb63bd0a95b2a03ae8821d6",
+      "path": "project/research/n30/2026-09-11-m225-hand-classification-v1/explore_structure.py",
+      "sha256": "dec062695ccf6e0d331481ac0140c68535bb336407edfefcffeffbe7b2564025"
+    },
+    {
+      "bytes": 12529,
+      "git_blob_sha": "721faf140f520f7befcd6c00d917877eafde9631",
+      "path": "project/research/n30/2026-09-11-m225-hand-classification-v1/verify_hand_classification.py",
+      "sha256": "dcc88ec55941f84a1ecf989b69c0beff3fa0e164f9aa3ab509bc14dd055f7e11"
+    },
+    {
+      "bytes": 3545,
+      "git_blob_sha": "ef6d56435962a55dd277fa60e53803e6ba1744eb",
+      "path": "project/research/n30/2026-09-11-m225-resource-envelope-v1/README.md",
+      "sha256": "cac12b1aff0af16c091ab292e71e2c9ec03fc3f5ee8f5c11871c028cac79e5ea"
+    },
+    {
+      "bytes": 8973,
+      "git_blob_sha": "648a068936278c4b05f309a7e5394965365bb35a",
+      "path": "project/research/n30/2026-09-11-threshold-tail-v1/README.md",
+      "sha256": "10e15cce98d3fe1576181652cebf43fdaede3528bd2f56a69f531a7079efac2a"
+    },
+    {
+      "bytes": 6005,
+      "git_blob_sha": "fe771ddb06581460bf22c11fb28402f7ae7d78e9",
+      "path": "releases/REVIEW_READY_INDEX.md",
+      "sha256": "9cff3b15688a685fac8081c53fcdfd483e3ec7061e4fd3df992ab720f2c13007"
+    }
+  ],
+  "exact_file_readbacks": [
+    "README.md",
+    "project/research/n30/2026-09-11-m225-hand-classification-v1/HAND_CLASSIFICATION.md",
+    "project/research/n30/2026-09-11-m225-hand-classification-v1/HAND_CLASSIFIED_PROFILES.txt"
+  ],
+  "publication_checks": {
+    "baseline": "d063c25445671c2588f5a619ecbc468e9698806d",
+    "broken_links": [],
+    "current_versions": {
+      "n25": 2,
+      "n27": 2,
+      "n28": 2,
+      "n29": 4,
+      "n30": 2
+    },
+    "frozen_bridge_unchanged": true,
+    "relative_links_checked": 216,
+    "scope": "Current entry pages, three predecessor READMEs and new checkpoint; not all historical links.",
+    "status": "PASS",
+    "tracked_and_untracked_changes_within_scope": true,
+    "written_cap4_cap5_cap6_tables_match": true,
+    "written_capacity_entries_checked": 50,
+    "written_score_distribution_match": true
+  },
+  "frozen_bridge": {
+    "path": "project/reviews/n29/2026-09-11-reviewer-v3/GRAPH_TO_MODEL_BRIDGE.md",
+    "sha256": "4a2333802f011a51eca60041aeb412dc157bf8adf99807cb59581b4274152f42",
+    "unchanged": true
+  },
+  "frozen_packages_formulas_and_ledger": "Every baseline blob outside the six intended current-navigation README/index paths is unchanged. This includes historical profiles, exact certificate formulas, proof sources, frozen reviewer packages and governed theorem ledger.",
+  "classification_audit": {
+    "cap4_arithmetic_states": 365,
+    "cap4_profiles": 70,
+    "cap5_arithmetic_states": 366,
+    "cap5_profiles": 30,
+    "cap6_arithmetic_states": 225,
+    "checks": {
+      "N2_at_most_10_deficit_at_most_4": true,
+      "N2_at_most_11_deficit_at_most_5": true,
+      "all_cap_five_preimages_classified": true,
+      "cap_four_table_complete": true,
+      "clipping_with_zero_and_one_entries": true,
+      "no_preimage_with_six_or_more": true
+    },
+    "floating_point_used": false,
+    "full_multiset_sweep_used": false,
+    "generated_profiles_sha256": "13eeaf4a4af8836451131a65bb3f4e9cd5a6a33a473e687f20bbc069d49c4130",
+    "historical_comparison": {
+      "match": true,
+      "sha256": "cf29aeee1f83c957ae06a70c1d7de5df5b482c384c6c109d09f64ed1230fe237"
+    },
+    "historical_profiles_used_for_derivation": false,
+    "maximum_demand": 5,
+    "score_distribution": {
+      "18": 64,
+      "19": 29,
+      "20": 6,
+      "21": 1
+    },
+    "solver_used": false,
+    "status": "PASS",
+    "total_profiles": 100
+  },
+  "endpoint_replay": {
+    "assigned_counts": {
+      "B1": 195,
+      "B2": 13,
+      "B3": 2,
+      "C1": 1
+    },
+    "certificate_sha256": "20c8389036ee426b4d6b2589d41454546f9c823ff150ed6c9103da8c070aecc8",
+    "covered": 211,
+    "direct_integer_state_checks": 12772,
+    "discovery_imported": false,
+    "dmax": 12,
+    "endpoint_integer_state_checks": 8069,
+    "floating_point_used": false,
+    "full_frontier_template_coverage": {
+      "B1": 195,
+      "B2": 79,
+      "B3": 24,
+      "C1": 10
+    },
+    "isolated_C_degree_bound_used": false,
+    "minimum_assigned_gap": 1,
+    "product_order_checks": 37128,
+    "profile_completeness_is_input": true,
+    "profile_sha256": "13eeaf4a4af8836451131a65bb3f4e9cd5a6a33a473e687f20bbc069d49c4130",
+    "schema": "n30-joint-envelope-audit-v1",
+    "solver_used": false,
+    "status": "PASS",
+    "template_count": 4,
+    "tight_rows": 211,
+    "uncovered": []
+  },
+  "ci_runs": [
+    {
+      "id": 34647010353,
+      "name": "N30 m225 four-envelope exact audit",
+      "head_sha": "4a393a00d2ae27d45b3387eeb7207c250d991d22",
+      "status": "completed",
+      "conclusion": "success",
+      "url": "https://github.com/paullenz/MurtySimon742/actions/runs/34647010353"
+    },
+    {
+      "id": 34647010347,
+      "name": "N30 m225 scalar excess exact audit",
+      "head_sha": "4a393a00d2ae27d45b3387eeb7207c250d991d22",
+      "status": "completed",
+      "conclusion": "success",
+      "url": "https://github.com/paullenz/MurtySimon742/actions/runs/34647010347"
+    },
+    {
+      "id": 34647010305,
+      "name": "N30 m225 hand classification and endpoint replay",
+      "head_sha": "4a393a00d2ae27d45b3387eeb7207c250d991d22",
+      "status": "completed",
+      "conclusion": "success",
+      "url": "https://github.com/paullenz/MurtySimon742/actions/runs/34647010305"
+    },
+    {
+      "id": 34647010312,
+      "name": "N30 threshold-tail structure",
+      "head_sha": "4a393a00d2ae27d45b3387eeb7207c250d991d22",
+      "status": "completed",
+      "conclusion": "success",
+      "url": "https://github.com/paullenz/MurtySimon742/actions/runs/34647010312"
+    }
+  ],
+  "new_ci_job_steps": [
+    {
+      "name": "Set up job",
+      "conclusion": "success"
+    },
+    {
+      "name": "Run actions/checkout@11d5960a326750d5838078e36cf38b85af677262",
+      "conclusion": "success"
+    },
+    {
+      "name": "Derive profiles without the historical frontier",
+      "conclusion": "success"
+    },
+    {
+      "name": "Feed the independently derived profiles into the four-envelope checker",
+      "conclusion": "success"
+    },
+    {
+      "name": "Corroborate historical agreement after derivation",
+      "conclusion": "success"
+    },
+    {
+      "name": "Check every written classification table",
+      "conclusion": "success"
+    },
+    {
+      "name": "Run actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02",
+      "conclusion": "success"
+    },
+    {
+      "name": "Post Run actions/checkout@11d5960a326750d5838078e36cf38b85af677262",
+      "conclusion": "success"
+    },
+    {
+      "name": "Complete job",
+      "conclusion": "success"
+    }
+  ],
+  "scope": {
+    "result_status": "CANDIDATE / REPRODUCED",
+    "classification": "70 cap-four plus 30 cap-five profiles, with all higher preimages excluded by the written clipping and bounded arithmetic tables",
+    "historical_exhaustive_profile_list_needed_for_new_derivation": false,
+    "proof_is_table_free": false,
+    "external_specialist_review": "OPEN",
+    "governed_theorem_ledger_promotion": false,
+    "new_reviewer_edition": false,
+    "remaining": [
+      "Independent review of the written classification and its bounded arithmetic tables.",
+      "Complete Delta=16 assembly audit including the bridge and 211 envelope evaluations.",
+      "Separate Delta=17 finite components and full N30 assembly review."
+    ]
+  },
+  "receipt_note": "This receipt records the verified research commit. Its own subsequent commit is excluded to avoid a recursive content hash."
+}
