@@ -14,7 +14,7 @@ Candidate proofs and reproducible research. **Updated 11 September 2026. Indepen
 | `n=29` | Complete candidate: `e(G) <= 210`, equality exactly `K(14,15)`; Fan-free reviewer v2; minimal trusted `Delta=16` kernel and exact Farkas endpoint; external review open |
 | `n=30` | Complete candidate: `e(G) <= 225`, equality exactly `K(15,15)`; Fan-free reviewer v2; exact finite endpoint certificates and assembly replay green; external review open |
 | General maximum-degree result | Candidate theorem: `n >= 6` and `Delta(G) >= (7/12)n` imply `e(G) < floor(n^2/4)`; complete candidate hand argument with internal exact audits green; external review and novelty assessment open |
-| RX-Hall / 3-D potential programme | Active finite-to-symbolic research programme. Under the current fixed 3-D potentials the exact finite minimum scalar-template counts are `2` for `n=30,t=1`, `3` for `n=29,t=2`, and `4` for `n=29,t=3`. The suggestive `t+1` pattern is an active falsification target, **not a theorem** and not an unrestricted solution. |
+| RX-Hall / 3-D potential programme | Active finite-to-symbolic research programme. Under the current fixed 3-D potentials the exact finite minimum scalar-template counts are `2` for `n=30,t=1`, `3` for `n=29,t=2`, and `4` for `n=29,t=3`. A non-circular exact audit now shows `J=2#{rho>=2}-#{s=1}` gives a common-template regime partition at `t=1,2`, while `(h_res,J)` does so at `t=3`. The suggestive `t+1` pattern remains a falsification target, **not a theorem** and not an unrestricted solution. |
 
 The unrestricted Murty–Simon conjecture remains unsolved by this project.
 
@@ -198,9 +198,41 @@ The full regenerated `n=29, Delta=16, t=2` frontier contains 902 profiles. The c
 
 This is a finite certificate-compression theorem inside the RX-Hall model. It is **not** an unrestricted Murty–Simon theorem and does not replace the fixed-order n=29 reviewer proof chain.
 
+#### 11 September: non-circular regime audit and tight boundary profiles
+
+The adjacent `t=1,2,3` laboratories have now been re-audited without using pre-chosen assignment labels. Every preserved scalar template is evaluated on every profile first with exact `fractions.Fraction` arithmetic; only then are low-dimensional regime cells tested for a common valid template.
+
+The exact finite result is:
+
+```text
+t=1: J alone suffices;
+t=2: J alone suffices;
+t=3: J alone fails, but (h_res,J) suffices,
+```
+
+where
+
+```text
+J = 2 #{u:rho_u>=2} - #{i:s_i=1}.
+```
+
+Thus every occupied `(h_res,J)` cell across the three current laboratories has a nonempty common-template intersection. This is a genuine sufficient finite regime partition, not merely a replay of labels generated from the same statistics.
+
+The stronger statement is false: `(h_res,J)` does **not** determine the complete set of templates that work on a profile. Exact `t=3` collisions show that even the entire residual sequence can be held fixed while the validity mask changes, and conversely the entire demand sequence can be held fixed while the validity mask changes. Fine certificate geometry is therefore genuinely joint in `(s,rho)`. The corrected analysis and replay live under [`project/research/general_n/2026-09-11-regime-structure-v1/`](project/research/general_n/2026-09-11-regime-structure-v1/README.md).
+
+An exact regime-margin census gives minimum assigned gaps
+
+```text
+t=1: 1/2
+t=2: 367/30
+t=3: 1
+```
+
+and at `t=3` the minimum gap `1` is attained by profiles `0,1,5,30,38`. Four of those five — `0,1,38,30` — are exactly the pairwise-incompatible four-profile clique proving that four templates are necessary. This makes the boundary profiles the current symbolic target: they simultaneously control the necessity and the tight end of sufficiency.
+
 #### 11 September working hypothesis — `t+1` scalar regimes
 
-The three current exact finite laboratories now give
+The three current exact finite laboratories give
 
 ```text
 n=30, t=1: minimum 2 scalar templates;
@@ -216,9 +248,9 @@ minimum regime count = t+1
 
 a natural **falsification target**. It is not presently a theorem: the three results use different finite frontiers and different fixed 3-D potentials, and no extrapolation to general `(n,t)` is claimed.
 
-The immediate research priority is to characterize the exact scalar regimes by elementary statistics of the demand/source profiles `(s,rho)`, test whether the resulting regime boundaries can be generated from parameters rather than profile IDs, and then attack the proposed `t+1` rule on fresh finite domains. Only after surviving those tests would it be appropriate to seek a symbolic regime lemma and combine it with charging/demand bounds to push below the `7/12` maximum-degree frontier.
+The corrected next step is not to reconstruct every template-validity mask. The proof-relevant target is to derive symbolic lower bounds for the assigned template gap on each `J` / `(h_res,J)` regime, beginning with the five exact `t=3` margin-one extremals and especially the incompatibility-clique profiles `0,1,38,30`. The natural ingredients are cumulative demand/source tails, HC3 pointwise capacity `q_u <= #{i:s_i<=rho_u}`, and only as much joint Hall information as the tight profiles force.
 
-An active structural diagnostic is preserved under [`project/research/general_n/2026-09-11-regime-structure-v1/`](project/research/general_n/2026-09-11-regime-structure-v1/). It tests whether elementary threshold statistics of `(s,rho)` can exactly partition the 902 `t=2` profiles into regions certified by the three already-exact rational templates. This diagnostic is exploratory and does not alter any theorem claim.
+In parallel the same regime pair should be hostile-tested on fresh exact frontiers. Any universal promotion still depends on an independent red-team of the graph-to-profile/RX-Hall bridge and the 3-D monotone potential-certificate lemma. Only after these steps survive should a parameterized `t+1` regime lemma be attempted or combined with charging/demand bounds to push below the `7/12` maximum-degree frontier.
 
 ### Layer-sum 13/22 and earlier structural checkpoints
 
