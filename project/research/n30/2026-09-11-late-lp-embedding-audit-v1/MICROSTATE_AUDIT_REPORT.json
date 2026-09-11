@@ -1,0 +1,69 @@
+{
+  "schema": "n30-late-lp-microstate-embedding-audit-v1",
+  "status": "PASS",
+  "fixtures": [
+    {
+      "fixture": "uniform-rho",
+      "t": -26,
+      "demand_groups": [
+        [
+          0,
+          1
+        ],
+        [
+          1,
+          12
+        ]
+      ],
+      "residual_groups": [
+        [
+          4,
+          16
+        ]
+      ],
+      "selected_pair_arcs": 64,
+      "selected_cross_edges": 64,
+      "corrected_n30": {
+        "variables": 8279,
+        "equalities": 254,
+        "inequalities": 10254,
+        "violations": 0
+      }
+    },
+    {
+      "fixture": "mixed",
+      "t": -25,
+      "demand_groups": [
+        [
+          0,
+          7
+        ],
+        [
+          1,
+          6
+        ]
+      ],
+      "residual_groups": [
+        [
+          3,
+          8
+        ],
+        [
+          4,
+          8
+        ]
+      ],
+      "selected_pair_arcs": 56,
+      "selected_cross_edges": 56,
+      "corrected_n30": {
+        "variables": 15023,
+        "equalities": 342,
+        "inequalities": 17132,
+        "violations": 0
+      }
+    }
+  ],
+  "all_production_rows_satisfied": true,
+  "external_independence": false,
+  "note": "Exact rational normalization regression only; fixtures are not asserted critical graphs."
+}
