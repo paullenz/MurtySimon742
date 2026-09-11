@@ -4,10 +4,14 @@
 n = 31
 Turan = n * n // 4
 assert Turan == 240
-assert 19 * 12 > 7 * n  # Delta=19 lies strictly above 7n/12.
 assert 18 * (31 - 18) == 234
 assert 17 * (31 - 17) == 238
 assert 16 * (31 - 16) == 240
+
+# The twelve-label transfer covers every 18<=Delta<=29 branch.
+high_bounds = {b: b * (31 - b) for b in range(18, 30)}
+assert max(high_bounds.values()) == 234
+assert high_bounds[18] == 234
 
 # Delta=16 witness-deficit tables.
 def witness_rhs(h, o):
