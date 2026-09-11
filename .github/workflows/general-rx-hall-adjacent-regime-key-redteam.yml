@@ -7,6 +7,7 @@ on:
       - '.github/workflows/general-rx-hall-adjacent-regime-key-redteam.yml'
       - 'project/research/general_n/2026-09-11-regime-structure-v1/adjacent_t123_regime_key_redteam.py'
       - 'project/research/general_n/2026-09-11-regime-structure-v1/adjacent_t123_validity_mask_audit_exact.py'
+      - 'project/research/general_n/2026-09-11-regime-structure-v1/adjacent_t123_regime_margin_exact.py'
       - 'project/research/general_n/2026-09-11-regime-structure-v1/n29_t3_template_mask_structure_exact.py'
       - 'project/research/general_n/2026-09-11-regime-structure-v1/n29_t3_hJ_collision_exact.py'
       - 'project/research/general_n/2026-09-11-regime-structure-v1/n29_t3_joint_capacity_structure_exact.py'
@@ -63,6 +64,15 @@ jobs:
             --t3-demands-json inputs/t3/demands.json \
             --t3-rows inputs/t3/row_survivors.txt \
             --output out/ADJACENT_T123_VALIDITY_MASK_AUDIT_EXACT.json
+          /usr/bin/python3 -I -B "$N/adjacent_t123_regime_margin_exact.py" \
+            --t1-script "$R/n30_t1_two_rational_templates_exact.py" \
+            --t2-script "$R/n29_t2_sh3_c11_three_scalar_exact.py" \
+            --t3-script "$R/n29_t3_four_scalar_templates_exact.py" \
+            --t2-demands-json inputs/t2/demands.json \
+            --t2-rows inputs/t2/row_survivors.txt \
+            --t3-demands-json inputs/t3/demands.json \
+            --t3-rows inputs/t3/row_survivors.txt \
+            --output out/ADJACENT_T123_REGIME_MARGIN_EXACT.json
           /usr/bin/python3 -I -B "$N/n29_t3_template_mask_structure_exact.py" \
             --cover-script "$R/n29_t3_four_scalar_templates_exact.py" \
             --demands-json inputs/t3/demands.json \
