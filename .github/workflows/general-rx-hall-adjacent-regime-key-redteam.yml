@@ -11,6 +11,7 @@ on:
       - 'project/research/general_n/2026-09-11-regime-structure-v1/n29_t3_template_mask_structure_exact.py'
       - 'project/research/general_n/2026-09-11-regime-structure-v1/n29_t3_hJ_collision_exact.py'
       - 'project/research/general_n/2026-09-11-regime-structure-v1/n29_t3_joint_capacity_structure_exact.py'
+      - 'project/research/general_n/2026-09-11-regime-structure-v1/n29_t3_boundary_envelope_exact.py'
       - 'project/research/general_n/2026-09-09-rx-hall-v1/n29_t3_four_scalar_templates_exact.py'
       - 'project/research/general_n/2026-09-09-rx-hall-v1/n29_t2_sh3_c11_three_scalar_exact.py'
       - 'project/research/general_n/2026-09-09-rx-hall-v1/n30_t1_two_rational_templates_exact.py'
@@ -88,6 +89,11 @@ jobs:
             --demands-json inputs/t3/demands.json \
             --rows inputs/t3/row_survivors.txt \
             --output out/N29_T3_JOINT_CAPACITY_STRUCTURE_EXACT.json
+          /usr/bin/python3 -I -B "$N/n29_t3_boundary_envelope_exact.py" \
+            --cover-script "$R/n29_t3_four_scalar_templates_exact.py" \
+            --demands-json inputs/t3/demands.json \
+            --rows inputs/t3/row_survivors.txt \
+            --output out/N29_T3_BOUNDARY_ENVELOPE_EXACT.json
           cp inputs/t2/MINIMAL_ROWS_REPORT.json out/T2_MINIMAL_ROWS_REPORT.json
           cp inputs/t3/MINIMAL_ROWS_REPORT.json out/T3_MINIMAL_ROWS_REPORT.json
           sha256sum out/*.json > out/SHA256SUMS.txt
