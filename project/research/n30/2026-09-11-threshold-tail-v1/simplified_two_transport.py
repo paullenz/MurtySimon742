@@ -19,14 +19,15 @@ Balances retained:
   label excess-type normalisation;
   source selected degree q and label selected degree x=s+e.
 
-Everything else from the historical grouped LP is discarded.  Thus infeasibility
+Everything else from the historical grouped LP is discarded. Thus infeasibility
 of this system is a valid necessary-condition contradiction, but feasibility
 would prove nothing.
 """
 from __future__ import annotations
 from collections import Counter,defaultdict
+from fractions import Fraction
 from functools import reduce
-from math import gcd
+from math import gcd,lcm
 import argparse,json
 import numpy as np
 from scipy.optimize import linprog
@@ -65,7 +66,6 @@ def add(d,j,c=1):d[j]=d.get(j,0)+c
 
 def build(s,rho):
  m=M(); SG=sorted(Counter(rho).items()); LG=sorted(Counter(s).items())
- # Source type distributions.
  W={};types=defaultdict(list)
  for k,(rh,nk) in enumerate(SG):
   norm={}
@@ -73,8 +73,6 @@ def build(s,rho):
    for p in range(min(rh+2,B-1-q)+1):
     w=m.var(('W',k,rh,q,p));W[k,q,p]=w;types[k].append((q,p,w));norm[w]=1
   m.equal(norm,1)
- # Supplement transport. P is a density per source in group k to individual
- # destinations in group l, exactly as in the historical grouped model.
  Pout=defaultdict(list);Pin=defaultdict(list)
  for k,(rh,nk) in enumerate(SG):
   for q,p,w in types[k]:
@@ -94,15 +92,12 @@ def build(s,rho):
    e={w2:-p2}
    for k,z in Pin[l,q2,p2]:add(e,z,SG[k][1]-(k==l))
    m.equal(e,0)
- # Label excess distributions. A label has x=s+e selected incidences, and
- # x<=B safely bounds e<=B-s.
  L={};ltypes=defaultdict(list)
  for g,(sg,ng) in enumerate(LG):
   norm={}
   for ex in range(B-sg+1):
    z=m.var(('L',g,sg,ex));L[g,ex]=z;ltypes[g].append((ex,z));norm[z]=1
   m.equal(norm,1)
- # Selected incidence transport.
  Zout=defaultdict(list);Zin=defaultdict(list)
  for k,(rh,nk) in enumerate(SG):
   for q,p,w in types[k]:
@@ -125,6 +120,24 @@ def build(s,rho):
    m.equal(e,0)
  return m
 
+def _evaluate_mu(m,mu):
+ coef=[0]*len(m.names);rv=0
+ for (row,b),w in zip(m.eq,mu):
+  if not w:continue
+  rv+=w*b
+  for j,c in row.items():coef[j]+=w*c
+ return coef,rv
+
+def _primitive(mu):
+ g=reduce(gcd,[abs(x) for x in mu if x] or [1]) or 1
+ return [x//g for x in mu]
+
+def _rational_candidate(raw,max_den):
+ fr=[Fraction(float(x)).limit_denominator(max_den) for x in raw]
+ den=1
+ for x in fr:den=lcm(den,x.denominator)
+ return _primitive([x.numerator*(den//x.denominator) for x in fr])
+
 def exact_certificate(m):
  # Nonnegative variables, equalities only. A Farkas ray mu with A^T mu>=0,
  # b^T mu<0 suffices. Split free equality multipliers into +/- parts.
@@ -133,20 +146,25 @@ def exact_certificate(m):
  D=vstack([D,csr_matrix(np.r_[f,-f].reshape(1,-1))],format='csr')
  rhs=np.r_[np.zeros(N),-1.0]
  res=linprog(np.ones(2*ne),A_ub=D,b_ub=rhs,bounds=(0,None),method='highs')
- if not res.success:return None
- for scale in (1000,1000000,1000000000):
-  mu=[round(float(x-y)*scale) for x,y in zip(res.x[:ne],res.x[ne:])]
-  coef=[0]*N;rv=0
-  for (row,b),w in zip(m.eq,mu):
-   if not w:continue
-   rv+=w*b
-   for j,c in row.items():coef[j]+=w*c
+ if not res.success:return None,{'dual_status':int(res.status),'dual_message':str(res.message)}
+ raw=[float(x-y) for x,y in zip(res.x[:ne],res.x[ne:])]
+ # Rational reconstruction is preferable to decimal scaling because the Farkas
+ # ray commonly has exact zero reduced coefficients formed by cancellations.
+ for md in (32,128,512,2048,10000,100000,1000000):
+  mu=_rational_candidate(raw,md)
+  coef,rv=_evaluate_mu(m,mu)
   if min(coef)>=0 and rv<0:
-   factor=reduce(gcd,[abs(x) for x in mu] or [1]) or 1
-   c={'eq':[(i,w//factor) for i,w in enumerate(mu) if w],
-      'rhs':rv//factor,'variables':N,'equalities':ne}
-   verify(m,c);return c
- return None
+   c={'eq':[(i,w) for i,w in enumerate(mu) if w],
+      'rhs':rv,'variables':N,'equalities':ne,'max_denominator':md}
+   verify(m,c);return c,{'dual_status':int(res.status),'min_raw_reduced_coeff':float(np.min(E.T@np.array(raw))),'raw_rhs':float(np.dot(f,raw))}
+ # Keep diagnostics if the numerical ray does not rationalise directly.
+ red=np.asarray(E.T@np.array(raw)).ravel()
+ return None,{
+  'dual_status':int(res.status),'dual_message':str(res.message),
+  'min_raw_reduced_coeff':float(red.min()),'max_raw_reduced_coeff':float(red.max()),
+  'raw_rhs':float(np.dot(f,raw)),'raw_mu_linf':float(max(abs(x) for x in raw)),
+  'near_zero_reduced_coeffs':int(np.sum(np.abs(red)<1e-8)),
+ }
 
 def verify(m,c):
  assert c['variables']==len(m.names) and c['equalities']==len(m.eq)
@@ -167,14 +185,14 @@ def eqkind(m,i):
 
 def main():
  ap=argparse.ArgumentParser();ap.add_argument('--output');z=ap.parse_args()
- out={'schema':'n30-m226-simplified-two-transport-v1','rows':[]}
+ out={'schema':'n30-m226-simplified-two-transport-v2','rows':[]}
  for tag,s,rho in ROWS:
   m=build(s,rho);sol=m.solve();row={'tag':tag,'status':int(sol.status),'variables':len(m.names),'equalities':len(m.eq)}
   if sol.status==2:
-   c=exact_certificate(m);assert c is not None,tag
-   from collections import Counter
-   kinds=Counter(eqkind(m,i) for i,w in c['eq'])
-   row['certificate']={'rhs':c['rhs'],'support_counts':dict(kinds),'terms':len(c['eq'])}
+   c,diag=exact_certificate(m);row['certificate_diagnostic']=diag
+   if c is not None:
+    kinds=Counter(eqkind(m,i) for i,w in c['eq'])
+    row['certificate']={'rhs':c['rhs'],'support_counts':dict(kinds),'terms':len(c['eq']),'max_denominator':c['max_denominator']}
   out['rows'].append(row)
  assert all(x['status']==2 for x in out['rows'])
  text=json.dumps(out,indent=2,sort_keys=True)+'\n'
