@@ -2,7 +2,7 @@
 
 11 September 2026. Research direction: Paul Lenz. Mathematical development and internal checking: ChatGPT/Geeps.
 
-**Status: active research; no change yet to the current n=30 candidate proof.**
+**Status: candidate analytic hardening; the `n=30, Delta=16, m=226` endpoint now has a hand route after the universal bridge. Independent mathematical review remains open.**
 
 ## Target
 
@@ -14,35 +14,34 @@ b=16,
 t=m-224.
 ```
 
-The threshold-tail construction gives a necessary inequality
+The threshold-tail construction gives the necessary inequality
 
 ```text
 Q_{13,16}(s) >= 16+2t.
 ```
 
-An exact full-domain check over all
+Historically, an exact full-domain check over all
 
 ```text
 C(25,13)=5,200,300
 ```
 
-nondecreasing demand multisets `0<=s_i<=12` gives
+nondecreasing demand multisets `0<=s_i<=12` found
 
 ```text
 max Q_{13,16}=21,
 ```
 
-uniquely at `(3^13)`. Hence `t<=2`, so every `Delta=16` scope with `m>=227` is already excluded by threshold tails.
+uniquely at `(3^13)`, and exactly seven profiles with `Q>=20`.
 
-The sole upper-bound endpoint is therefore
+That exhaustive classification is no longer a logical dependency at the upper endpoint. [`N30_M226_HAND_PROFILE_REDUCTION.md`](N30_M226_HAND_PROFILE_REDUCTION.md) proves by hand that
 
 ```text
-m=226,
-t=2,
-Q>=20.
+Q<=21,
+Q=21 only at (3^13),
 ```
 
-Exactly seven demand multisets have `Q>=20`:
+and that `Q>=20` holds exactly for
 
 ```text
 (2^2,3^11),
@@ -54,9 +53,17 @@ Exactly seven demand multisets have `Q>=20`:
 (4^13).
 ```
 
-Tail-slack accounting forces exactly nine residual rows. These agree one-for-one with the nine historical row-threshold survivors from workflow `34287440190` and the nine exact Farkas rejections from workflow `34287739057`.
+The proof uses a monotone clipping chain and a two-variable tail calculation. It also derives by hand the exact nine residual rows below. The small standard-library audit [`verify_hand_profile_reduction.py`](verify_hand_profile_reduction.py) checks only the local clipping obligations, 105 cap-four tail pairs, cap-five preimages and the nine-row reconstruction; it does **not** perform the historical 5,200,300-profile sweep.
 
-The research goal is to replace those nine historical Farkas exclusions by a short hand argument, ideally one or two structural inequalities.
+Hence `t<=2`, so every `Delta=16` scope with `m>=227` is excluded by the hand threshold-tail bound.
+
+The sole upper-bound endpoint is
+
+```text
+m=226,
+t=2,
+Q>=20.
+```
 
 ## Exact nine rows
 
@@ -72,4 +79,14 @@ s=(3,4^12),   rho=(1^5,2,4^10), r=47
 s=(4^13),     rho=(1^5,3,4^10), r=48
 ```
 
-The historical exact endpoint route remains valid corroboration. No theorem status is promoted by this note.
+[`N30_M226_HAND_ENDPOINT_REDUCTION.md`](N30_M226_HAND_ENDPOINT_REDUCTION.md) then excludes these rows by hand: one dies immediately from demand-ledger equality and the remaining eight by a label-excess versus supplement-Hall contradiction. [`verify_hand_endpoint_table.py`](verify_hand_endpoint_table.py) checks the tiny integer endpoint table without a solver.
+
+Thus, conditional on the universal graph-to-model / threshold-tail lemmas already used by the project, the complete `n=30, Delta=16, m=226` endpoint no longer logically depends on:
+
+- the 5,200,300-demand maximisation;
+- the residual-row enumeration;
+- the final grouped LP / exact Farkas certificates.
+
+All historical exact evidence remains preserved as independent corroboration and regression material.
+
+This analytic hardening does **not** remove the exact finite work currently used at `m=225, Delta=16` for the equality classification of the full `n=30` candidate theorem, and it does not promote the project beyond candidate status. Independent specialist review remains open.
