@@ -16,6 +16,23 @@ jobs:
     timeout-minutes: 15
     steps:
       - uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262
+      - name: Check hand profile and residual-row reduction without solver
+        run: |
+          set -euo pipefail
+          D=project/research/n30/2026-09-11-threshold-tail-v1
+          /usr/bin/python3 -I -B "$D/verify_hand_profile_reduction.py" --output N30_M226_HAND_PROFILE_REDUCTION_EXACT.json >/dev/null
+          python3 - <<'PY'
+          import json
+          r=json.load(open('N30_M226_HAND_PROFILE_REDUCTION_EXACT.json'))
+          assert r['status']=='PASS'
+          assert len(r['cap4_high_pairs'])==7
+          assert len(r['seven_profiles'])==7
+          assert len(r['nine_residual_rows'])==9
+          assert not r['solver_used'] and not r['floating_point_used']
+          assert not r['full_5200300_profile_sweep_used']
+          print('hand profile/row reduction exact audit PASS')
+          print('Q values:', [x['Q'] for x in r['seven_profiles']])
+          PY
       - name: Check hand endpoint table without solver
         run: |
           set -euo pipefail
@@ -70,6 +87,7 @@ jobs:
         with:
           name: n30-m226-nine-farkas-structure
           path: |
+            N30_M226_HAND_PROFILE_REDUCTION_EXACT.json
             N30_M226_HAND_ENDPOINT_TABLE_EXACT.json
             N30_M226_NINE_FARKAS_STRUCTURE.json
             N30_M226_EIGHT_MODEL_ABLATION.json
