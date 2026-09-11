@@ -6,7 +6,6 @@ for infeasibility, to guide a hand proof.  This is research tooling, not proof.
 """
 from __future__ import annotations
 import json,sys
-from collections import Counter
 from pathlib import Path
 import numpy as np
 from scipy.optimize import linprog
@@ -64,11 +63,10 @@ def solve_filtered(m,drop):
 
 def main():
  cats=['Tmon','Ppair','source_label_cap','nested_endpoint','bounds','label_norm','label_totals','forced_tail','source_norm','Pflow','source_q','label_x_tail']
- out={'schema':'n30-m226-eight-model-ablation-v1','rows':[]}
+ out={'schema':'n30-m226-eight-model-ablation-v2','rows':[]}
  for tag,s,rho in ROWS:
   m=build(s,rho,2); assert solve_filtered(m,set())==2
   single={c:solve_filtered(m,{c}) for c in cats}
-  # Test a few conceptually important reduced systems by dropping multiple categories.
   probes={
    'no_pair_or_Tmon':{'Ppair','Tmon'},
    'no_source_label_cap':{'source_label_cap'},
@@ -76,7 +74,10 @@ def main():
    'no_nested':{'nested_endpoint'},
    'no_nested_no_sourcecap':{'nested_endpoint','source_label_cap'},
    'no_Pflow_no_pair':{'Pflow','Ppair'},
-   'label_plus_incidence_only':{'Pflow','Ppair','source_label_cap'},
+   'drop_all_apparently_inessential':{'Ppair','Tmon','bounds','source_label_cap'},
+   'core_six_only':{'Ppair','Tmon','bounds','source_label_cap','label_norm','label_totals'},
+   'core_six_plus_label_norm':{'Ppair','Tmon','bounds','source_label_cap','label_totals'},
+   'core_six_plus_label_totals':{'Ppair','Tmon','bounds','source_label_cap','label_norm'},
   }
   multi={k:solve_filtered(m,v) for k,v in probes.items()}
   out['rows'].append({'tag':tag,'single_drop_status':single,'probe_status':multi})
