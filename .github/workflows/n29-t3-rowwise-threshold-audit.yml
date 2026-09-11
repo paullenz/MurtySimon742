@@ -1,0 +1,49 @@
+name: Audit n29 t3 rowwise threshold lemma
+
+on:
+  workflow_dispatch:
+  push:
+    paths:
+      - '.github/workflows/n29-t3-rowwise-threshold-audit.yml'
+      - 'project/research/general_n/2026-09-11-regime-structure-v1/n29_t3_rowwise_threshold_audit_exact.py'
+      - 'project/reviews/n29/2026-09-08-redteam-restart-v1/minimal_prepare.py'
+      - 'project/reviews/n29/2026-09-08-redteam-restart-v1/minimal_rows.cpp'
+      - 'project/reviews/n29/2026-09-09-bridge-standalone-v1/THRESHOLD_CAPACITY_LEMMA.md'
+
+permissions:
+  contents: read
+
+jobs:
+  audit:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 20
+    steps:
+      - uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262
+      - run: |
+          python3 -m venv .venv
+          .venv/bin/python -m pip install --disable-pip-version-check --only-binary=:all: scipy==1.17.0
+      - name: Regenerate canonical t3 minimal rows
+        run: |
+          set -euo pipefail
+          D=project/reviews/n29/2026-09-08-redteam-restart-v1
+          mkdir -p inputs/t3 out
+          g++ -O3 -std=c++17 "$D/minimal_rows.cpp" -o minimal_rows
+          .venv/bin/python -I -B "$D/minimal_prepare.py" --t 3 --output inputs/t3
+          ./minimal_rows inputs/t3/demands.txt inputs/t3/row_survivors.txt inputs/t3/row_bands.txt 3 > inputs/t3/MINIMAL_ROWS_REPORT.json
+      - name: Apply written threshold lemma row by row
+        run: |
+          set -euo pipefail
+          N=project/research/general_n/2026-09-11-regime-structure-v1
+          /usr/bin/python3 -I -B "$N/n29_t3_rowwise_threshold_audit_exact.py" \
+            --demands-json inputs/t3/demands.json \
+            --rows inputs/t3/row_survivors.txt \
+            --output out/N29_T3_ROWWISE_THRESHOLD_AUDIT_EXACT.json
+          cp inputs/t3/MINIMAL_ROWS_REPORT.json out/T3_MINIMAL_ROWS_REPORT.json
+          sha256sum out/*.json > out/SHA256SUMS.txt
+      - uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02
+        if: always()
+        with:
+          name: n29-t3-rowwise-threshold-audit
+          path: out/*
+          if-no-files-found: error
+          retention-days: 30
