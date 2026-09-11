@@ -218,6 +218,8 @@ a natural **falsification target**. It is not presently a theorem: the three res
 
 The immediate research priority is to characterize the exact scalar regimes by elementary statistics of the demand/source profiles `(s,rho)`, test whether the resulting regime boundaries can be generated from parameters rather than profile IDs, and then attack the proposed `t+1` rule on fresh finite domains. Only after surviving those tests would it be appropriate to seek a symbolic regime lemma and combine it with charging/demand bounds to push below the `7/12` maximum-degree frontier.
 
+An active structural diagnostic is preserved under [`project/research/general_n/2026-09-11-regime-structure-v1/`](project/research/general_n/2026-09-11-regime-structure-v1/). It tests whether elementary threshold statistics of `(s,rho)` can exactly partition the 902 `t=2` profiles into regions certified by the three already-exact rational templates. This diagnostic is exploratory and does not alter any theorem claim.
+
 ### Layer-sum 13/22 and earlier structural checkpoints
 
 The [13/22 reviewer release](releases/general-13-22-reviewer-v1/README.md), [13/22 layer-sum proof](project/research/general_n/2026-09-08-layer-sum-v1/PROOF.md), and the preserved [v9](project/research/general_n/2026-09-07-stability-spare-sources-v9/README.md), [v10](project/research/general_n/2026-09-08-demand-tail-stability-v10/README.md), and [v11](project/research/general_n/2026-09-08-jensen-tail-v11/README.md) checkpoints document the preceding general-order programme. The local Lean slice checks ten scoped quasi-edge/edge-insertion lemmas; the complete universal theorems are not formally verified.
