@@ -1,6 +1,6 @@
 # Start here for reviewers
 
-**Updated 10 September 2026.**
+**Updated 11 September 2026.**
 
 ## What this repository is
 
@@ -22,7 +22,7 @@ The repository currently contains complete candidate fixed-order Murty–Simon r
 - `n=29`: `e(G) <= 210`, equality only `K(14,15)`;
 - `n=30`: `e(G) <= 225`, equality only `K(15,15)`.
 
-The current fixed-order reviewer surfaces are the **Fan-free v2 editions** in [`releases/REVIEW_READY_INDEX.md`](releases/REVIEW_READY_INDEX.md). Historical v1 packages remain preserved for provenance.
+The PDF reviewer packages in [`releases/REVIEW_READY_INDEX.md`](releases/REVIEW_READY_INDEX.md) are the **Fan-free v2 editions**. For `n=29`, the current text proof has since been hardened further as **reviewer-v3** after a blind external-assistant red-team; the v2 PDF remains preserved until a new reviewer PDF is built.
 
 The strongest current reviewer-packaged general candidate is
 
@@ -50,21 +50,41 @@ The complete finite domain was replayed in sixteen disjoint clean-runner shards 
 
 The principal remaining question is therefore not whether the arithmetic replay terminates, but whether the graph-to-model reductions and their hypotheses are universally sound.
 
-## Robustness milestone: Fan-free fixed-order v2 editions
+## Robustness milestone: Fan-free fixed-order proofs and analytic hardening
 
 A hostile external-AI critique questioned both selected/residual semantics and the use of G. Fan's 1987 density theorem as an edge-count cap. The semantic objections were re-audited and resolved explicitly in the current proof text. The project then removed Fan as a **logical dependency** from its current fixed-order candidate proofs at `n=25,27,28,29,30`, while retaining Fan's theorem as historical attribution and preserving every reviewer-v1/proof source unchanged.
 
-Reviewers should therefore use the **Fan-free reviewer-v2 packages** listed in [`releases/REVIEW_READY_INDEX.md`](releases/REVIEW_READY_INDEX.md). The direct replacement is [`FAN_FREE_REDUCTION.md`](project/research/fan-free-fixed-orders/2026-09-09-v1/FAN_FREE_REDUCTION.md), and its assembled edge-range/source-integrity checks are recorded in [`FAN_FREE_AUDIT.md`](project/research/fan-free-fixed-orders/2026-09-09-v1/FAN_FREE_AUDIT.md). The audit is internal; independent review of the graph-theoretic bridge remains open.
+The direct replacement is [`FAN_FREE_REDUCTION.md`](project/research/fan-free-fixed-orders/2026-09-09-v1/FAN_FREE_REDUCTION.md), and its assembled edge-range/source-integrity checks are recorded in [`FAN_FREE_AUDIT.md`](project/research/fan-free-fixed-orders/2026-09-09-v1/FAN_FREE_AUDIT.md). The audit is internal; independent review of the graph-theoretic bridge remains open.
+
+A second blind external-assistant red-team of `n=29`, supplied on 11 September without project background, attacked the bridge, residual activity, threshold capacity, isolated-C, corrected late-LP normalization, exact Farkas semantics and the hand assembly and reported no fatal defect. Its follow-up and our independent reproduction are preserved in [`FOLLOWUP.md`](project/reviews/n29/2026-09-11-blind-external-ai-redteam-v1/FOLLOWUP.md).
+
+That review also found a useful pointwise charging bound which removes several historical computations from the **logical** dependency chain. The exact cross-order derivation is [`POINTWISE_CAPS.md`](project/research/fan-free-fixed-orders/2026-09-11-pointwise-analytic-caps-v1/POINTWISE_CAPS.md). In particular:
+
+- `n=28, Delta=15`: every `m>=203` is now a hand exclusion;
+- `n=29, Delta=16`: `m=215` is a hand threshold contradiction and every `m>=216` is a one-line hand exclusion;
+- `n=30, Delta=17`: every `m>=228` is now a hand exclusion;
+- `n=30, Delta=16`: every `m>=234` is now a hand exclusion.
+
+Historical workflows for those ranges remain preserved as corroborating evidence only.
 
 ## Recommended bridge audit: n=29
 
 The n=29 candidate remains a clean place to audit the universal graph-to-demand machinery because most degree ranges are eliminated by short hand arguments and the difficult `Delta=16` case has a deliberately reduced trusted kernel. The same bridge is then parameterised at n=30.
 
-Main proof:
+**Current reviewer-v3 text proof:**
 
-- [`project/reviews/n29/2026-09-09-fan-free-v2/PROOF.md`](project/reviews/n29/2026-09-09-fan-free-v2/PROOF.md)
+- [`project/reviews/n29/2026-09-11-reviewer-v3/README.md`](project/reviews/n29/2026-09-11-reviewer-v3/README.md)
+- [`project/reviews/n29/2026-09-11-reviewer-v3/PROOF.md`](project/reviews/n29/2026-09-11-reviewer-v3/PROOF.md)
 
-Standalone bridge and hostile audit:
+**Current self-contained graph-to-model bridge:**
+
+- [`project/reviews/n29/2026-09-11-reviewer-v3/GRAPH_TO_MODEL_BRIDGE.md`](project/reviews/n29/2026-09-11-reviewer-v3/GRAPH_TO_MODEL_BRIDGE.md)
+
+**Blind external red-team follow-up:**
+
+- [`project/reviews/n29/2026-09-11-blind-external-ai-redteam-v1/FOLLOWUP.md`](project/reviews/n29/2026-09-11-blind-external-ai-redteam-v1/FOLLOWUP.md)
+
+Historical bridge/audit surfaces remain preserved:
 
 - [`project/reviews/n29/2026-09-09-bridge-standalone-v1/GRAPH_TO_MODEL_BRIDGE.md`](project/reviews/n29/2026-09-09-bridge-standalone-v1/GRAPH_TO_MODEL_BRIDGE.md)
 - [`project/reviews/n29/2026-09-09-bridge-standalone-v1/THRESHOLD_CAPACITY_LEMMA.md`](project/reviews/n29/2026-09-09-bridge-standalone-v1/THRESHOLD_CAPACITY_LEMMA.md)
@@ -99,12 +119,24 @@ Every late exclusion is rechecked by exact integer arithmetic. Floating-point LP
 
 The minimal route does **not** use the old projected screen, joint propagator, shared LP, typed LP, old endpoint LP or the older pair-capacity support formula. Those remain in the repository as redundant evidence and research history.
 
+For the Fan-free `Delta=16` upper range, reviewer-v3 further reduces the necessary computation:
+
+```text
+m=212: exact trusted-kernel extension;
+m=213,214: exact threshold/source-count/Hall arithmetic;
+m=215: hand threshold-capacity contradiction;
+m>=216: hand pointwise charging cap.
+```
+
+Thus the old generic `m=216..232` scan is no longer logically required.
+
 ## n=30 complete candidate
 
 Current proof and audit:
 
 - [`project/reviews/n30/2026-09-09-fan-free-v2/PROOF.md`](project/reviews/n30/2026-09-09-fan-free-v2/PROOF.md)
 - [`project/reviews/n30/2026-09-09-candidate-v1/ASSEMBLY_AUDIT.md`](project/reviews/n30/2026-09-09-candidate-v1/ASSEMBLY_AUDIT.md)
+- [`project/reviews/n30/2026-09-09-fan-free-v2/ANALYTIC_HARDENING_2026-09-11.md`](project/reviews/n30/2026-09-09-fan-free-v2/ANALYTIC_HARDENING_2026-09-11.md)
 
 Its candidate statement is
 
@@ -113,7 +145,7 @@ e(G) <= 225,
 with equality exactly K(15,15).
 ```
 
-The current edition does not use Fan's density theorem logically. For `Delta=17`, the difficult scopes close by threshold/source-count inequalities and exact Hall duals. For `Delta=16`, the bridge is genuinely parameterised to `(a,b)=(13,16)` and the remaining final rows are rejected by exact integer Farkas certificates. The final assembly replay is green. This is still same-assistant evidence, not external validation.
+The current edition does not use Fan's density theorem logically. For `Delta=17`, the difficult scopes close by threshold/source-count inequalities and exact Hall duals; the new analytic hardening removes every upper-range `Delta=17` scope with `m>=228` from the computational chain. For `Delta=16`, the bridge is genuinely parameterised to `(a,b)=(13,16)` and the remaining final rows are rejected by exact integer Farkas certificates; `m>=234` is now excluded analytically. The final assembly replay is green. This is still same-assistant evidence, not external validation.
 
 ## General 7/12 candidate
 
@@ -168,6 +200,8 @@ The grouped selected-incidence equation multiplied label-side capacity by the la
 - the n=30 `Delta=16` grouped model was written fresh with the corrected normalization.
 
 This history is intentionally public. It should not be silently edited out of the record.
+
+A separate 11 September proof-text audit found an intermediate sign/order typo in the expanded threshold-capacity lemma's explanatory algebra. The corrected sign is exactly the direction required to prove the same final threshold inequality, so no computation or candidate status changed. The correction is recorded in the historical lemma itself and the reviewer-v3 bridge writes the proof self-contained from scratch.
 
 ## What to attack first
 
