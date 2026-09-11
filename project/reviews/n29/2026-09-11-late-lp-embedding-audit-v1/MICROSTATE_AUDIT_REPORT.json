@@ -1,0 +1,81 @@
+{
+  "schema": "n29-late-lp-microstate-embedding-audit-v1",
+  "status": "PASS",
+  "purpose": "exact rational regression of graph-level averaging into corrected production late LP",
+  "fixtures": [
+    {
+      "fixture": "uniform",
+      "t": -26,
+      "demand_groups": [
+        [
+          1,
+          12
+        ]
+      ],
+      "residual_groups": [
+        [
+          4,
+          16
+        ]
+      ],
+      "selected_pair_arcs": 64,
+      "selected_cross_edges": 64,
+      "residual_cross_edges": 64,
+      "corrected_v2": {
+        "variables": 735,
+        "equalities": 113,
+        "inequalities": 1038,
+        "violations": 0
+      },
+      "quarantined_v1_failures": {
+        "equalities": 2,
+        "inequalities": 0,
+        "missing_nonzero_variables": 0,
+        "total": 2
+      }
+    },
+    {
+      "fixture": "mixed",
+      "t": -25,
+      "demand_groups": [
+        [
+          0,
+          6
+        ],
+        [
+          1,
+          6
+        ]
+      ],
+      "residual_groups": [
+        [
+          3,
+          8
+        ],
+        [
+          4,
+          8
+        ]
+      ],
+      "selected_pair_arcs": 56,
+      "selected_cross_edges": 56,
+      "residual_cross_edges": 56,
+      "corrected_v2": {
+        "variables": 14879,
+        "equalities": 336,
+        "inequalities": 16958,
+        "violations": 0
+      },
+      "quarantined_v1_failures": {
+        "equalities": 3,
+        "inequalities": 0,
+        "missing_nonzero_variables": 0,
+        "total": 3
+      }
+    }
+  ],
+  "corrected_v2_all_rows_satisfied": true,
+  "historical_v1_detectably_fails": true,
+  "external_independence": false,
+  "note": "Fixtures test averaging/normalisation algebra, not existence of diameter-two-critical graphs."
+}
