@@ -2,8 +2,8 @@
 
 11 September 2026. Research direction: Paul Lenz. Mathematical development and internal checking: ChatGPT/Geeps.
 
-**Status: candidate simplification, internally exact-checked; independent mathematical review remains open.**  
-This note does **not** modify the preserved reviewer-v3 package. It records a stronger route discovered after that package was assembled.
+**Status: candidate simplification with a hand proof of the scalar tail bound and independent exact regression checks; independent mathematical review remains open.**  
+This note does **not** erase or rewrite the preserved reviewer-v3 package. It records a stronger route discovered after that package was assembled.
 
 ## Headline
 
@@ -27,16 +27,35 @@ e(G) >= 210   (t >= 2)
 
 is impossible, assuming the universal selected/residual bridge.
 
-This removes, for `Delta=16` at the proof-critical `m=210,211` scopes, every downstream dependency on
+This removes, for `Delta=16` at the proof-critical `m=210,211` scopes, every downstream logical dependency on
 
 - demand charging enumeration,
 - residual-row enumeration,
 - source-capacity Hall pruning,
 - supplement-cap refinement,
 - the corrected late LP,
-- and exact Farkas certificates.
+- exact Farkas certificates,
+- **and now the earlier 1,352,078-demand-multiset maximisation.**
 
-The only finite computation in this new route is a direct exhaustive check of a 12-variable integer lemma over `1,352,078` nondecreasing demand multisets. It uses integer arithmetic only, no solver and no floating point.
+The scalar bound `Q(s)<=18` now has a direct hand proof in
+
+```text
+N29_DELTA16_THRESHOLD_TAIL_HAND_PROOF.md
+```
+
+with a small exact local-obligation checker
+
+```text
+n29_delta16_threshold_tail_hand_check.py
+```
+
+The original exhaustive checker
+
+```text
+n29_delta16_threshold_tail_collapse_exact.py
+```
+
+is retained as an independent full-domain regression and equality-case audit rather than a logical premise. Both paths pass together in GitHub Actions run `34617844004`.
 
 ## 1. Bridge inputs
 
@@ -123,7 +142,7 @@ g_h(W) =
         2W <= z^2-z+h(h+1) },                       if W>0.
 ```
 
-If the set is empty, the demand vector is already impossible.
+If the set is empty, the demand vector is already impossible and requires no further treatment.
 
 Every actual residual sequence therefore satisfies
 
@@ -146,15 +165,67 @@ Q(s) := S - sum_{h=2}^{11} g_h(W_h)
 
 The residual sequence has disappeared.
 
-## 4. Exact finite lemma
+## 4. Hand lemma: Q(s)<=18
 
-The checker
+The new hand proof writes
+
+```text
+N_h = #{i:s_i>=h},
+p   = N_1,
+d_h = N_h-g_h(W_h),
+D(s)=sum_{h=2}^{11} d_h.
+```
+
+The Ferrers-tail identity gives
+
+```text
+S = p + sum_{h=2}^{11} N_h,
+```
+
+so
+
+```text
+Q(s)=p+D(s).                                      (8)
+```
+
+The hand argument proves
+
+```text
+D(s)<=6.                                          (9)
+```
+
+Its structure is:
+
+1. for every `h>=7`, `d_h<=0`;
+2. clipping every demand above six down to six cannot decrease `D`;
+3. clipping `6->5`, `5->4`, and `4->3` cannot decrease `D`, except for tiny endpoint configurations that are checked explicitly and satisfy the same bound;
+4. after reduction to demands in `{0,1,2,3}`, put `x=N_2`, `y=N_3`; then
+
+   ```text
+   D=x+y-g_2(2x+y)-g_3(3y),
+   ```
+
+   and three elementary ranges `y<=6`, `7<=y<=10`, `y>=11` give `D<=6`.
+
+Since `p<=12`, (8)--(9) give
+
+```text
+boxed: Q(s)<=18.                                  (10)
+```
+
+The detailed algebra, including every exceptional clipping case, is in `N29_DELTA16_THRESHOLD_TAIL_HAND_PROOF.md`.
+
+The local hand obligations are separately regression-checked by `n29_delta16_threshold_tail_hand_check.py`; it uses only exact integer arithmetic, no solver and no floating point. It checks the finite endpoint tables plus the final 91 integer pairs `0<=y<=x<=12`, rather than enumerating demand multisets.
+
+## 5. Independent exhaustive audit
+
+The older checker
 
 ```text
 n29_delta16_threshold_tail_collapse_exact.py
 ```
 
-exhausts every nondecreasing 12-tuple
+still exhausts every nondecreasing 12-tuple
 
 ```text
 0 <= s_1 <= ... <= s_12 <= 11.
@@ -168,10 +239,10 @@ C(23,12) = 1,352,078
 
 such multisets.
 
-Using integer arithmetic only, it finds
+Using integer arithmetic only, it independently finds
 
 ```text
-max Q(s) = 18.                                    (8)
+max Q(s) = 18.                                    (11)
 ```
 
 There are exactly four maximisers:
@@ -185,11 +256,11 @@ There are exactly four maximisers:
 
 In each case `Q=18`.
 
-The checker also independently reconstructs the exact scaled charging table as a regression guard, but charging is **not needed** for the final contradiction.
+This equality classification is not needed by the hand proof, so it remains useful independent finite evidence rather than a premise.
 
-## 5. Consequence for Delta=16
+## 6. Consequence for Delta=16
 
-From (7) and (8),
+From (7) and (10),
 
 ```text
 16 + 2t <= 18,
@@ -198,7 +269,7 @@ From (7) and (8),
 so
 
 ```text
-t <= 1.                                           (9)
+t <= 1.                                           (12)
 ```
 
 Therefore a positive-surplus `Delta=16` graph on 29 vertices cannot have
@@ -217,34 +288,36 @@ and every larger m: impossible.
 
 This is strictly stronger and structurally simpler than the reviewer-v3 `Delta=16` route.
 
-## 6. Independent regeneration against the old finite frontiers
+## 7. Independent regeneration against the old finite frontiers
 
-As a cross-check before deriving (8), the existing minimal preparation and residual scanner were independently regenerated.
+The existing minimal preparation and residual scanner were also independently regenerated as a cross-check.
 
-At `t=3`, inserting the threshold-capacity family directly into the row scan rejected all `712,091` residual states before Hall/refinement was needed.
+At `t=3`, inserting the threshold-capacity family directly into the full row scan rejected all `712,091` residual states before Hall/refinement was needed.
 
 At `t=2`, the same full threshold family rejected all `3,439,716` residual states.
 
-Those scans are corroboration only. They are not logical dependencies of the demand-only proof above.
+A further independent audit in `n29_t3_rowwise_threshold_audit_exact.py` starts from the already reduced 126-row `t=3` minimal kernel and applies the written threshold family literally. All 126 are rejected, including all 94 positive zero-slack RX-Hall research profiles; each already violates the `h=2` threshold. GitHub Actions run `34616219528` passed.
 
-## 7. Trust boundary and next work
+These scans are corroboration only. They are not logical dependencies of the demand-only hand proof.
 
-The new reduction is only as sound as:
+## 8. Trust boundary and next work
+
+The reduction is only as sound as:
 
 1. the graph-to-model bridge;
 2. residual activity for `t>0`;
 3. pointwise selected-incidence forcing `s_i<=rho_u`;
 4. the threshold-capacity lemma;
-5. the exact finite maximisation `Q(s)<=18`.
+5. the hand inequality `D(s)<=6`.
 
-Items 1--4 already have internal hostile audits in the project, but independent expert review remains open. Item 5 is deliberately tiny and self-contained and should now be independently reimplemented.
+Items 1--4 have internal hostile audits and partial Lean formalisation elsewhere in the repository; independent expert review remains open. Item 5 now has both a direct written proof and an independent exact local-obligation checker, plus the older full-domain exhaustive regression.
 
-The highest-value next step is to **replace the finite maximisation by a hand inequality**, if possible. The four extremisers strongly suggest that the threshold-tail score has a clean extremal description. A second priority is to parameterise
+The highest-value next step is to parameterise
 
 ```text
 Q_{a,b}(s)
 ```
 
-for adjacent orders and determine whether this tail-sum mechanism is a general-N ingredient rather than an `n=29` coincidence.
+for adjacent `(a,b)` and determine whether the tail-sum mechanism is a genuine general-N ingredient rather than an `n=29` coincidence. In particular, `(a,b)=(13,16)` is the natural next laboratory because it is the `Delta=16` boundary appearing at `n=30`.
 
 No unrestricted Murty-Simon theorem is claimed here.
