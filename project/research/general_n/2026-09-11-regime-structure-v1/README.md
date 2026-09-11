@@ -1,218 +1,226 @@
-# adjacent RX-Hall regime structure: t=1,2,3
+# Adjacent RX-Hall regime structure: t=1,2,3
 
 11 September 2026. Research direction: Paul Lenz. Mathematical development and internal checking: ChatGPT/Geeps.
 
-**Status: exact finite structural diagnostics inside the already-preserved RX-Hall 3-D model. Not a general-N theorem. Independent mathematical review remains open.**
+**Status: exact finite structural diagnostics inside the preserved RX-Hall 3-D model. Not a general-N theorem. Independent mathematical review remains open.**
 
-## Current headline
+## Current headline — corrected after non-circular audit
 
-The adjacent exact laboratories require respectively 2, 3 and 4 scalar templates:
+The adjacent exact laboratories still require respectively 2, 3 and 4 scalar templates within their fixed-potential architectures:
 
-- `n=30,t=1`: 7 hard profiles, 2 exact templates;
-- `n=29,t=2`: 902 regenerated profiles, 3 exact templates;
-- `n=29,t=3`: 94 regenerated profiles, 4 exact templates.
+- `n=30,t=1`: 7 hard profiles, exactly 2 templates;
+- `n=29,t=2`: 902 regenerated profiles, exactly 3 templates;
+- `n=29,t=3`: 94 regenerated profiles, exactly 4 templates.
 
-The first attempted cross-laboratory compression by
+Those exact template-count statements remain intact.
+
+However, the attempted low-dimensional explanation by `(h_res,J)` has **not** survived a stronger audit.
+
+Earlier exploratory scripts compressed a *chosen valid-template assignment* using
 
 ```text
-(h_res,L)
+J = 2 z_2-D_1,
+z_2=#{u:rho_u>=2},
+D_1=#{i:s_i=1}.
 ```
 
-has now been exactly **falsified in all three laboratories**. Here `h_res` is the ordinary h-index of the residual degrees and `L` is the scalar supplement-cap cutoff from `SUPPLEMENT_CAP_THRESHOLD_LEMMA.md`.
+The `t=2` assignment labels were themselves defined from `D1`, and the `t=3` assignment labels were themselves defined from the previously found count tree containing the `rho1<=8` split. Re-classifying those labels with the same statistics is therefore not independent structural evidence.
 
-A smaller replacement works on all three finite laboratories:
+This circularity is recorded explicitly in
 
 ```text
-(h_res,J),
-J = 2 z_2 - D_1,
-z_2 = #{u:rho_u>=2},
-D_1 = #{i:s_i=1}.
+ASSIGNMENT_CLASSIFIER_AUDIT_CORRECTION.md
 ```
 
-Since all three current laboratories have `b=16` residual sources, this is equivalent to
+The correct independent target is the **complete exact validity mask**
 
 ```text
-(h_res,G),
-G = 2 rho_1 + nu_1,
-rho_1=#{u:rho_u=1},
-nu_1=#{i:s_i=1},
-G=2b-J.
+M(P)={T : exact_gap_T(P)>0}
 ```
 
-Every occupied `(h_res,G)` cell has one canonical valid exact-template assignment at `t=1,2,3`.
+under every preserved template. On `n=29,t=3`, all four gaps have now been recomputed with exact `fractions.Fraction` arithmetic for all 94 regenerated profiles before any feature classification is attempted.
 
-This is a finite assignment-compression result, **not** a theorem that `(h_res,J)` determines the complete overlap/coverage mask of all templates. Exact red-team checks show substantial template overlap within many `(h_res,G)` cells.
+## Exact t=3 validity-mask result
 
-Full note:
+There are **8 distinct exact validity masks** among the 94 profiles:
 
 ```text
-N29_T23_HL_COMPRESSION_FALSIFICATION.md
+A0                         1
+A1                         1
+A38                        3
+A530                       2
+A1+A38                    18
+A1+A530                    1
+A1+A38+A530               57
+A0+A1+A38+A530            11
 ```
 
-Replay:
+The following candidate keys all fail to determine this mask:
 
 ```text
-n29_t23_hL_compression_scan.py
+h_res
+D1
+rho1
+J
+(h_res,J)
+(h_res,D1)
+(h_res,D1,rho1)
+(h_res,D1,D5,rho1)
+(h_res,D1,D5,1[2z2>=b])
+```
+
+No tested integer threshold `rho1<=k` appended to `(h_res,D1,D5)` makes the mask pure. No subset of the tested primitive family `(h_res,D1,D5,rho1)` is sufficient.
+
+Thus the previous special emphasis on coefficient `2` in `J` and on the half-source threshold `z2=b/2` is withdrawn as structural evidence. They remain useful encodings of one successful finite assignment rule only.
+
+Exact checker:
+
+```text
+n29_t3_template_mask_structure_exact.py
 ```
 
 Successful CI:
 
 ```text
-run id:      34590110191
-artifact id: 10195264884
-artifact:    adjacent-t123-hL-compression
-SHA-256:     7e2a50a7ec23e00e8479fe4dba7fbeb0e8422ffd6fc436960af06335b844e7a1
+run id:      34591935362
+artifact id: 10195981323
+artifact:    adjacent-t123-regime-key-redteam
 ```
 
-## t=2 unit-demand regime result
+## Smallest exact (h,J) collision
 
-Let
+The first validity-mask collision already occurs at profiles 1 and 2. They have the same
 
 ```text
-nu1(s) = #{ i : s_i = 1 }.
+h_res = 4
+J     = 14
+rho1  = 9
+z2    = 7
+r     = 34
+D1    = 0
+D5    = 0
+S     = 40
 ```
 
-For the complete regenerated `n=29,Delta=16,t=2` RX-Hall frontier of 902 profiles, the three exact rational scalar templates admit the exact deterministic assignment
+and the same full residual sequence
 
 ```text
-nu1 = 0  -> T2   825 profiles
-nu1 = 1  -> T1    76 profiles
-nu1 = 2  -> T0     1 profile
+rho = (1^9,3^3,4^4).
 ```
 
-No other value of `nu1` occurs on this frontier. Every assigned template has strictly positive exact `fractions.Fraction` certificate gap.
-
-The exact incompatibility triangle proving that two scalar templates do not suffice consists of profiles `0`, `3`, and `77`:
-
-| profile | demand id | `nu1` | unique-template role |
-|---:|---:|---:|---|
-| 0 | 45 | 2 | T0-only |
-| 3 | 70 | 1 | T1-only |
-| 77 | 154 | 0 | T2-only |
-
-All three nevertheless share
+But their demand profiles differ:
 
 ```text
-(h_res,L)=(4,6),
+profile 1: s = (2^2,3^4,4^6)
+profile 2: s = (2^1,3^6,4^5)
 ```
 
-which is the cleanest falsification of the original two-index idea.
-
-## t=2 exact overlap census
-
-Writing a template-coverage mask in `(T0,T1,T2)` order:
+and their exact template-validity masks are
 
 ```text
-001   19
-010   20
-011  129
-100    1
-110   40
-111  693
+profile 1: {A1}
+profile 2: {A1,A38,A530}.
 ```
 
-There are 40 profiles covered by exactly one template, 169 by exactly two, and 693 by all three. The deterministic regime assignment deliberately chooses one valid template even where others also work.
-
-## Supplement-cap scalar cutoff
-
-For an arbitrary demand count `a`, let
+The exact gaps are:
 
 ```text
-C_u = min(a-rho_u, #{i:s_i<=rho_u}),
-Z_u = rho_u+C_u,
-L   = max{k>=1 : #{u:Z_u>=k-1}>=k+1}.
+profile 1:
+  A0   = -3049/81
+  A1   = 1
+  A38  = -2547/154
+  A530 = -21493/1440
+
+profile 2:
+  A0   = -1598/81
+  A1   = 159/5
+  A38  = 4229/385
+  A530 = 3151/288
 ```
 
-The monotone supplement-cap refinement has the exact closed form
+So even the **entire residual sequence** does not determine the regime geometry.
+
+## The converse collision: the demand side alone also fails
+
+Profiles 3 and 5 have the identical full demand sequence
 
 ```text
-q*_u=min(C_u,L).
+s=(2,3^5,4^6),
 ```
 
-Thus the original vector fixed-point operation is carried by one integer cutoff. This structural lemma is independent of the `n=29` numerical certificate and is why the same `L` is legitimate in the `n=30,t=1` comparison after substituting its own value of `a`.
-
-## Adjacent exact finite assignment rules
-
-The new two-scalar view gives the following exact finite rules.
-
-### t=1
-
-On the seven `n=30,t=1` hard profiles, `G` alone separates the preserved assignment:
+but different residual profiles and different masks:
 
 ```text
-G in {16,18} -> A
-G in {13,15,17} -> B
+profile 3 rho = (1^9,3^3,4^3,5)
+mask = {A1,A38,A530}
+
+profile 5 rho = (1^8,2,3^3,4^4)
+mask = {A530}.
 ```
 
-### t=2
+Therefore neither the full source marginal `rho` nor the full demand marginal `s` determines the exact template-validity mask.
 
-On all 902 profiles:
+This is the main structural conclusion of the audit:
+
+> **The finite t=3 certificate geometry is genuinely joint in `(s,rho)`; a one-sided scalar or marginal classifier is insufficient.**
+
+Exact collision checker:
 
 ```text
-G=20    -> T0
-G odd   -> T1
-otherwise -> T2
+n29_t3_hJ_collision_exact.py
 ```
 
-### t=3
-
-On all 94 profiles:
+Successful CI:
 
 ```text
-h_res=5              -> A38
-h_res=4 and G<=16    -> A530
-h_res=4 and G=18     -> A1
-h_res=4 and G=19     -> A0
+run id:      34592115266
+artifact id: 10196050417
+artifact:    adjacent-t123-regime-key-redteam
 ```
 
-At `t=3`, `G` alone is not enough: `G=14,16` occur in both `A38` and `A530`, and the ordinary residual h-index supplies the missing distinction.
+## What remains valid from the earlier assignment work
 
-Chronologically `G=2rho_1+nu_1` was found from the `t=2,3` collision analysis before the `n=30,t=1` laboratory was inspected, so the `t=1` success is a genuine finite holdout check.
+The old deterministic count trees are still correct *sufficient assignment rules*: every profile assigned by those trees receives a template with strictly positive exact gap. They remain useful compact replays of the finite cover.
 
-## Important boundary of the compression
+What they do **not** establish is that their branch statistics are intrinsic, minimal, or likely to parameterize a universal theorem.
 
-The key `(h_res,J)` determines the **canonical valid-template assignment**, not the complete set of templates that happen to work on a profile.
+Likewise, the exact template-count minima remain separately established:
 
-Exact coverage-mask red-team counts within `(h_res,G)` cells are:
+- `t=1`: two templates suffice, and an exact incompatibility certificate shows one cannot;
+- `t=2`: three templates suffice, and profiles `0,3,77` form an exact pairwise-incompatible triangle;
+- `t=3`: four templates suffice, and profiles `0,1,38,30` form an exact pairwise-incompatible clique.
 
-```text
-t=1: 1 mixed coverage-mask cell, 3/7 profiles involved
-t=2: 13 mixed coverage-mask cells, 879/902 profiles involved
-t=3: 6 mixed coverage-mask cells, 93/94 profiles involved
-```
+The suggestive numerical sequence `2,3,4` therefore remains an observation about minimum template counts in three finite fixed-potential laboratories. It is **not currently backed by a valid low-dimensional `t+1` regime classifier**.
 
-So the next proof target should be “one fixed template works throughout each parameterized regime”, not “the two scalars reconstruct the entire certificate geometry”.
+## Relation to the original (h,L) falsification
 
-## Reproducibility
+The original `(h_res,L)` compression is still exactly falsified. The later `(h_res,J)` assignment compression remains a compact way to encode chosen valid assignments, but the independent mask audit shows it does not capture the underlying overlap geometry.
 
-Original t=2 regime diagnostic:
+Historical files are retained for reproducibility:
 
 ```text
-n29_t2_regime_structure_scan.py
-.github/workflows/general-rx-hall-n29-t2-regime-structure.yml
-```
-
-Supplement cutoff replay:
-
-```text
-n29_t2_supplement_threshold_replay.py
-SUPPLEMENT_CAP_THRESHOLD_LEMMA.md
-```
-
-Adjacent t=1,2,3 compression replay:
-
-```text
+N29_T23_HL_COMPRESSION_FALSIFICATION.md
 n29_t23_hL_compression_scan.py
-.github/workflows/general-rx-hall-n29-t23-hL-compression.yml
+adjacent_t123_regime_key_redteam.py
 ```
+
+The last of these should be read only as an assignment-rule compression/replay; see `ASSIGNMENT_CLASSIFIER_AUDIT_CORRECTION.md`.
 
 ## Current next target
 
-Feature hunting should stop here unless the present structure fails a fresh-domain test. The priority is now:
+The priority is now different from the pre-audit plan:
 
-1. treat `J=2z_2-D_1` as the natural low-threshold ledger statistic rather than the raw encoding `G`;
-2. derive regime-wise inequalities from `(h_res,J)` and the cumulative source/demand tails;
-3. determine whether the coefficient 2 has a combinatorial origin in residual activity/Hall supply;
-4. hostile-test the same pair on a genuinely fresh exact frontier not used in discovery;
-5. if it survives, seek a parameterized statement that one fixed rational template works on each regime;
-6. keep the graph-to-profile/RX-Hall bridge and 3-D potential lemma as the principal independent-review trust boundary.
+1. **Stop searching for source-only scalar classifiers.** The exact same-`rho` collision falsifies that route.
+2. **Stop searching for demand-only classifiers.** The exact same-`s` collision falsifies that route.
+3. Mine genuinely **joint** statistics of `(s,rho)` suggested by the RX1/Hall compatibility relation `s<=rho`, for example cumulative compatibility counts or Ferrers/majorization deficits.
+4. Test whether a very small family of joint threshold statistics determines the exact validity masks, beginning with the explicit collisions above rather than with the easy bulk profiles.
+5. Independently red-team the graph-to-profile/RX-Hall bridge and the 3-D monotone potential lemma; these remain the universal mathematical trust boundary.
+6. Only if a joint statistic survives fresh finite laboratories should it be promoted into a parameterized regime lemma.
+
+The natural next experiment is therefore to compare profiles by the joint threshold matrix
+
+```text
+C_{k,l}=#{(u,i): rho_u>=k and s_i<=l}
+```
+
+or, more economically, the Ferrers compatibility profile induced by `s_i<=rho_u`, and determine the smallest joint summary that separates the exact collision witnesses while retaining symbolic meaning.
