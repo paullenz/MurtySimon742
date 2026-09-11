@@ -1,0 +1,40 @@
+{
+  "status": "PASS",
+  "negative_acceptance_tests": [
+    {
+      "mutation": "missing_exception_template",
+      "rejected": true,
+      "returncode": 1
+    },
+    {
+      "mutation": "negative_monotone_weight",
+      "rejected": true,
+      "returncode": 1
+    }
+  ],
+  "correct_supplement_bound_witness": {
+    "template": "B1",
+    "s": [
+      0,
+      2,
+      3,
+      3,
+      3,
+      3,
+      3,
+      3,
+      3,
+      3,
+      3,
+      3,
+      3
+    ],
+    "rho": 1,
+    "qmax": 1,
+    "full_minimum": -469,
+    "minimizer_q": 1,
+    "minimizer_p": 3,
+    "incorrect_rho_plus_one_minimum": -468
+  },
+  "meaning": "The actual acceptance path rejects incomplete/negative-weight inputs. The full source box includes a necessary boundary minimizer that the historical invalid tightening would omit."
+}

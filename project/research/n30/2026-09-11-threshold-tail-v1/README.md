@@ -165,6 +165,8 @@ This analytic hardening does **not** promote the project beyond candidate status
 
 ## Later continuation: seven scalar formulas for 57 positive rows
 
+**Historical intermediate checkpoint:** the subsequent [four-envelope reduction](../2026-09-11-m225-resource-envelope-v1/README.md) covers all 211 tight rows, including the four zero-demand rows. It replaces the final endpoint LP/Farkas models in the new supplementary route, conditional on the 100-profile completeness input and the universal bridge. The finite demand classification and explicit envelope arithmetic remain dependencies. The following paragraph preserves the earlier 57-row stage.
+
 The [recovered continuation checkpoint](../2026-09-11-m225-hall-continuation-v1/README.md) strengthens the hand selected-excess/Hall approach with the pointwise source cap `q<=#{i:s_i<=rho}` and an explicit reduction to three supplement-degree endpoints. Seven fixed integer-weight formulas exclude 57 of the 207 positive tight rows. All 57 inequalities are displayed in an exact appendix and checked by an independent standard-library program; the minimum assigned gap is `1/12`.
 
 The remaining 150 positive rows continue to require stronger preserved methods. They are not survivors of the complete existing candidate proof. The four zero-demand certificates and the finite 100-profile completeness dependency remain as stated above. The continuation also records a [non-blocking source-degree display erratum](../../../reviews/cross-cutting/2026-09-11-source-degree-erratum-v1/ERRATUM.md) in the frozen common bridge.

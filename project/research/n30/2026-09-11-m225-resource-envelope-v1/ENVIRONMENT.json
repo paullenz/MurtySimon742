@@ -1,0 +1,8 @@
+{
+  "baseline": "34763cb17ce554a27e57643cfb8e74882e66fc86",
+  "repository": "paullenz/MurtySimon742",
+  "python": "3.12.14 (main, Aug 25 2026, 14:00:49) [Clang 22.1.3 ]",
+  "scipy_discovery_version": "1.17.0",
+  "proof_critical_acceptance": "standard library only",
+  "final_certificate_constructed_from_preserved_discovery": true
+}

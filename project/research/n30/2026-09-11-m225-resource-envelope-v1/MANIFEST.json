@@ -1,0 +1,219 @@
+{
+  "schema": "n30-four-envelope-manifest-v1",
+  "repository": "paullenz/MurtySimon742",
+  "branch": "main",
+  "baseline": "34763cb17ce554a27e57643cfb8e74882e66fc86",
+  "files": [
+    {
+      "path": ".github/workflows/n30-m225-four-envelopes.yml",
+      "bytes": 1745,
+      "sha256": "a2484d54736e2dcb05984bed01154e71223e7ba508a5c27fc1b628bd97ab5458",
+      "git_blob_sha": "bbb0e40e25e2dff3fb943ebd6f973859be705b99"
+    },
+    {
+      "path": "README.md",
+      "bytes": 33104,
+      "sha256": "cb8201dd41b8f65719ed1727f609c7ed67945d0a60f3cff5bca416f2358f351b",
+      "git_blob_sha": "91b985e52d859bf6a9a258d99ef8e1fc9ca86531"
+    },
+    {
+      "path": "START_HERE_FOR_REVIEWERS.md",
+      "bytes": 18564,
+      "sha256": "ef4fe38c6f3d52a60c0d4fa601c087f38f7f2c260d6239aabc3f92d6c27a77cc",
+      "git_blob_sha": "0456b75b1c77c0ecc1c31406829fb7eb35312bea"
+    },
+    {
+      "path": "project/research/n30/2026-09-11-m225-hall-continuation-v1/README.md",
+      "bytes": 3698,
+      "sha256": "dd877b00aab4625928b3abd82d5e1eb7cd3ac1aa53e195302dff79843b2c0086",
+      "git_blob_sha": "ac19f11fcfb9384d645ac80f70f604ef8108d360"
+    },
+    {
+      "path": "project/research/n30/2026-09-11-m225-resource-envelope-v1/ACCEPTANCE_BOUNDARY_AUDIT.json",
+      "bytes": 812,
+      "sha256": "fd9238edabda9c78504e537421d94253ad80cc54e6fc284886e29d1333690857",
+      "git_blob_sha": "64930506caab0d98d83e379b18e97cd0ffdf954b"
+    },
+    {
+      "path": "project/research/n30/2026-09-11-m225-resource-envelope-v1/ENVIRONMENT.json",
+      "bytes": 333,
+      "sha256": "d902847c858ba4bbde5fbc9ff7a875165e04235e0ab6c914d28b400c116a3a7b",
+      "git_blob_sha": "bce9e98316bf62c8a9f499ed9f64cb211b56e599"
+    },
+    {
+      "path": "project/research/n30/2026-09-11-m225-resource-envelope-v1/EXACT_APPENDIX.md",
+      "bytes": 22374,
+      "sha256": "c658de4f40e6382c48c71d16f438c093eb750388e3705e3a59b379ceca7a206a",
+      "git_blob_sha": "abfbb831884a3f402c5ca2ba09763575b5826c5a"
+    },
+    {
+      "path": "project/research/n30/2026-09-11-m225-resource-envelope-v1/EXACT_APPENDIX_SEVEN_INITIAL.md",
+      "bytes": 21308,
+      "sha256": "15285ae8d4d01ad7d3f9d5d3a58ab264db2f848fd9f1f576a5bbbd7a826ed335",
+      "git_blob_sha": "2f01ccf287c71fb8b61a273510565a52d1160c01"
+    },
+    {
+      "path": "project/research/n30/2026-09-11-m225-resource-envelope-v1/EXACT_AUDIT.json",
+      "bytes": 164629,
+      "sha256": "bdcf5813b2646db34b411f4722a28f08bf36476753b3d33d22467c60e8fea05b",
+      "git_blob_sha": "1181c9cec2fe8b3f161f84cff2b3e80e0aa1e627"
+    },
+    {
+      "path": "project/research/n30/2026-09-11-m225-resource-envelope-v1/EXACT_AUDIT_SEVEN_INITIAL.json",
+      "bytes": 176460,
+      "sha256": "299020bd7967648e58879a69edfee13f8eb1f8f707bca51699da6bb72af657d2",
+      "git_blob_sha": "d073fb6cf395a37dc4979d1890294af27fe3551c"
+    },
+    {
+      "path": "project/research/n30/2026-09-11-m225-resource-envelope-v1/FOUR_ENVELOPE_REDUCTION.md",
+      "bytes": 11281,
+      "sha256": "be1c5025c359a223ab8023a5940b07c96adf6132feb012156a1d55459ff945f7",
+      "git_blob_sha": "24691f1ef6ec5099a5f1d5422ea5fecb97281625"
+    },
+    {
+      "path": "project/research/n30/2026-09-11-m225-resource-envelope-v1/HANDOVER.md",
+      "bytes": 8176,
+      "sha256": "6d3c3f82cd08291909fccc2c47e911f8c0ad6cee0630813218a19cba1209a2f1",
+      "git_blob_sha": "28f79b11667d37772dd3f6f98b449fb805fae9a1"
+    },
+    {
+      "path": "project/research/n30/2026-09-11-m225-resource-envelope-v1/JOINT_CERTIFICATES.json",
+      "bytes": 1645,
+      "sha256": "20c8389036ee426b4d6b2589d41454546f9c823ff150ed6c9103da8c070aecc8",
+      "git_blob_sha": "f7594457900708058aeeae2cc062386f7a8c34ef"
+    },
+    {
+      "path": "project/research/n30/2026-09-11-m225-resource-envelope-v1/JOINT_CERTIFICATES_SEVEN_INITIAL.json",
+      "bytes": 2534,
+      "sha256": "f48a993fcea897fb8f90b8ecbe296c2b75274fd29058d87336fec6cb8fcf302a",
+      "git_blob_sha": "6bf2db5baadd0545e4672124cb06b7cac72dff38"
+    },
+    {
+      "path": "project/research/n30/2026-09-11-m225-resource-envelope-v1/JOINT_RECTANGLES_DMAX12_DISCOVERY.json",
+      "bytes": 56582,
+      "sha256": "fb69f4d4ca77e8800359e0137ba9f93dc8f9bbf8dc06c88d52d65e5f776abd42",
+      "git_blob_sha": "3aa3975a0902c8810060b81d2ce531f8e8f0670e"
+    },
+    {
+      "path": "project/research/n30/2026-09-11-m225-resource-envelope-v1/JOINT_RECTANGLES_INTEGER_COVER.json",
+      "bytes": 18802,
+      "sha256": "68b5c4075d1358c81d03db13903e4011d392f12c7828abfed64ca4b52b131f2c",
+      "git_blob_sha": "79871b3fed32e25d7cef5e1bcab368c037e737fd"
+    },
+    {
+      "path": "project/research/n30/2026-09-11-m225-resource-envelope-v1/JOINT_RECTANGLES_SIMPLIFIED.json",
+      "bytes": 18982,
+      "sha256": "bc0080672f92b7fb39ce3f5957fbcd90afaa211128d852a79b9db9360cb793aa",
+      "git_blob_sha": "0540bc20be9571a2d5ccc10707cb4a18c7c97203"
+    },
+    {
+      "path": "project/research/n30/2026-09-11-m225-resource-envelope-v1/JOINT_SMALL_DMAX12_DISCOVERY.json",
+      "bytes": 168386,
+      "sha256": "af6f343728d5afbbbfb773e3aefacf89b89aa19bada490e551502db308c903a5",
+      "git_blob_sha": "419ca07169af20a6b1fafda5a3aaa4e3100446cf"
+    },
+    {
+      "path": "project/research/n30/2026-09-11-m225-resource-envelope-v1/JOINT_SMALL_INTEGER_COVER.json",
+      "bytes": 64120,
+      "sha256": "3641ad41557dc98d941d9f575e5543cb09f6452b676ce625e21a6d2495a8ad7a",
+      "git_blob_sha": "3f0181816792c66199d9ef8ff750063865fd9947"
+    },
+    {
+      "path": "project/research/n30/2026-09-11-m225-resource-envelope-v1/JOINT_SMALL_SIMPLIFIED.json",
+      "bytes": 64449,
+      "sha256": "e9e222ac8ad079459bef88c1c36788eac83b7e4326a6e9f09c17748eb23590a9",
+      "git_blob_sha": "e60b42e5eb4b7f8fef7400e660ab14dd5d1452c7"
+    },
+    {
+      "path": "project/research/n30/2026-09-11-m225-resource-envelope-v1/ONE_OLD_SCALAR_ROW_PROBE.json",
+      "bytes": 1049,
+      "sha256": "024e2bc4f41fe378c227d2657959cce009b60e11298e1f1a470cf526f8800e15",
+      "git_blob_sha": "f1226920062c3c832804a440b05a738124e6cf41"
+    },
+    {
+      "path": "project/research/n30/2026-09-11-m225-resource-envelope-v1/ONE_OLD_SCALAR_ROW_SIMPLIFIED.json",
+      "bytes": 1000,
+      "sha256": "e14f6eeee1ce5a46c36f07e8b8cb4c8d754ec1e4f0c780efd5a6833b024c2faf",
+      "git_blob_sha": "84da5299b788ef1916ac86f525699178c59246af"
+    },
+    {
+      "path": "project/research/n30/2026-09-11-m225-resource-envelope-v1/PUBLICATION_CHECKS.json",
+      "bytes": 436,
+      "sha256": "7fe001368bf956dbaac53776e0d7370a7bd9195cac2dc3b55ee0a1b90a5ec490",
+      "git_blob_sha": "9c1d196e6c141b9b07f49990fabb5c8d7e3a1c31"
+    },
+    {
+      "path": "project/research/n30/2026-09-11-m225-resource-envelope-v1/README.md",
+      "bytes": 3029,
+      "sha256": "cd717f819e618127d87ce97552d575c2c33b576b43cbdad6dda3ef11017885f1",
+      "git_blob_sha": "23f27d4364d26f0c542b047c66c54d96a11a76e9"
+    },
+    {
+      "path": "project/research/n30/2026-09-11-m225-resource-envelope-v1/SIMPLE_RESOURCE_DISCOVERY.json",
+      "bytes": 152094,
+      "sha256": "4ca3f1dae7bef86b15d0769c5359249cabe67348fdb32ccb8e0fd8484c86e6b8",
+      "git_blob_sha": "f69c707559d0b527f043afa72b5c9271cb949b0f"
+    },
+    {
+      "path": "project/research/n30/2026-09-11-m225-resource-envelope-v1/audit_acceptance_boundaries.py",
+      "bytes": 2303,
+      "sha256": "c292b408ad16d6fd62b2a675388a9dd74a80a52ae12cc8ab073feba0f60ac3ff",
+      "git_blob_sha": "c73c64b4132104a7f2a33556c08bffdc10247d99"
+    },
+    {
+      "path": "project/research/n30/2026-09-11-m225-resource-envelope-v1/check_publication.py",
+      "bytes": 2629,
+      "sha256": "0af6457b9c51a183b20e80281cb9754c930173190c17a1f3fac960d6cbb80f44",
+      "git_blob_sha": "cdbe3c07194031a369212d19718dc152c2b89c5e"
+    },
+    {
+      "path": "project/research/n30/2026-09-11-m225-resource-envelope-v1/compress_joint_cover.py",
+      "bytes": 2461,
+      "sha256": "20e5b8746b610e5f6b00a8c8f45c87c73fad0a47903899da83cea0a0eb996d6d",
+      "git_blob_sha": "58b39c43db8a6b61b5b429dab90740c1579a42cd"
+    },
+    {
+      "path": "project/research/n30/2026-09-11-m225-resource-envelope-v1/finish_joint_cover.py",
+      "bytes": 1915,
+      "sha256": "17a0550cdea5dd22e07097ebe608c19df9849abafe59865af5a85d30af325561",
+      "git_blob_sha": "f49040f69e0de65429b5b4e53ff85c8bc4c6dca1"
+    },
+    {
+      "path": "project/research/n30/2026-09-11-m225-resource-envelope-v1/mine_joint_potential.py",
+      "bytes": 4603,
+      "sha256": "a33117c82bdf4914b9a32b63b4d178e57712e83d9d15dd7c9204f36fb0e967fa",
+      "git_blob_sha": "cd940a8999d45f4d800cb057c548c7e40c7ffe71"
+    },
+    {
+      "path": "project/research/n30/2026-09-11-m225-resource-envelope-v1/mine_resource_envelope.py",
+      "bytes": 2408,
+      "sha256": "0464bf52083f42d06014224f0298a1516319e9ce9f52ebfb66a82e516b965a63",
+      "git_blob_sha": "cc2c3fad839e45361c7381bb78bfa794e52afa20"
+    },
+    {
+      "path": "project/research/n30/2026-09-11-m225-resource-envelope-v1/simplify_joint_templates.py",
+      "bytes": 3265,
+      "sha256": "ca9d49533c7b95acd0869efe3551625b8a8da510e5da0bf4a4fb1c863a90bdc6",
+      "git_blob_sha": "8c8cd3a4f237715eb36c40d80169369653fa87a3"
+    },
+    {
+      "path": "project/research/n30/2026-09-11-m225-resource-envelope-v1/verify_joint_certificates.py",
+      "bytes": 9305,
+      "sha256": "d71ac3c7465309f60fe2bbb6710c393d028039b72554b897c189d392660e4a4b",
+      "git_blob_sha": "c2fea8d21724e5a0dce30c40baf94eb7d2969297"
+    },
+    {
+      "path": "project/research/n30/2026-09-11-threshold-tail-v1/README.md",
+      "bytes": 8338,
+      "sha256": "97ded4401a4aad7d222152f7e7b6fe7076c35e125dde1c00e2a2cafa4aa0d023",
+      "git_blob_sha": "1cc4e79be750bafff951a827f0ebd6cf03dd6819"
+    },
+    {
+      "path": "releases/REVIEW_READY_INDEX.md",
+      "bytes": 5756,
+      "sha256": "992e7ac8109ed327dbb36dc41a6faa7cee6239e4bb857550c461213219634706",
+      "git_blob_sha": "13d9ee08ec1c8a13249364e60d31a0c4bee0fac1"
+    }
+  ],
+  "exclusion": "This manifest excludes itself and the later publication receipt to avoid recursive hashing."
+}

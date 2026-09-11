@@ -1,0 +1,16 @@
+{
+  "status": "PASS",
+  "baseline": "34763cb17ce554a27e57643cfb8e74882e66fc86",
+  "relative_links_checked": 196,
+  "broken_links": [],
+  "current_versions": {
+    "n25": 2,
+    "n27": 2,
+    "n28": 2,
+    "n29": 4,
+    "n30": 2
+  },
+  "frozen_bridge_unchanged": true,
+  "tracked_changes_within_scope": true,
+  "scope": "Current reviewer entry pages, predecessor README notices and the new checkpoint; not a full historic-link audit."
+}

@@ -1,0 +1,40 @@
+name: N30 m225 four-envelope exact audit
+
+on:
+  workflow_dispatch:
+  push:
+    paths:
+      - 'project/research/n30/2026-09-11-m225-resource-envelope-v1/**'
+      - 'project/research/n30/2026-09-11-threshold-tail-v1/N30_M225_QGE18_PROFILES.txt'
+      - '.github/workflows/n30-m225-four-envelopes.yml'
+
+permissions:
+  contents: read
+
+jobs:
+  exact:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 5
+    steps:
+      - uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262
+      - name: Reconstruct all tight rows and verify the four explicit envelopes
+        run: |
+          python3 -I -B project/research/n30/2026-09-11-m225-resource-envelope-v1/verify_joint_certificates.py --output N30_FOUR_ENVELOPE_AUDIT.json
+          python3 - <<'PY'
+          import json
+          r=json.load(open('N30_FOUR_ENVELOPE_AUDIT.json'))
+          assert r['status']=='PASS' and r['covered']==211 and not r['uncovered']
+          assert r['template_count']==4 and r['minimum_assigned_gap']==1
+          assert r['profile_sha256']=='cf29aeee1f83c957ae06a70c1d7de5df5b482c384c6c109d09f64ed1230fe237'
+          assert not r['solver_used'] and not r['floating_point_used'] and not r['discovery_imported']
+          PY
+      - name: Reject incomplete and invalid certificates
+        run: python3 -I -B project/research/n30/2026-09-11-m225-resource-envelope-v1/audit_acceptance_boundaries.py
+      - uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02
+        with:
+          name: n30-four-envelope-exact-audit
+          path: |
+            N30_FOUR_ENVELOPE_AUDIT.json
+            project/research/n30/2026-09-11-m225-resource-envelope-v1/ACCEPTANCE_BOUNDARY_AUDIT.json
+          if-no-files-found: error
+          retention-days: 90
