@@ -1,0 +1,137 @@
+{
+  "schema": "n34-bound-publication-receipt-v1",
+  "date": "2026-09-12",
+  "repository": "paullenz/MurtySimon742",
+  "branch": "main",
+  "published_research_commit": "7926f297b05ec283c9cf83977902d3f6dc0c55cf",
+  "parent": "09bf515a30c2918db019eaca252c7ecff05c57d7",
+  "tree": "7a3a9bdd1a911f79c3a307caa1113ee2c6f1d630",
+  "local_reviewed_commit": "5014b311ffb0d9377e3cbfe1ae158ed3226464b5",
+  "checks": {
+    "branch_readback": true,
+    "remote_git_fetch": true,
+    "identical_local_and_remote_tree": true,
+    "expected_changed_paths": 24,
+    "all_changed_content_hashes_match": true,
+    "manifest_artifact_hashes_verified": 46,
+    "pinned_connector_readbacks": [
+      "README.md",
+      "releases/n34-bound-reviewer-v1/MANIFEST.json",
+      "project/research/n34/2026-09-12-m290-v1/verification.json"
+    ],
+    "no_unintended_frozen_or_governed_changes": true,
+    "no_deleted_paths": true,
+    "clean_replay": "PASS",
+    "reviewer_links_checked": 299
+  },
+  "changed_artifacts": {
+    "README.md": {
+      "sha256": "f8ef634dde55a31b2ae2172185a98a4e0e732e222f957992b93ed4850f900d69",
+      "bytes": 31611
+    },
+    "START_HERE_FOR_REVIEWERS.md": {
+      "sha256": "60f32e4ad863938cdc7f743bee66282884c7c8d241bba1a8318f9e2450864017",
+      "bytes": 11385
+    },
+    "project/research/general_n/2026-09-12-exact-budget-threshold-v1/BRIDGE_REFINEMENTS.md": {
+      "sha256": "c4ba5e30a5484beabe2c1749d459fbe938d25f7dcdb6f665924cef5dd810d47e",
+      "bytes": 5761
+    },
+    "project/research/n34/2026-09-12-frontier-v1/README.md": {
+      "sha256": "844a8637b6a9867626a745ccad9baac9674b25db4315c12b31e0458ec7efceaf",
+      "bytes": 6656
+    },
+    "project/research/n34/2026-09-12-m290-v1/AUDIT.md": {
+      "sha256": "93884b0eada378f62207403abe24fb532653303aec23edda9021ddc1a8cb66ac",
+      "bytes": 4129
+    },
+    "project/research/n34/2026-09-12-m290-v1/README.md": {
+      "sha256": "ee09be8b33e5a667590fbbbacc4ab57de9490e19f7ddf391b9fd02be633ade04",
+      "bytes": 6484
+    },
+    "project/research/n34/2026-09-12-m290-v1/after_subset_exploration.json": {
+      "sha256": "15fdec479b05e7e154d7ae43a926b410a35a538d4cd545f94b621e0f5f0e1cdd",
+      "bytes": 37320
+    },
+    "project/research/n34/2026-09-12-m290-v1/baseline.json": {
+      "sha256": "be45646aac51a932db983513563db4021376470be22c7b4e30226c42588d34e1",
+      "bytes": 510501
+    },
+    "project/research/n34/2026-09-12-m290-v1/discover.py": {
+      "sha256": "eafaca0c1f7898f5ad07f93f1103931b4c81fe39e5d6aee4f424472f693f04ce",
+      "bytes": 1861
+    },
+    "project/research/n34/2026-09-12-m290-v1/discovery.log": {
+      "sha256": "6459e954e993cc5df190557fb27610613c6b10b4450e188390d9dc2a802a35b8",
+      "bytes": 982
+    },
+    "project/research/n34/2026-09-12-m290-v1/extended.py": {
+      "sha256": "271a7ea94a6a6c0796b2e525ee3edc30f6302be7c666e850ec769f0bc94ee200",
+      "bytes": 5675
+    },
+    "project/research/n34/2026-09-12-m290-v1/extended_adaptive.json": {
+      "sha256": "954cdbdc03cc9e7694bb332eb84525c08bac30bdf4e007bc5338e1e7eda0bfb0",
+      "bytes": 215863
+    },
+    "project/research/n34/2026-09-12-m290-v1/extended_adaptive.log": {
+      "sha256": "75e51409349f94f24dfeaa513ac543ea30cc385278d8fd0773c40475e8623b25",
+      "bytes": 859
+    },
+    "project/research/n34/2026-09-12-m290-v1/extended_fixed.json": {
+      "sha256": "ff6a7cae96957a04504fb96d9caa2966acfb1b109c05d82ff20e12eff61619b5",
+      "bytes": 52072
+    },
+    "project/research/n34/2026-09-12-m290-v1/extended_fixed.log": {
+      "sha256": "7584535b368f0ae3f7352bd0d10eda5c9d00671b456301d455bb6433e5c7ceea",
+      "bytes": 1379
+    },
+    "project/research/n34/2026-09-12-m290-v1/verification.json": {
+      "sha256": "3120e8a582a5fb608440cdd481712dbea31f817659e76afefee8782788d2df30",
+      "bytes": 875
+    },
+    "project/research/n34/2026-09-12-m290-v1/verification.log": {
+      "sha256": "3120e8a582a5fb608440cdd481712dbea31f817659e76afefee8782788d2df30",
+      "bytes": 875
+    },
+    "project/research/n34/2026-09-12-m290-v1/verify.py": {
+      "sha256": "47372158ce367211e22cafb4668b84c46210f66ae7f7533645f1225ac9bd3001",
+      "bytes": 6760
+    },
+    "releases/REVIEW_READY_INDEX.md": {
+      "sha256": "695ef227de1949fac80bc3645eff458ab76bc58b3eb03999dfe92363845a9b1d",
+      "bytes": 9162
+    },
+    "releases/general-joint-clipping-reviewer-v1/README.md": {
+      "sha256": "7ca8917d3b32229ca7c23adc6705aa9787ca74ec186d8175ffb9a149619f055e",
+      "bytes": 2999
+    },
+    "releases/n34-bound-reviewer-v1/MANIFEST.json": {
+      "sha256": "38fe996111f85194bc8dfb2ee040eddfd46de1636313d6d73f522181d701a65a",
+      "bytes": 9532
+    },
+    "releases/n34-bound-reviewer-v1/README.md": {
+      "sha256": "6cb98220a7e05c0d02d142be59bd6d05c9cdfd6e1ea3ccf39e420d5b950227e4",
+      "bytes": 2222
+    },
+    "releases/n34-bound-reviewer-v1/VALIDATION.json": {
+      "sha256": "c4acad8e3bb5ca4fa8cfe688945963c43bbc6a10fdef29816d385beb7895e4c5",
+      "bytes": 2765
+    },
+    "releases/n34-bound-reviewer-v1/check_manifest.py": {
+      "sha256": "9672d3677895e9a590da8a96c5b99b4bea10aae27661d9118e018578fecf922b",
+      "bytes": 522
+    }
+  },
+  "scope": {
+    "n": 34,
+    "candidate_upper_bound": 289,
+    "m290_states": 1614,
+    "hand_accounting_exclusions": 662,
+    "integer_certificates": 952,
+    "local_integer_checks": 431338,
+    "equality_classification": "OPEN",
+    "m289_conservative_states": 13546,
+    "external_review": "OPEN"
+  },
+  "receipt_followup": "This receipt is attached in a subsequent commit whose parent is the verified research commit. It is excluded from the proof-artifact manifest to avoid circular hashes."
+}
