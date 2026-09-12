@@ -1,6 +1,6 @@
 # Murty–Simon / Erdős Problem #742
 
-Candidate proofs and reproducible research. **Updated 12 September 2026. Independent mathematical review, novelty assessment and independent computational reproduction remain OPEN.** Repository publication, green replay and same-assistant hostile audit are not external acceptance and do not prove the unrestricted conjecture.
+Candidate proofs and reproducible research. **Updated 13 September 2026. Independent mathematical review, novelty assessment and independent computational reproduction remain OPEN.** Repository publication, green replay and same-assistant hostile audit are not external acceptance and do not prove the unrestricted conjecture.
 
 **External reviewers:** start with [`START_HERE_FOR_REVIEWERS.md`](START_HERE_FOR_REVIEWERS.md). The canonical theorem-level packages are indexed in [`releases/REVIEW_READY_INDEX.md`](releases/REVIEW_READY_INDEX.md). The project actively welcomes hostile review, counterexamples, literature corrections and genuinely independent reproduction; GitHub Issues are the preferred place to report a suspected flaw.
 
@@ -78,6 +78,13 @@ neighbourhoods are fixed. All twelve bounded solver attempts on six survivors
 remain unresolved. Fixed-pattern obstructions are preserved with their limits:
 the constructed probes already fail weaker load checks. No whole-state
 exclusions are added; the new contribution is a conditional routing reduction.
+A [constraint-respecting cross-neighbourhood continuation](project/research/general_n/2026-09-13-constraint-respecting-cross-v1/README.md)
+now extracts a co-singleton trace hierarchy and a receiver-containment spill
+inequality from the exact label-set compatibility condition. The spill bound
+depends only on `(a,b,s,rho,q)` and rejects 173 of 2,000 deterministic sampled
+selected-degree patterns in one frozen N34 stratum. This is reconnaissance,
+not complete coverage: no whole-state exclusion is added and the 4,584-state
+frontier is unchanged.
 
 ## Failures, audit challenges and corrections are part of the record
 
@@ -130,6 +137,7 @@ available for that scrutiny.
 | Compatible routing: full catalogue | Frozen 20 seed vectors and control projections: 990/5,578 catalogue exclusions; four retained pilot-only witnesses give 994 combined exclusions and 4,584 survivors. One fixed potential covers 707 cases and has a general analytic reduction. Reviewer-v1; external review OPEN. |
 | Closed compatible potential | Candidate general exact formula: at most 59 candidate values per residual/sender class, with variable eligibility cutoff. Full fixed-weight family excludes 832 previously handled cases; zero new combined exclusions, 4,584 survivors. Reviewer-v1; external review OPEN. |
 | Fixed-neighbourhood routing flow | Candidate exact B-side routing criterion for fixed selected/residual cross sets, with checked Hall obstructions. Six-state/twelve-run pilot unresolved; no whole-state exclusions added, 4,584 survivors. Reviewer-v1; external review OPEN. |
+| Co-singleton trace / containment spill | Candidate general hand lemmas projecting exact label-set compatibility to higher-order trace moments and a scalar `(a,b,s,rho,q)` spill inequality. Deterministic reconnaissance cuts 173/2,000 selected patterns in N34 state 13537; no whole-state exclusions yet, so 4,584 survivors remain. External review and novelty OPEN. |
 | General maximum-degree result | Candidate theorem: `n >= 6` and `Delta(G) >= (7/12)n` imply `e(G) < floor(n^2/4)`; complete candidate hand argument with internal exact audits green; external review and novelty assessment open |
 | RX-Hall / monotone-potential programme | Active finite-to-symbolic programme. It is **not** an unrestricted theorem. It supplies general structural experiments and proof-critical exact finite exclusions in N32, N33, N34 and N35. Floating infeasibility is not accepted as a proof event. |
 
@@ -165,10 +173,20 @@ cross patterns. A further 5,024 compatible patterns challenge its implications,
 and 8,192 cases check the linear models against direct combinatorial objects.
 All original models, solver logs, timeouts, certificates and limitations are
 preserved in the [audit](project/research/general_n/2026-09-12-arc-realisation-pilot-v1/AUDIT.md).
-The next search should construct cross-neighbourhoods satisfying minimum
-endpoint loads and supplying compatible exceptions before applying flow cuts.
 External mathematical review and novelty remain OPEN; fixed-order ledgers,
 the 7/12 candidate and forecasts are unchanged.
+
+The [13 September constraint-respecting continuation](project/research/general_n/2026-09-13-constraint-respecting-cross-v1/README.md)
+implements the previously identified next step: construct cross data only
+after enforcing minimum endpoint loads and exact compatible destinations. Its
+bounded fixed-pattern failures remain explicitly non-proof evidence. More
+usefully, the exact compatibility condition yields a [co-singleton trace and
+receiver-containment spill](project/research/general_n/2026-09-13-constraint-respecting-cross-v1/CONTAINMENT_SPILL.md)
+family of candidate hand inequalities. A directly checkable partial pattern
+for N34 state 60 has 19 of 37 obligations with compatible destinations; the
+new scalar spill test rejects 173/2,000 deterministic selected patterns in
+N34 state 13537. Complete full-domain application is the next test. The
+4,584-state frontier remains unchanged.
 
 ## Closed compatible potential and review
 
@@ -736,6 +754,7 @@ Historical packages remain preserved. N31, N32, N33, N34 and N35 are currently s
 | Compatible routing: full catalogue | [Reviewer-v1 source package](releases/general-compatible-catalogue-reviewer-v1/README.md) | [Analytic reduction](project/research/general_n/2026-09-12-compatible-routing-catalogue-v1/FIXED_POTENTIAL.md); [full replay and audit](project/research/general_n/2026-09-12-compatible-routing-catalogue-v1/README.md) |
 | Closed compatible potential | [Reviewer-v1 source package](releases/general-closed-compatible-reviewer-v1/README.md) | [General closed formula](project/research/general_n/2026-09-12-closed-compatible-potential-v1/CLOSED_POTENTIAL.md); [review and negative frontier result](project/research/general_n/2026-09-12-closed-compatible-potential-v1/AUDIT.md) |
 | Fixed-neighbourhood routing flow | [Reviewer-v1 source package](releases/general-arc-realisation-reviewer-v1/README.md) | [Conditional general criterion](project/research/general_n/2026-09-12-arc-realisation-pilot-v1/FIXED_NEIGHBOURHOOD_FLOW.md); [timeouts, fixed-pattern limits and audit](project/research/general_n/2026-09-12-arc-realisation-pilot-v1/AUDIT.md) |
+| Co-singleton trace / containment spill | [Research checkpoint](project/research/general_n/2026-09-13-constraint-respecting-cross-v1/README.md) | [Candidate hand lemmas](project/research/general_n/2026-09-13-constraint-respecting-cross-v1/CONTAINMENT_SPILL.md); [scope audit](project/research/general_n/2026-09-13-constraint-respecting-cross-v1/AUDIT.md) |
 | General step-back | [Balanced-degree / fixed-a source package](releases/general-stepback-v1/README.md) | [Internal audit](project/reviews/general-theory/2026-09-12-stepback-v1/HOSTILE_AUDIT.md) |
 | Joint clipping / historical N34 upper layers | [Reviewer-v1 source package](releases/general-joint-clipping-reviewer-v1/README.md) | [Focused foundations audit](project/reviews/general-theory/2026-09-12-joint-followthrough-v1/FOUNDATIONS_AUDIT.md); [N34 exact verification](project/research/n34/2026-09-12-frontier-v1/upper_layer_verification.json) |
 | General 293/500 | [Reviewer manuscript](releases/general-293-500-reviewer-v1/General_293_500_Reviewer_Manuscript_v1.pdf) | [Verification companion](releases/general-293-500-reviewer-v1/General_293_500_Verification_Companion_v1.pdf) |
