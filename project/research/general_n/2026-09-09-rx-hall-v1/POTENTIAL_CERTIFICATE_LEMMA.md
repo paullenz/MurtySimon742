@@ -53,10 +53,12 @@ This includes nonnegative combinations of BC rectangle indicators and the diagon
 Fix nonnegative numbers
 
 ```
-lambda >= 0,  c >= 0,  mu >= 0,  tau_j >= 0,
+lambda >= 0,  c >= 0,  tau_j >= 0,
 ```
 
-and any coordinatewise nondecreasing potential `F`.
+an arbitrary real balance multiplier `mu`, and any coordinatewise nondecreasing potential `F`.
+
+**12 September clarification:** the earlier statement unnecessarily restricted `mu>=0`. Its coefficient multiplies the exact balance `sum q=sum p`, so the proof below works for either sign. The existing envelope implementations represent this free multiplier as `mu+ - mu-`. Allowing it explicitly closes that wording mismatch; no inequality direction or certificate arithmetic changes.
 
 For every demand value `s`, choose a real number `ell_s` such that every graph-admissible label state `(R,x)` with that demand satisfies
 

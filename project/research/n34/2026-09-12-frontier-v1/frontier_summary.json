@@ -1,0 +1,24 @@
+{
+  "1": {
+    "profiles": 1296,
+    "states": 13546,
+    "positive_demand_states": 12926,
+    "zero_demand_states": 620
+  },
+  "2": {
+    "profiles": 337,
+    "states": 1614,
+    "positive_demand_states": 1585,
+    "zero_demand_states": 29
+  },
+  "3": {
+    "profiles": 56,
+    "states": 110,
+    "positive_demand_states": 110
+  },
+  "4": {
+    "profiles": 2,
+    "states": 2,
+    "positive_demand_states": 2
+  }
+}

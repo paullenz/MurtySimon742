@@ -1,0 +1,53 @@
+{"a": 17, "M": 6, "k": 11, "loss": 1, "independent_gain": 0, "joint_gain": 3, "net_gain": 2, "minimizer": [2, 2, 2, 2, 3, 4, 6, 6, 6, 6, 6, 6, 6, 6, 6, 6, 6], "dp_states": 155}
+{"a": 17, "cap": 5, "states": 5985, "Dmax": 15, "Qmax": 32, "terminal_Q_equality": [[3, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4], [4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4], [4, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5]], "clipping_to_five_verified": true}
+{"a": 18, "M": 6, "k": 11, "loss": 1, "independent_gain": 0, "joint_gain": 2, "net_gain": 1, "minimizer": [2, 3, 4, 4, 4, 5, 5, 6, 6, 6, 6, 6, 6, 6, 6, 6, 6, 6], "dp_states": 201}
+{"a": 18, "cap": 5, "states": 7315, "Dmax": 17, "Qmax": 35, "terminal_Q_equality": [[4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4], [4, 4, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5], [5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5]], "clipping_to_five_verified": true}
+{"a": 19, "M": 7, "k": 13, "loss": 1, "independent_gain": 0, "joint_gain": 3, "net_gain": 2, "minimizer": [2, 5, 6, 6, 6, 6, 7, 7, 7, 7, 7, 7, 7, 7, 7, 7, 7, 7, 7], "dp_states": 246}
+{"a": 19, "M": 6, "k": 11, "loss": 1, "independent_gain": 0, "joint_gain": 2, "net_gain": 1, "minimizer": [2, 2, 2, 4, 4, 4, 5, 5, 6, 6, 6, 6, 6, 6, 6, 6, 6, 6, 6], "dp_states": 253}
+{"a": 19, "M": 6, "k": 12, "loss": 1, "independent_gain": 0, "joint_gain": 3, "net_gain": 2, "minimizer": [2, 2, 3, 3, 3, 4, 5, 6, 6, 6, 6, 6, 6, 6, 6, 6, 6, 6, 6], "dp_states": 201}
+{"a": 19, "cap": 5, "states": 8855, "Dmax": 20, "Qmax": 39, "terminal_Q_equality": [[4, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5]], "clipping_to_five_verified": true}
+{"a": 20, "M": 9, "k": 15, "loss": 1, "independent_gain": 0, "joint_gain": 5, "net_gain": 4, "minimizer": [3, 3, 3, 5, 6, 9, 9, 9, 9, 9, 9, 9, 9, 9, 9, 9, 9, 9, 9, 9], "dp_states": 358}
+{"a": 20, "M": 8, "k": 14, "loss": 1, "independent_gain": 0, "joint_gain": 4, "net_gain": 3, "minimizer": [2, 3, 3, 6, 6, 6, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8], "dp_states": 358}
+{"a": 20, "M": 7, "k": 13, "loss": 1, "independent_gain": 0, "joint_gain": 3, "net_gain": 2, "minimizer": [2, 2, 3, 6, 6, 6, 6, 7, 7, 7, 7, 7, 7, 7, 7, 7, 7, 7, 7, 7], "dp_states": 321}
+{"a": 20, "M": 6, "k": 11, "loss": 1, "independent_gain": 0, "joint_gain": 2, "net_gain": 1, "minimizer": [2, 2, 2, 2, 2, 4, 4, 5, 5, 6, 6, 6, 6, 6, 6, 6, 6, 6, 6, 6], "dp_states": 311}
+{"a": 20, "M": 6, "k": 12, "loss": 1, "independent_gain": 0, "joint_gain": 2, "net_gain": 1, "minimizer": [3, 3, 4, 5, 5, 5, 5, 5, 6, 6, 6, 6, 6, 6, 6, 6, 6, 6, 6, 6], "dp_states": 253}
+{"a": 20, "cap": 5, "states": 10626, "Dmax": 22, "Qmax": 42, "terminal_Q_equality": [[5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5]], "clipping_to_five_verified": true}
+{"a": 21, "M": 10, "k": 16, "loss": 1, "independent_gain": 0, "joint_gain": 6, "net_gain": 5, "minimizer": [6, 6, 6, 6, 7, 10, 10, 10, 10, 10, 10, 10, 10, 10, 10, 10, 10, 10, 10, 10, 10], "dp_states": 469}
+{"a": 21, "M": 9, "k": 15, "loss": 1, "independent_gain": 0, "joint_gain": 5, "net_gain": 4, "minimizer": [2, 2, 2, 3, 5, 6, 9, 9, 9, 9, 9, 9, 9, 9, 9, 9, 9, 9, 9, 9, 9], "dp_states": 491}
+{"a": 21, "M": 8, "k": 14, "loss": 1, "independent_gain": 0, "joint_gain": 4, "net_gain": 3, "minimizer": [2, 3, 3, 4, 4, 5, 5, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8], "dp_states": 469}
+{"a": 21, "M": 7, "k": 13, "loss": 1, "independent_gain": 0, "joint_gain": 3, "net_gain": 2, "minimizer": [2, 2, 3, 4, 5, 5, 5, 5, 7, 7, 7, 7, 7, 7, 7, 7, 7, 7, 7, 7, 7], "dp_states": 406}
+{"a": 21, "M": 6, "k": 11, "loss": 1, "independent_gain": 0, "joint_gain": 2, "net_gain": 1, "minimizer": [2, 2, 2, 2, 2, 3, 3, 4, 4, 4, 6, 6, 6, 6, 6, 6, 6, 6, 6, 6, 6], "dp_states": 375}
+{"a": 21, "M": 6, "k": 12, "loss": 1, "independent_gain": 0, "joint_gain": 2, "net_gain": 1, "minimizer": [3, 3, 4, 4, 4, 4, 4, 4, 5, 6, 6, 6, 6, 6, 6, 6, 6, 6, 6, 6, 6], "dp_states": 311}
+{"a": 21, "M": 6, "k": 20, "loss": 5, "independent_gain": 4, "joint_gain": 5, "net_gain": 0, "minimizer": [0, 6, 6, 6, 6, 6, 6, 6, 6, 6, 6, 6, 6, 6, 6, 6, 6, 6, 6, 6, 6], "dp_states": 15}
+{"a": 21, "cap": 5, "states": 12650, "Dmax": 25, "Qmax": 46, "terminal_Q_equality": [[5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5]], "clipping_to_five_verified": true}
+{"a": 22, "M": 10, "k": 16, "loss": 1, "independent_gain": 0, "joint_gain": 5, "net_gain": 4, "minimizer": [2, 3, 5, 7, 7, 7, 10, 10, 10, 10, 10, 10, 10, 10, 10, 10, 10, 10, 10, 10, 10, 10], "dp_states": 645}
+{"a": 22, "M": 9, "k": 15, "loss": 1, "independent_gain": 0, "joint_gain": 4, "net_gain": 3, "minimizer": [2, 3, 5, 5, 7, 7, 8, 9, 9, 9, 9, 9, 9, 9, 9, 9, 9, 9, 9, 9, 9, 9], "dp_states": 645}
+{"a": 22, "M": 9, "k": 16, "loss": 1, "independent_gain": 0, "joint_gain": 5, "net_gain": 4, "minimizer": [2, 3, 6, 6, 6, 6, 9, 9, 9, 9, 9, 9, 9, 9, 9, 9, 9, 9, 9, 9, 9, 9], "dp_states": 491}
+{"a": 22, "M": 8, "k": 14, "loss": 1, "independent_gain": 0, "joint_gain": 4, "net_gain": 3, "minimizer": [2, 2, 2, 2, 4, 4, 5, 5, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8], "dp_states": 595}
+{"a": 22, "M": 8, "k": 15, "loss": 1, "independent_gain": 0, "joint_gain": 4, "net_gain": 3, "minimizer": [2, 2, 6, 6, 6, 6, 7, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8], "dp_states": 469}
+{"a": 22, "M": 7, "k": 13, "loss": 1, "independent_gain": 0, "joint_gain": 3, "net_gain": 2, "minimizer": [2, 2, 3, 4, 4, 4, 4, 4, 4, 7, 7, 7, 7, 7, 7, 7, 7, 7, 7, 7, 7, 7], "dp_states": 501}
+{"a": 22, "M": 7, "k": 14, "loss": 1, "independent_gain": 0, "joint_gain": 3, "net_gain": 2, "minimizer": [3, 5, 5, 5, 5, 5, 6, 6, 7, 7, 7, 7, 7, 7, 7, 7, 7, 7, 7, 7, 7, 7], "dp_states": 406}
+{"a": 22, "M": 6, "k": 11, "loss": 1, "independent_gain": 0, "joint_gain": 2, "net_gain": 1, "minimizer": [0, 2, 2, 2, 2, 2, 3, 3, 4, 4, 4, 6, 6, 6, 6, 6, 6, 6, 6, 6, 6, 6], "dp_states": 445}
+{"a": 22, "M": 6, "k": 12, "loss": 1, "independent_gain": 0, "joint_gain": 2, "net_gain": 1, "minimizer": [2, 2, 2, 4, 4, 4, 4, 4, 4, 5, 6, 6, 6, 6, 6, 6, 6, 6, 6, 6, 6, 6], "dp_states": 375}
+{"a": 22, "M": 6, "k": 13, "loss": 1, "independent_gain": 0, "joint_gain": 3, "net_gain": 2, "minimizer": [3, 3, 3, 3, 3, 3, 4, 4, 4, 6, 6, 6, 6, 6, 6, 6, 6, 6, 6, 6, 6, 6], "dp_states": 311}
+{"a": 22, "M": 6, "k": 20, "loss": 5, "independent_gain": 4, "joint_gain": 5, "net_gain": 0, "minimizer": [0, 0, 6, 6, 6, 6, 6, 6, 6, 6, 6, 6, 6, 6, 6, 6, 6, 6, 6, 6, 6, 6], "dp_states": 31}
+{"a": 22, "M": 6, "k": 21, "loss": 6, "independent_gain": 4, "joint_gain": 6, "net_gain": 0, "minimizer": [0, 6, 6, 6, 6, 6, 6, 6, 6, 6, 6, 6, 6, 6, 6, 6, 6, 6, 6, 6, 6, 6], "dp_states": 15}
+{"a": 22, "cap": 5, "states": 14950, "Dmax": 27, "Qmax": 49, "terminal_Q_equality": [[4, 4, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5], [3, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5], [4, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5], [5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5]], "clipping_to_five_verified": true}
+{"a": 23, "M": 11, "k": 18, "loss": 1, "independent_gain": 0, "joint_gain": 6, "net_gain": 5, "minimizer": [4, 4, 6, 10, 10, 11, 11, 11, 11, 11, 11, 11, 11, 11, 11, 11, 11, 11, 11, 11, 11, 11, 11], "dp_states": 595}
+{"a": 23, "M": 10, "k": 16, "loss": 1, "independent_gain": 0, "joint_gain": 5, "net_gain": 4, "minimizer": [2, 2, 3, 3, 7, 7, 7, 10, 10, 10, 10, 10, 10, 10, 10, 10, 10, 10, 10, 10, 10, 10, 10], "dp_states": 849}
+{"a": 23, "M": 10, "k": 17, "loss": 1, "independent_gain": 0, "joint_gain": 5, "net_gain": 4, "minimizer": [6, 6, 7, 7, 7, 8, 10, 10, 10, 10, 10, 10, 10, 10, 10, 10, 10, 10, 10, 10, 10, 10, 10], "dp_states": 645}
+{"a": 23, "M": 9, "k": 15, "loss": 1, "independent_gain": 0, "joint_gain": 4, "net_gain": 3, "minimizer": [2, 2, 3, 3, 5, 7, 7, 8, 9, 9, 9, 9, 9, 9, 9, 9, 9, 9, 9, 9, 9, 9, 9], "dp_states": 820}
+{"a": 23, "M": 9, "k": 16, "loss": 1, "independent_gain": 0, "joint_gain": 5, "net_gain": 4, "minimizer": [2, 2, 2, 6, 6, 6, 6, 9, 9, 9, 9, 9, 9, 9, 9, 9, 9, 9, 9, 9, 9, 9, 9], "dp_states": 645}
+{"a": 23, "M": 8, "k": 14, "loss": 1, "independent_gain": 0, "joint_gain": 3, "net_gain": 2, "minimizer": [6, 7, 7, 7, 7, 7, 7, 7, 7, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8], "dp_states": 736}
+{"a": 23, "M": 8, "k": 15, "loss": 1, "independent_gain": 0, "joint_gain": 4, "net_gain": 3, "minimizer": [3, 3, 3, 4, 4, 5, 6, 7, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8, 8], "dp_states": 595}
+{"a": 23, "M": 7, "k": 13, "loss": 1, "independent_gain": 0, "joint_gain": 3, "net_gain": 2, "minimizer": [2, 2, 2, 2, 4, 4, 4, 4, 4, 4, 7, 7, 7, 7, 7, 7, 7, 7, 7, 7, 7, 7, 7], "dp_states": 606}
+{"a": 23, "M": 7, "k": 14, "loss": 1, "independent_gain": 0, "joint_gain": 3, "net_gain": 2, "minimizer": [2, 3, 3, 5, 5, 5, 5, 6, 6, 7, 7, 7, 7, 7, 7, 7, 7, 7, 7, 7, 7, 7, 7], "dp_states": 501}
+{"a": 23, "M": 7, "k": 15, "loss": 2, "independent_gain": 1, "joint_gain": 4, "net_gain": 2, "minimizer": [4, 4, 4, 4, 4, 4, 5, 5, 7, 7, 7, 7, 7, 7, 7, 7, 7, 7, 7, 7, 7, 7, 7], "dp_states": 406}
+{"a": 23, "M": 6, "k": 11, "loss": 1, "independent_gain": 0, "joint_gain": 1, "net_gain": 0, "minimizer": [3, 3, 4, 4, 5, 5, 5, 5, 5, 5, 5, 5, 6, 6, 6, 6, 6, 6, 6, 6, 6, 6, 6], "dp_states": 521}
+{"a": 23, "M": 6, "k": 12, "loss": 1, "independent_gain": 0, "joint_gain": 2, "net_gain": 1, "minimizer": [2, 2, 2, 2, 2, 4, 4, 4, 4, 4, 5, 6, 6, 6, 6, 6, 6, 6, 6, 6, 6, 6, 6], "dp_states": 445}
+{"a": 23, "M": 6, "k": 13, "loss": 1, "independent_gain": 0, "joint_gain": 3, "net_gain": 2, "minimizer": [2, 3, 3, 3, 3, 3, 3, 3, 3, 4, 6, 6, 6, 6, 6, 6, 6, 6, 6, 6, 6, 6, 6], "dp_states": 375}
+{"a": 23, "M": 6, "k": 20, "loss": 5, "independent_gain": 4, "joint_gain": 4, "net_gain": -1, "minimizer": [3, 5, 5, 6, 6, 6, 6, 6, 6, 6, 6, 6, 6, 6, 6, 6, 6, 6, 6, 6, 6, 6, 6], "dp_states": 53}
+{"a": 23, "M": 6, "k": 21, "loss": 6, "independent_gain": 4, "joint_gain": 5, "net_gain": -1, "minimizer": [2, 2, 6, 6, 6, 6, 6, 6, 6, 6, 6, 6, 6, 6, 6, 6, 6, 6, 6, 6, 6, 6, 6], "dp_states": 31}
+{"a": 23, "M": 6, "k": 22, "loss": 6, "independent_gain": 5, "joint_gain": 5, "net_gain": -1, "minimizer": [3, 6, 6, 6, 6, 6, 6, 6, 6, 6, 6, 6, 6, 6, 6, 6, 6, 6, 6, 6, 6, 6, 6], "dp_states": 15}
+{"a": 23, "M": 6, "k": 23, "loss": 7, "independent_gain": 6, "joint_gain": 6, "net_gain": -1, "minimizer": [6, 6, 6, 6, 6, 6, 6, 6, 6, 6, 6, 6, 6, 6, 6, 6, 6, 6, 6, 6, 6, 6, 6], "dp_states": 5}
+{"a": 23, "cap": 5, "states": 17550, "Dmax": 30, "Qmax": 53, "terminal_Q_equality": [[5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5]], "clipping_to_five_verified": false}

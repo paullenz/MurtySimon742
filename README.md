@@ -16,10 +16,51 @@ Candidate proofs and reproducible research. **Updated 12 September 2026. Indepen
 | `n=31` | Complete candidate: `e(G) <= 240`, equality exactly `K(15,16)`; source-first reviewer-v1; predominantly hand/structural; hostile internal audit found no blocking flaw; external review open |
 | `n=32` | Complete candidate: `e(G) <= 256`, equality exactly `K(16,16)`; source-first reviewer-v1; 257-edge branch exact nine-rectangle closure, equality branch exact finite replay plus one hand tight-threshold contradiction; hostile internal audit found no blocking flaw; external review open |
 | `n=33` | Complete candidate: `e(G) <= 272`, equality exactly `K(16,17)`; source-first reviewer-v1; `Delta=17` entirely hand-closed, sole new equality frontier has 21 demand profiles / 29 states, with 25 exact shifted-potential exclusions and 4 hand contradictions; hostile internal audit found no blocking flaw; external review open |
+| `n=34` partial | Candidate upper bound `e(G)<=290`; the conjectured bound is 289. The 291-edge layer is closed by 109 exact certificates + one hand contradiction; the 292-edge layer by two exact certificates. The 289- and 290-edge `Delta=18` layers remain OPEN. |
+| Balanced-degree / fixed-a structural results | Candidate all-order balanced-degree reduction; infinite `a=14` high-b family; tail bounds through `a=23`, including joint clipping and an adaptive six-level boundary; proof-critical finite arithmetic where stated; external review open |
 | General maximum-degree result | Candidate theorem: `n >= 6` and `Delta(G) >= (7/12)n` imply `e(G) < floor(n^2/4)`; complete candidate hand argument with internal exact audits green; external review and novelty assessment open |
 | RX-Hall / monotone-potential programme | Active finite-to-symbolic programme. It is **not** an unrestricted theorem. It now has two roles: general structural experimentation, and compact proof-critical exact finite exclusion inside the N32 and N33 fixed-order packages. Floating infeasibility is not accepted as a proof event. |
 
 The unrestricted Murty–Simon conjecture remains unsolved by this project.
+
+## 12 September follow-through: general structure and partial n=34 bound
+
+The [general step-back package](releases/general-stepback-v1/README.md) records
+the candidate balanced-degree theorem for every `n>=7`, the infinite family
+`n>=35, Delta=n-15 => e(G)<=15 Delta`, and the fifteen-/sixteen-label tail bounds.
+The balanced-degree theorem and the 7/12 result together confine any prospective
+counterexample with `n>=7` to `ceil(n/2)+1 <= Delta < 7n/12`, conditional on
+the current candidate arguments.
+
+The [joint-clipping reviewer package](releases/general-joint-clipping-reviewer-v1/README.md)
+now extends the scalar tail bounds to `a=17,...,23`:
+
+```text
+a:     17  18  19  20  21  22  23
+Qmax:  32  35  39  42  46  49  54
+```
+
+The new recurrence keeps lower tails compatible. Clipping to maximum demand
+five works through a=22; at a=23, retaining six gives the last bound. All 46
+rows requiring joint treatment and the terminal arithmetic were rechecked by
+a separately structured exact verifier. This is finite proof-critical
+arithmetic, not an unrestricted scalar theorem.
+
+The earlier sixteen-label note overstated the a=17 obstruction: the independent
+estimate was inconclusive, while actual compatible clipping has minimum gain
+`+2`. The actual `6^23 -> 5^23` counterexample remains preserved. A second
+clarification makes explicit that the potential lemma's exact-balance multiplier
+may have either sign. The [focused foundations audit](project/reviews/general-theory/2026-09-12-joint-followthrough-v1/FOUNDATIONS_AUDIT.md)
+records these corrections and the primary-source dependency check.
+
+For [n=34](project/research/n34/2026-09-12-frontier-v1/README.md), all target-range
+degrees except `Delta=18` close by existing structural results. At that degree,
+the 292-edge layer has two exact certificates; the 291-edge layer has 109 exact
+certificates and one application of a new
+[tight-threshold hand lemma](project/research/general_n/2026-09-12-joint-clipping-v1/TIGHT_THRESHOLD_LEMMA.md).
+Thus the current **partial candidate bound is 290 edges**. The 290-edge layer
+still has 1,614 conservative states, and the 289-edge equality layer has 13,546.
+Neither is represented as resolved. The complete fixed-order frontier remains n=33.
 
 ## 12 September milestone: fixed-order frontier extended through n=33
 
@@ -40,7 +81,7 @@ Start with [`releases/n31-reviewer-v1/README.md`](releases/n31-reviewer-v1/READM
 - `Delta=17` closes through the thirteen-label theorem plus its equality analysis;
 - `Delta=16` closes by witness-deficit counting, with equality forcing `K(15,16)`.
 
-The [complete proof](project/research/n31/2026-09-11-hand-route-v1/PROOF.md), [hostile internal audit](project/research/n31/2026-09-11-hand-route-v1/HOSTILE_AUDIT.md), [arithmetic regression](project/research/n31/2026-09-11-hand-route-v1/check_n31_hand_route.py), and [thirteen-label theorem](project/research/general_n/2026-09-11-thirteen-label-tail-v1/THIRTEEN_LABEL_TAIL.md) are preserved. The hostile audit found no blocking flaw; it remains same-assistant internal evidence, not external validation.
+The [complete proof](project/research/n31/2026-09-11-hand-route-v1/PROOF.md), [hostile internal audit](project/research/n31/2026-09-11-hand-route-v1/HOSTILE_AUDIT.md), [arithmetic regression](project/research/n31/2026-09-11-hand-route-v1/check_n31_arithmetic.py), and [thirteen-label theorem](project/research/general_n/2026-09-11-thirteen-label-tail-v1/THIRTEEN_LABEL_TAIL.md) are preserved. The hostile audit found no blocking flaw; it remains same-assistant internal evidence, not external validation.
 
 ### n=32
 
@@ -303,9 +344,9 @@ The RX-Hall programme therefore has both exploratory and fixed-order proof roles
 
 The canonical selected/residual bridge is preserved at [`project/research/general_n/2026-09-11-canonical-bridge-v1/CANONICAL_BRIDGE.md`](project/research/general_n/2026-09-11-canonical-bridge-v1/CANONICAL_BRIDGE.md). Its key consequences include the exact ledger, demand inequality, residual activity, selected-incidence forcing, endpoint load, source/supplement constraints and threshold capacity.
 
-The source-independent twelve-label theorem, thirteen-label theorem and fourteen-label theorem form the current fixed-order tail sequence. They are especially valuable because they convert much of the difficult high-degree arithmetic into short hand inequalities and equality classifications.
+The source-independent twelve-label theorem, thirteen-label theorem and fourteen-label theorem form the hand core of the fixed-order tail sequence. The fifteen-/sixteen-label results add explicit finite terminal tables; the joint-clipping package extends scalar bounds through twenty-three labels with proof-critical exact arithmetic.
 
-These structures are promising for orders beyond 33, but **no candidate result for n=34 or any higher complete order is claimed here**.
+These structures now give the partial n=34 bound above, but **no complete candidate Murty-Simon result for n=34 or any higher order is claimed here**.
 
 ## Review-paper / package index
 
@@ -322,6 +363,8 @@ Historical packages remain preserved. N31, N32 and N33 are currently source-firs
 | n=32 | [Reviewer-v1 source package](releases/n32-reviewer-v1/README.md) | [Hostile internal audit](project/reviews/n32/2026-09-12-reviewer-v1/HOSTILE_AUDIT.md); [exact equality ledger](project/research/n32/2026-09-12-equality-v1/CERTIFICATION_LEDGER.md) |
 | n=33 | [Reviewer-v1 source package](releases/n33-reviewer-v1/README.md) | [Hostile internal audit](project/research/n33/2026-09-12-candidate-v1/HOSTILE_AUDIT.md); [exact replay](project/research/n33/2026-09-12-candidate-v1/README.md) |
 | **General 7/12** | [Reviewer manuscript](releases/general-7-12-reviewer-v1/General_7_12_Reviewer_Manuscript_v1.pdf) | [Verification companion](releases/general-7-12-reviewer-v1/General_7_12_Verification_Companion_v1.pdf) |
+| General step-back | [Balanced-degree / fixed-a source package](releases/general-stepback-v1/README.md) | [Internal audit](project/reviews/general-theory/2026-09-12-stepback-v1/HOSTILE_AUDIT.md) |
+| Joint clipping / partial n=34 | [Reviewer-v1 source package](releases/general-joint-clipping-reviewer-v1/README.md) | [Focused foundations audit](project/reviews/general-theory/2026-09-12-joint-followthrough-v1/FOUNDATIONS_AUDIT.md); [N34 exact verification](project/research/n34/2026-09-12-frontier-v1/upper_layer_verification.json) |
 | General 293/500 | [Reviewer manuscript](releases/general-293-500-reviewer-v1/General_293_500_Reviewer_Manuscript_v1.pdf) | [Verification companion](releases/general-293-500-reviewer-v1/General_293_500_Verification_Companion_v1.pdf) |
 | General 13/22 | [Reviewer manuscript](releases/general-13-22-reviewer-v1/General_13_22_Reviewer_Manuscript_v1.pdf) | [Verification companion](releases/general-13-22-reviewer-v1/General_13_22_Verification_Companion_v1.pdf) |
 

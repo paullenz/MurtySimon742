@@ -1,0 +1,35 @@
+{
+  "a": 23,
+  "cap": 6,
+  "states": 98280,
+  "Dmax": 31,
+  "Qmax": 54,
+  "terminal_Q_equality": [
+    [
+      6,
+      6,
+      6,
+      6,
+      6,
+      6,
+      6,
+      6,
+      6,
+      6,
+      6,
+      6,
+      6,
+      6,
+      6,
+      6,
+      6,
+      6,
+      6,
+      6,
+      6,
+      6,
+      6
+    ]
+  ],
+  "clipping_above_six_verified": true
+}

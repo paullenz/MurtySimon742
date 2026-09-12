@@ -2,8 +2,8 @@
 """Exact verifier for SIXTEEN_LABEL_TAIL.md.
 
 Checks the safe clipping table, all 4,845 max-five terminal quadruples, the
-sixteen possible 6->5 equality preimages, and the first clean-clipping failure
-at a=17. No floating point is used.
+sixteen possible 6->5 equality preimages, and the first inconclusive
+independent-interval clipping bound at a=17. No floating point is used.
 """
 A = 16
 
@@ -95,11 +95,11 @@ def main():
         vals.append(D_of([5]*(16-j) + [6]*j))
     assert vals == [8,7,8,9,9,10,10,10,9,9,10,10,10,10,9,10]
 
-    # First failure of the unmodified safe clipping architecture.
+    # The interval bound is inconclusive; actual compatible clipping is safe.
     rows17 = clipping_rows(17, 6)
     assert (11, 1, 0) in rows17
 
-    print("PASS: sixteen-label theorem arithmetic verified; a=17 obstruction reproduced")
+    print("PASS: sixteen-label arithmetic verified; a=17 interval-bound obstruction reproduced")
 
 
 if __name__ == "__main__":

@@ -1,0 +1,13 @@
+total=77558760 maxQ=26 maxQ_count=2
+Q=20 profiles=588
+Q=21 profiles=379
+Q=22 profiles=193
+Q=23 profiles=88
+Q=24 profiles=43
+Q=25 profiles=11
+Q=26 profiles=2
+t=1 m=289 raw=1304 monotone=1296 dcap=1296
+t=2 m=290 raw=337 monotone=337 dcap=337
+t=3 m=291 raw=56 monotone=56 dcap=56
+t=4 m=292 raw=2 monotone=2 dcap=2
+saved_union_profiles=1296

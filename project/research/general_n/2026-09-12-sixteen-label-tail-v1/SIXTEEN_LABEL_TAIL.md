@@ -216,9 +216,9 @@ For seventeen labels, the proposed `6->5` clipping with exactly eleven sixes has
 L_6(11)=1,
 ```
 
-but the safe lower-level gamma-drop sum can be zero. Thus clipping can decrease `D` in that local configuration, and the proof architecture genuinely needs a new ingredient from `a=17` onward.
+but the safe lower-level gamma-drop sum can be zero. This shows only that the independent-interval estimate is inconclusive; it does **not** show that an actual compatible demand vector loses `D` there. The later joint check gives minimum actual net gain `+2` in this configuration.
 
-This is a useful falsification result: the sequence of tail theorems is not being extrapolated blindly. The next symbolic target is to understand or repair precisely this `(a,M,k)=(17,6,11)` obstruction.
+The [joint-clipping continuation](../2026-09-12-joint-clipping-v1/JOINT_CLIPPING.md) repairs clipping down to five through `a=22`. Genuine `6->5` failures occur at `a=23`, including `6^23 -> 5^23`; retaining a max-six terminal domain handles that boundary. This correction changes the description of the method's limitation, not the sixteen-label theorem or its arithmetic.
 
 ## 8. Trust boundary
 

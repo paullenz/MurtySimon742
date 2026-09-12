@@ -1,0 +1,60 @@
+{
+  "status": "PASS",
+  "joint_rows": 46,
+  "literal_lower_multisets": 156721,
+  "independently_verified_bounds": [
+    {
+      "a": 17,
+      "cap": 5,
+      "terminal_states": 5985,
+      "Dmax": 15,
+      "Qmax": 32
+    },
+    {
+      "a": 18,
+      "cap": 5,
+      "terminal_states": 7315,
+      "Dmax": 17,
+      "Qmax": 35
+    },
+    {
+      "a": 19,
+      "cap": 5,
+      "terminal_states": 8855,
+      "Dmax": 20,
+      "Qmax": 39
+    },
+    {
+      "a": 20,
+      "cap": 5,
+      "terminal_states": 10626,
+      "Dmax": 22,
+      "Qmax": 42
+    },
+    {
+      "a": 21,
+      "cap": 5,
+      "terminal_states": 12650,
+      "Dmax": 25,
+      "Qmax": 46
+    },
+    {
+      "a": 22,
+      "cap": 5,
+      "terminal_states": 14950,
+      "Dmax": 27,
+      "Qmax": 49
+    },
+    {
+      "a": 23,
+      "cap": 6,
+      "terminal_states": 98280,
+      "Dmax": 31,
+      "Qmax": 54
+    }
+  ],
+  "known_23_label_failure": {
+    "before": 31,
+    "after": 30
+  }
+}

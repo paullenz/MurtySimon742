@@ -29,7 +29,7 @@ The canonical reviewer packages are indexed in [`releases/REVIEW_READY_INDEX.md`
 
 N29 has no proof-critical computation. N30 combines hand lemmas with explicit finite integer tables. N31 is predominantly hand/structural. N32 uses hand reductions plus exact finite replay in the difficult `Delta=17` branch. N33 is again compact: the sole new equality frontier has only 29 residual states, 25 exact shifted-potential exclusions and four hand contradictions.
 
-The strongest current reviewer-packaged general candidate is
+The strongest current reviewer-packaged broad maximum-degree candidate is
 
 ```text
 n >= 6 and Delta(G) >= (7/12)n  ==>  e(G) < floor(n^2/4).
@@ -40,6 +40,26 @@ Start with [`releases/general-7-12-reviewer-v1/README.md`](releases/general-7-12
 The active RX-Hall / monotone-potential programme has exact finite compression results and is now proof-critical in parts of the N32/N33 fixed-order packages, but **no unrestricted theorem is claimed from that programme**.
 
 No unrestricted all-order proof is claimed anywhere in the repository.
+
+## New general structure and partial n=34 work
+
+The [general step-back package](releases/general-stepback-v1/README.md) includes
+the balanced-degree theorem for all n>=7 and the a=14 infinite family. The
+[joint-clipping package](releases/general-joint-clipping-reviewer-v1/README.md)
+adds sharp scalar tail bounds for a=17..23 and a general tight-threshold hand
+obstruction. These results include proof-critical finite arithmetic where stated.
+
+The [n=34 partial route](project/research/n34/2026-09-12-frontier-v1/README.md)
+excludes all graphs with at least 291 edges within the current candidate
+dependencies. Its bound is **290**, one edge above the conjectured bound.
+The 289- and 290-edge Delta=18 layers remain OPEN; no complete N34 result is claimed.
+
+For the newest review pass, start with the
+[focused foundations checklist](project/reviews/general-theory/2026-09-12-joint-followthrough-v1/FOUNDATIONS_AUDIT.md).
+It checks the primary dominating-edge theorem's exception, the witness-capacity
+injection, the entire canonical bridge and the new exact certificates. It also
+records corrections to the a=17 obstruction wording and the free balance
+multiplier in the potential lemma. Same-assistant checks remain internal evidence.
 
 ## Current fixed-order extensions: n=31, n=32, n=33
 

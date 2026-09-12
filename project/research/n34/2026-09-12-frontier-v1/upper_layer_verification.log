@@ -1,0 +1,2 @@
+t 3 {'expected_states': 110, 'exact_exclusions': 109, 'hand_exclusions': 1, 'unresolved': 0, 'hand': [{'s': (5, 5, 5, 5, 5, 5, 5, 5, 5, 6, 6, 6, 6, 6, 6), 'rho': (1, 1, 1, 1, 1, 4, 5, 5, 5, 5, 5, 5, 6, 6, 6, 6, 6, 6), 'contradiction': {'h': 2, 'z': 13, 'S': 81, 'r': 75, 'incoming_lower': 75, 'incoming_upper': 57}}], 'local_integer_checks': 39709, 'worst_gap': -9897}
+t 4 {'expected_states': 2, 'exact_exclusions': 2, 'hand_exclusions': 0, 'unresolved': 0, 'hand': [], 'local_integer_checks': 530, 'worst_gap': -9967}
