@@ -4,6 +4,7 @@ set -euo pipefail
 HERE="$(cd "$(dirname "$0")" && pwd)"
 OUT="${1:-$HERE/replay-output}"
 SHARDS="${N32_SHARDS:-32}"
+WORKERS="${N32_WORKERS:-4}"
 mkdir -p "$OUT/rx" "$OUT/zero"
 
 CXX="${CXX:-g++}"
@@ -16,19 +17,19 @@ python3 -I -B "$HERE/n32_t1_lifted_potential_exact.py" \
   --zero-states "$OUT/N32_T1_ZERO_STATES.jsonl" \
   --output "$OUT/N32_T1_LIFTED_EXACT.json"
 
-for ((i=0;i<SHARDS;i++)); do
+# Shards are mathematically independent. Run a bounded number concurrently so
+# CI remains practical without changing any model or acceptance criterion.
+seq 0 $((SHARDS-1)) | xargs -P "$WORKERS" -I{} \
   python3 -I -B "$HERE/n32_t1_full_rx_exact.py" \
     --survivors "$OUT/N32_T1_SURVIVORS.jsonl" \
-    --shard "$i" --shards "$SHARDS" \
-    --output "$OUT/rx/shard_${i}.json"
-done
+    --shard "{}" --shards "$SHARDS" \
+    --output "$OUT/rx/shard_{}.json"
 
-for ((i=0;i<SHARDS;i++)); do
+seq 0 $((SHARDS-1)) | xargs -P "$WORKERS" -I{} \
   python3 -I -B "$HERE/n32_t1_zero_exact.py" \
     --zero-states "$OUT/N32_T1_ZERO_STATES.jsonl" \
-    --shard "$i" --shards "$SHARDS" \
-    --output "$OUT/zero/shard_${i}.json"
-done
+    --shard "{}" --shards "$SHARDS" \
+    --output "$OUT/zero/shard_{}.json"
 
 python3 -I -B "$HERE/aggregate_n32_t1_replay.py" \
   --lifted "$OUT/N32_T1_LIFTED_EXACT.json" \
