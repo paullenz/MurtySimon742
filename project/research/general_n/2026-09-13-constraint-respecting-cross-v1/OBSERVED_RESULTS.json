@@ -1,0 +1,26 @@
+{
+  "schema": "constraint-respecting-cross-observed-results-v1",
+  "date": "2026-09-13",
+  "status": "EXPLORATORY",
+  "interpretation": "All negative counts below are solver-reported infeasibility for a fixed sampled selected pattern. They are not proof certificates and do not exclude a state.",
+  "fixed_sample": [
+    {"layer":"n34-m289","state_id":60,"mode":"random_exact_demand","trials":1000,"seed":742123,"result_counts":{"solver_reported_infeasible":1000,"positive_pattern":0}},
+    {"layer":"n34-m289","state_id":7896,"mode":"random_exact_demand","trials":100,"seed":99001,"result_counts":{"solver_reported_infeasible":100,"positive_pattern":0}},
+    {"layer":"n34-m289","state_id":13537,"mode":"random_exact_demand","trials":100,"seed":99002,"result_counts":{"solver_reported_infeasible":100,"positive_pattern":0}},
+    {"layer":"n35-m306","state_id":17,"mode":"random_exact_demand","trials":100,"seed":99003,"result_counts":{"solver_reported_infeasible":100,"positive_pattern":0}},
+    {"layer":"n35-m306","state_id":246,"mode":"random_exact_demand","trials":100,"seed":99004,"result_counts":{"solver_reported_infeasible":100,"positive_pattern":0}},
+    {"layer":"n35-m306","state_id":454,"mode":"random_exact_demand","trials":100,"seed":99005,"result_counts":{"solver_reported_infeasible":100,"positive_pattern":0}}
+  ],
+  "n34_state60_extra_selected_sampling": [
+    {"extra_max_per_label":1,"trials":500,"seed":742201,"selected_total_range":[39,50],"result_counts":{"solver_reported_infeasible":500,"positive_pattern":0}},
+    {"extra_max_per_label":2,"trials":300,"seed":88302,"selected_total_range":[42,61],"result_counts":{"solver_reported_infeasible":300,"positive_pattern":0}},
+    {"extra_max_per_label":3,"trials":200,"seed":88303,"selected_total_range":[48,74],"result_counts":{"solver_reported_infeasible":200,"positive_pattern":0}}
+  ],
+  "additional_bounded_runs": [
+    {"layer":"n34-m289","state_id":60,"mode":"joint_selected_residual_hard_compatibility","time_limit_seconds":30,"outcome":"OPEN_NO_INCUMBENT"},
+    {"layer":"n34-m289","state_id":60,"mode":"joint_soft_compatibility","time_limit_seconds":20,"outcome":"FEASIBLE_INCUMBENT","witnessed_obligations":10,"selected_obligations":37,"optimality":"NOT_PROVED"},
+    {"layer":"n34-m289","state_id":60,"mode":"fixed-demand_selected_local_search_plus_soft_residual_optimization","outcome":"FEASIBLE_PARTIAL_PATTERN","witnessed_obligations":19,"selected_obligations":37,"eligible_ordered_pairs":20,"optimality":"NOT_PROVED","artifact":"BEST_PARTIAL_PATTERN.json"}
+  ],
+  "whole_state_exclusions_added": 0,
+  "frontier_change": "NONE"
+}
