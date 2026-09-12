@@ -1,0 +1,254 @@
+{
+  "schema": "general-joint-routing-publication-v1",
+  "date": "2026-09-12",
+  "repository": "paullenz/MurtySimon742",
+  "branch": "main",
+  "parent": "e64091d771888fa68d60f0c8292fce9accf82d1a",
+  "publication_commit": "2af89816681f9f54ae1212d3bed464ca248819c3",
+  "publication_tree": "f8ff71051676da3a57161e296eb8e74270023344",
+  "local_review_commit": "88d2ccd9a78a9c32b3682d01ba5b5ecfeaab7ccc",
+  "checks": {
+    "branch_read_back": true,
+    "nonforced_update": true,
+    "exact_local_remote_tree_match": true,
+    "all_changed_paths_and_sha256_verified": true,
+    "changed_paths": 40,
+    "manifests_verified": {
+      "general-joint-routing-reviewer-v1": 50,
+      "general-heavy-load-reviewer-v1": 48,
+      "n34-reviewer-v2": 134,
+      "n35-reviewer-v1": 134
+    },
+    "raw_api_readbacks": [
+      "README.md",
+      "releases/general-joint-routing-reviewer-v1/README.md",
+      "project/research/general_n/2026-09-12-joint-routing-pilot-v1/JOINT_ROUTING_LEMMA.md",
+      "project/research/general_n/2026-09-12-joint-routing-pilot-v1/AUDIT.md",
+      "project/research/general_n/2026-09-12-joint-routing-pilot-v1/verification.json",
+      "project/research/general_n/2026-09-12-joint-routing-pilot-v1/EVIDENCE_STORAGE.json"
+    ],
+    "exact_original_recovery": {
+      "project/research/general_n/2026-09-12-joint-routing-pilot-v1/pilot_results.jsonl": {
+        "status": "PASS",
+        "original_sha256": "fd269a1f8092d1755f7b6bb04c7eddba81f6ae57705a952d36f81b0cc2b19ea2",
+        "original_bytes": 163087,
+        "records": 27
+      },
+      "project/research/general_n/2026-09-12-joint-routing-pilot-v1/frontier_results.jsonl": {
+        "status": "PASS",
+        "original_sha256": "a34dd73b26d8bb2461bdc30d7d6f638b93bf90681497d098bba2a15420b474c8",
+        "original_bytes": 10801083,
+        "records": 6307
+      },
+      "project/research/general_n/2026-09-12-heavy-load-family-v1/frontier_results.jsonl": {
+        "status": "PASS",
+        "original_sha256": "8ba9e8c9a6322fac71710e86d140f754cfe7dfa743dd55a043dc94723418a547",
+        "original_bytes": 3122169,
+        "records": 14031
+      },
+      "project/research/general_n/2026-09-12-heavy-load-family-v1/profile_results.jsonl": {
+        "status": "PASS",
+        "original_sha256": "aaca0892a4f4a6a093eae58ecb7374c9c4ea85b88a2d6cac5c9cbc18d38ebbfe",
+        "original_bytes": 1648230,
+        "records": 1453
+      },
+      "project/research/general_n/2026-09-12-heavy-load-family-v1/remaining_states.json": {
+        "status": "PASS",
+        "original_sha256": "5db7ea92b92083c2205007b483c4789ced80bddb693cb7a21004b1f4f46e26c6",
+        "original_bytes": 1695040,
+        "records": 8280
+      },
+      "project/research/n34/2026-09-12-equality-v1/fixed": {
+        "status": "PASS",
+        "original_sha256": "91c00600dd97c4e5577c071eefd8f7423440d9f89acecf4ed49f7de6646b053b",
+        "original_bytes": 4058094,
+        "records": 13546
+      },
+      "project/research/n34/2026-09-12-equality-v1/adaptive": {
+        "status": "PASS",
+        "original_sha256": "28ebf4fd8de79a5b9a20ca2208e33c58b2280c38890d294796e76dedbb2a2974",
+        "original_bytes": 5886992,
+        "records": 3925
+      }
+    },
+    "no_frozen_proof_or_ledger_changes": true,
+    "existing_changes_limited_to_navigation_and_its_manifest_hashes": true,
+    "current_reviewer_entrypoints_consistent": true,
+    "clean_validation": "releases/general-joint-routing-reviewer-v1/VALIDATION.json"
+  },
+  "changed_paths": {
+    "README.md": {
+      "bytes": 43588,
+      "sha256": "78e7787ad9276494b15d2934134cff7eb1097ef14340a1f56b0894128bc3f861"
+    },
+    "START_HERE_FOR_REVIEWERS.md": {
+      "bytes": 14206,
+      "sha256": "d792c91e0202793981b02e5ea9b1b4445377a7a5f721c37f71f9d3a8b0187fca"
+    },
+    "project/research/general_n/2026-09-12-joint-routing-pilot-v1/AUDIT.md": {
+      "bytes": 6280,
+      "sha256": "04c3009609ec82c6d675d687c16b42abcce3ff8d0eaef0262f3fbb48383a7212"
+    },
+    "project/research/general_n/2026-09-12-joint-routing-pilot-v1/EVIDENCE_STORAGE.json": {
+      "bytes": 883,
+      "sha256": "1ce1aee0e463a6b6801335ab7ef3e2076b137768d5b53548a1b21a61b717f0d5"
+    },
+    "project/research/general_n/2026-09-12-joint-routing-pilot-v1/JOINT_ROUTING_LEMMA.md": {
+      "bytes": 6690,
+      "sha256": "e5d3833a0fd4835c2c02145c39bf163630558a081bf0f69e431c69663db500a9"
+    },
+    "project/research/general_n/2026-09-12-joint-routing-pilot-v1/README.md": {
+      "bytes": 5120,
+      "sha256": "724208d12e82c83dfabf218153ce7915ab039451eff54184c14fcd4e97b16358"
+    },
+    "project/research/general_n/2026-09-12-joint-routing-pilot-v1/catalog.py": {
+      "bytes": 1323,
+      "sha256": "f44f135c463a3ab5db77bb51226c501f5dfa41e2cf3f2777ff3756c30d4b18af"
+    },
+    "project/research/general_n/2026-09-12-joint-routing-pilot-v1/check_routing.py": {
+      "bytes": 2008,
+      "sha256": "971418efdfbac1821f215028c47f1a29a575f8bda12673582e80874f36c7ebe9"
+    },
+    "project/research/general_n/2026-09-12-joint-routing-pilot-v1/environment.json": {
+      "bytes": 305,
+      "sha256": "5b7a3b2352f7e332149fcc12881701c07047253dc885876e8493ae8bb474efb6"
+    },
+    "project/research/general_n/2026-09-12-joint-routing-pilot-v1/evidence_io.py": {
+      "bytes": 1183,
+      "sha256": "70f69ba0515175852bf13fcca19196c2b04703f1ba657a1ba51e9a9eeb587b37"
+    },
+    "project/research/general_n/2026-09-12-joint-routing-pilot-v1/frontier.log": {
+      "bytes": 1851,
+      "sha256": "11ab7749b2bf5b73988645ed90aa6eba0af9a12c22897bc22a37cbef2e68630c"
+    },
+    "project/research/general_n/2026-09-12-joint-routing-pilot-v1/frontier_results.jsonl.gz.b64": {
+      "bytes": 367485,
+      "sha256": "848fc0a86e8a6ad30d86c229e4c40a8cdde882e8a4ed224100ddf4afd09d4fcc"
+    },
+    "project/research/general_n/2026-09-12-joint-routing-pilot-v1/frontier_summary.json": {
+      "bytes": 266791,
+      "sha256": "7fd38bf9bf455b4c44ab75a7a34d82958c84c51233319aa5519e60fb6d81b410"
+    },
+    "project/research/general_n/2026-09-12-joint-routing-pilot-v1/joint_bound.py": {
+      "bytes": 1629,
+      "sha256": "26a71137fb41b91d59ddb244e4f47c6fa55174c8dcd77295475ed602491a0ae4"
+    },
+    "project/research/general_n/2026-09-12-joint-routing-pilot-v1/multiplier_catalog.json": {
+      "bytes": 2020,
+      "sha256": "aeb26d5cefc4cc969206d45dc5ff4033e603e9a3e854ece6e88c8258062c6bfb"
+    },
+    "project/research/general_n/2026-09-12-joint-routing-pilot-v1/pack_evidence.py": {
+      "bytes": 1215,
+      "sha256": "9fc059bca6e05b5263d70be8ec9c1a76189ede12ffb63c98d7896ae38f34bcb2"
+    },
+    "project/research/general_n/2026-09-12-joint-routing-pilot-v1/pilot.log": {
+      "bytes": 2452,
+      "sha256": "82567ea0a0c906c9e3c6b0bdc6c3c798ab01d8c3ef7c42709ac3aea3f94da3ab"
+    },
+    "project/research/general_n/2026-09-12-joint-routing-pilot-v1/pilot_inputs.json": {
+      "bytes": 75282,
+      "sha256": "1e2077b021ba2f58d0763c4914027dc801564dd54eed854ab9a4669f9d23e3d4"
+    },
+    "project/research/general_n/2026-09-12-joint-routing-pilot-v1/pilot_results.jsonl.gz.b64": {
+      "bytes": 13099,
+      "sha256": "909dfd8c6e300b7e5554732dbd332a4c8c64f73791664c18bbfd6da1ded21112"
+    },
+    "project/research/general_n/2026-09-12-joint-routing-pilot-v1/probe.py": {
+      "bytes": 3435,
+      "sha256": "c41593a93c9818064890331487229d78b60a9ef773bc71781e11ad40f49d6536"
+    },
+    "project/research/general_n/2026-09-12-joint-routing-pilot-v1/replay_frontier.py": {
+      "bytes": 4311,
+      "sha256": "42f3f683fb0429e755ac938f85e7a54a3cb6bbb0cd7447cb234336bfc4a198e9"
+    },
+    "project/research/general_n/2026-09-12-joint-routing-pilot-v1/routing_verification.json": {
+      "bytes": 1777,
+      "sha256": "7f0b2c7187bf3d560079408cc30d70909a7d3b55761f54912791059e2c89d415"
+    },
+    "project/research/general_n/2026-09-12-joint-routing-pilot-v1/routing_verification.log": {
+      "bytes": 1777,
+      "sha256": "7f0b2c7187bf3d560079408cc30d70909a7d3b55761f54912791059e2c89d415"
+    },
+    "project/research/general_n/2026-09-12-joint-routing-pilot-v1/select_pilot.py": {
+      "bytes": 3018,
+      "sha256": "08f655cdee43ce7be8e69d42a1599fe7a085679eb95efb2ad600f93becb1202b"
+    },
+    "project/research/general_n/2026-09-12-joint-routing-pilot-v1/selection.log": {
+      "bytes": 697,
+      "sha256": "104679552d2a75a31575e7a2c439be41fc8e7c3f44c6f7205fa20b9ca3b5b102"
+    },
+    "project/research/general_n/2026-09-12-joint-routing-pilot-v1/selection_initial.log": {
+      "bytes": 684,
+      "sha256": "bcdedf27f6a48847cbc4a2722d3f828b306dd528f8e8cb24c7fb30fbd8c4650d"
+    },
+    "project/research/general_n/2026-09-12-joint-routing-pilot-v1/storage.log": {
+      "bytes": 883,
+      "sha256": "1ce1aee0e463a6b6801335ab7ef3e2076b137768d5b53548a1b21a61b717f0d5"
+    },
+    "project/research/general_n/2026-09-12-joint-routing-pilot-v1/verification.json": {
+      "bytes": 849,
+      "sha256": "d92e009b2262c7cc0d774879e67bfbe4100774f8a27ceeca6bc9cfafde96ea3a"
+    },
+    "project/research/general_n/2026-09-12-joint-routing-pilot-v1/verification.log": {
+      "bytes": 933,
+      "sha256": "bbae4c3328d77dca0bdad748124b01b1acb155cee1da468776819bd06a249bc2"
+    },
+    "project/research/general_n/2026-09-12-joint-routing-pilot-v1/verify.py": {
+      "bytes": 8665,
+      "sha256": "f53a486ae6fca2da81de8fe564eb5c0c8255a0a8e1ab0ef352801abbb7a4644f"
+    },
+    "releases/REVIEW_READY_INDEX.md": {
+      "bytes": 11384,
+      "sha256": "3831c0dff4a3aef21d7dd00e4f57677f82922ba9b3e90d01eced7922b1b4e64d"
+    },
+    "releases/general-heavy-load-reviewer-v1/MANIFEST.json": {
+      "bytes": 10251,
+      "sha256": "5e27731bc331042c1705f75b506a378c7eb81b05f2eb26a5213cffc1df6e1f14"
+    },
+    "releases/general-joint-routing-reviewer-v1/MANIFEST.json": {
+      "bytes": 10780,
+      "sha256": "3b35832554963eeeca988411d28d7e4c4cf5fa07e49aa46b9918e7b4a162d905"
+    },
+    "releases/general-joint-routing-reviewer-v1/README.md": {
+      "bytes": 3545,
+      "sha256": "588750930d5a70b89bf615fd11a90660cb61c93669159c9442e57ec9d6e32f36"
+    },
+    "releases/general-joint-routing-reviewer-v1/VALIDATION.json": {
+      "bytes": 2035,
+      "sha256": "dacf393e9789784ba1e8ea3a176f278d9b4058539602fd9e2ea1cbabcef5018c"
+    },
+    "releases/general-joint-routing-reviewer-v1/build_manifest.py": {
+      "bytes": 2981,
+      "sha256": "fe296ff14da24f801392ef9f6cd34a34d5a11cfd6ff50a9847bd372b99aa37b9"
+    },
+    "releases/general-joint-routing-reviewer-v1/check_manifest.py": {
+      "bytes": 446,
+      "sha256": "461ee805df678a6ee7a196005b24e022f15375aba664968c1f773c7532022bb3"
+    },
+    "releases/general-joint-routing-reviewer-v1/validate_release.py": {
+      "bytes": 3450,
+      "sha256": "ab3fab79d499473842099db65e04ab27386af65ec14fca0113701b450a5190d5"
+    },
+    "releases/n34-reviewer-v2/MANIFEST.json": {
+      "bytes": 25869,
+      "sha256": "08f86936bbcdb7a117a7e2daf78b22fabad25e15f71176828de8512d7c336cdf"
+    },
+    "releases/n35-reviewer-v1/MANIFEST.json": {
+      "bytes": 25850,
+      "sha256": "c5698d1de665495ccb5bf697e273184343bd2c0e57cf7968a500f54716a1f0d8"
+    }
+  },
+  "scope": {
+    "candidate_general_lemma": true,
+    "pilot_states": 27,
+    "new_full_domain_exclusions": 729,
+    "additional_within_same_catalog": 563,
+    "eligible_states": 6307,
+    "catalog_survivors": 5578,
+    "old_rule_removals_not_credited": 192,
+    "external_review": "OPEN",
+    "unrestricted_theorem": false,
+    "improved_maximum_degree_threshold": false
+  },
+  "note": "This receipt records the research publication. The following receipt-only commit is read back separately; no circular self-hash claim."
+}
