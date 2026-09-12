@@ -1,72 +1,95 @@
-# N32, Delta=17, m=257 (t=2): frontier checkpoint
+# N32, Delta=17, m=257 (t=2): exact candidate closure
 
 12 September 2026. Research direction: Paul Lenz. Mathematical development and internal checking: ChatGPT/Geeps.
 
-**Status: OPEN reconnaissance checkpoint. No N32 theorem is claimed here. Independent mathematical review remains open.**
+**Status: candidate exact finite closure inside the established graph-to-RX/Hall bridge. Independent mathematical review and novelty assessment remain OPEN.** This is not an unrestricted Murty-Simon theorem.
 
-## Target
+## Result
 
-For `n=32`, `Delta=17`, put
-
-```text
-a = 14,
-b = 17,
-t = m - b(a+1) = m-255.
-```
-
-The fourteen-label hand theorem already closes every `m>=259`. The `m=258` (`t=3`) equality frontier reduces to the three score-maximising demand profiles and all three have separate hand contradictions preserved in `project/research/n32/2026-09-11-hand-route-v1/`.
-
-Thus the only currently unresolved above-Turan branch is
+For
 
 ```text
-n=32, Delta=17, m=257, t=2.
+n=32, Delta=17, a=14, b=17, m=257, t=2,
 ```
 
-## Score frontier
+the fourteen-label hand theorem gives `Q<=23` while the bridge gives `Q>=21`.
 
-The canonical bridge gives
+The committed exhaustive score checker independently verifies all `20,058,300` nondecreasing fourteen-demand multisets and finds exactly
 
 ```text
-Q(s) >= b+2t = 21,
+Q=21 : 50
+Q=22 : 18
+Q=23 :  3
+-------------
+         71
 ```
 
-while the fourteen-label theorem gives `Q(s)<=23`.
+frontier profiles. Every surviving demand is at most five. There is exactly one zero-demand row, `0,3^13`.
 
-A preliminary exact score scan in the current research session found that the raw demand frontier is finite and small (working count: 71 multisets with `Q>=21`). This count is reconnaissance only until a standalone replay is committed; it is not used as a proof premise.
+The 70 positive-demand rows expand, after every allowed zero/one/two-unit residual-tail slack distribution is included, to exactly **154** `(s,rho)` states.
 
-The key structural point is that the `Q=21` sector has zero threshold-tail slack: the lower bounds on residual threshold counts are then forced to equality. The `Q=22,23` sectors have only one or two units of aggregate slack. Hence the raw number of demand profiles substantially overstates the remaining freedom.
+## Exact nine-rectangle potential
 
-## Negative tests already performed
+All 154 positive-demand states are excluded by one common graph-level BC potential using only two adjacent threshold layers:
 
-### 1. Fourteen-label score alone
+```text
+F = 4 B_(2,0)
+  + 2 B_(2,6)
+  +   B_(2,8)
+  +   B_(2,10)
+  +   B_(2,13)
+  +   B_(2,14)
+  +   B_(3,9)
+  +   B_(3,11)
+  +   B_(3,12).
+```
 
-The scalar inequality `Q<=23` does not close `t=2`: the required lower bound is only `Q>=21`.
+No diagonal/slack correction is required.
 
-### 2. Immediate Hall-core consequences
+With these nine weights pinned exactly at the displayed integers, the common finite envelope exactifies at denominator `100000` with
 
-The direct graph-level Hall/source inequalities (selected-incidence forcing, pointwise source cap, threshold supplement transport, one/two-rectangle Hall counting, and total selected-incidence balance) do not immediately collapse the entire `t=2` frontier by the same short equality argument that closes `t=3`.
+```text
+positive-demand states:        154
+contradiction margins:         154
+nonnegative margins:             0
+zero-RHS row violations:         0
+bound violations:                0
+repair count:                  269
+repair total numerator:        582
+worst contradiction numerator: -99891
+```
 
-This is not evidence against the RX/Hall route; it shows that a stronger weighted/combined inequality is needed.
+Acceptance is integer arithmetic. Floating point is used only to propose profile-specific envelope coefficients.
 
-### 3. Witness-deficit shortcut
+The mathematical implication of the potential is the elementary `POTENTIAL_CERTIFICATE_LEMMA.md`: monotone selected-incidence transport, source/supplement threshold transport, exact incidence balances, and summation. The nine rectangles themselves are direct graph-level counting inequalities.
 
-Because `n=32`, `Delta=17` and there is no dominating edge in the dense non-bipartite target range, a witness pair has degree sum at most 31, so relative to degree 17 its total degree deficit is at least 3. This is one unit stronger than the odd-order balanced witness calculation used at N29/N31.
+## Zero-demand row
 
-However an extremal capacity check shows that this extra deficit budget alone does not force the witness-capacity upper bound below 257 for every admissible deficit distribution. Therefore the simple witness-deficit inequality is insufficient by itself and should not be promoted as an N32 closure.
+The unique zero-demand frontier `s=(0,3^13)` is excluded by hand. Equality in the tail ledger forces residual degrees `3^9,1^8` and exact `h=2` threshold capacity. The N31 endpoint equality analysis then gives at least 33 supplement indegrees into the nine high sources, while endpoint-load forcing gives at most `9*2=18`, a contradiction. Full details are in `N32_T2_RECTANGLE_POTENTIAL.md`.
 
-## Most promising next route
+## Consequence
 
-Return to the preserved `t=2` RX/Hall compression, but keep the proof target combinatorial and small. In particular, the N29 `t=2` work established that the difficult Hall geometry can be expressed using a small family of cumulative BC rectangles plus diagonal slack thresholds. The graph-level forms of these inequalities are already preserved in
+Together with the already hand-closed `m>=258` branch, the current candidate framework now gives
 
-- `project/research/general_n/2026-09-09-rx-hall-v1/HALL_CORE_SYMBOLIC_LEMMAS.md`,
-- `.../T2_RECTANGLE_DIAGONAL_COMPRESSION.md`, and
-- `.../DIAGONAL_SLACK_THRESHOLD.md`.
+```text
+n=32 => e(G) <= 256.
+```
 
-The immediate N32 objective is to determine whether the 14-label `Q>=21` frontier is eliminated by a small fixed rectangle/diagonal potential. Any positive computational result must then be exactified and translated into an explicit hand inequality before theorem use.
+So the **N32 Turan upper bound is candidate closed**.
+
+The equality classification is not yet finished. The next target is the `m=256` layer, especially `Delta=17,t=1`; the balanced `Delta=16` branch is expected to force `K_{16,16}` by degree/witness rigidity.
+
+## Files
+
+- `N32_T2_RECTANGLE_POTENTIAL.md` — full derivation, exact status and zero-demand hand proof.
+- `N32_T2_FRONTIER.csv` — exact 71-profile score frontier.
+- `check_n32_t2_frontier.cpp` — independent exhaustive score checker.
+- `n32_t2_nine_rectangle_exact.py` — regenerates the 154 states and exactifies/verifies the fixed nine-term potential.
+- `../2026-09-11-hand-route-v1/` — hand closure of the `m=258` equality profiles.
 
 ## Trust boundary
 
-- N32 `m>=258` remains hand-closed in the current candidate framework.
-- N32 `m=257`, `Delta=17` remains OPEN.
-- No claim should be made that the N32 Turan upper bound is proved until this case is removed.
-- If `m=257` is removed, the equality-level `m=256`, `Delta=17` branch must still be addressed separately to obtain uniqueness of `K_{16,16}`.
+- Internal exact replay is not independent external validation.
+- Correctness remains conditional on the canonical graph-to-selected/residual bridge used throughout the fixed-order programme.
+- The positive-demand finite envelope is computer-checked; the global potential has only nine explicit graph-level rectangle terms.
+- Independent specialist review remains OPEN.
