@@ -1,0 +1,38 @@
+name: containment-spill-refinement
+
+on:
+  push:
+    paths:
+      - '.github/workflows/containment-spill-refinement.yml'
+      - 'project/research/general_n/2026-09-13-constraint-respecting-cross-v1/refine_spill_witness.py'
+
+permissions:
+  contents: write
+
+jobs:
+  refine:
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    steps:
+      - uses: actions/checkout@v4
+      - name: Refine unresolved witness search
+        run: |
+          set -o pipefail
+          python project/research/general_n/2026-09-13-constraint-respecting-cross-v1/refine_spill_witness.py | tee /tmp/spill-refinement.log
+      - name: Upload result and log
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: containment-spill-refinement
+          path: |
+            project/research/general_n/2026-09-13-constraint-respecting-cross-v1/SPILL_WITNESS_REFINEMENT.json
+            /tmp/spill-refinement.log
+          if-no-files-found: warn
+      - name: Commit scoped refinement result
+        run: |
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add project/research/general_n/2026-09-13-constraint-respecting-cross-v1/SPILL_WITNESS_REFINEMENT.json
+          git diff --cached --quiet && exit 0
+          git commit -m 'Record deeper spill witness refinement'
+          git push
