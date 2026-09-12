@@ -1,0 +1,10 @@
+{
+  "status": "PASS",
+  "prior_routing_states": 6307,
+  "eligible_survivors": 5578,
+  "sample": 29,
+  "strata": 11,
+  "recovered_prior_original_streams": 2,
+  "selection_independent_of_solver_outcomes": true,
+  "external_review": "OPEN"
+}

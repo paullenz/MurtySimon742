@@ -1,0 +1,25 @@
+{
+  "status": "PASS",
+  "local_options_checked": 26896,
+  "local_maxima": {
+    "(5, 0)": 62,
+    "(5, 1)": 56,
+    "(6, 0)": 64,
+    "(6, 1)": 56
+  },
+  "allowed_j": [
+    5,
+    6
+  ],
+  "required": 659,
+  "source_upper_bounds": {
+    "5": 636,
+    "6": 628
+  },
+  "gaps": {
+    "5": 23,
+    "6": 31
+  },
+  "scope": "H=0..40, q=H..H+40, p=0..7, j=5 or 6; hand proof establishes unbounded local scope",
+  "external_review": "OPEN"
+}

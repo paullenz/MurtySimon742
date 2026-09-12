@@ -1,0 +1,24 @@
+{
+  "python": "3.12.14",
+  "numpy": "2.3.5",
+  "scipy": "1.17.0",
+  "platform": "Linux-6.18.35-x86_64-with-glibc2.39",
+  "baseline_commit": "580c6692749d274725439ddb0bb4957e192792e7",
+  "solver": "scipy.optimize.linprog(method=highs), nonnegative split-dual proposal",
+  "time_limit_per_lp": 10,
+  "rounding_scales": [
+    100,
+    10000,
+    1000000,
+    100000000
+  ],
+  "input_selection": "Frozen before any LP: 29 first/middle/last stratum representatives",
+  "cutoff": "T=4h; h=2..max(s)",
+  "actual_attempts": 648,
+  "original_stdout": "pilot.log",
+  "original_results": "pilot_results.jsonl, losslessly encoded",
+  "notes": [
+    "Solver status 2 means the searched dual proposal problem was reported infeasible; it is not an exact graph or routing feasibility certificate.",
+    "All 321 successful dual proposals yielded strictly negative exact repaired certificates."
+  ]
+}

@@ -88,6 +88,17 @@ nine over the ordinary load-cap test, all included in those 114. All 5,578
 previous joint-routing survivors remain. The package preserves that negative
 frontier result, full evidence and invalid extensions; external review is OPEN.
 
+The [compatible-routing reviewer-v1 package](releases/general-compatible-routing-reviewer-v1/README.md)
+adds selected-degree destination eligibility and mixed traffic inequalities.
+A preselected 29-state pilot excludes 19 cases: two by extending the preceding
+multiplier search, one further by retaining selected degrees, and sixteen
+further by destination eligibility. Mixed cuts add no further whole-state
+exclusions. It includes a compact hand example, 321 exact certificates and
+321 independently checked potential envelopes, all failed searches and ten
+sample survivors. The full 5,578-state pool has not been replayed under these
+rules. Generalization and fixed-order status remain candidate; external review
+is OPEN.
+
 For the preceding general-foundations review pass, see the
 [focused foundations checklist](project/reviews/general-theory/2026-09-12-joint-followthrough-v1/FOUNDATIONS_AUDIT.md).
 It checks the primary dominating-edge theorem's exception, the witness-capacity

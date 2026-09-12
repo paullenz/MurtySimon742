@@ -56,10 +56,14 @@ new demand-only inequalities. A [joint routing continuation](releases/general-jo
 now conditions on the number of heavy senders and limits how many of their
 arcs each destination can receive. It supplies 729 further exact exclusions
 after all earlier hand rules. A [demand/tail projection and closed equality rule](releases/general-routing-tail-reviewer-v1/README.md)
-now simplify that mechanism into profile-level statements. They leave the
-5,578-state remainder unchanged; stronger supplement eligibility is the next
-structural target. Wider local cutoffs and individual source caps added no
-exclusions in the earlier experiment.
+simplify that mechanism into profile-level statements, with zero further
+exclusions among its 5,578 state survivors. A [destination-compatibility pilot](releases/general-compatible-routing-reviewer-v1/README.md)
+now excludes 19 of a preselected 29-state sample: two from extending the old
+multiplier search, one further from retaining selected degrees, and sixteen
+further from destination eligibility. One exclusion has a compact hand proof.
+Mixed traffic cuts add no further whole-state exclusions in the sample.
+A frozen-catalogue test on the full pool is the next gate; the pilot rate is
+not an estimate of full-pool coverage.
 
 ## Failures, audit challenges and corrections are part of the record
 
@@ -108,6 +112,7 @@ available for that scrutiny.
 | Heavy-load / routing family | Candidate all-threshold hand inequalities, explicit incoming-degree penalties, and new demand-only tail bounds. Low-demand consequence: `s_i<=2, t>0, b-a<=5 => 9t+4(b-a)<=a`. Reviewer-v1; external review OPEN. |
 | Joint heavy routing | Candidate general lemma coupling heavy-sender count, destination indegrees and pair capacity. Reviewer-v1; 729 further exclusions from a corrected pool of 6,307; 5,578 survive the frozen catalogue. External review OPEN. |
 | Demand/tail projection and equality rigidity | Candidate general hand lemmas; reviewer-v1. Adds 114 whole layer/profile exclusions before residual enumeration and a closed strictness criterion. Adds no exclusions among the 5,578 joint-routing survivors. External review OPEN. |
+| Compatible destination routing | Candidate general eligibility and mixed-traffic inequalities; reviewer-v1. Frozen 29-state pilot: 19 exact exclusions, including 16 beyond selected-degree retention; 10 survivors. Mixed cuts add zero further states. Full-pool replay pending; external review OPEN. |
 | General maximum-degree result | Candidate theorem: `n >= 6` and `Delta(G) >= (7/12)n` imply `e(G) < floor(n^2/4)`; complete candidate hand argument with internal exact audits green; external review and novelty assessment open |
 | RX-Hall / monotone-potential programme | Active finite-to-symbolic programme. It is **not** an unrestricted theorem. It supplies general structural experiments and proof-critical exact finite exclusions in N32, N33, N34 and N35. Floating infeasibility is not accepted as a proof event. |
 
@@ -118,6 +123,29 @@ separates correctness, originality, validation of existing general candidates,
 further general advances and a complete proof. Its forecasts are explicitly
 subjective, with a stated horizon and sensitivity scenarios; they are not
 mathematical evidence or external endorsement.
+
+## Compatible destination routing
+
+The [compatible-routing reviewer-v1 package](releases/general-compatible-routing-reviewer-v1/README.md)
+retains total selected degree and the requirement that a source of selected
+degree q can send only to destinations with residual-plus-selected degree
+at least q-1. Separate traffic bounds and mixed cuts give a general potential
+envelope, with an exact count of heavy senders.
+
+The preselected 29-state pilot compares four nested models: 2 exclusions from
+unrestricted multiplier search in the old bound, 3 after retaining selected
+degrees, 19 after destination eligibility, and 19 after mixed cuts. All 321
+integer certificates and 321 extracted envelopes pass exact checks implemented
+separately from discovery. The [compact hand example](project/research/general_n/2026-09-12-compatible-routing-pilot-v1/COMPACT_EXAMPLE.md)
+requires capacity at least 659, while its only possible sender counts permit
+at most 636 or 628.
+
+All ten sample survivors, unsuccessful searches, original solver proposals,
+rounding repairs and audit challenges are preserved. The full pool of 5,578
+previous general-routing survivors has not been replayed under the new rules.
+The next step is a small frozen catalogue tested across that pool. The pilot
+adds structural understanding and alternative certificates; the N34/N35
+candidate ledgers and 7/12 candidate remain unchanged. External review is OPEN.
 
 ## Demand/tail projection and equality rigidity
 
@@ -141,8 +169,9 @@ are preserved.
 
 **All 5,578 states surviving the previous joint-routing catalogue still
 survive these tests.** This is a simplification into demand-level theory,
-not a reduction of the remaining frontier. Stronger supplement eligibility
-and label/supplement compatibility are the next targets. No improvement to
+not a reduction of the remaining frontier by this package. The compatible
+routing pilot above tests stronger supplement eligibility; fuller label/supplement
+compatibility remains open. No improvement to
 the 7/12 result or unrestricted conjecture proof is claimed; external review
 and novelty assessment remain OPEN.
 
@@ -571,8 +600,8 @@ exact elementary source maxima, and demand-only tail refinements. Its measured
 reach and failed extensions are recorded in the structural-result section above.
 
 The 595 alternative envelope exclusions do not silently change the canonical
-N34/N35 ledgers. The next target is a joint destination/incoming-degree
-constraint that addresses the preserved survivors.
+N34/N35 ledgers. The subsequent joint-routing and compatible-routing packages
+above test destination constraints against preserved survivors.
 
 ### Canonical bridge and threshold-tail family
 
@@ -600,6 +629,9 @@ Historical packages remain preserved. N31, N32, N33, N34 and N35 are currently s
 | n=35 | [Reviewer-v1 source package](releases/n35-reviewer-v1/README.md) | [Internal audit](project/research/n35/2026-09-12-candidate-v1/AUDIT.md); [complete exact replay](project/research/n35/2026-09-12-candidate-v1/verification.json) |
 | **General 7/12** | [Reviewer manuscript](releases/general-7-12-reviewer-v1/General_7_12_Reviewer_Manuscript_v1.pdf) | [Verification companion](releases/general-7-12-reviewer-v1/General_7_12_Verification_Companion_v1.pdf) |
 | Heavy-load / routing family | [Reviewer-v1 source package](releases/general-heavy-load-reviewer-v1/README.md) | [Hand proof](project/research/general_n/2026-09-12-heavy-load-family-v1/HEAVY_LOAD_FAMILY.md); [internal audit and exact applications](project/research/general_n/2026-09-12-heavy-load-family-v1/README.md) |
+| Joint heavy routing | [Reviewer-v1 source package](releases/general-joint-routing-reviewer-v1/README.md) | [Hand lemma and exact applications](project/research/general_n/2026-09-12-joint-routing-pilot-v1/README.md) |
+| Demand/tail projection | [Reviewer-v1 source package](releases/general-routing-tail-reviewer-v1/README.md) | [General lemmas and negative frontier result](project/research/general_n/2026-09-12-routing-tail-projection-v1/README.md) |
+| Compatible destination routing | [Reviewer-v1 source package](releases/general-compatible-routing-reviewer-v1/README.md) | [Compact hand proof](project/research/general_n/2026-09-12-compatible-routing-pilot-v1/COMPACT_EXAMPLE.md); [audit and bounded pilot](project/research/general_n/2026-09-12-compatible-routing-pilot-v1/AUDIT.md) |
 | General step-back | [Balanced-degree / fixed-a source package](releases/general-stepback-v1/README.md) | [Internal audit](project/reviews/general-theory/2026-09-12-stepback-v1/HOSTILE_AUDIT.md) |
 | Joint clipping / historical N34 upper layers | [Reviewer-v1 source package](releases/general-joint-clipping-reviewer-v1/README.md) | [Focused foundations audit](project/reviews/general-theory/2026-09-12-joint-followthrough-v1/FOUNDATIONS_AUDIT.md); [N34 exact verification](project/research/n34/2026-09-12-frontier-v1/upper_layer_verification.json) |
 | General 293/500 | [Reviewer manuscript](releases/general-293-500-reviewer-v1/General_293_500_Reviewer_Manuscript_v1.pdf) | [Verification companion](releases/general-293-500-reviewer-v1/General_293_500_Verification_Companion_v1.pdf) |

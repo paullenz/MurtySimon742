@@ -1,0 +1,79 @@
+{
+  "status": "PASS",
+  "date": "2026-09-12",
+  "python": "3.12.14",
+  "replay": [
+    {
+      "command": "python project/research/general_n/2026-09-12-compatible-routing-pilot-v1/select_pilot.py",
+      "returncode": 0,
+      "stdout_sha256": "0cbd96eb7514dd4bf099b47e142ba45ce3919bf7bcd2a64a02db9d32fb4fa47d"
+    },
+    {
+      "command": "python project/research/general_n/2026-09-12-compatible-routing-pilot-v1/probe.py",
+      "returncode": 0,
+      "stdout_sha256": "296ff481db1dd4806ff5143f5074d6513f8cc2557c872b730a8a2f1065303f6f"
+    },
+    {
+      "command": "python project/research/general_n/2026-09-12-compatible-routing-pilot-v1/verify_selection.py",
+      "returncode": 0,
+      "stdout_sha256": "1102df35713614ea1e2483928c009a7fc15fc61f789624e2b23ef4d688024b31"
+    },
+    {
+      "command": "python project/research/general_n/2026-09-12-compatible-routing-pilot-v1/independent_verify.py",
+      "returncode": 0,
+      "stdout_sha256": "7aee6a11a9d5f9aec42e4bcd29ae10c01f1242c9038a35ba8822ebade575e1ef"
+    },
+    {
+      "command": "python project/research/general_n/2026-09-12-compatible-routing-pilot-v1/extract_envelopes.py",
+      "returncode": 0,
+      "stdout_sha256": "1abac6ce8912f768ce83e60011504a86c8c9613129511eeb002f00d6d01051eb"
+    },
+    {
+      "command": "python project/research/general_n/2026-09-12-compatible-routing-pilot-v1/verify_envelopes.py",
+      "returncode": 0,
+      "stdout_sha256": "700ed3776b2337f1464cb65c96bf031ed603f3e94c77b1b6a639a5a98f89b76e"
+    },
+    {
+      "command": "python project/research/general_n/2026-09-12-compatible-routing-pilot-v1/check_routing.py",
+      "returncode": 0,
+      "stdout_sha256": "dd363ff18fe41faf00b2fb5b34fff5aa4955e072735995f23c9431f0ee8dcb12"
+    },
+    {
+      "command": "python project/research/general_n/2026-09-12-compatible-routing-pilot-v1/check_compact.py",
+      "returncode": 0,
+      "stdout_sha256": "74d10d7deb45706e5e3632439b055cb311fd4b50f4240dceb157a1f8544f395a"
+    }
+  ],
+  "original_archive_recovered": {
+    "bytes": 871129,
+    "sha256": "d6e6dd4450b89af699fe9e7b96632fc4227c3ba0030b3ca03faf3de0319400c9",
+    "records": 29
+  },
+  "rediscovery_all_result_fields_except_attempt_seconds_identical": true,
+  "rediscovery_all_summary_fields_except_total_seconds_identical": true,
+  "original_timing_evidence_preserved": true,
+  "reproduced_byte_identical_files": [
+    "pilot_inputs.json",
+    "selection_verification.json",
+    "verification.json",
+    "envelopes.json",
+    "envelope_verification.json",
+    "routing_verification.json",
+    "compact_verification.json"
+  ],
+  "exact_checks_from_original_archive_without_raw_stream": true,
+  "navigation": {
+    "markdown_files": 9,
+    "local_links_checked": 289,
+    "status": "PASS"
+  },
+  "scope": {
+    "sample": 29,
+    "excluded": 19,
+    "survivors": 10,
+    "additional_from_eligibility": 16,
+    "additional_whole_states_from_mixed_cuts": 0,
+    "full_pool_replay": false
+  },
+  "external_review": "OPEN"
+}

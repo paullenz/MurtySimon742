@@ -1,0 +1,110 @@
+{
+  "status": "PASS",
+  "coloured_partial_orientations": 15756,
+  "routing_configurations": 94536,
+  "mixed_cuts_checked": 3090516,
+  "scope": "b=1..4; h=1..3; minimal valid residual scores and those scores plus one; all cutoffs 0..a+1",
+  "counterexamples": [
+    {
+      "invalid_claim": "Destination score must be at least q_origin rather than q_origin-1",
+      "arcs": [
+        [
+          0,
+          1
+        ],
+        [
+          0,
+          2
+        ]
+      ],
+      "q": [
+        2,
+        0,
+        0
+      ],
+      "p": [
+        0,
+        1,
+        1
+      ],
+      "rho": [
+        1,
+        1,
+        1
+      ],
+      "h": 1,
+      "H": [
+        2,
+        0,
+        0
+      ],
+      "explanation": "Both receiving scores are 1. The valid eligibility threshold is q_origin-1=1, not 2."
+    },
+    {
+      "invalid_claim": "Use min(p,j-1) for every destination, including destinations outside the high-sender set",
+      "arcs": [
+        [
+          0,
+          1
+        ],
+        [
+          0,
+          2
+        ]
+      ],
+      "q": [
+        2,
+        0,
+        0
+      ],
+      "p": [
+        0,
+        1,
+        1
+      ],
+      "rho": [
+        1,
+        1,
+        1
+      ],
+      "h": 1,
+      "H": [
+        2,
+        0,
+        0
+      ],
+      "j": 1,
+      "explanation": "The two non-senders each receive one forced arc; subtracting one from j there incorrectly leaves zero capacity."
+    },
+    {
+      "invalid_claim": "Use the forced-arc cap m instead of p on destinations eligible for ordinary traffic",
+      "arcs": [
+        [
+          0,
+          1
+        ]
+      ],
+      "q": [
+        1,
+        0
+      ],
+      "p": [
+        0,
+        1
+      ],
+      "rho": [
+        1,
+        1
+      ],
+      "h": 1,
+      "H": [
+        0,
+        0
+      ],
+      "j": 0,
+      "explanation": "There is one ordinary arc and every forced-arc cap is zero. Ordinary destinations require their total indegree capacity."
+    }
+  ],
+  "examples_are": "Abstract routing systems, not asserted D2C graphs",
+  "external_review": "OPEN"
+}

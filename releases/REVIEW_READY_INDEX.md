@@ -26,6 +26,7 @@ The current fixed-order PDF packages are Fan-free reviewer-v2 at `n=25,27,28`, *
 | Heavy-load / routing family | All-threshold inequalities with incoming-degree penalties; `s_i<=2, t>0, b-a<=5 => 9t+4(b-a)<=a` | [reviewer-v1](general-heavy-load-reviewer-v1/README.md) | [hand proof](../project/research/general_n/2026-09-12-heavy-load-family-v1/HEAVY_LOAD_FAMILY.md); [internal audit](../project/research/general_n/2026-09-12-heavy-load-family-v1/AUDIT.md) | Candidate structural family; 595 alternative envelope exclusions and 45 rejected layer/profile instances; complete survivors and failed extensions preserved; external review OPEN |
 | Joint heavy routing | General count-conditioned load inequality using destination indegrees and unordered-pair capacity | [reviewer-v1](general-joint-routing-reviewer-v1/README.md) | [hand lemma](../project/research/general_n/2026-09-12-joint-routing-pilot-v1/JOINT_ROUTING_LEMMA.md); [audit](../project/research/general_n/2026-09-12-joint-routing-pilot-v1/AUDIT.md) | Candidate structural lemma; 729 further exact exclusions from 6,307 eligible cases, 5,578 catalogue survivors; comparison correction and all failed attempts preserved; external review OPEN |
 | Demand/tail projection and equality rigidity | Residual-budget tail bounds, demand-only joint routing, and a closed strictness criterion for the load inequality | [reviewer-v1](general-routing-tail-reviewer-v1/README.md) | [tail projection](../project/research/general_n/2026-09-12-routing-tail-projection-v1/TAIL_PROJECTION.md); [equality lemma](../project/research/general_n/2026-09-12-routing-tail-projection-v1/EQUALITY_BOUNDARY.md); [audit](../project/research/general_n/2026-09-12-routing-tail-projection-v1/AUDIT.md) | Candidate general lemmas; 114 further whole-profile exclusions, zero further exclusions among 5,578 previous state survivors; external review OPEN |
+| Compatible destination routing | General selected-degree eligibility tails, mixed traffic cuts and count-conditioned potential envelope | [reviewer-v1](general-compatible-routing-reviewer-v1/README.md) | [hand example](../project/research/general_n/2026-09-12-compatible-routing-pilot-v1/COMPACT_EXAMPLE.md); [audit](../project/research/general_n/2026-09-12-compatible-routing-pilot-v1/AUDIT.md) | Candidate general inequalities; 19/29 preselected pilot exclusions, 16 beyond selected-degree retention; mixed cuts add zero further states; full-pool replay pending; external review OPEN |
 | general-293-500 | `n >= 6 and Delta(G) >= (293/500)n imply e(G) < floor(n^2/4)` | [PDF](general-293-500-reviewer-v1/General_293_500_Reviewer_Manuscript_v1.pdf) | [PDF](general-293-500-reviewer-v1/General_293_500_Verification_Companion_v1.pdf) | retained candidate hand argument; superseded in threshold strength by 7/12; independent review OPEN |
 | general-7-12 | `n >= 6 and Delta(G) >= (7/12)n imply e(G) < floor(n^2/4)` | [PDF](general-7-12-reviewer-v1/General_7_12_Reviewer_Manuscript_v1.pdf) | [PDF](general-7-12-reviewer-v1/General_7_12_Verification_Companion_v1.pdf) | complete candidate hand argument; internal exact audits green; independent review and novelty assessment OPEN |
 | general-13-22 | `n >= 6 and Delta(G) >= (13/22)n imply e(G) < floor(n^2/4)` | [PDF](general-13-22-reviewer-v1/General_13_22_Reviewer_Manuscript_v1.pdf) | [PDF](general-13-22-reviewer-v1/General_13_22_Verification_Companion_v1.pdf) | retained candidate hand proof; independent mathematical review OPEN |
@@ -61,6 +62,13 @@ The [demand/tail continuation](general-routing-tail-reviewer-v1/README.md)
 simplifies that mechanism and extracts a closed equality criterion. Its
 114 whole-profile exclusions do not reduce the prior 5,578-state remainder.
 The zero additional-state result and all counterexamples are preserved.
+
+The [compatible-routing continuation](general-compatible-routing-reviewer-v1/README.md)
+retains selected-degree destination eligibility. Its 29-state pilot gives
+19 exact exclusions and ten survivors, with sixteen exclusions attributable
+to eligibility beyond selected-degree retention. Mixed cuts add no further
+whole-state exclusions. The full preceding pool has not been replayed;
+a compact hand example and the complete negative record accompany the pilot.
 
 ## Fixed-order history note
 

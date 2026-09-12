@@ -1,0 +1,14 @@
+{
+  "schema": "compatible-routing-evidence-v1",
+  "files": {
+    "pilot_results.jsonl": {
+      "stored_file": "pilot_results.jsonl.gz.b64",
+      "format": "jsonl",
+      "records": 29,
+      "original_bytes": 871129,
+      "original_sha256": "d6e6dd4450b89af699fe9e7b96632fc4227c3ba0030b3ca03faf3de0319400c9",
+      "stored_bytes": 132141,
+      "stored_sha256": "fdebe46b8d84bcb355d2588d3089a315066c72476175686b1ca3c7e37c20d538"
+    }
+  }
+}

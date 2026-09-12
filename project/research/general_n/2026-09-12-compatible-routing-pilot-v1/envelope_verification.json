@@ -1,0 +1,8 @@
+{
+  "status": "PASS",
+  "envelopes": 321,
+  "source_options_checked": 76092,
+  "minimum_integer_gap": 16,
+  "cardinality_check": "Per-source dynamic programming, independently of discovery sorting",
+  "external_review": "OPEN"
+}

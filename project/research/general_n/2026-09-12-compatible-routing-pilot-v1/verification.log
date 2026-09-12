@@ -1,0 +1,63 @@
+{
+  "status": "PASS",
+  "independent_model_hashes": 648,
+  "integer_certificates": 321,
+  "integer_column_checks": 76092,
+  "capacity_cases": 275,
+  "solver_status_counts": {
+    "0": 321,
+    "2": 327
+  },
+  "exclusions": {
+    "separate_transport": 19,
+    "joint_transport": 19,
+    "catalogue_free": 2,
+    "selected_balance": 3
+  },
+  "additional_selected_degree": 1,
+  "additional_destination_eligibility": 16,
+  "additional_mixed_cuts": 0,
+  "survivors": [
+    [
+      "n34-m289",
+      60
+    ],
+    [
+      "n34-m289",
+      972
+    ],
+    [
+      "n34-m289",
+      1368
+    ],
+    [
+      "n34-m289",
+      3522
+    ],
+    [
+      "n34-m289",
+      5690
+    ],
+    [
+      "n34-m289",
+      6158
+    ],
+    [
+      "n34-m289",
+      9490
+    ],
+    [
+      "n35-m306",
+      98
+    ],
+    [
+      "n35-m306",
+      218
+    ],
+    [
+      "n35-m306",
+      329
+    ]
+  ],
+  "external_review": "OPEN"
+}

@@ -1,0 +1,15 @@
+{
+  "schema": "compatible-routing-pilot-summary-v1",
+  "selected": 29,
+  "exclusions": {
+    "catalogue_free": 2,
+    "selected_balance": 3,
+    "separate_transport": 19,
+    "joint_transport": 19
+  },
+  "attempts": 648,
+  "seconds": 11.517828977997851,
+  "thresholds": "h=2..max(s), T=4h",
+  "early_stopping": "First uncertified j blocks a threshold; first fully excluded threshold ends a mode for a state.",
+  "external_review": "OPEN"
+}

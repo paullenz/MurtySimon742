@@ -1,0 +1,260 @@
+{
+  "schema": "general-compatible-routing-reviewer-v1",
+  "date": "2026-09-12",
+  "repository": "paullenz/MurtySimon742",
+  "unchanged_dependency_baseline": "580c6692749d274725439ddb0bb4957e192792e7",
+  "python": "3.12.14",
+  "scope": {
+    "candidate_compatible_routing_inequalities": true,
+    "candidate_general_potential_envelope": true,
+    "compact_hand_example": true,
+    "prior_pool": 5578,
+    "sample": 29,
+    "exclusions": {
+      "catalogue_free": 2,
+      "selected_balance": 3,
+      "separate_transport": 19,
+      "joint_transport": 19
+    },
+    "additional_from_eligibility": 16,
+    "additional_whole_states_from_mixed_cuts": 0,
+    "survivors": 10,
+    "full_pool_replay": false,
+    "integer_certificates": 321,
+    "extracted_envelopes": 321,
+    "changed_fixed_order_ledgers": false,
+    "improved_maximum_degree_threshold": false,
+    "unrestricted_theorem": false,
+    "external_review": "OPEN"
+  },
+  "artifacts": {
+    "README.md": {
+      "bytes": 48960,
+      "sha256": "7df52142842b5dce0e17240dab395016446f424c4d64cb62490de4d38770ce83"
+    },
+    "START_HERE_FOR_REVIEWERS.md": {
+      "bytes": 15489,
+      "sha256": "4a561863b3fe6b3d39a172f471cb5a3d4b2e1dbfbf63082b15971850f4e50586"
+    },
+    "project/research/general_n/2026-09-11-canonical-bridge-v1/CANONICAL_BRIDGE.md": {
+      "bytes": 17501,
+      "sha256": "c87068f40785baa790495aa5811b92370012845c0e592cfeacd6c03a3976dcd2"
+    },
+    "project/research/general_n/2026-09-12-compatible-routing-pilot-v1/AUDIT.md": {
+      "bytes": 5708,
+      "sha256": "e0a9ba73cb66fc42a3b25340bea49feb720bdb9ddebf71ece4e0a167a4377c0c"
+    },
+    "project/research/general_n/2026-09-12-compatible-routing-pilot-v1/COMPACT_EXAMPLE.md": {
+      "bytes": 3136,
+      "sha256": "33eee6e9c552d605290141493727c5d7000a744a4020b8560590d8df6635ce6b"
+    },
+    "project/research/general_n/2026-09-12-compatible-routing-pilot-v1/COMPATIBLE_ROUTING.md": {
+      "bytes": 6063,
+      "sha256": "b192e96ceaa86579acfc5f74f406e74251b1185dadb0385079e98ed963eefd38"
+    },
+    "project/research/general_n/2026-09-12-compatible-routing-pilot-v1/EVIDENCE_STORAGE.json": {
+      "bytes": 444,
+      "sha256": "904fe9a9154a35282b8c9296c03571daabcd7c6d16772a066175935b0d09e4c8"
+    },
+    "project/research/general_n/2026-09-12-compatible-routing-pilot-v1/PLAN.md": {
+      "bytes": 2553,
+      "sha256": "b2b49698dd77551ad69d329fd257e0f81eff7e9db42e5c2a02e2ebacdafbcd42"
+    },
+    "project/research/general_n/2026-09-12-compatible-routing-pilot-v1/README.md": {
+      "bytes": 5246,
+      "sha256": "4b6db8e16baaf1ae53f53252ca943f485f64c9dfa3f9f8c755268e0ff0a99334"
+    },
+    "project/research/general_n/2026-09-12-compatible-routing-pilot-v1/check_compact.py": {
+      "bytes": 1315,
+      "sha256": "ec66ccb5b3a50c4e082d4d06d05f2062251c75349f8a02cd0ad3fd480e8f5f7e"
+    },
+    "project/research/general_n/2026-09-12-compatible-routing-pilot-v1/check_routing.py": {
+      "bytes": 3522,
+      "sha256": "7819b3b506f13c6a7ad0ceb0c0ad7790b18e23586471a5ea03d41fc398cc0ab6"
+    },
+    "project/research/general_n/2026-09-12-compatible-routing-pilot-v1/compact_verification.json": {
+      "bytes": 434,
+      "sha256": "74d10d7deb45706e5e3632439b055cb311fd4b50f4240dceb157a1f8544f395a"
+    },
+    "project/research/general_n/2026-09-12-compatible-routing-pilot-v1/compact_verification.log": {
+      "bytes": 434,
+      "sha256": "74d10d7deb45706e5e3632439b055cb311fd4b50f4240dceb157a1f8544f395a"
+    },
+    "project/research/general_n/2026-09-12-compatible-routing-pilot-v1/envelope_extraction.log": {
+      "bytes": 123,
+      "sha256": "1abac6ce8912f768ce83e60011504a86c8c9613129511eeb002f00d6d01051eb"
+    },
+    "project/research/general_n/2026-09-12-compatible-routing-pilot-v1/envelope_verification.json": {
+      "bytes": 229,
+      "sha256": "700ed3776b2337f1464cb65c96bf031ed603f3e94c77b1b6a639a5a98f89b76e"
+    },
+    "project/research/general_n/2026-09-12-compatible-routing-pilot-v1/envelope_verification.log": {
+      "bytes": 229,
+      "sha256": "700ed3776b2337f1464cb65c96bf031ed603f3e94c77b1b6a639a5a98f89b76e"
+    },
+    "project/research/general_n/2026-09-12-compatible-routing-pilot-v1/envelopes.json": {
+      "bytes": 121307,
+      "sha256": "b0448e4d0764389ca1e5b94e210520dcb90d1cb95c4f93fe747dc50cb0787979"
+    },
+    "project/research/general_n/2026-09-12-compatible-routing-pilot-v1/environment.json": {
+      "bytes": 884,
+      "sha256": "cd1fd03918b2e498e9973d983ee9e10c5fcd71963a646041b841a01c52dfd2bc"
+    },
+    "project/research/general_n/2026-09-12-compatible-routing-pilot-v1/evidence_io.py": {
+      "bytes": 890,
+      "sha256": "c0ee0538d2201000e04fc254695aa6349bc6f19b608550b6b9f876f5738567e9"
+    },
+    "project/research/general_n/2026-09-12-compatible-routing-pilot-v1/extract_envelopes.py": {
+      "bytes": 2369,
+      "sha256": "9519031dd9abf165fe2fdb913ff0259975f31bd9dff395861b676ea5452381c0"
+    },
+    "project/research/general_n/2026-09-12-compatible-routing-pilot-v1/independent_verify.py": {
+      "bytes": 7863,
+      "sha256": "111356493c320d8c702c7f32f81e2f3ec346daf896080dd3dddaea332dc478d1"
+    },
+    "project/research/general_n/2026-09-12-compatible-routing-pilot-v1/model.py": {
+      "bytes": 4021,
+      "sha256": "3cce6537eb6e91096139cde9fb9794057354bca980188ba8c6749de8263c8b29"
+    },
+    "project/research/general_n/2026-09-12-compatible-routing-pilot-v1/pack_evidence.py": {
+      "bytes": 872,
+      "sha256": "64401e613d711c0917a0189a41a0fb95be78a69aab8cc8b86840b8bc2bcaa319"
+    },
+    "project/research/general_n/2026-09-12-compatible-routing-pilot-v1/pilot.log": {
+      "bytes": 6623,
+      "sha256": "7691c99615e3ccc7559c98f348f7676eee39de8d55b0b7cc3ca155b96fd49ef3"
+    },
+    "project/research/general_n/2026-09-12-compatible-routing-pilot-v1/pilot_inputs.json": {
+      "bytes": 18338,
+      "sha256": "7c61e960e7ed0efe8eefff8ee1d657a0701f5b13735bbcab82da56f9318bca7b"
+    },
+    "project/research/general_n/2026-09-12-compatible-routing-pilot-v1/pilot_results.jsonl.gz.b64": {
+      "bytes": 132141,
+      "sha256": "fdebe46b8d84bcb355d2588d3089a315066c72476175686b1ca3c7e37c20d538"
+    },
+    "project/research/general_n/2026-09-12-compatible-routing-pilot-v1/probe.py": {
+      "bytes": 4662,
+      "sha256": "fd4f94f79b9043469cbc5251aa31cba0635cd06475a5b8537faf9edca6b6730c"
+    },
+    "project/research/general_n/2026-09-12-compatible-routing-pilot-v1/routing_verification.json": {
+      "bytes": 2092,
+      "sha256": "dd363ff18fe41faf00b2fb5b34fff5aa4955e072735995f23c9431f0ee8dcb12"
+    },
+    "project/research/general_n/2026-09-12-compatible-routing-pilot-v1/routing_verification.log": {
+      "bytes": 2092,
+      "sha256": "dd363ff18fe41faf00b2fb5b34fff5aa4955e072735995f23c9431f0ee8dcb12"
+    },
+    "project/research/general_n/2026-09-12-compatible-routing-pilot-v1/select_pilot.py": {
+      "bytes": 1972,
+      "sha256": "eea3d06a35d96d57f9111a0b2dc987a5298ad2fc43e0e5288d1ad573f8b2249d"
+    },
+    "project/research/general_n/2026-09-12-compatible-routing-pilot-v1/selection_verification.json": {
+      "bytes": 239,
+      "sha256": "1102df35713614ea1e2483928c009a7fc15fc61f789624e2b23ef4d688024b31"
+    },
+    "project/research/general_n/2026-09-12-compatible-routing-pilot-v1/summary.json": {
+      "bytes": 440,
+      "sha256": "4569e8f2d0e18be8477e022d1c6af91d9e1aaf48fb9e703181d3ab41407ec732"
+    },
+    "project/research/general_n/2026-09-12-compatible-routing-pilot-v1/verification.json": {
+      "bytes": 911,
+      "sha256": "7aee6a11a9d5f9aec42e4bcd29ae10c01f1242c9038a35ba8822ebade575e1ef"
+    },
+    "project/research/general_n/2026-09-12-compatible-routing-pilot-v1/verification.log": {
+      "bytes": 911,
+      "sha256": "7aee6a11a9d5f9aec42e4bcd29ae10c01f1242c9038a35ba8822ebade575e1ef"
+    },
+    "project/research/general_n/2026-09-12-compatible-routing-pilot-v1/verify_envelopes.py": {
+      "bytes": 2137,
+      "sha256": "9e73bde6ed4139eaf4a48853037ac92cc70037b70c3a63b69ed1a05799427c12"
+    },
+    "project/research/general_n/2026-09-12-compatible-routing-pilot-v1/verify_selection.py": {
+      "bytes": 2376,
+      "sha256": "b519aa5ca5d0586196aa4e39b020237052f0c727dd347c5e0e4e85bcadcf45d1"
+    },
+    "project/research/general_n/2026-09-12-heavy-load-family-v1/EVIDENCE_STORAGE.json": {
+      "bytes": 1277,
+      "sha256": "5db0fbdb3eee44abf15efce475dad8c5e315cf76386a5e5ed70f7a572536915f"
+    },
+    "project/research/general_n/2026-09-12-heavy-load-family-v1/HEAVY_LOAD_FAMILY.md": {
+      "bytes": 10974,
+      "sha256": "896ccb1c7b4973cc02fee07745ac850d50f77dd127ef50570077282877c5b9ba"
+    },
+    "project/research/general_n/2026-09-12-heavy-load-family-v1/evidence_io.py": {
+      "bytes": 1183,
+      "sha256": "70f69ba0515175852bf13fcca19196c2b04703f1ba657a1ba51e9a9eeb587b37"
+    },
+    "project/research/general_n/2026-09-12-heavy-load-family-v1/remaining_states.json.gz.b64": {
+      "bytes": 76032,
+      "sha256": "94c7664182c47b364f261547c4ce938f9b36e0ada396f8b2434cee35dba8c68c"
+    },
+    "project/research/general_n/2026-09-12-joint-routing-pilot-v1/EVIDENCE_STORAGE.json": {
+      "bytes": 883,
+      "sha256": "1ce1aee0e463a6b6801335ab7ef3e2076b137768d5b53548a1b21a61b717f0d5"
+    },
+    "project/research/general_n/2026-09-12-joint-routing-pilot-v1/JOINT_ROUTING_LEMMA.md": {
+      "bytes": 6690,
+      "sha256": "e5d3833a0fd4835c2c02145c39bf163630558a081bf0f69e431c69663db500a9"
+    },
+    "project/research/general_n/2026-09-12-joint-routing-pilot-v1/frontier_results.jsonl.gz.b64": {
+      "bytes": 367485,
+      "sha256": "848fc0a86e8a6ad30d86c229e4c40a8cdde882e8a4ed224100ddf4afd09d4fcc"
+    },
+    "project/research/general_n/2026-09-12-joint-routing-pilot-v1/frontier_summary.json": {
+      "bytes": 266791,
+      "sha256": "7fd38bf9bf455b4c44ab75a7a34d82958c84c51233319aa5519e60fb6d81b410"
+    },
+    "releases/REVIEW_READY_INDEX.md": {
+      "bytes": 13409,
+      "sha256": "7f43ea3b5290af0a9494f684ee483dca38b5ff507b7bbc80249fa2b9cb3e02dd"
+    },
+    "releases/general-compatible-routing-reviewer-v1/README.md": {
+      "bytes": 4546,
+      "sha256": "34d1fee80c867e192bd894e479aa833c3d05fd5a6b57bd1b5b07c463c96f6619"
+    },
+    "releases/general-compatible-routing-reviewer-v1/VALIDATION.json": {
+      "bytes": 2976,
+      "sha256": "1f5dfb4e9a5a6189d5afa515b5773900f01a440047e369c95ba56586355d463c"
+    },
+    "releases/general-compatible-routing-reviewer-v1/build_manifest.py": {
+      "bytes": 3311,
+      "sha256": "b5ab454bcff8fcb534a472998d82164be2662d0020d8519bbc656f81da8926b0"
+    },
+    "releases/general-compatible-routing-reviewer-v1/check_manifest.py": {
+      "bytes": 439,
+      "sha256": "3707fc691c8a32b9096638052076bf80ed314288c4a87c45fa106beaefa710da"
+    },
+    "releases/general-compatible-routing-reviewer-v1/validate_release.py": {
+      "bytes": 5619,
+      "sha256": "8265ac0183abc6ece0d3491225394fe8f6c00ae6f508672806b2f096043278ce"
+    },
+    "releases/general-heavy-load-reviewer-v1/MANIFEST.json": {
+      "bytes": 10251,
+      "sha256": "36a00174d98778a3392df2c1b54dd7f55b46c848c06027f69d90005029cf718e"
+    },
+    "releases/general-joint-routing-reviewer-v1/MANIFEST.json": {
+      "bytes": 10780,
+      "sha256": "96f61aa4d9ea91bffedb6c974b65b23ed88a426c7b3c5633b973e10f74c1ada6"
+    },
+    "releases/general-routing-tail-reviewer-v1/MANIFEST.json": {
+      "bytes": 14928,
+      "sha256": "0807c4552ca5177ee6d4af37e1d43ed52ae631f190c79377660408ccbe77d347"
+    },
+    "releases/n34-reviewer-v2/MANIFEST.json": {
+      "bytes": 25869,
+      "sha256": "5cdd698fdf660fee0ab7ae7ebe5677dba52820c37ed6ff73285e31f2bf128044"
+    },
+    "releases/n35-reviewer-v1/MANIFEST.json": {
+      "bytes": 25850,
+      "sha256": "8663ba5eddc65724ed6707b2f4b57866dabc5e4658557a1113e303a6f8f1eb51"
+    }
+  },
+  "notes": [
+    "General implications and the compact example have hand proofs; finite applications require exact replay.",
+    "The original solver stream is losslessly preserved, including all failures, proposals, repairs and timings.",
+    "Clean rediscovery matches all result fields except measured elapsed times; original times remain preserved.",
+    "Preceding current manifests and the complete baseline pin unchanged transitive evidence.",
+    "This manifest excludes itself and the publication receipt to avoid circular hashes.",
+    "The sample was selected before discovery and is not a random estimate of full-pool coverage."
+  ]
+}
