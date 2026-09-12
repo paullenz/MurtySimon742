@@ -1,0 +1,65 @@
+{
+  "schema": "murty-simon-subjective-outcome-forecast-v1",
+  "date": "2026-09-12",
+  "horizon_end": "2027-09-12",
+  "baseline_commit": "f9ffe629dd35ddbaaae3cf8d8542e775984d531f",
+  "status": "Subjective planning assessment; not mathematical evidence or a calibrated statistical forecast",
+  "assumptions": [
+    "Regular active research sessions over the next twelve months, with scope to change methods.",
+    "At least one suitably qualified external graph theorist completes a substantive review of the shared foundations and a proposed main result; decisive computational evidence receives external reproduction where needed.",
+    "Corrections and revisions are allowed, with original failures retained.",
+    "No assumed improvement in AI capability and no assumption of unlimited compute.",
+    "Outcomes concern this programme's contribution, not a solution by unrelated researchers.",
+    "Paper-worthy means a specialist judges the result correct, original and substantial enough for a research paper; it does not mean a journal has accepted it within the horizon."
+  ],
+  "milestones": [
+    {
+      "id": "sound",
+      "definition": "The programme yields at least one substantial correct graph-theoretic result, from the preserved work or its continuation, after specialist scrutiny and allowed repairs.",
+      "central_conditional_percent": 90,
+      "cautious_conditional_percent": 80,
+      "favourable_conditional_percent": 95,
+      "reason": "Explicit graph-level proofs, exact acceptance and successful hand extraction support a high probability. Shared assumptions, real prior bugs, and absent external review prevent treating this as near certain. This is not the probability that every present headline or every line is correct."
+    },
+    {
+      "id": "original_useful",
+      "definition": "The programme yields at least one original result or proof method of sufficient mathematical substance for a research paper.",
+      "central_conditional_percent": 85,
+      "cautious_conditional_percent": 75,
+      "favourable_conditional_percent": 95,
+      "reason": "Conditional on sound substantial mathematics, explicit new-order candidates and the candidate 7/12 theorem make meaningful originality plausible. Specialist literature comparison and significance judgment remain open; a limited search cannot certify novelty."
+    },
+    {
+      "id": "general_theorem",
+      "definition": "The original useful contribution includes a theorem about infinitely many orders or a parameter-uniform structural mechanism, with a nontrivial application beyond restating previously known results. Existing candidates can qualify.",
+      "central_conditional_percent": 85,
+      "cautious_conditional_percent": 75,
+      "favourable_conditional_percent": 95,
+      "reason": "Several such candidate statements already exist. Some possible successful outcomes are instead fixed-order or methodological, and general transfer or novelty could fail even if a narrower contribution survives."
+    },
+    {
+      "id": "further_general_advance",
+      "definition": "The reviewed original general contribution materially exceeds the 12 September baseline: for example, a maximum-degree threshold at most 0.57n with explicit small-order coverage, or a uniform structural theorem treating a growing family in the still-uncovered intermediate-degree regime. Another isolated finite order, a tiny scalar-constant change, or a reformulation of already excluded states does not by itself qualify.",
+      "central_conditional_percent": 60,
+      "cautious_conditional_percent": 45,
+      "favourable_conditional_percent": 75,
+      "reason": "Conditional on reviewed useful general theory, repeated successful extraction and genuine extra information from destination coupling support further progress. The scalar ceiling, clipping failures and zero additional exclusions from the latest refinement leave a substantial chance of a plateau."
+    },
+    {
+      "id": "complete_proof",
+      "definition": "The programme produces an original complete proof of the Murty-Simon edge bound and equality classification for all orders, with the decisive argument passing detailed specialist review within the stated horizon.",
+      "central_conditional_percent": 25,
+      "cautious_conditional_percent": 15,
+      "favourable_conditional_percent": 35,
+      "reason": "Even conditional on a material general advance, no argument yet covers the whole intermediate-degree regime or supplies a usable complete finite reduction. A further strong theorem may still stop well short. This final conditional judgment is particularly uncertain."
+    }
+  ],
+  "model_notes": [
+    "Milestones are nested by definition. Each percentage after the first is conditional on reaching the preceding milestone.",
+    "Products use the conditional probability chain rule; independence is neither assumed nor justified.",
+    "Inputs are judgmental elicitation choices, not measured success rates, fitted frequencies or Bayes factors. The arithmetic organises the judgments and supplies no new empirical evidence.",
+    "Cautious and favourable columns are coherent sensitivity scenarios, not confidence intervals, credible intervals or hard probability bounds.",
+    "There is no probability assigned here to a counterexample or to unrelated discoveries. Failure to reach a milestone need not mean that the conjecture is false.",
+    "The reported baseline is new. Exact percentages from 11 September could not be recovered, so a numerical reconciliation with those earlier estimates remains unavailable."
+  ]
+}

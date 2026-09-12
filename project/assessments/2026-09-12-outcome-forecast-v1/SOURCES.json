@@ -1,0 +1,104 @@
+{
+  "schema": "outcome-assessment-provenance-v1",
+  "date": "2026-09-12",
+  "baseline_commit": "f9ffe629dd35ddbaaae3cf8d8542e775984d531f",
+  "read_scope": "Current sources and preserved audit records; no fresh full archive replay or independent proof audit",
+  "baseline_artifacts": {
+    "README.md": {
+      "bytes": 45602,
+      "sha256": "40688b500c04d3c8204a2788811521584f29322bba9c7f207a0880656e9ff4f4"
+    },
+    "START_HERE_FOR_REVIEWERS.md": {
+      "bytes": 14764,
+      "sha256": "90f9a47bf0a3c6364e0dbd51239b4b5b12f893a7a87de97e70088d103ea51468"
+    },
+    "project/N25_PROJECT_STANDING_ORDERS.md": {
+      "bytes": 6969,
+      "sha256": "c4744119d8103e2b32a03c32f24d17a5ebedee6729c5e1d7f4ec85e24517a095"
+    },
+    "project/REPO_SYNC_POLICY.md": {
+      "bytes": 5381,
+      "sha256": "757eae979d60ace04b774c4d7a4389275e2deadaa68ea8229e4958bde4e42140"
+    },
+    "releases/general-stepback-v1/README.md": {
+      "bytes": 3501,
+      "sha256": "d37bcd1c57bc84fca8c8bcb15903b1533b068ee1e23be315e1b327fefe3aad6f"
+    },
+    "releases/general-7-12-reviewer-v1/README.md": {
+      "bytes": 941,
+      "sha256": "0149049442ed35c66eea2fa9b48974696e773dc2b33618114bc8c1332e07eec8"
+    },
+    "project/research/general_n/2026-09-11-canonical-bridge-v1/CANONICAL_BRIDGE.md": {
+      "bytes": 17501,
+      "sha256": "c87068f40785baa790495aa5811b92370012845c0e592cfeacd6c03a3976dcd2"
+    },
+    "project/research/general_n/2026-09-09-profile-integral-7-12-v1/PROOF.md": {
+      "bytes": 9541,
+      "sha256": "659237d92b2f0fa24da1c7d516dba4e8ed3ecb1c8f0505338fe526547a003660"
+    },
+    "project/research/general_n/2026-09-09-profile-integral-7-12-v1/PROFILE_INTEGRAL_CEILING.md": {
+      "bytes": 2821,
+      "sha256": "7279366af99de5d7250fbd622df31c636aac4b540d6b2bb1ec8569d4053c7027"
+    },
+    "project/research/general_n/2026-09-12-joint-routing-pilot-v1/AUDIT.md": {
+      "bytes": 6280,
+      "sha256": "04c3009609ec82c6d675d687c16b42abcce3ff8d0eaef0262f3fbb48383a7212"
+    },
+    "project/research/general_n/2026-09-12-routing-tail-projection-v1/AUDIT.md": {
+      "bytes": 7970,
+      "sha256": "793bb90f36eccb58d6c04c5adf39021d033a93f50513a96b687bc0055556a0a6"
+    },
+    "project/reviews/n34/2026-09-12-heavy-independent-v1/README.md": {
+      "bytes": 5336,
+      "sha256": "739185841bd42e48dfdb4259916fcbdb3e34ce9611a14399d495a998a64e85da"
+    },
+    "project/reviews/general-theory/2026-09-12-stepback-v1/HOSTILE_AUDIT.md": {
+      "bytes": 8360,
+      "sha256": "f2cdfffd4cbaa1351b532f98822b9fbf72ebb16afe9fb816d49e73baa1a0d9f2"
+    },
+    "project/reviews/general-theory/2026-09-12-joint-followthrough-v1/FOUNDATIONS_AUDIT.md": {
+      "bytes": 8805,
+      "sha256": "c1149d23318111374e16a68051b55cfff3cd4ee39db46e761d5fc4edccf7f8bd"
+    },
+    "project/reviews/n29/2026-09-08-redteam-restart-v1/PUBLIC_RELEASE_AUDIT.md": {
+      "bytes": 6883,
+      "sha256": "4562fd2692fc9067ff31bd948b396bf9382263701a584a0b70072368bdba55a7"
+    }
+  },
+  "external_context": [
+    {
+      "url": "https://link.springer.com/article/10.2478/s11533-014-0449-3",
+      "title": "A maximum degree theorem for diameter-2-critical graphs",
+      "scope": "Publisher abstract and metadata read; published maximum-degree conditions and historical context."
+    },
+    {
+      "url": "https://arxiv.org/html/1610.00360v2",
+      "title": "Improving the bound for maximum degree on Murty-Simon Conjecture",
+      "scope": "Primary preprint text read; Theorem 3.5 states 0.6756n while abstract states 0.6755n. Theorem constant used as comparison, no audit claimed."
+    },
+    {
+      "url": "https://arxiv.org/html/1812.08420v1",
+      "title": "Strengthening the Murty-Simon conjecture on diameter 2 critical graphs",
+      "scope": "Primary text inspected for historical context and Theorem 4; abstract/publication metadata also read at https://arxiv.org/abs/1812.08420."
+    },
+    {
+      "url": "https://arxiv.org/abs/1406.6736",
+      "title": "Diameter critical graphs",
+      "scope": "Author abstract read; disproof of stronger average-edge-degree conjecture provides a caution about proposed routes."
+    },
+    {
+      "url": "https://www.erdosproblems.com/742",
+      "title": "Erdos Problem 742",
+      "scope": "Direct fetch HTTP 403; indexed excerpt available with old crawl date. No fresh live full-page verification claimed."
+    },
+    {
+      "url": "https://www.sciencedirect.com/science/article/pii/S0166218X25003439",
+      "title": "Characterize all C5-free diameter-2-critical graphs with at least floor((n-1)^2/4)+1 edges",
+      "scope": "Direct fetch HTTP 403; indexed abstract available. Not relied on as a full-text check or a novelty determination."
+    }
+  ],
+  "probability_source": "Assistant subjective judgments, explicitly conditional and uncalibrated; no external source supplies the forecast percentages",
+  "history_limit": "Exact 11 September probability estimates unavailable after retrieval attempts in the preceding turn; current-turn conversation estimates and withdrawal preserved in ASSESSMENT.md",
+  "new_mathematical_claims": false,
+  "external_review": "OPEN"
+}

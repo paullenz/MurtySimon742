@@ -113,6 +113,12 @@ available for that scrutiny.
 
 The unrestricted Murty–Simon conjecture remains unsolved by this project.
 
+For research planning, the [12 September outcome assessment](project/assessments/2026-09-12-outcome-forecast-v1/ASSESSMENT.md)
+separates correctness, originality, validation of existing general candidates,
+further general advances and a complete proof. Its forecasts are explicitly
+subjective, with a stated horizon and sensitivity scenarios; they are not
+mathematical evidence or external endorsement.
+
 ## Demand/tail projection and equality rigidity
 
 The [routing-tail reviewer-v1 package](releases/general-routing-tail-reviewer-v1/README.md)

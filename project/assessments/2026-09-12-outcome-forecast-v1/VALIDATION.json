@@ -1,0 +1,28 @@
+{
+  "schema": "outcome-assessment-document-validation-v1",
+  "date": "2026-09-12",
+  "status": "PASS: document, arithmetic and hash consistency only",
+  "baseline_commit": "f9ffe629dd35ddbaaae3cf8d8542e775984d531f",
+  "checked_current_manifests": {
+    "releases/n34-reviewer-v2/MANIFEST.json": 134,
+    "releases/n35-reviewer-v1/MANIFEST.json": 134,
+    "releases/general-heavy-load-reviewer-v1/MANIFEST.json": 48,
+    "releases/general-joint-routing-reviewer-v1/MANIFEST.json": 50,
+    "releases/general-routing-tail-reviewer-v1/MANIFEST.json": 69
+  },
+  "manifest_scope_and_membership_unchanged": true,
+  "baseline_source_hashes_checked": 15,
+  "changed_markdown_relative_links_checked": 151,
+  "intended_existing_changed_paths": [
+    "README.md",
+    "releases/general-heavy-load-reviewer-v1/MANIFEST.json",
+    "releases/general-joint-routing-reviewer-v1/MANIFEST.json",
+    "releases/general-routing-tail-reviewer-v1/MANIFEST.json",
+    "releases/n34-reviewer-v2/MANIFEST.json",
+    "releases/n35-reviewer-v1/MANIFEST.json"
+  ],
+  "proofs_and_ledgers_unchanged": true,
+  "fresh_mathematical_audit": false,
+  "statistical_calibration": false,
+  "external_review": "OPEN"
+}

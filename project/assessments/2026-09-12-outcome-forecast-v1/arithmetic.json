@@ -1,0 +1,118 @@
+{
+  "schema": "murty-simon-subjective-forecast-arithmetic-v1",
+  "status": "Arithmetic consistency only; no empirical calibration",
+  "scenarios": {
+    "cautious": [
+      {
+        "id": "sound",
+        "conditional_percent": 80.0,
+        "cumulative_fraction": "4/5",
+        "cumulative_percent": 80.0
+      },
+      {
+        "id": "original_useful",
+        "conditional_percent": 75.0,
+        "cumulative_fraction": "3/5",
+        "cumulative_percent": 60.0
+      },
+      {
+        "id": "general_theorem",
+        "conditional_percent": 75.0,
+        "cumulative_fraction": "9/20",
+        "cumulative_percent": 45.0
+      },
+      {
+        "id": "further_general_advance",
+        "conditional_percent": 45.0,
+        "cumulative_fraction": "81/400",
+        "cumulative_percent": 20.25
+      },
+      {
+        "id": "complete_proof",
+        "conditional_percent": 15.0,
+        "cumulative_fraction": "243/8000",
+        "cumulative_percent": 3.0375
+      }
+    ],
+    "central": [
+      {
+        "id": "sound",
+        "conditional_percent": 90.0,
+        "cumulative_fraction": "9/10",
+        "cumulative_percent": 90.0
+      },
+      {
+        "id": "original_useful",
+        "conditional_percent": 85.0,
+        "cumulative_fraction": "153/200",
+        "cumulative_percent": 76.5
+      },
+      {
+        "id": "general_theorem",
+        "conditional_percent": 85.0,
+        "cumulative_fraction": "2601/4000",
+        "cumulative_percent": 65.025
+      },
+      {
+        "id": "further_general_advance",
+        "conditional_percent": 60.0,
+        "cumulative_fraction": "7803/20000",
+        "cumulative_percent": 39.015
+      },
+      {
+        "id": "complete_proof",
+        "conditional_percent": 25.0,
+        "cumulative_fraction": "7803/80000",
+        "cumulative_percent": 9.75375
+      }
+    ],
+    "favourable": [
+      {
+        "id": "sound",
+        "conditional_percent": 95.0,
+        "cumulative_fraction": "19/20",
+        "cumulative_percent": 95.0
+      },
+      {
+        "id": "original_useful",
+        "conditional_percent": 95.0,
+        "cumulative_fraction": "361/400",
+        "cumulative_percent": 90.25
+      },
+      {
+        "id": "general_theorem",
+        "conditional_percent": 95.0,
+        "cumulative_fraction": "6859/8000",
+        "cumulative_percent": 85.7375
+      },
+      {
+        "id": "further_general_advance",
+        "conditional_percent": 75.0,
+        "cumulative_fraction": "20577/32000",
+        "cumulative_percent": 64.303125
+      },
+      {
+        "id": "complete_proof",
+        "conditional_percent": 35.0,
+        "cumulative_fraction": "144039/640000",
+        "cumulative_percent": 22.50609375
+      }
+    ]
+  },
+  "central_exclusive_percent_lowest_to_highest": [
+    10.0,
+    13.5,
+    11.475,
+    26.01,
+    29.26125,
+    9.75375
+  ],
+  "central_exclusive_sum": "1",
+  "display_central_rounded_to_nearest_five_percent": {
+    "sound": 90,
+    "original_useful": 75,
+    "general_theorem": 65,
+    "further_general_advance": 40,
+    "complete_proof": 10
+  }
+}
