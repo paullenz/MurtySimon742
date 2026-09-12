@@ -29,6 +29,7 @@ The current fixed-order PDF packages are Fan-free reviewer-v2 at `n=25,27,28`, *
 | Compatible destination routing | General selected-degree eligibility tails, mixed traffic cuts and count-conditioned potential envelope | [reviewer-v1](general-compatible-routing-reviewer-v1/README.md) | [hand example](../project/research/general_n/2026-09-12-compatible-routing-pilot-v1/COMPACT_EXAMPLE.md); [audit](../project/research/general_n/2026-09-12-compatible-routing-pilot-v1/AUDIT.md) | Candidate general inequalities; 19/29 preselected pilot exclusions, 16 beyond selected-degree retention; mixed cuts add zero further states; full-pool continuation below; external review OPEN |
 | Compatible routing: full catalogue and analytic reduction | Fixed eligible-routing potentials; exact q elimination and at most five p candidates per H for the recurring potential | [reviewer-v1](general-compatible-catalogue-reviewer-v1/README.md) | [hand reduction](../project/research/general_n/2026-09-12-compatible-routing-catalogue-v1/FIXED_POTENTIAL.md); [audit and replay](../project/research/general_n/2026-09-12-compatible-routing-catalogue-v1/README.md) | Candidate general reduction; 990 catalogue exclusions plus four inherited pilot-only witnesses, 4,584 combined survivors; no per-state fitting; external review OPEN |
 | Closed compatible potential | General exact local maxima using two q branches and at most 59 candidate values per residual/sender class | [reviewer-v1](general-closed-compatible-reviewer-v1/README.md) | [hand formula](../project/research/general_n/2026-09-12-closed-compatible-potential-v1/CLOSED_POTENTIAL.md); [review and audit](../project/research/general_n/2026-09-12-closed-compatible-potential-v1/AUDIT.md) | Candidate analytic continuation; 832 previously handled cases, zero further combined exclusions, 4,584 survivors; external review OPEN |
+| Fixed-neighbourhood routing flow | Exact candidate B-side routing criterion for fixed selected/residual cross sets | [reviewer-v1](general-arc-realisation-reviewer-v1/README.md) | [general flow proof](../project/research/general_n/2026-09-12-arc-realisation-pilot-v1/FIXED_NEIGHBOURHOOD_FLOW.md); [audit and unsuccessful pilot](../project/research/general_n/2026-09-12-arc-realisation-pilot-v1/AUDIT.md) | Six-state pilot unresolved; fixed-pattern certificates only, no additional whole-state exclusions, 4,584 survivors; external review OPEN |
 | general-293-500 | `n >= 6 and Delta(G) >= (293/500)n imply e(G) < floor(n^2/4)` | [PDF](general-293-500-reviewer-v1/General_293_500_Reviewer_Manuscript_v1.pdf) | [PDF](general-293-500-reviewer-v1/General_293_500_Verification_Companion_v1.pdf) | retained candidate hand argument; superseded in threshold strength by 7/12; independent review OPEN |
 | general-7-12 | `n >= 6 and Delta(G) >= (7/12)n imply e(G) < floor(n^2/4)` | [PDF](general-7-12-reviewer-v1/General_7_12_Reviewer_Manuscript_v1.pdf) | [PDF](general-7-12-reviewer-v1/General_7_12_Verification_Companion_v1.pdf) | complete candidate hand argument; internal exact audits green; independent review and novelty assessment OPEN |
 | general-13-22 | `n >= 6 and Delta(G) >= (13/22)n imply e(G) < floor(n^2/4)` | [PDF](general-13-22-reviewer-v1/General_13_22_Reviewer_Manuscript_v1.pdf) | [PDF](general-13-22-reviewer-v1/General_13_22_Verification_Companion_v1.pdf) | retained candidate hand proof; independent mathematical review OPEN |
@@ -88,6 +89,14 @@ maxima and extends the eligibility cutoff. Its fixed-weight family excludes
 frontier exclusions are reported; all 4,584 survivors remain. The preceding
 work was reviewed, including all old recurring-potential gaps, with no blocking
 flaw found internally. External review and novelty remain OPEN.
+
+The [simultaneous-routing continuation](general-arc-realisation-reviewer-v1/README.md)
+reduces B-side routing of fixed cross-neighbourhoods to integer flow with
+checkable Hall obstructions. All twelve bounded solver runs remain unresolved;
+the deterministic flow probes already fail weaker endpoint loads. No
+whole-state exclusion or general density advance is claimed. The conditional
+criterion, tiny exhaustive checks, original models and failures are preserved.
+The next research target is compatible cross-neighbourhood construction.
 
 ## Fixed-order history note
 

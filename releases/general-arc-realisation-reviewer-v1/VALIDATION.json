@@ -1,0 +1,53 @@
+{
+  "status": "PASS",
+  "date": "2026-09-12",
+  "python": "3.12.14",
+  "clean_replay": [
+    {
+      "command": "python project/research/general_n/2026-09-12-arc-realisation-pilot-v1/prepare_inputs.py",
+      "returncode": 0,
+      "stdout_sha256": "d2d9d6c3b2f371586a682677705ab10d033fb23c60570861c13755991e3cdee3"
+    },
+    {
+      "command": "python project/research/general_n/2026-09-12-arc-realisation-pilot-v1/check_flow.py",
+      "returncode": 0,
+      "stdout_sha256": "45825b606e3fcda4589a3949566645ae17c4f9d7f765a0ecd125f298f5748d82"
+    },
+    {
+      "command": "python project/research/general_n/2026-09-12-arc-realisation-pilot-v1/check_model.py",
+      "returncode": 0,
+      "stdout_sha256": "85dea1563d591f5aac5ff118e93c2886d6b15acfdc24f18655c5988958f838b1"
+    },
+    {
+      "command": "python project/research/general_n/2026-09-12-arc-realisation-pilot-v1/run_flow_probes.py",
+      "returncode": 0,
+      "stdout_sha256": "ff7c8bc502d3a8e2afda092b0c48ad711b65d3594ac816efce07bf5046f00548"
+    },
+    {
+      "command": "python project/research/general_n/2026-09-12-arc-realisation-pilot-v1/verify.py",
+      "returncode": 0,
+      "stdout_sha256": "172676675efb4f1d90be350cce973b43f53a2e0b8986a3ca01ebdb92d35c76a6"
+    }
+  ],
+  "regenerated_files_byte_identical": [
+    "pilot_inputs.json",
+    "flow_verification.json",
+    "model_verification.json",
+    "shortcut_counterexample.json",
+    "flow_probes.json",
+    "verification.json",
+    "new_exclusions.json"
+  ],
+  "original_models_rebuilt": 12,
+  "original_solver_attempts_rerun": false,
+  "original_logs_and_timings_preserved": true,
+  "navigation": {
+    "markdown_files": 10,
+    "local_links_checked": 317
+  },
+  "fixed_cross_flow_and_linear_model_challenges": "PASS",
+  "new_whole_state_exclusions": 0,
+  "combined_exclusions": 994,
+  "combined_survivors": 4584,
+  "external_review": "OPEN"
+}

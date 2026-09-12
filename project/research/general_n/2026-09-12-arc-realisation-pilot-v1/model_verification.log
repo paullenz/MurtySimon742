@@ -1,0 +1,106 @@
+{
+  "status": "PASS",
+  "tiny_linear_vs_combinatorial_checks": 8192,
+  "tiny_accepted_assignments": {
+    "degree_routing": 614,
+    "label_compatible": 166
+  },
+  "positive_demand_heavy_controls": {
+    "degree_routing": {
+      "status": "PASS",
+      "linear_rows_checked": 278,
+      "selected_arcs": 6,
+      "residual_incidences": 14,
+      "q": [
+        3,
+        0,
+        0,
+        0,
+        3,
+        0,
+        0
+      ],
+      "p": [
+        0,
+        2,
+        2,
+        2,
+        0,
+        0,
+        0
+      ],
+      "label_selected_degrees": [
+        2,
+        2,
+        2,
+        0,
+        0
+      ],
+      "label_cross_degrees": [
+        4,
+        4,
+        4,
+        4,
+        4
+      ],
+      "incoming_distinct_labels": [
+        0,
+        1,
+        1,
+        1,
+        0,
+        0,
+        0
+      ]
+    },
+    "label_compatible": {
+      "status": "PASS",
+      "linear_rows_checked": 698,
+      "selected_arcs": 6,
+      "residual_incidences": 14,
+      "q": [
+        3,
+        0,
+        0,
+        0,
+        3,
+        0,
+        0
+      ],
+      "p": [
+        0,
+        2,
+        2,
+        2,
+        0,
+        0,
+        0
+      ],
+      "label_selected_degrees": [
+        2,
+        2,
+        2,
+        0,
+        0
+      ],
+      "label_cross_degrees": [
+        4,
+        4,
+        4,
+        4,
+        4
+      ],
+      "incoming_distinct_labels": [
+        0,
+        1,
+        1,
+        1,
+        0,
+        0,
+        0
+      ]
+    }
+  },
+  "invalid_coarse_sufficiency_example": "shortcut_counterexample.json",
+  "no_positive_surplus_graph_claim": true
+}

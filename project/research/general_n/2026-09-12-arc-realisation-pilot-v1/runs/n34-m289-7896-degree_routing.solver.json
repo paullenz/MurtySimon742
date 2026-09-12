@@ -1,0 +1,13 @@
+{
+  "status": 1,
+  "message": "Time limit reached. (HiGHS Status 13: model_status is Time limit reached; primal_status is None)",
+  "original_solver_seconds": 20.017234120001376,
+  "variables": 3335,
+  "rows": 4733,
+  "nonzero_coefficients": 26780,
+  "raw_x": null,
+  "fun": null,
+  "mip_node_count": null,
+  "mip_dual_bound": null,
+  "mip_gap": null
+}

@@ -1,0 +1,13 @@
+{
+  "status": "PASS",
+  "fixed_cross_patterns": 729,
+  "brute_destination_assignments": 4096,
+  "routable_patterns": 154,
+  "certified_unroutable_patterns": 575,
+  "labelled_oriented_graphs": 343,
+  "distinct_source_label_graphs": 280,
+  "compatible_cross_patterns": 5024,
+  "eligible_demand_vectors": 10292,
+  "heavy_threshold_checks": 5304,
+  "scope": "Exhaustive finite abstract objects, not positive-surplus D2C graphs; general proof is separate."
+}

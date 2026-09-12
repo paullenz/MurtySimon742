@@ -120,6 +120,16 @@ enumeration matches all 476,427 recorded gaps; 39,902 local cases and all
 4,584 survivors, failed gaps and invalid-shortcut examples remain preserved.
 External mathematical review and novelty remain OPEN.
 
+The [arc-realisation reviewer-v1 package](releases/general-arc-realisation-reviewer-v1/README.md)
+gives an exact candidate integer-flow criterion for B-side routing once the
+selected/residual cross sets are fixed. Pair compatibility determines the
+label and orientation; an impossible fixed pattern has a checked Hall set.
+All twelve original solver attempts on six frozen states remain unresolved.
+The twelve constructed flow probes already violate weaker endpoint loads,
+so no added strength or whole-state exclusion is claimed. The frontier stays
+at 4,584 survivors. Exhaustive tiny-object checks, exact models, timeouts,
+failed shortcuts and a full scope audit are preserved. External review OPEN.
+
 For the preceding general-foundations review pass, see the
 [focused foundations checklist](project/reviews/general-theory/2026-09-12-joint-followthrough-v1/FOUNDATIONS_AUDIT.md).
 It checks the primary dominating-edge theorem's exception, the witness-capacity

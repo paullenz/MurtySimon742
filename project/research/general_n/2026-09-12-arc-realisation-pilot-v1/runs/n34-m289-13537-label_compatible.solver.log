@@ -1,0 +1,50 @@
+Running HiGHS 1.8.0 (git hash: 222cce7): Copyright (c) 2024 HiGHS under MIT licence terms
+Coefficient ranges:
+  Matrix [1e+00, 2e+01]
+  Cost   [0e+00, 0e+00]
+  Bound  [1e+00, 2e+01]
+  RHS    [1e+00, 2e+01]
+Presolving model
+12770 rows, 4404 cols, 57646 nonzeros  0s
+8715 rows, 4404 cols, 53681 nonzeros  0s
+8715 rows, 4404 cols, 49761 nonzeros  0s
+Objective function is integral with scale 1
+
+Solving MIP model with:
+   8715 rows
+   4404 cols (4372 binary, 32 integer, 0 implied int., 0 continuous)
+   49761 nonzeros
+MIP-Timing:        0.11 - starting analytic centre calculation
+
+Src: B => Branching; C => Central rounding; F => Feasibility pump; H => Heuristic; L => Sub-MIP;
+     P => Empty MIP; R => Randomized rounding; S => Solve LP; T => Evaluate node; U => Unbounded;
+     z => Trivial zero; l => Trivial lower; u => Trivial upper; p => Trivial point
+
+        Nodes      |    B&B Tree     |            Objective Bounds              |  Dynamic Constraints |       Work      
+Src  Proc. InQueue |  Leaves   Expl. | BestBound       BestSol              Gap |   Cuts   InLp Confl. | LpIters     Time
+
+         0       0         0   0.00%   0               inf                  inf        0      0      0         0     0.1s
+         0       0         0   0.00%   0               inf                  inf        0      0      2      4677     1.8s
+         0       0         0   0.00%   0               inf                  inf      259     28      7      7900     7.8s
+         0       0         0   0.00%   0               inf                  inf      348     42      9      9077    13.9s
+         0       0         0   0.00%   0               inf                  inf      414     57     12      9077    20.1s
+
+Solving report
+  Status            Time limit reached
+  Primal bound      inf
+  Dual bound        0
+  Gap               inf
+  P-D integral      0
+  Solution status   -
+  Timing            20.08 (total)
+                    0.00 (presolve)
+                    0.00 (solve)
+                    0.00 (postsolve)
+  Max sub-MIP depth 0
+  Nodes             0
+  Repair LPs        0 (0 feasible; 0 iterations)
+  LP iterations     9077 (total)
+                    0 (strong br.)
+                    4400 (separation)
+                    0 (heuristics)
+SAVED_RESULT n34-m289-13537-label_compatible.solver.json 1

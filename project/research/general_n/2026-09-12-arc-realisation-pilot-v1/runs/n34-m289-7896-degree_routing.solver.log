@@ -1,0 +1,55 @@
+Running HiGHS 1.8.0 (git hash: 222cce7): Copyright (c) 2024 HiGHS under MIT licence terms
+Coefficient ranges:
+  Matrix [1e+00, 2e+01]
+  Cost   [0e+00, 0e+00]
+  Bound  [1e+00, 2e+01]
+  RHS    [1e+00, 2e+01]
+Presolving model
+3890 rows, 3058 cols, 17845 nonzeros  0s
+1387 rows, 3043 cols, 16117 nonzeros  0s
+1387 rows, 3043 cols, 16061 nonzeros  0s
+Objective function is integral with scale 1
+
+Solving MIP model with:
+   1387 rows
+   3043 cols (3013 binary, 30 integer, 0 implied int., 0 continuous)
+   16061 nonzeros
+MIP-Timing:       0.035 - starting analytic centre calculation
+
+Src: B => Branching; C => Central rounding; F => Feasibility pump; H => Heuristic; L => Sub-MIP;
+     P => Empty MIP; R => Randomized rounding; S => Solve LP; T => Evaluate node; U => Unbounded;
+     z => Trivial zero; l => Trivial lower; u => Trivial upper; p => Trivial point
+
+        Nodes      |    B&B Tree     |            Objective Bounds              |  Dynamic Constraints |       Work      
+Src  Proc. InQueue |  Leaves   Expl. | BestBound       BestSol              Gap |   Cuts   InLp Confl. | LpIters     Time
+
+         0       0         0   0.00%   0               inf                  inf        0      0      0         0     0.0s
+         0       0         0   0.00%   0               inf                  inf        0      0      2      1085     0.1s
+
+Symmetry detection completed in 0.0s
+Found 10 generator(s)
+
+        66       3        18   1.12%   0               inf                  inf      925     76   1000     42774     5.1s
+       173      21        61   1.12%   0               inf                  inf     1126    112   1209     87058    10.1s
+       207      26        77   1.12%   0               inf                  inf     1220     92   1293    138929    15.4s
+       374      36       155   1.12%   0               inf                  inf     2024    188   1609    185802    20.0s
+
+Solving report
+  Status            Time limit reached
+  Primal bound      inf
+  Dual bound        0
+  Gap               inf
+  P-D integral      0
+  Solution status   -
+  Timing            20.01 (total)
+                    0.00 (presolve)
+                    0.00 (solve)
+                    0.00 (postsolve)
+  Max sub-MIP depth 3
+  Nodes             374
+  Repair LPs        0 (0 feasible; 0 iterations)
+  LP iterations     185802 (total)
+                    0 (strong br.)
+                    4714 (separation)
+                    103361 (heuristics)
+SAVED_RESULT n34-m289-7896-degree_routing.solver.json 1

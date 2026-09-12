@@ -1,0 +1,90 @@
+{
+  "schema": "arc-model-storage-v1",
+  "encoding": "base64(gzip), mtime=0",
+  "files": {
+    "n34-m289-60-degree_routing.model.json": {
+      "stored_file": "n34-m289-60-degree_routing.model.json.gz.b64",
+      "original_bytes": 470050,
+      "original_sha256": "d800b697983d9d779db74ab77cd943cdcd365fb9ba82f7660a98e7526d3b7519",
+      "stored_bytes": 64608,
+      "stored_sha256": "43ec37838ae03605e36a4c41672914032be0b7f5551a980d10cfb4f4bc0ea2fb"
+    },
+    "n34-m289-60-label_compatible.model.json": {
+      "stored_file": "n34-m289-60-label_compatible.model.json.gz.b64",
+      "original_bytes": 1260878,
+      "original_sha256": "2545ff8097110f5eaafd7907b9c4504a01ab685d3da7a53c4db26e2eb1464098",
+      "stored_bytes": 161413,
+      "stored_sha256": "364e23b81ba8861849d3ed49932bbee2a23e477ed1c199fe66befbdf30e8a43a"
+    },
+    "n34-m289-7896-degree_routing.model.json": {
+      "stored_file": "n34-m289-7896-degree_routing.model.json.gz.b64",
+      "original_bytes": 621885,
+      "original_sha256": "7032e89c34ddbb864d0673c5950e5287925021f10d2ba97ff6685e0624ba4dc3",
+      "stored_bytes": 76538,
+      "stored_sha256": "0ed355a5177770bfd7273b3d5fc4a54ed055e3c85275c33c8744f54786658723"
+    },
+    "n34-m289-7896-label_compatible.model.json": {
+      "stored_file": "n34-m289-7896-label_compatible.model.json.gz.b64",
+      "original_bytes": 1428681,
+      "original_sha256": "aa844067e9536c67b524d59542b3c4492f082f2fc82b992af896b2139370243a",
+      "stored_bytes": 175901,
+      "stored_sha256": "d47d657a79efc2204ba48dfd799d88b8e45e82c65d8f102f1e60125f0a5e59de"
+    },
+    "n34-m289-13537-degree_routing.model.json": {
+      "stored_file": "n34-m289-13537-degree_routing.model.json.gz.b64",
+      "original_bytes": 795855,
+      "original_sha256": "ceda83c6c259cb0f609c66f76c18777d07de4b7828c80e1fef7cb41727665c7f",
+      "stored_bytes": 94958,
+      "stored_sha256": "2481b05bbd92cddb961f3df80b4e7091ba2c5f323e49b425d290fc58c87f8bf5"
+    },
+    "n34-m289-13537-label_compatible.model.json": {
+      "stored_file": "n34-m289-13537-label_compatible.model.json.gz.b64",
+      "original_bytes": 1727787,
+      "original_sha256": "32a7e8ef2a5ac413d74f026709c72065560789790dfda3cf377030a909f1a620",
+      "stored_bytes": 209209,
+      "stored_sha256": "3a266a5c6d0535c63a390481dd33b0bbff194af4dca6c5289536812fc8ad943b"
+    },
+    "n35-m306-17-degree_routing.model.json": {
+      "stored_file": "n35-m306-17-degree_routing.model.json.gz.b64",
+      "original_bytes": 675825,
+      "original_sha256": "e15d14cf2803983e35dcc54b6982e129477aa17f3522745414e120cb39dc90be",
+      "stored_bytes": 82913,
+      "stored_sha256": "8285280bd16700674f64ae17196284db600469291bfffcfb3304da9c29422dec"
+    },
+    "n35-m306-17-label_compatible.model.json": {
+      "stored_file": "n35-m306-17-label_compatible.model.json.gz.b64",
+      "original_bytes": 1586745,
+      "original_sha256": "87edb16a52f20dec44fd3ae883092029fec5425df3e28ec3e72d9ad20b16f34c",
+      "stored_bytes": 194928,
+      "stored_sha256": "41109714072417018077057a1e074dbe7ddcffac81a2e5c9e8deb4bede9a0df6"
+    },
+    "n35-m306-246-degree_routing.model.json": {
+      "stored_file": "n35-m306-246-degree_routing.model.json.gz.b64",
+      "original_bytes": 721496,
+      "original_sha256": "e3a97d071c5653c6c29205f94ce755c204bb05176b872cafc031cf05cabececd",
+      "stored_bytes": 87785,
+      "stored_sha256": "58201dd69c4815a5bf31918cec5706a8bc1f74ea033cc9a12befd411c6536837"
+    },
+    "n35-m306-246-label_compatible.model.json": {
+      "stored_file": "n35-m306-246-label_compatible.model.json.gz.b64",
+      "original_bytes": 1662288,
+      "original_sha256": "db24b411f43596d4fecbd719d032078eb7ca9287177cf90e742e01c23a2ba352",
+      "stored_bytes": 203167,
+      "stored_sha256": "92c43d7ec416c946f2b2204e2988cdbc154589ca2eba1134dfdb4c039a8006fb"
+    },
+    "n35-m306-454-degree_routing.model.json": {
+      "stored_file": "n35-m306-454-degree_routing.model.json.gz.b64",
+      "original_bytes": 856488,
+      "original_sha256": "a74b6ba6f819354aad8f369c5406447bc0973b7a2446a2318a33734419a7b823",
+      "stored_bytes": 99630,
+      "stored_sha256": "8c7858057844e6cc31a38992e361f61ddd30116160039dbdd8be144fbf020706"
+    },
+    "n35-m306-454-label_compatible.model.json": {
+      "stored_file": "n35-m306-454-label_compatible.model.json.gz.b64",
+      "original_bytes": 1849430,
+      "original_sha256": "038c19a214c62184cd02c1b90f7d199d7ff4f7b8fb52cb45f3e2c411eb9c58b5",
+      "stored_bytes": 220974,
+      "stored_sha256": "ad317923d0547d71831d1c614dca88e2c99ce1749dee6dcdde7f54b55aa61448"
+    }
+  }
+}

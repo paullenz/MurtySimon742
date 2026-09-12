@@ -1,0 +1,47 @@
+Running HiGHS 1.8.0 (git hash: 222cce7): Copyright (c) 2024 HiGHS under MIT licence terms
+Coefficient ranges:
+  Matrix [1e+00, 2e+01]
+  Cost   [0e+00, 0e+00]
+  Bound  [1e+00, 2e+01]
+  RHS    [1e+00, 2e+01]
+Presolving model
+7121 rows, 2854 cols, 31645 nonzeros  0s
+5756 rows, 2854 cols, 29773 nonzeros  0s
+Objective function is integral with scale 1
+
+Solving MIP model with:
+   5756 rows
+   2854 cols (2825 binary, 29 integer, 0 implied int., 0 continuous)
+   29773 nonzeros
+MIP-Timing:       0.062 - starting analytic centre calculation
+
+Src: B => Branching; C => Central rounding; F => Feasibility pump; H => Heuristic; L => Sub-MIP;
+     P => Empty MIP; R => Randomized rounding; S => Solve LP; T => Evaluate node; U => Unbounded;
+     z => Trivial zero; l => Trivial lower; u => Trivial upper; p => Trivial point
+
+        Nodes      |    B&B Tree     |            Objective Bounds              |  Dynamic Constraints |       Work      
+Src  Proc. InQueue |  Leaves   Expl. | BestBound       BestSol              Gap |   Cuts   InLp Confl. | LpIters     Time
+
+         0       0         0   0.00%   0               inf                  inf        0      0      0         0     0.1s
+         0       0         0   0.00%   0               inf                  inf        0      0     14      1811     0.4s
+         0       0         0   0.00%   0               inf                  inf      316     77    507     63007    20.0s
+
+Solving report
+  Status            Time limit reached
+  Primal bound      inf
+  Dual bound        0
+  Gap               inf
+  P-D integral      0
+  Solution status   -
+  Timing            20.00 (total)
+                    0.00 (presolve)
+                    0.00 (solve)
+                    0.00 (postsolve)
+  Max sub-MIP depth 1
+  Nodes             0
+  Repair LPs        0 (0 feasible; 0 iterations)
+  LP iterations     63007 (total)
+                    0 (strong br.)
+                    2827 (separation)
+                    58369 (heuristics)
+SAVED_RESULT n34-m289-60-label_compatible.solver.json 1

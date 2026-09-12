@@ -72,6 +72,12 @@ now reduces each local sender-class maximum to at most 59 explicit candidate
 values and allows the eligibility cutoff to vary. That fixed-weight family
 explains 832 already excluded cases and adds zero frontier exclusions; all
 4,584 combined survivors remain recorded.
+A [simultaneous-routing continuation](releases/general-arc-realisation-reviewer-v1/README.md)
+now gives a general integer-flow criterion once the selected/residual cross
+neighbourhoods are fixed. All twelve bounded solver attempts on six survivors
+remain unresolved. Fixed-pattern obstructions are preserved with their limits:
+the constructed probes already fail weaker load checks. No whole-state
+exclusions are added; the new contribution is a conditional routing reduction.
 
 ## Failures, audit challenges and corrections are part of the record
 
@@ -123,6 +129,7 @@ available for that scrutiny.
 | Compatible destination routing | Candidate general eligibility and mixed-traffic inequalities; reviewer-v1. Frozen 29-state pilot: 19 exact exclusions, including 16 beyond selected-degree retention; 10 survivors. Mixed cuts add zero further states. Full-pool continuation below; external review OPEN. |
 | Compatible routing: full catalogue | Frozen 20 seed vectors and control projections: 990/5,578 catalogue exclusions; four retained pilot-only witnesses give 994 combined exclusions and 4,584 survivors. One fixed potential covers 707 cases and has a general analytic reduction. Reviewer-v1; external review OPEN. |
 | Closed compatible potential | Candidate general exact formula: at most 59 candidate values per residual/sender class, with variable eligibility cutoff. Full fixed-weight family excludes 832 previously handled cases; zero new combined exclusions, 4,584 survivors. Reviewer-v1; external review OPEN. |
+| Fixed-neighbourhood routing flow | Candidate exact B-side routing criterion for fixed selected/residual cross sets, with checked Hall obstructions. Six-state/twelve-run pilot unresolved; no whole-state exclusions added, 4,584 survivors. Reviewer-v1; external review OPEN. |
 | General maximum-degree result | Candidate theorem: `n >= 6` and `Delta(G) >= (7/12)n` imply `e(G) < floor(n^2/4)`; complete candidate hand argument with internal exact audits green; external review and novelty assessment open |
 | RX-Hall / monotone-potential programme | Active finite-to-symbolic programme. It is **not** an unrestricted theorem. It supplies general structural experiments and proof-critical exact finite exclusions in N32, N33, N34 and N35. Floating infeasibility is not accepted as a proof event. |
 
@@ -133,6 +140,35 @@ separates correctness, originality, validation of existing general candidates,
 further general advances and a complete proof. Its forecasts are explicitly
 subjective, with a stated horizon and sensitivity scenarios; they are not
 mathematical evidence or external endorsement.
+
+## Simultaneous routing and fixed-neighbourhood flow
+
+The [arc-realisation reviewer-v1 package](releases/general-arc-realisation-reviewer-v1/README.md)
+proves a candidate conditional criterion: for fixed selected sets S_u and
+cross-neighbour sets N_u, the pair u->v can carry label i exactly when
+S_u minus N_v={i} and S_v is contained in N_u. These conditions determine
+its label and forbid the reverse orientation. An integer flow then either
+routes every selected incidence or supplies a checkable Hall obstruction.
+This solves B-side routing for those fixed sets; it does not choose the sets
+or construct a complete diameter-two edge-critical graph.
+
+The bounded pilot searched six frozen survivors with two simultaneous models.
+All twelve runs reached a time limit without an incumbent. Twelve deterministic
+cross patterns have exact flow obstructions, but all already fail minimum
+endpoint loads and have incidences with no eligible destination. They do not
+demonstrate new strength over the earlier frontier bounds. **Zero whole-state
+exclusions are added: the combined record stays at 994 exclusions and 4,584
+survivors.**
+
+The flow criterion agrees with exhaustive assignment checking on 729 tiny
+cross patterns. A further 5,024 compatible patterns challenge its implications,
+and 8,192 cases check the linear models against direct combinatorial objects.
+All original models, solver logs, timeouts, certificates and limitations are
+preserved in the [audit](project/research/general_n/2026-09-12-arc-realisation-pilot-v1/AUDIT.md).
+The next search should construct cross-neighbourhoods satisfying minimum
+endpoint loads and supplying compatible exceptions before applying flow cuts.
+External mathematical review and novelty remain OPEN; fixed-order ledgers,
+the 7/12 candidate and forecasts are unchanged.
 
 ## Closed compatible potential and review
 
@@ -157,8 +193,7 @@ for recorded winning thresholds; the extra cutoff-2 case occurs at a later
 threshold and was already excluded. This continuation simplifies the general
 formula and records the limit of cutoff variation under these fixed weights.
 
-The next bounded target is actual arc allocation on a small survivor sample:
-can the locally allowed capacities coexist in one routing? All failures,
+The simultaneous-routing continuation above now tests that next question. All failures,
 original evidence and survivor lists are preserved in the [review and audit](project/research/general_n/2026-09-12-closed-compatible-potential-v1/AUDIT.md).
 The fixed-order ledgers, 7/12 candidate and forecasts remain unchanged.
 
@@ -700,6 +735,7 @@ Historical packages remain preserved. N31, N32, N33, N34 and N35 are currently s
 | Compatible destination routing | [Reviewer-v1 source package](releases/general-compatible-routing-reviewer-v1/README.md) | [Compact hand proof](project/research/general_n/2026-09-12-compatible-routing-pilot-v1/COMPACT_EXAMPLE.md); [audit and bounded pilot](project/research/general_n/2026-09-12-compatible-routing-pilot-v1/AUDIT.md) |
 | Compatible routing: full catalogue | [Reviewer-v1 source package](releases/general-compatible-catalogue-reviewer-v1/README.md) | [Analytic reduction](project/research/general_n/2026-09-12-compatible-routing-catalogue-v1/FIXED_POTENTIAL.md); [full replay and audit](project/research/general_n/2026-09-12-compatible-routing-catalogue-v1/README.md) |
 | Closed compatible potential | [Reviewer-v1 source package](releases/general-closed-compatible-reviewer-v1/README.md) | [General closed formula](project/research/general_n/2026-09-12-closed-compatible-potential-v1/CLOSED_POTENTIAL.md); [review and negative frontier result](project/research/general_n/2026-09-12-closed-compatible-potential-v1/AUDIT.md) |
+| Fixed-neighbourhood routing flow | [Reviewer-v1 source package](releases/general-arc-realisation-reviewer-v1/README.md) | [Conditional general criterion](project/research/general_n/2026-09-12-arc-realisation-pilot-v1/FIXED_NEIGHBOURHOOD_FLOW.md); [timeouts, fixed-pattern limits and audit](project/research/general_n/2026-09-12-arc-realisation-pilot-v1/AUDIT.md) |
 | General step-back | [Balanced-degree / fixed-a source package](releases/general-stepback-v1/README.md) | [Internal audit](project/reviews/general-theory/2026-09-12-stepback-v1/HOSTILE_AUDIT.md) |
 | Joint clipping / historical N34 upper layers | [Reviewer-v1 source package](releases/general-joint-clipping-reviewer-v1/README.md) | [Focused foundations audit](project/reviews/general-theory/2026-09-12-joint-followthrough-v1/FOUNDATIONS_AUDIT.md); [N34 exact verification](project/research/n34/2026-09-12-frontier-v1/upper_layer_verification.json) |
 | General 293/500 | [Reviewer manuscript](releases/general-293-500-reviewer-v1/General_293_500_Reviewer_Manuscript_v1.pdf) | [Verification companion](releases/general-293-500-reviewer-v1/General_293_500_Verification_Companion_v1.pdf) |
