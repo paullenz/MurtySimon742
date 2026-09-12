@@ -25,7 +25,7 @@ The repository currently contains complete candidate fixed-order Murty–Simon r
 - `n=32`: `e(G) <= 256`, equality only `K(16,16)`;
 - `n=33`: `e(G) <= 272`, equality only `K(16,17)`.
 
-The canonical reviewer packages are indexed in [`releases/REVIEW_READY_INDEX.md`](releases/REVIEW_READY_INDEX.md). The current fixed-order editions are Fan-free reviewer-v2 at `n=25,27,28`, reviewer-v4 at `n=29`, reviewer-v3 at `n=30`, and source-first reviewer-v1 packages at `n=31,32,33`.
+The canonical reviewer packages are indexed in [`releases/REVIEW_READY_INDEX.md`](releases/REVIEW_READY_INDEX.md). The current fixed-order editions are Fan-free reviewer-v2 at `n=25,27,28`, reviewer-v4 at `n=29`, reviewer-v3 at `n=30`, source-first reviewer-v1 packages at `n=31,32,33`, and bound reviewer-v1 at `n=34` (equality OPEN).
 
 N29 has no proof-critical computation. N30 combines hand lemmas with explicit finite integer tables. N31 is predominantly hand/structural. N32 uses hand reductions plus exact finite replay in the difficult `Delta=17` branch. N33 is again compact: the sole new equality frontier has only 29 residual states, 25 exact shifted-potential exclusions and four hand contradictions.
 
@@ -41,7 +41,7 @@ The active RX-Hall / monotone-potential programme has exact finite compression r
 
 No unrestricted all-order proof is claimed anywhere in the repository.
 
-## New general structure and partial n=34 work
+## New general structure and n=34 upper bound
 
 The [general step-back package](releases/general-stepback-v1/README.md) includes
 the balanced-degree theorem for all n>=7 and the a=14 infinite family. The
@@ -49,12 +49,15 @@ the balanced-degree theorem for all n>=7 and the a=14 infinite family. The
 adds sharp scalar tail bounds for a=17..23 and a general tight-threshold hand
 obstruction. These results include proof-critical finite arithmetic where stated.
 
-The [n=34 partial route](project/research/n34/2026-09-12-frontier-v1/README.md)
-excludes all graphs with at least 291 edges within the current candidate
-dependencies. Its bound is **290**, one edge above the conjectured bound.
-The 289- and 290-edge Delta=18 layers remain OPEN; no complete N34 result is claimed.
+The [N34 bound reviewer-v1 package](releases/n34-bound-reviewer-v1/README.md)
+now establishes the **candidate conjectured bound e(G)<=289**. All 1,614
+290-edge states have exact exclusions: 662 hand/accounting and 952 integer
+certificates. The [new internal audit](project/research/n34/2026-09-12-m290-v1/AUDIT.md)
+checks the exact residual budget, zero-demand handling and heavy-label subset lemma.
+Equality classification remains OPEN, with 13,546 conservative Delta=18
+states at 289 edges. Complete bound-and-equality packages still reach n=33.
 
-For the newest review pass, start with the
+For the preceding general-foundations review pass, see the
 [focused foundations checklist](project/reviews/general-theory/2026-09-12-joint-followthrough-v1/FOUNDATIONS_AUDIT.md).
 It checks the primary dominating-edge theorem's exception, the witness-capacity
 injection, the entire canonical bridge and the new exact certificates. It also

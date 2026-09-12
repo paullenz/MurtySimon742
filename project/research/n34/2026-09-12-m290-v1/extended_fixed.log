@@ -1,0 +1,26 @@
+10 {'hand': 4, 'certificates': 6, 'unresolved': 0}
+20 {'hand': 8, 'certificates': 12, 'unresolved': 0}
+30 {'hand': 10, 'certificates': 20, 'unresolved': 0}
+40 {'hand': 13, 'certificates': 22, 'unresolved': 5}
+50 {'hand': 13, 'certificates': 23, 'unresolved': 14}
+60 {'hand': 18, 'certificates': 23, 'unresolved': 19}
+70 {'hand': 18, 'certificates': 23, 'unresolved': 29}
+80 {'hand': 21, 'certificates': 23, 'unresolved': 36}
+90 {'hand': 26, 'certificates': 25, 'unresolved': 39}
+100 {'hand': 30, 'certificates': 29, 'unresolved': 41}
+110 {'hand': 34, 'certificates': 33, 'unresolved': 43}
+120 {'hand': 35, 'certificates': 35, 'unresolved': 50}
+130 {'hand': 35, 'certificates': 37, 'unresolved': 58}
+140 {'hand': 35, 'certificates': 37, 'unresolved': 68}
+150 {'hand': 35, 'certificates': 37, 'unresolved': 78}
+160 {'hand': 35, 'certificates': 37, 'unresolved': 88}
+170 {'hand': 41, 'certificates': 37, 'unresolved': 92}
+180 {'hand': 45, 'certificates': 37, 'unresolved': 98}
+190 {'hand': 45, 'certificates': 37, 'unresolved': 108}
+200 {'hand': 45, 'certificates': 37, 'unresolved': 118}
+210 {'hand': 45, 'certificates': 38, 'unresolved': 127}
+220 {'hand': 49, 'certificates': 38, 'unresolved': 133}
+230 {'hand': 50, 'certificates': 43, 'unresolved': 137}
+240 {'hand': 51, 'certificates': 48, 'unresolved': 141}
+242 {'hand': 51, 'certificates': 49, 'unresolved': 142}
+COMPLETE 242

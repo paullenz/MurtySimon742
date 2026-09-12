@@ -1,0 +1,39 @@
+{
+  "schema": "n34-bound-validation-v1",
+  "date": "2026-09-12",
+  "baseline_commit": "09bf515a30c2918db019eaca252c7ecff05c57d7",
+  "clean_replay": {
+    "status": "PASS",
+    "proof_artifact_tree": "e5968b98314b44638153d77156e6d5dbd9c49a3f",
+    "archive_sha256": "5ed440da144b48fcbc3682666c00bb7a7ffca3b8e1cb6cf3055e5c15f88518d0",
+    "commands": [
+      {
+        "command": "python project/research/n34/2026-09-12-m290-v1/verify.py",
+        "exit_code": 0,
+        "stdout": "{\n  \"schema\": \"n34-m290-solver-free-verification-v1\",\n  \"status\": \"PASS\",\n  \"frontier\": {\n    \"profiles\": 337,\n    \"states\": 1614,\n    \"positive_demand_states\": 1585,\n    \"zero_demand_states\": 29\n  },\n  \"exclusions\": {\n    \"positive_degree_mass\": 463,\n    \"tight_total_threshold\": 148,\n    \"baseline_certificates\": 761,\n    \"tight_subset_threshold\": 51,\n    \"fixed_certificates\": 49,\n    \"adaptive_certificates\": 142\n  },\n  \"local_integer_checks\": 431338,\n  \"certificate_gaps\": {\n    \"baseline\": {\n      \"count\": 761,\n      \"worst_integer_gap\": -9858\n    },\n    \"fixed\": {\n      \"count\": 49,\n      \"worst_integer_gap\": -9866\n    },\n    \"adaptive\": {\n      \"count\": 142,\n      \"worst_integer_gap\": -9535\n    }\n  },\n  \"covered_states\": 1614,\n  \"unresolved_states\": 0,\n  \"candidate_consequence\": \"e(G)<=289 for n=34; equality classification OPEN\",\n  \"external_review\": \"OPEN\"\n}\n",
+        "stderr": ""
+      },
+      {
+        "command": "python project/research/n34/2026-09-12-frontier-v1/verify_upper_layers.py",
+        "exit_code": 0,
+        "stdout": "t 3 {'expected_states': 110, 'exact_exclusions': 109, 'hand_exclusions': 1, 'unresolved': 0, 'hand': [{'s': (5, 5, 5, 5, 5, 5, 5, 5, 5, 6, 6, 6, 6, 6, 6), 'rho': (1, 1, 1, 1, 1, 4, 5, 5, 5, 5, 5, 5, 6, 6, 6, 6, 6, 6), 'contradiction': {'h': 2, 'z': 13, 'S': 81, 'r': 75, 'incoming_lower': 75, 'incoming_upper': 57}}], 'local_integer_checks': 39709, 'worst_gap': -9897}\nt 4 {'expected_states': 2, 'exact_exclusions': 2, 'hand_exclusions': 0, 'unresolved': 0, 'hand': [], 'local_integer_checks': 530, 'worst_gap': -9967}\n",
+        "stderr": ""
+      },
+      {
+        "command": "python releases/n34-bound-reviewer-v1/check_manifest.py",
+        "exit_code": 0,
+        "stdout": "PASS: 45 artifact hashes\n",
+        "stderr": ""
+      }
+    ],
+    "note": "Final packaging subsequently adds this receipt and refreshes its manifest; proof artifacts are unchanged."
+  },
+  "reviewer_consistency": {
+    "markdown_files": 60,
+    "relative_links_checked": 299,
+    "missing_links": [],
+    "current_package": "releases/n34-bound-reviewer-v1/README.md",
+    "candidate_bound": 289,
+    "equality_classification": "OPEN"
+  }
+}

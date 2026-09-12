@@ -1,5 +1,7 @@
 # N34: partial upper bound and explicit remaining frontier
 
+> Historical upper-layer checkpoint. The [current N34 bound package](../2026-09-12-m290-v1/README.md) closes the 290-edge branch and gives the candidate bound 289; equality classification remains OPEN. The result and state counts below record this earlier checkpoint.
+
 12 September 2026. Research direction: Paul Lenz. Development, computation and
 internal checking: ChatGPT/Geeps.
 
