@@ -1,8 +1,8 @@
 # Murty–Simon / Erdős #742 — current state handoff
 
-**Purpose.** This is the short durable handoff for restarting research after a chat reset, context loss or client desynchronisation. The repository, not any chat transcript, is the source of truth. Read this file first, then inspect commits newer than the baseline below, then follow the linked canonical reviewer/research packages.
+**Purpose.** This is the short durable handoff for restarting research after a chat reset, context loss or client desynchronisation. The repository, not any chat transcript, is the source of truth. Read this file first, inspect commits newer than the research baseline below, then follow the linked canonical packages.
 
-**State reconstructed:** 13 September 2026 from public `main` through commit `a4e025e88432953d3a51b7cb5c1f30aa990ee5ff` (`Record verified publication of the fixed-neighbourhood routing flow criterion`). If `main` is newer, reconcile this file against all later commits before continuing.
+**Research state reconciled:** 13 September 2026 through commit `882a43fa222e890537d34c044ee5f0877b61210a`, including the constraint-respecting cross-neighbourhood continuation and its co-singleton/containment-spill theory. If `main` is newer, reconcile every later result, correction or failed experiment before continuing.
 
 External mathematical review, novelty assessment and independent computational reproduction remain OPEN unless a later preserved checkpoint explicitly changes that status. Internal replay, same-assistant audit and repository publication are not external acceptance.
 
@@ -32,9 +32,12 @@ Current candidate general results include:
 - general heavy-load/routing inequalities for every heavy threshold `h`, including incoming-degree penalties and the low-demand consequence `s_i<=2, t>0, b-a<=5 => 9t+4(b-a)<=a`;
 - joint heavy-routing inequalities coupling sender counts, destination indegrees and pair capacity;
 - demand/tail projection and equality-rigidity lemmas;
-- destination-compatibility inequalities and the full compatible-routing catalogue;
-- closed compatible potentials with an exact local-maxima reduction;
-- fixed-neighbourhood B-side routing as an exact integer-flow/Hall criterion once selected/residual cross-neighbourhoods are fixed.
+- destination-compatibility inequalities, the full compatible-routing catalogue and the closed compatible potential;
+- fixed-neighbourhood B-side routing as an exact integer-flow/Hall criterion once selected/residual cross-neighbourhoods are fixed;
+- **co-singleton trace hierarchy:** for every `T subset S_u`, `|T|=k>=1`, exact compatibility forces at least `q_u-k+1` B cross-neighbourhoods containing `T`, yielding higher-order moment inequalities;
+- **receiver-containment spill inequality:** a candidate hand projection of the exact condition `S_v subset N_u` to the scalar profile `(a,b,s,rho,q)`. For source `u`, actual selected mass outside `N_u` is bounded below from demand/eligibility totals and above by the maximum outside mass that can be placed while retaining `q_u` contained candidate receivers.
+
+The co-singleton pair moment is genuinely stronger than endpoint loads on abstract cross data: the preserved five-label/seven-source example satisfies every individual endpoint load but has pair moment `16<18`.
 
 The unrestricted Murty–Simon conjecture is **not** proved by this project.
 
@@ -47,54 +50,59 @@ The joint-routing continuation left `5,578` states in the frozen generalisation 
 
 These are survivors of a proposed general simplification, not surviving graphs and not open N34/N35 proof obligations.
 
-The closed compatible-potential continuation adds **zero** new exclusions beyond those 994. Its value is the exact general formula and analytic reduction.
+The closed compatible-potential continuation adds zero new exclusions beyond those 994. The fixed-neighbourhood routing-flow pilot also adds zero whole-state exclusions.
 
-The fixed-neighbourhood routing-flow pilot also adds **zero** whole-state exclusions. All 12 solver attempts on six frozen survivors timed out without an incumbent. Twelve deterministic fixed-cross probes have exact Hall obstructions, but every one already violates minimum endpoint-load constraints; they therefore demonstrate no new strength over the previous frontier bounds.
+The 13 September constraint-respecting continuation likewise adds **zero whole-state exclusions so far**. Its key bounded findings are:
 
-Canonical latest package: [`releases/general-arc-realisation-reviewer-v1/README.md`](releases/general-arc-realisation-reviewer-v1/README.md).
+- broad fixed-selected-pattern residual/compatibility searches found no complete compatible cross pattern in the frozen sample, but negative solver statuses are preserved only as exploratory evidence, never proof;
+- a directly checkable N34 state-60 partial pattern has exact demands/residual source degrees, no minimum endpoint-load violation, and **19 of 37** obligations with nonempty exact compatible-destination sets (20 eligible ordered pairs); 19 is not proved optimal;
+- deterministic reconnaissance of the new spill inequality on 2,000 exact-demand selected patterns per frozen state cuts **173/2,000** patterns (183 source-level violations) in N34 state 13537 and zero in the other five sampled states. This is not exhaustive state coverage.
+
+Current continuation: [`project/research/general_n/2026-09-13-constraint-respecting-cross-v1/README.md`](project/research/general_n/2026-09-13-constraint-respecting-cross-v1/README.md). Hand theory: [`CONTAINMENT_SPILL.md`](project/research/general_n/2026-09-13-constraint-respecting-cross-v1/CONTAINMENT_SPILL.md).
 
 ## Most important unresolved correctness obligations
 
 1. **External review of the shared foundations/canonical bridge.** Many later results share graph-to-model implications, so this is the main correlated correctness risk.
-2. External review and novelty assessment of the candidate `7/12` theorem and the other general lemmas.
+2. External review and novelty assessment of the candidate `7/12` theorem and the other general lemmas, including the new trace/spill projection.
 3. Independent reproduction of proof-critical computations where a reviewer regards them as material.
-4. Continue preserving failures, counterexamples to proposed lemmas, bugs, corrections and negative experiments. Never treat a timeout, solver noncompletion or floating infeasibility report as proof.
+4. Continue preserving failures, counterexamples to proposed lemmas, bugs, corrections and negative experiments. Never treat a timeout, solver noncompletion or raw infeasibility status as proof.
 
 ## Current research diagnosis
 
-The main obstacle is now structural rather than raw finite arithmetic. Fixed-order proving through N35 is strong enough that the highest-value work is to explain why the finite machinery succeeds and project those explanations to parameter-uniform statements.
+The main obstacle is structural rather than raw finite arithmetic. Exact destination compatibility contains information that the earlier scalar routing models discard: an actual exception `w_i` must satisfy both
 
-The latest routing theorem separates two questions:
+```text
+S_u \ N_(w_i)={i},
+S_(w_i) subset N_u.
+```
 
-1. choose selected/residual cross-neighbourhoods satisfying the earlier graph-derived constraints;
-2. for those fixed sets, route all selected incidences via the exact compatibility/flow criterion.
+The first condition creates all co-singleton traces of `S_u`; the second creates receiver-containment pressure. The new spill inequality is the first hand projection found in this continuation that retains part of that second condition while eliminating the actual label sets.
 
-The first bounded pilot failed because its deterministic cross-pattern construction did **not** enforce minimum endpoint loads or nonempty compatible destinations before testing routing. The next experiment must correct that design rather than merely spend more solver time on the old formulation.
+This is the best immediate avenue because it can be tested against the complete preserved `q`/source-option domain without constructing full cross-neighbourhoods.
 
 ## Next three research tasks — priority order
 
-### P1. Constraint-respecting cross-neighbourhood construction
+### P1. Exact full-domain spill integration
 
-Freeze a small heterogeneous sample from the 4,584 survivor pool, including N34 and N35 states and materially different demand/residual profiles. Construct cross-neighbourhoods while enforcing, before any routing test:
+Add the receiver-containment spill inequality to the **complete preserved selected-degree/source-option domain** underlying the 4,584 compatible-routing survivors. Use exact integer arithmetic and complete coverage, not randomized sampling.
 
-- exact selected/residual source degrees;
-- the preserved source/demand restrictions;
-- all minimum endpoint-load inequalities;
-- at least one genuinely compatible destination/exception for every selected incidence;
-- the fixed-neighbourhood pair-compatibility conditions;
-- any already-proved heavy-source/destination restrictions that are logically prior to routing.
+Determine separately:
 
-Then apply the exact fixed-neighbourhood integer-flow/Hall test. Preserve the frozen sample, constructor, every outcome and every failed attempt. A fixed-pattern obstruction is not a whole-state exclusion unless the search quantifies over the full admissible pattern domain.
+- how many local `q` configurations the new cut removes;
+- whether any whole states lose every admissible `q` configuration;
+- whether the cut strengthens the recurring/closed compatible potential even where it does not exclude a whole state.
 
-### P2. Extract a profile-level Hall inequality
+Preserve the full before/after domain, exact witnesses and all zero-gain results. Do not count a state exclusion unless every admissible branch is covered.
 
-For any nontrivial failed routing instance, study the deficient Hall set as a mathematical object. Seek a bound on the union of compatible destination sets using only profile data such as `s`, `rho`, `a`, `b`, `t`, heavy-sender counts and existing tail variables. The target is a parameter-uniform hand lemma eliminating cross-neighbourhood variables, not merely another finite certificate.
+### P2. Extract a simpler demand/tail consequence
 
-A successful routing instance is also useful: inspect which structural feature permits routing and identify the next missing graph constraint.
+If P1 produces exact exclusions, inspect the first and most common spill witnesses for a projection eliminating `q` as well. Seek a hand inequality in `s,rho,a,b,t` or residual tails analogous to earlier successful certificate-to-theory reductions.
 
-### P3. Use later orders only as structural laboratories
+Also test the higher-order trace moments (`k=2` first) on the complete domain. Their usefulness should be judged by exact coverage, not sample frequency.
 
-Do not make N36 the primary target merely to extend the finite sequence. Attack N36 (or later orders) when it provides a clean testbed for a new general mechanism, a boundary case for a proposed lemma, or a way to falsify an over-generalisation.
+### P3. Return to constructive cross-neighbourhood/Hall search with the new cuts
+
+After applying the new profile cuts, resume complete-compatible-cross construction on a small frozen heterogeneous sample. Require endpoint loads and at least one exact compatible destination before routing; then apply the exact Hall flow. A successful cross pattern or a genuinely collective Hall deficit is valuable. Use N36 only as a structural laboratory, not as the primary target.
 
 ## Research/preservation rules for every continuation
 
@@ -104,7 +112,7 @@ The standing orders in [`project/N25_PROJECT_STANDING_ORDERS.md`](project/N25_PR
 - preserve code, exact parameters, inputs, outputs, survivor lists, hashes, commands, certificates and environment information where applicable;
 - record unsuccessful searches and invalidated arguments rather than deleting them;
 - distinguish mathematical proof status, exact replay, internal audit, publication and external review;
-- update `README.md` and reviewer entry points when a material frontier change occurs;
+- update `README.md` and reviewer entry points when a material frontier or theory change occurs;
 - verify committed paths and reviewer/version consistency after publication;
 - routine research commits to `paullenz/MurtySimon742` `main` are authorised without asking again; use non-forced updates.
 
@@ -113,7 +121,7 @@ The standing orders in [`project/N25_PROJECT_STANDING_ORDERS.md`](project/N25_PR
 On a fresh chat/session:
 
 1. open this file;
-2. inspect `main` commits newer than the baseline recorded at the top;
+2. inspect `main` commits newer than the research baseline recorded at the top;
 3. reconcile any later result, correction or failed experiment into this handoff;
 4. read the latest linked reviewer/research package relevant to the active task;
 5. continue from the first unfinished priority above rather than reconstructing status from conversational memory;
