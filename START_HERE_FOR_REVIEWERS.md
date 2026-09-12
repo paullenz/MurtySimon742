@@ -1,6 +1,6 @@
 # Start here for reviewers
 
-**Updated 11 September 2026.**
+**Updated 12 September 2026.**
 
 ## What this repository is
 
@@ -21,8 +21,10 @@ The repository currently contains complete candidate fixed-order Murty–Simon r
 - `n=28`: `e(G) <= 196`, equality only `K(14,14)`;
 - `n=29`: `e(G) <= 210`, equality only `K(14,15)`;
 - `n=30`: `e(G) <= 225`, equality only `K(15,15)`.
+- `n=31`: `e(G) <= 240`, equality only `K(15,16)`;
+- `n=32`: `e(G) <= 256`, equality only `K(16,16)`.
 
-The canonical PDF reviewer packages are indexed in [`releases/REVIEW_READY_INDEX.md`](releases/REVIEW_READY_INDEX.md). The current fixed-order editions are Fan-free reviewer-v2 at `n=25,27,28`, **reviewer-v4 at `n=29`**, and **reviewer-v3 at `n=30`**. N29 has no proof-critical computation; N30 combines hand lemmas with explicit finite integer tables.
+The canonical reviewer packages are indexed in [`releases/REVIEW_READY_INDEX.md`](releases/REVIEW_READY_INDEX.md). The current fixed-order editions are Fan-free reviewer-v2 at `n=25,27,28`, **reviewer-v4 at `n=29`**, **reviewer-v3 at `n=30`**, and source-first **reviewer-v1 packages at `n=31,32`**. N29 has no proof-critical computation; N30 combines hand lemmas with explicit finite integer tables; N31 is predominantly hand/structural; N32 uses hand reductions plus exact finite replay in the difficult `Delta=17` branch.
 
 The strongest current reviewer-packaged general candidate is
 
@@ -35,6 +37,27 @@ Start with [`releases/general-7-12-reviewer-v1/README.md`](releases/general-7-12
 The active RX-Hall / 3-D potential programme is attempting to go below the `7/12` frontier by retaining more joint profile information. It has exact finite compression results, but **no unrestricted theorem is claimed from that programme yet**.
 
 No unrestricted all-order proof is claimed anywhere in the repository.
+
+## n=31 and n=32 fixed-order extensions
+
+### n=31
+
+Candidate `e(G)<=240`, equality exactly `K(15,16)`.
+
+- [`releases/n31-reviewer-v1/README.md`](releases/n31-reviewer-v1/README.md)
+- [`project/research/n31/2026-09-11-hand-route-v1/PROOF.md`](project/research/n31/2026-09-11-hand-route-v1/PROOF.md)
+- [`project/research/n31/2026-09-11-hand-route-v1/HOSTILE_AUDIT.md`](project/research/n31/2026-09-11-hand-route-v1/HOSTILE_AUDIT.md)
+
+### n=32
+
+Candidate `e(G)<=256`, equality exactly `K(16,16)`.
+
+- [`releases/n32-reviewer-v1/README.md`](releases/n32-reviewer-v1/README.md)
+- [`project/reviews/n32/2026-09-12-reviewer-v1/PROOF.md`](project/reviews/n32/2026-09-12-reviewer-v1/PROOF.md)
+- [`project/reviews/n32/2026-09-12-reviewer-v1/HOSTILE_AUDIT.md`](project/reviews/n32/2026-09-12-reviewer-v1/HOSTILE_AUDIT.md)
+- [`project/research/n32/2026-09-12-equality-v1/CERTIFICATION_LEDGER.md`](project/research/n32/2026-09-12-equality-v1/CERTIFICATION_LEDGER.md)
+
+For N32 the highest-value external targets are the shared selected/residual bridge, threshold-capacity equality, endpoint load, the t=1 residual-tail expansion and the strengthened zero-demand model. Exact replay is important implementation evidence but is not a substitute for reviewing those implications.
 
 ## n=25: the natural fixed-order paper to inspect
 
@@ -52,7 +75,7 @@ The principal remaining question is therefore not whether the arithmetic replay 
 
 ## Robustness milestone: Fan-free fixed-order proofs and analytic hardening
 
-A hostile external-AI critique questioned both selected/residual semantics and the use of G. Fan's 1987 density theorem as an edge-count cap. The semantic objections were re-audited and resolved explicitly in the current proof text. The project then removed Fan as a **logical dependency** from its current fixed-order candidate proofs at `n=25,27,28,29,30`, while retaining Fan's theorem as historical attribution and preserving every reviewer-v1/proof source unchanged.
+A hostile external-AI critique questioned both selected/residual semantics and the use of G. Fan's 1987 density theorem as an edge-count cap. The semantic objections were re-audited and resolved explicitly in the current proof text. The project then removed Fan as a **logical dependency** from its current fixed-order candidate proofs at `n=25,27,28,29,30,31,32`, while retaining Fan's theorem as historical attribution and preserving every reviewer-v1/proof source unchanged.
 
 The direct replacement is [`FAN_FREE_REDUCTION.md`](project/research/fan-free-fixed-orders/2026-09-09-v1/FAN_FREE_REDUCTION.md), and its assembled edge-range/source-integrity checks are recorded in [`FAN_FREE_AUDIT.md`](project/research/fan-free-fixed-orders/2026-09-09-v1/FAN_FREE_AUDIT.md). The audit is internal; independent review of the graph-theoretic bridge remains open.
 

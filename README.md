@@ -1,6 +1,6 @@
 # Murty–Simon / Erdős Problem #742
 
-Candidate proofs and reproducible research. **Updated 11 September 2026. Independent mathematical review, novelty assessment and independent computational reproduction remain OPEN.** Repository publication and internal replay are not external acceptance or a proof of the unrestricted conjecture.
+Candidate proofs and reproducible research. **Updated 12 September 2026. Independent mathematical review, novelty assessment and independent computational reproduction remain OPEN.** Repository publication and internal replay are not external acceptance or a proof of the unrestricted conjecture.
 
 **External reviewers:** please start with [`START_HERE_FOR_REVIEWERS.md`](START_HERE_FOR_REVIEWERS.md). The project actively welcomes hostile review, counterexamples, literature corrections and independent reproduction. GitHub Issues are the preferred place to report a suspected flaw.
 
@@ -13,10 +13,21 @@ Candidate proofs and reproducible research. **Updated 11 September 2026. Indepen
 | `n=28` | Complete candidate: `e(G) <= 196`, equality exactly `K(14,14)`; Fan-free reviewer v2 plus 11 September analytic upper-range hardening; external review open |
 | `n=29` | Complete candidate: `e(G) <= 210`, equality exactly `K(14,15)`; **reviewer-v4 package**; Delta=16 closed by a hand threshold-tail proof with no proof-critical computation; dedicated reviewer-v4 hostile audit found no blocking flaw and exact red-team CI passed; external review open |
 | `n=30` | Complete candidate: `e(G) <= 225`, equality exactly `K(15,15)`; **reviewer-v3 package** with self-contained hand lemmas and every proof-critical integer table; Delta>=17 closed by a hand bound, Delta=15 equality proved directly; internal arithmetic REPRODUCED; independent specialist review OPEN |
+| `n=31` | Complete candidate: `e(G) <= 240`, equality exactly `K(15,16)`; source-first reviewer-v1 package; hand route with thirteen-label equality closure and witness-deficit balanced branch; hostile internal audit found no blocking flaw; external review OPEN |
+| `n=32` | Complete candidate: `e(G) <= 256`, equality exactly `K(16,16)`; **reviewer-v1 source package**; `m>=258` hand-closed, 257-edge branch exact nine-rectangle closure, equality branch has exact finite replay plus one hand tight-threshold contradiction; hostile internal audit found no blocking flaw; external review OPEN |
 | General maximum-degree result | Candidate theorem: `n >= 6` and `Delta(G) >= (7/12)n` imply `e(G) < floor(n^2/4)`; complete candidate hand argument with internal exact audits green; external review and novelty assessment open |
 | RX-Hall / 3-D potential programme | Active finite-to-symbolic research programme. Under the current fixed 3-D potentials the exact finite minimum scalar-template counts are `2` for `n=30,t=1`, `3` for `n=29,t=2`, and `4` for `n=29,t=3`. A non-circular exact audit now shows `J=2#{rho>=2}-#{s=1}` gives a common-template regime partition at `t=1,2`, while `(h_res,J)` does so at `t=3`. The suggestive `t+1` pattern remains a falsification target, **not a theorem** and not an unrestricted solution. |
 
 The unrestricted Murty–Simon conjecture remains unsolved by this project.
+
+## 12 September fixed-order extension: n=31 and n=32
+
+The fixed-order candidate frontier has been extended beyond n=30.
+
+- **n=31:** candidate `e(G)<=240`, equality exactly `K(15,16)`. Start with [`releases/n31-reviewer-v1/README.md`](releases/n31-reviewer-v1/README.md). The route is predominantly hand/structural and its hostile internal audit found no blocking flaw.
+- **n=32:** candidate `e(G)<=256`, equality exactly `K(16,16)`. Start with [`releases/n32-reviewer-v1/README.md`](releases/n32-reviewer-v1/README.md). The difficult `Delta=17` branch combines hand tail lemmas with exact finite replay. At equality, the exact ledger is 1,369 lifted-potential exclusions, 614 full RX/Hall exact Farkas exclusions, 61 strengthened zero-demand exact exclusions, one pre-model arithmetic impossibility and one hand tight-threshold contradiction. No floating-point infeasibility is a proof event.
+
+Both claims remain **candidate mathematics** pending genuinely independent specialist review. The unrestricted Murty-Simon conjecture remains unsolved.
 
 ## Public-review note
 
