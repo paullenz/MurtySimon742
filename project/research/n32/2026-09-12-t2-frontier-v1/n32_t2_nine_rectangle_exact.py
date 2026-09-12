@@ -23,8 +23,8 @@ import hashlib
 import json
 
 HERE = Path(__file__).resolve().parent
-ROOT = HERE.parents[2]
-RD_PATH = ROOT / "general_n" / "2026-09-09-rx-hall-v1" / "n29_t2_rectdiag_sparse_scan.py"
+RESEARCH = HERE.parents[1]
+RD_PATH = RESEARCH / "general_n" / "2026-09-09-rx-hall-v1" / "n29_t2_rectdiag_sparse_scan.py"
 spec = spec_from_file_location("rd", RD_PATH)
 if spec is None or spec.loader is None:
     raise SystemExit(f"cannot load {RD_PATH}")
