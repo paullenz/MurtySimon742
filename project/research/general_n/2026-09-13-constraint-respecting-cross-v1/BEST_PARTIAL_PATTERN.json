@@ -1,0 +1,21 @@
+{
+  "schema": "compatible-destination-partial-witness-v1",
+  "record": {
+    "layer": "n34-m289",
+    "state_id": 60,
+    "a": 15,
+    "b": 18,
+    "s": [2,2,2,2,2,2,2,2,3,3,3,3,3,3,3],
+    "rho": [1,1,1,1,1,1,1,2,2,2,2,2,3,3,3,3,3,3]
+  },
+  "selected": [[],[],[],[],[],[],[],[2,5],[1,6,7],[0,4],[1,3,5],[0,2,3,6],[8,11,12,13,14],[10,11,12,14],[4,9,12,13],[8,10],[8,9,11,13],[7,9,10,14]],
+  "residual": [[4],[8],[10],[5],[8],[0],[2],[0,3],[3,5],[9,12],[2,6],[1,5],[4,9,10],[7,8,9],[0,11,14],[11,12,13],[7,10,14],[6,11,13]],
+  "claimed": {
+    "selected_incidence_count": 37,
+    "obligations_with_nonempty_compatible_destination_set": 19,
+    "empty_obligations": 18,
+    "eligible_ordered_pairs": 20,
+    "minimum_endpoint_load_violations": 0
+  },
+  "provenance": "Feasible incumbent from a bounded soft-compatibility/local search, then checked directly. The search did not prove that 19 is optimal. This is not a complete cross pattern for routing and not a state exclusion."
+}
