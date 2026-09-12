@@ -1,0 +1,16 @@
+{
+  "python": "3.12.14",
+  "platform": "Linux-6.18.35-x86_64-with-glibc2.39",
+  "original_closed_replay_seconds": 6.015307946996472,
+  "exclusions": {
+    "fixed_k2": 708,
+    "all_k": 832
+  },
+  "source_contexts": 56986,
+  "piece_evaluations": 497406,
+  "candidate_evaluations": 618309,
+  "maximum_candidates_per_class": 22,
+  "integer_arithmetic": "Python unbounded integers",
+  "solver_used": false,
+  "external_review": "OPEN"
+}

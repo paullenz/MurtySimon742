@@ -1,0 +1,43 @@
+{
+  "status": "PASS",
+  "scope": "Abstract local source domains, not asserted diameter-two critical graphs",
+  "examples": [
+    {
+      "invalid_shortcut": "Always replace q by H across the destination-eligibility jump",
+      "parameters": [
+        15,
+        18,
+        4,
+        2,
+        5,
+        1,
+        0,
+        1
+      ],
+      "sender_class": 0,
+      "true_maximum": 12,
+      "shortcut_maximum": 0
+    },
+    {
+      "invalid_shortcut": "Check only the endpoints of the H interval",
+      "parameters": [
+        15,
+        18,
+        4,
+        2,
+        5,
+        4,
+        10,
+        2
+      ],
+      "sender_class": 1,
+      "H_endpoints": [
+        5,
+        10
+      ],
+      "true_maximum": 56,
+      "shortcut_maximum": 54
+    }
+  ],
+  "external_review": "OPEN"
+}

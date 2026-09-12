@@ -33,12 +33,12 @@
   },
   "artifacts": {
     "README.md": {
-      "bytes": 51768,
-      "sha256": "53b35406a59254a71e2c11357e1b0aba8efc2e606f6c43069bef880fc66aa32b"
+      "bytes": 54581,
+      "sha256": "a987601de0dc50c93b61d053cd2f2ec5db5be6ee409de9762cb48098a439e6d3"
     },
     "START_HERE_FOR_REVIEWERS.md": {
-      "bytes": 16272,
-      "sha256": "750d4072a516c2c3bb2fd4e56acdaa85e05e2443a64268bd8e7f7cdaab45a1a0"
+      "bytes": 16965,
+      "sha256": "e469d694c6ccf71ef0b3a45fd77379cbd0961978c50ca83048ec05693d59b075"
     },
     "project/research/general_n/2026-09-11-canonical-bridge-v1/CANONICAL_BRIDGE.md": {
       "bytes": 17501,
@@ -261,8 +261,8 @@
       "sha256": "7fd38bf9bf455b4c44ab75a7a34d82958c84c51233319aa5519e60fb6d81b410"
     },
     "releases/REVIEW_READY_INDEX.md": {
-      "bytes": 14601,
-      "sha256": "bfcf046ec2c44fca579389ebbfa66f25bdd0c47dbf3d7be738f171d685590db1"
+      "bytes": 15687,
+      "sha256": "b83314175e32697a610ca7cac245a04b59d35f43e3a47c7ff44b6e61a8954dae"
     },
     "releases/general-compatible-catalogue-reviewer-v1/README.md": {
       "bytes": 4478,
@@ -286,27 +286,27 @@
     },
     "releases/general-compatible-routing-reviewer-v1/MANIFEST.json": {
       "bytes": 12371,
-      "sha256": "8526b334f7ea6723211f748e344846ce0b646421f7fca93a013650d22dfd1377"
+      "sha256": "944ee60ecb023575ceb38ac1239d57db8a8e843331fe5c376da5c9955ecfb3f3"
     },
     "releases/general-heavy-load-reviewer-v1/MANIFEST.json": {
       "bytes": 10251,
-      "sha256": "166f5860c2215923074ef85e75ce6910eaae930fc56a8eb94181bf65327c3fc7"
+      "sha256": "07cef601b3b7af0765a60e1f9178fb90ce8d43e1201c13487e0e050386367090"
     },
     "releases/general-joint-routing-reviewer-v1/MANIFEST.json": {
       "bytes": 10780,
-      "sha256": "135e23ceb5916599ac99b7c937139bb6a6f3e09c6ccfbe6cbb2d365321d3e6a4"
+      "sha256": "c70612b81178f26feb4cb47a8f6230578b66ab51691a7722260e8a0c6e241b1a"
     },
     "releases/general-routing-tail-reviewer-v1/MANIFEST.json": {
       "bytes": 14928,
-      "sha256": "9ada9f7ee5ec35d2185b6c0a56b125c0679c5f52aeee32b515e88250494a3397"
+      "sha256": "a5d4c8ee33ea3f602eb376952bc61496e745bb9abb7e07c7ba8d66532926120f"
     },
     "releases/n34-reviewer-v2/MANIFEST.json": {
       "bytes": 25869,
-      "sha256": "3a72614f35168aafbb97ec2bc3cdb4dbad100afc49e7e14859de2906d40417bf"
+      "sha256": "fa55ceacddd104715a06b8e5146d1806724ea47ccf8eec5edcd326c6547bd5d5"
     },
     "releases/n35-reviewer-v1/MANIFEST.json": {
       "bytes": 25850,
-      "sha256": "3214d9239266d7d335fb1252eff6a5f821bcfdb3a113a70c6e60bd320911872d"
+      "sha256": "4c27d519a7298225ba9de4f04c700113b22015bf857c9b6968eb4ca48404c9db"
     }
   },
   "notes": [

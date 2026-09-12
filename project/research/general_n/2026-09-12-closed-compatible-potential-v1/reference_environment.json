@@ -1,0 +1,10 @@
+{
+  "status": "PASS",
+  "reference_bytes": 6846352,
+  "reference_sha256": "49167ed15767b96070d9a6a35d8f080fe502821fd24bd77fc116bd0b60b6e813",
+  "original_reference_seconds": 0.35842021200369345,
+  "compiler": "g++ (Ubuntu 13.3.0-6ubuntu2~24.04) 13.3.0",
+  "exact_full_enumeration": true,
+  "cardinality_dynamic_programming": true,
+  "external_review": "OPEN"
+}

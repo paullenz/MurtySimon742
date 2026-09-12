@@ -1,0 +1,50 @@
+{
+  "status": "PASS",
+  "pool": 5578,
+  "closed_and_full_enumeration_byte_identical": true,
+  "original_result_bytes": 6846352,
+  "original_result_sha256": "49167ed15767b96070d9a6a35d8f080fe502821fd24bd77fc116bd0b60b6e813",
+  "thresholds": 42193,
+  "capacity_bypasses": 179823,
+  "sender_count_attempts": 52491,
+  "integer_gaps": 476427,
+  "minimum_best_positive_gap": 1,
+  "prior_template13_gaps_rechecked": 28591,
+  "exclusions": {
+    "fixed_k2": 708,
+    "all_k": 832
+  },
+  "added_by_cutoff_variation": 124,
+  "prior_template13_recorded_winning_thresholds": 707,
+  "fixed_k2_additional_later_threshold_cases": [
+    [
+      "n35-m307",
+      18
+    ]
+  ],
+  "all_k_prior_pilot_only_overlap": [],
+  "new_exclusions_over_prior_combined": 0,
+  "combined_exclusions": 994,
+  "combined_survivors": 4584,
+  "layers": {
+    "n34-m289": {
+      "pool": 5415,
+      "fixed_k2": 641,
+      "all_k": 753,
+      "combined_survivors": 4506
+    },
+    "n35-m306": {
+      "pool": 162,
+      "fixed_k2": 66,
+      "all_k": 78,
+      "combined_survivors": 78
+    },
+    "n35-m307": {
+      "pool": 1,
+      "fixed_k2": 1,
+      "all_k": 1,
+      "combined_survivors": 0
+    }
+  },
+  "external_review": "OPEN"
+}

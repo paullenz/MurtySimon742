@@ -1,0 +1,17 @@
+{
+  "status": "PASS",
+  "baseline_commit": "dfcfbc26da5c32b76b83c19de47e08cdc3ea4815",
+  "current_manifests": {
+    "n34-reviewer-v2": 134,
+    "n35-reviewer-v1": 134,
+    "general-heavy-load-reviewer-v1": 48,
+    "general-joint-routing-reviewer-v1": 50,
+    "general-routing-tail-reviewer-v1": 69,
+    "general-compatible-routing-reviewer-v1": 55,
+    "general-compatible-catalogue-reviewer-v1": 69
+  },
+  "total_artifact_checks": 559,
+  "timing": "Checked before this continuation changes navigation; use the baseline commit for the reviewed manifest versions.",
+  "prior_template13_gaps_rechecked": 28591,
+  "external_review": "OPEN"
+}

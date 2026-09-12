@@ -110,6 +110,16 @@ failures, a post-replay 11-template compression and full survivor accounting
 are preserved. No new density threshold or fixed-order theorem is claimed;
 external review remains OPEN.
 
+The [closed-compatible reviewer-v1 package](releases/general-closed-compatible-reviewer-v1/README.md)
+reviews that checkpoint and gives an exact general local-maxima formula with
+at most 59 candidate values per residual/sender class. It extends the ordinary
+eligibility cutoff while keeping weights fixed. Independent complete source
+enumeration matches all 476,427 recorded gaps; 39,902 local cases and all
+28,591 prior recurring-potential gaps also pass. The resulting family explains
+832 already handled cases and adds zero combined frontier exclusions. All
+4,584 survivors, failed gaps and invalid-shortcut examples remain preserved.
+External mathematical review and novelty remain OPEN.
+
 For the preceding general-foundations review pass, see the
 [focused foundations checklist](project/reviews/general-theory/2026-09-12-joint-followthrough-v1/FOUNDATIONS_AUDIT.md).
 It checks the primary dominating-edge theorem's exception, the witness-capacity

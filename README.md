@@ -67,6 +67,11 @@ now excludes 990 of all 5,578 prior survivors. Retaining four pilot-only
 certificates gives 994 combined exclusions and 4,584 survivors. One fixed
 potential handles 707 cases and now has a general hand reduction of its
 local maxima. These counts come from complete replay, not pilot extrapolation.
+A [closed-potential continuation](releases/general-closed-compatible-reviewer-v1/README.md)
+now reduces each local sender-class maximum to at most 59 explicit candidate
+values and allows the eligibility cutoff to vary. That fixed-weight family
+explains 832 already excluded cases and adds zero frontier exclusions; all
+4,584 combined survivors remain recorded.
 
 ## Failures, audit challenges and corrections are part of the record
 
@@ -117,6 +122,7 @@ available for that scrutiny.
 | Demand/tail projection and equality rigidity | Candidate general hand lemmas; reviewer-v1. Adds 114 whole layer/profile exclusions before residual enumeration and a closed strictness criterion. Adds no exclusions among the 5,578 joint-routing survivors. External review OPEN. |
 | Compatible destination routing | Candidate general eligibility and mixed-traffic inequalities; reviewer-v1. Frozen 29-state pilot: 19 exact exclusions, including 16 beyond selected-degree retention; 10 survivors. Mixed cuts add zero further states. Full-pool continuation below; external review OPEN. |
 | Compatible routing: full catalogue | Frozen 20 seed vectors and control projections: 990/5,578 catalogue exclusions; four retained pilot-only witnesses give 994 combined exclusions and 4,584 survivors. One fixed potential covers 707 cases and has a general analytic reduction. Reviewer-v1; external review OPEN. |
+| Closed compatible potential | Candidate general exact formula: at most 59 candidate values per residual/sender class, with variable eligibility cutoff. Full fixed-weight family excludes 832 previously handled cases; zero new combined exclusions, 4,584 survivors. Reviewer-v1; external review OPEN. |
 | General maximum-degree result | Candidate theorem: `n >= 6` and `Delta(G) >= (7/12)n` imply `e(G) < floor(n^2/4)`; complete candidate hand argument with internal exact audits green; external review and novelty assessment open |
 | RX-Hall / monotone-potential programme | Active finite-to-symbolic programme. It is **not** an unrestricted theorem. It supplies general structural experiments and proof-critical exact finite exclusions in N32, N33, N34 and N35. Floating infeasibility is not accepted as a proof event. |
 
@@ -127,6 +133,34 @@ separates correctness, originality, validation of existing general candidates,
 further general advances and a complete proof. Its forecasts are explicitly
 subjective, with a stated horizon and sensitivity scenarios; they are not
 mathematical evidence or external endorsement.
+
+## Closed compatible potential and review
+
+The [closed-compatible reviewer-v1 package](releases/general-closed-compatible-reviewer-v1/README.md)
+reviews the preceding catalogue and derives an exact general formula for its
+recurring potential with any eligibility cutoff k. Two selected-degree branches
+suffice. Their local maxima reduce to at most 27 linear or concave quadratic
+pieces plus one endpoint branch, requiring at most **59 candidate values per
+source residual and sender class**, independently of graph order.
+
+The closed implementation and independent complete source enumeration produce
+byte-identical results for all 5,578 states, covering 476,427 gaps. A further
+39,902 local parameter cases challenge the boundaries. The review rechecks
+all 28,591 old recurring-potential gaps and preserves concrete counterexamples
+to invalid shortcuts. These internal checks accompany the hand proof; external
+mathematical review remains OPEN.
+
+The fixed cutoff-2 family excludes 708 cases when all thresholds are searched;
+the variable-cutoff family excludes 832. **It adds zero exclusions beyond the
+preceding combined 994**, so 4,584 survivors remain. The earlier 707 count was
+for recorded winning thresholds; the extra cutoff-2 case occurs at a later
+threshold and was already excluded. This continuation simplifies the general
+formula and records the limit of cutoff variation under these fixed weights.
+
+The next bounded target is actual arc allocation on a small survivor sample:
+can the locally allowed capacities coexist in one routing? All failures,
+original evidence and survivor lists are preserved in the [review and audit](project/research/general_n/2026-09-12-closed-compatible-potential-v1/AUDIT.md).
+The fixed-order ledgers, 7/12 candidate and forecasts remain unchanged.
 
 ## Compatible routing: full-pool catalogue and analytic reduction
 
@@ -153,9 +187,9 @@ Independent code verifies all 1,564,007 catalogue gaps. Post-replay compression
 uses 11 existing templates for all 990 recorded exclusions; no minimum size
 is claimed. The complete evidence, 4,584 combined survivors, four pilot-only
 witnesses and [audit challenges](project/research/general_n/2026-09-12-compatible-routing-catalogue-v1/AUDIT.md)
-are preserved. The next mathematical target is a closed bound on the remaining
-heavy-degree maximum, tested against these survivors. Fixed-order ledgers,
-the 7/12 threshold and external-review status remain unchanged.
+are preserved. The closed-potential continuation above now removes the
+remaining heavy-degree enumeration and tests cutoff variation. Fixed-order
+ledgers, the 7/12 threshold and external-review status remain unchanged.
 
 ## Compatible destination routing
 
@@ -665,6 +699,7 @@ Historical packages remain preserved. N31, N32, N33, N34 and N35 are currently s
 | Demand/tail projection | [Reviewer-v1 source package](releases/general-routing-tail-reviewer-v1/README.md) | [General lemmas and negative frontier result](project/research/general_n/2026-09-12-routing-tail-projection-v1/README.md) |
 | Compatible destination routing | [Reviewer-v1 source package](releases/general-compatible-routing-reviewer-v1/README.md) | [Compact hand proof](project/research/general_n/2026-09-12-compatible-routing-pilot-v1/COMPACT_EXAMPLE.md); [audit and bounded pilot](project/research/general_n/2026-09-12-compatible-routing-pilot-v1/AUDIT.md) |
 | Compatible routing: full catalogue | [Reviewer-v1 source package](releases/general-compatible-catalogue-reviewer-v1/README.md) | [Analytic reduction](project/research/general_n/2026-09-12-compatible-routing-catalogue-v1/FIXED_POTENTIAL.md); [full replay and audit](project/research/general_n/2026-09-12-compatible-routing-catalogue-v1/README.md) |
+| Closed compatible potential | [Reviewer-v1 source package](releases/general-closed-compatible-reviewer-v1/README.md) | [General closed formula](project/research/general_n/2026-09-12-closed-compatible-potential-v1/CLOSED_POTENTIAL.md); [review and negative frontier result](project/research/general_n/2026-09-12-closed-compatible-potential-v1/AUDIT.md) |
 | General step-back | [Balanced-degree / fixed-a source package](releases/general-stepback-v1/README.md) | [Internal audit](project/reviews/general-theory/2026-09-12-stepback-v1/HOSTILE_AUDIT.md) |
 | Joint clipping / historical N34 upper layers | [Reviewer-v1 source package](releases/general-joint-clipping-reviewer-v1/README.md) | [Focused foundations audit](project/reviews/general-theory/2026-09-12-joint-followthrough-v1/FOUNDATIONS_AUDIT.md); [N34 exact verification](project/research/n34/2026-09-12-frontier-v1/upper_layer_verification.json) |
 | General 293/500 | [Reviewer manuscript](releases/general-293-500-reviewer-v1/General_293_500_Reviewer_Manuscript_v1.pdf) | [Verification companion](releases/general-293-500-reviewer-v1/General_293_500_Verification_Companion_v1.pdf) |

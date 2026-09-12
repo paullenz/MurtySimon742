@@ -1,0 +1,13 @@
+{
+  "status": "PASS",
+  "exhaustive_cases": 39390,
+  "larger_cases": 512,
+  "total_cases": 39902,
+  "reference_source_options": 395609,
+  "small_domain": "a=2..5, b=a or a+1, rho=1..a, h=2..a+1, k=0..a+1, j=0..b; all hi+lo<=a with hi=0 if rho<h",
+  "larger_domain": "512 deterministic cases, seed 74220260912, a=6..32, b=a..a+6; full tuples preserved",
+  "largest_observed_pieces": 13,
+  "largest_observed_candidate_count": 18,
+  "proved_candidate_bound_per_sender_class": 59,
+  "external_review": "OPEN"
+}

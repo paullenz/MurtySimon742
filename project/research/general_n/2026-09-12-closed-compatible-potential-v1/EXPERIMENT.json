@@ -1,0 +1,24 @@
+{
+  "schema": "closed-compatible-potential-experiment-v1",
+  "baseline_commit": "dfcfbc26da5c32b76b83c19de47e08cdc3ea4815",
+  "plan_sha256": "0b7d57074ca7de5869262adeb2cef4ba1e1027fe231e93dc7bee38f2aab3b4c9",
+  "pool": 5578,
+  "prior_combined_exclusions": 994,
+  "prior_combined_survivors": 4584,
+  "weights": {
+    "load": 1,
+    "heavy_mass": 1,
+    "heavy_receiving": 2,
+    "ordinary_transport": 4
+  },
+  "modes": {
+    "fixed_k2": [
+      2
+    ],
+    "all_k": "0..a+1"
+  },
+  "thresholds": "2..max(s), T=4h",
+  "sender_case_rule": "For each actual j, any positive exact cutoff gap suffices; every capacity-allowed j must be excluded. First failed j stops h; first fully excluded h stops mode.",
+  "LP_used": false,
+  "external_review": "OPEN"
+}

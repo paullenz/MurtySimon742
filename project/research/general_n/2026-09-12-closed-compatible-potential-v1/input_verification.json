@@ -1,0 +1,10 @@
+{
+  "status": "PASS",
+  "pool": 5578,
+  "prior_catalogue": 990,
+  "prior_pilot_only": 4,
+  "prior_combined": 994,
+  "pool_sha256": "34244eb2bdc6330a0bc2fc9b67ca8b05bdcc7fd9901196410213e7b1b8ff7e1f",
+  "experiment_sha256": "f5652377e4f76a398a5d0f34c4dc83efb2d2625098d8b2f7fc78c098b56902fa",
+  "external_review": "OPEN"
+}

@@ -28,6 +28,7 @@ The current fixed-order PDF packages are Fan-free reviewer-v2 at `n=25,27,28`, *
 | Demand/tail projection and equality rigidity | Residual-budget tail bounds, demand-only joint routing, and a closed strictness criterion for the load inequality | [reviewer-v1](general-routing-tail-reviewer-v1/README.md) | [tail projection](../project/research/general_n/2026-09-12-routing-tail-projection-v1/TAIL_PROJECTION.md); [equality lemma](../project/research/general_n/2026-09-12-routing-tail-projection-v1/EQUALITY_BOUNDARY.md); [audit](../project/research/general_n/2026-09-12-routing-tail-projection-v1/AUDIT.md) | Candidate general lemmas; 114 further whole-profile exclusions, zero further exclusions among 5,578 previous state survivors; external review OPEN |
 | Compatible destination routing | General selected-degree eligibility tails, mixed traffic cuts and count-conditioned potential envelope | [reviewer-v1](general-compatible-routing-reviewer-v1/README.md) | [hand example](../project/research/general_n/2026-09-12-compatible-routing-pilot-v1/COMPACT_EXAMPLE.md); [audit](../project/research/general_n/2026-09-12-compatible-routing-pilot-v1/AUDIT.md) | Candidate general inequalities; 19/29 preselected pilot exclusions, 16 beyond selected-degree retention; mixed cuts add zero further states; full-pool continuation below; external review OPEN |
 | Compatible routing: full catalogue and analytic reduction | Fixed eligible-routing potentials; exact q elimination and at most five p candidates per H for the recurring potential | [reviewer-v1](general-compatible-catalogue-reviewer-v1/README.md) | [hand reduction](../project/research/general_n/2026-09-12-compatible-routing-catalogue-v1/FIXED_POTENTIAL.md); [audit and replay](../project/research/general_n/2026-09-12-compatible-routing-catalogue-v1/README.md) | Candidate general reduction; 990 catalogue exclusions plus four inherited pilot-only witnesses, 4,584 combined survivors; no per-state fitting; external review OPEN |
+| Closed compatible potential | General exact local maxima using two q branches and at most 59 candidate values per residual/sender class | [reviewer-v1](general-closed-compatible-reviewer-v1/README.md) | [hand formula](../project/research/general_n/2026-09-12-closed-compatible-potential-v1/CLOSED_POTENTIAL.md); [review and audit](../project/research/general_n/2026-09-12-closed-compatible-potential-v1/AUDIT.md) | Candidate analytic continuation; 832 previously handled cases, zero further combined exclusions, 4,584 survivors; external review OPEN |
 | general-293-500 | `n >= 6 and Delta(G) >= (293/500)n imply e(G) < floor(n^2/4)` | [PDF](general-293-500-reviewer-v1/General_293_500_Reviewer_Manuscript_v1.pdf) | [PDF](general-293-500-reviewer-v1/General_293_500_Verification_Companion_v1.pdf) | retained candidate hand argument; superseded in threshold strength by 7/12; independent review OPEN |
 | general-7-12 | `n >= 6 and Delta(G) >= (7/12)n imply e(G) < floor(n^2/4)` | [PDF](general-7-12-reviewer-v1/General_7_12_Reviewer_Manuscript_v1.pdf) | [PDF](general-7-12-reviewer-v1/General_7_12_Verification_Companion_v1.pdf) | complete candidate hand argument; internal exact audits green; independent review and novelty assessment OPEN |
 | general-13-22 | `n >= 6 and Delta(G) >= (13/22)n imply e(G) < floor(n^2/4)` | [PDF](general-13-22-reviewer-v1/General_13_22_Reviewer_Manuscript_v1.pdf) | [PDF](general-13-22-reviewer-v1/General_13_22_Verification_Companion_v1.pdf) | retained candidate hand proof; independent mathematical review OPEN |
@@ -79,6 +80,14 @@ reduction of its local maxima. This gives new structural explanations within
 the existing fixed-order candidates; their ledgers and the 7/12 threshold are
 unchanged. All gaps, failed attempts, inherited witnesses and survivors are
 preserved; external review remains OPEN.
+
+The [closed-potential continuation](general-closed-compatible-reviewer-v1/README.md)
+removes the remaining local degree enumeration through explicit quadratic
+maxima and extends the eligibility cutoff. Its fixed-weight family excludes
+832 cases already covered by the preceding combined record. Zero additional
+frontier exclusions are reported; all 4,584 survivors remain. The preceding
+work was reviewed, including all old recurring-potential gaps, with no blocking
+flaw found internally. External review and novelty remain OPEN.
 
 ## Fixed-order history note
 

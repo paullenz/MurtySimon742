@@ -1,0 +1,28 @@
+PROGRESS 500 excluded {'fixed_k2': 0, 'all_k': 0} contexts 7021
+PROGRESS 1000 excluded {'fixed_k2': 0, 'all_k': 0} contexts 10744
+PROGRESS 1500 excluded {'fixed_k2': 184, 'all_k': 237} contexts 20128
+PROGRESS 2000 excluded {'fixed_k2': 237, 'all_k': 293} contexts 22100
+PROGRESS 2500 excluded {'fixed_k2': 326, 'all_k': 382} contexts 24582
+PROGRESS 3000 excluded {'fixed_k2': 442, 'all_k': 499} contexts 26469
+PROGRESS 3500 excluded {'fixed_k2': 541, 'all_k': 598} contexts 28934
+PROGRESS 4000 excluded {'fixed_k2': 577, 'all_k': 634} contexts 30974
+PROGRESS 4500 excluded {'fixed_k2': 601, 'all_k': 667} contexts 33371
+PROGRESS 5000 excluded {'fixed_k2': 641, 'all_k': 739} contexts 40137
+PROGRESS 5500 excluded {'fixed_k2': 664, 'all_k': 781} contexts 52360
+PROGRESS 5578 excluded {'fixed_k2': 708, 'all_k': 832} contexts 56986
+{
+  "python": "3.12.14",
+  "platform": "Linux-6.18.35-x86_64-with-glibc2.39",
+  "original_closed_replay_seconds": 6.015307946996472,
+  "exclusions": {
+    "fixed_k2": 708,
+    "all_k": 832
+  },
+  "source_contexts": 56986,
+  "piece_evaluations": 497406,
+  "candidate_evaluations": 618309,
+  "maximum_candidates_per_class": 22,
+  "integer_arithmetic": "Python unbounded integers",
+  "solver_used": false,
+  "external_review": "OPEN"
+}

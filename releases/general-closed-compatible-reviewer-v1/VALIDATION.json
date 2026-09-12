@@ -1,0 +1,74 @@
+{
+  "status": "PASS",
+  "date": "2026-09-12",
+  "python": "3.12.14",
+  "replay": [
+    {
+      "command": "python project/research/general_n/2026-09-12-closed-compatible-potential-v1/prepare_inputs.py",
+      "returncode": 0,
+      "stdout_sha256": "96f5a590a9b67388f6957745c3f42329b37b09f1a11443bb5ec19b7006552a33"
+    },
+    {
+      "command": "python project/research/general_n/2026-09-12-closed-compatible-potential-v1/check_local.py",
+      "returncode": 0,
+      "stdout_sha256": "324409e09bd26499d28a3c209b908dc74654230722b2bdb17940e61df2c6c79c"
+    },
+    {
+      "command": "python project/research/general_n/2026-09-12-closed-compatible-potential-v1/replay.py",
+      "returncode": 0,
+      "stdout_sha256": "571845c98808555ff0246c66494fcd2d044d5d81164db6c3a6c93a3b205fefc1"
+    },
+    {
+      "command": "python project/research/general_n/2026-09-12-closed-compatible-potential-v1/run_reference.py",
+      "returncode": 0,
+      "stdout_sha256": "d82cf46f1408d3d8e80b2749e828204669a4eb60d4bd080113e604d00a8d510e"
+    },
+    {
+      "command": "python project/research/general_n/2026-09-12-closed-compatible-potential-v1/verify.py",
+      "returncode": 0,
+      "stdout_sha256": "3923f3e5e7f68f756e00f439626a78a67c7f9d2509ac4a47bc53c5c267934b4d"
+    },
+    {
+      "command": "python project/research/general_n/2026-09-12-closed-compatible-potential-v1/check_shortcuts.py",
+      "returncode": 0,
+      "stdout_sha256": "be43a767fca06897aeee0986cb087503f8e75c28a35f5a23b0f5dd2eeba012fa"
+    }
+  ],
+  "original_logical_streams_reproduced_byte_for_byte": [
+    "pool_inputs.jsonl",
+    "engine_input.txt",
+    "frontier_results.jsonl",
+    "reference_results.jsonl",
+    "survivors.json"
+  ],
+  "reproduced_summary_files": [
+    "input_verification.json",
+    "prior_exclusions.json",
+    "local_verification.json",
+    "larger_local_cases.json",
+    "reference.log",
+    "verification.json",
+    "new_exclusions.json",
+    "shortcut_counterexamples.json"
+  ],
+  "original_timings_preserved": true,
+  "closed_reproduction_seconds": 6.12876013800269,
+  "reference_reproduction_seconds": 0.3954780869971728,
+  "exact_checks_from_original_archives_without_raw_streams": true,
+  "navigation": {
+    "markdown_files": 8,
+    "local_links_checked": 303,
+    "status": "PASS"
+  },
+  "scope": {
+    "local_candidate_bound": 59,
+    "local_parameter_challenges": 39902,
+    "pool": 5578,
+    "fixed_k2_excluded": 708,
+    "all_k_excluded": 832,
+    "new_combined_exclusions": 0,
+    "combined_exclusions": 994,
+    "combined_survivors": 4584
+  },
+  "external_review": "OPEN"
+}

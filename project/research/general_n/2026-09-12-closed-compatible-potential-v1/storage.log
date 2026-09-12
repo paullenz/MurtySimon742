@@ -1,0 +1,47 @@
+{
+  "schema": "closed-compatible-potential-evidence-v1",
+  "encoding": "gzip mtime=0, base64 wrapped at 76 characters",
+  "files": {
+    "pool_inputs.jsonl": {
+      "stored_file": "pool_inputs.jsonl.gz.b64",
+      "original_bytes": 1124585,
+      "original_sha256": "34244eb2bdc6330a0bc2fc9b67ca8b05bdcc7fd9901196410213e7b1b8ff7e1f",
+      "stored_bytes": 50440,
+      "stored_sha256": "a17f8d98afbef3731a7877e9e644b035b0dccb3541abb4079db1ecae01498309",
+      "lines": 5578
+    },
+    "engine_input.txt": {
+      "stored_file": "engine_input.txt.gz.b64",
+      "original_bytes": 486776,
+      "original_sha256": "6df64d8d0a6dab11e67e3ace6ab69ad30ade91cb260c604fe8d3e461536419e6",
+      "stored_bytes": 44742,
+      "stored_sha256": "80ffb425e94b7a287632770175bd4198769268e41b307bc9c94467bc075391bf",
+      "lines": 5579
+    },
+    "frontier_results.jsonl": {
+      "stored_file": "frontier_results.jsonl.gz.b64",
+      "original_bytes": 6846352,
+      "original_sha256": "49167ed15767b96070d9a6a35d8f080fe502821fd24bd77fc116bd0b60b6e813",
+      "stored_bytes": 743954,
+      "stored_sha256": "d16b2a787e3a9e090d8db2b66fe8ba0c238cb5e990e057efd5b392620bdb40bd",
+      "lines": 5578
+    },
+    "reference_results.jsonl": {
+      "stored_file": "frontier_results.jsonl.gz.b64",
+      "original_bytes": 6846352,
+      "original_sha256": "49167ed15767b96070d9a6a35d8f080fe502821fd24bd77fc116bd0b60b6e813",
+      "stored_bytes": 743954,
+      "stored_sha256": "d16b2a787e3a9e090d8db2b66fe8ba0c238cb5e990e057efd5b392620bdb40bd",
+      "lines": 5578
+    },
+    "survivors.json": {
+      "stored_file": "survivors.json.gz.b64",
+      "original_bytes": 924834,
+      "original_sha256": "e79ebb8895d216b05c3f27900913993326948576d8fef672b7d011ba0300c58e",
+      "stored_bytes": 41836,
+      "stored_sha256": "428a773c9ded02288c101fe73a62cd90243ae2f5f3a6edcc9f4e703066816352",
+      "lines": 1
+    }
+  },
+  "note": "Five logical streams, four unique stored streams. The independently generated result streams are byte-identical and share storage. Separate original logs and timings are preserved."
+}
