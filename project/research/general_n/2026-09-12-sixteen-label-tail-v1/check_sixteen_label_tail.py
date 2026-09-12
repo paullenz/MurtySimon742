@@ -1,8 +1,9 @@
 #!/usr/bin/env python3
 """Exact verifier for SIXTEEN_LABEL_TAIL.md.
 
-Checks the safe clipping table, all 4,845 max-five terminal quadruples, and the
-sixteen possible 6->5 equality preimages. No floating point is used.
+Checks the safe clipping table, all 4,845 max-five terminal quadruples, the
+sixteen possible 6->5 equality preimages, and the first clean-clipping failure
+at a=17. No floating point is used.
 """
 A = 16
 
@@ -22,21 +23,21 @@ def gamma(h, W):
 
 def D_of(s):
     D = 0
-    for h in range(2, A):
+    for h in range(2, len(s)):
         vals = [x for x in s if x >= h]
         if vals:
             D += len(vals) - gamma(h, sum(vals))
     return D
 
 
-def clipping_rows(M):
+def clipping_rows(A0, M):
     rows = []
-    for k in range(1, A + 1):
+    for k in range(1, A0 + 1):
         loss = k - gamma(M, M * k)
         if loss <= 0:
             continue
         lo = M * k
-        hi = M * k + (M - 1) * (A - k)
+        hi = M * k + (M - 1) * (A0 - k)
         gain = 0
         for h in range(2, M):
             gain += min(
@@ -60,7 +61,7 @@ def main():
         6:[(11,1,1),(12,1,4),(13,1,4),(14,2,4),(15,2,4),(16,3,6)],
     }
     for M in range(10, 5, -1):
-        rows = clipping_rows(M)
+        rows = clipping_rows(A, M)
         assert rows == expected[M], (M, rows)
         assert all(g >= l for _, l, g in rows)
 
@@ -94,10 +95,11 @@ def main():
         vals.append(D_of([5]*(16-j) + [6]*j))
     assert vals == [8,7,8,9,9,10,10,10,9,9,10,10,10,10,9,10]
 
-    # First clean-clipping obstruction at a=17, M=6, k=11.
-    global A
+    # First failure of the unmodified safe clipping architecture.
+    rows17 = clipping_rows(17, 6)
+    assert (11, 1, 0) in rows17
 
-    print("PASS: sixteen-label clipping and 4,845 terminal states verified exactly")
+    print("PASS: sixteen-label theorem arithmetic verified; a=17 obstruction reproduced")
 
 
 if __name__ == "__main__":
