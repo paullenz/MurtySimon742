@@ -1,0 +1,388 @@
+{
+  "schema": "general-compatible-catalogue-publication-v1",
+  "date": "2026-09-12",
+  "repository": "paullenz/MurtySimon742",
+  "branch": "main",
+  "parent": "be45e9c540ece11290e6f07e3a31bd8dcc3da2d0",
+  "publication_commit": "555dd4218ecdee92f3084c9a1adbd3697d48a94b",
+  "publication_tree": "a9e7ccb097f6eebce073a7e73f1aba7d67cf3a50",
+  "local_review_commit": "31fdc307899ef714e5967e0febd15fb016f0ac5d",
+  "checks": {
+    "branch_read_back": true,
+    "nonforced_update": true,
+    "exact_local_remote_tree_match": true,
+    "all_changed_paths_and_sha256_verified": true,
+    "changed_paths": 55,
+    "manifests_verified": {
+      "n34-reviewer-v2": 134,
+      "n35-reviewer-v1": 134,
+      "general-heavy-load-reviewer-v1": 48,
+      "general-joint-routing-reviewer-v1": 50,
+      "general-routing-tail-reviewer-v1": 69,
+      "general-compatible-routing-reviewer-v1": 55,
+      "general-compatible-catalogue-reviewer-v1": 69
+    },
+    "original_streams_recovered": {
+      "project/research/general_n/2026-09-12-compatible-routing-catalogue-v1/pool_inputs.jsonl": {
+        "status": "PASS",
+        "original_bytes": 1124585,
+        "original_sha256": "34244eb2bdc6330a0bc2fc9b67ca8b05bdcc7fd9901196410213e7b1b8ff7e1f",
+        "lines": 5578
+      },
+      "project/research/general_n/2026-09-12-compatible-routing-catalogue-v1/engine_input.txt": {
+        "status": "PASS",
+        "original_bytes": 487503,
+        "original_sha256": "590ff29c66e226fb3bf111be6a03d11463d30718512b048a119cb1b22fe76b1a",
+        "lines": 5614
+      },
+      "project/research/general_n/2026-09-12-compatible-routing-catalogue-v1/frontier_results.jsonl": {
+        "status": "PASS",
+        "original_bytes": 14236471,
+        "original_sha256": "4e9d7d320c58c8fe0318237197c0fd7e00ccb6b1918f65334dfb5735e4192a83",
+        "lines": 5578
+      },
+      "project/research/general_n/2026-09-12-compatible-routing-catalogue-v1/survivors.json": {
+        "status": "PASS",
+        "original_bytes": 1315615,
+        "original_sha256": "2c6bb11ec3c6dfb45a07b511c1e85c8c44898201c0f045630e0f622ee93647eb",
+        "lines": 1
+      },
+      "project/research/general_n/2026-09-12-compatible-routing-catalogue-v1/template_coverage.json": {
+        "status": "PASS",
+        "original_bytes": 120133,
+        "original_sha256": "16e2c665b5ed0ca68a7a6aca180c1b419ffaadcb142528c0d245e15e9024880e",
+        "lines": 1
+      },
+      "project/research/general_n/2026-09-12-compatible-routing-pilot-v1/pilot_results.jsonl": {
+        "status": "PASS",
+        "original_bytes": 871129,
+        "original_sha256": "d6e6dd4450b89af699fe9e7b96632fc4227c3ba0030b3ca03faf3de0319400c9",
+        "records": 29
+      },
+      "project/research/general_n/2026-09-12-heavy-load-family-v1/frontier_results.jsonl": {
+        "status": "PASS",
+        "original_bytes": 3122169,
+        "original_sha256": "8ba9e8c9a6322fac71710e86d140f754cfe7dfa743dd55a043dc94723418a547",
+        "records": 14031
+      },
+      "project/research/general_n/2026-09-12-heavy-load-family-v1/profile_results.jsonl": {
+        "status": "PASS",
+        "original_bytes": 1648230,
+        "original_sha256": "aaca0892a4f4a6a093eae58ecb7374c9c4ea85b88a2d6cac5c9cbc18d38ebbfe",
+        "records": 1453
+      },
+      "project/research/general_n/2026-09-12-heavy-load-family-v1/remaining_states.json": {
+        "status": "PASS",
+        "original_bytes": 1695040,
+        "original_sha256": "5db7ea92b92083c2205007b483c4789ced80bddb693cb7a21004b1f4f46e26c6",
+        "records": 8280
+      },
+      "project/research/general_n/2026-09-12-joint-routing-pilot-v1/pilot_results.jsonl": {
+        "status": "PASS",
+        "original_bytes": 163087,
+        "original_sha256": "fd269a1f8092d1755f7b6bb04c7eddba81f6ae57705a952d36f81b0cc2b19ea2",
+        "records": 27
+      },
+      "project/research/general_n/2026-09-12-joint-routing-pilot-v1/frontier_results.jsonl": {
+        "status": "PASS",
+        "original_bytes": 10801083,
+        "original_sha256": "a34dd73b26d8bb2461bdc30d7d6f638b93bf90681497d098bba2a15420b474c8",
+        "records": 6307
+      },
+      "project/research/general_n/2026-09-12-routing-tail-projection-v1/pilot_results.jsonl": {
+        "status": "PASS",
+        "original_bytes": 307916,
+        "original_sha256": "6d89680c8aae92006ce4ebdebebe44df22623c7b56c5bab7b68bb45716a15341",
+        "records": 27
+      },
+      "project/research/general_n/2026-09-12-routing-tail-projection-v1/profile_results.jsonl": {
+        "status": "PASS",
+        "original_bytes": 5732891,
+        "original_sha256": "262f84b27cc3c54418762bb79823cdfa0b29824d2ecae5c1ad1289ce620ee368",
+        "records": 1453
+      },
+      "project/research/general_n/2026-09-12-routing-tail-projection-v1/state_comparison.json": {
+        "status": "PASS",
+        "original_bytes": 1134242,
+        "original_sha256": "9b647ba14c9aea02a3c7af7d7486b04ae4d403af1237560d2728ed01185cbaf2",
+        "records": 5578
+      },
+      "project/research/general_n/2026-09-12-routing-tail-projection-v1/boundary_results.jsonl": {
+        "status": "PASS",
+        "original_bytes": 2373604,
+        "original_sha256": "6923e5c30279369b3b68c97265af26f03c787dcb051ba51ce672d9319df5e561",
+        "records": 1453
+      },
+      "project/research/general_n/2026-09-12-routing-tail-projection-v1/boundary_state_comparison.json": {
+        "status": "PASS",
+        "original_bytes": 453772,
+        "original_sha256": "7b0db53cb73a8baf80cd6bc37a28710f39084d6061e70f374bf12730ca2bff11",
+        "records": 5578
+      }
+    },
+    "key_raw_files_verified": [
+      "README.md",
+      "START_HERE_FOR_REVIEWERS.md",
+      "releases/REVIEW_READY_INDEX.md",
+      "releases/general-compatible-catalogue-reviewer-v1/README.md",
+      "project/research/general_n/2026-09-12-compatible-routing-catalogue-v1/FIXED_POTENTIAL.md",
+      "project/research/general_n/2026-09-12-compatible-routing-catalogue-v1/frontier_summary.json"
+    ],
+    "local_links_verified_at_commit": 293,
+    "no_existing_proof_or_ledger_changes": true,
+    "existing_changes_limited_to_navigation_and_dependent_manifest_hashes": true,
+    "current_reviewer_entrypoints_consistent": true,
+    "clean_validation": "releases/general-compatible-catalogue-reviewer-v1/VALIDATION.json"
+  },
+  "changed_paths": {
+    "README.md": {
+      "bytes": 51768,
+      "sha256": "53b35406a59254a71e2c11357e1b0aba8efc2e606f6c43069bef880fc66aa32b"
+    },
+    "START_HERE_FOR_REVIEWERS.md": {
+      "bytes": 16272,
+      "sha256": "750d4072a516c2c3bb2fd4e56acdaa85e05e2443a64268bd8e7f7cdaab45a1a0"
+    },
+    "project/research/general_n/2026-09-12-compatible-routing-catalogue-v1/AUDIT.md": {
+      "bytes": 6408,
+      "sha256": "e030d4e5f1ae060cd0cabd19a46c16a7a7a4ca3ef4383bc3cb04bd426c4d9b8b"
+    },
+    "project/research/general_n/2026-09-12-compatible-routing-catalogue-v1/EVIDENCE_STORAGE.json": {
+      "bytes": 2053,
+      "sha256": "9c1193ba125f2fa724495177a21176f366acbaf8a4123d3051cb67e5b98d98fd"
+    },
+    "project/research/general_n/2026-09-12-compatible-routing-catalogue-v1/FIXED_POTENTIAL.md": {
+      "bytes": 5333,
+      "sha256": "004547a6165b85c5af45a580e7de0046169f296793f2215e8d75e38ab7024f9f"
+    },
+    "project/research/general_n/2026-09-12-compatible-routing-catalogue-v1/PLAN.md": {
+      "bytes": 3177,
+      "sha256": "ebf51ffbcda9393321668dbc686faf70a4cad0c2f76f2d083c02a272bf9625a6"
+    },
+    "project/research/general_n/2026-09-12-compatible-routing-catalogue-v1/README.md": {
+      "bytes": 5665,
+      "sha256": "c2e993986ad306fb773cd53a36e7f146221c0406949ee9187a56c708b2688427"
+    },
+    "project/research/general_n/2026-09-12-compatible-routing-catalogue-v1/catalogue.json": {
+      "bytes": 28799,
+      "sha256": "1f8c90af470320f616d9ccba030fa738988d46569af5651572fc9c90ef68e757"
+    },
+    "project/research/general_n/2026-09-12-compatible-routing-catalogue-v1/catalogue_and_summary_verification.json": {
+      "bytes": 452,
+      "sha256": "ff40cb4a41949d82e4a4799ae01de73236dbcdecbe46ba8d6702e062b2cc2608"
+    },
+    "project/research/general_n/2026-09-12-compatible-routing-catalogue-v1/catalogue_and_summary_verification.log": {
+      "bytes": 452,
+      "sha256": "ff40cb4a41949d82e4a4799ae01de73236dbcdecbe46ba8d6702e062b2cc2608"
+    },
+    "project/research/general_n/2026-09-12-compatible-routing-catalogue-v1/catalogue_candidates.json": {
+      "bytes": 115672,
+      "sha256": "075d4dacac107c7c8bb4c547c1718d7a414a223e17ec76cf922396436fafd5c4"
+    },
+    "project/research/general_n/2026-09-12-compatible-routing-catalogue-v1/check_fixed_potential.py": {
+      "bytes": 3059,
+      "sha256": "e9b902752dbb746bc6fdd6ea31fa32834c21fd76571bbef12387c88b0d9ab4c0"
+    },
+    "project/research/general_n/2026-09-12-compatible-routing-catalogue-v1/compile.log": {
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "project/research/general_n/2026-09-12-compatible-routing-catalogue-v1/compile_initial.log": {
+      "bytes": 2570,
+      "sha256": "ab674c0e1b99e73ed973a6386a0cfc1c7d911139663764eef2422bd7246f8f41"
+    },
+    "project/research/general_n/2026-09-12-compatible-routing-catalogue-v1/compression.json": {
+      "bytes": 1429,
+      "sha256": "afbb5a4997048b81055f8f31e68e785f31aeed7b902357b1c7f15a69a980f65a"
+    },
+    "project/research/general_n/2026-09-12-compatible-routing-catalogue-v1/engine_input.txt.gz.b64": {
+      "bytes": 45131,
+      "sha256": "cddbac2ae7a02f259b8415ce424bbcba24633cacd180e2a1f37e3781190ab6b3"
+    },
+    "project/research/general_n/2026-09-12-compatible-routing-catalogue-v1/environment.json": {
+      "bytes": 662,
+      "sha256": "99270b059c6fd57d028467e4b4a11cf2821f8f89aae58c82e545ac5c48de9499"
+    },
+    "project/research/general_n/2026-09-12-compatible-routing-catalogue-v1/evidence_io.py": {
+      "bytes": 874,
+      "sha256": "13b344164b63fd02bc1d5d33dbd6bba8edb94a6933f1afb745f8bd0ab9f79fe6"
+    },
+    "project/research/general_n/2026-09-12-compatible-routing-catalogue-v1/fixed_potential_verification.json": {
+      "bytes": 398,
+      "sha256": "a947c4fafac8dd8d51a960966ba724d44c8e745b8ebf7ee1408710e6db18f2d2"
+    },
+    "project/research/general_n/2026-09-12-compatible-routing-catalogue-v1/fixed_potential_verification.log": {
+      "bytes": 398,
+      "sha256": "a947c4fafac8dd8d51a960966ba724d44c8e745b8ebf7ee1408710e6db18f2d2"
+    },
+    "project/research/general_n/2026-09-12-compatible-routing-catalogue-v1/freeze_catalogue.py": {
+      "bytes": 2652,
+      "sha256": "84bbf7eddee42ee1280dde4ea050d1fbc6ea00b37e13947d9304654f7033b49e"
+    },
+    "project/research/general_n/2026-09-12-compatible-routing-catalogue-v1/frontier_results.jsonl.gz.b64": {
+      "bytes": 1774911,
+      "sha256": "3aa8af5cc328031eb85470f7b90af9e4ad316b7a8de0ac919098c64af40f749f"
+    },
+    "project/research/general_n/2026-09-12-compatible-routing-catalogue-v1/frontier_summary.json": {
+      "bytes": 2722,
+      "sha256": "217dc5d489e627534ab342496f59b14ea3ea553463cc8639ef66f64eae72aa18"
+    },
+    "project/research/general_n/2026-09-12-compatible-routing-catalogue-v1/independent_verify.py": {
+      "bytes": 8861,
+      "sha256": "6a61e28267251b8ac434add1434a9a841b6d0239d96a98ec46a436d23147a62e"
+    },
+    "project/research/general_n/2026-09-12-compatible-routing-catalogue-v1/input_preparation_initial_failure.log": {
+      "bytes": 316,
+      "sha256": "25243132cce7e625d006a05f09a69d20a37f26b69b570cf01666a1dcd50d691a"
+    },
+    "project/research/general_n/2026-09-12-compatible-routing-catalogue-v1/input_verification.json": {
+      "bytes": 643,
+      "sha256": "ff7042289855b93f319dffdfe9d048c22afd156b4c12b43a719c14c5c327fc80"
+    },
+    "project/research/general_n/2026-09-12-compatible-routing-catalogue-v1/pack_evidence.py": {
+      "bytes": 1320,
+      "sha256": "068e0de4fb19dd74f1f300838e5258ca39e7ba4434ed5d26a517463a08f3a03e"
+    },
+    "project/research/general_n/2026-09-12-compatible-routing-catalogue-v1/pool_inputs.jsonl.gz.b64": {
+      "bytes": 50440,
+      "sha256": "a17f8d98afbef3731a7877e9e644b035b0dccb3541abb4079db1ecae01498309"
+    },
+    "project/research/general_n/2026-09-12-compatible-routing-catalogue-v1/prepare_inputs.py": {
+      "bytes": 3369,
+      "sha256": "5e2814dda0741bc081862fcc344e1b46ceeb3c0096a489ca9eadfd46270f0ee6"
+    },
+    "project/research/general_n/2026-09-12-compatible-routing-catalogue-v1/prepare_inputs_initial.py": {
+      "bytes": 3369,
+      "sha256": "a1e054c22902ea0368ba028abcfce5dbf6d06a91afb7727a5b58a326823c8c1d"
+    },
+    "project/research/general_n/2026-09-12-compatible-routing-catalogue-v1/replay.cpp": {
+      "bytes": 6481,
+      "sha256": "0b9922e9abd69da13f060899f4ac7cfd9ca58f0f539712393d444034a5e3e7d1"
+    },
+    "project/research/general_n/2026-09-12-compatible-routing-catalogue-v1/replay.log": {
+      "bytes": 570,
+      "sha256": "4caec82d7d8cf3c2f05681a759e9d40010b6087579c3fe1a1426554147bf2464"
+    },
+    "project/research/general_n/2026-09-12-compatible-routing-catalogue-v1/replay_initial.cpp": {
+      "bytes": 6421,
+      "sha256": "8ec652d7c60f3e42a62ce832c90b6d6f22433823582e534a232794640440bc2c"
+    },
+    "project/research/general_n/2026-09-12-compatible-routing-catalogue-v1/run_replay.py": {
+      "bytes": 1359,
+      "sha256": "63becedf0ba8fdcaedeee86523ce03f3b072318ef73191b0b019778e0c12a04e"
+    },
+    "project/research/general_n/2026-09-12-compatible-routing-catalogue-v1/storage.log": {
+      "bytes": 2053,
+      "sha256": "9c1193ba125f2fa724495177a21176f366acbaf8a4123d3051cb67e5b98d98fd"
+    },
+    "project/research/general_n/2026-09-12-compatible-routing-catalogue-v1/summarize.py": {
+      "bytes": 5664,
+      "sha256": "606a6eeda3d6f6fab982bcc0180bb758d057a62504b9e11c5780084a59554bff"
+    },
+    "project/research/general_n/2026-09-12-compatible-routing-catalogue-v1/summary.log": {
+      "bytes": 2722,
+      "sha256": "217dc5d489e627534ab342496f59b14ea3ea553463cc8639ef66f64eae72aa18"
+    },
+    "project/research/general_n/2026-09-12-compatible-routing-catalogue-v1/survivors.json.gz.b64": {
+      "bytes": 43895,
+      "sha256": "65be1c37c55c30a3857f88d8548713a76d15dc455a77a2f440bd795014e392f9"
+    },
+    "project/research/general_n/2026-09-12-compatible-routing-catalogue-v1/template_coverage.json.gz.b64": {
+      "bytes": 4831,
+      "sha256": "56b980634239bbd8db20ddf5c3d7d4d35bee2c892d9ac6f5c39178d03cdd39d5"
+    },
+    "project/research/general_n/2026-09-12-compatible-routing-catalogue-v1/verification.json": {
+      "bytes": 991,
+      "sha256": "c3df5829a31b1c9c28ccfc40945882e8703ab3a90a87442018fd821bc4eb8756"
+    },
+    "project/research/general_n/2026-09-12-compatible-routing-catalogue-v1/verification.log": {
+      "bytes": 1096,
+      "sha256": "9de4682f3632443ebea53c261466010dd94a2dfdf4a769b6c7da64a41c655ffb"
+    },
+    "project/research/general_n/2026-09-12-compatible-routing-catalogue-v1/verify_catalogue_and_summary.py": {
+      "bytes": 4881,
+      "sha256": "e662b532b2359f8d23698c52d94c4bd485a5cb41f84a29f7ffd280a306b5c6d3"
+    },
+    "releases/REVIEW_READY_INDEX.md": {
+      "bytes": 14601,
+      "sha256": "bfcf046ec2c44fca579389ebbfa66f25bdd0c47dbf3d7be738f171d685590db1"
+    },
+    "releases/general-compatible-catalogue-reviewer-v1/MANIFEST.json": {
+      "bytes": 15837,
+      "sha256": "82fa4241c370c6706525e9a6c59a64e69ea09d5221114c1d6c5d9dcfd0fe854b"
+    },
+    "releases/general-compatible-catalogue-reviewer-v1/README.md": {
+      "bytes": 4478,
+      "sha256": "8cd4f91aa532dca25c1ee449e993d31ad144f1e1ac860acf7de38305b1bfb630"
+    },
+    "releases/general-compatible-catalogue-reviewer-v1/VALIDATION.json": {
+      "bytes": 3003,
+      "sha256": "cd5ac6151b92152d2a68617e37cc45fc6de2f52d321b4103904465bab43cd299"
+    },
+    "releases/general-compatible-catalogue-reviewer-v1/build_manifest.py": {
+      "bytes": 4096,
+      "sha256": "52342edddecf6748f9a6fbdd261221bf2738ff35e1379a3a1f91575f1bddd222"
+    },
+    "releases/general-compatible-catalogue-reviewer-v1/check_manifest.py": {
+      "bytes": 439,
+      "sha256": "3707fc691c8a32b9096638052076bf80ed314288c4a87c45fa106beaefa710da"
+    },
+    "releases/general-compatible-catalogue-reviewer-v1/validate_release.py": {
+      "bytes": 4808,
+      "sha256": "24cc931390ab32693b1c32956c9faa69c8129a5be2f6f5fdc8507b38323296e6"
+    },
+    "releases/general-compatible-routing-reviewer-v1/MANIFEST.json": {
+      "bytes": 12371,
+      "sha256": "8526b334f7ea6723211f748e344846ce0b646421f7fca93a013650d22dfd1377"
+    },
+    "releases/general-heavy-load-reviewer-v1/MANIFEST.json": {
+      "bytes": 10251,
+      "sha256": "166f5860c2215923074ef85e75ce6910eaae930fc56a8eb94181bf65327c3fc7"
+    },
+    "releases/general-joint-routing-reviewer-v1/MANIFEST.json": {
+      "bytes": 10780,
+      "sha256": "135e23ceb5916599ac99b7c937139bb6a6f3e09c6ccfbe6cbb2d365321d3e6a4"
+    },
+    "releases/general-routing-tail-reviewer-v1/MANIFEST.json": {
+      "bytes": 14928,
+      "sha256": "9ada9f7ee5ec35d2185b6c0a56b125c0679c5f52aeee32b515e88250494a3397"
+    },
+    "releases/n34-reviewer-v2/MANIFEST.json": {
+      "bytes": 25869,
+      "sha256": "3a72614f35168aafbb97ec2bc3cdb4dbad100afc49e7e14859de2906d40417bf"
+    },
+    "releases/n35-reviewer-v1/MANIFEST.json": {
+      "bytes": 25850,
+      "sha256": "3214d9239266d7d335fb1252eff6a5f821bcfdb3a113a70c6e60bd320911872d"
+    }
+  },
+  "scope": {
+    "candidate_general_analytic_reduction": true,
+    "exact_q_elimination": true,
+    "at_most_five_p_candidates_per_H": true,
+    "pool": 5578,
+    "frozen_seed_vectors": 20,
+    "templates_with_control_projections": 31,
+    "exclusions": {
+      "heavy_only": 0,
+      "selected_degree": 0,
+      "eligible": 990
+    },
+    "pilot_only_exclusions": 4,
+    "newly_excluded_beyond_pilot": 975,
+    "combined_exclusions": 994,
+    "combined_survivors": 4584,
+    "fixed_potential_whole_states": 707,
+    "full_model_reduction_checks": 28591,
+    "exact_catalogue_gaps": 1564007,
+    "post_replay_compressed_templates": 11,
+    "full_pool_replay": true,
+    "solver_used": false,
+    "changed_fixed_order_ledgers": false,
+    "improved_maximum_degree_threshold": false,
+    "unrestricted_theorem": false,
+    "external_review": "OPEN"
+  },
+  "orchestration_note": "After user steering, ephemeral orchestration state was unavailable. Resumed from the on-disk checkpoint and the successful create-tree SHA already returned; no content changed.",
+  "note": "This receipt records the research publication. Its following receipt-only commit is read back separately; no circular self-hash claim."
+}
