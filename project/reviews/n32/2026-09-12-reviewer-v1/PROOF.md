@@ -98,6 +98,14 @@ The bridge gives
 Q\ge17+2t.
 \]
 
+A uniform finite-model cap used throughout this branch is
+
+\[
+d_i\le12.
+\]
+
+Indeed, the isolated-`C` lemma is parameteric: if `C=H[A]` had an isolated vertex then `b<=a-1-t`. Here `a=14`, `b=17` and every level considered in the `Delta=17` branch has `t>=1`, so it would force `17<=12`, impossible. Thus `\delta(C)>=1`; since `F` is the complement of `C` on 14 vertices, every `d_i=d_F(i)` is at most 12. This justifies the `dmax=12` cap in both the positive- and zero-demand finite models below.
+
 Thus `e(G)>=259` gives `t>=4` and `Q>=25`, impossible.
 
 ### 3.1 The 258-edge level
