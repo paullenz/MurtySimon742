@@ -1,0 +1,207 @@
+{
+  "schema": "n34-complete-publication-receipt-v1",
+  "date": "2026-09-12",
+  "repository": "paullenz/MurtySimon742",
+  "branch": "main",
+  "published_research_commit": "7794bad0f555044bee453b483521a4fbf07bb733",
+  "parent": "efcccf7f2a4b103f7b7ca3d5201dcb5485ce5fe0",
+  "tree": "9898884ab2d65d844a6590f55df161cd9e6a7e67",
+  "local_reviewed_commit": "c0eca06ab5e5a9fb23009cf8f4f82b71af1c71cc",
+  "checks": {
+    "branch_readback": true,
+    "remote_git_fetch": true,
+    "identical_local_and_remote_tree": true,
+    "expected_changed_paths": 37,
+    "all_changed_content_hashes_match": true,
+    "manifest_artifact_hashes_verified": 75,
+    "pinned_connector_readbacks": [
+      "README.md",
+      "releases/n34-reviewer-v1/README.md",
+      "project/research/n34/2026-09-12-equality-v1/README.md",
+      "project/research/n34/2026-09-12-equality-v1/verification.json",
+      "project/research/n34/2026-09-12-equality-v1/CERTIFICATE_STORAGE.json"
+    ],
+    "no_unintended_frozen_or_governed_changes": true,
+    "no_deleted_paths": true,
+    "clean_replay": "PASS",
+    "reviewer_links_checked": 320
+  },
+  "recovered_certificate_streams": {
+    "fixed": {
+      "records": 13546,
+      "original_bytes": 4058094,
+      "original_sha256": "91c00600dd97c4e5577c071eefd8f7423440d9f89acecf4ed49f7de6646b053b",
+      "recovered_from_committed_bytes": true
+    },
+    "adaptive": {
+      "records": 3925,
+      "original_bytes": 5886992,
+      "original_sha256": "28ebf4fd8de79a5b9a20ca2208e33c58b2280c38890d294796e76dedbb2a2974",
+      "recovered_from_committed_bytes": true
+    }
+  },
+  "changed_artifacts": {
+    "README.md": {
+      "sha256": "472e59652e5a16ee98623174500c00649784f90cce544b18de035b6de242ebe9",
+      "bytes": 32500
+    },
+    "START_HERE_FOR_REVIEWERS.md": {
+      "sha256": "30000ceeb41567899a1b670740e1a95b579998ff3a702aa6d18be566683fb2c6",
+      "bytes": 12044
+    },
+    "project/research/general_n/2026-09-12-source-capped-threshold-v1/SOURCE_CAPPED_THRESHOLD.md": {
+      "sha256": "4d3434627c77a3ca625957029afa1098f408a68f70deebee81371401456e095f",
+      "bytes": 3649
+    },
+    "project/research/n34/2026-09-12-equality-v1/AUDIT.md": {
+      "sha256": "d03e9bf9cd2d5bcb66bd987e5ae5abebd16377b5baf9c01956bb264496a3b1c8",
+      "bytes": 4434
+    },
+    "project/research/n34/2026-09-12-equality-v1/CERTIFICATE_STORAGE.json": {
+      "sha256": "1dc0ccc4ffcb38aa5908f82596e7c09c4b9e21f7050f76a45d3a4429ec451203",
+      "bytes": 876
+    },
+    "project/research/n34/2026-09-12-equality-v1/HEAVY_SPLIT.md": {
+      "sha256": "c5a3ba3e8f36f51f42e628dec77209fb08d530ec27572832c219efd97fb905d3",
+      "bytes": 4995
+    },
+    "project/research/n34/2026-09-12-equality-v1/README.md": {
+      "sha256": "13ff52aef89eab781ed54d31cf04e890833a2b48d748e79709bd70247e487997",
+      "bytes": 7005
+    },
+    "project/research/n34/2026-09-12-equality-v1/adaptive.jsonl.gz.b64": {
+      "sha256": "922df2dd97af585c5dbb63f9962eb12863aa2ae76464911ebed4d2ec2a921378",
+      "bytes": 901160
+    },
+    "project/research/n34/2026-09-12-equality-v1/adaptive.log": {
+      "sha256": "79e012bf71a4f0f89dc93a1f8c5df64aacadf433f8ac7fdeaf4b90a65a36f890",
+      "bytes": 2278
+    },
+    "project/research/n34/2026-09-12-equality-v1/adaptive_summary.json": {
+      "sha256": "6b2eebd7df8ade23c6c0dd8394325f38dafc88a9be01e018d9fe1ca36842bc4f",
+      "bytes": 370
+    },
+    "project/research/n34/2026-09-12-equality-v1/certificate_io.py": {
+      "sha256": "cb735e569a885162eb367b8f1506939a75e102eacfa53a7992ae36f4f0b08745",
+      "bytes": 1052
+    },
+    "project/research/n34/2026-09-12-equality-v1/certify_heavy.py": {
+      "sha256": "4bb213953c3c5e8bfdd8a19d6afefc0dd8c10ed8cd6adad45fab6ea3fd50cd5c",
+      "bytes": 859
+    },
+    "project/research/n34/2026-09-12-equality-v1/envelopes.py": {
+      "sha256": "736e4cb10d0518cfb1e742f34e3c01c4ca0041a71ac30cfd4e611d661e83b1c2",
+      "bytes": 4367
+    },
+    "project/research/n34/2026-09-12-equality-v1/fixed.jsonl.gz.b64": {
+      "sha256": "e87d846f3022e0514b468a8f228b8a2cd729271a4153e1da39ee5e32936ba910",
+      "bytes": 365187
+    },
+    "project/research/n34/2026-09-12-equality-v1/fixed.log": {
+      "sha256": "defcf12c6a8bc83442867fb20f48d6402e5c0ea0ce632448d95679c4291c5cb5",
+      "bytes": 10009
+    },
+    "project/research/n34/2026-09-12-equality-v1/fixed_summary.json": {
+      "sha256": "9b9f370911e1af23db65579fa537c1990c5d14fe453331345056c5724d90b783",
+      "bytes": 424
+    },
+    "project/research/n34/2026-09-12-equality-v1/heavy.log": {
+      "sha256": "4f105e9ace8f597d1b7c05087e28a9f01562affd207c89f5e19a63e190ad40b2",
+      "bytes": 79
+    },
+    "project/research/n34/2026-09-12-equality-v1/heavy_certificate.json": {
+      "sha256": "1ee516ac86b9386894b7e63968c311f20e4ff2d4f96ddb608912f7005880770a",
+      "bytes": 5219
+    },
+    "project/research/n34/2026-09-12-equality-v1/heavy_model.py": {
+      "sha256": "60746ca836599022f98262db299d4d28e46e4057b7d15e02a6d761a389041f24",
+      "bytes": 4813
+    },
+    "project/research/n34/2026-09-12-equality-v1/low_state_rx.json": {
+      "sha256": "4d3d04f669111e6d0ca7b0011861866acecd2f88ab08d9badf132c660f2582f6",
+      "bytes": 1022
+    },
+    "project/research/n34/2026-09-12-equality-v1/low_state_rx.log": {
+      "sha256": "73f7f4d735f5462b24e9852cdc317caf3fc0757db7733ad36ac3bd2da15577c5",
+      "bytes": 305
+    },
+    "project/research/n34/2026-09-12-equality-v1/pack_certificates.py": {
+      "sha256": "e711018c4ed4682917bbf9199f98b3158d337f7cd9f21472ffff5afe110e3e64",
+      "bytes": 1102
+    },
+    "project/research/n34/2026-09-12-equality-v1/probe_low_state.py": {
+      "sha256": "963a5a696b607b230b2e32dda160a506913417386756c9ee4b535a7c87cf5942",
+      "bytes": 1294
+    },
+    "project/research/n34/2026-09-12-equality-v1/storage.log": {
+      "sha256": "1dc0ccc4ffcb38aa5908f82596e7c09c4b9e21f7050f76a45d3a4429ec451203",
+      "bytes": 876
+    },
+    "project/research/n34/2026-09-12-equality-v1/sweep.py": {
+      "sha256": "f027a26948565a10c64c5f2953219a108e3367e4a9ec2832f768533d06432074",
+      "bytes": 4081
+    },
+    "project/research/n34/2026-09-12-equality-v1/verification.json": {
+      "sha256": "17075cea32febf0ffc13ffcf24e21dd814b2807bb1ce0c6c8d42d93d57c76b77",
+      "bytes": 922
+    },
+    "project/research/n34/2026-09-12-equality-v1/verification.log": {
+      "sha256": "364830e6c2b7c8c8a8ab9e15d1ee9547809eba1455288d7ea99de7888d858f8c",
+      "bytes": 982
+    },
+    "project/research/n34/2026-09-12-equality-v1/verify.py": {
+      "sha256": "f7a5819c4c456aa626fb82550eea46d4a19c63243f994a512ceaa990aa700ea3",
+      "bytes": 6985
+    },
+    "project/research/n34/2026-09-12-frontier-v1/README.md": {
+      "sha256": "6d469178ed5556c3d6e780f8012e17a884e1d8e27a65cb6ae583dd98121bfc18",
+      "bytes": 6624
+    },
+    "project/research/n34/2026-09-12-m290-v1/README.md": {
+      "sha256": "6b966424c4785bb6f79f59cff5af3a9d49a5ec0e808c045103712a49545fa969",
+      "bytes": 6751
+    },
+    "releases/REVIEW_READY_INDEX.md": {
+      "sha256": "3acb7d77df25fbe727735baeb0f68db45a00475950a1e59a7e78c5acd9c7e280",
+      "bytes": 9141
+    },
+    "releases/general-joint-clipping-reviewer-v1/README.md": {
+      "sha256": "0161c5a712f9d5da311d65d7ed5e754ed5d88f591a246098e38d2b59880fbf10",
+      "bytes": 2970
+    },
+    "releases/n34-bound-reviewer-v1/README.md": {
+      "sha256": "9cf9c3f928424b14b05ef604dead5c15f0d1302ad083a284293adefec0ee21f9",
+      "bytes": 2593
+    },
+    "releases/n34-reviewer-v1/MANIFEST.json": {
+      "sha256": "4a43045cf005cf852fda37e7e51901219ea4eb3a93f83865ac3b2d8f39d5dbc8",
+      "bytes": 15043
+    },
+    "releases/n34-reviewer-v1/README.md": {
+      "sha256": "e1eedc993d9062249475ea8c47b3c3673c20a8f95df43815820dc53de62f4c35",
+      "bytes": 2250
+    },
+    "releases/n34-reviewer-v1/VALIDATION.json": {
+      "sha256": "50008106eb080ac0267e3cb517461a8c3b7428c64eac33cafcadb5426b6136f8",
+      "bytes": 4194
+    },
+    "releases/n34-reviewer-v1/check_manifest.py": {
+      "sha256": "39a3795b60fa07190ffab82bac5fb530f4f453d400a31bb3aa0feba7f949da92",
+      "bytes": 512
+    }
+  },
+  "scope": {
+    "n": 34,
+    "candidate_upper_bound": 289,
+    "candidate_equality": "K(17,17) only",
+    "m289_states": 13546,
+    "hand_accounting_exclusions": 6708,
+    "integer_envelope_certificates": 6837,
+    "heavy_split_farkas_certificates": 1,
+    "envelope_local_integer_checks": 3018781,
+    "heavy_split_columns_checked": 12570,
+    "external_review": "OPEN",
+    "unrestricted_theorem": false
+  },
+  "receipt_followup": "This receipt is attached in a subsequent commit whose parent is the verified research commit; it is excluded from the proof manifest to avoid circular hashes."
+}
