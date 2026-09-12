@@ -1,0 +1,316 @@
+{
+  "schema": "routing-tail-projection-catalog-v1",
+  "source_sha256": "6d89680c8aae92006ce4ebdebebe44df22623c7b56c5bab7b68bb45716a15341",
+  "pilot_distinct_ratios": 34,
+  "rule": "Successful pilot local certificates, their kappa=0 versions, and the preceding 20 routing templates; scale all numerators by h.",
+  "templates": [
+    {
+      "denominator": 5,
+      "lam": 5,
+      "mu": 0,
+      "eta": 2,
+      "kappa": 0
+    },
+    {
+      "denominator": 2,
+      "lam": 2,
+      "mu": 0,
+      "eta": 1,
+      "kappa": 0
+    },
+    {
+      "denominator": 1,
+      "lam": 1,
+      "mu": 0,
+      "eta": 1,
+      "kappa": 0
+    },
+    {
+      "denominator": 3,
+      "lam": 4,
+      "mu": 0,
+      "eta": 1,
+      "kappa": 0
+    },
+    {
+      "denominator": 3,
+      "lam": 4,
+      "mu": 0,
+      "eta": 1,
+      "kappa": 2
+    },
+    {
+      "denominator": 3,
+      "lam": 4,
+      "mu": 0,
+      "eta": 2,
+      "kappa": 0
+    },
+    {
+      "denominator": 30,
+      "lam": 41,
+      "mu": 0,
+      "eta": 21,
+      "kappa": 0
+    },
+    {
+      "denominator": 2,
+      "lam": 3,
+      "mu": 0,
+      "eta": 1,
+      "kappa": 0
+    },
+    {
+      "denominator": 2,
+      "lam": 3,
+      "mu": 0,
+      "eta": 1,
+      "kappa": 1
+    },
+    {
+      "denominator": 2,
+      "lam": 3,
+      "mu": 0,
+      "eta": 1,
+      "kappa": 2
+    },
+    {
+      "denominator": 4,
+      "lam": 6,
+      "mu": 0,
+      "eta": 3,
+      "kappa": 0
+    },
+    {
+      "denominator": 4,
+      "lam": 6,
+      "mu": 0,
+      "eta": 3,
+      "kappa": 2
+    },
+    {
+      "denominator": 6,
+      "lam": 9,
+      "mu": 0,
+      "eta": 5,
+      "kappa": 0
+    },
+    {
+      "denominator": 6,
+      "lam": 9,
+      "mu": 0,
+      "eta": 5,
+      "kappa": 33
+    },
+    {
+      "denominator": 2,
+      "lam": 3,
+      "mu": 0,
+      "eta": 2,
+      "kappa": 0
+    },
+    {
+      "denominator": 3,
+      "lam": 5,
+      "mu": 0,
+      "eta": 2,
+      "kappa": 0
+    },
+    {
+      "denominator": 3,
+      "lam": 5,
+      "mu": 0,
+      "eta": 2,
+      "kappa": 1
+    },
+    {
+      "denominator": 3,
+      "lam": 5,
+      "mu": 0,
+      "eta": 2,
+      "kappa": 2
+    },
+    {
+      "denominator": 3,
+      "lam": 5,
+      "mu": 0,
+      "eta": 2,
+      "kappa": 4
+    },
+    {
+      "denominator": 3,
+      "lam": 5,
+      "mu": 0,
+      "eta": 2,
+      "kappa": 16
+    },
+    {
+      "denominator": 3,
+      "lam": 5,
+      "mu": 0,
+      "eta": 2,
+      "kappa": 48
+    },
+    {
+      "denominator": 3,
+      "lam": 5,
+      "mu": 0,
+      "eta": 3,
+      "kappa": 0
+    },
+    {
+      "denominator": 3,
+      "lam": 5,
+      "mu": 0,
+      "eta": 3,
+      "kappa": 2
+    },
+    {
+      "denominator": 3,
+      "lam": 5,
+      "mu": 0,
+      "eta": 3,
+      "kappa": 9
+    },
+    {
+      "denominator": 3,
+      "lam": 5,
+      "mu": 0,
+      "eta": 3,
+      "kappa": 19
+    },
+    {
+      "denominator": 3,
+      "lam": 5,
+      "mu": 40,
+      "eta": 42,
+      "kappa": 0
+    },
+    {
+      "denominator": 3,
+      "lam": 5,
+      "mu": 40,
+      "eta": 42,
+      "kappa": 48
+    },
+    {
+      "denominator": 4,
+      "lam": 7,
+      "mu": 0,
+      "eta": 3,
+      "kappa": 0
+    },
+    {
+      "denominator": 4,
+      "lam": 7,
+      "mu": 0,
+      "eta": 4,
+      "kappa": 0
+    },
+    {
+      "denominator": 4,
+      "lam": 7,
+      "mu": 60,
+      "eta": 64,
+      "kappa": 0
+    },
+    {
+      "denominator": 30,
+      "lam": 56,
+      "mu": 0,
+      "eta": 43,
+      "kappa": 0
+    },
+    {
+      "denominator": 30,
+      "lam": 56,
+      "mu": 0,
+      "eta": 43,
+      "kappa": 187
+    },
+    {
+      "denominator": 30,
+      "lam": 56,
+      "mu": 397,
+      "eta": 440,
+      "kappa": 0
+    },
+    {
+      "denominator": 30,
+      "lam": 56,
+      "mu": 397,
+      "eta": 440,
+      "kappa": 480
+    },
+    {
+      "denominator": 1,
+      "lam": 2,
+      "mu": 0,
+      "eta": 1,
+      "kappa": 0
+    },
+    {
+      "denominator": 3,
+      "lam": 6,
+      "mu": 0,
+      "eta": 4,
+      "kappa": 0
+    },
+    {
+      "denominator": 2,
+      "lam": 4,
+      "mu": 0,
+      "eta": 3,
+      "kappa": 0
+    },
+    {
+      "denominator": 1,
+      "lam": 2,
+      "mu": 0,
+      "eta": 2,
+      "kappa": 0
+    },
+    {
+      "denominator": 1,
+      "lam": 2,
+      "mu": 0,
+      "eta": 2,
+      "kappa": 8
+    },
+    {
+      "denominator": 1,
+      "lam": 2,
+      "mu": 14,
+      "eta": 16,
+      "kappa": 0
+    },
+    {
+      "denominator": 1,
+      "lam": 2,
+      "mu": 14,
+      "eta": 16,
+      "kappa": 16
+    },
+    {
+      "denominator": 15,
+      "lam": 31,
+      "mu": 0,
+      "eta": 29,
+      "kappa": 0
+    },
+    {
+      "denominator": 3,
+      "lam": 7,
+      "mu": 9,
+      "eta": 17,
+      "kappa": 0
+    },
+    {
+      "denominator": 3,
+      "lam": 7,
+      "mu": 9,
+      "eta": 17,
+      "kappa": 48
+    }
+  ]
+}

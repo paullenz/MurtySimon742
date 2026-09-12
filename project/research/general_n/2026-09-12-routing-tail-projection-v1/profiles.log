@@ -1,0 +1,104 @@
+PROFILES 0 {'no_penalty': {'prior_profile_exclusion': 1}, 'aggregate': {'prior_profile_exclusion': 1}, 'joint_budget': {'prior_profile_exclusion': 1}} 0.02
+PROFILES 200 {'no_penalty': {'prior_profile_exclusion': 30, 'single_threshold_profile_exclusion': 39, 'survives_projection': 131, 'raised_budget_in_surviving_or_joint_profile': 37, 'joint_tail_profile_exclusion': 1}, 'aggregate': {'prior_profile_exclusion': 30, 'single_threshold_profile_exclusion': 29, 'survives_projection': 142, 'raised_budget_in_surviving_or_joint_profile': 32}, 'joint_budget': {'prior_profile_exclusion': 30, 'single_threshold_profile_exclusion': 39, 'survives_projection': 130, 'raised_budget_in_surviving_or_joint_profile': 46, 'joint_tail_profile_exclusion': 2}} 0.53
+PROFILES 400 {'no_penalty': {'prior_profile_exclusion': 30, 'single_threshold_profile_exclusion': 62, 'survives_projection': 308, 'raised_budget_in_surviving_or_joint_profile': 61, 'joint_tail_profile_exclusion': 1}, 'aggregate': {'prior_profile_exclusion': 30, 'single_threshold_profile_exclusion': 36, 'survives_projection': 335, 'raised_budget_in_surviving_or_joint_profile': 42}, 'joint_budget': {'prior_profile_exclusion': 30, 'single_threshold_profile_exclusion': 65, 'survives_projection': 304, 'raised_budget_in_surviving_or_joint_profile': 72, 'joint_tail_profile_exclusion': 2}} 1.13
+PROFILES 600 {'no_penalty': {'prior_profile_exclusion': 30, 'single_threshold_profile_exclusion': 71, 'survives_projection': 499, 'raised_budget_in_surviving_or_joint_profile': 83, 'joint_tail_profile_exclusion': 1}, 'aggregate': {'prior_profile_exclusion': 30, 'single_threshold_profile_exclusion': 38, 'survives_projection': 533, 'raised_budget_in_surviving_or_joint_profile': 46}, 'joint_budget': {'prior_profile_exclusion': 30, 'single_threshold_profile_exclusion': 74, 'survives_projection': 495, 'raised_budget_in_surviving_or_joint_profile': 94, 'joint_tail_profile_exclusion': 2}} 1.79
+PROFILES 800 {'no_penalty': {'prior_profile_exclusion': 30, 'single_threshold_profile_exclusion': 71, 'survives_projection': 699, 'raised_budget_in_surviving_or_joint_profile': 91, 'joint_tail_profile_exclusion': 1}, 'aggregate': {'prior_profile_exclusion': 30, 'single_threshold_profile_exclusion': 38, 'survives_projection': 733, 'raised_budget_in_surviving_or_joint_profile': 46}, 'joint_budget': {'prior_profile_exclusion': 30, 'single_threshold_profile_exclusion': 74, 'survives_projection': 695, 'raised_budget_in_surviving_or_joint_profile': 102, 'joint_tail_profile_exclusion': 2}} 2.39
+PROFILES 1000 {'no_penalty': {'prior_profile_exclusion': 30, 'single_threshold_profile_exclusion': 71, 'survives_projection': 899, 'raised_budget_in_surviving_or_joint_profile': 91, 'joint_tail_profile_exclusion': 1}, 'aggregate': {'prior_profile_exclusion': 30, 'single_threshold_profile_exclusion': 38, 'survives_projection': 933, 'raised_budget_in_surviving_or_joint_profile': 46}, 'joint_budget': {'prior_profile_exclusion': 30, 'single_threshold_profile_exclusion': 74, 'survives_projection': 895, 'raised_budget_in_surviving_or_joint_profile': 102, 'joint_tail_profile_exclusion': 2}} 3.19
+PROFILES 1200 {'no_penalty': {'prior_profile_exclusion': 30, 'single_threshold_profile_exclusion': 71, 'survives_projection': 1099, 'raised_budget_in_surviving_or_joint_profile': 91, 'joint_tail_profile_exclusion': 1}, 'aggregate': {'prior_profile_exclusion': 30, 'single_threshold_profile_exclusion': 38, 'survives_projection': 1133, 'raised_budget_in_surviving_or_joint_profile': 46}, 'joint_budget': {'prior_profile_exclusion': 30, 'single_threshold_profile_exclusion': 74, 'survives_projection': 1095, 'raised_budget_in_surviving_or_joint_profile': 102, 'joint_tail_profile_exclusion': 2}} 3.97
+PROFILES 1400 {'no_penalty': {'prior_profile_exclusion': 45, 'single_threshold_profile_exclusion': 104, 'survives_projection': 1251, 'raised_budget_in_surviving_or_joint_profile': 98, 'joint_tail_profile_exclusion': 1}, 'aggregate': {'prior_profile_exclusion': 45, 'single_threshold_profile_exclusion': 62, 'survives_projection': 1294, 'raised_budget_in_surviving_or_joint_profile': 49}, 'joint_budget': {'prior_profile_exclusion': 45, 'single_threshold_profile_exclusion': 111, 'survives_projection': 1243, 'raised_budget_in_surviving_or_joint_profile': 109, 'joint_tail_profile_exclusion': 2}} 4.81
+{
+  "status": "COMPLETE_FROZEN_CATALOG_REPLAY",
+  "profiles": 1453,
+  "templates": 44,
+  "counts": {
+    "no_penalty": {
+      "prior_profile_exclusion": 45,
+      "single_threshold_profile_exclusion": 105,
+      "survives_projection": 1302,
+      "raised_budget_in_surviving_or_joint_profile": 98,
+      "joint_tail_profile_exclusion": 1
+    },
+    "aggregate": {
+      "prior_profile_exclusion": 45,
+      "single_threshold_profile_exclusion": 62,
+      "survives_projection": 1346,
+      "raised_budget_in_surviving_or_joint_profile": 49
+    },
+    "joint_budget": {
+      "prior_profile_exclusion": 45,
+      "single_threshold_profile_exclusion": 112,
+      "survives_projection": 1294,
+      "raised_budget_in_surviving_or_joint_profile": 109,
+      "joint_tail_profile_exclusion": 2
+    }
+  },
+  "layers": {
+    "n34-m289": {
+      "no_penalty": {
+        "prior_profile_exclusion": 30,
+        "single_threshold_profile_exclusion": 73,
+        "survives_projection": 1192,
+        "joint_tail_profile_exclusion": 1
+      },
+      "aggregate": {
+        "prior_profile_exclusion": 30,
+        "single_threshold_profile_exclusion": 40,
+        "survives_projection": 1226
+      },
+      "joint_budget": {
+        "prior_profile_exclusion": 30,
+        "single_threshold_profile_exclusion": 77,
+        "survives_projection": 1187,
+        "joint_tail_profile_exclusion": 2
+      }
+    },
+    "n35-m307": {
+      "no_penalty": {
+        "prior_profile_exclusion": 3,
+        "single_threshold_profile_exclusion": 5,
+        "survives_projection": 5
+      },
+      "aggregate": {
+        "prior_profile_exclusion": 3,
+        "single_threshold_profile_exclusion": 4,
+        "survives_projection": 6
+      },
+      "joint_budget": {
+        "prior_profile_exclusion": 3,
+        "single_threshold_profile_exclusion": 6,
+        "survives_projection": 4
+      }
+    },
+    "n35-m306": {
+      "no_penalty": {
+        "prior_profile_exclusion": 12,
+        "single_threshold_profile_exclusion": 27,
+        "survives_projection": 105
+      },
+      "aggregate": {
+        "prior_profile_exclusion": 12,
+        "single_threshold_profile_exclusion": 18,
+        "survives_projection": 114
+      },
+      "joint_budget": {
+        "prior_profile_exclusion": 12,
+        "single_threshold_profile_exclusion": 29,
+        "survives_projection": 103
+      }
+    }
+  },
+  "prior_joint_survivors": 5578,
+  "state_comparison": {
+    "no_penalty": {
+      "survives_projection": 5578
+    },
+    "aggregate": {
+      "survives_projection": 5578
+    },
+    "joint_budget": {
+      "survives_projection": 5578
+    }
+  },
+  "scope": "One pass from the preceding heavy-load closed tails. Survivors are necessary-condition records, not graphs.",
+  "external_review": "OPEN"
+}

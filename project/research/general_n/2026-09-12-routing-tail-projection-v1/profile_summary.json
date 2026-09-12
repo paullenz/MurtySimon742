@@ -1,0 +1,96 @@
+{
+  "status": "COMPLETE_FROZEN_CATALOG_REPLAY",
+  "profiles": 1453,
+  "templates": 44,
+  "counts": {
+    "no_penalty": {
+      "prior_profile_exclusion": 45,
+      "single_threshold_profile_exclusion": 105,
+      "survives_projection": 1302,
+      "raised_budget_in_surviving_or_joint_profile": 98,
+      "joint_tail_profile_exclusion": 1
+    },
+    "aggregate": {
+      "prior_profile_exclusion": 45,
+      "single_threshold_profile_exclusion": 62,
+      "survives_projection": 1346,
+      "raised_budget_in_surviving_or_joint_profile": 49
+    },
+    "joint_budget": {
+      "prior_profile_exclusion": 45,
+      "single_threshold_profile_exclusion": 112,
+      "survives_projection": 1294,
+      "raised_budget_in_surviving_or_joint_profile": 109,
+      "joint_tail_profile_exclusion": 2
+    }
+  },
+  "layers": {
+    "n34-m289": {
+      "no_penalty": {
+        "prior_profile_exclusion": 30,
+        "single_threshold_profile_exclusion": 73,
+        "survives_projection": 1192,
+        "joint_tail_profile_exclusion": 1
+      },
+      "aggregate": {
+        "prior_profile_exclusion": 30,
+        "single_threshold_profile_exclusion": 40,
+        "survives_projection": 1226
+      },
+      "joint_budget": {
+        "prior_profile_exclusion": 30,
+        "single_threshold_profile_exclusion": 77,
+        "survives_projection": 1187,
+        "joint_tail_profile_exclusion": 2
+      }
+    },
+    "n35-m307": {
+      "no_penalty": {
+        "prior_profile_exclusion": 3,
+        "single_threshold_profile_exclusion": 5,
+        "survives_projection": 5
+      },
+      "aggregate": {
+        "prior_profile_exclusion": 3,
+        "single_threshold_profile_exclusion": 4,
+        "survives_projection": 6
+      },
+      "joint_budget": {
+        "prior_profile_exclusion": 3,
+        "single_threshold_profile_exclusion": 6,
+        "survives_projection": 4
+      }
+    },
+    "n35-m306": {
+      "no_penalty": {
+        "prior_profile_exclusion": 12,
+        "single_threshold_profile_exclusion": 27,
+        "survives_projection": 105
+      },
+      "aggregate": {
+        "prior_profile_exclusion": 12,
+        "single_threshold_profile_exclusion": 18,
+        "survives_projection": 114
+      },
+      "joint_budget": {
+        "prior_profile_exclusion": 12,
+        "single_threshold_profile_exclusion": 29,
+        "survives_projection": 103
+      }
+    }
+  },
+  "prior_joint_survivors": 5578,
+  "state_comparison": {
+    "no_penalty": {
+      "survives_projection": 5578
+    },
+    "aggregate": {
+      "survives_projection": 5578
+    },
+    "joint_budget": {
+      "survives_projection": 5578
+    }
+  },
+  "scope": "One pass from the preceding heavy-load closed tails. Survivors are necessary-condition records, not graphs.",
+  "external_review": "OPEN"
+}

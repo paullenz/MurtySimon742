@@ -1,0 +1,87 @@
+{
+  "status": "PASS",
+  "tail_checks": 109401,
+  "plateau_checks": 78639,
+  "zero_slack_forced_tail_checks": 3490,
+  "local_source_options": 12414,
+  "local_equality_options": 258,
+  "routing_integer_checks": 58957,
+  "domains": {
+    "tails": "2<=a<=7, 1<=b<=6, all sorted positive residual tuples; zero/half/exact lower tails; M=r,r+1,r+2",
+    "local": "1<=h<=12, 0<=H<=6h, 0<=p<=3h",
+    "routing": "1<=h<=12, 0<=P<=3h, 0<=z<=40, all admissible j"
+  },
+  "invalid_extensions": [
+    {
+      "claim": "Subtract all higher lower tails when bounding one residual degree",
+      "a": 3,
+      "b": 3,
+      "rho": [
+        1,
+        3,
+        3
+      ],
+      "L": [
+        3,
+        2,
+        2
+      ],
+      "h": 2,
+      "E": 2,
+      "wrong_Rmax": 2,
+      "correct_Rmax": 3,
+      "explanation": "The distinguished source itself contributes to higher tails; other sources need only (L_l-1)_+."
+    },
+    {
+      "claim": "Charge (h-1)(z-L_h) for every tail increase",
+      "a": 3,
+      "b": 5,
+      "rho": [
+        1,
+        2,
+        2,
+        3,
+        3
+      ],
+      "L": [
+        5,
+        4,
+        1
+      ],
+      "M": 11,
+      "D": 1,
+      "h": 3,
+      "z": 2,
+      "wrong_charge": 2,
+      "correct_charge": 1,
+      "explanation": "A lower tail already above z need not rise. The positive-part sum is necessary."
+    },
+    {
+      "claim": "Infer a positive number of 2h-senders from local maximality alone",
+      "h": 2,
+      "z": 2,
+      "H": [
+        2,
+        2
+      ],
+      "p": [
+        0,
+        0
+      ],
+      "heavy_sum": 4,
+      "high_senders": 0,
+      "explanation": "This is only a local counterexample. Full nontrivial load equality implies G<=4W<=4h(z+j) and r>0, so j>=ceil(r/(4h))>=1. The first draft overstated the need for a separate j=0 exception; corrected before publication."
+    },
+    {
+      "claim": "Allow p>3h while retaining source cost <=4h^2",
+      "h": 2,
+      "H": 2,
+      "p": 7,
+      "source_cost": 18,
+      "claimed_upper": 16,
+      "explanation": "The incoming-degree hypothesis is essential; this is a local inequality counterexample, not a graph."
+    }
+  ],
+  "scope": "Finite corroboration of the hand proofs; abstract integer data are not claimed graph realizations.",
+  "external_review": "OPEN"
+}

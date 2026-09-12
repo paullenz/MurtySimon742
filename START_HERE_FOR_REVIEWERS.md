@@ -80,6 +80,14 @@ All 5,578 survivors and the correction removing 192 old-rule exclusions are
 preserved. The general maximum-degree result and fixed-order ledgers are
 unchanged; external review remains OPEN.
 
+The [routing-tail reviewer-v1 package](releases/general-routing-tail-reviewer-v1/README.md)
+projects joint routing onto demands and proved lower tails, and extracts a
+closed equality-rigidity criterion. It adds 114 whole layer/profile exclusions
+beyond the earlier 45 demand-level exclusions. The scalar strictness rule adds
+nine over the ordinary load-cap test, all included in those 114. All 5,578
+previous joint-routing survivors remain. The package preserves that negative
+frontier result, full evidence and invalid extensions; external review is OPEN.
+
 For the preceding general-foundations review pass, see the
 [focused foundations checklist](project/reviews/general-theory/2026-09-12-joint-followthrough-v1/FOUNDATIONS_AUDIT.md).
 It checks the primary dominating-edge theorem's exception, the witness-capacity

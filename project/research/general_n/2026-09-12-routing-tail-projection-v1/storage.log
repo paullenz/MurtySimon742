@@ -1,0 +1,52 @@
+{
+  "schema": "routing-tail-projection-evidence-storage-v1",
+  "encoding": "base64(gzip(original)); mtime=0",
+  "files": {
+    "pilot_results.jsonl": {
+      "stored_file": "pilot_results.jsonl.gz.b64",
+      "format": "jsonl",
+      "records": 27,
+      "original_bytes": 307916,
+      "original_sha256": "6d89680c8aae92006ce4ebdebebe44df22623c7b56c5bab7b68bb45716a15341",
+      "stored_bytes": 31801,
+      "stored_sha256": "245bec05a12f5e2f438ea66b96525d63d101cc5a6bcef0ce041d9822aec9c544"
+    },
+    "profile_results.jsonl": {
+      "stored_file": "profile_results.jsonl.gz.b64",
+      "format": "jsonl",
+      "records": 1453,
+      "original_bytes": 5732891,
+      "original_sha256": "262f84b27cc3c54418762bb79823cdfa0b29824d2ecae5c1ad1289ce620ee368",
+      "stored_bytes": 249035,
+      "stored_sha256": "fceca243e6472e8247e2171c1dbb06b6e50d39ec76e44afeb9c9d4fabdd28516"
+    },
+    "state_comparison.json": {
+      "stored_file": "state_comparison.json.gz.b64",
+      "format": "json",
+      "records": 5578,
+      "original_bytes": 1134242,
+      "original_sha256": "9b647ba14c9aea02a3c7af7d7486b04ae4d403af1237560d2728ed01185cbaf2",
+      "stored_bytes": 25682,
+      "stored_sha256": "e88558123728bba255efa2f392f8e0915b91ec172870371c00ed9c94d3676ac5"
+    },
+    "boundary_results.jsonl": {
+      "stored_file": "boundary_results.jsonl.gz.b64",
+      "format": "jsonl",
+      "records": 1453,
+      "original_bytes": 2373604,
+      "original_sha256": "6923e5c30279369b3b68c97265af26f03c787dcb051ba51ce672d9319df5e561",
+      "stored_bytes": 71444,
+      "stored_sha256": "6d352cf0496104bee20fad2184494580660671f6353aa96bf8973aa63611279e"
+    },
+    "boundary_state_comparison.json": {
+      "stored_file": "boundary_state_comparison.json.gz.b64",
+      "format": "json",
+      "records": 5578,
+      "original_bytes": 453772,
+      "original_sha256": "7b0db53cb73a8baf80cd6bc37a28710f39084d6061e70f374bf12730ca2bff11",
+      "stored_bytes": 23716,
+      "stored_sha256": "7a93819d20e41d25b76e533f0255f42440070042ad7105e557c43365a51b6cf6",
+      "records_key": "records"
+    }
+  }
+}

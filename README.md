@@ -55,9 +55,11 @@ indegrees. It strengthens the h=2 case to `8k<=r+8z` when p<=6 and gives
 new demand-only inequalities. A [joint routing continuation](releases/general-joint-routing-reviewer-v1/README.md)
 now conditions on the number of heavy senders and limits how many of their
 arcs each destination can receive. It supplies 729 further exact exclusions
-after all earlier hand rules; the next target is a demand/tail consequence
-of this destination cap. Wider local cutoffs and individual source caps
-added no exclusions in the earlier experiment.
+after all earlier hand rules. A [demand/tail projection and closed equality rule](releases/general-routing-tail-reviewer-v1/README.md)
+now simplify that mechanism into profile-level statements. They leave the
+5,578-state remainder unchanged; stronger supplement eligibility is the next
+structural target. Wider local cutoffs and individual source caps added no
+exclusions in the earlier experiment.
 
 ## Failures, audit challenges and corrections are part of the record
 
@@ -105,12 +107,40 @@ available for that scrutiny.
 | Balanced-degree / fixed-a structural results | Candidate all-order balanced-degree reduction; infinite `a=14` high-b family; tail bounds through `a=23`, including joint clipping and an adaptive six-level boundary; proof-critical finite arithmetic where stated; external review open |
 | Heavy-load / routing family | Candidate all-threshold hand inequalities, explicit incoming-degree penalties, and new demand-only tail bounds. Low-demand consequence: `s_i<=2, t>0, b-a<=5 => 9t+4(b-a)<=a`. Reviewer-v1; external review OPEN. |
 | Joint heavy routing | Candidate general lemma coupling heavy-sender count, destination indegrees and pair capacity. Reviewer-v1; 729 further exclusions from a corrected pool of 6,307; 5,578 survive the frozen catalogue. External review OPEN. |
+| Demand/tail projection and equality rigidity | Candidate general hand lemmas; reviewer-v1. Adds 114 whole layer/profile exclusions before residual enumeration and a closed strictness criterion. Adds no exclusions among the 5,578 joint-routing survivors. External review OPEN. |
 | General maximum-degree result | Candidate theorem: `n >= 6` and `Delta(G) >= (7/12)n` imply `e(G) < floor(n^2/4)`; complete candidate hand argument with internal exact audits green; external review and novelty assessment open |
 | RX-Hall / monotone-potential programme | Active finite-to-symbolic programme. It is **not** an unrestricted theorem. It supplies general structural experiments and proof-critical exact finite exclusions in N32, N33, N34 and N35. Floating infeasibility is not accepted as a proof event. |
 
 The unrestricted Murty–Simon conjecture remains unsolved by this project.
 
-## Joint heavy routing: the next structural step
+## Demand/tail projection and equality rigidity
+
+The [routing-tail reviewer-v1 package](releases/general-routing-tail-reviewer-v1/README.md)
+removes the unknown residual-degree tuple from a joint-routing inequality.
+If D is the residual budget left after proved lower tails, and d is their
+last positive level, every source has `rho<=d+D`. Raising a tail consumes
+this budget and tightens the cap. Zero remaining budget forces every tail.
+
+A second hand lemma describes equality in the load bound. When incoming
+degree is at most 3h, equality forces each heavy source to send h or 2h
+heavy arcs; a 2h-sender has incoming degree zero. Destination capacity then
+gives an explicit criterion making the load inequality strict by one unit.
+
+Across 1,453 layer/profile instances, the projection adds **114 whole-profile
+exclusions** beyond the preceding 45, leaving 1,294 profile survivors.
+The scalar equality rule adds nine profile exclusions over the ordinary
+load-cap test; those are included in the 114. Exact replay and the
+[counterexample/audit record](project/research/general_n/2026-09-12-routing-tail-projection-v1/AUDIT.md)
+are preserved.
+
+**All 5,578 states surviving the previous joint-routing catalogue still
+survive these tests.** This is a simplification into demand-level theory,
+not a reduction of the remaining frontier. Stronger supplement eligibility
+and label/supplement compatibility are the next targets. No improvement to
+the 7/12 result or unrestricted conjecture proof is claimed; external review
+and novelty assessment remain OPEN.
+
+## Joint heavy routing
 
 The [joint-routing reviewer-v1 package](releases/general-joint-routing-reviewer-v1/README.md)
 combines the load potential with destination capacity. With j heavy senders,

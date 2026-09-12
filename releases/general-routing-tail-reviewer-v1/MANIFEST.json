@@ -1,0 +1,310 @@
+{
+  "schema": "general-routing-tail-reviewer-v1",
+  "date": "2026-09-12",
+  "repository": "paullenz/MurtySimon742",
+  "unchanged_dependency_baseline": "fcdacbf32e79930977f7da77697f4b6f90b18ca0",
+  "python": "3.12.14",
+  "scope": {
+    "candidate_general_tail_projection": true,
+    "candidate_closed_equality_rigidity": true,
+    "pilot_profiles": 27,
+    "pilot_exclusions": 9,
+    "full_layer_profile_instances": 1453,
+    "prior_profile_exclusions": 45,
+    "new_profile_exclusions": 114,
+    "remaining_profiles": 1294,
+    "templates": 44,
+    "scalar_additional_over_ordinary_cap": 9,
+    "prior_joint_state_survivors": 5578,
+    "new_state_exclusions": 0,
+    "changed_fixed_order_ledgers": false,
+    "improved_maximum_degree_threshold": false,
+    "unrestricted_theorem": false,
+    "external_review": "OPEN"
+  },
+  "artifacts": {
+    "README.md": {
+      "bytes": 45602,
+      "sha256": "40688b500c04d3c8204a2788811521584f29322bba9c7f207a0880656e9ff4f4"
+    },
+    "START_HERE_FOR_REVIEWERS.md": {
+      "bytes": 14764,
+      "sha256": "90f9a47bf0a3c6364e0dbd51239b4b5b12f893a7a87de97e70088d103ea51468"
+    },
+    "project/research/general_n/2026-09-11-canonical-bridge-v1/CANONICAL_BRIDGE.md": {
+      "bytes": 17501,
+      "sha256": "c87068f40785baa790495aa5811b92370012845c0e592cfeacd6c03a3976dcd2"
+    },
+    "project/research/general_n/2026-09-12-exact-budget-threshold-v1/BRIDGE_REFINEMENTS.md": {
+      "bytes": 5761,
+      "sha256": "c4ba5e30a5484beabe2c1749d459fbe938d25f7dcdb6f665924cef5dd810d47e"
+    },
+    "project/research/general_n/2026-09-12-heavy-load-family-v1/EVIDENCE_STORAGE.json": {
+      "bytes": 1277,
+      "sha256": "5db0fbdb3eee44abf15efce475dad8c5e315cf76386a5e5ed70f7a572536915f"
+    },
+    "project/research/general_n/2026-09-12-heavy-load-family-v1/HEAVY_LOAD_FAMILY.md": {
+      "bytes": 10974,
+      "sha256": "896ccb1c7b4973cc02fee07745ac850d50f77dd127ef50570077282877c5b9ba"
+    },
+    "project/research/general_n/2026-09-12-heavy-load-family-v1/application_verification.json": {
+      "bytes": 969,
+      "sha256": "47c9aa18b09e96322e137377646b220e1d7d1588ef58f8bd7555f45d09c7e4aa"
+    },
+    "project/research/general_n/2026-09-12-heavy-load-family-v1/evidence_io.py": {
+      "bytes": 1183,
+      "sha256": "70f69ba0515175852bf13fcca19196c2b04703f1ba657a1ba51e9a9eeb587b37"
+    },
+    "project/research/general_n/2026-09-12-heavy-load-family-v1/frontier_results.jsonl.gz.b64": {
+      "bytes": 130823,
+      "sha256": "dda9e7dba25012b063d1107809bf28a29837ef8735b4ce703573671900c6e287"
+    },
+    "project/research/general_n/2026-09-12-heavy-load-family-v1/frontier_summary.json": {
+      "bytes": 26830,
+      "sha256": "4b6eb738703fd5ad75ce12f4fe09bb86852a335d9c6ff135eec370ce6cb88d9f"
+    },
+    "project/research/general_n/2026-09-12-heavy-load-family-v1/profile_results.jsonl.gz.b64": {
+      "bytes": 31826,
+      "sha256": "6dea3c03962646e5448de28d6762ef25a5817cd2f3c983c174f31c6fb52c7408"
+    },
+    "project/research/general_n/2026-09-12-heavy-load-family-v1/profile_summary.json": {
+      "bytes": 762,
+      "sha256": "87cad0e575d3d61ca9cbf4fa17c72c559b2d987ee6b56c47820c2e91764e53b3"
+    },
+    "project/research/general_n/2026-09-12-joint-routing-pilot-v1/JOINT_ROUTING_LEMMA.md": {
+      "bytes": 6690,
+      "sha256": "e5d3833a0fd4835c2c02145c39bf163630558a081bf0f69e431c69663db500a9"
+    },
+    "project/research/general_n/2026-09-12-joint-routing-pilot-v1/frontier_summary.json": {
+      "bytes": 266791,
+      "sha256": "7fd38bf9bf455b4c44ab75a7a34d82958c84c51233319aa5519e60fb6d81b410"
+    },
+    "project/research/general_n/2026-09-12-joint-routing-pilot-v1/multiplier_catalog.json": {
+      "bytes": 2020,
+      "sha256": "aeb26d5cefc4cc969206d45dc5ff4033e603e9a3e854ece6e88c8258062c6bfb"
+    },
+    "project/research/general_n/2026-09-12-joint-routing-pilot-v1/pilot_inputs.json": {
+      "bytes": 75282,
+      "sha256": "1e2077b021ba2f58d0763c4914027dc801564dd54eed854ab9a4669f9d23e3d4"
+    },
+    "project/research/general_n/2026-09-12-routing-tail-projection-v1/AUDIT.md": {
+      "bytes": 7970,
+      "sha256": "793bb90f36eccb58d6c04c5adf39021d033a93f50513a96b687bc0055556a0a6"
+    },
+    "project/research/general_n/2026-09-12-routing-tail-projection-v1/EQUALITY_BOUNDARY.md": {
+      "bytes": 4322,
+      "sha256": "ada0319e78c150d9867c0053f1a5ee6cf1c4bce4f664903f48403f64e8086842"
+    },
+    "project/research/general_n/2026-09-12-routing-tail-projection-v1/EVIDENCE_STORAGE.json": {
+      "bytes": 2091,
+      "sha256": "a4a8953668c68d7bab86588fe15c8fc6464ad1063170c11585d08d675d45d545"
+    },
+    "project/research/general_n/2026-09-12-routing-tail-projection-v1/README.md": {
+      "bytes": 4993,
+      "sha256": "ee29da0a101361c7af37f36293955943c972495b681de1b5782fc881ff791256"
+    },
+    "project/research/general_n/2026-09-12-routing-tail-projection-v1/TAIL_PROJECTION.md": {
+      "bytes": 5584,
+      "sha256": "fae471271717423e453eee292953c76e4dbf5362754ca1d7aaf663fc95134c84"
+    },
+    "project/research/general_n/2026-09-12-routing-tail-projection-v1/boundary.log": {
+      "bytes": 764,
+      "sha256": "22ac113da61eb0cdcc45e95e61a8c7929ac620dd5ecfc2da06193b9a24915563"
+    },
+    "project/research/general_n/2026-09-12-routing-tail-projection-v1/boundary_profiles.py": {
+      "bytes": 4333,
+      "sha256": "56a96fb0a2e528f42092a4a54fcc2a18110281fa67756565df8f8e03da4bc2c9"
+    },
+    "project/research/general_n/2026-09-12-routing-tail-projection-v1/boundary_results.jsonl.gz.b64": {
+      "bytes": 71444,
+      "sha256": "6d352cf0496104bee20fad2184494580660671f6353aa96bf8973aa63611279e"
+    },
+    "project/research/general_n/2026-09-12-routing-tail-projection-v1/boundary_state_comparison.json.gz.b64": {
+      "bytes": 23716,
+      "sha256": "7a93819d20e41d25b76e533f0255f42440070042ad7105e557c43365a51b6cf6"
+    },
+    "project/research/general_n/2026-09-12-routing-tail-projection-v1/boundary_summary.json": {
+      "bytes": 764,
+      "sha256": "22ac113da61eb0cdcc45e95e61a8c7929ac620dd5ecfc2da06193b9a24915563"
+    },
+    "project/research/general_n/2026-09-12-routing-tail-projection-v1/boundary_verification.json": {
+      "bytes": 1350,
+      "sha256": "dce0166d4125e95c96a7f7c8726415e44fe0d97f156eb5b4e313054784a176bb"
+    },
+    "project/research/general_n/2026-09-12-routing-tail-projection-v1/boundary_verification.log": {
+      "bytes": 1350,
+      "sha256": "dce0166d4125e95c96a7f7c8726415e44fe0d97f156eb5b4e313054784a176bb"
+    },
+    "project/research/general_n/2026-09-12-routing-tail-projection-v1/budget_verification.json": {
+      "bytes": 2301,
+      "sha256": "9024410e6060887786f139062769d2980f01aee4434c7b60e77f9fbd7e6f2e69"
+    },
+    "project/research/general_n/2026-09-12-routing-tail-projection-v1/budget_verification.log": {
+      "bytes": 2301,
+      "sha256": "9024410e6060887786f139062769d2980f01aee4434c7b60e77f9fbd7e6f2e69"
+    },
+    "project/research/general_n/2026-09-12-routing-tail-projection-v1/budget_verification_initial.json": {
+      "bytes": 2176,
+      "sha256": "484a0cd752b659318485dae65e734544e93ad44e29054cf4b531364636035f8f"
+    },
+    "project/research/general_n/2026-09-12-routing-tail-projection-v1/budget_verification_initial.log": {
+      "bytes": 2176,
+      "sha256": "484a0cd752b659318485dae65e734544e93ad44e29054cf4b531364636035f8f"
+    },
+    "project/research/general_n/2026-09-12-routing-tail-projection-v1/check_budget.py": {
+      "bytes": 4235,
+      "sha256": "f35f70d198d694b45c988e9f597b42edfcda907d6f6d756209ffdf9e43a92c47"
+    },
+    "project/research/general_n/2026-09-12-routing-tail-projection-v1/check_budget_initial.py": {
+      "bytes": 4110,
+      "sha256": "6ff27d9d243bd975e6f36d0acc36e4e24329954c28790ded72a70b315d01b3ec"
+    },
+    "project/research/general_n/2026-09-12-routing-tail-projection-v1/environment.json": {
+      "bytes": 456,
+      "sha256": "9002e6be8ff614a9f3870ff52e8c9bc531d4b74ec68ee67668f49f99697f9e53"
+    },
+    "project/research/general_n/2026-09-12-routing-tail-projection-v1/evidence_io.py": {
+      "bytes": 1291,
+      "sha256": "e751207d52587139528f3e6b4be9ab93b03961a24489290ffd56ac3cef85b1b9"
+    },
+    "project/research/general_n/2026-09-12-routing-tail-projection-v1/freeze_catalog.py": {
+      "bytes": 1869,
+      "sha256": "65211eceab8247dfb0524325e843d16506053b41dc9ecccdb31f1410d51011ba"
+    },
+    "project/research/general_n/2026-09-12-routing-tail-projection-v1/multiplier_catalog.json": {
+      "bytes": 4824,
+      "sha256": "788eaf308efe58a7d29d6e843dbe4f3d399288f8e3e0526843ef0fe5d55ecf92"
+    },
+    "project/research/general_n/2026-09-12-routing-tail-projection-v1/pack_evidence.py": {
+      "bytes": 1465,
+      "sha256": "abf2788503bf55a829227cf88768342df950bd20ff5f4a255846fd78689345bb"
+    },
+    "project/research/general_n/2026-09-12-routing-tail-projection-v1/pilot.log": {
+      "bytes": 2802,
+      "sha256": "b65fb107b54538b541194b03fad8b31a50feb757d2f634d767d70c71ab92a6f7"
+    },
+    "project/research/general_n/2026-09-12-routing-tail-projection-v1/pilot_inputs.json": {
+      "bytes": 57992,
+      "sha256": "5bc9e6efc87cd304caed99c6f577a3444e6648dc46daff920b226c3e38f27291"
+    },
+    "project/research/general_n/2026-09-12-routing-tail-projection-v1/pilot_results.jsonl.gz.b64": {
+      "bytes": 31801,
+      "sha256": "245bec05a12f5e2f438ea66b96525d63d101cc5a6bcef0ce041d9822aec9c544"
+    },
+    "project/research/general_n/2026-09-12-routing-tail-projection-v1/probe.py": {
+      "bytes": 4642,
+      "sha256": "cd2aec8f9b7455c87bb37b35b9bc360a554c5b483ec88d66c2d81dd8c99802ff"
+    },
+    "project/research/general_n/2026-09-12-routing-tail-projection-v1/profile_results.jsonl.gz.b64": {
+      "bytes": 249035,
+      "sha256": "fceca243e6472e8247e2171c1dbb06b6e50d39ec76e44afeb9c9d4fabdd28516"
+    },
+    "project/research/general_n/2026-09-12-routing-tail-projection-v1/profile_summary.json": {
+      "bytes": 2762,
+      "sha256": "71432d5b8675bb6c07e65762dbc4e3b87a28a59c607fc9879bdc6cc1eaef5602"
+    },
+    "project/research/general_n/2026-09-12-routing-tail-projection-v1/profiles.log": {
+      "bytes": 7091,
+      "sha256": "5120d4fd729db1d2a65f8f5efb8b80cde4cb45c7403f60211dc3fd0295cdffeb"
+    },
+    "project/research/general_n/2026-09-12-routing-tail-projection-v1/projection.py": {
+      "bytes": 1858,
+      "sha256": "9a20cfda8e0f5d3c20de5b942ebf61e2051ca90e0276e6993d6e9c9dff2731ad"
+    },
+    "project/research/general_n/2026-09-12-routing-tail-projection-v1/replay_profiles.py": {
+      "bytes": 6409,
+      "sha256": "0373e03464e4528bc077d92b584f6ab38e5978d9eeeb31d91be6e81254de3c09"
+    },
+    "project/research/general_n/2026-09-12-routing-tail-projection-v1/state_comparison.json.gz.b64": {
+      "bytes": 25682,
+      "sha256": "e88558123728bba255efa2f392f8e0915b91ec172870371c00ed9c94d3676ac5"
+    },
+    "project/research/general_n/2026-09-12-routing-tail-projection-v1/storage.log": {
+      "bytes": 2091,
+      "sha256": "a4a8953668c68d7bab86588fe15c8fc6464ad1063170c11585d08d675d45d545"
+    },
+    "project/research/general_n/2026-09-12-routing-tail-projection-v1/verification.json": {
+      "bytes": 833,
+      "sha256": "99deccc936b6c96c8f504ed20b08a83a11d0f2f3458f28ee63691a647e058fa0"
+    },
+    "project/research/general_n/2026-09-12-routing-tail-projection-v1/verification.log": {
+      "bytes": 1010,
+      "sha256": "9d6dcd1f5128197f293f6a2cc8284b0a52b9e4bd51134db65a0a384ef3fd4dde"
+    },
+    "project/research/general_n/2026-09-12-routing-tail-projection-v1/verify.py": {
+      "bytes": 11593,
+      "sha256": "7b9ceedc8feaba97f03bc688bb1e6fe72cae4c8487ea57adfdaf487aa75ff7fd"
+    },
+    "project/research/general_n/2026-09-12-routing-tail-projection-v1/verify_boundary.py": {
+      "bytes": 6042,
+      "sha256": "89e0788a42eb9909c2f18d50f187070d40765ee9731c231b06df0c5d030d3991"
+    },
+    "project/research/general_n/2026-09-12-source-capped-threshold-v1/SOURCE_CAPPED_THRESHOLD.md": {
+      "bytes": 3649,
+      "sha256": "4d3434627c77a3ca625957029afa1098f408a68f70deebee81371401456e095f"
+    },
+    "project/research/n34/2026-09-12-frontier-v1/FRONTIER.csv": {
+      "bytes": 46719,
+      "sha256": "35f4569b93d80015e91f995ac0b905955496e57e276f0aad67cdd12b6d6530c4"
+    },
+    "project/research/n34/2026-09-12-frontier-v1/check_frontier.py": {
+      "bytes": 2597,
+      "sha256": "e87d6c4bc17979fb5ccf6ec2bf81dc1ebbfe70f8d8bca5c872fe91943780eb41"
+    },
+    "project/research/n34/2026-09-12-frontier-v1/enumerate_frontier.cpp": {
+      "bytes": 2132,
+      "sha256": "a9cab16ca6392bc0a78b415d2e7ca767d13f91c1b5267fd08511f2ac8f8dc3bc"
+    },
+    "project/research/n34/2026-09-12-frontier-v1/enumeration.log": {
+      "bytes": 337,
+      "sha256": "356b8a9b60ce0c3a5f679e65f8798035b2f22a0810348bd6298cc2e67adcd468"
+    },
+    "releases/REVIEW_READY_INDEX.md": {
+      "bytes": 12357,
+      "sha256": "c5c20bc2ebb0a6a307b1a93a0606f24fcca14ed7b5029b217b823fc5de3e4b03"
+    },
+    "releases/general-heavy-load-reviewer-v1/MANIFEST.json": {
+      "bytes": 10251,
+      "sha256": "2c54143d7a4dc8dfee11333fea3b96c529fb6c07effc9eb5301d3833850b6b8f"
+    },
+    "releases/general-joint-routing-reviewer-v1/MANIFEST.json": {
+      "bytes": 10780,
+      "sha256": "2e48b5afe37ebe0c795f912a8bbbd149133a609c6cc7f89265c232829c6b7459"
+    },
+    "releases/general-routing-tail-reviewer-v1/README.md": {
+      "bytes": 3956,
+      "sha256": "f8a4ab7992636068603ca03ddf5153c80cb3e14be8b2de25e453934aead2104c"
+    },
+    "releases/general-routing-tail-reviewer-v1/VALIDATION.json": {
+      "bytes": 2356,
+      "sha256": "5230a9c3c2280d3838c1bd852783859d17055742eb8a68eb566cc006b03b6b1d"
+    },
+    "releases/general-routing-tail-reviewer-v1/build_manifest.py": {
+      "bytes": 3554,
+      "sha256": "267ab348e80c917f5b1b3e12c5cfc04c00cd2a7c4cee13bf49cce33ace85a7d1"
+    },
+    "releases/general-routing-tail-reviewer-v1/check_manifest.py": {
+      "bytes": 446,
+      "sha256": "461ee805df678a6ee7a196005b24e022f15375aba664968c1f773c7532022bb3"
+    },
+    "releases/general-routing-tail-reviewer-v1/validate_release.py": {
+      "bytes": 3604,
+      "sha256": "d3492a445c68128c0ee8fc1ab54494d511265d8692aeeb4f8a665cbfe677a0e1"
+    },
+    "releases/n34-reviewer-v2/MANIFEST.json": {
+      "bytes": 25869,
+      "sha256": "01c3c5f4ed2bfcbd46e2f51c3fcb9d6bf330ab5a8b77b5e90a89634b8cbb94fe"
+    },
+    "releases/n35-reviewer-v1/MANIFEST.json": {
+      "bytes": 25850,
+      "sha256": "d23684269caea570e7a4f1df32575b529cd7487c7fe01d682e2eb8cf2ae1a21a"
+    }
+  },
+  "notes": [
+    "General parameter claims have hand proofs; finite coverage claims require exact replay.",
+    "Five original streams are stored losslessly with original and encoded hashes.",
+    "Preceding current manifests and the complete baseline pin unchanged transitive evidence.",
+    "This manifest excludes itself and the publication receipt to avoid circular hashes.",
+    "The zero additional-state result is part of the scope; profile simplification is not a new fixed-order closure."
+  ]
+}

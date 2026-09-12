@@ -20,12 +20,12 @@
   },
   "artifacts": {
     "README.md": {
-      "bytes": 43588,
-      "sha256": "78e7787ad9276494b15d2934134cff7eb1097ef14340a1f56b0894128bc3f861"
+      "bytes": 45602,
+      "sha256": "40688b500c04d3c8204a2788811521584f29322bba9c7f207a0880656e9ff4f4"
     },
     "START_HERE_FOR_REVIEWERS.md": {
-      "bytes": 14206,
-      "sha256": "d792c91e0202793981b02e5ea9b1b4445377a7a5f721c37f71f9d3a8b0187fca"
+      "bytes": 14764,
+      "sha256": "90f9a47bf0a3c6364e0dbd51239b4b5b12f893a7a87de97e70088d103ea51468"
     },
     "project/research/general_n/2026-09-11-canonical-bridge-v1/CANONICAL_BRIDGE.md": {
       "bytes": 17501,
@@ -188,8 +188,8 @@
       "sha256": "739185841bd42e48dfdb4259916fcbdb3e34ce9611a14399d495a998a64e85da"
     },
     "releases/REVIEW_READY_INDEX.md": {
-      "bytes": 11384,
-      "sha256": "3831c0dff4a3aef21d7dd00e4f57677f82922ba9b3e90d01eced7922b1b4e64d"
+      "bytes": 12357,
+      "sha256": "c5c20bc2ebb0a6a307b1a93a0606f24fcca14ed7b5029b217b823fc5de3e4b03"
     },
     "releases/general-heavy-load-reviewer-v1/README.md": {
       "bytes": 4032,

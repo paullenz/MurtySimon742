@@ -1,0 +1,39 @@
+{
+  "status": "COMPLETE_SCALAR_SCAN",
+  "profiles": 1453,
+  "counts": {
+    "load_cap": {
+      "prior_profile_exclusion": 45,
+      "excluded_tail_values": 65,
+      "single_threshold_profile_exclusion": 31,
+      "survives_scalar": 1377
+    },
+    "strict": {
+      "prior_profile_exclusion": 45,
+      "excluded_tail_values": 80,
+      "single_threshold_profile_exclusion": 40,
+      "survives_scalar": 1368
+    }
+  },
+  "additional_whole_profiles_from_strictness": [
+    20,
+    69,
+    76,
+    91,
+    115,
+    144,
+    1339,
+    1340,
+    1343
+  ],
+  "raised_budget_vs_load_cap": [
+    44,
+    46,
+    168,
+    192,
+    213,
+    233
+  ],
+  "external_review": "OPEN",
+  "scope": "Closed equality-rigidity inequality and tail slack; no optimization solver."
+}

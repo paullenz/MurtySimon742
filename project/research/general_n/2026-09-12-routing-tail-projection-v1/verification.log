@@ -1,0 +1,38 @@
+VERIFIED_PROFILES 0
+VERIFIED_PROFILES 200
+VERIFIED_PROFILES 400
+VERIFIED_PROFILES 600
+VERIFIED_PROFILES 800
+VERIFIED_PROFILES 1000
+VERIFIED_PROFILES 1200
+VERIFIED_PROFILES 1400
+{
+  "status": "PASS",
+  "pilot_profiles": 27,
+  "pilot_results": {
+    "no_penalty": {
+      "single_threshold_profile_exclusion": 6,
+      "survives_projection": 21
+    },
+    "penalty": {
+      "single_threshold_profile_exclusion": 9,
+      "survives_projection": 18
+    }
+  },
+  "full_profiles": 1453,
+  "prior_profile_exclusions": 45,
+  "new_profile_exclusions": 114,
+  "profile_survivors": 1294,
+  "prior_joint_state_survivors": 5578,
+  "new_state_exclusions": 0,
+  "checks": {
+    "local_options": 3834361,
+    "integer_envelopes": 790922,
+    "capacity_cases": 3529,
+    "excluded_tail_values": 577,
+    "existing_tail_budget_cases": 2394,
+    "whole_profile_witnesses": 297
+  },
+  "implementation": "Independent tail-slack identities and step-indicator costs; no discovery/projection imports.",
+  "external_review": "OPEN"
+}

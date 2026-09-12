@@ -1,0 +1,60 @@
+{
+  "status": "PASS",
+  "date": "2026-09-12",
+  "python": "3.12.14",
+  "replay": [
+    {
+      "command": "python project/research/general_n/2026-09-12-routing-tail-projection-v1/check_budget.py",
+      "returncode": 0,
+      "stdout_sha256": "9024410e6060887786f139062769d2980f01aee4434c7b60e77f9fbd7e6f2e69"
+    },
+    {
+      "command": "python project/research/general_n/2026-09-12-routing-tail-projection-v1/probe.py",
+      "returncode": 0,
+      "stdout_sha256": "8ddba74dacb0b880eb830a4ae03e45bff4d4d61dc81a74a2ad0adf0d3cd7e6f2"
+    },
+    {
+      "command": "python project/research/general_n/2026-09-12-routing-tail-projection-v1/freeze_catalog.py",
+      "returncode": 0,
+      "stdout_sha256": "493d309160e8b48280ce3afe9fd4b36e8ecc04190d2fb55bf92f599eb12971d7"
+    },
+    {
+      "command": "python project/research/general_n/2026-09-12-routing-tail-projection-v1/replay_profiles.py",
+      "returncode": 0,
+      "stdout_sha256": "3ab8493488cd85a6b4a78442beec52ad4c6b3e2f1864ff8ec7dbb831bded6537"
+    },
+    {
+      "command": "python project/research/general_n/2026-09-12-routing-tail-projection-v1/boundary_profiles.py",
+      "returncode": 0,
+      "stdout_sha256": "22ac113da61eb0cdcc45e95e61a8c7929ac620dd5ecfc2da06193b9a24915563"
+    },
+    {
+      "command": "python project/research/general_n/2026-09-12-routing-tail-projection-v1/verify.py",
+      "returncode": 0,
+      "stdout_sha256": "9d6dcd1f5128197f293f6a2cc8284b0a52b9e4bd51134db65a0a384ef3fd4dde"
+    },
+    {
+      "command": "python project/research/general_n/2026-09-12-routing-tail-projection-v1/verify_boundary.py",
+      "returncode": 0,
+      "stdout_sha256": "dce0166d4125e95c96a7f7c8726415e44fe0d97f156eb5b4e313054784a176bb"
+    }
+  ],
+  "reproduced_summary_files": [
+    "pilot_inputs.json",
+    "multiplier_catalog.json",
+    "profile_summary.json",
+    "boundary_summary.json",
+    "budget_verification.json",
+    "verification.json",
+    "boundary_verification.json"
+  ],
+  "all_five_original_streams_reproduced_byte_for_byte": true,
+  "exact_checks_from_archives_without_raw_streams": true,
+  "navigation": {
+    "changed_markdown_files": 8,
+    "local_links_checked": 255,
+    "status": "PASS"
+  },
+  "scope": "General tail/equality lemmas and profile applications; zero additional exclusions of the prior 5,578 state survivors.",
+  "external_review": "OPEN"
+}

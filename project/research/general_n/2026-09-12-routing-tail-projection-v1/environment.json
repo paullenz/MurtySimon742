@@ -1,0 +1,18 @@
+{
+  "python": "3.12.14",
+  "numpy": "2.3.5",
+  "scipy": "1.17.0",
+  "platform": "Linux-6.18.35-x86_64-with-glibc2.39",
+  "solver": "scipy.optimize.linprog(method=highs)",
+  "pilot_time_limit_per_lp": 10,
+  "pilot_coefficient_bound": "0..16h",
+  "denominators": [
+    1,
+    2,
+    10,
+    100,
+    1000
+  ],
+  "full_replay": "44 frozen rational ratios; no numerical optimization",
+  "unchanged_input_baseline": "fcdacbf32e79930977f7da77697f4b6f90b18ca0"
+}
