@@ -1,0 +1,34 @@
+name: Sync N31 N32 front door
+
+on:
+  push:
+    branches: [ main ]
+    paths:
+      - '.github/workflows/n31-n32-frontdoor-sync.yml'
+      - 'project/tools/sync_n31_n32_frontdoor.py'
+
+permissions:
+  contents: write
+
+jobs:
+  sync:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+      - name: Apply asserted front-door patch
+        run: python3 -I -B project/tools/sync_n31_n32_frontdoor.py
+      - name: Show diff
+        run: git diff -- README.md START_HERE_FOR_REVIEWERS.md releases/REVIEW_READY_INDEX.md
+      - name: Commit synchronized front door
+        run: |
+          if git diff --quiet -- README.md START_HERE_FOR_REVIEWERS.md releases/REVIEW_READY_INDEX.md; then
+            echo 'No front-door changes required.'
+            exit 0
+          fi
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add README.md START_HERE_FOR_REVIEWERS.md releases/REVIEW_READY_INDEX.md
+          git commit -m 'Sync reviewer front door for N31 and N32'
+          git push
