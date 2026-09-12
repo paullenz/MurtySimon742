@@ -1,0 +1,579 @@
+{
+  "schema": "general-arc-realisation-publication-v1",
+  "date": "2026-09-12",
+  "repository": "paullenz/MurtySimon742",
+  "branch": "main",
+  "parent": "31b5e78d9f80bc9328973db03ab6f497025e5ddc",
+  "commit": "c056f16102f365fd4ff05dbadc24eafe4d9eb2c8",
+  "tree": "ba0233e22f8fd414ea835b74f79bc646c815898c",
+  "local_research_commit": "af8fddc2df83c25c91df4ba7f199dbefdabb09fe",
+  "checks": {
+    "branch_attachment": true,
+    "parent_and_tree": true,
+    "non_forced_update": true,
+    "changed_path_count": 86,
+    "changed_paths_and_hashes": true,
+    "manifests_verified": {
+      "n34-reviewer-v2": 134,
+      "n35-reviewer-v1": 134,
+      "general-heavy-load-reviewer-v1": 48,
+      "general-joint-routing-reviewer-v1": 50,
+      "general-routing-tail-reviewer-v1": 69,
+      "general-compatible-routing-reviewer-v1": 55,
+      "general-compatible-catalogue-reviewer-v1": 69,
+      "general-closed-compatible-reviewer-v1": 63,
+      "general-arc-realisation-reviewer-v1": 90
+    },
+    "original_streams_recovered": {
+      "project/research/general_n/2026-09-12-heavy-load-family-v1/frontier_results.jsonl": {
+        "status": "PASS",
+        "original_bytes": 3122169,
+        "original_sha256": "8ba9e8c9a6322fac71710e86d140f754cfe7dfa743dd55a043dc94723418a547"
+      },
+      "project/research/general_n/2026-09-12-heavy-load-family-v1/profile_results.jsonl": {
+        "status": "PASS",
+        "original_bytes": 1648230,
+        "original_sha256": "aaca0892a4f4a6a093eae58ecb7374c9c4ea85b88a2d6cac5c9cbc18d38ebbfe"
+      },
+      "project/research/general_n/2026-09-12-heavy-load-family-v1/remaining_states.json": {
+        "status": "PASS",
+        "original_bytes": 1695040,
+        "original_sha256": "5db7ea92b92083c2205007b483c4789ced80bddb693cb7a21004b1f4f46e26c6"
+      },
+      "project/research/general_n/2026-09-12-joint-routing-pilot-v1/pilot_results.jsonl": {
+        "status": "PASS",
+        "original_bytes": 163087,
+        "original_sha256": "fd269a1f8092d1755f7b6bb04c7eddba81f6ae57705a952d36f81b0cc2b19ea2"
+      },
+      "project/research/general_n/2026-09-12-joint-routing-pilot-v1/frontier_results.jsonl": {
+        "status": "PASS",
+        "original_bytes": 10801083,
+        "original_sha256": "a34dd73b26d8bb2461bdc30d7d6f638b93bf90681497d098bba2a15420b474c8"
+      },
+      "project/research/general_n/2026-09-12-routing-tail-projection-v1/pilot_results.jsonl": {
+        "status": "PASS",
+        "original_bytes": 307916,
+        "original_sha256": "6d89680c8aae92006ce4ebdebebe44df22623c7b56c5bab7b68bb45716a15341"
+      },
+      "project/research/general_n/2026-09-12-routing-tail-projection-v1/profile_results.jsonl": {
+        "status": "PASS",
+        "original_bytes": 5732891,
+        "original_sha256": "262f84b27cc3c54418762bb79823cdfa0b29824d2ecae5c1ad1289ce620ee368"
+      },
+      "project/research/general_n/2026-09-12-routing-tail-projection-v1/state_comparison.json": {
+        "status": "PASS",
+        "original_bytes": 1134242,
+        "original_sha256": "9b647ba14c9aea02a3c7af7d7486b04ae4d403af1237560d2728ed01185cbaf2"
+      },
+      "project/research/general_n/2026-09-12-routing-tail-projection-v1/boundary_results.jsonl": {
+        "status": "PASS",
+        "original_bytes": 2373604,
+        "original_sha256": "6923e5c30279369b3b68c97265af26f03c787dcb051ba51ce672d9319df5e561"
+      },
+      "project/research/general_n/2026-09-12-routing-tail-projection-v1/boundary_state_comparison.json": {
+        "status": "PASS",
+        "original_bytes": 453772,
+        "original_sha256": "7b0db53cb73a8baf80cd6bc37a28710f39084d6061e70f374bf12730ca2bff11"
+      },
+      "project/research/general_n/2026-09-12-compatible-routing-pilot-v1/pilot_results.jsonl": {
+        "status": "PASS",
+        "original_bytes": 871129,
+        "original_sha256": "d6e6dd4450b89af699fe9e7b96632fc4227c3ba0030b3ca03faf3de0319400c9"
+      },
+      "project/research/general_n/2026-09-12-compatible-routing-catalogue-v1/pool_inputs.jsonl": {
+        "status": "PASS",
+        "original_bytes": 1124585,
+        "original_sha256": "34244eb2bdc6330a0bc2fc9b67ca8b05bdcc7fd9901196410213e7b1b8ff7e1f"
+      },
+      "project/research/general_n/2026-09-12-compatible-routing-catalogue-v1/engine_input.txt": {
+        "status": "PASS",
+        "original_bytes": 487503,
+        "original_sha256": "590ff29c66e226fb3bf111be6a03d11463d30718512b048a119cb1b22fe76b1a"
+      },
+      "project/research/general_n/2026-09-12-compatible-routing-catalogue-v1/frontier_results.jsonl": {
+        "status": "PASS",
+        "original_bytes": 14236471,
+        "original_sha256": "4e9d7d320c58c8fe0318237197c0fd7e00ccb6b1918f65334dfb5735e4192a83"
+      },
+      "project/research/general_n/2026-09-12-compatible-routing-catalogue-v1/survivors.json": {
+        "status": "PASS",
+        "original_bytes": 1315615,
+        "original_sha256": "2c6bb11ec3c6dfb45a07b511c1e85c8c44898201c0f045630e0f622ee93647eb"
+      },
+      "project/research/general_n/2026-09-12-compatible-routing-catalogue-v1/template_coverage.json": {
+        "status": "PASS",
+        "original_bytes": 120133,
+        "original_sha256": "16e2c665b5ed0ca68a7a6aca180c1b419ffaadcb142528c0d245e15e9024880e"
+      },
+      "project/research/general_n/2026-09-12-closed-compatible-potential-v1/pool_inputs.jsonl": {
+        "status": "PASS",
+        "original_bytes": 1124585,
+        "original_sha256": "34244eb2bdc6330a0bc2fc9b67ca8b05bdcc7fd9901196410213e7b1b8ff7e1f"
+      },
+      "project/research/general_n/2026-09-12-closed-compatible-potential-v1/engine_input.txt": {
+        "status": "PASS",
+        "original_bytes": 486776,
+        "original_sha256": "6df64d8d0a6dab11e67e3ace6ab69ad30ade91cb260c604fe8d3e461536419e6"
+      },
+      "project/research/general_n/2026-09-12-closed-compatible-potential-v1/frontier_results.jsonl": {
+        "status": "PASS",
+        "original_bytes": 6846352,
+        "original_sha256": "49167ed15767b96070d9a6a35d8f080fe502821fd24bd77fc116bd0b60b6e813"
+      },
+      "project/research/general_n/2026-09-12-closed-compatible-potential-v1/reference_results.jsonl": {
+        "status": "PASS",
+        "original_bytes": 6846352,
+        "original_sha256": "49167ed15767b96070d9a6a35d8f080fe502821fd24bd77fc116bd0b60b6e813"
+      },
+      "project/research/general_n/2026-09-12-closed-compatible-potential-v1/survivors.json": {
+        "status": "PASS",
+        "original_bytes": 924834,
+        "original_sha256": "e79ebb8895d216b05c3f27900913993326948576d8fef672b7d011ba0300c58e"
+      },
+      "project/research/general_n/2026-09-12-arc-realisation-pilot-v1/runs/n34-m289-60-degree_routing.model.json": {
+        "status": "PASS",
+        "original_bytes": 470050,
+        "original_sha256": "d800b697983d9d779db74ab77cd943cdcd365fb9ba82f7660a98e7526d3b7519"
+      },
+      "project/research/general_n/2026-09-12-arc-realisation-pilot-v1/runs/n34-m289-60-label_compatible.model.json": {
+        "status": "PASS",
+        "original_bytes": 1260878,
+        "original_sha256": "2545ff8097110f5eaafd7907b9c4504a01ab685d3da7a53c4db26e2eb1464098"
+      },
+      "project/research/general_n/2026-09-12-arc-realisation-pilot-v1/runs/n34-m289-7896-degree_routing.model.json": {
+        "status": "PASS",
+        "original_bytes": 621885,
+        "original_sha256": "7032e89c34ddbb864d0673c5950e5287925021f10d2ba97ff6685e0624ba4dc3"
+      },
+      "project/research/general_n/2026-09-12-arc-realisation-pilot-v1/runs/n34-m289-7896-label_compatible.model.json": {
+        "status": "PASS",
+        "original_bytes": 1428681,
+        "original_sha256": "aa844067e9536c67b524d59542b3c4492f082f2fc82b992af896b2139370243a"
+      },
+      "project/research/general_n/2026-09-12-arc-realisation-pilot-v1/runs/n34-m289-13537-degree_routing.model.json": {
+        "status": "PASS",
+        "original_bytes": 795855,
+        "original_sha256": "ceda83c6c259cb0f609c66f76c18777d07de4b7828c80e1fef7cb41727665c7f"
+      },
+      "project/research/general_n/2026-09-12-arc-realisation-pilot-v1/runs/n34-m289-13537-label_compatible.model.json": {
+        "status": "PASS",
+        "original_bytes": 1727787,
+        "original_sha256": "32a7e8ef2a5ac413d74f026709c72065560789790dfda3cf377030a909f1a620"
+      },
+      "project/research/general_n/2026-09-12-arc-realisation-pilot-v1/runs/n35-m306-17-degree_routing.model.json": {
+        "status": "PASS",
+        "original_bytes": 675825,
+        "original_sha256": "e15d14cf2803983e35dcc54b6982e129477aa17f3522745414e120cb39dc90be"
+      },
+      "project/research/general_n/2026-09-12-arc-realisation-pilot-v1/runs/n35-m306-17-label_compatible.model.json": {
+        "status": "PASS",
+        "original_bytes": 1586745,
+        "original_sha256": "87edb16a52f20dec44fd3ae883092029fec5425df3e28ec3e72d9ad20b16f34c"
+      },
+      "project/research/general_n/2026-09-12-arc-realisation-pilot-v1/runs/n35-m306-246-degree_routing.model.json": {
+        "status": "PASS",
+        "original_bytes": 721496,
+        "original_sha256": "e3a97d071c5653c6c29205f94ce755c204bb05176b872cafc031cf05cabececd"
+      },
+      "project/research/general_n/2026-09-12-arc-realisation-pilot-v1/runs/n35-m306-246-label_compatible.model.json": {
+        "status": "PASS",
+        "original_bytes": 1662288,
+        "original_sha256": "db24b411f43596d4fecbd719d032078eb7ca9287177cf90e742e01c23a2ba352"
+      },
+      "project/research/general_n/2026-09-12-arc-realisation-pilot-v1/runs/n35-m306-454-degree_routing.model.json": {
+        "status": "PASS",
+        "original_bytes": 856488,
+        "original_sha256": "a74b6ba6f819354aad8f369c5406447bc0973b7a2446a2318a33734419a7b823"
+      },
+      "project/research/general_n/2026-09-12-arc-realisation-pilot-v1/runs/n35-m306-454-label_compatible.model.json": {
+        "status": "PASS",
+        "original_bytes": 1849430,
+        "original_sha256": "038c19a214c62184cd02c1b90f7d199d7ff4f7b8fb52cb45f3e2c411eb9c58b5"
+      }
+    },
+    "key_raw_files_verified": [
+      "README.md",
+      "START_HERE_FOR_REVIEWERS.md",
+      "releases/REVIEW_READY_INDEX.md",
+      "releases/general-arc-realisation-reviewer-v1/README.md",
+      "project/research/general_n/2026-09-12-arc-realisation-pilot-v1/FIXED_NEIGHBOURHOOD_FLOW.md",
+      "project/research/general_n/2026-09-12-arc-realisation-pilot-v1/verification.json"
+    ],
+    "local_links_verified_at_commit": 317,
+    "no_existing_proof_or_ledger_changes": true,
+    "existing_changes_limited_to_navigation_and_dependent_manifest_hashes": true,
+    "prior_manifest_scopes_unchanged": true,
+    "current_reviewer_entrypoints_consistent": true,
+    "original_solver_log_whitespace_preserved": true,
+    "clean_validation": "releases/general-arc-realisation-reviewer-v1/VALIDATION.json"
+  },
+  "changed_paths": {
+    "README.md": {
+      "bytes": 57454,
+      "sha256": "269a9dba89b30e679280034a00d7ad8107a47fb5b94c3ccce44faaa6ae5d09d7"
+    },
+    "START_HERE_FOR_REVIEWERS.md": {
+      "bytes": 17668,
+      "sha256": "111e5540ea9eb76c7f7e7a55c47d8117f4229688484ffaaab823a2c1945203cf"
+    },
+    "project/research/general_n/2026-09-12-arc-realisation-pilot-v1/AUDIT.md": {
+      "bytes": 6511,
+      "sha256": "be061d6e204a48f21da4377e118952e680118b73e144e97567494d55ecdb4fcd"
+    },
+    "project/research/general_n/2026-09-12-arc-realisation-pilot-v1/FIXED_NEIGHBOURHOOD_FLOW.md": {
+      "bytes": 6868,
+      "sha256": "2dfb49175a4c4b2b5a331d48fa0cbe86879d88b59ffc4412e0e82378fbd46ddd"
+    },
+    "project/research/general_n/2026-09-12-arc-realisation-pilot-v1/FLOW_PLAN.md": {
+      "bytes": 2097,
+      "sha256": "1f28c8eba15a7dc198ba012c5a036a7c123f4ed539ed262f0894fa61424b0954"
+    },
+    "project/research/general_n/2026-09-12-arc-realisation-pilot-v1/MODEL.md": {
+      "bytes": 2996,
+      "sha256": "6540e5a83bf5c9e26c918afeeacc6946140e45dd18e60a4cf5a79ac4e51c0053"
+    },
+    "project/research/general_n/2026-09-12-arc-realisation-pilot-v1/PLAN.md": {
+      "bytes": 3098,
+      "sha256": "8cc64d1c3b185abbfb4be26fb88353a673de2b4ba9fb9162e6867665d2411ff5"
+    },
+    "project/research/general_n/2026-09-12-arc-realisation-pilot-v1/README.md": {
+      "bytes": 4078,
+      "sha256": "b3e052fbbfb8a4991b976a64f3109dd0afea62ced72d9e7e8100fc94315e4cb4"
+    },
+    "project/research/general_n/2026-09-12-arc-realisation-pilot-v1/check_flow.py": {
+      "bytes": 5572,
+      "sha256": "c0aba6295b49f16b2116d79cb65264779ae2be693cf376dcd352f3a32a6bf974"
+    },
+    "project/research/general_n/2026-09-12-arc-realisation-pilot-v1/check_model.py": {
+      "bytes": 3840,
+      "sha256": "af1f26636c6320bc8541c42ec28535bf55dbe6b001d49aecbc5416a09ebdd80b"
+    },
+    "project/research/general_n/2026-09-12-arc-realisation-pilot-v1/check_witness.py": {
+      "bytes": 3654,
+      "sha256": "562d3b8fc4e7c7361cb7d35f394a7d356860c2c4e1c782410ae838891e77fa37"
+    },
+    "project/research/general_n/2026-09-12-arc-realisation-pilot-v1/flow.py": {
+      "bytes": 3463,
+      "sha256": "56ef4900c753ac2d9a325e7e6dad2bdda9cf61e07d3fd129a5e8b90a3fc66268"
+    },
+    "project/research/general_n/2026-09-12-arc-realisation-pilot-v1/flow_probes.json": {
+      "bytes": 161587,
+      "sha256": "9c6664b8840ab7c2d4ff1200e92fcb1b718aad7ca88c5a040d2011e11c90c57c"
+    },
+    "project/research/general_n/2026-09-12-arc-realisation-pilot-v1/flow_probes.log": {
+      "bytes": 788,
+      "sha256": "ff7c8bc502d3a8e2afda092b0c48ad711b65d3594ac816efce07bf5046f00548"
+    },
+    "project/research/general_n/2026-09-12-arc-realisation-pilot-v1/flow_verification.json": {
+      "bytes": 454,
+      "sha256": "45825b606e3fcda4589a3949566645ae17c4f9d7f765a0ecd125f298f5748d82"
+    },
+    "project/research/general_n/2026-09-12-arc-realisation-pilot-v1/flow_verification.log": {
+      "bytes": 454,
+      "sha256": "45825b606e3fcda4589a3949566645ae17c4f9d7f765a0ecd125f298f5748d82"
+    },
+    "project/research/general_n/2026-09-12-arc-realisation-pilot-v1/model.py": {
+      "bytes": 3582,
+      "sha256": "13c0652df9d1b40c18eaa41cff46ea1547fe9554052e5e6e303a4a4cf376e040"
+    },
+    "project/research/general_n/2026-09-12-arc-realisation-pilot-v1/model_verification.json": {
+      "bytes": 1632,
+      "sha256": "85dea1563d591f5aac5ff118e93c2886d6b15acfdc24f18655c5988958f838b1"
+    },
+    "project/research/general_n/2026-09-12-arc-realisation-pilot-v1/model_verification.log": {
+      "bytes": 1632,
+      "sha256": "85dea1563d591f5aac5ff118e93c2886d6b15acfdc24f18655c5988958f838b1"
+    },
+    "project/research/general_n/2026-09-12-arc-realisation-pilot-v1/new_exclusions.json": {
+      "bytes": 3,
+      "sha256": "37517e5f3dc66819f61f5a7bb8ace1921282415f10551d2defa5c3eb0985b570"
+    },
+    "project/research/general_n/2026-09-12-arc-realisation-pilot-v1/pilot.log": {
+      "bytes": 963,
+      "sha256": "2f6d4dc54d1d7301af8f78a1ec45f672c41de3edb80b96860f4ba5530cb85c87"
+    },
+    "project/research/general_n/2026-09-12-arc-realisation-pilot-v1/pilot_inputs.json": {
+      "bytes": 4320,
+      "sha256": "90737eaff45c72a9767cc7afd0af83c4872e1c0081ca6d1fac36e08c5578efb3"
+    },
+    "project/research/general_n/2026-09-12-arc-realisation-pilot-v1/prepare_inputs.py": {
+      "bytes": 1738,
+      "sha256": "a5ed6ec9b5c6b00d507d678aaff825570e4b7f2284285afd76dfd5f3c0cd049e"
+    },
+    "project/research/general_n/2026-09-12-arc-realisation-pilot-v1/publication_whitespace_check.json": {
+      "bytes": 4826,
+      "sha256": "ded1bb438ad0e8399c1dd17c5dc983fc3b2268dd6c21409c944bef5f17c58a65"
+    },
+    "project/research/general_n/2026-09-12-arc-realisation-pilot-v1/run_flow_probes.py": {
+      "bytes": 2810,
+      "sha256": "5847ac17b6dae37e56a34443e0a7fc4a42ba80d9609560ef244930febe172e90"
+    },
+    "project/research/general_n/2026-09-12-arc-realisation-pilot-v1/run_pilot.py": {
+      "bytes": 3753,
+      "sha256": "c55772eb5f4cd2f9343f1deb047c403ed1e4e877d45160486127d6fa3dce9ef9"
+    },
+    "project/research/general_n/2026-09-12-arc-realisation-pilot-v1/runs/EVIDENCE_STORAGE.json": {
+      "bytes": 4563,
+      "sha256": "50c5e761ea220c639a28bc89d4cf1751b1542e02fd4875548646ba399b30f333"
+    },
+    "project/research/general_n/2026-09-12-arc-realisation-pilot-v1/runs/environment.json": {
+      "bytes": 1041,
+      "sha256": "719b64c285677eb1535cb422dbccd5dc5f52325243bcb6704b5088ba4817886e"
+    },
+    "project/research/general_n/2026-09-12-arc-realisation-pilot-v1/runs/n34-m289-13537-degree_routing.model.json.gz.b64": {
+      "bytes": 94958,
+      "sha256": "2481b05bbd92cddb961f3df80b4e7091ba2c5f323e49b425d290fc58c87f8bf5"
+    },
+    "project/research/general_n/2026-09-12-arc-realisation-pilot-v1/runs/n34-m289-13537-degree_routing.solver.json": {
+      "bytes": 353,
+      "sha256": "a45d7f58fabeb416eb62d368059e2ee6964ae8f9fbca47f41816cd7ef07607bc"
+    },
+    "project/research/general_n/2026-09-12-arc-realisation-pilot-v1/runs/n34-m289-13537-degree_routing.solver.log": {
+      "bytes": 2382,
+      "sha256": "7138b7143789a08435a10fada6284e120270ad0e942020f568bd40238581ec56"
+    },
+    "project/research/general_n/2026-09-12-arc-realisation-pilot-v1/runs/n34-m289-13537-label_compatible.model.json.gz.b64": {
+      "bytes": 209209,
+      "sha256": "3a266a5c6d0535c63a390481dd33b0bbff194af4dca6c5289536812fc8ad943b"
+    },
+    "project/research/general_n/2026-09-12-arc-realisation-pilot-v1/runs/n34-m289-13537-label_compatible.solver.json": {
+      "bytes": 354,
+      "sha256": "0eb6ff89f9a7313fd04d6d4b9274905bdb2eec902dc328744b52e35960c9134e"
+    },
+    "project/research/general_n/2026-09-12-arc-realisation-pilot-v1/runs/n34-m289-13537-label_compatible.solver.log": {
+      "bytes": 2316,
+      "sha256": "e35c44c0494d5fb242946ecdc212f964f636eb4663711a19c3b851ed3be47337"
+    },
+    "project/research/general_n/2026-09-12-arc-realisation-pilot-v1/runs/n34-m289-60-degree_routing.model.json.gz.b64": {
+      "bytes": 64608,
+      "sha256": "43ec37838ae03605e36a4c41672914032be0b7f5551a980d10cfb4f4bc0ea2fb"
+    },
+    "project/research/general_n/2026-09-12-arc-realisation-pilot-v1/runs/n34-m289-60-degree_routing.solver.json": {
+      "bytes": 353,
+      "sha256": "906b325933dff96bdb69cd2d8682a7abef131bac4aacf880ea829a764d38a522"
+    },
+    "project/research/general_n/2026-09-12-arc-realisation-pilot-v1/runs/n34-m289-60-degree_routing.solver.log": {
+      "bytes": 2952,
+      "sha256": "cef2ad91f856f998c4f3acf398a8a077ca4ba60bf31ba31fa90694ab122bc03d"
+    },
+    "project/research/general_n/2026-09-12-arc-realisation-pilot-v1/runs/n34-m289-60-label_compatible.model.json.gz.b64": {
+      "bytes": 161413,
+      "sha256": "364e23b81ba8861849d3ed49932bbee2a23e477ed1c199fe66befbdf30e8a43a"
+    },
+    "project/research/general_n/2026-09-12-arc-realisation-pilot-v1/runs/n34-m289-60-label_compatible.solver.json": {
+      "bytes": 353,
+      "sha256": "aea308c0ec88d471ffea62fd78b11df695a9f24df9e44ac222eb56edaf8cb981"
+    },
+    "project/research/general_n/2026-09-12-arc-realisation-pilot-v1/runs/n34-m289-60-label_compatible.solver.log": {
+      "bytes": 2032,
+      "sha256": "faabda5e02f77da56e36c8bc7305c6e150b021674d6b8c2bd1620e21dc33f1ac"
+    },
+    "project/research/general_n/2026-09-12-arc-realisation-pilot-v1/runs/n34-m289-7896-degree_routing.model.json.gz.b64": {
+      "bytes": 76538,
+      "sha256": "0ed355a5177770bfd7273b3d5fc4a54ed055e3c85275c33c8744f54786658723"
+    },
+    "project/research/general_n/2026-09-12-arc-realisation-pilot-v1/runs/n34-m289-7896-degree_routing.solver.json": {
+      "bytes": 353,
+      "sha256": "7946b5e6a583b6f5a0397791400b8b907378bc53b8d5e4b7c7a1f66d62d808ec"
+    },
+    "project/research/general_n/2026-09-12-arc-realisation-pilot-v1/runs/n34-m289-7896-degree_routing.solver.log": {
+      "bytes": 2504,
+      "sha256": "96b7d1d649be8755387085b49784642304ad0dc91234cfddefa0f027ddcde028"
+    },
+    "project/research/general_n/2026-09-12-arc-realisation-pilot-v1/runs/n34-m289-7896-label_compatible.model.json.gz.b64": {
+      "bytes": 175901,
+      "sha256": "d47d657a79efc2204ba48dfd799d88b8e45e82c65d8f102f1e60125f0a5e59de"
+    },
+    "project/research/general_n/2026-09-12-arc-realisation-pilot-v1/runs/n34-m289-7896-label_compatible.solver.json": {
+      "bytes": 354,
+      "sha256": "a04e0c7f8ed51e85d45a0cf9aaa10c95dec3dc6716243695c220e4e524353215"
+    },
+    "project/research/general_n/2026-09-12-arc-realisation-pilot-v1/runs/n34-m289-7896-label_compatible.solver.log": {
+      "bytes": 2197,
+      "sha256": "651ce11573423f4ab66283729eb057edde8c6f2b1c3ae0e6043622d265c8524d"
+    },
+    "project/research/general_n/2026-09-12-arc-realisation-pilot-v1/runs/n35-m306-17-degree_routing.model.json.gz.b64": {
+      "bytes": 82913,
+      "sha256": "8285280bd16700674f64ae17196284db600469291bfffcfb3304da9c29422dec"
+    },
+    "project/research/general_n/2026-09-12-arc-realisation-pilot-v1/runs/n35-m306-17-degree_routing.solver.json": {
+      "bytes": 353,
+      "sha256": "b182b41b21df3d396dde62c31ac63767e7bf42c9c3253187f45fb8b899fdc754"
+    },
+    "project/research/general_n/2026-09-12-arc-realisation-pilot-v1/runs/n35-m306-17-degree_routing.solver.log": {
+      "bytes": 2500,
+      "sha256": "80184a5a36842ede9f78624079967e30139176dad8fe748c66742fd861de4fa8"
+    },
+    "project/research/general_n/2026-09-12-arc-realisation-pilot-v1/runs/n35-m306-17-label_compatible.model.json.gz.b64": {
+      "bytes": 194928,
+      "sha256": "41109714072417018077057a1e074dbe7ddcffac81a2e5c9e8deb4bede9a0df6"
+    },
+    "project/research/general_n/2026-09-12-arc-realisation-pilot-v1/runs/n35-m306-17-label_compatible.solver.json": {
+      "bytes": 353,
+      "sha256": "8154469f339ce314414d0d83e26d842810f53c004508514044b75a6537633c43"
+    },
+    "project/research/general_n/2026-09-12-arc-realisation-pilot-v1/runs/n35-m306-17-label_compatible.solver.log": {
+      "bytes": 2074,
+      "sha256": "9739422273e9b84979b5a7965bb010ab490e6b3e51d43178374a7ffa538c333b"
+    },
+    "project/research/general_n/2026-09-12-arc-realisation-pilot-v1/runs/n35-m306-246-degree_routing.model.json.gz.b64": {
+      "bytes": 87785,
+      "sha256": "58201dd69c4815a5bf31918cec5706a8bc1f74ea033cc9a12befd411c6536837"
+    },
+    "project/research/general_n/2026-09-12-arc-realisation-pilot-v1/runs/n35-m306-246-degree_routing.solver.json": {
+      "bytes": 353,
+      "sha256": "4027f4f9705396ca0aa4643a1d1a61d5da6efb584ec26b13a3d6ebd3ca45a574"
+    },
+    "project/research/general_n/2026-09-12-arc-realisation-pilot-v1/runs/n35-m306-246-degree_routing.solver.log": {
+      "bytes": 2502,
+      "sha256": "d4df5920e74bc2c9d5a4da91b6450e4796d606618491c78a1eb0ec79e75b9ccd"
+    },
+    "project/research/general_n/2026-09-12-arc-realisation-pilot-v1/runs/n35-m306-246-label_compatible.model.json.gz.b64": {
+      "bytes": 203167,
+      "sha256": "92c43d7ec416c946f2b2204e2988cdbc154589ca2eba1134dfdb4c039a8006fb"
+    },
+    "project/research/general_n/2026-09-12-arc-realisation-pilot-v1/runs/n35-m306-246-label_compatible.solver.json": {
+      "bytes": 354,
+      "sha256": "d695d41469bca916dae18fbc66ae9f08d09c184e7777b1a189c41fee2c7c3e6e"
+    },
+    "project/research/general_n/2026-09-12-arc-realisation-pilot-v1/runs/n35-m306-246-label_compatible.solver.log": {
+      "bytes": 2075,
+      "sha256": "b5968ac1957675833495650025e1fb208a2a6b885c07605f99239c122c519d61"
+    },
+    "project/research/general_n/2026-09-12-arc-realisation-pilot-v1/runs/n35-m306-454-degree_routing.model.json.gz.b64": {
+      "bytes": 99630,
+      "sha256": "8c7858057844e6cc31a38992e361f61ddd30116160039dbdd8be144fbf020706"
+    },
+    "project/research/general_n/2026-09-12-arc-realisation-pilot-v1/runs/n35-m306-454-degree_routing.solver.json": {
+      "bytes": 353,
+      "sha256": "f580cd4b238471b46f7545e603827a0e841232fabb3b8d211d1c358ea38f6bd3"
+    },
+    "project/research/general_n/2026-09-12-arc-realisation-pilot-v1/runs/n35-m306-454-degree_routing.solver.log": {
+      "bytes": 2502,
+      "sha256": "782bd76eaa22aef1a3258ddf23213779b2809b0d72158c1735020fccd565401b"
+    },
+    "project/research/general_n/2026-09-12-arc-realisation-pilot-v1/runs/n35-m306-454-label_compatible.model.json.gz.b64": {
+      "bytes": 220974,
+      "sha256": "ad317923d0547d71831d1c614dca88e2c99ce1749dee6dcdde7f54b55aa61448"
+    },
+    "project/research/general_n/2026-09-12-arc-realisation-pilot-v1/runs/n35-m306-454-label_compatible.solver.json": {
+      "bytes": 353,
+      "sha256": "e5e06eeb3e44bf1d6f882760f744c0b6ec5d8956f22ddb826adc0c7f97eaf169"
+    },
+    "project/research/general_n/2026-09-12-arc-realisation-pilot-v1/runs/n35-m306-454-label_compatible.solver.log": {
+      "bytes": 2437,
+      "sha256": "33dae39f685b382aa953c3a9ca8926c897da4730324c3076e24caf1b57ce4644"
+    },
+    "project/research/general_n/2026-09-12-arc-realisation-pilot-v1/runs/results.json": {
+      "bytes": 13425,
+      "sha256": "6c140e9ca879ccf44c1dffd24c927be57629f0071366e84ed66d2406d138755b"
+    },
+    "project/research/general_n/2026-09-12-arc-realisation-pilot-v1/shortcut_counterexample.json": {
+      "bytes": 1276,
+      "sha256": "4de963212c4933438a9634e2015030f85b54cd0812e06fab0a0ef84506927f67"
+    },
+    "project/research/general_n/2026-09-12-arc-realisation-pilot-v1/solve_one.py": {
+      "bytes": 1910,
+      "sha256": "213250ec2ed60241072fed94d8cdbed9491fa98af713981cd143d18d2760ae70"
+    },
+    "project/research/general_n/2026-09-12-arc-realisation-pilot-v1/storage.py": {
+      "bytes": 868,
+      "sha256": "af161b7ee2e8029abf7acc30e11932ecc2843a86d1c748709b0716e8dc0644a4"
+    },
+    "project/research/general_n/2026-09-12-arc-realisation-pilot-v1/verification.json": {
+      "bytes": 28682,
+      "sha256": "172676675efb4f1d90be350cce973b43f53a2e0b8986a3ca01ebdb92d35c76a6"
+    },
+    "project/research/general_n/2026-09-12-arc-realisation-pilot-v1/verification.log": {
+      "bytes": 28682,
+      "sha256": "172676675efb4f1d90be350cce973b43f53a2e0b8986a3ca01ebdb92d35c76a6"
+    },
+    "project/research/general_n/2026-09-12-arc-realisation-pilot-v1/verify.py": {
+      "bytes": 5189,
+      "sha256": "6d3da3cca4563158ad8bd989713fd71b628f03adf08f4a9ccfe920409db4fe20"
+    },
+    "releases/REVIEW_READY_INDEX.md": {
+      "bytes": 16773,
+      "sha256": "a8db78a1993b52ef7268e5b415eb3af50864d4c87676872b92cfb5f131f53294"
+    },
+    "releases/general-arc-realisation-reviewer-v1/MANIFEST.json": {
+      "bytes": 20216,
+      "sha256": "6430c92c62bf896f6ef0b7fce5f6ea6c04ca678a343b20a23894f103ae9d4f46"
+    },
+    "releases/general-arc-realisation-reviewer-v1/README.md": {
+      "bytes": 3544,
+      "sha256": "568ba8355548fcdd436ac50594951beff1f71e813c9bea1510d90af747d83a37"
+    },
+    "releases/general-arc-realisation-reviewer-v1/VALIDATION.json": {
+      "bytes": 1877,
+      "sha256": "e66c9cae3e5cefb3ee4390aa5ad7d9172d56aaacfc9e0bd98c4baa4136cb61c8"
+    },
+    "releases/general-arc-realisation-reviewer-v1/build_manifest.py": {
+      "bytes": 3064,
+      "sha256": "f733dbeae9cb44592cbf17c9d5cfb3bbdaeb7caef6bba8de375a7f986f912d3e"
+    },
+    "releases/general-arc-realisation-reviewer-v1/check_manifest.py": {
+      "bytes": 424,
+      "sha256": "8895fdbe1c2219cc4fa9c47bc37a1c59c9599c22c04a4de7ba7743c1c525b0e8"
+    },
+    "releases/general-arc-realisation-reviewer-v1/validate_release.py": {
+      "bytes": 3097,
+      "sha256": "e31da5d8c403514e0cf6b712a3878db7f6f7fb97ed3ad636809319f2fab9f645"
+    },
+    "releases/general-closed-compatible-reviewer-v1/MANIFEST.json": {
+      "bytes": 14433,
+      "sha256": "9232d5c9bc4b856cc5e40755550a2ea833923bce2dda7d208ac081464e2af024"
+    },
+    "releases/general-compatible-catalogue-reviewer-v1/MANIFEST.json": {
+      "bytes": 15837,
+      "sha256": "58c655d9548ad67bcdd1002d1f84b0a54cc11d25a479c478ca7de9b51a62a874"
+    },
+    "releases/general-compatible-routing-reviewer-v1/MANIFEST.json": {
+      "bytes": 12371,
+      "sha256": "ba5fd7983843c6c7229321793b94b5cb664d2c6dd4f9ada86b6b06183d66a819"
+    },
+    "releases/general-heavy-load-reviewer-v1/MANIFEST.json": {
+      "bytes": 10251,
+      "sha256": "5594784c5a25f88bdb2e477e7e46f62a9710eb2f91348c2897a622c53adc7610"
+    },
+    "releases/general-joint-routing-reviewer-v1/MANIFEST.json": {
+      "bytes": 10780,
+      "sha256": "0b6b000778958626078eb5d1fe1a94045cf7d5a8fb532570f5ac65b80262e931"
+    },
+    "releases/general-routing-tail-reviewer-v1/MANIFEST.json": {
+      "bytes": 14928,
+      "sha256": "38faf138a8fc97cfc3dfba43501db82e00da69c6b6956f454ab596a23c561057"
+    },
+    "releases/n34-reviewer-v2/MANIFEST.json": {
+      "bytes": 25869,
+      "sha256": "38b47dd69eeb1e80e81f507639688cac10d97777aa335e636a063fbd0a8089fb"
+    },
+    "releases/n35-reviewer-v1/MANIFEST.json": {
+      "bytes": 25850,
+      "sha256": "ca9632e40f3686424eb7b42e017ae4cbd8ca2092ed0d0b01a7bf9c08d3ced243"
+    }
+  },
+  "scope": {
+    "candidate_general_fixed_neighbourhood_flow_criterion": true,
+    "B_side_only": true,
+    "pilot_cases": 6,
+    "pilot_attempts": 12,
+    "verified_pilot_incumbents": 0,
+    "uncertified_infeasibility_reports": 0,
+    "open_time_limited_attempts": 12,
+    "constructed_flow_probes": 12,
+    "fixed_pattern_obstructions": 12,
+    "all_constructed_probes_already_fail_minimum_endpoint_load": true,
+    "new_whole_state_exclusions": 0,
+    "combined_exclusions": 994,
+    "combined_survivors": 4584,
+    "tiny_fixed_patterns": 729,
+    "tiny_model_checks": 8192,
+    "original_models_rebuilt": 12,
+    "changed_fixed_order_ledgers": false,
+    "improved_maximum_degree_threshold": false,
+    "unrestricted_theorem": false,
+    "external_review": "OPEN"
+  },
+  "note": "This receipt records the research publication. Its following receipt-only commit is read back separately; no circular self-hash claim."
+}
