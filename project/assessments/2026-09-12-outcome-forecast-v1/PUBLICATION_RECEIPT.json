@@ -1,0 +1,99 @@
+{
+  "schema": "outcome-forecast-publication-receipt-v1",
+  "repository": "paullenz/MurtySimon742",
+  "branch": "main",
+  "parent": "f9ffe629dd35ddbaaae3cf8d8542e775984d531f",
+  "research_commit": "2d7d4d1a881922a9290264c8ba616fe42fdec149",
+  "research_tree": "69f84c1d62a6d9813153816db582aff45c618016",
+  "local_commit": "a23f46391c6b8b16cb2ac0779cf0e279f50d573c",
+  "date": "2026-09-12",
+  "expected_changed_paths": [
+    "README.md",
+    "project/assessments/2026-09-12-outcome-forecast-v1/ASSESSMENT.md",
+    "project/assessments/2026-09-12-outcome-forecast-v1/SOURCES.json",
+    "project/assessments/2026-09-12-outcome-forecast-v1/VALIDATION.json",
+    "project/assessments/2026-09-12-outcome-forecast-v1/arithmetic.json",
+    "project/assessments/2026-09-12-outcome-forecast-v1/evaluate_forecast.py",
+    "project/assessments/2026-09-12-outcome-forecast-v1/forecast.json",
+    "releases/general-heavy-load-reviewer-v1/MANIFEST.json",
+    "releases/general-joint-routing-reviewer-v1/MANIFEST.json",
+    "releases/general-routing-tail-reviewer-v1/MANIFEST.json",
+    "releases/n34-reviewer-v2/MANIFEST.json",
+    "releases/n35-reviewer-v1/MANIFEST.json"
+  ],
+  "path_hashes": {
+    "README.md": {
+      "bytes": 46006,
+      "sha256": "6335fd13d861bd679bebeb7bd5b4ea081305a890ae9b7bd3107b3eb499fb876f"
+    },
+    "project/assessments/2026-09-12-outcome-forecast-v1/ASSESSMENT.md": {
+      "bytes": 15590,
+      "sha256": "b853ab061d3e1572f24bcc0682414ba9a94afd5c439e122606b09b72b40f65bb"
+    },
+    "project/assessments/2026-09-12-outcome-forecast-v1/SOURCES.json": {
+      "bytes": 5104,
+      "sha256": "6b5123a340e5d07fcada434526a8a9c56df0a19e5f4e3c5ca6cd07213d1253c5"
+    },
+    "project/assessments/2026-09-12-outcome-forecast-v1/VALIDATION.json": {
+      "bytes": 1179,
+      "sha256": "b83ce645dc75a37d9198a0190c71a4ee36005ad05c946dbb1d2ed2c197a92d9d"
+    },
+    "project/assessments/2026-09-12-outcome-forecast-v1/arithmetic.json": {
+      "bytes": 3056,
+      "sha256": "4c5ab055205dd163678a895ba4e57c0bd087d4f1315b5ade30df8eca44250048"
+    },
+    "project/assessments/2026-09-12-outcome-forecast-v1/evaluate_forecast.py": {
+      "bytes": 2067,
+      "sha256": "5093a6c14fcdd512611e691ce1e17766bed8d0926a8ddb50c6380d017fec5f06"
+    },
+    "project/assessments/2026-09-12-outcome-forecast-v1/forecast.json": {
+      "bytes": 5594,
+      "sha256": "c88a7985ce6c715168ad11908992156d8115402c116ea40e134cda11de9d1c2d"
+    },
+    "releases/general-heavy-load-reviewer-v1/MANIFEST.json": {
+      "bytes": 10251,
+      "sha256": "2f568cf3e3d0bf179e5b6de0ccd6e71cc5481e2abc5a62ba0d3317e9684721c7"
+    },
+    "releases/general-joint-routing-reviewer-v1/MANIFEST.json": {
+      "bytes": 10780,
+      "sha256": "5875c32108e1958572e0114cfb4829c43f462896279ae0c75fbb46cee9b951cb"
+    },
+    "releases/general-routing-tail-reviewer-v1/MANIFEST.json": {
+      "bytes": 14928,
+      "sha256": "68e6ff9bbaba0d0b143eb986c91f85b930a992a80e0b41d4b2a49314a370cf45"
+    },
+    "releases/n34-reviewer-v2/MANIFEST.json": {
+      "bytes": 25869,
+      "sha256": "27af72e2bf6301e6328eedc0474b41cbce69da94248d6412dd9238e557d369d2"
+    },
+    "releases/n35-reviewer-v1/MANIFEST.json": {
+      "bytes": 25850,
+      "sha256": "ae04aaf379264e2dcfaea0bcdff66b70d513a343eda1f66f98380d915ad8e006"
+    }
+  },
+  "checks": {
+    "research_branch_API_readback": true,
+    "research_commit_parent_and_tree_API_readback": true,
+    "pinned_raw_API_files": [
+      "README.md",
+      "project/assessments/2026-09-12-outcome-forecast-v1/ASSESSMENT.md",
+      "project/assessments/2026-09-12-outcome-forecast-v1/forecast.json",
+      "project/assessments/2026-09-12-outcome-forecast-v1/VALIDATION.json"
+    ],
+    "public_git_fetch_branch_match": true,
+    "all_intended_committed_path_hashes": true,
+    "committed_current_manifests": {
+      "releases/n34-reviewer-v2/MANIFEST.json": 134,
+      "releases/n35-reviewer-v1/MANIFEST.json": 134,
+      "releases/general-heavy-load-reviewer-v1/MANIFEST.json": 48,
+      "releases/general-joint-routing-reviewer-v1/MANIFEST.json": 50,
+      "releases/general-routing-tail-reviewer-v1/MANIFEST.json": 69
+    },
+    "changed_markdown_relative_links": 151,
+    "baseline_source_hashes": 15,
+    "manifest_scope_and_membership_unchanged": true,
+    "proofs_and_ledgers_unchanged": true,
+    "forecast_arithmetic_consistent": true
+  },
+  "scope": "Subjective assessment and navigation only; no new theorem, mathematical audit, external review or statistical calibration. Receipt is committed separately to avoid circular self-hashing."
+}
