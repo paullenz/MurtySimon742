@@ -1,0 +1,238 @@
+{
+  "schema": "general-heavy-load-family-publication-v1",
+  "date": "2026-09-12",
+  "repository": "paullenz/MurtySimon742",
+  "branch": "main",
+  "parent": "398b8d949c244f7229a8ba723fb11b5fbdb7c536",
+  "publication_commit": "e4a7247883c75200449591f0efa6e69ad00500e7",
+  "publication_tree": "0e0a2f2f818e9710ae75b6fdfae84bf3161bc39f",
+  "local_review_commit": "924519caee62756797dfabe343959d515052a487",
+  "checks": {
+    "branch_read_back": true,
+    "nonforced_update": true,
+    "exact_local_remote_tree_match": true,
+    "all_changed_paths_and_sha256_verified": true,
+    "changed_paths": 34,
+    "manifests_verified": {
+      "general-heavy-load-reviewer-v1": 48,
+      "n34-reviewer-v2": 134,
+      "n35-reviewer-v1": 134
+    },
+    "raw_api_readbacks": [
+      "README.md",
+      "releases/general-heavy-load-reviewer-v1/README.md",
+      "project/research/general_n/2026-09-12-heavy-load-family-v1/HEAVY_LOAD_FAMILY.md",
+      "project/research/general_n/2026-09-12-heavy-load-family-v1/application_verification.json",
+      "project/research/general_n/2026-09-12-heavy-load-family-v1/EVIDENCE_STORAGE.json"
+    ],
+    "exact_original_recovery": {
+      "frontier_results.jsonl": {
+        "status": "PASS",
+        "original_sha256": "8ba9e8c9a6322fac71710e86d140f754cfe7dfa743dd55a043dc94723418a547",
+        "records": 14031,
+        "original_bytes": 3122169
+      },
+      "profile_results.jsonl": {
+        "status": "PASS",
+        "original_sha256": "aaca0892a4f4a6a093eae58ecb7374c9c4ea85b88a2d6cac5c9cbc18d38ebbfe",
+        "records": 1453,
+        "original_bytes": 1648230
+      },
+      "remaining_states.json": {
+        "status": "PASS",
+        "original_sha256": "5db7ea92b92083c2205007b483c4789ced80bddb693cb7a21004b1f4f46e26c6",
+        "records": 8280,
+        "original_bytes": 1695040
+      }
+    },
+    "old_n34_encoded_recovery": "PASS for both original streams",
+    "no_unintended_changes_or_deletions": true,
+    "fixed_order_proofs_and_ledgers_unchanged": true
+  },
+  "validation": {
+    "status": "PASS",
+    "date": "2026-09-12",
+    "python": "3.12.14",
+    "replay": [
+      {
+        "command": "python project/research/general_n/2026-09-12-heavy-load-family-v1/check_local.py",
+        "returncode": 0,
+        "stdout_sha256": "49d914fd590a3f9980ab8b7dd98cd4108465490bc9942db7dd718d8840af7655"
+      },
+      {
+        "command": "python project/research/general_n/2026-09-12-heavy-load-family-v1/probe_frontiers.py",
+        "returncode": 0,
+        "stdout_sha256": "8ac702322ff6c1c61920352e8152590fe1fe8b0550795ae3caccd3832e41350e"
+      },
+      {
+        "command": "python project/research/general_n/2026-09-12-heavy-load-family-v1/probe_profiles.py",
+        "returncode": 0,
+        "stdout_sha256": "87cad0e575d3d61ca9cbf4fa17c72c559b2d987ee6b56c47820c2e91764e53b3"
+      },
+      {
+        "command": "python project/research/general_n/2026-09-12-heavy-load-family-v1/verify_applications.py",
+        "returncode": 0,
+        "stdout_sha256": "47c9aa18b09e96322e137377646b220e1d7d1588ef58f8bd7555f45d09c7e4aa"
+      }
+    ],
+    "reproduced_summary_files": [
+      "local_verification.json",
+      "frontier_summary.json",
+      "profile_summary.json",
+      "application_verification.json"
+    ],
+    "all_three_raw_study_streams_reproduced_exactly": true,
+    "verification_from_encoded_evidence_without_raw_streams": true,
+    "navigation": {
+      "changed_markdown_files": 7,
+      "local_links_checked": 237,
+      "status": "PASS"
+    },
+    "scope": "New general family and application study; existing fixed-order proofs and ledgers are unchanged.",
+    "external_review": "OPEN"
+  },
+  "changed_artifacts": {
+    "README.md": {
+      "sha256": "3b832b87af2b822f4138b74a777081944225770d8781876053ddbd6049bfadee",
+      "bytes": 41684
+    },
+    "START_HERE_FOR_REVIEWERS.md": {
+      "sha256": "0f19365ee3e3d1ad87bb2774fff04315097f6ae5e70cf62c1b49a85eec469cd7",
+      "bytes": 13609
+    },
+    "project/research/general_n/2026-09-12-heavy-load-family-v1/AUDIT.md": {
+      "sha256": "5003e856e0ed4575b0b242d9f7c219e26ff28c68deb111a257c157695b1edfac",
+      "bytes": 5720
+    },
+    "project/research/general_n/2026-09-12-heavy-load-family-v1/EVIDENCE_STORAGE.json": {
+      "sha256": "5db0fbdb3eee44abf15efce475dad8c5e315cf76386a5e5ed70f7a572536915f",
+      "bytes": 1277
+    },
+    "project/research/general_n/2026-09-12-heavy-load-family-v1/HEAVY_LOAD_FAMILY.md": {
+      "sha256": "896ccb1c7b4973cc02fee07745ac850d50f77dd127ef50570077282877c5b9ba",
+      "bytes": 10974
+    },
+    "project/research/general_n/2026-09-12-heavy-load-family-v1/README.md": {
+      "sha256": "180e13a6214bdb428624beaeafb1a8d958c06368a604bd36127b4ef9697c0559",
+      "bytes": 4778
+    },
+    "project/research/general_n/2026-09-12-heavy-load-family-v1/application_verification.json": {
+      "sha256": "47c9aa18b09e96322e137377646b220e1d7d1588ef58f8bd7555f45d09c7e4aa",
+      "bytes": 969
+    },
+    "project/research/general_n/2026-09-12-heavy-load-family-v1/application_verification.log": {
+      "sha256": "47c9aa18b09e96322e137377646b220e1d7d1588ef58f8bd7555f45d09c7e4aa",
+      "bytes": 969
+    },
+    "project/research/general_n/2026-09-12-heavy-load-family-v1/bounds.py": {
+      "sha256": "fe1c163507c8ebd756403d6bc8bc31fdf19724ffdd68e683ed97a9537b461e28",
+      "bytes": 1901
+    },
+    "project/research/general_n/2026-09-12-heavy-load-family-v1/check_local.py": {
+      "sha256": "94087a179a14d0bc9acd1aeb3a211322662801368a16adfaaee4b0a422148e42",
+      "bytes": 2462
+    },
+    "project/research/general_n/2026-09-12-heavy-load-family-v1/evidence_io.py": {
+      "sha256": "70f69ba0515175852bf13fcca19196c2b04703f1ba657a1ba51e9a9eeb587b37",
+      "bytes": 1183
+    },
+    "project/research/general_n/2026-09-12-heavy-load-family-v1/frontier_probe.log": {
+      "sha256": "36f2a26e7cceda0919431d13e6fdd6f94c847c1e1043db90ffe608a9d478375f",
+      "bytes": 2641
+    },
+    "project/research/general_n/2026-09-12-heavy-load-family-v1/frontier_results.jsonl.gz.b64": {
+      "sha256": "dda9e7dba25012b063d1107809bf28a29837ef8735b4ce703573671900c6e287",
+      "bytes": 130823
+    },
+    "project/research/general_n/2026-09-12-heavy-load-family-v1/frontier_summary.json": {
+      "sha256": "4b6eb738703fd5ad75ce12f4fe09bb86852a335d9c6ff135eec370ce6cb88d9f",
+      "bytes": 26830
+    },
+    "project/research/general_n/2026-09-12-heavy-load-family-v1/local_verification.json": {
+      "sha256": "3d59280de1696ec2d656017a506444ad4857535a4ed789efaafd71b00c7210fb",
+      "bytes": 4572
+    },
+    "project/research/general_n/2026-09-12-heavy-load-family-v1/local_verification.log": {
+      "sha256": "49d914fd590a3f9980ab8b7dd98cd4108465490bc9942db7dd718d8840af7655",
+      "bytes": 508
+    },
+    "project/research/general_n/2026-09-12-heavy-load-family-v1/pack_evidence.py": {
+      "sha256": "84aba678117934f841da779e557cac0b12dd51bd550f938ca6a303cbf4c076b7",
+      "bytes": 1245
+    },
+    "project/research/general_n/2026-09-12-heavy-load-family-v1/probe_frontiers.py": {
+      "sha256": "82ed55f8e53de7961ea1ec17f039206c238fbd8f48aed8e99eb0e4385e368e07",
+      "bytes": 4369
+    },
+    "project/research/general_n/2026-09-12-heavy-load-family-v1/probe_profiles.py": {
+      "sha256": "59a567b9dc0eb5ba8b12bd30072fc72f8e0cb0593292726b8b1336c8c6648a2f",
+      "bytes": 2512
+    },
+    "project/research/general_n/2026-09-12-heavy-load-family-v1/profile_probe.log": {
+      "sha256": "87cad0e575d3d61ca9cbf4fa17c72c559b2d987ee6b56c47820c2e91764e53b3",
+      "bytes": 762
+    },
+    "project/research/general_n/2026-09-12-heavy-load-family-v1/profile_results.jsonl.gz.b64": {
+      "sha256": "6dea3c03962646e5448de28d6762ef25a5817cd2f3c983c174f31c6fb52c7408",
+      "bytes": 31826
+    },
+    "project/research/general_n/2026-09-12-heavy-load-family-v1/profile_summary.json": {
+      "sha256": "87cad0e575d3d61ca9cbf4fa17c72c559b2d987ee6b56c47820c2e91764e53b3",
+      "bytes": 762
+    },
+    "project/research/general_n/2026-09-12-heavy-load-family-v1/remaining_states.json.gz.b64": {
+      "sha256": "94c7664182c47b364f261547c4ce938f9b36e0ada396f8b2434cee35dba8c68c",
+      "bytes": 76032
+    },
+    "project/research/general_n/2026-09-12-heavy-load-family-v1/storage.log": {
+      "sha256": "5db0fbdb3eee44abf15efce475dad8c5e315cf76386a5e5ed70f7a572536915f",
+      "bytes": 1277
+    },
+    "project/research/general_n/2026-09-12-heavy-load-family-v1/verify_applications.py": {
+      "sha256": "58eb4af2d4de96752dd6665e657da6bb8e074187f4c090d738548ea7141744ef",
+      "bytes": 6327
+    },
+    "releases/REVIEW_READY_INDEX.md": {
+      "sha256": "99bbf7eb76156053169872ca00628a626304efa844b96eadd83bfa9092a12569",
+      "bytes": 10522
+    },
+    "releases/general-heavy-load-reviewer-v1/MANIFEST.json": {
+      "sha256": "82baf11e389bd27ad27bc9ee847a32d28ef393110c2fe888901b2a4468b5d331",
+      "bytes": 10251
+    },
+    "releases/general-heavy-load-reviewer-v1/README.md": {
+      "sha256": "585834dd526564a7dbebe9e84962922909856e91130bb5923908181127ea7cbc",
+      "bytes": 4032
+    },
+    "releases/general-heavy-load-reviewer-v1/VALIDATION.json": {
+      "sha256": "12297f43103dc16e16a114ca7525350f221947f34c8be7bff2df532c5a24bdbe",
+      "bytes": 1545
+    },
+    "releases/general-heavy-load-reviewer-v1/build_manifest.py": {
+      "sha256": "6883aca71f2ca1fb9f8a0fb2c8152ed4ede77cead237a7171b48d5ca7003dbf6",
+      "bytes": 3281
+    },
+    "releases/general-heavy-load-reviewer-v1/check_manifest.py": {
+      "sha256": "461ee805df678a6ee7a196005b24e022f15375aba664968c1f773c7532022bb3",
+      "bytes": 446
+    },
+    "releases/general-heavy-load-reviewer-v1/validate_release.py": {
+      "sha256": "df98fc2f34a90e31f05a2be2d0d38e62e151ecdb4b54eb31d6e576b7d4b28b77",
+      "bytes": 3687
+    },
+    "releases/n34-reviewer-v2/MANIFEST.json": {
+      "sha256": "b75bccd8828e4efac216d9c596ada9ce15acc72f2e6da67354f9402b4bde24ac",
+      "bytes": 25869
+    },
+    "releases/n35-reviewer-v1/MANIFEST.json": {
+      "sha256": "6ad0201300023c0efd8d8e8984f8aa71fd646248f1c754326b12dc15f5c32738",
+      "bytes": 25850
+    }
+  },
+  "external_review": "OPEN",
+  "notes": [
+    "This receipt records the verified research commit; its own subsequent publication is checked separately.",
+    "New general structural candidates and alternative exclusions do not silently revise prior fixed-order ledgers.",
+    "Complete failed extensions, negative parameter-search results and surviving-state records are preserved."
+  ]
+}
