@@ -24,6 +24,7 @@ The current fixed-order PDF packages are Fan-free reviewer-v2 at `n=25,27,28`, *
 | n=34 | `e(G)<=289`, equality exactly `K(17,17)` | [reviewer-v2](n34-reviewer-v2/README.md) | [v2 replay](../project/reviews/n34/2026-09-12-heavy-independent-v1/verify_v2.py); [normalization audit and hand replacement](../project/reviews/n34/2026-09-12-heavy-independent-v1/README.md) | Complete candidate: 6,709 hand/accounting and 6,837 envelope exclusions; external review OPEN |
 | n=35 | `e(G)<=306`, equality exactly `K(17,18)` | [reviewer-v1](n35-reviewer-v1/README.md) | [exact replay](../project/research/n35/2026-09-12-candidate-v1/verify.py); [internal audit](../project/research/n35/2026-09-12-candidate-v1/AUDIT.md) | Complete candidate: all 485 new states excluded; 92,701 local integer checks; external review OPEN |
 | Heavy-load / routing family | All-threshold inequalities with incoming-degree penalties; `s_i<=2, t>0, b-a<=5 => 9t+4(b-a)<=a` | [reviewer-v1](general-heavy-load-reviewer-v1/README.md) | [hand proof](../project/research/general_n/2026-09-12-heavy-load-family-v1/HEAVY_LOAD_FAMILY.md); [internal audit](../project/research/general_n/2026-09-12-heavy-load-family-v1/AUDIT.md) | Candidate structural family; 595 alternative envelope exclusions and 45 rejected layer/profile instances; complete survivors and failed extensions preserved; external review OPEN |
+| Joint heavy routing | General count-conditioned load inequality using destination indegrees and unordered-pair capacity | [reviewer-v1](general-joint-routing-reviewer-v1/README.md) | [hand lemma](../project/research/general_n/2026-09-12-joint-routing-pilot-v1/JOINT_ROUTING_LEMMA.md); [audit](../project/research/general_n/2026-09-12-joint-routing-pilot-v1/AUDIT.md) | Candidate structural lemma; 729 further exact exclusions from 6,307 eligible cases, 5,578 catalogue survivors; comparison correction and all failed attempts preserved; external review OPEN |
 | general-293-500 | `n >= 6 and Delta(G) >= (293/500)n imply e(G) < floor(n^2/4)` | [PDF](general-293-500-reviewer-v1/General_293_500_Reviewer_Manuscript_v1.pdf) | [PDF](general-293-500-reviewer-v1/General_293_500_Verification_Companion_v1.pdf) | retained candidate hand argument; superseded in threshold strength by 7/12; independent review OPEN |
 | general-7-12 | `n >= 6 and Delta(G) >= (7/12)n imply e(G) < floor(n^2/4)` | [PDF](general-7-12-reviewer-v1/General_7_12_Reviewer_Manuscript_v1.pdf) | [PDF](general-7-12-reviewer-v1/General_7_12_Verification_Companion_v1.pdf) | complete candidate hand argument; internal exact audits green; independent review and novelty assessment OPEN |
 | general-13-22 | `n >= 6 and Delta(G) >= (13/22)n imply e(G) < floor(n^2/4)` | [PDF](general-13-22-reviewer-v1/General_13_22_Reviewer_Manuscript_v1.pdf) | [PDF](general-13-22-reviewer-v1/General_13_22_Verification_Companion_v1.pdf) | retained candidate hand proof; independent mathematical review OPEN |
@@ -49,6 +50,11 @@ The [bound-only package](n34-bound-reviewer-v1/README.md) and
 the preceding upper-bound checkpoints and remain dependencies.
 
 No item in this index is represented as externally accepted. Same-assistant independent implementations are not external independent verification.
+
+The [joint-routing continuation](general-joint-routing-reviewer-v1/README.md)
+adds destination congestion to the general load argument. Its 729 alternative
+exclusions leave the canonical fixed-order ledgers unchanged. The corrected
+comparison pool, full survivors and failed variants are preserved.
 
 ## Fixed-order history note
 

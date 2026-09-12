@@ -1,0 +1,128 @@
+{
+  "schema": "joint-routing-multiplier-catalog-v1",
+  "source_sha256": "fd269a1f8092d1755f7b6bb04c7eddba81f6ae57705a952d36f81b0cc2b19ea2",
+  "scale": "Multiply each numerator by h, keeping the denominator.",
+  "scope": "Templates frozen from the 27-case pilot before full-domain replay. No numerical optimization in replay.",
+  "templates": [
+    {
+      "lam": 5,
+      "mu": 0,
+      "eta": 2,
+      "denominator": 5
+    },
+    {
+      "lam": 2,
+      "mu": 0,
+      "eta": 1,
+      "denominator": 2
+    },
+    {
+      "lam": 1,
+      "mu": 0,
+      "eta": 1,
+      "denominator": 1
+    },
+    {
+      "lam": 4,
+      "mu": 0,
+      "eta": 2,
+      "denominator": 3
+    },
+    {
+      "lam": 41,
+      "mu": 0,
+      "eta": 21,
+      "denominator": 30
+    },
+    {
+      "lam": 3,
+      "mu": 0,
+      "eta": 1,
+      "denominator": 2
+    },
+    {
+      "lam": 6,
+      "mu": 0,
+      "eta": 3,
+      "denominator": 4
+    },
+    {
+      "lam": 9,
+      "mu": 0,
+      "eta": 5,
+      "denominator": 6
+    },
+    {
+      "lam": 3,
+      "mu": 0,
+      "eta": 2,
+      "denominator": 2
+    },
+    {
+      "lam": 5,
+      "mu": 0,
+      "eta": 2,
+      "denominator": 3
+    },
+    {
+      "lam": 5,
+      "mu": 0,
+      "eta": 3,
+      "denominator": 3
+    },
+    {
+      "lam": 7,
+      "mu": 0,
+      "eta": 3,
+      "denominator": 4
+    },
+    {
+      "lam": 7,
+      "mu": 0,
+      "eta": 4,
+      "denominator": 4
+    },
+    {
+      "lam": 7,
+      "mu": 60,
+      "eta": 64,
+      "denominator": 4
+    },
+    {
+      "lam": 56,
+      "mu": 0,
+      "eta": 43,
+      "denominator": 30
+    },
+    {
+      "lam": 2,
+      "mu": 0,
+      "eta": 1,
+      "denominator": 1
+    },
+    {
+      "lam": 6,
+      "mu": 0,
+      "eta": 4,
+      "denominator": 3
+    },
+    {
+      "lam": 4,
+      "mu": 0,
+      "eta": 3,
+      "denominator": 2
+    },
+    {
+      "lam": 2,
+      "mu": 0,
+      "eta": 2,
+      "denominator": 1
+    },
+    {
+      "lam": 31,
+      "mu": 0,
+      "eta": 29,
+      "denominator": 15
+    }
+  ]
+}

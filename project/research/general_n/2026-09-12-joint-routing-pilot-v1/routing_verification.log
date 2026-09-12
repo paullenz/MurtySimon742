@@ -1,0 +1,89 @@
+{
+  "status": "PASS",
+  "scope": "All partial orientations on labelled Z with 0<=z<=5, and every subset J. These are combinatorial models, not D2C graph realizations.",
+  "counts": [
+    {
+      "z": 0,
+      "partial_orientations": 1,
+      "orientation_subset_checks": 1
+    },
+    {
+      "z": 1,
+      "partial_orientations": 1,
+      "orientation_subset_checks": 2
+    },
+    {
+      "z": 2,
+      "partial_orientations": 3,
+      "orientation_subset_checks": 12
+    },
+    {
+      "z": 3,
+      "partial_orientations": 27,
+      "orientation_subset_checks": 216
+    },
+    {
+      "z": 4,
+      "partial_orientations": 729,
+      "orientation_subset_checks": 11664
+    },
+    {
+      "z": 5,
+      "partial_orientations": 59049,
+      "orientation_subset_checks": 1889568
+    }
+  ],
+  "total_orientation_subset_checks": 1901463,
+  "invalid_extensions": [
+    {
+      "invalid_claim": "Every destination has y<=j-1",
+      "Z": [
+        0,
+        1,
+        2
+      ],
+      "J": [
+        0,
+        1
+      ],
+      "arcs": [
+        [
+          0,
+          2
+        ],
+        [
+          1,
+          2
+        ]
+      ],
+      "destination": 2,
+      "y": 2,
+      "claimed_bound": 1,
+      "explanation": "Only destinations inside J lose their own source; outside J can receive j arcs."
+    },
+    {
+      "invalid_claim": "Count both orientations of an internal pair independently",
+      "Z": [
+        0,
+        1
+      ],
+      "J": [
+        0,
+        1
+      ],
+      "arcs": [
+        [
+          0,
+          1
+        ],
+        [
+          1,
+          0
+        ]
+      ],
+      "D": 2,
+      "pair_capacity": 1,
+      "explanation": "This input violates the single-orientation hypothesis and cannot represent canonical selected pairs."
+    }
+  ]
+}

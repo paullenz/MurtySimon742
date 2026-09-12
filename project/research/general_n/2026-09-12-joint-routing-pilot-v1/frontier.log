@@ -1,0 +1,45 @@
+PROGRESS 500 {'both': 54, 'joint_only': 108, 'survives_catalog': 338} 0.97
+PROGRESS 1000 {'both': 105, 'joint_only': 205, 'survives_catalog': 690} 1.38
+PROGRESS 1500 {'both': 110, 'joint_only': 308, 'survives_catalog': 1082} 1.79
+PROGRESS 2000 {'both': 144, 'joint_only': 409, 'survives_catalog': 1447} 2.25
+PROGRESS 2500 {'both': 144, 'joint_only': 512, 'survives_catalog': 1844} 2.77
+PROGRESS 3000 {'both': 144, 'joint_only': 536, 'survives_catalog': 2320} 3.29
+PROGRESS 3500 {'both': 144, 'joint_only': 542, 'survives_catalog': 2814} 3.81
+PROGRESS 4000 {'both': 144, 'joint_only': 542, 'survives_catalog': 3314} 4.35
+PROGRESS 4500 {'both': 144, 'joint_only': 542, 'survives_catalog': 3814} 4.85
+PROGRESS 5000 {'both': 144, 'joint_only': 542, 'survives_catalog': 4314} 5.36
+PROGRESS 5500 {'both': 144, 'joint_only': 543, 'survives_catalog': 4813} 5.99
+PROGRESS 6000 {'both': 144, 'joint_only': 543, 'survives_catalog': 5313} 6.73
+PROGRESS 6307 {'both': 166, 'joint_only': 563, 'survives_catalog': 5578} 7.29
+{
+  "status": "COMPLETE_FROZEN_CATALOG_REPLAY",
+  "eligible_states": 6307,
+  "templates": 20,
+  "parameter_scope": "Every h=1..max(s), T=4h; all feasible j; frozen 20 scale-invariant rational templates.",
+  "counts": {
+    "both": 166,
+    "joint_only": 563,
+    "survives_catalog": 5578
+  },
+  "by_layer": {
+    "n34-m289": {
+      "both": 144,
+      "joint_only": 543,
+      "survives_catalog": 5415
+    },
+    "n35-m307": {
+      "joint_only": 1,
+      "both": 4,
+      "survives_catalog": 1
+    },
+    "n35-m306": {
+      "joint_only": 19,
+      "survives_catalog": 162,
+      "both": 18
+    }
+  },
+  "new_joint_exclusions": 729,
+  "joint_survivors": 5578,
+  "external_review": "OPEN",
+  "scope": "Necessary-condition states; survival is failure of this finite catalog, not graph feasibility. Canonical fixed-order ledgers unchanged."
+}

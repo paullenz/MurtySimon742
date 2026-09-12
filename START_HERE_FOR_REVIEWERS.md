@@ -71,6 +71,15 @@ cap. The study records 595 alternative hand exclusions for previously
 certified states, 45 excluded layer/profile instances, and all survivors and
 failed extensions. The existing fixed-order ledgers remain unchanged.
 
+The [joint heavy-routing reviewer-v1 package](releases/general-joint-routing-reviewer-v1/README.md)
+adds a candidate hand lemma coupling the number of heavy senders with each
+destination's incoming capacity and the unordered-pair budget. A 27-case pilot
+led to 729 further exact exclusions from the full corrected pool of 6,307;
+563 depend on the sharper destination term within the same frozen catalogue.
+All 5,578 survivors and the correction removing 192 old-rule exclusions are
+preserved. The general maximum-degree result and fixed-order ledgers are
+unchanged; external review remains OPEN.
+
 For the preceding general-foundations review pass, see the
 [focused foundations checklist](project/reviews/general-theory/2026-09-12-joint-followthrough-v1/FOUNDATIONS_AUDIT.md).
 It checks the primary dominating-edge theorem's exception, the witness-capacity

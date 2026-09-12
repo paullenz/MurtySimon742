@@ -1,0 +1,16 @@
+{
+  "python": "3.12.14",
+  "numpy": "2.3.5",
+  "scipy": "1.17.0",
+  "platform": "Linux-6.18.35-x86_64-with-glibc2.39",
+  "solver": "scipy.optimize.linprog(method=highs)",
+  "time_limit_per_lp": 10,
+  "multiplier_bound": "0..16h",
+  "rational_denominators": [
+    1,
+    2,
+    10,
+    100,
+    1000
+  ]
+}

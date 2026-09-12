@@ -1,0 +1,19 @@
+{
+  "schema": "joint-routing-pilot-selection-v1",
+  "input_sha256": "5db7ea92b92083c2205007b483c4789ced80bddb693cb7a21004b1f4f46e26c6",
+  "historical_envelope_pool": 6499,
+  "eligible_pool": 6307,
+  "eligible_counts": {
+    "('n34-m289', 'adaptive')": 3452,
+    "('n34-m289', 'fixed13')": 586,
+    "('n34-m289', 'fixed9')": 2064,
+    "('n35-m306', 'adaptive')": 90,
+    "('n35-m306', 'fixed13')": 3,
+    "('n35-m306', 'fixed9')": 106,
+    "('n35-m307', 'adaptive')": 1,
+    "('n35-m307', 'fixed9')": 5
+  },
+  "selection": "Per layer/method: first, middle, last; all N35 m307; all zero-demand survivors; deduplicate; sort by layer/id.",
+  "selected": 396
+}
+REAPPLIED_HAND_REMOVALS 192

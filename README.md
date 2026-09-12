@@ -52,9 +52,12 @@ anew: the corresponding generic N35 source bound permits indegree five.
 That mechanism now yields a [general heavy-load and routing family](releases/general-heavy-load-reviewer-v1/README.md)
 for every heavy threshold h, with an explicit cost for large supplement
 indegrees. It strengthens the h=2 case to `8k<=r+8z` when p<=6 and gives
-new demand-only inequalities. The next question is how to constrain heavy
-arc destinations and incoming degrees jointly; wider local cutoffs and
-individual source caps added no exclusions in the first full experiment.
+new demand-only inequalities. A [joint routing continuation](releases/general-joint-routing-reviewer-v1/README.md)
+now conditions on the number of heavy senders and limits how many of their
+arcs each destination can receive. It supplies 729 further exact exclusions
+after all earlier hand rules; the next target is a demand/tail consequence
+of this destination cap. Wider local cutoffs and individual source caps
+added no exclusions in the earlier experiment.
 
 ## Failures, audit challenges and corrections are part of the record
 
@@ -101,10 +104,34 @@ available for that scrutiny.
 | `n=35` | Complete candidate: `e(G)<=306`, equality exactly `K(17,18)`; reviewer-v1. All 485 new states close by 228 hand/accounting arguments and 257 integer envelopes. External review OPEN. |
 | Balanced-degree / fixed-a structural results | Candidate all-order balanced-degree reduction; infinite `a=14` high-b family; tail bounds through `a=23`, including joint clipping and an adaptive six-level boundary; proof-critical finite arithmetic where stated; external review open |
 | Heavy-load / routing family | Candidate all-threshold hand inequalities, explicit incoming-degree penalties, and new demand-only tail bounds. Low-demand consequence: `s_i<=2, t>0, b-a<=5 => 9t+4(b-a)<=a`. Reviewer-v1; external review OPEN. |
+| Joint heavy routing | Candidate general lemma coupling heavy-sender count, destination indegrees and pair capacity. Reviewer-v1; 729 further exclusions from a corrected pool of 6,307; 5,578 survive the frozen catalogue. External review OPEN. |
 | General maximum-degree result | Candidate theorem: `n >= 6` and `Delta(G) >= (7/12)n` imply `e(G) < floor(n^2/4)`; complete candidate hand argument with internal exact audits green; external review and novelty assessment open |
 | RX-Hall / monotone-potential programme | Active finite-to-symbolic programme. It is **not** an unrestricted theorem. It supplies general structural experiments and proof-critical exact finite exclusions in N32, N33, N34 and N35. Floating infeasibility is not accepted as a proof event. |
 
 The unrestricted Murty–Simon conjecture remains unsolved by this project.
+
+## Joint heavy routing: the next structural step
+
+The [joint-routing reviewer-v1 package](releases/general-joint-routing-reviewer-v1/README.md)
+combines the load potential with destination capacity. With j heavy senders,
+a destination can receive at most j of their arcs, or j-1 when it is itself
+one of those senders. The candidate hand lemma combines this with incoming
+degree and one orientation per unordered pair, for arbitrary graph parameters.
+
+A 27-case pilot found twelve new exclusions, including four beyond its
+aggregate-routing variant. Twenty multiplier ratios extracted from those
+witnesses then excluded **729 further states** across the full comparison
+pool. Using the same catalogue, 563 of those exclusions require the sharper
+destination term. Independent integer replay passes; **5,578 states survive**
+this catalogue. Their profiles, failed searches, witnesses and audit remain
+available. Survival is not graph feasibility.
+
+The comparison pool was corrected from 6,499 to 6,307: 192 historically
+solver-certified cases already failed an earlier hand rule skipped by their
+original run ordering. The [audit](project/research/general_n/2026-09-12-joint-routing-pilot-v1/AUDIT.md)
+records every removal and explains why those cases are not new progress.
+Canonical N34/N35 ledgers and the 7/12 maximum-degree result remain unchanged;
+external mathematical review and novelty assessment are OPEN.
 
 ## General heavy-load and routing: the new structural result
 

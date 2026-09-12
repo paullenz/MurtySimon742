@@ -1,0 +1,54 @@
+{
+  "status": "PASS",
+  "date": "2026-09-12",
+  "python": "3.12.14",
+  "replay": [
+    {
+      "command": "python project/research/general_n/2026-09-12-joint-routing-pilot-v1/select_pilot.py",
+      "returncode": 0,
+      "stdout_sha256": "104679552d2a75a31575e7a2c439be41fc8e7c3f44c6f7205fa20b9ca3b5b102"
+    },
+    {
+      "command": "python project/research/general_n/2026-09-12-joint-routing-pilot-v1/probe.py",
+      "returncode": 0,
+      "stdout_sha256": "08ba651c72d39d62df105dc33d8591d75651bbff45181ce96335ddb3012b6bf5"
+    },
+    {
+      "command": "python project/research/general_n/2026-09-12-joint-routing-pilot-v1/catalog.py",
+      "returncode": 0,
+      "stdout_sha256": "cf3c58adb55d4e6c3f1db18c1971b94097717986ef0997a5c15ba38b971434e4"
+    },
+    {
+      "command": "python project/research/general_n/2026-09-12-joint-routing-pilot-v1/replay_frontier.py",
+      "returncode": 0,
+      "stdout_sha256": "1986f231d0ba221ab6f561fad4f64ed6b826eddff552fe3a4d3cea2275fc1dd5"
+    },
+    {
+      "command": "python project/research/general_n/2026-09-12-joint-routing-pilot-v1/check_routing.py",
+      "returncode": 0,
+      "stdout_sha256": "7f0b2c7187bf3d560079408cc30d70909a7d3b55761f54912791059e2c89d415"
+    },
+    {
+      "command": "python project/research/general_n/2026-09-12-joint-routing-pilot-v1/verify.py",
+      "returncode": 0,
+      "stdout_sha256": "bbae4c3328d77dca0bdad748124b01b1acb155cee1da468776819bd06a249bc2"
+    }
+  ],
+  "reproduced_summary_files": [
+    "pilot_inputs.json",
+    "multiplier_catalog.json",
+    "frontier_summary.json",
+    "routing_verification.json",
+    "verification.json",
+    "environment.json"
+  ],
+  "both_original_streams_reproduced_byte_for_byte": true,
+  "exact_verification_from_archives_without_raw_streams": true,
+  "navigation": {
+    "changed_markdown_files": 7,
+    "local_links_checked": 241,
+    "status": "PASS"
+  },
+  "scope": "New general joint-routing lemma and finite applications; canonical fixed-order proof ledgers unchanged.",
+  "external_review": "OPEN"
+}

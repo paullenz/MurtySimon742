@@ -1,0 +1,49 @@
+VERIFIED 1000
+VERIFIED 2000
+VERIFIED 3000
+VERIFIED 4000
+VERIFIED 5000
+VERIFIED 6000
+{
+  "status": "PASS",
+  "pilot_states": 27,
+  "pilot_exclusions": {
+    "aggregate": 8,
+    "joint": 12
+  },
+  "pilot_joint_beyond_aggregate": [
+    [
+      "n34-m289",
+      3620
+    ],
+    [
+      "n35-m306",
+      1
+    ],
+    [
+      "n35-m306",
+      6
+    ],
+    [
+      "n35-m307",
+      1
+    ]
+  ],
+  "full_pool": 6307,
+  "full_joint_exclusions": 729,
+  "full_joint_survivors": 5578,
+  "full_catalog_outcomes": {
+    "both": 166,
+    "joint_only": 563,
+    "survives_catalog": 5578
+  },
+  "reapplied_old_hand_removals": 192,
+  "checks": {
+    "specified_j_capacity_exclusions": 5471,
+    "local_options": 2645388,
+    "integer_envelopes": 1234969,
+    "complete_state_witnesses": 915
+  },
+  "implementation": "Independent indicator-sum local scores and cardinality dynamic programming; no discovery imports.",
+  "external_review": "OPEN"
+}

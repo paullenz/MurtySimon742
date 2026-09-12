@@ -1,0 +1,24 @@
+{
+  "schema": "joint-routing-evidence-storage-v1",
+  "encoding": "base64(gzip(original)); mtime=0",
+  "files": {
+    "pilot_results.jsonl": {
+      "stored_file": "pilot_results.jsonl.gz.b64",
+      "format": "jsonl",
+      "records": 27,
+      "original_bytes": 163087,
+      "original_sha256": "fd269a1f8092d1755f7b6bb04c7eddba81f6ae57705a952d36f81b0cc2b19ea2",
+      "stored_bytes": 13099,
+      "stored_sha256": "909dfd8c6e300b7e5554732dbd332a4c8c64f73791664c18bbfd6da1ded21112"
+    },
+    "frontier_results.jsonl": {
+      "stored_file": "frontier_results.jsonl.gz.b64",
+      "format": "jsonl",
+      "records": 6307,
+      "original_bytes": 10801083,
+      "original_sha256": "a34dd73b26d8bb2461bdc30d7d6f638b93bf90681497d098bba2a15420b474c8",
+      "stored_bytes": 367485,
+      "stored_sha256": "848fc0a86e8a6ad30d86c229e4c40a8cdde882e8a4ed224100ddf4afd09d4fcc"
+    }
+  }
+}
