@@ -24,9 +24,10 @@ The repository currently contains complete candidate fixed-order Murty–Simon r
 - `n=31`: `e(G) <= 240`, equality only `K(15,16)`;
 - `n=32`: `e(G) <= 256`, equality only `K(16,16)`;
 - `n=33`: `e(G) <= 272`, equality only `K(16,17)`;
-- `n=34`: `e(G) <= 289`, equality only `K(17,17)`.
+- `n=34`: `e(G) <= 289`, equality only `K(17,17)`;
+- `n=35`: `e(G) <= 306`, equality only `K(17,18)`.
 
-The canonical reviewer packages are indexed in [`releases/REVIEW_READY_INDEX.md`](releases/REVIEW_READY_INDEX.md). The current fixed-order editions are Fan-free reviewer-v2 at `n=25,27,28`, reviewer-v4 at `n=29`, reviewer-v3 at `n=30`, source-first reviewer-v1 packages at `n=31,32,33,34`.
+The canonical reviewer packages are indexed in [`releases/REVIEW_READY_INDEX.md`](releases/REVIEW_READY_INDEX.md). The current fixed-order editions are Fan-free reviewer-v2 at `n=25,27,28`, reviewer-v4 at `n=29`, reviewer-v3 at `n=30`, source-first reviewer-v1 packages at `n=31,32,33,35`, and reviewer-v2 at `n=34`.
 
 N29 has no proof-critical computation. N30 combines hand lemmas with explicit finite integer tables. N31 is predominantly hand/structural. N32 uses hand reductions plus exact finite replay in the difficult `Delta=17` branch. N33 is again compact: the sole new equality frontier has only 29 residual states, 25 exact shifted-potential exclusions and four hand contradictions.
 
@@ -42,7 +43,7 @@ The active RX-Hall / monotone-potential programme has exact finite compression r
 
 No unrestricted all-order proof is claimed anywhere in the repository.
 
-## New general structure and complete n=34 candidate
+## New general structure and complete n=35 candidate
 
 The [general step-back package](releases/general-stepback-v1/README.md) includes
 the balanced-degree theorem for all n>=7 and the a=14 infinite family. The
@@ -50,15 +51,17 @@ the balanced-degree theorem for all n>=7 and the a=14 infinite family. The
 adds sharp scalar tail bounds for a=17..23 and a general tight-threshold hand
 obstruction. These results include proof-critical finite arithmetic where stated.
 
-The [N34 reviewer-v1 package](releases/n34-reviewer-v1/README.md) now gives
-**the complete candidate e(G)<=289, with equality exactly K(17,17)**.
-The new equality ledger covers all 13,546 states: 6,708 hand/accounting
-exclusions, 6,837 integer envelopes and one heavy-degree Farkas certificate.
-The [focused audit](project/research/n34/2026-09-12-equality-v1/AUDIT.md)
-checks exact budgets, zero-demand handling, the new source-capped threshold
-lemma and the normalized heavy-degree model. Earlier upper-bound dependencies
-remain required. The complete fixed-order candidate frontier now reaches n=34;
-external mathematical review and reproduction remain OPEN.
+The [N34 reviewer-v2 package](releases/n34-reviewer-v2/README.md) retains the
+complete candidate bound 289, equality K(17,17), and replaces its final large
+certificate with a [short hand proof](project/reviews/n34/2026-09-12-heavy-independent-v1/HAND_PROOF.md). The equality
+ledger is now 6,709 hand/accounting exclusions and 6,837 exact envelopes.
+The [separate whole-count audit](project/reviews/n34/2026-09-12-heavy-independent-v1/README.md) matches all original model
+rows and independently checks a translated certificate as corroboration.
+
+The [N35 reviewer-v1 package](releases/n35-reviewer-v1/README.md) gives the new
+candidate bound 306, equality K(17,18). Its two new finite layers contain
+485 states, all excluded by 228 hand/accounting arguments and 257 exact
+envelopes. External mathematical review and reproduction remain OPEN.
 
 For the preceding general-foundations review pass, see the
 [focused foundations checklist](project/reviews/general-theory/2026-09-12-joint-followthrough-v1/FOUNDATIONS_AUDIT.md).
@@ -67,7 +70,7 @@ injection, the entire canonical bridge and the new exact certificates. It also
 records corrections to the a=17 obstruction wording and the free balance
 multiplier in the potential lemma. Same-assistant checks remain internal evidence.
 
-## Current fixed-order extensions: n=31, n=32, n=33, n=34
+## Current fixed-order extensions: n=31, n=32, n=33, n=34, n=35
 
 ### n=31
 
@@ -107,13 +110,28 @@ Highest-value N33 review targets are the same shared bridge, threshold-capacity/
 
 Candidate `e(G)<=289`, equality exactly `K(17,17)`.
 
-- [Reviewer-v1 package](releases/n34-reviewer-v1/README.md)
+- [Reviewer-v2 package](releases/n34-reviewer-v2/README.md)
 - [Complete proof](project/research/n34/2026-09-12-equality-v1/README.md)
-- [Exact equality replay](project/research/n34/2026-09-12-equality-v1/verify.py)
-- [Heavy-degree graph model](project/research/n34/2026-09-12-equality-v1/HEAVY_SPLIT.md)
+- [Exact v2 equality replay](project/reviews/n34/2026-09-12-heavy-independent-v1/verify_v2.py)
+- [Hand replacement and normalization audit](project/reviews/n34/2026-09-12-heavy-independent-v1/README.md)
 
 All 13,546 equality states are excluded. This extends the prior upper bound
 of 289 to the complete candidate equality classification. External review is OPEN.
+
+### n=35
+
+Candidate `e(G)<=306`, equality exactly `K(17,18)`.
+
+- [Reviewer-v1 package](releases/n35-reviewer-v1/README.md)
+- [Complete proof and ledger](project/research/n35/2026-09-12-candidate-v1/PROOF.md)
+- [Exact replay](project/research/n35/2026-09-12-candidate-v1/verify.py)
+- [Focused internal audit](project/research/n35/2026-09-12-candidate-v1/AUDIT.md)
+
+The sole new Delta=19 branch has 19 states at 307 edges and 466 at 306 edges.
+All are covered, including three zero-demand states. The proof uses 257
+exact envelopes with 92,701 local integer checks and 228 hand/accounting
+exclusions. Review the bridge, complete frontier and degree dependencies
+alongside the certificates. External review remains OPEN.
 
 ## Recommended bridge audit: n=29
 
@@ -162,13 +180,13 @@ Important correction notes include:
 - the non-blocking threshold-capacity explanatory sign/order typo, corrected in current proof text;
 - the frozen N29 bridge source-degree display erratum, which omitted `q_u` in one displayed intermediate identity while using the correct resulting supplement bound.
 
-The current fixed-order candidates do not rely logically on Fan's 1987 density theorem. Direct Fan-free replacements were constructed for `n=25..30`; N31/N32/N33 were assembled without invoking Fan's theorem in the first place.
+The current fixed-order candidates do not rely logically on Fan's 1987 density theorem. Direct Fan-free replacements were constructed for `n=25..30`; N31/N32/N33/N34/N35 were assembled without invoking Fan's theorem in the first place.
 
 Same-assistant hostile audits and reimplementations are useful internal evidence but are explicitly **not** external independent review.
 
 ## Governance and limits
 
-No complete fixed-order candidate above `n=33`, proof through `n=1,000`, unrestricted all-order solution, novelty determination, full formal verification or external endorsement is claimed.
+No complete fixed-order candidate above `n=35`, proof through `n=1,000`, unrestricted all-order solution, novelty determination, full formal verification or external endorsement is claimed.
 
 Finite arithmetic states are necessary-condition systems, not graphs. Exact rejection is useful only if the graph-to-model implications are correct. Reviewers should therefore prioritize the universal graph bridge over merely rerunning solvers.
 

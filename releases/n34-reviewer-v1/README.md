@@ -1,5 +1,7 @@
 # N34 complete candidate: reviewer v1
 
+> Historical complete N34 reviewer-v1 package. The [current reviewer-v2 package](../n34-reviewer-v2/README.md) replaces its last Farkas exclusion with a hand proof and adds a separate normalization audit. This package's original manifest describes [commit ef030cc](https://github.com/paullenz/MurtySimon742/commit/ef030cc4e3d1ecc1355c94b5b1fac6befe6ebb78), before later navigation updates. Run its original manifest check at that snapshot.
+
 12 September 2026. **Candidate e(G)<=289, with equality exactly K(17,17).**
 External specialist review, novelty assessment and independent external
 reproduction remain OPEN.

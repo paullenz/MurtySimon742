@@ -1,6 +1,6 @@
 # Joint clipping and N34 follow-through: reviewer package v1
 
-> The general tail results remain current. The N34 section is a historical upper-layer checkpoint, superseded by the [complete reviewer-v1 package](../n34-reviewer-v1/README.md), which gives the candidate bound 289 and equality exactly K(17,17). The original artifact hashes in this package's manifest describe [commit 21e78b7](https://github.com/paullenz/MurtySimon742/commit/21e78b7a04f44bbd56a6ef7e51258b9bf27cfb00), before later navigation updates.
+> The general tail results remain current. The N34 section is a historical upper-layer checkpoint, superseded by the [complete reviewer-v2 package](../n34-reviewer-v2/README.md), which gives the candidate bound 289 and equality exactly K(17,17). The original artifact hashes in this package's manifest describe [commit 21e78b7](https://github.com/paullenz/MurtySimon742/commit/21e78b7a04f44bbd56a6ef7e51258b9bf27cfb00), before later navigation updates.
 
 12 September 2026. **Source-first candidate mathematics. Independent review,
 novelty assessment and independent reproduction remain OPEN.**

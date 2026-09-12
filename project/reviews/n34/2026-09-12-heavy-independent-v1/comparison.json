@@ -1,0 +1,14 @@
+{
+  "schema": "n34-heavy-independent-count-audit-v1",
+  "status": "PASS",
+  "variables": 12570,
+  "matched_equalities": 690,
+  "matched_inequalities": 12985,
+  "exact_row_multiset_equality": true,
+  "translated_certificate": {
+    "columns": 12570,
+    "integer_rhs": -103847120
+  },
+  "external_independence": false,
+  "external_review": "OPEN"
+}

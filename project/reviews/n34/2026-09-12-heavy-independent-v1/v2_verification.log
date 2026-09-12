@@ -1,0 +1,32 @@
+{
+  "status": "PASS_COMPLETE",
+  "frontier": {
+    "profiles": 1296,
+    "states": 13546,
+    "positive_demand_states": 12926,
+    "zero_demand_states": 620
+  },
+  "exclusions": {
+    "tight_subset_threshold": 1510,
+    "positive_degree_mass": 4768,
+    "fixed13": 784,
+    "fixed9": 2559,
+    "adaptive": 3494,
+    "source_capped_threshold": 430,
+    "heavy_load_hand": 1
+  },
+  "zero_demand_exclusions": {
+    "tight_subset_threshold": 159,
+    "fixed13": 41,
+    "fixed9": 80,
+    "adaptive": 316,
+    "source_capped_threshold": 24
+  },
+  "envelope_local_integer_checks": 3018781,
+  "hand_accounting_exclusions": 6709,
+  "integer_envelope_certificates": 6837,
+  "proof_critical_heavy_farkas_certificates": 0,
+  "covered_states": 13546,
+  "unresolved": [],
+  "external_review": "OPEN"
+}

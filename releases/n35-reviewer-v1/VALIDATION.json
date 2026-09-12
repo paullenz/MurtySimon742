@@ -1,0 +1,68 @@
+{
+  "status": "PASS",
+  "schema": "n34-v2-n35-v1-clean-validation",
+  "python": "3.12.14",
+  "exact_replay": [
+    {
+      "command": "python project/research/n34/2026-09-12-frontier-v1/verify_upper_layers.py",
+      "returncode": 0,
+      "stdout_sha256": "de73f17662f9f9bca61cc51d9b25d89721705d12aa350fee52a87490cf230962"
+    },
+    {
+      "command": "python project/research/n34/2026-09-12-m290-v1/verify.py",
+      "returncode": 0,
+      "stdout_sha256": "3120e8a582a5fb608440cdd481712dbea31f817659e76afefee8782788d2df30"
+    },
+    {
+      "command": "python project/reviews/n34/2026-09-12-heavy-independent-v1/verify_hand.py",
+      "returncode": 0,
+      "stdout_sha256": "518329ed55f31ba02115c83e56230314ac6311689aad49ee8472033d0679b351"
+    },
+    {
+      "command": "python project/reviews/n34/2026-09-12-heavy-independent-v1/verify_v2.py",
+      "returncode": 0,
+      "stdout_sha256": "b5a69c33168e3610122036227df56cc33deba459e3b00d4c181a33779c0571c7"
+    },
+    {
+      "command": "python project/reviews/n34/2026-09-12-heavy-independent-v1/compare_models.py",
+      "returncode": 0,
+      "stdout_sha256": "b226fc73239777631f47da1e9d34809995f1c7009546b8cf0592af260a0138d8"
+    },
+    {
+      "command": "python project/reviews/n34/2026-09-12-heavy-independent-v1/verify_count_certificate.py",
+      "returncode": 0,
+      "stdout_sha256": "f19c0d28f25edd069e8ec02cf27b613680aa2768a72eed1220b553add7f2200b"
+    },
+    {
+      "command": "python project/research/n35/2026-09-12-candidate-v1/verify.py",
+      "returncode": 0,
+      "stdout_sha256": "4c9d2ff91cbde2ed04d9a593aae05f7b347976f4b85aae3b48e4bcaf19dc875c"
+    },
+    {
+      "command": "python project/research/n35/2026-09-12-candidate-v1/audit_frontier.py",
+      "returncode": 0,
+      "stdout_sha256": "f8a7c0d51b109651c71a2984ee130ff120936cc8edff50f5f68aed73f9a6ce2a"
+    }
+  ],
+  "reproduced_artifacts": [
+    "project/reviews/n34/2026-09-12-heavy-independent-v1/hand_verification.json",
+    "project/reviews/n34/2026-09-12-heavy-independent-v1/v2_verification.json",
+    "project/reviews/n34/2026-09-12-heavy-independent-v1/comparison.json",
+    "project/reviews/n34/2026-09-12-heavy-independent-v1/count_certificate.json",
+    "project/research/n35/2026-09-12-candidate-v1/verification.json",
+    "project/research/n35/2026-09-12-candidate-v1/frontier_audit.json"
+  ],
+  "demand_enumeration": {
+    "status": "PASS_EXACT_BYTE_MATCH",
+    "profiles_enumerated": 77558760,
+    "stdout": "total=77558760 maxQ=26 maxQ_count=2\nQ=20 profiles=588\nQ=21 profiles=379\nQ=22 profiles=193\nQ=23 profiles=88\nQ=24 profiles=43\nQ=25 profiles=11\nQ=26 profiles=2\nt=1 m=289 raw=1304 monotone=1296 dcap=1296\nt=2 m=290 raw=337 monotone=337 dcap=337\nt=3 m=291 raw=56 monotone=56 dcap=56\nt=4 m=292 raw=2 monotone=2 dcap=2\nsaved_union_profiles=1296\n",
+    "csv_sha256": "35f4569b93d80015e91f995ac0b905955496e57e276f0aad67cdd12b6d6530c4"
+  },
+  "navigation": {
+    "markdown_files": 13,
+    "local_links": 262,
+    "status": "PASS"
+  },
+  "clean_copy": "staged/tracked files only; no original raw N34 JSONL or working caches required",
+  "external_review": "OPEN"
+}

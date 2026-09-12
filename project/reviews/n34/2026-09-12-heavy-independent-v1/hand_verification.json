@@ -1,0 +1,12 @@
+{
+  "status": "PASS",
+  "label_options": 83,
+  "source_options": 195,
+  "minimum_label_cost": 12,
+  "minimum_source_slack": 0,
+  "contradiction": {
+    "required_lower": 78,
+    "allowed_upper": 74
+  },
+  "external_review": "OPEN"
+}

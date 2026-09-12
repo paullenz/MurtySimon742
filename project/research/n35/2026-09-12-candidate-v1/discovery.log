@@ -1,0 +1,13 @@
+PROGRESS 3 19 19 {'tight_subset_threshold': 6, 'fixed9': 9, 'positive_degree_mass': 2, 'source_capped_threshold': 1, 'adaptive': 1} 0.15
+COMPLETE {"t": 3, "frontier": {"profiles": 13, "states": 19, "positive_demand_states": 19}, "counts": {"tight_subset_threshold": 6, "fixed9": 9, "positive_degree_mass": 2, "source_capped_threshold": 1, "adaptive": 1}, "external_review": "OPEN"}
+PROGRESS 2 50 466 {'tight_subset_threshold': 15, 'fixed9': 15, 'adaptive': 13, 'positive_degree_mass': 5, 'source_capped_threshold': 2} 2.19
+PROGRESS 2 100 466 {'tight_subset_threshold': 28, 'fixed9': 40, 'adaptive': 13, 'positive_degree_mass': 15, 'source_capped_threshold': 3, 'fixed13': 1} 2.39
+PROGRESS 2 150 466 {'tight_subset_threshold': 40, 'fixed9': 53, 'adaptive': 23, 'positive_degree_mass': 26, 'source_capped_threshold': 6, 'fixed13': 2} 3.96
+PROGRESS 2 200 466 {'tight_subset_threshold': 47, 'fixed9': 84, 'adaptive': 23, 'positive_degree_mass': 38, 'source_capped_threshold': 6, 'fixed13': 2} 4.18
+PROGRESS 2 250 466 {'tight_subset_threshold': 57, 'fixed9': 103, 'adaptive': 26, 'positive_degree_mass': 54, 'source_capped_threshold': 7, 'fixed13': 3} 4.7
+PROGRESS 2 300 466 {'tight_subset_threshold': 63, 'fixed9': 122, 'adaptive': 38, 'positive_degree_mass': 64, 'source_capped_threshold': 10, 'fixed13': 3} 6.59
+PROGRESS 2 350 466 {'tight_subset_threshold': 72, 'fixed9': 134, 'adaptive': 53, 'positive_degree_mass': 78, 'source_capped_threshold': 10, 'fixed13': 3} 8.72
+PROGRESS 2 400 466 {'tight_subset_threshold': 82, 'fixed9': 151, 'adaptive': 62, 'positive_degree_mass': 92, 'source_capped_threshold': 10, 'fixed13': 3} 9.93
+PROGRESS 2 450 466 {'tight_subset_threshold': 90, 'fixed9': 151, 'adaptive': 84, 'positive_degree_mass': 107, 'source_capped_threshold': 15, 'fixed13': 3} 12.6
+PROGRESS 2 466 466 {'tight_subset_threshold': 93, 'fixed9': 151, 'adaptive': 93, 'positive_degree_mass': 110, 'source_capped_threshold': 16, 'fixed13': 3} 13.47
+COMPLETE {"t": 2, "frontier": {"profiles": 144, "states": 466, "positive_demand_states": 463, "zero_demand_states": 3}, "counts": {"tight_subset_threshold": 93, "fixed9": 151, "adaptive": 93, "positive_degree_mass": 110, "source_capped_threshold": 16, "fixed13": 3}, "external_review": "OPEN"}

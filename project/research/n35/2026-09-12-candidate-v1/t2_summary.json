@@ -1,0 +1,18 @@
+{
+  "t": 2,
+  "frontier": {
+    "profiles": 144,
+    "states": 466,
+    "positive_demand_states": 463,
+    "zero_demand_states": 3
+  },
+  "counts": {
+    "tight_subset_threshold": 93,
+    "fixed9": 151,
+    "adaptive": 93,
+    "positive_degree_mass": 110,
+    "source_capped_threshold": 16,
+    "fixed13": 3
+  },
+  "external_review": "OPEN"
+}

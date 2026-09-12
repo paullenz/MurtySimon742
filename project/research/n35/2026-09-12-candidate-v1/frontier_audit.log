@@ -1,0 +1,147 @@
+{
+  "status": "PASS",
+  "csv_sha256": "35f4569b93d80015e91f995ac0b905955496e57e276f0aad67cdd12b6d6530c4",
+  "layers": {
+    "3": {
+      "states": 19,
+      "profiles": 13,
+      "exact_state_set_agreement": true,
+      "zero_states": []
+    },
+    "2": {
+      "states": 466,
+      "profiles": 144,
+      "exact_state_set_agreement": true,
+      "zero_states": [
+        {
+          "s": [
+            0,
+            3,
+            3,
+            3,
+            3,
+            3,
+            3,
+            3,
+            3,
+            3,
+            3,
+            3,
+            3,
+            3,
+            3
+          ],
+          "rho": [
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            2,
+            3,
+            3,
+            3,
+            3,
+            3,
+            3,
+            3,
+            3,
+            3
+          ],
+          "zero_labels": 1,
+          "deficit": 0
+        },
+        {
+          "s": [
+            0,
+            3,
+            4,
+            4,
+            4,
+            4,
+            4,
+            4,
+            4,
+            4,
+            4,
+            4,
+            4,
+            4,
+            4
+          ],
+          "rho": [
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            3,
+            4,
+            4,
+            4,
+            4,
+            4,
+            4,
+            4,
+            4,
+            4,
+            4
+          ],
+          "zero_labels": 1,
+          "deficit": 0
+        },
+        {
+          "s": [
+            0,
+            4,
+            4,
+            4,
+            4,
+            4,
+            4,
+            4,
+            4,
+            4,
+            4,
+            4,
+            4,
+            4,
+            4
+          ],
+          "rho": [
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            1,
+            4,
+            4,
+            4,
+            4,
+            4,
+            4,
+            4,
+            4,
+            4,
+            4,
+            4
+          ],
+          "zero_labels": 1,
+          "deficit": 0
+        }
+      ]
+    }
+  },
+  "independence": "separate internal implementations; shared complete demand CSV",
+  "external_review": "OPEN"
+}

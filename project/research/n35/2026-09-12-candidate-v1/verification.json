@@ -1,0 +1,55 @@
+{
+  "schema": "n35-exact-replay-v1",
+  "status": "PASS_COMPLETE",
+  "layers": {
+    "3": {
+      "frontier": {
+        "profiles": 13,
+        "states": 19,
+        "positive_demand_states": 19
+      },
+      "exclusions": {
+        "tight_subset_threshold": 6,
+        "fixed9": 9,
+        "positive_degree_mass": 2,
+        "source_capped_threshold": 1,
+        "adaptive": 1
+      },
+      "zero_demand_exclusions": {},
+      "local_integer_checks": 2588,
+      "worst_gap_numerators": {
+        "fixed9": -9913,
+        "adaptive": -9624
+      },
+      "unresolved": []
+    },
+    "2": {
+      "frontier": {
+        "profiles": 144,
+        "states": 466,
+        "positive_demand_states": 463,
+        "zero_demand_states": 3
+      },
+      "exclusions": {
+        "tight_subset_threshold": 93,
+        "fixed9": 151,
+        "adaptive": 93,
+        "positive_degree_mass": 110,
+        "source_capped_threshold": 16,
+        "fixed13": 3
+      },
+      "zero_demand_exclusions": {
+        "tight_subset_threshold": 1,
+        "fixed9": 2
+      },
+      "local_integer_checks": 90113,
+      "worst_gap_numerators": {
+        "fixed9": -9866,
+        "adaptive": -9552,
+        "fixed13": -9939
+      },
+      "unresolved": []
+    }
+  },
+  "external_review": "OPEN"
+}
