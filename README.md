@@ -4,6 +4,85 @@ Candidate proofs and reproducible research. **Updated 12 September 2026. Indepen
 
 **External reviewers:** start with [`START_HERE_FOR_REVIEWERS.md`](START_HERE_FOR_REVIEWERS.md). The canonical theorem-level packages are indexed in [`releases/REVIEW_READY_INDEX.md`](releases/REVIEW_READY_INDEX.md). The project actively welcomes hostile review, counterexamples, literature corrections and genuinely independent reproduction; GitHub Issues are the preferred place to report a suspected flaw.
 
+## How this research develops general theory
+
+Our aim is to extract structural principles that explain why a diameter-two
+edge-critical graph cannot be too dense. Specific graph orders provide
+manageable cases in which to develop those principles, find weaknesses in
+proposed arguments, and identify hypotheses that a more general theorem needs.
+Progress at finitely many orders does not, by itself, establish a result for
+all orders.
+
+The [canonical bridge](project/research/general_n/2026-09-11-canonical-bridge-v1/CANONICAL_BRIDGE.md)
+translates graph structure into demands, residual budgets and selected
+incidences. We organise these constraints by `a=n-1-Delta`, `b=Delta` and
+the edge surplus `t=e(G)-b(a+1)`. This lets different orders share the same
+structural framework. The graph-to-constraint implications are mathematical
+claims that must be reviewed separately from the arithmetic checking them.
+
+The working cycle is:
+
+1. **Reduce the problem structurally.** Prove necessary inequalities and
+   identify a complete domain of remaining cases, keeping the assumptions
+   and dependencies explicit.
+2. **Use computation to investigate the difficult cases.** Search for useful
+   inequalities and propose certificates. Accept a computational exclusion
+   only after exact verification and complete coverage checks; a floating-point
+   solver report, timeout or unsuccessful search is not proof.
+3. **Extract simpler explanations.** Examine which constraints make a
+   certificate work, then seek a short hand argument that retains the decisive
+   information. Some finite certificates remain proof-critical; each package
+   states where they are still required.
+4. **Generalise with explicit hypotheses.** Formulate a parameterized lemma,
+   prove its graph-level implications, and test its reach against preserved
+   difficult cases and failed attempts. Infinite-family conclusions require
+   an argument covering the whole family.
+
+N34 provides a concrete example. Its final 12,570-variable certificate was
+replaced by a [four-step load potential and short hand proof](project/reviews/n34/2026-09-12-heavy-independent-v1/HAND_PROOF.md).
+Tracking how many selected incidences go to heavy labels exposed a useful
+restriction on where their supplements can lie. Combined with endpoint loads,
+this gives the candidate bound `6k<=r+6z`: k counts labels with demand at least
+two, z counts sources with residual degree at least two, and r is the total
+residual budget. The hypothesis is that every source counted by z has
+supplement indegree at most four. The final N34 state would require `78<=74`.
+The lemma is independent of the order 34, but its hypothesis must be checked
+anew: the corresponding generic N35 source bound permits indegree five.
+
+This example identifies a direction for general theory: combine residual
+budgets with restrictions on how selected incidences are distributed and
+routed, and seek reusable load inequalities. The next research priority is
+to extend that argument across heavy thresholds and supplement capacities.
+
+## Failures, audit challenges and corrections are part of the record
+
+**We record failed approaches, counterexamples to proposed lemmas, unsuccessful
+or incomplete computations, audit challenges, discovered bugs, corrections
+and unresolved proof obligations alongside successful results.** These records
+help explain which ideas failed, which hypotheses matter, and why the current
+argument differs from an earlier version.
+
+Our [preservation standing orders](project/N25_PROJECT_STANDING_ORDERS.md) require
+every material result and failure to be saved with enough provenance for
+reconstruction and audit: code, parameters, inputs, outputs, certificates,
+survivor lists and review findings as applicable. Original evidence and
+superseded arguments are retained. Invalidated evidence is clearly labelled
+and excluded from the active proof chain. Missing original evidence is recorded
+as a recovery obligation; a later reconstruction is identified as such.
+
+For examples, see the preserved [N29 normalization bug and audit](project/reviews/n29/2026-09-08-redteam-restart-v1/PUBLIC_RELEASE_AUDIT.md),
+the [corrections from the general-foundations review](project/reviews/general-theory/2026-09-12-joint-followthrough-v1/FOUNDATIONS_AUDIT.md),
+and the [N34 failed relaxation, separate normalization audit and hand replacement](project/reviews/n34/2026-09-12-heavy-independent-v1/README.md).
+When a challenge reveals a flaw, the goal is to identify the first invalid
+implication, state which downstream claims are affected, and preserve the
+correction trail. An unresolved challenge remains visible as an open obligation.
+
+Exact replay, internal audit, repository publication and external mathematical
+acceptance are distinct statuses. Same-assistant reimplementations can reduce
+implementation risk; external specialist review and novelty assessment remain
+OPEN. The repository is intended to make both the arguments and their history
+available for that scrutiny.
+
 ## Current headline status
 
 | Scope | Current project status |
