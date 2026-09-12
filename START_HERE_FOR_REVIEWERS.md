@@ -4,9 +4,9 @@
 
 ## What this repository is
 
-This repository contains **AI-assisted candidate mathematics** concerning the Murty–Simon conjecture / Erdős Problem #742, together with code, exact certificates, replay workflows, red-team reports and failed intermediate approaches.
+This repository contains **AI-assisted candidate mathematics** concerning the Murty–Simon conjecture / Erdős Problem #742, together with code, exact certificates, replay workflows, hostile audits and failed intermediate approaches.
 
-Nothing here should be treated as externally accepted mathematics merely because a workflow is green. The fixed-order results and general structural results are explicitly labelled **candidate** until they receive genuinely independent mathematical review. Same-assistant reimplementations reduce implementation risk but are not external independence.
+Nothing here should be treated as externally accepted mathematics merely because a workflow is green. The fixed-order and general structural results are explicitly labelled **candidate** until they receive genuinely independent mathematical review. Same-assistant reimplementations reduce implementation risk but are not external independence.
 
 Paul Lenz directed the project and chose the research priorities. ChatGPT/Geeps supplied the mathematical development, implementations, manuscripts and internal audits.
 
@@ -20,11 +20,14 @@ The repository currently contains complete candidate fixed-order Murty–Simon r
 - `n=27`: `e(G) <= 182`, equality only `K(13,14)`;
 - `n=28`: `e(G) <= 196`, equality only `K(14,14)`;
 - `n=29`: `e(G) <= 210`, equality only `K(14,15)`;
-- `n=30`: `e(G) <= 225`, equality only `K(15,15)`.
+- `n=30`: `e(G) <= 225`, equality only `K(15,15)`;
 - `n=31`: `e(G) <= 240`, equality only `K(15,16)`;
-- `n=32`: `e(G) <= 256`, equality only `K(16,16)`.
+- `n=32`: `e(G) <= 256`, equality only `K(16,16)`;
+- `n=33`: `e(G) <= 272`, equality only `K(16,17)`.
 
-The canonical reviewer packages are indexed in [`releases/REVIEW_READY_INDEX.md`](releases/REVIEW_READY_INDEX.md). The current fixed-order editions are Fan-free reviewer-v2 at `n=25,27,28`, **reviewer-v4 at `n=29`**, **reviewer-v3 at `n=30`**, and source-first **reviewer-v1 packages at `n=31,32`**. N29 has no proof-critical computation; N30 combines hand lemmas with explicit finite integer tables; N31 is predominantly hand/structural; N32 uses hand reductions plus exact finite replay in the difficult `Delta=17` branch.
+The canonical reviewer packages are indexed in [`releases/REVIEW_READY_INDEX.md`](releases/REVIEW_READY_INDEX.md). The current fixed-order editions are Fan-free reviewer-v2 at `n=25,27,28`, reviewer-v4 at `n=29`, reviewer-v3 at `n=30`, and source-first reviewer-v1 packages at `n=31,32,33`.
+
+N29 has no proof-critical computation. N30 combines hand lemmas with explicit finite integer tables. N31 is predominantly hand/structural. N32 uses hand reductions plus exact finite replay in the difficult `Delta=17` branch. N33 is again compact: the sole new equality frontier has only 29 residual states, 25 exact shifted-potential exclusions and four hand contradictions.
 
 The strongest current reviewer-packaged general candidate is
 
@@ -34,11 +37,11 @@ n >= 6 and Delta(G) >= (7/12)n  ==>  e(G) < floor(n^2/4).
 
 Start with [`releases/general-7-12-reviewer-v1/README.md`](releases/general-7-12-reviewer-v1/README.md). This is a complete candidate hand argument with internal exact audits green; independent mathematical review, novelty assessment and external reproduction remain open.
 
-The active RX-Hall / 3-D potential programme is attempting to go below the `7/12` frontier by retaining more joint profile information. It has exact finite compression results, but **no unrestricted theorem is claimed from that programme yet**.
+The active RX-Hall / monotone-potential programme has exact finite compression results and is now proof-critical in parts of the N32/N33 fixed-order packages, but **no unrestricted theorem is claimed from that programme**.
 
 No unrestricted all-order proof is claimed anywhere in the repository.
 
-## n=31 and n=32 fixed-order extensions
+## Current fixed-order extensions: n=31, n=32, n=33
 
 ### n=31
 
@@ -47,6 +50,8 @@ Candidate `e(G)<=240`, equality exactly `K(15,16)`.
 - [`releases/n31-reviewer-v1/README.md`](releases/n31-reviewer-v1/README.md)
 - [`project/research/n31/2026-09-11-hand-route-v1/PROOF.md`](project/research/n31/2026-09-11-hand-route-v1/PROOF.md)
 - [`project/research/n31/2026-09-11-hand-route-v1/HOSTILE_AUDIT.md`](project/research/n31/2026-09-11-hand-route-v1/HOSTILE_AUDIT.md)
+
+The route is predominantly hand/structural: high degrees close through the twelve-label theorem, `Delta=17` through the thirteen-label theorem and equality analysis, and `Delta=16` through witness-deficit counting.
 
 ### n=32
 
@@ -59,91 +64,47 @@ Candidate `e(G)<=256`, equality exactly `K(16,16)`.
 
 For N32 the highest-value external targets are the shared selected/residual bridge, threshold-capacity equality, endpoint load, the t=1 residual-tail expansion and the strengthened zero-demand model. Exact replay is important implementation evidence but is not a substitute for reviewing those implications.
 
-## n=25: the natural fixed-order paper to inspect
+### n=33
 
-The project treats `n=25` as a candidate resolution of the conspicuous order-25 gap between Fan's published `n<=24` and `n=26` results.
+Candidate `e(G)<=272`, equality exactly `K(16,17)`.
 
-Current package:
+- [`releases/n33-reviewer-v1/README.md`](releases/n33-reviewer-v1/README.md)
+- [`project/research/n33/2026-09-12-candidate-v1/PROOF.md`](project/research/n33/2026-09-12-candidate-v1/PROOF.md)
+- [`project/research/n33/2026-09-12-candidate-v1/HOSTILE_AUDIT.md`](project/research/n33/2026-09-12-candidate-v1/HOSTILE_AUDIT.md)
+- [`project/research/n33/2026-09-12-candidate-v1/README.md`](project/research/n33/2026-09-12-candidate-v1/README.md)
 
-- [`releases/n25-reviewer-v2/README.md`](releases/n25-reviewer-v2/README.md)
-- [`project/reviews/n25/2026-09-09-fan-free-v2/PROOF.md`](project/reviews/n25/2026-09-09-fan-free-v2/PROOF.md)
-- [`project/reviews/n25/2026-09-08-reaudit-v1/README.md`](project/reviews/n25/2026-09-08-reaudit-v1/README.md)
+N33 has an especially small new proof surface. `Delta=17` is fully hand-closed and equality forces `K(17,16)`. The only new finite branch is `(a,b,t)=(14,18,2)` at `Delta=18,m=272`: 21 demand profiles expand to 29 residual-tail states; a shifted nine-rectangle potential excludes 25 with exact integer acceptance and four are excluded by hand. No full RX/Hall Farkas stage is needed.
 
-The complete finite domain was replayed in sixteen disjoint clean-runner shards covering 543,578 outer states and 3,442,212 labelled columns. A separately written terminal re-audit imported no frozen verifier and independently reconstructed all 1,959 final equality certificates. No blocking mathematical defect was found in that internal re-audit.
-
-The principal remaining question is therefore not whether the arithmetic replay terminates, but whether the graph-to-model reductions and their hypotheses are universally sound.
-
-## Robustness milestone: Fan-free fixed-order proofs and analytic hardening
-
-A hostile external-AI critique questioned both selected/residual semantics and the use of G. Fan's 1987 density theorem as an edge-count cap. The semantic objections were re-audited and resolved explicitly in the current proof text. The project then removed Fan as a **logical dependency** from its current fixed-order candidate proofs at `n=25,27,28,29,30,31,32`, while retaining Fan's theorem as historical attribution and preserving every reviewer-v1/proof source unchanged.
-
-The direct replacement is [`FAN_FREE_REDUCTION.md`](project/research/fan-free-fixed-orders/2026-09-09-v1/FAN_FREE_REDUCTION.md), and its assembled edge-range/source-integrity checks are recorded in [`FAN_FREE_AUDIT.md`](project/research/fan-free-fixed-orders/2026-09-09-v1/FAN_FREE_AUDIT.md). The audit is internal; independent review of the graph-theoretic bridge remains open.
-
-A second blind external-assistant red-team of `n=29`, supplied on 11 September without project background, attacked the bridge, residual activity, threshold capacity, isolated-C, corrected late-LP normalization, exact Farkas semantics and the hand assembly and reported no fatal defect. Its follow-up and our independent reproduction are preserved in [`FOLLOWUP.md`](project/reviews/n29/2026-09-11-blind-external-ai-redteam-v1/FOLLOWUP.md).
-
-That review also found a useful pointwise charging bound which removes several historical computations from the **logical** dependency chain. The exact cross-order derivation is [`POINTWISE_CAPS.md`](project/research/fan-free-fixed-orders/2026-09-11-pointwise-analytic-caps-v1/POINTWISE_CAPS.md). In particular:
-
-- `n=28, Delta=15`: every `m>=203` is now a hand exclusion;
-- `n=29, Delta=16`: the later reviewer-v4 threshold-tail proof is stronger and excludes **every `m>=210` by hand**; the earlier pointwise caps remain historical corroboration;
-- `n=30, Delta=17`: reviewer-v3 proves the stronger `m<=221` by a source-independent hand tail bound;
-- `n=30, Delta=16`: reviewer-v3 excludes every `m>=225` using the hand classification and explicit endpoint integer tables; the earlier pointwise caps remain corroboration.
-
-Historical workflows for those ranges remain preserved as corroborating evidence only.
+Highest-value N33 review targets are the same shared bridge, threshold-capacity/equality and endpoint-load lemmas, plus independent reproduction of the 21-profile / 29-state frontier and the four displayed hand contradictions.
 
 ## Recommended bridge audit: n=29
 
-The n=29 candidate is now an especially clean place to audit the universal graph-to-demand machinery because **no finite computation is logically required by reviewer-v4**.
+The n=29 reviewer-v4 candidate remains an especially clean place to audit the universal graph-to-demand machinery because no finite computation is logically required.
 
-**Current reviewer-v4 package:**
+Current package:
 
 - [`releases/n29-reviewer-v4/README.md`](releases/n29-reviewer-v4/README.md)
-- [`releases/n29-reviewer-v4/N29_Reviewer_Manuscript_v4.pdf`](releases/n29-reviewer-v4/N29_Reviewer_Manuscript_v4.pdf)
-- [`releases/n29-reviewer-v4/N29_Verification_Companion_v4.pdf`](releases/n29-reviewer-v4/N29_Verification_Companion_v4.pdf)
-
-**Canonical sources and audit:**
-
 - [`project/reviews/n29/2026-09-11-reviewer-v4/PROOF.md`](project/reviews/n29/2026-09-11-reviewer-v4/PROOF.md)
-- [`project/reviews/n29/2026-09-11-reviewer-v4/VERIFICATION_COMPANION.md`](project/reviews/n29/2026-09-11-reviewer-v4/VERIFICATION_COMPANION.md)
-- [`project/reviews/n29/2026-09-11-reviewer-v4-redteam-v1/REPORT.md`](project/reviews/n29/2026-09-11-reviewer-v4-redteam-v1/REPORT.md) — dedicated hostile audit: no blocking flaw found.
-- [`project/reviews/n29/2026-09-11-reviewer-v4/REDTEAM_HARDENING.md`](project/reviews/n29/2026-09-11-reviewer-v4/REDTEAM_HARDENING.md) — explicit endpoint table, parameterisation and citation hardening.
+- [`project/reviews/n29/2026-09-11-reviewer-v4-redteam-v1/REPORT.md`](project/reviews/n29/2026-09-11-reviewer-v4-redteam-v1/REPORT.md)
 - [`project/research/general_n/2026-09-11-threshold-tail-collapse-v1/N29_DELTA16_THRESHOLD_TAIL_HAND_PROOF.md`](project/research/general_n/2026-09-11-threshold-tail-collapse-v1/N29_DELTA16_THRESHOLD_TAIL_HAND_PROOF.md)
-- [`project/reviews/n29/2026-09-11-reviewer-v3/GRAPH_TO_MODEL_BRIDGE.md`](project/reviews/n29/2026-09-11-reviewer-v3/GRAPH_TO_MODEL_BRIDGE.md) — frozen self-contained bridge, appended to the v4 PDF.
-- [Source-degree display erratum](project/reviews/cross-cutting/2026-09-11-source-degree-erratum-v1/ERRATUM.md) — restore the omitted `q_u` cross-degree in Section 5 of that frozen appendix. The resulting supplement bound and inspected models are unchanged.
+- [`project/reviews/n29/2026-09-11-reviewer-v3/GRAPH_TO_MODEL_BRIDGE.md`](project/reviews/n29/2026-09-11-reviewer-v3/GRAPH_TO_MODEL_BRIDGE.md)
 
-For `Delta=16`, reviewer-v4 uses only the exact ledger/demand inequality, residual activity, selected-incidence forcing, selected-source capacity and threshold capacity. These give `Q(s)>=16+2t`; the hand tail-deficit argument gives `Q(s)<=18`, hence `t<=1` and excludes every `m>=210` in this degree branch.
+For `Delta=16`, reviewer-v4 uses only the exact ledger/demand inequality, residual activity, selected-incidence forcing, selected-source capacity and threshold capacity. These give `Q(s)>=16+2t`; the hand tail-deficit theorem gives `Q(s)<=18`, hence `t<=1` and excludes every `m>=210` in this degree branch.
 
-The corrected reviewer-v3 minimal kernel remains valuable independent evidence, but is no longer proof-critical. Its exact replays reject 126/126 rows at `m=211` and 1,467/1,467 rows at `m=210`. The old v1 grouped-model normalization bug remains quarantined and documented.
+The highest-value external review remains the **universal bridge + threshold-capacity lemma + hand clipping argument**, followed by the short `Delta=15`, `Delta=17` and higher-degree branches.
 
-A dedicated same-assistant hostile audit then rebuilt the v4 logic from scratch. Its separately specified exact checker passed run `34621982241`: all 1,352,078 demand multisets were swept, all clipping maps were globally regression-tested with zero counterexamples, the threshold-capacity algebra was checked over 1,472 integer parameter combinations, and the remaining degree branches were independently recomputed. This is strong internal evidence but is **not** external validation.
+## n=30 package
 
-The highest-value external review remains the **universal bridge + threshold-capacity lemma + hand clipping argument**, followed by the short `Delta=15`, `Delta=17` and residual h-index branches. A rerun of the late LP/Farkas stack is optional corroboration, not a prerequisite to assess v4.
-
-## n=30 complete candidate
-
-**Current reviewer-v3 package:**
+The current reviewer-v3 package contains the complete hand-lemma and explicit-integer-table proof:
 
 - [Self-contained manuscript PDF](releases/n30-reviewer-v3/N30_Reviewer_Manuscript_v3.pdf)
 - [Verification companion PDF](releases/n30-reviewer-v3/N30_Verification_Companion_v3.pdf)
 - [Complete portable review ZIP](releases/n30-reviewer-v3/N30_Reviewer_Package_v3.zip)
-- [Canonical proof source](project/reviews/n30/2026-09-11-reviewer-v3/PROOF.md), [editorial/dependency review](project/reviews/n30/2026-09-11-reviewer-v3/EDITORIAL_REVIEW.md), and [review report template](project/reviews/n30/2026-09-11-reviewer-v3/REVIEW_REPORT_TEMPLATE.md)
+- [Canonical proof source](project/reviews/n30/2026-09-11-reviewer-v3/PROOF.md)
 
-The candidate statement is `e(G)<=225`, with equality exactly `K(15,15)`. The manuscript includes every needed graph lemma and every proof-critical table; there is no need to assemble the proof by following research links.
-
-Delta>=17 is closed by a source-independent twelve-label hand bound, with the stronger `m<=221` at Delta=17. Delta=15 equality has an elementary regularity/triangle-free proof. At Delta=16, a hand classification derives exactly 100 profiles and Q<=21; finite residual-tail reconstruction and eight source inequalities settle m226, while four explicit envelopes cover all 211 tight m225 rows after 61 ledger exclusions.
-
-The historical large scans, grouped LPs, Farkas rays, higher-degree charging computations, isolated-C strengthening, Fan theorem and dominating-edge theorem are no longer premises. **The printed Delta=16 classification, residual-tail and endpoint tables remain proof-critical finite arithmetic.**
-
-The preceding [assembly audit](project/research/n30/2026-09-11-assembled-hand-route-v1/ASSEMBLY_AUDIT.json) reproduced all 844 per-template m225 gaps and all eight m226 contradictions, and its [bridge audit](project/research/n30/2026-09-11-assembled-hand-route-v1/BRIDGE_AUDIT.md) found no blocking flaw. This is same-assistant internal evidence. The ZIP supports a one-command replay from its extracted root.
-
-The [historical reviewer-v2 package](releases/n30-reviewer-v2/README.md) and all original proof/certificate bytes remain preserved. Reviewer-v3 updates the reading surface; the governed theorem ledger is unchanged. Independent specialist review is OPEN.
+`Delta>=17` is closed by the source-independent twelve-label theorem, `Delta=15` equality is direct, and `Delta=16` uses a hand classification plus explicit residual-tail and endpoint tables. Independent specialist review remains open.
 
 ## General 7/12 candidate
-
-The current strongest reviewer-packaged maximum-degree candidate is
-
-```text
-n >= 6 and Delta(G) >= (7/12)n  ==>  e(G) < floor(n^2/4).
-```
 
 Reviewer material:
 
@@ -151,91 +112,26 @@ Reviewer material:
 - [`project/research/general_n/2026-09-09-profile-integral-7-12-v1/PROOF.md`](project/research/general_n/2026-09-09-profile-integral-7-12-v1/PROOF.md)
 - [`project/research/general_n/2026-09-09-profile-integral-7-12-v1/AUDIT.md`](project/research/general_n/2026-09-09-profile-integral-7-12-v1/AUDIT.md)
 
-The scalar estimate gives
+The scalar estimate gives `t < 5a^2/128 + a/8`. Large-n regressions are consistency checks, not proof by extrapolation. The main mathematical trust boundary is the shared graph-to-demand/profile-integral bridge.
 
-```text
-t < 5a^2/128 + a/8.
-```
+## Robustness and correction policy
 
-Two separately written standard-library checkers agree on the exact scalar arithmetic and the finite assembly exceptions. The large `n` regressions are consistency checks, not proof by extrapolation. The main mathematical trust boundary is the shared graph-to-demand/profile-integral bridge.
+The repository preserves failed approaches and discovered bugs rather than rewriting history.
 
-The associated ceiling analysis places the asymptotic limit of the current scalar-uniform profile-integral architecture near `0.582066`, close to `7/12 = 0.583333...`; further progress is therefore expected to require additional joint profile information.
+Important correction notes include:
 
-## 10 September RX-Hall / 3-D potential frontier
+- the historical n=29 grouped-model normalization bug, whose v1 certificates are quarantined and not used by the current reviewer-v4 proof;
+- the non-blocking threshold-capacity explanatory sign/order typo, corrected in current proof text;
+- the frozen N29 bridge source-degree display erratum, which omitted `q_u` in one displayed intermediate identity while using the correct resulting supplement bound.
 
-The active continuation is documented under [`project/research/general_n/2026-09-09-rx-hall-v1/`](project/research/general_n/2026-09-09-rx-hall-v1/README.md).
+The current fixed-order candidates do not rely logically on Fan's 1987 density theorem. Direct Fan-free replacements were constructed for `n=25..30`; N31/N32/N33 were assembled without invoking Fan's theorem in the first place.
 
-Three current finite compression milestones are particularly relevant:
+Same-assistant hostile audits and reimplementations are useful internal evidence but are explicitly **not** external independent review.
 
-1. **n=29, t=3.** All 94 regenerated hard profiles admit one exact rational analytic min-hinge potential with nine breakpoints. See [`MIN_HINGE_ANALYTIC_REDUCTION.md`](project/research/general_n/2026-09-09-rx-hall-v1/MIN_HINGE_ANALYTIC_REDUCTION.md).
-2. **n=30, t=1.** A naive BC/diagonal parameter rule failed one of seven hard profiles. Restoring the first Hall coordinate with the single threshold `1[s>=2]` yields an exact 13-generator 3-D potential with two rational scalar templates covering all seven profiles and minimum exact strict gap `1/2`. See [`N30_T1_TWO_TEMPLATE_POTENTIAL.md`](project/research/general_n/2026-09-09-rx-hall-v1/N30_T1_TWO_TEMPLATE_POTENTIAL.md).
-3. **n=29, t=2.** A fixed 11-term primitive 3-D potential plus exactly three rational scalar templates covers all 902 regenerated profiles. An exact rational Farkas incompatibility triangle proves that, for this fixed potential, two templates cannot suffice. See [`N29_T2_3D_THREE_TEMPLATE_EXACT.md`](project/research/general_n/2026-09-09-rx-hall-v1/N29_T2_3D_THREE_TEMPLATE_EXACT.md).
+## Governance and limits
 
-These are exact finite RX-Hall results conditional on the graph-to-profile bridge and the 3-D monotone transport/potential lemma. They are **not** unrestricted Murty–Simon theorems and are not dependencies of the current fixed-order proofs.
+No complete fixed-order candidate above `n=33`, proof through `n=1,000`, unrestricted all-order solution, novelty determination, full formal verification or external endorsement is claimed.
 
-The current high-value research target is to explain the three `t=2` scalar regimes by simple profile statistics and determine whether the resulting inequalities extend symbolically in `(n,t)`. That is the path being tested toward a genuinely reusable infinite-family theorem below the `7/12` frontier.
+Finite arithmetic states are necessary-condition systems, not graphs. Exact rejection is useful only if the graph-to-model implications are correct. Reviewers should therefore prioritize the universal graph bridge over merely rerunning solvers.
 
-## Important audit history: a real n=29 bug was found
-
-During the hostile n=29 bridge audit, an error was found in the first version of the *additional* cumulative-threshold verifier, `independent_threshold_model.py`.
-
-The grouped selected-incidence equation multiplied label-side capacity by the label-group multiplicity twice. Accordingly:
-
-- the **v1 cumulative-threshold certificates are not valid proof evidence**;
-- the flawed v1 source is retained for audit history and must not be cited as a verifier;
-- the error did not affect the original n=29 direct route or the separate fully fresh implementation;
-- [`independent_threshold_model_v2.py`](project/reviews/n29/2026-09-08-redteam-restart-v1/independent_threshold_model_v2.py) fixes the normalization;
-- corrected v2 was replayed cleanly and again produced zero survivors;
-- the later minimal trusted-kernel replay uses the corrected v2 model and produced zero survivors;
-- the n=30 `Delta=16` grouped model was written fresh with the corrected normalization.
-
-This history is intentionally public. It should not be silently edited out of the record.
-
-A separate 11 September proof-text audit found an intermediate sign/order typo in the expanded threshold-capacity lemma's explanatory algebra. The corrected sign is exactly the direction required to prove the same final threshold inequality, so no computation or candidate status changed. The correction is recorded in the historical lemma itself and the reviewer-v3 bridge writes the proof self-contained from scratch.
-
-## What to attack first
-
-A useful hostile review would try to break these points in roughly this order:
-
-1. **Complement/quasi-edge construction.** Does every missing `B`-pair really force the selected cross-edge structure claimed?
-2. **Injection and uniqueness.** Are selected edges, supplements and unordered `B`-pairs counted without collisions?
-3. **Residual activity.** For `t>0`, is the proof that every `B` row has positive residual degree valid in all edge cases?
-4. **Demand implication.** Does `s_i=max(0,d_i-R_i)` genuinely require `s_i` distinct selected sources with enough residual degree?
-5. **Charging inequality.** Check the per-source charge budget and the passage to the summed demand inequality.
-6. **Threshold-capacity lemma.** Check the high-demand/high-residual source counting and unordered-pair capacity.
-7. **Parameterized isolated-C lemma.** Check the auxiliary-location argument and disjoint residual-edge families.
-8. **Exact source-capacity dual.** Verify that it is only a necessary Hall relaxation and that the saved integer dual inequality proves each rejection.
-9. **Residual-row scanner.** Check that every pruning operation enlarges or preserves the graph-realizable set before rejection.
-10. **Corrected grouped LP normalization.** Track every grouped variable dimensionally: per label, per source, or per possible pair.
-11. **3-D transport/potential lemma.** Check that every asserted coordinatewise incidence inequality is justified and that every used potential is coordinatewise nondecreasing on the required domain.
-12. **Exact Farkas checkers.** Confirm multiplier signs, equality treatment, coefficientwise conditions and strictly negative combined RHS where required.
-
-A single valid counterexample to any universal lemma is enough to invalidate the dependent route and should be reported immediately.
-
-## Reproduction philosophy
-
-The repository attempts to distinguish clearly between:
-
-- mathematical lemmas;
-- finite necessary-condition systems;
-- exploratory numerical solver output;
-- exact machine-checkable certificates;
-- same-assistant reimplementation;
-- genuinely independent external review.
-
-Only the first five can currently be supplied internally. External mathematical and computational review remains explicitly open.
-
-## How to report a problem
-
-Please open a GitHub Issue and include, where possible:
-
-- the exact file and lemma/constraint;
-- the smallest configuration or parameter values that expose the problem;
-- whether the issue is mathematical, implementation, reproducibility, attribution/literature, or exposition;
-- whether it changes a headline candidate result or only a redundant verification route.
-
-Corrections should preserve the original evidence and failure history rather than overwrite it silently.
-
-## Licence
-
-The repository is released under the MIT licence in [`LICENSE`](LICENSE).
+For the canonical package list and current status wording, use [`releases/REVIEW_READY_INDEX.md`](releases/REVIEW_READY_INDEX.md).
