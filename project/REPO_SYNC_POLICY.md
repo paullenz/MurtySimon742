@@ -56,3 +56,11 @@ Open material is preserved too. Failed approaches, partial enumerations, survivi
 ## Practical limitation
 
 Repository synchronization occurs when a ChatGPT work session is active and GitHub access is available; this file is a standing project instruction, not a background process. Commit completion and mathematical certification remain separate questions.
+
+## Standing authorization for GitHub commits and pushes — 12 September 2026
+
+Paul explicitly instructed: “Great - you don't need to ask my permission to commit to GitHub in future”.
+
+This is continuing user authorization to commit and push routine Murty–Simon research, code, proofs, audit evidence, documentation and corrections to the public repository `paullenz/MurtySimon742`, including its `main` branch. Complete these updates without requesting fresh user permission for each checkpoint. Continue the existing preservation, README/link consistency, non-forced update and publication verification requirements.
+
+If a platform approval or access-control block occurs, report the actual block and preserve the prepared work. Do not misdescribe it as missing user authorization, and do not bypass the control.

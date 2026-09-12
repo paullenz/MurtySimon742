@@ -76,3 +76,11 @@ A reviewer release is **not fully published/preserved** until this consistency s
 ## GitHub standing order
 
 The repository `paullenz/MurtySimon742` is the durable project home. Future material work should be preserved here (or in an explicitly hash-pinned external artifact referenced here) rather than left only in chat history.
+
+## Standing authorization for GitHub commits and pushes — 12 September 2026
+
+Paul explicitly instructed: “Great - you don't need to ask my permission to commit to GitHub in future”.
+
+This is continuing user authorization to commit and push routine Murty–Simon research, code, proofs, audit evidence, documentation and corrections to the public repository `paullenz/MurtySimon742`, including its `main` branch. Complete these updates without requesting fresh user permission for each checkpoint. Continue the existing preservation, README/link consistency, non-forced update and publication verification requirements.
+
+If a platform approval or access-control block occurs, report the actual block and preserve the prepared work. Do not misdescribe it as missing user authorization, and do not bypass the control.
