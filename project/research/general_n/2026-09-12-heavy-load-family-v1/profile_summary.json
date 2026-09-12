@@ -1,0 +1,28 @@
+{
+  "status": "COMPLETE_PROFILE_SCAN",
+  "layers": {
+    "n34-m289": {
+      "single_threshold_exclusion": 7,
+      "profiles": 1296,
+      "raised_minimum_residual_budget": 48,
+      "joint_tail_exclusion": 23,
+      "survives_joint_tail": 1266
+    },
+    "n35-m307": {
+      "single_threshold_exclusion": 2,
+      "profiles": 13,
+      "raised_minimum_residual_budget": 3,
+      "survives_joint_tail": 10,
+      "joint_tail_exclusion": 1
+    },
+    "n35-m306": {
+      "joint_tail_exclusion": 6,
+      "profiles": 144,
+      "raised_minimum_residual_budget": 17,
+      "survives_joint_tail": 132,
+      "single_threshold_exclusion": 6
+    }
+  },
+  "external_review": "OPEN",
+  "scope": "New necessary profile constraints; surviving profiles are not graphs."
+}

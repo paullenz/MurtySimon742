@@ -1,0 +1,244 @@
+{
+  "status": "PASS",
+  "ranges": {
+    "h": [
+      1,
+      12
+    ],
+    "T": "h..6h",
+    "P": "0..5h",
+    "H": "0..T+1"
+  },
+  "direct_source_options": 15201197,
+  "exact_capped_maxima": 589457,
+  "exact_uniform_maxima": 17042,
+  "label_checks": 2556945,
+  "failed_extensions": [
+    {
+      "attempt": "extend cutoff beyond 4h with C=hT",
+      "h": 1,
+      "T": 5,
+      "H": 2,
+      "p": 0,
+      "cost": 6,
+      "claimed_cap": 5
+    },
+    {
+      "attempt": "omit incoming penalty beyond p=3h",
+      "h": 1,
+      "T": 4,
+      "H": 1,
+      "p": 4,
+      "cost": 5,
+      "claimed_cap": 4
+    },
+    {
+      "attempt": "extend cutoff beyond 4h with C=hT",
+      "h": 2,
+      "T": 9,
+      "H": 4,
+      "p": 0,
+      "cost": 20,
+      "claimed_cap": 18
+    },
+    {
+      "attempt": "omit incoming penalty beyond p=3h",
+      "h": 2,
+      "T": 8,
+      "H": 2,
+      "p": 7,
+      "cost": 18,
+      "claimed_cap": 16
+    },
+    {
+      "attempt": "extend cutoff beyond 4h with C=hT",
+      "h": 3,
+      "T": 13,
+      "H": 6,
+      "p": 0,
+      "cost": 42,
+      "claimed_cap": 39
+    },
+    {
+      "attempt": "omit incoming penalty beyond p=3h",
+      "h": 3,
+      "T": 12,
+      "H": 3,
+      "p": 10,
+      "cost": 39,
+      "claimed_cap": 36
+    },
+    {
+      "attempt": "extend cutoff beyond 4h with C=hT",
+      "h": 4,
+      "T": 17,
+      "H": 8,
+      "p": 0,
+      "cost": 72,
+      "claimed_cap": 68
+    },
+    {
+      "attempt": "omit incoming penalty beyond p=3h",
+      "h": 4,
+      "T": 16,
+      "H": 4,
+      "p": 13,
+      "cost": 68,
+      "claimed_cap": 64
+    },
+    {
+      "attempt": "extend cutoff beyond 4h with C=hT",
+      "h": 5,
+      "T": 21,
+      "H": 10,
+      "p": 0,
+      "cost": 110,
+      "claimed_cap": 105
+    },
+    {
+      "attempt": "omit incoming penalty beyond p=3h",
+      "h": 5,
+      "T": 20,
+      "H": 5,
+      "p": 16,
+      "cost": 105,
+      "claimed_cap": 100
+    },
+    {
+      "attempt": "extend cutoff beyond 4h with C=hT",
+      "h": 6,
+      "T": 25,
+      "H": 12,
+      "p": 0,
+      "cost": 156,
+      "claimed_cap": 150
+    },
+    {
+      "attempt": "omit incoming penalty beyond p=3h",
+      "h": 6,
+      "T": 24,
+      "H": 6,
+      "p": 19,
+      "cost": 150,
+      "claimed_cap": 144
+    },
+    {
+      "attempt": "extend cutoff beyond 4h with C=hT",
+      "h": 7,
+      "T": 29,
+      "H": 14,
+      "p": 0,
+      "cost": 210,
+      "claimed_cap": 203
+    },
+    {
+      "attempt": "omit incoming penalty beyond p=3h",
+      "h": 7,
+      "T": 28,
+      "H": 7,
+      "p": 22,
+      "cost": 203,
+      "claimed_cap": 196
+    },
+    {
+      "attempt": "extend cutoff beyond 4h with C=hT",
+      "h": 8,
+      "T": 33,
+      "H": 16,
+      "p": 0,
+      "cost": 272,
+      "claimed_cap": 264
+    },
+    {
+      "attempt": "omit incoming penalty beyond p=3h",
+      "h": 8,
+      "T": 32,
+      "H": 8,
+      "p": 25,
+      "cost": 264,
+      "claimed_cap": 256
+    },
+    {
+      "attempt": "extend cutoff beyond 4h with C=hT",
+      "h": 9,
+      "T": 37,
+      "H": 18,
+      "p": 0,
+      "cost": 342,
+      "claimed_cap": 333
+    },
+    {
+      "attempt": "omit incoming penalty beyond p=3h",
+      "h": 9,
+      "T": 36,
+      "H": 9,
+      "p": 28,
+      "cost": 333,
+      "claimed_cap": 324
+    },
+    {
+      "attempt": "extend cutoff beyond 4h with C=hT",
+      "h": 10,
+      "T": 41,
+      "H": 20,
+      "p": 0,
+      "cost": 420,
+      "claimed_cap": 410
+    },
+    {
+      "attempt": "omit incoming penalty beyond p=3h",
+      "h": 10,
+      "T": 40,
+      "H": 10,
+      "p": 31,
+      "cost": 410,
+      "claimed_cap": 400
+    },
+    {
+      "attempt": "extend cutoff beyond 4h with C=hT",
+      "h": 11,
+      "T": 45,
+      "H": 22,
+      "p": 0,
+      "cost": 506,
+      "claimed_cap": 495
+    },
+    {
+      "attempt": "omit incoming penalty beyond p=3h",
+      "h": 11,
+      "T": 44,
+      "H": 11,
+      "p": 34,
+      "cost": 495,
+      "claimed_cap": 484
+    },
+    {
+      "attempt": "extend cutoff beyond 4h with C=hT",
+      "h": 12,
+      "T": 49,
+      "H": 24,
+      "p": 0,
+      "cost": 600,
+      "claimed_cap": 588
+    },
+    {
+      "attempt": "omit incoming penalty beyond p=3h",
+      "h": 12,
+      "T": 48,
+      "H": 12,
+      "p": 37,
+      "cost": 588,
+      "claimed_cap": 576
+    }
+  ],
+  "old_N34_p5_counterexample": {
+    "h": 2,
+    "T": 6,
+    "H": 2,
+    "p": 5,
+    "cost": 14,
+    "claimed_cap": 12
+  },
+  "scope": "Local-domain counterexamples are not graphs or counterexamples to Murty-Simon.",
+  "external_review": "OPEN"
+}

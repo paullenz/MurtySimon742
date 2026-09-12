@@ -23,7 +23,7 @@ The current fixed-order PDF packages are Fan-free reviewer-v2 at `n=25,27,28`, *
 | tight total-demand threshold | if all demands >=h and `S=C_h(z_h)`, then `b+2t<=h(h+1)` | [hand lemma](../project/research/general_n/2026-09-12-joint-clipping-v1/TIGHT_THRESHOLD_LEMMA.md) | [foundations audit](../project/reviews/general-theory/2026-09-12-joint-followthrough-v1/FOUNDATIONS_AUDIT.md) | candidate universal bridge consequence; independent review OPEN |
 | n=34 | `e(G)<=289`, equality exactly `K(17,17)` | [reviewer-v2](n34-reviewer-v2/README.md) | [v2 replay](../project/reviews/n34/2026-09-12-heavy-independent-v1/verify_v2.py); [normalization audit and hand replacement](../project/reviews/n34/2026-09-12-heavy-independent-v1/README.md) | Complete candidate: 6,709 hand/accounting and 6,837 envelope exclusions; external review OPEN |
 | n=35 | `e(G)<=306`, equality exactly `K(17,18)` | [reviewer-v1](n35-reviewer-v1/README.md) | [exact replay](../project/research/n35/2026-09-12-candidate-v1/verify.py); [internal audit](../project/research/n35/2026-09-12-candidate-v1/AUDIT.md) | Complete candidate: all 485 new states excluded; 92,701 local integer checks; external review OPEN |
-| Heavy load with p<=4 | `6k<=r+6z`, where k counts labels with s>=2 and z counts sources with rho>=2 | [hand theorem](../project/reviews/n34/2026-09-12-heavy-independent-v1/HAND_PROOF.md) | [focused audit](../project/reviews/n34/2026-09-12-heavy-independent-v1/README.md) | Parameterized candidate necessary condition; all sources counted by z must have p<=4; external review OPEN |
+| Heavy-load / routing family | All-threshold inequalities with incoming-degree penalties; `s_i<=2, t>0, b-a<=5 => 9t+4(b-a)<=a` | [reviewer-v1](general-heavy-load-reviewer-v1/README.md) | [hand proof](../project/research/general_n/2026-09-12-heavy-load-family-v1/HEAVY_LOAD_FAMILY.md); [internal audit](../project/research/general_n/2026-09-12-heavy-load-family-v1/AUDIT.md) | Candidate structural family; 595 alternative envelope exclusions and 45 rejected layer/profile instances; complete survivors and failed extensions preserved; external review OPEN |
 | general-293-500 | `n >= 6 and Delta(G) >= (293/500)n imply e(G) < floor(n^2/4)` | [PDF](general-293-500-reviewer-v1/General_293_500_Reviewer_Manuscript_v1.pdf) | [PDF](general-293-500-reviewer-v1/General_293_500_Verification_Companion_v1.pdf) | retained candidate hand argument; superseded in threshold strength by 7/12; independent review OPEN |
 | general-7-12 | `n >= 6 and Delta(G) >= (7/12)n imply e(G) < floor(n^2/4)` | [PDF](general-7-12-reviewer-v1/General_7_12_Reviewer_Manuscript_v1.pdf) | [PDF](general-7-12-reviewer-v1/General_7_12_Verification_Companion_v1.pdf) | complete candidate hand argument; internal exact audits green; independent review and novelty assessment OPEN |
 | general-13-22 | `n >= 6 and Delta(G) >= (13/22)n imply e(G) < floor(n^2/4)` | [PDF](general-13-22-reviewer-v1/General_13_22_Reviewer_Manuscript_v1.pdf) | [PDF](general-13-22-reviewer-v1/General_13_22_Verification_Companion_v1.pdf) | retained candidate hand proof; independent mathematical review OPEN |
@@ -38,7 +38,10 @@ The joint-clipping continuation adds fixed-a scalar results through a=23.
 The [N34 reviewer-v2 package](n34-reviewer-v2/README.md) now gives the complete
 candidate bound 289 and equality exactly K(17,17). Its new
 [source-capped threshold lemma](../project/research/general_n/2026-09-12-source-capped-threshold-v1/SOURCE_CAPPED_THRESHOLD.md)
-and the new p<=4 heavy-load hand theorem extend the general bridge machinery.
+and the [general heavy-load/routing family](general-heavy-load-reviewer-v1/README.md)
+extend the general bridge machinery. The original p<=4 hand theorem remains
+preserved; the new family strengthens it and adds demand-only consequences.
+Its measured alternative exclusions do not change the fixed-order ledgers.
 The [N35 reviewer-v1 package](n35-reviewer-v1/README.md) now completes the
 candidate bound 306 and equality K(17,18), with all 485 new states excluded.
 The [bound-only package](n34-bound-reviewer-v1/README.md) and

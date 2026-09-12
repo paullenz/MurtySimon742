@@ -1,0 +1,33 @@
+{
+  "schema": "heavy-load-family-evidence-storage-v1",
+  "encoding": "base64(gzip(original)); mtime=0",
+  "files": {
+    "frontier_results.jsonl": {
+      "stored_file": "frontier_results.jsonl.gz.b64",
+      "format": "jsonl",
+      "records": 14031,
+      "original_bytes": 3122169,
+      "original_sha256": "8ba9e8c9a6322fac71710e86d140f754cfe7dfa743dd55a043dc94723418a547",
+      "stored_bytes": 130823,
+      "stored_sha256": "dda9e7dba25012b063d1107809bf28a29837ef8735b4ce703573671900c6e287"
+    },
+    "profile_results.jsonl": {
+      "stored_file": "profile_results.jsonl.gz.b64",
+      "format": "jsonl",
+      "records": 1453,
+      "original_bytes": 1648230,
+      "original_sha256": "aaca0892a4f4a6a093eae58ecb7374c9c4ea85b88a2d6cac5c9cbc18d38ebbfe",
+      "stored_bytes": 31826,
+      "stored_sha256": "6dea3c03962646e5448de28d6762ef25a5817cd2f3c983c174f31c6fb52c7408"
+    },
+    "remaining_states.json": {
+      "stored_file": "remaining_states.json.gz.b64",
+      "format": "json",
+      "records": 8280,
+      "original_bytes": 1695040,
+      "original_sha256": "5db7ea92b92083c2205007b483c4789ced80bddb693cb7a21004b1f4f46e26c6",
+      "stored_bytes": 76032,
+      "stored_sha256": "94c7664182c47b364f261547c4ce938f9b36e0ada396f8b2434cee35dba8c68c"
+    }
+  }
+}

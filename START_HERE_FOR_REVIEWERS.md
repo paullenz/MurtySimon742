@@ -63,6 +63,14 @@ candidate bound 306, equality K(17,18). Its two new finite layers contain
 485 states, all excluded by 228 hand/accounting arguments and 257 exact
 envelopes. External mathematical review and reproduction remain OPEN.
 
+The [general heavy-load/routing reviewer package](releases/general-heavy-load-reviewer-v1/README.md)
+now extends the N34 hand mechanism to every heavy threshold, with explicit
+incoming-degree penalties and demand-only tail bounds. Its low-demand
+corollary is `s_i<=2, t>0, b-a<=5 => 9t+4(b-a)<=a`, with no residual-degree
+cap. The study records 595 alternative hand exclusions for previously
+certified states, 45 excluded layer/profile instances, and all survivors and
+failed extensions. The existing fixed-order ledgers remain unchanged.
+
 For the preceding general-foundations review pass, see the
 [focused foundations checklist](project/reviews/general-theory/2026-09-12-joint-followthrough-v1/FOUNDATIONS_AUDIT.md).
 It checks the primary dominating-edge theorem's exception, the witness-capacity

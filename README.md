@@ -49,10 +49,12 @@ supplement indegree at most four. The final N34 state would require `78<=74`.
 The lemma is independent of the order 34, but its hypothesis must be checked
 anew: the corresponding generic N35 source bound permits indegree five.
 
-This example identifies a direction for general theory: combine residual
-budgets with restrictions on how selected incidences are distributed and
-routed, and seek reusable load inequalities. The next research priority is
-to extend that argument across heavy thresholds and supplement capacities.
+That mechanism now yields a [general heavy-load and routing family](releases/general-heavy-load-reviewer-v1/README.md)
+for every heavy threshold h, with an explicit cost for large supplement
+indegrees. It strengthens the h=2 case to `8k<=r+8z` when p<=6 and gives
+new demand-only inequalities. The next question is how to constrain heavy
+arc destinations and incoming degrees jointly; wider local cutoffs and
+individual source caps added no exclusions in the first full experiment.
 
 ## Failures, audit challenges and corrections are part of the record
 
@@ -98,10 +100,34 @@ available for that scrutiny.
 | `n=34` | Complete candidate: `e(G)<=289`, equality exactly `K(17,17)`; reviewer-v2. All 13,546 equality states close by 6,709 hand/accounting arguments and 6,837 integer envelopes. The final heavy Farkas certificate is replaced by a short hand proof. External review OPEN. |
 | `n=35` | Complete candidate: `e(G)<=306`, equality exactly `K(17,18)`; reviewer-v1. All 485 new states close by 228 hand/accounting arguments and 257 integer envelopes. External review OPEN. |
 | Balanced-degree / fixed-a structural results | Candidate all-order balanced-degree reduction; infinite `a=14` high-b family; tail bounds through `a=23`, including joint clipping and an adaptive six-level boundary; proof-critical finite arithmetic where stated; external review open |
+| Heavy-load / routing family | Candidate all-threshold hand inequalities, explicit incoming-degree penalties, and new demand-only tail bounds. Low-demand consequence: `s_i<=2, t>0, b-a<=5 => 9t+4(b-a)<=a`. Reviewer-v1; external review OPEN. |
 | General maximum-degree result | Candidate theorem: `n >= 6` and `Delta(G) >= (7/12)n` imply `e(G) < floor(n^2/4)`; complete candidate hand argument with internal exact audits green; external review and novelty assessment open |
 | RX-Hall / monotone-potential programme | Active finite-to-symbolic programme. It is **not** an unrestricted theorem. It supplies general structural experiments and proof-critical exact finite exclusions in N32, N33, N34 and N35. Floating infeasibility is not accepted as a proof event. |
 
 The unrestricted Murty–Simon conjecture remains unsolved by this project.
+
+## General heavy-load and routing: the new structural result
+
+The [reviewer-v1 family](releases/general-heavy-load-reviewer-v1/README.md)
+extends the N34 hand argument to every heavy threshold h. For heavy label
+count k_h, high-residual source count z_h and residual budget r, it gives
+`4h k_h<=r+4h z_h` when incoming degree is at most 3h. The full version retains
+weighted demands and an explicit penalty for degrees above 3h. Its hand
+proof also gives exact source-capacity formulas and new tail bounds.
+
+For positive surplus and `b-a<=2h+1`, the penalty can be eliminated from a
+demand-only inequality. In particular, `s_i<=2` and `b-a<=5` force
+`9t+4(b-a)<=a`, without any cap on residual degrees. This is a candidate
+infinite-family restriction under stated profile hypotheses.
+
+The complete study supplies alternative hand exclusions for 595 states that
+previously required envelopes, and rejects 45 layer/profile instances before
+residual enumeration. It also preserves a clear limit: 8,280 states survive
+the searched family, and wider cutoffs and individual capacity refinements
+add no exclusions on that domain. The [audit and full evidence](project/research/general_n/2026-09-12-heavy-load-family-v1/README.md)
+include successful witnesses, all survivors, failed local extensions and exact
+replay. Existing fixed-order theorem statements and reviewer ledgers remain
+unchanged; external review and novelty assessment are OPEN.
 
 ## 12 September follow-through: N34 hand simplification and complete N35 candidate
 
@@ -473,6 +499,18 @@ The earlier `t+1` scalar-template pattern observed in the N29/N30 laboratories r
 
 The RX-Hall programme therefore has both exploratory and fixed-order proof roles, but still does **not** constitute an unrestricted Murty–Simon theorem. Any general promotion depends first on independent review of the universal graph-to-incidence bridge and the monotone potential-certificate lemmas.
 
+### General heavy-load and routing inequalities
+
+The [new candidate family](releases/general-heavy-load-reviewer-v1/README.md)
+combines endpoint loads, actual heavy selected degree and supplement routing.
+It supplies all-threshold inequalities with explicit incoming-degree penalties,
+exact elementary source maxima, and demand-only tail refinements. Its measured
+reach and failed extensions are recorded in the structural-result section above.
+
+The 595 alternative envelope exclusions do not silently change the canonical
+N34/N35 ledgers. The next target is a joint destination/incoming-degree
+constraint that addresses the preserved survivors.
+
 ### Canonical bridge and threshold-tail family
 
 The canonical selected/residual bridge is preserved at [`project/research/general_n/2026-09-11-canonical-bridge-v1/CANONICAL_BRIDGE.md`](project/research/general_n/2026-09-11-canonical-bridge-v1/CANONICAL_BRIDGE.md). Its key consequences include the exact ledger, demand inequality, residual activity, selected-incidence forcing, endpoint load, source/supplement constraints and threshold capacity.
@@ -498,6 +536,7 @@ Historical packages remain preserved. N31, N32, N33, N34 and N35 are currently s
 | n=34 | [Reviewer-v2 source package](releases/n34-reviewer-v2/README.md) | [Normalization audit and hand proof](project/reviews/n34/2026-09-12-heavy-independent-v1/README.md); [complete equality replay](project/reviews/n34/2026-09-12-heavy-independent-v1/v2_verification.json) |
 | n=35 | [Reviewer-v1 source package](releases/n35-reviewer-v1/README.md) | [Internal audit](project/research/n35/2026-09-12-candidate-v1/AUDIT.md); [complete exact replay](project/research/n35/2026-09-12-candidate-v1/verification.json) |
 | **General 7/12** | [Reviewer manuscript](releases/general-7-12-reviewer-v1/General_7_12_Reviewer_Manuscript_v1.pdf) | [Verification companion](releases/general-7-12-reviewer-v1/General_7_12_Verification_Companion_v1.pdf) |
+| Heavy-load / routing family | [Reviewer-v1 source package](releases/general-heavy-load-reviewer-v1/README.md) | [Hand proof](project/research/general_n/2026-09-12-heavy-load-family-v1/HEAVY_LOAD_FAMILY.md); [internal audit and exact applications](project/research/general_n/2026-09-12-heavy-load-family-v1/README.md) |
 | General step-back | [Balanced-degree / fixed-a source package](releases/general-stepback-v1/README.md) | [Internal audit](project/reviews/general-theory/2026-09-12-stepback-v1/HOSTILE_AUDIT.md) |
 | Joint clipping / historical N34 upper layers | [Reviewer-v1 source package](releases/general-joint-clipping-reviewer-v1/README.md) | [Focused foundations audit](project/reviews/general-theory/2026-09-12-joint-followthrough-v1/FOUNDATIONS_AUDIT.md); [N34 exact verification](project/research/n34/2026-09-12-frontier-v1/upper_layer_verification.json) |
 | General 293/500 | [Reviewer manuscript](releases/general-293-500-reviewer-v1/General_293_500_Reviewer_Manuscript_v1.pdf) | [Verification companion](releases/general-293-500-reviewer-v1/General_293_500_Verification_Companion_v1.pdf) |

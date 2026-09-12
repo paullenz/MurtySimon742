@@ -1,0 +1,26 @@
+{
+  "status": "PASS",
+  "ranges": {
+    "h": [
+      1,
+      12
+    ],
+    "T": "h..6h",
+    "P": "0..5h",
+    "H": "0..T+1"
+  },
+  "direct_source_options": 15201197,
+  "exact_capped_maxima": 589457,
+  "exact_uniform_maxima": 17042,
+  "label_checks": 2556945,
+  "old_N34_p5_counterexample": {
+    "h": 2,
+    "T": 6,
+    "H": 2,
+    "p": 5,
+    "cost": 14,
+    "claimed_cap": 12
+  },
+  "scope": "Local-domain counterexamples are not graphs or counterexamples to Murty-Simon.",
+  "external_review": "OPEN"
+}

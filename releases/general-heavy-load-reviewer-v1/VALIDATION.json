@@ -1,0 +1,42 @@
+{
+  "status": "PASS",
+  "date": "2026-09-12",
+  "python": "3.12.14",
+  "replay": [
+    {
+      "command": "python project/research/general_n/2026-09-12-heavy-load-family-v1/check_local.py",
+      "returncode": 0,
+      "stdout_sha256": "49d914fd590a3f9980ab8b7dd98cd4108465490bc9942db7dd718d8840af7655"
+    },
+    {
+      "command": "python project/research/general_n/2026-09-12-heavy-load-family-v1/probe_frontiers.py",
+      "returncode": 0,
+      "stdout_sha256": "8ac702322ff6c1c61920352e8152590fe1fe8b0550795ae3caccd3832e41350e"
+    },
+    {
+      "command": "python project/research/general_n/2026-09-12-heavy-load-family-v1/probe_profiles.py",
+      "returncode": 0,
+      "stdout_sha256": "87cad0e575d3d61ca9cbf4fa17c72c559b2d987ee6b56c47820c2e91764e53b3"
+    },
+    {
+      "command": "python project/research/general_n/2026-09-12-heavy-load-family-v1/verify_applications.py",
+      "returncode": 0,
+      "stdout_sha256": "47c9aa18b09e96322e137377646b220e1d7d1588ef58f8bd7555f45d09c7e4aa"
+    }
+  ],
+  "reproduced_summary_files": [
+    "local_verification.json",
+    "frontier_summary.json",
+    "profile_summary.json",
+    "application_verification.json"
+  ],
+  "all_three_raw_study_streams_reproduced_exactly": true,
+  "verification_from_encoded_evidence_without_raw_streams": true,
+  "navigation": {
+    "changed_markdown_files": 7,
+    "local_links_checked": 237,
+    "status": "PASS"
+  },
+  "scope": "New general family and application study; existing fixed-order proofs and ledgers are unchanged.",
+  "external_review": "OPEN"
+}

@@ -1,0 +1,39 @@
+PROGRESS 1000 0.72 {'n34-m289': {'four_h': 386, 'existing_positive_degree_mass': 356, 'survives_searched_family': 258}}
+PROGRESS 2000 1.13 {'n34-m289': {'four_h': 597, 'existing_positive_degree_mass': 713, 'survives_searched_family': 690}}
+PROGRESS 3000 1.73 {'n34-m289': {'four_h': 599, 'existing_positive_degree_mass': 1067, 'survives_searched_family': 1334}}
+PROGRESS 4000 2.26 {'n34-m289': {'four_h': 599, 'existing_positive_degree_mass': 1521, 'survives_searched_family': 1880}}
+PROGRESS 5000 2.87 {'n34-m289': {'four_h': 694, 'existing_positive_degree_mass': 1867, 'survives_searched_family': 2439}}
+PROGRESS 6000 3.61 {'n34-m289': {'four_h': 728, 'existing_positive_degree_mass': 2166, 'survives_searched_family': 3106}}
+PROGRESS 7000 4.29 {'n34-m289': {'four_h': 790, 'existing_positive_degree_mass': 2521, 'survives_searched_family': 3689}}
+PROGRESS 8000 5.06 {'n34-m289': {'four_h': 790, 'existing_positive_degree_mass': 2852, 'survives_searched_family': 4358}}
+PROGRESS 9000 5.85 {'n34-m289': {'four_h': 790, 'existing_positive_degree_mass': 3204, 'survives_searched_family': 5006}}
+PROGRESS 10000 6.6 {'n34-m289': {'four_h': 790, 'existing_positive_degree_mass': 3589, 'survives_searched_family': 5621}}
+PROGRESS 11000 7.32 {'n34-m289': {'four_h': 790, 'existing_positive_degree_mass': 4001, 'survives_searched_family': 6209}}
+PROGRESS 12000 8.13 {'n34-m289': {'four_h': 790, 'existing_positive_degree_mass': 4381, 'survives_searched_family': 6829}}
+PROGRESS 13000 9.18 {'n34-m289': {'four_h': 790, 'existing_positive_degree_mass': 4646, 'survives_searched_family': 7564}}
+PROGRESS 14000 10.11 {'n34-m289': {'four_h': 790, 'existing_positive_degree_mass': 4768, 'survives_searched_family': 7988}, 'n35-m307': {'four_h': 6, 'survives_searched_family': 11, 'existing_positive_degree_mass': 2}, 'n35-m306': {'four_h': 75, 'survives_searched_family': 258, 'existing_positive_degree_mass': 102}}
+{
+  "status": "COMPLETE_PARAMETER_SCAN",
+  "parameters": "all h=1..max(s); T=4h, then integer T=h..4a",
+  "counts": {
+    "n34-m289": {
+      "four_h": 790,
+      "existing_positive_degree_mass": 4768,
+      "survives_searched_family": 7988
+    },
+    "n35-m307": {
+      "four_h": 6,
+      "survives_searched_family": 11,
+      "existing_positive_degree_mass": 2
+    },
+    "n35-m306": {
+      "four_h": 75,
+      "survives_searched_family": 281,
+      "existing_positive_degree_mass": 110
+    }
+  },
+  "previously_certified_states_now_excluded_by_family": 595,
+  "remaining_states": 8280,
+  "scope": "Survival is only within the stated parameter search; these are necessary-condition states, not graphs.",
+  "external_review": "OPEN"
+}
