@@ -1,5 +1,7 @@
 # N34 candidate upper bound: reviewer v1
 
+> Historical bound-only checkpoint. The [current complete N34 reviewer-v1 package](../n34-reviewer-v1/README.md) establishes the candidate equality classification as well. The original hashes in this package's manifest describe [commit efcccf7](https://github.com/paullenz/MurtySimon742/commit/efcccf7f2a4b103f7b7ca3d5201dcb5485ce5fe0), before later navigation updates.
+
 12 September 2026. **Candidate e(G)<=289 for 34-vertex diameter-two
 edge-critical graphs. Equality classification and external review OPEN.**
 

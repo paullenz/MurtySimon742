@@ -1,0 +1,20 @@
+{
+  "schema": "n34-equality-discovery-stage-v1",
+  "stage": "fixed",
+  "frontier": {
+    "profiles": 1296,
+    "states": 13546,
+    "positive_demand_states": 12926,
+    "zero_demand_states": 620
+  },
+  "inputs": 13546,
+  "processed": 13546,
+  "counts": {
+    "tight_subset_threshold": 1510,
+    "unresolved": 3925,
+    "positive_degree_mass": 4768,
+    "fixed13": 784,
+    "fixed9": 2559
+  },
+  "discovery_complete": true
+}

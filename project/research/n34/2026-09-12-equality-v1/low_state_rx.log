@@ -1,0 +1,2 @@
+MODEL 12084 12344 485
+{'state_id': 1, 's': (1, 1, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2), 'rho': (1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 2, 2, 2, 2, 2, 2, 2, 2), 'solver_status': 0, 'variables': 12084, 'inequalities': 12344, 'equalities': 485, 'interpretation': 'Numerical feasible relaxation only; not a graph.'}

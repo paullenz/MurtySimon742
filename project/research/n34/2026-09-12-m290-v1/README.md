@@ -1,5 +1,7 @@
 # N34: candidate bound 289; equality classification open
 
+> Historical 290-edge checkpoint and current upper-bound dependency. The [complete N34 package](../2026-09-12-equality-v1/README.md) now closes the equality branch and gives equality exactly K(17,17). The open-equality wording below records this earlier checkpoint.
+
 12 September 2026. Research direction: Paul Lenz. Development, computation
 and internal checking: ChatGPT/Geeps.
 

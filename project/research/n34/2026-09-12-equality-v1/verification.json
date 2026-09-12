@@ -1,0 +1,39 @@
+{
+  "schema": "n34-equality-exact-verification-v1",
+  "status": "PASS_COMPLETE",
+  "frontier": {
+    "profiles": 1296,
+    "states": 13546,
+    "positive_demand_states": 12926,
+    "zero_demand_states": 620
+  },
+  "exclusions": {
+    "tight_subset_threshold": 1510,
+    "positive_degree_mass": 4768,
+    "fixed13": 784,
+    "fixed9": 2559,
+    "adaptive": 3494,
+    "source_capped_threshold": 430,
+    "heavy_split_farkas": 1
+  },
+  "zero_demand_exclusions": {
+    "tight_subset_threshold": 159,
+    "fixed13": 41,
+    "fixed9": 80,
+    "adaptive": 316,
+    "source_capped_threshold": 24
+  },
+  "envelope_local_integer_checks": 3018781,
+  "worst_envelope_gap_numerators": {
+    "fixed13": -9760,
+    "fixed9": -9874,
+    "adaptive": -9355
+  },
+  "heavy_split_verification": {
+    "integer_columns_checked": 12570,
+    "rhs": -998530
+  },
+  "covered_states": 13546,
+  "unresolved_states": [],
+  "external_review": "OPEN"
+}

@@ -1,0 +1,22 @@
+START adaptive inputs 3925 resuming 0
+PROGRESS 200 {'unresolved': 1, 'adaptive': 198, 'source_capped_threshold': 1} seconds 26.18
+PROGRESS 400 {'unresolved': 1, 'adaptive': 398, 'source_capped_threshold': 1} seconds 54.99
+PROGRESS 600 {'unresolved': 1, 'adaptive': 598, 'source_capped_threshold': 1} seconds 82.52
+PROGRESS 800 {'unresolved': 1, 'adaptive': 787, 'source_capped_threshold': 12} seconds 108.74
+PROGRESS 1000 {'unresolved': 1, 'adaptive': 981, 'source_capped_threshold': 18} seconds 140.39
+PROGRESS 1200 {'unresolved': 1, 'adaptive': 1172, 'source_capped_threshold': 27} seconds 170.52
+PROGRESS 1400 {'unresolved': 1, 'adaptive': 1369, 'source_capped_threshold': 30} seconds 200.07
+PROGRESS 1600 {'unresolved': 1, 'adaptive': 1563, 'source_capped_threshold': 36} seconds 227.43
+PROGRESS 1800 {'unresolved': 1, 'adaptive': 1732, 'source_capped_threshold': 67} seconds 251.37
+PROGRESS 2000 {'unresolved': 1, 'adaptive': 1932, 'source_capped_threshold': 67} seconds 279.03
+PROGRESS 2200 {'unresolved': 1, 'adaptive': 2124, 'source_capped_threshold': 75} seconds 306.55
+PROGRESS 2400 {'unresolved': 1, 'adaptive': 2269, 'source_capped_threshold': 130} seconds 326.99
+PROGRESS 2600 {'unresolved': 1, 'adaptive': 2459, 'source_capped_threshold': 140} seconds 353.17
+PROGRESS 2800 {'unresolved': 1, 'adaptive': 2636, 'source_capped_threshold': 163} seconds 375.26
+PROGRESS 3000 {'unresolved': 1, 'adaptive': 2825, 'source_capped_threshold': 174} seconds 395.93
+PROGRESS 3200 {'unresolved': 1, 'adaptive': 2948, 'source_capped_threshold': 251} seconds 413.48
+PROGRESS 3400 {'unresolved': 1, 'adaptive': 3135, 'source_capped_threshold': 264} seconds 441.39
+PROGRESS 3600 {'unresolved': 1, 'adaptive': 3280, 'source_capped_threshold': 319} seconds 462.6
+PROGRESS 3800 {'unresolved': 1, 'adaptive': 3410, 'source_capped_threshold': 389} seconds 479.44
+PROGRESS 3925 {'unresolved': 1, 'adaptive': 3494, 'source_capped_threshold': 430} seconds 488.18
+COMPLETE {"schema": "n34-equality-discovery-stage-v1", "stage": "adaptive", "frontier": {"profiles": 1296, "states": 13546, "positive_demand_states": 12926, "zero_demand_states": 620}, "inputs": 3925, "processed": 3925, "counts": {"unresolved": 1, "adaptive": 3494, "source_capped_threshold": 430}, "discovery_complete": true}

@@ -1,0 +1,24 @@
+{
+  "schema": "n34-equality-certificate-storage-v1",
+  "encoding": "base64(gzip(JSONL)); gzip mtime=0",
+  "files": {
+    "fixed": {
+      "original_file": "fixed.jsonl",
+      "stored_file": "fixed.jsonl.gz.b64",
+      "original_bytes": 4058094,
+      "original_sha256": "91c00600dd97c4e5577c071eefd8f7423440d9f89acecf4ed49f7de6646b053b",
+      "stored_bytes": 365187,
+      "stored_sha256": "e87d846f3022e0514b468a8f228b8a2cd729271a4153e1da39ee5e32936ba910",
+      "records": 13546
+    },
+    "adaptive": {
+      "original_file": "adaptive.jsonl",
+      "stored_file": "adaptive.jsonl.gz.b64",
+      "original_bytes": 5886992,
+      "original_sha256": "28ebf4fd8de79a5b9a20ca2208e33c58b2280c38890d294796e76dedbb2a2974",
+      "stored_bytes": 901160,
+      "stored_sha256": "922df2dd97af585c5dbb63f9962eb12863aa2ae76464911ebed4d2ec2a921378",
+      "records": 3925
+    }
+  }
+}
