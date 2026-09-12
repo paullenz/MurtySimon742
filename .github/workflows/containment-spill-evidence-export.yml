@@ -1,0 +1,32 @@
+name: containment-spill-evidence-export
+
+on:
+  push:
+    paths:
+      - '.github/workflows/containment-spill-evidence-export.yml'
+
+permissions:
+  contents: read
+
+jobs:
+  export:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Recover verified evidence streams
+        run: |
+          python - <<'PY'
+          import sys
+          from pathlib import Path
+          cat=Path('project/research/general_n/2026-09-12-compatible-routing-catalogue-v1')
+          sys.path.insert(0,str(cat))
+          from evidence_io import read_bytes
+          out=Path('/tmp/spill-evidence'); out.mkdir()
+          for name in ['survivors.json','pool_inputs.jsonl']:
+              (out/name).write_bytes(read_bytes(name))
+              print(name,(out/name).stat().st_size)
+          PY
+      - uses: actions/upload-artifact@v4
+        with:
+          name: containment-spill-evidence
+          path: /tmp/spill-evidence
