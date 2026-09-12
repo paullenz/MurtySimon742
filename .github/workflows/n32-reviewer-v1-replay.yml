@@ -1,0 +1,45 @@
+name: N32 reviewer-v1 exact replay
+
+on:
+  push:
+    branches: [ main ]
+    paths:
+      - '.github/workflows/n32-reviewer-v1-replay.yml'
+      - 'project/research/n32/2026-09-12-equality-v1/**'
+      - 'project/research/n32/2026-09-12-t2-frontier-v1/**'
+      - 'project/reviews/n32/2026-09-12-reviewer-v1/**'
+      - 'project/research/general_n/2026-09-09-rx-hall-v1/rx_hall_scan.py'
+      - 'project/research/general_n/2026-09-09-rx-hall-v1/rx_hall_exact.py'
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  replay:
+    runs-on: ubuntu-latest
+    timeout-minutes: 60
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - name: Install exact-replay dependencies
+        run: python -m pip install --upgrade pip numpy scipy
+      - name: Run N32 equality replay
+        env:
+          N32_SHARDS: '32'
+        run: bash project/research/n32/2026-09-12-equality-v1/run_replay.sh "$RUNNER_TEMP/n32-replay"
+      - name: Show aggregate ledger
+        run: cat "$RUNNER_TEMP/n32-replay/N32_T1_AGGREGATE.json"
+      - name: Upload replay evidence
+        uses: actions/upload-artifact@v4
+        with:
+          name: n32-reviewer-v1-exact-replay
+          path: |
+            ${{ runner.temp }}/n32-replay/N32_T1_FRONTIER.csv
+            ${{ runner.temp }}/n32-replay/N32_T1_LIFTED_EXACT.json
+            ${{ runner.temp }}/n32-replay/N32_T1_AGGREGATE.json
+            ${{ runner.temp }}/n32-replay/rx/*.json
+            ${{ runner.temp }}/n32-replay/zero/*.json
+          if-no-files-found: error
