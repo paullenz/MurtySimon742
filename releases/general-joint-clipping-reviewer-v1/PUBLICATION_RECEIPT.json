@@ -1,45 +1,52 @@
 {
-  "schema": "joint-clipping-n34-review-v1",
-  "date": "2026-09-12",
+  "status": "RESEARCH_CHECKPOINT_PUBLISHED_AND_VERIFIED",
   "repository": "paullenz/MurtySimon742",
-  "baseline_commit": "8f55e0c763baff8de27897ea86cfca4bd45cb00b",
-  "status": "candidate; internal exact verification; independent review OPEN",
-  "scope": {
-    "tail_labels": [
-      17,
-      18,
-      19,
-      20,
-      21,
-      22,
-      23
-    ],
-    "tail_Q_bounds": [
-      32,
-      35,
-      39,
-      42,
-      46,
-      49,
-      54
-    ],
-    "n34_partial_upper_bound": 290,
-    "n34_open_edge_counts": [
-      289,
-      290
-    ],
-    "no_complete_order_above": 33
-  },
-  "environment": {
-    "python": "3.12.14",
-    "numpy": "2.3.5",
-    "scipy": "1.17.0",
-    "compiler": "g++ (Ubuntu 13.3.0-6ubuntu2~24.04) 13.3.0"
-  },
-  "artifacts": {
+  "branch": "main",
+  "parent": "8f55e0c763baff8de27897ea86cfca4bd45cb00b",
+  "commit": "1c9c4ba31775264852ad37cd76ad6818104cc567",
+  "approved_local_commit": "9248798776e4bcf2fed9e928d8fe381936d80a17",
+  "verified_tree": "ad7b34bf84c9a4e8afafa17bf6191c0b4fdb5424",
+  "approved_and_published_trees_identical": true,
+  "expected_changed_paths": [
+    "README.md",
+    "START_HERE_FOR_REVIEWERS.md",
+    "project/research/general_n/2026-09-09-rx-hall-v1/POTENTIAL_CERTIFICATE_LEMMA.md",
+    "project/research/general_n/2026-09-12-joint-clipping-v1/JOINT_CLIPPING.md",
+    "project/research/general_n/2026-09-12-joint-clipping-v1/TIGHT_THRESHOLD_LEMMA.md",
+    "project/research/general_n/2026-09-12-joint-clipping-v1/adaptive_cap_23.json",
+    "project/research/general_n/2026-09-12-joint-clipping-v1/independent_verification.json",
+    "project/research/general_n/2026-09-12-joint-clipping-v1/joint_clipping.py",
+    "project/research/general_n/2026-09-12-joint-clipping-v1/results.json",
+    "project/research/general_n/2026-09-12-joint-clipping-v1/run.log",
+    "project/research/general_n/2026-09-12-joint-clipping-v1/verification.log",
+    "project/research/general_n/2026-09-12-joint-clipping-v1/verify_joint_clipping.py",
+    "project/research/general_n/2026-09-12-sixteen-label-tail-v1/SIXTEEN_LABEL_TAIL.md",
+    "project/research/general_n/2026-09-12-sixteen-label-tail-v1/check_sixteen_label_tail.py",
+    "project/research/n34/2026-09-12-frontier-v1/FRONTIER.csv",
+    "project/research/n34/2026-09-12-frontier-v1/README.md",
+    "project/research/n34/2026-09-12-frontier-v1/certification.log",
+    "project/research/n34/2026-09-12-frontier-v1/certify_upper_layers.py",
+    "project/research/n34/2026-09-12-frontier-v1/check_frontier.py",
+    "project/research/n34/2026-09-12-frontier-v1/enumerate_frontier.cpp",
+    "project/research/n34/2026-09-12-frontier-v1/enumeration.log",
+    "project/research/n34/2026-09-12-frontier-v1/frontier_check.log",
+    "project/research/n34/2026-09-12-frontier-v1/frontier_summary.json",
+    "project/research/n34/2026-09-12-frontier-v1/states_t3.json",
+    "project/research/n34/2026-09-12-frontier-v1/states_t4.json",
+    "project/research/n34/2026-09-12-frontier-v1/upper_layer_certificates.json",
+    "project/research/n34/2026-09-12-frontier-v1/upper_layer_verification.json",
+    "project/research/n34/2026-09-12-frontier-v1/upper_layer_verification.log",
+    "project/research/n34/2026-09-12-frontier-v1/verify_upper_layers.py",
+    "project/reviews/general-theory/2026-09-12-joint-followthrough-v1/FOUNDATIONS_AUDIT.md",
+    "releases/REVIEW_READY_INDEX.md",
+    "releases/general-joint-clipping-reviewer-v1/MANIFEST.json",
+    "releases/general-joint-clipping-reviewer-v1/README.md",
+    "releases/n31-reviewer-v1/README.md"
+  ],
+  "published_artifact_hashes": {
     "README.md": {
-      "sha256": "3bec03ccaf9c4512ff2be89d88be6bd7b6989ab9458768ee4d25e2ed1094ae50",
-      "bytes": 31042
+      "sha256": "608e638ca421f6c85a6e788777f22860258a4f2d6cc108a3f63258751dc03267",
+      "bytes": 29969
     },
     "START_HERE_FOR_REVIEWERS.md": {
       "sha256": "54196e89636079bd575cd0f0e76a8fcf61a7d0aeeff80b95dcd71912e22524a2",
@@ -162,28 +169,37 @@
       "bytes": 8759
     },
     "releases/general-joint-clipping-reviewer-v1/README.md": {
-      "sha256": "872f89679dd6b0dbf79a0762a367884b4f616d5f1c7d4fe05a7aaba05fec54ed",
-      "bytes": 2516
+      "sha256": "62a125eb50f7cf9cfea0ef59d787423c04ac3d3d7465bfa63ae0f117896bf81e",
+      "bytes": 2362
     },
     "releases/n31-reviewer-v1/README.md": {
       "sha256": "5c57b2280e0f3d74f7c4abbd132bb69233041801735f706dd5c859b6497dda32",
       "bytes": 950
     }
   },
-  "replay_commands": [
-    "python project/research/general_n/2026-09-12-joint-clipping-v1/verify_joint_clipping.py",
-    "python project/research/n34/2026-09-12-frontier-v1/check_frontier.py",
-    "python project/research/n34/2026-09-12-frontier-v1/verify_upper_layers.py"
+  "key_files_read_back_via_GitHub": [
+    "README.md",
+    "releases/general-joint-clipping-reviewer-v1/MANIFEST.json",
+    "project/research/n34/2026-09-12-frontier-v1/upper_layer_verification.json"
   ],
-  "frontier_regeneration": [
-    "g++ -O3 -std=c++17 project/research/n34/2026-09-12-frontier-v1/enumerate_frontier.cpp -o /tmp/n34_frontier",
-    "/tmp/n34_frontier /tmp/n34_frontier.csv",
-    "cmp /tmp/n34_frontier.csv project/research/n34/2026-09-12-frontier-v1/FRONTIER.csv"
-  ],
-  "publication": {
-    "approved_local_commit": "9248798776e4bcf2fed9e928d8fe381936d80a17",
-    "published_research_commit": "1c9c4ba31775264852ad37cd76ad6818104cc567",
-    "documentation_update_parent": "1c9c4ba31775264852ad37cd76ad6818104cc567",
-    "receipt": "PUBLICATION_RECEIPT.json"
+  "checks": {
+    "all_published_artifact_hashes_match": true,
+    "committed_paths_match_expected": true,
+    "no_unintended_file_changes": true,
+    "remote_main_verified_at_research_commit": true,
+    "clean_replay_previously_passed": true,
+    "reviewer_markdown_files_checked": 28,
+    "local_links_checked": 276,
+    "missing_links": 0
+  },
+  "documentation_followup": {
+    "scope": [
+      "README.md",
+      "releases/general-joint-clipping-reviewer-v1/README.md",
+      "releases/general-joint-clipping-reviewer-v1/MANIFEST.json",
+      "releases/general-joint-clipping-reviewer-v1/PUBLICATION_RECEIPT.json"
+    ],
+    "parent": "1c9c4ba31775264852ad37cd76ad6818104cc567",
+    "changes": "Clarify N34 partial status across README sections, include N34 potential milestones, render the label-bound mapping as a table, and link this receipt. Proofs and certificates are unchanged."
   }
 }

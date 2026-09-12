@@ -39,6 +39,8 @@ N34 demand enumeration additionally requires a C++17 compiler. SciPy is
 needed only to reproduce numerical discovery of envelope coefficients.
 
 The exact scope is recorded in [the artifact manifest](MANIFEST.json).
+The [publication receipt](PUBLICATION_RECEIPT.json) records the approved
+research checkpoint, its verified GitHub publication and the README/link checks.
 Separate implementations and this internal audit do not constitute external
 independent mathematical validation. No proof beyond the stated fixed-a
 ranges or complete fixed-order result above n=33 is claimed.

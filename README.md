@@ -19,7 +19,7 @@ Candidate proofs and reproducible research. **Updated 12 September 2026. Indepen
 | `n=34` partial | Candidate upper bound `e(G)<=290`; the conjectured bound is 289. The 291-edge layer is closed by 109 exact certificates + one hand contradiction; the 292-edge layer by two exact certificates. The 289- and 290-edge `Delta=18` layers remain OPEN. |
 | Balanced-degree / fixed-a structural results | Candidate all-order balanced-degree reduction; infinite `a=14` high-b family; tail bounds through `a=23`, including joint clipping and an adaptive six-level boundary; proof-critical finite arithmetic where stated; external review open |
 | General maximum-degree result | Candidate theorem: `n >= 6` and `Delta(G) >= (7/12)n` imply `e(G) < floor(n^2/4)`; complete candidate hand argument with internal exact audits green; external review and novelty assessment open |
-| RX-Hall / monotone-potential programme | Active finite-to-symbolic programme. It is **not** an unrestricted theorem. It now has two roles: general structural experimentation, and compact proof-critical exact finite exclusion inside the N32 and N33 fixed-order packages. Floating infeasibility is not accepted as a proof event. |
+| RX-Hall / monotone-potential programme | Active finite-to-symbolic programme. It is **not** an unrestricted theorem. It supplies general structural experiments and proof-critical exact finite exclusions in N32, N33 and the partial N34 route. Floating infeasibility is not accepted as a proof event. |
 
 The unrestricted Murty–Simon conjecture remains unsolved by this project.
 
@@ -33,12 +33,12 @@ counterexample with `n>=7` to `ceil(n/2)+1 <= Delta < 7n/12`, conditional on
 the current candidate arguments.
 
 The [joint-clipping reviewer package](releases/general-joint-clipping-reviewer-v1/README.md)
-now extends the scalar tail bounds to `a=17,...,23`:
+now extends the scalar tail bounds to `a=17,...,23`, where `a=n-1-Delta`
+is the number of labels in the canonical bridge:
 
-```text
-a:     17  18  19  20  21  22  23
-Qmax:  32  35  39  42  46  49  54
-```
+| a | 17 | 18 | 19 | 20 | 21 | 22 | 23 |
+|---|---:|---:|---:|---:|---:|---:|---:|
+| Maximum Q | 32 | 35 | 39 | 42 | 46 | 49 | 54 |
 
 The new recurrence keeps lower tails compatible. Clipping to maximum demand
 five works through a=22; at a=23, retaining six gives the last bound. All 46
@@ -291,6 +291,21 @@ The high-degree range and 258-edge endpoint are hand-closed. The 257-edge level 
 
 The new proof surface is smaller than N32: the `Delta=17` equality branch is fully hand-rigid, and the sole new `(a,b,t)=(14,18,2)` frontier has only 29 residual states. Twenty-five are excluded by the shifted nine-rectangle potential with exact integer acceptance and four by explicit hand threshold arguments. No full RX/Hall Farkas stage is proof-critical. Independent review remains open.
 
+### n=34: partial result
+
+**Partial candidate:** `e(G)<=290`; the conjectured bound is 289.
+
+[Partial proof and remaining frontier](project/research/n34/2026-09-12-frontier-v1/README.md)
+· [reviewer source package](releases/general-joint-clipping-reviewer-v1/README.md)
+· [solver-free certificate verifier](project/research/n34/2026-09-12-frontier-v1/verify_upper_layers.py).
+
+All target-range degree branches except `Delta=18` are closed. At that degree,
+the 292-edge layer has two exact certificates and the 291-edge layer has 109
+exact certificates plus one hand contradiction. The 290-edge layer remains
+open with 1,614 conservative residual states; the 289-edge equality layer
+remains open with 13,546. A complete N34 result requires closing both layers.
+Independent specialist review remains open.
+
 ## General structural programme
 
 ### Strongest current maximum-degree candidate: 7/12
@@ -334,7 +349,9 @@ Important exact finite milestones include:
 - `n=29,t=3`: a simpler fixed potential requiring exactly four scalar templates;
 - `n=32,t=2`: the proof-critical nine-rectangle common potential excluding all 154 positive-demand 257-edge states;
 - `n=32,t=1`: the proof-critical two-stage exact finite equality replay;
-- `n=33,t=2`: the shifted nine-rectangle potential excluding 25/29 equality states, with the four failures resolved by hand.
+- `n=33,t=2`: the shifted nine-rectangle potential excluding 25/29 equality states, with the four failures resolved by hand;
+- `n=34,t=4`: two exact certificates exclude the 292-edge layer;
+- `n=34,t=3`: 109 exact certificates and the tight-threshold hand lemma exclude all 110 states at 291 edges.
 
 The earlier `t+1` scalar-template pattern observed in the N29/N30 laboratories remains a **falsification target only**. N32/N33 should not be retrofitted into that pattern without a new parameterized theorem.
 
