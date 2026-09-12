@@ -1,6 +1,6 @@
 # Constraint-respecting cross-neighbourhood pilot v1
 
-13 September 2026. **Exploratory continuation, not a theorem package.** External mathematical review remains OPEN. No fixed-order ledger, general theorem, 7/12 threshold or whole-state frontier count is changed by this checkpoint.
+13 September 2026. **Exploratory continuation plus candidate general hand lemmas.** External mathematical review and novelty assessment remain OPEN. No fixed-order ledger, 7/12 threshold or whole-state frontier count is changed by this checkpoint.
 
 ## Why this continuation exists
 
@@ -56,28 +56,47 @@ A soft compatibility search produced the preserved [partial pattern](BEST_PARTIA
 
 The number 19 is **not proved optimal**. Its value is diagnostic: compatibility responds materially to the selected-incidence geometry. A short local search moved from patterns with only a handful of compatible obligations to this 19/37 pattern, so the obstruction is not captured by the already-known scalar source sizes alone.
 
+## General theory extracted from the failures
+
+The [co-singleton trace and receiver-containment spill note](CONTAINMENT_SPILL.md) extracts two candidate hand lemmas from exact destination compatibility.
+
+For each source `u`, the actual exceptions of its selected labels force the cross-neighbourhood traces on `S_u` to contain every co-singleton `S_u-{i}`. Consequently every `k`-subset `T` of `S_u` has at least `q_u-k+1` common B-neighbours. Double counting gives the moment hierarchy
+
+```text
+sum_(|T|=k) max({q_u-k+1:T subset S_u} union {0})
+    <= sum_v binom(q_v+rho_v,k).
+```
+
+The `k=1` case is only endpoint-load information, while `k>=2` retains higher-order overlap. A five-label/seven-source abstract example passes every individual endpoint load but violates the pair moment (`16<18`), so the higher-order trace is genuinely additional information.
+
+More importantly for projection, the exact receiver condition `S_v subset N_u` yields a **receiver-containment spill inequality** depending only on `(a,b,s,rho,q)`. It compares a lower bound on selected mass forced outside `N_u` with the maximum outside mass that can be packed into sources not needed as contained compatible receivers. For each source it also retains the scalar receiver requirements `q_v+rho_v>=q_u-1`, `q_v<=q_u+rho_u` and positive incoming capacity.
+
+A standard-library deterministic reconnaissance check of 2,000 exact-demand selected patterns per frozen state finds violations in **173/2,000** patterns for N34 m289 state 13537 (183 source-level violations) and zero in the other five samples. This does not exclude state 13537; it demonstrates that the new projected inequality can remove selected-degree configurations before residual placement. See [`check_containment_spill.py`](check_containment_spill.py) and [`CONTAINMENT_SPILL_CHECK.json`](CONTAINMENT_SPILL_CHECK.json).
+
 ## Interpretation
 
-This experiment improves the diagnosis of the next difficulty:
+The work sharpens the diagnosis in two directions:
 
 1. The previous deterministic residual placement was not the only problem. Many substantially different selected patterns also fail to admit residual sets giving every selected incidence an exact compatible destination.
-2. On the other hand, selected-pattern changes can more than double the number of obligations with compatible destinations. This argues against treating the negative samples as evidence of a simple universal scalar contradiction.
-3. The useful next object is therefore the **overlap geometry** of selected sets and cross-neighbourhoods: an eligible pair `u->v` requires the near-containment `|S_u intersect N_v|=q_u-1` together with `S_v subset N_u`.
+2. Selected-pattern changes can materially increase compatible-destination availability, so the obstruction is not captured by scalar source sizes alone.
+3. Exact compatibility contains a higher-order co-singleton design condition.
+4. Part of the receiver-containment condition can nevertheless be projected back to the scalar selected-degree profile through the spill inequality.
 
-The next theoretical step is to count or bound how many such near-containments can coexist given the label degrees `x_i`, residual degrees `R_i`, source sizes `q_u,rho_u` and the receiver capacities. A profile-level bound on the union of compatible destination sets could turn the fixed-neighbourhood Hall theorem into a genuine parameter-uniform exclusion.
+The next high-value test is therefore **complete**, not random: add the spill inequality to the preserved compatible-routing `q`/source-option domain and determine by exact arithmetic whether it removes any of the 4,584 generalisation survivors or strengthens the closed potential. If it does, inspect the first witnesses for a simpler demand/tail consequence; if it does not, preserve the limit.
 
 ## Reproduction
 
-SciPy/NumPy are needed only for exploratory search:
+SciPy/NumPy are needed only for exploratory fixed-pattern search:
 
 ```sh
 python project/research/general_n/2026-09-13-constraint-respecting-cross-v1/run_fixed_selected_search.py --quick --output QUICK_RESULTS.json
 ```
 
-The full default sampling schedule mirrors the preserved observed-run parameters but may be slow and is not promoted as proof evidence. The positive partial witness requires only the Python standard library:
+The full default sampling schedule mirrors the preserved observed-run parameters but may be slow and is not promoted as proof evidence. The positive partial witness and the new spill checker require only the Python standard library:
 
 ```sh
 python project/research/general_n/2026-09-13-constraint-respecting-cross-v1/validate_partial.py
+python project/research/general_n/2026-09-13-constraint-respecting-cross-v1/check_containment_spill.py
 ```
 
 ## Status
@@ -85,5 +104,6 @@ python project/research/general_n/2026-09-13-constraint-respecting-cross-v1/vali
 - whole-state exclusions added: **0**;
 - compatible-routing/generalisation frontier: unchanged at **994 exclusions / 4,584 survivors**;
 - fixed-order candidate proofs N34/N35: unchanged and already closed by their own packages;
-- useful new evidence: a corrected construction model, broad but non-proof negative sampling, and a directly validated 19/37 partial compatibility pattern;
-- next target: a hand/profile inequality for compatible-destination overlap or a genuinely compatible complete cross pattern to feed into the exact Hall flow.
+- candidate new general mathematics: co-singleton trace/moment hierarchy and receiver-containment spill inequality;
+- bounded evidence: broad non-proof negative sampling, a directly validated 19/37 partial pattern, and 173/2,000 spill violations in one frozen stratum;
+- next target: exact full-domain application of the spill inequality.
