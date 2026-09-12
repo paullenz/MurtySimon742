@@ -1,0 +1,384 @@
+{
+  "schema": "general-closed-compatible-publication-v1",
+  "date": "2026-09-12",
+  "repository": "paullenz/MurtySimon742",
+  "branch": "main",
+  "parent": "dfcfbc26da5c32b76b83c19de47e08cdc3ea4815",
+  "commit": "c7a92fdf85f4a111af828afc65fed5537d8d7ec0",
+  "tree": "034dde68500590eaa0457196de9ea0e2f794c744",
+  "local_research_commit": "f2fc190c6b9cef54f908d33f795926bdfffc5d7c",
+  "checks": {
+    "branch_attachment": true,
+    "parent_and_tree": true,
+    "non_forced_update": true,
+    "changed_path_count": 53,
+    "changed_paths_and_hashes": true,
+    "manifests_verified": {
+      "n34-reviewer-v2": 134,
+      "n35-reviewer-v1": 134,
+      "general-heavy-load-reviewer-v1": 48,
+      "general-joint-routing-reviewer-v1": 50,
+      "general-routing-tail-reviewer-v1": 69,
+      "general-compatible-routing-reviewer-v1": 55,
+      "general-compatible-catalogue-reviewer-v1": 69,
+      "general-closed-compatible-reviewer-v1": 63
+    },
+    "original_streams_recovered": {
+      "project/research/general_n/2026-09-12-heavy-load-family-v1/frontier_results.jsonl": {
+        "status": "PASS",
+        "original_bytes": 3122169,
+        "original_sha256": "8ba9e8c9a6322fac71710e86d140f754cfe7dfa743dd55a043dc94723418a547"
+      },
+      "project/research/general_n/2026-09-12-heavy-load-family-v1/profile_results.jsonl": {
+        "status": "PASS",
+        "original_bytes": 1648230,
+        "original_sha256": "aaca0892a4f4a6a093eae58ecb7374c9c4ea85b88a2d6cac5c9cbc18d38ebbfe"
+      },
+      "project/research/general_n/2026-09-12-heavy-load-family-v1/remaining_states.json": {
+        "status": "PASS",
+        "original_bytes": 1695040,
+        "original_sha256": "5db7ea92b92083c2205007b483c4789ced80bddb693cb7a21004b1f4f46e26c6"
+      },
+      "project/research/general_n/2026-09-12-joint-routing-pilot-v1/pilot_results.jsonl": {
+        "status": "PASS",
+        "original_bytes": 163087,
+        "original_sha256": "fd269a1f8092d1755f7b6bb04c7eddba81f6ae57705a952d36f81b0cc2b19ea2"
+      },
+      "project/research/general_n/2026-09-12-joint-routing-pilot-v1/frontier_results.jsonl": {
+        "status": "PASS",
+        "original_bytes": 10801083,
+        "original_sha256": "a34dd73b26d8bb2461bdc30d7d6f638b93bf90681497d098bba2a15420b474c8"
+      },
+      "project/research/general_n/2026-09-12-routing-tail-projection-v1/pilot_results.jsonl": {
+        "status": "PASS",
+        "original_bytes": 307916,
+        "original_sha256": "6d89680c8aae92006ce4ebdebebe44df22623c7b56c5bab7b68bb45716a15341"
+      },
+      "project/research/general_n/2026-09-12-routing-tail-projection-v1/profile_results.jsonl": {
+        "status": "PASS",
+        "original_bytes": 5732891,
+        "original_sha256": "262f84b27cc3c54418762bb79823cdfa0b29824d2ecae5c1ad1289ce620ee368"
+      },
+      "project/research/general_n/2026-09-12-routing-tail-projection-v1/state_comparison.json": {
+        "status": "PASS",
+        "original_bytes": 1134242,
+        "original_sha256": "9b647ba14c9aea02a3c7af7d7486b04ae4d403af1237560d2728ed01185cbaf2"
+      },
+      "project/research/general_n/2026-09-12-routing-tail-projection-v1/boundary_results.jsonl": {
+        "status": "PASS",
+        "original_bytes": 2373604,
+        "original_sha256": "6923e5c30279369b3b68c97265af26f03c787dcb051ba51ce672d9319df5e561"
+      },
+      "project/research/general_n/2026-09-12-routing-tail-projection-v1/boundary_state_comparison.json": {
+        "status": "PASS",
+        "original_bytes": 453772,
+        "original_sha256": "7b0db53cb73a8baf80cd6bc37a28710f39084d6061e70f374bf12730ca2bff11"
+      },
+      "project/research/general_n/2026-09-12-compatible-routing-pilot-v1/pilot_results.jsonl": {
+        "status": "PASS",
+        "original_bytes": 871129,
+        "original_sha256": "d6e6dd4450b89af699fe9e7b96632fc4227c3ba0030b3ca03faf3de0319400c9"
+      },
+      "project/research/general_n/2026-09-12-compatible-routing-catalogue-v1/pool_inputs.jsonl": {
+        "status": "PASS",
+        "original_bytes": 1124585,
+        "original_sha256": "34244eb2bdc6330a0bc2fc9b67ca8b05bdcc7fd9901196410213e7b1b8ff7e1f"
+      },
+      "project/research/general_n/2026-09-12-compatible-routing-catalogue-v1/engine_input.txt": {
+        "status": "PASS",
+        "original_bytes": 487503,
+        "original_sha256": "590ff29c66e226fb3bf111be6a03d11463d30718512b048a119cb1b22fe76b1a"
+      },
+      "project/research/general_n/2026-09-12-compatible-routing-catalogue-v1/frontier_results.jsonl": {
+        "status": "PASS",
+        "original_bytes": 14236471,
+        "original_sha256": "4e9d7d320c58c8fe0318237197c0fd7e00ccb6b1918f65334dfb5735e4192a83"
+      },
+      "project/research/general_n/2026-09-12-compatible-routing-catalogue-v1/survivors.json": {
+        "status": "PASS",
+        "original_bytes": 1315615,
+        "original_sha256": "2c6bb11ec3c6dfb45a07b511c1e85c8c44898201c0f045630e0f622ee93647eb"
+      },
+      "project/research/general_n/2026-09-12-compatible-routing-catalogue-v1/template_coverage.json": {
+        "status": "PASS",
+        "original_bytes": 120133,
+        "original_sha256": "16e2c665b5ed0ca68a7a6aca180c1b419ffaadcb142528c0d245e15e9024880e"
+      },
+      "project/research/general_n/2026-09-12-closed-compatible-potential-v1/pool_inputs.jsonl": {
+        "status": "PASS",
+        "original_bytes": 1124585,
+        "original_sha256": "34244eb2bdc6330a0bc2fc9b67ca8b05bdcc7fd9901196410213e7b1b8ff7e1f"
+      },
+      "project/research/general_n/2026-09-12-closed-compatible-potential-v1/engine_input.txt": {
+        "status": "PASS",
+        "original_bytes": 486776,
+        "original_sha256": "6df64d8d0a6dab11e67e3ace6ab69ad30ade91cb260c604fe8d3e461536419e6"
+      },
+      "project/research/general_n/2026-09-12-closed-compatible-potential-v1/frontier_results.jsonl": {
+        "status": "PASS",
+        "original_bytes": 6846352,
+        "original_sha256": "49167ed15767b96070d9a6a35d8f080fe502821fd24bd77fc116bd0b60b6e813"
+      },
+      "project/research/general_n/2026-09-12-closed-compatible-potential-v1/reference_results.jsonl": {
+        "status": "PASS",
+        "original_bytes": 6846352,
+        "original_sha256": "49167ed15767b96070d9a6a35d8f080fe502821fd24bd77fc116bd0b60b6e813"
+      },
+      "project/research/general_n/2026-09-12-closed-compatible-potential-v1/survivors.json": {
+        "status": "PASS",
+        "original_bytes": 924834,
+        "original_sha256": "e79ebb8895d216b05c3f27900913993326948576d8fef672b7d011ba0300c58e"
+      }
+    },
+    "key_raw_files_verified": [
+      "README.md",
+      "START_HERE_FOR_REVIEWERS.md",
+      "releases/REVIEW_READY_INDEX.md",
+      "releases/general-closed-compatible-reviewer-v1/README.md",
+      "project/research/general_n/2026-09-12-closed-compatible-potential-v1/CLOSED_POTENTIAL.md",
+      "project/research/general_n/2026-09-12-closed-compatible-potential-v1/verification.json"
+    ],
+    "local_links_verified_at_commit": 303,
+    "no_existing_proof_or_ledger_changes": true,
+    "existing_changes_limited_to_navigation_and_dependent_manifest_hashes": true,
+    "prior_manifest_scopes_unchanged": true,
+    "current_reviewer_entrypoints_consistent": true,
+    "clean_validation": "releases/general-closed-compatible-reviewer-v1/VALIDATION.json"
+  },
+  "changed_paths": {
+    "README.md": {
+      "bytes": 54581,
+      "sha256": "a987601de0dc50c93b61d053cd2f2ec5db5be6ee409de9762cb48098a439e6d3"
+    },
+    "START_HERE_FOR_REVIEWERS.md": {
+      "bytes": 16965,
+      "sha256": "e469d694c6ccf71ef0b3a45fd77379cbd0961978c50ca83048ec05693d59b075"
+    },
+    "project/research/general_n/2026-09-12-closed-compatible-potential-v1/AUDIT.md": {
+      "bytes": 6642,
+      "sha256": "8d73b88ebe2a50c7225b15854de3212136192d7de2f1df572536291ba2fafaea"
+    },
+    "project/research/general_n/2026-09-12-closed-compatible-potential-v1/CLOSED_POTENTIAL.md": {
+      "bytes": 6050,
+      "sha256": "f98ea3f981b04136b4e925d18135849426e53d6376f247d5a1ec4ed18424c155"
+    },
+    "project/research/general_n/2026-09-12-closed-compatible-potential-v1/EVIDENCE_STORAGE.json": {
+      "bytes": 2087,
+      "sha256": "2f25d4f4acf7d35c873c73e3b84afb3c5b55ebe755b370c9da07abf69580baf6"
+    },
+    "project/research/general_n/2026-09-12-closed-compatible-potential-v1/EXPERIMENT.json": {
+      "bytes": 751,
+      "sha256": "f5652377e4f76a398a5d0f34c4dc83efb2d2625098d8b2f7fc78c098b56902fa"
+    },
+    "project/research/general_n/2026-09-12-closed-compatible-potential-v1/PLAN.md": {
+      "bytes": 3102,
+      "sha256": "0b7d57074ca7de5869262adeb2cef4ba1e1027fe231e93dc7bee38f2aab3b4c9"
+    },
+    "project/research/general_n/2026-09-12-closed-compatible-potential-v1/README.md": {
+      "bytes": 5444,
+      "sha256": "b8781569cc8fe4e3964e742ed1e820a6d2e09e76eff0e0222193cb54520747a5"
+    },
+    "project/research/general_n/2026-09-12-closed-compatible-potential-v1/check_local.py": {
+      "bytes": 3023,
+      "sha256": "09a0f19966c2744ea8ecd3bf6ad690812acb29d922469e0a6b21283e6871c5aa"
+    },
+    "project/research/general_n/2026-09-12-closed-compatible-potential-v1/check_shortcuts.py": {
+      "bytes": 1757,
+      "sha256": "dd3025b43f6f31f6c772b3598483005182df13a2a41449f0902c89298edfc4f5"
+    },
+    "project/research/general_n/2026-09-12-closed-compatible-potential-v1/closed.py": {
+      "bytes": 2750,
+      "sha256": "af99323f3b5150e497c12260251b61c1acd4aca9cddce0fb9d79c36f17f11d14"
+    },
+    "project/research/general_n/2026-09-12-closed-compatible-potential-v1/engine_input.txt.gz.b64": {
+      "bytes": 44742,
+      "sha256": "80ffb425e94b7a287632770175bd4198769268e41b307bc9c94467bc075391bf"
+    },
+    "project/research/general_n/2026-09-12-closed-compatible-potential-v1/environment.json": {
+      "bytes": 433,
+      "sha256": "ee97593bc09bee3aaf2ed6ebf928f6c21153cdcb87583f1c0c9999f36557e773"
+    },
+    "project/research/general_n/2026-09-12-closed-compatible-potential-v1/evidence_io.py": {
+      "bytes": 760,
+      "sha256": "d76d23e9774d1c7b1e9bbf0b0ec38d9e78ffd991a48370d6cc77699d953acf89"
+    },
+    "project/research/general_n/2026-09-12-closed-compatible-potential-v1/frontier_results.jsonl.gz.b64": {
+      "bytes": 743954,
+      "sha256": "d16b2a787e3a9e090d8db2b66fe8ba0c238cb5e990e057efd5b392620bdb40bd"
+    },
+    "project/research/general_n/2026-09-12-closed-compatible-potential-v1/input_verification.json": {
+      "bytes": 320,
+      "sha256": "96f5a590a9b67388f6957745c3f42329b37b09f1a11443bb5ec19b7006552a33"
+    },
+    "project/research/general_n/2026-09-12-closed-compatible-potential-v1/larger_local_cases.json": {
+      "bytes": 11360,
+      "sha256": "c56167b90ca7bc3f9ca30495f442bb50be19133ca69aaac4c0a9a7d65ac41852"
+    },
+    "project/research/general_n/2026-09-12-closed-compatible-potential-v1/local_verification.json": {
+      "bytes": 507,
+      "sha256": "3385765a7f7ee3978f2b7c5ad2dd40c958cea796e1f9d7bf8f3ed269b91c7f45"
+    },
+    "project/research/general_n/2026-09-12-closed-compatible-potential-v1/local_verification.log": {
+      "bytes": 608,
+      "sha256": "324409e09bd26499d28a3c209b908dc74654230722b2bdb17940e61df2c6c79c"
+    },
+    "project/research/general_n/2026-09-12-closed-compatible-potential-v1/new_exclusions.json": {
+      "bytes": 3,
+      "sha256": "37517e5f3dc66819f61f5a7bb8ace1921282415f10551d2defa5c3eb0985b570"
+    },
+    "project/research/general_n/2026-09-12-closed-compatible-potential-v1/pack_evidence.py": {
+      "bytes": 1511,
+      "sha256": "0d253f0a2b002998ee91082a05182cdc02ca197af18876f6e93b3d8db10fea47"
+    },
+    "project/research/general_n/2026-09-12-closed-compatible-potential-v1/pool_inputs.jsonl.gz.b64": {
+      "bytes": 50440,
+      "sha256": "a17f8d98afbef3731a7877e9e644b035b0dccb3541abb4079db1ecae01498309"
+    },
+    "project/research/general_n/2026-09-12-closed-compatible-potential-v1/prepare_inputs.py": {
+      "bytes": 2496,
+      "sha256": "0edaec9d655f4c318d7f889d281a7cc9c5aa45f80744e351612c22902e839b1d"
+    },
+    "project/research/general_n/2026-09-12-closed-compatible-potential-v1/prior_exclusions.json": {
+      "bytes": 35974,
+      "sha256": "bee355e55af9b755b5d2860bbfa6c619021f789339fc91f623ec21bd0b6688e7"
+    },
+    "project/research/general_n/2026-09-12-closed-compatible-potential-v1/prior_review_verification.json": {
+      "bytes": 639,
+      "sha256": "ff87067f48db49e4396107e3db788d1c568d0875782204c68943acaeec42f81b"
+    },
+    "project/research/general_n/2026-09-12-closed-compatible-potential-v1/reference.cpp": {
+      "bytes": 5044,
+      "sha256": "b29e7299ecad10213937ac89407c03f78f069342d20817a4003411d5f04a5571"
+    },
+    "project/research/general_n/2026-09-12-closed-compatible-potential-v1/reference.log": {
+      "bytes": 406,
+      "sha256": "7b4cd94368d725c09491a9f741e3d2f5797dcd82e9bdaebaa459f73d30c64e82"
+    },
+    "project/research/general_n/2026-09-12-closed-compatible-potential-v1/reference_compile.log": {
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "project/research/general_n/2026-09-12-closed-compatible-potential-v1/reference_environment.json": {
+      "bytes": 361,
+      "sha256": "492d2cb26dd0d78691380191f7488e2b80872c0c1a7fca81baeb7f7210c4eea3"
+    },
+    "project/research/general_n/2026-09-12-closed-compatible-potential-v1/replay.log": {
+      "bytes": 1263,
+      "sha256": "d12882d1acd27ead364698764a20e2df1f4038ce1ac1764c10c5f1f7276cba12"
+    },
+    "project/research/general_n/2026-09-12-closed-compatible-potential-v1/replay.py": {
+      "bytes": 3532,
+      "sha256": "2ae235a52a669acfab858feca7b63c2a51bb7c93ecc2ac0d487d67312011dde8"
+    },
+    "project/research/general_n/2026-09-12-closed-compatible-potential-v1/run_reference.py": {
+      "bytes": 1379,
+      "sha256": "4d2768316612e759fb3823d2558304d056f1bccce9cf2a2dcca837a4620c0585"
+    },
+    "project/research/general_n/2026-09-12-closed-compatible-potential-v1/shortcut_counterexamples.json": {
+      "bytes": 802,
+      "sha256": "be43a767fca06897aeee0986cb087503f8e75c28a35f5a23b0f5dd2eeba012fa"
+    },
+    "project/research/general_n/2026-09-12-closed-compatible-potential-v1/shortcut_counterexamples.log": {
+      "bytes": 802,
+      "sha256": "be43a767fca06897aeee0986cb087503f8e75c28a35f5a23b0f5dd2eeba012fa"
+    },
+    "project/research/general_n/2026-09-12-closed-compatible-potential-v1/storage.log": {
+      "bytes": 2087,
+      "sha256": "2f25d4f4acf7d35c873c73e3b84afb3c5b55ebe755b370c9da07abf69580baf6"
+    },
+    "project/research/general_n/2026-09-12-closed-compatible-potential-v1/survivors.json.gz.b64": {
+      "bytes": 41836,
+      "sha256": "428a773c9ded02288c101fe73a62cd90243ae2f5f3a6edcc9f4e703066816352"
+    },
+    "project/research/general_n/2026-09-12-closed-compatible-potential-v1/verification.json": {
+      "bytes": 1200,
+      "sha256": "3923f3e5e7f68f756e00f439626a78a67c7f9d2509ac4a47bc53c5c267934b4d"
+    },
+    "project/research/general_n/2026-09-12-closed-compatible-potential-v1/verification.log": {
+      "bytes": 1200,
+      "sha256": "3923f3e5e7f68f756e00f439626a78a67c7f9d2509ac4a47bc53c5c267934b4d"
+    },
+    "project/research/general_n/2026-09-12-closed-compatible-potential-v1/verify.py": {
+      "bytes": 6579,
+      "sha256": "6b15e365ece4b695f232d9f8d5e68799b82308500a42f11e64525a5a3f568684"
+    },
+    "releases/REVIEW_READY_INDEX.md": {
+      "bytes": 15687,
+      "sha256": "b83314175e32697a610ca7cac245a04b59d35f43e3a47c7ff44b6e61a8954dae"
+    },
+    "releases/general-closed-compatible-reviewer-v1/MANIFEST.json": {
+      "bytes": 14433,
+      "sha256": "1d30a824459fede7947714dd5a99c0bdc6930981d97bfa489292ce61135f8687"
+    },
+    "releases/general-closed-compatible-reviewer-v1/README.md": {
+      "bytes": 4313,
+      "sha256": "a66386980d4e115153a5bca322d91cf88a0c10294e3aea28f50627488b36d1c9"
+    },
+    "releases/general-closed-compatible-reviewer-v1/VALIDATION.json": {
+      "bytes": 2576,
+      "sha256": "e721261cda40f09b798e4b42d6285c396efd2be2e57e2326bae2bc3e267dcc3f"
+    },
+    "releases/general-closed-compatible-reviewer-v1/build_manifest.py": {
+      "bytes": 3867,
+      "sha256": "d34e07bb4267f47ab2b38079ffcd3a638162c2db4a8007e3af84bbb10cf81e62"
+    },
+    "releases/general-closed-compatible-reviewer-v1/check_manifest.py": {
+      "bytes": 436,
+      "sha256": "b21c12302a0bbc91dd756adfc54656bfa387dd6c6f552b4b6aa928576f38891b"
+    },
+    "releases/general-closed-compatible-reviewer-v1/validate_release.py": {
+      "bytes": 4836,
+      "sha256": "03fdb99d0c8cb01e2a70c7bb3d5118df1e334146415a8ff3ac6fd785259dbe14"
+    },
+    "releases/general-compatible-catalogue-reviewer-v1/MANIFEST.json": {
+      "bytes": 15837,
+      "sha256": "f406505330d1fe6e33da71c827e8c6fb849bd55b3615ae8314864aceb04b7e24"
+    },
+    "releases/general-compatible-routing-reviewer-v1/MANIFEST.json": {
+      "bytes": 12371,
+      "sha256": "944ee60ecb023575ceb38ac1239d57db8a8e843331fe5c376da5c9955ecfb3f3"
+    },
+    "releases/general-heavy-load-reviewer-v1/MANIFEST.json": {
+      "bytes": 10251,
+      "sha256": "07cef601b3b7af0765a60e1f9178fb90ce8d43e1201c13487e0e050386367090"
+    },
+    "releases/general-joint-routing-reviewer-v1/MANIFEST.json": {
+      "bytes": 10780,
+      "sha256": "c70612b81178f26feb4cb47a8f6230578b66ab51691a7722260e8a0c6e241b1a"
+    },
+    "releases/general-routing-tail-reviewer-v1/MANIFEST.json": {
+      "bytes": 14928,
+      "sha256": "a5d4c8ee33ea3f602eb376952bc61496e745bb9abb7e07c7ba8d66532926120f"
+    },
+    "releases/n34-reviewer-v2/MANIFEST.json": {
+      "bytes": 25869,
+      "sha256": "fa55ceacddd104715a06b8e5146d1806724ea47ccf8eec5edcd326c6547bd5d5"
+    },
+    "releases/n35-reviewer-v1/MANIFEST.json": {
+      "bytes": 25850,
+      "sha256": "4c27d519a7298225ba9de4f04c700113b22015bf857c9b6968eb4ca48404c9db"
+    }
+  },
+  "scope": {
+    "candidate_general_closed_local_maxima": true,
+    "local_candidate_bound_per_sender_class": 59,
+    "variable_ordinary_eligibility_cutoff": true,
+    "local_parameter_challenges": 39902,
+    "pool": 5578,
+    "fixed_k2_exclusions": 708,
+    "all_k_exclusions": 832,
+    "new_exclusions_over_prior_combined": 0,
+    "combined_exclusions": 994,
+    "combined_survivors": 4584,
+    "integer_gaps": 476427,
+    "prior_template13_gaps_rechecked": 28591,
+    "invalid_shortcut_examples": 2,
+    "full_pool_replay": true,
+    "solver_used": false,
+    "changed_fixed_order_ledgers": false,
+    "improved_maximum_degree_threshold": false,
+    "unrestricted_theorem": false,
+    "external_review": "OPEN"
+  },
+  "note": "This receipt records the research publication. Its following receipt-only commit is read back separately; no circular self-hash claim."
+}
