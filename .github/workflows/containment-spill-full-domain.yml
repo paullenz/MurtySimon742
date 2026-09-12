@@ -1,0 +1,43 @@
+name: containment-spill-full-domain
+
+on:
+  push:
+    paths:
+      - '.github/workflows/containment-spill-full-domain.yml'
+      - 'project/research/general_n/2026-09-13-constraint-respecting-cross-v1/full_domain_spill_witness.py'
+
+permissions:
+  contents: write
+
+jobs:
+  full-domain-witness:
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    steps:
+      - uses: actions/checkout@v4
+      - name: Run deterministic positive-witness search
+        id: run
+        continue-on-error: true
+        run: |
+          python project/research/general_n/2026-09-13-constraint-respecting-cross-v1/full_domain_spill_witness.py | tee /tmp/full-domain-spill.log
+      - name: Upload result and log
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: containment-spill-full-domain
+          path: |
+            project/research/general_n/2026-09-13-constraint-respecting-cross-v1/FULL_DOMAIN_SPILL_WITNESSES.json
+            /tmp/full-domain-spill.log
+          if-no-files-found: warn
+      - name: Commit successful complete result
+        if: steps.run.outcome == 'success'
+        run: |
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add project/research/general_n/2026-09-13-constraint-respecting-cross-v1/FULL_DOMAIN_SPILL_WITNESSES.json
+          git diff --cached --quiet && exit 0
+          git commit -m 'Record full-domain spill positive witnesses'
+          git push
+      - name: Fail job if witness search was incomplete
+        if: steps.run.outcome != 'success'
+        run: exit 1
