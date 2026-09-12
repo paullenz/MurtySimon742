@@ -1,0 +1,17 @@
+{
+  "status": "PASS",
+  "states": 5578,
+  "layers": {
+    "n34-m289": 5415,
+    "n35-m306": 162,
+    "n35-m307": 1
+  },
+  "input_hashes": {
+    "heavy_remaining_states": "5db7ea92b92083c2205007b483c4789ced80bddb693cb7a21004b1f4f46e26c6",
+    "joint_frontier_results": "a34dd73b26d8bb2461bdc30d7d6f638b93bf90681497d098bba2a15420b474c8",
+    "joint_frontier_summary": "7fd38bf9bf455b4c44ab75a7a34d82958c84c51233319aa5519e60fb6d81b410"
+  },
+  "catalogue_sha256": "1f8c90af470320f616d9ccba030fa738988d46569af5651572fc9c90ef68e757",
+  "pool_sha256": "34244eb2bdc6330a0bc2fc9b67ca8b05bdcc7fd9901196410213e7b1b8ff7e1f",
+  "external_review": "OPEN"
+}

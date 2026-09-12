@@ -1,0 +1,85 @@
+{
+  "status": "PASS",
+  "date": "2026-09-12",
+  "python": "3.12.14",
+  "replay": [
+    {
+      "command": "python project/research/general_n/2026-09-12-compatible-routing-catalogue-v1/freeze_catalogue.py",
+      "returncode": 0,
+      "stdout_sha256": "04c16943915aab5a4a0bba3064f3e1aa1d1614ca1bb792335dcffb6cb177336c"
+    },
+    {
+      "command": "python project/research/general_n/2026-09-12-compatible-routing-catalogue-v1/prepare_inputs.py",
+      "returncode": 0,
+      "stdout_sha256": "ff7042289855b93f319dffdfe9d048c22afd156b4c12b43a719c14c5c327fc80"
+    },
+    {
+      "command": "python project/research/general_n/2026-09-12-compatible-routing-catalogue-v1/run_replay.py",
+      "returncode": 0,
+      "stdout_sha256": "4caec82d7d8cf3c2f05681a759e9d40010b6087579c3fe1a1426554147bf2464"
+    },
+    {
+      "command": "python project/research/general_n/2026-09-12-compatible-routing-catalogue-v1/independent_verify.py",
+      "returncode": 0,
+      "stdout_sha256": "9de4682f3632443ebea53c261466010dd94a2dfdf4a769b6c7da64a41c655ffb"
+    },
+    {
+      "command": "python project/research/general_n/2026-09-12-compatible-routing-catalogue-v1/summarize.py",
+      "returncode": 0,
+      "stdout_sha256": "217dc5d489e627534ab342496f59b14ea3ea553463cc8639ef66f64eae72aa18"
+    },
+    {
+      "command": "python project/research/general_n/2026-09-12-compatible-routing-catalogue-v1/verify_catalogue_and_summary.py",
+      "returncode": 0,
+      "stdout_sha256": "ff40cb4a41949d82e4a4799ae01de73236dbcdecbe46ba8d6702e062b2cc2608"
+    },
+    {
+      "command": "python project/research/general_n/2026-09-12-compatible-routing-catalogue-v1/check_fixed_potential.py",
+      "returncode": 0,
+      "stdout_sha256": "a947c4fafac8dd8d51a960966ba724d44c8e745b8ebf7ee1408710e6db18f2d2"
+    }
+  ],
+  "original_streams_reproduced_byte_for_byte": [
+    "pool_inputs.jsonl",
+    "engine_input.txt",
+    "frontier_results.jsonl",
+    "survivors.json",
+    "template_coverage.json"
+  ],
+  "reproduced_summary_files": [
+    "catalogue.json",
+    "catalogue_candidates.json",
+    "input_verification.json",
+    "replay.log",
+    "verification.json",
+    "frontier_summary.json",
+    "compression.json",
+    "catalogue_and_summary_verification.json",
+    "fixed_potential_verification.json"
+  ],
+  "original_timings_preserved": true,
+  "reproduction_environment": {
+    "python": "3.12.14",
+    "compiler": "g++ (Ubuntu 13.3.0-6ubuntu2~24.04) 13.3.0",
+    "exit_code": 0,
+    "reproduction_seconds": 0.38899214699995355,
+    "solver_used": false
+  },
+  "exact_checks_from_original_archives_without_raw_streams": true,
+  "navigation": {
+    "markdown_files": 8,
+    "local_links_checked": 293,
+    "status": "PASS"
+  },
+  "scope": {
+    "pool": 5578,
+    "catalogue_excluded": 990,
+    "pilot_only_excluded": 4,
+    "combined_excluded": 994,
+    "combined_survivors": 4584,
+    "fixed_potential_states": 707,
+    "analytic_q_elimination": true,
+    "at_most_five_p_candidates": true
+  },
+  "external_review": "OPEN"
+}

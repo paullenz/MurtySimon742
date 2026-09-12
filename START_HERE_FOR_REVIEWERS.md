@@ -95,9 +95,20 @@ multiplier search, one further by retaining selected degrees, and sixteen
 further by destination eligibility. Mixed cuts add no further whole-state
 exclusions. It includes a compact hand example, 321 exact certificates and
 321 independently checked potential envelopes, all failed searches and ten
-sample survivors. The full 5,578-state pool has not been replayed under these
-rules. Generalization and fixed-order status remain candidate; external review
-is OPEN.
+sample survivors. That pilot tested only its sample; the full-pool continuation
+below now measures catalogue coverage. Generalization and fixed-order status
+remain candidate; external review is OPEN.
+
+The [compatible-catalogue reviewer-v1 package](releases/general-compatible-catalogue-reviewer-v1/README.md)
+freezes 20 simple pilot vectors, then replays all 5,578 prior survivors. It
+excludes 990, retaining 15 pilot successes; four pilot-only witnesses are
+preserved separately. The combined record has 994 exclusions and 4,584 survivors.
+One fixed potential handles 707 cases and has a new general hand reduction:
+no q enumeration and at most five p candidates per H. Exact code checks all
+1,564,007 catalogue gaps and the inherited pilot cases. Original outputs,
+failures, a post-replay 11-template compression and full survivor accounting
+are preserved. No new density threshold or fixed-order theorem is claimed;
+external review remains OPEN.
 
 For the preceding general-foundations review pass, see the
 [focused foundations checklist](project/reviews/general-theory/2026-09-12-joint-followthrough-v1/FOUNDATIONS_AUDIT.md).

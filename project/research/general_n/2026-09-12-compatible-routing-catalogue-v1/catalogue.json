@@ -1,0 +1,1927 @@
+{
+  "schema": "compatible-routing-catalogue-v1",
+  "baseline_commit": "be45e9c540ece11290e6f07e3a31bd8dcc3da2d0",
+  "pilot_envelopes_sha256": "b0448e4d0764389ca1e5b94e210520dcb90d1cb95c4f93fe747dc50cb0787979",
+  "candidate_count": 155,
+  "seed_count": 20,
+  "ranking": "sum absolute primitive integer weights, number of terms, lexicographic vector",
+  "thresholds": "h=2..max(s), T=4h; transport cutoffs retain their absolute integer values",
+  "templates": [
+    {
+      "id": 0,
+      "weights": [
+        [
+          "ub",
+          [
+            "heavy_mass"
+          ],
+          1
+        ]
+      ]
+    },
+    {
+      "id": 1,
+      "weights": [
+        [
+          "ub",
+          [
+            "heavy_receiving"
+          ],
+          1
+        ],
+        [
+          "ub",
+          [
+            "load"
+          ],
+          1
+        ]
+      ]
+    },
+    {
+      "id": 2,
+      "weights": [
+        [
+          "ub",
+          [
+            "heavy_mass"
+          ],
+          3
+        ],
+        [
+          "ub",
+          [
+            "load"
+          ],
+          1
+        ]
+      ]
+    },
+    {
+      "id": 3,
+      "weights": [
+        [
+          "ub",
+          [
+            "heavy_receiving"
+          ],
+          3
+        ],
+        [
+          "ub",
+          [
+            "load"
+          ],
+          1
+        ]
+      ]
+    },
+    {
+      "id": 4,
+      "weights": [
+        [
+          "ub",
+          [
+            "heavy_mass"
+          ],
+          1
+        ],
+        [
+          "ub",
+          [
+            "heavy_receiving"
+          ],
+          2
+        ],
+        [
+          "ub",
+          [
+            "load"
+          ],
+          1
+        ]
+      ]
+    },
+    {
+      "id": 5,
+      "weights": [
+        [
+          "ub",
+          [
+            "heavy_mass"
+          ],
+          2
+        ],
+        [
+          "ub",
+          [
+            "heavy_receiving"
+          ],
+          1
+        ],
+        [
+          "ub",
+          [
+            "load"
+          ],
+          1
+        ]
+      ]
+    },
+    {
+      "id": 6,
+      "weights": [
+        [
+          "ub",
+          [
+            "heavy_receiving"
+          ],
+          4
+        ],
+        [
+          "ub",
+          [
+            "load"
+          ],
+          1
+        ]
+      ]
+    },
+    {
+      "id": 7,
+      "weights": [
+        [
+          "ub",
+          [
+            "heavy_receiving"
+          ],
+          2
+        ],
+        [
+          "ub",
+          [
+            "load"
+          ],
+          1
+        ],
+        [
+          "ub",
+          [
+            "pair_capacity"
+          ],
+          2
+        ]
+      ]
+    },
+    {
+      "id": 8,
+      "weights": [
+        [
+          "eq",
+          [
+            "selected_balance"
+          ],
+          4
+        ],
+        [
+          "ub",
+          [
+            "heavy_receiving"
+          ],
+          1
+        ],
+        [
+          "ub",
+          [
+            "load"
+          ],
+          1
+        ]
+      ]
+    },
+    {
+      "id": 9,
+      "weights": [
+        [
+          "ub",
+          [
+            "all_transport",
+            2
+          ],
+          3
+        ],
+        [
+          "ub",
+          [
+            "heavy_receiving"
+          ],
+          3
+        ],
+        [
+          "ub",
+          [
+            "load"
+          ],
+          1
+        ]
+      ]
+    },
+    {
+      "id": 10,
+      "weights": [
+        [
+          "ub",
+          [
+            "all_transport",
+            3
+          ],
+          2
+        ],
+        [
+          "ub",
+          [
+            "heavy_receiving"
+          ],
+          4
+        ],
+        [
+          "ub",
+          [
+            "load"
+          ],
+          1
+        ]
+      ]
+    },
+    {
+      "id": 11,
+      "weights": [
+        [
+          "ub",
+          [
+            "all_transport",
+            3
+          ],
+          3
+        ],
+        [
+          "ub",
+          [
+            "heavy_receiving"
+          ],
+          3
+        ],
+        [
+          "ub",
+          [
+            "load"
+          ],
+          1
+        ]
+      ]
+    },
+    {
+      "id": 12,
+      "weights": [
+        [
+          "ub",
+          [
+            "all_transport",
+            2
+          ],
+          3
+        ],
+        [
+          "ub",
+          [
+            "heavy_receiving"
+          ],
+          2
+        ],
+        [
+          "ub",
+          [
+            "load"
+          ],
+          1
+        ],
+        [
+          "ub",
+          [
+            "pair_capacity"
+          ],
+          2
+        ]
+      ]
+    },
+    {
+      "id": 13,
+      "weights": [
+        [
+          "ub",
+          [
+            "all_transport",
+            2
+          ],
+          4
+        ],
+        [
+          "ub",
+          [
+            "heavy_mass"
+          ],
+          1
+        ],
+        [
+          "ub",
+          [
+            "heavy_receiving"
+          ],
+          2
+        ],
+        [
+          "ub",
+          [
+            "load"
+          ],
+          1
+        ]
+      ]
+    },
+    {
+      "id": 14,
+      "weights": [
+        [
+          "ub",
+          [
+            "all_transport",
+            2
+          ],
+          4
+        ],
+        [
+          "ub",
+          [
+            "heavy_mass"
+          ],
+          2
+        ],
+        [
+          "ub",
+          [
+            "heavy_receiving"
+          ],
+          1
+        ],
+        [
+          "ub",
+          [
+            "load"
+          ],
+          1
+        ]
+      ]
+    },
+    {
+      "id": 15,
+      "weights": [
+        [
+          "ub",
+          [
+            "heavy_mass"
+          ],
+          4
+        ],
+        [
+          "ub",
+          [
+            "heavy_receiving"
+          ],
+          5
+        ],
+        [
+          "ub",
+          [
+            "load"
+          ],
+          2
+        ]
+      ]
+    },
+    {
+      "id": 16,
+      "weights": [
+        [
+          "ub",
+          [
+            "forced_transport",
+            9
+          ],
+          1
+        ],
+        [
+          "ub",
+          [
+            "heavy_mass"
+          ],
+          11
+        ]
+      ]
+    },
+    {
+      "id": 17,
+      "weights": [
+        [
+          "ub",
+          [
+            "all_transport",
+            2
+          ],
+          1
+        ],
+        [
+          "ub",
+          [
+            "all_transport",
+            3
+          ],
+          7
+        ],
+        [
+          "ub",
+          [
+            "all_transport",
+            5
+          ],
+          1
+        ],
+        [
+          "ub",
+          [
+            "heavy_mass"
+          ],
+          3
+        ],
+        [
+          "ub",
+          [
+            "load"
+          ],
+          1
+        ]
+      ]
+    },
+    {
+      "id": 18,
+      "weights": [
+        [
+          "ub",
+          [
+            "heavy_mass"
+          ],
+          3
+        ],
+        [
+          "ub",
+          [
+            "heavy_receiving"
+          ],
+          9
+        ],
+        [
+          "ub",
+          [
+            "load"
+          ],
+          2
+        ]
+      ]
+    },
+    {
+      "id": 19,
+      "weights": [
+        [
+          "ub",
+          [
+            "heavy_mass"
+          ],
+          4
+        ],
+        [
+          "ub",
+          [
+            "heavy_receiving"
+          ],
+          11
+        ],
+        [
+          "ub",
+          [
+            "load"
+          ],
+          3
+        ]
+      ]
+    },
+    {
+      "id": 20,
+      "weights": [
+        [
+          "ub",
+          [
+            "all_transport",
+            2
+          ],
+          8
+        ],
+        [
+          "ub",
+          [
+            "heavy_mass"
+          ],
+          4
+        ],
+        [
+          "ub",
+          [
+            "heavy_receiving"
+          ],
+          5
+        ],
+        [
+          "ub",
+          [
+            "load"
+          ],
+          2
+        ]
+      ]
+    },
+    {
+      "id": 21,
+      "weights": [
+        [
+          "ub",
+          [
+            "all_transport",
+            3
+          ],
+          5
+        ],
+        [
+          "ub",
+          [
+            "heavy_mass"
+          ],
+          3
+        ],
+        [
+          "ub",
+          [
+            "heavy_receiving"
+          ],
+          9
+        ],
+        [
+          "ub",
+          [
+            "load"
+          ],
+          2
+        ]
+      ]
+    },
+    {
+      "id": 22,
+      "weights": [
+        [
+          "ub",
+          [
+            "all_transport",
+            2
+          ],
+          6
+        ],
+        [
+          "ub",
+          [
+            "all_transport",
+            3
+          ],
+          2
+        ],
+        [
+          "ub",
+          [
+            "heavy_mass"
+          ],
+          4
+        ],
+        [
+          "ub",
+          [
+            "heavy_receiving"
+          ],
+          5
+        ],
+        [
+          "ub",
+          [
+            "load"
+          ],
+          2
+        ]
+      ]
+    },
+    {
+      "id": 23,
+      "weights": [
+        [
+          "ub",
+          [
+            "heavy_mass"
+          ],
+          13
+        ],
+        [
+          "ub",
+          [
+            "heavy_receiving"
+          ],
+          4
+        ],
+        [
+          "ub",
+          [
+            "load"
+          ],
+          3
+        ]
+      ]
+    },
+    {
+      "id": 24,
+      "weights": [
+        [
+          "ub",
+          [
+            "heavy_mass"
+          ],
+          6
+        ],
+        [
+          "ub",
+          [
+            "heavy_receiving"
+          ],
+          16
+        ],
+        [
+          "ub",
+          [
+            "load"
+          ],
+          5
+        ]
+      ]
+    },
+    {
+      "id": 25,
+      "weights": [
+        [
+          "ub",
+          [
+            "forced_transport",
+            5
+          ],
+          3
+        ],
+        [
+          "ub",
+          [
+            "forced_transport",
+            6
+          ],
+          2
+        ],
+        [
+          "ub",
+          [
+            "forced_transport",
+            7
+          ],
+          2
+        ],
+        [
+          "ub",
+          [
+            "forced_transport",
+            8
+          ],
+          1
+        ],
+        [
+          "ub",
+          [
+            "forced_transport",
+            9
+          ],
+          1
+        ],
+        [
+          "ub",
+          [
+            "forced_transport",
+            10
+          ],
+          1
+        ],
+        [
+          "ub",
+          [
+            "forced_transport",
+            11
+          ],
+          1
+        ],
+        [
+          "ub",
+          [
+            "heavy_mass"
+          ],
+          16
+        ]
+      ]
+    },
+    {
+      "id": 26,
+      "weights": [
+        [
+          "ub",
+          [
+            "heavy_mass"
+          ],
+          9
+        ],
+        [
+          "ub",
+          [
+            "heavy_receiving"
+          ],
+          17
+        ],
+        [
+          "ub",
+          [
+            "load"
+          ],
+          7
+        ]
+      ]
+    },
+    {
+      "id": 27,
+      "weights": [
+        [
+          "ub",
+          [
+            "all_transport",
+            2
+          ],
+          10
+        ],
+        [
+          "ub",
+          [
+            "forced_transport",
+            4
+          ],
+          3
+        ],
+        [
+          "ub",
+          [
+            "forced_transport",
+            5
+          ],
+          1
+        ],
+        [
+          "ub",
+          [
+            "heavy_mass"
+          ],
+          13
+        ],
+        [
+          "ub",
+          [
+            "heavy_receiving"
+          ],
+          4
+        ],
+        [
+          "ub",
+          [
+            "load"
+          ],
+          3
+        ]
+      ]
+    },
+    {
+      "id": 28,
+      "weights": [
+        [
+          "ub",
+          [
+            "heavy_receiving"
+          ],
+          27
+        ],
+        [
+          "ub",
+          [
+            "load"
+          ],
+          4
+        ],
+        [
+          "ub",
+          [
+            "pair_capacity"
+          ],
+          5
+        ]
+      ]
+    },
+    {
+      "id": 29,
+      "weights": [
+        [
+          "ub",
+          [
+            "forced_transport",
+            7
+          ],
+          1
+        ],
+        [
+          "ub",
+          [
+            "forced_transport",
+            8
+          ],
+          2
+        ],
+        [
+          "ub",
+          [
+            "heavy_mass"
+          ],
+          9
+        ],
+        [
+          "ub",
+          [
+            "heavy_receiving"
+          ],
+          17
+        ],
+        [
+          "ub",
+          [
+            "load"
+          ],
+          7
+        ]
+      ]
+    },
+    {
+      "id": 30,
+      "weights": [
+        [
+          "ub",
+          [
+            "all_transport",
+            2
+          ],
+          10
+        ],
+        [
+          "ub",
+          [
+            "heavy_receiving"
+          ],
+          21
+        ],
+        [
+          "ub",
+          [
+            "load"
+          ],
+          7
+        ]
+      ]
+    }
+  ],
+  "modes": {
+    "heavy_only": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      15,
+      18,
+      19,
+      23,
+      24,
+      26,
+      28
+    ],
+    "selected_degree": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      15,
+      18,
+      19,
+      23,
+      24,
+      26,
+      28
+    ],
+    "eligible": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      12,
+      13,
+      14,
+      15,
+      16,
+      17,
+      18,
+      19,
+      20,
+      21,
+      22,
+      23,
+      24,
+      25,
+      26,
+      27,
+      28,
+      29,
+      30
+    ]
+  },
+  "seeds": [
+    {
+      "template_id": 3,
+      "rank": 1,
+      "weights": [
+        [
+          "ub",
+          [
+            "heavy_receiving"
+          ],
+          3
+        ],
+        [
+          "ub",
+          [
+            "load"
+          ],
+          1
+        ]
+      ],
+      "provenance": [
+        {
+          "mode": "separate_transport",
+          "layer": "n34-m289",
+          "state_id": 66,
+          "h": 2,
+          "j": 10,
+          "attempt_index": 15
+        }
+      ]
+    },
+    {
+      "template_id": 8,
+      "rank": 2,
+      "weights": [
+        [
+          "eq",
+          [
+            "selected_balance"
+          ],
+          4
+        ],
+        [
+          "ub",
+          [
+            "heavy_receiving"
+          ],
+          1
+        ],
+        [
+          "ub",
+          [
+            "load"
+          ],
+          1
+        ]
+      ],
+      "provenance": [
+        {
+          "mode": "selected_balance",
+          "layer": "n34-m289",
+          "state_id": 3972,
+          "h": 4,
+          "j": 3,
+          "attempt_index": 5
+        }
+      ]
+    },
+    {
+      "template_id": 9,
+      "rank": 3,
+      "weights": [
+        [
+          "ub",
+          [
+            "all_transport",
+            2
+          ],
+          3
+        ],
+        [
+          "ub",
+          [
+            "heavy_receiving"
+          ],
+          3
+        ],
+        [
+          "ub",
+          [
+            "load"
+          ],
+          1
+        ]
+      ],
+      "provenance": [
+        {
+          "mode": "separate_transport",
+          "layer": "n35-m306",
+          "state_id": 134,
+          "h": 4,
+          "j": 9,
+          "attempt_index": 16
+        }
+      ]
+    },
+    {
+      "template_id": 10,
+      "rank": 4,
+      "weights": [
+        [
+          "ub",
+          [
+            "all_transport",
+            3
+          ],
+          2
+        ],
+        [
+          "ub",
+          [
+            "heavy_receiving"
+          ],
+          4
+        ],
+        [
+          "ub",
+          [
+            "load"
+          ],
+          1
+        ]
+      ],
+      "provenance": [
+        {
+          "mode": "separate_transport",
+          "layer": "n34-m289",
+          "state_id": 3972,
+          "h": 4,
+          "j": 7,
+          "attempt_index": 15
+        },
+        {
+          "mode": "separate_transport",
+          "layer": "n34-m289",
+          "state_id": 3972,
+          "h": 4,
+          "j": 10,
+          "attempt_index": 18
+        }
+      ]
+    },
+    {
+      "template_id": 11,
+      "rank": 5,
+      "weights": [
+        [
+          "ub",
+          [
+            "all_transport",
+            3
+          ],
+          3
+        ],
+        [
+          "ub",
+          [
+            "heavy_receiving"
+          ],
+          3
+        ],
+        [
+          "ub",
+          [
+            "load"
+          ],
+          1
+        ]
+      ],
+      "provenance": [
+        {
+          "mode": "separate_transport",
+          "layer": "n35-m306",
+          "state_id": 2,
+          "h": 4,
+          "j": 6,
+          "attempt_index": 11
+        }
+      ]
+    },
+    {
+      "template_id": 12,
+      "rank": 6,
+      "weights": [
+        [
+          "ub",
+          [
+            "all_transport",
+            2
+          ],
+          3
+        ],
+        [
+          "ub",
+          [
+            "heavy_receiving"
+          ],
+          2
+        ],
+        [
+          "ub",
+          [
+            "load"
+          ],
+          1
+        ],
+        [
+          "ub",
+          [
+            "pair_capacity"
+          ],
+          2
+        ]
+      ],
+      "provenance": [
+        {
+          "mode": "separate_transport",
+          "layer": "n35-m306",
+          "state_id": 386,
+          "h": 4,
+          "j": 12,
+          "attempt_index": 22
+        }
+      ]
+    },
+    {
+      "template_id": 13,
+      "rank": 7,
+      "weights": [
+        [
+          "ub",
+          [
+            "all_transport",
+            2
+          ],
+          4
+        ],
+        [
+          "ub",
+          [
+            "heavy_mass"
+          ],
+          1
+        ],
+        [
+          "ub",
+          [
+            "heavy_receiving"
+          ],
+          2
+        ],
+        [
+          "ub",
+          [
+            "load"
+          ],
+          1
+        ]
+      ],
+      "provenance": [
+        {
+          "mode": "separate_transport",
+          "layer": "n34-m289",
+          "state_id": 4665,
+          "h": 4,
+          "j": 6,
+          "attempt_index": 11
+        }
+      ]
+    },
+    {
+      "template_id": 14,
+      "rank": 8,
+      "weights": [
+        [
+          "ub",
+          [
+            "all_transport",
+            2
+          ],
+          4
+        ],
+        [
+          "ub",
+          [
+            "heavy_mass"
+          ],
+          2
+        ],
+        [
+          "ub",
+          [
+            "heavy_receiving"
+          ],
+          1
+        ],
+        [
+          "ub",
+          [
+            "load"
+          ],
+          1
+        ]
+      ],
+      "provenance": [
+        {
+          "mode": "separate_transport",
+          "layer": "n35-m306",
+          "state_id": 386,
+          "h": 4,
+          "j": 3,
+          "attempt_index": 13
+        }
+      ]
+    },
+    {
+      "template_id": 16,
+      "rank": 9,
+      "weights": [
+        [
+          "ub",
+          [
+            "forced_transport",
+            9
+          ],
+          1
+        ],
+        [
+          "ub",
+          [
+            "heavy_mass"
+          ],
+          11
+        ]
+      ],
+      "provenance": [
+        {
+          "mode": "separate_transport",
+          "layer": "n34-m289",
+          "state_id": 11291,
+          "h": 2,
+          "j": 6,
+          "attempt_index": 10
+        }
+      ]
+    },
+    {
+      "template_id": 17,
+      "rank": 10,
+      "weights": [
+        [
+          "ub",
+          [
+            "all_transport",
+            2
+          ],
+          1
+        ],
+        [
+          "ub",
+          [
+            "all_transport",
+            3
+          ],
+          7
+        ],
+        [
+          "ub",
+          [
+            "all_transport",
+            5
+          ],
+          1
+        ],
+        [
+          "ub",
+          [
+            "heavy_mass"
+          ],
+          3
+        ],
+        [
+          "ub",
+          [
+            "load"
+          ],
+          1
+        ]
+      ],
+      "provenance": [
+        {
+          "mode": "separate_transport",
+          "layer": "n34-m289",
+          "state_id": 13542,
+          "h": 6,
+          "j": 7,
+          "attempt_index": 18
+        }
+      ]
+    },
+    {
+      "template_id": 19,
+      "rank": 11,
+      "weights": [
+        [
+          "ub",
+          [
+            "heavy_mass"
+          ],
+          4
+        ],
+        [
+          "ub",
+          [
+            "heavy_receiving"
+          ],
+          11
+        ],
+        [
+          "ub",
+          [
+            "load"
+          ],
+          3
+        ]
+      ],
+      "provenance": [
+        {
+          "mode": "separate_transport",
+          "layer": "n34-m289",
+          "state_id": 66,
+          "h": 2,
+          "j": 9,
+          "attempt_index": 14
+        },
+        {
+          "mode": "separate_transport",
+          "layer": "n34-m289",
+          "state_id": 133,
+          "h": 2,
+          "j": 9,
+          "attempt_index": 14
+        },
+        {
+          "mode": "separate_transport",
+          "layer": "n34-m289",
+          "state_id": 184,
+          "h": 2,
+          "j": 9,
+          "attempt_index": 11
+        },
+        {
+          "mode": "separate_transport",
+          "layer": "n34-m289",
+          "state_id": 316,
+          "h": 2,
+          "j": 9,
+          "attempt_index": 11
+        }
+      ]
+    },
+    {
+      "template_id": 20,
+      "rank": 12,
+      "weights": [
+        [
+          "ub",
+          [
+            "all_transport",
+            2
+          ],
+          8
+        ],
+        [
+          "ub",
+          [
+            "heavy_mass"
+          ],
+          4
+        ],
+        [
+          "ub",
+          [
+            "heavy_receiving"
+          ],
+          5
+        ],
+        [
+          "ub",
+          [
+            "load"
+          ],
+          2
+        ]
+      ],
+      "provenance": [
+        {
+          "mode": "separate_transport",
+          "layer": "n35-m306",
+          "state_id": 134,
+          "h": 4,
+          "j": 5,
+          "attempt_index": 12
+        }
+      ]
+    },
+    {
+      "template_id": 21,
+      "rank": 13,
+      "weights": [
+        [
+          "ub",
+          [
+            "all_transport",
+            3
+          ],
+          5
+        ],
+        [
+          "ub",
+          [
+            "heavy_mass"
+          ],
+          3
+        ],
+        [
+          "ub",
+          [
+            "heavy_receiving"
+          ],
+          9
+        ],
+        [
+          "ub",
+          [
+            "load"
+          ],
+          2
+        ]
+      ],
+      "provenance": [
+        {
+          "mode": "separate_transport",
+          "layer": "n35-m306",
+          "state_id": 8,
+          "h": 4,
+          "j": 5,
+          "attempt_index": 11
+        }
+      ]
+    },
+    {
+      "template_id": 22,
+      "rank": 14,
+      "weights": [
+        [
+          "ub",
+          [
+            "all_transport",
+            2
+          ],
+          6
+        ],
+        [
+          "ub",
+          [
+            "all_transport",
+            3
+          ],
+          2
+        ],
+        [
+          "ub",
+          [
+            "heavy_mass"
+          ],
+          4
+        ],
+        [
+          "ub",
+          [
+            "heavy_receiving"
+          ],
+          5
+        ],
+        [
+          "ub",
+          [
+            "load"
+          ],
+          2
+        ]
+      ],
+      "provenance": [
+        {
+          "mode": "separate_transport",
+          "layer": "n35-m306",
+          "state_id": 136,
+          "h": 4,
+          "j": 6,
+          "attempt_index": 13
+        }
+      ]
+    },
+    {
+      "template_id": 24,
+      "rank": 15,
+      "weights": [
+        [
+          "ub",
+          [
+            "heavy_mass"
+          ],
+          6
+        ],
+        [
+          "ub",
+          [
+            "heavy_receiving"
+          ],
+          16
+        ],
+        [
+          "ub",
+          [
+            "load"
+          ],
+          5
+        ]
+      ],
+      "provenance": [
+        {
+          "mode": "separate_transport",
+          "layer": "n34-m289",
+          "state_id": 133,
+          "h": 2,
+          "j": 6,
+          "attempt_index": 11
+        },
+        {
+          "mode": "separate_transport",
+          "layer": "n34-m289",
+          "state_id": 184,
+          "h": 2,
+          "j": 8,
+          "attempt_index": 10
+        }
+      ]
+    },
+    {
+      "template_id": 25,
+      "rank": 16,
+      "weights": [
+        [
+          "ub",
+          [
+            "forced_transport",
+            5
+          ],
+          3
+        ],
+        [
+          "ub",
+          [
+            "forced_transport",
+            6
+          ],
+          2
+        ],
+        [
+          "ub",
+          [
+            "forced_transport",
+            7
+          ],
+          2
+        ],
+        [
+          "ub",
+          [
+            "forced_transport",
+            8
+          ],
+          1
+        ],
+        [
+          "ub",
+          [
+            "forced_transport",
+            9
+          ],
+          1
+        ],
+        [
+          "ub",
+          [
+            "forced_transport",
+            10
+          ],
+          1
+        ],
+        [
+          "ub",
+          [
+            "forced_transport",
+            11
+          ],
+          1
+        ],
+        [
+          "ub",
+          [
+            "heavy_mass"
+          ],
+          16
+        ]
+      ],
+      "provenance": [
+        {
+          "mode": "separate_transport",
+          "layer": "n34-m289",
+          "state_id": 60,
+          "h": 2,
+          "j": 2,
+          "attempt_index": 10
+        }
+      ]
+    },
+    {
+      "template_id": 27,
+      "rank": 17,
+      "weights": [
+        [
+          "ub",
+          [
+            "all_transport",
+            2
+          ],
+          10
+        ],
+        [
+          "ub",
+          [
+            "forced_transport",
+            4
+          ],
+          3
+        ],
+        [
+          "ub",
+          [
+            "forced_transport",
+            5
+          ],
+          1
+        ],
+        [
+          "ub",
+          [
+            "heavy_mass"
+          ],
+          13
+        ],
+        [
+          "ub",
+          [
+            "heavy_receiving"
+          ],
+          4
+        ],
+        [
+          "ub",
+          [
+            "load"
+          ],
+          3
+        ]
+      ],
+      "provenance": [
+        {
+          "mode": "separate_transport",
+          "layer": "n34-m289",
+          "state_id": 275,
+          "h": 3,
+          "j": 2,
+          "attempt_index": 9
+        }
+      ]
+    },
+    {
+      "template_id": 28,
+      "rank": 18,
+      "weights": [
+        [
+          "ub",
+          [
+            "heavy_receiving"
+          ],
+          27
+        ],
+        [
+          "ub",
+          [
+            "load"
+          ],
+          4
+        ],
+        [
+          "ub",
+          [
+            "pair_capacity"
+          ],
+          5
+        ]
+      ],
+      "provenance": [
+        {
+          "mode": "selected_balance",
+          "layer": "n35-m307",
+          "state_id": 18,
+          "h": 5,
+          "j": 9,
+          "attempt_index": 13
+        }
+      ]
+    },
+    {
+      "template_id": 29,
+      "rank": 19,
+      "weights": [
+        [
+          "ub",
+          [
+            "forced_transport",
+            7
+          ],
+          1
+        ],
+        [
+          "ub",
+          [
+            "forced_transport",
+            8
+          ],
+          2
+        ],
+        [
+          "ub",
+          [
+            "heavy_mass"
+          ],
+          9
+        ],
+        [
+          "ub",
+          [
+            "heavy_receiving"
+          ],
+          17
+        ],
+        [
+          "ub",
+          [
+            "load"
+          ],
+          7
+        ]
+      ],
+      "provenance": [
+        {
+          "mode": "separate_transport",
+          "layer": "n35-m306",
+          "state_id": 35,
+          "h": 2,
+          "j": 6,
+          "attempt_index": 8
+        }
+      ]
+    },
+    {
+      "template_id": 30,
+      "rank": 20,
+      "weights": [
+        [
+          "ub",
+          [
+            "all_transport",
+            2
+          ],
+          10
+        ],
+        [
+          "ub",
+          [
+            "heavy_receiving"
+          ],
+          21
+        ],
+        [
+          "ub",
+          [
+            "load"
+          ],
+          7
+        ]
+      ],
+      "provenance": [
+        {
+          "mode": "separate_transport",
+          "layer": "n34-m289",
+          "state_id": 275,
+          "h": 3,
+          "j": 6,
+          "attempt_index": 13
+        }
+      ]
+    }
+  ],
+  "external_review": "OPEN"
+}

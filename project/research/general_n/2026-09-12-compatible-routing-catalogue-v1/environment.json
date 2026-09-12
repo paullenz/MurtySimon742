@@ -1,0 +1,20 @@
+{
+  "python": "3.12.14",
+  "platform": "Linux-6.18.35-x86_64-with-glibc2.39",
+  "compiler": "g++ (Ubuntu 13.3.0-6ubuntu2~24.04) 13.3.0",
+  "compile_command": [
+    "g++",
+    "-std=c++17",
+    "-O2",
+    "-Wall",
+    "-Wextra",
+    "-o",
+    "/workspace/scratch/138cf11dfd69/compatible_catalogue_replay",
+    "project/research/general_n/2026-09-12-compatible-routing-catalogue-v1/replay.cpp"
+  ],
+  "exit_code": 0,
+  "original_replay_seconds": 0.3619304979984008,
+  "catalogue_sha256": "1f8c90af470320f616d9ccba030fa738988d46569af5651572fc9c90ef68e757",
+  "solver_used": false,
+  "integer_type": "signed 64-bit; bounded input and coefficient domains asserted"
+}

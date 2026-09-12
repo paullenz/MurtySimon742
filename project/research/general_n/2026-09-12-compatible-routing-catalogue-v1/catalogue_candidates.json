@@ -1,0 +1,8236 @@
+[
+  {
+    "rank": 1,
+    "weights": [
+      [
+        "ub",
+        [
+          "heavy_receiving"
+        ],
+        3
+      ],
+      [
+        "ub",
+        [
+          "load"
+        ],
+        1
+      ]
+    ],
+    "selected": true,
+    "provenance": [
+      {
+        "mode": "separate_transport",
+        "layer": "n34-m289",
+        "state_id": 66,
+        "h": 2,
+        "j": 10,
+        "attempt_index": 15
+      }
+    ]
+  },
+  {
+    "rank": 2,
+    "weights": [
+      [
+        "eq",
+        [
+          "selected_balance"
+        ],
+        4
+      ],
+      [
+        "ub",
+        [
+          "heavy_receiving"
+        ],
+        1
+      ],
+      [
+        "ub",
+        [
+          "load"
+        ],
+        1
+      ]
+    ],
+    "selected": true,
+    "provenance": [
+      {
+        "mode": "selected_balance",
+        "layer": "n34-m289",
+        "state_id": 3972,
+        "h": 4,
+        "j": 3,
+        "attempt_index": 5
+      }
+    ]
+  },
+  {
+    "rank": 3,
+    "weights": [
+      [
+        "ub",
+        [
+          "all_transport",
+          2
+        ],
+        3
+      ],
+      [
+        "ub",
+        [
+          "heavy_receiving"
+        ],
+        3
+      ],
+      [
+        "ub",
+        [
+          "load"
+        ],
+        1
+      ]
+    ],
+    "selected": true,
+    "provenance": [
+      {
+        "mode": "separate_transport",
+        "layer": "n35-m306",
+        "state_id": 134,
+        "h": 4,
+        "j": 9,
+        "attempt_index": 16
+      }
+    ]
+  },
+  {
+    "rank": 4,
+    "weights": [
+      [
+        "ub",
+        [
+          "all_transport",
+          3
+        ],
+        2
+      ],
+      [
+        "ub",
+        [
+          "heavy_receiving"
+        ],
+        4
+      ],
+      [
+        "ub",
+        [
+          "load"
+        ],
+        1
+      ]
+    ],
+    "selected": true,
+    "provenance": [
+      {
+        "mode": "separate_transport",
+        "layer": "n34-m289",
+        "state_id": 3972,
+        "h": 4,
+        "j": 7,
+        "attempt_index": 15
+      },
+      {
+        "mode": "separate_transport",
+        "layer": "n34-m289",
+        "state_id": 3972,
+        "h": 4,
+        "j": 10,
+        "attempt_index": 18
+      }
+    ]
+  },
+  {
+    "rank": 5,
+    "weights": [
+      [
+        "ub",
+        [
+          "all_transport",
+          3
+        ],
+        3
+      ],
+      [
+        "ub",
+        [
+          "heavy_receiving"
+        ],
+        3
+      ],
+      [
+        "ub",
+        [
+          "load"
+        ],
+        1
+      ]
+    ],
+    "selected": true,
+    "provenance": [
+      {
+        "mode": "separate_transport",
+        "layer": "n35-m306",
+        "state_id": 2,
+        "h": 4,
+        "j": 6,
+        "attempt_index": 11
+      }
+    ]
+  },
+  {
+    "rank": 6,
+    "weights": [
+      [
+        "ub",
+        [
+          "all_transport",
+          2
+        ],
+        3
+      ],
+      [
+        "ub",
+        [
+          "heavy_receiving"
+        ],
+        2
+      ],
+      [
+        "ub",
+        [
+          "load"
+        ],
+        1
+      ],
+      [
+        "ub",
+        [
+          "pair_capacity"
+        ],
+        2
+      ]
+    ],
+    "selected": true,
+    "provenance": [
+      {
+        "mode": "separate_transport",
+        "layer": "n35-m306",
+        "state_id": 386,
+        "h": 4,
+        "j": 12,
+        "attempt_index": 22
+      }
+    ]
+  },
+  {
+    "rank": 7,
+    "weights": [
+      [
+        "ub",
+        [
+          "all_transport",
+          2
+        ],
+        4
+      ],
+      [
+        "ub",
+        [
+          "heavy_mass"
+        ],
+        1
+      ],
+      [
+        "ub",
+        [
+          "heavy_receiving"
+        ],
+        2
+      ],
+      [
+        "ub",
+        [
+          "load"
+        ],
+        1
+      ]
+    ],
+    "selected": true,
+    "provenance": [
+      {
+        "mode": "separate_transport",
+        "layer": "n34-m289",
+        "state_id": 4665,
+        "h": 4,
+        "j": 6,
+        "attempt_index": 11
+      }
+    ]
+  },
+  {
+    "rank": 8,
+    "weights": [
+      [
+        "ub",
+        [
+          "all_transport",
+          2
+        ],
+        4
+      ],
+      [
+        "ub",
+        [
+          "heavy_mass"
+        ],
+        2
+      ],
+      [
+        "ub",
+        [
+          "heavy_receiving"
+        ],
+        1
+      ],
+      [
+        "ub",
+        [
+          "load"
+        ],
+        1
+      ]
+    ],
+    "selected": true,
+    "provenance": [
+      {
+        "mode": "separate_transport",
+        "layer": "n35-m306",
+        "state_id": 386,
+        "h": 4,
+        "j": 3,
+        "attempt_index": 13
+      }
+    ]
+  },
+  {
+    "rank": 9,
+    "weights": [
+      [
+        "ub",
+        [
+          "forced_transport",
+          9
+        ],
+        1
+      ],
+      [
+        "ub",
+        [
+          "heavy_mass"
+        ],
+        11
+      ]
+    ],
+    "selected": true,
+    "provenance": [
+      {
+        "mode": "separate_transport",
+        "layer": "n34-m289",
+        "state_id": 11291,
+        "h": 2,
+        "j": 6,
+        "attempt_index": 10
+      }
+    ]
+  },
+  {
+    "rank": 10,
+    "weights": [
+      [
+        "ub",
+        [
+          "all_transport",
+          2
+        ],
+        1
+      ],
+      [
+        "ub",
+        [
+          "all_transport",
+          3
+        ],
+        7
+      ],
+      [
+        "ub",
+        [
+          "all_transport",
+          5
+        ],
+        1
+      ],
+      [
+        "ub",
+        [
+          "heavy_mass"
+        ],
+        3
+      ],
+      [
+        "ub",
+        [
+          "load"
+        ],
+        1
+      ]
+    ],
+    "selected": true,
+    "provenance": [
+      {
+        "mode": "separate_transport",
+        "layer": "n34-m289",
+        "state_id": 13542,
+        "h": 6,
+        "j": 7,
+        "attempt_index": 18
+      }
+    ]
+  },
+  {
+    "rank": 11,
+    "weights": [
+      [
+        "ub",
+        [
+          "heavy_mass"
+        ],
+        4
+      ],
+      [
+        "ub",
+        [
+          "heavy_receiving"
+        ],
+        11
+      ],
+      [
+        "ub",
+        [
+          "load"
+        ],
+        3
+      ]
+    ],
+    "selected": true,
+    "provenance": [
+      {
+        "mode": "separate_transport",
+        "layer": "n34-m289",
+        "state_id": 66,
+        "h": 2,
+        "j": 9,
+        "attempt_index": 14
+      },
+      {
+        "mode": "separate_transport",
+        "layer": "n34-m289",
+        "state_id": 133,
+        "h": 2,
+        "j": 9,
+        "attempt_index": 14
+      },
+      {
+        "mode": "separate_transport",
+        "layer": "n34-m289",
+        "state_id": 184,
+        "h": 2,
+        "j": 9,
+        "attempt_index": 11
+      },
+      {
+        "mode": "separate_transport",
+        "layer": "n34-m289",
+        "state_id": 316,
+        "h": 2,
+        "j": 9,
+        "attempt_index": 11
+      }
+    ]
+  },
+  {
+    "rank": 12,
+    "weights": [
+      [
+        "ub",
+        [
+          "all_transport",
+          2
+        ],
+        8
+      ],
+      [
+        "ub",
+        [
+          "heavy_mass"
+        ],
+        4
+      ],
+      [
+        "ub",
+        [
+          "heavy_receiving"
+        ],
+        5
+      ],
+      [
+        "ub",
+        [
+          "load"
+        ],
+        2
+      ]
+    ],
+    "selected": true,
+    "provenance": [
+      {
+        "mode": "separate_transport",
+        "layer": "n35-m306",
+        "state_id": 134,
+        "h": 4,
+        "j": 5,
+        "attempt_index": 12
+      }
+    ]
+  },
+  {
+    "rank": 13,
+    "weights": [
+      [
+        "ub",
+        [
+          "all_transport",
+          3
+        ],
+        5
+      ],
+      [
+        "ub",
+        [
+          "heavy_mass"
+        ],
+        3
+      ],
+      [
+        "ub",
+        [
+          "heavy_receiving"
+        ],
+        9
+      ],
+      [
+        "ub",
+        [
+          "load"
+        ],
+        2
+      ]
+    ],
+    "selected": true,
+    "provenance": [
+      {
+        "mode": "separate_transport",
+        "layer": "n35-m306",
+        "state_id": 8,
+        "h": 4,
+        "j": 5,
+        "attempt_index": 11
+      }
+    ]
+  },
+  {
+    "rank": 14,
+    "weights": [
+      [
+        "ub",
+        [
+          "all_transport",
+          2
+        ],
+        6
+      ],
+      [
+        "ub",
+        [
+          "all_transport",
+          3
+        ],
+        2
+      ],
+      [
+        "ub",
+        [
+          "heavy_mass"
+        ],
+        4
+      ],
+      [
+        "ub",
+        [
+          "heavy_receiving"
+        ],
+        5
+      ],
+      [
+        "ub",
+        [
+          "load"
+        ],
+        2
+      ]
+    ],
+    "selected": true,
+    "provenance": [
+      {
+        "mode": "separate_transport",
+        "layer": "n35-m306",
+        "state_id": 136,
+        "h": 4,
+        "j": 6,
+        "attempt_index": 13
+      }
+    ]
+  },
+  {
+    "rank": 15,
+    "weights": [
+      [
+        "ub",
+        [
+          "heavy_mass"
+        ],
+        6
+      ],
+      [
+        "ub",
+        [
+          "heavy_receiving"
+        ],
+        16
+      ],
+      [
+        "ub",
+        [
+          "load"
+        ],
+        5
+      ]
+    ],
+    "selected": true,
+    "provenance": [
+      {
+        "mode": "separate_transport",
+        "layer": "n34-m289",
+        "state_id": 133,
+        "h": 2,
+        "j": 6,
+        "attempt_index": 11
+      },
+      {
+        "mode": "separate_transport",
+        "layer": "n34-m289",
+        "state_id": 184,
+        "h": 2,
+        "j": 8,
+        "attempt_index": 10
+      }
+    ]
+  },
+  {
+    "rank": 16,
+    "weights": [
+      [
+        "ub",
+        [
+          "forced_transport",
+          5
+        ],
+        3
+      ],
+      [
+        "ub",
+        [
+          "forced_transport",
+          6
+        ],
+        2
+      ],
+      [
+        "ub",
+        [
+          "forced_transport",
+          7
+        ],
+        2
+      ],
+      [
+        "ub",
+        [
+          "forced_transport",
+          8
+        ],
+        1
+      ],
+      [
+        "ub",
+        [
+          "forced_transport",
+          9
+        ],
+        1
+      ],
+      [
+        "ub",
+        [
+          "forced_transport",
+          10
+        ],
+        1
+      ],
+      [
+        "ub",
+        [
+          "forced_transport",
+          11
+        ],
+        1
+      ],
+      [
+        "ub",
+        [
+          "heavy_mass"
+        ],
+        16
+      ]
+    ],
+    "selected": true,
+    "provenance": [
+      {
+        "mode": "separate_transport",
+        "layer": "n34-m289",
+        "state_id": 60,
+        "h": 2,
+        "j": 2,
+        "attempt_index": 10
+      }
+    ]
+  },
+  {
+    "rank": 17,
+    "weights": [
+      [
+        "ub",
+        [
+          "all_transport",
+          2
+        ],
+        10
+      ],
+      [
+        "ub",
+        [
+          "forced_transport",
+          4
+        ],
+        3
+      ],
+      [
+        "ub",
+        [
+          "forced_transport",
+          5
+        ],
+        1
+      ],
+      [
+        "ub",
+        [
+          "heavy_mass"
+        ],
+        13
+      ],
+      [
+        "ub",
+        [
+          "heavy_receiving"
+        ],
+        4
+      ],
+      [
+        "ub",
+        [
+          "load"
+        ],
+        3
+      ]
+    ],
+    "selected": true,
+    "provenance": [
+      {
+        "mode": "separate_transport",
+        "layer": "n34-m289",
+        "state_id": 275,
+        "h": 3,
+        "j": 2,
+        "attempt_index": 9
+      }
+    ]
+  },
+  {
+    "rank": 18,
+    "weights": [
+      [
+        "ub",
+        [
+          "heavy_receiving"
+        ],
+        27
+      ],
+      [
+        "ub",
+        [
+          "load"
+        ],
+        4
+      ],
+      [
+        "ub",
+        [
+          "pair_capacity"
+        ],
+        5
+      ]
+    ],
+    "selected": true,
+    "provenance": [
+      {
+        "mode": "selected_balance",
+        "layer": "n35-m307",
+        "state_id": 18,
+        "h": 5,
+        "j": 9,
+        "attempt_index": 13
+      }
+    ]
+  },
+  {
+    "rank": 19,
+    "weights": [
+      [
+        "ub",
+        [
+          "forced_transport",
+          7
+        ],
+        1
+      ],
+      [
+        "ub",
+        [
+          "forced_transport",
+          8
+        ],
+        2
+      ],
+      [
+        "ub",
+        [
+          "heavy_mass"
+        ],
+        9
+      ],
+      [
+        "ub",
+        [
+          "heavy_receiving"
+        ],
+        17
+      ],
+      [
+        "ub",
+        [
+          "load"
+        ],
+        7
+      ]
+    ],
+    "selected": true,
+    "provenance": [
+      {
+        "mode": "separate_transport",
+        "layer": "n35-m306",
+        "state_id": 35,
+        "h": 2,
+        "j": 6,
+        "attempt_index": 8
+      }
+    ]
+  },
+  {
+    "rank": 20,
+    "weights": [
+      [
+        "ub",
+        [
+          "all_transport",
+          2
+        ],
+        10
+      ],
+      [
+        "ub",
+        [
+          "heavy_receiving"
+        ],
+        21
+      ],
+      [
+        "ub",
+        [
+          "load"
+        ],
+        7
+      ]
+    ],
+    "selected": true,
+    "provenance": [
+      {
+        "mode": "separate_transport",
+        "layer": "n34-m289",
+        "state_id": 275,
+        "h": 3,
+        "j": 6,
+        "attempt_index": 13
+      }
+    ]
+  },
+  {
+    "rank": 21,
+    "weights": [
+      [
+        "ub",
+        [
+          "forced_transport",
+          3
+        ],
+        6
+      ],
+      [
+        "ub",
+        [
+          "forced_transport",
+          4
+        ],
+        2
+      ],
+      [
+        "ub",
+        [
+          "forced_transport",
+          6
+        ],
+        2
+      ],
+      [
+        "ub",
+        [
+          "forced_transport",
+          7
+        ],
+        3
+      ],
+      [
+        "ub",
+        [
+          "forced_transport",
+          9
+        ],
+        1
+      ],
+      [
+        "ub",
+        [
+          "forced_transport",
+          10
+        ],
+        1
+      ],
+      [
+        "ub",
+        [
+          "forced_transport",
+          11
+        ],
+        1
+      ],
+      [
+        "ub",
+        [
+          "heavy_mass"
+        ],
+        16
+      ],
+      [
+        "ub",
+        [
+          "heavy_receiving"
+        ],
+        4
+      ],
+      [
+        "ub",
+        [
+          "load"
+        ],
+        4
+      ]
+    ],
+    "selected": false,
+    "provenance": [
+      {
+        "mode": "separate_transport",
+        "layer": "n34-m289",
+        "state_id": 316,
+        "h": 2,
+        "j": 4,
+        "attempt_index": 6
+      }
+    ]
+  },
+  {
+    "rank": 22,
+    "weights": [
+      [
+        "eq",
+        [
+          "selected_balance"
+        ],
+        25
+      ],
+      [
+        "ub",
+        [
+          "heavy_receiving"
+        ],
+        13
+      ],
+      [
+        "ub",
+        [
+          "load"
+        ],
+        5
+      ]
+    ],
+    "selected": false,
+    "provenance": [
+      {
+        "mode": "selected_balance",
+        "layer": "n34-m289",
+        "state_id": 11291,
+        "h": 5,
+        "j": 5,
+        "attempt_index": 8
+      }
+    ]
+  },
+  {
+    "rank": 23,
+    "weights": [
+      [
+        "eq",
+        [
+          "selected_balance"
+        ],
+        25
+      ],
+      [
+        "ub",
+        [
+          "heavy_receiving"
+        ],
+        14
+      ],
+      [
+        "ub",
+        [
+          "load"
+        ],
+        5
+      ]
+    ],
+    "selected": false,
+    "provenance": [
+      {
+        "mode": "selected_balance",
+        "layer": "n35-m307",
+        "state_id": 18,
+        "h": 5,
+        "j": 4,
+        "attempt_index": 8
+      }
+    ]
+  },
+  {
+    "rank": 24,
+    "weights": [
+      [
+        "ub",
+        [
+          "heavy_mass"
+        ],
+        10
+      ],
+      [
+        "ub",
+        [
+          "heavy_receiving"
+        ],
+        27
+      ],
+      [
+        "ub",
+        [
+          "load"
+        ],
+        8
+      ]
+    ],
+    "selected": false,
+    "provenance": [
+      {
+        "mode": "separate_transport",
+        "layer": "n34-m289",
+        "state_id": 66,
+        "h": 2,
+        "j": 7,
+        "attempt_index": 12
+      },
+      {
+        "mode": "separate_transport",
+        "layer": "n34-m289",
+        "state_id": 184,
+        "h": 2,
+        "j": 7,
+        "attempt_index": 9
+      },
+      {
+        "mode": "separate_transport",
+        "layer": "n34-m289",
+        "state_id": 316,
+        "h": 2,
+        "j": 7,
+        "attempt_index": 9
+      }
+    ]
+  },
+  {
+    "rank": 25,
+    "weights": [
+      [
+        "ub",
+        [
+          "forced_transport",
+          5
+        ],
+        1
+      ],
+      [
+        "ub",
+        [
+          "forced_transport",
+          6
+        ],
+        3
+      ],
+      [
+        "ub",
+        [
+          "forced_transport",
+          7
+        ],
+        4
+      ],
+      [
+        "ub",
+        [
+          "forced_transport",
+          9
+        ],
+        1
+      ],
+      [
+        "ub",
+        [
+          "forced_transport",
+          10
+        ],
+        1
+      ],
+      [
+        "ub",
+        [
+          "forced_transport",
+          11
+        ],
+        1
+      ],
+      [
+        "ub",
+        [
+          "heavy_mass"
+        ],
+        21
+      ],
+      [
+        "ub",
+        [
+          "heavy_receiving"
+        ],
+        11
+      ],
+      [
+        "ub",
+        [
+          "load"
+        ],
+        5
+      ]
+    ],
+    "selected": false,
+    "provenance": [
+      {
+        "mode": "separate_transport",
+        "layer": "n34-m289",
+        "state_id": 184,
+        "h": 2,
+        "j": 4,
+        "attempt_index": 6
+      }
+    ]
+  },
+  {
+    "rank": 26,
+    "weights": [
+      [
+        "ub",
+        [
+          "heavy_mass"
+        ],
+        17
+      ],
+      [
+        "ub",
+        [
+          "heavy_receiving"
+        ],
+        22
+      ],
+      [
+        "ub",
+        [
+          "load"
+        ],
+        11
+      ]
+    ],
+    "selected": false,
+    "provenance": [
+      {
+        "mode": "catalogue_free",
+        "layer": "n34-m289",
+        "state_id": 133,
+        "h": 2,
+        "j": 3,
+        "attempt_index": 0
+      },
+      {
+        "mode": "selected_balance",
+        "layer": "n34-m289",
+        "state_id": 133,
+        "h": 2,
+        "j": 3,
+        "attempt_index": 4
+      }
+    ]
+  },
+  {
+    "rank": 27,
+    "weights": [
+      [
+        "ub",
+        [
+          "all_transport",
+          2
+        ],
+        9
+      ],
+      [
+        "ub",
+        [
+          "all_transport",
+          3
+        ],
+        7
+      ],
+      [
+        "ub",
+        [
+          "forced_transport",
+          5
+        ],
+        1
+      ],
+      [
+        "ub",
+        [
+          "heavy_mass"
+        ],
+        18
+      ],
+      [
+        "ub",
+        [
+          "heavy_receiving"
+        ],
+        13
+      ],
+      [
+        "ub",
+        [
+          "load"
+        ],
+        4
+      ]
+    ],
+    "selected": false,
+    "provenance": [
+      {
+        "mode": "separate_transport",
+        "layer": "n34-m289",
+        "state_id": 11798,
+        "h": 4,
+        "j": 6,
+        "attempt_index": 12
+      }
+    ]
+  },
+  {
+    "rank": 28,
+    "weights": [
+      [
+        "ub",
+        [
+          "heavy_mass"
+        ],
+        20
+      ],
+      [
+        "ub",
+        [
+          "heavy_receiving"
+        ],
+        25
+      ],
+      [
+        "ub",
+        [
+          "load"
+        ],
+        12
+      ]
+    ],
+    "selected": false,
+    "provenance": [
+      {
+        "mode": "catalogue_free",
+        "layer": "n34-m289",
+        "state_id": 66,
+        "h": 2,
+        "j": 3,
+        "attempt_index": 0
+      },
+      {
+        "mode": "selected_balance",
+        "layer": "n34-m289",
+        "state_id": 66,
+        "h": 2,
+        "j": 3,
+        "attempt_index": 4
+      }
+    ]
+  },
+  {
+    "rank": 29,
+    "weights": [
+      [
+        "ub",
+        [
+          "all_transport",
+          2
+        ],
+        20
+      ],
+      [
+        "ub",
+        [
+          "forced_transport",
+          4
+        ],
+        5
+      ],
+      [
+        "ub",
+        [
+          "forced_transport",
+          5
+        ],
+        3
+      ],
+      [
+        "ub",
+        [
+          "heavy_mass"
+        ],
+        20
+      ],
+      [
+        "ub",
+        [
+          "heavy_receiving"
+        ],
+        7
+      ],
+      [
+        "ub",
+        [
+          "load"
+        ],
+        7
+      ]
+    ],
+    "selected": false,
+    "provenance": [
+      {
+        "mode": "separate_transport",
+        "layer": "n34-m289",
+        "state_id": 275,
+        "h": 3,
+        "j": 3,
+        "attempt_index": 10
+      }
+    ]
+  },
+  {
+    "rank": 30,
+    "weights": [
+      [
+        "ub",
+        [
+          "all_transport",
+          6
+        ],
+        1
+      ],
+      [
+        "ub",
+        [
+          "heavy_mass"
+        ],
+        16
+      ],
+      [
+        "ub",
+        [
+          "heavy_receiving"
+        ],
+        40
+      ],
+      [
+        "ub",
+        [
+          "load"
+        ],
+        13
+      ]
+    ],
+    "selected": false,
+    "provenance": [
+      {
+        "mode": "separate_transport",
+        "layer": "n34-m289",
+        "state_id": 184,
+        "h": 2,
+        "j": 6,
+        "attempt_index": 8
+      }
+    ]
+  },
+  {
+    "rank": 31,
+    "weights": [
+      [
+        "ub",
+        [
+          "forced_transport",
+          3
+        ],
+        8
+      ],
+      [
+        "ub",
+        [
+          "forced_transport",
+          4
+        ],
+        6
+      ],
+      [
+        "ub",
+        [
+          "forced_transport",
+          5
+        ],
+        2
+      ],
+      [
+        "ub",
+        [
+          "forced_transport",
+          6
+        ],
+        5
+      ],
+      [
+        "ub",
+        [
+          "forced_transport",
+          7
+        ],
+        4
+      ],
+      [
+        "ub",
+        [
+          "forced_transport",
+          8
+        ],
+        4
+      ],
+      [
+        "ub",
+        [
+          "forced_transport",
+          10
+        ],
+        2
+      ],
+      [
+        "ub",
+        [
+          "forced_transport",
+          11
+        ],
+        1
+      ],
+      [
+        "ub",
+        [
+          "heavy_mass"
+        ],
+        32
+      ],
+      [
+        "ub",
+        [
+          "load"
+        ],
+        7
+      ]
+    ],
+    "selected": false,
+    "provenance": [
+      {
+        "mode": "separate_transport",
+        "layer": "n34-m289",
+        "state_id": 275,
+        "h": 2,
+        "j": 4,
+        "attempt_index": 7
+      }
+    ]
+  },
+  {
+    "rank": 32,
+    "weights": [
+      [
+        "ub",
+        [
+          "forced_transport",
+          3
+        ],
+        15
+      ],
+      [
+        "ub",
+        [
+          "forced_transport",
+          4
+        ],
+        5
+      ],
+      [
+        "ub",
+        [
+          "forced_transport",
+          6
+        ],
+        5
+      ],
+      [
+        "ub",
+        [
+          "forced_transport",
+          7
+        ],
+        3
+      ],
+      [
+        "ub",
+        [
+          "forced_transport",
+          9
+        ],
+        2
+      ],
+      [
+        "ub",
+        [
+          "forced_transport",
+          10
+        ],
+        2
+      ],
+      [
+        "ub",
+        [
+          "forced_transport",
+          11
+        ],
+        2
+      ],
+      [
+        "ub",
+        [
+          "heavy_mass"
+        ],
+        30
+      ],
+      [
+        "ub",
+        [
+          "load"
+        ],
+        10
+      ]
+    ],
+    "selected": false,
+    "provenance": [
+      {
+        "mode": "separate_transport",
+        "layer": "n34-m289",
+        "state_id": 66,
+        "h": 2,
+        "j": 4,
+        "attempt_index": 9
+      }
+    ]
+  },
+  {
+    "rank": 33,
+    "weights": [
+      [
+        "ub",
+        [
+          "all_transport",
+          2
+        ],
+        34
+      ],
+      [
+        "ub",
+        [
+          "forced_transport",
+          9
+        ],
+        1
+      ],
+      [
+        "ub",
+        [
+          "heavy_mass"
+        ],
+        38
+      ],
+      [
+        "ub",
+        [
+          "load"
+        ],
+        4
+      ]
+    ],
+    "selected": false,
+    "provenance": [
+      {
+        "mode": "separate_transport",
+        "layer": "n34-m289",
+        "state_id": 9490,
+        "h": 4,
+        "j": 4,
+        "attempt_index": 13
+      }
+    ]
+  },
+  {
+    "rank": 34,
+    "weights": [
+      [
+        "ub",
+        [
+          "all_transport",
+          0
+        ],
+        15
+      ],
+      [
+        "ub",
+        [
+          "all_transport",
+          2
+        ],
+        5
+      ],
+      [
+        "ub",
+        [
+          "all_transport",
+          3
+        ],
+        25
+      ],
+      [
+        "ub",
+        [
+          "forced_transport",
+          5
+        ],
+        13
+      ],
+      [
+        "ub",
+        [
+          "forced_transport",
+          6
+        ],
+        5
+      ],
+      [
+        "ub",
+        [
+          "heavy_receiving"
+        ],
+        12
+      ],
+      [
+        "ub",
+        [
+          "load"
+        ],
+        15
+      ]
+    ],
+    "selected": false,
+    "provenance": [
+      {
+        "mode": "separate_transport",
+        "layer": "n34-m289",
+        "state_id": 3972,
+        "h": 4,
+        "j": 5,
+        "attempt_index": 13
+      }
+    ]
+  },
+  {
+    "rank": 35,
+    "weights": [
+      [
+        "ub",
+        [
+          "forced_transport",
+          6
+        ],
+        1
+      ],
+      [
+        "ub",
+        [
+          "forced_transport",
+          7
+        ],
+        13
+      ],
+      [
+        "ub",
+        [
+          "forced_transport",
+          10
+        ],
+        3
+      ],
+      [
+        "ub",
+        [
+          "forced_transport",
+          11
+        ],
+        2
+      ],
+      [
+        "ub",
+        [
+          "heavy_mass"
+        ],
+        43
+      ],
+      [
+        "ub",
+        [
+          "heavy_receiving"
+        ],
+        29
+      ],
+      [
+        "ub",
+        [
+          "load"
+        ],
+        14
+      ]
+    ],
+    "selected": false,
+    "provenance": [
+      {
+        "mode": "separate_transport",
+        "layer": "n34-m289",
+        "state_id": 60,
+        "h": 2,
+        "j": 4,
+        "attempt_index": 12
+      }
+    ]
+  },
+  {
+    "rank": 36,
+    "weights": [
+      [
+        "ub",
+        [
+          "heavy_mass"
+        ],
+        37
+      ],
+      [
+        "ub",
+        [
+          "heavy_receiving"
+        ],
+        47
+      ],
+      [
+        "ub",
+        [
+          "load"
+        ],
+        23
+      ]
+    ],
+    "selected": false,
+    "provenance": [
+      {
+        "mode": "catalogue_free",
+        "layer": "n34-m289",
+        "state_id": 275,
+        "h": 2,
+        "j": 3,
+        "attempt_index": 0
+      },
+      {
+        "mode": "selected_balance",
+        "layer": "n34-m289",
+        "state_id": 275,
+        "h": 2,
+        "j": 3,
+        "attempt_index": 3
+      }
+    ]
+  },
+  {
+    "rank": 37,
+    "weights": [
+      [
+        "ub",
+        [
+          "all_transport",
+          3
+        ],
+        23
+      ],
+      [
+        "ub",
+        [
+          "forced_transport",
+          7
+        ],
+        5
+      ],
+      [
+        "ub",
+        [
+          "forced_transport",
+          8
+        ],
+        5
+      ],
+      [
+        "ub",
+        [
+          "heavy_mass"
+        ],
+        70
+      ],
+      [
+        "ub",
+        [
+          "load"
+        ],
+        4
+      ]
+    ],
+    "selected": false,
+    "provenance": [
+      {
+        "mode": "separate_transport",
+        "layer": "n34-m289",
+        "state_id": 13530,
+        "h": 4,
+        "j": 8,
+        "attempt_index": 12
+      }
+    ]
+  },
+  {
+    "rank": 38,
+    "weights": [
+      [
+        "ub",
+        [
+          "all_transport",
+          2
+        ],
+        30
+      ],
+      [
+        "ub",
+        [
+          "forced_transport",
+          5
+        ],
+        14
+      ],
+      [
+        "ub",
+        [
+          "forced_transport",
+          7
+        ],
+        1
+      ],
+      [
+        "ub",
+        [
+          "forced_transport",
+          8
+        ],
+        3
+      ],
+      [
+        "ub",
+        [
+          "forced_transport",
+          9
+        ],
+        4
+      ],
+      [
+        "ub",
+        [
+          "heavy_mass"
+        ],
+        54
+      ],
+      [
+        "ub",
+        [
+          "load"
+        ],
+        10
+      ]
+    ],
+    "selected": false,
+    "provenance": [
+      {
+        "mode": "separate_transport",
+        "layer": "n35-m306",
+        "state_id": 134,
+        "h": 3,
+        "j": 5,
+        "attempt_index": 9
+      }
+    ]
+  },
+  {
+    "rank": 39,
+    "weights": [
+      [
+        "ub",
+        [
+          "heavy_mass"
+        ],
+        18
+      ],
+      [
+        "ub",
+        [
+          "heavy_receiving"
+        ],
+        73
+      ],
+      [
+        "ub",
+        [
+          "load"
+        ],
+        27
+      ]
+    ],
+    "selected": false,
+    "provenance": [
+      {
+        "mode": "catalogue_free",
+        "layer": "n35-m306",
+        "state_id": 35,
+        "h": 2,
+        "j": 7,
+        "attempt_index": 1
+      },
+      {
+        "mode": "selected_balance",
+        "layer": "n35-m306",
+        "state_id": 35,
+        "h": 2,
+        "j": 7,
+        "attempt_index": 5
+      },
+      {
+        "mode": "separate_transport",
+        "layer": "n35-m306",
+        "state_id": 35,
+        "h": 2,
+        "j": 7,
+        "attempt_index": 9
+      }
+    ]
+  },
+  {
+    "rank": 40,
+    "weights": [
+      [
+        "ub",
+        [
+          "heavy_mass"
+        ],
+        43
+      ],
+      [
+        "ub",
+        [
+          "heavy_receiving"
+        ],
+        67
+      ],
+      [
+        "ub",
+        [
+          "load"
+        ],
+        33
+      ]
+    ],
+    "selected": false,
+    "provenance": [
+      {
+        "mode": "catalogue_free",
+        "layer": "n34-m289",
+        "state_id": 184,
+        "h": 2,
+        "j": 4,
+        "attempt_index": 0
+      },
+      {
+        "mode": "selected_balance",
+        "layer": "n34-m289",
+        "state_id": 184,
+        "h": 2,
+        "j": 4,
+        "attempt_index": 3
+      }
+    ]
+  },
+  {
+    "rank": 41,
+    "weights": [
+      [
+        "ub",
+        [
+          "heavy_mass"
+        ],
+        33
+      ],
+      [
+        "ub",
+        [
+          "heavy_receiving"
+        ],
+        89
+      ],
+      [
+        "ub",
+        [
+          "load"
+        ],
+        28
+      ]
+    ],
+    "selected": false,
+    "provenance": [
+      {
+        "mode": "separate_transport",
+        "layer": "n34-m289",
+        "state_id": 66,
+        "h": 2,
+        "j": 6,
+        "attempt_index": 11
+      },
+      {
+        "mode": "separate_transport",
+        "layer": "n34-m289",
+        "state_id": 316,
+        "h": 2,
+        "j": 6,
+        "attempt_index": 8
+      }
+    ]
+  },
+  {
+    "rank": 42,
+    "weights": [
+      [
+        "eq",
+        [
+          "selected_balance"
+        ],
+        100
+      ],
+      [
+        "ub",
+        [
+          "heavy_receiving"
+        ],
+        34
+      ],
+      [
+        "ub",
+        [
+          "load"
+        ],
+        25
+      ]
+    ],
+    "selected": false,
+    "provenance": [
+      {
+        "mode": "selected_balance",
+        "layer": "n34-m289",
+        "state_id": 3972,
+        "h": 4,
+        "j": 4,
+        "attempt_index": 6
+      }
+    ]
+  },
+  {
+    "rank": 43,
+    "weights": [
+      [
+        "ub",
+        [
+          "heavy_receiving"
+        ],
+        153
+      ],
+      [
+        "ub",
+        [
+          "load"
+        ],
+        20
+      ]
+    ],
+    "selected": false,
+    "provenance": [
+      {
+        "mode": "catalogue_free",
+        "layer": "n34-m289",
+        "state_id": 11291,
+        "h": 5,
+        "j": 5,
+        "attempt_index": 3
+      }
+    ]
+  },
+  {
+    "rank": 44,
+    "weights": [
+      [
+        "ub",
+        [
+          "all_transport",
+          2
+        ],
+        102
+      ],
+      [
+        "ub",
+        [
+          "forced_transport",
+          8
+        ],
+        2
+      ],
+      [
+        "ub",
+        [
+          "forced_transport",
+          9
+        ],
+        1
+      ],
+      [
+        "ub",
+        [
+          "heavy_mass"
+        ],
+        102
+      ],
+      [
+        "ub",
+        [
+          "load"
+        ],
+        13
+      ]
+    ],
+    "selected": false,
+    "provenance": [
+      {
+        "mode": "separate_transport",
+        "layer": "n34-m289",
+        "state_id": 9490,
+        "h": 4,
+        "j": 6,
+        "attempt_index": 15
+      }
+    ]
+  },
+  {
+    "rank": 45,
+    "weights": [
+      [
+        "ub",
+        [
+          "forced_transport",
+          7
+        ],
+        9
+      ],
+      [
+        "ub",
+        [
+          "forced_transport",
+          8
+        ],
+        12
+      ],
+      [
+        "ub",
+        [
+          "forced_transport",
+          10
+        ],
+        4
+      ],
+      [
+        "ub",
+        [
+          "heavy_mass"
+        ],
+        92
+      ],
+      [
+        "ub",
+        [
+          "heavy_receiving"
+        ],
+        117
+      ],
+      [
+        "ub",
+        [
+          "load"
+        ],
+        47
+      ]
+    ],
+    "selected": false,
+    "provenance": [
+      {
+        "mode": "separate_transport",
+        "layer": "n34-m289",
+        "state_id": 972,
+        "h": 2,
+        "j": 5,
+        "attempt_index": 6
+      }
+    ]
+  },
+  {
+    "rank": 46,
+    "weights": [
+      [
+        "ub",
+        [
+          "all_transport",
+          2
+        ],
+        51
+      ],
+      [
+        "ub",
+        [
+          "forced_transport",
+          8
+        ],
+        26
+      ],
+      [
+        "ub",
+        [
+          "forced_transport",
+          9
+        ],
+        21
+      ],
+      [
+        "ub",
+        [
+          "heavy_mass"
+        ],
+        236
+      ],
+      [
+        "ub",
+        [
+          "load"
+        ],
+        17
+      ]
+    ],
+    "selected": false,
+    "provenance": [
+      {
+        "mode": "separate_transport",
+        "layer": "n34-m289",
+        "state_id": 9490,
+        "h": 3,
+        "j": 5,
+        "attempt_index": 10
+      }
+    ]
+  },
+  {
+    "rank": 47,
+    "weights": [
+      [
+        "ub",
+        [
+          "heavy_receiving"
+        ],
+        353
+      ],
+      [
+        "ub",
+        [
+          "load"
+        ],
+        49
+      ]
+    ],
+    "selected": false,
+    "provenance": [
+      {
+        "mode": "selected_balance",
+        "layer": "n35-m307",
+        "state_id": 18,
+        "h": 5,
+        "j": 8,
+        "attempt_index": 12
+      }
+    ]
+  },
+  {
+    "rank": 48,
+    "weights": [
+      [
+        "ub",
+        [
+          "all_transport",
+          2
+        ],
+        118
+      ],
+      [
+        "ub",
+        [
+          "forced_transport",
+          4
+        ],
+        22
+      ],
+      [
+        "ub",
+        [
+          "forced_transport",
+          5
+        ],
+        43
+      ],
+      [
+        "ub",
+        [
+          "forced_transport",
+          6
+        ],
+        16
+      ],
+      [
+        "ub",
+        [
+          "forced_transport",
+          9
+        ],
+        15
+      ],
+      [
+        "ub",
+        [
+          "heavy_mass"
+        ],
+        199
+      ],
+      [
+        "ub",
+        [
+          "load"
+        ],
+        49
+      ]
+    ],
+    "selected": false,
+    "provenance": [
+      {
+        "mode": "separate_transport",
+        "layer": "n35-m306",
+        "state_id": 386,
+        "h": 3,
+        "j": 6,
+        "attempt_index": 11
+      }
+    ]
+  },
+  {
+    "rank": 49,
+    "weights": [
+      [
+        "ub",
+        [
+          "all_transport",
+          3
+        ],
+        110
+      ],
+      [
+        "ub",
+        [
+          "all_transport",
+          4
+        ],
+        305
+      ],
+      [
+        "ub",
+        [
+          "load"
+        ],
+        73
+      ]
+    ],
+    "selected": false,
+    "provenance": [
+      {
+        "mode": "separate_transport",
+        "layer": "n35-m306",
+        "state_id": 2,
+        "h": 4,
+        "j": 8,
+        "attempt_index": 13
+      }
+    ]
+  },
+  {
+    "rank": 50,
+    "weights": [
+      [
+        "ub",
+        [
+          "all_transport",
+          2
+        ],
+        171
+      ],
+      [
+        "ub",
+        [
+          "all_transport",
+          3
+        ],
+        67
+      ],
+      [
+        "ub",
+        [
+          "heavy_mass"
+        ],
+        254
+      ],
+      [
+        "ub",
+        [
+          "heavy_receiving"
+        ],
+        53
+      ],
+      [
+        "ub",
+        [
+          "load"
+        ],
+        37
+      ]
+    ],
+    "selected": false,
+    "provenance": [
+      {
+        "mode": "separate_transport",
+        "layer": "n35-m307",
+        "state_id": 18,
+        "h": 4,
+        "j": 7,
+        "attempt_index": 19
+      }
+    ]
+  },
+  {
+    "rank": 51,
+    "weights": [
+      [
+        "ub",
+        [
+          "all_transport",
+          3
+        ],
+        143
+      ],
+      [
+        "ub",
+        [
+          "all_transport",
+          4
+        ],
+        397
+      ],
+      [
+        "ub",
+        [
+          "load"
+        ],
+        95
+      ]
+    ],
+    "selected": false,
+    "provenance": [
+      {
+        "mode": "separate_transport",
+        "layer": "n35-m306",
+        "state_id": 2,
+        "h": 4,
+        "j": 10,
+        "attempt_index": 15
+      }
+    ]
+  },
+  {
+    "rank": 52,
+    "weights": [
+      [
+        "ub",
+        [
+          "heavy_receiving"
+        ],
+        577
+      ],
+      [
+        "ub",
+        [
+          "load"
+        ],
+        77
+      ]
+    ],
+    "selected": false,
+    "provenance": [
+      {
+        "mode": "catalogue_free",
+        "layer": "n34-m289",
+        "state_id": 11291,
+        "h": 5,
+        "j": 6,
+        "attempt_index": 4
+      },
+      {
+        "mode": "selected_balance",
+        "layer": "n34-m289",
+        "state_id": 11291,
+        "h": 5,
+        "j": 6,
+        "attempt_index": 9
+      }
+    ]
+  },
+  {
+    "rank": 53,
+    "weights": [
+      [
+        "ub",
+        [
+          "all_transport",
+          2
+        ],
+        307
+      ],
+      [
+        "ub",
+        [
+          "heavy_mass"
+        ],
+        68
+      ],
+      [
+        "ub",
+        [
+          "heavy_receiving"
+        ],
+        216
+      ],
+      [
+        "ub",
+        [
+          "load"
+        ],
+        91
+      ]
+    ],
+    "selected": false,
+    "provenance": [
+      {
+        "mode": "separate_transport",
+        "layer": "n35-m306",
+        "state_id": 386,
+        "h": 4,
+        "j": 9,
+        "attempt_index": 19
+      }
+    ]
+  },
+  {
+    "rank": 54,
+    "weights": [
+      [
+        "ub",
+        [
+          "heavy_receiving"
+        ],
+        537
+      ],
+      [
+        "ub",
+        [
+          "load"
+        ],
+        80
+      ],
+      [
+        "ub",
+        [
+          "pair_capacity"
+        ],
+        99
+      ]
+    ],
+    "selected": false,
+    "provenance": [
+      {
+        "mode": "selected_balance",
+        "layer": "n35-m307",
+        "state_id": 18,
+        "h": 5,
+        "j": 10,
+        "attempt_index": 14
+      }
+    ]
+  },
+  {
+    "rank": 55,
+    "weights": [
+      [
+        "ub",
+        [
+          "all_transport",
+          3
+        ],
+        173
+      ],
+      [
+        "ub",
+        [
+          "all_transport",
+          4
+        ],
+        481
+      ],
+      [
+        "ub",
+        [
+          "load"
+        ],
+        115
+      ]
+    ],
+    "selected": false,
+    "provenance": [
+      {
+        "mode": "separate_transport",
+        "layer": "n35-m306",
+        "state_id": 2,
+        "h": 4,
+        "j": 9,
+        "attempt_index": 14
+      }
+    ]
+  },
+  {
+    "rank": 56,
+    "weights": [
+      [
+        "ub",
+        [
+          "all_transport",
+          3
+        ],
+        210
+      ],
+      [
+        "ub",
+        [
+          "heavy_receiving"
+        ],
+        479
+      ],
+      [
+        "ub",
+        [
+          "load"
+        ],
+        120
+      ]
+    ],
+    "selected": false,
+    "provenance": [
+      {
+        "mode": "separate_transport",
+        "layer": "n34-m289",
+        "state_id": 3972,
+        "h": 4,
+        "j": 9,
+        "attempt_index": 17
+      }
+    ]
+  },
+  {
+    "rank": 57,
+    "weights": [
+      [
+        "ub",
+        [
+          "all_transport",
+          2
+        ],
+        385
+      ],
+      [
+        "ub",
+        [
+          "heavy_receiving"
+        ],
+        342
+      ],
+      [
+        "ub",
+        [
+          "load"
+        ],
+        128
+      ]
+    ],
+    "selected": false,
+    "provenance": [
+      {
+        "mode": "separate_transport",
+        "layer": "n35-m306",
+        "state_id": 386,
+        "h": 4,
+        "j": 11,
+        "attempt_index": 21
+      }
+    ]
+  },
+  {
+    "rank": 58,
+    "weights": [
+      [
+        "ub",
+        [
+          "all_transport",
+          2
+        ],
+        482
+      ],
+      [
+        "ub",
+        [
+          "forced_transport",
+          8
+        ],
+        17
+      ],
+      [
+        "ub",
+        [
+          "forced_transport",
+          9
+        ],
+        1
+      ],
+      [
+        "ub",
+        [
+          "heavy_mass"
+        ],
+        438
+      ],
+      [
+        "ub",
+        [
+          "load"
+        ],
+        66
+      ]
+    ],
+    "selected": false,
+    "provenance": [
+      {
+        "mode": "separate_transport",
+        "layer": "n34-m289",
+        "state_id": 9490,
+        "h": 4,
+        "j": 7,
+        "attempt_index": 16
+      }
+    ]
+  },
+  {
+    "rank": 59,
+    "weights": [
+      [
+        "ub",
+        [
+          "all_transport",
+          3
+        ],
+        262
+      ],
+      [
+        "ub",
+        [
+          "heavy_receiving"
+        ],
+        599
+      ],
+      [
+        "ub",
+        [
+          "load"
+        ],
+        150
+      ]
+    ],
+    "selected": false,
+    "provenance": [
+      {
+        "mode": "separate_transport",
+        "layer": "n34-m289",
+        "state_id": 3972,
+        "h": 4,
+        "j": 8,
+        "attempt_index": 16
+      }
+    ]
+  },
+  {
+    "rank": 60,
+    "weights": [
+      [
+        "ub",
+        [
+          "all_transport",
+          3
+        ],
+        610
+      ],
+      [
+        "ub",
+        [
+          "all_transport",
+          5
+        ],
+        98
+      ],
+      [
+        "ub",
+        [
+          "heavy_receiving"
+        ],
+        207
+      ],
+      [
+        "ub",
+        [
+          "load"
+        ],
+        109
+      ]
+    ],
+    "selected": false,
+    "provenance": [
+      {
+        "mode": "separate_transport",
+        "layer": "n34-m289",
+        "state_id": 13542,
+        "h": 6,
+        "j": 10,
+        "attempt_index": 21
+      }
+    ]
+  },
+  {
+    "rank": 61,
+    "weights": [
+      [
+        "ub",
+        [
+          "heavy_receiving"
+        ],
+        844
+      ],
+      [
+        "ub",
+        [
+          "load"
+        ],
+        195
+      ]
+    ],
+    "selected": false,
+    "provenance": [
+      {
+        "mode": "separate_transport",
+        "layer": "n34-m289",
+        "state_id": 275,
+        "h": 3,
+        "j": 7,
+        "attempt_index": 14
+      }
+    ]
+  },
+  {
+    "rank": 62,
+    "weights": [
+      [
+        "ub",
+        [
+          "all_transport",
+          3
+        ],
+        204
+      ],
+      [
+        "ub",
+        [
+          "heavy_receiving"
+        ],
+        515
+      ],
+      [
+        "ub",
+        [
+          "load"
+        ],
+        136
+      ],
+      [
+        "ub",
+        [
+          "pair_capacity"
+        ],
+        233
+      ]
+    ],
+    "selected": false,
+    "provenance": [
+      {
+        "mode": "separate_transport",
+        "layer": "n35-m306",
+        "state_id": 8,
+        "h": 4,
+        "j": 8,
+        "attempt_index": 14
+      }
+    ]
+  },
+  {
+    "rank": 63,
+    "weights": [
+      [
+        "ub",
+        [
+          "all_transport",
+          3
+        ],
+        375
+      ],
+      [
+        "ub",
+        [
+          "forced_transport",
+          7
+        ],
+        21
+      ],
+      [
+        "ub",
+        [
+          "heavy_mass"
+        ],
+        250
+      ],
+      [
+        "ub",
+        [
+          "heavy_receiving"
+        ],
+        331
+      ],
+      [
+        "ub",
+        [
+          "load"
+        ],
+        125
+      ]
+    ],
+    "selected": false,
+    "provenance": [
+      {
+        "mode": "separate_transport",
+        "layer": "n35-m306",
+        "state_id": 2,
+        "h": 4,
+        "j": 3,
+        "attempt_index": 8
+      }
+    ]
+  },
+  {
+    "rank": 64,
+    "weights": [
+      [
+        "ub",
+        [
+          "all_transport",
+          3
+        ],
+        391
+      ],
+      [
+        "ub",
+        [
+          "all_transport",
+          4
+        ],
+        199
+      ],
+      [
+        "ub",
+        [
+          "all_transport",
+          5
+        ],
+        103
+      ],
+      [
+        "ub",
+        [
+          "forced_transport",
+          8
+        ],
+        41
+      ],
+      [
+        "ub",
+        [
+          "heavy_mass"
+        ],
+        242
+      ],
+      [
+        "ub",
+        [
+          "heavy_receiving"
+        ],
+        58
+      ],
+      [
+        "ub",
+        [
+          "load"
+        ],
+        88
+      ]
+    ],
+    "selected": false,
+    "provenance": [
+      {
+        "mode": "separate_transport",
+        "layer": "n34-m289",
+        "state_id": 13542,
+        "h": 6,
+        "j": 4,
+        "attempt_index": 15
+      }
+    ]
+  },
+  {
+    "rank": 65,
+    "weights": [
+      [
+        "ub",
+        [
+          "all_transport",
+          2
+        ],
+        508
+      ],
+      [
+        "ub",
+        [
+          "heavy_mass"
+        ],
+        113
+      ],
+      [
+        "ub",
+        [
+          "heavy_receiving"
+        ],
+        357
+      ],
+      [
+        "ub",
+        [
+          "load"
+        ],
+        150
+      ]
+    ],
+    "selected": false,
+    "provenance": [
+      {
+        "mode": "separate_transport",
+        "layer": "n35-m306",
+        "state_id": 386,
+        "h": 4,
+        "j": 10,
+        "attempt_index": 20
+      }
+    ]
+  },
+  {
+    "rank": 66,
+    "weights": [
+      [
+        "ub",
+        [
+          "all_transport",
+          3
+        ],
+        450
+      ],
+      [
+        "ub",
+        [
+          "all_transport",
+          4
+        ],
+        150
+      ],
+      [
+        "ub",
+        [
+          "forced_transport",
+          7
+        ],
+        7
+      ],
+      [
+        "ub",
+        [
+          "heavy_receiving"
+        ],
+        343
+      ],
+      [
+        "ub",
+        [
+          "load"
+        ],
+        200
+      ]
+    ],
+    "selected": false,
+    "provenance": [
+      {
+        "mode": "separate_transport",
+        "layer": "n35-m306",
+        "state_id": 2,
+        "h": 4,
+        "j": 4,
+        "attempt_index": 9
+      }
+    ]
+  },
+  {
+    "rank": 67,
+    "weights": [
+      [
+        "ub",
+        [
+          "all_transport",
+          3
+        ],
+        375
+      ],
+      [
+        "ub",
+        [
+          "all_transport",
+          4
+        ],
+        193
+      ],
+      [
+        "ub",
+        [
+          "heavy_receiving"
+        ],
+        455
+      ],
+      [
+        "ub",
+        [
+          "load"
+        ],
+        136
+      ]
+    ],
+    "selected": false,
+    "provenance": [
+      {
+        "mode": "separate_transport",
+        "layer": "n34-m289",
+        "state_id": 11291,
+        "h": 5,
+        "j": 6,
+        "attempt_index": 15
+      }
+    ]
+  },
+  {
+    "rank": 68,
+    "weights": [
+      [
+        "ub",
+        [
+          "all_transport",
+          2
+        ],
+        526
+      ],
+      [
+        "ub",
+        [
+          "forced_transport",
+          7
+        ],
+        19
+      ],
+      [
+        "ub",
+        [
+          "heavy_mass"
+        ],
+        263
+      ],
+      [
+        "ub",
+        [
+          "heavy_receiving"
+        ],
+        244
+      ],
+      [
+        "ub",
+        [
+          "load"
+        ],
+        132
+      ]
+    ],
+    "selected": false,
+    "provenance": [
+      {
+        "mode": "separate_transport",
+        "layer": "n35-m306",
+        "state_id": 386,
+        "h": 4,
+        "j": 4,
+        "attempt_index": 14
+      }
+    ]
+  },
+  {
+    "rank": 69,
+    "weights": [
+      [
+        "ub",
+        [
+          "heavy_receiving"
+        ],
+        690
+      ],
+      [
+        "ub",
+        [
+          "load"
+        ],
+        172
+      ],
+      [
+        "ub",
+        [
+          "pair_capacity"
+        ],
+        345
+      ]
+    ],
+    "selected": false,
+    "provenance": [
+      {
+        "mode": "separate_transport",
+        "layer": "n34-m289",
+        "state_id": 275,
+        "h": 3,
+        "j": 9,
+        "attempt_index": 16
+      }
+    ]
+  },
+  {
+    "rank": 70,
+    "weights": [
+      [
+        "ub",
+        [
+          "all_transport",
+          3
+        ],
+        640
+      ],
+      [
+        "ub",
+        [
+          "all_transport",
+          5
+        ],
+        113
+      ],
+      [
+        "ub",
+        [
+          "heavy_mass"
+        ],
+        282
+      ],
+      [
+        "ub",
+        [
+          "heavy_receiving"
+        ],
+        94
+      ],
+      [
+        "ub",
+        [
+          "load"
+        ],
+        94
+      ]
+    ],
+    "selected": false,
+    "provenance": [
+      {
+        "mode": "separate_transport",
+        "layer": "n34-m289",
+        "state_id": 13542,
+        "h": 6,
+        "j": 5,
+        "attempt_index": 16
+      }
+    ]
+  },
+  {
+    "rank": 71,
+    "weights": [
+      [
+        "ub",
+        [
+          "all_transport",
+          2
+        ],
+        243
+      ],
+      [
+        "ub",
+        [
+          "all_transport",
+          3
+        ],
+        596
+      ],
+      [
+        "ub",
+        [
+          "all_transport",
+          5
+        ],
+        94
+      ],
+      [
+        "ub",
+        [
+          "heavy_mass"
+        ],
+        196
+      ],
+      [
+        "ub",
+        [
+          "heavy_receiving"
+        ],
+        31
+      ],
+      [
+        "ub",
+        [
+          "load"
+        ],
+        110
+      ]
+    ],
+    "selected": false,
+    "provenance": [
+      {
+        "mode": "separate_transport",
+        "layer": "n34-m289",
+        "state_id": 13542,
+        "h": 6,
+        "j": 8,
+        "attempt_index": 19
+      }
+    ]
+  },
+  {
+    "rank": 72,
+    "weights": [
+      [
+        "ub",
+        [
+          "all_transport",
+          3
+        ],
+        283
+      ],
+      [
+        "ub",
+        [
+          "heavy_receiving"
+        ],
+        802
+      ],
+      [
+        "ub",
+        [
+          "load"
+        ],
+        189
+      ]
+    ],
+    "selected": false,
+    "provenance": [
+      {
+        "mode": "separate_transport",
+        "layer": "n35-m306",
+        "state_id": 8,
+        "h": 4,
+        "j": 7,
+        "attempt_index": 13
+      }
+    ]
+  },
+  {
+    "rank": 73,
+    "weights": [
+      [
+        "ub",
+        [
+          "all_transport",
+          3
+        ],
+        710
+      ],
+      [
+        "ub",
+        [
+          "all_transport",
+          5
+        ],
+        121
+      ],
+      [
+        "ub",
+        [
+          "heavy_mass"
+        ],
+        197
+      ],
+      [
+        "ub",
+        [
+          "heavy_receiving"
+        ],
+        155
+      ],
+      [
+        "ub",
+        [
+          "load"
+        ],
+        113
+      ]
+    ],
+    "selected": false,
+    "provenance": [
+      {
+        "mode": "separate_transport",
+        "layer": "n34-m289",
+        "state_id": 13542,
+        "h": 6,
+        "j": 9,
+        "attempt_index": 20
+      }
+    ]
+  },
+  {
+    "rank": 74,
+    "weights": [
+      [
+        "ub",
+        [
+          "all_transport",
+          3
+        ],
+        290
+      ],
+      [
+        "ub",
+        [
+          "all_transport",
+          4
+        ],
+        676
+      ],
+      [
+        "ub",
+        [
+          "heavy_receiving"
+        ],
+        145
+      ],
+      [
+        "ub",
+        [
+          "load"
+        ],
+        193
+      ]
+    ],
+    "selected": false,
+    "provenance": [
+      {
+        "mode": "separate_transport",
+        "layer": "n35-m306",
+        "state_id": 2,
+        "h": 4,
+        "j": 7,
+        "attempt_index": 12
+      }
+    ]
+  },
+  {
+    "rank": 75,
+    "weights": [
+      [
+        "ub",
+        [
+          "all_transport",
+          3
+        ],
+        686
+      ],
+      [
+        "ub",
+        [
+          "all_transport",
+          5
+        ],
+        122
+      ],
+      [
+        "ub",
+        [
+          "forced_transport",
+          7
+        ],
+        44
+      ],
+      [
+        "ub",
+        [
+          "heavy_mass"
+        ],
+        319
+      ],
+      [
+        "ub",
+        [
+          "heavy_receiving"
+        ],
+        46
+      ],
+      [
+        "ub",
+        [
+          "load"
+        ],
+        100
+      ]
+    ],
+    "selected": false,
+    "provenance": [
+      {
+        "mode": "separate_transport",
+        "layer": "n34-m289",
+        "state_id": 13542,
+        "h": 6,
+        "j": 6,
+        "attempt_index": 17
+      }
+    ]
+  },
+  {
+    "rank": 76,
+    "weights": [
+      [
+        "ub",
+        [
+          "heavy_receiving"
+        ],
+        1083
+      ],
+      [
+        "ub",
+        [
+          "load"
+        ],
+        250
+      ]
+    ],
+    "selected": false,
+    "provenance": [
+      {
+        "mode": "separate_transport",
+        "layer": "n34-m289",
+        "state_id": 275,
+        "h": 3,
+        "j": 8,
+        "attempt_index": 15
+      }
+    ]
+  },
+  {
+    "rank": 77,
+    "weights": [
+      [
+        "ub",
+        [
+          "all_transport",
+          3
+        ],
+        390
+      ],
+      [
+        "ub",
+        [
+          "all_transport",
+          4
+        ],
+        188
+      ],
+      [
+        "ub",
+        [
+          "heavy_mass"
+        ],
+        289
+      ],
+      [
+        "ub",
+        [
+          "heavy_receiving"
+        ],
+        405
+      ],
+      [
+        "ub",
+        [
+          "load"
+        ],
+        116
+      ]
+    ],
+    "selected": false,
+    "provenance": [
+      {
+        "mode": "separate_transport",
+        "layer": "n34-m289",
+        "state_id": 11291,
+        "h": 5,
+        "j": 5,
+        "attempt_index": 14
+      }
+    ]
+  },
+  {
+    "rank": 78,
+    "weights": [
+      [
+        "ub",
+        [
+          "all_transport",
+          2
+        ],
+        400
+      ],
+      [
+        "ub",
+        [
+          "forced_transport",
+          5
+        ],
+        87
+      ],
+      [
+        "ub",
+        [
+          "forced_transport",
+          6
+        ],
+        33
+      ],
+      [
+        "ub",
+        [
+          "heavy_mass"
+        ],
+        500
+      ],
+      [
+        "ub",
+        [
+          "heavy_receiving"
+        ],
+        280
+      ],
+      [
+        "ub",
+        [
+          "load"
+        ],
+        100
+      ]
+    ],
+    "selected": false,
+    "provenance": [
+      {
+        "mode": "separate_transport",
+        "layer": "n34-m289",
+        "state_id": 6158,
+        "h": 4,
+        "j": 3,
+        "attempt_index": 11
+      }
+    ]
+  },
+  {
+    "rank": 79,
+    "weights": [
+      [
+        "ub",
+        [
+          "heavy_mass"
+        ],
+        319
+      ],
+      [
+        "ub",
+        [
+          "heavy_receiving"
+        ],
+        851
+      ],
+      [
+        "ub",
+        [
+          "load"
+        ],
+        266
+      ]
+    ],
+    "selected": false,
+    "provenance": [
+      {
+        "mode": "separate_transport",
+        "layer": "n34-m289",
+        "state_id": 133,
+        "h": 2,
+        "j": 10,
+        "attempt_index": 15
+      }
+    ]
+  },
+  {
+    "rank": 80,
+    "weights": [
+      [
+        "ub",
+        [
+          "all_transport",
+          2
+        ],
+        653
+      ],
+      [
+        "ub",
+        [
+          "forced_transport",
+          7
+        ],
+        27
+      ],
+      [
+        "ub",
+        [
+          "heavy_mass"
+        ],
+        327
+      ],
+      [
+        "ub",
+        [
+          "heavy_receiving"
+        ],
+        275
+      ],
+      [
+        "ub",
+        [
+          "load"
+        ],
+        163
+      ]
+    ],
+    "selected": false,
+    "provenance": [
+      {
+        "mode": "separate_transport",
+        "layer": "n35-m306",
+        "state_id": 386,
+        "h": 4,
+        "j": 5,
+        "attempt_index": 15
+      }
+    ]
+  },
+  {
+    "rank": 81,
+    "weights": [
+      [
+        "ub",
+        [
+          "all_transport",
+          3
+        ],
+        492
+      ],
+      [
+        "ub",
+        [
+          "forced_transport",
+          5
+        ],
+        140
+      ],
+      [
+        "ub",
+        [
+          "forced_transport",
+          6
+        ],
+        119
+      ],
+      [
+        "ub",
+        [
+          "heavy_mass"
+        ],
+        328
+      ],
+      [
+        "ub",
+        [
+          "heavy_receiving"
+        ],
+        203
+      ],
+      [
+        "ub",
+        [
+          "load"
+        ],
+        164
+      ]
+    ],
+    "selected": false,
+    "provenance": [
+      {
+        "mode": "separate_transport",
+        "layer": "n34-m289",
+        "state_id": 3972,
+        "h": 4,
+        "j": 3,
+        "attempt_index": 11
+      }
+    ]
+  },
+  {
+    "rank": 82,
+    "weights": [
+      [
+        "ub",
+        [
+          "heavy_mass"
+        ],
+        323
+      ],
+      [
+        "ub",
+        [
+          "heavy_receiving"
+        ],
+        860
+      ],
+      [
+        "ub",
+        [
+          "load"
+        ],
+        269
+      ]
+    ],
+    "selected": false,
+    "provenance": [
+      {
+        "mode": "separate_transport",
+        "layer": "n34-m289",
+        "state_id": 316,
+        "h": 2,
+        "j": 10,
+        "attempt_index": 12
+      }
+    ]
+  },
+  {
+    "rank": 83,
+    "weights": [
+      [
+        "ub",
+        [
+          "heavy_mass"
+        ],
+        324
+      ],
+      [
+        "ub",
+        [
+          "heavy_receiving"
+        ],
+        865
+      ],
+      [
+        "ub",
+        [
+          "load"
+        ],
+        270
+      ]
+    ],
+    "selected": false,
+    "provenance": [
+      {
+        "mode": "separate_transport",
+        "layer": "n34-m289",
+        "state_id": 184,
+        "h": 2,
+        "j": 10,
+        "attempt_index": 12
+      }
+    ]
+  },
+  {
+    "rank": 84,
+    "weights": [
+      [
+        "ub",
+        [
+          "all_transport",
+          3
+        ],
+        524
+      ],
+      [
+        "ub",
+        [
+          "all_transport",
+          4
+        ],
+        262
+      ],
+      [
+        "ub",
+        [
+          "forced_transport",
+          5
+        ],
+        361
+      ],
+      [
+        "ub",
+        [
+          "forced_transport",
+          7
+        ],
+        14
+      ],
+      [
+        "ub",
+        [
+          "heavy_receiving"
+        ],
+        48
+      ],
+      [
+        "ub",
+        [
+          "load"
+        ],
+        262
+      ]
+    ],
+    "selected": false,
+    "provenance": [
+      {
+        "mode": "separate_transport",
+        "layer": "n35-m306",
+        "state_id": 2,
+        "h": 4,
+        "j": 5,
+        "attempt_index": 10
+      }
+    ]
+  },
+  {
+    "rank": 85,
+    "weights": [
+      [
+        "ub",
+        [
+          "all_transport",
+          3
+        ],
+        505
+      ],
+      [
+        "ub",
+        [
+          "forced_transport",
+          6
+        ],
+        94
+      ],
+      [
+        "ub",
+        [
+          "forced_transport",
+          7
+        ],
+        28
+      ],
+      [
+        "ub",
+        [
+          "heavy_mass"
+        ],
+        336
+      ],
+      [
+        "ub",
+        [
+          "heavy_receiving"
+        ],
+        352
+      ],
+      [
+        "ub",
+        [
+          "load"
+        ],
+        168
+      ]
+    ],
+    "selected": false,
+    "provenance": [
+      {
+        "mode": "separate_transport",
+        "layer": "n35-m306",
+        "state_id": 8,
+        "h": 4,
+        "j": 3,
+        "attempt_index": 9
+      }
+    ]
+  },
+  {
+    "rank": 86,
+    "weights": [
+      [
+        "ub",
+        [
+          "all_transport",
+          0
+        ],
+        190
+      ],
+      [
+        "ub",
+        [
+          "all_transport",
+          2
+        ],
+        63
+      ],
+      [
+        "ub",
+        [
+          "all_transport",
+          3
+        ],
+        506
+      ],
+      [
+        "ub",
+        [
+          "forced_transport",
+          5
+        ],
+        219
+      ],
+      [
+        "ub",
+        [
+          "forced_transport",
+          6
+        ],
+        84
+      ],
+      [
+        "ub",
+        [
+          "heavy_receiving"
+        ],
+        203
+      ],
+      [
+        "ub",
+        [
+          "load"
+        ],
+        253
+      ]
+    ],
+    "selected": false,
+    "provenance": [
+      {
+        "mode": "separate_transport",
+        "layer": "n34-m289",
+        "state_id": 3972,
+        "h": 4,
+        "j": 4,
+        "attempt_index": 12
+      }
+    ]
+  },
+  {
+    "rank": 87,
+    "weights": [
+      [
+        "ub",
+        [
+          "all_transport",
+          3
+        ],
+        390
+      ],
+      [
+        "ub",
+        [
+          "heavy_receiving"
+        ],
+        914
+      ],
+      [
+        "ub",
+        [
+          "load"
+        ],
+        223
+      ]
+    ],
+    "selected": false,
+    "provenance": [
+      {
+        "mode": "separate_transport",
+        "layer": "n35-m306",
+        "state_id": 8,
+        "h": 4,
+        "j": 6,
+        "attempt_index": 12
+      }
+    ]
+  },
+  {
+    "rank": 88,
+    "weights": [
+      [
+        "ub",
+        [
+          "all_transport",
+          2
+        ],
+        547
+      ],
+      [
+        "ub",
+        [
+          "all_transport",
+          3
+        ],
+        156
+      ],
+      [
+        "ub",
+        [
+          "heavy_receiving"
+        ],
+        625
+      ],
+      [
+        "ub",
+        [
+          "load"
+        ],
+        234
+      ]
+    ],
+    "selected": false,
+    "provenance": [
+      {
+        "mode": "separate_transport",
+        "layer": "n35-m306",
+        "state_id": 136,
+        "h": 4,
+        "j": 9,
+        "attempt_index": 16
+      }
+    ]
+  },
+  {
+    "rank": 89,
+    "weights": [
+      [
+        "ub",
+        [
+          "all_transport",
+          3
+        ],
+        375
+      ],
+      [
+        "ub",
+        [
+          "all_transport",
+          4
+        ],
+        181
+      ],
+      [
+        "ub",
+        [
+          "heavy_mass"
+        ],
+        500
+      ],
+      [
+        "ub",
+        [
+          "heavy_receiving"
+        ],
+        417
+      ],
+      [
+        "ub",
+        [
+          "load"
+        ],
+        111
+      ]
+    ],
+    "selected": false,
+    "provenance": [
+      {
+        "mode": "separate_transport",
+        "layer": "n35-m306",
+        "state_id": 465,
+        "h": 5,
+        "j": 6,
+        "attempt_index": 15
+      }
+    ]
+  },
+  {
+    "rank": 90,
+    "weights": [
+      [
+        "ub",
+        [
+          "all_transport",
+          2
+        ],
+        741
+      ],
+      [
+        "ub",
+        [
+          "forced_transport",
+          6
+        ],
+        123
+      ],
+      [
+        "ub",
+        [
+          "heavy_mass"
+        ],
+        370
+      ],
+      [
+        "ub",
+        [
+          "heavy_receiving"
+        ],
+        247
+      ],
+      [
+        "ub",
+        [
+          "load"
+        ],
+        185
+      ]
+    ],
+    "selected": false,
+    "provenance": [
+      {
+        "mode": "separate_transport",
+        "layer": "n35-m306",
+        "state_id": 134,
+        "h": 4,
+        "j": 4,
+        "attempt_index": 11
+      }
+    ]
+  },
+  {
+    "rank": 91,
+    "weights": [
+      [
+        "ub",
+        [
+          "all_transport",
+          2
+        ],
+        714
+      ],
+      [
+        "ub",
+        [
+          "heavy_mass"
+        ],
+        455
+      ],
+      [
+        "ub",
+        [
+          "heavy_receiving"
+        ],
+        390
+      ],
+      [
+        "ub",
+        [
+          "load"
+        ],
+        162
+      ]
+    ],
+    "selected": false,
+    "provenance": [
+      {
+        "mode": "separate_transport",
+        "layer": "n35-m306",
+        "state_id": 386,
+        "h": 4,
+        "j": 6,
+        "attempt_index": 16
+      }
+    ]
+  },
+  {
+    "rank": 92,
+    "weights": [
+      [
+        "ub",
+        [
+          "all_transport",
+          3
+        ],
+        412
+      ],
+      [
+        "ub",
+        [
+          "all_transport",
+          4
+        ],
+        198
+      ],
+      [
+        "ub",
+        [
+          "heavy_mass"
+        ],
+        549
+      ],
+      [
+        "ub",
+        [
+          "heavy_receiving"
+        ],
+        442
+      ],
+      [
+        "ub",
+        [
+          "load"
+        ],
+        122
+      ]
+    ],
+    "selected": false,
+    "provenance": [
+      {
+        "mode": "separate_transport",
+        "layer": "n35-m306",
+        "state_id": 465,
+        "h": 5,
+        "j": 7,
+        "attempt_index": 16
+      }
+    ]
+  },
+  {
+    "rank": 93,
+    "weights": [
+      [
+        "ub",
+        [
+          "all_transport",
+          2
+        ],
+        577
+      ],
+      [
+        "ub",
+        [
+          "all_transport",
+          3
+        ],
+        192
+      ],
+      [
+        "ub",
+        [
+          "forced_transport",
+          6
+        ],
+        128
+      ],
+      [
+        "ub",
+        [
+          "heavy_mass"
+        ],
+        385
+      ],
+      [
+        "ub",
+        [
+          "heavy_receiving"
+        ],
+        256
+      ],
+      [
+        "ub",
+        [
+          "load"
+        ],
+        192
+      ]
+    ],
+    "selected": false,
+    "provenance": [
+      {
+        "mode": "separate_transport",
+        "layer": "n35-m306",
+        "state_id": 136,
+        "h": 4,
+        "j": 4,
+        "attempt_index": 11
+      }
+    ]
+  },
+  {
+    "rank": 94,
+    "weights": [
+      [
+        "ub",
+        [
+          "all_transport",
+          2
+        ],
+        806
+      ],
+      [
+        "ub",
+        [
+          "heavy_mass"
+        ],
+        645
+      ],
+      [
+        "ub",
+        [
+          "heavy_receiving"
+        ],
+        323
+      ],
+      [
+        "ub",
+        [
+          "load"
+        ],
+        161
+      ]
+    ],
+    "selected": false,
+    "provenance": [
+      {
+        "mode": "separate_transport",
+        "layer": "n35-m306",
+        "state_id": 386,
+        "h": 4,
+        "j": 7,
+        "attempt_index": 17
+      }
+    ]
+  },
+  {
+    "rank": 95,
+    "weights": [
+      [
+        "ub",
+        [
+          "all_transport",
+          3
+        ],
+        507
+      ],
+      [
+        "ub",
+        [
+          "heavy_receiving"
+        ],
+        1189
+      ],
+      [
+        "ub",
+        [
+          "load"
+        ],
+        290
+      ]
+    ],
+    "selected": false,
+    "provenance": [
+      {
+        "mode": "separate_transport",
+        "layer": "n34-m289",
+        "state_id": 3972,
+        "h": 4,
+        "j": 6,
+        "attempt_index": 14
+      }
+    ]
+  },
+  {
+    "rank": 96,
+    "weights": [
+      [
+        "ub",
+        [
+          "all_transport",
+          3
+        ],
+        540
+      ],
+      [
+        "ub",
+        [
+          "forced_transport",
+          5
+        ],
+        65
+      ],
+      [
+        "ub",
+        [
+          "heavy_mass"
+        ],
+        540
+      ],
+      [
+        "ub",
+        [
+          "heavy_receiving"
+        ],
+        691
+      ],
+      [
+        "ub",
+        [
+          "load"
+        ],
+        180
+      ]
+    ],
+    "selected": false,
+    "provenance": [
+      {
+        "mode": "separate_transport",
+        "layer": "n35-m306",
+        "state_id": 8,
+        "h": 4,
+        "j": 4,
+        "attempt_index": 10
+      }
+    ]
+  },
+  {
+    "rank": 97,
+    "weights": [
+      [
+        "ub",
+        [
+          "all_transport",
+          2
+        ],
+        859
+      ],
+      [
+        "ub",
+        [
+          "heavy_mass"
+        ],
+        657
+      ],
+      [
+        "ub",
+        [
+          "heavy_receiving"
+        ],
+        328
+      ],
+      [
+        "ub",
+        [
+          "load"
+        ],
+        177
+      ]
+    ],
+    "selected": false,
+    "provenance": [
+      {
+        "mode": "separate_transport",
+        "layer": "n35-m306",
+        "state_id": 386,
+        "h": 4,
+        "j": 8,
+        "attempt_index": 18
+      }
+    ]
+  },
+  {
+    "rank": 98,
+    "weights": [
+      [
+        "ub",
+        [
+          "all_transport",
+          2
+        ],
+        902
+      ],
+      [
+        "ub",
+        [
+          "heavy_mass"
+        ],
+        226
+      ],
+      [
+        "ub",
+        [
+          "heavy_receiving"
+        ],
+        639
+      ],
+      [
+        "ub",
+        [
+          "load"
+        ],
+        263
+      ]
+    ],
+    "selected": false,
+    "provenance": [
+      {
+        "mode": "separate_transport",
+        "layer": "n35-m306",
+        "state_id": 134,
+        "h": 4,
+        "j": 8,
+        "attempt_index": 15
+      }
+    ]
+  },
+  {
+    "rank": 99,
+    "weights": [
+      [
+        "ub",
+        [
+          "all_transport",
+          2
+        ],
+        643
+      ],
+      [
+        "ub",
+        [
+          "all_transport",
+          3
+        ],
+        214
+      ],
+      [
+        "ub",
+        [
+          "heavy_mass"
+        ],
+        429
+      ],
+      [
+        "ub",
+        [
+          "heavy_receiving"
+        ],
+        571
+      ],
+      [
+        "ub",
+        [
+          "load"
+        ],
+        214
+      ]
+    ],
+    "selected": false,
+    "provenance": [
+      {
+        "mode": "separate_transport",
+        "layer": "n35-m306",
+        "state_id": 136,
+        "h": 4,
+        "j": 5,
+        "attempt_index": 12
+      }
+    ]
+  },
+  {
+    "rank": 100,
+    "weights": [
+      [
+        "ub",
+        [
+          "all_transport",
+          2
+        ],
+        973
+      ],
+      [
+        "ub",
+        [
+          "heavy_mass"
+        ],
+        270
+      ],
+      [
+        "ub",
+        [
+          "heavy_receiving"
+        ],
+        649
+      ],
+      [
+        "ub",
+        [
+          "load"
+        ],
+        270
+      ]
+    ],
+    "selected": false,
+    "provenance": [
+      {
+        "mode": "separate_transport",
+        "layer": "n35-m306",
+        "state_id": 134,
+        "h": 4,
+        "j": 7,
+        "attempt_index": 14
+      }
+    ]
+  },
+  {
+    "rank": 101,
+    "weights": [
+      [
+        "ub",
+        [
+          "all_transport",
+          2
+        ],
+        930
+      ],
+      [
+        "ub",
+        [
+          "heavy_mass"
+        ],
+        465
+      ],
+      [
+        "ub",
+        [
+          "heavy_receiving"
+        ],
+        581
+      ],
+      [
+        "ub",
+        [
+          "load"
+        ],
+        233
+      ]
+    ],
+    "selected": false,
+    "provenance": [
+      {
+        "mode": "separate_transport",
+        "layer": "n35-m306",
+        "state_id": 134,
+        "h": 4,
+        "j": 6,
+        "attempt_index": 13
+      }
+    ]
+  },
+  {
+    "rank": 102,
+    "weights": [
+      [
+        "ub",
+        [
+          "all_transport",
+          2
+        ],
+        751
+      ],
+      [
+        "ub",
+        [
+          "all_transport",
+          3
+        ],
+        232
+      ],
+      [
+        "ub",
+        [
+          "heavy_mass"
+        ],
+        246
+      ],
+      [
+        "ub",
+        [
+          "heavy_receiving"
+        ],
+        697
+      ],
+      [
+        "ub",
+        [
+          "load"
+        ],
+        287
+      ]
+    ],
+    "selected": false,
+    "provenance": [
+      {
+        "mode": "separate_transport",
+        "layer": "n35-m306",
+        "state_id": 136,
+        "h": 4,
+        "j": 8,
+        "attempt_index": 15
+      }
+    ]
+  },
+  {
+    "rank": 103,
+    "weights": [
+      [
+        "ub",
+        [
+          "all_transport",
+          2
+        ],
+        1111
+      ],
+      [
+        "ub",
+        [
+          "heavy_mass"
+        ],
+        392
+      ],
+      [
+        "ub",
+        [
+          "heavy_receiving"
+        ],
+        588
+      ],
+      [
+        "ub",
+        [
+          "load"
+        ],
+        261
+      ]
+    ],
+    "selected": false,
+    "provenance": [
+      {
+        "mode": "separate_transport",
+        "layer": "n34-m289",
+        "state_id": 4665,
+        "h": 4,
+        "j": 5,
+        "attempt_index": 10
+      }
+    ]
+  },
+  {
+    "rank": 104,
+    "weights": [
+      [
+        "ub",
+        [
+          "all_transport",
+          2
+        ],
+        804
+      ],
+      [
+        "ub",
+        [
+          "all_transport",
+          3
+        ],
+        268
+      ],
+      [
+        "ub",
+        [
+          "heavy_mass"
+        ],
+        536
+      ],
+      [
+        "ub",
+        [
+          "heavy_receiving"
+        ],
+        625
+      ],
+      [
+        "ub",
+        [
+          "load"
+        ],
+        268
+      ]
+    ],
+    "selected": false,
+    "provenance": [
+      {
+        "mode": "separate_transport",
+        "layer": "n35-m306",
+        "state_id": 136,
+        "h": 4,
+        "j": 7,
+        "attempt_index": 14
+      }
+    ]
+  },
+  {
+    "rank": 105,
+    "weights": [
+      [
+        "ub",
+        [
+          "heavy_mass"
+        ],
+        577
+      ],
+      [
+        "ub",
+        [
+          "heavy_receiving"
+        ],
+        1538
+      ],
+      [
+        "ub",
+        [
+          "load"
+        ],
+        481
+      ]
+    ],
+    "selected": false,
+    "provenance": [
+      {
+        "mode": "separate_transport",
+        "layer": "n34-m289",
+        "state_id": 133,
+        "h": 2,
+        "j": 8,
+        "attempt_index": 13
+      }
+    ]
+  },
+  {
+    "rank": 106,
+    "weights": [
+      [
+        "ub",
+        [
+          "all_transport",
+          2
+        ],
+        764
+      ],
+      [
+        "ub",
+        [
+          "all_transport",
+          3
+        ],
+        301
+      ],
+      [
+        "ub",
+        [
+          "heavy_mass"
+        ],
+        1153
+      ],
+      [
+        "ub",
+        [
+          "heavy_receiving"
+        ],
+        251
+      ],
+      [
+        "ub",
+        [
+          "load"
+        ],
+        163
+      ]
+    ],
+    "selected": false,
+    "provenance": [
+      {
+        "mode": "separate_transport",
+        "layer": "n35-m307",
+        "state_id": 18,
+        "h": 4,
+        "j": 6,
+        "attempt_index": 18
+      }
+    ]
+  },
+  {
+    "rank": 107,
+    "weights": [
+      [
+        "ub",
+        [
+          "heavy_mass"
+        ],
+        588
+      ],
+      [
+        "ub",
+        [
+          "heavy_receiving"
+        ],
+        1569
+      ],
+      [
+        "ub",
+        [
+          "load"
+        ],
+        490
+      ]
+    ],
+    "selected": false,
+    "provenance": [
+      {
+        "mode": "separate_transport",
+        "layer": "n34-m289",
+        "state_id": 66,
+        "h": 2,
+        "j": 8,
+        "attempt_index": 13
+      },
+      {
+        "mode": "separate_transport",
+        "layer": "n34-m289",
+        "state_id": 316,
+        "h": 2,
+        "j": 8,
+        "attempt_index": 10
+      }
+    ]
+  },
+  {
+    "rank": 108,
+    "weights": [
+      [
+        "eq",
+        [
+          "selected_balance"
+        ],
+        1333
+      ],
+      [
+        "ub",
+        [
+          "heavy_mass"
+        ],
+        400
+      ],
+      [
+        "ub",
+        [
+          "heavy_receiving"
+        ],
+        667
+      ],
+      [
+        "ub",
+        [
+          "load"
+        ],
+        267
+      ]
+    ],
+    "selected": false,
+    "provenance": [
+      {
+        "mode": "selected_balance",
+        "layer": "n35-m307",
+        "state_id": 18,
+        "h": 5,
+        "j": 3,
+        "attempt_index": 7
+      }
+    ]
+  },
+  {
+    "rank": 109,
+    "weights": [
+      [
+        "ub",
+        [
+          "forced_transport",
+          4
+        ],
+        169
+      ],
+      [
+        "ub",
+        [
+          "forced_transport",
+          5
+        ],
+        141
+      ],
+      [
+        "ub",
+        [
+          "forced_transport",
+          6
+        ],
+        234
+      ],
+      [
+        "ub",
+        [
+          "forced_transport",
+          7
+        ],
+        172
+      ],
+      [
+        "ub",
+        [
+          "forced_transport",
+          8
+        ],
+        215
+      ],
+      [
+        "ub",
+        [
+          "forced_transport",
+          10
+        ],
+        78
+      ],
+      [
+        "ub",
+        [
+          "forced_transport",
+          11
+        ],
+        65
+      ],
+      [
+        "ub",
+        [
+          "heavy_mass"
+        ],
+        1480
+      ],
+      [
+        "ub",
+        [
+          "load"
+        ],
+        155
+      ]
+    ],
+    "selected": false,
+    "provenance": [
+      {
+        "mode": "separate_transport",
+        "layer": "n34-m289",
+        "state_id": 275,
+        "h": 2,
+        "j": 3,
+        "attempt_index": 6
+      }
+    ]
+  },
+  {
+    "rank": 110,
+    "weights": [
+      [
+        "ub",
+        [
+          "all_transport",
+          2
+        ],
+        1429
+      ],
+      [
+        "ub",
+        [
+          "heavy_mass"
+        ],
+        1071
+      ],
+      [
+        "ub",
+        [
+          "load"
+        ],
+        357
+      ]
+    ],
+    "selected": false,
+    "provenance": [
+      {
+        "mode": "separate_transport",
+        "layer": "n34-m289",
+        "state_id": 9490,
+        "h": 4,
+        "j": 3,
+        "attempt_index": 12
+      }
+    ]
+  },
+  {
+    "rank": 111,
+    "weights": [
+      [
+        "ub",
+        [
+          "forced_transport",
+          3
+        ],
+        226
+      ],
+      [
+        "ub",
+        [
+          "forced_transport",
+          4
+        ],
+        209
+      ],
+      [
+        "ub",
+        [
+          "forced_transport",
+          5
+        ],
+        134
+      ],
+      [
+        "ub",
+        [
+          "forced_transport",
+          6
+        ],
+        145
+      ],
+      [
+        "ub",
+        [
+          "forced_transport",
+          7
+        ],
+        162
+      ],
+      [
+        "ub",
+        [
+          "forced_transport",
+          8
+        ],
+        113
+      ],
+      [
+        "ub",
+        [
+          "forced_transport",
+          9
+        ],
+        90
+      ],
+      [
+        "ub",
+        [
+          "forced_transport",
+          10
+        ],
+        74
+      ],
+      [
+        "ub",
+        [
+          "forced_transport",
+          11
+        ],
+        61
+      ],
+      [
+        "ub",
+        [
+          "heavy_mass"
+        ],
+        1455
+      ],
+      [
+        "ub",
+        [
+          "load"
+        ],
+        218
+      ]
+    ],
+    "selected": false,
+    "provenance": [
+      {
+        "mode": "separate_transport",
+        "layer": "n34-m289",
+        "state_id": 133,
+        "h": 2,
+        "j": 3,
+        "attempt_index": 8
+      }
+    ]
+  },
+  {
+    "rank": 112,
+    "weights": [
+      [
+        "ub",
+        [
+          "heavy_receiving"
+        ],
+        2683
+      ],
+      [
+        "ub",
+        [
+          "load"
+        ],
+        366
+      ]
+    ],
+    "selected": false,
+    "provenance": [
+      {
+        "mode": "selected_balance",
+        "layer": "n35-m307",
+        "state_id": 18,
+        "h": 5,
+        "j": 7,
+        "attempt_index": 11
+      }
+    ]
+  },
+  {
+    "rank": 113,
+    "weights": [
+      [
+        "ub",
+        [
+          "all_transport",
+          2
+        ],
+        962
+      ],
+      [
+        "ub",
+        [
+          "all_transport",
+          3
+        ],
+        376
+      ],
+      [
+        "ub",
+        [
+          "heavy_mass"
+        ],
+        1408
+      ],
+      [
+        "ub",
+        [
+          "heavy_receiving"
+        ],
+        282
+      ],
+      [
+        "ub",
+        [
+          "load"
+        ],
+        211
+      ]
+    ],
+    "selected": false,
+    "provenance": [
+      {
+        "mode": "separate_transport",
+        "layer": "n35-m307",
+        "state_id": 18,
+        "h": 4,
+        "j": 8,
+        "attempt_index": 20
+      }
+    ]
+  },
+  {
+    "rank": 114,
+    "weights": [
+      [
+        "ub",
+        [
+          "all_transport",
+          3
+        ],
+        799
+      ],
+      [
+        "ub",
+        [
+          "all_transport",
+          8
+        ],
+        29
+      ],
+      [
+        "ub",
+        [
+          "forced_transport",
+          5
+        ],
+        317
+      ],
+      [
+        "ub",
+        [
+          "forced_transport",
+          6
+        ],
+        233
+      ],
+      [
+        "ub",
+        [
+          "heavy_mass"
+        ],
+        1323
+      ],
+      [
+        "ub",
+        [
+          "heavy_receiving"
+        ],
+        366
+      ],
+      [
+        "ub",
+        [
+          "load"
+        ],
+        218
+      ]
+    ],
+    "selected": false,
+    "provenance": [
+      {
+        "mode": "separate_transport",
+        "layer": "n34-m289",
+        "state_id": 3522,
+        "h": 4,
+        "j": 2,
+        "attempt_index": 8
+      }
+    ]
+  },
+  {
+    "rank": 115,
+    "weights": [
+      [
+        "ub",
+        [
+          "all_transport",
+          2
+        ],
+        1429
+      ],
+      [
+        "ub",
+        [
+          "heavy_mass"
+        ],
+        1714
+      ],
+      [
+        "ub",
+        [
+          "load"
+        ],
+        190
+      ],
+      [
+        "ub",
+        [
+          "pair_capacity"
+        ],
+        476
+      ]
+    ],
+    "selected": false,
+    "provenance": [
+      {
+        "mode": "separate_transport",
+        "layer": "n35-m307",
+        "state_id": 18,
+        "h": 4,
+        "j": 9,
+        "attempt_index": 21
+      }
+    ]
+  },
+  {
+    "rank": 116,
+    "weights": [
+      [
+        "ub",
+        [
+          "heavy_mass"
+        ],
+        1461
+      ],
+      [
+        "ub",
+        [
+          "heavy_receiving"
+        ],
+        1573
+      ],
+      [
+        "ub",
+        [
+          "load"
+        ],
+        787
+      ]
+    ],
+    "selected": false,
+    "provenance": [
+      {
+        "mode": "catalogue_free",
+        "layer": "n34-m289",
+        "state_id": 60,
+        "h": 2,
+        "j": 2,
+        "attempt_index": 0
+      },
+      {
+        "mode": "selected_balance",
+        "layer": "n34-m289",
+        "state_id": 60,
+        "h": 2,
+        "j": 2,
+        "attempt_index": 5
+      }
+    ]
+  },
+  {
+    "rank": 117,
+    "weights": [
+      [
+        "ub",
+        [
+          "heavy_mass"
+        ],
+        588
+      ],
+      [
+        "ub",
+        [
+          "heavy_receiving"
+        ],
+        2353
+      ],
+      [
+        "ub",
+        [
+          "load"
+        ],
+        882
+      ]
+    ],
+    "selected": false,
+    "provenance": [
+      {
+        "mode": "catalogue_free",
+        "layer": "n35-m306",
+        "state_id": 35,
+        "h": 2,
+        "j": 9,
+        "attempt_index": 3
+      },
+      {
+        "mode": "selected_balance",
+        "layer": "n35-m306",
+        "state_id": 35,
+        "h": 2,
+        "j": 9,
+        "attempt_index": 7
+      },
+      {
+        "mode": "separate_transport",
+        "layer": "n35-m306",
+        "state_id": 35,
+        "h": 2,
+        "j": 9,
+        "attempt_index": 11
+      }
+    ]
+  },
+  {
+    "rank": 118,
+    "weights": [
+      [
+        "ub",
+        [
+          "forced_transport",
+          3
+        ],
+        604
+      ],
+      [
+        "ub",
+        [
+          "forced_transport",
+          6
+        ],
+        201
+      ],
+      [
+        "ub",
+        [
+          "forced_transport",
+          7
+        ],
+        432
+      ],
+      [
+        "ub",
+        [
+          "forced_transport",
+          9
+        ],
+        141
+      ],
+      [
+        "ub",
+        [
+          "forced_transport",
+          10
+        ],
+        116
+      ],
+      [
+        "ub",
+        [
+          "forced_transport",
+          11
+        ],
+        96
+      ],
+      [
+        "ub",
+        [
+          "heavy_mass"
+        ],
+        2047
+      ],
+      [
+        "ub",
+        [
+          "load"
+        ],
+        302
+      ]
+    ],
+    "selected": false,
+    "provenance": [
+      {
+        "mode": "separate_transport",
+        "layer": "n34-m289",
+        "state_id": 66,
+        "h": 2,
+        "j": 3,
+        "attempt_index": 8
+      }
+    ]
+  },
+  {
+    "rank": 119,
+    "weights": [
+      [
+        "ub",
+        [
+          "heavy_mass"
+        ],
+        877
+      ],
+      [
+        "ub",
+        [
+          "heavy_receiving"
+        ],
+        2305
+      ],
+      [
+        "ub",
+        [
+          "load"
+        ],
+        763
+      ]
+    ],
+    "selected": false,
+    "provenance": [
+      {
+        "mode": "catalogue_free",
+        "layer": "n35-m306",
+        "state_id": 35,
+        "h": 2,
+        "j": 6,
+        "attempt_index": 0
+      },
+      {
+        "mode": "selected_balance",
+        "layer": "n35-m306",
+        "state_id": 35,
+        "h": 2,
+        "j": 6,
+        "attempt_index": 4
+      }
+    ]
+  },
+  {
+    "rank": 120,
+    "weights": [
+      [
+        "ub",
+        [
+          "all_transport",
+          2
+        ],
+        1250
+      ],
+      [
+        "ub",
+        [
+          "heavy_mass"
+        ],
+        341
+      ],
+      [
+        "ub",
+        [
+          "heavy_receiving"
+        ],
+        1818
+      ],
+      [
+        "ub",
+        [
+          "load"
+        ],
+        682
+      ]
+    ],
+    "selected": false,
+    "provenance": [
+      {
+        "mode": "separate_transport",
+        "layer": "n34-m289",
+        "state_id": 275,
+        "h": 3,
+        "j": 5,
+        "attempt_index": 12
+      }
+    ]
+  },
+  {
+    "rank": 121,
+    "weights": [
+      [
+        "ub",
+        [
+          "all_transport",
+          2
+        ],
+        1093
+      ],
+      [
+        "ub",
+        [
+          "forced_transport",
+          7
+        ],
+        145
+      ],
+      [
+        "ub",
+        [
+          "forced_transport",
+          8
+        ],
+        59
+      ],
+      [
+        "ub",
+        [
+          "forced_transport",
+          9
+        ],
+        205
+      ],
+      [
+        "ub",
+        [
+          "heavy_mass"
+        ],
+        2253
+      ],
+      [
+        "ub",
+        [
+          "load"
+        ],
+        364
+      ]
+    ],
+    "selected": false,
+    "provenance": [
+      {
+        "mode": "separate_transport",
+        "layer": "n35-m306",
+        "state_id": 218,
+        "h": 3,
+        "j": 5,
+        "attempt_index": 9
+      }
+    ]
+  },
+  {
+    "rank": 122,
+    "weights": [
+      [
+        "ub",
+        [
+          "all_transport",
+          2
+        ],
+        923
+      ],
+      [
+        "ub",
+        [
+          "forced_transport",
+          7
+        ],
+        77
+      ],
+      [
+        "ub",
+        [
+          "forced_transport",
+          9
+        ],
+        154
+      ],
+      [
+        "ub",
+        [
+          "heavy_mass"
+        ],
+        2154
+      ],
+      [
+        "ub",
+        [
+          "load"
+        ],
+        308
+      ],
+      [
+        "ub",
+        [
+          "pair_capacity"
+        ],
+        538
+      ]
+    ],
+    "selected": false,
+    "provenance": [
+      {
+        "mode": "separate_transport",
+        "layer": "n35-m306",
+        "state_id": 386,
+        "h": 3,
+        "j": 5,
+        "attempt_index": 10
+      }
+    ]
+  },
+  {
+    "rank": 123,
+    "weights": [
+      [
+        "ub",
+        [
+          "heavy_mass"
+        ],
+        968
+      ],
+      [
+        "ub",
+        [
+          "heavy_receiving"
+        ],
+        2581
+      ],
+      [
+        "ub",
+        [
+          "load"
+        ],
+        806
+      ]
+    ],
+    "selected": false,
+    "provenance": [
+      {
+        "mode": "separate_transport",
+        "layer": "n34-m289",
+        "state_id": 133,
+        "h": 2,
+        "j": 7,
+        "attempt_index": 12
+      }
+    ]
+  },
+  {
+    "rank": 124,
+    "weights": [
+      [
+        "ub",
+        [
+          "all_transport",
+          3
+        ],
+        1636
+      ],
+      [
+        "ub",
+        [
+          "heavy_mass"
+        ],
+        2455
+      ],
+      [
+        "ub",
+        [
+          "load"
+        ],
+        182
+      ],
+      [
+        "ub",
+        [
+          "pair_capacity"
+        ],
+        606
+      ]
+    ],
+    "selected": false,
+    "provenance": [
+      {
+        "mode": "separate_transport",
+        "layer": "n34-m289",
+        "state_id": 13530,
+        "h": 5,
+        "j": 7,
+        "attempt_index": 14
+      }
+    ]
+  },
+  {
+    "rank": 125,
+    "weights": [
+      [
+        "ub",
+        [
+          "all_transport",
+          2
+        ],
+        606
+      ],
+      [
+        "ub",
+        [
+          "forced_transport",
+          6
+        ],
+        213
+      ],
+      [
+        "ub",
+        [
+          "forced_transport",
+          7
+        ],
+        245
+      ],
+      [
+        "ub",
+        [
+          "forced_transport",
+          8
+        ],
+        303
+      ],
+      [
+        "ub",
+        [
+          "forced_transport",
+          9
+        ],
+        182
+      ],
+      [
+        "ub",
+        [
+          "heavy_mass"
+        ],
+        3187
+      ],
+      [
+        "ub",
+        [
+          "load"
+        ],
+        202
+      ]
+    ],
+    "selected": false,
+    "provenance": [
+      {
+        "mode": "separate_transport",
+        "layer": "n34-m289",
+        "state_id": 6158,
+        "h": 3,
+        "j": 4,
+        "attempt_index": 9
+      }
+    ]
+  },
+  {
+    "rank": 126,
+    "weights": [
+      [
+        "ub",
+        [
+          "forced_transport",
+          5
+        ],
+        276
+      ],
+      [
+        "ub",
+        [
+          "forced_transport",
+          6
+        ],
+        405
+      ],
+      [
+        "ub",
+        [
+          "forced_transport",
+          7
+        ],
+        296
+      ],
+      [
+        "ub",
+        [
+          "forced_transport",
+          8
+        ],
+        133
+      ],
+      [
+        "ub",
+        [
+          "forced_transport",
+          9
+        ],
+        167
+      ],
+      [
+        "ub",
+        [
+          "forced_transport",
+          10
+        ],
+        136
+      ],
+      [
+        "ub",
+        [
+          "forced_transport",
+          11
+        ],
+        114
+      ],
+      [
+        "ub",
+        [
+          "heavy_mass"
+        ],
+        2778
+      ],
+      [
+        "ub",
+        [
+          "heavy_receiving"
+        ],
+        555
+      ],
+      [
+        "ub",
+        [
+          "load"
+        ],
+        278
+      ]
+    ],
+    "selected": false,
+    "provenance": [
+      {
+        "mode": "separate_transport",
+        "layer": "n34-m289",
+        "state_id": 60,
+        "h": 2,
+        "j": 3,
+        "attempt_index": 11
+      }
+    ]
+  },
+  {
+    "rank": 127,
+    "weights": [
+      [
+        "ub",
+        [
+          "forced_transport",
+          3
+        ],
+        827
+      ],
+      [
+        "ub",
+        [
+          "forced_transport",
+          4
+        ],
+        337
+      ],
+      [
+        "ub",
+        [
+          "forced_transport",
+          5
+        ],
+        92
+      ],
+      [
+        "ub",
+        [
+          "forced_transport",
+          6
+        ],
+        291
+      ],
+      [
+        "ub",
+        [
+          "forced_transport",
+          7
+        ],
+        277
+      ],
+      [
+        "ub",
+        [
+          "forced_transport",
+          8
+        ],
+        182
+      ],
+      [
+        "ub",
+        [
+          "forced_transport",
+          9
+        ],
+        146
+      ],
+      [
+        "ub",
+        [
+          "forced_transport",
+          10
+        ],
+        119
+      ],
+      [
+        "ub",
+        [
+          "forced_transport",
+          11
+        ],
+        99
+      ],
+      [
+        "ub",
+        [
+          "heavy_mass"
+        ],
+        2301
+      ],
+      [
+        "ub",
+        [
+          "load"
+        ],
+        582
+      ]
+    ],
+    "selected": false,
+    "provenance": [
+      {
+        "mode": "separate_transport",
+        "layer": "n34-m289",
+        "state_id": 133,
+        "h": 2,
+        "j": 4,
+        "attempt_index": 9
+      }
+    ]
+  },
+  {
+    "rank": 128,
+    "weights": [
+      [
+        "ub",
+        [
+          "all_transport",
+          3
+        ],
+        1009
+      ],
+      [
+        "ub",
+        [
+          "forced_transport",
+          5
+        ],
+        464
+      ],
+      [
+        "ub",
+        [
+          "forced_transport",
+          6
+        ],
+        263
+      ],
+      [
+        "ub",
+        [
+          "forced_transport",
+          7
+        ],
+        138
+      ],
+      [
+        "ub",
+        [
+          "forced_transport",
+          8
+        ],
+        145
+      ],
+      [
+        "ub",
+        [
+          "heavy_mass"
+        ],
+        3076
+      ],
+      [
+        "ub",
+        [
+          "load"
+        ],
+        239
+      ]
+    ],
+    "selected": false,
+    "provenance": [
+      {
+        "mode": "separate_transport",
+        "layer": "n35-m306",
+        "state_id": 465,
+        "h": 4,
+        "j": 7,
+        "attempt_index": 12
+      }
+    ]
+  },
+  {
+    "rank": 129,
+    "weights": [
+      [
+        "ub",
+        [
+          "all_transport",
+          2
+        ],
+        614
+      ],
+      [
+        "ub",
+        [
+          "all_transport",
+          3
+        ],
+        886
+      ],
+      [
+        "ub",
+        [
+          "forced_transport",
+          5
+        ],
+        343
+      ],
+      [
+        "ub",
+        [
+          "forced_transport",
+          6
+        ],
+        159
+      ],
+      [
+        "ub",
+        [
+          "forced_transport",
+          7
+        ],
+        119
+      ],
+      [
+        "ub",
+        [
+          "forced_transport",
+          8
+        ],
+        193
+      ],
+      [
+        "ub",
+        [
+          "heavy_mass"
+        ],
+        2957
+      ],
+      [
+        "ub",
+        [
+          "load"
+        ],
+        300
+      ]
+    ],
+    "selected": false,
+    "provenance": [
+      {
+        "mode": "separate_transport",
+        "layer": "n35-m306",
+        "state_id": 465,
+        "h": 4,
+        "j": 8,
+        "attempt_index": 13
+      }
+    ]
+  },
+  {
+    "rank": 130,
+    "weights": [
+      [
+        "ub",
+        [
+          "all_transport",
+          3
+        ],
+        2071
+      ],
+      [
+        "ub",
+        [
+          "forced_transport",
+          7
+        ],
+        59
+      ],
+      [
+        "ub",
+        [
+          "heavy_mass"
+        ],
+        3047
+      ],
+      [
+        "ub",
+        [
+          "load"
+        ],
+        237
+      ],
+      [
+        "ub",
+        [
+          "pair_capacity"
+        ],
+        976
+      ]
+    ],
+    "selected": false,
+    "provenance": [
+      {
+        "mode": "separate_transport",
+        "layer": "n34-m289",
+        "state_id": 13530,
+        "h": 5,
+        "j": 8,
+        "attempt_index": 15
+      }
+    ]
+  },
+  {
+    "rank": 131,
+    "weights": [
+      [
+        "ub",
+        [
+          "heavy_mass"
+        ],
+        2444
+      ],
+      [
+        "ub",
+        [
+          "heavy_receiving"
+        ],
+        3111
+      ],
+      [
+        "ub",
+        [
+          "load"
+        ],
+        1556
+      ]
+    ],
+    "selected": false,
+    "provenance": [
+      {
+        "mode": "catalogue_free",
+        "layer": "n34-m289",
+        "state_id": 60,
+        "h": 2,
+        "j": 3,
+        "attempt_index": 1
+      },
+      {
+        "mode": "selected_balance",
+        "layer": "n34-m289",
+        "state_id": 60,
+        "h": 2,
+        "j": 3,
+        "attempt_index": 6
+      }
+    ]
+  },
+  {
+    "rank": 132,
+    "weights": [
+      [
+        "ub",
+        [
+          "heavy_mass"
+        ],
+        1111
+      ],
+      [
+        "ub",
+        [
+          "heavy_receiving"
+        ],
+        4444
+      ],
+      [
+        "ub",
+        [
+          "load"
+        ],
+        1667
+      ]
+    ],
+    "selected": false,
+    "provenance": [
+      {
+        "mode": "catalogue_free",
+        "layer": "n35-m306",
+        "state_id": 35,
+        "h": 2,
+        "j": 8,
+        "attempt_index": 2
+      },
+      {
+        "mode": "selected_balance",
+        "layer": "n35-m306",
+        "state_id": 35,
+        "h": 2,
+        "j": 8,
+        "attempt_index": 6
+      },
+      {
+        "mode": "separate_transport",
+        "layer": "n35-m306",
+        "state_id": 35,
+        "h": 2,
+        "j": 8,
+        "attempt_index": 10
+      }
+    ]
+  },
+  {
+    "rank": 133,
+    "weights": [
+      [
+        "ub",
+        [
+          "all_transport",
+          3
+        ],
+        2500
+      ],
+      [
+        "ub",
+        [
+          "forced_transport",
+          5
+        ],
+        712
+      ],
+      [
+        "ub",
+        [
+          "forced_transport",
+          6
+        ],
+        465
+      ],
+      [
+        "ub",
+        [
+          "forced_transport",
+          7
+        ],
+        141
+      ],
+      [
+        "ub",
+        [
+          "heavy_mass"
+        ],
+        1667
+      ],
+      [
+        "ub",
+        [
+          "heavy_receiving"
+        ],
+        1030
+      ],
+      [
+        "ub",
+        [
+          "load"
+        ],
+        833
+      ]
+    ],
+    "selected": false,
+    "provenance": [
+      {
+        "mode": "separate_transport",
+        "layer": "n34-m289",
+        "state_id": 3522,
+        "h": 4,
+        "j": 3,
+        "attempt_index": 9
+      }
+    ]
+  },
+  {
+    "rank": 134,
+    "weights": [
+      [
+        "eq",
+        [
+          "selected_balance"
+        ],
+        4286
+      ],
+      [
+        "ub",
+        [
+          "heavy_receiving"
+        ],
+        2286
+      ],
+      [
+        "ub",
+        [
+          "load"
+        ],
+        857
+      ]
+    ],
+    "selected": false,
+    "provenance": [
+      {
+        "mode": "selected_balance",
+        "layer": "n35-m307",
+        "state_id": 18,
+        "h": 5,
+        "j": 5,
+        "attempt_index": 9
+      }
+    ]
+  },
+  {
+    "rank": 135,
+    "weights": [
+      [
+        "ub",
+        [
+          "forced_transport",
+          7
+        ],
+        735
+      ],
+      [
+        "ub",
+        [
+          "forced_transport",
+          8
+        ],
+        572
+      ],
+      [
+        "ub",
+        [
+          "forced_transport",
+          9
+        ],
+        458
+      ],
+      [
+        "ub",
+        [
+          "heavy_mass"
+        ],
+        5882
+      ]
+    ],
+    "selected": false,
+    "provenance": [
+      {
+        "mode": "separate_transport",
+        "layer": "n34-m289",
+        "state_id": 9490,
+        "h": 2,
+        "j": 6,
+        "attempt_index": 8
+      }
+    ]
+  },
+  {
+    "rank": 136,
+    "weights": [
+      [
+        "ub",
+        [
+          "all_transport",
+          2
+        ],
+        2889
+      ],
+      [
+        "ub",
+        [
+          "heavy_mass"
+        ],
+        889
+      ],
+      [
+        "ub",
+        [
+          "heavy_receiving"
+        ],
+        3333
+      ],
+      [
+        "ub",
+        [
+          "load"
+        ],
+        1333
+      ]
+    ],
+    "selected": false,
+    "provenance": [
+      {
+        "mode": "separate_transport",
+        "layer": "n34-m289",
+        "state_id": 275,
+        "h": 3,
+        "j": 4,
+        "attempt_index": 11
+      }
+    ]
+  },
+  {
+    "rank": 137,
+    "weights": [
+      [
+        "ub",
+        [
+          "forced_transport",
+          3
+        ],
+        1551
+      ],
+      [
+        "ub",
+        [
+          "forced_transport",
+          4
+        ],
+        421
+      ],
+      [
+        "ub",
+        [
+          "forced_transport",
+          6
+        ],
+        509
+      ],
+      [
+        "ub",
+        [
+          "forced_transport",
+          7
+        ],
+        600
+      ],
+      [
+        "ub",
+        [
+          "forced_transport",
+          9
+        ],
+        185
+      ],
+      [
+        "ub",
+        [
+          "forced_transport",
+          10
+        ],
+        151
+      ],
+      [
+        "ub",
+        [
+          "forced_transport",
+          11
+        ],
+        126
+      ],
+      [
+        "ub",
+        [
+          "heavy_mass"
+        ],
+        3151
+      ],
+      [
+        "ub",
+        [
+          "heavy_receiving"
+        ],
+        766
+      ],
+      [
+        "ub",
+        [
+          "load"
+        ],
+        1273
+      ]
+    ],
+    "selected": false,
+    "provenance": [
+      {
+        "mode": "separate_transport",
+        "layer": "n34-m289",
+        "state_id": 316,
+        "h": 2,
+        "j": 5,
+        "attempt_index": 7
+      }
+    ]
+  },
+  {
+    "rank": 138,
+    "weights": [
+      [
+        "ub",
+        [
+          "all_transport",
+          3
+        ],
+        1429
+      ],
+      [
+        "ub",
+        [
+          "heavy_mass"
+        ],
+        4286
+      ],
+      [
+        "ub",
+        [
+          "heavy_receiving"
+        ],
+        571
+      ],
+      [
+        "ub",
+        [
+          "load"
+        ],
+        286
+      ],
+      [
+        "ub",
+        [
+          "pair_capacity"
+        ],
+        3143
+      ]
+    ],
+    "selected": false,
+    "provenance": [
+      {
+        "mode": "separate_transport",
+        "layer": "n34-m289",
+        "state_id": 11798,
+        "h": 4,
+        "j": 7,
+        "attempt_index": 13
+      }
+    ]
+  },
+  {
+    "rank": 139,
+    "weights": [
+      [
+        "ub",
+        [
+          "all_transport",
+          2
+        ],
+        2747
+      ],
+      [
+        "ub",
+        [
+          "forced_transport",
+          5
+        ],
+        993
+      ],
+      [
+        "ub",
+        [
+          "forced_transport",
+          6
+        ],
+        435
+      ],
+      [
+        "ub",
+        [
+          "forced_transport",
+          7
+        ],
+        86
+      ],
+      [
+        "ub",
+        [
+          "forced_transport",
+          8
+        ],
+        211
+      ],
+      [
+        "ub",
+        [
+          "forced_transport",
+          9
+        ],
+        327
+      ],
+      [
+        "ub",
+        [
+          "heavy_mass"
+        ],
+        4867
+      ],
+      [
+        "ub",
+        [
+          "load"
+        ],
+        960
+      ]
+    ],
+    "selected": false,
+    "provenance": [
+      {
+        "mode": "separate_transport",
+        "layer": "n35-m306",
+        "state_id": 136,
+        "h": 3,
+        "j": 5,
+        "attempt_index": 9
+      }
+    ]
+  },
+  {
+    "rank": 140,
+    "weights": [
+      [
+        "ub",
+        [
+          "heavy_mass"
+        ],
+        3462
+      ],
+      [
+        "ub",
+        [
+          "heavy_receiving"
+        ],
+        5385
+      ],
+      [
+        "ub",
+        [
+          "load"
+        ],
+        2692
+      ]
+    ],
+    "selected": false,
+    "provenance": [
+      {
+        "mode": "catalogue_free",
+        "layer": "n34-m289",
+        "state_id": 133,
+        "h": 2,
+        "j": 4,
+        "attempt_index": 1
+      },
+      {
+        "mode": "selected_balance",
+        "layer": "n34-m289",
+        "state_id": 133,
+        "h": 2,
+        "j": 4,
+        "attempt_index": 5
+      }
+    ]
+  },
+  {
+    "rank": 141,
+    "weights": [
+      [
+        "ub",
+        [
+          "all_transport",
+          2
+        ],
+        5341
+      ],
+      [
+        "ub",
+        [
+          "forced_transport",
+          8
+        ],
+        143
+      ],
+      [
+        "ub",
+        [
+          "forced_transport",
+          9
+        ],
+        55
+      ],
+      [
+        "ub",
+        [
+          "heavy_mass"
+        ],
+        5341
+      ],
+      [
+        "ub",
+        [
+          "load"
+        ],
+        692
+      ]
+    ],
+    "selected": false,
+    "provenance": [
+      {
+        "mode": "separate_transport",
+        "layer": "n34-m289",
+        "state_id": 9490,
+        "h": 4,
+        "j": 5,
+        "attempt_index": 14
+      }
+    ]
+  },
+  {
+    "rank": 142,
+    "weights": [
+      [
+        "ub",
+        [
+          "heavy_mass"
+        ],
+        3756
+      ],
+      [
+        "ub",
+        [
+          "heavy_receiving"
+        ],
+        5951
+      ],
+      [
+        "ub",
+        [
+          "load"
+        ],
+        2488
+      ]
+    ],
+    "selected": false,
+    "provenance": [
+      {
+        "mode": "catalogue_free",
+        "layer": "n34-m289",
+        "state_id": 316,
+        "h": 2,
+        "j": 4,
+        "attempt_index": 0
+      },
+      {
+        "mode": "selected_balance",
+        "layer": "n34-m289",
+        "state_id": 316,
+        "h": 2,
+        "j": 4,
+        "attempt_index": 3
+      }
+    ]
+  },
+  {
+    "rank": 143,
+    "weights": [
+      [
+        "ub",
+        [
+          "all_transport",
+          2
+        ],
+        6071
+      ],
+      [
+        "ub",
+        [
+          "all_transport",
+          4
+        ],
+        1071
+      ],
+      [
+        "ub",
+        [
+          "heavy_receiving"
+        ],
+        4286
+      ],
+      [
+        "ub",
+        [
+          "load"
+        ],
+        1429
+      ]
+    ],
+    "selected": false,
+    "provenance": [
+      {
+        "mode": "separate_transport",
+        "layer": "n35-m306",
+        "state_id": 329,
+        "h": 5,
+        "j": 3,
+        "attempt_index": 11
+      }
+    ]
+  },
+  {
+    "rank": 144,
+    "weights": [
+      [
+        "ub",
+        [
+          "all_transport",
+          0
+        ],
+        37
+      ],
+      [
+        "ub",
+        [
+          "all_transport",
+          2
+        ],
+        12
+      ],
+      [
+        "ub",
+        [
+          "forced_transport",
+          4
+        ],
+        9
+      ],
+      [
+        "ub",
+        [
+          "forced_transport",
+          5
+        ],
+        1660
+      ],
+      [
+        "ub",
+        [
+          "forced_transport",
+          6
+        ],
+        807
+      ],
+      [
+        "ub",
+        [
+          "forced_transport",
+          7
+        ],
+        468
+      ],
+      [
+        "ub",
+        [
+          "forced_transport",
+          8
+        ],
+        425
+      ],
+      [
+        "ub",
+        [
+          "forced_transport",
+          9
+        ],
+        465
+      ],
+      [
+        "ub",
+        [
+          "forced_transport",
+          10
+        ],
+        517
+      ],
+      [
+        "ub",
+        [
+          "heavy_mass"
+        ],
+        7917
+      ],
+      [
+        "ub",
+        [
+          "load"
+        ],
+        550
+      ]
+    ],
+    "selected": false,
+    "provenance": [
+      {
+        "mode": "separate_transport",
+        "layer": "n34-m289",
+        "state_id": 3972,
+        "h": 3,
+        "j": 4,
+        "attempt_index": 9
+      }
+    ]
+  },
+  {
+    "rank": 145,
+    "weights": [
+      [
+        "ub",
+        [
+          "forced_transport",
+          4
+        ],
+        2879
+      ],
+      [
+        "ub",
+        [
+          "forced_transport",
+          6
+        ],
+        887
+      ],
+      [
+        "ub",
+        [
+          "forced_transport",
+          7
+        ],
+        438
+      ],
+      [
+        "ub",
+        [
+          "forced_transport",
+          8
+        ],
+        139
+      ],
+      [
+        "ub",
+        [
+          "forced_transport",
+          9
+        ],
+        566
+      ],
+      [
+        "ub",
+        [
+          "heavy_mass"
+        ],
+        7273
+      ],
+      [
+        "ub",
+        [
+          "load"
+        ],
+        909
+      ]
+    ],
+    "selected": false,
+    "provenance": [
+      {
+        "mode": "separate_transport",
+        "layer": "n35-m307",
+        "state_id": 18,
+        "h": 3,
+        "j": 6,
+        "attempt_index": 16
+      }
+    ]
+  },
+  {
+    "rank": 146,
+    "weights": [
+      [
+        "ub",
+        [
+          "forced_transport",
+          3
+        ],
+        1813
+      ],
+      [
+        "ub",
+        [
+          "forced_transport",
+          4
+        ],
+        56
+      ],
+      [
+        "ub",
+        [
+          "forced_transport",
+          6
+        ],
+        799
+      ],
+      [
+        "ub",
+        [
+          "forced_transport",
+          7
+        ],
+        207
+      ],
+      [
+        "ub",
+        [
+          "forced_transport",
+          8
+        ],
+        265
+      ],
+      [
+        "ub",
+        [
+          "forced_transport",
+          9
+        ],
+        212
+      ],
+      [
+        "ub",
+        [
+          "forced_transport",
+          10
+        ],
+        173
+      ],
+      [
+        "ub",
+        [
+          "forced_transport",
+          11
+        ],
+        144
+      ],
+      [
+        "ub",
+        [
+          "heavy_mass"
+        ],
+        4553
+      ],
+      [
+        "ub",
+        [
+          "heavy_receiving"
+        ],
+        3291
+      ],
+      [
+        "ub",
+        [
+          "load"
+        ],
+        1997
+      ]
+    ],
+    "selected": false,
+    "provenance": [
+      {
+        "mode": "separate_transport",
+        "layer": "n34-m289",
+        "state_id": 133,
+        "h": 2,
+        "j": 5,
+        "attempt_index": 10
+      }
+    ]
+  },
+  {
+    "rank": 147,
+    "weights": [
+      [
+        "ub",
+        [
+          "forced_transport",
+          6
+        ],
+        791
+      ],
+      [
+        "ub",
+        [
+          "forced_transport",
+          7
+        ],
+        933
+      ],
+      [
+        "ub",
+        [
+          "forced_transport",
+          9
+        ],
+        287
+      ],
+      [
+        "ub",
+        [
+          "forced_transport",
+          10
+        ],
+        235
+      ],
+      [
+        "ub",
+        [
+          "forced_transport",
+          11
+        ],
+        196
+      ],
+      [
+        "ub",
+        [
+          "heavy_mass"
+        ],
+        4896
+      ],
+      [
+        "ub",
+        [
+          "heavy_receiving"
+        ],
+        4255
+      ],
+      [
+        "ub",
+        [
+          "load"
+        ],
+        1977
+      ]
+    ],
+    "selected": false,
+    "provenance": [
+      {
+        "mode": "separate_transport",
+        "layer": "n34-m289",
+        "state_id": 184,
+        "h": 2,
+        "j": 5,
+        "attempt_index": 7
+      }
+    ]
+  },
+  {
+    "rank": 148,
+    "weights": [
+      [
+        "ub",
+        [
+          "heavy_mass"
+        ],
+        4091
+      ],
+      [
+        "ub",
+        [
+          "heavy_receiving"
+        ],
+        6364
+      ],
+      [
+        "ub",
+        [
+          "load"
+        ],
+        3182
+      ]
+    ],
+    "selected": false,
+    "provenance": [
+      {
+        "mode": "catalogue_free",
+        "layer": "n34-m289",
+        "state_id": 66,
+        "h": 2,
+        "j": 4,
+        "attempt_index": 1
+      },
+      {
+        "mode": "selected_balance",
+        "layer": "n34-m289",
+        "state_id": 66,
+        "h": 2,
+        "j": 4,
+        "attempt_index": 5
+      }
+    ]
+  },
+  {
+    "rank": 149,
+    "weights": [
+      [
+        "eq",
+        [
+          "selected_balance"
+        ],
+        8333
+      ],
+      [
+        "ub",
+        [
+          "heavy_receiving"
+        ],
+        4167
+      ],
+      [
+        "ub",
+        [
+          "load"
+        ],
+        1667
+      ]
+    ],
+    "selected": false,
+    "provenance": [
+      {
+        "mode": "selected_balance",
+        "layer": "n35-m307",
+        "state_id": 18,
+        "h": 5,
+        "j": 6,
+        "attempt_index": 10
+      }
+    ]
+  },
+  {
+    "rank": 150,
+    "weights": [
+      [
+        "ub",
+        [
+          "heavy_mass"
+        ],
+        6923
+      ],
+      [
+        "ub",
+        [
+          "heavy_receiving"
+        ],
+        10769
+      ],
+      [
+        "ub",
+        [
+          "load"
+        ],
+        5385
+      ]
+    ],
+    "selected": false,
+    "provenance": [
+      {
+        "mode": "catalogue_free",
+        "layer": "n34-m289",
+        "state_id": 60,
+        "h": 2,
+        "j": 4,
+        "attempt_index": 2
+      },
+      {
+        "mode": "selected_balance",
+        "layer": "n34-m289",
+        "state_id": 60,
+        "h": 2,
+        "j": 4,
+        "attempt_index": 7
+      }
+    ]
+  },
+  {
+    "rank": 151,
+    "weights": [
+      [
+        "ub",
+        [
+          "all_transport",
+          3
+        ],
+        983
+      ],
+      [
+        "ub",
+        [
+          "forced_transport",
+          6
+        ],
+        2357
+      ],
+      [
+        "ub",
+        [
+          "forced_transport",
+          7
+        ],
+        1485
+      ],
+      [
+        "ub",
+        [
+          "forced_transport",
+          8
+        ],
+        1830
+      ],
+      [
+        "ub",
+        [
+          "forced_transport",
+          9
+        ],
+        1093
+      ],
+      [
+        "ub",
+        [
+          "forced_transport",
+          10
+        ],
+        1296
+      ],
+      [
+        "ub",
+        [
+          "heavy_mass"
+        ],
+        18609
+      ],
+      [
+        "ub",
+        [
+          "load"
+        ],
+        1130
+      ]
+    ],
+    "selected": false,
+    "provenance": [
+      {
+        "mode": "separate_transport",
+        "layer": "n35-m306",
+        "state_id": 8,
+        "h": 3,
+        "j": 4,
+        "attempt_index": 7
+      }
+    ]
+  },
+  {
+    "rank": 152,
+    "weights": [
+      [
+        "eq",
+        [
+          "selected_balance"
+        ],
+        6667
+      ],
+      [
+        "ub",
+        [
+          "heavy_mass"
+        ],
+        18333
+      ],
+      [
+        "ub",
+        [
+          "heavy_receiving"
+        ],
+        10000
+      ],
+      [
+        "ub",
+        [
+          "load"
+        ],
+        1667
+      ]
+    ],
+    "selected": false,
+    "provenance": [
+      {
+        "mode": "selected_balance",
+        "layer": "n35-m306",
+        "state_id": 386,
+        "h": 4,
+        "j": 3,
+        "attempt_index": 6
+      }
+    ]
+  },
+  {
+    "rank": 153,
+    "weights": [
+      [
+        "ub",
+        [
+          "forced_transport",
+          3
+        ],
+        8621
+      ],
+      [
+        "ub",
+        [
+          "forced_transport",
+          4
+        ],
+        2500
+      ],
+      [
+        "ub",
+        [
+          "forced_transport",
+          6
+        ],
+        2673
+      ],
+      [
+        "ub",
+        [
+          "forced_transport",
+          7
+        ],
+        3434
+      ],
+      [
+        "ub",
+        [
+          "forced_transport",
+          9
+        ],
+        1058
+      ],
+      [
+        "ub",
+        [
+          "forced_transport",
+          10
+        ],
+        865
+      ],
+      [
+        "ub",
+        [
+          "forced_transport",
+          11
+        ],
+        721
+      ],
+      [
+        "ub",
+        [
+          "heavy_mass"
+        ],
+        16682
+      ],
+      [
+        "ub",
+        [
+          "heavy_receiving"
+        ],
+        2242
+      ],
+      [
+        "ub",
+        [
+          "load"
+        ],
+        6682
+      ]
+    ],
+    "selected": false,
+    "provenance": [
+      {
+        "mode": "separate_transport",
+        "layer": "n34-m289",
+        "state_id": 66,
+        "h": 2,
+        "j": 5,
+        "attempt_index": 10
+      }
+    ]
+  },
+  {
+    "rank": 154,
+    "weights": [
+      [
+        "ub",
+        [
+          "all_transport",
+          0
+        ],
+        16071
+      ],
+      [
+        "ub",
+        [
+          "all_transport",
+          2
+        ],
+        5357
+      ],
+      [
+        "ub",
+        [
+          "forced_transport",
+          4
+        ],
+        10714
+      ],
+      [
+        "ub",
+        [
+          "forced_transport",
+          9
+        ],
+        2143
+      ],
+      [
+        "ub",
+        [
+          "heavy_mass"
+        ],
+        47857
+      ],
+      [
+        "ub",
+        [
+          "heavy_receiving"
+        ],
+        15714
+      ],
+      [
+        "ub",
+        [
+          "load"
+        ],
+        7143
+      ]
+    ],
+    "selected": false,
+    "provenance": [
+      {
+        "mode": "separate_transport",
+        "layer": "n34-m289",
+        "state_id": 1368,
+        "h": 3,
+        "j": 3,
+        "attempt_index": 7
+      }
+    ]
+  },
+  {
+    "rank": 155,
+    "weights": [
+      [
+        "ub",
+        [
+          "all_transport",
+          3
+        ],
+        36000
+      ],
+      [
+        "ub",
+        [
+          "heavy_mass"
+        ],
+        54000
+      ],
+      [
+        "ub",
+        [
+          "load"
+        ],
+        4000
+      ],
+      [
+        "ub",
+        [
+          "pair_capacity"
+        ],
+        13333
+      ]
+    ],
+    "selected": false,
+    "provenance": [
+      {
+        "mode": "separate_transport",
+        "layer": "n34-m289",
+        "state_id": 13542,
+        "h": 5,
+        "j": 7,
+        "attempt_index": 13
+      }
+    ]
+  }
+]

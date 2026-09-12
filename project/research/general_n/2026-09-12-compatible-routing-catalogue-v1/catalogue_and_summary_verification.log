@@ -1,0 +1,18 @@
+{
+  "status": "PASS",
+  "ranked_pilot_vectors": 155,
+  "frozen_seeds": 20,
+  "templates": 31,
+  "mode_sizes": {
+    "heavy_only": 15,
+    "selected_degree": 16,
+    "eligible": 31
+  },
+  "complete_survivor_accounting": true,
+  "compressed_templates": 11,
+  "compressed_sender_count_obligations": 6314,
+  "single_hand_template_whole_states": 707,
+  "ordinary_only_at_recorded_threshold": 989,
+  "combined_survivors": 4584,
+  "external_review": "OPEN"
+}

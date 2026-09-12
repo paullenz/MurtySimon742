@@ -1,0 +1,4 @@
+Initial input preparation stopped before any replay.
+ValueError: 'n34-m289' is not in list
+Cause: display-style layer names were used in LAYERS instead of the preserved lowercase hyphenated identifiers.
+Correction: use n34-m289, n35-m306, n35-m307. The pool input had already been written; no engine result existed.

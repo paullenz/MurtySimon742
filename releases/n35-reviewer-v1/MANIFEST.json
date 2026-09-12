@@ -24,12 +24,12 @@
   },
   "artifacts": {
     "README.md": {
-      "sha256": "7df52142842b5dce0e17240dab395016446f424c4d64cb62490de4d38770ce83",
-      "bytes": 48960
+      "sha256": "53b35406a59254a71e2c11357e1b0aba8efc2e606f6c43069bef880fc66aa32b",
+      "bytes": 51768
     },
     "START_HERE_FOR_REVIEWERS.md": {
-      "sha256": "4a561863b3fe6b3d39a172f471cb5a3d4b2e1dbfbf63082b15971850f4e50586",
-      "bytes": 15489
+      "sha256": "750d4072a516c2c3bb2fd4e56acdaa85e05e2443a64268bd8e7f7cdaab45a1a0",
+      "bytes": 16272
     },
     "project/research/general_n/2026-09-09-profile-integral-7-12-v1/AUDIT.md": {
       "sha256": "e8c9b3c1997cea5e5f8700e2af6552050dee76bd83f84ba7911c26b30e238320",
@@ -504,8 +504,8 @@
       "bytes": 2349
     },
     "releases/REVIEW_READY_INDEX.md": {
-      "sha256": "7f43ea3b5290af0a9494f684ee483dca38b5ff507b7bbc80249fa2b9cb3e02dd",
-      "bytes": 13409
+      "sha256": "bfcf046ec2c44fca579389ebbfa66f25bdd0c47dbf3d7be738f171d685590db1",
+      "bytes": 14601
     },
     "releases/general-joint-clipping-reviewer-v1/README.md": {
       "sha256": "e834def374a8725bbd39171a545ac824e15ec1e4ce59e3e63bc630db33a74cb8",

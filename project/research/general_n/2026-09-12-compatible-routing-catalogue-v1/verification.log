@@ -1,0 +1,49 @@
+VERIFIED 1000 states
+VERIFIED 2000 states
+VERIFIED 3000 states
+VERIFIED 4000 states
+VERIFIED 5000 states
+{
+  "status": "PASS",
+  "states": 5578,
+  "thresholds": 64332,
+  "attempted_sender_counts": 72303,
+  "exact_catalogue_gaps_checked": 1564007,
+  "capacity_bypasses": 267696,
+  "domain_cache_entries": 6403,
+  "potential_cache_entries": 152889,
+  "source_potential_checks": 14310343,
+  "distinct_domain_options": 530152,
+  "minimum_best_positive_integer_gap": 1,
+  "exclusions": {
+    "heavy_only": 0,
+    "selected_degree": 0,
+    "eligible": 990
+  },
+  "catalogue_survivors": 4588,
+  "pilot_exclusions": 19,
+  "pilot_retained": 15,
+  "inherited_pilot_only": [
+    [
+      "n34-m289",
+      66
+    ],
+    [
+      "n34-m289",
+      184
+    ],
+    [
+      "n34-m289",
+      316
+    ],
+    [
+      "n34-m289",
+      13530
+    ]
+  ],
+  "inherited_sender_count_cases": 46,
+  "combined_exclusions": 994,
+  "combined_survivors": 4584,
+  "integer_arithmetic": "Python unbounded integers; separate Cartesian source domains and per-source cardinality dynamic programming",
+  "external_review": "OPEN"
+}

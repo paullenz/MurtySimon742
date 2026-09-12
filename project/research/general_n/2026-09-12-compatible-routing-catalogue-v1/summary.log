@@ -1,0 +1,128 @@
+{
+  "schema": "compatible-routing-full-pool-summary-v1",
+  "pool": 5578,
+  "seeds": 20,
+  "templates": 31,
+  "exclusions": {
+    "heavy_only": 0,
+    "selected_degree": 0,
+    "eligible": 990
+  },
+  "catalogue_survivors": 4588,
+  "pilot_sample": 29,
+  "pilot_exclusions": 19,
+  "pilot_exclusions_retained": 15,
+  "pilot_only_exclusions": [
+    [
+      "n34-m289",
+      66
+    ],
+    [
+      "n34-m289",
+      184
+    ],
+    [
+      "n34-m289",
+      316
+    ],
+    [
+      "n34-m289",
+      13530
+    ]
+  ],
+  "newly_excluded_beyond_pilot": 975,
+  "combined_exclusions": 994,
+  "combined_survivors": 4584,
+  "layers": {
+    "n34-m289": {
+      "pool": 5415,
+      "catalogue_excluded": 905,
+      "pilot_only": 4,
+      "combined_excluded": 909,
+      "combined_survivors": 4506
+    },
+    "n35-m306": {
+      "pool": 162,
+      "catalogue_excluded": 84,
+      "pilot_only": 0,
+      "combined_excluded": 84,
+      "combined_survivors": 78
+    },
+    "n35-m307": {
+      "pool": 1,
+      "catalogue_excluded": 1,
+      "pilot_only": 0,
+      "combined_excluded": 1,
+      "combined_survivors": 0
+    }
+  },
+  "strata": {
+    "n34-m289/positive-demand": {
+      "pool": 5092,
+      "catalogue_excluded": 861,
+      "combined_survivors": 4229
+    },
+    "n34-m289/zero-demand": {
+      "pool": 323,
+      "catalogue_excluded": 44,
+      "combined_survivors": 277
+    },
+    "n35-m306/positive-demand": {
+      "pool": 161,
+      "catalogue_excluded": 83,
+      "combined_survivors": 78
+    },
+    "n35-m306/zero-demand": {
+      "pool": 1,
+      "catalogue_excluded": 1,
+      "combined_survivors": 0
+    },
+    "n35-m307/positive-demand": {
+      "pool": 1,
+      "catalogue_excluded": 1,
+      "combined_survivors": 0
+    },
+    "n35-m307/zero-demand": {
+      "pool": 0,
+      "catalogue_excluded": 0,
+      "combined_survivors": 0
+    }
+  },
+  "winning_thresholds": {
+    "2": 1,
+    "3": 9,
+    "4": 818,
+    "5": 149,
+    "6": 13
+  },
+  "single_template_support": {
+    "9": 492,
+    "10": 362,
+    "11": 326,
+    "12": 285,
+    "13": 707,
+    "14": 5,
+    "17": 13,
+    "20": 669,
+    "21": 254,
+    "22": 747,
+    "30": 20
+  },
+  "states_needing_more_than_one_template_at_recorded_threshold": 6,
+  "compact_hand_template_id": 13,
+  "compact_hand_template_whole_states": 707,
+  "compact_hand_template_by_layer_and_h": {
+    "('n34-m289', 4)": 608,
+    "('n34-m289', 5)": 33,
+    "('n35-m306', 4)": 59,
+    "('n35-m306', 5)": 7
+  },
+  "compressed_subset_templates": 11,
+  "ordinary_only_at_recorded_threshold": 989,
+  "full_pool_replay": true,
+  "solver_used": false,
+  "changed_fixed_order_ledgers": false,
+  "improved_maximum_degree_threshold": false,
+  "unrestricted_theorem": false,
+  "external_review": "OPEN"
+}

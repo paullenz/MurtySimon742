@@ -1,0 +1,60 @@
+{
+  "selection_timing": "Post-replay analysis; not the frozen input catalogue",
+  "method": "Greedy cover of recorded positive sender-count obligations, ties by template ID; no minimality claim",
+  "covered_whole_states": 990,
+  "sender_count_obligations": 6314,
+  "selected": [
+    {
+      "template_id": 22,
+      "new_sender_count_obligations": 5514
+    },
+    {
+      "template_id": 10,
+      "new_sender_count_obligations": 533
+    },
+    {
+      "template_id": 17,
+      "new_sender_count_obligations": 95
+    },
+    {
+      "template_id": 30,
+      "new_sender_count_obligations": 60
+    },
+    {
+      "template_id": 21,
+      "new_sender_count_obligations": 53
+    },
+    {
+      "template_id": 13,
+      "new_sender_count_obligations": 48
+    },
+    {
+      "template_id": 24,
+      "new_sender_count_obligations": 5
+    },
+    {
+      "template_id": 29,
+      "new_sender_count_obligations": 3
+    },
+    {
+      "template_id": 9,
+      "new_sender_count_obligations": 1
+    },
+    {
+      "template_id": 14,
+      "new_sender_count_obligations": 1
+    },
+    {
+      "template_id": 28,
+      "new_sender_count_obligations": 1
+    }
+  ],
+  "ordinary_only_whole_states_at_recorded_threshold": 989,
+  "recorded_witnesses_using_forced_tails": [
+    [
+      "n34-m289",
+      133
+    ]
+  ],
+  "scope": "No new weights or state exclusions. The subset covers the recorded winning thresholds, not all possible thresholds."
+}

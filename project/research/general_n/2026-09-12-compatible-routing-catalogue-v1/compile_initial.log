@@ -1,0 +1,26 @@
+project/research/general_n/2026-09-12-compatible-routing-catalogue-v1/replay.cpp: In function ‘std::vector<long int> capacities(int, int, const std::vector<int>&, const std::vector<int>&)’:
+project/research/general_n/2026-09-12-compatible-routing-catalogue-v1/replay.cpp:86:9: warning: this ‘if’ clause does not guard... [-Wmisleading-indentation]
+   86 |         if(j)sum+=high[j-1];I pair=I(j)*z-I(j)*(j+1)/2;
+      |         ^~
+project/research/general_n/2026-09-12-compatible-routing-catalogue-v1/replay.cpp:86:29: note: ...this statement, but the latter is misleadingly indented as if it were guarded by the ‘if’
+   86 |         if(j)sum+=high[j-1];I pair=I(j)*z-I(j)*(j+1)/2;
+      |                             ^
+project/research/general_n/2026-09-12-compatible-routing-catalogue-v1/replay.cpp: In function ‘int main()’:
+project/research/general_n/2026-09-12-compatible-routing-catalogue-v1/replay.cpp:118:13: warning: this ‘if’ clause does not guard... [-Wmisleading-indentation]
+  118 |             if(mode)cout<<',';cout<<'"'<<mode_names[mode]<<"\":{\"thresholds\":[";
+      |             ^~
+project/research/general_n/2026-09-12-compatible-routing-catalogue-v1/replay.cpp:118:31: note: ...this statement, but the latter is misleadingly indented as if it were guarded by the ‘if’
+  118 |             if(mode)cout<<',';cout<<'"'<<mode_names[mode]<<"\":{\"thresholds\":[";
+      |                               ^~~~
+project/research/general_n/2026-09-12-compatible-routing-catalogue-v1/replay.cpp:121:17: warning: this ‘if’ clause does not guard... [-Wmisleading-indentation]
+  121 |                 if(!firsth)cout<<',';firsth=false;
+      |                 ^~
+project/research/general_n/2026-09-12-compatible-routing-catalogue-v1/replay.cpp:121:38: note: ...this statement, but the latter is misleadingly indented as if it were guarded by the ‘if’
+  121 |                 if(!firsth)cout<<',';firsth=false;
+      |                                      ^~~~~~
+project/research/general_n/2026-09-12-compatible-routing-catalogue-v1/replay.cpp:128:21: warning: this ‘if’ clause does not guard... [-Wmisleading-indentation]
+  128 |                     if(!firstj)cout<<',';firstj=false;
+      |                     ^~
+project/research/general_n/2026-09-12-compatible-routing-catalogue-v1/replay.cpp:128:42: note: ...this statement, but the latter is misleadingly indented as if it were guarded by the ‘if’
+  128 |                     if(!firstj)cout<<',';firstj=false;
+      |                                          ^~~~~~

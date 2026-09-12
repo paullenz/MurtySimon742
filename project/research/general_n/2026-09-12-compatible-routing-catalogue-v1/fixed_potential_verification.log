@@ -1,0 +1,12 @@
+{
+  "status": "PASS",
+  "template_id": 13,
+  "full_model_gaps_matched": 28591,
+  "whole_states_at_recorded_winning_threshold": 707,
+  "source_contexts": 2919,
+  "breakpoint_evaluations": 67327,
+  "exact_q_elimination": true,
+  "at_most_five_p_breakpoints_per_H": true,
+  "scope": "Finite corroboration of the hand-proved parameterized reduction; no added exclusions",
+  "external_review": "OPEN"
+}

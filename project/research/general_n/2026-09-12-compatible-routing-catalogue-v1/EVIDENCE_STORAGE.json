@@ -1,0 +1,47 @@
+{
+  "schema": "compatible-routing-catalogue-evidence-v1",
+  "encoding": "gzip mtime=0, base64 wrapped at 76 characters",
+  "files": {
+    "pool_inputs.jsonl": {
+      "stored_file": "pool_inputs.jsonl.gz.b64",
+      "original_bytes": 1124585,
+      "original_sha256": "34244eb2bdc6330a0bc2fc9b67ca8b05bdcc7fd9901196410213e7b1b8ff7e1f",
+      "stored_bytes": 50440,
+      "stored_sha256": "a17f8d98afbef3731a7877e9e644b035b0dccb3541abb4079db1ecae01498309",
+      "lines": 5578
+    },
+    "engine_input.txt": {
+      "stored_file": "engine_input.txt.gz.b64",
+      "original_bytes": 487503,
+      "original_sha256": "590ff29c66e226fb3bf111be6a03d11463d30718512b048a119cb1b22fe76b1a",
+      "stored_bytes": 45131,
+      "stored_sha256": "cddbac2ae7a02f259b8415ce424bbcba24633cacd180e2a1f37e3781190ab6b3",
+      "lines": 5614
+    },
+    "frontier_results.jsonl": {
+      "stored_file": "frontier_results.jsonl.gz.b64",
+      "original_bytes": 14236471,
+      "original_sha256": "4e9d7d320c58c8fe0318237197c0fd7e00ccb6b1918f65334dfb5735e4192a83",
+      "stored_bytes": 1774911,
+      "stored_sha256": "3aa8af5cc328031eb85470f7b90af9e4ad316b7a8de0ac919098c64af40f749f",
+      "lines": 5578
+    },
+    "survivors.json": {
+      "stored_file": "survivors.json.gz.b64",
+      "original_bytes": 1315615,
+      "original_sha256": "2c6bb11ec3c6dfb45a07b511c1e85c8c44898201c0f045630e0f622ee93647eb",
+      "stored_bytes": 43895,
+      "stored_sha256": "65be1c37c55c30a3857f88d8548713a76d15dc455a77a2f440bd795014e392f9",
+      "lines": 1
+    },
+    "template_coverage.json": {
+      "stored_file": "template_coverage.json.gz.b64",
+      "original_bytes": 120133,
+      "original_sha256": "16e2c665b5ed0ca68a7a6aca180c1b419ffaadcb142528c0d245e15e9024880e",
+      "stored_bytes": 4831,
+      "stored_sha256": "56b980634239bbd8db20ddf5c3d7d4d35bee2c892d9ac6f5c39178d03cdd39d5",
+      "lines": 1
+    }
+  },
+  "note": "All inputs, evaluated gaps, stop points, survivors and template coverage are recoverable exactly. Original runtime and logs are preserved separately."
+}
