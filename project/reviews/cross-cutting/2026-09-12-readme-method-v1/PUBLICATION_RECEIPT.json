@@ -1,0 +1,62 @@
+{
+  "schema": "readme-research-method-publication-v1",
+  "date": "2026-09-12",
+  "repository": "paullenz/MurtySimon742",
+  "branch": "main",
+  "parent": "436bb2c92a4a622a8ff9608a5df3053e339a19e3",
+  "publication_commit": "a4632ebc165d6f3c4ece411eab9ef2bf7efc703e",
+  "publication_tree": "c05e17d7dae30a44bfbd69ee7d719c9bcaaae435",
+  "local_review_commit": "7b27fa5daf5660836aa4308f790acec70bc7ace7",
+  "scope": "README opening: general-theory research method, failure preservation, audit challenges and correction history",
+  "validation": {
+    "status": "PASS",
+    "parent": "436bb2c92a4a622a8ff9608a5df3053e339a19e3",
+    "changed_paths": [
+      "README.md",
+      "releases/n34-reviewer-v2/MANIFEST.json",
+      "releases/n35-reviewer-v1/MANIFEST.json"
+    ],
+    "readme_local_links_checked": 123,
+    "existing_readme_status_and_results_unchanged": true,
+    "reviewer_versions_consistent": true,
+    "manifest_changes": "README hash and byte count only in both current manifests",
+    "mathematical_code_and_certificates_unchanged": true,
+    "verification_scope": "Documentation, local links, exact diff and existing manifest hashes; no new mathematical computation."
+  },
+  "checks": {
+    "nonforced_update": true,
+    "branch_readback": true,
+    "exact_local_remote_tree_match": true,
+    "all_changed_paths_and_sha256_verified": true,
+    "raw_api_files_verified": [
+      "README.md",
+      "releases/n34-reviewer-v2/MANIFEST.json",
+      "releases/n35-reviewer-v1/MANIFEST.json"
+    ],
+    "manifest_artifacts_verified": 134,
+    "both_manifests_pass": true,
+    "original_encoded_certificate_recovery": "PASS for both preserved N34 streams",
+    "no_unintended_changes_or_deletions": true,
+    "mathematical_artifacts_and_status_unchanged": true
+  },
+  "changed_artifacts": {
+    "README.md": {
+      "sha256": "d3742850ef0ac30fedc7ec03b2b2f5e86f29994950679712ad1e431d60920fb0",
+      "bytes": 38847
+    },
+    "releases/n34-reviewer-v2/MANIFEST.json": {
+      "sha256": "182270909cc5cd4add9b8855f23c67b10a8d4e20f0ee52b64b6e8a201066c2c1",
+      "bytes": 25869
+    },
+    "releases/n35-reviewer-v1/MANIFEST.json": {
+      "sha256": "0ae61455683c47e4236bcca6e244e863a444372a2023db9fa71f194b4b798ea8",
+      "bytes": 25850
+    }
+  },
+  "external_review": "OPEN",
+  "notes": [
+    "Documentation-only update; existing mathematical replay reports retain their original provenance.",
+    "The manifests change only the README hash and byte count. No proof, certificate, scope or result is changed.",
+    "This receipt records the verified documentation commit; its own publication is checked separately."
+  ]
+}
