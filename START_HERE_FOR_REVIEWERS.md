@@ -1,6 +1,6 @@
 # Start here for reviewers
 
-**Updated 12 September 2026.**
+**Updated 13 September 2026.** Research checkpoint reconciled through `3bfce1b71f061e1709193cbd1b6c24bf5df0edf5`; see [CURRENT_STATE.md](CURRENT_STATE.md) for the restart handoff.
 
 ## What this repository is
 
@@ -129,6 +129,26 @@ The twelve constructed flow probes already violate weaker endpoint loads,
 so no added strength or whole-state exclusion is claimed. The frontier stays
 at 4,584 survivors. Exhaustive tiny-object checks, exact models, timeouts,
 failed shortcuts and a full scope audit are preserved. External review OPEN.
+
+The [13 September cross-neighbourhood research checkpoint](project/research/general_n/2026-09-13-constraint-respecting-cross-v1/README.md)
+adds co-singleton trace and containment-spill candidate lemmas. Its complete
+spill study supplies an exact-demand selected/transport/spill witness for
+every one of the 4,584 survivors, so that scalar projection adds zero
+whole-state exclusions.
+
+The subsequent [pair-overlap and residual-cover hand lemmas](project/research/general_n/2026-09-13-constraint-respecting-cross-v1/PAIR_OVERLAP.md)
+retain which labels are selected together. The [frozen replay](project/research/general_n/2026-09-13-constraint-respecting-cross-v1/PAIR_OVERLAP_CHECK.json)
+initially finds 23 raw pair-moment failures; all are repaired within three
+degree-preserving switches. The stronger local residual-cover test rejects
+26 particular resulting patterns, but alternative selected-set geometries
+remain unquantified. **No whole-state exclusion is added: 994 exclusions /
+4,584 survivors remain in the generalisation pool.** These are tests of a
+general simplification, not open N34/N35 fixed-order proof obligations.
+
+This is an active research checkpoint, not a new reviewer release or an
+external validation. Shared residual-label budgets and coverage of admissible
+selected-set geometries are the next targets; the [handover](CURRENT_STATE.md)
+records the priorities and open review obligations.
 
 For the preceding general-foundations review pass, see the
 [focused foundations checklist](project/reviews/general-theory/2026-09-12-joint-followthrough-v1/FOUNDATIONS_AUDIT.md).

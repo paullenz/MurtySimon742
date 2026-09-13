@@ -2,7 +2,7 @@
 
 **Purpose.** This is the short durable handoff for restarting research after a chat reset, context loss or client desynchronisation. The repository, not any chat transcript, is the source of truth. Read this file first, inspect commits newer than the research baseline below, then follow the linked canonical packages.
 
-**Research state reconciled:** 13 September 2026 through commit `f32099397985fe104b5112434c458d8261e1d5bd`, including the exact full-domain receiver-containment spill application and audit. If `main` is newer, reconcile every later result, correction or failed experiment before continuing.
+**Research state reconciled:** 13 September 2026 through commit `3bfce1b71f061e1709193cbd1b6c24bf5df0edf5` (13 September, 01:19 BST), including the complete scalar-spill limit result, the pair-overlap/residual-cover hand lemmas and their frozen exact replay. This handoff update reconciles existing evidence; it adds no new mathematical or computational result. If `main` is newer, reconcile every later result, correction or failed experiment before continuing.
 
 External mathematical review, novelty assessment and independent computational reproduction remain OPEN unless a later preserved checkpoint explicitly changes that status. Internal replay, same-assistant audit and repository publication are not external acceptance.
 
@@ -35,7 +35,8 @@ Current candidate general results include:
 - destination-compatibility inequalities, the full compatible-routing catalogue and the closed compatible potential;
 - fixed-neighbourhood B-side routing as an exact integer-flow/Hall criterion once selected/residual cross-neighbourhoods are fixed;
 - **co-singleton trace hierarchy:** for every `T subset S_u`, `|T|=k>=1`, exact compatibility forces at least `q_u-k+1` B cross-neighbourhoods containing `T`, yielding higher-order moment inequalities;
-- **receiver-containment spill inequality:** a candidate hand projection of the exact condition `S_v subset N_u` to the scalar profile `(a,b,s,rho,q)`.
+- **receiver-containment spill inequality:** a candidate hand projection of the exact condition `S_v subset N_u` to the scalar profile `(a,b,s,rho,q)`;
+- **pair-overlap / residual-cover inequalities:** for fixed selected sets, subtract selected-selected coverage from required pair traces and bound how many remaining pair deficits each source's residual labels can cover. The local maxima currently discard residual-label budgets shared across sources.
 
 The co-singleton pair moment is genuinely stronger than endpoint loads on abstract cross data: the preserved five-label/seven-source example satisfies every individual endpoint load but has pair moment `16<18`.
 
@@ -66,10 +67,32 @@ Key findings:
 
 This is an exact **limit result for the scalar spill projection**. It does not construct residual sets, actual compatible destinations, heavy-H data, Hall routings or graphs. The frontier therefore remains **994 exclusions / 4,584 survivors**.
 
+### Latest pair-overlap / residual-cover replay
+
+[Hand lemmas](project/research/general_n/2026-09-13-constraint-respecting-cross-v1/PAIR_OVERLAP.md);
+[exact frozen output](project/research/general_n/2026-09-13-constraint-respecting-cross-v1/PAIR_OVERLAP_CHECK.json);
+[checker](project/research/general_n/2026-09-13-constraint-respecting-cross-v1/check_pair_overlap.py).
+
+| Quantity | Recorded result |
+|---|---|
+| Stored selected patterns checked | 4,584, one per combined survivor |
+| Initial raw pair-moment failures | 23 |
+| Degree-preserving pair repairs | All 23; at most three switches each |
+| Local residual-cover failures on the resulting frozen patterns | 26; minimum slack -87 |
+| Whole-state exclusions added | 0 |
+| Combined frontier | 994 exclusions / 4,584 survivors |
+
+The raw pair test has a passing selected-pattern witness for every state.
+The stronger local residual-cover failures exclude only the 26 listed fixed
+selected realizations. The replay does not quantify all admissible selected
+sets or prove any state impossible. The hand note reports additional
+search-assisted repairs of individual examples; those are separate from the
+frozen replay and do not change its counts.
+
 ## Most important unresolved correctness obligations
 
 1. **External review of the shared foundations/canonical bridge.** Many later results share graph-to-model implications, so this is the main correlated correctness risk.
-2. External review and novelty assessment of the candidate `7/12` theorem and the other general lemmas, including the co-singleton/containment-spill results.
+2. External review and novelty assessment of the candidate `7/12` theorem and the other general lemmas, including the co-singleton, containment-spill and pair-overlap/residual-cover results.
 3. Independent reproduction of proof-critical computations where a reviewer regards them as material.
 4. Continue preserving failures, counterexamples to proposed lemmas, bugs, corrections and negative experiments. Never treat a timeout, solver noncompletion or raw infeasibility status as proof.
 
@@ -84,32 +107,41 @@ S_(w_i) subset N_u.
 
 Across the `q_u` distinct exceptions of a single source, the first condition forces every co-singleton trace of `S_u`; equivalently, every selected `k`-subset must occur in at least `q_u-k+1` B cross-neighbourhoods. The second condition couples those exception rows back to `N_u`.
 
-The spill inequality retains part of the second condition but loses the actual label overlaps. The complete 4,584-witness result shows that this loss is now decisive: further tuning of this scalar spill bound is low priority. The next progress must retain set-overlap information, beginning with pair (`k=2`) traces and residual-compatible realization.
+The complete spill study shows that this scalar projection cannot eliminate any current survivor. The pair continuation now retains actual label overlaps, but the raw pair test can also be satisfied in every state by rearranging selected labels without changing their degree data. The stronger local residual-cover bound rejects 26 fixed patterns; its reach over all admissible geometries is still unknown. It also maximizes each source independently, discarding residual-label budgets shared across rows. Those two losses of information define the next research target.
 
 ## Next three research tasks — priority order
 
-### P1. Pair-overlap / co-singleton projection
+### P1. Shared residual budgets and admissible selected geometries
 
-Develop the first genuinely set-sensitive consequence of the co-singleton trace lemma. Start with `k=2`.
+Start from the already derived local residual-cover inequality in
+[PAIR_OVERLAP.md](project/research/general_n/2026-09-13-constraint-respecting-cross-v1/PAIR_OVERLAP.md); do not restart its derivation
+or the completed spill/pair replay. Retain residual-label budgets shared
+across sources instead of maximizing every source independently. Seek a
+checkable weighted cover or Hall obstruction, with explicit hypotheses.
 
-For a source `u`, its `q_u` distinct exception rows must collectively contain each pair in `S_u` at least `q_u-1` times when the source row itself is included, and at least `q_u-2` times among the exception rows alone. Seek a global capacity bound using selected/residual pair incidences across B, distinguishing:
-
-- selected-selected pair capacity;
-- selected-residual mixed pair capacity;
-- residual-residual pair capacity;
-- the receiver-containment restriction `S_v subset N_u`.
-
-The goal is a hand inequality retaining enough label-overlap information to be stronger than the exhausted scalar spill projection. Prove it before using finite data; then challenge it on abstract cross-data examples and the preserved frontier.
+Use the 26 fixed-pattern failures as diagnostic examples. Quantify the
+obstruction over alternative admissible selected sets: a failure of one
+stored pattern is not a whole-state exclusion. Preserve degree-preserving
+repairs and counterexamples to proposed strengthenings.
 
 ### P2. Exact residual-compatible construction on a frozen sample
 
-Take the exact-demand spill-surviving selected patterns from a small frozen heterogeneous sample. Search residual placements satisfying endpoint loads and **exact** destination compatibility before final Hall routing. Preserve raw solver outcomes only as exploratory evidence.
+For patterns surviving the strengthened overlap checks, search residual
+placements satisfying the shared budgets, endpoint loads and exact
+destination compatibility. Then apply the fixed-neighbourhood integer-flow
+criterion. Extract directly checkable obstructions from failed attempts;
+solver infeasibility and timeouts alone remain exploratory.
 
-For any failed pattern, extract a checkable combinatorial obstruction—preferably a pair/triple overlap deficit or a Hall-type cut on residual labels. For any successful pattern, apply the exact fixed-neighbourhood flow and inspect the next missing graph condition.
+If pair information still loses the decisive structure, test the analogous
+triple-deficit construction, retaining the same complete-coverage standard.
 
-### P3. Complete-domain application of any new set-level cut
+### P3. Complete-domain application of any strengthened set-level cut
 
-Only after P1/P2 identify a checkable set-level inequality, apply it to the complete preserved 4,584-state domain. Quantify local-configuration cuts and whole-state exclusions separately. Preserve zero-gain outcomes. Use N36 only as a structural laboratory, not as the primary objective.
+Apply a checked new inequality to the preserved 4,584-state domain only with
+explicit coverage of every admissible branch needed for a whole-state claim.
+Report fixed-pattern rejections and whole-state exclusions separately.
+Preserve zero-gain outcomes. N36 remains a structural laboratory rather than
+the primary objective.
 
 ## Research/preservation rules for every continuation
 

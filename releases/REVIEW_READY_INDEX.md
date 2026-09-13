@@ -1,5 +1,5 @@
 # Review-ready proof index
-Updated 12 September 2026. This index identifies the canonical reviewer-facing paper or source package for every current theorem-level candidate claim in the top-level project status. Historical failed or superseded development checkpoints remain preserved rather than silently rewritten.
+Updated 13 September 2026. This index identifies the canonical reviewer-facing paper or source package for every current theorem-level candidate claim in the top-level project status. Historical failed or superseded development checkpoints remain preserved rather than silently rewritten.
 
 The current fixed-order PDF packages are Fan-free reviewer-v2 at `n=25,27,28`, **reviewer-v4 at `n=29`**, and **reviewer-v3 at `n=30`**. Source-first reviewer-v1 packages cover `n=31,32,33,35`, with reviewer-v2 at `n=34`; complete candidate bound and equality classification now reach n=35. The 12 September step-back programme also has a source-first general-theory package collecting the new balanced-degree, `a=14`, fifteen-label and sixteen-label structural results.
 
@@ -96,7 +96,31 @@ checkable Hall obstructions. All twelve bounded solver runs remain unresolved;
 the deterministic flow probes already fail weaker endpoint loads. No
 whole-state exclusion or general density advance is claimed. The conditional
 criterion, tiny exhaustive checks, original models and failures are preserved.
-The next research target is compatible cross-neighbourhood construction.
+The subsequent research checkpoint below records the cross-neighbourhood
+construction experiments and the resulting spill/overlap constraints.
+
+## Active research checkpoint — no new reviewer release
+
+The [13 September cross-neighbourhood continuation](../project/research/general_n/2026-09-13-constraint-respecting-cross-v1/README.md)
+and [current handoff](../CURRENT_STATE.md) reconcile research through
+`3bfce1b71f061e1709193cbd1b6c24bf5df0edf5`. The co-singleton/spill
+candidate lemmas have a complete negative application result: all 4,584
+survivors possess exact-demand selected/transport/spill witnesses.
+
+The [pair-overlap / residual-cover candidate hand lemmas](../project/research/general_n/2026-09-13-constraint-respecting-cross-v1/PAIR_OVERLAP.md)
+retain selected-label geometry. The [frozen replay](../project/research/general_n/2026-09-13-constraint-respecting-cross-v1/PAIR_OVERLAP_CHECK.json)
+checks 4,584 stored patterns, repairs all 23 initial raw pair-moment failures
+with at most three degree-preserving switches each, and finds 26 fixed-pattern
+failures under the stronger local residual-cover test. Alternative selected
+geometries remain unquantified. Zero whole-state exclusions are added; the
+combined generalisation record stays at 994 exclusions / 4,584 survivors.
+
+This checkpoint adds no theorem-level release or change to the fixed-order
+ledgers or 7/12 threshold. The survivor states are tests of a general
+simplification, not gaps in the N34/N35 candidate proofs. Next work retains
+shared residual-label budgets and tests coverage over admissible selected
+sets. External mathematical review, novelty and independent reproduction
+remain OPEN.
 
 ## Fixed-order history note
 

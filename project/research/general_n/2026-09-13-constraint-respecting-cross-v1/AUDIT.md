@@ -112,8 +112,33 @@ For any eligible ordered pair `u->v` the exact condition gives
 
 and identifies the unique missing selected label. In addition `S_v subset N_u`. Across the `q_u` distinct exceptions of one source, these force a complete family of co-singleton traces. The next useful constraint must therefore retain **which labels overlap**, not merely how many selected labels each source has.
 
-The most natural next target is the pair (`k=2`) member of the co-singleton hierarchy, followed by residual-compatible realization and exact Hall routing. Any proposed pair-overlap inequality must be proved from the canonical bridge and tested on complete preserved domains rather than inferred from sampled failure frequency.
+The subsequent pair (`k=2`) continuation is now preserved in `PAIR_OVERLAP.md` and its frozen replay. The next target is shared residual-label budgets and coverage of admissible selected-set geometries, followed by exact compatibility and Hall routing. Whole-state claims still require complete coverage.
+
+## Pair-overlap replay: documentation reconciliation
+
+This subsection records the scope of the existing output committed at
+`3bfce1b71f061e1709193cbd1b6c24bf5df0edf5`. It is a documentation
+reconciliation, not a new mathematical audit or a fresh computational replay.
+
+[PAIR_OVERLAP.md](PAIR_OVERLAP.md) gives candidate hand derivations for the
+pair moment, selected-pair deficit and local residual-cover inequality.
+[PAIR_OVERLAP_CHECK.json](PAIR_OVERLAP_CHECK.json) records 4,584 input patterns,
+23 initial raw pair-moment failures, degree-preserving repairs of all 23
+within three switches each, and 26 local residual-cover failures on the
+resulting frozen patterns (minimum slack -87).
+
+The raw test therefore has a passing pattern for each state in this study.
+The 26 stronger failures concern fixed selected realizations only. Neither
+this replay nor this documentation update quantifies all admissible selected
+sets, proves whole-state infeasibility, constructs graphs or supplies external
+review. Search-assisted repairs mentioned in the hand note are outside the
+frozen repair rule and must remain distinct from these exact counts.
+
+The current local residual-cover maximum treats sources separately. Shared
+residual-label budgets and alternative selected geometries are outstanding
+research questions. No whole-state exclusion is added; the generalisation
+frontier remains 994 exclusions / 4,584 survivors.
 
 ## Preservation check
 
-This checkpoint preserves the plan, observed-run parameters and outcomes, the positive partial pattern, its direct validator, the exploratory sampler, the co-singleton/spill hand derivation, deterministic reconnaissance, the complete exact-demand witness generator and all 4,584 final witnesses. It does not replace or modify the preceding fixed-neighbourhood flow proof, fixed-order ledgers, 7/12 candidate, forecast or reviewer packages.
+This checkpoint preserves the plan, observed-run parameters and outcomes, the positive partial pattern, its direct validator, the exploratory sampler, the co-singleton/spill hand derivation, deterministic reconnaissance, the complete exact-demand witness generator and all 4,584 final witnesses. The subsequent pair-overlap hand note, deterministic checker and exact frozen output are also preserved and linked from the current overview pages. It does not replace or modify the preceding fixed-neighbourhood flow proof, fixed-order ledgers, 7/12 candidate, forecast or reviewer packages.
