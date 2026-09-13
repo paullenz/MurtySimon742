@@ -1,0 +1,42 @@
+name: Verify N34 state 519 whole-state candidate
+
+on:
+  workflow_dispatch:
+  push:
+    paths:
+      - 'project/research/general_n/2026-09-13-alternative-attacks-v1/verify_state519_low.cpp'
+      - 'project/research/general_n/2026-09-13-alternative-attacks-v1/verify_state519_exceptions.cpp'
+      - 'project/research/general_n/2026-09-13-alternative-attacks-v1/verify_state519_tail.cpp'
+      - '.github/workflows/verify-state519-whole-state.yml'
+
+permissions:
+  contents: read
+
+jobs:
+  verify:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262
+      - name: Compile exact integer verifiers
+        run: |
+          set -euo pipefail
+          cd project/research/general_n/2026-09-13-alternative-attacks-v1
+          g++ -O3 -std=c++17 -Wall -Wextra -pedantic verify_state519_low.cpp -o verify_state519_low
+          g++ -O3 -std=c++17 -Wall -Wextra -pedantic verify_state519_exceptions.cpp -o verify_state519_exceptions
+          g++ -O3 -std=c++17 -Wall -Wextra -pedantic verify_state519_tail.cpp -o verify_state519_tail
+      - name: Replay low/profile sweep E=0..24
+        run: |
+          set -euo pipefail
+          cd project/research/general_n/2026-09-13-alternative-attacks-v1
+          ./verify_state519_low | tee state519_low.log
+      - name: Replay source-availability exceptions E=6,8,9
+        run: |
+          set -euo pipefail
+          cd project/research/general_n/2026-09-13-alternative-attacks-v1
+          ./verify_state519_exceptions | tee state519_exceptions.log
+      - name: Replay refined tail E=25..34 and capacity ceiling
+        run: |
+          set -euo pipefail
+          cd project/research/general_n/2026-09-13-alternative-attacks-v1
+          ./verify_state519_tail | tee state519_tail.log
