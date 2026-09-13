@@ -1,0 +1,28 @@
+name: check total-excess machinery
+
+on:
+  workflow_dispatch:
+  push:
+    paths:
+      - 'project/research/general_n/2026-09-13-alternative-attacks-v1/TOTAL_EXCESS_SOURCE_CAP.md'
+      - 'project/research/general_n/2026-09-13-alternative-attacks-v1/verify_total_excess_machinery.py'
+      - '.github/workflows/check-total-excess-machinery.yml'
+
+jobs:
+  verify:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v4
+      - name: Brute-check circulation and total-excess cap
+        working-directory: project/research/general_n/2026-09-13-alternative-attacks-v1
+        run: |
+          python3 verify_total_excess_machinery.py | tee TOTAL_EXCESS_MACHINERY_REPLAY.txt
+          test -s TOTAL_EXCESS_MACHINERY_VERIFICATION.json
+      - name: Upload replay
+        uses: actions/upload-artifact@v4
+        with:
+          name: total-excess-machinery-replay
+          path: |
+            project/research/general_n/2026-09-13-alternative-attacks-v1/TOTAL_EXCESS_MACHINERY_REPLAY.txt
+            project/research/general_n/2026-09-13-alternative-attacks-v1/TOTAL_EXCESS_MACHINERY_VERIFICATION.json
