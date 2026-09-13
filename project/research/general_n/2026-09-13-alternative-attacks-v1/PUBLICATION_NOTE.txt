@@ -1,0 +1,1 @@
+Research commit 06ba21b23ad06544c4a03a43522c21276e1dac6c prepared from verified main parent 9ab4fd755ecd07048a14e1349c2c27aa3cf467e4. This note intentionally records the publication target only after the research tree was assembled. No whole-state frontier change is claimed.
