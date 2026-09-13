@@ -2,7 +2,7 @@
 
 **Purpose.** Durable restart point after chat reset, client desynchronisation or context loss. The repository, not any chat transcript, is the source of truth. Read this file first, inspect later `main` commits, then follow the linked packages.
 
-**Research state reconciled:** 13 September 2026 through the **N34 state-279 whole-state exclusion** in [`project/research/general_n/2026-09-13-alternative-attacks-v1/STATE_279_WHOLE_STATE.md`](project/research/general_n/2026-09-13-alternative-attacks-v1/STATE_279_WHOLE_STATE.md), after the earlier state-227 closure. External mathematical review, novelty assessment and independent computational reproduction remain OPEN unless a later preserved checkpoint explicitly changes that status. Internal replay, same-assistant audit and repository publication are not external acceptance.
+**Research state reconciled:** 13 September 2026 through the **N34 state-588 whole-state exclusion**, after the earlier state-227 and state-279 closures. External mathematical review, novelty assessment and independent computational reproduction remain OPEN unless a later preserved checkpoint explicitly changes that status. Internal replay, same-assistant audit and repository publication are not external acceptance.
 
 The temporary branches `threshold-family-scan` and `state279-proof` were reconciled into `main` by merge commit `566e064447a9cd54a8fa253c9049de0ffbc09efe`. Their histories remain preserved.
 
@@ -52,42 +52,71 @@ The central diagnosis is a **quantifier problem**, not merely a shortage of scal
 
 ### State 227
 
-[`STATE_227_WHOLE_STATE.md`](project/research/general_n/2026-09-13-alternative-attacks-v1/STATE_227_WHOLE_STATE.md) excludes N34 state 227 as a whole scalar state. Exact enumeration handles `E=0,...,20`; a threshold-excess tail argument handles `E=21,...,34`; incoming capacity makes `E>=35` impossible. Machine summary: [`STATE_227_WHOLE_STATE_VERIFICATION.json`](project/research/general_n/2026-09-13-alternative-attacks-v1/STATE_227_WHOLE_STATE_VERIFICATION.json).
-
-This moved the frozen frontier from `994 exclusions / 4,584 survivors` to `995 / 4,583`.
+[`STATE_227_WHOLE_STATE.md`](project/research/general_n/2026-09-13-alternative-attacks-v1/STATE_227_WHOLE_STATE.md) excludes N34 state 227. Exact enumeration handles `E=0,...,20`; a threshold-excess tail handles `E=21,...,34`; incoming capacity makes `E>=35` impossible. Frontier: `994/4,584 -> 995/4,583`.
 
 ### State 279
 
-[`STATE_279_WHOLE_STATE.md`](project/research/general_n/2026-09-13-alternative-attacks-v1/STATE_279_WHOLE_STATE.md) is the second whole-state exclusion produced by the programme. State data are
+[`STATE_279_WHOLE_STATE.md`](project/research/general_n/2026-09-13-alternative-attacks-v1/STATE_279_WHOLE_STATE.md) excludes N34 state 279. State data:
 
 ```text
 a=15, b=18, t=1,
-s   = 2^3,3^12,
-rho = 1^7,3^11,
-r=40,
-S=42.
+s=2^3,3^12,
+rho=1^7,3^11,
+r=40, S=42.
 ```
 
-The preserved proof combines a hand reduction with exact integer enumeration. The low-excess verifier covers `E=0,...,15`, with three explicitly recorded hand-rigidity cases; the threshold tail closes `E=16,...,34`, with minimum reported gap 2; total incoming capacity makes `E>=35` impossible. Machine summary: [`STATE_279_WHOLE_STATE_VERIFICATION.json`](project/research/general_n/2026-09-13-alternative-attacks-v1/STATE_279_WHOLE_STATE_VERIFICATION.json). External review of the bridge and hand-rigidity arguments and independent computational reproduction remain open.
+Exact low-excess replay covers `E=0,...,15`, with three hand-rigidity cases. The relaxed `h_2` threshold closes `E=16,...,34`; incoming capacity kills `E>=35`. Frontier: `995/4,583 -> 996/4,582`.
+
+### State 588
+
+[`STATE_588_WHOLE_STATE.md`](project/research/general_n/2026-09-13-alternative-attacks-v1/STATE_588_WHOLE_STATE.md) is the third whole-state exclusion. State data:
+
+```text
+a=15, b=18, t=1,
+s=3^15,
+rho=1^5,2,3^12,
+r=43, S=45.
+```
+
+Only the twelve `rho=3` sources can be active. Exact low-excess replay covers `E=0,...,15`; the only coarse equality is
+
+```text
+E=9, e=0^12,3^3, q=3^6,6^6.
+```
+
+Its equality conditions force `sum C_i>=106`, contradicting the exact ledger `sum C_i=97`. A cheap `h_2` tail screen is strict for every `E=16,...,34` except `E=16` and `E=24`; exact replay closes those two layers (`200/200` and `1,009/1,009` profiles respectively). The total incoming cap `sum p<=79` excludes `E>=35`.
+
+Replay: [`STATE_588_REPLAY.md`](project/research/general_n/2026-09-13-alternative-attacks-v1/STATE_588_REPLAY.md). Machine summary: [`STATE_588_WHOLE_STATE_VERIFICATION.json`](project/research/general_n/2026-09-13-alternative-attacks-v1/STATE_588_WHOLE_STATE_VERIFICATION.json).
 
 ## Current whole-state generalisation record
 
-The frontier is now
+The frozen frontier is now
 
 ```text
-996 exclusions / 4,582 survivors.
+997 exclusions / 4,581 survivors.
 ```
 
 Breakdown:
 
 ```text
-4,504 N34 equality-derived survivors,
+4,503 N34 equality-derived survivors,
 78 N35 m=306-derived survivors.
 ```
 
 These are survivors in a frozen generalisation experiment, **not surviving graphs** and not unresolved fixed-order N34/N35 cases.
 
-The temporary extraction utility [`extract_frozen_survivors.py`](project/research/general_n/2026-09-13-alternative-attacks-v1/extract_frozen_survivors.py) is transport/replay infrastructure only; it does not apply a new theorem. The associated workflow is [`.github/workflows/threshold-survivor-extract.yml`](.github/workflows/threshold-survivor-extract.yml).
+The temporary extraction utility [`extract_frozen_survivors.py`](project/research/general_n/2026-09-13-alternative-attacks-v1/extract_frozen_survivors.py) is transport/replay infrastructure only; it does not apply a theorem. The associated workflow is [`.github/workflows/threshold-survivor-extract.yml`](.github/workflows/threshold-survivor-extract.yml).
+
+## General-theory lesson from the three closures
+
+The three examples now support a reusable two-sided architecture:
+
+1. **High-excess scarcity:** threshold counts `h_l` cap the incoming load of large-q sources.
+2. **Zero/low-excess availability:** labels with small excess require sufficiently low-p sources; the incoming ledger may make those sources unavailable.
+3. **Endpoint budget:** once source availability is forced, `C_i>=q_u+p_u` can make the total label budget impossible.
+4. **Triage before exact enumeration:** the cheap `h_2` relaxation can rank states by their non-strict excess layers; exact profile enumeration should be reserved for those layers.
+
+State 588 is important because it has `s=3^15`: the mechanism is therefore not dependent on demand-two correction terms.
 
 ## Independent maximum-cut route
 
@@ -97,47 +126,39 @@ For any cut `X|Y`, let `I` be its internal edges and `M` its missing cross-pairs
 e(G)=|X||Y|+I-M.
 ```
 
-Thus `I<=M` for some cut would imply Murty–Simon. Deterministic reconnaissance found zero maximum-cut violations among the recorded small D2C instances and sampled positive `C5` blow-ups; a short hand argument proves the desired cut inequality for every positive independent-set blow-up of `C5`.
-
-A direct matching from every maximum-cut internal edge to a uniquely witnessed cross nonedge is **false**. Any viable proof must use aggregate charging, alternating exchanges or stability rather than one-edge/one-nonedge matching.
+Thus `I<=M` for some cut would imply Murty–Simon. A direct matching from every maximum-cut internal edge to a uniquely witnessed cross nonedge is **false**; any viable proof must use aggregate charging, alternating exchanges or stability.
 
 ## Corrected interpretation of switching
 
-Degree-preserving `2x2` repairs live in the **relaxed selected-incidence matrix**. They are not automatically legal switches of actual graph quasi-edge representatives, because the switched cross-edge may not have the required exact total-domination exception.
-
-Use either explicit all-geometry models where the matrix relaxation is stated as such, or selection-free raw candidate data / genuinely legal representative availability at graph level. No active theorem assumes unrestricted graph-level switching.
+Degree-preserving `2x2` repairs live in the **relaxed selected-incidence matrix**. They are not automatically legal switches of actual graph quasi-edge representatives. Use either explicit all-geometry models where the matrix relaxation is stated as such, or selection-free raw candidate data / genuinely legal representative availability at graph level. No active theorem assumes unrestricted graph-level switching.
 
 ## Most important correctness obligations
 
 1. **External review of the canonical bridge**, especially the graph-to-quasi-edge implications; this remains the main correlated correctness risk.
 2. External review/novelty assessment of the candidate `7/12` theorem and later general lemmas, especially selection-free candidate capacity, selected excess and the threshold family.
-3. Independent reproduction of the state-227 and state-279 exact-profile and tail computations.
-4. External checking of the state-279 hand-rigidity cases.
+3. Independent reproduction of the state-227, state-279 and state-588 exact computations.
+4. External checking of the hand-rigidity arguments in all three whole-state closures.
 5. Continue preserving failures, invalidated shortcuts, solver timeouts and publication/tooling mistakes. Never treat numerical infeasibility or noncompletion as proof.
 
 ## Current research priorities
 
-### P1. Apply the threshold excess-cap family across the remaining 4,582 survivors
+### P1. Run threshold triage across the remaining 4,581 survivors
 
-Start with `l=1,2,3`, couple it to the existing top-k endpoint envelope, and quantify `q`/excess profiles before returning to selected-set geometry. State 227 and state 279 now show that the mechanism is not isolated to one state.
+Use the cheap `h_2` relaxation first, rank states by the number and severity of non-strict excess layers, then exact-enumerate only the exceptional layers. Preserve the scan inputs, code, outputs and ranking.
 
-### P2. Seek a symbolic threshold theorem
+### P2. Seek a symbolic threshold/availability theorem
 
-Extract a parameterized inequality in `(a,b,rho,s,E,h_l)` that replaces per-state enumeration for broad classes. Compare the common structure of the state-227 and state-279 closures.
+Extract a parameterized inequality in `(a,b,rho,s,E,h_l)` that explains the common state-227/state-279/state-588 closures. Include the zero-excess/low-excess source-availability rigidity revealed by states 279 and 588.
 
-### P3. Use the frozen-survivor extraction workflow to run systematic family scans
+### P3. Continue the selection-free raw candidate-capacity projection
 
-The extraction utility now provides a durable way to recover the frozen survivor pool for broad threshold-family experiments. Preserve any new exclusion counts, parameters, scripts and replay outputs before using them downstream.
+Seek useful degree/tail projections of the candidate sets `K_u` that do not require the entire raw graph.
 
-### P4. Project raw candidate-capacity subsets
-
-Seek useful selection-free projections in terms of degree/tail data that do not require the entire raw graph.
-
-### P5. Maintain the maximum-cut route in parallel
+### P4. Maintain the maximum-cut route in parallel
 
 Do not retry the falsified direct matching. Test aggregate Hall/charging or stability statements around a maximum cut.
 
-### P6. Return to shared residual/pair geometry after quantified pruning
+### P5. Return to shared residual/pair geometry after quantified pruning
 
 The shared-budget and exact-destination machinery remains powerful. Bring it back after the threshold programme has reduced the alternative-margin/profile space; do not default to another single stored selected pattern.
 
@@ -158,7 +179,7 @@ On a fresh session:
 
 1. open this file;
 2. inspect `main` commits newer than the reconciliation point;
-3. read the alternative-attacks v1 README, `STATE_227_WHOLE_STATE.md`, `STATE_279_WHOLE_STATE.md` and the verification JSON files;
+3. read the alternative-attacks README plus `STATE_227_WHOLE_STATE.md`, `STATE_279_WHOLE_STATE.md`, `STATE_588_WHOLE_STATE.md` and their verification summaries;
 4. continue from P1/P2 unless later preserved work changes priority;
 5. preserve any material result or failure before relying on it downstream;
 6. after a material change, update this handoff in the same repository-writing pass.
