@@ -2,9 +2,9 @@
 
 **Purpose.** Durable restart point after chat reset, client desynchronisation or context loss. The repository, not any chat transcript, is the source of truth. Read this file first, inspect later `main` commits, then follow the linked packages.
 
-**Research state reconciled:** 13 September 2026 through the canonical N34 whole-state ledger: **16 quantified closures** (`227, 279, 588, 526, 382, 519, 230, 282, 385, 153, 122, 283, 154, 231, 77, 60`), frontier **1,010/4,568**. External mathematical review, novelty assessment and independent computational reproduction remain OPEN unless a later preserved checkpoint explicitly changes that status. Internal replay, same-assistant audit and repository publication are not external acceptance.
+**Research state reconciled:** 13 September 2026 through the audited potential-pair frontier promotion: **961 quantified whole-state closures**, frontier **1,955/3,623** (`3,545` N34-derived survivors plus `78` N35-derived survivors). Eighteen closures predate the large family; **943 further N34-derived scalar states** are protected by the cross-implementation potential-pair audit. External mathematical review, novelty assessment and genuinely independent third-party computational reproduction remain OPEN unless a later preserved checkpoint explicitly changes that status. Internal replay, same-assistant audit and repository publication are not external acceptance.
 
-**Durability guard:** [`tools/check_n34_whole_state_ledger.py`](tools/check_n34_whole_state_ledger.py) pins all 16 current closures in `KNOWN_MINIMUM`, including states `77` and `60`. New closures may be added, but a later ledger/README rewrite must not silently remove any preserved closure.
+**Durability guard:** [`tools/check_n34_whole_state_ledger.py`](tools/check_n34_whole_state_ledger.py) protects the 18 earlier closures plus the hash-pinned **943-state** [`PAIR_CAPACITY_FRONTIER_EXCLUDED.tsv`](project/research/general_n/2026-09-13-alternative-attacks-v1/PAIR_CAPACITY_FRONTIER_EXCLUDED.tsv) family, checks ledger provenance, and currently verifies `961` ledger states. New closures may be added, but a later ledger/README rewrite must not silently remove any preserved closure.
 
 The temporary branches `threshold-family-scan` and `state279-proof` were reconciled into `main` by merge commit `566e064447a9cd54a8fa253c9049de0ffbc09efe`. Their histories remain preserved.
 
@@ -45,6 +45,10 @@ Current candidate general results include:
 - zero-excess endpoint-order candidate lemma: an exact-demand label of demand `d` requires at least `d` active sources with `rho_u>=d` and `p_u<=rho_u-1`, and its endpoint `C_i` is at least the `d`-th smallest eligible `q_u+p_u`;
 - exact low-demand incidence-capacity scanner extending the audited adjacent-family verifier to a broader seven-state ring without rewriting its mathematical search logic;
 - orientation target-capacity lemma for selected missing-B-edge orientations: if an edge is oriented `u->w`, then `q_u-1<=q_w+rho_w`; consequently, for every integer `k`, `sum_{w:q_w+rho_w<=k} p_w <= sum_{u:q_u<=k+1} q_u`. The exact E=0 replay closes states 77 and 60 with a minimum six-incidence deficit.
+- exact directed compatibility and Hall-flow projection: an orientation `u->w` requires `q_u<=q_w+rho_w+1` and `q_w<=q_u+rho_u`; the resulting source-target relation is genuinely two-dimensional rather than Ferrers in general.
+- total-excess source cap: in all-positive-demand branches, `p_u<=rho_u+floor(E/q_u)-1` for every active source, with an explicit zero-demand correction in the general statement.
+- potential-pair capacity theorem: the actual missing graph `J` is a subgraph of a scalar potential graph `K_D`, giving `p_u+q_u<=d_KD(u)`; two structurally different full-frontier implementations use this to close 943 further N34-derived scalar states.
+- low-`c`/high-`q` cross obstruction: for every integer `r`, with `ell_r=#{w:q_w+rho_w<=r}` and `u_r=#{u:q_u>=r+2}`, every legal branch satisfies `Q+ell_r*u_r<=binom(b,2)`.
 
 The unrestricted Murty–Simon conjecture is **not** proved by this project.
 
@@ -121,18 +125,57 @@ The independent exact verifier [`verify_e0_orientation_capacity.py`](project/res
 
 Whole-state records are [`STATE_77_WHOLE_STATE.md`](project/research/general_n/2026-09-13-alternative-attacks-v1/STATE_77_WHOLE_STATE.md) and [`STATE_60_WHOLE_STATE.md`](project/research/general_n/2026-09-13-alternative-attacks-v1/STATE_60_WHOLE_STATE.md). They are entries 15 and 16 of the canonical union; ordinal wording in older parallel notes is non-authoritative.
 
+## Latest large frontier advance: potential-pair capacity
+
+The orientation work sharpened from a one-sided target cut to the exact directed compatibility condition
+
+```text
+D(u,w) iff u!=w,
+              q_u<=q_w+rho_w+1,
+              q_w<=q_u+rho_u.
+```
+
+An unordered pair can be missing only if one of its two directions is compatible. This defines the potential-pair graph `K_D`; the actual missing graph satisfies
+
+```text
+J subseteq K_D,
+q_u+p_u=d_J(u)<=d_KD(u).
+```
+
+The resulting pointwise cap, combined with canonical incoming/simple bounds and the total-excess source cap, was scanned over a deliberately **enlarged** q-universe: only `q_u<=min(a-rho_u,#{i:s_i<=rho_u})` and `sum q=S+E` were assumed, so no selected-incidence Hall feasibility was needed for the exclusions.
+
+Two structurally different full-frontier implementations agree exactly on **943 further N34-derived whole-state exclusions**. The first constructs directed pairs from expanded source vectors; the second enumerates `(rho,q)` type multiplicities and computes `d_KD` from the closed-form counting theorem. On every excluded state they agree exactly on exhaustive profile count, pre-pair pass count and best final deficit. See [`PAIR_CAPACITY_FRONTIER_AUDIT.md`](project/research/general_n/2026-09-13-alternative-attacks-v1/PAIR_CAPACITY_FRONTIER_AUDIT.md).
+
+The promoted frozen frontier is
+
+```text
+1,955 exclusions / 3,623 survivors,
+3,545 N34 equality-derived survivors,
+78 N35 m=306-derived survivors.
+```
+
+The theorem itself is separately replayed in [`verify_potential_pair_capacity.py`](project/research/general_n/2026-09-13-alternative-attacks-v1/verify_potential_pair_capacity.py), which checked 122,608 small `(q,rho)` profiles, 2,259,488 ordered pairs and 588,416 degree identities. These are internal replay checks, not external acceptance.
+
+A compact symbolic consequence is the threshold product obstruction
+
+```text
+Q + ell_r*u_r <= binom(b,2)
+```
+
+for every integer `r`, where `ell_r` counts low-`c` vertices and `u_r` counts high-`q` sources. This is now the highest-leverage all-order route.
+
 ## Current whole-state generalisation record
 
 The frozen frontier is now
 
 ```text
-1,010 exclusions / 4,568 survivors.
+1,955 exclusions / 3,623 survivors.
 ```
 
 Breakdown:
 
 ```text
-4,490 N34 equality-derived survivors,
+3,545 N34 equality-derived survivors,
 78 N35 m=306-derived survivors.
 ```
 
@@ -140,7 +183,7 @@ These are survivors in a frozen generalisation experiment, **not surviving graph
 
 The extraction utility [`extract_frozen_survivors.py`](project/research/general_n/2026-09-13-alternative-attacks-v1/extract_frozen_survivors.py) is transport/replay infrastructure only; it does not apply a theorem.
 
-## General-theory lesson from the 16 closures
+## General-theory lesson from the quantified closures
 
 The closures support a reusable two-sided architecture:
 
@@ -177,7 +220,7 @@ This table is now historical triage rather than the live frontier: **all seven s
 
 [`REFINED_H2_FAMILY_SCAN.md`](project/research/general_n/2026-09-13-alternative-attacks-v1/REFINED_H2_FAMILY_SCAN.md) contains nine structurally adjacent N34 records. At scan time five were closed and four were active: states `230,282,385,519`. **All four are now closed**; the canonical ledger records their whole-state status.
 
-The old refined-tail thresholds and intermediate gaps remain useful audit history, but neither this narrow family nor the seven-state extension ring contains a live target now. New targets should be chosen only after rescanning the remaining 4,568-state frontier with the orientation-capacity and joint-Hall machinery.
+The old refined-tail thresholds and intermediate gaps remain useful audit history, but neither this narrow family nor the seven-state extension ring contains a live target now. The old target ranking is superseded. The remaining **3,623-state** frontier should now be attacked with pair-choice/target Hall, selected-incidence Hall and excess-budget coupling after the cheap potential-pair screen.
 
 ## Independent maximum-cut route
 
@@ -196,7 +239,7 @@ Degree-preserving `2x2` repairs live in the **relaxed selected-incidence matrix*
 ## Most important correctness obligations
 
 1. **External review of the canonical bridge**, especially the graph-to-quasi-edge implications; this remains the main correlated correctness risk.
-2. External review/novelty assessment of the candidate `7/12` theorem and later general lemmas, especially selection-free candidate capacity, selected excess, threshold family, refined baseline/order-statistic lemma, zero-excess endpoint-order lemma and orientation target-capacity lemma.
+2. External review/novelty assessment of the candidate `7/12` theorem and later general lemmas, especially selected excess, total-excess source capacity, exact directed compatibility, potential-pair capacity, the low-c/high-q threshold product obstruction and the orientation Hall/flow projections.
 3. Independent reproduction of the exact computations and hand steps linked from the canonical whole-state ledger.
 4. External checking of hand-rigidity/endpoint arguments in the closures that use them.
 5. Preserve the complete seven-state extension outputs, not only the successful state-153 layer table, before relying on them downstream.
@@ -204,26 +247,31 @@ Degree-preserving `2x2` repairs live in the **relaxed selected-incidence matrix*
 
 ## Current research priorities
 
-### P1. Generalise and audit the orientation target-capacity lemma
+### P1. Convert potential-pair capacity into an all-order scalar theorem
 
-Extract the state-77/state-60 E=0 argument into the strongest useful selection-free or selected-orientation form, test its exact hypotheses against the canonical bridge, and look for subset/threshold strengthenings. Preserve counterexamples to any over-strong formulation.
+Start from [`POTENTIAL_PAIR_CAPACITY.md`](project/research/general_n/2026-09-13-alternative-attacks-v1/POTENTIAL_PAIR_CAPACITY.md) and the threshold consequence [`LOW_C_HIGH_Q_CROSS_OBSTRUCTION.md`](project/research/general_n/2026-09-13-alternative-attacks-v1/LOW_C_HIGH_Q_CROSS_OBSTRUCTION.md):
 
-### P2. Rescan the remaining frozen catalogue
+```text
+Q + ell_r*u_r <= binom(b,2)
+```
 
-Apply the orientation target-capacity cut together with the joint endpoint-class Hall refinement and existing incidence-capacity machinery to the remaining 4,568 frozen scalar survivors. Rank the next whole-state targets by the size and structure of their residual layers, preserving full inputs, outputs, hashes and failures.
+for every integer `r`. Optimise this together with `q+rho<=a`, demand forcing and incoming/total-excess caps. The goal is a parameterised theorem, not further finite accumulation.
 
-### P3. Extract a symbolic mixed-class Hall/flow theorem
+### P2. Rescan the residual 3,623-state frontier with stronger relational machinery
 
-Generalise [`ENDPOINT_CLASS_PACKING.md`](project/research/general_n/2026-09-13-alternative-attacks-v1/ENDPOINT_CLASS_PACKING.md), especially the joint demand-two/demand-three threshold system that closed state 231, and relate it cleanly to the new orientation target-capacity cut. Seek a parameterised theorem rather than accumulating state-specific patches.
+Potential-pair capacity has already removed 943 current states. On the survivors, escalate in cost order: pair-choice Hall, target-capacity Hall, selected-incidence Hall, then the weighted excess-budget min-cost coupling. Preserve exact residual structure and use it to select the next theorem target.
+
+### P3. Diagnose the 78 N35-derived survivors
+
+The 943-state family contains no N35-derived closure. Compare their `(q,c,rho,s)` structure with the eliminated N34 population to identify the structural feature missing from the present potential-pair theorem.
 
 ### P4. Strengthen independent audit and reproduction
 
-Prioritise external checking of the canonical bridge, the mixed-class Hall projection, the orientation target-capacity lemma and the state-77/state-60 exact replay. Internal green CI remains replay evidence, not external acceptance.
+Prioritise external checking of the canonical bridge, directed compatibility, total-excess source cap and potential-pair theorem. The two internal frontier implementations agree exactly on all 943 exclusions, but same-assistant independent code remains internal replay evidence.
 
 ### P5. Continue independent routes and preservation
 
-Continue selection-free, maximum-cut and other genuinely different approaches where they add information. Preserve failed approaches, counterexamples, solver timeouts and corrected interpretations; never infer proof from timeout or numerical infeasibility alone.
-
+Continue maximum-cut/stability, selection-free and other genuinely different approaches. Preserve failures, counterexamples, solver timeouts and corrected interpretations; never infer proof from timeout or numerical infeasibility alone.
 ## Research/preservation rules
 
 The standing orders in [`project/N25_PROJECT_STANDING_ORDERS.md`](project/N25_PROJECT_STANDING_ORDERS.md) remain binding. In particular:
@@ -232,7 +280,7 @@ The standing orders in [`project/N25_PROJECT_STANDING_ORDERS.md`](project/N25_PR
 - preserve code, parameters, inputs, outputs, survivor lists, hashes, commands, certificates and environment information where applicable;
 - preserve failed approaches, counterexamples and corrected interpretations rather than deleting them;
 - distinguish mathematical proof status, exact replay, internal audit, publication and external review;
-- the canonical whole-state ledger guard must retain every independently committed closure in its `KNOWN_MINIMUM` set; states `77` and `60` are explicitly protected alongside the earlier 14 closures;
+- the canonical whole-state ledger guard must retain every independently committed closure; it explicitly protects the 18 earlier closures and the hash-pinned 943-state potential-pair family with provenance checks;
 - routine non-forced commits/pushes to canonical repository `paullenz/MurtySimon742` `main` are authorised without asking again;
 - verify the branch head and key files after publication; do not use force-push or history rewriting.
 
@@ -243,7 +291,7 @@ On a fresh session:
 1. open this file;
 2. inspect `main` commits newer than this reconciliation point;
 3. read the alternative-attacks README, [`WHOLE_STATE_LEDGER.tsv`](project/research/general_n/2026-09-13-alternative-attacks-v1/WHOLE_STATE_LEDGER.tsv), and the closure records linked from that ledger;
-4. inspect `REFINED_BASELINE3_LEMMA.md`, `ZERO_EXCESS_ENDPOINT_ORDER.md`, `ENDPOINT_CLASS_PACKING.md`, [`ORIENTATION_TARGET_CAPACITY.md`](project/research/general_n/2026-09-13-alternative-attacks-v1/ORIENTATION_TARGET_CAPACITY.md), `make_class_packing_scanner.py`, [`verify_e0_orientation_capacity.py`](project/research/general_n/2026-09-13-alternative-attacks-v1/verify_e0_orientation_capacity.py) and the current residual result tables;
+4. inspect [`POTENTIAL_PAIR_CAPACITY.md`](project/research/general_n/2026-09-13-alternative-attacks-v1/POTENTIAL_PAIR_CAPACITY.md), [`PAIR_CAPACITY_FRONTIER_AUDIT.md`](project/research/general_n/2026-09-13-alternative-attacks-v1/PAIR_CAPACITY_FRONTIER_AUDIT.md), [`LOW_C_HIGH_Q_CROSS_OBSTRUCTION.md`](project/research/general_n/2026-09-13-alternative-attacks-v1/LOW_C_HIGH_Q_CROSS_OBSTRUCTION.md), [`ORIENTATION_FLOW_HALL.md`](project/research/general_n/2026-09-13-alternative-attacks-v1/ORIENTATION_FLOW_HALL.md), and the current residual result tables;
 5. continue from P1/P2 unless later preserved work changes priority;
 6. preserve any material result or failure before relying on it downstream;
 7. after a material change, update this handoff in the same repository-writing pass.

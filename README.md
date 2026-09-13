@@ -1,6 +1,6 @@
 # Murty–Simon / Erdős Problem #742
 
-Candidate proofs and reproducible research. **Updated 13 September 2026 through the canonical N34 whole-state ledger: 16 quantified whole-state closures, frontier 1,010/4,568. Independent mathematical review, novelty assessment and independent computational reproduction remain OPEN.** Repository publication, green replay and same-assistant hostile audit are not external acceptance and do not prove the unrestricted conjecture.
+Candidate proofs and reproducible research. **Updated 13 September 2026 through the audited potential-pair frontier promotion: 961 quantified whole-state closures, frontier 1,955/3,623. Independent mathematical review, novelty assessment and genuinely independent third-party computational reproduction remain OPEN.** Repository publication, green replay and same-assistant hostile audit are not external acceptance and do not prove the unrestricted conjecture.
 
 **External reviewers:** start with [`START_HERE_FOR_REVIEWERS.md`](START_HERE_FOR_REVIEWERS.md). Canonical theorem-level packages are indexed in [`releases/REVIEW_READY_INDEX.md`](releases/REVIEW_READY_INDEX.md). The project welcomes hostile review, counterexamples, literature corrections and genuinely independent reproduction; GitHub Issues are the preferred place to report a suspected flaw.
 
@@ -43,7 +43,7 @@ Exact replay, internal audit, repository publication and external mathematical a
 | `n=34` | Complete candidate: `e(G)<=289`, equality exactly `K(17,17)`; reviewer-v2; final heavy certificate replaced by a short hand proof; external review open |
 | `n=35` | Complete candidate: `e(G)<=306`, equality exactly `K(17,18)`; reviewer-v1; external review open |
 | General maximum-degree result | Candidate theorem: for `n>=6`, `Delta(G)>=(7/12)n` implies `e(G)<floor(n^2/4)`; internal exact audits green; external review and novelty assessment open |
-| Generalisation frontier | **1,010 exclusions / 4,568 survivors** from the canonical N34 whole-state ledger; these are scalar states in a frozen experiment, not surviving graphs |
+| Generalisation frontier | **1,955 exclusions / 3,623 survivors** from the canonical quantified whole-state ledger; `3,545` are N34 equality-derived and `78` are N35 `m=306`-derived; these are scalar states in a frozen experiment, not surviving graphs |
 
 The unrestricted Murty–Simon conjecture remains unsolved by this project.
 
@@ -206,41 +206,24 @@ The audited low-demand extension logic is strict on **every** admissible excess 
 <!-- N34-WHOLE-STATE-LEDGER:START -->
 ### Canonical N34 whole-state ledger
 
-The canonical ledger records **16 distinct quantified whole-state exclusions**. This table is generated from [`WHOLE_STATE_LEDGER.tsv`](project/research/general_n/2026-09-13-alternative-attacks-v1/WHOLE_STATE_LEDGER.tsv) so parallel lines of work cannot silently disappear from the headline count.
+The canonical [`WHOLE_STATE_LEDGER.tsv`](project/research/general_n/2026-09-13-alternative-attacks-v1/WHOLE_STATE_LEDGER.tsv) now records **961 distinct quantified whole-state exclusions**. Eighteen were established on the earlier individual/family lines; a further **943 N34-derived scalar states** are excluded by the audited potential-pair capacity family.
 
-The checker [`tools/check_n34_whole_state_ledger.py`](tools/check_n34_whole_state_ledger.py) separately pins all 16 current closures in `KNOWN_MINIMUM`. This guard is deliberately monotone: future closures may be added, while an accidental rewrite must not silently erase a preserved closure.
+The large promotion is documented in [`PAIR_CAPACITY_FRONTIER_AUDIT.md`](project/research/general_n/2026-09-13-alternative-attacks-v1/PAIR_CAPACITY_FRONTIER_AUDIT.md), with the exact promoted state certificate in [`PAIR_CAPACITY_FRONTIER_EXCLUDED.tsv`](project/research/general_n/2026-09-13-alternative-attacks-v1/PAIR_CAPACITY_FRONTIER_EXCLUDED.tsv). Two structurally different full-frontier implementations agree exactly on the 943-state excluded set and, for every excluded state, on exhaustive profile counts and best capacity deficits.
 
-| State | Method | Record |
-|---:|---|---|
-| 227 | state-specific exact replay | [`STATE_227_WHOLE_STATE.md`](project/research/general_n/2026-09-13-alternative-attacks-v1/STATE_227_WHOLE_STATE.md) |
-| 279 | state-specific exact replay | [`STATE_279_WHOLE_STATE.md`](project/research/general_n/2026-09-13-alternative-attacks-v1/STATE_279_WHOLE_STATE.md) |
-| 588 | state-specific exact replay | [`STATE_588_WHOLE_STATE.md`](project/research/general_n/2026-09-13-alternative-attacks-v1/STATE_588_WHOLE_STATE.md) |
-| 526 | state-specific exact replay | [`STATE_526_WHOLE_STATE.md`](project/research/general_n/2026-09-13-alternative-attacks-v1/STATE_526_WHOLE_STATE.md) |
-| 382 | state-specific exact replay | [`STATE_382_WHOLE_STATE.md`](project/research/general_n/2026-09-13-alternative-attacks-v1/STATE_382_WHOLE_STATE.md) |
-| 519 | state-specific exact replay | [`STATE_519_WHOLE_STATE.md`](project/research/general_n/2026-09-13-alternative-attacks-v1/STATE_519_WHOLE_STATE.md) |
-| 230 | incidence-capacity family closure | [`INCIDENCE_CAPACITY_FAMILY_CLOSURE.md`](project/research/general_n/2026-09-13-alternative-attacks-v1/INCIDENCE_CAPACITY_FAMILY_CLOSURE.md) |
-| 282 | incidence-capacity family closure | [`INCIDENCE_CAPACITY_FAMILY_CLOSURE.md`](project/research/general_n/2026-09-13-alternative-attacks-v1/INCIDENCE_CAPACITY_FAMILY_CLOSURE.md) |
-| 385 | incidence-capacity family closure | [`INCIDENCE_CAPACITY_FAMILY_CLOSURE.md`](project/research/general_n/2026-09-13-alternative-attacks-v1/INCIDENCE_CAPACITY_FAMILY_CLOSURE.md) |
-| 153 | low-demand extension closure | [`STATE_153_WHOLE_STATE.md`](project/research/general_n/2026-09-13-alternative-attacks-v1/STATE_153_WHOLE_STATE.md) |
-| 122 | endpoint class-packing closure | [`STATE_122_WHOLE_STATE.md`](project/research/general_n/2026-09-13-alternative-attacks-v1/STATE_122_WHOLE_STATE.md) |
-| 283 | endpoint class-packing closure | [`STATE_283_WHOLE_STATE.md`](project/research/general_n/2026-09-13-alternative-attacks-v1/STATE_283_WHOLE_STATE.md) |
-| 154 | endpoint class-packing closure | [`STATE_154_WHOLE_STATE.md`](project/research/general_n/2026-09-13-alternative-attacks-v1/STATE_154_WHOLE_STATE.md) |
-| 231 | mixed-class joint Hall closure | [`STATE_231_WHOLE_STATE.md`](project/research/general_n/2026-09-13-alternative-attacks-v1/STATE_231_WHOLE_STATE.md) |
-| 77 | orientation target-capacity closure | [`STATE_77_WHOLE_STATE.md`](project/research/general_n/2026-09-13-alternative-attacks-v1/STATE_77_WHOLE_STATE.md) |
-| 60 | orientation target-capacity closure | [`STATE_60_WHOLE_STATE.md`](project/research/general_n/2026-09-13-alternative-attacks-v1/STATE_60_WHOLE_STATE.md) |
+The durability checker [`tools/check_n34_whole_state_ledger.py`](tools/check_n34_whole_state_ledger.py) protects the 18 earlier closures plus the hash-pinned 943-state family and verifies their ledger provenance.
 
 The current frozen frontier is therefore
 
 ```text
-1,010 exclusions / 4,568 survivors,
-4,490 N34 equality-derived survivors,
+1,955 exclusions / 3,623 survivors,
+3,545 N34 equality-derived survivors,
 78 N35 m=306-derived survivors.
 ```
 
-Survival in this catalogue is not graph feasibility.
+Survival in this catalogue is not graph feasibility. The unrestricted Murty–Simon conjecture remains unproved by this project.
 <!-- N34-WHOLE-STATE-LEDGER:END -->
 
-## What the 16 closures suggest
+## What the quantified closures suggest
 
 The emerging reusable architecture is two-sided:
 
@@ -264,7 +247,7 @@ State 519 is theoretically useful because it converts the earlier qualitative so
 | [Compatible routing catalogue](releases/general-compatible-catalogue-reviewer-v1/README.md) | 994 retained full/pilot exclusions | Produced the 4,584-state frontier entering the quantifier programme |
 | [Containment spill / pair overlap](project/research/general_n/2026-09-13-constraint-respecting-cross-v1/README.md) | Scalar spill witnesses for all 4,584; fixed-pattern failures | Exposed the quantifier gap |
 | [Shared residual budgets](project/research/general_n/2026-09-13-shared-residual-budget-v1/README.md) | 4,487/4,584 stored patterns rejected | Very strong on fixed geometry; not a whole-state result by itself |
-| [Alternative attacks](project/research/general_n/2026-09-13-alternative-attacks-v1/README.md) | Selection-free/excess/Hall/orientation lemmas and 16 quantified whole-state closures | Current primary programme; next task is generalising orientation/flow capacity and rescanning the remaining frontier |
+| [Alternative attacks](project/research/general_n/2026-09-13-alternative-attacks-v1/README.md) | Selection-free/excess/Hall/orientation/potential-pair lemmas and 961 quantified whole-state closures | Current primary programme; potential-pair capacity removed 943 further N34-derived scalar states; symbolic generalisation and the 3,623-state residual frontier are now primary |
 
 ## Current low-demand programmes
 
@@ -284,7 +267,7 @@ The preserved extension history is:
 
 Similarly, the formerly active adjacent-family states `230,282,385,519` are all closed. Their older gaps remain preserved because failed/intermediate frontiers are part of the audit record, but none is a live research obligation now.
 
-The next target set should be chosen by applying the new orientation-capacity and joint-Hall machinery to the **remaining 4,568 frozen scalar survivors**, rather than by continuing an obsolete local ranking.
+The older local target lists are obsolete. The current residual experiment contains **3,623 frozen scalar survivors**; the next targets should be chosen by combining potential-pair capacity, orientation Hall/flow, selected-incidence Hall and excess-budget machinery on that reduced frontier.
 
 ## Independent maximum-cut route
 
@@ -298,17 +281,16 @@ Thus `I<=M` for some cut would prove Murty–Simon. A direct one-internal-edge/o
 
 ## Current research priorities
 
-1. **Generalise and red-team the orientation target-capacity lemma.** Derive the strongest exact source-target Hall/flow criterion justified by the canonical bridge, including the companion endpoint condition where useful, and preserve counterexamples to over-strong variants.
-2. **Rescan all 4,568 remaining frozen scalar survivors** with orientation target capacity combined with joint endpoint-class Hall and existing incidence-capacity machinery; use the resulting residual structure to choose the next whole-state targets.
-3. **Seek a symbolic mixed-class Hall/flow theorem.** In particular, determine whether the source-target compatibility relation has enough Ferrers/threshold structure that full feasibility reduces to a small family of prefix cuts.
-4. **Strengthen independent audit/reproduction** of the canonical bridge, orientation-capacity lemma, mixed-class Hall projection and the state-77/state-60 exact replay.
-5. **Continue genuinely independent routes** such as selection-free candidate capacity and maximum-cut/stability arguments, while preserving failures and corrected hypotheses.
-6. **Return to shared residual/pair/exact-destination geometry only after quantified pruning** shows where the lighter reusable theory stops.
-
+1. **Generalise the potential-pair obstruction symbolically.** The strongest compact new consequence is the low-`c`/high-`q` product bound `Q + ell_r u_r <= binom(b,2)` for every threshold `r`. Optimise the `(q,c)` distributions under this family, `q+rho<=a`, demand forcing and incoming caps, seeking an all-order theorem rather than further finite accumulation.
+2. **Rescan the remaining 3,623 scalar survivors with the stronger relational systems.** Apply exact pair-choice Hall, target-capacity Hall, selected-incidence Hall and the excess-budget min-cost coupling only after the cheap potential-pair screen; use the new survivor structure to rank genuinely hard branches.
+3. **Understand the 78 N35-derived survivors separately.** The potential-pair family closes 943 N34-derived states but none of the 78 N35-derived states, so this residual class is a valuable diagnostic of what the current theorem still misses.
+4. **Strengthen independent audit/reproduction.** Prioritise external checking of the canonical bridge, directed compatibility, total-excess source cap and potential-pair theorem. The two internal implementations and green CI are strong replay evidence, not external acceptance.
+5. **Continue genuinely independent routes.** Preserve and develop maximum-cut/stability, selection-free and other structurally different approaches; use failures to test whether the orientation/pair picture is genuinely central rather than merely effective on the frozen catalogue.
+6. **Return to exact shared-residual/destination geometry only after quantified pruning.** The cheaper reusable theory should first identify where pair capacity and Hall/flow stop; bespoke geometry belongs on that residual set, not on already excluded states.
 ## Trust boundary
 
 The largest correlated mathematical risk is still the canonical bridge: its graph-to-quasi-edge implications, selected/residual ledger, forcing lemmas and endpoint consequences require independent specialist review. The whole-state arithmetic is exact, but independent computational reproduction and external checking of structural arguments remain open. The candidate `7/12` theorem, mixed-class Hall projection and orientation target-capacity lemma also require novelty assessment and external review.
 
 No solver timeout, floating infeasibility status or unsuccessful search is used as proof.
 
-For restart-level detail, read [`CURRENT_STATE.md`](CURRENT_STATE.md). For the latest quantified advance, read [`ORIENTATION_TARGET_CAPACITY.md`](project/research/general_n/2026-09-13-alternative-attacks-v1/ORIENTATION_TARGET_CAPACITY.md), [`STATE_77_WHOLE_STATE.md`](project/research/general_n/2026-09-13-alternative-attacks-v1/STATE_77_WHOLE_STATE.md), [`STATE_60_WHOLE_STATE.md`](project/research/general_n/2026-09-13-alternative-attacks-v1/STATE_60_WHOLE_STATE.md), and [`verify_e0_orientation_capacity.py`](project/research/general_n/2026-09-13-alternative-attacks-v1/verify_e0_orientation_capacity.py).
+For restart-level detail, read [`CURRENT_STATE.md`](CURRENT_STATE.md). For the latest quantified advance, read [`POTENTIAL_PAIR_CAPACITY.md`](project/research/general_n/2026-09-13-alternative-attacks-v1/POTENTIAL_PAIR_CAPACITY.md), [`PAIR_CAPACITY_FRONTIER_AUDIT.md`](project/research/general_n/2026-09-13-alternative-attacks-v1/PAIR_CAPACITY_FRONTIER_AUDIT.md), [`LOW_C_HIGH_Q_CROSS_OBSTRUCTION.md`](project/research/general_n/2026-09-13-alternative-attacks-v1/LOW_C_HIGH_Q_CROSS_OBSTRUCTION.md), and [`ORIENTATION_FLOW_HALL.md`](project/research/general_n/2026-09-13-alternative-attacks-v1/ORIENTATION_FLOW_HALL.md).

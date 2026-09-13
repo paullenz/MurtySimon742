@@ -6,56 +6,37 @@
 
 The programme attacks the missing quantifier in fixed-pattern residual arguments: rejecting one selected quasi-edge geometry does not exclude the underlying scalar state because another legal selected geometry may exist.
 
-The quantified line now has **16 whole-state N34 exclusions**:
-
-```text
-227, 279, 588, 526, 382, 519, 230, 282, 385, 153, 122, 283, 154, 231, 77, 60.
-```
+The canonical ledger now has **961 quantified N34-derived whole-state exclusions**: 18 earlier individually/family audited closures plus a cross-implementation-audited **943-state potential-pair capacity family**. The exact 943 IDs are preserved in [`PAIR_CAPACITY_FRONTIER_EXCLUDED.tsv`](PAIR_CAPACITY_FRONTIER_EXCLUDED.tsv), with audit provenance in [`PAIR_CAPACITY_FRONTIER_AUDIT.md`](PAIR_CAPACITY_FRONTIER_AUDIT.md).
 
 The canonical union of all closure lines is recorded in [`WHOLE_STATE_LEDGER.tsv`](WHOLE_STATE_LEDGER.tsv); that ledger, rather than local ordinal wording in individual notes, controls the headline count.
 
 The frozen frontier is now
 
 ```text
-1,010 exclusions / 4,568 survivors,
+1,955 exclusions / 3,623 survivors,
 ```
 
 split as
 
 ```text
-4,490 N34 equality-derived survivors,
+3,545 N34 equality-derived survivors,
 78 N35 m=306-derived survivors.
 ```
 
 These are scalar states in a frozen generalisation experiment, not individual surviving graphs. The fixed-order N34/N35 candidate proofs are unchanged.
 
-The durability checker [`../../../../tools/check_n34_whole_state_ledger.py`](../../../../tools/check_n34_whole_state_ledger.py) pins all 16 current closures in `KNOWN_MINIMUM`, explicitly including states `77` and `60`. New closures may be added, but an accidental later ledger/README rewrite must not silently remove a preserved closure.
+The durability checker [`../../../../tools/check_n34_whole_state_ledger.py`](../../../../tools/check_n34_whole_state_ledger.py) protects the 18 earlier closures plus the hash-pinned 943-state potential-pair family and verifies the ledger provenance of every promoted family member. New closures may be added, but an accidental later ledger/README rewrite must not silently remove a preserved closure.
 
 <!-- CANONICAL-WHOLE-STATE-LEDGER:START -->
 ### Canonical closure ledger
 
-The durability checker [`../../../../tools/check_n34_whole_state_ledger.py`](../../../../tools/check_n34_whole_state_ledger.py) pins all 16 current closures in `KNOWN_MINIMUM`; new closures may be added, but a later ledger/README rewrite must not silently remove a preserved closure.
+The canonical [`WHOLE_STATE_LEDGER.tsv`](WHOLE_STATE_LEDGER.tsv) contains **961 quantified whole-state exclusions**. The large current family is documented in [`PAIR_CAPACITY_FRONTIER_AUDIT.md`](PAIR_CAPACITY_FRONTIER_AUDIT.md), with exact IDs in [`PAIR_CAPACITY_FRONTIER_EXCLUDED.tsv`](PAIR_CAPACITY_FRONTIER_EXCLUDED.tsv).
 
-| State | Method | Record |
-|---:|---|---|
-| 227 | state-specific exact replay | [`STATE_227_WHOLE_STATE.md`](STATE_227_WHOLE_STATE.md) |
-| 279 | state-specific exact replay | [`STATE_279_WHOLE_STATE.md`](STATE_279_WHOLE_STATE.md) |
-| 588 | state-specific exact replay | [`STATE_588_WHOLE_STATE.md`](STATE_588_WHOLE_STATE.md) |
-| 526 | state-specific exact replay | [`STATE_526_WHOLE_STATE.md`](STATE_526_WHOLE_STATE.md) |
-| 382 | state-specific exact replay | [`STATE_382_WHOLE_STATE.md`](STATE_382_WHOLE_STATE.md) |
-| 519 | state-specific exact replay | [`STATE_519_WHOLE_STATE.md`](STATE_519_WHOLE_STATE.md) |
-| 230 | incidence-capacity family closure | [`INCIDENCE_CAPACITY_FAMILY_CLOSURE.md`](INCIDENCE_CAPACITY_FAMILY_CLOSURE.md) |
-| 282 | incidence-capacity family closure | [`INCIDENCE_CAPACITY_FAMILY_CLOSURE.md`](INCIDENCE_CAPACITY_FAMILY_CLOSURE.md) |
-| 385 | incidence-capacity family closure | [`INCIDENCE_CAPACITY_FAMILY_CLOSURE.md`](INCIDENCE_CAPACITY_FAMILY_CLOSURE.md) |
-| 153 | low-demand extension closure | [`STATE_153_WHOLE_STATE.md`](STATE_153_WHOLE_STATE.md) |
-| 122 | endpoint class-packing closure | [`STATE_122_WHOLE_STATE.md`](STATE_122_WHOLE_STATE.md) |
-| 283 | endpoint class-packing closure | [`STATE_283_WHOLE_STATE.md`](STATE_283_WHOLE_STATE.md) |
-| 154 | endpoint class-packing closure | [`STATE_154_WHOLE_STATE.md`](STATE_154_WHOLE_STATE.md) |
-| 231 | mixed-class joint Hall closure | [`STATE_231_WHOLE_STATE.md`](STATE_231_WHOLE_STATE.md) |
-| 77 | orientation target-capacity closure | [`STATE_77_WHOLE_STATE.md`](STATE_77_WHOLE_STATE.md) |
-| 60 | orientation target-capacity closure | [`STATE_60_WHOLE_STATE.md`](STATE_60_WHOLE_STATE.md) |
+Two full-frontier implementations—expanded source vectors with pairwise directed compatibility, and independent `(rho,q)` type-count enumeration using the closed-form potential degree—agree exactly on the 943 promoted exclusions and their exhaustive certificate statistics.
 
-Canonical frontier: **1,010 exclusions / 4,568 survivors**.
+Canonical frontier: **1,955 exclusions / 3,623 survivors** (`3,545` N34-derived plus `78` N35-derived).
+
+The durability checker [`../../../../tools/check_n34_whole_state_ledger.py`](../../../../tools/check_n34_whole_state_ledger.py) hash-pins the 943-state certificate and checks ledger provenance.
 <!-- CANONICAL-WHOLE-STATE-LEDGER:END -->
 
 ## Core selected-excess mechanism
@@ -104,6 +85,10 @@ The present architecture is:
    with `L_u=max(0,p_u-rho_u+1)`.
 6. **Forced low-score incidence** — [`FORCED_INCIDENCE_SCORE.md`](FORCED_INCIDENCE_SCORE.md) turns a Hall/pigeonhole overload into a sharper bound on a particular label's `d_i` when that label is forced to receive an incidence from a low-score source.
 7. **Orientation target capacity** — [`ORIENTATION_TARGET_CAPACITY.md`](ORIENTATION_TARGET_CAPACITY.md) links the selected-label constraints back to the actual missing-edge orientation. For every oriented missing pair `u->w`, `q_u-1<=q_w+rho_w`; hence low-cross-degree targets have a Hall-type incoming-capacity restriction.
+8. **Exact orientation Hall flow** — [`ORIENTATION_FLOW_HALL.md`](ORIENTATION_FLOW_HALL.md) keeps the companion endpoint inequality, proves the exact directed compatibility relation and records why the full relation is two-dimensional rather than Ferrers in general.
+9. **Total-excess source capacity** — [`TOTAL_EXCESS_SOURCE_CAP.md`](TOTAL_EXCESS_SOURCE_CAP.md) interpolates the exact-demand incoming cap across every total-excess layer.
+10. **Potential-pair capacity** — [`POTENTIAL_PAIR_CAPACITY.md`](POTENTIAL_PAIR_CAPACITY.md) forgets the orientation but retains which unordered pairs could possibly be missing, giving `p_u+q_u<=d_KD(u)`; this is the mechanism behind the audited 943-state frontier family.
+11. **Low-c/high-q threshold obstruction** — [`LOW_C_HIGH_Q_CROSS_OBSTRUCTION.md`](LOW_C_HIGH_Q_CROSS_OBSTRUCTION.md) extracts the compact all-order candidate inequality `Q+ell_r*u_r<=binom(b,2)` for every threshold `r`.
 
 The progression is therefore
 
@@ -114,7 +99,9 @@ threshold scarcity
  -> demand-compatible excess order
  -> incidence-capacity competition
  -> forced low-score rigidity
- -> missing-edge orientation / flow capacity.
+ -> missing-edge orientation / flow capacity
+ -> potential-pair capacity
+ -> low-c/high-q threshold obstruction.
 ```
 
 ## Whole-state exclusions
