@@ -1,0 +1,36 @@
+name: scan orientation all-excess max-s3
+
+on:
+  workflow_dispatch:
+  push:
+    paths:
+      - 'project/research/general_n/2026-09-13-alternative-attacks-v1/scan_orientation_all_excess_frontier.cpp'
+      - 'project/research/general_n/2026-09-13-alternative-attacks-v1/summarize_orientation_all_excess_scan.py'
+      - '.github/workflows/scan-orientation-all-excess-maxs3.yml'
+
+jobs:
+  scan:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    steps:
+      - uses: actions/checkout@v4
+      - name: Prepare max-s <= 3 canonical shard
+        working-directory: project/research/general_n/2026-09-13-alternative-attacks-v1
+        run: python3 prepare_orientation_e0_frontier.py --max-s 3 --output ORIENTATION_ALL_EXCESS_MAXS3_INPUT.txt
+      - name: Compile all-excess scanner
+        working-directory: project/research/general_n/2026-09-13-alternative-attacks-v1
+        run: g++ -O3 -std=c++17 -Wall -Wextra -pedantic scan_orientation_all_excess_frontier.cpp -o scan_orientation_all_excess_frontier
+      - name: Run all-excess scan
+        working-directory: project/research/general_n/2026-09-13-alternative-attacks-v1
+        run: |
+          ./scan_orientation_all_excess_frontier ORIENTATION_ALL_EXCESS_MAXS3_INPUT.txt ORIENTATION_ALL_EXCESS_MAXS3.tsv 2>&1 | tee ORIENTATION_ALL_EXCESS_MAXS3_REPLAY.txt
+          python3 summarize_orientation_all_excess_scan.py ORIENTATION_ALL_EXCESS_MAXS3.tsv --output ORIENTATION_ALL_EXCESS_MAXS3_SUMMARY.json
+      - name: Upload scan
+        uses: actions/upload-artifact@v4
+        with:
+          name: orientation-all-excess-maxs3
+          path: |
+            project/research/general_n/2026-09-13-alternative-attacks-v1/ORIENTATION_ALL_EXCESS_MAXS3_INPUT_VERIFICATION.json
+            project/research/general_n/2026-09-13-alternative-attacks-v1/ORIENTATION_ALL_EXCESS_MAXS3.tsv
+            project/research/general_n/2026-09-13-alternative-attacks-v1/ORIENTATION_ALL_EXCESS_MAXS3_REPLAY.txt
+            project/research/general_n/2026-09-13-alternative-attacks-v1/ORIENTATION_ALL_EXCESS_MAXS3_SUMMARY.json
