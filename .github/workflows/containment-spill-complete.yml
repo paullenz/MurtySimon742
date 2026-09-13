@@ -1,0 +1,40 @@
+name: containment-spill-complete
+
+on:
+  push:
+    paths:
+      - '.github/workflows/containment-spill-complete.yml'
+      - 'project/research/general_n/2026-09-13-constraint-respecting-cross-v1/complete_spill_witness.py'
+
+permissions:
+  contents: write
+
+jobs:
+  complete:
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    steps:
+      - uses: actions/checkout@v4
+      - name: Assemble and verify all 4,584 positive witnesses
+        shell: bash
+        run: |
+          set -o pipefail
+          python project/research/general_n/2026-09-13-constraint-respecting-cross-v1/complete_spill_witness.py | tee /tmp/spill-complete.log
+      - name: Upload complete evidence and log
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: containment-spill-complete
+          path: |
+            project/research/general_n/2026-09-13-constraint-respecting-cross-v1/FULL_DOMAIN_SPILL_COMPLETE.json
+            /tmp/spill-complete.log
+          if-no-files-found: warn
+      - name: Commit complete result
+        run: |
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add project/research/general_n/2026-09-13-constraint-respecting-cross-v1/FULL_DOMAIN_SPILL_COMPLETE.json
+          git diff --cached --quiet && exit 0
+          git commit -m 'Record complete spill witnesses for all combined survivors'
+          git pull --rebase origin main
+          git push
