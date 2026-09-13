@@ -1,0 +1,38 @@
+name: Scan refined h2 adjacent family
+
+on:
+  workflow_dispatch:
+  push:
+    paths:
+      - 'project/research/general_n/2026-09-13-alternative-attacks-v1/prepare_refined_h2_family_scan.py'
+      - 'project/research/general_n/2026-09-13-alternative-attacks-v1/scan_refined_h2_family.cpp'
+      - '.github/workflows/scan-refined-h2-adjacent-family.yml'
+
+permissions:
+  contents: read
+
+jobs:
+  scan:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 20
+    steps:
+      - uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262
+      - name: Prepare hash-verified family input
+        run: |
+          set -euo pipefail
+          cd project/research/general_n/2026-09-13-alternative-attacks-v1
+          python3 prepare_refined_h2_family_scan.py | tee refined_h2_family_prepare.log
+      - name: Compile exact integer scanner
+        run: |
+          set -euo pipefail
+          cd project/research/general_n/2026-09-13-alternative-attacks-v1
+          g++ -O2 -std=c++17 -Wall -Wextra -pedantic scan_refined_h2_family.cpp -o scan_refined_h2_family
+      - name: Run adjacent-family scan
+        run: |
+          set -euo pipefail
+          cd project/research/general_n/2026-09-13-alternative-attacks-v1
+          ./scan_refined_h2_family refined_h2_family_input.txt REFINED_H2_FAMILY_SCAN.tsv | tee refined_h2_family_scan.log
+          echo '--- INPUT SUMMARY ---'
+          cat REFINED_H2_FAMILY_INPUT.json
+          echo '--- COMPLETE TSV ---'
+          cat REFINED_H2_FAMILY_SCAN.tsv
