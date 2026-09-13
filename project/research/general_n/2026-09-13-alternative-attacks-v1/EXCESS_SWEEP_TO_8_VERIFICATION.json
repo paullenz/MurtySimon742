@@ -1,0 +1,43 @@
+{
+  "schema": "state-227-excess-sweep-to-8-v1",
+  "status": "PASS",
+  "summaries": [
+    {"E":4,"profiles":20,"strict":20,"equality":0,"source_infeasible":0,"minimum_strict_gap":6},
+    {"E":5,"profiles":35,"strict":35,"equality":0,"source_infeasible":0,"minimum_strict_gap":4},
+    {"E":6,"profiles":62,"strict":61,"equality":1,"source_infeasible":0,"minimum_strict_gap":4},
+    {"E":7,"profiles":102,"strict":101,"equality":1,"source_infeasible":0,"minimum_strict_gap":8},
+    {"E":8,"profiles":167,"strict":166,"equality":0,"source_infeasible":1,"minimum_strict_gap":9}
+  ],
+  "equality_profiles": [
+    {
+      "E":6,
+      "e2":[0,0,0,0],
+      "e3":[0,0,0,0,0,0,0,0,0,0,6],
+      "B":258,
+      "baseline":258,
+      "unique_minimizer":{"q2":0,"p2":4,"rho3_q":[1,5,5,5,5,5,5,5,5,6],"T":328,"C0":8,"Pplus":78},
+      "hand_exclusion":"Equality forces four zero-excess demand-two labels to C=2 each, but at least seven of their eight selected incidences come from sources with q>=5, violating endpoint load."
+    },
+    {
+      "E":7,
+      "e2":[0,0,0,7],
+      "e3":[0,0,0,0,0,0,0,0,0,0,0],
+      "B":261,
+      "baseline":261,
+      "unique_minimizer":{"q2":1,"p2":4,"rho3_q":[1,5,5,5,5,5,5,5,5,6],"T":339,"C0":6,"Pplus":84},
+      "hand_exclusion":"The rho=2 source has excess requirement 3 and must use the unique e=7 demand-two label. Equality forces the other three demand-two labels to C=2 each, but at least five of their six selected incidences come from rho=3 sources with q>=5."
+    }
+  ],
+  "source_infeasible_profiles": [
+    {
+      "E":8,
+      "e2":[0,0,0,0],
+      "e3":[0,0,0,0,0,0,0,0,0,0,8],
+      "reason":"The demand-three label has selected degree x=11 and would require eleven distinct sources with rho>=3; only ten rho=3 sources exist and the rho=2 source is ineligible."
+    }
+  ],
+  "profiles_checked":386,
+  "all_profiles_excluded_after_equality_rigidity":true,
+  "conclusion":"Together with E=0,1,2,3, any surviving state-227 realization must have total selected excess E>=9.",
+  "whole_state_exclusion":false
+}
