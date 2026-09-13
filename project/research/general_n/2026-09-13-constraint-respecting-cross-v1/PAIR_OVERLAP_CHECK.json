@@ -1,0 +1,782 @@
+{
+  "schema": "pair-overlap-check-v1",
+  "date": "2026-09-13",
+  "input_patterns": 4584,
+  "raw_pair_moment_failures": 23,
+  "raw_pair_failures": [
+    {
+      "layer": "n34-m289",
+      "state_id": 11236,
+      "slack": -1
+    },
+    {
+      "layer": "n34-m289",
+      "state_id": 11260,
+      "slack": -37
+    },
+    {
+      "layer": "n34-m289",
+      "state_id": 11268,
+      "slack": -55
+    },
+    {
+      "layer": "n34-m289",
+      "state_id": 11269,
+      "slack": -82
+    },
+    {
+      "layer": "n34-m289",
+      "state_id": 11271,
+      "slack": -27
+    },
+    {
+      "layer": "n34-m289",
+      "state_id": 11273,
+      "slack": -116
+    },
+    {
+      "layer": "n34-m289",
+      "state_id": 11274,
+      "slack": -76
+    },
+    {
+      "layer": "n34-m289",
+      "state_id": 11276,
+      "slack": -29
+    },
+    {
+      "layer": "n34-m289",
+      "state_id": 11277,
+      "slack": -8
+    },
+    {
+      "layer": "n34-m289",
+      "state_id": 11399,
+      "slack": -114
+    },
+    {
+      "layer": "n34-m289",
+      "state_id": 11400,
+      "slack": -46
+    },
+    {
+      "layer": "n34-m289",
+      "state_id": 11585,
+      "slack": -95
+    },
+    {
+      "layer": "n34-m289",
+      "state_id": 11591,
+      "slack": -13
+    },
+    {
+      "layer": "n34-m289",
+      "state_id": 11618,
+      "slack": -125
+    },
+    {
+      "layer": "n34-m289",
+      "state_id": 11624,
+      "slack": -97
+    },
+    {
+      "layer": "n34-m289",
+      "state_id": 11633,
+      "slack": -84
+    },
+    {
+      "layer": "n34-m289",
+      "state_id": 11636,
+      "slack": -150
+    },
+    {
+      "layer": "n34-m289",
+      "state_id": 11637,
+      "slack": -145
+    },
+    {
+      "layer": "n34-m289",
+      "state_id": 11744,
+      "slack": -21
+    },
+    {
+      "layer": "n34-m289",
+      "state_id": 11745,
+      "slack": -18
+    },
+    {
+      "layer": "n35-m306",
+      "state_id": 428,
+      "slack": -11
+    },
+    {
+      "layer": "n35-m306",
+      "state_id": 430,
+      "slack": -32
+    },
+    {
+      "layer": "n35-m306",
+      "state_id": 439,
+      "slack": -103
+    }
+  ],
+  "pair_repairs": [
+    {
+      "layer": "n34-m289",
+      "state_id": 11236,
+      "before_slack": -1,
+      "after_slack": 74,
+      "switches": [
+        [
+          7,
+          10,
+          10,
+          13
+        ]
+      ]
+    },
+    {
+      "layer": "n34-m289",
+      "state_id": 11260,
+      "before_slack": -37,
+      "after_slack": 36,
+      "switches": [
+        [
+          11,
+          13,
+          5,
+          2
+        ]
+      ]
+    },
+    {
+      "layer": "n34-m289",
+      "state_id": 11268,
+      "before_slack": -55,
+      "after_slack": 35,
+      "switches": [
+        [
+          13,
+          16,
+          4,
+          5
+        ],
+        [
+          8,
+          16,
+          11,
+          14
+        ]
+      ]
+    },
+    {
+      "layer": "n34-m289",
+      "state_id": 11269,
+      "before_slack": -82,
+      "after_slack": 3,
+      "switches": [
+        [
+          6,
+          8,
+          13,
+          0
+        ],
+        [
+          12,
+          15,
+          2,
+          6
+        ]
+      ]
+    },
+    {
+      "layer": "n34-m289",
+      "state_id": 11271,
+      "before_slack": -27,
+      "after_slack": 23,
+      "switches": [
+        [
+          12,
+          17,
+          7,
+          2
+        ]
+      ]
+    },
+    {
+      "layer": "n34-m289",
+      "state_id": 11273,
+      "before_slack": -116,
+      "after_slack": 4,
+      "switches": [
+        [
+          13,
+          14,
+          3,
+          4
+        ],
+        [
+          7,
+          13,
+          13,
+          9
+        ],
+        [
+          8,
+          14,
+          14,
+          6
+        ]
+      ]
+    },
+    {
+      "layer": "n34-m289",
+      "state_id": 11274,
+      "before_slack": -76,
+      "after_slack": 16,
+      "switches": [
+        [
+          7,
+          10,
+          14,
+          4
+        ],
+        [
+          8,
+          9,
+          3,
+          5
+        ]
+      ]
+    },
+    {
+      "layer": "n34-m289",
+      "state_id": 11276,
+      "before_slack": -29,
+      "after_slack": 23,
+      "switches": [
+        [
+          8,
+          17,
+          13,
+          6
+        ]
+      ]
+    },
+    {
+      "layer": "n34-m289",
+      "state_id": 11277,
+      "before_slack": -8,
+      "after_slack": 31,
+      "switches": [
+        [
+          14,
+          15,
+          3,
+          5
+        ]
+      ]
+    },
+    {
+      "layer": "n34-m289",
+      "state_id": 11399,
+      "before_slack": -114,
+      "after_slack": 8,
+      "switches": [
+        [
+          9,
+          15,
+          3,
+          0
+        ],
+        [
+          10,
+          11,
+          2,
+          13
+        ],
+        [
+          7,
+          9,
+          1,
+          12
+        ]
+      ]
+    },
+    {
+      "layer": "n34-m289",
+      "state_id": 11400,
+      "before_slack": -46,
+      "after_slack": 14,
+      "switches": [
+        [
+          9,
+          14,
+          0,
+          7
+        ]
+      ]
+    },
+    {
+      "layer": "n34-m289",
+      "state_id": 11585,
+      "before_slack": -95,
+      "after_slack": 27,
+      "switches": [
+        [
+          13,
+          15,
+          10,
+          5
+        ],
+        [
+          13,
+          17,
+          14,
+          2
+        ]
+      ]
+    },
+    {
+      "layer": "n34-m289",
+      "state_id": 11591,
+      "before_slack": -13,
+      "after_slack": 13,
+      "switches": [
+        [
+          13,
+          16,
+          9,
+          4
+        ]
+      ]
+    },
+    {
+      "layer": "n34-m289",
+      "state_id": 11618,
+      "before_slack": -125,
+      "after_slack": 19,
+      "switches": [
+        [
+          11,
+          15,
+          6,
+          9
+        ],
+        [
+          7,
+          10,
+          12,
+          1
+        ],
+        [
+          7,
+          15,
+          2,
+          4
+        ]
+      ]
+    },
+    {
+      "layer": "n34-m289",
+      "state_id": 11624,
+      "before_slack": -97,
+      "after_slack": 4,
+      "switches": [
+        [
+          11,
+          15,
+          10,
+          9
+        ],
+        [
+          7,
+          14,
+          13,
+          2
+        ]
+      ]
+    },
+    {
+      "layer": "n34-m289",
+      "state_id": 11633,
+      "before_slack": -84,
+      "after_slack": 34,
+      "switches": [
+        [
+          15,
+          17,
+          8,
+          14
+        ],
+        [
+          8,
+          12,
+          3,
+          13
+        ],
+        [
+          6,
+          8,
+          11,
+          2
+        ]
+      ]
+    },
+    {
+      "layer": "n34-m289",
+      "state_id": 11636,
+      "before_slack": -150,
+      "after_slack": 0,
+      "switches": [
+        [
+          6,
+          10,
+          0,
+          2
+        ],
+        [
+          9,
+          12,
+          5,
+          13
+        ],
+        [
+          9,
+          17,
+          7,
+          1
+        ]
+      ]
+    },
+    {
+      "layer": "n34-m289",
+      "state_id": 11637,
+      "before_slack": -145,
+      "after_slack": 28,
+      "switches": [
+        [
+          13,
+          15,
+          0,
+          13
+        ],
+        [
+          12,
+          17,
+          1,
+          12
+        ],
+        [
+          15,
+          17,
+          7,
+          4
+        ]
+      ]
+    },
+    {
+      "layer": "n34-m289",
+      "state_id": 11744,
+      "before_slack": -21,
+      "after_slack": 39,
+      "switches": [
+        [
+          9,
+          14,
+          0,
+          11
+        ]
+      ]
+    },
+    {
+      "layer": "n34-m289",
+      "state_id": 11745,
+      "before_slack": -18,
+      "after_slack": 54,
+      "switches": [
+        [
+          10,
+          15,
+          7,
+          3
+        ]
+      ]
+    },
+    {
+      "layer": "n35-m306",
+      "state_id": 428,
+      "before_slack": -11,
+      "after_slack": 39,
+      "switches": [
+        [
+          13,
+          18,
+          4,
+          10
+        ]
+      ]
+    },
+    {
+      "layer": "n35-m306",
+      "state_id": 430,
+      "before_slack": -32,
+      "after_slack": 18,
+      "switches": [
+        [
+          13,
+          18,
+          7,
+          2
+        ]
+      ]
+    },
+    {
+      "layer": "n35-m306",
+      "state_id": 439,
+      "before_slack": -103,
+      "after_slack": 31,
+      "switches": [
+        [
+          7,
+          14,
+          13,
+          4
+        ],
+        [
+          9,
+          12,
+          12,
+          2
+        ],
+        [
+          16,
+          18,
+          6,
+          2
+        ]
+      ]
+    }
+  ],
+  "all_pair_moments_repaired": true,
+  "maximum_repair_switches": 3,
+  "minimum_repaired_moment_slack": {
+    "2": 0,
+    "3": 195,
+    "4": 191
+  },
+  "local_residual_cover_failures_on_frozen_repaired_patterns": 26,
+  "minimum_local_residual_cover_slack": -87,
+  "local_residual_cover_failures": [
+    {
+      "layer": "n34-m289",
+      "state_id": 249,
+      "slack": -5,
+      "demand_units": 108,
+      "local_capacity": 103,
+      "deficit_edge_count": 50
+    },
+    {
+      "layer": "n34-m289",
+      "state_id": 620,
+      "slack": -1,
+      "demand_units": 122,
+      "local_capacity": 121,
+      "deficit_edge_count": 50
+    },
+    {
+      "layer": "n34-m289",
+      "state_id": 11236,
+      "slack": -84,
+      "demand_units": 443,
+      "local_capacity": 359,
+      "deficit_edge_count": 81
+    },
+    {
+      "layer": "n34-m289",
+      "state_id": 11250,
+      "slack": -8,
+      "demand_units": 502,
+      "local_capacity": 494,
+      "deficit_edge_count": 98
+    },
+    {
+      "layer": "n34-m289",
+      "state_id": 11260,
+      "slack": -50,
+      "demand_units": 467,
+      "local_capacity": 417,
+      "deficit_edge_count": 91
+    },
+    {
+      "layer": "n34-m289",
+      "state_id": 11268,
+      "slack": -3,
+      "demand_units": 463,
+      "local_capacity": 460,
+      "deficit_edge_count": 92
+    },
+    {
+      "layer": "n34-m289",
+      "state_id": 11269,
+      "slack": -34,
+      "demand_units": 489,
+      "local_capacity": 455,
+      "deficit_edge_count": 92
+    },
+    {
+      "layer": "n34-m289",
+      "state_id": 11271,
+      "slack": -82,
+      "demand_units": 467,
+      "local_capacity": 385,
+      "deficit_edge_count": 87
+    },
+    {
+      "layer": "n34-m289",
+      "state_id": 11273,
+      "slack": -39,
+      "demand_units": 492,
+      "local_capacity": 453,
+      "deficit_edge_count": 95
+    },
+    {
+      "layer": "n34-m289",
+      "state_id": 11274,
+      "slack": -13,
+      "demand_units": 475,
+      "local_capacity": 462,
+      "deficit_edge_count": 96
+    },
+    {
+      "layer": "n34-m289",
+      "state_id": 11276,
+      "slack": -10,
+      "demand_units": 464,
+      "local_capacity": 454,
+      "deficit_edge_count": 92
+    },
+    {
+      "layer": "n34-m289",
+      "state_id": 11277,
+      "slack": -13,
+      "demand_units": 455,
+      "local_capacity": 442,
+      "deficit_edge_count": 91
+    },
+    {
+      "layer": "n34-m289",
+      "state_id": 11399,
+      "slack": -25,
+      "demand_units": 475,
+      "local_capacity": 450,
+      "deficit_edge_count": 90
+    },
+    {
+      "layer": "n34-m289",
+      "state_id": 11509,
+      "slack": -81,
+      "demand_units": 180,
+      "local_capacity": 99,
+      "deficit_edge_count": 45
+    },
+    {
+      "layer": "n34-m289",
+      "state_id": 11512,
+      "slack": -76,
+      "demand_units": 182,
+      "local_capacity": 106,
+      "deficit_edge_count": 47
+    },
+    {
+      "layer": "n34-m289",
+      "state_id": 11555,
+      "slack": -38,
+      "demand_units": 496,
+      "local_capacity": 458,
+      "deficit_edge_count": 93
+    },
+    {
+      "layer": "n34-m289",
+      "state_id": 11585,
+      "slack": -70,
+      "demand_units": 485,
+      "local_capacity": 415,
+      "deficit_edge_count": 89
+    },
+    {
+      "layer": "n34-m289",
+      "state_id": 11618,
+      "slack": -27,
+      "demand_units": 488,
+      "local_capacity": 461,
+      "deficit_edge_count": 93
+    },
+    {
+      "layer": "n34-m289",
+      "state_id": 11623,
+      "slack": -32,
+      "demand_units": 429,
+      "local_capacity": 397,
+      "deficit_edge_count": 85
+    },
+    {
+      "layer": "n34-m289",
+      "state_id": 11624,
+      "slack": -38,
+      "demand_units": 492,
+      "local_capacity": 454,
+      "deficit_edge_count": 93
+    },
+    {
+      "layer": "n34-m289",
+      "state_id": 11636,
+      "slack": -30,
+      "demand_units": 498,
+      "local_capacity": 468,
+      "deficit_edge_count": 96
+    },
+    {
+      "layer": "n34-m289",
+      "state_id": 11637,
+      "slack": -27,
+      "demand_units": 467,
+      "local_capacity": 440,
+      "deficit_edge_count": 90
+    },
+    {
+      "layer": "n34-m289",
+      "state_id": 11744,
+      "slack": -6,
+      "demand_units": 479,
+      "local_capacity": 473,
+      "deficit_edge_count": 96
+    },
+    {
+      "layer": "n34-m289",
+      "state_id": 11745,
+      "slack": -2,
+      "demand_units": 453,
+      "local_capacity": 451,
+      "deficit_edge_count": 92
+    },
+    {
+      "layer": "n35-m306",
+      "state_id": 430,
+      "slack": -87,
+      "demand_units": 467,
+      "local_capacity": 380,
+      "deficit_edge_count": 87
+    },
+    {
+      "layer": "n35-m306",
+      "state_id": 439,
+      "slack": -25,
+      "demand_units": 465,
+      "local_capacity": 440,
+      "deficit_edge_count": 93
+    }
+  ],
+  "whole_state_exclusions_claimed": 0,
+  "scope": "Pair-moment repairs are direct positive selected-set witnesses and show zero whole-state exclusions from the raw k=2 moment on this study. Local residual-cover failures exclude only the listed fixed selected-set realizations; alternative selected-set geometries are not quantified here."
+}
