@@ -1,0 +1,42 @@
+name: pair-overlap-check
+
+on:
+  push:
+    paths:
+      - '.github/workflows/pair-overlap-check.yml'
+      - 'project/research/general_n/2026-09-13-constraint-respecting-cross-v1/check_pair_overlap.py'
+
+permissions:
+  contents: write
+
+jobs:
+  replay:
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    steps:
+      - uses: actions/checkout@v4
+      - name: Replay pair-overlap checks
+        shell: bash
+        run: |
+          set -o pipefail
+          python project/research/general_n/2026-09-13-constraint-respecting-cross-v1/check_pair_overlap.py | tee /tmp/pair-overlap.log
+      - name: Upload evidence
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: pair-overlap-check
+          path: |
+            project/research/general_n/2026-09-13-constraint-respecting-cross-v1/PAIR_OVERLAP_CHECK.json
+            /tmp/pair-overlap.log
+          if-no-files-found: warn
+      - name: Commit replay result
+        run: |
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add project/research/general_n/2026-09-13-constraint-respecting-cross-v1/PAIR_OVERLAP_CHECK.json
+          git diff --cached --quiet && exit 0
+          git commit -m 'Record exact pair-overlap replay'
+          git reset --hard HEAD
+          git fetch origin main
+          git rebase origin/main
+          git push
