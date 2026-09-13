@@ -1,0 +1,14 @@
+state	method	record
+227	state-specific exact replay	STATE_227_WHOLE_STATE.md
+279	state-specific exact replay	STATE_279_WHOLE_STATE.md
+588	state-specific exact replay	STATE_588_WHOLE_STATE.md
+526	state-specific exact replay	STATE_526_WHOLE_STATE.md
+382	state-specific exact replay	STATE_382_WHOLE_STATE.md
+519	state-specific exact replay	STATE_519_WHOLE_STATE.md
+230	incidence-capacity family closure	INCIDENCE_CAPACITY_FAMILY_CLOSURE.md
+282	incidence-capacity family closure	INCIDENCE_CAPACITY_FAMILY_CLOSURE.md
+385	incidence-capacity family closure	INCIDENCE_CAPACITY_FAMILY_CLOSURE.md
+153	low-demand extension closure	STATE_153_WHOLE_STATE.md
+122	endpoint class-packing closure	STATE_122_WHOLE_STATE.md
+283	endpoint class-packing closure	STATE_283_WHOLE_STATE.md
+154	endpoint class-packing closure	STATE_154_WHOLE_STATE.md
