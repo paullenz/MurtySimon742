@@ -1,0 +1,105 @@
+{
+  "schema": "murty-simon-documentation-publication-v1",
+  "date": "2026-09-13",
+  "repository": "paullenz/MurtySimon742",
+  "branch": "main",
+  "parent": "3bfce1b71f061e1709193cbd1b6c24bf5df0edf5",
+  "commit": "f419430f3d7b2a3ee87a534885be2446b0a5bb13",
+  "tree": "52dcb8d2faaa9a59107bae3d3b1dbd25234489f8",
+  "scope": "Documentation reconciliation of the existing exact spill and pair-overlap checkpoints; no new mathematical or computational result.",
+  "changed_files": {
+    "CURRENT_STATE.md": {
+      "bytes": 13532,
+      "git_blob_sha": "c2718cd73e5c7a0ce59d8272ea21fcb500148ab2",
+      "sha256": "99f3c5cc926216ec06b2c6d11cd1a7443defd2a3d30bcbe1975ba1dc69ecc4ae"
+    },
+    "README.md": {
+      "bytes": 62841,
+      "git_blob_sha": "4a6807d8359d0c7989f28b2bd1d3382272537d21",
+      "sha256": "89a1ea958a7836b67490dcff560dcc7e43ffbc42c7a42789d18e89aed9d5d820"
+    },
+    "START_HERE_FOR_REVIEWERS.md": {
+      "bytes": 19234,
+      "git_blob_sha": "c27bf66efdccd68466569fc743f4607985f9e56b",
+      "sha256": "3d148a0151d08d025a3e550582027e2f0038bc80e7e2c87f1dd85dcaeb743a0e"
+    },
+    "project/research/general_n/2026-09-13-constraint-respecting-cross-v1/AUDIT.md": {
+      "bytes": 10543,
+      "git_blob_sha": "3e00f17d1694a4634e019fbe20489c9bf67f3df2",
+      "sha256": "eba8de096d50a5005bd6ed900768a1b1a71681ab5855598b0951ff0a7183ab2f"
+    },
+    "project/research/general_n/2026-09-13-constraint-respecting-cross-v1/README.md": {
+      "bytes": 13197,
+      "git_blob_sha": "7f6252061d025d9ceb51a7af899ce400ad30c502",
+      "sha256": "e76e7eb784528aaae73a25e873fe778fbc025a80246731dbea36c9565d0d32ad"
+    },
+    "releases/REVIEW_READY_INDEX.md": {
+      "bytes": 18375,
+      "git_blob_sha": "31d538102c686745c8248aa264a9d466568aa910",
+      "sha256": "6356c5609672dee4d3c49e734df118e5f3cfeda29cb9edf82b80c583169e1470"
+    }
+  },
+  "checks": {
+    "branch": "f419430f3d7b2a3ee87a534885be2446b0a5bb13",
+    "changed_paths": [
+      "CURRENT_STATE.md",
+      "README.md",
+      "START_HERE_FOR_REVIEWERS.md",
+      "project/research/general_n/2026-09-13-constraint-respecting-cross-v1/AUDIT.md",
+      "project/research/general_n/2026-09-13-constraint-respecting-cross-v1/README.md",
+      "releases/REVIEW_READY_INDEX.md"
+    ],
+    "commit": "f419430f3d7b2a3ee87a534885be2446b0a5bb13",
+    "content_readback": [
+      {
+        "content_matches": true,
+        "path": "CURRENT_STATE.md",
+        "sha": "c2718cd73e5c7a0ce59d8272ea21fcb500148ab2"
+      },
+      {
+        "content_matches": true,
+        "path": "README.md",
+        "sha": "4a6807d8359d0c7989f28b2bd1d3382272537d21"
+      },
+      {
+        "content_matches": true,
+        "path": "START_HERE_FOR_REVIEWERS.md",
+        "sha": "c27bf66efdccd68466569fc743f4607985f9e56b"
+      },
+      {
+        "content_matches": true,
+        "path": "project/research/general_n/2026-09-13-constraint-respecting-cross-v1/AUDIT.md",
+        "sha": "3e00f17d1694a4634e019fbe20489c9bf67f3df2"
+      },
+      {
+        "content_matches": true,
+        "path": "project/research/general_n/2026-09-13-constraint-respecting-cross-v1/README.md",
+        "sha": "7f6252061d025d9ceb51a7af899ce400ad30c502"
+      },
+      {
+        "content_matches": true,
+        "path": "releases/REVIEW_READY_INDEX.md",
+        "sha": "31d538102c686745c8248aa264a9d466568aa910"
+      }
+    ],
+    "mathematical_replay_performed": false,
+    "missing": [],
+    "no_other_files_modified": true,
+    "per_document": {
+      "CURRENT_STATE.md": 12,
+      "README.md": 183,
+      "START_HERE_FOR_REVIEWERS.md": 53,
+      "project/research/general_n/2026-09-13-constraint-respecting-cross-v1/AUDIT.md": 2,
+      "project/research/general_n/2026-09-13-constraint-respecting-cross-v1/README.md": 12,
+      "releases/REVIEW_READY_INDEX.md": 82
+    },
+    "relative_links_checked": 344,
+    "summary_reconciled": true
+  },
+  "reviewer_version_check": "Current fixed-order version references retained: n25/27/28 v2, n29 v4, n30 v3, n31/32/33/35 v1, n34 v2. No reviewer release promoted.",
+  "limitations": [
+    "No mathematical proof replay or independent audit performed in this documentation update.",
+    "External mathematical review, novelty assessment and independent reproduction remain open."
+  ],
+  "verification_note": "The six documentation files were read back at the committed SHA, matched to exact prepared content and local Git blob/SHA-256 manifest, and the full repository leaf tree comparison found exactly those six changes. Main was read back pointing to this commit before this receipt was prepared."
+}
