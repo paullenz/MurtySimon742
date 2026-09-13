@@ -1,0 +1,84 @@
+name: sync-containment-spill-readme
+
+on:
+  push:
+    paths:
+      - '.github/workflows/sync-containment-spill-readme.yml'
+
+permissions:
+  contents: write
+
+jobs:
+  sync:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Patch README status text
+        run: |
+          python - <<'PY'
+          from pathlib import Path
+          p=Path('README.md')
+          s=p.read_text()
+          replacements={
+          '''A [constraint-respecting cross-neighbourhood continuation](project/research/general_n/2026-09-13-constraint-respecting-cross-v1/README.md)
+now extracts a co-singleton trace hierarchy and a receiver-containment spill
+inequality from the exact label-set compatibility condition. The spill bound
+depends only on `(a,b,s,rho,q)` and rejects 173 of 2,000 deterministic sampled
+selected-degree patterns in one frozen N34 stratum. This is reconnaissance,
+not complete coverage: no whole-state exclusion is added and the 4,584-state
+frontier is unchanged.''':
+          '''A [constraint-respecting cross-neighbourhood continuation](project/research/general_n/2026-09-13-constraint-respecting-cross-v1/README.md)
+now extracts a co-singleton trace hierarchy and a receiver-containment spill
+inequality from the exact label-set compatibility condition. The spill bound
+depends only on `(a,b,s,rho,q)`. Although reconnaissance rejected 173 of 2,000
+sampled selected-degree patterns in one frozen N34 stratum, the subsequent
+complete positive-witness study finds exact-demand spill/transport witnesses
+for **all 4,584 combined survivors**. Thus the scalar spill projection adds
+zero whole-state exclusions; the next target is genuinely set-level pair and
+higher-order overlap information.''',
+          '''| Co-singleton trace / containment spill | Candidate general hand lemmas projecting exact label-set compatibility to higher-order trace moments and a scalar `(a,b,s,rho,q)` spill inequality. Deterministic reconnaissance cuts 173/2,000 selected patterns in N34 state 13537; no whole-state exclusions yet, so 4,584 survivors remain. External review and novelty OPEN. |''':
+          '''| Co-singleton trace / containment spill | Candidate general hand lemmas projecting exact label-set compatibility to higher-order trace moments and a scalar `(a,b,s,rho,q)` spill inequality. Complete exact-demand positive-witness coverage passes for all 4,584 combined survivors, so the scalar spill projection adds zero whole-state exclusions. Pair/higher-order set overlap is the next target. External review and novelty OPEN. |''',
+          '''The [13 September constraint-respecting continuation](project/research/general_n/2026-09-13-constraint-respecting-cross-v1/README.md)
+implements the previously identified next step: construct cross data only
+after enforcing minimum endpoint loads and exact compatible destinations. Its
+bounded fixed-pattern failures remain explicitly non-proof evidence. More
+usefully, the exact compatibility condition yields a [co-singleton trace and
+receiver-containment spill](project/research/general_n/2026-09-13-constraint-respecting-cross-v1/CONTAINMENT_SPILL.md)
+family of candidate hand inequalities. A directly checkable partial pattern
+for N34 state 60 has 19 of 37 obligations with compatible destinations; the
+new scalar spill test rejects 173/2,000 deterministic selected patterns in
+N34 state 13537. Complete full-domain application is the next test. The
+4,584-state frontier remains unchanged.''':
+          '''The [13 September constraint-respecting continuation](project/research/general_n/2026-09-13-constraint-respecting-cross-v1/README.md)
+implements the previously identified next step: construct cross data only
+after enforcing minimum endpoint loads and exact compatible destinations. Its
+bounded fixed-pattern failures remain explicitly non-proof evidence. More
+usefully, the exact compatibility condition yields a [co-singleton trace and
+receiver-containment spill](project/research/general_n/2026-09-13-constraint-respecting-cross-v1/CONTAINMENT_SPILL.md)
+family of candidate hand inequalities. A directly checkable partial pattern
+for N34 state 60 has 19 of 37 obligations with compatible destinations. The
+complete [exact-demand spill witness record](project/research/general_n/2026-09-13-constraint-respecting-cross-v1/FULL_DOMAIN_SPILL_EXACT.json)
+then shows that all 4,584 combined survivors satisfy the scalar spill/transport
+conditions for some exact-demand selected pattern. Hence spill adds zero
+whole-state exclusions and the active target moves to pair/higher-order
+set-overlap and residual-compatible realization.''',
+          '''| Co-singleton trace / containment spill | [Research checkpoint](project/research/general_n/2026-09-13-constraint-respecting-cross-v1/README.md) | [Candidate hand lemmas](project/research/general_n/2026-09-13-constraint-respecting-cross-v1/CONTAINMENT_SPILL.md); [scope audit](project/research/general_n/2026-09-13-constraint-respecting-cross-v1/AUDIT.md) |''':
+          '''| Co-singleton trace / containment spill | [Research checkpoint](project/research/general_n/2026-09-13-constraint-respecting-cross-v1/README.md) | [Candidate hand lemmas](project/research/general_n/2026-09-13-constraint-respecting-cross-v1/CONTAINMENT_SPILL.md); [complete exact-demand witness record](project/research/general_n/2026-09-13-constraint-respecting-cross-v1/FULL_DOMAIN_SPILL_EXACT.json); [scope audit](project/research/general_n/2026-09-13-constraint-respecting-cross-v1/AUDIT.md) |'''
+          }
+          for old,new in replacements.items():
+              if old not in s:
+                  raise SystemExit('expected README block not found:\n'+old[:120])
+              s=s.replace(old,new,1)
+          p.write_text(s)
+          PY
+      - name: Commit README sync
+        run: |
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add README.md
+          git diff --cached --quiet && exit 0
+          git commit -m 'Sync README with exact spill full-domain result'
+          git reset --hard HEAD
+          git fetch origin main
+          git rebase origin/main
+          git push
