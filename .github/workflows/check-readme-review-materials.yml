@@ -1,0 +1,29 @@
+name: check README review materials
+
+on:
+  workflow_dispatch:
+  push:
+    paths:
+      - 'README.md'
+      - 'START_HERE_FOR_REVIEWERS.md'
+      - 'releases/**'
+      - 'project/N25_PROJECT_STANDING_ORDERS.md'
+      - 'tools/check_readme_review_materials.py'
+      - '.github/workflows/check-readme-review-materials.yml'
+  pull_request:
+    paths:
+      - 'README.md'
+      - 'START_HERE_FOR_REVIEWERS.md'
+      - 'releases/**'
+      - 'project/N25_PROJECT_STANDING_ORDERS.md'
+      - 'tools/check_readme_review_materials.py'
+      - '.github/workflows/check-readme-review-materials.yml'
+
+jobs:
+  guard:
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - uses: actions/checkout@v4
+      - name: Verify protected reviewer navigation
+        run: python3 tools/check_readme_review_materials.py
