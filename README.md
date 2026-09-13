@@ -208,7 +208,7 @@ The audited low-demand extension logic is strict on **every** admissible excess 
 
 The canonical ledger records **16 distinct quantified whole-state exclusions**. This table is generated from [`WHOLE_STATE_LEDGER.tsv`](project/research/general_n/2026-09-13-alternative-attacks-v1/WHOLE_STATE_LEDGER.tsv) so parallel lines of work cannot silently disappear from the headline count.
 
-The checker [`tools/check_n34_whole_state_ledger.py`](tools/check_n34_whole_state_ledger.py) separately pins all 16 current closures in `KNOWN_MINIMUM`, including states `77` and `60`. This is deliberately monotone: future closures can be added, while an accidental rewrite cannot silently erase a preserved closure.
+The checker [`tools/check_n34_whole_state_ledger.py`](tools/check_n34_whole_state_ledger.py) separately pins all 16 current closures in `KNOWN_MINIMUM`. This guard is deliberately monotone: future closures may be added, while an accidental rewrite must not silently erase a preserved closure.
 
 | State | Method | Record |
 |---:|---|---|

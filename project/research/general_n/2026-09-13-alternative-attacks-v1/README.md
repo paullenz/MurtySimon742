@@ -34,6 +34,8 @@ The durability checker [`../../../../tools/check_n34_whole_state_ledger.py`](../
 <!-- CANONICAL-WHOLE-STATE-LEDGER:START -->
 ### Canonical closure ledger
 
+The durability checker [`../../../../tools/check_n34_whole_state_ledger.py`](../../../../tools/check_n34_whole_state_ledger.py) pins all 16 current closures in `KNOWN_MINIMUM`; new closures may be added, but a later ledger/README rewrite must not silently remove a preserved closure.
+
 | State | Method | Record |
 |---:|---|---|
 | 227 | state-specific exact replay | [`STATE_227_WHOLE_STATE.md`](STATE_227_WHOLE_STATE.md) |

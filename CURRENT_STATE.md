@@ -4,7 +4,7 @@
 
 **Research state reconciled:** 13 September 2026 through the canonical N34 whole-state ledger: **16 quantified closures** (`227, 279, 588, 526, 382, 519, 230, 282, 385, 153, 122, 283, 154, 231, 77, 60`), frontier **1,010/4,568**. External mathematical review, novelty assessment and independent computational reproduction remain OPEN unless a later preserved checkpoint explicitly changes that status. Internal replay, same-assistant audit and repository publication are not external acceptance.
 
-**Durability guard:** [`tools/check_n34_whole_state_ledger.py`](tools/check_n34_whole_state_ledger.py) pins all 16 current closures in `KNOWN_MINIMUM`, including states `77` and `60`. New closures may be added, but a later ledger/README rewrite must not silently remove any of these preserved closures.
+**Durability guard:** [`tools/check_n34_whole_state_ledger.py`](tools/check_n34_whole_state_ledger.py) pins all 16 current closures in `KNOWN_MINIMUM`, including states `77` and `60`. New closures may be added, but a later ledger/README rewrite must not silently remove any preserved closure.
 
 The temporary branches `threshold-family-scan` and `state279-proof` were reconciled into `main` by merge commit `566e064447a9cd54a8fa253c9049de0ffbc09efe`. Their histories remain preserved.
 
