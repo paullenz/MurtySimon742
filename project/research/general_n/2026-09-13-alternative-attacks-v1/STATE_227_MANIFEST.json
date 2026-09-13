@@ -1,0 +1,17 @@
+{
+  "schema": "state-227-whole-state-manifest-v1",
+  "date": "2026-09-13",
+  "note": "Blob SHAs identify the state-227 closure files on the publication branch before fast-forward to main. The earlier package MANIFEST.json remains the historical manifest for the original alternative-attacks checkpoint.",
+  "files": {
+    "STATE_227_WHOLE_STATE.md": "016d80352f37fb62b0aac419003fd7558e79fe96",
+    "STATE_227_WHOLE_STATE_VERIFICATION.json": "95e5e0ba2b47ccb875c60e289bedc8c0a8d5a153",
+    "verify_state227_exact_to20.cpp": "27d27cd8df9752c46b6d2fe0759aa4b2f6ac0928",
+    "verify_state227_exact_to20_replay.cpp": "953d6ddfd0125b85a6e48aad0db2b9b5aaecfc0b",
+    "verify_state227_tail.cpp": "9694864426d17976d1c5ca6d62f1bceaa5e1e24a",
+    "STATE_227_REPLAY.md": "5889e3a03797729fdd22ab6380b31dd298f55a14",
+    "README.md": "fcc8d1904397033611fff923b9464a9cf9e300f4",
+    "AUDIT.md": "16bf8ed8b916762c2e5c64b7d88a34f403b94884"
+  },
+  "root_handoff_blob": "5a69bb76778146c43e3960c953ae365feebd3e9e",
+  "root_readme_blob": "9c75b4b393c831082a652b0f3c2deba256ba3e47"
+}
