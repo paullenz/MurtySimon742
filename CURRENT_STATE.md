@@ -2,7 +2,7 @@
 
 **Purpose.** Durable restart point after chat reset, client desynchronisation or context loss. The repository, not any chat transcript, is the source of truth. Read this file first, inspect later `main` commits, then follow the linked packages.
 
-**Research state reconciled:** 13 September 2026 through the **N34 state-382 whole-state exclusion**, the fifth quantified whole-state closure after states 227, 279, 588 and 526. External mathematical review, novelty assessment and independent computational reproduction remain OPEN unless a later preserved checkpoint explicitly changes that status. Internal replay, same-assistant audit and repository publication are not external acceptance.
+**Research state reconciled:** 13 September 2026 through the **N34 state-519 whole-state exclusion**, the sixth quantified whole-state closure after states 227, 279, 588, 526 and 382. External mathematical review, novelty assessment and independent computational reproduction remain OPEN unless a later preserved checkpoint explicitly changes that status. Internal replay, same-assistant audit and repository publication are not external acceptance.
 
 The temporary branches `threshold-family-scan` and `state279-proof` were reconciled into `main` by merge commit `566e064447a9cd54a8fa253c9049de0ffbc09efe`. Their histories remain preserved.
 
@@ -39,7 +39,8 @@ Current candidate general results include:
 - selected-excess bound on every selected positive-demand incidence: `p_u-rho_u+1<=x_i-s_i`;
 - exact-demand corollary: when `x=s`, every active source satisfies `p_u<=rho_u-1`;
 - threshold excess-cap family: if `h_l=#{i:x_i-s_i>=l}`, then `q_u>h_l => p_u<=rho_u+l-2`;
-- refined baseline-3/order-statistic candidate lemma for the `s_i in {2,3}` family, preserving the exact score `rho_u+q_u-1` and the negative zero-excess demand-two contribution.
+- refined baseline-3/order-statistic candidate lemma for the `s_i in {2,3}` family, preserving the exact score `rho_u+q_u-1` and negative zero-excess demand-two contribution;
+- zero-excess endpoint-order candidate lemma: an exact-demand label of demand `d` requires at least `d` active sources with `rho_u>=d` and `p_u<=rho_u-1`, and its endpoint `C_i` is at least the `d`-th smallest eligible `q_u+p_u`.
 
 The unrestricted Murty–Simon conjecture is **not** proved by this project.
 
@@ -103,34 +104,37 @@ rho=1^6,2,3^11,
 r=41, S=43.
 ```
 
-Exact low-excess replay covers `E=0,...,17` and is strictly positive throughout: no equality case and no hand-rigidity exception are needed. The refined tail retains the universal negative contribution of zero-excess demand-two labels. Writing
+Exact low-excess replay covers `E=0,...,17` and is strictly positive throughout. The refined tail retains the negative zero-excess demand-two contribution; this makes every `E=17,...,34` layer strict, while `E=16` is already exactly excluded. Incoming capacity excludes `E>=35`. Frontier: `998/4,580 -> 999/4,579`.
+
+### State 519
+
+[`STATE_519_WHOLE_STATE.md`](project/research/general_n/2026-09-13-alternative-attacks-v1/STATE_519_WHOLE_STATE.md) is the sixth whole-state exclusion:
 
 ```text
-z_0=#{i:s_i=2,e_i=0},
+a=15, b=18, t=1,
+s=2,3^14,
+rho=1^6,3^12,
+r=42, S=44.
 ```
 
-the stronger necessary baseline inequality is
+The generic refined-family scan ranked 519 first among the four then-active adjacent companions. Exact profile replay excludes all `E=0,...,24` profiles except one coarse nonpositive profile at each of `E=6,8,9`. A stronger source-availability replay retains the fact that a zero-excess demand-two label needs two distinct active `rho=3` sources with `p<=2`, and jointly retains their endpoint loads; the three minimum gaps become `2,4,2`. The refined `h_2` tail is strict for every `E=25,...,34`; incoming capacity excludes `E>=35`.
 
-```text
-T + 2 z_0 - P_+ <= 3(84+E).
-```
+GitHub Actions run `34773463128` completed green on all proof-critical stages. Frontier: `999/4,579 -> 1,000/4,578`.
 
-This correction makes the tail strict for every `E=17,...,34`; the only non-strict layer of the refined relaxation is `E=16`, already strictly excluded by the exact replay. Incoming capacity excludes `E>=35`. Frontier: `998/4,580 -> 999/4,579`.
-
-The follow-on note [`REFINED_BASELINE3_LEMMA.md`](project/research/general_n/2026-09-13-alternative-attacks-v1/REFINED_BASELINE3_LEMMA.md) generalises the mechanism to every positive-demand scalar state with `s_i in {2,3}`. It uses the exact order statistic of the source score `rho_u+q_u-1`, so it is at least as strong as the deliberately relaxed state-382 tail envelope.
+The mechanism is extracted in [`ZERO_EXCESS_ENDPOINT_ORDER.md`](project/research/general_n/2026-09-13-alternative-attacks-v1/ZERO_EXCESS_ENDPOINT_ORDER.md).
 
 ## Current whole-state generalisation record
 
 The frozen frontier is now
 
 ```text
-999 exclusions / 4,579 survivors.
+1,000 exclusions / 4,578 survivors.
 ```
 
 Breakdown:
 
 ```text
-4,501 N34 equality-derived survivors,
+4,500 N34 equality-derived survivors,
 78 N35 m=306-derived survivors.
 ```
 
@@ -138,27 +142,30 @@ These are survivors in a frozen generalisation experiment, **not surviving graph
 
 The extraction utility [`extract_frozen_survivors.py`](project/research/general_n/2026-09-13-alternative-attacks-v1/extract_frozen_survivors.py) is transport/replay infrastructure only; it does not apply a theorem.
 
-## General-theory lesson from the five closures
+## General-theory lesson from the six closures
 
 The examples now support a reusable two-sided architecture:
 
 1. **High-excess scarcity:** threshold counts `h_l` cap the incoming load of large-q sources.
-2. **Zero/low-excess availability:** labels with small excess require sufficiently low-p sources; the incoming ledger may make those sources unavailable.
-3. **Endpoint/order-statistic budget:** for a positive-demand label, `C_i=d_i+e_i`, while every selected source gives `d_i<=rho_u+q_u-1`; the `x_i`-th eligible source score therefore caps `C_i`.
-4. **Negative baseline terms matter:** with baseline three, a demand-two label at zero excess contributes at most `-2`, not zero. State 382 is the first closure where preserving this term is decisive in several tail layers.
-5. **Triage before exact enumeration:** use the cheap refined threshold relaxation to rank states by non-strict layers; exact profile enumeration should be reserved for those layers and the low-excess boundary.
+2. **Zero/low-excess availability:** exact-demand labels require enough sufficiently low-p selected sources.
+3. **Endpoint upper order statistics:** every selected source gives `d_i<=rho_u+q_u-1`, so the selected-source score distribution caps `C_i` from above.
+4. **Endpoint lower order statistics:** a zero-excess exact-demand label forces `C_i` at least the appropriate eligible-source order statistic of `q_u+p_u`.
+5. **Negative baseline terms matter:** a demand-two label at zero excess contributes negatively in baseline three and should not be discarded.
+6. **Triage before exact enumeration:** cheap refined relaxations should rank states and excess layers before profile enumeration.
 
-State 588 shows the mechanism does not depend on demand-two correction terms. State 526 exposes source-availability rigidity. State 382 gives the cleanest fully strict low-excess replay and the first reusable negative-baseline correction.
+State 588 shows the mechanism does not depend on demand-two terms. State 526 exposes source-availability rigidity. State 382 gives the clean universal negative-baseline correction. State 519 upgrades that correction to an actual endpoint-load order statistic.
 
-## Adjacent-family scan now in progress/preserved
+## Adjacent-family scan and current narrow-family frontier
 
-The files
+[`REFINED_H2_FAMILY_SCAN.md`](project/research/general_n/2026-09-13-alternative-attacks-v1/REFINED_H2_FAMILY_SCAN.md) contains nine structurally adjacent N34 records. At scan time five were closed and four were active: states `230,282,385,519`.
 
-- `prepare_refined_h2_family_scan.py`,
-- `scan_refined_h2_family.cpp`,
-- `.github/workflows/scan-refined-h2-adjacent-family.yml`
+State 519 ranked first and has now been closed. The remaining active companions are
 
-implement exact-integer triage for the structurally adjacent N34 family with demands only 2/3, at most four demand-two labels, residual degrees only 1/2/3, and at most three `rho=2` sources. The hash-verified input reconstruction contains nine records: the five closed regression states plus four active companion states. The first workflow attempt failed at C++ compilation because `std::tie` was applied to temporary `size()` values; that failure is preserved. The compile fix is committed, and the subsequent scan must be read from later commits/workflow evidence before making any new frontier claim.
+```text
+230, 282, 385.
+```
+
+The old refined tail is already strict from `E=21` upward for 282 and 385, and `E=23` upward for 230. The next correct move is to add the zero-excess endpoint-order term to the generic scanner and rerank these three before launching further low-excess exhaustive work.
 
 ## Independent maximum-cut route
 
@@ -177,30 +184,34 @@ Degree-preserving `2x2` repairs live in the **relaxed selected-incidence matrix*
 ## Most important correctness obligations
 
 1. **External review of the canonical bridge**, especially the graph-to-quasi-edge implications; this remains the main correlated correctness risk.
-2. External review/novelty assessment of the candidate `7/12` theorem and later general lemmas, especially selection-free candidate capacity, selected excess, the threshold family and the refined baseline-3/order-statistic lemma.
-3. Independent reproduction of the state-227, state-279, state-588, state-526 and state-382 exact computations.
-4. External checking of hand-rigidity/endpoint arguments in the closures that use them; state 382 itself requires no hand exception.
+2. External review/novelty assessment of the candidate `7/12` theorem and later general lemmas, especially selection-free candidate capacity, selected excess, the threshold family, refined baseline/order-statistic lemma and zero-excess endpoint-order lemma.
+3. Independent reproduction of the exact computations for states 227, 279, 588, 526, 382 and 519.
+4. External checking of hand-rigidity/endpoint arguments in the closures that use them.
 5. Continue preserving failures, invalidated shortcuts, solver timeouts and publication/tooling mistakes. Never treat numerical infeasibility or noncompletion as proof.
 
 ## Current research priorities
 
-### P1. Complete refined threshold triage across the adjacent family, then widen it
+### P1. Generalize the state-519 endpoint-order correction across the adjacent family
 
-Use the refined baseline-3/order-statistic relaxation first. Preserve full input, code, regression checks, outputs and ranking. Exact-enumerate only the non-strict excess layers of the best active companion state. After the adjacent family is understood, widen the same scanner across the remaining 4,579 frozen survivors where its hypotheses apply.
+Incorporate `lambda_d`, the eligible-source endpoint-load order statistic for exact-demand labels, into the generic threshold scanner. Rerank states 230, 282 and 385 before large exact enumerations.
 
 ### P2. Seek a symbolic threshold/availability theorem
 
-Extract a parameterized inequality in `(a,b,rho,s,E,h_l)` explaining all five closures and, if possible, their four adjacent companion states. The exact source-score order statistic in `REFINED_BASELINE3_LEMMA.md` is now the natural starting point.
+Extract a parameterized inequality in `(a,b,rho,s,E,h_l)` that explains all six closures. The natural ingredients are the source score `rho+q-1`, threshold p-caps and the new exact-demand endpoint order statistic.
 
-### P3. Continue the selection-free raw candidate-capacity projection
+### P3. Widen quantified pruning beyond the narrow adjacent family
+
+Apply the strengthened scanner to the remaining 4,578 frozen scalar survivors wherever its hypotheses apply, preserving full inputs, outputs, hashes and failures.
+
+### P4. Continue the selection-free raw candidate-capacity projection
 
 Seek useful degree/tail projections of the candidate sets `K_u` that do not require the entire raw graph.
 
-### P4. Maintain the maximum-cut route in parallel
+### P5. Maintain the maximum-cut route in parallel
 
 Do not retry the falsified direct matching. Test aggregate Hall/charging or stability statements around a maximum cut.
 
-### P5. Return to shared residual/pair geometry after quantified pruning
+### P6. Return to shared residual/pair geometry after quantified pruning
 
 Bring the stronger shared-budget and exact-destination machinery back after the threshold programme has reduced the alternative-margin/profile space.
 
@@ -221,8 +232,8 @@ On a fresh session:
 
 1. open this file;
 2. inspect `main` commits newer than this reconciliation point;
-3. read the alternative-attacks README and the five whole-state notes (227, 279, 588, 526, 382) plus verification summaries;
-4. inspect `REFINED_BASELINE3_LEMMA.md` and the latest refined-family scan evidence;
+3. read the alternative-attacks README and the six whole-state notes (227, 279, 588, 526, 382, 519) plus verification summaries;
+4. inspect `REFINED_BASELINE3_LEMMA.md`, `ZERO_EXCESS_ENDPOINT_ORDER.md` and `REFINED_H2_FAMILY_SCAN.md`;
 5. continue from P1/P2 unless later preserved work changes priority;
 6. preserve any material result or failure before relying on it downstream;
 7. after a material change, update this handoff in the same repository-writing pass.
