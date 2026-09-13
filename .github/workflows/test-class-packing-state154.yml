@@ -1,0 +1,26 @@
+name: test class-packing state154 residuals
+
+on:
+  workflow_dispatch:
+  push:
+    paths:
+      - '.github/workflows/test-class-packing-state154.yml'
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v4
+      - name: Generate and compile class-packing scanner
+        run: |
+          set -euo pipefail
+          cd project/research/general_n/2026-09-13-alternative-attacks-v1
+          python3 make_class_packing_scanner.py
+          g++ -O3 -std=c++17 scan_class_packing.generated.cpp -o /tmp/scan_class_packing
+      - name: Test residual layers
+        run: |
+          set -euo pipefail
+          for E in 0 6 7; do
+            /tmp/scan_class_packing 154 "$E"
+          done
