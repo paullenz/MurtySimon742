@@ -94,6 +94,17 @@ No whole-state exclusion is added: the record stays at 994 exclusions and
 4,584 survivors. These are tests of a general simplification, not open
 N34/N35 proof obligations.
 
+A [shared residual-budget continuation](project/research/general_n/2026-09-13-shared-residual-budget-v1/README.md)
+now couples label residual degrees across endpoint and pair constraints.
+Exact checks exclude 4,487 of the 4,584 frozen selected patterns, leaving
+97 with rational joint-relaxation witnesses. The stages are 4,449 shared
+endpoint exclusions, 13 further placement-control exclusions and 25 pair-stage
+exclusions. Three of the last 25 follow from weighted pairs alone; 22 require
+the conjunction of separately feasible pair and endpoint controls. A general
+balance-or-concentration hand argument explains 1,871 endpoint exclusions.
+These are fixed-pattern results: no whole-state exclusion is added, and the
+994-exclusion / 4,584-state generalisation frontier remains unchanged.
+
 ## Failures, audit challenges and corrections are part of the record
 
 **We record failed approaches, counterexamples to proposed lemmas, unsuccessful
@@ -147,6 +158,7 @@ available for that scrutiny.
 | Fixed-neighbourhood routing flow | Candidate exact B-side routing criterion for fixed selected/residual cross sets, with checked Hall obstructions. Six-state/twelve-run pilot unresolved; no whole-state exclusions added, 4,584 survivors. Reviewer-v1; external review OPEN. |
 | Co-singleton trace / containment spill | Candidate general hand lemmas. Complete exact-demand positive-witness study covers all 4,584 survivors; zero whole-state exclusions from the scalar spill projection. External review and novelty OPEN. |
 | Pair-overlap / residual cover | Candidate general hand lemmas for fixed selected sets. Frozen 4,584-pattern replay: 23 raw pair-moment failures, all repaired within three degree-preserving switches; stronger local residual-cover test rejects 26 fixed patterns. Alternative selected-set geometries remain unquantified; zero whole-state exclusions, 4,584 survivors. External review and novelty OPEN. |
+| Shared residual budgets / balance-or-concentration | Candidate general hand bounds. Frozen-pattern accounting: 4,449 endpoint + 13 placement + 25 pair-stage exclusions; 97 rational joint witnesses. Of the pair stage, 22 need jointly enforced constraints that pass separately. A short balanced-cover bound explains 1,871 exclusions. Zero whole-state exclusions; 4,584 scalar states remain. External review and novelty OPEN. |
 | General maximum-degree result | Candidate theorem: `n >= 6` and `Delta(G) >= (7/12)n` imply `e(G) < floor(n^2/4)`; complete candidate hand argument with internal exact audits green; external review and novelty assessment open |
 | RX-Hall / monotone-potential programme | Active finite-to-symbolic programme. It is **not** an unrestricted theorem. It supplies general structural experiments and proof-critical exact finite exclusions in N32, N33, N34 and N35. Floating infeasibility is not accepted as a proof event. |
 
@@ -215,13 +227,24 @@ records:
 | Local residual cover | 26 failures on the resulting frozen patterns; minimum slack -87 | Fixed-pattern exclusions only; alternative geometries are not exhausted |
 | Combined generalisation frontier | 994 exclusions / 4,584 survivors | Unchanged; the fixed-order N34/N35 candidate ledgers are already closed |
 
-The next priority is to retain residual-label budgets shared across sources
-and quantify the overlap obstruction over admissible selected-set geometries.
-A surviving residual placement can then be tested by the exact
-fixed-neighbourhood Hall criterion. The [handover](CURRENT_STATE.md) records
-the current priorities. External mathematical review, novelty and independent
-reproduction remain OPEN; the 7/12 candidate and fixed-order packages are
-unchanged.
+The [shared residual-budget continuation](project/research/general_n/2026-09-13-shared-residual-budget-v1/README.md)
+now performs the shared-budget test. Its [hand argument](project/research/general_n/2026-09-13-shared-residual-budget-v1/SHARED_BUDGET.md)
+proves a weighted endpoint/pair inequality and a balance-or-concentration
+alternative. If M active sources distribute one unit each evenly across
+c used labels, then `(2c-M)Q<=cH0+Mr`. When that bound fails, every viable
+selected geometry must concentrate too many active sources inside some
+smaller label set. Here H0 is the incoming capacity of empty selected sources.
+
+The [separate exact verifier](project/research/general_n/2026-09-13-shared-residual-budget-v1/VERIFICATION.json) checks all
+4,487 fixed-pattern exclusions and the 97 rational joint witnesses. It also
+checks that 22 pair-stage failures have exact feasible witnesses for both
+controls separately. Neither these rational mixtures nor the source-wise
+certificates choose a simultaneous integer residual placement or cover all
+alternative selected geometries. The next priority is to exploit the
+concentration alternative across those geometries, and to test exact
+compatibility/Hall routing on the passing patterns. See the
+[handover](CURRENT_STATE.md). External review remains OPEN; the 7/12 candidate,
+fixed-order packages and whole-state frontier are unchanged.
 
 ## Closed compatible potential and review
 
@@ -791,6 +814,7 @@ Historical packages remain preserved. N31, N32, N33, N34 and N35 are currently s
 | Fixed-neighbourhood routing flow | [Reviewer-v1 source package](releases/general-arc-realisation-reviewer-v1/README.md) | [Conditional general criterion](project/research/general_n/2026-09-12-arc-realisation-pilot-v1/FIXED_NEIGHBOURHOOD_FLOW.md); [timeouts, fixed-pattern limits and audit](project/research/general_n/2026-09-12-arc-realisation-pilot-v1/AUDIT.md) |
 | Co-singleton trace / containment spill | [Research checkpoint](project/research/general_n/2026-09-13-constraint-respecting-cross-v1/README.md) | [Candidate hand lemmas](project/research/general_n/2026-09-13-constraint-respecting-cross-v1/CONTAINMENT_SPILL.md); [complete spill witnesses](project/research/general_n/2026-09-13-constraint-respecting-cross-v1/FULL_DOMAIN_SPILL_EXACT.json); [scope audit](project/research/general_n/2026-09-13-constraint-respecting-cross-v1/AUDIT.md) |
 | Pair-overlap / residual cover | [Candidate hand lemmas](project/research/general_n/2026-09-13-constraint-respecting-cross-v1/PAIR_OVERLAP.md) | [Exact frozen replay](project/research/general_n/2026-09-13-constraint-respecting-cross-v1/PAIR_OVERLAP_CHECK.json); [checker](project/research/general_n/2026-09-13-constraint-respecting-cross-v1/check_pair_overlap.py); fixed-pattern scope only |
+| Shared residual budgets / balance-or-concentration | [Candidate hand arguments](project/research/general_n/2026-09-13-shared-residual-budget-v1/SHARED_BUDGET.md); [research checkpoint](project/research/general_n/2026-09-13-shared-residual-budget-v1/README.md) | [Exact verification](project/research/general_n/2026-09-13-shared-residual-budget-v1/VERIFICATION.json); [scope audit and failures](project/research/general_n/2026-09-13-shared-residual-budget-v1/AUDIT.md) |
 | General step-back | [Balanced-degree / fixed-a source package](releases/general-stepback-v1/README.md) | [Internal audit](project/reviews/general-theory/2026-09-12-stepback-v1/HOSTILE_AUDIT.md) |
 | Joint clipping / historical N34 upper layers | [Reviewer-v1 source package](releases/general-joint-clipping-reviewer-v1/README.md) | [Focused foundations audit](project/reviews/general-theory/2026-09-12-joint-followthrough-v1/FOUNDATIONS_AUDIT.md); [N34 exact verification](project/research/n34/2026-09-12-frontier-v1/upper_layer_verification.json) |
 | General 293/500 | [Reviewer manuscript](releases/general-293-500-reviewer-v1/General_293_500_Reviewer_Manuscript_v1.pdf) | [Verification companion](releases/general-293-500-reviewer-v1/General_293_500_Verification_Companion_v1.pdf) |

@@ -1,0 +1,13 @@
+Traceback (most recent call last):
+  File "/workspace/scratch/9cb4c3583fdd/MurtySimon742/project/research/general_n/2026-09-13-shared-residual-budget-v1/shared_pair_cover.py", line 136, in <module>
+    if __name__=='__main__':main()
+                            ^^^^^^
+  File "/workspace/scratch/9cb4c3583fdd/MurtySimon742/project/research/general_n/2026-09-13-shared-residual-budget-v1/shared_pair_cover.py", line 129, in main
+    entry['shared_pair']=solve(rec,S,True,D,edges,opts)
+                         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/workspace/scratch/9cb4c3583fdd/MurtySimon742/project/research/general_n/2026-09-13-shared-residual-budget-v1/shared_pair_cover.py", line 92, in solve
+    exact,method=rational_solution(res,Aub,rhs,Aeq,[1]*b+[Q],h,n,b)
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/workspace/scratch/9cb4c3583fdd/MurtySimon742/project/research/general_n/2026-09-13-shared-residual-budget-v1/shared_pair_cover.py", line 26, in rational_solution
+    import sympy as sp
+ModuleNotFoundError: No module named 'sympy'

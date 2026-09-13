@@ -1,6 +1,6 @@
 # Start here for reviewers
 
-**Updated 13 September 2026.** Research checkpoint reconciled through `3bfce1b71f061e1709193cbd1b6c24bf5df0edf5`; see [CURRENT_STATE.md](CURRENT_STATE.md) for the restart handoff.
+**Updated 13 September 2026.** Research checkpoint includes the shared residual-budget continuation of 13 September; see [CURRENT_STATE.md](CURRENT_STATE.md) for the restart handoff.
 
 ## What this repository is
 
@@ -145,10 +145,20 @@ remain unquantified. **No whole-state exclusion is added: 994 exclusions /
 4,584 survivors remain in the generalisation pool.** These are tests of a
 general simplification, not open N34/N35 fixed-order proof obligations.
 
-This is an active research checkpoint, not a new reviewer release or an
-external validation. Shared residual-label budgets and coverage of admissible
-selected-set geometries are the next targets; the [handover](CURRENT_STATE.md)
-records the priorities and open review obligations.
+The subsequent [shared residual-budget checkpoint](project/research/general_n/2026-09-13-shared-residual-budget-v1/README.md)
+now tests shared endpoint/residual constraints on all 4,584 frozen selected
+patterns. Exact stages exclude 4,449 + 13 + 25 patterns, leaving 97 rational
+joint witnesses. Of the 25 pair-stage exclusions, three are weighted pair-only
+obstructions; 22 need the conjunction of separately feasible pair and endpoint
+controls. A candidate general balance-or-concentration hand argument explains
+1,871 endpoint exclusions. The [separate verifier](project/research/general_n/2026-09-13-shared-residual-budget-v1/VERIFICATION.json)
+checks certificates and positive witnesses using only the Python standard library.
+
+This remains fixed-pattern research: alternative selected sets, q and x>=s
+are not exhausted, so zero whole-state exclusions are added and 4,584 scalar
+states remain. It is not a new reviewer release or external validation.
+The [handover](CURRENT_STATE.md) now prioritizes the concentration alternative
+across admissible geometries and exact realization of the passing patterns.
 
 For the preceding general-foundations review pass, see the
 [focused foundations checklist](project/reviews/general-theory/2026-09-12-joint-followthrough-v1/FOUNDATIONS_AUDIT.md).

@@ -194,3 +194,14 @@ python project/research/general_n/2026-09-13-constraint-respecting-cross-v1/chec
 - exact limit: **all 4,584 survivors admit exact-demand selected/transport/spill witnesses**;
 - exact frozen pair replay: **23 initial raw failures, all repaired; 26 stronger local residual-cover fixed-pattern failures**;
 - next target: shared residual-label budgets, admissible selected-set geometries and exact residual-compatible/Hall construction.
+
+## Subsequent shared-budget checkpoint
+
+The [shared residual-budget continuation](../2026-09-13-shared-residual-budget-v1/README.md)
+now tests this checkpoint's 4,584 repaired selected patterns. It gives candidate
+general endpoint/pair and balance-or-concentration hand arguments, 4,487 exact
+fixed-pattern exclusions and 97 rational joint witnesses. Of 25 pair-stage
+exclusions, 22 need the conjunction of separately feasible controls. These
+results do not exhaust alternative selected geometries: the whole-state
+frontier remains 994 exclusions / 4,584 survivors. The [current handoff](../../../../CURRENT_STATE.md)
+records the successor's priorities; the spill/pair evidence above is retained.

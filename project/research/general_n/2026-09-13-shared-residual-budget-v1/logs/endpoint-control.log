@@ -1,0 +1,16 @@
+endpoint control 500
+endpoint control 1000
+endpoint control 1500
+endpoint control 2000
+endpoint control 2500
+endpoint control 3000
+endpoint control 3500
+endpoint control 4000
+endpoint control 4500
+{
+  "patterns": 4584,
+  "exact_pattern_exclusions": 4449,
+  "new_beyond_old_fixed_pattern_failures": 4423,
+  "solver_nonoptimal": 0,
+  "whole_state_exclusions": 0
+}

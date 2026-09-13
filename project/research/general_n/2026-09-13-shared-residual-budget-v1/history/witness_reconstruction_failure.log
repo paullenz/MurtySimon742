@@ -1,0 +1,11 @@
+Traceback (most recent call last):
+  File "/workspace/scratch/9cb4c3583fdd/MurtySimon742/project/research/general_n/2026-09-13-shared-residual-budget-v1/shared_pair_cover.py", line 111, in <module>
+    if __name__=='__main__':main()
+                            ^^^^^^
+  File "/workspace/scratch/9cb4c3583fdd/MurtySimon742/project/research/general_n/2026-09-13-shared-residual-budget-v1/shared_pair_cover.py", line 104, in main
+    entry['shared_pair']=solve(rec,S,True,D,edges,opts)
+                         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/workspace/scratch/9cb4c3583fdd/MurtySimon742/project/research/general_n/2026-09-13-shared-residual-budget-v1/shared_pair_cover.py", line 72, in solve
+    assert all(sum((v for v0,R,v in z if v0==u),F(0))==1 for u in range(b))
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError

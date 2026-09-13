@@ -1,0 +1,6 @@
+{
+  "tested": 25,
+  "weighted_pair_only_exclusions": 3,
+  "require_joint_constraints_vs_separately_feasible_controls": 22,
+  "whole_state_exclusions": 0
+}

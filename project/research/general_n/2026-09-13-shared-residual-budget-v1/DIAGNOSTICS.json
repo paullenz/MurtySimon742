@@ -1,0 +1,8 @@
+{
+  "scope": "Diagnostic on frozen selected patterns; old p was only a scalar transport witness. New models permit p to vary.",
+  "counts": {
+    "patterns": 4584,
+    "minimum_endpoint_total_failures": 0,
+    "stored_incoming_endpoint_total_failures": 4584
+  }
+}

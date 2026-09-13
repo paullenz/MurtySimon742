@@ -1,0 +1,21 @@
+shared pair 10
+shared pair 20
+shared pair 30
+shared pair 40
+shared pair 50
+shared pair 60
+shared pair 70
+shared pair 80
+shared pair 90
+shared pair 100
+shared pair 110
+shared pair 120
+shared pair 130
+{
+  "input_patterns": 135,
+  "tested": 135,
+  "placement_control_exclusions": 13,
+  "additional_pair_exclusions": 25,
+  "solver_nonoptimal": 0,
+  "whole_state_exclusions": 0
+}

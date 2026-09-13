@@ -2,7 +2,7 @@
 
 **Purpose.** This is the short durable handoff for restarting research after a chat reset, context loss or client desynchronisation. The repository, not any chat transcript, is the source of truth. Read this file first, inspect commits newer than the research baseline below, then follow the linked canonical packages.
 
-**Research state reconciled:** 13 September 2026 through commit `3bfce1b71f061e1709193cbd1b6c24bf5df0edf5` (13 September, 01:19 BST), including the complete scalar-spill limit result, the pair-overlap/residual-cover hand lemmas and their frozen exact replay. This handoff update reconciles existing evidence; it adds no new mathematical or computational result. If `main` is newer, reconcile every later result, correction or failed experiment before continuing.
+**Research state reconciled:** 13 September 2026, including the [shared residual-budget continuation](project/research/general_n/2026-09-13-shared-residual-budget-v1/README.md), developed on repository baseline `c6089842b5926960e21aa181f4a4c1ee44009a19`. Its general hand bounds, exact staged pattern results, attribution controls and failures are preserved together with this handoff. Inspect later commits and publication receipts before continuing.
 
 External mathematical review, novelty assessment and independent computational reproduction remain OPEN unless a later preserved checkpoint explicitly changes that status. Internal replay, same-assistant audit and repository publication are not external acceptance.
 
@@ -36,7 +36,8 @@ Current candidate general results include:
 - fixed-neighbourhood B-side routing as an exact integer-flow/Hall criterion once selected/residual cross-neighbourhoods are fixed;
 - **co-singleton trace hierarchy:** for every `T subset S_u`, `|T|=k>=1`, exact compatibility forces at least `q_u-k+1` B cross-neighbourhoods containing `T`, yielding higher-order moment inequalities;
 - **receiver-containment spill inequality:** a candidate hand projection of the exact condition `S_v subset N_u` to the scalar profile `(a,b,s,rho,q)`;
-- **pair-overlap / residual-cover inequalities:** for fixed selected sets, subtract selected-selected coverage from required pair traces and bound how many remaining pair deficits each source's residual labels can cover. The local maxima currently discard residual-label budgets shared across sources.
+- **pair-overlap / residual-cover inequalities:** for fixed selected sets, subtract selected-selected coverage from required pair traces and bound how many remaining pair deficits each source's residual labels can cover. The original local maxima discard residual-label budgets shared across sources; the continuation below now couples those budgets.
+- **shared residual-budget and balance-or-concentration arguments:** weighted endpoint/pair bounds with exact support functions; balanced selected-label covers imply `(2c-M)Q<=cH0+Mr`, otherwise a concentrated label subset is forced when that numerical bound fails.
 
 The co-singleton pair moment is genuinely stronger than endpoint loads on abstract cross data: the preserved five-label/seven-source example satisfies every individual endpoint load but has pair moment `16<18`.
 
@@ -89,10 +90,42 @@ sets or prove any state impossible. The hand note reports additional
 search-assisted repairs of individual examples; those are separate from the
 frozen replay and do not change its counts.
 
+### Shared residual-budget continuation
+
+[Hand arguments](project/research/general_n/2026-09-13-shared-residual-budget-v1/SHARED_BUDGET.md);
+[verification](project/research/general_n/2026-09-13-shared-residual-budget-v1/VERIFICATION.json);
+[scope audit](project/research/general_n/2026-09-13-shared-residual-budget-v1/AUDIT.md).
+
+On precisely the preceding 4,584 repaired selected patterns, with incoming
+degrees p allowed to vary:
+
+| Stage | Additional fixed-pattern exclusions | Patterns left |
+|---|---:|---:|
+| Shared-label endpoint budget | 4,449 | 135 |
+| Residual-placement control without pair constraints | 13 | 122 |
+| Joint pair constraints and shared budgets | 25 | 97 |
+
+All 26 older local-cover failures occur in the first stage. Among the final
+25, three have weighted pair-only obstructions. The other 22 have exact
+fractional witnesses for pair-only and endpoint-placement controls
+separately, but exact obstructions to their conjunction. The 97 final
+passing witnesses are rational mixtures, not integer placements or graphs.
+
+A general balanced-cover inequality `(2c-M)Q<=cH0+Mr` explains 1,871 endpoint
+exclusions. In the complete fixed-pattern study, 1,883 covers are balanced
+and 2,701 have checked concentration witnesses. When the numerical bound
+fails, every viable arrangement must have a label subset containing more
+than `(M/c)|I|` active sources. This is a conditional all-order structural
+alternative, not an unconditional density theorem.
+
+Total fixed-pattern exclusions: **4,487**. Whole-state exclusions added:
+**0**. The generalisation frontier remains **994 exclusions / 4,584 states**.
+Alternative selected sets, q-vectors and x>=s remain unquantified.
+
 ## Most important unresolved correctness obligations
 
 1. **External review of the shared foundations/canonical bridge.** Many later results share graph-to-model implications, so this is the main correlated correctness risk.
-2. External review and novelty assessment of the candidate `7/12` theorem and the other general lemmas, including the co-singleton, containment-spill and pair-overlap/residual-cover results.
+2. External review and novelty assessment of the candidate `7/12` theorem and the other general lemmas, including the co-singleton, containment-spill, pair-overlap and shared residual-budget/balanced-cover results.
 3. Independent reproduction of proof-critical computations where a reviewer regards them as material.
 4. Continue preserving failures, counterexamples to proposed lemmas, bugs, corrections and negative experiments. Never treat a timeout, solver noncompletion or raw infeasibility status as proof.
 
@@ -107,41 +140,37 @@ S_(w_i) subset N_u.
 
 Across the `q_u` distinct exceptions of a single source, the first condition forces every co-singleton trace of `S_u`; equivalently, every selected `k`-subset must occur in at least `q_u-k+1` B cross-neighbourhoods. The second condition couples those exception rows back to `N_u`.
 
-The complete spill study shows that this scalar projection cannot eliminate any current survivor. The pair continuation now retains actual label overlaps, but the raw pair test can also be satisfied in every state by rearranging selected labels without changing their degree data. The stronger local residual-cover bound rejects 26 fixed patterns; its reach over all admissible geometries is still unknown. It also maximizes each source independently, discarding residual-label budgets shared across rows. Those two losses of information define the next research target.
+The scalar spill projection has a passing selected-pattern witness in every current state. Sharing residual degrees across sources now rejects most of those particular witnesses, and pair constraints add information that cannot always be recovered from either separate control. The remaining obstruction to whole-state progress is coverage of alternative selected geometries. The balance-or-concentration alternative gives a general way to organize that next step; the 97 passing fixed patterns also provide concrete data for testing simultaneous integer realization.
 
 ## Next three research tasks — priority order
 
-### P1. Shared residual budgets and admissible selected geometries
+### P1. Constrain all admissible selected geometries
 
-Start from the already derived local residual-cover inequality in
-[PAIR_OVERLAP.md](project/research/general_n/2026-09-13-constraint-respecting-cross-v1/PAIR_OVERLAP.md); do not restart its derivation
-or the completed spill/pair replay. Retain residual-label budgets shared
-across sources instead of maximizing every source independently. Seek a
-checkable weighted cover or Hall obstruction, with explicit hypotheses.
+Use the balance-or-concentration alternative in
+[SHARED_BUDGET.md](project/research/general_n/2026-09-13-shared-residual-budget-v1/SHARED_BUDGET.md). In the balanced case,
+apply the explicit counting bound. In the concentrated case, combine the
+forced label subset with pair traces, residual budgets and exact destination
+containment. Include alternative q-vectors and x_i>=s_i; the completed
+replay covers one exact-demand selected arrangement per scalar state.
 
-Use the 26 fixed-pattern failures as diagnostic examples. Quantify the
-obstruction over alternative admissible selected sets: a failure of one
-stored pattern is not a whole-state exclusion. Preserve degree-preserving
-repairs and counterexamples to proposed strengthenings.
+Seek a general subset inequality or a complete quantified branch argument.
+A rejected stored arrangement is not a whole-state exclusion.
 
-### P2. Exact residual-compatible construction on a frozen sample
+### P2. Simultaneous integer realization on the passing patterns
 
-For patterns surviving the strengthened overlap checks, search residual
-placements satisfying the shared budgets, endpoint loads and exact
-destination compatibility. Then apply the fixed-neighbourhood integer-flow
-criterion. Extract directly checkable obstructions from failed attempts;
-solver infeasibility and timeouts alone remain exploratory.
+The 97 exact rational joint witnesses pass the stated relaxation only. Test
+whether one residual set per source can satisfy shared budgets, endpoint
+loads, exact compatible destinations and then the fixed-neighbourhood Hall
+criterion. Preserve failed searches and directly check any extracted
+obstruction. Solver noncompletion or infeasibility alone remains exploratory.
 
-If pair information still loses the decisive structure, test the analogous
-triple-deficit construction, retaining the same complete-coverage standard.
+### P3. Complete-domain application and theory extraction
 
-### P3. Complete-domain application of any strengthened set-level cut
-
-Apply a checked new inequality to the preserved 4,584-state domain only with
-explicit coverage of every admissible branch needed for a whole-state claim.
-Report fixed-pattern rejections and whole-state exclusions separately.
-Preserve zero-gain outcomes. N36 remains a structural laboratory rather than
-the primary objective.
+Only after P1/P2 produces a checked quantified obstruction should the
+4,584-state frontier count change. Keep pattern, q-profile and whole-state
+coverage distinct. Preserve counterexamples and zero-gain outcomes, and
+seek a simpler parameterized consequence of any successful obstruction.
+N36 remains a structural laboratory rather than the primary objective.
 
 ## Research/preservation rules for every continuation
 

@@ -1,0 +1,7 @@
+{
+  "patterns": 4584,
+  "balanced": 1883,
+  "concentrated": 2701,
+  "exact_pattern_exclusions": 1871,
+  "whole_state_exclusions": 0
+}

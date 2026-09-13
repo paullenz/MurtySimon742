@@ -1,0 +1,29 @@
+{
+  "status": "PASS",
+  "date": "2026-09-13",
+  "verifier": "Python standard library; discovery modules and solvers not imported",
+  "patterns": 4584,
+  "endpoint_certificates": 4449,
+  "balanced_short_certificates": 1871,
+  "concentration_witnesses": 2701,
+  "additional_placement_certificates": 13,
+  "additional_pair_certificates": 25,
+  "exact_control_fractional_witnesses": 122,
+  "exact_pair_fractional_witnesses": 97,
+  "combined_fixed_pattern_exclusions": 4487,
+  "whole_state_exclusions": 0,
+  "generalisation_frontier_survivors": 4584,
+  "tiny_challenge": {
+    "cross_assignments_enumerated": 756,
+    "valid_placement_weight_checks": 1412,
+    "positive_pair_deficit_checks": 24,
+    "scope": "Abstract necessary-condition data, not a D2C graph enumeration."
+  },
+  "integer_compressed_certificates": 38,
+  "weighted_pair_only_exclusions": 3,
+  "joint_exclusions_with_both_controls_separately_feasible": 22,
+  "input_sha256": {
+    "FULL_DOMAIN_SPILL_EXACT.json": "3efa7742a32b91e2b1b3a6982dca6591f63da571e70adbf1c2999e6466f76da5",
+    "PAIR_OVERLAP_CHECK.json": "0143ff4e5344a425aea8bc0c384ae41e694840025662ac5c162b50654a89fa73"
+  }
+}

@@ -119,8 +119,23 @@ This checkpoint adds no theorem-level release or change to the fixed-order
 ledgers or 7/12 threshold. The survivor states are tests of a general
 simplification, not gaps in the N34/N35 candidate proofs. Next work retains
 shared residual-label budgets and tests coverage over admissible selected
-sets. External mathematical review, novelty and independent reproduction
-remain OPEN.
+sets. The following continuation performs the shared-budget test.
+
+The [shared residual-budget checkpoint](../project/research/general_n/2026-09-13-shared-residual-budget-v1/README.md) adds
+candidate general weighted endpoint/pair inequalities and a balance-or-
+concentration alternative. The exact frozen-pattern sequence is 4,449 endpoint
+exclusions, 13 further residual-placement exclusions, 25 pair-stage exclusions
+and 97 rational joint witnesses. Three pair-stage cases fail weighted pairs
+alone; 22 have both controls feasible separately but their conjunction fails.
+The short balanced-cover inequality explains 1,871 endpoint exclusions.
+[Exact verification](../project/research/general_n/2026-09-13-shared-residual-budget-v1/VERIFICATION.json) and the
+[scope audit](../project/research/general_n/2026-09-13-shared-residual-budget-v1/AUDIT.md) preserve the complete accounting.
+
+These 4,487 fixed-pattern exclusions add zero whole-state exclusions.
+Alternative selected geometries remain open; the generalisation frontier
+stays at 994 exclusions / 4,584 states. Current reviewer versions, fixed-order
+ledgers and the 7/12 candidate are unchanged. External mathematical review,
+novelty and independent reproduction remain OPEN.
 
 ## Fixed-order history note
 
