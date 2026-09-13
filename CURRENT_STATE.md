@@ -4,6 +4,8 @@
 
 **Research state reconciled:** 13 September 2026 through the canonical N34 whole-state ledger: **16 quantified closures** (`227, 279, 588, 526, 382, 519, 230, 282, 385, 153, 122, 283, 154, 231, 77, 60`), frontier **1,010/4,568**. External mathematical review, novelty assessment and independent computational reproduction remain OPEN unless a later preserved checkpoint explicitly changes that status. Internal replay, same-assistant audit and repository publication are not external acceptance.
 
+**Durability guard:** [`tools/check_n34_whole_state_ledger.py`](tools/check_n34_whole_state_ledger.py) pins all 16 current closures in `KNOWN_MINIMUM`, including states `77` and `60`. New closures may be added, but a later ledger/README rewrite must not silently remove any of these preserved closures.
+
 The temporary branches `threshold-family-scan` and `state279-proof` were reconciled into `main` by merge commit `566e064447a9cd54a8fa253c9049de0ffbc09efe`. Their histories remain preserved.
 
 ## Headline fixed-order candidate status
@@ -41,7 +43,7 @@ Current candidate general results include:
 - threshold excess-cap family: if `h_l=#{i:x_i-s_i>=l}`, then `q_u>h_l => p_u<=rho_u+l-2`;
 - refined baseline-3/order-statistic candidate lemma for the `s_i in {2,3}` family, preserving the exact score `rho_u+q_u-1` and negative zero-excess demand-two contribution;
 - zero-excess endpoint-order candidate lemma: an exact-demand label of demand `d` requires at least `d` active sources with `rho_u>=d` and `p_u<=rho_u-1`, and its endpoint `C_i` is at least the `d`-th smallest eligible `q_u+p_u`;
-- exact low-demand incidence-capacity scanner extending the audited adjacent-family verifier to a broader seven-state ring without rewriting its mathematical search logic.
+- exact low-demand incidence-capacity scanner extending the audited adjacent-family verifier to a broader seven-state ring without rewriting its mathematical search logic;
 - orientation target-capacity lemma for selected missing-B-edge orientations: if an edge is oriented `u->w`, then `q_u-1<=q_w+rho_w`; consequently, for every integer `k`, `sum_{w:q_w+rho_w<=k} p_w <= sum_{u:q_u<=k+1} q_u`. The exact E=0 replay closes states 77 and 60 with a minimum six-incidence deficit.
 
 The unrestricted Murty–Simon conjecture is **not** proved by this project.
@@ -149,8 +151,9 @@ The closures support a reusable two-sided architecture:
 5. **Negative baseline terms matter:** a demand-two label at zero excess contributes negatively in baseline three and should not be discarded.
 6. **Triage before exact enumeration:** cheap refined relaxations should rank states and excess layers before profile enumeration.
 7. **Some whole states now close without bespoke rigidity:** state 153 is strict on all admissible excess layers under the reusable exact incidence-capacity verifier, which is encouraging for scale.
+8. **Missing-edge orientation is itself capacitated:** an oriented missing edge can only enter a target with enough cross-degree to support the source's other selected labels. This links the source-label Hall machinery back to the actual missing-edge orientation and suggests a stronger flow/Ferrers formulation.
 
-State 588 shows the mechanism does not depend on demand-two terms. State 526 exposes source-availability rigidity. State 382 gives the clean universal negative-baseline correction. State 519 upgrades that correction to an endpoint-load order statistic. State 153 shows the strengthened machinery can sometimes supply a clean whole-state closure directly.
+State 588 shows the mechanism does not depend on demand-two terms. State 526 exposes source-availability rigidity. State 382 gives the clean universal negative-baseline correction. State 519 upgrades that correction to an endpoint-load order statistic. State 153 shows the strengthened machinery can sometimes supply a clean whole-state closure directly. States 77 and 60 show that the remaining obstruction can sometimes be eliminated by graph-level orientation capacity without fixing a selected geometry.
 
 ## Broader low-demand extension matrix
 
@@ -174,7 +177,7 @@ This table is now historical triage rather than the live frontier: **all seven s
 
 [`REFINED_H2_FAMILY_SCAN.md`](project/research/general_n/2026-09-13-alternative-attacks-v1/REFINED_H2_FAMILY_SCAN.md) contains nine structurally adjacent N34 records. At scan time five were closed and four were active: states `230,282,385,519`. **All four are now closed**; the canonical ledger records their whole-state status.
 
-The old refined tail is already strict from `E=21` upward for 282 and 385, and `E=23` upward for 230. The endpoint-order term should still be propagated through this narrow family, but the broader matrix now offers smaller immediate targets in states 283 and 122.
+The old refined-tail thresholds and intermediate gaps remain useful audit history, but neither this narrow family nor the seven-state extension ring contains a live target now. New targets should be chosen only after rescanning the remaining 4,568-state frontier with the orientation-capacity and joint-Hall machinery.
 
 ## Independent maximum-cut route
 
@@ -193,7 +196,7 @@ Degree-preserving `2x2` repairs live in the **relaxed selected-incidence matrix*
 ## Most important correctness obligations
 
 1. **External review of the canonical bridge**, especially the graph-to-quasi-edge implications; this remains the main correlated correctness risk.
-2. External review/novelty assessment of the candidate `7/12` theorem and later general lemmas, especially selection-free candidate capacity, selected excess, threshold family, refined baseline/order-statistic lemma and zero-excess endpoint-order lemma.
+2. External review/novelty assessment of the candidate `7/12` theorem and later general lemmas, especially selection-free candidate capacity, selected excess, threshold family, refined baseline/order-statistic lemma, zero-excess endpoint-order lemma and orientation target-capacity lemma.
 3. Independent reproduction of the exact computations and hand steps linked from the canonical whole-state ledger.
 4. External checking of hand-rigidity/endpoint arguments in the closures that use them.
 5. Preserve the complete seven-state extension outputs, not only the successful state-153 layer table, before relying on them downstream.
@@ -229,6 +232,7 @@ The standing orders in [`project/N25_PROJECT_STANDING_ORDERS.md`](project/N25_PR
 - preserve code, parameters, inputs, outputs, survivor lists, hashes, commands, certificates and environment information where applicable;
 - preserve failed approaches, counterexamples and corrected interpretations rather than deleting them;
 - distinguish mathematical proof status, exact replay, internal audit, publication and external review;
+- the canonical whole-state ledger guard must retain every independently committed closure in its `KNOWN_MINIMUM` set; states `77` and `60` are explicitly protected alongside the earlier 14 closures;
 - routine non-forced commits/pushes to canonical repository `paullenz/MurtySimon742` `main` are authorised without asking again;
 - verify the branch head and key files after publication; do not use force-push or history rewriting.
 
@@ -239,7 +243,7 @@ On a fresh session:
 1. open this file;
 2. inspect `main` commits newer than this reconciliation point;
 3. read the alternative-attacks README, [`WHOLE_STATE_LEDGER.tsv`](project/research/general_n/2026-09-13-alternative-attacks-v1/WHOLE_STATE_LEDGER.tsv), and the closure records linked from that ledger;
-4. inspect `REFINED_BASELINE3_LEMMA.md`, `ZERO_EXCESS_ENDPOINT_ORDER.md`, `ENDPOINT_CLASS_PACKING.md`, `make_class_packing_scanner.py` and the current residual result tables;
+4. inspect `REFINED_BASELINE3_LEMMA.md`, `ZERO_EXCESS_ENDPOINT_ORDER.md`, `ENDPOINT_CLASS_PACKING.md`, [`ORIENTATION_TARGET_CAPACITY.md`](project/research/general_n/2026-09-13-alternative-attacks-v1/ORIENTATION_TARGET_CAPACITY.md), `make_class_packing_scanner.py`, [`verify_e0_orientation_capacity.py`](project/research/general_n/2026-09-13-alternative-attacks-v1/verify_e0_orientation_capacity.py) and the current residual result tables;
 5. continue from P1/P2 unless later preserved work changes priority;
 6. preserve any material result or failure before relying on it downstream;
 7. after a material change, update this handoff in the same repository-writing pass.
