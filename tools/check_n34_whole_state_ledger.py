@@ -13,9 +13,9 @@ CATALOGUE_TOTAL = 5578
 
 # These closures were independently committed on parallel intraday branches.
 # Keeping the minimum set explicit prevents a later README/ledger rewrite from
-# silently dropping one branch of work.  New closures may be added freely.
+# silently dropping one branch of work. New closures may be added freely.
 KNOWN_MINIMUM = {
-    122, 153, 154, 227, 230, 279, 282, 283, 382, 385, 519, 526, 588
+    122, 153, 154, 227, 230, 231, 279, 282, 283, 382, 385, 519, 526, 588
 }
 
 
