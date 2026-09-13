@@ -5,6 +5,10 @@ on:
   push:
     paths:
       - '.github/workflows/test-class-packing-state231.yml'
+      - 'project/research/general_n/2026-09-13-alternative-attacks-v1/make_class_packing_scanner.py'
+      - 'project/research/general_n/2026-09-13-alternative-attacks-v1/scan_incidence_capacity_family.cpp'
+      - 'project/research/general_n/2026-09-13-alternative-attacks-v1/state231_base.tsv'
+      - 'project/research/general_n/2026-09-13-alternative-attacks-v1/proof_state231_E*.tsv'
 
 # Target the five nonpositive layers from the original extension matrix.
 jobs:
@@ -22,6 +26,14 @@ jobs:
       - name: Test residual layers
         run: |
           set -euo pipefail
+          : > /tmp/state231_class_packing.txt
           for E in 6 7 8 9 10; do
-            /tmp/scan_class_packing 231 "$E"
+            echo "=== state 231 E=$E ===" | tee -a /tmp/state231_class_packing.txt
+            /tmp/scan_class_packing 231 "$E" | tee -a /tmp/state231_class_packing.txt
           done
+      - name: Preserve residual replay output
+        uses: actions/upload-artifact@v4
+        with:
+          name: state231-class-packing-results
+          path: /tmp/state231_class_packing.txt
+          if-no-files-found: error
