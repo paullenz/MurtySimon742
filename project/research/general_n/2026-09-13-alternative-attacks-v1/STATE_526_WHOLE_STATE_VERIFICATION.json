@@ -1,0 +1,85 @@
+{
+  "schema": "state-526-whole-state-v1",
+  "status": "PASS_WITH_HAND_RIGIDITY",
+  "state": {
+    "layer": "n34-m289",
+    "state_id": 526,
+    "a": 15,
+    "b": 18,
+    "t": 1,
+    "s": "2,3^14",
+    "rho": "1^5,2^2,3^11",
+    "r": 42,
+    "S": 44
+  },
+  "low_excess": {
+    "range_E": [0,16],
+    "rows": [
+      {"E":0,"profiles":1,"strict":1,"equality":0,"negative":0,"source_infeasible":0,"minimum_strict_gap":4},
+      {"E":1,"profiles":2,"strict":2,"equality":0,"negative":0,"source_infeasible":0,"minimum_strict_gap":9},
+      {"E":2,"profiles":4,"strict":4,"equality":0,"negative":0,"source_infeasible":0,"minimum_strict_gap":15},
+      {"E":3,"profiles":7,"strict":7,"equality":0,"negative":0,"source_infeasible":0,"minimum_strict_gap":8},
+      {"E":4,"profiles":12,"strict":12,"equality":0,"negative":0,"source_infeasible":0,"minimum_strict_gap":8},
+      {"E":5,"profiles":19,"strict":19,"equality":0,"negative":0,"source_infeasible":0,"minimum_strict_gap":6},
+      {"E":6,"profiles":30,"strict":30,"equality":0,"negative":0,"source_infeasible":0,"minimum_strict_gap":3},
+      {"E":7,"profiles":45,"strict":44,"equality":1,"negative":0,"source_infeasible":0,"minimum_strict_gap":5},
+      {"E":8,"profiles":67,"strict":67,"equality":0,"negative":0,"source_infeasible":0,"minimum_strict_gap":5},
+      {"E":9,"profiles":96,"strict":96,"equality":0,"negative":0,"source_infeasible":0,"minimum_strict_gap":3},
+      {"E":10,"profiles":136,"strict":136,"equality":0,"negative":0,"source_infeasible":0,"minimum_strict_gap":5},
+      {"E":11,"profiles":188,"strict":188,"equality":0,"negative":0,"source_infeasible":0,"minimum_strict_gap":11},
+      {"E":12,"profiles":257,"strict":257,"equality":0,"negative":0,"source_infeasible":0,"minimum_strict_gap":7},
+      {"E":13,"profiles":345,"strict":345,"equality":0,"negative":0,"source_infeasible":0,"minimum_strict_gap":12},
+      {"E":14,"profiles":459,"strict":459,"equality":0,"negative":0,"source_infeasible":0,"minimum_strict_gap":18},
+      {"E":15,"profiles":601,"strict":601,"equality":0,"negative":0,"source_infeasible":0,"minimum_strict_gap":14},
+      {"E":16,"profiles":780,"strict":780,"equality":0,"negative":0,"source_infeasible":0,"minimum_strict_gap":23}
+    ],
+    "hand_rigidity": {
+      "E": 7,
+      "excess": "e2=7,e3=0^14",
+      "unique_q_rho2": "1^2",
+      "unique_q_rho3": "1^2,5^7,6^2",
+      "forced_p_rho2_q1": 4,
+      "forced_p_rho3_q1": 5,
+      "forced_p_rho3_q5_q6": 2,
+      "lower_sum_C_zero_demand3": 98,
+      "exact_sum_C": 93,
+      "result": "excluded"
+    }
+  },
+  "h2_tail": {
+    "range_E": [16,34],
+    "rows": [
+      {"E":16,"h":4,"gap":0,"q2_total":2},
+      {"E":17,"h":4,"gap":5,"q2_total":2},
+      {"E":18,"h":4,"gap":8,"q2_total":2},
+      {"E":19,"h":5,"gap":8,"q2_total":2},
+      {"E":20,"h":5,"gap":8,"q2_total":2},
+      {"E":21,"h":5,"gap":7,"q2_total":2},
+      {"E":22,"h":5,"gap":6,"q2_total":2},
+      {"E":23,"h":5,"gap":10,"q2_total":2},
+      {"E":24,"h":6,"gap":10,"q2_total":2},
+      {"E":25,"h":6,"gap":13,"q2_total":2},
+      {"E":26,"h":6,"gap":16,"q2_total":2},
+      {"E":27,"h":6,"gap":18,"q2_total":2},
+      {"E":28,"h":6,"gap":22,"q2_total":2},
+      {"E":29,"h":6,"gap":25,"q2_total":2},
+      {"E":30,"h":6,"gap":28,"q2_total":2},
+      {"E":31,"h":7,"gap":40,"q2_total":2},
+      {"E":32,"h":7,"gap":40,"q2_total":2},
+      {"E":33,"h":7,"gap":44,"q2_total":2},
+      {"E":34,"h":7,"gap":42,"q2_total":2}
+    ],
+    "non_strict_layers": [16],
+    "exception_resolution": "E=16 is strictly excluded by the exact low-excess replay with minimum gap 23."
+  },
+  "capacity_ceiling": {
+    "sum_p_upper": 78,
+    "Q": "44+E",
+    "maximum_E": 34,
+    "reason": "5*3+2*4+11*5=78"
+  },
+  "whole_state_exclusion": true,
+  "frontier_before": {"excluded":997,"survivors":4581,"n34_survivors":4503,"n35_survivors":78},
+  "frontier_after": {"excluded":998,"survivors":4580,"n34_survivors":4502,"n35_survivors":78},
+  "trust_boundary": "External review of the canonical bridge and hand rigidity remains open; independent computational reproduction remains open."
+}
