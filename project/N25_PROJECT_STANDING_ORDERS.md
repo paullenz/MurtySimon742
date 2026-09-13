@@ -57,6 +57,23 @@ The README must remain a concise current map rather than an exhaustive changelog
 
 Before treating a major research checkpoint or reviewer package as fully preserved, check whether the README needs a corresponding update. If it does, update it in the same repository-writing pass whenever practicable.
 
+### Protected papers/review-material navigation standing order — 13 September 2026
+
+The root `README.md` must permanently retain a visible reviewer-facing **Papers and review materials** section delimited by the exact markers
+
+```text
+<!-- REVIEW-MATERIALS:START -->
+<!-- REVIEW-MATERIALS:END -->
+```
+
+This section is a protected navigation surface, not disposable prose. It must continue to expose the current fixed-order reviewer packages, principal general-theory reviewer packages, `START_HERE_FOR_REVIEWERS.md`, `releases/REVIEW_READY_INDEX.md`, the canonical bridge, material audits and material errata/corrections.
+
+A full-file README rewrite must preserve the protected section. Before committing such a rewrite, compare the protected section against the current default-branch version and ensure that no current package, paper, verification companion, audit or erratum has silently disappeared. When a reviewer version is superseded, replace the current-version link deliberately and preserve the superseded package in history/indexes; do not remove the navigation surface itself.
+
+Whenever a new current reviewer-facing paper/package is created or promoted, add it to the protected README section in the same publication pass unless there is a documented reason not to. The canonical detailed source remains `releases/REVIEW_READY_INDEX.md`; the README is intentionally a duplicated human navigation layer so reviewers cannot lose the papers through a status rewrite.
+
+Run `python3 tools/check_readme_review_materials.py` after relevant README/release changes. The workflow `.github/workflows/check-readme-review-materials.yml` is a standing CI guard. A guard failure means the reviewer-facing publication pass is incomplete and must be corrected before the checkpoint is treated as fully preserved.
+
 ### Reviewer-version and link consistency standing order
 
 Whenever any reviewer package, manuscript, verification companion, proof surface, audit release, or other canonical reviewer-facing artifact is created, superseded, renamed, or promoted, perform a repository-facing consistency sweep in the same update pass.
