@@ -1,0 +1,70 @@
+name: scan orientation E0 full frontier
+
+on:
+  workflow_dispatch:
+  push:
+    paths:
+      - 'project/research/general_n/2026-09-13-alternative-attacks-v1/prepare_orientation_e0_frontier.py'
+      - 'project/research/general_n/2026-09-13-alternative-attacks-v1/scan_orientation_e0_frontier.cpp'
+      - 'project/research/general_n/2026-09-13-alternative-attacks-v1/summarize_orientation_e0_scan.py'
+      - 'project/research/general_n/2026-09-13-alternative-attacks-v1/merge_orientation_e0_shards.py'
+      - '.github/workflows/scan-orientation-e0-full.yml'
+
+jobs:
+  scan:
+    strategy:
+      fail-fast: false
+      matrix:
+        rem: [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15]
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    steps:
+      - uses: actions/checkout@v4
+      - name: Prepare canonical shard
+        working-directory: project/research/general_n/2026-09-13-alternative-attacks-v1
+        env:
+          REM: ${{ matrix.rem }}
+        run: python3 prepare_orientation_e0_frontier.py --mod 16 --rem "$REM" --output "ORIENTATION_E0_SHARD_${REM}_INPUT.txt"
+      - name: Compile exact scanner
+        working-directory: project/research/general_n/2026-09-13-alternative-attacks-v1
+        run: g++ -O3 -std=c++17 -Wall -Wextra -pedantic scan_orientation_e0_frontier.cpp -o scan_orientation_e0_frontier
+      - name: Run exact shard
+        working-directory: project/research/general_n/2026-09-13-alternative-attacks-v1
+        env:
+          REM: ${{ matrix.rem }}
+        run: |
+          ./scan_orientation_e0_frontier "ORIENTATION_E0_SHARD_${REM}_INPUT.txt" "ORIENTATION_E0_SHARD_${REM}.tsv" 2>&1 | tee "ORIENTATION_E0_SHARD_${REM}_REPLAY.txt"
+          python3 summarize_orientation_e0_scan.py "ORIENTATION_E0_SHARD_${REM}.tsv" --output "ORIENTATION_E0_SHARD_${REM}_SUMMARY.json"
+      - name: Upload exact shard
+        uses: actions/upload-artifact@v4
+        with:
+          name: orientation-e0-shard-${{ matrix.rem }}
+          path: |
+            project/research/general_n/2026-09-13-alternative-attacks-v1/ORIENTATION_E0_SHARD_${{ matrix.rem }}_INPUT_VERIFICATION.json
+            project/research/general_n/2026-09-13-alternative-attacks-v1/ORIENTATION_E0_SHARD_${{ matrix.rem }}.tsv
+            project/research/general_n/2026-09-13-alternative-attacks-v1/ORIENTATION_E0_SHARD_${{ matrix.rem }}_REPLAY.txt
+            project/research/general_n/2026-09-13-alternative-attacks-v1/ORIENTATION_E0_SHARD_${{ matrix.rem }}_SUMMARY.json
+
+  collect:
+    needs: scan
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/download-artifact@v4
+        with:
+          pattern: orientation-e0-shard-*
+          path: merged
+          merge-multiple: true
+      - name: Merge and verify all 4,568 rows
+        working-directory: project/research/general_n/2026-09-13-alternative-attacks-v1
+        run: |
+          python3 merge_orientation_e0_shards.py "$GITHUB_WORKSPACE/merged" --shards 16 --output ORIENTATION_E0_FULL.tsv
+          python3 summarize_orientation_e0_scan.py ORIENTATION_E0_FULL.tsv --output ORIENTATION_E0_FULL_SUMMARY.json
+      - name: Upload canonical full scan
+        uses: actions/upload-artifact@v4
+        with:
+          name: orientation-e0-full-frontier
+          path: |
+            project/research/general_n/2026-09-13-alternative-attacks-v1/ORIENTATION_E0_FULL.tsv
+            project/research/general_n/2026-09-13-alternative-attacks-v1/ORIENTATION_E0_FULL_SUMMARY.json
