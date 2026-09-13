@@ -1,0 +1,27 @@
+name: summarize orientation frontier
+
+on:
+  workflow_dispatch:
+  push:
+    paths:
+      - 'project/research/general_n/2026-09-13-alternative-attacks-v1/summarize_orientation_frontier.py'
+      - '.github/workflows/summarize-orientation-frontier.yml'
+
+jobs:
+  summarize:
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - uses: actions/checkout@v4
+      - name: Decode and summarize canonical frontier
+        working-directory: project/research/general_n/2026-09-13-alternative-attacks-v1
+        run: |
+          python3 summarize_orientation_frontier.py | tee ORIENTATION_FRONTIER_SUMMARY_REPLAY.txt
+          test -s ORIENTATION_FRONTIER_SUMMARY.json
+      - name: Upload summary
+        uses: actions/upload-artifact@v4
+        with:
+          name: orientation-frontier-summary
+          path: |
+            project/research/general_n/2026-09-13-alternative-attacks-v1/ORIENTATION_FRONTIER_SUMMARY.json
+            project/research/general_n/2026-09-13-alternative-attacks-v1/ORIENTATION_FRONTIER_SUMMARY_REPLAY.txt
