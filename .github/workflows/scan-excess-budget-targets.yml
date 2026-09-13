@@ -1,0 +1,45 @@
+name: scan excess-budget orientation targets
+
+on:
+  workflow_dispatch:
+  push:
+    paths:
+      - 'project/research/general_n/2026-09-13-alternative-attacks-v1/prepare_orientation_target_states.py'
+      - 'project/research/general_n/2026-09-13-alternative-attacks-v1/scan_excess_budget_orientation.cpp'
+      - 'project/research/general_n/2026-09-13-alternative-attacks-v1/summarize_excess_budget_orientation.py'
+      - '.github/workflows/scan-excess-budget-targets.yml'
+
+jobs:
+  scan:
+    strategy:
+      fail-fast: false
+      matrix:
+        state: [13518, 13519]
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    steps:
+      - uses: actions/checkout@v4
+      - name: Extract canonical target state
+        working-directory: project/research/general_n/2026-09-13-alternative-attacks-v1
+        env:
+          STATE: ${{ matrix.state }}
+        run: python3 prepare_orientation_target_states.py --state "$STATE" --output "EXCESS_BUDGET_${STATE}_INPUT.txt"
+      - name: Compile scanner
+        working-directory: project/research/general_n/2026-09-13-alternative-attacks-v1
+        run: g++ -O3 -std=c++17 -Wall -Wextra -pedantic scan_excess_budget_orientation.cpp -o scan_excess_budget_orientation
+      - name: Run exact excess-budget orientation scan
+        working-directory: project/research/general_n/2026-09-13-alternative-attacks-v1
+        env:
+          STATE: ${{ matrix.state }}
+        run: |
+          ./scan_excess_budget_orientation "EXCESS_BUDGET_${STATE}_INPUT.txt" "EXCESS_BUDGET_${STATE}.tsv" 2>&1 | tee "EXCESS_BUDGET_${STATE}_REPLAY.txt"
+          python3 summarize_excess_budget_orientation.py "EXCESS_BUDGET_${STATE}.tsv" --output "EXCESS_BUDGET_${STATE}_SUMMARY.json"
+      - name: Upload scan
+        uses: actions/upload-artifact@v4
+        with:
+          name: excess-budget-${{ matrix.state }}
+          path: |
+            project/research/general_n/2026-09-13-alternative-attacks-v1/EXCESS_BUDGET_${{ matrix.state }}_INPUT_VERIFICATION.json
+            project/research/general_n/2026-09-13-alternative-attacks-v1/EXCESS_BUDGET_${{ matrix.state }}.tsv
+            project/research/general_n/2026-09-13-alternative-attacks-v1/EXCESS_BUDGET_${{ matrix.state }}_REPLAY.txt
+            project/research/general_n/2026-09-13-alternative-attacks-v1/EXCESS_BUDGET_${{ matrix.state }}_SUMMARY.json
