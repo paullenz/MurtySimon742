@@ -199,6 +199,51 @@ source u may feed a label with C_i<lambda
 
 For an identical label class, inequality (4) is the degree-sequence obstruction obtained by applying simplicity and row capacities to the low-endpoint subproblem. It is deliberately cheaper than a full max-flow replay and is therefore suitable for broad quantified scans.
 
+## 10. Mixed demand-two / demand-three joint Hall projection
+
+The separate class bounds remain valid when several zero-excess demand classes coexist, but they do not use the fact that those classes compete for the **same** selected-source incidences. In the low-demand N34 states the important pair is the zero-excess demand-two class `J_2` and zero-excess demand-three class `J_3`.
+
+Fix a threshold `lambda`, and suppose `a` labels of `J_2` and `b` labels of `J_3` have endpoint mass below `lambda`. Put
+
+```text
+A_2(lambda)={u: rho_u=2,
+                q_u>0,
+                p_u<=1,
+                q_u+p_u<lambda},
+
+A_3(lambda)={u: rho_u>=3,
+                q_u>0,
+                p_u<=rho_u-1,
+                q_u+p_u<lambda}.                     (15)
+```
+
+A source in `A_2` can feed only demand-two labels, whereas a source in `A_3` can feed either class. Consider any subcollection containing `i` of the `a` demand-two labels and `j` of the `b` demand-three labels. It needs exactly `2i+3j` selected incidences. Simplicity and the row-degree cap imply the necessary Hall inequality
+
+```text
+2i+3j
+ <= sum_{u in A_2(lambda)} min(q_u,i)
+  + sum_{u in A_3(lambda)} min(q_u,i+j)               (16)
+```
+
+for every
+
+```text
+0<=i<=a, 0<=j<=b, i+j>0.                              (17)
+```
+
+No sufficiency claim is needed here: (16) is used only as a necessary feasibility test, so retaining a pair `(a,b)` that satisfies it can only weaken the resulting lower bound, never invalidate it.
+
+Define `K_lambda` to be the largest `a+b` over pairs within the available class sizes that satisfy all inequalities (16). Then at most `K_lambda` labels across `J_2 union J_3` can have endpoint mass below `lambda`, and therefore
+
+```text
+#{i in J_2 union J_3 : C_i>=lambda}
+ >= |J_2|+|J_3|-K_lambda.                             (18)
+```
+
+Threshold summation gives the mixed-class endpoint lower bound. Because demand-two labels have baseline `2` and demand-three labels baseline `3`, the `lambda=3` contribution is applied only to `J_2`; from `lambda=4` onward equation (18) applies to both classes.
+
+The implementation uses this mixed bound only as a **global endpoint-budget feasibility prune** against `sum_i C_i=r+Q`. The score objective continues to use the already-proved separate demand-two contribution. Thus the new test does not double-count endpoint mass in the objective.
+
 ## Trust boundary
 
-The proof of the class-packing inequality itself is finite bipartite counting. Its Murty–Simon application depends on the canonical selected/residual bridge, especially endpoint load, selected-excess, selected-edge forcing and the exact endpoint-sum identity. It does not assert that a scalar branch satisfying the bound extends to a graph. External checking of those bridge implications remains open.
+The proof of the class-packing inequality and mixed-class Hall projection is finite bipartite counting. Their Murty–Simon application depends on the canonical selected/residual bridge, especially endpoint load, selected-excess, selected-edge forcing and the exact endpoint-sum identity. They do not assert that a scalar branch satisfying the bounds extends to a graph. External checking of those bridge implications remains open.
