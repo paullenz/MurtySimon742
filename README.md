@@ -1,6 +1,6 @@
 # Murty–Simon / Erdős Problem #742
 
-Candidate proofs and reproducible research. **Updated 13 September 2026 through the N34 state-588 whole-state exclusion. Independent mathematical review, novelty assessment and independent computational reproduction remain OPEN.** Repository publication, green replay and same-assistant hostile audit are not external acceptance and do not prove the unrestricted conjecture.
+Candidate proofs and reproducible research. **Updated 13 September 2026 through the N34 state-526 whole-state exclusion. Independent mathematical review, novelty assessment and independent computational reproduction remain OPEN.** Repository publication, green replay and same-assistant hostile audit are not external acceptance and do not prove the unrestricted conjecture.
 
 **External reviewers:** start with [`START_HERE_FOR_REVIEWERS.md`](START_HERE_FOR_REVIEWERS.md). Canonical theorem-level packages are indexed in [`releases/REVIEW_READY_INDEX.md`](releases/REVIEW_READY_INDEX.md). The project welcomes hostile review, counterexamples, literature corrections and genuinely independent reproduction; GitHub Issues are the preferred place to report a suspected flaw.
 
@@ -18,19 +18,11 @@ b=Delta,
 t=e(G)-b(a+1).
 ```
 
-The working cycle is:
-
-1. **Reduce structurally.** Prove necessary inequalities and identify a complete remaining domain with assumptions and dependencies explicit.
-2. **Use computation for discovery and finite closure.** Accept a computational exclusion only after exact verification and coverage checks; a solver timeout or floating-point infeasibility status is never proof.
-3. **Extract simpler explanations.** Replace large computational objects with hand arguments where possible.
-4. **Generalise with explicit hypotheses.** Formulate parameterized lemmas and test their reach against preserved hard cases and failures.
-5. **Quantify alternative geometry.** A strong inequality on one representative system does not exclude the graph/state unless every admissible alternative geometry is controlled.
-
-That fifth step is now central and has produced three whole-state frontier exclusions.
+The working cycle is structural reduction, exact finite closure, simplification to hand arguments where possible, explicit generalisation, and—critically—quantification over alternative selected geometry.
 
 ## Failures, audit challenges and corrections are part of the record
 
-**Failed approaches, counterexamples to proposed lemmas, incomplete computations, audit challenges, discovered bugs, corrections and unresolved proof obligations are preserved alongside successful results.** The [preservation standing orders](project/N25_PROJECT_STANDING_ORDERS.md) require enough provenance for reconstruction and audit: code, parameters, inputs, outputs, survivor lists, certificates and review findings as applicable.
+**Failed approaches, counterexamples to proposed lemmas, incomplete computations, audit challenges, discovered bugs, corrections and unresolved proof obligations are preserved alongside successful results.** The [preservation standing orders](project/N25_PROJECT_STANDING_ORDERS.md) require enough provenance for reconstruction and audit.
 
 Examples include the [N29 normalization bug and audit](project/reviews/n29/2026-09-08-redteam-restart-v1/PUBLIC_RELEASE_AUDIT.md), the [general-foundations corrections](project/reviews/general-theory/2026-09-12-joint-followthrough-v1/FOUNDATIONS_AUDIT.md), the [N34 failed relaxation and hand replacement](project/reviews/n34/2026-09-12-heavy-independent-v1/README.md), and the [alternative-attacks audit](project/research/general_n/2026-09-13-alternative-attacks-v1/AUDIT.md).
 
@@ -50,46 +42,26 @@ Exact replay, internal audit, repository publication and external mathematical a
 | `n=33` | Complete candidate: `e(G)<=272`, equality exactly `K(16,17)`; source-first reviewer-v1; external review open |
 | `n=34` | Complete candidate: `e(G)<=289`, equality exactly `K(17,17)`; reviewer-v2; final heavy certificate replaced by a short hand proof; external review open |
 | `n=35` | Complete candidate: `e(G)<=306`, equality exactly `K(17,18)`; reviewer-v1; external review open |
-| General maximum-degree result | Candidate theorem: for `n>=6`, `Delta(G)>=(7/12)n` implies `e(G)<floor(n^2/4)`; complete candidate hand argument with internal exact audits green; external review and novelty assessment open |
-| Generalisation frontier | **997 exclusions / 4,581 survivors** after whole-state closures of N34 states 227, 279 and 588; these are scalar states in a frozen experiment, not surviving graphs |
+| General maximum-degree result | Candidate theorem: for `n>=6`, `Delta(G)>=(7/12)n` implies `e(G)<floor(n^2/4)`; internal exact audits green; external review and novelty assessment open |
+| Generalisation frontier | **998 exclusions / 4,580 survivors** after whole-state closures of N34 states 227, 279, 588 and 526; these are scalar states in a frozen experiment, not surviving graphs |
 
 The unrestricted Murty–Simon conjecture remains unsolved by this project.
 
 ## Fixed-order frontier through n=35
 
-Canonical reviewer packages are linked from [`releases/REVIEW_READY_INDEX.md`](releases/REVIEW_READY_INDEX.md). The fixed-order candidates have their own complete ledgers. The generalisation survivor counts below are **not** unresolved obligations in those fixed-order proofs.
+Canonical reviewer packages are indexed in [`releases/REVIEW_READY_INDEX.md`](releases/REVIEW_READY_INDEX.md). The fixed-order candidates have their own complete ledgers. The generalisation survivor counts below are **not** unresolved obligations in those fixed-order proofs.
 
 ## Current general structural results
 
-Important candidate all-order or parameterized results include:
+Important candidate all-order or parameterized results include balanced-degree reduction; the `7/12` maximum-degree theorem candidate; heavy-load/routing families; joint routing and demand/tail projection; compatible-destination routing and Hall/flow criteria; containment spill and pair-overlap inequalities; shared residual budgets; selection-free candidate capacity; and the selected-excess / threshold family.
 
-- balanced-degree reduction and fixed-`a`/tail families;
-- the `7/12` maximum-degree theorem candidate;
-- all-threshold heavy-load/routing inequalities with incoming-degree penalties and demand-only consequences;
-- joint heavy routing, demand/tail projection and equality rigidity;
-- compatible-destination routing, closed compatible potential and fixed-neighbourhood exact Hall/flow routing;
-- co-singleton trace hierarchy and receiver-containment spill;
-- pair-overlap/residual-cover inequalities;
-- shared residual budgets and a balance-or-concentration alternative;
-- selection-free raw candidate-capacity subsets;
-- selected-excess inequality and the threshold excess-cap family.
-
-### Selected excess and threshold capacity
-
-For every selected positive-demand incidence, the [selection-free/excess package](project/research/general_n/2026-09-13-alternative-attacks-v1/SELECTION_FREE.md) gives the candidate inequality
+For every selected positive-demand incidence,
 
 ```text
-p_u-rho_u+1 <= x_i-s_i.                              (1)
+p_u-rho_u+1 <= e_i:=x_i-s_i.                         (1)
 ```
 
-Put
-
-```text
-e_i=x_i-s_i,
-h_l=#{i:e_i>=l}.
-```
-
-Then
+If `h_l=#{i:e_i>=l}`, then
 
 ```text
 q_u>h_l => p_u<=rho_u+l-2.                            (2)
@@ -97,44 +69,55 @@ q_u>h_l => p_u<=rho_u+l-2.                            (2)
 
 This threshold family is a principal mechanism in the quantified whole-state programme.
 
-## Quantifier pivot: three whole-state exclusions
+## Quantifier pivot: four whole-state exclusions
 
-The [alternative-attacks package](project/research/general_n/2026-09-13-alternative-attacks-v1/README.md) was created because the shared-residual continuation had become extremely strong on one stored selected geometry—4,487 of 4,584 stored patterns were rejected—but that did not quantify alternative selections, `q`-vectors or `x>s`.
+The [alternative-attacks package](project/research/general_n/2026-09-13-alternative-attacks-v1/README.md) was created because the shared-residual continuation had become extremely strong on one stored selected geometry—4,487 of 4,584 stored patterns were rejected—but that did not quantify alternative selections, q-vectors or `x>s`.
 
 ### N34 state 227
 
-[`STATE_227_WHOLE_STATE.md`](project/research/general_n/2026-09-13-alternative-attacks-v1/STATE_227_WHOLE_STATE.md) combines exact integer enumeration through `E=20`, two hand rigidity exclusions, a relaxed `h_2` threshold/top-k tail for `E=21,...,34`, and the incoming-capacity ceiling beyond that. It moved the frontier from `994 / 4,584` to `995 / 4,583`.
+[`STATE_227_WHOLE_STATE.md`](project/research/general_n/2026-09-13-alternative-attacks-v1/STATE_227_WHOLE_STATE.md) combines exact integer enumeration through `E=20`, two hand rigidity exclusions, a relaxed `h_2` tail for `E=21,...,34`, and the incoming-capacity ceiling. Frontier: `994/4,584 -> 995/4,583`.
 
 ### N34 state 279
 
-[`STATE_279_WHOLE_STATE.md`](project/research/general_n/2026-09-13-alternative-attacks-v1/STATE_279_WHOLE_STATE.md) uses exact low-excess enumeration through `E=15`, three hand-rigidity cases, and an `h_2` tail that is strict throughout `E=16,...,34`. It moved the frontier to `996 / 4,582`.
+[`STATE_279_WHOLE_STATE.md`](project/research/general_n/2026-09-13-alternative-attacks-v1/STATE_279_WHOLE_STATE.md) uses exact low-excess enumeration through `E=15`, three hand-rigidity cases, and an `h_2` tail strict throughout `E=16,...,34`. Frontier: `995/4,583 -> 996/4,582`.
 
 ### N34 state 588
 
-[`STATE_588_WHOLE_STATE.md`](project/research/general_n/2026-09-13-alternative-attacks-v1/STATE_588_WHOLE_STATE.md) has
+[`STATE_588_WHOLE_STATE.md`](project/research/general_n/2026-09-13-alternative-attacks-v1/STATE_588_WHOLE_STATE.md) has `s=3^15` and `rho=1^5,2,3^12`. Its unique low-excess equality is removed by an endpoint-budget contradiction `sum C_i>=106>97`. The cheap `h_2` tail leaves only `E=16` and `E=24`, both closed by exact replay. Frontier: `996/4,582 -> 997/4,581`.
+
+### N34 state 526
+
+[`STATE_526_WHOLE_STATE.md`](project/research/general_n/2026-09-13-alternative-attacks-v1/STATE_526_WHOLE_STATE.md) has
 
 ```text
-a=15, b=18, t=1,
-s=3^15,
-rho=1^5,2,3^12,
-r=43, S=45.
+s=2,3^14,
+rho=1^5,2^2,3^11,
+r=42, S=44.
 ```
 
-Its exact low-excess scan has one coarse equality, `E=9, e=0^12,3^3, q=3^6,6^6`; equality forces an endpoint-budget contradiction `sum C_i>=106>97`. A cheap `h_2` tail screen closes every `E=16,...,34` layer except `E=16` and `E=24`; exact replay closes those two exception layers (`200/200` and `1,009/1,009` profiles). The incoming-capacity ceiling excludes `E>=35`.
+The exact scan through `E=16` has one coarse equality at
 
-Replay: [`STATE_588_REPLAY.md`](project/research/general_n/2026-09-13-alternative-attacks-v1/STATE_588_REPLAY.md). Machine summary: [`STATE_588_WHOLE_STATE_VERIFICATION.json`](project/research/general_n/2026-09-13-alternative-attacks-v1/STATE_588_WHOLE_STATE_VERIFICATION.json).
+```text
+E=7, e_2=7, e_3=0^14,
+q_(rho=2)=1^2,
+q_(rho=3)=1^2,5^7,6^2.
+```
+
+The incoming ledger forces all q=1 sources to high p, so they can select only the high-excess label. Every zero-excess demand-three label must therefore use q=5/6, p=2 sources and has `C_i>=7`; those fourteen labels alone give `sum C_i>=98>93`, contradicting the exact total. The relaxed `h_2` tail is positive on every `E=17,...,34`; its sole zero at `E=16` is already strictly excluded by the exact scan. Frontier: `997/4,581 -> 998/4,580`.
+
+Replay: [`STATE_526_REPLAY.md`](project/research/general_n/2026-09-13-alternative-attacks-v1/STATE_526_REPLAY.md). Machine summary: [`STATE_526_WHOLE_STATE_VERIFICATION.json`](project/research/general_n/2026-09-13-alternative-attacks-v1/STATE_526_WHOLE_STATE_VERIFICATION.json).
 
 The current frozen frontier is therefore
 
 ```text
-997 exclusions / 4,581 survivors,
-4,503 N34 equality-derived survivors,
+998 exclusions / 4,580 survivors,
+4,502 N34 equality-derived survivors,
 78 N35 m=306-derived survivors.
 ```
 
 Survival in this catalogue is not graph feasibility.
 
-## What the three closures suggest
+## What the four closures suggest
 
 The emerging reusable architecture is two-sided:
 
@@ -142,7 +125,7 @@ The emerging reusable architecture is two-sided:
 2. **Low-excess availability:** zero/low-excess labels need sufficiently low-p sources; the incoming ledger may consume those cheap sources.
 3. **Endpoint budget:** forced source usage raises `C_i>=q_u+p_u` until the exact `sum C_i` ledger becomes impossible.
 
-State 588 is especially useful because all base demands are three, showing that the mechanism is not tied to demand-two correction terms. It also suggests a better computational workflow: use a cheap `h_2` screen to rank states by non-strict excess layers, then exact-enumerate only the exceptional layers.
+States 588 and 526 also suggest a more efficient computational workflow: use a cheap `h_2` screen to rank states by non-strict excess layers, then exact-enumerate only exceptional layers and the low-excess boundary.
 
 ## How the preceding generalisation machinery reached this point
 
@@ -151,34 +134,32 @@ State 588 is especially useful because all base demands are three, showing that 
 | [General heavy load](releases/general-heavy-load-reviewer-v1/README.md) | All-threshold load/routing family; 595 alternative hand exclusions | Strong aggregate structure; does not by itself quantify all selected geometry |
 | [Joint heavy routing](releases/general-joint-routing-reviewer-v1/README.md) | 729 further exact catalogue exclusions; 5,578 survivors | Frozen multiplier catalogue |
 | [Compatible routing catalogue](releases/general-compatible-catalogue-reviewer-v1/README.md) | 994 retained full/pilot exclusions | Produced the 4,584-state frontier entering the quantifier programme |
-| [Containment spill / pair overlap](project/research/general_n/2026-09-13-constraint-respecting-cross-v1/README.md) | Scalar spill witnesses for all 4,584; fixed-pattern pair/residual-cover failures | Exposed the quantifier gap |
-| [Shared residual budgets](project/research/general_n/2026-09-13-shared-residual-budget-v1/README.md) | 4,487/4,584 stored patterns rejected; 97 rational joint witnesses | Very strong on fixed geometry; not a whole-state result by itself |
-| [Alternative attacks](project/research/general_n/2026-09-13-alternative-attacks-v1/README.md) | Selection-free/excess lemmas and whole-state closures of states 227, 279 and 588 | Current primary programme |
-
-Detailed historical milestone narratives, original outputs and superseded counts remain preserved in the linked packages and Git history.
+| [Containment spill / pair overlap](project/research/general_n/2026-09-13-constraint-respecting-cross-v1/README.md) | Scalar spill witnesses for all 4,584; fixed-pattern failures | Exposed the quantifier gap |
+| [Shared residual budgets](project/research/general_n/2026-09-13-shared-residual-budget-v1/README.md) | 4,487/4,584 stored patterns rejected | Very strong on fixed geometry; not a whole-state result by itself |
+| [Alternative attacks](project/research/general_n/2026-09-13-alternative-attacks-v1/README.md) | Selection-free/excess lemmas and whole-state closures of states 227, 279, 588 and 526 | Current primary programme |
 
 ## Independent maximum-cut route
 
-For any cut `X|Y`, if `I` is the number of internal edges and `M` the number of missing cross-pairs, exactly
+For any cut `X|Y`, if `I` is the number of internal edges and `M` the number of missing cross-pairs,
 
 ```text
 e(G)=|X||Y|+I-M.
 ```
 
-Thus `I<=M` for some cut would prove Murty–Simon. Reconnaissance found zero violations among the preserved finite test sets, and a hand argument proves the cut inequality for positive independent-set blow-ups of `C5`. A direct one-internal-edge/one-cross-nonedge matching proof is false and is preserved as a failed route.
+Thus `I<=M` for some cut would prove Murty–Simon. A direct one-internal-edge/one-cross-nonedge matching proof is false and is preserved as a failed route.
 
 ## Current research priorities
 
-1. **Run cheap threshold triage across the remaining 4,581 survivors.** Rank states by the number/severity of non-strict `h_2` excess layers, then exact-enumerate only the exceptions.
-2. **Extract a symbolic threshold/availability theorem.** Explain the shared state-227/state-279/state-588 mechanism in parameters `(a,b,rho,s,E,h_l)`.
+1. **Run cheap threshold triage across the remaining 4,580 survivors.** Rank states by the number/severity of non-strict `h_2` excess layers, then exact-enumerate only the exceptions.
+2. **Extract a symbolic threshold/availability theorem.** Explain the shared state-227/state-279/state-588/state-526 mechanism in parameters `(a,b,rho,s,E,h_l)`.
 3. **Continue the selection-free raw candidate-capacity projection.** Proper source subsets and thresholded source/label classes remain promising.
 4. **Maintain the maximum-cut route independently.** Do not retry the falsified direct matching.
-5. **Return to shared residual/pair/exact-destination geometry after quantified pruning.** Those constraints are powerful once the alternative-margin/profile space has been reduced.
+5. **Return to shared residual/pair/exact-destination geometry after quantified pruning.**
 
 ## Trust boundary
 
-The largest correlated mathematical risk is still the canonical bridge: its graph-to-quasi-edge implications, selected/residual ledger, forcing lemmas and endpoint consequences require independent specialist review. The state-227, state-279 and state-588 arithmetic is exact, but independent computational reproduction and external checking of the hand-rigidity arguments remain open. The candidate `7/12` theorem and later general lemmas also require novelty assessment and external review.
+The largest correlated mathematical risk is still the canonical bridge: its graph-to-quasi-edge implications, selected/residual ledger, forcing lemmas and endpoint consequences require independent specialist review. The whole-state arithmetic is exact, but independent computational reproduction and external checking of the hand-rigidity arguments remain open. The candidate `7/12` theorem and later general lemmas also require novelty assessment and external review.
 
 No solver timeout, floating infeasibility status or unsuccessful search is used as proof.
 
-For restart-level detail, read [`CURRENT_STATE.md`](CURRENT_STATE.md). For the latest quantified advance, read [`STATE_588_WHOLE_STATE.md`](project/research/general_n/2026-09-13-alternative-attacks-v1/STATE_588_WHOLE_STATE.md).
+For restart-level detail, read [`CURRENT_STATE.md`](CURRENT_STATE.md). For the latest quantified advance, read [`STATE_526_WHOLE_STATE.md`](project/research/general_n/2026-09-13-alternative-attacks-v1/STATE_526_WHOLE_STATE.md).
