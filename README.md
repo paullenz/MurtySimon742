@@ -1,6 +1,6 @@
 # Murty–Simon / Erdős Problem #742
 
-Candidate proofs and reproducible research. **Updated 13 September 2026 through the canonical N34 whole-state ledger: 14 quantified whole-state closures, frontier 1,008/4,570. Independent mathematical review, novelty assessment and independent computational reproduction remain OPEN.** Repository publication, green replay and same-assistant hostile audit are not external acceptance and do not prove the unrestricted conjecture.
+Candidate proofs and reproducible research. **Updated 13 September 2026 through the canonical N34 whole-state ledger: 16 quantified whole-state closures, frontier 1,010/4,568. Independent mathematical review, novelty assessment and independent computational reproduction remain OPEN.** Repository publication, green replay and same-assistant hostile audit are not external acceptance and do not prove the unrestricted conjecture.
 
 **External reviewers:** start with [`START_HERE_FOR_REVIEWERS.md`](START_HERE_FOR_REVIEWERS.md). Canonical theorem-level packages are indexed in [`releases/REVIEW_READY_INDEX.md`](releases/REVIEW_READY_INDEX.md). The project welcomes hostile review, counterexamples, literature corrections and genuinely independent reproduction; GitHub Issues are the preferred place to report a suspected flaw.
 
@@ -43,7 +43,7 @@ Exact replay, internal audit, repository publication and external mathematical a
 | `n=34` | Complete candidate: `e(G)<=289`, equality exactly `K(17,17)`; reviewer-v2; final heavy certificate replaced by a short hand proof; external review open |
 | `n=35` | Complete candidate: `e(G)<=306`, equality exactly `K(17,18)`; reviewer-v1; external review open |
 | General maximum-degree result | Candidate theorem: for `n>=6`, `Delta(G)>=(7/12)n` implies `e(G)<floor(n^2/4)`; internal exact audits green; external review and novelty assessment open |
-| Generalisation frontier | **1,008 exclusions / 4,570 survivors** from the canonical N34 whole-state ledger; these are scalar states in a frozen experiment, not surviving graphs |
+| Generalisation frontier | **1,010 exclusions / 4,568 survivors** from the canonical N34 whole-state ledger; these are scalar states in a frozen experiment, not surviving graphs |
 
 The unrestricted Murty–Simon conjecture remains unsolved by this project.
 
@@ -123,7 +123,7 @@ and the negative baseline contribution from zero-excess demand-two labels.
 
 The newer [`ZERO_EXCESS_ENDPOINT_ORDER.md`](project/research/general_n/2026-09-13-alternative-attacks-v1/ZERO_EXCESS_ENDPOINT_ORDER.md) adds the opposite-side order statistic: a zero-excess demand-`d` label needs `d` active selected sources with `rho_u>=d` and `p_u<=rho_u-1`, and its endpoint `C_i` is at least the `d`-th smallest eligible `q_u+p_u`.
 
-## Quantifier pivot: 14 whole-state exclusions
+## Quantifier pivot: 16 whole-state exclusions
 
 The [alternative-attacks package](project/research/general_n/2026-09-13-alternative-attacks-v1/README.md) was created because the shared-residual continuation had become extremely strong on one stored selected geometry—4,487 of 4,584 stored patterns were rejected—but that did not quantify alternative selections, q-vectors or `x>s`.
 
@@ -192,7 +192,7 @@ The audited low-demand extension logic is strict on **every** admissible excess 
 <!-- N34-WHOLE-STATE-LEDGER:START -->
 ### Canonical N34 whole-state ledger
 
-The canonical ledger records **14 distinct quantified whole-state exclusions**. This table is generated from [`WHOLE_STATE_LEDGER.tsv`](project/research/general_n/2026-09-13-alternative-attacks-v1/WHOLE_STATE_LEDGER.tsv) so parallel lines of work cannot silently disappear from the headline count.
+The canonical ledger records **16 distinct quantified whole-state exclusions**. This table is generated from [`WHOLE_STATE_LEDGER.tsv`](project/research/general_n/2026-09-13-alternative-attacks-v1/WHOLE_STATE_LEDGER.tsv) so parallel lines of work cannot silently disappear from the headline count.
 
 | State | Method | Record |
 |---:|---|---|
@@ -210,19 +210,21 @@ The canonical ledger records **14 distinct quantified whole-state exclusions**. 
 | 283 | endpoint class-packing closure | [`STATE_283_WHOLE_STATE.md`](project/research/general_n/2026-09-13-alternative-attacks-v1/STATE_283_WHOLE_STATE.md) |
 | 154 | endpoint class-packing closure | [`STATE_154_WHOLE_STATE.md`](project/research/general_n/2026-09-13-alternative-attacks-v1/STATE_154_WHOLE_STATE.md) |
 | 231 | mixed-class joint Hall closure | [`STATE_231_WHOLE_STATE.md`](project/research/general_n/2026-09-13-alternative-attacks-v1/STATE_231_WHOLE_STATE.md) |
+| 77 | orientation target-capacity closure | [`STATE_77_WHOLE_STATE.md`](project/research/general_n/2026-09-13-alternative-attacks-v1/STATE_77_WHOLE_STATE.md) |
+| 60 | orientation target-capacity closure | [`STATE_60_WHOLE_STATE.md`](project/research/general_n/2026-09-13-alternative-attacks-v1/STATE_60_WHOLE_STATE.md) |
 
 The current frozen frontier is therefore
 
 ```text
-1,008 exclusions / 4,570 survivors,
-4,492 N34 equality-derived survivors,
+1,010 exclusions / 4,568 survivors,
+4,490 N34 equality-derived survivors,
 78 N35 m=306-derived survivors.
 ```
 
 Survival in this catalogue is not graph feasibility.
 <!-- N34-WHOLE-STATE-LEDGER:END -->
 
-## What the 14 closures suggest
+## What the 16 closures suggest
 
 The emerging reusable architecture is two-sided:
 

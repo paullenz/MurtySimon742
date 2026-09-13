@@ -6,10 +6,10 @@
 
 The programme attacks the missing quantifier in fixed-pattern residual arguments: rejecting one selected quasi-edge geometry does not exclude the underlying scalar state because another legal selected geometry may exist.
 
-The quantified line now has **14 whole-state N34 exclusions**:
+The quantified line now has **16 whole-state N34 exclusions**:
 
 ```text
-227, 279, 588, 526, 382, 519, 230, 282, 385, 153, 122, 283, 154, 231.
+227, 279, 588, 526, 382, 519, 230, 282, 385, 153, 122, 283, 154, 231, 77, 60.
 ```
 
 The canonical union of all closure lines is recorded in [`WHOLE_STATE_LEDGER.tsv`](WHOLE_STATE_LEDGER.tsv); that ledger, rather than local ordinal wording in individual notes, controls the headline count.
@@ -17,13 +17,13 @@ The canonical union of all closure lines is recorded in [`WHOLE_STATE_LEDGER.tsv
 The frozen frontier is now
 
 ```text
-1,008 exclusions / 4,570 survivors,
+1,010 exclusions / 4,568 survivors,
 ```
 
 split as
 
 ```text
-4,492 N34 equality-derived survivors,
+4,490 N34 equality-derived survivors,
 78 N35 m=306-derived survivors.
 ```
 
@@ -48,8 +48,10 @@ These are scalar states in a frozen generalisation experiment, not individual su
 | 283 | endpoint class-packing closure | [`STATE_283_WHOLE_STATE.md`](STATE_283_WHOLE_STATE.md) |
 | 154 | endpoint class-packing closure | [`STATE_154_WHOLE_STATE.md`](STATE_154_WHOLE_STATE.md) |
 | 231 | mixed-class joint Hall closure | [`STATE_231_WHOLE_STATE.md`](STATE_231_WHOLE_STATE.md) |
+| 77 | orientation target-capacity closure | [`STATE_77_WHOLE_STATE.md`](STATE_77_WHOLE_STATE.md) |
+| 60 | orientation target-capacity closure | [`STATE_60_WHOLE_STATE.md`](STATE_60_WHOLE_STATE.md) |
 
-Canonical frontier: **1,008 exclusions / 4,570 survivors**.
+Canonical frontier: **1,010 exclusions / 4,568 survivors**.
 <!-- CANONICAL-WHOLE-STATE-LEDGER:END -->
 
 ## Core selected-excess mechanism
@@ -235,7 +237,7 @@ The programme should now use the following order:
 
 The frozen survivor extraction utility [`extract_frozen_survivors.py`](extract_frozen_survivors.py) is transport/replay infrastructure only; it does not itself apply a theorem.
 
-## General lesson from the 14 closures
+## General lesson from the 16 closures
 
 The newer closures suggest that the useful object is not merely a scalar ledger but a **capacitated selected source-label incidence system**.
 
@@ -262,7 +264,7 @@ A direct one-edge/one-nonedge matching proof is false and remains preserved as a
 
 ## Audit boundaries and current priority
 
-[`AUDIT.md`](AUDIT.md) records invalidated shortcuts and proof-status boundaries. None of the 14 whole-state closures relies on numerical solver infeasibility: proof-critical computation is exact integer enumeration/dynamic programming, with explicit structural arguments at equality boundaries.
+[`AUDIT.md`](AUDIT.md) records invalidated shortcuts and proof-status boundaries. None of the 16 whole-state closures relies on numerical solver infeasibility: proof-critical computation is exact integer enumeration/dynamic programming, with explicit structural arguments at equality boundaries.
 
 External mathematical review of the canonical bridge and all new lemmas remains open. Independent computational reproduction remains open until a separate environment has replayed the committed artifacts.
 

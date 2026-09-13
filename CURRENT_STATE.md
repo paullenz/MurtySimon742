@@ -2,7 +2,7 @@
 
 **Purpose.** Durable restart point after chat reset, client desynchronisation or context loss. The repository, not any chat transcript, is the source of truth. Read this file first, inspect later `main` commits, then follow the linked packages.
 
-**Research state reconciled:** 13 September 2026 through the canonical N34 whole-state ledger: **14 quantified closures** (`227, 279, 588, 526, 382, 519, 230, 282, 385, 153, 122, 283, 154, 231`), frontier **1,008/4,570**. External mathematical review, novelty assessment and independent computational reproduction remain OPEN unless a later preserved checkpoint explicitly changes that status. Internal replay, same-assistant audit and repository publication are not external acceptance.
+**Research state reconciled:** 13 September 2026 through the canonical N34 whole-state ledger: **16 quantified closures** (`227, 279, 588, 526, 382, 519, 230, 282, 385, 153, 122, 283, 154, 231, 77, 60`), frontier **1,010/4,568**. External mathematical review, novelty assessment and independent computational reproduction remain OPEN unless a later preserved checkpoint explicitly changes that status. Internal replay, same-assistant audit and repository publication are not external acceptance.
 
 The temporary branches `threshold-family-scan` and `state279-proof` were reconciled into `main` by merge commit `566e064447a9cd54a8fa253c9049de0ffbc09efe`. Their histories remain preserved.
 
@@ -103,13 +103,13 @@ Thus the exact scan covers every possible excess value; no bespoke hand-rigidity
 The frozen frontier is now
 
 ```text
-1,008 exclusions / 4,570 survivors.
+1,010 exclusions / 4,568 survivors.
 ```
 
 Breakdown:
 
 ```text
-4,492 N34 equality-derived survivors,
+4,490 N34 equality-derived survivors,
 78 N35 m=306-derived survivors.
 ```
 
@@ -117,7 +117,7 @@ These are survivors in a frozen generalisation experiment, **not surviving graph
 
 The extraction utility [`extract_frozen_survivors.py`](project/research/general_n/2026-09-13-alternative-attacks-v1/extract_frozen_survivors.py) is transport/replay infrastructure only; it does not apply a theorem.
 
-## General-theory lesson from the 14 closures
+## General-theory lesson from the 16 closures
 
 The closures support a reusable two-sided architecture:
 
@@ -188,7 +188,7 @@ Replay the strengthened mixed demand-two/demand-three Hall projection on its pre
 E=0,1,3,4,5,6,7.
 ```
 
-If every layer becomes strict, package state 77 immediately as closure number 15.
+If every layer becomes strict, package state 77 immediately as closure number 17.
 
 ### P2. Attack state 60 next
 
@@ -206,7 +206,7 @@ Generalise [`ENDPOINT_CLASS_PACKING.md`](project/research/general_n/2026-09-13-a
 
 ### P4. Widen quantified pruning
 
-Apply the strengthened scanner to the remaining 4,570 frozen scalar survivors wherever its hypotheses apply, preserving inputs, outputs, hashes and failures.
+Apply the strengthened scanner to the remaining 4,568 frozen scalar survivors wherever its hypotheses apply, preserving inputs, outputs, hashes and failures.
 
 ### P5. Continue independent routes and audit
 
