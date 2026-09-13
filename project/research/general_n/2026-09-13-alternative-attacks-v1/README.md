@@ -4,9 +4,9 @@
 
 ## Why this programme exists
 
-The shared-residual-budget continuation rejects 4,487 of 4,584 stored selected patterns, but a fixed-pattern rejection does not exclude a scalar state because another selected geometry may exist. This programme therefore attacks the missing quantifiers directly.
+The shared-residual-budget continuation rejects 4,487 of 4,584 stored selected patterns, but a fixed-pattern rejection does not exclude a scalar state because another selected geometry may exist. This programme attacks the missing quantifiers directly.
 
-The main line quantifies alternative selected sets, source margins and selected excess. A separate maximum-cut line is retained as an independent proof architecture. The quantified line has now produced **four whole-state exclusions: N34 states 227, 279, 588 and 526**.
+The main line quantifies alternative selected sets, source margins and selected excess. A separate maximum-cut line is retained as an independent architecture. The quantified line has now produced **five whole-state exclusions: N34 states 227, 279, 588, 526 and 382**.
 
 ## Core selected-excess mechanism
 
@@ -16,89 +16,73 @@ See [`SELECTION_FREE.md`](SELECTION_FREE.md). For every selected positive-demand
 p_u-rho_u+1 <= e_i := x_i-s_i.                       (1)
 ```
 
-In exact demand `x=s`, every active source therefore has `p_u<=rho_u-1`. More generally, put
+If
 
 ```text
-h_l=#{i:e_i>=l}.
+h_l=#{i:e_i>=l},
 ```
 
-If `p_u-rho_u+1>=l`, every one of the source's `q_u` selected labels has excess at least `l`; hence
-
-```text
-q_u<=h_l,
-```
-
-or equivalently
+then
 
 ```text
 q_u>h_l => p_u<=rho_u+l-2.                            (2)
 ```
 
-The `l=2` member is already strong enough to close most or all of the high-excess tails in all four quantified examples.
+The `l=2` member is already strong enough to close most or all of the high-excess tails in all five quantified examples.
 
-## Whole-state exclusion 1: N34 state 227
+## Whole-state exclusions
 
-Full proof: [`STATE_227_WHOLE_STATE.md`](STATE_227_WHOLE_STATE.md).  
-Machine summary: [`STATE_227_WHOLE_STATE_VERIFICATION.json`](STATE_227_WHOLE_STATE_VERIFICATION.json).  
-Replay: [`STATE_227_REPLAY.md`](STATE_227_REPLAY.md).
+### 1. N34 state 227
+
+[`STATE_227_WHOLE_STATE.md`](STATE_227_WHOLE_STATE.md) / [`STATE_227_REPLAY.md`](STATE_227_REPLAY.md).
 
 ```text
-a=15, b=18, t=1,
 s=2^4,3^11,
 rho=1^7,2,3^10,
 r=39, S=41.
 ```
 
-Exact integer enumeration covers every excess profile through `E=20`; two equality profiles are removed by explicit hand rigidity. The relaxed `h_2` threshold/top-k argument closes `E=21,...,34`; total incoming capacity makes `E>=35` impossible. Frontier: `994/4,584 -> 995/4,583`.
+Exact integer enumeration covers every excess profile through `E=20`; two equality profiles are removed by hand rigidity. The relaxed `h_2` tail closes `E=21,...,34`; incoming capacity excludes `E>=35`. Frontier: `994/4,584 -> 995/4,583`.
 
-## Whole-state exclusion 2: N34 state 279
+### 2. N34 state 279
 
-Full proof: [`STATE_279_WHOLE_STATE.md`](STATE_279_WHOLE_STATE.md).  
-Machine summary: [`STATE_279_WHOLE_STATE_VERIFICATION.json`](STATE_279_WHOLE_STATE_VERIFICATION.json).  
-Replay: [`STATE_279_REPLAY.md`](STATE_279_REPLAY.md).
+[`STATE_279_WHOLE_STATE.md`](STATE_279_WHOLE_STATE.md) / [`STATE_279_REPLAY.md`](STATE_279_REPLAY.md).
 
 ```text
-a=15, b=18, t=1,
 s=2^3,3^12,
 rho=1^7,3^11,
 r=40, S=42.
 ```
 
-The exact low-excess verifier covers `E=0,...,15`; three non-strict profiles are removed by explicit hand rigidity. The `h_2` tail closes every `E=16,...,34`, with minimum strict tail gap 2, and total incoming capacity excludes `E>=35`. Frontier: `995/4,583 -> 996/4,582`.
+Exact low-excess replay covers `E=0,...,15`, with three hand-rigidity cases. The `h_2` tail closes `E=16,...,34`; incoming capacity excludes `E>=35`. Frontier: `995/4,583 -> 996/4,582`.
 
-State 279 exposed a reusable **zero-excess availability** mechanism: a zero-excess label can use only sources with `p_u<=rho_u-1`, but the global incoming ledger can force the cheapest-q sources to carry too much `p`, pushing those labels onto larger endpoint loads and breaking the `C_i` budget.
+State 279 exposed a reusable **zero-excess availability** mechanism: the global incoming ledger can force cheap-q sources to high p, making them unavailable to zero-excess labels and pushing those labels onto larger endpoint loads.
 
-## Whole-state exclusion 3: N34 state 588
+### 3. N34 state 588
 
-Full proof: [`STATE_588_WHOLE_STATE.md`](STATE_588_WHOLE_STATE.md).  
-Machine summary: [`STATE_588_WHOLE_STATE_VERIFICATION.json`](STATE_588_WHOLE_STATE_VERIFICATION.json).  
-Replay: [`STATE_588_REPLAY.md`](STATE_588_REPLAY.md).
+[`STATE_588_WHOLE_STATE.md`](STATE_588_WHOLE_STATE.md) / [`STATE_588_REPLAY.md`](STATE_588_REPLAY.md).
 
 ```text
-a=15, b=18, t=1,
 s=3^15,
 rho=1^5,2,3^12,
 r=43, S=45.
 ```
 
-The exact low-excess scan covers `E=0,...,15`; its unique coarse equality is excluded by incidence rigidity, giving `sum C_i>=106>97`. A cheap relaxed `h_2` screen is strict on every `E=16,...,34` except `E=16` and `E=24`; exact profile replay closes those two layers. Incoming capacity excludes `E>=35`. Frontier: `996/4,582 -> 997/4,581`.
+The exact low-excess scan has one coarse equality, excluded by `sum C_i>=106>97`. A cheap `h_2` screen leaves only `E=16` and `E=24`; exact replay closes both. Frontier: `996/4,582 -> 997/4,581`.
 
-State 588 shows that the mechanism is not tied to demand-two correction terms and motivates cheap tail triage before exact enumeration.
+State 588 shows the mechanism is not tied to demand-two correction terms and motivates cheap tail triage before exact enumeration.
 
-## Whole-state exclusion 4: N34 state 526
+### 4. N34 state 526
 
-Full proof: [`STATE_526_WHOLE_STATE.md`](STATE_526_WHOLE_STATE.md).  
-Machine summary: [`STATE_526_WHOLE_STATE_VERIFICATION.json`](STATE_526_WHOLE_STATE_VERIFICATION.json).  
-Replay: [`STATE_526_REPLAY.md`](STATE_526_REPLAY.md).
+[`STATE_526_WHOLE_STATE.md`](STATE_526_WHOLE_STATE.md) / [`STATE_526_REPLAY.md`](STATE_526_REPLAY.md).
 
 ```text
-a=15, b=18, t=1,
 s=2,3^14,
 rho=1^5,2^2,3^11,
 r=42, S=44.
 ```
 
-The exact low-excess scan covers `E=0,...,16`; it has one coarse equality,
+The exact scan through `E=16` has one coarse equality,
 
 ```text
 E=7, e_2=7, e_3=0^14,
@@ -106,64 +90,77 @@ q_(rho=2)=1^2,
 q_(rho=3)=1^2,5^7,6^2.
 ```
 
-The incoming ledger forces the two `rho=2,q=1` sources to `p=4`, the two `rho=3,q=1` sources to `p=5`, and all nine `q=5/6` sources to `p=2`. The four q=1 sources must select the unique high-excess label. Hence all fourteen zero-excess demand-three labels are selected only at q=5/6 sources, so each has `C_i>=7`. Those labels alone give `sum C_i>=98`, contradicting the exact total `sum C_i=93`.
+Equality forces every q=1 source to high p, so all fourteen zero-excess demand-three labels must use q=5/6, p=2 sources and each has `C_i>=7`; they alone give `sum C_i>=98>93`. The relaxed `h_2` tail is strict for `E=17,...,34`; its sole zero at `E=16` is already exactly excluded. Frontier: `997/4,581 -> 998/4,580`.
 
-The relaxed `h_2` tail has gap zero only at `E=16`, already strictly excluded by the exact scan with gap 23. Every `E=17,...,34` has positive relaxed gap; total incoming capacity `sum p<=78` excludes `E>=35`. Frontier: `997/4,581 -> 998/4,580`.
+### 5. N34 state 382
+
+[`STATE_382_WHOLE_STATE.md`](STATE_382_WHOLE_STATE.md) / [`STATE_382_REPLAY.md`](STATE_382_REPLAY.md).
+
+```text
+s=2^2,3^13,
+rho=1^6,2,3^11,
+r=41, S=43.
+```
+
+Every exact low-excess profile through `E=17` is strictly excluded; no hand-rigidity exception is needed. The decisive refinement is to retain the universal contribution from zero-excess demand-two labels. If
+
+```text
+z_0=#{i:s_i=2,e_i=0},
+```
+
+then the baseline identity gives the stronger necessary inequality
+
+```text
+T + 2 z_0 - P_+ <= 3(84+E).                          (3)
+```
+
+Combining (3) with the relaxed `h_2` source caps makes every `E=17,...,34` tail layer strict. Without the `2z_0` term, the old relaxation misses `E=17,21,22`; with it their gaps are `3,3,2`. `E=16` is already exactly excluded. Frontier: `998/4,580 -> 999/4,579`.
 
 ## Current frozen frontier
 
-The four quantified whole-state closures give
+The five quantified whole-state closures give
 
 ```text
-998 exclusions / 4,580 survivors,
+999 exclusions / 4,579 survivors,
 ```
 
 split as
 
 ```text
-4,502 N34 equality-derived survivors,
+4,501 N34 equality-derived survivors,
 78 N35 m=306-derived survivors.
 ```
 
-These are scalar states in a frozen generalisation experiment, not surviving graphs. The separate fixed-order N34/N35 candidate proofs were already closed and are unchanged.
+These are scalar states in a frozen generalisation experiment, not surviving graphs. The fixed-order N34/N35 candidate proofs were already closed and are unchanged.
 
-## New screening strategy
+## Default family-screening strategy
 
-States 588 and 526 support a more efficient family-level workflow than exact-enumerating every state from scratch:
+The programme should now use the following order:
 
-1. compute the cheap `h_2` relaxed tail gaps across the allowed excess range;
-2. rank states by the number and severity of non-strict layers;
-3. exact-enumerate only those exceptional layers plus the genuinely low-excess region;
-4. if an equality survives, extract its source-capacity equality conditions and seek a hand incidence-rigidity contradiction;
-5. only after quantified pruning return to the stronger shared-residual/pair geometry.
+1. apply the refined `h_2` tail screen, **retaining elementary negative baseline terms such as `2z_0`** rather than discarding them;
+2. rank states by the number and severity of non-strict excess layers;
+3. exact-enumerate only the exceptional layers and the low-excess boundary;
+4. if an equality survives, extract its source-capacity equality conditions and seek an incidence-rigidity contradiction;
+5. after quantified pruning, return to the stronger shared-residual/pair geometry.
 
 The frozen survivor extraction utility [`extract_frozen_survivors.py`](extract_frozen_survivors.py) is transport/replay infrastructure only; it does not itself apply a theorem.
 
-## Raw candidate capacity
+## Raw candidate capacity and independent route
 
-For a raw candidate quasi-edge `ui->w`, the selection-free package also gives
+The selection-free package also gives raw candidate-label subset capacities; these remain a secondary graph-level projection route without choosing representatives.
 
-```text
-d_i<=c_u-1,
-C_i>=mu_u.
-```
-
-These define candidate-label sets `K_u` and a source-subset capacity inequality. This remains a secondary route for projecting graph-level candidate availability without choosing representatives.
-
-## Independent maximum-cut route
-
-[`MAXCUT_ROUTE.md`](MAXCUT_ROUTE.md) records
+[`MAXCUT_ROUTE.md`](MAXCUT_ROUTE.md) records the independent identity
 
 ```text
-e(G)=|X||Y|+I-M,
+e(G)=|X||Y|+I-M.
 ```
 
-for any cut, where `I` is the number of internal edges and `M` the missing cross-pairs. Thus `I<=M` for some cut would prove Murty–Simon. A direct one-edge/one-nonedge matching proof is false and remains preserved as a failed route; any viable maximum-cut proof must use aggregate charging or stability.
+A direct one-edge/one-nonedge matching proof is false and remains preserved as a failed route; any viable maximum-cut proof must use aggregate charging or stability.
 
 ## Audit boundaries and current priority
 
-[`AUDIT.md`](AUDIT.md) records invalidated shortcuts and proof-status boundaries. None of the four whole-state closures uses numerical solver infeasibility: the proof-critical computations are exact integer enumerations, with explicit hand arguments where the coarse envelope is non-strict.
+[`AUDIT.md`](AUDIT.md) records invalidated shortcuts and proof-status boundaries. None of the five whole-state closures uses numerical solver infeasibility: the proof-critical computations are exact integer enumerations, with explicit hand arguments where a coarse envelope is non-strict.
 
 External mathematical review of the canonical bridge, selected-excess/threshold lemmas and hand-rigidity arguments remains open; independent computational reproduction remains open.
 
-**Current priority:** run cheap threshold triage across the remaining **4,580** frozen states, especially the adjacent low-demand N34 family, and seek a symbolic theorem explaining the common state-227/state-279/state-588/state-526 mechanism before returning to fixed-pattern refinements.
+**Current priority:** rerun the adjacent low-demand N34 family with the **refined h2 + zero-label correction** before spending effort on exact enumeration. Seek a symbolic theorem explaining the common state-227/state-279/state-588/state-526/state-382 mechanism.
