@@ -1,0 +1,71 @@
+{
+  "schema": "state-588-whole-state-v1",
+  "status": "PASS_WITH_HAND_RIGIDITY",
+  "state": {
+    "layer": "n34-m289",
+    "state_id": 588,
+    "a": 15,
+    "b": 18,
+    "t": 1,
+    "s": "3^15",
+    "rho": "1^5,2,3^12",
+    "r": 43,
+    "S": 45
+  },
+  "low_excess": {
+    "range_E": [0, 15],
+    "rows": [
+      {"E":0,"profiles":1,"strict":1,"equality":0,"negative":0,"source_infeasible":0,"minimum_strict_gap":6},
+      {"E":1,"profiles":1,"strict":1,"equality":0,"negative":0,"source_infeasible":0,"minimum_strict_gap":12},
+      {"E":2,"profiles":2,"strict":2,"equality":0,"negative":0,"source_infeasible":0,"minimum_strict_gap":17},
+      {"E":3,"profiles":3,"strict":3,"equality":0,"negative":0,"source_infeasible":0,"minimum_strict_gap":10},
+      {"E":4,"profiles":5,"strict":5,"equality":0,"negative":0,"source_infeasible":0,"minimum_strict_gap":9},
+      {"E":5,"profiles":7,"strict":7,"equality":0,"negative":0,"source_infeasible":0,"minimum_strict_gap":8},
+      {"E":6,"profiles":11,"strict":11,"equality":0,"negative":0,"source_infeasible":0,"minimum_strict_gap":3},
+      {"E":7,"profiles":15,"strict":15,"equality":0,"negative":0,"source_infeasible":0,"minimum_strict_gap":4},
+      {"E":8,"profiles":22,"strict":22,"equality":0,"negative":0,"source_infeasible":0,"minimum_strict_gap":5},
+      {"E":9,"profiles":30,"strict":29,"equality":1,"negative":0,"source_infeasible":0,"minimum_strict_gap":12},
+      {"E":10,"profiles":41,"strict":41,"equality":0,"negative":0,"source_infeasible":0,"minimum_strict_gap":7},
+      {"E":11,"profiles":54,"strict":54,"equality":0,"negative":0,"source_infeasible":0,"minimum_strict_gap":8},
+      {"E":12,"profiles":73,"strict":73,"equality":0,"negative":0,"source_infeasible":0,"minimum_strict_gap":6},
+      {"E":13,"profiles":94,"strict":94,"equality":0,"negative":0,"source_infeasible":0,"minimum_strict_gap":15},
+      {"E":14,"profiles":123,"strict":123,"equality":0,"negative":0,"source_infeasible":0,"minimum_strict_gap":16},
+      {"E":15,"profiles":157,"strict":157,"equality":0,"negative":0,"source_infeasible":0,"minimum_strict_gap":8}
+    ],
+    "hand_rigidity": {
+      "E": 9,
+      "excess": "0^12,3^3",
+      "unique_q": "3^6,6^6",
+      "required_q3_p": 5,
+      "q6_total_p": 5,
+      "lower_sum_C_zero": 82,
+      "lower_sum_C_high": 24,
+      "lower_sum_C_total": 106,
+      "exact_sum_C": 97,
+      "result": "excluded"
+    }
+  },
+  "h2_tail": {
+    "range_E": [16, 34],
+    "rows": [
+      {"E":16,"h":4,"gap":-3},{"E":17,"h":4,"gap":1},{"E":18,"h":4,"gap":6},{"E":19,"h":5,"gap":8},{"E":20,"h":5,"gap":8},{"E":21,"h":5,"gap":6},{"E":22,"h":5,"gap":6},{"E":23,"h":5,"gap":4},{"E":24,"h":5,"gap":0},{"E":25,"h":5,"gap":14},{"E":26,"h":6,"gap":13},{"E":27,"h":6,"gap":6},{"E":28,"h":6,"gap":7},{"E":29,"h":6,"gap":8},{"E":30,"h":6,"gap":12},{"E":31,"h":6,"gap":18},{"E":32,"h":6,"gap":26},{"E":33,"h":7,"gap":31},{"E":34,"h":7,"gap":30}
+    ],
+    "non_strict_layers": [16, 24]
+  },
+  "exact_exception_layers": {
+    "rows": [
+      {"E":16,"profiles":200,"strict":200,"equality":0,"negative":0,"source_infeasible":0,"minimum_strict_gap":17},
+      {"E":24,"profiles":1009,"strict":793,"equality":0,"negative":0,"source_infeasible":216,"minimum_strict_gap":32}
+    ]
+  },
+  "capacity_ceiling": {
+    "sum_p_upper": 79,
+    "Q": "45+E",
+    "maximum_E": 34,
+    "reason": "5*3+1*4+12*5=79"
+  },
+  "whole_state_exclusion": true,
+  "frontier_before": {"excluded":996,"survivors":4582,"n34_survivors":4504,"n35_survivors":78},
+  "frontier_after": {"excluded":997,"survivors":4581,"n34_survivors":4503,"n35_survivors":78},
+  "trust_boundary": "External review of the canonical bridge and hand rigidity remains open; independent computational reproduction remains open."
+}
