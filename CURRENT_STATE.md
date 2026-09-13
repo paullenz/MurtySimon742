@@ -2,7 +2,7 @@
 
 **Purpose.** Durable restart point after chat reset, client desynchronisation or context loss. The repository, not any chat transcript, is the source of truth. Read this file first, inspect later `main` commits, then follow the linked packages.
 
-**Research state reconciled:** 13 September 2026 through the **N34 state-153 whole-state exclusion**, the seventh quantified whole-state closure after states 227, 279, 588, 526, 382 and 519. External mathematical review, novelty assessment and independent computational reproduction remain OPEN unless a later preserved checkpoint explicitly changes that status. Internal replay, same-assistant audit and repository publication are not external acceptance.
+**Research state reconciled:** 13 September 2026 through the canonical N34 whole-state ledger: **14 quantified closures** (`227, 279, 588, 526, 382, 519, 230, 282, 385, 153, 122, 283, 154, 231`), frontier **1,008/4,570**. External mathematical review, novelty assessment and independent computational reproduction remain OPEN unless a later preserved checkpoint explicitly changes that status. Internal replay, same-assistant audit and repository publication are not external acceptance.
 
 The temporary branches `threshold-family-scan` and `state279-proof` were reconciled into `main` by merge commit `566e064447a9cd54a8fa253c9049de0ffbc09efe`. Their histories remain preserved.
 
@@ -103,13 +103,13 @@ Thus the exact scan covers every possible excess value; no bespoke hand-rigidity
 The frozen frontier is now
 
 ```text
-1,001 exclusions / 4,577 survivors.
+1,008 exclusions / 4,570 survivors.
 ```
 
 Breakdown:
 
 ```text
-4,499 N34 equality-derived survivors,
+4,492 N34 equality-derived survivors,
 78 N35 m=306-derived survivors.
 ```
 
@@ -117,7 +117,7 @@ These are survivors in a frozen generalisation experiment, **not surviving graph
 
 The extraction utility [`extract_frozen_survivors.py`](project/research/general_n/2026-09-13-alternative-attacks-v1/extract_frozen_survivors.py) is transport/replay infrastructure only; it does not apply a theorem.
 
-## General-theory lesson from the seven closures
+## General-theory lesson from the 14 closures
 
 The closures support a reusable two-sided architecture:
 
@@ -140,10 +140,10 @@ The current layer summary is:
 | State | minimum gap | nonpositive excess layers |
 |---:|---:|---|
 | 153 | `+1` | none — **whole state closed** |
-| 283 | `-2` | `E=7 (-2)` |
-| 122 | `-3` | `E=0 (-3)` |
-| 154 | `-3` | `E=0 (-1), 6 (-1), 7 (-3)` |
-| 231 | `-7` | `E=6 (-5), 7 (-2), 8 (-3), 9 (-7), 10 (-3)` |
+| 283 | `+1` | none — **whole state closed** |
+| 122 | `+1` | none — **whole state closed** |
+| 154 | `+1` | none — **whole state closed** |
+| 231 | `+1` | none — **whole state closed** |
 | 77 | `-7` | `E=0 (-7), 1 (-3), 3 (0), 4 (0), 5 (0), 6 (-1), 7 (0)` |
 | 60 | `-11` | `E=0 (-11), 1 (-5), 2 (-2), 3 (-3), 4 (-3), 5 (-5), 6 (-2), 7 (-3)` |
 
@@ -151,11 +151,7 @@ This is a useful compression. After state 153, **state 283 has only one exceptio
 
 ## Adjacent-family narrow scan
 
-[`REFINED_H2_FAMILY_SCAN.md`](project/research/general_n/2026-09-13-alternative-attacks-v1/REFINED_H2_FAMILY_SCAN.md) contains nine structurally adjacent N34 records. At scan time five were closed and four were active: states `230,282,385,519`. State 519 is now closed. The remaining active companions are
-
-```text
-230, 282, 385.
-```
+[`REFINED_H2_FAMILY_SCAN.md`](project/research/general_n/2026-09-13-alternative-attacks-v1/REFINED_H2_FAMILY_SCAN.md) contains nine structurally adjacent N34 records. At scan time five were closed and four were active: states `230,282,385,519`. **All four are now closed**; the canonical ledger records their whole-state status.
 
 The old refined tail is already strict from `E=21` upward for 282 and 385, and `E=23` upward for 230. The endpoint-order term should still be propagated through this narrow family, but the broader matrix now offers smaller immediate targets in states 283 and 122.
 
@@ -177,47 +173,44 @@ Degree-preserving `2x2` repairs live in the **relaxed selected-incidence matrix*
 
 1. **External review of the canonical bridge**, especially the graph-to-quasi-edge implications; this remains the main correlated correctness risk.
 2. External review/novelty assessment of the candidate `7/12` theorem and later general lemmas, especially selection-free candidate capacity, selected excess, threshold family, refined baseline/order-statistic lemma and zero-excess endpoint-order lemma.
-3. Independent reproduction of the exact computations for states 227, 279, 588, 526, 382, 519 and 153.
+3. Independent reproduction of the exact computations and hand steps linked from the canonical whole-state ledger.
 4. External checking of hand-rigidity/endpoint arguments in the closures that use them.
 5. Preserve the complete seven-state extension outputs, not only the successful state-153 layer table, before relying on them downstream.
 6. Continue preserving failures, invalidated shortcuts, solver timeouts and publication/tooling mistakes. Never treat numerical infeasibility or noncompletion as proof.
 
 ## Current research priorities
 
-### P1. Attack the two one-layer extension survivors
+### P1. Attack state 77 with joint class packing
 
-Prioritize:
+Replay the strengthened mixed demand-two/demand-three Hall projection on its preserved weak layers
 
 ```text
-state 122: E=0, current gap -3;
-state 283: E=7, current gap -2.
+E=0,1,3,4,5,6,7.
 ```
 
-Extract their minimizing q-vectors/profiles, then apply the strongest exact-demand endpoint-order/source-availability and threshold-incidence constraints. If either closes, package it as the next whole-state note immediately.
+If every layer becomes strict, package state 77 immediately as closure number 15.
 
-### P2. Continue with state 154
+### P2. Attack state 60 next
 
-If P1 does not immediately close both states, analyze state 154's three residual layers `E=0,6,7`. Its small residual set makes it the next best exact target.
+Its preserved weak layers are
 
-### P3. Seek a symbolic threshold/availability theorem
+```text
+E=0,1,2,3,4,5,6,7.
+```
 
-Extract a parameterized inequality in `(a,b,rho,s,E,h_l)` that explains the seven closures and the matrix compression, rather than accumulating isolated finite results.
+Use the same scanner first; only derive a new inequality if a residual equality or negative gap survives.
 
-### P4. Propagate the endpoint-order correction through 230/282/385
+### P3. Extract a symbolic mixed-class Hall/flow theorem
 
-Complete the original adjacent-family P1 by adding the eligible-source `lambda_d` term to the generic scanner and reranking the three remaining narrow-family states.
+Generalise [`ENDPOINT_CLASS_PACKING.md`](project/research/general_n/2026-09-13-alternative-attacks-v1/ENDPOINT_CLASS_PACKING.md), especially the joint demand-two/demand-three threshold system that closed state 231. Seek a parameterised theorem rather than accumulating state-specific patches.
 
-### P5. Widen quantified pruning
+### P4. Widen quantified pruning
 
-Apply the strengthened scanner to the remaining 4,577 frozen scalar survivors wherever its hypotheses apply, preserving full inputs, outputs, hashes and failures.
+Apply the strengthened scanner to the remaining 4,570 frozen scalar survivors wherever its hypotheses apply, preserving inputs, outputs, hashes and failures.
 
-### P6. Continue selection-free and maximum-cut routes in parallel
+### P5. Continue independent routes and audit
 
-Seek useful raw candidate-capacity projections and aggregate maximum-cut charging/stability statements. Do not retry the falsified direct matching.
-
-### P7. Return to shared residual/pair geometry after quantified pruning
-
-Bring the stronger shared-budget and exact-destination machinery back after the threshold programme has reduced the alternative-margin/profile space.
+Maintain external review of the canonical bridge and fixed-order candidates; continue selection-free and maximum-cut routes where they offer genuinely different information. Preserve failed approaches and do not infer proof from timeout or numerical infeasibility alone.
 
 ## Research/preservation rules
 
@@ -236,8 +229,8 @@ On a fresh session:
 
 1. open this file;
 2. inspect `main` commits newer than this reconciliation point;
-3. read the alternative-attacks README and the seven whole-state notes (227, 279, 588, 526, 382, 519, 153) plus verification summaries;
-4. inspect `REFINED_BASELINE3_LEMMA.md`, `ZERO_EXCESS_ENDPOINT_ORDER.md`, `REFINED_H2_FAMILY_SCAN.md`, `make_low_demand_extension_scanner.py` and the preserved state-153 extension table;
+3. read the alternative-attacks README, [`WHOLE_STATE_LEDGER.tsv`](project/research/general_n/2026-09-13-alternative-attacks-v1/WHOLE_STATE_LEDGER.tsv), and the closure records linked from that ledger;
+4. inspect `REFINED_BASELINE3_LEMMA.md`, `ZERO_EXCESS_ENDPOINT_ORDER.md`, `ENDPOINT_CLASS_PACKING.md`, `make_class_packing_scanner.py` and the current residual result tables;
 5. continue from P1/P2 unless later preserved work changes priority;
 6. preserve any material result or failure before relying on it downstream;
 7. after a material change, update this handoff in the same repository-writing pass.
