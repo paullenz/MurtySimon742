@@ -1,0 +1,103 @@
+{
+  "schema": "state-279-whole-state-v1",
+  "status": "PASS_WITH_HAND_RIGIDITY",
+  "state": {
+    "layer": "n34-m289",
+    "state_id": 279,
+    "a": 15,
+    "b": 18,
+    "t": 1,
+    "s": "2^3,3^12",
+    "rho": "1^7,3^11",
+    "r": 40,
+    "S": 42
+  },
+  "low_excess": {
+    "range_E": [0,15],
+    "rows": [
+      {"E":0,"profiles":1,"strict":1,"equality":0,"negative":0,"source_infeasible":0,"minimum_strict_gap":2,"minimum_finite_gap":2},
+      {"E":1,"profiles":2,"strict":2,"equality":0,"negative":0,"source_infeasible":0,"minimum_strict_gap":5,"minimum_finite_gap":5},
+      {"E":2,"profiles":5,"strict":5,"equality":0,"negative":0,"source_infeasible":0,"minimum_strict_gap":11,"minimum_finite_gap":11},
+      {"E":3,"profiles":10,"strict":10,"equality":0,"negative":0,"source_infeasible":0,"minimum_strict_gap":5,"minimum_finite_gap":5},
+      {"E":4,"profiles":19,"strict":19,"equality":0,"negative":0,"source_infeasible":0,"minimum_strict_gap":5,"minimum_finite_gap":5},
+      {"E":5,"profiles":33,"strict":33,"equality":0,"negative":0,"source_infeasible":0,"minimum_strict_gap":2,"minimum_finite_gap":2},
+      {"E":6,"profiles":57,"strict":55,"equality":1,"negative":1,"source_infeasible":0,"minimum_strict_gap":6,"minimum_finite_gap":-2},
+      {"E":7,"profiles":92,"strict":92,"equality":0,"negative":0,"source_infeasible":0,"minimum_strict_gap":5,"minimum_finite_gap":5},
+      {"E":8,"profiles":147,"strict":147,"equality":0,"negative":0,"source_infeasible":0,"minimum_strict_gap":2,"minimum_finite_gap":2},
+      {"E":9,"profiles":226,"strict":225,"equality":1,"negative":0,"source_infeasible":0,"minimum_strict_gap":9,"minimum_finite_gap":0},
+      {"E":10,"profiles":341,"strict":341,"equality":0,"negative":0,"source_infeasible":0,"minimum_strict_gap":7,"minimum_finite_gap":7},
+      {"E":11,"profiles":501,"strict":501,"equality":0,"negative":0,"source_infeasible":0,"minimum_strict_gap":8,"minimum_finite_gap":8},
+      {"E":12,"profiles":726,"strict":726,"equality":0,"negative":0,"source_infeasible":0,"minimum_strict_gap":6,"minimum_finite_gap":6},
+      {"E":13,"profiles":1028,"strict":1028,"equality":0,"negative":0,"source_infeasible":0,"minimum_strict_gap":15,"minimum_finite_gap":15},
+      {"E":14,"profiles":1438,"strict":1438,"equality":0,"negative":0,"source_infeasible":0,"minimum_strict_gap":17,"minimum_finite_gap":17},
+      {"E":15,"profiles":1977,"strict":1977,"equality":0,"negative":0,"source_infeasible":0,"minimum_strict_gap":20,"minimum_finite_gap":20}
+    ],
+    "hand_rigidity_cases": [
+      {
+        "E":6,
+        "e2":[0,0,0],
+        "e3":[0,0,0,0,0,0,0,0,0,0,0,6],
+        "coarse_gap":-2,
+        "unique_nonpositive_q":[1,1,5,5,5,5,5,5,5,5,6],
+        "hand_lower_C0":15,
+        "coarse_C0":6,
+        "result":"excluded"
+      },
+      {
+        "E":6,
+        "e2":[0,0,0],
+        "e3":[0,0,0,0,0,0,0,0,0,0,3,3],
+        "coarse_gap":0,
+        "unique_nonpositive_q":[2,2,2,2,2,6,6,6,6,7,7],
+        "hand_argument":"C0=6 would require at least three q=2,p=0 sources for the six zero-excess demand-two incidences, leaving active incoming capacity at most 22 instead of the required 27.",
+        "result":"excluded"
+      },
+      {
+        "E":9,
+        "e2":[0,0,0],
+        "e3":[0,0,0,0,0,0,0,0,0,3,3,3],
+        "coarse_gap":0,
+        "unique_nonpositive_q":[3,3,3,3,3,6,6,6,6,6,6],
+        "hand_lower_C0":9,
+        "coarse_C0":6,
+        "result":"excluded"
+      }
+    ]
+  },
+  "threshold_tail": {
+    "range_E": [16,34],
+    "rule": "For h=#{i:e_i>=2}, each rho=3 source satisfies q>h => p<=3; otherwise only p<=5 is retained.",
+    "rows": [
+      {"E":16,"h":4,"minimum_gap":2},
+      {"E":17,"h":4,"minimum_gap":7},
+      {"E":18,"h":4,"minimum_gap":10},
+      {"E":19,"h":5,"minimum_gap":10},
+      {"E":20,"h":5,"minimum_gap":10},
+      {"E":21,"h":5,"minimum_gap":9},
+      {"E":22,"h":5,"minimum_gap":8},
+      {"E":23,"h":5,"minimum_gap":12},
+      {"E":24,"h":6,"minimum_gap":12},
+      {"E":25,"h":6,"minimum_gap":15},
+      {"E":26,"h":6,"minimum_gap":18},
+      {"E":27,"h":6,"minimum_gap":20},
+      {"E":28,"h":6,"minimum_gap":24},
+      {"E":29,"h":6,"minimum_gap":27},
+      {"E":30,"h":6,"minimum_gap":30},
+      {"E":31,"h":7,"minimum_gap":42},
+      {"E":32,"h":7,"minimum_gap":42},
+      {"E":33,"h":7,"minimum_gap":46},
+      {"E":34,"h":7,"minimum_gap":44}
+    ],
+    "minimum_gap": 2
+  },
+  "capacity_ceiling": {
+    "sum_p_upper": 76,
+    "Q": "42+E",
+    "maximum_E": 34,
+    "reason": "7*3 + 11*5 = 76"
+  },
+  "whole_state_exclusion": true,
+  "frontier_before": {"excluded":995,"survivors":4583,"n34_survivors":4505,"n35_survivors":78},
+  "frontier_after": {"excluded":996,"survivors":4582,"n34_survivors":4504,"n35_survivors":78},
+  "trust_boundary": "External review of the canonical bridge and hand rigidity remains open; independent computational reproduction remains open."
+}
