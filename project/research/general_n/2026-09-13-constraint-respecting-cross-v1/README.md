@@ -1,6 +1,6 @@
 # Constraint-respecting cross-neighbourhood pilot v1
 
-13 September 2026. **Exploratory continuation plus candidate general hand lemmas.** External mathematical review and novelty assessment remain OPEN. No fixed-order ledger, 7/12 threshold or whole-state frontier count is changed by this checkpoint.
+13 September 2026. **Exploratory continuation plus candidate general hand lemmas and an exact full-domain negative application result.** External mathematical review and novelty assessment remain OPEN. No fixed-order ledger, 7/12 threshold or whole-state frontier count is changed by this checkpoint.
 
 ## Why this continuation exists
 
@@ -71,18 +71,55 @@ The `k=1` case is only endpoint-load information, while `k>=2` retains higher-or
 
 More importantly for projection, the exact receiver condition `S_v subset N_u` yields a **receiver-containment spill inequality** depending only on `(a,b,s,rho,q)`. It compares a lower bound on selected mass forced outside `N_u` with the maximum outside mass that can be packed into sources not needed as contained compatible receivers. For each source it also retains the scalar receiver requirements `q_v+rho_v>=q_u-1`, `q_v<=q_u+rho_u` and positive incoming capacity.
 
-A standard-library deterministic reconnaissance check of 2,000 exact-demand selected patterns per frozen state finds violations in **173/2,000** patterns for N34 m289 state 13537 (183 source-level violations) and zero in the other five samples. This does not exclude state 13537; it demonstrates that the new projected inequality can remove selected-degree configurations before residual placement. See [`check_containment_spill.py`](check_containment_spill.py) and [`CONTAINMENT_SPILL_CHECK.json`](CONTAINMENT_SPILL_CHECK.json).
+A standard-library deterministic reconnaissance check of 2,000 exact-demand selected patterns per frozen state found violations in **173/2,000** patterns for N34 m289 state 13537 (183 source-level violations) and zero in the other five samples. That was useful for discovering the inequality but was not evidence of a whole-state exclusion.
+
+## Exact full-domain spill application: zero whole-state exclusions
+
+The reconnaissance was followed by a complete positive-witness study over all **4,584 combined compatible-routing survivors**. The aim was deliberately constructive: a single directly checkable witness is enough to show that the spill inequality, together with the selected-degree/transport conditions checked here, does **not** eliminate that state.
+
+[`assemble_exact_spill_witness.py`](assemble_exact_spill_witness.py) and the preserved [`FULL_DOMAIN_SPILL_EXACT.json`](FULL_DOMAIN_SPILL_EXACT.json) give one witness for every survivor with the stronger choice
+
+```text
+x_i = s_i  for every label i.
+```
+
+Each witness directly checks:
+
+- exact selected label degrees `x=s`;
+- source eligibility `rho_u>=s_i` for every selected incidence;
+- source selected-degree capacity `q_u<=a-rho_u`;
+- total selected/incoming balance;
+- every preserved nested transport-tail inequality;
+- the scalar candidate-receiver count;
+- the receiver-containment spill inequality at every source.
+
+The complete result is:
+
+```text
+combined survivors checked                    4,584
+exact-demand witnesses found                  4,584
+unresolved                                        0
+whole-state exclusions added                      0
+minimum candidate-receiver margin                 0
+minimum spill slack                               0
+```
+
+The generation route was 4,484 first-pass exact witnesses, 98 deeper exact-demand search witnesses and two deterministic boundary exact-demand witnesses. All final witnesses are rechecked from their stored selected sets and degree data; no solver infeasibility result is used to establish the zero-gain conclusion.
+
+This is an exact **limit result for the scalar spill projection**, not a feasibility result for the original graph problem. The witnesses do not construct residual sets, exact compatible destinations, heavy-H data or the final Hall routing. A state can therefore survive this projection and still fail much later set-level conditions.
+
+The full-domain result also corrects the impression one might get from the `173/2,000` reconnaissance count: sampled selected-degree configurations can fail the spill inequality while every whole state still has another selected-degree configuration that passes it. Sample frequency must not be extrapolated into whole-state reach.
 
 ## Interpretation
 
-The work sharpens the diagnosis in two directions:
+The work now sharpens the diagnosis more decisively:
 
-1. The previous deterministic residual placement was not the only problem. Many substantially different selected patterns also fail to admit residual sets giving every selected incidence an exact compatible destination.
-2. Selected-pattern changes can materially increase compatible-destination availability, so the obstruction is not captured by scalar source sizes alone.
-3. Exact compatibility contains a higher-order co-singleton design condition.
-4. Part of the receiver-containment condition can nevertheless be projected back to the scalar selected-degree profile through the spill inequality.
+1. Exact compatibility contains genuinely higher-order information: the co-singleton trace hierarchy is not reducible to individual endpoint loads.
+2. The receiver-containment spill inequality successfully projects part of that information to `(a,b,s,rho,q)` and can remove individual selected-degree configurations.
+3. **That scalar projection is exhausted at the current whole-state frontier:** every one of the 4,584 survivors has an exact-demand witness passing it.
+4. The remaining information therefore lies in the actual set geometry—simultaneous co-singleton traces, residual placements and exact receiver containment—not in this scalar spill bound alone.
 
-The next high-value test is therefore **complete**, not random: add the spill inequality to the preserved compatible-routing `q`/source-option domain and determine by exact arithmetic whether it removes any of the 4,584 generalisation survivors or strengthens the closed potential. If it does, inspect the first witnesses for a simpler demand/tail consequence; if it does not, preserve the limit.
+The next high-value target is the first genuinely set-level projection. The natural starting point is the `k=2` co-singleton/pair-overlap condition: count how the `q_u` distinct exception rows must simultaneously realize `q_u-1` traces of every selected pair, and compare that requirement with the selected/residual pair capacity available across B. Any resulting inequality should be tested on complete preserved domains and separated carefully from raw solver infeasibility.
 
 ## Reproduction
 
@@ -92,18 +129,24 @@ SciPy/NumPy are needed only for exploratory fixed-pattern search:
 python project/research/general_n/2026-09-13-constraint-respecting-cross-v1/run_fixed_selected_search.py --quick --output QUICK_RESULTS.json
 ```
 
-The full default sampling schedule mirrors the preserved observed-run parameters but may be slow and is not promoted as proof evidence. The positive partial witness and the new spill checker require only the Python standard library:
+The positive partial witness and the local spill reconnaissance require only the Python standard library:
 
 ```sh
 python project/research/general_n/2026-09-13-constraint-respecting-cross-v1/validate_partial.py
 python project/research/general_n/2026-09-13-constraint-respecting-cross-v1/check_containment_spill.py
 ```
 
+The complete exact-demand witness assembly is also deterministic/checkable from the preserved catalogue evidence:
+
+```sh
+python project/research/general_n/2026-09-13-constraint-respecting-cross-v1/assemble_exact_spill_witness.py
+```
+
 ## Status
 
-- whole-state exclusions added: **0**;
+- whole-state exclusions added by spill: **0**;
 - compatible-routing/generalisation frontier: unchanged at **994 exclusions / 4,584 survivors**;
 - fixed-order candidate proofs N34/N35: unchanged and already closed by their own packages;
 - candidate new general mathematics: co-singleton trace/moment hierarchy and receiver-containment spill inequality;
-- bounded evidence: broad non-proof negative sampling, a directly validated 19/37 partial pattern, and 173/2,000 spill violations in one frozen stratum;
-- next target: exact full-domain application of the spill inequality.
+- exact limit: **all 4,584 survivors admit exact-demand selected/transport/spill witnesses**;
+- next target: pair/higher-order set-overlap projection and residual-compatible construction, not further scalar spill tuning.
