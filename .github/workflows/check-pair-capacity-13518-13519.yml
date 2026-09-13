@@ -1,0 +1,27 @@
+name: check pair capacity 13518 13519
+
+on:
+  workflow_dispatch:
+  push:
+    paths:
+      - 'project/research/general_n/2026-09-13-alternative-attacks-v1/verify_pair_capacity_states_13518_13519.py'
+      - '.github/workflows/check-pair-capacity-13518-13519.yml'
+
+jobs:
+  verify:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v4
+      - name: Independent enlarged-q replay
+        working-directory: project/research/general_n/2026-09-13-alternative-attacks-v1
+        run: |
+          python3 verify_pair_capacity_states_13518_13519.py | tee PAIR_CAPACITY_13518_13519_REPLAY.txt
+          test -s PAIR_CAPACITY_13518_13519_INDEPENDENT.json
+      - name: Upload replay
+        uses: actions/upload-artifact@v4
+        with:
+          name: pair-capacity-13518-13519-independent
+          path: |
+            project/research/general_n/2026-09-13-alternative-attacks-v1/PAIR_CAPACITY_13518_13519_REPLAY.txt
+            project/research/general_n/2026-09-13-alternative-attacks-v1/PAIR_CAPACITY_13518_13519_INDEPENDENT.json
