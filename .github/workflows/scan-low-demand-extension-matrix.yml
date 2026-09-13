@@ -1,0 +1,49 @@
+name: scan low-demand extension matrix
+
+on:
+  workflow_dispatch:
+  push:
+    paths:
+      - '.github/workflows/scan-low-demand-extension-matrix.yml'
+
+jobs:
+  scan:
+    strategy:
+      fail-fast: false
+      matrix:
+        state: [283, 153, 231, 154, 122, 77, 60]
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@v4
+      - name: Generate and compile audited extension scanner
+        run: |
+          set -euo pipefail
+          cd project/research/general_n/2026-09-13-alternative-attacks-v1
+          python3 make_low_demand_extension_scanner.py
+          g++ -O3 -std=c++17 scan_low_demand_extension.generated.cpp -o /tmp/scan_low_demand_extension
+      - name: Scan state ${{ matrix.state }}
+        run: |
+          set -euo pipefail
+          state='${{ matrix.state }}'
+          out="LOW_DEMAND_EXTENSION_${state}.tsv"
+          echo -e 'state\tE\tgap\tline' > "$out"
+          for E in $(seq 0 34); do
+            line=$(/tmp/scan_low_demand_extension "$state" "$E" | head -n 1)
+            gap=$(printf '%s\n' "$line" | sed -E 's/.* gap=(-?[0-9]+).*/\1/')
+            printf '%s\t%s\t%s\t%s\n' "$state" "$E" "$gap" "$line" >> "$out"
+          done
+          python3 - "$out" <<'PY'
+          import sys
+          p=sys.argv[1]
+          rows=[]
+          for line in open(p).read().splitlines()[1:]:
+              s,e,g,raw=line.split('\t',3)
+              rows.append((int(e),int(g)))
+          non=[x for x in rows if x[1]<=0]
+          print(f'STATE_SUMMARY state={open(p).read().splitlines()[1].split(chr(9))[0]} min_gap={min(g for _,g in rows)} nonpositive_count={len(non)} nonpositive={non}')
+          PY
+      - uses: actions/upload-artifact@v4
+        with:
+          name: low-demand-extension-${{ matrix.state }}
+          path: LOW_DEMAND_EXTENSION_${{ matrix.state }}.tsv
