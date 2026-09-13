@@ -28,7 +28,7 @@ struct PackSrc{int q,rho,cap;};
 
 static long long endpoint_class_lb(const vector<PackSrc>&src,const vector<int>&p,int d,int z){
  if(z==0)return 0;
- vector<pair<int,int>> a; // (endpoint load, row capacity q)
+ vector<pair<int,int>> a;
  for(int i=0;i<(int)src.size();++i){
   if(src[i].q<=0||src[i].rho<d||p[i]>src[i].rho-1)continue;
   a.push_back({src[i].q+p[i],src[i].q});
@@ -74,6 +74,9 @@ static long long packed_source_objective(const State&st,const vector<int>&q2,con
 
 def main():
     raw = SRC.read_text(); s = raw
+    inc="#include <vector>\n"
+    assert s.count(inc)==1
+    s=s.replace(inc,inc+"#include <functional>\n",1)
     needle = " if(id==519)return {519,1,14,6,0,12,44,42};\n"
     assert s.count(needle) == 1
     addition = "".join(f" if(id=={sid})return {{{sid},{n2},{n3},{r1},{r2},{r3},{S},{r}}};\n" for sid,n2,n3,r1,r2,r3,S,r in EXTRA)
