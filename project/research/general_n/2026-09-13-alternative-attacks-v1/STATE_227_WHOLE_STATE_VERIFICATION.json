@@ -1,0 +1,78 @@
+{
+  "schema": "state-227-whole-state-v1",
+  "status": "PASS",
+  "state": {
+    "layer": "n34-m289",
+    "state_id": 227,
+    "a": 15,
+    "b": 18,
+    "t": 1,
+    "s": "2^4,3^11",
+    "rho": "1^7,2,3^10",
+    "r": 39,
+    "S": 41
+  },
+  "exact_profile_sweep": {
+    "range_E": [0,20],
+    "profiles": 49847,
+    "strict_exclusions": 40548,
+    "source_infeasible": 9297,
+    "equality_profiles": 2,
+    "equality_profiles_hand_excluded": true,
+    "rows": [
+      {"E":0,"profiles":1,"strict":1,"equality":0,"source_infeasible":0,"minimum_strict_gap":1},
+      {"E":1,"profiles":2,"strict":2,"equality":0,"source_infeasible":0,"minimum_strict_gap":5},
+      {"E":2,"profiles":5,"strict":5,"equality":0,"source_infeasible":0,"minimum_strict_gap":9},
+      {"E":3,"profiles":10,"strict":10,"equality":0,"source_infeasible":0,"minimum_strict_gap":7},
+      {"E":4,"profiles":20,"strict":20,"equality":0,"source_infeasible":0,"minimum_strict_gap":6},
+      {"E":5,"profiles":35,"strict":35,"equality":0,"source_infeasible":0,"minimum_strict_gap":4},
+      {"E":6,"profiles":62,"strict":61,"equality":1,"source_infeasible":0,"minimum_strict_gap":4},
+      {"E":7,"profiles":102,"strict":101,"equality":1,"source_infeasible":0,"minimum_strict_gap":8},
+      {"E":8,"profiles":167,"strict":166,"equality":0,"source_infeasible":1,"minimum_strict_gap":9},
+      {"E":9,"profiles":262,"strict":259,"equality":0,"source_infeasible":3,"minimum_strict_gap":10},
+      {"E":10,"profiles":407,"strict":398,"equality":0,"source_infeasible":9,"minimum_strict_gap":12},
+      {"E":11,"profiles":614,"strict":593,"equality":0,"source_infeasible":21,"minimum_strict_gap":13},
+      {"E":12,"profiles":918,"strict":872,"equality":0,"source_infeasible":46,"minimum_strict_gap":14},
+      {"E":13,"profiles":1342,"strict":1251,"equality":0,"source_infeasible":91,"minimum_strict_gap":22},
+      {"E":14,"profiles":1944,"strict":1772,"equality":0,"source_infeasible":172,"minimum_strict_gap":26},
+      {"E":15,"profiles":2770,"strict":2463,"equality":0,"source_infeasible":307,"minimum_strict_gap":26},
+      {"E":16,"profiles":3912,"strict":3381,"equality":0,"source_infeasible":531,"minimum_strict_gap":31},
+      {"E":17,"profiles":5451,"strict":4567,"equality":0,"source_infeasible":884,"minimum_strict_gap":38},
+      {"E":18,"profiles":7536,"strict":6101,"equality":0,"source_infeasible":1435,"minimum_strict_gap":34},
+      {"E":19,"profiles":10303,"strict":8037,"equality":0,"source_infeasible":2266,"minimum_strict_gap":40},
+      {"E":20,"profiles":13984,"strict":10453,"equality":0,"source_infeasible":3531,"minimum_strict_gap":44}
+    ]
+  },
+  "high_excess_h2_relaxation": {
+    "range_E": [21,34],
+    "rule": "For h=#{i:e_i>=2}, every rho=3 source with q>h has p<=3; otherwise only the basic p<=5 cap is retained.",
+    "minimum_gap_rows": [
+      {"E":21,"h":5,"minimum_gap":8},
+      {"E":22,"h":6,"minimum_gap":13},
+      {"E":23,"h":6,"minimum_gap":14},
+      {"E":24,"h":6,"minimum_gap":15},
+      {"E":25,"h":6,"minimum_gap":15},
+      {"E":26,"h":6,"minimum_gap":15},
+      {"E":27,"h":6,"minimum_gap":15},
+      {"E":28,"h":6,"minimum_gap":26},
+      {"E":29,"h":7,"minimum_gap":32},
+      {"E":30,"h":7,"minimum_gap":40},
+      {"E":31,"h":7,"minimum_gap":44},
+      {"E":32,"h":7,"minimum_gap":39},
+      {"E":33,"h":7,"minimum_gap":34},
+      {"E":34,"h":8,"minimum_gap":56}
+    ],
+    "minimum_gap": 8
+  },
+  "capacity_ceiling": {
+    "sum_p_upper": 75,
+    "Q": "41+E",
+    "maximum_E": 34,
+    "reason": "7*3 + 1*4 + 10*5 = 75"
+  },
+  "whole_state_exclusion": true,
+  "conclusion": "N34 state 227 has no selected/residual realization satisfying the canonical bridge.",
+  "frontier_before": {"excluded":994,"survivors":4584,"n34_survivors":4506,"n35_survivors":78},
+  "frontier_after": {"excluded":995,"survivors":4583,"n34_survivors":4505,"n35_survivors":78},
+  "trust_boundary": "External mathematical review of the canonical bridge, selected-excess lemma and endpoint/top-k reductions remains open; independent computational reproduction remains open."
+}
