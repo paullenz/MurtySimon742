@@ -1,0 +1,37 @@
+name: Scan endpoint-order adjacent companions
+
+on:
+  workflow_dispatch:
+  push:
+    paths:
+      - 'project/research/general_n/2026-09-13-alternative-attacks-v1/prepare_endpoint_order_companions.py'
+      - 'project/research/general_n/2026-09-13-alternative-attacks-v1/scan_endpoint_order_companions.cpp'
+      - '.github/workflows/scan-endpoint-order-companions.yml'
+
+permissions:
+  contents: read
+
+jobs:
+  scan:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 25
+    steps:
+      - uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262
+      - name: Prepare hash-verified current companion input
+        run: |
+          set -euo pipefail
+          cd project/research/general_n/2026-09-13-alternative-attacks-v1
+          python3 prepare_endpoint_order_companions.py | tee endpoint_order_prepare.log
+          cat endpoint_order_companions_input.txt
+      - name: Compile exact integer scanner
+        run: |
+          set -euo pipefail
+          cd project/research/general_n/2026-09-13-alternative-attacks-v1
+          g++ -O3 -std=c++17 -Wall -Wextra -pedantic scan_endpoint_order_companions.cpp -o scan_endpoint_order_companions
+      - name: Run endpoint-order scan
+        run: |
+          set -euo pipefail
+          cd project/research/general_n/2026-09-13-alternative-attacks-v1
+          ./scan_endpoint_order_companions endpoint_order_companions_input.txt ENDPOINT_ORDER_COMPANIONS_SCAN.tsv | tee endpoint_order_scan.log
+          echo '--- COMPLETE TSV ---'
+          cat ENDPOINT_ORDER_COMPANIONS_SCAN.tsv
