@@ -1,0 +1,27 @@
+name: prepare low-demand Hall-flow family
+
+on:
+  workflow_dispatch:
+  push:
+    paths:
+      - 'project/research/general_n/2026-09-13-alternative-attacks-v1/prepare_low_demand_flow_family.py'
+      - '.github/workflows/prepare-low-demand-flow-family.yml'
+
+jobs:
+  prepare:
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - uses: actions/checkout@v4
+      - name: Decode frozen catalogue and prepare expanded family
+        run: |
+          set -euo pipefail
+          cd project/research/general_n/2026-09-13-alternative-attacks-v1
+          python3 prepare_low_demand_flow_family.py | tee low_demand_flow_family.log
+      - uses: actions/upload-artifact@v4
+        with:
+          name: low-demand-flow-family
+          path: |
+            project/research/general_n/2026-09-13-alternative-attacks-v1/LOW_DEMAND_FLOW_FAMILY_INPUT.json
+            project/research/general_n/2026-09-13-alternative-attacks-v1/low_demand_flow_family_input.txt
+            project/research/general_n/2026-09-13-alternative-attacks-v1/low_demand_flow_family.log
