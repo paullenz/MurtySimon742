@@ -1,12 +1,33 @@
-# Alternative attacks v1 — quantifier correction and whole-state threshold programme
+# Alternative attacks v1 — quantifier-correct whole-state programme
 
-13 September 2026. **Research checkpoint. Candidate hand lemmas and exact finite reductions; external review, novelty assessment and independent reproduction remain OPEN. The unrestricted Murty–Simon conjecture is not proved.**
+13 September 2026. **Research checkpoint. Candidate hand lemmas and exact finite reductions; external mathematical review, novelty assessment and independent reproduction remain OPEN. The unrestricted Murty–Simon conjecture is not proved.**
 
-## Why this programme exists
+## Current result
 
-The shared-residual-budget continuation rejects 4,487 of 4,584 stored selected patterns, but a fixed-pattern rejection does not exclude a scalar state because another selected geometry may exist. This programme attacks the missing quantifiers directly.
+The programme attacks the missing quantifier in fixed-pattern residual arguments: rejecting one selected quasi-edge geometry does not exclude the underlying scalar state because another legal selected geometry may exist.
 
-The main line quantifies alternative selected sets, source margins and selected excess. A separate maximum-cut line is retained as an independent architecture. The quantified line has now produced **six whole-state exclusions: N34 states 227, 279, 588, 526, 382 and 519**.
+The quantified line now has **nine whole-state N34 exclusions**:
+
+```text
+227, 279, 382, 526, 588, 519, 230, 282, 385.
+```
+
+The latest three closures, `230,282,385`, complete the narrow adjacent low-demand family identified by `REFINED_H2_FAMILY_SCAN.md`. See [`INCIDENCE_CAPACITY_FAMILY_CLOSURE.md`](INCIDENCE_CAPACITY_FAMILY_CLOSURE.md).
+
+The frozen frontier is now
+
+```text
+1,003 exclusions / 4,575 survivors,
+```
+
+split as
+
+```text
+4,497 N34 equality-derived survivors,
+78 N35 m=306-derived survivors.
+```
+
+These are scalar states in a frozen generalisation experiment, not individual surviving graphs. The fixed-order N34/N35 candidate proofs are unchanged.
 
 ## Core selected-excess mechanism
 
@@ -28,18 +49,48 @@ then
 q_u>h_l => p_u<=rho_u+l-2.                            (2)
 ```
 
-The `l=2` member closes most high-excess tails in the six quantified examples.
+The early whole-state closures used the `l=2` member as a high-excess tail screen. The later work retains progressively more of the information in (1) instead of summing it away.
 
-Two later refinements are now central:
+## Current refinement hierarchy
 
-1. [`REFINED_BASELINE3_LEMMA.md`](REFINED_BASELINE3_LEMMA.md) keeps the exact selected-source score `rho_u+q_u-1` and the negative baseline contribution of zero-excess demand-two labels.
-2. [`ZERO_EXCESS_ENDPOINT_ORDER.md`](ZERO_EXCESS_ENDPOINT_ORDER.md) keeps the **low-p source availability and endpoint-load order statistic** of an exact-demand label. For a zero-excess demand-two label this replaces the universal endpoint lower bound 2 by a state-dependent second-smallest eligible `q_u+p_u`.
+The present architecture is:
+
+1. **Refined baseline-three accounting** — [`REFINED_BASELINE3_LEMMA.md`](REFINED_BASELINE3_LEMMA.md) keeps the exact selected-source score `rho_u+q_u-1` and the negative contribution of zero-excess demand-two labels.
+2. **Exact-demand endpoint order** — [`ZERO_EXCESS_ENDPOINT_ORDER.md`](ZERO_EXCESS_ENDPOINT_ORDER.md) gives `C_i>=max(d,L_(d))` for a zero-excess demand-`d` label.
+3. **Capacity-order endpoint bound** — [`CAPACITY_ORDER_ENDPOINT_LEMMA.md`](CAPACITY_ORDER_ENDPOINT_LEMMA.md) converts the existence of `d` cheap eligible endpoints into a scalar incoming-capacity loss and gives the exact minimum `d`-th endpoint load inside the independent source-cap relaxation.
+4. **Demand-compatible excess order** — [`DEMAND_COMPATIBLE_EXCESS_ORDER.md`](DEMAND_COMPATIBLE_EXCESS_ORDER.md) replaces global threshold counts by the compatible excess order statistic. In an all-positive-demand branch,
+
+   ```text
+   p_u <= rho_u-1 + eta_(q_u)^(rho_u),
+   ```
+
+   where `eta_q^(rho)` is the `q`-th largest excess among labels with `0<s_i<=rho`.
+5. **Threshold incidence capacity** — [`THRESHOLD_INCIDENCE_CAPACITY.md`](THRESHOLD_INCIDENCE_CAPACITY.md) accounts for competition between different sources for the finite selected-degree capacity of high-excess compatible labels:
+
+   ```text
+   sum_{u:q_u>0, rho_u<=R, L_u>=ell} q_u
+    <= sum_{i:0<s_i<=R, e_i>=ell} x_i,
+   ```
+
+   with `L_u=max(0,p_u-rho_u+1)`.
+6. **Forced low-score incidence** — [`FORCED_INCIDENCE_SCORE.md`](FORCED_INCIDENCE_SCORE.md) turns a Hall/pigeonhole overload into a sharper bound on a particular label's `d_i` when that label is forced to receive an incidence from a low-score source.
+
+The progression is therefore
+
+```text
+threshold scarcity
+ -> exact-demand availability
+ -> endpoint order statistics
+ -> demand-compatible excess order
+ -> incidence-capacity competition
+ -> forced low-score rigidity.
+```
 
 ## Whole-state exclusions
 
-### 1. N34 state 227
+### State 227
 
-[`STATE_227_WHOLE_STATE.md`](STATE_227_WHOLE_STATE.md) / [`STATE_227_REPLAY.md`](STATE_227_REPLAY.md).
+[`STATE_227_WHOLE_STATE.md`](STATE_227_WHOLE_STATE.md) / [`STATE_227_REPLAY.md`](STATE_227_REPLAY.md)
 
 ```text
 s=2^4,3^11,
@@ -47,11 +98,11 @@ rho=1^7,2,3^10,
 r=39, S=41.
 ```
 
-Exact integer enumeration covers every excess profile through `E=20`; two equality profiles are removed by hand rigidity. The relaxed `h_2` tail closes `E=21,...,34`; incoming capacity excludes `E>=35`. Frontier: `994/4,584 -> 995/4,583`.
+Exact integer enumeration covers the low-excess region; two equality profiles are removed by hand rigidity. The relaxed threshold tail closes the remaining feasible excess layers. Frontier step: `994/4,584 -> 995/4,583`.
 
-### 2. N34 state 279
+### State 279
 
-[`STATE_279_WHOLE_STATE.md`](STATE_279_WHOLE_STATE.md) / [`STATE_279_REPLAY.md`](STATE_279_REPLAY.md).
+[`STATE_279_WHOLE_STATE.md`](STATE_279_WHOLE_STATE.md) / [`STATE_279_REPLAY.md`](STATE_279_REPLAY.md)
 
 ```text
 s=2^3,3^12,
@@ -59,13 +110,11 @@ rho=1^7,3^11,
 r=40, S=42.
 ```
 
-Exact low-excess replay covers `E=0,...,15`, with three hand-rigidity cases. The `h_2` tail closes `E=16,...,34`; incoming capacity excludes `E>=35`. Frontier: `995/4,583 -> 996/4,582`.
+Exact low-excess replay plus three rigidity cases closes the low region; the threshold tail closes the rest. This state exposed the first reusable zero-excess source-availability mechanism. Frontier: `995/4,583 -> 996/4,582`.
 
-State 279 exposed the first reusable **zero-excess availability** mechanism: the incoming ledger can consume cheap-p sources, forcing zero-excess labels onto larger endpoint loads.
+### State 588
 
-### 3. N34 state 588
-
-[`STATE_588_WHOLE_STATE.md`](STATE_588_WHOLE_STATE.md) / [`STATE_588_REPLAY.md`](STATE_588_REPLAY.md).
+[`STATE_588_WHOLE_STATE.md`](STATE_588_WHOLE_STATE.md) / [`STATE_588_REPLAY.md`](STATE_588_REPLAY.md)
 
 ```text
 s=3^15,
@@ -73,13 +122,11 @@ rho=1^5,2,3^12,
 r=43, S=45.
 ```
 
-The exact low-excess scan has one coarse equality, excluded by `sum C_i>=106>97`. A cheap `h_2` screen leaves only `E=16` and `E=24`; exact replay closes both. Frontier: `996/4,582 -> 997/4,581`.
+A cheap tail screen leaves only two exceptional excess layers; exact replay closes them, and the one coarse low-excess equality is excluded by the cross-degree sum. Frontier: `996/4,582 -> 997/4,581`.
 
-State 588 shows the mechanism is not tied to demand-two corrections and motivates cheap tail triage before exact enumeration.
+### State 526
 
-### 4. N34 state 526
-
-[`STATE_526_WHOLE_STATE.md`](STATE_526_WHOLE_STATE.md) / [`STATE_526_REPLAY.md`](STATE_526_REPLAY.md).
+[`STATE_526_WHOLE_STATE.md`](STATE_526_WHOLE_STATE.md) / [`STATE_526_REPLAY.md`](STATE_526_REPLAY.md)
 
 ```text
 s=2,3^14,
@@ -87,19 +134,11 @@ rho=1^5,2^2,3^11,
 r=42, S=44.
 ```
 
-The exact scan through `E=16` has one coarse equality,
+The lone coarse equality forces all fourteen zero-excess demand-three labels onto high-load sources, giving a direct cross-degree contradiction. Frontier: `997/4,581 -> 998/4,580`.
 
-```text
-E=7, e_2=7, e_3=0^14,
-q_(rho=2)=1^2,
-q_(rho=3)=1^2,5^7,6^2.
-```
+### State 382
 
-Equality forces every q=1 source to high p, so all fourteen zero-excess demand-three labels must use q=5/6, p=2 sources and each has `C_i>=7`; they alone give `sum C_i>=98>93`. The relaxed `h_2` tail is strict for `E=17,...,34`. Frontier: `997/4,581 -> 998/4,580`.
-
-### 5. N34 state 382
-
-[`STATE_382_WHOLE_STATE.md`](STATE_382_WHOLE_STATE.md) / [`STATE_382_REPLAY.md`](STATE_382_REPLAY.md).
+[`STATE_382_WHOLE_STATE.md`](STATE_382_WHOLE_STATE.md) / [`STATE_382_REPLAY.md`](STATE_382_REPLAY.md)
 
 ```text
 s=2^2,3^13,
@@ -107,23 +146,11 @@ rho=1^6,2,3^11,
 r=41, S=43.
 ```
 
-Every exact low-excess profile through `E=17` is strictly excluded; no hand-rigidity exception is needed. If
+Retaining the negative baseline-three contribution of zero-excess demand-two labels makes the refined tail strict; exact low-excess profiles are already excluded. Frontier: `998/4,580 -> 999/4,579`.
 
-```text
-z_0=#{i:s_i=2,e_i=0},
-```
+### State 519
 
-then retaining the negative baseline-three contribution gives
-
-```text
-T + 2 z_0 - P_+ <= 3(84+E).                          (3)
-```
-
-The refined tail is strict for every `E=17,...,34`; `E=16` is already exactly excluded. Frontier: `998/4,580 -> 999/4,579`.
-
-### 6. N34 state 519
-
-[`STATE_519_WHOLE_STATE.md`](STATE_519_WHOLE_STATE.md) / [`STATE_519_REPLAY.md`](STATE_519_REPLAY.md).
+[`STATE_519_WHOLE_STATE.md`](STATE_519_WHOLE_STATE.md) / [`STATE_519_REPLAY.md`](STATE_519_REPLAY.md)
 
 ```text
 s=2,3^14,
@@ -131,94 +158,72 @@ rho=1^6,3^12,
 r=42, S=44.
 ```
 
-The generic adjacent-family scan ranked 519 as the best active companion. The exact profile replay covers `E=0,...,24`; every relaxed profile is strict or source-infeasible except one coarse nonpositive profile at each of `E=6,8,9`.
+Three exceptional layers survive the coarse profile relaxation. The exact-demand endpoint-order mechanism closes them by optimizing the two eligible source endpoints jointly with the incoming ledger. GitHub Actions run `34773463128` is green on the state-519 proof-critical stages. Frontier: `999/4,579 -> 1,000/4,578`.
 
-Those three layers are closed by the new exact-demand endpoint-order mechanism. When the unique demand-two label has zero excess, its two selected sources are distinct `rho=3` sources satisfying
+### States 230, 282 and 385 — adjacent-family closure
 
-```text
-p_u<=2,
-```
+See [`INCIDENCE_CAPACITY_FAMILY_CLOSURE.md`](INCIDENCE_CAPACITY_FAMILY_CLOSURE.md) and the final exact verifier [`scan_incidence_capacity_family.cpp`](scan_incidence_capacity_family.cpp).
 
-and the label endpoint obeys
+The profiles are
 
 ```text
-C_2>=max(q_u+p_u,q_v+p_v).
+state 230: s=2^4,3^11, rho=1^6,2^3,3^9,  r=39, S=41
+state 282: s=2^3,3^12, rho=1^6,2^2,3^10, r=40, S=42
+state 385: s=2^2,3^13, rho=1^5,2^3,3^10, r=41, S=43
 ```
 
-The dedicated exact replay minimizes this endpoint load jointly with `sum q_u p_u`; the minimum gaps are
+The demand-compatible excess-order cap reduces the old low-excess obstruction dramatically. Threshold incidence capacity and forced low-score source incidences remove the last equality cases.
+
+A complete local replay of
 
 ```text
-E=6 : 2
-E=8 : 4
-E=9 : 2.
+3 states * 35 excess layers = 105 checks
 ```
 
-A refined `h_2` tail is strict for every `E=25,...,34`, with minimum gaps
+has a positive gap in every layer; the minimum whole-layer gap is `+1` for each state. The committed workflow [`scan-incidence-capacity-family.yml`](../../../../.github/workflows/scan-incidence-capacity-family.yml) recompiles the verifier and independently requires all 105 gaps to be positive.
+
+Frontier steps:
 
 ```text
-4,5,12,2,1,2,5,10,21,20,
+state 230: 1,000/4,578 -> 1,001/4,577
+state 282: 1,001/4,577 -> 1,002/4,576
+state 385: 1,002/4,576 -> 1,003/4,575
 ```
 
-and incoming capacity excludes `E>=35`. GitHub Actions run `34773463128` is green on all proof-critical stages. Frontier: `999/4,579 -> 1,000/4,578`.
-
-## Current frozen frontier
-
-The six quantified whole-state closures give
+The four active companions identified by the original adjacent-family scan,
 
 ```text
-1,000 exclusions / 4,578 survivors,
+230, 282, 385, 519,
 ```
 
-split as
-
-```text
-4,500 N34 equality-derived survivors,
-78 N35 m=306-derived survivors.
-```
-
-These are scalar states in a frozen generalisation experiment, not surviving graphs. The fixed-order N34/N35 candidate proofs were already closed and are unchanged.
-
-## Adjacent low-demand family
-
-[`REFINED_H2_FAMILY_SCAN.md`](REFINED_H2_FAMILY_SCAN.md) records the generic scan of the narrow N34 family with demands only 2/3 and residual degrees only 1/2/3. At scan time it contained the five already-closed states plus four active companions:
-
-```text
-230, 282, 385, 519.
-```
-
-State 519 ranked first and has now been closed. The remaining active companions in this narrow family are therefore
-
-```text
-230, 282, 385.
-```
-
-The generic refined tail is already strict from `E=21` upward for states 282 and 385, and from `E=23` upward for state 230. The next scan should add the exact-demand endpoint-order correction from `ZERO_EXCESS_ENDPOINT_ORDER.md` before committing to large low-excess enumerations.
+are now all closed.
 
 ## Default family-screening strategy
 
 The programme should now use the following order:
 
-1. apply the refined `h_2` tail screen, retaining negative baseline terms rather than discarding them;
-2. whenever zero-excess exact-demand labels occur, optimize their **eligible-source endpoint order statistic jointly with the incoming ledger**;
-3. rank states by the number and severity of remaining non-strict excess layers;
-4. exact-enumerate only the exceptional layers and low-excess boundary;
-5. if equality survives, extract source-capacity equality conditions and seek incidence rigidity;
-6. after quantified pruning, return to the stronger shared-residual/pair geometry.
+1. run the refined threshold/baseline screen;
+2. add capacity-order endpoint availability whenever exact-demand labels occur;
+3. replace global excess counts by demand-compatible excess order statistics;
+4. exact-enumerate only branches still non-strict;
+5. impose threshold selected-incidence capacities before any graph-level search;
+6. when equality survives, use forced-incidence/source-score rigidity or a full matching test;
+7. only then return to stronger shared-residual/pair geometry.
 
 The frozen survivor extraction utility [`extract_frozen_survivors.py`](extract_frozen_survivors.py) is transport/replay infrastructure only; it does not itself apply a theorem.
 
-## General lesson from the six closures
+## General lesson from the nine closures
 
-The examples now support a reusable two-sided architecture:
+The newer closures suggest that the useful object is not merely a scalar ledger but a **capacitated selected source-label incidence system**.
 
-- **high-excess scarcity:** threshold counts `h_l` cap the incoming load of large-q sources;
-- **low-excess availability:** exact-demand labels require enough low-p selected sources;
-- **endpoint upper order statistics:** `d_i<=rho_u+q_u-1` bounds `C_i` from above through the selected sources;
-- **endpoint lower order statistics:** zero-excess labels force `C_i` from below through the eligible low-p sources;
-- **negative baseline terms:** demand-two zero-excess labels help the baseline-three contradiction and should not be thrown away;
-- **triage before exact enumeration:** cheap scalar relaxations identify the few layers where detailed profile work is worth the cost.
+- high excess is scarce and limits incoming load;
+- low residual-degree sources see only restricted demand classes;
+- labels have finite selected-degree capacity `x_i`, so sources compete for compatible high-excess labels;
+- exact-demand labels require enough low-p endpoints;
+- endpoint lower and upper order statistics interact through the same source margins;
+- equality can force low-score sources onto specific labels, sharply reducing positive correction bounds.
 
-States 588, 526, 382 and 519 now exhibit four complementary manifestations: demand-three endpoint rigidity, source-availability rigidity, universal negative-baseline correction, and exact-demand endpoint-order availability.
+The natural generalisation is therefore Hall/flow-like rather than another collection of isolated state-specific inequalities.
 
 ## Raw candidate capacity and independent route
 
@@ -234,8 +239,8 @@ A direct one-edge/one-nonedge matching proof is false and remains preserved as a
 
 ## Audit boundaries and current priority
 
-[`AUDIT.md`](AUDIT.md) records invalidated shortcuts and proof-status boundaries. None of the six whole-state closures uses numerical solver infeasibility: proof-critical computations are exact integer enumerations, with explicit structural arguments where coarse envelopes are non-strict.
+[`AUDIT.md`](AUDIT.md) records invalidated shortcuts and proof-status boundaries. None of the nine whole-state closures relies on numerical solver infeasibility: proof-critical computation is exact integer enumeration/dynamic programming, with explicit structural arguments at equality boundaries.
 
-External mathematical review of the canonical bridge, selected-excess/threshold lemmas, refined baseline/order-statistic lemmas and rigidity arguments remains open; independent computational reproduction remains open.
+External mathematical review of the canonical bridge and all new lemmas remains open. Independent computational reproduction remains open until a separate environment has replayed the committed artifacts.
 
-**Current priority:** generalize the state-519 endpoint-order correction across the adjacent family, then attack states 282/385 before 230 unless the strengthened scan changes that ranking. In parallel, continue seeking a symbolic theorem that explains all six closures rather than accumulating isolated finite cases.
+**Current priority:** extract a general Hall/flow theorem from the demand-compatible excess-order, threshold-capacity and forced-incidence lemmas; then rescan the remaining frozen N34 survivors for families captured by that theorem. The aim is to explain the nine closures symbolically rather than accumulate isolated finite cases.
