@@ -1,0 +1,28 @@
+name: scan low-residual reservoir bound
+
+on:
+  workflow_dispatch:
+  push:
+    paths:
+      - 'project/research/general_n/2026-09-13-alternative-attacks-v1/LOW_RESIDUAL_RESERVOIR_BOUND.md'
+      - 'project/research/general_n/2026-09-13-alternative-attacks-v1/scan_low_residual_reservoir.py'
+      - '.github/workflows/scan-low-residual-reservoir.yml'
+
+jobs:
+  scan:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v4
+      - name: Scan current 3,623-state frontier
+        working-directory: project/research/general_n/2026-09-13-alternative-attacks-v1
+        run: |
+          python3 scan_low_residual_reservoir.py | tee LOW_RESIDUAL_RESERVOIR_REPLAY.txt
+          test -s LOW_RESIDUAL_RESERVOIR_SCAN.json
+      - name: Upload scan
+        uses: actions/upload-artifact@v4
+        with:
+          name: low-residual-reservoir-scan
+          path: |
+            project/research/general_n/2026-09-13-alternative-attacks-v1/LOW_RESIDUAL_RESERVOIR_REPLAY.txt
+            project/research/general_n/2026-09-13-alternative-attacks-v1/LOW_RESIDUAL_RESERVOIR_SCAN.json
