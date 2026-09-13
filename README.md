@@ -71,7 +71,7 @@ This reviewer-facing index is intentionally duplicated here as a protected navig
 
 - [`7/12` maximum-degree reviewer-v1](releases/general-7-12-reviewer-v1/README.md) — [manuscript PDF](releases/general-7-12-reviewer-v1/General_7_12_Reviewer_Manuscript_v1.pdf) and [verification companion PDF](releases/general-7-12-reviewer-v1/General_7_12_Verification_Companion_v1.pdf).
 - [`13/22` retained maximum-degree reviewer-v1](releases/general-13-22-reviewer-v1/README.md) — [manuscript PDF](releases/general-13-22-reviewer-v1/General_13_22_Reviewer_Manuscript_v1.pdf) and [verification companion PDF](releases/general-13-22-reviewer-v1/General_13_22_Verification_Companion_v1.pdf).
-- [`293/500` retained maximum-degree reviewer-v1](releases/general-293-500-reviewer-v1/README.md) — [manuscript PDF](releases/general-293-500-reviewer-v1/General_293_500_Reviewer_Manuscript_v1.pdf) and [verification companion PDF](releases/general-293-500-reviewer-v1/General_293_500_Verification_Companion_v1.pdf).
+- [`293/500` retained maximum-degree reviewer-v1`](releases/general-293-500-reviewer-v1/README.md) — [manuscript PDF](releases/general-293-500-reviewer-v1/General_293_500_Reviewer_Manuscript_v1.pdf) and [verification companion PDF](releases/general-293-500-reviewer-v1/General_293_500_Verification_Companion_v1.pdf).
 - [General step-back structural package](releases/general-stepback-v1/README.md) — balanced-degree theorem candidate, `a=14`, fifteen-label and sixteen-label results.
 - [Joint-clipping reviewer-v1](releases/general-joint-clipping-reviewer-v1/README.md) — sharp scalar tail bounds and tight-threshold obstruction.
 - [Heavy-load / routing reviewer-v1](releases/general-heavy-load-reviewer-v1/README.md).
@@ -99,7 +99,7 @@ The fixed-order candidates have their own complete ledgers. The generalisation s
 
 ## Current general structural results
 
-Important candidate all-order or parameterized results include balanced-degree reduction; the `7/12` maximum-degree theorem candidate; heavy-load/routing families; joint routing and demand/tail projection; compatible-destination routing and Hall/flow criteria; containment spill and pair-overlap inequalities; shared residual budgets; selection-free candidate capacity; the selected-excess / threshold family; the refined baseline-3/order-statistic lemma; the zero-excess endpoint-order lemma; and the exact low-demand incidence-capacity extension scanner.
+Important candidate all-order or parameterized results include balanced-degree reduction; the `7/12` maximum-degree theorem candidate; heavy-load/routing families; joint routing and demand/tail projection; compatible-destination routing and Hall/flow criteria; containment spill and pair-overlap inequalities; shared residual budgets; selection-free candidate capacity; the selected-excess / threshold family; the refined baseline-3/order-statistic lemma; the zero-excess endpoint-order lemma; exact low-demand incidence-capacity; mixed-class joint Hall; and the orientation target-capacity lemma for missing-edge orientations.
 
 For every selected positive-demand incidence,
 
@@ -122,6 +122,20 @@ v_u=rho_u+q_u-1
 and the negative baseline contribution from zero-excess demand-two labels.
 
 The newer [`ZERO_EXCESS_ENDPOINT_ORDER.md`](project/research/general_n/2026-09-13-alternative-attacks-v1/ZERO_EXCESS_ENDPOINT_ORDER.md) adds the opposite-side order statistic: a zero-excess demand-`d` label needs `d` active selected sources with `rho_u>=d` and `p_u<=rho_u-1`, and its endpoint `C_i` is at least the `d`-th smallest eligible `q_u+p_u`.
+
+[`ORIENTATION_TARGET_CAPACITY.md`](project/research/general_n/2026-09-13-alternative-attacks-v1/ORIENTATION_TARGET_CAPACITY.md) links those source/label constraints back to the missing-edge graph. If a missing `B`-edge is oriented `u->w`, then
+
+```text
+q_u - 1 <= q_w + rho_w,
+```
+
+so every threshold `k` satisfies
+
+```text
+sum_{w:q_w+rho_w<=k} p_w <= sum_{u:q_u<=k+1} q_u.
+```
+
+This one-sided Hall-type cut closes the entire `E=0` q-frontier for states 77 and 60 with a six-incidence margin even in the closest profiles.
 
 ## Quantifier pivot: 16 whole-state exclusions
 
@@ -194,6 +208,8 @@ The audited low-demand extension logic is strict on **every** admissible excess 
 
 The canonical ledger records **16 distinct quantified whole-state exclusions**. This table is generated from [`WHOLE_STATE_LEDGER.tsv`](project/research/general_n/2026-09-13-alternative-attacks-v1/WHOLE_STATE_LEDGER.tsv) so parallel lines of work cannot silently disappear from the headline count.
 
+The checker [`tools/check_n34_whole_state_ledger.py`](tools/check_n34_whole_state_ledger.py) separately pins all 16 current closures in `KNOWN_MINIMUM`, including states `77` and `60`. This is deliberately monotone: future closures can be added, while an accidental rewrite cannot silently erase a preserved closure.
+
 | State | Method | Record |
 |---:|---|---|
 | 227 | state-specific exact replay | [`STATE_227_WHOLE_STATE.md`](project/research/general_n/2026-09-13-alternative-attacks-v1/STATE_227_WHOLE_STATE.md) |
@@ -235,8 +251,9 @@ The emerging reusable architecture is two-sided:
 5. **Negative baseline terms matter:** demand-two labels at zero excess contribute negatively in baseline three and should not be thrown away.
 6. **Triage before exact enumeration:** cheap refined relaxations identify the few layers worth exact profile work.
 7. **Reusable exact machinery is beginning to close states directly:** state 153 is strict across its entire admissible excess range, without bespoke rigidity.
+8. **Missing-edge orientation is itself capacitated:** a large-`q` source cannot send an oriented missing edge into a target with insufficient cross-degree. This supplies a second Hall/flow system on the same margins and reconnects the selected-label machinery to the graph-level missing-edge geometry.
 
-State 519 is theoretically useful because it converts the earlier qualitative source-availability idea into the explicit reusable endpoint-order lemma. State 153 is useful operationally because it demonstrates that the strengthened exact machinery can itself constitute the whole finite closure.
+State 519 is theoretically useful because it converts the earlier qualitative source-availability idea into the explicit reusable endpoint-order lemma. State 153 is useful operationally because it demonstrates that the strengthened exact machinery can itself constitute the whole finite closure. States 77 and 60 are especially useful structurally because the final obstruction is a general orientation-capacity condition rather than a state-specific selected geometry.
 
 ## How the preceding generalisation machinery reached this point
 
@@ -247,25 +264,27 @@ State 519 is theoretically useful because it converts the earlier qualitative so
 | [Compatible routing catalogue](releases/general-compatible-catalogue-reviewer-v1/README.md) | 994 retained full/pilot exclusions | Produced the 4,584-state frontier entering the quantifier programme |
 | [Containment spill / pair overlap](project/research/general_n/2026-09-13-constraint-respecting-cross-v1/README.md) | Scalar spill witnesses for all 4,584; fixed-pattern failures | Exposed the quantifier gap |
 | [Shared residual budgets](project/research/general_n/2026-09-13-shared-residual-budget-v1/README.md) | 4,487/4,584 stored patterns rejected | Very strong on fixed geometry; not a whole-state result by itself |
-| [Alternative attacks](project/research/general_n/2026-09-13-alternative-attacks-v1/README.md) | Selection-free/excess lemmas and seven whole-state closures through state 153 | Current primary programme |
+| [Alternative attacks](project/research/general_n/2026-09-13-alternative-attacks-v1/README.md) | Selection-free/excess/Hall/orientation lemmas and 16 quantified whole-state closures | Current primary programme; next task is generalising orientation/flow capacity and rescanning the remaining frontier |
 
 ## Current low-demand programmes
 
-The older narrow [`REFINED_H2_FAMILY_SCAN.md`](project/research/general_n/2026-09-13-alternative-attacks-v1/REFINED_H2_FAMILY_SCAN.md) left states `230,282,385` active after state 519 closed.
+The older narrow [`REFINED_H2_FAMILY_SCAN.md`](project/research/general_n/2026-09-13-alternative-attacks-v1/REFINED_H2_FAMILY_SCAN.md) and the seven-state extension matrix are now **historical triage surfaces**, not live target lists. Every state they highlighted has since been whole-state closed.
 
-The newer exact extension matrix broadened the same audited incidence-capacity logic to seven additional states. Run `34780310971` completed green in all seven jobs:
+The preserved extension history is:
 
-| State | minimum gap | nonpositive layers |
+| State | original/earlier minimum gap | current status |
 |---:|---:|---|
-| 153 | `+1` | none — closed |
-| 283 | `-2` | `E=7` |
-| 122 | `-3` | `E=0` |
-| 154 | `-3` | `E=0,6,7` |
-| 231 | `-7` | `E=6,7,8,9,10` |
-| 77 | `-7` | `E=0,1,3,4,5,6,7` |
-| 60 | `-11` | `E=0,1,2,3,4,5,6,7` |
+| 153 | `+1` | whole-state closed |
+| 283 | `-2` at `E=7` | subsequently whole-state closed |
+| 122 | `-3` at `E=0` | subsequently whole-state closed |
+| 154 | `-3` at `E=0,6,7` | subsequently whole-state closed |
+| 231 | `-7` at `E=6,...,10` | subsequently whole-state closed |
+| 77 | `-7` across historical weak layers | subsequently whole-state closed by joint Hall + orientation capacity |
+| 60 | `-11` across historical weak layers | subsequently whole-state closed by joint Hall + orientation capacity |
 
-These are necessary-condition scan survivors, not surviving graphs. The immediate next targets are state 122 at `E=0` and state 283 at `E=7`, each of which has only one remaining exceptional layer.
+Similarly, the formerly active adjacent-family states `230,282,385,519` are all closed. Their older gaps remain preserved because failed/intermediate frontiers are part of the audit record, but none is a live research obligation now.
+
+The next target set should be chosen by applying the new orientation-capacity and joint-Hall machinery to the **remaining 4,568 frozen scalar survivors**, rather than by continuing an obsolete local ranking.
 
 ## Independent maximum-cut route
 
@@ -279,18 +298,17 @@ Thus `I<=M` for some cut would prove Murty–Simon. A direct one-internal-edge/o
 
 ## Current research priorities
 
-1. **Attack the two one-layer extension survivors:** state 122 at `E=0` (gap `-3`) and state 283 at `E=7` (gap `-2`). Extract the exact minimizing q-vectors/profiles and apply the strongest endpoint-order/source-availability and threshold-incidence constraints.
-2. **Continue with state 154** if needed; only `E=0,6,7` remain nonpositive.
-3. **Extract a symbolic threshold/availability theorem** explaining the seven closures and the broader matrix compression.
-4. **Finish propagation through the narrow 230/282/385 family** with the exact-demand endpoint-order term.
-5. **Widen the strengthened quantified scanner across the remaining 4,577 frozen states** wherever its hypotheses apply, preserving full inputs, outputs, hashes and failures.
-6. **Continue selection-free raw candidate-capacity and maximum-cut routes independently.** Do not retry the falsified direct matching.
-7. **Return to shared residual/pair/exact-destination geometry after quantified pruning.**
+1. **Generalise and red-team the orientation target-capacity lemma.** Derive the strongest exact source-target Hall/flow criterion justified by the canonical bridge, including the companion endpoint condition where useful, and preserve counterexamples to over-strong variants.
+2. **Rescan all 4,568 remaining frozen scalar survivors** with orientation target capacity combined with joint endpoint-class Hall and existing incidence-capacity machinery; use the resulting residual structure to choose the next whole-state targets.
+3. **Seek a symbolic mixed-class Hall/flow theorem.** In particular, determine whether the source-target compatibility relation has enough Ferrers/threshold structure that full feasibility reduces to a small family of prefix cuts.
+4. **Strengthen independent audit/reproduction** of the canonical bridge, orientation-capacity lemma, mixed-class Hall projection and the state-77/state-60 exact replay.
+5. **Continue genuinely independent routes** such as selection-free candidate capacity and maximum-cut/stability arguments, while preserving failures and corrected hypotheses.
+6. **Return to shared residual/pair/exact-destination geometry only after quantified pruning** shows where the lighter reusable theory stops.
 
 ## Trust boundary
 
-The largest correlated mathematical risk is still the canonical bridge: its graph-to-quasi-edge implications, selected/residual ledger, forcing lemmas and endpoint consequences require independent specialist review. The whole-state arithmetic is exact, but independent computational reproduction and external checking of structural arguments remain open. The candidate `7/12` theorem and later general lemmas also require novelty assessment and external review.
+The largest correlated mathematical risk is still the canonical bridge: its graph-to-quasi-edge implications, selected/residual ledger, forcing lemmas and endpoint consequences require independent specialist review. The whole-state arithmetic is exact, but independent computational reproduction and external checking of structural arguments remain open. The candidate `7/12` theorem, mixed-class Hall projection and orientation target-capacity lemma also require novelty assessment and external review.
 
 No solver timeout, floating infeasibility status or unsuccessful search is used as proof.
 
-For restart-level detail, read [`CURRENT_STATE.md`](CURRENT_STATE.md). For the latest quantified advance, read [`STATE_153_WHOLE_STATE.md`](project/research/general_n/2026-09-13-alternative-attacks-v1/STATE_153_WHOLE_STATE.md), [`STATE_519_WHOLE_STATE.md`](project/research/general_n/2026-09-13-alternative-attacks-v1/STATE_519_WHOLE_STATE.md), [`ZERO_EXCESS_ENDPOINT_ORDER.md`](project/research/general_n/2026-09-13-alternative-attacks-v1/ZERO_EXCESS_ENDPOINT_ORDER.md), and [`make_low_demand_extension_scanner.py`](project/research/general_n/2026-09-13-alternative-attacks-v1/make_low_demand_extension_scanner.py).
+For restart-level detail, read [`CURRENT_STATE.md`](CURRENT_STATE.md). For the latest quantified advance, read [`ORIENTATION_TARGET_CAPACITY.md`](project/research/general_n/2026-09-13-alternative-attacks-v1/ORIENTATION_TARGET_CAPACITY.md), [`STATE_77_WHOLE_STATE.md`](project/research/general_n/2026-09-13-alternative-attacks-v1/STATE_77_WHOLE_STATE.md), [`STATE_60_WHOLE_STATE.md`](project/research/general_n/2026-09-13-alternative-attacks-v1/STATE_60_WHOLE_STATE.md), and [`verify_e0_orientation_capacity.py`](project/research/general_n/2026-09-13-alternative-attacks-v1/verify_e0_orientation_capacity.py).
