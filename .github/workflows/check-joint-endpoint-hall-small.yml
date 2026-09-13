@@ -1,0 +1,21 @@
+name: check joint endpoint Hall small systems
+
+on:
+  workflow_dispatch:
+  push:
+    paths:
+      - 'project/research/general_n/2026-09-13-alternative-attacks-v1/ENDPOINT_CLASS_PACKING.md'
+      - 'project/research/general_n/2026-09-13-alternative-attacks-v1/make_class_packing_scanner.py'
+      - 'project/research/general_n/2026-09-13-alternative-attacks-v1/verify_joint_endpoint_hall_small.py'
+      - '.github/workflows/check-joint-endpoint-hall-small.yml'
+
+jobs:
+  check:
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - uses: actions/checkout@v4
+      - name: Exhaustively compare bound with exact small systems
+        run: |
+          cd project/research/general_n/2026-09-13-alternative-attacks-v1
+          python3 verify_joint_endpoint_hall_small.py
