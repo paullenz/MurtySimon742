@@ -1,6 +1,6 @@
 # Murty–Simon / Erdős Problem #742
 
-Candidate proofs and reproducible research. **Updated 13 September 2026 through the N34 state-526 whole-state exclusion. Independent mathematical review, novelty assessment and independent computational reproduction remain OPEN.** Repository publication, green replay and same-assistant hostile audit are not external acceptance and do not prove the unrestricted conjecture.
+Candidate proofs and reproducible research. **Updated 13 September 2026 through the N34 state-382 whole-state exclusion, the fifth quantified whole-state closure. Independent mathematical review, novelty assessment and independent computational reproduction remain OPEN.** Repository publication, green replay and same-assistant hostile audit are not external acceptance and do not prove the unrestricted conjecture.
 
 **External reviewers:** start with [`START_HERE_FOR_REVIEWERS.md`](START_HERE_FOR_REVIEWERS.md). Canonical theorem-level packages are indexed in [`releases/REVIEW_READY_INDEX.md`](releases/REVIEW_READY_INDEX.md). The project welcomes hostile review, counterexamples, literature corrections and genuinely independent reproduction; GitHub Issues are the preferred place to report a suspected flaw.
 
@@ -43,7 +43,7 @@ Exact replay, internal audit, repository publication and external mathematical a
 | `n=34` | Complete candidate: `e(G)<=289`, equality exactly `K(17,17)`; reviewer-v2; final heavy certificate replaced by a short hand proof; external review open |
 | `n=35` | Complete candidate: `e(G)<=306`, equality exactly `K(17,18)`; reviewer-v1; external review open |
 | General maximum-degree result | Candidate theorem: for `n>=6`, `Delta(G)>=(7/12)n` implies `e(G)<floor(n^2/4)`; internal exact audits green; external review and novelty assessment open |
-| Generalisation frontier | **998 exclusions / 4,580 survivors** after whole-state closures of N34 states 227, 279, 588 and 526; these are scalar states in a frozen experiment, not surviving graphs |
+| Generalisation frontier | **999 exclusions / 4,579 survivors** after whole-state closures of N34 states 227, 279, 588, 526 and 382; these are scalar states in a frozen experiment, not surviving graphs |
 
 The unrestricted Murty–Simon conjecture remains unsolved by this project.
 
@@ -53,7 +53,7 @@ Canonical reviewer packages are indexed in [`releases/REVIEW_READY_INDEX.md`](re
 
 ## Current general structural results
 
-Important candidate all-order or parameterized results include balanced-degree reduction; the `7/12` maximum-degree theorem candidate; heavy-load/routing families; joint routing and demand/tail projection; compatible-destination routing and Hall/flow criteria; containment spill and pair-overlap inequalities; shared residual budgets; selection-free candidate capacity; and the selected-excess / threshold family.
+Important candidate all-order or parameterized results include balanced-degree reduction; the `7/12` maximum-degree theorem candidate; heavy-load/routing families; joint routing and demand/tail projection; compatible-destination routing and Hall/flow criteria; containment spill and pair-overlap inequalities; shared residual budgets; selection-free candidate capacity; the selected-excess / threshold family; and the refined baseline-3/order-statistic lemma for positive-demand states with `s_i in {2,3}`.
 
 For every selected positive-demand incidence,
 
@@ -67,9 +67,15 @@ If `h_l=#{i:e_i>=l}`, then
 q_u>h_l => p_u<=rho_u+l-2.                            (2)
 ```
 
-This threshold family is a principal mechanism in the quantified whole-state programme.
+For the low-demand family, the new order-statistic refinement keeps the exact source score
 
-## Quantifier pivot: four whole-state exclusions
+```text
+v_u=rho_u+q_u-1
+```
+
+at every selected incidence and retains the negative baseline contribution from zero-excess demand-two labels. See [`REFINED_BASELINE3_LEMMA.md`](project/research/general_n/2026-09-13-alternative-attacks-v1/REFINED_BASELINE3_LEMMA.md).
+
+## Quantifier pivot: five whole-state exclusions
 
 The [alternative-attacks package](project/research/general_n/2026-09-13-alternative-attacks-v1/README.md) was created because the shared-residual continuation had become extremely strong on one stored selected geometry—4,487 of 4,584 stored patterns were rejected—but that did not quantify alternative selections, q-vectors or `x>s`.
 
@@ -95,37 +101,55 @@ rho=1^5,2^2,3^11,
 r=42, S=44.
 ```
 
-The exact scan through `E=16` has one coarse equality at
+Its unique coarse low-excess equality is removed by a source-availability/endpoint-budget contradiction. The relaxed `h_2` tail is positive on every `E=17,...,34`; its sole zero at `E=16` is already strictly excluded by the exact scan. Frontier: `997/4,581 -> 998/4,580`.
+
+### N34 state 382
+
+[`STATE_382_WHOLE_STATE.md`](project/research/general_n/2026-09-13-alternative-attacks-v1/STATE_382_WHOLE_STATE.md) has
 
 ```text
-E=7, e_2=7, e_3=0^14,
-q_(rho=2)=1^2,
-q_(rho=3)=1^2,5^7,6^2.
+s=2^2,3^13,
+rho=1^6,2,3^11,
+r=41, S=43.
 ```
 
-The incoming ledger forces all q=1 sources to high p, so they can select only the high-excess label. Every zero-excess demand-three label must therefore use q=5/6, p=2 sources and has `C_i>=7`; those fourteen labels alone give `sum C_i>=98>93`, contradicting the exact total. The relaxed `h_2` tail is positive on every `E=17,...,34`; its sole zero at `E=16` is already strictly excluded by the exact scan. Frontier: `997/4,581 -> 998/4,580`.
+The exact low-excess sweep through `E=17` is strictly positive throughout, so **no hand-rigidity exception is needed**. For the tail, let
 
-Replay: [`STATE_526_REPLAY.md`](project/research/general_n/2026-09-13-alternative-attacks-v1/STATE_526_REPLAY.md). Machine summary: [`STATE_526_WHOLE_STATE_VERIFICATION.json`](project/research/general_n/2026-09-13-alternative-attacks-v1/STATE_526_WHOLE_STATE_VERIFICATION.json).
+```text
+z_0=#{i:s_i=2,e_i=0}.
+```
+
+Retaining the negative baseline-three contribution of those labels gives the stronger necessary inequality
+
+```text
+T + 2 z_0 - P_+ <= 3(84+E).
+```
+
+The refined tail is strict for every `E=17,...,34`; its only non-strict layer is `E=16`, already strictly excluded by the exact replay. Incoming capacity excludes `E>=35`. Frontier: `998/4,580 -> 999/4,579`.
+
+Replay: [`STATE_382_REPLAY.md`](project/research/general_n/2026-09-13-alternative-attacks-v1/STATE_382_REPLAY.md). No separate hand argument is required for this state.
 
 The current frozen frontier is therefore
 
 ```text
-998 exclusions / 4,580 survivors,
-4,502 N34 equality-derived survivors,
+999 exclusions / 4,579 survivors,
+4,501 N34 equality-derived survivors,
 78 N35 m=306-derived survivors.
 ```
 
 Survival in this catalogue is not graph feasibility.
 
-## What the four closures suggest
+## What the five closures suggest
 
 The emerging reusable architecture is two-sided:
 
 1. **High-excess scarcity:** threshold counts `h_l` restrict which large-p sources can also have large q.
 2. **Low-excess availability:** zero/low-excess labels need sufficiently low-p sources; the incoming ledger may consume those cheap sources.
-3. **Endpoint budget:** forced source usage raises `C_i>=q_u+p_u` until the exact `sum C_i` ledger becomes impossible.
+3. **Endpoint/order-statistic budget:** every selected source for label `i` bounds `d_i` by `rho_u+q_u-1`; the `x_i`-th eligible source score therefore bounds `C_i=d_i+e_i`.
+4. **Negative baseline terms matter:** at baseline three, a demand-two label with `e_i=0` contributes at most `-2`, rather than zero. This is decisive in the state-382 tail.
+5. **Triage before exact enumeration:** use the cheap refined threshold relaxation to rank states by non-strict excess layers, then exact-enumerate only exceptional layers and the low-excess boundary.
 
-States 588 and 526 also suggest a more efficient computational workflow: use a cheap `h_2` screen to rank states by non-strict excess layers, then exact-enumerate only exceptional layers and the low-excess boundary.
+States 588, 526 and 382 demonstrate three complementary mechanisms: demand-three-only endpoint rigidity, source-availability rigidity, and a clean refined-baseline closure without any hand exception.
 
 ## How the preceding generalisation machinery reached this point
 
@@ -136,7 +160,17 @@ States 588 and 526 also suggest a more efficient computational workflow: use a c
 | [Compatible routing catalogue](releases/general-compatible-catalogue-reviewer-v1/README.md) | 994 retained full/pilot exclusions | Produced the 4,584-state frontier entering the quantifier programme |
 | [Containment spill / pair overlap](project/research/general_n/2026-09-13-constraint-respecting-cross-v1/README.md) | Scalar spill witnesses for all 4,584; fixed-pattern failures | Exposed the quantifier gap |
 | [Shared residual budgets](project/research/general_n/2026-09-13-shared-residual-budget-v1/README.md) | 4,487/4,584 stored patterns rejected | Very strong on fixed geometry; not a whole-state result by itself |
-| [Alternative attacks](project/research/general_n/2026-09-13-alternative-attacks-v1/README.md) | Selection-free/excess lemmas and whole-state closures of states 227, 279, 588 and 526 | Current primary programme |
+| [Alternative attacks](project/research/general_n/2026-09-13-alternative-attacks-v1/README.md) | Selection-free/excess lemmas and whole-state closures of states 227, 279, 588, 526 and 382 | Current primary programme |
+
+## Current refined-family scan
+
+The files
+
+- [`prepare_refined_h2_family_scan.py`](project/research/general_n/2026-09-13-alternative-attacks-v1/prepare_refined_h2_family_scan.py),
+- [`scan_refined_h2_family.cpp`](project/research/general_n/2026-09-13-alternative-attacks-v1/scan_refined_h2_family.cpp), and
+- [`.github/workflows/scan-refined-h2-adjacent-family.yml`](.github/workflows/scan-refined-h2-adjacent-family.yml)
+
+implement an exact-integer triage of the structurally adjacent N34 low-demand family. Hash-verified preparation finds nine records in scope: the five already-closed regression states and four still-active companion states. The first workflow attempt is deliberately preserved as a tooling failure (`std::tie` applied to temporary `size()` values); the compile fix is committed. **No further frontier reduction is claimed here unless a later preserved checkpoint records it.**
 
 ## Independent maximum-cut route
 
@@ -150,8 +184,8 @@ Thus `I<=M` for some cut would prove Murty–Simon. A direct one-internal-edge/o
 
 ## Current research priorities
 
-1. **Run cheap threshold triage across the remaining 4,580 survivors.** Rank states by the number/severity of non-strict `h_2` excess layers, then exact-enumerate only the exceptions.
-2. **Extract a symbolic threshold/availability theorem.** Explain the shared state-227/state-279/state-588/state-526 mechanism in parameters `(a,b,rho,s,E,h_l)`.
+1. **Complete refined threshold triage of the four active adjacent companions, then widen it.** Rank by non-strict excess layers and exact-enumerate only those exceptions.
+2. **Extract a symbolic threshold/availability theorem.** Explain the shared five-state mechanism, now using the exact source-score order statistic and negative baseline term.
 3. **Continue the selection-free raw candidate-capacity projection.** Proper source subsets and thresholded source/label classes remain promising.
 4. **Maintain the maximum-cut route independently.** Do not retry the falsified direct matching.
 5. **Return to shared residual/pair/exact-destination geometry after quantified pruning.**
@@ -162,4 +196,4 @@ The largest correlated mathematical risk is still the canonical bridge: its grap
 
 No solver timeout, floating infeasibility status or unsuccessful search is used as proof.
 
-For restart-level detail, read [`CURRENT_STATE.md`](CURRENT_STATE.md). For the latest quantified advance, read [`STATE_526_WHOLE_STATE.md`](project/research/general_n/2026-09-13-alternative-attacks-v1/STATE_526_WHOLE_STATE.md).
+For restart-level detail, read [`CURRENT_STATE.md`](CURRENT_STATE.md). For the latest quantified advance, read [`STATE_382_WHOLE_STATE.md`](project/research/general_n/2026-09-13-alternative-attacks-v1/STATE_382_WHOLE_STATE.md) and [`REFINED_BASELINE3_LEMMA.md`](project/research/general_n/2026-09-13-alternative-attacks-v1/REFINED_BASELINE3_LEMMA.md).
