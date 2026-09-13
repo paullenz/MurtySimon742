@@ -1,0 +1,53 @@
+name: capacity-order hybrid scan
+
+on:
+  workflow_dispatch:
+  push:
+    paths:
+      - 'project/research/general_n/2026-09-13-alternative-attacks-v1/scan_capacity_order_hybrid.cpp'
+      - 'project/research/general_n/2026-09-13-alternative-attacks-v1/CAPACITY_ORDER_ENDPOINT_LEMMA.md'
+      - '.github/workflows/scan-capacity-order-hybrid.yml'
+
+jobs:
+  replay:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v4
+      - name: Compile verifier
+        run: |
+          g++ -O3 -std=c++17 \
+            project/research/general_n/2026-09-13-alternative-attacks-v1/scan_capacity_order_hybrid.cpp \
+            -o /tmp/scan_capacity_order_hybrid
+      - name: Replay boundary layers
+        run: |
+          set -euo pipefail
+          out=/tmp/capacity_order_hybrid_boundary.txt
+          : > "$out"
+          for pair in \
+            '230 18' '230 19' '230 20' '230 22' \
+            '282 14' '282 15' '282 16' '282 20' \
+            '385 15' '385 16' '385 17' '385 20'; do
+            set -- $pair
+            /tmp/scan_capacity_order_hybrid "$1" "$2" | tee -a "$out"
+          done
+
+          gap() {
+            awk -v s="$1" -v e="$2" '
+              $1=="state="s && $2=="E="e { next }
+            ' "$out" >/dev/null
+            grep "^state=$1 E=$2 " "$out" | sed -E 's/.* gap=(-?[0-9]+).*/\1/'
+          }
+
+          test "$(gap 230 18)" -le 0
+          test "$(gap 230 19)" -gt 0
+          test "$(gap 282 14)" -le 0
+          test "$(gap 282 15)" -gt 0
+          test "$(gap 385 15)" -le 0
+          test "$(gap 385 16)" -gt 0
+
+          cp "$out" capacity_order_hybrid_boundary.txt
+      - uses: actions/upload-artifact@v4
+        with:
+          name: capacity-order-hybrid-boundary
+          path: capacity_order_hybrid_boundary.txt
