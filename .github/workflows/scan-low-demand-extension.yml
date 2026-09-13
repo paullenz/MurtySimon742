@@ -1,0 +1,58 @@
+name: scan low-demand extension ring
+
+on:
+  workflow_dispatch:
+  push:
+    paths:
+      - 'project/research/general_n/2026-09-13-alternative-attacks-v1/make_low_demand_extension_scanner.py'
+      - 'project/research/general_n/2026-09-13-alternative-attacks-v1/scan_incidence_capacity_family.cpp'
+      - '.github/workflows/scan-low-demand-extension.yml'
+
+jobs:
+  scan:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@v4
+      - name: Generate and compile exact extension scanner
+        run: |
+          set -euo pipefail
+          cd project/research/general_n/2026-09-13-alternative-attacks-v1
+          python3 make_low_demand_extension_scanner.py | tee low_demand_extension_generation.log
+          g++ -O3 -std=c++17 scan_low_demand_extension.generated.cpp -o /tmp/scan_low_demand_extension
+      - name: Scan all seven states and every excess layer
+        run: |
+          set -euo pipefail
+          out=project/research/general_n/2026-09-13-alternative-attacks-v1/LOW_DEMAND_EXTENSION_SCAN.tsv
+          echo -e 'state\tE\tgap\tline' > "$out"
+          for state in 283 153 231 154 122 77 60; do
+            for E in $(seq 0 34); do
+              line=$(/tmp/scan_low_demand_extension "$state" "$E" | head -n 1)
+              gap=$(printf '%s\n' "$line" | sed -E 's/.* gap=(-?[0-9]+).*/\1/')
+              printf '%s\t%s\t%s\t%s\n' "$state" "$E" "$gap" "$line" >> "$out"
+            done
+          done
+          python3 - <<'PY'
+          from pathlib import Path
+          from collections import defaultdict
+          p=Path('project/research/general_n/2026-09-13-alternative-attacks-v1/LOW_DEMAND_EXTENSION_SCAN.tsv')
+          rows=[]
+          for line in p.read_text().splitlines()[1:]:
+              s,e,g,raw=line.split('\t',3)
+              rows.append((int(s),int(e),int(g),raw))
+          by=defaultdict(list)
+          for s,e,g,raw in rows: by[s].append((e,g,raw))
+          print('LOW_DEMAND_EXTENSION_SUMMARY')
+          for s in [283,153,231,154,122,77,60]:
+              vals=by[s]
+              non=[(e,g) for e,g,_ in vals if g<=0]
+              m=min(g for _,g,_ in vals)
+              print(f'state={s} min_gap={m} nonpositive_count={len(non)} nonpositive={non}')
+          print('TOTAL_NONPOSITIVE',sum(g<=0 for _,_,g,_ in rows))
+          PY
+      - uses: actions/upload-artifact@v4
+        with:
+          name: low-demand-extension-scan
+          path: |
+            project/research/general_n/2026-09-13-alternative-attacks-v1/LOW_DEMAND_EXTENSION_SCAN.tsv
+            project/research/general_n/2026-09-13-alternative-attacks-v1/low_demand_extension_generation.log
