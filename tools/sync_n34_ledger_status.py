@@ -1,8 +1,8 @@
 #!/usr/bin/env python3
 """Synchronize durable N34 whole-state status from WHOLE_STATE_LEDGER.tsv.
 
-This script deliberately touches only bounded status surfaces. Reviewer-material
-links are protected by their separate guard and are not rewritten here.
+Only bounded status surfaces are edited. Reviewer-material links are protected
+by their separate guard and are deliberately not rewritten here.
 """
 from pathlib import Path
 import csv
@@ -20,7 +20,7 @@ BASE_SURVIVORS = 4584
 N35_SURVIVORS = 78
 
 
-def rows():
+def read_rows():
     with LEDGER.open(newline="") as f:
         return list(csv.DictReader(f, delimiter="\t"))
 
@@ -32,6 +32,13 @@ def replace_one(text, pattern, repl, label, flags=0):
     return out
 
 
+def replace_optional(text, pattern, repl, label, flags=0):
+    out, n = re.subn(pattern, repl, text, count=1, flags=flags)
+    if n > 1:
+        raise RuntimeError(f"{label}: expected at most one replacement, got {n}")
+    return out
+
+
 def replace_or_insert_block(text, start, end, block, anchor_pattern, label):
     if start in text:
         pat = re.escape(start) + r".*?" + re.escape(end)
@@ -40,12 +47,12 @@ def replace_or_insert_block(text, start, end, block, anchor_pattern, label):
 
 
 def ledger_table(rs, prefix):
-    lines = [
-        "| State | Method | Record |",
-        "|---:|---|---|",
-    ]
+    lines = ["| State | Method | Record |", "|---:|---|---|"]
     for r in rs:
-        lines.append(f"| {r['state']} | {r['method']} | [`{r['record']}`]({prefix}{r['record']}) |")
+        lines.append(
+            f"| {r['state']} | {r['method']} | "
+            f"[`{r['record']}`]({prefix}{r['record']}) |"
+        )
     return "\n".join(lines)
 
 
@@ -81,9 +88,9 @@ def sync_root(rs, count, exclusions, survivors, n34_survivors):
     end = "<!-- N34-WHOLE-STATE-LEDGER:END -->"
     block = (
         f"{start}\n"
-        f"### Canonical N34 whole-state ledger\n\n"
+        "### Canonical N34 whole-state ledger\n\n"
         f"The canonical ledger records **{count} distinct quantified whole-state exclusions**. "
-        f"This table is generated from [`WHOLE_STATE_LEDGER.tsv`](project/research/general_n/2026-09-13-alternative-attacks-v1/WHOLE_STATE_LEDGER.tsv) so parallel lines of work cannot silently disappear from the headline count.\n\n"
+        "This table is generated from [`WHOLE_STATE_LEDGER.tsv`](project/research/general_n/2026-09-13-alternative-attacks-v1/WHOLE_STATE_LEDGER.tsv) so parallel lines of work cannot silently disappear from the headline count.\n\n"
         + ledger_table(rs, "project/research/general_n/2026-09-13-alternative-attacks-v1/")
         + f"\n\nThe current frozen frontier is therefore\n\n```text\n{exclusions:,} exclusions / {survivors:,} survivors,\n{n34_survivors:,} N34 equality-derived survivors,\n{N35_SURVIVORS} N35 m=306-derived survivors.\n```\n\n"
         "Survival in this catalogue is not graph feasibility.\n"
@@ -108,7 +115,7 @@ def sync_alt(rs, count, exclusions, survivors, n34_survivors):
         "alt closure count/list",
         flags=re.S,
     )
-    t = replace_one(
+    t = replace_optional(
         t,
         r"The latest three closures,[^\n]*",
         "The canonical union of all closure lines is recorded in [`WHOLE_STATE_LEDGER.tsv`](WHOLE_STATE_LEDGER.tsv); that ledger, rather than local ordinal wording in individual notes, controls the headline count.",
@@ -124,31 +131,6 @@ def sync_alt(rs, count, exclusions, survivors, n34_survivors):
     t = re.sub(r"## General lesson from the [^\n]* closures", f"## General lesson from the {count} closures", t)
     t = re.sub(r"None of the [^\n]* whole-state closures", f"None of the {count} whole-state closures", t)
     t = re.sub(r"explain the [^\n]* closures symbolically", f"explain the {count} closures symbolically", t)
-
-    replacements = {
-        122: "| 122 | `+1` | none — **whole state closed** ([`STATE_122_WHOLE_STATE.md`](STATE_122_WHOLE_STATE.md)) |",
-        283: "| 283 | `+1` | none — **whole state closed** ([`STATE_283_WHOLE_STATE.md`](STATE_283_WHOLE_STATE.md)) |",
-        154: "| 154 | `+1` | none — **whole state closed** ([`STATE_154_WHOLE_STATE.md`](STATE_154_WHOLE_STATE.md)) |",
-        231: "| 231 | `+1` | none — **whole state closed** ([`STATE_231_WHOLE_STATE.md`](STATE_231_WHOLE_STATE.md)) |",
-    }
-    for sid, line in replacements.items():
-        t = replace_one(t, rf"\| {sid} \|[^\n]*", line, f"alt matrix state {sid}")
-
-    t = replace_one(
-        t,
-        r"This is a useful compression\.[^\n]*\n\nAfter state 153,[^\n]*\n",
-        "This matrix has compressed further: states **122, 283, 154 and 231 are now whole-state closed** by endpoint class packing and its mixed-class Hall refinement. The remaining states from this seven-state ring are **77 and 60**; their preserved original weak layers are the next finite targets. These are necessary-condition scan survivors, not graphs.\n",
-        "alt matrix interpretation",
-    )
-
-    t = replace_one(
-        t,
-        r"At scan time five were closed and four were active: states `230,282,385,519`\. State 519 is now closed\. The remaining active companions are\s*```text\n230, 282, 385\.\n```",
-        "At scan time five were closed and four were active: states `230,282,385,519`. **All four are now closed**: state 519 by endpoint-order/source-availability rigidity and states 230, 282 and 385 by the incidence-capacity family closure.",
-        "alt adjacent-family status",
-        flags=re.S,
-    )
-
     t = replace_one(
         t,
         r"\*\*Current priority:\*\*[^\n]*",
@@ -191,6 +173,7 @@ def sync_current(rs, count, exclusions, survivors, n34_survivors):
         flags=re.S,
     )
     t = re.sub(r"## General-theory lesson from the [^\n]* closures", f"## General-theory lesson from the {count} closures", t)
+
     replacements = {
         122: "| 122 | `+1` | none — **whole state closed** |",
         283: "| 283 | `+1` | none — **whole state closed** |",
@@ -200,13 +183,13 @@ def sync_current(rs, count, exclusions, survivors, n34_survivors):
     for sid, line in replacements.items():
         t = replace_one(t, rf"\| {sid} \|[^\n]*", line, f"current matrix state {sid}")
 
-    t = replace_one(
+    t = replace_optional(
         t,
         r"This is a useful compression\.[^\n]*\n\nAfter state 153,[^\n]*\n",
         "This matrix has compressed further: states **122, 283, 154 and 231 are now whole-state closed**. The remaining states from this ring are **77 and 60**, which are the next finite class-packing targets.\n",
         "current matrix interpretation",
     )
-    t = replace_one(
+    t = replace_optional(
         t,
         r"At scan time five were closed and four were active: states `230,282,385,519`\. State 519 is now closed\. The remaining active companions are\s*```text\n230, 282, 385\.\n```",
         "At scan time five were closed and four were active: states `230,282,385,519`. **All four are now closed**; the canonical ledger records their whole-state status.",
@@ -261,14 +244,13 @@ Maintain external review of the canonical bridge and fixed-order candidates; con
         "current priorities",
         flags=re.S,
     )
-
-    t = replace_one(
+    t = replace_optional(
         t,
         r"3\. read the alternative-attacks README and the seven whole-state notes \([^\n]*\) plus verification summaries;",
         "3. read the alternative-attacks README, [`WHOLE_STATE_LEDGER.tsv`](project/research/general_n/2026-09-13-alternative-attacks-v1/WHOLE_STATE_LEDGER.tsv), and the closure records linked from that ledger;",
         "current restart ledger",
     )
-    t = replace_one(
+    t = replace_optional(
         t,
         r"4\. inspect `REFINED_BASELINE3_LEMMA\.md`, `ZERO_EXCESS_ENDPOINT_ORDER\.md`, `REFINED_H2_FAMILY_SCAN\.md`, `make_low_demand_extension_scanner\.py` and the preserved state-153 extension table;",
         "4. inspect `REFINED_BASELINE3_LEMMA.md`, `ZERO_EXCESS_ENDPOINT_ORDER.md`, `ENDPOINT_CLASS_PACKING.md`, `make_class_packing_scanner.py` and the current residual result tables;",
@@ -278,7 +260,7 @@ Maintain external review of the canonical bridge and fixed-order candidates; con
 
 
 def main():
-    rs = rows()
+    rs = read_rows()
     states = [int(r["state"]) for r in rs]
     if len(states) != len(set(states)):
         raise SystemExit("duplicate state in ledger")
