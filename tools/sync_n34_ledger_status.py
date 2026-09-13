@@ -91,6 +91,7 @@ def sync_root(rs, count, exclusions, survivors, n34_survivors):
         "### Canonical N34 whole-state ledger\n\n"
         f"The canonical ledger records **{count} distinct quantified whole-state exclusions**. "
         "This table is generated from [`WHOLE_STATE_LEDGER.tsv`](project/research/general_n/2026-09-13-alternative-attacks-v1/WHOLE_STATE_LEDGER.tsv) so parallel lines of work cannot silently disappear from the headline count.\n\n"
+        f"The checker [`tools/check_n34_whole_state_ledger.py`](tools/check_n34_whole_state_ledger.py) separately pins all {count} current closures in `KNOWN_MINIMUM`. This guard is deliberately monotone: future closures may be added, while an accidental rewrite must not silently erase a preserved closure.\n\n"
         + ledger_table(rs, "project/research/general_n/2026-09-13-alternative-attacks-v1/")
         + f"\n\nThe current frozen frontier is therefore\n\n```text\n{exclusions:,} exclusions / {survivors:,} survivors,\n{n34_survivors:,} N34 equality-derived survivors,\n{N35_SURVIVORS} N35 m=306-derived survivors.\n```\n\n"
         "Survival in this catalogue is not graph feasibility.\n"
@@ -134,7 +135,7 @@ def sync_alt(rs, count, exclusions, survivors, n34_survivors):
     t = replace_one(
         t,
         r"\*\*Current priority:\*\*[^\n]*",
-        "**Current priority:** generalise and audit the orientation target-capacity lemma that closed states 77 and 60, combine it with the joint endpoint-class Hall refinement, and rescan the remaining frozen N34 catalogue for the next quantified closures.",
+        f"**Current priority:** generalise and red-team the orientation target-capacity lemma; derive the strongest exact Hall/flow or threshold-prefix formulation justified by the canonical bridge; then combine it with the joint endpoint-class and incidence-capacity machinery to rescan the remaining **{survivors:,}** frozen scalar survivors. States 77 and 60 are closed and must not be retargeted as live obligations.",
         "alt priority",
     )
 
@@ -143,6 +144,7 @@ def sync_alt(rs, count, exclusions, survivors, n34_survivors):
     block = (
         f"{start}\n"
         "### Canonical closure ledger\n\n"
+        f"The durability checker [`../../../../tools/check_n34_whole_state_ledger.py`](../../../../tools/check_n34_whole_state_ledger.py) pins all {count} current closures in `KNOWN_MINIMUM`; new closures may be added, but a later ledger/README rewrite must not silently remove a preserved closure.\n\n"
         + ledger_table(rs, "")
         + f"\n\nCanonical frontier: **{exclusions:,} exclusions / {survivors:,} survivors**.\n"
         f"{end}"
@@ -165,6 +167,20 @@ def sync_current(rs, count, exclusions, survivors, n34_survivors):
         f"**Research state reconciled:** 13 September 2026 through the canonical N34 whole-state ledger: **{count} quantified closures** (`{state_list}`), frontier **{exclusions:,}/{survivors:,}**. External mathematical review, novelty assessment and independent computational reproduction remain OPEN unless a later preserved checkpoint explicitly changes that status. Internal replay, same-assistant audit and repository publication are not external acceptance.",
         "current headline",
     )
+    guard = (
+        f"**Durability guard:** [`tools/check_n34_whole_state_ledger.py`](tools/check_n34_whole_state_ledger.py) "
+        f"pins all {count} current closures in `KNOWN_MINIMUM`, including states `77` and `60`. "
+        "New closures may be added, but a later ledger/README rewrite must not silently remove any preserved closure."
+    )
+    if "**Durability guard:**" in t:
+        t = replace_one(t, r"\*\*Durability guard:\*\*[^\n]*", guard, "current durability guard")
+    else:
+        t = replace_one(
+            t,
+            r"(\*\*Research state reconciled:\*\*[^\n]*\n)",
+            r"\1\n" + guard + "\n",
+            "current durability guard insertion",
+        )
     t = replace_one(
         t,
         r"The frozen frontier is now\s*```text\n.*?```\s*Breakdown:\s*```text\n.*?```",
@@ -238,11 +254,18 @@ Continue selection-free, maximum-cut and other genuinely different approaches wh
         "3. read the alternative-attacks README, [`WHOLE_STATE_LEDGER.tsv`](project/research/general_n/2026-09-13-alternative-attacks-v1/WHOLE_STATE_LEDGER.tsv), and the closure records linked from that ledger;",
         "current restart ledger",
     )
+    restart_line = "4. inspect `REFINED_BASELINE3_LEMMA.md`, `ZERO_EXCESS_ENDPOINT_ORDER.md`, `ENDPOINT_CLASS_PACKING.md`, [`ORIENTATION_TARGET_CAPACITY.md`](project/research/general_n/2026-09-13-alternative-attacks-v1/ORIENTATION_TARGET_CAPACITY.md), `make_class_packing_scanner.py`, [`verify_e0_orientation_capacity.py`](project/research/general_n/2026-09-13-alternative-attacks-v1/verify_e0_orientation_capacity.py) and the current residual result tables;"
     t = replace_optional(
         t,
         r"4\. inspect `REFINED_BASELINE3_LEMMA\.md`, `ZERO_EXCESS_ENDPOINT_ORDER\.md`, `REFINED_H2_FAMILY_SCAN\.md`, `make_low_demand_extension_scanner\.py` and the preserved state-153 extension table;",
-        "4. inspect `REFINED_BASELINE3_LEMMA.md`, `ZERO_EXCESS_ENDPOINT_ORDER.md`, `ENDPOINT_CLASS_PACKING.md`, `make_class_packing_scanner.py` and the current residual result tables;",
-        "current restart tools",
+        restart_line,
+        "current restart old tools",
+    )
+    t = replace_optional(
+        t,
+        r"4\. inspect `REFINED_BASELINE3_LEMMA\.md`, `ZERO_EXCESS_ENDPOINT_ORDER\.md`, `ENDPOINT_CLASS_PACKING\.md`, `make_class_packing_scanner\.py` and the current residual result tables;",
+        restart_line,
+        "current restart intermediate tools",
     )
     p.write_text(t)
 
