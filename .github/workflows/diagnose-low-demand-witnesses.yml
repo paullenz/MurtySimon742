@@ -1,0 +1,29 @@
+name: diagnose low-demand witnesses
+
+on:
+  workflow_dispatch:
+  push:
+    paths:
+      - 'project/research/general_n/2026-09-13-alternative-attacks-v1/make_low_demand_witness_scanner.py'
+      - '.github/workflows/diagnose-low-demand-witnesses.yml'
+
+jobs:
+  diagnose:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v4
+      - name: Generate and compile witness scanner
+        run: |
+          set -euo pipefail
+          cd project/research/general_n/2026-09-13-alternative-attacks-v1
+          python3 make_low_demand_witness_scanner.py
+          g++ -O3 -std=c++17 scan_low_demand_witness.generated.cpp -o /tmp/scan_low_demand_witness
+      - name: State 122 E0 witness
+        run: |
+          set -euo pipefail
+          /tmp/scan_low_demand_witness 122 0
+      - name: State 283 E7 witness
+        run: |
+          set -euo pipefail
+          /tmp/scan_low_demand_witness 283 7
