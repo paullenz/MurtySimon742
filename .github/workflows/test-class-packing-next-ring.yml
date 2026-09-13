@@ -1,0 +1,43 @@
+name: test class-packing next ring
+
+on:
+  workflow_dispatch:
+  push:
+    paths:
+      - '.github/workflows/test-class-packing-next-ring.yml'
+      - 'project/research/general_n/2026-09-13-alternative-attacks-v1/make_class_packing_scanner.py'
+      - 'project/research/general_n/2026-09-13-alternative-attacks-v1/scan_incidence_capacity_family.cpp'
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@v4
+      - name: Generate and compile joint-Hall class-packing scanner
+        run: |
+          set -euo pipefail
+          cd project/research/general_n/2026-09-13-alternative-attacks-v1
+          python3 make_class_packing_scanner.py
+          g++ -O3 -std=c++17 scan_class_packing.generated.cpp -o /tmp/scan_class_packing
+      - name: State 77 residual layers
+        run: |
+          set -euo pipefail
+          : > /tmp/next_ring_results.txt
+          for E in 0 1 3 4 5 6 7; do
+            echo "=== state 77 E=$E ===" | tee -a /tmp/next_ring_results.txt
+            /tmp/scan_class_packing 77 "$E" | tee -a /tmp/next_ring_results.txt
+          done
+      - name: State 60 residual layers
+        run: |
+          set -euo pipefail
+          for E in 0 1 2 3 4 5 6 7; do
+            echo "=== state 60 E=$E ===" | tee -a /tmp/next_ring_results.txt
+            /tmp/scan_class_packing 60 "$E" | tee -a /tmp/next_ring_results.txt
+          done
+      - name: Preserve next-ring replay output
+        uses: actions/upload-artifact@v4
+        with:
+          name: class-packing-next-ring-results
+          path: /tmp/next_ring_results.txt
+          if-no-files-found: error
