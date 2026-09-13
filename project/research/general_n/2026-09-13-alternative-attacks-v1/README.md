@@ -29,6 +29,8 @@ split as
 
 These are scalar states in a frozen generalisation experiment, not individual surviving graphs. The fixed-order N34/N35 candidate proofs are unchanged.
 
+The durability checker [`../../../../tools/check_n34_whole_state_ledger.py`](../../../../tools/check_n34_whole_state_ledger.py) pins all 16 current closures in `KNOWN_MINIMUM`, explicitly including states `77` and `60`. New closures may be added, but an accidental later ledger/README rewrite must not silently remove a preserved closure.
+
 <!-- CANONICAL-WHOLE-STATE-LEDGER:START -->
 ### Canonical closure ledger
 
@@ -99,6 +101,7 @@ The present architecture is:
 
    with `L_u=max(0,p_u-rho_u+1)`.
 6. **Forced low-score incidence** — [`FORCED_INCIDENCE_SCORE.md`](FORCED_INCIDENCE_SCORE.md) turns a Hall/pigeonhole overload into a sharper bound on a particular label's `d_i` when that label is forced to receive an incidence from a low-score source.
+7. **Orientation target capacity** — [`ORIENTATION_TARGET_CAPACITY.md`](ORIENTATION_TARGET_CAPACITY.md) links the selected-label constraints back to the actual missing-edge orientation. For every oriented missing pair `u->w`, `q_u-1<=q_w+rho_w`; hence low-cross-degree targets have a Hall-type incoming-capacity restriction.
 
 The progression is therefore
 
@@ -108,7 +111,8 @@ threshold scarcity
  -> endpoint order statistics
  -> demand-compatible excess order
  -> incidence-capacity competition
- -> forced low-score rigidity.
+ -> forced low-score rigidity
+ -> missing-edge orientation / flow capacity.
 ```
 
 ## Whole-state exclusions
@@ -223,6 +227,19 @@ The four active companions identified by the original adjacent-family scan,
 
 are now all closed.
 
+### Latest closures: states 77 and 60
+
+The joint endpoint-class Hall refinement makes every formerly weak positive-excess layer strict in both states, leaving only `E=0`. The orientation target-capacity lemma then closes the exact-demand fibres without fixing selected-label identities.
+
+The exact verifier [`verify_e0_orientation_capacity.py`](verify_e0_orientation_capacity.py) enumerates the full nondecreasing `q` frontier:
+
+```text
+state 77: 201,670 E=0 q-profiles, 0 pass, best cut 32 < Q=38;
+state 60: 253,001 E=0 q-profiles, 0 pass, best cut 31 < Q=37.
+```
+
+Thus even the closest profile has a six-incidence target-capacity deficit. Whole-state records are [`STATE_77_WHOLE_STATE.md`](STATE_77_WHOLE_STATE.md) and [`STATE_60_WHOLE_STATE.md`](STATE_60_WHOLE_STATE.md).
+
 ## Default family-screening strategy
 
 The programme should now use the following order:
@@ -231,24 +248,26 @@ The programme should now use the following order:
 2. add capacity-order endpoint availability whenever exact-demand labels occur;
 3. replace global excess counts by demand-compatible excess order statistics;
 4. exact-enumerate only branches still non-strict;
-5. impose threshold selected-incidence capacities before any graph-level search;
-6. when equality survives, use forced-incidence/source-score rigidity or a full matching test;
-7. only then return to stronger shared-residual/pair geometry.
+5. impose threshold selected-incidence capacities;
+6. impose missing-edge orientation target-capacity cuts before escalating to a graph-level model;
+7. when equality survives, use forced-incidence/source-score rigidity or the strongest exact Hall/flow test available;
+8. only then return to stronger shared-residual/pair geometry.
 
 The frozen survivor extraction utility [`extract_frozen_survivors.py`](extract_frozen_survivors.py) is transport/replay infrastructure only; it does not itself apply a theorem.
 
 ## General lesson from the 16 closures
 
-The newer closures suggest that the useful object is not merely a scalar ledger but a **capacitated selected source-label incidence system**.
+The newer closures suggest that the useful object is not merely a scalar ledger but a **capacitated selected source-label incidence system coupled to a capacitated orientation of the missing-edge graph**.
 
 - high excess is scarce and limits incoming load;
 - low residual-degree sources see only restricted demand classes;
 - labels have finite selected-degree capacity `x_i`, so sources compete for compatible high-excess labels;
 - exact-demand labels require enough low-p endpoints;
 - endpoint lower and upper order statistics interact through the same source margins;
-- equality can force low-score sources onto specific labels, sharply reducing positive correction bounds.
+- equality can force low-score sources onto specific labels, sharply reducing positive correction bounds;
+- a source with large `q_u` cannot orient a missing edge into a target with insufficient cross-degree, producing a second Hall/flow constraint on the same margins.
 
-The natural generalisation is therefore Hall/flow-like rather than another collection of isolated state-specific inequalities.
+The natural generalisation is therefore Hall/flow-like rather than another collection of isolated state-specific inequalities. The next structural question is whether the allowed source-target relation has enough Ferrers/threshold structure that the full orientation feasibility problem reduces to a small family of prefix cuts.
 
 ## Raw candidate capacity and independent route
 
@@ -268,4 +287,4 @@ A direct one-edge/one-nonedge matching proof is false and remains preserved as a
 
 External mathematical review of the canonical bridge and all new lemmas remains open. Independent computational reproduction remains open until a separate environment has replayed the committed artifacts.
 
-**Current priority:** apply the joint endpoint-class Hall refinement to states 77 and 60, then extract the strongest reusable mixed-class Hall/flow theorem and rescan the remaining frozen N34 catalogue.
+**Current priority:** generalise and red-team the orientation target-capacity lemma; derive the strongest exact Hall/flow or threshold-prefix formulation justified by the canonical bridge; then combine it with the joint endpoint-class and incidence-capacity machinery to rescan the remaining **4,568** frozen scalar survivors. States 77 and 60 are closed and must not be retargeted as live obligations.
