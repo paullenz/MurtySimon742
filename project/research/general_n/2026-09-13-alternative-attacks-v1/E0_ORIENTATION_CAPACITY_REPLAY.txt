@@ -1,0 +1,18 @@
+GitHub Actions run 34785891328
+Workflow: check E0 orientation target capacity
+Conclusion: success
+Commit under test: 13a9ffd1e488d36a312c44e497b1010f8e7b5609
+
+state=77 profiles=201670 passing=0 Q=38 max_min_cut=32 minimum_deficit=6
+closest q2=2,2,2,2 q3=2,2,2,3,5,6,10 threshold=1 eligible_out=14 high_target_cap=18
+threshold_witness_counts k1=63498 k2=24746 k3=49890 k4=28066 k5=17102 k6=8902 k7=6334 k8=2472 k9=594 k10=66
+
+state=60 profiles=253001 passing=0 Q=37 max_min_cut=31 minimum_deficit=6
+closest q2=2,2,2,2,2 q3=0,2,4,5,6,10 threshold=3 eligible_out=16 high_target_cap=15
+threshold_witness_counts k1=72374 k2=38726 k3=63032 k4=35254 k5=22441 k6=13712 k7=5036 k8=1924 k9=471 k10=31
+
+E0_ORIENTATION_TARGET_CAPACITY PASS
+
+Actions artifact: e0-orientation-capacity-replay
+Artifact id: 10326950324
+Artifact ZIP SHA-256: 304dfd030f0deb7947e31b17110fa42e234924edfa4936b7b34c03b481885904
