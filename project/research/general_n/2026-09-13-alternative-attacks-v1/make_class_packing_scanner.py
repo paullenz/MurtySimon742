@@ -6,6 +6,13 @@ profile whose existing bound is still nonpositive is sent to the new fallback.
 The fallback enumerates incoming p allocations subject to the same pointwise
 caps and applies ENDPOINT_CLASS_PACKING.md to the zero-excess demand-two and
 demand-three classes, together with the exact total endpoint budget.
+
+The zero-excess classes also share the same source incidences.  For each mass
+threshold we therefore impose the exact Hall inequalities for the nested
+compatibility classes (demand 3 sources are a subset of demand 2 sources).
+This is used as a safe total-endpoint-budget pruning condition; the objective
+still uses only the separately proved demand-two lower bound, so no endpoint
+mass is double-counted.
 """
 from pathlib import Path
 import hashlib
@@ -44,6 +51,51 @@ static long long endpoint_class_lb(const vector<PackSrc>&src,const vector<int>&p
  return lb;
 }
 
+// Exact Hall test for a selected set of a demand-two and b demand-three
+// zero-excess endpoint labels.  A rho=2 source can meet only demand-two
+// labels; a rho>=3 source can meet both classes.  When lam>0, only sources
+// with endpoint load q+p < lam may serve labels whose endpoint mass is <lam.
+static bool joint_hall_ok(const vector<PackSrc>&src,const vector<int>&p,int a,int b,int lam){
+ for(int i=0;i<=a;++i)for(int j=0;j<=b;++j){
+  if(i==0&&j==0)continue;
+  long long cap=0;
+  for(int u=0;u<(int)src.size();++u){
+   if(src[u].q<=0||src[u].rho<2||p[u]>src[u].rho-1)continue;
+   if(lam>0 && src[u].q+p[u]>=lam)continue;
+   if(src[u].rho==2)cap+=min(src[u].q,i);
+   else cap+=min(src[u].q,i+j);
+  }
+  if(2LL*i+3LL*j>cap)return false;
+ }
+ return true;
+}
+
+// Lower bound the combined endpoint mass of the two zero-excess classes.
+// At each threshold lambda, labels with mass <lambda must be realizable using
+// only sources with q+p<lambda.  Maximizing the number of such labels under
+// the nested Hall system gives a rigorous lower bound on the number forced to
+// cross that threshold.
+static long long endpoint_joint_lb(const vector<PackSrc>&src,const vector<int>&p,int z2,int z3){
+ if(z2==0&&z3==0)return 0;
+ if(!joint_hall_ok(src,p,z2,z3,0))return INF;
+ long long lb=2LL*z2+3LL*z3;
+ int mx=3;
+ for(int u=0;u<(int)src.size();++u)
+  if(src[u].q>0&&src[u].rho>=2&&p[u]<=src[u].rho-1)mx=max(mx,src[u].q+p[u]);
+ // lambda=3 contributes only the excess above the demand-two base mass 2.
+ int low2=0;
+ for(int a=0;a<=z2;++a)if(joint_hall_ok(src,p,a,0,3))low2=max(low2,a);
+ lb+=z2-low2;
+ // From lambda=4 onwards, both classes contribute one unit per threshold.
+ for(int lam=4;lam<=mx+1;++lam){
+  int low=0;
+  for(int a=0;a<=z2;++a)for(int b=0;b<=z3;++b)
+   if(joint_hall_ok(src,p,a,b,lam))low=max(low,a+b);
+  lb+=z2+z3-low;
+ }
+ return lb;
+}
+
 static long long packed_source_objective(const State&st,const vector<int>&q2,const vector<int>&q3,
                                          const vector<int>&e2,const vector<int>&e3,int Q){
  vector<int>d2=e2,all=e2;all.insert(all.end(),e3.begin(),e3.end());
@@ -62,7 +114,8 @@ static long long packed_source_objective(const State&st,const vector<int>&q2,con
   if(qp>=best)return;if(rem<0||rem>suf[at])return;
   if(at==(int)src.size()){
    if(rem)return;long long l2=endpoint_class_lb(src,p,2,z2);if(l2==INF)return;long long l3=endpoint_class_lb(src,p,3,z3);if(l3==INF)return;
-   if(l2+l3+other>totalC)return;best=min(best,qp+l2);return;
+   long long lj=endpoint_joint_lb(src,p,z2,z3);if(lj==INF)return;
+   if(max(l2+l3,lj)+other>totalC)return;best=min(best,qp+l2);return;
   }
   int hi=min(src[at].cap,rem);for(int x=0;x<=hi;++x){p[at]=x;dfs(at+1,rem-x,qp+1LL*src[at].q*x);}p[at]=0;
  };
@@ -91,6 +144,6 @@ def main():
     OUT.write_text(s)
     print("BASE_SHA256",hashlib.sha256(raw.encode()).hexdigest())
     print("GENERATED_SHA256",hashlib.sha256(s.encode()).hexdigest())
-    print("FALLBACK","exact-p-endpoint-class-packing")
+    print("FALLBACK","exact-p-endpoint-class-packing-joint-hall")
 
 if __name__=="__main__":main()
