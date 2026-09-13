@@ -1,0 +1,24 @@
+name: Replay refined h2 adjacent input
+
+on:
+  workflow_dispatch:
+  push:
+    paths:
+      - '.github/workflows/replay-refined-h2-adjacent-input.yml'
+
+permissions:
+  contents: read
+
+jobs:
+  replay-input:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 5
+    steps:
+      - uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262
+      - name: Reconstruct and print exact family input
+        run: |
+          set -euo pipefail
+          cd project/research/general_n/2026-09-13-alternative-attacks-v1
+          python3 prepare_refined_h2_family_scan.py
+          echo '--- EXACT FAMILY INPUT ---'
+          cat refined_h2_family_input.txt
