@@ -6,6 +6,7 @@ on:
     paths:
       - '.github/workflows/test-class-packing-state154.yml'
 
+# Target the three nonpositive layers from the original extension matrix.
 jobs:
   test:
     runs-on: ubuntu-latest
