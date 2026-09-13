@@ -1,0 +1,19 @@
+name: check N34 whole-state ledger
+
+on:
+  workflow_dispatch:
+  push:
+    paths:
+      - 'project/research/general_n/2026-09-13-alternative-attacks-v1/WHOLE_STATE_LEDGER.tsv'
+      - 'project/research/general_n/2026-09-13-alternative-attacks-v1/STATE_*_WHOLE_STATE.md'
+      - 'project/research/general_n/2026-09-13-alternative-attacks-v1/INCIDENCE_CAPACITY_FAMILY_CLOSURE.md'
+      - 'tools/check_n34_whole_state_ledger.py'
+      - '.github/workflows/check-n34-whole-state-ledger.yml'
+
+jobs:
+  check:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Check canonical closure ledger
+        run: python3 tools/check_n34_whole_state_ledger.py
