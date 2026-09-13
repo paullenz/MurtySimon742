@@ -1,0 +1,27 @@
+name: check E0 orientation target capacity
+
+on:
+  workflow_dispatch:
+  push:
+    paths:
+      - 'project/research/general_n/2026-09-13-alternative-attacks-v1/ORIENTATION_TARGET_CAPACITY.md'
+      - 'project/research/general_n/2026-09-13-alternative-attacks-v1/verify_e0_orientation_capacity.py'
+      - '.github/workflows/check-e0-orientation-capacity.yml'
+
+jobs:
+  verify:
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - uses: actions/checkout@v4
+      - name: Replay exact E0 orientation-capacity enumeration
+        run: |
+          set -euo pipefail
+          cd project/research/general_n/2026-09-13-alternative-attacks-v1
+          python3 verify_e0_orientation_capacity.py | tee E0_ORIENTATION_CAPACITY_REPLAY.txt
+      - name: Preserve replay output
+        uses: actions/upload-artifact@v4
+        with:
+          name: e0-orientation-capacity-replay
+          path: project/research/general_n/2026-09-13-alternative-attacks-v1/E0_ORIENTATION_CAPACITY_REPLAY.txt
+          if-no-files-found: error
