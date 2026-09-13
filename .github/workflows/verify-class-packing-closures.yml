@@ -6,6 +6,7 @@ on:
     paths:
       - '.github/workflows/verify-class-packing-closures.yml'
 
+# Full 0..34 regression before promoting states 122 and 283.
 jobs:
   verify:
     runs-on: ubuntu-latest
