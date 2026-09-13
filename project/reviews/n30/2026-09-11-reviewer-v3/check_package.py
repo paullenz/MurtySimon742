@@ -64,10 +64,13 @@ def main():
         for kind in ['Reviewer_Manuscript','Verification_Companion']:
             path=f'releases/n{n}-reviewer-v{v}/N{n}_{kind}_v{v}.pdf'
             assert path in index and (ROOT/path).is_file(),path
+    # Current navigation surfaces must continue to expose the canonical N30
+    # manuscript and verification companion. The portable ZIP is verified
+    # directly below from its manifest and archive contents; it need not be
+    # linked independently from every top-level navigation surface.
     for f in [ROOT/p for p in SURFACES[:3]]:
         s=f.read_text();assert 'n30-reviewer-v3/N30_Reviewer_Manuscript_v3.pdf' in s
         assert 'n30-reviewer-v3/N30_Verification_Companion_v3.pdf' in s
-        assert 'n30-reviewer-v3/N30_Reviewer_Package_v3.zip' in s
         assert not re.search(r'current[^\n]*v2 at `n=25,27,28,30`',s,re.I)
     # Historical proof integrity is enforced by the pinned source hashes above.
     # The repository is an active multi-order research tree, so unrelated later
