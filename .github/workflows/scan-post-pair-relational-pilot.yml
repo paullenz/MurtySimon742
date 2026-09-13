@@ -1,0 +1,58 @@
+name: scan post-pair relational pilot
+
+on:
+  workflow_dispatch:
+  push:
+    paths:
+      - 'project/research/general_n/2026-09-13-alternative-attacks-v1/scan_post_pair_relational.cpp'
+      - '.github/workflows/scan-post-pair-relational-pilot.yml'
+
+jobs:
+  pilot:
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    steps:
+      - uses: actions/checkout@v4
+      - name: Prepare one ledger-current 1/32 shard
+        working-directory: project/research/general_n/2026-09-13-alternative-attacks-v1
+        run: python3 prepare_pair_capacity_frontier.py --mod 32 --rem 0 --output POST_PAIR_PILOT_INPUT.txt
+      - name: Compile post-pair relational scanner
+        working-directory: project/research/general_n/2026-09-13-alternative-attacks-v1
+        run: g++ -O3 -std=c++17 -Wall -Wextra -pedantic scan_post_pair_relational.cpp -o scan_post_pair_relational
+      - name: Run pilot
+        working-directory: project/research/general_n/2026-09-13-alternative-attacks-v1
+        run: |
+          ./scan_post_pair_relational POST_PAIR_PILOT_INPUT.txt POST_PAIR_PILOT.tsv 2>&1 | tee POST_PAIR_PILOT_REPLAY.txt
+          python3 - <<'PY'
+          import csv, json
+          with open('POST_PAIR_PILOT.tsv') as f:
+              rows=list(csv.DictReader(f,delimiter='\t'))
+          exc=[r for r in rows if r['status']=='RELATIONAL_EXCLUDED']
+          surv=[r for r in rows if r['status']=='SURVIVES_RELATIONAL']
+          report={
+              'schema':'post-pair-relational-pilot-v1',
+              'states':len(rows),
+              'relational_excluded':len(exc),
+              'survives_relational':len(surv),
+              'excluded_state_ids':[int(r['state_id']) for r in exc],
+              'profiles_tested':sum(int(r['profiles_tested']) for r in rows),
+              'paircap_pass':sum(int(r['paircap_pass']) for r in rows),
+              'incidence_pass':sum(int(r['incidence_pass']) for r in rows),
+              'pairhall_pass':sum(int(r['pairhall_pass']) for r in rows),
+              'targethall_pass':sum(int(r['targethall_pass']) for r in rows),
+              'cost_fail':sum(int(r['cost_fail']) for r in rows),
+              'reported_seconds':sum(float(r['seconds']) for r in rows),
+              'external_review':'OPEN',
+          }
+          open('POST_PAIR_PILOT_SUMMARY.json','w').write(json.dumps(report,indent=2)+'\n')
+          print(json.dumps(report,indent=2))
+          PY
+      - name: Upload pilot
+        uses: actions/upload-artifact@v4
+        with:
+          name: post-pair-relational-pilot
+          path: |
+            project/research/general_n/2026-09-13-alternative-attacks-v1/POST_PAIR_PILOT_INPUT_VERIFICATION.json
+            project/research/general_n/2026-09-13-alternative-attacks-v1/POST_PAIR_PILOT.tsv
+            project/research/general_n/2026-09-13-alternative-attacks-v1/POST_PAIR_PILOT_REPLAY.txt
+            project/research/general_n/2026-09-13-alternative-attacks-v1/POST_PAIR_PILOT_SUMMARY.json
