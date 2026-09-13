@@ -15,3 +15,5 @@ state	method	record
 231	mixed-class joint Hall closure	STATE_231_WHOLE_STATE.md
 77	orientation target-capacity closure	STATE_77_WHOLE_STATE.md
 60	orientation target-capacity closure	STATE_60_WHOLE_STATE.md
+13518	potential-pair capacity closure	PAIR_CAPACITY_13518_13519_WHOLE_STATE.md
+13519	potential-pair capacity closure	PAIR_CAPACITY_13518_13519_WHOLE_STATE.md
