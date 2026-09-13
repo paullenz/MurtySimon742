@@ -1,0 +1,34 @@
+name: sync N34 ledger status
+
+on:
+  workflow_dispatch:
+  push:
+    paths:
+      - 'project/research/general_n/2026-09-13-alternative-attacks-v1/WHOLE_STATE_LEDGER.tsv'
+      - 'tools/sync_n34_ledger_status.py'
+      - '.github/workflows/sync-n34-ledger-status.yml'
+
+permissions:
+  contents: write
+
+jobs:
+  sync:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+      - name: Synchronize status surfaces
+        run: python3 tools/sync_n34_ledger_status.py
+      - name: Commit synchronized status if changed
+        run: |
+          set -euo pipefail
+          if git diff --quiet -- README.md CURRENT_STATE.md project/research/general_n/2026-09-13-alternative-attacks-v1/README.md; then
+            echo 'Status surfaces already synchronized.'
+            exit 0
+          fi
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add README.md CURRENT_STATE.md project/research/general_n/2026-09-13-alternative-attacks-v1/README.md
+          git commit -m 'Sync N34 status from canonical whole-state ledger'
+          git push
