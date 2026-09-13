@@ -1,0 +1,28 @@
+name: diagnose low-demand one-layer survivors
+
+on:
+  workflow_dispatch:
+  push:
+    paths:
+      - '.github/workflows/diagnose-low-demand-survivors.yml'
+
+jobs:
+  diagnose:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v4
+      - name: Generate and compile audited extension scanner
+        run: |
+          set -euo pipefail
+          cd project/research/general_n/2026-09-13-alternative-attacks-v1
+          python3 make_low_demand_extension_scanner.py
+          g++ -O3 -std=c++17 scan_low_demand_extension.generated.cpp -o /tmp/scan_low_demand_extension
+      - name: State 122 E0
+        run: |
+          set -euo pipefail
+          /tmp/scan_low_demand_extension 122 0
+      - name: State 283 E7
+        run: |
+          set -euo pipefail
+          /tmp/scan_low_demand_extension 283 7
