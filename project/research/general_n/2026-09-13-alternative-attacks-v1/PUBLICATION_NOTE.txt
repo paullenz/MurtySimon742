@@ -1,1 +1,1 @@
-Research package published on main through commit fc9b616767721b28030da981ba1a6932e8a54c44, whose parent is the earlier publication-note commit 55269f448e956f5ec9b312f23f17aeb708f3c3b4. The mathematical research tree is the staged blob set recorded in MANIFEST.json. No whole-state frontier change is claimed.
+STOP USING CONTENTS API FOR BRANCH ATTACHMENT. Research package target commit: b7cbdad8c0cca049b8c8af1eab752e08980bba63. The branch ref must be advanced to that child commit by a non-forced Git ref update. No whole-state frontier change is claimed.
