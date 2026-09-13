@@ -1,0 +1,18 @@
+{
+  "schema": "margin-class-example-arithmetic-v1",
+  "state": {
+    "layer": "n34-m289",
+    "state_id": 227
+  },
+  "Q": 41,
+  "r": 39,
+  "incoming_max_total": 42,
+  "incoming_required_total": 41,
+  "unique_deficit_units": 1,
+  "q3_demand3_left_in_first_three_cases": 5,
+  "q4_deficit_case_C5_capable_incidences": 9,
+  "q4_deficit_case_C5_labels_required": 6,
+  "q4_deficit_case_C5_incidences_required": 18,
+  "status": "PASS",
+  "scope": "Arithmetic replay of the hand proof; margin-class exclusion only, not whole-state exclusion."
+}

@@ -1,0 +1,26 @@
+{
+  "schema": "selection-free-small-graph-challenge-v1",
+  "scope": "Evidence only; direct graph-definition challenge, not proof.",
+  "seed": 74220260913,
+  "graphs": 728,
+  "roots": 1169,
+  "root_order_counts": {
+    "3": 1,
+    "4": 5,
+    "5": 8,
+    "6": 12,
+    "7": 24,
+    "8": 204,
+    "9": 218,
+    "10": 224,
+    "11": 233,
+    "12": 240
+  },
+  "candidate_triples_checked": 3856,
+  "positive_surplus_roots": 0,
+  "candidate_set_subset_inequalities_checked": 77696,
+  "positive_surplus_sharpened_subset_inequalities_checked": 0,
+  "representative_systems_checked": 2338,
+  "violations": 0,
+  "status": "PASS"
+}

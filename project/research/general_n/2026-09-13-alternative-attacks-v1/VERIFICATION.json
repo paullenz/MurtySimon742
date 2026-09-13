@@ -1,0 +1,41 @@
+{
+  "schema": "alternative-attacks-v1-verification",
+  "date": "2026-09-13",
+  "status": "PASS",
+  "checks": {
+    "python_compile": ["maxcut_recon.py","verify_margin_example.py","verify_selection_free_small.py"],
+    "margin_class_arithmetic": {
+      "schema": "margin-class-example-arithmetic-v1",
+      "state": {"layer": "n34-m289","state_id": 227},
+      "Q": 41,"r": 39,"incoming_max_total": 42,"incoming_required_total": 41,"unique_deficit_units": 1,
+      "q3_demand3_left_in_first_three_cases": 5,
+      "q4_deficit_case_C5_capable_incidences": 9,
+      "q4_deficit_case_C5_labels_required": 6,
+      "q4_deficit_case_C5_incidences_required": 18,
+      "status": "PASS",
+      "scope": "Arithmetic replay of the hand proof; margin-class exclusion only, not whole-state exclusion."
+    },
+    "selection_free_small_graph": {
+      "schema": "selection-free-small-graph-challenge-v1",
+      "scope": "Evidence only; direct graph-definition challenge, not proof.",
+      "seed": 74220260913,"graphs": 728,"roots": 1169,
+      "root_order_counts": {"3":1,"4":5,"5":8,"6":12,"7":24,"8":204,"9":218,"10":224,"11":233,"12":240},
+      "candidate_triples_checked": 3856,"positive_surplus_roots": 0,
+      "candidate_set_subset_inequalities_checked": 77696,
+      "positive_surplus_sharpened_subset_inequalities_checked": 0,
+      "representative_systems_checked": 2338,"violations": 0,"status": "PASS"
+    },
+    "maximum_cut_recon": {
+      "schema": "maximum-cut-recon-v1",
+      "scope": "Reconnaissance only. No sampled or exhaustive finite check proves the maximum-cut inequality or Murty--Simon.",
+      "seed": 74220260913,"networkx_version": "3.6.1",
+      "atlas": {"d2c_graphs":21,"order_counts":{"3":1,"4":2,"5":3,"6":5,"7":10}},
+      "generated": {"attempts":{"8":300,"9":300,"10":300,"11":300,"12":300},"d2c_instances":707,"order_counts":{"8":130,"9":138,"10":127,"11":155,"12":157}},
+      "maximum_cut_test": {"instances":728,"violations":0,"minimum_margin":0},
+      "degree_square_negative_control": {"violations_in_this_sample":0,"maximum_gap_in_this_sample":0,"warning":"The Caccetta--Haggkvist degree-square inequality is known false for D2C graphs in general; this diagnostic is not a conjecture."},
+      "c5_blowup_test": {"sampled_weight_vectors":2226,"orders":[5,30],"violations":0,"minimum_margin":1}
+    }
+  },
+  "trust_boundary": "Hand lemmas remain candidate and externally unreviewed. Finite checks are challenges/reconnaissance only. No solver infeasibility or timeout is accepted as proof. No whole-state frontier change is claimed.",
+  "environment": {"python":"3.13.5","platform":"Linux-6.18.44-x86_64-with-glibc2.41"}
+}

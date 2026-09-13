@@ -1,0 +1,20 @@
+{
+  "schema": "alternative-attacks-v1-git-blob-manifest",
+  "date": "2026-09-13",
+  "note": "Blob SHAs below identify the exact bytes staged for the research checkpoint. VERIFICATION.json and this manifest are separate metadata blobs.",
+  "files": {
+    "README.md": "93f9e5e5797574e56985c7f9ea025ece8cef2356",
+    "SELECTION_FREE.md": "fb774ebb504430c2c39627feab3531fbbe012e4a",
+    "MARGIN_CLASS_EXAMPLE.md": "3811ebd483bfbaddfcb842a53dc1ed35d92853ea",
+    "GEOMETRY_MODEL.md": "8c0e66c8840a1d796642c1ee87d787cafc7bb7c7",
+    "MAXCUT_ROUTE.md": "04449c551dd68aace4798e9b380e8942f2c73100",
+    "AUDIT.md": "44dc8f41227fb6cedd380fbb0ed191494a0a77d0",
+    "maxcut_recon.py": "033db682fb945c92a07e0f0d151e11b9f328d767",
+    "MAXCUT_RECON.json": "6883eaea317341a9260e5d485f71027ae34a7a2b",
+    "verify_margin_example.py": "2ecafe64a97f8a99537d41de15fea708b9f2889f",
+    "MARGIN_CLASS_VERIFICATION.json": "dd61b1d381556e036b4bee655af7d1fe68489a68",
+    "verify_selection_free_small.py": "4f669920af2dedc4dde3808cf33d73dbf85ad66f",
+    "SELECTION_FREE_SMALL_CHECK.json": "3b6616cdca7ff82e04411e3c5913759dc7e73b28"
+  },
+  "verification_blob": "8423f526ca441bec3968b3432f31d9ccf0452783"
+}
