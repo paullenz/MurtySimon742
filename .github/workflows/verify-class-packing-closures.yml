@@ -1,0 +1,52 @@
+name: verify class-packing closures
+
+on:
+  workflow_dispatch:
+  push:
+    paths:
+      - '.github/workflows/verify-class-packing-closures.yml'
+
+jobs:
+  verify:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    strategy:
+      fail-fast: false
+      matrix:
+        state: [122, 283]
+    steps:
+      - uses: actions/checkout@v4
+      - name: Generate and compile class-packing scanner
+        run: |
+          set -euo pipefail
+          cd project/research/general_n/2026-09-13-alternative-attacks-v1
+          python3 make_class_packing_scanner.py
+          g++ -O3 -std=c++17 scan_class_packing.generated.cpp -o /tmp/scan_class_packing
+      - name: Verify all excess layers
+        run: |
+          set -euo pipefail
+          cd project/research/general_n/2026-09-13-alternative-attacks-v1
+          state='${{ matrix.state }}'
+          out="CLASS_PACKING_CLOSURE_${state}.tsv"
+          echo -e 'state\tE\tgap\tline' > "$out"
+          for E in $(seq 0 34); do
+            line=$(/tmp/scan_class_packing "$state" "$E" | head -n 1)
+            gap=$(printf '%s\n' "$line" | sed -E 's/.* gap=(-?[0-9]+).*/\1/')
+            printf '%s\t%s\t%s\t%s\n' "$state" "$E" "$gap" "$line" >> "$out"
+          done
+          python3 - "$out" <<'PY'
+          import sys
+          p=sys.argv[1]
+          rows=[]
+          for line in open(p).read().splitlines()[1:]:
+              s,e,g,raw=line.split('\t',3)
+              rows.append((int(e),int(g)))
+          non=[x for x in rows if x[1]<=0]
+          print(f'CLASS_PACKING_SUMMARY state={open(p).read().splitlines()[1].split(chr(9))[0]} min_gap={min(g for _,g in rows)} nonpositive_count={len(non)} nonpositive={non}')
+          if non:
+              raise SystemExit(1)
+          PY
+      - uses: actions/upload-artifact@v4
+        with:
+          name: class-packing-closure-${{ matrix.state }}
+          path: project/research/general_n/2026-09-13-alternative-attacks-v1/CLASS_PACKING_CLOSURE_${{ matrix.state }}.tsv
