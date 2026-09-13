@@ -1,0 +1,26 @@
+name: threshold survivor extract
+
+on:
+  push:
+    branches:
+      - threshold-family-scan
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  extract:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Extract frozen survivor scalar records
+        run: |
+          mkdir -p /tmp/threshold-scan
+          python project/research/general_n/2026-09-13-alternative-attacks-v1/extract_frozen_survivors.py /tmp/threshold-scan/frozen_survivors.jsonl
+      - uses: actions/upload-artifact@v4
+        with:
+          name: threshold-survivor-pool
+          path: /tmp/threshold-scan/
+          if-no-files-found: error
+          retention-days: 1
