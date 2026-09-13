@@ -1,0 +1,28 @@
+name: check orientation Hall flow
+
+on:
+  workflow_dispatch:
+  push:
+    paths:
+      - 'project/research/general_n/2026-09-13-alternative-attacks-v1/ORIENTATION_FLOW_HALL.md'
+      - 'project/research/general_n/2026-09-13-alternative-attacks-v1/verify_orientation_flow_hall.py'
+      - '.github/workflows/check-orientation-flow-hall.yml'
+
+jobs:
+  verify:
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - uses: actions/checkout@v4
+      - name: Replay exact Hall/flow checks
+        working-directory: project/research/general_n/2026-09-13-alternative-attacks-v1
+        run: |
+          python3 verify_orientation_flow_hall.py | tee ORIENTATION_FLOW_HALL_REPLAY.txt
+          test -s ORIENTATION_FLOW_HALL_VERIFICATION.json
+      - name: Upload replay
+        uses: actions/upload-artifact@v4
+        with:
+          name: orientation-flow-hall-replay
+          path: |
+            project/research/general_n/2026-09-13-alternative-attacks-v1/ORIENTATION_FLOW_HALL_REPLAY.txt
+            project/research/general_n/2026-09-13-alternative-attacks-v1/ORIENTATION_FLOW_HALL_VERIFICATION.json
