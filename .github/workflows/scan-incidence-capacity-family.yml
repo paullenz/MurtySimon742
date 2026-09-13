@@ -1,0 +1,42 @@
+name: incidence-capacity adjacent-family replay
+
+on:
+  workflow_dispatch:
+  push:
+    paths:
+      - 'project/research/general_n/2026-09-13-alternative-attacks-v1/scan_incidence_capacity_family.cpp'
+      - 'project/research/general_n/2026-09-13-alternative-attacks-v1/THRESHOLD_INCIDENCE_CAPACITY.md'
+      - 'project/research/general_n/2026-09-13-alternative-attacks-v1/FORCED_INCIDENCE_SCORE.md'
+      - 'project/research/general_n/2026-09-13-alternative-attacks-v1/DEMAND_COMPATIBLE_EXCESS_ORDER.md'
+      - 'project/research/general_n/2026-09-13-alternative-attacks-v1/CAPACITY_ORDER_ENDPOINT_LEMMA.md'
+      - '.github/workflows/scan-incidence-capacity-family.yml'
+
+jobs:
+  replay:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@v4
+      - name: Compile exact verifier
+        run: |
+          g++ -O3 -std=c++17 \
+            project/research/general_n/2026-09-13-alternative-attacks-v1/scan_incidence_capacity_family.cpp \
+            -o /tmp/scan_incidence_capacity_family
+      - name: Replay every excess layer of states 230, 282 and 385
+        run: |
+          set -euo pipefail
+          out=incidence_capacity_family_replay.txt
+          : > "$out"
+          for state in 230 282 385; do
+            for E in $(seq 0 34); do
+              line=$(/tmp/scan_incidence_capacity_family "$state" "$E" | head -n 1)
+              echo "$line" | tee -a "$out"
+              gap=$(printf '%s\n' "$line" | sed -E 's/.* gap=(-?[0-9]+).*/\1/')
+              test "$gap" -gt 0
+            done
+          done
+          echo 'PASS all 105 state/excess layers have positive exact-relaxation gap' | tee -a "$out"
+      - uses: actions/upload-artifact@v4
+        with:
+          name: incidence-capacity-adjacent-family-replay
+          path: incidence_capacity_family_replay.txt
