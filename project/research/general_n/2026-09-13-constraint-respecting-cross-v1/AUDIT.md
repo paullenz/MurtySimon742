@@ -44,22 +44,76 @@ A time-limited all-at-once corrected MILP for N34 state 60 returned no incumbent
 
 It confirms 19 obligations with a nonempty compatible-destination set, 18 with an empty set and 20 eligible ordered pairs. It also confirms the exact-demand vector and source residual sequence. The search that found this pattern does not prove that 19 is maximal.
 
-## Sampling limits
+## Sampling limits and the later correction
 
 The randomized selected patterns are not uniform samples from all admissible selected-set families. They are generated label by label, hardest demand first, with a load-balancing random score. The extra-selected runs add an independently random number of incidences per label up to a small cap.
 
-Consequently the absence of a positive complete cross pattern is not a probability estimate for existence, and the raw sample count is not a measure of distance to a whole-state exclusion. The result is best used to guide structural theory and better search design.
+The reconnaissance spill checker later found 173/2,000 selected patterns failing the scalar spill inequality in one frozen N34 stratum. This was useful discovery evidence but never a whole-state exclusion. The complete positive-witness study now makes that distinction concrete: **all 4,584 combined survivors possess another exact-demand selected configuration that passes the spill and transport conditions.**
+
+Thus the sampled failure rate is not a probability estimate for whole-state failure and must not be extrapolated. This correction is intentionally preserved because it is a useful example of why the project distinguishes configuration-level reconnaissance from complete state coverage.
+
+## Exact full-domain positive-witness check
+
+`assemble_exact_spill_witness.py` reads the preserved combined survivor set and constructs one selected-pattern witness for every survivor with `x_i=s_i` exactly. `FULL_DOMAIN_SPILL_EXACT.json` stores all 4,584 final witnesses.
+
+For each witness the checker independently reconstructs and verifies:
+
+1. the selected sets and source selected degrees `q_u`;
+2. exact label selected degrees `x_i=s_i`;
+3. source eligibility `rho_u>=s_i` for every selected incidence;
+4. source capacity `q_u<=a-rho_u`;
+5. the incoming-degree vector `p`, total balance and every nested transport-tail inequality;
+6. candidate receiver counts required by the scalar containment projection;
+7. the receiver-containment spill inequality source by source.
+
+The final complete counts are:
+
+```text
+witnessed                   4,584
+unresolved                      0
+all exact-demand             true
+whole-state exclusions added    0
+minimum receiver margin          0
+minimum spill slack              0
+```
+
+The final witness generation used 4,484 first-pass witnesses, 98 deeper search witnesses and two deterministic boundary exact-demand constructions. The search route is not proof-critical to the zero-gain claim because every saved final witness is checked directly.
+
+The two deterministic boundary constructions were added after randomized/local search had difficulty with highly nonuniform selected-source degrees. This corrects an intermediate exploratory impression that extra selected incidences might be required. They are not: the final full-domain record has `x=s` for every state.
+
+## Scope of the full-domain zero-gain result
+
+A positive spill witness proves only that the following conjunction of necessary conditions does not exclude the state:
+
+- exact demand selected degrees;
+- selected-source eligibility/capacity;
+- selected/incoming balance;
+- the preserved nested transport inequalities;
+- scalar candidate-receiver counts;
+- receiver-containment spill.
+
+It does **not** construct residual sets, verify the exact set equalities `S_u\N_v={i}`, realize `S_v subset N_u` for every actual exception, impose the full heavy-H catalogue data, route selected obligations by Hall flow, construct `H[A]`, or build a diameter-two edge-critical graph. The result is therefore a limit of this scalar projection, not evidence that any of the 4,584 states is graph-feasible.
+
+## Workflow/preservation correction
+
+The first full-domain workflow piped the Python process through `tee` without `pipefail`, so a partial search exit code was masked and its explicitly scoped 4,484/100 partial JSON was committed. The file correctly labels the 100 unresolved states and makes no complete claim, so it remains valid historical evidence. The workflow was hardened before subsequent use.
+
+A later refinement workflow generated additional evidence but its automatic push lost a race with another main-branch update. The output was recovered from the immutable workflow artifact and then superseded by the stronger complete exact-demand run. The final exact-demand workflow completed successfully and committed `FULL_DOMAIN_SPILL_EXACT.json` to `main`.
+
+These operational events do not alter the mathematics but are retained because publication/preservation failures are part of the audit trail.
 
 ## Structural lesson retained
 
-The directly validated partial witness shows that compatible-destination availability can change substantially while the scalar profile `(a,b,s,rho)` remains fixed. This reinforces the need to retain selected-set overlap information.
+The directly validated partial witness shows that compatible-destination availability can change substantially while the scalar profile `(a,b,s,rho)` remains fixed. The complete spill result now goes further: scalar `(a,b,s,rho,q)` information is still insufficient to remove any of the 4,584 surviving states.
 
 For any eligible ordered pair `u->v` the exact condition gives
 
     |S_u intersect N_v| = q_u-1
 
-and identifies the unique missing selected label. In addition `S_v subset N_u`. These simultaneous near-containments are the natural next object to count. Any proposed profile-level inequality must be proved from the canonical graph bridge rather than inferred from sample frequency.
+and identifies the unique missing selected label. In addition `S_v subset N_u`. Across the `q_u` distinct exceptions of one source, these force a complete family of co-singleton traces. The next useful constraint must therefore retain **which labels overlap**, not merely how many selected labels each source has.
+
+The most natural next target is the pair (`k=2`) member of the co-singleton hierarchy, followed by residual-compatible realization and exact Hall routing. Any proposed pair-overlap inequality must be proved from the canonical bridge and tested on complete preserved domains rather than inferred from sampled failure frequency.
 
 ## Preservation check
 
-This checkpoint preserves the plan, observed-run parameters and outcomes, the positive partial pattern, its direct validator and the exploratory sampler. It does not replace or modify the preceding fixed-neighbourhood flow proof, fixed-order ledgers, 7/12 candidate, forecast or reviewer packages.
+This checkpoint preserves the plan, observed-run parameters and outcomes, the positive partial pattern, its direct validator, the exploratory sampler, the co-singleton/spill hand derivation, deterministic reconnaissance, the complete exact-demand witness generator and all 4,584 final witnesses. It does not replace or modify the preceding fixed-neighbourhood flow proof, fixed-order ledgers, 7/12 candidate, forecast or reviewer packages.
