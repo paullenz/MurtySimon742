@@ -1,0 +1,74 @@
+name: independently scan pair-capacity types full frontier
+
+on:
+  workflow_dispatch:
+  push:
+    paths:
+      - 'project/research/general_n/2026-09-13-alternative-attacks-v1/scan_pair_capacity_types.cpp'
+      - '.github/workflows/scan-pair-capacity-types-full.yml'
+
+jobs:
+  scan:
+    strategy:
+      fail-fast: false
+      matrix:
+        rem: [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31]
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    steps:
+      - uses: actions/checkout@v4
+      - name: Prepare ledger-current canonical shard
+        working-directory: project/research/general_n/2026-09-13-alternative-attacks-v1
+        env:
+          REM: ${{ matrix.rem }}
+        run: python3 prepare_pair_capacity_frontier.py --mod 32 --rem "$REM" --output "PAIR_TYPES_SHARD_${REM}_INPUT.txt"
+      - name: Compile independent type-count scanner
+        working-directory: project/research/general_n/2026-09-13-alternative-attacks-v1
+        run: g++ -O3 -std=c++17 -Wall -Wextra -pedantic scan_pair_capacity_types.cpp -o scan_pair_capacity_types
+      - name: Run independent type-count shard
+        working-directory: project/research/general_n/2026-09-13-alternative-attacks-v1
+        env:
+          REM: ${{ matrix.rem }}
+        run: |
+          ./scan_pair_capacity_types "PAIR_TYPES_SHARD_${REM}_INPUT.txt" "PAIR_TYPES_SHARD_${REM}.tsv" 2>&1 | tee "PAIR_TYPES_SHARD_${REM}_REPLAY.txt"
+      - name: Upload independent shard
+        uses: actions/upload-artifact@v4
+        with:
+          name: pair-types-shard-${{ matrix.rem }}
+          path: |
+            project/research/general_n/2026-09-13-alternative-attacks-v1/PAIR_TYPES_SHARD_${{ matrix.rem }}_INPUT_VERIFICATION.json
+            project/research/general_n/2026-09-13-alternative-attacks-v1/PAIR_TYPES_SHARD_${{ matrix.rem }}.tsv
+            project/research/general_n/2026-09-13-alternative-attacks-v1/PAIR_TYPES_SHARD_${{ matrix.rem }}_REPLAY.txt
+
+  collect:
+    needs: scan
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/download-artifact@v4
+        with:
+          pattern: pair-types-shard-*
+          path: merged
+          merge-multiple: true
+      - name: Rename independent files into merge-compatible names
+        run: |
+          mkdir normalized
+          for f in merged/PAIR_TYPES_SHARD_*; do
+            b="$(basename "$f")"
+            n="${b/PAIR_TYPES_SHARD_/PAIR_CAPACITY_SHARD_}"
+            cp "$f" "normalized/$n"
+          done
+      - name: Merge and summarize independent frontier
+        working-directory: project/research/general_n/2026-09-13-alternative-attacks-v1
+        run: |
+          python3 merge_pair_capacity_frontier.py "$GITHUB_WORKSPACE/normalized" --shards 32 --output PAIR_CAPACITY_TYPES_FULL.tsv
+          python3 summarize_pair_capacity_frontier.py PAIR_CAPACITY_TYPES_FULL.tsv --output PAIR_CAPACITY_TYPES_SUMMARY.json
+      - name: Upload independent full scan
+        uses: actions/upload-artifact@v4
+        with:
+          name: pair-capacity-types-full-frontier
+          path: |
+            project/research/general_n/2026-09-13-alternative-attacks-v1/PAIR_CAPACITY_TYPES_FULL.tsv
+            project/research/general_n/2026-09-13-alternative-attacks-v1/PAIR_CAPACITY_TYPES_FULL_MERGE_VERIFICATION.json
+            project/research/general_n/2026-09-13-alternative-attacks-v1/PAIR_CAPACITY_TYPES_SUMMARY.json
