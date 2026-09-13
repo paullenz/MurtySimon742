@@ -244,8 +244,8 @@ int main(int argc,char**argv){
         const auto&a=scans[i]; const auto&b=scans[j];
         int ama=a.nonstrict.empty()?-1:a.nonstrict.back();
         int bma=b.nonstrict.empty()?-1:b.nonstrict.back();
-        return tie(a.nonstrict.size(),ama,a.difficulty,a.st.id)
-             < tie(b.nonstrict.size(),bma,b.difficulty,b.st.id);
+        return make_tuple(a.nonstrict.size(),ama,a.difficulty,a.st.id)
+             < make_tuple(b.nonstrict.size(),bma,b.difficulty,b.st.id);
     });
 
     ofstream out(argv[2]); if(!out) return 2;
@@ -257,7 +257,9 @@ int main(int argc,char**argv){
            <<sc.st.S<<'\t'<<sc.st.r<<'\t'<<sc.st.Emax<<'\t'<<sc.nonstrict.size()<<'\t'
            <<(sc.nonstrict.empty()?-1:sc.nonstrict.back())<<'\t'<<sc.difficulty<<'\t';
         for(size_t z=0;z<sc.nonstrict.size();++z){
-            if(z) out<<','; int E=sc.nonstrict[z]; out<<E<<':'<<sc.gaps[E];
+            if(z) out<<',';
+            int E=sc.nonstrict[z];
+            out<<E<<':'<<sc.gaps[E];
         }
         out<<'\n';
     };
