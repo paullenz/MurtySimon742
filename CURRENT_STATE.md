@@ -42,6 +42,7 @@ Current candidate general results include:
 - refined baseline-3/order-statistic candidate lemma for the `s_i in {2,3}` family, preserving the exact score `rho_u+q_u-1` and negative zero-excess demand-two contribution;
 - zero-excess endpoint-order candidate lemma: an exact-demand label of demand `d` requires at least `d` active sources with `rho_u>=d` and `p_u<=rho_u-1`, and its endpoint `C_i` is at least the `d`-th smallest eligible `q_u+p_u`;
 - exact low-demand incidence-capacity scanner extending the audited adjacent-family verifier to a broader seven-state ring without rewriting its mathematical search logic.
+- orientation target-capacity lemma for selected missing-B-edge orientations: if an edge is oriented `u->w`, then `q_u-1<=q_w+rho_w`; consequently, for every integer `k`, `sum_{w:q_w+rho_w<=k} p_w <= sum_{u:q_u<=k+1} q_u`. The exact E=0 replay closes states 77 and 60 with a minimum six-incidence deficit.
 
 The unrestricted Murty–Simon conjecture is **not** proved by this project.
 
@@ -98,6 +99,26 @@ E<=34.
 
 Thus the exact scan covers every possible excess value; no bespoke hand-rigidity exception is needed. GitHub Actions run `34780310971`, job `103786002313`, is green. Exact output is preserved in [`LOW_DEMAND_EXTENSION_153.tsv`](project/research/general_n/2026-09-13-alternative-attacks-v1/LOW_DEMAND_EXTENSION_153.tsv) with machine provenance in [`STATE_153_WHOLE_STATE_VERIFICATION.json`](project/research/general_n/2026-09-13-alternative-attacks-v1/STATE_153_WHOLE_STATE_VERIFICATION.json). Frontier: `1,000/4,578 -> 1,001/4,577`.
 
+## Latest closures: states 77 and 60
+
+The mixed demand-two/demand-three joint-Hall refinement made every previously weak positive-excess layer strict in states 77 and 60, leaving only `E=0` in each state. The remaining exact-demand layer is excluded by [`ORIENTATION_TARGET_CAPACITY.md`](project/research/general_n/2026-09-13-alternative-attacks-v1/ORIENTATION_TARGET_CAPACITY.md).
+
+For a selected orientation of a missing `B`-edge `u->w`, every other selected label at `u` must also be cross-adjacent to `w`, giving
+
+```text
+q_u - 1 <= q_w + rho_w.
+```
+
+Hence every threshold `k` obeys the necessary target-capacity cut
+
+```text
+sum_{w:q_w+rho_w<=k} p_w <= sum_{u:q_u<=k+1} q_u.
+```
+
+The independent exact verifier [`verify_e0_orientation_capacity.py`](project/research/general_n/2026-09-13-alternative-attacks-v1/verify_e0_orientation_capacity.py) enumerated all `201,670` `E=0` q-profiles for state 77 and all `253,001` for state 60. No profile passed; the closest profile in either state was still six incidences short. GitHub Actions run `34785891328` completed green and its replay output is preserved.
+
+Whole-state records are [`STATE_77_WHOLE_STATE.md`](project/research/general_n/2026-09-13-alternative-attacks-v1/STATE_77_WHOLE_STATE.md) and [`STATE_60_WHOLE_STATE.md`](project/research/general_n/2026-09-13-alternative-attacks-v1/STATE_60_WHOLE_STATE.md). They are entries 15 and 16 of the canonical union; ordinal wording in older parallel notes is non-authoritative.
+
 ## Current whole-state generalisation record
 
 The frozen frontier is now
@@ -144,10 +165,10 @@ The current layer summary is:
 | 122 | `+1` | none — **whole state closed** |
 | 154 | `+1` | none — **whole state closed** |
 | 231 | `+1` | none — **whole state closed** |
-| 77 | `-7` | `E=0 (-7), 1 (-3), 3 (0), 4 (0), 5 (0), 6 (-1), 7 (0)` |
-| 60 | `-11` | `E=0 (-11), 1 (-5), 2 (-2), 3 (-3), 4 (-3), 5 (-5), 6 (-2), 7 (-3)` |
+| 77 | `-7` in the original extension scan | historical weak layers `E=0,1,3,4,5,6,7`; **subsequently whole-state closed** |
+| 60 | `-11` in the original extension scan | historical weak layers `E=0,...,7`; **subsequently whole-state closed** |
 
-This is a useful compression. After state 153, **state 283 has only one exceptional layer (`E=7`) and state 122 only one (`E=0`)**. They are the immediate best closure targets. These are necessary-condition scan survivors, not graphs.
+This table is now historical triage rather than the live frontier: **all seven states in this extension ring (153, 283, 231, 154, 122, 77 and 60) are whole-state closed** after the later endpoint-class, joint-Hall and orientation-capacity refinements. The original nonpositive layers remain recorded because failures and intermediate frontiers are part of the audit trail.
 
 ## Adjacent-family narrow scan
 
@@ -180,37 +201,25 @@ Degree-preserving `2x2` repairs live in the **relaxed selected-incidence matrix*
 
 ## Current research priorities
 
-### P1. Attack state 77 with joint class packing
+### P1. Generalise and audit the orientation target-capacity lemma
 
-Replay the strengthened mixed demand-two/demand-three Hall projection on its preserved weak layers
+Extract the state-77/state-60 E=0 argument into the strongest useful selection-free or selected-orientation form, test its exact hypotheses against the canonical bridge, and look for subset/threshold strengthenings. Preserve counterexamples to any over-strong formulation.
 
-```text
-E=0,1,3,4,5,6,7.
-```
+### P2. Rescan the remaining frozen catalogue
 
-If every layer becomes strict, package state 77 immediately as closure number 17.
-
-### P2. Attack state 60 next
-
-Its preserved weak layers are
-
-```text
-E=0,1,2,3,4,5,6,7.
-```
-
-Use the same scanner first; only derive a new inequality if a residual equality or negative gap survives.
+Apply the orientation target-capacity cut together with the joint endpoint-class Hall refinement and existing incidence-capacity machinery to the remaining 4,568 frozen scalar survivors. Rank the next whole-state targets by the size and structure of their residual layers, preserving full inputs, outputs, hashes and failures.
 
 ### P3. Extract a symbolic mixed-class Hall/flow theorem
 
-Generalise [`ENDPOINT_CLASS_PACKING.md`](project/research/general_n/2026-09-13-alternative-attacks-v1/ENDPOINT_CLASS_PACKING.md), especially the joint demand-two/demand-three threshold system that closed state 231. Seek a parameterised theorem rather than accumulating state-specific patches.
+Generalise [`ENDPOINT_CLASS_PACKING.md`](project/research/general_n/2026-09-13-alternative-attacks-v1/ENDPOINT_CLASS_PACKING.md), especially the joint demand-two/demand-three threshold system that closed state 231, and relate it cleanly to the new orientation target-capacity cut. Seek a parameterised theorem rather than accumulating state-specific patches.
 
-### P4. Widen quantified pruning
+### P4. Strengthen independent audit and reproduction
 
-Apply the strengthened scanner to the remaining 4,568 frozen scalar survivors wherever its hypotheses apply, preserving inputs, outputs, hashes and failures.
+Prioritise external checking of the canonical bridge, the mixed-class Hall projection, the orientation target-capacity lemma and the state-77/state-60 exact replay. Internal green CI remains replay evidence, not external acceptance.
 
-### P5. Continue independent routes and audit
+### P5. Continue independent routes and preservation
 
-Maintain external review of the canonical bridge and fixed-order candidates; continue selection-free and maximum-cut routes where they offer genuinely different information. Preserve failed approaches and do not infer proof from timeout or numerical infeasibility alone.
+Continue selection-free, maximum-cut and other genuinely different approaches where they add information. Preserve failed approaches, counterexamples, solver timeouts and corrected interpretations; never infer proof from timeout or numerical infeasibility alone.
 
 ## Research/preservation rules
 

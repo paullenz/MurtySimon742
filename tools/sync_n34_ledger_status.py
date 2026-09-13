@@ -134,7 +134,7 @@ def sync_alt(rs, count, exclusions, survivors, n34_survivors):
     t = replace_one(
         t,
         r"\*\*Current priority:\*\*[^\n]*",
-        "**Current priority:** apply the joint endpoint-class Hall refinement to states 77 and 60, then extract the strongest reusable mixed-class Hall/flow theorem and rescan the remaining frozen N34 catalogue.",
+        "**Current priority:** generalise and audit the orientation target-capacity lemma that closed states 77 and 60, combine it with the joint endpoint-class Hall refinement, and rescan the remaining frozen N34 catalogue for the next quantified closures.",
         "alt priority",
     )
 
@@ -204,37 +204,25 @@ def sync_current(rs, count, exclusions, survivors, n34_survivors):
 
     priority = f"""## Current research priorities
 
-### P1. Attack state 77 with joint class packing
+### P1. Generalise and audit the orientation target-capacity lemma
 
-Replay the strengthened mixed demand-two/demand-three Hall projection on its preserved weak layers
+Extract the state-77/state-60 E=0 argument into the strongest useful selection-free or selected-orientation form, test its exact hypotheses against the canonical bridge, and look for subset/threshold strengthenings. Preserve counterexamples to any over-strong formulation.
 
-```text
-E=0,1,3,4,5,6,7.
-```
+### P2. Rescan the remaining frozen catalogue
 
-If every layer becomes strict, package state 77 immediately as closure number {count + 1}.
-
-### P2. Attack state 60 next
-
-Its preserved weak layers are
-
-```text
-E=0,1,2,3,4,5,6,7.
-```
-
-Use the same scanner first; only derive a new inequality if a residual equality or negative gap survives.
+Apply the orientation target-capacity cut together with the joint endpoint-class Hall refinement and existing incidence-capacity machinery to the remaining {survivors:,} frozen scalar survivors. Rank the next whole-state targets by the size and structure of their residual layers, preserving full inputs, outputs, hashes and failures.
 
 ### P3. Extract a symbolic mixed-class Hall/flow theorem
 
-Generalise [`ENDPOINT_CLASS_PACKING.md`](project/research/general_n/2026-09-13-alternative-attacks-v1/ENDPOINT_CLASS_PACKING.md), especially the joint demand-two/demand-three threshold system that closed state 231. Seek a parameterised theorem rather than accumulating state-specific patches.
+Generalise [`ENDPOINT_CLASS_PACKING.md`](project/research/general_n/2026-09-13-alternative-attacks-v1/ENDPOINT_CLASS_PACKING.md), especially the joint demand-two/demand-three threshold system that closed state 231, and relate it cleanly to the new orientation target-capacity cut. Seek a parameterised theorem rather than accumulating state-specific patches.
 
-### P4. Widen quantified pruning
+### P4. Strengthen independent audit and reproduction
 
-Apply the strengthened scanner to the remaining {survivors:,} frozen scalar survivors wherever its hypotheses apply, preserving inputs, outputs, hashes and failures.
+Prioritise external checking of the canonical bridge, the mixed-class Hall projection, the orientation target-capacity lemma and the state-77/state-60 exact replay. Internal green CI remains replay evidence, not external acceptance.
 
-### P5. Continue independent routes and audit
+### P5. Continue independent routes and preservation
 
-Maintain external review of the canonical bridge and fixed-order candidates; continue selection-free and maximum-cut routes where they offer genuinely different information. Preserve failed approaches and do not infer proof from timeout or numerical infeasibility alone.
+Continue selection-free, maximum-cut and other genuinely different approaches where they add information. Preserve failed approaches, counterexamples, solver timeouts and corrected interpretations; never infer proof from timeout or numerical infeasibility alone.
 
 """
     t = replace_one(
