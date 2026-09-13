@@ -15,7 +15,8 @@ CATALOGUE_TOTAL = 5578
 # minimum set explicit prevents a later README/ledger rewrite from silently
 # dropping one branch of work. New closures may be added freely.
 KNOWN_MINIMUM = {
-    60, 77, 122, 153, 154, 227, 230, 231, 279, 282, 283, 382, 385, 519, 526, 588
+    60, 77, 122, 153, 154, 227, 230, 231, 279, 282, 283, 382, 385, 519, 526, 588,
+    13518, 13519,
 }
 
 
