@@ -1,0 +1,30 @@
+name: scan total-excess aggregate DP
+
+on:
+  workflow_dispatch:
+  push:
+    paths:
+      - 'project/research/general_n/2026-09-13-alternative-attacks-v1/TOTAL_EXCESS_AGGREGATE_DP.md'
+      - 'project/research/general_n/2026-09-13-alternative-attacks-v1/scan_total_excess_aggregate_dp.py'
+      - '.github/workflows/scan-total-excess-aggregate-dp.yml'
+
+jobs:
+  scan:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v4
+      - name: Run aggregate DP over all 4,568 canonical survivors
+        working-directory: project/research/general_n/2026-09-13-alternative-attacks-v1
+        run: |
+          python3 scan_total_excess_aggregate_dp.py | tee TOTAL_EXCESS_AGGREGATE_DP_REPLAY.txt
+          test -s TOTAL_EXCESS_AGGREGATE_DP_SCAN.json
+          test -s TOTAL_EXCESS_AGGREGATE_DP_FULL.json
+      - name: Upload aggregate scan
+        uses: actions/upload-artifact@v4
+        with:
+          name: total-excess-aggregate-dp-scan
+          path: |
+            project/research/general_n/2026-09-13-alternative-attacks-v1/TOTAL_EXCESS_AGGREGATE_DP_REPLAY.txt
+            project/research/general_n/2026-09-13-alternative-attacks-v1/TOTAL_EXCESS_AGGREGATE_DP_SCAN.json
+            project/research/general_n/2026-09-13-alternative-attacks-v1/TOTAL_EXCESS_AGGREGATE_DP_FULL.json
