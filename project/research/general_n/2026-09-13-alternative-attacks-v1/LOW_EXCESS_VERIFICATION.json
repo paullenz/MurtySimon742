@@ -1,0 +1,28 @@
+{
+  "schema": "state-227-low-excess-v1",
+  "status": "PASS",
+  "profiles_checked": 17,
+  "excluded_total_excess": [1, 2, 3],
+  "minimum_required_total_excess": 4,
+  "whole_state_exclusion": false,
+  "records": [
+    {"E":1,"demand2_excess":[0,0,0,1],"demand3_positive_excess":[],"method":"coarse","lower":242,"upper":237,"gap":5},
+    {"E":1,"demand2_excess":[0,0,0,0],"demand3_positive_excess":[1],"method":"sharp","lower":248,"upper":243,"gap":5},
+    {"E":2,"demand2_excess":[0,0,0,0],"demand3_positive_excess":[2],"method":"sharp","lower":255,"upper":246,"gap":9},
+    {"E":2,"demand2_excess":[0,0,0,0],"demand3_positive_excess":[1,1],"method":"sharp","lower":257,"upper":246,"gap":11},
+    {"E":2,"demand2_excess":[0,0,0,1],"demand3_positive_excess":[1],"method":"coarse","lower":257,"upper":254,"gap":3},
+    {"E":2,"demand2_excess":[0,0,0,2],"demand3_positive_excess":[],"method":"coarse","lower":258,"upper":255,"gap":3},
+    {"E":2,"demand2_excess":[0,0,1,1],"demand3_positive_excess":[],"method":"coarse","lower":257,"upper":242,"gap":15},
+    {"E":3,"demand2_excess":[0,0,0,0],"demand3_positive_excess":[3],"method":"sharp","lower":256,"upper":249,"gap":7},
+    {"E":3,"demand2_excess":[0,0,0,0],"demand3_positive_excess":[1,2],"method":"sharp","lower":263,"upper":249,"gap":14},
+    {"E":3,"demand2_excess":[0,0,0,0],"demand3_positive_excess":[1,1,1],"method":"sharp","lower":262,"upper":249,"gap":13},
+    {"E":3,"demand2_excess":[0,0,0,1],"demand3_positive_excess":[2],"method":"coarse","lower":274,"upper":273,"gap":1},
+    {"E":3,"demand2_excess":[0,0,0,1],"demand3_positive_excess":[1,1],"method":"sharp","lower":267,"upper":249,"gap":18},
+    {"E":3,"demand2_excess":[0,0,0,2],"demand3_positive_excess":[1],"method":"coarse","lower":274,"upper":272,"gap":2},
+    {"E":3,"demand2_excess":[0,0,1,1],"demand3_positive_excess":[1],"method":"coarse","lower":270,"upper":259,"gap":11},
+    {"E":3,"demand2_excess":[0,0,0,3],"demand3_positive_excess":[],"method":"sharp","lower":257,"upper":249,"gap":8},
+    {"E":3,"demand2_excess":[0,0,1,2],"demand3_positive_excess":[],"method":"coarse","lower":274,"upper":260,"gap":14},
+    {"E":3,"demand2_excess":[0,1,1,1],"demand3_positive_excess":[],"method":"coarse","lower":270,"upper":247,"gap":23}
+  ],
+  "scope": "Together with the separately verified E=0 exact-demand exclusion, any surviving state-227 realization must have total selected excess at least 4. No whole-state exclusion is claimed."
+}
