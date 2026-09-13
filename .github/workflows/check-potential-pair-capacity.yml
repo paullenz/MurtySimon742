@@ -1,0 +1,28 @@
+name: check potential-pair capacity
+
+on:
+  workflow_dispatch:
+  push:
+    paths:
+      - 'project/research/general_n/2026-09-13-alternative-attacks-v1/POTENTIAL_PAIR_CAPACITY.md'
+      - 'project/research/general_n/2026-09-13-alternative-attacks-v1/verify_potential_pair_capacity.py'
+      - '.github/workflows/check-potential-pair-capacity.yml'
+
+jobs:
+  verify:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v4
+      - name: Exhaustively replay the potential-pair formula
+        working-directory: project/research/general_n/2026-09-13-alternative-attacks-v1
+        run: |
+          python3 verify_potential_pair_capacity.py | tee POTENTIAL_PAIR_CAPACITY_REPLAY.txt
+          test -s POTENTIAL_PAIR_CAPACITY_VERIFICATION.json
+      - name: Upload replay
+        uses: actions/upload-artifact@v4
+        with:
+          name: potential-pair-capacity-replay
+          path: |
+            project/research/general_n/2026-09-13-alternative-attacks-v1/POTENTIAL_PAIR_CAPACITY_REPLAY.txt
+            project/research/general_n/2026-09-13-alternative-attacks-v1/POTENTIAL_PAIR_CAPACITY_VERIFICATION.json
