@@ -8,27 +8,95 @@ on:
       - 'tools/sync_current_state_staircase_v2_20260914.py'
       - '.github/workflows/render-current-state-staircase-20260914.yml'
 
+permissions:
+  contents: write
+
+concurrency:
+  group: current-state-staircase-sync
+  cancel-in-progress: false
+
 jobs:
   render:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Fast-forward to latest main
+        run: |
+          git fetch origin main
+          git merge --ff-only origin/main
+
       - name: Render ledger-safe base handoff
         run: python3 tools/sync_generalisation_status.py --write
+
       - name: Render staircase-band handoff
         run: python3 tools/sync_current_state_staircase_v2_20260914.py
+
       - name: Recheck canonical counts and ledgers
         run: |
           python3 tools/sync_generalisation_status.py
           python3 tools/check_whole_state_ledgers.py
           python3 tools/check_n34_whole_state_ledger.py
           python3 tools/check_post_pair_relational_recovery.py
+
       - name: Recheck staircase handoff idempotency
         run: python3 tools/sync_current_state_staircase_v2_20260914.py
+
       - name: Check patch integrity
         run: git diff --check
+
       - name: Upload audited handoff
         uses: actions/upload-artifact@v4
         with:
           name: current-state-staircase-20260914
           path: CURRENT_STATE.md
+
+      - name: Commit audited handoff with non-force retry
+        run: |
+          set -euo pipefail
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+
+          render_and_check() {
+            python3 tools/sync_generalisation_status.py --write
+            python3 tools/sync_current_state_staircase_v2_20260914.py
+            python3 tools/sync_generalisation_status.py
+            python3 tools/check_whole_state_ledgers.py
+            python3 tools/check_n34_whole_state_ledger.py
+            python3 tools/check_post_pair_relational_recovery.py
+            python3 tools/sync_current_state_staircase_v2_20260914.py
+            git diff --check
+          }
+
+          commit_if_needed() {
+            git add README.md CURRENT_STATE.md \
+              project/research/general_n/2026-09-13-alternative-attacks-v1/README.md
+            if git diff --cached --quiet; then
+              echo 'Canonical handoff already synchronized.'
+              return 1
+            fi
+            git commit -m 'Synchronize staircase Hall current state'
+            return 0
+          }
+
+          if ! commit_if_needed; then
+            exit 0
+          fi
+
+          for attempt in 1 2 3; do
+            if git push origin HEAD:main; then
+              exit 0
+            fi
+            echo "Push race on attempt $attempt; rerendering from latest main."
+            git fetch origin main
+            git reset --hard origin/main
+            render_and_check
+            if ! commit_if_needed; then
+              exit 0
+            fi
+          done
+
+          echo 'Unable to synchronize handoff after three non-force retries.' >&2
+          exit 1
