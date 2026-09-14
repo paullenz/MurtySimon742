@@ -1,0 +1,78 @@
+name: scan canonical antichain profile statistics pilot
+
+on:
+  workflow_dispatch:
+  push:
+    paths:
+      - 'project/research/general_n/2026-09-14-type-compressed-orientation-hall-v1/make_antichain_stats_scanner.py'
+      - '.github/workflows/scan-antichain-profile-stats-pilot.yml'
+
+jobs:
+  pilot:
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Prepare frozen-style 1/256 pilot shard
+        working-directory: project/research/general_n/2026-09-13-alternative-attacks-v1
+        run: python3 prepare_pair_capacity_frontier.py --mod 256 --rem 16 --output ANTICHAIN_STATS_PILOT_INPUT.txt
+
+      - name: Generate scanner
+        working-directory: project/research/general_n/2026-09-14-type-compressed-orientation-hall-v1
+        run: python3 make_antichain_stats_scanner.py
+
+      - name: Compile scanner
+        working-directory: project/research/general_n/2026-09-14-type-compressed-orientation-hall-v1
+        run: g++ -O3 -std=c++17 -Wall -Wextra -pedantic scan_antichain_profile_stats.cpp -o scan_antichain_profile_stats
+
+      - name: Run pilot
+        run: |
+          project/research/general_n/2026-09-14-type-compressed-orientation-hall-v1/scan_antichain_profile_stats \
+            project/research/general_n/2026-09-13-alternative-attacks-v1/ANTICHAIN_STATS_PILOT_INPUT.txt \
+            ANTICHAIN_PROFILE_STATS_PILOT.tsv \
+            2>&1 | tee ANTICHAIN_PROFILE_STATS_PILOT_REPLAY.txt
+
+      - name: Summarize canonical generator statistics
+        run: |
+          python3 - <<'PY'
+          import csv, json
+          with open('ANTICHAIN_PROFILE_STATS_PILOT.tsv', newline='') as f:
+              rows=list(csv.DictReader(f,delimiter='\t'))
+          hist={str(i):sum(int(r[f'target_gen{i}']) for r in rows) for i in range(1,9)}
+          hist['9+']=sum(int(r['target_gen9plus']) for r in rows)
+          targetfails=sum(int(r['targethall_fail']) for r in rows)
+          if sum(hist.values()) != targetfails:
+              raise SystemExit(f'generator histogram mismatch: hist={sum(hist.values())} targetfails={targetfails}')
+          summary={
+              'schema':'canonical-antichain-profile-stats-pilot-v1',
+              'states':len(rows),
+              'relational_excluded':sum(r['status']=='RELATIONAL_EXCLUDED' for r in rows),
+              'survives_relational':sum(r['status']=='SURVIVES_RELATIONAL' for r in rows),
+              'target_hall_failure_profiles':targetfails,
+              'canonical_generator_histogram':hist,
+              'max_canonical_generators':max(int(r['target_maxgen']) for r in rows),
+              'profiles_tested':sum(int(r['profiles_tested']) for r in rows),
+              'selected_layers':{
+                  'n34-m289':sum(int(r['layer'])==0 for r in rows),
+                  'n35-m306':sum(int(r['layer'])==1 for r in rows),
+              },
+              'promotion_status':'RECONNAISSANCE_ONLY',
+              'external_review':'OPEN',
+              'crosscheck':'Every target-Hall failure aborts the run unless labelled and dominance-closed quotient maximum-flow values agree exactly.',
+          }
+          open('ANTICHAIN_PROFILE_STATS_PILOT_SUMMARY.json','w').write(json.dumps(summary,indent=2,sort_keys=True)+'\n')
+          print(json.dumps(summary,indent=2,sort_keys=True))
+          PY
+
+      - name: Upload pilot evidence
+        uses: actions/upload-artifact@v4
+        with:
+          name: canonical-antichain-profile-stats-pilot
+          path: |
+            project/research/general_n/2026-09-13-alternative-attacks-v1/ANTICHAIN_STATS_PILOT_INPUT.txt
+            project/research/general_n/2026-09-13-alternative-attacks-v1/ANTICHAIN_STATS_PILOT_INPUT_VERIFICATION.json
+            project/research/general_n/2026-09-14-type-compressed-orientation-hall-v1/scan_antichain_profile_stats.cpp
+            ANTICHAIN_PROFILE_STATS_PILOT.tsv
+            ANTICHAIN_PROFILE_STATS_PILOT_REPLAY.txt
+            ANTICHAIN_PROFILE_STATS_PILOT_SUMMARY.json
