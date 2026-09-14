@@ -2,9 +2,10 @@
 """Prepare specific ledger-current states for post-pair relational auditing.
 
 Transport only: this applies no theorem. It decodes the frozen compatible-
-routing survivor catalogue, removes every currently promoted N34 closure from
-the canonical whole-state ledger, and emits exactly the requested active state
-IDs in the input format consumed by the relational scanners.
+routing survivor catalogue, removes every currently promoted N34/N35 closure
+from the corresponding canonical whole-state ledgers, and emits exactly the
+requested active state IDs in the input format consumed by the relational
+scanners.
 """
 from pathlib import Path
 import argparse
@@ -18,7 +19,10 @@ CAT = HERE.parent / "2026-09-12-compatible-routing-catalogue-v1"
 sys.path.insert(0, str(CAT))
 from evidence_io import read_bytes  # noqa: E402
 
-LEDGER = HERE / "WHOLE_STATE_LEDGER.tsv"
+LEDGERS = {
+    "n34-m289": HERE / "WHOLE_STATE_LEDGER.tsv",
+    "n35-m306": HERE / "WHOLE_STATE_LEDGER_N35.tsv",
+}
 LAYERS = {"n34-m289": 0, "n35-m306": 1}
 
 
@@ -31,12 +35,12 @@ def parse_ids(text: str) -> list[int]:
     return ids
 
 
-def ledger_closed_n34() -> set[int]:
-    with LEDGER.open(newline="") as f:
+def ledger_closed(path: Path) -> set[int]:
+    with path.open(newline="") as f:
         rows = list(csv.DictReader(f, delimiter="\t"))
     ids = [int(r["state"]) for r in rows]
     if len(ids) != len(set(ids)):
-        raise SystemExit("duplicate state in WHOLE_STATE_LEDGER.tsv")
+        raise SystemExit(f"duplicate state in {path.name}")
     return set(ids)
 
 
@@ -47,7 +51,7 @@ def main() -> None:
     args = ap.parse_args()
 
     requested = parse_ids(args.ids)
-    closed = ledger_closed_n34()
+    closed = {layer: ledger_closed(path) for layer, path in LEDGERS.items()}
     raw = read_bytes("survivors.json")
     rows = json.loads(raw)
     combined = [r for r in rows if r["combined_survives"]]
@@ -56,9 +60,9 @@ def main() -> None:
 
     active = [
         r for r in combined
-        if not (r["layer"] == "n34-m289" and r["state_id"] in closed)
+        if int(r["state_id"]) not in closed[r["layer"]]
     ]
-    expected_active = 4584 - len(closed)
+    expected_active = 4584 - sum(len(ids) for ids in closed.values())
     if len(active) != expected_active:
         raise SystemExit(("active-count mismatch", len(active), expected_active))
 
@@ -84,12 +88,14 @@ def main() -> None:
         lines.append(" ".join(map(str, vals)))
     out.write_text("\n".join(lines) + "\n")
 
-    ledger_raw = LEDGER.read_bytes()
     report = {
-        "schema": "post-pair-target-input-v1",
+        "schema": "post-pair-target-input-v2",
         "source_sha256": hashlib.sha256(raw).hexdigest(),
-        "ledger_sha256": hashlib.sha256(ledger_raw).hexdigest(),
-        "ledger_closure_count": len(closed),
+        "ledger_sha256": {
+            layer: hashlib.sha256(path.read_bytes()).hexdigest()
+            for layer, path in LEDGERS.items()
+        },
+        "ledger_closure_count": {layer: len(ids) for layer, ids in closed.items()},
         "canonical_active": len(active),
         "requested_ids": requested,
         "selected": [

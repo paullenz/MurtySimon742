@@ -1,20 +1,25 @@
 # Murty–Simon / Erdős #742 — current state handoff
 
 <!-- CURRENT-STATUS:START -->
-**14 September 2026 — checkpoint `row108-ci-receipt-v1`.** Inspected predecessor: `010ea19981e67bab2395f6657a5416680cb2a3d1`. This preserves the successful exact source-price restoration receipt, conditioned-price work, exact row471 rigidity closure of branches39,40, stronger witness work, all failures and reviewer material, and now records the independent remote success of the exact row108 replay. The predecessor's condensed root reviewer section caused an unrelated N30 package-navigation failure; this checkpoint restores the frozen n25–n30 manuscript/verification PDF links while preserving that failed run as failed. **Fixed-order, general7/12, canonical-frontier and sample mathematical status are unchanged from the predecessor.**
+**14 September 2026 — checkpoint `relational-ledger-validation-v1`.** Inspected predecessor: `13d62aeb7abb1c84acb483610c0667c905709025`. The 2,655-key relational audit is confirmed complete: exact discovery/audit key sets are byte-identical, all 256 audit shards plus aggregate succeeded, both implementations agree, and unresolved count is zero. This commit installs the hash-gated separate reviewed-ledger promotion step and updates target reconstruction to respect both N34 and N35 ledgers. **Mathematical status unchanged in this preparatory commit; canonical counts remain unchanged until that promotion workflow succeeds.**
+<!-- RELATIONAL-FULL-PROMOTION:PENDING -->
 
 Canonical repository: `paullenz/MurtySimon742`, ID1359206057. Every commit must update the CURRENT-STATUS blocks in BOTH this file and README.md atomically. Read [`AGENTS.md`](AGENTS.md), [`CANONICAL_REPOSITORY.md`](CANONICAL_REPOSITORY.md), [`RESEARCH_EVIDENCE_INDEX.md`](RESEARCH_EVIDENCE_INDEX.md), and newer commits before continuing.
 
-## Canonical status — unchanged
+## Canonical status — unchanged pending reviewed ledger promotion
 
 ```text
 whole-state closures:               977
 canonical exclusions:             1,971
 canonical survivors:              3,607
-recovered relational candidates:  2,655 — UNPROMOTED
+recovered relational candidates:  2,655 — AUDIT COMPLETE / LEDGER REVIEW PENDING
 ```
 
 Fixed-order n25/n27-through-n35 and general7/12 candidates remain preserved with external review, novelty assessment and third-party reproduction OPEN. No unrestricted proof or newly realized graph is claimed.
+
+## Relational validation lane — audit complete, promotion pending
+
+Run `34854911792` completed successfully after auditing all 2,655 recovered keys with two independent implementations over 256 shards and a successful aggregate requiring complete agreement. The discovery and audit key TSVs are byte-identical (SHA256 `67593252e0bc27766c24c8bf38060c8b0f98384a6f61fc02ac1e25fafb0ecfa2`), and both report zero unresolved states. The separate reviewed-ledger step is installed by this checkpoint but has not yet run; therefore no canonical count changes are claimed here.
 
 ## Boundary-profile status
 
@@ -53,4 +58,4 @@ The last line enforces one shared residual neighbourhood at each source. Full mu
 
 The complete pre-row108 handoff is preserved byte-for-byte in [`CURRENT_STATE_PRE_ROW108_2026-09-14.md`](CURRENT_STATE_PRE_ROW108_2026-09-14.md); earlier archives, reviewer packages, counterexamples and negative experiments remain intact.
 
-The2,655 recovered relational candidates require complete coverage, both implementations agreeing, zero unresolved cases, successful aggregate and a separate reviewed ledger step before promotion. Sample exclusions do not change that gate. Internal proof checks, successful CI and durable publication do not replace external specialist review of the canonical graph-to-selected/residual bridge.
+The2,655 recovered relational candidates have now cleared complete coverage, both implementations agreeing, zero unresolved cases and a successful aggregate in run34854911792. The final separate reviewed-ledger step is installed by this checkpoint and remains the only promotion gate. Sample exclusions do not change that gate. Internal proof checks, successful CI and durable publication do not replace external specialist review of the canonical graph-to-selected/residual bridge.
