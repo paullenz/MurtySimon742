@@ -1,0 +1,27 @@
+{
+  "canonical_generator_histogram": {
+    "1": 214,
+    "2": 6722,
+    "3": 41452,
+    "4": 80972,
+    "5": 58775,
+    "6": 16349,
+    "7": 1426,
+    "8": 9,
+    "9+": 0
+  },
+  "crosscheck": "Every target-Hall failure aborts the run unless labelled and dominance-closed quotient maximum-flow values agree exactly.",
+  "external_review": "OPEN",
+  "max_canonical_generators": 8,
+  "profiles_tested": 201493148,
+  "promotion_status": "RECONNAISSANCE_ONLY",
+  "relational_excluded": 13,
+  "schema": "canonical-antichain-profile-stats-pilot-v1",
+  "selected_layers": {
+    "n34-m289": 14,
+    "n35-m306": 1
+  },
+  "states": 15,
+  "survives_relational": 2,
+  "target_hall_failure_profiles": 205919
+}
