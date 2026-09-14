@@ -1,0 +1,47 @@
+name: Conditioned source pricing
+on:
+  push:
+    paths:
+      - 'project/research/general_n/2026-09-14-conditioned-source-pricing-v1/**'
+      - 'project/research/general_n/2026-09-14-joint-blocks-v1/FRESH_RECHECK_FULL.json'
+      - 'project/research/general_n/2026-09-14-block-pressure-v1/REMAINDER_12.json'
+      - '.github/workflows/conditioned-source-pricing.yml'
+  pull_request:
+    paths:
+      - 'project/research/general_n/2026-09-14-conditioned-source-pricing-v1/**'
+      - 'project/research/general_n/2026-09-14-joint-blocks-v1/FRESH_RECHECK_FULL.json'
+      - 'project/research/general_n/2026-09-14-block-pressure-v1/REMAINDER_12.json'
+      - '.github/workflows/conditioned-source-pricing.yml'
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  replay:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    steps:
+      - uses: actions/checkout@v4
+      - name: Run exact conditioned source-price audit and boundary scan
+        run: |
+          python3 project/research/general_n/2026-09-14-conditioned-source-pricing-v1/verify_conditioned_source_pricing.py --out /tmp/CONDITIONED_SOURCE_PRICING_FULL.json
+      - name: Check exact full-output digest and headline scope
+        run: |
+          echo '1aec5dc47102ec24f64cc9776c624b32d025112b06fb643f306a0768e091639a  /tmp/CONDITIONED_SOURCE_PRICING_FULL.json' | sha256sum -c -
+          python3 - <<'PY'
+          import json
+          p=json.load(open('/tmp/CONDITIONED_SOURCE_PRICING_FULL.json'))
+          assert p['audit']=={'configurations':9293,'priced_inequalities':24063,'strict_vs_zero_price':150}
+          assert p['newly_excluded_original']==[]
+          assert p['newly_excluded_fresh']==[]
+          assert p['canonical_frontier_changed'] is False
+          assert p['relational_candidates_promoted'] is False
+          r=next(x for x in p['original'] if x['row']==471)
+          c={x['e_low']:x for x in r['certificates']}
+          assert c[39]['search']['upper']==225 and c[39]['lower']==224 and c[39]['gap']==-1
+          assert c[40]['search']['upper']==225 and c[40]['lower']==223 and c[40]['gap']==-2
+          PY
+      - uses: actions/upload-artifact@v4
+        with:
+          name: conditioned-source-pricing-full
+          path: /tmp/CONDITIONED_SOURCE_PRICING_FULL.json
+          if-no-files-found: error

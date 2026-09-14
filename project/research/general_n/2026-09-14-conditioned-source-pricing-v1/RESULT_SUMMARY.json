@@ -1,0 +1,40 @@
+{
+  "schema": "source-priced-row-budget-summary-v1",
+  "local_full_output_sha256": "1aec5dc47102ec24f64cc9776c624b32d025112b06fb643f306a0768e091639a",
+  "audit": {
+    "configurations": 9293,
+    "priced_inequalities": 24063,
+    "strict_vs_zero_price": 150
+  },
+  "strict_fixture": {
+    "zero_price": 2,
+    "source_price": 1,
+    "prices": [0, 0, 0, 1]
+  },
+  "newly_excluded_original": [],
+  "newly_excluded_fresh": [],
+  "original": [
+    {"row":108,"eta":2,"remaining":[33,34,35,36,37],"max_price_gain":0},
+    {"row":160,"eta":1,"remaining":[33,34],"max_price_gain":0},
+    {"row":338,"eta":1,"remaining":[28,29,30,31,32],"max_price_gain":0},
+    {"row":347,"eta":3,"remaining":[52,53,54,55,56],"max_price_gain":0},
+    {"row":471,"eta":2,"remaining":[39,40,41,42,43,47],"max_price_gain":7,
+     "near_tight":[
+       {"e_low":39,"zero_upper":232,"priced_upper":225,"lower":224,"gap":-1,"prices_nonzero":{"9":1,"23":1}},
+       {"e_low":40,"zero_upper":230,"priced_upper":225,"lower":223,"gap":-2,"prices_nonzero":{"9":1,"23":1}}
+     ]},
+    {"row":586,"eta":2,"remaining":[45,46,47,52],"max_price_gain":0}
+  ],
+  "fresh": [
+    {"row":20,"eta":2,"remaining":[37,38,39],"max_price_gain":0},
+    {"row":91,"eta":1,"remaining":[26,27],"max_price_gain":0},
+    {"row":391,"eta":1,"remaining":[21,22,23,24],"price_gains":[4,3,2,1]},
+    {"row":490,"eta":2,"remaining":[54,55],"max_price_gain":0},
+    {"row":528,"eta":2,"remaining":[26,27,28,29,30,31],"max_price_gain":1},
+    {"row":562,"eta":0,"remaining":[15,16,17,18,19,20,21],"max_price_gain":0},
+    {"row":677,"eta":1,"remaining":[14,15,16,17,18,19,20],"max_price_gain":0}
+  ],
+  "canonical_frontier_changed": false,
+  "relational_candidates_promoted": false,
+  "scope": "local deterministic finite price search; not exhaustive over all prices or all eta; synthetic relaxed profiles, not realized graphs"
+}
