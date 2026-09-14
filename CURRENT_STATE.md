@@ -9,9 +9,9 @@
 - identity guard: [`CANONICAL_REPOSITORY.md`](CANONICAL_REPOSITORY.md)
 - legacy names such as `MurtySimon25` and historical `N25_*` filenames are not the current repository name.
 
-**State synchronized:** 14 September 2026 through commit `c0bacae1252f6a80821e9c3aab4ab1a0a4526630` (`Relaunch final relational candidate audit after output fix`), including the completed 812 receiver-layer diagnostic, coupled residual-slack theory, positive-slack incidence pressure, and the internally audited exterior residual-upset reduction.
+**State synchronized:** 14 September 2026 through parent commit `3321d8ce18b77b78f421166ca55abc82f493b923` (`Freeze q-stratified crossing-gap audit`), including the frozen 812 q-stratified diagnosis, exact q-crossing identity, coupled residual-slack theory, positive-slack incidence pressure, and the audited exterior residual-upset reduction.
 
-Previous versions remain preserved in Git history. This file is intentionally concise and must be updated whenever theorem status, frontier status, audit status or principal research priority changes.
+Previous versions remain preserved in Git history. This file must be updated whenever theorem status, frontier status, audit status or principal research priority changes.
 
 ---
 
@@ -38,32 +38,34 @@ workflow run: 34820187136
 status:       completed / success
 ```
 
-The long-budget recovery of unresolved/unattempted discovery states also completed successfully:
+Long-budget recovery also completed successfully:
 
 ```text
 workflow run: 34844403328
 status:       completed / success
 ```
 
-The recovered aggregate contains **2,655 candidate relational exclusions**. These are **not promoted**. The recovered results are hash-pinned at
+The recovered aggregate contains **2,655 candidate relational exclusions**, hash-pinned at
 
 ```text
 sha256:2c892301854660c8c1f73a13c4949ce2fb7e1e5706f9ecffbbe79f9483e71970
 ```
 
-The first final-candidate cross-audit launch (`34849859218`) failed before mathematical auditing because a pretty-printed JSON object was accidentally appended to `$GITHUB_OUTPUT`; GitHub Actions rejected the `{` as an invalid output line. Before that formatting failure the workflow had successfully downloaded the recovered aggregate and passed the source-completeness, source-hash, 2,655-candidate-count and candidate-input-coverage checks. This failure is plumbing, not evidence of mathematical disagreement.
+These are **not promoted**.
 
-The output-channel bug was repaired and the hash-pinned audit has now been explicitly relaunched:
+The first final-candidate cross-audit launch (`34849859218`) failed before mathematical auditing because a pretty-printed JSON object was accidentally appended to `$GITHUB_OUTPUT`. Source-completeness, source-hash, 2,655-candidate-count and candidate-input-coverage checks had already passed. This was a workflow-output bug, not mathematical disagreement.
+
+The bug was repaired and the identical hash-pinned audit relaunched:
 
 ```text
-commit:       c0bacae1252f6a80821e9c3aab4ab1a0a4526630
 workflow run: 34854911792
-status at sync: queued
 candidate set: 2,655
 shards:        256
+plan job:      success
+shard status at this sync: queued / no promotion yet
 ```
 
-Each shard compiles and runs two independently structured implementations, `scan_post_pair_relational.cpp` and `scan_post_pair_relational_types.cpp`, and promotion is blocked unless all 2,655 states receive exact cross-implementation agreement with zero unresolved states.
+Each shard runs two independently structured implementations, `scan_post_pair_relational.cpp` and `scan_post_pair_relational_types.cpp`. Promotion remains blocked unless all 2,655 states receive exact agreement with zero unresolved states.
 
 Required chain:
 
@@ -133,16 +135,14 @@ Internally audited results include:
 5. minimum-margin witnesses form a lattice;
 6. their union `M+` is the unique maximal minimizer and a sharp-hardness up-set;
 7. `M+` has a unique minimal-generator antichain;
-8. ordered by cross degree, those generators form a moving staircase with strictly increasing `c`, weakly increasing `q`, and increasing `P` on equal-`q` plateaux;
+8. its ordered generators form a moving staircase with strictly increasing `c`, weakly increasing `q`, and increasing `P` on equal-`q` plateaux;
 9. the compatible-copy all-bands staircase cut reproduces the exact Hall margin of `M+`.
 
 In the Murty source universe `c=q+rho<=a`, so there is at most one primary staircase generator breakpoint per integer cross-degree level and `h<=a+1`.
 
 ### Exact compatible-copy representation
 
-The coarse band relaxation detected `205,918/205,919` target-Hall failures in the frozen 15-state pilot. The unique miss, state 226, exposed the compatible-copy correction. The compatible-copy theorem passed independent finite verification, and the canonical all-bands exactness theorem then showed that for `M+` this representation is exact, not merely near-exact.
-
-Fresh pilot replay:
+Frozen 15-state pilot:
 
 ```text
 profiles tested:          201,493,148
@@ -150,6 +150,8 @@ target-Hall failures:         205,919
 compatible-copy detects:      205,919
 compatible-copy misses:             0
 ```
+
+Thus canonical target-Hall failure has an exact whole-staircase representation.
 
 ---
 
@@ -162,17 +164,13 @@ y_w = number of M+-sources directed-compatible with target w,
 s_w = (P_w-y_w)_+.
 ```
 
-The strict exterior slack-expansion theorem says that every nonempty exterior source set `T` must satisfy
+Every nonempty exterior source set `T` must satisfy
 
 ```text
 sum_w min(s_w,K_T(w)) >= D(T)+1.
 ```
 
-Thus a hypothetical deficient primary staircase is accompanied by a **strictly expanding residual receiver system** outside it.
-
-### Exterior sharp-upset reduction — internally audited
-
-The residual system no longer requires arbitrary exterior-subset search. Under the residual-cap sharp order
+Under the residual-cap sharp order
 
 ```text
 x >=_s y
@@ -180,7 +178,7 @@ iff c_x<=c_y
     and [q_x>q_y or (q_x=q_y and s_x>=s_y)],
 ```
 
-if any nonempty exterior set has residual margin `<=0`, then some nonempty residual sharp up-set does. The finite audit is green:
+it suffices to test nonempty residual sharp up-sets. The independent finite audit is green:
 
 ```text
 workflow run:                           34851263359
@@ -193,83 +191,120 @@ random trials:                               1,600
 result:                                    success
 ```
 
-This gives the current structural picture:
+Current structural picture:
 
 ```text
-primary P-staircase M+        must be deficient in a counterexample,
-exterior residual-s staircase must remain strictly expanding.
+primary P-staircase M+        deficient in a counterexample,
+exterior residual-s staircase required to remain strictly expanding.
 ```
-
-The general-theory target is to prove these two staircase requirements cannot coexist under Murty residual/source-cap budgets.
 
 ---
 
-## 6. 812 receiver-layer exceptions — completed diagnostic
+## 6. Receiver-layer correlation problem — q-stratification breakthrough
 
-The one-dimensional receiver-layer rearrangement detects `205,107/205,919` exact target-Hall failures, leaving 812 correlation-sensitive failures. The detailed diagnostic has now completed successfully on the same deterministic 15-state sample.
-
-### Concentration
-
-All **812** exceptions occur in only **8** sample states:
+The global one-dimensional receiver-layer rearrangement detects
 
 ```text
-state 1626:  61
-state 2439:  90
-state 2984:   5
-state 5519: 249
-state 6085:  14
-state 7610: 262
-state 8179: 116
-state  429:  15
+205,107 / 205,919
 ```
 
-### Canonical generator count
+exact target-Hall failures, leaving 812 false negatives.
+
+### 6.1 Frozen 812 diagnosis
+
+The complete 812-row diagnostic artifact is frozen and hash-pinned. Rearranging receiver layers **separately inside each q-stratum** eliminates the entire residue:
 
 ```text
-2 generators: 140
-3 generators: 499
-4 generators:  98
-5 generators:  75
-1 or >=6:       0
+812 global-layer false negatives examined
+812 q-stratified detections
+812 q-stratified upper bounds equal exact receiver capacity
+0   positive q-stratified gaps
 ```
 
-So the correlation-sensitive cases are not high-complexity antichains; 3 generators dominate and the maximum is 5.
-
-### Exact Hall deficiency
+On these 812 canonical maximal witnesses:
 
 ```text
-deficit 1: 687
-deficit 2: 116
-deficit 3:   9
-deficit >=4: 0
+profiles with mixed selected/unselected status inside one q-level: 0
 ```
 
-The maximum exact deficiency is only 3.
-
-### Rearrangement excess
+Selected q-levels form a threshold. First selected q:
 
 ```text
-excess 0: 537
-excess 1: 133
-excess 2:  94
-excess 3:  40
-excess 4:   5
-excess 5:   3
+q*=3 : 349
+q*=4 : 242
+q*=5 : 173
+q*=6 :  48
 ```
 
-The lost target-correlation gap is at most 7. There are only **169 distinct q-profiles** among the 812 exceptions.
+Gap from largest unselected q to smallest selected q:
 
-This is a strong narrowing result: the missing correlation is bounded and low-dimensional rather than an arbitrary Hall phenomenon.
+```text
+1 : 340
+2 : 415
+3 :  56
+4 :   1
+```
+
+This is strong frozen-pilot evidence, **not a universal theorem**.
+
+### 6.2 Exact q-crossing identity — internally audited
+
+For arbitrary labelled Hall source set `S`, let `U_q(S)` be the q-only comonotone receiver-layer upper bound and `H(S)` the exact receiver capacity. The exact lost correlation is
+
+```text
+C_q(S)=sum_{q,m} min(H^S_{q,m},L^O_{q,m}),
+```
+
+where the terms count selected high-capacity and unselected low-capacity targets crossing inside equal-`(q,m)` preincoming blocks.
+
+The audited identity is
+
+```text
+U_q(S)-H(S)=C_q(S).
+```
+
+Independent verifier:
+
+```text
+workflow run:                         34858775228
+exhaustive cases:                       384,612
+exhaustive positive-gap cases:           60,301
+exhaustive maximum gap:                       2
+nontrivial crossing blocks:             606,568
+random trials:                            20,000
+random positive-gap cases:                 4,142
+random maximum gap:                            5
+result:                                     PASS
+```
+
+The many positive-gap hostile examples are important: `C_q=0` is **not** an abstract Hall theorem. A concrete canonical Hall counterexample with `C_q=1` is preserved in `Q_STRATIFIED_EXACTNESS_COUNTEREXAMPLE.md`.
+
+Therefore the Murty-specific target is now exact and narrow:
+
+```text
+control or exclude C_q>0
+```
+
+for canonical maximal witnesses arising from the Murty bridge.
+
+### 6.3 Full frozen-pilot q-crossing replay
+
+A fresh run over the same 201,493,148-profile frozen pilot has been launched to measure q-stratified reach and `C_q` across **all** 205,919 target-Hall failures:
+
+```text
+workflow run: 34859094097
+status at this sync: queued
+```
+
+Do not promote the 812 observation to full-pilot exactness until this run completes successfully.
 
 ---
 
-## 7. New Murty-specific correlation inequalities
-
-The 812 diagnostic has already produced useful symbolic structure.
+## 7. Murty-specific residual/slack inequalities — useful but not decisive on the 812
 
 ### Coupled primary-incoming / residual-slack budget
 
-For slack layer
+For
 
 ```text
 S_j={w:s_w>=j},
@@ -277,53 +312,40 @@ sigma_j=|S_j|,
 Y_j=sum_{w in S_j} y_w,
 ```
 
-positive-surplus residual activity and the Murty target cap imply
+positive-surplus residual activity gives
 
 ```text
-sum_{w in S_j} max(0,y_w+a-b+j) <= r-b.      (7.1)
+sum_{w in S_j} max(0,y_w+a-b+j) <= r-b.
 ```
 
-When `a-b+j>=0`, this becomes
+When `a-b+j>=0`:
 
 ```text
-Y_j+(a-b+j)sigma_j <= r-b.                   (7.2)
+Y_j+(a-b+j)sigma_j <= r-b.
 ```
-
-Near balance this is especially sharp:
-
-```text
-b=a+1:  Y_1 <= r-b,
-         Y_j+(j-1)sigma_j <= r-b  for j>=2;
-
-b=a:    Y_j+j sigma_j <= r-b.
-```
-
-Interpretation: a target cannot both receive many primary staircase incidences and retain much residual slack without consuming residual degree budget.
 
 ### Positive-slack incidence pressure
 
-Let `Z={w:s_w>=1}` and `O=B\M+`. Labelled singleton exterior expansion gives
+With `Z={w:s_w>=1}` and `O=B\M+`:
 
 ```text
-D(O)+|O| <= e_D(O,Z),
+D(O)+|O|+Y_1 <= sum_{w in Z} d_D^-(w).
 ```
 
-and hence
+The incoming term is an exact two-dimensional `(q,c)` rectangle count.
+
+### Exact evaluation on all 812
+
+These newer scalar consequences have now been tested against the entire frozen 812 residue:
 
 ```text
-D(O)+|O|+Y_1 <= sum_{w in Z} d_D^-(w).        (7.3)
+coupled residual-slack budget: minimum remaining slack 17
+positive-slack incidence pressure: minimum slack 1
+whole-exterior residual expansion: minimum slack 2
+profiles excluded by these scalar tests alone: 0
 ```
 
-Using the exact directed compatibility rectangle
-
-```text
-q_u<=c_w+1,
-c_u>=q_w,
-```
-
-the incoming term has an exact two-dimensional count. Therefore the same positive-slack targets must simultaneously supply exterior incidence capacity, absorb primary incoming multiplicity, and fit inside the residual-excess budget (7.1).
-
-This is currently the cheapest promising route to a symbolic contradiction.
+So the 812 are **not** hiding a violation of the current scalar slack budgets. The decisive missing information is q-level correlation.
 
 ---
 
@@ -333,8 +355,10 @@ This is currently the cheapest promising route to a symbolic contradiction.
 - one principal sharp up-set is not sufficient in general;
 - no universal two-generator bound: primary failures reach eight generators in the broader pilot;
 - interval-neighborhood bands do not make contiguous band cuts sufficient;
-- receiver-layer rearrangement is not exact: 812 frozen-pilot false negatives remain;
-- the whole-exterior scalar slack total alone is too coarse/redundant; the useful information is layered and correlation-sensitive;
+- global receiver-layer rearrangement is not exact: 812 frozen-pilot false negatives exist;
+- q-only exactness is not an abstract Hall theorem: positive `C_q` examples are preserved;
+- the whole-exterior scalar slack total alone is too coarse;
+- the current coupled slack and incidence-pressure inequalities do not by themselves eliminate the 812;
 - survival of a relaxation never implies graph realizability.
 
 Failures, rejected lemmas, bugs, counterexamples and audit challenges must remain preserved.
@@ -343,29 +367,42 @@ Failures, rejected lemmas, bugs, counterexamples and audit challenges must remai
 
 ## 9. Current mathematical priority
 
-The research priority has shifted from searching arbitrary Hall cuts to proving a **two-staircase incompatibility theorem**.
+The target-correlation problem has narrowed from arbitrary target matching to one explicit crossing statistic.
 
 Current route:
 
 ```text
 hypothetical counterexample
  -> deficient canonical primary P-staircase M+
- -> exact compatible-copy whole-staircase deficit
- -> residual slack s_w left by that primary staircase
- -> strictly expanding exterior residual-s staircase
- -> coupled residual budget + incidence-pressure inequalities
- -> contradiction sought from Murty bridge constraints.
+ -> exact whole-staircase Hall deficit
+ -> q-stratified receiver layers
+ -> exact error term C_q
+ -> show Murty-specific canonical structure forces C_q=0
+    or bounds C_q below the available Hall deficit
+ -> contradiction.
 ```
 
-Immediate analytic tasks:
+In parallel:
 
-1. apply (7.1)–(7.3) explicitly to the 812 diagnostic profiles and measure how many are already impossible;
-2. stratify any residue by the exact two-dimensional compatibility rectangle, not by arbitrary Hall subsets;
-3. derive the smallest additional inequality required for the residual-s staircase;
-4. generalize that inequality in `a,b,r,t` rather than fitting fixed N;
-5. independently red-team every universal implication before promoting it into the audited chain.
+```text
+primary staircase M+
+ -> residual slack s_w
+ -> strictly expanding exterior residual-s staircase
+ -> coupled residual/source-cap budgets.
+```
 
-The desired endpoint is an all-order hand/structural inequality showing that the deficient primary staircase and required exterior residual staircase cannot coexist.
+The first structural consequence of a positive q-crossing is the equal-q swap saturation wall recorded in `CANONICAL_EQUAL_Q_SWAP_RIGIDITY.md`: a crossing forces the selected higher-`c` endpoint to be under-saturated while every receiver gained by that higher-`c` source over the lower-`c` unselected endpoint is strictly over-saturated.
+
+Immediate analytic priorities:
+
+1. complete the frozen full-pilot q-crossing replay and record whether any of the 205,919 failures have `C_q>0`;
+2. attack `C_q>0` symbolically via equal-q swap rigidity, residual/excess budget, source-cap and canonical maximality;
+3. derive a Murty-specific upper bound on total crossing mass `C_q` in terms of `a,b,r,t`;
+4. combine that bound with the exact q-stratified layer inequality and primary Hall deficit;
+5. independently red-team every universal implication before promotion;
+6. in parallel, complete the 2,655-state independent relational audit before changing the 3,607 frontier.
+
+The desired endpoint remains an all-order hand/structural contradiction, but the remaining target-level correlation is now an explicit low-dimensional quantity rather than a general max-flow problem.
 
 ---
 
@@ -382,4 +419,4 @@ Every sync must distinguish:
 - external mathematical review;
 - genuinely independent third-party computational reproduction.
 
-Nothing above is external acceptance of the unrestricted Murty–Simon conjecture. Fixed-order proofs remain candidate proofs with external review open; the bridge and new Hall/staircase theory have increasingly strong internal derivations and finite audits but external mathematical review and novelty assessment remain open; the 2,655 relational candidates remain unpromoted until the final cross-audit and separate promotion gate pass.
+Nothing above is external acceptance of the unrestricted Murty–Simon conjecture. Fixed-order proofs remain candidate proofs with external review open; the bridge and Hall/staircase/q-crossing theory have strong internal derivations and finite audits but external mathematical review and novelty assessment remain open; the 2,655 relational candidates remain unpromoted until the final cross-audit and separate promotion gate pass.
