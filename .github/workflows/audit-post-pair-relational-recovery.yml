@@ -1,0 +1,104 @@
+name: audit post-pair relational recovery
+
+on:
+  workflow_dispatch:
+  push:
+    paths:
+      - 'project/research/general_n/2026-09-13-alternative-attacks-v1/scan_post_pair_relational.cpp'
+      - 'project/research/general_n/2026-09-13-alternative-attacks-v1/scan_post_pair_relational_types.cpp'
+      - 'project/research/general_n/2026-09-13-alternative-attacks-v1/prepare_post_pair_targets.py'
+      - 'project/research/general_n/2026-09-13-alternative-attacks-v1/compare_post_pair_relational.py'
+      - '.github/workflows/audit-post-pair-relational-recovery.yml'
+
+jobs:
+  audit-state:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    strategy:
+      fail-fast: false
+      matrix:
+        state:
+          - 961
+          - 1025
+          - 2620
+          - 2706
+          - 2897
+          - 3007
+          - 3139
+          - 3202
+          - 3302
+          - 3359
+          - 3480
+          - 3599
+          - 4145
+          - 4559
+          - 4654
+          - 4994
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Reconstruct ledger-current target
+        working-directory: project/research/general_n/2026-09-13-alternative-attacks-v1
+        run: >-
+          python3 prepare_post_pair_targets.py
+          --ids ${{ matrix.state }}
+          --output POST_PAIR_${{ matrix.state }}_INPUT.txt
+
+      - name: Compile primary relational scanner
+        working-directory: project/research/general_n/2026-09-13-alternative-attacks-v1
+        run: >-
+          g++ -O3 -std=c++17 -Wall -Wextra -pedantic
+          scan_post_pair_relational.cpp
+          -o scan_post_pair_relational
+
+      - name: Compile independent type-count scanner
+        working-directory: project/research/general_n/2026-09-13-alternative-attacks-v1
+        run: >-
+          g++ -O3 -std=c++17 -Wall -Wextra -pedantic
+          scan_post_pair_relational_types.cpp
+          -o scan_post_pair_relational_types
+
+      - name: Fresh primary replay
+        working-directory: project/research/general_n/2026-09-13-alternative-attacks-v1
+        run: |
+          ./scan_post_pair_relational \
+            POST_PAIR_${{ matrix.state }}_INPUT.txt \
+            POST_PAIR_${{ matrix.state }}_PRIMARY.tsv \
+            2>&1 | tee POST_PAIR_${{ matrix.state }}_PRIMARY_REPLAY.txt
+
+      - name: Independent type-count replay
+        working-directory: project/research/general_n/2026-09-13-alternative-attacks-v1
+        run: |
+          ./scan_post_pair_relational_types \
+            POST_PAIR_${{ matrix.state }}_INPUT.txt \
+            POST_PAIR_${{ matrix.state }}_INDEPENDENT.tsv \
+            2>&1 | tee POST_PAIR_${{ matrix.state }}_INDEPENDENT_REPLAY.txt
+
+      - name: Require exact proof-relevant agreement
+        working-directory: project/research/general_n/2026-09-13-alternative-attacks-v1
+        run: >-
+          python3 compare_post_pair_relational.py
+          POST_PAIR_${{ matrix.state }}_PRIMARY.tsv
+          POST_PAIR_${{ matrix.state }}_INDEPENDENT.tsv
+          --output POST_PAIR_${{ matrix.state }}_COMPARE.json
+
+      - name: Print certificate rows
+        working-directory: project/research/general_n/2026-09-13-alternative-attacks-v1
+        run: |
+          cat POST_PAIR_${{ matrix.state }}_PRIMARY.tsv
+          cat POST_PAIR_${{ matrix.state }}_COMPARE.json
+
+      - name: Upload state audit artifacts
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: post-pair-relational-${{ matrix.state }}
+          if-no-files-found: warn
+          path: |
+            project/research/general_n/2026-09-13-alternative-attacks-v1/POST_PAIR_${{ matrix.state }}_INPUT.txt
+            project/research/general_n/2026-09-13-alternative-attacks-v1/POST_PAIR_${{ matrix.state }}_INPUT_VERIFICATION.json
+            project/research/general_n/2026-09-13-alternative-attacks-v1/POST_PAIR_${{ matrix.state }}_PRIMARY.tsv
+            project/research/general_n/2026-09-13-alternative-attacks-v1/POST_PAIR_${{ matrix.state }}_PRIMARY_REPLAY.txt
+            project/research/general_n/2026-09-13-alternative-attacks-v1/POST_PAIR_${{ matrix.state }}_INDEPENDENT.tsv
+            project/research/general_n/2026-09-13-alternative-attacks-v1/POST_PAIR_${{ matrix.state }}_INDEPENDENT_REPLAY.txt
+            project/research/general_n/2026-09-13-alternative-attacks-v1/POST_PAIR_${{ matrix.state }}_COMPARE.json
