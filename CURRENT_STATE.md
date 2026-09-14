@@ -1,10 +1,10 @@
 # Murty–Simon / Erdős #742 — current state handoff
 
-**14 September 2026. Synchronized through `57d7c1e7f7f786bcb77f15c7957765970901715d`, the priced-tail derivation, fixed-tau localized reconstruction and exact 80>77 certificate. Inspect newer commits and recheck CI before resuming.**
+**14 September 2026. Latest research: capped positive-excess charge and all-source spill. Proof `f1f9ea055233bf5bff4499f3f7981591a2f20765`, verifier `ea77b7372cf19b0dce74fbca9bcc8649757600c6`, frozen evidence `18cafdf20c5ab0d31c4c79f767f721b2064efa88`, reproducible CI `552fd57e9160467e0a70e9150c7ed8491c213ab8`. Inspect newer commits and live CI before resuming.**
 
-Canonical repository: `paullenz/MurtySimon742`, ID `1359206057`. The full immediately preceding handoff is preserved verbatim in [`CURRENT_STATE_PRE_PRICED_2026-09-14.md`](CURRENT_STATE_PRE_PRICED_2026-09-14.md). It retains the detailed interval, selected-loss, localized-cap, exact q-layer and recovery chronology. Earlier archival files and Git history remain intact. No force push, whole-state promotion or unrestricted proof is asserted.
+Canonical repository: `paullenz/MurtySimon742`, ID `1359206057`. The full preceding priced-tail handoff is permanently preserved [at commit 0b8ba460](https://github.com/paullenz/MurtySimon742/blob/0b8ba460064f7441a8f92cc6f7434193039b7db5/CURRENT_STATE.md). `CURRENT_STATE_PRE_PRICED_2026-09-14.md` and earlier archives retain the localized, interval, selected-loss, q-layer and recovery chronology. No proof files or failed approaches were removed. No unrestricted proof, graph realization or whole-state promotion is claimed.
 
-## Promoted frontier and audit gate — unchanged
+## Canonical promoted frontier — unchanged
 
 ```text
 quantified whole-state closures: 977
@@ -15,130 +15,133 @@ canonical survivors:            3,607
 recovered relational candidates: 2,655 — UNPROMOTED
 ```
 
-Final audit `34854911792` remains incomplete on direct recheck: final indexed shard `audit (255)`, job `104025296865`, is queued, with 257 jobs total and no accepted aggregate. The plan and first visible 29 shards had passed. Promotion requires full coverage of all 2,655 inputs, state-by-state agreement of `scan_post_pair_relational.cpp` and `scan_post_pair_relational_types.cpp`, zero unresolved states, successful aggregate, then a SEPARATE ledger promotion. Preserve the N34/N35 split and `tools/check_n34_whole_state_ledger.py`.
+The fixed-order candidates n=25 and n=27 through n=35, and the general 7/12 candidate theorem, are unchanged. External mathematical review and novelty assessment remain OPEN. These candidate packages are separate from the scalar generalisation frontier; scalar survivors are not graphs. Preserve both reviewer navigation surfaces.
 
-Frozen candidate SHA256: `2c892301854660c8c1f73a13c4949ce2fb7e1e5706f9ecffbbe79f9483e71970`. Never subtract 2,655 from 3,607 before promotion. The fixed-order candidate packages n=25 and n=27 through n=35, and the general 7/12 candidate theorem, are unchanged and externally unreviewed. These scalar states are not graphs or unfinished obligations in those fixed-order packages.
+## GitHub queue intervention and actual audit progress
 
-## Live CI: later observations supersede old queues
+The user requested a GitHub kick. Commit `6a66d18654b501abe02002e0d2a4d178c8657207` added `.github/workflows/kick-short-verifiers.yml`: a bounded, read-only fresh replay of the localized and priced verifiers on `ubuntu-24.04-arm`, with complete frozen-value checks and fully paginated audit-job diagnostics. It does NOT cancel or duplicate the 256-shard audit. An alternate architecture is a fresh allocation request, not scheduling priority or a bypass of account concurrency limits.
 
-- `34875592126`, frozen ledger: directly rechecked, completed SUCCESS, including combined survivor coverage.
-- `34871045562`, q-layer threshold: completed SUCCESS, including frozen totals.
-- `34868771056`, original mincut: mathematical verifier succeeded; raw JSON comparison failed only on formatting. Historical failure retained and classified as a workflow comparison bug.
-- `34878019517`, corrected mincut: directly rechecked, now completed SUCCESS, including frozen JSON value equality and evidence upload. Repair commit `81560e9` did not change mathematical totals.
-- `34859094097`, q-stratified pilot: completed artifact downloaded and replayed; finite summary records C_q=0 on all 205,919 Hall failures.
-- New priced-tail workflow: `.github/workflows/verify-priced-q-tail.yml`, committed at `57d7c1e7`; local verifier PASS is not itself remote CI completion. Recheck its run before calling it green.
-- The dedicated q-tail and localized-cap workflows have separate gates. Their earlier statuses are in the archived handoff; do not infer their completion from a different green run.
+Direct observations:
 
-The corrected mincut and frozen-ledger successes do not complete the 2,655-state relational audit.
+| Run | Latest observation in this synchronization |
+|---|---|
+| `34883538561`, short-verifier kick | Queued; job `104108421139` has not started. |
+| `34885163695`, new capped-spill CI | Created from `552fd57e`; queued. |
+| `34880833888`, original localized verifier | Rechecked; queued, no steps. |
+| `34854911792`, 2,655-candidate audit | Incomplete but making progress: new shard evidence downloaded; final indexed shard 255 still queued and no accepted aggregate. |
 
-## Notation and retained exact routes
+The audit artifact listing had 87 artifacts at one observation; that is NOT a claim of 87 successful shards. Its newest artifact was `10364625816`, `post-pair-relational-final-audit-shard-90`, uploaded at 2026-09-14 18:55:54 UTC. Its downloaded `AUDIT_STATUS.json` was checked: `finished=true`, `states_expected=11`, `states_audited=11`, `unresolved=[]`. Audited keys were (0,1694), (0,3190), (0,5194), (0,6144), (0,7129), (0,7841), (0,8475), (0,9191), (0,10002), (0,11002), (1,436). The archive SHA256 is `a842b781ddf9f27777d8085b08da44dbab1884c295636a0d70fdd417a5934db1`.
 
-```text
-r=sum rho=sum R, S=sum s, Q=sum q,
-D0=S-r-2t=sum_{s_i=0}(R_i-d_i)>=0,
-Esel=Q-S>=0,
-Q=r+2t+D0+Esel,
-delta=b-a,
-G=b(delta-1)-(2t+D0+Esel)>=0.
-```
+Do not diagnose the whole audit as stalled merely from its run-level queued label. Do not restart successful shards or the whole audit to try to accelerate allocation. Promotion requires ALL 2,655 inputs, both implementations agreeing state by state, zero unresolved, successful aggregate, then a separate ledger commit. Candidate discovery SHA256 remains `2c892301854660c8c1f73a13c4949ce2fb7e1e5706f9ecffbbe79f9483e71970`.
 
-`t` is structural surplus, `tau` a q threshold, `eta` a residual/demand-block threshold. z counts ZERO-DEMAND LABELS, and is not constrained by z<=Esel. Positive-surplus residual activity gives rho>=1; c=q+rho<=a.
+Earlier directly checked successes remain: frozen ledger `34875592126`, threshold `34871045562`, corrected mincut `34878019517`. Original mincut `34868771056` passed its mathematics but failed a raw JSON-format comparison; the repair retained all frozen values. These green gates do not complete the relational audit. No current platform-wide outage or quota diagnosis has been established.
 
-The exact q-stratified minimum theorem and q-layer threshold normal form in `2026-09-14-type-compressed-orientation-hall-v1/` remain fallbacks. Equality of minima does not mean pointwise equality or C_q(M+)=0. Before transferring an old canonical-witness theorem to new caps, check its monotonicity and other hypotheses; direct tail evaluation does not require that transfer.
+## New main hand inequality
 
-For a tail, interval incoming J_w(tau)=#{u!=w:tau<=q_u<=c_w+1} drops only reverse compatibility. With a legitimate cap P,
+Read [`project/research/general_n/2026-09-14-capped-spill-v1/README.md`](project/research/general_n/2026-09-14-capped-spill-v1/README.md).
+
+Keep notation exact:
 
 ```text
-Lambda=sum_w(rho_w+delta-1-P_w),
-Omega_tau=sum_w(P_w-J_w(tau))_+,
-Q_<tau=sum_{q_u<tau}q_u,
-Delta_tau=-F_tau >= Lambda+Omega_tau-Q_<tau-G.
+Q=r+2t+D0+Esel, delta=b-a,
+x_i=s_i+e_i, z=#{i:s_i=0},
+v_u=(q_u-z)_+, d_u=(p_u-rho_u+1)_+.
 ```
 
-The explicit nonnegative reverse correction Xi_tau makes this equality. Universal interval exactness is false: 32 of the old exported failure profiles have strict gaps at some threshold. All useful counterexamples are retained.
-
-## Localized excess: the extra canonical constraint
-
-The concurrent localized package `2026-09-14-localized-excess-v1/` is preserved and integrated. It defines
+`t` is structural surplus, `tau` a q threshold, `eta` a label-demand threshold. Never constrain z by z<=Esel. At selected positive-demand labels, canonical endpoint forcing gives d_u<=e_i. The incoming cap also gives d_u<=delta. Hence
 
 ```text
-U_eta={u:rho_u<=eta}, L_eta={i:s_i<=eta},
-C_eta=Esel+sum_{i in L_eta}s_i-sum_{u in U_eta}q_u>=0.
+sum_u v_u d_u
+ <= sum_{i:s_i>0}(s_i+e_i)min(e_i,delta).
 ```
 
-For rho_w>eta put kstar=min(|L_eta|,q_w,C_eta). When q_w>kstar the canonical endpoint-excess argument gives
+Let
 
 ```text
-p_w<=rho_w-1+floor((C_eta-kstar)/(q_w-kstar)).
+M0=sum_u(q_u-#{i:0<s_i<=rho_u})_+,
+B=Esel-M0>=0, smax=max_i s_i.
 ```
 
-Take the minimum with ALL legitimate old caps. Eta=0 recovers the zero-demand cap; positive eta prevents reusing excess forced into low-positive-demand labels. The source-outside-U condition is essential. Negative caps are infeasibility, never silently clipped.
-
-The concurrent complete local checks and incomplete wider generation experiment remain distinct. Our new reconstruction below reads the OLD exported stream; it does not claim to have completed that interrupted regenerated search.
-
-## New main proof target: priced tails, not necessarily deficient Hall tails
-
-Read [`PRICED_TAIL_BUDGET.md`](project/research/general_n/2026-09-14-q-tail-interval-budget-v1/PRICED_TAIL_BUDGET.md) first, then its verifier and frozen output.
-
-For x_i=s_i+e_i, every selected POSITIVE-demand label i at u satisfies p_u<=rho_u-1+e_i. Define v_u=(q_u-z)_+. Distinct selected labels imply the shared charge bound
+M0 is excess forced onto zero-demand labels, which cannot fund the positive-label charge. The strongest new closed-form bound is
 
 ```text
-sum_u v_u(p_u-rho_u+1)_+
- <= sum_i e_i(s_i+e_i)
- <= Esel(Esel+smax),   smax=max s_i.
+sum_u(q_u-z)_+(p_u-rho_u+1)_+
+ <= B[smax+min(B,delta)].
 ```
 
-For tail T_tau and a legitimate cap P, set
+When B>=delta, this is LINEAR in B, replacing the older quadratic envelope Esel(Esel+smax). Its bridge use depends on the incoming cap and positive-label endpoint forcing; these hypotheses cannot be silently omitted.
+
+For the priced tail with A_w=min(P_w,J_w(tau)), f_w=min(A_w,rho_w-1), g_w=A_w-f_w, substitute the new right side into
 
 ```text
-A_w=min(P_w,J_w(tau)),
-f_w=min(A_w,rho_w-1),
-g_w=A_w-f_w.
+theta(Q_tau-sum f_w)-sum_w(theta-v_w)_+g_w <= charge envelope.
 ```
 
-Every graph-derived orientation necessarily obeys, for ALL tau>=1 and prices theta>=0,
+A tail can have enough capacity but still be too expensive. No universal high-q-tail sufficiency theorem is assumed.
+
+## All-source spill and the integer envelope
+
+For L_eta={i:s_i<=eta}, let
 
 ```text
-theta*(Q_tau-sum_w f_w)
- -sum_w(theta-v_w)_+ g_w <= Esel(Esel+smax).
+f_u(eta)=(q_u-#{i:eta<s_i<=rho_u})_+,
+M_eta=sum_u f_u(eta), S_eta=sum_{i in L_eta}s_i,
+C_{eta,w}=Esel+S_eta-M_eta+f_w(eta).
 ```
 
-Its right side can equivalently use Esel=Q-r-2t-D0. The proof sums a pointwise free/paid receiver inequality and the canonical selected-incidence charge bound. It is hand-derived under explicit bridge hypotheses; external mathematical review and novelty assessment remain open.
-
-For theta>=max v the left side is
+Removing w's own forced spill before counting its actual k low-block selections avoids double counting. The exact necessary inequality is
 
 ```text
-theta*(Q_tau-sum A_w)+sum_w v_w g_w.
+C_{eta,w}>=k+(q_w-k)d_w when d_w>=1.
 ```
 
-Thus a deficient interval tail is one way to contradict the budget, but a TIGHT tail can also force too much excess cost. This broadens the research goal and avoids assuming a deficient Hall tail always exists.
-
-## New frozen evidence: a fixed tau=3 Hall-or-price certificate
-
-Independent localized-cap reconstruction on the 812 difficult profiles:
+With m=#{i:s_i<=min(eta,rho_w)} and kstar=min(m,q_w,C), q_w>kstar gives
 
 ```text
-fixed tau=3 detects:          812 / 812
-minimum / maximum deficit:     1 / 15
-cap vectors tightened:            748
-uniform weights detect:           773
-first deficient tau:        1:630, 2:117, 3:65
+p_w<=rho_w-1+floor((C-kstar)/(q_w-kstar)).
 ```
 
-The OLD-cap fixed-weight obstruction remains valid for OLD caps. It must NOT be transferred to the strengthened localized model: the common integer weighting (0,0,1,0,0,0,0,0) now works on all 812. This is finite evidence, not a universal tau=3 theorem.
+Take the minimum with EVERY prior cap, particularly exact potential-pair degrees. Negative caps reject a branch. Unlike the preceding localized theorem, this counts unavoidable low-label selections from all sources. The +f_w term is essential; a counterexample to omitting it is preserved in the proof note.
 
-On all 205,931 old exported rows, localized fixed tau=3 detects 205,930, including all 205,919 old Hall failures and 11 of 12 old Hall passes. Cap vectors tighten on 43,113. The remaining state-4073 profile has r=56,S=58,Q=65,t=1,D0=0,Esel=7,smax=4. At tau=3 its tail demand and capacity both equal 56. Filling the tail needs excess cost at least 80, while Esel(Esel+smax)=77. Theta=7 gives an exact strict certificate 80>77. All arrays and arithmetic are frozen in `PRICED_TAIL_VERIFICATION.json`.
+A prefix dynamic programme further maximizes the capped positive-label charge over INTEGER excess vectors with total Esel, per-label selected-incidence upper bounds, and all equal-demand-prefix spill lower bounds. The actual excess vector belongs to this projection. Its optimum is therefore a safe upper bound, but exactness is only for that explicitly relaxed budget problem, NOT for selectable matrices or graph realization. Constraints on an equal-demand block are imposed after the whole block.
 
-This last profile was already rejected by the old cost screen. The new result is a short scalar hand certificate explaining it. A Hall-or-priced-tail explanation therefore covers all OLD exports, not every possible profile or whole scalar state. The old scanner stopped at two surviving witnesses; eliminating them requires resuming omitted continuations before any whole-state claim.
+## Completed local verification and finite reach
 
-Shared-generator independent arithmetic is not external reproduction. Source TSV SHA256: `4b183b899127f4f9e05faed0cb23a11c6962c854f077d0e3ad209d09b386fb67`. Original artifact IDs, hashes and reproduction commands are retained in the interval package. The evidence ZIP includes original inputs, compressed raw rows and detailed outputs; those large rows are not claimed uploaded to Git.
+`verify_capped_spill.py` was executed locally and its committed blob checked against the executed file. It imports no production scanner. `CAPPED_SPILL_VERIFICATION.json` freezes every value.
 
-## Verification, hostile boundaries and next work
+```text
+exhaustive selected-incidence configurations: 133,586
+pressure/cap/envelope checks (delta=1,2,4):    400,758
+independent brute-force DP comparisons:        3,000
+  feasible / empty projections:          1,179 / 1,821
+standing hostile q-tail examples:                  3
+frozen difficult profiles replayed:              812
+```
 
-`verify_priced_tail.py` independently checks 1,329 receiver profiles / 5,109 feasible demand values, 9,293 selected-incidence configurations including zero demands, localized-cap reconstruction and the exact 80>77 fixture. `verify_localized_fixed_tail.py` checks the 812 fixed-threshold certificate without an optimizer. `replay_localized_export.py` reconstructs the full old stream; `recheck_synthetic_priced.py` preserves its negative boundary.
+On the 812, spill tightens one further cap vector (row 811, state 6085): full-capacity contradictions increase from 630 to 631; uniform interval detections stay 773; adaptive interval detections remain 812. These profiles were already excluded by other tails. No new whole-state closure follows.
 
-The earlier 713 sampled scalar/incidence/pair-flow relaxations now have 652 localized/priced rejections but **61 not rejected**. Passing is not graph realization, and these 61 prohibit claiming universal closure from the tested relaxation. No additional priced-only rejection occurred in that synthetic sample. Preserve the explicit unrejected example.
+The original fixed-seed 100,000-trial synthetic generator was regenerated locally from its committed source and frozen scanner. It reproduces all previous totals and the 713-row corpus. Shared generation is NOT an independent generator. TSV SHA256: `157db7e1f48261626eac8cb99bf875f4aec3b707d4c024f62989dd1bcec38572`.
 
-The three older hostile q-tail examples, old-cap exact fixed-weight obstruction, abstract interval misses, frozen strict gaps, and all generator/workflow corrections remain preserved. The a=4,b=7 cap-only case fails selected demand feasibility; the all-zero-demand case fails the canonical ledger. No counterexample is excluded by an unstated z restriction.
+```text
+prior localized/priced rejections:               652 / 713
+all-source spill with old quadratic envelope:     654 / 713
+spill with new closed-form capped envelope:       672 / 713
+spill with exact integer prefix envelope:         694 / 713
+not rejected:                                     19 / 713
+```
 
-Next: seek a structurally forced violating pair (tau,theta) from FULL canonical selected/residual and endpoint constraints, or sharpen the excess envelope and localized block budgets on the 61 synthetic survivors. Keep exact q-layer and crossing-wall/saturation routes as fallbacks, and the independent maximum-cut/stability route. Complete source-state continuations with coverage certificates separately from this hand attack. External review of the canonical graph bridge remains the central correlated dependency. No timeout, missing output or unreviewed discovery is proof.
+Thus 42 of the former 61 sampled survivors are newly rejected. This is NOT a 42-state frontier reduction. All new/remainder row IDs and the explicit arrays are preserved in frozen outputs and the reproducible corpus.
+
+The old published unrejected witness, zero-based row 4, now has a short certificate. It has Esel=34, M0=26, B=8, delta=smax=3. The closed-form upper cost is 8(3+3)=48. At tau=1, theta=4, previous localized caps already force cost at least 4(96-31)-203=57. Therefore **57>48**. The integer-envelope upper bound is 46 but is not needed. No interval tail is deficient on this profile with the new caps; the price genuinely adds a constraint beyond interval-tail deficiency.
+
+The remaining synthetic row IDs are 39,76,108,119,160,240,258,295,338,342,347,365,406,471,570,586,664,682,688. Passing remains no graph-realizability evidence. Do not assert all-order closure from this sample.
+
+## Retained previous achievements and next research target
+
+The priced-tail package retains its fixed tau=3 detection of all 812 localized difficult profiles and its Hall-or-price explanation of all 205,931 OLD exported rows, including the 80>77 state-4073 fixture. Those larger exports were NOT regenerated in this capped-spill session. Eliminating old early-stopping witnesses still requires exploring omitted source-state continuations before a whole-state claim.
+
+The old-cap fixed-weight obstruction remains valid for OLD caps; it does not transfer automatically to new caps. Preserve all hostile examples, 32 frozen interval strict gaps, zero-demand corrections and incomplete wider scans. Exact q-layer/minimum-cut and crossing-wall routes remain fallbacks; check fixed-q monotonicity before transferring witness theorems to modified caps. The independent maximum-cut/stability route remains preserved.
+
+Next: attack the 19 explicit synthetic survivors using joint residual/selected realization, sharper column constraints or source-specific pressure, rather than merely fitting another empirical threshold. Continue bounded source-state scans separately, with complete coverage and independent replay. The main hand target is a structurally forced priced-tail violation with the new capped budget.
+
+Local proof checks, same-assistant independent implementation, remote CI, external mathematical review and third-party reproduction are distinct. No timeout, missing output, failed search or floating infeasibility is proof. The canonical graph-to-selected/residual bridge remains the principal correlated external-review dependency.
