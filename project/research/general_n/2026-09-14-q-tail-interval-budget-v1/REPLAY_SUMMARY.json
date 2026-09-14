@@ -1,0 +1,38 @@
+{
+  "status":"LOCAL_REPLAY_AND_INDEPENDENT_ARITHMETIC_PASS",
+  "frontier_promotion":false,
+  "external_review":"OPEN",
+  "full_pilot":{
+    "states":15,"profiles_generated":201493148,"target_Hall_failures":205919,
+    "interval_detected":205919,"exact_tail_detected":205919,
+    "first_threshold_agrees":205919,"all_thresholds_interval_exact":205887,
+    "profiles_with_reverse_gap":32,"maximum_deficiency_agrees":205895,
+    "uniform_weight_detected":199634,"Hall_passes_arithmetic_checked":12,
+    "profiles_arithmetic_checked":205931,"original_logical_columns_identical":true,
+    "first_deficient_tau":{"1":141128,"2":50332,"3":14041,"4":418},
+    "earliest_maximum_exact_tau":{"1":25933,"2":56340,"3":110352,"4":13294},
+    "scope":"Same frozen generator and stopping rules; independent arithmetic, not independent generation or full-frontier coverage"
+  },
+  "difficult_812":{
+    "profiles":812,"interval_detected":812,"uniform_weight_detected":476,
+    "threshold_rows_checked":6667,"all_threshold_rows_interval_exact":true,
+    "first_deficient_tau":{"2":426,"3":191,"4":195},
+    "earliest_maximum_tau":{"2":220,"3":170,"4":422}
+  },
+  "synthetic":{
+    "seed":74220260914,"trials":100000,"formal_scalar_domain":44234,
+    "cap_pass":5582,"selected_incidence_pass":1467,"potential_pair_Hall_pass":713,
+    "independently_checked_profiles":713,"zero_demand_profiles":46,"D0_positive_profiles":30,
+    "target_Hall_failures":474,"interval_detected":474,"target_Hall_passes":239,
+    "scope":"Scalar ledger, source caps, selected incidence and pair flow only; not full canonical graph realization"
+  },
+  "provenance":{
+    "pilot_run":34859094097,"pilot_artifact":10356424619,
+    "pilot_zip_sha256":"b91c48268fb6b2b3c6545b28ced230d4ab8ad71b371b49205af1b6166c2a63f4",
+    "diagnostic_run":34850187436,"diagnostic_artifact":10351372086,
+    "diagnostic_zip_sha256":"d856c6987acedfc824a85ddd2826ca05d35a4a724b5417c866a235deba17fe4e",
+    "diagnostic_TSV_sha256":"c4f859f97bed726f6e4799473906bd1673520aa2501d755fc5136a1c3cb46885",
+    "frozen_scanner_sha256":"7b07649c355028818ba2153dedf461eb001b92541a5d994a83967cf366757906",
+    "exported_205931_profile_TSV_sha256":"4b183b899127f4f9e05faed0cb23a11c6962c854f077d0e3ad209d09b386fb67"
+  }
+}

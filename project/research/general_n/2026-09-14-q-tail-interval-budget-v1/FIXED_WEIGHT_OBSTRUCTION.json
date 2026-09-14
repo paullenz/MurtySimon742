@@ -1,0 +1,27 @@
+{
+  "K": 8,
+  "status": "EXACT_INTEGER_CERTIFICATE",
+  "interpretation": "No single nonnegative threshold-weight vector gives strictly positive pressure on every frozen difficult profile. Adaptive profile-dependent weights remain possible.",
+  "profiles": [
+    {"index":199,"state":1626,"weight":7,"a":15,"b":18,"t":1,"D0":0,"Esel":3,
+     "q":[0,0,0,0,1,1,1,1,2,3,3,3,3,4,7,7,7,7],
+     "rho":[1,1,1,1,1,1,1,1,4,3,3,4,4,5,3,3,4,4],
+     "P":[3,3,3,3,3,3,3,3,4,3,3,4,4,4,2,2,2,2],
+     "s":[1,2,2,3,3,3,3,3,3,4,4,4,4,4,4],
+     "deficiencies":[-4,0,2,2,-2,-2,-2,0]},
+    {"index":209,"state":1626,"weight":12,"a":15,"b":18,"t":1,"D0":0,"Esel":3,
+     "q":[0,0,0,0,1,1,1,1,3,3,3,3,3,3,7,7,7,7],
+     "rho":[1,1,1,1,1,1,1,1,3,3,4,4,4,5,3,3,4,4],
+     "P":[3,3,3,3,3,3,3,3,3,3,4,4,4,5,2,2,2,2],
+     "s":[1,2,2,3,3,3,3,3,3,4,4,4,4,4,4],
+     "deficiencies":[-5,3,3,-2,-2,-2,-2,0]},
+    {"index":768,"state":1626,"weight":10,"a":15,"b":18,"t":1,"D0":0,"Esel":4,
+     "q":[0,0,0,1,1,1,1,1,2,2,3,3,3,6,6,7,7,7],
+     "rho":[1,1,1,1,1,1,1,1,4,4,3,3,5,3,4,3,4,4],
+     "P":[3,3,3,3,3,3,3,3,5,5,3,3,5,2,3,2,2,2],
+     "s":[1,2,2,3,3,3,3,3,3,4,4,4,4,4,4],
+     "deficiencies":[-5,-7,-5,1,1,1,-5,0]}
+  ],
+  "total_weight":29,
+  "weighted_sum_deficiencies":[-138,-34,0,0,-28,-28,-88,0]
+}

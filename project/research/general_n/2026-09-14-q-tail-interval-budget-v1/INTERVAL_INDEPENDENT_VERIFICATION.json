@@ -1,0 +1,33 @@
+{
+  "exhaustive_interval_detection_misses":154,
+  "exhaustive_positive_reverse_profiles":1003,
+  "exhaustive_profiles":7314,
+  "first_abstract_interval_miss":{
+    "P":[1,1,1],"q":[0,1,2],"rho":[1,0,0],
+    "rows":[
+      {"H":2,"Omega":0,"U":3,"Xi":1,"deficiency":1,"demand":3,"interval_lower":0,"tau":1},
+      {"H":2,"Omega":1,"U":2,"Xi":0,"deficiency":0,"demand":2,"interval_lower":0,"tau":2},
+      {"H":0,"Omega":3,"U":0,"Xi":0,"deficiency":0,"demand":0,"interval_lower":0,"tau":3}
+    ],"weighted_deficiency":1,"weighted_interval_lower":0
+  },
+  "first_abstract_reverse_gap":{
+    "P":[0,1],"q":[1,2],"rho":[0,0],
+    "rows":[
+      {"H":0,"Omega":0,"U":1,"Xi":1,"deficiency":3,"demand":3,"interval_lower":2,"tau":1},
+      {"H":0,"Omega":1,"U":0,"Xi":0,"deficiency":2,"demand":2,"interval_lower":2,"tau":2},
+      {"H":0,"Omega":1,"U":0,"Xi":0,"deficiency":0,"demand":0,"interval_lower":0,"tau":3}
+    ],"weighted_deficiency":7,"weighted_interval_lower":6
+  },
+  "fixed_weight_obstruction":"PASS: exact integer combination, no optimization solver used",
+  "hostile":[
+    {"Esel":null,"P":[2,1,3,3,1,3,0],"maximum_tail_deficiency":0,"minimum_Hall_margin":-1,"name":"arbitrary_monotone","q":[0,1,3,3,1,3,2],"rho":[2,1,1,1,1,1,1],"z":null},
+    {"Esel":5,"P":[3,3,3,3,3,3,3],"maximum_tail_deficiency":0,"minimum_Hall_margin":-1,"name":"cap_formula_only","q":[1,3,3,3,3,3,3],"rho":[1,1,1,1,1,1,1],"z":2},
+    {"Esel":19,"P":[3,3,3,3,3,3,3],"maximum_tail_deficiency":0,"minimum_Hall_margin":-1,"name":"all_zero_demands","q":[1,3,3,3,3,3,3],"rho":[1,1,1,1,1,1,1],"z":4}
+  ],
+  "random_positive_reverse_profiles":3105,
+  "random_seed":7420914,
+  "random_trials":5000,
+  "scalar_selected_tail_loss_cases":179375,
+  "scope":"identities and upper bounds only; no universal tail sufficiency",
+  "status":"PASS"
+}

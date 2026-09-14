@@ -1,0 +1,36 @@
+name: verify q-tail interval budget
+
+on:
+  workflow_dispatch:
+  push:
+    paths:
+      - 'project/research/general_n/2026-09-14-q-tail-interval-budget-v1/**'
+      - '.github/workflows/verify-q-tail-interval-budget.yml'
+
+permissions:
+  contents: read
+
+jobs:
+  verify:
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - uses: actions/checkout@v4
+      - name: Independent identities and exact fixed-weight certificate
+        working-directory: project/research/general_n/2026-09-14-q-tail-interval-budget-v1
+        run: python3 verify_interval_budget.py --obstruction FIXED_WEIGHT_OBSTRUCTION.json --output /tmp/interval-actual.json
+      - name: Require all frozen JSON values
+        working-directory: project/research/general_n/2026-09-14-q-tail-interval-budget-v1
+        run: |
+          python3 -m json.tool --sort-keys INTERVAL_INDEPENDENT_VERIFICATION.json /tmp/interval-expected.canonical.json
+          python3 -m json.tool --sort-keys /tmp/interval-actual.json /tmp/interval-actual.canonical.json
+          diff -u /tmp/interval-expected.canonical.json /tmp/interval-actual.canonical.json
+      - name: Preserve replay evidence even on failure
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: q-tail-interval-budget-verification
+          path: |
+            /tmp/interval-actual.json
+            /tmp/interval-actual.canonical.json
+            /tmp/interval-expected.canonical.json
