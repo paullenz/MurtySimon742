@@ -2,7 +2,7 @@ name: audit post-pair relational full discovery
 
 on:
   workflow_run:
-    workflows: ["summarize post-pair relational full frontier"]
+    workflows: ["retry post-pair relational incomplete"]
     types: [completed]
 
 permissions:
@@ -20,13 +20,14 @@ jobs:
     steps:
       - uses: actions/checkout@v4
 
-      - name: Download discovery aggregate
+      - name: Download recovered layer-safe discovery aggregate
         env:
           GH_TOKEN: ${{ github.token }}
           RUN_ID: ${{ github.event.workflow_run.id }}
         run: |
           mkdir -p discovery
-          gh run download "$RUN_ID" -R "$GITHUB_REPOSITORY" -n post-pair-relational-full-discovery-aggregate -D discovery
+          gh run download "$RUN_ID" -R "$GITHUB_REPOSITORY" \
+            -n post-pair-relational-full-discovery-final -D discovery
 
       - id: plan
         name: Reconstruct exact candidate inputs and audit matrix
@@ -36,12 +37,12 @@ jobs:
           import csv, json
 
           root = Path('discovery')
-          summary = json.loads((root / 'POST_PAIR_RELATIONAL_FULL_DISCOVERY_SUMMARY.json').read_text())
+          summary = json.loads((root / 'POST_PAIR_RELATIONAL_FULL_FINAL_SUMMARY.json').read_text())
           if not summary.get('discovery_complete'):
               plan = {
-                  'schema': 'post-pair-relational-full-audit-plan-v1',
+                  'schema': 'post-pair-relational-full-audit-plan-v2',
                   'audit_ready': False,
-                  'reason': 'DISCOVERY_INCOMPLETE',
+                  'reason': 'RECOVERED_DISCOVERY_STILL_INCOMPLETE',
                   'discovery_summary': summary,
                   'candidate_count': 0,
                   'shard_count': 1,
@@ -54,14 +55,14 @@ jobs:
               print('matrix=' + json.dumps({'shard':[0]}, separators=(',', ':')))
               raise SystemExit(0)
 
-          with (root / 'POST_PAIR_RELATIONAL_FULL_DISCOVERY_RESULTS.tsv').open(newline='') as f:
+          with (root / 'POST_PAIR_RELATIONAL_FULL_FINAL_RESULTS.tsv').open(newline='') as f:
               rows = list(csv.DictReader(f, delimiter='\t'))
           candidate_keys = {
               (int(r['layer']), int(r['state_id']))
               for r in rows if r['status'] == 'RELATIONAL_EXCLUDED'
           }
           if len(candidate_keys) != summary['relational_excluded_candidates']:
-              raise SystemExit('candidate count mismatch against discovery summary')
+              raise SystemExit('candidate count mismatch against recovered discovery summary')
 
           expected = [x.strip() for x in (root / 'EXPECTED_ACTIVE.txt').read_text().splitlines() if x.strip()]
           n = int(expected[0]); body = expected[1:]
@@ -76,18 +77,24 @@ jobs:
           if seen != candidate_keys:
               raise SystemExit(f'could not reconstruct all candidate inputs: missing={sorted(candidate_keys-seen)}')
 
-          Path('CANDIDATE_INPUT.txt').write_text(str(len(selected)) + '\n' + ('\n'.join(selected) + '\n' if selected else ''))
+          Path('CANDIDATE_INPUT.txt').write_text(
+              str(len(selected)) + '\n' + ('\n'.join(selected) + '\n' if selected else '')
+          )
           count = len(selected)
           shard_count = min(256, max(1, count))
           plan = {
-              'schema': 'post-pair-relational-full-audit-plan-v1',
+              'schema': 'post-pair-relational-full-audit-plan-v2',
               'audit_ready': True,
-              'discovery_run_id': summary['scan_run_id'],
-              'discovery_head_sha': summary['scan_head_sha'],
+              'initial_scan_run_id': summary['initial_scan_run_id'],
+              'initial_scan_head_sha': summary['initial_scan_head_sha'],
+              'recovery_run_id': summary['retry_workflow_run_id'],
               'discovery_results_sha256': summary['results_sha256'],
               'candidate_count': count,
               'candidate_keys': [list(k) for k in sorted(candidate_keys)],
+              'candidate_n34': sum(k[0] == 0 for k in candidate_keys),
+              'candidate_n35': sum(k[0] == 1 for k in candidate_keys),
               'shard_count': shard_count,
+              'state_timeout_seconds': 1800,
               'promotion_status': 'NOT_PROMOTED',
               'external_review': 'OPEN',
           }
@@ -110,7 +117,7 @@ jobs:
     needs: plan
     if: ${{ needs.plan.outputs.audit_ready == 'true' && needs.plan.outputs.candidate_count != '0' }}
     runs-on: ubuntu-latest
-    timeout-minutes: 120
+    timeout-minutes: 360
     strategy:
       fail-fast: false
       max-parallel: 64
@@ -165,7 +172,7 @@ jobs:
           --independent ./scan_post_pair_relational_types
           --outdir FULL_RELATIONAL_AUDIT_SHARD_${{ matrix.shard }}
           --shard ${{ matrix.shard }}
-          --state-timeout 300
+          --state-timeout 1800
 
       - name: Upload durable audit checkpoints
         if: always()
