@@ -1,0 +1,96 @@
+name: publish verified conditioned evidence
+on:
+  workflow_dispatch:
+  push:
+    paths:
+      - '.github/workflows/publish-verified-conditioned-evidence.yml'
+permissions:
+  actions: read
+  contents: write
+jobs:
+  publish:
+    if: github.repository == 'paullenz/MurtySimon742' && github.ref == 'refs/heads/main'
+    runs-on: ubuntu-24.04-arm
+    timeout-minutes: 5
+    steps:
+      - name: Download already verified data; no computational replay
+        uses: actions/download-artifact@v4
+        with:
+          name: conditioned-excess-sealed-evidence
+          run-id: 34894544147
+          github-token: ${{ github.token }}
+          path: /tmp/verified-publication
+      - name: Verify pinned bytes and publish through a non-forced Git tree update
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          python3 - <<'PY'
+          """Publish the already verified artifact, not a mathematical replay."""
+          import hashlib, json, os, pathlib, urllib.request
+          REPO='paullenz/MurtySimon742'
+          BASE='project/research/general_n/2026-09-14-evidence-preservation-v1/durable/'
+          EXPECTED='3bfacfe22427bced71574a9879102594ed9e21103c799739558e254e46526fa7'
+          root=pathlib.Path('/tmp/verified-publication')
+          matches=list(root.rglob('MATERIALIZATION_STATUS.json'))
+          assert len(matches)==1, matches
+          raw=matches[0].read_bytes()
+          assert hashlib.sha256(raw).hexdigest()==EXPECTED, 'Sealed manifest differs'
+          m=json.loads(raw)
+          assert m['result']=='PASS' and m['promotion']=='NONE' and len(m['files'])==15
+          parent=matches[0].parent
+          payload={}
+          for name,info in m['files'].items():
+              p=pathlib.PurePosixPath(name)
+              assert not p.is_absolute() and '..' not in p.parts
+              data=(parent/name).read_bytes()
+              assert len(data)==info['bytes'] and hashlib.sha256(data).hexdigest()==info['sha256'], name
+              payload[BASE+name]=data
+          payload[BASE+'MATERIALIZATION_STATUS.json']=raw
+          full=json.loads(payload[BASE+'CONDITIONED_EXCESS_FULL.json'])
+          assert hashlib.sha256(json.dumps(full,sort_keys=True,separators=(',',':')).encode()).hexdigest()==m['conditioned_full_canonical_sha256']
+          
+          def api(path,data=None,method=None):
+              req=urllib.request.Request('https://api.github.com/repos/'+REPO+path,
+                  data=None if data is None else json.dumps(data).encode(),
+                  headers={'Authorization':'Bearer '+os.environ['GH_TOKEN'],'Accept':'application/vnd.github+json','Content-Type':'application/json'},
+                  method=method or ('GET' if data is None else 'POST'))
+              with urllib.request.urlopen(req,timeout=60) as response:return json.load(response)
+          
+          def blob(data):return hashlib.sha1(b'blob '+str(len(data)).encode()+b'\0'+data).hexdigest()
+          
+          head=api('/git/ref/heads/main')['object']['sha']
+          base=api('/git/commits/'+head)['tree']['sha']
+          original=api('/git/trees/'+base+'?recursive=1')
+          assert not original.get('truncated'), 'Need complete tree to check existing evidence'
+          existing={v['path']:v['sha'] for v in original['tree'] if v['type']=='blob'}
+          entries=[]
+          for path,data in sorted(payload.items()):
+              expected=blob(data)
+              if path in existing:
+                  assert existing[path]==expected, 'Existing durable data differs: '+path
+              else:entries.append({'path':path,'mode':'100644','type':'blob','content':data.decode('utf-8')})
+          if entries:
+              tree=api('/git/trees',{'base_tree':base,'tree':entries})['sha']
+              commit=api('/git/commits',{'message':'Publish hash-verified conditioned evidence without checkout mutation; no ledger promotion','tree':tree,'parents':[head]})['sha']
+              # Non-fast-forward races are explicit publication blockers, never force pushes.
+              api('/git/refs/heads/main',{'sha':commit,'force':False},'PATCH')
+          else:
+              tree=base;commit=head
+          checked=api('/git/trees/'+tree+'?recursive=1')
+          assert not checked.get('truncated')
+          found={v['path']:v['sha'] for v in checked['tree'] if v['type']=='blob'}
+          assert all(found.get(path)==blob(data) for path,data in payload.items())
+          receipt={'result':'PUBLISHED','commit':commit,'files_checked':len(payload),'sealed_manifest_sha256':EXPECTED,
+           'source_run':34894544147,'source_artifact':10368074968,
+           'verification':'PASSED in source run; not recomputed here','ledger_promotion':'NONE',
+           'prior_publication_failure':'rebase refused unstaged checkout changes; fixed using Git tree API'}
+          pathlib.Path('/tmp/conditioned-publication-receipt.json').write_text(json.dumps(receipt,indent=2)+'\n')
+          print(json.dumps(receipt,indent=2))
+          PY
+      - name: Preserve publication receipt
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: conditioned-publication-receipt
+          path: /tmp/conditioned-publication-receipt.json
+          if-no-files-found: warn
