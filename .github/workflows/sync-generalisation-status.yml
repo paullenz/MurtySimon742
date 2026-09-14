@@ -1,0 +1,45 @@
+name: sync generalisation status
+
+on:
+  workflow_dispatch:
+  push:
+    paths:
+      - 'tools/sync_generalisation_status.py'
+      - 'project/research/general_n/2026-09-13-alternative-attacks-v1/WHOLE_STATE_LEDGER.tsv'
+      - '.github/workflows/sync-generalisation-status.yml'
+
+permissions:
+  contents: write
+
+jobs:
+  sync:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Derive canonical status from ledger
+        run: python3 tools/sync_generalisation_status.py --write
+
+      - name: Recheck canonical status and closure guards
+        run: |
+          python3 tools/sync_generalisation_status.py
+          python3 tools/check_n34_whole_state_ledger.py
+          python3 tools/check_post_pair_relational_recovery.py
+
+      - name: Check patch integrity
+        run: git diff --check
+
+      - name: Commit synchronized documentation
+        run: |
+          if git diff --quiet; then
+            echo 'Canonical status already synchronized.'
+            exit 0
+          fi
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add README.md CURRENT_STATE.md \
+            project/research/general_n/2026-09-13-alternative-attacks-v1/README.md
+          git commit -m 'Synchronize canonical generalisation status from ledger'
+          git push origin HEAD:main
