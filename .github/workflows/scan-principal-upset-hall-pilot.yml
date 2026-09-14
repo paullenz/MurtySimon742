@@ -1,0 +1,72 @@
+name: scan principal-upset Hall reach pilot
+
+on:
+  workflow_dispatch:
+  push:
+    paths:
+      - 'project/research/general_n/2026-09-14-type-compressed-orientation-hall-v1/make_principal_upset_scanner.py'
+      - '.github/workflows/scan-principal-upset-hall-pilot.yml'
+
+jobs:
+  pilot:
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Prepare the same ledger-current 1/256 pilot shard
+        working-directory: project/research/general_n/2026-09-13-alternative-attacks-v1
+        run: python3 prepare_pair_capacity_frontier.py --mod 256 --rem 16 --output PRINCIPAL_UPSET_PILOT_INPUT.txt
+
+      - name: Generate principal-upset scanner from frozen single-type scanner
+        working-directory: project/research/general_n/2026-09-14-type-compressed-orientation-hall-v1
+        run: python3 make_principal_upset_scanner.py
+
+      - name: Compile generated reach scanner
+        working-directory: project/research/general_n/2026-09-14-type-compressed-orientation-hall-v1
+        run: g++ -O3 -std=c++17 -Wall -Wextra -pedantic scan_principal_upset_hall_reach.cpp -o scan_principal_upset_hall_reach
+
+      - name: Run pilot
+        run: |
+          project/research/general_n/2026-09-14-type-compressed-orientation-hall-v1/scan_principal_upset_hall_reach \
+            project/research/general_n/2026-09-13-alternative-attacks-v1/PRINCIPAL_UPSET_PILOT_INPUT.txt \
+            PRINCIPAL_UPSET_HALL_PILOT.tsv \
+            2>&1 | tee PRINCIPAL_UPSET_HALL_PILOT_REPLAY.txt
+
+      - name: Summarize reach
+        run: |
+          python3 - <<'PY'
+          import csv, json
+          with open('PRINCIPAL_UPSET_HALL_PILOT.tsv', newline='') as f:
+              rows=list(csv.DictReader(f,delimiter='\t'))
+          excluded=[r for r in rows if r['status']=='RELATIONAL_EXCLUDED']
+          principal_closed=[r for r in excluded if int(r['targethall_fail'])==0 and int(r['cost_fail'])==0]
+          summary={
+              'schema':'principal-upset-hall-reach-pilot-v1',
+              'states':len(rows),
+              'relational_excluded':len(excluded),
+              'survives_relational':sum(r['status']=='SURVIVES_RELATIONAL' for r in rows),
+              'principal_upset_sufficient_whole_states':len(principal_closed),
+              'principal_upset_sufficient_state_keys':[[int(r['layer']),int(r['state_id'])] for r in principal_closed],
+              'profiles_killed_by_principal_upset':sum(int(r['principal_fail']) for r in rows),
+              'profiles_requiring_nonprincipal_target_failure':sum(int(r['targethall_fail']) for r in rows),
+              'profiles_requiring_cost_failure':sum(int(r['cost_fail']) for r in rows),
+              'max_principal_deficit':max([int(r['max_principal_deficit']) for r in rows] or [0]),
+              'promotion_status':'RECONNAISSANCE_ONLY',
+              'external_review':'OPEN',
+          }
+          open('PRINCIPAL_UPSET_HALL_PILOT_SUMMARY.json','w').write(json.dumps(summary,indent=2,sort_keys=True)+'\n')
+          print(json.dumps(summary,indent=2,sort_keys=True))
+          PY
+
+      - name: Upload pilot artifacts
+        uses: actions/upload-artifact@v4
+        with:
+          name: principal-upset-hall-reach-pilot
+          path: |
+            project/research/general_n/2026-09-13-alternative-attacks-v1/PRINCIPAL_UPSET_PILOT_INPUT.txt
+            project/research/general_n/2026-09-13-alternative-attacks-v1/PRINCIPAL_UPSET_PILOT_INPUT_VERIFICATION.json
+            project/research/general_n/2026-09-14-type-compressed-orientation-hall-v1/scan_principal_upset_hall_reach.cpp
+            PRINCIPAL_UPSET_HALL_PILOT.tsv
+            PRINCIPAL_UPSET_HALL_PILOT_REPLAY.txt
+            PRINCIPAL_UPSET_HALL_PILOT_SUMMARY.json
