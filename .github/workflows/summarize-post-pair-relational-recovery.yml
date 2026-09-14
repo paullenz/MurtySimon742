@@ -1,0 +1,113 @@
+name: summarize post-pair relational recovery
+
+on:
+  workflow_run:
+    workflows: ["audit post-pair relational recovery"]
+    types: [completed]
+
+permissions:
+  actions: read
+  contents: read
+
+jobs:
+  summarize:
+    if: ${{ github.event.workflow_run.conclusion == 'success' }}
+    runs-on: ubuntu-latest
+    steps:
+      - name: Download per-state audit artifacts
+        env:
+          GH_TOKEN: ${{ github.token }}
+          RUN_ID: ${{ github.event.workflow_run.id }}
+        run: |
+          mkdir artifacts
+          gh run download "$RUN_ID" -R "$GITHUB_REPOSITORY" -p 'post-pair-relational-*' -D artifacts
+
+      - name: Build aggregate certificate
+        env:
+          RUN_ID: ${{ github.event.workflow_run.id }}
+          HEAD_SHA: ${{ github.event.workflow_run.head_sha }}
+        run: |
+          python3 - <<'PY'
+          from pathlib import Path
+          import csv, hashlib, json, os
+
+          expected = [961,1025,2620,2706,2897,3007,3139,3202,3302,3359,3480,3599,4145,4559,4654,4994]
+          root = Path('artifacts')
+          compares = list(root.rglob('POST_PAIR_*_COMPARE.json'))
+          primaries = list(root.rglob('POST_PAIR_*_PRIMARY.tsv'))
+          if len(compares) != len(expected) or len(primaries) != len(expected):
+              raise SystemExit(f'artifact count mismatch: compare={len(compares)} primary={len(primaries)}')
+
+          compare_by_id = {}
+          for path in compares:
+              obj = json.loads(path.read_text())
+              if obj.get('result') != 'PASS' or obj.get('difference_count') != 0:
+                  raise SystemExit(f'failed comparison artifact: {path}')
+              ids = obj.get('state_ids', [])
+              if len(ids) != 1:
+                  raise SystemExit(f'unexpected state list: {path}: {ids}')
+              compare_by_id[int(ids[0])] = (path, obj)
+          if sorted(compare_by_id) != expected:
+              raise SystemExit(f'comparison ids mismatch: {sorted(compare_by_id)}')
+
+          rows = []
+          primary_by_id = {}
+          for path in primaries:
+              with path.open(newline='') as f:
+                  rr = list(csv.DictReader(f, delimiter='\t'))
+              if len(rr) != 1:
+                  raise SystemExit(f'expected one primary row in {path}')
+              row = rr[0]
+              state = int(row['state_id'])
+              if row['status'] != 'RELATIONAL_EXCLUDED':
+                  raise SystemExit(f'non-excluded primary row: {path}')
+              primary_by_id[state] = (path, row)
+              rows.append(row)
+          if sorted(primary_by_id) != expected:
+              raise SystemExit(f'primary ids mismatch: {sorted(primary_by_id)}')
+
+          rows.sort(key=lambda r: int(r['state_id']))
+          fields = list(rows[0])
+          out = Path('POST_PAIR_RELATIONAL_RECOVERY_EXCLUDED.tsv')
+          with out.open('w', newline='') as f:
+              w = csv.DictWriter(f, fieldnames=fields, delimiter='\t', lineterminator='\n')
+              w.writeheader(); w.writerows(rows)
+
+          def sha(path):
+              return hashlib.sha256(Path(path).read_bytes()).hexdigest()
+
+          audit = {
+              'schema': 'post-pair-relational-recovery-audit-v1',
+              'trigger_run_id': int(os.environ['RUN_ID']),
+              'trigger_head_sha': os.environ['HEAD_SHA'],
+              'state_ids': expected,
+              'state_count': len(expected),
+              'all_comparisons': 'PASS',
+              'combined_tsv_sha256': sha(out),
+              'primary_profiles_total': sum(int(r['profiles_tested']) for r in rows),
+              'paircap_pass_total': sum(int(r['paircap_pass']) for r in rows),
+              'incidence_pass_total': sum(int(r['incidence_pass']) for r in rows),
+              'pairhall_pass_total': sum(int(r['pairhall_pass']) for r in rows),
+              'targethall_pass_total': sum(int(r['targethall_pass']) for r in rows),
+              'cost_fail_total': sum(int(r['cost_fail']) for r in rows),
+              'per_state_compare_sha256': {
+                  str(state): sha(compare_by_id[state][0]) for state in expected
+              },
+              'per_state_primary_sha256': {
+                  str(state): sha(primary_by_id[state][0]) for state in expected
+              },
+              'external_review': 'OPEN',
+              'note': 'Implementation cross-check; not independent mathematical review or third-party reproduction.',
+          }
+          Path('POST_PAIR_RELATIONAL_RECOVERY_AUDIT.json').write_text(json.dumps(audit, indent=2, sort_keys=True) + '\n')
+          print(out.read_text())
+          print(json.dumps(audit, indent=2, sort_keys=True))
+          PY
+
+      - name: Upload aggregate certificate
+        uses: actions/upload-artifact@v4
+        with:
+          name: post-pair-relational-recovery-aggregate
+          path: |
+            POST_PAIR_RELATIONAL_RECOVERY_EXCLUDED.tsv
+            POST_PAIR_RELATIONAL_RECOVERY_AUDIT.json
