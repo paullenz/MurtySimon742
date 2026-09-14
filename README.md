@@ -1,6 +1,6 @@
 # Murty–Simon / Erdős Problem #742
 
-Open, reproducible research on the Murty–Simon conjecture / Erdős Problem #742. **Updated 14 September 2026 through recovery of the q-stratified minimum-cut/threshold developments and the new selected-excess tail-loss budget, research commit `94cbfd966f6fd913ad9f96bdc4b0ba835c530dbb`.**
+Open, reproducible research on the Murty–Simon conjecture / Erdős Problem #742. **Updated 14 September 2026 through the interval-tail budget and localized selected-excess cap, including proof `449a268f93600d78660e02b09d65e5304a2ca0bf`, frozen evidence `cbe1076c87b1cb1eccff409a14dcac7839fd9de6` and replay workflow `e7618ca2caa6438beea5b613638d9fa45297705b`.**
 
 The canonical promoted finite frontier remains **1,971 exclusions / 3,607 survivors**, with **977 quantified whole-state closures**. The **2,655 recovered relational candidate exclusions remain unpromoted**. The unrestricted conjecture is **not claimed proved**. Independent mathematical review, novelty assessment and genuinely independent third-party computational reproduction remain OPEN.
 
@@ -8,7 +8,7 @@ The canonical promoted finite frontier remains **1,971 exclusions / 3,607 surviv
 
 **External reviewers:** start with [`START_HERE_FOR_REVIEWERS.md`](START_HERE_FOR_REVIEWERS.md) and [`releases/REVIEW_READY_INDEX.md`](releases/REVIEW_READY_INDEX.md). The project welcomes hostile review, counterexamples, literature corrections and independent reproduction. GitHub Issues are the preferred place to report a suspected flaw.
 
-The previous README is preserved verbatim in [`README_EARLIER_2026-09-14.md`](README_EARLIER_2026-09-14.md), including its historical statistics, older priorities and route chronology. Its live-status statements are superseded by this page and the current handoff. The protected reviewer index below is retained unchanged.
+The earlier README is preserved verbatim in [`README_EARLIER_2026-09-14.md`](README_EARLIER_2026-09-14.md), including historical statistics, older priorities and route chronology. Its live-status statements are superseded by this page and the current handoff. The protected reviewer index below is retained unchanged.
 
 ## How this research develops general theory
 
@@ -36,13 +36,19 @@ This is compatible with positive crossing statistic C_q on particular source set
 
 The [type-complete witness corollary](project/research/general_n/2026-09-14-type-compressed-orientation-hall-v1/Q_STRATIFIED_TYPE_COMPLETE_WITNESS.md) and [q-layer threshold normal form](project/research/general_n/2026-09-14-type-compressed-orientation-hall-v1/Q_LAYER_THRESHOLD_NORMAL_FORM.md) express that minimum through type sets, cap tails, source order statistics and two-dimensional histogram rectangle counts. Their exact scope remains the target-Hall relaxation, not graph realizability.
 
-These are preserved hand derivations with local finite verification. The corrected minimum-cut CI replay, run `34878019517`, was still queued when checked during this recovery; it is not being reported as a completed new CI audit.
+These are preserved hand derivations with local finite verification. Threshold CI `34871045562` is green. The corrected minimum-cut CI replay `34878019517` was still queued at recheck. Its predecessor `34868771056` completed the mathematical verifier but failed on JSON list formatting in a raw text comparison; this is a workflow-comparison problem, not a mathematical counterexample. The fix retains all frozen value checks.
 
-### 2. High-q tails: useful, but not a universal theorem
+### 2. High-q tails and interval budgets: useful, not a universal theorem
 
 The frozen 812 difficult profiles all have deficient high-q tails. However, the [preserved red-team correction](https://github.com/paullenz/MurtySimon742/commit/93c9e8995c57e69c238396f20641a0dc84bb4754) shows that arbitrary monotone caps, the current cap formula alone, and even selected-incidence feasibility without the global bridge ledger do not imply tail sufficiency. The zero-demand count z must not be incorrectly restricted by z<=E.
 
-The narrowed ledger-current q-tail question remains OPEN. The broader pilot run `34876612516` was still queued when checked; no result for all 205,919 frozen-pilot Hall failures is claimed here. The full q-layer threshold representation remains available even if the narrowed tail conjecture fails.
+The [interval-tail package](project/research/general_n/2026-09-14-q-tail-interval-budget-v1/README.md) now gives a sufficient adaptive threshold inequality, with exact reverse-compatibility correction. Its committed replay detects all 205,919 old target-Hall failures in the original 15-state pilot using the interval bound; 32 profiles have a strict interval/exact gap at some threshold. This is finite reconnaissance with shared generation and independently implemented arithmetic, not a universal interval-exactness or tail-sufficiency theorem.
+
+The original q-stratified artifact from run `34859094097` has also been retrieved: all 205,919 failures have C_q=0. This finite observation is separate from pointwise or minimum-cut theorems. The dedicated q-tail CI run `34876612516` must still be checked independently; its queued status must not erase the separately preserved completed local replay evidence.
+
+The interval package preserves an exact three-profile certificate showing that no common nonnegative weighting detects every one of the 812 profiles with the OLD capacities. Adaptive thresholds remain viable. Its synthetic scalar/incidence relaxation also has target-Hall passes, proving that those weaker hypotheses alone cannot force a deficient tail on every profile.
+
+The narrowed full-bridge q-tail question remains OPEN. The full q-layer threshold representation and crossing-wall route remain available.
 
 ### 3. Exact two-defect bridge and weighted pressure
 
@@ -54,11 +60,11 @@ Esel = Q-S >= 0,        selected excess,
 Q = r+2t+D0+Esel.
 ```
 
-The [summed high-q-tail pressure note](project/research/general_n/2026-09-14-type-compressed-orientation-hall-v1/SUMMED_Q_TAIL_PRESSURE.md) gives exact weighted layer-cake inequalities. A single quadratic projection is not a substitute for adaptive thresholds. Its reported 812-profile reach remains reconnaissance, not an all-order theorem.
+The [summed high-q-tail pressure note](project/research/general_n/2026-09-14-type-compressed-orientation-hall-v1/SUMMED_Q_TAIL_PRESSURE.md) gives exact weighted layer-cake inequalities. A single quadratic projection is not a substitute for adaptive thresholds. Structural surplus is t; q-thresholds are tau.
 
-### 4. New selected-excess tail-loss budget
+### 4. Selected-excess tail-loss budget
 
-The [new hand derivation](project/research/general_n/2026-09-14-type-compressed-orientation-hall-v1/SELECTED_EXCESS_TAIL_LOSS_BUDGET.md) converts the selected-excess receiver cap into an exact short sum of high-q tail losses. Put k=b-a-1>=0, E=Esel, z=#{i:s_i=0}, and N(h)=#{u:q_u>=h}. Define
+The [hand derivation](project/research/general_n/2026-09-14-type-compressed-orientation-hall-v1/SELECTED_EXCESS_TAIL_LOSS_BUDGET.md) converts the selected-excess receiver cap into an exact short sum of high-q tail losses. Put k=b-a-1>=0, E=Esel, z=#{i:s_i=0}, and N(h)=#{u:q_u>=h}. Define
 
 ```text
 h_j(E,z)=min(E,z)+floor(max(E-z,0)/j)+1,
@@ -80,9 +86,42 @@ H(A0)-D(A0)
 
 where V is receiver capacity unused by A0 and q_out is demand outside A0.
 
-This turns the existing aggregate cap screen into a hand-usable threshold budget and identifies exactly what additional cut-specific shortage is needed. **It is not an extra computational exclusion beyond the existing sum-P screen.** No new frontier reductions are claimed.
+This turns the existing aggregate cap screen into a hand-usable threshold budget and identifies exactly what additional cut-specific shortage is needed. **It is not an extra computational exclusion beyond the existing sum-P screen.**
 
 The [local audit](project/research/general_n/2026-09-14-type-compressed-orientation-hall-v1/EXCESS_TAIL_LOSS_AUDIT.md) passed 179,375 pointwise identities, 171,504 exhaustive source-set checks, and 10,000 deterministic random profiles. A reproducible verifier, frozen JSON and CI workflow are committed. Local PASS is not remote CI completion or external review.
+
+### 5. New localized selected-excess cap — additional bridge strength
+
+The [localized-excess package](project/research/general_n/2026-09-14-localized-excess-v1/README.md) strengthens the target caps rather than merely rewriting them. For a residual threshold eta>=0 define
+
+```text
+U_eta={u:rho_u<=eta},  L_eta={i:s_i<=eta},
+C_eta=Esel+sum_{i in L_eta}s_i-sum_{u in U_eta}q_u.
+```
+
+All selections from U_eta must land in L_eta. For a source w with rho_w>eta, let k count its selected labels in L_eta. Canonical endpoint forcing yields
+
+```text
+C_eta >= k+(q_w-k)(p_w-rho_w+1)  when p_w>=rho_w.
+```
+
+This gives an explicit floor cap after maximizing over feasible k. Eta=0 recovers the existing zero-demand cap exactly; positive eta captures excess already forced into positive-demand labels. In particular,
+
+```text
+q_w>C_eta and rho_w>eta => p_w<=rho_w-1.
+```
+
+If Z collects sources certified this way and delta=b-a, the two-defect budget strengthens to
+
+```text
+2t+D0+Esel+delta*|Z| <= b(delta-1).
+```
+
+Retain all other caps, especially exact potential-pair degrees. Two old surviving PROFILE witnesses associated with states 1626 and 2984 now fail: their required loads are 51 and 57, while localized total target capacities are 50 and 52. **This does not exclude either entire scalar state.**
+
+On the frozen 812 difficult profiles, cap vectors tighten on 748, uniform-weight detections increase from 476 to 773, and 630 now fail already at tau=1. All 812 remain detectable by adaptive exact tails. The independent implementation passes 133,586 exhaustive incidence configurations, 6,880 floor cases and 3,000 ledger-preserving incidence mutations. These are necessary-condition/incidence tests, not realized Murty graphs or external acceptance.
+
+The [experiment log](project/research/general_n/2026-09-14-localized-excess-v1/EXPERIMENT_LOG.md) preserves the standing hostile examples, a rejected marginal-exactness shortcut and an incomplete wider scanner run. No timeout result is promoted. The new cap is the current priority for combining localized bridge information with adaptive threshold losses.
 
 ## Finite frontier and audit gates
 
@@ -95,9 +134,9 @@ canonical survivors:            3,607
 recovered relational candidates: 2,655 (NOT PROMOTED)
 ```
 
-The final relational cross-audit `34854911792` was fetched again in this recovery and remained queued with no conclusion. Promotion still requires exact state-by-state agreement between `scan_post_pair_relational.cpp` and `scan_post_pair_relational_types.cpp`, zero unresolved cases, then a separate ledger-promotion step. N34 and N35 provenance must remain separate.
+The final relational cross-audit `34854911792` remains incomplete: the plan and first visible audit shards passed, but a paginated recheck still found shard 255 queued. Promotion requires full coverage of all 2,655 candidates, exact agreement between `scan_post_pair_relational.cpp` and `scan_post_pair_relational_types.cpp`, zero unresolved cases, a successful aggregate and then a separate ledger-promotion step. N34 and N35 provenance remain separate.
 
-These scalar states are not surviving graphs and are not unresolved obligations in the fixed-order candidate proofs.
+Frozen-ledger CI `34875592126` has now passed, including combined survivor coverage. That is not the separate relational promotion audit. These scalar states are not surviving graphs and are not unresolved obligations in the fixed-order candidate proofs.
 
 ## Fixed-order and general candidate status
 
@@ -109,7 +148,7 @@ These scalar states are not surviving graphs and are not unresolved obligations 
 | n=29 | e(G)<=210, equality exactly K(14,15); reviewer-v4; difficult Delta=16 branch hand-closed |
 | n=30 | e(G)<=225, equality exactly K(15,15); reviewer-v3 |
 | n=31 | e(G)<=240, equality exactly K(15,16); source-first reviewer-v1 |
-| n=32 | e(G)<=256, equality exactly K(16,16); source-first reviewer-v1 |
+| n=32 | e(G)<=256, equality exactly K(16,17); source-first reviewer-v1 |
 | n=33 | e(G)<=272, equality exactly K(16,17); source-first reviewer-v1 |
 | n=34 | e(G)<=289, equality exactly K(17,17); reviewer-v2; final heavy certificate hand-replaced |
 | n=35 | e(G)<=306, equality exactly K(17,18); reviewer-v1 |
@@ -165,12 +204,12 @@ Superseded reviewer editions and failed/corrected research remain preserved in G
 
 ## Immediate research priorities
 
-Use the exact threshold/cap-loss budget to seek a structural lower bound on cut vacancy minus outside demand that exceeds the available bridge budget. Test an adaptive high-q tail first, but retain the full type-complete threshold route; tail sufficiency is not assumed. Diagnose the frozen difficult profiles in the new loss coordinates rather than claiming that their already-passed aggregate cap screen excludes them again.
+Use localized selected excess to strengthen target capacities, then combine the exact two-defect budget with adaptive interval-tail loss or the exact q-layer histogram formulation. The two old surviving profile witnesses expose a joint selected-incidence/endpoint-forcing obstruction; complete scalar-state searches and independent replay are still required. Uniform weighting improves materially but does not cover all 812 profiles.
 
-Complete and inspect the queued high-q-tail and minimum-cut replays. Separately complete the 2,655-candidate cross-audit before any ledger promotion. Preserve all failed generalizations and harness corrections. External review remains focused on the quasi-edge selection/injection, bridge forcing, endpoint loads, incoming/source caps, and the exact Hall reductions.
+Complete the independent localized-cap CI and bounded, checkpointed broader tests. Separately finish the 2,655-candidate relational audit and successful aggregate before any ledger promotion. Preserve failures and harness corrections. External review remains focused on quasi-edge selection/injection, bridge forcing, endpoint loads, incoming/source caps, and the exact Hall reductions. Fixed-q monotonicity requirements must be checked before applying an old canonical-witness theorem to any newly modified capacity model.
 
-The independent maximum-cut/stability route remains open: for a cut X|Y, e(G)=|X||Y|+I-M, so finding I<=M would suffice. The failed one-internal-edge/one-cross-nonedge matching shortcut remains preserved in the earlier route record.
+The independent maximum-cut/stability route remains open: for a cut X|Y, e(G)=|X||Y|+I-M, so finding I<=M would suffice. The failed one-internal-edge/one-cross-nonedge matching shortcut remains preserved in the earlier route record. Crossing-wall charge and saturation-wall arguments remain retained fallbacks.
 
 ## Trust boundary
 
-Hand derivation, finite verification, a separately structured internal implementation, remote CI replay, external mathematical review and third-party reproduction are different statuses. No timeout, missing output, unsuccessful search, floating infeasibility report or unreviewed discovery is a certificate. The largest correlated mathematical dependency remains the canonical graph-to-constraint bridge. The new recovery work changes the structural formulation and restart accuracy, not the promoted frontier.
+Hand derivation, finite verification, a separately structured internal implementation, remote CI replay, external mathematical review and third-party reproduction are different statuses. No timeout, missing output, unsuccessful search, floating infeasibility report or unreviewed discovery is a certificate. The largest correlated mathematical dependency remains the canonical graph-to-constraint bridge. The localized cap changes the structural strength and profile-level evidence, not the promoted whole-state frontier.
