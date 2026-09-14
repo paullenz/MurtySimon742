@@ -1,0 +1,35 @@
+name: verify frozen-state global ledger
+
+on:
+  push:
+    paths:
+      - 'project/research/general_n/2026-09-14-type-compressed-orientation-hall-v1/FROZEN_STATE_GLOBAL_LEDGER.md'
+      - 'project/research/general_n/2026-09-14-type-compressed-orientation-hall-v1/verify_frozen_state_global_ledger.py'
+      - '.github/workflows/verify-frozen-state-global-ledger.yml'
+  workflow_dispatch:
+
+jobs:
+  verify:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v4
+      - name: Verify frozen survivor ledger
+        working-directory: project/research/general_n/2026-09-14-type-compressed-orientation-hall-v1
+        run: python3 verify_frozen_state_global_ledger.py
+      - name: Require combined survivor coverage
+        working-directory: project/research/general_n/2026-09-14-type-compressed-orientation-hall-v1
+        run: |
+          python3 - <<'PY'
+          import json
+          d=json.load(open('FROZEN_STATE_GLOBAL_LEDGER_VERIFICATION.json'))
+          assert d['result']=='PASS'
+          assert d['combined_survivors']==4584
+          assert d['positive_demand_states']+d['zero_demand_states']==4584
+          assert d['ledger_equality_states']+d['ledger_strict_slack_states']==4584
+          print(json.dumps(d,indent=2,sort_keys=True))
+          PY
+      - uses: actions/upload-artifact@v4
+        with:
+          name: frozen-state-global-ledger-verification
+          path: project/research/general_n/2026-09-14-type-compressed-orientation-hall-v1/FROZEN_STATE_GLOBAL_LEDGER_VERIFICATION.json
