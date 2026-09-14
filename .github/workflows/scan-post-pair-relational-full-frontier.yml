@@ -1,12 +1,10 @@
 name: scan post-pair relational full frontier
 
+# Full-frontier discovery is an expensive controlled experiment. Code and
+# documentation changes must not relaunch it implicitly. Use workflow_dispatch
+# after deliberately choosing the ledger/checkpoint version to scan.
 on:
   workflow_dispatch:
-  push:
-    paths:
-      - 'project/research/general_n/2026-09-13-alternative-attacks-v1/run_post_pair_relational_checkpointed.py'
-      - 'project/research/general_n/2026-09-13-alternative-attacks-v1/scan_post_pair_relational.cpp'
-      - '.github/workflows/scan-post-pair-relational-full-frontier.yml'
 
 jobs:
   plan:
