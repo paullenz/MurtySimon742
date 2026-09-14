@@ -1,25 +1,27 @@
 # Murty–Simon / Erdős #742 — current state handoff
 
 <!-- CURRENT-STATUS:START -->
-**14 September 2026 — checkpoint `relational-ledger-validation-v1`.** Inspected predecessor: `13d62aeb7abb1c84acb483610c0667c905709025`. The 2,655-key relational audit is confirmed complete: exact discovery/audit key sets are byte-identical, all 256 audit shards plus aggregate succeeded, both implementations agree, and unresolved count is zero. This commit installs the hash-gated separate reviewed-ledger promotion step and updates target reconstruction to respect both N34 and N35 ledgers. **Mathematical status unchanged in this preparatory commit; canonical counts remain unchanged until that promotion workflow succeeds.**
-<!-- RELATIONAL-FULL-PROMOTION:PENDING -->
+**14 September 2026 — checkpoint `relational-ledger-promotion-v1`.** The separate reviewed-ledger gate has completed after full discovery run `34844403328` and independent audit run `34854911792`. The candidate key files are byte-identical; all 2,655 keys have dual agreement; unresolved count is zero; the reviewed base ledgers were non-overlapping; and the promoted ledgers reconcile exactly. **Canonical finite frontier is now 4,626 exclusions / 952 survivors / 3,632 whole-state closures.** Fixed-order/general candidate and boundary-profile mathematical status is otherwise unchanged; external review remains OPEN.
+<!-- RELATIONAL-FULL-PROMOTION:PROMOTED -->
 
 Canonical repository: `paullenz/MurtySimon742`, ID1359206057. Every commit must update the CURRENT-STATUS blocks in BOTH this file and README.md atomically. Read [`AGENTS.md`](AGENTS.md), [`CANONICAL_REPOSITORY.md`](CANONICAL_REPOSITORY.md), [`RESEARCH_EVIDENCE_INDEX.md`](RESEARCH_EVIDENCE_INDEX.md), and newer commits before continuing.
 
 ## Canonical status — unchanged pending reviewed ledger promotion
 
 ```text
-whole-state closures:               977
-canonical exclusions:             1,971
-canonical survivors:              3,607
-recovered relational candidates:  2,655 — AUDIT COMPLETE / LEDGER REVIEW PENDING
+whole-state closures:             3,632
+canonical exclusions:             4,626
+canonical survivors:                952
+  N34-derived survivors:             949
+  N35-derived survivors:               3
+recovered relational candidates:  2,655 — AUDITED AND PROMOTED
 ```
 
 Fixed-order n25/n27-through-n35 and general7/12 candidates remain preserved with external review, novelty assessment and third-party reproduction OPEN. No unrestricted proof or newly realized graph is claimed.
 
-## Relational validation lane — audit complete, promotion pending
+## Relational validation lane — promoted
 
-Run `34854911792` completed successfully after auditing all 2,655 recovered keys with two independent implementations over 256 shards and a successful aggregate requiring complete agreement. The discovery and audit key TSVs are byte-identical (SHA256 `67593252e0bc27766c24c8bf38060c8b0f98384a6f61fc02ac1e25fafb0ecfa2`), and both report zero unresolved states. The separate reviewed-ledger step is installed by this checkpoint but has not yet run; therefore no canonical count changes are claimed here.
+Discovery/recovery run `34844403328` and independent audit run `34854911792` cover the exact same 2,655-key set (SHA256 `67593252e0bc27766c24c8bf38060c8b0f98384a6f61fc02ac1e25fafb0ecfa2`), with zero unresolved states and successful two-implementation aggregate agreement. The separate reviewed ledger step confirmed zero overlap with the pre-existing ledgers and promoted 2,580 N34 plus 75 N35 closures. The remaining relational frontier is 952 states: 949 N34 and 3 N35. See the promotion audit in the alternative-attacks package. This remains finite evidence conditional on the canonical bridge, not an unrestricted proof.
 
 ## Boundary-profile status
 
@@ -58,4 +60,4 @@ The last line enforces one shared residual neighbourhood at each source. Full mu
 
 The complete pre-row108 handoff is preserved byte-for-byte in [`CURRENT_STATE_PRE_ROW108_2026-09-14.md`](CURRENT_STATE_PRE_ROW108_2026-09-14.md); earlier archives, reviewer packages, counterexamples and negative experiments remain intact.
 
-The2,655 recovered relational candidates have now cleared complete coverage, both implementations agreeing, zero unresolved cases and a successful aggregate in run34854911792. The final separate reviewed-ledger step is installed by this checkpoint and remains the only promotion gate. Sample exclusions do not change that gate. Internal proof checks, successful CI and durable publication do not replace external specialist review of the canonical graph-to-selected/residual bridge.
+The 2,655 recovered relational candidates have now cleared complete coverage, dual agreement, zero unresolved cases, successful aggregate and the separate reviewed-ledger step. Their ledger promotion changes only the canonical finite frontier. Internal proof checks, successful CI and durable publication do not replace external specialist review of the canonical graph-to-selected/residual bridge.

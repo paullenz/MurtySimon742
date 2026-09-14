@@ -25,8 +25,8 @@ Open, reproducible research on the Murty–Simon conjecture / Erdős Problem #74
 | Workstream | Latest established or recorded position |
 |---|---|
 | General maximum-degree candidate | For n>=6, Delta(G)>=(7/12)n implies e(G)<floor(n^2/4); external review and novelty assessment open |
-| Canonical finite frontier | **1,971 exclusions / 3,607 survivors; 977 quantified whole-state closures** — unchanged |
-| Relational candidates | **2,655 recovered candidates remain UNPROMOTED** pending completed independent audit and separate reviewed ledger promotion; audit run **34854911792 SUCCESS**, promotion workflow pending |
+| Canonical finite frontier | **4,626 exclusions / 952 survivors; 3,632 quantified whole-state closures** after reviewed promotion of the fully audited relational family |
+| Relational audit/promotion | **2,655/2,655 audited keys promoted** after run **34854911792 SUCCESS** and reviewed ledger reconciliation: 2,580 N34 + 75 N35 closures; 949 N34 + 3 N35 survivors remain |
 | Source-price restoration | Original source-price replay **34905883642 SUCCESS**; earlier failed transfer run34904353492 remains recorded as failed |
 | Conditioned source pricing | Exact branch scan over six original plus seven fresh profiles; run **34905354792 SUCCESS** for the frozen scan |
 | Row471 rigidity | Conditioned branches `e_L=39,40` are exactly hand/verifier closed; run **34906169745 SUCCESS** including that rigidity check. Row471 remains open on `41,42,43,47` |
@@ -37,8 +37,8 @@ Open, reproducible research on the Murty–Simon conjecture / Erdős Problem #74
 | Documentation guards | Status-sync run34906766824 and reviewer-navigation run34906766838 both SUCCESS on the row108 commit. N30 package run34906766832 FAILED because the condensed root reviewer section omitted explicit frozen manuscript-PDF paths; this commit restores those links. No N30 proof/release bytes were changed |
 | Active continuation | Attack row471 `e_L=41` first with selected-label/destination plus ONE common residual-neighbourhood constraint; in parallel carry exact common-pressure/source-incidence across the five remaining original profiles |
 
-**Checkpoint — 14 September 2026, `relational-ledger-validation-v1`.** Inspected predecessor `13d62aeb7abb1c84acb483610c0667c905709025`. The full 2,655-key audit is now confirmed complete and green, with byte-identical discovery/audit key ledgers and zero unresolved states. This commit installs the hash-gated separate ledger-promotion step and fixes target reconstruction to subtract both N34 and N35 ledgers. **Mathematical status unchanged in this preparatory commit; canonical counts remain 1,971 / 3,607 / 977 until the promotion workflow itself succeeds.**
-<!-- RELATIONAL-FULL-PROMOTION:PENDING -->
+**Checkpoint — 14 September 2026, `relational-ledger-promotion-v1`.** The separate reviewed ledger step has completed after discovery run **34844403328** and independent audit run **34854911792**. Exact source/result/key hashes, complete dual agreement, zero unresolved states, base-ledger non-overlap and final ledger counts were checked before publication. **Canonical finite frontier promoted to 4,626 exclusions / 952 survivors / 3,632 whole-state closures.** Fixed-order candidates, general7/12 candidate, row108/row471 sample results and their verification status are otherwise unchanged. External mathematical review remains OPEN.
+<!-- RELATIONAL-FULL-PROMOTION:PROMOTED -->
 
 **Standing order:** every commit must update the current-status blocks in BOTH this README and [`CURRENT_STATE.md`](CURRENT_STATE.md), in the same atomic commit, including an explicit unchanged-mathematics statement when appropriate. Keep these fixed-order and general summaries near the top. See [`AGENTS.md`](AGENTS.md) and [`CANONICAL_REPOSITORY.md`](CANONICAL_REPOSITORY.md).
 <!-- CURRENT-STATUS:END -->
@@ -61,7 +61,7 @@ For row108, one fixed signed price vector closes24 of the32 block-total tuples s
 
 Do not quietly delete, relabel or retrospectively clean up a failed lemma, non-closing experiment, counterexample or CI event. The454/597 simultaneous-multiblock non-rejection remains a negative predecessor result. Source-price run34904353492 remains failed even though the exact restoration replay later succeeded. N30 run34906766832 remains failed because the predecessor README omitted explicit frozen PDF navigation; this repair does not repaint that run green. Sample exclusions never change the canonical frontier without the separate promotion gate.
 
-The2,655 recovered relational candidates have completed the full two-implementation audit (run34854911792 SUCCESS, zero unresolved, successful aggregate) but still require the separate reviewed ledger step before promotion. This commit installs that hash-gated promotion step; no candidate is promoted by this preparatory commit.
+The 2,655 recovered relational candidates completed full discovery and two-implementation audit, then the separate reviewed ledger step. All 2,655 are now ledger-promoted with pinned hashes and zero unresolved states. This finite closure family remains conditional on the canonical bridge and does not replace external specialist review.
 
 <!-- REVIEW-MATERIALS:START -->
 ## Papers and review materials

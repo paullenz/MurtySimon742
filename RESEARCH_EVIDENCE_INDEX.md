@@ -1,6 +1,6 @@
 # Research evidence index — 14 September 2026
 
-This index distinguishes derivation, finite verification, preservation and external acceptance. It does not promote the 2,655 recovered relational candidates. The canonical frontier remains 1,971 exclusions / 3,607 survivors / 977 whole-state closures. Fixed-order reviewer packages retain their separate status in [the reviewer index](releases/REVIEW_READY_INDEX.md).
+This index distinguishes derivation, finite verification, preservation and external acceptance. The fully audited 2,655-key relational family has now passed the separate reviewed-ledger step and is promoted. The canonical finite frontier is 4,626 exclusions / 952 survivors / 3,632 whole-state closures. Fixed-order reviewer packages retain their separate status in [the reviewer index](releases/REVIEW_READY_INDEX.md).
 
 ## Added continuation: stronger prices and a witnessed relaxation boundary
 
@@ -55,11 +55,13 @@ The [publication audit](project/research/general_n/2026-09-14-evidence-preservat
 
 The committed durable directory includes original713 corpus and scanner,pilot/812 inputs,full conditioned output and nine prior arrays,complete capped/block actual-expected pairs,full historical audit snapshots and both byte-exact historical capped outputs. Readable exploratory sources and all five earlier block-output objects are also committed. Failed archive-transfer attempts and numerical searches remain documented rather than accepted as evidence.
 
-## Relational audit: separate scope
+## Relational audit and reviewed promotion
 
-The combined replay's full257-job snapshot at19:43:10 UTC is a HISTORICAL snapshot:successful plan,128 successful shards and128 queued shards. Do not report it as current audit status. Current reporting must inspect every job page or a newer complete diagnostic. No new live audit count is asserted by this research index.
+Discovery/recovery run `34844403328` completed all 3,607 then-current canonical survivors and identified 2,655 relational candidate closures (2,580 N34, 75 N35) with zero unresolved states. Complete result SHA256: `2c892301854660c8c1f73a13c4949ce2fb7e1e5706f9ecffbbe79f9483e71970`; candidate-key SHA256: `67593252e0bc27766c24c8bf38060c8b0f98384a6f61fc02ac1e25fafb0ecfa2`.
 
-Preserve successful jobs. Retry only one individual confirmed transient infrastructure failure;do not retry queued/running/successful jobs or computational timeouts,alter audit budgets/concurrency,weaken hashes,or duplicate the256-shard audit. Full coverage of2,655 inputs,dual agreement,zero unresolved states,successful aggregate and a separate reviewed ledger step remain mandatory before promotion.
+Independent audit run `34854911792` completed all 256 shards plus the aggregate. Its final aggregate required complete agreement between two independently compiled implementations. The final audited-key TSV is byte-identical to the discovery candidate-key TSV, and the audit reports zero unresolved cases. The separate reviewed-ledger step then confirmed non-overlap with the existing 977/0 N34/N35 ledgers and promoted all 2,655 keys. Canonical accounting is now 4,626 exclusions / 952 survivors / 3,632 whole-state closures, leaving 949 N34 and 3 N35 survivors.
+
+See [`POST_PAIR_RELATIONAL_FULL_PROMOTION_AUDIT.md`](project/research/general_n/2026-09-13-alternative-attacks-v1/POST_PAIR_RELATIONAL_FULL_PROMOTION_AUDIT.md) and the [machine-readable promotion audit](project/research/general_n/2026-09-13-alternative-attacks-v1/POST_PAIR_RELATIONAL_FULL_PROMOTION_AUDIT.json). This is a finite promotion conditional on the canonical bridge; external mathematical review and independent third-party reproduction remain OPEN.
 
 ## Review obligations
 
