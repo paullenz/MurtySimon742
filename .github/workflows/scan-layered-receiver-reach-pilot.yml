@@ -1,0 +1,89 @@
+name: scan layered receiver Hall reach pilot
+
+on:
+  workflow_dispatch:
+  push:
+    paths:
+      - 'project/research/general_n/2026-09-14-type-compressed-orientation-hall-v1/make_layered_receiver_reach_scanner.py'
+      - '.github/workflows/scan-layered-receiver-reach-pilot.yml'
+
+jobs:
+  pilot:
+    runs-on: ubuntu-latest
+    timeout-minutes: 45
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Prepare same deterministic 1/256 pilot shard
+        working-directory: project/research/general_n/2026-09-13-alternative-attacks-v1
+        run: python3 prepare_pair_capacity_frontier.py --mod 256 --rem 16 --output LAYERED_RECEIVER_REACH_PILOT_INPUT.txt
+
+      - name: Generate canonical antichain scanner
+        working-directory: project/research/general_n/2026-09-14-type-compressed-orientation-hall-v1
+        run: python3 make_antichain_stats_scanner.py
+
+      - name: Add coarse-band instrumentation
+        working-directory: project/research/general_n/2026-09-14-type-compressed-orientation-hall-v1
+        run: python3 make_band_reach_scanner.py
+
+      - name: Add compatible-copy instrumentation
+        working-directory: project/research/general_n/2026-09-14-type-compressed-orientation-hall-v1
+        run: python3 make_compatible_copy_band_reach_scanner.py
+
+      - name: Add layered-receiver instrumentation
+        working-directory: project/research/general_n/2026-09-14-type-compressed-orientation-hall-v1
+        run: python3 make_layered_receiver_reach_scanner.py
+
+      - name: Compile scanner
+        working-directory: project/research/general_n/2026-09-14-type-compressed-orientation-hall-v1
+        run: g++ -O3 -std=c++17 -Wall -Wextra -pedantic scan_layered_receiver_reach_stats.cpp -o scan_layered_receiver_reach_stats
+
+      - name: Run pilot
+        run: |
+          project/research/general_n/2026-09-14-type-compressed-orientation-hall-v1/scan_layered_receiver_reach_stats \
+            project/research/general_n/2026-09-13-alternative-attacks-v1/LAYERED_RECEIVER_REACH_PILOT_INPUT.txt \
+            LAYERED_RECEIVER_REACH_PILOT.tsv \
+            2>&1 | tee LAYERED_RECEIVER_REACH_PILOT_REPLAY.txt
+
+      - name: Summarize and assert baseline reproduction
+        run: |
+          python3 - <<'PY'
+          import csv,json
+          rows=list(csv.DictReader(open('LAYERED_RECEIVER_REACH_PILOT.tsv'),delimiter='\t'))
+          target=sum(int(r['targethall_fail']) for r in rows)
+          band=sum(int(r['band_fail']) for r in rows)
+          cc=sum(int(r['ccband_fail']) for r in rows)
+          lf=sum(int(r['layer_fail']) for r in rows)
+          lp=sum(int(r['layer_pass']) for r in rows)
+          if target!=205919 or band!=205918 or cc!=205919:
+              raise SystemExit(f'baseline changed target={target} band={band} cc={cc}')
+          if lf+lp!=target:
+              raise SystemExit(f'layer accounting mismatch {lf}+{lp}!={target}')
+          summary={
+            'schema':'layered-receiver-reach-pilot-v1',
+            'states':len(rows),
+            'profiles_tested':sum(int(r['profiles_tested']) for r in rows),
+            'target_hall_failure_profiles':target,
+            'layered_receiver_detected':lf,
+            'layered_receiver_passed_despite_target_failure':lp,
+            'layered_receiver_detection_fraction':lf/target if target else None,
+            'passing_layer_excess_sum':sum(int(r['layer_excess_sum']) for r in rows),
+            'maximum_passing_layer_excess':max(int(r['layer_max_excess']) for r in rows),
+            'promotion_status':'RECONNAISSANCE_ONLY',
+            'external_review':'OPEN'
+          }
+          open('LAYERED_RECEIVER_REACH_PILOT_SUMMARY.json','w').write(json.dumps(summary,indent=2,sort_keys=True)+'\n')
+          print(json.dumps(summary,indent=2,sort_keys=True))
+          PY
+
+      - name: Upload evidence
+        uses: actions/upload-artifact@v4
+        with:
+          name: layered-receiver-reach-pilot
+          path: |
+            project/research/general_n/2026-09-13-alternative-attacks-v1/LAYERED_RECEIVER_REACH_PILOT_INPUT.txt
+            project/research/general_n/2026-09-13-alternative-attacks-v1/LAYERED_RECEIVER_REACH_PILOT_INPUT_VERIFICATION.json
+            project/research/general_n/2026-09-14-type-compressed-orientation-hall-v1/scan_layered_receiver_reach_stats.cpp
+            LAYERED_RECEIVER_REACH_PILOT.tsv
+            LAYERED_RECEIVER_REACH_PILOT_REPLAY.txt
+            LAYERED_RECEIVER_REACH_PILOT_SUMMARY.json
