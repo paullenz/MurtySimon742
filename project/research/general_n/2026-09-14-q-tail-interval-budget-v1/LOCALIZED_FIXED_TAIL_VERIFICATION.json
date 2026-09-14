@@ -1,0 +1,1 @@
+{"common_integer_weights":[0,0,1,0,0,0,0,0],"counts":{"changed":748,"profiles":812,"uniform_detects":773},"first_threshold":{"1":630,"2":117,"3":65},"maximum_integer_pressure":15,"minimum_integer_pressure":1,"scope":"Existing 812 rows, localized caps, fixed tau=3; no optimizer or new generation","status":"PASS"}

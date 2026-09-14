@@ -1,0 +1,22 @@
+{
+"status":"PASS",
+"scope":"Localized caps reconstructed on OLD exported rows only; NOT a regenerated profile search or whole-state exclusion",
+"source_profile_sha256":"4b183b899127f4f9e05faed0cb23a11c6962c854f077d0e3ad209d09b386fb67",
+"counts":{"caps_changed":43113,"localized_interval_detected":205930,"localized_tail_detected":205930,"old_Hall_passes":12,"old_exported_profiles":205931,"old_pass_now_interval_detected":11,"old_pass_now_sumP_rejected":9,"tau_delta_interval_detected":205930,"tau_three_interval_detected":205930,"uniform_detected":200892},
+"first_interval_tau":{"-1":1,"1":163981,"2":31989,"3":9960},
+"by_state":{
+"11007":{"interval_detected":204,"profiles":204,"tau_delta_detected":204},
+"1626":{"interval_detected":63825,"profiles":63825,"tau_delta_detected":63825},
+"226":{"interval_detected":64232,"profiles":64232,"tau_delta_detected":64232},
+"2439":{"interval_detected":48448,"profiles":48448,"tau_delta_detected":48448},
+"2984":{"interval_detected":1685,"profiles":1685,"tau_delta_detected":1685},
+"4073":{"interval_detected":13871,"profiles":13872,"tau_delta_detected":13871},
+"429":{"interval_detected":96,"profiles":96,"tau_delta_detected":96},
+"5519":{"interval_detected":477,"profiles":477,"tau_delta_detected":477},
+"6085":{"interval_detected":12260,"profiles":12260,"tau_delta_detected":12260},
+"6998":{"interval_detected":562,"profiles":562,"tau_delta_detected":562},
+"7610":{"interval_detected":7,"profiles":7,"tau_delta_detected":7},
+"8179":{"interval_detected":253,"profiles":253,"tau_delta_detected":253},
+"8727":{"interval_detected":10,"profiles":10,"tau_delta_detected":10}},
+"fixed_tau_delta_miss_examples":[{"state":"4073","Esel":7,"q":[0,0,0,0,0,1,2,2,2,2,7,7,7,7,7,7,7,7],"rho":[1,1,1,1,1,3,4,4,4,4,4,4,4,4,4,4,4,4],"s":[2,4,4,4,4,4,4,4,4,4,4,4,4,4,4],"P_local":[3,3,3,3,3,5,6,6,6,6,4,4,4,4,4,4,4,4],"tau_delta":3,"fixed_deficiency_lower":0,"best_interval_deficiency":0,"first_interval_tau":-1}]
+}

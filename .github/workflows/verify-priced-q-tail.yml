@@ -1,0 +1,37 @@
+name: verify priced q-tail certificate
+
+on:
+  workflow_dispatch:
+  push:
+    paths:
+      - 'project/research/general_n/2026-09-14-q-tail-interval-budget-v1/verify_priced_tail.py'
+      - 'project/research/general_n/2026-09-14-q-tail-interval-budget-v1/verify_interval_budget.py'
+      - 'project/research/general_n/2026-09-14-q-tail-interval-budget-v1/PRICED_TAIL_BUDGET.md'
+      - 'project/research/general_n/2026-09-14-q-tail-interval-budget-v1/PRICED_TAIL_VERIFICATION.json'
+      - '.github/workflows/verify-priced-q-tail.yml'
+
+permissions:
+  contents: read
+
+jobs:
+  verify:
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - uses: actions/checkout@v4
+      - name: Preserve frozen expected values before replay
+        working-directory: project/research/general_n/2026-09-14-q-tail-interval-budget-v1
+        run: cp PRICED_TAIL_VERIFICATION.json /tmp/priced-tail-expected.json
+      - name: Independently verify charge, receiver dual and 80 versus 77 certificate
+        working-directory: project/research/general_n/2026-09-14-q-tail-interval-budget-v1
+        run: python3 verify_priced_tail.py > /tmp/priced-tail-actual.json
+      - name: Require every frozen JSON value
+        run: |
+          python3 -m json.tool --sort-keys /tmp/priced-tail-expected.json /tmp/priced-tail-expected.canonical.json
+          python3 -m json.tool --sort-keys /tmp/priced-tail-actual.json /tmp/priced-tail-actual.canonical.json
+          diff -u /tmp/priced-tail-expected.canonical.json /tmp/priced-tail-actual.canonical.json
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: priced-q-tail-verification
+          path: /tmp/priced-tail-*.json
