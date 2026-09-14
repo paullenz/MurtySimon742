@@ -1,0 +1,23 @@
+name: Singleton destination trap
+on:
+  push:
+    paths:
+      - 'project/research/general_n/2026-09-15-singleton-destination-trap-v1/**'
+      - 'project/research/general_n/2026-09-14-block-pressure-v1/REMAINDER_12.json'
+      - '.github/workflows/singleton-destination-trap.yml'
+  pull_request:
+    paths:
+      - 'project/research/general_n/2026-09-15-singleton-destination-trap-v1/**'
+      - 'project/research/general_n/2026-09-14-block-pressure-v1/REMAINDER_12.json'
+      - '.github/workflows/singleton-destination-trap.yml'
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  replay:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v4
+      - name: Exact singleton destination replay
+        run: python3 project/research/general_n/2026-09-15-singleton-destination-trap-v1/run_replay.py

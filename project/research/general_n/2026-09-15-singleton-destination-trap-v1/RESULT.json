@@ -1,0 +1,14 @@
+{
+  "newly_excluded": [347, 471, 586],
+  "original_sample": {"not_rejected": [160, 338], "rejected": 711, "total": 713},
+  "profiles": {
+    "160": {"a": 23, "cardinality_arc_slot": {"compatible_pair_slots": 261, "deficient_demand": 0, "deficient_neighbor_slots": 0, "deficient_source_subset": [], "max_compatible_pair_flow": 81, "rejected": false, "required_out_arcs": 81}, "singleton_trap": {"hall_witness": null, "low_q_destinations": [6, 9, 14, 18, 21], "matching_size": 2, "pair_slots": [[6, 14], [6, 18], [9, 14], [9, 18], [14, 18], [14, 21], [18, 21]], "rejected": false, "required": 2, "trap_sources": [14, 18]}},
+    "338": {"a": 23, "cardinality_arc_slot": {"compatible_pair_slots": 272, "deficient_demand": 0, "deficient_neighbor_slots": 0, "deficient_source_subset": [], "max_compatible_pair_flow": 101, "rejected": false, "required_out_arcs": 101}, "singleton_trap": {"hall_witness": null, "low_q_destinations": [0, 1, 3], "matching_size": 1, "pair_slots": [[0, 3], [1, 3]], "rejected": false, "required": 1, "trap_sources": [3]}},
+    "347": {"a": 23, "cardinality_arc_slot": {"compatible_pair_slots": 307, "deficient_demand": 5, "deficient_neighbor_slots": 3, "deficient_source_subset": [12, 16, 21], "max_compatible_pair_flow": 127, "rejected": true, "required_out_arcs": 129}, "singleton_trap": {"hall_witness": {"deficit": 1, "neighbor_pair_slots": [], "sources": [16]}, "low_q_destinations": [16], "matching_size": 0, "pair_slots": [], "rejected": true, "required": 1, "trap_sources": [16]}},
+    "471": {"a": 21, "cardinality_arc_slot": {"compatible_pair_slots": 214, "deficient_demand": 2, "deficient_neighbor_slots": 1, "deficient_source_subset": [3, 4], "max_compatible_pair_flow": 95, "rejected": true, "required_out_arcs": 96}, "singleton_trap": {"hall_witness": {"deficit": 1, "neighbor_pair_slots": [[3, 4]], "sources": [3, 4]}, "low_q_destinations": [3, 4], "matching_size": 1, "pair_slots": [[3, 4]], "rejected": true, "required": 2, "trap_sources": [3, 4]}},
+    "586": {"a": 23, "cardinality_arc_slot": {"compatible_pair_slots": 274, "deficient_demand": 1, "deficient_neighbor_slots": 0, "deficient_source_subset": [8], "max_compatible_pair_flow": 108, "rejected": true, "required_out_arcs": 109}, "singleton_trap": {"hall_witness": {"deficit": 1, "neighbor_pair_slots": [], "sources": [8]}, "low_q_destinations": [8], "matching_size": 0, "pair_slots": [], "rejected": true, "required": 1, "trap_sources": [8]}}
+  },
+  "remaining": [160, 338],
+  "schema": "singleton-destination-and-cardinality-arc-slot-original-v1",
+  "scope": "necessary selected-label/destination cardinality coupling plus simple orientation; original synthetic namespace only"
+}
