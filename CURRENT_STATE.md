@@ -9,9 +9,9 @@
 - identity guard: [`CANONICAL_REPOSITORY.md`](CANONICAL_REPOSITORY.md)
 - legacy names such as `MurtySimon25` and historical `N25_*` filenames are **not** the current repository name.
 
-**State synchronized:** 14 September 2026 through parent commit `0e27a1ae7aaf327a9dfa077cb033089af06fb703` (`Freeze compatible-copy band reach pilot`), including the completed long-budget post-pair relational recovery, compatible-copy Hall exactness, canonical Hall marginal structure and layered receiver-capacity audit.
+**State synchronized:** 14 September 2026 through parent commit `eb10ae4b05c80ed6b3d919c3017a414e02344456` (`Freeze layered receiver reach pilot`), including the completed long-budget post-pair relational recovery, compatible-copy Hall exactness, canonical Hall marginal structure, layered receiver-capacity audit and the frozen layered receiver reach pilot.
 
-The previous, more chronological version of this file remains preserved in Git history. This file is intentionally kept tighter so a restart sees the actual live proof boundary first.
+The previous, more chronological versions of this file remain preserved in Git history. This file is intentionally kept tighter so a restart sees the actual live proof boundary first.
 
 ---
 
@@ -145,11 +145,11 @@ The coarse relaxation is intentionally lossy. In the frozen deterministic 15-sta
 
 The unique false negative was N34 state `226`.
 
-### 4.3 Compatible-copy band theorem — now formal and audited
+### 4.3 Compatible-copy band theorem — formal and audited
 
 The state-226 diagnostic showed the coarse band model invented five source-target incidences by granting all members of a band the generator's compatibility. The correction is [`COMPATIBLE_COPY_BAND_HALL.md`](project/research/general_n/2026-09-14-type-compressed-orientation-hall-v1/COMPATIBLE_COPY_BAND_HALL.md): a band-to-target edge counts only source copies in that band which are individually compatible with that target.
 
-The compatible-copy aggregation lemma has passed a separately written dependency-free verifier:
+The compatible-copy aggregation lemma passed a separately written dependency-free verifier:
 
 ```text
 workflow run:                          34844598113
@@ -166,7 +166,7 @@ Frozen audit: [`COMPATIBLE_COPY_BAND_HALL_AUDIT.md`](project/research/general_n/
 
 ### 4.4 Canonical-witness exactness — major current theorem
 
-A stronger consequence is now internally audited in [`CANONICAL_WITNESS_COMPATIBLE_COPY_EXACTNESS.md`](project/research/general_n/2026-09-14-type-compressed-orientation-hall-v1/CANONICAL_WITNESS_COMPATIBLE_COPY_EXACTNESS.md).
+A stronger consequence is internally audited in [`CANONICAL_WITNESS_COMPATIBLE_COPY_EXACTNESS.md`](project/research/general_n/2026-09-14-type-compressed-orientation-hall-v1/CANONICAL_WITNESS_COMPATIBLE_COPY_EXACTNESS.md).
 
 For the canonical maximal Hall witness `M+`, take **all** of its staircase bands. For every target type, summing compatible-copy counts over those bands gives exactly the number of selected compatible source copies used in the original Hall cut, with the same diagonal deletion. Therefore the all-bands compatible-copy Hall margin is **exactly** `F(M+)`.
 
@@ -179,12 +179,12 @@ Consequences inside the target-flow relaxation:
 Independent finite audit:
 
 ```text
-workflow run:                  34847381427
-result:                        success
-profiles checked:              2,486
-infeasible profiles:           1,518
-whole-staircase identities:    2,486
-feasibility-equivalence checks:2,486
+workflow run:                   34847381427
+result:                         success
+profiles checked:               2,486
+infeasible profiles:            1,518
+whole-staircase identities:     2,486
+feasibility-equivalence checks: 2,486
 ```
 
 Artifact digest:
@@ -193,7 +193,7 @@ Artifact digest:
 sha256:f20e97ec0021e788e0903a36e8ae67235e747dc3c7581b693fd6af76de7504d3
 ```
 
-### 4.5 Fresh end-to-end Murty pilot
+### 4.5 Fresh end-to-end compatible-copy Murty pilot
 
 The compatible-copy instrumentation was rerun from scratch on the frozen deterministic 15-state pilot:
 
@@ -214,7 +214,7 @@ Artifact digest:
 sha256:ad2b600051843e1f482b9a7a0f89fe2c64d2469911f5e18c2db6115c0c406b2d
 ```
 
-This pilot is now direct replay evidence for the 205,919/205,919 figure. The canonical-witness exactness theorem explains structurally why that result should occur for canonical target-Hall failures.
+This pilot is direct replay evidence for the 205,919/205,919 figure. The canonical-witness exactness theorem explains structurally why that result should occur for canonical target-Hall failures.
 
 ### 4.6 Canonical Hall marginal/boundary theorem
 
@@ -243,7 +243,7 @@ minimum exterior gap:  1
 
 This is now a preferred route for constraining the staircase boundary itself.
 
-### 4.7 Layered receiver-capacity projection
+### 4.7 Layered receiver-capacity projection — verified, strong but not exact
 
 [`LAYERED_RECEIVER_CAPACITY.md`](project/research/general_n/2026-09-14-type-compressed-orientation-hall-v1/LAYERED_RECEIVER_CAPACITY.md) rewrites
 
@@ -263,9 +263,26 @@ Murty-like trials: 10,000
 strict losses seen: 4,675
 ```
 
-The fact that strict correlation loss occurs often is important: the rearrangement projection is genuinely weaker than exact Hall, so its usefulness must be measured empirically rather than assumed.
+The dedicated frozen reach pilot is [`LAYERED_RECEIVER_REACH_PILOT.md`](project/research/general_n/2026-09-14-type-compressed-orientation-hall-v1/LAYERED_RECEIVER_REACH_PILOT.md):
 
-A dedicated layered-receiver reach pilot has been launched from the frozen Hall pilot machinery. Treat its output as reconnaissance until frozen and reviewed.
+```text
+workflow run:                       34848635869
+result:                             success
+profiles tested:                    201,493,148
+target-Hall failures:                   205,919
+layered receiver detected:              205,107
+layered receiver false negatives:           812
+detection fraction:                  99.605670%
+maximum observed passing layer excess:       5
+```
+
+Artifact digest:
+
+```text
+sha256:6221ecb4a20685a1f3c02e3a3bd8ce8d18c729572a504d8a981a2c9ffcd179c0
+```
+
+This is an important narrowing result. The one-dimensional receiver-layer distributions retain almost all exact Hall obstruction, but the lost correlation between capacity level and compatible-source-count level matters for 812 pilot profiles. The next attack should target that specific correlation loss rather than revert to arbitrary Hall subsets.
 
 ---
 
@@ -277,6 +294,7 @@ The following shortcuts are false and must remain visible:
 - one principal sharp up-set is not sufficient in general;
 - no universal two-generator bound: Murty pilot failures reach eight canonical generators, with four modal;
 - interval-neighborhood bands do **not** imply it suffices to test contiguous sets of bands; a preserved three-band counterexample has a failing disconnected cut `{1,3}` while every contiguous interval passes;
+- the receiver-layer rearrangement is not exact: the frozen pilot has 812 false negatives;
 - a scan survival means only survival of the tested relaxation, never graph realizability.
 
 Failures, bugs, rejected lemmas, audit challenges and counterexamples are research assets and must continue to be preserved rather than overwritten.
@@ -285,30 +303,28 @@ Failures, bugs, rejected lemmas, audit challenges and counterexamples are resear
 
 ## 6. Current mathematical priority
 
-The strategic question has shifted.
+The canonical Hall obstruction is now represented exactly by a **canonical moving staircase**, and its compatible-copy all-bands cut reproduces the exact canonical Hall deficiency. The principal goal is therefore to derive a Murty-specific **parametric inequality** that forces the canonical whole-staircase Hall margin to be nonnegative under the bridge constraints.
 
-The canonical Hall obstruction is now represented exactly by a **canonical moving staircase**, and its compatible-copy all-bands cut reproduces the exact canonical Hall deficiency. The main goal is therefore no longer to invent increasingly complicated finite Hall checks. It is to derive a Murty-specific **parametric inequality** that forces the canonical whole-staircase Hall margin to be nonnegative under the bridge constraints.
+The layered receiver experiment narrows the missing ingredient further: pure one-dimensional capacity/count layers explain 205,107 of 205,919 pilot Hall failures, leaving **812 correlation-sensitive failures**.
 
-The most promising ingredients to combine are:
+The preferred next route is:
 
-1. canonical staircase monotonicity in `(c,q,P)`;
-2. exact compatible-copy rectangle counts;
-3. canonical boundary marginal inequalities;
-4. layered receiver-capacity counts;
-5. Murty residual budgets, source cap `q+rho<=a`, incoming caps and total-excess bounds;
-6. threshold/residual h-index constraints from the canonical bridge.
+1. stratify those 812 false negatives by rearrangement slack, canonical generator count, receiver-capacity levels, compatible-count levels, `q/c/rho`, total excess `E` and state;
+2. identify the smallest target-correlation statistic that distinguishes the 812 from true Hall-feasible profiles;
+3. prove a Murty-specific bound on that statistic using residual budgets, source cap `q+rho<=a`, incoming caps, total-excess bounds and canonical boundary marginals;
+4. fold that bound into the whole-staircase Hall inequality.
 
-The layered-receiver reach pilot should be used diagnostically: if the one-dimensional projection retains most canonical Hall failures, attack the resulting layer inequality directly; if it loses too much, identify exactly which target correlation statistic must be restored.
+The aim is a symbolic all-order inequality, not another fixed-order-only screen.
 
 ---
 
 ## 7. Immediate operational priorities
 
 1. **Finish the fresh cross-implementation audit of the recovered 3,607-state relational scan.** Only after exact agreement may candidate exclusions be promoted to the canonical ledger.
-2. **Freeze and assess the layered-receiver reach pilot.** Record both successes and misses; do not promote it merely because it is strong empirically.
-3. **Develop the all-order whole-staircase inequality.** Prefer symbolic consequences of the bridge over another fixed-order-only scalar screen.
+2. **Diagnose the 812 layered-receiver false negatives.** Preserve the full classification and any failed proposed correlation summaries.
+3. **Develop the all-order whole-staircase inequality** from the canonical boundary and receiver-correlation structure.
 4. **Red-team each new universal lemma independently.** Finite green CI supports arithmetic and implementation consistency but is not external mathematical acceptance.
-5. **Keep reviewer navigation synchronized** whenever theorem-level status changes.
+5. **Keep reviewer navigation and this handoff synchronized** whenever theorem-level status changes.
 
 ---
 
@@ -323,6 +339,7 @@ It must be synchronized whenever any of the following occurs:
 - a theorem or corollary is promoted into the internally audited chain;
 - a proposed theorem is falsified or materially weakened;
 - an audit gate completes or fails;
+- a material pilot changes the principal research direction;
 - a new principal attack becomes the research priority;
 - work pauses after a material research block.
 
