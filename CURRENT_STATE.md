@@ -9,13 +9,13 @@
 - identity guard: [`CANONICAL_REPOSITORY.md`](CANONICAL_REPOSITORY.md)
 - legacy names such as `MurtySimon25` and historical `N25_*` filenames are not the current repository name.
 
-**State synchronized:** 14 September 2026 through parent commit `90417a9c1d8788689ff3a875e11f1e7938a66a79` (`Freeze canonical Hall slack-expansion CI audit`).
+**State synchronized:** 14 September 2026 through commit `c0bacae1252f6a80821e9c3aab4ab1a0a4526630` (`Relaunch final relational candidate audit after output fix`), including the completed 812 receiver-layer diagnostic, coupled residual-slack theory, positive-slack incidence pressure, and the internally audited exterior residual-upset reduction.
 
-Previous longer versions remain preserved in Git history. This file is intentionally concise and should be updated whenever theorem status, frontier status, audit status or principal research priority changes.
+Previous versions remain preserved in Git history. This file is intentionally concise and must be updated whenever theorem status, frontier status, audit status or principal research priority changes.
 
 ---
 
-## 1. Canonical promoted frontier — unchanged pending audit
+## 1. Canonical promoted frontier — unchanged
 
 ```text
 quantified whole-state closures: 977
@@ -27,33 +27,52 @@ canonical survivors:            3,607
 
 The closure ledger remains protected by `tools/check_n34_whole_state_ledger.py`. Of the 977 closures, 943 N34-derived states come from the cross-implemented potential-pair family; earlier closures remain separately preserved.
 
-**Do not change the 3,607 headline from discovery/recovery output alone.** Promotion requires the dedicated cross-implementation audit gate and then a separate ledger-promotion step.
+**Do not change the 3,607 headline from discovery/recovery output alone.** Promotion requires the dedicated cross-implementation audit and then a separate ledger-promotion step.
 
-### Relational full-frontier status
+### Relational full-frontier audit status
 
-The layer/state-safe full scan of the 3,607 canonical survivors completed successfully:
+The full layer/state-safe discovery scan of the 3,607 canonical survivors completed successfully:
 
 ```text
 workflow run: 34820187136
-head:         3255c0641b00ae97c426d1e089a6b6c92c8300fc
 status:       completed / success
 ```
 
-The long-budget retry/recovery of incomplete or unresolved states also completed successfully:
+The long-budget recovery of unresolved/unattempted discovery states also completed successfully:
 
 ```text
 workflow run: 34844403328
 status:       completed / success
 ```
 
+The recovered aggregate contains **2,655 candidate relational exclusions**. These are **not promoted**. The recovered results are hash-pinned at
+
+```text
+sha256:2c892301854660c8c1f73a13c4949ce2fb7e1e5706f9ecffbbe79f9483e71970
+```
+
+The first final-candidate cross-audit launch (`34849859218`) failed before mathematical auditing because a pretty-printed JSON object was accidentally appended to `$GITHUB_OUTPUT`; GitHub Actions rejected the `{` as an invalid output line. Before that formatting failure the workflow had successfully downloaded the recovered aggregate and passed the source-completeness, source-hash, 2,655-candidate-count and candidate-input-coverage checks. This failure is plumbing, not evidence of mathematical disagreement.
+
+The output-channel bug was repaired and the hash-pinned audit has now been explicitly relaunched:
+
+```text
+commit:       c0bacae1252f6a80821e9c3aab4ab1a0a4526630
+workflow run: 34854911792
+status at sync: queued
+candidate set: 2,655
+shards:        256
+```
+
+Each shard compiles and runs two independently structured implementations, `scan_post_pair_relational.cpp` and `scan_post_pair_relational_types.cpp`, and promotion is blocked unless all 2,655 states receive exact cross-implementation agreement with zero unresolved states.
+
 Required chain:
 
 ```text
-checkpointed discovery                     COMPLETE
- -> layer-safe aggregate                   COMPLETE for discovery
- -> long-budget recovery                   COMPLETE
- -> fresh cross-implementation audit       OPEN
- -> separately gated ledger promotion      OPEN
+checkpointed discovery                COMPLETE
+ -> layer-safe aggregate              COMPLETE
+ -> long-budget recovery              COMPLETE
+ -> final 2,655-state cross-audit     QUEUED/RUNNING; NOT YET PASS
+ -> separate ledger promotion         OPEN
 ```
 
 N34 and N35 provenance must remain separate throughout.
@@ -64,24 +83,24 @@ N34 and N35 provenance must remain separate throughout.
 
 Preserved candidate proofs remain:
 
-- `n=25`: `e(G)<=156`, equality `K(12,13)`; reviewer-v2; external specialist review open.
-- `n=27`: `e(G)<=182`, equality `K(13,14)`; reviewer-v2; external review open.
-- `n=28`: `e(G)<=196`, equality `K(14,14)`; reviewer-v2 plus analytic hardening; external review open.
-- `n=29`: `e(G)<=210`, equality `K(14,15)`; reviewer-v4; difficult `Delta=16` branch hand-closed; external review open.
-- `n=30`: `e(G)<=225`, equality `K(15,15)`; reviewer-v3; external review open.
-- `n=31`: `e(G)<=240`, equality `K(15,16)`; source-first reviewer-v1; external review open.
-- `n=32`: `e(G)<=256`, equality `K(16,16)`; source-first reviewer-v1; external review open.
-- `n=33`: `e(G)<=272`, equality `K(16,17)`; source-first reviewer-v1; external review open.
-- `n=34`: `e(G)<=289`, equality `K(17,17)`; reviewer-v2; external review open.
-- `n=35`: `e(G)<=306`, equality `K(17,18)`; reviewer-v1; external review open.
+- `n=25`: `e(G)<=156`, equality `K(12,13)`; external specialist review open.
+- `n=27`: `e(G)<=182`, equality `K(13,14)`; external review open.
+- `n=28`: `e(G)<=196`, equality `K(14,14)`; external review open.
+- `n=29`: `e(G)<=210`, equality `K(14,15)`; difficult `Delta=16` branch hand-closed; external review open.
+- `n=30`: `e(G)<=225`, equality `K(15,15)`; external review open.
+- `n=31`: `e(G)<=240`, equality `K(15,16)`; external review open.
+- `n=32`: `e(G)<=256`, equality `K(16,16)`; external review open.
+- `n=33`: `e(G)<=272`, equality `K(16,17)`; external review open.
+- `n=34`: `e(G)<=289`, equality `K(17,17)`; external review open.
+- `n=35`: `e(G)<=306`, equality `K(17,18)`; external review open.
 
 These fixed-order candidate proofs are separate from the 3,607-state general-theory frontier.
 
 ---
 
-## 3. Canonical general bridge
+## 3. Canonical graph-to-constraint bridge
 
-Canonical graph-to-constraint framework:
+Canonical framework:
 
 `project/research/general_n/2026-09-11-canonical-bridge-v1/CANONICAL_BRIDGE.md`
 
@@ -93,252 +112,274 @@ b = Delta,
 t = e(G)-b(a+1).
 ```
 
-The bridge supplies the selected/residual ledger, demand inequalities, forcing, endpoint load, residual activity for positive surplus, charging, threshold capacity, isolated-C exclusion and residual h-index consequences. Downstream Hall and finite arguments remain conditional on this bridge.
+The bridge supplies the selected/residual ledger, demand inequalities, selected-edge forcing, endpoint load, residual activity for positive surplus, charging, threshold capacity, isolated-C exclusion and residual h-index consequences. Downstream Hall and finite arguments remain conditional on this bridge.
 
 Highest-value external red-team targets remain the quasi-edge selection/injection and forcing portions, especially Sections 2–3, 6 and 8–12. External mathematical acceptance remains open.
 
 ---
 
-## 4. Hall/orientation structural chain — internally audited position
+## 4. Primary canonical Hall staircase — internally audited chain
 
 Current package:
 
 `project/research/general_n/2026-09-14-type-compressed-orientation-hall-v1/`
 
-### 4.1 Exact type/cut structure
-
 Internally audited results include:
 
 1. complete `(q,c,P)` type classes suffice for a minimum target-Hall cut;
-2. the labelled target-flow relaxation is represented exactly by the quotient type network;
+2. labelled target flow is represented exactly by the quotient type network;
 3. the Hall margin is submodular;
 4. sharp-hardness dominance constrains minimum witnesses;
 5. minimum-margin witnesses form a lattice;
-6. their union `M+` is the unique maximal minimizer and is a sharp-hardness up-set;
+6. their union `M+` is the unique maximal minimizer and a sharp-hardness up-set;
 7. `M+` has a unique minimal-generator antichain;
-8. ordered by cross degree, those generators form a moving staircase with strictly increasing `c`, weakly increasing `q`, and increasing `P` on equal-`q` plateaux.
+8. ordered by cross degree, those generators form a moving staircase with strictly increasing `c`, weakly increasing `q`, and increasing `P` on equal-`q` plateaux;
+9. the compatible-copy all-bands staircase cut reproduces the exact Hall margin of `M+`.
 
-In the Murty source universe `c=q+rho<=a`, so there is at most one generator breakpoint per integer cross-degree level and `h<=a+1`.
+In the Murty source universe `c=q+rho<=a`, so there is at most one primary staircase generator breakpoint per integer cross-degree level and `h<=a+1`.
 
-### 4.2 Compatible-copy staircase representation
+### Exact compatible-copy representation
 
-The coarse staircase-band relaxation detected `205,918/205,919` exact target-Hall failures in the frozen 15-state pilot. Its unique false negative was state 226.
+The coarse band relaxation detected `205,918/205,919` target-Hall failures in the frozen 15-state pilot. The unique miss, state 226, exposed the compatible-copy correction. The compatible-copy theorem passed independent finite verification, and the canonical all-bands exactness theorem then showed that for `M+` this representation is exact, not merely near-exact.
 
-The corrected compatible-copy band theorem counts only source copies actually compatible with each target. Its independent verifier is green:
-
-```text
-workflow run:                        34844598113
-profiles checked:                    2,715
-sharp up-sets checked:              43,988
-labelled-pair capacity checks:     636,193
-state-226 refined flow / demand:     38 / 39
-```
-
-### 4.3 Canonical-witness exactness
-
-For the canonical maximal Hall witness `M+`, take **all** staircase bands. Summing compatible-copy counts across all bands gives exactly the original selected compatible-source multiplicity at every target, including diagonal deletion. Hence the all-bands compatible-copy Hall margin is exactly `F(M+)`.
-
-Independent audit:
+Fresh pilot replay:
 
 ```text
-workflow run:                   34847381427
-result:                         success
-profiles checked:               2,486
-infeasible profiles:            1,518
-whole-staircase identities:     2,486
-feasibility-equivalence checks: 2,486
+profiles tested:          201,493,148
+target-Hall failures:         205,919
+compatible-copy detects:      205,919
+compatible-copy misses:             0
 ```
-
-Fresh Murty pilot replay:
-
-```text
-workflow run:        34846952940
-profiles tested:     201,493,148
-target-Hall fails:       205,919
-compatible-copy detects: 205,919
-compatible-copy misses:        0
-```
-
-Thus canonical target-Hall failure is now represented exactly by a canonical moving staircase and its whole-staircase compatible-copy cut.
-
-### 4.4 Canonical boundary marginals
-
-For `M+`:
-
-- every exterior type has strictly positive integer addition marginal;
-- adding exterior type `tau` gains at least `n_tau q_tau+1` target-capacity units;
-- every exterior source copy has directed-compatible degree at least `q_tau+1`;
-- removing a selected type loses at most its removed demand;
-- types in the unique minimal minimizer `M-` obey the corresponding strict removal inequality.
-
-Audit:
-
-```text
-workflow run:          34848012710
-profiles:              2,486
-exterior types:        3,142
-interior types:        5,585
-minimum exterior gap:      1
-result:                success
-```
-
-### 4.5 Strict exterior slack expansion — latest audited theorem
-
-`CANONICAL_HALL_SLACK_EXPANSION.md` strengthens the one-type marginal theorem to **every nonempty set of exterior complete types**.
-
-For the residual receiver slack left by `M+`,
-
-```text
-s_sigma = (P_sigma-y_sigma(M+))_+,
-```
-
-and any nonempty exterior type set `T`,
-
-```text
-sum_sigma n_sigma min(s_sigma,K_T(sigma)) >= D(T)+1.
-```
-
-Equivalently, the entire exterior of a deficient canonical staircase must itself form a strictly expanding residual Hall system in the unused receiver slots left by `M+`.
-
-Whole-exterior consequence:
-
-```text
-sum_sigma n_sigma s_sigma >= D(O)+1
-```
-
-whenever the exterior `O` is nonempty.
-
-Independent audit:
-
-```text
-workflow run:          34849028879
-result:                success
-profiles checked:      2,086
-infeasible profiles:   1,193
-exterior subsets:     11,828
-interior subsets:     16,121
-M- subsets:            6,125
-minimum exterior gap:      1
-```
-
-The `+1` is sharp on the audit suite.
-
-### 4.6 Layered receiver-capacity projection
-
-The exact receiver term
-
-```text
-sum_w min(P_w,m_w)
-```
-
-can be written as overlap of receiver-capacity layers and compatible-source-count layers. Forgetting only the target-by-target correlation gives a one-dimensional rearrangement upper bound.
-
-The theorem verifier is green:
-
-```text
-workflow run:       34848254327
-arbitrary trials:   5,000
-Murty-like trials: 10,000
-strict losses:      4,675
-result:             success
-```
-
-Frozen Murty pilot:
-
-```text
-workflow run:                        34848635869
-profiles tested:                     201,493,148
-target-Hall failures:                    205,919
-layered receiver detected:               205,107
-layered receiver false negatives:            812
-detection fraction:                   99.605670%
-maximum passing layer excess:                 5
-```
-
-So pure one-dimensional receiver-layer distributions explain almost all canonical Hall failures, but 812 pilot profiles genuinely require some target-level correlation information.
 
 ---
 
-## 5. Preserved negative results / routes not to repeat
+## 5. Exterior residual-slack system — second staircase
+
+For primary canonical witness `M+`, let
+
+```text
+y_w = number of M+-sources directed-compatible with target w,
+s_w = (P_w-y_w)_+.
+```
+
+The strict exterior slack-expansion theorem says that every nonempty exterior source set `T` must satisfy
+
+```text
+sum_w min(s_w,K_T(w)) >= D(T)+1.
+```
+
+Thus a hypothetical deficient primary staircase is accompanied by a **strictly expanding residual receiver system** outside it.
+
+### Exterior sharp-upset reduction — internally audited
+
+The residual system no longer requires arbitrary exterior-subset search. Under the residual-cap sharp order
+
+```text
+x >=_s y
+iff c_x<=c_y
+    and [q_x>q_y or (q_x=q_y and s_x>=s_y)],
+```
+
+if any nonempty exterior set has residual margin `<=0`, then some nonempty residual sharp up-set does. The finite audit is green:
+
+```text
+workflow run:                           34851263359
+canonical profiles checked:                  2,314
+profiles with nonempty exterior:             1,263
+canonical exterior subsets checked:         32,245
+minimum canonical exterior margin:               1
+residual violation profiles checked:         1,787
+random trials:                               1,600
+result:                                    success
+```
+
+This gives the current structural picture:
+
+```text
+primary P-staircase M+        must be deficient in a counterexample,
+exterior residual-s staircase must remain strictly expanding.
+```
+
+The general-theory target is to prove these two staircase requirements cannot coexist under Murty residual/source-cap budgets.
+
+---
+
+## 6. 812 receiver-layer exceptions — completed diagnostic
+
+The one-dimensional receiver-layer rearrangement detects `205,107/205,919` exact target-Hall failures, leaving 812 correlation-sensitive failures. The detailed diagnostic has now completed successfully on the same deterministic 15-state sample.
+
+### Concentration
+
+All **812** exceptions occur in only **8** sample states:
+
+```text
+state 1626:  61
+state 2439:  90
+state 2984:   5
+state 5519: 249
+state 6085:  14
+state 7610: 262
+state 8179: 116
+state  429:  15
+```
+
+### Canonical generator count
+
+```text
+2 generators: 140
+3 generators: 499
+4 generators:  98
+5 generators:  75
+1 or >=6:       0
+```
+
+So the correlation-sensitive cases are not high-complexity antichains; 3 generators dominate and the maximum is 5.
+
+### Exact Hall deficiency
+
+```text
+deficit 1: 687
+deficit 2: 116
+deficit 3:   9
+deficit >=4: 0
+```
+
+The maximum exact deficiency is only 3.
+
+### Rearrangement excess
+
+```text
+excess 0: 537
+excess 1: 133
+excess 2:  94
+excess 3:  40
+excess 4:   5
+excess 5:   3
+```
+
+The lost target-correlation gap is at most 7. There are only **169 distinct q-profiles** among the 812 exceptions.
+
+This is a strong narrowing result: the missing correlation is bounded and low-dimensional rather than an arbitrary Hall phenomenon.
+
+---
+
+## 7. New Murty-specific correlation inequalities
+
+The 812 diagnostic has already produced useful symbolic structure.
+
+### Coupled primary-incoming / residual-slack budget
+
+For slack layer
+
+```text
+S_j={w:s_w>=j},
+sigma_j=|S_j|,
+Y_j=sum_{w in S_j} y_w,
+```
+
+positive-surplus residual activity and the Murty target cap imply
+
+```text
+sum_{w in S_j} max(0,y_w+a-b+j) <= r-b.      (7.1)
+```
+
+When `a-b+j>=0`, this becomes
+
+```text
+Y_j+(a-b+j)sigma_j <= r-b.                   (7.2)
+```
+
+Near balance this is especially sharp:
+
+```text
+b=a+1:  Y_1 <= r-b,
+         Y_j+(j-1)sigma_j <= r-b  for j>=2;
+
+b=a:    Y_j+j sigma_j <= r-b.
+```
+
+Interpretation: a target cannot both receive many primary staircase incidences and retain much residual slack without consuming residual degree budget.
+
+### Positive-slack incidence pressure
+
+Let `Z={w:s_w>=1}` and `O=B\M+`. Labelled singleton exterior expansion gives
+
+```text
+D(O)+|O| <= e_D(O,Z),
+```
+
+and hence
+
+```text
+D(O)+|O|+Y_1 <= sum_{w in Z} d_D^-(w).        (7.3)
+```
+
+Using the exact directed compatibility rectangle
+
+```text
+q_u<=c_w+1,
+c_u>=q_w,
+```
+
+the incoming term has an exact two-dimensional count. Therefore the same positive-slack targets must simultaneously supply exterior incidence capacity, absorb primary incoming multiplicity, and fit inside the residual-excess budget (7.1).
+
+This is currently the cheapest promising route to a symbolic contradiction.
+
+---
+
+## 8. Preserved negative results / routes not to repeat
 
 - no universal one-dimensional Ferrers ordering of individual sources;
 - one principal sharp up-set is not sufficient in general;
-- no universal two-generator bound: Murty pilot failures reach eight canonical generators, with four modal;
+- no universal two-generator bound: primary failures reach eight generators in the broader pilot;
 - interval-neighborhood bands do not make contiguous band cuts sufficient;
 - receiver-layer rearrangement is not exact: 812 frozen-pilot false negatives remain;
+- the whole-exterior scalar slack total alone is too coarse/redundant; the useful information is layered and correlation-sensitive;
 - survival of a relaxation never implies graph realizability.
 
 Failures, rejected lemmas, bugs, counterexamples and audit challenges must remain preserved.
 
 ---
 
-## 6. Current mathematical priority
+## 9. Current mathematical priority
 
-The main target is now a **Murty-specific all-order inequality ruling out a deficient canonical staircase**.
+The research priority has shifted from searching arbitrary Hall cuts to proving a **two-staircase incompatibility theorem**.
 
-The structural picture is:
+Current route:
 
 ```text
 hypothetical counterexample
- -> canonical deficient Hall staircase M+
- -> exact whole-staircase compatible-copy deficit
- -> strict residual Hall expansion on every exterior set
- -> Murty residual/incoming/source-cap budgets
+ -> deficient canonical primary P-staircase M+
+ -> exact compatible-copy whole-staircase deficit
+ -> residual slack s_w left by that primary staircase
+ -> strictly expanding exterior residual-s staircase
+ -> coupled residual budget + incidence-pressure inequalities
+ -> contradiction sought from Murty bridge constraints.
 ```
 
-The strongest immediate opportunity is to force a contradiction between the **deficient interior staircase** and the **strictly expanding exterior residual-slot system**.
+Immediate analytic tasks:
 
-In parallel, the 812 layered-receiver false negatives identify exactly where one-dimensional rearrangement loses too much correlation.
+1. apply (7.1)–(7.3) explicitly to the 812 diagnostic profiles and measure how many are already impossible;
+2. stratify any residue by the exact two-dimensional compatibility rectangle, not by arbitrary Hall subsets;
+3. derive the smallest additional inequality required for the residual-s staircase;
+4. generalize that inequality in `a,b,r,t` rather than fitting fixed N;
+5. independently red-team every universal implication before promoting it into the audited chain.
 
-Preferred mathematical attack:
-
-1. classify the 812 false negatives by state, deficit, rearrangement slack, generator count, receiver-capacity layers, compatible-count layers, `q,c,rho`, total excess `E` and exterior demand/slack;
-2. test whether strict exterior slack expansion eliminates or sharply stratifies those 812 when expressed only in layer statistics;
-3. identify the smallest correlation statistic still needed after exterior expansion;
-4. prove a Murty-specific bound on that statistic from `q+rho<=a`, residual budgets, incoming caps, total-excess caps and the bridge;
-5. substitute that bound into the exact whole-staircase Hall inequality.
-
-The aim is a symbolic all-order contradiction, not another fixed-order-only screen.
+The desired endpoint is an all-order hand/structural inequality showing that the deficient primary staircase and required exterior residual staircase cannot coexist.
 
 ---
 
-## 7. Immediate operational priorities
+## 10. Standing synchronization / trust boundary
 
-1. **Build and run the fresh cross-implementation audit of the recovered 3,607-state relational scan.** This is the only route to safely reducing the promoted frontier from 3,607.
-2. **Classify the 812 layered-receiver false negatives**, preserving the complete diagnostic table and all failed proposed summaries.
-3. **Exploit strict exterior slack expansion** against the Murty receiver/residual budgets; start with the whole-exterior inequality, then sharpen to selected exterior subsets if needed.
-4. **Develop the all-order whole-staircase inequality** by restoring only the minimal target-correlation statistic needed beyond the layered receiver bound.
-5. **Red-team each universal lemma independently** and keep external-review status separate from internal finite verification.
+`CURRENT_STATE.md` is the mandatory restart surface. Synchronize it whenever a frontier count changes, an audit completes/fails, a theorem enters/leaves the audited chain, a material pilot changes direction, or work pauses after a material block.
 
-Operationally, priorities 1 and 2 can run independently; priority 3 is the main hand-proof/general-theory line.
+Every sync must distinguish:
 
----
+- discovery/reconnaissance;
+- internal proof derivation;
+- finite verification;
+- independently structured implementation audit;
+- external mathematical review;
+- genuinely independent third-party computational reproduction.
 
-## 8. Standing synchronization order
-
-`CURRENT_STATE.md` is the mandatory restart surface.
-
-Synchronize it whenever:
-
-- a canonical frontier/ledger count changes;
-- discovery or recovery completes;
-- a theorem/corollary enters or leaves the internally audited chain;
-- an audit gate completes or fails;
-- a material pilot changes research direction;
-- the principal attack changes;
-- work pauses after a material research block.
-
-Every sync must distinguish discovery, internal finite verification, same-assistant audit, independent implementation, external mathematical review and external reproduction.
-
-Before restart: confirm `CANONICAL_REPOSITORY.md`, read this file, inspect commits newer than the synchronization point, reconcile material changes, then continue.
-
----
-
-## 9. External-status boundary
-
-Nothing above is external acceptance of the unrestricted Murty–Simon conjecture.
-
-- fixed-order results remain candidate proofs with external review open;
-- bridge/Hall structural results have strong internal proofs and finite audits, but external mathematical review and novelty assessment remain open;
-- the recovered 3,607-state relational scan is not a canonical frontier reduction until the fresh cross-implementation audit and separate promotion gate pass;
-- genuinely independent third-party computational reproduction remains open.
+Nothing above is external acceptance of the unrestricted Murty–Simon conjecture. Fixed-order proofs remain candidate proofs with external review open; the bridge and new Hall/staircase theory have increasingly strong internal derivations and finite audits but external mathematical review and novelty assessment remain open; the 2,655 relational candidates remain unpromoted until the final cross-audit and separate promotion gate pass.
