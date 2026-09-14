@@ -1,0 +1,24 @@
+name: verify compatible-copy band Hall refinement
+
+on:
+  workflow_dispatch:
+  push:
+    paths:
+      - 'project/research/general_n/2026-09-14-type-compressed-orientation-hall-v1/COMPATIBLE_COPY_BAND_HALL.md'
+      - 'project/research/general_n/2026-09-14-type-compressed-orientation-hall-v1/verify_compatible_copy_band_hall.py'
+      - '.github/workflows/verify-compatible-copy-band-hall.yml'
+
+jobs:
+  verify:
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    steps:
+      - uses: actions/checkout@v4
+      - name: Run independent compatible-copy verifier
+        working-directory: project/research/general_n/2026-09-14-type-compressed-orientation-hall-v1
+        run: python3 verify_compatible_copy_band_hall.py
+      - name: Upload verification record
+        uses: actions/upload-artifact@v4
+        with:
+          name: compatible-copy-band-hall-verification
+          path: project/research/general_n/2026-09-14-type-compressed-orientation-hall-v1/COMPATIBLE_COPY_BAND_HALL_VERIFICATION.json
