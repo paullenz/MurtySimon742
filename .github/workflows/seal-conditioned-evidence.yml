@@ -1,0 +1,79 @@
+name: verify conditioned excess and seal research evidence
+
+on:
+  workflow_dispatch:
+  push:
+    paths:
+      - '.github/workflows/seal-conditioned-evidence.yml'
+
+permissions:
+  actions: read
+  contents: write
+
+jobs:
+  seal:
+    if: github.repository == 'paullenz/MurtySimon742' && github.ref == 'refs/heads/main'
+    runs-on: ubuntu-24.04-arm
+    timeout-minutes: 15
+    env:
+      PYTHONOPTIMIZE: '0'
+      PYTHONHASHSEED: '0'
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+      - name: Download completed combined verification evidence
+        uses: actions/download-artifact@v4
+        with:
+          name: block-pressure-combined-replay
+          run-id: 34887492789
+          github-token: ${{ github.token }}
+          path: /tmp/preservation-inputs/combined
+      - name: Download original scanner and pilot input
+        uses: actions/download-artifact@v4
+        with:
+          name: q-stratified-receiver-reach-pilot
+          run-id: 34859094097
+          github-token: ${{ github.token }}
+          path: /tmp/preservation-inputs/pilot
+      - name: Download original difficult-profile diagnostic
+        uses: actions/download-artifact@v4
+        with:
+          name: layered-receiver-exception-diagnostic
+          run-id: 34850187436
+          github-token: ${{ github.token }}
+          path: /tmp/preservation-inputs/diagnostic
+      - name: Require exact executed source and frozen result blobs
+        run: |
+          test "$(git hash-object project/research/general_n/2026-09-14-conditioned-excess-v1/verify_conditioned_excess.py)" = 412356d3585e2fda845434868e52653a58852aee
+          test "$(git hash-object project/research/general_n/2026-09-14-conditioned-excess-v1/FROZEN_RESULT.json)" = 500241c6bac364354c14a2e596fbcdc9dd78b2f4
+          test "$(git hash-object project/research/general_n/2026-09-14-evidence-preservation-v1/materialize_evidence.py)" = df2f821abb08d7ed57bc2393b12fff22431c6e48
+      - name: Verify full conditioned replay, historical bytes and every source/artifact hash
+        run: |
+          python3 project/research/general_n/2026-09-14-evidence-preservation-v1/materialize_evidence.py \
+            --inputs /tmp/preservation-inputs > /tmp/evidence-materialization.json
+      - name: Commit only verified evidence; preserve concurrent work
+        run: |
+          set -eu
+          archive=project/research/general_n/2026-09-14-evidence-preservation-v1/durable
+          test -f "$archive/MATERIALIZATION_STATUS.json"
+          git add -- "$archive"
+          if git diff --cached --quiet; then
+            echo 'Identical sealed evidence already committed'
+            exit 0
+          fi
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git commit -m 'Seal verified raw inputs, historical outputs and full conditioned-excess replay; no ledger promotion'
+          git fetch origin main
+          git rebase origin/main
+          git push origin HEAD:main
+      - name: Retain complete evidence even if publication is blocked
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: conditioned-excess-sealed-evidence
+          if-no-files-found: warn
+          path: |
+            /tmp/evidence-materialization.json
+            project/research/general_n/2026-09-14-evidence-preservation-v1/durable
