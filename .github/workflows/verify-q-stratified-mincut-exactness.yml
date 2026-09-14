@@ -18,11 +18,20 @@ jobs:
       - name: Replay q-stratified mincut verification
         working-directory: project/research/general_n/2026-09-14-type-compressed-orientation-hall-v1
         run: python3 verify_q_stratified_mincut_exactness.py > /tmp/Q_STRATIFIED_MINCUT_EXACTNESS_VERIFICATION.json
-      - name: Require frozen output equality
+      - name: Require frozen JSON value equality
         working-directory: project/research/general_n/2026-09-14-type-compressed-orientation-hall-v1
-        run: diff -u Q_STRATIFIED_MINCUT_EXACTNESS_VERIFICATION.json /tmp/Q_STRATIFIED_MINCUT_EXACTNESS_VERIFICATION.json
+        run: |
+          # Run 34868771056 passed the verifier but failed a whitespace-only diff.
+          # Canonicalize formatting, not values: keys, array order and all totals remain checked.
+          python3 -m json.tool --sort-keys Q_STRATIFIED_MINCUT_EXACTNESS_VERIFICATION.json /tmp/q-mincut-expected.canonical.json
+          python3 -m json.tool --sort-keys /tmp/Q_STRATIFIED_MINCUT_EXACTNESS_VERIFICATION.json /tmp/q-mincut-actual.canonical.json
+          diff -u /tmp/q-mincut-expected.canonical.json /tmp/q-mincut-actual.canonical.json
       - name: Upload verification evidence
+        if: always()
         uses: actions/upload-artifact@v4
         with:
           name: q-stratified-mincut-exactness-verification
-          path: /tmp/Q_STRATIFIED_MINCUT_EXACTNESS_VERIFICATION.json
+          path: |
+            /tmp/Q_STRATIFIED_MINCUT_EXACTNESS_VERIFICATION.json
+            /tmp/q-mincut-expected.canonical.json
+            /tmp/q-mincut-actual.canonical.json
