@@ -1,0 +1,71 @@
+name: scan post-pair relational full frontier
+
+on:
+  workflow_dispatch:
+  push:
+    paths:
+      - 'project/research/general_n/2026-09-13-alternative-attacks-v1/run_post_pair_relational_checkpointed.py'
+      - 'project/research/general_n/2026-09-13-alternative-attacks-v1/scan_post_pair_relational.cpp'
+      - '.github/workflows/scan-post-pair-relational-full-frontier.yml'
+
+jobs:
+  plan:
+    runs-on: ubuntu-latest
+    outputs:
+      matrix: ${{ steps.matrix.outputs.value }}
+    steps:
+      - id: matrix
+        name: Build deterministic 256-shard matrix
+        run: |
+          python3 - <<'PY' >> "$GITHUB_OUTPUT"
+          import json
+          print('value=' + json.dumps({'shard': list(range(256))}, separators=(',', ':')))
+          PY
+
+  scan:
+    needs: plan
+    runs-on: ubuntu-latest
+    timeout-minutes: 90
+    strategy:
+      fail-fast: false
+      max-parallel: 64
+      matrix: ${{ fromJSON(needs.plan.outputs.matrix) }}
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Prepare ledger-current shard
+        working-directory: project/research/general_n/2026-09-13-alternative-attacks-v1
+        run: >-
+          python3 prepare_pair_capacity_frontier.py
+          --mod 256
+          --rem ${{ matrix.shard }}
+          --output FULL_RELATIONAL_SHARD_${{ matrix.shard }}_INPUT.txt
+
+      - name: Compile primary relational scanner
+        working-directory: project/research/general_n/2026-09-13-alternative-attacks-v1
+        run: >-
+          g++ -O3 -std=c++17 -Wall -Wextra -pedantic
+          scan_post_pair_relational.cpp
+          -o scan_post_pair_relational
+
+      - name: Run checkpointed state-by-state discovery
+        working-directory: project/research/general_n/2026-09-13-alternative-attacks-v1
+        run: >-
+          python3 run_post_pair_relational_checkpointed.py
+          FULL_RELATIONAL_SHARD_${{ matrix.shard }}_INPUT.txt
+          --scanner ./scan_post_pair_relational
+          --outdir FULL_RELATIONAL_SHARD_${{ matrix.shard }}
+          --shard ${{ matrix.shard }}
+          --state-timeout 300
+
+      - name: Upload durable shard checkpoints
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: post-pair-frontier-shard-${{ matrix.shard }}
+          if-no-files-found: error
+          compression-level: 6
+          path: |
+            project/research/general_n/2026-09-13-alternative-attacks-v1/FULL_RELATIONAL_SHARD_${{ matrix.shard }}_INPUT.txt
+            project/research/general_n/2026-09-13-alternative-attacks-v1/FULL_RELATIONAL_SHARD_${{ matrix.shard }}_INPUT_VERIFICATION.json
+            project/research/general_n/2026-09-13-alternative-attacks-v1/FULL_RELATIONAL_SHARD_${{ matrix.shard }}/
