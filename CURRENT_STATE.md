@@ -11,41 +11,80 @@ The temporary branches `threshold-family-scan` and `state279-proof` were reconci
 <!-- HALL-STRUCTURE-2026-09-14:START -->
 ## 14 September Hall-structure checkpoint
 
-**Status boundary.** The canonical promoted whole-state position remains **977 quantified closures, 1,971 exclusions / 3,607 survivors**. Nothing in this section changes that ledger count. The full post-pair relational scan is discovery/reconnaissance until its recovery pass and fresh cross-implementation audit complete; only a later separately gated promotion may change the headline frontier.
+**Status boundary.** The canonical promoted whole-state position remains **977 quantified closures, 1,971 exclusions / 3,607 survivors**. Nothing in this section changes that ledger count. The full post-pair relational scan remains discovery/reconnaissance until its recovery pass and fresh cross-implementation audit complete; only a later separately gated promotion may change the headline frontier.
 
-### Exact target-Hall compression
+The current Hall package is [`project/research/general_n/2026-09-14-type-compressed-orientation-hall-v1/`](project/research/general_n/2026-09-14-type-compressed-orientation-hall-v1/README.md), with detailed provenance in [`AUDIT.md`](project/research/general_n/2026-09-14-type-compressed-orientation-hall-v1/AUDIT.md) and [`STAIRCASE_AUDIT.md`](project/research/general_n/2026-09-14-type-compressed-orientation-hall-v1/STAIRCASE_AUDIT.md).
 
-The current orientation/Hall package is [`project/research/general_n/2026-09-14-type-compressed-orientation-hall-v1/`](project/research/general_n/2026-09-14-type-compressed-orientation-hall-v1/README.md).
+### Internally audited exact target-Hall structure
 
-- **Whole-type Hall theorem.** For fixed `(q,c,P)` data, every labelled Hall cut is represented exactly by type counts, and coordinatewise discrete concavity implies a minimum Hall margin is attained by a union of complete `(q,c,P)` type classes. GitHub Actions run `34820069162` is green; its frozen audit checked `14,330` profiles, `593,984` labelled/compressed cut equalities and `391,896` coordinate-concavity lines with zero discrepancies.
-- **Exact type-level max-flow theorem.** The full labelled target network is equivalent, by min-cut equality, to a quotient network on the distinct `(q,c,P)` types. The Hall-margin set function is submodular. GitHub Actions run `34821405958` is green. This gives exact small type-level certificates rather than labelled max-flow witnesses.
-- **Interval form.** Numerical directed compatibility is exactly intersection of source interval `[q,c]` with target interval `[q,c+1]`, before deletion of the self-arc. This is the correct replacement for the disproved one-dimensional Ferrers-prefix simplification.
-
-### Dominance and antichain structure
-
-- [`DOMINANCE_UPSET_HALL.md`](project/research/general_n/2026-09-14-type-compressed-orientation-hall-v1/DOMINANCE_UPSET_HALL.md) proves an exchange/up-set theorem for the initial hardness order `q` up, `c` down, `P` up. Its independent CI replay, run `34827519117`, is green; the preserved artifact digest is `sha256:5e0977bedbd2615df54f4f31f95ec4847635355f10fad835257d92a65697bd21`.
-- [`SHARP_DOMINANCE_UPSET_HALL.md`](project/research/general_n/2026-09-14-type-compressed-orientation-hall-v1/SHARP_DOMINANCE_UPSET_HALL.md) strengthens the exchange order to
+- **Whole-type Hall theorem:** complete `(q,c,P)` type classes suffice for a minimum target-Hall cut; run `34820069162` is green.
+- **Exact type-level max-flow theorem and submodularity:** labelled target flow is min-cut equivalent to the quotient type network; run `34821405958` is green.
+- **Sharp dominance:** [`SHARP_DOMINANCE_UPSET_HALL.md`](project/research/general_n/2026-09-14-type-compressed-orientation-hall-v1/SHARP_DOMINANCE_UPSET_HALL.md)
 
   ```text
-  x >=_* y  iff  c_x<=c_y
+  x >=_* y iff c_x<=c_y
                  and [q_x>q_y or (q_x=q_y and P_x>=P_y)].
   ```
 
-  In particular, if `q_x>=q_y+2` and `c_x<=c_y`, **every** minimum Hall witness containing `y` also contains `x`, irrespective of `P`. Its dedicated CI replay, run `34830228571`, is green and frozen in [`SHARP_DOMINANCE_UPSET_HALL_VERIFICATION.json`](project/research/general_n/2026-09-14-type-compressed-orientation-hall-v1/SHARP_DOMINANCE_UPSET_HALL_VERIFICATION.json): `4,286` profiles, `1,123,108` submodularity checks, `372,455` sharp exchange checks and `126,654` strict-gap checks, with zero discrepancies. Artifact digest: `sha256:b686e3f9663a082aa9b0ff9fa89d1c0a29904ca3622f205421a895e3babbf37c`.
-- The exact quotient network can be augmented with capacity-`Q+1` dominance-closure arcs without changing its min-cut value; see [`DOMINANCE_CLOSED_MAXFLOW.md`](project/research/general_n/2026-09-14-type-compressed-orientation-hall-v1/DOMINANCE_CLOSED_MAXFLOW.md).
-- [`CANONICAL_ANTICHAIN_CERTIFICATE.md`](project/research/general_n/2026-09-14-type-compressed-orientation-hall-v1/CANONICAL_ANTICHAIN_CERTIFICATE.md) gives the next exact consequence: submodularity makes the minimum-margin cuts a lattice, so there is a unique maximal minimizer `M+`; it is a sharp-hardness up-set and is uniquely represented by its minimal antichain generators. A closure-augmented quotient max-flow recovers the same `M+` from one residual min-cut. Its dedicated CI replay, run `34830787798`, is green and frozen in [`CANONICAL_ANTICHAIN_CERTIFICATE_VERIFICATION.json`](project/research/general_n/2026-09-14-type-compressed-orientation-hall-v1/CANONICAL_ANTICHAIN_CERTIFICATE_VERIFICATION.json): `4,286` profiles, `198,140` type-set margins, `28,460` minimizer-lattice pair checks, `4,286` closure-flow checks and `4,286` residual maximal-cut checks, with zero discrepancies. Artifact digest: `sha256:2ed919e019c7f65a21fbbe92d81e5db84db14e39889bd259d559e2feded08433`.
+  If `q_x>=q_y+2` and `c_x<=c_y`, every minimum Hall witness containing `y` contains `x`, independent of `P`. Run `34830228571` is green; artifact digest `sha256:b686e3f9663a082aa9b0ff9fa89d1c0a29904ca3622f205421a895e3babbf37c`.
+- **Canonical antichain certificate:** minimum-margin type sets form a lattice; their union `M+` is the unique maximal minimizer, a sharp-hardness up-set, and is uniquely represented by its minimal generator antichain. A closure-augmented quotient max-flow extracts the same `M+`. Run `34830787798` is green; artifact digest `sha256:2ed919e019c7f65a21fbbe92d81e5db84db14e39889bd259d559e2feded08433`.
+- **Exact moving staircase:** ordering the generators by cross degree gives
 
-### Preserved failed simplifications
+  ```text
+  c_1<...<c_h,
+  q_1<=...<=q_h,
+  ```
 
-[`PRINCIPAL_UPSET_COUNTEREXAMPLE.md`](project/research/general_n/2026-09-14-type-compressed-orientation-hall-v1/PRINCIPAL_UPSET_COUNTEREXAMPLE.md) prevents a false next step. A three-type `V` profile has every principal up-set nondeficient but a two-generator up-set of margin `-1`; a four-type example needs three incomparable generators. Therefore neither single-type cuts nor one principal up-set is exact in general.
+  with `P` strictly increasing on every equal-`q` plateau. Membership in the sharp up-set is exactly a moving `(q,P)` threshold at the first generator cross-degree above the type. Run `34831605792` is green; artifact digest `sha256:96ca7d14e9b823ae428f677f21cf60cfa519e7f6326799fcf9b331e433d38ace`.
 
-The 15-state principal-upset reconnaissance pilot completed green as a computation but **is not a promotion certificate**: the full relational stack excluded `13/15` states, while principal up-sets completely explained only `2/13`. Principal up-sets killed `17,284` individual profiles versus `14,768` for single-type cuts, so they help pruning but do not capture the genuine multi-generator obstruction.
+This moving staircase is not the disproved one-dimensional Ferrers shortcut: the threshold changes with `c`, and genuinely multi-generator boundaries occur.
 
-The canonical-antichain verification also found negative test profiles requiring up to six generators (`869, 1,303, 1,005, 324, 49, 6` profiles with respectively `1,...,6` generators). This is audit evidence, not an all-order bound; it reinforces that the right next object is the **structured staircase boundary**, not a guessed small generator count.
+### Verified staircase-band relaxation
+
+[`STAIRCASE_BAND_HALL.md`](project/research/general_n/2026-09-14-type-compressed-orientation-hall-v1/STAIRCASE_BAND_HALL.md) groups selected sources by staircase band. Every source interval in a band is contained in its generator interval. For each target type the generator-compatible source bands form an empty set or a **contiguous interval of band indices**.
+
+Exact target-flow feasibility therefore implies feasibility of a smaller capacitated interval-neighborhood band flow. This step is deliberately a **necessary relaxation**, not an exact equivalence. Run `34832155910` is green; frozen audit totals include `2,786` profiles, `39,991` sharp up-sets, `1,334,288` incoming upper-bound checks and `210,356` band-set capacity checks, with zero discrepancies. Artifact digest: `sha256:ced7c25892c42a0a13a61c404642da6f27af21607655be255b20efd498a03a24`.
+
+In the current Murty-Simon source universe, `c=q+rho` and the q-profile cap includes `q<=a-rho`, so `c<=a`. Since canonical staircase generators have distinct integer `c`, there is at most one generator breakpoint per cross-degree level and hence `h<=a+1`.
+
+### Preserved negative results on generator count
+
+[`PRINCIPAL_UPSET_COUNTEREXAMPLE.md`](project/research/general_n/2026-09-14-type-compressed-orientation-hall-v1/PRINCIPAL_UPSET_COUNTEREXAMPLE.md) already rules out one principal up-set and a universal two-generator shortcut.
+
+The Murty-specific pilot [`MURTY_ANTICHAIN_PROFILE_STATS_PILOT.md`](project/research/general_n/2026-09-14-type-compressed-orientation-hall-v1/MURTY_ANTICHAIN_PROFILE_STATS_PILOT.md), run `34831697002`, strengthens that warning. It tested `201,493,148` profiles in the same deterministic 15-state frontier sample and cross-checked **every** labelled target-Hall failure against the dominance-closed quotient max-flow. Among `205,919` target-Hall failures the canonical generator histogram was:
+
+```text
+1:      214
+2:    6,722
+3:   41,452
+4:   80,972
+5:   58,775
+6:   16,349
+7:    1,426
+8:        9
+9+:       0
+```
+
+The modal obstruction uses four generators and actual Murty-Simon profiles reach eight. This is reconnaissance, not an all-order theorem or a promotion result. It decisively lowers the priority of any small-constant generator approach and points instead to aggregate staircase-band inequalities.
+
+### Near-exact band reach and the remaining exception
+
+[`STAIRCASE_BAND_REACH_PILOT.md`](project/research/general_n/2026-09-14-type-compressed-orientation-hall-v1/STAIRCASE_BAND_REACH_PILOT.md) measures how much exact target-Hall power survives the verified band relaxation on the same deterministic 15-state Murty pilot. GitHub Actions run `34832806900` completed green.
+
+Across `205,919` exact target-Hall-failing profiles, the band relaxation was also infeasible on **205,918** and passed only **one** profile:
+
+```text
+band retention of exact target-Hall failures:
+205,918 / 205,919 = 99.999514%.
+```
+
+The sole false-negative is a two-generator profile in N34 state `226`. A dedicated diagnostic workflow is isolating its exact `(E,rho,q)` profile, canonical type-level minimum cut and feasible band flow so that the missing within-band statistic can be identified. This is reconnaissance only and changes no canonical closure count.
+
+The interval-neighborhood structure does **not** imply that it is enough to check contiguous source-band cuts. [`BAND_INTERVAL_CUT_COUNTEREXAMPLE.md`](project/research/general_n/2026-09-14-type-compressed-orientation-hall-v1/BAND_INTERVAL_CUT_COUNTEREXAMPLE.md) preserves a three-band example where every contiguous band interval has nonnegative Hall margin but the disconnected cut `{1,3}` has margin `-1`. Therefore the promising object is the complete band flow or a stronger Murty-specific reduction, not an unsupported interval-cut shortcut.
 
 ### Full frontier relational scan
 
-The layer/state-safe full scan of the canonical `3,607` survivors is GitHub Actions run `34820187136`, head `3255c0641b00ae97c426d1e089a6b6c92c8300fc`. It uses per-state checkpointing and treats timeouts/errors as unresolved, never as exclusions. The downstream chain is:
+The layer/state-safe full scan of the canonical `3,607` survivors is GitHub Actions run `34820187136`, head `3255c0641b00ae97c426d1e089a6b6c92c8300fc`. It uses per-state checkpointing and treats timeouts/errors as unresolved, never as exclusions. The downstream chain remains:
 
 ```text
 checkpointed discovery
@@ -55,7 +94,7 @@ checkpointed discovery
  -> separate gated promotion only after agreement.
 ```
 
-A scan shard or preliminary relational exclusion is **not canonical evidence by itself**. N34 and N35 provenance are kept in separate ledgers to prevent layer-count drift. The correct structural priority while this scan proceeds is to analyse the verified sharp-dominance **antichain staircase** of deficient type-level min-cuts, not to force the already-refuted principal-upset shortcut.
+A scan shard or preliminary relational exclusion is **not canonical evidence by itself**. N34 and N35 provenance remain in separate ledgers.
 <!-- HALL-STRUCTURE-2026-09-14:END -->
 
 ## Headline fixed-order candidate status
@@ -299,25 +338,25 @@ Degree-preserving `2x2` repairs live in the **relaxed selected-incidence matrix*
 <!-- CURRENT-PRIORITIES-2026-09-14:START -->
 ## Current research priorities
 
-### P1. Exploit the verified canonical Hall antichain staircase
+### P1. Attack the aggregate consecutive-band Hall inequalities
 
-The sharp dominance theorem and [`CANONICAL_ANTICHAIN_CERTIFICATE.md`](project/research/general_n/2026-09-14-type-compressed-orientation-hall-v1/CANONICAL_ANTICHAIN_CERTIFICATE.md) are internally CI-green. The next all-order task is to turn the unique generator antichain into a sharper Murty-Simon-specific staircase description using `c=q+rho`, the canonical `q` caps, target-capacity formula `P`, demand forcing and excess constraints. Do **not** assume a universal one- or two-generator bound: preserved counterexamples and the finite audit rule that out as a safe general route.
+The exact canonical target-Hall obstruction is now a verified moving staircase; actual Murty-Simon profiles often need 4–6 generators and can need 8, so a bounded-generator theorem is not the preferred route. Use [`STAIRCASE_BAND_HALL.md`](project/research/general_n/2026-09-14-type-compressed-orientation-hall-v1/STAIRCASE_BAND_HALL.md) as the next symbolic interface: combine the contiguous band neighborhoods with `c=q+rho`, `q<=a-rho`, target caps `P`, demand forcing, selected incidence, pair capacity, unordered-pair Hall and excess-budget constraints. Seek aggregate interval/band inequalities or a restricted parametric family of violating band cuts. Use the unique state-226 band false-negative to identify which within-band statistic must be restored before attempting any stronger exact reduction.
 
 ### P2. Complete, recover and independently audit the 3,607-state relational scan
 
-Run `34820187136` is the layer/state-safe checkpointed discovery pass over the canonical survivor frontier. Let every shard complete; record every timeout/error as unresolved; recover all unresolved/unattempted layer-states with the long-budget pass; then freshly replay every discovery exclusion through both the vector and independent type-count implementations. Only a later separately gated certificate promotion may change the canonical `1,971/3,607` headline.
+Run `34820187136` is the layer/state-safe checkpointed discovery pass over the canonical survivor frontier. Record every timeout/error as unresolved; recover all unresolved/unattempted layer-states with the long-budget pass; then freshly replay every discovery exclusion through both the vector and independent type-count implementations. Only a later separately gated certificate promotion may change the canonical `1,971/3,607` headline.
 
 ### P3. Explain the N35-derived layer
 
-Keep N34 and N35 closure ledgers separate. Compare the 78 N35-derived survivors against eliminated N34 profiles under the exact type-Hall, sharp-dominance and antichain descriptions. The goal is to identify a structural parameter that explains the layer difference, not merely to accumulate N35 exclusions.
+Keep N34 and N35 closure ledgers separate. Compare the 78 N35-derived survivors against eliminated N34 profiles using the exact staircase and band descriptions. The single N35 pilot state showed only 1–4 generator target-Hall failures while the sampled N34 states reached eight, but that sample is far too small for a claim; use it only to choose structural statistics worth testing.
 
 ### P4. Strengthen independent review and reproduction
 
-Prioritise external checking of the canonical bridge, exact directed compatibility, whole-type Hall theorem, type-level max-flow equivalence, total-excess source cap, potential-pair theorem and the new dominance/antichain arguments. Repository CI and separately written same-assistant code are internal evidence, not third-party acceptance.
+Prioritise external checking of the canonical bridge, exact directed compatibility, whole-type Hall theorem, quotient max-flow equivalence, sharp dominance, canonical antichain/staircase, total-excess source cap and potential-pair theorem. Repository CI and separately written same-assistant code are internal evidence, not third-party acceptance.
 
 ### P5. Preserve genuinely different routes
 
-Continue maximum-cut/stability, selection-free and other independent approaches when they have leverage. Preserve negative results such as the coarse low-residual-reservoir scan and every counterexample to an over-strong simplification. Never infer proof from timeout, numerical infeasibility or a solver status alone.
+Continue maximum-cut/stability, selection-free and other independent approaches when they have leverage. Preserve negative results, invalidated shortcuts and solver/time-out evidence. Never infer proof from timeout, numerical infeasibility or a solver status alone.
 <!-- CURRENT-PRIORITIES-2026-09-14:END -->
 
 ## Research/preservation rules
@@ -365,11 +404,11 @@ The coarse low-residual-reservoir theorem was also scanned over the pre-promotio
 <!-- ACTIVE-RELATIONAL-2026-09-14:START -->
 ## 14 September 2026 — active post-pair relational programme
 
-The **canonical promoted frontier remains `1,971 exclusions / 3,607 survivors`**. A stronger post-pair relational programme is running over those 3,607 ledger-current scalar survivors, but its discoveries are deliberately **not canonical closures** until they pass full coverage/recovery, fresh cross-implementation audit and a separately gated promotion.
+The **canonical promoted frontier remains `1,971 exclusions / 3,607 survivors`**. The stronger post-pair relational programme is discovery only until full coverage/recovery, fresh cross-implementation audit and a separately gated promotion.
 
-The current layer/state-safe discovery run is GitHub Actions run `34820187136` at head `3255c0641b00ae97c426d1e089a6b6c92c8300fc`. It checkpointed every state separately and identifies every record by `(layer,state)`, so later timeout/cancellation cannot erase earlier completed evidence or conflate N34 and N35 IDs. The earlier run `34818390230` is preserved as historical reconnaissance but is not the authoritative full-frontier discovery pass.
+The authoritative layer/state-safe discovery run is GitHub Actions run `34820187136` at head `3255c0641b00ae97c426d1e089a6b6c92c8300fc`. Every record is keyed by `(layer,state)` and each state is checkpointed separately. The earlier run `34818390230` is preserved as historical reconnaissance rather than the authoritative full-frontier pass.
 
-The execution chain is documented in [`POST_PAIR_RELATIONAL_FULL_FRONTIER.md`](project/research/general_n/2026-09-13-alternative-attacks-v1/POST_PAIR_RELATIONAL_FULL_FRONTIER.md): checkpointed discovery, layer-safe aggregation, explicit unresolved accounting, long-budget recovery of every unresolved/unattempted layer-state, then fresh primary and independent type-count replay of every candidate exclusion. N34 and N35 promotions use separate ledgers.
+The execution chain is documented in [`POST_PAIR_RELATIONAL_FULL_FRONTIER.md`](project/research/general_n/2026-09-13-alternative-attacks-v1/POST_PAIR_RELATIONAL_FULL_FRONTIER.md): checkpointed discovery, layer-safe aggregation, explicit unresolved accounting, long-budget recovery, then fresh primary and independent type-count replay of every candidate exclusion. N34 and N35 promotions use separate ledgers.
 
-In parallel, the target-Hall layer has been converted from an opaque labelled max-flow obstruction into exact type-level structure: complete types, quotient max-flow, submodular Hall margin, sharp hardness up-sets, dominance-closed min-cut, and a verified canonical antichain staircase. The preserved principal-upset counterexample shows that genuine multi-generator antichains are necessary. The next structural task is to exploit the Murty-Simon-specific relations to constrain that staircase while the finite scan completes.
+The structural track has progressed from labelled target flow to complete types, exact quotient max-flow, submodularity, sharp hardness up-sets, a canonical antichain, an exact moving staircase, and now a verified consecutive-band necessary relaxation. The Murty-specific antichain pilot shows that high generator counts are real inside the scanned relaxation, while the band-reach pilot retains 205,918/205,919 exact target-Hall failures. The active theory target is therefore **aggregate staircase-band demand/capacity plus the single missing within-band distinction**, not a small-generator or contiguous-cut shortcut.
 <!-- ACTIVE-RELATIONAL-2026-09-14:END -->
