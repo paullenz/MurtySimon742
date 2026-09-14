@@ -29,7 +29,7 @@ jobs:
           mkdir -p artifacts
           gh run download "$RUN_ID" -R "$GITHUB_REPOSITORY" -p 'post-pair-frontier-shard-*' -D artifacts || true
 
-      - name: Aggregate with explicit coverage accounting
+      - name: Aggregate with layer-safe coverage accounting
         env:
           RUN_ID: ${{ github.event.workflow_run.id }}
           RUN_CONCLUSION: ${{ github.event.workflow_run.conclusion }}
@@ -52,12 +52,32 @@ jobs:
               body = lines[1:]
               if len(body) != n:
                   raise SystemExit(f'input count mismatch in {path}')
-              return [int(line.split()[1]) for line in body]
+              records = []
+              for line in body:
+                  tok = line.split()
+                  records.append({
+                      'layer': int(tok[0]),
+                      'state_id': int(tok[1]),
+                      'line': line,
+                  })
+              return records
 
-          expected_ids = parse_input(expected_path)
-          expected_set = set(expected_ids)
-          if len(expected_ids) != 3607 or len(expected_set) != 3607:
-              raise SystemExit(f'unexpected canonical frontier size at scan head: {len(expected_ids)}')
+          expected_records = parse_input(expected_path)
+          expected_keys = [(r['layer'], r['state_id']) for r in expected_records]
+          expected_set = set(expected_keys)
+          if len(expected_records) != 3607 or len(expected_set) != 3607:
+              raise SystemExit(
+                  f'unexpected/duplicate canonical layer-state frontier: '
+                  f'rows={len(expected_records)} unique_keys={len(expected_set)}'
+              )
+
+          state_to_expected = {}
+          for key in expected_keys:
+              state_to_expected.setdefault(key[1], []).append(key)
+          cross_layer_id_collisions = {
+              str(state): [list(k) for k in keys]
+              for state, keys in state_to_expected.items() if len(keys) > 1
+          }
 
           shard_inputs = {}
           verification = {}
@@ -84,14 +104,14 @@ jobs:
               if filt.get('mod') != 256 or filt.get('rem') != shard:
                   raise SystemExit(f'wrong shard filter in verification {shard}: {filt}')
 
-          artifact_input_ids = []
-          for shard, ids in shard_inputs.items():
-              artifact_input_ids.extend(ids)
-          if len(artifact_input_ids) != len(set(artifact_input_ids)):
-              raise SystemExit('duplicate state across downloaded shard inputs')
-          unexpected_inputs = sorted(set(artifact_input_ids) - expected_set)
+          artifact_input_keys = []
+          for shard, records in shard_inputs.items():
+              artifact_input_keys.extend((r['layer'], r['state_id']) for r in records)
+          if len(artifact_input_keys) != len(set(artifact_input_keys)):
+              raise SystemExit('duplicate layer-state key across downloaded shard inputs')
+          unexpected_inputs = sorted(set(artifact_input_keys) - expected_set)
           if unexpected_inputs:
-              raise SystemExit(f'artifact contains non-frontier state ids: {unexpected_inputs[:20]}')
+              raise SystemExit(f'artifact contains non-frontier layer-state keys: {unexpected_inputs[:20]}')
 
           result_rows = {}
           result_fields = None
@@ -101,16 +121,17 @@ jobs:
               if rows and result_fields is None:
                   result_fields = list(rows[0].keys())
               for row in rows:
-                  state = int(row['state_id'])
-                  if state in result_rows:
-                      raise SystemExit(f'duplicate completed result for state {state}')
-                  if state not in expected_set:
-                      raise SystemExit(f'completed result outside expected frontier: {state}')
+                  key = (int(row['layer']), int(row['state_id']))
+                  if key in result_rows:
+                      raise SystemExit(f'duplicate completed result for layer-state {key}')
+                  if key not in expected_set:
+                      raise SystemExit(f'completed result outside expected frontier: {key}')
                   if row['status'] not in {'RELATIONAL_EXCLUDED', 'SURVIVES_RELATIONAL'}:
-                      raise SystemExit(f'bad mathematical status for {state}: {row["status"]}')
-                  result_rows[state] = row
+                      raise SystemExit(f'bad mathematical status for {key}: {row["status"]}')
+                  result_rows[key] = row
 
           unresolved = {}
+          identity_ambiguities = []
           shard_statuses = {}
           for path in artifacts.rglob('SHARD_STATUS.json'):
               obj = json.loads(path.read_text())
@@ -118,19 +139,35 @@ jobs:
               if shard in shard_statuses:
                   raise SystemExit(f'duplicate shard status: {shard}')
               shard_statuses[shard] = obj
+              shard_records = shard_inputs.get(shard, [])
+              by_state = {}
+              for rec in shard_records:
+                  by_state.setdefault(rec['state_id'], []).append((rec['layer'], rec['state_id']))
               for item in obj.get('unresolved', []):
                   state = int(item['state_id'])
-                  if state in unresolved:
-                      raise SystemExit(f'duplicate unresolved record: {state}')
-                  if state in result_rows:
-                      raise SystemExit(f'state both completed and unresolved: {state}')
-                  unresolved[state] = item
+                  candidates = by_state.get(state, [])
+                  if len(candidates) != 1:
+                      identity_ambiguities.append({
+                          'shard': shard,
+                          'state_id': state,
+                          'candidate_keys': [list(k) for k in candidates],
+                          'reason': 'legacy checkpoint lacked layer identity',
+                      })
+                      continue
+                  key = candidates[0]
+                  if key in unresolved:
+                      raise SystemExit(f'duplicate unresolved record: {key}')
+                  if key in result_rows:
+                      raise SystemExit(f'layer-state both completed and unresolved: {key}')
+                  enriched = dict(item)
+                  enriched['layer'] = key[0]
+                  unresolved[key] = enriched
 
           missing_shards = sorted(set(range(256)) - set(shard_inputs))
           unattempted = sorted(expected_set - set(result_rows) - set(unresolved))
-          missing_from_artifact_inputs = sorted(expected_set - set(artifact_input_ids))
-          excluded = sorted(state for state, row in result_rows.items() if row['status'] == 'RELATIONAL_EXCLUDED')
-          survives = sorted(state for state, row in result_rows.items() if row['status'] == 'SURVIVES_RELATIONAL')
+          missing_from_artifact_inputs = sorted(expected_set - set(artifact_input_keys))
+          excluded = sorted(key for key, row in result_rows.items() if row['status'] == 'RELATIONAL_EXCLUDED')
+          survives = sorted(key for key, row in result_rows.items() if row['status'] == 'SURVIVES_RELATIONAL')
 
           if result_fields is None:
               result_fields = [
@@ -144,13 +181,28 @@ jobs:
           with combined.open('w', newline='') as f:
               w = csv.DictWriter(f, fieldnames=result_fields, delimiter='\t', lineterminator='\n')
               w.writeheader()
-              for state in sorted(result_rows):
-                  w.writerow(result_rows[state])
+              for key in sorted(result_rows):
+                  w.writerow(result_rows[key])
 
-          candidates = Path('POST_PAIR_RELATIONAL_FULL_DISCOVERY_CANDIDATES.txt')
-          candidates.write_text('\n'.join(map(str, excluded)) + ('\n' if excluded else ''))
+          candidates = Path('POST_PAIR_RELATIONAL_FULL_DISCOVERY_CANDIDATES.tsv')
+          with candidates.open('w', newline='') as f:
+              w = csv.writer(f, delimiter='\t', lineterminator='\n')
+              w.writerow(['layer', 'state_id'])
+              w.writerows(excluded)
+
           unresolved_path = Path('POST_PAIR_RELATIONAL_FULL_DISCOVERY_UNRESOLVED.json')
-          unresolved_path.write_text(json.dumps({str(k): unresolved[k] for k in sorted(unresolved)}, indent=2, sort_keys=True) + '\n')
+          unresolved_path.write_text(json.dumps({
+              f'{k[0]}:{k[1]}': unresolved[k] for k in sorted(unresolved)
+          }, indent=2, sort_keys=True) + '\n')
+
+          identity_path = Path('POST_PAIR_RELATIONAL_FULL_DISCOVERY_IDENTITY_AUDIT.json')
+          identity_path.write_text(json.dumps({
+              'schema': 'post-pair-relational-identity-audit-v1',
+              'expected_cross_layer_state_id_collisions': cross_layer_id_collisions,
+              'legacy_unresolved_identity_ambiguities': identity_ambiguities,
+              'layer_state_keys_unique': len(expected_keys) == len(expected_set),
+              'external_review': 'OPEN',
+          }, indent=2, sort_keys=True) + '\n')
 
           def sha(path):
               return hashlib.sha256(Path(path).read_bytes()).hexdigest()
@@ -159,35 +211,45 @@ jobs:
           for item in unresolved.values():
               reasons[item['reason']] = reasons.get(item['reason'], 0) + 1
 
+          discovery_complete = (
+              len(result_rows) == len(expected_records)
+              and not unresolved
+              and not unattempted
+              and not missing_shards
+              and not identity_ambiguities
+          )
+
           summary = {
-              'schema': 'post-pair-relational-full-discovery-v1',
+              'schema': 'post-pair-relational-full-discovery-v2-layer-safe',
               'scan_run_id': int(os.environ['RUN_ID']),
               'scan_head_sha': os.environ['RUN_HEAD_SHA'],
               'scan_workflow_conclusion': os.environ['RUN_CONCLUSION'],
-              'expected_frontier': len(expected_ids),
+              'expected_frontier': len(expected_records),
               'expected_frontier_sha256': sha(expected_path),
+              'expected_cross_layer_state_id_collision_count': len(cross_layer_id_collisions),
               'shards_expected': 256,
               'shard_inputs_found': len(shard_inputs),
               'shard_statuses_found': len(shard_statuses),
               'missing_shards': missing_shards,
-              'artifact_input_states': len(artifact_input_ids),
-              'missing_from_artifact_inputs': missing_from_artifact_inputs,
+              'artifact_input_states': len(artifact_input_keys),
+              'missing_from_artifact_inputs': [list(k) for k in missing_from_artifact_inputs],
               'states_completed': len(result_rows),
               'relational_excluded_candidates': len(excluded),
+              'relational_excluded_n34': sum(k[0] == 0 for k in excluded),
+              'relational_excluded_n35': sum(k[0] == 1 for k in excluded),
               'survives_relational': len(survives),
+              'survives_n34': sum(k[0] == 0 for k in survives),
+              'survives_n35': sum(k[0] == 1 for k in survives),
               'unresolved_count': len(unresolved),
               'unresolved_by_reason': reasons,
+              'identity_ambiguity_count': len(identity_ambiguities),
               'unattempted_count': len(unattempted),
-              'unattempted_state_ids': unattempted,
-              'candidate_state_ids': excluded,
-              'discovery_complete': (
-                  len(result_rows) == len(expected_ids)
-                  and not unresolved
-                  and not unattempted
-                  and not missing_shards
-              ),
+              'unattempted_keys': [list(k) for k in unattempted],
+              'candidate_keys': [list(k) for k in excluded],
+              'discovery_complete': discovery_complete,
               'results_sha256': sha(combined),
               'candidates_sha256': sha(candidates),
+              'identity_audit_sha256': sha(identity_path),
               'promotion_status': 'NOT_PROMOTED_REQUIRES_INDEPENDENT_AUDIT',
               'external_review': 'OPEN',
           }
@@ -203,6 +265,7 @@ jobs:
             project/research/general_n/2026-09-13-alternative-attacks-v1/EXPECTED_ACTIVE.txt
             project/research/general_n/2026-09-13-alternative-attacks-v1/EXPECTED_ACTIVE_VERIFICATION.json
             project/research/general_n/2026-09-13-alternative-attacks-v1/POST_PAIR_RELATIONAL_FULL_DISCOVERY_RESULTS.tsv
-            project/research/general_n/2026-09-13-alternative-attacks-v1/POST_PAIR_RELATIONAL_FULL_DISCOVERY_CANDIDATES.txt
+            project/research/general_n/2026-09-13-alternative-attacks-v1/POST_PAIR_RELATIONAL_FULL_DISCOVERY_CANDIDATES.tsv
             project/research/general_n/2026-09-13-alternative-attacks-v1/POST_PAIR_RELATIONAL_FULL_DISCOVERY_UNRESOLVED.json
+            project/research/general_n/2026-09-13-alternative-attacks-v1/POST_PAIR_RELATIONAL_FULL_DISCOVERY_IDENTITY_AUDIT.json
             project/research/general_n/2026-09-13-alternative-attacks-v1/POST_PAIR_RELATIONAL_FULL_DISCOVERY_SUMMARY.json
