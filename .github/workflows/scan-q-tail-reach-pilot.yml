@@ -1,0 +1,107 @@
+name: scan high-q-tail Hall reach pilot
+
+on:
+  push:
+    paths:
+      - 'project/research/general_n/2026-09-14-type-compressed-orientation-hall-v1/make_q_tail_stats_scanner.py'
+      - '.github/workflows/scan-q-tail-reach-pilot.yml'
+  workflow_dispatch:
+
+jobs:
+  pilot:
+    runs-on: ubuntu-latest
+    timeout-minutes: 45
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Prepare same deterministic 1/256 pilot shard
+        working-directory: project/research/general_n/2026-09-13-alternative-attacks-v1
+        run: python3 prepare_pair_capacity_frontier.py --mod 256 --rem 16 --output Q_TAIL_REACH_PILOT_INPUT.txt
+
+      - name: Generate canonical antichain scanner
+        working-directory: project/research/general_n/2026-09-14-type-compressed-orientation-hall-v1
+        run: python3 make_antichain_stats_scanner.py
+
+      - name: Add coarse-band instrumentation
+        working-directory: project/research/general_n/2026-09-14-type-compressed-orientation-hall-v1
+        run: python3 make_band_reach_scanner.py
+
+      - name: Add compatible-copy instrumentation
+        working-directory: project/research/general_n/2026-09-14-type-compressed-orientation-hall-v1
+        run: python3 make_compatible_copy_band_reach_scanner.py
+
+      - name: Add layered-receiver instrumentation
+        working-directory: project/research/general_n/2026-09-14-type-compressed-orientation-hall-v1
+        run: python3 make_layered_receiver_reach_scanner.py
+
+      - name: Add q-crossing instrumentation
+        working-directory: project/research/general_n/2026-09-14-type-compressed-orientation-hall-v1
+        run: python3 make_q_crossing_stats_scanner.py
+
+      - name: Add exact high-q-tail instrumentation
+        working-directory: project/research/general_n/2026-09-14-type-compressed-orientation-hall-v1
+        run: python3 make_q_tail_stats_scanner.py
+
+      - name: Compile scanner
+        working-directory: project/research/general_n/2026-09-14-type-compressed-orientation-hall-v1
+        run: g++ -O3 -std=c++17 -Wall -Wextra -pedantic scan_q_tail_stats.cpp -o scan_q_tail_stats
+
+      - name: Run pilot
+        run: |
+          project/research/general_n/2026-09-14-type-compressed-orientation-hall-v1/scan_q_tail_stats \
+            project/research/general_n/2026-09-13-alternative-attacks-v1/Q_TAIL_REACH_PILOT_INPUT.txt \
+            Q_TAIL_REACH_PILOT.tsv \
+            2>&1 | tee Q_TAIL_REACH_PILOT_REPLAY.txt
+
+      - name: Summarize and require frozen accounting
+        run: |
+          python3 - <<'PY'
+          import csv,json
+          rows=list(csv.DictReader(open('Q_TAIL_REACH_PILOT.tsv'),delimiter='\t'))
+          profiles=sum(int(r['profiles_tested']) for r in rows)
+          target=sum(int(r['targethall_fail']) for r in rows)
+          detected=sum(int(r['qtail_detected']) for r in rows)
+          missed=sum(int(r['qtail_missed']) for r in rows)
+          exact=sum(int(r['qtail_exact']) for r in rows)
+          nonexact=sum(int(r['qtail_nonexact']) for r in rows)
+          gap_sum=sum(int(r['qtail_gap_sum']) for r in rows)
+          gap_max=max(int(r['qtail_gap_max']) for r in rows)
+          if profiles!=201493148:
+              raise SystemExit(f'profile baseline changed {profiles}')
+          if target!=205919:
+              raise SystemExit(f'target-Hall baseline changed {target}')
+          if detected+missed!=target or exact+nonexact!=target:
+              raise SystemExit('q-tail accounting mismatch')
+          first={str(t):sum(int(r[f'qtail_first_t{t}']) for r in rows) for t in range(1,16)}
+          best={str(t):sum(int(r[f'qtail_best_t{t}']) for r in rows) for t in range(1,16)}
+          summary={
+            'schema':'high-q-tail-hall-reach-pilot-v1',
+            'states':len(rows),
+            'profiles_tested':profiles,
+            'target_hall_failure_profiles':target,
+            'tail_detected_profiles':detected,
+            'tail_missed_profiles':missed,
+            'tail_exact_minimum_profiles':exact,
+            'tail_nonexact_minimum_profiles':nonexact,
+            'tail_gap_sum':gap_sum,
+            'tail_gap_maximum':gap_max,
+            'first_deficient_threshold_histogram':first,
+            'best_threshold_histogram':best,
+            'promotion_status':'RECONNAISSANCE_ONLY',
+            'external_review':'OPEN',
+          }
+          open('Q_TAIL_REACH_PILOT_SUMMARY.json','w').write(json.dumps(summary,indent=2,sort_keys=True)+'\n')
+          print(json.dumps(summary,indent=2,sort_keys=True))
+          PY
+
+      - name: Upload evidence
+        uses: actions/upload-artifact@v4
+        with:
+          name: high-q-tail-hall-reach-pilot
+          path: |
+            project/research/general_n/2026-09-13-alternative-attacks-v1/Q_TAIL_REACH_PILOT_INPUT.txt
+            project/research/general_n/2026-09-13-alternative-attacks-v1/Q_TAIL_REACH_PILOT_INPUT_VERIFICATION.json
+            project/research/general_n/2026-09-14-type-compressed-orientation-hall-v1/scan_q_tail_stats.cpp
+            Q_TAIL_REACH_PILOT.tsv
+            Q_TAIL_REACH_PILOT_REPLAY.txt
+            Q_TAIL_REACH_PILOT_SUMMARY.json
