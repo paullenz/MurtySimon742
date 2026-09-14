@@ -1,0 +1,42 @@
+{
+  "claims_checked": [
+    "interval identity",
+    "labelled Hall-margin submodularity",
+    "dominance exchange inequality",
+    "maximum-cardinality minimizers are hardness up-sets",
+    "unrestricted minimum equals minimum over hardness up-sets"
+  ],
+  "exchange_checks": 263285,
+  "exhaustive_max_order": 5,
+  "exhaustive_profiles": 1286,
+  "exhaustive_universe": [
+    [0, 0, 0],
+    [0, 1, 1],
+    [1, 1, 0],
+    [1, 2, 1],
+    [1, 3, 2],
+    [2, 2, 1],
+    [2, 3, 0],
+    [2, 4, 2]
+  ],
+  "external_review": "OPEN",
+  "interval_checks": 101928,
+  "margin_evaluations": 221532,
+  "max_card_minimizers": 4286,
+  "note": "Independent finite arithmetic audit; not independent mathematical review of the Murty-Simon bridge.",
+  "profiles": 4286,
+  "profiles_with_negative_margin": 3556,
+  "random_profiles": 3000,
+  "result": "PASS",
+  "schema": "dominance-upset-hall-verification-v1",
+  "seed": 7420914,
+  "submodularity_checks": 1123108,
+  "upset_sets_checked": 92069,
+  "github_actions": {
+    "run_id": 34827519117,
+    "head_sha": "f9f317caa970677b3ef3bc6d09baa0db8cb9296a",
+    "artifact_id": 10339799796,
+    "artifact_sha256": "5e0977bedbd2615df54f4f31f95ec4847635355f10fad835257d92a65697bd21",
+    "conclusion": "success"
+  }
+}
