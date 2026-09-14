@@ -1,0 +1,96 @@
+name: priority proof replay and audit queue diagnostic
+
+on:
+  workflow_dispatch:
+  push:
+    paths:
+      - '.github/workflows/kick-short-verifiers.yml'
+
+# Read only. Never cancel/restart the long audit, alter evidence, or promote keys.
+permissions:
+  contents: read
+  actions: read
+concurrency:
+  group: priority-proof-replay-${{ github.ref }}
+  cancel-in-progress: false
+
+jobs:
+  replay:
+    # A fresh standard runner allocation on a different architecture, not a
+    # guarantee of scheduling priority or a bypass of account concurrency limits.
+    runs-on: ubuntu-24.04-arm
+    timeout-minutes: 15
+    env:
+      PYTHONOPTIMIZE: '0'
+    steps:
+      - uses: actions/checkout@v4
+      - name: Collect every audit job page without restarting completed work
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          mkdir -p /tmp/priority-replay
+          python3 - <<'PY'
+          import collections, datetime, json, os, pathlib, urllib.request
+          repo=os.environ['GITHUB_REPOSITORY']
+          assert repo=='paullenz/MurtySimon742'
+          base='https://api.github.com/repos/'+repo
+          def get(path):
+              req=urllib.request.Request(base+path,headers={'Authorization':'Bearer '+os.environ['GH_TOKEN'],'Accept':'application/vnd.github+json','X-GitHub-Api-Version':'2022-11-28'})
+              with urllib.request.urlopen(req,timeout=60) as r:return json.load(r)
+          runs={}
+          for rid in [34854911792,34880833888,34878019517,34876612516]:
+              run=get('/actions/runs/'+str(rid));jobs=[];page=1
+              while True:
+                  batch=get('/actions/runs/'+str(rid)+'/jobs?filter=latest&per_page=100&page='+str(page))
+                  jobs.extend(batch['jobs'])
+                  if len(batch['jobs'])<100:break
+                  page+=1
+              if len(jobs)!=batch['total_count']:raise RuntimeError('Pagination/attempt changed; do not claim complete snapshot')
+              slim=[{k:j.get(k) for k in ['id','name','status','conclusion','started_at','completed_at','runner_name','labels']} for j in jobs]
+              counts=dict(collections.Counter((j['status']+'/'+str(j['conclusion'])) for j in jobs))
+              runs[str(rid)]={'status':run['status'],'conclusion':run['conclusion'],'head_sha':run['head_sha'],'run_attempt':run['run_attempt'],'jobs_total':len(jobs),'counts':counts,'jobs':slim}
+              print(rid,run['status'],run['conclusion'],len(jobs),counts)
+          snapshot={'observed_utc':datetime.datetime.now(datetime.timezone.utc).isoformat(),'observer_run_id':os.environ['GITHUB_RUN_ID'],'observer_sha':os.environ['GITHUB_SHA'],'runs':runs,'promotion':'NONE; snapshot is not an audit aggregate'}
+          pathlib.Path('/tmp/priority-replay/QUEUE_SNAPSHOT.json').write_text(json.dumps(snapshot,indent=2,sort_keys=True)+'\n')
+          PY
+      - uses: actions/download-artifact@v4
+        with:
+          name: layered-receiver-exception-diagnostic
+          run-id: 34850187436
+          github-token: ${{ github.token }}
+          path: /tmp/priority-inputs/exceptions
+      - uses: actions/download-artifact@v4
+        with:
+          name: q-stratified-receiver-reach-pilot
+          run-id: 34859094097
+          github-token: ${{ github.token }}
+          path: /tmp/priority-inputs/pilot
+      - name: Replay both short verifiers with complete frozen-value checks
+        run: |
+          python3 - <<'PY'
+          import hashlib,json,pathlib,subprocess,sys
+          root=pathlib.Path('/tmp/priority-inputs');out=pathlib.Path('/tmp/priority-replay')
+          local=pathlib.Path('project/research/general_n/2026-09-14-localized-excess-v1')
+          priced=pathlib.Path('project/research/general_n/2026-09-14-q-tail-interval-budget-v1')
+          def unique(name):
+              paths=list(root.rglob(name));assert len(paths)==1,(name,paths)
+              return paths[0]
+          exc=unique('LAYER_EXCEPTION_DIAGNOSTIC.tsv');pilot=unique('Q_STRATIFIED_RECEIVER_REACH_PILOT_INPUT.txt')
+          expected=json.loads((local/'LOCALIZED_EXCESS_VERIFICATION.json').read_text())
+          assert hashlib.sha256(exc.read_bytes()).hexdigest()==expected['frozen_812']['exceptions_sha256']
+          assert hashlib.sha256(pilot.read_bytes()).hexdigest()==expected['frozen_812']['pilot_input_sha256']
+          cases=[('localized',local,'verify_localized_excess.py',expected,['--exceptions',str(exc),'--pilot-input',str(pilot)]),('priced',priced,'verify_priced_tail.py',json.loads((priced/'PRICED_TAIL_VERIFICATION.json').read_text()),[])]
+          for name,directory,script,frozen,args in cases:
+              (out/(name+'-expected.json')).write_text(json.dumps(frozen,indent=2,sort_keys=True)+'\n')
+              actual=out/(name+'-actual.json')
+              with actual.open('w') as handle:subprocess.run([sys.executable,script,*args],cwd=directory,stdout=handle,check=True)
+              assert json.loads(actual.read_text())==frozen,name+' frozen-value mismatch; preserve output and investigate'
+              print(name+': PASS, every frozen value agrees')
+          PY
+      - name: Preserve diagnostics and arithmetic on success or failure
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: priority-proof-replay-and-queue-diagnostic
+          path: /tmp/priority-replay
+          if-no-files-found: error
