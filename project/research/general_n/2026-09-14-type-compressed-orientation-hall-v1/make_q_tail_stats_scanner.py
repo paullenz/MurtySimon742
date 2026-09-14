@@ -67,12 +67,11 @@ if s.count(old)!=1:
 s=s.replace(old,new,1)
 
 old="<<r.qcross_hist[9]<<'\\t'<<r.cost_fail<<'\\t'\n"
+first=''.join(f"<<r.qtail_first_hist[{i}]<<'\\t'" for i in range(1,16))
+best=''.join(f"<<r.qtail_best_hist[{i}]<<'\\t'" for i in range(1,16))
 new=("<<r.qcross_hist[9]<<'\\t'<<r.qtail_detected<<'\\t'<<r.qtail_missed<<'\\t'"
      "<<r.qtail_exact<<'\\t'<<r.qtail_nonexact<<'\\t'<<r.qtail_gap_sum<<'\\t'<<r.qtail_gap_max<<'\\t'\n           "
-     +"<<'\\t'<<".join(f"r.qtail_first_hist[{i}]" for i in range(1,16))
-     +"<<'\\t'<<"
-     +"<<'\\t'<<".join(f"r.qtail_best_hist[{i}]" for i in range(1,16))
-     +"<<'\\t'<<r.cost_fail<<'\\t'\n")
+     +first+"\n           "+best+"<<r.cost_fail<<'\\t'\n")
 if s.count(old)!=1:
     raise SystemExit('TSV row point not unique')
 s=s.replace(old,new,1)
