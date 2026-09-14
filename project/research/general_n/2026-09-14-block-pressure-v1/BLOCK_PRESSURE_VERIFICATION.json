@@ -1,0 +1,30 @@
+{
+  "external_review": "OPEN",
+  "hostile": {
+    "distinct_systems": [
+      {"minimum": -1, "tail_margins": [0, 2, 1, 0]},
+      {"minimum": -1, "tail_margins": [2, 3, 3, 0]}
+    ],
+    "examples": 3,
+    "explicit_bridge_failures": ["r exceeds choose(a,2)", "selected-demand infeasibility", "S below r+2t"]
+  },
+  "incidence": {"configurations": 9293, "inequality_checks": 33356, "strict_top_relaxations": 2038},
+  "independent_brute": {"feasible": 579, "seed": 742091416, "trials": 2000},
+  "receiver": {"incoming_vectors": 14806, "instances": 1000, "seed": 742091417},
+  "schema": "demand-block-source-pressure-v1",
+  "synthetic": {
+    "certificates": [
+      {"certificate": {"capacity": 97, "demand": 91, "eta": 1, "free": 45, "gap": 105, "lower": 576, "penalty": 390, "tau": 4, "theta": 21, "upper": 471, "weight_rule": "three_above_q2"}, "prior_lower": 238, "prior_upper": 286, "row": 39},
+      {"certificate": {"capacity": 82, "demand": 81, "eta": 1, "free": 50, "gap": 62, "lower": 209, "penalty": 349, "tau": 4, "theta": 18, "upper": 147, "weight_rule": "three_above_q2"}, "prior_lower": 104, "prior_upper": 138, "row": 76},
+      {"certificate": {"capacity": 113, "demand": 104, "eta": 0, "free": 69, "gap": 12, "lower": 456, "penalty": 174, "tau": 4, "theta": 18, "upper": 444, "weight_rule": "three_above_q2"}, "prior_lower": 152, "prior_upper": 172, "row": 119},
+      {"certificate": {"capacity": 104, "demand": 93, "eta": 1, "free": 34, "gap": 7, "lower": 200, "penalty": 95, "tau": 3, "theta": 5, "upper": 193, "weight_rule": "uniform"}, "prior_lower": 259, "prior_upper": 275, "row": 406},
+      {"certificate": {"capacity": 101, "demand": 100, "eta": 1, "free": 51, "gap": 230, "lower": 617, "penalty": 559, "tau": 3, "theta": 24, "upper": 387, "weight_rule": "three_above_q2"}, "prior_lower": 258, "prior_upper": 270, "row": 664},
+      {"certificate": {"capacity": 89, "demand": 82, "eta": 1, "free": 28, "gap": 12, "lower": 621, "penalty": 351, "tau": 4, "theta": 18, "upper": 609, "weight_rule": "three_above_q2"}, "prior_lower": 261, "prior_upper": 279, "row": 682},
+      {"certificate": {"capacity": 54, "demand": 50, "eta": 1, "free": 27, "gap": 3, "lower": 114, "penalty": 93, "tau": 5, "theta": 9, "upper": 111, "weight_rule": "three_above_q2"}, "prior_lower": 125, "prior_upper": 156, "row": 688}
+    ],
+    "counts": {"newly_rejected": 7, "prior_rejected": 694, "profiles": 713, "unrejected": 12},
+    "input_sha256": "157db7e1f48261626eac8cb99bf875f4aec3b707d4c024f62989dd1bcec38572",
+    "unweighted_hand_certificate": {"Esel": 33, "capacity": 101, "delta": 6, "demand": 100, "eta": 1, "forced_low": 15, "free": 51, "gap": 19, "low_demand": 1, "lower": 209, "penalty": 183, "remaining_excess": 19, "row": 664, "smax": 4, "tau": 3, "theta": 8, "upper": 190},
+    "unrejected_rows": [108, 160, 240, 258, 295, 338, 342, 347, 365, 471, 570, 586]
+  }
+}
