@@ -1,0 +1,44 @@
+{
+  "claims_checked": [
+    "sharp-upset generators have distinct cross degrees",
+    "generator q is nondecreasing with increasing c",
+    "generator P strictly increases along equal-q plateaus",
+    "moving (q,P) threshold reconstructs every sharp hardness up-set exactly",
+    "staircase rectangle-count formula equals direct complete-type Hall margin"
+  ],
+  "distinct_c_checks": 69136,
+  "exhaustive_max_order": 5,
+  "exhaustive_profiles": 1286,
+  "exhaustive_universe": [
+    [0, 0, 0],
+    [0, 1, 1],
+    [1, 1, 0],
+    [1, 2, 1],
+    [1, 3, 2],
+    [2, 2, 1],
+    [2, 3, 0],
+    [2, 4, 2]
+  ],
+  "external_review": "OPEN",
+  "generator_histogram": {
+    "0": 4286,
+    "1": 17273,
+    "2": 25014,
+    "3": 16398,
+    "4": 5243,
+    "5": 864,
+    "6": 58
+  },
+  "generator_step_checks": 77285,
+  "max_generators": 6,
+  "membership_checks": 411436,
+  "note": "Independent finite arithmetic audit of the staircase representation; not third-party review of the Murty-Simon bridge.",
+  "profiles": 4286,
+  "random_profiles": 3000,
+  "reconstruction_checks": 69136,
+  "rectangle_margin_checks": 69136,
+  "result": "PASS",
+  "schema": "staircase-threshold-hall-verification-v1",
+  "seed": 7420914,
+  "upsets_checked": 69136
+}
