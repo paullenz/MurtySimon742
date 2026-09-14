@@ -1,10 +1,10 @@
 # Murty–Simon / Erdős #742 — current state handoff
 
-**14 September 2026. New checkpoint: demand-block and source-specific priced pressure. Proof `5616b33e452d62728f05a721b7fa5cb2724382ea`, verifier `56c8f230b7b0da6996a84392fa43d981fe65d964`, frozen output `479bc1faad29a4c95ebc4530238c46aabe08f0ea`, combined CI `82c544d9d8fc9ff991845adb9d7d74dacb1e715c`, all twelve retained profiles `e733028b9a60cb2d42e8db6dc7f3c88f11afaaa9`. Inspect newer commits and live CI before continuing.**
+**14 September 2026. Latest mathematical checkpoint: conditioned spill slack and the row-295 equality obstruction. Proof `ab132ffd4c82f50d4ffe2120e8167c861e7ba6a6`, executed verifier `0baedfab7df5870fdd8b475d7eed8163f075844f`, frozen result `73d06b1990b0995df7b78b2cf9226c730d6a9dcb`. Historical-source recovery `caaae9a6b6e5fc6d0bfacfd9185947037c95859f`; hash-strict materialization/CI `e50f4a95b2420835bc2aa8a50e3334e75a0da996`. Inspect newer commits and current run information before resuming.**
 
-Canonical repository: `paullenz/MurtySimon742`, ID `1359206057`. The complete preceding capped-spill handoff remains preserved [at commit e0f2c0a5](https://github.com/paullenz/MurtySimon742/blob/e0f2c0a555c6e8e9902df615114d1cd73918b38e/CURRENT_STATE.md). Its predecessor, priced-tail and earlier archival handoffs retain every prior derivation, experiment, counterexample and audit gate. The repository, not a chat transcript, is the durable source of truth.
+Canonical repository: `paullenz/MurtySimon742`, ID `1359206057`. The entire preceding block-pressure handoff is preserved verbatim in [CURRENT_STATE_PRE_CONDITIONED_2026-09-14.md](CURRENT_STATE_PRE_CONDITIONED_2026-09-14.md); the previous root overview is [README_PRE_CONDITIONED_2026-09-14.md](README_PRE_CONDITIONED_2026-09-14.md). Their earlier queue statuses and research priorities are historical. Begin with [RESEARCH_EVIDENCE_INDEX.md](RESEARCH_EVIDENCE_INDEX.md) for dependency and verification scope.
 
-## Canonical frontier and external review — unchanged
+## Canonical frontier and promotion boundary — unchanged
 
 ```text
 quantified whole-state closures: 977
@@ -12,162 +12,141 @@ canonical exclusions:           1,971
 canonical survivors:            3,607
   N34-derived:                  3,529
   N35-derived:                     78
-recovered relational candidates: 2,655 — NOT PROMOTED
+recovered relational candidates: 2,655 — UNPROMOTED
 ```
 
-The fixed-order candidates n=25 and n=27 through n=35, plus the general 7/12 maximum-degree candidate, are unchanged. External mathematical review, novelty assessment and third-party reproduction remain OPEN. Synthetic profiles and generalisation scalar states are not graphs or unresolved obligations in those fixed-order packages. Preserve both reviewer navigation surfaces.
+The fixed-order candidates n25 and n27 through n35 and the general 7/12 candidate theorem are unchanged; external mathematical review, novelty assessment and third-party reproduction remain OPEN. The synthetic profiles below are not graphs, whole canonical scalar states or unresolved obligations in those reviewer packages. Preserve both reviewer-navigation surfaces.
 
-Promotion of the 2,655 recovered candidates still requires every candidate covered, both relational implementations agreeing state by state, zero unresolved cases, a successful aggregate and a separate ledger-promotion commit. Keep N34/N35 provenance separate. Candidate discovery SHA256 remains `2c892301854660c8c1f73a13c4949ce2fb7e1e5706f9ecffbbe79f9483e71970`.
+Do not promote the recovered candidates. The required chain is exact coverage of all 2655 inputs, both relational implementations agreeing state by state, zero unresolved states, successful aggregate, then a separate reviewed ledger step. Preserve N34/N35 provenance and the existing closure-ledger validator. The discovery SHA256 remains `2c892301854660c8c1f73a13c4949ce2fb7e1e5706f9ecffbbe79f9483e71970`.
 
-## GitHub has made progress; do not trust old queue labels
+## CI and actual evidence inspected
 
-The short-verifier kick `34883538561` is now COMPLETED/SUCCESS. Its downloaded artifact `10363664441`, `priority-proof-replay-and-queue-diagnostic`, has archive SHA256 `91eabcde27e8a1a79d8e40ecbcacf826cb33519899fc2589a0981e6755690a5c`. Both complete parsed actual/expected JSON objects were compared locally: localized and priced outputs agree exactly.
+Capped-spill run `34885163695` was directly rechecked and has completed SUCCESS, including exact synthetic regeneration and its full frozen comparisons. Combined capped/block-pressure run `34887492789` has also completed SUCCESS. The downloaded combined artifact is `10364839603`, archive SHA256 `08b3df5892c99c5fb8acc728052e1355ffe51a3af2d6d965c248d2003fe0e5a1`. Both complete actual/expected JSON pairs were compared locally and agree.
 
-Its fully paginated snapshot was observed at **2026-09-14 19:17:44 UTC**:
+Its complete, 257-job audit snapshot is timestamped **2026-09-14 19:43:10.495414 UTC**:
 
 ```text
-relational audit 34854911792:
-  plan succeeded,
-  audit shards succeeded: 116
-  audit shards running:    11
-  audit shards queued:    129
-  total jobs:             257 (plan + 256 shards)
-  accepted aggregate:     NONE
+audit 34854911792:
+  successful plan:          1
+  successful audit shards:128
+  queued audit shards:    128
+  successful aggregate inspected: NONE
 ```
 
-This is a timestamped snapshot, not a current completion claim. It supersedes the old first-page account of only 29 visible successes. No failed shard appeared in that snapshot. The run-level label still said queued despite active and completed shards.
+This is NOT a current run-level inference or a claim of full audit completion. Earlier snapshots at 19:17 and 18:55 are preserved, not silently rewritten. Recheck every job page or a newer complete diagnostic before reporting current progress. Do not cancel/duplicate the full audit, restart successful or queued work, alter budgets/concurrency, or retry computational timeouts without review. Individual failed/cancelled jobs may be retried once only after their logs establish transient infrastructure failure. Hash or frozen-value disagreements are blockers.
 
-The same snapshot records completed success for dedicated q-tail run `34876612516`, repaired mincut `34878019517` and original localized run `34880833888`. The current capped-spill run `34885163695` was directly rechecked and still queued. Previously verified frozen-ledger `34875592126` and threshold `34871045562` successes remain separate from relational promotion.
+The new conditioned-verification/evidence-publication run is **34894544147**, job104145146205. It remained QUEUED at direct inspection. It is a new proof/preservation scope, not a retry of the large audit. It runs the full new verifier, checks every source/artifact hash, regenerates historical output bytes and publishes only verified data in the evidence directory. Do not claim remote PASS or completed durable publication before checking the run and committed materialization record. Its writes do not touch the promoted ledger.
 
-A fresh COMBINED capped-spill/block-pressure replay was triggered as **`34887492789`**, observed queued after creation. It regenerates the hash-pinned corpus, replays the complete prior capped-spill gate and new integer verifier, then records fully paginated before/after audit snapshots. It uses a single standard ARM runner, does not cancel or duplicate the 256-shard audit, and makes no scheduling-priority guarantee. Do not call the new proof remotely green before checking this run.
+The existing hourly GitHub automation remains separate from ongoing mathematical work; preserve its conservative retry and notification rules. Internal CI success is not external mathematical acceptance.
 
-An hourly conditional GitHub check was also scheduled at the user's request to keep GH moving. It only retries individual confirmed transient-infrastructure failures once; queued/running/successful jobs, mathematical discrepancies, hash failures and computational timeouts are not blindly retried. It cannot promote the ledger and should stop after relevant scopes complete. This does not imply ongoing autonomous mathematical research between chat turns.
-
-## Retained core notation and proof chain
+## Notation and retained canonical requirements
 
 ```text
 Q=r+2t+D0+Esel,
 D0=S-r-2t>=0,
 Esel=Q-S>=0,
-x_i=s_i+e_i,
-delta=b-a,
-c_u=q_u+rho_u<=a,
-rho_u>=1.
+x_i=s_i+e_i, e_i>=0,
+c_u=q_u+rho_u<=a, rho_u>=1,
+d_u=(p_u-rho_u+1)_+.
 ```
 
-Structural surplus is t, q-threshold tau, label-demand threshold eta. z counts zero-demand labels; never assume z<=Esel. Selected ui has s_i<=rho_u, and a selected POSITIVE-demand label forces
+`t` is structural surplus, `tau` a q threshold, `eta` a demand-block threshold. Never silently assume z<=Esel. Selected ui implies s_i<=rho_u; at a selected POSITIVE-demand label, d_u<=e_i. Retain all legitimate caps: incoming/residual, simple degree, exact potential-pair, selected excess, localized and all-source spill. Negative caps mean infeasibility, never clipping.
+
+The preceding source-specific charge envelope independently maximized the best sources for each label and the excess distribution. Its optimum was a safe UPPER bound, not a jointly realizable selected matrix. The new step couples the cap and this envelope to the SAME exact block-excess total.
+
+## New universal conditional lemma
+
+Read [the conditioned proof](project/research/general_n/2026-09-14-conditioned-excess-v1/README.md). For any label set L containing all zero-demand labels, with eligible source labels A_u={i:s_i<=rho_u}, put
 
 ```text
-d_u=(p_u-rho_u+1)_+ <= e_i.
+S_L=sum_{i in L}s_i,
+f_u=(q_u-|A_u outside L|)_+,
+M=sum_u f_u,
+m_u=|A_u intersect L|.
 ```
 
-Retain all legitimate target caps P: residual/incoming, simple-degree, exact potential-pair, selected-excess, localized and all-source-spill. Negative caps reject a branch and must not be clipped to zero. Define source pressure ceiling D_u=(P_u-rho_u+1)_+; actual d_u<=D_u<=delta.
-
-The capped-spill theorem, its 57>48 hand certificate, all 400,758 old inequality checks, 3,000 old independent prefix-DP comparisons and 812-case replay remain preserved in `2026-09-14-capped-spill-v1`. Those full old tests were NOT rerun locally during the new block-pressure session; the new combined CI explicitly reruns them.
-
-## New hand inequality: exclude low-positive-demand excess from a high-label charge
-
-Read [`project/research/general_n/2026-09-14-block-pressure-v1/README.md`](project/research/general_n/2026-09-14-block-pressure-v1/README.md).
-
-For eta>=0 set
+Fix the ACTUAL excess e_L on L and define J=S_L+e_L-M, E_H=Esel-e_L. Necessarily J>=0. If k_u counts actual low-block selections, then sum k=M+J and k_u>=f_u. Hence
 
 ```text
-L_eta={i:s_i<=eta}, m_eta=|L_eta|,
-v_u(eta)=(q_u-m_eta)_+,
-M_eta=sum_u(q_u-#{i:eta<s_i<=rho_u})_+,
-S_eta=sum_{i:s_i<=eta}s_i,
-B_eta=min(Esel,Esel+S_eta-M_eta).
+k_u<=kmax_u=min(q_u,m_u,f_u+J).
 ```
 
-Each source selects at least v_u(eta) labels above eta. All-source spill forces at least M_eta-S_eta excess onto low labels, so high-label excess is at most B_eta. B_eta<0 is infeasibility. With smax_eta=max high-label demand (zero for no high labels), the clean necessary inequality is
+Whenever q_u>kmax_u,
 
 ```text
-sum_u v_u(eta)(p_u-rho_u+1)_+
- <= B_eta[smax_eta+min(B_eta,delta)].
+p_u<=rho_u-1+floor(E_H/(q_u-kmax_u)).
 ```
 
-This generalizes the preceding zero-label subtraction to LOW POSITIVE demands and retains the two-defect budget via Esel=Q-r-2t-D0.
+The distinct selected labels outside L are positive-demand and each needs at least d_u excess. This proves the inequality. It neither assumes a q-tail theorem nor double-counts the source's forced spill.
 
-For arbitrary alpha_u>=0 there is a sharper source-cap bound:
+For L={s<=eta}, split exhaustively over integer e_L from max(0,M-S_L) to Esel. Use the resulting cap AND an exact e_L constraint in the top-source upper-envelope DP. Every actual incidence system lies in one such branch. Empty/full conditioning blocks have their explicit exact totals. Rejecting every branch excludes the profile; finding one non-rejected branch is not graph realization.
+
+## Hand resolution of row 295: equality would require 10<=8
+
+Row295 has a24,b28,Q109,r79,t1,D0=0,Esel28; demands are 1 twice, 2 three times, 3 three times and 4 sixteen times. Twelve sources with (q,rho)=(2,1) must select BOTH low labels. This forces low-label excess e_L>=22, leaving at most six above that block.
+
+The proof note and verifier give the exact source-ceiling score table: every label of demand2,3,4 with excess e<=6 contributes at most5e. The two demand-one labels contribute at most4(2+e_L). Thus actual selected charge C=sum q_u d_u satisfies
 
 ```text
-sum_u alpha_u v_u(eta)d_u
- <= sum_{i:s_i>eta} sum_{u selected at i} alpha_u min(e_i,D_u).
+C<=4(2+e_L)+5(28-e_L)<=126.
 ```
 
-For each candidate e_i, upper-bound the label contribution by the largest s_i+e_i values alpha_u min(e_i,D_u) among q_u>0,rho_u>=s_i. Maximize their sum over the previously justified integer total-excess, per-label and complete equal-demand-prefix constraints. This gives U(eta,alpha;P), a SAFE UPPER bound, exact only for that necessary projection. Top-source selections for different labels need not be jointly realizable; the relaxation direction is upper, not lower.
+The orientation balance gives sum d>=109-sum(rho-1)=58. All q>=2, exactly twelve q2 sources have d<=4, so C>=3*58-12*4=126. Feasibility forces equality everywhere. In particular e_L=22 and both low-label selected columns are completely filled by the twelve forced sources; every q>3 source has zero pressure.
 
-## Priced-tail coupling and the 209>190 certificate
+The four q3 sources would need total pressure10. None can use the already-filled low labels, so each selects three other distinct positive labels. Total excess there is only six; each q3 pressure is at most2, giving total at most8. Contradiction:10<=8.
 
-For interval incoming J_w(tau)=#{u!=w:tau<=q_u<=c_w+1}, set
+This is a short hand certificate, not a numerical optimizer claim. Additional singleton column bounds alone did not lower the old optimum126; that unsuccessful attempt is preserved in the exploration directory.
+
+## Exact finite branch coverage and tests
+
+The final verifier directly replays ALL twelve preceding non-rejections. It is standard-library code with source blob `412356d3585e2fda845434868e52653a58852aee`, matched against the locally executed file. It implements the new conditional cap/DP separately and uses prior modules only for earlier caps and receiver arithmetic.
 
 ```text
-A_w=min(P_w,J_w),
-f_w=min(A_w,rho_w-1),
-g_w=A_w-f_w,
-w_w=alpha_w(q_w-m_eta)_+.
+selected-incidence configurations: 9,293
+conditioned inequalities:          42,649
+independent brute comparisons:      2,000
+  nonempty projections:              143
+standing hostile examples:              3
+prior remainder inputs replayed:        12
+newly excluded sampled rows: 295,365,570
 ```
 
-Every actual graph orientation must satisfy, for every theta>=0,
+Complete exclusion branches:
 
 ```text
-theta(Q_tau-sum f_w)-sum_w(theta-w_w)_+g_w <= U(eta,alpha;P).
+row295: eta1, e_L22..28
+row365: eta1, e_L22..38
+row570: eta2, e_L43..49
 ```
 
-For alpha=1 the closed-form B_eta bound is another valid right side. All newly frozen certificates use the one-sided interval bound, not unproved exact reverse compatibility or tail-minimum equality.
+Every value in each stated range is rejected by total capacity, empty necessary projection or a strict integer price/envelope inequality. Examples include129>126,206>205 and242>241. All branch values, including non-excluding attempts for other profiles, are emitted by the full verifier.
 
-Synthetic row 664 gives a short unweighted hand contradiction:
+Cumulative sampled-corpus position: **704/713 rejected, nine not rejected**. Prior701 exclusions are retained; this new session does NOT claim a fresh independent generation of all713 profiles or a whole-state scan. Remaining rows:
 
 ```text
-a=24,b=30,t=1,D0=0,Esel=33,
-eta=1,M_eta=15,S_eta=1,B_eta=19,
-delta=6,smax_eta=4,
-upper=19(4+6)=190.
-
-tau=3,theta=8,Q_tau=100,sum A=101,sum f=51,
-penalty=183,
-required cost=8(100-51)-183=209>190.
+108,160,240,258,338,342,347,471,586.
 ```
 
-Nominal interval capacity exceeds demand, but financing it is impossible. No optimizer or integer-DP optimum is needed for this particular certificate.
+The preceding twelve full arrays remain committed in `2026-09-14-block-pressure-v1/REMAINDER_12.json`. No input was deleted to hide a failure.
 
-## Completed new verification and synthetic result
+## Documentation, exact output and preservation gates
 
-The new executed standard-library verifier imports no production C++ scanner. It reuses the preceding Python module only for old cap/baseline reconstruction. Its committed blob matches the locally executed file: `31973251dd7e3250f3ded9a3e3af903a35824020`.
+Use [REPRODUCE.md](project/research/general_n/2026-09-14-conditioned-excess-v1/REPRODUCE.md). The complete canonical JSON replay SHA256 is
 
 ```text
-actual incidence configurations:              9,293
-new inequality checks:                       33,356
-independent labelled-subset/excess comparisons: 2,000
-  nonempty / empty projections:            579 / 1,421
-receiver box instances:                       1,000
-receiver incoming vectors:                   14,806
-standing hostile examples:                       3
+7a29e4b93739f676fe2f11701235d0982d621b85b1086de7ece057723221455e
 ```
 
-The SAME 713-row corpus is used, SHA256 `157db7e1f48261626eac8cb99bf875f4aec3b707d4c024f62989dd1bcec38572`. It first reproduces the preceding 694 exclusions and exact 19 remaining row IDs. All eta, tau and price breakpoints are tested for alpha=1 and for alpha=1 at q<=2 / alpha=3 at q>2. The latter is an inequality coefficient choice, NOT an extra graph hypothesis.
+This binds unsuccessful branches too. `FROZEN_RESULT.json` includes all new exclusion certificates and explicitly marks omitted unsuccessful detail in its compact display; the full deterministic replay reconstructs all of it with committed inputs alone.
 
-```text
-additional rejected profiles: 7
-combined rejected:          701 / 713
-not rejected:                12 / 713
-new rows: 39,76,119,406,664,682,688
-```
+The [evidence-preservation package](project/research/general_n/2026-09-14-evidence-preservation-v1/README.md) recovers eleven original exploratory source files, a convenience prior copy and five full block-output objects from the portable bundles. Source blobs were checked byte-for-byte. Historical numerical multiplier failures remain non-proofs. Two large capped historical outputs were regenerated locally with exact original byte hashes. The new materializer also passed locally, checking17 source/output files, raw artifacts and the entire conditioned result.
 
-All seven certificates, including capacity/demand, prices, penalties, upper envelopes and strict gaps, are in `BLOCK_PRESSURE_VERIFICATION.json`. All TWELVE unrejected arrays are committed in `REMAINDER_12.json`:
+Raw corpus, original scanner, pilot/812 inputs, combined-CI outputs, full queue snapshots, the two large historical outputs and the complete conditioned replay are to be committed by the hash-strict seal workflow into `durable/`. Only an inspected successful committed `MATERIALIZATION_STATUS.json` establishes that publication. If the run remains queued, the dependency is explicit; do not call the repository archival work fully sealed. The portable session bundle retains all original inputs and outputs meanwhile.
 
-```text
-108,160,240,258,295,338,342,347,365,471,570,586.
-```
+Bad long encoded archive transfers were detected and removed from the working tree, with errors retained in Git history and `TRANSFER_ERRATUM.md`. They were never accepted as evidence. The mathematical verifier and frozen result remained intact. Readable replacements have matching original hashes; never weaken a hash gate to accept a transfer.
 
-This is NOT a seven-state reduction of the 3,607 frontier. The corpus is a sampled scalar/incidence/pair-flow relaxation; passing gives no graph-realizability evidence. No new 812-profile or 205,931-export replay was performed locally in this block session. The preceding larger observations remain preserved with their own provenance.
+## Next mathematical target and trust boundary
 
-## Failed extensions, red-team boundaries and next priority
+Enforce common excess totals across multiple demand blocks, or the joint incidence constraints lost by independently choosing each label's best sources. The nine remaining profiles are concrete boundary tests. A universal theorem must force a contradiction from full canonical structure, not from extrapolation of the sample.
 
-Source ceilings alone reject only row 664; demand blocks give six new rejections; the tested source weighting adds row 688. A bounded multiblock-weight search gave no additional rejection. An exploratory row-incidence Lagrangian search tightened some bounds but gave no additional certified exclusion of the tested twelve. It used floating optimization only for discovery and does not certify infeasibility or optimality. All exploratory code/results are retained in the portable bundle and their scope is recorded in the proof note.
-
-The standing hostile examples still have negative Hall minima and no deficient high-q tails. Their explicit bridge failures are residual/edge-ledger inconsistency, selected-demand infeasibility, and S<r+2t respectively. No z restriction was silently added.
-
-Row 295 reaches equality 126=126 in a source-cap charge bound. Audit whether equality forces incompatible actual selected incidences; this is a sharper next target than fitting more weights. More broadly attack joint residual/selected realizability of the twelve. Preserve the exact q-layer/mincut, crossing-wall and maximum-cut/stability fallbacks. Check fixed-q monotonicity before transferring witness theorems to new capacity models.
-
-Hand derivation, same-assistant independent implementation, local finite verification, remote CI, external mathematical review and third-party reproduction remain different statuses. Actual graph orientations satisfy Hall; a contradiction must be forced by OTHER canonical constraints. No timeout, queue label, missing output, failed search or floating status proves an exclusion. The canonical selected/residual bridge remains the principal correlated external-review dependency.
+Retain exact q-layer/mincut, crossing-wall/saturation and independent maximum-cut/stability routes and all hostile cases. Check monotonicity before transferring old witness theorems to new caps. Actual graph orientations satisfy Hall; other bridge constraints must force the contradiction. No queue label, timeout, missing output, failed numerical search or internal green run is an external proof. The canonical graph-to-selected/residual bridge remains the principal correlated review dependency.
