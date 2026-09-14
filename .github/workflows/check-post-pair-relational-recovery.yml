@@ -1,0 +1,24 @@
+name: check post-pair relational recovery
+
+on:
+  workflow_dispatch:
+  push:
+    paths:
+      - 'tools/check_post_pair_relational_recovery.py'
+      - 'project/research/general_n/2026-09-13-alternative-attacks-v1/POST_PAIR_RELATIONAL_RECOVERY_EXCLUDED.tsv'
+      - 'project/research/general_n/2026-09-13-alternative-attacks-v1/POST_PAIR_RELATIONAL_RECOVERY_AUDIT.json'
+      - 'project/research/general_n/2026-09-13-alternative-attacks-v1/POST_PAIR_RELATIONAL_RECOVERY.md'
+      - 'project/research/general_n/2026-09-13-alternative-attacks-v1/WHOLE_STATE_LEDGER.tsv'
+      - '.github/workflows/check-post-pair-relational-recovery.yml'
+
+jobs:
+  check:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Verify hash, provenance, IDs and ledger promotion
+        run: python3 tools/check_post_pair_relational_recovery.py
+      - name: Verify canonical ledger durability
+        run: python3 tools/check_n34_whole_state_ledger.py
+      - name: Verify headline counts are ledger-derived and synchronized
+        run: python3 tools/sync_generalisation_status.py
