@@ -1,0 +1,26 @@
+{
+  "claims_checked": [
+    "interval identity",
+    "Hall-margin submodularity",
+    "sharp exchange inequality",
+    "strict demand-gap exchange",
+    "maximum-cardinality minimizers are sharp hardness up-sets",
+    "unrestricted minimum equals minimum over sharp hardness up-sets"
+  ],
+  "exchange_checks": 372455,
+  "exhaustive_profiles": 1286,
+  "external_review": "OPEN",
+  "interval_checks": 101928,
+  "margin_evaluations": 221532,
+  "max_cardinality_minimizers": 4286,
+  "note": "Independent finite arithmetic audit; not independent mathematical review of the Murty-Simon bridge.",
+  "profiles": 4286,
+  "profiles_with_negative_margin": 3556,
+  "random_profiles": 3000,
+  "result": "PASS",
+  "schema": "sharp-dominance-upset-hall-verification-v1",
+  "seed": 7420914,
+  "strict_gap_checks": 126654,
+  "submodularity_checks": 1123108,
+  "upset_sets_checked": 69136
+}
