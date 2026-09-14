@@ -1,0 +1,84 @@
+name: scan staircase-band Hall reach pilot
+
+on:
+  workflow_dispatch:
+  push:
+    paths:
+      - 'project/research/general_n/2026-09-14-type-compressed-orientation-hall-v1/make_band_reach_scanner.py'
+      - '.github/workflows/scan-staircase-band-reach-pilot.yml'
+
+jobs:
+  pilot:
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Prepare same deterministic 1/256 pilot shard
+        working-directory: project/research/general_n/2026-09-13-alternative-attacks-v1
+        run: python3 prepare_pair_capacity_frontier.py --mod 256 --rem 16 --output BAND_REACH_PILOT_INPUT.txt
+
+      - name: Generate antichain scanner
+        working-directory: project/research/general_n/2026-09-14-type-compressed-orientation-hall-v1
+        run: python3 make_antichain_stats_scanner.py
+
+      - name: Add band reach instrumentation
+        working-directory: project/research/general_n/2026-09-14-type-compressed-orientation-hall-v1
+        run: python3 make_band_reach_scanner.py
+
+      - name: Compile scanner
+        working-directory: project/research/general_n/2026-09-14-type-compressed-orientation-hall-v1
+        run: g++ -O3 -std=c++17 -Wall -Wextra -pedantic scan_band_reach_stats.cpp -o scan_band_reach_stats
+
+      - name: Run pilot
+        run: |
+          project/research/general_n/2026-09-14-type-compressed-orientation-hall-v1/scan_band_reach_stats \
+            project/research/general_n/2026-09-13-alternative-attacks-v1/BAND_REACH_PILOT_INPUT.txt \
+            STAIRCASE_BAND_REACH_PILOT.tsv \
+            2>&1 | tee STAIRCASE_BAND_REACH_PILOT_REPLAY.txt
+
+      - name: Summarize band reach
+        run: |
+          python3 - <<'PY'
+          import csv,json
+          rows=list(csv.DictReader(open('STAIRCASE_BAND_REACH_PILOT.tsv'),delimiter='\t'))
+          target=sum(int(r['targethall_fail']) for r in rows)
+          bandfail=sum(int(r['band_fail']) for r in rows)
+          bandpass=sum(int(r['band_pass']) for r in rows)
+          if bandfail+bandpass!=target:
+              raise SystemExit(f'band accounting mismatch {bandfail}+{bandpass}!={target}')
+          hist={str(i):sum(int(r[f'band_fail_gen{i}']) for r in rows) for i in range(1,9)}
+          hist['9+']=sum(int(r['band_fail_gen9plus']) for r in rows)
+          if sum(hist.values())!=bandfail:
+              raise SystemExit('band-fail generator histogram mismatch')
+          summary={
+              'schema':'staircase-band-reach-pilot-v1',
+              'states':len(rows),
+              'profiles_tested':sum(int(r['profiles_tested']) for r in rows),
+              'target_hall_failure_profiles':target,
+              'band_detected_target_failures':bandfail,
+              'band_passed_despite_target_failure':bandpass,
+              'band_detection_fraction':bandfail/target if target else None,
+              'band_failure_generator_histogram':hist,
+              'max_generators_on_band_failure':max(int(r['band_maxgen']) for r in rows),
+              'relational_excluded':sum(r['status']=='RELATIONAL_EXCLUDED' for r in rows),
+              'survives_relational':sum(r['status']=='SURVIVES_RELATIONAL' for r in rows),
+              'promotion_status':'RECONNAISSANCE_ONLY',
+              'external_review':'OPEN',
+              'crosscheck':'Labelled target-flow failures must match sharp-dominance quotient max-flow; band flow is then measured as a necessary relaxation only.',
+          }
+          open('STAIRCASE_BAND_REACH_PILOT_SUMMARY.json','w').write(json.dumps(summary,indent=2,sort_keys=True)+'\n')
+          print(json.dumps(summary,indent=2,sort_keys=True))
+          PY
+
+      - name: Upload evidence
+        uses: actions/upload-artifact@v4
+        with:
+          name: staircase-band-reach-pilot
+          path: |
+            project/research/general_n/2026-09-13-alternative-attacks-v1/BAND_REACH_PILOT_INPUT.txt
+            project/research/general_n/2026-09-13-alternative-attacks-v1/BAND_REACH_PILOT_INPUT_VERIFICATION.json
+            project/research/general_n/2026-09-14-type-compressed-orientation-hall-v1/scan_band_reach_stats.cpp
+            STAIRCASE_BAND_REACH_PILOT.tsv
+            STAIRCASE_BAND_REACH_PILOT_REPLAY.txt
+            STAIRCASE_BAND_REACH_PILOT_SUMMARY.json
