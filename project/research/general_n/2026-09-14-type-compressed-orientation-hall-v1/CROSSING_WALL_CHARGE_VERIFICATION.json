@@ -1,0 +1,29 @@
+{
+  "hostile_counterexample": {
+    "C_q": 1,
+    "exterior_oversaturation_C": 2,
+    "minimizer_count": 2,
+    "minimum_margin": -1,
+    "removal_margin": -1,
+    "selected_slack_A": 1,
+    "tight_slack_neighbors": 1
+  },
+  "random_desert_degree_jump": {
+    "equal_m_pairs_checked": 21436,
+    "trials": 50000
+  },
+  "random_double_tightness": {
+    "crossing_pairs_checked": 363,
+    "profiles_with_crossing_pairs": 306,
+    "trials": 20000
+  },
+  "random_weighted_charge": {
+    "positive_blocks_checked": 371,
+    "positive_crossing_profiles": 371,
+    "trials": 30000
+  },
+  "result": "PASS",
+  "schema": "crossing-wall-charge-verification-v1",
+  "seed": 7420915,
+  "trust_boundary": "Finite deterministic testing supports but does not replace the hand proofs; external mathematical review remains open."
+}
