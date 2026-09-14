@@ -3,7 +3,8 @@
 
 The layer-specific whole-state ledgers are the source of truth. Historical
 frontier steps inside research notes are intentionally left untouched; only
-canonical/headline surfaces are synchronized.
+canonical/headline surfaces are synchronized. Rewriting is deliberately
+idempotent: already-normalized wording is accepted on subsequent runs.
 """
 from pathlib import Path
 import argparse
@@ -108,7 +109,7 @@ def rewrite_package(text, c, e, s, n34, n35, c34, c35):
     )
     text = sub_required(
         text,
-        r"The canonical \[`WHOLE_STATE_LEDGER\.tsv`\]\(WHOLE_STATE_LEDGER\.tsv\) contains \*\*[\d,]+ quantified whole-state exclusions\*\*\.",
+        r"The canonical \[`WHOLE_STATE_LEDGER\.tsv`\]\(WHOLE_STATE_LEDGER\.tsv\) contains \*\*[\d,]+ quantified (?:N34 )?whole-state exclusions\*\*\.",
         f"The canonical [`WHOLE_STATE_LEDGER.tsv`](WHOLE_STATE_LEDGER.tsv) contains **{commas(c34)} quantified N34 whole-state exclusions**.",
         "package canonical N34 ledger block",
     )
