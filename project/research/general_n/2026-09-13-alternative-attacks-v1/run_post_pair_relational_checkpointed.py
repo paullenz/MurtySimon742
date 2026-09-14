@@ -2,9 +2,9 @@
 """Run a relational frontier shard with durable per-state checkpoints.
 
 Discovery only. A timeout, process error, malformed output or missing output is
-recorded explicitly and is never treated as an exclusion. Each state is run in
-its own subprocess and written to disk before the next state starts, so a later
-job cancellation cannot erase already completed state results.
+recorded explicitly and is never treated as an exclusion. Each layer-state is
+run in its own subprocess and written to disk before the next one starts, so a
+later job cancellation cannot erase already completed mathematical results.
 """
 from pathlib import Path
 import argparse
@@ -30,9 +30,9 @@ def read_input(path: Path):
     states = lines[1:]
     if len(states) != n:
         raise SystemExit(f"shard input count mismatch: header={n} rows={len(states)}")
-    ids = [int(line.split()[1]) for line in states]
-    if len(ids) != len(set(ids)):
-        raise SystemExit("duplicate state id in shard input")
+    keys = [(int(line.split()[0]), int(line.split()[1])) for line in states]
+    if len(keys) != len(set(keys)):
+        raise SystemExit("duplicate layer-state key in shard input")
     return states
 
 
@@ -52,31 +52,38 @@ def write_results(path: Path, rows):
     tmp.replace(path)
 
 
-def parse_single_result(path: Path, expected_state: int):
+def parse_single_result(path: Path, expected_layer: int, expected_state: int):
     with path.open(newline="") as f:
         rows = list(csv.DictReader(f, delimiter="\t"))
     if len(rows) != 1:
         raise ValueError(f"expected one output row, got {len(rows)}")
     row = rows[0]
-    if int(row["state_id"]) != expected_state:
-        raise ValueError(f"state mismatch: expected {expected_state}, got {row['state_id']}")
+    key = (int(row["layer"]), int(row["state_id"]))
+    expected = (expected_layer, expected_state)
+    if key != expected:
+        raise ValueError(f"layer-state mismatch: expected {expected}, got {key}")
     if list(row.keys()) != RESULT_FIELDS:
         raise ValueError(f"unexpected output schema: {list(row.keys())}")
     return row
 
 
-def status_payload(shard, input_path, rows, unresolved, started):
+def status_payload(shard, input_path, total, rows, unresolved, started):
     return {
-        "schema": "post-pair-relational-checkpoint-shard-v1",
+        "schema": "post-pair-relational-checkpoint-shard-v2-layer-state",
         "shard": shard,
         "input": str(input_path),
-        "states_total": len(rows) + len(unresolved),
+        "states_total": total,
         "states_completed": len(rows),
         "relational_excluded": sum(r["status"] == "RELATIONAL_EXCLUDED" for r in rows),
         "survives_relational": sum(r["status"] == "SURVIVES_RELATIONAL" for r in rows),
         "unresolved": unresolved,
-        "completed_state_ids": [int(r["state_id"]) for r in rows],
-        "excluded_state_ids": [int(r["state_id"]) for r in rows if r["status"] == "RELATIONAL_EXCLUDED"],
+        "completed_keys": [
+            [int(r["layer"]), int(r["state_id"])] for r in rows
+        ],
+        "excluded_keys": [
+            [int(r["layer"]), int(r["state_id"])]
+            for r in rows if r["status"] == "RELATIONAL_EXCLUDED"
+        ],
         "elapsed_seconds": time.monotonic() - started,
         "trust_boundary": "Discovery only; exclusions require independent cross-implementation audit before promotion.",
         "external_review": "OPEN",
@@ -103,8 +110,9 @@ def main():
     started = time.monotonic()
 
     for index, line in enumerate(state_lines):
-        state = int(line.split()[1])
-        state_dir = outdir / f"state-{state}"
+        tok = line.split()
+        layer, state = int(tok[0]), int(tok[1])
+        state_dir = outdir / f"layer-{layer}-state-{state}"
         state_dir.mkdir(exist_ok=True)
         one_input = state_dir / "INPUT.txt"
         one_output = state_dir / "RESULT.tsv"
@@ -124,6 +132,7 @@ def main():
             replay.write_text(proc.stdout or "")
             if proc.returncode != 0:
                 unresolved.append({
+                    "layer": layer,
                     "state_id": state,
                     "reason": "PROCESS_ERROR",
                     "returncode": proc.returncode,
@@ -131,10 +140,11 @@ def main():
                 })
             else:
                 try:
-                    row = parse_single_result(one_output, state)
+                    row = parse_single_result(one_output, layer, state)
                     rows.append(row)
                 except Exception as exc:
                     unresolved.append({
+                        "layer": layer,
                         "state_id": state,
                         "reason": "MALFORMED_OUTPUT",
                         "detail": str(exc),
@@ -146,6 +156,7 @@ def main():
                 text = text.decode(errors="replace")
             replay.write_text(text)
             unresolved.append({
+                "layer": layer,
                 "state_id": state,
                 "reason": "STATE_TIMEOUT",
                 "timeout_seconds": args.state_timeout,
@@ -154,6 +165,7 @@ def main():
         except Exception as exc:
             replay.write_text(f"runner exception: {exc!r}\n")
             unresolved.append({
+                "layer": layer,
                 "state_id": state,
                 "reason": "RUNNER_EXCEPTION",
                 "detail": repr(exc),
@@ -163,15 +175,19 @@ def main():
         write_results(results_path, rows)
         atomic_write(
             status_path,
-            json.dumps(status_payload(args.shard, input_path, rows, unresolved, started), indent=2, sort_keys=True) + "\n",
+            json.dumps(
+                status_payload(args.shard, input_path, len(state_lines), rows, unresolved, started),
+                indent=2,
+                sort_keys=True,
+            ) + "\n",
         )
         print(
             f"checkpoint shard={args.shard} index={index+1}/{len(state_lines)} "
-            f"state={state} completed={len(rows)} unresolved={len(unresolved)}",
+            f"layer={layer} state={state} completed={len(rows)} unresolved={len(unresolved)}",
             flush=True,
         )
 
-    payload = status_payload(args.shard, input_path, rows, unresolved, started)
+    payload = status_payload(args.shard, input_path, len(state_lines), rows, unresolved, started)
     payload["finished"] = True
     atomic_write(status_path, json.dumps(payload, indent=2, sort_keys=True) + "\n")
     print(json.dumps(payload, indent=2, sort_keys=True))
