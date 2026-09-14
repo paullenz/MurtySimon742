@@ -34,10 +34,10 @@ Open, reproducible research on the Murty–Simon conjecture / Erdős Problem #74
 | Original synthetic sample | **708/713 rejected; five not rejected: 160,338,347,471,586.** Sample-level evidence only; no canonical whole-state promotion |
 | Fresh-seed sample | **708/715 rejected; seven retained in a separate namespace.** Unchanged by the row108 result |
 | Row108 verification | Local complete replay and remote workflow **34906766833 / job104185160249 SUCCESS**. The exact remote replay step completed successfully with the frozen 46,662 / 1,201 / 1,124 / 77 / 57,867 certificate counts |
-| Documentation guards | Status-sync run34906766824 and reviewer-navigation run34906766838 both SUCCESS on the row108 commit. N30 package run34906766832 FAILED after an earlier README condensation removed explicit frozen PDF paths; those links were restored. This checkpoint also restores and protects the hostile/red-team audit history in the root README |
+| Documentation guards | Status-sync run34906766824 and reviewer-navigation run34906766838 both SUCCESS on the row108 commit. N30 package run34906766832 FAILED after an earlier README condensation removed explicit frozen PDF paths; those links were restored. New red-team-history guard run **34908428824 FAILED** because `START_HERE_FOR_REVIEWERS.md` was outside rather than inside the protected reviewer block; this checkpoint adds it inside the block without weakening the guard |
 | Active continuation | Attack row471 `e_L=41` first with selected-label/destination plus ONE common residual-neighbourhood constraint; in parallel carry exact common-pressure/source-incidence across the five remaining original profiles |
 
-**Checkpoint — 15 September 2026, `restore-redteam-readme-history-v1`.** Inspected predecessor `54c6109990382eaeb71296bfc1aab9149c7e5ca0`. The reviewed relational promotion is preserved unchanged. This documentation-hardening checkpoint restores the substantive hostile/red-team audit history and the proof changes those audits caused, marks that history as protected, and extends the README CI guard plus repository standing orders against future silent compression. **Mathematical status unchanged: canonical finite frontier remains 4,626 exclusions / 952 survivors / 3,632 whole-state closures; fixed-order/general candidates and row108/row471 status are unchanged.** External mathematical review remains OPEN.
+**Checkpoint — 15 September 2026, `restore-redteam-readme-history-guard-fix-v1`.** Inspected predecessor `0484cb261f97b8dacf5acbf6b1efec41a98392c9`. The restored hostile/red-team history and additive-preservation standing orders are retained. The first strengthened README guard run `34908428824` failed because the start-here link existed only above the protected reviewer block; this repair duplicates that navigation inside the protected block and leaves the failed run recorded as failed. **Mathematical status unchanged: canonical finite frontier remains 4,626 exclusions / 952 survivors / 3,632 whole-state closures; fixed-order/general candidates and row108/row471 status are unchanged.** External mathematical review remains OPEN.
 <!-- RELATIONAL-FULL-PROMOTION:PROMOTED -->
 
 **Standing order:** every commit must update the current-status blocks in BOTH this README and [`CURRENT_STATE.md`](CURRENT_STATE.md), in the same atomic commit, including an explicit unchanged-mathematics statement when appropriate. Keep these fixed-order and general summaries near the top. README changes must be additive/reconciliatory: do not silently delete or materially compress substantive historical content, especially protected audit history, failures/corrections and reviewer navigation. See [`AGENTS.md`](AGENTS.md) and [`CANONICAL_REPOSITORY.md`](CANONICAL_REPOSITORY.md).
@@ -101,7 +101,7 @@ For row108, one fixed signed price vector closes24 of the32 block-total tuples s
 
 ## Failures and audit gates remain first-class evidence
 
-Do not quietly delete, relabel or retrospectively clean up a failed lemma, non-closing experiment, counterexample or CI event. The454/597 simultaneous-multiblock non-rejection remains a negative predecessor result. Source-price run34904353492 remains failed even though the exact restoration replay later succeeded. N30 run34906766832 remains failed because an earlier condensed README omitted explicit frozen PDF navigation; restoring the links does not repaint that run green. Sample exclusions never change the canonical frontier without the separate promotion gate.
+Do not quietly delete, relabel or retrospectively clean up a failed lemma, non-closing experiment, counterexample or CI event. The454/597 simultaneous-multiblock non-rejection remains a negative predecessor result. Source-price run34904353492 remains failed even though the exact restoration replay later succeeded. N30 run34906766832 remains failed because an earlier condensed README omitted explicit frozen PDF navigation; restoring the links does not repaint that run green. New README guard run34908428824 remains failed because the start-here link was outside the protected block; this repair does not repaint it green. Sample exclusions never change the canonical frontier without the separate promotion gate.
 
 The 2,655 recovered relational candidates completed full discovery and two-implementation audit, then the separate reviewed ledger step. All 2,655 are now ledger-promoted with pinned hashes and zero unresolved states. This finite closure family remains conditional on the canonical bridge and does not replace external specialist review.
 
@@ -109,6 +109,8 @@ The 2,655 recovered relational candidates completed full discovery and two-imple
 ## Papers and review materials
 
 This reviewer-facing navigation surface is protected. Detailed canonical status remains [`releases/REVIEW_READY_INDEX.md`](releases/REVIEW_READY_INDEX.md); new editions must update both surfaces rather than deleting this section.
+
+**Reviewer entry:** start with [`START_HERE_FOR_REVIEWERS.md`](START_HERE_FOR_REVIEWERS.md), then use the package index below.
 
 ### Fixed-order papers and packages
 
