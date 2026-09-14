@@ -1,0 +1,24 @@
+name: verify staircase-band Hall relaxation
+
+on:
+  workflow_dispatch:
+  push:
+    paths:
+      - 'project/research/general_n/2026-09-14-type-compressed-orientation-hall-v1/STAIRCASE_BAND_HALL.md'
+      - 'project/research/general_n/2026-09-14-type-compressed-orientation-hall-v1/verify_staircase_band_hall.py'
+      - '.github/workflows/verify-staircase-band-hall.yml'
+
+jobs:
+  verify:
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    steps:
+      - uses: actions/checkout@v4
+      - name: Run independent finite verifier
+        working-directory: project/research/general_n/2026-09-14-type-compressed-orientation-hall-v1
+        run: python3 verify_staircase_band_hall.py
+      - name: Upload verification record
+        uses: actions/upload-artifact@v4
+        with:
+          name: staircase-band-hall-verification
+          path: project/research/general_n/2026-09-14-type-compressed-orientation-hall-v1/STAIRCASE_BAND_HALL_VERIFICATION.json
