@@ -33,7 +33,7 @@ jobs:
       - id: plan
         name: Freeze candidate input and 256-shard matrix
         run: |
-          python3 - <<'PY' >> "$GITHUB_OUTPUT"
+          python3 - <<'PY'
           from pathlib import Path
           import csv, hashlib, json, os
           root=Path('discovery')
@@ -73,8 +73,10 @@ jobs:
           }
           Path('CANDIDATE_PLAN.json').write_text(json.dumps(prov,indent=2,sort_keys=True)+'\n')
           shards=256
-          print('shard_count='+str(shards))
-          print('matrix='+json.dumps({'shard':list(range(shards))},separators=(',',':')))
+          with open(os.environ['GITHUB_OUTPUT'],'a') as fh:
+              fh.write('shard_count='+str(shards)+'\n')
+              fh.write('matrix='+json.dumps({'shard':list(range(shards))},separators=(',',':'))+'\n')
+          print(json.dumps(prov,indent=2,sort_keys=True))
           PY
       - uses: actions/upload-artifact@v4
         with:
