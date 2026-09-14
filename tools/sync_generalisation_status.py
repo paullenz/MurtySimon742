@@ -11,6 +11,8 @@ import argparse
 import csv
 import re
 
+from sync_current_state_hall_20260914 import rewrite as rewrite_hall_current_state
+
 ROOT = Path(__file__).resolve().parents[1]
 BASE = ROOT / "project/research/general_n/2026-09-13-alternative-attacks-v1"
 N34_LEDGER = BASE / "WHOLE_STATE_LEDGER.tsv"
@@ -97,7 +99,8 @@ def rewrite_current(text, c, e, s, n34, n35, c34, c35):
             found_guard = True
     if not found_head or not found_guard:
         raise SystemExit("CURRENT_STATE canonical headline/guard not found")
-    return "\n".join(lines) + ("\n" if text.endswith("\n") else "")
+    text = "\n".join(lines) + ("\n" if text.endswith("\n") else "")
+    return rewrite_hall_current_state(text)
 
 
 def rewrite_package(text, c, e, s, n34, n35, c34, c35):
@@ -131,6 +134,12 @@ def expected_snippets(c, e, s, n34, n35, c34, c35):
         CURRENT: [
             f"**{commas(c)} quantified whole-state closures**, frontier **{commas(e)}/{commas(s)}** (`{commas(n34)}` N34-derived survivors plus `{commas(n35)}` N35-derived survivors)",
             f"currently verifies `{commas(c34)}` ledger states",
+            "<!-- HALL-STRUCTURE-2026-09-14:START -->",
+            "Exact type-level max-flow theorem",
+            "SHARP_DOMINANCE_UPSET_HALL.md",
+            "PRINCIPAL_UPSET_COUNTEREXAMPLE.md",
+            "34820187136",
+            "separate gated promotion only after agreement",
         ],
         PACKAGE: [
             f"**{commas(c34)} quantified N34-derived whole-state exclusions**",
