@@ -2,11 +2,59 @@
 
 **Purpose.** Durable restart point after chat reset, client desynchronisation or context loss. The repository, not any chat transcript, is the source of truth. Read this file first, inspect later `main` commits, then follow the linked packages.
 
-**Research state reconciled:** 14 September 2026 through the audited post-pair relational recovery promotion: **977 quantified whole-state closures**, frontier **1,971/3,607** (`3,529` N34-derived survivors plus `78` N35-derived survivors). Eighteen closures predate the large family; **943 further N34-derived scalar states** are protected by the cross-implementation potential-pair audit. External mathematical review, novelty assessment and genuinely independent third-party computational reproduction remain OPEN unless a later preserved checkpoint explicitly changes that status. Internal replay, same-assistant audit and repository publication are not external acceptance.
+**Research state reconciled:** 14 September 2026 through the audited post-pair relational recovery promotion and Hall-structure checkpoint: **977 quantified whole-state closures**, frontier **1,971/3,607** (`3,529` N34-derived survivors plus `78` N35-derived survivors). Eighteen closures predate the large family; **943 further N34-derived scalar states** are protected by the cross-implementation potential-pair audit. External mathematical review, novelty assessment and genuinely independent third-party computational reproduction remain OPEN unless a later preserved checkpoint explicitly changes that status. Internal replay, same-assistant audit and repository publication are not external acceptance.
 
 **Durability guard:** [`tools/check_n34_whole_state_ledger.py`](tools/check_n34_whole_state_ledger.py) protects the 18 earlier closures plus the hash-pinned **943-state** [`PAIR_CAPACITY_FRONTIER_EXCLUDED.tsv`](project/research/general_n/2026-09-13-alternative-attacks-v1/PAIR_CAPACITY_FRONTIER_EXCLUDED.tsv) family, checks ledger provenance, and currently verifies `977` ledger states. New closures may be added, but a later ledger/README rewrite must not silently remove any preserved closure.
 
 The temporary branches `threshold-family-scan` and `state279-proof` were reconciled into `main` by merge commit `566e064447a9cd54a8fa253c9049de0ffbc09efe`. Their histories remain preserved.
+
+<!-- HALL-STRUCTURE-2026-09-14:START -->
+## 14 September Hall-structure checkpoint
+
+**Status boundary.** The canonical promoted whole-state position remains **977 quantified closures, 1,971 exclusions / 3,607 survivors**. Nothing in this section changes that ledger count. The full post-pair relational scan is discovery/reconnaissance until its recovery pass and fresh cross-implementation audit complete; only a later separately gated promotion may change the headline frontier.
+
+### Exact target-Hall compression
+
+The current orientation/Hall package is [`project/research/general_n/2026-09-14-type-compressed-orientation-hall-v1/`](project/research/general_n/2026-09-14-type-compressed-orientation-hall-v1/README.md).
+
+- **Whole-type Hall theorem.** For fixed `(q,c,P)` data, every labelled Hall cut is represented exactly by type counts, and coordinatewise discrete concavity implies a minimum Hall margin is attained by a union of complete `(q,c,P)` type classes. GitHub Actions run `34820069162` is green; its frozen audit checked `14,330` profiles, `593,984` labelled/compressed cut equalities and `391,896` coordinate-concavity lines with zero discrepancies.
+- **Exact type-level max-flow theorem.** The full labelled target network is equivalent, by min-cut equality, to a quotient network on the distinct `(q,c,P)` types. The Hall-margin set function is submodular. GitHub Actions run `34821405958` is green. This gives exact small type-level certificates rather than labelled max-flow witnesses.
+- **Interval form.** Numerical directed compatibility is exactly intersection of source interval `[q,c]` with target interval `[q,c+1]`, before deletion of the self-arc. This is the correct replacement for the disproved one-dimensional Ferrers-prefix simplification.
+
+### Dominance and antichain structure
+
+- [`DOMINANCE_UPSET_HALL.md`](project/research/general_n/2026-09-14-type-compressed-orientation-hall-v1/DOMINANCE_UPSET_HALL.md) proves an exchange/up-set theorem for the initial hardness order `q` up, `c` down, `P` up. Its independent CI replay, run `34827519117`, is green; the preserved artifact digest is `sha256:5e0977bedbd2615df54f4f31f95ec4847635355f10fad835257d92a65697bd21`.
+- [`SHARP_DOMINANCE_UPSET_HALL.md`](project/research/general_n/2026-09-14-type-compressed-orientation-hall-v1/SHARP_DOMINANCE_UPSET_HALL.md) strengthens the exchange order to
+
+  ```text
+  x >=_* y  iff  c_x<=c_y
+                 and [q_x>q_y or (q_x=q_y and P_x>=P_y)].
+  ```
+
+  In particular, if `q_x>=q_y+2` and `c_x<=c_y`, **every** minimum Hall witness containing `y` also contains `x`, irrespective of `P`. The frozen same-assistant local audit is green on `4,286` profiles, with `1,123,108` submodularity checks, `372,455` sharp exchange checks and `126,654` strict-gap checks. A dedicated GitHub CI replay is present; until its result is separately frozen, this sharper statement must not be described as independently reproduced or externally reviewed.
+- The exact quotient network can be augmented with capacity-`Q+1` dominance-closure arcs without changing its min-cut value; see [`DOMINANCE_CLOSED_MAXFLOW.md`](project/research/general_n/2026-09-14-type-compressed-orientation-hall-v1/DOMINANCE_CLOSED_MAXFLOW.md).
+- [`CANONICAL_ANTICHAIN_CERTIFICATE.md`](project/research/general_n/2026-09-14-type-compressed-orientation-hall-v1/CANONICAL_ANTICHAIN_CERTIFICATE.md) records the next exact consequence: submodularity makes the minimum-margin cuts a lattice, so there is a unique maximal minimizer `M+`; it is a sharp-hardness up-set and is uniquely represented by its minimal antichain generators. This gives a canonical Hall-failure certificate and an exact staircase geometry for the boundary. Its dedicated independent arithmetic verifier is the current next audit target.
+
+### Preserved failed simplifications
+
+[`PRINCIPAL_UPSET_COUNTEREXAMPLE.md`](project/research/general_n/2026-09-14-type-compressed-orientation-hall-v1/PRINCIPAL_UPSET_COUNTEREXAMPLE.md) prevents a false next step. A three-type `V` profile has every principal up-set nondeficient but a two-generator up-set of margin `-1`; a four-type example needs three incomparable generators. Therefore neither single-type cuts nor one principal up-set is exact in general.
+
+The 15-state principal-upset reconnaissance pilot completed green as a computation but **is not a promotion certificate**: the full relational stack excluded `13/15` states, while principal up-sets completely explained only `2/13`. Principal up-sets killed `17,284` individual profiles versus `14,768` for single-type cuts, so they help pruning but do not capture the genuine multi-generator obstruction.
+
+### Full frontier relational scan
+
+The layer/state-safe full scan of the canonical `3,607` survivors is GitHub Actions run `34820187136`, head `3255c0641b00ae97c426d1e089a6b6c92c8300fc`. It uses per-state checkpointing and treats timeouts/errors as unresolved, never as exclusions. The downstream chain is:
+
+```text
+checkpointed discovery
+ -> layer-safe aggregate
+ -> long-budget recovery of every unresolved/unattempted state
+ -> fresh two-implementation state-by-state audit
+ -> separate gated promotion only after agreement.
+```
+
+A scan shard or preliminary relational exclusion is **not canonical evidence by itself**. N34 and N35 provenance are kept in separate ledgers to prevent layer-count drift. The correct structural priority while this scan proceeds is to analyse the sharp dominance **antichain boundary** of deficient type-level min-cuts, not to force the already-refuted principal-upset shortcut.
+<!-- HALL-STRUCTURE-2026-09-14:END -->
 
 ## Headline fixed-order candidate status
 
@@ -221,7 +269,7 @@ This table is now historical triage rather than the live frontier: **all seven s
 
 [`REFINED_H2_FAMILY_SCAN.md`](project/research/general_n/2026-09-13-alternative-attacks-v1/REFINED_H2_FAMILY_SCAN.md) contains nine structurally adjacent N34 records. At scan time five were closed and four were active: states `230,282,385,519`. **All four are now closed**; the canonical ledger records their whole-state status.
 
-The old refined-tail thresholds and intermediate gaps remain useful audit history, but neither this narrow family nor the seven-state extension ring contains a live target now. The old target ranking is superseded. The remaining **3,623-state** frontier should now be attacked with pair-choice/target Hall, selected-incidence Hall and excess-budget coupling after the cheap potential-pair screen.
+The old refined-tail thresholds and intermediate gaps remain useful audit history, but neither this narrow family nor the seven-state extension ring contains a live target now. The old target ranking is superseded. The historical 3,623-state frontier has since fallen to the canonical **3,607-state** frontier after the audited 16-state relational recovery. Current work uses the checkpointed relational discovery/recovery/audit pipeline described below.
 
 ## Independent maximum-cut route
 
@@ -246,33 +294,30 @@ Degree-preserving `2x2` repairs live in the **relaxed selected-incidence matrix*
 5. Preserve the complete seven-state extension outputs, not only the successful state-153 layer table, before relying on them downstream.
 6. Continue preserving failures, invalidated shortcuts, solver timeouts and publication/tooling mistakes. Never treat numerical infeasibility or noncompletion as proof.
 
+<!-- CURRENT-PRIORITIES-2026-09-14:START -->
 ## Current research priorities
 
-### P1. Convert potential-pair capacity into an all-order scalar theorem
+### P1. Characterise the canonical Hall antichain boundary
 
-Start from [`POTENTIAL_PAIR_CAPACITY.md`](project/research/general_n/2026-09-13-alternative-attacks-v1/POTENTIAL_PAIR_CAPACITY.md) and the threshold consequence [`LOW_C_HIGH_Q_CROSS_OBSTRUCTION.md`](project/research/general_n/2026-09-13-alternative-attacks-v1/LOW_C_HIGH_Q_CROSS_OBSTRUCTION.md):
+Start from [`SHARP_DOMINANCE_UPSET_HALL.md`](project/research/general_n/2026-09-14-type-compressed-orientation-hall-v1/SHARP_DOMINANCE_UPSET_HALL.md), [`DOMINANCE_CLOSED_MAXFLOW.md`](project/research/general_n/2026-09-14-type-compressed-orientation-hall-v1/DOMINANCE_CLOSED_MAXFLOW.md), and [`CANONICAL_ANTICHAIN_CERTIFICATE.md`](project/research/general_n/2026-09-14-type-compressed-orientation-hall-v1/CANONICAL_ANTICHAIN_CERTIFICATE.md). Verify the canonical maximal-mincut/antichain certificate independently, then seek further exact restrictions on the staircase generators. Do **not** assume a universal one- or two-generator bound: the preserved counterexamples rule those out in general.
 
-```text
-Q + ell_r*u_r <= binom(b,2)
-```
+### P2. Complete, recover and independently audit the 3,607-state relational scan
 
-for every integer `r`. Optimise this together with `q+rho<=a`, demand forcing and incoming/total-excess caps. The goal is a parameterised theorem, not further finite accumulation.
+Run `34820187136` is the layer/state-safe checkpointed discovery pass over the canonical survivor frontier. Let every shard complete; record every timeout/error as unresolved; recover all unresolved/unattempted layer-states with the long-budget pass; then freshly replay every discovery exclusion through both the vector and independent type-count implementations. Only a later separately gated certificate promotion may change the canonical `1,971/3,607` headline.
 
-### P2. Rescan the residual 3,623-state frontier with stronger relational machinery
+### P3. Explain the N35-derived layer
 
-Potential-pair capacity has already removed 943 current states. On the survivors, escalate in cost order: pair-choice Hall, target-capacity Hall, selected-incidence Hall, then the weighted excess-budget min-cost coupling. Preserve exact residual structure and use it to select the next theorem target.
+Keep N34 and N35 closure ledgers separate. Compare the 78 N35-derived survivors against eliminated N34 profiles under the exact type-Hall, sharp-dominance and antichain descriptions. The goal is to identify a structural parameter that explains the layer difference, not merely to accumulate N35 exclusions.
 
-### P3. Diagnose the 78 N35-derived survivors
+### P4. Strengthen independent review and reproduction
 
-The 943-state family contains no N35-derived closure. Compare their `(q,c,rho,s)` structure with the eliminated N34 population to identify the structural feature missing from the present potential-pair theorem.
+Prioritise external checking of the canonical bridge, exact directed compatibility, whole-type Hall theorem, type-level max-flow equivalence, total-excess source cap, potential-pair theorem and the new dominance/antichain arguments. Repository CI and separately written same-assistant code are internal evidence, not third-party acceptance.
 
-### P4. Strengthen independent audit and reproduction
+### P5. Preserve genuinely different routes
 
-Prioritise external checking of the canonical bridge, directed compatibility, total-excess source cap and potential-pair theorem. The two internal frontier implementations agree exactly on all 943 exclusions, but same-assistant independent code remains internal replay evidence.
+Continue maximum-cut/stability, selection-free and other independent approaches when they have leverage. Preserve negative results such as the coarse low-residual-reservoir scan and every counterexample to an over-strong simplification. Never infer proof from timeout, numerical infeasibility or a solver status alone.
+<!-- CURRENT-PRIORITIES-2026-09-14:END -->
 
-### P5. Continue independent routes and preservation
-
-Continue maximum-cut/stability, selection-free and other genuinely different approaches. Preserve failures, counterexamples, solver timeouts and corrected interpretations; never infer proof from timeout or numerical infeasibility alone.
 ## Research/preservation rules
 
 The standing orders in [`project/N25_PROJECT_STANDING_ORDERS.md`](project/N25_PROJECT_STANDING_ORDERS.md) remain binding. In particular:
@@ -315,12 +360,14 @@ The coarse low-residual-reservoir theorem was also scanned over the pre-promotio
 
 **Next priority:** run the checkpointable relational machinery over the remaining ledger-current survivor frontier, preserving per-state artifacts and promoting only cross-checked closures; in parallel, extract symbolic two-dimensional Hall/dominance consequences that could replace finite scanning by a general theorem.
 
+<!-- ACTIVE-RELATIONAL-2026-09-14:START -->
 ## 14 September 2026 — active post-pair relational programme
 
-The **canonical promoted frontier remains `1,971 exclusions / 3,607 survivors`**. A stronger post-pair relational discovery programme is running over those 3,607 ledger-current scalar survivors, but its discoveries are deliberately **not canonical closures** until they pass fresh cross-implementation audit and frozen-certificate promotion.
+The **canonical promoted frontier remains `1,971 exclusions / 3,607 survivors`**. A stronger post-pair relational programme is running over those 3,607 ledger-current scalar survivors, but its discoveries are deliberately **not canonical closures** until they pass full coverage/recovery, fresh cross-implementation audit and a separately gated promotion.
 
-The execution chain is documented in [`POST_PAIR_RELATIONAL_FULL_FRONTIER.md`](project/research/general_n/2026-09-13-alternative-attacks-v1/POST_PAIR_RELATIONAL_FULL_FRONTIER.md): checkpointed per-state discovery, explicit timeout/error recording, a long-budget recovery pass for every unresolved or unattempted layer-state, then fresh primary and independent type-count replay of every discovery exclusion. N34 and N35 whole-state promotions use separate ledgers so layer provenance cannot be silently conflated.
+The current layer/state-safe discovery run is GitHub Actions run `34820187136` at head `3255c0641b00ae97c426d1e089a6b6c92c8300fc`. It checkpointed every state separately and identifies every record by `(layer,state)`, so later timeout/cancellation cannot erase earlier completed evidence or conflate N34 and N35 IDs. The earlier run `34818390230` is preserved as historical reconnaissance but is not the authoritative full-frontier discovery pass.
 
-The intended canonical discovery experiment is GitHub Actions run `34818390230` at head `94f89d5d0147842f9d0c2e10606d2117e62400f5`. A later duplicate full scan was accidentally queued before the expensive workflow was made manual-only; it has no canonical status and cannot promote anything. All future full-frontier discovery launches are explicit `workflow_dispatch` operations.
+The execution chain is documented in [`POST_PAIR_RELATIONAL_FULL_FRONTIER.md`](project/research/general_n/2026-09-13-alternative-attacks-v1/POST_PAIR_RELATIONAL_FULL_FRONTIER.md): checkpointed discovery, layer-safe aggregation, explicit unresolved accounting, long-budget recovery of every unresolved/unattempted layer-state, then fresh primary and independent type-count replay of every candidate exclusion. N34 and N35 promotions use separate ledgers.
 
-The dominant structural lesson from early reconnaissance is that the exact **directed target-Hall** layer is much stronger than the older one-dimensional threshold projection. This motivated the [whole-type orientation Hall theorem](project/research/general_n/2026-09-14-type-compressed-orientation-hall-v1/README.md): arbitrary labelled target-Hall cuts reduce exactly to unions of complete `(q,c,P)` types. Its frozen internal verifier checked `14,330` profiles, `593,984` labelled/compressed cut equalities and `391,896` coordinate-concavity lines with zero discrepancies. These are internal checks, not external acceptance.
+In parallel, the target-Hall layer has been converted from an opaque labelled max-flow obstruction into exact type-level structure: complete types, quotient max-flow, submodular Hall margin, sharp hardness up-sets, dominance-closed min-cut, and now a canonical antichain boundary. The preserved principal-upset counterexample shows that genuine multi-generator antichains are necessary. The next structural task is therefore to verify and characterise that canonical antichain certificate while the finite scan completes.
+<!-- ACTIVE-RELATIONAL-2026-09-14:END -->
