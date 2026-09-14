@@ -1,129 +1,70 @@
 # Murty–Simon / Erdős Problem #742
 
-Open, reproducible research on the Murty–Simon conjecture / Erdős Problem #742. **Updated 14 September 2026 through the interval-tail budget and localized selected-excess cap, including proof `449a268f93600d78660e02b09d65e5304a2ca0bf`, frozen evidence `cbe1076c87b1cb1eccff409a14dcac7839fd9de6` and replay workflow `e7618ca2caa6438beea5b613638d9fa45297705b`.**
+Open, reproducible research on the Murty–Simon conjecture / Erdős Problem #742. **Updated 14 September 2026 through the priced-tail budget and localized fixed-threshold checkpoint `57d7c1e7f7f786bcb77f15c7957765970901715d`.**
 
-The canonical promoted finite frontier remains **1,971 exclusions / 3,607 survivors**, with **977 quantified whole-state closures**. The **2,655 recovered relational candidate exclusions remain unpromoted**. The unrestricted conjecture is **not claimed proved**. Independent mathematical review, novelty assessment and genuinely independent third-party computational reproduction remain OPEN.
+The promoted finite frontier remains **1,971 exclusions / 3,607 survivors**, with **977 quantified whole-state closures**. The **2,655 recovered relational candidates remain unpromoted**. The unrestricted conjecture is **not claimed proved**. Independent mathematical review, novelty assessment and third-party computational reproduction remain OPEN.
 
-**Canonical repository:** `paullenz/MurtySimon742`; see [`CANONICAL_REPOSITORY.md`](CANONICAL_REPOSITORY.md). **Research restarts:** read [`CURRENT_STATE.md`](CURRENT_STATE.md), then inspect newer commits. The repository, not a chat transcript, is the durable source of truth.
+**Canonical repository:** `paullenz/MurtySimon742`; see [`CANONICAL_REPOSITORY.md`](CANONICAL_REPOSITORY.md). **Restarts:** read [`CURRENT_STATE.md`](CURRENT_STATE.md), then inspect newer commits and live CI. The repository, not a chat transcript, is the durable source of truth.
 
-**External reviewers:** start with [`START_HERE_FOR_REVIEWERS.md`](START_HERE_FOR_REVIEWERS.md) and [`releases/REVIEW_READY_INDEX.md`](releases/REVIEW_READY_INDEX.md). The project welcomes hostile review, counterexamples, literature corrections and independent reproduction. GitHub Issues are the preferred place to report a suspected flaw.
+**External reviewers:** begin with [`START_HERE_FOR_REVIEWERS.md`](START_HERE_FOR_REVIEWERS.md) and [`releases/REVIEW_READY_INDEX.md`](releases/REVIEW_READY_INDEX.md). Hostile review, counterexamples, literature corrections and independent reproduction are welcome.
 
-The earlier README is preserved verbatim in [`README_EARLIER_2026-09-14.md`](README_EARLIER_2026-09-14.md), including historical statistics, older priorities and route chronology. Its live-status statements are superseded by this page and the current handoff. The protected reviewer index below is retained unchanged.
+The full immediately preceding overview is preserved verbatim in [`README_PRE_PRICED_2026-09-14.md`](README_PRE_PRICED_2026-09-14.md), including the detailed exact q-layer, interval, selected-loss and localized-cap derivations and earlier statistics. Earlier archives and Git history remain intact. The protected reviewer index below is retained.
 
 ## How this research develops general theory
 
-Specific graph orders serve as laboratories for structural principles, not as a substitute for an all-order proof. The [canonical graph-to-constraint bridge](project/research/general_n/2026-09-11-canonical-bridge-v1/CANONICAL_BRIDGE.md) translates graph structure into selected/residual incidences, label demands, source loads, destination caps and missing-pair constraints.
+Specific graph orders are laboratories for structural principles, not a substitute for an all-order proof. The [canonical graph-to-constraint bridge](project/research/general_n/2026-09-11-canonical-bridge-v1/CANONICAL_BRIDGE.md) translates a hypothetical graph into selected quasi-edge representatives, residual incidences, demands, missing-pair loads and target capacities. We retain the exact notation a=n-1-Delta, b=Delta and structural surplus t=e(G)-b(a+1).
+
+The cycle is exact constraints, finite experiments, hand-theorem extraction, immediate hostile tests, separately structured verification, then return to the symbolic inequality. Failed approaches, bugs, counterexamples and audit challenges are preserved. Surviving any relaxation never implies graph realizability.
+
+## New main result: a tail can be feasible but too expensive
+
+Read the [priced-tail hand derivation and certificate](project/research/general_n/2026-09-14-q-tail-interval-budget-v1/PRICED_TAIL_BUDGET.md). It combines the [interval budget](project/research/general_n/2026-09-14-q-tail-interval-budget-v1/README.md) with the concurrent [localized selected-excess cap](project/research/general_n/2026-09-14-localized-excess-v1/README.md).
+
+Keep the bridge quantities distinct:
 
 ```text
-a=n-1-Delta,
-b=Delta,
-t=e(G)-b(a+1).
+D0=S-r-2t>=0,
+Esel=Q-S>=0,
+Q=r+2t+D0+Esel.
 ```
 
-The working cycle is graph structure, exact constraints, finite experiments, structural theorem extraction, hostile counterexample search, separately structured verification, and return to the all-order inequality. Failed approaches, bugs, counterexamples and audit challenges remain preserved. Survival of a relaxation never implies graph realizability.
-
-## Current mathematical route
-
-### 1. Exact q-stratified minimum, not pointwise crossing elimination
-
-The [q-stratified minimum-cut theorem](project/research/general_n/2026-09-14-type-compressed-orientation-hall-v1/Q_STRATIFIED_MINCUT_EXACTNESS.md) derives, under its fixed-q cap monotonicity hypotheses,
+For z zero-demand labels, put v_w=(q_w-z)_+. Distinct selected labels and canonical positive-demand endpoint forcing give the shared budget
 
 ```text
-min_S [H(S)-D(S)] = min_S [U_q(S)-D(S)].
+sum_w v_w(p_w-rho_w+1)_+ <= Esel(Esel+smax),
+smax=max_i s_i.
 ```
 
-This is compatible with positive crossing statistic C_q on particular source sets, even the maximal minimizer. The old requirement to prove C_q(M+)=0 is no longer a prerequisite for an exact q-stratified minimum. Do not conflate pointwise equality with equality of minima.
-
-The [type-complete witness corollary](project/research/general_n/2026-09-14-type-compressed-orientation-hall-v1/Q_STRATIFIED_TYPE_COMPLETE_WITNESS.md) and [q-layer threshold normal form](project/research/general_n/2026-09-14-type-compressed-orientation-hall-v1/Q_LAYER_THRESHOLD_NORMAL_FORM.md) express that minimum through type sets, cap tails, source order statistics and two-dimensional histogram rectangle counts. Their exact scope remains the target-Hall relaxation, not graph realizability.
-
-These are preserved hand derivations with local finite verification. Threshold CI `34871045562` is green. The corrected minimum-cut CI replay `34878019517` was still queued at recheck. Its predecessor `34868771056` completed the mathematical verifier but failed on JSON list formatting in a raw text comparison; this is a workflow-comparison problem, not a mathematical counterexample. The fix retains all frozen value checks.
-
-### 2. High-q tails and interval budgets: useful, not a universal theorem
-
-The frozen 812 difficult profiles all have deficient high-q tails. However, the [preserved red-team correction](https://github.com/paullenz/MurtySimon742/commit/93c9e8995c57e69c238396f20641a0dc84bb4754) shows that arbitrary monotone caps, the current cap formula alone, and even selected-incidence feasibility without the global bridge ledger do not imply tail sufficiency. The zero-demand count z must not be incorrectly restricted by z<=E.
-
-The [interval-tail package](project/research/general_n/2026-09-14-q-tail-interval-budget-v1/README.md) now gives a sufficient adaptive threshold inequality, with exact reverse-compatibility correction. Its committed replay detects all 205,919 old target-Hall failures in the original 15-state pilot using the interval bound; 32 profiles have a strict interval/exact gap at some threshold. This is finite reconnaissance with shared generation and independently implemented arithmetic, not a universal interval-exactness or tail-sufficiency theorem.
-
-The original q-stratified artifact from run `34859094097` has also been retrieved: all 205,919 failures have C_q=0. This finite observation is separate from pointwise or minimum-cut theorems. The dedicated q-tail CI run `34876612516` must still be checked independently; its queued status must not erase the separately preserved completed local replay evidence.
-
-The interval package preserves an exact three-profile certificate showing that no common nonnegative weighting detects every one of the 812 profiles with the OLD capacities. Adaptive thresholds remain viable. Its synthetic scalar/incidence relaxation also has target-Hall passes, proving that those weaker hypotheses alone cannot force a deficient tail on every profile.
-
-The narrowed full-bridge q-tail question remains OPEN. The full q-layer threshold representation and crossing-wall route remain available.
-
-### 3. Exact two-defect bridge and weighted pressure
-
-The [two-defect decomposition](project/research/general_n/2026-09-14-type-compressed-orientation-hall-v1/BRIDGE_TWO_DEFECT_DECOMPOSITION.md) separates two historically conflated quantities:
+At q-threshold tau, let Q_tau be the tail demand and let A_w be the available interval incoming capacity after all legitimate target caps, including localized caps. Put f_w=min(A_w,rho_w-1) and g_w=A_w-f_w. Every graph-derived orientation necessarily satisfies, for every price theta>=0,
 
 ```text
-D0 = S-r-2t >= 0,       zero-demand bridge deficit,
-Esel = Q-S >= 0,        selected excess,
-Q = r+2t+D0+Esel.
+theta*(Q_tau-sum_w f_w)
+ -sum_w(theta-v_w)_+ g_w <= Esel(Esel+smax).
 ```
 
-The [summed high-q-tail pressure note](project/research/general_n/2026-09-14-type-compressed-orientation-hall-v1/SUMMED_Q_TAIL_PRESSURE.md) gives exact weighted layer-cake inequalities. A single quadratic projection is not a substitute for adaptive thresholds. Structural surplus is t; q-thresholds are tau.
+A strict violation is a contradiction even when no high-q tail is Hall-deficient. The exact hypotheses, pointwise price proof, zero-demand treatment and finite verifier are in the linked note. This is not a claimed all-order theorem forcing such a violation; its graph application inherits the canonical bridge's external-review boundary.
 
-### 4. Selected-excess tail-loss budget
+### Fixed-threshold evidence and the 80>77 certificate
 
-The [hand derivation](project/research/general_n/2026-09-14-type-compressed-orientation-hall-v1/SELECTED_EXCESS_TAIL_LOSS_BUDGET.md) converts the selected-excess receiver cap into an exact short sum of high-q tail losses. Put k=b-a-1>=0, E=Esel, z=#{i:s_i=0}, and N(h)=#{u:q_u>=h}. Define
+With the stronger localized caps, **the single threshold tau=3 detects all 812 difficult profiles**, with minimum deficiency 1 and maximum 15. This is a finite certificate, not a universal tau=3 theorem. The exact obstruction to common nonnegative weights remains preserved for the OLD cap model; it does not transfer to stronger caps.
 
-```text
-h_j(E,z)=min(E,z)+floor(max(E-z,0)/j)+1,
-L_E=sum_{j=1}^{k+1} N(h_j(E,z)).
-```
+Reconstructing localized caps on all **205,931 OLD exported profiles** makes tau=3 deficient in **205,930**. The remaining profile, associated with state 4073, has a tight tail: demand and capacity both 56. Filling it requires selected-excess cost at least **80**, while the canonical budget permits only **77**. The explicit price theta=7 proves the contradiction without a min-cost-flow computation.
 
-With L_K the additional, non-double-counted potential-pair cap loss,
+The last profile was already rejected by the old cost screen; the advance is a short hand certificate explaining it. These are old exported rows with shared generation and early stopping, **not regenerated complete state searches**. Rejecting old stopping witnesses requires exploring omitted continuations before a whole-state claim. No frontier count changes.
 
-```text
-2t+D0+E+L_E+L_K <= bk
-```
+The new standard-library verifier checks 1,329 receiver profiles / 5,109 feasible demand values, 9,293 selected-incidence configurations including zero demands, and the exact 80>77 fixture. A separate integer-only reconstruction verifies the 812-case fixed threshold. Code, frozen outputs, source hashes and reproduction instructions are committed.
 
-is necessary. For every source set A0 the exact Hall margin is
+On the earlier 713 synthetic scalar/incidence/pair-flow relaxations, the stronger tests reject 652 but leave **61 not rejected**. The examples are preserved. Neither a universal contradiction nor graph realizability follows from these tests.
 
-```text
-H(A0)-D(A0)
- = bk-(2t+D0+E)-L_E-L_K+q_out(A0)-V(A0),
-```
+## Retained exact routes and negative results
 
-where V is receiver capacity unused by A0 and q_out is demand outside A0.
+The [q-stratified minimum theorem](project/research/general_n/2026-09-14-type-compressed-orientation-hall-v1/Q_STRATIFIED_MINCUT_EXACTNESS.md), [type-complete witness corollary](project/research/general_n/2026-09-14-type-compressed-orientation-hall-v1/Q_STRATIFIED_TYPE_COMPLETE_WITNESS.md) and [q-layer threshold normal form](project/research/general_n/2026-09-14-type-compressed-orientation-hall-v1/Q_LAYER_THRESHOLD_NORMAL_FORM.md) remain exact fallbacks under their stated hypotheses. Equality of minima is not pointwise equality or a requirement that C_q(M+)=0. Check fixed-q monotonicity before transferring old canonical-witness results to modified caps.
 
-This turns the existing aggregate cap screen into a hand-usable threshold budget and identifies exactly what additional cut-specific shortage is needed. **It is not an extra computational exclusion beyond the existing sum-P screen.**
+The [selected-excess tail-loss budget](project/research/general_n/2026-09-14-type-compressed-orientation-hall-v1/SELECTED_EXCESS_TAIL_LOSS_BUDGET.md) rewrites old cap losses exactly; the localized cap adds genuinely stronger bridge information. The [hostile q-tail cases](project/research/general_n/2026-09-14-type-compressed-orientation-hall-v1/MURTY_Q_TAIL_HALL_CONJECTURE.md), old fixed-weight obstruction, 32 frozen interval strict gaps, abstract interval misses, and synthetic non-rejections remain part of the result. The zero-demand count z is never silently bounded by Esel.
 
-The [local audit](project/research/general_n/2026-09-14-type-compressed-orientation-hall-v1/EXCESS_TAIL_LOSS_AUDIT.md) passed 179,375 pointwise identities, 171,504 exhaustive source-set checks, and 10,000 deterministic random profiles. A reproducible verifier, frozen JSON and CI workflow are committed. Local PASS is not remote CI completion or external review.
+The original completed q-stratified artifact records C_q=0 on all 205,919 old Hall failures. This remains finite reconnaissance. Crossing-wall charge and saturation-wall arguments are retained, not discarded.
 
-### 5. New localized selected-excess cap — additional bridge strength
-
-The [localized-excess package](project/research/general_n/2026-09-14-localized-excess-v1/README.md) strengthens the target caps rather than merely rewriting them. For a residual threshold eta>=0 define
-
-```text
-U_eta={u:rho_u<=eta},  L_eta={i:s_i<=eta},
-C_eta=Esel+sum_{i in L_eta}s_i-sum_{u in U_eta}q_u.
-```
-
-All selections from U_eta must land in L_eta. For a source w with rho_w>eta, let k count its selected labels in L_eta. Canonical endpoint forcing yields
-
-```text
-C_eta >= k+(q_w-k)(p_w-rho_w+1)  when p_w>=rho_w.
-```
-
-This gives an explicit floor cap after maximizing over feasible k. Eta=0 recovers the existing zero-demand cap exactly; positive eta captures excess already forced into positive-demand labels. In particular,
-
-```text
-q_w>C_eta and rho_w>eta => p_w<=rho_w-1.
-```
-
-If Z collects sources certified this way and delta=b-a, the two-defect budget strengthens to
-
-```text
-2t+D0+Esel+delta*|Z| <= b(delta-1).
-```
-
-Retain all other caps, especially exact potential-pair degrees. Two old surviving PROFILE witnesses associated with states 1626 and 2984 now fail: their required loads are 51 and 57, while localized total target capacities are 50 and 52. **This does not exclude either entire scalar state.**
-
-On the frozen 812 difficult profiles, cap vectors tighten on 748, uniform-weight detections increase from 476 to 773, and 630 now fail already at tau=1. All 812 remain detectable by adaptive exact tails. The independent implementation passes 133,586 exhaustive incidence configurations, 6,880 floor cases and 3,000 ledger-preserving incidence mutations. These are necessary-condition/incidence tests, not realized Murty graphs or external acceptance.
-
-The [experiment log](project/research/general_n/2026-09-14-localized-excess-v1/EXPERIMENT_LOG.md) preserves the standing hostile examples, a rejected marginal-exactness shortcut and an incomplete wider scanner run. No timeout result is promoted. The new cap is the current priority for combining localized bridge information with adaptive threshold losses.
-
-## Finite frontier and audit gates
+## Finite frontier and CI gates
 
 ```text
 quantified whole-state closures: 977
@@ -131,12 +72,12 @@ canonical exclusions:           1,971
 canonical survivors:            3,607
   N34-derived:                  3,529
   N35-derived:                     78
-recovered relational candidates: 2,655 (NOT PROMOTED)
+recovered relational candidates: 2,655 — UNPROMOTED
 ```
 
-The final relational cross-audit `34854911792` remains incomplete: the plan and first visible audit shards passed, but a paginated recheck still found shard 255 queued. Promotion requires full coverage of all 2,655 candidates, exact agreement between `scan_post_pair_relational.cpp` and `scan_post_pair_relational_types.cpp`, zero unresolved cases, a successful aggregate and then a separate ledger-promotion step. N34 and N35 provenance remain separate.
+The final relational audit `34854911792` remains incomplete: its final indexed shard is still queued, and no accepted aggregate has been observed. Promotion requires all 2,655 inputs covered, state-by-state agreement of both implementations, zero unresolved states, successful aggregate and then a separate ledger update. These scalar states are not graphs or unresolved obligations in the fixed-order candidate packages.
 
-Frozen-ledger CI `34875592126` has now passed, including combined survivor coverage. That is not the separate relational promotion audit. These scalar states are not surviving graphs and are not unresolved obligations in the fixed-order candidate proofs.
+**Frozen-ledger CI `34875592126`, q-layer threshold CI `34871045562`, and repaired mincut CI `34878019517` are now green.** The old failed mincut run `34868771056` passed the mathematical verifier but failed on JSON formatting; the repair preserves all frozen values. These successes do not complete the relational audit. Local priced-tail PASS is distinct from remote execution of its new CI workflow.
 
 ## Fixed-order and general candidate status
 
@@ -168,7 +109,7 @@ This reviewer-facing index is intentionally duplicated here as a protected navig
 - [`n=30 reviewer-v3`](releases/n30-reviewer-v3/README.md) — [manuscript PDF](releases/n30-reviewer-v3/N30_Reviewer_Manuscript_v3.pdf) and [verification companion PDF](releases/n30-reviewer-v3/N30_Verification_Companion_v3.pdf).
 - [`n=31 reviewer-v1`](releases/n31-reviewer-v1/README.md) — source-first proof/review package; [hostile audit](project/research/n31/2026-09-11-hand-route-v1/HOSTILE_AUDIT.md).
 - [`n=32 reviewer-v1`](releases/n32-reviewer-v1/README.md) — source-first proof/review package; [exact equality ledger](project/research/n32/2026-09-12-equality-v1/CERTIFICATION_LEDGER.md).
-- [`n=33 reviewer-v1`](releases/n33-reviewer-v1/README.md) — source-first proof/review package; [hostile audit](project/research/n33/2026-09-12-candidate-v1/AUDIT.md).
+- [`n=33 reviewer-v1`](releases/n33-reviewer-v1/README.md) — source-first proof/review package; [hostile audit](project/research/n33/2026-09-12-candidate-v1/HOSTILE_AUDIT.md).
 - [`n=34 reviewer-v2`](releases/n34-reviewer-v2/README.md) — complete candidate package; [normalization audit and hand replacement](project/reviews/n34/2026-09-12-heavy-independent-v1/README.md).
 - [`n=35 reviewer-v1`](releases/n35-reviewer-v1/README.md) — complete candidate package; [internal audit](project/research/n35/2026-09-12-candidate-v1/AUDIT.md).
 
@@ -202,14 +143,10 @@ This reviewer-facing index is intentionally duplicated here as a protected navig
 Superseded reviewer editions and failed/corrected research remain preserved in Git history and the linked package histories; they are not silently deleted.
 <!-- REVIEW-MATERIALS:END -->
 
-## Immediate research priorities
+## Next research priority and trust boundary
 
-Use localized selected excess to strengthen target capacities, then combine the exact two-defect budget with adaptive interval-tail loss or the exact q-layer histogram formulation. The two old surviving profile witnesses expose a joint selected-incidence/endpoint-forcing obstruction; complete scalar-state searches and independent replay are still required. Uniform weighting improves materially but does not cover all 812 profiles.
+Seek a violating pair (tau,theta) forced by FULL canonical structure, using localized excess, exact pair losses and stronger shared excess envelopes. A hand proof need not force a deficient Hall tail when a feasible tail is already too expensive. The 61 synthetic non-rejections and incomplete source-state continuations are explicit remaining limitations, not erased failures.
 
-Complete the independent localized-cap CI and bounded, checkpointed broader tests. Separately finish the 2,655-candidate relational audit and successful aggregate before any ledger promotion. Preserve failures and harness corrections. External review remains focused on quasi-edge selection/injection, bridge forcing, endpoint loads, incoming/source caps, and the exact Hall reductions. Fixed-q monotonicity requirements must be checked before applying an old canonical-witness theorem to any newly modified capacity model.
+Retain exact q-layer and crossing-wall/saturation routes. The independent maximum-cut/stability programme is also preserved: e(G)=|X||Y|+I-M, so I<=M for some cut would suffice, but the naive edge-to-missing-pair matching shortcut is false.
 
-The independent maximum-cut/stability route remains open: for a cut X|Y, e(G)=|X||Y|+I-M, so finding I<=M would suffice. The failed one-internal-edge/one-cross-nonedge matching shortcut remains preserved in the earlier route record. Crossing-wall charge and saturation-wall arguments remain retained fallbacks.
-
-## Trust boundary
-
-Hand derivation, finite verification, a separately structured internal implementation, remote CI replay, external mathematical review and third-party reproduction are different statuses. No timeout, missing output, unsuccessful search, floating infeasibility report or unreviewed discovery is a certificate. The largest correlated mathematical dependency remains the canonical graph-to-constraint bridge. The localized cap changes the structural strength and profile-level evidence, not the promoted whole-state frontier.
+Hand derivation, finite tests, separate internal implementations, remote CI, external review and third-party reproduction are distinct. No timeout, missing output, failed search or floating infeasibility is proof. The canonical quasi-edge/selected-residual bridge remains the central correlated external-review dependency. Preserve reviewer navigation and audit gates during every update.
