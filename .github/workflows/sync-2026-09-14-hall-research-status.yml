@@ -1,0 +1,47 @@
+name: sync 2026-09-14 Hall research status
+
+on:
+  workflow_dispatch:
+  push:
+    paths:
+      - 'tools/sync_2026_09_14_hall_research_status.py'
+      - '.github/workflows/sync-2026-09-14-hall-research-status.yml'
+
+permissions:
+  contents: write
+
+jobs:
+  sync:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Update canonical navigation without changing closure counts
+        run: python3 tools/sync_2026_09_14_hall_research_status.py
+
+      - name: Recheck canonical frontier and protected ledgers
+        run: |
+          python3 tools/sync_generalisation_status.py
+          python3 tools/check_whole_state_ledgers.py
+          python3 tools/check_n34_whole_state_ledger.py
+          python3 tools/check_post_pair_relational_recovery.py
+
+      - name: Check patch integrity
+        run: git diff --check
+
+      - name: Commit research-status documentation
+        run: |
+          if git diff --quiet; then
+            echo 'Hall research status already synchronized.'
+            exit 0
+          fi
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add README.md CURRENT_STATE.md \
+            project/research/general_n/2026-09-13-alternative-attacks-v1/README.md \
+            project/research/general_n/2026-09-13-alternative-attacks-v1/POST_PAIR_RELATIONAL_FULL_FRONTIER.md \
+            project/research/general_n/2026-09-14-type-compressed-orientation-hall-v1/TYPE_COMPRESSED_ORIENTATION_HALL.md
+          git commit -m 'Expose whole-type Hall advance on canonical research surfaces'
+          git push origin HEAD:main
