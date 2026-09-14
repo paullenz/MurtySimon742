@@ -1,0 +1,24 @@
+name: verify type-compressed orientation Hall
+
+on:
+  workflow_dispatch:
+  push:
+    paths:
+      - 'project/research/general_n/2026-09-14-type-compressed-orientation-hall-v1/TYPE_COMPRESSED_ORIENTATION_HALL.md'
+      - 'project/research/general_n/2026-09-14-type-compressed-orientation-hall-v1/verify_type_compressed_orientation_hall.py'
+      - '.github/workflows/verify-type-compressed-orientation-hall.yml'
+
+jobs:
+  verify:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@v4
+      - name: Replay exact finite audit
+        working-directory: project/research/general_n/2026-09-14-type-compressed-orientation-hall-v1
+        run: python3 verify_type_compressed_orientation_hall.py
+      - name: Upload verification record
+        uses: actions/upload-artifact@v4
+        with:
+          name: type-compressed-orientation-hall-verification
+          path: project/research/general_n/2026-09-14-type-compressed-orientation-hall-v1/TYPE_COMPRESSED_ORIENTATION_HALL_VERIFICATION.json
