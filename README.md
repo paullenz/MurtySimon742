@@ -4,6 +4,22 @@ Open, reproducible research on the Murty–Simon conjecture / Erdős Problem #74
 
 The promoted finite frontier remains **1,971 exclusions / 3,607 survivors**, with **977 quantified whole-state closures**. The **2,655 recovered relational candidates remain unpromoted**. The unrestricted conjecture is **not claimed proved**. External mathematical review, novelty assessment and independent third-party reproduction remain OPEN.
 
+## Fixed-order and general candidate status
+
+| Scope | Preserved candidate result; external review open |
+|---|---|
+| n=25 | e(G)<=156, equality exactly K(12,13); reviewer-v2 |
+| n=27 | e(G)<=182, equality exactly K(13,14); reviewer-v2 |
+| n=28 | e(G)<=196, equality exactly K(14,14); reviewer-v2 plus analytic hardening |
+| n=29 | e(G)<=210, equality exactly K(14,15); reviewer-v4; difficult Delta=16 branch hand-closed |
+| n=30 | e(G)<=225, equality exactly K(15,15); reviewer-v3 |
+| n=31 | e(G)<=240, equality exactly K(15,16); source-first reviewer-v1 |
+| n=32 | e(G)<=256, equality exactly K(16,16); source-first reviewer-v1 |
+| n=33 | e(G)<=272, equality exactly K(16,17); source-first reviewer-v1 |
+| n=34 | e(G)<=289, equality exactly K(17,17); reviewer-v2; final heavy certificate hand-replaced |
+| n=35 | e(G)<=306, equality exactly K(17,18); reviewer-v1 |
+| General maximum-degree result | For n>=6, Delta(G)>=(7/12)n implies e(G)<floor(n^2/4); candidate theorem, external review and novelty assessment open |
+
 **Canonical repository:** `paullenz/MurtySimon742`; see [CANONICAL_REPOSITORY.md](CANONICAL_REPOSITORY.md). **Restarts:** read [CURRENT_STATE.md](CURRENT_STATE.md), [RESEARCH_EVIDENCE_INDEX.md](RESEARCH_EVIDENCE_INDEX.md), and newer commits. The repository, not a chat transcript, is the durable source of truth.
 
 **External reviewers:** begin with [START_HERE_FOR_REVIEWERS.md](START_HERE_FOR_REVIEWERS.md) and [releases/REVIEW_READY_INDEX.md](releases/REVIEW_READY_INDEX.md). Hostile review, counterexamples, literature corrections and independent reproduction are welcome.
@@ -77,7 +93,7 @@ The tempting stronger inequality summing high-label excess only once across all 
 
 The simultaneous multiblock extension tested597 consistent block-total tuples on the six remaining profiles:25 failed total capacity,118 failed priced bounds and454 remain across all six. **It produced no additional full-profile exclusion.** The complete larger output is reconstructible from committed code/inputs and pinned by its full digest, and retained in the portable bundle and CI output. It is not falsely described as a raw JSON file committed in the package.
 
-[One offline replay command](project/research/general_n/2026-09-14-joint-blocks-v1/REPRODUCE.md) checks exact source blobs, reruns the parent conditioned proof, verifies every new shared/fresh JSON value, regenerates the fresh corpus and reproduces the failed multiblock experiment. It needs Python standard library and g++17, not live artifact downloads or an optimizer. New component tests passed locally; the unified whole-harness CI34898768799 was queued at first inspection and must be checked separately before reporting remote PASS.
+[One offline replay command](project/research/general_n/2026-09-14-joint-blocks-v1/REPRODUCE.md) checks exact source blobs, reruns the parent conditioned proof, verifies every new shared/fresh JSON value, regenerates the fresh corpus and reproduces the failed multiblock experiment. It needs Python standard library and g++17, not live artifact downloads or an optimizer. The unified whole-harness CI34898768799, queued at first inspection, subsequently completed SUCCESS on 14 September 2026; its downloaded parent/shared/fresh/multiblock outputs were compared locally with exact equality. See the dated [CI audit receipt](project/research/general_n/2026-09-14-joint-blocks-v1/CI_AUDIT.md). Earlier queued observations remain historical, not current status.
 
 ## Documentation and durable evidence
 
@@ -94,22 +110,6 @@ Readable exploratory sources, unsuccessful numerical searches, all prior block-o
 The [exact q-stratified minimum](project/research/general_n/2026-09-14-type-compressed-orientation-hall-v1/Q_STRATIFIED_MINCUT_EXACTNESS.md), [type-complete witness corollary](project/research/general_n/2026-09-14-type-compressed-orientation-hall-v1/Q_STRATIFIED_TYPE_COMPLETE_WITNESS.md), and [q-layer threshold normal form](project/research/general_n/2026-09-14-type-compressed-orientation-hall-v1/Q_LAYER_THRESHOLD_NORMAL_FORM.md) remain fallbacks. Equality of minima is not pointwise equality; check monotonicity before transferring witness theorems to new caps. Crossing-wall/saturation and maximum-cut/stability routes remain retained.
 
 Audit34854911792 has a strict promotion gate: all2,655 inputs, both implementations agreeing, zero unresolved, successful aggregate and a separate reviewed ledger step. No new live shard count is asserted here. Fetch every job page or a complete diagnostic before reporting current status. Preserve completed work; do not duplicate the audit, alter budgets/concurrency or retry queued/successful jobs or computational timeouts. Capped-spill34885163695 and combined capped/block34887492789 passed their scopes; this does not complete the relational audit.
-
-## Fixed-order and general candidate status
-
-| Scope | Preserved candidate result; external review open |
-|---|---|
-| n=25 | e(G)<=156, equality exactly K(12,13); reviewer-v2 |
-| n=27 | e(G)<=182, equality exactly K(13,14); reviewer-v2 |
-| n=28 | e(G)<=196, equality exactly K(14,14); reviewer-v2 plus analytic hardening |
-| n=29 | e(G)<=210, equality exactly K(14,15); reviewer-v4; difficult Delta=16 branch hand-closed |
-| n=30 | e(G)<=225, equality exactly K(15,15); reviewer-v3 |
-| n=31 | e(G)<=240, equality exactly K(15,16); source-first reviewer-v1 |
-| n=32 | e(G)<=256, equality exactly K(16,16); source-first reviewer-v1 |
-| n=33 | e(G)<=272, equality exactly K(16,17); source-first reviewer-v1 |
-| n=34 | e(G)<=289, equality exactly K(17,17); reviewer-v2; final heavy certificate hand-replaced |
-| n=35 | e(G)<=306, equality exactly K(17,18); reviewer-v1 |
-| General maximum-degree result | For n>=6, Delta(G)>=(7/12)n implies e(G)<floor(n^2/4); candidate theorem, external review and novelty assessment open |
 
 <!-- REVIEW-MATERIALS:START -->
 ## Papers and review materials
