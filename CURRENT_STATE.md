@@ -1,7 +1,7 @@
 # Murty–Simon / Erdős #742 — current state handoff
 
 <!-- CURRENT-STATUS:START -->
-**14 September 2026 — checkpoint `readme-status-v1`.** Inspected predecessor: `be8c3a82d6304986f4fab09cdcd07b2b737f4835`. The fixed-order and general-state summaries now lead README.md. This commit records the user’s every-commit status rule, installs paired-status checks, and reconciles source-sharing plan commit `047885e9524a05a9680ec84fcc33903a43257271` into the handoff. **Mathematical status unchanged.** The guard passed 11 local regression checks; the new remote workflow is not yet claimed passed.
+**14 September 2026 — checkpoint `failure-retention-readme-v1`.** Inspected predecessor: `8568b8c4bd631a80cd3f310644120a2ca0e323ff`. This documentation-only checkpoint restores a dedicated README section making failures, hostile counterexamples, non-rejections, audit failures and corrections first-class research evidence, with concrete preserved examples and an explicit no-glossing rule. **Mathematical status unchanged.** Fixed-order candidates, the canonical frontier, shared-slack theorem, sample counts and source-sharing research target are unchanged.
 
 Canonical repository: `paullenz/MurtySimon742`, ID 1359206057. Every commit must update the CURRENT-STATUS blocks in BOTH this file and README.md atomically. Read [CANONICAL_REPOSITORY.md](CANONICAL_REPOSITORY.md), [AGENTS.md](AGENTS.md), [RESEARCH_EVIDENCE_INDEX.md](RESEARCH_EVIDENCE_INDEX.md), and commits newer than this predecessor before continuing.
 
