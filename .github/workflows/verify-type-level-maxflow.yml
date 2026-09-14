@@ -1,0 +1,24 @@
+name: verify type-level maxflow corollary
+
+on:
+  workflow_dispatch:
+  push:
+    paths:
+      - 'project/research/general_n/2026-09-14-type-compressed-orientation-hall-v1/TYPE_LEVEL_MAXFLOW_COROLLARY.md'
+      - 'project/research/general_n/2026-09-14-type-compressed-orientation-hall-v1/verify_type_level_maxflow.py'
+      - '.github/workflows/verify-type-level-maxflow.yml'
+
+jobs:
+  verify:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@v4
+      - name: Replay exact labelled-vs-quotient audit
+        working-directory: project/research/general_n/2026-09-14-type-compressed-orientation-hall-v1
+        run: python3 verify_type_level_maxflow.py
+      - name: Upload verification record
+        uses: actions/upload-artifact@v4
+        with:
+          name: type-level-maxflow-verification
+          path: project/research/general_n/2026-09-14-type-compressed-orientation-hall-v1/TYPE_LEVEL_MAXFLOW_VERIFICATION.json
