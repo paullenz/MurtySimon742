@@ -1,0 +1,23 @@
+name: verify band interval-cut counterexample
+
+on:
+  workflow_dispatch:
+  push:
+    paths:
+      - 'project/research/general_n/2026-09-14-type-compressed-orientation-hall-v1/BAND_INTERVAL_CUT_COUNTEREXAMPLE.md'
+      - 'project/research/general_n/2026-09-14-type-compressed-orientation-hall-v1/verify_band_interval_cut_counterexample.py'
+      - '.github/workflows/verify-band-interval-cut-counterexample.yml'
+
+jobs:
+  verify:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Replay exact counterexample
+        working-directory: project/research/general_n/2026-09-14-type-compressed-orientation-hall-v1
+        run: python3 verify_band_interval_cut_counterexample.py
+      - name: Upload verification
+        uses: actions/upload-artifact@v4
+        with:
+          name: band-interval-cut-counterexample-verification
+          path: project/research/general_n/2026-09-14-type-compressed-orientation-hall-v1/BAND_INTERVAL_CUT_COUNTEREXAMPLE_VERIFICATION.json
