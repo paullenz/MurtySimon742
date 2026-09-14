@@ -21,7 +21,9 @@ D(u,w) iff u!=w,
             q_w<=c_u.
 ```
 
-The ordinary capacitated Hall criterion quantifies over every vertex subset `W subseteq B`. The theorem below shows that, once a `q,c,P` profile is fixed, all subsets with the same counts of identical source types are exactly equivalent. This is an exact compression, not a relaxation.
+The ordinary capacitated Hall criterion quantifies over every vertex subset `W subseteq B`. The first compression below replaces labelled subsets by counts of identical `(q,c,P)` types. A second, stronger observation then uses discrete concavity to show that a minimum Hall margin is always attained by a **union of complete type classes**.
+
+Thus the full target-flow Hall test is equivalent to at most `2^k` cuts when the profile has `k` distinct `(q,c,P)` types.
 
 ## 2. Types
 
@@ -50,7 +52,11 @@ q_tau<=c_sigma+1,
 q_sigma<=c_tau.
 ```
 
-The actual vertex relation still deletes the diagonal `u=w`. In the canonical setting `c_tau=q_tau+rho_tau>=q_tau`, so `A_{tau,tau}=1`; it is retained symbolically below to make the diagonal correction explicit.
+The actual vertex relation still deletes the diagonal `u=w`. In the canonical setting `c_tau=q_tau+rho_tau>=q_tau`, so
+
+```text
+A_{tau,tau}=1.                                        (1)
+```
 
 For a source subset `W`, write
 
@@ -62,83 +68,183 @@ x_tau=|W cap T_tau|,
 Define the type-level incoming multiplicity at a target of type `sigma` before deleting its own source copy by
 
 ```text
-m_sigma(x)=sum_tau A_{tau,sigma} x_tau.                (1)
+m_sigma(x)=sum_tau A_{tau,sigma} x_tau.                (2)
 ```
 
-## 3. Exact compressed cut formula
+## 3. Exact type-count cut formula
 
-A target `w` of type `sigma` sees
-
-```text
-m_sigma(x)
-```
-
-sources from `W` if `w notin W`, and
-
-```text
-m_sigma(x)-A_{sigma,sigma}
-```
-
-if `w in W`, because only then must the forbidden self-arc be removed.
+A target `w` of type `sigma` sees `m_sigma(x)` sources from `W` if `w notin W`, and `m_sigma(x)-1` if `w in W`, by (1) and the forbidden self-arc.
 
 There are `n_sigma-x_sigma` targets of the first kind and `x_sigma` of the second kind. Hence the complete target capacity available to `W` is exactly
 
 ```text
 R(x)=sum_sigma [
        (n_sigma-x_sigma) min(P_sigma,m_sigma(x))
-       + x_sigma min(P_sigma,m_sigma(x)-A_{sigma,sigma})
-     ].                                                (2)
+       + x_sigma min(P_sigma,m_sigma(x)-1)
+     ].                                                (3)
 ```
 
 The source demand of `W` is
 
 ```text
-L(x)=sum_tau q_tau x_tau.                              (3)
+L(x)=sum_tau q_tau x_tau.                              (4)
 ```
 
-Therefore:
+Therefore the ordinary vertex Hall system is exactly equivalent to
 
-> **Type-compressed orientation Hall theorem.** The directed target-flow relaxation has a value-`Q` flow if and only if, for every integer type-count vector `x` satisfying `0<=x_tau<=n_tau`,
->
-> ```text
-> L(x)<=R(x).                                          (4)
-> ```
->
-> Equivalently, target-flow infeasibility has a certificate consisting only of the finite type table and one violating integer count vector `x`.
+```text
+L(x)<=R(x)                                             (5)
+```
 
-### Proof
+for every integer vector `0<=x_tau<=n_tau`.
+
+### Proof of the type-count formula
 
 The vertex-level capacitated Hall theorem says that a value-`Q` flow exists if and only if every source subset `W` satisfies
 
 ```text
 sum_{u in W} q_u
- <= sum_{w in B} min(P_w, |N_D^-(w) cap W|).           (5)
+ <= sum_{w in B} min(P_w, |N_D^-(w) cap W|).           (6)
 ```
 
-Fix the type-count vector `x` of `W`. The left side of (5) is exactly (3). For any target `w` of type `sigma`, all numerical compatibility tests against a source depend only on the source type. Thus the number of compatible sources in `W` is `m_sigma(x)`, except that the source copy of `w` itself must be deleted when `w in W`, giving `m_sigma(x)-A_{sigma,sigma}`. Summing the target contribution over the `n_sigma-x_sigma` targets outside `W` and the `x_sigma` targets inside `W` gives (2).
+Fix the type-count vector `x` of `W`. The left side is (4). All numerical compatibility tests against a target depend only on source and target types. The only labelled exception is the deleted self-arc, which subtracts one exactly when the target's own source belongs to `W`. Summing over targets of each type gives (3). Thus every two labelled subsets with the same type counts have the same Hall margin. QED.
 
-Hence every two source subsets with the same type-count vector have identical Hall demand and identical Hall capacity. Quantifying over all subsets `W` is therefore exactly equivalent to quantifying over all feasible integer vectors `x`. QED.
+## 4. Coordinatewise concavity
 
-## 4. Canonical simplification
-
-Because the canonical bridge has
+Define the Hall margin
 
 ```text
-c_tau=q_tau+rho_tau>=q_tau,
+F(x)=R(x)-L(x).                                        (7)
 ```
 
-we always have `A_{tau,tau}=1`. Thus (2) becomes
+Fix all coordinates except `x_tau` and vary
 
 ```text
-R(x)=sum_sigma [
-       (n_sigma-x_sigma) min(P_sigma,m_sigma(x))
-       + x_sigma min(P_sigma,m_sigma(x)-1)
-     ].                                                (6)
+x=x_tau in {0,1,...,n_tau}.
 ```
 
-The only non-type-symmetric feature of the original vertex network is therefore a one-unit diagonal correction on targets whose own source lies in the cut.
+We show that `F` is a discrete concave function of this one coordinate.
 
-## 5. Two-dimensional dominance form
+For a target type `sigma!=tau`, its contribution to `R` is either constant in `x` or has the form
+
+```text
+(n_sigma-x_sigma) h(a+x)
+ + x_sigma h(a+x-1),                                  (8)
+```
+
+where
+
+```text
+h(y)=min(P_sigma,y).
+```
+
+The integer function `h` is concave: its successive increments are `1` until saturation and `0` afterwards. Hence (8), a nonnegative linear combination of shifted copies of `h`, is concave in `x`.
+
+For `sigma=tau`, write
+
+```text
+m_tau(x)=a+x,
+```
+
+where `a` is independent of `x`. Its own target contribution is
+
+```text
+g(x)=(n_tau-x) h(a+x)+x h(a+x-1),                    (9)
+```
+
+with `h(y)=min(P_tau,y)`.
+
+When `a+x<=P_tau`,
+
+```text
+g(x)=n_tau a+(n_tau-1)x.                              (10)
+```
+
+When `a+x>=P_tau+1`,
+
+```text
+g(x)=n_tau P_tau.                                     (11)
+```
+
+If the transition occurs inside the interval, put `x_0=P_tau-a`. The successive increments of `g` are
+
+```text
+n_tau-1, ..., n_tau-1, x_0, 0, ..., 0.                (12)
+```
+
+A genuine transition to `x_0+1` inside the domain implies `x_0<=n_tau-1`, so these increments are nonincreasing. Thus `g` is discretely concave.
+
+Every target-type contribution is therefore concave in `x_tau`; subtracting the linear term `q_tau x_tau` preserves concavity. Hence:
+
+> **Coordinatewise concavity lemma.** Holding all other type counts fixed, `F(x)` is discretely concave in each coordinate `x_tau` separately.
+
+## 5. Whole-type reduction
+
+A concave function on a finite integer interval attains a minimum at an endpoint. Starting from any type-count vector `x`, apply the coordinatewise concavity lemma to the first coordinate and replace it by either `0` or `n_tau` without increasing `F`. Repeat for every coordinate. After finitely many steps one obtains a box vertex `x*` with
+
+```text
+x*_tau in {0,n_tau}
+```
+
+for every type and
+
+```text
+F(x*)<=F(x).                                           (13)
+```
+
+Consequently:
+
+> **Whole-type orientation Hall theorem.** The target-flow relaxation has a value-`Q` flow if and only if Hall inequality (5) holds for the type-count vectors satisfying
+>
+> ```text
+> x_tau in {0,n_tau}                                  (14)
+> ```
+>
+> for every `(q,c,P)` type `tau`.
+>
+> Equivalently, if any labelled Hall cut fails, then a union of complete `(q,c,P)` type classes also fails, with at least as large a deficiency.
+
+This is stronger than the initial type-count compression: `prod_tau(n_tau+1)` possible count vectors collapse to at most `2^k` complete-type unions, where `k` is the number of distinct types.
+
+## 6. Closed formula for a union of types
+
+Let `S` be a set of source types and take
+
+```text
+x_tau=n_tau  if tau in S,
+x_tau=0      otherwise.
+```
+
+Then
+
+```text
+m_sigma(S)=sum_{tau in S} A_{tau,sigma} n_tau.         (15)
+```
+
+The Hall demand is
+
+```text
+L(S)=sum_{tau in S} q_tau n_tau,                       (16)
+```
+
+and the target capacity is
+
+```text
+R(S)=sum_{sigma notin S}
+       n_sigma min(P_sigma,m_sigma(S))
+     +sum_{sigma in S}
+       n_sigma min(P_sigma,m_sigma(S)-1).              (17)
+```
+
+Thus every target-flow exclusion has a compact certificate
+
+```text
+(type table, selected type set S, L(S), R(S), deficiency).
+```
+
+No labelled subset or generic max-flow certificate is needed to verify the cut once the type data are fixed.
+
+## 7. Two-dimensional dominance form
 
 The compatibility test
 
@@ -147,66 +253,37 @@ q_tau<=c_sigma+1,
 c_tau>=q_sigma
 ```
 
-is a two-dimensional dominance rectangle. Consequently
+is a two-dimensional dominance rectangle. Therefore `m_sigma(S)` is a weighted two-dimensional orthant count of complete source types.
+
+The earlier red-team result still stands: there is no general single Ferrers ordering of individual sources. The new theorem identifies the correct replacement: **unions of complete two-dimensional types** suffice for the full target Hall relaxation.
+
+This suggests a sharper symbolic programme. Instead of arbitrary source subsets, analyze type sets `S` under the partial order on `(q,c)` and seek further closure properties of a minimum deficient type set—for example, whether one may restrict to particular antichains, ideals, or staircase boundaries. Such reductions require separate proof and are not assumed here.
+
+## 8. Repeated-type special case
+
+For one type `tau` alone, taking the complete class gives the necessary inequality
 
 ```text
-m_sigma(x)
-```
-
-is a weighted two-dimensional orthant count of the chosen source types.
-
-This makes precise the earlier diagnosis that there is no general one-dimensional Ferrers ordering. The exact target Hall obstruction is nevertheless much smaller than an arbitrary `2^b` subset system whenever the profile has repeated `(q,c,P)` types.
-
-The theorem therefore offers two possible routes:
-
-1. **finite acceleration:** enumerate bounded type counts rather than labelled source subsets when extracting Hall cut certificates;
-2. **general theory:** seek inequalities controlling the minimum of `R(x)-L(x)` over two-dimensional dominance count vectors.
-
-## 6. Single-type and few-type corollaries
-
-If `W` uses `x` sources from one type `tau` and no other source type, then (6) gives the explicit necessary inequality
-
-```text
-x q_tau
+n_tau q_tau
  <= sum_{sigma!=tau:A_{tau,sigma}=1}
-       n_sigma min(P_sigma,x)
-    +(n_tau-x) min(P_tau,x)
-    +x min(P_tau,x-1).                                (7)
+       n_sigma min(P_sigma,n_tau)
+    +n_tau min(P_tau,n_tau-1).                        (18)
 ```
 
-This family detects congestion caused by repeated high-demand sources even when every one of them individually has enough targets.
+The whole-type theorem shows that partial selection of that class never yields a strictly stronger global minimum than some complete-type union, although the witnessing union may contain additional types.
 
-More generally, a cut supported on `k` source types is governed by a `k`-variable integer inequality obtained directly from (1)-(4). Thus a useful empirical question is how many source types are needed by the minimum deficient cuts on the current frontier.
+## 9. Verification and red-team boundary
 
-## 7. Important non-claim: whole type classes only
+[`verify_type_compressed_orientation_hall.py`](verify_type_compressed_orientation_hall.py) is intended to check three independent arithmetic facts on deterministic small profiles:
 
-The theorem does **not** assert that it is enough to choose
+1. the direct labelled-subset Hall margin equals formula (3) for every labelled subset;
+2. the minimum over all integer type-count vectors equals the minimum over whole-type box vertices;
+3. the discrete first differences in every coordinate are nonincreasing.
 
-```text
-x_tau in {0,n_tau}.
-```
+The verifier is an audit of the finite identities, not the basis of the hand proof above. Any counterexample blocks use of the whole-type reduction.
 
-The `min(P_sigma,m_sigma)` saturation and the diagonal correction can make a proper fraction of a repeated type the strongest cut. The committed verifier searches explicitly for such counterexamples. If found, they are preserved as a warning against replacing (4) by a whole-type-only test.
+## 10. Trust boundary
 
-## 8. Certificates and audit
-
-A compressed target-Hall failure can be recorded as:
-
-```text
-(type q,c,P,n table),
-violating x vector,
-all m_sigma(x),
-L(x),
-R(x),
-deficiency L-R.
-```
-
-Every quantity is integer. Expanding any count vector `x` to an arbitrary labelled subset with those type counts reproduces the same vertex-level Hall cut exactly.
-
-[`verify_type_compressed_orientation_hall.py`](verify_type_compressed_orientation_hall.py) independently checks the formula against direct labelled-subset enumeration on a deterministic small-profile suite and searches for a failure of the stronger whole-type-only shortcut.
-
-## 9. Trust boundary
-
-This theorem is an exact compression of the target-flow relaxation once the data `(q,c,P)` and the directed compatibility relation are accepted. Its Murty-Simon application still depends on the canonical graph-to-constraint bridge and on the validity of the target capacity bounds used to define `P`. Passing all compressed cuts is only target-flow feasibility, not graph feasibility.
+The concavity and type-compression arguments are elementary finite combinatorics once the target-flow network is accepted. Their Murty-Simon application still depends on the canonical graph-to-constraint bridge and on the validity of the target capacities `P`. Passing every whole-type cut proves only feasibility of this target-flow relaxation, not graph feasibility.
 
 The unrestricted Murty-Simon conjecture is not proved by this result.
