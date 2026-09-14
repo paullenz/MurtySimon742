@@ -67,20 +67,24 @@ The Murty-specific pilot [`MURTY_ANTICHAIN_PROFILE_STATS_PILOT.md`](project/rese
 
 The modal obstruction uses four generators and actual Murty-Simon profiles reach eight. This is reconnaissance, not an all-order theorem or a promotion result. It decisively lowers the priority of any small-constant generator approach and points instead to aggregate staircase-band inequalities.
 
-### Near-exact band reach and the remaining exception
+### Near-exact band reach and resolved state-226 diagnostic
 
 [`STAIRCASE_BAND_REACH_PILOT.md`](project/research/general_n/2026-09-14-type-compressed-orientation-hall-v1/STAIRCASE_BAND_REACH_PILOT.md) measures how much exact target-Hall power survives the verified band relaxation on the same deterministic 15-state Murty pilot. GitHub Actions run `34832806900` completed green.
 
-Across `205,919` exact target-Hall-failing profiles, the band relaxation was also infeasible on **205,918** and passed only **one** profile:
+Across `205,919` exact target-Hall-failing profiles, the coarse band relaxation was also infeasible on **205,918** and passed only **one** profile:
 
 ```text
 band retention of exact target-Hall failures:
 205,918 / 205,919 = 99.999514%.
 ```
 
-The sole false-negative is a two-generator profile in N34 state `226`. A dedicated diagnostic workflow is isolating its exact `(E,rho,q)` profile, canonical type-level minimum cut and feasible band flow so that the missing within-band statistic can be identified. This is reconnaissance only and changes no canonical closure count.
+The sole false-negative is a two-generator profile in N34 state `226`. The dedicated diagnostic run `34838612503` completed green and its exact block is frozen in [`STATE_226_BAND_EXCEPTION_DIAGNOSTIC.txt`](project/research/general_n/2026-09-14-type-compressed-orientation-hall-v1/STATE_226_BAND_EXCEPTION_DIAGNOSTIC.txt), with provenance in [`STATE_226_BAND_EXCEPTION_DIAGNOSTIC_PROVENANCE.json`](project/research/general_n/2026-09-14-type-compressed-orientation-hall-v1/STATE_226_BAND_EXCEPTION_DIAGNOSTIC_PROVENANCE.json) and interpretation in [`STATE_226_BAND_EXCEPTION.md`](project/research/general_n/2026-09-14-type-compressed-orientation-hall-v1/STATE_226_BAND_EXCEPTION.md).
 
-The interval-neighborhood structure does **not** imply that it is enough to check contiguous source-band cuts. [`BAND_INTERVAL_CUT_COUNTEREXAMPLE.md`](project/research/general_n/2026-09-14-type-compressed-orientation-hall-v1/BAND_INTERVAL_CUT_COUNTEREXAMPLE.md) preserves a three-band example where every contiguous band interval has nonnegative Hall margin but the disconnected cut `{1,3}` has margin `-1`. Therefore the promising object is the complete band flow or a stronger Murty-specific reduction, not an unsupported interval-cut shortcut.
+The exception occurs at `E=6`, `Q=47`: exact quotient flow is `46` (deficit `1`), while the coarse band flow is exactly saturated at `39/39`. The entire capacity error occurs at target type `(q,c,P,n)=(2,4,4,1)`: exact selected-source incoming capacity is `2`, but the coarse band model supplies `7`, an overestimate of `5`. Those five spurious incidences are exactly the five copies of selected non-generator type `(q,c,rho,P,n)=(6,9,3,3,5)`, grouped under easier band generator `(5,9,4,4,1)`. The generator reaches the target because `5<=4+1`; the five non-generator copies do not because `6>4+1`.
+
+This identifies a stronger theorem-safe **compatible-copy band refinement**: for each band/target edge count only selected source copies in that band which are individually compatible with that target, rather than all copies whenever the generator is compatible. On state `226`, this reduces total effective target receiving capacity to `38` against band demand `39`, so it rejects the unique coarse-band exception. Since refinement only removes capacity, all earlier `205,918` coarse-band failures remain failures. Therefore, as a **derived frozen-pilot conclusion**, the compatible-copy refinement detects `205,919/205,919` exact target-Hall failures in the same 15-state pilot. This refinement still needs its own formal theorem note and independent CI verifier before being elevated beyond derived reconnaissance.
+
+The interval-neighborhood structure does **not** imply that it is enough to check contiguous source-band cuts. [`BAND_INTERVAL_CUT_COUNTEREXAMPLE.md`](project/research/general_n/2026-09-14-type-compressed-orientation-hall-v1/BAND_INTERVAL_CUT_COUNTEREXAMPLE.md) preserves a three-band example where every contiguous band interval has nonnegative Hall margin but the disconnected cut `{1,3}` has margin `-1`. Therefore the promising object is the complete compatible-copy band flow or a stronger Murty-specific reduction, not an unsupported interval-cut shortcut.
 
 ### Full frontier relational scan
 
@@ -340,7 +344,7 @@ Degree-preserving `2x2` repairs live in the **relaxed selected-incidence matrix*
 
 ### P1. Attack the aggregate consecutive-band Hall inequalities
 
-The exact canonical target-Hall obstruction is now a verified moving staircase; actual Murty-Simon profiles often need 4–6 generators and can need 8, so a bounded-generator theorem is not the preferred route. Use [`STAIRCASE_BAND_HALL.md`](project/research/general_n/2026-09-14-type-compressed-orientation-hall-v1/STAIRCASE_BAND_HALL.md) as the next symbolic interface: combine the contiguous band neighborhoods with `c=q+rho`, `q<=a-rho`, target caps `P`, demand forcing, selected incidence, pair capacity, unordered-pair Hall and excess-budget constraints. Seek aggregate interval/band inequalities or a restricted parametric family of violating band cuts. Use the unique state-226 band false-negative to identify which within-band statistic must be restored before attempting any stronger exact reduction.
+The exact canonical target-Hall obstruction is now a verified moving staircase; actual Murty-Simon profiles often need 4–6 generators and can need 8, so a bounded-generator theorem is not the preferred route. Use [`STAIRCASE_BAND_HALL.md`](project/research/general_n/2026-09-14-type-compressed-orientation-hall-v1/STAIRCASE_BAND_HALL.md) as the next symbolic interface: combine the contiguous band neighborhoods with `c=q+rho`, `q<=a-rho`, target caps `P`, demand forcing, selected incidence, pair capacity, unordered-pair Hall and excess-budget constraints. Seek aggregate interval/band inequalities or a restricted parametric family of violating band intervals.
 
 ### P2. Complete, recover and independently audit the 3,607-state relational scan
 
@@ -410,5 +414,5 @@ The authoritative layer/state-safe discovery run is GitHub Actions run `34820187
 
 The execution chain is documented in [`POST_PAIR_RELATIONAL_FULL_FRONTIER.md`](project/research/general_n/2026-09-13-alternative-attacks-v1/POST_PAIR_RELATIONAL_FULL_FRONTIER.md): checkpointed discovery, layer-safe aggregation, explicit unresolved accounting, long-budget recovery, then fresh primary and independent type-count replay of every candidate exclusion. N34 and N35 promotions use separate ledgers.
 
-The structural track has progressed from labelled target flow to complete types, exact quotient max-flow, submodularity, sharp hardness up-sets, a canonical antichain, an exact moving staircase, and now a verified consecutive-band necessary relaxation. The Murty-specific antichain pilot shows that high generator counts are real inside the scanned relaxation, while the band-reach pilot retains 205,918/205,919 exact target-Hall failures. The active theory target is therefore **aggregate staircase-band demand/capacity plus the single missing within-band distinction**, not a small-generator or contiguous-cut shortcut.
+The structural track has progressed from labelled target flow to complete types, exact quotient max-flow, submodularity, sharp hardness up-sets, a canonical antichain, an exact moving staircase, and now a verified consecutive-band necessary relaxation. The Murty-specific antichain pilot shows that high generator counts are real inside the scanned relaxation, so the active theory target is **aggregate staircase-band demand/capacity**, not a small-generator shortcut.
 <!-- ACTIVE-RELATIONAL-2026-09-14:END -->
