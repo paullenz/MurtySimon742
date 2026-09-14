@@ -1,5 +1,7 @@
 # Murty–Simon / Erdős Problem #742
 
+**Reviewers — start here:** [`START_HERE_FOR_REVIEWERS.md`](START_HERE_FOR_REVIEWERS.md) and [`releases/REVIEW_READY_INDEX.md`](releases/REVIEW_READY_INDEX.md). **GitHub Issues and comments are the preferred medium for feedback**: they keep counterexamples, corrections and discussion durable and attached to the relevant evidence. A short counterexample or a precise identification of the first invalid implication is especially valuable.
+
 Open, reproducible research on the Murty–Simon conjecture / Erdős Problem #742. **The unrestricted conjecture is not claimed proved.** External mathematical review, novelty assessment and independent third-party reproduction remain OPEN.
 
 <!-- CURRENT-STATUS:START -->
@@ -32,14 +34,12 @@ Open, reproducible research on the Murty–Simon conjecture / Erdős Problem #74
 | Last recorded end-to-end verification | Shared-slack run 34898768799 completed SUCCESS; exact output comparison is recorded in the [CI receipt](project/research/general_n/2026-09-14-joint-blocks-v1/CI_AUDIT.md). This is not a new live audit observation |
 | Active continuation | [Source-sharing plan](project/research/general_n/2026-09-14-source-sharing-v1/PLAN.md), committed at 047885e9524a05a9680ec84fcc33903a43257271: enforce common selected-source row budgets instead of independently reusing each label's best sources |
 
-**Checkpoint — 14 September 2026, `failure-retention-readme-v1`.** Inspected predecessor: `8568b8c4bd631a80cd3f310644120a2ca0e323ff`. This documentation-only checkpoint restores a dedicated README section explaining that failed routes, hostile counterexamples, non-rejections, audit failures and corrections are first-class research evidence and must not be quietly glossed over; concrete examples are retained below. **Mathematical status unchanged.** Fixed-order candidates, the canonical frontier, the shared-slack result and the active source-sharing attack are unchanged. Next: continue the exact source-priced charge-envelope attack and preserve both successful and unsuccessful outcomes.
+**Checkpoint — 14 September 2026, `reviewer-entry-readme-v1`.** Inspected predecessor: `5140548a3c0af9b43a3746b804258b745fca7ed9`. This documentation-only checkpoint moves reviewer orientation to the first line beneath the title and makes GitHub Issues/comments the preferred durable feedback channel, while retaining the explicit failure-preservation section below. **Mathematical status unchanged.** Fixed-order candidates, the canonical frontier, the shared-slack result and the active source-sharing attack are unchanged. Next: continue the exact source-priced charge-envelope attack and preserve both successful and unsuccessful outcomes.
 
 **Standing order:** every commit must update the current-status blocks in BOTH this README and [CURRENT_STATE.md](CURRENT_STATE.md), in the same atomic commit. Record the actual change even when mathematical status is unchanged. Keep these summaries near the top. See [CANONICAL_REPOSITORY.md](CANONICAL_REPOSITORY.md) and [AGENTS.md](AGENTS.md).
 <!-- CURRENT-STATUS:END -->
 
 **Canonical repository:** `paullenz/MurtySimon742`. **Restarts:** read [CURRENT_STATE.md](CURRENT_STATE.md), [RESEARCH_EVIDENCE_INDEX.md](RESEARCH_EVIDENCE_INDEX.md), and newer commits. The repository, not a chat transcript, is the durable source of truth.
-
-**External reviewers:** begin with [START_HERE_FOR_REVIEWERS.md](START_HERE_FOR_REVIEWERS.md) and [releases/REVIEW_READY_INDEX.md](releases/REVIEW_READY_INDEX.md). Hostile review, counterexamples, literature corrections and independent reproduction are welcome.
 
 ## Research approach and detailed evidence
 

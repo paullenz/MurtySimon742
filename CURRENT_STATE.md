@@ -1,7 +1,7 @@
 # Murty–Simon / Erdős #742 — current state handoff
 
 <!-- CURRENT-STATUS:START -->
-**14 September 2026 — checkpoint `failure-retention-readme-v1`.** Inspected predecessor: `8568b8c4bd631a80cd3f310644120a2ca0e323ff`. This documentation-only checkpoint restores a dedicated README section making failures, hostile counterexamples, non-rejections, audit failures and corrections first-class research evidence, with concrete preserved examples and an explicit no-glossing rule. **Mathematical status unchanged.** Fixed-order candidates, the canonical frontier, shared-slack theorem, sample counts and source-sharing research target are unchanged.
+**14 September 2026 — checkpoint `reviewer-entry-readme-v1`.** Inspected predecessor: `5140548a3c0af9b43a3746b804258b745fca7ed9`. This documentation-only checkpoint moves reviewer orientation to the first line beneath the README title and makes GitHub Issues/comments the preferred durable feedback channel, while retaining the explicit failure-preservation section. **Mathematical status unchanged.** Fixed-order candidates, the canonical frontier, shared-slack theorem, sample counts and source-sharing research target are unchanged.
 
 Canonical repository: `paullenz/MurtySimon742`, ID 1359206057. Every commit must update the CURRENT-STATUS blocks in BOTH this file and README.md atomically. Read [CANONICAL_REPOSITORY.md](CANONICAL_REPOSITORY.md), [AGENTS.md](AGENTS.md), [RESEARCH_EVIDENCE_INDEX.md](RESEARCH_EVIDENCE_INDEX.md), and commits newer than this predecessor before continuing.
 
