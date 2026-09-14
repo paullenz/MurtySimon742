@@ -1,6 +1,6 @@
 # Murty–Simon / Erdős Problem #742
 
-Candidate proofs and reproducible research. **Updated 14 September 2026 through the audited post-pair relational recovery promotion: 977 quantified whole-state closures, frontier 1,955/3,623. Independent mathematical review, novelty assessment and genuinely independent third-party computational reproduction remain OPEN.** Repository publication, green replay and same-assistant hostile audit are not external acceptance and do not prove the unrestricted conjecture.
+Candidate proofs and reproducible research. **Updated 14 September 2026 through the audited post-pair relational recovery promotion: 977 quantified whole-state closures, frontier 1,971/3,607. Independent mathematical review, novelty assessment and genuinely independent third-party computational reproduction remain OPEN.** Repository publication, green replay and same-assistant hostile audit are not external acceptance and do not prove the unrestricted conjecture.
 
 **External reviewers:** start with [`START_HERE_FOR_REVIEWERS.md`](START_HERE_FOR_REVIEWERS.md). Canonical theorem-level packages are indexed in [`releases/REVIEW_READY_INDEX.md`](releases/REVIEW_READY_INDEX.md). The project welcomes hostile review, counterexamples, literature corrections and genuinely independent reproduction; GitHub Issues are the preferred place to report a suspected flaw.
 
