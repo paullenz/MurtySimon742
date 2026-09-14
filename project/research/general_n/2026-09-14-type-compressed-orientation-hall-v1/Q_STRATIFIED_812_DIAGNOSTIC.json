@@ -1,0 +1,39 @@
+{
+  "schema": "q-stratified-812-diagnostic-v1",
+  "source_workflow_run": 34850187436,
+  "source_artifact_id": 10351372086,
+  "source_tsv_sha256": "c4f859f97bed726f6e4799473906bd1673520aa2501d755fc5136a1c3cb46885",
+  "exceptions": 812,
+  "state_histogram": {
+    "226": 61,
+    "1626": 709,
+    "2984": 39,
+    "4073": 2,
+    "6085": 1
+  },
+  "q_only_detected": 812,
+  "q_only_exact_capacity_matches": 812,
+  "q_only_gap_set": [0],
+  "fixed_q_mixed_selected_status_profiles": 0,
+  "selected_only_detected": 798,
+  "selected_only_exact_capacity_matches": 668,
+  "q_threshold_histogram": {
+    "3": 349,
+    "4": 242,
+    "5": 173,
+    "6": 48
+  },
+  "selected_unselected_q_gap_histogram": {
+    "1": 340,
+    "2": 415,
+    "3": 56,
+    "4": 1
+  },
+  "crossing_positive_profiles": 0,
+  "crossing_max": 0,
+  "coupled_residual_budget_min_slack": 17,
+  "positive_slack_incidence_pressure_min_slack": 1,
+  "whole_exterior_residual_expansion_min_margin": 2,
+  "promotion_status": "RECONNAISSANCE_ONLY",
+  "external_review": "OPEN"
+}
