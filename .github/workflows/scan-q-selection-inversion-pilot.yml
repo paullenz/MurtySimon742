@@ -1,0 +1,89 @@
+name: scan q-selection inversion pilot
+
+on:
+  workflow_dispatch:
+  push:
+    paths:
+      - 'project/research/general_n/2026-09-14-type-compressed-orientation-hall-v1/make_q_selection_inversion_scanner.py'
+      - '.github/workflows/scan-q-selection-inversion-pilot.yml'
+
+jobs:
+  pilot:
+    runs-on: ubuntu-latest
+    timeout-minutes: 45
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Prepare same deterministic 1/256 pilot shard
+        working-directory: project/research/general_n/2026-09-13-alternative-attacks-v1
+        run: python3 prepare_pair_capacity_frontier.py --mod 256 --rem 16 --output Q_SELECTION_INVERSION_PILOT_INPUT.txt
+
+      - name: Generate canonical antichain scanner
+        working-directory: project/research/general_n/2026-09-14-type-compressed-orientation-hall-v1
+        run: python3 make_antichain_stats_scanner.py
+
+      - name: Add coarse-band instrumentation
+        working-directory: project/research/general_n/2026-09-14-type-compressed-orientation-hall-v1
+        run: python3 make_band_reach_scanner.py
+
+      - name: Add compatible-copy instrumentation
+        working-directory: project/research/general_n/2026-09-14-type-compressed-orientation-hall-v1
+        run: python3 make_compatible_copy_band_reach_scanner.py
+
+      - name: Add layered-receiver instrumentation
+        working-directory: project/research/general_n/2026-09-14-type-compressed-orientation-hall-v1
+        run: python3 make_layered_receiver_reach_scanner.py
+
+      - name: Add exact q-crossing instrumentation
+        working-directory: project/research/general_n/2026-09-14-type-compressed-orientation-hall-v1
+        run: python3 make_q_crossing_stats_scanner.py
+
+      - name: Add q-selection inversion instrumentation
+        working-directory: project/research/general_n/2026-09-14-type-compressed-orientation-hall-v1
+        run: python3 make_q_selection_inversion_scanner.py
+
+      - name: Compile scanner
+        working-directory: project/research/general_n/2026-09-14-type-compressed-orientation-hall-v1
+        run: g++ -O3 -std=c++17 -Wall -Wextra -pedantic scan_q_selection_inversion_stats.cpp -o scan_q_selection_inversion_stats
+
+      - name: Run pilot
+        run: |
+          project/research/general_n/2026-09-14-type-compressed-orientation-hall-v1/scan_q_selection_inversion_stats \
+            project/research/general_n/2026-09-13-alternative-attacks-v1/Q_SELECTION_INVERSION_PILOT_INPUT.txt \
+            Q_SELECTION_INVERSION_PILOT.tsv \
+            2>&1 | tee Q_SELECTION_INVERSION_PILOT_REPLAY.txt
+
+      - name: Summarize and assert frozen baseline
+        run: |
+          python3 - <<'PY'
+          import csv,json
+          rows=list(csv.DictReader(open('Q_SELECTION_INVERSION_PILOT.tsv'),delimiter='\t'))
+          result={
+            'schema':'q-selection-inversion-frozen-pilot-v1',
+            'states':len(rows),
+            'profiles_tested':sum(int(r['profiles_tested']) for r in rows),
+            'target_hall_failure_profiles':sum(int(r['targethall_fail']) for r in rows),
+            'positive_crossing_profiles':sum(int(r['qcross_positive']) for r in rows),
+            'selection_inversion_profiles':sum(int(r['qselection_inversion_profiles']) for r in rows),
+            'promotion_status':'RECONNAISSANCE_ONLY',
+            'external_review':'OPEN',
+          }
+          assert result['states']==15,result
+          assert result['profiles_tested']==201493148,result
+          assert result['target_hall_failure_profiles']==205919,result
+          assert result['positive_crossing_profiles']==0,result
+          assert result['selection_inversion_profiles']==0,result
+          open('Q_SELECTION_INVERSION_PILOT_SUMMARY.json','w').write(json.dumps(result,indent=2,sort_keys=True)+'\n')
+          print(json.dumps(result,indent=2,sort_keys=True))
+          PY
+
+      - name: Upload evidence
+        uses: actions/upload-artifact@v4
+        with:
+          name: q-selection-inversion-frozen-pilot
+          path: |
+            project/research/general_n/2026-09-13-alternative-attacks-v1/Q_SELECTION_INVERSION_PILOT_INPUT.txt
+            project/research/general_n/2026-09-14-type-compressed-orientation-hall-v1/scan_q_selection_inversion_stats.cpp
+            Q_SELECTION_INVERSION_PILOT.tsv
+            Q_SELECTION_INVERSION_PILOT_REPLAY.txt
+            Q_SELECTION_INVERSION_PILOT_SUMMARY.json
