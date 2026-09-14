@@ -1,0 +1,26 @@
+{
+  "band_detected_target_failures": 205918,
+  "band_detection_fraction": 0.9999951437215604,
+  "band_failure_generator_histogram": {
+    "1": 214,
+    "2": 6721,
+    "3": 41452,
+    "4": 80972,
+    "5": 58775,
+    "6": 16349,
+    "7": 1426,
+    "8": 9,
+    "9+": 0
+  },
+  "band_passed_despite_target_failure": 1,
+  "crosscheck": "Labelled target-flow failures must match sharp-dominance quotient max-flow; band flow is then measured as a necessary relaxation only.",
+  "external_review": "OPEN",
+  "max_generators_on_band_failure": 8,
+  "profiles_tested": 201493148,
+  "promotion_status": "RECONNAISSANCE_ONLY",
+  "relational_excluded": 13,
+  "schema": "staircase-band-reach-pilot-v1",
+  "states": 15,
+  "survives_relational": 2,
+  "target_hall_failure_profiles": 205919
+}
