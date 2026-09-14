@@ -1,0 +1,15 @@
+name: runner queue probe
+
+on:
+  push:
+    paths:
+      - '.github/workflows/runner-queue-probe.yml'
+  workflow_dispatch:
+
+jobs:
+  probe:
+    runs-on: ubuntu-22.04
+    timeout-minutes: 5
+    steps:
+      - name: Confirm hosted runner allocation
+        run: echo "runner allocated"
