@@ -1,0 +1,147 @@
+name: summarize post-pair relational full audit
+
+on:
+  workflow_run:
+    workflows: ["audit post-pair relational full discovery"]
+    types: [completed]
+
+permissions:
+  actions: read
+  contents: read
+
+jobs:
+  summarize:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Download audit plan and all available audit shards
+        env:
+          GH_TOKEN: ${{ github.token }}
+          RUN_ID: ${{ github.event.workflow_run.id }}
+        run: |
+          mkdir -p artifacts
+          gh run download "$RUN_ID" -R "$GITHUB_REPOSITORY" -D artifacts || true
+
+      - name: Aggregate exact audit coverage
+        env:
+          RUN_ID: ${{ github.event.workflow_run.id }}
+          RUN_CONCLUSION: ${{ github.event.workflow_run.conclusion }}
+          RUN_HEAD_SHA: ${{ github.event.workflow_run.head_sha }}
+        run: |
+          python3 - <<'PY'
+          from pathlib import Path
+          import csv, hashlib, json, os
+
+          root = Path('artifacts')
+          plans = list(root.rglob('CANDIDATE_PLAN.json'))
+          inputs = list(root.rglob('CANDIDATE_INPUT.txt'))
+          if len(plans) != 1 or len(inputs) != 1:
+              raise SystemExit(f'expected one audit plan/input, found plans={len(plans)} inputs={len(inputs)}')
+          plan = json.loads(plans[0].read_text())
+          lines = [x.strip() for x in inputs[0].read_text().splitlines() if x.strip()]
+          n = int(lines[0]); body = lines[1:]
+          if len(body) != n:
+              raise SystemExit('candidate input count mismatch')
+          expected_keys = [(int(line.split()[0]), int(line.split()[1])) for line in body]
+          if len(expected_keys) != len(set(expected_keys)):
+              raise SystemExit('duplicate candidate key in audit plan')
+          expected = set(expected_keys)
+
+          audited = {}
+          fields = None
+          for path in root.rglob('AUDITED_RESULTS.tsv'):
+              with path.open(newline='') as f:
+                  rows = list(csv.DictReader(f, delimiter='\t'))
+              if rows and fields is None:
+                  fields = list(rows[0])
+              for row in rows:
+                  key = (int(row['layer']), int(row['state_id']))
+                  if key in audited:
+                      raise SystemExit(f'duplicate audited result: {key}')
+                  if key not in expected:
+                      raise SystemExit(f'audited result outside plan: {key}')
+                  if row['status'] != 'RELATIONAL_EXCLUDED' or row['witness_E'] != '-1':
+                      raise SystemExit(f'non-exclusion in audited result: {key}')
+                  audited[key] = row
+
+          unresolved = {}
+          statuses = []
+          for path in root.rglob('AUDIT_STATUS.json'):
+              obj = json.loads(path.read_text())
+              statuses.append(obj)
+              for item in obj.get('unresolved', []):
+                  key = (int(item['layer']), int(item['state_id']))
+                  if key in unresolved:
+                      raise SystemExit(f'duplicate unresolved audit record: {key}')
+                  if key in audited:
+                      raise SystemExit(f'key both audited and unresolved: {key}')
+                  unresolved[key] = item
+
+          unattempted = sorted(expected - set(audited) - set(unresolved))
+          unexpected_unresolved = sorted(set(unresolved) - expected)
+          if unexpected_unresolved:
+              raise SystemExit(f'unresolved keys outside plan: {unexpected_unresolved[:20]}')
+
+          if fields is None:
+              fields = [
+                  'layer','state_id','S','Emax','profiles_tested','paircap_fail','paircap_pass',
+                  'incidence_fail','incidence_pass','pairhall_fail','pairhall_pass',
+                  'targethall_fail','targethall_pass','cost_fail','status','witness_E',
+                  'witness_cost','witness_envelope','seconds','witness_rho','witness_q'
+              ]
+          out = Path('POST_PAIR_RELATIONAL_FULL_AUDITED_EXCLUDED.tsv')
+          with out.open('w', newline='') as f:
+              w = csv.DictWriter(f, fieldnames=fields, delimiter='\t', lineterminator='\n')
+              w.writeheader()
+              for key in sorted(audited):
+                  w.writerow(audited[key])
+
+          unresolved_path = Path('POST_PAIR_RELATIONAL_FULL_AUDIT_UNRESOLVED.json')
+          unresolved_path.write_text(json.dumps({f'{k[0]}:{k[1]}': unresolved[k] for k in sorted(unresolved)}, indent=2, sort_keys=True) + '\n')
+
+          def sha(path):
+              return hashlib.sha256(Path(path).read_bytes()).hexdigest()
+
+          reasons = {}
+          for item in unresolved.values():
+              reasons[item['reason']] = reasons.get(item['reason'], 0) + 1
+
+          audit_ready = bool(plan.get('audit_ready'))
+          audit_complete = (
+              audit_ready
+              and len(audited) == len(expected)
+              and not unresolved
+              and not unattempted
+          )
+          summary = {
+              'schema': 'post-pair-relational-full-audit-summary-v1',
+              'audit_run_id': int(os.environ['RUN_ID']),
+              'audit_head_sha': os.environ['RUN_HEAD_SHA'],
+              'audit_workflow_conclusion': os.environ['RUN_CONCLUSION'],
+              'audit_ready': audit_ready,
+              'candidate_count': len(expected),
+              'audited_count': len(audited),
+              'audited_n34': sum(k[0] == 0 for k in audited),
+              'audited_n35': sum(k[0] == 1 for k in audited),
+              'unresolved_count': len(unresolved),
+              'unresolved_by_reason': reasons,
+              'unattempted_count': len(unattempted),
+              'unattempted_keys': [list(k) for k in unattempted],
+              'audit_complete': audit_complete,
+              'audited_results_sha256': sha(out),
+              'unresolved_sha256': sha(unresolved_path),
+              'promotion_status': 'NOT_PROMOTED_REQUIRES_FROZEN_CERTIFICATE_AND_LEDGER_REVIEW',
+              'external_review': 'OPEN',
+              'trust_boundary': 'Cross-implementation internal audit; not independent third-party reproduction or mathematical acceptance.',
+          }
+          Path('POST_PAIR_RELATIONAL_FULL_AUDIT_SUMMARY.json').write_text(json.dumps(summary, indent=2, sort_keys=True) + '\n')
+          print(json.dumps(summary, indent=2, sort_keys=True))
+          PY
+
+      - name: Upload aggregate audit record
+        uses: actions/upload-artifact@v4
+        with:
+          name: post-pair-relational-full-audit-aggregate
+          path: |
+            POST_PAIR_RELATIONAL_FULL_AUDITED_EXCLUDED.tsv
+            POST_PAIR_RELATIONAL_FULL_AUDIT_UNRESOLVED.json
+            POST_PAIR_RELATIONAL_FULL_AUDIT_SUMMARY.json
