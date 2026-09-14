@@ -1,0 +1,73 @@
+name: diagnose staircase-band Hall exception
+
+on:
+  workflow_dispatch:
+  push:
+    paths:
+      - 'project/research/general_n/2026-09-14-type-compressed-orientation-hall-v1/make_band_exception_diagnostic.py'
+      - '.github/workflows/diagnose-staircase-band-exception.yml'
+
+jobs:
+  diagnostic:
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Prepare deterministic 1/256 pilot shard
+        working-directory: project/research/general_n/2026-09-13-alternative-attacks-v1
+        run: python3 prepare_pair_capacity_frontier.py --mod 256 --rem 16 --output BAND_EXCEPTION_PILOT_INPUT.txt
+
+      - name: Generate antichain scanner
+        working-directory: project/research/general_n/2026-09-14-type-compressed-orientation-hall-v1
+        run: python3 make_antichain_stats_scanner.py
+
+      - name: Add band reach instrumentation
+        working-directory: project/research/general_n/2026-09-14-type-compressed-orientation-hall-v1
+        run: python3 make_band_reach_scanner.py
+
+      - name: Add exception diagnostic instrumentation
+        working-directory: project/research/general_n/2026-09-14-type-compressed-orientation-hall-v1
+        run: python3 make_band_exception_diagnostic.py
+
+      - name: Compile diagnostic scanner
+        working-directory: project/research/general_n/2026-09-14-type-compressed-orientation-hall-v1
+        run: g++ -O3 -std=c++17 -Wall -Wextra -pedantic scan_band_exception_diagnostic.cpp -o scan_band_exception_diagnostic
+
+      - name: Run diagnostic pilot
+        run: |
+          project/research/general_n/2026-09-14-type-compressed-orientation-hall-v1/scan_band_exception_diagnostic \
+            project/research/general_n/2026-09-13-alternative-attacks-v1/BAND_EXCEPTION_PILOT_INPUT.txt \
+            BAND_EXCEPTION_PILOT.tsv \
+            2>&1 | tee BAND_EXCEPTION_DIAGNOSTIC_REPLAY.txt
+
+      - name: Extract exception block and assert uniqueness
+        run: |
+          python3 - <<'PY'
+          from pathlib import Path
+          text=Path('BAND_EXCEPTION_DIAGNOSTIC_REPLAY.txt').read_text()
+          begins=[i for i,l in enumerate(text.splitlines()) if l.startswith('BAND_EXCEPTION_BEGIN')]
+          ends=[i for i,l in enumerate(text.splitlines()) if l.startswith('BAND_EXCEPTION_END')]
+          if len(begins)!=1 or len(ends)!=1:
+              raise SystemExit(f'expected one band exception, got begins={len(begins)} ends={len(ends)}')
+          lines=text.splitlines()
+          if not lines[begins[0]].startswith('BAND_EXCEPTION_BEGIN state=226 '):
+              raise SystemExit('unique exception is not state 226')
+          if ends[0] < begins[0]:
+              raise SystemExit('malformed exception block')
+          block='\n'.join(lines[begins[0]:ends[0]+1])+'\n'
+          Path('STATE_226_BAND_EXCEPTION_DIAGNOSTIC.txt').write_text(block)
+          print(block)
+          PY
+
+      - name: Upload diagnostic evidence
+        uses: actions/upload-artifact@v4
+        with:
+          name: staircase-band-exception-diagnostic
+          path: |
+            project/research/general_n/2026-09-13-alternative-attacks-v1/BAND_EXCEPTION_PILOT_INPUT.txt
+            project/research/general_n/2026-09-13-alternative-attacks-v1/BAND_EXCEPTION_PILOT_INPUT_VERIFICATION.json
+            project/research/general_n/2026-09-14-type-compressed-orientation-hall-v1/scan_band_exception_diagnostic.cpp
+            BAND_EXCEPTION_PILOT.tsv
+            BAND_EXCEPTION_DIAGNOSTIC_REPLAY.txt
+            STATE_226_BAND_EXCEPTION_DIAGNOSTIC.txt
