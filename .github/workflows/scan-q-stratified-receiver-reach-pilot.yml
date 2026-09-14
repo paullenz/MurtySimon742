@@ -4,7 +4,7 @@ on:
   workflow_dispatch:
   push:
     paths:
-      - 'project/research/general_n/2026-09-14-type-compressed-orientation-hall-v1/make_q_stratified_receiver_residue_scanner.py'
+      - 'project/research/general_n/2026-09-14-type-compressed-orientation-hall-v1/make_q_crossing_stats_scanner.py'
       - '.github/workflows/scan-q-stratified-receiver-reach-pilot.yml'
 
 jobs:
@@ -34,17 +34,17 @@ jobs:
         working-directory: project/research/general_n/2026-09-14-type-compressed-orientation-hall-v1
         run: python3 make_layered_receiver_reach_scanner.py
 
-      - name: Add efficient q-stratified residue instrumentation
+      - name: Add exact q-crossing statistic instrumentation
         working-directory: project/research/general_n/2026-09-14-type-compressed-orientation-hall-v1
-        run: python3 make_q_stratified_receiver_residue_scanner.py
+        run: python3 make_q_crossing_stats_scanner.py
 
       - name: Compile scanner
         working-directory: project/research/general_n/2026-09-14-type-compressed-orientation-hall-v1
-        run: g++ -O3 -std=c++17 -Wall -Wextra -pedantic scan_q_stratified_receiver_residue_stats.cpp -o scan_q_stratified_receiver_residue_stats
+        run: g++ -O3 -std=c++17 -Wall -Wextra -pedantic scan_q_crossing_stats.cpp -o scan_q_crossing_stats
 
       - name: Run pilot
         run: |
-          project/research/general_n/2026-09-14-type-compressed-orientation-hall-v1/scan_q_stratified_receiver_residue_stats \
+          project/research/general_n/2026-09-14-type-compressed-orientation-hall-v1/scan_q_crossing_stats \
             project/research/general_n/2026-09-13-alternative-attacks-v1/Q_STRATIFIED_RECEIVER_REACH_PILOT_INPUT.txt \
             Q_STRATIFIED_RECEIVER_REACH_PILOT.tsv \
             2>&1 | tee Q_STRATIFIED_RECEIVER_REACH_PILOT_REPLAY.txt
@@ -61,15 +61,16 @@ jobs:
           lp=sum(int(r['layer_pass']) for r in rows)
           qf=sum(int(r['qlayer_fail']) for r in rows)
           qp=sum(int(r['qlayer_pass']) for r in rows)
-          qe=sum(int(r['qlayer_exact']) for r in rows)
-          qgap=sum(int(r['qlayer_gap_sum']) for r in rows)
-          qmix=sum(int(r['qmixed_profiles']) for r in rows)
+          qzero=sum(int(r['qcross_zero']) for r in rows)
+          qpos=sum(int(r['qcross_positive']) for r in rows)
           if target!=205919 or band!=205918 or cc!=205919 or lf!=205107 or lp!=812:
               raise SystemExit(f'baseline changed target={target} band={band} cc={cc} layer={lf}+{lp}')
-          if qf+qp!=target:
-              raise SystemExit(f'q-layer accounting mismatch {qf}+{qp}!={target}')
+          if qf+qp!=target or qzero+qpos!=target:
+              raise SystemExit(f'q accounting mismatch qlayer={qf}+{qp} crossing={qzero}+{qpos} target={target}')
+          hist={str(i):sum(int(r[f'qcross_{i}']) for r in rows) for i in range(9)}
+          hist['9+']=sum(int(r['qcross_9plus']) for r in rows)
           summary={
-            'schema':'q-stratified-receiver-reach-pilot-v2-residue-only',
+            'schema':'q-stratified-receiver-reach-pilot-v3-crossing-statistic',
             'states':len(rows),
             'profiles_tested':sum(int(r['profiles_tested']) for r in rows),
             'target_hall_failure_profiles':target,
@@ -77,11 +78,11 @@ jobs:
             'global_layer_false_negatives':lp,
             'q_stratified_detected':qf,
             'q_stratified_false_negatives':qp,
-            'q_stratified_exact_matches_on_global_residue':qe,
-            'q_stratified_total_gap_above_exact_on_global_residue':qgap,
-            'q_stratified_max_gap_above_exact_on_global_residue':max(int(r['qlayer_max_gap']) for r in rows),
-            'global_residue_profiles_with_mixed_selected_status_inside_q':qmix,
-            'max_mixed_q_levels_in_one_global_residue_profile':max(int(r['qmixed_max_levels']) for r in rows),
+            'zero_crossing_profiles':qzero,
+            'positive_crossing_profiles':qpos,
+            'crossing_sum':sum(int(r['qcross_sum']) for r in rows),
+            'maximum_crossing':max(int(r['qcross_max']) for r in rows),
+            'crossing_histogram':hist,
             'promotion_status':'RECONNAISSANCE_ONLY',
             'external_review':'OPEN'
           }
@@ -96,7 +97,7 @@ jobs:
           path: |
             project/research/general_n/2026-09-13-alternative-attacks-v1/Q_STRATIFIED_RECEIVER_REACH_PILOT_INPUT.txt
             project/research/general_n/2026-09-13-alternative-attacks-v1/Q_STRATIFIED_RECEIVER_REACH_PILOT_INPUT_VERIFICATION.json
-            project/research/general_n/2026-09-14-type-compressed-orientation-hall-v1/scan_q_stratified_receiver_residue_stats.cpp
+            project/research/general_n/2026-09-14-type-compressed-orientation-hall-v1/scan_q_crossing_stats.cpp
             Q_STRATIFIED_RECEIVER_REACH_PILOT.tsv
             Q_STRATIFIED_RECEIVER_REACH_PILOT_REPLAY.txt
             Q_STRATIFIED_RECEIVER_REACH_PILOT_SUMMARY.json
