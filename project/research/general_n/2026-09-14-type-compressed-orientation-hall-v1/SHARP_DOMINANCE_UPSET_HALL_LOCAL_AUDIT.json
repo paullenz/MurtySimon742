@@ -1,0 +1,29 @@
+{
+  "schema": "sharp-dominance-upset-hall-local-audit-v1",
+  "date": "2026-09-14",
+  "status": "PASS",
+  "execution_scope": "same-assistant local exhaustive/deterministic arithmetic audit",
+  "exhaustive_profiles": 1286,
+  "random_profiles": 3000,
+  "profiles": 4286,
+  "profiles_with_negative_margin": 3556,
+  "interval_checks": 101928,
+  "margin_evaluations": 221532,
+  "submodularity_checks": 1123108,
+  "exchange_checks": 372455,
+  "strict_gap_checks": 126654,
+  "max_cardinality_minimizers": 4286,
+  "upset_sets_checked": 69136,
+  "seed": 7420914,
+  "claims_checked": [
+    "interval identity",
+    "Hall-margin submodularity",
+    "sharp exchange inequality",
+    "strict demand-gap exchange inequality",
+    "maximum-cardinality minimizers are sharp hardness up-sets",
+    "unrestricted minimum equals minimum over sharp hardness up-sets"
+  ],
+  "external_mathematical_review": "OPEN",
+  "independent_third_party_reproduction": "OPEN",
+  "note": "This record is explicitly weaker than GitHub CI or independent reproduction. The preserved verifier source is verify_sharp_dominance_upset_hall.py."
+}
