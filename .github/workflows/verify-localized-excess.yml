@@ -1,0 +1,63 @@
+name: verify localized selected excess
+on:
+  workflow_dispatch:
+  push:
+    paths:
+      - 'project/research/general_n/2026-09-14-localized-excess-v1/**'
+      - '.github/workflows/verify-localized-excess.yml'
+permissions:
+  contents: read
+  actions: read
+jobs:
+  verify:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v4
+      - name: Download frozen difficult-profile diagnostic
+        uses: actions/download-artifact@v4
+        with:
+          name: layered-receiver-exception-diagnostic
+          run-id: 34850187436
+          github-token: ${{ github.token }}
+          path: /tmp/localized-inputs/exceptions
+      - name: Download frozen q-stratified pilot input
+        uses: actions/download-artifact@v4
+        with:
+          name: q-stratified-receiver-reach-pilot
+          run-id: 34859094097
+          github-token: ${{ github.token }}
+          path: /tmp/localized-inputs/pilot
+      - name: Replay independent verifier and require every frozen value
+        working-directory: project/research/general_n/2026-09-14-localized-excess-v1
+        env:
+          PYTHONOPTIMIZE: '0'
+        run: |
+          python3 - <<'PY'
+          import hashlib, json, pathlib, subprocess, sys
+          root = pathlib.Path('/tmp/localized-inputs')
+          expected = json.loads(pathlib.Path('LOCALIZED_EXCESS_VERIFICATION.json').read_text())
+          def unique(name):
+              found = list(root.rglob(name))
+              assert len(found) == 1, (name, found)
+              return found[0]
+          diagnostic = unique('LAYER_EXCEPTION_DIAGNOSTIC.tsv')
+          pilot = unique('Q_STRATIFIED_RECEIVER_REACH_PILOT_INPUT.txt')
+          assert hashlib.sha256(diagnostic.read_bytes()).hexdigest() == expected['frozen_812']['exceptions_sha256']
+          assert hashlib.sha256(pilot.read_bytes()).hexdigest() == expected['frozen_812']['pilot_input_sha256']
+          output = pathlib.Path('/tmp/LOCALIZED_EXCESS_REPLAY.json')
+          with output.open('w') as handle:
+              subprocess.run([sys.executable, 'verify_localized_excess.py', '--exceptions', str(diagnostic), '--pilot-input', str(pilot)], stdout=handle, check=True)
+          actual = json.loads(output.read_text())
+          assert actual == expected, 'Complete parsed JSON differs: inspect evidence; do not weaken checks'
+          print('PASS: exhaustive, floor, hostile, mutation, witness and all 812 frozen-profile values agree')
+          PY
+      - name: Upload replay evidence and frozen inputs
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: localized-excess-independent-replay
+          if-no-files-found: warn
+          path: |
+            /tmp/LOCALIZED_EXCESS_REPLAY.json
+            /tmp/localized-inputs
