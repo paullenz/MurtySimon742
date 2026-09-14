@@ -1,0 +1,23 @@
+name: Row471 common-pressure eL42 eL43
+on:
+  push:
+    paths:
+      - 'project/research/general_n/2026-09-15-row471-e42-e43-common-pressure-v1/**'
+      - 'project/research/general_n/2026-09-14-block-pressure-v1/REMAINDER_12.json'
+      - '.github/workflows/row471-e42-e43-common-pressure.yml'
+  pull_request:
+    paths:
+      - 'project/research/general_n/2026-09-15-row471-e42-e43-common-pressure-v1/**'
+      - 'project/research/general_n/2026-09-14-block-pressure-v1/REMAINDER_12.json'
+      - '.github/workflows/row471-e42-e43-common-pressure.yml'
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  replay:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v4
+      - name: Exact row471 eL42 eL43 replay
+        run: python3 project/research/general_n/2026-09-15-row471-e42-e43-common-pressure-v1/run_replay.py

@@ -1,0 +1,52 @@
+{
+  "independent_regression_e_low": [41],
+  "newly_closed_e_low": [42, 43],
+  "remaining_e_low": [47],
+  "reports": {
+    "41": {
+      "contradiction": "213<222",
+      "high_admissible_terminal_states": 27,
+      "high_excess": 6,
+      "high_terminal_states": 85,
+      "high_upper": 45,
+      "low_high_slots": 3,
+      "receiver_lower": 222,
+      "rho1_upper": 132,
+      "rho2_admissible_terminal_states": 531,
+      "rho2_state_counts": [15, 210, 1225, 4325],
+      "rho2_upper": 36,
+      "total_charge_upper": 213
+    },
+    "42": {
+      "contradiction": "214<222",
+      "high_admissible_terminal_states": 18,
+      "high_excess": 5,
+      "high_terminal_states": 75,
+      "high_upper": 38,
+      "low_high_slots": 4,
+      "receiver_lower": 222,
+      "rho1_upper": 132,
+      "rho2_admissible_terminal_states": 840,
+      "rho2_state_counts": [15, 210, 1225, 4325],
+      "rho2_upper": 44,
+      "total_charge_upper": 214
+    },
+    "43": {
+      "contradiction": "215<222",
+      "high_admissible_terminal_states": 12,
+      "high_excess": 4,
+      "high_terminal_states": 63,
+      "high_upper": 29,
+      "low_high_slots": 5,
+      "receiver_lower": 222,
+      "rho1_upper": 132,
+      "rho2_admissible_terminal_states": 1194,
+      "rho2_state_counts": [15, 210, 1225, 4325],
+      "rho2_upper": 54,
+      "total_charge_upper": 215
+    }
+  },
+  "row": 471,
+  "schema": "row471-e42-e43-common-pressure-v1",
+  "scope": "exact necessary-condition argument inside the conditioned selected-incidence/common-pressure relaxation; e_L=47 remains; no unrestricted or whole-state claim"
+}

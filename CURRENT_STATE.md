@@ -1,9 +1,7 @@
 # Murty–Simon / Erdős #742 — current state handoff
 
 <!-- CURRENT-STATUS:START -->
-**15 September 2026 — checkpoint `row471-e41-highblock-v1`.** Inspected predecessor: `2667a909f8eec2f7ade27712cc65f6d345b663d2`. The conditioned row471 branch `eta=2,e_L=41` is now exactly closed inside the existing selected-incidence/common-pressure relaxation. The high block has excess six and only three low selections among its nine eligible sources; receiver pressure forces at least ten pressure units onto those nine sources. Exact integer exhaustion of the nine small pressure ranges plus the three shared low slots shows every surviving pressure pattern needs at least 28 high selections from positive-pressure sources, while the positive-excess high labels can carry at most 24 incidences. Contradiction `28>24`. **Row471 itself remains open on `e_L=42,43,47`; original synthetic sample remains 708/713. Canonical finite frontier remains 4,626 exclusions / 952 survivors / 3,632 whole-state closures.** External review remains OPEN.
-
-**Publication-process correction.** Predecessor `2667a909...` published the new row471 research note before the paired README/CURRENT_STATE status update, contrary to the standing every-commit synchronization rule. That sequencing error is preserved rather than glossed over. This checkpoint supplies the paired live-status correction and exact verifier; no mathematical claim is inferred from the publication order.
+**15 September 2026 — checkpoint `row471-e42-e43-common-pressure-v1`.** Inspected predecessor: `2c640dcb2226bd4a6d056dc9da46cc4be9a53bc1`. The independently verified row471 `e_L=41` closure is preserved. A separate exact source-group common-pressure split now closes conditioned branches `e_L=42,43`, with total charge uppers `214,215` against the inherited exact receiver lower `222`; the same verifier independently rechecks `e_L=41` at `213<222`. **Row471 itself remains open only on `e_L=47`; original synthetic sample remains 708/713. Canonical finite frontier remains 4,626 exclusions / 952 survivors / 3,632 whole-state closures.** External review remains OPEN.
 <!-- RELATIONAL-FULL-PROMOTION:PROMOTED -->
 
 Canonical repository: `paullenz/MurtySimon742`, ID1359206057. Every commit must update the CURRENT-STATUS blocks in BOTH this file and README.md atomically. Read [`AGENTS.md`](AGENTS.md), [`CANONICAL_REPOSITORY.md`](CANONICAL_REPOSITORY.md), [`RESEARCH_EVIDENCE_INDEX.md`](RESEARCH_EVIDENCE_INDEX.md), and newer commits before continuing.
@@ -29,7 +27,37 @@ Discovery/recovery run `34844403328` and independent audit run `34854911792` cov
 
 The shared block-slack package had rejected707/713 original synthetic profiles and708/715 fresh profiles. The row108 [`conditioned-source-sharing-v1`](project/research/general_n/2026-09-14-conditioned-source-sharing-v1/README.md) exclusion raises the ORIGINAL sample to **708/713 rejected**, with exactly **160,338,347,471,586** not rejected. This is sample-level evidence only. The fresh sample remains **708/715 rejected** in its separate namespace. No canonical whole-state closure follows from that sample result.
 
-For row471, the earlier rigidity step closed conditioned branches `e_L=39,40`; run34906169745 completed SUCCESS and passed the exact conditioned scan, frozen-output digest check and rigidity verifier. The new [`row471-e41-v1`](project/research/general_n/2026-09-15-row471-e41-v1/README.md) argument closes `e_L=41` by shared high-excess pressure counting. Its standard-library verifier records 55,992 pressure vectors with high pressure at least ten, 1,311 per-source shared-slack survivors, 25 pressure/low-slot pairs after the common nested-excess test, 18 distinct pressure vectors, and the final `28>24` incidence contradiction. Row471 is not fully excluded; conditioned branches **42,43,47** remain.
+For row471, the earlier rigidity step closed conditioned branches `e_L=39,40`; run34906169745 completed SUCCESS and passed the exact conditioned scan, frozen-output digest check and rigidity verifier. The independently developed [`row471-e41-v1`](project/research/general_n/2026-09-15-row471-e41-v1/README.md) closes `e_L=41` by a shared high-excess/common-pressure incidence contradiction `28>24`. The new [`row471-e42-e43-common-pressure-v1`](project/research/general_n/2026-09-15-row471-e42-e43-common-pressure-v1/README.md) closes `e_L=42,43` by an exact source-group split: the `rho=2` symmetry DP has charge maxima `44,54`, the high-source nested-excess DP has maxima `38,29`, and the `rho=1` contribution is at most132, giving `214<222` and `215<222`. Its `e_L=41` calculation `213<222` is only an independent regression. **Only `e_L=47` remains for row471.**
+
+## Row471 `e_L=42,43` exact common-pressure split
+
+At `eta=2`, the low block has base demand13. Sources divide into 12 sources with `rho=1` and total row sum33, four sources with `rho=2` and row sums `7,4,4,3`, and nine sources with `rho=3` and total row sum45. Every `rho<=2` selection is low-block, so for branch excess `e_L`, the high sources use exactly
+
+```text
+L=e_L-38
+```
+
+low selections, while the twelve demand-three labels have total excess
+
+```text
+H=47-e_L.
+```
+
+For `e_L=41,42,43`, `(L,H)=(3,6),(4,5),(5,4)`. The inherited exact receiver certificate with `charge_eta=0`, uniform source weight, `tau=1`, `theta=5` gives `free=22`, `penalty=148`, and hence the same lower bound
+
+```text
+C=sum q_u d_u >= 5*(96-22)-148 = 222.
+```
+
+The twelve `rho=1` sources have pressure ceiling4, so contribute at most132. For the four `rho=2` sources, an exact symmetry DP tracks selected degree and maximum selected-source pressure on the four demand-two labels; the shared high-source low-slot budget gives exact safe maxima `36,44,54`. For the nine `rho=3` sources, sorting high-label excesses and maximally nesting pressure requirements gives exact safe maxima `45,38,29`. Thus the combined safe upper bounds are
+
+```text
+e_L=41: 132+36+45=213 < 222  (independent regression)
+e_L=42: 132+44+38=214 < 222  (new closure)
+e_L=43: 132+54+29=215 < 222  (new closure)
+```
+
+The exact standard-library replay passed locally. Frozen canonical parsed-result SHA256 is `b2f2b8f1f714eb11225c07d9a9595154a7c53523b5d8da74be8a2028c170cc15`. A dedicated remote workflow is installed by this checkpoint and is **not called successful until inspected**.
 
 ## Exact row108 finish — remotely reproduced
 
@@ -47,11 +75,11 @@ The root README has regained the earlier hostile/red-team history that had been 
 
 Strengthened guard run **34908428824** remains FAILED. Its failure was navigational, not mathematical: `START_HERE_FOR_REVIEWERS.md` existed at the README top but not inside the protected `REVIEW-MATERIALS` block. The subsequent repair adds that link inside the protected block and does not weaken the red-team-history checks.
 
-The standalone research-note commit `2667a909...` is also retained as a process failure against the every-commit paired-status rule. This checkpoint corrects the live surfaces and adds the exact verifier rather than rewriting that predecessor as compliant.
+The standalone research-note commit `2667a909...` is also retained as a process failure against the every-commit paired-status rule. Later checkpoints correct the live surfaces and add exact verification rather than rewriting that predecessor as compliant.
 
 ## Immediate next target
 
-Attack row471 `e_L=42` next, then `43,47`. First test whether the same shared high-excess pressure mechanism strengthens: high excess falls to five at `e_L=42`, while high-source low slots rise to four. If that no longer closes the branch, add destination-label compatibility and the bridge's ONE common residual-neighbourhood condition. In parallel, carry exact common-pressure/source-incidence across the five remaining original profiles. Preserve every non-rejection and keep the fresh namespace separate.
+Attack the final row471 branch `e_L=47`. It is structurally different from `41–43`: all selected excess is in the low block and the inherited best charge system uses `charge_eta=2`, so the exact `C>=222` lower bound above is unavailable. The next attack should impose selected-label/destination compatibility and the bridge's **ONE shared residual neighbourhood per source**, rather than extrapolating the charge split outside its valid domain. In parallel, carry exact common-pressure/source-incidence across the other retained original profiles. Preserve every non-rejection and keep the fresh namespace separate.
 
 For a canonical arc `u->w` and selected-label sets `S_u,S_w`, retain
 
