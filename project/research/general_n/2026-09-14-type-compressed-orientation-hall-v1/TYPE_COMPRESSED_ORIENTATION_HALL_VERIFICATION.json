@@ -1,0 +1,40 @@
+{
+  "arithmetic": "exact integers only",
+  "claims_checked": [
+    "labelled subset margin equals compressed type-count formula",
+    "minimum over all subsets equals minimum over unions of complete types",
+    "compressed Hall margin is coordinatewise discretely concave"
+  ],
+  "deterministic_broad_random": {
+    "concavity_lines": 84606,
+    "formula_checks": 322532,
+    "profiles": 5000,
+    "profiles_with_hall_violation": 2418,
+    "seed": 7420914
+  },
+  "exhaustive_small_type_universe": {
+    "concavity_lines": 307290,
+    "formula_checks": 271452,
+    "profiles": 9330,
+    "profiles_with_hall_violation": 6430,
+    "types": [
+      [0, 0, 0],
+      [0, 1, 1],
+      [1, 1, 0],
+      [1, 2, 1],
+      [2, 2, 1],
+      [2, 3, 2]
+    ]
+  },
+  "external_review": "OPEN",
+  "github_actions": {
+    "run_id": 34820069162,
+    "head_sha": "d7cd31c89df42e8f9d069a579dc5bec7f27205cf",
+    "conclusion": "success",
+    "artifact_id": 10337932232,
+    "artifact_digest": "sha256:5c0c6dec9db66306d501e8f28d9ee3fc604d4d04363067b90e59f80c2ed4e55b"
+  },
+  "note": "Finite audit supports but does not replace the hand proof. External mathematical review and novelty assessment remain open.",
+  "schema": "type-compressed-orientation-hall-verification-v1",
+  "status": "PASS"
+}
