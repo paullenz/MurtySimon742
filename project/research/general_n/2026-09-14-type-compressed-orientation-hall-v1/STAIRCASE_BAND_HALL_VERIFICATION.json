@@ -1,0 +1,36 @@
+{
+  "band_demand_checks": 79626,
+  "band_sets_checked": 210356,
+  "capacity_dominance_checks": 210356,
+  "claims_checked": [
+    "selected source intervals are contained in their band-generator intervals",
+    "target generator-compatible band neighborhoods are consecutive",
+    "band demand dominates generator-demand lower bound",
+    "actual compatible incoming counts never exceed band upper counts for every band subset",
+    "exact Hall target capacity never exceeds staircase-band upper capacity"
+  ],
+  "exhaustive_max_order": 5,
+  "exhaustive_profiles": 1286,
+  "exhaustive_universe": [
+    [0, 0, 0],
+    [0, 1, 1],
+    [1, 1, 0],
+    [1, 2, 1],
+    [1, 3, 2],
+    [2, 2, 1],
+    [2, 3, 0],
+    [2, 4, 2]
+  ],
+  "external_review": "OPEN",
+  "incoming_upper_checks": 1334288,
+  "max_bands": 6,
+  "note": "Independent finite arithmetic audit of the staircase-band relaxation; not third-party review of the Murty-Simon bridge.",
+  "profiles": 2786,
+  "random_profiles": 1500,
+  "result": "PASS",
+  "schema": "staircase-band-hall-verification-v1",
+  "seed": 7420914,
+  "source_interval_containment_checks": 112807,
+  "target_interval_checks": 214908,
+  "upsets_checked": 39991
+}
