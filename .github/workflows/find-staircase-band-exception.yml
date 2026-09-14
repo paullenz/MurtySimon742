@@ -1,0 +1,59 @@
+name: find unique staircase-band exception
+
+on:
+  workflow_dispatch:
+  push:
+    paths:
+      - 'project/research/general_n/2026-09-14-type-compressed-orientation-hall-v1/make_band_exception_scanner.py'
+      - '.github/workflows/find-staircase-band-exception.yml'
+
+jobs:
+  diagnose:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Prepare pilot shard and isolate state 226
+        working-directory: project/research/general_n/2026-09-13-alternative-attacks-v1
+        run: |
+          python3 prepare_pair_capacity_frontier.py --mod 256 --rem 16 --output BAND_EXCEPTION_PILOT_INPUT.txt
+          python3 - <<'PY'
+          from pathlib import Path
+          p=Path('BAND_EXCEPTION_PILOT_INPUT.txt')
+          lines=[x.strip() for x in p.read_text().splitlines() if x.strip()]
+          body=lines[1:]
+          hit=[x for x in body if int(x.split()[1])==226]
+          if len(hit)!=1: raise SystemExit(f'expected exactly state 226, got {len(hit)}')
+          Path('BAND_EXCEPTION_STATE226_INPUT.txt').write_text('1\n'+hit[0]+'\n')
+          PY
+
+      - name: Generate diagnostic scanner chain
+        working-directory: project/research/general_n/2026-09-14-type-compressed-orientation-hall-v1
+        run: |
+          python3 make_antichain_stats_scanner.py
+          python3 make_band_reach_scanner.py
+          python3 make_band_exception_scanner.py
+
+      - name: Compile diagnostic scanner
+        working-directory: project/research/general_n/2026-09-14-type-compressed-orientation-hall-v1
+        run: g++ -O3 -std=c++17 -Wall -Wextra -pedantic scan_band_exception.cpp -o scan_band_exception
+
+      - name: Find first exact-Hall / band-flow discrepancy
+        run: |
+          project/research/general_n/2026-09-14-type-compressed-orientation-hall-v1/scan_band_exception \
+            project/research/general_n/2026-09-13-alternative-attacks-v1/BAND_EXCEPTION_STATE226_INPUT.txt \
+            BAND_EXCEPTION_STATE226_SCAN.tsv \
+            2>&1 | tee BAND_EXCEPTION_REPLAY.txt
+          test -s BAND_EXCEPTION_WITNESS.json
+          cat BAND_EXCEPTION_WITNESS.json
+
+      - name: Upload diagnostic evidence
+        uses: actions/upload-artifact@v4
+        with:
+          name: staircase-band-exception-witness
+          path: |
+            project/research/general_n/2026-09-13-alternative-attacks-v1/BAND_EXCEPTION_STATE226_INPUT.txt
+            project/research/general_n/2026-09-14-type-compressed-orientation-hall-v1/scan_band_exception.cpp
+            BAND_EXCEPTION_WITNESS.json
+            BAND_EXCEPTION_REPLAY.txt
