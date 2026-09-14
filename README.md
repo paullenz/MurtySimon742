@@ -1,10 +1,9 @@
 # Murty–Simon / Erdős Problem #742
 
-Open, reproducible research on the Murty–Simon conjecture / Erdős Problem #742. **Updated 14 September 2026 through the shared block-slack theorem and fresh-seed verification.** The new [proof package](project/research/general_n/2026-09-14-joint-blocks-v1/README.md) records the derivation, all hypothesis boundaries, complete integer certificates, a preserved counterexample and unsuccessful multiblock extensions.
+Open, reproducible research on the Murty–Simon conjecture / Erdős Problem #742. **The unrestricted conjecture is not claimed proved.** External mathematical review, novelty assessment and independent third-party reproduction remain OPEN.
 
-The promoted finite frontier remains **1,971 exclusions / 3,607 survivors**, with **977 quantified whole-state closures**. The **2,655 recovered relational candidates remain unpromoted**. The unrestricted conjecture is **not claimed proved**. External mathematical review, novelty assessment and independent third-party reproduction remain OPEN.
-
-## Fixed-order and general candidate status
+<!-- CURRENT-STATUS:START -->
+## Current status: fixed-order candidates
 
 | Scope | Preserved candidate result; external review open |
 |---|---|
@@ -18,17 +17,33 @@ The promoted finite frontier remains **1,971 exclusions / 3,607 survivors**, wit
 | n=33 | e(G)<=272, equality exactly K(16,17); source-first reviewer-v1 |
 | n=34 | e(G)<=289, equality exactly K(17,17); reviewer-v2; final heavy certificate hand-replaced |
 | n=35 | e(G)<=306, equality exactly K(17,18); reviewer-v1 |
-| General maximum-degree result | For n>=6, Delta(G)>=(7/12)n implies e(G)<floor(n^2/4); candidate theorem, external review and novelty assessment open |
 
-**Canonical repository:** `paullenz/MurtySimon742`; see [CANONICAL_REPOSITORY.md](CANONICAL_REPOSITORY.md). **Restarts:** read [CURRENT_STATE.md](CURRENT_STATE.md), [RESEARCH_EVIDENCE_INDEX.md](RESEARCH_EVIDENCE_INDEX.md), and newer commits. The repository, not a chat transcript, is the durable source of truth.
+## Current status: general research
+
+| Workstream | Latest established or recorded position |
+|---|---|
+| General maximum-degree candidate | For n>=6, Delta(G)>=(7/12)n implies e(G)<floor(n^2/4); external review and novelty assessment open |
+| Canonical finite frontier | **1,971 exclusions / 3,607 survivors; 977 quantified whole-state closures** — unchanged |
+| Relational candidates | **2,655 recovered candidates remain UNPROMOTED** pending the full audit and separate reviewed ledger step |
+| Latest internally checked structural result | [Shared block-slack pressure](project/research/general_n/2026-09-14-joint-blocks-v1/README.md): sources must share one budget of spare selected places |
+| Original synthetic sample | 707 of 713 rejected; six not rejected: 108,160,338,347,471,586 |
+| Fresh-seed sample | 708 of 715 rejected; seven not rejected, in a separate row namespace; same generator, not independent generation |
+| Preserved unsuccessful extension | Simultaneous multiblock test retained 454 of 597 tuples across all six original profiles; no additional full-profile exclusion |
+| Last recorded end-to-end verification | Shared-slack run 34898768799 completed SUCCESS; exact output comparison is recorded in the [CI receipt](project/research/general_n/2026-09-14-joint-blocks-v1/CI_AUDIT.md). This is not a new live audit observation |
+| Active continuation | [Source-sharing plan](project/research/general_n/2026-09-14-source-sharing-v1/PLAN.md), committed at 047885e9524a05a9680ec84fcc33903a43257271: enforce common selected-source row budgets instead of independently reusing each label's best sources |
+
+**Checkpoint — 14 September 2026, `readme-status-v1`.** Inspected predecessor: `be8c3a82d6304986f4fab09cdcd07b2b737f4835`. This commit brings both summaries to the opening overview, reconciles the already-committed source-sharing plan into the live handoff, preserves the preceding detailed pages byte-for-byte, and installs the every-commit synchronization rule. The status guard passed 11 local regression checks; its new remote workflow is not yet claimed passed. **Mathematical status unchanged.** Next: derive and exactly test the source-priced charge envelope; no new source-sharing exclusion has been established here.
+
+**Standing order:** every commit must update the current-status blocks in BOTH this README and [CURRENT_STATE.md](CURRENT_STATE.md), in the same atomic commit. Record the actual change even when mathematical status is unchanged. Keep these summaries near the top. See [CANONICAL_REPOSITORY.md](CANONICAL_REPOSITORY.md) and [AGENTS.md](AGENTS.md).
+<!-- CURRENT-STATUS:END -->
+
+**Canonical repository:** `paullenz/MurtySimon742`. **Restarts:** read [CURRENT_STATE.md](CURRENT_STATE.md), [RESEARCH_EVIDENCE_INDEX.md](RESEARCH_EVIDENCE_INDEX.md), and newer commits. The repository, not a chat transcript, is the durable source of truth.
 
 **External reviewers:** begin with [START_HERE_FOR_REVIEWERS.md](START_HERE_FOR_REVIEWERS.md) and [releases/REVIEW_READY_INDEX.md](releases/REVIEW_READY_INDEX.md). Hostile review, counterexamples, literature corrections and independent reproduction are welcome.
 
-The previous root overview and handoff are preserved BYTE FOR BYTE in [README_PRE_SHARED_SLACK_2026-09-14.md](README_PRE_SHARED_SLACK_2026-09-14.md) and [CURRENT_STATE_PRE_SHARED_SLACK_2026-09-14.md](CURRENT_STATE_PRE_SHARED_SLACK_2026-09-14.md). Their older counts and queue observations are historical. Earlier archives, failed approaches and reviewer packages remain intact. The protected reviewer-navigation section below is retained unchanged.
+## Research approach and detailed evidence
 
-## How this research develops general theory
-
-Specific graph orders and explicitly defined relaxed profiles serve as laboratories for structural principles, not substitutes for an all-order proof. The [canonical graph-to-constraint bridge](project/research/general_n/2026-09-11-canonical-bridge-v1/CANONICAL_BRIDGE.md) translates a hypothetical graph into selected quasi-edge representatives, residual incidences, label demands, missing-pair loads and incoming capacities.
+Specific graph orders and explicitly defined relaxed profiles are laboratories for structural principles, not substitutes for an all-order proof. The [canonical graph-to-constraint bridge](project/research/general_n/2026-09-11-canonical-bridge-v1/CANONICAL_BRIDGE.md) translates a hypothetical graph into selected quasi-edge representatives, residual incidences, label demands, missing-pair loads and incoming capacities. Keep structural surplus t, q-threshold tau and block threshold eta distinct:
 
 ```text
 a=n-1-Delta, b=Delta, t=e(G)-b(a+1),
@@ -36,80 +51,17 @@ Q=r+2t+D0+Esel,
 D0=S-r-2t>=0, Esel=Q-S>=0.
 ```
 
-Structural surplus is t, q-threshold tau, demand-block threshold eta. Zero-demand count z is never silently bounded by Esel. The cycle is exact constraints, finite tests, hand-proof extraction, hostile testing, separately structured verification, and return to the universal inequality. Surviving a relaxation never implies graph realizability.
+The cycle is exact constraints, finite tests, hand-proof extraction, hostile testing, separately structured verification, and return to the universal inequality. Zero-demand labels stay explicit; never silently assume their count is bounded by Esel. Surviving a relaxation does not imply graph realizability.
 
-## New result: spare selections are shared, not independently reusable
+The [complete preceding overview](README_SHARED_SLACK_DETAILS_2026-09-14.md) is preserved **byte-for-byte** and contains the full shared-slack derivation, the hand-readable 103<104 branch, branch-coverage ranges, verification counts, fresh-seed results, negative experiments and publication history. Its status statements are historical observations as of that checkpoint; the opening summaries above and [live handoff](CURRENT_STATE.md) are current. Earlier archives remain intact. The protected reviewer-navigation section below is retained unchanged.
 
-The [conditioned-excess argument](project/research/general_n/2026-09-14-conditioned-excess-v1/README.md) couples incoming caps and the charge envelope to the SAME excess in one demand block. It previously resolved row295's equality case: four sources would need total pressure10 but could carry at most8.
+The [shared-slack proof package](project/research/general_n/2026-09-14-joint-blocks-v1/README.md), [offline replay guide](project/research/general_n/2026-09-14-joint-blocks-v1/REPRODUCE.md), [research evidence index](RESEARCH_EVIDENCE_INDEX.md), [durable evidence directory](project/research/general_n/2026-09-14-evidence-preservation-v1/durable/), and [publication audit](project/research/general_n/2026-09-14-evidence-preservation-v1/PUBLICATION_AUDIT.md) retain exact inputs, proofs, failures, counterexamples and replay scopes. A successful file write or queued workflow is not verification.
 
-The new [shared-slack theorem](project/research/general_n/2026-09-14-joint-blocks-v1/README.md) quantifies the positive-slack case. Let L contain every zero-demand label. Define f_u as the number of source u's selections forced into L, M=sum f_u, and S_L=sum of its demands. Fix the actual low-block excess e_L and put
+## Retained routes and audit gate
 
-```text
-H=Esel-e_L,
-J=S_L+e_L-M.
-```
+[Priced tails](project/research/general_n/2026-09-14-q-tail-interval-budget-v1/PRICED_TAIL_BUDGET.md), [interval capacity](project/research/general_n/2026-09-14-q-tail-interval-budget-v1/README.md), [localized excess](project/research/general_n/2026-09-14-localized-excess-v1/README.md), [capped spill](project/research/general_n/2026-09-14-capped-spill-v1/README.md), [block pressure](project/research/general_n/2026-09-14-block-pressure-v1/README.md), and [conditioned excess](project/research/general_n/2026-09-14-conditioned-excess-v1/README.md) retain their own assumptions and evidence. The [exact q-stratified minimum](project/research/general_n/2026-09-14-type-compressed-orientation-hall-v1/Q_STRATIFIED_MINCUT_EXACTNESS.md), [type-complete witness corollary](project/research/general_n/2026-09-14-type-compressed-orientation-hall-v1/Q_STRATIFIED_TYPE_COMPLETE_WITNESS.md), and [q-layer threshold normal form](project/research/general_n/2026-09-14-type-compressed-orientation-hall-v1/Q_LAYER_THRESHOLD_NORMAL_FORM.md) remain fallbacks alongside crossing-wall/saturation and maximum-cut/stability. Equality of minima is not pointwise equality; check monotonicity before transferring witness theorems to new caps.
 
-J is the TOTAL number of low-block selected places beyond the forced selections. If pressure is d_u=(p_u-rho_u+1)_+, every selected positive label outside L needs at least d_u excess. Consequently, for d>=1,
-
-```text
-gamma_u(d;H)=(q_u-f_u-floor(H/d))_+,
-gamma_u(0;H)=0,
-sum_u gamma_u(d_u;H)<=J.
-```
-
-This is a shared budget: every source cannot spend the same J spare places separately. Its equivalent two-defect-coupled form is
-
-```text
-H+sum_u gamma_u(d_u;H)<=Q-r-2t-D0+S_L-M.
-```
-
-The full note retains the necessary eligibility ceilings, zero-demand treatment, monotonicity for tail pressure and a group-count corollary. An exact integer pressure DP gives a safe upper bound on tail incoming capacity. It is exact only for the stated pressure/slack projection, not for joint selected-incidence or graph realization.
-
-### A hand-readable branch: 103 is less than 104
-
-For one previously surviving row240 branch, H=4 and J=2. A tail needs104 incoming units; receivers provide28 free units plus74 pressure units without spending slack. With only two shared slack places, at most one further pressure unit is affordable. Therefore incoming capacity is at most28+74+1=103<104.
-
-The complete profile exclusion covers all low-block excess totals, not only this illustrative branch: prior price certificates cover e_L39,40, and the new shared-slack bounds cover41 through45. Complete inherited/new coverage is also recorded for rows258 and342. The initial draft's overly broad marginal-cost wording and a conservative table entry were explicitly corrected; the theorem, verifier and frozen result were unchanged.
-
-### Original sample and fresh-seed evidence
-
-| Necessary screens on the SAME original 713 profiles | Rejected | Not rejected |
-|---|---:|---:|
-| Earlier localized/priced tests | 652 | 61 |
-| Capped spill and integer envelope | 694 | 19 |
-| Demand-block/source pressure | 701 | 12 |
-| Conditioned excess | 704 | 9 |
-| Shared block slack, retaining earlier screens | **707** | **6** |
-
-The six original remaining rows are108,160,338,347,471,586. Their arrays remain in the committed original input. These are **not six remaining cases of the conjecture**, three new whole-state closures or a change to the canonical3,607-state frontier.
-
-A fresh seed74220260919 of the SAME generator produced715 profiles passing the stated scalar-ledger, cap, selected-incidence and potential-pair-flow screens. Prior/new stages reject708 and retain seven. Shared slack adds three exclusions beyond the earlier screens in this fresh sample. All seven non-rejected arrays and all three complete new certificates are committed in [FRESH_RECHECK_FULL.json](project/research/general_n/2026-09-14-joint-blocks-v1/FRESH_RECHECK_FULL.json). Fresh row IDs are a distinct namespace. A new seed is not independently designed generation, graph realization or a universal theorem.
-
-## Verification, negative results and reproducibility
-
-The new local verifier completed9,293 exhaustive selected-incidence configurations,25,391 arbitrary low-block checks including12,305 positive-slack blocks,7,839 valid random-incidence systems from10,000 trials, and3,000 independent brute-force comparisons covering237,067 pressure vectors. All three standing hostile q-tail examples remain. These incidence and synthetic domains have separate stated assumptions.
-
-The tempting stronger inequality summing high-label excess only once across all sources is false: two sources can share the same positive label. The explicit actual-incidence counterexample is preserved. The valid theorem instead counts low-block selected places in one matrix.
-
-The simultaneous multiblock extension tested597 consistent block-total tuples on the six remaining profiles:25 failed total capacity,118 failed priced bounds and454 remain across all six. **It produced no additional full-profile exclusion.** The complete larger output is reconstructible from committed code/inputs and pinned by its full digest, and retained in the portable bundle and CI output. It is not falsely described as a raw JSON file committed in the package.
-
-[One offline replay command](project/research/general_n/2026-09-14-joint-blocks-v1/REPRODUCE.md) checks exact source blobs, reruns the parent conditioned proof, verifies every new shared/fresh JSON value, regenerates the fresh corpus and reproduces the failed multiblock experiment. It needs Python standard library and g++17, not live artifact downloads or an optimizer. The unified whole-harness CI34898768799, queued at first inspection, subsequently completed SUCCESS on 14 September 2026; its downloaded parent/shared/fresh/multiblock outputs were compared locally with exact equality. See the dated [CI audit receipt](project/research/general_n/2026-09-14-joint-blocks-v1/CI_AUDIT.md). Earlier queued observations remain historical, not current status.
-
-## Documentation and durable evidence
-
-The [research evidence index](RESEARCH_EVIDENCE_INDEX.md) records the chain of assumptions and exact verification scopes. The [starting joint-block plan](project/research/general_n/2026-09-14-joint-blocks-v1/PLAN.md) was committed before new experiments.
-
-All16 preceding raw/derived evidence files are now committed in the [durable directory](project/research/general_n/2026-09-14-evidence-preservation-v1/durable/) at `b6a15db114d7b4f3b71d73da816daec563f11824`. [PUBLICATION_AUDIT.md](project/research/general_n/2026-09-14-evidence-preservation-v1/PUBLICATION_AUDIT.md) records that run34894544147 passed its mathematical/hash steps but failed Git rebase on an unclean checkout; publication-only repair34895776658 then succeeded using verified bytes. The old overall failed run is not relabeled green. The repair did not rerun or modify the256-shard audit.
-
-Readable exploratory sources, unsuccessful numerical searches, all prior block-output objects, full original corpus/scanner and prior raw snapshots are preserved. Rejected encoded transfers remain documented in [TRANSFER_ERRATUM.md](project/research/general_n/2026-09-14-evidence-preservation-v1/TRANSFER_ERRATUM.md). Neither a successful file write nor a queued workflow is accepted as verification.
-
-## Retained exact routes and audit gate
-
-[Priced tails](project/research/general_n/2026-09-14-q-tail-interval-budget-v1/PRICED_TAIL_BUDGET.md), [interval capacity](project/research/general_n/2026-09-14-q-tail-interval-budget-v1/README.md), [localized excess](project/research/general_n/2026-09-14-localized-excess-v1/README.md), [capped spill](project/research/general_n/2026-09-14-capped-spill-v1/README.md) and [block pressure](project/research/general_n/2026-09-14-block-pressure-v1/README.md) retain their own evidence and counterexamples. The earlier205,931-export explanation retains its original shared-generation/early-stopping scope, not a new whole-state scan.
-
-The [exact q-stratified minimum](project/research/general_n/2026-09-14-type-compressed-orientation-hall-v1/Q_STRATIFIED_MINCUT_EXACTNESS.md), [type-complete witness corollary](project/research/general_n/2026-09-14-type-compressed-orientation-hall-v1/Q_STRATIFIED_TYPE_COMPLETE_WITNESS.md), and [q-layer threshold normal form](project/research/general_n/2026-09-14-type-compressed-orientation-hall-v1/Q_LAYER_THRESHOLD_NORMAL_FORM.md) remain fallbacks. Equality of minima is not pointwise equality; check monotonicity before transferring witness theorems to new caps. Crossing-wall/saturation and maximum-cut/stability routes remain retained.
-
-Audit34854911792 has a strict promotion gate: all2,655 inputs, both implementations agreeing, zero unresolved, successful aggregate and a separate reviewed ledger step. No new live shard count is asserted here. Fetch every job page or a complete diagnostic before reporting current status. Preserve completed work; do not duplicate the audit, alter budgets/concurrency or retry queued/successful jobs or computational timeouts. Capped-spill34885163695 and combined capped/block34887492789 passed their scopes; this does not complete the relational audit.
+Audit 34854911792 requires all 2,655 inputs, both implementations agreeing, zero unresolved cases, a successful aggregate and a separate reviewed ledger step before promotion. No new live shard count is asserted here. Fetch every job page or a complete diagnostic before reporting one. Preserve completed work; do not duplicate the audit, alter budgets/concurrency, or retry queued/successful jobs or computational timeouts. Sample exclusions do not change the canonical frontier.
 
 <!-- REVIEW-MATERIALS:START -->
 ## Papers and review materials
@@ -159,8 +111,6 @@ This reviewer-facing index is intentionally duplicated here as a protected navig
 Superseded reviewer editions and failed/corrected research remain preserved in Git history and the linked package histories; they are not silently deleted.
 <!-- REVIEW-MATERIALS:END -->
 
-## Next research target and trust boundary
-
-Attack common selected-source usage across several blocks or the full multiresource shared-slack constraint. Six original and seven fresh non-rejected profiles are explicit boundary evidence, not graph constructions. The universal goal remains a contradiction forced by full canonical structure rather than extrapolation from either sample.
+## Trust boundary
 
 Hand derivation, separately structured same-assistant verification, remote CI, preservation and external acceptance are distinct. No timeout, missing output, unsuccessful search or floating infeasibility is proof. The canonical selected/residual bridge remains the principal correlated external-review dependency. Preserve reviewer navigation, failed approaches and every audit gate.

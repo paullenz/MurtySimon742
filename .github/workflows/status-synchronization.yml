@@ -1,0 +1,30 @@
+name: Status synchronization
+on:
+  push:
+  pull_request:
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  check-status:
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+      - name: Check every new commit
+        env:
+          EVENT_NAME: ${{ github.event_name }}
+          PUSH_BASE: ${{ github.event.before }}
+          PR_BASE: ${{ github.event.pull_request.base.sha }}
+          PR_HEAD: ${{ github.event.pull_request.head.sha }}
+          HEAD_SHA: ${{ github.sha }}
+        run: |
+          if [ "$EVENT_NAME" = pull_request ]; then
+            python3 scripts/check_status_sync.py --base "$PR_BASE" --head "$PR_HEAD"
+          elif [ "$EVENT_NAME" = push ]; then
+            python3 scripts/check_status_sync.py --base "$PUSH_BASE" --head "$HEAD_SHA"
+          else
+            python3 scripts/check_status_sync.py --head "$HEAD_SHA"
+          fi
