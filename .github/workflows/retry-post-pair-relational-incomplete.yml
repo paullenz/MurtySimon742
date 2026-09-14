@@ -1,0 +1,279 @@
+name: retry post-pair relational incomplete
+
+on:
+  workflow_run:
+    workflows: ["summarize post-pair relational full frontier"]
+    types: [completed]
+
+permissions:
+  actions: read
+  contents: read
+
+jobs:
+  plan:
+    runs-on: ubuntu-latest
+    outputs:
+      retry_count: ${{ steps.plan.outputs.retry_count }}
+      shard_count: ${{ steps.plan.outputs.shard_count }}
+      matrix: ${{ steps.plan.outputs.matrix }}
+    steps:
+      - name: Download initial discovery aggregate
+        env:
+          GH_TOKEN: ${{ github.token }}
+          RUN_ID: ${{ github.event.workflow_run.id }}
+        run: |
+          mkdir -p plan
+          gh run download "$RUN_ID" -R "$GITHUB_REPOSITORY" \
+            -n post-pair-relational-full-discovery-aggregate -D plan
+
+      - id: plan
+        name: Build exact layer-state retry set
+        run: |
+          python3 - <<'PY' >> "$GITHUB_OUTPUT"
+          from pathlib import Path
+          import json
+
+          root = Path('plan')
+          summary = json.loads((root / 'POST_PAIR_RELATIONAL_FULL_DISCOVERY_SUMMARY.json').read_text())
+          identity = json.loads((root / 'POST_PAIR_RELATIONAL_FULL_DISCOVERY_IDENTITY_AUDIT.json').read_text())
+          unresolved = json.loads((root / 'POST_PAIR_RELATIONAL_FULL_DISCOVERY_UNRESOLVED.json').read_text())
+
+          expected_lines = [x.strip() for x in (root / 'EXPECTED_ACTIVE.txt').read_text().splitlines() if x.strip()]
+          n = int(expected_lines[0]); body = expected_lines[1:]
+          if len(body) != n:
+              raise SystemExit('EXPECTED_ACTIVE count mismatch')
+          by_key = {}
+          for line in body:
+              tok = line.split(); key = (int(tok[0]), int(tok[1]))
+              if key in by_key:
+                  raise SystemExit(f'duplicate expected key: {key}')
+              by_key[key] = line
+
+          retry = set(tuple(x) for x in summary.get('unattempted_keys', []))
+          for item in unresolved.values():
+              retry.add((int(item['layer']), int(item['state_id'])))
+          for item in identity.get('legacy_unresolved_identity_ambiguities', []):
+              for key in item.get('candidate_keys', []):
+                  retry.add(tuple(key))
+
+          missing = sorted(retry - set(by_key))
+          if missing:
+              raise SystemExit(f'retry keys absent from expected frontier: {missing[:20]}')
+          selected = [by_key[key] for key in sorted(retry)]
+          Path('plan/RETRY_INPUT.txt').write_text(
+              str(len(selected)) + '\n' + ('\n'.join(selected) + '\n' if selected else '')
+          )
+          shard_count = min(128, max(1, len(selected)))
+          report = {
+              'schema': 'post-pair-relational-retry-plan-v1',
+              'source_summary': summary,
+              'retry_count': len(selected),
+              'retry_keys': [list(k) for k in sorted(retry)],
+              'shard_count': shard_count,
+              'state_timeout_seconds': 1800,
+              'promotion_status': 'NOT_PROMOTED',
+              'external_review': 'OPEN',
+          }
+          Path('plan/RETRY_PLAN.json').write_text(json.dumps(report, indent=2, sort_keys=True) + '\n')
+          print(f'retry_count={len(selected)}')
+          print(f'shard_count={shard_count}')
+          print('matrix=' + json.dumps({'shard': list(range(shard_count))}, separators=(',', ':')))
+          PY
+
+      - name: Upload retry plan and frozen initial aggregate
+        uses: actions/upload-artifact@v4
+        with:
+          name: post-pair-relational-retry-plan
+          path: plan/
+
+  retry:
+    needs: plan
+    if: ${{ needs.plan.outputs.retry_count != '0' }}
+    runs-on: ubuntu-latest
+    timeout-minutes: 240
+    strategy:
+      fail-fast: false
+      max-parallel: 64
+      matrix: ${{ fromJSON(needs.plan.outputs.matrix) }}
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Download retry plan
+        uses: actions/download-artifact@v4
+        with:
+          name: post-pair-relational-retry-plan
+          path: retry-plan
+
+      - name: Prepare deterministic retry shard
+        env:
+          SHARD: ${{ matrix.shard }}
+          MOD: ${{ needs.plan.outputs.shard_count }}
+        run: |
+          python3 - <<'PY'
+          from pathlib import Path
+          import os
+          lines = [x.strip() for x in Path('retry-plan/RETRY_INPUT.txt').read_text().splitlines() if x.strip()]
+          n = int(lines[0]); body = lines[1:]
+          if len(body) != n:
+              raise SystemExit('retry input count mismatch')
+          shard=int(os.environ['SHARD']); mod=int(os.environ['MOD'])
+          selected=[line for i,line in enumerate(body) if i % mod == shard]
+          Path(f'RETRY_SHARD_{shard}_INPUT.txt').write_text(
+              str(len(selected))+'\n'+('\n'.join(selected)+'\n' if selected else '')
+          )
+          print('retry shard', shard, 'states', len(selected))
+          PY
+
+      - name: Compile primary relational scanner
+        working-directory: project/research/general_n/2026-09-13-alternative-attacks-v1
+        run: >-
+          g++ -O3 -std=c++17 -Wall -Wextra -pedantic
+          scan_post_pair_relational.cpp -o scan_post_pair_relational
+
+      - name: Run long-budget layer-safe retry
+        working-directory: project/research/general_n/2026-09-13-alternative-attacks-v1
+        run: >-
+          python3 run_post_pair_relational_checkpointed.py
+          ../../../../RETRY_SHARD_${{ matrix.shard }}_INPUT.txt
+          --scanner ./scan_post_pair_relational
+          --outdir RETRY_SHARD_${{ matrix.shard }}
+          --shard ${{ matrix.shard }}
+          --state-timeout 1800
+
+      - name: Upload durable retry checkpoints
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: post-pair-relational-retry-shard-${{ matrix.shard }}
+          if-no-files-found: error
+          path: |
+            RETRY_SHARD_${{ matrix.shard }}_INPUT.txt
+            project/research/general_n/2026-09-13-alternative-attacks-v1/RETRY_SHARD_${{ matrix.shard }}/
+
+  collect:
+    needs: [plan, retry]
+    if: ${{ always() && needs.plan.result == 'success' }}
+    runs-on: ubuntu-latest
+    steps:
+      - name: Download retry plan
+        uses: actions/download-artifact@v4
+        with:
+          name: post-pair-relational-retry-plan
+          path: plan
+
+      - name: Download any retry shard artifacts
+        if: ${{ needs.plan.outputs.retry_count != '0' }}
+        env:
+          GH_TOKEN: ${{ github.token }}
+          RUN_ID: ${{ github.run_id }}
+        run: |
+          mkdir -p retry-artifacts
+          gh run download "$RUN_ID" -R "$GITHUB_REPOSITORY" \
+            -p 'post-pair-relational-retry-shard-*' -D retry-artifacts || true
+
+      - name: Merge initial discovery with retry results
+        env:
+          RETRY_WORKFLOW_RUN_ID: ${{ github.run_id }}
+          RETRY_JOB_RESULT: ${{ needs.retry.result }}
+        run: |
+          python3 - <<'PY'
+          from pathlib import Path
+          import csv, hashlib, json, os
+
+          plan = Path('plan')
+          retry_root = Path('retry-artifacts')
+          initial_summary = json.loads((plan / 'POST_PAIR_RELATIONAL_FULL_DISCOVERY_SUMMARY.json').read_text())
+          expected_lines = [x.strip() for x in (plan / 'EXPECTED_ACTIVE.txt').read_text().splitlines() if x.strip()]
+          n = int(expected_lines[0]); body = expected_lines[1:]
+          expected = {(int(line.split()[0]), int(line.split()[1])) for line in body}
+          if len(body) != n or len(expected) != n:
+              raise SystemExit('expected frontier malformed')
+
+          with (plan / 'POST_PAIR_RELATIONAL_FULL_DISCOVERY_RESULTS.tsv').open(newline='') as f:
+              initial_rows = list(csv.DictReader(f, delimiter='\t'))
+          fields = list(initial_rows[0]) if initial_rows else [
+              'layer','state_id','S','Emax','profiles_tested','paircap_fail','paircap_pass',
+              'incidence_fail','incidence_pass','pairhall_fail','pairhall_pass',
+              'targethall_fail','targethall_pass','cost_fail','status','witness_E',
+              'witness_cost','witness_envelope','seconds','witness_rho','witness_q'
+          ]
+          merged = {(int(r['layer']), int(r['state_id'])): r for r in initial_rows}
+          if len(merged) != len(initial_rows):
+              raise SystemExit('duplicate key in initial results')
+
+          retry_unresolved = {}
+          for path in retry_root.rglob('SHARD_RESULTS.tsv'):
+              with path.open(newline='') as f:
+                  for row in csv.DictReader(f, delimiter='\t'):
+                      key=(int(row['layer']),int(row['state_id']))
+                      if key in merged:
+                          raise SystemExit(f'retry unexpectedly duplicates completed initial result: {key}')
+                      if key not in expected:
+                          raise SystemExit(f'retry result outside frontier: {key}')
+                      merged[key]=row
+          for path in retry_root.rglob('SHARD_STATUS.json'):
+              obj=json.loads(path.read_text())
+              for item in obj.get('unresolved',[]):
+                  key=(int(item['layer']),int(item['state_id']))
+                  if key in merged:
+                      raise SystemExit(f'retry key both completed and unresolved: {key}')
+                  if key in retry_unresolved:
+                      raise SystemExit(f'duplicate retry unresolved key: {key}')
+                  retry_unresolved[key]=item
+
+          unattempted=sorted(expected-set(merged)-set(retry_unresolved))
+          excluded=sorted(k for k,r in merged.items() if r['status']=='RELATIONAL_EXCLUDED')
+          survives=sorted(k for k,r in merged.items() if r['status']=='SURVIVES_RELATIONAL')
+
+          out=Path('POST_PAIR_RELATIONAL_FULL_FINAL_RESULTS.tsv')
+          with out.open('w',newline='') as f:
+              w=csv.DictWriter(f,fieldnames=fields,delimiter='\t',lineterminator='\n')
+              w.writeheader()
+              for key in sorted(merged):w.writerow(merged[key])
+          cand=Path('POST_PAIR_RELATIONAL_FULL_FINAL_CANDIDATES.tsv')
+          with cand.open('w',newline='') as f:
+              w=csv.writer(f,delimiter='\t',lineterminator='\n');w.writerow(['layer','state_id']);w.writerows(excluded)
+          unr=Path('POST_PAIR_RELATIONAL_FULL_FINAL_UNRESOLVED.json')
+          unr.write_text(json.dumps({f'{k[0]}:{k[1]}':retry_unresolved[k] for k in sorted(retry_unresolved)},indent=2,sort_keys=True)+'\n')
+
+          def sha(p):return hashlib.sha256(Path(p).read_bytes()).hexdigest()
+          final={
+              'schema':'post-pair-relational-full-discovery-final-v1',
+              'initial_scan_run_id':initial_summary['scan_run_id'],
+              'initial_scan_head_sha':initial_summary['scan_head_sha'],
+              'retry_workflow_run_id':int(os.environ['RETRY_WORKFLOW_RUN_ID']),
+              'retry_job_result':os.environ['RETRY_JOB_RESULT'],
+              'expected_frontier':len(expected),
+              'states_completed':len(merged),
+              'relational_excluded_candidates':len(excluded),
+              'relational_excluded_n34':sum(k[0]==0 for k in excluded),
+              'relational_excluded_n35':sum(k[0]==1 for k in excluded),
+              'survives_relational':len(survives),
+              'survives_n34':sum(k[0]==0 for k in survives),
+              'survives_n35':sum(k[0]==1 for k in survives),
+              'unresolved_count':len(retry_unresolved),
+              'unresolved_keys':[list(k) for k in sorted(retry_unresolved)],
+              'unattempted_count':len(unattempted),
+              'unattempted_keys':[list(k) for k in unattempted],
+              'discovery_complete':len(merged)==len(expected) and not retry_unresolved and not unattempted,
+              'candidate_keys':[list(k) for k in excluded],
+              'results_sha256':sha(out),
+              'candidates_sha256':sha(cand),
+              'promotion_status':'NOT_PROMOTED_REQUIRES_INDEPENDENT_AUDIT',
+              'external_review':'OPEN',
+          }
+          Path('POST_PAIR_RELATIONAL_FULL_FINAL_SUMMARY.json').write_text(json.dumps(final,indent=2,sort_keys=True)+'\n')
+          print(json.dumps(final,indent=2,sort_keys=True))
+          PY
+
+      - name: Upload final layer-safe discovery aggregate
+        uses: actions/upload-artifact@v4
+        with:
+          name: post-pair-relational-full-discovery-final
+          path: |
+            plan/EXPECTED_ACTIVE.txt
+            plan/EXPECTED_ACTIVE_VERIFICATION.json
+            POST_PAIR_RELATIONAL_FULL_FINAL_RESULTS.tsv
+            POST_PAIR_RELATIONAL_FULL_FINAL_CANDIDATES.tsv
+            POST_PAIR_RELATIONAL_FULL_FINAL_UNRESOLVED.json
+            POST_PAIR_RELATIONAL_FULL_FINAL_SUMMARY.json
