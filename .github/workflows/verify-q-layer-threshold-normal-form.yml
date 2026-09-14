@@ -1,0 +1,37 @@
+name: verify q-layer threshold normal form
+
+on:
+  push:
+    paths:
+      - 'project/research/general_n/2026-09-14-type-compressed-orientation-hall-v1/Q_LAYER_THRESHOLD_NORMAL_FORM.md'
+      - 'project/research/general_n/2026-09-14-type-compressed-orientation-hall-v1/verify_q_layer_threshold_normal_form.py'
+      - '.github/workflows/verify-q-layer-threshold-normal-form.yml'
+  workflow_dispatch:
+
+jobs:
+  verify:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    steps:
+      - uses: actions/checkout@v4
+      - name: Run independent threshold verifier
+        working-directory: project/research/general_n/2026-09-14-type-compressed-orientation-hall-v1
+        run: python3 verify_q_layer_threshold_normal_form.py
+      - name: Require frozen totals
+        working-directory: project/research/general_n/2026-09-14-type-compressed-orientation-hall-v1
+        run: |
+          python3 - <<'PY'
+          import json
+          p='Q_LAYER_THRESHOLD_NORMAL_FORM_VERIFICATION.json'
+          d=json.load(open(p))
+          assert d['result']=='PASS'
+          assert d['exhaustive_labelled_profiles']==46800
+          assert d['exhaustive_source_sets']==666600
+          assert d['random_trials']==30000
+          assert d['random_seed']==74220260914
+          print(json.dumps(d,indent=2,sort_keys=True))
+          PY
+      - uses: actions/upload-artifact@v4
+        with:
+          name: q-layer-threshold-normal-form-verification
+          path: project/research/general_n/2026-09-14-type-compressed-orientation-hall-v1/Q_LAYER_THRESHOLD_NORMAL_FORM_VERIFICATION.json
