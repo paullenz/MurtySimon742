@@ -1,0 +1,178 @@
+name: audit post-pair relational full discovery
+
+on:
+  workflow_run:
+    workflows: ["summarize post-pair relational full frontier"]
+    types: [completed]
+
+permissions:
+  actions: read
+  contents: read
+
+jobs:
+  plan:
+    runs-on: ubuntu-latest
+    outputs:
+      audit_ready: ${{ steps.plan.outputs.audit_ready }}
+      candidate_count: ${{ steps.plan.outputs.candidate_count }}
+      shard_count: ${{ steps.plan.outputs.shard_count }}
+      matrix: ${{ steps.plan.outputs.matrix }}
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Download discovery aggregate
+        env:
+          GH_TOKEN: ${{ github.token }}
+          RUN_ID: ${{ github.event.workflow_run.id }}
+        run: |
+          mkdir -p discovery
+          gh run download "$RUN_ID" -R "$GITHUB_REPOSITORY" -n post-pair-relational-full-discovery-aggregate -D discovery
+
+      - id: plan
+        name: Reconstruct exact candidate inputs and audit matrix
+        run: |
+          python3 - <<'PY' >> "$GITHUB_OUTPUT"
+          from pathlib import Path
+          import csv, json
+
+          root = Path('discovery')
+          summary = json.loads((root / 'POST_PAIR_RELATIONAL_FULL_DISCOVERY_SUMMARY.json').read_text())
+          if not summary.get('discovery_complete'):
+              plan = {
+                  'schema': 'post-pair-relational-full-audit-plan-v1',
+                  'audit_ready': False,
+                  'reason': 'DISCOVERY_INCOMPLETE',
+                  'discovery_summary': summary,
+                  'candidate_count': 0,
+                  'shard_count': 1,
+              }
+              Path('CANDIDATE_INPUT.txt').write_text('0\n')
+              Path('CANDIDATE_PLAN.json').write_text(json.dumps(plan, indent=2, sort_keys=True) + '\n')
+              print('audit_ready=false')
+              print('candidate_count=0')
+              print('shard_count=1')
+              print('matrix=' + json.dumps({'shard':[0]}, separators=(',', ':')))
+              raise SystemExit(0)
+
+          with (root / 'POST_PAIR_RELATIONAL_FULL_DISCOVERY_RESULTS.tsv').open(newline='') as f:
+              rows = list(csv.DictReader(f, delimiter='\t'))
+          candidate_keys = {
+              (int(r['layer']), int(r['state_id']))
+              for r in rows if r['status'] == 'RELATIONAL_EXCLUDED'
+          }
+          if len(candidate_keys) != summary['relational_excluded_candidates']:
+              raise SystemExit('candidate count mismatch against discovery summary')
+
+          expected = [x.strip() for x in (root / 'EXPECTED_ACTIVE.txt').read_text().splitlines() if x.strip()]
+          n = int(expected[0]); body = expected[1:]
+          if len(body) != n:
+              raise SystemExit('EXPECTED_ACTIVE input count mismatch')
+          selected = []
+          seen = set()
+          for line in body:
+              tok = line.split(); key = (int(tok[0]), int(tok[1]))
+              if key in candidate_keys:
+                  selected.append(line); seen.add(key)
+          if seen != candidate_keys:
+              raise SystemExit(f'could not reconstruct all candidate inputs: missing={sorted(candidate_keys-seen)}')
+
+          Path('CANDIDATE_INPUT.txt').write_text(str(len(selected)) + '\n' + ('\n'.join(selected) + '\n' if selected else ''))
+          count = len(selected)
+          shard_count = min(256, max(1, count))
+          plan = {
+              'schema': 'post-pair-relational-full-audit-plan-v1',
+              'audit_ready': True,
+              'discovery_run_id': summary['scan_run_id'],
+              'discovery_head_sha': summary['scan_head_sha'],
+              'discovery_results_sha256': summary['results_sha256'],
+              'candidate_count': count,
+              'candidate_keys': [list(k) for k in sorted(candidate_keys)],
+              'shard_count': shard_count,
+              'promotion_status': 'NOT_PROMOTED',
+              'external_review': 'OPEN',
+          }
+          Path('CANDIDATE_PLAN.json').write_text(json.dumps(plan, indent=2, sort_keys=True) + '\n')
+          print('audit_ready=true')
+          print(f'candidate_count={count}')
+          print(f'shard_count={shard_count}')
+          print('matrix=' + json.dumps({'shard': list(range(shard_count))}, separators=(',', ':')))
+          PY
+
+      - name: Upload frozen audit plan
+        uses: actions/upload-artifact@v4
+        with:
+          name: post-pair-relational-full-audit-plan
+          path: |
+            CANDIDATE_INPUT.txt
+            CANDIDATE_PLAN.json
+
+  audit:
+    needs: plan
+    if: ${{ needs.plan.outputs.audit_ready == 'true' && needs.plan.outputs.candidate_count != '0' }}
+    runs-on: ubuntu-latest
+    timeout-minutes: 120
+    strategy:
+      fail-fast: false
+      max-parallel: 64
+      matrix: ${{ fromJSON(needs.plan.outputs.matrix) }}
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Download frozen audit plan
+        uses: actions/download-artifact@v4
+        with:
+          name: post-pair-relational-full-audit-plan
+          path: audit-plan
+
+      - name: Prepare deterministic candidate shard
+        env:
+          SHARD: ${{ matrix.shard }}
+          SHARD_COUNT: ${{ needs.plan.outputs.shard_count }}
+        run: |
+          python3 - <<'PY'
+          from pathlib import Path
+          import os
+          src = Path('audit-plan/CANDIDATE_INPUT.txt')
+          lines = [x.strip() for x in src.read_text().splitlines() if x.strip()]
+          n = int(lines[0]); body = lines[1:]
+          if len(body) != n:
+              raise SystemExit('candidate audit plan input mismatch')
+          shard = int(os.environ['SHARD']); mod = int(os.environ['SHARD_COUNT'])
+          selected = [line for i, line in enumerate(body) if i % mod == shard]
+          out = Path(f'CANDIDATE_SHARD_{shard}_INPUT.txt')
+          out.write_text(str(len(selected)) + '\n' + ('\n'.join(selected) + '\n' if selected else ''))
+          print('selected', len(selected), 'of', n, 'for shard', shard, '/', mod)
+          PY
+
+      - name: Compile primary scanner
+        working-directory: project/research/general_n/2026-09-13-alternative-attacks-v1
+        run: >-
+          g++ -O3 -std=c++17 -Wall -Wextra -pedantic
+          scan_post_pair_relational.cpp -o scan_post_pair_relational
+
+      - name: Compile independent type-count scanner
+        working-directory: project/research/general_n/2026-09-13-alternative-attacks-v1
+        run: >-
+          g++ -O3 -std=c++17 -Wall -Wextra -pedantic
+          scan_post_pair_relational_types.cpp -o scan_post_pair_relational_types
+
+      - name: Fresh checkpointed cross-implementation audit
+        working-directory: project/research/general_n/2026-09-13-alternative-attacks-v1
+        run: >-
+          python3 run_post_pair_relational_crosscheck_checkpointed.py
+          ../../../../CANDIDATE_SHARD_${{ matrix.shard }}_INPUT.txt
+          --primary ./scan_post_pair_relational
+          --independent ./scan_post_pair_relational_types
+          --outdir FULL_RELATIONAL_AUDIT_SHARD_${{ matrix.shard }}
+          --shard ${{ matrix.shard }}
+          --state-timeout 300
+
+      - name: Upload durable audit checkpoints
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: post-pair-relational-full-audit-shard-${{ matrix.shard }}
+          if-no-files-found: error
+          path: |
+            CANDIDATE_SHARD_${{ matrix.shard }}_INPUT.txt
+            project/research/general_n/2026-09-13-alternative-attacks-v1/FULL_RELATIONAL_AUDIT_SHARD_${{ matrix.shard }}/
