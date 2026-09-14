@@ -81,6 +81,7 @@ This reviewer-facing index is intentionally duplicated here as a protected navig
 - [Compatible-routing full-catalogue reviewer-v1](releases/general-compatible-catalogue-reviewer-v1/README.md).
 - [Closed-compatible-potential reviewer-v1](releases/general-closed-compatible-reviewer-v1/README.md).
 - [Fixed-neighbourhood / arc-realisation reviewer-v1](releases/general-arc-realisation-reviewer-v1/README.md).
+- [Whole-type orientation Hall research package](project/research/general_n/2026-09-14-type-compressed-orientation-hall-v1/README.md) — exact reduction of labelled target-Hall cuts to unions of complete `(q,c,P)` types; green internal exact audit, external review/novelty open.
 
 ### Reviewer entry points, audits and corrections
 
@@ -99,7 +100,7 @@ The fixed-order candidates have their own complete ledgers. The generalisation s
 
 ## Current general structural results
 
-Important candidate all-order or parameterized results include balanced-degree reduction; the `7/12` maximum-degree theorem candidate; heavy-load/routing families; joint routing and demand/tail projection; compatible-destination routing and Hall/flow criteria; containment spill and pair-overlap inequalities; shared residual budgets; selection-free candidate capacity; the selected-excess / threshold family; the refined baseline-3/order-statistic lemma; the zero-excess endpoint-order lemma; exact low-demand incidence-capacity; mixed-class joint Hall; and the orientation target-capacity lemma for missing-edge orientations.
+Important candidate all-order or parameterized results include balanced-degree reduction; the `7/12` maximum-degree theorem candidate; heavy-load/routing families; joint routing and demand/tail projection; compatible-destination routing and Hall/flow criteria; containment spill and pair-overlap inequalities; shared residual budgets; selection-free candidate capacity; the selected-excess / threshold family; the refined baseline-3/order-statistic lemma; the zero-excess endpoint-order lemma; exact low-demand incidence-capacity; mixed-class joint Hall; the orientation target-capacity lemma for missing-edge orientations; and the exact whole-type reduction for the two-dimensional target-Hall system.
 
 For every selected positive-demand incidence,
 

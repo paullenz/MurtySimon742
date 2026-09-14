@@ -88,6 +88,7 @@ The present architecture is:
 8. **Exact orientation Hall flow** — [`ORIENTATION_FLOW_HALL.md`](ORIENTATION_FLOW_HALL.md) keeps the companion endpoint inequality, proves the exact directed compatibility relation and records why the full relation is two-dimensional rather than Ferrers in general.
 9. **Total-excess source capacity** — [`TOTAL_EXCESS_SOURCE_CAP.md`](TOTAL_EXCESS_SOURCE_CAP.md) interpolates the exact-demand incoming cap across every total-excess layer.
 10. **Potential-pair capacity** — [`POTENTIAL_PAIR_CAPACITY.md`](POTENTIAL_PAIR_CAPACITY.md) forgets the orientation but retains which unordered pairs could possibly be missing, giving `p_u+q_u<=d_KD(u)`; this is the mechanism behind the audited 943-state frontier family.
+11. **Whole-type target-Hall reduction** — the [14 September theorem package](../2026-09-14-type-compressed-orientation-hall-v1/README.md) proves that the exact target-Hall margin is coordinatewise concave in identical `(q,c,P)` type counts, so any failing labelled cut has an equally strong or stronger witness that is a union of complete types.
 11. **Low-c/high-q threshold obstruction** — [`LOW_C_HIGH_Q_CROSS_OBSTRUCTION.md`](LOW_C_HIGH_Q_CROSS_OBSTRUCTION.md) extracts the compact all-order candidate inequality `Q+ell_r*u_r<=binom(b,2)` for every threshold `r`.
 
 The progression is therefore

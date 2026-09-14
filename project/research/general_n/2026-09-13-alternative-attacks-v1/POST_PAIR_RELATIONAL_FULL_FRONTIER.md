@@ -63,3 +63,9 @@ The finite scan is not an end in itself. Its certificate statistics should be mi
 ## Trust boundary
 
 The unrestricted Murty–Simon conjecture is not proved by this programme. Internal replay, cross-implementation agreement and GitHub publication are not external mathematical acceptance. The purpose of this protocol is to make every finite exclusion reproducible, auditable and difficult to overclaim.
+
+## Canonical discovery-run provenance
+
+The intended first full-frontier discovery experiment is GitHub Actions run `34818390230`, head `94f89d5d0147842f9d0c2e10606d2117e62400f5`. It was launched before the later layer-state checkpoint hardening; the downstream summarizer therefore reconstructs layer identity from each frozen shard input and rejects any unresolved ambiguity rather than guessing.
+
+A later code update queued a redundant second full-frontier run before the expensive scan workflow was changed to manual-only. That duplicate run is noncanonical reconnaissance: it has no authority to change a ledger or headline count. The promotion path is gated entirely on the layer-safe aggregate/recovery/audit chain documented above.

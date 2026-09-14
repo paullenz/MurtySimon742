@@ -12,7 +12,7 @@ u_L -> w_R      capacity 1 if D(u,w),
 w_R -> sink       capacity P_w,
 ```
 
-where
+where every `P_w` is a valid **nonnegative integer** upper bound on the target indegree `p_w` (a negative candidate cap already excludes the profile before this flow is formed), and
 
 ```text
 c_u=q_u+rho_u,
