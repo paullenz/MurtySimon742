@@ -1,0 +1,23 @@
+name: verify exterior slack upset reduction
+
+on:
+  workflow_dispatch:
+  push:
+    paths:
+      - 'project/research/general_n/2026-09-14-type-compressed-orientation-hall-v1/verify_exterior_slack_upset_reduction.py'
+      - 'project/research/general_n/2026-09-14-type-compressed-orientation-hall-v1/EXTERIOR_SLACK_UPSET_REDUCTION.md'
+      - '.github/workflows/verify-exterior-slack-upset-reduction.yml'
+
+jobs:
+  verify:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Run independent finite verifier
+        working-directory: project/research/general_n/2026-09-14-type-compressed-orientation-hall-v1
+        run: python3 verify_exterior_slack_upset_reduction.py
+      - name: Upload verification record
+        uses: actions/upload-artifact@v4
+        with:
+          name: exterior-slack-upset-reduction-verification
+          path: project/research/general_n/2026-09-14-type-compressed-orientation-hall-v1/EXTERIOR_SLACK_UPSET_REDUCTION_VERIFICATION.json
