@@ -1,6 +1,6 @@
 # Shared block slack: pressure competes for the same selected places
 
-14 September 2026. **Hand derivation under explicit selected-incidence/endpoint hypotheses; internally checked, external mathematical review OPEN. No whole-state promotion, realized graph or unrestricted Murty–Simon proof.** The [starting plan](PLAN.md) was committed before these experiments. This extends [conditioned excess](../2026-09-14-conditioned-excess-v1/README.md), not a replacement of its evidence.
+14 September 2026. **Hand derivation under explicit selected-incidence/endpoint hypotheses; internally checked, external mathematical review OPEN. No whole-state promotion, realized graph or unrestricted Murty–Simon proof.** The [starting plan](PLAN.md) was committed before these experiments. This extends [conditioned excess](../2026-09-14-conditioned-excess-v1/README.md), not a replacement of its evidence. The complete end-to-end replay has now PASSED; see [CI_AUDIT.md](CI_AUDIT.md).
 
 ## 1. The missing shared resource
 
@@ -78,9 +78,11 @@ The integer dynamic programme can be strictly stronger than this separable ratio
 
 For a receiver box A_u>=0, define free_u=min(A_u,rho_u-1) and G_u=A_u-free_u. Let Psi_L(e_L;G) be the maximum of sum d_u over admissible integers 0<=d_u<=min(D_u,G_u), subject to (1). The dynamic programme stores maximum accumulated pressure for each used slack 0,...,J. It is exact for this independent-pressure/one-budget projection ONLY, not selected-matrix or graph realizability.
 
-Any incoming vector y_u<=A_u has pressure d'_u=(y_u-rho_u+1)_+<=d_u. Slack cost is nondecreasing, so d' satisfies (1). Therefore
+Let y be the incoming vector from a subset of sources in the SAME actual orientation whose full incoming vector is p. Then 0<=y_u<=p_u. Suppose also y_u<=A_u. Its pressure d'_u=(y_u-rho_u+1)_+ is at most d_u, at most G_u, and at most D_u. The admissible pressure sets are downward closed and gamma is nondecreasing, so d' satisfies (1). Since y_u<=free_u+d'_u, we obtain
 
 >     sum_u y_u <= sum_u free_u + Psi_L(e_L;G).        (5)
+
+The condition y_u<=p_u is essential. An arbitrary vector satisfying only the nominal box y_u<=A_u need not inherit the selected-incidence pressure constraints. The prior draft's phrase 'any incoming vector y<=A' omitted this domination condition in its prose; it is made explicit here rather than asserted for an unrestricted receiver box. Actual tail incoming vectors always satisfy it, so the intended graph-derived-tail implication, executable verifier, frozen arithmetic and exclusions are unchanged.
 
 For T_tau={u:q_u>=tau}, take the interval upper box
 
@@ -88,7 +90,7 @@ For T_tau={u:q_u>=tau}, take the interval upper box
 A_w=min(P_w, #{u!=w:tau<=q_u<=q_w+rho_w+1}).
 ```
 
-A graph-derived orientation sends Q_tau=sum_{u in T_tau}q_u incoming units. If Q_tau exceeds (5), the branch is impossible. The interval box drops reverse compatibility in the SAFE upper direction. No universal high-q-tail sufficiency, equality of Hall minima or fixed-q monotonicity is assumed.
+A graph-derived orientation sends Q_tau=sum_{u in T_tau}q_u incoming units from those sources. Its actual incoming vector has y<=p and y<=A as required. If Q_tau exceeds (5), the branch is impossible. The interval box drops reverse compatibility in the SAFE upper direction. No universal high-q-tail sufficiency, equality of Hall minima or fixed-q monotonicity is assumed.
 
 The coarser full-orientation balance is sum d_u>=Q-r+b=b+2t+D0+Esel. It can also be compared directly to Psi. The implementation retains exact free-cap losses through (5).
 
