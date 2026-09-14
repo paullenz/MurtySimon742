@@ -1,13 +1,13 @@
-# Murty q-tail Hall conjecture
+# Murty q-tail Hall conjecture — narrowed after red-team failures
 
-14 September 2026. **Research conjecture / proof target. NOT a promoted theorem.**
+14 September 2026. **Research conjecture / proof target only. NOT a promoted theorem.**
 
-The q-layer threshold normal form suggests a much stronger simplification on the actual Murty post-pair cap domain than is true for an arbitrary directed Hall instance.
+## 1. Surviving empirical phenomenon
 
 For an integer `t>=1`, define the complete high-demand source tail
 
 ```text
-S_t={u:q_u>=t}.                                         (1)
+S_t={u:q_u>=t}.
 ```
 
 Let
@@ -16,77 +16,22 @@ Let
 F(S)=H(S)-D(S)
 ```
 
-be the exact directed target-Hall margin using the current post-pair target capacities `P`.
+be the exact directed target-Hall margin with the current post-pair target capacities.
 
-The candidate statement is:
-
-> **Murty q-tail Hall conjecture.** For the target capacities produced by the current post-pair Murty cap formula,
->
-> ```text
-> min_{S subseteq B} F(S)
-> = min_{t>=1} F(S_t),                                  (2)
-> ```
->
-> with the empty set included on the right as margin zero.
-
-Equivalently, if the target-flow Hall relaxation fails at all, then it fails on a high-`q` tail.
-
-If proved, this would replace arbitrary source-set min-cut / max-flow by a one-parameter family of explicit histogram cuts.
-
-## 1. Exact tail margin
-
-For a target `w`, the incoming count from `S_t` is
-
-```text
-y_w(t)
- = #{u != w :
-       t<=q_u<=c_w+1,
-       q_w<=c_u}.                                      (3)
-```
-
-Define the source rectangle count
-
-```text
-R(t,x;q)
- = #{u:t<=q_u<=x and c_u>=q}.                          (4)
-```
-
-Then
-
-```text
-y_w(t)
- = R(t,c_w+1;q_w) - 1_{q_w>=t}.                        (5)
-```
-
-Therefore the candidate exact minimum would be obtained from
-
-```text
-F_t
- = sum_w min(P_w,
-             R(t,c_w+1;q_w)-1_{q_w>=t})
-   - sum_{u:q_u>=t}q_u.                                (6)
-```
-
-No max flow remains in (6).
-
-## 2. Frozen 812-profile result
-
-The detailed frozen artifact from GitHub Actions run `34850187436` contains the 812 exact target-Hall failures missed by the global receiver-layer rearrangement.
-
-Direct evaluation of every high-`q` tail on those frozen type profiles gives
+On the frozen Murty pilot, every difficult exact target-Hall failure found so far has a deficient high-q tail. In particular, the 812 failures missed by the global receiver-layer relaxation are all detected by this one-parameter family:
 
 ```text
 812 difficult profiles tested,
 812 profiles with a deficient high-q tail,
-0 misses.                                              (7)
+0 misses.
 ```
 
-The first deficient tail threshold is distributed as
+The first deficient threshold is distributed as
 
 ```text
 t=2 : 426
 t=3 : 191
-t=4 : 195.                                             (8)
+t=4 : 195.
 ```
 
 The maximum-deficiency tail uses
@@ -94,76 +39,48 @@ The maximum-deficiency tail uses
 ```text
 t=2 : 220
 t=3 : 170
-t=4 : 422.                                             (9)
+t=4 : 422.
 ```
 
-Thus the entire difficult q-stratified residue is already witnessed by the one-parameter tail family.
+This is strong reconnaissance, but the natural abstract conjecture turned out to be false under weaker hypotheses.
 
-This is stronger than the earlier observation that the canonical maximal witnesses on the 812 residue are q-homogeneous thresholds.
+## 2. Exact tail formula
 
-## 3. Exhaustive small-domain support for the CURRENT cap formula
-
-The current target cap is
+For a target `w`, incoming from `S_t` is
 
 ```text
-P_u=min(
-  rho_u+b-a-1,
-  b-1-q_u,
-  rho_u+lambda(q_u,E,z)  [when applicable],
-  d_K(u)-q_u
-).                                                      (10)
+y_w(t)
+ = #{u != w :
+       t<=q_u<=c_w+1,
+       q_w<=c_u}.
 ```
 
-Here `c=q+rho`, `rho>=1`, `q+rho<=a`, and `d_K` is the exact potential-pair degree.
-
-Independent exhaustive enumeration over `(q,rho,E,z)` with the cap (10) found no discrepancy between the exact Hall minimum and the best high-q tail.
-
-Frozen completed blocks include:
+With
 
 ```text
-(a,b)=(2,3):       90 cap profiles,
-(a,b)=(2,4):      351 cap profiles,
-(a,b)=(3,4):   12,258 cap profiles,
-(a,b)=(3,5):    3,320 multiset cap profiles,
-(a,b)=(4,5):   42,836 multiset cap profiles,
-(a,b)=(4,6):  145,729 multiset cap profiles.            (11)
+R(t,x;q)=#{u:t<=q_u<=x and c_u>=q},
 ```
 
-The `(4,6)` block alone contains `10,980` profiles with negative exact Hall minimum. Every one has a high-q tail attaining the same minimum.
-
-The multiset enumeration covers every `(q,rho)` margin pattern up to permutation and every tested admissible `E,z` value in the stated small universe.
-
-## 4. Broad random red-team
-
-Additional deterministic random tests over the current cap formula have varied
+we have
 
 ```text
-b,
-b-a,
-positive rho profiles,
-q with q+rho<=a,
-E across the full range 0..Q,
-zero-demand correction z,
-potential-pair degree caps.                             (12)
+y_w(t)=R(t,c_w+1;q_w)-1_{q_w>=t}.
 ```
 
-No tail-minimum discrepancy has been found.
-
-One dedicated equality run tested `28,138` valid current-cap profiles and obtained
+Hence
 
 ```text
-exact min F = min_t F(S_t)
+F_t
+ = sum_w min(P_w,
+             R(t,c_w+1;q_w)-1_{q_w>=t})
+   - sum_{u:q_u>=t}q_u.
 ```
 
-in all `28,138` cases.
+So if a ledger-current Murty theorem reducing the minimum to high-q tails is eventually proved, its proof-critical inequalities will be explicit histogram inequalities rather than max-flow statements.
 
-A separate wide-excess detection run tested `114,746` valid profiles; `1,564` had negative exact Hall minimum and all `1,564` had a deficient high-q tail.
+## 3. First hostile boundary — arbitrary monotone capacities
 
-These random totals are reconnaissance and are not combined into a formal exhaustive count because the runs use overlapping parameter ranges.
-
-## 5. Crucial hostile counterexample outside the current cap formula
-
-The tail statement is false for arbitrary fixed-q-monotone target capacities, even under several other Murty-looking pointwise restrictions.
+Tail sufficiency is false for arbitrary fixed-q-monotone target capacities, even when several Murty-looking pointwise caps are respected.
 
 Take `a=4`, `b=7` and seven labelled copies with `(q,c,P)`
 
@@ -174,85 +91,123 @@ Take `a=4`, `b=7` and seven labelled copies with `(q,c,P)`
 (3,4,3),
 (1,2,1),
 (3,4,3),
-(2,3,0).                                               (13)
+(2,3,0).
 ```
 
-Here `rho=c-q>=1`, `c<=a`, and the listed capacities respect:
+Here `rho=c-q>=1`, `c<=a`, the capacities are fixed-q monotone, and the listed `P` values respect the residual, simple-degree and potential-pair upper caps. Nevertheless the exact Hall minimum is `-1` on a non-tail source set, while every high-q tail has margin at least zero.
+
+Therefore no proof may rely only on directed compatibility plus monotone target capacities or those three cap families.
+
+## 4. Second hostile boundary — the current cap formula alone
+
+A bookkeeping correction materially changed the finite red-team. In the selected-excess cap,
 
 ```text
-P<=rho+b-a-1,
-P<=b-1-q,
-P<=d_K-q.                                              (14)
+z = #{i:s_i=0}
 ```
 
-They are also fixed-q monotone.
-
-Nevertheless the exact Hall minimum is `-1`, attained for a non-tail set containing the three `q=3` copies and the two `q=1` copies while excluding the `q=2` copy. Every high-q tail has margin at least zero.
-
-Thus neither directed compatibility, positive residual activity, fixed-q monotonicity, nor the residual/simple/potential-pair caps alone imply (2).
-
-The deterministic current cap (10), especially its selected-excess structure and the way all cap terms are combined, is genuinely part of the conjecture.
-
-This counterexample is a standing red-team obligation: any proposed proof that does not use hypotheses distinguishing (10) from (13) is incomplete.
-
-## 6. Relation to earlier results
-
-The old one-sided orientation threshold inequality is the coarse capacity projection of a high-q tail. For `S_t`, sources cannot reach targets with `c<t-1`, giving
+is the number of zero-demand labels. It is **not** constrained by `z<=E`. The correct implementation is
 
 ```text
-sum_{u:q_u>=t}q_u
- <= sum_{w:c_w>=t-1}P_w                               (15)
+k*=min(z,min(q,E)).
 ```
 
-as a safe but weaker condition.
+After restoring the correct quantifier range for `z`, the current deterministic post-pair cap formula itself admits a tail counterexample if the `A`-side demand ledger is not enforced.
 
-The exact tail cut (6) also retains:
+One example has
 
 ```text
-q_w<=c_u,
-unit source-target edges,
-diagonal deletion,
-competition among high-q sources.                      (16)
+a=4,
+b=7,
+(q,rho)=(1,1) once,
+(q,rho)=(3,1) six times,
+E=5,
+z=2.
 ```
 
-On the frozen 812 residue, the coarse rectangle/capacity-only form detects `794/812`, while the exact high-q tail detects `812/812`.
+The current cap formula gives `P=3` on all seven targets. The exact Hall minimum is `-1`, while every high-q tail has margin at least zero.
 
-Thus the missing 18 cases require genuine directed target competition even though the witness family remains one-dimensional.
+However, this profile is not compatible with a legal selected-demand system: `Q=19`, so `S=Q-E=14`; with two zero-demand labels the remaining positive labels would have to carry total demand 14, whereas selected-edge forcing requires every selected positive-demand label incident to these `rho=1` sources to have `s_i<=1`.
 
-## 7. Why this would matter
+Thus the cap formula by itself is not the missing theorem. The source-demand coupling matters.
 
-If (2) is proved, then the current all-order target-Hall problem becomes:
+## 5. Third hostile boundary — selected-incidence feasibility is still insufficient
+
+Even adding the exact selection-free source-label incidence feasibility condition is not enough if the global scalar state identities are omitted.
+
+Take again
 
 ```text
-for every admissible q,rho,E,z profile,
-find t such that F_t<0.                                (17)
+a=4,
+b=7,
+(q,rho)=(1,1) once,
+(q,rho)=(3,1) six times,
+s=(0,0,0,0),
+E=19,
+z=4.
 ```
 
-Each `F_t` is the explicit histogram expression (6). The source-set search, canonical staircase, crossing statistic and target max-flow would disappear from the proof-critical layer.
+All selected labels have zero demand, so the source-label lower-bound circulation is feasible. The current cap formula again gives `P=3` throughout. The exact Hall minimum is `-1` on the singleton `q=1` source, while every high-q tail is nondeficient.
 
-The remaining work would be to combine (6) with:
+Therefore the implication
 
 ```text
-q+rho<=a,
-sum q=S+E,
-residual budget,
-selected-excess budget,
-potential-pair capacity,
-source-demand forcing.                                 (18)
+current cap formula
++ selected-incidence feasibility
+=> high-q-tail Hall sufficiency
 ```
 
-This is materially closer to a scalar all-order contradiction.
+is **false**.
 
-## 8. Immediate proof target
+This negative result is now a standing red-team obligation.
 
-A direct universal exchange lemma based only on `q_x>q_y` is false away from Hall minimizers, even for current-cap profiles. Therefore the proof, if true, must use either:
+## 6. What survives on the actual frozen Murty states
 
-1. minimum-witness tightness;
-2. an uncrossing/compression argument acting on several q-levels at once; or
-3. a structural property of the deterministic cap function (10), not merely neighborhood nesting.
+The frozen N34/N35-derived scalar states satisfy additional global ledger identities inherited from the canonical graph-to-constraint bridge and the fixed-order state construction. Those identities are not present in the hostile profiles above.
 
-The most promising route is to choose a Hall minimizer with lexicographically maximal selected `q`-multiset and prove that any inversion `y in S`, `x notin S`, `q_x>q_y` can be neutralized at minimum value using the cap-specific slack constraints.
+The live proof target is therefore deliberately narrower:
+
+> **Ledger-current q-tail question.** On scalar profiles satisfying the **full canonical Murty bridge and the actual frozen-state global ledger identities**, is every negative target-Hall minimum attained by a high-q tail `S_t`?
+
+This is presently a question, not a theorem. Its exact hypotheses must be recovered from the original state-generation identities before further promotion.
+
+## 7. Corrected finite-evidence status
+
+Earlier broad random and small exhaustive tests of the cap formula found no tail discrepancy, but some exploratory runs incorrectly restricted the zero-demand parameter by `z<=E`. Those runs are therefore **not accepted as evidence for the narrowed conjecture**.
+
+After enforcing demand-consistent `z` and selected-incidence feasibility, exhaustive small tests still showed no discrepancy through several low orders before the all-zero-demand `a=4,b=7` counterexample in Section 5 appeared. This is useful boundary information: the failure requires a branch absent from the observed frozen frontier, but the reason must be proved from the global ledger rather than guessed.
+
+The robust empirical fact that remains fully valid is the frozen 812-profile statement in Section 1.
+
+## 8. Relation to the exact q-layer reduction
+
+[`Q_LAYER_THRESHOLD_NORMAL_FORM.md`](Q_LAYER_THRESHOLD_NORMAL_FORM.md) remains exact. It gives, for arbitrary `S`,
+
+```text
+U_q(S)
+ = sum_q sum_k
+     min(
+       T_q(theta_{q,k}),
+       T^O_q(r_{q,k}-1;S)
+       +T^S_q(r_{q,k+1}-1;S)
+     ).
+```
+
+Together with [`Q_STRATIFIED_MINCUT_EXACTNESS.md`](Q_STRATIFIED_MINCUT_EXACTNESS.md), the exact target-Hall minimum is already reduced to threshold histogram data without assuming any q-tail theorem.
+
+Accordingly the project does **not** depend on the tail conjecture. If the narrowed ledger-current tail theorem fails, the q-layer threshold normal form remains the preferred exact all-order route.
+
+## 9. Immediate research task
+
+Before any further q-tail promotion:
+
+1. recover the exact global identities defining the frozen scalar states, especially the relation among `sum s`, `sum rho`, `a`, `b`, fixed-order edge count and surplus;
+2. add those identities to the hostile finite generator;
+3. rerun the tail-minimum red-team under the **full** bridge domain;
+4. only then attempt an uncrossing proof for high-q tails.
+
+Any proof which does not exclude the counterexamples in Sections 3-5 by an explicitly stated hypothesis is incomplete.
 
 ## Trust boundary
 
-Equation (2) is **not proved**. The 812-profile result and the finite enumerations are computational evidence only. The arbitrary-cap counterexample is preserved specifically to prevent accidental promotion of a false general Hall statement.
+High-q-tail sufficiency is unproved and false under several natural weakenings. The only theorem-safe statements here are the exact tail-margin formula and the reported frozen-pilot computations. The unrestricted Murty-Simon conjecture remains unproved.
