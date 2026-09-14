@@ -5,6 +5,7 @@ on:
   push:
     paths:
       - 'tools/sync_generalisation_status.py'
+      - 'tools/sync_current_state_hall_20260914.py'
       - 'tools/check_whole_state_ledgers.py'
       - 'project/research/general_n/2026-09-13-alternative-attacks-v1/WHOLE_STATE_LEDGER.tsv'
       - 'project/research/general_n/2026-09-13-alternative-attacks-v1/WHOLE_STATE_LEDGER_N35.tsv'
@@ -20,6 +21,11 @@ jobs:
       - uses: actions/checkout@v4
         with:
           fetch-depth: 0
+
+      - name: Fast-forward to latest main before rendering
+        run: |
+          git fetch origin main
+          git merge --ff-only origin/main
 
       - name: Derive canonical status from layer-specific ledgers
         run: python3 tools/sync_generalisation_status.py --write
