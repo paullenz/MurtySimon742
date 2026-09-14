@@ -1,0 +1,28 @@
+name: verify crossing wall charge
+
+on:
+  workflow_dispatch:
+  push:
+    paths:
+      - 'project/research/general_n/2026-09-14-type-compressed-orientation-hall-v1/CROSSING_WALL_CHARGE_AND_TIGHTNESS.md'
+      - 'project/research/general_n/2026-09-14-type-compressed-orientation-hall-v1/verify_crossing_wall_charge.py'
+      - 'project/research/general_n/2026-09-14-type-compressed-orientation-hall-v1/CROSSING_WALL_CHARGE_VERIFICATION.json'
+      - '.github/workflows/verify-crossing-wall-charge.yml'
+
+jobs:
+  verify:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@v4
+      - name: Replay deterministic crossing-wall verification
+        working-directory: project/research/general_n/2026-09-14-type-compressed-orientation-hall-v1
+        run: python3 verify_crossing_wall_charge.py > /tmp/CROSSING_WALL_CHARGE_VERIFICATION.json
+      - name: Require frozen output equality
+        working-directory: project/research/general_n/2026-09-14-type-compressed-orientation-hall-v1
+        run: diff -u CROSSING_WALL_CHARGE_VERIFICATION.json /tmp/CROSSING_WALL_CHARGE_VERIFICATION.json
+      - name: Upload verification evidence
+        uses: actions/upload-artifact@v4
+        with:
+          name: crossing-wall-charge-verification
+          path: /tmp/CROSSING_WALL_CHARGE_VERIFICATION.json
