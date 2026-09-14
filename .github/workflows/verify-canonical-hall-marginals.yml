@@ -1,0 +1,24 @@
+name: verify canonical Hall marginals
+
+on:
+  workflow_dispatch:
+  push:
+    paths:
+      - 'project/research/general_n/2026-09-14-type-compressed-orientation-hall-v1/CANONICAL_HALL_MARGINALS.md'
+      - 'project/research/general_n/2026-09-14-type-compressed-orientation-hall-v1/verify_canonical_hall_marginals.py'
+      - '.github/workflows/verify-canonical-hall-marginals.yml'
+
+jobs:
+  verify:
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    steps:
+      - uses: actions/checkout@v4
+      - name: Run independent finite verifier
+        working-directory: project/research/general_n/2026-09-14-type-compressed-orientation-hall-v1
+        run: python3 verify_canonical_hall_marginals.py
+      - name: Upload verification record
+        uses: actions/upload-artifact@v4
+        with:
+          name: canonical-hall-marginals-verification
+          path: project/research/general_n/2026-09-14-type-compressed-orientation-hall-v1/CANONICAL_HALL_MARGINALS_VERIFICATION.json
