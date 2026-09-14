@@ -64,7 +64,8 @@ jobs:
           if len(candidate_keys) != summary['relational_excluded_candidates']:
               raise SystemExit('candidate count mismatch against recovered discovery summary')
 
-          expected = [x.strip() for x in (root / 'EXPECTED_ACTIVE.txt').read_text().splitlines() if x.strip()]
+          expected_path = root / 'plan' / 'EXPECTED_ACTIVE.txt'
+          expected = [x.strip() for x in expected_path.read_text().splitlines() if x.strip()]
           n = int(expected[0]); body = expected[1:]
           if len(body) != n:
               raise SystemExit('EXPECTED_ACTIVE input count mismatch')
