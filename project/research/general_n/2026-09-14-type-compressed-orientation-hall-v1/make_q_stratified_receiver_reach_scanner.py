@@ -96,13 +96,6 @@ new = '''            if(layerupper<bdemand)++res.layer_fail;
                 ++res.qmixed_profiles;
                 res.qmixed_max_levels=max(res.qmixed_max_levels,qmixed);
             }
-            if(qmixed>0 || qlayerupper>=bdemand){
-                cerr<<"QSTRAT_EXCEPTION\\tstate="<<st.id<<"\\tE="<<E<<"\\tQ="<<Q
-                    <<"\\tdemand="<<bdemand<<"\\texactcap="<<bexact
-                    <<"\\tqlayerupper="<<qlayerupper<<"\\tqgap="<<qgap
-                    <<"\\tqmixed="<<qmixed<<"\\n";
-            }
-
             if(bflow<bdemand && ccflow>=bdemand){'''
 if s.count(old) != 1:
     raise SystemExit('q-stratified counter insertion point not unique')
