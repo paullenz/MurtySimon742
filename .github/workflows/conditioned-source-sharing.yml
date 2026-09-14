@@ -1,0 +1,25 @@
+name: Conditioned source sharing row 108
+on:
+  push:
+    paths:
+      - 'project/research/general_n/2026-09-14-conditioned-source-sharing-v1/**'
+      - 'project/research/general_n/2026-09-14-block-pressure-v1/REMAINDER_12.json'
+      - 'project/research/general_n/2026-09-14-joint-blocks-v1/SHARED_SLACK_FULL.json'
+      - '.github/workflows/conditioned-source-sharing.yml'
+  pull_request:
+    paths:
+      - 'project/research/general_n/2026-09-14-conditioned-source-sharing-v1/**'
+      - 'project/research/general_n/2026-09-14-block-pressure-v1/REMAINDER_12.json'
+      - 'project/research/general_n/2026-09-14-joint-blocks-v1/SHARED_SLACK_FULL.json'
+      - '.github/workflows/conditioned-source-sharing.yml'
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  replay:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v4
+      - name: Exact conditioned row-108 replay
+        run: python3 project/research/general_n/2026-09-14-conditioned-source-sharing-v1/run_replay.py

@@ -1,48 +1,52 @@
 # Murty–Simon / Erdős #742 — current state handoff
 
 <!-- CURRENT-STATUS:START -->
-<!-- SOURCE-PRICE-PUBLICATION:START -->
-**Publication verification — 2026-09-14 22:48:27 UTC; run 34905883642.** The original source-price result file is restored to its pre-existing SHA256 `1953c61d26c68dc2bcbb9aeddbe0d18336e05b118541f4d9ca3f9528c808caae`. The UNCHANGED offline harness passed all source/input hashes, the canonical twelve-row input, the six-row transcription, 9,043 incidence/demand checks, 371 brute-force comparisons, three hostile/boundary fixtures and complete output equality for all 576 price evaluations. The failed run 34904353492 remains recorded. **Mathematical status unchanged: zero new profile exclusions.** This receipt covers the original source-sharing package, NOT the separate stronger price/witness package. Validated checkout: `e6c9915826173b7b4ab8f76dc9b944b710128b0b`; this atomic commit publishes the repaired data and paired status receipt. See [repair audit](project/research/general_n/2026-09-14-source-sharing-v1/CI_AUDIT.md).
-<!-- SOURCE-PRICE-PUBLICATION:END -->
+**14 September 2026 — checkpoint `conditioned-source-sharing-row108-v1`.** Inspected predecessor: `c3eb63dd354c7170a1f56ff774d771accb709858`. This preserves the successful exact source-price restoration receipt (run34905883642), conditioned-price work, the exact row471 rigidity closure of branches39,40 and successful remote replay34906169745, stronger witness work, all failures and reviewer material, and adds an exact selected-incidence exclusion of original synthetic row108. **Fixed-order, general7/12 and canonical-frontier mathematical status unchanged; one additional original synthetic profile is excluded.**
 
-**14 September 2026 — research checkpoint `row471-rigidity-v1`.** Inspected predecessor: `aa6c41fcede3bf2e7e935a00840030ef0b9ee1df`. Two conditioned branches of original synthetic row471 are now hand-closed. At eta2,e_L39 the receiver/source-price squeeze forces pressures `d_9>=4,d_23>=4,d_13>=2`; the twelve demand-three labels then need at least12 high excess although only8 is available. At e_L40 it forces `d_9>=4,d_23>=3,d_13>=2`, requiring at least10 high excess with only7 available. Exact integer recheck is in [ROW471_RIGIDITY.md](project/research/general_n/2026-09-14-conditioned-source-pricing-v1/ROW471_RIGIDITY.md) and `verify_row471_rigidity.py`. **This closes branches 39 and40, not the row471 profile. Original sample remains707/713; fixed-order, general7/12 and canonical-frontier status are unchanged.**
-
-Canonical repository: `paullenz/MurtySimon742`, ID1359206057. Every commit must update CURRENT-STATUS blocks in BOTH README.md and this file atomically. Read [CANONICAL_REPOSITORY.md](CANONICAL_REPOSITORY.md), [AGENTS.md](AGENTS.md), [RESEARCH_EVIDENCE_INDEX.md](RESEARCH_EVIDENCE_INDEX.md), and newer commits before continuing.
+Canonical repository: `paullenz/MurtySimon742`, ID1359206057. Every commit must update the CURRENT-STATUS blocks in BOTH this file and README.md atomically. Read [`AGENTS.md`](AGENTS.md), [`CANONICAL_REPOSITORY.md`](CANONICAL_REPOSITORY.md), [`RESEARCH_EVIDENCE_INDEX.md`](RESEARCH_EVIDENCE_INDEX.md), and newer commits before continuing.
 
 ## Canonical status — unchanged
 
 ```text
-whole-state closures:             977
-canonical exclusions:           1,971
-canonical survivors:            3,607
-  N34-derived:                  3,529
-  N35-derived:                     78
-recovered relational candidates: 2,655 — UNPROMOTED
+whole-state closures:               977
+canonical exclusions:             1,971
+canonical survivors:              3,607
+recovered relational candidates:  2,655 — UNPROMOTED
 ```
 
-Fixed-order n25/n27-through-n35 and general7/12 candidates remain preserved; external mathematical review, novelty assessment and third-party reproduction OPEN. No unrestricted proof or newly realized graph is claimed.
+Fixed-order n25/n27-through-n35 and general7/12 candidates remain preserved with external review, novelty assessment and third-party reproduction OPEN. No unrestricted proof or newly realized graph is claimed.
 
-The [shared-slack](project/research/general_n/2026-09-14-joint-blocks-v1/README.md) sample remains original707/713 rejected, leaving108,160,338,347,471,586; fresh708/715 rejected, leaving20,91,391,490,528,562,677 in a distinct namespace. These are synthetic profiles, not remaining cases of the conjecture. The simultaneous multiblock experiment left454/597 tuples across all six originals; no extra closure.
+## Boundary-profile status
 
-## Three source-price scopes plus row471 rigidity
+The shared block-slack package had rejected707/713 original synthetic profiles and708/715 fresh profiles. Its six original non-rejections were108,160,338,347,471,586. The new [`conditioned-source-sharing-v1`](project/research/general_n/2026-09-14-conditioned-source-sharing-v1/README.md) excludes original row108 in the stated selected-incidence relaxation. Therefore the ORIGINAL sample is now **708/713 rejected**, with exactly **160,338,347,471,586** not rejected. This is sample-level evidence only. The fresh sample remains **708/715 rejected** in its separate namespace. No canonical whole-state closure or relational-candidate promotion follows.
 
-The [original package](project/research/general_n/2026-09-14-source-sharing-v1/README.md) retains its elementary exact-row pricing proof, deterministic576-price experiment and finite checks:9,043 incidence/demand configurations,371 brute-force DP comparisons and three hostile fixtures. Four weighted bounds improve against the same zero-price baseline, but none excludes a profile. All unit-weight trials retain zero. The transferred extra-zero error and its exact restoration are documented separately; restored full replay34905883642 passed without weakening the original expected hash.
+Separately, the row471 rigidity step closes conditioned branches `e_L=39,40`. Run34906169745 completed SUCCESS and its job explicitly passed the exact conditioned scan, frozen-output digest check, and `Verify row-471 hand rigidity closures` step. Row471 itself is not excluded; conditioned branches `41,42,43,47` remain.
 
-The [stronger search / joint-witness package](project/research/general_n/2026-09-14-source-pricing-witnesses-v1/README.md) attains21 improvements in24 frozen comparisons, with no contradiction. Exact incidence/orientation witnesses for original160,338,347 establish feasibility only of the LISTED uncoupled model; they do not assign labels to arcs or construct graph residual neighbourhoods. The particular witnesses violate stronger pair/common-residual conditions, so they are not graph realizations and do not exclude or realize the profiles generally.
+## Exact row108 finish
 
-The [conditioned continuation](project/research/general_n/2026-09-14-conditioned-source-pricing-v1/README.md) uses the SAME exact low-block excess and branch-specific legitimate caps as the conditioned/shared-slack route. Recorded audit:9,293 incidence configurations,24,063 priced inequalities,150 strict improvements over zero prices. Inherited branch rejections are applied first, then every remaining branch at the targeted eta is priced for all six originals and all seven fresh profiles separately. Its exact remote replay **34905354792 completed SUCCESS** on checkpoint7504cfa5, matching the frozen full-output SHA256 `1aec5dc47102ec24f64cc9776c624b32d025112b06fb643f306a0768e091639a` and the headline row471 near-miss values.
+For row108, shared-slack gives cumulative ranges `e_{s<=1}=26..33` and `e_{s<=2}=33..37`, hence40 monotone exact block-total tuples. Replaying the preserved simultaneous-multiblock screen rejects8 and leaves32.
 
-That conditioned scan retained row471 eta2 branches `39,40,41,42,43,47`. The new [row471 rigidity argument](project/research/general_n/2026-09-14-conditioned-source-pricing-v1/ROW471_RIGIDITY.md) now removes39 and40 by combining the SAME source-price upper with the receiver pressure minimum and positive-label endpoint forcing. The remaining conditioned branches are therefore
+A single fixed signed source-price vector, with `-4` at zero-based source indices1,12,21 and zero elsewhere, strictly closes24 of those32. All three priced sources have `q_u=5`, so exact source row sums restore the signed Lagrange price exactly.
 
-```text
-41,42,43,47.
-```
+The final eight tuples are `(26,33),(26,35),(26,36),(26,37),(27,33),(27,36),(27,37),(28,37)`. Row108 has no zero-demand labels, so unit charge is exactly `C0=sum q_u d_u` for ONE common pressure `d_u=(p_u-rho_u+1)_+` per source. All eight require charge at least211.
 
-The new verifier is self-contained integer arithmetic and is added to the conditioned workflow. A fresh remote run including this verifier is required before remote verification of the new branch closures is claimed.
+The standard-library verifier enumerates **46,662** excess histograms up to equal-demand permutation. Exact row/type incidence flow leaves **1,201** feasible histograms. Exact incidence-charge flow disposes of **1,124** below211 even while relaxing common pressure. The remaining **77** undergo exact common-pressure branch-and-bound with flow feasibility at every branch; **57,867** branch nodes are visited and none can attain211. Therefore all32 previous row108 survivors are eliminated in this selected-incidence relaxation.
 
-## Immediate next target: row471 e_L=41 and destination-label coupling
+Complete verifier output canonical SHA256: `5ea860b79516d9a34e73a67fafdb7875cd3c9c99b01594b4bf3aab2c3e8a7629`. Local replay passed before publication. A dedicated remote workflow is installed by this checkpoint and **must not be called successful until its run is inspected**.
 
-Prioritize eta2,e_L41, then42,43,47. The simple near-equality pressure argument that closed39/40 no longer forces the same three sources once the source-price gap widens, so do not extend it by wishful analogy. Retain ONE selected-incidence matrix with exact row/column sums and impose destination compatibility plus one common residual neighbourhood. Seek a Hall/saturation or forced-incidence contradiction suitable for a reusable hand lemma. For canonical arc u->w and selected sets S_u,S_w, retain
+## Verification history preserved
+
+- Original source-price run34904353492 **FAILED** on the data-transfer defect before mathematics and stays failed.
+- Exact source-price restoration replay run34905883642 **SUCCESS**: restored the pre-existing result hash and passed the unchanged full harness. This validates only that original package.
+- Conditioned-source-price run34905354792 **SUCCESS** for its frozen scan.
+- Its successor run34906169745 also **SUCCESS**, including exact verification of row471 conditioned branch closures `e_L=39,40`; row471 remains open at `41,42,43,47`.
+- The row108 package has local complete replay only at this checkpoint; its remote result is pending inspection.
+
+## Immediate next target
+
+Do not broaden blind price search. Prioritize one actual selected-incidence matrix together with destination-label compatibility and the bridge's ONE common residual-neighbourhood condition, especially original row471 at eta2/e_L41 first, then42,43,47; branches39,40 are now exactly closed. In parallel, carry the exact common-pressure/source-incidence mechanism across the five remaining original profiles. Preserve every non-rejection and keep the fresh namespace separate.
+
+For a canonical arc `u->w` and selected-label sets `S_u,S_w`, retain
 
 ```text
 1 <= |S_u minus S_w| <= rho_w+1,
@@ -50,19 +54,11 @@ Prioritize eta2,e_L41, then42,43,47. The simple near-equality pressure argument 
 | (union_{w:u->w} S_w) minus S_u | <= rho_u.
 ```
 
-Enforce these over ALL allowed realizations, not just existing witnesses. Keep full branch coverage and separate row namespaces. Retain multiresource shared slack, exact q-layer/mincut, crossing-wall/saturation and maximum-cut/stability alternatives.
-
-## Verification history and corrections
-
-Shared-slack run34898768799/job104159335270 on `de4cdce81db75301b622874fdfe6f5c792e89b7a` passed and complete downloaded outputs matched. Conditioned-source-pricing run34905354792 on7504cfa5 completed SUCCESS. Original source-price34904353492/job104177437867 FAILED before mathematics at the transferred result hash; the later diagnosis identified an extra vector entry rather than mere formatting. The original raw expected hash stayed authoritative, and restored replay34905883642 passed the unchanged full harness. The failed run remains a failure in history. [CI_AUDIT.md](project/research/general_n/2026-09-14-source-sharing-v1/CI_AUDIT.md) preserves the exact diagnosis and hashes.
-
-The q-layer normal-form strategy correction remains: all subsets passing means Hall feasibility; exclusion requires a deficient subset. Its equations1–15 and recorded finite checks are unchanged; the old note is preserved byte-for-byte. No all-profile contradiction follows merely from that correction.
+The last line enforces one shared residual neighbourhood at each source. Full multiresource shared slack, exact q-layer/mincut, crossing-wall/saturation and maximum-cut/stability remain preserved alternatives.
 <!-- CURRENT-STATUS:END -->
 
-## Preservation, dependencies and audit gates
+## Preservation and audit gates
 
-The [shared-slack README archive](README_SHARED_SLACK_DETAILS_2026-09-14.md), [handoff archive](CURRENT_STATE_PRE_COMMIT_STATUS_2026-09-14.md), all subsequent checkpoints in Git history and all reviewer packages remain retained. The full failure-retention policy and reviewer-first invitation remain in the README. Read the [canonical bridge](project/research/general_n/2026-09-11-canonical-bridge-v1/CANONICAL_BRIDGE.md), [shared-slack proof](project/research/general_n/2026-09-14-joint-blocks-v1/README.md) and [offline guide](project/research/general_n/2026-09-14-joint-blocks-v1/REPRODUCE.md). Preserve Q=r+2t+D0+Esel; distinguish structural t, q-threshold tau and block eta. Zero-demand labels stay explicit. Keep legitimate caps, positive-label forcing d_u=(p_u-rho_u+1)_+<=e_i and y<=p for actual-tail receivers. Relaxed incidence/pressure feasibility is not graph realizability.
+The complete predecessor handoff is preserved byte-for-byte in [`CURRENT_STATE_PRE_ROW108_2026-09-14.md`](CURRENT_STATE_PRE_ROW108_2026-09-14.md); historical status remains available without cluttering the live handoff. Earlier archives, reviewer packages, counterexamples and negative experiments remain intact.
 
-The2,655 candidates require complete coverage, dual agreement, zero unresolved states, successful aggregate and a separate reviewed ledger step. Keep N34/N35 provenance and closure validator. No live audit shard count is asserted. Fetch EVERY page or a complete diagnostic before reporting audit34854911792. Do not duplicate it, change budgets/concurrency or retry queued/running/successful jobs or computational timeouts; the existing narrow transient-infrastructure retry rule remains.
-
-All16 earlier raw/derived evidence files are preserved at `b6a15db114d7b4f3b71d73da816daec563f11824`. Publication-only34895776658 succeeded; earlier34894544147 passed math/hash steps but failed Git rebase. Preserve both records and [publication audit](project/research/general_n/2026-09-14-evidence-preservation-v1/PUBLICATION_AUDIT.md). Internal checks, remote CI and preservation are distinct from external specialist acceptance of the graph-to-selected/residual bridge.
+The2,655 recovered relational candidates require complete coverage, both implementations agreeing, zero unresolved cases, successful aggregate and a separate reviewed ledger step before promotion. Sample exclusions do not change that gate. Internal proof checks, successful CI and durable publication do not replace external specialist review of the canonical graph-to-selected/residual bridge.
