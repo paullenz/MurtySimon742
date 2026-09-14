@@ -1,0 +1,24 @@
+name: verify canonical Hall slack expansion
+
+on:
+  workflow_dispatch:
+  push:
+    paths:
+      - 'project/research/general_n/2026-09-14-type-compressed-orientation-hall-v1/CANONICAL_HALL_SLACK_EXPANSION.md'
+      - 'project/research/general_n/2026-09-14-type-compressed-orientation-hall-v1/verify_canonical_hall_slack_expansion.py'
+      - '.github/workflows/verify-canonical-hall-slack-expansion.yml'
+
+jobs:
+  verify:
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    steps:
+      - uses: actions/checkout@v4
+      - name: Run independent finite verifier
+        working-directory: project/research/general_n/2026-09-14-type-compressed-orientation-hall-v1
+        run: python3 verify_canonical_hall_slack_expansion.py
+      - name: Upload verification record
+        uses: actions/upload-artifact@v4
+        with:
+          name: canonical-hall-slack-expansion-verification
+          path: project/research/general_n/2026-09-14-type-compressed-orientation-hall-v1/CANONICAL_HALL_SLACK_EXPANSION_VERIFICATION.json
