@@ -1,0 +1,29 @@
+{
+  "exhaustive": {
+    "Mplus_positive_crossing_profiles": 177,
+    "P_values": [0, 1, 2],
+    "deletions": 204,
+    "n_max": 4,
+    "profiles": 4992,
+    "q_values": [0, 1],
+    "rho_values": [0, 1]
+  },
+  "hostile_counterexample": {
+    "Mplus_crossing": 1,
+    "Mplus_q_margin": 0,
+    "deletions": 1,
+    "final_crossing": 0,
+    "final_q_margin": -1,
+    "final_witness": [1, 2, 3],
+    "minimum_margin": -1
+  },
+  "random": {
+    "Mplus_positive_crossing_profiles": 145,
+    "deletions": 147,
+    "seed": 7420916,
+    "trials": 30000
+  },
+  "result": "PASS",
+  "schema": "q-stratified-mincut-exactness-verification-v1",
+  "trust_boundary": "Finite verification supports the hand proof; it does not replace external mathematical review."
+}
