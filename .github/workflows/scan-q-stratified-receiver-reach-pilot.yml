@@ -4,7 +4,7 @@ on:
   workflow_dispatch:
   push:
     paths:
-      - 'project/research/general_n/2026-09-14-type-compressed-orientation-hall-v1/make_q_stratified_receiver_reach_scanner.py'
+      - 'project/research/general_n/2026-09-14-type-compressed-orientation-hall-v1/make_q_stratified_receiver_residue_scanner.py'
       - '.github/workflows/scan-q-stratified-receiver-reach-pilot.yml'
 
 jobs:
@@ -34,21 +34,20 @@ jobs:
         working-directory: project/research/general_n/2026-09-14-type-compressed-orientation-hall-v1
         run: python3 make_layered_receiver_reach_scanner.py
 
-      - name: Add q-stratified instrumentation
+      - name: Add efficient q-stratified residue instrumentation
         working-directory: project/research/general_n/2026-09-14-type-compressed-orientation-hall-v1
-        run: python3 make_q_stratified_receiver_reach_scanner.py
+        run: python3 make_q_stratified_receiver_residue_scanner.py
 
       - name: Compile scanner
         working-directory: project/research/general_n/2026-09-14-type-compressed-orientation-hall-v1
-        run: g++ -O3 -std=c++17 -Wall -Wextra -pedantic scan_q_stratified_receiver_reach_stats.cpp -o scan_q_stratified_receiver_reach_stats
+        run: g++ -O3 -std=c++17 -Wall -Wextra -pedantic scan_q_stratified_receiver_residue_stats.cpp -o scan_q_stratified_receiver_residue_stats
 
       - name: Run pilot
         run: |
-          project/research/general_n/2026-09-14-type-compressed-orientation-hall-v1/scan_q_stratified_receiver_reach_stats \
+          project/research/general_n/2026-09-14-type-compressed-orientation-hall-v1/scan_q_stratified_receiver_residue_stats \
             project/research/general_n/2026-09-13-alternative-attacks-v1/Q_STRATIFIED_RECEIVER_REACH_PILOT_INPUT.txt \
             Q_STRATIFIED_RECEIVER_REACH_PILOT.tsv \
             2>&1 | tee Q_STRATIFIED_RECEIVER_REACH_PILOT_REPLAY.txt
-          grep '^QSTRAT_EXCEPTION' Q_STRATIFIED_RECEIVER_REACH_PILOT_REPLAY.txt > Q_STRATIFIED_RECEIVER_EXCEPTIONS.tsv || true
 
       - name: Summarize and assert baseline reproduction
         run: |
@@ -70,7 +69,7 @@ jobs:
           if qf+qp!=target:
               raise SystemExit(f'q-layer accounting mismatch {qf}+{qp}!={target}')
           summary={
-            'schema':'q-stratified-receiver-reach-pilot-v1',
+            'schema':'q-stratified-receiver-reach-pilot-v2-residue-only',
             'states':len(rows),
             'profiles_tested':sum(int(r['profiles_tested']) for r in rows),
             'target_hall_failure_profiles':target,
@@ -78,11 +77,11 @@ jobs:
             'global_layer_false_negatives':lp,
             'q_stratified_detected':qf,
             'q_stratified_false_negatives':qp,
-            'q_stratified_exact_capacity_matches':qe,
-            'q_stratified_total_gap_above_exact':qgap,
-            'q_stratified_max_gap_above_exact':max(int(r['qlayer_max_gap']) for r in rows),
-            'profiles_with_mixed_selected_status_inside_q':qmix,
-            'max_mixed_q_levels_in_one_profile':max(int(r['qmixed_max_levels']) for r in rows),
+            'q_stratified_exact_matches_on_global_residue':qe,
+            'q_stratified_total_gap_above_exact_on_global_residue':qgap,
+            'q_stratified_max_gap_above_exact_on_global_residue':max(int(r['qlayer_max_gap']) for r in rows),
+            'global_residue_profiles_with_mixed_selected_status_inside_q':qmix,
+            'max_mixed_q_levels_in_one_global_residue_profile':max(int(r['qmixed_max_levels']) for r in rows),
             'promotion_status':'RECONNAISSANCE_ONLY',
             'external_review':'OPEN'
           }
@@ -97,8 +96,7 @@ jobs:
           path: |
             project/research/general_n/2026-09-13-alternative-attacks-v1/Q_STRATIFIED_RECEIVER_REACH_PILOT_INPUT.txt
             project/research/general_n/2026-09-13-alternative-attacks-v1/Q_STRATIFIED_RECEIVER_REACH_PILOT_INPUT_VERIFICATION.json
-            project/research/general_n/2026-09-14-type-compressed-orientation-hall-v1/scan_q_stratified_receiver_reach_stats.cpp
+            project/research/general_n/2026-09-14-type-compressed-orientation-hall-v1/scan_q_stratified_receiver_residue_stats.cpp
             Q_STRATIFIED_RECEIVER_REACH_PILOT.tsv
             Q_STRATIFIED_RECEIVER_REACH_PILOT_REPLAY.txt
-            Q_STRATIFIED_RECEIVER_EXCEPTIONS.tsv
             Q_STRATIFIED_RECEIVER_REACH_PILOT_SUMMARY.json
