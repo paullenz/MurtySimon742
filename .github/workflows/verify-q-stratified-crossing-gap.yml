@@ -1,0 +1,26 @@
+name: verify q-stratified crossing gap
+
+on:
+  workflow_dispatch:
+  push:
+    paths:
+      - 'project/research/general_n/2026-09-14-type-compressed-orientation-hall-v1/Q_STRATIFIED_CROSSING_GAP.md'
+      - 'project/research/general_n/2026-09-14-type-compressed-orientation-hall-v1/verify_q_stratified_crossing_gap.py'
+      - '.github/workflows/verify-q-stratified-crossing-gap.yml'
+
+jobs:
+  verify:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v4
+      - name: Run independent finite verifier
+        working-directory: project/research/general_n/2026-09-14-type-compressed-orientation-hall-v1
+        run: python3 verify_q_stratified_crossing_gap.py | tee Q_STRATIFIED_CROSSING_GAP_VERIFICATION_REPLAY.txt
+      - uses: actions/upload-artifact@v4
+        with:
+          name: q-stratified-crossing-gap-verification
+          path: |
+            project/research/general_n/2026-09-14-type-compressed-orientation-hall-v1/Q_STRATIFIED_CROSSING_GAP_VERIFICATION.json
+            project/research/general_n/2026-09-14-type-compressed-orientation-hall-v1/Q_STRATIFIED_CROSSING_GAP_VERIFICATION_REPLAY.txt
+            project/research/general_n/2026-09-14-type-compressed-orientation-hall-v1/verify_q_stratified_crossing_gap.py
