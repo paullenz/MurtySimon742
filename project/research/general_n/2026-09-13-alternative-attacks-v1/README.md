@@ -30,7 +30,7 @@ The durability checker [`../../../../tools/check_n34_whole_state_ledger.py`](../
 <!-- CANONICAL-WHOLE-STATE-LEDGER:START -->
 ### Canonical closure ledger
 
-The canonical [`WHOLE_STATE_LEDGER.tsv`](WHOLE_STATE_LEDGER.tsv) contains **977 quantified whole-state exclusions**. The large current family is documented in [`PAIR_CAPACITY_FRONTIER_AUDIT.md`](PAIR_CAPACITY_FRONTIER_AUDIT.md), with exact IDs in [`PAIR_CAPACITY_FRONTIER_EXCLUDED.tsv`](PAIR_CAPACITY_FRONTIER_EXCLUDED.tsv).
+The canonical [`WHOLE_STATE_LEDGER.tsv`](WHOLE_STATE_LEDGER.tsv) contains **977 quantified N34 whole-state exclusions**. The large current family is documented in [`PAIR_CAPACITY_FRONTIER_AUDIT.md`](PAIR_CAPACITY_FRONTIER_AUDIT.md), with exact IDs in [`PAIR_CAPACITY_FRONTIER_EXCLUDED.tsv`](PAIR_CAPACITY_FRONTIER_EXCLUDED.tsv).
 
 Two full-frontier implementations—expanded source vectors with pairwise directed compatibility, and independent `(rho,q)` type-count enumeration using the closed-form potential degree—agree exactly on the 943 promoted exclusions and their exhaustive certificate statistics.
 

@@ -43,7 +43,7 @@ Exact replay, internal audit, repository publication and external mathematical a
 | `n=34` | Complete candidate: `e(G)<=289`, equality exactly `K(17,17)`; reviewer-v2; final heavy certificate replaced by a short hand proof; external review open |
 | `n=35` | Complete candidate: `e(G)<=306`, equality exactly `K(17,18)`; reviewer-v1; external review open |
 | General maximum-degree result | Candidate theorem: for `n>=6`, `Delta(G)>=(7/12)n` implies `e(G)<floor(n^2/4)`; internal exact audits green; external review and novelty assessment open |
-| Generalisation frontier | **1,971 exclusions / 3,607 survivors** from the canonical quantified whole-state ledger; `3,529` are N34 equality-derived and `78` are N35 `m=306`-derived; these are scalar states in a frozen experiment, not surviving graphs |
+| Generalisation frontier | **1,971 exclusions / 3,607 survivors** from the canonical quantified whole-state ledgers; `3,529` are N34 equality-derived and `78` are N35 `m=306`-derived; these are scalar states in a frozen experiment, not surviving graphs |
 
 The unrestricted Murty–Simon conjecture remains unsolved by this project.
 
