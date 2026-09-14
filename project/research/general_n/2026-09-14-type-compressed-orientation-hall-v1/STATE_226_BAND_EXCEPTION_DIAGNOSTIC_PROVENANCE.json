@@ -1,0 +1,18 @@
+{
+  "artifact_digest": "sha256:7912587b4de8387107c8cd1c323fa38bc07dd8df2a9252a960240670123531fb",
+  "artifact_id": 10344904119,
+  "artifact_name": "staircase-band-exception-diagnostic",
+  "canonical_frontier_unchanged": true,
+  "diagnostic_bytes": 1036,
+  "diagnostic_sha256": "c41e8eeaa4c00b13c25eb64ea698bb5e56afc7596090b0b977a9d9a44e2ec428",
+  "exception_blocks": 1,
+  "exception_state": 226,
+  "external_review": "OPEN",
+  "head_sha": "2e0080d0c19318709a93a0130620e634e022e905",
+  "job_id": 103958105979,
+  "promotion_status": "RECONNAISSANCE_ONLY",
+  "schema": "state-226-band-exception-diagnostic-v1",
+  "source_pilot": "deterministic current-ledger 1/256 remainder-16 frontier pilot",
+  "workflow_run_id": 34838612503,
+  "workflow_status": "success"
+}
