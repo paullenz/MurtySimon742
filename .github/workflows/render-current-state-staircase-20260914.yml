@@ -1,0 +1,33 @@
+name: render current staircase research state
+
+on:
+  workflow_dispatch:
+  push:
+    paths:
+      - 'tools/sync_current_state_staircase_20260914.py'
+      - '.github/workflows/render-current-state-staircase-20260914.yml'
+
+jobs:
+  render:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Render ledger-safe base handoff
+        run: python3 tools/sync_generalisation_status.py --write
+      - name: Render staircase-band handoff
+        run: python3 tools/sync_current_state_staircase_20260914.py
+      - name: Recheck canonical counts and ledgers
+        run: |
+          python3 tools/sync_generalisation_status.py
+          python3 tools/check_whole_state_ledgers.py
+          python3 tools/check_n34_whole_state_ledger.py
+          python3 tools/check_post_pair_relational_recovery.py
+      - name: Recheck staircase handoff idempotency
+        run: python3 tools/sync_current_state_staircase_20260914.py
+      - name: Check patch integrity
+        run: git diff --check
+      - name: Upload audited handoff
+        uses: actions/upload-artifact@v4
+        with:
+          name: current-state-staircase-20260914
+          path: CURRENT_STATE.md
