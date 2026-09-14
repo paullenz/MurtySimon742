@@ -14,6 +14,7 @@ env:
   RECOVERY_RUN_ID: '34844403328'
   EXPECTED_CANDIDATES: '2655'
   EXPECTED_RESULTS_SHA256: '2c892301854660c8c1f73a13c4949ce2fb7e1e5706f9ecffbbe79f9483e71970'
+  AUDIT_REVISION: '2'
 
 jobs:
   plan:
@@ -62,6 +63,7 @@ jobs:
           prov={
             'schema':'post-pair-relational-final-candidate-audit-plan-v1',
             'canonical_repo':'paullenz/MurtySimon742',
+            'audit_revision':int(os.environ['AUDIT_REVISION']),
             'source_recovery_run_id':int(os.environ['RECOVERY_RUN_ID']),
             'source_results_sha256':got,
             'candidate_count':len(selected),
