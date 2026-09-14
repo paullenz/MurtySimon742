@@ -227,3 +227,132 @@ A useful general theorem would show that these earlier constraints force every l
 All CI records above are internal exact/reproducible evidence, not external mathematical acceptance. The entire package inherits the canonical graph-to-constraint bridge and target-capacity assumptions. The Murty-specific pilot is reconnaissance only and promotes no state.
 
 The unrestricted Murty-Simon conjecture remains unproved by this project.
+
+## 8. 14 September addendum — coarse-band reach, state 226, and compatible-copy refinement
+
+This addendum supersedes the *research-priority wording* in section 6 but does not alter the theorem-status statements in sections 1–7.
+
+### Coarse-band reach
+
+[`STAIRCASE_BAND_REACH_PILOT.md`](STAIRCASE_BAND_REACH_PILOT.md) records GitHub Actions run `34832806900`. On the same deterministic 15-state Murty pilot:
+
+```text
+profiles tested:                    201,493,148
+exact target-Hall failures:             205,919
+coarse-band detected failures:           205,918
+coarse-band false negatives:                   1
+retention:                              99.999514%
+```
+
+The unique false negative is a two-generator profile in N34-derived state `226`.
+
+### Dedicated exact diagnostic
+
+GitHub Actions run `34838612503` completed successfully and explicitly asserted that exactly one band exception occurred and that it was state `226`. The original workflow artifact is:
+
+```text
+artifact id:      10344904119
+artifact name:    staircase-band-exception-diagnostic
+artifact digest:  sha256:7912587b4de8387107c8cd1c323fa38bc07dd8df2a9252a960240670123531fb
+```
+
+Durable repo evidence:
+
+- [`STATE_226_BAND_EXCEPTION_DIAGNOSTIC.txt`](STATE_226_BAND_EXCEPTION_DIAGNOSTIC.txt)
+- [`STATE_226_BAND_EXCEPTION_DIAGNOSTIC_PROVENANCE.json`](STATE_226_BAND_EXCEPTION_DIAGNOSTIC_PROVENANCE.json)
+- [`STATE_226_BAND_EXCEPTION.md`](STATE_226_BAND_EXCEPTION.md)
+
+The exceptional profile is
+
+```text
+state=226
+E=6
+Q=47
+exact quotient target flow=46
+exact deficit=1
+coarse band flow=39
+coarse band demand=39
+coarse band slack=0
+canonical generators=2
+```
+
+Its selected source types are
+
+```text
+type 3: (q,c,rho,P,n)=(4,6,2,2,1), band 0 generator
+type 4: (q,c,rho,P,n)=(5,9,4,4,1), band 1 generator
+type 5: (q,c,rho,P,n)=(6,9,3,3,5), band 1 non-generator
+```
+
+The only coarse-band incoming-capacity overestimate occurs at target type 1,
+
+```text
+(q,c,P,n)=(2,4,4,1),
+```
+
+where
+
+```text
+exact incoming capacity = 2
+coarse-band incoming    = 7
+overestimate             = 5.
+```
+
+The five extra incidences are exactly the five copies of type 5. Band generator type 4 can reach target type 1 because
+
+```text
+5 <= 4+1,
+```
+
+whereas the five type-5 copies cannot because
+
+```text
+6 > 4+1.
+```
+
+Every other target type has zero coarse-band overestimate in this exception.
+
+### Compatible-copy refinement
+
+The diagnostic identifies a strictly stronger aggregation which remains theorem-safe as a necessary condition: for each source-band/target-type edge, use the **actual number of selected source copies in that band individually compatible with that target**, with the same self-deletion correction, instead of using every copy whenever the band generator is compatible.
+
+Exact target-flow feasibility necessarily implies feasibility of this refined band network because it aggregates genuine exact compatibilities and invents no source-target edges.
+
+For state `226`, the refinement changes only the problematic band-1/target-1 contribution. The resulting effective target receiving capacities are bounded by
+
+```text
+target 1: min(4,  2) =  2
+target 2: min(15,21) = 15
+target 3: min(2,  6) =  2
+target 4: min(4,  6) =  4
+target 5: min(15,30) = 15
+                           --
+total                      38
+```
+
+while selected band demand is
+
+```text
+4+35=39.
+```
+
+Thus the compatible-copy refinement rejects the unique coarse-band exception.
+
+Because the refinement only removes capacities from the verified coarse-band network, every one of the previous `205,918` coarse-band failures remains a failure. Therefore the exact diagnostic plus monotonicity give the following **derived frozen-pilot result**:
+
+```text
+205,919 / 205,919 exact target-Hall failures
+are detected by the compatible-copy band refinement
+on the deterministic 15-state pilot.
+```
+
+This is not yet being promoted to the internally audited theorem chain. The next required audit boundary is explicit:
+
+1. write the compatible-copy band lemma as a formal theorem statement;
+2. build a separately written independent verifier;
+3. replay the theorem on exhaustive/random small profiles;
+4. replay the full frozen 15-state pilot;
+5. freeze the generated records and hashes;
+6. only then update the exact/verified structural chain.
+
+No whole-state ledger or canonical frontier count changes as a consequence of this addendum.
