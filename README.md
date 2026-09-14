@@ -2,7 +2,7 @@
 
 **Reviewers — start here:** [`START_HERE_FOR_REVIEWERS.md`](START_HERE_FOR_REVIEWERS.md) and [`releases/REVIEW_READY_INDEX.md`](releases/REVIEW_READY_INDEX.md). GitHub Issues/comments are preferred for counterexamples, corrections and reproducibility reports.
 
-Open, reproducible research on the Murty–Simon conjecture / Erdős Problem #742. **The unrestricted conjecture is not claimed proved.** External mathematical review, novelty assessment and independent third-party reproduction remain OPEN.
+Open, reproducible research on the Murty–Simon conjecture / Erdős Problem #742. **The unrestricted conjecture is not claimed proved.** External mathematical review, novelty assessment and independent third-party reproduction remain OPEN. The project actively welcomes hostile review, counterexamples, literature corrections and independent reproduction.
 
 <!-- CURRENT-STATUS:START -->
 ## Current status: fixed-order candidates
@@ -34,16 +34,58 @@ Open, reproducible research on the Murty–Simon conjecture / Erdős Problem #74
 | Original synthetic sample | **708/713 rejected; five not rejected: 160,338,347,471,586.** Sample-level evidence only; no canonical whole-state promotion |
 | Fresh-seed sample | **708/715 rejected; seven retained in a separate namespace.** Unchanged by the row108 result |
 | Row108 verification | Local complete replay and remote workflow **34906766833 / job104185160249 SUCCESS**. The exact remote replay step completed successfully with the frozen 46,662 / 1,201 / 1,124 / 77 / 57,867 certificate counts |
-| Documentation guards | Status-sync run34906766824 and reviewer-navigation run34906766838 both SUCCESS on the row108 commit. N30 package run34906766832 FAILED because the condensed root reviewer section omitted explicit frozen manuscript-PDF paths; this commit restores those links. No N30 proof/release bytes were changed |
+| Documentation guards | Status-sync run34906766824 and reviewer-navigation run34906766838 both SUCCESS on the row108 commit. N30 package run34906766832 FAILED after an earlier README condensation removed explicit frozen PDF paths; those links were restored. This checkpoint also restores and protects the hostile/red-team audit history in the root README |
 | Active continuation | Attack row471 `e_L=41` first with selected-label/destination plus ONE common residual-neighbourhood constraint; in parallel carry exact common-pressure/source-incidence across the five remaining original profiles |
 
-**Checkpoint — 14 September 2026, `relational-ledger-promotion-v1`.** The separate reviewed ledger step has completed after discovery run **34844403328** and independent audit run **34854911792**. Exact source/result/key hashes, complete dual agreement, zero unresolved states, base-ledger non-overlap and final ledger counts were checked before publication. **Canonical finite frontier promoted to 4,626 exclusions / 952 survivors / 3,632 whole-state closures.** Fixed-order candidates, general7/12 candidate, row108/row471 sample results and their verification status are otherwise unchanged. External mathematical review remains OPEN.
+**Checkpoint — 15 September 2026, `restore-redteam-readme-history-v1`.** Inspected predecessor `54c6109990382eaeb71296bfc1aab9149c7e5ca0`. The reviewed relational promotion is preserved unchanged. This documentation-hardening checkpoint restores the substantive hostile/red-team audit history and the proof changes those audits caused, marks that history as protected, and extends the README CI guard plus repository standing orders against future silent compression. **Mathematical status unchanged: canonical finite frontier remains 4,626 exclusions / 952 survivors / 3,632 whole-state closures; fixed-order/general candidates and row108/row471 status are unchanged.** External mathematical review remains OPEN.
 <!-- RELATIONAL-FULL-PROMOTION:PROMOTED -->
 
-**Standing order:** every commit must update the current-status blocks in BOTH this README and [`CURRENT_STATE.md`](CURRENT_STATE.md), in the same atomic commit, including an explicit unchanged-mathematics statement when appropriate. Keep these fixed-order and general summaries near the top. See [`AGENTS.md`](AGENTS.md) and [`CANONICAL_REPOSITORY.md`](CANONICAL_REPOSITORY.md).
+**Standing order:** every commit must update the current-status blocks in BOTH this README and [`CURRENT_STATE.md`](CURRENT_STATE.md), in the same atomic commit, including an explicit unchanged-mathematics statement when appropriate. Keep these fixed-order and general summaries near the top. README changes must be additive/reconciliatory: do not silently delete or materially compress substantive historical content, especially protected audit history, failures/corrections and reviewer navigation. See [`AGENTS.md`](AGENTS.md) and [`CANONICAL_REPOSITORY.md`](CANONICAL_REPOSITORY.md).
 <!-- CURRENT-STATUS:END -->
 
 **Canonical repository:** `paullenz/MurtySimon742`. For a restart read [`CURRENT_STATE.md`](CURRENT_STATE.md), [`RESEARCH_EVIDENCE_INDEX.md`](RESEARCH_EVIDENCE_INDEX.md), and newer commits. The complete pre-row108 root overview is preserved byte-for-byte in [`README_PRE_ROW108_2026-09-14.md`](README_PRE_ROW108_2026-09-14.md).
+
+<!-- REDTEAM-HISTORY:START -->
+## Hostile / red-team audit history and resulting proof hardening
+
+**Protected project history.** This section records what adversarial review actually changed, including defects that invalidated evidence, non-blocking errors, and proof dependencies that were removed after challenge. It is intentionally cumulative. Routine status rewrites must not delete or materially compress it; new hostile-audit results should be appended or reconciled while preserving earlier findings and links.
+
+The repository intentionally preserves failed approaches and audit findings rather than silently rewriting them. Several important proof improvements exist specifically because hostile review attacked earlier versions.
+
+### n=29 — a real defect was found, corrected, and then the computational dependency was largely removed
+
+During the restarted hostile audit of the additional n=29 `Delta=16` cumulative-threshold verifier, a **real normalization bug** was found in its first version: a label-group multiplicity was counted twice. The v1 cumulative-threshold certificates are therefore **invalid as proof evidence** and the historical v1 source remains retained only for auditability. This defect did **not** affect the original n=29 direct route or the separate fully fresh implementation.
+
+A corrected `v2` model was replayed cleanly and again produced zero survivors. The audit then reduced the proof-critical `Delta=16` computation to a smaller trusted kernel, whose clean replay also produced zero survivors with every late exclusion rechecked by exact integer Farkas arithmetic. See the [public-release audit](project/reviews/n29/2026-09-08-redteam-restart-v1/PUBLIC_RELEASE_AUDIT.md) and [minimal-kernel report](project/reviews/n29/2026-09-08-redteam-restart-v1/MINIMAL_KERNEL_REPORT.json).
+
+On 11 September, a separate ChatGPT instance with no project background performed a hostile n=29 review supplied by the user. It independently attacked the graph-to-model bridge, residual activity, threshold capacity, isolated-C treatment, corrected LP normalization, exact Farkas semantics and the hand assembly, and reported **no fatal flaw**. It independently recovered the complete n=29 charging-domain counts and a NetworkX graph-atlas bridge regression through order 7; both were reproduced again inside this project. Crucially, the review also found a new pointwise charging bound that removed substantial upper-range computation from the logical proof chain. See the [blind external red-team follow-up](project/reviews/n29/2026-09-11-blind-external-ai-redteam-v1/FOLLOWUP.md), [reviewer-v4 proof](project/reviews/n29/2026-09-11-reviewer-v4/PROOF.md), [reviewer-v4 release package](releases/n29-reviewer-v4/README.md), and [cross-order analytic caps](project/research/fan-free-fixed-orders/2026-09-11-pointwise-analytic-caps-v1/POINTWISE_CAPS.md).
+
+A separate proof-text audit found a **non-blocking sign/order typo** in an intermediate explanatory sentence of the expanded threshold-capacity lemma. The corrected sign is exactly the direction needed for the already-used final inequality, so no numerical result or candidate status changed. The historical lemma records the correction rather than erasing it.
+
+Later on 11 September, summing threshold capacity over residual-degree tails produced a stronger demand-only inequality. A hand clipping argument gives `Q(s)<=18`, while the bridge gives `Q(s)>=16+2t` for `Delta=16`, hence `t<=1`. This closes the `n=29, Delta=16, m>=210` branch without proof-critical computation. The corrected minimal-kernel/Farkas route remains frozen as independent corroboration and audit history rather than being discarded.
+
+### Robustness milestone — Fan dependency removed after hostile challenge
+
+A later external-AI critique raised three concrete objections: two possible collision/double-counting issues in the selected/residual construction, and the fact that the fixed-order papers then in scope used G. Fan's 1987 upper-density theorem to cap the edge search. The two local semantic objections did **not** survive re-audit: selection is one representative per missing **unordered** `B`-pair, and the forced cross-edges in the residual injection cannot themselves be selected because their endpoints miss an `A`-vertex. The current editions state those points explicitly. See the [cross-cutting feedback audit](project/reviews/cross-cutting/2026-09-09-external-ai-feedback-audit-v1/REPORT.md).
+
+For the Fan point, the project deliberately went further than defending the citation. It constructed direct order-specific upper-range reductions for the five fixed-order candidates then in scope, `n=25,27,28,29,30`, so Fan's theorem became **historical attribution only**, not a logical dependency of those proofs. Every historical reviewer/proof source was retained unchanged. The replacement is documented in [`FAN_FREE_REDUCTION.md`](project/research/fan-free-fixed-orders/2026-09-09-v1/FAN_FREE_REDUCTION.md), with later analytic simplifications in [`POINTWISE_CAPS.md`](project/research/fan-free-fixed-orders/2026-09-11-pointwise-analytic-caps-v1/POINTWISE_CAPS.md).
+
+The assembled replacement passed a fresh [hostile coverage/integrity audit](project/research/fan-free-fixed-orders/2026-09-09-v1/FAN_FREE_AUDIT.md): required upper edge ranges were complete, every proof-event checkpoint had zero survivors under exact acceptance, reviewer surfaces contained no residual logical invocation of Fan, and frozen historical source hashes still matched their recorded provenance. This is internal robustness evidence, not external acceptance; graph-to-residual lemmas and short hand monotonicity arguments remain important review targets.
+
+### Other fixed-order and general hostile audits retained
+
+| Scope | Adversarial audit outcome and resulting hardening |
+|---|---|
+| `n=25` | The [8 September re-audit](project/reviews/n25/2026-09-08-reaudit-v1/README.md) replayed the complete finite domain in 16 disjoint clean-runner shards: 543,578 outer states, 3,442,212 labelled columns and 1,959 independently reconstructed final equality certificates. No blocking mathematical defect was found; terminal reconstruction was made more independent of the frozen verifier. |
+| `n=27` | The [8 September red-team audit](project/reviews/n27/2026-09-08-redteam-v1/REPORT.md) hardened a replay covering 80,978,546 canonical columns and independently reconstructed all 35,435 terminal source-cap vectors. It found a raw C++ negative-token input-acceptance weakness and an initial audit-comparator gzip-timestamp mismatch; both were explicitly guarded/corrected without changing the mathematical candidate. |
+| `n=28` | The [7 September red-team report](project/reviews/n28/2026-09-07-redteam-v1/REPORT.md) added fresh replays, independent certificate checks and graph tests. No blocking defect was found in the direct candidate route. A non-blocking standalone-helper input-validation defect was recorded and guarded rather than hidden. |
+| `n=30` | The [hostile assembly audit](project/reviews/n30/2026-09-09-candidate-v1/ASSEMBLY_AUDIT.md) attacked the stitching of the exact degree regimes and certificate branches. Later Fan-free/analytic hardening reduced several historically computational upper-range scopes while retaining the assembly evidence. |
+| General `7/12` | The [hostile audit](project/research/general_n/2026-09-09-profile-integral-7-12-v1/AUDIT.md) used separately structured exact checkers against the scalar arithmetic, finite degree-assembly exceptions and threshold certificates. Large finite regressions are treated as consistency checks, not extrapolative proof; the shared graph-to-demand/profile-integral lemmas remain the central review target. |
+
+### Preservation rule for adversarial findings
+
+A hostile audit can strengthen confidence, weaken a claim, expose a defect, or force a different proof route. All four outcomes are useful evidence. Findings that invalidate evidence must stay visible as invalidated; superseded computations remain available as corroboration/history; failed audits, counterexamples and reviewer-triggered proof changes are not to be removed merely because a later route is cleaner. The automated README guard enforces the presence of this section and its core links, but the standing order is broader: substantive historical content elsewhere in the README must also be preserved unless the user explicitly requests removal or compression.
+<!-- REDTEAM-HISTORY:END -->
 
 ## Current research chain
 
@@ -59,7 +101,7 @@ For row108, one fixed signed price vector closes24 of the32 block-total tuples s
 
 ## Failures and audit gates remain first-class evidence
 
-Do not quietly delete, relabel or retrospectively clean up a failed lemma, non-closing experiment, counterexample or CI event. The454/597 simultaneous-multiblock non-rejection remains a negative predecessor result. Source-price run34904353492 remains failed even though the exact restoration replay later succeeded. N30 run34906766832 remains failed because the predecessor README omitted explicit frozen PDF navigation; this repair does not repaint that run green. Sample exclusions never change the canonical frontier without the separate promotion gate.
+Do not quietly delete, relabel or retrospectively clean up a failed lemma, non-closing experiment, counterexample or CI event. The454/597 simultaneous-multiblock non-rejection remains a negative predecessor result. Source-price run34904353492 remains failed even though the exact restoration replay later succeeded. N30 run34906766832 remains failed because an earlier condensed README omitted explicit frozen PDF navigation; restoring the links does not repaint that run green. Sample exclusions never change the canonical frontier without the separate promotion gate.
 
 The 2,655 recovered relational candidates completed full discovery and two-implementation audit, then the separate reviewed ledger step. All 2,655 are now ledger-promoted with pinned hashes and zero unresolved states. This finite closure family remains conditional on the canonical bridge and does not replace external specialist review.
 

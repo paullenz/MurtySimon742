@@ -25,9 +25,13 @@ Each update must state the latest completed step, evidence/verification scope, u
 
 For a research-state change, also reconcile canonical frontier/ledger counts; completion or failure of discovery, recovery and audit gates; theorem promotion, falsification or weakening; changes of attack; material negative results; and the handoff after a substantive research block. Historical observations must be dated and preserved rather than silently overwritten as though they were current observations.
 
+## README preservation order
+
+The root README is cumulative project memory and a reviewer-facing audit surface. Normal status rewrites must be **additive/reconciliatory**, not destructive. Do not remove or materially compress substantive prior content merely to make the README shorter. The marked `REDTEAM-HISTORY` and `REVIEW-MATERIALS` sections are protected content; hostile/red-team findings, actual defects, corrections, failed approaches, reviewer-triggered proof changes and their links must remain visible in the root README. If detailed material is archived, retain a meaningful root summary and direct navigation. Any intentional removal or material compression requires explicit user instruction. Before publishing, compare the proposed README with current `main` for dropped headings, links, failures and audit history; the automated guard is only a minimum backstop.
+
 Before publication: read latest main, preserve concurrent changes, check links and status consistency, commit all related files together, update the branch without force, then fetch the resulting branch/file to verify publication. A rejected/non-fast-forward update requires reconciliation, not overwriting newer work.
 
-The lightweight `scripts/check_status_sync.py` and `Status synchronization` workflow detect commits missing either status-block update. They cannot determine whether mathematical prose is true and are not branch protection; substantive review remains mandatory. No historical backfill is demanded. An old branch must incorporate this rule before new work is published.
+The lightweight `scripts/check_status_sync.py` and `Status synchronization` workflow detect commits missing either status-block update. `tools/check_readme_review_materials.py` also protects the reviewer-navigation and hostile/red-team-history blocks. These guards cannot determine whether mathematical prose is true and are not branch protection; substantive review remains mandatory. No historical backfill is demanded.
 
 ## Evidence, review and preservation
 
@@ -35,4 +39,4 @@ A state sync must preserve the distinction between discovery, internal verificat
 
 Preserve useful proofs, failed approaches, counterexamples, verifier code, exact inputs/outputs, audit challenges and prior reviewer editions. Keep the protected reviewer-navigation section in README.md and synchronize it with `releases/REVIEW_READY_INDEX.md` when editions change.
 
-Do not duplicate or change the budgets/concurrency of relational audit 34854911792. Its 2,655 recovered candidates remain unpromoted until complete coverage, dual agreement, zero unresolved cases, successful aggregate and a separate reviewed ledger step. Fetch every job page or a complete diagnostic before asserting a live shard count.
+Relational audit 34854911792 has completed and its 2,655 audited keys passed the separate reviewed-ledger promotion step on 14 September 2026. The promoted finite frontier is 4,626 exclusions / 952 survivors / 3,632 whole-state closures. Do not alter the historical audit budgets/concurrency or reinterpret this finite promotion as an unrestricted proof; external review of the canonical bridge remains separate.

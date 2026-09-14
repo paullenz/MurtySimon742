@@ -1,12 +1,12 @@
 # Murty–Simon / Erdős #742 — current state handoff
 
 <!-- CURRENT-STATUS:START -->
-**14 September 2026 — checkpoint `relational-ledger-promotion-v1`.** The separate reviewed-ledger gate has completed after full discovery run `34844403328` and independent audit run `34854911792`. The candidate key files are byte-identical; all 2,655 keys have dual agreement; unresolved count is zero; the reviewed base ledgers were non-overlapping; and the promoted ledgers reconcile exactly. **Canonical finite frontier is now 4,626 exclusions / 952 survivors / 3,632 whole-state closures.** Fixed-order/general candidate and boundary-profile mathematical status is otherwise unchanged; external review remains OPEN.
+**15 September 2026 — checkpoint `restore-redteam-readme-history-v1`.** Inspected predecessor: `54c6109990382eaeb71296bfc1aab9149c7e5ca0`. The reviewed 2,655-key relational promotion is preserved unchanged. This documentation-hardening checkpoint restores the substantive hostile/red-team audit history and the proof changes those audits caused to the root README, marks that history as protected, and extends the README CI guard plus repository standing orders against future silent compression. **Mathematical status unchanged: canonical finite frontier remains 4,626 exclusions / 952 survivors / 3,632 whole-state closures; fixed-order/general candidates and row108/row471 status are unchanged.** External review remains OPEN.
 <!-- RELATIONAL-FULL-PROMOTION:PROMOTED -->
 
 Canonical repository: `paullenz/MurtySimon742`, ID1359206057. Every commit must update the CURRENT-STATUS blocks in BOTH this file and README.md atomically. Read [`AGENTS.md`](AGENTS.md), [`CANONICAL_REPOSITORY.md`](CANONICAL_REPOSITORY.md), [`RESEARCH_EVIDENCE_INDEX.md`](RESEARCH_EVIDENCE_INDEX.md), and newer commits before continuing.
 
-## Canonical status — unchanged pending reviewed ledger promotion
+## Canonical status — promoted current frontier
 
 ```text
 whole-state closures:             3,632
@@ -25,11 +25,11 @@ Discovery/recovery run `34844403328` and independent audit run `34854911792` cov
 
 ## Boundary-profile status
 
-The shared block-slack package had rejected707/713 original synthetic profiles and708/715 fresh profiles. The row108 [`conditioned-source-sharing-v1`](project/research/general_n/2026-09-14-conditioned-source-sharing-v1/README.md) exclusion raises the ORIGINAL sample to **708/713 rejected**, with exactly **160,338,347,471,586** not rejected. This is sample-level evidence only. The fresh sample remains **708/715 rejected** in its separate namespace. No canonical whole-state closure or relational-candidate promotion follows.
+The shared block-slack package had rejected707/713 original synthetic profiles and708/715 fresh profiles. The row108 [`conditioned-source-sharing-v1`](project/research/general_n/2026-09-14-conditioned-source-sharing-v1/README.md) exclusion raises the ORIGINAL sample to **708/713 rejected**, with exactly **160,338,347,471,586** not rejected. This is sample-level evidence only. The fresh sample remains **708/715 rejected** in its separate namespace. No canonical whole-state closure follows from that sample result.
 
 Separately, the row471 rigidity step closes conditioned branches `e_L=39,40`. Run34906169745 completed SUCCESS and explicitly passed the exact conditioned scan, frozen-output digest check and `Verify row-471 hand rigidity closures` step. Row471 itself is not excluded; conditioned branches `41,42,43,47` remain.
 
-## Exact row108 finish — now remotely reproduced
+## Exact row108 finish — remotely reproduced
 
 For row108, shared-slack gives cumulative ranges `e_{s<=1}=26..33` and `e_{s<=2}=33..37`, hence40 monotone exact block-total tuples. Replaying the preserved simultaneous-multiblock screen rejects8 and leaves32. One fixed signed source-price vector closes24; the final eight require unit charge at least211 under one common source pressure.
 
@@ -39,7 +39,9 @@ Local replay passed before publication. Remote workflow **34906766833**, job **1
 
 ## Failure preservation and documentation repair
 
-N30 reviewer-v3 package run **34906766832** on predecessor `010ea199...` FAILED at `Check complete proof tables, current links and release hashes`. Its log shows the specific assertion `releases/n25-reviewer-v2/N25_Reviewer_Manuscript_v2.pdf`: the predecessor's condensed protected reviewer section had retained package README links but removed the explicit frozen PDF paths required by the N30 integrity checker. No N30 proof or release bytes were changed. This checkpoint restores the full n25–n30 manuscript/verification PDF navigation. The failed run remains failed and is not repainted green; the new workflow result triggered by this repair must be inspected separately.
+N30 reviewer-v3 package run **34906766832** on predecessor `010ea199...` FAILED at `Check complete proof tables, current links and release hashes`. Its log shows the specific assertion `releases/n25-reviewer-v2/N25_Reviewer_Manuscript_v2.pdf`: the predecessor's condensed protected reviewer section had retained package README links but removed the explicit frozen PDF paths required by the N30 integrity checker. No N30 proof or release bytes were changed. The row108 receipt commit restored the full n25–n30 manuscript/verification PDF navigation. The failed run remains failed and is not repainted green.
+
+The root README has now also regained the earlier hostile/red-team history that had been lost during later condensation: the real n29 grouped-model normalization defect and correction, blind external-AI n29 challenge and resulting analytic hardening, Fan-dependency challenge and Fan-free replacement, fixed-order adversarial replays, and general7/12 hostile audit. The restored block is guarded by `tools/check_readme_review_materials.py`. Standing orders now require README updates to be additive/reconciliatory; substantive historical content must not be silently deleted or compressed.
 
 ## Immediate next target
 
@@ -60,4 +62,6 @@ The last line enforces one shared residual neighbourhood at each source. Full mu
 
 The complete pre-row108 handoff is preserved byte-for-byte in [`CURRENT_STATE_PRE_ROW108_2026-09-14.md`](CURRENT_STATE_PRE_ROW108_2026-09-14.md); earlier archives, reviewer packages, counterexamples and negative experiments remain intact.
 
-The 2,655 recovered relational candidates have now cleared complete coverage, dual agreement, zero unresolved cases, successful aggregate and the separate reviewed-ledger step. Their ledger promotion changes only the canonical finite frontier. Internal proof checks, successful CI and durable publication do not replace external specialist review of the canonical graph-to-selected/residual bridge.
+The 2,655 recovered relational candidates have cleared complete coverage, dual agreement, zero unresolved cases, successful aggregate and the separate reviewed-ledger step. Their ledger promotion changes only the canonical finite frontier. Internal proof checks, successful CI and durable publication do not replace external specialist review of the canonical graph-to-selected/residual bridge.
+
+The root README is also part of the preservation surface. Its hostile/red-team audit history and reviewer-navigation blocks are protected content. Future status work must add/reconcile rather than erase; moving details to an archive is allowed only while retaining a substantive root summary and direct links, unless the user explicitly requests removal or compression.
