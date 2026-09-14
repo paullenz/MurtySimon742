@@ -1,0 +1,63 @@
+name: scan single-type Hall reach pilot
+
+on:
+  workflow_dispatch:
+  push:
+    paths:
+      - 'project/research/general_n/2026-09-14-type-compressed-orientation-hall-v1/scan_single_type_hall_reach.cpp'
+      - '.github/workflows/scan-single-type-hall-pilot.yml'
+
+jobs:
+  pilot:
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    steps:
+      - uses: actions/checkout@v4
+      - name: Prepare one ledger-current 1/256 shard
+        working-directory: project/research/general_n/2026-09-13-alternative-attacks-v1
+        run: python3 prepare_pair_capacity_frontier.py --mod 256 --rem 16 --output SINGLE_TYPE_PILOT_INPUT.txt
+      - name: Compile reach scanner
+        working-directory: project/research/general_n/2026-09-14-type-compressed-orientation-hall-v1
+        run: g++ -O3 -std=c++17 -Wall -Wextra -pedantic scan_single_type_hall_reach.cpp -o scan_single_type_hall_reach
+      - name: Run pilot
+        run: |
+          project/research/general_n/2026-09-14-type-compressed-orientation-hall-v1/scan_single_type_hall_reach \
+            project/research/general_n/2026-09-13-alternative-attacks-v1/SINGLE_TYPE_PILOT_INPUT.txt \
+            SINGLE_TYPE_HALL_PILOT.tsv \
+            2>&1 | tee SINGLE_TYPE_HALL_PILOT_REPLAY.txt
+      - name: Summarize proof-stage reach
+        run: |
+          python3 - <<'PY'
+          import csv, json
+          with open('SINGLE_TYPE_HALL_PILOT.tsv', newline='') as f:
+              rows=list(csv.DictReader(f,delimiter='\t'))
+          excluded=[r for r in rows if r['status']=='RELATIONAL_EXCLUDED']
+          single_closed=[r for r in excluded if int(r['targethall_fail'])==0 and int(r['cost_fail'])==0]
+          summary={
+              'schema':'single-type-hall-reach-pilot-v1',
+              'states':len(rows),
+              'relational_excluded':len(excluded),
+              'survives_relational':sum(r['status']=='SURVIVES_RELATIONAL' for r in rows),
+              'single_type_sufficient_whole_states':len(single_closed),
+              'single_type_sufficient_state_keys':[[int(r['layer']),int(r['state_id'])] for r in single_closed],
+              'profiles_killed_by_single_type':sum(int(r['singletype_fail']) for r in rows),
+              'profiles_requiring_multi_type_target_failure':sum(int(r['targethall_fail']) for r in rows),
+              'profiles_requiring_cost_failure':sum(int(r['cost_fail']) for r in rows),
+              'max_single_deficit':max([int(r['max_single_deficit']) for r in rows] or [0]),
+              'promotion_status':'RECONNAISSANCE_ONLY',
+              'external_review':'OPEN',
+          }
+          open('SINGLE_TYPE_HALL_PILOT_SUMMARY.json','w').write(json.dumps(summary,indent=2,sort_keys=True)+'\n')
+          print(json.dumps(summary,indent=2,sort_keys=True))
+          PY
+      - name: Upload pilot artifacts
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: single-type-hall-reach-pilot
+          path: |
+            project/research/general_n/2026-09-13-alternative-attacks-v1/SINGLE_TYPE_PILOT_INPUT.txt
+            project/research/general_n/2026-09-13-alternative-attacks-v1/SINGLE_TYPE_PILOT_INPUT_VERIFICATION.json
+            SINGLE_TYPE_HALL_PILOT.tsv
+            SINGLE_TYPE_HALL_PILOT_REPLAY.txt
+            SINGLE_TYPE_HALL_PILOT_SUMMARY.json
