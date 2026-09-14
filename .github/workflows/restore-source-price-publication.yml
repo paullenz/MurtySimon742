@@ -1,0 +1,22 @@
+name: Restore frozen source-price publication
+on:
+  push:
+    branches: [main]
+    paths:
+      - 'tools/restore_source_price_publication.py'
+      - '.github/workflows/restore-source-price-publication.yml'
+  workflow_dispatch:
+permissions:
+  contents: write
+jobs:
+  restore-and-replay:
+    if: github.ref == 'refs/heads/main'
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: main
+          fetch-depth: 0
+      - name: Restore original bytes, require unchanged full replay, publish paired status
+        run: python3 tools/restore_source_price_publication.py
