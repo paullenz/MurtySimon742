@@ -1,0 +1,22 @@
+{
+  "exhaustive_P_values": [
+    0,
+    1,
+    2
+  ],
+  "exhaustive_c_rule": "q..2",
+  "exhaustive_labelled_profiles": 46800,
+  "exhaustive_q_values": [
+    0,
+    1
+  ],
+  "exhaustive_source_sets": 666600,
+  "external_review": "OPEN",
+  "fixed_q_cap_monotonicity": true,
+  "promotion_status": "INTERNAL_ARITHMETIC_SUPPORT_ONLY",
+  "random_maximum_n": 10,
+  "random_seed": 74220260914,
+  "random_trials": 30000,
+  "result": "PASS",
+  "schema": "q-layer-threshold-normal-form-verification-v1"
+}
