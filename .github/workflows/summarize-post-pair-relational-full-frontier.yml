@@ -1,0 +1,208 @@
+name: summarize post-pair relational full frontier
+
+on:
+  workflow_run:
+    workflows: ["scan post-pair relational full frontier"]
+    types: [completed]
+
+permissions:
+  actions: read
+  contents: read
+
+jobs:
+  summarize:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: ${{ github.event.workflow_run.head_sha }}
+
+      - name: Reconstruct exact expected frontier at scan head
+        working-directory: project/research/general_n/2026-09-13-alternative-attacks-v1
+        run: python3 prepare_pair_capacity_frontier.py --output EXPECTED_ACTIVE.txt
+
+      - name: Download every available shard artifact
+        env:
+          GH_TOKEN: ${{ github.token }}
+          RUN_ID: ${{ github.event.workflow_run.id }}
+        run: |
+          mkdir -p artifacts
+          gh run download "$RUN_ID" -R "$GITHUB_REPOSITORY" -p 'post-pair-frontier-shard-*' -D artifacts || true
+
+      - name: Aggregate with explicit coverage accounting
+        env:
+          RUN_ID: ${{ github.event.workflow_run.id }}
+          RUN_CONCLUSION: ${{ github.event.workflow_run.conclusion }}
+          RUN_HEAD_SHA: ${{ github.event.workflow_run.head_sha }}
+        working-directory: project/research/general_n/2026-09-13-alternative-attacks-v1
+        run: |
+          python3 - <<'PY'
+          from pathlib import Path
+          import csv, hashlib, json, os, re
+
+          repo = Path('../../../..').resolve()
+          artifacts = repo / 'artifacts'
+          expected_path = Path('EXPECTED_ACTIVE.txt')
+
+          def parse_input(path):
+              lines = [x.strip() for x in path.read_text().splitlines() if x.strip()]
+              if not lines:
+                  raise SystemExit(f'empty input file: {path}')
+              n = int(lines[0])
+              body = lines[1:]
+              if len(body) != n:
+                  raise SystemExit(f'input count mismatch in {path}')
+              return [int(line.split()[1]) for line in body]
+
+          expected_ids = parse_input(expected_path)
+          expected_set = set(expected_ids)
+          if len(expected_ids) != 3607 or len(expected_set) != 3607:
+              raise SystemExit(f'unexpected canonical frontier size at scan head: {len(expected_ids)}')
+
+          shard_inputs = {}
+          verification = {}
+          for path in artifacts.rglob('FULL_RELATIONAL_SHARD_*_INPUT.txt'):
+              m = re.search(r'FULL_RELATIONAL_SHARD_(\d+)_INPUT\.txt$', path.name)
+              if not m:
+                  continue
+              shard = int(m.group(1))
+              if shard in shard_inputs:
+                  raise SystemExit(f'duplicate shard input artifact: {shard}')
+              shard_inputs[shard] = parse_input(path)
+          for path in artifacts.rglob('FULL_RELATIONAL_SHARD_*_INPUT_VERIFICATION.json'):
+              m = re.search(r'FULL_RELATIONAL_SHARD_(\d+)_INPUT_VERIFICATION\.json$', path.name)
+              if not m:
+                  continue
+              shard = int(m.group(1))
+              obj = json.loads(path.read_text())
+              verification[shard] = obj
+              if obj.get('canonical_active') != 3607:
+                  raise SystemExit(f'wrong canonical_active in shard {shard}: {obj.get("canonical_active")}')
+              if obj.get('ledger_closure_count') != 977:
+                  raise SystemExit(f'wrong ledger closure count in shard {shard}: {obj.get("ledger_closure_count")}')
+              filt = obj.get('filter', {})
+              if filt.get('mod') != 256 or filt.get('rem') != shard:
+                  raise SystemExit(f'wrong shard filter in verification {shard}: {filt}')
+
+          artifact_input_ids = []
+          for shard, ids in shard_inputs.items():
+              artifact_input_ids.extend(ids)
+          if len(artifact_input_ids) != len(set(artifact_input_ids)):
+              raise SystemExit('duplicate state across downloaded shard inputs')
+          unexpected_inputs = sorted(set(artifact_input_ids) - expected_set)
+          if unexpected_inputs:
+              raise SystemExit(f'artifact contains non-frontier state ids: {unexpected_inputs[:20]}')
+
+          result_rows = {}
+          result_fields = None
+          for path in artifacts.rglob('SHARD_RESULTS.tsv'):
+              with path.open(newline='') as f:
+                  rows = list(csv.DictReader(f, delimiter='\t'))
+              if rows and result_fields is None:
+                  result_fields = list(rows[0].keys())
+              for row in rows:
+                  state = int(row['state_id'])
+                  if state in result_rows:
+                      raise SystemExit(f'duplicate completed result for state {state}')
+                  if state not in expected_set:
+                      raise SystemExit(f'completed result outside expected frontier: {state}')
+                  if row['status'] not in {'RELATIONAL_EXCLUDED', 'SURVIVES_RELATIONAL'}:
+                      raise SystemExit(f'bad mathematical status for {state}: {row["status"]}')
+                  result_rows[state] = row
+
+          unresolved = {}
+          shard_statuses = {}
+          for path in artifacts.rglob('SHARD_STATUS.json'):
+              obj = json.loads(path.read_text())
+              shard = int(obj['shard'])
+              if shard in shard_statuses:
+                  raise SystemExit(f'duplicate shard status: {shard}')
+              shard_statuses[shard] = obj
+              for item in obj.get('unresolved', []):
+                  state = int(item['state_id'])
+                  if state in unresolved:
+                      raise SystemExit(f'duplicate unresolved record: {state}')
+                  if state in result_rows:
+                      raise SystemExit(f'state both completed and unresolved: {state}')
+                  unresolved[state] = item
+
+          missing_shards = sorted(set(range(256)) - set(shard_inputs))
+          unattempted = sorted(expected_set - set(result_rows) - set(unresolved))
+          missing_from_artifact_inputs = sorted(expected_set - set(artifact_input_ids))
+          excluded = sorted(state for state, row in result_rows.items() if row['status'] == 'RELATIONAL_EXCLUDED')
+          survives = sorted(state for state, row in result_rows.items() if row['status'] == 'SURVIVES_RELATIONAL')
+
+          if result_fields is None:
+              result_fields = [
+                  'layer','state_id','S','Emax','profiles_tested','paircap_fail','paircap_pass',
+                  'incidence_fail','incidence_pass','pairhall_fail','pairhall_pass',
+                  'targethall_fail','targethall_pass','cost_fail','status','witness_E',
+                  'witness_cost','witness_envelope','seconds','witness_rho','witness_q'
+              ]
+
+          combined = Path('POST_PAIR_RELATIONAL_FULL_DISCOVERY_RESULTS.tsv')
+          with combined.open('w', newline='') as f:
+              w = csv.DictWriter(f, fieldnames=result_fields, delimiter='\t', lineterminator='\n')
+              w.writeheader()
+              for state in sorted(result_rows):
+                  w.writerow(result_rows[state])
+
+          candidates = Path('POST_PAIR_RELATIONAL_FULL_DISCOVERY_CANDIDATES.txt')
+          candidates.write_text('\n'.join(map(str, excluded)) + ('\n' if excluded else ''))
+          unresolved_path = Path('POST_PAIR_RELATIONAL_FULL_DISCOVERY_UNRESOLVED.json')
+          unresolved_path.write_text(json.dumps({str(k): unresolved[k] for k in sorted(unresolved)}, indent=2, sort_keys=True) + '\n')
+
+          def sha(path):
+              return hashlib.sha256(Path(path).read_bytes()).hexdigest()
+
+          reasons = {}
+          for item in unresolved.values():
+              reasons[item['reason']] = reasons.get(item['reason'], 0) + 1
+
+          summary = {
+              'schema': 'post-pair-relational-full-discovery-v1',
+              'scan_run_id': int(os.environ['RUN_ID']),
+              'scan_head_sha': os.environ['RUN_HEAD_SHA'],
+              'scan_workflow_conclusion': os.environ['RUN_CONCLUSION'],
+              'expected_frontier': len(expected_ids),
+              'expected_frontier_sha256': sha(expected_path),
+              'shards_expected': 256,
+              'shard_inputs_found': len(shard_inputs),
+              'shard_statuses_found': len(shard_statuses),
+              'missing_shards': missing_shards,
+              'artifact_input_states': len(artifact_input_ids),
+              'missing_from_artifact_inputs': missing_from_artifact_inputs,
+              'states_completed': len(result_rows),
+              'relational_excluded_candidates': len(excluded),
+              'survives_relational': len(survives),
+              'unresolved_count': len(unresolved),
+              'unresolved_by_reason': reasons,
+              'unattempted_count': len(unattempted),
+              'unattempted_state_ids': unattempted,
+              'candidate_state_ids': excluded,
+              'discovery_complete': (
+                  len(result_rows) == len(expected_ids)
+                  and not unresolved
+                  and not unattempted
+                  and not missing_shards
+              ),
+              'results_sha256': sha(combined),
+              'candidates_sha256': sha(candidates),
+              'promotion_status': 'NOT_PROMOTED_REQUIRES_INDEPENDENT_AUDIT',
+              'external_review': 'OPEN',
+          }
+          Path('POST_PAIR_RELATIONAL_FULL_DISCOVERY_SUMMARY.json').write_text(json.dumps(summary, indent=2, sort_keys=True) + '\n')
+          print(json.dumps(summary, indent=2, sort_keys=True))
+          PY
+
+      - name: Upload aggregate discovery record
+        uses: actions/upload-artifact@v4
+        with:
+          name: post-pair-relational-full-discovery-aggregate
+          path: |
+            project/research/general_n/2026-09-13-alternative-attacks-v1/EXPECTED_ACTIVE.txt
+            project/research/general_n/2026-09-13-alternative-attacks-v1/EXPECTED_ACTIVE_VERIFICATION.json
+            project/research/general_n/2026-09-13-alternative-attacks-v1/POST_PAIR_RELATIONAL_FULL_DISCOVERY_RESULTS.tsv
+            project/research/general_n/2026-09-13-alternative-attacks-v1/POST_PAIR_RELATIONAL_FULL_DISCOVERY_CANDIDATES.txt
+            project/research/general_n/2026-09-13-alternative-attacks-v1/POST_PAIR_RELATIONAL_FULL_DISCOVERY_UNRESOLVED.json
+            project/research/general_n/2026-09-13-alternative-attacks-v1/POST_PAIR_RELATIONAL_FULL_DISCOVERY_SUMMARY.json
