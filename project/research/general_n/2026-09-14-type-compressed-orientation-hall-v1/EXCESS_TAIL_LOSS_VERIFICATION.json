@@ -1,0 +1,23 @@
+{
+  "archived_non_tail_counterexample": {
+    "Q_minus_r_minus_E": -7,
+    "caps": [3, 3, 3, 3, 3, 3, 3],
+    "full_bridge_ledger": "FAILS",
+    "singleton_margin": -1,
+    "tail_margins": [2, 3, 3, 0]
+  },
+  "exhaustive": {
+    "deficient_source_sets": 7135,
+    "nonnegative_cap_profiles": 6381,
+    "profiles": 6381,
+    "source_sets": 171504
+  },
+  "random_nonnegative_cap_profiles": 9301,
+  "random_profiles": 10000,
+  "random_seed": 74220260914,
+  "random_source_sets": 93010,
+  "result": "PASS",
+  "scalar_identities": 179375,
+  "schema": "selected-excess-tail-loss-v1",
+  "trust_boundary": "Local exact finite audit; not independent external review; no frontier promotion"
+}

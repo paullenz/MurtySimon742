@@ -1,0 +1,41 @@
+name: verify selected-excess tail loss
+
+on:
+  push:
+    paths:
+      - 'project/research/general_n/2026-09-14-type-compressed-orientation-hall-v1/verify_excess_tail_loss.py'
+      - 'project/research/general_n/2026-09-14-type-compressed-orientation-hall-v1/SELECTED_EXCESS_TAIL_LOSS_BUDGET.md'
+      - 'project/research/general_n/2026-09-14-type-compressed-orientation-hall-v1/EXCESS_TAIL_LOSS_VERIFICATION.json'
+      - '.github/workflows/verify-excess-tail-loss.yml'
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  verify:
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - uses: actions/checkout@v4
+      - name: Replay exact loss and Hall budget checks
+        working-directory: project/research/general_n/2026-09-14-type-compressed-orientation-hall-v1
+        run: python3 verify_excess_tail_loss.py > /tmp/EXCESS_TAIL_LOSS_ACTUAL.json
+      - name: Require frozen JSON value equality
+        working-directory: project/research/general_n/2026-09-14-type-compressed-orientation-hall-v1
+        run: |
+          python3 - <<'PY'
+          import json
+          from pathlib import Path
+          expected=json.loads(Path('EXCESS_TAIL_LOSS_VERIFICATION.json').read_text())
+          actual=json.loads(Path('/tmp/EXCESS_TAIL_LOSS_ACTUAL.json').read_text())
+          if actual != expected:
+              raise SystemExit('frozen selected-excess tail-loss values changed')
+          print('PASS: exact frozen JSON values')
+          PY
+      - name: Upload replay evidence
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: selected-excess-tail-loss-verification
+          path: /tmp/EXCESS_TAIL_LOSS_ACTUAL.json
