@@ -2,9 +2,9 @@
 
 **Purpose.** Durable restart point after chat reset, client desynchronisation or context loss. The repository, not any chat transcript, is the source of truth. Read this file first, inspect later `main` commits, then follow the linked packages.
 
-**Research state reconciled:** 13 September 2026 through the audited potential-pair frontier promotion: **961 quantified whole-state closures**, frontier **1,955/3,623** (`3,545` N34-derived survivors plus `78` N35-derived survivors). Eighteen closures predate the large family; **943 further N34-derived scalar states** are protected by the cross-implementation potential-pair audit. External mathematical review, novelty assessment and genuinely independent third-party computational reproduction remain OPEN unless a later preserved checkpoint explicitly changes that status. Internal replay, same-assistant audit and repository publication are not external acceptance.
+**Research state reconciled:** 14 September 2026 through the audited post-pair relational recovery promotion: **977 quantified whole-state closures**, frontier **1,971/3,607** (`3,545` N34-derived survivors plus `78` N35-derived survivors). Eighteen closures predate the large family; **943 further N34-derived scalar states** are protected by the cross-implementation potential-pair audit. External mathematical review, novelty assessment and genuinely independent third-party computational reproduction remain OPEN unless a later preserved checkpoint explicitly changes that status. Internal replay, same-assistant audit and repository publication are not external acceptance.
 
-**Durability guard:** [`tools/check_n34_whole_state_ledger.py`](tools/check_n34_whole_state_ledger.py) protects the 18 earlier closures plus the hash-pinned **943-state** [`PAIR_CAPACITY_FRONTIER_EXCLUDED.tsv`](project/research/general_n/2026-09-13-alternative-attacks-v1/PAIR_CAPACITY_FRONTIER_EXCLUDED.tsv) family, checks ledger provenance, and currently verifies `961` ledger states. New closures may be added, but a later ledger/README rewrite must not silently remove any preserved closure.
+**Durability guard:** [`tools/check_n34_whole_state_ledger.py`](tools/check_n34_whole_state_ledger.py) protects the 18 earlier closures plus the hash-pinned **943-state** [`PAIR_CAPACITY_FRONTIER_EXCLUDED.tsv`](project/research/general_n/2026-09-13-alternative-attacks-v1/PAIR_CAPACITY_FRONTIER_EXCLUDED.tsv) family, checks ledger provenance, and currently verifies `977` ledger states. New closures may be added, but a later ledger/README rewrite must not silently remove any preserved closure.
 
 The temporary branches `threshold-family-scan` and `state279-proof` were reconciled into `main` by merge commit `566e064447a9cd54a8fa253c9049de0ffbc09efe`. Their histories remain preserved.
 
@@ -149,8 +149,8 @@ Two structurally different full-frontier implementations agree exactly on **943 
 The promoted frozen frontier is
 
 ```text
-1,955 exclusions / 3,623 survivors,
-3,545 N34 equality-derived survivors,
+1,971 exclusions / 3,607 survivors,
+3,529 N34 equality-derived survivors,
 78 N35 m=306-derived survivors.
 ```
 
@@ -169,13 +169,13 @@ for every integer `r`, where `ell_r` counts low-`c` vertices and `u_r` counts hi
 The frozen frontier is now
 
 ```text
-1,955 exclusions / 3,623 survivors.
+1,971 exclusions / 3,607 survivors.
 ```
 
 Breakdown:
 
 ```text
-3,545 N34 equality-derived survivors,
+3,529 N34 equality-derived survivors,
 78 N35 m=306-derived survivors.
 ```
 
@@ -297,3 +297,19 @@ On a fresh session:
 7. after a material change, update this handoff in the same repository-writing pass.
 
 For the fuller reviewer-facing map use [`README.md`](README.md) and [`START_HERE_FOR_REVIEWERS.md`](START_HERE_FOR_REVIEWERS.md).
+
+## 14 September 2026 — relational recovery promotion
+
+The interrupted 1/32 relational pilot has now been recovered state-by-state. Sixteen N34-derived states passed fresh isolated replay in both the original vector-enumeration implementation and an independent type-count implementation; every proof-relevant stage count agreed exactly. The aggregate certificate is [`POST_PAIR_RELATIONAL_RECOVERY_EXCLUDED.tsv`](project/research/general_n/2026-09-13-alternative-attacks-v1/POST_PAIR_RELATIONAL_RECOVERY_EXCLUDED.tsv), hash `c1ce4e645edf9dcc3e2f39ef42bd85030449b161549978877eb2e15ab2abe832`, with provenance in [`POST_PAIR_RELATIONAL_RECOVERY.md`](project/research/general_n/2026-09-13-alternative-attacks-v1/POST_PAIR_RELATIONAL_RECOVERY.md).
+
+Canonical generalisation frontier after promotion:
+
+```text
+1,971 exclusions / 3,607 survivors,
+3,529 N34 equality-derived survivors,
+78 N35 m=306-derived survivors.
+```
+
+The coarse low-residual-reservoir theorem was also scanned over the pre-promotion 3,623-state frontier: it applied to 3,421 states but closed none. That negative result is preserved in `LOW_RESIDUAL_RESERVOIR_RESULT.md` and is evidence that the exact two-dimensional relational structure carries information not captured by the coarse symbolic reservoir count.
+
+**Next priority:** run the checkpointable relational machinery over the remaining ledger-current survivor frontier, preserving per-state artifacts and promoting only cross-checked closures; in parallel, extract symbolic two-dimensional Hall/dominance consequences that could replace finite scanning by a general theorem.

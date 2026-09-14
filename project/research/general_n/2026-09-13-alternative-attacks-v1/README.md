@@ -6,20 +6,20 @@
 
 The programme attacks the missing quantifier in fixed-pattern residual arguments: rejecting one selected quasi-edge geometry does not exclude the underlying scalar state because another legal selected geometry may exist.
 
-The canonical ledger now has **961 quantified N34-derived whole-state exclusions**: 18 earlier individually/family audited closures plus a cross-implementation-audited **943-state potential-pair capacity family**. The exact 943 IDs are preserved in [`PAIR_CAPACITY_FRONTIER_EXCLUDED.tsv`](PAIR_CAPACITY_FRONTIER_EXCLUDED.tsv), with audit provenance in [`PAIR_CAPACITY_FRONTIER_AUDIT.md`](PAIR_CAPACITY_FRONTIER_AUDIT.md).
+The canonical ledger now has **977 quantified N34-derived whole-state exclusions**: 18 earlier individually/family audited closures plus a cross-implementation-audited **943-state potential-pair capacity family**. The exact 943 IDs are preserved in [`PAIR_CAPACITY_FRONTIER_EXCLUDED.tsv`](PAIR_CAPACITY_FRONTIER_EXCLUDED.tsv), with audit provenance in [`PAIR_CAPACITY_FRONTIER_AUDIT.md`](PAIR_CAPACITY_FRONTIER_AUDIT.md).
 
 The canonical union of all closure lines is recorded in [`WHOLE_STATE_LEDGER.tsv`](WHOLE_STATE_LEDGER.tsv); that ledger, rather than local ordinal wording in individual notes, controls the headline count.
 
 The frozen frontier is now
 
 ```text
-1,955 exclusions / 3,623 survivors,
+1,971 exclusions / 3,607 survivors,
 ```
 
 split as
 
 ```text
-3,545 N34 equality-derived survivors,
+3,529 N34 equality-derived survivors,
 78 N35 m=306-derived survivors.
 ```
 
@@ -34,7 +34,7 @@ The canonical [`WHOLE_STATE_LEDGER.tsv`](WHOLE_STATE_LEDGER.tsv) contains **961 
 
 Two full-frontier implementations—expanded source vectors with pairwise directed compatibility, and independent `(rho,q)` type-count enumeration using the closed-form potential degree—agree exactly on the 943 promoted exclusions and their exhaustive certificate statistics.
 
-Canonical frontier: **1,955 exclusions / 3,623 survivors** (`3,545` N34-derived plus `78` N35-derived).
+Canonical frontier: **1,971 exclusions / 3,607 survivors** (`3,545` N34-derived plus `78` N35-derived).
 
 The durability checker [`../../../../tools/check_n34_whole_state_ledger.py`](../../../../tools/check_n34_whole_state_ledger.py) hash-pins the 943-state certificate and checks ledger provenance.
 <!-- CANONICAL-WHOLE-STATE-LEDGER:END -->
@@ -276,4 +276,10 @@ A direct one-edge/one-nonedge matching proof is false and remains preserved as a
 
 External mathematical review of the canonical bridge and all new lemmas remains open. Independent computational reproduction remains open until a separate environment has replayed the committed artifacts.
 
-**Current priority:** generalise and red-team the orientation target-capacity lemma; derive the strongest exact Hall/flow or threshold-prefix formulation justified by the canonical bridge; then combine it with the joint endpoint-class and incidence-capacity machinery to rescan the remaining **4,568** frozen scalar survivors. States 77 and 60 are closed and must not be retargeted as live obligations.
+**Current priority:** generalise and red-team the orientation target-capacity lemma; derive the strongest exact Hall/flow or threshold-prefix formulation justified by the canonical bridge; then combine it with the joint endpoint-class and incidence-capacity machinery to rescan the remaining **3,607** frozen scalar survivors. States 77 and 60 are closed and must not be retargeted as live obligations.
+
+## Post-pair relational recovery promotion — 14 September 2026
+
+The cancelled pilot has been recovered under the audit protocol in [`POST_PAIR_RELATIONAL_RECOVERY.md`](POST_PAIR_RELATIONAL_RECOVERY.md). Sixteen states are now promoted after exact agreement between the primary scanner and an independent type-count implementation. The frozen aggregate certificate is [`POST_PAIR_RELATIONAL_RECOVERY_EXCLUDED.tsv`](POST_PAIR_RELATIONAL_RECOVERY_EXCLUDED.tsv), SHA-256 `c1ce4e645edf9dcc3e2f39ef42bd85030449b161549978877eb2e15ab2abe832`. Canonical frontier is **1,971 exclusions / 3,607 survivors**.
+
+The earlier low-residual-reservoir scan remains a preserved negative result: 3,421 of the then-current 3,623 states were in scope, but it excluded zero whole states. The active route is therefore the stronger relational Hall/min-cost layer, not further tuning of that coarse reservoir bound.

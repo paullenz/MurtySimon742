@@ -1,6 +1,6 @@
 # Murty–Simon / Erdős Problem #742
 
-Candidate proofs and reproducible research. **Updated 13 September 2026 through the audited potential-pair frontier promotion: 961 quantified whole-state closures, frontier 1,955/3,623. Independent mathematical review, novelty assessment and genuinely independent third-party computational reproduction remain OPEN.** Repository publication, green replay and same-assistant hostile audit are not external acceptance and do not prove the unrestricted conjecture.
+Candidate proofs and reproducible research. **Updated 14 September 2026 through the audited post-pair relational recovery promotion: 977 quantified whole-state closures, frontier 1,955/3,623. Independent mathematical review, novelty assessment and genuinely independent third-party computational reproduction remain OPEN.** Repository publication, green replay and same-assistant hostile audit are not external acceptance and do not prove the unrestricted conjecture.
 
 **External reviewers:** start with [`START_HERE_FOR_REVIEWERS.md`](START_HERE_FOR_REVIEWERS.md). Canonical theorem-level packages are indexed in [`releases/REVIEW_READY_INDEX.md`](releases/REVIEW_READY_INDEX.md). The project welcomes hostile review, counterexamples, literature corrections and genuinely independent reproduction; GitHub Issues are the preferred place to report a suspected flaw.
 
@@ -43,7 +43,7 @@ Exact replay, internal audit, repository publication and external mathematical a
 | `n=34` | Complete candidate: `e(G)<=289`, equality exactly `K(17,17)`; reviewer-v2; final heavy certificate replaced by a short hand proof; external review open |
 | `n=35` | Complete candidate: `e(G)<=306`, equality exactly `K(17,18)`; reviewer-v1; external review open |
 | General maximum-degree result | Candidate theorem: for `n>=6`, `Delta(G)>=(7/12)n` implies `e(G)<floor(n^2/4)`; internal exact audits green; external review and novelty assessment open |
-| Generalisation frontier | **1,955 exclusions / 3,623 survivors** from the canonical quantified whole-state ledger; `3,545` are N34 equality-derived and `78` are N35 `m=306`-derived; these are scalar states in a frozen experiment, not surviving graphs |
+| Generalisation frontier | **1,971 exclusions / 3,607 survivors** from the canonical quantified whole-state ledger; `3,529` are N34 equality-derived and `78` are N35 `m=306`-derived; these are scalar states in a frozen experiment, not surviving graphs |
 
 The unrestricted Murty–Simon conjecture remains unsolved by this project.
 
@@ -215,8 +215,8 @@ The durability checker [`tools/check_n34_whole_state_ledger.py`](tools/check_n34
 The current frozen frontier is therefore
 
 ```text
-1,955 exclusions / 3,623 survivors,
-3,545 N34 equality-derived survivors,
+1,971 exclusions / 3,607 survivors,
+3,529 N34 equality-derived survivors,
 78 N35 m=306-derived survivors.
 ```
 
@@ -247,7 +247,7 @@ State 519 is theoretically useful because it converts the earlier qualitative so
 | [Compatible routing catalogue](releases/general-compatible-catalogue-reviewer-v1/README.md) | 994 retained full/pilot exclusions | Produced the 4,584-state frontier entering the quantifier programme |
 | [Containment spill / pair overlap](project/research/general_n/2026-09-13-constraint-respecting-cross-v1/README.md) | Scalar spill witnesses for all 4,584; fixed-pattern failures | Exposed the quantifier gap |
 | [Shared residual budgets](project/research/general_n/2026-09-13-shared-residual-budget-v1/README.md) | 4,487/4,584 stored patterns rejected | Very strong on fixed geometry; not a whole-state result by itself |
-| [Alternative attacks](project/research/general_n/2026-09-13-alternative-attacks-v1/README.md) | Selection-free/excess/Hall/orientation/potential-pair lemmas and 961 quantified whole-state closures | Current primary programme; potential-pair capacity removed 943 further N34-derived scalar states; symbolic generalisation and the 3,623-state residual frontier are now primary |
+| [Alternative attacks](project/research/general_n/2026-09-13-alternative-attacks-v1/README.md) | Selection-free/excess/Hall/orientation/potential-pair lemmas and 977 quantified whole-state closures | Current primary programme; potential-pair capacity removed 943 further N34-derived scalar states; symbolic generalisation and the 3,623-state residual frontier are now primary |
 
 ## Current low-demand programmes
 
@@ -294,3 +294,7 @@ The largest correlated mathematical risk is still the canonical bridge: its grap
 No solver timeout, floating infeasibility status or unsuccessful search is used as proof.
 
 For restart-level detail, read [`CURRENT_STATE.md`](CURRENT_STATE.md). For the latest quantified advance, read [`POTENTIAL_PAIR_CAPACITY.md`](project/research/general_n/2026-09-13-alternative-attacks-v1/POTENTIAL_PAIR_CAPACITY.md), [`PAIR_CAPACITY_FRONTIER_AUDIT.md`](project/research/general_n/2026-09-13-alternative-attacks-v1/PAIR_CAPACITY_FRONTIER_AUDIT.md), [`LOW_C_HIGH_Q_CROSS_OBSTRUCTION.md`](project/research/general_n/2026-09-13-alternative-attacks-v1/LOW_C_HIGH_Q_CROSS_OBSTRUCTION.md), and [`ORIENTATION_FLOW_HALL.md`](project/research/general_n/2026-09-13-alternative-attacks-v1/ORIENTATION_FLOW_HALL.md).
+
+## 14 September 2026 relational recovery checkpoint
+
+Sixteen further N34-derived scalar states have been promoted after a fresh state-by-state post-pair relational replay and exact agreement between two implementations with different q-profile representations and potential-pair calculations. See [`POST_PAIR_RELATIONAL_RECOVERY.md`](project/research/general_n/2026-09-13-alternative-attacks-v1/POST_PAIR_RELATIONAL_RECOVERY.md). Aggregate certificate SHA-256: `c1ce4e645edf9dcc3e2f39ef42bd85030449b161549978877eb2e15ab2abe832`. The canonical frozen frontier is now **1,971 exclusions / 3,607 survivors**. These are quantified scalar exclusions inside the generalisation experiment, not an unrestricted proof of Murty-Simon.

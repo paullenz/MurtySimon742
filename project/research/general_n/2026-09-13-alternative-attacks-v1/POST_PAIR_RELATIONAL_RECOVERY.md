@@ -82,4 +82,4 @@ The unrestricted conjecture remains open in this project.
 
 ## 6. Current status
 
-**At creation of this checkpoint:** 16 recovery candidates identified; **0 newly promoted from this interrupted pilot**. Canonical frontier remains `1,955 exclusions / 3,623 survivors` until the audit gates above are completed and recorded.
+**Promotion complete after cross-implementation audit.** GitHub Actions run `34817529642` at head `c2b426da46284617681081797d1c571d23cd531d` completed all 16 isolated state jobs. For every state, the primary vector-enumeration scanner and independent type-count scanner agreed exactly on the full proof-relevant stage counts and final `RELATIONAL_EXCLUDED` status. The frozen aggregate certificate has SHA-256 `c1ce4e645edf9dcc3e2f39ef42bd85030449b161549978877eb2e15ab2abe832`. The 16 states are now promoted to `WHOLE_STATE_LEDGER.tsv`; canonical frontier is `1,971 exclusions / 3,607 survivors` with `977` quantified whole-state closures. External mathematical review and genuinely independent third-party reproduction remain open.
