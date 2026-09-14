@@ -148,7 +148,7 @@ Frozen-ledger CI `34875592126` has now passed, including combined survivor cover
 | n=29 | e(G)<=210, equality exactly K(14,15); reviewer-v4; difficult Delta=16 branch hand-closed |
 | n=30 | e(G)<=225, equality exactly K(15,15); reviewer-v3 |
 | n=31 | e(G)<=240, equality exactly K(15,16); source-first reviewer-v1 |
-| n=32 | e(G)<=256, equality exactly K(16,17); source-first reviewer-v1 |
+| n=32 | e(G)<=256, equality exactly K(16,16); source-first reviewer-v1 |
 | n=33 | e(G)<=272, equality exactly K(16,17); source-first reviewer-v1 |
 | n=34 | e(G)<=289, equality exactly K(17,17); reviewer-v2; final heavy certificate hand-replaced |
 | n=35 | e(G)<=306, equality exactly K(17,18); reviewer-v1 |
@@ -168,7 +168,7 @@ This reviewer-facing index is intentionally duplicated here as a protected navig
 - [`n=30 reviewer-v3`](releases/n30-reviewer-v3/README.md) — [manuscript PDF](releases/n30-reviewer-v3/N30_Reviewer_Manuscript_v3.pdf) and [verification companion PDF](releases/n30-reviewer-v3/N30_Verification_Companion_v3.pdf).
 - [`n=31 reviewer-v1`](releases/n31-reviewer-v1/README.md) — source-first proof/review package; [hostile audit](project/research/n31/2026-09-11-hand-route-v1/HOSTILE_AUDIT.md).
 - [`n=32 reviewer-v1`](releases/n32-reviewer-v1/README.md) — source-first proof/review package; [exact equality ledger](project/research/n32/2026-09-12-equality-v1/CERTIFICATION_LEDGER.md).
-- [`n=33 reviewer-v1`](releases/n33-reviewer-v1/README.md) — source-first proof/review package; [hostile audit](project/research/n33/2026-09-12-candidate-v1/HOSTILE_AUDIT.md).
+- [`n=33 reviewer-v1`](releases/n33-reviewer-v1/README.md) — source-first proof/review package; [hostile audit](project/research/n33/2026-09-12-candidate-v1/AUDIT.md).
 - [`n=34 reviewer-v2`](releases/n34-reviewer-v2/README.md) — complete candidate package; [normalization audit and hand replacement](project/reviews/n34/2026-09-12-heavy-independent-v1/README.md).
 - [`n=35 reviewer-v1`](releases/n35-reviewer-v1/README.md) — complete candidate package; [internal audit](project/research/n35/2026-09-12-candidate-v1/AUDIT.md).
 
