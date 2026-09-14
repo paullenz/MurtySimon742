@@ -1,0 +1,81 @@
+name: diagnose layered receiver exceptions
+
+on:
+  push:
+    paths:
+      - 'project/research/general_n/2026-09-14-type-compressed-orientation-hall-v1/make_layered_receiver_exception_diagnostic.py'
+      - '.github/workflows/diagnose-layered-receiver-exceptions.yml'
+  workflow_dispatch:
+
+jobs:
+  diagnose:
+    runs-on: ubuntu-latest
+    timeout-minutes: 45
+    steps:
+      - uses: actions/checkout@v4
+      - name: Prepare frozen pilot input
+        working-directory: project/research/general_n/2026-09-13-alternative-attacks-v1
+        run: python3 prepare_pair_capacity_frontier.py --mod 256 --rem 16 --output LAYER_EXCEPTION_DIAGNOSTIC_INPUT.txt
+      - name: Generate scanner stack
+        working-directory: project/research/general_n/2026-09-14-type-compressed-orientation-hall-v1
+        run: |
+          python3 make_antichain_stats_scanner.py
+          python3 make_band_reach_scanner.py
+          python3 make_compatible_copy_band_reach_scanner.py
+          python3 make_layered_receiver_reach_scanner.py
+          python3 make_layered_receiver_exception_diagnostic.py
+      - name: Compile diagnostic scanner
+        working-directory: project/research/general_n/2026-09-14-type-compressed-orientation-hall-v1
+        run: g++ -O3 -std=c++17 -Wall -Wextra -pedantic scan_layered_receiver_exception_diagnostic.cpp -o scan_layered_receiver_exception_diagnostic
+      - name: Run diagnostic
+        run: |
+          project/research/general_n/2026-09-14-type-compressed-orientation-hall-v1/scan_layered_receiver_exception_diagnostic \
+            project/research/general_n/2026-09-13-alternative-attacks-v1/LAYER_EXCEPTION_DIAGNOSTIC_INPUT.txt \
+            LAYER_EXCEPTION_DIAGNOSTIC_STATE_SUMMARY.tsv \
+            2>&1 | tee LAYER_EXCEPTION_DIAGNOSTIC_REPLAY.txt
+          grep '^LAYER_EXCEPTION' LAYER_EXCEPTION_DIAGNOSTIC_REPLAY.txt > LAYER_EXCEPTION_DIAGNOSTIC.tsv
+      - name: Summarize exception geometry
+        run: |
+          python3 - <<'PY'
+          from pathlib import Path
+          import collections,json
+          lines=[x for x in Path('LAYER_EXCEPTION_DIAGNOSTIC.tsv').read_text().splitlines() if x]
+          if len(lines)!=812: raise SystemExit(f'expected 812 exceptions, got {len(lines)}')
+          def row(line):
+              d={}
+              for x in line.split('\t')[1:]:
+                  k,v=x.split('=',1);d[k]=v
+              return d
+          rows=[row(x) for x in lines]
+          states=collections.Counter(int(r['state']) for r in rows)
+          ex=collections.Counter(int(r['layerexcess']) for r in rows)
+          ed=collections.Counter(int(r['exactdef']) for r in rows)
+          gens=collections.Counter(int(r['gens']) for r in rows)
+          joint=collections.Counter((int(r['exactdef']),int(r['layerexcess'])) for r in rows)
+          E=collections.Counter(int(r['E']) for r in rows)
+          report={
+            'schema':'layered-receiver-exception-diagnostic-v1',
+            'exceptions':len(rows),
+            'state_histogram':dict(sorted(states.items())),
+            'layer_excess_histogram':dict(sorted(ex.items())),
+            'exact_deficit_histogram':dict(sorted(ed.items())),
+            'generator_histogram':dict(sorted(gens.items())),
+            'E_histogram':dict(sorted(E.items())),
+            'deficit_excess_joint':{f'{a},{b}':v for (a,b),v in sorted(joint.items())},
+            'max_layer_excess':max(ex),
+            'max_exact_deficit':max(ed),
+            'promotion_status':'RECONNAISSANCE_ONLY',
+            'external_review':'OPEN'
+          }
+          Path('LAYER_EXCEPTION_DIAGNOSTIC_SUMMARY.json').write_text(json.dumps(report,indent=2,sort_keys=True)+'\n')
+          print(json.dumps(report,indent=2,sort_keys=True))
+          PY
+      - uses: actions/upload-artifact@v4
+        with:
+          name: layered-receiver-exception-diagnostic
+          path: |
+            LAYER_EXCEPTION_DIAGNOSTIC.tsv
+            LAYER_EXCEPTION_DIAGNOSTIC_STATE_SUMMARY.tsv
+            LAYER_EXCEPTION_DIAGNOSTIC_REPLAY.txt
+            LAYER_EXCEPTION_DIAGNOSTIC_SUMMARY.json
+            project/research/general_n/2026-09-14-type-compressed-orientation-hall-v1/scan_layered_receiver_exception_diagnostic.cpp
