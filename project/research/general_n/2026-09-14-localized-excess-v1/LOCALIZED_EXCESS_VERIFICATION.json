@@ -1,0 +1,55 @@
+{
+  "exhaustive_incidence_profiles": 133586,
+  "external_review": "OPEN",
+  "floor_cases": 6880,
+  "frozen_812": {
+    "counts": {
+      "localized_activation": 808,
+      "localized_exact": 812,
+      "localized_full_source": 630,
+      "localized_marginal": 812,
+      "localized_uniform": 773,
+      "original_activation": 794,
+      "original_marginal": 812,
+      "original_uniform": 476,
+      "profiles": 812,
+      "tightened": 748
+    },
+    "exceptions_sha256": "c4f859f97bed726f6e4799473906bd1673520aa2501d755fc5136a1c3cb46885",
+    "first_deficient_threshold": {"2": 426, "3": 191, "4": 195},
+    "localized_first_deficient_threshold": {"1": 630, "2": 117, "3": 65},
+    "pilot_input_sha256": "6a2391d22d5a04734f340461545feecdcec78cf9d498af5091583bb2f3f20240"
+  },
+  "hostile": [
+    {"Q": 13, "name": "arbitrary_monotone_caps", "tail_margins": [0, 2, 1, 0], "target_flow": 12},
+    {"Q": 19, "name": "cap_formula_only_E5_z2", "tail_margins": [2, 3, 3, 0], "target_flow": 18},
+    {"Q": 19, "name": "all_zero_demand_E19_z4", "tail_margins": [2, 3, 3, 0], "target_flow": 18}
+  ],
+  "mutations": {
+    "domain": "selected-incidence/source-cap/two-defect projection; NOT realized graphs",
+    "incidence_mutations": 3000,
+    "positive_scalar_ledger_profiles": 3000,
+    "seed": 7420914
+  },
+  "schema": "localized-selected-excess-v1",
+  "survivors": [
+    {
+      "D0": 0, "Esel": 4, "Q": 51, "S": 47, "id": 1626,
+      "localized_P": [3,3,3,3,3,3,3,3,2,2,2,2,3,3,3,3,2,4],
+      "localized_cap_sum": 50,
+      "localized_tail_margins": [-1,-2,-3,-6,-6,-6,4,0],
+      "original_P": [3,3,3,3,3,3,3,3,3,3,2,2,5,4,3,3,2,5],
+      "original_tail_margins": [5,4,3,0,0,0,4,0],
+      "original_target_flow": 51, "r": 45, "t": 1
+    },
+    {
+      "D0": 0, "Esel": 3, "Q": 57, "S": 54, "id": 2984,
+      "localized_P": [3,3,3,3,3,3,2,2,3,3,3,3,3,3,3,3,3,3],
+      "localized_cap_sum": 52,
+      "localized_tail_margins": [-5,-5,-5,-8,-8,-8,0],
+      "original_P": [3,3,3,3,3,3,3,3,6,6,4,3,3,3,3,3,3,3],
+      "original_tail_margins": [4,4,4,1,1,1,0],
+      "original_target_flow": 57, "r": 52, "t": 1
+    }
+  ]
+}
