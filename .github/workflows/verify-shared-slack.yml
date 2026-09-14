@@ -1,0 +1,38 @@
+name: verify shared block slack and fresh evidence
+
+on:
+  workflow_dispatch:
+  push:
+    paths:
+      - 'project/research/general_n/2026-09-14-joint-blocks-v1/verify_shared_slack.py'
+      - 'project/research/general_n/2026-09-14-joint-blocks-v1/run_replay.py'
+      - 'project/research/general_n/2026-09-14-joint-blocks-v1/recheck_fresh.py'
+      - 'project/research/general_n/2026-09-14-joint-blocks-v1/regenerate_fresh.py'
+      - 'project/research/general_n/2026-09-14-joint-blocks-v1/explore_multiblock.py'
+      - 'project/research/general_n/2026-09-14-joint-blocks-v1/SHARED_SLACK_FULL.json'
+      - 'project/research/general_n/2026-09-14-joint-blocks-v1/FRESH_RECHECK_FULL.json'
+      - '.github/workflows/verify-shared-slack.yml'
+
+permissions:
+  contents: read
+
+jobs:
+  verify:
+    runs-on: ubuntu-24.04-arm
+    timeout-minutes: 10
+    env:
+      PYTHONOPTIMIZE: '0'
+      PYTHONHASHSEED: '0'
+    steps:
+      - uses: actions/checkout@v4
+      - name: Replay parent, shared slack, fresh corpus and multiblock negative result
+        run: |
+          python3 project/research/general_n/2026-09-14-joint-blocks-v1/run_replay.py \
+            --outdir /tmp/shared-slack-replay
+      - name: Preserve all new and inherited checks on success or failure
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: shared-slack-full-replay
+          if-no-files-found: error
+          path: /tmp/shared-slack-replay
