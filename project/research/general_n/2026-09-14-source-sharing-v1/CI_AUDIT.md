@@ -33,3 +33,7 @@ The original bad publication and failed run remain failures in history. A later 
 ## Scope
 
 The original experiment retains 9,043 incidence/demand configurations, 371 brute-force DP comparisons, three hostile/boundary checks and 576 price evaluations, with four weighted improvements and ZERO new profile exclusions. This replay does NOT verify the separate stronger price/witness or conditioned-source-pricing packages. Those newer packages and their row471/label-destination research target remain preserved. External review, canonical counts and promotion gates are unchanged.
+
+## Completed exact replay, 2026-09-14 22:48:27 UTC
+
+Run 34905883642; checked-out predecessor `e6c9915826173b7b4ab8f76dc9b944b710128b0b`. The known extra-zero repair restored the original byte hash. The unchanged full harness passed before this publication attempt. No expected hash, source, numerical result or validator was weakened. Only the original source-sharing package was replayed. The whole workflow also requires non-forced publication and a final remote-ref check; its final conclusion must be inspected separately.
