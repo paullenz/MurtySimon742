@@ -5,7 +5,9 @@ on:
   push:
     paths:
       - 'tools/sync_generalisation_status.py'
+      - 'tools/check_whole_state_ledgers.py'
       - 'project/research/general_n/2026-09-13-alternative-attacks-v1/WHOLE_STATE_LEDGER.tsv'
+      - 'project/research/general_n/2026-09-13-alternative-attacks-v1/WHOLE_STATE_LEDGER_N35.tsv'
       - '.github/workflows/sync-generalisation-status.yml'
 
 permissions:
@@ -19,12 +21,13 @@ jobs:
         with:
           fetch-depth: 0
 
-      - name: Derive canonical status from ledger
+      - name: Derive canonical status from layer-specific ledgers
         run: python3 tools/sync_generalisation_status.py --write
 
       - name: Recheck canonical status and closure guards
         run: |
           python3 tools/sync_generalisation_status.py
+          python3 tools/check_whole_state_ledgers.py
           python3 tools/check_n34_whole_state_ledger.py
           python3 tools/check_post_pair_relational_recovery.py
 
@@ -41,5 +44,5 @@ jobs:
           git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
           git add README.md CURRENT_STATE.md \
             project/research/general_n/2026-09-13-alternative-attacks-v1/README.md
-          git commit -m 'Synchronize canonical generalisation status from ledger'
+          git commit -m 'Synchronize canonical generalisation status from ledgers'
           git push origin HEAD:main
