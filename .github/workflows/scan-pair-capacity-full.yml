@@ -1,14 +1,12 @@
 name: scan pair-capacity full frontier
 
+# The 943-state pair-capacity family is frozen and protected by its audited
+# certificate. The live generalisation frontier is now post-pair and is scanned
+# by the stronger relational workflow. Keep this full pair-capacity replay
+# available for explicit audit/reproduction, but do not relaunch it whenever
+# transport/ledger preparation code changes.
 on:
   workflow_dispatch:
-  push:
-    paths:
-      - 'project/research/general_n/2026-09-13-alternative-attacks-v1/prepare_pair_capacity_frontier.py'
-      - 'project/research/general_n/2026-09-13-alternative-attacks-v1/scan_pair_capacity_frontier.cpp'
-      - 'project/research/general_n/2026-09-13-alternative-attacks-v1/merge_pair_capacity_frontier.py'
-      - 'project/research/general_n/2026-09-13-alternative-attacks-v1/summarize_pair_capacity_frontier.py'
-      - '.github/workflows/scan-pair-capacity-full.yml'
 
 jobs:
   scan:
