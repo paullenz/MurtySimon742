@@ -1,0 +1,209 @@
+name: audit recovered post-pair relational candidates
+
+on:
+  push:
+    paths:
+      - '.github/workflows/audit-post-pair-relational-final-candidates.yml'
+  workflow_dispatch:
+
+permissions:
+  actions: read
+  contents: read
+
+env:
+  RECOVERY_RUN_ID: '34844403328'
+  EXPECTED_CANDIDATES: '2655'
+  EXPECTED_RESULTS_SHA256: '2c892301854660c8c1f73a13c4949ce2fb7e1e5706f9ecffbbe79f9483e71970'
+
+jobs:
+  plan:
+    runs-on: ubuntu-latest
+    outputs:
+      matrix: ${{ steps.plan.outputs.matrix }}
+      shard_count: ${{ steps.plan.outputs.shard_count }}
+    steps:
+      - uses: actions/checkout@v4
+      - name: Download hash-pinned recovered discovery
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          mkdir -p discovery
+          gh run download "$RECOVERY_RUN_ID" -R "$GITHUB_REPOSITORY" \
+            -n post-pair-relational-full-discovery-final -D discovery
+      - id: plan
+        name: Freeze candidate input and 256-shard matrix
+        run: |
+          python3 - <<'PY' >> "$GITHUB_OUTPUT"
+          from pathlib import Path
+          import csv, hashlib, json, os
+          root=Path('discovery')
+          results=root/'POST_PAIR_RELATIONAL_FULL_FINAL_RESULTS.tsv'
+          summary=json.loads((root/'POST_PAIR_RELATIONAL_FULL_FINAL_SUMMARY.json').read_text())
+          if not summary.get('discovery_complete') or summary.get('unresolved_count') or summary.get('unattempted_count'):
+              raise SystemExit('recovered discovery is not complete')
+          got=hashlib.sha256(results.read_bytes()).hexdigest()
+          if got != os.environ['EXPECTED_RESULTS_SHA256']:
+              raise SystemExit(f'results hash mismatch {got}')
+          rows=list(csv.DictReader(results.open(newline=''),delimiter='\t'))
+          keys={(int(r['layer']),int(r['state_id'])) for r in rows if r['status']=='RELATIONAL_EXCLUDED'}
+          if len(keys)!=int(os.environ['EXPECTED_CANDIDATES']):
+              raise SystemExit(f'candidate count mismatch {len(keys)}')
+          src=root/'plan'/'EXPECTED_ACTIVE.txt'
+          lines=[x.strip() for x in src.read_text().splitlines() if x.strip()]
+          n=int(lines[0]); body=lines[1:]
+          if len(body)!=n: raise SystemExit('expected-active count mismatch')
+          selected=[]; seen=set()
+          for line in body:
+              tok=line.split(); key=(int(tok[0]),int(tok[1]))
+              if key in keys: selected.append(line); seen.add(key)
+          if seen!=keys: raise SystemExit(f'missing candidate inputs {sorted(keys-seen)}')
+          out=Path('CANDIDATE_INPUT.txt')
+          out.write_text(str(len(selected))+'\n'+'\n'.join(selected)+'\n')
+          prov={
+            'schema':'post-pair-relational-final-candidate-audit-plan-v1',
+            'canonical_repo':'paullenz/MurtySimon742',
+            'source_recovery_run_id':int(os.environ['RECOVERY_RUN_ID']),
+            'source_results_sha256':got,
+            'candidate_count':len(selected),
+            'candidate_n34':sum(k[0]==0 for k in keys),
+            'candidate_n35':sum(k[0]==1 for k in keys),
+            'candidate_input_sha256':hashlib.sha256(out.read_bytes()).hexdigest(),
+            'promotion_status':'NOT_PROMOTED_AUDIT_IN_PROGRESS',
+            'external_review':'OPEN',
+          }
+          Path('CANDIDATE_PLAN.json').write_text(json.dumps(prov,indent=2,sort_keys=True)+'\n')
+          shards=256
+          print('shard_count='+str(shards))
+          print('matrix='+json.dumps({'shard':list(range(shards))},separators=(',',':')))
+          print(json.dumps(prov,indent=2,sort_keys=True))
+          PY
+      - uses: actions/upload-artifact@v4
+        with:
+          name: post-pair-relational-final-candidate-audit-plan
+          path: |
+            CANDIDATE_INPUT.txt
+            CANDIDATE_PLAN.json
+
+  audit:
+    needs: plan
+    runs-on: ubuntu-latest
+    timeout-minutes: 360
+    strategy:
+      fail-fast: false
+      max-parallel: 64
+      matrix: ${{ fromJSON(needs.plan.outputs.matrix) }}
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/download-artifact@v4
+        with:
+          name: post-pair-relational-final-candidate-audit-plan
+          path: audit-plan
+      - name: Prepare deterministic shard
+        env:
+          SHARD: ${{ matrix.shard }}
+          SHARD_COUNT: ${{ needs.plan.outputs.shard_count }}
+        run: |
+          python3 - <<'PY'
+          from pathlib import Path
+          import os
+          lines=[x.strip() for x in Path('audit-plan/CANDIDATE_INPUT.txt').read_text().splitlines() if x.strip()]
+          n=int(lines[0]); body=lines[1:]
+          if len(body)!=n: raise SystemExit('candidate plan count mismatch')
+          shard=int(os.environ['SHARD']); mod=int(os.environ['SHARD_COUNT'])
+          selected=[line for i,line in enumerate(body) if i%mod==shard]
+          Path(f'CANDIDATE_SHARD_{shard}_INPUT.txt').write_text(str(len(selected))+'\n'+('n'.join([]) if False else ('\n'.join(selected)+'\n' if selected else '')))
+          print('selected',len(selected),'of',n,'for shard',shard,'/',mod)
+          PY
+      - name: Compile both independent implementations
+        working-directory: project/research/general_n/2026-09-13-alternative-attacks-v1
+        run: |
+          g++ -O3 -std=c++17 -Wall -Wextra -pedantic scan_post_pair_relational.cpp -o scan_post_pair_relational
+          g++ -O3 -std=c++17 -Wall -Wextra -pedantic scan_post_pair_relational_types.cpp -o scan_post_pair_relational_types
+      - name: Fresh state-by-state cross-implementation audit
+        working-directory: project/research/general_n/2026-09-13-alternative-attacks-v1
+        run: >-
+          python3 run_post_pair_relational_crosscheck_checkpointed.py
+          ../../../../CANDIDATE_SHARD_${{ matrix.shard }}_INPUT.txt
+          --primary ./scan_post_pair_relational
+          --independent ./scan_post_pair_relational_types
+          --outdir FULL_RELATIONAL_FINAL_AUDIT_SHARD_${{ matrix.shard }}
+          --shard ${{ matrix.shard }}
+          --state-timeout 1800
+      - name: Upload durable audit shard
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: post-pair-relational-final-audit-shard-${{ matrix.shard }}
+          if-no-files-found: error
+          path: |
+            CANDIDATE_SHARD_${{ matrix.shard }}_INPUT.txt
+            project/research/general_n/2026-09-13-alternative-attacks-v1/FULL_RELATIONAL_FINAL_AUDIT_SHARD_${{ matrix.shard }}/
+
+  aggregate:
+    needs: [plan, audit]
+    if: always()
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Download audit plan and all shard artifacts
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          mkdir -p aggregate
+          gh run download "$GITHUB_RUN_ID" -R "$GITHUB_REPOSITORY" \
+            -n post-pair-relational-final-candidate-audit-plan -D aggregate/plan
+          gh run download "$GITHUB_RUN_ID" -R "$GITHUB_REPOSITORY" \
+            -p 'post-pair-relational-final-audit-shard-*' -D aggregate/shards
+      - name: Require complete two-implementation agreement
+        run: |
+          python3 - <<'PY'
+          from pathlib import Path
+          import csv, hashlib, json, os
+          root=Path('aggregate')
+          plan=json.loads((root/'plan'/'CANDIDATE_PLAN.json').read_text())
+          expected=plan['candidate_count']
+          status_files=sorted((root/'shards').rglob('AUDIT_STATUS.json'))
+          if len(status_files)!=256:
+              raise SystemExit(f'expected 256 audit status files, got {len(status_files)}')
+          audited=[]; unresolved=[]; expected_sum=0
+          for p in status_files:
+              d=json.loads(p.read_text())
+              if not d.get('finished'): unresolved.append({'file':str(p),'reason':'SHARD_NOT_FINISHED'})
+              expected_sum+=d['states_expected']
+              audited.extend(tuple(x) for x in d['audited_keys'])
+              unresolved.extend(d.get('unresolved',[]))
+          if expected_sum!=expected:
+              raise SystemExit(f'shard expected sum mismatch {expected_sum}!={expected}')
+          if len(audited)!=expected or len(set(audited))!=expected:
+              raise SystemExit(f'audited key coverage mismatch audited={len(audited)} unique={len(set(audited))} expected={expected}')
+          if unresolved:
+              Path('FULL_RELATIONAL_FINAL_AUDIT_UNRESOLVED.json').write_text(json.dumps(unresolved,indent=2,sort_keys=True)+'\n')
+              raise SystemExit(f'cross-audit unresolved count {len(unresolved)}')
+          plan_lines=[x.strip() for x in (root/'plan'/'CANDIDATE_INPUT.txt').read_text().splitlines() if x.strip()]
+          candidate_keys={(int(x.split()[0]),int(x.split()[1])) for x in plan_lines[1:]}
+          if set(audited)!=candidate_keys:
+              raise SystemExit('audited keys differ from candidate plan')
+          result={
+            'schema':'post-pair-relational-full-independent-audit-v1',
+            'result':'PASS',
+            'candidate_count':expected,
+            'candidate_n34':plan['candidate_n34'],
+            'candidate_n35':plan['candidate_n35'],
+            'states_audited':len(audited),
+            'unresolved_count':0,
+            'source_recovery_run_id':plan['source_recovery_run_id'],
+            'source_results_sha256':plan['source_results_sha256'],
+            'candidate_input_sha256':plan['candidate_input_sha256'],
+            'promotion_status':'AUDIT_COMPLETE_NOT_YET_LEDGER_PROMOTED',
+            'external_review':'OPEN',
+          }
+          Path('FULL_RELATIONAL_FINAL_AUDIT_SUMMARY.json').write_text(json.dumps(result,indent=2,sort_keys=True)+'\n')
+          Path('FULL_RELATIONAL_FINAL_AUDITED_KEYS.tsv').write_text('layer\tstate_id\n'+''.join(f'{a}\t{b}\n' for a,b in sorted(audited)))
+          print(json.dumps(result,indent=2,sort_keys=True))
+          PY
+      - uses: actions/upload-artifact@v4
+        with:
+          name: post-pair-relational-full-independent-audit-final
+          path: |
+            FULL_RELATIONAL_FINAL_AUDIT_SUMMARY.json
+            FULL_RELATIONAL_FINAL_AUDITED_KEYS.tsv
