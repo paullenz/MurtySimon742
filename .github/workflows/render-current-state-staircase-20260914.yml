@@ -5,6 +5,7 @@ on:
   push:
     paths:
       - 'tools/sync_current_state_staircase_20260914.py'
+      - 'tools/sync_current_state_staircase_v2_20260914.py'
       - '.github/workflows/render-current-state-staircase-20260914.yml'
 
 jobs:
@@ -15,7 +16,7 @@ jobs:
       - name: Render ledger-safe base handoff
         run: python3 tools/sync_generalisation_status.py --write
       - name: Render staircase-band handoff
-        run: python3 tools/sync_current_state_staircase_20260914.py
+        run: python3 tools/sync_current_state_staircase_v2_20260914.py
       - name: Recheck canonical counts and ledgers
         run: |
           python3 tools/sync_generalisation_status.py
@@ -23,7 +24,7 @@ jobs:
           python3 tools/check_n34_whole_state_ledger.py
           python3 tools/check_post_pair_relational_recovery.py
       - name: Recheck staircase handoff idempotency
-        run: python3 tools/sync_current_state_staircase_20260914.py
+        run: python3 tools/sync_current_state_staircase_v2_20260914.py
       - name: Check patch integrity
         run: git diff --check
       - name: Upload audited handoff
