@@ -75,7 +75,6 @@ jobs:
           shards=256
           print('shard_count='+str(shards))
           print('matrix='+json.dumps({'shard':list(range(shards))},separators=(',',':')))
-          print(json.dumps(prov,indent=2,sort_keys=True))
           PY
       - uses: actions/upload-artifact@v4
         with:
@@ -111,7 +110,7 @@ jobs:
           if len(body)!=n: raise SystemExit('candidate plan count mismatch')
           shard=int(os.environ['SHARD']); mod=int(os.environ['SHARD_COUNT'])
           selected=[line for i,line in enumerate(body) if i%mod==shard]
-          Path(f'CANDIDATE_SHARD_{shard}_INPUT.txt').write_text(str(len(selected))+'\n'+('n'.join([]) if False else ('\n'.join(selected)+'\n' if selected else '')))
+          Path(f'CANDIDATE_SHARD_{shard}_INPUT.txt').write_text(str(len(selected))+'\n'+('\n'.join(selected)+'\n' if selected else ''))
           print('selected',len(selected),'of',n,'for shard',shard,'/',mod)
           PY
       - name: Compile both independent implementations
@@ -158,7 +157,7 @@ jobs:
         run: |
           python3 - <<'PY'
           from pathlib import Path
-          import csv, hashlib, json, os
+          import json
           root=Path('aggregate')
           plan=json.loads((root/'plan'/'CANDIDATE_PLAN.json').read_text())
           expected=plan['candidate_count']
