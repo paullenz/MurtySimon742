@@ -1,0 +1,116 @@
+name: combined capped and block-pressure replay
+
+on:
+  workflow_dispatch:
+  push:
+    paths:
+      - 'project/research/general_n/2026-09-14-block-pressure-v1/verify_block_pressure.py'
+      - 'project/research/general_n/2026-09-14-block-pressure-v1/BLOCK_PRESSURE_VERIFICATION.json'
+      - '.github/workflows/verify-block-pressure.yml'
+
+permissions:
+  contents: read
+  actions: read
+concurrency:
+  group: block-pressure-replay-${{ github.ref }}
+  cancel-in-progress: false
+
+jobs:
+  verify:
+    runs-on: ubuntu-24.04-arm
+    timeout-minutes: 15
+    env:
+      PYTHONOPTIMIZE: '0'
+    steps:
+      - uses: actions/checkout@v4
+      - name: Prepare read-only fully paginated queue diagnostic
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          mkdir -p /tmp/block-evidence
+          cat > /tmp/block-queue.py <<'PY'
+          import collections,datetime,json,os,pathlib,urllib.request
+          repo=os.environ['GITHUB_REPOSITORY']
+          def get(path):
+              request=urllib.request.Request('https://api.github.com/repos/'+repo+path,headers={'Authorization':'Bearer '+os.environ['GH_TOKEN'],'Accept':'application/vnd.github+json'})
+              with urllib.request.urlopen(request,timeout=60) as response:return json.load(response)
+          result={'observed_utc':datetime.datetime.now(datetime.timezone.utc).isoformat(),'observer_run':os.environ['GITHUB_RUN_ID'],'promotion':'NONE; read-only snapshot','runs':{}}
+          for run in (34854911792,34880833888,34883538561,34885163695):
+              meta=get('/actions/runs/'+str(run));jobs=[];page=1
+              while True:
+                  data=get('/actions/runs/'+str(run)+'/jobs?per_page=100&page='+str(page))
+                  jobs.extend(data['jobs'])
+                  if len(jobs)>=data['total_count']:break
+                  if not data['jobs']:raise RuntimeError('Incomplete job pagination')
+                  page+=1
+              result['runs'][str(run)]={'status':meta['status'],'conclusion':meta['conclusion'],'head_sha':meta['head_sha'],'jobs_total':len(jobs),'counts':dict(collections.Counter(j['status']+'/'+str(j['conclusion']) for j in jobs)),'jobs':[{k:j.get(k) for k in ('id','name','status','conclusion','started_at','completed_at')} for j in jobs]}
+          pathlib.Path('/tmp/block-evidence/QUEUE_'+os.environ.get('SNAPSHOT','BEFORE')+'.json').write_text(json.dumps(result,indent=2,sort_keys=True)+'\n')
+          print(json.dumps({run:{k:v for k,v in data.items() if k!='jobs'} for run,data in result['runs'].items()},indent=2))
+          PY
+          python3 /tmp/block-queue.py
+      - uses: actions/download-artifact@v4
+        with:
+          name: q-stratified-receiver-reach-pilot
+          run-id: 34859094097
+          github-token: ${{ github.token }}
+          path: /tmp/block-inputs/pilot
+      - uses: actions/download-artifact@v4
+        with:
+          name: layered-receiver-exception-diagnostic
+          run-id: 34850187436
+          github-token: ${{ github.token }}
+          path: /tmp/block-inputs/exceptions
+      - name: Regenerate hash-pinned synthetic corpus
+        run: |
+          python3 - <<'PY'
+          import hashlib,json,pathlib,subprocess
+          root=pathlib.Path('/tmp/block-inputs/pilot');out=pathlib.Path('/tmp/block-evidence')
+          source=pathlib.Path('project/research/general_n/2026-09-14-q-tail-interval-budget-v1/search_synthetic_interval.cpp')
+          assert subprocess.check_output(['git','hash-object',str(source)],text=True).strip()=='72b1b0374cba1b865ad778c6ad123d9353c13de6'
+          matches=list(root.rglob('scan_q_crossing_stats.cpp'));assert len(matches)==1
+          assert hashlib.sha256(matches[0].read_bytes()).hexdigest()=='7b07649c355028818ba2153dedf461eb001b92541a5d994a83967cf366757906'
+          subprocess.run(['g++','-O3','-std=c++17','-I',str(root),str(source),'-o','/tmp/block-generator'],check=True)
+          with (out/'GENERATOR_ACTUAL.json').open('w') as handle:
+              subprocess.run(['/tmp/block-generator','100000'],cwd=out,stdout=handle,check=True)
+          expected={'seed':74220260914,'trials':100000,'domain':44234,'cap_pass':5582,'incidence_pass':1467,'pair_flow_pass':713,'zero_demand_profiles':46,'Hall_failures':474,'tail_detection_misses':0,'interval_detection_misses':0}
+          assert json.loads((out/'GENERATOR_ACTUAL.json').read_text())==expected
+          assert hashlib.sha256((out/'SYNTHETIC_INTERVAL_PROFILES.tsv').read_bytes()).hexdigest()=='157db7e1f48261626eac8cb99bf875f4aec3b707d4c024f62989dd1bcec38572'
+          PY
+      - name: Replay prior capped-spill gate and every new block-pressure value
+        run: |
+          python3 - <<'PY'
+          import hashlib,json,pathlib,subprocess,sys
+          root=pathlib.Path('/tmp/block-inputs');out=pathlib.Path('/tmp/block-evidence')
+          base=pathlib.Path('project/research/general_n');prior=base/'2026-09-14-capped-spill-v1';new=base/'2026-09-14-block-pressure-v1'
+          def unique(name):
+              matches=list(root.rglob(name));assert len(matches)==1,(name,matches)
+              return matches[0]
+          exc=unique('LAYER_EXCEPTION_DIAGNOSTIC.tsv');pilot=unique('Q_STRATIFIED_RECEIVER_REACH_PILOT_INPUT.txt')
+          old_expected=json.loads((prior/'CAPPED_SPILL_VERIFICATION.json').read_text())
+          assert hashlib.sha256(exc.read_bytes()).hexdigest()==old_expected['frozen_812']['exceptions_sha256']
+          assert hashlib.sha256(pilot.read_bytes()).hexdigest()==old_expected['frozen_812']['pilot_sha256']
+          corpus=out/'SYNTHETIC_INTERVAL_PROFILES.tsv'
+          with (out/'CAPPED_ACTUAL.json').open('w') as handle:
+              subprocess.run([sys.executable,str(prior/'verify_capped_spill.py'),'--exceptions',str(exc),'--pilot-input',str(pilot),'--synthetic',str(corpus)],stdout=handle,check=True)
+          assert json.loads((out/'CAPPED_ACTUAL.json').read_text())==old_expected,'Prior frozen output differs; investigate without weakening checks'
+          new_expected=json.loads((new/'BLOCK_PRESSURE_VERIFICATION.json').read_text())
+          with (out/'BLOCK_ACTUAL.json').open('w') as handle:
+              subprocess.run([sys.executable,str(new/'verify_block_pressure.py'),'--synthetic',str(corpus),'--prior',str(prior/'verify_capped_spill.py')],stdout=handle,check=True)
+          assert json.loads((out/'BLOCK_ACTUAL.json').read_text())==new_expected,'New frozen output differs; investigate without weakening checks'
+          (out/'CAPPED_EXPECTED.json').write_text(json.dumps(old_expected,indent=2,sort_keys=True)+'\n')
+          (out/'BLOCK_EXPECTED.json').write_text(json.dumps(new_expected,indent=2,sort_keys=True)+'\n')
+          print('PASS: both complete frozen objects agree; no whole-state promotion')
+          PY
+      - name: Refresh fully paginated diagnostic without cancelling or restarting audit jobs
+        if: always()
+        env:
+          GH_TOKEN: ${{ github.token }}
+          SNAPSHOT: AFTER
+        run: python3 /tmp/block-queue.py
+      - name: Retain all verification and diagnostic evidence
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: block-pressure-combined-replay
+          path: /tmp/block-evidence
+          if-no-files-found: error
