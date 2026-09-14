@@ -1,0 +1,23 @@
+name: Source-priced incidence envelope
+on:
+  push:
+    paths:
+      - 'project/research/general_n/2026-09-14-source-sharing-v1/**'
+      - 'project/research/general_n/2026-09-14-block-pressure-v1/REMAINDER_12.json'
+      - '.github/workflows/source-price-envelope.yml'
+  pull_request:
+    paths:
+      - 'project/research/general_n/2026-09-14-source-sharing-v1/**'
+      - 'project/research/general_n/2026-09-14-block-pressure-v1/REMAINDER_12.json'
+      - '.github/workflows/source-price-envelope.yml'
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  replay:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v4
+      - name: Exact finite soundness and complete original-six replay
+        run: python3 project/research/general_n/2026-09-14-source-sharing-v1/run_replay.py

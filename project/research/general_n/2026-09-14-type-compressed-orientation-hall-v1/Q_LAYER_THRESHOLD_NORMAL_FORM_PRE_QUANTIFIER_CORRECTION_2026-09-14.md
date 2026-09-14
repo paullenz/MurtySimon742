@@ -2,8 +2,6 @@
 
 14 September 2026. **Candidate exact structural theorem for the q-stratified target-Hall reduction. External mathematical review remains OPEN.**
 
-**Research-target correction, 14 September 2026:** section9 now distinguishes Hall feasibility from the deficient-subset condition needed for exclusion. The preceding equations(1)–(15) and recorded verification counts are unchanged. The [pre-correction note](Q_LAYER_THRESHOLD_NORMAL_FORM_PRE_QUANTIFIER_CORRECTION_2026-09-14.md) is preserved byte-for-byte; its section9 is superseded, not silently erased.
-
 The q-stratified minimum-cut theorem reduces exact target-Hall failure to the q-only receiver quantity
 
 ```text
@@ -296,23 +294,21 @@ result:                       PASS
 
 The verifier computes `alpha` and `beta` directly from target capacities and actual incoming counts, and independently through the cap thresholds and source order statistics. It requires exact equality term-by-term and in the final q-layer sum.
 
-## 9. Research consequence — corrected quantifiers
+## 9. Research consequence
 
-The earlier section9 proposed `threshold receiver capacity >= selected demand` for EVERY type-complete source subset S. By (14), that is the condition for Hall FEASIBILITY of the relaxation. It is not the contradiction required to exclude a profile. The earlier strategy paragraph reversed the research target; its displayed inequality is not promoted as an exclusion lemma.
-
-For an all-profile exclusion through this route, the required target has the quantifiers and sign
+The remaining hand-proof problem is no longer a target-flow problem and no longer a target-correlation problem. It is a histogram inequality:
 
 ```text
-for every profile B in the explicitly stated positive-surplus domain,
-there exists a type-complete source subset S such that
-U_q^B(S) < D_B(S).                                    (16 corrected)
+for every admissible type-complete S,
+threshold receiver capacity >= selected demand.        (16)
 ```
 
-This is an UNPROVED research goal, not a consequence of the exact normal form. Some relaxed profiles may satisfy Hall feasibility; excluding them would then require additional canonical structure or a stronger relaxation, not a reversed inequality or a claim that an unsuccessful search proved existence.
+The natural next attacks are:
 
-A useful attack must upper-bound receiver capacity for a suitably chosen subset while retaining a larger selected demand, or identify unavoidable sparse threshold rectangles from the full canonical budgets. Expressing r_{q,k} through R_S(q,t), and pairing source-demand layers with receiver layers, can help locate such a subset, but does not establish (16) by itself.
-
-This correction changes the strategy paragraph, not equations(1)–(15), their recorded finite verifier results, a frozen exclusion certificate, or the canonical frontier. The earlier verification counts above are retained historical evidence, not a newly rerun audit.
+1. lower-bound the cap tails `T_q(theta_{q,k})` from the residual and potential-pair budgets;
+2. express the source thresholds `r_{q,k}` via `R_S(q,t)` and the source cap `q+rho<=a`;
+3. pair the demand layer-cake identity for `D(S)` with the `(q,k)` receiver layers;
+4. identify which threshold rectangles can be simultaneously sparse enough to violate (16).
 
 ## Trust boundary
 
