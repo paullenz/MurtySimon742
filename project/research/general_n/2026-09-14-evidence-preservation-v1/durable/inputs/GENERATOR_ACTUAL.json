@@ -1,0 +1,12 @@
+{
+  "seed":74220260914,
+  "trials":100000,
+  "domain":44234,
+  "cap_pass":5582,
+  "incidence_pass":1467,
+  "pair_flow_pass":713,
+  "zero_demand_profiles":46,
+  "Hall_failures":474,
+  "tail_detection_misses":0,
+  "interval_detection_misses":0
+}

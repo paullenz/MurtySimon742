@@ -1,0 +1,3773 @@
+{
+  "external_review": "OPEN",
+  "hostile": {
+    "distinct_systems": [
+      {
+        "minimum": -1,
+        "tail_margins": [
+          0,
+          2,
+          1,
+          0
+        ]
+      },
+      {
+        "minimum": -1,
+        "tail_margins": [
+          2,
+          3,
+          3,
+          0
+        ]
+      }
+    ],
+    "examples": 3,
+    "explicit_bridge_failures": [
+      "r exceeds choose(a,2)",
+      "selected-demand infeasibility",
+      "S below r+2t"
+    ]
+  },
+  "incidence": {
+    "a_max": 3,
+    "b_max": 3,
+    "conditioned_inequalities": 42649,
+    "configurations": 9293
+  },
+  "independent_brute": {
+    "nonempty": 143,
+    "seed": 742091418,
+    "trials": 2000
+  },
+  "replay": {
+    "hand295": {
+      "D": [
+        4,
+        4,
+        0,
+        0,
+        1,
+        4,
+        0,
+        4,
+        4,
+        1,
+        1,
+        1,
+        4,
+        1,
+        0,
+        1,
+        4,
+        4,
+        4,
+        2,
+        4,
+        4,
+        1,
+        4,
+        4,
+        4,
+        4,
+        4
+      ],
+      "Esel": 28,
+      "P": [
+        4,
+        4,
+        3,
+        4,
+        5,
+        4,
+        3,
+        4,
+        4,
+        4,
+        4,
+        4,
+        4,
+        3,
+        4,
+        5,
+        4,
+        4,
+        4,
+        4,
+        4,
+        4,
+        4,
+        4,
+        6,
+        7,
+        8,
+        8
+      ],
+      "Q": 109,
+      "charge_lower": 126,
+      "charge_upper": 126,
+      "contradiction": "equality would force 10 <= 8",
+      "forced_low_excess": 22,
+      "free": 51,
+      "maximum_q3_pressure": 8,
+      "r": 79,
+      "remaining_high_excess": 6,
+      "required_q3_pressure": 10,
+      "row": 295,
+      "top_source_table": {
+        "2": [
+          0,
+          3,
+          8,
+          14,
+          19,
+          20,
+          21
+        ],
+        "3": [
+          0,
+          4,
+          10,
+          15,
+          20,
+          21,
+          22
+        ],
+        "4": [
+          0,
+          5,
+          9,
+          13,
+          17,
+          18,
+          18
+        ]
+      }
+    },
+    "input_rows": [
+      108,
+      160,
+      240,
+      258,
+      295,
+      338,
+      342,
+      347,
+      365,
+      471,
+      570,
+      586
+    ],
+    "newly_excluded": [
+      295,
+      365,
+      570
+    ],
+    "not_excluded": [
+      108,
+      160,
+      240,
+      258,
+      338,
+      342,
+      347,
+      471,
+      586
+    ],
+    "reports": [
+      {
+        "excluded": false,
+        "row": 108,
+        "splits": [
+          {
+            "admissible_e_low_max": 45,
+            "admissible_e_low_min": 26,
+            "branches": [
+              {
+                "charge_eta": 0,
+                "e_low": 26,
+                "gap": -17,
+                "lower": 211,
+                "reason": "price",
+                "tau": 1,
+                "theta": 5,
+                "upper": 228,
+                "weighted": false
+              },
+              {
+                "charge_eta": 0,
+                "e_low": 27,
+                "gap": -21,
+                "lower": 211,
+                "reason": "price",
+                "tau": 1,
+                "theta": 5,
+                "upper": 232,
+                "weighted": false
+              },
+              {
+                "charge_eta": 0,
+                "e_low": 28,
+                "gap": -21,
+                "lower": 211,
+                "reason": "price",
+                "tau": 1,
+                "theta": 5,
+                "upper": 232,
+                "weighted": false
+              },
+              {
+                "charge_eta": 0,
+                "e_low": 29,
+                "gap": -21,
+                "lower": 211,
+                "reason": "price",
+                "tau": 1,
+                "theta": 5,
+                "upper": 232,
+                "weighted": false
+              },
+              {
+                "charge_eta": 0,
+                "e_low": 30,
+                "gap": -16,
+                "lower": 211,
+                "reason": "price",
+                "tau": 1,
+                "theta": 5,
+                "upper": 227,
+                "weighted": false
+              },
+              {
+                "charge_eta": 0,
+                "e_low": 31,
+                "gap": -13,
+                "lower": 211,
+                "reason": "price",
+                "tau": 1,
+                "theta": 5,
+                "upper": 224,
+                "weighted": false
+              },
+              {
+                "charge_eta": 1,
+                "e_low": 32,
+                "gap": -12,
+                "lower": 76,
+                "reason": "price",
+                "tau": 5,
+                "theta": 3,
+                "upper": 88,
+                "weighted": false
+              },
+              {
+                "charge_eta": 1,
+                "e_low": 33,
+                "gap": -8,
+                "lower": 76,
+                "reason": "price",
+                "tau": 5,
+                "theta": 3,
+                "upper": 84,
+                "weighted": false
+              },
+              {
+                "charge_eta": 0,
+                "e_low": 34,
+                "gap": 3,
+                "lower": 211,
+                "reason": "price",
+                "tau": 1,
+                "theta": 5,
+                "upper": 208,
+                "weighted": false
+              },
+              {
+                "charge_eta": 0,
+                "e_low": 35,
+                "gap": 7,
+                "lower": 211,
+                "reason": "price",
+                "tau": 1,
+                "theta": 5,
+                "upper": 204,
+                "weighted": false
+              },
+              {
+                "charge_eta": 0,
+                "e_low": 36,
+                "gap": 11,
+                "lower": 211,
+                "reason": "price",
+                "tau": 1,
+                "theta": 5,
+                "upper": 200,
+                "weighted": false
+              },
+              {
+                "charge_eta": 0,
+                "e_low": 37,
+                "gap": 25,
+                "lower": 211,
+                "reason": "price",
+                "tau": 1,
+                "theta": 5,
+                "upper": 186,
+                "weighted": false
+              },
+              {
+                "charge_eta": 0,
+                "e_low": 38,
+                "gap": 38,
+                "lower": 214,
+                "reason": "price",
+                "tau": 1,
+                "theta": 6,
+                "upper": 176,
+                "weighted": false
+              },
+              {
+                "charge_eta": 0,
+                "e_low": 39,
+                "gap": 40,
+                "lower": 214,
+                "reason": "price",
+                "tau": 1,
+                "theta": 6,
+                "upper": 174,
+                "weighted": false
+              },
+              {
+                "e_low": 40,
+                "gap": 5,
+                "reason": "total_capacity"
+              },
+              {
+                "e_low": 41,
+                "gap": 6,
+                "reason": "total_capacity"
+              },
+              {
+                "e_low": 42,
+                "gap": 14,
+                "reason": "total_capacity"
+              },
+              {
+                "e_low": 43,
+                "gap": 23,
+                "reason": "total_capacity"
+              },
+              {
+                "e_low": 44,
+                "gap": 28,
+                "reason": "total_capacity"
+              },
+              {
+                "e_low": 45,
+                "gap": 31,
+                "reason": "total_capacity"
+              }
+            ],
+            "eta": 1,
+            "unrejected_e_low": [
+              26,
+              27,
+              28,
+              29,
+              30,
+              31,
+              32,
+              33
+            ]
+          },
+          {
+            "admissible_e_low_max": 45,
+            "admissible_e_low_min": 32,
+            "branches": [
+              {
+                "charge_eta": 0,
+                "e_low": 32,
+                "gap": 1,
+                "lower": 213,
+                "reason": "price",
+                "tau": 1,
+                "theta": 5,
+                "upper": 212,
+                "weighted": false
+              },
+              {
+                "charge_eta": 0,
+                "e_low": 33,
+                "gap": -15,
+                "lower": 211,
+                "reason": "price",
+                "tau": 1,
+                "theta": 5,
+                "upper": 226,
+                "weighted": false
+              },
+              {
+                "charge_eta": 0,
+                "e_low": 34,
+                "gap": -17,
+                "lower": 211,
+                "reason": "price",
+                "tau": 1,
+                "theta": 5,
+                "upper": 228,
+                "weighted": false
+              },
+              {
+                "charge_eta": 0,
+                "e_low": 35,
+                "gap": -19,
+                "lower": 211,
+                "reason": "price",
+                "tau": 1,
+                "theta": 5,
+                "upper": 230,
+                "weighted": false
+              },
+              {
+                "charge_eta": 0,
+                "e_low": 36,
+                "gap": -17,
+                "lower": 211,
+                "reason": "price",
+                "tau": 1,
+                "theta": 5,
+                "upper": 228,
+                "weighted": false
+              },
+              {
+                "charge_eta": 0,
+                "e_low": 37,
+                "gap": -20,
+                "lower": 211,
+                "reason": "price",
+                "tau": 1,
+                "theta": 5,
+                "upper": 231,
+                "weighted": false
+              },
+              {
+                "charge_eta": 0,
+                "e_low": 38,
+                "gap": -19,
+                "lower": 211,
+                "reason": "price",
+                "tau": 1,
+                "theta": 5,
+                "upper": 230,
+                "weighted": false
+              },
+              {
+                "charge_eta": 0,
+                "e_low": 39,
+                "gap": -15,
+                "lower": 211,
+                "reason": "price",
+                "tau": 1,
+                "theta": 5,
+                "upper": 226,
+                "weighted": false
+              },
+              {
+                "charge_eta": 0,
+                "e_low": 40,
+                "gap": -13,
+                "lower": 211,
+                "reason": "price",
+                "tau": 1,
+                "theta": 5,
+                "upper": 224,
+                "weighted": false
+              },
+              {
+                "charge_eta": 0,
+                "e_low": 41,
+                "gap": -13,
+                "lower": 211,
+                "reason": "price",
+                "tau": 1,
+                "theta": 5,
+                "upper": 224,
+                "weighted": false
+              },
+              {
+                "charge_eta": 0,
+                "e_low": 42,
+                "gap": -7,
+                "lower": 211,
+                "reason": "price",
+                "tau": 1,
+                "theta": 5,
+                "upper": 218,
+                "weighted": false
+              },
+              {
+                "charge_eta": 0,
+                "e_low": 43,
+                "gap": -3,
+                "lower": 211,
+                "reason": "price",
+                "tau": 1,
+                "theta": 5,
+                "upper": 214,
+                "weighted": false
+              },
+              {
+                "charge_eta": 0,
+                "e_low": 44,
+                "gap": -1,
+                "lower": 211,
+                "reason": "price",
+                "tau": 1,
+                "theta": 5,
+                "upper": 212,
+                "weighted": false
+              },
+              {
+                "charge_eta": 2,
+                "e_low": 45,
+                "gap": 0,
+                "lower": 0,
+                "reason": "price",
+                "tau": 1,
+                "theta": 0,
+                "upper": 0,
+                "weighted": false
+              }
+            ],
+            "eta": 2,
+            "unrejected_e_low": [
+              33,
+              34,
+              35,
+              36,
+              37,
+              38,
+              39,
+              40,
+              41,
+              42,
+              43,
+              44,
+              45
+            ]
+          }
+        ]
+      },
+      {
+        "excluded": false,
+        "row": 160,
+        "splits": [
+          {
+            "admissible_e_low_max": 38,
+            "admissible_e_low_min": 33,
+            "branches": [
+              {
+                "charge_eta": 1,
+                "e_low": 33,
+                "gap": -12,
+                "lower": 3,
+                "reason": "price",
+                "tau": 6,
+                "theta": 2,
+                "upper": 15,
+                "weighted": false
+              },
+              {
+                "charge_eta": 1,
+                "e_low": 34,
+                "gap": -11,
+                "lower": 3,
+                "reason": "price",
+                "tau": 6,
+                "theta": 2,
+                "upper": 14,
+                "weighted": false
+              },
+              {
+                "charge_eta": 1,
+                "e_low": 35,
+                "gap": -8,
+                "lower": 3,
+                "reason": "price",
+                "tau": 6,
+                "theta": 2,
+                "upper": 11,
+                "weighted": false
+              },
+              {
+                "charge_eta": 1,
+                "e_low": 36,
+                "gap": -5,
+                "lower": 3,
+                "reason": "price",
+                "tau": 6,
+                "theta": 2,
+                "upper": 8,
+                "weighted": false
+              },
+              {
+                "charge_eta": 1,
+                "e_low": 37,
+                "gap": 2,
+                "lower": 5,
+                "reason": "price",
+                "tau": 6,
+                "theta": 4,
+                "upper": 3,
+                "weighted": false
+              },
+              {
+                "charge_eta": 1,
+                "e_low": 38,
+                "gap": 8,
+                "lower": 8,
+                "reason": "price",
+                "tau": 6,
+                "theta": 4,
+                "upper": 0,
+                "weighted": false
+              }
+            ],
+            "eta": 1,
+            "unrejected_e_low": [
+              33,
+              34,
+              35,
+              36
+            ]
+          }
+        ]
+      },
+      {
+        "excluded": false,
+        "row": 240,
+        "splits": [
+          {
+            "admissible_e_low_max": 45,
+            "admissible_e_low_min": 24,
+            "branches": [
+              {
+                "charge_eta": 0,
+                "e_low": 24,
+                "gap": -24,
+                "lower": 204,
+                "reason": "price",
+                "tau": 1,
+                "theta": 4,
+                "upper": 228,
+                "weighted": false
+              },
+              {
+                "charge_eta": 0,
+                "e_low": 25,
+                "gap": -24,
+                "lower": 204,
+                "reason": "price",
+                "tau": 1,
+                "theta": 4,
+                "upper": 228,
+                "weighted": false
+              },
+              {
+                "charge_eta": 0,
+                "e_low": 26,
+                "gap": -22,
+                "lower": 204,
+                "reason": "price",
+                "tau": 1,
+                "theta": 4,
+                "upper": 226,
+                "weighted": false
+              },
+              {
+                "charge_eta": 0,
+                "e_low": 27,
+                "gap": -20,
+                "lower": 204,
+                "reason": "price",
+                "tau": 1,
+                "theta": 4,
+                "upper": 224,
+                "weighted": false
+              },
+              {
+                "charge_eta": 0,
+                "e_low": 28,
+                "gap": -16,
+                "lower": 204,
+                "reason": "price",
+                "tau": 1,
+                "theta": 4,
+                "upper": 220,
+                "weighted": false
+              },
+              {
+                "charge_eta": 0,
+                "e_low": 29,
+                "gap": -16,
+                "lower": 204,
+                "reason": "price",
+                "tau": 1,
+                "theta": 4,
+                "upper": 220,
+                "weighted": false
+              },
+              {
+                "charge_eta": 0,
+                "e_low": 30,
+                "gap": -14,
+                "lower": 204,
+                "reason": "price",
+                "tau": 1,
+                "theta": 4,
+                "upper": 218,
+                "weighted": false
+              },
+              {
+                "charge_eta": 0,
+                "e_low": 31,
+                "gap": -12,
+                "lower": 204,
+                "reason": "price",
+                "tau": 1,
+                "theta": 4,
+                "upper": 216,
+                "weighted": false
+              },
+              {
+                "charge_eta": 0,
+                "e_low": 32,
+                "gap": -8,
+                "lower": 204,
+                "reason": "price",
+                "tau": 1,
+                "theta": 4,
+                "upper": 212,
+                "weighted": false
+              },
+              {
+                "charge_eta": 0,
+                "e_low": 33,
+                "gap": -8,
+                "lower": 204,
+                "reason": "price",
+                "tau": 1,
+                "theta": 4,
+                "upper": 212,
+                "weighted": false
+              },
+              {
+                "charge_eta": 0,
+                "e_low": 34,
+                "gap": -4,
+                "lower": 204,
+                "reason": "price",
+                "tau": 1,
+                "theta": 4,
+                "upper": 208,
+                "weighted": false
+              },
+              {
+                "charge_eta": 0,
+                "e_low": 35,
+                "gap": -2,
+                "lower": 204,
+                "reason": "price",
+                "tau": 1,
+                "theta": 4,
+                "upper": 206,
+                "weighted": false
+              },
+              {
+                "charge_eta": 0,
+                "e_low": 36,
+                "gap": 0,
+                "lower": 204,
+                "reason": "price",
+                "tau": 1,
+                "theta": 4,
+                "upper": 204,
+                "weighted": false
+              },
+              {
+                "charge_eta": 0,
+                "e_low": 37,
+                "gap": 2,
+                "lower": 204,
+                "reason": "price",
+                "tau": 1,
+                "theta": 4,
+                "upper": 202,
+                "weighted": false
+              },
+              {
+                "charge_eta": 0,
+                "e_low": 38,
+                "gap": 34,
+                "lower": 212,
+                "reason": "price",
+                "tau": 1,
+                "theta": 6,
+                "upper": 178,
+                "weighted": false
+              },
+              {
+                "charge_eta": 0,
+                "e_low": 39,
+                "gap": 36,
+                "lower": 212,
+                "reason": "price",
+                "tau": 1,
+                "theta": 6,
+                "upper": 176,
+                "weighted": false
+              },
+              {
+                "e_low": 40,
+                "gap": 8,
+                "reason": "total_capacity"
+              },
+              {
+                "e_low": 41,
+                "gap": 8,
+                "reason": "total_capacity"
+              },
+              {
+                "e_low": 42,
+                "gap": 17,
+                "reason": "total_capacity"
+              },
+              {
+                "e_low": 43,
+                "gap": 20,
+                "reason": "total_capacity"
+              },
+              {
+                "e_low": 44,
+                "gap": 27,
+                "reason": "total_capacity"
+              },
+              {
+                "e_low": 45,
+                "gap": 28,
+                "reason": "total_capacity"
+              }
+            ],
+            "eta": 1,
+            "unrejected_e_low": [
+              24,
+              25,
+              26,
+              27,
+              28,
+              29,
+              30,
+              31,
+              32,
+              33,
+              34,
+              35,
+              36
+            ]
+          },
+          {
+            "admissible_e_low_max": 45,
+            "admissible_e_low_min": 39,
+            "branches": [
+              {
+                "charge_eta": 0,
+                "e_low": 39,
+                "gap": 15,
+                "lower": 224,
+                "reason": "price",
+                "tau": 1,
+                "theta": 8,
+                "upper": 209,
+                "weighted": false
+              },
+              {
+                "charge_eta": 0,
+                "e_low": 40,
+                "gap": 12,
+                "lower": 224,
+                "reason": "price",
+                "tau": 1,
+                "theta": 8,
+                "upper": 212,
+                "weighted": false
+              },
+              {
+                "charge_eta": 0,
+                "e_low": 41,
+                "gap": -2,
+                "lower": 212,
+                "reason": "price",
+                "tau": 1,
+                "theta": 5,
+                "upper": 214,
+                "weighted": false
+              },
+              {
+                "charge_eta": 0,
+                "e_low": 42,
+                "gap": -10,
+                "lower": 208,
+                "reason": "price",
+                "tau": 1,
+                "theta": 5,
+                "upper": 218,
+                "weighted": false
+              },
+              {
+                "charge_eta": 2,
+                "e_low": 43,
+                "gap": -9,
+                "lower": 0,
+                "reason": "price",
+                "tau": 1,
+                "theta": 0,
+                "upper": 9,
+                "weighted": false
+              },
+              {
+                "charge_eta": 2,
+                "e_low": 44,
+                "gap": -4,
+                "lower": 0,
+                "reason": "price",
+                "tau": 1,
+                "theta": 0,
+                "upper": 4,
+                "weighted": false
+              },
+              {
+                "charge_eta": 2,
+                "e_low": 45,
+                "gap": 0,
+                "lower": 0,
+                "reason": "price",
+                "tau": 1,
+                "theta": 0,
+                "upper": 0,
+                "weighted": false
+              }
+            ],
+            "eta": 2,
+            "unrejected_e_low": [
+              41,
+              42,
+              43,
+              44,
+              45
+            ]
+          }
+        ]
+      },
+      {
+        "excluded": false,
+        "row": 258,
+        "splits": [
+          {
+            "admissible_e_low_max": 48,
+            "admissible_e_low_min": 13,
+            "branches": [
+              {
+                "charge_eta": 1,
+                "e_low": 13,
+                "gap": -35,
+                "lower": 241,
+                "reason": "price",
+                "tau": 4,
+                "theta": 6,
+                "upper": 276,
+                "weighted": false
+              },
+              {
+                "charge_eta": 1,
+                "e_low": 14,
+                "gap": -28,
+                "lower": 240,
+                "reason": "price",
+                "tau": 4,
+                "theta": 6,
+                "upper": 268,
+                "weighted": false
+              },
+              {
+                "charge_eta": 1,
+                "e_low": 15,
+                "gap": -18,
+                "lower": 240,
+                "reason": "price",
+                "tau": 4,
+                "theta": 6,
+                "upper": 258,
+                "weighted": false
+              },
+              {
+                "charge_eta": 1,
+                "e_low": 16,
+                "gap": -12,
+                "lower": 240,
+                "reason": "price",
+                "tau": 4,
+                "theta": 6,
+                "upper": 252,
+                "weighted": false
+              },
+              {
+                "charge_eta": 1,
+                "e_low": 17,
+                "gap": -6,
+                "lower": 240,
+                "reason": "price",
+                "tau": 4,
+                "theta": 6,
+                "upper": 246,
+                "weighted": false
+              },
+              {
+                "charge_eta": 1,
+                "e_low": 18,
+                "gap": 0,
+                "lower": 240,
+                "reason": "price",
+                "tau": 4,
+                "theta": 6,
+                "upper": 240,
+                "weighted": false
+              },
+              {
+                "charge_eta": 1,
+                "e_low": 19,
+                "gap": 14,
+                "lower": 241,
+                "reason": "price",
+                "tau": 4,
+                "theta": 6,
+                "upper": 227,
+                "weighted": false
+              },
+              {
+                "charge_eta": 1,
+                "e_low": 20,
+                "gap": 21,
+                "lower": 241,
+                "reason": "price",
+                "tau": 4,
+                "theta": 6,
+                "upper": 220,
+                "weighted": false
+              },
+              {
+                "charge_eta": 0,
+                "e_low": 21,
+                "gap": 12,
+                "lower": 918,
+                "reason": "price",
+                "tau": 4,
+                "theta": 21,
+                "upper": 906,
+                "weighted": true
+              },
+              {
+                "charge_eta": 0,
+                "e_low": 22,
+                "gap": 24,
+                "lower": 918,
+                "reason": "price",
+                "tau": 4,
+                "theta": 21,
+                "upper": 894,
+                "weighted": true
+              },
+              {
+                "charge_eta": 0,
+                "e_low": 23,
+                "gap": 36,
+                "lower": 918,
+                "reason": "price",
+                "tau": 4,
+                "theta": 21,
+                "upper": 882,
+                "weighted": true
+              },
+              {
+                "charge_eta": 0,
+                "e_low": 24,
+                "gap": 54,
+                "lower": 921,
+                "reason": "price",
+                "tau": 4,
+                "theta": 21,
+                "upper": 867,
+                "weighted": true
+              },
+              {
+                "charge_eta": 0,
+                "e_low": 25,
+                "gap": 4,
+                "lower": 315,
+                "reason": "price",
+                "tau": 4,
+                "theta": 7,
+                "upper": 311,
+                "weighted": false
+              },
+              {
+                "charge_eta": 0,
+                "e_low": 26,
+                "gap": 11,
+                "lower": 315,
+                "reason": "price",
+                "tau": 4,
+                "theta": 7,
+                "upper": 304,
+                "weighted": false
+              },
+              {
+                "charge_eta": 0,
+                "e_low": 27,
+                "gap": 15,
+                "lower": 315,
+                "reason": "price",
+                "tau": 4,
+                "theta": 7,
+                "upper": 300,
+                "weighted": false
+              },
+              {
+                "charge_eta": 0,
+                "e_low": 28,
+                "gap": 23,
+                "lower": 315,
+                "reason": "price",
+                "tau": 4,
+                "theta": 7,
+                "upper": 292,
+                "weighted": false
+              },
+              {
+                "charge_eta": 0,
+                "e_low": 29,
+                "gap": 57,
+                "lower": 329,
+                "reason": "price",
+                "tau": 4,
+                "theta": 9,
+                "upper": 272,
+                "weighted": false
+              },
+              {
+                "e_low": 30,
+                "reason": "empty_projection"
+              },
+              {
+                "e_low": 31,
+                "reason": "empty_projection"
+              },
+              {
+                "e_low": 32,
+                "reason": "empty_projection"
+              },
+              {
+                "e_low": 33,
+                "reason": "empty_projection"
+              },
+              {
+                "e_low": 34,
+                "reason": "empty_projection"
+              },
+              {
+                "e_low": 35,
+                "reason": "empty_projection"
+              },
+              {
+                "e_low": 36,
+                "reason": "empty_projection"
+              },
+              {
+                "e_low": 37,
+                "reason": "empty_projection"
+              },
+              {
+                "e_low": 38,
+                "reason": "empty_projection"
+              },
+              {
+                "e_low": 39,
+                "reason": "empty_projection"
+              },
+              {
+                "e_low": 40,
+                "reason": "empty_projection"
+              },
+              {
+                "e_low": 41,
+                "reason": "empty_projection"
+              },
+              {
+                "e_low": 42,
+                "reason": "empty_projection"
+              },
+              {
+                "e_low": 43,
+                "reason": "empty_projection"
+              },
+              {
+                "e_low": 44,
+                "reason": "empty_projection"
+              },
+              {
+                "e_low": 45,
+                "reason": "empty_projection"
+              },
+              {
+                "e_low": 46,
+                "gap": 2,
+                "reason": "total_capacity"
+              },
+              {
+                "e_low": 47,
+                "gap": 3,
+                "reason": "total_capacity"
+              },
+              {
+                "e_low": 48,
+                "gap": 3,
+                "reason": "total_capacity"
+              }
+            ],
+            "eta": 1,
+            "unrejected_e_low": [
+              13,
+              14,
+              15,
+              16,
+              17,
+              18
+            ]
+          },
+          {
+            "admissible_e_low_max": 48,
+            "admissible_e_low_min": 38,
+            "branches": [
+              {
+                "charge_eta": 0,
+                "e_low": 38,
+                "gap": 56,
+                "lower": 362,
+                "reason": "price",
+                "tau": 4,
+                "theta": 9,
+                "upper": 306,
+                "weighted": false
+              },
+              {
+                "charge_eta": 0,
+                "e_low": 39,
+                "gap": 49,
+                "lower": 357,
+                "reason": "price",
+                "tau": 4,
+                "theta": 9,
+                "upper": 308,
+                "weighted": false
+              },
+              {
+                "charge_eta": 0,
+                "e_low": 40,
+                "gap": 31,
+                "lower": 349,
+                "reason": "price",
+                "tau": 4,
+                "theta": 9,
+                "upper": 318,
+                "weighted": false
+              },
+              {
+                "charge_eta": 0,
+                "e_low": 41,
+                "gap": 4,
+                "lower": 331,
+                "reason": "price",
+                "tau": 4,
+                "theta": 9,
+                "upper": 327,
+                "weighted": false
+              },
+              {
+                "charge_eta": 2,
+                "e_low": 42,
+                "gap": -32,
+                "lower": 0,
+                "reason": "price",
+                "tau": 1,
+                "theta": 0,
+                "upper": 32,
+                "weighted": false
+              },
+              {
+                "charge_eta": 2,
+                "e_low": 43,
+                "gap": -27,
+                "lower": 0,
+                "reason": "price",
+                "tau": 1,
+                "theta": 0,
+                "upper": 27,
+                "weighted": false
+              },
+              {
+                "charge_eta": 2,
+                "e_low": 44,
+                "gap": -28,
+                "lower": 0,
+                "reason": "price",
+                "tau": 1,
+                "theta": 0,
+                "upper": 28,
+                "weighted": false
+              },
+              {
+                "charge_eta": 2,
+                "e_low": 45,
+                "gap": -18,
+                "lower": 0,
+                "reason": "price",
+                "tau": 1,
+                "theta": 0,
+                "upper": 18,
+                "weighted": false
+              },
+              {
+                "charge_eta": 2,
+                "e_low": 46,
+                "gap": -10,
+                "lower": 0,
+                "reason": "price",
+                "tau": 1,
+                "theta": 0,
+                "upper": 10,
+                "weighted": false
+              },
+              {
+                "charge_eta": 2,
+                "e_low": 47,
+                "gap": -4,
+                "lower": 0,
+                "reason": "price",
+                "tau": 1,
+                "theta": 0,
+                "upper": 4,
+                "weighted": false
+              },
+              {
+                "charge_eta": 2,
+                "e_low": 48,
+                "gap": 0,
+                "lower": 0,
+                "reason": "price",
+                "tau": 1,
+                "theta": 0,
+                "upper": 0,
+                "weighted": false
+              }
+            ],
+            "eta": 2,
+            "unrejected_e_low": [
+              42,
+              43,
+              44,
+              45,
+              46,
+              47,
+              48
+            ]
+          }
+        ]
+      },
+      {
+        "excluded": true,
+        "row": 295,
+        "splits": [
+          {
+            "admissible_e_low_max": 28,
+            "admissible_e_low_min": 22,
+            "branches": [
+              {
+                "charge_eta": 0,
+                "e_low": 22,
+                "gap": 3,
+                "lower": 129,
+                "reason": "price",
+                "tau": 1,
+                "theta": 5,
+                "upper": 126,
+                "weighted": false
+              },
+              {
+                "charge_eta": 0,
+                "e_low": 23,
+                "gap": 6,
+                "lower": 129,
+                "reason": "price",
+                "tau": 1,
+                "theta": 5,
+                "upper": 123,
+                "weighted": false
+              },
+              {
+                "charge_eta": 0,
+                "e_low": 24,
+                "gap": 2,
+                "lower": 126,
+                "reason": "price",
+                "tau": 1,
+                "theta": 3,
+                "upper": 124,
+                "weighted": false
+              },
+              {
+                "charge_eta": 0,
+                "e_low": 25,
+                "gap": 6,
+                "lower": 126,
+                "reason": "price",
+                "tau": 1,
+                "theta": 3,
+                "upper": 120,
+                "weighted": false
+              },
+              {
+                "e_low": 26,
+                "gap": 1,
+                "reason": "total_capacity"
+              },
+              {
+                "e_low": 27,
+                "gap": 6,
+                "reason": "total_capacity"
+              },
+              {
+                "e_low": 28,
+                "gap": 10,
+                "reason": "total_capacity"
+              }
+            ],
+            "eta": 1,
+            "unrejected_e_low": []
+          }
+        ]
+      },
+      {
+        "excluded": false,
+        "row": 338,
+        "splits": [
+          {
+            "admissible_e_low_max": 39,
+            "admissible_e_low_min": 14,
+            "branches": [
+              {
+                "charge_eta": 0,
+                "e_low": 14,
+                "gap": -87,
+                "lower": 63,
+                "reason": "price",
+                "tau": 1,
+                "theta": 3,
+                "upper": 150,
+                "weighted": false
+              },
+              {
+                "charge_eta": 0,
+                "e_low": 15,
+                "gap": -82,
+                "lower": 63,
+                "reason": "price",
+                "tau": 1,
+                "theta": 3,
+                "upper": 145,
+                "weighted": false
+              },
+              {
+                "charge_eta": 0,
+                "e_low": 16,
+                "gap": -77,
+                "lower": 63,
+                "reason": "price",
+                "tau": 1,
+                "theta": 3,
+                "upper": 140,
+                "weighted": false
+              },
+              {
+                "charge_eta": 0,
+                "e_low": 17,
+                "gap": -72,
+                "lower": 63,
+                "reason": "price",
+                "tau": 1,
+                "theta": 3,
+                "upper": 135,
+                "weighted": false
+              },
+              {
+                "charge_eta": 0,
+                "e_low": 18,
+                "gap": -67,
+                "lower": 63,
+                "reason": "price",
+                "tau": 1,
+                "theta": 3,
+                "upper": 130,
+                "weighted": false
+              },
+              {
+                "charge_eta": 0,
+                "e_low": 19,
+                "gap": -62,
+                "lower": 63,
+                "reason": "price",
+                "tau": 1,
+                "theta": 3,
+                "upper": 125,
+                "weighted": false
+              },
+              {
+                "charge_eta": 0,
+                "e_low": 20,
+                "gap": -57,
+                "lower": 63,
+                "reason": "price",
+                "tau": 1,
+                "theta": 3,
+                "upper": 120,
+                "weighted": false
+              },
+              {
+                "charge_eta": 0,
+                "e_low": 21,
+                "gap": -52,
+                "lower": 63,
+                "reason": "price",
+                "tau": 1,
+                "theta": 3,
+                "upper": 115,
+                "weighted": false
+              },
+              {
+                "charge_eta": 0,
+                "e_low": 22,
+                "gap": -47,
+                "lower": 63,
+                "reason": "price",
+                "tau": 1,
+                "theta": 3,
+                "upper": 110,
+                "weighted": false
+              },
+              {
+                "charge_eta": 0,
+                "e_low": 23,
+                "gap": -42,
+                "lower": 63,
+                "reason": "price",
+                "tau": 1,
+                "theta": 3,
+                "upper": 105,
+                "weighted": false
+              },
+              {
+                "charge_eta": 0,
+                "e_low": 24,
+                "gap": -37,
+                "lower": 63,
+                "reason": "price",
+                "tau": 1,
+                "theta": 3,
+                "upper": 100,
+                "weighted": false
+              },
+              {
+                "charge_eta": 0,
+                "e_low": 25,
+                "gap": -22,
+                "lower": 63,
+                "reason": "price",
+                "tau": 1,
+                "theta": 3,
+                "upper": 85,
+                "weighted": false
+              },
+              {
+                "charge_eta": 0,
+                "e_low": 26,
+                "gap": -15,
+                "lower": 63,
+                "reason": "price",
+                "tau": 1,
+                "theta": 3,
+                "upper": 78,
+                "weighted": false
+              },
+              {
+                "charge_eta": 0,
+                "e_low": 27,
+                "gap": -8,
+                "lower": 63,
+                "reason": "price",
+                "tau": 1,
+                "theta": 3,
+                "upper": 71,
+                "weighted": false
+              },
+              {
+                "charge_eta": 0,
+                "e_low": 28,
+                "gap": 1,
+                "lower": 63,
+                "reason": "price",
+                "tau": 1,
+                "theta": 3,
+                "upper": 62,
+                "weighted": false
+              },
+              {
+                "e_low": 29,
+                "reason": "empty_projection"
+              },
+              {
+                "e_low": 30,
+                "reason": "empty_projection"
+              },
+              {
+                "e_low": 31,
+                "reason": "empty_projection"
+              },
+              {
+                "e_low": 32,
+                "reason": "empty_projection"
+              },
+              {
+                "e_low": 33,
+                "reason": "empty_projection"
+              },
+              {
+                "e_low": 34,
+                "reason": "empty_projection"
+              },
+              {
+                "e_low": 35,
+                "gap": 6,
+                "reason": "total_capacity"
+              },
+              {
+                "e_low": 36,
+                "gap": 18,
+                "reason": "total_capacity"
+              },
+              {
+                "e_low": 37,
+                "gap": 35,
+                "reason": "total_capacity"
+              },
+              {
+                "e_low": 38,
+                "gap": 46,
+                "reason": "total_capacity"
+              },
+              {
+                "e_low": 39,
+                "gap": 56,
+                "reason": "total_capacity"
+              }
+            ],
+            "eta": 0,
+            "unrejected_e_low": [
+              14,
+              15,
+              16,
+              17,
+              18,
+              19,
+              20,
+              21,
+              22,
+              23,
+              24,
+              25,
+              26,
+              27
+            ]
+          },
+          {
+            "admissible_e_low_max": 39,
+            "admissible_e_low_min": 28,
+            "branches": [
+              {
+                "charge_eta": 1,
+                "e_low": 28,
+                "gap": -35,
+                "lower": 35,
+                "reason": "price",
+                "tau": 5,
+                "theta": 2,
+                "upper": 70,
+                "weighted": false
+              },
+              {
+                "charge_eta": 1,
+                "e_low": 29,
+                "gap": -36,
+                "lower": 34,
+                "reason": "price",
+                "tau": 5,
+                "theta": 2,
+                "upper": 70,
+                "weighted": false
+              },
+              {
+                "charge_eta": 1,
+                "e_low": 30,
+                "gap": -21,
+                "lower": 34,
+                "reason": "price",
+                "tau": 5,
+                "theta": 2,
+                "upper": 55,
+                "weighted": false
+              },
+              {
+                "charge_eta": 1,
+                "e_low": 31,
+                "gap": -14,
+                "lower": 34,
+                "reason": "price",
+                "tau": 5,
+                "theta": 2,
+                "upper": 48,
+                "weighted": false
+              },
+              {
+                "charge_eta": 1,
+                "e_low": 32,
+                "gap": 0,
+                "lower": 102,
+                "reason": "price",
+                "tau": 5,
+                "theta": 6,
+                "upper": 102,
+                "weighted": true
+              },
+              {
+                "charge_eta": 1,
+                "e_low": 33,
+                "gap": 3,
+                "lower": 34,
+                "reason": "price",
+                "tau": 5,
+                "theta": 2,
+                "upper": 31,
+                "weighted": false
+              },
+              {
+                "charge_eta": 1,
+                "e_low": 34,
+                "gap": 12,
+                "lower": 35,
+                "reason": "price",
+                "tau": 5,
+                "theta": 3,
+                "upper": 23,
+                "weighted": false
+              },
+              {
+                "charge_eta": 1,
+                "e_low": 35,
+                "gap": 17,
+                "lower": 35,
+                "reason": "price",
+                "tau": 5,
+                "theta": 3,
+                "upper": 18,
+                "weighted": false
+              },
+              {
+                "charge_eta": 0,
+                "e_low": 36,
+                "gap": 127,
+                "lower": 261,
+                "reason": "price",
+                "tau": 5,
+                "theta": 21,
+                "upper": 134,
+                "weighted": true
+              },
+              {
+                "charge_eta": 0,
+                "e_low": 37,
+                "gap": 13,
+                "lower": 95,
+                "reason": "price",
+                "tau": 5,
+                "theta": 7,
+                "upper": 82,
+                "weighted": false
+              },
+              {
+                "e_low": 38,
+                "gap": 5,
+                "reason": "total_capacity"
+              },
+              {
+                "e_low": 39,
+                "gap": 6,
+                "reason": "total_capacity"
+              }
+            ],
+            "eta": 1,
+            "unrejected_e_low": [
+              28,
+              29,
+              30,
+              31,
+              32
+            ]
+          },
+          {
+            "admissible_e_low_max": 39,
+            "admissible_e_low_min": 34,
+            "branches": [
+              {
+                "charge_eta": 2,
+                "e_low": 34,
+                "gap": -20,
+                "lower": 0,
+                "reason": "price",
+                "tau": 1,
+                "theta": 0,
+                "upper": 20,
+                "weighted": false
+              },
+              {
+                "charge_eta": 2,
+                "e_low": 35,
+                "gap": -16,
+                "lower": 0,
+                "reason": "price",
+                "tau": 1,
+                "theta": 0,
+                "upper": 16,
+                "weighted": false
+              },
+              {
+                "charge_eta": 2,
+                "e_low": 36,
+                "gap": -12,
+                "lower": 0,
+                "reason": "price",
+                "tau": 1,
+                "theta": 0,
+                "upper": 12,
+                "weighted": false
+              },
+              {
+                "charge_eta": 2,
+                "e_low": 37,
+                "gap": -9,
+                "lower": 0,
+                "reason": "price",
+                "tau": 1,
+                "theta": 0,
+                "upper": 9,
+                "weighted": false
+              },
+              {
+                "charge_eta": 2,
+                "e_low": 38,
+                "gap": -4,
+                "lower": 0,
+                "reason": "price",
+                "tau": 1,
+                "theta": 0,
+                "upper": 4,
+                "weighted": false
+              },
+              {
+                "charge_eta": 2,
+                "e_low": 39,
+                "gap": 0,
+                "lower": 0,
+                "reason": "price",
+                "tau": 1,
+                "theta": 0,
+                "upper": 0,
+                "weighted": false
+              }
+            ],
+            "eta": 2,
+            "unrejected_e_low": [
+              34,
+              35,
+              36,
+              37,
+              38,
+              39
+            ]
+          }
+        ]
+      },
+      {
+        "excluded": false,
+        "row": 342,
+        "splits": [
+          {
+            "admissible_e_low_max": 41,
+            "admissible_e_low_min": 26,
+            "branches": [
+              {
+                "charge_eta": 1,
+                "e_low": 26,
+                "gap": -6,
+                "lower": 234,
+                "reason": "price",
+                "tau": 5,
+                "theta": 15,
+                "upper": 240,
+                "weighted": true
+              },
+              {
+                "charge_eta": 1,
+                "e_low": 27,
+                "gap": -8,
+                "lower": 216,
+                "reason": "price",
+                "tau": 5,
+                "theta": 15,
+                "upper": 224,
+                "weighted": true
+              },
+              {
+                "charge_eta": 1,
+                "e_low": 28,
+                "gap": -20,
+                "lower": 65,
+                "reason": "price",
+                "tau": 5,
+                "theta": 4,
+                "upper": 85,
+                "weighted": false
+              },
+              {
+                "charge_eta": 1,
+                "e_low": 29,
+                "gap": -13,
+                "lower": 65,
+                "reason": "price",
+                "tau": 5,
+                "theta": 4,
+                "upper": 78,
+                "weighted": false
+              },
+              {
+                "charge_eta": 1,
+                "e_low": 30,
+                "gap": 1,
+                "lower": 66,
+                "reason": "price",
+                "tau": 5,
+                "theta": 4,
+                "upper": 65,
+                "weighted": false
+              },
+              {
+                "charge_eta": 1,
+                "e_low": 31,
+                "gap": 7,
+                "lower": 66,
+                "reason": "price",
+                "tau": 5,
+                "theta": 4,
+                "upper": 59,
+                "weighted": false
+              },
+              {
+                "charge_eta": 0,
+                "e_low": 32,
+                "gap": 2,
+                "lower": 380,
+                "reason": "price",
+                "tau": 5,
+                "theta": 21,
+                "upper": 378,
+                "weighted": true
+              },
+              {
+                "charge_eta": 0,
+                "e_low": 33,
+                "gap": 36,
+                "lower": 389,
+                "reason": "price",
+                "tau": 5,
+                "theta": 24,
+                "upper": 353,
+                "weighted": true
+              },
+              {
+                "charge_eta": 0,
+                "e_low": 34,
+                "gap": 132,
+                "lower": 455,
+                "reason": "price",
+                "tau": 5,
+                "theta": 27,
+                "upper": 323,
+                "weighted": true
+              },
+              {
+                "charge_eta": 0,
+                "e_low": 35,
+                "gap": 142,
+                "lower": 455,
+                "reason": "price",
+                "tau": 5,
+                "theta": 27,
+                "upper": 313,
+                "weighted": true
+              },
+              {
+                "charge_eta": 0,
+                "e_low": 36,
+                "gap": 215,
+                "lower": 500,
+                "reason": "price",
+                "tau": 5,
+                "theta": 27,
+                "upper": 285,
+                "weighted": true
+              },
+              {
+                "charge_eta": 0,
+                "e_low": 37,
+                "gap": 271,
+                "lower": 530,
+                "reason": "price",
+                "tau": 5,
+                "theta": 27,
+                "upper": 259,
+                "weighted": true
+              },
+              {
+                "charge_eta": 0,
+                "e_low": 38,
+                "gap": 36,
+                "lower": 210,
+                "reason": "price",
+                "tau": 5,
+                "theta": 9,
+                "upper": 174,
+                "weighted": false
+              },
+              {
+                "charge_eta": 0,
+                "e_low": 39,
+                "gap": 54,
+                "lower": 220,
+                "reason": "price",
+                "tau": 5,
+                "theta": 9,
+                "upper": 166,
+                "weighted": false
+              },
+              {
+                "charge_eta": 0,
+                "e_low": 40,
+                "gap": 82,
+                "lower": 236,
+                "reason": "price",
+                "tau": 5,
+                "theta": 9,
+                "upper": 154,
+                "weighted": false
+              },
+              {
+                "charge_eta": 0,
+                "e_low": 41,
+                "gap": 92,
+                "lower": 242,
+                "reason": "price",
+                "tau": 5,
+                "theta": 9,
+                "upper": 150,
+                "weighted": false
+              }
+            ],
+            "eta": 1,
+            "unrejected_e_low": [
+              26,
+              27,
+              28,
+              29
+            ]
+          },
+          {
+            "admissible_e_low_max": 41,
+            "admissible_e_low_min": 17,
+            "branches": [
+              {
+                "e_low": 17,
+                "reason": "empty_projection"
+              },
+              {
+                "e_low": 18,
+                "reason": "empty_projection"
+              },
+              {
+                "e_low": 19,
+                "reason": "empty_projection"
+              },
+              {
+                "e_low": 20,
+                "reason": "empty_projection"
+              },
+              {
+                "e_low": 21,
+                "reason": "empty_projection"
+              },
+              {
+                "e_low": 22,
+                "reason": "empty_projection"
+              },
+              {
+                "e_low": 23,
+                "reason": "empty_projection"
+              },
+              {
+                "e_low": 24,
+                "reason": "empty_projection"
+              },
+              {
+                "e_low": 25,
+                "reason": "empty_projection"
+              },
+              {
+                "charge_eta": 0,
+                "e_low": 26,
+                "gap": -97,
+                "lower": 142,
+                "reason": "price",
+                "tau": 1,
+                "theta": 2,
+                "upper": 239,
+                "weighted": false
+              },
+              {
+                "charge_eta": 2,
+                "e_low": 27,
+                "gap": -92,
+                "lower": 0,
+                "reason": "price",
+                "tau": 1,
+                "theta": 0,
+                "upper": 92,
+                "weighted": false
+              },
+              {
+                "charge_eta": 2,
+                "e_low": 28,
+                "gap": -85,
+                "lower": 0,
+                "reason": "price",
+                "tau": 1,
+                "theta": 0,
+                "upper": 85,
+                "weighted": false
+              },
+              {
+                "charge_eta": 2,
+                "e_low": 29,
+                "gap": -78,
+                "lower": 0,
+                "reason": "price",
+                "tau": 1,
+                "theta": 0,
+                "upper": 78,
+                "weighted": false
+              },
+              {
+                "charge_eta": 2,
+                "e_low": 30,
+                "gap": -71,
+                "lower": 0,
+                "reason": "price",
+                "tau": 1,
+                "theta": 0,
+                "upper": 71,
+                "weighted": false
+              },
+              {
+                "charge_eta": 2,
+                "e_low": 31,
+                "gap": -66,
+                "lower": 0,
+                "reason": "price",
+                "tau": 1,
+                "theta": 0,
+                "upper": 66,
+                "weighted": false
+              },
+              {
+                "charge_eta": 2,
+                "e_low": 32,
+                "gap": -59,
+                "lower": 0,
+                "reason": "price",
+                "tau": 1,
+                "theta": 0,
+                "upper": 59,
+                "weighted": false
+              },
+              {
+                "charge_eta": 2,
+                "e_low": 33,
+                "gap": -52,
+                "lower": 0,
+                "reason": "price",
+                "tau": 1,
+                "theta": 0,
+                "upper": 52,
+                "weighted": false
+              },
+              {
+                "charge_eta": 2,
+                "e_low": 34,
+                "gap": -45,
+                "lower": 0,
+                "reason": "price",
+                "tau": 1,
+                "theta": 0,
+                "upper": 45,
+                "weighted": false
+              },
+              {
+                "charge_eta": 2,
+                "e_low": 35,
+                "gap": -38,
+                "lower": 0,
+                "reason": "price",
+                "tau": 1,
+                "theta": 0,
+                "upper": 38,
+                "weighted": false
+              },
+              {
+                "charge_eta": 2,
+                "e_low": 36,
+                "gap": -33,
+                "lower": 0,
+                "reason": "price",
+                "tau": 1,
+                "theta": 0,
+                "upper": 33,
+                "weighted": false
+              },
+              {
+                "charge_eta": 2,
+                "e_low": 37,
+                "gap": -26,
+                "lower": 0,
+                "reason": "price",
+                "tau": 1,
+                "theta": 0,
+                "upper": 26,
+                "weighted": false
+              },
+              {
+                "charge_eta": 2,
+                "e_low": 38,
+                "gap": -18,
+                "lower": 0,
+                "reason": "price",
+                "tau": 1,
+                "theta": 0,
+                "upper": 18,
+                "weighted": false
+              },
+              {
+                "charge_eta": 2,
+                "e_low": 39,
+                "gap": -12,
+                "lower": 0,
+                "reason": "price",
+                "tau": 1,
+                "theta": 0,
+                "upper": 12,
+                "weighted": false
+              },
+              {
+                "charge_eta": 2,
+                "e_low": 40,
+                "gap": -5,
+                "lower": 0,
+                "reason": "price",
+                "tau": 1,
+                "theta": 0,
+                "upper": 5,
+                "weighted": false
+              },
+              {
+                "charge_eta": 2,
+                "e_low": 41,
+                "gap": 0,
+                "lower": 0,
+                "reason": "price",
+                "tau": 1,
+                "theta": 0,
+                "upper": 0,
+                "weighted": false
+              }
+            ],
+            "eta": 2,
+            "unrejected_e_low": [
+              26,
+              27,
+              28,
+              29,
+              30,
+              31,
+              32,
+              33,
+              34,
+              35,
+              36,
+              37,
+              38,
+              39,
+              40,
+              41
+            ]
+          },
+          {
+            "admissible_e_low_max": 41,
+            "admissible_e_low_min": 33,
+            "branches": [
+              {
+                "charge_eta": 0,
+                "e_low": 33,
+                "gap": 36,
+                "lower": 452,
+                "reason": "price",
+                "tau": 5,
+                "theta": 27,
+                "upper": 416,
+                "weighted": true
+              },
+              {
+                "charge_eta": 0,
+                "e_low": 34,
+                "gap": 3,
+                "lower": 434,
+                "reason": "price",
+                "tau": 5,
+                "theta": 24,
+                "upper": 431,
+                "weighted": true
+              },
+              {
+                "charge_eta": 3,
+                "e_low": 35,
+                "gap": -30,
+                "lower": 0,
+                "reason": "price",
+                "tau": 1,
+                "theta": 0,
+                "upper": 30,
+                "weighted": false
+              },
+              {
+                "charge_eta": 3,
+                "e_low": 36,
+                "gap": -25,
+                "lower": 0,
+                "reason": "price",
+                "tau": 1,
+                "theta": 0,
+                "upper": 25,
+                "weighted": false
+              },
+              {
+                "charge_eta": 3,
+                "e_low": 37,
+                "gap": -22,
+                "lower": 0,
+                "reason": "price",
+                "tau": 1,
+                "theta": 0,
+                "upper": 22,
+                "weighted": false
+              },
+              {
+                "charge_eta": 3,
+                "e_low": 38,
+                "gap": -16,
+                "lower": 0,
+                "reason": "price",
+                "tau": 1,
+                "theta": 0,
+                "upper": 16,
+                "weighted": false
+              },
+              {
+                "charge_eta": 3,
+                "e_low": 39,
+                "gap": -12,
+                "lower": 0,
+                "reason": "price",
+                "tau": 1,
+                "theta": 0,
+                "upper": 12,
+                "weighted": false
+              },
+              {
+                "charge_eta": 3,
+                "e_low": 40,
+                "gap": -5,
+                "lower": 0,
+                "reason": "price",
+                "tau": 1,
+                "theta": 0,
+                "upper": 5,
+                "weighted": false
+              },
+              {
+                "charge_eta": 3,
+                "e_low": 41,
+                "gap": 0,
+                "lower": 0,
+                "reason": "price",
+                "tau": 1,
+                "theta": 0,
+                "upper": 0,
+                "weighted": false
+              }
+            ],
+            "eta": 3,
+            "unrejected_e_low": [
+              35,
+              36,
+              37,
+              38,
+              39,
+              40,
+              41
+            ]
+          }
+        ]
+      },
+      {
+        "excluded": false,
+        "row": 347,
+        "splits": [
+          {
+            "admissible_e_low_max": 56,
+            "admissible_e_low_min": 47,
+            "branches": [
+              {
+                "charge_eta": 1,
+                "e_low": 47,
+                "gap": -44,
+                "lower": 0,
+                "reason": "price",
+                "tau": 1,
+                "theta": 0,
+                "upper": 44,
+                "weighted": false
+              },
+              {
+                "charge_eta": 1,
+                "e_low": 48,
+                "gap": -40,
+                "lower": 0,
+                "reason": "price",
+                "tau": 1,
+                "theta": 0,
+                "upper": 40,
+                "weighted": false
+              },
+              {
+                "charge_eta": 1,
+                "e_low": 49,
+                "gap": -36,
+                "lower": 0,
+                "reason": "price",
+                "tau": 1,
+                "theta": 0,
+                "upper": 36,
+                "weighted": false
+              },
+              {
+                "charge_eta": 1,
+                "e_low": 50,
+                "gap": -35,
+                "lower": 0,
+                "reason": "price",
+                "tau": 1,
+                "theta": 0,
+                "upper": 35,
+                "weighted": false
+              },
+              {
+                "charge_eta": 1,
+                "e_low": 51,
+                "gap": -30,
+                "lower": 0,
+                "reason": "price",
+                "tau": 1,
+                "theta": 0,
+                "upper": 30,
+                "weighted": false
+              },
+              {
+                "charge_eta": 1,
+                "e_low": 52,
+                "gap": -24,
+                "lower": 0,
+                "reason": "price",
+                "tau": 1,
+                "theta": 0,
+                "upper": 24,
+                "weighted": false
+              },
+              {
+                "charge_eta": 1,
+                "e_low": 53,
+                "gap": -16,
+                "lower": 0,
+                "reason": "price",
+                "tau": 1,
+                "theta": 0,
+                "upper": 16,
+                "weighted": false
+              },
+              {
+                "charge_eta": 1,
+                "e_low": 54,
+                "gap": -10,
+                "lower": 0,
+                "reason": "price",
+                "tau": 1,
+                "theta": 0,
+                "upper": 10,
+                "weighted": false
+              },
+              {
+                "charge_eta": 1,
+                "e_low": 55,
+                "gap": -4,
+                "lower": 0,
+                "reason": "price",
+                "tau": 1,
+                "theta": 0,
+                "upper": 4,
+                "weighted": false
+              },
+              {
+                "charge_eta": 1,
+                "e_low": 56,
+                "gap": 0,
+                "lower": 0,
+                "reason": "price",
+                "tau": 1,
+                "theta": 0,
+                "upper": 0,
+                "weighted": false
+              }
+            ],
+            "eta": 1,
+            "unrejected_e_low": [
+              47,
+              48,
+              49,
+              50,
+              51,
+              52,
+              53,
+              54,
+              55,
+              56
+            ]
+          },
+          {
+            "admissible_e_low_max": 56,
+            "admissible_e_low_min": 52,
+            "branches": [
+              {
+                "charge_eta": 3,
+                "e_low": 52,
+                "gap": -12,
+                "lower": 0,
+                "reason": "price",
+                "tau": 1,
+                "theta": 0,
+                "upper": 12,
+                "weighted": false
+              },
+              {
+                "charge_eta": 3,
+                "e_low": 53,
+                "gap": -9,
+                "lower": 0,
+                "reason": "price",
+                "tau": 1,
+                "theta": 0,
+                "upper": 9,
+                "weighted": false
+              },
+              {
+                "charge_eta": 3,
+                "e_low": 54,
+                "gap": -6,
+                "lower": 0,
+                "reason": "price",
+                "tau": 1,
+                "theta": 0,
+                "upper": 6,
+                "weighted": false
+              },
+              {
+                "charge_eta": 3,
+                "e_low": 55,
+                "gap": -3,
+                "lower": 0,
+                "reason": "price",
+                "tau": 1,
+                "theta": 0,
+                "upper": 3,
+                "weighted": false
+              },
+              {
+                "charge_eta": 3,
+                "e_low": 56,
+                "gap": 0,
+                "lower": 0,
+                "reason": "price",
+                "tau": 1,
+                "theta": 0,
+                "upper": 0,
+                "weighted": false
+              }
+            ],
+            "eta": 3,
+            "unrejected_e_low": [
+              52,
+              53,
+              54,
+              55,
+              56
+            ]
+          }
+        ]
+      },
+      {
+        "excluded": true,
+        "row": 365,
+        "splits": [
+          {
+            "admissible_e_low_max": 38,
+            "admissible_e_low_min": 22,
+            "branches": [
+              {
+                "charge_eta": 0,
+                "e_low": 22,
+                "gap": 6,
+                "lower": 206,
+                "reason": "price",
+                "tau": 1,
+                "theta": 6,
+                "upper": 200,
+                "weighted": false
+              },
+              {
+                "charge_eta": 0,
+                "e_low": 23,
+                "gap": 1,
+                "lower": 206,
+                "reason": "price",
+                "tau": 1,
+                "theta": 6,
+                "upper": 205,
+                "weighted": false
+              },
+              {
+                "charge_eta": 0,
+                "e_low": 24,
+                "gap": 2,
+                "lower": 204,
+                "reason": "price",
+                "tau": 1,
+                "theta": 5,
+                "upper": 202,
+                "weighted": false
+              },
+              {
+                "charge_eta": 0,
+                "e_low": 25,
+                "gap": 5,
+                "lower": 204,
+                "reason": "price",
+                "tau": 1,
+                "theta": 5,
+                "upper": 199,
+                "weighted": false
+              },
+              {
+                "charge_eta": 0,
+                "e_low": 26,
+                "gap": 8,
+                "lower": 204,
+                "reason": "price",
+                "tau": 1,
+                "theta": 5,
+                "upper": 196,
+                "weighted": false
+              },
+              {
+                "charge_eta": 0,
+                "e_low": 27,
+                "gap": 19,
+                "lower": 206,
+                "reason": "price",
+                "tau": 1,
+                "theta": 6,
+                "upper": 187,
+                "weighted": false
+              },
+              {
+                "charge_eta": 0,
+                "e_low": 28,
+                "gap": 22,
+                "lower": 206,
+                "reason": "price",
+                "tau": 1,
+                "theta": 6,
+                "upper": 184,
+                "weighted": false
+              },
+              {
+                "charge_eta": 0,
+                "e_low": 29,
+                "gap": 25,
+                "lower": 206,
+                "reason": "price",
+                "tau": 1,
+                "theta": 6,
+                "upper": 181,
+                "weighted": false
+              },
+              {
+                "charge_eta": 0,
+                "e_low": 30,
+                "gap": 32,
+                "lower": 208,
+                "reason": "price",
+                "tau": 1,
+                "theta": 6,
+                "upper": 176,
+                "weighted": false
+              },
+              {
+                "charge_eta": 0,
+                "e_low": 31,
+                "gap": 65,
+                "lower": 226,
+                "reason": "price",
+                "tau": 1,
+                "theta": 9,
+                "upper": 161,
+                "weighted": false
+              },
+              {
+                "e_low": 32,
+                "gap": 1,
+                "reason": "total_capacity"
+              },
+              {
+                "e_low": 33,
+                "gap": 9,
+                "reason": "total_capacity"
+              },
+              {
+                "e_low": 34,
+                "gap": 12,
+                "reason": "total_capacity"
+              },
+              {
+                "e_low": 35,
+                "gap": 19,
+                "reason": "total_capacity"
+              },
+              {
+                "e_low": 36,
+                "gap": 22,
+                "reason": "total_capacity"
+              },
+              {
+                "e_low": 37,
+                "gap": 27,
+                "reason": "total_capacity"
+              },
+              {
+                "e_low": 38,
+                "gap": 28,
+                "reason": "total_capacity"
+              }
+            ],
+            "eta": 1,
+            "unrejected_e_low": []
+          }
+        ]
+      },
+      {
+        "excluded": false,
+        "row": 471,
+        "splits": [
+          {
+            "admissible_e_low_max": 47,
+            "admissible_e_low_min": 31,
+            "branches": [
+              {
+                "charge_eta": 0,
+                "e_low": 31,
+                "gap": -18,
+                "lower": 222,
+                "reason": "price",
+                "tau": 1,
+                "theta": 5,
+                "upper": 240,
+                "weighted": false
+              },
+              {
+                "charge_eta": 0,
+                "e_low": 32,
+                "gap": -16,
+                "lower": 222,
+                "reason": "price",
+                "tau": 1,
+                "theta": 5,
+                "upper": 238,
+                "weighted": false
+              },
+              {
+                "charge_eta": 0,
+                "e_low": 33,
+                "gap": -14,
+                "lower": 222,
+                "reason": "price",
+                "tau": 1,
+                "theta": 5,
+                "upper": 236,
+                "weighted": false
+              },
+              {
+                "charge_eta": 0,
+                "e_low": 34,
+                "gap": -18,
+                "lower": 222,
+                "reason": "price",
+                "tau": 1,
+                "theta": 5,
+                "upper": 240,
+                "weighted": false
+              },
+              {
+                "charge_eta": 0,
+                "e_low": 35,
+                "gap": -18,
+                "lower": 222,
+                "reason": "price",
+                "tau": 1,
+                "theta": 5,
+                "upper": 240,
+                "weighted": false
+              },
+              {
+                "charge_eta": 0,
+                "e_low": 36,
+                "gap": -13,
+                "lower": 222,
+                "reason": "price",
+                "tau": 1,
+                "theta": 5,
+                "upper": 235,
+                "weighted": false
+              },
+              {
+                "charge_eta": 0,
+                "e_low": 37,
+                "gap": -10,
+                "lower": 222,
+                "reason": "price",
+                "tau": 1,
+                "theta": 5,
+                "upper": 232,
+                "weighted": false
+              },
+              {
+                "charge_eta": 0,
+                "e_low": 38,
+                "gap": -10,
+                "lower": 222,
+                "reason": "price",
+                "tau": 1,
+                "theta": 5,
+                "upper": 232,
+                "weighted": false
+              },
+              {
+                "charge_eta": 0,
+                "e_low": 39,
+                "gap": -10,
+                "lower": 222,
+                "reason": "price",
+                "tau": 1,
+                "theta": 5,
+                "upper": 232,
+                "weighted": false
+              },
+              {
+                "charge_eta": 0,
+                "e_low": 40,
+                "gap": -4,
+                "lower": 222,
+                "reason": "price",
+                "tau": 1,
+                "theta": 5,
+                "upper": 226,
+                "weighted": false
+              },
+              {
+                "charge_eta": 0,
+                "e_low": 41,
+                "gap": 0,
+                "lower": 222,
+                "reason": "price",
+                "tau": 1,
+                "theta": 5,
+                "upper": 222,
+                "weighted": false
+              },
+              {
+                "charge_eta": 0,
+                "e_low": 42,
+                "gap": 2,
+                "lower": 222,
+                "reason": "price",
+                "tau": 1,
+                "theta": 5,
+                "upper": 220,
+                "weighted": false
+              },
+              {
+                "charge_eta": 0,
+                "e_low": 43,
+                "gap": 2,
+                "lower": 222,
+                "reason": "price",
+                "tau": 1,
+                "theta": 5,
+                "upper": 220,
+                "weighted": false
+              },
+              {
+                "charge_eta": 0,
+                "e_low": 44,
+                "gap": 8,
+                "lower": 222,
+                "reason": "price",
+                "tau": 1,
+                "theta": 5,
+                "upper": 214,
+                "weighted": false
+              },
+              {
+                "charge_eta": 0,
+                "e_low": 45,
+                "gap": 12,
+                "lower": 222,
+                "reason": "price",
+                "tau": 1,
+                "theta": 5,
+                "upper": 210,
+                "weighted": false
+              },
+              {
+                "charge_eta": 0,
+                "e_low": 46,
+                "gap": 14,
+                "lower": 222,
+                "reason": "price",
+                "tau": 1,
+                "theta": 5,
+                "upper": 208,
+                "weighted": false
+              },
+              {
+                "charge_eta": 0,
+                "e_low": 47,
+                "gap": 14,
+                "lower": 222,
+                "reason": "price",
+                "tau": 1,
+                "theta": 5,
+                "upper": 208,
+                "weighted": false
+              }
+            ],
+            "eta": 1,
+            "unrejected_e_low": [
+              31,
+              32,
+              33,
+              34,
+              35,
+              36,
+              37,
+              38,
+              39,
+              40,
+              41
+            ]
+          },
+          {
+            "admissible_e_low_max": 47,
+            "admissible_e_low_min": 38,
+            "branches": [
+              {
+                "charge_eta": 0,
+                "e_low": 38,
+                "gap": 12,
+                "lower": 230,
+                "reason": "price",
+                "tau": 1,
+                "theta": 7,
+                "upper": 218,
+                "weighted": false
+              },
+              {
+                "charge_eta": 0,
+                "e_low": 39,
+                "gap": -8,
+                "lower": 224,
+                "reason": "price",
+                "tau": 1,
+                "theta": 5,
+                "upper": 232,
+                "weighted": false
+              },
+              {
+                "charge_eta": 0,
+                "e_low": 40,
+                "gap": -7,
+                "lower": 223,
+                "reason": "price",
+                "tau": 1,
+                "theta": 5,
+                "upper": 230,
+                "weighted": false
+              },
+              {
+                "charge_eta": 0,
+                "e_low": 41,
+                "gap": -12,
+                "lower": 222,
+                "reason": "price",
+                "tau": 1,
+                "theta": 5,
+                "upper": 234,
+                "weighted": false
+              },
+              {
+                "charge_eta": 0,
+                "e_low": 42,
+                "gap": -13,
+                "lower": 222,
+                "reason": "price",
+                "tau": 1,
+                "theta": 5,
+                "upper": 235,
+                "weighted": false
+              },
+              {
+                "charge_eta": 0,
+                "e_low": 43,
+                "gap": -22,
+                "lower": 222,
+                "reason": "price",
+                "tau": 1,
+                "theta": 5,
+                "upper": 244,
+                "weighted": false
+              },
+              {
+                "charge_eta": 0,
+                "e_low": 44,
+                "gap": -16,
+                "lower": 222,
+                "reason": "price",
+                "tau": 1,
+                "theta": 5,
+                "upper": 238,
+                "weighted": false
+              },
+              {
+                "charge_eta": 2,
+                "e_low": 45,
+                "gap": -10,
+                "lower": 0,
+                "reason": "price",
+                "tau": 1,
+                "theta": 0,
+                "upper": 10,
+                "weighted": false
+              },
+              {
+                "charge_eta": 2,
+                "e_low": 46,
+                "gap": -4,
+                "lower": 0,
+                "reason": "price",
+                "tau": 1,
+                "theta": 0,
+                "upper": 4,
+                "weighted": false
+              },
+              {
+                "charge_eta": 2,
+                "e_low": 47,
+                "gap": 0,
+                "lower": 0,
+                "reason": "price",
+                "tau": 1,
+                "theta": 0,
+                "upper": 0,
+                "weighted": false
+              }
+            ],
+            "eta": 2,
+            "unrejected_e_low": [
+              39,
+              40,
+              41,
+              42,
+              43,
+              44,
+              45,
+              46,
+              47
+            ]
+          }
+        ]
+      },
+      {
+        "excluded": true,
+        "row": 570,
+        "splits": [
+          {
+            "admissible_e_low_max": 49,
+            "admissible_e_low_min": 30,
+            "branches": [
+              {
+                "charge_eta": 0,
+                "e_low": 30,
+                "gap": -4,
+                "lower": 242,
+                "reason": "price",
+                "tau": 1,
+                "theta": 5,
+                "upper": 246,
+                "weighted": false
+              },
+              {
+                "charge_eta": 0,
+                "e_low": 31,
+                "gap": -2,
+                "lower": 242,
+                "reason": "price",
+                "tau": 1,
+                "theta": 5,
+                "upper": 244,
+                "weighted": false
+              },
+              {
+                "charge_eta": 0,
+                "e_low": 32,
+                "gap": -2,
+                "lower": 242,
+                "reason": "price",
+                "tau": 1,
+                "theta": 5,
+                "upper": 244,
+                "weighted": false
+              },
+              {
+                "charge_eta": 0,
+                "e_low": 33,
+                "gap": -2,
+                "lower": 242,
+                "reason": "price",
+                "tau": 1,
+                "theta": 5,
+                "upper": 244,
+                "weighted": false
+              },
+              {
+                "charge_eta": 0,
+                "e_low": 34,
+                "gap": 3,
+                "lower": 242,
+                "reason": "price",
+                "tau": 1,
+                "theta": 5,
+                "upper": 239,
+                "weighted": false
+              },
+              {
+                "charge_eta": 0,
+                "e_low": 35,
+                "gap": 4,
+                "lower": 242,
+                "reason": "price",
+                "tau": 1,
+                "theta": 5,
+                "upper": 238,
+                "weighted": false
+              },
+              {
+                "charge_eta": 0,
+                "e_low": 36,
+                "gap": 6,
+                "lower": 242,
+                "reason": "price",
+                "tau": 1,
+                "theta": 5,
+                "upper": 236,
+                "weighted": false
+              },
+              {
+                "charge_eta": 0,
+                "e_low": 37,
+                "gap": 6,
+                "lower": 242,
+                "reason": "price",
+                "tau": 1,
+                "theta": 5,
+                "upper": 236,
+                "weighted": false
+              },
+              {
+                "charge_eta": 0,
+                "e_low": 38,
+                "gap": 12,
+                "lower": 242,
+                "reason": "price",
+                "tau": 1,
+                "theta": 5,
+                "upper": 230,
+                "weighted": false
+              },
+              {
+                "charge_eta": 0,
+                "e_low": 39,
+                "gap": 14,
+                "lower": 242,
+                "reason": "price",
+                "tau": 1,
+                "theta": 5,
+                "upper": 228,
+                "weighted": false
+              },
+              {
+                "charge_eta": 0,
+                "e_low": 40,
+                "gap": 17,
+                "lower": 242,
+                "reason": "price",
+                "tau": 1,
+                "theta": 5,
+                "upper": 225,
+                "weighted": false
+              },
+              {
+                "charge_eta": 0,
+                "e_low": 41,
+                "gap": 18,
+                "lower": 242,
+                "reason": "price",
+                "tau": 1,
+                "theta": 5,
+                "upper": 224,
+                "weighted": false
+              },
+              {
+                "charge_eta": 0,
+                "e_low": 42,
+                "gap": 22,
+                "lower": 242,
+                "reason": "price",
+                "tau": 1,
+                "theta": 5,
+                "upper": 220,
+                "weighted": false
+              },
+              {
+                "charge_eta": 0,
+                "e_low": 43,
+                "gap": 24,
+                "lower": 242,
+                "reason": "price",
+                "tau": 1,
+                "theta": 5,
+                "upper": 218,
+                "weighted": false
+              },
+              {
+                "charge_eta": 0,
+                "e_low": 44,
+                "gap": 26,
+                "lower": 242,
+                "reason": "price",
+                "tau": 1,
+                "theta": 5,
+                "upper": 216,
+                "weighted": false
+              },
+              {
+                "charge_eta": 0,
+                "e_low": 45,
+                "gap": 26,
+                "lower": 242,
+                "reason": "price",
+                "tau": 1,
+                "theta": 5,
+                "upper": 216,
+                "weighted": false
+              },
+              {
+                "e_low": 46,
+                "gap": 3,
+                "reason": "total_capacity"
+              },
+              {
+                "e_low": 47,
+                "gap": 11,
+                "reason": "total_capacity"
+              },
+              {
+                "e_low": 48,
+                "gap": 17,
+                "reason": "total_capacity"
+              },
+              {
+                "e_low": 49,
+                "gap": 22,
+                "reason": "total_capacity"
+              }
+            ],
+            "eta": 1,
+            "unrejected_e_low": [
+              30,
+              31,
+              32,
+              33
+            ]
+          },
+          {
+            "admissible_e_low_max": 49,
+            "admissible_e_low_min": 43,
+            "branches": [
+              {
+                "e_low": 43,
+                "gap": 2,
+                "reason": "total_capacity"
+              },
+              {
+                "e_low": 44,
+                "gap": 2,
+                "reason": "total_capacity"
+              },
+              {
+                "charge_eta": 0,
+                "e_low": 45,
+                "gap": 18,
+                "lower": 253,
+                "reason": "price",
+                "tau": 1,
+                "theta": 7,
+                "upper": 235,
+                "weighted": false
+              },
+              {
+                "charge_eta": 0,
+                "e_low": 46,
+                "gap": 7,
+                "lower": 247,
+                "reason": "price",
+                "tau": 1,
+                "theta": 6,
+                "upper": 240,
+                "weighted": false
+              },
+              {
+                "charge_eta": 0,
+                "e_low": 47,
+                "gap": 1,
+                "lower": 242,
+                "reason": "price",
+                "tau": 1,
+                "theta": 5,
+                "upper": 241,
+                "weighted": false
+              },
+              {
+                "charge_eta": 0,
+                "e_low": 48,
+                "gap": 2,
+                "lower": 242,
+                "reason": "price",
+                "tau": 1,
+                "theta": 5,
+                "upper": 240,
+                "weighted": false
+              },
+              {
+                "charge_eta": 0,
+                "e_low": 49,
+                "gap": 2,
+                "lower": 242,
+                "reason": "price",
+                "tau": 1,
+                "theta": 5,
+                "upper": 240,
+                "weighted": false
+              }
+            ],
+            "eta": 2,
+            "unrejected_e_low": []
+          }
+        ]
+      },
+      {
+        "excluded": false,
+        "row": 586,
+        "splits": [
+          {
+            "admissible_e_low_max": 52,
+            "admissible_e_low_min": 37,
+            "branches": [
+              {
+                "charge_eta": 1,
+                "e_low": 37,
+                "gap": -42,
+                "lower": 39,
+                "reason": "price",
+                "tau": 6,
+                "theta": 3,
+                "upper": 81,
+                "weighted": false
+              },
+              {
+                "charge_eta": 1,
+                "e_low": 38,
+                "gap": -46,
+                "lower": 35,
+                "reason": "price",
+                "tau": 6,
+                "theta": 3,
+                "upper": 81,
+                "weighted": false
+              },
+              {
+                "charge_eta": 1,
+                "e_low": 39,
+                "gap": -57,
+                "lower": 29,
+                "reason": "price",
+                "tau": 6,
+                "theta": 3,
+                "upper": 86,
+                "weighted": false
+              },
+              {
+                "charge_eta": 1,
+                "e_low": 40,
+                "gap": -64,
+                "lower": 28,
+                "reason": "price",
+                "tau": 6,
+                "theta": 2,
+                "upper": 92,
+                "weighted": false
+              },
+              {
+                "charge_eta": 1,
+                "e_low": 41,
+                "gap": -50,
+                "lower": 28,
+                "reason": "price",
+                "tau": 6,
+                "theta": 2,
+                "upper": 78,
+                "weighted": false
+              },
+              {
+                "charge_eta": 1,
+                "e_low": 42,
+                "gap": -42,
+                "lower": 28,
+                "reason": "price",
+                "tau": 6,
+                "theta": 2,
+                "upper": 70,
+                "weighted": false
+              },
+              {
+                "charge_eta": 1,
+                "e_low": 43,
+                "gap": -28,
+                "lower": 29,
+                "reason": "price",
+                "tau": 6,
+                "theta": 3,
+                "upper": 57,
+                "weighted": false
+              },
+              {
+                "charge_eta": 1,
+                "e_low": 44,
+                "gap": -21,
+                "lower": 29,
+                "reason": "price",
+                "tau": 6,
+                "theta": 3,
+                "upper": 50,
+                "weighted": false
+              },
+              {
+                "charge_eta": 1,
+                "e_low": 45,
+                "gap": -9,
+                "lower": 93,
+                "reason": "price",
+                "tau": 6,
+                "theta": 9,
+                "upper": 102,
+                "weighted": true
+              },
+              {
+                "charge_eta": 1,
+                "e_low": 46,
+                "gap": 3,
+                "lower": 93,
+                "reason": "price",
+                "tau": 6,
+                "theta": 9,
+                "upper": 90,
+                "weighted": true
+              },
+              {
+                "charge_eta": 1,
+                "e_low": 47,
+                "gap": 8,
+                "lower": 37,
+                "reason": "price",
+                "tau": 6,
+                "theta": 4,
+                "upper": 29,
+                "weighted": false
+              },
+              {
+                "charge_eta": 1,
+                "e_low": 48,
+                "gap": 18,
+                "lower": 40,
+                "reason": "price",
+                "tau": 6,
+                "theta": 4,
+                "upper": 22,
+                "weighted": false
+              },
+              {
+                "charge_eta": 1,
+                "e_low": 49,
+                "gap": 35,
+                "lower": 50,
+                "reason": "price",
+                "tau": 6,
+                "theta": 4,
+                "upper": 15,
+                "weighted": false
+              },
+              {
+                "charge_eta": 1,
+                "e_low": 50,
+                "gap": 52,
+                "lower": 60,
+                "reason": "price",
+                "tau": 6,
+                "theta": 4,
+                "upper": 8,
+                "weighted": false
+              },
+              {
+                "charge_eta": 1,
+                "e_low": 51,
+                "gap": 67,
+                "lower": 70,
+                "reason": "price",
+                "tau": 6,
+                "theta": 4,
+                "upper": 3,
+                "weighted": false
+              },
+              {
+                "charge_eta": 1,
+                "e_low": 52,
+                "gap": 76,
+                "lower": 76,
+                "reason": "price",
+                "tau": 6,
+                "theta": 4,
+                "upper": 0,
+                "weighted": false
+              }
+            ],
+            "eta": 1,
+            "unrejected_e_low": [
+              37,
+              38,
+              39,
+              40,
+              41,
+              42,
+              43,
+              44,
+              45
+            ]
+          },
+          {
+            "admissible_e_low_max": 52,
+            "admissible_e_low_min": 45,
+            "branches": [
+              {
+                "charge_eta": 2,
+                "e_low": 45,
+                "gap": -28,
+                "lower": 0,
+                "reason": "price",
+                "tau": 1,
+                "theta": 0,
+                "upper": 28,
+                "weighted": false
+              },
+              {
+                "charge_eta": 2,
+                "e_low": 46,
+                "gap": -24,
+                "lower": 0,
+                "reason": "price",
+                "tau": 1,
+                "theta": 0,
+                "upper": 24,
+                "weighted": false
+              },
+              {
+                "charge_eta": 2,
+                "e_low": 47,
+                "gap": -20,
+                "lower": 0,
+                "reason": "price",
+                "tau": 1,
+                "theta": 0,
+                "upper": 20,
+                "weighted": false
+              },
+              {
+                "charge_eta": 2,
+                "e_low": 48,
+                "gap": -18,
+                "lower": 0,
+                "reason": "price",
+                "tau": 1,
+                "theta": 0,
+                "upper": 18,
+                "weighted": false
+              },
+              {
+                "charge_eta": 2,
+                "e_low": 49,
+                "gap": -14,
+                "lower": 0,
+                "reason": "price",
+                "tau": 1,
+                "theta": 0,
+                "upper": 14,
+                "weighted": false
+              },
+              {
+                "charge_eta": 2,
+                "e_low": 50,
+                "gap": -10,
+                "lower": 0,
+                "reason": "price",
+                "tau": 1,
+                "theta": 0,
+                "upper": 10,
+                "weighted": false
+              },
+              {
+                "charge_eta": 2,
+                "e_low": 51,
+                "gap": -4,
+                "lower": 0,
+                "reason": "price",
+                "tau": 1,
+                "theta": 0,
+                "upper": 4,
+                "weighted": false
+              },
+              {
+                "charge_eta": 2,
+                "e_low": 52,
+                "gap": 0,
+                "lower": 0,
+                "reason": "price",
+                "tau": 1,
+                "theta": 0,
+                "upper": 0,
+                "weighted": false
+              }
+            ],
+            "eta": 2,
+            "unrejected_e_low": [
+              45,
+              46,
+              47,
+              48,
+              49,
+              50,
+              51,
+              52
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  "schema": "conditioned-spill-slack-v1",
+  "source_corpus_sha256": "157db7e1f48261626eac8cb99bf875f4aec3b707d4c024f62989dd1bcec38572"
+}
