@@ -1,6 +1,6 @@
 # Type-compressed orientation Hall v1
 
-14 September 2026. **Candidate general structural package. Internal exact audits are green through the exact staircase-threshold theorem and the staircase-band necessary relaxation; external mathematical review, novelty assessment and genuinely independent third-party reproduction remain OPEN.**
+14 September 2026. **Candidate general structural package. Internal exact audits are green through the exact staircase-threshold theorem and the staircase-band necessary relaxation; the state-226 coarse-band exception is now isolated and durably preserved. External mathematical review, novelty assessment and genuinely independent third-party reproduction remain OPEN.**
 
 ## Headline progression
 
@@ -28,8 +28,9 @@ The package now gives the following chain.
 5. **Canonical antichain certificate — exact.** Submodularity makes the minimum-margin type sets a lattice. Their union is the unique maximal minimizer `M+`; it is a sharp-hardness up-set and has a unique minimal antichain boundary. A closure-augmented quotient max-flow recovers the same `M+` from one exact residual min-cut. See [`CANONICAL_ANTICHAIN_CERTIFICATE.md`](CANONICAL_ANTICHAIN_CERTIFICATE.md).
 6. **Moving staircase threshold — exact.** If the minimal generators are ordered by increasing cross degree `c`, their demand `q` is nondecreasing and `P` strictly increases on equal-`q` plateaus. Every type's membership is determined exactly by the first generator cross-degree above it and one moving `(q,P)` threshold. See [`STAIRCASE_THRESHOLD_HALL.md`](STAIRCASE_THRESHOLD_HALL.md).
 7. **Staircase-band flow — necessary relaxation.** Group selected sources by staircase band. Every target type sees a contiguous interval of generator-compatible bands, giving a smaller capacitated interval-neighborhood flow. Exact target-flow feasibility implies band-flow feasibility, but not conversely. See [`STAIRCASE_BAND_HALL.md`](STAIRCASE_BAND_HALL.md).
+8. **Compatible-copy band refinement — derived pilot result, formal CI theorem package still pending.** The unique coarse-band false negative is entirely caused by a generator-compatible edge being assigned to five non-generator source copies that are not individually compatible. Counting only genuinely compatible selected source copies on each band/target edge rejects that exception, while monotonicity preserves all earlier coarse-band failures. On the frozen 15-state pilot this gives `205,919/205,919` detection of exact target-Hall failures. See [`STATE_226_BAND_EXCEPTION.md`](STATE_226_BAND_EXCEPTION.md).
 
-Thus the dominant target-Hall obstruction is no longer an arbitrary labelled max-flow failure: its exact certificate is a canonical type-level staircase, and it admits a further consecutive-band relaxation suitable for aggregate all-order arguments.
+Thus the dominant target-Hall obstruction is no longer an arbitrary labelled max-flow failure: its exact certificate is a canonical type-level staircase, and it admits a highly faithful band compression. The compatible-copy refinement is the current theorem-development target; it is documented but is not yet being described as independently CI-audited beyond the exact state-226 diagnostic and monotonicity argument.
 
 ## Verification
 
@@ -133,13 +134,31 @@ sha256:ced7c25892c42a0a13a61c404642da6f27af21607655be255b20efd498a03a24
 zero discrepancies.
 ```
 
-For detailed provenance and trust boundaries see [`AUDIT.md`](AUDIT.md) and the continuation [`STAIRCASE_AUDIT.md`](STAIRCASE_AUDIT.md).
+### Coarse-band reach and state-226 diagnostic
+
+[`STAIRCASE_BAND_REACH_PILOT.md`](STAIRCASE_BAND_REACH_PILOT.md) records GitHub Actions run `34832806900`: among `205,919` exact target-Hall failures in the deterministic 15-state pilot, the coarse staircase-band relaxation rejects `205,918` and passes exactly one.
+
+The dedicated diagnostic run `34838612503` completed green and asserted uniqueness of that exception. The raw exception block is frozen in [`STATE_226_BAND_EXCEPTION_DIAGNOSTIC.txt`](STATE_226_BAND_EXCEPTION_DIAGNOSTIC.txt), with provenance in [`STATE_226_BAND_EXCEPTION_DIAGNOSTIC_PROVENANCE.json`](STATE_226_BAND_EXCEPTION_DIAGNOSTIC_PROVENANCE.json). The original workflow artifact is `10344904119` with digest
+
+```text
+sha256:7912587b4de8387107c8cd1c323fa38bc07dd8df2a9252a960240670123531fb
+```
+
+The exception is N34-derived state `226`, at `E=6`, `Q=47`. Exact quotient target flow is `46`, while the coarse band flow is exactly saturated at `39/39`. The only incoming-capacity overestimate is target type `(q,c,P,n)=(2,4,4,1)`: exact selected-source incoming capacity is `2`, while the coarse band model supplies `7`.
+
+The five-unit discrepancy is exactly the five copies of selected non-generator type `(q,c,rho,P,n)=(6,9,3,3,5)` which are grouped under easier generator `(5,9,4,4,1)`. The generator is compatible with the target because `5<=4+1`; the five non-generator copies are not because `6>4+1`.
+
+Counting only individually compatible selected source copies reduces the refined receiving-capacity total to `38` against band demand `39`. Since this refinement only removes capacity, all `205,918` previous coarse-band failures remain failures. Hence the compatible-copy refinement detects `205,919/205,919` exact target-Hall failures on this frozen pilot as a derived result. A separate formal theorem note and independent CI replay are still required before this refinement is promoted to the package's internally audited theorem chain.
+
+For detailed provenance and trust boundaries see [`AUDIT.md`](AUDIT.md), the continuation [`STAIRCASE_AUDIT.md`](STAIRCASE_AUDIT.md), and [`STATE_226_BAND_EXCEPTION.md`](STATE_226_BAND_EXCEPTION.md).
 
 ## Preserved failed simplifications
 
 [`PRINCIPAL_UPSET_COUNTEREXAMPLE.md`](PRINCIPAL_UPSET_COUNTEREXAMPLE.md) gives a three-type `V` for which every principal hardness up-set is nondeficient but a two-generator up-set has margin `-1`. A four-type example needs three incomparable generators. Hence neither “one type” nor “one principal up-set” is an exact replacement for the antichain boundary.
 
 The 15-state principal-upset reach pilot agrees with that diagnosis. The full relational stack excludes `13/15` pilot states, but principal up-sets completely explain only `2/13`; they kill more individual profiles than single-type cuts (`17,284` versus `14,768`) without eliminating the genuinely multi-generator obstruction.
+
+[`BAND_INTERVAL_CUT_COUNTEREXAMPLE.md`](BAND_INTERVAL_CUT_COUNTEREXAMPLE.md) also prevents a false interval shortcut: every contiguous source-band cut can be nonnegative while a disconnected band set is deficient. Consecutive target neighborhoods therefore do not imply that only contiguous source-band cuts need be checked.
 
 ## Murty-specific generator complexity
 
@@ -169,14 +188,16 @@ The modal obstruction has **four** generators and actual Murty-Simon profiles re
 
 ## Current research use
 
-The current all-order target is the **aggregate staircase-band flow**. The exact canonical boundary has strictly increasing `c`, nondecreasing `q`, and strictly increasing `P` along equal-`q` plateaus. In the current Murty-Simon source universe `q<=a-rho` and `c=q+rho`, hence `c<=a` and there is at most one generator breakpoint per integer cross-degree level.
+The current all-order target is the **compatible-copy staircase-band flow**. The exact canonical boundary has strictly increasing `c`, nondecreasing `q`, and strictly increasing `P` along equal-`q` plateaus. In the current Murty-Simon source universe `q<=a-rho` and `c=q+rho`, hence `c<=a` and there is at most one generator breakpoint per integer cross-degree level.
 
-The next question is whether the Murty-Simon-specific relations among `q`, `rho`, target cap `P`, demand, selected incidence, pair capacity and excess force the consecutive-band Hall inequalities automatically, or reduce a violating band interval to a small parametric family. That route can remain compact even though the raw number of generators is not small.
+The completed state-226 diagnostic shows exactly what the generator-only band model loses: within a band, a source with higher `q` can lose low-`c` targets still reachable by the easier generator. The next formal task is therefore to prove and independently verify the compatible-copy band aggregation, replay it across the frozen pilot, and then seek an aggregate scalar/interval description of those true compatible-copy capacities.
 
 In parallel, the checkpointed layer/state-safe relational scan of the canonical `3,607` survivor frontier is discovery only until its recovery and two-implementation audit chain completes. No scan-only candidate changes the canonical frontier.
 
 ## Trust boundary
 
-Theorems through the staircase threshold are exact for the directed target-flow relaxation under their stated `(q,c,P)` data. The staircase-band result is explicitly a necessary relaxation. Their Murty-Simon application inherits the canonical graph-to-constraint bridge and the validity of the target-capacity bounds. Target-flow feasibility is not graph feasibility.
+Theorems through the staircase threshold are exact for the directed target-flow relaxation under their stated `(q,c,P)` data. The coarse staircase-band theorem is a verified necessary relaxation. The compatible-copy refinement is presently a theorem-safe derived aggregation with a fully preserved state-226 diagnostic and frozen-pilot monotonicity argument, but it does **not** yet have its own independent CI theorem replay.
+
+Their Murty-Simon application inherits the canonical graph-to-constraint bridge and the validity of the target-capacity bounds. Target-flow feasibility is not graph feasibility.
 
 Repository CI and separately written internal verifiers are not third-party mathematical review. External review and novelty assessment remain open, and the unrestricted Murty-Simon conjecture remains unproved by this project.
