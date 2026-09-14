@@ -1,0 +1,161 @@
+#!/usr/bin/env python3
+"""Synchronize and audit canonical generalisation headline counts.
+
+The whole-state ledger is the source of truth. Historical frontier steps inside
+research notes are intentionally left untouched; only canonical/headline
+surfaces are synchronized.
+"""
+from pathlib import Path
+import argparse
+import csv
+import re
+
+ROOT = Path(__file__).resolve().parents[1]
+BASE = ROOT / "project/research/general_n/2026-09-13-alternative-attacks-v1"
+LEDGER = BASE / "WHOLE_STATE_LEDGER.tsv"
+ROOT_README = ROOT / "README.md"
+CURRENT = ROOT / "CURRENT_STATE.md"
+PACKAGE = BASE / "README.md"
+
+BASE_EXCLUSIONS = 994
+BASE_SURVIVORS = 4584
+N35_SURVIVORS = 78
+CATALOGUE_TOTAL = BASE_EXCLUSIONS + BASE_SURVIVORS
+
+
+def counts():
+    with LEDGER.open(newline="") as f:
+        rows = list(csv.DictReader(f, delimiter="\t"))
+    states = [int(r["state"]) for r in rows]
+    if len(states) != len(set(states)):
+        raise SystemExit("duplicate state in WHOLE_STATE_LEDGER.tsv")
+    closures = len(states)
+    exclusions = BASE_EXCLUSIONS + closures
+    survivors = BASE_SURVIVORS - closures
+    if exclusions + survivors != CATALOGUE_TOTAL:
+        raise SystemExit("catalogue accounting mismatch")
+    n34 = survivors - N35_SURVIVORS
+    if n34 < 0:
+        raise SystemExit("negative N34 survivor count")
+    return closures, exclusions, survivors, n34
+
+
+def commas(x):
+    return f"{x:,}"
+
+
+def sub_required(text, pattern, repl, label):
+    new, n = re.subn(pattern, repl, text, count=1, flags=re.MULTILINE)
+    if n != 1:
+        raise SystemExit(f"canonical status pattern not found exactly once: {label}")
+    return new
+
+
+def rewrite_root(text, c, e, s, n34):
+    text = sub_required(
+        text,
+        r"(Candidate proofs and reproducible research\. \*\*Updated .*?: )[\d,]+ quantified whole-state closures, frontier [\d,]+/[\d,]+(\. Independent mathematical review,)",
+        rf"\g<1>{commas(c)} quantified whole-state closures, frontier {commas(e)}/{commas(s)}\g<2>",
+        "root headline",
+    )
+    text = sub_required(
+        text,
+        r"^\| Generalisation frontier \| .*?\|$",
+        f"| Generalisation frontier | **{commas(e)} exclusions / {commas(s)} survivors** from the canonical quantified whole-state ledger; `{commas(n34)}` are N34 equality-derived and `{commas(N35_SURVIVORS)}` are N35 `m=306`-derived; these are scalar states in a frozen experiment, not surviving graphs |",
+        "root frontier table",
+    )
+    return text
+
+
+def rewrite_current(text, c, e, s, n34):
+    lines = text.splitlines()
+    found_head = found_guard = False
+    for i, line in enumerate(lines):
+        if line.startswith("**Research state reconciled:**"):
+            line = re.sub(r"[\d,]+ quantified whole-state closures", f"{commas(c)} quantified whole-state closures", line, count=1)
+            line = re.sub(r"frontier \*\*[\d,]+/[\d,]+\*\*", f"frontier **{commas(e)}/{commas(s)}**", line, count=1)
+            line = re.sub(
+                r"\(`?[\d,]+`? N34-derived survivors plus `?[\d,]+`? N35-derived survivors\)",
+                f"(`{commas(n34)}` N34-derived survivors plus `{commas(N35_SURVIVORS)}` N35-derived survivors)",
+                line,
+                count=1,
+            )
+            lines[i] = line
+            found_head = True
+        if line.startswith("**Durability guard:**"):
+            line = re.sub(r"currently verifies `?[\d,]+`? ledger states", f"currently verifies `{commas(c)}` ledger states", line, count=1)
+            lines[i] = line
+            found_guard = True
+    if not found_head or not found_guard:
+        raise SystemExit("CURRENT_STATE canonical headline/guard not found")
+    return "\n".join(lines) + ("\n" if text.endswith("\n") else "")
+
+
+def rewrite_package(text, c, e, s, n34):
+    text = sub_required(
+        text,
+        r"The canonical ledger now has \*\*[\d,]+ quantified N34-derived whole-state exclusions\*\*:",
+        f"The canonical ledger now has **{commas(c)} quantified N34-derived whole-state exclusions**:",
+        "package current ledger count",
+    )
+    text = sub_required(
+        text,
+        r"The canonical \[`WHOLE_STATE_LEDGER\.tsv`\]\(WHOLE_STATE_LEDGER\.tsv\) contains \*\*[\d,]+ quantified whole-state exclusions\*\*\.",
+        f"The canonical [`WHOLE_STATE_LEDGER.tsv`](WHOLE_STATE_LEDGER.tsv) contains **{commas(c)} quantified whole-state exclusions**.",
+        "package canonical ledger block",
+    )
+    text = sub_required(
+        text,
+        r"Canonical frontier: \*\*[\d,]+ exclusions / [\d,]+ survivors\*\* \(`?[\d,]+`? N34-derived plus `?[\d,]+`? N35-derived\)\.",
+        f"Canonical frontier: **{commas(e)} exclusions / {commas(s)} survivors** (`{commas(n34)}` N34-derived plus `{commas(N35_SURVIVORS)}` N35-derived).",
+        "package canonical frontier block",
+    )
+    return text
+
+
+def expected_snippets(c, e, s, n34):
+    return {
+        ROOT_README: [
+            f"{commas(c)} quantified whole-state closures, frontier {commas(e)}/{commas(s)}",
+            f"**{commas(e)} exclusions / {commas(s)} survivors** from the canonical quantified whole-state ledger; `{commas(n34)}` are N34 equality-derived",
+        ],
+        CURRENT: [
+            f"**{commas(c)} quantified whole-state closures**, frontier **{commas(e)}/{commas(s)}** (`{commas(n34)}` N34-derived survivors plus `{commas(N35_SURVIVORS)}` N35-derived survivors)",
+            f"currently verifies `{commas(c)}` ledger states",
+        ],
+        PACKAGE: [
+            f"**{commas(c)} quantified N34-derived whole-state exclusions**",
+            f"contains **{commas(c)} quantified whole-state exclusions**",
+            f"Canonical frontier: **{commas(e)} exclusions / {commas(s)} survivors** (`{commas(n34)}` N34-derived plus `{commas(N35_SURVIVORS)}` N35-derived).",
+        ],
+    }
+
+
+def check(c, e, s, n34):
+    for path, snippets in expected_snippets(c, e, s, n34).items():
+        text = path.read_text()
+        missing = [x for x in snippets if x not in text]
+        if missing:
+            raise SystemExit(f"canonical status drift in {path}: missing {missing}")
+    print("GENERALISATION_STATUS_OK")
+    print("closures", c)
+    print("exclusions", e)
+    print("survivors", s)
+    print("n34_survivors", n34)
+    print("n35_survivors", N35_SURVIVORS)
+
+
+def main():
+    ap = argparse.ArgumentParser()
+    ap.add_argument("--write", action="store_true")
+    args = ap.parse_args()
+    c, e, s, n34 = counts()
+    if args.write:
+        ROOT_README.write_text(rewrite_root(ROOT_README.read_text(), c, e, s, n34))
+        CURRENT.write_text(rewrite_current(CURRENT.read_text(), c, e, s, n34))
+        PACKAGE.write_text(rewrite_package(PACKAGE.read_text(), c, e, s, n34))
+    check(c, e, s, n34)
+
+
+if __name__ == "__main__":
+    main()
