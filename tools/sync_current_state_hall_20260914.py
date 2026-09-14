@@ -39,15 +39,17 @@ The current orientation/Hall package is [`project/research/general_n/2026-09-14-
                  and [q_x>q_y or (q_x=q_y and P_x>=P_y)].
   ```
 
-  In particular, if `q_x>=q_y+2` and `c_x<=c_y`, **every** minimum Hall witness containing `y` also contains `x`, irrespective of `P`. The frozen same-assistant local audit is green on `4,286` profiles, with `1,123,108` submodularity checks, `372,455` sharp exchange checks and `126,654` strict-gap checks. A dedicated GitHub CI replay is present; until its result is separately frozen, this sharper statement must not be described as independently reproduced or externally reviewed.
+  In particular, if `q_x>=q_y+2` and `c_x<=c_y`, **every** minimum Hall witness containing `y` also contains `x`, irrespective of `P`. Its dedicated CI replay, run `34830228571`, is green and frozen in [`SHARP_DOMINANCE_UPSET_HALL_VERIFICATION.json`](project/research/general_n/2026-09-14-type-compressed-orientation-hall-v1/SHARP_DOMINANCE_UPSET_HALL_VERIFICATION.json): `4,286` profiles, `1,123,108` submodularity checks, `372,455` sharp exchange checks and `126,654` strict-gap checks, with zero discrepancies. Artifact digest: `sha256:b686e3f9663a082aa9b0ff9fa89d1c0a29904ca3622f205421a895e3babbf37c`.
 - The exact quotient network can be augmented with capacity-`Q+1` dominance-closure arcs without changing its min-cut value; see [`DOMINANCE_CLOSED_MAXFLOW.md`](project/research/general_n/2026-09-14-type-compressed-orientation-hall-v1/DOMINANCE_CLOSED_MAXFLOW.md).
-- [`CANONICAL_ANTICHAIN_CERTIFICATE.md`](project/research/general_n/2026-09-14-type-compressed-orientation-hall-v1/CANONICAL_ANTICHAIN_CERTIFICATE.md) records the next exact consequence: submodularity makes the minimum-margin cuts a lattice, so there is a unique maximal minimizer `M+`; it is a sharp-hardness up-set and is uniquely represented by its minimal antichain generators. This gives a canonical Hall-failure certificate and an exact staircase geometry for the boundary. Its dedicated independent arithmetic verifier is the current next audit target.
+- [`CANONICAL_ANTICHAIN_CERTIFICATE.md`](project/research/general_n/2026-09-14-type-compressed-orientation-hall-v1/CANONICAL_ANTICHAIN_CERTIFICATE.md) gives the next exact consequence: submodularity makes the minimum-margin cuts a lattice, so there is a unique maximal minimizer `M+`; it is a sharp-hardness up-set and is uniquely represented by its minimal antichain generators. A closure-augmented quotient max-flow recovers the same `M+` from one residual min-cut. Its dedicated CI replay, run `34830787798`, is green and frozen in [`CANONICAL_ANTICHAIN_CERTIFICATE_VERIFICATION.json`](project/research/general_n/2026-09-14-type-compressed-orientation-hall-v1/CANONICAL_ANTICHAIN_CERTIFICATE_VERIFICATION.json): `4,286` profiles, `198,140` type-set margins, `28,460` minimizer-lattice pair checks, `4,286` closure-flow checks and `4,286` residual maximal-cut checks, with zero discrepancies. Artifact digest: `sha256:2ed919e019c7f65a21fbbe92d81e5db84db14e39889bd259d559e2feded08433`.
 
 ### Preserved failed simplifications
 
 [`PRINCIPAL_UPSET_COUNTEREXAMPLE.md`](project/research/general_n/2026-09-14-type-compressed-orientation-hall-v1/PRINCIPAL_UPSET_COUNTEREXAMPLE.md) prevents a false next step. A three-type `V` profile has every principal up-set nondeficient but a two-generator up-set of margin `-1`; a four-type example needs three incomparable generators. Therefore neither single-type cuts nor one principal up-set is exact in general.
 
 The 15-state principal-upset reconnaissance pilot completed green as a computation but **is not a promotion certificate**: the full relational stack excluded `13/15` states, while principal up-sets completely explained only `2/13`. Principal up-sets killed `17,284` individual profiles versus `14,768` for single-type cuts, so they help pruning but do not capture the genuine multi-generator obstruction.
+
+The canonical-antichain verification also found negative test profiles requiring up to six generators (`869, 1,303, 1,005, 324, 49, 6` profiles with respectively `1,...,6` generators). This is audit evidence, not an all-order bound; it reinforces that the right next object is the **structured staircase boundary**, not a guessed small generator count.
 
 ### Full frontier relational scan
 
@@ -61,15 +63,15 @@ checkpointed discovery
  -> separate gated promotion only after agreement.
 ```
 
-A scan shard or preliminary relational exclusion is **not canonical evidence by itself**. N34 and N35 provenance are kept in separate ledgers to prevent layer-count drift. The correct structural priority while this scan proceeds is to analyse the sharp dominance **antichain boundary** of deficient type-level min-cuts, not to force the already-refuted principal-upset shortcut.
+A scan shard or preliminary relational exclusion is **not canonical evidence by itself**. N34 and N35 provenance are kept in separate ledgers to prevent layer-count drift. The correct structural priority while this scan proceeds is to analyse the verified sharp-dominance **antichain staircase** of deficient type-level min-cuts, not to force the already-refuted principal-upset shortcut.
 <!-- HALL-STRUCTURE-2026-09-14:END -->'''
 
 PRIORITIES = r'''<!-- CURRENT-PRIORITIES-2026-09-14:START -->
 ## Current research priorities
 
-### P1. Characterise the canonical Hall antichain boundary
+### P1. Exploit the verified canonical Hall antichain staircase
 
-Start from [`SHARP_DOMINANCE_UPSET_HALL.md`](project/research/general_n/2026-09-14-type-compressed-orientation-hall-v1/SHARP_DOMINANCE_UPSET_HALL.md), [`DOMINANCE_CLOSED_MAXFLOW.md`](project/research/general_n/2026-09-14-type-compressed-orientation-hall-v1/DOMINANCE_CLOSED_MAXFLOW.md), and [`CANONICAL_ANTICHAIN_CERTIFICATE.md`](project/research/general_n/2026-09-14-type-compressed-orientation-hall-v1/CANONICAL_ANTICHAIN_CERTIFICATE.md). Verify the canonical maximal-mincut/antichain certificate independently, then seek further exact restrictions on the staircase generators. Do **not** assume a universal one- or two-generator bound: the preserved counterexamples rule those out in general.
+The sharp dominance theorem and [`CANONICAL_ANTICHAIN_CERTIFICATE.md`](project/research/general_n/2026-09-14-type-compressed-orientation-hall-v1/CANONICAL_ANTICHAIN_CERTIFICATE.md) are internally CI-green. The next all-order task is to turn the unique generator antichain into a sharper Murty-Simon-specific staircase description using `c=q+rho`, the canonical `q` caps, target-capacity formula `P`, demand forcing and excess constraints. Do **not** assume a universal one- or two-generator bound: preserved counterexamples and the finite audit rule that out as a safe general route.
 
 ### P2. Complete, recover and independently audit the 3,607-state relational scan
 
@@ -97,7 +99,7 @@ The current layer/state-safe discovery run is GitHub Actions run `34820187136` a
 
 The execution chain is documented in [`POST_PAIR_RELATIONAL_FULL_FRONTIER.md`](project/research/general_n/2026-09-13-alternative-attacks-v1/POST_PAIR_RELATIONAL_FULL_FRONTIER.md): checkpointed discovery, layer-safe aggregation, explicit unresolved accounting, long-budget recovery of every unresolved/unattempted layer-state, then fresh primary and independent type-count replay of every candidate exclusion. N34 and N35 promotions use separate ledgers.
 
-In parallel, the target-Hall layer has been converted from an opaque labelled max-flow obstruction into exact type-level structure: complete types, quotient max-flow, submodular Hall margin, sharp hardness up-sets, dominance-closed min-cut, and now a canonical antichain boundary. The preserved principal-upset counterexample shows that genuine multi-generator antichains are necessary. The next structural task is therefore to verify and characterise that canonical antichain certificate while the finite scan completes.
+In parallel, the target-Hall layer has been converted from an opaque labelled max-flow obstruction into exact type-level structure: complete types, quotient max-flow, submodular Hall margin, sharp hardness up-sets, dominance-closed min-cut, and a verified canonical antichain staircase. The preserved principal-upset counterexample shows that genuine multi-generator antichains are necessary. The next structural task is to exploit the Murty-Simon-specific relations to constrain that staircase while the finite scan completes.
 <!-- ACTIVE-RELATIONAL-2026-09-14:END -->'''
 
 
@@ -118,21 +120,16 @@ def replace_marked_or_section(text, start, end, heading, replacement, following_
 
 
 def rewrite(text: str) -> str:
-    # Update reconciliation phrase without touching ledger-derived numbers.
     text = text.replace(
         "**Research state reconciled:** 14 September 2026 through the audited post-pair relational recovery promotion:",
         "**Research state reconciled:** 14 September 2026 through the audited post-pair relational recovery promotion and Hall-structure checkpoint:",
         1,
     )
-
-    # The adjacent-family paragraph was a live instruction when the frontier was
-    # 3,623. Preserve the history but point current work to the canonical 3,607.
     text = text.replace(
         "The remaining **3,623-state** frontier should now be attacked with pair-choice/target Hall, selected-incidence Hall and excess-budget coupling after the cheap potential-pair screen.",
         "The historical 3,623-state frontier has since fallen to the canonical **3,607-state** frontier after the audited 16-state relational recovery. Current work uses the checkpointed relational discovery/recovery/audit pipeline described below.",
     )
 
-    # Hall checkpoint near the top.
     if START in text or END in text:
         if text.count(START) != 1 or text.count(END) != 1:
             raise SystemExit("malformed Hall checkpoint markers")
@@ -160,19 +157,19 @@ def main():
     old = PATH.read_text()
     new = rewrite(old)
     PATH.write_text(new)
-    # Idempotency / required-status guards.
     again = rewrite(new)
     if again != new:
         raise SystemExit("Hall current-state synchronizer is not idempotent")
     required = [
         "977 quantified closures, 1,971 exclusions / 3,607 survivors",
         "Exact type-level max-flow theorem",
-        "SHARP_DOMINANCE_UPSET_HALL.md",
+        "run `34830228571`, is green",
+        "run `34830787798`, is green",
         "CANONICAL_ANTICHAIN_CERTIFICATE.md",
         "PRINCIPAL_UPSET_COUNTEREXAMPLE.md",
         "34820187136",
         "separate gated promotion only after agreement",
-        "### P1. Characterise the canonical Hall antichain boundary",
+        "### P1. Exploit the verified canonical Hall antichain staircase",
         "### P2. Complete, recover and independently audit the 3,607-state relational scan",
         "The earlier run `34818390230` is preserved as historical reconnaissance",
     ]
