@@ -40,8 +40,29 @@ jobs:
           assert c[39]['search']['upper']==225 and c[39]['lower']==224 and c[39]['gap']==-1
           assert c[40]['search']['upper']==225 and c[40]['lower']==223 and c[40]['gap']==-2
           PY
+      - name: Verify row-471 hand rigidity closures
+        run: |
+          python3 project/research/general_n/2026-09-14-conditioned-source-pricing-v1/verify_row471_rigidity.py > /tmp/ROW471_RIGIDITY.json
+          python3 - <<'PY'
+          import json
+          p=json.load(open('/tmp/ROW471_RIGIDITY.json'))
+          assert p['row']==471
+          assert p['closed_e_low']==[39,40]
+          assert p['reports']['39']['receiver_min_charge']==224
+          assert p['reports']['39']['source_price_upper']==225
+          assert p['reports']['39']['minimum_required_high_excess']==12
+          assert p['reports']['39']['available_high_excess']==8
+          assert p['reports']['39']['contradiction']=='12>8'
+          assert p['reports']['40']['receiver_min_charge']==223
+          assert p['reports']['40']['source_price_upper']==225
+          assert p['reports']['40']['minimum_required_high_excess']==10
+          assert p['reports']['40']['available_high_excess']==7
+          assert p['reports']['40']['contradiction']=='10>7'
+          PY
       - uses: actions/upload-artifact@v4
         with:
           name: conditioned-source-pricing-full
-          path: /tmp/CONDITIONED_SOURCE_PRICING_FULL.json
+          path: |
+            /tmp/CONDITIONED_SOURCE_PRICING_FULL.json
+            /tmp/ROW471_RIGIDITY.json
           if-no-files-found: error
