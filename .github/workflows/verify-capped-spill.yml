@@ -1,0 +1,86 @@
+name: verify capped excess and all-source spill
+
+on:
+  workflow_dispatch:
+  push:
+    paths:
+      - 'project/research/general_n/2026-09-14-capped-spill-v1/verify_capped_spill.py'
+      - 'project/research/general_n/2026-09-14-capped-spill-v1/CAPPED_SPILL_VERIFICATION.json'
+      - '.github/workflows/verify-capped-spill.yml'
+
+permissions:
+  contents: read
+  actions: read
+concurrency:
+  group: capped-spill-replay-${{ github.ref }}
+  cancel-in-progress: false
+
+jobs:
+  verify:
+    runs-on: ubuntu-24.04-arm
+    timeout-minutes: 15
+    env:
+      PYTHONOPTIMIZE: '0'
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/download-artifact@v4
+        with:
+          name: q-stratified-receiver-reach-pilot
+          run-id: 34859094097
+          github-token: ${{ github.token }}
+          path: /tmp/capped-inputs/pilot
+      - uses: actions/download-artifact@v4
+        with:
+          name: layered-receiver-exception-diagnostic
+          run-id: 34850187436
+          github-token: ${{ github.token }}
+          path: /tmp/capped-inputs/exceptions
+      - name: Regenerate the exact old synthetic corpus with pinned generator and scanner
+        run: |
+          mkdir -p /tmp/capped-evidence
+          python3 - <<'PY'
+          import hashlib,json,pathlib,subprocess
+          root=pathlib.Path('/tmp/capped-inputs/pilot')
+          generators=pathlib.Path('project/research/general_n/2026-09-14-q-tail-interval-budget-v1/search_synthetic_interval.cpp')
+          blob=subprocess.check_output(['git','hash-object',str(generators)],text=True).strip()
+          assert blob=='72b1b0374cba1b865ad778c6ad123d9353c13de6','Generator changed; do not silently regenerate a different corpus'
+          matches=list(root.rglob('scan_q_crossing_stats.cpp'))
+          assert len(matches)==1,matches
+          assert hashlib.sha256(matches[0].read_bytes()).hexdigest()=='7b07649c355028818ba2153dedf461eb001b92541a5d994a83967cf366757906'
+          subprocess.run(['g++','-O3','-std=c++17','-I',str(root),str(generators),'-o','/tmp/capped-generator'],check=True)
+          out=pathlib.Path('/tmp/capped-evidence')
+          with (out/'SYNTHETIC_GENERATOR_REPLAY.json').open('w') as handle:
+              subprocess.run(['/tmp/capped-generator','100000'],cwd=out,stdout=handle,check=True)
+          expected={'seed':74220260914,'trials':100000,'domain':44234,'cap_pass':5582,'incidence_pass':1467,'pair_flow_pass':713,'zero_demand_profiles':46,'Hall_failures':474,'tail_detection_misses':0,'interval_detection_misses':0}
+          assert json.loads((out/'SYNTHETIC_GENERATOR_REPLAY.json').read_text())==expected
+          assert hashlib.sha256((out/'SYNTHETIC_INTERVAL_PROFILES.tsv').read_bytes()).hexdigest()=='157db7e1f48261626eac8cb99bf875f4aec3b707d4c024f62989dd1bcec38572'
+          print('Pinned generator reproduces all old totals and the exact 713-row corpus')
+          PY
+      - name: Run independent incidence, brute-force, hostile and frozen-profile checks
+        run: |
+          python3 - <<'PY'
+          import hashlib,json,pathlib,subprocess,sys
+          root=pathlib.Path('/tmp/capped-inputs');out=pathlib.Path('/tmp/capped-evidence')
+          package=pathlib.Path('project/research/general_n/2026-09-14-capped-spill-v1')
+          frozen=json.loads((package/'CAPPED_SPILL_VERIFICATION.json').read_text())
+          def unique(name):
+              paths=list(root.rglob(name));assert len(paths)==1,(name,paths)
+              return paths[0]
+          exc=unique('LAYER_EXCEPTION_DIAGNOSTIC.tsv')
+          pilot=unique('Q_STRATIFIED_RECEIVER_REACH_PILOT_INPUT.txt')
+          assert hashlib.sha256(exc.read_bytes()).hexdigest()==frozen['frozen_812']['exceptions_sha256']
+          assert hashlib.sha256(pilot.read_bytes()).hexdigest()==frozen['frozen_812']['pilot_sha256']
+          (out/'CAPPED_SPILL_EXPECTED.json').write_text(json.dumps(frozen,indent=2,sort_keys=True)+'\n')
+          with (out/'CAPPED_SPILL_ACTUAL.json').open('w') as handle:
+              subprocess.run([sys.executable,str(package/'verify_capped_spill.py'),'--exceptions',str(exc),'--pilot-input',str(pilot),'--synthetic',str(out/'SYNTHETIC_INTERVAL_PROFILES.tsv')],stdout=handle,check=True)
+          actual=json.loads((out/'CAPPED_SPILL_ACTUAL.json').read_text())
+          assert actual==frozen,'Full parsed output mismatch; preserve and investigate, never weaken frozen totals'
+          print('PASS: all frozen values, including 400758 checks, 3000 independent DP cases, 812 profiles and all 713 synthetic rows')
+          PY
+      - name: Preserve evidence on success or failure
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: capped-spill-independent-replay
+          path: /tmp/capped-evidence
+          if-no-files-found: error
