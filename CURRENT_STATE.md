@@ -1,12 +1,12 @@
 # Murty–Simon / Erdős #742 — current state handoff
 
 <!-- CURRENT-STATUS:START -->
-**15 September 2026 — checkpoint `fresh-forced-core-high-squeeze-v1`.** Inspected predecessor: `c5fd3f52b807bb2d28daa56a22ffcf7d961e0f30`. The predecessor forced-core receiver theorem has now passed dedicated remote replay **34944185174 SUCCESS** and paired-status workflow **34944185225 SUCCESS**. Applying the same exact routing consequence to the seven survivors of the separate fresh seed excludes rows20,91,391,528,562,677 by total receiver-capacity shortages. Fresh row490 passes the raw partition but forces all six candidate receivers to be used; this reduces the `s>=3` selected-slot upper from46 to43 against demand45. **The FRESH synthetic sample is therefore 715/715 rejected; the ORIGINAL synthetic sample remains713/713. Canonical finite frontier remains4,626 exclusions / 952 survivors /3,632 whole-state closures.** External review remains OPEN.
+**15 September 2026 — checkpoint `canonical-forced-core-scan-v1` installation.** Inspected predecessor: `b405cf8b2cd0c18bb488391e96491d977092f19d`. The arbitrary-`r` forced eligibility-core/high-demand test has been embedded into the exact post-pair relational enumerator on research branch `research/forced-core-canonical-scan-v1`. Against the pinned promoted-relational discovery, **646/952 stored relational witnesses already survive** the new theorem and therefore cannot be new exclusions; **306/952 stored witnesses are rejected** and require resumed enumeration over every admissible `q` profile. Local regression reproduces the old N34 state97 witness after8,678,218 profiles, while N34 state152 is exhausted and closed after27,787,962 profiles. **Mathematical/canonical status is unchanged: 4,626 exclusions / 952 survivors /3,632 whole-state closures. No new canonical exclusion is promoted by this installation checkpoint.** External review remains OPEN.
 <!-- RELATIONAL-FULL-PROMOTION:PROMOTED -->
 
 Canonical repository: `paullenz/MurtySimon742`, ID1359206057. Every commit must update the CURRENT-STATUS blocks in BOTH this file and README.md atomically. Read [`AGENTS.md`](AGENTS.md), [`CANONICAL_REPOSITORY.md`](CANONICAL_REPOSITORY.md), [`RESEARCH_EVIDENCE_INDEX.md`](RESEARCH_EVIDENCE_INDEX.md), and newer commits before continuing.
 
-## Canonical status — unchanged by the synthetic-sample closures
+## Canonical status — unchanged by the discovery-scan installation
 
 ```text
 whole-state closures:             3,632
@@ -38,9 +38,9 @@ S_v subset N_u,
 
 and receiver capacity `c_v=rho_v+b-a-1`. A receiver can serve at most one core label. Row160 needs three capacity-10 bins from `5,5,5,4,4,4,4` (best minimum9); row338 needs20 obligations against capacity17.
 
-## Fresh synthetic boundary sample — now 715/715
+## Fresh synthetic boundary sample — 715/715
 
-The preserved fresh seed `74220260919` had seven non-rejections: rows20,91,391,490,528,562,677. The new [`fresh-forced-core-high-squeeze-v1`](project/research/general_n/2026-09-15-fresh-forced-core-high-squeeze-v1/README.md) explicitly scans only this fresh namespace.
+The preserved fresh seed `74220260919` had seven non-rejections: rows20,91,391,490,528,562,677. [`fresh-forced-core-high-squeeze-v1`](project/research/general_n/2026-09-15-fresh-forced-core-high-squeeze-v1/README.md) explicitly scans only this fresh namespace. Its research-branch workflow **34946294672 SUCCESS** reproduces the closure.
 
 At residual level `r=1`, six profiles fail even the total relaxed receiver-capacity inequality:
 
@@ -74,8 +74,6 @@ Thus row490 is excluded by an explicit integer inequality, not by a numerical so
 7357a5139417a1b48f94d8ddbb6122c57363ce70ab0c4586673a290a25c51464
 ```
 
-Local exact replay passed. Dedicated remote CI is installed by this checkpoint and **must not be called successful until inspected**.
-
 ## General structural form
 
 For arbitrary residual level `r`, put `A_r={i:s_i<=r}`, `h=|A_r|`, `U_r={u:rho_u=r,q_u=h}`. Then every `u in U_r` has `S_u=A_r`. Any receiver of a forced-core obligation lies in the relaxed class
@@ -88,6 +86,18 @@ q_v+rho_v >= h-1,
 
 and each receiver is dedicated to at most one core label. If such a receiver is forced used, then `S_v subset A_r union R_u`, so for every threshold `tau>r` it has at most `r` selected labels with `s_i>=tau`. This couples exact receiver usage to the existing threshold-demand machinery.
 
+## Canonical forced-core discovery scan — running, not promoted
+
+[`canonical-forced-core-scan-v1`](project/research/general_n/2026-09-15-forced-core-canonical-scan-v1/README.md) pins the exact promoted relational discovery result SHA256 `2c892301854660c8c1f73a13c4949ce2fb7e1e5706f9ecffbbe79f9483e71970`. The stored-witness pre-screen is used only as an optimization:
+
+```text
+canonical relational survivors: 952
+stored witnesses surviving new theorem: 646
+stored witnesses rejected by new theorem: 306
+```
+
+The 646 are definite non-exclusions for this route because their existing `q` witnesses satisfy both the promoted relational relaxation and the new theorem. The 306 are **not** whole-state exclusions merely because their stored witness fails. For each one, the exact enumerator resumes all admissible `q` profiles and closes the state only if none survives the accumulated conditions. State97 is the regression control; state152 is the first complete local closure. The sharded remote discovery workflow is the next execution step. No candidate result from this scan is ledger-promoted without complete coverage and a separate audit/review step.
+
 ## Preserved predecessor evidence
 
 - Singleton-destination theorem: original rows347,471,586 excluded; remote workflow34910561258 SUCCESS.
@@ -99,12 +109,11 @@ and each receiver is dedicated to at most one core label. If such a receiver is 
 
 ## Immediate next target
 
-Both synthetic laboratories are now closed under accumulated necessary conditions. The next priority is to move the new structure onto the canonical frontier rather than generate more synthetic samples:
-
-1. scan all **952 canonical survivors** for the arbitrary-`r` forced eligibility-core capacity and high-demand squeeze;
-2. turn repeated receiver-count/high-threshold patterns into an aggregate inequality that does not require per-profile enumeration;
-3. preserve every canonical non-rejection and promote nothing without a complete theorem-hypothesis check;
-4. continue external review of the graph-to-selected/residual bridge and fixed-neighbourhood routing theorem.
+1. complete the sharded exact resumed enumeration on the 306 witness-killed canonical states;
+2. independently audit every candidate whole-state closure and preserve every later `q` witness;
+3. only after audit decide whether any candidate closures qualify for canonical ledger promotion;
+4. turn repeated receiver-count/high-threshold patterns into an aggregate inequality that does not require per-profile enumeration;
+5. continue external review of the graph-to-selected/residual bridge and fixed-neighbourhood routing theorem.
 <!-- CURRENT-STATUS:END -->
 
 ## Preservation, failures and audit gates
@@ -113,6 +122,6 @@ The complete pre-row108 handoff remains preserved byte-for-byte in [`CURRENT_STA
 
 Historical failures remain failures: source-price transfer run34904353492, N30 navigation run34906766832, the red-team-history guard failure34908428824, and standalone row471 process commit `2667a909...` are not repainted by later repairs. The branch-specific charge route did not itself finish row471; the singleton-destination theorem is a distinct stronger structural argument. The forced-core/high-squeeze theorem is another distinct successor and does not retrospectively turn earlier uncoupled witnesses or solver statuses into graph realizations.
 
-The 2,655 relational candidates have cleared complete coverage, dual agreement, zero unresolved cases, successful aggregate and the separate reviewed-ledger step. Their promotion changes the canonical finite frontier. Synthetic sample exclusions, including the 713/713 original and 715/715 fresh closures, **do not** change it.
+The 2,655 relational candidates have cleared complete coverage, dual agreement, zero unresolved cases, successful aggregate and the separate reviewed-ledger step. Their promotion changes the canonical finite frontier. Synthetic sample exclusions, including the 713/713 original and 715/715 fresh closures, **do not** change it. The canonical forced-core scan is likewise discovery-only until its own complete enumeration and audit gates are satisfied.
 
 Internal proof checks, successful CI and durable publication do not replace external specialist review of the canonical graph-to-selected/residual bridge, selected-incidence eligibility, destination capacities and the fixed-neighbourhood labelled-routing criterion.

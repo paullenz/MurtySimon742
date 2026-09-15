@@ -1,0 +1,102 @@
+name: canonical forced core discovery
+
+on:
+  push:
+    branches: [research/forced-core-canonical-scan-v1]
+    paths:
+      - 'project/research/general_n/2026-09-15-forced-core-canonical-scan-v1/**'
+      - '.github/workflows/canonical-forced-core-discovery.yml'
+      - 'README.md'
+      - 'CURRENT_STATE.md'
+
+permissions:
+  actions: read
+  contents: read
+
+jobs:
+  plan:
+    runs-on: ubuntu-latest
+    outputs:
+      matrix: ${{ steps.mk.outputs.matrix }}
+      shard_count: ${{ steps.mk.outputs.shard_count }}
+    steps:
+      - uses: actions/checkout@v4
+      - name: Download pinned promoted-relational discovery aggregate
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          mkdir -p discovery plan
+          gh run download 34844403328 -R "$GITHUB_REPOSITORY" -n post-pair-relational-full-discovery-final -D discovery
+          python3 project/research/general_n/2026-09-15-forced-core-canonical-scan-v1/prepare_scan.py discovery plan
+      - id: mk
+        run: |
+          python3 - <<'PY' >> "$GITHUB_OUTPUT"
+          import json
+          p=json.load(open('plan/PLAN.json')); n=len(p['target_keys']); shards=min(256,max(1,n))
+          print(f'shard_count={shards}')
+          print('matrix='+json.dumps({'shard':list(range(shards))},separators=(',',':')))
+          PY
+      - uses: actions/upload-artifact@v4
+        with:
+          name: canonical-forced-core-plan
+          path: plan/
+
+  scan:
+    needs: plan
+    runs-on: ubuntu-latest
+    timeout-minutes: 360
+    strategy:
+      fail-fast: false
+      max-parallel: 64
+      matrix: ${{ fromJSON(needs.plan.outputs.matrix) }}
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/download-artifact@v4
+        with:
+          name: canonical-forced-core-plan
+          path: plan
+      - name: Build exact scanner
+        run: g++ -O3 -std=c++17 -Wall -Wextra -pedantic project/research/general_n/2026-09-15-forced-core-canonical-scan-v1/scan_forced_core.cpp -o scan_forced_core
+      - name: Prepare shard
+        env:
+          SHARD: ${{ matrix.shard }}
+          MOD: ${{ needs.plan.outputs.shard_count }}
+        run: |
+          python3 - <<'PY'
+          from pathlib import Path
+          import os
+          x=[z.strip() for z in Path('plan/TARGET_INPUT.txt').read_text().splitlines() if z.strip()]
+          n=int(x[0]);body=x[1:];assert len(body)==n
+          sh=int(os.environ['SHARD']);mod=int(os.environ['MOD']);sel=[line for i,line in enumerate(body) if i%mod==sh]
+          Path('INPUT.txt').write_text(str(len(sel))+'\n'+(''.join(line+'\n' for line in sel)))
+          PY
+      - name: Run exact resumed enumeration
+        run: ./scan_forced_core INPUT.txt RESULT.tsv
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: canonical-forced-core-shard-${{ matrix.shard }}
+          if-no-files-found: error
+          path: |
+            INPUT.txt
+            RESULT.tsv
+
+  aggregate:
+    needs: [plan,scan]
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/download-artifact@v4
+        with:
+          name: canonical-forced-core-plan
+          path: plan
+      - uses: actions/download-artifact@v4
+        with:
+          pattern: canonical-forced-core-shard-*
+          path: shards
+      - name: Aggregate with exact key coverage
+        run: python3 project/research/general_n/2026-09-15-forced-core-canonical-scan-v1/aggregate.py plan shards final
+      - uses: actions/upload-artifact@v4
+        with:
+          name: canonical-forced-core-discovery-final
+          path: final/
