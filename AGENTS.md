@@ -2,28 +2,62 @@
 
 Canonical repository: `paullenz/MurtySimon742` (ID 1359206057).
 
-## Mandatory first action and durable handoff
+## Mandatory first action and durable live handoff
 
-**User standing order — 15 September 2026: whenever work is picked up again, the FIRST action must be to examine the current `CURRENT_STATE.md` on `main` in `paullenz/MurtySimon742`.** This applies to a new chat, timeout recovery, context reset, takeover or any resumed research session. Do this before substantive analysis, editing or launching computation; memory and earlier chat reports do not establish the current state. Record the inspected main SHA, then read the other governing files, inspect newer commits and all active branches/runs named by the handoff, and reconcile newer evidence before continuing. If the remote state cannot be read, state that limitation and distinguish the last durable checkpoint from an unverified current state.
+`STATUS_SYNC_POLICY_V2`
 
-- **Checkpoint immediately after every significant result, failure, correction or change of attack, and at least every ten minutes during sustained active work.** The interval is not permission to defer a result checkpoint. Do not wait for the end of a research block or for a convenient code commit. During a long remote run, checkpoint the launch and run ID before doing other work.
-- **Before starting another long operation, publish the useful work already completed.** Preserve proofs, code, exact inputs/outputs, negative results and pending work in GitHub with explicit status labels. A local-only file or chat transcript is not a durable handoff.
-- **Publish the live handoff on main.** Update the CURRENT-STATUS blocks in `CURRENT_STATE.md` and `README.md` together in one atomic commit. If unfinished research remains on another branch, the main handoff must link to its exact durable commit and name the branch; a branch-only status update does not satisfy this order.
-- **Every checkpoint must let another session resume without guessing:** include the checkpoint time and inspected predecessor SHA; last verified result and its evidence; unchanged/promoted ledger counts and trust boundaries; unresolved questions, failures and blockers; exact branches, commits and evidence paths; running workflow/job/artifact IDs and last observed states; and the precise next action or executable command with its inputs and expected output. Use explicit `IN_PROGRESS`, `FAILED`, `AUDIT_COMPLETE_NOT_PROMOTED` or equivalent labels where appropriate.
-- **Long-running GitHub workflows must record completion independently of the chat.** A completion handler should write completed/failed/cancelled outcomes, exact source SHA, run IDs, evidence locations and review status into the durable handoff, with paired atomic status updates. It must never automatically promote mathematical claims, change the canonical ledger, hide a historical failure or overwrite concurrent work. Until this handler is implemented and verified, list it explicitly as pending and reconcile finished runs at each active checkpoint.
-- **Verify publication before saying work is saved.** Re-read main before writing, publish without force, preserve concurrent changes, and fetch the resulting commit and both status files from GitHub. A rejected update requires reconciliation. If publication fails, preserve a remote recovery checkpoint where possible and report exactly what remains unpublished; do not claim main is current.
-- Before pausing, ending a research turn or handing work off, publish and verify the latest checkpoint. An abrupt interruption can precede a checkpoint; never imply that unfinished or unsaved work was preserved. Resume by following the first-action rule above.
+**User standing order — 15 September 2026: whenever work is picked up again, the FIRST action must be to read the current `CURRENT_STATE.md` on `main`.** This applies after a timeout, new chat, context reset, takeover, or any resumed research session. Do this before substantive analysis, editing, or computation. Record the inspected main SHA, then inspect only the exact newer commits, branches, runs, and evidence named by the live handoff unless durable sources disagree.
 
-The every-commit status rule below remains in force in addition to these elapsed-time, event and restart requirements.
+`CURRENT_STATE.md` is the **high-frequency operational source of truth**. `README.md` is the lower-frequency reviewer-facing summary and may legitimately lag routine WIP/status checkpoints.
 
-After the mandatory first read of `CURRENT_STATE.md`, read `CANONICAL_REPOSITORY.md`, the opening status summaries in `README.md`, `RESEARCH_EVIDENCE_INDEX.md`, and commits newer than the recorded checkpoint. Existing package-specific instructions and audit gates remain in force.
+### Transaction-style research invariant
 
-**Every commit must update the CURRENT-STATUS blocks in BOTH README.md and CURRENT_STATE.md in the same atomic commit.** This includes documentation, code, evidence-publication and automation commits. Record the completed step, verification and limitations, and next step. When results have not changed, write **mathematical status unchanged** and describe the actual non-mathematical change. Never leave status for a later commit or fabricate progress to satisfy the check.
+- **Never start substantive research unit N+1 while useful output from unit N exists only in session memory.** A unit is one bounded lemma/proof attempt, counterexample search, computation, verifier change, evidence reconciliation, or comparable step.
+- **Checkpoint immediately after every substantive result, failure, correction, counterexample, change of attack, or completed bounded computation.** Ten minutes is only a maximum elapsed-time backstop, not the normal cadence.
+- **Before launching a long-running operation, publish useful completed work and record the launch/run ID.** When the run yields a material result, checkpoint that result before starting another research unit.
+- **WIP commits are encouraged.** Do not wait for polish. Use explicit labels such as `WIP_UNVERIFIED`, `FAILED_ROUTE`, `IN_PROGRESS`, `VERIFIED_INTERNAL_NOT_PROMOTED`, and `AUDIT_COMPLETE_NOT_PROMOTED`. Negative results are research progress and must be preserved.
+- **Bound timeout loss to at most one small research unit.** If more than one meaningful step has happened since the last durable checkpoint, stop and checkpoint before continuing.
 
-Keep the fixed-order and general-research summaries near the top of README.md. Preserve its protected reviewer navigation, exact evidence, failures, counterexamples, audit challenges and archived states. Do not promote samples, numerical infeasibility, queued CI or timed-out computation to proof. External review stays separate from internal checks.
+### Required live-checkpoint contents
 
-**README additive-preservation rule.** The root README is a cumulative reviewer/handoff surface, not disposable status prose. Routine status refreshes, reorganisations and full-file rewrites must not delete, silently condense or replace substantive historical material. In particular, the protected `REDTEAM-HISTORY` and `REVIEW-MATERIALS` blocks, failures/corrections, hostile-audit findings, and proof-hardening consequences must remain in the root README with their meaningful detail and links. New information should be added or reconciled with existing text rather than replacing it wholesale. If material is moved to an archive for length, the root README must retain a substantive summary and direct link. Removal or material compression of such content requires explicit user instruction. Before publishing a README rewrite, diff it against current `main` specifically for dropped sections, links and audit findings. The CI guard is a backstop, not permission to remove unguarded content.
+Every `CURRENT-STATUS` block in `CURRENT_STATE.md` must contain:
 
-The user authorizes sensible research commits and README/handoff updates without asking again. Re-read the branch before writing, preserve concurrent work, use non-forced fast-forward publication, and verify the resulting commit/file remotely. Run `python scripts/check_status_sync.py --base HEAD --head <prepared-commit>` locally when available, or check the equivalent staged status-block changes before publication. The CI check detects omissions; it is not a mathematical validator or a guarantee of branch protection.
+- `CHECKPOINT CLASS:`
+- `INSPECTED PREDECESSOR:`
+- `LAST VERIFIED RESULT:` (or explicit mathematical status unchanged)
+- relevant canonical/promoted counts and trust boundary
+- unresolved questions, failures, blockers, evidence paths, and active run/job/artifact IDs when relevant
+- `UNPRESERVED WORK:` — normally `None`; if not, state exactly what remains outside GitHub and preserve it before beginning another substantive unit
+- `NEXT ACTION:` — one concrete next step or command with expected interpretation
+
+The current durable head is the `main` commit containing the handoff. A self-referential final SHA is not required inside that same commit; the handoff records its inspected predecessor.
+
+### Commit and README synchronization policy
+
+**Every active-line commit must update the `CURRENT-STATUS` block in `CURRENT_STATE.md`.** This includes research, code, evidence, documentation, maintenance, policy, and automation commits. If mathematics is unchanged, say so explicitly and describe the actual non-mathematical change.
+
+**README is no longer a per-commit handoff surface.** Refresh its `CURRENT-STATUS` block when reviewer-facing mathematical state materially changes: theorem/proof status, canonical ledger counts, promotions/demotions, completed audits that alter reviewer interpretation, reviewer-package releases, or comparable substantive milestones. Routine `STATUS_ONLY`, WIP, failure-preservation, launch-recording, and timeout-recovery checkpoints do not require a README edit. If a commit edits `README.md` for any reason, refresh its `CURRENT-STATUS` block in that commit.
+
+This supersedes the former rule requiring paired README/CURRENT_STATE edits on every commit. Historical commits and archived snapshots are preserved and are not rewritten.
+
+### Cheap durable checkpoints
+
+- Prefer a `CURRENT_STATE.md`-only commit when no research artifact itself changed.
+- Most mathematical workflows are path-scoped, so status-only checkpoints should not launch expensive proof jobs.
+- If code/evidence changed and is worth preserving, commit it with the live handoff; do not keep it local merely to avoid CI.
+- Do not manufacture code/file touches solely to trigger CI. Verification and preservation are separate concerns.
+- Never promote a mathematical claim merely because a WIP checkpoint or CI run exists.
+
+### Publication and recovery
+
+- **Verify publication before saying work is saved.** Re-read main before writing; publish without force; preserve concurrent changes; then fetch the resulting commit and `CURRENT_STATE.md` remotely.
+- Before pausing, ending a research turn, or handing off, publish and verify the latest checkpoint. An abrupt interruption can occur before checkpointing; never imply unsaved work was preserved.
+- On recovery: read current `CURRENT_STATE.md` first, inspect commits newer than its recorded predecessor and exact named runs/branches, reconcile only discrepancies, then execute `NEXT ACTION`. Do not do a repo-wide forensic reassessment unless durable sources disagree.
+
+After the mandatory first read, consult `CANONICAL_REPOSITORY.md`, `README.md`, `RESEARCH_EVIDENCE_INDEX.md`, and package-specific instructions as needed. Existing audit and promotion gates remain in force.
+
+Keep the README cumulative and reviewer-facing. Preserve protected reviewer navigation, `REDTEAM-HISTORY`, `REVIEW-MATERIALS`, failures/corrections, counterexamples, hostile-audit findings, proof-hardening consequences, and direct links. Removal or material compression requires explicit user instruction.
+
+The user authorizes sensible research commits and handoff updates without asking again. Re-read the branch before writing, preserve concurrent work, use non-forced fast-forward publication, and verify the result remotely. `scripts/check_status_sync.py` is a process guard, not a mathematical validator.
 
 Keep audit 34854911792 and its promotion gate unchanged unless separately authorized. Full details: `CANONICAL_REPOSITORY.md`.
