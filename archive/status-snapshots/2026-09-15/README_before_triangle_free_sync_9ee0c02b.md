@@ -4,9 +4,9 @@
 <!-- CURRENT-STATUS:START -->
 ## Current status
 
-**Mathematical summary synchronized through `9ee0c02b9d4d…` — tight-block rigidity, disjoint-receiver routing and the triangle-free extra-selection budget; internally derived under explicit bridge hypotheses; NOT PROMOTED.** The [multi-spare proof](project/research/general_n/2026-09-15-spare-receiver-rigidity-v1/PRESERVED_HANDOFF.md) covers **|M|=d+k with 0<=k<d**. The [disjoint-receiver proof](project/research/general_n/2026-09-15-disjoint-receiver-boundary-v1/PRESERVED_HANDOFF.md) constrains extra selections; the [subsequent triangle-free corollary](project/research/general_n/2026-09-15-triangle-free-receiver-budget-v1/PRESERVED_HANDOFF.md) gives **E<=floor(d^2/4) whenever |M|<3d**. All use the full canonical selected-representative system and the tight-block assumptions **|T|=|H|=d**. The elementary triangle-free edge inequality is standard; no novelty is claimed for it. External mathematical review remains OPEN.
+**Latest mathematical checkpoint: `57a1a2b48637…` — spare-receiver rigidity, internally proved under explicit bridge hypotheses; NOT PROMOTED.** The [complete preserved proof and finite checks](project/research/general_n/2026-09-15-spare-receiver-rigidity-v1/PRESERVED_HANDOFF.md) extend the equality and one-spare arguments to **|M|=d+k with 0<=k<d**. High sources can select only the tight block; labels forced to occur at k+1 receivers must fit in every high residual set. The finite checks test elementary set steps, not graph realizations or catalogue exclusions. External review remains OPEN.
 
-**Canonical ledger: 4,626 exclusions / 952 survivors / 3,632 whole-state closures.** No new catalogue replay, new exclusion count or promotion is claimed by these structural proofs or this README synchronization. The unrestricted conjecture is **not claimed proved**. Finite set and auxiliary-graph checks are not original graph realizations or catalogue exclusions. For **|M|<2d**, the stronger earlier conclusion is E=0; at **|M|=2d**, the high-source induced graph is bipartite; for **2d<|M|<3d**, only triangle-freeness and the edge budget are asserted, with an explicit five-cycle set-family control ruling out an unjustified bipartiteness claim.
+**Canonical ledger: 4,626 exclusions / 952 survivors / 3,632 whole-state closures.** No new catalogue replay, new exclusion count or promotion is claimed by the spare-receiver proof. The unrestricted conjecture is **not claimed proved**.
 
 **Live operational handoff:** [`CURRENT_STATE.md`](CURRENT_STATE.md). **Reviewers:** [`START_HERE_FOR_REVIEWERS.md`](START_HERE_FOR_REVIEWERS.md) · [`REVIEW_READY_INDEX.md`](releases/REVIEW_READY_INDEX.md) · [papers and review materials](#papers-and-review-materials).
 
@@ -27,22 +27,17 @@
 
 ## Current status: general research
 
-In this table, `m_R` denotes the receiver count `|M|`; E is the total number of extra high-source selections beyond the tight block.
-
 | Workstream | Current recorded position and trust boundary |
 |---|---|
 | Canonical finite frontier | **4,626 exclusions / 952 survivors / 3,632 whole-state closures**; unchanged |
 | Tight-label strict/equality families | **41 active states internally certified, NOT_PROMOTED**; 19 overlap the earlier 170 forced-core candidates, 22 are additional distinct keys |
 | Forced-core independent audit | **170 candidate exclusions and 136 survivor witnesses audited; AUDIT_COMPLETE_NOT_PROMOTED**; separate promotion gate still applies |
-| One-spare review | [OS1/OS2 dependency review](https://github.com/paullenz/MurtySimon742/blob/43dc689300eb20efa30e2b848a5326f3c5dcbd6f/CURRENT_STATE.md): no gap found under the stated assumptions; same-assistant internal review, not independent acceptance |
-| Spare-receiver structural proof | **0<=k<d**, `m_R=d+k`: high-source rigidity and k+1-occurrence residual-union bound; [full proof and checks](project/research/general_n/2026-09-15-spare-receiver-rigidity-v1/PRESERVED_HANDOFF.md); internal conditional proof, external review open |
-| Disjoint-receiver restriction | Extra high-source selections can use only pairs with disjoint tight-destination sets; at `m_R=2d`, complementary pairs give bipartiteness and `E<=floor(d^2/4)`; [preserved proof](project/research/general_n/2026-09-15-disjoint-receiver-boundary-v1/PRESERVED_HANDOFF.md); not promoted |
-| Triangle-free extension | For `m_R<3d`, `E<=floor(d^2/4)`; for `2d<m_R<3d`, bipartiteness is not asserted. [Full corollary, five-cycle control and elementary checks](project/research/general_n/2026-09-15-triangle-free-receiver-budget-v1/PRESERVED_HANDOFF.md); internal, not a new catalogue result |
-| Numerical replay | Original equality package records 4,588 Python/C++ decisions agreeing; **not freshly rerun in this continuation**. New symbolic results have not been applied to the full catalogue |
-| Next mathematical question | Connect the extra-selection budget E to forced residual-label demand when high sources can have extras. Do not reuse the rigid-case residual-union argument without a new justification |
-| Other unresolved work | State 3349 q-enumeration; transport of larger inputs; completion reporter NOT_IMPLEMENTED; separate audit promotion and external review |
+| Spare-receiver structural proof | **0<=k<d**, |M|=d+k: high-source rigidity and k+1-occurrence residual-union bound; internal conditional proof, external review open |
+| Numerical replay | Original equality package records 4,588 Python/C++ decisions agreeing; **not freshly rerun in this session** |
+| Next mathematical question | **|M|=2d**: constrain extra high-source selections when two T-receiver sets can be disjoint; no graph counterexample is claimed |
+| Other unresolved work | State 3349 q-enumeration; transport of larger inputs; completion reporter NOT_IMPLEMENTED |
 
-**Status-first maintenance rule:** keep this live overview and these tables before chronological updates. Refresh this block at reviewer-facing milestones; use CURRENT_STATE.md for routine research transactions. Historical next-action and policy paragraphs below are retained for auditability, not instructions overriding this overview or AGENTS.md. Every active-line commit updates CURRENT_STATE; README updates are required at substantive reviewer-facing changes and whenever README itself is edited, not on every routine checkpoint. Pause/stop instructions override further research and housekeeping.
+**Status-first maintenance rule:** keep this live overview and these tables before chronological updates. Refresh this block at reviewer-facing milestones; use CURRENT_STATE.md for routine research transactions. Historical next-action and policy paragraphs below are retained for auditability, not instructions overriding this overview or AGENTS.md.
 <!-- RELATIONAL-FULL-PROMOTION:PROMOTED -->
 <!-- CURRENT-STATUS:END -->
 
@@ -53,8 +48,6 @@ Open, reproducible research on the Murty–Simon conjecture / Erdős Problem #74
 ## Dated research updates — preserved history
 
 The following dated updates retain earlier evidence, failures and next-action lists. They are superseded where applicable by the live overview above and CURRENT_STATE.md. Historical run observations are not fresh checks of running jobs. The [complete pre-layout README](archive/status-snapshots/2026-09-15/README_before_status_first.md) is also preserved byte-for-byte.
-
-**15 September 2026 — README synchronization correction.** The status-first layout was repaired at `03aba3e50706…`, but the leading mathematical summary still identified the multi-spare checkpoint and the already-treated `|M|=2d` question. This update retains that layout and reconciles the overview and table with the disjoint-receiver and triangle-free proofs through `9ee0c02b9d4d…`. The [complete preceding README](archive/status-snapshots/2026-09-15/README_before_triangle_free_sync_9ee0c02b.md) and [complete latest mathematical handoff](project/research/general_n/2026-09-15-triangle-free-receiver-budget-v1/PRESERVED_HANDOFF.md) are copied byte-for-byte. No ledger, proof, audit gate or historical failure is altered by the correction.
 
 **2026-09-15T21:06:56.336Z — further mathematics complete: equality rigidity adds 25 whole-state certificates.** Inspected predecessor `1992778d461056d365cc0c3584b510134b2b93ed`. The [new equality proof and exact replay](project/research/general_n/2026-09-15-tight-label-equality-v1/README.md) shows that when a tight d-label block has exactly d high sources and d receivers, each high source must select exactly that block. All labels selected at the receivers must fit in every high source's residual set. The resulting scalar bound rejects **25 current states**, with **4,588/4,588 Python/C++ decisions agreeing** (164 applicable historical states, all rejected; 4,424 outside scope). The weaker preliminary pair-count bound rejected only23 active states; its non-rejections are preserved. The stronger proof also excludes911 and5915. State5802 gives the hand contradiction **eight forced labels in five residual slots**.
 
@@ -159,8 +152,6 @@ A hostile audit can strengthen confidence, weaken a claim, expose a defect, or f
 ## Current research chain
 
 Specific graph orders and explicitly defined relaxed profiles are laboratories for structural principles, not substitutes for an all-order proof. The [canonical graph-to-constraint bridge](project/research/general_n/2026-09-11-canonical-bridge-v1/CANONICAL_BRIDGE.md) translates a hypothetical graph into selected quasi-edge representatives, residual incidences, label demands, missing-pair loads and incoming capacities.
-
-**Latest continuation:** [strict tight-label blocks](project/research/general_n/2026-09-15-tight-label-block-v1/README.md), [equality rigidity](project/research/general_n/2026-09-15-tight-label-equality-v1/README.md), [one-spare internal review](https://github.com/paullenz/MurtySimon742/blob/43dc689300eb20efa30e2b848a5326f3c5dcbd6f/CURRENT_STATE.md), [multi-spare rigidity](project/research/general_n/2026-09-15-spare-receiver-rigidity-v1/PRESERVED_HANDOFF.md), [disjoint-receiver routing](project/research/general_n/2026-09-15-disjoint-receiver-boundary-v1/PRESERVED_HANDOFF.md), and [the triangle-free budget below 3d receivers](project/research/general_n/2026-09-15-triangle-free-receiver-budget-v1/PRESERVED_HANDOFF.md). The latter symbolic work has not been applied to the full catalogue and is not promoted. Earlier routes and intermediate audit states remain below as historical evidence.
 
 - [Shared block slack](project/research/general_n/2026-09-14-joint-blocks-v1/README.md): one shared low-block slack budget; original707/713 and fresh708/715 at that checkpoint.
 - [Source-priced selected incidence](project/research/general_n/2026-09-14-source-sharing-v1/README.md): exact source-row dualization; restored replay34905883642 passed while the earlier failure remains preserved.
