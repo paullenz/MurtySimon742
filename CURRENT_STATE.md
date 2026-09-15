@@ -1,41 +1,40 @@
 # Murty–Simon / Erdős #742 — live current state
 
-> Operational source of truth. Read this file first on resumption. Keep the README's current overview and status tables before dated updates. The complete preceding mathematical handoff is now preserved byte-for-byte at the stable proof link below.
+> Read this file first on resumption. Routine internal research may be newer here than the dated README summary. The preceding handoff is preserved byte-for-byte below.
 
 <!-- CURRENT-STATUS:START -->
-**CHECKPOINT CLASS:** `DOCUMENTATION_SYNC`. User-requested README correction. Mathematical status unchanged. The status-first layout from 03aba3e5070661052b591450a6c924b132fee305 is retained, and the current summary is reconciled with the subsequent disjoint-receiver and triangle-free results through 9ee0c02b9d4db807bcd0a453d48b1fd22c7e327b.
+**CHECKPOINT CLASS:** `WIP_INTERNAL_PROOF_NOT_PROMOTED`. Tight-receiver colouring and residual-capacity amplification, one bounded symbolic unit.
 
-**WORK MODE:** `ADMIN`, explicitly requested by “The Readme is not fixed”. The mathematical continuation was set aside for this repair. No new mathematical result, test or catalogue execution is claimed by this commit.
+**WORK MODE:** `MATH`. User-authorized autonomous continuation. No download repair, catalogue transfer, README editing, workflow launch or polling was needed for this unit.
 
-**INSPECTED PREDECESSOR:** `9ee0c02b9d4db807bcd0a453d48b1fd22c7e327b` on main. The branch advanced while an earlier README draft was being prepared. That older draft was not published; this change preserves the newer status-first layout, stable proof packages and triangle-free mathematical checkpoint rather than overwriting them.
+**INSPECTED PREDECESSOR:** `8d9d932620ea02ea69193202924f45ed35d77eb6` on main, re-read immediately before publication. Its documentation synchronization is preserved; no other branch activity is inferred.
 
-**LAST VERIFIED RESULT:** unchanged from the predecessor: under the full canonical tight-block assumptions |T|=|H|=d, the disjoint-receiver graph Gamma is triangle-free for |M|<3d, so E=sum_H(|S_u|-d)<=floor(d^2/4). The underlying actual high-source induced graph is then triangle-free, not necessarily bipartite. At |M|=2d the stronger complementary-set argument gives bipartiteness. For |M|<2d the earlier rigidity theorem gives E=0, together with the k+1-occurrence residual-union bound when |M|=d+k and 0<=k<d. These are the same assistant's internally derived conditional results, NOT_PROMOTED; external review of the shared bridge and arguments remains OPEN.
+**LAST VERIFIED RESULT:** internally derived conditional proof under the FULL canonical bridge, including the exact identity deg_F(t)=d+R_t. For |T|=|H|=d, K=N_F(T) minus T lies in EVERY high residual set. Write kappa=|K|, h=min_H rho, ell for the number of USED tight receivers, and c_t for the number receiving tight label t. Then ell-c_t<=kappa-1 and (d-1)ell<=d(kappa-1)<=d(h-1). Each tight label gives a proper colouring of the disjoint-receiver graph Gamma. For d>=2, chi(Gamma)<=min_t c_t<=min(floor(|M|/d),floor((h-1)/(d-1))). Thus |M|<3d actually forces BIPARTITENESS, strengthening the prior triangle-free statement; h<3d-2 does likewise without a receiver-count ceiling. If h<2d-1, E=0. Also E>0 forces kappa>=2d-1 and a>=3d, with E<=(d-1)max(0,a-3d+1). General balanced multipartite edge bounds and the sharper K-dependent bound are in the proof. For d=1, E=0 directly.
 
-**CANONICAL / PROMOTED STATUS:** unchanged — **4,626 exclusions / 952 survivors / 3,632 whole-state closures**. The 41 strict/equality certificates remain NOT_PROMOTED (19 overlap the earlier 170 forced-core candidates, 22 are additional keys). The 170-candidate audit remains AUDIT_COMPLETE_NOT_PROMOTED. No new state IDs, catalogue exclusions, ledger changes or promotions.
+**CORRECTION / FAILED ROUTE:** the prior d=5, |M|=13 anonymous C5 set-family control remains valid as an abstract example, but is NOT a consistently labelled tight-receiver system: each of five tight labels would require at least three receivers, hence at least 15 in total. It does not obstruct the stronger bipartiteness result. The old occurrence-union threshold is vacuous at |M|>=2d; the new proof uses actual F-neighbourhoods and the exact demand identity rather than an unsupported slack extension.
 
-**CHECKS / LIMITS:** the predecessor records 6,228 elementary triangle-free auxiliary-graph checks and the five-cycle set-family control. Earlier set-step tests are retained in their proof packages. These are recorded prior tests, not freshly executed in this documentation task, not original diameter-two graph enumeration and not catalogue replay. Original equality replay remains NOT_RUN in the continuation under discussion. State 3349 enumeration remains unresolved. No current workflow status is inferred from dated historical observations.
+**CANONICAL / PROMOTED STATUS:** unchanged — **4,626 exclusions / 952 survivors / 3,632 whole-state closures**. The 41 strict/equality certificates remain NOT_PROMOTED; the 170-candidate audit remains AUDIT_COMPLETE_NOT_PROMOTED. Independent expert review of the bridge and new proof remains OPEN. No new catalogue exclusion or unrestricted theorem is claimed.
 
-**UNPRESERVED WORK:** `None` after publication. README and this handoff are changed atomically; the complete predecessor handoff is copied by its existing blob SHA to the stable triangle-free proof path, and the complete preceding README is copied byte-for-byte to an archive path. Earlier proofs, failed routes, red-team history and review links remain available. The superseded unpublished administrative draft contained no new mathematics.
+**CHECKS / LIMITS:** 50,755 necessary coloured receiver-incidence patterns for d=1 through 4 and 19 controls passed. This tests the new colouring, capacity and threshold reduction, NOT original graph enumeration, NOT catalogue replay, and NOT independent proof review. Exact source and output are preserved. Original equality replay remains NOT_RUN in this continuation; state 3349 enumeration remains unresolved.
 
-**DEFERRED ADMIN:** large-input transport, automatic workflow-completion reporting (NOT_IMPLEMENTED), and unrelated CI/maintenance. Do not retry the previously failed direct-download route. No workflow was deliberately launched, cancelled or polled during this repair; normal configured checks may be triggered by publication and are not claimed complete.
+**UNPRESERVED WORK:** `None` after publication. Full proof, rejected extrapolation, dependency audit, runnable checker and exact results are in the dedicated package. The preceding handoff is archived by its existing blob SHA. Earlier proofs, controls, audit history and reviewer material remain untouched.
 
-**NEXT ACTION:** resume MATH with the predecessor's next bounded symbolic unit: connect the extra-selection budget E to forced residual-label demand when high sources may have extra selections. Seek a necessary inequality without assuming that the rigid-case residual-union argument remains valid. Preserve the first result or failure before further work; keep catalogue replay/scanning separate. No further user approval is needed for the already-authorized bounded continuation, but no work is claimed to run after a response ends.
+**DEFERRED ADMIN:** large-input transfer, automated workflow-completion reporting, README/reviewer integration after review of this WIP strengthening, and unrelated CI/maintenance. Do not retry the failed direct-download route. Normal configured checks may be triggered by publication; none are claimed completed here.
 
-**PROCESS RULE:** STATUS_SYNC_POLICY_V2 / RESEARCH_EXECUTION_POLICY_V3. CURRENT_STATE is updated per active-line transaction. README is refreshed at substantive reviewer-facing milestones and whenever README itself is edited; routine WIP/status transactions need not change it. Current overview and status tables stay before dated notes. A README lag after material proof developments is a documentation defect, not grounds to change the mathematical ledger. Pause/stop overrides further research and housekeeping.
+**NEXT ACTION:** one bounded symbolic unit at the first non-rigid scalar boundary a=3d. If extras occur, the new bounds leave exactly one label outside T union K. Determine the resulting high-source graph and residual structure before catalogue application; do not assume further impossibility without proof. Preserve the first result or obstruction. No further user affirmation is needed.
+
+**PROCESS RULE:** STATUS_SYNC_POLICY_V2 / RESEARCH_EXECUTION_POLICY_V3. Mathematics first, one coherent checkpoint and one remote confirmation. No work is claimed to continue after a response ends. Pause/stop overrides further research and housekeeping.
 <!-- CURRENT-STATUS:END -->
 
-## Stable sources and preserved history
+## Exact evidence and preserved predecessor
 
-- [Complete triangle-free proof, five-cycle control, runnable checks and original handoff](project/research/general_n/2026-09-15-triangle-free-receiver-budget-v1/PRESERVED_HANDOFF.md) — exact copy of blob 03bfd3741b88c9ea995cc775ed194c73f7bf4846 from 9ee0c02b9d4db807bcd0a453d48b1fd22c7e327b. Its embedded status is historical, not a competing live handoff.
-- [Disjoint-destination lemma D1-D3 and boundary proof](project/research/general_n/2026-09-15-disjoint-receiver-boundary-v1/PRESERVED_HANDOFF.md).
+- [Full conditional proof and audit boundaries](project/research/general_n/2026-09-16-tight-receiver-colouring-v1/PROOF.md).
+- [Runnable necessary-pattern checker](project/research/general_n/2026-09-16-tight-receiver-colouring-v1/check_residual_capacity.py).
+- [Exact checker results](project/research/general_n/2026-09-16-tight-receiver-colouring-v1/CHECK_RESULTS.json).
+- [Complete preceding live handoff](archive/status-snapshots/2026-09-16/CURRENT_STATE_before_receiver_colouring_8d9d9326.md), copied from blob 7078ef9ba14af9efd9b950a45c7b27300608cc84. Embedded status and root-relative links are historical.
+- [Canonical bridge](project/research/general_n/2026-09-11-canonical-bridge-v1/CANONICAL_BRIDGE.md).
+- [Disjoint-destination proof](project/research/general_n/2026-09-15-disjoint-receiver-boundary-v1/PRESERVED_HANDOFF.md).
+- [Prior triangle-free proof and anonymous C5 control](project/research/general_n/2026-09-15-triangle-free-receiver-budget-v1/PRESERVED_HANDOFF.md).
 - [Multi-spare rigidity and residual-union proof](project/research/general_n/2026-09-15-spare-receiver-rigidity-v1/PRESERVED_HANDOFF.md).
-- [One-spare internal review](https://github.com/paullenz/MurtySimon742/blob/43dc689300eb20efa30e2b848a5326f3c5dcbd6f/CURRENT_STATE.md).
-- [Canonical selected/residual bridge](project/research/general_n/2026-09-11-canonical-bridge-v1/CANONICAL_BRIDGE.md).
-- [Original candidate and transport history](https://github.com/paullenz/MurtySimon742/blob/219ba7043c8a8b7152ba42715ab8767e667fb75d/CURRENT_STATE.md).
-- [README before this synchronization](archive/status-snapshots/2026-09-15/README_before_triangle_free_sync_9ee0c02b.md) — exact copy of blob 9be635aff9b19472f1b356741ce3d84cf5a4026b. This is a frozen root-file snapshot; resolve its relative links from the repository root, or use the live README navigation.
-- [Complete pre-layout README](archive/status-snapshots/2026-09-15/README_before_status_first.md).
-- [Layout repair checkpoint](https://github.com/paullenz/MurtySimon742/blob/03aba3e5070661052b591450a6c924b132fee305/CURRENT_STATE.md).
 
-## Recovery
-
-Read this live file and AGENTS.md, then the exact sources needed for the next unit. Historical handoffs and dated README instructions do not override the current task or a pause/stop request. Do not reconstruct the project from chat history when durable sources agree.
+On recovery, read this file and AGENTS.md, then only the exact mathematical dependencies needed. All preserved earlier navigation remains in the predecessor handoff and live README.
