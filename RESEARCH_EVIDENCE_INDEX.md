@@ -2,6 +2,10 @@
 
 This index distinguishes derivation, finite verification, preservation and external acceptance. The fully audited 2,655-key relational family has now passed the separate reviewed-ledger step and is promoted. The canonical finite frontier is 4,626 exclusions / 952 survivors / 3,632 whole-state closures. Fixed-order reviewer packages retain their separate status in [the reviewer index](releases/REVIEW_READY_INDEX.md).
 
+## 15 September 2026 — saturated receiver barrier
+
+[Proof, exact inputs, both implementations and replay](project/research/general_n/2026-09-15-saturated-receiver-barrier-v1/README.md). New forced-membership prefix-capacity inequality rejects 24 of 124 saved q witnesses; all 124 pass the old route, and independent Python/C++ checks agree on all 24. This is a fixed-witness advance, not a whole-state or ledger promotion. The 602 shared-core and 6,481 weighted-threshold non-improvements are retained. Next: quantify all allowed q for the affected states. External review OPEN.
+
 ## 15 September 2026 — completed independent audit and durable handoff
 
 The [current handoff](CURRENT_STATE.md) supersedes older audit-pending observations. Independent forced-core audit [34997614970](https://github.com/paullenz/MurtySimon742/actions/runs/34997614970), commit `36239bd0bcd466e464c0bcb4546314ccce4a63ba`, completed SUCCESS: 170 candidate exclusions compared with zero field mismatches, and 136 survivor witnesses replayed with zero failures. It explicitly records `AUDIT_COMPLETE_NOT_PROMOTED`. Final artifact `10413221638`, `canonical-forced-core-independent-audit-v2-final`, has ZIP SHA256 `a600e47fe0d3b4ac2a010cfa55995562e9bd8d701a219932266f542cd11d5fe6`. The final outputs are in GitHub Actions artifacts; permanent research-package preservation and the separate reviewed promotion are still pending.

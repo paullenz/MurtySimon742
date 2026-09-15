@@ -1,0 +1,7855 @@
+{
+  "joint_checks": 602,
+  "joint_rejected": [],
+  "labelled_checks": 1040,
+  "labelled_joint_rejected": [
+    3349,
+    4629,
+    4687,
+    5694,
+    5993,
+    6139,
+    6273,
+    6848,
+    7079,
+    7225,
+    7327,
+    7728,
+    7932,
+    8254,
+    8358,
+    9107,
+    9340,
+    9573,
+    9851,
+    10068,
+    10276,
+    10509,
+    10510,
+    10845
+  ],
+  "profiles": 124,
+  "results": [
+    {
+      "cores": [],
+      "joint_failures": [],
+      "labelled_joint_failures": [],
+      "layer": "n34-m289",
+      "state_id": 232,
+      "weighted_failures": []
+    },
+    {
+      "cores": [
+        {
+          "U": [
+            2,
+            3,
+            4,
+            5,
+            6,
+            7
+          ],
+          "eligible": [
+            0,
+            1
+          ],
+          "h": 1,
+          "m": 6,
+          "r": 1
+        },
+        {
+          "U": [
+            8
+          ],
+          "eligible": [
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            9,
+            10,
+            11,
+            14
+          ],
+          "h": 3,
+          "m": 1,
+          "r": 2
+        }
+      ],
+      "joint_failures": [],
+      "labelled_joint_failures": [],
+      "layer": "n34-m289",
+      "state_id": 978,
+      "weighted_failures": []
+    },
+    {
+      "cores": [
+        {
+          "U": [
+            2,
+            3,
+            4,
+            5,
+            6,
+            7
+          ],
+          "eligible": [
+            0,
+            1
+          ],
+          "h": 1,
+          "m": 6,
+          "r": 1
+        },
+        {
+          "U": [
+            8
+          ],
+          "eligible": [
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            9,
+            10,
+            11,
+            14
+          ],
+          "h": 3,
+          "m": 1,
+          "r": 2
+        }
+      ],
+      "joint_failures": [],
+      "labelled_joint_failures": [],
+      "layer": "n34-m289",
+      "state_id": 979,
+      "weighted_failures": []
+    },
+    {
+      "cores": [
+        {
+          "U": [
+            2,
+            3,
+            4,
+            5,
+            6,
+            7
+          ],
+          "eligible": [
+            0,
+            1
+          ],
+          "h": 1,
+          "m": 6,
+          "r": 1
+        },
+        {
+          "U": [
+            8
+          ],
+          "eligible": [
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            9,
+            10,
+            17
+          ],
+          "h": 3,
+          "m": 1,
+          "r": 2
+        }
+      ],
+      "joint_failures": [],
+      "labelled_joint_failures": [],
+      "layer": "n34-m289",
+      "state_id": 1312,
+      "weighted_failures": []
+    },
+    {
+      "cores": [
+        {
+          "U": [
+            2,
+            3,
+            4,
+            5,
+            6,
+            7
+          ],
+          "eligible": [
+            0,
+            1
+          ],
+          "h": 1,
+          "m": 6,
+          "r": 1
+        },
+        {
+          "U": [
+            8
+          ],
+          "eligible": [
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            9,
+            10,
+            16
+          ],
+          "h": 3,
+          "m": 1,
+          "r": 2
+        }
+      ],
+      "joint_failures": [],
+      "labelled_joint_failures": [],
+      "layer": "n34-m289",
+      "state_id": 1313,
+      "weighted_failures": []
+    },
+    {
+      "cores": [
+        {
+          "U": [
+            2,
+            3,
+            4,
+            5,
+            6,
+            7
+          ],
+          "eligible": [
+            0,
+            1
+          ],
+          "h": 1,
+          "m": 6,
+          "r": 1
+        },
+        {
+          "U": [
+            8
+          ],
+          "eligible": [
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            9,
+            12,
+            17
+          ],
+          "h": 3,
+          "m": 1,
+          "r": 2
+        }
+      ],
+      "joint_failures": [],
+      "labelled_joint_failures": [],
+      "layer": "n34-m289",
+      "state_id": 1315,
+      "weighted_failures": []
+    },
+    {
+      "cores": [
+        {
+          "U": [
+            2,
+            3,
+            4,
+            5,
+            6,
+            7
+          ],
+          "eligible": [
+            0,
+            1
+          ],
+          "h": 1,
+          "m": 6,
+          "r": 1
+        },
+        {
+          "U": [
+            8
+          ],
+          "eligible": [
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            9,
+            11,
+            12,
+            13
+          ],
+          "h": 3,
+          "m": 1,
+          "r": 2
+        }
+      ],
+      "joint_failures": [],
+      "labelled_joint_failures": [],
+      "layer": "n34-m289",
+      "state_id": 1316,
+      "weighted_failures": []
+    },
+    {
+      "cores": [
+        {
+          "U": [
+            2,
+            3,
+            4,
+            5,
+            6,
+            7
+          ],
+          "eligible": [
+            0,
+            1
+          ],
+          "h": 1,
+          "m": 6,
+          "r": 1
+        }
+      ],
+      "joint_failures": [],
+      "labelled_joint_failures": [],
+      "layer": "n34-m289",
+      "state_id": 2034,
+      "weighted_failures": []
+    },
+    {
+      "cores": [
+        {
+          "U": [
+            2,
+            3,
+            4,
+            5,
+            6,
+            7
+          ],
+          "eligible": [
+            0,
+            1
+          ],
+          "h": 1,
+          "m": 6,
+          "r": 1
+        }
+      ],
+      "joint_failures": [],
+      "labelled_joint_failures": [],
+      "layer": "n34-m289",
+      "state_id": 2043,
+      "weighted_failures": []
+    },
+    {
+      "cores": [
+        {
+          "U": [
+            2,
+            3,
+            4,
+            5,
+            6,
+            7
+          ],
+          "eligible": [
+            0,
+            1
+          ],
+          "h": 1,
+          "m": 6,
+          "r": 1
+        }
+      ],
+      "joint_failures": [],
+      "labelled_joint_failures": [],
+      "layer": "n34-m289",
+      "state_id": 2044,
+      "weighted_failures": []
+    },
+    {
+      "cores": [
+        {
+          "U": [
+            2,
+            3,
+            4,
+            5,
+            6,
+            7
+          ],
+          "eligible": [
+            0,
+            1
+          ],
+          "h": 1,
+          "m": 6,
+          "r": 1
+        }
+      ],
+      "joint_failures": [],
+      "labelled_joint_failures": [],
+      "layer": "n34-m289",
+      "state_id": 2045,
+      "weighted_failures": []
+    },
+    {
+      "cores": [
+        {
+          "U": [
+            1,
+            2,
+            3,
+            4,
+            5,
+            6
+          ],
+          "eligible": [
+            0,
+            7
+          ],
+          "h": 1,
+          "m": 6,
+          "r": 1
+        },
+        {
+          "U": [
+            9
+          ],
+          "eligible": [
+            8,
+            10,
+            11,
+            12,
+            13,
+            14,
+            15,
+            16,
+            17
+          ],
+          "h": 7,
+          "m": 1,
+          "r": 3
+        }
+      ],
+      "joint_failures": [],
+      "labelled_joint_failures": [],
+      "layer": "n34-m289",
+      "state_id": 2070,
+      "weighted_failures": []
+    },
+    {
+      "cores": [
+        {
+          "U": [
+            8,
+            9
+          ],
+          "eligible": [
+            6,
+            7,
+            10,
+            11,
+            12,
+            13,
+            14,
+            15,
+            16,
+            17
+          ],
+          "h": 7,
+          "m": 2,
+          "r": 3
+        }
+      ],
+      "joint_failures": [],
+      "labelled_joint_failures": [],
+      "layer": "n34-m289",
+      "state_id": 2139,
+      "weighted_failures": []
+    },
+    {
+      "cores": [
+        {
+          "U": [
+            8,
+            9
+          ],
+          "eligible": [
+            6,
+            7,
+            10,
+            11,
+            12,
+            13,
+            14,
+            15,
+            16,
+            17
+          ],
+          "h": 7,
+          "m": 2,
+          "r": 3
+        }
+      ],
+      "joint_failures": [],
+      "labelled_joint_failures": [],
+      "layer": "n34-m289",
+      "state_id": 2167,
+      "weighted_failures": []
+    },
+    {
+      "cores": [
+        {
+          "U": [
+            2,
+            3,
+            4,
+            5,
+            6,
+            7
+          ],
+          "eligible": [
+            0,
+            1
+          ],
+          "h": 1,
+          "m": 6,
+          "r": 1
+        },
+        {
+          "U": [
+            9
+          ],
+          "eligible": [
+            8,
+            10,
+            11,
+            12,
+            13,
+            14,
+            15,
+            16,
+            17
+          ],
+          "h": 6,
+          "m": 1,
+          "r": 3
+        }
+      ],
+      "joint_failures": [],
+      "labelled_joint_failures": [],
+      "layer": "n34-m289",
+      "state_id": 2183,
+      "weighted_failures": []
+    },
+    {
+      "cores": [
+        {
+          "U": [
+            2,
+            3,
+            4,
+            5,
+            6,
+            7
+          ],
+          "eligible": [
+            0,
+            1
+          ],
+          "h": 1,
+          "m": 6,
+          "r": 1
+        }
+      ],
+      "joint_failures": [],
+      "labelled_joint_failures": [],
+      "layer": "n34-m289",
+      "state_id": 2184,
+      "weighted_failures": []
+    },
+    {
+      "cores": [
+        {
+          "U": [
+            2,
+            3,
+            4,
+            5,
+            6,
+            7
+          ],
+          "eligible": [
+            0,
+            1
+          ],
+          "h": 1,
+          "m": 6,
+          "r": 1
+        }
+      ],
+      "joint_failures": [],
+      "labelled_joint_failures": [],
+      "layer": "n34-m289",
+      "state_id": 2185,
+      "weighted_failures": []
+    },
+    {
+      "cores": [
+        {
+          "U": [
+            2,
+            3,
+            4,
+            5,
+            6
+          ],
+          "eligible": [
+            0,
+            1
+          ],
+          "h": 1,
+          "m": 5,
+          "r": 1
+        },
+        {
+          "U": [
+            7
+          ],
+          "eligible": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            8,
+            9,
+            17
+          ],
+          "h": 2,
+          "m": 1,
+          "r": 2
+        }
+      ],
+      "joint_failures": [],
+      "labelled_joint_failures": [],
+      "layer": "n34-m289",
+      "state_id": 2284,
+      "weighted_failures": []
+    },
+    {
+      "cores": [
+        {
+          "U": [
+            2,
+            3,
+            4,
+            5,
+            6
+          ],
+          "eligible": [
+            0,
+            1
+          ],
+          "h": 1,
+          "m": 5,
+          "r": 1
+        },
+        {
+          "U": [
+            7
+          ],
+          "eligible": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            10,
+            11,
+            16,
+            17
+          ],
+          "h": 2,
+          "m": 1,
+          "r": 2
+        }
+      ],
+      "joint_failures": [],
+      "labelled_joint_failures": [],
+      "layer": "n34-m289",
+      "state_id": 2285,
+      "weighted_failures": []
+    },
+    {
+      "cores": [
+        {
+          "U": [
+            1,
+            2,
+            3,
+            4,
+            5,
+            6
+          ],
+          "eligible": [
+            0,
+            7
+          ],
+          "h": 1,
+          "m": 6,
+          "r": 1
+        },
+        {
+          "U": [
+            8
+          ],
+          "eligible": [
+            9,
+            10,
+            11,
+            12,
+            13,
+            14,
+            15,
+            16,
+            17
+          ],
+          "h": 6,
+          "m": 1,
+          "r": 3
+        }
+      ],
+      "joint_failures": [],
+      "labelled_joint_failures": [],
+      "layer": "n34-m289",
+      "state_id": 2287,
+      "weighted_failures": []
+    },
+    {
+      "cores": [
+        {
+          "U": [
+            1,
+            2,
+            3,
+            4,
+            5,
+            6
+          ],
+          "eligible": [
+            0,
+            7
+          ],
+          "h": 1,
+          "m": 6,
+          "r": 1
+        }
+      ],
+      "joint_failures": [],
+      "labelled_joint_failures": [],
+      "layer": "n34-m289",
+      "state_id": 2288,
+      "weighted_failures": []
+    },
+    {
+      "cores": [
+        {
+          "U": [
+            5,
+            6
+          ],
+          "eligible": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            10,
+            11,
+            12
+          ],
+          "h": 2,
+          "m": 2,
+          "r": 2
+        },
+        {
+          "U": [
+            9
+          ],
+          "eligible": [
+            7,
+            8,
+            10,
+            11,
+            12,
+            13,
+            14,
+            15,
+            16,
+            17
+          ],
+          "h": 6,
+          "m": 1,
+          "r": 3
+        }
+      ],
+      "joint_failures": [],
+      "labelled_joint_failures": [],
+      "layer": "n34-m289",
+      "state_id": 2331,
+      "weighted_failures": []
+    },
+    {
+      "cores": [
+        {
+          "U": [
+            2,
+            3,
+            4,
+            5,
+            6
+          ],
+          "eligible": [
+            0,
+            1
+          ],
+          "h": 1,
+          "m": 5,
+          "r": 1
+        },
+        {
+          "U": [
+            7
+          ],
+          "eligible": [
+            2,
+            3,
+            4,
+            5,
+            6,
+            8,
+            9,
+            10,
+            11
+          ],
+          "h": 3,
+          "m": 1,
+          "r": 2
+        }
+      ],
+      "joint_failures": [],
+      "labelled_joint_failures": [],
+      "layer": "n34-m289",
+      "state_id": 2547,
+      "weighted_failures": []
+    },
+    {
+      "cores": [
+        {
+          "U": [
+            2,
+            3,
+            4,
+            5,
+            6
+          ],
+          "eligible": [
+            0,
+            1
+          ],
+          "h": 1,
+          "m": 5,
+          "r": 1
+        },
+        {
+          "U": [
+            7
+          ],
+          "eligible": [
+            2,
+            3,
+            4,
+            5,
+            6,
+            8,
+            9,
+            10,
+            11
+          ],
+          "h": 3,
+          "m": 1,
+          "r": 2
+        }
+      ],
+      "joint_failures": [],
+      "labelled_joint_failures": [],
+      "layer": "n34-m289",
+      "state_id": 2548,
+      "weighted_failures": []
+    },
+    {
+      "cores": [
+        {
+          "U": [
+            2,
+            3,
+            4,
+            5
+          ],
+          "eligible": [
+            0,
+            1
+          ],
+          "h": 1,
+          "m": 4,
+          "r": 1
+        },
+        {
+          "U": [
+            7
+          ],
+          "eligible": [
+            2,
+            3,
+            4,
+            5,
+            6,
+            8,
+            9,
+            10,
+            11
+          ],
+          "h": 3,
+          "m": 1,
+          "r": 2
+        }
+      ],
+      "joint_failures": [],
+      "labelled_joint_failures": [],
+      "layer": "n34-m289",
+      "state_id": 2550,
+      "weighted_failures": []
+    },
+    {
+      "cores": [
+        {
+          "U": [
+            6,
+            7
+          ],
+          "eligible": [
+            5,
+            8,
+            9
+          ],
+          "h": 3,
+          "m": 2,
+          "r": 2
+        }
+      ],
+      "joint_failures": [],
+      "labelled_joint_failures": [],
+      "layer": "n34-m289",
+      "state_id": 2564,
+      "weighted_failures": []
+    },
+    {
+      "cores": [
+        {
+          "U": [
+            2,
+            3,
+            4,
+            5,
+            6
+          ],
+          "eligible": [
+            0,
+            1
+          ],
+          "h": 1,
+          "m": 5,
+          "r": 1
+        },
+        {
+          "U": [
+            7
+          ],
+          "eligible": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            9,
+            10,
+            11,
+            12
+          ],
+          "h": 2,
+          "m": 1,
+          "r": 2
+        }
+      ],
+      "joint_failures": [],
+      "labelled_joint_failures": [],
+      "layer": "n34-m289",
+      "state_id": 2571,
+      "weighted_failures": []
+    },
+    {
+      "cores": [
+        {
+          "U": [
+            2,
+            3,
+            4,
+            5,
+            6
+          ],
+          "eligible": [
+            0,
+            1
+          ],
+          "h": 1,
+          "m": 5,
+          "r": 1
+        },
+        {
+          "U": [
+            7
+          ],
+          "eligible": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            8,
+            9,
+            10,
+            11
+          ],
+          "h": 2,
+          "m": 1,
+          "r": 2
+        }
+      ],
+      "joint_failures": [],
+      "labelled_joint_failures": [],
+      "layer": "n34-m289",
+      "state_id": 2581,
+      "weighted_failures": []
+    },
+    {
+      "cores": [
+        {
+          "U": [
+            2,
+            3,
+            4,
+            5,
+            6
+          ],
+          "eligible": [
+            0,
+            1
+          ],
+          "h": 1,
+          "m": 5,
+          "r": 1
+        },
+        {
+          "U": [
+            7
+          ],
+          "eligible": [
+            2,
+            3,
+            4,
+            5,
+            6,
+            8,
+            9,
+            10,
+            11
+          ],
+          "h": 3,
+          "m": 1,
+          "r": 2
+        }
+      ],
+      "joint_failures": [],
+      "labelled_joint_failures": [],
+      "layer": "n34-m289",
+      "state_id": 2770,
+      "weighted_failures": []
+    },
+    {
+      "cores": [
+        {
+          "U": [
+            2,
+            3,
+            4,
+            5,
+            6
+          ],
+          "eligible": [
+            0,
+            1
+          ],
+          "h": 1,
+          "m": 5,
+          "r": 1
+        },
+        {
+          "U": [
+            7
+          ],
+          "eligible": [
+            2,
+            3,
+            4,
+            5,
+            6,
+            8,
+            9,
+            10,
+            16
+          ],
+          "h": 3,
+          "m": 1,
+          "r": 2
+        }
+      ],
+      "joint_failures": [],
+      "labelled_joint_failures": [],
+      "layer": "n34-m289",
+      "state_id": 2771,
+      "weighted_failures": []
+    },
+    {
+      "cores": [
+        {
+          "U": [
+            2,
+            3,
+            4,
+            5,
+            6
+          ],
+          "eligible": [
+            0,
+            1
+          ],
+          "h": 1,
+          "m": 5,
+          "r": 1
+        },
+        {
+          "U": [
+            7
+          ],
+          "eligible": [
+            2,
+            3,
+            4,
+            5,
+            6,
+            8,
+            9,
+            10,
+            11
+          ],
+          "h": 3,
+          "m": 1,
+          "r": 2
+        }
+      ],
+      "joint_failures": [],
+      "labelled_joint_failures": [],
+      "layer": "n34-m289",
+      "state_id": 2773,
+      "weighted_failures": []
+    },
+    {
+      "cores": [
+        {
+          "U": [
+            2,
+            3,
+            4,
+            5
+          ],
+          "eligible": [
+            0,
+            1
+          ],
+          "h": 1,
+          "m": 4,
+          "r": 1
+        },
+        {
+          "U": [
+            7
+          ],
+          "eligible": [
+            2,
+            3,
+            4,
+            5,
+            6,
+            8,
+            9,
+            10
+          ],
+          "h": 3,
+          "m": 1,
+          "r": 2
+        }
+      ],
+      "joint_failures": [],
+      "labelled_joint_failures": [],
+      "layer": "n34-m289",
+      "state_id": 2779,
+      "weighted_failures": []
+    },
+    {
+      "cores": [
+        {
+          "U": [
+            2,
+            3,
+            4,
+            5,
+            6
+          ],
+          "eligible": [
+            0,
+            1
+          ],
+          "h": 1,
+          "m": 5,
+          "r": 1
+        },
+        {
+          "U": [
+            7
+          ],
+          "eligible": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            8,
+            9,
+            10,
+            11
+          ],
+          "h": 2,
+          "m": 1,
+          "r": 2
+        }
+      ],
+      "joint_failures": [],
+      "labelled_joint_failures": [],
+      "layer": "n34-m289",
+      "state_id": 2839,
+      "weighted_failures": []
+    },
+    {
+      "cores": [
+        {
+          "U": [
+            2,
+            3,
+            4,
+            5,
+            6
+          ],
+          "eligible": [
+            0,
+            1
+          ],
+          "h": 1,
+          "m": 5,
+          "r": 1
+        },
+        {
+          "U": [
+            7
+          ],
+          "eligible": [
+            2,
+            3,
+            4,
+            5,
+            6,
+            8,
+            9,
+            10,
+            11,
+            12
+          ],
+          "h": 3,
+          "m": 1,
+          "r": 2
+        }
+      ],
+      "joint_failures": [],
+      "labelled_joint_failures": [],
+      "layer": "n34-m289",
+      "state_id": 3178,
+      "weighted_failures": []
+    },
+    {
+      "cores": [
+        {
+          "U": [
+            2,
+            3,
+            4,
+            5,
+            6
+          ],
+          "eligible": [
+            0,
+            1
+          ],
+          "h": 1,
+          "m": 5,
+          "r": 1
+        },
+        {
+          "U": [
+            7
+          ],
+          "eligible": [
+            2,
+            3,
+            4,
+            5,
+            6,
+            8,
+            9,
+            10
+          ],
+          "h": 3,
+          "m": 1,
+          "r": 2
+        }
+      ],
+      "joint_failures": [],
+      "labelled_joint_failures": [],
+      "layer": "n34-m289",
+      "state_id": 3179,
+      "weighted_failures": []
+    },
+    {
+      "cores": [
+        {
+          "U": [
+            2,
+            3,
+            4,
+            5
+          ],
+          "eligible": [
+            0,
+            1
+          ],
+          "h": 1,
+          "m": 4,
+          "r": 1
+        },
+        {
+          "U": [
+            7
+          ],
+          "eligible": [
+            2,
+            3,
+            4,
+            5,
+            6,
+            8,
+            9,
+            10
+          ],
+          "h": 3,
+          "m": 1,
+          "r": 2
+        }
+      ],
+      "joint_failures": [],
+      "labelled_joint_failures": [],
+      "layer": "n34-m289",
+      "state_id": 3184,
+      "weighted_failures": []
+    },
+    {
+      "cores": [
+        {
+          "U": [
+            1,
+            2,
+            3,
+            4
+          ],
+          "eligible": [
+            0,
+            5
+          ],
+          "h": 1,
+          "m": 4,
+          "r": 1
+        }
+      ],
+      "joint_failures": [],
+      "labelled_joint_failures": [],
+      "layer": "n34-m289",
+      "state_id": 3186,
+      "weighted_failures": []
+    },
+    {
+      "cores": [
+        {
+          "U": [
+            2,
+            3,
+            4,
+            5
+          ],
+          "eligible": [
+            0,
+            1
+          ],
+          "h": 1,
+          "m": 4,
+          "r": 1
+        },
+        {
+          "U": [
+            7
+          ],
+          "eligible": [
+            2,
+            3,
+            4,
+            5,
+            6,
+            8,
+            9,
+            10,
+            17
+          ],
+          "h": 3,
+          "m": 1,
+          "r": 3
+        }
+      ],
+      "joint_failures": [],
+      "labelled_joint_failures": [],
+      "layer": "n34-m289",
+      "state_id": 3344,
+      "weighted_failures": []
+    },
+    {
+      "cores": [
+        {
+          "U": [
+            1,
+            2,
+            3,
+            4
+          ],
+          "eligible": [
+            0,
+            5
+          ],
+          "h": 1,
+          "m": 4,
+          "r": 1
+        },
+        {
+          "U": [
+            5
+          ],
+          "eligible": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            6,
+            7,
+            8
+          ],
+          "h": 1,
+          "m": 1,
+          "r": 2
+        }
+      ],
+      "joint_failures": [],
+      "labelled_joint_failures": [
+        {
+          "capacity": 3,
+          "cores": [
+            1
+          ],
+          "demand": 4,
+          "demand_values": [
+            1
+          ],
+          "receiver_caps": [
+            3,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          "saturated_receivers": [
+            1,
+            2,
+            3,
+            4,
+            5
+          ]
+        }
+      ],
+      "layer": "n34-m289",
+      "state_id": 3349,
+      "weighted_failures": []
+    },
+    {
+      "cores": [
+        {
+          "U": [
+            1,
+            2,
+            3,
+            4,
+            5
+          ],
+          "eligible": [
+            0,
+            6
+          ],
+          "h": 1,
+          "m": 5,
+          "r": 1
+        },
+        {
+          "U": [
+            6
+          ],
+          "eligible": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5
+          ],
+          "h": 1,
+          "m": 1,
+          "r": 2
+        },
+        {
+          "U": [
+            7
+          ],
+          "eligible": [
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            8,
+            13,
+            14,
+            15
+          ],
+          "h": 3,
+          "m": 1,
+          "r": 3
+        }
+      ],
+      "joint_failures": [],
+      "labelled_joint_failures": [
+        {
+          "capacity": 3,
+          "cores": [
+            1
+          ],
+          "demand": 5,
+          "demand_values": [
+            1
+          ],
+          "receiver_caps": [
+            3,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          "saturated_receivers": [
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7
+          ]
+        },
+        {
+          "capacity": 3,
+          "cores": [
+            1
+          ],
+          "demand": 5,
+          "demand_values": [
+            1,
+            3
+          ],
+          "receiver_caps": [
+            3,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          "saturated_receivers": [
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7
+          ]
+        },
+        {
+          "capacity": 3,
+          "cores": [
+            1,
+            2
+          ],
+          "demand": 6,
+          "demand_values": [
+            1
+          ],
+          "receiver_caps": [
+            3,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          "saturated_receivers": [
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7
+          ]
+        },
+        {
+          "capacity": 3,
+          "cores": [
+            1,
+            2
+          ],
+          "demand": 6,
+          "demand_values": [
+            1,
+            3
+          ],
+          "receiver_caps": [
+            3,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          "saturated_receivers": [
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7
+          ]
+        }
+      ],
+      "layer": "n34-m289",
+      "state_id": 4629,
+      "weighted_failures": []
+    },
+    {
+      "cores": [
+        {
+          "U": [
+            1,
+            2,
+            3,
+            4,
+            5
+          ],
+          "eligible": [
+            0,
+            6
+          ],
+          "h": 1,
+          "m": 5,
+          "r": 1
+        },
+        {
+          "U": [
+            6
+          ],
+          "eligible": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5
+          ],
+          "h": 1,
+          "m": 1,
+          "r": 2
+        }
+      ],
+      "joint_failures": [],
+      "labelled_joint_failures": [
+        {
+          "capacity": 3,
+          "cores": [
+            1
+          ],
+          "demand": 5,
+          "demand_values": [
+            1
+          ],
+          "receiver_caps": [
+            3,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          "saturated_receivers": [
+            1,
+            2,
+            3,
+            4,
+            5,
+            6
+          ]
+        },
+        {
+          "capacity": 3,
+          "cores": [
+            1,
+            2
+          ],
+          "demand": 6,
+          "demand_values": [
+            1
+          ],
+          "receiver_caps": [
+            3,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          "saturated_receivers": [
+            1,
+            2,
+            3,
+            4,
+            5,
+            6
+          ]
+        }
+      ],
+      "layer": "n34-m289",
+      "state_id": 4687,
+      "weighted_failures": []
+    },
+    {
+      "cores": [
+        {
+          "U": [
+            2,
+            3,
+            4,
+            5,
+            6
+          ],
+          "eligible": [
+            0,
+            1
+          ],
+          "h": 1,
+          "m": 5,
+          "r": 1
+        }
+      ],
+      "joint_failures": [],
+      "labelled_joint_failures": [],
+      "layer": "n34-m289",
+      "state_id": 4888,
+      "weighted_failures": []
+    },
+    {
+      "cores": [
+        {
+          "U": [
+            2,
+            3,
+            4,
+            5
+          ],
+          "eligible": [
+            0,
+            1
+          ],
+          "h": 1,
+          "m": 4,
+          "r": 1
+        },
+        {
+          "U": [
+            6
+          ],
+          "eligible": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5,
+            7,
+            8,
+            9
+          ],
+          "h": 2,
+          "m": 1,
+          "r": 3
+        }
+      ],
+      "joint_failures": [],
+      "labelled_joint_failures": [],
+      "layer": "n34-m289",
+      "state_id": 5167,
+      "weighted_failures": []
+    },
+    {
+      "cores": [
+        {
+          "U": [
+            2,
+            3,
+            4,
+            5
+          ],
+          "eligible": [
+            0,
+            1
+          ],
+          "h": 1,
+          "m": 4,
+          "r": 1
+        }
+      ],
+      "joint_failures": [],
+      "labelled_joint_failures": [],
+      "layer": "n34-m289",
+      "state_id": 5216,
+      "weighted_failures": []
+    },
+    {
+      "cores": [
+        {
+          "U": [
+            4,
+            5,
+            6
+          ],
+          "eligible": [
+            0,
+            1,
+            2,
+            3
+          ],
+          "h": 2,
+          "m": 3,
+          "r": 1
+        }
+      ],
+      "joint_failures": [],
+      "labelled_joint_failures": [],
+      "layer": "n34-m289",
+      "state_id": 5666,
+      "weighted_failures": []
+    },
+    {
+      "cores": [
+        {
+          "U": [
+            1,
+            2,
+            3,
+            4,
+            5
+          ],
+          "eligible": [
+            0,
+            6
+          ],
+          "h": 1,
+          "m": 5,
+          "r": 1
+        },
+        {
+          "U": [
+            6
+          ],
+          "eligible": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5
+          ],
+          "h": 1,
+          "m": 1,
+          "r": 2
+        }
+      ],
+      "joint_failures": [],
+      "labelled_joint_failures": [
+        {
+          "capacity": 3,
+          "cores": [
+            1
+          ],
+          "demand": 5,
+          "demand_values": [
+            0
+          ],
+          "receiver_caps": [
+            3,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          "saturated_receivers": [
+            1,
+            2,
+            3,
+            4,
+            5,
+            6
+          ]
+        },
+        {
+          "capacity": 3,
+          "cores": [
+            1,
+            2
+          ],
+          "demand": 6,
+          "demand_values": [
+            0
+          ],
+          "receiver_caps": [
+            3,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          "saturated_receivers": [
+            1,
+            2,
+            3,
+            4,
+            5,
+            6
+          ]
+        }
+      ],
+      "layer": "n34-m289",
+      "state_id": 5694,
+      "weighted_failures": []
+    },
+    {
+      "cores": [
+        {
+          "U": [
+            2,
+            3,
+            4,
+            5
+          ],
+          "eligible": [
+            0,
+            1
+          ],
+          "h": 1,
+          "m": 4,
+          "r": 1
+        },
+        {
+          "U": [
+            8
+          ],
+          "eligible": [
+            6,
+            7,
+            9,
+            10,
+            11,
+            12,
+            13,
+            14,
+            15,
+            16,
+            17
+          ],
+          "h": 5,
+          "m": 1,
+          "r": 3
+        }
+      ],
+      "joint_failures": [],
+      "labelled_joint_failures": [],
+      "layer": "n34-m289",
+      "state_id": 5710,
+      "weighted_failures": []
+    },
+    {
+      "cores": [
+        {
+          "U": [
+            4,
+            5,
+            6
+          ],
+          "eligible": [
+            0,
+            1,
+            2,
+            3,
+            7
+          ],
+          "h": 2,
+          "m": 3,
+          "r": 1
+        }
+      ],
+      "joint_failures": [],
+      "labelled_joint_failures": [],
+      "layer": "n34-m289",
+      "state_id": 5802,
+      "weighted_failures": []
+    },
+    {
+      "cores": [
+        {
+          "U": [
+            2,
+            3,
+            4,
+            5
+          ],
+          "eligible": [
+            0,
+            1
+          ],
+          "h": 1,
+          "m": 4,
+          "r": 1
+        }
+      ],
+      "joint_failures": [],
+      "labelled_joint_failures": [],
+      "layer": "n34-m289",
+      "state_id": 5834,
+      "weighted_failures": []
+    },
+    {
+      "cores": [
+        {
+          "U": [
+            2,
+            3,
+            4,
+            5
+          ],
+          "eligible": [
+            0,
+            1
+          ],
+          "h": 1,
+          "m": 4,
+          "r": 1
+        },
+        {
+          "U": [
+            6
+          ],
+          "eligible": [
+            2,
+            3,
+            4,
+            5,
+            7,
+            8,
+            9
+          ],
+          "h": 3,
+          "m": 1,
+          "r": 2
+        },
+        {
+          "U": [
+            7
+          ],
+          "eligible": [
+            2,
+            3,
+            4,
+            5,
+            6,
+            8,
+            9,
+            13,
+            14,
+            15
+          ],
+          "h": 3,
+          "m": 1,
+          "r": 3
+        }
+      ],
+      "joint_failures": [],
+      "labelled_joint_failures": [],
+      "layer": "n34-m289",
+      "state_id": 5915,
+      "weighted_failures": []
+    },
+    {
+      "cores": [
+        {
+          "U": [
+            4,
+            5,
+            6
+          ],
+          "eligible": [
+            0,
+            1,
+            2,
+            3
+          ],
+          "h": 2,
+          "m": 3,
+          "r": 1
+        }
+      ],
+      "joint_failures": [],
+      "labelled_joint_failures": [],
+      "layer": "n34-m289",
+      "state_id": 5926,
+      "weighted_failures": []
+    },
+    {
+      "cores": [
+        {
+          "U": [
+            2,
+            3,
+            4,
+            5
+          ],
+          "eligible": [
+            0,
+            1
+          ],
+          "h": 1,
+          "m": 4,
+          "r": 1
+        },
+        {
+          "U": [
+            6
+          ],
+          "eligible": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5,
+            7,
+            8,
+            9
+          ],
+          "h": 2,
+          "m": 1,
+          "r": 2
+        },
+        {
+          "U": [
+            7
+          ],
+          "eligible": [
+            2,
+            3,
+            4,
+            5,
+            6,
+            8,
+            9,
+            13,
+            14,
+            15
+          ],
+          "h": 3,
+          "m": 1,
+          "r": 3
+        }
+      ],
+      "joint_failures": [],
+      "labelled_joint_failures": [],
+      "layer": "n34-m289",
+      "state_id": 5932,
+      "weighted_failures": []
+    },
+    {
+      "cores": [
+        {
+          "U": [
+            2,
+            3,
+            4,
+            5
+          ],
+          "eligible": [
+            0,
+            1
+          ],
+          "h": 1,
+          "m": 4,
+          "r": 1
+        },
+        {
+          "U": [
+            7
+          ],
+          "eligible": [
+            2,
+            3,
+            4,
+            5,
+            6,
+            8,
+            9,
+            10
+          ],
+          "h": 3,
+          "m": 1,
+          "r": 3
+        }
+      ],
+      "joint_failures": [],
+      "labelled_joint_failures": [],
+      "layer": "n34-m289",
+      "state_id": 5973,
+      "weighted_failures": []
+    },
+    {
+      "cores": [
+        {
+          "U": [
+            1,
+            2,
+            3,
+            4
+          ],
+          "eligible": [
+            0,
+            5
+          ],
+          "h": 1,
+          "m": 4,
+          "r": 1
+        },
+        {
+          "U": [
+            5
+          ],
+          "eligible": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            8
+          ],
+          "h": 1,
+          "m": 1,
+          "r": 2
+        },
+        {
+          "U": [
+            6,
+            7
+          ],
+          "eligible": [
+            1,
+            2,
+            3,
+            4,
+            5,
+            8,
+            9,
+            13,
+            14
+          ],
+          "h": 3,
+          "m": 2,
+          "r": 3
+        }
+      ],
+      "joint_failures": [],
+      "labelled_joint_failures": [
+        {
+          "capacity": 3,
+          "cores": [
+            1
+          ],
+          "demand": 4,
+          "demand_values": [
+            1
+          ],
+          "receiver_caps": [
+            3,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          "saturated_receivers": [
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7
+          ]
+        },
+        {
+          "capacity": 3,
+          "cores": [
+            1
+          ],
+          "demand": 4,
+          "demand_values": [
+            1,
+            3
+          ],
+          "receiver_caps": [
+            3,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          "saturated_receivers": [
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7
+          ]
+        },
+        {
+          "capacity": 4,
+          "cores": [
+            1,
+            2
+          ],
+          "demand": 5,
+          "demand_values": [
+            1
+          ],
+          "receiver_caps": [
+            3,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            1,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          "saturated_receivers": [
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7
+          ]
+        },
+        {
+          "capacity": 4,
+          "cores": [
+            1,
+            2
+          ],
+          "demand": 5,
+          "demand_values": [
+            1,
+            3
+          ],
+          "receiver_caps": [
+            3,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            1,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          "saturated_receivers": [
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7
+          ]
+        }
+      ],
+      "layer": "n34-m289",
+      "state_id": 5993,
+      "weighted_failures": []
+    },
+    {
+      "cores": [
+        {
+          "U": [
+            4,
+            5,
+            6
+          ],
+          "eligible": [
+            0,
+            1,
+            2,
+            3
+          ],
+          "h": 2,
+          "m": 3,
+          "r": 1
+        }
+      ],
+      "joint_failures": [],
+      "labelled_joint_failures": [],
+      "layer": "n34-m289",
+      "state_id": 6095,
+      "weighted_failures": []
+    },
+    {
+      "cores": [
+        {
+          "U": [
+            2,
+            3,
+            4,
+            5
+          ],
+          "eligible": [
+            0,
+            1
+          ],
+          "h": 1,
+          "m": 4,
+          "r": 1
+        },
+        {
+          "U": [
+            6
+          ],
+          "eligible": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5,
+            7,
+            8,
+            9
+          ],
+          "h": 2,
+          "m": 1,
+          "r": 3
+        }
+      ],
+      "joint_failures": [],
+      "labelled_joint_failures": [],
+      "layer": "n34-m289",
+      "state_id": 6102,
+      "weighted_failures": []
+    },
+    {
+      "cores": [
+        {
+          "U": [
+            2,
+            3,
+            4
+          ],
+          "eligible": [
+            0,
+            1
+          ],
+          "h": 1,
+          "m": 3,
+          "r": 1
+        },
+        {
+          "U": [
+            5,
+            6
+          ],
+          "eligible": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            7,
+            8
+          ],
+          "h": 2,
+          "m": 2,
+          "r": 2
+        }
+      ],
+      "joint_failures": [],
+      "labelled_joint_failures": [],
+      "layer": "n34-m289",
+      "state_id": 6103,
+      "weighted_failures": []
+    },
+    {
+      "cores": [
+        {
+          "U": [
+            2,
+            3,
+            4,
+            5
+          ],
+          "eligible": [
+            0,
+            1
+          ],
+          "h": 1,
+          "m": 4,
+          "r": 1
+        },
+        {
+          "U": [
+            6
+          ],
+          "eligible": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5,
+            7,
+            8,
+            9
+          ],
+          "h": 2,
+          "m": 1,
+          "r": 3
+        }
+      ],
+      "joint_failures": [],
+      "labelled_joint_failures": [],
+      "layer": "n34-m289",
+      "state_id": 6133,
+      "weighted_failures": []
+    },
+    {
+      "cores": [
+        {
+          "U": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5
+          ],
+          "eligible": [
+            12
+          ],
+          "h": 1,
+          "m": 6,
+          "r": 1
+        },
+        {
+          "U": [
+            6
+          ],
+          "eligible": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5,
+            7,
+            8,
+            12
+          ],
+          "h": 2,
+          "m": 1,
+          "r": 3
+        }
+      ],
+      "joint_failures": [],
+      "labelled_joint_failures": [],
+      "layer": "n34-m289",
+      "state_id": 6134,
+      "weighted_failures": []
+    },
+    {
+      "cores": [
+        {
+          "U": [
+            2,
+            3,
+            4,
+            5
+          ],
+          "eligible": [
+            0,
+            1
+          ],
+          "h": 1,
+          "m": 4,
+          "r": 1
+        }
+      ],
+      "joint_failures": [],
+      "labelled_joint_failures": [],
+      "layer": "n34-m289",
+      "state_id": 6135,
+      "weighted_failures": []
+    },
+    {
+      "cores": [
+        {
+          "U": [
+            1,
+            2,
+            3,
+            4
+          ],
+          "eligible": [
+            0,
+            5
+          ],
+          "h": 1,
+          "m": 4,
+          "r": 1
+        },
+        {
+          "U": [
+            5
+          ],
+          "eligible": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            6
+          ],
+          "h": 1,
+          "m": 1,
+          "r": 2
+        },
+        {
+          "U": [
+            6
+          ],
+          "eligible": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5,
+            7,
+            8,
+            9
+          ],
+          "h": 2,
+          "m": 1,
+          "r": 3
+        }
+      ],
+      "joint_failures": [],
+      "labelled_joint_failures": [
+        {
+          "capacity": 3,
+          "cores": [
+            1
+          ],
+          "demand": 4,
+          "demand_values": [
+            1
+          ],
+          "receiver_caps": [
+            3,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          "saturated_receivers": [
+            1,
+            2,
+            3,
+            4,
+            5,
+            6
+          ]
+        },
+        {
+          "capacity": 3,
+          "cores": [
+            1
+          ],
+          "demand": 4,
+          "demand_values": [
+            1,
+            3
+          ],
+          "receiver_caps": [
+            3,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          "saturated_receivers": [
+            1,
+            2,
+            3,
+            4,
+            5,
+            6
+          ]
+        },
+        {
+          "capacity": 3,
+          "cores": [
+            1,
+            2
+          ],
+          "demand": 5,
+          "demand_values": [
+            1
+          ],
+          "receiver_caps": [
+            3,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          "saturated_receivers": [
+            1,
+            2,
+            3,
+            4,
+            5,
+            6
+          ]
+        },
+        {
+          "capacity": 3,
+          "cores": [
+            1,
+            2
+          ],
+          "demand": 5,
+          "demand_values": [
+            1,
+            3
+          ],
+          "receiver_caps": [
+            3,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          "saturated_receivers": [
+            1,
+            2,
+            3,
+            4,
+            5,
+            6
+          ]
+        }
+      ],
+      "layer": "n34-m289",
+      "state_id": 6139,
+      "weighted_failures": []
+    },
+    {
+      "cores": [
+        {
+          "U": [
+            2,
+            3,
+            4,
+            5
+          ],
+          "eligible": [
+            0,
+            1
+          ],
+          "h": 1,
+          "m": 4,
+          "r": 1
+        }
+      ],
+      "joint_failures": [],
+      "labelled_joint_failures": [],
+      "layer": "n34-m289",
+      "state_id": 6261,
+      "weighted_failures": []
+    },
+    {
+      "cores": [
+        {
+          "U": [
+            2,
+            3,
+            4,
+            5
+          ],
+          "eligible": [
+            0,
+            1
+          ],
+          "h": 1,
+          "m": 4,
+          "r": 1
+        }
+      ],
+      "joint_failures": [],
+      "labelled_joint_failures": [],
+      "layer": "n34-m289",
+      "state_id": 6262,
+      "weighted_failures": []
+    },
+    {
+      "cores": [
+        {
+          "U": [
+            1,
+            2,
+            3,
+            4
+          ],
+          "eligible": [
+            0,
+            5
+          ],
+          "h": 1,
+          "m": 4,
+          "r": 1
+        },
+        {
+          "U": [
+            5
+          ],
+          "eligible": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            6
+          ],
+          "h": 1,
+          "m": 1,
+          "r": 2
+        }
+      ],
+      "joint_failures": [],
+      "labelled_joint_failures": [
+        {
+          "capacity": 3,
+          "cores": [
+            1
+          ],
+          "demand": 4,
+          "demand_values": [
+            1
+          ],
+          "receiver_caps": [
+            3,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          "saturated_receivers": [
+            1,
+            2,
+            3,
+            4,
+            5
+          ]
+        },
+        {
+          "capacity": 4,
+          "cores": [
+            1,
+            2
+          ],
+          "demand": 5,
+          "demand_values": [
+            1
+          ],
+          "receiver_caps": [
+            3,
+            0,
+            0,
+            0,
+            0,
+            0,
+            1,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          "saturated_receivers": [
+            1,
+            2,
+            3,
+            4,
+            5
+          ]
+        }
+      ],
+      "layer": "n34-m289",
+      "state_id": 6273,
+      "weighted_failures": []
+    },
+    {
+      "cores": [
+        {
+          "U": [
+            1,
+            2,
+            3,
+            4,
+            5
+          ],
+          "eligible": [
+            0,
+            6
+          ],
+          "h": 1,
+          "m": 5,
+          "r": 1
+        },
+        {
+          "U": [
+            6
+          ],
+          "eligible": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5
+          ],
+          "h": 1,
+          "m": 1,
+          "r": 2
+        }
+      ],
+      "joint_failures": [],
+      "labelled_joint_failures": [
+        {
+          "capacity": 3,
+          "cores": [
+            1
+          ],
+          "demand": 5,
+          "demand_values": [
+            0
+          ],
+          "receiver_caps": [
+            3,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          "saturated_receivers": [
+            1,
+            2,
+            3,
+            4,
+            5,
+            6
+          ]
+        },
+        {
+          "capacity": 3,
+          "cores": [
+            1,
+            2
+          ],
+          "demand": 6,
+          "demand_values": [
+            0
+          ],
+          "receiver_caps": [
+            3,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          "saturated_receivers": [
+            1,
+            2,
+            3,
+            4,
+            5,
+            6
+          ]
+        }
+      ],
+      "layer": "n34-m289",
+      "state_id": 6848,
+      "weighted_failures": []
+    },
+    {
+      "cores": [
+        {
+          "U": [
+            4,
+            5,
+            6
+          ],
+          "eligible": [
+            0,
+            1,
+            2,
+            3
+          ],
+          "h": 2,
+          "m": 3,
+          "r": 1
+        }
+      ],
+      "joint_failures": [],
+      "labelled_joint_failures": [],
+      "layer": "n34-m289",
+      "state_id": 6952,
+      "weighted_failures": []
+    },
+    {
+      "cores": [
+        {
+          "U": [
+            2,
+            3,
+            4,
+            5
+          ],
+          "eligible": [
+            0,
+            1
+          ],
+          "h": 1,
+          "m": 4,
+          "r": 1
+        }
+      ],
+      "joint_failures": [],
+      "labelled_joint_failures": [],
+      "layer": "n34-m289",
+      "state_id": 6970,
+      "weighted_failures": []
+    },
+    {
+      "cores": [
+        {
+          "U": [
+            2,
+            3,
+            4,
+            5
+          ],
+          "eligible": [
+            0,
+            1
+          ],
+          "h": 1,
+          "m": 4,
+          "r": 1
+        },
+        {
+          "U": [
+            6
+          ],
+          "eligible": [
+            2,
+            3,
+            4,
+            5,
+            7,
+            8,
+            12
+          ],
+          "h": 3,
+          "m": 1,
+          "r": 2
+        },
+        {
+          "U": [
+            7
+          ],
+          "eligible": [
+            2,
+            3,
+            4,
+            5,
+            6,
+            8,
+            12
+          ],
+          "h": 3,
+          "m": 1,
+          "r": 3
+        }
+      ],
+      "joint_failures": [],
+      "labelled_joint_failures": [],
+      "layer": "n34-m289",
+      "state_id": 7015,
+      "weighted_failures": []
+    },
+    {
+      "cores": [
+        {
+          "U": [
+            2,
+            3,
+            4,
+            5
+          ],
+          "eligible": [
+            0,
+            1
+          ],
+          "h": 1,
+          "m": 4,
+          "r": 1
+        },
+        {
+          "U": [
+            6,
+            7
+          ],
+          "eligible": [
+            2,
+            3,
+            4,
+            5,
+            8,
+            12
+          ],
+          "h": 3,
+          "m": 2,
+          "r": 3
+        }
+      ],
+      "joint_failures": [],
+      "labelled_joint_failures": [],
+      "layer": "n34-m289",
+      "state_id": 7072,
+      "weighted_failures": []
+    },
+    {
+      "cores": [
+        {
+          "U": [
+            2,
+            3,
+            4,
+            5
+          ],
+          "eligible": [
+            0,
+            1
+          ],
+          "h": 1,
+          "m": 4,
+          "r": 1
+        },
+        {
+          "U": [
+            6,
+            7
+          ],
+          "eligible": [
+            2,
+            3,
+            4,
+            5,
+            8,
+            11
+          ],
+          "h": 3,
+          "m": 2,
+          "r": 3
+        }
+      ],
+      "joint_failures": [],
+      "labelled_joint_failures": [],
+      "layer": "n34-m289",
+      "state_id": 7073,
+      "weighted_failures": []
+    },
+    {
+      "cores": [
+        {
+          "U": [
+            1,
+            2,
+            3,
+            4
+          ],
+          "eligible": [
+            0,
+            5
+          ],
+          "h": 1,
+          "m": 4,
+          "r": 1
+        },
+        {
+          "U": [
+            5
+          ],
+          "eligible": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            8,
+            12
+          ],
+          "h": 1,
+          "m": 1,
+          "r": 2
+        },
+        {
+          "U": [
+            6,
+            7
+          ],
+          "eligible": [
+            1,
+            2,
+            3,
+            4,
+            5,
+            8,
+            12
+          ],
+          "h": 3,
+          "m": 2,
+          "r": 3
+        }
+      ],
+      "joint_failures": [],
+      "labelled_joint_failures": [
+        {
+          "capacity": 3,
+          "cores": [
+            1
+          ],
+          "demand": 4,
+          "demand_values": [
+            1
+          ],
+          "receiver_caps": [
+            3,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          "saturated_receivers": [
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7
+          ]
+        },
+        {
+          "capacity": 3,
+          "cores": [
+            1
+          ],
+          "demand": 4,
+          "demand_values": [
+            1,
+            3
+          ],
+          "receiver_caps": [
+            3,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          "saturated_receivers": [
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7
+          ]
+        }
+      ],
+      "layer": "n34-m289",
+      "state_id": 7079,
+      "weighted_failures": []
+    },
+    {
+      "cores": [
+        {
+          "U": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5
+          ],
+          "eligible": [
+            12
+          ],
+          "h": 1,
+          "m": 6,
+          "r": 1
+        },
+        {
+          "U": [
+            6
+          ],
+          "eligible": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5,
+            7,
+            8,
+            12
+          ],
+          "h": 2,
+          "m": 1,
+          "r": 3
+        }
+      ],
+      "joint_failures": [],
+      "labelled_joint_failures": [],
+      "layer": "n34-m289",
+      "state_id": 7188,
+      "weighted_failures": []
+    },
+    {
+      "cores": [
+        {
+          "U": [
+            2,
+            3,
+            4
+          ],
+          "eligible": [
+            0,
+            1
+          ],
+          "h": 1,
+          "m": 3,
+          "r": 1
+        },
+        {
+          "U": [
+            5,
+            6
+          ],
+          "eligible": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            7,
+            8,
+            12
+          ],
+          "h": 2,
+          "m": 2,
+          "r": 2
+        }
+      ],
+      "joint_failures": [],
+      "labelled_joint_failures": [],
+      "layer": "n34-m289",
+      "state_id": 7189,
+      "weighted_failures": []
+    },
+    {
+      "cores": [
+        {
+          "U": [
+            2,
+            3,
+            4,
+            5
+          ],
+          "eligible": [
+            0,
+            1
+          ],
+          "h": 1,
+          "m": 4,
+          "r": 1
+        },
+        {
+          "U": [
+            6
+          ],
+          "eligible": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5,
+            7,
+            8,
+            12
+          ],
+          "h": 2,
+          "m": 1,
+          "r": 3
+        }
+      ],
+      "joint_failures": [],
+      "labelled_joint_failures": [],
+      "layer": "n34-m289",
+      "state_id": 7209,
+      "weighted_failures": []
+    },
+    {
+      "cores": [
+        {
+          "U": [
+            2,
+            3,
+            4,
+            5
+          ],
+          "eligible": [
+            0,
+            1
+          ],
+          "h": 1,
+          "m": 4,
+          "r": 1
+        },
+        {
+          "U": [
+            6
+          ],
+          "eligible": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5,
+            7,
+            8,
+            12
+          ],
+          "h": 2,
+          "m": 1,
+          "r": 3
+        }
+      ],
+      "joint_failures": [],
+      "labelled_joint_failures": [],
+      "layer": "n34-m289",
+      "state_id": 7219,
+      "weighted_failures": []
+    },
+    {
+      "cores": [
+        {
+          "U": [
+            2,
+            3,
+            4,
+            5
+          ],
+          "eligible": [
+            0,
+            1
+          ],
+          "h": 1,
+          "m": 4,
+          "r": 1
+        },
+        {
+          "U": [
+            6
+          ],
+          "eligible": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5,
+            7,
+            11,
+            12
+          ],
+          "h": 2,
+          "m": 1,
+          "r": 3
+        }
+      ],
+      "joint_failures": [],
+      "labelled_joint_failures": [],
+      "layer": "n34-m289",
+      "state_id": 7220,
+      "weighted_failures": []
+    },
+    {
+      "cores": [
+        {
+          "U": [
+            2,
+            3,
+            4,
+            5
+          ],
+          "eligible": [
+            0,
+            1
+          ],
+          "h": 1,
+          "m": 4,
+          "r": 1
+        }
+      ],
+      "joint_failures": [],
+      "labelled_joint_failures": [],
+      "layer": "n34-m289",
+      "state_id": 7221,
+      "weighted_failures": []
+    },
+    {
+      "cores": [
+        {
+          "U": [
+            1,
+            2,
+            3,
+            4
+          ],
+          "eligible": [
+            0,
+            5
+          ],
+          "h": 1,
+          "m": 4,
+          "r": 1
+        },
+        {
+          "U": [
+            5
+          ],
+          "eligible": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            6
+          ],
+          "h": 1,
+          "m": 1,
+          "r": 2
+        },
+        {
+          "U": [
+            6
+          ],
+          "eligible": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5,
+            7,
+            8,
+            12
+          ],
+          "h": 2,
+          "m": 1,
+          "r": 3
+        }
+      ],
+      "joint_failures": [],
+      "labelled_joint_failures": [
+        {
+          "capacity": 3,
+          "cores": [
+            1
+          ],
+          "demand": 4,
+          "demand_values": [
+            1
+          ],
+          "receiver_caps": [
+            3,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          "saturated_receivers": [
+            1,
+            2,
+            3,
+            4,
+            5,
+            6
+          ]
+        },
+        {
+          "capacity": 3,
+          "cores": [
+            1
+          ],
+          "demand": 4,
+          "demand_values": [
+            1,
+            3
+          ],
+          "receiver_caps": [
+            3,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          "saturated_receivers": [
+            1,
+            2,
+            3,
+            4,
+            5,
+            6
+          ]
+        },
+        {
+          "capacity": 3,
+          "cores": [
+            1,
+            2
+          ],
+          "demand": 5,
+          "demand_values": [
+            1
+          ],
+          "receiver_caps": [
+            3,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          "saturated_receivers": [
+            1,
+            2,
+            3,
+            4,
+            5,
+            6
+          ]
+        },
+        {
+          "capacity": 3,
+          "cores": [
+            1,
+            2
+          ],
+          "demand": 5,
+          "demand_values": [
+            1,
+            3
+          ],
+          "receiver_caps": [
+            3,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          "saturated_receivers": [
+            1,
+            2,
+            3,
+            4,
+            5,
+            6
+          ]
+        }
+      ],
+      "layer": "n34-m289",
+      "state_id": 7225,
+      "weighted_failures": []
+    },
+    {
+      "cores": [
+        {
+          "U": [
+            2,
+            3,
+            4,
+            5
+          ],
+          "eligible": [
+            0,
+            1
+          ],
+          "h": 1,
+          "m": 4,
+          "r": 1
+        }
+      ],
+      "joint_failures": [],
+      "labelled_joint_failures": [],
+      "layer": "n34-m289",
+      "state_id": 7322,
+      "weighted_failures": []
+    },
+    {
+      "cores": [
+        {
+          "U": [
+            2,
+            3,
+            4,
+            5
+          ],
+          "eligible": [
+            0,
+            1
+          ],
+          "h": 1,
+          "m": 4,
+          "r": 1
+        }
+      ],
+      "joint_failures": [],
+      "labelled_joint_failures": [],
+      "layer": "n34-m289",
+      "state_id": 7323,
+      "weighted_failures": []
+    },
+    {
+      "cores": [
+        {
+          "U": [
+            1,
+            2,
+            3,
+            4
+          ],
+          "eligible": [
+            0,
+            5
+          ],
+          "h": 1,
+          "m": 4,
+          "r": 1
+        },
+        {
+          "U": [
+            5
+          ],
+          "eligible": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            6
+          ],
+          "h": 1,
+          "m": 1,
+          "r": 2
+        }
+      ],
+      "joint_failures": [],
+      "labelled_joint_failures": [
+        {
+          "capacity": 3,
+          "cores": [
+            1
+          ],
+          "demand": 4,
+          "demand_values": [
+            1
+          ],
+          "receiver_caps": [
+            3,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          "saturated_receivers": [
+            1,
+            2,
+            3,
+            4,
+            5
+          ]
+        },
+        {
+          "capacity": 4,
+          "cores": [
+            1,
+            2
+          ],
+          "demand": 5,
+          "demand_values": [
+            1
+          ],
+          "receiver_caps": [
+            3,
+            0,
+            0,
+            0,
+            0,
+            0,
+            1,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          "saturated_receivers": [
+            1,
+            2,
+            3,
+            4,
+            5
+          ]
+        }
+      ],
+      "layer": "n34-m289",
+      "state_id": 7327,
+      "weighted_failures": []
+    },
+    {
+      "cores": [
+        {
+          "U": [
+            4,
+            5,
+            6
+          ],
+          "eligible": [
+            0,
+            1,
+            2,
+            3
+          ],
+          "h": 2,
+          "m": 3,
+          "r": 1
+        },
+        {
+          "U": [
+            7
+          ],
+          "eligible": [
+            4,
+            5,
+            6,
+            8,
+            9,
+            10,
+            11,
+            12,
+            13,
+            14
+          ],
+          "h": 4,
+          "m": 1,
+          "r": 3
+        }
+      ],
+      "joint_failures": [],
+      "labelled_joint_failures": [],
+      "layer": "n34-m289",
+      "state_id": 7611,
+      "weighted_failures": []
+    },
+    {
+      "cores": [
+        {
+          "U": [
+            2,
+            3,
+            4,
+            5
+          ],
+          "eligible": [
+            0,
+            1
+          ],
+          "h": 1,
+          "m": 4,
+          "r": 1
+        }
+      ],
+      "joint_failures": [],
+      "labelled_joint_failures": [],
+      "layer": "n34-m289",
+      "state_id": 7624,
+      "weighted_failures": []
+    },
+    {
+      "cores": [
+        {
+          "U": [
+            2,
+            3,
+            4,
+            5
+          ],
+          "eligible": [
+            0,
+            1
+          ],
+          "h": 1,
+          "m": 4,
+          "r": 1
+        },
+        {
+          "U": [
+            6,
+            7
+          ],
+          "eligible": [
+            2,
+            3,
+            4,
+            5,
+            8,
+            11
+          ],
+          "h": 3,
+          "m": 2,
+          "r": 3
+        }
+      ],
+      "joint_failures": [],
+      "labelled_joint_failures": [],
+      "layer": "n34-m289",
+      "state_id": 7682,
+      "weighted_failures": []
+    },
+    {
+      "cores": [
+        {
+          "U": [
+            2,
+            3,
+            4,
+            5
+          ],
+          "eligible": [
+            0,
+            1
+          ],
+          "h": 1,
+          "m": 4,
+          "r": 1
+        },
+        {
+          "U": [
+            6,
+            7
+          ],
+          "eligible": [
+            2,
+            3,
+            4,
+            5,
+            8,
+            11
+          ],
+          "h": 3,
+          "m": 2,
+          "r": 3
+        }
+      ],
+      "joint_failures": [],
+      "labelled_joint_failures": [],
+      "layer": "n34-m289",
+      "state_id": 7721,
+      "weighted_failures": []
+    },
+    {
+      "cores": [
+        {
+          "U": [
+            2,
+            3,
+            4,
+            5
+          ],
+          "eligible": [
+            0,
+            1
+          ],
+          "h": 1,
+          "m": 4,
+          "r": 1
+        },
+        {
+          "U": [
+            6,
+            7
+          ],
+          "eligible": [
+            2,
+            3,
+            4,
+            5,
+            10,
+            11
+          ],
+          "h": 3,
+          "m": 2,
+          "r": 3
+        }
+      ],
+      "joint_failures": [],
+      "labelled_joint_failures": [],
+      "layer": "n34-m289",
+      "state_id": 7722,
+      "weighted_failures": []
+    },
+    {
+      "cores": [
+        {
+          "U": [
+            1,
+            2,
+            3,
+            4
+          ],
+          "eligible": [
+            0,
+            5
+          ],
+          "h": 1,
+          "m": 4,
+          "r": 1
+        },
+        {
+          "U": [
+            5
+          ],
+          "eligible": [
+            0,
+            1,
+            2,
+            3,
+            4
+          ],
+          "h": 1,
+          "m": 1,
+          "r": 2
+        },
+        {
+          "U": [
+            6,
+            7
+          ],
+          "eligible": [
+            1,
+            2,
+            3,
+            4,
+            5,
+            8,
+            9
+          ],
+          "h": 3,
+          "m": 2,
+          "r": 3
+        }
+      ],
+      "joint_failures": [],
+      "labelled_joint_failures": [
+        {
+          "capacity": 3,
+          "cores": [
+            1
+          ],
+          "demand": 4,
+          "demand_values": [
+            1
+          ],
+          "receiver_caps": [
+            3,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          "saturated_receivers": [
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7
+          ]
+        },
+        {
+          "capacity": 3,
+          "cores": [
+            1
+          ],
+          "demand": 4,
+          "demand_values": [
+            1,
+            3
+          ],
+          "receiver_caps": [
+            3,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          "saturated_receivers": [
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7
+          ]
+        },
+        {
+          "capacity": 3,
+          "cores": [
+            1,
+            2
+          ],
+          "demand": 5,
+          "demand_values": [
+            1
+          ],
+          "receiver_caps": [
+            3,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          "saturated_receivers": [
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7
+          ]
+        },
+        {
+          "capacity": 3,
+          "cores": [
+            1,
+            2
+          ],
+          "demand": 5,
+          "demand_values": [
+            1,
+            3
+          ],
+          "receiver_caps": [
+            3,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          "saturated_receivers": [
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7
+          ]
+        }
+      ],
+      "layer": "n34-m289",
+      "state_id": 7728,
+      "weighted_failures": []
+    },
+    {
+      "cores": [
+        {
+          "U": [
+            2,
+            3,
+            4,
+            5
+          ],
+          "eligible": [
+            0,
+            1
+          ],
+          "h": 1,
+          "m": 4,
+          "r": 1
+        }
+      ],
+      "joint_failures": [],
+      "labelled_joint_failures": [],
+      "layer": "n34-m289",
+      "state_id": 7855,
+      "weighted_failures": []
+    },
+    {
+      "cores": [
+        {
+          "U": [
+            2,
+            3,
+            4,
+            5
+          ],
+          "eligible": [
+            0,
+            1
+          ],
+          "h": 1,
+          "m": 4,
+          "r": 1
+        },
+        {
+          "U": [
+            9
+          ],
+          "eligible": [
+            6,
+            7,
+            8,
+            10,
+            11,
+            12,
+            13,
+            14,
+            15,
+            16,
+            17
+          ],
+          "h": 8,
+          "m": 1,
+          "r": 4
+        }
+      ],
+      "joint_failures": [],
+      "labelled_joint_failures": [],
+      "layer": "n34-m289",
+      "state_id": 7928,
+      "weighted_failures": []
+    },
+    {
+      "cores": [
+        {
+          "U": [
+            1,
+            2,
+            3,
+            4
+          ],
+          "eligible": [
+            0,
+            5
+          ],
+          "h": 1,
+          "m": 4,
+          "r": 1
+        },
+        {
+          "U": [
+            5
+          ],
+          "eligible": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            6
+          ],
+          "h": 1,
+          "m": 1,
+          "r": 2
+        }
+      ],
+      "joint_failures": [],
+      "labelled_joint_failures": [
+        {
+          "capacity": 3,
+          "cores": [
+            1
+          ],
+          "demand": 4,
+          "demand_values": [
+            1
+          ],
+          "receiver_caps": [
+            3,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          "saturated_receivers": [
+            1,
+            2,
+            3,
+            4,
+            5
+          ]
+        },
+        {
+          "capacity": 4,
+          "cores": [
+            1,
+            2
+          ],
+          "demand": 5,
+          "demand_values": [
+            1
+          ],
+          "receiver_caps": [
+            3,
+            0,
+            0,
+            0,
+            0,
+            0,
+            1,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          "saturated_receivers": [
+            1,
+            2,
+            3,
+            4,
+            5
+          ]
+        }
+      ],
+      "layer": "n34-m289",
+      "state_id": 7932,
+      "weighted_failures": []
+    },
+    {
+      "cores": [
+        {
+          "U": [
+            2,
+            3,
+            4,
+            5
+          ],
+          "eligible": [
+            0,
+            1,
+            6
+          ],
+          "h": 2,
+          "m": 4,
+          "r": 1
+        },
+        {
+          "U": [
+            6
+          ],
+          "eligible": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5,
+            10,
+            11,
+            12,
+            13
+          ],
+          "h": 2,
+          "m": 1,
+          "r": 2
+        }
+      ],
+      "joint_failures": [],
+      "labelled_joint_failures": [
+        {
+          "capacity": 6,
+          "cores": [
+            1
+          ],
+          "demand": 8,
+          "demand_values": [
+            1
+          ],
+          "receiver_caps": [
+            3,
+            3,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          "saturated_receivers": [
+            2,
+            3,
+            4,
+            5,
+            6
+          ]
+        }
+      ],
+      "layer": "n34-m289",
+      "state_id": 8254,
+      "weighted_failures": []
+    },
+    {
+      "cores": [
+        {
+          "U": [
+            2,
+            3,
+            4,
+            5
+          ],
+          "eligible": [
+            0,
+            1
+          ],
+          "h": 1,
+          "m": 4,
+          "r": 1
+        }
+      ],
+      "joint_failures": [],
+      "labelled_joint_failures": [],
+      "layer": "n34-m289",
+      "state_id": 8281,
+      "weighted_failures": []
+    },
+    {
+      "cores": [
+        {
+          "U": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5
+          ],
+          "eligible": [
+            17
+          ],
+          "h": 1,
+          "m": 6,
+          "r": 1
+        },
+        {
+          "U": [
+            9
+          ],
+          "eligible": [
+            6,
+            7,
+            8,
+            10,
+            11,
+            12,
+            13,
+            14,
+            15,
+            16,
+            17
+          ],
+          "h": 7,
+          "m": 1,
+          "r": 4
+        }
+      ],
+      "joint_failures": [],
+      "labelled_joint_failures": [],
+      "layer": "n34-m289",
+      "state_id": 8353,
+      "weighted_failures": []
+    },
+    {
+      "cores": [
+        {
+          "U": [
+            1,
+            2,
+            3,
+            4
+          ],
+          "eligible": [
+            0,
+            5
+          ],
+          "h": 1,
+          "m": 4,
+          "r": 1
+        },
+        {
+          "U": [
+            5
+          ],
+          "eligible": [
+            0,
+            1,
+            2,
+            3,
+            4
+          ],
+          "h": 1,
+          "m": 1,
+          "r": 2
+        },
+        {
+          "U": [
+            9
+          ],
+          "eligible": [
+            6,
+            7,
+            8,
+            10,
+            11,
+            12,
+            13,
+            14,
+            15,
+            16,
+            17
+          ],
+          "h": 7,
+          "m": 1,
+          "r": 4
+        }
+      ],
+      "joint_failures": [],
+      "labelled_joint_failures": [
+        {
+          "capacity": 3,
+          "cores": [
+            1
+          ],
+          "demand": 4,
+          "demand_values": [
+            1
+          ],
+          "receiver_caps": [
+            3,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          "saturated_receivers": [
+            1,
+            2,
+            3,
+            4,
+            5,
+            9
+          ]
+        },
+        {
+          "capacity": 3,
+          "cores": [
+            1
+          ],
+          "demand": 4,
+          "demand_values": [
+            1,
+            4
+          ],
+          "receiver_caps": [
+            3,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          "saturated_receivers": [
+            1,
+            2,
+            3,
+            4,
+            5,
+            9
+          ]
+        },
+        {
+          "capacity": 3,
+          "cores": [
+            1,
+            2
+          ],
+          "demand": 5,
+          "demand_values": [
+            1
+          ],
+          "receiver_caps": [
+            3,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          "saturated_receivers": [
+            1,
+            2,
+            3,
+            4,
+            5,
+            9
+          ]
+        },
+        {
+          "capacity": 3,
+          "cores": [
+            1,
+            2
+          ],
+          "demand": 5,
+          "demand_values": [
+            1,
+            4
+          ],
+          "receiver_caps": [
+            3,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          "saturated_receivers": [
+            1,
+            2,
+            3,
+            4,
+            5,
+            9
+          ]
+        }
+      ],
+      "layer": "n34-m289",
+      "state_id": 8358,
+      "weighted_failures": []
+    },
+    {
+      "cores": [
+        {
+          "U": [
+            2,
+            3,
+            4,
+            5
+          ],
+          "eligible": [
+            0,
+            1
+          ],
+          "h": 1,
+          "m": 4,
+          "r": 1
+        },
+        {
+          "U": [
+            6
+          ],
+          "eligible": [
+            2,
+            3,
+            4,
+            5,
+            9,
+            10,
+            11
+          ],
+          "h": 3,
+          "m": 1,
+          "r": 3
+        },
+        {
+          "U": [
+            7,
+            8
+          ],
+          "eligible": [
+            6,
+            9,
+            10,
+            11,
+            12,
+            13,
+            14,
+            15,
+            16,
+            17
+          ],
+          "h": 6,
+          "m": 2,
+          "r": 4
+        }
+      ],
+      "joint_failures": [],
+      "labelled_joint_failures": [],
+      "layer": "n34-m289",
+      "state_id": 8622,
+      "weighted_failures": []
+    },
+    {
+      "cores": [
+        {
+          "U": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5
+          ],
+          "eligible": [
+            9
+          ],
+          "h": 1,
+          "m": 6,
+          "r": 1
+        },
+        {
+          "U": [
+            8
+          ],
+          "eligible": [
+            6,
+            7,
+            9,
+            10,
+            11,
+            12,
+            13,
+            14,
+            15,
+            16,
+            17
+          ],
+          "h": 6,
+          "m": 1,
+          "r": 4
+        }
+      ],
+      "joint_failures": [],
+      "labelled_joint_failures": [],
+      "layer": "n34-m289",
+      "state_id": 8671,
+      "weighted_failures": []
+    },
+    {
+      "cores": [
+        {
+          "U": [
+            2,
+            3,
+            4,
+            5
+          ],
+          "eligible": [
+            0,
+            1
+          ],
+          "h": 1,
+          "m": 4,
+          "r": 1
+        },
+        {
+          "U": [
+            7,
+            8
+          ],
+          "eligible": [
+            6,
+            9,
+            10,
+            11,
+            12,
+            13,
+            14,
+            15,
+            16,
+            17
+          ],
+          "h": 6,
+          "m": 2,
+          "r": 4
+        }
+      ],
+      "joint_failures": [],
+      "labelled_joint_failures": [],
+      "layer": "n34-m289",
+      "state_id": 8732,
+      "weighted_failures": []
+    },
+    {
+      "cores": [
+        {
+          "U": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5
+          ],
+          "eligible": [
+            8
+          ],
+          "h": 1,
+          "m": 6,
+          "r": 1
+        }
+      ],
+      "joint_failures": [],
+      "labelled_joint_failures": [],
+      "layer": "n34-m289",
+      "state_id": 9013,
+      "weighted_failures": []
+    },
+    {
+      "cores": [
+        {
+          "U": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5
+          ],
+          "eligible": [
+            9
+          ],
+          "h": 1,
+          "m": 6,
+          "r": 1
+        },
+        {
+          "U": [
+            6
+          ],
+          "eligible": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5,
+            7,
+            8,
+            9,
+            10
+          ],
+          "h": 3,
+          "m": 1,
+          "r": 3
+        }
+      ],
+      "joint_failures": [],
+      "labelled_joint_failures": [],
+      "layer": "n34-m289",
+      "state_id": 9084,
+      "weighted_failures": []
+    },
+    {
+      "cores": [
+        {
+          "U": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5
+          ],
+          "eligible": [
+            17
+          ],
+          "h": 1,
+          "m": 6,
+          "r": 1
+        },
+        {
+          "U": [
+            6
+          ],
+          "eligible": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5,
+            7,
+            8,
+            17
+          ],
+          "h": 3,
+          "m": 1,
+          "r": 3
+        }
+      ],
+      "joint_failures": [],
+      "labelled_joint_failures": [],
+      "layer": "n34-m289",
+      "state_id": 9104,
+      "weighted_failures": []
+    },
+    {
+      "cores": [
+        {
+          "U": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5
+          ],
+          "eligible": [
+            8
+          ],
+          "h": 1,
+          "m": 6,
+          "r": 1
+        },
+        {
+          "U": [
+            6
+          ],
+          "eligible": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5,
+            7,
+            8,
+            9
+          ],
+          "h": 3,
+          "m": 1,
+          "r": 3
+        }
+      ],
+      "joint_failures": [],
+      "labelled_joint_failures": [],
+      "layer": "n34-m289",
+      "state_id": 9105,
+      "weighted_failures": []
+    },
+    {
+      "cores": [
+        {
+          "U": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5
+          ],
+          "eligible": [
+            9
+          ],
+          "h": 1,
+          "m": 6,
+          "r": 1
+        }
+      ],
+      "joint_failures": [],
+      "labelled_joint_failures": [],
+      "layer": "n34-m289",
+      "state_id": 9106,
+      "weighted_failures": []
+    },
+    {
+      "cores": [
+        {
+          "U": [
+            1,
+            2,
+            3,
+            4
+          ],
+          "eligible": [
+            0,
+            5
+          ],
+          "h": 1,
+          "m": 4,
+          "r": 1
+        },
+        {
+          "U": [
+            5
+          ],
+          "eligible": [
+            0,
+            1,
+            2,
+            3,
+            4
+          ],
+          "h": 1,
+          "m": 1,
+          "r": 2
+        },
+        {
+          "U": [
+            6
+          ],
+          "eligible": [
+            1,
+            2,
+            3,
+            4,
+            5,
+            7,
+            8,
+            9
+          ],
+          "h": 3,
+          "m": 1,
+          "r": 3
+        }
+      ],
+      "joint_failures": [],
+      "labelled_joint_failures": [
+        {
+          "capacity": 3,
+          "cores": [
+            1
+          ],
+          "demand": 4,
+          "demand_values": [
+            1
+          ],
+          "receiver_caps": [
+            3,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          "saturated_receivers": [
+            1,
+            2,
+            3,
+            4,
+            5,
+            6
+          ]
+        },
+        {
+          "capacity": 3,
+          "cores": [
+            1
+          ],
+          "demand": 4,
+          "demand_values": [
+            1,
+            3
+          ],
+          "receiver_caps": [
+            3,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          "saturated_receivers": [
+            1,
+            2,
+            3,
+            4,
+            5,
+            6
+          ]
+        },
+        {
+          "capacity": 3,
+          "cores": [
+            1,
+            2
+          ],
+          "demand": 5,
+          "demand_values": [
+            1
+          ],
+          "receiver_caps": [
+            3,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          "saturated_receivers": [
+            1,
+            2,
+            3,
+            4,
+            5,
+            6
+          ]
+        },
+        {
+          "capacity": 3,
+          "cores": [
+            1,
+            2
+          ],
+          "demand": 5,
+          "demand_values": [
+            1,
+            3
+          ],
+          "receiver_caps": [
+            3,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          "saturated_receivers": [
+            1,
+            2,
+            3,
+            4,
+            5,
+            6
+          ]
+        }
+      ],
+      "layer": "n34-m289",
+      "state_id": 9107,
+      "weighted_failures": []
+    },
+    {
+      "cores": [
+        {
+          "U": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5
+          ],
+          "eligible": [
+            9
+          ],
+          "h": 1,
+          "m": 6,
+          "r": 1
+        }
+      ],
+      "joint_failures": [],
+      "labelled_joint_failures": [],
+      "layer": "n34-m289",
+      "state_id": 9169,
+      "weighted_failures": []
+    },
+    {
+      "cores": [
+        {
+          "U": [
+            2,
+            3,
+            4,
+            5
+          ],
+          "eligible": [
+            0,
+            1
+          ],
+          "h": 1,
+          "m": 4,
+          "r": 1
+        },
+        {
+          "U": [
+            8
+          ],
+          "eligible": [
+            6,
+            7,
+            9,
+            10,
+            11,
+            12,
+            13,
+            14,
+            15,
+            16,
+            17
+          ],
+          "h": 5,
+          "m": 1,
+          "r": 4
+        }
+      ],
+      "joint_failures": [],
+      "labelled_joint_failures": [],
+      "layer": "n34-m289",
+      "state_id": 9190,
+      "weighted_failures": []
+    },
+    {
+      "cores": [
+        {
+          "U": [
+            2,
+            3,
+            4,
+            5
+          ],
+          "eligible": [
+            0,
+            1
+          ],
+          "h": 1,
+          "m": 4,
+          "r": 1
+        }
+      ],
+      "joint_failures": [],
+      "labelled_joint_failures": [],
+      "layer": "n34-m289",
+      "state_id": 9338,
+      "weighted_failures": []
+    },
+    {
+      "cores": [
+        {
+          "U": [
+            2,
+            3,
+            4,
+            5
+          ],
+          "eligible": [
+            0,
+            1
+          ],
+          "h": 1,
+          "m": 4,
+          "r": 1
+        }
+      ],
+      "joint_failures": [],
+      "labelled_joint_failures": [],
+      "layer": "n34-m289",
+      "state_id": 9339,
+      "weighted_failures": []
+    },
+    {
+      "cores": [
+        {
+          "U": [
+            1,
+            2,
+            3,
+            4
+          ],
+          "eligible": [
+            0,
+            5
+          ],
+          "h": 1,
+          "m": 4,
+          "r": 1
+        },
+        {
+          "U": [
+            5
+          ],
+          "eligible": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            9,
+            10
+          ],
+          "h": 1,
+          "m": 1,
+          "r": 2
+        }
+      ],
+      "joint_failures": [],
+      "labelled_joint_failures": [
+        {
+          "capacity": 3,
+          "cores": [
+            1
+          ],
+          "demand": 4,
+          "demand_values": [
+            0
+          ],
+          "receiver_caps": [
+            3,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          "saturated_receivers": [
+            1,
+            2,
+            3,
+            4,
+            5
+          ]
+        }
+      ],
+      "layer": "n34-m289",
+      "state_id": 9340,
+      "weighted_failures": []
+    },
+    {
+      "cores": [
+        {
+          "U": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5
+          ],
+          "eligible": [
+            8
+          ],
+          "h": 1,
+          "m": 6,
+          "r": 1
+        }
+      ],
+      "joint_failures": [],
+      "labelled_joint_failures": [],
+      "layer": "n34-m289",
+      "state_id": 9552,
+      "weighted_failures": []
+    },
+    {
+      "cores": [
+        {
+          "U": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5
+          ],
+          "eligible": [
+            8
+          ],
+          "h": 1,
+          "m": 6,
+          "r": 1
+        }
+      ],
+      "joint_failures": [],
+      "labelled_joint_failures": [],
+      "layer": "n34-m289",
+      "state_id": 9571,
+      "weighted_failures": []
+    },
+    {
+      "cores": [
+        {
+          "U": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5
+          ],
+          "eligible": [
+            8
+          ],
+          "h": 1,
+          "m": 6,
+          "r": 1
+        }
+      ],
+      "joint_failures": [],
+      "labelled_joint_failures": [],
+      "layer": "n34-m289",
+      "state_id": 9572,
+      "weighted_failures": []
+    },
+    {
+      "cores": [
+        {
+          "U": [
+            1,
+            2,
+            3,
+            4
+          ],
+          "eligible": [
+            0,
+            5
+          ],
+          "h": 1,
+          "m": 4,
+          "r": 1
+        },
+        {
+          "U": [
+            5
+          ],
+          "eligible": [
+            0,
+            1,
+            2,
+            3,
+            4
+          ],
+          "h": 1,
+          "m": 1,
+          "r": 2
+        }
+      ],
+      "joint_failures": [],
+      "labelled_joint_failures": [
+        {
+          "capacity": 3,
+          "cores": [
+            1
+          ],
+          "demand": 4,
+          "demand_values": [
+            1
+          ],
+          "receiver_caps": [
+            3,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          "saturated_receivers": [
+            1,
+            2,
+            3,
+            4,
+            5
+          ]
+        },
+        {
+          "capacity": 3,
+          "cores": [
+            1,
+            2
+          ],
+          "demand": 5,
+          "demand_values": [
+            1
+          ],
+          "receiver_caps": [
+            3,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          "saturated_receivers": [
+            1,
+            2,
+            3,
+            4,
+            5
+          ]
+        }
+      ],
+      "layer": "n34-m289",
+      "state_id": 9573,
+      "weighted_failures": []
+    },
+    {
+      "cores": [
+        {
+          "U": [
+            2,
+            3,
+            4,
+            5
+          ],
+          "eligible": [
+            0,
+            1
+          ],
+          "h": 1,
+          "m": 4,
+          "r": 1
+        }
+      ],
+      "joint_failures": [],
+      "labelled_joint_failures": [],
+      "layer": "n34-m289",
+      "state_id": 9714,
+      "weighted_failures": []
+    },
+    {
+      "cores": [
+        {
+          "U": [
+            1,
+            2,
+            3,
+            4
+          ],
+          "eligible": [
+            0,
+            5
+          ],
+          "h": 1,
+          "m": 4,
+          "r": 1
+        },
+        {
+          "U": [
+            5
+          ],
+          "eligible": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            8
+          ],
+          "h": 1,
+          "m": 1,
+          "r": 2
+        }
+      ],
+      "joint_failures": [],
+      "labelled_joint_failures": [
+        {
+          "capacity": 3,
+          "cores": [
+            1
+          ],
+          "demand": 4,
+          "demand_values": [
+            0
+          ],
+          "receiver_caps": [
+            3,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          "saturated_receivers": [
+            1,
+            2,
+            3,
+            4,
+            5
+          ]
+        },
+        {
+          "capacity": 4,
+          "cores": [
+            1,
+            2
+          ],
+          "demand": 5,
+          "demand_values": [
+            0
+          ],
+          "receiver_caps": [
+            3,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            1,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          "saturated_receivers": [
+            1,
+            2,
+            3,
+            4,
+            5
+          ]
+        }
+      ],
+      "layer": "n34-m289",
+      "state_id": 9851,
+      "weighted_failures": []
+    },
+    {
+      "cores": [
+        {
+          "U": [
+            2,
+            3,
+            4,
+            5
+          ],
+          "eligible": [
+            0,
+            1
+          ],
+          "h": 1,
+          "m": 4,
+          "r": 1
+        },
+        {
+          "U": [
+            6
+          ],
+          "eligible": [
+            2,
+            3,
+            4,
+            5,
+            7,
+            8,
+            9
+          ],
+          "h": 3,
+          "m": 1,
+          "r": 3
+        },
+        {
+          "U": [
+            7
+          ],
+          "eligible": [
+            2,
+            3,
+            4,
+            5,
+            6,
+            8,
+            9,
+            10
+          ],
+          "h": 3,
+          "m": 1,
+          "r": 4
+        }
+      ],
+      "joint_failures": [],
+      "labelled_joint_failures": [],
+      "layer": "n34-m289",
+      "state_id": 10043,
+      "weighted_failures": []
+    },
+    {
+      "cores": [
+        {
+          "U": [
+            2,
+            3,
+            4,
+            5
+          ],
+          "eligible": [
+            0,
+            1
+          ],
+          "h": 1,
+          "m": 4,
+          "r": 1
+        },
+        {
+          "U": [
+            6,
+            7
+          ],
+          "eligible": [
+            2,
+            3,
+            4,
+            5,
+            8,
+            9,
+            10
+          ],
+          "h": 3,
+          "m": 2,
+          "r": 4
+        }
+      ],
+      "joint_failures": [],
+      "labelled_joint_failures": [],
+      "layer": "n34-m289",
+      "state_id": 10067,
+      "weighted_failures": []
+    },
+    {
+      "cores": [
+        {
+          "U": [
+            1,
+            2,
+            3,
+            4
+          ],
+          "eligible": [
+            0,
+            5
+          ],
+          "h": 1,
+          "m": 4,
+          "r": 1
+        },
+        {
+          "U": [
+            5
+          ],
+          "eligible": [
+            0,
+            1,
+            2,
+            3,
+            4
+          ],
+          "h": 1,
+          "m": 1,
+          "r": 2
+        },
+        {
+          "U": [
+            6
+          ],
+          "eligible": [
+            1,
+            2,
+            3,
+            4,
+            5,
+            7,
+            8,
+            9
+          ],
+          "h": 3,
+          "m": 1,
+          "r": 3
+        },
+        {
+          "U": [
+            7
+          ],
+          "eligible": [
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            8,
+            9
+          ],
+          "h": 3,
+          "m": 1,
+          "r": 4
+        }
+      ],
+      "joint_failures": [],
+      "labelled_joint_failures": [
+        {
+          "capacity": 3,
+          "cores": [
+            1
+          ],
+          "demand": 4,
+          "demand_values": [
+            0
+          ],
+          "receiver_caps": [
+            3,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          "saturated_receivers": [
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7
+          ]
+        },
+        {
+          "capacity": 3,
+          "cores": [
+            1
+          ],
+          "demand": 4,
+          "demand_values": [
+            0,
+            3
+          ],
+          "receiver_caps": [
+            3,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          "saturated_receivers": [
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7
+          ]
+        },
+        {
+          "capacity": 3,
+          "cores": [
+            1,
+            2
+          ],
+          "demand": 5,
+          "demand_values": [
+            0
+          ],
+          "receiver_caps": [
+            3,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          "saturated_receivers": [
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7
+          ]
+        },
+        {
+          "capacity": 3,
+          "cores": [
+            1,
+            2
+          ],
+          "demand": 5,
+          "demand_values": [
+            0,
+            3
+          ],
+          "receiver_caps": [
+            3,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          "saturated_receivers": [
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7
+          ]
+        },
+        {
+          "capacity": 5,
+          "cores": [
+            1,
+            2,
+            3
+          ],
+          "demand": 6,
+          "demand_values": [
+            0
+          ],
+          "receiver_caps": [
+            3,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            1,
+            1,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          "saturated_receivers": [
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7
+          ]
+        },
+        {
+          "capacity": 5,
+          "cores": [
+            1,
+            2,
+            4
+          ],
+          "demand": 6,
+          "demand_values": [
+            0
+          ],
+          "receiver_caps": [
+            3,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            1,
+            1,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          "saturated_receivers": [
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7
+          ]
+        }
+      ],
+      "layer": "n34-m289",
+      "state_id": 10068,
+      "weighted_failures": []
+    },
+    {
+      "cores": [
+        {
+          "U": [
+            2,
+            3,
+            4,
+            5
+          ],
+          "eligible": [
+            0,
+            1
+          ],
+          "h": 1,
+          "m": 4,
+          "r": 1
+        },
+        {
+          "U": [
+            6,
+            7
+          ],
+          "eligible": [
+            2,
+            3,
+            4,
+            5,
+            8,
+            9,
+            10
+          ],
+          "h": 3,
+          "m": 2,
+          "r": 4
+        }
+      ],
+      "joint_failures": [],
+      "labelled_joint_failures": [],
+      "layer": "n34-m289",
+      "state_id": 10210,
+      "weighted_failures": []
+    },
+    {
+      "cores": [
+        {
+          "U": [
+            1,
+            2,
+            3,
+            4
+          ],
+          "eligible": [
+            0,
+            5
+          ],
+          "h": 1,
+          "m": 4,
+          "r": 1
+        },
+        {
+          "U": [
+            5
+          ],
+          "eligible": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            8
+          ],
+          "h": 1,
+          "m": 1,
+          "r": 2
+        },
+        {
+          "U": [
+            6,
+            7
+          ],
+          "eligible": [
+            1,
+            2,
+            3,
+            4,
+            5,
+            8,
+            9,
+            10
+          ],
+          "h": 3,
+          "m": 2,
+          "r": 4
+        }
+      ],
+      "joint_failures": [],
+      "labelled_joint_failures": [
+        {
+          "capacity": 3,
+          "cores": [
+            1
+          ],
+          "demand": 4,
+          "demand_values": [
+            0
+          ],
+          "receiver_caps": [
+            3,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          "saturated_receivers": [
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7
+          ]
+        },
+        {
+          "capacity": 3,
+          "cores": [
+            1
+          ],
+          "demand": 4,
+          "demand_values": [
+            0,
+            3
+          ],
+          "receiver_caps": [
+            3,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          "saturated_receivers": [
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7
+          ]
+        },
+        {
+          "capacity": 3,
+          "cores": [
+            1
+          ],
+          "demand": 4,
+          "demand_values": [
+            0,
+            4
+          ],
+          "receiver_caps": [
+            3,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          "saturated_receivers": [
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7
+          ]
+        },
+        {
+          "capacity": 3,
+          "cores": [
+            1
+          ],
+          "demand": 4,
+          "demand_values": [
+            0,
+            3,
+            4
+          ],
+          "receiver_caps": [
+            3,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          "saturated_receivers": [
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7
+          ]
+        },
+        {
+          "capacity": 4,
+          "cores": [
+            1,
+            2
+          ],
+          "demand": 5,
+          "demand_values": [
+            0
+          ],
+          "receiver_caps": [
+            3,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            1,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          "saturated_receivers": [
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7
+          ]
+        },
+        {
+          "capacity": 4,
+          "cores": [
+            1,
+            2
+          ],
+          "demand": 5,
+          "demand_values": [
+            0,
+            3
+          ],
+          "receiver_caps": [
+            3,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            1,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          "saturated_receivers": [
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7
+          ]
+        },
+        {
+          "capacity": 4,
+          "cores": [
+            1,
+            2
+          ],
+          "demand": 5,
+          "demand_values": [
+            0,
+            4
+          ],
+          "receiver_caps": [
+            3,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            1,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          "saturated_receivers": [
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7
+          ]
+        },
+        {
+          "capacity": 4,
+          "cores": [
+            1,
+            2
+          ],
+          "demand": 5,
+          "demand_values": [
+            0,
+            3,
+            4
+          ],
+          "receiver_caps": [
+            3,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            1,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          "saturated_receivers": [
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7
+          ]
+        }
+      ],
+      "layer": "n34-m289",
+      "state_id": 10276,
+      "weighted_failures": []
+    },
+    {
+      "cores": [
+        {
+          "U": [
+            1,
+            2,
+            3,
+            4
+          ],
+          "eligible": [
+            0,
+            5
+          ],
+          "h": 1,
+          "m": 4,
+          "r": 1
+        },
+        {
+          "U": [
+            5
+          ],
+          "eligible": [
+            0,
+            1,
+            2,
+            3,
+            4
+          ],
+          "h": 1,
+          "m": 1,
+          "r": 2
+        },
+        {
+          "U": [
+            6,
+            7
+          ],
+          "eligible": [
+            1,
+            2,
+            3,
+            4,
+            5,
+            8,
+            9,
+            17
+          ],
+          "h": 3,
+          "m": 2,
+          "r": 4
+        }
+      ],
+      "joint_failures": [],
+      "labelled_joint_failures": [
+        {
+          "capacity": 3,
+          "cores": [
+            1
+          ],
+          "demand": 4,
+          "demand_values": [
+            0
+          ],
+          "receiver_caps": [
+            3,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          "saturated_receivers": [
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7
+          ]
+        },
+        {
+          "capacity": 3,
+          "cores": [
+            1
+          ],
+          "demand": 4,
+          "demand_values": [
+            0,
+            4
+          ],
+          "receiver_caps": [
+            3,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          "saturated_receivers": [
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7
+          ]
+        },
+        {
+          "capacity": 3,
+          "cores": [
+            1,
+            2
+          ],
+          "demand": 5,
+          "demand_values": [
+            0
+          ],
+          "receiver_caps": [
+            3,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          "saturated_receivers": [
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7
+          ]
+        },
+        {
+          "capacity": 3,
+          "cores": [
+            1,
+            2
+          ],
+          "demand": 5,
+          "demand_values": [
+            0,
+            4
+          ],
+          "receiver_caps": [
+            3,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          "saturated_receivers": [
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7
+          ]
+        }
+      ],
+      "layer": "n34-m289",
+      "state_id": 10509,
+      "weighted_failures": []
+    },
+    {
+      "cores": [
+        {
+          "U": [
+            1,
+            2,
+            3,
+            4
+          ],
+          "eligible": [
+            0,
+            5
+          ],
+          "h": 1,
+          "m": 4,
+          "r": 1
+        },
+        {
+          "U": [
+            5
+          ],
+          "eligible": [
+            0,
+            1,
+            2,
+            3,
+            4
+          ],
+          "h": 1,
+          "m": 1,
+          "r": 2
+        },
+        {
+          "U": [
+            6
+          ],
+          "eligible": [
+            1,
+            2,
+            3,
+            4,
+            5,
+            7,
+            8,
+            9,
+            10
+          ],
+          "h": 3,
+          "m": 1,
+          "r": 4
+        }
+      ],
+      "joint_failures": [],
+      "labelled_joint_failures": [
+        {
+          "capacity": 3,
+          "cores": [
+            1
+          ],
+          "demand": 4,
+          "demand_values": [
+            0
+          ],
+          "receiver_caps": [
+            3,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          "saturated_receivers": [
+            1,
+            2,
+            3,
+            4,
+            5,
+            6
+          ]
+        },
+        {
+          "capacity": 3,
+          "cores": [
+            1
+          ],
+          "demand": 4,
+          "demand_values": [
+            0,
+            4
+          ],
+          "receiver_caps": [
+            3,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          "saturated_receivers": [
+            1,
+            2,
+            3,
+            4,
+            5,
+            6
+          ]
+        },
+        {
+          "capacity": 3,
+          "cores": [
+            1,
+            2
+          ],
+          "demand": 5,
+          "demand_values": [
+            0
+          ],
+          "receiver_caps": [
+            3,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          "saturated_receivers": [
+            1,
+            2,
+            3,
+            4,
+            5,
+            6
+          ]
+        },
+        {
+          "capacity": 3,
+          "cores": [
+            1,
+            2
+          ],
+          "demand": 5,
+          "demand_values": [
+            0,
+            4
+          ],
+          "receiver_caps": [
+            3,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          "saturated_receivers": [
+            1,
+            2,
+            3,
+            4,
+            5,
+            6
+          ]
+        }
+      ],
+      "layer": "n34-m289",
+      "state_id": 10510,
+      "weighted_failures": []
+    },
+    {
+      "cores": [
+        {
+          "U": [
+            2,
+            3,
+            4,
+            5
+          ],
+          "eligible": [
+            0,
+            1,
+            6
+          ],
+          "h": 2,
+          "m": 4,
+          "r": 1
+        },
+        {
+          "U": [
+            6
+          ],
+          "eligible": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5,
+            7,
+            17
+          ],
+          "h": 2,
+          "m": 1,
+          "r": 3
+        }
+      ],
+      "joint_failures": [],
+      "labelled_joint_failures": [
+        {
+          "capacity": 6,
+          "cores": [
+            1
+          ],
+          "demand": 8,
+          "demand_values": [
+            1
+          ],
+          "receiver_caps": [
+            3,
+            3,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          "saturated_receivers": [
+            2,
+            3,
+            4,
+            5,
+            6
+          ]
+        },
+        {
+          "capacity": 8,
+          "cores": [
+            1,
+            3
+          ],
+          "demand": 10,
+          "demand_values": [
+            1
+          ],
+          "receiver_caps": [
+            3,
+            3,
+            0,
+            0,
+            0,
+            0,
+            0,
+            1,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            1
+          ],
+          "saturated_receivers": [
+            2,
+            3,
+            4,
+            5,
+            6
+          ]
+        }
+      ],
+      "layer": "n34-m289",
+      "state_id": 10845,
+      "weighted_failures": []
+    },
+    {
+      "cores": [
+        {
+          "U": [
+            0,
+            1,
+            2,
+            3,
+            4
+          ],
+          "eligible": [
+            7
+          ],
+          "h": 1,
+          "m": 5,
+          "r": 1
+        },
+        {
+          "U": [
+            5,
+            6
+          ],
+          "eligible": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            7,
+            8
+          ],
+          "h": 2,
+          "m": 2,
+          "r": 4
+        }
+      ],
+      "joint_failures": [],
+      "labelled_joint_failures": [],
+      "layer": "n34-m289",
+      "state_id": 11079,
+      "weighted_failures": []
+    },
+    {
+      "cores": [
+        {
+          "U": [
+            2,
+            3,
+            4,
+            5,
+            6,
+            7
+          ],
+          "eligible": [
+            0,
+            1
+          ],
+          "h": 1,
+          "m": 6,
+          "r": 1
+        },
+        {
+          "U": [
+            8
+          ],
+          "eligible": [
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            9,
+            10,
+            11,
+            12
+          ],
+          "h": 3,
+          "m": 1,
+          "r": 3
+        }
+      ],
+      "joint_failures": [],
+      "labelled_joint_failures": [],
+      "layer": "n35-m306",
+      "state_id": 18,
+      "weighted_failures": []
+    }
+  ],
+  "scope": "124 preserved fixed-q rescue witnesses; not a whole-state enumeration",
+  "weighted_checks": 6481,
+  "weighted_rejected": []
+}
