@@ -1,6 +1,9 @@
 # Murty–Simon / Erdős #742 — current state handoff
 
 <!-- CURRENT-STATUS:START -->
+<!-- RECEIVER-PRICE-GAP-CENSUS-V1-STAGING -->
+**15 September 2026 — full receiver-price gap census launched.** The independent 170-candidate forced-core audit is actively fanned out: its plan job and **136/136 survivor-witness replay are green**, while candidate enumeration jobs are running; no forced-core candidate has been promoted. In parallel, branch `research/forced-core-receiver-price-gap-census-v1` launches a complete aggregate-versus-partition census across all **170 complete candidate universes**. Every type profile is first tested by scalar receiver capacity and the exact fractional receiver-price cover; only aggregate survivors fall through to the exact labelled-partition DP. The census gate requires exact `profiles_tested` agreement and `aggregate_fail + partition_gap_fail = authoritative core_fail` state-by-state. Any genuine partition-only profile is preserved as a gap witness rather than treated as a failed experiment; authoritative endpoints with `h=5` and `h=4` are prioritized. **Canonical/promoted status unchanged: 4,626 exclusions / 952 survivors / 3,632 whole-state closures. External review remains OPEN.**
+
 <!-- FORCED-CORE-AUDIT-V2-STAGING -->
 **15 September 2026 — independent forced-core audit v2 launch checkpoint.** The completed 306-state forced-core discovery remains discovery-only: 170 N34-derived candidate exclusions and 136 rescanned survivors, with 646 stored-witness survivors for 782 route survivors. The independently structured type-multiplicity scanner now has **29/170 exact field-for-field candidate matches** (the original 24 plus states `9858,10296,10507,10858,10898`). A direct replay through the independent acceptance semantics validates **136/136 survivor witnesses** and exactly reproduces witness `E`, target-flow cost and envelope; an initial 26-failure replay was traced solely to misreading the canonical `envelope=-1` sentinel and is recorded in the audit-v2 package. The full one-state-per-job 170-candidate audit is installed on `research/forced-core-canonical-audit-v2`; its final gate also requires the 136-witness replay. In parallel, `RECEIVER_PRICE_LEMMA.md` proves scalar receiver-capacity and fractional receiver-price inequalities as necessary conditions; eight audited closures currently have zero partition-only rejections, but completeness is **not** claimed. **Canonical/promoted status unchanged: 4,626 exclusions / 952 survivors / 3,632 whole-state closures. External review remains OPEN.**
 
@@ -142,9 +145,15 @@ The 646 stored-witness survivors are definite non-exclusions for this route beca
 
 The same audit package preserves an independently structured type-multiplicity implementation. Its initial 24 complete whole-state exclusions agree with the primary implementation field-for-field on `profiles_tested` and every rejection/pass stage count; all 24 are contained in the final 170 exclusion candidates.
 
-This is strong internal reconciliation, but it is not yet the promotion gate. The independent type-multiplicity scanner must be expanded substantially — preferably to all 170 candidate closures — and the survivor side should receive an independent witness replay so the audit is not one-sided.
+Audit-v2 now extends this to a full one-state-per-job 170-candidate matrix and separately replays all 136 survivor witnesses. The plan and survivor replay have already completed successfully; candidate jobs are in progress. This remains an internal promotion gate, not external acceptance.
 
 All three N35 canonical survivors remain definite survivors of this route. Any promotion from the completed forced-core discovery would therefore remove only N34-derived states.
+
+## Aggregate receiver-price exactness attack — census launched
+
+[`forced-core-receiver-price-gap-census-v1`](project/research/general_n/2026-09-15-forced-core-receiver-price-gap-census-v1/README.md) tests the proved scalar capacity and fractional receiver-price necessary conditions across all 170 complete candidate universes. The census calls the exact labelled-partition DP only after the aggregate conditions pass, so any remaining exact rejection is a direct `partition_only` or `partition_high_only` witness.
+
+The aggregate gate requires exact complete-profile agreement with the authoritative discovery and exact recovery of the authoritative `core_fail` total state-by-state. A nonzero partition-only count is retained as a counterexample to aggregate exactness; a zero count would be finite empirical exactness only and would motivate, but not prove, a Hall/flow-duality or integrality theorem.
 
 ## Preserved predecessor evidence
 
@@ -157,12 +166,12 @@ All three N35 canonical survivors remain definite survivors of this route. Any p
 
 ## Immediate next target
 
-1. freeze the completed 306-state aggregate and its provenance in a permanent research package;
-2. run the independently structured type-multiplicity scanner across the final 170 candidate exclusions and require exact field-by-field agreement;
-3. independently replay all 136 rescanned survivor witnesses, preserving the 124 pre-certified rescues and the 12 complete-enumeration-only survivors separately;
-4. build a promotion gate that requires exactly 306 expected keys, no duplicates or missing keys, exactly 170 exclusions +136 rescanned survivors, exact independent exclusion agreement, successful survivor witness replay, preservation of the initial 24 audit matches and 124 rescue reconciliation, and zero N35 exclusions;
-5. promote the finite ledger only if every gate succeeds; otherwise preserve and diagnose every discrepancy without weakening acceptance criteria;
-6. turn repeated receiver-count/high-threshold patterns into an aggregate inequality that does not require per-profile enumeration;
+1. allow the active 170-candidate independent audit matrix to complete and require exact field-by-field agreement;
+2. preserve and diagnose any audit discrepancy; if the full audit is green, perform a separate reviewed promotion step rather than auto-promoting;
+3. complete the 170-candidate receiver-price gap census and classify every exact forced-core rejection as aggregate-caught or genuinely partition-only;
+4. if a partition-only witness exists, reduce it to a minimal structural obstruction and strengthen the aggregate statistic;
+5. if the census is zero-gap, attack exactness analytically via Hall/flow duality, nested receiver structure, or an integrality/total-unimodularity argument;
+6. only after those gates, rerun the reduced canonical survivor frontier with the strongest validated structural inequality;
 7. continue external review of the graph-to-selected/residual bridge and fixed-neighbourhood routing theorem.
 <!-- CURRENT-STATUS:END -->
 

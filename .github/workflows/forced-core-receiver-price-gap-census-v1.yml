@@ -1,0 +1,109 @@
+name: forced core receiver price gap census v1
+
+on:
+  workflow_dispatch:
+  push:
+    branches: [research/forced-core-receiver-price-gap-census-v1]
+    paths:
+      - 'project/research/general_n/2026-09-15-forced-core-receiver-price-gap-census-v1/**'
+      - '.github/workflows/forced-core-receiver-price-gap-census-v1.yml'
+      - 'README.md'
+      - 'CURRENT_STATE.md'
+
+permissions:
+  actions: read
+  contents: read
+
+jobs:
+  plan:
+    if: github.event_name == 'workflow_dispatch' || github.event.head_commit.message == 'Launch full receiver-price gap census v1'
+    runs-on: ubuntu-latest
+    outputs:
+      matrix: ${{ steps.mk.outputs.matrix }}
+    steps:
+      - uses: actions/checkout@v4
+      - name: Reconstruct pinned 170-candidate census plan
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          mkdir -p relational plan discovery audit_plan
+          gh run download 34844403328 -R "$GITHUB_REPOSITORY" -n post-pair-relational-full-discovery-final -D relational
+          python3 project/research/general_n/2026-09-15-forced-core-canonical-scan-v1/prepare_scan.py relational plan
+          gh run download 34950746007 -R "$GITHUB_REPOSITORY" -n canonical-forced-core-discovery-final -D discovery
+          python3 project/research/general_n/2026-09-15-forced-core-canonical-audit-v2/prepare_audit.py plan discovery audit_plan
+      - id: mk
+        name: Prioritize h=5 and h=4 authoritative endpoints
+        run: |
+          python3 - <<'PY' >> "$GITHUB_OUTPUT"
+          import csv,json
+          rows=list(csv.DictReader(open('audit_plan/PRIMARY_CANDIDATE_RESULTS.tsv'),delimiter='\t'))
+          assert len(rows)==170
+          def rank(i):
+              h=int(rows[i]['last_core_h'])
+              return (0 if h==5 else 1 if h==4 else 2,-h,i)
+          order=sorted(range(len(rows)),key=rank)
+          print('matrix='+json.dumps({'shard':order},separators=(',',':')))
+          PY
+      - uses: actions/upload-artifact@v4
+        with:
+          name: forced-core-receiver-price-gap-census-v1-plan
+          path: audit_plan/
+
+  census:
+    needs: plan
+    runs-on: ubuntu-latest
+    timeout-minutes: 360
+    strategy:
+      fail-fast: false
+      max-parallel: 12
+      matrix: ${{ fromJSON(needs.plan.outputs.matrix) }}
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/download-artifact@v4
+        with:
+          name: forced-core-receiver-price-gap-census-v1-plan
+          path: audit_plan
+      - name: Build gap census scanner
+        run: g++ -O3 -std=c++17 -Wall -Wextra -pedantic project/research/general_n/2026-09-15-forced-core-receiver-price-gap-census-v1/gap_census.cpp -o gap_census
+      - name: Prepare exactly one complete candidate universe
+        env:
+          SHARD: ${{ matrix.shard }}
+        run: |
+          python3 - <<'PY'
+          from pathlib import Path
+          import os
+          x=[z.strip() for z in Path('audit_plan/CANDIDATE_INPUT.txt').read_text().splitlines() if z.strip()]
+          n=int(x[0]);body=x[1:];assert n==170 and len(body)==n
+          i=int(os.environ['SHARD']);assert 0<=i<n
+          Path('INPUT.txt').write_text('1\n'+body[i]+'\n')
+          PY
+      - name: Enumerate aggregate-versus-partition gap census
+        run: ./gap_census INPUT.txt RESULT.tsv
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: receiver-price-gap-census-${{ matrix.shard }}
+          if-no-files-found: error
+          path: |
+            INPUT.txt
+            RESULT.tsv
+
+  aggregate:
+    needs: [plan, census]
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/download-artifact@v4
+        with:
+          name: forced-core-receiver-price-gap-census-v1-plan
+          path: audit_plan
+      - uses: actions/download-artifact@v4
+        with:
+          pattern: receiver-price-gap-census-*
+          path: shards
+      - name: Apply coverage and authoritative-count gate
+        run: python3 project/research/general_n/2026-09-15-forced-core-receiver-price-gap-census-v1/aggregate_gap.py audit_plan shards final
+      - uses: actions/upload-artifact@v4
+        with:
+          name: forced-core-receiver-price-gap-census-v1-final
+          path: final/
