@@ -2,6 +2,9 @@ name: Fresh forced core high squeeze
 
 on:
   push:
+    paths:
+      - 'project/research/general_n/2026-09-15-fresh-forced-core-high-squeeze-v1/**'
+      - '.github/workflows/fresh-forced-core-high-squeeze.yml'
   workflow_dispatch:
 
 jobs:
