@@ -124,6 +124,8 @@ All three N35 canonical survivors are already definite survivors of this route; 
 4. require complete key coverage and aggregate agreement before any reviewed ledger promotion;
 5. turn repeated receiver-count/high-threshold patterns into an aggregate inequality that does not require per-profile enumeration;
 6. continue external review of the graph-to-selected/residual bridge and fixed-neighbourhood routing theorem.
+**Research-branch forced-core audit staging — 15 September 2026.** The completed 306-state forced-core discovery has 136 rescanned survivors and 170 N34 candidate exclusions; together with 646 retained stored witnesses this gives 782 definite survivors on this theorem route. A full 170-state independently structured type-multiplicity audit is staged on `research/forced-core-canonical-complete-v1`. **Canonical main remains unchanged at 4,626 exclusions / 952 survivors / 3,632 whole-state closures; no forced-core closure is promoted here.** External review remains OPEN.
+
 <!-- CURRENT-STATUS:END -->
 
 ## Preservation, failures and audit gates

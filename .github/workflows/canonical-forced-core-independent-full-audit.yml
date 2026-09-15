@@ -1,0 +1,214 @@
+name: canonical forced core independent full audit
+
+on:
+  push:
+    branches: [research/forced-core-canonical-complete-v1]
+    paths:
+      - '.github/workflows/canonical-forced-core-independent-full-audit.yml'
+      - 'project/research/general_n/2026-09-15-forced-core-canonical-complete-v1/README.md'
+      - 'project/research/general_n/2026-09-15-forced-core-canonical-complete-v1/compare_independent.py'
+
+permissions:
+  actions: read
+  contents: write
+
+jobs:
+  plan:
+    runs-on: ubuntu-latest
+    outputs:
+      matrix: ${{ steps.mk.outputs.matrix }}
+    steps:
+      - uses: actions/checkout@v4
+      - name: Download pinned primary plan and completed result
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          mkdir -p source-plan primary audit-plan
+          gh run download 34950746007 -R "$GITHUB_REPOSITORY" -n canonical-forced-core-plan -D source-plan
+          gh run download 34950746007 -R "$GITHUB_REPOSITORY" -n canonical-forced-core-discovery-final -D primary
+      - name: Verify frozen primary bytes
+        run: |
+          printf '%s  %s\n' \
+            50de683023c683c54f0c3c05a50627a02cb229daf3e89a6d59664c4579291b32 primary/RESULTS.tsv \
+            d2f9b2d3d6529be39ee85415f58a8692e547f4a002435e38472a9d643af70d52 primary/SUMMARY.json \
+            e7af96eeef09113076b84ad16f40eb4021517efe6db765d537e4edba2e4af180 primary/CANDIDATE_KEYS.tsv \
+            | sha256sum -c -
+      - id: mk
+        name: Build exact 170-state independent-audit input
+        run: |
+          python3 - <<'PY' >> "$GITHUB_OUTPUT"
+          import csv,json
+          from pathlib import Path
+          with open('primary/RESULTS.tsv',newline='') as f:
+              rows=list(csv.DictReader(f,delimiter='\t'))
+          assert len(rows)==306
+          excluded=[r for r in rows if r['status']=='FORCED_CORE_EXCLUDED']
+          survived=[r for r in rows if r['status']=='SURVIVES_FORCED_CORE']
+          assert len(excluded)==170 and len(survived)==136
+          assert all(r['layer']=='0' for r in excluded)
+          x=Path('source-plan/TARGET_INPUT.txt').read_text().splitlines()
+          assert int(x[0])==306 and len(x[1:])==306
+          bykey={tuple(line.split()[:2]):line for line in x[1:]}
+          keys=[(r['layer'],r['state_id']) for r in excluded]
+          assert len(set(keys))==170 and all(k in bykey for k in keys)
+          Path('audit-plan/CANDIDATE_INPUT.txt').write_text('170\n'+'\n'.join(bykey[k] for k in keys)+'\n')
+          for name in ('RESULTS.tsv','SUMMARY.json','CANDIDATE_KEYS.tsv'):
+              Path('audit-plan', 'PRIMARY_'+name).write_bytes(Path('primary',name).read_bytes())
+          Path('audit-plan/SOURCE_PLAN.json').write_bytes(Path('source-plan/PLAN.json').read_bytes())
+          print('matrix='+json.dumps({'shard':list(range(170))},separators=(',',':')))
+          PY
+      - uses: actions/upload-artifact@v4
+        with:
+          name: forced-core-independent-audit-plan
+          path: audit-plan/
+
+  scan:
+    needs: plan
+    runs-on: ubuntu-latest
+    timeout-minutes: 360
+    strategy:
+      fail-fast: false
+      max-parallel: 64
+      matrix: ${{ fromJSON(needs.plan.outputs.matrix) }}
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/download-artifact@v4
+        with:
+          name: forced-core-independent-audit-plan
+          path: audit-plan
+      - name: Build independent type-multiplicity scanner
+        run: |
+          g++ -O3 -std=c++17 -Wall -Wextra -pedantic \
+            project/research/general_n/2026-09-15-forced-core-canonical-audit-v1/scan_forced_core_types.cpp \
+            -o scan_forced_core_types
+      - name: Prepare single-state shard
+        env:
+          SHARD: ${{ matrix.shard }}
+        run: |
+          python3 - <<'PY'
+          from pathlib import Path
+          import os
+          x=Path('audit-plan/CANDIDATE_INPUT.txt').read_text().splitlines()
+          assert int(x[0])==170 and len(x[1:])==170
+          i=int(os.environ['SHARD']); assert 0<=i<170
+          Path('INPUT.txt').write_text('1\n'+x[i+1]+'\n')
+          PY
+      - name: Run independent exact enumeration
+        run: ./scan_forced_core_types INPUT.txt RESULT.tsv
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: forced-core-independent-shard-${{ matrix.shard }}
+          if-no-files-found: error
+          path: |
+            INPUT.txt
+            RESULT.tsv
+
+  aggregate:
+    needs: [plan, scan]
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/download-artifact@v4
+        with:
+          name: forced-core-independent-audit-plan
+          path: audit-plan
+      - uses: actions/download-artifact@v4
+        with:
+          pattern: forced-core-independent-shard-*
+          path: shards
+      - name: Merge exact independent results
+        run: |
+          python3 - <<'PY'
+          from pathlib import Path
+          files=sorted(Path('shards').glob('forced-core-independent-shard-*/RESULT.tsv'))
+          assert len(files)==170, len(files)
+          header=None; rows=[]
+          for p in files:
+              lines=p.read_text().splitlines()
+              assert len(lines)==2, (p,len(lines))
+              if header is None: header=lines[0]
+              else: assert lines[0]==header
+              rows.append(lines[1])
+          keys=[tuple(r.split('\t')[:2]) for r in rows]
+          assert len(set(keys))==170
+          rows.sort(key=lambda r: tuple(map(int,r.split('\t')[:2])))
+          Path('INDEPENDENT_RESULTS.tsv').write_text(header+'\n'+'\n'.join(rows)+'\n')
+          PY
+      - id: compare
+        name: Compare every proof-relevant counting field
+        run: |
+          set +e
+          python3 project/research/general_n/2026-09-15-forced-core-canonical-complete-v1/compare_independent.py \
+            audit-plan/PRIMARY_RESULTS.tsv INDEPENDENT_RESULTS.tsv audit-results
+          rc=$?
+          echo "rc=$rc" >> "$GITHUB_OUTPUT"
+          exit 0
+      - name: Freeze primary, independent and reconciliation evidence
+        env:
+          AUDIT_RC: ${{ steps.compare.outputs.rc }}
+        run: |
+          PKG=project/research/general_n/2026-09-15-forced-core-canonical-complete-v1
+          mkdir -p "$PKG"
+          cp audit-plan/PRIMARY_RESULTS.tsv "$PKG/RESULTS.tsv"
+          cp audit-plan/PRIMARY_SUMMARY.json "$PKG/SUMMARY.json"
+          cp audit-plan/PRIMARY_CANDIDATE_KEYS.tsv "$PKG/CANDIDATE_KEYS.tsv"
+          cp audit-plan/CANDIDATE_INPUT.txt "$PKG/CANDIDATE_INPUT.txt"
+          cp audit-plan/SOURCE_PLAN.json "$PKG/SOURCE_PLAN.json"
+          cp INDEPENDENT_RESULTS.tsv "$PKG/INDEPENDENT_RESULTS.tsv"
+          cp audit-results/SUMMARY.json "$PKG/FULL_INDEPENDENT_AUDIT_SUMMARY.json"
+          cp audit-results/MISMATCHES.tsv "$PKG/FULL_INDEPENDENT_MISMATCHES.tsv"
+          if [ -f audit-results/INDEPENDENT_CLOSURE_MATCHES.tsv ]; then
+            cp audit-results/INDEPENDENT_CLOSURE_MATCHES.tsv "$PKG/FULL_INDEPENDENT_CLOSURE_MATCHES.tsv"
+          fi
+          python3 - <<'PY'
+          import csv,hashlib,json,os
+          from pathlib import Path
+          p=Path('project/research/general_n/2026-09-15-forced-core-canonical-complete-v1')
+          with (p/'RESULTS.tsv').open(newline='') as f: rows=list(csv.DictReader(f,delimiter='\t'))
+          remote={2454,3145,4453,4618,5163,5672,5972,7664,7851,7927,9014,9849}
+          extra=[r for r in rows if r['status']=='SURVIVES_FORCED_CORE' and int(r['state_id']) in remote]
+          assert len(extra)==12
+          with (p/'ADDITIONAL_REMOTE_SURVIVORS.tsv').open('w',newline='') as f:
+              w=csv.DictWriter(f,fieldnames=rows[0].keys(),delimiter='\t',lineterminator='\n'); w.writeheader(); w.writerows(extra)
+          files={x.name:hashlib.sha256(x.read_bytes()).hexdigest() for x in sorted(p.iterdir()) if x.is_file() and x.name!='MANIFEST.json'}
+          audit=json.loads((p/'FULL_INDEPENDENT_AUDIT_SUMMARY.json').read_text())
+          manifest={
+            'schema':'forced-core-canonical-complete-v1',
+            'source_run_id':34950746007,
+            'source_head_sha':'25fd9044e9d8ef52326d27f9a97732916aef5dc4',
+            'source_artifact_id':10396963173,
+            'source_artifact_digest':'sha256:60409b6049e9436aeaaaf898509f7022abb3b3ade030359174379ba22e238705',
+            'source_plan_artifact_id':10389007498,
+            'source_plan_artifact_digest':'sha256:f85794962923a4f03e229fcebf730c31b0ca97916aa2a19713dba90a4f6c8d5b',
+            'parent_audit_checkpoint':'66a2c41a7389e07c4bfaf29fde914cc9b046c7bb',
+            'rescanned_targets':306,'rescanned_survivors':136,'candidate_exclusions':170,
+            'candidate_exclusions_n34':170,'candidate_exclusions_n35':0,
+            'stored_witness_retained':646,'definite_survivors_this_route':782,
+            'prior_local_rescue_agreement':'124/124','prior_independent_closure_agreement':'24/24',
+            'additional_remote_survivor_ids':sorted(remote),
+            'full_independent_audit':audit,
+            'audit_exit_code':int(os.environ['AUDIT_RC']),
+            'promotion_status':'AUDIT_COMPLETE_NOT_CANONICALLY_PROMOTED',
+            'external_review':'OPEN','files_sha256':files}
+          (p/'MANIFEST.json').write_text(json.dumps(manifest,indent=2,sort_keys=True)+'\n')
+          PY
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: forced-core-independent-full-audit
+          path: project/research/general_n/2026-09-15-forced-core-canonical-complete-v1/
+      - name: Preserve audit evidence on the research branch
+        run: |
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add project/research/general_n/2026-09-15-forced-core-canonical-complete-v1
+          if ! git diff --cached --quiet; then
+            git commit -m 'Preserve completed forced-core discovery and full independent audit'
+            git push origin "HEAD:${GITHUB_REF_NAME}"
+          fi
+      - name: Enforce promotion-quality exact match
+        env:
+          AUDIT_RC: ${{ steps.compare.outputs.rc }}
+        run: |
+          test "$AUDIT_RC" = 0

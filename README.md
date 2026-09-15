@@ -44,6 +44,8 @@ Open, reproducible research on the Murty–Simon conjecture / Erdős Problem #74
 <!-- RELATIONAL-FULL-PROMOTION:PROMOTED -->
 
 **Standing order:** every commit must update the current-status blocks in BOTH this README and [`CURRENT_STATE.md`](CURRENT_STATE.md), in the same atomic commit, including an explicit unchanged-mathematics statement when appropriate. Keep these fixed-order and general summaries near the top. README changes must be additive/reconciliatory: do not silently delete or materially compress substantive historical content, especially protected audit history, failures/corrections and reviewer navigation. See [`AGENTS.md`](AGENTS.md) and [`CANONICAL_REPOSITORY.md`](CANONICAL_REPOSITORY.md).
+**Research-branch forced-core audit staging — 15 September 2026.** The completed 306-state forced-core discovery has 136 rescanned survivors and 170 N34 candidate exclusions; together with 646 retained stored witnesses this gives 782 definite survivors on this theorem route. A full 170-state independently structured type-multiplicity audit is staged on `research/forced-core-canonical-complete-v1`. **Canonical main remains unchanged at 4,626 exclusions / 952 survivors / 3,632 whole-state closures; no forced-core closure is promoted here.** External review remains OPEN.
+
 <!-- CURRENT-STATUS:END -->
 
 **Canonical repository:** `paullenz/MurtySimon742`. For a restart read [`CURRENT_STATE.md`](CURRENT_STATE.md), [`RESEARCH_EVIDENCE_INDEX.md`](RESEARCH_EVIDENCE_INDEX.md), and newer commits. The complete pre-row108 root overview is preserved byte-for-byte in [`README_PRE_ROW108_2026-09-14.md`](README_PRE_ROW108_2026-09-14.md).
