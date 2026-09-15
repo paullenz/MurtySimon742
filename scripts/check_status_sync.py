@@ -1,9 +1,11 @@
 #!/usr/bin/env python3
-"""Check every new commit for paired, substantive current-status block edits.
+"""Enforce a durable live CURRENT_STATE handoff.
 
-No network, writes or third-party dependencies. This is a documentation guard,
-not a proof checker or a test of factual freshness. Revisions are resolved to
-commit IDs before use. Historical commits predating AGENTS.md's rule are skipped.
+STATUS_SYNC_POLICY_V2 makes CURRENT_STATE.md the per-commit operational source
+of truth. README.md is lower frequency: if README itself is edited, its status
+block must also change. Historical pre-v2 commits retain the legacy paired rule.
+
+This is a process guard, not a proof checker or a test of factual freshness.
 """
 from __future__ import annotations
 import argparse
@@ -13,7 +15,17 @@ import sys
 
 START = '<!-- CURRENT-STATUS:START -->'
 END = '<!-- CURRENT-STATUS:END -->'
-PATHS = ('README.md', 'CURRENT_STATE.md')
+CURRENT = 'CURRENT_STATE.md'
+README = 'README.md'
+POLICY_V2 = 'STATUS_SYNC_POLICY_V2'
+LEGACY_RULE = 'Every commit must update the CURRENT-STATUS blocks'
+REQUIRED_FIELDS = (
+    'CHECKPOINT CLASS:',
+    'INSPECTED PREDECESSOR:',
+    'LAST VERIFIED RESULT:',
+    'UNPRESERVED WORK:',
+    'NEXT ACTION:',
+)
 
 
 def git(*args: str, optional: bool = False) -> str:
@@ -42,18 +54,48 @@ def block(text: str) -> str | None:
     return ' '.join(body.split())
 
 
-def check_commit(commit: str) -> list[str]:
-    parents = git('rev-list', '--parents', '-n', '1', commit).split()[1:]
-    parent = parents[0] if parents else None
-    rule = 'Every commit must update the CURRENT-STATUS blocks'
+def changed_paths(commit: str, parent: str | None) -> set[str]:
+    if parent:
+        out = git('diff-tree', '--no-commit-id', '--name-only', '-r', parent, commit)
+    else:
+        out = git('ls-tree', '-r', '--name-only', commit)
+    return {line.strip() for line in out.splitlines() if line.strip()}
+
+
+def check_v2(commit: str, parent: str | None, prior_policy: str) -> list[str]:
+    failures: list[str] = []
     policy = git('show', f'{commit}:AGENTS.md', optional=True)
-    prior = git('show', f'{parent}:AGENTS.md', optional=True) if parent else ''
-    if rule not in policy and rule not in prior:
+    if POLICY_V2 in prior_policy and POLICY_V2 not in policy:
+        failures.append(f'{commit[:12]}: STATUS_SYNC_POLICY_V2 removed')
+        return failures
+
+    new_current = block(git('show', f'{commit}:{CURRENT}', optional=True))
+    old_current = block(git('show', f'{parent}:{CURRENT}', optional=True)) if parent else None
+    if new_current is None:
+        failures.append(f'{commit[:12]}: {CURRENT} lacks one nonempty status block')
+    elif new_current == old_current:
+        failures.append(f'{commit[:12]}: {CURRENT} status block unchanged')
+    else:
+        for field in REQUIRED_FIELDS:
+            if field not in new_current:
+                failures.append(f'{commit[:12]}: {CURRENT} status block missing {field}')
+
+    paths = changed_paths(commit, parent)
+    if README in paths:
+        new_readme = block(git('show', f'{commit}:{README}', optional=True))
+        old_readme = block(git('show', f'{parent}:{README}', optional=True)) if parent else None
+        if new_readme is None:
+            failures.append(f'{commit[:12]}: {README} lacks one nonempty status block')
+        elif new_readme == old_readme:
+            failures.append(f'{commit[:12]}: {README} edited but status block unchanged')
+    return failures
+
+
+def check_legacy(commit: str, parent: str | None, policy: str, prior_policy: str) -> list[str]:
+    if LEGACY_RULE not in policy and LEGACY_RULE not in prior_policy:
         return []
-    failures = []
-    if rule in prior and rule not in policy:
-        failures.append(f'{commit[:12]}: standing status rule removed')
-    for path in PATHS:
+    failures: list[str] = []
+    for path in (README, CURRENT):
         new = block(git('show', f'{commit}:{path}', optional=True))
         old = block(git('show', f'{parent}:{path}', optional=True)) if parent else None
         if new is None:
@@ -61,6 +103,16 @@ def check_commit(commit: str) -> list[str]:
         elif new == old:
             failures.append(f'{commit[:12]}: {path} status block unchanged')
     return failures
+
+
+def check_commit(commit: str) -> list[str]:
+    parents = git('rev-list', '--parents', '-n', '1', commit).split()[1:]
+    parent = parents[0] if parents else None
+    policy = git('show', f'{commit}:AGENTS.md', optional=True)
+    prior_policy = git('show', f'{parent}:AGENTS.md', optional=True) if parent else ''
+    if POLICY_V2 in policy or POLICY_V2 in prior_policy:
+        return check_v2(commit, parent, prior_policy)
+    return check_legacy(commit, parent, policy, prior_policy)
 
 
 def main() -> int:
@@ -81,8 +133,7 @@ def main() -> int:
         if errors:
             print('\n'.join(errors), file=sys.stderr)
             return 1
-        print(f'Status synchronization PASS: {len(commits)} commit(s) inspected. '
-              'Content truth and mathematical scope still require review.')
+        print(f'Live handoff synchronization PASS: {len(commits)} commit(s) inspected. Content truth and mathematical scope still require review.')
         return 0
     except (RuntimeError, ValueError) as exc:
         print(str(exc), file=sys.stderr)
