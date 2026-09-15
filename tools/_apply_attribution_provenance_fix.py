@@ -41,73 +41,9 @@ if "## Commit-attribution provenance correction, 2026-09-15" in audit_text:
     raise RuntimeError("audit provenance note already present")
 AUDIT.write_text(audit_text.rstrip() + "\n\n" + audit_note.strip() + "\n")
 
-# Make the historical one-off restoration safe and non-misattributing if manually replayed.
-restore_old = """    changed = restore(RESULT)
-    command(sys.executable, str(PACKAGE / 'run_replay.py'))
-    # Source, copied-input, canonical-input and ORIGINAL result-byte hashes plus
-"""
-restore_new = """    changed = restore(RESULT)
-    command(sys.executable, str(PACKAGE / 'run_replay.py'))
-
-    # The one-off publication completed on 2026-09-14. Later status rewrites removed
-    # its temporary publication markers. An already-correct manual replay is therefore
-    # read-only; if a repair were unexpectedly needed, refuse to create a new history event.
-    status_texts = [Path(name).read_text() for name in ['README.md', 'CURRENT_STATE.md']]
-    markers_present = all(
-        text.count(START) == 1 and text.count(END) == 1 for text in status_texts
-    )
-    if not markers_present:
-        if changed:
-            raise RuntimeError(
-                'Repair was required but legacy publication markers are absent; '
-                'refusing to create a new historical publication commit'
-            )
-        print('Restoration already published; unchanged replay passed. No repository mutation required.',
-              flush=True)
-        return
-
-    # Source, copied-input, canonical-input and ORIGINAL result-byte hashes plus
-"""
-replace_once(RESTORE, restore_old, restore_new)
-
-identity_old = """    command('git', '-c', 'user.name=Research verification',
-            '-c', 'user.email=verification@users.noreply.github.com',
-            'commit', '-m', f'Restore original source-price data; record exact replay {run} in both statuses')
-"""
-identity_new = """    # Use GitHub's canonical Actions identity. Never invent a generic
-    # users.noreply.github.com address: GitHub may map it to another account.
-    command('git', '-c', 'user.name=github-actions[bot]',
-            '-c', 'user.email=41898282+github-actions[bot]@users.noreply.github.com',
-            'commit', '-m', f'Restore original source-price data; record exact replay {run} in both statuses')
-"""
-replace_once(RESTORE, identity_old, identity_new)
-
-RESTORE_WF.write_text("""name: Restore frozen source-price publication
-# Historical one-off repair workflow. The successful 2026-09-14 restoration is
-# complete; automatic push triggering is disabled to prevent accidental republishing.
-on:
-  workflow_dispatch:
-permissions:
-  contents: write
-jobs:
-  restore-and-replay:
-    if: github.ref == 'refs/heads/main'
-    runs-on: ubuntu-latest
-    timeout-minutes: 10
-    steps:
-      - uses: actions/checkout@v4
-        with:
-          ref: main
-          fetch-depth: 0
-      - name: Replay historical restoration safely
-        run: python3 tools/restore_source_price_publication.py
-""")
-
-# Temporary maintenance machinery must not survive the final branch commit.
-subprocess.run(["git", "rm", "-f", str(SELF), str(SELF_WF)], check=True)
-subprocess.run(["python3", "scripts/check_status_sync.py", "--base", "HEAD^", "--head", "HEAD"], check=False)
-# Stage the intended final diff (HEAD currently contains only temporary setup files).
-subprocess.run(["git", "add", "README.md", "CURRENT_STATE.md", str(AUDIT), str(RESTORE), str(RESTORE_WF)], check=True)
+# Stage only non-workflow target files. Temporary setup files remain on this staging branch;
+# they are deliberately excluded from the eventual main-tree commit.
+subprocess.run(["git", "add", "README.md", "CURRENT_STATE.md", str(AUDIT), str(RESTORE)], check=True)
 subprocess.run(["git", "-c", "user.name=github-actions[bot]",
                 "-c", "user.email=41898282+github-actions[bot]@users.noreply.github.com",
                 "commit", "-m", "Correct workflow attribution provenance without rewriting history"], check=True)
