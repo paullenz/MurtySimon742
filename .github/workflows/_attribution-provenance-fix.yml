@@ -1,0 +1,22 @@
+name: Apply attribution provenance fix
+on:
+  push:
+    branches:
+      - maintenance/attribution-provenance-20260915
+    paths:
+      - tools/_apply_attribution_provenance_fix.py
+      - .github/workflows/_attribution-provenance-fix.yml
+permissions:
+  contents: write
+jobs:
+  apply:
+    if: github.repository == 'paullenz/MurtySimon742'
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: maintenance/attribution-provenance-20260915
+          fetch-depth: 0
+      - name: Apply non-destructive provenance correction
+        run: python3 tools/_apply_attribution_provenance_fix.py
