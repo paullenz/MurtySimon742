@@ -2,8 +2,10 @@
 """Enforce a durable live CURRENT_STATE handoff.
 
 STATUS_SYNC_POLICY_V2 makes CURRENT_STATE.md the per-commit operational source
-of truth. README.md is lower frequency: if README itself is edited, its status
-block must also change. Historical pre-v2 commits retain the legacy paired rule.
+of truth. RESEARCH_EXECUTION_POLICY_V3 adds explicit work-mode and deferred-admin
+fields so research turns cannot silently drift into repository/CI maintenance.
+README.md is lower frequency: if README itself is edited, its status block must
+also change. Historical pre-v2 commits retain the legacy paired rule.
 
 This is a process guard, not a proof checker or a test of factual freshness.
 """
@@ -18,14 +20,18 @@ END = '<!-- CURRENT-STATUS:END -->'
 CURRENT = 'CURRENT_STATE.md'
 README = 'README.md'
 POLICY_V2 = 'STATUS_SYNC_POLICY_V2'
+POLICY_V3 = 'RESEARCH_EXECUTION_POLICY_V3'
 LEGACY_RULE = 'Every commit must update the CURRENT-STATUS blocks'
 REQUIRED_FIELDS = (
     'CHECKPOINT CLASS:',
+    'WORK MODE:',
     'INSPECTED PREDECESSOR:',
     'LAST VERIFIED RESULT:',
     'UNPRESERVED WORK:',
+    'DEFERRED ADMIN:',
     'NEXT ACTION:',
 )
+VALID_MODES = ('MATH', 'ADMIN', 'AUDIT', 'STATUS', 'RECOVERY')
 
 
 def git(*args: str, optional: bool = False) -> str:
@@ -68,6 +74,9 @@ def check_v2(commit: str, parent: str | None, prior_policy: str) -> list[str]:
     if POLICY_V2 in prior_policy and POLICY_V2 not in policy:
         failures.append(f'{commit[:12]}: STATUS_SYNC_POLICY_V2 removed')
         return failures
+    if POLICY_V3 in prior_policy and POLICY_V3 not in policy:
+        failures.append(f'{commit[:12]}: RESEARCH_EXECUTION_POLICY_V3 removed')
+        return failures
 
     new_current = block(git('show', f'{commit}:{CURRENT}', optional=True))
     old_current = block(git('show', f'{parent}:{CURRENT}', optional=True)) if parent else None
@@ -79,6 +88,13 @@ def check_v2(commit: str, parent: str | None, prior_policy: str) -> list[str]:
         for field in REQUIRED_FIELDS:
             if field not in new_current:
                 failures.append(f'{commit[:12]}: {CURRENT} status block missing {field}')
+        if POLICY_V3 in policy:
+            mode_match = re.search(r'WORK MODE:\s*`?([A-Z]+)`?', new_current)
+            if not mode_match or mode_match.group(1) not in VALID_MODES:
+                failures.append(
+                    f'{commit[:12]}: {CURRENT} WORK MODE must be one of '
+                    + ', '.join(VALID_MODES)
+                )
 
     paths = changed_paths(commit, parent)
     if README in paths:
