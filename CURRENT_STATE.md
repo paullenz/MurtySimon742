@@ -1,12 +1,12 @@
 # Murty–Simon / Erdős #742 — current state handoff
 
 <!-- CURRENT-STATUS:START -->
-**15 September 2026 — checkpoint `forced-core-canonical-audit-v1`.** Starting from `25fd9044e9d8ef52326d27f9a97732916aef5dc4`, local exact witness search has certified **124 pairwise distinct replacement `q` witnesses** among the 306 stored-witness failures. Together with the 646 stored witnesses that already satisfy the forced-core theorem, this proves at least **770/952 canonical relational survivors** cannot be excluded by this route; at most **182** states remain eligible to become new closures. An independently structured type-multiplicity scanner exactly matches the primary scanner on the complete profile count and every stage count for **24 whole-state exclusions**. The authoritative sharded discovery run **34950746007** remains in progress in runner-limited waves. **Mathematical/canonical status is unchanged: 4,626 exclusions / 952 survivors / 3,632 whole-state closures. No forced-core closure is promoted by this checkpoint.** External review remains OPEN.
+**15 September 2026 — checkpoint `forced-core-canonical-full-audit-v1` installation.** Authoritative discovery workflow **34950746007** on `25fd9044e9d8ef52326d27f9a97732916aef5dc4` has completed **SUCCESS** with exact 306-key coverage: **170 candidate whole-state exclusions and 136 rescanned survivors**. All 170 candidates are N34-derived; all three N35 targets survive. All **124** locally certified replacement witnesses reappear among the exhaustive survivors, and the remaining **12** survivors are states `2454,3145,4453,4618,5163,5672,5972,7664,7851,7927,9014,9849`. The predecessor's **24** independently audited exclusions are all contained in the final 170 and their stored stage counts match the completed primary aggregate. A 170-state independently structured type-multiplicity replay is installed on research branch `research/forced-core-canonical-full-audit-v1`; it must match every deterministic stage count before any promotion is considered. **Mathematical/canonical status is unchanged: 4,626 exclusions / 952 survivors / 3,632 whole-state closures. No forced-core closure is promoted by this checkpoint.** External review remains OPEN.
 <!-- RELATIONAL-FULL-PROMOTION:PROMOTED -->
 
 Canonical repository: `paullenz/MurtySimon742`, ID1359206057. Every commit must update the CURRENT-STATUS blocks in BOTH this file and README.md atomically. Read [`AGENTS.md`](AGENTS.md), [`CANONICAL_REPOSITORY.md`](CANONICAL_REPOSITORY.md), [`RESEARCH_EVIDENCE_INDEX.md`](RESEARCH_EVIDENCE_INDEX.md), and newer commits before continuing.
 
-## Canonical status — unchanged by the forced-core audit checkpoint
+## Canonical status — unchanged by the full forced-core audit installation
 
 ```text
 whole-state closures:             3,632
@@ -86,26 +86,28 @@ q_v+rho_v >= h-1,
 
 and each receiver is dedicated to at most one core label. If such a receiver is forced used, then `S_v subset A_r union R_u`, so for every threshold `tau>r` it has at most `r` selected labels with `s_i>=tau`. This couples exact receiver usage to the existing threshold-demand machinery.
 
-## Canonical forced-core discovery and audit — running, not promoted
+## Canonical forced-core discovery complete; full independent audit installed — not promoted
 
-[`canonical-forced-core-scan-v1`](project/research/general_n/2026-09-15-forced-core-canonical-scan-v1/README.md) pins the exact promoted relational discovery result SHA256 `2c892301854660c8c1f73a13c4949ce2fb7e1e5706f9ecffbbe79f9483e71970`. The stored-witness pre-screen is used only as an optimization:
+[`canonical-forced-core-scan-v1`](project/research/general_n/2026-09-15-forced-core-canonical-scan-v1/README.md) pins the promoted-relational discovery result SHA256 `2c892301854660c8c1f73a13c4949ce2fb7e1e5706f9ecffbbe79f9483e71970`. The stored-witness pre-screen was only an optimization; complete enumeration now gives:
 
 ```text
-canonical relational survivors:          952
-stored witnesses surviving new theorem:  646
-stored witnesses rejected by new theorem:306
-additional certified replacement witnesses:124
-definite survivors of this route:        >=770
-states still eligible to close:          <=182
+canonical relational survivors entering route: 952
+stored witnesses surviving new theorem:          646
+stored witnesses requiring resumed enumeration: 306
+rescanned survivors:                             136
+candidate whole-state exclusions:                170
+survivors of this forced-core route:              782
+candidate N34 exclusions:                        170
+candidate N35 exclusions:                          0
 ```
 
-The 646 are definite non-exclusions for this route because their existing `q` witnesses satisfy both the promoted relational relaxation and the new theorem. [`forced-core-canonical-audit-v1`](project/research/general_n/2026-09-15-forced-core-canonical-audit-v1/README.md) preserves 124 further explicit witnesses. Candidate generation used neighbourhood, old-feasible BFS and multi-jump searches, but certification is exact: a state is counted as rescued only when one concrete `q` profile passes every old relational acceptance stage and the new forced-core test. Search failure is never exclusion evidence.
+The 646 stored witnesses are definite non-exclusions for this route. [`forced-core-canonical-audit-v1`](project/research/general_n/2026-09-15-forced-core-canonical-audit-v1/README.md) preserves 124 further explicit witnesses; every one reappears among the 136 exhaustive survivors. The exact set difference is the twelve later survivors `2454,3145,4453,4618,5163,5672,5972,7664,7851,7927,9014,9849`, all N34. Search failure was never used as exclusion evidence.
 
-The same audit package preserves an independently structured type-multiplicity implementation. For 24 complete whole-state exclusions it agrees with the primary implementation field-for-field on `profiles_tested` and every rejection/pass stage count. These are internal audit candidates only; **none is ledger-promoted** until the remote 306-state discovery has complete key coverage, the aggregate succeeds and a reviewed promotion gate is applied.
+Authoritative remote workflow **34950746007** completed successfully with exact key coverage. Its completed aggregate classifies all 306 targets and yields the 170/136 split above. All three N35 targets survive, so every candidate new closure is N34-derived. This remains discovery evidence, not a ledger promotion.
 
-The authoritative remote workflow is GitHub Actions run **34950746007** on commit `25fd9044e9d8ef52326d27f9a97732916aef5dc4`. It is progressing through the 256-way matrix in runner-limited waves. Later jobs remain queued while long exact shards execute. No restart or weakened acceptance criterion is used.
+The predecessor audit package preserves an independently structured type-multiplicity implementation. Its first 24 complete whole-state exclusions agree with the primary implementation field-for-field on `profiles_tested` and every rejection/pass stage count; all 24 are members of the final 170 and their stored counts reconcile with the completed primary aggregate.
 
-All three N35 canonical survivors are already definite survivors of this route; any new forced-core closures are therefore N34-derived.
+[`forced-core-canonical-full-audit-v1`](project/research/general_n/2026-09-15-forced-core-canonical-full-audit-v1/README.md) durably freezes the exact 170 candidate keys and 136 survivor keys and installs a full 170-state independent replay. The workflow requires exact agreement on `S`, `Emax`, complete profile count, every pair-capacity/incidence/Hall/cost/core stage count and final status, followed by exact 170-key aggregate coverage. Any mismatch is preserved and fails the aggregate. **No candidate is promoted merely because the discovery or internal audit succeeds.**
 
 ## Preserved predecessor evidence
 
@@ -118,12 +120,11 @@ All three N35 canonical survivors are already definite survivors of this route; 
 
 ## Immediate next target
 
-1. complete the sharded exact resumed enumeration on the 306 witness-killed canonical states;
-2. continue exact replacement-witness search only as a survivor-finding optimization, never as exclusion evidence;
-3. independently audit every candidate whole-state closure and preserve every later `q` witness;
-4. require complete key coverage and aggregate agreement before any reviewed ledger promotion;
-5. turn repeated receiver-count/high-threshold patterns into an aggregate inequality that does not require per-profile enumeration;
-6. continue external review of the graph-to-selected/residual bridge and fixed-neighbourhood routing theorem.
+1. complete the 170-state independent type-multiplicity audit and require exact stage-count/key agreement;
+2. preserve every mismatch or, if clean, the complete audit aggregate and hashes;
+3. only after a clean full audit perform a separate reviewed ledger/non-overlap promotion step;
+4. turn repeated receiver-count/high-threshold patterns into an aggregate inequality that does not require per-profile enumeration;
+5. continue external review of the graph-to-selected/residual bridge and fixed-neighbourhood routing theorem.
 <!-- CURRENT-STATUS:END -->
 
 ## Preservation, failures and audit gates
@@ -132,6 +133,6 @@ The complete pre-row108 handoff remains preserved byte-for-byte in [`CURRENT_STA
 
 Historical failures remain failures: source-price transfer run34904353492, N30 navigation run34906766832, the red-team-history guard failure34908428824, and standalone row471 process commit `2667a909...` are not repainted by later repairs. The branch-specific charge route did not itself finish row471; the singleton-destination theorem is a distinct stronger structural argument. The forced-core/high-squeeze theorem is another distinct successor and does not retrospectively turn earlier uncoupled witnesses or solver statuses into graph realizations.
 
-The 2,655 relational candidates have cleared complete coverage, dual agreement, zero unresolved cases, successful aggregate and the separate reviewed-ledger step. Their promotion changes the canonical finite frontier. Synthetic sample exclusions, including the 713/713 original and 715/715 fresh closures, **do not** change it. The canonical forced-core scan and audit checkpoint are likewise discovery-only until their own complete enumeration, independent audit and reviewed promotion gates are satisfied.
+The 2,655 relational candidates have cleared complete coverage, dual agreement, zero unresolved cases, successful aggregate and the separate reviewed-ledger step. Their promotion changes the canonical finite frontier. Synthetic sample exclusions, including the 713/713 original and 715/715 fresh closures, **do not** change it. The canonical forced-core discovery and audit remain discovery/audit-only until complete independent audit and a separate reviewed promotion gate are satisfied.
 
 Internal proof checks, successful CI and durable publication do not replace external specialist review of the canonical graph-to-selected/residual bridge, selected-incidence eligibility, destination capacities and the fixed-neighbourhood labelled-routing criterion.

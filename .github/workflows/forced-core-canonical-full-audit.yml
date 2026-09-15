@@ -1,0 +1,119 @@
+name: forced core canonical full independent audit
+
+on:
+  push:
+    branches:
+      - research/forced-core-canonical-full-audit-v1
+    paths:
+      - ".github/workflows/forced-core-canonical-full-audit.yml"
+      - "project/research/general_n/2026-09-15-forced-core-canonical-full-audit-v1/**"
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  actions: read
+
+jobs:
+  reconcile:
+    runs-on: ubuntu-latest
+    outputs:
+      matrix: ${{ steps.matrix.outputs.matrix }}
+    steps:
+      - uses: actions/checkout@v4
+      - name: Download authoritative completed discovery artifact
+        uses: actions/download-artifact@v4
+        with:
+          name: canonical-forced-core-discovery
+          path: /tmp/source-final
+          repository: paullenz/MurtySimon742
+          run-id: 34950746007
+          github-token: ${{ github.token }}
+      - name: Download authoritative discovery plan artifact
+        uses: actions/download-artifact@v4
+        with:
+          name: canonical-forced-core-plan
+          path: /tmp/source-plan
+          repository: paullenz/MurtySimon742
+          run-id: 34950746007
+          github-token: ${{ github.token }}
+      - name: Reconcile and prepare exact 170-state audit inputs
+        run: |
+          python3 project/research/general_n/2026-09-15-forced-core-canonical-full-audit-v1/prepare_audit.py /tmp/source-final /tmp/source-plan /tmp/prepared
+      - name: Build 170-state matrix
+        id: matrix
+        run: |
+          python3 - <<'PY' >> "$GITHUB_OUTPUT"
+          import json
+          print("matrix="+json.dumps(list(range(170)),separators=(",",":")))
+          PY
+      - uses: actions/upload-artifact@v4
+        with:
+          name: forced-core-full-audit-prepared
+          path: /tmp/prepared
+          if-no-files-found: error
+
+  audit:
+    needs: reconcile
+    runs-on: ubuntu-latest
+    timeout-minutes: 180
+    strategy:
+      fail-fast: false
+      max-parallel: 64
+      matrix:
+        index: ${{ fromJSON(needs.reconcile.outputs.matrix) }}
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/download-artifact@v4
+        with:
+          name: forced-core-full-audit-prepared
+          path: /tmp/prepared
+      - name: Build independent type-multiplicity scanner
+        run: |
+          g++ -O3 -std=c++20 project/research/general_n/2026-09-15-forced-core-canonical-audit-v1/scan_forced_core_types.cpp -o /tmp/scan_forced_core_types
+      - name: Prepare one exact candidate
+        run: |
+          python3 - <<'PY'
+          from pathlib import Path
+          i=${{ matrix.index }}
+          lines=Path("/tmp/prepared/AUDIT_INPUT.txt").read_text().splitlines()
+          assert int(lines[0])==170
+          row=lines[i+1]
+          Path("/tmp/one_input.txt").write_text("1\n"+row+"\n")
+          p=row.split()
+          Path("/tmp/key.txt").write_text(p[0]+"-"+p[1])
+          PY
+      - name: Run independent exact enumeration
+        run: |
+          /tmp/scan_forced_core_types /tmp/one_input.txt /tmp/independent.tsv
+      - name: Compare deterministic stage counts
+        run: |
+          key="$(cat /tmp/key.txt)"
+          python3 project/research/general_n/2026-09-15-forced-core-canonical-full-audit-v1/compare_one.py /tmp/independent.tsv /tmp/prepared/PRIMARY_CANDIDATE_COUNTS.tsv "/tmp/audit-${key}.json"
+      - uses: actions/upload-artifact@v4
+        with:
+          name: forced-core-audit-${{ matrix.index }}
+          path: |
+            /tmp/audit-*.json
+            /tmp/independent.tsv
+          if-no-files-found: error
+
+  aggregate:
+    needs: [reconcile, audit]
+    if: ${{ always() }}
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/download-artifact@v4
+        with:
+          pattern: forced-core-audit-*
+          path: /tmp/audit-results
+          merge-multiple: false
+      - name: Aggregate with exact key coverage
+        run: |
+          python3 project/research/general_n/2026-09-15-forced-core-canonical-full-audit-v1/aggregate_audit.py /tmp/audit-results project/research/general_n/2026-09-15-forced-core-canonical-full-audit-v1/CANDIDATE_KEYS.tsv /tmp/final-audit
+      - uses: actions/upload-artifact@v4
+        if: ${{ always() }}
+        with:
+          name: forced-core-canonical-full-independent-audit
+          path: /tmp/final-audit
+          if-no-files-found: error

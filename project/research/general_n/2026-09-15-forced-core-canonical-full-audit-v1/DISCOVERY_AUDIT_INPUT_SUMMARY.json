@@ -1,0 +1,32 @@
+{
+  "candidate_exclusions": 170,
+  "candidate_exclusions_n34": 170,
+  "candidate_exclusions_n35": 0,
+  "canonical_promotion": "NONE_DISCOVERY_AUDIT_ONLY",
+  "date": "2026-09-15",
+  "external_review": "OPEN",
+  "full_enumeration_only_rescues_expected": [
+    2454,
+    3145,
+    4453,
+    4618,
+    5163,
+    5672,
+    5972,
+    7664,
+    7851,
+    7927,
+    9014,
+    9849
+  ],
+  "initial_independent_matches_expected": 24,
+  "local_certified_rescues_expected": 124,
+  "rescanned_survivors": 136,
+  "rescanned_targets": 306,
+  "schema": "forced-core-canonical-full-audit-input-v1",
+  "source_commit": "25fd9044e9d8ef52326d27f9a97732916aef5dc4",
+  "source_discovery_run": 34950746007,
+  "source_final_artifact_digest_sha256": "3a3b30ca8ba901f2687fc26370a9c684029c6340d73a7b7a6d485d961bee7fab",
+  "source_results_sha256": "2c892301854660c8c1f73a13c4949ce2fb7e1e5706f9ecffbbe79f9483e71970",
+  "stored_witness_retained": 646
+}
