@@ -1,0 +1,136 @@
+name: canonical forced core independent audit v2
+
+on:
+  push:
+    branches: [research/forced-core-canonical-audit-v2]
+    paths:
+      - 'project/research/general_n/2026-09-15-forced-core-canonical-audit-v2/**'
+      - '.github/workflows/canonical-forced-core-independent-audit-v2.yml'
+      - 'README.md'
+      - 'CURRENT_STATE.md'
+
+permissions:
+  actions: read
+  contents: read
+
+jobs:
+  plan:
+    if: github.event.head_commit.message == 'Launch full independent forced-core audit v2'
+    runs-on: ubuntu-latest
+    outputs:
+      matrix: ${{ steps.mk.outputs.matrix }}
+    steps:
+      - uses: actions/checkout@v4
+      - name: Download pinned relational and forced-core aggregates
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          mkdir -p relational plan discovery audit_plan
+          gh run download 34844403328 -R "$GITHUB_REPOSITORY" -n post-pair-relational-full-discovery-final -D relational
+          python3 project/research/general_n/2026-09-15-forced-core-canonical-scan-v1/prepare_scan.py relational plan
+          gh run download 34950746007 -R "$GITHUB_REPOSITORY" -n canonical-forced-core-discovery-final -D discovery
+          python3 project/research/general_n/2026-09-15-forced-core-canonical-audit-v2/prepare_audit.py plan discovery audit_plan
+      - id: mk
+        run: |
+          python3 - <<'PY' >> "$GITHUB_OUTPUT"
+          import json
+          p=json.load(open('audit_plan/PLAN.json'))
+          n=p['candidate_count']
+          assert n==170
+          print('matrix='+json.dumps({'shard':list(range(n))},separators=(',',':')))
+          PY
+      - uses: actions/upload-artifact@v4
+        with:
+          name: canonical-forced-core-independent-audit-v2-plan
+          path: audit_plan/
+
+  scan_candidates:
+    needs: plan
+    runs-on: ubuntu-latest
+    timeout-minutes: 360
+    strategy:
+      fail-fast: false
+      max-parallel: 48
+      matrix: ${{ fromJSON(needs.plan.outputs.matrix) }}
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/download-artifact@v4
+        with:
+          name: canonical-forced-core-independent-audit-v2-plan
+          path: audit_plan
+      - name: Build independently structured type-multiplicity scanner
+        run: g++ -O3 -std=c++17 -Wall -Wextra -pedantic project/research/general_n/2026-09-15-forced-core-canonical-audit-v1/scan_forced_core_types.cpp -o scan_forced_core_types
+      - name: Prepare exactly one candidate state
+        env:
+          SHARD: ${{ matrix.shard }}
+        run: |
+          python3 - <<'PY'
+          from pathlib import Path
+          import os
+          x=[z.strip() for z in Path('audit_plan/CANDIDATE_INPUT.txt').read_text().splitlines() if z.strip()]
+          n=int(x[0]); body=x[1:]; assert n==170 and len(body)==n
+          i=int(os.environ['SHARD']); assert 0<=i<n
+          Path('INPUT.txt').write_text('1\n'+body[i]+'\n')
+          PY
+      - name: Run complete independent enumeration
+        run: ./scan_forced_core_types INPUT.txt RESULT.tsv
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: independent-forced-core-candidate-${{ matrix.shard }}
+          if-no-files-found: error
+          path: |
+            INPUT.txt
+            RESULT.tsv
+
+  replay_survivors:
+    needs: plan
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/download-artifact@v4
+        with:
+          name: canonical-forced-core-independent-audit-v2-plan
+          path: audit_plan
+      - name: Build direct witness replayer from exact independent scanner core
+        run: |
+          python3 - <<'PY'
+          from pathlib import Path
+          src=Path('project/research/general_n/2026-09-15-forced-core-canonical-audit-v1/scan_forced_core_types.cpp').read_text()
+          marker='int main(int argc,char**argv)'
+          assert marker in src
+          prefix=src.split(marker)[0]
+          main=Path('project/research/general_n/2026-09-15-forced-core-canonical-audit-v2/witness_replay_main.inc').read_text()
+          Path('replay_forced_core_witnesses.cpp').write_text(prefix+main)
+          PY
+          g++ -O3 -std=c++17 -Wall -Wextra -pedantic replay_forced_core_witnesses.cpp -o replay_forced_core_witnesses
+      - name: Replay all 136 survivor witnesses
+        run: ./replay_forced_core_witnesses audit_plan/SURVIVOR_WITNESSES.txt SURVIVOR_WITNESS_REPLAY.tsv
+      - uses: actions/upload-artifact@v4
+        with:
+          name: canonical-forced-core-survivor-replay-v2
+          path: SURVIVOR_WITNESS_REPLAY.tsv
+
+  aggregate:
+    needs: [plan, scan_candidates, replay_survivors]
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/download-artifact@v4
+        with:
+          name: canonical-forced-core-independent-audit-v2-plan
+          path: audit_plan
+      - uses: actions/download-artifact@v4
+        with:
+          pattern: independent-forced-core-candidate-*
+          path: shards
+      - uses: actions/download-artifact@v4
+        with:
+          name: canonical-forced-core-survivor-replay-v2
+          path: replay
+      - name: Apply exact audit gate
+        run: python3 project/research/general_n/2026-09-15-forced-core-canonical-audit-v2/aggregate_audit.py audit_plan shards replay/SURVIVOR_WITNESS_REPLAY.tsv final
+      - uses: actions/upload-artifact@v4
+        with:
+          name: canonical-forced-core-independent-audit-v2-final
+          path: final/

@@ -5,6 +5,9 @@
 Open, reproducible research on the Murty–Simon conjecture / Erdős Problem #742. **The unrestricted conjecture is not claimed proved.** External mathematical review, novelty assessment and independent third-party reproduction remain OPEN. The project actively welcomes hostile review, counterexamples, literature corrections and independent reproduction.
 
 <!-- CURRENT-STATUS:START -->
+<!-- FORCED-CORE-AUDIT-V2-STAGING -->
+**15 September 2026 — independent forced-core audit v2 launch checkpoint.** The completed 306-state forced-core discovery remains discovery-only: 170 N34-derived candidate exclusions and 136 rescanned survivors, with 646 stored-witness survivors for 782 route survivors. The independently structured type-multiplicity scanner now has **29/170 exact field-for-field candidate matches** (the original 24 plus states `9858,10296,10507,10858,10898`). A direct replay through the independent acceptance semantics validates **136/136 survivor witnesses** and exactly reproduces witness `E`, target-flow cost and envelope; an initial 26-failure replay was traced solely to misreading the canonical `envelope=-1` sentinel and is recorded in the audit-v2 package. The full one-state-per-job 170-candidate audit is installed on `research/forced-core-canonical-audit-v2`; its final gate also requires the 136-witness replay. In parallel, `RECEIVER_PRICE_LEMMA.md` proves scalar receiver-capacity and fractional receiver-price inequalities as necessary conditions; eight audited closures currently have zero partition-only rejections, but completeness is **not** claimed. **Canonical/promoted status unchanged: 4,626 exclusions / 952 survivors / 3,632 whole-state closures. External review remains OPEN.**
+
 ## Current status: fixed-order candidates
 
 | Scope | Preserved candidate result; external review open |
