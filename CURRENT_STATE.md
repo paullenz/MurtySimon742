@@ -1,12 +1,12 @@
 # Murty–Simon / Erdős #742 — current state handoff
 
 <!-- CURRENT-STATUS:START -->
-**15 September 2026 — checkpoint `forced-core-canonical-audit-v1`.** Starting from `25fd9044e9d8ef52326d27f9a97732916aef5dc4`, local exact witness search has certified **124 pairwise distinct replacement `q` witnesses** among the 306 stored-witness failures. Together with the 646 stored witnesses that already satisfy the forced-core theorem, this proves at least **770/952 canonical relational survivors** cannot be excluded by this route; at most **182** states remain eligible to become new closures. An independently structured type-multiplicity scanner exactly matches the primary scanner on the complete profile count and every stage count for **24 whole-state exclusions**. The authoritative sharded discovery run **34950746007** remains in progress in runner-limited waves. **Mathematical/canonical status is unchanged: 4,626 exclusions / 952 survivors / 3,632 whole-state closures. No forced-core closure is promoted by this checkpoint.** External review remains OPEN.
+**15 September 2026 — checkpoint `threshold-hall-normal-form-v1`.** The forced-core audit checkpoint remains intact: 124 certified replacement witnesses plus the 646 stored witnesses prove at least **770/952 canonical relational survivors** cannot be excluded by the forced-core route, and 24 complete exclusion candidates already have field-for-field agreement between two exact implementations. A new exact replay now covers **23 of those 24 audited exclusions and 92,922,346 admissible `q` profiles**. For **22 states**, the old generic selected-incidence, pair-Hall and target-Hall failures are reproduced exactly by explicit monotone threshold cut inequalities. State2812 leaves exactly three profiles after all threshold cuts; the established exact cost bound excludes them with minimum target costs `74,74,75` versus excess envelope `60`. State152 is deliberately outside this new threshold-normal-form replay claim. The authoritative sharded discovery run **34950746007** remains in progress in runner-limited waves. **Mathematical/canonical status is unchanged: 4,626 exclusions / 952 survivors / 3,632 whole-state closures. No forced-core closure is promoted by this checkpoint.** External review remains OPEN.
 <!-- RELATIONAL-FULL-PROMOTION:PROMOTED -->
 
 Canonical repository: `paullenz/MurtySimon742`, ID1359206057. Every commit must update the CURRENT-STATUS blocks in BOTH this file and README.md atomically. Read [`AGENTS.md`](AGENTS.md), [`CANONICAL_REPOSITORY.md`](CANONICAL_REPOSITORY.md), [`RESEARCH_EVIDENCE_INDEX.md`](RESEARCH_EVIDENCE_INDEX.md), and newer commits before continuing.
 
-## Canonical status — unchanged by the forced-core audit checkpoint
+## Canonical status — unchanged by the threshold-Hall audit-hardening checkpoint
 
 ```text
 whole-state closures:             3,632
@@ -107,6 +107,31 @@ The authoritative remote workflow is GitHub Actions run **34950746007** on commi
 
 All three N35 canonical survivors are already definite survivors of this route; any new forced-core closures are therefore N34-derived.
 
+## Threshold-Hall normal form pilot — structural simplification, not promotion
+
+[`threshold-hall-normal-form-v1`](project/research/general_n/2026-09-15-threshold-hall-normal-form-v1/README.md) asks whether the generic flow stages in the difficult audited N34 closure family can be exposed as explicit Hall/min-cut inequalities. It uses three necessary cut families:
+
+1. selected-incidence suffix cuts on `L_d={i:s_i>=d}`;
+2. pair-slot cuts on monotone source sets `X(R,k)={i:rho_i>=R,q_i>=k}`;
+3. target-capacity cuts on the same `X(R,k)`, with capacity `sum_j min(P_j,deg_X(j))`.
+
+The inequalities are only necessary conditions; passing them is never interpreted as realizability. Exact enumeration of 23 audited closure states gives:
+
+```text
+complete q profiles enumerated:                     92,922,346
+states closed before any generic flow fallback:             22
+states leaving profiles after all threshold cuts:             1
+threshold-surviving profiles:                                 3
+cost-bound exclusions among those three:                      3
+final profiles remaining in the 23-state replay:              0
+```
+
+For the 22 threshold-closed states, the incidence/pair-slot/target threshold counts match the corresponding generic-flow stage counts from the independent closure ledger exactly. The sole threshold exception is state2812. Its three profiles all have `E=6`; exact target costs are `74,74,75`, while the exact excess envelope is `60` for each, so the pre-existing cost inequality excludes all three.
+
+State152 is intentionally omitted from the new threshold-normal-form replay claim. Its earlier complete exclusion remains preserved in the independent audit evidence, but this checkpoint does not assert that the threshold cut family reproduces it.
+
+The important general-theory target suggested by this replay is a **compression/exchange theorem**: prove conditions under which an arbitrary deficient source subset for the pair/target networks can be replaced by one of the monotone sets `X(R,k)` without increasing available capacity. Such a theorem would turn this finite normal form into a symbolic structural reduction. It is not yet proved.
+
 ## Preserved predecessor evidence
 
 - Singleton-destination theorem: original rows347,471,586 excluded; remote workflow34910561258 SUCCESS.
@@ -122,8 +147,9 @@ All three N35 canonical survivors are already definite survivors of this route; 
 2. continue exact replacement-witness search only as a survivor-finding optimization, never as exclusion evidence;
 3. independently audit every candidate whole-state closure and preserve every later `q` witness;
 4. require complete key coverage and aggregate agreement before any reviewed ledger promotion;
-5. turn repeated receiver-count/high-threshold patterns into an aggregate inequality that does not require per-profile enumeration;
-6. continue external review of the graph-to-selected/residual bridge and fixed-neighbourhood routing theorem.
+5. attack the threshold-compression theorem suggested by the 23-state replay: determine when arbitrary deficient pair/target source sets can be compressed to `X(R,k)` threshold sets;
+6. seek an aggregate inequality over the recurring long-plateau `s` / concentrated-`rho` family that removes per-profile enumeration entirely;
+7. continue external review of the graph-to-selected/residual bridge and fixed-neighbourhood routing theorem.
 <!-- CURRENT-STATUS:END -->
 
 ## Preservation, failures and audit gates
@@ -132,6 +158,6 @@ The complete pre-row108 handoff remains preserved byte-for-byte in [`CURRENT_STA
 
 Historical failures remain failures: source-price transfer run34904353492, N30 navigation run34906766832, the red-team-history guard failure34908428824, and standalone row471 process commit `2667a909...` are not repainted by later repairs. The branch-specific charge route did not itself finish row471; the singleton-destination theorem is a distinct stronger structural argument. The forced-core/high-squeeze theorem is another distinct successor and does not retrospectively turn earlier uncoupled witnesses or solver statuses into graph realizations.
 
-The 2,655 relational candidates have cleared complete coverage, dual agreement, zero unresolved cases, successful aggregate and the separate reviewed-ledger step. Their promotion changes the canonical finite frontier. Synthetic sample exclusions, including the 713/713 original and 715/715 fresh closures, **do not** change it. The canonical forced-core scan and audit checkpoint are likewise discovery-only until their own complete enumeration, independent audit and reviewed promotion gates are satisfied.
+The 2,655 relational candidates have cleared complete coverage, dual agreement, zero unresolved cases, successful aggregate and the separate reviewed-ledger step. Their promotion changes the canonical finite frontier. Synthetic sample exclusions, including the 713/713 original and 715/715 fresh closures, **do not** change it. The canonical forced-core scan, audit checkpoint and threshold-Hall normal-form pilot are likewise discovery/audit-only until their relevant complete enumeration, independent audit and reviewed promotion gates are satisfied.
 
 Internal proof checks, successful CI and durable publication do not replace external specialist review of the canonical graph-to-selected/residual bridge, selected-incidence eligibility, destination capacities and the fixed-neighbourhood labelled-routing criterion.

@@ -1,0 +1,35 @@
+{
+  "base_commit": "66a2c41a7389e07c4bfaf29fde914cc9b046c7bb",
+  "canonical_promotion": "NONE",
+  "cost_fallback_excluded_profiles": 3,
+  "date": "2026-09-15",
+  "files": {
+    "COST_REMAINDERS_2812.tsv": {
+      "bytes": 237,
+      "sha256": "705d508315bb8230ca92b52da72a7e726ea45de01dba6487558da11698c14fdf"
+    },
+    "README.md": {
+      "bytes": 6470,
+      "sha256": "e96b445e590bcba0f6260ac1f173d2fb0a961c99b841ca3a99299d42f5d0cc8a"
+    },
+    "REPLAY_IDS.txt": {
+      "bytes": 130,
+      "sha256": "3b905d0e7737e914fca872b66f24fdad01c5af51fffb57681acbad34731b38ea"
+    },
+    "THRESHOLD_REPLAY_23.tsv": {
+      "bytes": 1130,
+      "sha256": "75ecc623278ded8756405ce092c42fcb46612101bc796fc52b61c6f82e4db295"
+    },
+    "scan_threshold_hall_v1.cpp": {
+      "bytes": 8976,
+      "sha256": "53096d238470b6bf291a33724792a55db91a9d2e0f5765917ff1468a706eb87e"
+    }
+  },
+  "final_remaining_profiles": 0,
+  "omitted_audited_state": 152,
+  "profiles_enumerated": 92922346,
+  "replayed_states": 23,
+  "schema": "threshold-hall-normal-form-v1",
+  "threshold_closed_states": 22,
+  "threshold_remaining_profiles": 3
+}
