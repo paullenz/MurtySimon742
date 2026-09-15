@@ -27,10 +27,16 @@ The predecessor package's 24 independently audited whole-state closures are all 
 
 - `DISCOVERY_AUDIT_INPUT_SUMMARY.json` records provenance and counts.
 - `CANDIDATE_KEYS.tsv` and `RESCAN_SURVIVOR_KEYS.tsv` durably freeze the exact 170/136 classification.
-- `prepare_audit.py` downloads the pinned run-34950746007 final and plan artifacts, checks their provenance and exact 306-key partition, verifies the 124+12 rescue reconciliation, and confirms the original 24 audit rows against the final primary counts.
+- `prepare_audit.py` checks the pinned run-34950746007 final and plan artifacts, their provenance and exact 306-key partition, verifies the 124+12 rescue reconciliation, and confirms the original 24 audit rows against the final primary counts.
 - The same preparation step emits exact `AUDIT_INPUT.txt`, `PRIMARY_CANDIDATE_COUNTS.tsv`, `FULL_ENUMERATION_ONLY_RESCUES.tsv` and `RECONCILIATION.json` into the workflow artifact before any audit shard runs.
 
 The discovery result is pinned to source relational SHA256 `2c892301854660c8c1f73a13c4949ce2fb7e1e5706f9ecffbbe79f9483e71970` and final workflow-artifact digest SHA256 `3a3b30ca8ba901f2687fc26370a9c684029c6340d73a7b7a6d485d961bee7fab`.
+
+## Transport repair and preserved failed attempt
+
+Initial audit run **34985326400** failed in `reconcile` before any audit logic ran: `actions/download-artifact@v4` could not resolve the still-extant historical final artifact by name. The matrix was skipped, so this run provides **no mathematical audit evidence** and remains recorded as failed.
+
+The repair does not change the frozen data, reconciliation checks, scanner or comparator. It changes only source-artifact transport: the workflow downloads final artifact **10396963173** and plan artifact **10389007498** by immutable GitHub artifact ID through the REST endpoint, using the same `actions: read` token. The downloaded ZIPs must contain `SUMMARY.json`, `RESULTS.tsv`, `PLAN.json` and `TARGET_INPUT.txt` before `prepare_audit.py` can run.
 
 ## Full independent audit
 

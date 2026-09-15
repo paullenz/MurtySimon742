@@ -7,6 +7,8 @@ on:
     paths:
       - ".github/workflows/forced-core-canonical-full-audit.yml"
       - "project/research/general_n/2026-09-15-forced-core-canonical-full-audit-v1/**"
+      - "README.md"
+      - "CURRENT_STATE.md"
   workflow_dispatch:
 
 permissions:
@@ -18,24 +20,32 @@ jobs:
     runs-on: ubuntu-latest
     outputs:
       matrix: ${{ steps.matrix.outputs.matrix }}
+    env:
+      GH_TOKEN: ${{ github.token }}
     steps:
       - uses: actions/checkout@v4
-      - name: Download authoritative completed discovery artifact
-        uses: actions/download-artifact@v4
-        with:
-          name: canonical-forced-core-discovery
-          path: /tmp/source-final
-          repository: paullenz/MurtySimon742
-          run-id: 34950746007
-          github-token: ${{ github.token }}
-      - name: Download authoritative discovery plan artifact
-        uses: actions/download-artifact@v4
-        with:
-          name: canonical-forced-core-plan
-          path: /tmp/source-plan
-          repository: paullenz/MurtySimon742
-          run-id: 34950746007
-          github-token: ${{ github.token }}
+      - name: Download pinned authoritative discovery artifacts by ID
+        run: |
+          set -euo pipefail
+          mkdir -p /tmp/source-final /tmp/source-plan
+          curl --fail-with-body -L \
+            -H "Authorization: Bearer ${GH_TOKEN}" \
+            -H "Accept: application/vnd.github+json" \
+            -H "X-GitHub-Api-Version: 2022-11-28" \
+            "https://api.github.com/repos/paullenz/MurtySimon742/actions/artifacts/10396963173/zip" \
+            -o /tmp/source-final.zip
+          curl --fail-with-body -L \
+            -H "Authorization: Bearer ${GH_TOKEN}" \
+            -H "Accept: application/vnd.github+json" \
+            -H "X-GitHub-Api-Version: 2022-11-28" \
+            "https://api.github.com/repos/paullenz/MurtySimon742/actions/artifacts/10389007498/zip" \
+            -o /tmp/source-plan.zip
+          unzip -q /tmp/source-final.zip -d /tmp/source-final
+          unzip -q /tmp/source-plan.zip -d /tmp/source-plan
+          test -f /tmp/source-final/SUMMARY.json
+          test -f /tmp/source-final/RESULTS.tsv
+          test -f /tmp/source-plan/PLAN.json
+          test -f /tmp/source-plan/TARGET_INPUT.txt
       - name: Reconcile and prepare exact 170-state audit inputs
         run: |
           python3 project/research/general_n/2026-09-15-forced-core-canonical-full-audit-v1/prepare_audit.py /tmp/source-final /tmp/source-plan /tmp/prepared

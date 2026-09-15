@@ -1,12 +1,12 @@
 # Murty–Simon / Erdős #742 — current state handoff
 
 <!-- CURRENT-STATUS:START -->
-**15 September 2026 — checkpoint `forced-core-canonical-full-audit-v1` installation.** Authoritative discovery workflow **34950746007** on `25fd9044e9d8ef52326d27f9a97732916aef5dc4` has completed **SUCCESS** with exact 306-key coverage: **170 candidate whole-state exclusions and 136 rescanned survivors**. All 170 candidates are N34-derived; all three N35 targets survive. All **124** locally certified replacement witnesses reappear among the exhaustive survivors, and the remaining **12** survivors are states `2454,3145,4453,4618,5163,5672,5972,7664,7851,7927,9014,9849`. The predecessor's **24** independently audited exclusions are all contained in the final 170 and their stored stage counts match the completed primary aggregate. A 170-state independently structured type-multiplicity replay is installed on research branch `research/forced-core-canonical-full-audit-v1`; it must match every deterministic stage count before any promotion is considered. **Mathematical/canonical status is unchanged: 4,626 exclusions / 952 survivors / 3,632 whole-state closures. No forced-core closure is promoted by this checkpoint.** External review remains OPEN.
+**15 September 2026 — checkpoint `forced-core-canonical-full-audit-v1` transport repair.** Authoritative discovery workflow **34950746007** on `25fd9044e9d8ef52326d27f9a97732916aef5dc4` completed **SUCCESS** with exact 306-key coverage: **170 candidate whole-state exclusions and 136 rescanned survivors**. All 170 candidates are N34-derived; all three N35 targets survive. All **124** locally certified replacement witnesses reappear among the exhaustive survivors, and the remaining **12** survivors are states `2454,3145,4453,4618,5163,5672,5972,7664,7851,7927,9014,9849`. The predecessor's **24** independently audited exclusions are all contained in the final 170 and their stored stage counts match the completed primary aggregate. Initial full-audit run **34985326400** failed before reconciliation because `download-artifact@v4` could not resolve the still-extant historical discovery artifact by name; no reconciliation code or independent scanner ran. The workflow is repaired to fetch the two pinned source artifacts by immutable artifact ID via the GitHub REST endpoint before applying the same 170-state audit gates. **Mathematical/canonical status is unchanged: 4,626 exclusions / 952 survivors / 3,632 whole-state closures. No forced-core closure is promoted by this checkpoint.** External review remains OPEN.
 <!-- RELATIONAL-FULL-PROMOTION:PROMOTED -->
 
 Canonical repository: `paullenz/MurtySimon742`, ID1359206057. Every commit must update the CURRENT-STATUS blocks in BOTH this file and README.md atomically. Read [`AGENTS.md`](AGENTS.md), [`CANONICAL_REPOSITORY.md`](CANONICAL_REPOSITORY.md), [`RESEARCH_EVIDENCE_INDEX.md`](RESEARCH_EVIDENCE_INDEX.md), and newer commits before continuing.
 
-## Canonical status — unchanged by the full forced-core audit installation
+## Canonical status — unchanged by the full forced-core audit transport repair
 
 ```text
 whole-state closures:             3,632
@@ -86,7 +86,7 @@ q_v+rho_v >= h-1,
 
 and each receiver is dedicated to at most one core label. If such a receiver is forced used, then `S_v subset A_r union R_u`, so for every threshold `tau>r` it has at most `r` selected labels with `s_i>=tau`. This couples exact receiver usage to the existing threshold-demand machinery.
 
-## Canonical forced-core discovery complete; full independent audit installed — not promoted
+## Canonical forced-core discovery complete; full independent audit transport repaired — not promoted
 
 [`canonical-forced-core-scan-v1`](project/research/general_n/2026-09-15-forced-core-canonical-scan-v1/README.md) pins the promoted-relational discovery result SHA256 `2c892301854660c8c1f73a13c4949ce2fb7e1e5706f9ecffbbe79f9483e71970`. The stored-witness pre-screen was only an optimization; complete enumeration now gives:
 
@@ -107,7 +107,7 @@ Authoritative remote workflow **34950746007** completed successfully with exact 
 
 The predecessor audit package preserves an independently structured type-multiplicity implementation. Its first 24 complete whole-state exclusions agree with the primary implementation field-for-field on `profiles_tested` and every rejection/pass stage count; all 24 are members of the final 170 and their stored counts reconcile with the completed primary aggregate.
 
-[`forced-core-canonical-full-audit-v1`](project/research/general_n/2026-09-15-forced-core-canonical-full-audit-v1/README.md) durably freezes the exact 170 candidate keys and 136 survivor keys and installs a full 170-state independent replay. The workflow requires exact agreement on `S`, `Emax`, complete profile count, every pair-capacity/incidence/Hall/cost/core stage count and final status, followed by exact 170-key aggregate coverage. Any mismatch is preserved and fails the aggregate. **No candidate is promoted merely because the discovery or internal audit succeeds.**
+[`forced-core-canonical-full-audit-v1`](project/research/general_n/2026-09-15-forced-core-canonical-full-audit-v1/README.md) durably freezes the exact 170 candidate keys and 136 survivor keys and installs a full 170-state independent replay. The first remote attempt, run **34985326400**, failed at the initial historical-artifact name lookup and therefore ran neither the reconciliation gate nor the independent scanner. The failed attempt remains preserved as failed. The repaired workflow fetches the authoritative final artifact **10396963173** and plan artifact **10389007498** directly by immutable artifact ID through the REST API, then applies the unchanged reconciliation and audit logic. It requires exact agreement on `S`, `Emax`, complete profile count, every pair-capacity/incidence/Hall/cost/core stage count and final status, followed by exact 170-key aggregate coverage. Any mismatch is preserved and fails the aggregate. **No candidate is promoted merely because the discovery or internal audit succeeds.**
 
 ## Preserved predecessor evidence
 
@@ -116,11 +116,12 @@ The predecessor audit package preserves an independently structured type-multipl
 - Row471 `e_L=41`: independent high-block/common-pressure contradiction.
 - Row471 `e_L=42,43`: source-group totals `214,215<222`, run34909572352 SUCCESS.
 - Row108 source-sharing: remote workflow34906766833/job104185160249 SUCCESS.
+- Full forced-core audit run34985326400: failed before reconciliation because the historical artifact was not resolved by name; no mathematical audit stage ran.
 - Historical failed runs and process/audit failures remain failures; nothing here repaints them green.
 
 ## Immediate next target
 
-1. complete the 170-state independent type-multiplicity audit and require exact stage-count/key agreement;
+1. run the repaired 170-state independent type-multiplicity audit and require exact stage-count/key agreement;
 2. preserve every mismatch or, if clean, the complete audit aggregate and hashes;
 3. only after a clean full audit perform a separate reviewed ledger/non-overlap promotion step;
 4. turn repeated receiver-count/high-threshold patterns into an aggregate inequality that does not require per-profile enumeration;
@@ -131,7 +132,7 @@ The predecessor audit package preserves an independently structured type-multipl
 
 The complete pre-row108 handoff remains preserved byte-for-byte in [`CURRENT_STATE_PRE_ROW108_2026-09-14.md`](CURRENT_STATE_PRE_ROW108_2026-09-14.md); earlier archives, reviewer packages, counterexamples and negative experiments remain intact.
 
-Historical failures remain failures: source-price transfer run34904353492, N30 navigation run34906766832, the red-team-history guard failure34908428824, and standalone row471 process commit `2667a909...` are not repainted by later repairs. The branch-specific charge route did not itself finish row471; the singleton-destination theorem is a distinct stronger structural argument. The forced-core/high-squeeze theorem is another distinct successor and does not retrospectively turn earlier uncoupled witnesses or solver statuses into graph realizations.
+Historical failures remain failures: source-price transfer run34904353492, N30 navigation run34906766832, the red-team-history guard failure34908428824, standalone row471 process commit `2667a909...`, and full forced-core audit run34985326400 are not repainted by later repairs. The last of these failed before any reconciliation or independent enumeration because the cross-run artifact name lookup returned “Artifact not found”. The branch-specific charge route did not itself finish row471; the singleton-destination theorem is a distinct stronger structural argument. The forced-core/high-squeeze theorem is another distinct successor and does not retrospectively turn earlier uncoupled witnesses or solver statuses into graph realizations.
 
 The 2,655 relational candidates have cleared complete coverage, dual agreement, zero unresolved cases, successful aggregate and the separate reviewed-ledger step. Their promotion changes the canonical finite frontier. Synthetic sample exclusions, including the 713/713 original and 715/715 fresh closures, **do not** change it. The canonical forced-core discovery and audit remain discovery/audit-only until complete independent audit and a separate reviewed promotion gate are satisfied.
 
