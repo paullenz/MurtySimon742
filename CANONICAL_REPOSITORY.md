@@ -10,10 +10,20 @@ This supersedes older project repository names, including `paullenz/MurtySimon25
 
 For every project restart or context recovery:
 
-1. confirm this repository identity;
-2. read [`README.md`](README.md), [`CURRENT_STATE.md`](CURRENT_STATE.md), and [`AGENTS.md`](AGENTS.md);
-3. inspect commits newer than the synchronization point recorded there;
-4. reconcile any material newer result into both live status surfaces before treating the handoff as current.
+1. **FIRST ACTION: read the current [`CURRENT_STATE.md`](CURRENT_STATE.md) on `main` in `paullenz/MurtySimon742`, before substantive analysis, edits or computation.** Apply this after every timeout, new chat, context reset, takeover or resumed session; do not substitute memory or an earlier chat summary.
+2. record the inspected main SHA, confirm this repository identity, and read [`AGENTS.md`](AGENTS.md), this file, [`README.md`](README.md) and [`RESEARCH_EVIDENCE_INDEX.md`](RESEARCH_EVIDENCE_INDEX.md);
+3. inspect commits newer than the checkpoint and the exact active branches, workflow runs and evidence it names;
+4. reconcile material newer results into both live status surfaces before treating the handoff as current or continuing research. If remote state is unavailable, identify the last durable checkpoint and explicitly leave current status unverified.
+
+## Durable checkpoint cadence and timeout recovery
+
+User standing order, 15 September 2026: checkpoint after every significant result, failure, correction or change of attack, **at least every ten minutes during sustained active work**, before the next long operation, and before a pause or handoff. The complete operational requirements are in [AGENTS.md — Mandatory first action and durable handoff](AGENTS.md#mandatory-first-action-and-durable-handoff).
+
+A checkpoint must be published to main with paired CURRENT_STATE/README updates; branch-only and local-only status are insufficient. Preserve unfinished research on a durable branch when needed and link its exact commit from main. Include timestamp and inspected predecessor, last verified results and evidence, ledger/promotion scope, unresolved issues and failed attempts, exact branch/commit/file locations, active workflow/job/artifact IDs and observed states, and the precise next action or command with inputs and expected output. Use explicit pending/failure/review labels.
+
+Long-running GitHub workflows must eventually have a verified completion handler that records their outcomes independently of the chat and updates both live status surfaces atomically. It must not promote mathematics or alter the canonical ledger automatically. **Recording this requirement does not install that handler: until implementation and verification are complete, keep it listed as pending and manually reconcile completed runs at each active checkpoint.**
+
+Before reporting a checkpoint saved, re-read main, publish without force while preserving concurrent changes, then fetch the resulting commit and both files remotely. If publication fails, report the gap and preserve a remote recovery checkpoint where possible. An abrupt interruption cannot guarantee preservation of unfinished work; the durable checkpoint is the restart boundary.
 
 ## Standing synchronization order — every commit
 

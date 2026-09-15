@@ -2,6 +2,14 @@
 
 This index distinguishes derivation, finite verification, preservation and external acceptance. The fully audited 2,655-key relational family has now passed the separate reviewed-ledger step and is promoted. The canonical finite frontier is 4,626 exclusions / 952 survivors / 3,632 whole-state closures. Fixed-order reviewer packages retain their separate status in [the reviewer index](releases/REVIEW_READY_INDEX.md).
 
+## 15 September 2026 — completed independent audit and durable handoff
+
+The [current handoff](CURRENT_STATE.md) supersedes older audit-pending observations. Independent forced-core audit [34997614970](https://github.com/paullenz/MurtySimon742/actions/runs/34997614970), commit `36239bd0bcd466e464c0bcb4546314ccce4a63ba`, completed SUCCESS: 170 candidate exclusions compared with zero field mismatches, and 136 survivor witnesses replayed with zero failures. It explicitly records `AUDIT_COMPLETE_NOT_PROMOTED`. Final artifact `10413221638`, `canonical-forced-core-independent-audit-v2-final`, has ZIP SHA256 `a600e47fe0d3b4ac2a010cfa55995562e9bd8d701a219932266f542cd11d5fe6`. The final outputs are in GitHub Actions artifacts; permanent research-package preservation and the separate reviewed promotion are still pending.
+
+Receiver-price census [34999206636](https://github.com/paullenz/MurtySimon742/actions/runs/34999206636), pinned commit `52ea9f1d787736a2c93451ef05886061085af27f`, has 169/170 successful census jobs at `2026-09-15T20:29:39.674Z`, with one still running and final reconciliation pending. Earlier partial zero-gap log counts are recorded with their scope in CURRENT_STATE.md; no complete-corpus or unrestricted exactness claim follows.
+
+The user requires [current-state-first resumption, frequent durable checkpoints and verified publication](AGENTS.md#mandatory-first-action-and-durable-handoff). Automatic workflow-completion reporting is required but not implemented by this documentation commit. **Canonical mathematical status unchanged: 4,626 exclusions / 952 survivors / 3,632 whole-state closures; external review OPEN.**
+
 ## Added continuation: stronger prices and a witnessed relaxation boundary
 
 The [separate price/witness package](project/research/general_n/2026-09-14-source-pricing-witnesses-v1/README.md) preserves a concurrently developed stronger bounded price search, sharper tail lower bounds and explicit selected-incidence/simple-orientation witnesses. The original source-price package below, its verifier, workflow, correction and failed searches remain unchanged. See the [publication reconciliation](project/research/general_n/2026-09-14-source-pricing-witnesses-v1/PUBLICATION.md). Both packages derive the same elementary row-budget dualization, not independent new graph theorems.
