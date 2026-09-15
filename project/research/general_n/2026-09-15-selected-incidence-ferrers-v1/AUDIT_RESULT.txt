@@ -1,0 +1,1 @@
+cases=1206288 mismatches=0 max_a=4 max_b=4

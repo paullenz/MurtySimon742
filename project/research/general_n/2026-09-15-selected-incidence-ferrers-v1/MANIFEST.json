@@ -1,0 +1,23 @@
+{
+  "base_branch_commit": "d30e660fe1e6fd0ffcec1a725a5e11eadfe5e947",
+  "canonical_promotion": "NONE",
+  "date": "2026-09-15",
+  "exhaustive_small_cases": 1206288,
+  "files": {
+    "AUDIT_RESULT.txt": {
+      "bytes": 43,
+      "sha256": "91bccc9997a954efb774405986b78d5496758c0ed194d60b9fe818d1b68bfba4"
+    },
+    "README.md": {
+      "bytes": 6375,
+      "sha256": "7bedfb0da56bd686fa0df203f76b3ce46c64e0ba32d03793d7ad7afbbdb2ef6f"
+    },
+    "audit_incidence_ferrers.cpp": {
+      "bytes": 3047,
+      "sha256": "b5c0c849d4ffb85a3c504ef7c39440438c10968d01871830b29d2fa716af42f5"
+    }
+  },
+  "mismatches": 0,
+  "schema": "selected-incidence-ferrers-v1",
+  "theorem_scope": "all canonical selected-incidence Ferrers networks under row eligibility bounds"
+}

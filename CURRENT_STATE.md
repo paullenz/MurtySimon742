@@ -1,12 +1,12 @@
 # Murty–Simon / Erdős #742 — current state handoff
 
 <!-- CURRENT-STATUS:START -->
-**15 September 2026 — checkpoint `threshold-hall-normal-form-v1`.** The forced-core audit checkpoint remains intact: 124 certified replacement witnesses plus the 646 stored witnesses prove at least **770/952 canonical relational survivors** cannot be excluded by the forced-core route, and 24 complete exclusion candidates already have field-for-field agreement between two exact implementations. A new exact replay now covers **23 of those 24 audited exclusions and 92,922,346 admissible `q` profiles**. For **22 states**, the old generic selected-incidence, pair-Hall and target-Hall failures are reproduced exactly by explicit monotone threshold cut inequalities. State2812 leaves exactly three profiles after all threshold cuts; the established exact cost bound excludes them with minimum target costs `74,74,75` versus excess envelope `60`. State152 is deliberately outside this new threshold-normal-form replay claim. The authoritative sharded discovery run **34950746007** remains in progress in runner-limited waves. **Mathematical/canonical status is unchanged: 4,626 exclusions / 952 survivors / 3,632 whole-state closures. No forced-core closure is promoted by this checkpoint.** External review remains OPEN.
+**15 September 2026 — checkpoint `selected-incidence-ferrers-v1`.** The forced-core audit checkpoint remains intact: 124 certified replacement witnesses plus the 646 stored witnesses prove at least **770/952 canonical relational survivors** cannot be excluded by the forced-core route, and 24 complete exclusion candidates have field-for-field agreement between two exact implementations. The threshold-Hall replay covers **23 of those 24 audited exclusions and 92,922,346 admissible `q` profiles**. The selected-incidence component of that replay has now been upgraded to an all-order structural theorem: because source eligibility is Ferrers (`s_i<=rho_u`), the original exact-row selected-incidence circulation is feasible iff a finite set of demand-suffix inequalities holds. The proof uses capacitated Hall, monotone exchange and concavity across equal-demand blocks. An independently structured exhaustive regression compares the original circulation, a cover flow and the suffix test on **1,206,288 small instances with zero mismatches**. The authoritative sharded forced-core discovery run **34950746007** remains in progress in runner-limited waves. **Mathematical/canonical status is unchanged: 4,626 exclusions / 952 survivors / 3,632 whole-state closures. No forced-core closure is promoted by this checkpoint.** External review remains OPEN.
 <!-- RELATIONAL-FULL-PROMOTION:PROMOTED -->
 
 Canonical repository: `paullenz/MurtySimon742`, ID1359206057. Every commit must update the CURRENT-STATUS blocks in BOTH this file and README.md atomically. Read [`AGENTS.md`](AGENTS.md), [`CANONICAL_REPOSITORY.md`](CANONICAL_REPOSITORY.md), [`RESEARCH_EVIDENCE_INDEX.md`](RESEARCH_EVIDENCE_INDEX.md), and newer commits before continuing.
 
-## Canonical status — unchanged by the threshold-Hall audit-hardening checkpoint
+## Canonical status — unchanged by the Ferrers structural checkpoint
 
 ```text
 whole-state closures:             3,632
@@ -130,7 +130,39 @@ For the 22 threshold-closed states, the incidence/pair-slot/target threshold cou
 
 State152 is intentionally omitted from the new threshold-normal-form replay claim. Its earlier complete exclusion remains preserved in the independent audit evidence, but this checkpoint does not assert that the threshold cut family reproduces it.
 
-The important general-theory target suggested by this replay is a **compression/exchange theorem**: prove conditions under which an arbitrary deficient source subset for the pair/target networks can be replaced by one of the monotone sets `X(R,k)` without increasing available capacity. Such a theorem would turn this finite normal form into a symbolic structural reduction. It is not yet proved.
+## Selected-incidence Ferrers theorem — generic incidence flow eliminated
+
+[`selected-incidence-ferrers-v1`](project/research/general_n/2026-09-15-selected-incidence-ferrers-v1/README.md) turns the first threshold observation into an all-order theorem inside the canonical selected/residual relaxation.
+
+Let labels have demands `s_i`, sources have exact row degrees `q_u` and residual thresholds `rho_u`, and permit incidence `u-i` exactly when `s_i<=rho_u`. Under the already-enforced row bound
+
+```text
+q_u <= |{i:s_i<=rho_u}|,
+```
+
+the original exact-row lower-bound circulation is feasible iff, for every distinct demand value `d`,
+
+```text
+sum_{i:s_i>=d} s_i
+ <=
+sum_u min(q_u, |{i:d<=s_i<=rho_u}|).             (F_d)
+```
+
+The proof has four parts: exact row sums reduce to a capacitated lower-demand cover; capacitated Hall characterizes that cover; an exchange shows that among label subsets of fixed size the hardest subset is the largest-demand prefix; and concavity of `min(q_u,a_u+l)` across an equal-demand block reduces all prefix lengths to block endpoints. Hence the suffix inequalities `(F_d)` are necessary and sufficient.
+
+This has three practical consequences:
+
+- `variable_incidence(...)` is no longer proof-critically dependent on generic max-flow;
+- every incidence failure has a short integer threshold certificate;
+- the 23-state threshold replay's incidence-stage agreement is explained by theorem rather than merely observed computationally.
+
+An independently structured exhaustive regression compares (i) lower-demand cover max-flow, (ii) the original exact-row circulation semantics and (iii) the suffix inequalities over all sorted instances with `1<=|I|,|U|<=4`, demand/threshold values `0..|U|` and every eligible row degree. Result:
+
+```text
+cases=1206288 mismatches=0 max_a=4 max_b=4
+```
+
+The regression corroborates the hand proof; it is not being substituted for it. The remaining threshold-compression problem is therefore concentrated in the pair-slot and target-capacity networks, where pair identity and the forbidden self-arc disturb pure Ferrers nesting.
 
 ## Preserved predecessor evidence
 
@@ -147,9 +179,10 @@ The important general-theory target suggested by this replay is a **compression/
 2. continue exact replacement-witness search only as a survivor-finding optimization, never as exclusion evidence;
 3. independently audit every candidate whole-state closure and preserve every later `q` witness;
 4. require complete key coverage and aggregate agreement before any reviewed ledger promotion;
-5. attack the threshold-compression theorem suggested by the 23-state replay: determine when arbitrary deficient pair/target source sets can be compressed to `X(R,k)` threshold sets;
-6. seek an aggregate inequality over the recurring long-plateau `s` / concentrated-`rho` family that removes per-profile enumeration entirely;
-7. continue external review of the graph-to-selected/residual bridge and fixed-neighbourhood routing theorem.
+5. attack the remaining pair-slot/target threshold-compression problem: determine when arbitrary deficient source sets can be compressed to `X(R,k)={i:rho_i>=R,q_i>=k}`;
+6. exploit the near-Ferrers form of directed target compatibility and the bounded perturbation caused by forbidden self-arcs;
+7. seek an aggregate inequality over the recurring long-plateau `s` / concentrated-`rho` family that removes per-profile enumeration entirely;
+8. continue external review of the graph-to-selected/residual bridge, fixed-neighbourhood routing theorem and the new Ferrers reduction.
 <!-- CURRENT-STATUS:END -->
 
 ## Preservation, failures and audit gates
@@ -158,6 +191,6 @@ The complete pre-row108 handoff remains preserved byte-for-byte in [`CURRENT_STA
 
 Historical failures remain failures: source-price transfer run34904353492, N30 navigation run34906766832, the red-team-history guard failure34908428824, and standalone row471 process commit `2667a909...` are not repainted by later repairs. The branch-specific charge route did not itself finish row471; the singleton-destination theorem is a distinct stronger structural argument. The forced-core/high-squeeze theorem is another distinct successor and does not retrospectively turn earlier uncoupled witnesses or solver statuses into graph realizations.
 
-The 2,655 relational candidates have cleared complete coverage, dual agreement, zero unresolved cases, successful aggregate and the separate reviewed-ledger step. Their promotion changes the canonical finite frontier. Synthetic sample exclusions, including the 713/713 original and 715/715 fresh closures, **do not** change it. The canonical forced-core scan, audit checkpoint and threshold-Hall normal-form pilot are likewise discovery/audit-only until their relevant complete enumeration, independent audit and reviewed promotion gates are satisfied.
+The 2,655 relational candidates have cleared complete coverage, dual agreement, zero unresolved cases, successful aggregate and the separate reviewed-ledger step. Their promotion changes the canonical finite frontier. Synthetic sample exclusions, including the 713/713 original and 715/715 fresh closures, **do not** change it. The canonical forced-core scan, audit checkpoint, threshold-Hall normal-form pilot and selected-incidence Ferrers theorem are likewise discovery/audit/structural work until their relevant complete enumeration, independent audit and reviewed promotion gates are satisfied.
 
-Internal proof checks, successful CI and durable publication do not replace external specialist review of the canonical graph-to-selected/residual bridge, selected-incidence eligibility, destination capacities and the fixed-neighbourhood labelled-routing criterion.
+Internal proof checks, successful CI and durable publication do not replace external specialist review of the canonical graph-to-selected/residual bridge, selected-incidence eligibility, destination capacities, fixed-neighbourhood labelled-routing criterion or the new Ferrers reduction.
