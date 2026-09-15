@@ -1,0 +1,16 @@
+name: Fresh forced core high squeeze
+
+on:
+  push:
+  workflow_dispatch:
+
+jobs:
+  verify:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Replay fresh forced-core and high-squeeze proof
+        run: python3 project/research/general_n/2026-09-15-fresh-forced-core-high-squeeze-v1/run_replay.py

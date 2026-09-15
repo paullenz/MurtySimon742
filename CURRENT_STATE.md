@@ -1,12 +1,12 @@
 # Murty–Simon / Erdős #742 — current state handoff
 
 <!-- CURRENT-STATUS:START -->
-**15 September 2026 — checkpoint `forced-core-capacity-v1`.** Inspected predecessor: `66a49c5a3d61937e7d8a9e92ca7d7ee0937f5a7e`. The fixed-neighbourhood labelled-routing criterion now gives a short receiver-capacity obstruction for the last two original synthetic non-rejections. In row160, ten `rho=1,q=3` sources are forced onto the same three selected labels; their three label classes require capacity10 each, while the only relaxed candidate receiver capacities are `5,5,5,4,4,4,4`, whose best possible minimum bin is9. In row338, ten `rho=1,q=2` sources are forced onto the same two labels, creating20 obligations against only `6+6+5=17` candidate receiver capacity. **Rows160 and338 are excluded, so the ORIGINAL synthetic sample is now 713/713 rejected. Canonical finite frontier remains4,626 exclusions / 952 survivors /3,632 whole-state closures. Fresh sample remains708/715 in its separate namespace.** External review remains OPEN.
+**15 September 2026 — checkpoint `fresh-forced-core-high-squeeze-v1`.** Inspected predecessor: `c5fd3f52b807bb2d28daa56a22ffcf7d961e0f30`. The predecessor forced-core receiver theorem has now passed dedicated remote replay **34944185174 SUCCESS** and paired-status workflow **34944185225 SUCCESS**. Applying the same exact routing consequence to the seven survivors of the separate fresh seed excludes rows20,91,391,528,562,677 by total receiver-capacity shortages. Fresh row490 passes the raw partition but forces all six candidate receivers to be used; this reduces the `s>=3` selected-slot upper from46 to43 against demand45. **The FRESH synthetic sample is therefore 715/715 rejected; the ORIGINAL synthetic sample remains713/713. Canonical finite frontier remains4,626 exclusions / 952 survivors /3,632 whole-state closures.** External review remains OPEN.
 <!-- RELATIONAL-FULL-PROMOTION:PROMOTED -->
 
 Canonical repository: `paullenz/MurtySimon742`, ID1359206057. Every commit must update the CURRENT-STATUS blocks in BOTH this file and README.md atomically. Read [`AGENTS.md`](AGENTS.md), [`CANONICAL_REPOSITORY.md`](CANONICAL_REPOSITORY.md), [`RESEARCH_EVIDENCE_INDEX.md`](RESEARCH_EVIDENCE_INDEX.md), and newer commits before continuing.
 
-## Canonical status — unchanged by the synthetic-sample closure
+## Canonical status — unchanged by the synthetic-sample closures
 
 ```text
 whole-state closures:             3,632
@@ -19,99 +19,100 @@ recovered relational candidates:  2,655 — AUDITED AND PROMOTED
 
 The reviewed relational promotion remains the current canonical finite frontier. Fixed-order n25/n27-through-n35 and general7/12 candidates remain preserved with external review, novelty assessment and third-party reproduction OPEN. No unrestricted proof or newly realized graph is claimed.
 
-## Original synthetic boundary sample — now 713/713
+## Original synthetic boundary sample — 713/713
 
-The predecessor singleton-destination theorem excluded rows347,471,586 and left rows160 and338. The new [`forced-core-capacity-v1`](project/research/general_n/2026-09-15-forced-core-capacity-v1/README.md) excludes both remaining profiles using selected-incidence eligibility plus the exact fixed-neighbourhood routing criterion.
+The singleton-destination theorem excluded rows347,471,586 and [`forced-core-capacity-v1`](project/research/general_n/2026-09-15-forced-core-capacity-v1/README.md) excluded rows160 and338. Its standard-library proof package now has dedicated remote workflow **34944185174 SUCCESS**. The original 713-profile namespace is closed under the accumulated necessary conditions.
 
-Let
+The forced-core mechanism is:
 
 ```text
 A={i:s_i<=1}, h=|A|, U={u:rho_u=1 and q_u=h}.
 ```
 
-Every `u in U` is forced to have `S_u=A`. For an obligation `(u,i)` to destination `v`, the retained routing theorem requires
+Every `u in U` has `S_u=A`. For an obligation `(u,i)` to destination `v`, fixed-neighbourhood routing requires
 
 ```text
 S_u minus N_v = {i},
 S_v subset N_u,
 ```
 
-with incoming capacity `c_v=rho_v+b-a-1`. Hence any receiver of a forced-core obligation must satisfy
+and receiver capacity `c_v=rho_v+b-a-1`. A receiver can serve at most one core label. Row160 needs three capacity-10 bins from `5,5,5,4,4,4,4` (best minimum9); row338 needs20 obligations against capacity17.
+
+## Fresh synthetic boundary sample — now 715/715
+
+The preserved fresh seed `74220260919` had seven non-rejections: rows20,91,391,490,528,562,677. The new [`fresh-forced-core-high-squeeze-v1`](project/research/general_n/2026-09-15-fresh-forced-core-high-squeeze-v1/README.md) explicitly scans only this fresh namespace.
+
+At residual level `r=1`, six profiles fail even the total relaxed receiver-capacity inequality:
 
 ```text
-v not in U,
-q_v<=h,
-q_v+rho_v>=h-1.
+row   h   |U|   receiver capacities   total / required
+ 20   3    10   7,6,6,5               24 / 30
+ 91   2    12   4                       4 / 24
+391   2    10   8,4                    12 / 20
+528   1    11   7                       7 / 11
+562   1     9   none                    0 /  9
+677   1    10   none                    0 / 10
 ```
 
-Moreover each fixed receiver can serve at most one core label because `A minus N_v` has a unique singleton value. Thus its whole incoming capacity is indivisible across the core-label classes.
+Fresh row490 has core `A={0,1,2}` and eleven forced sources. Its six relaxed receivers have capacities `8,6,6,9,8,7`, so the raw partition is feasible. But each core label needs11 units while every receiver has capacity below11; since a receiver serves only one core label, all six receivers are forced used.
 
-Exact profile certificates:
+Every used receiver `v` satisfies `S_v subset N_u=A union R_u` for at least one forced source, and `|R_u|=1`; therefore it has at most one selected label outside A. At threshold3 the profile requires
 
 ```text
-row160:
-  core labels             0,1,2
-  forced sources          0,1,2,3,13,16,17,19,25,26
-  relaxed receivers       4,9,10,14,15,18,22
-  capacities              5,5,5,4,4,4,4
-  required per label      10
-  best possible min bin    9   => EXCLUDED
-
-row338:
-  core labels             0,1
-  forced sources          6,7,9,10,11,14,15,22,26,27
-  relaxed receivers       0,1,3
-  capacities              6,6,5
-  required obligations    20
-  total receiver capacity 17   => EXCLUDED
+sum_{s_i>=3} s_i = 45
 ```
 
-The row160 contradiction also has a one-line pigeonhole proof: seven receivers split over three labels force at least two labels to use at most two receivers; a two-receiver bin reaches10 only as `5+5`, which would require four capacity-5 receivers, but only three exist.
-
-The standard-library verifier enumerates every receiver-label assignment and a 290-pattern tiny structural challenge. Frozen canonical parsed-result SHA256:
+selected high-label incidences. Sources with `rho>=3` have only46 raw selected slots, and the forced use of receivers3 and17 removes respectively1 and2 high slots (receiver23 loses0), leaving
 
 ```text
-8784209ee05bb1ec6cd6da559e8845dbfeee3e041a96dcce9f41360c6d12920e
+43 < 45.
+```
+
+Thus row490 is excluded by an explicit integer inequality, not by a numerical solver status. Frozen canonical result SHA256:
+
+```text
+7357a5139417a1b48f94d8ddbb6122c57363ce70ab0c4586673a290a25c51464
 ```
 
 Local exact replay passed. Dedicated remote CI is installed by this checkpoint and **must not be called successful until inspected**.
 
-## Singleton and row471 history — preserved
+## General structural form
 
-The preceding [`singleton-destination-trap-v1`](project/research/general_n/2026-09-15-singleton-destination-trap-v1/README.md) remains an independent structural result. It excluded original rows347,471,586 by forcing `(q,rho)=(1,1)` sources onto `q<=1` destinations and then exposing unordered-pair Hall deficiencies. Its dedicated workflow34910561258 completed SUCCESS.
+For arbitrary residual level `r`, put `A_r={i:s_i<=r}`, `h=|A_r|`, `U_r={u:rho_u=r,q_u=h}`. Then every `u in U_r` has `S_u=A_r`. Any receiver of a forced-core obligation lies in the relaxed class
 
-Earlier row471 exact work remains useful independent evidence:
+```text
+v not in U_r,
+q_v <= h+r-1,
+q_v+rho_v >= h-1,
+```
 
-- `e_L=39,40`: conditioned rigidity closure, remote run34906169745 SUCCESS.
-- `e_L=41`: independent high-block/common-pressure contradiction.
-- `e_L=42,43`: exact source-group split with `214<222` and `215<222`; remote run34909572352 SUCCESS.
+and each receiver is dedicated to at most one core label. If such a receiver is forced used, then `S_v subset A_r union R_u`, so for every threshold `tau>r` it has at most `r` selected labels with `s_i>=tau`. This couples exact receiver usage to the existing threshold-demand machinery.
 
-The singleton theorem superseded the need to attack `e_L=47`, but none of those predecessor packages is deleted.
+## Preserved predecessor evidence
 
-## Exact row108 finish — remotely reproduced
-
-Row108 remains excluded by its separate selected-incidence/source-sharing route. Its standard-library verifier enumerates46,662 excess histograms, leaves1,201 row/type-incidence-feasible histograms, disposes of1,124 by exact incidence-charge flow below211, and sends77 to exact common-pressure branch-and-bound.57,867 branch nodes are visited; none attains211. Remote workflow34906766833/job104185160249 completed SUCCESS.
-
-## Fresh namespace — deliberately separate
-
-The fresh seed sample remains **708/715 rejected** with seven retained profiles in its own namespace. Neither the singleton nor forced-core checkpoint changes that count until those seven profiles are explicitly scanned. Do not mix row namespaces.
+- Singleton-destination theorem: original rows347,471,586 excluded; remote workflow34910561258 SUCCESS.
+- Row471 branches `e_L=39,40`: conditioned rigidity, run34906169745 SUCCESS.
+- Row471 `e_L=41`: independent high-block/common-pressure contradiction.
+- Row471 `e_L=42,43`: source-group totals `214,215<222`, run34909572352 SUCCESS.
+- Row108 source-sharing: remote workflow34906766833/job104185160249 SUCCESS.
+- Historical failed runs and process/audit failures remain failures; nothing here repaints them green.
 
 ## Immediate next target
 
-The original 713-profile laboratory is now closed under the accumulated necessary conditions. The next useful work is therefore structural rather than more original-sample grinding:
+Both synthetic laboratories are now closed under accumulated necessary conditions. The next priority is to move the new structure onto the canonical frontier rather than generate more synthetic samples:
 
-1. scan the seven retained fresh-seed profiles with the singleton and forced-core receiver-capacity lemmas, preserving all non-rejections;
-2. generalize the forced-core argument from `rho=1` to low-eligibility cores at arbitrary residual level `r`;
-3. test the resulting theorem against the 952 canonical survivors, without promoting anything beyond its proved scope;
-4. continue external review of the canonical graph-to-selected/residual bridge and the fixed-neighbourhood routing theorem on which this synthetic closure depends.
+1. scan all **952 canonical survivors** for the arbitrary-`r` forced eligibility-core capacity and high-demand squeeze;
+2. turn repeated receiver-count/high-threshold patterns into an aggregate inequality that does not require per-profile enumeration;
+3. preserve every canonical non-rejection and promote nothing without a complete theorem-hypothesis check;
+4. continue external review of the graph-to-selected/residual bridge and fixed-neighbourhood routing theorem.
 <!-- CURRENT-STATUS:END -->
 
 ## Preservation, failures and audit gates
 
 The complete pre-row108 handoff remains preserved byte-for-byte in [`CURRENT_STATE_PRE_ROW108_2026-09-14.md`](CURRENT_STATE_PRE_ROW108_2026-09-14.md); earlier archives, reviewer packages, counterexamples and negative experiments remain intact.
 
-Historical failures remain failures: source-price transfer run34904353492, N30 navigation run34906766832, the red-team-history guard failure34908428824, and standalone row471 process commit `2667a909...` are not repainted by later repairs. The branch-specific charge route did not itself finish row471; the singleton-destination theorem is a distinct stronger structural argument. The forced-core theorem is another distinct successor and does not retrospectively turn earlier uncoupled witnesses into graph realizations.
+Historical failures remain failures: source-price transfer run34904353492, N30 navigation run34906766832, the red-team-history guard failure34908428824, and standalone row471 process commit `2667a909...` are not repainted by later repairs. The branch-specific charge route did not itself finish row471; the singleton-destination theorem is a distinct stronger structural argument. The forced-core/high-squeeze theorem is another distinct successor and does not retrospectively turn earlier uncoupled witnesses or solver statuses into graph realizations.
 
-The 2,655 relational candidates have cleared complete coverage, dual agreement, zero unresolved cases, successful aggregate and the separate reviewed-ledger step. Their promotion changes the canonical finite frontier. Synthetic sample exclusions, including the new 713/713 closure, **do not** change it.
+The 2,655 relational candidates have cleared complete coverage, dual agreement, zero unresolved cases, successful aggregate and the separate reviewed-ledger step. Their promotion changes the canonical finite frontier. Synthetic sample exclusions, including the 713/713 original and 715/715 fresh closures, **do not** change it.
 
 Internal proof checks, successful CI and durable publication do not replace external specialist review of the canonical graph-to-selected/residual bridge, selected-incidence eligibility, destination capacities and the fixed-neighbourhood labelled-routing criterion.

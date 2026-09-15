@@ -1,0 +1,342 @@
+{
+  "canonical_finite_frontier": {
+    "changed": false,
+    "exclusions": 4626,
+    "survivors": 952,
+    "whole_state_closures": 3632
+  },
+  "capacity_deficit_exclusions": [
+    20,
+    91,
+    391,
+    528,
+    562,
+    677
+  ],
+  "fresh_sample": {
+    "not_rejected": [],
+    "rejected": 715,
+    "total": 715
+  },
+  "input": {
+    "embedded_source_sha256": "f0e32e99a66d51027d1ad89d9f3874a8d50b3d4d215e8e1dd0d816786504dc2e",
+    "previous_counts": {
+      "profiles": 715,
+      "unrejected": 7
+    },
+    "seed": 74220260919
+  },
+  "newly_excluded": [
+    20,
+    91,
+    391,
+    490,
+    528,
+    562,
+    677
+  ],
+  "original_sample": {
+    "not_rejected": [],
+    "rejected": 713,
+    "total": 713
+  },
+  "profiles": {
+    "20": {
+      "best_partition_min": 6,
+      "candidate_capacity_total": 24,
+      "candidate_destinations": [
+        2,
+        9,
+        17,
+        18
+      ],
+      "capacity_multiset": [
+        7,
+        6,
+        6,
+        5
+      ],
+      "core_labels": [
+        0,
+        1,
+        2
+      ],
+      "core_size": 3,
+      "forced_source_count": 10,
+      "forced_sources": [
+        0,
+        1,
+        3,
+        4,
+        8,
+        15,
+        19,
+        20,
+        21,
+        22
+      ],
+      "max_receiver_capacity": 7,
+      "minimum_receivers_per_label": 2,
+      "minimum_receivers_total": 6,
+      "partition_feasible": false,
+      "required_obligations": 30,
+      "row": 20,
+      "total_capacity_deficit": true
+    },
+    "391": {
+      "best_partition_min": 4,
+      "candidate_capacity_total": 12,
+      "candidate_destinations": [
+        3,
+        5
+      ],
+      "capacity_multiset": [
+        8,
+        4
+      ],
+      "core_labels": [
+        0,
+        1
+      ],
+      "core_size": 2,
+      "forced_source_count": 10,
+      "forced_sources": [
+        0,
+        4,
+        9,
+        11,
+        12,
+        14,
+        15,
+        17,
+        20,
+        22
+      ],
+      "max_receiver_capacity": 8,
+      "minimum_receivers_per_label": 2,
+      "minimum_receivers_total": 4,
+      "partition_feasible": false,
+      "required_obligations": 20,
+      "row": 391,
+      "total_capacity_deficit": true
+    },
+    "490": {
+      "best_partition_min": 14,
+      "candidate_capacity_total": 44,
+      "candidate_destinations": [
+        3,
+        7,
+        10,
+        17,
+        23,
+        27
+      ],
+      "capacity_multiset": [
+        8,
+        6,
+        6,
+        9,
+        8,
+        7
+      ],
+      "core_labels": [
+        0,
+        1,
+        2
+      ],
+      "core_size": 3,
+      "forced_source_count": 11,
+      "forced_sources": [
+        1,
+        4,
+        5,
+        11,
+        12,
+        13,
+        19,
+        21,
+        22,
+        26,
+        28
+      ],
+      "max_receiver_capacity": 9,
+      "minimum_receivers_per_label": 2,
+      "minimum_receivers_total": 6,
+      "partition_feasible": true,
+      "required_obligations": 33,
+      "row": 490,
+      "total_capacity_deficit": false
+    },
+    "528": {
+      "best_partition_min": 7,
+      "candidate_capacity_total": 7,
+      "candidate_destinations": [
+        15
+      ],
+      "capacity_multiset": [
+        7
+      ],
+      "core_labels": [
+        0
+      ],
+      "core_size": 1,
+      "forced_source_count": 11,
+      "forced_sources": [
+        2,
+        4,
+        8,
+        9,
+        10,
+        13,
+        16,
+        17,
+        18,
+        26,
+        27
+      ],
+      "max_receiver_capacity": 7,
+      "minimum_receivers_per_label": 2,
+      "minimum_receivers_total": 2,
+      "partition_feasible": false,
+      "required_obligations": 11,
+      "row": 528,
+      "total_capacity_deficit": true
+    },
+    "562": {
+      "best_partition_min": 0,
+      "candidate_capacity_total": 0,
+      "candidate_destinations": [],
+      "capacity_multiset": [],
+      "core_labels": [
+        0
+      ],
+      "core_size": 1,
+      "forced_source_count": 9,
+      "forced_sources": [
+        3,
+        7,
+        10,
+        13,
+        16,
+        20,
+        23,
+        25,
+        27
+      ],
+      "max_receiver_capacity": 0,
+      "minimum_receivers_per_label": null,
+      "minimum_receivers_total": null,
+      "partition_feasible": false,
+      "required_obligations": 9,
+      "row": 562,
+      "total_capacity_deficit": true
+    },
+    "677": {
+      "best_partition_min": 0,
+      "candidate_capacity_total": 0,
+      "candidate_destinations": [],
+      "capacity_multiset": [],
+      "core_labels": [
+        0
+      ],
+      "core_size": 1,
+      "forced_source_count": 10,
+      "forced_sources": [
+        0,
+        1,
+        5,
+        6,
+        7,
+        8,
+        9,
+        19,
+        22,
+        27
+      ],
+      "max_receiver_capacity": 0,
+      "minimum_receivers_per_label": null,
+      "minimum_receivers_total": null,
+      "partition_feasible": false,
+      "required_obligations": 10,
+      "row": 677,
+      "total_capacity_deficit": true
+    },
+    "91": {
+      "best_partition_min": 0,
+      "candidate_capacity_total": 4,
+      "candidate_destinations": [
+        7
+      ],
+      "capacity_multiset": [
+        4
+      ],
+      "core_labels": [
+        0,
+        1
+      ],
+      "core_size": 2,
+      "forced_source_count": 12,
+      "forced_sources": [
+        0,
+        3,
+        8,
+        10,
+        11,
+        12,
+        15,
+        17,
+        20,
+        24,
+        25,
+        26
+      ],
+      "max_receiver_capacity": 4,
+      "minimum_receivers_per_label": 3,
+      "minimum_receivers_total": 6,
+      "partition_feasible": false,
+      "required_obligations": 24,
+      "row": 91,
+      "total_capacity_deficit": true
+    }
+  },
+  "r0": 1,
+  "row490_high_squeeze": {
+    "adjusted_high_selected_upper": 43,
+    "all_candidate_receivers_forced_used": true,
+    "deficit": 2,
+    "high_eligible_used_receiver_adjustments": {
+      "17": {
+        "high_selected_upper": 1,
+        "lost_high_slots": 2,
+        "q": 3,
+        "rho": 4
+      },
+      "23": {
+        "high_selected_upper": 1,
+        "lost_high_slots": 0,
+        "q": 1,
+        "rho": 3
+      },
+      "3": {
+        "high_selected_upper": 1,
+        "lost_high_slots": 1,
+        "q": 2,
+        "rho": 3
+      }
+    },
+    "raw_high_source_capacity": 46,
+    "rejected": true,
+    "required_high_selected": 45,
+    "threshold": 3,
+    "used_receivers": [
+      3,
+      7,
+      10,
+      17,
+      23,
+      27
+    ]
+  },
+  "schema": "fresh-forced-core-high-squeeze-v1",
+  "scope": "fresh seed 74220260919, seven previously unrejected synthetic profiles; necessary canonical fixed-neighbourhood routing conditions only"
+}
