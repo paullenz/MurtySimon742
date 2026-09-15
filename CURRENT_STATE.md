@@ -3,23 +3,23 @@
 > **Operational source of truth.** Read this file first after every timeout, new chat, takeover, or resumed session. `README.md` is the lower-frequency reviewer-facing summary and may lag routine WIP/status checkpoints. The complete pre-transaction-protocol handoff remains at [`archive/status-snapshots/2026-09-15/CURRENT_STATE_pre_transaction_protocol.md`](archive/status-snapshots/2026-09-15/CURRENT_STATE_pre_transaction_protocol.md).
 
 <!-- CURRENT-STATUS:START -->
-**CHECKPOINT CLASS:** `WIP_INTERNAL_PROOF_NOT_PROMOTED`. Second bounded unit: a parameterized spare-receiver rigidity proof, unifying the equality and one-spare cases. Internal symbolic reasoning and finite set-step checks; no independent expert acceptance or catalogue application.
+**CHECKPOINT CLASS:** `WIP_INTERNAL_PROOF_NOT_PROMOTED`. Third bounded mathematical unit: a general disjoint-destination restriction for extra high-source selections, and a quadratic extra-selection budget at |M|=2d. Full proof and finite set-family checks are below; external review remains OPEN.
 
-**WORK MODE:** `MATH`. User-authorized autonomous prioritization. The first unit was published and remotely confirmed before this one began. No download repairs, workflow polling or unrelated maintenance were performed.
+**WORK MODE:** `MATH`. User-authorized autonomous prioritization. The preceding mathematical checkpoint was published and remotely confirmed. No failed-download retries, CI polling, workflow launches/cancellations or unrelated repository maintenance were performed.
 
-**INSPECTED PREDECESSOR:** `43dc689300eb20efa30e2b848a5326f3c5dcbd6f` on `main`, re-read immediately before this write. The complete preceding one-spare review and its runnable finite checks are preserved at the immutable link below. All earlier WIP and transfer history remain linked separately.
+**INSPECTED PREDECESSOR:** `57a1a2b48637763a4b09ce857d1f29a25d649c75` on `main`, re-read immediately before this write. Its complete multi-spare proof and checks remain at the immutable link below; the original one-spare WIP, review and transport history also remain directly linked.
 
-**LAST VERIFIED RESULT:** under the explicit canonical selected/residual assumptions, |T|=|H|=d and |M|=d+k with 0<=k<d force S_u=T at every high source. Labels outside T demanding more than e_L(i)+k selected sources must lie in every high residual set, giving |K_(k+1)|<=min_H rho. The full proof is below. Finite set-step checks passed for 21 (d,k) cases, 1<=d<=6: 286,528 receiver-pair checks and 301,013 occurrence checks. Six boundary controls and fifteen omission controls passed. These counts are NOT graph enumeration or catalogue exclusions.
+**LAST VERIFIED RESULT:** under the full canonical selected/residual assumptions and |T|=|H|=d, every extra selected label at a high source must be routed to another high source with a DISJOINT set of tight-label destinations. Hence E=sum_H(|S_u|-d) is at most the number of disjoint unordered high-source pairs. At |M|=2d, disjoint d-sets must be complements; their disjointness graph is a union of complete bipartite components and isolates. Therefore E<=floor(d^2/4), and sum_H q_u<=d^2+floor(d^2/4). For an actual underlying graph G, the same construction gives E=e(G[H]) and G[H] is bipartite at this boundary. Finite checks passed on 8,038 small receiver-set families, with extremal set controls and a larger-ground-set negative control. These are NOT enumerations of original graphs or catalogue states.
 
-**CANONICAL / PROMOTED STATUS:** unchanged — **4,626 canonical exclusions / 952 survivors / 3,632 whole-state closures**. The prior 41 strict-block/equality active certificates remain `NOT_PROMOTED`; the 170-candidate forced-core audit remains `AUDIT_COMPLETE_NOT_PROMOTED`. The equality package's 4,588 Python/C++ agreement and 25 active certificates are prior recorded evidence, not newly rerun here. External review of the bridge and these proofs remains OPEN.
+**CANONICAL / PROMOTED STATUS:** unchanged — **4,626 canonical exclusions / 952 survivors / 3,632 whole-state closures**. The prior 41 strict-block/equality active certificates remain `NOT_PROMOTED`; the 170-candidate forced-core audit remains `AUDIT_COMPLETE_NOT_PROMOTED`. Original equality replay remains `NOT_RUN` in this session; its 4,588 Python/C++ agreement and 25 active certificates are prior recorded evidence. No new state IDs or numerical exclusions are claimed. State 3349 q-enumeration is unresolved.
 
-**ACTIVE / PENDING:** original equality catalogue replay remains `NOT_RUN` in this session; no new state IDs or counts are claimed. State 3349 q-enumeration is unresolved. The first untreated scalar boundary is |M|=2d: two high sources may then have disjoint T-destination sets, so the common-receiver argument alone does not force rigidity. This is a proof-method boundary, not a graph counterexample or a proof that rigidity is false there.
+**ACTIVE / PENDING:** three bounded units are now preserved: one-spare review; the |M|=d+k,0<=k<d rigidity/union theorem; and this disjointness/boundary theorem. All new proof claims remain internally derived and not promoted. The boundary proof gives a useful restriction rather than complete rigidity. A new catalogue scan still requires exact inputs, the unchanged baseline replay, a tested scalar implementation and independent checks; none is silently inferred from the elementary tests below.
 
-**UNPRESERVED WORK:** `None` after publication: full parameterized proof, exact finite-check source, results and limitations are included below. The earlier one-spare review and its checks remain in the immutable predecessor.
+**UNPRESERVED WORK:** `None` after publication. Full current proof, runnable finite-check source and exact results are below. Previous complete proofs, checks and failed transport work are retained verbatim in the immutable predecessor links; the live handoff is not the sole copy of those materials.
 
-**DEFERRED ADMIN:** large-input transfer, automatic workflow-completion reporting, reviewer README maintenance and unrelated CI work. Do not retry the failed direct DNS route in an unchanged environment. No workflow was launched, cancelled or polled.
+**DEFERRED ADMIN:** large-input transfer, automatic workflow-completion reporting, reviewer README maintenance and unrelated CI work. Do not retry the failed direct DNS route in an unchanged environment. No workflow was launched, cancelled or polled during these units.
 
-**NEXT ACTION:** one bounded hand-mathematics unit at |M|=2d: classify possible destinations of an additional high-source selection using disjointness of its source and destination T-receiver sets. Seek an exact restriction or counting bound; do not call the overlap counterexample a graph counterexample. Preserve the first result or failure before further work. Catalogue replay/application remains a separate computational task.
+**NEXT ACTION:** one bounded symbolic unit extending the disjointness budget into 2d<|M|<3d. Start from the fact that three pairwise disjoint d-subsets would require at least 3d receivers; derive the resulting edge-count restriction directly before claiming an extra-selection bound. Do not assume bipartiteness merely from absence of triangles, and preserve the first result or failure before further work. Keep full-catalogue replay/application separate; no user intervention is required for sensible bounded continuation, but no work is claimed to run after the current response ends.
 
 **PROCESS RULE NOW IN FORCE:** `RESEARCH_EXECUTION_POLICY_V3`. One bounded substantive unit, immediate preservation, one publication verification. A user pause/stop instruction overrides further research or housekeeping.
 <!-- CURRENT-STATUS:END -->
@@ -27,157 +27,170 @@
 ## Recovery procedure
 
 1. Read this file first and record current `main` SHA.
-2. Read `AGENTS.md` and only the exact mathematical inputs for the current unit.
+2. Read `AGENTS.md` and only the exact mathematical inputs needed.
 3. Do not reconstruct from chat history when durable sources agree.
 4. Preserve each substantive result or failure before the next unit.
 
-## Immutable evidence and preservation links
+## Immutable research and preservation links
 
-- [One-spare proof review, dependency audit, exact finite-check source and results](https://github.com/paullenz/MurtySimon742/blob/43dc689300eb20efa30e2b848a5326f3c5dcbd6f/CURRENT_STATE.md).
-- [Original one-spare WIP, complete transport diagnosis, seven-file manifest and downloader source](https://github.com/paullenz/MurtySimon742/blob/219ba7043c8a8b7152ba42715ab8767e667fb75d/CURRENT_STATE.md).
-- [Canonical selected/residual bridge](https://github.com/paullenz/MurtySimon742/blob/219ba7043c8a8b7152ba42715ab8767e667fb75d/project/research/general_n/2026-09-11-canonical-bridge-v1/CANONICAL_BRIDGE.md), particularly Sections 2, 3, 5, 6.1 and 6.4.
+- [Multi-spare rigidity and residual-union theorem, full proof, tests and limits](https://github.com/paullenz/MurtySimon742/blob/57a1a2b48637763a4b09ce857d1f29a25d649c75/CURRENT_STATE.md).
+- [One-spare proof review, reverse-containment audit and finite checks](https://github.com/paullenz/MurtySimon742/blob/43dc689300eb20efa30e2b848a5326f3c5dcbd6f/CURRENT_STATE.md).
+- [Original one-spare WIP, complete transport diagnosis, seven-file manifest and downloader](https://github.com/paullenz/MurtySimon742/blob/219ba7043c8a8b7152ba42715ab8767e667fb75d/CURRENT_STATE.md).
+- [Canonical selected/residual bridge](https://github.com/paullenz/MurtySimon742/blob/219ba7043c8a8b7152ba42715ab8767e667fb75d/project/research/general_n/2026-09-11-canonical-bridge-v1/CANONICAL_BRIDGE.md), especially Sections 2, 3, 5, 6.1 and 6.4.
 - [Strict tight-label block theorem](https://github.com/paullenz/MurtySimon742/blob/219ba7043c8a8b7152ba42715ab8767e667fb75d/project/research/general_n/2026-09-15-tight-label-block-v1/README.md).
-- [Equality proof and existing replay package](https://github.com/paullenz/MurtySimon742/blob/219ba7043c8a8b7152ba42715ab8767e667fb75d/project/research/general_n/2026-09-15-tight-label-equality-v1/README.md).
+- [Original equality proof and replay package](https://github.com/paullenz/MurtySimon742/blob/219ba7043c8a8b7152ba42715ab8767e667fb75d/project/research/general_n/2026-09-15-tight-label-equality-v1/README.md).
 
-## Spare-receiver rigidity and residual union — internal conditional proof
+## Extra selections require disjoint tight-destination sets
 
-### Hypotheses
+### Hypotheses and notation
 
-Use the actual full selected/residual system of the canonical bridge. Labels i have nonnegative integer demands s_i and at least s_i distinct selected sources. At vertex u, N_u=S_u disjoint-union R_u with |R_u|=rho_u. Selection of i at u requires s_i<=rho_u. Every selected label has its actual destination, different selected labels at a source have different destinations, and an unordered missing B-pair is represented in only one orientation.
+Use the full canonical representative construction, not arbitrary demand-thinned selected sets or a freely chosen scalar routing. For each B-vertex u, N_u=S_u disjoint-union R_u and |R_u|=rho_u. Demands s_i are nonnegative integers, each label has at least s_i distinct selected sources, and selection of i at u requires s_i<=rho_u. Every selected label has an actual destination. Distinct labels at one source have distinct destinations, and opposite orientations cannot both represent the same unordered missing B-pair.
 
-For every actual selected obligation (u,i)->v we use
+For an obligation (u,i)->v, the construction gives
 
     i not in N_v,
     S_u minus {i} subset N_v,
     S_v subset N_u.                                         (P)
 
-The last containment is not a new axiom asserted without justification: if (v,j)->z is selected, then z!=u by uniqueness of the missing-pair orientation. Its quasi-edge dominates u; since uv is missing, uj is present. The preceding review derives this directly from the canonical graph construction. These conditions are necessary for graphs, not asserted sufficient for realizing one.
+The reverse containment follows directly from quasi-edge domination and the prohibition on opposite selected orientations; its full derivation is in the preceding review.
 
-Fix integers d>=1 and k with 0<=k<d. Define
+Fix d>=1 and set
 
-    T={i:s_i=d},       H={u:rho_u>=d},
-    M={v:rho_v=d-1},   L={v:rho_v<d-1}.
+    T={i:s_i=d}, H={u:rho_u>=d}, M={v:rho_v=d-1}.
 
-Assume |T|=|H|=d and |M|=d+k. For i outside T define
+Assume |T|=|H|=d. For this first lemma no upper bound on |M| is imposed. Any actual realization necessarily has |M|>=d. All high vertices select T. A tight-label destination lies in M and has residual set exactly T minus the label it receives, because it cannot select T and has fewer than d residual slots.
 
-    e_L(i)=|{w in L:rho_w>=s_i}|,
-    K_(k+1)={i outside T:s_i>e_L(i)+k}.
+Let D_u be the d distinct tight-label destinations of u in H. Define a simple graph Gamma on the d high vertices by
 
-### Statement
+    uw in E(Gamma) iff D_u intersect D_w is empty.
 
-For every u in H,
+Repeated destination sets at different high vertices are allowed. Gamma has distinct source vertices, not merely distinct set types.
 
-    S_u=T, hence q_u=d,                                    (SR1)
-    K_(k+1) subset R_u.                                    (SR2)
+### Lemma 1: every extra obligation uses a disjoint high pair
 
-In particular the following scalar necessary condition is independent of q:
+Suppose j in S_u minus T and its selected destination is w.
 
-    |K_(k+1)| <= min_{u in H} rho_u.                        (SR3)
+First w must be high. Otherwise forward containment in (P) would place all d labels of T into N_w. None can be selected outside H, while rho_w<d, a contradiction.
 
-All assertions are conditional on the listed full selected-representative hypotheses. No unrestricted Murty–Simon theorem or new catalogue exclusion is being asserted.
+Now suppose v belonged to D_u intersect D_w. The tight obligation from u to v forces j in N_v. Since R_v is contained in T, j is selected at v. The tight obligation from w to v and reverse containment then give j in N_w. But w is the destination of (u,j), so j must be absent from N_w. Contradiction.
 
-### Proof: tight destinations
+Consequently
 
-Every i in T has at least d selected sources and precisely d eligible vertices, namely H. Therefore T subset S_u for all u in H. A T-obligation cannot end in H, where its label is present. Outside H a T-label cannot be selected by eligibility. Its destination must still contain the other d-1 T-labels, so those are all residual. Its residual size is less than d and at least d-1, hence equals d-1. It lies in M, and when receiving i its residual set is exactly T minus {i}.
+    (u,j)->w with j outside T implies u,w in H
+    and D_u intersect D_w is empty.                         (D1)
 
-Let D_u be the d distinct T-destinations of u in H. Thus D_u subset M, |D_u|=d, and u omits exactly k vertices of M. Saturation is claimed only at a vertex actually receiving a T-obligation, not at every unused receiver.
+This statement is valid for arbitrary |M| under the stated hypotheses. It does not say every disjoint pair supports a realizable obligation.
 
-### Proof: rigidity from forced intersection
+### Lemma 2: an exact combinatorial budget
 
-For any u,w in H,
+Let
 
-    |D_u intersect D_w| >= 2d-(d+k)=d-k>0.                 (I)
+    E=sum_{u in H}|S_u minus T|=sum_{u in H}(|S_u|-d).
 
-Suppose j in S_u minus T. For every v in D_u, (P) forces j in N_v. As R_v is contained in T, j must be selected at v. For any other w in H choose v in D_u intersect D_w. Reverse containment at the obligation from w to v yields S_v subset N_w, so j in N_w. The original selection already puts j in N_u. Thus j belongs to every high neighbourhood.
+Every extra label has one destination, which by D1 is a neighbour of its source in Gamma. Different selected labels at a source have different destinations. Also opposite orientations of one unordered pair cannot both be selected. Thus extra obligations inject into unordered edges of Gamma, giving
 
-The destination of (u,j) cannot be high, because a destination must omit j. It cannot be outside H either: all d labels of T belong to S_u minus {j}, so (P) would put all of T there, none selectable there, in fewer than d residual slots. Every selected label must have a destination; this contradiction proves SR1.
+    |S_u|-d <= deg_Gamma(u) for every u in H,
+    E <= e(Gamma).                                         (D2)
 
-For d=1,k=0 there is only one high source. The statement and proof still hold: the assertion concerning other high sources is vacuous. This does not claim the one-spare case d=1,k=1, which is outside 0<=k<d.
+For the actual original diameter-two edge-critical graph G, write J=complement(G). Every missing J-pair inside H has exactly one selected representative, whose source and destination are high. Its label cannot lie in T, since every high vertex already contains every T-label. Conversely every extra high obligation has both ends in H by D1. Therefore, for that actual graph,
 
-### Proof: k+1 occurrences cannot all be omitted
+    E=e(G[H]), and G[H] is a subgraph of Gamma.              (D3)
 
-Let i in K_(k+1). By SR1 it has no selected source in H. It can have at most e_L(i) selected sources in L, so its demand forces at least k+1 distinct selected sources in M. Every D_u omits only k vertices of M; at least one of these sources lies in D_u. Reverse containment puts i in N_u. Since i is outside T=S_u, it lies in R_u. This holds for every u in H, proving SR2 and SR3.
+D3 uses the full missing-pair representation property. It is not an assertion of graph realization for a relaxation satisfying only some numerical conditions.
 
-### Recovered cases and precise limits
+### Corollary: recover rigidity below 2d
 
-- k=0 recovers the equality-case one-occurrence union bound.
-- k=1 (necessarily d>=2) recovers the reviewed one-spare two-occurrence bound.
-- For example d=5 permits k=0,1,2,3,4, with 5 through 9 receivers. At k=2 a label needs at least three selected M-occurrences to be forced into every high residual set. This example illustrates the theorem, not a catalogue state or an exclusion count.
-- If a label has only k forced occurrences, they can all be in M minus D_u. Thus one cannot replace k+1 by k using the hitting argument alone.
-- At |M|=2d, the d-sets D and M minus D are disjoint. This invalidates a universal positive-intersection assertion at that boundary. It does NOT establish that SR1 fails for a genuine graph, nor that the theorem's global range is sharp.
-- More input structure might extend the result beyond this sufficient scalar range. That remains research, not a conclusion of the finite checks.
+If |M|<2d, no two d-element subsets of M are disjoint. Gamma is edgeless, so D2 gives E=0 and S_u=T for every high source. This recovers the rigidity step of the preceding multi-spare theorem by a shorter obstruction argument. For d=1 there is only one high source, so E=0 for any receiver pool; the earlier d>=2 restriction belonged to its particular overlap proof, not a counterexample at d=1.
 
-## Exact finite set-step check
+## Boundary theorem at |M|=2d
 
-This program was run locally; no input downloads or external packages were needed. It exhausts the elementary intersection assertions for the stated small parameters, not graph realizations.
+When |M|=2d, disjoint d-subsets must be exact complements:
+
+    D_u intersect D_w empty iff D_w=M minus D_u.            (B1)
+
+Group high vertices by their destination set. Every set type X is paired with its unique complementary type M minus X. If the two groups have sizes p and q, the corresponding Gamma component is K_(p,q); a group whose complement is absent contributes isolated vertices. Since d>=1, a set cannot equal its disjoint complement, so there are no loops or exceptional self-pairs.
+
+Thus Gamma is a disjoint union of complete bipartite components and isolates. Choose a bipartition of each component and combine them into two sides of sizes P and Q; place isolates arbitrarily. Then P+Q=d and
+
+    e(Gamma) <= P Q <= floor(d^2/4).                       (B2)
+
+The final inequality follows from (P-Q)^2>=0 and integrality. Combining D2 and B2 gives
+
+    sum_{u in H}(|S_u|-d) <= floor(d^2/4),                  (B3)
+    sum_{u in H}q_u <= d^2+floor(d^2/4).                    (B4)
+
+For an actual G, D3 additionally shows that G[H] is bipartite at this boundary and e(G[H])<=floor(d^2/4). This is a LOCAL induced-subgraph statement under the tight-block hypotheses, not the unrestricted Murty–Simon inequality.
+
+For example d=5, |M|=10 gives at most 6 extra high-source selections in total. This is an illustrative conditional bound, not a state rejection or an assertion that all six can occur in a genuine graph.
+
+### Limits and failed overextensions preserved
+
+- The previous common-receiver argument cannot simply be reused at |M|=2d. The replacement is a restriction on permitted extra obligations, not a claim that no extras exist.
+- Extremal abstract set families attain floor(d^2/4) by splitting the d high vertices between a fixed d-set and its complement as evenly as possible. This proves sharpness of the SET-FAMILY edge budget only, not sharpness for realizable graphs.
+- For larger M, disjoint d-sets need not be complements. The complete-bipartite-component argument must not be exported without proof.
+- With d=3 and |M|=9, three disjoint triples give a triangle in Gamma with three edges, exceeding floor(3^2/4)=2. This is a counterexample to an UNRESTRICTED SET-FAMILY version of B2, not a counterexample graph to Murty–Simon or to the actual selected system.
+- Neither the new budget nor the earlier union bound has been applied to the catalogue. A correct structural inequality may be weak or vacuous on some states; no reduction in the 952 survivors is inferred.
+
+## Exact finite check of the boundary set-family graph
+
+The following program was run locally. It checks all ordered families of d destination d-sets on a 2d-element ground set for d=1,2,3, including repeated set types. It also checks balanced complementary families for d=1 through 20 and the larger-ground-set triangle negative control. It does not enumerate original graphs or certify graph realizability.
 
 ```python
 #!/usr/bin/env python3
-"""Exhaust the small set steps of the spare-receiver lemma, not graph models."""
-from itertools import combinations
+"""Small exhaustive checks of the boundary set-family graph, not original graphs."""
+from itertools import combinations, product
 import json
 
 
-def masks(n, size):
-    return [sum(1 << x for x in xs) for xs in combinations(range(n), size)]
+def check_family(family, d):
+    full = (1 << (2 * d)) - 1
+    edges = []
+    adjacency = [[] for _ in family]
+    for u, v in combinations(range(len(family)), 2):
+        if not family[u] & family[v]:
+            assert family[v] == full ^ family[u]
+            edges.append((u, v))
+            adjacency[u].append(v)
+            adjacency[v].append(u)
+    colors = {}
+    for start in range(len(family)):
+        if start in colors:
+            continue
+        colors[start] = 0
+        stack = [start]
+        while stack:
+            u = stack.pop()
+            for v in adjacency[u]:
+                if v in colors:
+                    assert colors[v] != colors[u]
+                else:
+                    colors[v] = 1 - colors[u]
+                    stack.append(v)
+    assert len(edges) <= d * d // 4
+    return len(edges)
 
 
 rows = []
-for d in range(1, 7):
-    for k in range(d):
-        m = d + k
-        destinations = masks(m, d)
-        supports = masks(m, k + 1)
-        pair_count = 0
-        occurrence_count = 0
-        for x in destinations:
-            for y in destinations:
-                assert (x & y).bit_count() >= d - k > 0
-                pair_count += 1
-            for selected_support in supports:
-                assert x & selected_support
-                occurrence_count += 1
-        if k:
-            first_d = (1 << d) - 1
-            omitted_k = ((1 << m) - 1) ^ first_d
-            assert omitted_k.bit_count() == k and not first_d & omitted_k
-        rows.append(dict(d=d, k=k, m=m, receiver_pair_checks=pair_count,
-                         occurrence_checks=occurrence_count))
-for d in range(1, 7):
+for d in range(1, 4):
+    choices = [sum(1 << i for i in s) for s in combinations(range(2*d), d)]
+    count, maximum = 0, 0
+    for family in product(choices, repeat=d):
+        maximum = max(maximum, check_family(family, d))
+        count += 1
+    assert maximum == d*d//4
+    rows.append(dict(d=d, families=count, max_edges=maximum, bound=d*d//4))
+for d in range(1, 21):
     left = (1 << d) - 1
     right = left << d
-    assert left.bit_count() == right.bit_count() == d and not left & right
-print(json.dumps(dict(status='PASS_FINITE_SET_STEPS_ONLY', parameter_cases=len(rows),
-    receiver_pair_checks=sum(r['receiver_pair_checks'] for r in rows),
-    occurrence_checks=sum(r['occurrence_checks'] for r in rows),
-    rows=rows, boundary_controls=6, omission_controls=15,
-    catalogue_replay='NOT_RUN', graph_counterexample_claimed=False), indent=2))
+    family = [left]*(d//2) + [right]*(d-d//2)
+    assert check_family(family, d) == d*d//4
+# Disjointness need not be bipartite on a larger ground set.
+family = [(1 << 3)-1, ((1 << 3)-1) << 3, ((1 << 3)-1) << 6]
+assert all(not family[u] & family[v] for u, v in combinations(range(3), 2))
+print(json.dumps(dict(status='PASS_BOUNDARY_SET_FAMILIES_ONLY', rows=rows,
+    exhaustive_families=sum(x['families'] for x in rows),
+    extremal_set_controls=20, larger_ground_set_triangle_control=True,
+    catalogue_replay='NOT_RUN', original_graph_counterexample_claimed=False), indent=2))
 ```
 
-Recorded status: `PASS_FINITE_SET_STEPS_ONLY`. There were **21** parameter cases, **286,528** receiver-pair checks, **301,013** occurrence checks, **6** boundary controls and **15** omission controls. Catalogue replay: `NOT_RUN`. Graph counterexample claimed: `False`.
-
-Exact rows `(d,k,|M|,receiver-pair checks,occurrence checks)`:
-
-```text
-1 0 1 1 1
-2 0 2 1 2
-2 1 3 9 9
-3 0 3 1 3
-3 1 4 16 24
-3 2 5 100 100
-4 0 4 1 4
-4 1 5 25 50
-4 2 6 225 300
-4 3 7 1225 1225
-5 0 5 1 5
-5 1 6 36 90
-5 2 7 441 735
-5 3 8 3136 3920
-5 4 9 15876 15876
-6 0 6 1 6
-6 1 7 49 147
-6 2 8 784 1568
-6 3 9 7056 10584
-6 4 10 44100 52920
-6 5 11 213444 213444
-```
+Recorded status: `PASS_BOUNDARY_SET_FAMILIES_ONLY`. Exact rows `(d,families,maximum edges,bound)` were `(1,2,0,0)`, `(2,36,1,1)`, `(3,8000,2,2)`: **8,038** exhaustive set families in total. All **20** extremal set controls and the larger-ground-set triangle control passed. Catalogue replay: `NOT_RUN`; original graph counterexample claimed: `False`.
