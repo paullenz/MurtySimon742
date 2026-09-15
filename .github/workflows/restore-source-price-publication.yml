@@ -1,10 +1,7 @@
 name: Restore frozen source-price publication
+# Historical one-off repair workflow. The successful 2026-09-14 restoration is
+# complete; automatic push triggering is disabled to prevent accidental republishing.
 on:
-  push:
-    branches: [main]
-    paths:
-      - 'tools/restore_source_price_publication.py'
-      - '.github/workflows/restore-source-price-publication.yml'
   workflow_dispatch:
 permissions:
   contents: write
@@ -18,5 +15,5 @@ jobs:
         with:
           ref: main
           fetch-depth: 0
-      - name: Restore original bytes, require unchanged full replay, publish paired status
+      - name: Replay historical restoration safely
         run: python3 tools/restore_source_price_publication.py

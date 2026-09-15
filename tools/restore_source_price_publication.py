@@ -1,8 +1,9 @@
 #!/usr/bin/env python3
 """Repair one diagnosed publication error; preserve the original expected hash.
 
-Run only in the dedicated main-branch workflow. No theorem, generator, expected
-hash or validator is changed. Publication is atomic and non-forced.
+Run only in the dedicated main-branch workflow. The successful one-off restoration
+is now retained for manual replay only. No theorem, generator, expected hash or
+validator is changed. Publication, when needed, is atomic and non-forced.
 """
 from datetime import datetime, timezone
 from pathlib import Path
@@ -70,6 +71,24 @@ def main() -> None:
     parent = command('git', 'rev-parse', 'HEAD').strip()
     changed = restore(RESULT)
     command(sys.executable, str(PACKAGE / 'run_replay.py'))
+
+    # The one-off publication completed on 2026-09-14 and later status rewrites
+    # intentionally removed its temporary publication markers. A manual replay of
+    # an already-correct checkout must therefore be read-only, not a fresh commit.
+    status_texts = [Path(name).read_text() for name in ['README.md', 'CURRENT_STATE.md']]
+    markers_present = all(
+        text.count(START) == 1 and text.count(END) == 1 for text in status_texts
+    )
+    if not markers_present:
+        if changed:
+            raise RuntimeError(
+                'Repair was required but publication markers are no longer present; '
+                'refusing to create a new historical publication commit'
+            )
+        print('Restoration already published; unchanged replay passed. No repository mutation required.',
+              flush=True)
+        return
+
     # Source, copied-input, canonical-input and ORIGINAL result-byte hashes plus
     # both COMPLETE parsed replay outputs have now passed the unchanged harness.
     stamp = datetime.now(timezone.utc).strftime('%Y-%m-%d %H:%M:%S UTC')
@@ -103,8 +122,10 @@ def main() -> None:
     staged = set(command('git', 'diff', '--cached', '--name-only').splitlines())
     if not staged.issubset(set(files)) or not {'README.md', 'CURRENT_STATE.md'} <= staged:
         raise RuntimeError('Unexpected staged files or missing paired status')
-    command('git', '-c', 'user.name=Research verification',
-            '-c', 'user.email=verification@users.noreply.github.com',
+    # Use GitHub's canonical Actions identity. Do not invent a generic
+    # users.noreply.github.com address: GitHub may map it to another GitHub account.
+    command('git', '-c', 'user.name=github-actions[bot]',
+            '-c', 'user.email=41898282+github-actions[bot]@users.noreply.github.com',
             'commit', '-m', f'Restore original source-price data; record exact replay {run} in both statuses')
     command(sys.executable, 'scripts/check_status_sync.py', '--base', parent, '--head', 'HEAD')
     command('git', 'push', 'origin', 'HEAD:main')

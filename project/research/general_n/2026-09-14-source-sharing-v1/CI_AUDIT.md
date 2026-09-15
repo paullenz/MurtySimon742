@@ -37,3 +37,9 @@ The original experiment retains 9,043 incidence/demand configurations, 371 brute
 ## Completed exact replay, 2026-09-14 22:48:27 UTC
 
 Run 34905883642; checked-out predecessor `e6c9915826173b7b4ab8f76dc9b944b710128b0b`. The known extra-zero repair restored the original byte hash. The unchanged full harness passed before this publication attempt. No expected hash, source, numerical result or validator was weakened. Only the original source-sharing package was replayed. The whole workflow also requires non-forced publication and a final remote-ref check; its final conclusion must be inspected separately.
+
+## Commit-attribution provenance correction, 2026-09-15
+
+Commit `aa6c41fcede3bf2e7e935a00840030ef0b9ee1df` was produced by successful restoration run `34905883642`. GitHub records both the workflow actor and triggering actor as `paullenz`, while `tools/restore_source_price_publication.py` explicitly configured the Git commit as `Research verification <verification@users.noreply.github.com>`. GitHub mapped that noreply identity to account `verification` (display name Bill Wang), creating misleading contributor attribution. This is a synthetic-identity metadata error, not evidence that account `verification` triggered the workflow.
+
+The historical commit is deliberately retained to avoid rewriting the audited commit chain. The restoration workflow is now manual-only, the completed-restoration path replays and exits without repository mutation, and any future workflow-created commit uses GitHub's canonical Actions identity `github-actions[bot] <41898282+github-actions[bot]@users.noreply.github.com>`. Mathematical scope, expected hashes, verifier results and canonical status are unchanged.
