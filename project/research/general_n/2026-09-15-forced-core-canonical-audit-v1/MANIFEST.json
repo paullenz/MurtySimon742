@@ -1,0 +1,44 @@
+{
+  "canonical_promotion": "NONE",
+  "certified_rescues": 124,
+  "files": {
+    "CERTIFIED_RESCUES.tsv": {
+      "bytes": 7815,
+      "sha256": "57dcd719c28003a750943fafd687fce506a05122ac5ea7ae5433f8d679280165"
+    },
+    "INDEPENDENT_CLOSURE_MATCHES.tsv": {
+      "bytes": 2546,
+      "sha256": "c7a02202c79f6900e607d29033da7501f250165bbdbfc51fc471a1e0b013a880"
+    },
+    "README.md": {
+      "bytes": 3243,
+      "sha256": "1b693b09ec7c9244b434c82f21028205fb10b265908b1f9a9dd74a40ef4b6e25"
+    },
+    "bfs_oldpass.py": {
+      "bytes": 3407,
+      "sha256": "343a53b5571dfb05fd84ae221cfedad1757d112ee20f559ab5151efa4e75e4a5"
+    },
+    "random_jump.py": {
+      "bytes": 2346,
+      "sha256": "2bd121307a70815bf21acc69f4fca193807c6d064d8aea1c3ad24f412b2c58e6"
+    },
+    "random_jump2.py": {
+      "bytes": 2724,
+      "sha256": "b4a8abbc41cae2506fee4519d36e140add31e576cdabf4305eb5123fb53c1e39"
+    },
+    "random_jump3.py": {
+      "bytes": 2203,
+      "sha256": "a15d9ee5142c7be38275a7bb0b4b0938f3f686a8ecdbac8d45c985da0ffc97c5"
+    },
+    "scan_forced_core_h1fast.cpp": {
+      "bytes": 14206,
+      "sha256": "a381d8fedc16c18b97a913dd590436daa906a9cbe334d364e72ac133ac1dab7d"
+    },
+    "scan_forced_core_types.cpp": {
+      "bytes": 14015,
+      "sha256": "a21f2abbb2f7d8356a38c7c3d9399d7ea8d3a63073fb4a5f2a4fe956dd7f17b5"
+    }
+  },
+  "independent_closure_matches": 24,
+  "schema": "forced-core-canonical-audit-v1"
+}
