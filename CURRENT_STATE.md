@@ -3,19 +3,19 @@
 > **Operational source of truth.** Read this file first after every timeout, new chat, takeover, or resumed session. `README.md` is the lower-frequency reviewer-facing summary and may lag routine WIP/status checkpoints. The complete pre-transaction-protocol handoff is preserved byte-for-byte at [`archive/status-snapshots/2026-09-15/CURRENT_STATE_pre_transaction_protocol.md`](archive/status-snapshots/2026-09-15/CURRENT_STATE_pre_transaction_protocol.md).
 
 <!-- CURRENT-STATUS:START -->
-**CHECKPOINT CLASS:** `POLICY` / `RESEARCH_EXECUTION_POLICY_V3` — protect mathematical turns from repository/CI overhead.
+**CHECKPOINT CLASS:** `POLICY` / `RESEARCH_EXECUTION_POLICY_V3` — protected execution modes fully enacted after one intermediate status-only checkpoint.
 
 **WORK MODE:** `MATH` for the next research transaction. Requests such as “continue the maths”, “continue”, “carry on”, “proceed”, or “next” default to `MATH` unless the user explicitly asks for admin, audit, status, publication, or recovery work.
 
-**INSPECTED PREDECESSOR:** `991e88f97c6e88b92430297d1263367a61ab87f7` on `main`. The preceding V2 timeout-resilient checkpoint was durable and had `UNPRESERVED WORK: None`.
+**INSPECTED PREDECESSOR:** `7cf945a89cbfc68a7fc39c46050ed61be4e611e5` on `main`. That intermediate commit changed only this handoff while the atomic V3 policy tree was being prepared; no mathematics changed.
 
-**LAST VERIFIED RESULT:** mathematical status unchanged by this policy commit. The latest preserved mathematics remains [`project/research/general_n/2026-09-15-tight-label-equality-v1/`](project/research/general_n/2026-09-15-tight-label-equality-v1/): 25 internally verified whole-state certificates and 4,588/4,588 Python/C++ decision agreement. Together with the preceding disjoint strict-block family, 41 current states have internally verified certificates. These remain `NOT_PROMOTED`; external review remains open.
+**LAST VERIFIED RESULT:** mathematical status unchanged by the policy rollout. The latest preserved mathematics remains [`project/research/general_n/2026-09-15-tight-label-equality-v1/`](project/research/general_n/2026-09-15-tight-label-equality-v1/): 25 internally verified whole-state certificates and 4,588/4,588 Python/C++ decision agreement. Together with the preceding disjoint strict-block family, 41 current states have internally verified certificates. These remain `NOT_PROMOTED`; external review remains open.
 
 **CANONICAL / PROMOTED STATUS:** unchanged — **4,626 canonical exclusions / 952 survivors / 3,632 whole-state closures**. The completed 170-candidate forced-core independent audit remains `AUDIT_COMPLETE_NOT_PROMOTED`. No process checkpoint promotes mathematics.
 
 **ACTIVE / PENDING:** mathematical next route remains the one-spare-receiver case `|M|=d+1`, starting from equality rigidity. Quantify each high source's omitted receiver and determine how many additional selected labels can survive; do not extend the equality theorem without a new proof. The earlier state 3349 q-enumeration timeout remains unresolved.
 
-**UNPRESERVED WORK:** `None` after publication of this policy checkpoint.
+**UNPRESERVED WORK:** `None` after publication of this completed V3 policy checkpoint.
 
 **DEFERRED ADMIN:** automatic workflow-completion reporting remains `NOT_IMPLEMENTED`; it is non-blocking and must not displace the next mathematical transaction. No other non-blocking admin issue should be repaired during `MATH` mode merely because it is noticed.
 
