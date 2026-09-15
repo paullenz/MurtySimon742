@@ -3,30 +3,45 @@
 > **Operational source of truth.** Read this file first after every timeout, new chat, takeover, or resumed session. `README.md` is the lower-frequency reviewer-facing summary and may lag routine WIP/status checkpoints. The complete pre-transaction-protocol handoff is preserved byte-for-byte at [`archive/status-snapshots/2026-09-15/CURRENT_STATE_pre_transaction_protocol.md`](archive/status-snapshots/2026-09-15/CURRENT_STATE_pre_transaction_protocol.md).
 
 <!-- CURRENT-STATUS:START -->
-**CHECKPOINT CLASS:** `STATUS_ONLY` — timeout-resilient transaction protocol verified operationally.
+**CHECKPOINT CLASS:** `POLICY` / `RESEARCH_EXECUTION_POLICY_V3` — protect mathematical turns from repository/CI overhead.
 
-**INSPECTED PREDECESSOR:** `07543befba141ba76b55fa7b55e370c6fc96b262` on `main`. That status-only probe triggered exactly one GitHub Actions workflow, `Status synchronization`; neither `Forced core receiver capacity` nor `Fresh forced core high squeeze` was triggered. Cheap persistence is therefore verified at the workflow-trigger level.
+**WORK MODE:** `MATH` for the next research transaction. Requests such as “continue the maths”, “continue”, “carry on”, “proceed”, or “next” default to `MATH` unless the user explicitly asks for admin, audit, status, publication, or recovery work.
 
-**LAST VERIFIED RESULT:** mathematical status unchanged by the process rollout. The latest preserved mathematics remains [`project/research/general_n/2026-09-15-tight-label-equality-v1/`](project/research/general_n/2026-09-15-tight-label-equality-v1/): 25 internally verified whole-state certificates and 4,588/4,588 Python/C++ decision agreement. Together with the preceding disjoint strict-block family, 41 current states have internally verified certificates. These remain `NOT_PROMOTED`; external review remains open.
+**INSPECTED PREDECESSOR:** `991e88f97c6e88b92430297d1263367a61ab87f7` on `main`. The preceding V2 timeout-resilient checkpoint was durable and had `UNPRESERVED WORK: None`.
+
+**LAST VERIFIED RESULT:** mathematical status unchanged by this policy commit. The latest preserved mathematics remains [`project/research/general_n/2026-09-15-tight-label-equality-v1/`](project/research/general_n/2026-09-15-tight-label-equality-v1/): 25 internally verified whole-state certificates and 4,588/4,588 Python/C++ decision agreement. Together with the preceding disjoint strict-block family, 41 current states have internally verified certificates. These remain `NOT_PROMOTED`; external review remains open.
 
 **CANONICAL / PROMOTED STATUS:** unchanged — **4,626 canonical exclusions / 952 survivors / 3,632 whole-state closures**. The completed 170-candidate forced-core independent audit remains `AUDIT_COMPLETE_NOT_PROMOTED`. No process checkpoint promotes mathematics.
 
-**ACTIVE / PENDING:** mathematical next route is the one-spare-receiver case `|M|=d+1`, starting from equality rigidity. Quantify each high source's omitted receiver and determine how many additional selected labels can survive; do not extend the equality theorem without a new proof. The earlier state 3349 q-enumeration timeout remains unresolved. Automatic workflow-completion reporting remains `NOT_IMPLEMENTED`.
+**ACTIVE / PENDING:** mathematical next route remains the one-spare-receiver case `|M|=d+1`, starting from equality rigidity. Quantify each high source's omitted receiver and determine how many additional selected labels can survive; do not extend the equality theorem without a new proof. The earlier state 3349 q-enumeration timeout remains unresolved.
 
-**UNPRESERVED WORK:** `None`. The v2 standing orders, synchronization guard, archived old handoff, path-scoped proof-workflow triggers, and this verified live checkpoint are durable on `main`.
+**UNPRESERVED WORK:** `None` after publication of this policy checkpoint.
 
-**NEXT ACTION:** on resumption, first re-read this file on current `main` and record that head SHA. Run `python3 project/research/general_n/2026-09-15-tight-label-equality-v1/run_replay.py`; if clean, continue the hand mathematics for `|M|=d+1`. Checkpoint the first substantive result or failure before beginning another research unit.
+**DEFERRED ADMIN:** automatic workflow-completion reporting remains `NOT_IMPLEMENTED`; it is non-blocking and must not displace the next mathematical transaction. No other non-blocking admin issue should be repaired during `MATH` mode merely because it is noticed.
 
-**PROCESS RULE NOW IN FORCE:** never begin research unit N+1 while useful output from unit N exists only in session memory. Every active-line commit refreshes `CURRENT_STATE.md`; README is refreshed only for material reviewer-facing milestones or whenever README itself is edited. WIP/failure/status checkpoints are explicitly valid. Ten minutes is only a maximum backstop; substantive events trigger immediate checkpoints.
+**NEXT ACTION:** remain in `MATH` mode. Run `python3 project/research/general_n/2026-09-15-tight-label-equality-v1/run_replay.py`; if clean, perform one bounded hand-mathematics unit on `|M|=d+1`. Preserve the first substantive result, failure, counterexample, or changed route immediately before beginning another unit. Do not poll CI or do unrelated repository maintenance during that transaction.
+
+**PROCESS RULE NOW IN FORCE:** `RESEARCH_EXECUTION_POLICY_V3`. MATH mode is protected: exact-input reads → one bounded mathematical unit → immediate checkpoint → one publication verification → next unit. Routine CI is not awaited or repeatedly polled; unrelated admin is deferred; two consecutive connector/write failures trigger the tooling circuit breaker rather than a retry spiral. Recovery from a consistent handoff is narrow and does not reconstruct from chat history.
 <!-- CURRENT-STATUS:END -->
 
 ## Recovery procedure
 
 1. Read this file first and record current `main` SHA.
-2. Inspect commits newer than `INSPECTED PREDECESSOR` plus only exact branches/runs/evidence named above.
+2. Read `AGENTS.md`; inspect only commits/evidence required by this handoff and the active work mode.
 3. If durable sources agree, execute `NEXT ACTION` directly; do not reconstruct the project from chat history.
-4. After one substantive research unit, publish a new live checkpoint before beginning the next.
+4. In `MATH` mode, do one bounded research unit and checkpoint it before beginning the next.
 
 ## Checkpoint invariant
 
 A timeout may lose at most the single small in-memory research unit currently being attempted. Results, failures, counterexamples, changed attacks, and completed bounded computations are checkpoint events.
+
+## Protected MATH-mode summary
+
+- no unrelated README/reviewer-document maintenance;
+- no broad repo archaeology or CI inventory;
+- no repeated workflow polling;
+- no piggybacked housekeeping/process fixes;
+- maximum one sensible fallback after a preservation write failure;
+- after two consecutive connector/write failures, checkpoint `BLOCKED_TOOLING` if possible and stop retrying;
+- `UNPRESERVED WORK: None` before starting the next substantive unit;
+- put non-blocking process work in `DEFERRED ADMIN:` instead of doing it immediately.
