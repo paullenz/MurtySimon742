@@ -1,0 +1,8610 @@
+{
+  "active_count": 952,
+  "active_rejected": [
+    {
+      "layer": "n34-m289",
+      "state_id": 911
+    },
+    {
+      "layer": "n34-m289",
+      "state_id": 5590
+    },
+    {
+      "layer": "n34-m289",
+      "state_id": 5671
+    },
+    {
+      "layer": "n34-m289",
+      "state_id": 5693
+    },
+    {
+      "layer": "n34-m289",
+      "state_id": 5709
+    },
+    {
+      "layer": "n34-m289",
+      "state_id": 5790
+    },
+    {
+      "layer": "n34-m289",
+      "state_id": 5796
+    },
+    {
+      "layer": "n34-m289",
+      "state_id": 5802
+    },
+    {
+      "layer": "n34-m289",
+      "state_id": 5803
+    },
+    {
+      "layer": "n34-m289",
+      "state_id": 5808
+    },
+    {
+      "layer": "n34-m289",
+      "state_id": 5819
+    },
+    {
+      "layer": "n34-m289",
+      "state_id": 5834
+    },
+    {
+      "layer": "n34-m289",
+      "state_id": 5909
+    },
+    {
+      "layer": "n34-m289",
+      "state_id": 5910
+    },
+    {
+      "layer": "n34-m289",
+      "state_id": 5915
+    },
+    {
+      "layer": "n34-m289",
+      "state_id": 5922
+    },
+    {
+      "layer": "n34-m289",
+      "state_id": 5924
+    },
+    {
+      "layer": "n34-m289",
+      "state_id": 5927
+    },
+    {
+      "layer": "n34-m289",
+      "state_id": 5932
+    },
+    {
+      "layer": "n34-m289",
+      "state_id": 5944
+    },
+    {
+      "layer": "n34-m289",
+      "state_id": 5947
+    },
+    {
+      "layer": "n34-m289",
+      "state_id": 5948
+    },
+    {
+      "layer": "n34-m289",
+      "state_id": 5973
+    },
+    {
+      "layer": "n34-m289",
+      "state_id": 5986
+    },
+    {
+      "layer": "n34-m289",
+      "state_id": 5993
+    }
+  ],
+  "applicable_states": 164,
+  "input_count": 4588,
+  "rejected_states": 164,
+  "rows": [
+    {
+      "active": true,
+      "checks": [
+        {
+          "H": [
+            14,
+            15,
+            16,
+            17
+          ],
+          "K": [
+            6,
+            7,
+            8,
+            9,
+            10
+          ],
+          "L": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8,
+            9
+          ],
+          "M": [
+            10,
+            11,
+            12,
+            13
+          ],
+          "d": 4,
+          "preliminary_pair_lower": 4,
+          "preliminary_pair_rejected": false,
+          "preliminary_pair_upper": 6,
+          "rejected": true,
+          "required_union": 5,
+          "residual_union_capacity": 4
+        }
+      ],
+      "layer": "n34-m289",
+      "rejected": true,
+      "state_id": 911
+    },
+    {
+      "active": false,
+      "checks": [
+        {
+          "H": [
+            14,
+            15,
+            16,
+            17
+          ],
+          "K": [
+            6,
+            7,
+            8,
+            9,
+            10
+          ],
+          "L": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8,
+            9
+          ],
+          "M": [
+            10,
+            11,
+            12,
+            13
+          ],
+          "d": 4,
+          "preliminary_pair_lower": 4,
+          "preliminary_pair_rejected": false,
+          "preliminary_pair_upper": 6,
+          "rejected": true,
+          "required_union": 5,
+          "residual_union_capacity": 4
+        }
+      ],
+      "layer": "n34-m289",
+      "rejected": true,
+      "state_id": 916
+    },
+    {
+      "active": false,
+      "checks": [
+        {
+          "H": [
+            13,
+            14,
+            15,
+            16,
+            17
+          ],
+          "K": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8,
+            9
+          ],
+          "L": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7
+          ],
+          "M": [
+            8,
+            9,
+            10,
+            11,
+            12
+          ],
+          "d": 5,
+          "preliminary_pair_lower": 25,
+          "preliminary_pair_rejected": true,
+          "preliminary_pair_upper": 10,
+          "rejected": true,
+          "required_union": 10,
+          "residual_union_capacity": 5
+        }
+      ],
+      "layer": "n34-m289",
+      "rejected": true,
+      "state_id": 5519
+    },
+    {
+      "active": false,
+      "checks": [
+        {
+          "H": [
+            13,
+            14,
+            15,
+            16,
+            17
+          ],
+          "K": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8,
+            9
+          ],
+          "L": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7
+          ],
+          "M": [
+            8,
+            9,
+            10,
+            11,
+            12
+          ],
+          "d": 5,
+          "preliminary_pair_lower": 25,
+          "preliminary_pair_rejected": true,
+          "preliminary_pair_upper": 10,
+          "rejected": true,
+          "required_union": 10,
+          "residual_union_capacity": 5
+        }
+      ],
+      "layer": "n34-m289",
+      "rejected": true,
+      "state_id": 5577
+    },
+    {
+      "active": false,
+      "checks": [
+        {
+          "H": [
+            13,
+            14,
+            15,
+            16,
+            17
+          ],
+          "K": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8,
+            9
+          ],
+          "L": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7
+          ],
+          "M": [
+            8,
+            9,
+            10,
+            11,
+            12
+          ],
+          "d": 5,
+          "preliminary_pair_lower": 25,
+          "preliminary_pair_rejected": true,
+          "preliminary_pair_upper": 10,
+          "rejected": true,
+          "required_union": 10,
+          "residual_union_capacity": 5
+        }
+      ],
+      "layer": "n34-m289",
+      "rejected": true,
+      "state_id": 5584
+    },
+    {
+      "active": true,
+      "checks": [
+        {
+          "H": [
+            13,
+            14,
+            15,
+            16,
+            17
+          ],
+          "K": [
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8,
+            9
+          ],
+          "L": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7
+          ],
+          "M": [
+            8,
+            9,
+            10,
+            11,
+            12
+          ],
+          "d": 5,
+          "preliminary_pair_lower": 20,
+          "preliminary_pair_rejected": true,
+          "preliminary_pair_upper": 10,
+          "rejected": true,
+          "required_union": 9,
+          "residual_union_capacity": 5
+        }
+      ],
+      "layer": "n34-m289",
+      "rejected": true,
+      "state_id": 5590
+    },
+    {
+      "active": false,
+      "checks": [
+        {
+          "H": [
+            13,
+            14,
+            15,
+            16,
+            17
+          ],
+          "K": [
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8,
+            9
+          ],
+          "L": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7
+          ],
+          "M": [
+            8,
+            9,
+            10,
+            11,
+            12
+          ],
+          "d": 5,
+          "preliminary_pair_lower": 20,
+          "preliminary_pair_rejected": true,
+          "preliminary_pair_upper": 10,
+          "rejected": true,
+          "required_union": 9,
+          "residual_union_capacity": 5
+        }
+      ],
+      "layer": "n34-m289",
+      "rejected": true,
+      "state_id": 5606
+    },
+    {
+      "active": false,
+      "checks": [
+        {
+          "H": [
+            13,
+            14,
+            15,
+            16,
+            17
+          ],
+          "K": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8,
+            9
+          ],
+          "L": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7
+          ],
+          "M": [
+            8,
+            9,
+            10,
+            11,
+            12
+          ],
+          "d": 5,
+          "preliminary_pair_lower": 25,
+          "preliminary_pair_rejected": true,
+          "preliminary_pair_upper": 10,
+          "rejected": true,
+          "required_union": 10,
+          "residual_union_capacity": 5
+        }
+      ],
+      "layer": "n34-m289",
+      "rejected": true,
+      "state_id": 5623
+    },
+    {
+      "active": false,
+      "checks": [
+        {
+          "H": [
+            13,
+            14,
+            15,
+            16,
+            17
+          ],
+          "K": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8,
+            9
+          ],
+          "L": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7
+          ],
+          "M": [
+            8,
+            9,
+            10,
+            11,
+            12
+          ],
+          "d": 5,
+          "preliminary_pair_lower": 25,
+          "preliminary_pair_rejected": true,
+          "preliminary_pair_upper": 10,
+          "rejected": true,
+          "required_union": 10,
+          "residual_union_capacity": 5
+        }
+      ],
+      "layer": "n34-m289",
+      "rejected": true,
+      "state_id": 5635
+    },
+    {
+      "active": false,
+      "checks": [
+        {
+          "H": [
+            13,
+            14,
+            15,
+            16,
+            17
+          ],
+          "K": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8,
+            9
+          ],
+          "L": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7
+          ],
+          "M": [
+            8,
+            9,
+            10,
+            11,
+            12
+          ],
+          "d": 5,
+          "preliminary_pair_lower": 25,
+          "preliminary_pair_rejected": true,
+          "preliminary_pair_upper": 10,
+          "rejected": true,
+          "required_union": 10,
+          "residual_union_capacity": 5
+        }
+      ],
+      "layer": "n34-m289",
+      "rejected": true,
+      "state_id": 5659
+    },
+    {
+      "active": true,
+      "checks": [
+        {
+          "H": [
+            13,
+            14,
+            15,
+            16,
+            17
+          ],
+          "K": [
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8,
+            9
+          ],
+          "L": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7
+          ],
+          "M": [
+            8,
+            9,
+            10,
+            11,
+            12
+          ],
+          "d": 5,
+          "preliminary_pair_lower": 20,
+          "preliminary_pair_rejected": true,
+          "preliminary_pair_upper": 10,
+          "rejected": true,
+          "required_union": 9,
+          "residual_union_capacity": 5
+        }
+      ],
+      "layer": "n34-m289",
+      "rejected": true,
+      "state_id": 5671
+    },
+    {
+      "active": false,
+      "checks": [
+        {
+          "H": [
+            13,
+            14,
+            15,
+            16,
+            17
+          ],
+          "K": [
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8,
+            9
+          ],
+          "L": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7
+          ],
+          "M": [
+            8,
+            9,
+            10,
+            11,
+            12
+          ],
+          "d": 5,
+          "preliminary_pair_lower": 15,
+          "preliminary_pair_rejected": true,
+          "preliminary_pair_upper": 10,
+          "rejected": true,
+          "required_union": 8,
+          "residual_union_capacity": 5
+        }
+      ],
+      "layer": "n34-m289",
+      "rejected": true,
+      "state_id": 5687
+    },
+    {
+      "active": true,
+      "checks": [
+        {
+          "H": [
+            13,
+            14,
+            15,
+            16,
+            17
+          ],
+          "K": [
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8,
+            9
+          ],
+          "L": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7
+          ],
+          "M": [
+            8,
+            9,
+            10,
+            11,
+            12
+          ],
+          "d": 5,
+          "preliminary_pair_lower": 20,
+          "preliminary_pair_rejected": true,
+          "preliminary_pair_upper": 10,
+          "rejected": true,
+          "required_union": 9,
+          "residual_union_capacity": 5
+        }
+      ],
+      "layer": "n34-m289",
+      "rejected": true,
+      "state_id": 5693
+    },
+    {
+      "active": false,
+      "checks": [
+        {
+          "H": [
+            13,
+            14,
+            15,
+            16,
+            17
+          ],
+          "K": [
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8,
+            9
+          ],
+          "L": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7
+          ],
+          "M": [
+            8,
+            9,
+            10,
+            11,
+            12
+          ],
+          "d": 5,
+          "preliminary_pair_lower": 19,
+          "preliminary_pair_rejected": true,
+          "preliminary_pair_upper": 10,
+          "rejected": true,
+          "required_union": 9,
+          "residual_union_capacity": 5
+        }
+      ],
+      "layer": "n34-m289",
+      "rejected": true,
+      "state_id": 5703
+    },
+    {
+      "active": true,
+      "checks": [
+        {
+          "H": [
+            13,
+            14,
+            15,
+            16,
+            17
+          ],
+          "K": [
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8,
+            9
+          ],
+          "L": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7
+          ],
+          "M": [
+            8,
+            9,
+            10,
+            11,
+            12
+          ],
+          "d": 5,
+          "preliminary_pair_lower": 20,
+          "preliminary_pair_rejected": true,
+          "preliminary_pair_upper": 10,
+          "rejected": true,
+          "required_union": 9,
+          "residual_union_capacity": 5
+        }
+      ],
+      "layer": "n34-m289",
+      "rejected": true,
+      "state_id": 5709
+    },
+    {
+      "active": false,
+      "checks": [
+        {
+          "H": [
+            13,
+            14,
+            15,
+            16,
+            17
+          ],
+          "K": [
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8,
+            9
+          ],
+          "L": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7
+          ],
+          "M": [
+            8,
+            9,
+            10,
+            11,
+            12
+          ],
+          "d": 5,
+          "preliminary_pair_lower": 19,
+          "preliminary_pair_rejected": true,
+          "preliminary_pair_upper": 10,
+          "rejected": true,
+          "required_union": 9,
+          "residual_union_capacity": 5
+        }
+      ],
+      "layer": "n34-m289",
+      "rejected": true,
+      "state_id": 5720
+    },
+    {
+      "active": false,
+      "checks": [
+        {
+          "H": [
+            13,
+            14,
+            15,
+            16,
+            17
+          ],
+          "K": [
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8,
+            9
+          ],
+          "L": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7
+          ],
+          "M": [
+            8,
+            9,
+            10,
+            11,
+            12
+          ],
+          "d": 5,
+          "preliminary_pair_lower": 20,
+          "preliminary_pair_rejected": true,
+          "preliminary_pair_upper": 10,
+          "rejected": true,
+          "required_union": 9,
+          "residual_union_capacity": 5
+        }
+      ],
+      "layer": "n34-m289",
+      "rejected": true,
+      "state_id": 5726
+    },
+    {
+      "active": false,
+      "checks": [
+        {
+          "H": [
+            13,
+            14,
+            15,
+            16,
+            17
+          ],
+          "K": [
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8,
+            9
+          ],
+          "L": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7
+          ],
+          "M": [
+            8,
+            9,
+            10,
+            11,
+            12
+          ],
+          "d": 5,
+          "preliminary_pair_lower": 20,
+          "preliminary_pair_rejected": true,
+          "preliminary_pair_upper": 10,
+          "rejected": true,
+          "required_union": 9,
+          "residual_union_capacity": 5
+        }
+      ],
+      "layer": "n34-m289",
+      "rejected": true,
+      "state_id": 5730
+    },
+    {
+      "active": false,
+      "checks": [
+        {
+          "H": [
+            13,
+            14,
+            15,
+            16,
+            17
+          ],
+          "K": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8,
+            9
+          ],
+          "L": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7
+          ],
+          "M": [
+            8,
+            9,
+            10,
+            11,
+            12
+          ],
+          "d": 5,
+          "preliminary_pair_lower": 24,
+          "preliminary_pair_rejected": true,
+          "preliminary_pair_upper": 10,
+          "rejected": true,
+          "required_union": 10,
+          "residual_union_capacity": 5
+        }
+      ],
+      "layer": "n34-m289",
+      "rejected": true,
+      "state_id": 5765
+    },
+    {
+      "active": false,
+      "checks": [
+        {
+          "H": [
+            13,
+            14,
+            15,
+            16,
+            17
+          ],
+          "K": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8,
+            9
+          ],
+          "L": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7
+          ],
+          "M": [
+            8,
+            9,
+            10,
+            11,
+            12
+          ],
+          "d": 5,
+          "preliminary_pair_lower": 25,
+          "preliminary_pair_rejected": true,
+          "preliminary_pair_upper": 10,
+          "rejected": true,
+          "required_union": 10,
+          "residual_union_capacity": 5
+        }
+      ],
+      "layer": "n34-m289",
+      "rejected": true,
+      "state_id": 5782
+    },
+    {
+      "active": true,
+      "checks": [
+        {
+          "H": [
+            13,
+            14,
+            15,
+            16,
+            17
+          ],
+          "K": [
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8,
+            9
+          ],
+          "L": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7
+          ],
+          "M": [
+            8,
+            9,
+            10,
+            11,
+            12
+          ],
+          "d": 5,
+          "preliminary_pair_lower": 20,
+          "preliminary_pair_rejected": true,
+          "preliminary_pair_upper": 10,
+          "rejected": true,
+          "required_union": 9,
+          "residual_union_capacity": 5
+        }
+      ],
+      "layer": "n34-m289",
+      "rejected": true,
+      "state_id": 5790
+    },
+    {
+      "active": false,
+      "checks": [
+        {
+          "H": [
+            13,
+            14,
+            15,
+            16,
+            17
+          ],
+          "K": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8,
+            9
+          ],
+          "L": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7
+          ],
+          "M": [
+            8,
+            9,
+            10,
+            11,
+            12
+          ],
+          "d": 5,
+          "preliminary_pair_lower": 24,
+          "preliminary_pair_rejected": true,
+          "preliminary_pair_upper": 10,
+          "rejected": true,
+          "required_union": 10,
+          "residual_union_capacity": 5
+        }
+      ],
+      "layer": "n34-m289",
+      "rejected": true,
+      "state_id": 5792
+    },
+    {
+      "active": false,
+      "checks": [
+        {
+          "H": [
+            13,
+            14,
+            15,
+            16,
+            17
+          ],
+          "K": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8,
+            9
+          ],
+          "L": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7
+          ],
+          "M": [
+            8,
+            9,
+            10,
+            11,
+            12
+          ],
+          "d": 5,
+          "preliminary_pair_lower": 25,
+          "preliminary_pair_rejected": true,
+          "preliminary_pair_upper": 10,
+          "rejected": true,
+          "required_union": 10,
+          "residual_union_capacity": 5
+        }
+      ],
+      "layer": "n34-m289",
+      "rejected": true,
+      "state_id": 5794
+    },
+    {
+      "active": false,
+      "checks": [
+        {
+          "H": [
+            13,
+            14,
+            15,
+            16,
+            17
+          ],
+          "K": [
+            4,
+            5,
+            6,
+            7,
+            8,
+            9
+          ],
+          "L": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7
+          ],
+          "M": [
+            8,
+            9,
+            10,
+            11,
+            12
+          ],
+          "d": 5,
+          "preliminary_pair_lower": 5,
+          "preliminary_pair_rejected": false,
+          "preliminary_pair_upper": 10,
+          "rejected": true,
+          "required_union": 6,
+          "residual_union_capacity": 5
+        }
+      ],
+      "layer": "n34-m289",
+      "rejected": true,
+      "state_id": 5795
+    },
+    {
+      "active": true,
+      "checks": [
+        {
+          "H": [
+            13,
+            14,
+            15,
+            16,
+            17
+          ],
+          "K": [
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8,
+            9
+          ],
+          "L": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7
+          ],
+          "M": [
+            8,
+            9,
+            10,
+            11,
+            12
+          ],
+          "d": 5,
+          "preliminary_pair_lower": 20,
+          "preliminary_pair_rejected": true,
+          "preliminary_pair_upper": 10,
+          "rejected": true,
+          "required_union": 9,
+          "residual_union_capacity": 5
+        }
+      ],
+      "layer": "n34-m289",
+      "rejected": true,
+      "state_id": 5796
+    },
+    {
+      "active": false,
+      "checks": [
+        {
+          "H": [
+            13,
+            14,
+            15,
+            16,
+            17
+          ],
+          "K": [
+            3,
+            4,
+            5,
+            6,
+            7,
+            8,
+            9
+          ],
+          "L": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7
+          ],
+          "M": [
+            8,
+            9,
+            10,
+            11,
+            12
+          ],
+          "d": 5,
+          "preliminary_pair_lower": 10,
+          "preliminary_pair_rejected": false,
+          "preliminary_pair_upper": 10,
+          "rejected": true,
+          "required_union": 7,
+          "residual_union_capacity": 5
+        }
+      ],
+      "layer": "n34-m289",
+      "rejected": true,
+      "state_id": 5801
+    },
+    {
+      "active": true,
+      "checks": [
+        {
+          "H": [
+            13,
+            14,
+            15,
+            16,
+            17
+          ],
+          "K": [
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8,
+            9
+          ],
+          "L": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7
+          ],
+          "M": [
+            8,
+            9,
+            10,
+            11,
+            12
+          ],
+          "d": 5,
+          "preliminary_pair_lower": 15,
+          "preliminary_pair_rejected": true,
+          "preliminary_pair_upper": 10,
+          "rejected": true,
+          "required_union": 8,
+          "residual_union_capacity": 5
+        }
+      ],
+      "layer": "n34-m289",
+      "rejected": true,
+      "state_id": 5802
+    },
+    {
+      "active": true,
+      "checks": [
+        {
+          "H": [
+            13,
+            14,
+            15,
+            16,
+            17
+          ],
+          "K": [
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8,
+            9
+          ],
+          "L": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7
+          ],
+          "M": [
+            8,
+            9,
+            10,
+            11,
+            12
+          ],
+          "d": 5,
+          "preliminary_pair_lower": 20,
+          "preliminary_pair_rejected": true,
+          "preliminary_pair_upper": 10,
+          "rejected": true,
+          "required_union": 9,
+          "residual_union_capacity": 5
+        }
+      ],
+      "layer": "n34-m289",
+      "rejected": true,
+      "state_id": 5803
+    },
+    {
+      "active": false,
+      "checks": [
+        {
+          "H": [
+            13,
+            14,
+            15,
+            16,
+            17
+          ],
+          "K": [
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8,
+            9
+          ],
+          "L": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7
+          ],
+          "M": [
+            8,
+            9,
+            10,
+            11,
+            12
+          ],
+          "d": 5,
+          "preliminary_pair_lower": 19,
+          "preliminary_pair_rejected": true,
+          "preliminary_pair_upper": 10,
+          "rejected": true,
+          "required_union": 9,
+          "residual_union_capacity": 5
+        }
+      ],
+      "layer": "n34-m289",
+      "rejected": true,
+      "state_id": 5805
+    },
+    {
+      "active": true,
+      "checks": [
+        {
+          "H": [
+            13,
+            14,
+            15,
+            16,
+            17
+          ],
+          "K": [
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8,
+            9
+          ],
+          "L": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7
+          ],
+          "M": [
+            8,
+            9,
+            10,
+            11,
+            12
+          ],
+          "d": 5,
+          "preliminary_pair_lower": 15,
+          "preliminary_pair_rejected": true,
+          "preliminary_pair_upper": 10,
+          "rejected": true,
+          "required_union": 8,
+          "residual_union_capacity": 5
+        }
+      ],
+      "layer": "n34-m289",
+      "rejected": true,
+      "state_id": 5808
+    },
+    {
+      "active": false,
+      "checks": [
+        {
+          "H": [
+            13,
+            14,
+            15,
+            16,
+            17
+          ],
+          "K": [
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8,
+            9
+          ],
+          "L": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7
+          ],
+          "M": [
+            8,
+            9,
+            10,
+            11,
+            12
+          ],
+          "d": 5,
+          "preliminary_pair_lower": 14,
+          "preliminary_pair_rejected": true,
+          "preliminary_pair_upper": 10,
+          "rejected": true,
+          "required_union": 8,
+          "residual_union_capacity": 5
+        }
+      ],
+      "layer": "n34-m289",
+      "rejected": true,
+      "state_id": 5810
+    },
+    {
+      "active": false,
+      "checks": [
+        {
+          "H": [
+            13,
+            14,
+            15,
+            16,
+            17
+          ],
+          "K": [
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8,
+            9
+          ],
+          "L": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7
+          ],
+          "M": [
+            8,
+            9,
+            10,
+            11,
+            12
+          ],
+          "d": 5,
+          "preliminary_pair_lower": 15,
+          "preliminary_pair_rejected": true,
+          "preliminary_pair_upper": 10,
+          "rejected": true,
+          "required_union": 8,
+          "residual_union_capacity": 5
+        }
+      ],
+      "layer": "n34-m289",
+      "rejected": true,
+      "state_id": 5813
+    },
+    {
+      "active": false,
+      "checks": [
+        {
+          "H": [
+            13,
+            14,
+            15,
+            16,
+            17
+          ],
+          "K": [
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8,
+            9
+          ],
+          "L": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7
+          ],
+          "M": [
+            8,
+            9,
+            10,
+            11,
+            12
+          ],
+          "d": 5,
+          "preliminary_pair_lower": 15,
+          "preliminary_pair_rejected": true,
+          "preliminary_pair_upper": 10,
+          "rejected": true,
+          "required_union": 8,
+          "residual_union_capacity": 5
+        }
+      ],
+      "layer": "n34-m289",
+      "rejected": true,
+      "state_id": 5814
+    },
+    {
+      "active": true,
+      "checks": [
+        {
+          "H": [
+            13,
+            14,
+            15,
+            16,
+            17
+          ],
+          "K": [
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8,
+            9
+          ],
+          "L": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7
+          ],
+          "M": [
+            8,
+            9,
+            10,
+            11,
+            12
+          ],
+          "d": 5,
+          "preliminary_pair_lower": 20,
+          "preliminary_pair_rejected": true,
+          "preliminary_pair_upper": 10,
+          "rejected": true,
+          "required_union": 9,
+          "residual_union_capacity": 5
+        }
+      ],
+      "layer": "n34-m289",
+      "rejected": true,
+      "state_id": 5819
+    },
+    {
+      "active": false,
+      "checks": [
+        {
+          "H": [
+            13,
+            14,
+            15,
+            16,
+            17
+          ],
+          "K": [
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8,
+            9
+          ],
+          "L": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7
+          ],
+          "M": [
+            8,
+            9,
+            10,
+            11,
+            12
+          ],
+          "d": 5,
+          "preliminary_pair_lower": 19,
+          "preliminary_pair_rejected": true,
+          "preliminary_pair_upper": 10,
+          "rejected": true,
+          "required_union": 9,
+          "residual_union_capacity": 5
+        }
+      ],
+      "layer": "n34-m289",
+      "rejected": true,
+      "state_id": 5831
+    },
+    {
+      "active": true,
+      "checks": [
+        {
+          "H": [
+            13,
+            14,
+            15,
+            16,
+            17
+          ],
+          "K": [
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8,
+            9
+          ],
+          "L": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7
+          ],
+          "M": [
+            8,
+            9,
+            10,
+            11,
+            12
+          ],
+          "d": 5,
+          "preliminary_pair_lower": 20,
+          "preliminary_pair_rejected": true,
+          "preliminary_pair_upper": 10,
+          "rejected": true,
+          "required_union": 9,
+          "residual_union_capacity": 5
+        }
+      ],
+      "layer": "n34-m289",
+      "rejected": true,
+      "state_id": 5834
+    },
+    {
+      "active": false,
+      "checks": [
+        {
+          "H": [
+            13,
+            14,
+            15,
+            16,
+            17
+          ],
+          "K": [
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8,
+            9
+          ],
+          "L": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7
+          ],
+          "M": [
+            8,
+            9,
+            10,
+            11,
+            12
+          ],
+          "d": 5,
+          "preliminary_pair_lower": 20,
+          "preliminary_pair_rejected": true,
+          "preliminary_pair_upper": 10,
+          "rejected": true,
+          "required_union": 9,
+          "residual_union_capacity": 5
+        }
+      ],
+      "layer": "n34-m289",
+      "rejected": true,
+      "state_id": 5835
+    },
+    {
+      "active": false,
+      "checks": [
+        {
+          "H": [
+            13,
+            14,
+            15,
+            16,
+            17
+          ],
+          "K": [
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8,
+            9
+          ],
+          "L": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7
+          ],
+          "M": [
+            8,
+            9,
+            10,
+            11,
+            12
+          ],
+          "d": 5,
+          "preliminary_pair_lower": 18,
+          "preliminary_pair_rejected": true,
+          "preliminary_pair_upper": 10,
+          "rejected": true,
+          "required_union": 9,
+          "residual_union_capacity": 5
+        }
+      ],
+      "layer": "n34-m289",
+      "rejected": true,
+      "state_id": 5838
+    },
+    {
+      "active": false,
+      "checks": [
+        {
+          "H": [
+            13,
+            14,
+            15,
+            16,
+            17
+          ],
+          "K": [
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8,
+            9
+          ],
+          "L": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7
+          ],
+          "M": [
+            8,
+            9,
+            10,
+            11,
+            12
+          ],
+          "d": 5,
+          "preliminary_pair_lower": 18,
+          "preliminary_pair_rejected": true,
+          "preliminary_pair_upper": 10,
+          "rejected": true,
+          "required_union": 9,
+          "residual_union_capacity": 5
+        }
+      ],
+      "layer": "n34-m289",
+      "rejected": true,
+      "state_id": 5839
+    },
+    {
+      "active": false,
+      "checks": [
+        {
+          "H": [
+            13,
+            14,
+            15,
+            16,
+            17
+          ],
+          "K": [
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8,
+            9
+          ],
+          "L": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7
+          ],
+          "M": [
+            8,
+            9,
+            10,
+            11,
+            12
+          ],
+          "d": 5,
+          "preliminary_pair_lower": 19,
+          "preliminary_pair_rejected": true,
+          "preliminary_pair_upper": 10,
+          "rejected": true,
+          "required_union": 9,
+          "residual_union_capacity": 5
+        }
+      ],
+      "layer": "n34-m289",
+      "rejected": true,
+      "state_id": 5847
+    },
+    {
+      "active": false,
+      "checks": [
+        {
+          "H": [
+            13,
+            14,
+            15,
+            16,
+            17
+          ],
+          "K": [
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8,
+            9
+          ],
+          "L": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7
+          ],
+          "M": [
+            8,
+            9,
+            10,
+            11,
+            12
+          ],
+          "d": 5,
+          "preliminary_pair_lower": 19,
+          "preliminary_pair_rejected": true,
+          "preliminary_pair_upper": 10,
+          "rejected": true,
+          "required_union": 9,
+          "residual_union_capacity": 5
+        }
+      ],
+      "layer": "n34-m289",
+      "rejected": true,
+      "state_id": 5851
+    },
+    {
+      "active": false,
+      "checks": [
+        {
+          "H": [
+            13,
+            14,
+            15,
+            16,
+            17
+          ],
+          "K": [
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8,
+            9
+          ],
+          "L": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7
+          ],
+          "M": [
+            8,
+            9,
+            10,
+            11,
+            12
+          ],
+          "d": 5,
+          "preliminary_pair_lower": 20,
+          "preliminary_pair_rejected": true,
+          "preliminary_pair_upper": 10,
+          "rejected": true,
+          "required_union": 9,
+          "residual_union_capacity": 5
+        }
+      ],
+      "layer": "n34-m289",
+      "rejected": true,
+      "state_id": 5854
+    },
+    {
+      "active": false,
+      "checks": [
+        {
+          "H": [
+            13,
+            14,
+            15,
+            16,
+            17
+          ],
+          "K": [
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8,
+            9
+          ],
+          "L": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7
+          ],
+          "M": [
+            8,
+            9,
+            10,
+            11,
+            12
+          ],
+          "d": 5,
+          "preliminary_pair_lower": 20,
+          "preliminary_pair_rejected": true,
+          "preliminary_pair_upper": 10,
+          "rejected": true,
+          "required_union": 9,
+          "residual_union_capacity": 5
+        }
+      ],
+      "layer": "n34-m289",
+      "rejected": true,
+      "state_id": 5855
+    },
+    {
+      "active": false,
+      "checks": [
+        {
+          "H": [
+            13,
+            14,
+            15,
+            16,
+            17
+          ],
+          "K": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8,
+            9
+          ],
+          "L": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7
+          ],
+          "M": [
+            8,
+            9,
+            10,
+            11,
+            12
+          ],
+          "d": 5,
+          "preliminary_pair_lower": 23,
+          "preliminary_pair_rejected": true,
+          "preliminary_pair_upper": 10,
+          "rejected": true,
+          "required_union": 10,
+          "residual_union_capacity": 5
+        }
+      ],
+      "layer": "n34-m289",
+      "rejected": true,
+      "state_id": 5879
+    },
+    {
+      "active": false,
+      "checks": [
+        {
+          "H": [
+            13,
+            14,
+            15,
+            16,
+            17
+          ],
+          "K": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8,
+            9
+          ],
+          "L": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7
+          ],
+          "M": [
+            8,
+            9,
+            10,
+            11,
+            12
+          ],
+          "d": 5,
+          "preliminary_pair_lower": 23,
+          "preliminary_pair_rejected": true,
+          "preliminary_pair_upper": 10,
+          "rejected": true,
+          "required_union": 10,
+          "residual_union_capacity": 5
+        }
+      ],
+      "layer": "n34-m289",
+      "rejected": true,
+      "state_id": 5880
+    },
+    {
+      "active": false,
+      "checks": [
+        {
+          "H": [
+            13,
+            14,
+            15,
+            16,
+            17
+          ],
+          "K": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8,
+            9
+          ],
+          "L": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7
+          ],
+          "M": [
+            8,
+            9,
+            10,
+            11,
+            12
+          ],
+          "d": 5,
+          "preliminary_pair_lower": 24,
+          "preliminary_pair_rejected": true,
+          "preliminary_pair_upper": 10,
+          "rejected": true,
+          "required_union": 10,
+          "residual_union_capacity": 5
+        }
+      ],
+      "layer": "n34-m289",
+      "rejected": true,
+      "state_id": 5899
+    },
+    {
+      "active": false,
+      "checks": [
+        {
+          "H": [
+            13,
+            14,
+            15,
+            16,
+            17
+          ],
+          "K": [
+            4,
+            5,
+            6,
+            7,
+            8,
+            9
+          ],
+          "L": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7
+          ],
+          "M": [
+            8,
+            9,
+            10,
+            11,
+            12
+          ],
+          "d": 5,
+          "preliminary_pair_lower": 5,
+          "preliminary_pair_rejected": false,
+          "preliminary_pair_upper": 10,
+          "rejected": true,
+          "required_union": 6,
+          "residual_union_capacity": 5
+        }
+      ],
+      "layer": "n34-m289",
+      "rejected": true,
+      "state_id": 5902
+    },
+    {
+      "active": false,
+      "checks": [
+        {
+          "H": [
+            13,
+            14,
+            15,
+            16,
+            17
+          ],
+          "K": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8,
+            9
+          ],
+          "L": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7
+          ],
+          "M": [
+            8,
+            9,
+            10,
+            11,
+            12
+          ],
+          "d": 5,
+          "preliminary_pair_lower": 25,
+          "preliminary_pair_rejected": true,
+          "preliminary_pair_upper": 10,
+          "rejected": true,
+          "required_union": 10,
+          "residual_union_capacity": 5
+        }
+      ],
+      "layer": "n34-m289",
+      "rejected": true,
+      "state_id": 5907
+    },
+    {
+      "active": true,
+      "checks": [
+        {
+          "H": [
+            13,
+            14,
+            15,
+            16,
+            17
+          ],
+          "K": [
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8,
+            9
+          ],
+          "L": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7
+          ],
+          "M": [
+            8,
+            9,
+            10,
+            11,
+            12
+          ],
+          "d": 5,
+          "preliminary_pair_lower": 15,
+          "preliminary_pair_rejected": true,
+          "preliminary_pair_upper": 10,
+          "rejected": true,
+          "required_union": 8,
+          "residual_union_capacity": 5
+        }
+      ],
+      "layer": "n34-m289",
+      "rejected": true,
+      "state_id": 5909
+    },
+    {
+      "active": true,
+      "checks": [
+        {
+          "H": [
+            13,
+            14,
+            15,
+            16,
+            17
+          ],
+          "K": [
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8,
+            9
+          ],
+          "L": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7
+          ],
+          "M": [
+            8,
+            9,
+            10,
+            11,
+            12
+          ],
+          "d": 5,
+          "preliminary_pair_lower": 20,
+          "preliminary_pair_rejected": true,
+          "preliminary_pair_upper": 10,
+          "rejected": true,
+          "required_union": 9,
+          "residual_union_capacity": 5
+        }
+      ],
+      "layer": "n34-m289",
+      "rejected": true,
+      "state_id": 5910
+    },
+    {
+      "active": false,
+      "checks": [
+        {
+          "H": [
+            13,
+            14,
+            15,
+            16,
+            17
+          ],
+          "K": [
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8,
+            9
+          ],
+          "L": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7
+          ],
+          "M": [
+            8,
+            9,
+            10,
+            11,
+            12
+          ],
+          "d": 5,
+          "preliminary_pair_lower": 19,
+          "preliminary_pair_rejected": true,
+          "preliminary_pair_upper": 10,
+          "rejected": true,
+          "required_union": 9,
+          "residual_union_capacity": 5
+        }
+      ],
+      "layer": "n34-m289",
+      "rejected": true,
+      "state_id": 5912
+    },
+    {
+      "active": true,
+      "checks": [
+        {
+          "H": [
+            13,
+            14,
+            15,
+            16,
+            17
+          ],
+          "K": [
+            3,
+            4,
+            5,
+            6,
+            7,
+            8,
+            9
+          ],
+          "L": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7
+          ],
+          "M": [
+            8,
+            9,
+            10,
+            11,
+            12
+          ],
+          "d": 5,
+          "preliminary_pair_lower": 10,
+          "preliminary_pair_rejected": false,
+          "preliminary_pair_upper": 10,
+          "rejected": true,
+          "required_union": 7,
+          "residual_union_capacity": 5
+        }
+      ],
+      "layer": "n34-m289",
+      "rejected": true,
+      "state_id": 5915
+    },
+    {
+      "active": false,
+      "checks": [
+        {
+          "H": [
+            13,
+            14,
+            15,
+            16,
+            17
+          ],
+          "K": [
+            3,
+            4,
+            5,
+            6,
+            7,
+            8,
+            9
+          ],
+          "L": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7
+          ],
+          "M": [
+            8,
+            9,
+            10,
+            11,
+            12
+          ],
+          "d": 5,
+          "preliminary_pair_lower": 9,
+          "preliminary_pair_rejected": false,
+          "preliminary_pair_upper": 10,
+          "rejected": true,
+          "required_union": 7,
+          "residual_union_capacity": 5
+        }
+      ],
+      "layer": "n34-m289",
+      "rejected": true,
+      "state_id": 5917
+    },
+    {
+      "active": false,
+      "checks": [
+        {
+          "H": [
+            13,
+            14,
+            15,
+            16,
+            17
+          ],
+          "K": [
+            3,
+            4,
+            5,
+            6,
+            7,
+            8,
+            9
+          ],
+          "L": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7
+          ],
+          "M": [
+            8,
+            9,
+            10,
+            11,
+            12
+          ],
+          "d": 5,
+          "preliminary_pair_lower": 10,
+          "preliminary_pair_rejected": false,
+          "preliminary_pair_upper": 10,
+          "rejected": true,
+          "required_union": 7,
+          "residual_union_capacity": 5
+        }
+      ],
+      "layer": "n34-m289",
+      "rejected": true,
+      "state_id": 5920
+    },
+    {
+      "active": false,
+      "checks": [
+        {
+          "H": [
+            13,
+            14,
+            15,
+            16,
+            17
+          ],
+          "K": [
+            3,
+            4,
+            5,
+            6,
+            7,
+            8,
+            9
+          ],
+          "L": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7
+          ],
+          "M": [
+            8,
+            9,
+            10,
+            11,
+            12
+          ],
+          "d": 5,
+          "preliminary_pair_lower": 10,
+          "preliminary_pair_rejected": false,
+          "preliminary_pair_upper": 10,
+          "rejected": true,
+          "required_union": 7,
+          "residual_union_capacity": 5
+        }
+      ],
+      "layer": "n34-m289",
+      "rejected": true,
+      "state_id": 5921
+    },
+    {
+      "active": true,
+      "checks": [
+        {
+          "H": [
+            13,
+            14,
+            15,
+            16,
+            17
+          ],
+          "K": [
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8,
+            9
+          ],
+          "L": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7
+          ],
+          "M": [
+            8,
+            9,
+            10,
+            11,
+            12
+          ],
+          "d": 5,
+          "preliminary_pair_lower": 15,
+          "preliminary_pair_rejected": true,
+          "preliminary_pair_upper": 10,
+          "rejected": true,
+          "required_union": 8,
+          "residual_union_capacity": 5
+        }
+      ],
+      "layer": "n34-m289",
+      "rejected": true,
+      "state_id": 5922
+    },
+    {
+      "active": true,
+      "checks": [
+        {
+          "H": [
+            13,
+            14,
+            15,
+            16,
+            17
+          ],
+          "K": [
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8,
+            9
+          ],
+          "L": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7
+          ],
+          "M": [
+            8,
+            9,
+            10,
+            11,
+            12
+          ],
+          "d": 5,
+          "preliminary_pair_lower": 14,
+          "preliminary_pair_rejected": true,
+          "preliminary_pair_upper": 10,
+          "rejected": true,
+          "required_union": 8,
+          "residual_union_capacity": 5
+        }
+      ],
+      "layer": "n34-m289",
+      "rejected": true,
+      "state_id": 5924
+    },
+    {
+      "active": true,
+      "checks": [
+        {
+          "H": [
+            13,
+            14,
+            15,
+            16,
+            17
+          ],
+          "K": [
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8,
+            9
+          ],
+          "L": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7
+          ],
+          "M": [
+            8,
+            9,
+            10,
+            11,
+            12
+          ],
+          "d": 5,
+          "preliminary_pair_lower": 15,
+          "preliminary_pair_rejected": true,
+          "preliminary_pair_upper": 10,
+          "rejected": true,
+          "required_union": 8,
+          "residual_union_capacity": 5
+        }
+      ],
+      "layer": "n34-m289",
+      "rejected": true,
+      "state_id": 5927
+    },
+    {
+      "active": true,
+      "checks": [
+        {
+          "H": [
+            13,
+            14,
+            15,
+            16,
+            17
+          ],
+          "K": [
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8,
+            9
+          ],
+          "L": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7
+          ],
+          "M": [
+            8,
+            9,
+            10,
+            11,
+            12
+          ],
+          "d": 5,
+          "preliminary_pair_lower": 15,
+          "preliminary_pair_rejected": true,
+          "preliminary_pair_upper": 10,
+          "rejected": true,
+          "required_union": 8,
+          "residual_union_capacity": 5
+        }
+      ],
+      "layer": "n34-m289",
+      "rejected": true,
+      "state_id": 5932
+    },
+    {
+      "active": true,
+      "checks": [
+        {
+          "H": [
+            13,
+            14,
+            15,
+            16,
+            17
+          ],
+          "K": [
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8,
+            9
+          ],
+          "L": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7
+          ],
+          "M": [
+            8,
+            9,
+            10,
+            11,
+            12
+          ],
+          "d": 5,
+          "preliminary_pair_lower": 14,
+          "preliminary_pair_rejected": true,
+          "preliminary_pair_upper": 10,
+          "rejected": true,
+          "required_union": 8,
+          "residual_union_capacity": 5
+        }
+      ],
+      "layer": "n34-m289",
+      "rejected": true,
+      "state_id": 5944
+    },
+    {
+      "active": true,
+      "checks": [
+        {
+          "H": [
+            13,
+            14,
+            15,
+            16,
+            17
+          ],
+          "K": [
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8,
+            9
+          ],
+          "L": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7
+          ],
+          "M": [
+            8,
+            9,
+            10,
+            11,
+            12
+          ],
+          "d": 5,
+          "preliminary_pair_lower": 15,
+          "preliminary_pair_rejected": true,
+          "preliminary_pair_upper": 10,
+          "rejected": true,
+          "required_union": 8,
+          "residual_union_capacity": 5
+        }
+      ],
+      "layer": "n34-m289",
+      "rejected": true,
+      "state_id": 5947
+    },
+    {
+      "active": true,
+      "checks": [
+        {
+          "H": [
+            13,
+            14,
+            15,
+            16,
+            17
+          ],
+          "K": [
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8,
+            9
+          ],
+          "L": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7
+          ],
+          "M": [
+            8,
+            9,
+            10,
+            11,
+            12
+          ],
+          "d": 5,
+          "preliminary_pair_lower": 15,
+          "preliminary_pair_rejected": true,
+          "preliminary_pair_upper": 10,
+          "rejected": true,
+          "required_union": 8,
+          "residual_union_capacity": 5
+        }
+      ],
+      "layer": "n34-m289",
+      "rejected": true,
+      "state_id": 5948
+    },
+    {
+      "active": false,
+      "checks": [
+        {
+          "H": [
+            13,
+            14,
+            15,
+            16,
+            17
+          ],
+          "K": [
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8,
+            9
+          ],
+          "L": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7
+          ],
+          "M": [
+            8,
+            9,
+            10,
+            11,
+            12
+          ],
+          "d": 5,
+          "preliminary_pair_lower": 13,
+          "preliminary_pair_rejected": true,
+          "preliminary_pair_upper": 10,
+          "rejected": true,
+          "required_union": 8,
+          "residual_union_capacity": 5
+        }
+      ],
+      "layer": "n34-m289",
+      "rejected": true,
+      "state_id": 5951
+    },
+    {
+      "active": false,
+      "checks": [
+        {
+          "H": [
+            13,
+            14,
+            15,
+            16,
+            17
+          ],
+          "K": [
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8,
+            9
+          ],
+          "L": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7
+          ],
+          "M": [
+            8,
+            9,
+            10,
+            11,
+            12
+          ],
+          "d": 5,
+          "preliminary_pair_lower": 13,
+          "preliminary_pair_rejected": true,
+          "preliminary_pair_upper": 10,
+          "rejected": true,
+          "required_union": 8,
+          "residual_union_capacity": 5
+        }
+      ],
+      "layer": "n34-m289",
+      "rejected": true,
+      "state_id": 5952
+    },
+    {
+      "active": false,
+      "checks": [
+        {
+          "H": [
+            13,
+            14,
+            15,
+            16,
+            17
+          ],
+          "K": [
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8,
+            9
+          ],
+          "L": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7
+          ],
+          "M": [
+            8,
+            9,
+            10,
+            11,
+            12
+          ],
+          "d": 5,
+          "preliminary_pair_lower": 14,
+          "preliminary_pair_rejected": true,
+          "preliminary_pair_upper": 10,
+          "rejected": true,
+          "required_union": 8,
+          "residual_union_capacity": 5
+        }
+      ],
+      "layer": "n34-m289",
+      "rejected": true,
+      "state_id": 5960
+    },
+    {
+      "active": false,
+      "checks": [
+        {
+          "H": [
+            13,
+            14,
+            15,
+            16,
+            17
+          ],
+          "K": [
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8,
+            9
+          ],
+          "L": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7
+          ],
+          "M": [
+            8,
+            9,
+            10,
+            11,
+            12
+          ],
+          "d": 5,
+          "preliminary_pair_lower": 14,
+          "preliminary_pair_rejected": true,
+          "preliminary_pair_upper": 10,
+          "rejected": true,
+          "required_union": 8,
+          "residual_union_capacity": 5
+        }
+      ],
+      "layer": "n34-m289",
+      "rejected": true,
+      "state_id": 5964
+    },
+    {
+      "active": false,
+      "checks": [
+        {
+          "H": [
+            13,
+            14,
+            15,
+            16,
+            17
+          ],
+          "K": [
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8,
+            9
+          ],
+          "L": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7
+          ],
+          "M": [
+            8,
+            9,
+            10,
+            11,
+            12
+          ],
+          "d": 5,
+          "preliminary_pair_lower": 15,
+          "preliminary_pair_rejected": true,
+          "preliminary_pair_upper": 10,
+          "rejected": true,
+          "required_union": 8,
+          "residual_union_capacity": 5
+        }
+      ],
+      "layer": "n34-m289",
+      "rejected": true,
+      "state_id": 5967
+    },
+    {
+      "active": false,
+      "checks": [
+        {
+          "H": [
+            13,
+            14,
+            15,
+            16,
+            17
+          ],
+          "K": [
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8,
+            9
+          ],
+          "L": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7
+          ],
+          "M": [
+            8,
+            9,
+            10,
+            11,
+            12
+          ],
+          "d": 5,
+          "preliminary_pair_lower": 15,
+          "preliminary_pair_rejected": true,
+          "preliminary_pair_upper": 10,
+          "rejected": true,
+          "required_union": 8,
+          "residual_union_capacity": 5
+        }
+      ],
+      "layer": "n34-m289",
+      "rejected": true,
+      "state_id": 5968
+    },
+    {
+      "active": false,
+      "checks": [
+        {
+          "H": [
+            13,
+            14,
+            15,
+            16,
+            17
+          ],
+          "K": [
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8,
+            9
+          ],
+          "L": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7
+          ],
+          "M": [
+            8,
+            9,
+            10,
+            11,
+            12
+          ],
+          "d": 5,
+          "preliminary_pair_lower": 20,
+          "preliminary_pair_rejected": true,
+          "preliminary_pair_upper": 10,
+          "rejected": true,
+          "required_union": 9,
+          "residual_union_capacity": 5
+        }
+      ],
+      "layer": "n34-m289",
+      "rejected": true,
+      "state_id": 5969
+    },
+    {
+      "active": false,
+      "checks": [
+        {
+          "H": [
+            13,
+            14,
+            15,
+            16,
+            17
+          ],
+          "K": [
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8,
+            9
+          ],
+          "L": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7
+          ],
+          "M": [
+            8,
+            9,
+            10,
+            11,
+            12
+          ],
+          "d": 5,
+          "preliminary_pair_lower": 19,
+          "preliminary_pair_rejected": true,
+          "preliminary_pair_upper": 10,
+          "rejected": true,
+          "required_union": 9,
+          "residual_union_capacity": 5
+        }
+      ],
+      "layer": "n34-m289",
+      "rejected": true,
+      "state_id": 5970
+    },
+    {
+      "active": true,
+      "checks": [
+        {
+          "H": [
+            13,
+            14,
+            15,
+            16,
+            17
+          ],
+          "K": [
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8,
+            9
+          ],
+          "L": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7
+          ],
+          "M": [
+            8,
+            9,
+            10,
+            11,
+            12
+          ],
+          "d": 5,
+          "preliminary_pair_lower": 20,
+          "preliminary_pair_rejected": true,
+          "preliminary_pair_upper": 10,
+          "rejected": true,
+          "required_union": 9,
+          "residual_union_capacity": 5
+        }
+      ],
+      "layer": "n34-m289",
+      "rejected": true,
+      "state_id": 5973
+    },
+    {
+      "active": false,
+      "checks": [
+        {
+          "H": [
+            13,
+            14,
+            15,
+            16,
+            17
+          ],
+          "K": [
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8,
+            9
+          ],
+          "L": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7
+          ],
+          "M": [
+            8,
+            9,
+            10,
+            11,
+            12
+          ],
+          "d": 5,
+          "preliminary_pair_lower": 20,
+          "preliminary_pair_rejected": true,
+          "preliminary_pair_upper": 10,
+          "rejected": true,
+          "required_union": 9,
+          "residual_union_capacity": 5
+        }
+      ],
+      "layer": "n34-m289",
+      "rejected": true,
+      "state_id": 5974
+    },
+    {
+      "active": false,
+      "checks": [
+        {
+          "H": [
+            13,
+            14,
+            15,
+            16,
+            17
+          ],
+          "K": [
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8,
+            9
+          ],
+          "L": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7
+          ],
+          "M": [
+            8,
+            9,
+            10,
+            11,
+            12
+          ],
+          "d": 5,
+          "preliminary_pair_lower": 18,
+          "preliminary_pair_rejected": true,
+          "preliminary_pair_upper": 10,
+          "rejected": true,
+          "required_union": 9,
+          "residual_union_capacity": 5
+        }
+      ],
+      "layer": "n34-m289",
+      "rejected": true,
+      "state_id": 5977
+    },
+    {
+      "active": false,
+      "checks": [
+        {
+          "H": [
+            13,
+            14,
+            15,
+            16,
+            17
+          ],
+          "K": [
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8,
+            9
+          ],
+          "L": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7
+          ],
+          "M": [
+            8,
+            9,
+            10,
+            11,
+            12
+          ],
+          "d": 5,
+          "preliminary_pair_lower": 18,
+          "preliminary_pair_rejected": true,
+          "preliminary_pair_upper": 10,
+          "rejected": true,
+          "required_union": 9,
+          "residual_union_capacity": 5
+        }
+      ],
+      "layer": "n34-m289",
+      "rejected": true,
+      "state_id": 5978
+    },
+    {
+      "active": true,
+      "checks": [
+        {
+          "H": [
+            13,
+            14,
+            15,
+            16,
+            17
+          ],
+          "K": [
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8,
+            9
+          ],
+          "L": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7
+          ],
+          "M": [
+            8,
+            9,
+            10,
+            11,
+            12
+          ],
+          "d": 5,
+          "preliminary_pair_lower": 19,
+          "preliminary_pair_rejected": true,
+          "preliminary_pair_upper": 10,
+          "rejected": true,
+          "required_union": 9,
+          "residual_union_capacity": 5
+        }
+      ],
+      "layer": "n34-m289",
+      "rejected": true,
+      "state_id": 5986
+    },
+    {
+      "active": false,
+      "checks": [
+        {
+          "H": [
+            13,
+            14,
+            15,
+            16,
+            17
+          ],
+          "K": [
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8,
+            9
+          ],
+          "L": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7
+          ],
+          "M": [
+            8,
+            9,
+            10,
+            11,
+            12
+          ],
+          "d": 5,
+          "preliminary_pair_lower": 19,
+          "preliminary_pair_rejected": true,
+          "preliminary_pair_upper": 10,
+          "rejected": true,
+          "required_union": 9,
+          "residual_union_capacity": 5
+        }
+      ],
+      "layer": "n34-m289",
+      "rejected": true,
+      "state_id": 5990
+    },
+    {
+      "active": true,
+      "checks": [
+        {
+          "H": [
+            13,
+            14,
+            15,
+            16,
+            17
+          ],
+          "K": [
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8,
+            9
+          ],
+          "L": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7
+          ],
+          "M": [
+            8,
+            9,
+            10,
+            11,
+            12
+          ],
+          "d": 5,
+          "preliminary_pair_lower": 20,
+          "preliminary_pair_rejected": true,
+          "preliminary_pair_upper": 10,
+          "rejected": true,
+          "required_union": 9,
+          "residual_union_capacity": 5
+        }
+      ],
+      "layer": "n34-m289",
+      "rejected": true,
+      "state_id": 5993
+    },
+    {
+      "active": false,
+      "checks": [
+        {
+          "H": [
+            13,
+            14,
+            15,
+            16,
+            17
+          ],
+          "K": [
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8,
+            9
+          ],
+          "L": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7
+          ],
+          "M": [
+            8,
+            9,
+            10,
+            11,
+            12
+          ],
+          "d": 5,
+          "preliminary_pair_lower": 20,
+          "preliminary_pair_rejected": true,
+          "preliminary_pair_upper": 10,
+          "rejected": true,
+          "required_union": 9,
+          "residual_union_capacity": 5
+        }
+      ],
+      "layer": "n34-m289",
+      "rejected": true,
+      "state_id": 5994
+    },
+    {
+      "active": false,
+      "checks": [
+        {
+          "H": [
+            13,
+            14,
+            15,
+            16,
+            17
+          ],
+          "K": [
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8,
+            9
+          ],
+          "L": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7
+          ],
+          "M": [
+            8,
+            9,
+            10,
+            11,
+            12
+          ],
+          "d": 5,
+          "preliminary_pair_lower": 17,
+          "preliminary_pair_rejected": true,
+          "preliminary_pair_upper": 10,
+          "rejected": true,
+          "required_union": 9,
+          "residual_union_capacity": 5
+        }
+      ],
+      "layer": "n34-m289",
+      "rejected": true,
+      "state_id": 5998
+    },
+    {
+      "active": false,
+      "checks": [
+        {
+          "H": [
+            13,
+            14,
+            15,
+            16,
+            17
+          ],
+          "K": [
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8,
+            9
+          ],
+          "L": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7
+          ],
+          "M": [
+            8,
+            9,
+            10,
+            11,
+            12
+          ],
+          "d": 5,
+          "preliminary_pair_lower": 17,
+          "preliminary_pair_rejected": true,
+          "preliminary_pair_upper": 10,
+          "rejected": true,
+          "required_union": 9,
+          "residual_union_capacity": 5
+        }
+      ],
+      "layer": "n34-m289",
+      "rejected": true,
+      "state_id": 6000
+    },
+    {
+      "active": false,
+      "checks": [
+        {
+          "H": [
+            13,
+            14,
+            15,
+            16,
+            17
+          ],
+          "K": [
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8,
+            9
+          ],
+          "L": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7
+          ],
+          "M": [
+            8,
+            9,
+            10,
+            11,
+            12
+          ],
+          "d": 5,
+          "preliminary_pair_lower": 17,
+          "preliminary_pair_rejected": true,
+          "preliminary_pair_upper": 10,
+          "rejected": true,
+          "required_union": 9,
+          "residual_union_capacity": 5
+        }
+      ],
+      "layer": "n34-m289",
+      "rejected": true,
+      "state_id": 6001
+    },
+    {
+      "active": false,
+      "checks": [
+        {
+          "H": [
+            13,
+            14,
+            15,
+            16,
+            17
+          ],
+          "K": [
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8,
+            9
+          ],
+          "L": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7
+          ],
+          "M": [
+            8,
+            9,
+            10,
+            11,
+            12
+          ],
+          "d": 5,
+          "preliminary_pair_lower": 18,
+          "preliminary_pair_rejected": true,
+          "preliminary_pair_upper": 10,
+          "rejected": true,
+          "required_union": 9,
+          "residual_union_capacity": 5
+        }
+      ],
+      "layer": "n34-m289",
+      "rejected": true,
+      "state_id": 6018
+    },
+    {
+      "active": false,
+      "checks": [
+        {
+          "H": [
+            13,
+            14,
+            15,
+            16,
+            17
+          ],
+          "K": [
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8,
+            9
+          ],
+          "L": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7
+          ],
+          "M": [
+            8,
+            9,
+            10,
+            11,
+            12
+          ],
+          "d": 5,
+          "preliminary_pair_lower": 18,
+          "preliminary_pair_rejected": true,
+          "preliminary_pair_upper": 10,
+          "rejected": true,
+          "required_union": 9,
+          "residual_union_capacity": 5
+        }
+      ],
+      "layer": "n34-m289",
+      "rejected": true,
+      "state_id": 6019
+    },
+    {
+      "active": false,
+      "checks": [
+        {
+          "H": [
+            13,
+            14,
+            15,
+            16,
+            17
+          ],
+          "K": [
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8,
+            9
+          ],
+          "L": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7
+          ],
+          "M": [
+            8,
+            9,
+            10,
+            11,
+            12
+          ],
+          "d": 5,
+          "preliminary_pair_lower": 18,
+          "preliminary_pair_rejected": true,
+          "preliminary_pair_upper": 10,
+          "rejected": true,
+          "required_union": 9,
+          "residual_union_capacity": 5
+        }
+      ],
+      "layer": "n34-m289",
+      "rejected": true,
+      "state_id": 6029
+    },
+    {
+      "active": false,
+      "checks": [
+        {
+          "H": [
+            13,
+            14,
+            15,
+            16,
+            17
+          ],
+          "K": [
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8,
+            9
+          ],
+          "L": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7
+          ],
+          "M": [
+            8,
+            9,
+            10,
+            11,
+            12
+          ],
+          "d": 5,
+          "preliminary_pair_lower": 18,
+          "preliminary_pair_rejected": true,
+          "preliminary_pair_upper": 10,
+          "rejected": true,
+          "required_union": 9,
+          "residual_union_capacity": 5
+        }
+      ],
+      "layer": "n34-m289",
+      "rejected": true,
+      "state_id": 6030
+    },
+    {
+      "active": false,
+      "checks": [
+        {
+          "H": [
+            13,
+            14,
+            15,
+            16,
+            17
+          ],
+          "K": [
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8,
+            9
+          ],
+          "L": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7
+          ],
+          "M": [
+            8,
+            9,
+            10,
+            11,
+            12
+          ],
+          "d": 5,
+          "preliminary_pair_lower": 19,
+          "preliminary_pair_rejected": true,
+          "preliminary_pair_upper": 10,
+          "rejected": true,
+          "required_union": 9,
+          "residual_union_capacity": 5
+        }
+      ],
+      "layer": "n34-m289",
+      "rejected": true,
+      "state_id": 6038
+    },
+    {
+      "active": false,
+      "checks": [
+        {
+          "H": [
+            13,
+            14,
+            15,
+            16,
+            17
+          ],
+          "K": [
+            3,
+            4,
+            5,
+            6,
+            7,
+            8,
+            9
+          ],
+          "L": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7
+          ],
+          "M": [
+            8,
+            9,
+            10,
+            11,
+            12
+          ],
+          "d": 5,
+          "preliminary_pair_lower": 10,
+          "preliminary_pair_rejected": false,
+          "preliminary_pair_upper": 10,
+          "rejected": true,
+          "required_union": 7,
+          "residual_union_capacity": 5
+        }
+      ],
+      "layer": "n34-m289",
+      "rejected": true,
+      "state_id": 6041
+    },
+    {
+      "active": false,
+      "checks": [
+        {
+          "H": [
+            13,
+            14,
+            15,
+            16,
+            17
+          ],
+          "K": [
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8,
+            9
+          ],
+          "L": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7
+          ],
+          "M": [
+            8,
+            9,
+            10,
+            11,
+            12
+          ],
+          "d": 5,
+          "preliminary_pair_lower": 19,
+          "preliminary_pair_rejected": true,
+          "preliminary_pair_upper": 10,
+          "rejected": true,
+          "required_union": 9,
+          "residual_union_capacity": 5
+        }
+      ],
+      "layer": "n34-m289",
+      "rejected": true,
+      "state_id": 6043
+    },
+    {
+      "active": false,
+      "checks": [
+        {
+          "H": [
+            13,
+            14,
+            15,
+            16,
+            17
+          ],
+          "K": [
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8,
+            9
+          ],
+          "L": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7
+          ],
+          "M": [
+            8,
+            9,
+            10,
+            11,
+            12
+          ],
+          "d": 5,
+          "preliminary_pair_lower": 20,
+          "preliminary_pair_rejected": true,
+          "preliminary_pair_upper": 10,
+          "rejected": true,
+          "required_union": 9,
+          "residual_union_capacity": 5
+        }
+      ],
+      "layer": "n34-m289",
+      "rejected": true,
+      "state_id": 6046
+    },
+    {
+      "active": false,
+      "checks": [
+        {
+          "H": [
+            13,
+            14,
+            15,
+            16,
+            17
+          ],
+          "K": [
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8,
+            9
+          ],
+          "L": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7
+          ],
+          "M": [
+            8,
+            9,
+            10,
+            11,
+            12
+          ],
+          "d": 5,
+          "preliminary_pair_lower": 20,
+          "preliminary_pair_rejected": true,
+          "preliminary_pair_upper": 10,
+          "rejected": true,
+          "required_union": 9,
+          "residual_union_capacity": 5
+        }
+      ],
+      "layer": "n34-m289",
+      "rejected": true,
+      "state_id": 6047
+    },
+    {
+      "active": false,
+      "checks": [
+        {
+          "H": [
+            13,
+            14,
+            15,
+            16,
+            17
+          ],
+          "K": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8,
+            9
+          ],
+          "L": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7
+          ],
+          "M": [
+            8,
+            9,
+            10,
+            11,
+            12
+          ],
+          "d": 5,
+          "preliminary_pair_lower": 22,
+          "preliminary_pair_rejected": true,
+          "preliminary_pair_upper": 10,
+          "rejected": true,
+          "required_union": 10,
+          "residual_union_capacity": 5
+        }
+      ],
+      "layer": "n34-m289",
+      "rejected": true,
+      "state_id": 6051
+    },
+    {
+      "active": false,
+      "checks": [
+        {
+          "H": [
+            13,
+            14,
+            15,
+            16,
+            17
+          ],
+          "K": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8,
+            9
+          ],
+          "L": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7
+          ],
+          "M": [
+            8,
+            9,
+            10,
+            11,
+            12
+          ],
+          "d": 5,
+          "preliminary_pair_lower": 22,
+          "preliminary_pair_rejected": true,
+          "preliminary_pair_upper": 10,
+          "rejected": true,
+          "required_union": 10,
+          "residual_union_capacity": 5
+        }
+      ],
+      "layer": "n34-m289",
+      "rejected": true,
+      "state_id": 6053
+    },
+    {
+      "active": false,
+      "checks": [
+        {
+          "H": [
+            13,
+            14,
+            15,
+            16,
+            17
+          ],
+          "K": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8,
+            9
+          ],
+          "L": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7
+          ],
+          "M": [
+            8,
+            9,
+            10,
+            11,
+            12
+          ],
+          "d": 5,
+          "preliminary_pair_lower": 22,
+          "preliminary_pair_rejected": true,
+          "preliminary_pair_upper": 10,
+          "rejected": true,
+          "required_union": 10,
+          "residual_union_capacity": 5
+        }
+      ],
+      "layer": "n34-m289",
+      "rejected": true,
+      "state_id": 6054
+    },
+    {
+      "active": false,
+      "checks": [
+        {
+          "H": [
+            13,
+            14,
+            15,
+            16,
+            17
+          ],
+          "K": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8,
+            9
+          ],
+          "L": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7
+          ],
+          "M": [
+            8,
+            9,
+            10,
+            11,
+            12
+          ],
+          "d": 5,
+          "preliminary_pair_lower": 23,
+          "preliminary_pair_rejected": true,
+          "preliminary_pair_upper": 10,
+          "rejected": true,
+          "required_union": 10,
+          "residual_union_capacity": 5
+        }
+      ],
+      "layer": "n34-m289",
+      "rejected": true,
+      "state_id": 6074
+    },
+    {
+      "active": false,
+      "checks": [
+        {
+          "H": [
+            13,
+            14,
+            15,
+            16,
+            17
+          ],
+          "K": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8,
+            9
+          ],
+          "L": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7
+          ],
+          "M": [
+            8,
+            9,
+            10,
+            11,
+            12
+          ],
+          "d": 5,
+          "preliminary_pair_lower": 23,
+          "preliminary_pair_rejected": true,
+          "preliminary_pair_upper": 10,
+          "rejected": true,
+          "required_union": 10,
+          "residual_union_capacity": 5
+        }
+      ],
+      "layer": "n34-m289",
+      "rejected": true,
+      "state_id": 6075
+    },
+    {
+      "active": false,
+      "checks": [
+        {
+          "H": [
+            13,
+            14,
+            15,
+            16,
+            17
+          ],
+          "K": [
+            3,
+            4,
+            5,
+            6,
+            7,
+            8,
+            9
+          ],
+          "L": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7
+          ],
+          "M": [
+            8,
+            9,
+            10,
+            11,
+            12
+          ],
+          "d": 5,
+          "preliminary_pair_lower": 9,
+          "preliminary_pair_rejected": false,
+          "preliminary_pair_upper": 10,
+          "rejected": true,
+          "required_union": 7,
+          "residual_union_capacity": 5
+        }
+      ],
+      "layer": "n34-m289",
+      "rejected": true,
+      "state_id": 6084
+    },
+    {
+      "active": false,
+      "checks": [
+        {
+          "H": [
+            13,
+            14,
+            15,
+            16,
+            17
+          ],
+          "K": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8,
+            9
+          ],
+          "L": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7
+          ],
+          "M": [
+            8,
+            9,
+            10,
+            11,
+            12
+          ],
+          "d": 5,
+          "preliminary_pair_lower": 24,
+          "preliminary_pair_rejected": true,
+          "preliminary_pair_upper": 10,
+          "rejected": true,
+          "required_union": 10,
+          "residual_union_capacity": 5
+        }
+      ],
+      "layer": "n34-m289",
+      "rejected": true,
+      "state_id": 6088
+    },
+    {
+      "active": false,
+      "checks": [
+        {
+          "H": [
+            13,
+            14,
+            15,
+            16,
+            17
+          ],
+          "K": [
+            3,
+            4,
+            5,
+            6,
+            7,
+            8,
+            9
+          ],
+          "L": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7
+          ],
+          "M": [
+            8,
+            9,
+            10,
+            11,
+            12
+          ],
+          "d": 5,
+          "preliminary_pair_lower": 10,
+          "preliminary_pair_rejected": false,
+          "preliminary_pair_upper": 10,
+          "rejected": true,
+          "required_union": 7,
+          "residual_union_capacity": 5
+        }
+      ],
+      "layer": "n34-m289",
+      "rejected": true,
+      "state_id": 6091
+    },
+    {
+      "active": false,
+      "checks": [
+        {
+          "H": [
+            13,
+            14,
+            15,
+            16,
+            17
+          ],
+          "K": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8,
+            9
+          ],
+          "L": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7
+          ],
+          "M": [
+            8,
+            9,
+            10,
+            11,
+            12
+          ],
+          "d": 5,
+          "preliminary_pair_lower": 25,
+          "preliminary_pair_rejected": true,
+          "preliminary_pair_upper": 10,
+          "rejected": true,
+          "required_union": 10,
+          "residual_union_capacity": 5
+        }
+      ],
+      "layer": "n34-m289",
+      "rejected": true,
+      "state_id": 6092
+    },
+    {
+      "active": false,
+      "checks": [
+        {
+          "H": [
+            12,
+            13,
+            14,
+            15,
+            16,
+            17
+          ],
+          "K": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8
+          ],
+          "L": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5
+          ],
+          "M": [
+            6,
+            7,
+            8,
+            9,
+            10,
+            11
+          ],
+          "d": 6,
+          "preliminary_pair_lower": 18,
+          "preliminary_pair_rejected": true,
+          "preliminary_pair_upper": 15,
+          "rejected": true,
+          "required_union": 9,
+          "residual_union_capacity": 6
+        }
+      ],
+      "layer": "n34-m289",
+      "rejected": true,
+      "state_id": 12319
+    },
+    {
+      "active": false,
+      "checks": [
+        {
+          "H": [
+            12,
+            13,
+            14,
+            15,
+            16,
+            17
+          ],
+          "K": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8
+          ],
+          "L": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5
+          ],
+          "M": [
+            6,
+            7,
+            8,
+            9,
+            10,
+            11
+          ],
+          "d": 6,
+          "preliminary_pair_lower": 18,
+          "preliminary_pair_rejected": true,
+          "preliminary_pair_upper": 15,
+          "rejected": true,
+          "required_union": 9,
+          "residual_union_capacity": 6
+        }
+      ],
+      "layer": "n34-m289",
+      "rejected": true,
+      "state_id": 12325
+    },
+    {
+      "active": false,
+      "checks": [
+        {
+          "H": [
+            12,
+            13,
+            14,
+            15,
+            16,
+            17
+          ],
+          "K": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8
+          ],
+          "L": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5
+          ],
+          "M": [
+            6,
+            7,
+            8,
+            9,
+            10,
+            11
+          ],
+          "d": 6,
+          "preliminary_pair_lower": 18,
+          "preliminary_pair_rejected": true,
+          "preliminary_pair_upper": 15,
+          "rejected": true,
+          "required_union": 9,
+          "residual_union_capacity": 6
+        }
+      ],
+      "layer": "n34-m289",
+      "rejected": true,
+      "state_id": 12334
+    },
+    {
+      "active": false,
+      "checks": [
+        {
+          "H": [
+            12,
+            13,
+            14,
+            15,
+            16,
+            17
+          ],
+          "K": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8
+          ],
+          "L": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5
+          ],
+          "M": [
+            6,
+            7,
+            8,
+            9,
+            10,
+            11
+          ],
+          "d": 6,
+          "preliminary_pair_lower": 18,
+          "preliminary_pair_rejected": true,
+          "preliminary_pair_upper": 15,
+          "rejected": true,
+          "required_union": 9,
+          "residual_union_capacity": 6
+        }
+      ],
+      "layer": "n34-m289",
+      "rejected": true,
+      "state_id": 12341
+    },
+    {
+      "active": false,
+      "checks": [
+        {
+          "H": [
+            12,
+            13,
+            14,
+            15,
+            16,
+            17
+          ],
+          "K": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8
+          ],
+          "L": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5
+          ],
+          "M": [
+            6,
+            7,
+            8,
+            9,
+            10,
+            11
+          ],
+          "d": 6,
+          "preliminary_pair_lower": 17,
+          "preliminary_pair_rejected": true,
+          "preliminary_pair_upper": 15,
+          "rejected": true,
+          "required_union": 9,
+          "residual_union_capacity": 6
+        }
+      ],
+      "layer": "n34-m289",
+      "rejected": true,
+      "state_id": 12352
+    },
+    {
+      "active": false,
+      "checks": [
+        {
+          "H": [
+            12,
+            13,
+            14,
+            15,
+            16,
+            17
+          ],
+          "K": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8
+          ],
+          "L": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5
+          ],
+          "M": [
+            6,
+            7,
+            8,
+            9,
+            10,
+            11
+          ],
+          "d": 6,
+          "preliminary_pair_lower": 18,
+          "preliminary_pair_rejected": true,
+          "preliminary_pair_upper": 15,
+          "rejected": true,
+          "required_union": 9,
+          "residual_union_capacity": 6
+        }
+      ],
+      "layer": "n34-m289",
+      "rejected": true,
+      "state_id": 12357
+    },
+    {
+      "active": false,
+      "checks": [
+        {
+          "H": [
+            12,
+            13,
+            14,
+            15,
+            16,
+            17
+          ],
+          "K": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8
+          ],
+          "L": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5
+          ],
+          "M": [
+            6,
+            7,
+            8,
+            9,
+            10,
+            11
+          ],
+          "d": 6,
+          "preliminary_pair_lower": 18,
+          "preliminary_pair_rejected": true,
+          "preliminary_pair_upper": 15,
+          "rejected": true,
+          "required_union": 9,
+          "residual_union_capacity": 6
+        }
+      ],
+      "layer": "n34-m289",
+      "rejected": true,
+      "state_id": 12361
+    },
+    {
+      "active": false,
+      "checks": [
+        {
+          "H": [
+            12,
+            13,
+            14,
+            15,
+            16,
+            17
+          ],
+          "K": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8
+          ],
+          "L": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5
+          ],
+          "M": [
+            6,
+            7,
+            8,
+            9,
+            10,
+            11
+          ],
+          "d": 6,
+          "preliminary_pair_lower": 17,
+          "preliminary_pair_rejected": true,
+          "preliminary_pair_upper": 15,
+          "rejected": true,
+          "required_union": 9,
+          "residual_union_capacity": 6
+        }
+      ],
+      "layer": "n34-m289",
+      "rejected": true,
+      "state_id": 12373
+    },
+    {
+      "active": false,
+      "checks": [
+        {
+          "H": [
+            12,
+            13,
+            14,
+            15,
+            16,
+            17
+          ],
+          "K": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8
+          ],
+          "L": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5
+          ],
+          "M": [
+            6,
+            7,
+            8,
+            9,
+            10,
+            11
+          ],
+          "d": 6,
+          "preliminary_pair_lower": 18,
+          "preliminary_pair_rejected": true,
+          "preliminary_pair_upper": 15,
+          "rejected": true,
+          "required_union": 9,
+          "residual_union_capacity": 6
+        }
+      ],
+      "layer": "n34-m289",
+      "rejected": true,
+      "state_id": 12379
+    },
+    {
+      "active": false,
+      "checks": [
+        {
+          "H": [
+            12,
+            13,
+            14,
+            15,
+            16,
+            17
+          ],
+          "K": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8
+          ],
+          "L": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5
+          ],
+          "M": [
+            6,
+            7,
+            8,
+            9,
+            10,
+            11
+          ],
+          "d": 6,
+          "preliminary_pair_lower": 18,
+          "preliminary_pair_rejected": true,
+          "preliminary_pair_upper": 15,
+          "rejected": true,
+          "required_union": 9,
+          "residual_union_capacity": 6
+        }
+      ],
+      "layer": "n34-m289",
+      "rejected": true,
+      "state_id": 12382
+    },
+    {
+      "active": false,
+      "checks": [
+        {
+          "H": [
+            12,
+            13,
+            14,
+            15,
+            16,
+            17
+          ],
+          "K": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8
+          ],
+          "L": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5
+          ],
+          "M": [
+            6,
+            7,
+            8,
+            9,
+            10,
+            11
+          ],
+          "d": 6,
+          "preliminary_pair_lower": 18,
+          "preliminary_pair_rejected": true,
+          "preliminary_pair_upper": 15,
+          "rejected": true,
+          "required_union": 9,
+          "residual_union_capacity": 6
+        }
+      ],
+      "layer": "n34-m289",
+      "rejected": true,
+      "state_id": 12383
+    },
+    {
+      "active": false,
+      "checks": [
+        {
+          "H": [
+            12,
+            13,
+            14,
+            15,
+            16,
+            17
+          ],
+          "K": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8
+          ],
+          "L": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5
+          ],
+          "M": [
+            6,
+            7,
+            8,
+            9,
+            10,
+            11
+          ],
+          "d": 6,
+          "preliminary_pair_lower": 17,
+          "preliminary_pair_rejected": true,
+          "preliminary_pair_upper": 15,
+          "rejected": true,
+          "required_union": 9,
+          "residual_union_capacity": 6
+        }
+      ],
+      "layer": "n34-m289",
+      "rejected": true,
+      "state_id": 12385
+    },
+    {
+      "active": false,
+      "checks": [
+        {
+          "H": [
+            12,
+            13,
+            14,
+            15,
+            16,
+            17
+          ],
+          "K": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8
+          ],
+          "L": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5
+          ],
+          "M": [
+            6,
+            7,
+            8,
+            9,
+            10,
+            11
+          ],
+          "d": 6,
+          "preliminary_pair_lower": 18,
+          "preliminary_pair_rejected": true,
+          "preliminary_pair_upper": 15,
+          "rejected": true,
+          "required_union": 9,
+          "residual_union_capacity": 6
+        }
+      ],
+      "layer": "n34-m289",
+      "rejected": true,
+      "state_id": 12387
+    },
+    {
+      "active": false,
+      "checks": [
+        {
+          "H": [
+            12,
+            13,
+            14,
+            15,
+            16,
+            17
+          ],
+          "K": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8
+          ],
+          "L": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5
+          ],
+          "M": [
+            6,
+            7,
+            8,
+            9,
+            10,
+            11
+          ],
+          "d": 6,
+          "preliminary_pair_lower": 18,
+          "preliminary_pair_rejected": true,
+          "preliminary_pair_upper": 15,
+          "rejected": true,
+          "required_union": 9,
+          "residual_union_capacity": 6
+        }
+      ],
+      "layer": "n34-m289",
+      "rejected": true,
+      "state_id": 12388
+    },
+    {
+      "active": false,
+      "checks": [
+        {
+          "H": [
+            12,
+            13,
+            14,
+            15,
+            16,
+            17
+          ],
+          "K": [
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8
+          ],
+          "L": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5
+          ],
+          "M": [
+            6,
+            7,
+            8,
+            9,
+            10,
+            11
+          ],
+          "d": 6,
+          "preliminary_pair_lower": 12,
+          "preliminary_pair_rejected": false,
+          "preliminary_pair_upper": 15,
+          "rejected": true,
+          "required_union": 8,
+          "residual_union_capacity": 6
+        }
+      ],
+      "layer": "n34-m289",
+      "rejected": true,
+      "state_id": 12389
+    },
+    {
+      "active": false,
+      "checks": [
+        {
+          "H": [
+            12,
+            13,
+            14,
+            15,
+            16,
+            17
+          ],
+          "K": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8
+          ],
+          "L": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5
+          ],
+          "M": [
+            6,
+            7,
+            8,
+            9,
+            10,
+            11
+          ],
+          "d": 6,
+          "preliminary_pair_lower": 17,
+          "preliminary_pair_rejected": true,
+          "preliminary_pair_upper": 15,
+          "rejected": true,
+          "required_union": 9,
+          "residual_union_capacity": 6
+        }
+      ],
+      "layer": "n34-m289",
+      "rejected": true,
+      "state_id": 12391
+    },
+    {
+      "active": false,
+      "checks": [
+        {
+          "H": [
+            12,
+            13,
+            14,
+            15,
+            16,
+            17
+          ],
+          "K": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8
+          ],
+          "L": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5
+          ],
+          "M": [
+            6,
+            7,
+            8,
+            9,
+            10,
+            11
+          ],
+          "d": 6,
+          "preliminary_pair_lower": 18,
+          "preliminary_pair_rejected": true,
+          "preliminary_pair_upper": 15,
+          "rejected": true,
+          "required_union": 9,
+          "residual_union_capacity": 6
+        }
+      ],
+      "layer": "n34-m289",
+      "rejected": true,
+      "state_id": 12393
+    },
+    {
+      "active": false,
+      "checks": [
+        {
+          "H": [
+            12,
+            13,
+            14,
+            15,
+            16,
+            17
+          ],
+          "K": [
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8
+          ],
+          "L": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5
+          ],
+          "M": [
+            6,
+            7,
+            8,
+            9,
+            10,
+            11
+          ],
+          "d": 6,
+          "preliminary_pair_lower": 12,
+          "preliminary_pair_rejected": false,
+          "preliminary_pair_upper": 15,
+          "rejected": true,
+          "required_union": 8,
+          "residual_union_capacity": 6
+        }
+      ],
+      "layer": "n34-m289",
+      "rejected": true,
+      "state_id": 12394
+    },
+    {
+      "active": false,
+      "checks": [
+        {
+          "H": [
+            12,
+            13,
+            14,
+            15,
+            16,
+            17
+          ],
+          "K": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8
+          ],
+          "L": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5
+          ],
+          "M": [
+            6,
+            7,
+            8,
+            9,
+            10,
+            11
+          ],
+          "d": 6,
+          "preliminary_pair_lower": 16,
+          "preliminary_pair_rejected": true,
+          "preliminary_pair_upper": 15,
+          "rejected": true,
+          "required_union": 9,
+          "residual_union_capacity": 6
+        }
+      ],
+      "layer": "n34-m289",
+      "rejected": true,
+      "state_id": 12397
+    },
+    {
+      "active": false,
+      "checks": [
+        {
+          "H": [
+            12,
+            13,
+            14,
+            15,
+            16,
+            17
+          ],
+          "K": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8
+          ],
+          "L": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5
+          ],
+          "M": [
+            6,
+            7,
+            8,
+            9,
+            10,
+            11
+          ],
+          "d": 6,
+          "preliminary_pair_lower": 16,
+          "preliminary_pair_rejected": true,
+          "preliminary_pair_upper": 15,
+          "rejected": true,
+          "required_union": 9,
+          "residual_union_capacity": 6
+        }
+      ],
+      "layer": "n34-m289",
+      "rejected": true,
+      "state_id": 12398
+    },
+    {
+      "active": false,
+      "checks": [
+        {
+          "H": [
+            12,
+            13,
+            14,
+            15,
+            16,
+            17
+          ],
+          "K": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8
+          ],
+          "L": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5
+          ],
+          "M": [
+            6,
+            7,
+            8,
+            9,
+            10,
+            11
+          ],
+          "d": 6,
+          "preliminary_pair_lower": 17,
+          "preliminary_pair_rejected": true,
+          "preliminary_pair_upper": 15,
+          "rejected": true,
+          "required_union": 9,
+          "residual_union_capacity": 6
+        }
+      ],
+      "layer": "n34-m289",
+      "rejected": true,
+      "state_id": 12403
+    },
+    {
+      "active": false,
+      "checks": [
+        {
+          "H": [
+            12,
+            13,
+            14,
+            15,
+            16,
+            17
+          ],
+          "K": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8
+          ],
+          "L": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5
+          ],
+          "M": [
+            6,
+            7,
+            8,
+            9,
+            10,
+            11
+          ],
+          "d": 6,
+          "preliminary_pair_lower": 17,
+          "preliminary_pair_rejected": true,
+          "preliminary_pair_upper": 15,
+          "rejected": true,
+          "required_union": 9,
+          "residual_union_capacity": 6
+        }
+      ],
+      "layer": "n34-m289",
+      "rejected": true,
+      "state_id": 12407
+    },
+    {
+      "active": false,
+      "checks": [
+        {
+          "H": [
+            12,
+            13,
+            14,
+            15,
+            16,
+            17
+          ],
+          "K": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8
+          ],
+          "L": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5
+          ],
+          "M": [
+            6,
+            7,
+            8,
+            9,
+            10,
+            11
+          ],
+          "d": 6,
+          "preliminary_pair_lower": 18,
+          "preliminary_pair_rejected": true,
+          "preliminary_pair_upper": 15,
+          "rejected": true,
+          "required_union": 9,
+          "residual_union_capacity": 6
+        }
+      ],
+      "layer": "n34-m289",
+      "rejected": true,
+      "state_id": 12409
+    },
+    {
+      "active": false,
+      "checks": [
+        {
+          "H": [
+            12,
+            13,
+            14,
+            15,
+            16,
+            17
+          ],
+          "K": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8
+          ],
+          "L": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5
+          ],
+          "M": [
+            6,
+            7,
+            8,
+            9,
+            10,
+            11
+          ],
+          "d": 6,
+          "preliminary_pair_lower": 18,
+          "preliminary_pair_rejected": true,
+          "preliminary_pair_upper": 15,
+          "rejected": true,
+          "required_union": 9,
+          "residual_union_capacity": 6
+        }
+      ],
+      "layer": "n34-m289",
+      "rejected": true,
+      "state_id": 12410
+    },
+    {
+      "active": false,
+      "checks": [
+        {
+          "H": [
+            12,
+            13,
+            14,
+            15,
+            16,
+            17
+          ],
+          "K": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8
+          ],
+          "L": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5
+          ],
+          "M": [
+            6,
+            7,
+            8,
+            9,
+            10,
+            11
+          ],
+          "d": 6,
+          "preliminary_pair_lower": 18,
+          "preliminary_pair_rejected": true,
+          "preliminary_pair_upper": 15,
+          "rejected": true,
+          "required_union": 9,
+          "residual_union_capacity": 6
+        }
+      ],
+      "layer": "n34-m289",
+      "rejected": true,
+      "state_id": 12411
+    },
+    {
+      "active": false,
+      "checks": [
+        {
+          "H": [
+            12,
+            13,
+            14,
+            15,
+            16,
+            17
+          ],
+          "K": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8
+          ],
+          "L": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5
+          ],
+          "M": [
+            6,
+            7,
+            8,
+            9,
+            10,
+            11
+          ],
+          "d": 6,
+          "preliminary_pair_lower": 16,
+          "preliminary_pair_rejected": true,
+          "preliminary_pair_upper": 15,
+          "rejected": true,
+          "required_union": 9,
+          "residual_union_capacity": 6
+        }
+      ],
+      "layer": "n34-m289",
+      "rejected": true,
+      "state_id": 12414
+    },
+    {
+      "active": false,
+      "checks": [
+        {
+          "H": [
+            12,
+            13,
+            14,
+            15,
+            16,
+            17
+          ],
+          "K": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8
+          ],
+          "L": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5
+          ],
+          "M": [
+            6,
+            7,
+            8,
+            9,
+            10,
+            11
+          ],
+          "d": 6,
+          "preliminary_pair_lower": 16,
+          "preliminary_pair_rejected": true,
+          "preliminary_pair_upper": 15,
+          "rejected": true,
+          "required_union": 9,
+          "residual_union_capacity": 6
+        }
+      ],
+      "layer": "n34-m289",
+      "rejected": true,
+      "state_id": 12415
+    },
+    {
+      "active": false,
+      "checks": [
+        {
+          "H": [
+            12,
+            13,
+            14,
+            15,
+            16,
+            17
+          ],
+          "K": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8
+          ],
+          "L": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5
+          ],
+          "M": [
+            6,
+            7,
+            8,
+            9,
+            10,
+            11
+          ],
+          "d": 6,
+          "preliminary_pair_lower": 17,
+          "preliminary_pair_rejected": true,
+          "preliminary_pair_upper": 15,
+          "rejected": true,
+          "required_union": 9,
+          "residual_union_capacity": 6
+        }
+      ],
+      "layer": "n34-m289",
+      "rejected": true,
+      "state_id": 12423
+    },
+    {
+      "active": false,
+      "checks": [
+        {
+          "H": [
+            12,
+            13,
+            14,
+            15,
+            16,
+            17
+          ],
+          "K": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8
+          ],
+          "L": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5
+          ],
+          "M": [
+            6,
+            7,
+            8,
+            9,
+            10,
+            11
+          ],
+          "d": 6,
+          "preliminary_pair_lower": 18,
+          "preliminary_pair_rejected": true,
+          "preliminary_pair_upper": 15,
+          "rejected": true,
+          "required_union": 9,
+          "residual_union_capacity": 6
+        }
+      ],
+      "layer": "n34-m289",
+      "rejected": true,
+      "state_id": 12426
+    },
+    {
+      "active": false,
+      "checks": [
+        {
+          "H": [
+            12,
+            13,
+            14,
+            15,
+            16,
+            17
+          ],
+          "K": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8
+          ],
+          "L": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5
+          ],
+          "M": [
+            6,
+            7,
+            8,
+            9,
+            10,
+            11
+          ],
+          "d": 6,
+          "preliminary_pair_lower": 18,
+          "preliminary_pair_rejected": true,
+          "preliminary_pair_upper": 15,
+          "rejected": true,
+          "required_union": 9,
+          "residual_union_capacity": 6
+        }
+      ],
+      "layer": "n34-m289",
+      "rejected": true,
+      "state_id": 12427
+    },
+    {
+      "active": false,
+      "checks": [
+        {
+          "H": [
+            12,
+            13,
+            14,
+            15,
+            16,
+            17
+          ],
+          "K": [
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8
+          ],
+          "L": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5
+          ],
+          "M": [
+            6,
+            7,
+            8,
+            9,
+            10,
+            11
+          ],
+          "d": 6,
+          "preliminary_pair_lower": 12,
+          "preliminary_pair_rejected": false,
+          "preliminary_pair_upper": 15,
+          "rejected": true,
+          "required_union": 8,
+          "residual_union_capacity": 6
+        }
+      ],
+      "layer": "n34-m289",
+      "rejected": true,
+      "state_id": 12432
+    },
+    {
+      "active": false,
+      "checks": [
+        {
+          "H": [
+            12,
+            13,
+            14,
+            15,
+            16,
+            17
+          ],
+          "K": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8
+          ],
+          "L": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5
+          ],
+          "M": [
+            6,
+            7,
+            8,
+            9,
+            10,
+            11
+          ],
+          "d": 6,
+          "preliminary_pair_lower": 16,
+          "preliminary_pair_rejected": true,
+          "preliminary_pair_upper": 15,
+          "rejected": true,
+          "required_union": 9,
+          "residual_union_capacity": 6
+        }
+      ],
+      "layer": "n34-m289",
+      "rejected": true,
+      "state_id": 12436
+    },
+    {
+      "active": false,
+      "checks": [
+        {
+          "H": [
+            12,
+            13,
+            14,
+            15,
+            16,
+            17
+          ],
+          "K": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8
+          ],
+          "L": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5
+          ],
+          "M": [
+            6,
+            7,
+            8,
+            9,
+            10,
+            11
+          ],
+          "d": 6,
+          "preliminary_pair_lower": 16,
+          "preliminary_pair_rejected": true,
+          "preliminary_pair_upper": 15,
+          "rejected": true,
+          "required_union": 9,
+          "residual_union_capacity": 6
+        }
+      ],
+      "layer": "n34-m289",
+      "rejected": true,
+      "state_id": 12437
+    },
+    {
+      "active": false,
+      "checks": [
+        {
+          "H": [
+            12,
+            13,
+            14,
+            15,
+            16,
+            17
+          ],
+          "K": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8
+          ],
+          "L": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5
+          ],
+          "M": [
+            6,
+            7,
+            8,
+            9,
+            10,
+            11
+          ],
+          "d": 6,
+          "preliminary_pair_lower": 17,
+          "preliminary_pair_rejected": true,
+          "preliminary_pair_upper": 15,
+          "rejected": true,
+          "required_union": 9,
+          "residual_union_capacity": 6
+        }
+      ],
+      "layer": "n34-m289",
+      "rejected": true,
+      "state_id": 12442
+    },
+    {
+      "active": false,
+      "checks": [
+        {
+          "H": [
+            12,
+            13,
+            14,
+            15,
+            16,
+            17
+          ],
+          "K": [
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8
+          ],
+          "L": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5
+          ],
+          "M": [
+            6,
+            7,
+            8,
+            9,
+            10,
+            11
+          ],
+          "d": 6,
+          "preliminary_pair_lower": 12,
+          "preliminary_pair_rejected": false,
+          "preliminary_pair_upper": 15,
+          "rejected": true,
+          "required_union": 8,
+          "residual_union_capacity": 6
+        }
+      ],
+      "layer": "n34-m289",
+      "rejected": true,
+      "state_id": 12448
+    },
+    {
+      "active": false,
+      "checks": [
+        {
+          "H": [
+            12,
+            13,
+            14,
+            15,
+            16,
+            17
+          ],
+          "K": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8
+          ],
+          "L": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5
+          ],
+          "M": [
+            6,
+            7,
+            8,
+            9,
+            10,
+            11
+          ],
+          "d": 6,
+          "preliminary_pair_lower": 15,
+          "preliminary_pair_rejected": false,
+          "preliminary_pair_upper": 15,
+          "rejected": true,
+          "required_union": 9,
+          "residual_union_capacity": 6
+        }
+      ],
+      "layer": "n34-m289",
+      "rejected": true,
+      "state_id": 12454
+    },
+    {
+      "active": false,
+      "checks": [
+        {
+          "H": [
+            12,
+            13,
+            14,
+            15,
+            16,
+            17
+          ],
+          "K": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8
+          ],
+          "L": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5
+          ],
+          "M": [
+            6,
+            7,
+            8,
+            9,
+            10,
+            11
+          ],
+          "d": 6,
+          "preliminary_pair_lower": 15,
+          "preliminary_pair_rejected": false,
+          "preliminary_pair_upper": 15,
+          "rejected": true,
+          "required_union": 9,
+          "residual_union_capacity": 6
+        }
+      ],
+      "layer": "n34-m289",
+      "rejected": true,
+      "state_id": 12456
+    },
+    {
+      "active": false,
+      "checks": [
+        {
+          "H": [
+            12,
+            13,
+            14,
+            15,
+            16,
+            17
+          ],
+          "K": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8
+          ],
+          "L": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5
+          ],
+          "M": [
+            6,
+            7,
+            8,
+            9,
+            10,
+            11
+          ],
+          "d": 6,
+          "preliminary_pair_lower": 15,
+          "preliminary_pair_rejected": false,
+          "preliminary_pair_upper": 15,
+          "rejected": true,
+          "required_union": 9,
+          "residual_union_capacity": 6
+        }
+      ],
+      "layer": "n34-m289",
+      "rejected": true,
+      "state_id": 12457
+    },
+    {
+      "active": false,
+      "checks": [
+        {
+          "H": [
+            12,
+            13,
+            14,
+            15,
+            16,
+            17
+          ],
+          "K": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8
+          ],
+          "L": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5
+          ],
+          "M": [
+            6,
+            7,
+            8,
+            9,
+            10,
+            11
+          ],
+          "d": 6,
+          "preliminary_pair_lower": 16,
+          "preliminary_pair_rejected": true,
+          "preliminary_pair_upper": 15,
+          "rejected": true,
+          "required_union": 9,
+          "residual_union_capacity": 6
+        }
+      ],
+      "layer": "n34-m289",
+      "rejected": true,
+      "state_id": 12467
+    },
+    {
+      "active": false,
+      "checks": [
+        {
+          "H": [
+            12,
+            13,
+            14,
+            15,
+            16,
+            17
+          ],
+          "K": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8
+          ],
+          "L": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5
+          ],
+          "M": [
+            6,
+            7,
+            8,
+            9,
+            10,
+            11
+          ],
+          "d": 6,
+          "preliminary_pair_lower": 16,
+          "preliminary_pair_rejected": true,
+          "preliminary_pair_upper": 15,
+          "rejected": true,
+          "required_union": 9,
+          "residual_union_capacity": 6
+        }
+      ],
+      "layer": "n34-m289",
+      "rejected": true,
+      "state_id": 12468
+    },
+    {
+      "active": false,
+      "checks": [
+        {
+          "H": [
+            12,
+            13,
+            14,
+            15,
+            16,
+            17
+          ],
+          "K": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8
+          ],
+          "L": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5
+          ],
+          "M": [
+            6,
+            7,
+            8,
+            9,
+            10,
+            11
+          ],
+          "d": 6,
+          "preliminary_pair_lower": 16,
+          "preliminary_pair_rejected": true,
+          "preliminary_pair_upper": 15,
+          "rejected": true,
+          "required_union": 9,
+          "residual_union_capacity": 6
+        }
+      ],
+      "layer": "n34-m289",
+      "rejected": true,
+      "state_id": 12477
+    },
+    {
+      "active": false,
+      "checks": [
+        {
+          "H": [
+            12,
+            13,
+            14,
+            15,
+            16,
+            17
+          ],
+          "K": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8
+          ],
+          "L": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5
+          ],
+          "M": [
+            6,
+            7,
+            8,
+            9,
+            10,
+            11
+          ],
+          "d": 6,
+          "preliminary_pair_lower": 16,
+          "preliminary_pair_rejected": true,
+          "preliminary_pair_upper": 15,
+          "rejected": true,
+          "required_union": 9,
+          "residual_union_capacity": 6
+        }
+      ],
+      "layer": "n34-m289",
+      "rejected": true,
+      "state_id": 12478
+    },
+    {
+      "active": false,
+      "checks": [
+        {
+          "H": [
+            12,
+            13,
+            14,
+            15,
+            16,
+            17
+          ],
+          "K": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8
+          ],
+          "L": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5
+          ],
+          "M": [
+            6,
+            7,
+            8,
+            9,
+            10,
+            11
+          ],
+          "d": 6,
+          "preliminary_pair_lower": 17,
+          "preliminary_pair_rejected": true,
+          "preliminary_pair_upper": 15,
+          "rejected": true,
+          "required_union": 9,
+          "residual_union_capacity": 6
+        }
+      ],
+      "layer": "n34-m289",
+      "rejected": true,
+      "state_id": 12483
+    },
+    {
+      "active": false,
+      "checks": [
+        {
+          "H": [
+            12,
+            13,
+            14,
+            15,
+            16,
+            17
+          ],
+          "K": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8
+          ],
+          "L": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5
+          ],
+          "M": [
+            6,
+            7,
+            8,
+            9,
+            10,
+            11
+          ],
+          "d": 6,
+          "preliminary_pair_lower": 18,
+          "preliminary_pair_rejected": true,
+          "preliminary_pair_upper": 15,
+          "rejected": true,
+          "required_union": 9,
+          "residual_union_capacity": 6
+        }
+      ],
+      "layer": "n34-m289",
+      "rejected": true,
+      "state_id": 12489
+    },
+    {
+      "active": false,
+      "checks": [
+        {
+          "H": [
+            12,
+            13,
+            14,
+            15,
+            16,
+            17
+          ],
+          "K": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8
+          ],
+          "L": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5
+          ],
+          "M": [
+            6,
+            7,
+            8,
+            9,
+            10,
+            11
+          ],
+          "d": 6,
+          "preliminary_pair_lower": 18,
+          "preliminary_pair_rejected": true,
+          "preliminary_pair_upper": 15,
+          "rejected": true,
+          "required_union": 9,
+          "residual_union_capacity": 6
+        }
+      ],
+      "layer": "n34-m289",
+      "rejected": true,
+      "state_id": 12493
+    },
+    {
+      "active": false,
+      "checks": [
+        {
+          "H": [
+            12,
+            13,
+            14,
+            15,
+            16,
+            17
+          ],
+          "K": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8
+          ],
+          "L": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5
+          ],
+          "M": [
+            6,
+            7,
+            8,
+            9,
+            10,
+            11
+          ],
+          "d": 6,
+          "preliminary_pair_lower": 15,
+          "preliminary_pair_rejected": false,
+          "preliminary_pair_upper": 15,
+          "rejected": true,
+          "required_union": 9,
+          "residual_union_capacity": 6
+        }
+      ],
+      "layer": "n34-m289",
+      "rejected": true,
+      "state_id": 12499
+    },
+    {
+      "active": false,
+      "checks": [
+        {
+          "H": [
+            12,
+            13,
+            14,
+            15,
+            16,
+            17
+          ],
+          "K": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8
+          ],
+          "L": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5
+          ],
+          "M": [
+            6,
+            7,
+            8,
+            9,
+            10,
+            11
+          ],
+          "d": 6,
+          "preliminary_pair_lower": 15,
+          "preliminary_pair_rejected": false,
+          "preliminary_pair_upper": 15,
+          "rejected": true,
+          "required_union": 9,
+          "residual_union_capacity": 6
+        }
+      ],
+      "layer": "n34-m289",
+      "rejected": true,
+      "state_id": 12501
+    },
+    {
+      "active": false,
+      "checks": [
+        {
+          "H": [
+            12,
+            13,
+            14,
+            15,
+            16,
+            17
+          ],
+          "K": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8
+          ],
+          "L": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5
+          ],
+          "M": [
+            6,
+            7,
+            8,
+            9,
+            10,
+            11
+          ],
+          "d": 6,
+          "preliminary_pair_lower": 15,
+          "preliminary_pair_rejected": false,
+          "preliminary_pair_upper": 15,
+          "rejected": true,
+          "required_union": 9,
+          "residual_union_capacity": 6
+        }
+      ],
+      "layer": "n34-m289",
+      "rejected": true,
+      "state_id": 12502
+    },
+    {
+      "active": false,
+      "checks": [
+        {
+          "H": [
+            12,
+            13,
+            14,
+            15,
+            16,
+            17
+          ],
+          "K": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8
+          ],
+          "L": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5
+          ],
+          "M": [
+            6,
+            7,
+            8,
+            9,
+            10,
+            11
+          ],
+          "d": 6,
+          "preliminary_pair_lower": 16,
+          "preliminary_pair_rejected": true,
+          "preliminary_pair_upper": 15,
+          "rejected": true,
+          "required_union": 9,
+          "residual_union_capacity": 6
+        }
+      ],
+      "layer": "n34-m289",
+      "rejected": true,
+      "state_id": 12519
+    },
+    {
+      "active": false,
+      "checks": [
+        {
+          "H": [
+            12,
+            13,
+            14,
+            15,
+            16,
+            17
+          ],
+          "K": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8
+          ],
+          "L": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5
+          ],
+          "M": [
+            6,
+            7,
+            8,
+            9,
+            10,
+            11
+          ],
+          "d": 6,
+          "preliminary_pair_lower": 16,
+          "preliminary_pair_rejected": true,
+          "preliminary_pair_upper": 15,
+          "rejected": true,
+          "required_union": 9,
+          "residual_union_capacity": 6
+        }
+      ],
+      "layer": "n34-m289",
+      "rejected": true,
+      "state_id": 12520
+    },
+    {
+      "active": false,
+      "checks": [
+        {
+          "H": [
+            12,
+            13,
+            14,
+            15,
+            16,
+            17
+          ],
+          "K": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8
+          ],
+          "L": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5
+          ],
+          "M": [
+            6,
+            7,
+            8,
+            9,
+            10,
+            11
+          ],
+          "d": 6,
+          "preliminary_pair_lower": 17,
+          "preliminary_pair_rejected": true,
+          "preliminary_pair_upper": 15,
+          "rejected": true,
+          "required_union": 9,
+          "residual_union_capacity": 6
+        }
+      ],
+      "layer": "n34-m289",
+      "rejected": true,
+      "state_id": 12528
+    },
+    {
+      "active": false,
+      "checks": [
+        {
+          "H": [
+            12,
+            13,
+            14,
+            15,
+            16,
+            17
+          ],
+          "K": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8
+          ],
+          "L": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5
+          ],
+          "M": [
+            6,
+            7,
+            8,
+            9,
+            10,
+            11
+          ],
+          "d": 6,
+          "preliminary_pair_lower": 18,
+          "preliminary_pair_rejected": true,
+          "preliminary_pair_upper": 15,
+          "rejected": true,
+          "required_union": 9,
+          "residual_union_capacity": 6
+        }
+      ],
+      "layer": "n34-m289",
+      "rejected": true,
+      "state_id": 12531
+    },
+    {
+      "active": false,
+      "checks": [
+        {
+          "H": [
+            12,
+            13,
+            14,
+            15,
+            16,
+            17
+          ],
+          "K": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8
+          ],
+          "L": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5
+          ],
+          "M": [
+            6,
+            7,
+            8,
+            9,
+            10,
+            11
+          ],
+          "d": 6,
+          "preliminary_pair_lower": 17,
+          "preliminary_pair_rejected": true,
+          "preliminary_pair_upper": 15,
+          "rejected": true,
+          "required_union": 9,
+          "residual_union_capacity": 6
+        }
+      ],
+      "layer": "n34-m289",
+      "rejected": true,
+      "state_id": 12533
+    },
+    {
+      "active": false,
+      "checks": [
+        {
+          "H": [
+            12,
+            13,
+            14,
+            15,
+            16,
+            17
+          ],
+          "K": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8
+          ],
+          "L": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5
+          ],
+          "M": [
+            6,
+            7,
+            8,
+            9,
+            10,
+            11
+          ],
+          "d": 6,
+          "preliminary_pair_lower": 18,
+          "preliminary_pair_rejected": true,
+          "preliminary_pair_upper": 15,
+          "rejected": true,
+          "required_union": 9,
+          "residual_union_capacity": 6
+        }
+      ],
+      "layer": "n34-m289",
+      "rejected": true,
+      "state_id": 12536
+    },
+    {
+      "active": false,
+      "checks": [
+        {
+          "H": [
+            12,
+            13,
+            14,
+            15,
+            16,
+            17
+          ],
+          "K": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8
+          ],
+          "L": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5
+          ],
+          "M": [
+            6,
+            7,
+            8,
+            9,
+            10,
+            11
+          ],
+          "d": 6,
+          "preliminary_pair_lower": 18,
+          "preliminary_pair_rejected": true,
+          "preliminary_pair_upper": 15,
+          "rejected": true,
+          "required_union": 9,
+          "residual_union_capacity": 6
+        }
+      ],
+      "layer": "n34-m289",
+      "rejected": true,
+      "state_id": 12537
+    },
+    {
+      "active": false,
+      "checks": [
+        {
+          "H": [
+            12,
+            13,
+            14,
+            15,
+            16,
+            17
+          ],
+          "K": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8
+          ],
+          "L": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5
+          ],
+          "M": [
+            6,
+            7,
+            8,
+            9,
+            10,
+            11
+          ],
+          "d": 6,
+          "preliminary_pair_lower": 16,
+          "preliminary_pair_rejected": true,
+          "preliminary_pair_upper": 15,
+          "rejected": true,
+          "required_union": 9,
+          "residual_union_capacity": 6
+        }
+      ],
+      "layer": "n34-m289",
+      "rejected": true,
+      "state_id": 12601
+    },
+    {
+      "active": false,
+      "checks": [
+        {
+          "H": [
+            12,
+            13,
+            14,
+            15,
+            16,
+            17
+          ],
+          "K": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8
+          ],
+          "L": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5
+          ],
+          "M": [
+            6,
+            7,
+            8,
+            9,
+            10,
+            11
+          ],
+          "d": 6,
+          "preliminary_pair_lower": 16,
+          "preliminary_pair_rejected": true,
+          "preliminary_pair_upper": 15,
+          "rejected": true,
+          "required_union": 9,
+          "residual_union_capacity": 6
+        }
+      ],
+      "layer": "n34-m289",
+      "rejected": true,
+      "state_id": 12602
+    },
+    {
+      "active": false,
+      "checks": [
+        {
+          "H": [
+            12,
+            13,
+            14,
+            15,
+            16,
+            17
+          ],
+          "K": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8
+          ],
+          "L": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5
+          ],
+          "M": [
+            6,
+            7,
+            8,
+            9,
+            10,
+            11
+          ],
+          "d": 6,
+          "preliminary_pair_lower": 17,
+          "preliminary_pair_rejected": true,
+          "preliminary_pair_upper": 15,
+          "rejected": true,
+          "required_union": 9,
+          "residual_union_capacity": 6
+        }
+      ],
+      "layer": "n34-m289",
+      "rejected": true,
+      "state_id": 12610
+    },
+    {
+      "active": false,
+      "checks": [
+        {
+          "H": [
+            12,
+            13,
+            14,
+            15,
+            16,
+            17
+          ],
+          "K": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8
+          ],
+          "L": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5
+          ],
+          "M": [
+            6,
+            7,
+            8,
+            9,
+            10,
+            11
+          ],
+          "d": 6,
+          "preliminary_pair_lower": 17,
+          "preliminary_pair_rejected": true,
+          "preliminary_pair_upper": 15,
+          "rejected": true,
+          "required_union": 9,
+          "residual_union_capacity": 6
+        }
+      ],
+      "layer": "n34-m289",
+      "rejected": true,
+      "state_id": 12624
+    },
+    {
+      "active": false,
+      "checks": [
+        {
+          "H": [
+            12,
+            13,
+            14,
+            15,
+            16,
+            17
+          ],
+          "K": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8
+          ],
+          "L": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5
+          ],
+          "M": [
+            6,
+            7,
+            8,
+            9,
+            10,
+            11
+          ],
+          "d": 6,
+          "preliminary_pair_lower": 18,
+          "preliminary_pair_rejected": true,
+          "preliminary_pair_upper": 15,
+          "rejected": true,
+          "required_union": 9,
+          "residual_union_capacity": 6
+        }
+      ],
+      "layer": "n34-m289",
+      "rejected": true,
+      "state_id": 12627
+    },
+    {
+      "active": false,
+      "checks": [
+        {
+          "H": [
+            12,
+            13,
+            14,
+            15,
+            16,
+            17
+          ],
+          "K": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8
+          ],
+          "L": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5
+          ],
+          "M": [
+            6,
+            7,
+            8,
+            9,
+            10,
+            11
+          ],
+          "d": 6,
+          "preliminary_pair_lower": 18,
+          "preliminary_pair_rejected": true,
+          "preliminary_pair_upper": 15,
+          "rejected": true,
+          "required_union": 9,
+          "residual_union_capacity": 6
+        }
+      ],
+      "layer": "n34-m289",
+      "rejected": true,
+      "state_id": 12628
+    },
+    {
+      "active": false,
+      "checks": [
+        {
+          "H": [
+            12,
+            13,
+            14,
+            15,
+            16,
+            17
+          ],
+          "K": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8
+          ],
+          "L": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5
+          ],
+          "M": [
+            6,
+            7,
+            8,
+            9,
+            10,
+            11
+          ],
+          "d": 6,
+          "preliminary_pair_lower": 18,
+          "preliminary_pair_rejected": true,
+          "preliminary_pair_upper": 15,
+          "rejected": true,
+          "required_union": 9,
+          "residual_union_capacity": 6
+        }
+      ],
+      "layer": "n34-m289",
+      "rejected": true,
+      "state_id": 12633
+    },
+    {
+      "active": false,
+      "checks": [
+        {
+          "H": [
+            14,
+            15,
+            16,
+            17,
+            18
+          ],
+          "K": [
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8,
+            9
+          ],
+          "L": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8
+          ],
+          "M": [
+            9,
+            10,
+            11,
+            12,
+            13
+          ],
+          "d": 5,
+          "preliminary_pair_lower": 20,
+          "preliminary_pair_rejected": true,
+          "preliminary_pair_upper": 10,
+          "rejected": true,
+          "required_union": 9,
+          "residual_union_capacity": 5
+        }
+      ],
+      "layer": "n35-m306",
+      "rejected": true,
+      "state_id": 97
+    },
+    {
+      "active": false,
+      "checks": [
+        {
+          "H": [
+            14,
+            15,
+            16,
+            17,
+            18
+          ],
+          "K": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8,
+            9
+          ],
+          "L": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8
+          ],
+          "M": [
+            9,
+            10,
+            11,
+            12,
+            13
+          ],
+          "d": 5,
+          "preliminary_pair_lower": 25,
+          "preliminary_pair_rejected": true,
+          "preliminary_pair_upper": 10,
+          "rejected": true,
+          "required_union": 10,
+          "residual_union_capacity": 5
+        }
+      ],
+      "layer": "n35-m306",
+      "rejected": true,
+      "state_id": 217
+    },
+    {
+      "active": false,
+      "checks": [
+        {
+          "H": [
+            13,
+            14,
+            15,
+            16,
+            17,
+            18
+          ],
+          "K": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8
+          ],
+          "L": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5,
+            6
+          ],
+          "M": [
+            7,
+            8,
+            9,
+            10,
+            11,
+            12
+          ],
+          "d": 6,
+          "preliminary_pair_lower": 18,
+          "preliminary_pair_rejected": true,
+          "preliminary_pair_upper": 15,
+          "rejected": true,
+          "required_union": 9,
+          "residual_union_capacity": 6
+        }
+      ],
+      "layer": "n35-m306",
+      "rejected": true,
+      "state_id": 446
+    }
+  ],
+  "status": "INTERNAL_WHOLE_STATE_CERTIFICATES_NOT_PROMOTED"
+}

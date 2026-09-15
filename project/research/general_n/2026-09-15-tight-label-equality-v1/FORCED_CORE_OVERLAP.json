@@ -1,0 +1,1629 @@
+{
+  "source": "Complete census job logs, run34999206636; source commit52ea9f1d787736a2c93451ef05886061085af27f; all170 job counts sum to final aggregate",
+  "previous_candidates": [
+    {
+      "aggregate": 4875498,
+      "gap": 0,
+      "job": 104484526786,
+      "layer": 0,
+      "name": "census (0)",
+      "profiles": 27787962,
+      "state": 152
+    },
+    {
+      "aggregate": 70309386,
+      "gap": 0,
+      "job": 104484529280,
+      "layer": 0,
+      "name": "census (1)",
+      "profiles": 165810715,
+      "state": 963
+    },
+    {
+      "aggregate": 44861468,
+      "gap": 0,
+      "job": 104484532709,
+      "layer": 0,
+      "name": "census (2)",
+      "profiles": 113427312,
+      "state": 1297
+    },
+    {
+      "aggregate": 3805883,
+      "gap": 0,
+      "job": 104484544575,
+      "layer": 0,
+      "name": "census (3)",
+      "profiles": 16134038,
+      "state": 2172
+    },
+    {
+      "aggregate": 1668514,
+      "gap": 0,
+      "job": 104484545018,
+      "layer": 0,
+      "name": "census (4)",
+      "profiles": 9915607,
+      "state": 2327
+    },
+    {
+      "aggregate": 6718437,
+      "gap": 0,
+      "job": 104484545082,
+      "layer": 0,
+      "name": "census (5)",
+      "profiles": 43357526,
+      "state": 2442
+    },
+    {
+      "aggregate": 3660204,
+      "gap": 0,
+      "job": 104484545254,
+      "layer": 0,
+      "name": "census (6)",
+      "profiles": 43515052,
+      "state": 2504
+    },
+    {
+      "aggregate": 860047,
+      "gap": 0,
+      "job": 104484526634,
+      "layer": 0,
+      "name": "census (7)",
+      "profiles": 6447247,
+      "state": 2531
+    },
+    {
+      "aggregate": 14092853,
+      "gap": 0,
+      "job": 104484526775,
+      "layer": 0,
+      "name": "census (8)",
+      "profiles": 66799539,
+      "state": 2578
+    },
+    {
+      "aggregate": 39389760,
+      "gap": 0,
+      "job": 104484526650,
+      "layer": 0,
+      "name": "census (9)",
+      "profiles": 187440912,
+      "state": 2579
+    },
+    {
+      "aggregate": 2023126,
+      "gap": 0,
+      "job": 104484526958,
+      "layer": 0,
+      "name": "census (10)",
+      "profiles": 48691732,
+      "state": 2811
+    },
+    {
+      "aggregate": 225671,
+      "gap": 0,
+      "job": 104484546224,
+      "layer": 0,
+      "name": "census (11)",
+      "profiles": 4644060,
+      "state": 2812
+    },
+    {
+      "aggregate": 4327710,
+      "gap": 0,
+      "job": 104484551135,
+      "layer": 0,
+      "name": "census (12)",
+      "profiles": 26214324,
+      "state": 2858
+    },
+    {
+      "aggregate": 12936727,
+      "gap": 0,
+      "job": 104484551204,
+      "layer": 0,
+      "name": "census (13)",
+      "profiles": 78940412,
+      "state": 2859
+    },
+    {
+      "aggregate": 172114527,
+      "gap": 0,
+      "job": 104484546582,
+      "layer": 0,
+      "name": "census (14)",
+      "profiles": 675200478,
+      "state": 4626
+    },
+    {
+      "aggregate": 41724220,
+      "gap": 0,
+      "job": 104484546536,
+      "layer": 0,
+      "name": "census (15)",
+      "profiles": 168830178,
+      "state": 4627
+    },
+    {
+      "aggregate": 290738173,
+      "gap": 0,
+      "job": 104484529358,
+      "layer": 0,
+      "name": "census (16)",
+      "profiles": 488241272,
+      "state": 4913
+    },
+    {
+      "aggregate": 226836350,
+      "gap": 0,
+      "job": 104484530323,
+      "layer": 0,
+      "name": "census (17)",
+      "profiles": 392864925,
+      "state": 4937
+    },
+    {
+      "aggregate": 202637518,
+      "gap": 0,
+      "job": 104484530430,
+      "layer": 0,
+      "name": "census (18)",
+      "profiles": 343679208,
+      "state": 4944
+    },
+    {
+      "aggregate": 631449924,
+      "gap": 0,
+      "job": 104484530523,
+      "layer": 0,
+      "name": "census (19)",
+      "profiles": 1028169755,
+      "state": 4952
+    },
+    {
+      "aggregate": 118782769,
+      "gap": 0,
+      "job": 104484530776,
+      "layer": 0,
+      "name": "census (20)",
+      "profiles": 220130502,
+      "state": 4953
+    },
+    {
+      "aggregate": 208735544,
+      "gap": 0,
+      "job": 104484530595,
+      "layer": 0,
+      "name": "census (21)",
+      "profiles": 352713992,
+      "state": 4954
+    },
+    {
+      "aggregate": 321529771,
+      "gap": 0,
+      "job": 104484530812,
+      "layer": 0,
+      "name": "census (22)",
+      "profiles": 561351174,
+      "state": 4955
+    },
+    {
+      "aggregate": 170626611,
+      "gap": 0,
+      "job": 104484530805,
+      "layer": 0,
+      "name": "census (23)",
+      "profiles": 285998398,
+      "state": 5001
+    },
+    {
+      "aggregate": 119845587,
+      "gap": 0,
+      "job": 104484530756,
+      "layer": 0,
+      "name": "census (24)",
+      "profiles": 217917190,
+      "state": 5010
+    },
+    {
+      "aggregate": 109015631,
+      "gap": 0,
+      "job": 104484531030,
+      "layer": 0,
+      "name": "census (25)",
+      "profiles": 181487386,
+      "state": 5011
+    },
+    {
+      "aggregate": 271391443,
+      "gap": 0,
+      "job": 104484530993,
+      "layer": 0,
+      "name": "census (26)",
+      "profiles": 472056075,
+      "state": 5012
+    },
+    {
+      "aggregate": 130648429,
+      "gap": 0,
+      "job": 104484531997,
+      "layer": 0,
+      "name": "census (27)",
+      "profiles": 222347996,
+      "state": 5039
+    },
+    {
+      "aggregate": 137379784,
+      "gap": 0,
+      "job": 104484532069,
+      "layer": 0,
+      "name": "census (28)",
+      "profiles": 222347996,
+      "state": 5046
+    },
+    {
+      "aggregate": 91444726,
+      "gap": 0,
+      "job": 104484532296,
+      "layer": 0,
+      "name": "census (29)",
+      "profiles": 168830178,
+      "state": 5049
+    },
+    {
+      "aggregate": 109015631,
+      "gap": 0,
+      "job": 104484532148,
+      "layer": 0,
+      "name": "census (30)",
+      "profiles": 181487386,
+      "state": 5050
+    },
+    {
+      "aggregate": 314686770,
+      "gap": 0,
+      "job": 104484532356,
+      "layer": 0,
+      "name": "census (31)",
+      "profiles": 566511633,
+      "state": 5051
+    },
+    {
+      "aggregate": 267116082,
+      "gap": 0,
+      "job": 104484532517,
+      "layer": 0,
+      "name": "census (32)",
+      "profiles": 466008738,
+      "state": 5157
+    },
+    {
+      "aggregate": 141534399,
+      "gap": 0,
+      "job": 104484532452,
+      "layer": 0,
+      "name": "census (33)",
+      "profiles": 265148098,
+      "state": 5166
+    },
+    {
+      "aggregate": 294690437,
+      "gap": 0,
+      "job": 104484532751,
+      "layer": 0,
+      "name": "census (34)",
+      "profiles": 432158769,
+      "state": 5507
+    },
+    {
+      "aggregate": 198545744,
+      "gap": 0,
+      "job": 104484532922,
+      "layer": 0,
+      "name": "census (35)",
+      "profiles": 301420307,
+      "state": 5573
+    },
+    {
+      "aggregate": 209934963,
+      "gap": 0,
+      "job": 104484533781,
+      "layer": 0,
+      "name": "census (36)",
+      "profiles": 313267237,
+      "state": 5580
+    },
+    {
+      "aggregate": 642167658,
+      "gap": 0,
+      "job": 104484533849,
+      "layer": 0,
+      "name": "census (37)",
+      "profiles": 924319221,
+      "state": 5588
+    },
+    {
+      "aggregate": 129413508,
+      "gap": 0,
+      "job": 104484533697,
+      "layer": 0,
+      "name": "census (38)",
+      "profiles": 221738573,
+      "state": 5589
+    },
+    {
+      "aggregate": 169222863,
+      "gap": 0,
+      "job": 104484534007,
+      "layer": 0,
+      "name": "census (39)",
+      "profiles": 251904094,
+      "state": 5590
+    },
+    {
+      "aggregate": 330628888,
+      "gap": 0,
+      "job": 104484534067,
+      "layer": 0,
+      "name": "census (40)",
+      "profiles": 508039908,
+      "state": 5591
+    },
+    {
+      "aggregate": 216157176,
+      "gap": 0,
+      "job": 104484533967,
+      "layer": 0,
+      "name": "census (41)",
+      "profiles": 322907844,
+      "state": 5631
+    },
+    {
+      "aggregate": 144446453,
+      "gap": 0,
+      "job": 104484534159,
+      "layer": 0,
+      "name": "census (42)",
+      "profiles": 217577147,
+      "state": 5644
+    },
+    {
+      "aggregate": 437979284,
+      "gap": 0,
+      "job": 104484534321,
+      "layer": 0,
+      "name": "census (43)",
+      "profiles": 633836127,
+      "state": 5669
+    },
+    {
+      "aggregate": 89480616,
+      "gap": 0,
+      "job": 104484534511,
+      "layer": 0,
+      "name": "census (44)",
+      "profiles": 153308793,
+      "state": 5670
+    },
+    {
+      "aggregate": 139919272,
+      "gap": 0,
+      "job": 104484534880,
+      "layer": 0,
+      "name": "census (45)",
+      "profiles": 208876459,
+      "state": 5671
+    },
+    {
+      "aggregate": 140660332,
+      "gap": 0,
+      "job": 104484535417,
+      "layer": 0,
+      "name": "census (46)",
+      "profiles": 200499441,
+      "state": 5690
+    },
+    {
+      "aggregate": 457405101,
+      "gap": 0,
+      "job": 104484535550,
+      "layer": 0,
+      "name": "census (47)",
+      "profiles": 633836127,
+      "state": 5691
+    },
+    {
+      "aggregate": 304062316,
+      "gap": 0,
+      "job": 104484535612,
+      "layer": 0,
+      "name": "census (48)",
+      "profiles": 496362219,
+      "state": 5700
+    },
+    {
+      "aggregate": 41643094,
+      "gap": 0,
+      "job": 104484535639,
+      "layer": 0,
+      "name": "census (49)",
+      "profiles": 79591494,
+      "state": 5701
+    },
+    {
+      "aggregate": 101953646,
+      "gap": 0,
+      "job": 104484535707,
+      "layer": 0,
+      "name": "census (50)",
+      "profiles": 173223229,
+      "state": 5704
+    },
+    {
+      "aggregate": 69804070,
+      "gap": 0,
+      "job": 104484536172,
+      "layer": 0,
+      "name": "census (51)",
+      "profiles": 101708068,
+      "state": 5705
+    },
+    {
+      "aggregate": 138984045,
+      "gap": 0,
+      "job": 104484536014,
+      "layer": 0,
+      "name": "census (52)",
+      "profiles": 246027920,
+      "state": 5708
+    },
+    {
+      "aggregate": 222571430,
+      "gap": 0,
+      "job": 104484536304,
+      "layer": 0,
+      "name": "census (53)",
+      "profiles": 340733195,
+      "state": 5709
+    },
+    {
+      "aggregate": 124201696,
+      "gap": 0,
+      "job": 104484536355,
+      "layer": 0,
+      "name": "census (54)",
+      "profiles": 179968936,
+      "state": 5790
+    },
+    {
+      "aggregate": 113297537,
+      "gap": 0,
+      "job": 104484536612,
+      "layer": 0,
+      "name": "census (55)",
+      "profiles": 168153523,
+      "state": 5796
+    },
+    {
+      "aggregate": 82927355,
+      "gap": 0,
+      "job": 104484536884,
+      "layer": 0,
+      "name": "census (56)",
+      "profiles": 139131112,
+      "state": 5806
+    },
+    {
+      "aggregate": 69804070,
+      "gap": 0,
+      "job": 104484537093,
+      "layer": 0,
+      "name": "census (57)",
+      "profiles": 101708068,
+      "state": 5807
+    },
+    {
+      "aggregate": 272497628,
+      "gap": 0,
+      "job": 104484537147,
+      "layer": 0,
+      "name": "census (58)",
+      "profiles": 425853086,
+      "state": 5808
+    },
+    {
+      "aggregate": 187006273,
+      "gap": 0,
+      "job": 104484537460,
+      "layer": 0,
+      "name": "census (59)",
+      "profiles": 273555459,
+      "state": 5819
+    },
+    {
+      "aggregate": 89790505,
+      "gap": 0,
+      "job": 104484537416,
+      "layer": 0,
+      "name": "census (60)",
+      "profiles": 129778855,
+      "state": 5910
+    },
+    {
+      "aggregate": 69804070,
+      "gap": 0,
+      "job": 104484537796,
+      "layer": 0,
+      "name": "census (61)",
+      "profiles": 101708068,
+      "state": 5914
+    },
+    {
+      "aggregate": 637867950,
+      "gap": 0,
+      "job": 104484537951,
+      "layer": 0,
+      "name": "census (62)",
+      "profiles": 963179836,
+      "state": 5944
+    },
+    {
+      "aggregate": 149005479,
+      "gap": 0,
+      "job": 104484538004,
+      "layer": 0,
+      "name": "census (63)",
+      "profiles": 270330479,
+      "state": 5945
+    },
+    {
+      "aggregate": 171610177,
+      "gap": 0,
+      "job": 104484538241,
+      "layer": 0,
+      "name": "census (64)",
+      "profiles": 259293206,
+      "state": 5946
+    },
+    {
+      "aggregate": 538327567,
+      "gap": 0,
+      "job": 104484538494,
+      "layer": 0,
+      "name": "census (65)",
+      "profiles": 785588706,
+      "state": 6100
+    },
+    {
+      "aggregate": 140136542,
+      "gap": 0,
+      "job": 104484538759,
+      "layer": 0,
+      "name": "census (66)",
+      "profiles": 243723956,
+      "state": 6101
+    },
+    {
+      "aggregate": 110227846,
+      "gap": 0,
+      "job": 104484538848,
+      "layer": 0,
+      "name": "census (67)",
+      "profiles": 157112206,
+      "state": 6120
+    },
+    {
+      "aggregate": 364425529,
+      "gap": 0,
+      "job": 104484539067,
+      "layer": 0,
+      "name": "census (68)",
+      "profiles": 505826775,
+      "state": 6121
+    },
+    {
+      "aggregate": 98200864,
+      "gap": 0,
+      "job": 104484539116,
+      "layer": 0,
+      "name": "census (69)",
+      "profiles": 157278698,
+      "state": 6122
+    },
+    {
+      "aggregate": 63480791,
+      "gap": 0,
+      "job": 104484539272,
+      "layer": 0,
+      "name": "census (70)",
+      "profiles": 119072014,
+      "state": 6131
+    },
+    {
+      "aggregate": 138876894,
+      "gap": 0,
+      "job": 104484539435,
+      "layer": 0,
+      "name": "census (71)",
+      "profiles": 210431109,
+      "state": 6730
+    },
+    {
+      "aggregate": 94941261,
+      "gap": 0,
+      "job": 104484539585,
+      "layer": 0,
+      "name": "census (72)",
+      "profiles": 150184378,
+      "state": 6778
+    },
+    {
+      "aggregate": 317285400,
+      "gap": 0,
+      "job": 104484539788,
+      "layer": 0,
+      "name": "census (73)",
+      "profiles": 481544213,
+      "state": 6786
+    },
+    {
+      "aggregate": 48508836,
+      "gap": 0,
+      "job": 104484539795,
+      "layer": 0,
+      "name": "census (74)",
+      "profiles": 88290521,
+      "state": 6787
+    },
+    {
+      "aggregate": 81767989,
+      "gap": 0,
+      "job": 104484540256,
+      "layer": 0,
+      "name": "census (75)",
+      "profiles": 128224562,
+      "state": 6788
+    },
+    {
+      "aggregate": 146324419,
+      "gap": 0,
+      "job": 104484540443,
+      "layer": 0,
+      "name": "census (76)",
+      "profiles": 239957991,
+      "state": 6789
+    },
+    {
+      "aggregate": 98080768,
+      "gap": 0,
+      "job": 104484540597,
+      "layer": 0,
+      "name": "census (77)",
+      "profiles": 153140353,
+      "state": 6818
+    },
+    {
+      "aggregate": 65080012,
+      "gap": 0,
+      "job": 104484540663,
+      "layer": 0,
+      "name": "census (78)",
+      "profiles": 102628245,
+      "state": 6825
+    },
+    {
+      "aggregate": 214982549,
+      "gap": 0,
+      "job": 104484540838,
+      "layer": 0,
+      "name": "census (79)",
+      "profiles": 323686112,
+      "state": 6834
+    },
+    {
+      "aggregate": 33492287,
+      "gap": 0,
+      "job": 104484541031,
+      "layer": 0,
+      "name": "census (80)",
+      "profiles": 60402380,
+      "state": 6835
+    },
+    {
+      "aggregate": 67495370,
+      "gap": 0,
+      "job": 104484541348,
+      "layer": 0,
+      "name": "census (81)",
+      "profiles": 105354594,
+      "state": 6836
+    },
+    {
+      "aggregate": 150193361,
+      "gap": 0,
+      "job": 104484541275,
+      "layer": 0,
+      "name": "census (82)",
+      "profiles": 256666603,
+      "state": 6837
+    },
+    {
+      "aggregate": 61134373,
+      "gap": 0,
+      "job": 104484541304,
+      "layer": 0,
+      "name": "census (83)",
+      "profiles": 91440222,
+      "state": 6944
+    },
+    {
+      "aggregate": 54523557,
+      "gap": 0,
+      "job": 104484541471,
+      "layer": 0,
+      "name": "census (84)",
+      "profiles": 84033846,
+      "state": 6950
+    },
+    {
+      "aggregate": 128201441,
+      "gap": 0,
+      "job": 104484541919,
+      "layer": 0,
+      "name": "census (85)",
+      "profiles": 210877421,
+      "state": 6958
+    },
+    {
+      "aggregate": 89749058,
+      "gap": 0,
+      "job": 104484542222,
+      "layer": 0,
+      "name": "census (86)",
+      "profiles": 134224479,
+      "state": 6965
+    },
+    {
+      "aggregate": 103753379,
+      "gap": 0,
+      "job": 104484542220,
+      "layer": 0,
+      "name": "census (87)",
+      "profiles": 160981894,
+      "state": 7028
+    },
+    {
+      "aggregate": 86166921,
+      "gap": 0,
+      "job": 104484542214,
+      "layer": 0,
+      "name": "census (88)",
+      "profiles": 135663275,
+      "state": 7032
+    },
+    {
+      "aggregate": 59228617,
+      "gap": 0,
+      "job": 104484542423,
+      "layer": 0,
+      "name": "census (89)",
+      "profiles": 86904660,
+      "state": 7058
+    },
+    {
+      "aggregate": 90229660,
+      "gap": 0,
+      "job": 104484542507,
+      "layer": 0,
+      "name": "census (90)",
+      "profiles": 135663275,
+      "state": 7184
+    },
+    {
+      "aggregate": 294212694,
+      "gap": 0,
+      "job": 104484542819,
+      "layer": 0,
+      "name": "census (91)",
+      "profiles": 443962253,
+      "state": 7186
+    },
+    {
+      "aggregate": 62324234,
+      "gap": 0,
+      "job": 104484543191,
+      "layer": 0,
+      "name": "census (92)",
+      "profiles": 113710894,
+      "state": 7187
+    },
+    {
+      "aggregate": 57304150,
+      "gap": 0,
+      "job": 104484543204,
+      "layer": 0,
+      "name": "census (93)",
+      "profiles": 92800217,
+      "state": 7547
+    },
+    {
+      "aggregate": 67475921,
+      "gap": 0,
+      "job": 104484543506,
+      "layer": 0,
+      "name": "census (94)",
+      "profiles": 121346555,
+      "state": 7683
+    },
+    {
+      "aggregate": 40612520,
+      "gap": 0,
+      "job": 104484543530,
+      "layer": 0,
+      "name": "census (95)",
+      "profiles": 65923714,
+      "state": 7829
+    },
+    {
+      "aggregate": 35182023,
+      "gap": 0,
+      "job": 104484543647,
+      "layer": 0,
+      "name": "census (96)",
+      "profiles": 60065968,
+      "state": 7833
+    },
+    {
+      "aggregate": 60972023,
+      "gap": 0,
+      "job": 104484543755,
+      "layer": 0,
+      "name": "census (97)",
+      "profiles": 107924832,
+      "state": 7834
+    },
+    {
+      "aggregate": 126111403,
+      "gap": 0,
+      "job": 104484543841,
+      "layer": 0,
+      "name": "census (98)",
+      "profiles": 205306004,
+      "state": 7853
+    },
+    {
+      "aggregate": 20149922,
+      "gap": 0,
+      "job": 104484543861,
+      "layer": 0,
+      "name": "census (99)",
+      "profiles": 46082531,
+      "state": 7854
+    },
+    {
+      "aggregate": 52543652,
+      "gap": 0,
+      "job": 104484543985,
+      "layer": 0,
+      "name": "census (100)",
+      "profiles": 93144010,
+      "state": 7856
+    },
+    {
+      "aggregate": 3464085,
+      "gap": 0,
+      "job": 104484544043,
+      "layer": 0,
+      "name": "census (101)",
+      "profiles": 17624514,
+      "state": 8118
+    },
+    {
+      "aggregate": 14547914,
+      "gap": 0,
+      "job": 104484544805,
+      "layer": 0,
+      "name": "census (102)",
+      "profiles": 31699463,
+      "state": 8255
+    },
+    {
+      "aggregate": 11865470,
+      "gap": 0,
+      "job": 104484544981,
+      "layer": 0,
+      "name": "census (103)",
+      "profiles": 28748550,
+      "state": 8259
+    },
+    {
+      "aggregate": 13390956,
+      "gap": 0,
+      "job": 104484544895,
+      "layer": 0,
+      "name": "census (104)",
+      "profiles": 28748550,
+      "state": 8277
+    },
+    {
+      "aggregate": 4829391,
+      "gap": 0,
+      "job": 104484545377,
+      "layer": 0,
+      "name": "census (105)",
+      "profiles": 13955545,
+      "state": 8667
+    },
+    {
+      "aggregate": 18366354,
+      "gap": 0,
+      "job": 104484545431,
+      "layer": 0,
+      "name": "census (106)",
+      "profiles": 61112794,
+      "state": 8742
+    },
+    {
+      "aggregate": 2857614,
+      "gap": 0,
+      "job": 104484545300,
+      "layer": 0,
+      "name": "census (107)",
+      "profiles": 11595286,
+      "state": 8743
+    },
+    {
+      "aggregate": 6129303,
+      "gap": 0,
+      "job": 104484546163,
+      "layer": 0,
+      "name": "census (108)",
+      "profiles": 24170662,
+      "state": 8747
+    },
+    {
+      "aggregate": 4277940,
+      "gap": 0,
+      "job": 104484526687,
+      "layer": 0,
+      "name": "census (109)",
+      "profiles": 14583186,
+      "state": 9073
+    },
+    {
+      "aggregate": 3375922,
+      "gap": 0,
+      "job": 104484526696,
+      "layer": 0,
+      "name": "census (110)",
+      "profiles": 9417336,
+      "state": 9165
+    },
+    {
+      "aggregate": 11049572,
+      "gap": 0,
+      "job": 104484526871,
+      "layer": 0,
+      "name": "census (111)",
+      "profiles": 34184410,
+      "state": 9200
+    },
+    {
+      "aggregate": 2042116,
+      "gap": 0,
+      "job": 104484526975,
+      "layer": 0,
+      "name": "census (112)",
+      "profiles": 7987220,
+      "state": 9201
+    },
+    {
+      "aggregate": 3803027,
+      "gap": 0,
+      "job": 104484526711,
+      "layer": 0,
+      "name": "census (113)",
+      "profiles": 13750783,
+      "state": 9205
+    },
+    {
+      "aggregate": 3130211,
+      "gap": 0,
+      "job": 104484526930,
+      "layer": 0,
+      "name": "census (114)",
+      "profiles": 13759442,
+      "state": 9206
+    },
+    {
+      "aggregate": 3017846,
+      "gap": 0,
+      "job": 104484526862,
+      "layer": 0,
+      "name": "census (115)",
+      "profiles": 8039741,
+      "state": 9337
+    },
+    {
+      "aggregate": 8722591,
+      "gap": 0,
+      "job": 104484527073,
+      "layer": 0,
+      "name": "census (116)",
+      "profiles": 25586993,
+      "state": 9343
+    },
+    {
+      "aggregate": 23251455,
+      "gap": 0,
+      "job": 104484527078,
+      "layer": 0,
+      "name": "census (117)",
+      "profiles": 65683834,
+      "state": 9344
+    },
+    {
+      "aggregate": 9344506,
+      "gap": 0,
+      "job": 104484526926,
+      "layer": 0,
+      "name": "census (118)",
+      "profiles": 33656947,
+      "state": 9346
+    },
+    {
+      "aggregate": 1196435,
+      "gap": 0,
+      "job": 104484527017,
+      "layer": 0,
+      "name": "census (119)",
+      "profiles": 5042171,
+      "state": 9347
+    },
+    {
+      "aggregate": 15726866,
+      "gap": 0,
+      "job": 104484526948,
+      "layer": 0,
+      "name": "census (120)",
+      "profiles": 51968802,
+      "state": 9349
+    },
+    {
+      "aggregate": 2938214,
+      "gap": 0,
+      "job": 104484527046,
+      "layer": 0,
+      "name": "census (121)",
+      "profiles": 12540819,
+      "state": 9350
+    },
+    {
+      "aggregate": 8491743,
+      "gap": 0,
+      "job": 104484526946,
+      "layer": 0,
+      "name": "census (122)",
+      "profiles": 30244552,
+      "state": 9633
+    },
+    {
+      "aggregate": 829722,
+      "gap": 0,
+      "job": 104484546700,
+      "layer": 0,
+      "name": "census (123)",
+      "profiles": 3356702,
+      "state": 9634
+    },
+    {
+      "aggregate": 1378878,
+      "gap": 0,
+      "job": 104484526919,
+      "layer": 0,
+      "name": "census (124)",
+      "profiles": 5214032,
+      "state": 9635
+    },
+    {
+      "aggregate": 2499938,
+      "gap": 0,
+      "job": 104484527051,
+      "layer": 0,
+      "name": "census (125)",
+      "profiles": 11340005,
+      "state": 9636
+    },
+    {
+      "aggregate": 1378878,
+      "gap": 0,
+      "job": 104484527025,
+      "layer": 0,
+      "name": "census (126)",
+      "profiles": 5214032,
+      "state": 9694
+    },
+    {
+      "aggregate": 6216299,
+      "gap": 0,
+      "job": 104484528976,
+      "layer": 0,
+      "name": "census (127)",
+      "profiles": 21644546,
+      "state": 9723
+    },
+    {
+      "aggregate": 968990,
+      "gap": 0,
+      "job": 104484528811,
+      "layer": 0,
+      "name": "census (128)",
+      "profiles": 4047466,
+      "state": 9724
+    },
+    {
+      "aggregate": 1948975,
+      "gap": 0,
+      "job": 104484528863,
+      "layer": 0,
+      "name": "census (129)",
+      "profiles": 8144416,
+      "state": 9728
+    },
+    {
+      "aggregate": 1627030,
+      "gap": 0,
+      "job": 104484528740,
+      "layer": 0,
+      "name": "census (130)",
+      "profiles": 4758019,
+      "state": 9848
+    },
+    {
+      "aggregate": 1195826,
+      "gap": 0,
+      "job": 104484529059,
+      "layer": 0,
+      "name": "census (131)",
+      "profiles": 4047466,
+      "state": 9850
+    },
+    {
+      "aggregate": 5034960,
+      "gap": 0,
+      "job": 104484528885,
+      "layer": 0,
+      "name": "census (132)",
+      "profiles": 16516193,
+      "state": 9854
+    },
+    {
+      "aggregate": 14329914,
+      "gap": 0,
+      "job": 104484529081,
+      "layer": 0,
+      "name": "census (133)",
+      "profiles": 45444707,
+      "state": 9855
+    },
+    {
+      "aggregate": 4713046,
+      "gap": 0,
+      "job": 104484529044,
+      "layer": 0,
+      "name": "census (134)",
+      "profiles": 18332751,
+      "state": 9857
+    },
+    {
+      "aggregate": 398331,
+      "gap": 0,
+      "job": 104484551334,
+      "layer": 0,
+      "name": "census (135)",
+      "profiles": 1732067,
+      "state": 9858
+    },
+    {
+      "aggregate": 1476856,
+      "gap": 0,
+      "job": 104484546732,
+      "layer": 0,
+      "name": "census (136)",
+      "profiles": 5538908,
+      "state": 10025
+    },
+    {
+      "aggregate": 6403486,
+      "gap": 0,
+      "job": 104484546820,
+      "layer": 0,
+      "name": "census (137)",
+      "profiles": 22943003,
+      "state": 10045
+    },
+    {
+      "aggregate": 829988,
+      "gap": 0,
+      "job": 104484547108,
+      "layer": 0,
+      "name": "census (138)",
+      "profiles": 3356702,
+      "state": 10046
+    },
+    {
+      "aggregate": 810531,
+      "gap": 0,
+      "job": 104484546999,
+      "layer": 0,
+      "name": "census (139)",
+      "profiles": 3161414,
+      "state": 10047
+    },
+    {
+      "aggregate": 2831575,
+      "gap": 0,
+      "job": 104484547493,
+      "layer": 0,
+      "name": "census (140)",
+      "profiles": 13598522,
+      "state": 10048
+    },
+    {
+      "aggregate": 1646725,
+      "gap": 0,
+      "job": 104484547893,
+      "layer": 0,
+      "name": "census (141)",
+      "profiles": 5050864,
+      "state": 10064
+    },
+    {
+      "aggregate": 7939193,
+      "gap": 0,
+      "job": 104484548013,
+      "layer": 0,
+      "name": "census (142)",
+      "profiles": 22943003,
+      "state": 10065
+    },
+    {
+      "aggregate": 1012660,
+      "gap": 0,
+      "job": 104484548117,
+      "layer": 0,
+      "name": "census (143)",
+      "profiles": 3356702,
+      "state": 10066
+    },
+    {
+      "aggregate": 5094236,
+      "gap": 0,
+      "job": 104484548145,
+      "layer": 0,
+      "name": "census (144)",
+      "profiles": 17478052,
+      "state": 10071
+    },
+    {
+      "aggregate": 14607188,
+      "gap": 0,
+      "job": 104484548278,
+      "layer": 0,
+      "name": "census (145)",
+      "profiles": 48032574,
+      "state": 10072
+    },
+    {
+      "aggregate": 4035049,
+      "gap": 0,
+      "job": 104484548365,
+      "layer": 0,
+      "name": "census (146)",
+      "profiles": 15279759,
+      "state": 10074
+    },
+    {
+      "aggregate": 3566802,
+      "gap": 0,
+      "job": 104484548659,
+      "layer": 0,
+      "name": "census (147)",
+      "profiles": 12919611,
+      "state": 10076
+    },
+    {
+      "aggregate": 702261,
+      "gap": 0,
+      "job": 104484548810,
+      "layer": 0,
+      "name": "census (148)",
+      "profiles": 3116115,
+      "state": 10077
+    },
+    {
+      "aggregate": 1047902,
+      "gap": 0,
+      "job": 104484549575,
+      "layer": 0,
+      "name": "census (149)",
+      "profiles": 5336991,
+      "state": 10080
+    },
+    {
+      "aggregate": 3566802,
+      "gap": 0,
+      "job": 104484549309,
+      "layer": 0,
+      "name": "census (150)",
+      "profiles": 12919611,
+      "state": 10219
+    },
+    {
+      "aggregate": 702261,
+      "gap": 0,
+      "job": 104484549405,
+      "layer": 0,
+      "name": "census (151)",
+      "profiles": 3116115,
+      "state": 10220
+    },
+    {
+      "aggregate": 1615588,
+      "gap": 0,
+      "job": 104484549495,
+      "layer": 0,
+      "name": "census (152)",
+      "profiles": 7744302,
+      "state": 10224
+    },
+    {
+      "aggregate": 943783,
+      "gap": 0,
+      "job": 104484549537,
+      "layer": 0,
+      "name": "census (153)",
+      "profiles": 2871038,
+      "state": 10270
+    },
+    {
+      "aggregate": 4530560,
+      "gap": 0,
+      "job": 104484549667,
+      "layer": 0,
+      "name": "census (154)",
+      "profiles": 12919611,
+      "state": 10271
+    },
+    {
+      "aggregate": 881691,
+      "gap": 0,
+      "job": 104484549868,
+      "layer": 0,
+      "name": "census (155)",
+      "profiles": 3116115,
+      "state": 10272
+    },
+    {
+      "aggregate": 3438392,
+      "gap": 0,
+      "job": 104484550101,
+      "layer": 0,
+      "name": "census (156)",
+      "profiles": 14028856,
+      "state": 10295
+    },
+    {
+      "aggregate": 398331,
+      "gap": 0,
+      "job": 104484551526,
+      "layer": 0,
+      "name": "census (157)",
+      "profiles": 1732067,
+      "state": 10296
+    },
+    {
+      "aggregate": 1345738,
+      "gap": 0,
+      "job": 104484550381,
+      "layer": 0,
+      "name": "census (158)",
+      "profiles": 7018207,
+      "state": 10309
+    },
+    {
+      "aggregate": 3633106,
+      "gap": 0,
+      "job": 104484550726,
+      "layer": 0,
+      "name": "census (159)",
+      "profiles": 9763955,
+      "state": 10503
+    },
+    {
+      "aggregate": 10373585,
+      "gap": 0,
+      "job": 104484550940,
+      "layer": 0,
+      "name": "census (160)",
+      "profiles": 26651945,
+      "state": 10504
+    },
+    {
+      "aggregate": 846084,
+      "gap": 0,
+      "job": 104484550963,
+      "layer": 0,
+      "name": "census (161)",
+      "profiles": 2879556,
+      "state": 10505
+    },
+    {
+      "aggregate": 4332102,
+      "gap": 0,
+      "job": 104484551068,
+      "layer": 0,
+      "name": "census (162)",
+      "profiles": 14028856,
+      "state": 10506
+    },
+    {
+      "aggregate": 481785,
+      "gap": 0,
+      "job": 104484551522,
+      "layer": 0,
+      "name": "census (163)",
+      "profiles": 1732067,
+      "state": 10507
+    },
+    {
+      "aggregate": 600146,
+      "gap": 0,
+      "job": 104484551834,
+      "layer": 0,
+      "name": "census (164)",
+      "profiles": 2247120,
+      "state": 10850
+    },
+    {
+      "aggregate": 398331,
+      "gap": 0,
+      "job": 104484552264,
+      "layer": 0,
+      "name": "census (165)",
+      "profiles": 1732067,
+      "state": 10858
+    },
+    {
+      "aggregate": 1084966,
+      "gap": 0,
+      "job": 104484552442,
+      "layer": 0,
+      "name": "census (166)",
+      "profiles": 5551113,
+      "state": 10861
+    },
+    {
+      "aggregate": 481785,
+      "gap": 0,
+      "job": 104484552476,
+      "layer": 0,
+      "name": "census (167)",
+      "profiles": 1732067,
+      "state": 10898
+    },
+    {
+      "aggregate": 844557,
+      "gap": 0,
+      "job": 104484552696,
+      "layer": 0,
+      "name": "census (168)",
+      "profiles": 5114179,
+      "state": 10926
+    },
+    {
+      "aggregate": 696122,
+      "gap": 0,
+      "job": 104484553095,
+      "layer": 0,
+      "name": "census (169)",
+      "profiles": 2785466,
+      "state": 11056
+    }
+  ],
+  "strict_block_ids": [
+    5507,
+    5573,
+    5580,
+    5586,
+    5588,
+    5591,
+    5631,
+    5644,
+    5666,
+    5667,
+    5669,
+    5672,
+    5690,
+    5691,
+    5694,
+    5710
+  ],
+  "equality_ids": [
+    911,
+    5590,
+    5671,
+    5693,
+    5709,
+    5790,
+    5796,
+    5802,
+    5803,
+    5808,
+    5819,
+    5834,
+    5909,
+    5910,
+    5915,
+    5922,
+    5924,
+    5927,
+    5932,
+    5944,
+    5947,
+    5948,
+    5973,
+    5986,
+    5993
+  ],
+  "strict_overlap": [
+    5507,
+    5573,
+    5580,
+    5588,
+    5591,
+    5631,
+    5644,
+    5669,
+    5690,
+    5691
+  ],
+  "strict_additional": [
+    5586,
+    5666,
+    5667,
+    5672,
+    5694,
+    5710
+  ],
+  "equality_overlap": [
+    5590,
+    5671,
+    5709,
+    5790,
+    5796,
+    5808,
+    5819,
+    5910,
+    5944
+  ],
+  "equality_additional": [
+    911,
+    5693,
+    5802,
+    5803,
+    5834,
+    5909,
+    5915,
+    5922,
+    5924,
+    5927,
+    5932,
+    5947,
+    5948,
+    5973,
+    5986,
+    5993
+  ]
+}

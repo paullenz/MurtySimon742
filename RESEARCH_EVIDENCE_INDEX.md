@@ -2,6 +2,10 @@
 
 This index distinguishes derivation, finite verification, preservation and external acceptance. The fully audited 2,655-key relational family has now passed the separate reviewed-ledger step and is promoted. The canonical finite frontier is 4,626 exclusions / 952 survivors / 3,632 whole-state closures. Fixed-order reviewer packages retain their separate status in [the reviewer index](releases/REVIEW_READY_INDEX.md).
 
+## 15 September 2026 — tight-block equality rigidity
+
+[Proof and independent exact replay](project/research/general_n/2026-09-15-tight-label-equality-v1/README.md): equality forces high selected sets to equal the tight block, leaving a scalar residual-union inequality. It rejects25 active states; Python/C++ agree on all4,588 inputs. Alongside the strict-block lemma,41 current states are certified, including22 additional keys beyond the earlier170 candidates. The exact overlap and all170 census job rows are preserved. Canonical counts unchanged, NOT_PROMOTED, external review OPEN. Next: the one-spare-receiver case.
+
 ## 15 September 2026 — tight-label scalar obstruction and completed census
 
 [Proof, complete input/output and independent replay](project/research/general_n/2026-09-15-tight-label-block-v1/README.md): 16 of952 active states have five tight labels and only four possible receivers; ten overlap the prior170 candidates and six are additional (5586,5666,5667,5672,5694,5710). Python/C++ agree across4,588 rows. Whole-state internal certificates, NOT_PROMOTED; canonical counts unchanged. The package also preserves the completed170-state receiver-price census (25,769,305,797 profiles, zero partition gaps), the interrupted3349 pilot and exploratory flow evidence. See CURRENT_STATE.md for exact provenance and next mathematical action.
