@@ -1,54 +1,10 @@
 # Murty–Simon / Erdős Problem #742
 
-<!-- Keep the live overview and status tables here. Put dated updates below them, never above them. -->
-<!-- CURRENT-STATUS:START -->
-## Current status
-
-**Latest mathematical checkpoint: `57a1a2b48637…` — spare-receiver rigidity, internally proved under explicit bridge hypotheses; NOT PROMOTED.** The [complete preserved proof and finite checks](project/research/general_n/2026-09-15-spare-receiver-rigidity-v1/PRESERVED_HANDOFF.md) extend the equality and one-spare arguments to **|M|=d+k with 0<=k<d**. High sources can select only the tight block; labels forced to occur at k+1 receivers must fit in every high residual set. The finite checks test elementary set steps, not graph realizations or catalogue exclusions. External review remains OPEN.
-
-**Canonical ledger: 4,626 exclusions / 952 survivors / 3,632 whole-state closures.** No new catalogue replay, new exclusion count or promotion is claimed by the spare-receiver proof. The unrestricted conjecture is **not claimed proved**.
-
-**Live operational handoff:** [`CURRENT_STATE.md`](CURRENT_STATE.md). **Reviewers:** [`START_HERE_FOR_REVIEWERS.md`](START_HERE_FOR_REVIEWERS.md) · [`REVIEW_READY_INDEX.md`](releases/REVIEW_READY_INDEX.md) · [papers and review materials](#papers-and-review-materials).
-
-## Current status: fixed-order candidates
-
-| Scope | Preserved candidate result; external review open |
-|---|---|
-| n=25 | e(G)<=156, equality exactly K(12,13); reviewer-v2 |
-| n=27 | e(G)<=182, equality exactly K(13,14); reviewer-v2 |
-| n=28 | e(G)<=196, equality exactly K(14,14); reviewer-v2 plus analytic hardening |
-| n=29 | e(G)<=210, equality exactly K(14,15); reviewer-v4; difficult Delta=16 branch hand-closed |
-| n=30 | e(G)<=225, equality exactly K(15,15); reviewer-v3 |
-| n=31 | e(G)<=240, equality exactly K(15,16); source-first reviewer-v1 |
-| n=32 | e(G)<=256, equality exactly K(16,16); source-first reviewer-v1 |
-| n=33 | e(G)<=272, equality exactly K(16,17); source-first reviewer-v1 |
-| n=34 | e(G)<=289, equality exactly K(17,17); reviewer-v2; final heavy certificate hand-replaced |
-| n=35 | e(G)<=306, equality exactly K(17,18); reviewer-v1 |
-
-## Current status: general research
-
-| Workstream | Current recorded position and trust boundary |
-|---|---|
-| Canonical finite frontier | **4,626 exclusions / 952 survivors / 3,632 whole-state closures**; unchanged |
-| Tight-label strict/equality families | **41 active states internally certified, NOT_PROMOTED**; 19 overlap the earlier 170 forced-core candidates, 22 are additional distinct keys |
-| Forced-core independent audit | **170 candidate exclusions and 136 survivor witnesses audited; AUDIT_COMPLETE_NOT_PROMOTED**; separate promotion gate still applies |
-| Spare-receiver structural proof | **0<=k<d**, |M|=d+k: high-source rigidity and k+1-occurrence residual-union bound; internal conditional proof, external review open |
-| Numerical replay | Original equality package records 4,588 Python/C++ decisions agreeing; **not freshly rerun in this session** |
-| Next mathematical question | **|M|=2d**: constrain extra high-source selections when two T-receiver sets can be disjoint; no graph counterexample is claimed |
-| Other unresolved work | State 3349 q-enumeration; transport of larger inputs; completion reporter NOT_IMPLEMENTED |
-
-**Status-first maintenance rule:** keep this live overview and these tables before chronological updates. Refresh this block at reviewer-facing milestones; use CURRENT_STATE.md for routine research transactions. Historical next-action and policy paragraphs below are retained for auditability, not instructions overriding this overview or AGENTS.md.
-<!-- RELATIONAL-FULL-PROMOTION:PROMOTED -->
-<!-- CURRENT-STATUS:END -->
-
 **Reviewers — start here:** [`START_HERE_FOR_REVIEWERS.md`](START_HERE_FOR_REVIEWERS.md) and [`releases/REVIEW_READY_INDEX.md`](releases/REVIEW_READY_INDEX.md). GitHub Issues/comments are preferred for counterexamples, corrections and reproducibility reports.
 
 Open, reproducible research on the Murty–Simon conjecture / Erdős Problem #742. **The unrestricted conjecture is not claimed proved.** External mathematical review, novelty assessment and independent third-party reproduction remain OPEN. The project actively welcomes hostile review, counterexamples, literature corrections and independent reproduction.
 
-## Dated research updates — preserved history
-
-The following dated updates retain earlier evidence, failures and next-action lists. They are superseded where applicable by the live overview above and CURRENT_STATE.md. Historical run observations are not fresh checks of running jobs. The [complete pre-layout README](archive/status-snapshots/2026-09-15/README_before_status_first.md) is also preserved byte-for-byte.
-
+<!-- CURRENT-STATUS:START -->
 **2026-09-15T21:06:56.336Z — further mathematics complete: equality rigidity adds 25 whole-state certificates.** Inspected predecessor `1992778d461056d365cc0c3584b510134b2b93ed`. The [new equality proof and exact replay](project/research/general_n/2026-09-15-tight-label-equality-v1/README.md) shows that when a tight d-label block has exactly d high sources and d receivers, each high source must select exactly that block. All labels selected at the receivers must fit in every high source's residual set. The resulting scalar bound rejects **25 current states**, with **4,588/4,588 Python/C++ decisions agreeing** (164 applicable historical states, all rejected; 4,424 outside scope). The weaker preliminary pair-count bound rejected only23 active states; its non-rejections are preserved. The stronger proof also excludes911 and5915. State5802 gives the hand contradiction **eight forced labels in five residual slots**.
 
 **Reconciled progress:** this equality family and the preceding strict-block family are disjoint and certify **41 of the current952 states**. **19 overlap the earlier170 forced-core candidates; 22 additional distinct keys are new to that candidate list.** [Exact overlap and all170 job records](project/research/general_n/2026-09-15-tight-label-equality-v1/FORCED_CORE_OVERLAP.json) reconcile to the completed census aggregate. No N35 active state is rejected. These are **internally verified whole-state certificates, NOT_PROMOTED**; external review remains OPEN. Canonical counts remain **4,626 exclusions /952 survivors /3,632 whole-state closures**. Prior audit `AUDIT_COMPLETE_NOT_PROMOTED`; receiver-price census `SUCCESS`, with no jobs still running. The five repository checks on predecessor1992778 all passed; they are not remote proof execution of this new equality package. Automatic workflow-completion reporting remains `NOT_IMPLEMENTED`.
@@ -71,9 +27,22 @@ The following dated updates retain earlier evidence, failures and next-action li
 
 **Canonical mathematical status unchanged: 4,626 exclusions / 952 survivors / 3,632 whole-state closures.** This documentation/policy reconciliation does not perform the separate reviewed forced-core promotion; 4,796 / 782 / 3,802 remain conditional post-promotion counts. External review remains OPEN. The earlier discovery/audit-pending observations below are preserved as dated history and superseded by this checkpoint where applicable. Next: inspect the last census job and final aggregate, preserve the audit/census outputs durably, apply the separate reviewed promotion gate, and implement/verify automatic completion reporting.
 
-## Historical general-research workstream register
+## Current status: fixed-order candidates
 
-The following register is retained from the preceding README. In particular, its older audit-pending and paired-README policy entries are historical; the current overview, AGENTS.md and CURRENT_STATE.md take precedence.
+| Scope | Preserved candidate result; external review open |
+|---|---|
+| n=25 | e(G)<=156, equality exactly K(12,13); reviewer-v2 |
+| n=27 | e(G)<=182, equality exactly K(13,14); reviewer-v2 |
+| n=28 | e(G)<=196, equality exactly K(14,14); reviewer-v2 plus analytic hardening |
+| n=29 | e(G)<=210, equality exactly K(14,15); reviewer-v4; difficult Delta=16 branch hand-closed |
+| n=30 | e(G)<=225, equality exactly K(15,15); reviewer-v3 |
+| n=31 | e(G)<=240, equality exactly K(15,16); source-first reviewer-v1 |
+| n=32 | e(G)<=256, equality exactly K(16,16); source-first reviewer-v1 |
+| n=33 | e(G)<=272, equality exactly K(16,17); source-first reviewer-v1 |
+| n=34 | e(G)<=289, equality exactly K(17,17); reviewer-v2; final heavy certificate hand-replaced |
+| n=35 | e(G)<=306, equality exactly K(17,18); reviewer-v1 |
+
+## Current status: general research
 
 | Workstream | Latest established or recorded position |
 |---|---|
@@ -100,10 +69,10 @@ The following register is retained from the preceding README. In particular, its
 **Repository-root archival cleanup — 15 September 2026.** Six historical `README_*` snapshots and eight historical `CURRENT_STATE_*` snapshots from 14 September have been moved, byte-for-byte, to [`archive/status-snapshots/2026-09-14/`](archive/status-snapshots/2026-09-14/README.md). This is navigation/preservation work only: no historical evidence is deleted, and the live root status surfaces remain `README.md` and `CURRENT_STATE.md`. **Canonical mathematical status unchanged.**
 
 **Maintenance provenance correction — 15 September 2026.** Commit `aa6c41fcede3bf2e7e935a00840030ef0b9ee1df` was generated by successful restoration workflow run `34905883642`. GitHub records both the run actor and triggering actor as `paullenz`; the workflow script nevertheless configured the Git commit as `Research verification <verification@users.noreply.github.com>`, which GitHub mapped to the unrelated account `verification` (display name Bill Wang). That historical commit is preserved to avoid rewriting the audited chain. The one-off restoration workflow is now manual-only, completed replays are read-only, and any future workflow-created commit uses the canonical `github-actions[bot]` identity. **Mathematical and canonical status are unchanged.**
+<!-- RELATIONAL-FULL-PROMOTION:PROMOTED -->
 
 **Standing order:** every commit must update the current-status blocks in BOTH this README and [`CURRENT_STATE.md`](CURRENT_STATE.md), in the same atomic commit, including an explicit unchanged-mathematics statement when appropriate. Keep these fixed-order and general summaries near the top. README changes must be additive/reconciliatory: do not silently delete or materially compress substantive historical content, especially protected audit history, failures/corrections and reviewer navigation. See [`AGENTS.md`](AGENTS.md) and [`CANONICAL_REPOSITORY.md`](CANONICAL_REPOSITORY.md).
-
-**Historical-policy clarification:** the preceding paragraph is retained verbatim as history. STATUS_SYNC_POLICY_V2 and RESEARCH_EXECUTION_POLICY_V3 now require CURRENT_STATE updates per transaction and README refreshes at substantive reviewer-facing milestones, not paired README edits on every routine checkpoint.
+<!-- CURRENT-STATUS:END -->
 
 **Canonical repository:** `paullenz/MurtySimon742`. For a restart read [`CURRENT_STATE.md`](CURRENT_STATE.md), [`RESEARCH_EVIDENCE_INDEX.md`](RESEARCH_EVIDENCE_INDEX.md), and newer commits. The complete pre-row108 root overview is preserved byte-for-byte in [`archive/status-snapshots/2026-09-14/README_PRE_ROW108_2026-09-14.md`](archive/status-snapshots/2026-09-14/README_PRE_ROW108_2026-09-14.md).
 
