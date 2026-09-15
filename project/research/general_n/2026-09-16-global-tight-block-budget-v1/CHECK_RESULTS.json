@@ -1,0 +1,140 @@
+{
+  "status": "PASS_TARGETED_BUDGET_CHECKS_ONLY",
+  "positive_part_identity": {
+    "rows": [
+      {
+        "a": 1,
+        "F_graphs": 1,
+        "degree_residual_cases": 2,
+        "positive_slack_cases": 1
+      },
+      {
+        "a": 2,
+        "F_graphs": 2,
+        "degree_residual_cases": 13,
+        "positive_slack_cases": 8
+      },
+      {
+        "a": 3,
+        "F_graphs": 8,
+        "degree_residual_cases": 170,
+        "positive_slack_cases": 125
+      },
+      {
+        "a": 4,
+        "F_graphs": 64,
+        "degree_residual_cases": 4417,
+        "positive_slack_cases": 3608
+      },
+      {
+        "a": 5,
+        "F_graphs": 1024,
+        "degree_residual_cases": 224906,
+        "positive_slack_cases": 196689
+      }
+    ],
+    "cases": 229508
+  },
+  "global_budget": {
+    "cases": 50748,
+    "positive_tau_relaxed_cases": 5216,
+    "cases_with_unused_vertices": 33696,
+    "graph_realizability": "NOT_ASSERTED"
+  },
+  "demand_cap": {
+    "candidate_demands": 360
+  },
+  "integer_thresholds": {
+    "rows": [
+      {
+        "d": 3,
+        "tau": 1,
+        "a_lower_bound_for_extras": 19,
+        "assumptions": "b>=a+2; necessary bound only"
+      },
+      {
+        "d": 4,
+        "tau": 1,
+        "a_lower_bound_for_extras": 20,
+        "assumptions": "b>=a+2; necessary bound only"
+      },
+      {
+        "d": 5,
+        "tau": 1,
+        "a_lower_bound_for_extras": 23,
+        "assumptions": "b>=a+2; necessary bound only"
+      },
+      {
+        "d": 6,
+        "tau": 1,
+        "a_lower_bound_for_extras": 27,
+        "assumptions": "b>=a+2; necessary bound only"
+      },
+      {
+        "d": 7,
+        "tau": 1,
+        "a_lower_bound_for_extras": 31,
+        "assumptions": "b>=a+2; necessary bound only"
+      },
+      {
+        "d": 8,
+        "tau": 1,
+        "a_lower_bound_for_extras": 34,
+        "assumptions": "b>=a+2; necessary bound only"
+      },
+      {
+        "d": 9,
+        "tau": 1,
+        "a_lower_bound_for_extras": 38,
+        "assumptions": "b>=a+2; necessary bound only"
+      },
+      {
+        "d": 10,
+        "tau": 1,
+        "a_lower_bound_for_extras": 42,
+        "assumptions": "b>=a+2; necessary bound only"
+      }
+    ],
+    "d2_obstruction_checks": 100
+  },
+  "negative_controls": [
+    {
+      "kind": "activity_cannot_be_dropped",
+      "d": 3,
+      "a": 13,
+      "b": 12,
+      "tau": 1,
+      "reason": "three unused vertices have rho=0",
+      "canonical_realization": false
+    },
+    {
+      "kind": "T_must_be_exact_demand_level",
+      "d": 3,
+      "a": 4,
+      "tight_labels": 4,
+      "required_tight_labels": 3,
+      "canonical_hypotheses_satisfied": false
+    },
+    {
+      "kind": "positive_part_slack_cannot_be_discarded",
+      "S": 1,
+      "r": 2,
+      "tau": -1,
+      "alpha": 1
+    },
+    {
+      "kind": "do_not_use_largest_receiver_pool_as_chromatic_lower_bound",
+      "d": 3,
+      "counts": [
+        2,
+        3,
+        3
+      ],
+      "valid_upper_bound_on_chi": 2
+    }
+  ],
+  "original_graph_enumeration": "NOT_RUN",
+  "catalogue_replay": "NOT_RUN",
+  "independent_expert_review": "OPEN",
+  "scope": "New arithmetic and necessary-assumption steps only; not validation of the canonical bridge or graph realizability."
+}
