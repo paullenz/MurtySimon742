@@ -3,11 +3,11 @@
 > **Operational source of truth.** Read this file first after every timeout, new chat, takeover, or resumed session. `README.md` is the lower-frequency reviewer-facing summary and may lag routine WIP/status checkpoints. The complete pre-transaction-protocol handoff is preserved byte-for-byte at [`archive/status-snapshots/2026-09-15/CURRENT_STATE_pre_transaction_protocol.md`](archive/status-snapshots/2026-09-15/CURRENT_STATE_pre_transaction_protocol.md).
 
 <!-- CURRENT-STATUS:START -->
-**CHECKPOINT CLASS:** `POLICY` / `RESEARCH_EXECUTION_POLICY_V3` — protected execution modes fully enacted after one intermediate status-only checkpoint.
+**CHECKPOINT CLASS:** `POLICY` / `RESEARCH_EXECUTION_POLICY_V3` — protected execution modes fully enacted after bounded publication reconciliation.
 
 **WORK MODE:** `MATH` for the next research transaction. Requests such as “continue the maths”, “continue”, “carry on”, “proceed”, or “next” default to `MATH` unless the user explicitly asks for admin, audit, status, publication, or recovery work.
 
-**INSPECTED PREDECESSOR:** `7cf945a89cbfc68a7fc39c46050ed61be4e611e5` on `main`. That intermediate commit changed only this handoff while the atomic V3 policy tree was being prepared; no mathematics changed.
+**INSPECTED PREDECESSOR:** `10c667448050128403895bff8905605c5e5d0de7` on `main`. Two intermediate contents-API commits updated only this handoff while the prepared atomic V3 policy tree was being published; no mathematics changed. The reconciliation stops here under the new tooling circuit-breaker rule.
 
 **LAST VERIFIED RESULT:** mathematical status unchanged by the policy rollout. The latest preserved mathematics remains [`project/research/general_n/2026-09-15-tight-label-equality-v1/`](project/research/general_n/2026-09-15-tight-label-equality-v1/): 25 internally verified whole-state certificates and 4,588/4,588 Python/C++ decision agreement. Together with the preceding disjoint strict-block family, 41 current states have internally verified certificates. These remain `NOT_PROMOTED`; external review remains open.
 
