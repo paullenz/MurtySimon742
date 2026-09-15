@@ -2,6 +2,10 @@
 
 This index distinguishes derivation, finite verification, preservation and external acceptance. The fully audited 2,655-key relational family has now passed the separate reviewed-ledger step and is promoted. The canonical finite frontier is 4,626 exclusions / 952 survivors / 3,632 whole-state closures. Fixed-order reviewer packages retain their separate status in [the reviewer index](releases/REVIEW_READY_INDEX.md).
 
+## 15 September 2026 — tight-label scalar obstruction and completed census
+
+[Proof, complete input/output and independent replay](project/research/general_n/2026-09-15-tight-label-block-v1/README.md): 16 of952 active states have five tight labels and only four possible receivers; ten overlap the prior170 candidates and six are additional (5586,5666,5667,5672,5694,5710). Python/C++ agree across4,588 rows. Whole-state internal certificates, NOT_PROMOTED; canonical counts unchanged. The package also preserves the completed170-state receiver-price census (25,769,305,797 profiles, zero partition gaps), the interrupted3349 pilot and exploratory flow evidence. See CURRENT_STATE.md for exact provenance and next mathematical action.
+
 ## 15 September 2026 — saturated receiver barrier
 
 [Proof, exact inputs, both implementations and replay](project/research/general_n/2026-09-15-saturated-receiver-barrier-v1/README.md). New forced-membership prefix-capacity inequality rejects 24 of 124 saved q witnesses; all 124 pass the old route, and independent Python/C++ checks agree on all 24. This is a fixed-witness advance, not a whole-state or ledger promotion. The 602 shared-core and 6,481 weighted-threshold non-improvements are retained. Next: quantify all allowed q for the affected states. External review OPEN.

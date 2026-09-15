@@ -1,0 +1,34 @@
+{
+  "run_id": 34999206636,
+  "head_sha": "52ea9f1d787736a2c93451ef05886061085af27f",
+  "aggregate_job": 104561296194,
+  "artifact_id": 10418246216,
+  "artifact_zip_sha256": "783f5c65d53fc84347e954c281cb688153bde81ad62b25b7e994fe0cb803fc68",
+  "source": "GitHub aggregate job log; original artifact not downloaded in this session",
+  "summary": {
+    "authoritative_primary_core_fail": 15307737127,
+    "candidate_state_count": 170,
+    "core_fail_count_exactly_reconciled": true,
+    "coverage": "complete type-profile enumeration for all 170 forced-core discovery candidates",
+    "interpretation": "Finite empirical exactness on these 170 complete candidate universes only; not a proof of general equivalence.",
+    "partition_gap_profile_count": 0,
+    "partition_gap_state_count": 0,
+    "primary_last_core_h_4_or_5_core_fail_profiles": 202902462,
+    "primary_last_core_h_4_or_5_partition_gap_profiles": 0,
+    "primary_last_core_h_4_or_5_state_count": 30,
+    "promotion_status": "ANALYTIC_CENSUS_ONLY_NOT_PROMOTED",
+    "schema": "forced-core-receiver-price-gap-census-v1",
+    "status": "ZERO_GAP_ON_COMPLETE_170_CANDIDATE_UNIVERSES",
+    "totals": {
+      "agg_capacity_fail": 8193132570,
+      "agg_fail": 15307737127,
+      "agg_high_fail": 7114604557,
+      "exact_core_pass": 10461568670,
+      "partition_gap_fail": 0,
+      "partition_high_only_fail": 0,
+      "partition_only_fail": 0,
+      "predicted_core_fail": 15307737127,
+      "profiles_tested": 25769305797
+    }
+  }
+}
