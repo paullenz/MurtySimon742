@@ -1,0 +1,129 @@
+{
+  "canonical_finite_frontier": {
+    "changed": false,
+    "exclusions": 4626,
+    "survivors": 952,
+    "whole_state_closures": 3632
+  },
+  "newly_excluded": [
+    160,
+    338
+  ],
+  "original_sample": {
+    "not_rejected": [],
+    "rejected": 713,
+    "total": 713
+  },
+  "profiles": {
+    "160": {
+      "best_achievable_min_label_capacity": 9,
+      "best_capacity_bin_sums": [
+        10,
+        9,
+        12
+      ],
+      "candidate_destinations": [
+        4,
+        9,
+        10,
+        14,
+        15,
+        18,
+        22
+      ],
+      "capacity_multiset": [
+        5,
+        5,
+        5,
+        4,
+        4,
+        4,
+        4
+      ],
+      "core_labels": [
+        0,
+        1,
+        2
+      ],
+      "core_size": 3,
+      "destination_capacities": {
+        "10": 5,
+        "14": 4,
+        "15": 4,
+        "18": 4,
+        "22": 4,
+        "4": 5,
+        "9": 5
+      },
+      "forced_source_count": 10,
+      "forced_sources": [
+        0,
+        1,
+        2,
+        3,
+        13,
+        16,
+        17,
+        19,
+        25,
+        26
+      ],
+      "partition_feasible": false,
+      "rejected": true,
+      "required_per_core_label": 10,
+      "row": 160
+    },
+    "338": {
+      "best_achievable_min_label_capacity": 6,
+      "best_capacity_bin_sums": [
+        11,
+        6
+      ],
+      "candidate_destinations": [
+        0,
+        1,
+        3
+      ],
+      "capacity_multiset": [
+        6,
+        6,
+        5
+      ],
+      "core_labels": [
+        0,
+        1
+      ],
+      "core_size": 2,
+      "destination_capacities": {
+        "0": 6,
+        "1": 6,
+        "3": 5
+      },
+      "forced_source_count": 10,
+      "forced_sources": [
+        6,
+        7,
+        9,
+        10,
+        11,
+        14,
+        15,
+        22,
+        26,
+        27
+      ],
+      "partition_feasible": false,
+      "rejected": true,
+      "required_per_core_label": 10,
+      "row": 338
+    }
+  },
+  "r0": 1,
+  "schema": "forced-core-receiver-capacity-partition-v1",
+  "scope": "original synthetic rows160 and338; necessary canonical selected/residual routing conditions only",
+  "source_sha256": "157db7e1f48261626eac8cb99bf875f4aec3b707d4c024f62989dd1bcec38572",
+  "tiny_challenge": {
+    "eligible_obligation_cases": 82,
+    "enumerated_cross_patterns": 290
+  }
+}
