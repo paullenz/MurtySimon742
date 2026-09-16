@@ -1,0 +1,20 @@
+{
+  "status": "RECOVERED_PROOF_WITH_ATTACHMENT_EVIDENCE",
+  "predecessor": "425830b5fc7a4e595235de8fae2b4481de4d6993",
+  "predecessor_handoff_blob": "7d28625afe5c64ccae4c9dbb6c15234460e8e6d1",
+  "original_evidence_location": "User-visible chat attachment MurtySimon742_Defect_Leakage_2026-09-16.zip; not uploaded by this recovery commit",
+  "original_zip_sha256": "7efea9bfe160b8a6d560900ec998e6fad46b43beb09da27a00b4c112a3ae1da3",
+  "original_package_directory": "project/research/general_n/2026-09-16-defect-leakage-cuts-v1",
+  "original_sha256": {
+    "PROOF.md": "26c4f52ae0e21f4b9391175be055eecd90c6a2efa3ed9c7b064ce508f71ded94",
+    "check_leakage.py": "6d1a7711c323391c0f43fc024a834d4d0c938c38e2263e0c64f939a574a6c1ad",
+    "verify_leakage.cpp": "2986d10529e2a773e7ae92c0a90bc719919cbc267dd586afcc2199f90f697874",
+    "CHECK_RESULTS.json": "808acf0d2e97589f42d5cd24e830ff7011cab4a34023fe9f7e1273cbc8d01fbf",
+    "EXACT_FLOW_CERTIFICATES.bin.gz": "0b026ea928cfeed32b9f15b09a91c4c9c51b90c87c72f147fba76aedb07e592b",
+    "unpack_certificates.py": "9129d1ca6792e2d6032a1c1444fd8b45d2713212dc5c6c8f0a9f80479cb8c3a4",
+    "README.md": "4edad32ec0425a45ec8a4d30edd980a49c660092f24f92bef37c85ae461b8cb8"
+  },
+  "fresh_checks": "Local attachment extraction and hashes only; no rerun of historical network tests",
+  "mathematical_status": "Internal conditional, not promoted; external review open",
+  "remote_scope": "Recovery transcription, receipt, live handoff and exact old handoff archive only"
+}
