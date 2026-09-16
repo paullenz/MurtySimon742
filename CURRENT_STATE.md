@@ -1,23 +1,25 @@
 # Murty–Simon / Erdős #742 — live current state
 
-> Continuing the structural treatment: a complete hand argument for the d=5,D=6 boundary is preserved before new finite checks. The preceding consolidated treatment and replay remain unchanged.
+> A parameter-wide support-charge argument replaces the isolated defect-six case split. The new argument and diagnostic are preserved here before their fresh verification.
 
 <!-- CURRENT-STATUS:START -->
-**CHECKPOINT CLASS:** `WIP_UNVERIFIED_FIVE_LABEL_DEFECT_SIX_CLOSURE`.
+**CHECKPOINT CLASS:** `WIP_UNVERIFIED_PAIR_COVER_SUPPORT_CHARGE`.
 
-**WORK MODE:** `MATH`. One bounded original-graph boundary argument.
+**WORK MODE:** `MATH`. One generalization extracted from the active boundary proof.
 
-**INSPECTED PREDECESSOR:** `314f953a5ba15ca62148d52062bd0ee8568dcccb`, tree `326c39d70e2b635ba6ce0066508bc4d21bbfa386`. Current main was read on resumption and confirmed before this unit.
+**INSPECTED PREDECESSOR:** `f047855b3d4f51f273fe1ba270284f6025134243`, tree `be00e1ebb456dfe639c61cffb3259f5855e80985`. The prior special-case hand argument remains unchanged.
 
-**LAST VERIFIED RESULT:** inherited exact-block D>=2floor(d/2)+2 theorem and its prior test records remain unchanged; not freshly replayed in this unit. New complete hand derivation awaiting tests: at d=5,D=6, either zero-loss star forests give a contradiction, or Q=K5 minus two disjoint edges and L+beta=2. All loss distributions except a unique two-neighbour interface label use the h=2 lemma. In the exception, choose a tight edge outside that label's support; it is unaffected and noncritical. Thus the proposed strengthened conclusion is D>=7, W>=32, or W>=52 with extras. External review, novelty and sharpness open.
+**LAST VERIFIED RESULT:** source structural treatment remains as at 314f953a5ba15ca62148d52062bd0ee8568dcccb. New complete WIP hand derivation: D<d(d-2) forces every tight pair to share a K-neighbour. Whenever this pair coverage holds, E_h(Q)<=L+floor(L/h)+beta for all h>=1, counting tight edges with endpoint degrees >=h+1. This necessary inequality closes d=5,D=6 and D=7 by a short hand argument; proposed strengthened bound D>=8, W>=33 or W>=53 with extras. No single all-tight common label is needed. External review, novelty and sharpness open.
 
-**CANONICAL / PROMOTED STATUS:** unchanged — 4626 exclusions / 952 survivors / 3632 whole-state closures. Prior candidate unions, audits and state3349 retain their boundaries. No catalogue scan, workflow launch or promotion.
+**EXECUTED DIAGNOSTIC:** all 1024 d=5 and 32768 d=6 labelled tight graphs inspected by the displayed necessary-condition envelope; minima 8 and 13, attained by 40 and 60 tight graphs respectively. This is a local numerical diagnostic, not an original graph census or a d=6 promoted theorem. Fresh independent checks and per-graph evidence follow next.
 
-**PRESERVATION:** full proof and its scope in `project/research/general_n/2026-09-17-defect-six-v1/DEFECT_SIX.md`. The source treatment remains at STRUCTURAL_REVIEW.md and its pinned predecessor.
+**CANONICAL / PROMOTED STATUS:** unchanged — 4626 exclusions / 952 survivors / 3632 whole-state closures. Candidate unions, audits and state3349 retain their boundaries. No canonical catalogue scan, workflow launch or promotion.
 
-**UNPRESERVED WORK:** None for this bounded derivation after remote confirmation. No prior attachment recovery, raw-stream transfer or PR merge is claimed.
+**PRESERVATION:** `project/research/general_n/2026-09-17-defect-six-v1/SUPPORT_CHARGE.md` contains full derivation, exact scope, hand d=5 corollary and the diagnostic observation. DEFECT_SIX.md is the earlier special-case derivation, not the strongest current target.
 
-**DEFERRED ADMIN:** old archive transfer, repair PR #2, unrelated CI and root historical narrative maintenance; external review and promotion.
+**UNPRESERVED WORK:** None for the mathematical derivations after remote confirmation. The diagnostic has not yet had its generator and per-graph stream installed; this is the immediate evidence task, not an unrecorded mathematical claim. No prior archive recovery or repair PR merge is claimed.
 
-**NEXT ACTION:** verify the local equal-adjacency exception lemma with two-probe graph checks and an explicit-path implementation, plus exact boundary classification. Then develop the support-cut charging formulation only after preserving those checks; do not assume a uniform hole bound alone handles an exceptional support.
+**DEFERRED ADMIN:** historical archive transfers, PR #2 and unrelated CI/status maintenance; external review and promotion.
+
+**NEXT ACTION:** deterministic two-probe local graph tests of pair-covered deletion and support threats; independent path checker; exact charge and per-Q envelope checks with premise-failure controls. Preserve and assemble the checked short treatment before opening the D=8 boundary.
 <!-- CURRENT-STATUS:END -->
