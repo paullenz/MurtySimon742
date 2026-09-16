@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 """Entry point for the preserved universal-core verification implementation.
 
-The implementation is unchanged. Expand its graph sidecar before replay so
+Expand the graph sidecar before replay so
 its final deterministic recompression also works in a freshly unpacked package.
 """
 from pathlib import Path
@@ -19,7 +19,7 @@ def main() -> None:
             with gzip.open(root / "GRAPH_RECORDS.json.gz", "rb") as source:
                 with graph.open("wb") as destination:
                     shutil.copyfileobj(source, destination)
-    runpy.run_path(str(root / "universal_core_impl.py"), run_name="__main__")
+    runpy.run_path(str(root / "universal_core_checked.py"), run_name="__main__")
 
 
 if __name__ == "__main__":
