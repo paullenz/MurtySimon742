@@ -1,0 +1,26 @@
+{
+  "status": "PASS_FRESH_LOCAL_LEMMA_AND_INTEGER_CHECKS",
+  "scope": "All distinguished-edge tight graphs d=3..6 with both endpoint degrees >=2; all allowed one-probe support types. Local short-path preservation, not canonical graph realizations or catalogue exclusions.",
+  "by_d": {
+    "3": {"tight_graphs": 1, "records": 13, "diameter_two": 12},
+    "4": {"tight_graphs": 18, "records": 288, "diameter_two": 268},
+    "5": {"tight_graphs": 392, "records": 7448, "diameter_two": 7002},
+    "6": {"tight_graphs": 14400, "records": 316800, "diameter_two": 300832}
+  },
+  "eligible_records": 324549,
+  "negative_controls": [
+    {"name": "first_endpoint_degree", "record": 324549, "lost_pairs": 1},
+    {"name": "second_endpoint_degree", "record": 324550, "lost_pairs": 1},
+    {"name": "singleton_pool_protection", "record": 324551, "lost_pairs": 1},
+    {"name": "one_hole_support_restriction", "record": 324552, "lost_pairs": 1},
+    {"name": "common_label", "record": 324553, "lost_pairs": 2}
+  ],
+  "records": 324554,
+  "arithmetic_parameter_range": [5, 1000],
+  "arithmetic_mu_checks": 250992,
+  "input_sha256": "84f73ad416db4f17c9407073065b31fc9f5bcf46e866d4fc83571a9555da3980",
+  "decision_sha256": "fb35f3c0c006f603179054ce8aa57cf3c73e5794ccc47a6907f83b12f39bd83c",
+  "cpp_decision_sha256": "fb35f3c0c006f603179054ce8aa57cf3c73e5794ccc47a6907f83b12f39bd83c",
+  "independence": "Python bitset reachability and C++ explicit intermediate-vertex search; same assistant, not external independent review.",
+  "inherited_11357_replay": "NOT_RERUN_IN_THIS_PACKAGE"
+}
