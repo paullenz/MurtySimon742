@@ -1,0 +1,14 @@
+{
+  "scope": "New conditional hand proofs and executed local necessary-condition tests, not promoted",
+  "predecessor": "456ea04f48411d834cb5a713f84e5db31f7fd4d4",
+  "sha256": {
+    "PROOF.md": "6a45c912a274ce9a722e7fdf1516c18cef8fe8b8ed785f62c6ff8180e79149d7",
+    "check_return.py": "2c08b956fa4cbc8637164cd494c75784fc7fe0710cf914e422f8a42ac2848e13",
+    "check_union.py": "961ba58d6bc0e77da12b583e04eb19e5da1385fea182b8e61a1f212aef0fa738",
+    "verify_return.cpp": "0fbc7a2424886d566c1caaa09914b57a8ebbfebec832151a15cca55ca63b0387",
+    "CHECK_RESULTS.json": "135390f403109c4866e5ada53c745100a56a21adb5942af654f6a983aff64026",
+    "UNION_CHECK_RESULTS.json": "6ee202ac64fbfd8d52a3afe93457833bc8b5ef2617982309a98ae67d510af207",
+    "SYMMETRY_ROWS.json.gz.b64": "020bb2f9ce2d495c66bdd1cd8eca842e779935f20308b54873076a93d433b8cd",
+    "unpack_rows.py": "eef46b635e3f65e7b978cfaeccdba26e5d4f5d80dbee2ca6a8e4790a2832c01a"
+  }
+}

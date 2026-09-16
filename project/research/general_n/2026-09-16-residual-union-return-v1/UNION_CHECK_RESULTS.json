@@ -1,0 +1,47 @@
+{
+  "status": "PASS_RESIDUAL_UNION_PREMISE_TESTS_ONLY",
+  "valid_set_premise_cases": 66429,
+  "cases_with_nonempty_forced_destination_residual": 28981,
+  "cases_with_source_destination_residual_overlap": 46822,
+  "profile_threshold_arrays": 130944,
+  "arrays_passing_union_degree_threshold": 24637,
+  "one_hole_selection_incompatibility_arrays": 1920,
+  "controls": [
+    {
+      "kind": "degree_sum_can_pass_while_union_fails",
+      "source_residual": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "destination_residual": [
+        0,
+        1,
+        2,
+        4
+      ],
+      "required_degree": 7,
+      "sum_capacity": 8,
+      "union_capacity": 5
+    },
+    {
+      "kind": "source_core_containment_is_required_for_full_receiver_penalty",
+      "core": [
+        0,
+        1,
+        2
+      ],
+      "source_residual": [
+        0,
+        1,
+        3
+      ],
+      "receiver_residual": [
+        2
+      ],
+      "required_degree": 4
+    }
+  ],
+  "scope": "Finite sets and parameter arrays assuming stated local premises; not validation of the canonical bridge"
+}

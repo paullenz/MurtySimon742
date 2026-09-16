@@ -1,0 +1,79 @@
+{
+  "status": "PASS_TARGETED_MIXED_RETURN_CHECKS_ONLY",
+  "exact_python_cpp_rows": 5100,
+  "symmetry_rows": 510,
+  "compatible_partitions_total": 12360,
+  "full_table_sha256": "188005655b37679651e93b3d8d72790ab15a901c84ca654c81bcb42906b01613",
+  "presence": {
+    "ternary_neighbourhoods": 4086,
+    "with_eligible_arrival": 865,
+    "with_multiple_eligible_bundles": 107
+  },
+  "return_matrices": {
+    "companion_selection_matrices": 4164,
+    "positive_demand_endpoint_arrays": 6912
+  },
+  "controls": [
+    {
+      "kind": "reverse_containment_required",
+      "p": 2,
+      "flags": 15,
+      "full_relaxation_cost": 8,
+      "without_reverse_cost": 4
+    },
+    {
+      "kind": "selected_mate_floor_requires_proof",
+      "p": 1,
+      "flags": 3,
+      "natural_floor_2_cost": 4,
+      "extra_floor_4_cost": 6
+    },
+    {
+      "kind": "nonfamily_reserves_overlap",
+      "mixed_residual_types": 2,
+      "distinct_family_mates": 2,
+      "shared_external_labels": 2,
+      "rho": 4
+    },
+    {
+      "kind": "overlapping_bundles_do_not_force_empty_intersection",
+      "groups": [
+        [
+          0,
+          2
+        ],
+        [
+          1,
+          2
+        ]
+      ],
+      "receiver_selected": [
+        2
+      ]
+    },
+    {
+      "kind": "positive_demand_required",
+      "delta": 0,
+      "R": 5,
+      "s": 0
+    },
+    {
+      "kind": "monitor_copies_must_not_multiply_cost",
+      "statement": "The theorem selects one source per bundle; additional copies may reuse destinations."
+    },
+    {
+      "kind": "receiver_budget_is_not_sigma_O",
+      "statement": "Receivers may be internal; count W once outside H and all intact monitors, not automatically outside V."
+    }
+  ],
+  "five_pairs": {
+    "A": 3,
+    "receiver_ceiling": 4,
+    "bound_with_selected_floor_at_most_3": 20,
+    "bound_with_selected_floor_4": 23,
+    "no_selected_mates_bound": 30
+  },
+  "scope": "Necessary receiver-resource and local incidence models; not original graphs or catalogue replay",
+  "independent_expert_review": "OPEN",
+  "both_implementations": "same assistant"
+}
