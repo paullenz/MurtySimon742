@@ -1,0 +1,333 @@
+{
+  "status": "PASS_TARGETED_SHARED_BUNDLE_CHECKS_ONLY",
+  "predecessor": "888e24fe285db0363a2670370e933963f937a02b",
+  "exact_capacity_table": {
+    "rows": 78624,
+    "python_cpp_full_byte_agreement": true,
+    "sha256": "63f57d1ed7b8cadd3d83b97888efc45a790ab8553059a51f1608b0fe329bb58f",
+    "domain": {
+      "groups": [
+        1,
+        2,
+        3
+      ],
+      "options": [
+        [
+          2,
+          1,
+          0
+        ],
+        [
+          2,
+          1,
+          1
+        ],
+        [
+          2,
+          1,
+          2
+        ],
+        [
+          2,
+          1,
+          3
+        ],
+        [
+          2,
+          2,
+          0
+        ],
+        [
+          2,
+          2,
+          1
+        ],
+        [
+          2,
+          2,
+          2
+        ],
+        [
+          2,
+          2,
+          3
+        ],
+        [
+          3,
+          1,
+          0
+        ],
+        [
+          3,
+          1,
+          1
+        ],
+        [
+          3,
+          1,
+          2
+        ],
+        [
+          3,
+          1,
+          3
+        ],
+        [
+          3,
+          2,
+          0
+        ],
+        [
+          3,
+          2,
+          1
+        ],
+        [
+          3,
+          2,
+          2
+        ],
+        [
+          3,
+          2,
+          3
+        ]
+      ],
+      "gap_order": [
+        -1,
+        0,
+        2
+      ],
+      "r_order": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6
+      ]
+    },
+    "encoding": "one unsigned byte per cost, in domain generator order"
+  },
+  "mate_occurrences": {
+    "assignments_tested": 78076,
+    "admissible_label_type_assignments": 2306,
+    "admissible_by_bundle_size": {
+      "2": 186,
+      "3": 618,
+      "4": 1502
+    },
+    "scope": "One-bundle monitored destinations with explicit escape symbols; not graphs"
+  },
+  "residual_union_set_cases": 75894,
+  "positive_demand_endpoint_scalar_cases": 14256,
+  "application_and_controls": {
+    "omega34": {
+      "Q": 20,
+      "local_capacity_r1_to_r4": [
+        0,
+        0,
+        0,
+        2
+      ],
+      "minimum_used_receivers": 10,
+      "minimum_sigma_O": 30,
+      "branch_budget_constant": 134,
+      "global_budget_constant": 105,
+      "old_minimum_a_tau1": 35,
+      "new_minimum_a_tau1": 35
+    },
+    "one_arc_leakage": {
+      "Q_into_O_lower": 19,
+      "linear_rounded_bound": 29,
+      "integer_resource_bound": 30,
+      "scope": "Assumes all other bundle hypotheses and a certified leakage bound"
+    },
+    "resource_only_witness": [
+      {
+        "bundle": 0,
+        "incoming_label": 0,
+        "monitored_arcs": 2,
+        "L_residual": [
+          [
+            0,
+            1
+          ]
+        ],
+        "external_residual": [
+          "x",
+          "y",
+          "z"
+        ],
+        "rho": 4
+      },
+      {
+        "bundle": 0,
+        "incoming_label": 1,
+        "monitored_arcs": 2,
+        "L_residual": [
+          [
+            0,
+            0
+          ]
+        ],
+        "external_residual": [
+          "x",
+          "y",
+          "z"
+        ],
+        "rho": 4
+      },
+      {
+        "bundle": 1,
+        "incoming_label": 0,
+        "monitored_arcs": 2,
+        "L_residual": [
+          [
+            1,
+            1
+          ]
+        ],
+        "external_residual": [
+          "x",
+          "y",
+          "z"
+        ],
+        "rho": 4
+      },
+      {
+        "bundle": 1,
+        "incoming_label": 1,
+        "monitored_arcs": 2,
+        "L_residual": [
+          [
+            1,
+            0
+          ]
+        ],
+        "external_residual": [
+          "x",
+          "y",
+          "z"
+        ],
+        "rho": 4
+      },
+      {
+        "bundle": 2,
+        "incoming_label": 0,
+        "monitored_arcs": 2,
+        "L_residual": [
+          [
+            2,
+            1
+          ]
+        ],
+        "external_residual": [
+          "x",
+          "y",
+          "z"
+        ],
+        "rho": 4
+      },
+      {
+        "bundle": 2,
+        "incoming_label": 1,
+        "monitored_arcs": 2,
+        "L_residual": [
+          [
+            2,
+            0
+          ]
+        ],
+        "external_residual": [
+          "x",
+          "y",
+          "z"
+        ],
+        "rho": 4
+      },
+      {
+        "bundle": 3,
+        "incoming_label": 0,
+        "monitored_arcs": 2,
+        "L_residual": [
+          [
+            3,
+            1
+          ]
+        ],
+        "external_residual": [
+          "x",
+          "y",
+          "z"
+        ],
+        "rho": 4
+      },
+      {
+        "bundle": 3,
+        "incoming_label": 1,
+        "monitored_arcs": 2,
+        "L_residual": [
+          [
+            3,
+            0
+          ]
+        ],
+        "external_residual": [
+          "x",
+          "y",
+          "z"
+        ],
+        "rho": 4
+      },
+      {
+        "bundle": 4,
+        "incoming_label": 0,
+        "monitored_arcs": 2,
+        "L_residual": [
+          [
+            4,
+            1
+          ]
+        ],
+        "external_residual": [
+          "x",
+          "y",
+          "z"
+        ],
+        "rho": 4
+      },
+      {
+        "bundle": 4,
+        "incoming_label": 1,
+        "monitored_arcs": 2,
+        "L_residual": [
+          [
+            4,
+            0
+          ]
+        ],
+        "external_residual": [
+          "x",
+          "y",
+          "z"
+        ],
+        "rho": 4
+      }
+    ],
+    "negative_controls": [
+      "same_label_sources_reuse_one_receiver",
+      "external_labels_count_max_not_sum",
+      "positive_demand_needed_for_degree_identity",
+      "O_must_not_select_the_monitored_label_family",
+      "degree_one_receivers_may_have_free_capacity",
+      "whole_label_type_leakage_reduces_compulsory_residual_occurrences"
+    ],
+    "witness_scope": "Resource envelope only; not a full canonical system or original graph"
+  },
+  "original_graph_enumeration": "NOT_RUN",
+  "catalogue_replay": "NOT_RUN",
+  "canonical_bridge_validation": "NOT_ASSERTED",
+  "independent_expert_review": "OPEN",
+  "implementations": "Both written by the same assistant, with different capacity enumerations"
+}

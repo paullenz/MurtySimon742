@@ -1,0 +1,23 @@
+{
+  "predecessor": "888e24fe285db0363a2670370e933963f937a02b",
+  "status": "WIP_INTERNAL_PROOF_NOT_PROMOTED",
+  "sha256": {
+    "PROOF.md": "d8afd6103948722a83e93205bb574dc8dae4b4c685edf488ee8b5ef6de6551a7",
+    "check_budget.py": "8f3e757cf8a853d55f83bab6c56a7ed39e4eca5ecfc057346c83c9e414c5a86d",
+    "verify_budget.cpp": "9b53c909bb3706b55234e815703a42e47f5c1b7b6494b336167eba69ea8763e4",
+    "CHECK_RESULTS.json": "87ff2ab99c528c9ea3c79107a3421f33da72d84709697dd464cc46e3b2a29c9f",
+    "EXACT_COSTS.bin.gz.b64": "a45bdc2b70b834262572ea4845bd3c228c86bd47c1d146e9e43b689312c27ec6",
+    "unpack_costs.py": "c4049600f74b64fac79315d5af8c1c1c7a917d2dd0206fdf469683d8c3d69e04",
+    "CURRENT_STATE.md": "4b2bd7d0b26cbf2400c4a0dfe1f87ff6c974682b50387c7d5b181a1a824ab2d0"
+  },
+  "git_blob_sha1": {
+    "PROOF.md": "22814e11389a0f2901809817796498de2880c7dd",
+    "check_budget.py": "1e3ea9689674cc00163991bbab0c3831a302708d",
+    "verify_budget.cpp": "32c1b1a62eebe043c13b95865d9312e9825b5ed6",
+    "CHECK_RESULTS.json": "cde4e43d0dae7b3167879e6558c9054abbbbc48c",
+    "EXACT_COSTS.bin.gz.b64": "e8106fb80cee583de2bf2cd41f1f5590977d7c03",
+    "unpack_costs.py": "bd1ffa5983502e458b49fd34c6d6fd29e316254f",
+    "CURRENT_STATE.md": "7d28625afe5c64ccae4c9dbb6c15234460e8e6d1"
+  },
+  "current_state_scope": "CURRENT_STATE.md is the root handoff published alongside this package."
+}
