@@ -1,42 +1,40 @@
 # Murty–Simon / Erdős #742 — live current state
 
-> Read this file first on resumption. README may lag routine internal WIP. The complete preceding handoff is archived unchanged.
+> Read this file first on resumption. This administrative checkpoint confirms an already-published mathematical result; it does not replace or promote that result.
 
 <!-- CURRENT-STATUS:START -->
-**CHECKPOINT CLASS:** `WIP_INTERNAL_PROOF_NOT_PROMOTED`. The saturated d=5 two-hole minimum has no valid destinations; conditional hand bound strengthened.
+**CHECKPOINT CLASS:** `ADMIN_PUBLICATION_RECOVERY`. Two-hole proof publication reconciled; connector-first publication procedure recorded.
 
-WORK MODE: `MATH`. One bounded continuation of the live two-hole routing task. No catalogue transfer, audit promotion, README editing, workflow launch or polling. The previous interface-only control is preserved as such, not treated as a full graph.
+WORK MODE: `ADMIN`. The user explicitly requested fixing publication, not further mathematical research. This transaction records the existing remote proof, preserves the preceding handoff, and documents safe write/fallback verification. No proof, checker, research result, catalogue entry, promotion gate or README is changed.
 
-**INSPECTED PREDECESSOR:** `002713dc090035ec4f01d8eaaf9d27023082bc4d` on main. CURRENT_STATE was read first, then AGENTS and the exact individual-pool/full-profile proofs and supplied evidence. Main is re-read before non-forced publication.
+**INSPECTED PREDECESSOR:** `6f5433aaa8cd4cb7fb739bd3e0c52f6e4e3fa7cc` on main, tree `9546274bb3d76154be126acc2352468b215a1ca7`. CURRENT_STATE was read first. This commit already contained the two-hole proof when this publication-recovery session began. Its recorded commit timestamp is 2026-09-16T09:29:12Z (10:29:12 BST). The earlier chat report that this unit was unpublished is superseded by this remote evidence; the reason for the earlier difference in tool availability is not established.
 
-**LAST VERIFIED RESULT:** internal conditional HAND PROOF under the FULL canonical bridge, tau>0, |T|=|H|=5, and extra selections E>0 (so full pools p_t>=2). Set p_t=2+u_t, L=sum u_t, h=kappa-9 and Omega=5h+3L+eta. The new algebraic bound Omega>=36-h+(11-h)L proves Omega>=30 without relying on a minimizer table; Omega=30 forces h=6,L=0,eta=0. Then all 15 K-labels have exactly two holes, q_t=6, complete F[T], beta_t=0 and demand four. Each is selected at all four vertices in the two pools indexed by its holes. Each pool source selects six K-labels. Two of these have the same hole pair, hence identical presence at all profile destinations. A destination for either twin cannot be high (label present), a profile vertex (the other twin must be present while this one is absent), or outside the profiles (five required K-labels exceed four residual slots). Thus Omega=30 is impossible, and integrality gives Omega>=31.
+**LAST VERIFIED RESULT:** mathematical status unchanged. The existing conditional hand proof records Omega=5h+3L+eta>=31 under the FULL canonical bridge, tau>0, |T|=|H|=5 and E>0. Consequently 4a+5>=b+2tau+101; b>=a+2 and integer tau>=1 force a>=34 for extras. E=0 through a=33 is rigidity, NOT automatic whole-state exclusion. The original row relaxation still has C(5,2)=30. The complete mathematical handoff is archived unchanged below.
 
-**NUMERICAL CONSEQUENCE / LIMIT:** 4a+5>=b+2tau+101, hence a>=ceil((98+2tau)/3) using b>=a+2. For integer tau>=1, d=5 extras require a>=34, compared with 33 previously: E=0 through a=33. This is rigidity, NOT automatic whole-state exclusion. C(5,2)=30 remains correct for the old row relaxation; the new result uses additional routing conditions. Other d bounds are unchanged. No sharpness or realizability claim.
+**PUBLICATION EVIDENCE:** the remote main ref, proof commit metadata, seven-file package listing, proof opening, manifest and CHECK_RESULTS.json were read. The receipt records their blob identities and byte sizes. This is a publication/content-presence reconciliation, NOT a fresh proof replay or byte-for-byte validation of all seven files against the manifest. The local attachment and the published package have different manifests; the older patch was NOT applied over the newer published proof. Historical attachments are retained as attachments, with their checksums recorded; this commit does not claim to upload those old ZIP/patch bytes.
 
-**CHECKS / LIMITS:** executed Python remaining-degree and C++ six-free-multiplicity enumerators agree on the complete reduced destination decisions for all 654 degree-six two-hole interfaces on five distinguished tight labels. At least 56 of 60 mandatory selected incidences fail in each interface (90 have 56 failures, 564 have 60). Total 38,880/39,240 failures; zero interfaces pass all mandatory destinations. The displayed predecessor interface fails all 60. A separate Python greedy / C++ dynamic-programming replay agrees on 29,424 ordered pool/type tuples, all h-slice minima and the sole old minimizing outer key. Additional 990 local profile masks and 83,740 twin-predicate cases passed; four negative controls are preserved. Exact sources, full decision lists and outputs accompany the proof. Both implementations are by the same assistant. NOT original-graph enumeration, NOT catalogue replay, NOT inherited-bridge validation or independent expert acceptance. The main bound and equality contradiction are hand proofs, not finite-check extrapolations.
+**WRITE ROUTE:** this session discovered the GitHub connector's create_tree, create_commit and update_ref actions, as well as create_file/update_file. The administrative checkpoint uses a tree based on the inspected main tree, a commit with that head as parent, and a non-forced ref update. Publication is complete only after the remote ref and handoff are read back; a created blob/tree/commit alone is not publication. See PUBLICATION_PROTOCOL.md before diagnosing a future write failure.
 
-**DEPENDENCIES / LIMITS:** full representatives, exact demand level T, eligibility, A-side domination, inherited K-residual/disjoint-destination facts, full profile pools, and positive-surplus residual activity for the global b-dependent budget. Only destination absence and forward containment are needed by the NEW routing contradiction; no new reverse-containment step. beta=0 and demand four are proved in the equality case, not exported to near-equality cases. Do not extend automatically to tau=0 or other d. Independent expert review and novelty assessment remain OPEN.
+**CHECKS / LIMITS:** local administrative payload checks verify required status fields, plain ADMIN work-mode syntax, parseable JSON, and the source-attachment hashes. The preservation tree changes only administrative files and reuses the preceding handoff's exact blob. No mathematical check was rerun. No remote CI success or permanent platform repair is asserted by this handoff.
 
-**CANONICAL / PROMOTED STATUS:** unchanged — **4,626 exclusions / 952 survivors / 3,632 whole-state closures**. The 41 strict/equality certificates remain NOT_PROMOTED; the 170-candidate audit remains AUDIT_COMPLETE_NOT_PROMOTED. State 3349 enumeration remains unresolved. Original equality replay was not rerun. No new state ID, promotion or unrestricted theorem is claimed.
+**CANONICAL / PROMOTED STATUS:** unchanged — **4,626 exclusions / 952 survivors / 3,632 whole-state closures**. The 41 strict/equality certificates remain NOT_PROMOTED; the 170-candidate audit remains AUDIT_COMPLETE_NOT_PROMOTED. External mathematical review remains OPEN. State 3349 enumeration is unresolved; original equality replay is not rerun.
 
-**UNPRESERVED WORK:** `None` after publication and one remote confirmation. Full proof, both checkers, exact results/decisions and the unchanged predecessor archive accompany this handoff.
+**UNPRESERVED WORK:** no active mathematical unit is awaiting publication: the two-hole proof already exists in the predecessor. This administrative transaction is complete only after its non-forced publication and remote confirmation. The older ZIP and patch are historical chat attachments, not newly committed repository artifacts; their preservation locations and checksums are explicit in the receipt.
 
-**DEFERRED ADMIN:** catalogue application and separate audit promotion; Markdown status-parser repair; reviewer/README integration after review; large-input transfer; automatic completion reporting; unrelated CI. Do not retry the failed direct-download route. No remote CI success is asserted.
+**DEFERRED ADMIN:** Markdown status-parser repair; reviewer/README integration after review; catalogue application and separate audit promotion; large-input transfer; automatic workflow-completion reporting; unrelated CI. These were not required to reconcile the already-published proof or exercise the current write route. Do not retry a failed direct-download route as a substitute for the working connector.
 
-**NEXT ACTION:** one bounded mathematical unit on Omega=31. The new hand inequality restricts it to (h,L,eta)=(5,0,6) or (6,0,1). Quantify the deviations that could break the twin-label destination obstruction. Do not assume beta=0, complete F[T], or all four selecting sources without deriving them for each branch. Preserve the first contradiction or surviving routing control immediately before another unit; no further affirmation is needed.
+**NEXT ACTION:** after publication confirmation, resume MATH only on a research-continuation request. The unchanged mathematical target is Omega=31, restricted by the existing hand inequality to (h,L,eta)=(5,0,6) or (6,0,1). Quantify deviations that could break the twin-label destination obstruction; do not assume beta=0, complete F[T], or all four selecting sources without deriving them. Read the archived full mathematical handoff and exact named dependencies. Do not apply the old attachment patch over the current main tree.
 
-**PROCESS RULE:** STATUS_SYNC_POLICY_V2 / RESEARCH_EXECUTION_POLICY_V3. One bounded unit, coherent preservation, one remote confirmation. No work is claimed to continue after the response ends. Pause/stop overrides continuation.
+**PROCESS RULE:** STATUS_SYNC_POLICY_V2 / RESEARCH_EXECUTION_POLICY_V3 continue unchanged. Read PUBLICATION_PROTOCOL.md when publication availability or status is uncertain. No background continuation is claimed; pause/stop overrides continuation.
 <!-- CURRENT-STATUS:END -->
 
-## Evidence and predecessor
+## Publication and mathematical evidence
 
-- [Full conditional hand proof](project/research/general_n/2026-09-16-two-hole-routing-obstruction-v1/PROOF.md).
-- [Python checker and replay driver](project/research/general_n/2026-09-16-two-hole-routing-obstruction-v1/check_routing.py).
-- [Differently structured C++ checker](project/research/general_n/2026-09-16-two-hole-routing-obstruction-v1/verify_routing.cpp).
-- [Exact test results](project/research/general_n/2026-09-16-two-hole-routing-obstruction-v1/CHECK_RESULTS.json).
-- [Lossless full reduced decision lists](project/research/general_n/2026-09-16-two-hole-routing-obstruction-v1/EXACT_DECISIONS.indexed.json); [safe decoder](project/research/general_n/2026-09-16-two-hole-routing-obstruction-v1/unpack_decisions.py).
-- [Complete unchanged predecessor](archive/status-snapshots/2026-09-16/CURRENT_STATE_before_two_hole_routing_002713dc.md), copied from blob c26d7d19b07da0493f48ca72e697eeabba27f48d.
-- [Individual-pool row dependency](project/research/general_n/2026-09-16-individual-pool-rows-v1/PROOF.md).
-- [Full-profile dependency](project/research/general_n/2026-09-16-weak-label-profile-budget-v1/PROOF.md).
+- [Publication recovery procedure](PUBLICATION_PROTOCOL.md).
+- [Publication receipt and attachment provenance](project/maintenance/2026-09-16-publication-recovery-v1/RECEIPT.json).
+- [Complete preceding mathematical handoff](archive/status-snapshots/2026-09-16/CURRENT_STATE_before_publication_recovery_6f5433aa.md), preserved from blob c474baddbc16d4d4006caefdbcb8a1e2ac842e9b.
+- [Existing two-hole proof](project/research/general_n/2026-09-16-two-hole-routing-obstruction-v1/PROOF.md).
+- [Existing evidence manifest](project/research/general_n/2026-09-16-two-hole-routing-obstruction-v1/MANIFEST.json).
+- [Existing recorded test results](project/research/general_n/2026-09-16-two-hole-routing-obstruction-v1/CHECK_RESULTS.json).
 
-Read AGENTS.md and only the exact mathematical dependencies needed. Older proofs, failures and reviewer material remain preserved.
+The main commit containing this handoff identifies the administrative checkpoint. Read AGENTS.md first after this file; no audit gate or standing preservation rule is weakened here.

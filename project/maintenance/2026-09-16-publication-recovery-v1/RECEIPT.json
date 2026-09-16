@@ -1,0 +1,80 @@
+{
+  "date": "2026-09-16",
+  "mode": "ADMIN",
+  "repository": "paullenz/MurtySimon742",
+  "repository_id": 1359206057,
+  "observed_mathematical_commit": "6f5433aaa8cd4cb7fb739bd3e0c52f6e4e3fa7cc",
+  "observed_mathematical_commit_utc": "2026-09-16T09:29:12Z",
+  "observed_base_tree": "9546274bb3d76154be126acc2352468b215a1ca7",
+  "observed_handoff_blob": "c474baddbc16d4d4006caefdbcb8a1e2ac842e9b",
+  "finding": "Two-hole proof already published on main before this administrative session; earlier unpublished chat report superseded by fresh repository evidence.",
+  "root_cause_limit": "Current write actions are exposed. This does not establish why a previous session reported absent actions.",
+  "package_path": "project/research/general_n/2026-09-16-two-hole-routing-obstruction-v1",
+  "package_files": {
+    "CHECK_RESULTS.json": {
+      "git_blob_sha": "f1d2d7ea94548b2afb6deeec23c6e81dcd74d633",
+      "bytes": 2936
+    },
+    "EXACT_DECISIONS.indexed.json": {
+      "git_blob_sha": "850a62fbb2be5ba9558af8a8507d417e1b5a61a3",
+      "bytes": 1579
+    },
+    "MANIFEST.json": {
+      "git_blob_sha": "b83c41daf0818766c657bb8b54d78f8bacc6e0d1",
+      "bytes": 1073
+    },
+    "PROOF.md": {
+      "git_blob_sha": "9174b011b7e984db4df79fd52a6462ed907f56ef",
+      "bytes": 16691
+    },
+    "check_routing.py": {
+      "git_blob_sha": "07e9d870ac8b2bce17d185f62538436c8d042782",
+      "bytes": 9707
+    },
+    "unpack_decisions.py": {
+      "git_blob_sha": "53d59013c0fb480d31feb0ead840e1709c605430",
+      "bytes": 1896
+    },
+    "verify_routing.cpp": {
+      "git_blob_sha": "91d23b3779504560d78d1e4826418e718bc7e53c",
+      "bytes": 3851
+    }
+  },
+  "verification_performed": [
+    "Read live main ref and commit metadata",
+    "Read live handoff and AGENTS",
+    "Read seven-file directory listing",
+    "Read proof opening, manifest and CHECK_RESULTS.json",
+    "Verified source attachment checksums locally"
+  ],
+  "not_performed": [
+    "Fresh mathematical replay",
+    "Independent mathematical review",
+    "Full package hash replay against manifest",
+    "Audit promotion",
+    "Platform-level repair",
+    "Historical attachment bytes uploaded"
+  ],
+  "attachments": {
+    "MurtySimon742_Two_Hole_Routing_2026-09-16.zip": {
+      "bytes": 54045,
+      "sha256": "6283e5bc3710fe9a6c3ead11e94ea8be355a1c5b9961f845e14673bd69df1ddf",
+      "preservation": "Original chat attachment retained unchanged; bytes not uploaded by this administrative commit"
+    },
+    "MurtySimon742_Two_Hole_Routing_2026-09-16.patch": {
+      "bytes": 57151,
+      "sha256": "ba2d2ed020c2eb3a7ae461016632d13541a753c174266d1c7a17eff247c8f417",
+      "preservation": "Original chat attachment retained unchanged; bytes not uploaded by this administrative commit"
+    }
+  },
+  "write_route": "create_tree(base_tree) -> create_commit(parent=head) -> update_ref(force=false) -> remote ref/handoff confirmation",
+  "administrative_commit_identity": "The commit first introducing this receipt and its paired CURRENT_STATE update; exact resulting SHA is returned by GitHub and reported after remote confirmation.",
+  "canonical_counts": {
+    "exclusions": 4626,
+    "survivors": 952,
+    "whole_state_closures": 3632
+  },
+  "research_files_changed": false,
+  "promotion_status": "UNCHANGED_NOT_PROMOTED",
+  "external_review": "OPEN"
+}
