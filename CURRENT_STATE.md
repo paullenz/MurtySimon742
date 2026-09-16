@@ -1,38 +1,93 @@
 # Murty–Simon / Erdős #742 — live current state
 
-> Read this first. Critical-edge covering now gives a quadratic clique-defect bound and closes intrinsic defect one for every exact block with d>=3. The d=2 exception remains explicit. No catalogue promotion.
+> Read this first. The d=2 exception has been reduced to a private-witness normal form; the complete symbolic derivation is preserved below before further attack. No exclusion of this family is claimed yet.
 
 <!-- CURRENT-STATUS:START -->
-**CHECKPOINT CLASS:** `INTERNAL_CRITICAL_EDGE_COVERING_VERIFIED_NOT_PROMOTED`.
+**CHECKPOINT CLASS:** `WIP_INTERNAL_D2_PRIVATE_WITNESS_NORMAL_FORM_NOT_PROMOTED`.
 
-**WORK MODE:** `MATH`. Theorem-first priority. This unit verifies and packages the already-preserved structural derivation; it is not a survivor scan.
+**WORK MODE:** `MATH`. Theorem-first priority. One bounded normal-form derivation, not a survivor scan.
 
-**INSPECTED PREDECESSOR:** `80a783799a9a671e9b29356284515bad0402a3ce`, tree `8eb802551777876951fea27d27855109a4b51875`. Main was re-read before publication preparation. The full derivation and earlier handoff remain at that immutable predecessor; the zero-defect unit remains at `54f974fcff8acd85870deacc931da15ec4b11069`.
+**INSPECTED PREDECESSOR:** `cf718afcba303618f2231b95d452b9af5671c8d8`, tree `988f21417e5d63396ef22154786542d92fe9c929`, CURRENT_STATE blob `0b257681052ea383e008bb51cc3fa82ea55c214d`. Main was re-read before this contents update; the preceding full handoff, proof and evidence remain at that immutable commit.
 
-**LAST VERIFIED RESULT:** internal parameterized hand proof. For an actual exact d-by-d block with d>=3 and complete F[T], L+beta>=(d-1)(d-2). Marking tight vertices that have singleton K-neighbours, original edge-criticality forces each K-label to meet at most one unmarked tight vertex. Counting distinct labels together with the exact tight rows proves the bound. If F[T] is incomplete, 2mu>=2 already, so every actual exact d>=3 block has intrinsic defect at least two. The d=2, L=1 singleton-label exception is NOT closed.
+**LAST VERIFIED RESULT:** new internal symbolic reduction, finite verification pending. For the remaining d=2 intrinsic-defect-one family, write C for c>=2 common labels, k for the unique singleton adjacent to s, X=V_t and Y=V_s. Original criticality of ts forces N_G(t) intersect N_G(k)={s}. The full quasi-edge identities then force N_G(k)={s} union Y, N_F(k)={s}, every O-vertex residual set {k}, and a function f:X->Y with |X|=c, |Y|=c-1 and N_G(x) intersect Y={f(x)}. Every function edge satisfies S_x={k} disjoint-union S_f(x). Some receiver therefore has two sources with identical selected sets and A-neighbourhoods. This is not yet a redundant-edge proof: full B-neighbourhoods need not coincide.
 
-**SCOPE / EQUALITY:** no positive pivot-surplus or pool-size restriction. The quadratic term REQUIRES complete F[T]. For d=5 the complete-tight-graph W thresholds are 37 and 57 (with extras); without completeness only 27 and 47 follow. Equality in the clique bound forces one unmarked tight vertex, one positive-demand singleton label at every other tight vertex, beta=0 and zero loss on all other K-labels. Incidence-only equality examples exist; no canonical graph realization is asserted. Configurations without an exact tight block remain outside the theorem.
+**SCOPE:** actual full canonical system and all-edge criticality, exact d=2 block and intrinsic defect one. No positive-surplus assumption. Both tight vertices are maximum-degree vertices, as is the pivot. The previous d>=3 one-defect closure and conditional quadratic clique-defect theorem are unchanged.
 
-**CHECKS:** Python and separately structured C++ agree on all 506403 exact records: 10333 local graph records, including 9712 eligible redundant deletions, and 496070 incidence records. The latter include exhaustive d=3 compatible row/pool assignments and 39 equality controls through d=15. All five graph controls have diameter two and a destructive designated deletion. Early bounded combined-driver invocations expired; separate complete replay and the delivered replay-only command succeeded. No interrupted invocation is counted as success. Both implementations and proof are by the same assistant. These are local graph/relaxation checks, NOT a canonical graph census or catalogue replay. External review and novelty assessment OPEN.
+**CHECKS:** new finite tests NOT_RUN. No rerun of earlier 506403 records, graph realization, catalogue application or external acceptance is claimed. All derivations are by the same assistant. Literature novelty and external review OPEN.
 
-**CANONICAL / PROMOTED STATUS:** unchanged — 4626 exclusions / 952 survivors / 3632 whole-state closures. Prior 203-key candidate union, 41 strict/equality certificates, 170-candidate audit and state3349 retain their previous status. No workflow launch, q-enumeration or promotion.
+**CANONICAL / PROMOTED STATUS:** unchanged — 4626 exclusions / 952 survivors / 3632 whole-state closures. Prior 203-key candidate union, 41 strict/equality certificates, 170-candidate audit and state3349 retain their previous boundaries. No workflow launch, q-enumeration or promotion.
 
-**PRESERVATION:** proof, exact summary, byte-preserved compressed verification sources and a tested hash-checking unpacker are in `project/research/general_n/2026-09-16-critical-edge-covering-v1/`. Decode the source bundle with `python3 unpack_sources.py`; then `python3 check_covering.py` regenerates and checks the finite cases. The complete 17-file attachment `MurtySimon742_Critical_Edge_Covering_2026-09-16.zip`, SHA256 `0b6e0ff62b58d4cfbb0fbe3774af93ebb605ba94b683194a37aaabecec12d72a`, includes original sources, proof, exact raw streams, audit notes, manifest, handoff and the predecessor ZIP unchanged. Every manifested file was checked inside the ZIP. Uncompressed input SHA256 `f3ff6ef23eac4d28bda0e6e4f472b427b5268a83356c63376fda3f366db8c9a0`; decision SHA256 `45633e4ee20f50bce9de4b40d1dd2a0656c1532609fd5d8c73adea67227bf922`. Large raw streams are NOT claimed uploaded by this commit.
+**UNPRESERVED WORK:** no completed symbolic finding remains only in session memory after remote confirmation; full derivation below. Earlier raw-stream and attachment transfers remain pending.
 
-**UNPRESERVED WORK:** no completed mathematical finding or verification source remains only in session memory after remote confirmation. Separate raw-stream GitHub transfer and older attachment transfers remain pending; exact bytes and hashes are in the delivered package.
+**DEFERRED ADMIN:** older evidence transfers; root README/reviewer integration; unrelated CI/status work; independent review, novelty assessment and promotion.
 
-**DEFERRED ADMIN:** raw-stream and older evidence transfers; root README/reviewer integration; unrelated CI/status work; independent review, novelty assessment and promotion.
+**NEXT ACTION:** continue this same d=2 normal-form attack: determine whether a fibre of f with at least two sources forces a redundant original edge using the full representative system, or characterize the remaining freedom. Do not equate shared A-neighbourhoods with full twins. Verify the resulting graph/representative implications and preserve exact controls before asserting closure.
 
-**NEXT ACTION:** one bounded mathematical unit resolving the isolated d=2 exception using full quasi-edge identities and original criticality. There beta=0 automatically. Write T={t,s}, let c>=2 count common K-labels, and let the unique singleton K-label neighbour only s; exact rows force p_t=c and p_s=c-1. Determine whether its private witness can occur in a full canonical graph, rather than extrapolating from the local eight-vertex control. Preserve the first result or obstruction. A generalization to incomplete F[T] is a separate subsequent task; do not transplant the quadratic bound to mu>0.
-
-**PROCESS RULE:** one bounded unit then preservation and one remote confirmation; no background-work claim or automatic promotion.
+**PROCESS RULE:** one bounded unit then immediate preservation and one remote confirmation; no background-work claim or automatic promotion.
 <!-- CURRENT-STATUS:END -->
 
-## Evidence
+## Preserved derivation: defect-one d=2 private-witness normal form
 
-- [Critical-edge covering theorem, complete proof and limits](project/research/general_n/2026-09-16-critical-edge-covering-v1/CRITICAL_EDGE_COVERING.md).
-- [Exact check summary](project/research/general_n/2026-09-16-critical-edge-covering-v1/CHECK_SUMMARY.json).
-- [Hash-verifying source unpacker](project/research/general_n/2026-09-16-critical-edge-covering-v1/unpack_sources.py) and [byte-preserved source ZIP, base64](project/research/general_n/2026-09-16-critical-edge-covering-v1/SOURCE_BUNDLE.zip.b64).
-- Earlier complete derivation and trust boundaries: `80a783799a9a671e9b29356284515bad0402a3ce:CURRENT_STATE.md`.
+Use the full canonical representative system of an actual diameter-two edge-critical graph G, J its complement, and the minimum-J-degree pivot p. Assume an exact d=2 block T={t,s}, H={h:rho_h>=2}, |H|=2, and intrinsic defect L+beta+2mu=1. All K-labels have demand zero; beta=0, mu=0. Let C consist of the common K-labels, |C|=c, and let k be the unique singleton K-label, adjacent in F=G[A] only to s among T. Let
 
-The main milestone remains a comparatively short structural treatment with explicit coverage and reviewable proofs. Finite checks support that milestone; they do not replace it.
+    X=V_t (residual set {s}), Y=V_s (residual set {t}),
+    O=B minus (H union X union Y), Z=A minus (T union C union {k}).
+
+The exact tight rows give |X|=c, |Y|=c-1, c>=2. The inherited full-pool saturation gives all C-X and C-Y edges in G. Exact tight neighbourhoods are
+
+    N_G(t)={s} union C union X union O,
+    N_G(s)={t,k} union C union Y union O.                 (N1)
+
+### 1. Criticality forces the only remaining private witness
+
+Deleting ts preserves the endpoint distance via any member of C. Every affected pair involving an exclusive neighbour in X or Y retains a path through C. The only remaining potentially damaged pair is {t,k}. Therefore original edge-criticality forces
+
+    N_G(t) intersect N_G(k)={s}.                         (N2)
+
+In particular k has no G-neighbour in C, X or O. Its J-edges to X are selected: the unique residual label there is s. Its J-edges to O cannot be selected, because selection of k requires its F-neighbour s to be present in J at the source; s has no J-occurrence in O by beta=0. Therefore
+
+    R_o={k} for every o in O.                            (N3)
+
+O is allowed to be empty; no positive pivot surplus is assumed.
+
+### 2. All singleton obligations end in Y
+
+The label k is residual at both high vertices and is present in J at every X or O vertex by (N2). At any y in Y it is absent in J: it is not the residual label t, and selection would require s present in J at y, which is impossible. Thus an actual selected obligation (x,k), x in X, has its destination f(x) in Y.
+
+The canonical residual-union inclusion applied to this obligation yields
+
+    N_F(k) subset R_x union R_f(x)={s,t}.
+
+But k is not adjacent to t in F and is adjacent to s. Hence N_F(k)={s}. Combining all A- and B-parts gives the exact full neighbourhood
+
+    N_G(k)={s} union Y.                                 (N4)
+
+For each x in X, the quasi-edge identity says the unique common G-neighbour of x and k is f(x). Since xs is absent in G, (N4) gives
+
+    N_G(x) intersect Y={f(x)}.                          (N5)
+
+Thus the entire X-Y subgraph is a function graph X->Y, with |X|=|Y|+1; at least one receiver has two distinct preimages. No injectivity is assumed or inferred.
+
+### 3. Selected sets agree across every function edge
+
+For x in X, y=f(x), forward selected containment gives S_x minus {k} subset N_J(y) intersect A={t} union S_y. No low source selects t, hence S_x minus {k} subset S_y. Reverse selected containment gives S_y subset {s} union S_x. No low source selects s, and k is absent at y, so the converse holds. Consequently
+
+    S_x={k} disjoint-union S_f(x),
+    N_J(x) intersect A={s,k} disjoint-union S_f(x),
+    N_J(y) intersect A={t} disjoint-union S_y.            (N6)
+
+Two distinct preimages of one y have exactly the same selected sets and A-neighbourhoods. This does not establish equality of their entire B-neighbourhoods or prove that either is removable.
+
+### 4. Exact auxiliary consequences
+
+The singleton is residual at exactly H union O and selected at exactly X, hence
+
+    delta_k=1, R_k=2+|O|, x_k=c, s_k=0.                 (N7)
+
+By (N1), both tight vertices have degree 2c+1+|O|=|B|. They, as well as p, are maximum-degree vertices in G, independently of the number of labels in Z.
+
+### Limits and next step
+
+The family is reduced, not excluded. Next test whether a fibre of size at least two forces a redundant original edge under the complete representative identities, or characterize the remaining freedom without asserting that shared A-neighbourhoods are full twins. Preserve failures and graph controls; do not report a survivor reduction.
+
+The prior critical-edge covering proof and exact verification sources remain in `project/research/general_n/2026-09-16-critical-edge-covering-v1/` at the inspected predecessor. The main milestone remains a comparatively short structural treatment, not incremental survivor counts.
