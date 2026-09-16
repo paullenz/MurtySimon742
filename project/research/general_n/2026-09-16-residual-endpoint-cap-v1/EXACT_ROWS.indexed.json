@@ -1,0 +1,7 @@
+{
+  "format": "domain-indexed-d5-endpoint-row-costs-v1",
+  "domain": "h=0..6; L=0..floor(5h/4); nondecreasing nonnegative length-5 u summing to L with h-L+u_t>=0; n0+N+n2=9+h; N+2n2<=5h-4L; N<=sum_t(h-L+u_t). Lexicographic order of [h,L,*u,n0,N,n2].",
+  "rows": 2940,
+  "complete_table_sha256": "66784755801d91f5520d916f88b1b9c2cbca5f89a22f8abc5fd60807cfae48bc",
+  "cost_bytes_gzip_base64": "H4sIAAAAAAAC/81WbW/aMBD+LyuFdh00lDbBIZA0IRAaSheWjgkJCQkJCQlp//9b785nxwaG2r1Is4J9se/18WOH2kXt8rLeaFxdf75pNp1PF7XaZR0mruo4RdNf4Gm2mq1bx2nfde5deKMXp93pdFxXuEIE+APDBlpek+mNtG3KvnUre6dN3V2HXD3A43qu1xXC7wX9EFRBC/VIy6GA2EANmiegBUEQhjFOoJnwA5oI4zglLaXDc/hLM7PntFoqL0eN7TstdO7V+ODy4HVlL3zqegFlPIAnjMLoMY6TYTrK0AM5sWt1uFouxXOpGkxfUOXY+mFIKWOSaZblYACqGJICVooYElsUszJoZ3k+gxhgo6CSzn1pEYTauWGAfjDzOEl5Embz2aygCJFSNhZ6lOWJBXQHQ1G+R1gYOD8YousZYldUkt/TQtBX4yDkIXqUfZxQN0xpK8bwZJNs8pTn0+fZS6HC6BBqU1xPb0tXuGpn/J7enL6FOkOmUSMQEAUuDh2RL5ssgunCniLbFWZMbZRpd+gPHBZlucBEmUCKPYo8mhSKQHqf1SZxhoc+IRvIA3Ej1MwcxtJgkmsTtAGjcrFYQkCERKLB+SdWoOykHZ9xk+cHCZ62w2xwE/OpXsAVWFoslytKdmKZvXt1SGj/ajXhU3J6tWBhuVqt/5a83lj0B7Csl/7AlMPIEB/jSkqGWkhHahxnPEyeZJ9PqXue0eH4Ck8xL+bfyvL1++LHsjoaXWEcDr/nGucj6FcMhIiBPiXAKM3u5IDfFbsUvSS8h/iqQnWROk5UhYmNOMMq0OgwkuRPrjnE0SgcxmP8VZ26xKMTZlwC1QVsMbkis6KzKvB0THRItdgXWMxXGJcxOawDd022l8LwS47RM7hGPmHqfO2oO+foxtF3jpmyynl2zjvfQdbn6+juMfD4mHeoHypHrhJTjZqBq7LNS8OSTNEWjNebzRYKRCpIEjBw9varwP/Gnv8SKHhPUOG8/YDoZX1gPmSPKOGBLl+rVVrGdVDYbLc7gnJugf9bOs9Ewz/XmfLH6ZxO/g6dJYOAL9vdbv+/ve/2+5/4ewPEzdGqfAsAAA=="
+}

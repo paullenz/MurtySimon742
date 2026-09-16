@@ -1,0 +1,209 @@
+{
+  "status": "PASS_TARGETED_ENDPOINT_CAP_AND_ROW_CHECKS_ONLY",
+  "python_cpp_complete_outer_cost_table_agreement": true,
+  "row_relaxation": {
+    "d": 5,
+    "z": 2,
+    "minimum": 34,
+    "minima_by_h": [
+      36,
+      35,
+      34,
+      36,
+      39,
+      42,
+      45
+    ],
+    "minimizing_rows": [
+      [
+        2,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        1,
+        10,
+        0,
+        34,
+        1
+      ]
+    ],
+    "symmetry_reduced_outer_rows": 2940,
+    "ordered_outer_tuples": 29424,
+    "count_is_not_all_one_hole_allocations": true,
+    "exact_rows_sha256": "66784755801d91f5520d916f88b1b9c2cbca5f89a22f8abc5fd60807cfae48bc",
+    "row_fields": [
+      "h",
+      "L",
+      "u0",
+      "u1",
+      "u2",
+      "u3",
+      "u4",
+      "n0",
+      "n1",
+      "n2",
+      "cost",
+      "ordered_multiplicity"
+    ]
+  },
+  "endpoint_arrays": {
+    "cases": 299332,
+    "by_d": [
+      {
+        "d": 2,
+        "cases": 40
+      },
+      {
+        "d": 3,
+        "cases": 162
+      },
+      {
+        "d": 4,
+        "cases": 448
+      },
+      {
+        "d": 5,
+        "cases": 1000
+      },
+      {
+        "d": 6,
+        "cases": 1944
+      },
+      {
+        "d": 7,
+        "cases": 3430
+      },
+      {
+        "d": 8,
+        "cases": 5632
+      },
+      {
+        "d": 9,
+        "cases": 8748
+      },
+      {
+        "d": 10,
+        "cases": 13000
+      },
+      {
+        "d": 11,
+        "cases": 18634
+      },
+      {
+        "d": 12,
+        "cases": 25920
+      },
+      {
+        "d": 13,
+        "cases": 35152
+      },
+      {
+        "d": 14,
+        "cases": 46648
+      },
+      {
+        "d": 15,
+        "cases": 60750
+      },
+      {
+        "d": 16,
+        "cases": 77824
+      }
+    ],
+    "scope": "Selected-label necessary scalar arrays only, not graph realizations"
+  },
+  "injection_masks": {
+    "cases": 137256,
+    "scope": "Local residual-incidence masks; canonical forcing is proved symbolically"
+  },
+  "hand_envelope": {
+    "envelope_cases": 1626,
+    "minimizers": [
+      [
+        2,
+        0,
+        24
+      ]
+    ],
+    "generalized_endpoint_arrays": 5832,
+    "scope": "Finite support only; hand proof has no finite h cutoff"
+  },
+  "negative_controls": [
+    {
+      "kind": "residual_at_all_high_sources_cannot_be_dropped",
+      "d": 5,
+      "source": 4,
+      "destination": 4,
+      "delta": 8,
+      "R": 4,
+      "s": 4,
+      "canonical_realization": false
+    },
+    {
+      "kind": "both_endpoints_must_be_low",
+      "d": 5,
+      "source": 4,
+      "destination": 5,
+      "delta": 9,
+      "R": 5,
+      "s": 4,
+      "canonical_realization": false
+    },
+    {
+      "kind": "degree_cap_requires_a_selected_incidence",
+      "d": 5,
+      "delta": 9,
+      "R": 9,
+      "x": 0,
+      "s": 0,
+      "degree_cap_applies": false,
+      "canonical_realization": false
+    },
+    {
+      "kind": "old_interface_not_a_canonical_system",
+      "d": 5,
+      "h": 6,
+      "L": 0,
+      "eta": 0,
+      "kappa": 15,
+      "violates_new_eta_floor": true,
+      "old_row_minimum_still": 30
+    },
+    {
+      "kind": "Omega31_branches",
+      "branches": [
+        {
+          "h": 5,
+          "eta": 6,
+          "required_eta": 14
+        },
+        {
+          "h": 6,
+          "eta": 1,
+          "required_eta": 15
+        }
+      ],
+      "branches_rejected": 2
+    },
+    {
+      "kind": "relaxed_Omega34_is_not_a_realizability_claim",
+      "h": 2,
+      "L": 0,
+      "n0": 1,
+      "n1": 10,
+      "n2": 0,
+      "omega": 34,
+      "canonical_realization": "NOT_ASSERTED"
+    }
+  ],
+  "symbolic_consequence": "s_k<=d-2 for every k in K; d=5,E>0 implies Omega>=34 and 4a+5>=b+2tau+104",
+  "integer_tau_one_minimum_a_for_extras": 35,
+  "original_graph_enumeration": "NOT_RUN",
+  "catalogue_replay": "NOT_RUN",
+  "independent_expert_review": "OPEN",
+  "canonical_bridge_validation": "NOT_ASSERTED",
+  "independence": "Different algorithms by the same assistant; not independent expert acceptance"
+}

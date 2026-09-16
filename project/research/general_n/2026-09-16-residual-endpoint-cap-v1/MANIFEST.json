@@ -1,0 +1,15 @@
+{
+  "predecessor": "9e0c4559d45df0bd033a422bdf18fe0b81078e0b",
+  "scope": "Conditional internal hand proof and targeted checks; not promoted",
+  "sha256": {
+    "PROOF.md": "3c9e10da94a2885bbdf5d90b9d87690471e2b1124a9cd1c0c0d1173beb38b068",
+    "CURRENT_STATE.md": "396c1c54325f7d98a27c7a92d66fa882350c66ec65317d0676702fd42c8e0cb1",
+    "check_cap.py": "cae77712f62dca4c71013789122e7d43b2d7f6e2f219b8e3edfc27ab0521999e",
+    "verify_cap.cpp": "6b43306e94eb51443991eeee0a9122c1bb93a4b3507c820d5aa9f25744308e4e",
+    "CHECK_RESULTS.json": "a47333b1906144e985ccc6891f38dda43ad4f8a6d76f5e95c743e619e31a7ac0",
+    "EXACT_ROWS.indexed.json": "92aa457b84db9d3d29740aa452747f660aa8d0f2ed6fc49913274889c9d132cc",
+    "unpack_rows.py": "2a2208a9cc99a5c15c4ed64aa7eb9a6a6b5e05ffb250c719384ce409f373ccf9"
+  },
+  "current_state_location": "CURRENT_STATE.md is the accompanying repository-root handoff at this checkpoint",
+  "evidence_encoding": "Indexed JSON stores saved row costs. Decoder regenerates the fixed input domain only, attaches stored costs, and checks the complete table SHA256."
+}
