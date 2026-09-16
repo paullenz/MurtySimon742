@@ -1,0 +1,14 @@
+{
+  "predecessor": "002713dc090035ec4f01d8eaaf9d27023082bc4d",
+  "scope": "Conditional internal hand proof; not promoted",
+  "sha256": {
+    "PROOF.md": "dee1c3c8f65c146c32ea05d00cf31ef1a2b8752b3eea6946fab504809cea80cb",
+    "CURRENT_STATE.md": "07a6f98415a6b9149835b9a51a1bf323758c00714f7e0908cdc340645870ef2f",
+    "check_routing.py": "c228e27e0d56603b9d266d3154b82f78ac042cd27481116812ca6ac84fe4d3a1",
+    "verify_routing.cpp": "acf4e655bbc45d5a9fed6319fbfffc465b64df5e44ed6d8bd228a0b877c7353a",
+    "CHECK_RESULTS.json": "024ade7367121d470569b990fceb02ca113c12f4da67e6fcbe62c8273fc90e84",
+    "unpack_decisions.py": "11fb45d35bb99a2a6b96797d37b45a46ea8593f0d87771a6cf08d473bb91f14a",
+    "EXACT_DECISIONS.indexed.json": "e255d01b40b2f999eb204df446d48b45caf2650ac3b4c84cc4c484c8f7e26e6a"
+  },
+  "evidence_encoding": "EXACT_DECISIONS.indexed.json stores domain-indexed nonzero destination masks. unpack_decisions.py reconstructs the fixed input domain and matrix shapes, overlays the stored decisions without recomputing them, and verifies the exact full JSON SHA256."
+}

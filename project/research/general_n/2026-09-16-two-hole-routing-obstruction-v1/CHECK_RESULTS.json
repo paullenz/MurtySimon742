@@ -1,0 +1,131 @@
+{
+  "status": "PASS_TARGETED_ROUTING_AND_HAND_BOUND_CHECKS_ONLY",
+  "predecessor": "002713dc090035ec4f01d8eaaf9d27023082bc4d",
+  "python_cpp_full_agreement": true,
+  "interface_domain": "Five distinguished tight labels; all 6-regular loopless multigraphs with parallel edges allowed; K-label permutations reduced",
+  "interfaces": 654,
+  "mandatory_selected_incidences_per_interface": 60,
+  "mandatory_selected_incidences_total": 39240,
+  "impossible_incidence_histogram": {
+    "56": 90,
+    "60": 564
+  },
+  "impossible_selected_incidences_total": 38880,
+  "fully_destination_admissible_interfaces": 0,
+  "explicit_predecessor_interface": {
+    "multiplicities": [
+      2,
+      1,
+      1,
+      2,
+      2,
+      1,
+      1,
+      2,
+      1,
+      2
+    ],
+    "impossible_selected_incidences": 60
+  },
+  "scalar": {
+    "feasible_outer_tuples": 29424,
+    "minimum": 30,
+    "minima_by_h": [
+      36,
+      35,
+      34,
+      33,
+      32,
+      31,
+      30
+    ],
+    "minimizers": [
+      [
+        6,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        15
+      ]
+    ]
+  },
+  "local_lemmas": {
+    "residual_masks_tested": 990,
+    "eligible_profile_types": 20,
+    "twin_predicate_cases": 83740
+  },
+  "negative_controls": [
+    {
+      "kind": "beta_zero_is_essential",
+      "holes": [
+        0,
+        1
+      ],
+      "residual": [
+        2,
+        3,
+        4,
+        5
+      ],
+      "tight_occurrences_outside_full_profiles": 3,
+      "scope": "Local control, not a graph"
+    },
+    {
+      "kind": "zero_deficit_is_essential",
+      "demand": 3,
+      "k_sources": [
+        [
+          0,
+          0
+        ],
+        [
+          0,
+          1
+        ],
+        [
+          1,
+          0
+        ]
+      ],
+      "j_sources": [
+        [
+          0,
+          0
+        ],
+        [
+          0,
+          1
+        ],
+        [
+          1,
+          1
+        ]
+      ],
+      "scope": "Twins distinguishable when selection is not saturated"
+    },
+    {
+      "kind": "six_selected_K_labels_is_essential_to_capacity_step",
+      "selected_K": 5,
+      "off_profile_capacity": 4,
+      "local_destination_exists": true
+    },
+    {
+      "kind": "old_interface_remains_valid_as_an_interface",
+      "interface_equations": "PASS",
+      "full_saturated_routing": "IMPOSSIBLE",
+      "original_graph_realization": "NOT_ASSERTED"
+    }
+  ],
+  "exact_decisions_sha256": "9f9132e1144fa5dc7ee35e5761c124efe68bab4c7e8ebad6788b3ac1ab9f3ebf",
+  "new_symbolic_consequence": "5h+3L+eta>=31 for d=5,z=2; 4a+5>=b+2tau+101; tau>=1 and b>=a+2 force a>=34 for extras",
+  "original_graph_enumeration": "NOT_RUN",
+  "catalogue_replay": "NOT_RUN",
+  "canonical_bridge_validation": "NOT_ASSERTED",
+  "independent_expert_review": "OPEN",
+  "scope": "Finite checks support the new conditional hand proof; both checkers by the same assistant; no promotion or novelty claim"
+}
