@@ -1,0 +1,25 @@
+{
+  "status": "PASS_FRESH_BOUNDED_HOLE_CHECKS",
+  "hole_budget": 2,
+  "scope": "All labelled distinguished-edge Q with endpoint degrees >=3 for d=4..6; all zero-, one-, two-hole probe supports and protected singletons. Local short-path tests, not canonical exact-block graph realizations.",
+  "by_d": {
+    "4": {"tight_graphs": 2, "records": 56, "diameter_two": 54},
+    "5": {"tight_graphs": 128, "records": 4992, "diameter_two": 4786},
+    "6": {"tight_graphs": 7744, "records": 402688, "diameter_two": 388568}
+  },
+  "eligible_records": 407736,
+  "controls": [
+    {"name": "first_endpoint_degree_two", "record": 407736, "lost_pairs": 1},
+    {"name": "second_endpoint_degree_two", "record": 407737, "lost_pairs": 1},
+    {"name": "three_hole_probe", "record": 407738, "lost_pairs": 1},
+    {"name": "unprotected_singleton", "record": 407739, "lost_pairs": 1},
+    {"name": "common_label_absent", "record": 407740, "lost_pairs": 1}
+  ],
+  "records": 407741,
+  "arithmetic_d_range": [5, 1000],
+  "arithmetic_mu_checks": 250992,
+  "input_sha256": "c2af42194578eb429bba22e2156a3bec6288e76b35379065a0e5e2bd74d2ff42",
+  "decision_sha256": "02a0d0aeeab4321f61929649a7a181c2a13b22d0c21ba5fb603af4f1b3c36142",
+  "cpp_decision_sha256": "02a0d0aeeab4321f61929649a7a181c2a13b22d0c21ba5fb603af4f1b3c36142",
+  "independence": "Python bitsets and C++ explicit intermediate-vertex search; same assistant, not independent expert review."
+}

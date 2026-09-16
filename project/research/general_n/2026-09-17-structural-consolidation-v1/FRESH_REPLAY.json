@@ -1,0 +1,15 @@
+{
+  "status": "PASS_PINNED_REGENERATION",
+  "families": [
+    {
+      "source": "check_star_forest.py",
+      "records": 324554,
+      "decision_sha256": "fb35f3c0c006f603179054ce8aa57cf3c73e5794ccc47a6907f83b12f39bd83c"
+    },
+    {
+      "source": "check_hole_budget.py",
+      "records": 407741,
+      "decision_sha256": "02a0d0aeeab4321f61929649a7a181c2a13b22d0c21ba5fb603af4f1b3c36142"
+    }
+  ]
+}

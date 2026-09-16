@@ -1,23 +1,27 @@
 # Murty–Simon / Erdős #742 — live current state
 
-> The checked star-forest theorem has been extended by a new bounded-hole argument. This checkpoint preserves the complete extension before its fresh tests and consolidated presentation.
+> **Current mathematical entry point: [STRUCTURAL_REVIEW.md](STRUCTURAL_REVIEW.md).** The short treatment, new one-defect extension, complete test sources, exact summaries and fresh-directory replay are published together. Older pre-check notes are historical stages, not the current proof status.
 
 <!-- CURRENT-STATUS:START -->
-**CHECKPOINT CLASS:** `WIP_UNVERIFIED_ONE_DEFECT_CLOSURE`.
+**CHECKPOINT CLASS:** `INTERNAL_STRUCTURAL_TREATMENT_REVIEWABLE_NOT_PROMOTED`.
 
-**WORK MODE:** `MATH`. One bounded next-boundary proof, not a survivor scan.
+**WORK MODE:** `AUDIT`. Completed the bounded theorem unit, its fresh verification and consolidated reviewer presentation. No long-running job is launched or claimed.
 
-**INSPECTED PREDECESSOR:** `072b24bfbd256b0d941725460e944da7cb402eae`, tree `3b16f58206d7526052353aef9c8ff4f78d653fb9`, confirmed main before this transaction.
+**INSPECTED PREDECESSOR:** `d9cbdec625fb841cac47a435bd409b60ab077e1f`, tree `32938873f7f66fe42f6700e1a57b0c21d16831f1`, confirmed main immediately before the transaction. This preserves the complete one-defect hand derivation before its tests.
 
-**LAST VERIFIED RESULT:** the predecessor's D>=2floor(d/2)+1 proof and 324554 matching local decisions remain unchanged. New complete hand derivation, awaiting fresh checks: a common tight neighbour and at most h missing tight neighbours per unprotected external vertex make any tight edge with endpoint degrees >=h+1 noncritical. At D=2floor(d/2)+1 the exact block has L+beta=1, minimum tight degree >=3 and a forced common label. Applying h=2 gives D>=2floor(d/2)+2 for d>=5; at d=5, W>=31 or W>=51 with extras. This is WIP internal mathematics, not external acceptance.
+**LAST VERIFIED RESULT:** for every actual whole exact block |T|=|H|=d>=5, D>=2floor(d/2)+2 and W>=d+(d-1)m+2floor(d/2)+2. Thus d=5 requires D>=6 and W>=31, or W>=51 with extra high-source selections. The treatment rederives the actual-graph bridge, exact accounting and universal-core bound, then closes both lowest numerical boundaries with star-forest and bounded-hole deletion lemmas. Exact-block existence/coverage remains a hypothesis. Internal candidate theorem; external mathematical review, novelty and sharpness open.
 
-**CANONICAL / PROMOTED STATUS:** unchanged — 4626 exclusions / 952 survivors / 3632 whole-state closures. Prior candidate union, certificates, audits and state3349 retain their boundaries. No catalogue scan, workflow launch or promotion.
+**FRESH CHECKS:** 324554 matching Python/C++ h=1 records and 407741 matching h=2 records, each including five effective premise-failure controls. Both positive test families exhaust the relevant labelled distinguished-edge tight graphs through d=6 and all allowed one-probe supports. Integer boundary calculations checked d=5,...,1000. These are local-lemma tests, not canonical graph realizations or a catalogue census. Both checkers are by the same assistant. The inherited 11357-record universal-core replay is NOT rerun here.
 
-**PRESERVATION:** complete new derivation in `project/research/general_n/2026-09-17-structural-consolidation-v1/ONE_DEFECT_CLOSURE.md`; predecessor proof and verification sources are unchanged. All definitions and exact graph scope are pinned there.
+**FRESH-DIRECTORY REPLAY:** copied only the published sources and expected summaries into a new directory, ran verify_published.py, and reproduced both complete streams with pinned counts and hashes. FRESH_REPLAY.json records PASS_PINNED_REGENERATION. The source-complete new tests require no recovered archive, network or third-party Python library.
 
-**UNPRESERVED WORK:** None for this bounded mathematical derivation after remote confirmation. Prior generated stream copies are local and fully regenerate from published code; historical attachment recovery and PR #2 remain separate.
+**CANONICAL / PROMOTED STATUS:** unchanged — 4626 exclusions / 952 survivors / 3632 whole-state closures. Previous candidate unions, certificates, audits and state3349 keep their existing boundaries. No catalogue scan, workflow launch, q-enumeration or promotion.
 
-**DEFERRED ADMIN:** historical attachments, PR #2 and unrelated CI maintenance; external review, novelty and promotion.
+**PRESERVATION:** all current mathematics and test sources are in `project/research/general_n/2026-09-17-structural-consolidation-v1/`; root STRUCTURAL_REVIEW.md is the current reviewer entry. The approximately 2200-word STRUCTURAL_TREATMENT.md is the integrated proof. Earlier pre-test proofs remain unchanged. The delivered ZIP includes full generated gzip inputs/decisions; raw GitHub stream transfer and old archive recovery are not claimed.
 
-**NEXT ACTION:** run fresh bounded-hole local checks with an explicit-path C++ checker and premise-failure controls, then publish one consolidated structural treatment of the full chain. Stop this bounded unit at that reviewer-facing checkpoint; d=5,D=6 remains an open boundary, not a result to assume.
+**UNPRESERVED WORK:** None for this theorem, its verification implementation, summaries or review treatment after remote confirmation. Generated raw copies are also supplied in the download and deterministically reproducible from the published sources. Historical attachments and the separate repair PR remain separate work, not hidden dependencies of this package.
+
+**DEFERRED ADMIN:** historical root README/reviewer-index narrative synchronization, older attachment transfer, PR #2 and unrelated CI/status maintenance; independent review, novelty and promotion. Current reviewer navigation is supplied without erasing those older snapshots.
+
+**NEXT ACTION:** MATH: analyze the d=5,D=6 boundary in the original graph, first separating the admissible mu and L+beta possibilities and determining whether a positive defect can protect all tight edges. Do not carry over zero-loss assumptions. Preserve the first complete argument or obstruction. Independently, exact-block coverage remains the main gap between this scoped treatment and an unrestricted result.
 <!-- CURRENT-STATUS:END -->
