@@ -1,0 +1,10 @@
+{
+  "status": "PASS_FRESH_PACKAGE_REPLAY",
+  "algorithm_changed": false,
+  "implementation_blob": "8b9124fc5bc384c4388a0f2d92c1f9be80425ff2",
+  "original_failure": "GRAPH_RECORDS.json was not expanded before final recompression",
+  "fix": "Thin entry point expands graph sidecar then runs unchanged implementation",
+  "matching_records": 11357,
+  "summary_byte_identical": true,
+  "decision_sha256": "c4859538b56444860b26fdc46e40f68bf21b4c65b68dce2e394b531c621ba82a"
+}
