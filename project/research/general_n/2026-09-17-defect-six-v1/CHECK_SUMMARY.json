@@ -1,0 +1,231 @@
+{
+  "status": "PASS_LOCAL_PAIR_COVER_AND_SUPPORT_CHARGE",
+  "records": 121549,
+  "graph_records": 87685,
+  "tight_graph_records": 33864,
+  "families": {
+    "d3_single_common": {
+      "tight_graphs": 4,
+      "records": 128
+    },
+    "d3_pair_cover_no_common": {
+      "tight_graphs": 4,
+      "records": 512
+    },
+    "d4_single_common": {
+      "tight_graphs": 32,
+      "records": 2048
+    },
+    "d4_pair_cover_no_common": {
+      "tight_graphs": 32,
+      "records": 8192
+    },
+    "d5_single_common": {
+      "tight_graphs": 120,
+      "records": 15360
+    },
+    "d5_pair_cover_no_common": {
+      "tight_graphs": 120,
+      "records": 61440
+    }
+  },
+  "counts": {
+    "eligible_local_records": 71241,
+    "positive_family_records": 87680,
+    "diameter_two_records": 31506,
+    "threat_present_but_no_lost_pair": 9933,
+    "threat_present_with_lost_pair": 6507
+  },
+  "controls": [
+    {
+      "name": "pair_coverage_removed",
+      "record": 87680,
+      "pair_covered": 0,
+      "pool_protected": 1,
+      "threat": 0,
+      "diameter_two": 1,
+      "lost_pairs": 2
+    },
+    {
+      "name": "pool_protection_removed",
+      "record": 87681,
+      "pair_covered": 1,
+      "pool_protected": 0,
+      "threat": 0,
+      "diameter_two": 1,
+      "lost_pairs": 1
+    },
+    {
+      "name": "uncovered_threat_allowed",
+      "record": 87682,
+      "pair_covered": 1,
+      "pool_protected": 1,
+      "threat": 1,
+      "diameter_two": 1,
+      "lost_pairs": 1
+    },
+    {
+      "name": "threat_not_sufficient_for_criticality",
+      "record": 87683,
+      "pair_covered": 1,
+      "pool_protected": 1,
+      "threat": 1,
+      "diameter_two": 1,
+      "lost_pairs": 0
+    },
+    {
+      "name": "pair_cover_without_common_label",
+      "record": 87684,
+      "pair_covered": 1,
+      "pool_protected": 1,
+      "threat": 0,
+      "diameter_two": 1,
+      "lost_pairs": 0
+    }
+  ],
+  "support_weight_h_checks": 255632,
+  "pair_row_integer_checks": 5314440,
+  "floor_ceiling_checks": 244420,
+  "envelope_minima": {
+    "3": {
+      "minimum": 2,
+      "attaining_count": 4,
+      "attaining_masks": [
+        3,
+        5,
+        6,
+        7
+      ]
+    },
+    "4": {
+      "minimum": 5,
+      "attaining_count": 6,
+      "attaining_masks": [
+        31,
+        47,
+        55,
+        59,
+        61,
+        62
+      ]
+    },
+    "5": {
+      "minimum": 8,
+      "attaining_count": 40,
+      "attaining_masks": [
+        255,
+        383,
+        447,
+        479,
+        503,
+        507,
+        511,
+        639,
+        703,
+        751,
+        759,
+        765,
+        767,
+        863,
+        879,
+        891,
+        893,
+        895,
+        927,
+        943,
+        951,
+        958,
+        959,
+        975,
+        987,
+        990,
+        991,
+        1005,
+        1006,
+        1007,
+        1011,
+        1013,
+        1014,
+        1015,
+        1017,
+        1018,
+        1019,
+        1020,
+        1021,
+        1022
+      ]
+    },
+    "6": {
+      "minimum": 13,
+      "attaining_count": 60,
+      "attaining_masks": [
+        8191,
+        12287,
+        14335,
+        15359,
+        16127,
+        16255,
+        16367,
+        16375,
+        20479,
+        22527,
+        24063,
+        24319,
+        24511,
+        24559,
+        24571,
+        27647,
+        28159,
+        28543,
+        28607,
+        28663,
+        28667,
+        29695,
+        30207,
+        30463,
+        30687,
+        30703,
+        30717,
+        31231,
+        31615,
+        31711,
+        31735,
+        31741,
+        32191,
+        32223,
+        32251,
+        32253,
+        32383,
+        32447,
+        32479,
+        32495,
+        32510,
+        32575,
+        32607,
+        32631,
+        32638,
+        32671,
+        32699,
+        32702,
+        32733,
+        32734,
+        32743,
+        32747,
+        32749,
+        32750,
+        32755,
+        32757,
+        32758,
+        32761,
+        32762,
+        32764
+      ]
+    }
+  },
+  "input_sha256": "c86c8d5580151753c75707ce7c93d16db83e00d52f0247c0ad3800126d089dc4",
+  "decision_sha256": "a3b0e95a3666e3deb3039b6d4e04278eead9c68740fc87873e656f97a14af581",
+  "cpp_decision_sha256": "a3b0e95a3666e3deb3039b6d4e04278eead9c68740fc87873e656f97a14af581",
+  "scope": "Local graph deletion, exact support threats, row arithmetic and tight-graph envelopes only. Not a canonical exact-block graph census or catalogue application.",
+  "independence": "Python bitset reachability and C++ explicit middle-vertex paths, same assistant; not independent expert review.",
+  "old_replay": "Older 11357/324554/407741 streams not rerun by this new package."
+}

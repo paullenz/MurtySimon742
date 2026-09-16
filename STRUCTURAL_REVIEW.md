@@ -1,30 +1,27 @@
-# Current short structural treatment — 17 September 2026
+# Current structural review — 17 September 2026
 
-**Start with [Exact tight blocks: interface capacity and critical-edge rigidity](project/research/general_n/2026-09-17-structural-consolidation-v1/STRUCTURAL_TREATMENT.md).** This is the current compact entry point for the exact-block structural work, not a new claim about the unrestricted conjecture or a replacement for the fixed-order reviewer packages.
+**Start with [Pair-covered interfaces and critical-edge charging](project/research/general_n/2026-09-17-defect-six-v1/THEOREM.md).** The preceding graph-to-representative construction and exact accounting are included byte-for-byte as the [prerequisite treatment](project/research/general_n/2026-09-17-defect-six-v1/PREREQUISITE_STRUCTURAL_TREATMENT.md).
 
-The approximately 2200-word treatment assembles the actual-graph representative bridge, exact interface accounting, universal-core inequality, zero-loss star forests and the new one-defect closure. Under the explicit whole-level hypothesis |T|=|H|=d>=5, its conclusion is
+Under the whole-level exact-block hypothesis |T|=|H|=d, small intrinsic defect forces each tight pair to share an interface neighbour. The new necessary inequality is
 
-    D>=2floor(d/2)+2,
-    W>=d+(d-1)m+2floor(d/2)+2.
+    E_h(Q)<=L+floor(L/h)+beta.
 
-At d=5: D>=6, W>=31, and W>=51 with extra high-source selections. The existence of an exact block is assumed. Novelty, sharpness and independent mathematical acceptance remain open. This is an internally checked candidate theorem, not a promotion.
+It yields D>=ceil(d(d-1)/4) for all d>=3. At d=5, the separate hand corollary strengthens the current bound to **D>=8, W>=33, or W>=53 with extra high-source selections**. These results do not assume a single interface label adjacent to every tight vertex.
 
-## Reproduction
+**Status:** internally checked candidate mathematics within an explicit exact-block scope. Unrestricted exact-block coverage, sharpness, novelty and independent mathematical acceptance remain open. No catalogue promotion or global Murty–Simon proof is claimed.
 
-In `project/research/general_n/2026-09-17-structural-consolidation-v1/`, run
+## Reproduce the new checks
+
+In project/research/general_n/2026-09-17-defect-six-v1/, run:
 
     python3 verify_published.py
 
-The published Python and C++ sources regenerate both local-lemma test families and compare their counts and stream hashes with the pinned summaries. Python 3.10+ and a C++17 compiler are required; no network or third-party Python package is used.
+Python 3.10+ and a C++17 compiler suffice; no network or third-party Python package is needed. The [exact summary](project/research/general_n/2026-09-17-defect-six-v1/CHECK_SUMMARY.json) contains 121549 matching Python/C++ records, including 87685 local graphs and 33864 auxiliary tight graphs, plus row and support-charge arithmetic checks. The [source-only replay](project/research/general_n/2026-09-17-defect-six-v1/FRESH_REPLAY.json) reproduced the pinned streams. Both implementations were written by the same assistant; they are not external independent review.
 
-The [star-forest summary](project/research/general_n/2026-09-17-structural-consolidation-v1/CHECK_SUMMARY.json) records 324554 matching decisions; the [bounded-hole summary](project/research/general_n/2026-09-17-structural-consolidation-v1/HOLE_CHECK_SUMMARY.json) records 407741. Each includes five effective premise-failure controls. [Fresh-directory regeneration](project/research/general_n/2026-09-17-structural-consolidation-v1/FRESH_REPLAY.json) reproduced both pinned decision streams. These are local short-path checks, not a census of canonical graph realizations. Both implementations are by the same assistant, not external independent reviewers.
+These tests include pair-covered interfaces without an all-tight common label, failures of essential premises, and examples showing that a support threat is not sufficient for actual criticality. No original exact-block graph census is claimed. Older verification families were not rerun in this package. Full generated gzip evidence is in the separate download and is reproducible from the published sources.
 
-The older universal-core 11357-record replay has not been rerun here. The current package is source-complete for its own new tests and does not need old recovery archives. Full generated streams are included in the separately delivered ZIP; their separate raw GitHub upload is not claimed.
+## Review focus and next obligation
 
-## Review and next proof obligation
+Review the full-pool protection argument, the necessity rather than sufficiency of the support-threat cover, and the loss charged to each support. Then review the pair-coverage counting and the quadratic and five-label corollaries. The next mathematical target is **d=5,D=8**, using the actual threat-cover equality conditions, not merely the passing scalar envelope.
 
-Review the representative existence argument and residual injections first, then full-pool coverage, the universal-core distinct-label count and the complete external-neighbour classification in the one-defect closure. The proof lists the immutable sources for each inherited result and preserves the pre-test derivations separately.
-
-The next mathematical target is the actual-graph boundary d=5,D=6, with no assumption that L or beta vanishes. Exact-block coverage for arbitrary graphs is a separate open obligation. The canonical ledger remains 4626 exclusions / 952 survivors / 3632 whole-state closures. No old evidence, failed approach or review package is deleted.
-
-For the operational handoff use [CURRENT_STATE.md](CURRENT_STATE.md). The older root README and reviewer index retain their historical snapshots; this entry and the live handoff identify the current structural theorem. The separate repair PR and historical archive work are not represented as completed by this package.
+Canonical counts remain 4626 exclusions / 952 survivors / 3632 whole-state closures. For the operational handoff read [CURRENT_STATE.md](CURRENT_STATE.md). The [preceding structural review entry](project/research/general_n/2026-09-17-defect-six-v1/PREVIOUS_STRUCTURAL_REVIEW.md) and all its earlier proof and verification links are retained for provenance; its D=6 next target is superseded here. No old proof, failed route or fixed-order reviewer package is removed.

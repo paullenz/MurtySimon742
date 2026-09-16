@@ -1,0 +1,6 @@
+{
+  "status": "PASS_FRESH_SOURCE_ONLY_REGENERATION",
+  "records": 121549,
+  "input_sha256": "c86c8d5580151753c75707ce7c93d16db83e00d52f0247c0ad3800126d089dc4",
+  "decision_sha256": "a3b0e95a3666e3deb3039b6d4e04278eead9c68740fc87873e656f97a14af581"
+}
