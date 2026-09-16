@@ -1,76 +1,38 @@
 # Murty–Simon / Erdős #742 — live current state
 
-> Read this first. The defect-one attack has yielded a parameterized critical-edge covering argument. The derivation is preserved below before its verification unit; no computational check of the new argument is claimed yet.
+> Read this first. Critical-edge covering now gives a quadratic clique-defect bound and closes intrinsic defect one for every exact block with d>=3. The d=2 exception remains explicit. No catalogue promotion.
 
 <!-- CURRENT-STATUS:START -->
-**CHECKPOINT CLASS:** `WIP_INTERNAL_CLIQUE_DEFECT_HAND_PROOF_NOT_PROMOTED`.
+**CHECKPOINT CLASS:** `INTERNAL_CRITICAL_EDGE_COVERING_VERIFIED_NOT_PROMOTED`.
 
-**WORK MODE:** `MATH`. Theorem-first priority. One critical-edge covering derivation, not a survivor scan.
+**WORK MODE:** `MATH`. Theorem-first priority. This unit verifies and packages the already-preserved structural derivation; it is not a survivor scan.
 
-**INSPECTED PREDECESSOR:** `54f974fcff8acd85870deacc931da15ec4b11069`, tree `8aee1d0825d29ef22652b4a7ed7493a219092b17`, CURRENT_STATE blob `5cb8a19152dde50adfe4e6df9c73e0cec3a56405`; current file freshly re-read before this contents update. The full preceding handoff and zero-defect proof remain at that immutable commit.
+**INSPECTED PREDECESSOR:** `80a783799a9a671e9b29356284515bad0402a3ce`, tree `8eb802551777876951fea27d27855109a4b51875`. Main was re-read before publication preparation. The full derivation and earlier handoff remain at that immutable predecessor; the zero-defect unit remains at `54f974fcff8acd85870deacc931da15ec4b11069`.
 
-**LAST VERIFIED RESULT:** new internal symbolic derivation, finite verification pending. For every actual exact d-by-d tight block with d>=3 and complete F[T], critical-edge covering forces L+beta>=(d-1)(d-2). If F[T] is not complete, 2mu>=2 already. Thus intrinsic defect one is excluded for every d>=3. No d=2 closure is claimed: beta=0 automatically there, and the L=1 singleton-label exception remains open. Full derivation below.
+**LAST VERIFIED RESULT:** internal parameterized hand proof. For an actual exact d-by-d block with d>=3 and complete F[T], L+beta>=(d-1)(d-2). Marking tight vertices that have singleton K-neighbours, original edge-criticality forces each K-label to meet at most one unmarked tight vertex. Counting distinct labels together with the exact tight rows proves the bound. If F[T] is incomplete, 2mu>=2 already, so every actual exact d>=3 block has intrinsic defect at least two. The d=2, L=1 singleton-label exception is NOT closed.
 
-**IMPLICATIONS / LIMITS:** conditional on the full original graph construction. For a complete tight graph, W>=d+(d-1)m+(d-1)(d-2); for d=5 this gives W>=37, or W>=57 when E>0. Without the completeness assumption the new derived universal d>=3 increment is only two, not the quadratic term. The argument uses criticality of all original edges and full receiver pools. It does not establish that every counterexample has an exact block.
+**SCOPE / EQUALITY:** no positive pivot-surplus or pool-size restriction. The quadratic term REQUIRES complete F[T]. For d=5 the complete-tight-graph W thresholds are 37 and 57 (with extras); without completeness only 27 and 47 follow. Equality in the clique bound forces one unmarked tight vertex, one positive-demand singleton label at every other tight vertex, beta=0 and zero loss on all other K-labels. Incidence-only equality examples exist; no canonical graph realization is asserted. Configurations without an exact tight block remain outside the theorem.
 
-**CHECKS:** new local graph and incidence checks NOT_RUN at this checkpoint. No replay of prior tests is claimed. The older zero-defect proof and its 8601 graph records retain their recorded internal status. Both proof and prospective implementations are by the same assistant; external review and novelty assessment OPEN.
+**CHECKS:** Python and separately structured C++ agree on all 506403 exact records: 10333 local graph records, including 9712 eligible redundant deletions, and 496070 incidence records. The latter include exhaustive d=3 compatible row/pool assignments and 39 equality controls through d=15. All five graph controls have diameter two and a destructive designated deletion. Early bounded combined-driver invocations expired; separate complete replay and the delivered replay-only command succeeded. No interrupted invocation is counted as success. Both implementations and proof are by the same assistant. These are local graph/relaxation checks, NOT a canonical graph census or catalogue replay. External review and novelty assessment OPEN.
 
-**CANONICAL / PROMOTED STATUS:** unchanged — 4626 exclusions / 952 survivors / 3632 whole-state closures. Prior 203-key candidate union, 41 strict/equality certificates and 170-candidate audit unchanged. State3349 unresolved. No catalogue application, q-enumeration, workflow launch or promotion.
+**CANONICAL / PROMOTED STATUS:** unchanged — 4626 exclusions / 952 survivors / 3632 whole-state closures. Prior 203-key candidate union, 41 strict/equality certificates, 170-candidate audit and state3349 retain their previous status. No workflow launch, q-enumeration or promotion.
 
-**UNPRESERVED WORK:** no completed mathematical derivation remains only in session memory after remote confirmation; the new argument and its d=2 limitation are transcribed below. Existing raw-archive and older-attachment transfers remain pending.
+**PRESERVATION:** proof, exact summary, byte-preserved compressed verification sources and a tested hash-checking unpacker are in `project/research/general_n/2026-09-16-critical-edge-covering-v1/`. Decode the source bundle with `python3 unpack_sources.py`; then `python3 check_covering.py` regenerates and checks the finite cases. The complete 17-file attachment `MurtySimon742_Critical_Edge_Covering_2026-09-16.zip`, SHA256 `0b6e0ff62b58d4cfbb0fbe3774af93ebb605ba94b683194a37aaabecec12d72a`, includes original sources, proof, exact raw streams, audit notes, manifest, handoff and the predecessor ZIP unchanged. Every manifested file was checked inside the ZIP. Uncompressed input SHA256 `f3ff6ef23eac4d28bda0e6e4f472b427b5268a83356c63376fda3f366db8c9a0`; decision SHA256 `45633e4ee20f50bce9de4b40d1dd2a0656c1532609fd5d8c73adea67227bf922`. Large raw streams are NOT claimed uploaded by this commit.
 
-**DEFERRED ADMIN:** older raw evidence transfers; root README/reviewer integration; unrelated CI/status work; independent review, literature novelty assessment and promotion.
+**UNPRESERVED WORK:** no completed mathematical finding or verification source remains only in session memory after remote confirmation. Separate raw-stream GitHub transfer and older attachment transfers remain pending; exact bytes and hashes are in the delivered package.
 
-**NEXT ACTION:** verify this same critical-edge covering theorem with explicit-path graph checks, separately structured incidence/defect arithmetic, and negative controls for full-pool saturation, singleton marks, completeness and d=2. Preserve exact decisions, proof and honest coverage limits. Do not treat checking the local lemma as enumerating original canonical graphs. After verification, choose between the d=2 exceptional branch and a separately proved extension to incomplete F[T]; do not silently apply the clique bound to mu>0.
+**DEFERRED ADMIN:** raw-stream and older evidence transfers; root README/reviewer integration; unrelated CI/status work; independent review, novelty assessment and promotion.
 
-**PROCESS RULE:** one bounded unit, preservation and one remote confirmation; no background-work claim or automatic promotion.
+**NEXT ACTION:** one bounded mathematical unit resolving the isolated d=2 exception using full quasi-edge identities and original criticality. There beta=0 automatically. Write T={t,s}, let c>=2 count common K-labels, and let the unique singleton K-label neighbour only s; exact rows force p_t=c and p_s=c-1. Determine whether its private witness can occur in a full canonical graph, rather than extrapolating from the local eight-vertex control. Preserve the first result or obstruction. A generalization to incomplete F[T] is a separate subsequent task; do not transplant the quadratic bound to mu>0.
+
+**PROCESS RULE:** one bounded unit then preservation and one remote confirmation; no background-work claim or automatic promotion.
 <!-- CURRENT-STATUS:END -->
 
-## Preserved derivation: critical-edge covering and clique defect
+## Evidence
 
-Use the complete canonical selected/residual construction of the recovered interface theorem at `4cb18222e4c0f56c2a5278f424c8414a09c469f7`. Let G be diameter-two edge-critical, J its complement, p a minimum-degree pivot, A its J-neighbourhood and B the remaining vertices. F=G[A]. Assume T={i:s_i=d}, H={v:rho_v>=d}, |T|=|H|=d>=3. Put K=N_F(T) minus T. Every high vertex selects T and carries K residually; every low vertex has residual degree at most d-1 and selects no tight label. The full pools are V_t={v outside H:R_v=T minus {t}}, p_t=|V_t|>=1, m=sum p_t>=d. At any actual exact block, each K-weight is d at zero demand and d-1 at positive demand: the d forced full receivers make the requisite low residual order statistics d-1. Put ell_k=|N_F(k) intersect T|, L=sum_K(w_k-ell_k), beta_t=R_t-(m-p_t)>=0, beta=sum beta_t, and mu=binom(d,2)-e(F[T]). The existing exact identity is W-d-(d-1)m=P+L+beta+2mu with P>=0.
+- [Critical-edge covering theorem, complete proof and limits](project/research/general_n/2026-09-16-critical-edge-covering-v1/CRITICAL_EDGE_COVERING.md).
+- [Exact check summary](project/research/general_n/2026-09-16-critical-edge-covering-v1/CHECK_SUMMARY.json).
+- [Hash-verifying source unpacker](project/research/general_n/2026-09-16-critical-edge-covering-v1/unpack_sources.py) and [byte-preserved source ZIP, base64](project/research/general_n/2026-09-16-critical-edge-covering-v1/SOURCE_BUNDLE.zip.b64).
+- Earlier complete derivation and trust boundaries: `80a783799a9a671e9b29356284515bad0402a3ce:CURRENT_STATE.md`.
 
-Assume now mu=0, so T is a clique.
-
-### 1. Full-pool adjacency and redundant edges
-
-If k in K is adjacent in F to t, then k is adjacent in G to every vertex x of V_t. Indeed k cannot be residual at x, since R_x=T minus {t}. If k were selected there, its quasi-edge would have to dominate t in J, but both k and x miss t in J. Thus kx is absent in J and present in G.
-
-Define Z={t in T: some k in K has N_F(k) intersect T={t}}, U=T minus Z, z=|Z| and u=|U|. These marks record singleton tight neighbourhoods, not all private witnesses of the original graph.
-
-Suppose t,s are distinct vertices of U and have a common K-neighbour k. Delete ts. Its endpoints retain a length-two path through a third tight vertex (d>=3). For an exclusive neighbour x of s, with x nonadjacent to t, consider its type. If x lies in A, it lies in K; because s is unmarked, x has another tight neighbour r different from s and t, giving t-r-x. If x lies in B and has at least two tight neighbours, the same path works. If x in B has only s as a tight neighbour, it has all d-1 other tight labels residual, so its low residual ceiling forces x in V_s; then t-k-x is a path by the full-pool adjacency fact. A high B vertex has no tight G-neighbour. The pivot and A-labels outside T union K have no tight G-neighbour. Reverse t and s for the other exclusive neighbours. This covers every formerly length-at-most-two path destroyed by ts; thus ts would be noncritical, a contradiction.
-
-Consequently every k in K has at most one tight neighbour in U.
-
-### 2. Counting distinct labels, not repeated incidences
-
-Write e_U=e_F(U,K), kappa=|K|, p_Z=sum_(t in Z)p_t and beta_U=sum_(t in U)beta_t. Each K-label meeting U contributes exactly one edge to e_U. In addition there are at least z DISTINCT singleton labels witnessing the z distinct marks, none of which meets U. Therefore
-
-    kappa >= e_U+z.                                      (C1)
-
-Each tight row satisfies e_F(t,K)=1+m-p_t+beta_t, since its full F-degree is d+R_t and its internal tight degree is d-1. Summing over U gives
-
-    e_U=u+(u-1)m+p_Z+beta_U.                            (C2)
-
-Every K weight is at least d-1, and e_F(T,K)=d+(d-1)m+beta. Hence
-
-    L+beta >= (d-1)kappa-d-(d-1)m
-           >= d(d-2)+(d-1)[(u-2)m+p_Z+beta_U].          (C3)
-
-If u>=2, the bracket is nonnegative, so L+beta>=d(d-2). If u<=1, there are z>=d-1 distinct singleton labels; each has ell=1 and weight at least d-1, hence contributes at least d-2 to L. Therefore L+beta>=(d-1)(d-2). Together these prove the parameterized clique bound.
-
-If equality L+beta=(d-1)(d-2) holds, the inequalities force u=1, z=d-1, beta=0, exactly one singleton label at each mark, all those labels of positive demand, and zero weight loss at every other K-label. These are necessary equality conditions, not an existence claim.
-
-### 3. Scope and the small exception
-
-For d>=3, mu=0 gives L+beta>=(d-1)(d-2)>=2; mu>=1 gives L+beta+2mu>=2 immediately. Thus intrinsic defect one is closed for every d>=3, without a positive-surplus assumption or restriction on m.
-
-For d=2, every K-label has zero demand. Also beta=0: any tight residual occurrence at a low vertex already fills its one residual slot and places it in a full pool. L=1 therefore means exactly one zero-demand K-label is adjacent to just one tight vertex, while all other K-labels are common. The only tight edge may use that singleton as a private witness. The preceding quadratic statement and d>=3 edge argument do not close this case. No counterexample graph is claimed, and no exceptional class is silently declared absent.
-
-A preliminary, weaker count used only singleton costs and row balance; the distinct-label count (C1)-(C3) strengthens it. No computational or literature-priority claim is attached to the derivation.
-
-## Earlier evidence
-
-- Zero-defect proof: `project/research/general_n/2026-09-16-zero-defect-closure-v1/ZERO_DEFECT_CLOSURE.md`.
-- Its exact preceding operational handoff is preserved at `54f974fcff8acd85870deacc931da15ec4b11069:CURRENT_STATE.md`.
-- Complete graph-to-interface proof is preserved at `4cb18222e4c0f56c2a5278f424c8414a09c469f7:CURRENT_STATE.md`.
+The main milestone remains a comparatively short structural treatment with explicit coverage and reviewable proofs. Finite checks support that milestone; they do not replace it.
