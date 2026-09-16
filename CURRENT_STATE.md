@@ -1,44 +1,42 @@
 # Murty–Simon / Erdős #742 — live current state
 
-> Read this file first on resumption. This is the operational handoff; the README may lag routine internal WIP. The preceding handoff is preserved unchanged below.
+> Read this file first on resumption. This is the operational handoff; README may lag routine internal WIP. The full preceding handoff is archived unchanged.
 
 <!-- CURRENT-STATUS:START -->
-**CHECKPOINT CLASS:** `WIP_INTERNAL_PROOF_NOT_PROMOTED`. Global demand–residual budget for tight blocks; closes the requested a=3d+1 boundary and a larger range.
+**CHECKPOINT CLASS:** `WIP_INTERNAL_PROOF_NOT_PROMOTED`. Tight-interface holes force unavoidable demand deficit; strengthened global tight-block budget.
 
-**WORK MODE:** `MATH`. User-authorized autonomous continuation. The live handoff had already closed a=3d, so this unit followed its a=3d+1 question and found a general counting replacement. No download repair, catalogue transfer, README editing, workflow launch or polling was needed.
+WORK MODE: `MATH`. One bounded symbolic unit, as authorized by the user. Continued the exact live next action rather than revisiting the closed a=3d+1 boundary. No catalogue transfer, audit promotion, README edit, workflow launch or polling. Plain work-mode field intentionally uses the existing checker-compatible syntax; the broader Markdown parser repair remains deferred.
 
-**INSPECTED PREDECESSOR:** `a5bc61ec94cbdb461e7d6515bc23062f80733508` on main. CURRENT_STATE was read first, then AGENTS and the exact first-boundary and canonical-bridge dependencies. The branch is re-read before non-forced publication.
+**INSPECTED PREDECESSOR:** `c9cc277e10ec854a7fa7f00766393e5ba68e7597` on main. CURRENT_STATE was read first, then AGENTS and the exact global-budget, first-boundary and canonical-bridge dependencies. Main is re-read before non-forced publication.
 
-**LAST VERIFIED RESULT:** internally derived conditional proof under the FULL canonical bridge. Assume tau>0 and |T|=|H|=d>=2; let z=chi(Gamma) for the disjoint-tight-receiver graph. Then a(d-1)+d>=b+2*tau+z*d*(2d-3). The proof combines the demand cap s_i<=d-1 outside the exact tight level with used-receiver colouring and the residual costs at disjoint high/receiver/other B-vertex sets. An exact nonnegative slack identity is recorded. If E>0, z>=2, so (d-1)(a-4d)>=b-3d+2*tau. Therefore a<=4d forces E=0 in the positive-surplus regime, including the former next boundary a=3d+1. Using b=Delta(G) and b>=a+2 gives, for d>=3, E>0 only if a>=4d+1+ceil((4+2*tau)/(d-2)); for example d=5,tau>=1 requires a>=23. This is not a realizability or sharpness assertion. The full positive-surplus tight-block hypotheses are impossible for d=1,2. For larger d, E=0 is rigidity, NOT exclusion of the whole state.
+**LAST VERIFIED RESULT:** internally derived conditional proof under the FULL canonical bridge, tau>0, and |T|=|H|=d>=3. Put z=chi(Gamma), kappa_0=1+z(d-1), h=kappa-kappa_0, and L=ell-zd. If mu counts missing F-edges inside T and Q counts missing T-K edges, then 2mu+Q<=dh-(d-1)L. Thus at least max(0,kappa_0-(d-1)h+(d-1)L+2mu) K-labels are common F-neighbours of T. Each is globally unselected and has demand zero. Integer minimization yields eta+dh>=d(z+1)-1. Inserting this into the exact budget identity gives (d-1)(a-2zd)>=b+2tau-1. If E>0, then z>=2 and (d-1)(a-4d)>=b+2tau-1, improving the predecessor right side by 3d-1. With b>=a+2, extras require a>=4d+4+ceil((9+2tau)/(d-2)); d=5,tau>=1 now requires a>=28 rather than 23. E=0 follows through a=27 in that example, NOT automatic whole-state exclusion.
 
-**DEPENDENCIES / LIMITS:** the b-dependent strengthening explicitly uses canonical residual activity rho>=1 for tau>0. A weaker H/U-only count still proves 2*tau<=(d-1)(a-4d) when E>0 without that activity input. No automatic extension of the activity-based formula to tau=0 is claimed. Independent expert review of the shared bridge, disjoint-destination reduction and new argument remains OPEN. The old nonnegative-surplus a<=3d proof remains preserved.
+**WHOLE-BLOCK NECESSARY CONDITION:** z>=1 also gives a>=2d+2+ceil((5+2tau)/(d-2)) for any such positive-surplus tight block. This may exclude configurations only after their full hypotheses are established; no catalogue ID is newly excluded in this checkpoint. None of these lower thresholds is a realizability or sharpness assertion.
 
-**PRESERVED LOCAL FINDING / REJECTED ROUTE:** any extra high-selected label j has no F-neighbour in K=N_F(T) minus T, by propagation through each tight receiver and A-side domination. Thus j is isolated in F when it is the only label outside T union K. The previous local control at kappa=2d remains valid: not all K-labels have been proved unselected there. The global count bypasses that unsupported saturation extrapolation. No novelty relative to the literature is asserted.
+**DEPENDENCIES / LIMITS:** full selected representatives, exact demand level T, canonical A-side domination, disjoint tight receiver reduction, positive-surplus residual activity, and the maximum-degree identity where used. Do not extend to tau=0 automatically. The integer slack lemma requires d>=3; a d=2 negative control is preserved. The predecessor separately rules out positive-surplus tight blocks for d=1,2. Only actual common K-labels are proved unselected; weak K-labels are not swept into that conclusion. Independent expert review remains OPEN; no literature-novelty claim.
 
-**CANONICAL / PROMOTED STATUS:** unchanged — **4,626 exclusions / 952 survivors / 3,632 whole-state closures**. The 41 strict/equality certificates remain NOT_PROMOTED; the 170-candidate audit remains AUDIT_COMPLETE_NOT_PROMOTED. No new state ID, catalogue exclusion, promotion, or unrestricted theorem is claimed.
+**CHECKS / LIMITS:** Python and separately structured C++ enumerators give matching counts and aggregate fingerprints for 243,149 accepted small interface/count configurations. Additional local checks passed: 88,384 scalar minimizations, 429,210 refined receiver-slack cases, 7,632 threshold cases, four negative controls. Exact source/results are preserved. These are relaxed A-side / scalar tests, NOT original-graph enumeration, NOT complete decision-list comparison, NOT catalogue replay, NOT canonical-bridge validation or external acceptance.
 
-**CHECKS / LIMITS:** local checks passed on 229,508 small F-degree/residual assignments for the positive-part identity, 50,748 formal counted source/label arrays, 360 demand/eligibility cases, integer threshold checks, and four negative controls. They test new arithmetic and necessary-assumption steps ONLY: NOT original-graph enumeration, NOT catalogue replay, NOT a canonical-bridge validation or independent review. Exact source and results are preserved. Original equality replay remains NOT_RUN in this continuation; state 3349 enumeration remains unresolved.
+**CANONICAL / PROMOTED STATUS:** unchanged — **4,626 exclusions / 952 survivors / 3,632 whole-state closures**. The 41 strict/equality certificates remain NOT_PROMOTED; the 170-candidate audit remains AUDIT_COMPLETE_NOT_PROMOTED. No new state ID, promotion or unrestricted theorem is claimed. Original equality replay was not rerun; state 3349 enumeration remains unresolved.
 
-**UNPRESERVED WORK:** `None` after publication. Full proof, exact slack identity, by-product, dependency boundaries, checker and exact results are in the dedicated package. The complete preceding handoff is archived using its existing blob SHA. Earlier mathematical and audit evidence remain untouched.
+**UNPRESERVED WORK:** `None` after publication. The full new proof, Python/C++ checkers, exact outputs and unchanged predecessor archive accompany this handoff. Publication and one remote confirmation are required before reporting the checkpoint saved.
 
-**DEFERRED ADMIN:** large-input transfer, automated workflow-completion reporting, reviewer/README integration of accumulated WIP after review, and unrelated CI/maintenance. Do not retry the failed direct-download route. Normal configured checks may be triggered by publication; none are claimed complete here.
+**DEFERRED ADMIN:** actual catalogue application and separate audit-promotion work; status-parser Markdown repair; reviewer/README integration after review; large-input transfer; automatic workflow-completion reporting; unrelated CI/maintenance. Do not retry the failed direct-download route. No remote CI success is claimed here.
 
-**NEXT ACTION:** one bounded symbolic unit quantifying unavoidable slack in the new exact budget identity, especially eta+d*(kappa-1-z(d-1)). Start at minimum kappa allowed by the receiver colouring and establish whether the saturated T-K interface forces a demand deficit. Do not assume the counting bound is attainable or extend all-K unselection without proof. Preserve the first result, obstruction or counterexample before another unit; no further affirmation is needed. The a=3d+1 boundary is now closed conditionally and is not the next task.
+**NEXT ACTION:** one bounded mathematical unit at the weakest h=z branch: bound selected degree of weak K-labels missing exactly one tight neighbour. Relate eligible sources to their omitted-label receiver pool and quantify the cost of tight residual occurrences outside used pools. Do not assume every source with residual profile T minus {t} belongs to U_t unless the residual accounting proves it. Preserve the first result, obstruction or counterexample immediately before another unit; no further affirmation is needed.
 
-**PROCESS RULE:** STATUS_SYNC_POLICY_V2 / RESEARCH_EXECUTION_POLICY_V3. One bounded mathematical unit, immediate coherent preservation, one remote confirmation. No work is claimed to continue after a response ends. Pause/stop overrides further research and housekeeping.
+**PROCESS RULE:** STATUS_SYNC_POLICY_V2 / RESEARCH_EXECUTION_POLICY_V3. One bounded mathematical unit, coherent preservation, one remote confirmation. No work is claimed to continue after a response ends. Pause/stop overrides further research and housekeeping.
 <!-- CURRENT-STATUS:END -->
 
 ## Exact evidence and preserved predecessor
 
-- [Full global budget proof and audit boundaries](project/research/general_n/2026-09-16-global-tight-block-budget-v1/PROOF.md).
-- [Runnable budget checker](project/research/general_n/2026-09-16-global-tight-block-budget-v1/check_budget.py).
-- [Exact checker results](project/research/general_n/2026-09-16-global-tight-block-budget-v1/CHECK_RESULTS.json).
-- [Complete predecessor handoff](archive/status-snapshots/2026-09-16/CURRENT_STATE_before_global_budget_a5bc61ec.md), copied from blob b48da28bba6097db0789ff4c05131a590a035707. Embedded status and root-relative links are historical.
-- [Previous first-boundary proof](project/research/general_n/2026-09-16-first-extra-boundary-v1/PROOF.md).
-- [Receiver-colouring and capacity proof](project/research/general_n/2026-09-16-tight-receiver-colouring-v1/PROOF.md).
+- [Full tight-interface slack proof](project/research/general_n/2026-09-16-tight-interface-slack-v1/PROOF.md).
+- [Python checker and replay driver](project/research/general_n/2026-09-16-tight-interface-slack-v1/check_slack.py).
+- [Separately structured C++ checker](project/research/general_n/2026-09-16-tight-interface-slack-v1/verify_slack.cpp).
+- [Exact local check outputs](project/research/general_n/2026-09-16-tight-interface-slack-v1/CHECK_RESULTS.json).
+- [Unchanged complete predecessor handoff](archive/status-snapshots/2026-09-16/CURRENT_STATE_before_interface_slack_c9cc277e.md), preserved from blob 751040ed8c445c65b322275e9059392f9668ba95.
+- [Predecessor global-budget proof](project/research/general_n/2026-09-16-global-tight-block-budget-v1/PROOF.md).
+- [Common-neighbour zero-selection dependency](project/research/general_n/2026-09-16-first-extra-boundary-v1/PROOF.md).
 - [Canonical bridge](project/research/general_n/2026-09-11-canonical-bridge-v1/CANONICAL_BRIDGE.md).
-- [Disjoint-destination proof](project/research/general_n/2026-09-15-disjoint-receiver-boundary-v1/PRESERVED_HANDOFF.md).
-- [Prior triangle-free proof and anonymous C5 control](project/research/general_n/2026-09-15-triangle-free-receiver-budget-v1/PRESERVED_HANDOFF.md).
-- [Multi-spare rigidity and residual-union proof](project/research/general_n/2026-09-15-spare-receiver-rigidity-v1/PRESERVED_HANDOFF.md).
 
-Read AGENTS.md and only the exact mathematical dependencies needed. Earlier navigation remains in the preserved predecessor and the live README.
+Read AGENTS.md and only the exact mathematical dependencies needed. Older evidence and navigation remain in the archived handoff and README.

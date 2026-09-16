@@ -1,0 +1,185 @@
+{
+  "status": "PASS_TARGETED_INTERFACE_AND_INTEGER_CHECKS_ONLY",
+  "python_cpp_exact_fingerprints_agree": true,
+  "interfaces": {
+    "cases": 243149,
+    "rows": [
+      {
+        "d": 3,
+        "z": 1,
+        "kappa": 3,
+        "cases": 1,
+        "sum": 0,
+        "sum_squares": 0,
+        "xor": 0
+      },
+      {
+        "d": 3,
+        "z": 1,
+        "kappa": 4,
+        "cases": 151,
+        "sum": 40980454,
+        "sum_squares": 11224653221026,
+        "xor": 520192
+      },
+      {
+        "d": 3,
+        "z": 1,
+        "kappa": 5,
+        "cases": 7275,
+        "sum": 32049166566,
+        "sum_squares": 142035969563012946,
+        "xor": 6258688
+      },
+      {
+        "d": 3,
+        "z": 1,
+        "kappa": 6,
+        "cases": 201627,
+        "sum": 10724182267446,
+        "sum_squares": 899779874271698234,
+        "xor": 66846720
+      },
+      {
+        "d": 3,
+        "z": 2,
+        "kappa": 5,
+        "cases": 1,
+        "sum": 8388608,
+        "sum_squares": 70368744177664,
+        "xor": 8388608
+      },
+      {
+        "d": 3,
+        "z": 2,
+        "kappa": 6,
+        "cases": 379,
+        "sum": 31921536974,
+        "sum_squares": 2689232081375232922,
+        "xor": 100401152
+      },
+      {
+        "d": 3,
+        "z": 2,
+        "kappa": 7,
+        "cases": 33714,
+        "sum": 27441907098695,
+        "sum_squares": 8652017372910295113,
+        "xor": 2097151
+      },
+      {
+        "d": 4,
+        "z": 1,
+        "kappa": 4,
+        "cases": 1,
+        "sum": 469762048,
+        "sum_squares": 220676381741154304,
+        "xor": 469762048
+      }
+    ]
+  },
+  "integer_checks": {
+    "scalar_cases": 88384,
+    "refined_cases": 429210,
+    "threshold_cases": 7632,
+    "thresholds": [
+      {
+        "d": 3,
+        "tau": 1,
+        "old_min_a_for_extras": 19,
+        "new_min_a_for_extras": 27,
+        "new_min_a_for_any_tight_block": 15
+      },
+      {
+        "d": 4,
+        "tau": 1,
+        "old_min_a_for_extras": 20,
+        "new_min_a_for_extras": 26,
+        "new_min_a_for_any_tight_block": 14
+      },
+      {
+        "d": 5,
+        "tau": 1,
+        "old_min_a_for_extras": 23,
+        "new_min_a_for_extras": 28,
+        "new_min_a_for_any_tight_block": 15
+      },
+      {
+        "d": 6,
+        "tau": 1,
+        "old_min_a_for_extras": 27,
+        "new_min_a_for_extras": 31,
+        "new_min_a_for_any_tight_block": 16
+      },
+      {
+        "d": 7,
+        "tau": 1,
+        "old_min_a_for_extras": 31,
+        "new_min_a_for_extras": 35,
+        "new_min_a_for_any_tight_block": 18
+      },
+      {
+        "d": 8,
+        "tau": 1,
+        "old_min_a_for_extras": 34,
+        "new_min_a_for_extras": 38,
+        "new_min_a_for_any_tight_block": 20
+      },
+      {
+        "d": 9,
+        "tau": 1,
+        "old_min_a_for_extras": 38,
+        "new_min_a_for_extras": 42,
+        "new_min_a_for_any_tight_block": 21
+      },
+      {
+        "d": 10,
+        "tau": 1,
+        "old_min_a_for_extras": 42,
+        "new_min_a_for_extras": 46,
+        "new_min_a_for_any_tight_block": 23
+      }
+    ]
+  },
+  "negative_controls": [
+    {
+      "kind": "d2_not_in_integer_lemma_domain",
+      "value": 2,
+      "claimed_bound": 3
+    },
+    {
+      "kind": "old_scalar_bound_does_not_imply_new_bound",
+      "d": 3,
+      "z": 2,
+      "a": 20,
+      "b": 23,
+      "tau": 1,
+      "h": 0,
+      "eta": 0,
+      "omitted_common_label_penalty": 10,
+      "canonical_realization": false
+    },
+    {
+      "kind": "h_must_be_integer",
+      "d": 5,
+      "z": 2,
+      "relaxed_h": "9/4",
+      "continuous_minimum": "45/4",
+      "integer_minimum": 14
+    },
+    {
+      "kind": "do_not_assert_all_K_labels_unselected",
+      "d": 3,
+      "z": 2,
+      "kappa": 6,
+      "common_K_labels": 3,
+      "weak_K_labels": 3,
+      "scope": "Local interface only; not a canonical realization"
+    }
+  ],
+  "independence": "Different enumerators by the same assistant; not independent expert review",
+  "original_graph_enumeration": "NOT_RUN",
+  "catalogue_replay": "NOT_RUN",
+  "canonical_bridge_validation": "NOT_ASSERTED",
+  "independent_expert_review": "OPEN"
+}

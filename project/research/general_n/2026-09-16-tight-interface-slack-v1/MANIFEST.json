@@ -1,0 +1,11 @@
+{
+  "predecessor": "c9cc277e10ec854a7fa7f00766393e5ba68e7597",
+  "scope": "Internal conditional proof and targeted tests; not promoted",
+  "sha256": {
+    "CHECK_RESULTS.json": "fa43e95561963571ccac797590f18447769be6bc66b724e059dbe09133747a9b",
+    "CURRENT_STATE.md": "548b802d9b5b0e5a378b857380904a88ad4cee3a2a6098d6f5d2f3f4b51e3740",
+    "PROOF.md": "1b4532e251910d84ace6b1c669bd7ee2dd6b7da8f1a7e44661fae7ea15dd60bf",
+    "check_slack.py": "6888b4aaf0111da46ac69aa21590443734d7fb8a967714c2701f5dd8d81d344c",
+    "verify_slack.cpp": "30bf6663d65e82c3c4c7ce70716ead2b6bbed3d593f63db0cb63a9a9499123fe"
+  }
+}
