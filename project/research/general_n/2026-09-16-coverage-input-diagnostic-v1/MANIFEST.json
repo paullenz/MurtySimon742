@@ -1,0 +1,14 @@
+{
+  "predecessor": "a5cf0b19359e357010f0c0167321a6854e964fa2",
+  "scope": "Three-record schema diagnostic and conditional scalar certificates; no promotion",
+  "sha256": {
+    "REPORT.md": "6098b35266eff1d5c735a5431608e6956b5cde98683e0648da1551fca8fb5a4a",
+    "SAMPLE_PROFILES.json": "ae174c2d3a09225d8ca0b9c206cd806e6b2dd1d25e46e14017eb084af434b978",
+    "check_diagnostic.py": "c309fe641402a90fc721df6e1a884f81867b0b890fe1761325d0d98d90135a98",
+    "verify_screen.cpp": "43675f40a2d7f51c374a5c409438f17df09d611838f2b39e5e7a4db2d688bd2a",
+    "CHECK_RESULTS.json": "02d8af63c61dc78c337d564254e998d5572dafb9ba4746080abc5d4f5e2f419e",
+    "CHECK_RESULTS.json.gz.b64": "b9ebcf471f103395bd16484fdf3de0aff1f7b9a2b935e8b7735e4ee17d478770",
+    "unpack_results.py": "08eb9780c104a6a38dce12ff677885354fe4a02fec3862b796cbdd91da41f4b3",
+    "CURRENT_STATE.md": "b3c7254ee063a25cae7c5237dbb73125e08dfdf77424e3b38125c16982c30a6c"
+  }
+}
