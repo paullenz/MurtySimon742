@@ -1,0 +1,13 @@
+{
+  "predecessor": "31f6c8aca964de0bcaed0cdfe03f14d7abbd7e18",
+  "scope": "Internal conditional proof and targeted necessary-condition checks; not promoted",
+  "sha256": {
+    "PROOF.md": "bcf724ae76e27bb3253e7fac383adeddead8eb501592fb1ddc51fc116f0f9600",
+    "CURRENT_STATE.md": "7f65f269ccb56116883701936519ae37a914c9b49e7d11297bf7d4768ef69cc7",
+    "check_profiles.py": "5b97d6d9f067982f675d3681395c230d27aa57445081228f64773ec55eb3a247",
+    "verify_minima.cpp": "ddb443c99488836f881a97e5aa0437e7468680350ad3b0530fde5b3ad0dbb9fc",
+    "CHECK_RESULTS.json": "e6a744238e8435438bd0d5576806664658bb2fd59add881301d39a9c148ac832",
+    "MINIMIZERS.json.gz.b64": "247657ec31312a3aee658b1919779a34029b028dce33843f9d3e43e7e2adfb73",
+    "explore.py": "935e16c64dac3a5329f284e2772387e2a5b8a28724d23abf2c8278d6c888b265"
+  }
+}
