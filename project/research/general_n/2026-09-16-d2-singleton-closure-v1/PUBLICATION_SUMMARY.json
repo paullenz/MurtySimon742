@@ -1,0 +1,18 @@
+{
+  "status": "PASS_INTERNAL_FINITE_CHECKS_NOT_PROMOTED",
+  "records": 6204,
+  "eligible_redundant_deletions": 18485,
+  "generic_lemma": {"labelled_graphs_scanned_through_n6": 33867, "diameter_at_most_two": 11324, "premise_graphs": 1710, "ordered_witnesses": 5160, "distinct_target_edges": 4080},
+  "local_completions": {"records": 4400, "diameter_two": 2132, "eligible_redundant_deletions": 11021, "source_instances_violating_unneeded_Z_equality": 436},
+  "full_representative_NONCRITICAL_controls": {"records": 90, "valid_representatives": 1053, "controls_with_nonempty_selected_Y": 42, "max_order": 53, "redundant_C_X_edges": 3384, "tight_edge_critical_in_every_control": true},
+  "negative_controls": {"records": 4, "diameter_two": 3, "all_designated_deletions_destructive": true},
+  "input_sha256": "620a4f0806056fb1a4d13689a8f2233dfbf35bc8d4ac3998db89fca19888b547",
+  "decision_sha256": "5744e8e2f91385abc7d477e89d7cf18ddee2b6cc225188c81e2b9d8d6461f470",
+  "fresh_source_regeneration": "PASS_BYTE_IDENTICAL_GRAPH_INPUT_DECISIONS_SUMMARY",
+  "stored_input_replay": "PASS",
+  "canonical_critical_graph_census": false,
+  "both_implementations_same_assistant": true,
+  "external_review": "OPEN",
+  "separate_source_and_raw_stream_GitHub_transfer": "PENDING; complete verified bytes in delivered v2 ZIP",
+  "v2_zip_sha256": "9c5ac15c427c3d70f9109fd7dddb5382a15f5a1f546c985b922616cc80ecbfc1"
+}
