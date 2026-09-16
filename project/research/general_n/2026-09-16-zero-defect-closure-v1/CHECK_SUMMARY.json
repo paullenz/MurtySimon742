@@ -1,0 +1,19 @@
+{
+  "status": "PASS_INTERNAL_ZERO_DEFECT_DELETION_LEMMA",
+  "groups": {
+    "exhaustive": {"graphs":8342,"diameter_two_graphs":6975,"tight_edge_deletions":31158,"losing_deletions":0,"lost_close_pairs":0,"diameter_two_after_deletions":26409},
+    "sampled": {"graphs":240,"diameter_two_graphs":225,"tight_edge_deletions":3381,"losing_deletions":0,"lost_close_pairs":0,"diameter_two_after_deletions":3257},
+    "canonical_control": {"graphs":14,"diameter_two_graphs":14,"tight_edge_deletions":560,"losing_deletions":0,"lost_close_pairs":0,"diameter_two_after_deletions":560},
+    "negative": {"graphs":5,"diameter_two_graphs":5,"tight_edge_deletions":10,"losing_deletions":8,"lost_close_pairs":11,"diameter_two_after_deletions":2}
+  },
+  "sample_seed":7420916,
+  "arithmetic_cases":9442,
+  "python_cpp_records":8601,
+  "input_sha256":"1436fee935106d27088e60747f2ba2047ea43c88941406af682512613daeaa17",
+  "decisions_sha256":"e0d715a3830bcbfb177d4982e17b24f3a7535a7df0bf4d7e0cbda09ce2de14ff",
+  "limits":["No catalogue scan or promotion.","Positive completion tests are the local structural lemma, not full canonical realizations.","Canonical controls are diameter-two NONCRITICAL graphs satisfying the selected-system boundary.","The 240 varied completions are sampled, not exhaustive.","Both implementations and the proof are from the same assistant; external review open."],
+  "replay":"python3 check_redundancy.py (Python 3.10+, g++ with C++17)",
+  "raw_evidence_bundle":"MurtySimon742_Zero_Defect_Closure_2026-09-16.zip",
+  "bundle_sha256":"54f1e8745916a02be332e71cab23948fdd3b13886dd2162c438d8c315c5e7201",
+  "raw_github_transfer":"PENDING; source-first publication does not claim separate raw table paths"
+}
