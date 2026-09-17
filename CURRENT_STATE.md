@@ -3,172 +3,154 @@
 > **Active target — 17 September 2026.** The live graph-theory problem is the sufficiently-large/eventual second-extremal D2C classification around `M(n)=floor((n-1)^2/4)+1`. The 2019 Dailly–Foucaud–Hansberg all-order strengthening is false: the published 2024 order-12, size-32 D2C graph remains a mandatory hostile control. Existing Murty–Simon / Erdős #742 work and the standalone-paper programme remain preserved, but they are not the live optimization target.
 
 <!-- CURRENT-STATUS:START -->
-**CHECKPOINT CLASS:** `DENSE_MAX_TRIANGLE_OR_TWIN_REDUCTION_CHECKED_NOT_PROMOTED`.
+**CHECKPOINT CLASS:** `Q0_INDEPENDENT_NEIGHBORHOOD_BRANCH_CLOSED_NOT_PROMOTED`.
 
-**WORK MODE:** `EVENTUAL_D2C_MATH`. This unit critically reconsidered the previous instruction to prove a blanket maximum-triangle-root lemma. A cleaner route emerged: price the `Q=0` maximum-root branch directly. The resulting theorem replaces the root-scope gate by an explicit false-twin reduction.
+**WORK MODE:** `EVENTUAL_D2C_MATH`. This unit critically reassessed the peeled `Q=0` / saturated-source route. The decisive simplification was to apply cross-edge criticality to **every** `B`-source, not just saturated ones. That turns the remaining branch into a star and then contradicts the required triangularity of `F`.
 
-**INSPECTED PREDECESSOR:** `450d5e1c3d97e3b45f67a1e8868e2db385e942b7`, whose substantive result is the all-private edge-witness pricing theorem and the conditional dense-root antipode theorem. No intervening mathematical commit was found before this unit.
+**INSPECTED PREDECESSORS:**
 
-## New result — exact `Q=0` defect coordinates
+- `4608632b1e2510e1b4493c915a044a630b15b449` — maximum-triangle-or-twin reduction;
+- `f7596142c35a86e83ff48a6faf001c45dca2faf8` — `Q=0` critical-arm orientation and saturated-source obstruction.
 
-Let `v` be a maximum-degree root with
+The saturated-source work remains preserved, but the new proof supersedes it for closing the `Q=0` branch.
 
-`B=N(v)`, `A=V(G)\N[v]`, `b=Delta(G)`, `F=G[A]`, `f=e(F)`, `Q=e(G[B])`.
+## New theorem — independent-neighbourhood defect bound
 
-Assume `Q=0`, so `B` is independent. For `x in A` put
+Let `G` be non-bipartite D2C and let `v` be a maximum-degree root with
 
-`R_x=b-|N_B(x)|`, `d_x=d_F(x)`, `e_x=R_x-d_x`.
+`B=N(v)`, `A=V(G)\N[v]`, `b=Delta(G)`, `F=G[A]`, `f=e(F)`.
 
-Maximum degree gives the exact identity
+Assume
 
-`e_x=b-d_G(x)>=0`.
+`Q=e(G[B])=0`,
 
-Since every missing `A-B` incidence is residual when `Q=0`,
+so `B` is independent. For `x in A` put
 
-`r=2f+sum_x e_x`,
+`R_x=b-|N_B(x)|`, `d_x=d_F(x)`, `e_x=R_x-d_x=b-d_G(x)>=0`.
 
-hence the residual defect
+Then the exact defect identity is
 
-> `delta=b(n-b)-m=r-f=f+sum_x e_x`.                    (Q0)
+> `delta=b(n-b)-m=f+sum_x e_x`.                        (Q0)
 
-Thus `delta` is literally the internal `A`-edge count plus total degree slack below the maximum.
+The new internal candidate theorem is:
 
-## Triangle-free `F`-edge payment
+> **Q0-INDEPENDENT-NEIGHBOURHOOD DEFECT THEOREM.**
+>
+> `delta >= b-1`.
 
-If `xy in E(F)` lies in no triangle of `G`, then its `B`-neighbourhoods are disjoint, so
+Equivalently,
 
-`R_x+R_y>=b`.
+`m <= b(n-b)-(b-1) = b((n-1)-b)+1 <= M(n)`.
 
-The endpoints also have no common `A`-neighbour, so
+Therefore **no above-threshold non-bipartite D2C graph can have a maximum-degree root with `Q=0`.**
 
-`f>=d_x+d_y-1`.
+Full hand proof:
 
-Using (Q0),
+`project/research/post_ms/2026-09-17-stronger-pivot-v1/Q0_INDEPENDENT_NEIGHBORHOOD_DEFECT_THEOREM.md`
 
-> `delta>=b-1`.                                        (TF)
+## Core proof mechanism
 
-This is exactly the defect needed for the second-extremal comparison because
+Assume for contradiction `delta<=b-2`.
 
-`b(n-b)-(b-1)=b((n-1)-b)+1<=M(n)`.
+1. The preserved triangle-free `F`-edge payment says every edge of `F` must lie in a triangle.
+2. For any source `u in B`, let `S_u=N_A(u)`, `T_u=A\S_u`, `t_u=|T_u|`.
+3. If `x in S_u` is nonisolated in `F[S_u]`, then the cross edge `ux` lies in a triangle. Criticality of `ux` has two possible arm directions.
+4. One direction immediately gives `delta>=b-1` by a `b-1` endpoint payment. Therefore under the counterexample assumption only the other direction survives, producing a private foot in `T_u` for every nonisolated vertex of `F[S_u]`.
+5. Hence
 
-Consequently, whenever
+   `nu(F[S_u]) <= t_u`                                (SF)
 
-`m>=M(n)+1`,
+   for every `u in B`.
+6. Since `F` is nonempty, (SF) implies every source has `t_u>=1`.
+7. The exact missing-incidence ledger gives
 
-one has `delta<=b-2`, and therefore **every edge of `F` must lie in a triangle**.
+   `sum_u t_u = r = f+delta <= 2delta <= 2b-4 < 2b`.
 
-## Maximum-triangle-or-twin reduction
+   With `b` positive integer source loads, some source has `t_u=1`.
+8. For that source, `F[A\{c}]` has at most one nonisolated vertex, hence is edgeless. Therefore `F` is a nonempty star centred at the unique missed vertex `c`.
+9. Every star edge must nevertheless be triangular. Since the star has no A-side triangle support, a `B`-source `w` sees both the centre and a leaf `x`.
+10. Then `x` is nonisolated in `F[S_w]`, so (SF) demands a private foot outside `S_w` adjacent to `x`. But `x` is a star leaf whose only `F`-neighbour is the centre, already inside `S_w`. Contradiction.
 
-Call `x in A` tight when `e_x=0`, equivalently `d_G(x)=b`.
+Thus `delta>=b-1`.
 
-If a tight `x` is incident with an `F`-edge, that edge is triangular by (TF), so `x` itself is a maximum-degree triangle vertex. Therefore, if **no** maximum-degree vertex lies in a triangle, every tight `A`-vertex is isolated in `F`.
+## Consequence — maximum-triangle-root scope is fully resolved
 
-For such a tight isolated `x`, `R_x=0`, so
-
-`N_G(x)=B=N_G(v)`.
-
-Hence all tight isolated vertices together with `v` form a false-twin class `W` with common independent neighbourhood `B`.
-
-Let `D={x in A:e_x>0}`. Then `F=F[D]`, `|D|<=sum e_x=delta-f`, and in the triangle-bearing branch `f>=1`. At `m>=M(n)+1` this implies
-
-> `|W|>=3`.                                             (TW)
-
-Thus any above-threshold triangle-containing graph with no maximum-degree triangle vertex has at least three maximum-degree, triangle-free false twins.
-
-## False-twin peeling
-
-If `x,y` are nonadjacent twins with common independent neighbourhood `B`, deleting one twin preserves diameter at most two because every path `p-y-q` can be replaced by `p-x-q`.
-
-For edge criticality, any witness avoiding the deleted twin survives. A witness `(y,z)` transfers to `(x,z)` by the twin automorphism unless the surviving edge under test is `xu`, `u in B`; in that case deleting `xu` leaves `x,u` with no common neighbour because `B` is independent. Hence every surviving edge remains critical, provided the reduced graph is noncomplete.
-
-Applying this repeatedly to the dense class `W` produces a smaller D2C core `G_0` with one twin root `w`, the same maximum degree `b`, all triangles preserved, and
-
-`A_0=D`, `n_0=b+|D|+1`.
-
-Every removed twin deletes exactly `b` edges while decreasing the order by one, so the residual defect is invariant:
-
-> `delta_0=delta`.                                      (PEEL)
-
-Every nonroot `A_0` vertex has positive degree slack `e_x>=1`.
-
-## Main structural reduction — internal candidate
-
-For a triangle-containing D2C graph with
+For every non-bipartite D2C graph with
 
 `m>=M(n)+1`,
 
-at least one of the following holds:
+every maximum-degree root satisfies
 
-1. **maximum-triangle branch:** some maximum-degree vertex lies in a triangle;
-2. **twin-core branch:** there is a false-twin class `W` of at least three maximum-degree, triangle-free vertices with a common independent neighbourhood, and all but one can be peeled to a smaller D2C core preserving `b`, all triangles, and `delta`.
+> `Q=e(G[N(v)])>0`.
 
-So the previous blanket “maximum-triangle-root” question is no longer the correct main gate. Its only dense obstruction has been compressed to an explicit twin expansion.
+So **every maximum-degree vertex lies in a triangle**. The earlier false-twin peeling branch is no longer an unresolved alternative; it was a valid reduction, but Q0-IN eliminates its core.
 
-Full proof:
+This is stronger than the originally sought existential maximum-triangle-root statement.
 
-`project/research/post_ms/2026-09-17-stronger-pivot-v1/MAX_TRIANGLE_OR_TWIN_REDUCTION.md`
+## Combination with preserved all-private theorem
+
+The preserved all-private edge-witness theorem states that for
+
+`n>=14`, `m>=M(n)+1`,
+
+once a maximum-degree root has `Q>0`, the all-private branch is impossible. Hence every such above-threshold graph is now forced into the **disjoint-support antipode branch**:
+
+> there exist `u,w in N(v)` with
+>
+> `uw notin E(G)` and `N(u) intersect N(w)={v}`.
+
+Thus, modulo external review of the internal lemmas, the scope issue is gone: the antipode branch is the single remaining structural branch for the eventual second-extremal attack.
+
+## Mandatory controls
+
+The published 2024 order-12, size-32 exception remains untouched. The independent `X_3` reconstruction has
+
+`n=12`, `m=32`, `M(12)=31`, `Delta=8`, `Q=12` at its unique maximum root.
+
+It therefore lies outside the Q0-IN hypothesis and remains in the maximum-triangle / antipode branch, as required.
+
+The expanded-`C5` equality family is sharp for Q0-IN: at maximum roots it has
+
+`Q=0`, `delta=b-1`, `m=M(n)`.
+
+The non-bipartite hypothesis is essential: complete bipartite graphs have `Q=0` and `delta=0`.
 
 ## Verification
 
-`check_max_triangle_or_twin_reduction.py` has been executed successfully and records
+Companion regression:
 
-`PASS_MAX_TRIANGLE_OR_TWIN_REDUCTION`.
+`project/research/post_ms/2026-09-17-stronger-pivot-v1/check_q0_independent_neighborhood_defect.py`
 
-Exact regression counts:
+Recorded summary:
+
+`project/research/post_ms/2026-09-17-stronger-pivot-v1/Q0_INDEPENDENT_NEIGHBORHOOD_DEFECT_CHECK_SUMMARY.json`
+
+Finite evidence:
 
 - 21 D2C graph-atlas classes through order 7;
-- 5 triangle-bearing classes;
-- 41 maximum-root `Q=0` instances;
+- 10 non-bipartite D2C classes;
+- 17 non-bipartite maximum-root `Q=0` instances;
 - 18 triangle-free `F`-edge payment records;
-- 82 direct false-twin peel operations;
-- 12,497,497 threshold/twin-class arithmetic records through `n=5000`;
-- 285 expanded-`C5` equality controls through order 30;
-- the explicit `X_3` hostile control `n=12,m=32,M(12)=31,delta=0,Q=12`.
+- zero violations of the exact defect identity or `delta>=b-1`;
+- explicit `X_3` hostile control replayed as D2C with `12/32`, `M(12)=31`, and `Q=12>0`.
 
-Summary:
-
-`project/research/post_ms/2026-09-17-stronger-pivot-v1/MAX_TRIANGLE_OR_TWIN_CHECK_SUMMARY.json`
-
-These are regression checks only; the hand proof is the mathematical basis.
-
-## Mandatory controls and preserved predecessor
-
-The 2024 order-12/size-32 exception remains untouched. The reconstructed `X_3` has its unique maximum root in the **maximum-triangle branch** (`Q=12`) and is not excluded.
-
-The expanded-`C5` equality family remains a useful boundary control: at maximum roots it has `delta=b-1` and exactly `M(n)` edges.
-
-The predecessor all-private edge-witness theorem remains intact: for `n>=14`, `m>=M(n)+1`, once a maximum-degree triangle root exists, the all-private branch is excluded and a disjoint-support antipode is forced.
-
-## Fallback with a nonmaximum triangle root
-
-If the twin-core route stalls, rerooting at a triangle vertex with
-
-`epsilon=Delta(G)-d(v)`
-
-produces the candidate all-private inequality
-
-`3 delta_v + epsilon(2a-t) >= binom(t,2)+2s+2t(b-t)`.
-
-This is preserved as a fallback, not the primary route; it does not by itself close `epsilon=1`.
+The atlas happens not to contain a `Q=0` instance with the new internal-source-foot obstruction active, so that local lemma is primarily hand mathematics rather than independently stress-tested by the small atlas. External review remains important.
 
 ## Trust boundary
 
-The maximum-triangle-or-twin reduction, false-twin peeling lemma, and nonmaximum-root epsilon formula are internal hand mathematics with finite regression. External mathematical and novelty review remain open. **No eventual second-extremal theorem is claimed.**
+Q0-IN is an internal hand theorem with finite regression. It has not received external mathematical review or novelty assessment. **No eventual second-extremal theorem is claimed.**
 
-The two live branches are now:
+The remaining live branch is now singular:
 
-1. **`Q=0` peeled core:** prove the stronger independent-neighbourhood defect theorem `delta>=b-1` for a non-bipartite D2C graph with a maximum root whose neighbourhood is independent;
-2. **maximum-triangle / antipode branch:** after a maximum-degree triangle root is obtained, convert the forced disjoint-support antipode into the required defect contradiction while preserving the order-12 control.
+1. choose a maximum-degree root `v`; Q0-IN forces `Q>0` above the threshold;
+2. for `n>=14`, all-private edge-witness pricing forces a disjoint-support antipode `u,w in B`;
+3. convert that antipode plus the residual defect ledger into `delta` large enough to contradict `m>=M(n)+1`, while preserving the order-12 `X_3` control.
 
 **UNPRESERVED WORK:** None after this current-state commit.
 
-**NEXT ACTION:** Prioritize the peeled `Q=0` core before further antipode sharpening. In that core,
+**NEXT ACTION:** Reassess the antipode branch from the new stronger starting point. Use an actual maximum-degree root with `Q>0` and an antipodal pair
 
-`N(v)=B` is independent, `A=D`, every `e_x>=1`, `delta=f+sum e_x`, and every `F`-edge must be triangular in any above-threshold candidate.
+`uw notin E(G)`, `N(u) intersect N(w)={v}`.
 
-Try to prove
-
-`delta>=b-1`
-
-by pricing criticality of the triangular `F`-edges. Split a critical arm according to whether its witness lies in `A` or `B`; an `A`-side witness appears capable of forcing a full `b`-scale endpoint payment, while the genuine unresolved case is when all necessary arms can be routed through `B`. If this target fails, preserve an explicit incidence-level obstruction. Do not return to the closed mixed `{4,5}` ladder and do not revert to the obsolete blanket maximum-triangle-root goal.
+The preserved coarse payment only gives `Q+r>=a` / `2delta+2f+b(2b-n)>=a`, which is too weak near balance and is satisfied by `X_3`. The next unit should exploit the **partition of A into disjoint supports of u and w plus the uncovered remainder**, and price criticality of edges incident to the two supports. Look specifically for a stability theorem whose error term vanishes only in a cube/Boolean-flow configuration; the order-12 `X_3` profile (`F=empty`, `delta=0`) must remain an allowed finite obstruction. Do not return to Q0 peeling, the closed mixed `{4,5}` ladder, or first-proof optimization for Erdős #742.
 <!-- CURRENT-STATUS:END -->
