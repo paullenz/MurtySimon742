@@ -1,23 +1,27 @@
 # Current structural review — 17 September 2026
 
-**Current five-label result: [Five-label defect eleven is impossible](project/research/general_n/2026-09-17-d5-defect11-closure-v1/THEOREM.md).** Its immediate prerequisite is the checked [exact support-cover theorem](project/research/general_n/2026-09-17-d5-exact-cover-v1/THEOREM.md), which itself rests on the pair-covered critical-edge theorem.
+The project now has two complementary structural layers.
 
-Under the whole-level exact-block hypothesis |T|=|H|=5, the current internally checked conclusion is
+## 1. Five-label exact block
+
+[Five-label defect eleven is impossible](project/research/general_n/2026-09-17-d5-defect11-closure-v1/THEOREM.md) proves, under the whole-level exact-block hypothesis |T|=|H|=5,
 
     D >= 12,
     W >= 37,
     extras => W >= 57.
 
-The preceding exact support cover gave D>=11. Equality at eleven would force every actual exception to attain its cheapest support price and therefore beta=0. Independent exact enumeration shows that every one of the 25 auxiliary D=11 minimizers requires a singleton tight support in every cheapest cover: three singleton supports for K5 minus one edge and one for the two-missing-edge matching family.
+The preceding exact support-cover and pair-coverage packages supply the critical-edge machinery and independent finite checks. D=12 attainability, sharpness and external acceptance remain open.
 
-Such a singleton must be a positive-demand K-label. But beta=0 forces its selected source into a full receiver pool, whose residual set contains only tight labels. The residual-union implication then bounds its F-degree by 1+4=5, whereas five residual high incidences plus positive demand require F-degree at least 6. This contradiction eliminates D=11.
+## 2. Scope bridge via h-index saturation
 
-Python and C++ independently enumerate all 1024 labelled tight graphs and agree byte-for-byte on the lexicographic `(cover cost, singleton count)` row stream; SHA256 `858941a3e47b59631433e61bd8ced65f6a9e7cb302a0de0281201e6074e0df77`.
+[Residual h-index saturation and the exact-block equality face](project/research/general_n/2026-09-17-hindex-saturation-v1/HINDEX_SATURATION.md) revisits the general residual h-index argument. If h is the residual h-index, |{rho>=h}|=h+u, and k labels have demand h, then
 
-The parameter-wide predecessor remains valid: pair coverage for D<d(d-2), the critical-edge support charge, and the quadratic exact-block bound. **Status remains internal candidate mathematics:** exact-block coverage, D=12 attainability, sharpness, novelty and independent review are open. No catalogue promotion or unrestricted proof is claimed.
+    b+2t <= (a-h-u)(h-1)+k.
 
-## Next target
+Equivalently, the older h-index upper bound loses exactly the explicit stability term `a-k+u(h-1)`. When u=0, receiver containment forces k<=h; k=h is precisely the square exact block. Thus the exact-block theorem is now identified as a sharp saturation face rather than an isolated hypothesis.
 
-Analyze D=12 while tracking the one unit of slack that can now appear outside the full receiver pools. The beta=0 shortcut used at eleven is no longer automatic. The correct next object is the joint support-cover / exact-row / selected-source feasibility problem, not a fresh survivor scan.
+For h=5,u=0, the top source-saturated value `b+2t=4a-15` forces k=5, while the non-square case is at most 4a-16.
 
-Canonical counts remain 4626 exclusions / 952 survivors / 3632 whole-state closures. Use [CURRENT_STATE.md](CURRENT_STATE.md) as the operational source of truth; all earlier proofs and failed routes remain preserved.
+**Status:** internal candidate mathematics. The next general task is to control u>0 by coupling source omissions and destinations. Exact-block coverage is therefore narrowed but not solved. Canonical counts remain 4626 exclusions / 952 survivors / 3632 whole-state closures; no unrestricted Murty-Simon proof or catalogue promotion is claimed.
+
+Use [CURRENT_STATE.md](CURRENT_STATE.md) for the live operational handoff. All earlier proofs, verifiers, failed routes and review material remain preserved.
