@@ -1,0 +1,10 @@
+{
+  "status": "PASS_EXCESS_AWARE_STRICTNESS",
+  "profile": "a=20,b=23,t=2,Q=80; rho=(5^7,4^8,2,1^7); s=x=4^20; R=(5,4^14,3^5); C=(9,8^14,7^5)",
+  "previous_basic_cut": {"lhs_2Q": 160, "rhs_sum_B": 160, "result": "PASS_AT_EQUALITY"},
+  "excess_weighted_cut": {"weights": [2,3], "lhs_5Q": 400, "rhs_sum_H": 397, "result": "FAIL"},
+  "exact_envelope": {"incoming_total": 80, "maximum_outgoing_total": 78},
+  "degree_checks": {"F_sequence": "(9,8^14,7^5)", "erdos_gallai": true, "residual_gale_ryser": true},
+  "independent_checkers": "Python exact curves/DP and C++ separately structured arithmetic/DP; same assistant, not external review",
+  "scope": "abstract canonical-bridge profile, not original graph realization"
+}
