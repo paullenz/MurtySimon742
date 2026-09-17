@@ -1,0 +1,7 @@
+#include <bits/stdc++.h>
+using namespace std;
+const int A=20,B=23,R=76; long long profiles=0; vector<array<int,20>> surv; int pre[5][61][20]; vector<pair<int,int>> ord;
+int cost(int h,int T,int H,int p){int ramp=max(0,T-max(h,H+p));return h*H+h*p+H*ramp-h*H*(H>h);} int RC(int h,int T,int P,int c){int z=0;for(int H=0;H<=c;H++)for(int p=0;p<=P;p++)z=max(z,cost(h,T,H,p));return z;}
+bool h5(const array<int,20>& c){int a=0,b=0;for(int i=4;i<20;i++)a+=c[i];for(int i=5;i<20;i++)b+=c[i];return a>=5&&b<6;} bool pass(const array<int,20>& c){for(auto [h,T]:ord){int lhs=h*20*max(T,4),rhs=h*R;for(int i=0;i<20;i++)rhs+=c[i]*pre[h][T][i];if(rhs<lhs)return false;}return true;}
+void rec(int r,int n,int s,array<int,20>& c){if(r==21){if(n==0&&s==0&&h5(c)){profiles++;if(pass(c))surv.push_back(c);}return;}for(int z=0;z<=n;z++){int ss=s-r*z;if(ss<0)break;int nn=n-z;if(nn*(r+1)<=ss&&ss<=nn*20){c[r-1]=z;rec(r+1,nn,ss,c);}}c[r-1]=0;}
+int main(){for(int h=1;h<=4;h++)for(int T=h;T<=60;T++)for(int r=1;r<=20;r++){if(r<h){pre[h][T][r-1]=0;continue;}int P=r+B-A-1,c=min(A-r,(r>=4?20:0));pre[h][T][r-1]=RC(h,T,P,c);}for(int h:{4,3,2,1}){int ctr=h==4?16:h==3?12:h==2?8:5;vector<int> ts;for(int T=h;T<=60;T++)ts.push_back(T);sort(ts.begin(),ts.end(),[&](int x,int y){return abs(x-ctr)<abs(y-ctr);});for(int T:ts)ord.push_back({h,T});}array<int,20> c{};rec(1,23,76,c);array<int,20>w{};w[0]=7;w[3]=11;w[4]=5;cout<<profiles<<' '<<surv.size()<<'\n';return !(profiles==127885&&surv.size()==1&&surv[0]==w);}

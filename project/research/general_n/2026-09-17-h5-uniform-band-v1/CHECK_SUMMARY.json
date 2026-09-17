@@ -1,0 +1,11 @@
+{
+  "status": "PASS_UNIFORM_H5_EMPTY_BAND",
+  "scope": "a=20,b=23,t=2; 20 labels with s=x=4; 23 positive residual degrees summing to 76; residual h-index exactly 5",
+  "histograms": 127885,
+  "heavy_subset": "exact restricted heavy-load capacities for h=1..4 and every integer T from h through 60",
+  "finite_heavy_survivors": 1,
+  "unique_histogram": "rho=(5^5,4^11,1^7)",
+  "closure": "unique candidate is excluded by the previously proved global endpoint-orientation cut: 2Q=160>149=sum B",
+  "conclusion": "intersection of this band with the full heavy-load family and global common-margin cut is empty",
+  "implementations": "independent Python and C++ histogram enumerators; same assistant, not external review"
+}
