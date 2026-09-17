@@ -155,18 +155,18 @@ Combine (6), (8), and (12). A necessary condition for a real bridge is
     354Q-177r-246*23
       <=224*20+57r+118k+421*5.
 
-Equivalently the source lower bound minus label upper bound is
+Equivalently, the source lower bound minus the label upper bound is
 
-    354Q-234r-118k-101?                                
+    354Q-234r-118k-12243.                              (13)
 
-Substituting the exact values directly is clearest:
+Substituting
 
     Q=85+k,
-    r=76+k.
+    r=76+k,
 
-The resulting gap is exactly
+gives the exact gap
 
->     63+2k.                                           (13)
+>     63+2k.                                           (14)
 
 For every `k=0,...,20`,
 
