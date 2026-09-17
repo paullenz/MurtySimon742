@@ -1,0 +1,24 @@
+{
+  "status": "PASS_ZERO_RESIDUAL_TIGHT_COVER_CLASSIFICATION",
+  "date": "2026-09-17",
+  "scope": "finite regression and exact normal-form replay; hand proof is in ZERO_RESIDUAL_TIGHT_COVER_CLASSIFICATION.md; no theorem promotion",
+  "cut_degree_checks_through_k_5000": 12492501,
+  "surviving_fibre_counts": [2, 4],
+  "k2": {
+    "n": 6,
+    "m": 8,
+    "Q": 2,
+    "r": 0,
+    "isomorphic_to_T6_H5": true
+  },
+  "k4": {
+    "normal_form_variants_after_gauge": 4,
+    "all_isomorphic_to_X3": true,
+    "n": 12,
+    "m": 32,
+    "M_n": 31,
+    "Q": 12,
+    "r": 0
+  },
+  "trust_boundary": "Direct adjacency-list identification of X3 with the published 2024 Figure 1 remains open; the classification is of the internal full-tight r=0 canonical mechanism."
+}
