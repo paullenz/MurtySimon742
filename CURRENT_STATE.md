@@ -1,75 +1,70 @@
 # Murty–Simon / Erdős #742 — live current state
 
-> **Current review entry: [STRUCTURAL_REVIEW.md](STRUCTURAL_REVIEW.md).** The five-label exact block has `D>=12`. Scope work now retains exact selected-incidence multiplicities, full capacitated Hall, and endpoint-tail restricted quadratic ledgers. In the mixed demand-4/5 near-Turán frontier at `(a,b,t)=(20,23,2)`, total selected excess `E=0,...,8` is internally excluded; any survivor in the established scope must have `E>=9`.
+> **Current review entry: [STRUCTURAL_REVIEW.md](STRUCTURAL_REVIEW.md).** The five-label exact block has `D>=12`. Scope work now retains exact selected-incidence multiplicities, full capacitated Hall, restricted quadratic endpoint layers, and Hall-count majorization. In the mixed demand-4/5 near-Turán frontier at `(a,b,t)=(20,23,2)`, total selected excess `E=0,...,9` is internally excluded; any survivor in the established scope must have `E>=10`.
 
 <!-- CURRENT-STATUS:START -->
-**CHECKPOINT CLASS:** `INTERNAL_SELECTED_EXCESS_BARRIER_E9_NOT_PROMOTED`.
+**CHECKPOINT CLASS:** `INTERNAL_HALL_MAJORIZATION_BARRIER_E10_NOT_PROMOTED`.
 
-**WORK MODE:** `MATH`. Continued the exact-incidence scope attack without returning to the canonical survivor catalogue. After the E=4 closure, successively retained excess-threshold and endpoint-threshold quadratic incidence layers. This closes E=5,6,7,8 and exposes E=9 as the first genuine obstruction to the current affine support-potential hierarchy.
+**WORK MODE:** `MATH`. Continued the exact-incidence scope attack without returning to the canonical survivor catalogue. E=9 initially defeated the endpoint-load affine potential hierarchy, but the exact selected-incidence **count** Hall thresholds supplied the missing information and compressed to a one-line uniform contradiction.
 
-**INSPECTED PREDECESSOR:** `1ce8f16ed062acb4d779a528b223d871d84fd3d7` plus the preserved E=5/E=6/E=7/E=8 packages committed afterwards. All earlier E<=4 work, full selected-incidence Hall, quadratic endpoint results, common-margin/Hall hierarchy, staircase/heavy-load work and five-label `D>=12` theorem remain preserved.
+**INSPECTED PREDECESSOR:** `89386b81b31265e818fc0edf98e1f0420a92f25f` plus the preserved E=9 Hall-majorization package. All E<=8 packages, full selected-incidence Hall, quadratic endpoint work, common-margin/staircase/heavy-load results and the five-label `D>=12` theorem remain preserved.
 
-**EXACT INCIDENCE LAYERS NOW AVAILABLE:** for every selected incidence `ui`,
+**EXACT INCIDENCE FACTS:** for every selected incidence `ui`,
 
 `s_i<=rho_u`, `e_i>=g_u=max(0,p_u-rho_u+1)`, `C_i=R_i+x_i>=w_u=p_u+q_u`.
 
-Besides the global quadratic endpoint inequality, one may sum endpoint load over any source threshold and dominate it by the corresponding compatible label threshold. In particular:
+Selected-label distinctness gives `q_ug_u<=E`. Full capacitated Hall remains valid on the eligibility graph.
 
-- `rho=4` sources -> `s=4` labels;
-- `g>=h` sources -> `e>=h` labels;
-- `w>=T` sources -> `C>=T` labels;
-- intersections of these restrictions are valid as well.
+**E=5 THROUGH E=8:** preserved unchanged. E=5 has gap `63+2k`; E=6 has constant gap `12`; E=7 has `190-9k>=10`; E=8 has constant gap `4`. See the corresponding dated packages and replay checkers.
 
-Exact selected-label distinctness gives `q_u g_u<=E`. Full capacitated Hall remains available on the complete eligibility graph.
+**E=9 NEW STRUCTURAL LAYER — HALL COUNT MAJORIZATION:** endpoint eligibility alone gives, for every threshold T,
 
-**E=5 CLOSURE:** `project/research/general_n/2026-09-17-e5-excess-restricted-v1/` gives one hand potential using
+`sum_{w_u>=T}q_u <= sum_{C_i>=T}x_i`.
 
-`12*(global)+2*(rho=4)+(g>=1)`.
+Demand compatibility also gives
 
-Its source/label inequalities sum to the contradiction gap
+`sum_{rho_u=4}q_u <= sum_{s_i=4}x_i`.
 
-`63+2k>0`
+Define
 
-for every `k=0,...,20`. The checker has zero local violations.
+`phi_9(z)=2[z>=6]+[z>=7]+2[z>=8]+[z>=9]+[z>=10]+[z>=11]+[z>=12]+[z>=13]+[z>=14]+[z>=16]+[z>=18]`.
 
-**E=6 CLOSURE:** `project/research/general_n/2026-09-17-e6-endpoint-staircase-v1/` adds endpoint-tail weights
+Take two copies of the demand-four count inequality plus the endpoint-threshold Hall combination encoded by `phi_9`. With
 
-`psi_6(z)=3[z>=5]+3[z>=7]+2[z>=8]+[z>=9]+[z>=11]`.
+`omega_B=2[rho=4]+phi_9(w)`,
+`omega_A=2[s=4]+phi_9(C)`,
 
-With weights
+every actual bridge satisfies
 
-`omega_B=3[rho=4]+[g>=1]+psi_6(w)`,
-`omega_A=3[s=4]+[e>=1]+psi_6(C)`,
+`sum omega_B q <= sum omega_A x`.
 
-the exact local potentials sum to a **constant gap 12**, independent of `k`. The checker exhausts all allowed local source/label states.
+Exact local support inequalities are
 
-**E=7 AND E=8 CLOSURE:** `project/research/general_n/2026-09-17-e7-e8-endpoint-staircase-v1/` records two further short endpoint staircases. At E=7 the summed gap is
+`omega_B q >= 9p+16q-17rho-10`,
 
-`190-9k>=10`,
+`omega_A x <= 8+5R+3[s=5]+18e`.
 
-and at E=8 the gap is the **constant 4**. Exact local replay finds no violations.
+Summing at E=9 (`Q=89+k`, `r=76+k`) gives a **constant contradiction gap 1** for every `k=0,...,20`. Thus E=9 is impossible.
 
 **CURRENT BARRIER:** combining all preserved results gives
 
-> **Any surviving mixed demand-4/5 near-Turán bridge in the established scope must have total selected excess `E>=9`.**
+> **Any surviving mixed demand-4/5 near-Turán bridge in the established scope must have total selected excess `E>=10`.**
 
-The E=3,...,8 closures themselves do not need the original `h>=5` assumption; the combined statement retains the scope hypotheses required by the E<=2 predecessor.
+The E=3,...,9 closures themselves do not require the original `h>=5` hypothesis; the combined statement retains whatever scope assumptions are still needed by the E<=2 predecessor.
 
-**E=9 METHOD OBSTRUCTION:** this is the first excess level where the affine support-potential programme fails in the middle demand-mixture range. A normalized continuous dual search allowed all endpoint thresholds `T=4,...,22`, excess thresholds `g/e>=1,2,3`, the demand-four restriction, and their demand/excess/endpoint intersections. It still finds no positive affine certificate for `k=5,...,18`. The same cone does certify `k=0,...,4` and `k=19,20`.
+**DISCOVERY / FAILURE RECORD:** before Hall-count majorization was introduced, the complete affine endpoint-load potential cone failed for E=9 on `k=5,...,18`, even with all endpoint/excess/demand intersections. A threshold-Hall histogram relaxation was then found infeasible for all 21 k values; its LP relaxation was also infeasible. Dual compression yielded the short `phi_9` certificate above. This preserved failure is important: count majorization contains information that weighted endpoint-load sums alone discard.
 
-This is a **negative result about the projection**, not evidence that an actual bridge or graph exists at E=9. It says that simply adding more scalar threshold weights is no longer the right next move. The full selected-incidence Hall/transport structure has now become the natural next layer.
-
-**AUDIT / PRESERVATION:** E5 theorem/checker are in `2026-09-17-e5-excess-restricted-v1/`; E6 theorem/checker in `2026-09-17-e6-endpoint-staircase-v1/`; E7/E8 theorem/checker in `2026-09-17-e7-e8-endpoint-staircase-v1/`. E4, E3, E<=2, full selected-incidence Hall, quadratic endpoint and all earlier failures/audits remain preserved. External mathematical review remains open.
+**AUDIT / PRESERVATION:** `project/research/general_n/2026-09-17-e9-hall-majorization-v1/E9_HALL_MAJORIZATION.md` contains the structural proof; `check_e9_hall_majorization.py` checks every local source/label state and the constant global gap 1. E5/E6/E7/E8 packages and all earlier work remain preserved. External mathematical review remains open.
 
 **FIVE-LABEL STATUS:** every actual whole exact block `|T|=|H|=5` still satisfies `D>=12`, hence `W>=37` or `W>=57` with extras.
 
-**CANONICAL / PROMOTED STATUS:** unchanged — 4626 exclusions / 952 survivors / 3632 whole-state closures. No canonical catalogue scan, q-enumeration or conjecture-level promotion.
+**CANONICAL / PROMOTED STATUS:** unchanged — 4626 exclusions / 952 survivors / 3632 whole-state closures. No catalogue scan, q-enumeration or conjecture-level promotion.
 
-**AUTOMATION STATUS:** the hourly Murty-Simon research automation was deliberately paused after 12:00 BST at the user's instruction. This handoff records the current manual continuation; other user alerts were not altered.
+**AUTOMATION STATUS:** the hourly Murty-Simon research automation remains deliberately paused per the user's noon instruction. Other alerts were not altered; research continues manually in the active chat.
 
-**UNPRESERVED WORK:** the E=9 dual-cone diagnostic itself should be frozen if it becomes proof-relevant. No E=9 feasibility or E>=10 claim is made.
+**UNPRESERVED WORK:** exploratory E=10 coefficient searches are not yet frozen; no `E>=11` claim.
 
 **DEFERRED ADMIN:** older archive transfers, PR #2, unrelated CI/root historical narrative maintenance; external review, novelty and promotion.
 
-**NEXT ACTION:** MATH: attack only the unresolved E=9 middle range `k=5,...,18` at the full selected-incidence level. Build/freeze an exact transport feasibility model with source rows `(rho,p,q)`, label columns `(s,R,e)`, simple-edge eligibility `s<=rho`, `e>=g`, `C>=w`, exact row/column selected degrees, and full capacitated Hall/max-flow. Preserve either the smallest incidence-level survivor or a complete finite infeasibility certificate. Do not broaden demand support before resolving whether E=9 is a true incidence obstruction or only an affine-potential obstruction.
+**NEXT ACTION:** MATH: test E=10 first against the same Hall-count architecture (endpoint thresholds plus demand-four capacity) with exact local condition `q_ug_u<=10`. Search for a short integer Hall staircase and affine local support inequalities. If no such uniform certificate exists, escalate to excess-threshold/full subset Hall only after preserving the first exact obstruction. Do not broaden demand support until this mechanism is understood.
 <!-- CURRENT-STATUS:END -->
