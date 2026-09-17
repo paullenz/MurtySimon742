@@ -1,0 +1,12 @@
+{
+  "status": "PASS_GENERAL_LEAF_PACKAGE_REDUCTION",
+  "date": "2026-09-17",
+  "defect_range": [3, 6],
+  "attachment_values": [0, 1, 2],
+  "isolated_pair_values": [0, 1, 2],
+  "maximum_k": 13,
+  "exact_instances": 1766,
+  "failures": 0,
+  "scope": "finite exact regression only; universal d>=3 formula remains a hand proof",
+  "negative_control": "k=4 X3 residual-zero perfect-matching mechanism is outside theorem scope"
+}
