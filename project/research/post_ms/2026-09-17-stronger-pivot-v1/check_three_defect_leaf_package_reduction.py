@@ -49,10 +49,8 @@ def leaf_subgraph(p, t):
             i, j = leaves[ai], leaves[bi]
             sgm = sigma[i][j]
             for s in (0, 1):
-                # source j -> i
                 u = source_code(sigma, j, i, s)
                 ss = s ^ sgm
-                # source i -> j in the paired physical orientation
                 v = 0
                 for h in range(k):
                     if h == i:
@@ -91,8 +89,6 @@ def exact_component_tau(adj):
         if e == n * (n - 1) // 2:
             total += n - 1
             continue
-
-        # All remaining leaf-package components should be complete bipartite.
         side = {}
         qq = deque([comp[0]])
         side[comp[0]] = 0
@@ -131,7 +127,6 @@ def L_formula(p, t):
 def main():
     checked = 0
     max_k = 0
-    # Exhaustive attachment triples with S<=12 and t<=5.
     for S in range(13):
         for p0 in range(S + 1):
             for p1 in range(S - p0 + 1):
@@ -147,7 +142,6 @@ def main():
                     checked += 1
                     max_k = max(max_k, k)
 
-    # Independently replay the finite-width consequences of L<=2k.
     for S in range(41):
         for p0 in range(S + 1):
             for p1 in range(S - p0 + 1):
@@ -159,7 +153,8 @@ def main():
                     survives = L_formula(p, t) <= 2 * k
                     if t == 0:
                         predicted = (
-                            g == 1
+                            g == 0
+                            or g == 1
                             or (g == 2 and y <= 5)
                             or (g == 3 and ((x == 1 and y <= 4) or (x == 2 and y == 2)))
                         )
