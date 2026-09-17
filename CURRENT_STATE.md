@@ -1,53 +1,83 @@
 # Murty–Simon / Erdős #742 — live current state
 
-> **Current review entry: [STRUCTURAL_REVIEW.md](STRUCTURAL_REVIEW.md).** The five-label exact block has D>=12. Scope work now has a general quadratic endpoint-load ledger, obtained by retaining the exact selected row degrees `q_u`, and a hand closure of the entire zero-excess mixed demand-4/5 near-Turán h>=5 band at `(a,b,t)=(20,23,2)`.
+> **Current review entry: [STRUCTURAL_REVIEW.md](STRUCTURAL_REVIEW.md).** The five-label exact block has `D>=12`. Scope work now retains exact selected-incidence multiplicities, has a general weighted endpoint/excess ledger, and rules out the entire mixed demand-4/5 near-Turán `h>=5` band at `(a,b,t)=(20,23,2)` whenever total selected excess is `E<=2`.
 
 <!-- CURRENT-STATUS:START -->
-**CHECKPOINT CLASS:** `INTERNAL_QUADRATIC_ENDPOINT_MIXED45_CLOSURE_NOT_PROMOTED`.
+**CHECKPOINT CLASS:** `INTERNAL_SMALL_SELECTED_EXCESS_BARRIER_NOT_PROMOTED`.
 
-**WORK MODE:** `MATH`. Critically reassessed the proposed Hall-aware mixed-demand census before executing it. The more important information loss was earlier: the recent endpoint/Hall projections retained only `q_u>0 => some selected incidence`, whereas the canonical bridge defines `q_u` to be the **exact number of selected edges sourced at u**. Restoring that exact row multiplicity makes endpoint load accumulate quadratically and eliminates the whole targeted zero-excess mixed 4/5 band without a histogram scan.
+**WORK MODE:** `MATH`. Continued the positive-selected-excess attack from the quadratic endpoint checkpoint. Rather than enumerating positive-excess histograms, retained the global excess budget on the actual selected incidence matrix.
 
-**INSPECTED PREDECESSOR:** `841bb39eed9fa632601dc71894592b0f11c8d63f`, confirmed current `main` before this transaction. Its selected-witness Hall theorem, uniform h=5 closure, excess-aware source envelope, common-margin cut, scalar obstruction, staircase/heavy-load theory, five-label D>=12 theorem and canonical counts remain preserved and unchanged.
+**INSPECTED PREDECESSOR:** `41ff4233d8054a0b7090f58d902826701ce85cb7`, whose quadratic endpoint lemma, zero-excess mixed 4/5 closure, selected-witness Hall theorem, common-margin/excess-aware endpoint results, staircase/heavy-load theory, five-label `D>=12` theorem and canonical counts remain preserved.
 
-**GENERAL LAST RESULT:** on every selected incidence `ui`, endpoint load gives `C_i=R_i+x_i >= p_u+q_u`. Because label `i` occurs in exactly `x_i` selected incidences and source `u` occurs in exactly `q_u` selected incidences, summing over the actual selected incidence matrix gives the general canonical-bridge inequality
+**GENERAL LAST RESULT:** on every selected incidence `ui`, retain
 
-`sum_i x_i(R_i+x_i) >= sum_u q_u(p_u+q_u)`.
+`C_i=R_i+x_i >= p_u+q_u`
 
-This is not a one-witness inequality: every one of the `q_u` selected incidences at source `u` pays the full endpoint threshold `p_u+q_u`.
+and
 
-**BOUNDED CLOSURE:** fix `a=20,b=23,t=2`, zero selected excess `x_i=s_i`, and all twenty demands in `{4,5}`. Let `k` be the number of demand-five labels. Then `Q=80+k` and, because all demands are positive and `x=s`, the exact ledger gives `r=Q-2t=76+k`. Assume at least five residual sources have `rho>=5` (in particular this covers residual h-index five).
+`e_i=x_i-s_i >= g_u:=max(0,p_u-rho_u+1)`.
 
-The label side of the quadratic endpoint ledger satisfies
+Because the actual selected incidence matrix has row degrees exactly `q_u` and column degrees exactly `x_i`, for every real `lambda>=0`,
 
-`sum_i x_i(R_i+x_i) <= U(k)=624+13k+min(18k,76+k)`.
+`sum_i x_i(C_i+lambda e_i) >= sum_u q_u(p_u+q_u+lambda g_u)`.
 
-The source side admits the local support inequality
+This is the weighted endpoint/excess ledger. It charges the excess condition on **every** selected incidence, not merely once per active source.
 
-`10p_u+15q_u-q_u(p_u+q_u) <= 10rho_u+20+delta_k [rho_u=4]`,
+**SMALL-EXCESS CLOSURE:** fix `(a,b,t)=(20,23,2)`, all twenty demands in `{4,5}`, let `k` be the number of demand-five labels, and assume at least five residual sources have `rho>=5`. Write total selected excess
 
-where `delta_k=6` for `k<=14`, `delta_15=5`, `delta_16=2`, and `delta_k=0` for `k>=17`. Summing, using `sum p=sum q=Q`, yields
+`E=sum_i(x_i-s_i)`.
 
-`sum_u q_u(p_u+q_u) >= 780+15k-delta_k c_4`,
+Then `r=76+k` and `Q=80+k+E`. Since positive demand gives `d_i=R_i+s_i<=19`, the zero-excess label side sharpens to
 
-with `c_4=#{u:rho_u=4}`. Positive residual activity plus five sources of residual degree at least five gives
+`U_0(k)=624+13k+min(14k,76+k)`.
 
-`c_4 <= floor((33+k)/3)`.
+For `E<=2`, adding excess raises `sum x_iC_i` by at most `24E+E^2`.
 
-The resulting source lower bound is strictly larger than `U(k)` for **every `k=0,...,20`**. Representative smallest gaps are still strict: k=14 gives 900>896; k=15 gives 925>910; k=16 gives 988>924. Therefore no canonical bridge profile exists in this entire zero-excess mixed 4/5 band. The previous uniform demand-four band is a special case `k=0`; heavy-load, staircase, common-margin and witness-Hall machinery are not needed for this stronger bounded conclusion.
+On the source side, distinct selected labels at a source and the excess condition give
 
-**AUDIT:** `project/research/general_n/2026-09-17-quadratic-endpoint-v1/QUADRATIC_ENDPOINT.md` contains the hand proof. `check_quadratic_endpoint.py` independently enumerates every local integer `(p,q)` state for `rho=1..20` and `k=0..20`, verifies the exact support constants, and checks every global arithmetic gap. Local replay returned `PASS_QUADRATIC_ENDPOINT`. This remains internal derivation/replay; external mathematical review is open.
+`q_u max(0,p_u-rho_u+1) <= E`.
 
-**STEP-BACK CONSEQUENCE:** the newest Hall theorem remains valid and useful, but it was not the right first tool for this frontier. The exact selected row/column multiplicities are stronger and should be retained before projecting to one-witness Hall or one-source envelopes. At the target `(20,23,2)` h>=5 scope, any remaining obstruction must now leave the zero-excess `{4,5}` band — most naturally through **positive selected excess**, a demand outside `{4,5}`, or a different residual geometry. The next high-value structural target is a weighted/excess version of the quadratic endpoint ledger, not a broad survivor census.
+For `E<=2` this leaves only the exceptional active possibilities `(p,q)=(rho,1),(rho,2),(rho+1,1)` beyond the old `p<=rho-1` regime; direct substitution shows the previous local support inequality remains valid unchanged:
+
+`10p_u+15q_u-q_u(p_u+q_u) <= 10rho_u+20+delta_k[rho_u=4]`,
+
+with `delta_k=6` for `k<=14`, `5` at `k=15`, `2` at `k=16`, and `0` for `k>=17`.
+
+After summation and the residual-mass bound on `c_4=#{rho=4}`, the zero-excess source-minus-label gaps over `k=0,...,20` are
+
+`90,78,66,48,36,24,8,9,10,5,6,7,2,3,4,15,64,97,98,99,100`.
+
+Thus `E=0,1` are immediately impossible. For `E=2` every `k!=12` remains strict. At the sole arithmetic boundary `k=12,E=2`, equality would force `rho=(5^5,4^15,1^3)`. If every local source bound were tight, the incoming total would be at most
+
+`3*3+15*3+5*7=89`,
+
+but the exact orientation ledger requires `sum p=Q=94`. Hence that boundary is also impossible.
+
+Therefore:
+
+> **Any canonical bridge profile in this mixed `{4,5}`, `h>=5` scope must have total selected excess `E>=3`.**
+
+This strictly extends the preceding zero-excess closure and does not use a broad survivor census.
+
+**AUDIT:** `project/research/general_n/2026-09-17-small-excess-quadratic-v1/SMALL_EXCESS_BARRIER.md` contains the hand proof and weighted general lemma. `check_small_excess_barrier.py` enumerates every local integer source state used for `E=0,1,2`, checks all 21 arithmetic gaps and the unique `k=12,E=2` boundary. Independent replay in the working environment returned `PASS_SMALL_EXCESS_BARRIER`; exact tight states were `rho=1:(p,q)=(3,0)`, `rho=4:(3,6)`, `rho=5:(4,5),(4,6),(7,0)`. External mathematical review remains open.
+
+**STEP-BACK CONSEQUENCE:** positive excess is no longer merely the next unanalysed coordinate: the first two units are structurally impossible. The next obstruction, if any, begins at `E=3`. At that point new source states first appear (notably `g=3,q=1` and `g=1,q=3`), so the right next theorem is to use excess-level selected-incidence capacities rather than weaken back to a one-source envelope.
+
+A necessary threshold family available directly from the incidence system is
+
+`sum_{u:g_u>=h} q_u <= sum_{i:e_i>=h} x_i` for every `h>=1`.
+
+This should be combined with the weighted ledger and the exact total excess budget before any bounded enumeration.
 
 **FIVE-LABEL STATUS:** every actual whole exact block `|T|=|H|=5` still satisfies `D>=12`, hence `W>=37` or `W>=57` with extras.
 
 **CANONICAL / PROMOTED STATUS:** unchanged — 4626 exclusions / 952 survivors / 3632 whole-state closures. No canonical catalogue scan, q-enumeration or theorem promotion.
 
-**PRESERVATION:** quadratic endpoint theorem/application/checker are in `project/research/general_n/2026-09-17-quadratic-endpoint-v1/`; selected-witness Hall remains in `2026-09-17-selected-witness-hall-v1/`; the uniform-band package remains in `2026-09-17-h5-uniform-band-v1/`; the excess-aware envelope remains in `2026-09-17-excess-aware-endpoint-v1/`. Earlier proofs, obstructions and failed routes remain preserved.
+**PRESERVATION:** small-excess theorem/checker are in `project/research/general_n/2026-09-17-small-excess-quadratic-v1/`; quadratic endpoint theorem/application/checker remain in `2026-09-17-quadratic-endpoint-v1/`; selected-witness Hall, excess-aware endpoint, common-margin, uniform-band and all earlier proofs/obstructions remain preserved.
 
-**UNPRESERVED WORK:** None for the quadratic endpoint theorem/application after remote writes and local replay.
+**UNPRESERVED WORK:** None for the `E<=2` theorem after remote preservation and local replay.
 
 **DEFERRED ADMIN:** older archive transfers, PR #2, unrelated CI/root historical narrative maintenance; external review, novelty and promotion.
 
-**NEXT ACTION:** MATH: step back again and attack positive selected excess using the exact selected row multiplicities. Seek a weighted extension of `sum x_i C_i >= sum q_u(p_u+q_u)` that trades the larger label-side budget created by excess against the selected-excess condition `e_i>=max(0,p_u-rho_u+1)` on **all q_u selected incidences**. Prefer a hand excess-penalty inequality or an exact incidence-level transport lemma; only enumerate a bounded positive-excess frontier after deriving that structural projection. Preserve strictness examples and failed coefficient choices.
+**NEXT ACTION:** MATH: attack `E=3` first, using the threshold selected-incidence excess capacities `sum_{g_u>=h}q_u <= sum_{e_i>=h}x_i` together with the weighted endpoint/excess ledger. Characterize the genuinely new exceptional source states at `E=3`, derive a hand correction/transport inequality if possible, and preserve either an `E>=4` barrier or the smallest exact bridge-level obstruction. Reassess before broadening to larger excess or demands outside `{4,5}`.
 <!-- CURRENT-STATUS:END -->
