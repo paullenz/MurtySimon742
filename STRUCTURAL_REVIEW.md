@@ -1,10 +1,10 @@
 # Current structural review — 17 September 2026
 
-The project now has four complementary structural layers. The latest was chosen after a deliberate step-back review: instead of inventing a new h/h-1 routing theorem from scratch, the existing canonical threshold-capacity theorem was rewritten in tail coordinates and found to already contain the required multi-level coupling.
+The project now has four positive structural layers plus one important negative scope result. The negative result matters because it prevents the programme from spending further time on a scalar recursion that the present relaxation cannot support.
 
 ## 1. Five-label exact block
 
-[Five-label defect eleven is impossible](project/research/general_n/2026-09-17-d5-defect11-closure-v1/THEOREM.md) proves, under the whole-level exact-block hypothesis |T|=|H|=5,
+[Five-label defect eleven is impossible](project/research/general_n/2026-09-17-d5-defect11-closure-v1/THEOREM.md) proves, under the whole-level exact-block hypothesis `|T|=|H|=5`,
 
     D >= 12,
     W >= 37,
@@ -20,11 +20,11 @@ The parameter-wide exact-block predecessor also supplies pair coverage, critical
 
     b+2t <= (a-h-u)(h-1)+k.
 
-Equivalently, the older h-index upper bound loses the explicit stability term `a-k+u(h-1)`. When u=0, receiver containment forces `k<=h`; `k=h` is precisely the square exact block. This identifies the exact-block theory as a saturation face rather than an isolated hypothesis.
+Equivalently, the older h-index upper bound loses the explicit stability term `a-k+u(h-1)`. When `u=0`, receiver containment forces `k<=h`; `k=h` is precisely the square exact block. This identifies the exact-block theory as a saturation face rather than an isolated hypothesis.
 
 ## 3. Destination bridge via receiver inflation
 
-[Receiver inflation beyond h-index saturation](project/research/general_n/2026-09-17-receiver-inflation-v1/RECEIVER_INFLATION.md) adds a penalty that the scalar h-index theorem does not see. For a threshold q<h, omission counting bounds how many high sources can select at most q maximum-demand labels. The remaining selected mass cannot all use destinations inside the h+u high sources because selected representatives consume distinct B-pairs. Overflow to low destinations forces those receivers to carry at least q maximum-demand labels residually.
+[Receiver inflation beyond h-index saturation](project/research/general_n/2026-09-17-receiver-inflation-v1/RECEIVER_INFLATION.md) adds a penalty that the scalar h-index theorem does not see. For a threshold `q<h`, omission counting bounds how many high sources can select at most q maximum-demand labels. The remaining selected mass cannot all use destinations inside the h+u high sources because selected representatives consume distinct B-pairs. Overflow to low destinations forces those receivers to carry at least q maximum-demand labels residually.
 
 With `N=h+u`,
 
@@ -61,40 +61,71 @@ so the ledger becomes
 
     2t <= sum_d (K_d-N_d).
 
-At every threshold d the existing pair-capacity theorem becomes the pure multi-level inequality
+At every threshold d the existing pair-capacity theorem becomes
 
     d K_d + sum_{j>d} K_j
       <= d N_d + C(N_d-d,2).
 
-For the top two levels, writing `k=K_h`, `K=K_{h-1}`, `N=N_h`, `M=N_{h-1}`, a non-square top level `k<=h-1` satisfies
-
-    b+2t <= a(h-2)-1+K_*(M)-(h-2)M,
-
-where
-
-    K_*(M)=min(a, M-1+floor(C(M-h+1,2)/(h-1))).
-
-If the residual staircase is flat across the top two levels, `N_h=N_{h-1}=h`, this collapses to
+For the top two levels, if `N_h=N_{h-1}=h` and the top demand level is non-square, then
 
     b+2t <= (h-2)(a-h+1).
 
-Hence, once `N_h=h`, a dense configuration above that threshold must either enter the exact square block or grow its residual tail immediately below h. At h=5,
+At h=5,
 
     N_5=5 and b+2t>3a-12
       => K_5=5 or N_4>=6.
 
-This is a direct structural narrowing of the exact-block coverage problem. The arithmetic elimination was brute-checked over 50,076 parameter triples; the inherited threshold-capacity graph theorem remains subject to external review.
+This is a genuine top-level narrowing of the exact-block coverage problem.
+
+## 5. Scalar recursion obstruction
+
+[Scalar staircase obstruction](project/research/general_n/2026-09-17-staircase-scalar-obstruction-v1/SCALAR_OBSTRUCTION.md) tests the proposed next step rather than assuming that the staircase can simply be iterated.
+
+Two facts emerge.
+
+First, if h is the residual h-index and `N_h=h`, then for every `d<h`,
+
+    N_d>=h>d.
+
+So the same unreduced graph cannot literally reach a lower square face `N_d=d`. Any genuine lower-level recursion would need a reduced graph/representative system whose residual h-index changes.
+
+Second, there is an explicit abstract feasible point of the current scalar relaxation at one edge above Turan:
+
+    a=20, b=23, n=44, t=2, m=485,
+    s=(4^20),
+    rho=(5^5,4^11,1^7).
+
+It has
+
+    S=80,
+    r=76,
+    r+2t=S,
+
+and tails
+
+    K=(20,20,20,20,0,...),
+    N=(23,16,16,16,5,0,...).
+
+Thus the residual h-index is 5 but `K_5=0`. All staircase-capacity inequalities, both canonical charging inequalities, h-index saturation, and the exact restricted heavy-load cutoff family survive. The latter is checked for every integer cutoff: finite ranges are enumerated exactly and an analytic linear lower bound closes the infinite tail. Basic label and residual degree sequences are also graphical.
+
+This is not a graph realization and not a counterexample to Murty–Simon. It is a clean obstruction to the **aggregated proof strategy**: the currently available scalar inequalities do not force entry into the exact block.
 
 ## Strategic consequence
 
-The scope problem is now better viewed as a staircase rather than a single equality face. There are three principal escape mechanisms:
+The positive structural programme remains valuable, but the next move should preserve information that the scalar relaxations discarded.
 
-1. excess top sources, penalized by h-index saturation and receiver inflation;
-2. the exact square block, handled by the current critical-edge theory;
-3. lower-level residual-tail growth, forced when demand migrates below the top level.
+The leading target is the joint endpoint/orientation system. Before local source capacities are maximized independently, every selected incidence satisfies
 
-The next priority is to make the third branch recursive: combine the full staircase inequalities with receiver inflation and the 12 September heavy-load/routing family, and test whether repeated peeling must eventually reach a square block or accumulate too much residual-tail area for the layer-cake ledger.
+    R_i+x_i >= q_u+p_u,
 
-**Status:** internal candidate mathematics. Exact-block coverage is narrowed but not solved. Canonical counts remain 4626 exclusions / 952 survivors / 3632 whole-state closures; no unrestricted Murty-Simon proof or catalogue promotion is claimed.
+while globally
+
+    sum_u q_u = sum_u p_u,
+
+and selected representatives use distinct unordered B-pairs. These constraints couple label load, source outdegree and supplement indegree. The current heavy-load theorem relaxes that joint system into independent source maxima; the scalar obstruction survives after that decoupling.
+
+The next high-value theorem should therefore derive a global inequality from endpoint loads, orientation conservation, pair uniqueness and residual-light incoming capacity, or else formalize a genuine reduced-system peeling operation whose h-index can actually fall.
+
+**Status:** internal candidate mathematics plus an internally audited negative relaxation result. Exact-block coverage is narrowed but not solved. Canonical counts remain 4626 exclusions / 952 survivors / 3632 whole-state closures; no unrestricted Murty-Simon proof or catalogue promotion is claimed.
 
 Use [CURRENT_STATE.md](CURRENT_STATE.md) for the live operational handoff. All earlier proofs, verifiers, failed routes and review material remain preserved.

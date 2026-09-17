@@ -1,0 +1,15 @@
+{
+  "status": "PASS",
+  "scope": "abstract scalar profile only; not graph realizability",
+  "parameters": {"a": 20, "b": 23, "n": 44, "t": 2, "m": 485},
+  "demand_profile": {"4": 20},
+  "residual_profile": {"5": 5, "4": 11, "1": 7},
+  "staircase_slacks": {"1": 174, "2": 43, "3": 46, "4": 50},
+  "heavy_min_finite_slack": {
+    "1": [114, 5],
+    "2": [98, 8],
+    "3": [84, 12],
+    "4": [48, 16]
+  },
+  "graphical_degree_checks": {"F": true, "residual_bipartite": true}
+}
