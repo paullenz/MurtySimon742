@@ -1,0 +1,17 @@
+{
+  "status": "PASS_SECOND_POSITIVE_RESIDUAL_HAMMING_DEFECT",
+  "date": "2026-09-17",
+  "scope": "finite arithmetic regression only; Hamming-degree and second-extremal statements are hand proofs",
+  "k_range_checked": [17, 5000],
+  "k_values_checked": 4984,
+  "pointwise_majorant_records": 71720,
+  "boundary_values": {
+    "k17": {"f_bound": 63, "m_bound": 675, "M": 677},
+    "k18": {"f_bound": 67, "m_bound": 751, "M": 757}
+  },
+  "failures": [],
+  "negative_controls": {
+    "k4_X3": "outside theorem scope; residual-zero 12/32 hostile control remains allowed",
+    "k2_H5": "outside theorem scope; classical six-vertex boundary remains allowed"
+  }
+}
