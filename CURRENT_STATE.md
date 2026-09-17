@@ -1,57 +1,95 @@
 # Murty–Simon / Erdős #742 — live current state
 
-> **Current review entry: [STRUCTURAL_REVIEW.md](STRUCTURAL_REVIEW.md).** The five-label exact block has `D>=12`. Scope work now retains the complete selected-incidence matrix and has reduced the mixed demand-4/5 near-Turán `E=3` problem to one sharply defined case: a single label carrying all three units of selected excess.
+> **Current review entry: [STRUCTURAL_REVIEW.md](STRUCTURAL_REVIEW.md).** The five-label exact block has `D>=12`. Scope work now retains exact selected-incidence multiplicities, a full capacitated Hall theorem, and a restricted quadratic endpoint method that rules out total selected excess `E=0,1,2,3` in the mixed demand-4/5 near-Turán frontier at `(a,b,t)=(20,23,2)`.
 
 <!-- CURRENT-STATUS:START -->
-**CHECKPOINT CLASS:** `INTERNAL_E3_REDUCED_TO_UNIQUE_TRIPLE_EXCESS_NOT_PROMOTED`.
+**CHECKPOINT CLASS:** `INTERNAL_E3_RESTRICTED_QUADRATIC_CLOSURE_NOT_PROMOTED`.
 
-**WORK MODE:** `MATH`. Reassessed the `E=3` problem after the full selected-incidence Hall theorem rather than launching the unfinished transport screen. Splitting the three excess partitions exposed a compact coefficient change that eliminates two partitions by hand.
+**WORK MODE:** `MATH`. Reconciled the concurrent `E=3` partition-reduction work with a stronger restricted-incidence potential. The split-partition proof remains useful and its corrected failed coefficient attempt is preserved, but the new argument closes **all three** excess partitions uniformly, including the formerly unresolved unique `(3)` case.
 
-**INSPECTED PREDECESSOR:** `ff4553d8c3c77da0d9f1343a34d6f8b565815bb3`, whose full selected-incidence Hall theorem and strictness example remain preserved. The `E<=2` small-excess barrier, quadratic endpoint ledger, common-margin/Hall hierarchy, staircase/heavy-load work and five-label `D>=12` theorem remain unchanged.
+**INSPECTED PREDECESSOR:** `a70339b81f3cb25afd93353d6eba0818b1e3f07f`, which hand-closes `(2,1)` and `(1,1,1)` and reduces `E=3` to a unique excess-three label. Its corrected proof/checker and the explicitly preserved failed `10p+15q` attempt remain unchanged. The full selected-incidence Hall theorem, `E<=2` barrier, quadratic endpoint work, earlier Hall/common-margin/staircase/heavy-load packages and five-label `D>=12` theorem remain preserved.
 
-**NEW HAND RESULT — E=3 PARTITION REDUCTION:** at total selected excess `E=3`, the possible positive excess multisets are `(3)`, `(2,1)`, `(1,1,1)`. For the split partitions `(2,1)` and `(1,1,1)`, every source satisfies the new support inequality
+**GENERAL RESTRICTED QUADRATIC LEMMA:** the global endpoint ledger is
 
-`12p_u+15q_u-q_u(p_u+q_u) <= 12rho_u+24`.
+`sum_u q_u(p_u+q_u) <= sum_i x_i C_i`.
 
-The proof uses exact selected-incidence multiplicity: with `(1,1,1)`, a positive excess requirement has `g=1` and `q<=3`; with `(2,1)`, `g=1` gives `q<=2` and `g=2` gives `q<=1`. For `g=0`, the usual `p<=rho-1`, `q<=20-rho` bounds suffice.
+Restricting to selected incidences sourced at `rho_u=4`, demand compatibility forces their labels to have `s_i=4`, hence
 
-Summing over the 23 sources gives
+`sum_{rho_u=4} q_u(p_u+q_u) <= sum_{s_i=4} x_i C_i`.
 
-`sum_u q_u(p_u+q_u) >= 27Q-12r-24b = 777+15k`,
+Multiply the global inequality by six and add the restricted one. Define
 
-where `k` is the number of demand-five labels, `r=76+k`, and `Q=83+k`.
+`K_B=sum_u (6+[rho_u=4])q_u(p_u+q_u)`
 
-The zero-excess label ceiling remains
+and
 
-`U_0(k)=624+13k+min(14k,76+k)`.
+`K_A=sum_i (6+[s_i=4])x_i C_i`.
 
-At `E=3`, partition `(1,1,1)` raises the label side by at most `75`, while `(2,1)` raises it by at most `77`. Even against the larger ceiling `U_0(k)+77`, the new source lower bound has strict gap for every `k=0,...,20`: for `k<=5` the gap is `76-12k>=16`, and for `k>=6` it is exactly `k>=6`. Therefore both split partitions are impossible.
+Every actual bridge satisfies
 
-**IMPORTANT CORRECTION / PRESERVED FAILURE:** the first attempt in this research unit tried to reuse the older `10p+15q` inequality for `(1,1,1)`. That is false: `(rho,p,q,g)=(5,5,3,1)` gives `71>70`. The failed coefficient choice is preserved in the proof/checker. Replacing coefficient 10 by 12 fixes the local theorem cleanly and removes the former `rho=4` bonus term entirely.
+`K_B<=K_A`.
 
-**SOLE REMAINING E=3 CASE:** any surviving `E=3` bridge must have exactly one excess-positive label `i_*` with `e_*=3`, hence `x_*=s_*+3 in {7,8}`. This case genuinely escapes the new 12/15 support inequality: `(rho,p,q,g)=(4,6,1,3)` gives `80>72`, and `(5,7,1,3)` gives `91>84`. Every such `g=3` source must use the same unique label `i_*`, and eligibility requires `s_*<=rho_u` and `C_*>=rho_u+3`. Thus the remaining obstruction is a single-column row-packing / endpoint-tail problem.
+This is a demand-restricted projection of the exact selected-incidence matrix: stronger than the undifferentiated quadratic ledger but much cheaper than full Hall.
 
-**FULL SELECTED-INCIDENCE HALL REMAINS AVAILABLE:** for every source subset `S`,
+**E=3 UNIFORM HAND CLOSURE:** total excess `E=3` and distinct selected labels at each source imply
 
-`sum_{u in S} q_u <= sum_i min(x_i, |{u in S: s_i<=rho_u, e_i>=g_u, C_i>=p_u+q_u}|)`.
+`q_u g_u<=3`, where `g_u=max(0,p_u-rho_u+1)`.
 
-This is now the natural tool for the unique `(3)` partition rather than another broad scalar census.
+Using only the canonical local caps, every source satisfies
 
-**AUDIT:** `project/research/general_n/2026-09-17-e3-partition-reduction-v1/E3_PARTITION_REDUCTION.md` contains the corrected hand proof and explicitly records the failed first coefficient attempt. `check_e3_partition_reduction.py` exhaustively checks every local state for both closed partitions across `k=0..20`, `rho=1..20`, verifies all global gaps, and confirms the surviving `(3)` local obstruction. Local replay returned `PASS_E3_PARTITION_REDUCTION`. External mathematical review remains open.
+`(6+[rho=4])q(p+q) >= 60p+102q-79rho-104`.            (S)
 
-**SMALL-EXCESS STATUS:** the earlier theorem `E>=3` remains valid. The new result strengthens it conditionally: if `E=3`, then necessarily `(e_i)^+=(3)`.
+The complete active local ranges have positive minimum slack: for `rho=4`, the minima at `g=0,1,2,3` are `6,21,60,7`; for `rho>=5` they are `7,37,79,25`. Thus (S) covers the unique `g=3,q=1` states that escaped the preceding split-partition argument.
 
-**E=3 DIAGNOSTIC:** the earlier exploratory integer transport model reportedly rejected tested patterns for all three partitions at difficult `k=9,10,12,13,14`, but that screen remains unfrozen and is not used as a theorem here. The two split partitions are now closed independently by hand; only the unique triple-excess partition remains to justify.
+Every label, using `d_i=R_i+s_i<=19` and `e_i<=3`, satisfies
+
+`(6+[s_i=4])x_i C_i <= 112+30R_i+38[s_i=5]+172e_i`.  (L)
+
+For `s=4`, right minus left is `(2-7e)R+116e-7e^2>=0`; for `s=5`, it is `e(112-6R-6e)>=0`.
+
+Summing (S) over the 23 sources and (L) over the 20 labels gives
+
+`K_B >= 162Q-79r-2392`,
+
+`K_A <= 2756+30r+38k`.
+
+At `E=3`,
+
+`Q=83+k`, `r=76+k`.
+
+Therefore the necessary inequality `K_B<=K_A` would require
+
+`14+15k<=0`,
+
+which is impossible for every `k=0,...,20`.
+
+Hence **all three `E=3` excess partitions are impossible**, including the unique `(3)` case left open by the concurrent partition-reduction checkpoint.
+
+**CURRENT BARRIER:** combining the earlier `E<=2` hand theorem with this result gives
+
+> **Any surviving mixed demand-4/5 near-Turán bridge in the established scope must have total selected excess `E>=4`.**
+
+The `E=3` argument itself does not require the earlier `h>=5` assumption; the combined statement retains whatever scope hypotheses are needed by the `E<=2` predecessor.
+
+**FULL SELECTED-INCIDENCE HALL:** remains available and unchanged. For eligibility `s_i<=rho_u`, `e_i>=g_u`, `C_i>=p_u+q_u`, the actual simple selected-incidence matrix has exact row degrees `q_u` and column degrees `x_i`, hence for every source subset `S`,
+
+`sum_{u in S}q_u <= sum_i min(x_i, |{u in S:i eligible at u}|)`.
+
+Its row corollary requires each source to have `q_u` distinct compatible labels. The restricted quadratic lemma above is a weighted projection of this exact incidence structure.
+
+**AUDIT:** `project/research/general_n/2026-09-17-e3-restricted-quadratic-v1/E3_RESTRICTED_QUADRATIC.md` contains the uniform hand proof. `check_e3_restricted_quadratic.py` exhaustively checks the complete local source and label integer domains and all 21 final gaps. Independent replay returned `PASS_E3_RESTRICTED_QUADRATIC`. The corrected split-partition proof/checker remain preserved in `2026-09-17-e3-partition-reduction-v1/`; their failed first coefficient choice is deliberately retained. Full selected-incidence Hall remains in `2026-09-17-full-selected-incidence-hall-v1/`; `E<=2` proof/checker remain in `2026-09-17-small-excess-quadratic-v1/`. External mathematical review remains open.
+
+**STEP-BACK CONSEQUENCE:** the significant pattern is the restricted-incidence weighting, not the numerical value three. The combination `6*(global quadratic)+(rho=4 restricted quadratic)` admits simple local potentials and yields a contradiction uniform in all 21 demand mixtures. The next high-value question is whether the coefficients can be parameterized in total excess `E`, rather than advancing one excess value at a time.
 
 **FIVE-LABEL STATUS:** every actual whole exact block `|T|=|H|=5` still satisfies `D>=12`, hence `W>=37` or `W>=57` with extras.
 
 **CANONICAL / PROMOTED STATUS:** unchanged — 4626 exclusions / 952 survivors / 3632 whole-state closures. No canonical catalogue scan, q-enumeration or conjecture-level promotion.
 
-**PRESERVATION:** corrected E=3 partition reduction/checker are in `project/research/general_n/2026-09-17-e3-partition-reduction-v1/`; full selected-incidence Hall theorem/checker remain in `2026-09-17-full-selected-incidence-hall-v1/`; small-excess barrier remains in `2026-09-17-small-excess-quadratic-v1/`; all earlier structural and audit packages remain preserved.
+**PRESERVATION:** uniform E3 closure/checker are in `project/research/general_n/2026-09-17-e3-restricted-quadratic-v1/`; corrected split-partition work in `2026-09-17-e3-partition-reduction-v1/`; full selected-incidence Hall in `2026-09-17-full-selected-incidence-hall-v1/`; small-excess barrier in `2026-09-17-small-excess-quadratic-v1/`; all earlier structural/audit packages remain preserved.
 
-**UNPRESERVED WORK:** the exploratory integer transport screen for complete `E=3` closure has not yet been frozen as a proof package; do not claim `E>=4` from it.
+**UNPRESERVED WORK:** exploratory `E=4+` coefficient searches are diagnostic only until frozen; no `E>=5` claim yet.
 
 **DEFERRED ADMIN:** older archive transfers, PR #2, unrelated CI/root historical narrative maintenance; external review, novelty and promotion.
 
-**NEXT ACTION:** MATH: step back again, then attack only the unique `(3)` partition. Couple the exceptional `g=3` sources to the single excess-three label's exact column capacity `x_*=7 or 8` and endpoint mass `C_*`, using full row-packing/Hall and the demand-four endpoint tail. Seek a compact hand inequality bounding the total support bonus from `p=rho+2,q=1`; if such a hand bound fails, freeze the smallest true incidence-level survivor rather than returning to a broad histogram scan. Do not move to `E>=4` until this final `E=3` partition is resolved.
+**NEXT ACTION:** MATH: seek a parameterized restricted-quadratic potential for `E>=4`. Start with `E=4`, where `q_ug_u<=4`; search for small integer source/label potentials using the same global plus demand-restricted ledgers, then derive them by hand. If `E=4` closes, test whether the coefficients interpolate in `E`; if the method fails, preserve the smallest exact incidence-level obstruction. Do not broaden demand support until this excess mechanism is understood.
 <!-- CURRENT-STATUS:END -->
