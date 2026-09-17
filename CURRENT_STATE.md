@@ -1,83 +1,71 @@
 # Murty–Simon / Erdős #742 — live current state
 
-> **Current review entry: [STRUCTURAL_REVIEW.md](STRUCTURAL_REVIEW.md).** The five-label exact block has `D>=12`. Scope work now retains exact selected-incidence multiplicities, has a general weighted endpoint/excess ledger, and rules out the entire mixed demand-4/5 near-Turán `h>=5` band at `(a,b,t)=(20,23,2)` whenever total selected excess is `E<=2`.
+> **Current review entry: [STRUCTURAL_REVIEW.md](STRUCTURAL_REVIEW.md).** The five-label exact block has `D>=12`. Scope work now retains the complete selected-incidence matrix: a weighted endpoint/excess ledger, an `E>=3` barrier for the mixed demand-4/5 near-Turán band, and a full capacitated Hall theorem using all exact selected row/column degrees.
 
 <!-- CURRENT-STATUS:START -->
-**CHECKPOINT CLASS:** `INTERNAL_SMALL_SELECTED_EXCESS_BARRIER_NOT_PROMOTED`.
+**CHECKPOINT CLASS:** `INTERNAL_FULL_SELECTED_INCIDENCE_HALL_NOT_PROMOTED`.
 
-**WORK MODE:** `MATH`. Continued the positive-selected-excess attack from the quadratic endpoint checkpoint. Rather than enumerating positive-excess histograms, retained the global excess budget on the actual selected incidence matrix.
+**WORK MODE:** `MATH`. Continued directly from the small-selected-excess barrier. The first aggregate `E=3` obstruction survived the weighted endpoint/excess ledgers, so the step-back question was what exact canonical information had still been projected away. The missing object was the whole simple selected-incidence matrix, not another scalar inequality.
 
-**INSPECTED PREDECESSOR:** `41ff4233d8054a0b7090f58d902826701ce85cb7`, whose quadratic endpoint lemma, zero-excess mixed 4/5 closure, selected-witness Hall theorem, common-margin/excess-aware endpoint results, staircase/heavy-load theory, five-label `D>=12` theorem and canonical counts remain preserved.
+**INSPECTED PREDECESSOR:** `e18e7b2db35ef92be7ca295b119870f8f0d724ab`, whose hand theorem rules out total selected excess `E=0,1,2` in the mixed `{4,5}`, `h>=5`, `(a,b,t)=(20,23,2)` scope. All earlier quadratic endpoint, Hall, common-margin, staircase/heavy-load and exact-block work remains preserved.
 
-**GENERAL LAST RESULT:** on every selected incidence `ui`, retain
+**GENERAL LAST RESULT — FULL SELECTED-INCIDENCE HALL:** define for every source
 
-`C_i=R_i+x_i >= p_u+q_u`
+`g_u=max(0,p_u-rho_u+1)`, `w_u=p_u+q_u`.
 
-and
+A label `i` can be selected at source `u` only if
 
-`e_i=x_i-s_i >= g_u:=max(0,p_u-rho_u+1)`.
+`s_i<=rho_u`, `e_i>=g_u`, `C_i=R_i+x_i>=w_u`.
 
-Because the actual selected incidence matrix has row degrees exactly `q_u` and column degrees exactly `x_i`, for every real `lambda>=0`,
+The actual selected incidences form a **simple bipartite graph** inside this eligibility graph, with exact source degrees `q_u` and exact label degrees `x_i`. Therefore, for every source subset `S`,
 
-`sum_i x_i(C_i+lambda e_i) >= sum_u q_u(p_u+q_u+lambda g_u)`.
+`sum_{u in S} q_u <= sum_i min(x_i, |{u in S: i is eligible at u}|)`.
 
-This is the weighted endpoint/excess ledger. It charges the excess condition on **every** selected incidence, not merely once per active source.
+This is the exact capacitated Hall/max-flow condition for realizing the selected-incidence matrix inside the eligibility graph. In particular, every individual source satisfies the cheap row-packing condition
 
-**SMALL-EXCESS CLOSURE:** fix `(a,b,t)=(20,23,2)`, all twenty demands in `{4,5}`, let `k` be the number of demand-five labels, and assume at least five residual sources have `rho>=5`. Write total selected excess
+`q_u <= #{i: s_i<=rho_u, e_i>=g_u, C_i>=p_u+q_u}`.
 
-`E=sum_i(x_i-s_i)`.
+Thus a source of selected degree `q_u` needs `q_u` **distinct** compatible labels. One favourable label, or one witness per active source, is not enough.
 
-Then `r=76+k` and `Q=80+k+E`. Since positive demand gives `d_i=R_i+s_i<=19`, the zero-excess label side sharpens to
+A threshold projection is also immediate: if `U(d,g,w)` is any source collection with `rho_u<=d`, `g_u>=g`, and `p_u+q_u>=w`, then
 
-`U_0(k)=624+13k+min(14k,76+k)`.
+`sum_{u in U}q_u <= sum_{i:s_i<=d,e_i>=g,C_i>=w} min(x_i,|U|)`.
 
-For `E<=2`, adding excess raises `sum x_iC_i` by at most `24E+E^2`.
+The earlier pure excess cut `sum_{g_u>=h}q_u <= sum_{e_i>=h}x_i` is a weaker projection of this system.
 
-On the source side, distinct selected labels at a source and the excess condition give
+**STRICTNESS TEST AT E=3:** an explicit aggregate profile at `k=12,E=3,r=88,Q=95` has source classes
 
-`q_u max(0,p_u-rho_u+1) <= E`.
+`3x(1,3,0), 2x(4,6,1), 5x(4,3,5), 1x(4,3,7), 7x(4,3,8), 5x(5,7,1)`
 
-For `E<=2` this leaves only the exceptional active possibilities `(p,q)=(rho,1),(rho,2),(rho+1,1)` beyond the old `p<=rho-1` regime; direct substitution shows the previous local support inequality remains valid unchanged:
+and label classes `(s,R,e)`
 
-`10p_u+15q_u-q_u(p_u+q_u) <= 10rho_u+20+delta_k[rho_u=4]`,
+`4x(4,0,0), 3x(4,2,0), 1x(4,3,0), 1x(5,0,0), 5x(5,1,0), 5x(5,12,0), 1x(5,14,3)`.
 
-with `delta_k=6` for `k<=14`, `5` at `k=15`, `2` at `k=16`, and `0` for `k>=17`.
+It passes the weighted endpoint/excess ledgers:
 
-After summation and the residual-mass bound on `c_4=#{rho=4}`, the zero-excess source-minus-label gaps over `k=0,...,20` are
+`lambda=0: 940>=940`, `lambda=1:964>=961`, `lambda=2:988>=982`, `lambda=3:1012>=1003`,
 
-`90,78,66,48,36,24,8,9,10,5,6,7,2,3,4,15,64,97,98,99,100`.
+and passes pure excess thresholds `7<=8` for `h=1,2,3`. But a source `(rho,p,q)=(4,3,8)` needs eight distinct labels with `s<=4` and `C>=11`; the eight demand-four labels have endpoint masses only `4,6,7`, so there are zero eligible labels. Row Hall reads `8<=0` and rejects immediately.
 
-Thus `E=0,1` are immediately impossible. For `E=2` every `k!=12` remains strict. At the sole arithmetic boundary `k=12,E=2`, equality would force `rho=(5^5,4^15,1^3)`. If every local source bound were tight, the incoming total would be at most
+This establishes that the full selected-incidence theorem adds genuine information beyond the aggregate quadratic/weighted ledgers and the earlier one-witness Hall theorem.
 
-`3*3+15*3+5*7=89`,
+**SMALL-EXCESS STATUS:** the preceding hand theorem remains: in the mixed `{4,5}`, `h>=5`, `(20,23,2)` scope, every actual bridge must have total selected excess `E>=3`. The `E<=2` theorem and checker remain unchanged.
 
-but the exact orientation ledger requires `sum p=Q=94`. Hence that boundary is also impossible.
+**E=3 DIAGNOSTIC:** a bounded integer transport model retaining exact margins, weighted/endpoint ledgers, excess threshold capacities and the new local row-packing condition has rejected the aggregate `E=3` obstruction patterns tested so far, including all three excess partitions at the difficult `k=9,10,12,13,14` values. This is diagnostic evidence only at this checkpoint; a complete hand closure or frozen exhaustive certificate has not yet been promoted.
 
-Therefore:
+**AUDIT:** `project/research/general_n/2026-09-17-full-selected-incidence-hall-v1/FULL_SELECTED_INCIDENCE_HALL.md` contains the theorem and strictness example. `check_strictness_example.py` independently replays all margins, weighted ledgers, excess thresholds and the row-packing failure; local replay returned `PASS_FULL_SELECTED_INCIDENCE_HALL_STRICTNESS`. The `E<=2` proof/checker remain in `2026-09-17-small-excess-quadratic-v1/`. External mathematical review remains open.
 
-> **Any canonical bridge profile in this mixed `{4,5}`, `h>=5` scope must have total selected excess `E>=3`.**
-
-This strictly extends the preceding zero-excess closure and does not use a broad survivor census.
-
-**AUDIT:** `project/research/general_n/2026-09-17-small-excess-quadratic-v1/SMALL_EXCESS_BARRIER.md` contains the hand proof and weighted general lemma. `check_small_excess_barrier.py` enumerates every local integer source state used for `E=0,1,2`, checks all 21 arithmetic gaps and the unique `k=12,E=2` boundary. Independent replay in the working environment returned `PASS_SMALL_EXCESS_BARRIER`; exact tight states were `rho=1:(p,q)=(3,0)`, `rho=4:(3,6)`, `rho=5:(4,5),(4,6),(7,0)`. External mathematical review remains open.
-
-**STEP-BACK CONSEQUENCE:** positive excess is no longer merely the next unanalysed coordinate: the first two units are structurally impossible. The next obstruction, if any, begins at `E=3`. At that point new source states first appear (notably `g=3,q=1` and `g=1,q=3`), so the right next theorem is to use excess-level selected-incidence capacities rather than weaken back to a one-source envelope.
-
-A necessary threshold family available directly from the incidence system is
-
-`sum_{u:g_u>=h} q_u <= sum_{i:e_i>=h} x_i` for every `h>=1`.
-
-This should be combined with the weighted ledger and the exact total excess budget before any bounded enumeration.
+**STEP-BACK CONSEQUENCE:** the correct hierarchy is now clearer: exact selected row/column multiplicities -> endpoint/excess eligibility -> full simple-incidence Hall -> only then projected scalar envelopes or finite screens. The next task is not to add another aggregate inequality before testing this exact incidence bottleneck.
 
 **FIVE-LABEL STATUS:** every actual whole exact block `|T|=|H|=5` still satisfies `D>=12`, hence `W>=37` or `W>=57` with extras.
 
 **CANONICAL / PROMOTED STATUS:** unchanged — 4626 exclusions / 952 survivors / 3632 whole-state closures. No canonical catalogue scan, q-enumeration or theorem promotion.
 
-**PRESERVATION:** small-excess theorem/checker are in `project/research/general_n/2026-09-17-small-excess-quadratic-v1/`; quadratic endpoint theorem/application/checker remain in `2026-09-17-quadratic-endpoint-v1/`; selected-witness Hall, excess-aware endpoint, common-margin, uniform-band and all earlier proofs/obstructions remain preserved.
+**PRESERVATION:** full selected-incidence Hall theorem/checker are in `project/research/general_n/2026-09-17-full-selected-incidence-hall-v1/`; small-excess barrier is in `2026-09-17-small-excess-quadratic-v1/`; quadratic endpoint and all earlier structural/audit packages remain preserved.
 
-**UNPRESERVED WORK:** None for the `E<=2` theorem after remote preservation and local replay.
+**UNPRESERVED WORK:** the exploratory integer transport screen for complete `E=3` closure has not yet been frozen as a proof package; do not claim `E>=4` from it yet.
 
 **DEFERRED ADMIN:** older archive transfers, PR #2, unrelated CI/root historical narrative maintenance; external review, novelty and promotion.
 
-**NEXT ACTION:** MATH: attack `E=3` first, using the threshold selected-incidence excess capacities `sum_{g_u>=h}q_u <= sum_{e_i>=h}x_i` together with the weighted endpoint/excess ledger. Characterize the genuinely new exceptional source states at `E=3`, derive a hand correction/transport inequality if possible, and preserve either an `E>=4` barrier or the smallest exact bridge-level obstruction. Reassess before broadening to larger excess or demands outside `{4,5}`.
+**NEXT ACTION:** MATH: finish `E=3` at the selected-incidence level. Split the three excess partitions `(3)`, `(2,1)`, `(1,1,1)`. The latter two already look hand-closable from the small-excess source inequality plus exact excess capacities; for `(3)`, use row-packing/endpoint-tail capacity of the unique excess label and the demand-four endpoint tails. Aim for a compact hand proof of `E>=4`; if a true incidence-level survivor remains, freeze the smallest one instead. Do not broaden to `E>=4` until `E=3` is resolved.
 <!-- CURRENT-STATUS:END -->
