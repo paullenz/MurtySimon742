@@ -1,6 +1,6 @@
 # Current structural review — 17 September 2026
 
-The project now has four positive structural layers plus one important negative scope result. The negative result matters because it prevents the programme from spending further time on a scalar recursion that the present relaxation cannot support.
+The project now has a five-label exact-block theorem, several general scope bridges, an important scalar-recursion obstruction, and a new exact-incidence result that completely closes one concrete near-Turán scope frontier.
 
 ## 1. Five-label exact block
 
@@ -108,24 +108,68 @@ and tails
 
 Thus the residual h-index is 5 but `K_5=0`. All staircase-capacity inequalities, both canonical charging inequalities, h-index saturation, and the exact restricted heavy-load cutoff family survive. The latter is checked for every integer cutoff: finite ranges are enumerated exactly and an analytic linear lower bound closes the infinite tail. Basic label and residual degree sequences are also graphical.
 
-This is not a graph realization and not a counterexample to Murty–Simon. It is a clean obstruction to the **aggregated proof strategy**: the currently available scalar inequalities do not force entry into the exact block.
+This is not a graph realization and not a counterexample to Murty-Simon. It is a clean obstruction to the **aggregated proof strategy**: the scalar inequalities alone do not force entry into the exact block.
+
+## 6. Exact selected-incidence Hall majorization closes the mixed 4/5 frontier
+
+The scalar obstruction led to retaining the actual selected-incidence multiplicities. For every selected incidence `ui` the canonical bridge has
+
+    s_i<=rho_u,
+    e_i>=max(0,p_u-rho_u+1),
+    R_i+x_i>=p_u+q_u.
+
+Full capacitated Hall then yields threshold-count majorization
+
+    sum_{p_u+q_u>=T} q_u
+      <= sum_{R_i+x_i>=T} x_i,
+
+together with the demand-four restriction
+
+    sum_{rho_u=4} q_u
+      <= sum_{s_i=4} x_i.
+
+Earlier exact-incidence packages successively exclude total selected excess `E=0,...,9` in the mixed demand-4/5 near-Turán frontier `(a,b,t)=(20,23,2)`.
+
+[Hall-ramp majorization closes the remaining mixed demand-4/5 selected-excess range](project/research/general_n/2026-09-17-hall-ramp-all-excess-v1/HALL_RAMP_ALL_EXCESS.md) compresses the rest. Define
+
+    H_L(z)=max(0,min(z,L)-4)
+          =sum_{T=5}^L [z>=T].
+
+Three range-uniform Hall potentials suffice:
+
+    10<=E<=15 : Phi=4H_9+12H_12+4H_19,
+    16<=E<=21 : Phi=5H_9+19H_14,
+    22<=E<=42 : Phi=6H_8+24H_15.
+
+After exact local support inequalities are summed, the contradiction gaps are respectively
+
+    60E-580,
+    47E-750,
+    47E-k-1006.
+
+Their minima on the stated ranges are `20`, `2`, and `8`. Finally,
+
+    sum p_u <= sum(rho_u+2)
+
+forces `E<=42`.
+
+Therefore, combining with the earlier `E<=9` work:
+
+> **No canonical bridge in the established mixed demand-4/5 near-Turán scope `(20,23,2)` survives at any selected-excess level.**
+
+This is a concrete closure of the selected-excess scope gap in that demand support. It is not yet a reduction of the full conjecture to the five-label exact block, because other demand-support patterns remain to be controlled. The new theorem has an exact integer replay checker and uses no catalogue scan.
 
 ## Strategic consequence
 
-The positive structural programme remains valuable, but the next move should preserve information that the scalar relaxations discarded.
+The endpoint/orientation programme has now paid off in a substantial way: it does more than kill the earlier scalar witness. In the mixed `{4,5}` near-Turán frontier it removes the entire selected-excess dimension.
 
-The leading target is the joint endpoint/orientation system. Before local source capacities are maximized independently, every selected incidence satisfies
+The next move should therefore **not** be another E-level exclusion. The useful structural question is now one level higher:
 
-    R_i+x_i >= q_u+p_u,
+1. Can the general h-index/receiver machinery force any remaining near-Turán obstruction into demand support `{4,5}`?
+2. Failing that, can Hall-ramp majorization be stated and proved in a demand-support-general form?
 
-while globally
+Either route would connect the new incidence theorem to the five-label exact-block theory and is more valuable than expanding the canonical survivor catalogue.
 
-    sum_u q_u = sum_u p_u,
-
-and selected representatives use distinct unordered B-pairs. These constraints couple label load, source outdegree and supplement indegree. The current heavy-load theorem relaxes that joint system into independent source maxima; the scalar obstruction survives after that decoupling.
-
-The next high-value theorem should therefore derive a global inequality from endpoint loads, orientation conservation, pair uniqueness and residual-light incoming capacity, or else formalize a genuine reduced-system peeling operation whose h-index can actually fall.
-
-**Status:** internal candidate mathematics plus an internally audited negative relaxation result. Exact-block coverage is narrowed but not solved. Canonical counts remain 4626 exclusions / 952 survivors / 3632 whole-state closures; no unrestricted Murty-Simon proof or catalogue promotion is claimed.
+**Status:** internal candidate mathematics with exact finite replay, plus preserved negative relaxation results. External mathematical review, novelty assessment and conjecture-level promotion remain open. Canonical counts remain 4626 exclusions / 952 survivors / 3632 whole-state closures.
 
 Use [CURRENT_STATE.md](CURRENT_STATE.md) for the live operational handoff. All earlier proofs, verifiers, failed routes and review material remain preserved.
