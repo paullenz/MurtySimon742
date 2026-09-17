@@ -1,0 +1,17 @@
+{
+  "status": "PASS_THREE_DEFECT_TRIANGLE_STAR_SWITCHING_EXCLUSION",
+  "date": "2026-09-17",
+  "scope": "finite regression evidence only; universal structural claims are hand proofs",
+  "component_replay_k_range": [5, 100],
+  "component_instances": 96,
+  "exact_orientation_code_decomposition": "2 K_{k-2} + 4 K_{1,k-2} + one doubled K2",
+  "exact_tau": "2k-1",
+  "arithmetic_replay_k_range": [5, 5000],
+  "closure_thresholds": {
+    "lambda_0": 13,
+    "lambda_minus_1": 15
+  },
+  "eventual_uniform_threshold": 15,
+  "finite_three_defect_exploration": "orders k=6..9: minimum tau observed was 2k-1, attained only by triangle-star states up to exceptional-coordinate relabelling",
+  "negative_control": "k=4 X3 residual-zero perfect-matching mechanism is outside theorem scope"
+}
