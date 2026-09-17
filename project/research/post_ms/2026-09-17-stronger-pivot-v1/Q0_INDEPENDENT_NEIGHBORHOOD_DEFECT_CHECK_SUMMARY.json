@@ -1,0 +1,21 @@
+{
+  "status": "PASS_Q0_INDEPENDENT_NEIGHBORHOOD_DEFECT",
+  "date": "2026-09-17",
+  "scope": "graph-atlas regression through order 7 plus X3 hostile control; not a proof and not a promotion",
+  "atlas_d2c": 21,
+  "atlas_nonbip_d2c": 10,
+  "q0_max_roots": 17,
+  "q0_nonbip_roots_fpositive": 17,
+  "triangle_free_F_edges": 18,
+  "source_internal_active_instances": 0,
+  "pure_foot_sources": 0,
+  "X3_hostile_control": {
+    "n": 12,
+    "m": 32,
+    "M_n": 31,
+    "Delta": 8,
+    "Q_at_unique_max_root": 12,
+    "is_D2C": true,
+    "classification": "outside Q0-IN hypothesis; maximum-root triangle branch"
+  }
+}
