@@ -1,29 +1,25 @@
 # Murty–Simon / Erdős #742 — live current state
 
-> **Current review entry: [STRUCTURAL_REVIEW.md](STRUCTURAL_REVIEW.md).** The pair-coverage theorem, critical-edge charge, quadratic defect bound and five-label D>=8 corollary are assembled with complete reproducible source and checked evidence. The earlier special-case derivations remain as historical stages.
+> **Current review entry: [STRUCTURAL_REVIEW.md](STRUCTURAL_REVIEW.md).** The five-label support-threat problem is now solved exactly as a weighted finite cover, strengthening the scoped exact-block bound from D>=8 to D>=11.
 
 <!-- CURRENT-STATUS:START -->
-**CHECKPOINT CLASS:** `VERIFIED_INTERNAL_PAIR_COVER_SUPPORT_CHARGE_NOT_PROMOTED`.
+**CHECKPOINT CLASS:** `VERIFIED_INTERNAL_D5_EXACT_SUPPORT_COVER_NOT_PROMOTED`.
 
-**WORK MODE:** `AUDIT`. Completed the bounded structural extension and source-only regeneration. No external job was launched.
+**WORK MODE:** `AUDIT`. Completed the bounded d=5 support-cover theorem and cross-implementation enumeration.
 
-**INSPECTED PREDECESSOR:** `d151af72e1fbd4a7fa2759347c045168cd868338`, tree `501dc4c8918b163c67bb9d01617053bb305f38ee`. Its pre-test pair-coverage and charge derivation is preserved unchanged. The special-case precursor remains at f047855b3d4f51f273fe1ba270284f6025134243.
+**INSPECTED PREDECESSOR:** `bdb297f2ff3e91ea329c8763e85d84c45cdc2662`, tree `13bad05475755e2e80b6e594dfa6269dd299baac`, confirmed main before this transaction. Its checked pair-coverage/support-charge theorem remains unchanged and is the prerequisite.
 
-**LAST VERIFIED RESULT:** under the actual whole exact-block hypothesis, D<d(d-2) forces a shared K-neighbour for every tight pair. Whenever this pair coverage holds, E_h(Q)<=L+floor(L/h)+beta for h>=1, where E_h counts edges with both tight degrees at least h+1. This gives D>=ceil(d(d-1)/4) for all d>=3. At d=5, a separate short hand corollary gives D>=8, W>=33, or W>=53 with extra high-source selections. No all-tight common label is required. These are internal candidate theorems with explicit graph scope; external mathematical acceptance, sharpness and novelty remain open.
+**LAST VERIFIED RESULT:** for an actual whole exact block |T|=|H|=5, D>=11. The proof uses the predecessor's pair coverage and necessity of the support-threat cover. Every K support S costs at least max(0,4-|S|) units of L; every off-pool residual support costs at least as much beta. Exact weighted set cover over all 1024 labelled tight graphs gives min_Q(2mu+tau(Q))=11. Hence W>=36, or W>=56 with extra high-source selections. This is an internal candidate theorem within the exact-block scope; external review, novelty, sharpness and attainability remain open.
 
-**FRESH CHECKS:** Python bitset reachability and C++ explicit middle-vertex paths agree on all 121549 records: 87685 local graph records and 33864 tight-graph records. There are 71241 records meeting the sufficient deletion premises, with no lost short pair. Tests include pair-covered interfaces without a common all-tight label and five named controls. Exact checks cover 255632 support/weight/threshold cases, 5314440 row inequalities and 244420 floor/ceiling identities. These are local lemmas and auxiliary-graph checks, not a canonical exact-block graph census. Both implementations and proof are by the same assistant.
+**FRESH CHECK:** Python set-based and C++ bit-mask implementations independently enumerate all 1024 Q, all 31 nonempty supports and the exact subset dynamic programme. Their full row streams agree byte-for-byte; SHA256 `80aa3a20b985dab08080c5d645bdf44cadb9498ec3be636219a670e35e4943c9`. The minimum is attained by 10 labelled Q with mu=1 and degree sequence (3,3,4,4,4), and 15 labelled Q with mu=2 and degree sequence (3,3,3,3,4). These are auxiliary graphs, not original realizations.
 
-**REPLAY:** source-only regeneration reproduced the complete expected summary and pinned hashes; it was rerun successfully after the user's interruption. Input SHA256 c86c8d5580151753c75707ce7c93d16db83e00d52f0247c0ad3800126d089dc4; both decision SHA256 a3b0e95a3666e3deb3039b6d4e04278eead9c68740fc87873e656f97a14af581. Run python3 verify_published.py in the new package directory. Older 11357/324554/407741 replay families are not freshly rerun here.
+**CANONICAL / PROMOTED STATUS:** unchanged — 4626 exclusions / 952 survivors / 3632 whole-state closures. Previous candidate unions, audits and state3349 retain their trust boundaries. No canonical catalogue scan, workflow launch, q-enumeration or promotion.
 
-**DIAGNOSTIC, NOT GRAPH REALIZATION:** the necessary-condition envelope has minima 8 and 13 over all labelled d=5 and d=6 tight graphs, with 40 and 60 attaining masks. The d=6 minimum is retained as diagnostic evidence, not an independently promoted strengthened theorem or an attainability claim.
+**PRESERVATION:** `project/research/general_n/2026-09-17-d5-exact-cover-v1/` contains the theorem, both exact enumerators and pinned summary. `STRUCTURAL_REVIEW.md` points to the new result. No prior proof or evidence is removed.
 
-**CANONICAL / PROMOTED STATUS:** unchanged — 4626 exclusions / 952 survivors / 3632 whole-state closures. Previous candidate unions, audits and state3349 keep their trust boundaries. No canonical catalogue scan, workflow launch, q-enumeration or promotion.
+**UNPRESERVED WORK:** None for this bounded theorem or its reported enumeration after remote confirmation.
 
-**PRESERVATION:** project/research/general_n/2026-09-17-defect-six-v1/ now contains THEOREM.md, a byte-identical prerequisite treatment, complete Python/C++ sources, replay driver, exact summary and replay report. STRUCTURAL_REVIEW.md is updated; its preceding version is preserved in the package. The download contains full compressed inputs/decisions and a checksum manifest. Those raw streams regenerate from source; their separate GitHub upload is not claimed.
+**DEFERRED ADMIN:** older archive transfers, PR #2, unrelated CI/root historical narrative maintenance; external review, novelty and promotion.
 
-**UNPRESERVED WORK:** None for this theorem, verification implementation or reported results after remote confirmation. Raw evidence copies are supplied in the download and regenerate deterministically from the published code. Historical archive work is not a hidden dependency of this package.
-
-**DEFERRED ADMIN:** older archive transfers, PR #2 and unrelated CI/root historical narrative maintenance; external review, novelty and promotion.
-
-**NEXT ACTION:** MATH: analyze d=5,D=8 using the actual support-threat cover and the equality conditions of the charge, rather than the scalar envelope alone. Determine whether the low-cost exceptional supports can protect every tight edge simultaneously. Exact-block coverage beyond this scoped theorem remains a separate essential obligation. Preserve the first result or obstruction before extending the unit.
+**NEXT ACTION:** MATH: analyze the two D=11 auxiliary minimum families using the full exact tight-row equations, K-support multiplicities, demand types and receiver-pool counts. Determine whether either weighted cover can be realized by the original selected-representative system. Exact-block coverage beyond this scoped theory remains a separate essential obligation.
 <!-- CURRENT-STATUS:END -->

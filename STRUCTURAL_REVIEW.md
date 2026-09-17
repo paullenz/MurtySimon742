@@ -1,27 +1,21 @@
 # Current structural review — 17 September 2026
 
-**Start with [Pair-covered interfaces and critical-edge charging](project/research/general_n/2026-09-17-defect-six-v1/THEOREM.md).** The preceding graph-to-representative construction and exact accounting are included byte-for-byte as the [prerequisite treatment](project/research/general_n/2026-09-17-defect-six-v1/PREREQUISITE_STRUCTURAL_TREATMENT.md).
+**Current five-label result: [Five-label exact support cover forces defect at least eleven](project/research/general_n/2026-09-17-d5-exact-cover-v1/THEOREM.md).** Its prerequisite is the checked [pair-covered interface and critical-edge charging theorem](project/research/general_n/2026-09-17-defect-six-v1/THEOREM.md), which in turn includes the exact graph-to-representative scope and links to the preceding treatment.
 
-Under the whole-level exact-block hypothesis |T|=|H|=d, small intrinsic defect forces each tight pair to share an interface neighbour. The new necessary inequality is
+Under the whole-level exact-block hypothesis |T|=|H|=5, criticality turns the actual exceptional supports into a weighted cover of the ten possible tight edges. Every K-support pays at least max(0,4-|S|) units of L and every off-pool residual support pays at least that much beta. Exact enumeration of all 1024 labelled tight graphs and all 31 nonempty supports gives
 
-    E_h(Q)<=L+floor(L/h)+beta.
+    D >= 11,
+    W >= 36,
+    extras => W >= 56.
 
-It yields D>=ceil(d(d-1)/4) for all d>=3. At d=5, the separate hand corollary strengthens the current bound to **D>=8, W>=33, or W>=53 with extra high-source selections**. These results do not assume a single interface label adjacent to every tight vertex.
+The two independent implementations produce the same complete 1024-row stream, SHA256 `80aa3a20b985dab08080c5d645bdf44cadb9498ec3be636219a670e35e4943c9`. The only auxiliary minimum types are K5 minus one edge, and the degree sequence (3,3,3,3,4) with two missing edges. These are necessary tight-graph shapes, not original-graph realizations.
 
-**Status:** internally checked candidate mathematics within an explicit exact-block scope. Unrestricted exact-block coverage, sharpness, novelty and independent mathematical acceptance remain open. No catalogue promotion or global Murty–Simon proof is claimed.
+The parameter-wide predecessor remains valid: pair coverage for D<d(d-2), the critical-edge inequality `E_h(Q)<=L+floor(L/h)+beta`, and the quadratic exact-block bound `D>=ceil(d(d-1)/4)`. The previous five-label D>=8 bound is superseded by D>=11.
 
-## Reproduce the new checks
+**Status:** internally checked candidate mathematics. Exact-block existence/coverage, attainability of D=11, sharpness, novelty and independent mathematical acceptance remain open. No catalogue promotion or unrestricted Murty-Simon proof is claimed.
 
-In project/research/general_n/2026-09-17-defect-six-v1/, run:
+## Review focus and next target
 
-    python3 verify_published.py
+Review first the necessity of the support-threat cover in the predecessor, then the cheap support price `max(0,4-|S|)` and the exact finite union-cover calculation. The next mathematical unit is to impose the full exact-row identities, demand types and receiver-pool multiplicities on the two auxiliary D=11 minimum families; a minimum set cover is necessary but not sufficient for realization.
 
-Python 3.10+ and a C++17 compiler suffice; no network or third-party Python package is needed. The [exact summary](project/research/general_n/2026-09-17-defect-six-v1/CHECK_SUMMARY.json) contains 121549 matching Python/C++ records, including 87685 local graphs and 33864 auxiliary tight graphs, plus row and support-charge arithmetic checks. The [source-only replay](project/research/general_n/2026-09-17-defect-six-v1/FRESH_REPLAY.json) reproduced the pinned streams. Both implementations were written by the same assistant; they are not external independent review.
-
-These tests include pair-covered interfaces without an all-tight common label, failures of essential premises, and examples showing that a support threat is not sufficient for actual criticality. No original exact-block graph census is claimed. Older verification families were not rerun in this package. Full generated gzip evidence is in the separate download and is reproducible from the published sources.
-
-## Review focus and next obligation
-
-Review the full-pool protection argument, the necessity rather than sufficiency of the support-threat cover, and the loss charged to each support. Then review the pair-coverage counting and the quadratic and five-label corollaries. The next mathematical target is **d=5,D=8**, using the actual threat-cover equality conditions, not merely the passing scalar envelope.
-
-Canonical counts remain 4626 exclusions / 952 survivors / 3632 whole-state closures. For the operational handoff read [CURRENT_STATE.md](CURRENT_STATE.md). The [preceding structural review entry](project/research/general_n/2026-09-17-defect-six-v1/PREVIOUS_STRUCTURAL_REVIEW.md) and all its earlier proof and verification links are retained for provenance; its D=6 next target is superseded here. No old proof, failed route or fixed-order reviewer package is removed.
+Canonical counts remain 4626 exclusions / 952 survivors / 3632 whole-state closures. The operational source of truth is [CURRENT_STATE.md](CURRENT_STATE.md); all earlier proofs and failed routes remain preserved.

@@ -1,0 +1,24 @@
+{
+  "status": "PASS_EXHAUSTIVE_D5_SUPPORT_COVER",
+  "tight_graphs": 1024,
+  "minimum_total_defect": 11,
+  "minimum_types": {
+    "(1, 9, (3, 3, 4, 4, 4))": 10,
+    "(2, 7, (3, 3, 3, 3, 4))": 15
+  },
+  "minimum_cover_cost_by_mu": {
+    "0": 12,
+    "1": 9,
+    "2": 7,
+    "3": 6,
+    "4": 4,
+    "5": 2,
+    "6": 0,
+    "7": 0,
+    "8": 0,
+    "9": 0,
+    "10": 0
+  },
+  "row_sha256": "80aa3a20b985dab08080c5d645bdf44cadb9498ec3be636219a670e35e4943c9",
+  "independent_implementations": "Python set/dynamic-programming implementation and C++ bit-mask/dynamic-programming implementation produced byte-identical 1024-row streams locally; same assistant, not external review."
+}
