@@ -1,58 +1,84 @@
 # Dense diameter-2-critical research — live current state
 
-> **Active target — 17 September 2026.** A public August 2026 repository predating this project appears to contain Lean formalizations of both the Murty–Simon inequality and equality clauses; source-level inspection has found no target-chain dependency gap, although an independent fresh rebuild remains open. Separately, the 2019 all-order second-extremal strengthening is false because of a published 12-vertex, 32-edge D2C graph. The live problem is therefore the sufficiently-large / eventual second-extremal classification around `M(n)=floor((n-1)^2/4)+1`. Existing Murty–Simon / Erdős #742 work remains preserved.
+> **Active target — 17 September 2026.** The 2019 all-order second-extremal strengthening is false because of a published 12-vertex, 32-edge D2C graph. The live problem is the sufficiently-large / eventual second-extremal classification around `M(n)=floor((n-1)^2/4)+1`. Existing Murty–Simon / Erdős #742 work remains preserved, but the project is not optimizing for first-proof priority there.
 
 <!-- CURRENT-STATUS:START -->
-**CHECKPOINT CLASS:** `FALSE_2019_DEPENDENCY_AUDIT_AND_README_SYNC_NO_PROOF_DEMOTION`.
+**CHECKPOINT CLASS:** `ROOT_EDGE_STABILITY_DICHOTOMY_NOT_PROMOTED`.
 
-**WORK MODE:** `AUDIT`. User requested that the README reflect the full change of situation and asked whether the false 2019 conjecture undermines the proofs. A targeted dependency audit was therefore performed before further mathematics.
+**WORK MODE:** `MATH`. Returned from the dependency-audit transaction to the perturbative Boolean-flow problem. Rather than trying to repair the factorial path argument immediately, this unit isolates the exact way root-edge criticality can fail to produce the disjoint-support antipode used in the zero-residual proof.
 
-**INSPECTED PREDECESSOR:** `32a5d27be924e6d2e6741aec7e91fc21fee35bb0` on `main`, containing the zero-residual Boolean-coding theorem and the `n<=294` cutoff.
+**INSPECTED PREDECESSOR:** `7bb7cc9a409d59455fead1042e0eecead5a8930c` on `main`, which synchronized the eventual-D2C target and audited the false 2019 conjecture out of the proof dependency chain. The zero-residual `n<=294` theorem at `32a5d27...` remains preserved.
 
-**LAST VERIFIED MATHEMATICAL RESULT:** unchanged from the predecessor. In the exact canonical boundary
+**LAST VERIFIED RESULT:** `project/research/post_ms/2026-09-17-stronger-pivot-v1/ROOT_EDGE_STABILITY_DICHOTOMY.md` plus `check_root_edge_stability_atlas.py`.
 
-`t=0`, `F=empty`, hence `r=0`,
+Use a maximum-degree root `v`, with
 
-any non-bipartite D2C graph with
+`B=N_G(v)`, `A=V(G)\N_G[v]`, `b=|B|`, `a=|A|`, `F=G[A]`, `f=e(F)`,
 
-`m>=M(n)=floor((n-1)^2/4)+1`
+and canonical residual variables
 
-must satisfy `n<=294`. The proof converts `G[B]` into a directed Boolean-coordinate flow, obtains the factorial path inequality `z!<=b lambda^z`, forces `z>=ceil(a/2)` from root criticality, and finishes with an exact finite arithmetic check below the hand cutoff. This remains an internal candidate theorem; external mathematical and novelty review remain open.
+`Q=e(G[B])`, `r=sum rho_u`, `delta=r-f=b(n-b)-m`, `lambda=2b-n`.
 
-**2019 FALSE-CONJECTURE DEPENDENCY AUDIT:** preserved at
+Call `u in B` **triangle-active** when it has a neighbour in `B`.
 
-`project/research/post_ms/2026-09-17-stronger-pivot-v1/DEPENDENCY_AUDIT_2019_FALSE_CONJECTURE.md`.
+**ROOT-EDGE ANTIPODE-OR-PRIVATE LEMMA.** For every triangle-active `u`, criticality of the root edge `vu` forces one of two alternatives:
 
-The audit found **no load-bearing use of Dailly–Foucaud–Hansberg Conjecture 3 as a premise** in the inspected fixed-order proofs, canonical selected/residual bridge, residual h-index derivations, Hall machinery, signed-surplus identities or zero-residual cutoff.
+1. **private-foot alternative:** there is `x in A` with `N_G(x) intersect B={u}`;
+2. **antipode alternative:** there is `w in B\{u}` with `uw` a nonedge and `N_G(u) intersect N_G(w)={v}`.
 
-The important distinction is now explicit:
+The proof is direct: after deleting `vu`, `(v,u)` stays at distance two through a rooted triangle neighbour. Any newly distant pair whose old path used `vu` must therefore be either `(v,x)` or `(u,w)`, giving exactly the two alternatives above.
 
-- the 2019 **Conjecture 3** all-order bound is false;
-- the same 2019 paper contains separate **proved dominating-edge theorems**, which remain valid inputs where used;
-- the D2C / total-domination-edge-critical complement correspondence used in the canonical construction is the earlier **Hanson–Wang (2003)** result, not Conjecture 3.
+Because a non-star D2C graph has no leaf, every private `x in A` is incident with an `F`-edge. Hence the set `P` of triangle-active B-vertices possessing a private A-neighbour injects into the nonisolated vertex set of `F`:
 
-Accordingly, no existing project theorem is demoted merely because Conjecture 3 is false. What changes is the strategic quantifier: `M(n)` is a comparison threshold for an eventual/sufficiently-large problem, not a universal theorem.
+`|P| <= nu(F) <= 2e(F)`.
 
-**CORRECTIONS IN THIS CHECKPOINT:**
+If some triangle-active source has no private foot, the antipode pair has disjoint A-neighbourhoods. Writing
 
-1. `project/research/general_n/2026-09-07-residual-hindex-v1/README.md` now attributes the complement/total-domination correspondence to Hanson–Wang (2003), explicitly separates the proved 2019 dominating-edge theorem from false Conjecture 3, and states that Conjecture 3 is not a proof input.
-2. `SIGNED_SURPLUS_PIVOT.md` is marked as a historically corrected pivot; its algebra is retained while the all-order target is replaced by the eventual problem.
-3. `DEFECT_TRIANGLE_ROOT.md` now treats `M(n)` as a comparison threshold and no longer describes the false all-order statement as an established/viable universal bound.
-4. The root `README.md` is synchronized with the August 2026 external proof collision, the 2024 counterexample, this dependency audit, the new eventual target, the zero-residual `n<=294` result, and the bounded automation window.
+`h_u=q_u+rho_u=# {x in A: ux notin E(G)}`,
 
-**EXTERNAL #742 COLLISION:** `Erdos742/Erdos742` predates this repository. Its inequality Lean source states the Formal Conjectures target and its visible `sorry` is an unused negative statement outside the target dependency chain; a separate equality formalization is also present. This is not treated as peer-reviewed acceptance until independently rebuilt/reviewed, but first-solution priority is treated as unavailable unless that external development fails audit.
+this gives
 
-**FALSE 2019 ALL-ORDER TARGET:** Radosavljević, Stanić and Živković (2024) report a 12-vertex, 32-edge D2C graph, while `M(12)=31`. The graph is a mandatory negative control for every proposed general theorem. `LITERATURE_CORRECTION_2024_EXCEPTION.md` records the primary-source correction and the move to the sufficiently-large formulation studied in recent work.
+`h_u+h_w>=a`,
 
-**CURRENT POST-PIVOT STRUCTURE:** the reconstructed hypercube-face graph `X_3` has `n=12,m=32` and the canonical profile `a=3,b=8,t=0,F=empty,r=0`. The family `X_k` remains D2C for `k>=3` but lies below `M(n)` for `k>=4`. In the exact zero-residual boundary, B-edges change one A-code coordinate, orient from `0` to `1`, and every zero coordinate has exactly one outgoing flip. This yields the Boolean-flow / factorial-growth cutoff above.
+and therefore the global cross-deficit bound
 
-**OLD LINE PRESERVED:** fixed-order candidates, audits, exact-block work, residual h-index/receiver theory, selected-incidence Hall and the complete mixed `{4,5}` all-E closure remain available. Canonical ledger remains **4626 exclusions / 952 survivors / 3632 whole-state closures**; no promotion changes.
+`Q+r>=a`.
 
-**AUTOMATION STATUS:** hourly task is `Eventual D2C Research`. Per the user's instruction, this automated research window is bounded to three more days and a separate stop task is scheduled for **20 September 2026 at about 13:53 UK time**. The research automation must retain the published 12-vertex exception as a hostile control, must not revert to the false all-order 2019 conjecture, and must not optimize for first-proof priority on Erdős #742.
+The canonical source inequality `Q<=r+b lambda` then yields
 
-**UNPRESERVED WORK:** None after this audit/checkpoint once the commit is published.
+`2r+b lambda>=a`,
 
-**DEFERRED ADMIN:** authoritative Figure-1 adjacency/isomorphism certification; fresh independent Lean recompilation of `Erdos742/Erdos742`; older archive transfers; PR #2; unrelated CI/root historical narrative maintenance; full novelty search for the hypercube-face construction and Boolean-flow formulation.
+or equivalently
 
-**NEXT ACTION:** MATH: return to the perturbative Boolean-flow problem after this documentation/dependency transaction. Move one layer outward from `r=e(F)=0`: quantify how small residual mass / `F`-edge mass corrupts the coordinate-flow system, seek an inequality of the form `n<=N(delta,e(F),...)`, and use the 12-vertex graph as a regression control. Preserve the first theorem, counterexample or obstruction before broadening scope.
+`2 delta + 2e(F) + b(2b-n) >= a`.                    (RSD)
+
+If instead **every** triangle-active source has a private foot, all rooted-triangle edges lie inside at most `nu(F)` active B-vertices, so
+
+`Q <= binom(nu(F),2) <= binom(min(b,2e(F)),2)`.       (PRIVATE)
+
+Thus every maximum-degree triangle root satisfies the compact dichotomy `(PRIVATE)` or `(RSD)`.
+
+**IMPORTANT SPECIAL CASE `F=empty`:** if `Q>0`, the private branch is impossible, so
+
+`2 delta + b(2b-n) >= a`.
+
+This is a genuine one-layer extension of the exact `F=r=0` Boolean boundary: positive residual cross mass is allowed, but it must pay for the loss of exact coordinate flow. At exact balance `b=n/2`, the antipode branch forces
+
+`r=delta+e(F) >= ceil(a/2)`.
+
+**12-VERTEX NEGATIVE CONTROL:** the reconstructed `X_3` profile has `a=3,b=8,lambda=4,delta=f=0` and satisfies the new inequality comfortably; the theorem does not accidentally exclude the published-order obstruction. Direct authoritative isomorphism between `X_3` and the published Figure 1 remains uncertified.
+
+**FINITE REGRESSION:** the atlas checker covers every D2C isomorphism class through order 7 and every maximum-degree root lying in a triangle. It found no failure of the root-edge dichotomy, the private-foot injection, `Q+r>=a`, or `2r+b lambda>=a`. This is regression evidence only; the hand proof is the basis of the theorem.
+
+**INTERPRETATION:** the first perturbative obstruction is now explicit. The zero-boundary antipode argument is not destroyed arbitrarily by `F` and residual mass. It fails only when rooted triangle-active vertices are supported by distinct private A-feet, and those feet must sit on `F`. Otherwise an actual disjoint-support antipode survives and immediately forces a quantitative residual/defect payment.
+
+**STATUS / TRUST BOUNDARY:** internal hand theorem, not promoted; external mathematical and novelty review open. No eventual second-extremal theorem is claimed. The maximum-triangle-root scope issue also remains open: a triangle-containing D2C graph is not yet proved to have a maximum-degree vertex in a triangle.
+
+**OLD LINE PRESERVED:** fixed-order candidates, audits, exact-block work, residual h-index/receiver theory, selected-incidence Hall, the complete mixed `{4,5}` all-E closure, the 12-vertex hypercube-face reconstruction, and the zero-residual `n<=294` cutoff remain available. Canonical ledger remains **4626 exclusions / 952 survivors / 3632 whole-state closures**; no catalogue promotion changes.
+
+**UNPRESERVED WORK:** None after this checkpoint.
+
+**DEFERRED ADMIN:** authoritative Figure-1 adjacency/isomorphism certification; fresh independent Lean recompilation of `Erdos742/Erdos742`; older archive transfers; PR #2; unrelated CI/root historical narrative maintenance; full novelty search for the hypercube-face construction / Boolean-flow / root-edge stability formulation.
+
+**NEXT ACTION:** MATH: split the eventual triangle-bearing attack along the new dichotomy instead of treating residual corruption uniformly. First attack the **all-private branch**, because it is now the only way to avoid the explicit antipode defect payment: classify the private A-feet inside `F`, use criticality of their incident F-edges and selected-pair uniqueness, and seek either a forced small cyclic/twin quotient or an additional residual charge. In parallel, retain `(RSD)` as the starting inequality for the antipode branch and only return to factorial/path expansion once the all-private obstruction is understood. Do not return to the closed mixed `{4,5}` ladder.
 <!-- CURRENT-STATUS:END -->
