@@ -3,85 +3,78 @@
 > **Active target — 17 September 2026.** The 2019 all-order second-extremal strengthening is false because of a published 12-vertex, 32-edge D2C graph. The live problem is the sufficiently-large / eventual second-extremal classification around `M(n)=floor((n-1)^2/4)+1`. Existing Murty–Simon / Erdős #742 work remains preserved.
 
 <!-- CURRENT-STATUS:START -->
-**CHECKPOINT CLASS:** `INDEPENDENT_HYPERCUBE_FACE_EXCEPTION_MECHANISM_NOT_NOVELTY_CLEARED`.
+**CHECKPOINT CLASS:** `ZERO_RESIDUAL_BOUNDARY_CODING_CUTOFF_294_NOT_PROMOTED`.
 
-**WORK MODE:** `MATH`. Reconstructed a deterministic 12-vertex/32-edge D2C benchmark matching all published coarse invariants and then generalized its visible structure. This is an independent reconstruction: direct isomorphism to the published Figure 1 has not yet been certified from authoritative adjacency data, so the repository does not call it the published graph. Radosavljević's claimed exhaustive small-order enumeration reports a single Conjecture-3 counterexample through order 13, which strongly suggests isomorphism, but that is supporting evidence rather than the identity certificate.
+**WORK MODE:** `MATH`. Continued from the independently reconstructed hypercube-face exception. The exact zero-residual boundary has now been converted into a binary coding theorem and a finite-order obstruction.
 
-**INSPECTED PREDECESSOR:** `e736305b286fd45d2d496eb6ec5850d40417e4a6` on `main`, which corrected the target after the 2024 literature collision.
+**INSPECTED PREDECESSOR:** `510281fe61fb754008492a6a86c6867c93a02372` on `main`, containing the `X_k` hypercube-face D2C family and the k=3 canonical profile.
 
-**LAST VERIFIED RESULT:** `project/research/post_ms/2026-09-17-stronger-pivot-v1/HYPERCUBE_FACE_EXCEPTION.md` and `check_hypercube_face_family.py` preserve the construction, hand proof and deterministic checks.
+**LAST VERIFIED RESULT:** `project/research/post_ms/2026-09-17-stronger-pivot-v1/ZERO_RESIDUAL_BOUNDARY.md` plus `check_zero_residual_cutoff.py`.
 
-For every `k>=3`, define `X_k` on
+Assume the canonical maximum-degree-root system satisfies
 
-`{r} union {a_1,...,a_k} union {0,1}^k`
+`t=0`, `F=empty`, hence `r=0`,
 
-by:
+and the graph is non-bipartite (equivalently here `Q=e(G[B])>0`). For each `u in B`, encode its G-neighbourhood in A by
 
-1. the cube vertices induce the hypercube `Q_k`;
-2. `r` is adjacent to every cube vertex;
-3. `a_i` is adjacent exactly to the cube vertices whose i-th coordinate is `0`;
-4. there are no other edges.
+`c(u) in {0,1}^a`, `c_i(u)=1 iff u a_i is an edge of G`.
 
-Then `X_k` is D2C. The proof is elementary and edge-type exact:
+Because every H-cross edge is selected and every missing H[B] pair has exactly one selected representative:
 
-- for a cube edge `xy` differing in coordinate `i` with `x_i=0,y_i=1`, the pair `(a_i,y)` has unique common neighbour `x`;
-- the same pair certifies criticality of the face edge `a_i x`;
-- for a root edge `rx`, the antipodal cube vertex `bar(x)` and `x` have unique common neighbour `r` when `k>=3`.
+1. every edge `uw` of `G[B]` joins codes of Hamming distance exactly one;
+2. orient that edge from the endpoint with `0` in the changed coordinate to the endpoint with `1`;
+3. for every vertex u and every zero coordinate of c(u), there is **exactly one** outgoing edge flipping that coordinate;
+4. there are no other B-edges.
 
-Diameter 2 follows directly from the root, coordinate flips and common zero-coordinate cube vertices.
+Thus the occupied codes form an upward-closed subset of the Boolean cube (with multiplicities), and the selected representatives are a directed coordinate-flow system.
 
-The parameters are
+Put
 
-`n=2^k+k+1`,
-`m=(k+1)2^k`.
+`lambda=2b-n=b-a-1`.
 
-For `k=3`, this gives `n=12,m=32`, degree sequence
+For `u in B`, its directed indegree is exactly `p_u`, and maximum-degree of the root gives
 
-`8,7,6,6,6,5,5,5,4,4,4,4`,
+`p_u<=lambda`.
 
-a unique dominating edge `r 000`, and a primitive/twin-free graph. A randomized reconstruction search found multiple labelled hits but only one isomorphism class in the bounded sample; this is diagnostic, not exhaustive uniqueness.
+Since `Q>0`, necessarily `lambda>=1`.
 
-**CANONICAL PROFILE OF k=3:** root at the unique degree-8 vertex:
+**FACTORIAL PATH LEMMA:** if a B-vertex has z zero coordinates, then it generates `z!` monotone directed paths to the all-ones fibre, while each endpoint can receive at most `lambda^z` such length-z paths. Hence
 
-- `b=8`, `a=3`;
-- `delta=b(n-b)-m=0`, equivalently `t=0`;
-- `F=G[A]` is empty;
-- total residual count `r=0`, so **every B-source has rho=0**;
-- `B` induces `Q_3`, so `Q=e(G[B])=12` rooted triangles;
-- the 12 H-cross edges are all selected representatives, with no residual cross edge;
-- each A-label is selected four times, but every label demand is `s_i=0` because `F` is empty.
+`z! <= b lambda^z`.                                    (FP)
 
-More generally, for `X_k` the canonical root is `r`, `A={a_i}`, `B=Q_k`, `F=empty`, `t=delta=r=0`, and
+**ROOT-CRITICALITY FORCES A LARGE-Z VERTEX:** choose a B-vertex u with at least one zero coordinate. Its root edge `ru` cannot be certified by `(r,u)` because u has a B-neighbour. It cannot be certified by `(r,a_i)` because every A-vertex has degree at least 2 in a non-star D2C graph. Therefore deleting `ru` forces a pair `(u,w)` whose only common neighbour was r. In particular the A-supports of c(u) and c(w) are disjoint. If u has z zeros, w has at least `a-z` zeros, so some B-vertex has
 
-`Q=k*2^(k-1)`.
+`z>=ceil(a/2)`.
 
-Each cube edge in coordinate `i` has a unique canonical quasi-edge: orient it from the endpoint with bit `1` to the endpoint with bit `0` and use label `a_i`. Thus for cube vertex `x`,
+Combining with (FP) gives a necessary arithmetic condition for every non-bipartite zero-residual boundary realization.
 
-`q_x=weight(x)`, `p_x=k-weight(x)`, `rho_x=0`.
+**SECOND-EXTREMAL CUTOFF:** in this boundary
 
-This is a crucial hostile control: a large selected system can coexist with **zero demand and zero residual mass**. Any eventual proof depending only on positive demand or residual h-index must explicitly exclude or price this boundary mechanism.
+`b=a+1+lambda`, `n=2a+2+lambda`, `m=b(a+1)`.
 
-**WHY THE FINITE EXCEPTION DOES NOT SCALE AT THE SAME DENSITY:** `X_3` has `m=32>M(12)=31`. But for every `k>=4`,
+Assume also `m>=M(n)`. A hand estimate rules out `a>=1296`: the density inequality gives `lambda<=3 sqrt(a)`; the standard integral bound `z! >= (z/e)^z` with `e<3`, together with `z>=a/2`, makes `z!/(lambda^z)>2^z`, contradicting `b<=2a` once `a>=1296`.
 
-`(k+1)2^k < M(2^k+k+1)`.
+The remaining finite integer range `a<1296` is checked exactly (integer factorials, no floating-point acceptance criterion). The strongest surviving necessary arithmetic point is
 
-Indeed with `N=2^k`,
+`a=134, lambda=24, z=67, b=159, n=294`.
 
-`(N+k)^2-4(k+1)N = N(N-2k-4)+k^2 >0`
+Therefore:
 
-for `k>=4`. So the natural hypercube-face continuation remains D2C but immediately drops below the second-extremal threshold. This explains one concrete way a genuine finite obstruction can self-dilute rather than threaten the eventual conjecture.
+> **Any non-bipartite D2C graph in the exact canonical boundary `t=0, F=empty, r=0` with `m>=floor((n-1)^2/4)+1` must have `n<=294`.**
 
-**IDENTITY / NOVELTY BOUNDARY:** an independently found labelled representative has graph6 `KnbI^UpaKgi\``; the deterministic construction uses another isomorphic labelling. The project has not obtained authoritative adjacency data for Figure 1 and does not claim direct identification. A quick literature search did not locate this `Q_k` face construction in named form, but no comprehensive novelty search has been done; **do not claim the infinite family as new**.
+This is an internally proved, partly computer-assisted structural theorem. The arithmetic survivor at n=294 is only a necessary-conditions survivor; no graph realization is claimed.
 
-**LITERATURE STATUS:** the peer-reviewed 2024 paper establishes existence of the 12/32 counterexample and says it has a dominating edge. The 2023 small-order enumeration reports a single counterexample through order 13. The 2025 Lin–Wang paper asks the sufficiently-large version and proves a substantial `C5`-free case. These remain external inputs, not project theorems.
+**RELATION TO THE 12-VERTEX EXCEPTION:** the hypercube-face graph `X_3` has `a=3,b=8,lambda=4,n=12` and lies inside this boundary. The family `X_k` for k>=4 remains D2C but falls below the second-extremal density. The new cutoff formalizes the broader phenomenon: this exact residual-zero mechanism cannot threaten the sufficiently-large problem beyond order 294.
 
-**OLD LINE PRESERVED:** all fixed-order candidates, audits, exact-block work, residual h-index/receiver theory, selected-incidence Hall and the complete mixed `{4,5}` all-E closure remain available. Canonical ledger remains **4626 exclusions / 952 survivors / 3632 whole-state closures**; no promotion changes.
+**IDENTITY / NOVELTY BOUNDARY:** direct isomorphism between `X_3` and the published Figure 1 remains uncertified from authoritative adjacency data, although the published enumeration plus matching invariants make it strongly likely. No novelty claim is made for the `X_k` family or the Boolean-flow lemma pending a dedicated literature comparison.
 
-**AUTOMATION STATUS:** hourly task is `Eventual D2C Research`; it must keep the 12-vertex exception as a negative control and not revert to the false all-order strengthening or the closed old excess ladder.
+**OLD LINE PRESERVED:** fixed-order candidates, audits, exact-block work, residual h-index/receiver theory, selected-incidence Hall and the complete mixed `{4,5}` all-E closure remain available. Canonical ledger remains **4626 exclusions / 952 survivors / 3632 whole-state closures**; no promotion changes.
+
+**AUTOMATION STATUS:** hourly task is `Eventual D2C Research`; it must retain the published 12-vertex exception and `X_3` as hostile controls and not revert to the false all-order conjecture.
 
 **UNPRESERVED WORK:** None after this checkpoint.
 
-**DEFERRED ADMIN:** authoritative Figure-1 adjacency/isomorphism certification; fresh Lean recompilation of `Erdos742/Erdos742`; reviewer-facing README synchronization; older archive transfers; PR #2; unrelated CI/root narrative maintenance; full novelty search for the hypercube-face construction.
+**DEFERRED ADMIN:** authoritative Figure-1 adjacency/isomorphism certification; fresh Lean recompilation of `Erdos742/Erdos742`; reviewer-facing README synchronization; older archive transfers; PR #2; unrelated CI/root narrative maintenance; full novelty search for the hypercube-face construction and Boolean-flow formulation.
 
-**NEXT ACTION:** MATH: classify the **zero-residual boundary** `t=0, r=0, F=empty` in canonical coordinates. Translate the selected representatives into an orientation/edge-labelling of `G[B]`: every B-edge must be represented by a unique A-nonedge at one endpoint, and in the hypercube family these labels are coordinate directions. Derive a general constraint on `G[B]` (degree, label classes, 4-cycle/cube structure, or expansion) strong enough to show that high-density members of this boundary are finite/small, or preserve a different scalable family if one exists. Keep `X_3` as the mandatory equality/exception control and `X_k,k>=4` as scalable negative controls.
+**NEXT ACTION:** MATH: move one layer outward from the exact boundary. Treat small positive residual defect / small `r+e(F)` as perturbations of the Boolean coordinate-flow system. Seek a stability version: delete or charge a bounded number of exceptional cross incidences/F-edges so that most of `G[B]` still admits the coordinate orientation, then combine factorial expansion with the existing Hall/residual inequalities. The immediate target is an inequality of the form `n <= N(delta,e(F),...)` for triangle-containing graphs at second-extremal density, with the zero-residual theorem recovered at `(delta,e(F))=(0,0)`.
 <!-- CURRENT-STATUS:END -->
