@@ -1,0 +1,35 @@
+{
+  "status": "PASS_ANTIPODE_TIGHT_MATCHING_STABILITY",
+  "date": "2026-09-17",
+  "scope": "finite regression evidence for ANTIPODE_TIGHT_MATCHING_STABILITY.md; not a proof and not a promotion",
+  "atlas_d2c_classes": 21,
+  "atlas_max_roots": 50,
+  "atlas_roots_with_antipode": 27,
+  "atlas_antipode_edges": 87,
+  "atlas_roots_with_tight_antipode": 9,
+  "atlas_tight_antipode_edges": 11,
+  "atlas_full_tight_cover_roots": 8,
+  "atlas_full_cover_B_edges": 4,
+  "atlas_selected_witness_records": 6,
+  "atlas_full_cover_records": [
+    {"n": 3, "m": 2, "b": 2, "a": 0, "k": 1, "Q": 0, "r": 0, "f": 0, "delta": 0},
+    {"n": 5, "m": 5, "b": 2, "a": 2, "k": 1, "Q": 0, "r": 2, "f": 1, "delta": 1},
+    {"n": 5, "m": 5, "b": 2, "a": 2, "k": 1, "Q": 0, "r": 2, "f": 1, "delta": 1},
+    {"n": 5, "m": 5, "b": 2, "a": 2, "k": 1, "Q": 0, "r": 2, "f": 1, "delta": 1},
+    {"n": 5, "m": 5, "b": 2, "a": 2, "k": 1, "Q": 0, "r": 2, "f": 1, "delta": 1},
+    {"n": 5, "m": 5, "b": 2, "a": 2, "k": 1, "Q": 0, "r": 2, "f": 1, "delta": 1},
+    {"n": 6, "m": 8, "b": 4, "a": 1, "k": 2, "Q": 2, "r": 0, "f": 0, "delta": 0},
+    {"n": 7, "m": 10, "b": 4, "a": 2, "k": 2, "Q": 2, "r": 2, "f": 0, "delta": 2}
+  ],
+  "X3_hostile_control": {
+    "n": 12,
+    "m": 32,
+    "M_n": 31,
+    "tight_antipode_pairs": 4,
+    "Q": 12,
+    "r": 0,
+    "delta": 0,
+    "selected_witness_records": 12,
+    "classification": "full tight-antipode Boolean-pair normal form; preserved negative control"
+  }
+}
