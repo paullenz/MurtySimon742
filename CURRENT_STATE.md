@@ -3,154 +3,195 @@
 > **Active target — 17 September 2026.** The live graph-theory problem is the sufficiently-large/eventual second-extremal D2C classification around `M(n)=floor((n-1)^2/4)+1`. The 2019 Dailly–Foucaud–Hansberg all-order strengthening is false: the published 2024 order-12, size-32 D2C graph remains a mandatory hostile control. Existing Murty–Simon / Erdős #742 work and the standalone-paper programme remain preserved, but they are not the live optimization target.
 
 <!-- CURRENT-STATUS:START -->
-**CHECKPOINT CLASS:** `Q0_INDEPENDENT_NEIGHBORHOOD_BRANCH_CLOSED_NOT_PROMOTED`.
+**CHECKPOINT CLASS:** `ANTIPODE_TIGHT_MATCHING_BOOLEAN_PAIR_STABILITY_NOT_PROMOTED`.
 
-**WORK MODE:** `EVENTUAL_D2C_MATH`. This unit critically reassessed the peeled `Q=0` / saturated-source route. The decisive simplification was to apply cross-edge criticality to **every** `B`-source, not just saturated ones. That turns the remaining branch into a star and then contradicts the required triangularity of `F`.
+**WORK MODE:** `EVENTUAL_D2C_MATH`. This unit reassessed the now-singular antipode branch after the `Q=0` closure. Rather than immediately trying another coarse defect inequality, it isolated the exact error term of a disjoint-support antipode and proved that the zero-error antipodes cannot branch. If they cover the rooted B-layer, the whole layer becomes a 2-lift of a complete graph and the A-layer becomes a Boolean transversal system. This is exactly the kind of stability normal form sought in the previous handoff: the error vanishes on the cube/Boolean mechanism and the order-12 hostile control lands precisely on that boundary.
 
-**INSPECTED PREDECESSORS:**
+**INSPECTED PREDECESSOR:** `1a58c7a61a5828b03eaaf81ce1af67dd35faa37e` (`Redirect live state after closing Q0 branch`). The Q0 theorem remains live and preserved; it is not revisited here.
 
-- `4608632b1e2510e1b4493c915a044a630b15b449` — maximum-triangle-or-twin reduction;
-- `f7596142c35a86e83ff48a6faf001c45dca2faf8` — `Q=0` critical-arm orientation and saturated-source obstruction.
+## Preserved entry point
 
-The saturated-source work remains preserved, but the new proof supersedes it for closing the `Q=0` branch.
+For a non-bipartite D2C graph above `M(n)`, Q0-IN forces every maximum-degree root `v` to have
 
-## New theorem — independent-neighbourhood defect bound
+`Q=e(G[N(v)])>0`.
 
-Let `G` be non-bipartite D2C and let `v` be a maximum-degree root with
+For `n>=14`, the preserved all-private edge-witness theorem then forces an antipode pair
 
-`B=N(v)`, `A=V(G)\N[v]`, `b=Delta(G)`, `F=G[A]`, `f=e(F)`.
+`u,w in B=N(v)`, `uw notin E(G)`, `N(u) intersect N(w)={v}`.
 
-Assume
+The live problem is to convert that structure into the required residual defect while retaining the finite `12/32` exception.
 
-`Q=e(G[B])=0`,
+## New exact antipode ledger
 
-so `B` is independent. For `x in A` put
+Write
 
-`R_x=b-|N_B(x)|`, `d_x=d_F(x)`, `e_x=R_x-d_x=b-d_G(x)>=0`.
+`A=V(G)\N[v]`, `a=|A|`, `b=|B|=Delta(G)`, `lambda=2b-n=b-a-1`,
 
-Then the exact defect identity is
+and vertex degree slack
 
-> `delta=b(n-b)-m=f+sum_x e_x`.                        (Q0)
+`epsilon_x=b-d_G(x)>=0`.
 
-The new internal candidate theorem is:
+For an antipode pair define
 
-> **Q0-INDEPENDENT-NEIGHBOURHOOD DEFECT THEOREM.**
+- `U=N_A(u)`, `W=N_A(w)`, `C=A\(U union W)`;
+- `X=N_B(u)`, `Y=N_B(w)`, `Z=(B\{u,w})\(X union Y)`;
+- `eta(uw)=|C|+|Z|`.
+
+The antipode condition makes both unions disjoint. Direct degree counting gives the exact identity
+
+> **ANTIPODE SLACK IDENTITY**
 >
-> `delta >= b-1`.
+> `epsilon_u+epsilon_w = lambda+1+eta(uw)`.             (AS)
 
-Equivalently,
+Thus `eta` is literally the excess endpoint slack beyond the unavoidable `lambda+1` baseline.
 
-`m <= b(n-b)-(b-1) = b((n-1)-b)+1 <= M(n)`.
+Call an antipode **tight** when `eta=0`; equivalently
 
-Therefore **no above-threshold non-bipartite D2C graph can have a maximum-degree root with `Q=0`.**
+`d(u)+d(w)=n-1`,
 
-Full hand proof:
+and every vertex outside `{u,w,v}` is adjacent to exactly one endpoint.
 
-`project/research/post_ms/2026-09-17-stronger-pivot-v1/Q0_INDEPENDENT_NEIGHBORHOOD_DEFECT_THEOREM.md`
+In the complement `H`, every antipode edge satisfies
 
-## Core proof mechanism
+`uw -> v`.
 
-Assume for contradiction `delta<=b-2`.
+So one H-edge is simultaneously a quasi-edge for both missing root edges `uv` and `wv`; this is the exact quasi-edge double-use mechanism of the antipode branch.
 
-1. The preserved triangle-free `F`-edge payment says every edge of `F` must lie in a triangle.
-2. For any source `u in B`, let `S_u=N_A(u)`, `T_u=A\S_u`, `t_u=|T_u|`.
-3. If `x in S_u` is nonisolated in `F[S_u]`, then the cross edge `ux` lies in a triangle. Criticality of `ux` has two possible arm directions.
-4. One direction immediately gives `delta>=b-1` by a `b-1` endpoint payment. Therefore under the counterexample assumption only the other direction survives, producing a private foot in `T_u` for every nonisolated vertex of `F[S_u]`.
-5. Hence
+Full hand note:
 
-   `nu(F[S_u]) <= t_u`                                (SF)
+`project/research/post_ms/2026-09-17-stronger-pivot-v1/ANTIPODE_TIGHT_MATCHING_STABILITY.md`
 
-   for every `u in B`.
-6. Since `F` is nonempty, (SF) implies every source has `t_u>=1`.
-7. The exact missing-incidence ledger gives
+## New theorem — tight antipodes cannot branch
 
-   `sum_u t_u = r = f+delta <= 2delta <= 2b-4 < 2b`.
+> **TIGHT-ANTIPODE MATCHING THEOREM.** For a fixed root `v`, the tight antipode pairs form a matching on `B`.
 
-   With `b` positive integer source loads, some source has `t_u=1`.
-8. For that source, `F[A\{c}]` has at most one nonisolated vertex, hence is edgeless. Therefore `F` is a nonempty star centred at the unique missed vertex `c`.
-9. Every star edge must nevertheless be triangular. Since the star has no A-side triangle support, a `B`-source `w` sees both the centre and a leaf `x`.
-10. Then `x` is nonisolated in `F[S_w]`, so (SF) demands a private foot outside `S_w` adjacent to `x`. But `x` is a star leaf whose only `F`-neighbour is the centre, already inside `S_w`. Contradiction.
+If a vertex `w` had two tight partners `u1,u2`, put
 
-Thus `delta>=b-1`.
+`R=V(G)\(N(w) union {w})`.
 
-## Consequence — maximum-triangle-root scope is fully resolved
+Tightness forces
 
-For every non-bipartite D2C graph with
+`N[ui]={v} union R`
 
-`m>=M(n)+1`,
+for both partners. Hence `u1,u2` are adjacent true twins. Deleting their edge leaves them at distance two through `v` and does not destroy any other length-at-most-two connection, contradicting D2C criticality.
 
-every maximum-degree root satisfies
+Therefore any antipode hub of multiplicity at least two must pay positive `eta` on all but at most one incident antipode relation.
 
-> `Q=e(G[N(v)])>0`.
+## Antipode matching cut
 
-So **every maximum-degree vertex lies in a triangle**. The earlier false-twin peeling branch is no longer an unresolved alternative; it was a valid reduction, but Q0-IN eliminates its core.
+For any matching `M` in the antipode graph, summing (AS) gives
 
-This is stronger than the originally sought existential maximum-triangle-root statement.
+`sum_{x in V(M)} epsilon_x = |M|(lambda+1)+sum_{e in M} eta(e)`.
 
-## Combination with preserved all-private theorem
+The canonical B-side slack ledger is
 
-The preserved all-private edge-witness theorem states that for
+`sum_{x in B} epsilon_x = b lambda + r - Q`.
 
-`n>=14`, `m>=M(n)+1`,
+Hence
 
-once a maximum-degree root has `Q>0`, the all-private branch is impossible. Hence every such above-threshold graph is now forced into the **disjoint-support antipode branch**:
+> `b lambda+r-Q >= |M|(lambda+1)+sum_{e in M} eta(e)`.  (AMC)
 
-> there exist `u,w in N(v)` with
->
-> `uw notin E(G)` and `N(u) intersect N(w)={v}`.
+At exact balance this is
 
-Thus, modulo external review of the internal lemmas, the scope issue is gone: the antipode branch is the single remaining structural branch for the eventual second-extremal attack.
+`r-Q >= |M|+sum eta(e)`.
 
-## Mandatory controls
+This is not yet the eventual second-extremal contradiction, but it prices disjoint antipodes and their non-Boolean error exactly rather than with a coarse support count.
 
-The published 2024 order-12, size-32 exception remains untouched. The independent `X_3` reconstruction has
+## Full tight cover — Boolean-pair normal form
 
-`n=12`, `m=32`, `M(12)=31`, `Delta=8`, `Q=12` at its unique maximum root.
+If tight antipodes cover all of `B`, Theorem above makes them a perfect matching. Write
 
-It therefore lies outside the Q0-IN hypothesis and remains in the maximum-triangle / antipode branch, as required.
+`b=2k`, `P_i={u_i,w_i}` for `1<=i<=k`.
 
-The expanded-`C5` equality family is sharp for Q0-IN: at maximum roots it has
+Then:
 
-`Q=0`, `delta=b-1`, `m=M(n)`.
+1. Between every two fibres `P_i,P_j`, the `2x2` B-adjacency is a perfect matching. Thus `G[B]` is a **2-lift of K_k**.
+2. Every `A`-vertex is adjacent to exactly one endpoint of every pair, hence receives a binary code in `{0,1}^k`.
+3. The rooted triangle count is exact:
 
-The non-bipartite hypothesis is essential: complete bipartite graphs have `Q=0` and `delta=0`.
+   `Q=k(k-1)`.
+4. Exactly half of the A-B pairs are G-edges, so the H-cross total is `ak`; hence
+
+   `r=k(a-k+1)`.
+5. Therefore
+
+   `delta=k(a-k+1)-e(F)`.
+6. Every `A`-vertex has `d_F(x)<=k` by maximum degree.
+
+This is much more rigid than the previous generic antipode partition.
+
+## Forced selected-witness codes
+
+In the full tight-cover normal form, let a B-edge `pq` between fibres `P_i,P_j` be canonically represented at source `q` by
+
+`qx -> p`
+
+with `x in A`.
+
+Then the binary code of `x` is forced by the ordered edge `q -> p`:
+
+- at `P_j`, choose the mate of `q`;
+- at `P_i`, choose `p`;
+- at every other fibre, choose the endpoint not adjacent to `q`.
+
+Moreover, if `S_q=N_A(q)`, then
+
+`N_F(x) intersect S_q = empty`.
+
+Thus selected incidences in the zero-error antipode branch are not generic Hall capacity: each one demands a prescribed Boolean code plus an F-separation condition. This is the new bridge to the selected/Hall machinery.
+
+## Mandatory 12/32 hostile control
+
+The reconstructed `X_3` lies **exactly** in the full tight-cover normal form:
+
+`a=3`, `b=8`, `k=4`, `lambda=4`, `Q=12`, `r=0`, `F=empty`, `delta=0`.
+
+Its four cube-antipodal pairs are the tight matching. The B-layer is
+
+`Q_3 ~= K_{4,4}-M`,
+
+a 3-regular 2-lift of `K_4`. The three A-vertices are Boolean transversals of the four fibres. Every one of the 12 rooted B-edges has exactly one canonical A-witness in the deterministic reconstruction.
+
+Thus the new theorem does not suppress the published finite exception; it identifies its structural mechanism precisely.
 
 ## Verification
 
 Companion regression:
 
-`project/research/post_ms/2026-09-17-stronger-pivot-v1/check_q0_independent_neighborhood_defect.py`
+`project/research/post_ms/2026-09-17-stronger-pivot-v1/check_antipode_tight_matching_stability.py`
 
 Recorded summary:
 
-`project/research/post_ms/2026-09-17-stronger-pivot-v1/Q0_INDEPENDENT_NEIGHBORHOOD_DEFECT_CHECK_SUMMARY.json`
+`project/research/post_ms/2026-09-17-stronger-pivot-v1/ANTIPODE_TIGHT_MATCHING_CHECK_SUMMARY.json`
 
 Finite evidence:
 
-- 21 D2C graph-atlas classes through order 7;
-- 10 non-bipartite D2C classes;
-- 17 non-bipartite maximum-root `Q=0` instances;
-- 18 triangle-free `F`-edge payment records;
-- zero violations of the exact defect identity or `delta>=b-1`;
-- explicit `X_3` hostile control replayed as D2C with `12/32`, `M(12)=31`, and `Q=12>0`.
+- 21 D2C atlas classes through order 7;
+- 50 maximum-degree root instances;
+- 87 antipode edges;
+- 11 tight antipode edges across 9 roots;
+- zero failure of the exact slack identity or tight-matching theorem;
+- 8 full-tight-cover roots, all satisfying the 2-lift/transversal and exact `Q,r` formulas;
+- forced selected-witness code/F-separation checks on every B-edge of those nontrivial atlas full-cover instances;
+- explicit `X_3` replay: four tight antipode pairs, `Q=12`, `r=0`, and 12 uniquely represented B-edges.
 
-The atlas happens not to contain a `Q=0` instance with the new internal-source-foot obstruction active, so that local lemma is primarily hand mathematics rather than independently stress-tested by the small atlas. External review remains important.
+Finite checks are regression evidence only. The hand proofs are the mathematical basis.
 
 ## Trust boundary
 
-Q0-IN is an internal hand theorem with finite regression. It has not received external mathematical review or novelty assessment. **No eventual second-extremal theorem is claimed.**
+The tight-antipode matching theorem, `(AMC)`, and the full tight-cover Boolean-pair normal form are internal hand mathematics with finite regression. External mathematical review and novelty assessment remain open. **No eventual second-extremal theorem is claimed.**
 
-The remaining live branch is now singular:
+The live branch is now split more sharply:
 
-1. choose a maximum-degree root `v`; Q0-IN forces `Q>0` above the threshold;
-2. for `n>=14`, all-private edge-witness pricing forces a disjoint-support antipode `u,w in B`;
-3. convert that antipode plus the residual defect ledger into `delta` large enough to contradict `m>=M(n)+1`, while preserving the order-12 `X_3` control.
+1. **errorful antipodes:** `eta>0` is charged directly by `(AS)/(AMC)`;
+2. **tight antipodes:** they form disjoint pairs;
+3. **full/near-full tight cover:** the root layer becomes a 2-lift/Boolean code system, with selected witnesses having forced code types and F-separation.
 
 **UNPRESERVED WORK:** None after this current-state commit.
 
-**NEXT ACTION:** Reassess the antipode branch from the new stronger starting point. Use an actual maximum-degree root with `Q>0` and an antipodal pair
+**NEXT ACTION:** Attack the **full or near-full tight-antipode matching branch** before returning to generic scalar inequalities. In the full-cover case, exploit the forced-code orientation system for the `k(k-1)` B-edges: at source `q`, every selected incidence must use a prescribed A-code and that label has no F-neighbour in `S_q=N_A(q)`. Seek a global code/Hall inequality that upper-bounds `e(F)` or forces residual mass, then combine it with
 
-`uw notin E(G)`, `N(u) intersect N(w)={v}`.
+`delta=k(a-k+1)-e(F)`.
 
-The preserved coarse payment only gives `Q+r>=a` / `2delta+2f+b(2b-n)>=a`, which is too weak near balance and is satisfied by `X_3`. The next unit should exploit the **partition of A into disjoint supports of u and w plus the uncovered remainder**, and price criticality of edges incident to the two supports. Look specifically for a stability theorem whose error term vanishes only in a cube/Boolean-flow configuration; the order-12 `X_3` profile (`F=empty`, `delta=0`) must remain an allowed finite obstruction. Do not return to Q0 peeling, the closed mixed `{4,5}` ladder, or first-proof optimization for Erdős #742.
+Use `(AMC)` to pay for the unmatched/errorful part in a near-full cover. Preserve `X_3` as the exact zero-error finite model. Do not return to the Q0 branch, the closed mixed `{4,5}` selected-excess ladder, or first-proof optimization for Erdős #742.
 <!-- CURRENT-STATUS:END -->
