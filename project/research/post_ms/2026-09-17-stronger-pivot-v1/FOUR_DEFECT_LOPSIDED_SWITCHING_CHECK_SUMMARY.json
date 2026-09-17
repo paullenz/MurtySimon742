@@ -1,0 +1,28 @@
+{
+  "status": "PASS_FOUR_DEFECT_LOPSIDED_SWITCHING_CLASSIFICATION",
+  "date": "2026-09-17",
+  "exact_k_range": [8, 12],
+  "valid_labelled_rooted_core_instances": 90,
+  "rooted_core_types": 8,
+  "tau_offsets_by_canonical_mask": {
+    "0": 4,
+    "11": 3,
+    "30": 4,
+    "31": 0,
+    "56": 4,
+    "57": 1,
+    "59": 4,
+    "63": -2
+  },
+  "low_cover_canonical_masks": [31, 63],
+  "arithmetic_replay_k_range": [8, 5000],
+  "closure_thresholds": {
+    "K4_lambda_1": 15,
+    "K4_lambda_0": 17,
+    "K4_lambda_minus_1": 19,
+    "K4_minus_nonroot_edge_lambda_minus_1": 16
+  },
+  "uniform_lopsided_threshold": 19,
+  "scope": "finite exact regression and arithmetic audit only; universal structural claims are hand proofs",
+  "negative_control": "k=4 X3 residual-zero perfect-matching mechanism is outside theorem scope"
+}
