@@ -1,0 +1,25 @@
+{
+  "status": "PASS_TWO_DEFECT_COMPLETE_SWITCHING_CLASSIFICATION",
+  "date": "2026-09-17",
+  "scope": "finite regression evidence only; universal cover formulas and F-separation claims are hand proofs",
+  "exact_graph_tau_replay_k_range": [5, 10],
+  "exact_graph_tuple_checks": 104,
+  "tuple_counts_by_k": {
+    "5": 4,
+    "6": 10,
+    "7": 12,
+    "8": 20,
+    "9": 24,
+    "10": 34
+  },
+  "formula_density_scan_k_range": [5, 100],
+  "formula_tuples_scanned": 159344,
+  "only_tau_le_2k_normal_forms": [
+    "isolated_star",
+    "adjacent_lopsided"
+  ],
+  "adjacent_lopsided_exact_tau": "2k",
+  "adjacent_lopsided_F_closure_threshold": 14,
+  "complete_two_defect_eventual_threshold": 14,
+  "negative_control": "k=4 X3 residual-zero perfect-matching mechanism remains outside theorem scope"
+}
