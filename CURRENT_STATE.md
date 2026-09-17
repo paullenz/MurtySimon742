@@ -3,17 +3,17 @@
 > **Active target — 17 September 2026.** The live problem is the sufficiently-large/eventual second-extremal D2C classification around `M(n)=floor((n-1)^2/4)+1`. The false all-order 2019 strengthening is not assumed. The published order-12, size-32 D2C obstruction remains a mandatory hostile control. Murty–Simon / Erdős #742 work remains preserved but is not the live optimization target.
 
 <!-- CURRENT-STATUS:START -->
-**CHECKPOINT CLASS:** `SECOND_POSITIVE_RESIDUAL_FULL_TIGHT_HAMMING_DEFECT_CLOSED_FOR_K_GE_17_NOT_PROMOTED`.
+**CHECKPOINT CLASS:** `LEAF_RICH_FULL_TIGHT_SWITCHING_BRANCHES_EXCLUDED_NOT_PROMOTED`.
 
-**WORK MODE:** `EVENTUAL_D2C_MATH`. This unit continued the full tight-antipode Boolean branch after the predecessor `0a311bae71ee15045926dbbe4fa3e70737c88998`. It did not return to a broad scalar census. The key move was to combine the Boolean witness-cover theorem with the preserved F-separation rule. At the first surviving layer `a=k+1,r=2k`, all A-codes are forced distinct, so residual-coordinate counts become Hamming-ball degree bounds in `F=G[A]`. This is strong enough to put the entire layer strictly below `M(n)` for `k>=17`.
+**WORK MODE:** `EVENTUAL_D2C_MATH`. Two independent continuations from predecessor `0a311bae71ee15045926dbbe4fa3e70737c88998` have now been reconciled rather than overwritten. One closed the first surviving small-residual layer `a=k+1,r=2k` below `M(n)` for `k>=17` by a Hamming-support defect bound. The present unit critically reassessed the eventual scale and found a stronger large-order direction: in any above-`M(n)` full-tight graph with `b=2k`, the handshake bound forces `a<=2k`, so genuinely large candidates live near `a=2k`, not near `a=k+1`. Exploiting that, two leaf-rich switching subbranches are now excluded for `k>=8`.
 
-## Preserved entry point
+## Preserved full-tight entry point
 
-For a non-bipartite D2C graph above `M(n)`, the preserved Q0 theorem forces every maximum-degree root to have rooted triangles. For `n>=14`, the all-private edge-witness theorem forces a disjoint-support antipode. Tight antipodes form a matching. If they cover `B=N(v)`, write
+For a non-bipartite D2C graph above `M(n)`, the preserved Q0 theorem forces rooted triangles at a maximum-degree root. For `n>=14`, the all-private edge-witness theorem forces a disjoint-support antipode. Tight antipodes form a matching. If they cover `B=N(v)`, write
 
 `B=P_1 dotcup ... dotcup P_k`, `|P_i|=2`, `b=2k`.
 
-Then `G[B]` is a 2-lift of `K_k`; every A-vertex is a Boolean transversal; and
+Then `G[B]` is a 2-lift of `K_k`; every `A`-vertex is a Boolean transversal; and
 
 `Q=k(k-1)`,
 
@@ -21,147 +21,174 @@ Then `G[B]` is a 2-lift of `K_k`; every A-vertex is a Boolean transversal; and
 
 `delta=r-e(F)`.
 
-The residual-zero classification preserves only `k=2` (`H5`) and `k=4` (`X_3`). The Boolean witness-cover theorem then gives, for `k>=5`, at least `k+1` distinct A-codes and therefore excludes the algebraic layer `a=k,r=k`.
+The residual-zero classification preserves only `k=2` (`H5`) and `k=4` (`X_3`). For `k>=5`, the Boolean witness-cover theorem gives at least `k+1` distinct A-codes and excludes `a=k,r=k`.
 
-## New theorem — Hamming residual support bounds F-degree
+The orientation-code graph `Omega_sigma` has one vertex per Boolean code and one edge per physical rooted B-edge; the actual distinct code support `C` is a vertex cover. If `ell(c)` is the number of degree-one coordinates of the switched graph `L_c`, then
 
-Now impose the first surviving layer
+`Q <= sum_{c in C} ell(c)`.
 
-`a=k+1`, `r=2k`.
+## Preserved second-positive Hamming closure
 
-The Boolean witness-cover theorem forces exactly `a=k+1` distinct codes: every A-label has a different code.
+At the first surviving layer
 
-For a label `x`, let `D_x subseteq [k]` be its residual coordinate set and `R_x=|D_x|`. Every coordinate outside `D_x` is selected at `x`. The preserved selected-incidence F-separation rule says that every F-neighbour `y` agrees with `x` at each selected coordinate. Hence
+`a=k+1`, `r=2k`,
 
-`{j:c_j(x)!=c_j(y)} subseteq D_x`.
+the Boolean witness-cover theorem forces all `k+1` A-codes to be distinct. If `D_x` is the residual-coordinate set of label `x`, with `R_x=|D_x|`, F-separation gives
 
-Because all A-codes are distinct, an F-neighbour must differ on a nonempty subset of `D_x`. Therefore
+`d_F(x) <= min(k,2^{R_x}-1)`,
 
-> `d_F(x) <= 2^{R_x}-1`.
+and
 
-Every A-vertex already has exactly `k` B-neighbours and maximum degree is `2k`, so also
+`sum_x R_x=2k`.
 
-> `d_F(x) <= k`.
+This yields `e(F)<=k^2/5` for `k>=19`, with sharper boundary arithmetic at `k=17,18`, and therefore
 
-Thus
+> **SECOND POSITIVE-RESIDUAL FULL-TIGHT DEFECT THEOREM — internal candidate:** the layer `a=k+1,r=2k` lies strictly below `M(n)` for every `k>=17`.
 
-> **HAMMING DEGREE BOUND**
->
-> `d_F(x) <= g_k(R_x):=min(k,2^{R_x}-1)`.
-
-The exact residual ledger is
-
-`sum_x R_x = r = 2k`.
-
-Full proof:
+Full note:
 
 `project/research/post_ms/2026-09-17-stronger-pivot-v1/SECOND_POSITIVE_RESIDUAL_HAMMING_DEFECT.md`.
 
-## Global F-bound and second-extremal consequence
+This result remains valid and preserved, but the present unit shows that it should not define the main eventual strategy.
 
-For every `k>=19` and every integer `R>=0`,
+## New density window: eventual full-tight candidates lie near a=2k
 
-`g_k(R) <= (k/5) R`.
+Because `Delta=2k`, every graph satisfies `m<=n Delta/2=nk`. If `n>=4k+2`, the exact parity formulas for `M(n)` give `M(n)>nk`. Hence any above-`M(n)` full-tight graph must satisfy
 
-The only nontrivial checks are `R=1,2,3,4`; the strongest is `15 <= 4k/5`, valid from `k=19`. For `R>=5`, simply use `g_k(R)<=k<=kR/5`.
+> `n<=4k+1`, hence `a<=2k`.
 
-Therefore
+This is the correct large-order scale for the full-tight branch.
 
-`2e(F) <= (k/5) sum R_x = 2k^2/5`,
+## New perfect-matching switching exclusion
 
-so
+Suppose some switched state `L_c` is a perfect matching. For even `k>=6`, the preserved switching lemma says every genuinely different switched state has at most two leaves; only the complementary code pair gives the same matching. Thus any witness-code cover satisfies
 
-> `e(F) <= k^2/5`.
+`k(k-1) <= 2k + 2(|C|-2)`,
 
-For `k=17,18`, the uniform majorant
+and therefore
 
-`g_k(R) <= (15/4)R`
+> `|C| >= (k^2-3k+4)/2`.
 
-gives the integral bounds
+For even `k>=8`, this exceeds `2k`, contradicting `|C|<=a<=2k` in an above-threshold graph.
 
-`e(F)<=63` at `k=17`,
+> **PERFECT-MATCHING SWITCHING EXCLUSION — internal candidate:** an above-`M(n)` full-tight graph with even `k>=8` has no perfect-matching switched state.
 
-`e(F)<=67` at `k=18`.
+The `k=4` `X_3` hostile control remains outside the range.
 
-At `a=k+1`,
+## New full-star orientation-code normal form
 
-`n=3k+2`,
+Suppose some `L_c` is a full star `K_{1,k-1}`. Gauge switching by `c` and then at the star centre reduces to `sigma=0`. For `k>=5`, the only leaf-bearing codes are
 
-`m=2k^2+2k+e(F)`.
+`e_1,...,e_k` and their complements.
 
-For `k>=19`, the Hamming bound and the parity-independent lower estimate
+The orientation-code graph is exactly
 
-`M(3k+2) >= (9k^2+6k+4)/4`
+> `Omega_sigma ~= K_k dotcup K_k`
 
-give
+plus isolated code vertices. Hence every actual witness-code support has
 
-`m < M(3k+2)`.
+> `|C|>=2k-2`.
 
-The two boundary calculations are
+Combined with `a<=2k`, an above-threshold star-class graph has only
 
-- `k=17`: `m<=675 < M(53)=677`;
-- `k=18`: `m<=751 < M(56)=757`.
+`a in {2k-2,2k-1,2k}`,
 
-Hence:
+or, with `lambda=2k-a-1`,
 
-> **SECOND POSITIVE-RESIDUAL FULL-TIGHT DEFECT THEOREM — internal candidate.** In the full tight-antipode Boolean normal form, the layer
+> `lambda in {1,0,-1}`.
+
+So this switching class collapses to three near-balanced residual layers before any detailed F analysis.
+
+## New F-separation closure of the full-star class
+
+Stay in the zero-signing gauge and call `e_i` the low layer and `bar(e_i)` the high layer. A selected coordinate at label `x` forces every F-neighbour of `x` to agree with `x` in that coordinate.
+
+Call a star-code label clean when its code occurs exactly once. If
+
+`q=a-(2k-2)=1-lambda in {0,1,2}`,
+
+then at most `2q` labels are non-clean.
+
+For clean labels:
+
+1. two distinct labels in the same star layer cannot be F-adjacent: the corresponding `Omega` edge must be selected at one of the two singleton labels, and the labels disagree in that selected coordinate;
+2. a low/high clean F-edge forces both endpoints to have residual degree at least `k-1` (or `k` for complementary indices).
+
+If `h` is the number of clean labels with residual degree at least `k-1`, then
+
+`h(k-1)<=r`,
+
+and the clean-clean F graph is bipartite. With `d_F<=k` on the at most `2q` exceptional labels,
+
+> `e(F) <= floor(h^2/4)+2(1-lambda)k`,
 >
-> `a=k+1`, `r=2k`
->
-> lies strictly below the second-extremal comparison level for every `k>=17`.
+> `h <= floor(r/(k-1))`.
 
-Consequently an above-`M(n)` full-tight counterexample with `k>=17` must satisfy
+For the three possible imbalance values this gives:
 
-> `a>=k+2`,
->
-> `r=k(a-k+1)>=3k`.
+- `lambda=1`: closure to `m<=M(n)` for every `k>=5`;
+- `lambda=0`: closure for every `k>=6`;
+- `lambda=-1`: closure for every `k>=8`.
 
-This is a density closure inside the full-tight branch, not an eventual theorem for arbitrary antipode configurations.
+Therefore:
+
+> **FULL-STAR SWITCHING EXCLUSION — internal candidate.** In the full tight-antipode branch, if the Boolean switching class contains a full star and `k>=8`, then `m<=M(n)`.
+
+Full note:
+
+`project/research/post_ms/2026-09-17-stronger-pivot-v1/LEAF_RICH_SWITCHING_EXCLUSIONS.md`.
 
 ## Verification
 
-Files:
+New companion files:
 
-- `SECOND_POSITIVE_RESIDUAL_HAMMING_DEFECT.md`
-- `check_second_positive_residual_hamming_defect.py`
-- `SECOND_POSITIVE_RESIDUAL_HAMMING_CHECK_SUMMARY.json`
+- `check_leaf_rich_switching_exclusions.py`
+- `LEAF_RICH_SWITCHING_EXCLUSIONS_CHECK_SUMMARY.json`
 
-Executed arithmetic replay:
+Finite replay verifies:
 
-- every `k=17,...,5000`;
-- 71,720 pointwise envelope records across all changing values of `g_k(R)`;
-- zero failure;
-- boundary values reproduced exactly: `(k,m_bound,M)=(17,675,677)` and `(18,751,757)`.
+- zero-signing switching classes through `k=12`: exactly `2k` leaf-bearing codes, all stars;
+- `Omega_sigma` is exactly two `K_k` components in that gauge;
+- perfect-matching cover arithmetic through `k=20`;
+- full-star defect arithmetic through `k=30`, with exact closure thresholds `k=5,6,8` for `lambda=1,0,-1`.
 
-The finite arithmetic check is evidence only. The Hamming and comparison arguments above are the hand proof.
+The preceding Hamming-defect checker independently replayed the `a=k+1,r=2k` theorem through `k=5000`.
 
-## Negative controls and trust boundary
+Finite checks are regression evidence only. The universal statements are the hand proofs.
+
+## Mandatory negative control and trust boundary
 
 - `k=2,r=0`: classical `H5` remains allowed.
-- `k=4,r=0`: the independent `X_3` Boolean/cube construction remains allowed with `n=12,m=32>M(12)=31`.
-- The present theorem starts at `k=17` and therefore does not suppress the hostile finite mechanism.
+- `k=4,r=0`: the independent twelve-vertex `X_3` Boolean/cube mechanism remains allowed with `n=12,m=32>M(12)=31`.
+- None of the new sufficiently-large exclusions suppresses the finite hostile control or revives the false all-order Conjecture 3.
+- Direct adjacency-list certification of the published 2024 Figure-1 graph against the project's `X_3` reconstruction remains open; no stronger identification is claimed.
 - External mathematical review and novelty assessment remain open.
-- No all-order second-extremal statement is claimed.
 
 ## Strategic consequence
 
-The full-tight Boolean obstruction now has three successive structural barriers:
+The full-tight branch now has both a **small-residual staircase** and a more relevant **large-order switching reduction**:
 
-1. `r=0`: only the finite `H5/X_3` switching mechanisms survive;
-2. `r=k`: impossible for `k>=5` by the Boolean witness-code cover theorem;
-3. `r=2k`: below `M(n)` for `k>=17` by the new Hamming-support defect theorem.
+- `r=0`: only finite `H5/X_3` mechanisms;
+- `r=k`: impossible for `k>=5`;
+- `r=2k`: below `M(n)` for `k>=17`;
+- for any above-threshold full-tight graph, density forces `a<=2k`;
+- perfect-matching switched states are impossible above `M(n)` for even `k>=8`;
+- full-star switched states are impossible above `M(n)` for every `k>=8`.
 
-For sufficiently large fibre count, any above-threshold full-tight witness is therefore pushed to
+The highest-value next target is therefore **not** simply the next algebraic residual layer `r=3k`. It is the remaining intermediate switching regime at the eventual scale:
 
-`a>=k+2`, `r>=3k`.
+- no perfect-matching state;
+- no full-star state;
+- possible non-star one-defect states, especially the previously classified `K_{1,k-3} dotcup K_2` triad;
+- otherwise every useful switched state has at least two non-leaf coordinates.
 
-**NEXT ACTION:** critically attack the next layer
+Finite orientation-code data still suggest the universal bound
 
-`a=k+2`, `r=3k`.
+`tau(Omega_sigma)>=2k-2` for `k>=5`.
 
-The Boolean witness-cover theorem still guarantees at least `k+1` distinct codes, so there is at most one duplicated code class. Extend the Hamming-support degree bound to this bounded-multiplicity setting, carefully pricing the extra F-edges that one duplicate code can create. Determine whether the `r=3k` layer is also below `M(n)` for all sufficiently large `k`. If the duplicate class causes a genuine obstruction, preserve its exact structure rather than hiding it.
+A realistic next bounded unit is to prove this first for the non-star one-defect switching class (especially the `K_{1,k-3} dotcup K_2` triad). If successful, every above-threshold full-tight graph in that class is forced into `a>=2k-2`, after which the same near-balanced F-separation strategy can be applied. A universal `tau>=2k-2` theorem would be a major structural compression of the whole full-tight branch.
 
-Use `(AMC)` only when returning to near-full/unmatched/errorful antipodes. Do not revisit Q0, the closed mixed `{4,5}` ladder, or first-proof optimization for Erdős #742.
+Use `(AMC)` only when returning to near-full/unmatched/errorful antipodes. Do not revisit Q0, the closed mixed `{4,5}` selected-excess ladder, or first-proof optimization for Erdős #742.
 
 **UNPRESERVED WORK:** None after this current-state commit.
 <!-- CURRENT-STATUS:END -->
