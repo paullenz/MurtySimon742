@@ -1,0 +1,19 @@
+{
+  "status": "PASS_TWO_DEFECT_ISOLATED_STAR_SWITCHING_EXCLUSION",
+  "date": "2026-09-17",
+  "scope": "finite regression evidence only; universal structural claims are hand proofs",
+  "component_replay_k_range": [5, 100],
+  "component_instances": 96,
+  "exact_orientation_code_decomposition": "2 K_{k-2} + 4 K_{1,k-2} + one doubled K2",
+  "exact_tau": "2k-1",
+  "physical_edge_count": "k(k-1)",
+  "arithmetic_replay_k_range": [5, 5000],
+  "closure_thresholds": {
+    "lambda_0": 10,
+    "lambda_minus_1": 12
+  },
+  "eventual_uniform_threshold": 12,
+  "broader_two_defect_reduction": "Every k-2-leaf switched state is parameterized by (p,q,t,epsilon), p+q+2t=k-2, with the two exceptional degrees p+epsilon and q+epsilon not equal to 1.",
+  "next_unproved_target": "tau(Omega_sigma) >= 2k-1 for the full two-defect parameter family, with equality only for the isolated-star class",
+  "negative_control": "The k=4 X3 residual-zero perfect-matching mechanism is outside theorem scope and remains allowed."
+}
