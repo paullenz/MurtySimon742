@@ -1,29 +1,53 @@
 # Murty–Simon / Erdős #742 — live current state
 
-> **Current review entry: [STRUCTURAL_REVIEW.md](STRUCTURAL_REVIEW.md).** The five-label exact block has D>=12. The scope programme now has two general bridges: h-index saturation and a new receiver-inflation theorem that charges high selected load which cannot fit through high-high B-pairs.
+> **Current review entry: [STRUCTURAL_REVIEW.md](STRUCTURAL_REVIEW.md).** The five-label exact block has D>=12. The scope programme now has three general bridges: h-index saturation, receiver inflation, and a new coupled demand/residual staircase theorem that converts the k<h escape into either a large scalar loss or forced lower-level residual-tail growth.
 
 <!-- CURRENT-STATUS:START -->
-**CHECKPOINT CLASS:** `INTERNAL_RECEIVER_INFLATION_BRIDGE_NOT_PROMOTED`.
+**CHECKPOINT CLASS:** `INTERNAL_STAIRCASE_PEELING_BRIDGE_NOT_PROMOTED`.
 
-**WORK MODE:** `MATH`. Stepped back from the recorded excess-source action, reviewed the exact-block, h-index and older heavy-routing mechanisms, and extracted a complementary destination-capacity theorem.
+**WORK MODE:** `MATH`. Stepped back from the recorded instruction to build a new h/h-1 routing theorem from scratch. Re-read the canonical threshold-capacity theorem and recognized that, in tail coordinates, it already supplies the missing multi-level coupling. Extracted the exact staircase system and its first adjacent-level peeling corollary.
 
-**INSPECTED PREDECESSOR:** `71b73a58ae0801a3ec0f8406a8d7818cee12464c`, tree `8102a7a9a66ab5b4303bc6a98e4d2f4515c122fa`, confirmed main before this transaction. Its h-index saturation theorem and the verified d=5,D>=12 predecessor remain unchanged.
+**INSPECTED PREDECESSOR:** `4612d874bb3e195ec7a3e1369da297779fbbbc37`, tree `4f8d22142024233a429b590f1f1605a1cf2a9497`, confirmed main before this transaction. Its receiver-inflation theorem, the h-index saturation theorem, the verified d=5,D>=12 exact-block predecessor and all canonical counts remain unchanged.
 
-**LAST RESULT:** let h be the residual h-index, N=h+u the number of sources with rho>=h, and k the number of demand-h labels. For each threshold q<h, the total omission budget bounds the number of q-light high sources; distinct high-high B-pairs bound how many q-heavy selected incidences can have high destinations; overflow forces distinct low receivers of residual degree at least q. Writing `ell_q=min(N,floor(ku/(k-q)))`, `Y_q=max(0,kh-q ell_q-C(N,2))`, `z_q=ceil(Y_q/N)`, one obtains `r>=b+h(h-1)+u(h-1)+(q-1)z_q` and therefore `b+2t<=(a-h-u)(h-1)+k-(q-1)z_q`. Hand graph theorem with exact arithmetic audit; external review and novelty open.
+**LAST RESULT:** for demand tails `K_d=#{s_i>=d}` and residual tails `N_d=#{rho_u>=d}`, positive surplus gives the exact layer-cake ledger `2t<=sum_d(K_d-N_d)`. The canonical threshold-capacity theorem rewrites as the pure staircase inequality
 
-**STEP-BACK CONSEQUENCE:** attacking u>0 alone is too narrow. Receiver inflation penalizes the excess-source branch, but the scalar optimizer can also evade the exact square face by moving demand from h to h-1 when k<h. The next structural target should therefore be a multi-level/peeling inequality coupling the top level to the h-1 level, preferably combining receiver inflation with the preserved heavy-load/routing tail theorem. Do not return automatically to D=12 exact-block grinding unless this broader analysis requires it.
+`d K_d + sum_{j>d} K_j <= d N_d + C(N_d-d,2)`.
 
-**ARITHMETIC AUDIT:** `check_receiver_inflation.py` exactly solves the row-load relaxation for 6090 `(h,u,k,q)` parameter/threshold combinations over 2<=h<=15, 0<=u<=5, 1<=k<=15 and confirms the closed light-row and heavy-mass bounds. This checks the finite arithmetic relaxation, not the hand graph implications.
+For residual h-index h>=3, writing `k=K_h`, `K=K_{h-1}`, `N=N_h`, `M=N_{h-1}`, one gets
 
-**FIVE-LABEL STATUS:** every actual whole exact block |T|=|H|=5 satisfies D>=12, hence W>=37 or W>=57 with extras. External review, novelty, sharpness and D=12 attainability remain open.
+`b+2t <= a(h-2)+K+k-(h-2)M-N`
+
+and
+
+`(h-1)K+k <= (h-1)M+C(M-h+1,2)`.
+
+If the top level is non-square (`k<=h-1`), define
+
+`K_*(M)=min(a, M-1+floor(C(M-h+1,2)/(h-1)))`.
+
+Then
+
+`b+2t <= a(h-2)-1+K_*(M)-(h-2)M`.
+
+In particular, if `N_h=N_{h-1}=h`, any non-square top level satisfies
+
+`b+2t <= (h-2)(a-h+1)`.
+
+Thus with `N_h=h` and larger target, either the exact square block occurs or the residual staircase must grow immediately below h. At h=5: `N_5=5` and `b+2t>3a-12` force `K_5=5` or `N_4>=6`.
+
+**STEP-BACK CONSEQUENCE:** the previous "mass can migrate from h to h-1" obstruction was too coarse. The h-1 migration is not free: threshold pair capacity either sharply reduces the demand sum or forces growth of the residual tail. The scope problem is now naturally a recursive staircase problem, not a single top-level branch.
+
+**ARITHMETIC AUDIT:** `check_staircase.py` brute-forces the Section 5 integer elimination for 50,076 `(h,a,M)` triples over `3<=h<=15`, `h<=a<=60`, `h<=M<=min(3a,100)`, plus 676 flat-tail cases. No failures. This checks the integer elimination only, not the inherited hand graph theorem.
+
+**FIVE-LABEL STATUS:** every actual whole exact block `|T|=|H|=5` satisfies `D>=12`, hence `W>=37` or `W>=57` with extras. The new staircase theorem gives a direct scope dichotomy feeding into that exact-block result, but does not prove that every graph reaches the block.
 
 **CANONICAL / PROMOTED STATUS:** unchanged — 4626 exclusions / 952 survivors / 3632 whole-state closures. Previous candidate unions, audits and state3349 retain their trust boundaries. No canonical catalogue scan, workflow launch, q-enumeration or promotion.
 
-**PRESERVATION:** `project/research/general_n/2026-09-17-receiver-inflation-v1/` contains the full new derivation and exact row-relaxation checker. The h-index saturation theorem remains at `project/research/general_n/2026-09-17-hindex-saturation-v1/`; the d=5 proof/check package remains at `project/research/general_n/2026-09-17-d5-defect11-closure-v1/`; the older general heavy-load theorem remains at `project/research/general_n/2026-09-12-heavy-load-family-v1/`.
+**PRESERVATION:** new theorem and audit are in `project/research/general_n/2026-09-17-staircase-peeling-v1/`. Receiver inflation remains at `project/research/general_n/2026-09-17-receiver-inflation-v1/`; h-index saturation at `project/research/general_n/2026-09-17-hindex-saturation-v1/`; d=5 closure at `project/research/general_n/2026-09-17-d5-defect11-closure-v1/`; older heavy-load theorem at `project/research/general_n/2026-09-12-heavy-load-family-v1/`.
 
 **UNPRESERVED WORK:** None for this bounded theorem or arithmetic audit after remote confirmation.
 
 **DEFERRED ADMIN:** older archive transfers, PR #2, unrelated CI/root historical narrative maintenance; external review, novelty and promotion.
 
-**NEXT ACTION:** MATH: derive a two-level staircase/peeling inequality. Start from the exact top-level omission/receiver accounting and quantify what is forced at demand h-1 when k<h or when receiver overflow vanishes. Compare the result directly with the existing heavy-load tail inequalities before choosing a further branch. Preserve either a genuine coupled bound or a clean obstruction; do not mechanically follow a stale next-action line.
+**NEXT ACTION:** MATH: make the staircase recursive. Combine the full family `SC_d` with receiver-inflation and the preserved heavy-load tail inequalities on the branch where `N_{h-1}>h`. Aim to prove that repeated peeling either reaches a square exact block at some level or accumulates enough residual-tail area to violate `2t<=sum_d(K_d-N_d)`. Preserve either a genuine recursive bound or a clean obstruction; do not mechanically return to exact-block D=12 grinding.
 <!-- CURRENT-STATUS:END -->

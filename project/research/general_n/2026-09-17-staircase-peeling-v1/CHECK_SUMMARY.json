@@ -1,0 +1,9 @@
+{
+  "status": "PASS",
+  "scope": "exact integer audit of the staircase-capacity elimination only; graph-theoretic threshold capacity remains a hand theorem",
+  "h_range": [3, 15],
+  "a_range": "h..60",
+  "M_range": "h..min(3a,100)",
+  "parameter_cases": 50076,
+  "flat_tail_cases": 676
+}

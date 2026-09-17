@@ -1,6 +1,6 @@
 # Current structural review — 17 September 2026
 
-The project now has three complementary structural layers. The third was chosen after a deliberate step-back review rather than by mechanically following the previous handoff.
+The project now has four complementary structural layers. The latest was chosen after a deliberate step-back review: instead of inventing a new h/h-1 routing theorem from scratch, the existing canonical threshold-capacity theorem was rewritten in tail coordinates and found to already contain the required multi-level coupling.
 
 ## 1. Five-label exact block
 
@@ -16,11 +16,11 @@ The parameter-wide exact-block predecessor also supplies pair coverage, critical
 
 ## 2. Scope bridge via h-index saturation
 
-[Residual h-index saturation and the exact-block equality face](project/research/general_n/2026-09-17-hindex-saturation-v1/HINDEX_SATURATION.md) revisits the general residual h-index argument. If h is the residual h-index, |{rho>=h}|=h+u, and k labels have demand h, then
+[Residual h-index saturation and the exact-block equality face](project/research/general_n/2026-09-17-hindex-saturation-v1/HINDEX_SATURATION.md) revisits the general residual h-index argument. If h is the residual h-index, `|{rho>=h}|=h+u`, and k labels have demand h, then
 
     b+2t <= (a-h-u)(h-1)+k.
 
-Equivalently, the older h-index upper bound loses the explicit stability term `a-k+u(h-1)`. When u=0, receiver containment forces k<=h; k=h is precisely the square exact block. This identifies the exact-block theory as a saturation face rather than an isolated hypothesis.
+Equivalently, the older h-index upper bound loses the explicit stability term `a-k+u(h-1)`. When u=0, receiver containment forces `k<=h`; `k=h` is precisely the square exact block. This identifies the exact-block theory as a saturation face rather than an isolated hypothesis.
 
 ## 3. Destination bridge via receiver inflation
 
@@ -42,11 +42,58 @@ and hence
 
 The accompanying exact dynamic programme checks the row-load relaxation for 6,090 parameter/threshold combinations. The graph implication remains a hand theorem by the same assistant, so external mathematical review is still required.
 
-This receiver mechanism is complementary to the preserved 12 September heavy-load/routing family: that theorem charges supplement indegree and residual tails, whereas receiver inflation charges destination pair capacity and forced low residual load.
+## 4. Coupled staircase / first peeling theorem
+
+[Coupled demand/residual staircases and the first peeling inequality](project/research/general_n/2026-09-17-staircase-peeling-v1/STAIRCASE.md) rewrites the canonical threshold-capacity theorem in terms of demand-tail counts
+
+    K_d=#{i:s_i>=d}
+
+and residual-tail counts
+
+    N_d=#{u:rho_u>=d}.
+
+Positive surplus gives exact layer-cake identities
+
+    S=sum_d K_d,
+    r=sum_d N_d,
+
+so the ledger becomes
+
+    2t <= sum_d (K_d-N_d).
+
+At every threshold d the existing pair-capacity theorem becomes the pure multi-level inequality
+
+    d K_d + sum_{j>d} K_j
+      <= d N_d + C(N_d-d,2).
+
+For the top two levels, writing `k=K_h`, `K=K_{h-1}`, `N=N_h`, `M=N_{h-1}`, a non-square top level `k<=h-1` satisfies
+
+    b+2t <= a(h-2)-1+K_*(M)-(h-2)M,
+
+where
+
+    K_*(M)=min(a, M-1+floor(C(M-h+1,2)/(h-1))).
+
+If the residual staircase is flat across the top two levels, `N_h=N_{h-1}=h`, this collapses to
+
+    b+2t <= (h-2)(a-h+1).
+
+Hence, once `N_h=h`, a dense configuration above that threshold must either enter the exact square block or grow its residual tail immediately below h. At h=5,
+
+    N_5=5 and b+2t>3a-12
+      => K_5=5 or N_4>=6.
+
+This is a direct structural narrowing of the exact-block coverage problem. The arithmetic elimination was brute-checked over 50,076 parameter triples; the inherited threshold-capacity graph theorem remains subject to external review.
 
 ## Strategic consequence
 
-The broader review changes the next priority. The excess-high-source branch u>0 is now explicitly penalized, but it is not the only way to avoid the square exact block. When k<h, mass can migrate to demand h-1 and the top-level receiver penalty can weaken while the aggregate demand bound remains large. The next target is therefore a **multi-level staircase/peeling theorem** coupling the h and h-1 levels, ideally with the existing heavy-load tail inequalities.
+The scope problem is now better viewed as a staircase rather than a single equality face. There are three principal escape mechanisms:
+
+1. excess top sources, penalized by h-index saturation and receiver inflation;
+2. the exact square block, handled by the current critical-edge theory;
+3. lower-level residual-tail growth, forced when demand migrates below the top level.
+
+The next priority is to make the third branch recursive: combine the full staircase inequalities with receiver inflation and the 12 September heavy-load/routing family, and test whether repeated peeling must eventually reach a square block or accumulate too much residual-tail area for the layer-cake ledger.
 
 **Status:** internal candidate mathematics. Exact-block coverage is narrowed but not solved. Canonical counts remain 4626 exclusions / 952 survivors / 3632 whole-state closures; no unrestricted Murty-Simon proof or catalogue promotion is claimed.
 
