@@ -1,0 +1,20 @@
+{
+  "status": "PASS_FIRST_POSITIVE_RESIDUAL_TIGHT_COVER_GAP",
+  "date": "2026-09-17",
+  "scope": "finite regression evidence only; universal code-cover and residual-gap statements are hand proofs",
+  "min_vertex_cover_distributions": {
+    "3": {"3": 1, "4": 1},
+    "4": {"3": 1, "6": 1, "7": 6},
+    "5": {"8": 11, "9": 10, "10": 16, "11": 12, "13": 15},
+    "6": {"10": 21, "11": 15, "12": 72, "13": 60, "14": 195, "15": 46, "16": 555, "23": 60}
+  },
+  "canonical_signings_checked_through_k6": 1098,
+  "minimum_cover_k5": 8,
+  "minimum_cover_k6": 10,
+  "theorem_thresholds": {"k5_requires_at_least": 6, "k6_requires_at_least": 7},
+  "one_defect_switch_pair_records": {"5": 80, "6": 150},
+  "negative_controls": {
+    "k4": "exceptional residual-zero X3 switching class remains allowed",
+    "k2": "H5 residual-zero boundary remains allowed"
+  }
+}
