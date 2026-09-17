@@ -1,83 +1,61 @@
-# Murty–Simon / Erdős #742 — live current state
+# Dense diameter-2-critical research — live current state
 
-> **Programme pivot — 17 September 2026.** The active target is the stronger dense non-bipartite D2C problem around `floor((n-1)^2/4)+1`. Existing #742 work is preserved. A pre-existing August 2026 public Lean proof/equality formalisation removes sensible first-proof priority for the original conjecture unless later audit overturns it.
+> **Literature correction — 17 September 2026.** The 2019 Dailly–Foucaud–Hansberg all-order strengthening is false: a published 2024 paper gives a 12-vertex, 32-edge D2C graph, while `floor((n-1)^2/4)+1=31`. The active programme is therefore the **eventual / corrected second-extremal problem**, not the false universal statement. Existing Murty–Simon / Erdős #742 work remains preserved.
 
 <!-- CURRENT-STATUS:START -->
-**CHECKPOINT CLASS:** `POST_MS_RESIDUAL_DEFECT_TRIANGLE_ROOT_NOT_PROMOTED`.
+**CHECKPOINT CLASS:** `LITERATURE_CORRECTION_EVENTUAL_SECOND_EXTREMAL_TARGET`.
 
-**WORK MODE:** `MATH`. Second bounded unit after the programme switch. The first signed-surplus checkpoint identified zero-residual sources. This unit corrects/refines the strategic emphasis: zero sources are only one boundary phenomenon. The more natural global coordinate is the residual defect `delta=-t=r-e(F)`, and the old selected count has a direct triangle interpretation.
+**WORK MODE:** `MATH`. A potentially fatal literature collision was checked before further theorem-building and found genuine. The research target has been repaired immediately rather than allowing the hourly work to optimize against a false conjecture.
 
-**INSPECTED PREDECESSOR:** `ea7ddcdfed9eb5cc6194287be059e2485748f532` on `main`, containing `SIGNED_SURPLUS_PIVOT.md`. The preceding all-E mixed `{4,5}` Hall-ramp closure at `7e1c9409...` remains preserved and not promoted.
+**INSPECTED PREDECESSOR:** `82de82825036321ecb78817550753aa05f18d768` on `main`. Its residual-defect and rooted-triangle reformulations remain valid mathematics; only the scope/target statement needed correction.
 
-**LAST VERIFIED RESULT:** `project/research/post_ms/2026-09-17-stronger-pivot-v1/DEFECT_TRIANGLE_ROOT.md` records the exact reformulation.
+**LAST VERIFIED RESULT:** `project/research/post_ms/2026-09-17-stronger-pivot-v1/LITERATURE_CORRECTION_2024_EXCEPTION.md` records the correction and its strategic consequences.
 
-Write
+**2019 CONJECTURE 3 IS FALSE AS STATED:** Radosavljević, Stanić and Živković, *Primitive diameter 2-critical graphs*, Publications de l'Institut Mathématique 115(129) (2024), 21–32, DOI `10.2298/PIM2429021R`, explicitly exhibit a D2C graph with
 
-`delta=-t=b(n-b)-m=r-e(F)`.
+`n=12, m=32`,
 
-Let
+while
 
-`M(n)=floor((n-1)^2/4)+1`.
+`floor((n-1)^2/4)+1=31`.
 
-Then the stronger bound `m<=M(n)` is **equivalent** to
+They state that the graph has a dominating edge. This is a counterexample to Dailly–Foucaud–Hansberg Conjecture 3, but not to the Murty–Simon bound (`32<36`). The graph had already been found in Radosavljević's small-order work.
 
-`delta >= b(n-b)-M(n)`.
+**CORRECT ACTIVE TARGET:** the live problem is the **sufficiently-large second-extremal classification**, matching the 2025 Lin–Wang Question 1:
 
-If `n=2s`, `b=s+d`, the target is
+> for sufficiently large `n`, if a D2C graph has at least `M(n)=floor((n-1)^2/4)+1` edges, must it be complete bipartite or an expanded `C5` from `C5+`?
 
-`delta >= s-1-d^2`.
+Equivalently, for sufficiently large non-bipartite D2C graphs, seek `m<=M(n)` with equality only in `C5+`. This formulation permits finite exceptions such as the 12-vertex graph.
 
-If `n=2s+1`, `b=s+d`, the target is
+**AUTHORITATIVE `C5+` DEFINITION:** use the original 2019 Dailly–Foucaud–Hansberg paper: three consecutive vertices of `C5` are expanded to independent twin sets and
 
-`delta >= s-1-d(d-1)`.
+`|X2| in {floor((n-3)/2), ceil((n-3)/2)}`.
 
-This is the correct signed objective: prove enough residual A–B mass in excess of `F`-edges.
+The 2024 paper prints a different `(n-2)/3` parameter while referring back to this family; do not use that secondary formula for extremal calculations. The original source is the project authority.
 
-**TRIANGLE INTERPRETATION OF THE SELECTED SYSTEM:** because the canonical root `v` is a maximum-degree vertex of `G`,
+**WHY THE PIVOT STILL MAKES SENSE:** the triangle-free version of the non-bipartite second-extremal bound is already established in the literature, with the expanded-`C5` family providing the large equality examples. Therefore our structural machinery is most naturally aimed at the **triangle-containing branch**, where eventual strictness below `M(n)` would complete the second-extremal picture (modulo the already-known triangle-free branch).
 
-`B=N_G(v)`.
+**RESIDUAL-DEFECT REFORMULATION REMAINS VALID:** with maximum-degree root, `b=Delta`,
 
-The missing pairs of `H[B]` are exactly the edges of `G[B]`. Hence the total selected count
+`delta=b(n-b)-m=r-e(F)`.
 
-`Q=e(G[B])`
+The target threshold translates to
 
-is exactly the number of triangles of `G` containing `v`. The Hall/selected-representative machinery is therefore a triangle-routing system rooted at a maximum-degree vertex, not merely an abstract near-Turán device.
+`delta >= b(n-b)-M(n)`
 
-**BASIC DEFECT BOUNDS:** summing the label minimum-degree inequality gives
+for the eventual problem. Also `Q=e(G[N(v)])` is the number of triangles through the root. These identities are independent of the false all-order conjecture.
 
-`delta >= e(F)-Q`.
+**MANDATORY NEGATIVE CONTROL:** every new structural lemma intended for the eventual theorem must either hold on the published 12-vertex exception or explicitly use a hypothesis that excludes its finite mechanism. In particular, do not infer a universal `n>=12` theorem from small-order diagnostics or from the old 2019 statement.
 
-Summing the source minimum-degree inequality gives, with `gamma=2b-n`,
+**EXTERNAL #742 COLLISION:** unchanged. The pre-existing `Erdos742/Erdos742` Lean proof/equality formalisation remains the reason first-proof priority for #742 is not the active goal, pending independent recompilation and external acceptance.
 
-`delta >= Q-e(F)-b*gamma`.
+**OLD LINE PRESERVED:** all fixed-order candidates, audits, exact-block work, h-index/receiver theory, selected-incidence Hall, and the complete mixed `{4,5}` all-E closure remain available. Canonical ledger remains **4626 exclusions / 952 survivors / 3632 whole-state closures**; no promotion changes.
 
-These are exact but by themselves not sufficient for the stronger conjecture.
-
-**DEGREE-BALANCE RESIDUAL BASELINE:** for every B-source,
-
-`rho_u >= p_u + n-2b`.
-
-Consequences:
-
-- if `b<n/2`, every B-source is automatically residual-active even when `t<=0`; the h-index and charging arguments whose only use of `t>0` was activity remain available in this branch;
-- if `b=n/2` (necessarily even), a zero source has `p_u=0`, and any two zero sources are adjacent in `H[B]` (equivalently, zero sources form a clique in H[B]);
-- if `b>n/2`, putting `lambda=2b-n`, every zero source has `p_u<=lambda`, and the number of missing H-pairs internal to the zero-source set Z is at most `lambda|Z|`.
-
-For a zero source `u`, `q_u=|N_A(u)|` and its H[B]-missing degree is `|N_A(u)|+p_u`; combine this with the signed zero-source component-union lemma from the predecessor.
-
-**IMPORTANT STRATEGIC CORRECTION:** the conjectured expanded-`C5` extremals are triangle-free, so for them `Q=0`. In particular, the selected/Hall system is not supposed to reconstruct those already-understood equality examples. The published triangle-free case of the stronger conjecture already handles that branch. The natural use of our machinery is the **triangle-containing branch**, where the conjecture predicts no large-order equality examples outside the finite exceptional list.
-
-**NEW SCOPE GAP:** if a triangle-containing D2C graph has a maximum-degree vertex lying in a triangle, choose such a canonical root and obtain `Q>0`, putting the selected/Hall machinery directly in play. It is not yet proved that such a root always exists. A finite diagnostic over every unlabeled graph of order at most 7 (`check_max_triangle_root_atlas.py`) found no counterexample: among triangle-bearing D2C isomorphism classes, every case had at least one maximum-degree vertex in a triangle. This is diagnostic evidence only.
-
-**LITERATURE ANCHOR:** Dailly–Foucaud–Hansberg (2019) state the stronger conjecture and note the triangle-free case is already established; Lin–Wang (2025) further show sufficiently large `C5`-free D2C graphs at the stronger threshold are complete bipartite. Loh–Ma's diameter-critical work supplies independent structural information on triangles (every triangle has at least two external critical-path “feet”), potentially relevant to the next lemma.
-
-**OLD LINE PRESERVED:** all fixed-order candidates, audits, exact-block work, h-index/receiver theory, selected-incidence Hall and the complete mixed `{4,5}` all-E closure remain available as tools. Canonical counts remain **4626 exclusions / 952 survivors / 3632 whole-state closures**; no promotion changes.
-
-**AUTOMATION STATUS:** the hourly task is now titled `Stronger D2C Research` and is explicitly instructed to pursue this stronger target rather than the old #742 excess ladder.
+**AUTOMATION STATUS:** the hourly research task is being retargeted again to the **eventual second-extremal** problem and must explicitly remember that the 2019 all-order strengthening has a 12-vertex counterexample.
 
 **UNPRESERVED WORK:** None after this checkpoint.
 
-**DEFERRED ADMIN:** independent fresh Lean recompilation of `Erdos742/Erdos742`; reviewer-facing README synchronization; older archive transfers; PR #2; unrelated CI/root narrative maintenance; external novelty review.
+**DEFERRED ADMIN:** independent fresh Lean recompilation of `Erdos742/Erdos742`; reviewer-facing README synchronization; older archive transfers; PR #2; unrelated CI/root narrative maintenance; comprehensive novelty review.
 
-**NEXT ACTION:** MATH: attack the **maximum-triangle-root lemma**: determine whether every triangle-containing D2C graph has at least one maximum-degree vertex contained in a triangle. Use edge-critical witnesses / triangle feet, not the small-order diagnostic as proof. If false, preserve the smallest structural counterexample and replace the canonical root by a near-maximum triangle root with an explicit degree-slack term. If true, the entire remaining triangle-bearing stronger-conjecture branch can be rooted with `Q>0` and fed into the selected/Hall machinery.
+**NEXT ACTION:** MATH: obtain or reconstruct the exact 12-vertex/32-edge exception (preferably graph6 or adjacency data) and compute its canonical residual profile `(b,a,delta,Q,F,rho,p,q)`. Use it as a hostile negative control against the residual-defect, zero-source and maximum-triangle-root ideas. Identify exactly which finite mechanism lets it beat `M(12)`. Only then resume the maximum-triangle-root / Hall attack for the sufficiently-large triangle-bearing branch.
 <!-- CURRENT-STATUS:END -->
