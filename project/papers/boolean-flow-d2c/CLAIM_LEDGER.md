@@ -2,60 +2,68 @@
 
 ## A. Core exact-boundary claims
 
-**BF1. One-coordinate coding.** In the exact boundary `t=0, F=empty, r=0`, every `B`-edge changes exactly one A-neighbourhood coordinate.
+**BF1. One-coordinate coding.** In `t=0, F=empty, r=0`, every `B`-edge changes exactly one A-neighbourhood coordinate.
 
-**BF2. Unique coordinate flow.** Each zero coordinate of a B-code has exactly one outgoing edge flipping that coordinate; there are no other B-edges after canonical orientation.
+**BF2. Unique coordinate flow.** Each zero coordinate has exactly one outgoing edge flipping it under canonical orientation.
 
-**BF3. Factorial path inequality.** If a B-code has `z` zero coordinates, then `z! <= b lambda^z`, with `lambda=2b-n`.
+**BF3. Factorial path inequality.** A code with `z` zero coordinates satisfies `z! <= b lambda^z`, `lambda=2b-n`.
 
-**BF4. Large-zero root consequence.** Root criticality forces a B-vertex with `z>=ceil(a/2)` in the non-bipartite exact boundary.
+**BF4. Large-zero root consequence.** Root criticality forces some `z>=ceil(a/2)` in the non-bipartite exact boundary.
 
-**BF5. Order cutoff.** Under the second-extremal comparison density, BF3+BF4 imply `n<=294` after exact finite arithmetic.
+**BF5. Order cutoff.** Under `m>=floor((n-1)^2/4)+1`, BF3+BF4 give the internal cutoff `n<=294` after exact finite arithmetic.
 
-**Status BF1–BF5:** internal candidate structural theorem package; external mathematical review OPEN; novelty review OPEN.
+**Status BF1–BF5:** internal candidate theorem package; external mathematical and novelty review OPEN.
 
-## B. Model-family claims
+## B. Model family
 
-**BF6. Hypercube-face family.** The deterministic family `X_k` is D2C for all `k>=3`, with `n=2^k+k+1`, `m=(k+1)2^k`.
+**BF6. Hypercube-face family.** `X_k` is D2C for all `k>=3`, with `n=2^k+k+1`, `m=(k+1)2^k`.
 
-**BF7. Density self-dilution.** For `k>=4`, `X_k` lies below the second-extremal comparison threshold used in the live project.
+**BF7. Density self-dilution.** For `k>=4`, `X_k` lies below the second-extremal comparison threshold.
 
-**Identity warning:** the `k=3` member matches the published 12/32 obstruction in coarse invariants, but direct authoritative isomorphism is not yet certified.
+No novelty or authoritative `X_3`/published-graph identity claim is authorised.
 
-**Novelty warning:** no claim that `X_k` is a new family.
+## C. Perturbative stability
 
-## C. Perturbative stability claims
+**BF8. Root-edge antipode-or-private-foot.** Every triangle-active root neighbour has either a private A-foot or an antipodal B-partner with only the root as common neighbour.
 
-**BF8. Root-edge antipode-or-private-foot lemma.** Every triangle-active root neighbour has either a private A-foot or an antipodal B-partner with only the root as common neighbour.
+**BF9. Private-foot charge.** Private-supported triangle-active sources inject into nonisolated vertices of `F`, hence are at most `2e(F)`.
 
-**BF9. Private-foot charge.** Private-foot triangle-active sources are bounded by the nonisolated vertices of `F`, hence by `2e(F)`.
+**BF10. Antipode defect payment.** In the antipode branch, `Q+r>=a`, hence `2r+b(2b-n)>=a`, equivalently `2delta+2e(F)+b(2b-n)>=a`.
 
-**BF10. Antipode defect payment.** In the antipode branch, `Q+r>=a` and therefore `2r+b(2b-n)>=a`; equivalently `2 delta+2e(F)+b(2b-n)>=a` in current canonical variables.
+**BF11. All-private edge bound.** If every triangle-active source is private-supported, `Q<=binom(min(b,2e(F)),2)`.
 
-**BF11. All-private edge bound.** If every triangle-active source is private-supported, rooted-triangle edges are confined to at most `min(b,2e(F))` active vertices, giving the stated quadratic bound on `Q`.
+**BF12. All-private gap theorem.** Let `t` be the number of triangle-active `B` vertices. In the all-private branch,
 
-**Status BF8–BF11:** internal hand theorem package; finite atlas regression supports but does not prove the result.
+`t(b-t)<=2delta`.
 
-## D. Claims not currently authorised
+This follows from private-foot cross-deficit mass, the maximum-degree bound on `F`, and `Q<=binom(t,2)`.
+
+**BF13. Exact all-private exclusion.** If `Q>0` and `delta=0`, the all-private maximum-root branch cannot be D2C. Equality in BF12's proof forces a rigid `B=K_b` / private-foot `K_b` structure; deleting a `B`-edge then leaves diameter at most two.
+
+**BF14. Near-exact rigidity when `t=b`.** Writing `Q=binom(b,2)-s`, one has `s<=delta`, total A-side maximum-degree slack at most `2(delta-s)`, and at most `2(delta-s)` additional missing A-B incidences beyond the private feet.
+
+**Status BF8–BF14:** internal hand theorem package. Atlas regression through order 7 supports BF12–BF13 but is not proof.
+
+## D. Claims not authorised
 
 Do not claim:
 
-- an eventual second-extremal theorem;
-- a classification of all near-extremal D2C graphs;
-- a general order bound outside the stated boundary/branch hypotheses;
+- an eventual second-extremal theorem or classification;
+- a general order bound outside stated hypotheses;
 - novelty of the Boolean coding or hypercube family;
 - authoritative identity of `X_3` with the published Figure-1 graph;
 - that every triangle-containing D2C graph has a maximum-degree root in a triangle;
-- that the current 294 constant is optimal or meaningful beyond this proof mechanism.
+- optimality/significance of the constant 294 beyond this mechanism;
+- that BF14 already forces a contradiction for positive `delta`.
 
 ## E. Promotion checklist
 
-- [ ] Independent proof audit of BF1–BF5.
-- [ ] Explicit repeated-code-fibre audit in factorial counting.
-- [ ] Independent proof audit of BF8–BF11.
-- [ ] Resolve or clearly quarantine maximum-triangle-root scope.
-- [ ] Authoritative adjacency/isomorphism check for the 12-vertex benchmark if used as more than a coarse negative control.
+- [ ] Independent proof audit of BF1–BF5 and repeated-code path counting.
+- [ ] Independent proof audit of BF8–BF14.
+- [x] Graph-atlas regression of BF12–BF13 through order 7.
+- [ ] Price B-edge criticality witnesses against the `O(delta)` defects in BF14.
+- [ ] Resolve or quarantine maximum-triangle-root scope.
+- [ ] Authoritative 12-vertex adjacency/isomorphism check if needed.
 - [ ] Full construction/Boolean-cube novelty search.
-- [ ] Compare against 2024 primitive-D2C constructions and 2025 C5-free results.
-- [ ] Freeze standalone arithmetic verifier for the 294 cutoff.
+- [ ] Compare against 2024 primitive-D2C and 2025 C5-free results.
 - [ ] External graph-theory review.

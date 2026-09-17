@@ -1,203 +1,174 @@
 # Boolean coordinate flow and root-edge stability in near-extremal diameter-2-critical graphs
 
-**Status:** working paper skeleton. This is a graph-theoretic candidate paper built around the exact zero-residual boundary and its first perturbative extension. The core results are internal candidate theorems; external mathematical review and novelty review remain open.
+**Status:** working paper. Core statements are internal candidate theorems; external mathematical and novelty review remain open. The paper does not claim an eventual second-extremal classification.
 
 ## Abstract — provisional
 
-Let `G` be a diameter-2-critical graph and root it at a maximum-degree vertex `v`. The canonical root decomposition splits the remaining vertices into `B=N(v)` and `A=V(G)\N[v]`, with residual mass measuring cross-incidences not accounted for by the selected criticality representatives. We study the exact zero-residual boundary and its first perturbations near the second-extremal density scale.
+Root a diameter-2-critical graph `G` at a maximum-degree vertex `v`, with `B=N(v)` and `A=V(G)\N[v]`. In the exact zero-residual boundary, the `A`-neighbourhood of each `B`-vertex becomes a Boolean word: every `B`-edge changes one coordinate and admits a canonical increasing orientation, with a unique outgoing flip for each zero coordinate. A factorial path count combined with root criticality yields an order cutoff `n<=294` at the comparison density `m>=floor((n-1)^2/4)+1`.
 
-When `A` is independent and the residual mass vanishes, the `A`-neighbourhood of each vertex of `B` is a Boolean word. Every edge of `G[B]` changes exactly one coordinate, and criticality canonically orients it in the increasing coordinate direction. Every zero coordinate has a unique outgoing flip. This produces a directed Boolean-coordinate flow. A factorial path count, combined with criticality of root edges, gives an order cutoff: any non-bipartite graph in this exact boundary satisfying `m >= floor((n-1)^2/4)+1` has `n<=294`.
+Away from the exact boundary, root-edge criticality gives an antipode-or-private-foot dichotomy. The antipode branch forces explicit residual mass. In the all-private branch, if `t` is the number of triangle-active `B` vertices, we prove the stability inequality
 
-We then show that root-edge criticality has a stable perturbative form. Every triangle-active neighbour of the root either possesses a private `A`-neighbour or has an antipodal `B`-vertex with disjoint `A`-support. The private alternative is controlled by the edges inside `A`; the antipode alternative forces an explicit residual/defect payment. This identifies the first obstruction to extending Boolean flow away from the exact boundary and supplies a structural dichotomy for subsequent near-extremal analysis.
+`t(b-t)<=2delta`,
 
-## 1. Introduction
+where `delta=b(n-b)-m=r-e(F)`. In particular the exact-defect all-private branch `delta=0`, `Q=e(G[B])>0`, is impossible: equality would force a rigid pair of cliques linked by a matching, in which a `B`-edge is not diameter-critical. For small positive defect the same argument gives quantitative near-clique/degree-slack control.
 
-### 1.1 Context
-
-Diameter-2-critical (D2C) graphs have diameter two and lose that property after deletion of any edge. The classical Murty–Simon problem concerns their maximum number of edges; a separate second-extremal line studies graphs near `floor((n-1)^2/4)+1` edges. The present paper does **not** claim an eventual second-extremal classification. Its purpose is to isolate a structural boundary mechanism and quantify its first perturbation.
-
-### 1.2 Why Boolean structure appears
-
-At the exact zero-residual boundary, the criticality representative attached to an internal `B`-edge determines a unique missing/incident `A`-coordinate. The criticality axioms then force all other coordinates to agree. This turns `G[B]` into a directed subgraph of a Boolean cube, possibly with repeated code fibres subject to the canonical constraints.
-
-### 1.3 Contributions
-
-Provisional contributions, subject to novelty clearance:
-
-1. Boolean coding of the exact zero-residual non-bipartite boundary;
-2. unique outgoing coordinate flips and directed coordinate-flow structure;
-3. factorial path-growth inequality `z! <= b lambda^z`;
-4. root-criticality forcing a code with at least `ceil(a/2)` zero coordinates;
-5. the consequent second-extremal boundary cutoff `n<=294`;
-6. an explicit hypercube-face family as a hostile/model example, without a novelty claim at present;
-7. the root-edge antipode-or-private-foot dichotomy;
-8. private-foot injection into the nonisolated part of `G[A]` and the resulting perturbative inequalities.
-
-## 2. Canonical maximum-degree-root notation
+## 1. Scope and notation
 
 Let `v` be a maximum-degree root,
 
-`B=N_G(v)`, `A=V(G)\N_G[v]`, `b=|B|`, `a=|A|`.
+`B=N_G(v)`, `A=V(G)\N_G[v]`, `b=|B|`, `a=|A|`,
 
-Let `F=G[A]` and `f=e(F)`. Retain the canonical selected/residual construction from the research programme, but restate every piece needed by this paper so the manuscript is self-contained.
+`F=G[A]`, `f=e(F)`, `Q=e(G[B])`.
 
-Use:
+Retain the canonical selected/residual construction, restating every bridge fact used in the finished paper. Use residual mass `r`, defect
 
-- `Q=e(G[B])`;
-- residual source values `rho_u` and `r=sum rho_u`;
-- defect `delta=r-f=b(n-b)-m` in the current canonical ledger;
-- `lambda=2b-n`;
-- appropriate incoming/outgoing selected counts `p_u,q_u`.
+`delta=r-f=b(n-b)-m`,
 
-Every identity inherited from the canonical bridge must be reproved or cited to a theorem proved in this paper; no hidden repository notation is acceptable in the finished manuscript.
+and `lambda=2b-n`.
 
-## 3. Exact zero-residual Boolean coding
+## 2. Exact zero-residual Boolean coding
 
-Assume
+Assume `F=empty` and `r=0`, and `Q>0`. Encode each `u in B` by its `A`-neighbourhood word `c(u) in {0,1}^a`.
 
-`t=0`, `F=empty`, and hence `r=0`,
+**Theorem 2.1.** Every `B`-edge joins codes at Hamming distance exactly one.
 
-and assume `G` is non-bipartite, so `Q>0` in this boundary.
+**Theorem 2.2.** Orient the edge from 0 to 1 in its changed coordinate. Every zero coordinate of a code has exactly one outgoing flip and there are no other outgoing `B`-edges.
 
-For `u in B`, define
+Repeated-code fibres must be treated explicitly in the final proof.
 
-`c(u) in {0,1}^a`, with `c_i(u)=1` iff `u a_i in E(G)`.
+## 3. Factorial path growth and the cutoff
 
-### Theorem 3.1 — one-coordinate edges
+If a code has `z` zero coordinates, all `z!` orders of coordinate flips give monotone directed paths. Maximum degree bounds directed indegree by `lambda`, hence
 
-Every edge `uw` of `G[B]` joins two codes at Hamming distance exactly one. The selected criticality representative determines the changed coordinate.
+`z!<=b lambda^z`.
 
-### Theorem 3.2 — canonical orientation
+Root-edge criticality supplies a pair with disjoint `A`-support, forcing some code with
 
-Orient `uw` from the endpoint whose changed coordinate is `0` to the endpoint whose changed coordinate is `1`. For every `u` and every zero coordinate of `c(u)`, there is exactly one outgoing edge flipping that coordinate, and there are no other outgoing `B`-edges.
+`z>=ceil(a/2)`.
 
-Explain carefully what multiplicities of equal codes are or are not permitted by the canonical construction.
+Combined with the second-extremal comparison density and an exact finite arithmetic check:
 
-## 4. Factorial path growth
+> **Boundary cutoff (internal candidate).** A non-bipartite D2C graph in `F=empty,r=0` with `m>=floor((n-1)^2/4)+1` has `n<=294`.
 
-Let `z(u)` be the number of zero coordinates of `c(u)`. From a vertex with `z` zeros, every ordering of its zero coordinates generates a monotone directed path of length `z` to an all-one fibre. This gives `z!` paths.
+The `n=294` arithmetic point is not a claimed graph.
 
-The maximum-degree bound gives directed indegree at most
+## 4. Hypercube-face model family
 
-`lambda=2b-n`.
-
-Therefore each endpoint receives at most `lambda^z` such paths per starting-fibre accounting, yielding the central inequality
-
-`z! <= b lambda^z`.
-
-This section needs a completely explicit treatment of repeated code fibres and path collisions.
-
-## 5. Root criticality forces a large-zero code
-
-Use criticality of a root edge `vu`. When `u` is triangle-active, deletion of `vu` cannot be witnessed by `(v,u)` itself through that triangle. In the exact independent-A boundary, the surviving critical pair forces another `B`-vertex with disjoint `A`-support.
-
-Thus, if `u` has `z` zero coordinates, its antipodal partner has at least `a-z` zero coordinates, so some code has
-
-`z >= ceil(a/2)`.
-
-State separately the degree/no-leaf facts used to exclude the private-A alternative in the exact boundary.
-
-## 6. Boundary order cutoff
-
-Combine `z>=ceil(a/2)` with `z!<=b lambda^z` and the density condition
-
-`m>=floor((n-1)^2/4)+1`.
-
-The current audited derivation first gives a hand cutoff for large `a`, then checks the remaining finite integer range exactly. The strongest surviving necessary arithmetic point is
-
-`a=134`, `lambda=24`, `z=67`, `b=159`, `n=294`.
-
-> **Theorem 6.1 (internal candidate).** Any non-bipartite D2C graph in the exact canonical boundary `t=0`, `F=empty`, `r=0` with `m>=floor((n-1)^2/4)+1` has `n<=294`.
-
-The theorem does not claim existence at `n=294`; that point is only an arithmetic survivor of necessary conditions.
-
-Before submission, decide whether the finite check can be shortened analytically or presented as a tiny certified appendix.
-
-## 7. Hypercube-face model family
-
-For `k>=3`, define `X_k` on
-
-`{r} union {a_1,...,a_k} union {0,1}^k`
-
-by taking the cube vertices to induce `Q_k`, joining `r` to every cube vertex, and joining `a_i` exactly to cube vertices with i-th coordinate zero.
-
-Give the elementary edge-type proof that `X_k` is D2C.
-
-Parameters:
+For `k>=3`, let `X_k` have a root adjacent to all cube vertices of `Q_k`, coordinate vertices `a_i` adjacent to the zero face in coordinate `i`, and the cube edges themselves. The elementary edge-type proof gives D2C with
 
 `n=2^k+k+1`, `m=(k+1)2^k`.
 
-For `k=3`, this produces a 12-vertex, 32-edge graph matching the coarse invariants of the known published obstruction; authoritative isomorphism certification remains a separate task and should not be assumed in the theorem statement.
+`X_3` has the coarse invariants of the known 12/32 obstruction; authoritative isomorphism remains uncertified. For `k>=4` the family falls below the comparison threshold. No novelty claim is authorised.
 
-For `k>=4`, prove that this natural continuation falls below the second-extremal comparison threshold. This makes the family a useful model of a finite obstruction that self-dilutes.
+## 5. Root-edge antipode/private-foot dichotomy
 
-**Novelty warning:** do not call the `X_k` family new until a dedicated construction search is complete.
+Call `u in B` triangle-active when it has a neighbour in `B`.
 
-## 8. Root-edge antipode-or-private-foot dichotomy
+> **Root-edge dichotomy.** Every triangle-active `u` has either
+> 1. a private foot `x in A` with `N(x) cap B={u}`, or
+> 2. an antipode `w in B\{u}` with `uw` a nonedge and `N(u) cap N(w)={v}`.
 
-Move away from the exact boundary. Call `u in B` triangle-active if it has a neighbour in `B`.
+The proof comes directly from deleting `vu`: `(v,u)` still has a two-path through the rooted triangle, so a newly distant pair must occur on one of the two other sides of an old path using `vu`.
 
-> **Theorem 8.1 (internal candidate).** For every triangle-active `u`, criticality of the root edge `vu` forces one of:
->
-> 1. a **private foot** `x in A` with `N_G(x) cap B={u}`;
-> 2. an **antipode** `w in B\{u}` with `uw` a nonedge and `N_G(u) cap N_G(w)={v}`.
+## 6. Antipode payment
 
-The proof should be written directly from the effect of deleting `vu`: `(v,u)` remains at distance two via a rooted triangle, so any newly distant pair whose old shortest path used `vu` is of one of the two stated forms.
+Private-supported active vertices inject into the nonisolated vertices of `F`, hence there are at most `2f` of them.
 
-## 9. Quantitative stability consequences
-
-Let `P` be the set of triangle-active `B`-vertices with a private `A`-neighbour. In a non-star D2C graph, a private `A`-vertex cannot be a leaf, so it is incident with an `F`-edge. Consequently
-
-`|P| <= nu(F) <= 2e(F)`,
-
-where `nu(F)` here denotes the number of nonisolated vertices of `F` (rename in final manuscript to avoid collision with matching-number notation).
-
-If a triangle-active source has no private foot, the antipode has disjoint `A`-support. Writing the canonical cross-deficit at a source as `h_u=q_u+rho_u`, obtain
+If an active vertex has no private foot, the antipode has disjoint `A`-support. With canonical cross deficit `h_u=q_u+rho_u`,
 
 `h_u+h_w>=a`,
 
-and hence globally
+and globally
 
 `Q+r>=a`.
 
-Combining with the canonical source inequality `Q<=r+b lambda` gives
+Using `Q<=r+b lambda` gives
 
 `2r+b lambda>=a`,
 
-or equivalently in the current defect variables
+or
 
-`2 delta + 2e(F) + b(2b-n) >= a`.  (RSD)
+`2delta+2f+b(2b-n)>=a`.                                (RSD)
 
-If every triangle-active source is private-supported, then all rooted-triangle edges lie among at most `2e(F)` active vertices, yielding
+## 7. All-private gap theorem
 
-`Q <= binom(min(b,2e(F)),2)`.  (PRIVATE)
+Suppose every triangle-active `B` vertex has a private foot. Let `T` be the active set and `t=|T|`.
 
-Thus the perturbative problem splits into an explicit antipode-payment branch and an all-private branch controlled by internal `A`-structure.
+Each distinct private foot misses `b-1` cross edges, so
 
-## 10. Current frontier
+`Q+r>=t(b-1)`.                                          (7.1)
 
-The next mathematical objective for this paper is not a broad scan. It is to understand the **all-private branch**:
+Maximum degree of the root gives, after summing degrees over `A`,
 
-- classify how private `A`-feet can sit inside `F`;
-- use criticality of incident `F`-edges;
-- look for forced small cyclic/twin quotients or further residual charge;
-- then return to factorial/Boolean expansion on the antipode branch.
+`2f<=Q+r`,
 
-A successful bound that forces `e(F)` or residual mass to grow with `a` would turn the present stability dichotomy into a substantially stronger near-extremal theorem.
+hence with `r=f+delta`,
 
-## 11. Literature obligations
+`f<=Q+delta`,
 
-The paper must be positioned against:
+and therefore
 
-- classical D2C/Murty–Simon literature;
-- Füredi’s sufficiently-large theorem;
-- the strengthened/second-extremal conjectures and dominating-edge results;
-- the 2023 small-order enumeration and 2024 primitive-D2C constructions/counterexample literature;
-- the 2025 `C5`-free second-extremal classification;
-- any known hypercube, product, or Boolean-code constructions of D2C graphs.
+`Q+r<=2Q+2delta`.                                       (7.2)
 
-No novelty claim for the Boolean-flow formulation, the `X_k` family, or the stability lemma is authorised until this comparison is complete.
+All `B`-edges lie inside `T`, so `Q<=binom(t,2)`. Combining (7.1)-(7.2):
 
-## 12. Current trust boundary
+> **All-private gap theorem (internal candidate).**
+>
+> `t(b-t)<=2delta`.                                     (APG)
 
-The cutoff and stability dichotomy are internal hand results with finite regression/checking where stated. They are not externally reviewed. This paper does not claim an eventual second-extremal classification, does not claim the 12-vertex reconstruction is authoritatively the published graph, and does not claim first-solution priority for Murty–Simon/Erdős #742.
+This supersedes the earlier private-branch edge bound as the main scalar constraint.
+
+## 8. Exact all-private exclusion
+
+If `delta=0` and `Q>0`, APG forces `t=b`. Equality throughout its proof then forces
+
+`G[B]=K_b`, `f=Q=binom(b,2)`,
+
+all missing A-B incidences to come from the `b` private feet, and equality in every A-side maximum-degree constraint. Consequently the private feet induce `K_b`, each is joined to its unique matched vertex of `B`, and every nonprivate A-vertex is B-complete and F-isolated.
+
+Delete any edge `uw` of `B`. The endpoints remain at distance two through `v`, while the potentially asymmetric private vertices are repaired by the two-paths
+
+`u-x_u-x_w` and `w-x_w-x_u`.
+
+All other pairs remain within distance two. Thus `uw` is not critical, contradiction.
+
+> **Exact all-private exclusion.** No non-bipartite all-private maximum-root D2C branch with `Q>0` has `delta=0`.
+
+## 9. Near-exact rigidity
+
+When APG forces `t=b`, write `Q=binom(b,2)-s`. Then
+
+`s<=delta`,
+
+so `B` is missing at most `delta` clique edges. Moreover
+
+`binom(b,2)+s-delta <= f <= binom(b,2)-s+delta`,
+
+and total A-side maximum-degree slack is at most
+
+`2(delta-s)<=2delta`.
+
+The number of missing A-B incidences beyond those forced by the private feet is also at most `2(delta-s)`.
+
+This suggests the next structural step: each surviving `B`-edge must obtain a criticality witness from a defect in an otherwise noncritical rigid model. Pricing those witnesses against the `O(delta)` available defects may force a positive lower bound on `delta` growing with `b`.
+
+## 10. Regression
+
+The existing zero-boundary and root-edge atlas checks remain preserved. A new standalone checker `check_all_private_stability_atlas.py` tests APG and the exact exclusion on every D2C graph-atlas isomorphism class through order 7 and every maximum-degree triangle root. It finds 3 all-private roots, no APG violation, and no `delta=0` all-private root.
+
+Finite testing is regression evidence only.
+
+## 11. Current frontier
+
+Two tasks now matter most:
+
+1. **all-private branch:** price criticality of `B`-edges against the small defect budget quantified in Section 9;
+2. **scope:** resolve or explicitly quarantine the possibility that a triangle-containing D2C graph has no maximum-degree vertex in a triangle.
+
+The antipode branch retains (RSD) as its starting inequality; factorial expansion should only be reintroduced after these structural obstructions are understood.
+
+## 12. Literature and trust boundary
+
+The final paper must compare the construction and stability results against classical D2C/Murty–Simon work, the recent primitive-D2C/counterexample literature, the sufficiently-large `C5`-free second-extremal results, and known Boolean/product constructions.
+
+All theorems above are internal candidates. No eventual classification, novelty claim, authoritative 12-vertex identification, or first-solution priority is asserted.

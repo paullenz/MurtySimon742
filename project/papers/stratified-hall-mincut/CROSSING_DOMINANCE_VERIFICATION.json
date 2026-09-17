@@ -1,0 +1,26 @@
+{
+  "result": "PASS",
+  "one_layer": {
+    "n": 4,
+    "layers": [[0, 1, 2, 3]],
+    "capacity_values": [0, 1, 2],
+    "layer_demand_values": [0, 1, 2],
+    "valid_capacity_digraph_profiles": 13212,
+    "valid_demand_instances": 39636,
+    "pointwise_gap_instances": 2760,
+    "pointwise_gap_source_sets": 7080,
+    "mincut_mismatches": 0
+  },
+  "two_layer": {
+    "n": 4,
+    "layers": [[0, 1], [2, 3]],
+    "capacity_values": [0, 1],
+    "layer_demand_values": [0, 1, 2],
+    "valid_capacity_digraph_profiles": 19120,
+    "valid_demand_instances": 172080,
+    "pointwise_gap_instances": 24624,
+    "pointwise_gap_source_sets": 46188,
+    "mincut_mismatches": 0
+  },
+  "note": "Frozen output of the standalone abstract regression. Exhaustive finite checking is supporting evidence only; the hand proof is load-bearing."
+}

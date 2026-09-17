@@ -1,84 +1,72 @@
 # Dense diameter-2-critical research — live current state
 
-> **Active target — 17 September 2026.** The 2019 all-order second-extremal strengthening is false because of a published 12-vertex, 32-edge D2C graph. The live problem is the sufficiently-large / eventual second-extremal classification around `M(n)=floor((n-1)^2/4)+1`. Existing Murty–Simon / Erdős #742 work remains preserved, but the project is not optimizing for first-proof priority there.
+> **Active target — 17 September 2026.** The live graph-theory problem is the sufficiently-large/eventual second-extremal D2C classification around `M(n)=floor((n-1)^2/4)+1`. In parallel, two standalone-paper candidates are now explicit research priorities: stratified Hall/min-cut exactness first, and Boolean-flow/D2C stability second.
 
 <!-- CURRENT-STATUS:START -->
-**CHECKPOINT CLASS:** `ROOT_EDGE_STABILITY_DICHOTOMY_NOT_PROMOTED`.
+**CHECKPOINT CLASS:** `STANDALONE_HALL_ABSTRACTION_AND_ALL_PRIVATE_STABILITY_NOT_PROMOTED`.
 
-**WORK MODE:** `MATH`. Returned from the dependency-audit transaction to the perturbative Boolean-flow problem. Rather than trying to repair the factorial path argument immediately, this unit isolates the exact way root-edge criticality can fail to produce the disjoint-support antipode used in the zero-residual proof.
+**WORK MODE:** `MATH + PAPER_EXTRACTION`. The project is deliberately separating reusable mathematics from the fate of the main conjecture attack.
 
-**INSPECTED PREDECESSOR:** `7bb7cc9a409d59455fead1042e0eecead5a8930c` on `main`, which synchronized the eventual-D2C target and audited the false 2019 conjecture out of the proof dependency chain. The zero-residual `n<=294` theorem at `32a5d27...` remains preserved.
+**INSPECTED PREDECESSOR:** `9f7f8ea31d4af709b50fec48d8b463c22744cd66` on `main`, which created the two standalone paper skeletons.
 
-**LAST VERIFIED RESULT:** `project/research/post_ms/2026-09-17-stronger-pivot-v1/ROOT_EDGE_STABILITY_DICHOTOMY.md` plus `check_root_edge_stability_atlas.py`.
+## Priority 1 — stratified Hall/min-cut paper
 
-Use a maximum-degree root `v`, with
+The q-stratified minimum-cut theorem has been abstracted beyond its original q/c numerical compatibility relation.
 
-`B=N_G(v)`, `A=V(G)\N_G[v]`, `b=|B|`, `a=|A|`, `F=G[A]`, `f=e(F)`,
+For a layered directed Hall system with common integer source demand in each layer, receiver capacities `P_w`, and loopless compatibility `R`, assume **two-sided crossing dominance (TCD)**: for equal-layer `x,y` with `P_x<P_y`, they are mutually compatible and `y` dominates `x` in both incoming and outgoing compatibility away from the diagonal.
 
-and canonical residual variables
+Then the hand proof gives
 
-`Q=e(G[B])`, `r=sum rho_u`, `delta=r-f=b(n-b)-m`, `lambda=2b-n`.
+`min_S [U(S)-D(S)] = min_S [H(S)-D(S)]`,
 
-Call `u in B` **triangle-active** when it has a neighbour in `B`.
+where `H` is exact capped receiver capacity and `U` is the layerwise rearranged upper bound.
 
-**ROOT-EDGE ANTIPODE-OR-PRIVATE LEMMA.** For every triangle-active `u`, criticality of the root edge `vu` forces one of two alternatives:
+The proof now uses only:
 
-1. **private-foot alternative:** there is `x in A` with `N_G(x) intersect B={u}`;
-2. **antipode alternative:** there is `w in B\{u}` with `uw` a nonedge and `N_G(u) intersect N_G(w)={v}`.
+1. layer-cake rearrangement;
+2. TCD to force every positive crossing to have `x notin S`, `y in S`, and multiplicity gap exactly one;
+3. submodularity/lattice of minimum Hall witnesses;
+4. neutral deletion of the selected high endpoint;
+5. finite crossing removal.
 
-The proof is direct: after deleting `vu`, `(v,u)` stays at distance two through a rooted triangle neighbour. Any newly distant pair whose old path used `vu` must therefore be either `(v,x)` or `(u,w)`, giving exactly the two alternatives above.
+The original q/c target-Hall theorem is a corollary because fixed-q capacity monotonicity plus the numerical compatibility relation imply TCD.
 
-Because a non-star D2C graph has no leaf, every private `x in A` is incident with an `F`-edge. Hence the set `P` of triangle-active B-vertices possessing a private A-neighbour injects into the nonisolated vertex set of `F`:
+**Standalone regression:** exhaustive four-vertex abstract checks found zero minimum-margin mismatches in both a one-layer regime (39,636 demand instances; 2,760 with pointwise gaps) and a two-layer regime (172,080 demand instances; 24,624 with pointwise gaps). This is evidence, not proof.
 
-`|P| <= nu(F) <= 2e(F)`.
+**Literature lead:** the 2026 Marmulla–Brandes Ferrers/threshold-digraph neighbourhood-inclusion paper is structurally close to TCD after diagonal deletion and must be compared carefully. No novelty claim is authorised.
 
-If some triangle-active source has no private foot, the antipode pair has disjoint A-neighbourhoods. Writing
+## Priority 2 — Boolean-flow D2C paper / live all-private branch
 
-`h_u=q_u+rho_u=# {x in A: ux notin E(G)}`,
+The previous root-edge dichotomy remains:
 
-this gives
+- private foot, or
+- disjoint-support antipode with residual payment.
 
-`h_u+h_w>=a`,
+The all-private branch now has a new quantitative theorem. Let `T` be the set of triangle-active vertices in `B`, `t=|T|`, `Q=e(G[B])`, and `delta=r-e(F)=b(n-b)-m`. If every vertex of `T` has a private A-foot, then distinct feet contribute `t(b-1)` missing A-B incidences. Maximum degree gives `e(F)<=Q+delta`, while all B-edges lie in `T`, so `Q<=binom(t,2)`. Therefore
 
-and therefore the global cross-deficit bound
+`t(b-t) <= 2delta`.                                    (APG)
 
-`Q+r>=a`.
+**Exact branch consequence:** if `Q>0` and `delta=0`, APG forces `t=b` and equality throughout. This rigidifies the graph to `B=K_b`, a `K_b` of private feet, and the natural matching between them (with any remaining A-vertices B-complete and F-isolated). Deleting a B-edge then leaves diameter at most two, contradicting D2C. Hence the non-bipartite all-private exact-defect branch does not exist.
 
-The canonical source inequality `Q<=r+b lambda` then yields
+**Near-exact consequence:** when `t=b` and `Q=binom(b,2)-s`, one has `s<=delta`; total A-side maximum-degree slack and additional cross-defect beyond the private feet are each at most `2(delta-s)<=2delta`.
 
-`2r+b lambda>=a`,
+**Atlas regression:** all D2C graph-atlas classes through order 7 give 9 maximum-degree triangle roots, 3 all-private roots, zero APG violations, and zero `delta=0` all-private roots.
 
-or equivalently
+## Preserved earlier core
 
-`2 delta + 2e(F) + b(2b-n) >= a`.                    (RSD)
+The zero-residual Boolean-flow theorem and internal `n<=294` cutoff remain unchanged. The root-edge antipode/private-foot theorem and antipode inequality `(RSD)` remain unchanged. The 12-vertex obstruction remains a mandatory hostile control. Canonical fixed-order ledger remains **4,626 exclusions / 952 survivors / 3,632 whole-state closures**; no catalogue promotion changes.
 
-If instead **every** triangle-active source has a private foot, all rooted-triangle edges lie inside at most `nu(F)` active B-vertices, so
+## Paper programme
 
-`Q <= binom(nu(F),2) <= binom(min(b,2e(F)),2)`.       (PRIVATE)
+[`project/papers/README.md`](project/papers/README.md) is the paper index. The Hall paper is first priority because its central theorem is now independent of D2C notation. The Boolean-flow paper develops in parallel and has strengthened through APG/exact all-private exclusion.
 
-Thus every maximum-degree triangle root satisfies the compact dichotomy `(PRIVATE)` or `(RSD)`.
+**README SYNC:** pending one-time self-removing workflow in this transaction; it will add a prominent root-README paper banner and reviewer links without rewriting historical content.
 
-**IMPORTANT SPECIAL CASE `F=empty`:** if `Q>0`, the private branch is impossible, so
+## Trust boundary
 
-`2 delta + b(2b-n) >= a`.
+Both new results are internal hand theorems with finite regression. External mathematical review and novelty assessment remain open. No eventual second-extremal theorem is claimed. The maximum-triangle-root scope issue remains open.
 
-This is a genuine one-layer extension of the exact `F=r=0` Boolean boundary: positive residual cross mass is allowed, but it must pay for the loss of exact coordinate flow. At exact balance `b=n/2`, the antipode branch forces
+**UNPRESERVED WORK:** None after this checkpoint once the commit is published.
 
-`r=delta+e(F) >= ceil(a/2)`.
-
-**12-VERTEX NEGATIVE CONTROL:** the reconstructed `X_3` profile has `a=3,b=8,lambda=4,delta=f=0` and satisfies the new inequality comfortably; the theorem does not accidentally exclude the published-order obstruction. Direct authoritative isomorphism between `X_3` and the published Figure 1 remains uncertified.
-
-**FINITE REGRESSION:** the atlas checker covers every D2C isomorphism class through order 7 and every maximum-degree root lying in a triangle. It found no failure of the root-edge dichotomy, the private-foot injection, `Q+r>=a`, or `2r+b lambda>=a`. This is regression evidence only; the hand proof is the basis of the theorem.
-
-**INTERPRETATION:** the first perturbative obstruction is now explicit. The zero-boundary antipode argument is not destroyed arbitrarily by `F` and residual mass. It fails only when rooted triangle-active vertices are supported by distinct private A-feet, and those feet must sit on `F`. Otherwise an actual disjoint-support antipode survives and immediately forces a quantitative residual/defect payment.
-
-**STATUS / TRUST BOUNDARY:** internal hand theorem, not promoted; external mathematical and novelty review open. No eventual second-extremal theorem is claimed. The maximum-triangle-root scope issue also remains open: a triangle-containing D2C graph is not yet proved to have a maximum-degree vertex in a triangle.
-
-**OLD LINE PRESERVED:** fixed-order candidates, audits, exact-block work, residual h-index/receiver theory, selected-incidence Hall, the complete mixed `{4,5}` all-E closure, the 12-vertex hypercube-face reconstruction, and the zero-residual `n<=294` cutoff remain available. Canonical ledger remains **4626 exclusions / 952 survivors / 3632 whole-state closures**; no catalogue promotion changes.
-
-**UNPRESERVED WORK:** None after this checkpoint.
-
-**DEFERRED ADMIN:** authoritative Figure-1 adjacency/isomorphism certification; fresh independent Lean recompilation of `Erdos742/Erdos742`; older archive transfers; PR #2; unrelated CI/root historical narrative maintenance; full novelty search for the hypercube-face construction / Boolean-flow / root-edge stability formulation.
-
-**NEXT ACTION:** MATH: split the eventual triangle-bearing attack along the new dichotomy instead of treating residual corruption uniformly. First attack the **all-private branch**, because it is now the only way to avoid the explicit antipode defect payment: classify the private A-feet inside `F`, use criticality of their incident F-edges and selected-pair uniqueness, and seek either a forced small cyclic/twin quotient or an additional residual charge. In parallel, retain `(RSD)` as the starting inequality for the antipode branch and only return to factorial/path expansion once the all-private obstruction is understood. Do not return to the closed mixed `{4,5}` ladder.
+**NEXT ACTION:** First, audit TCD against Ferrers/threshold/minimum-deficiency literature and seek minimal counterexamples when individual TCD clauses are removed. In parallel on the D2C track, use the near-rigid all-private model to price each B-edge criticality witness against the at-most-`O(delta)` defect budget. Do not return to the closed mixed `{4,5}` ladder.
 <!-- CURRENT-STATUS:END -->

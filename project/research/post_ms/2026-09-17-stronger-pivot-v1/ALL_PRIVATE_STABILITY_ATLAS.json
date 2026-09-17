@@ -1,0 +1,15 @@
+{
+  "result": "PASS",
+  "atlas_max_order": 7,
+  "d2c_isomorphism_classes": 21,
+  "maximum_degree_triangle_roots": 9,
+  "all_private_roots": 3,
+  "apg_violations": 0,
+  "delta_zero_all_private_roots": 0,
+  "profiles": [
+    {"n": 7, "b": 3, "t": 2, "Q": 1, "delta": 3, "lhs": 2, "rhs": 6},
+    {"n": 7, "b": 3, "t": 2, "Q": 1, "delta": 3, "lhs": 2, "rhs": 6},
+    {"n": 7, "b": 3, "t": 2, "Q": 1, "delta": 3, "lhs": 2, "rhs": 6}
+  ],
+  "note": "Finite graph-atlas regression only; the hand proof is load-bearing."
+}
