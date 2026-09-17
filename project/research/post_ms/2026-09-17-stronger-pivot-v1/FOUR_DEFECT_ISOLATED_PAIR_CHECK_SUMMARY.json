@@ -1,0 +1,19 @@
+{
+  "status": "PASS_FOUR_DEFECT_ISOLATED_PAIR_EXCLUSION",
+  "date": "2026-09-17",
+  "one_group_z_range": [4, 8],
+  "one_group_exact_instances": 180,
+  "t1_g1_minimum_excess": 8,
+  "t2_g1_minimum_excess": 16,
+  "two_group_y_values": [1, 2, 3],
+  "two_group_z_range": [4, 8],
+  "two_group_exact_instances": 380,
+  "two_group_minimum_excess_by_y": {
+    "1": 14,
+    "2": 18,
+    "3": 20
+  },
+  "eventual_uniform_k_threshold": 13,
+  "scope": "finite exact regression only; universal ray reductions are hand proofs",
+  "negative_control": "k=4 X3 residual-zero perfect-matching mechanism is outside theorem scope"
+}
