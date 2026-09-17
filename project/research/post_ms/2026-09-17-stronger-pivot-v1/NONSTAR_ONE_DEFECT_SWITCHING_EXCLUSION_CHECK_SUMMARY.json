@@ -1,0 +1,29 @@
+{
+  "status": "PASS_NONSTAR_ONE_DEFECT_SWITCHING_EXCLUSION",
+  "date": "2026-09-17",
+  "scope": "finite regression evidence only; universal orientation-code decomposition and eventual exclusion are hand proofs",
+  "decomposition_checked_k": {"min": 5, "max": 100, "count": 96},
+  "k5": {
+    "omega_nodes": 22,
+    "simple_edges": 17,
+    "physical_edges": 20,
+    "component_sizes": [2, 2, 6, 6, 6],
+    "tau": 8
+  },
+  "k100": {
+    "omega_nodes": 782,
+    "simple_edges": 9897,
+    "physical_edges": 9900,
+    "component_sizes": [97, 97, 196, 196, 196],
+    "tau": 198
+  },
+  "universal_component_pattern": "two K_(k-3) plus three balanced double-stars; three central simple pairs have multiplicity two",
+  "cover_formula": "tau(Omega_sigma)=2k-2",
+  "defect_arithmetic_checked_through_k": 5000,
+  "closure_thresholds": {
+    "lambda_1_a_2k_minus_2": 12,
+    "lambda_0_a_2k_minus_1": 14,
+    "lambda_minus_1_a_2k": 16
+  },
+  "mandatory_negative_control": "X3 remains allowed: k=4, residual-zero perfect-matching/factorization switching mechanism"
+}
