@@ -4,27 +4,33 @@
 
 **Status: candidate bridge-level continuation; not promoted; external mathematical review remains open.** This note continues the mixed `{4,5}` near-Turán scope at `(a,b,t)=(20,23,2)` after the small-excess theorem `E>=3` and the full selected-incidence Hall theorem.
 
-## 1. Step-back
+## 1. Step-back and correction of the first coefficient choice
 
 At total selected excess
 
     E=sum_i e_i=3,
 
-there are only three partitions of the excess:
+there are only three partitions:
 
     (3), (2,1), (1,1,1).
 
-The aggregate `E=3` obstruction showed that it is not enough to reuse the weighted endpoint/excess ledgers blindly. Before invoking full Hall, however, two of the three partitions can be removed by sharpening the existing small-excess argument only at the point where it actually changes: how many distinct selected labels can support a source with positive excess requirement.
+The first attempt was to reuse the preceding `10p+15q` source support inequality unchanged. That works for partition `(2,1)`, but **fails for `(1,1,1)`**: at
 
-The conclusion of this note is:
+    rho=5, p=5, q=3, g=1,
+
+one has
+
+    10p+15q-q(p+q)=71 > 70=10rho+20.
+
+That failed coefficient choice is preserved here because it identifies the right adjustment. Raising the incoming coefficient from 10 to 12 produces a cleaner support inequality with **no rho=4 bonus at all**, and it closes both split-excess partitions in one stroke.
+
+The correct conclusion is:
 
 > In the mixed `{4,5}`, `h>=5`, `(20,23,2)` scope, the excess partitions `(1,1,1)` and `(2,1)` are impossible. Hence any surviving `E=3` bridge must have a **unique label of excess three**.
 
-Thus the full `E=3` problem reduces to the single partition `(3)`.
-
 ## 2. Inherited notation
 
-Let `k` be the number of demand-five labels. As before,
+Let `k` be the number of demand-five labels. Then
 
     r=76+k,
     Q=83+k,
@@ -38,176 +44,166 @@ Every selected incidence `ui` satisfies
 
     e_i>=g_u.
 
-Selected labels at one source are distinct. The local source inequality from the small-excess proof is
+Selected labels at one source are distinct. Also
 
-    10p_u+15q_u-q_u(p_u+q_u)
-      <= 10rho_u+20+delta_k [rho_u=4],                 (1)
+    p_u<=rho_u+2,
+    q_u+rho_u<=20,
+    p_u+q_u<=22,
 
-where
+and every active source has `rho_u>=4` because all demands are at least four.
 
-    delta_k=6  for 0<=k<=14,
-    delta_15=5,
-    delta_16=2,
-    delta_k=0  for 17<=k<=20.
+## 3. A new 12/15 source support inequality
 
-At `E<=2`, (1) was already proved. We first check exactly when it remains valid at `E=3`.
+For either excess partition `(1,1,1)` or `(2,1)`, every source satisfies
 
-## 3. The local source inequality survives for partitions (1,1,1) and (2,1)
+> **Split-excess source inequality**
+>
+>     12p_u+15q_u-q_u(p_u+q_u)
+>       <=12rho_u+24.                                  (1)
 
-### Partition (1,1,1)
+### Proof
 
-There are exactly three labels with positive excess, each of excess one. Therefore, at any source with `q_u>0`,
+If `q=0`, the incoming cap `p<=rho+2` gives (1) immediately.
 
-- if `g_u=0`, there is no new restriction;
-- if `g_u=1`, at most three distinct selected labels are available, so `q_u<=3`;
-- if `g_u>=2`, no selected label is eligible, so `q_u=0`.
+Assume `q>0`.
 
-Hence the only new active states beyond the zero-excess range have
+### Case A: `g=0`
 
-    p_u=rho_u, q_u<=3.
+Then `p<=rho-1`. Also `q<=20-rho`.
 
-For `rho_u>=4`, direct substitution gives
+If `q<=12`, the coefficient of `p` is nonnegative, so
 
-    10rho+15q-q(rho+q)
-      =10rho+q(15-rho-q)
-      <=10rho+20
+    12p+15q-q(p+q)
+      <=12rho-12 + q(16-rho-q).
 
-for `q=1,2,3`. Thus (1) remains valid.
+For `rho>=4`, the final quadratic is at most 36, attained only at the boundary `rho=4,q=6`. Hence the whole expression is at most
 
-### Partition (2,1)
+    12rho-12+36=12rho+24.
 
-Now one label has excess two and one label has excess one. Thus
+If `q>=12`, the coefficient of `p` is nonpositive, so setting `p=0` only increases the expression. Then
 
-- `g=1` permits at most two distinct selected labels, so `q<=2`;
-- `g=2` permits at most one selected label, so `q<=1`;
-- `g>=3` permits none.
+    12p+15q-q(p+q) <= q(15-q) <=36 <12rho+24.
 
-The only new active states are therefore
+### Case B: partition `(1,1,1)` and `g>0`
 
-    p=rho,   q<=2,
-    p=rho+1, q<=1.
+Only three labels have positive excess and each has excess exactly one. Thus `g=1`, `p=rho`, and the simple selected-incidence condition gives `q<=3`. Therefore
 
-These are exactly the states already checked in the `E<=2` proof, and for every active source `rho>=4` they satisfy (1) strictly or weakly. Hence (1) again survives unchanged.
+    12p+15q-q(p+q)
+      =12rho + q(15-rho-q)
+      <=12rho+24,
 
-So for either partition, summing (1) gives the same source lower bound as before with `E=3`:
+because `rho>=4` and `q<=3`, with equality possible only at `rho=4,q=3`.
 
-    sum_u q_u(p_u+q_u)
-      >= L_0(k)+75,                                    (2)
+### Case C: partition `(2,1)` and `g>0`
 
-where
+For `g=1`, at most two distinct labels are eligible, so `p=rho`, `q<=2`; direct substitution gives at most `12rho+18`.
 
-    L_0(k)=780+15k-delta_k floor((33+k)/3).
+For `g=2`, only the excess-two label is eligible, so `p=rho+1`, `q<=1`; then
 
-## 4. Partition-specific label ceilings
+    12p+15q-q(p+q)
+      <=11rho+25
+      <=12rho+24.
 
-The small-excess note proved that, relative to the zero-excess label ceiling `U_0(k)`, the excess contribution satisfies
+No source with `g>=3` can be active. This proves (1).
 
-    Delta <= 24E + sum_i e_i^2.                         (3)
+## 4. Global source lower bound
 
-Here `E=3`.
+Sum (1) over all `b=23` sources. Since `sum p=sum q=Q`,
 
-For partition `(1,1,1)`,
+    27Q - sum_u q_u(p_u+q_u)
+      <=12r+24b.
 
-    sum e_i^2=3,
+Hence
 
-so
+>     sum_u q_u(p_u+q_u)
+>       >=27Q-12r-24b
+>       =777+15k.                                      (2)
 
-    label side <= U_0(k)+75.                            (4)
+Unlike the earlier `10/15` inequality, this bound needs no `c_4` count and no special `rho=4` correction.
 
-For partition `(2,1)`,
+## 5. Partition-specific label ceilings
 
-    sum e_i^2=5,
+The small-excess note established the zero-excess ceiling
 
-so
+    U_0(k)=624+13k+min(14k,76+k).                      (3)
 
-    label side <= U_0(k)+77.                            (5)
+For fixed `s_i,R_i`, excess changes the label contribution by at most
 
-Recall the exact zero-excess gap
+    24E + sum_i e_i^2.                                 (4)
 
-    G(k)=L_0(k)-U_0(k),
+At `E=3`:
 
-with `G(k)>0` for every `k`, and the unique minimum `G(12)=2`.
+- partition `(1,1,1)` has `sum e_i^2=3`, hence
 
-## 5. Partition (1,1,1) is impossible
+      label side <= U_0(k)+75;                         (5)
 
-By (2) and (4), every such bridge would require
+- partition `(2,1)` has `sum e_i^2=5`, hence
 
-    U_0(k)+75 >= L_0(k)+75,
+      label side <= U_0(k)+77.                         (6)
 
-or `G(k)<=0`, contradicting `G(k)>0` for all `k=0,...,20`.
+It therefore suffices to compare the stronger source lower bound (2) with the larger of the two label ceilings, namely `U_0(k)+77`.
 
-Therefore partition `(1,1,1)` is impossible.
+For `0<=k<=5`, `14k<=76+k`, so
 
-## 6. Partition (2,1) is impossible except for one arithmetic equality case
+    U_0(k)=624+27k,
 
-By (2) and (5), feasibility requires
+and
 
-    G(k)-2 <=0.
+    (777+15k)-(U_0(k)+77)
+      =76-12k
+      >=16.                                            (7)
 
-Since `G(k)>=2`, this is impossible for every `k` except the sole equality case
+For `6<=k<=20`, `76+k<14k`, so
 
-    k=12, G(12)=2.
+    U_0(k)=700+14k,
 
-It remains only to close `(k,E)=(12,3)` with excess partition `(2,1)`.
+and
 
-At `k=12`,
+    (777+15k)-(U_0(k)+77)
+      =k
+      >=6.                                             (8)
 
-    r=88,
-    Q=95,
-    c_4<=15.
+Thus the source side is strictly larger than even the worst partition-`(2,1)` label ceiling for every `k=0,...,20`.
 
-Equality between the source lower bound and label upper bound would force equality in every intervening estimate. In particular `c_4=15`, and equality in the residual-mass bound forces
+## 6. Bounded theorem
 
-    rho=(5^5,4^15,1^3).                                (6)
+> **E=3 split-partition exclusion.** In the canonical bridge at `(a,b,t)=(20,23,2)`, suppose all twenty demands lie in `{4,5}` and at least five residual sources have degree at least five. If total selected excess is `E=3`, then neither partition
+>
+>     (1,1,1) nor (2,1)
+>
+> can occur.
+>
+> Consequently every surviving `E=3` profile must have exactly one excess-positive label, of excess three:
+>
+>     (e_i)^+=(3).
 
-Equality in the summed local source inequality (1) would also require every source to be locally tight.
+The proof is bridge-level and is not a Murty-Simon theorem promotion.
 
-For the partition `(2,1)` the locally tight states have the same incoming-load ceiling relevant here as in the preceding boundary argument:
+## 7. Why partition (3) is genuinely different
 
-- at `rho=1`, tightness forces `p<=3`;
-- at `rho=4`, every tight state has `p<=3`;
-- at `rho=5`, every tight state has `p<=7`.
+The new inequality (1) does **not** survive for partition `(3)`. A unique excess-three label permits
 
-Therefore (6) would imply
+    p=rho+2, q=1, g=3.
 
-    sum_u p_u
-      <= 3*3 + 15*3 + 5*7
-      =89,
+At `rho=4`, for example,
 
-whereas the exact orientation ledger requires
+    12p+15q-q(p+q)
+      =80
+      >72=12rho+24.
 
-    sum_u p_u=Q=95.
+At `rho=5`, with `p=7,q=1`, the value is `91`, while `12rho+24=84`, a surplus of 7. Thus the obstruction is real and localized.
 
-So equality is impossible; the source lower bound is in fact strictly larger than the label upper bound. This closes the final `(2,1)` case.
-
-## 7. What remains: only partition (3)
-
-The same local inequality (1) does **not** survive unchanged for partition `(3)`. With one label of excess three, the state
-
-    p=rho+2, q=1, g=3
-
-is now legal at the excess level. For example at `rho=5`,
-
-    10p+15q-q(p+q)
-      =77,
-
-while the right side of (1) is only `70`.
-
-This is not a failure of the canonical bridge; it identifies the exact remaining mechanism. Every such `g=3` source must use the **same unique excess-three label**, and full selected-incidence eligibility additionally requires that label to satisfy
+Every such `g=3` source must use the **same unique excess-three label** `i_*`. Full selected-incidence eligibility additionally requires
 
     s_*<=rho_u,
-    C_*>=p_u+q_u=rho_u+3.
+    C_*>=p_u+q_u=rho_u+3,
 
-Thus the remaining `(3)` case is intrinsically a **single-column row-packing / endpoint-tail problem**. Aggregate support coefficients alone deliberately forget the information needed to close it.
+and the exact selected column degree is
 
-## 8. Bounded conclusion and next target
+    x_*=s_*+3 in {7,8}.
 
-> **E=3 partition reduction.** In the canonical bridge at `(a,b,t)=(20,23,2)`, with all twenty demands in `{4,5}` and at least five residual sources of degree at least five, an `E=3` profile can survive only if its entire selected excess is concentrated on one label:
->
->     (e_i)^+ = (3).
+So the remaining case is now a sharply defined **single-column row-packing / endpoint-tail problem**, not a general `E=3` search.
 
-The partitions `(1,1,1)` and `(2,1)` are impossible.
+## 8. Next target
 
-This is a bridge-level reduction, not a Murty-Simon proof and not a promoted catalogue theorem.
-
-The next high-value task is now sharply defined: close or realize the unique-excess-three partition using the exact column degree `x_*=s_*+3`, the endpoint mass `C_*`, and the row-packing/Hall restrictions on every source with `g_u>0`, especially the `g=3` sources that are the only reason the old source support inequality can fail.
+Close or realize partition `(3)` by coupling the number and residual degrees of the exceptional `g=3` sources to the unique label's exact selected capacity `x_*` and endpoint mass `C_*`. The first failed `10/15` attempt and the successful `12/15` correction show that further undirected scalar coefficient tuning is unlikely to be the main missing ingredient; the unique-column Hall information should now be used directly.
