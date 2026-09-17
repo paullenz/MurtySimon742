@@ -1,61 +1,87 @@
 # Dense diameter-2-critical research — live current state
 
-> **Literature correction — 17 September 2026.** The 2019 Dailly–Foucaud–Hansberg all-order strengthening is false: a published 2024 paper gives a 12-vertex, 32-edge D2C graph, while `floor((n-1)^2/4)+1=31`. The active programme is therefore the **eventual / corrected second-extremal problem**, not the false universal statement. Existing Murty–Simon / Erdős #742 work remains preserved.
+> **Active target — 17 September 2026.** The 2019 all-order second-extremal strengthening is false because of a published 12-vertex, 32-edge D2C graph. The live problem is the sufficiently-large / eventual second-extremal classification around `M(n)=floor((n-1)^2/4)+1`. Existing Murty–Simon / Erdős #742 work remains preserved.
 
 <!-- CURRENT-STATUS:START -->
-**CHECKPOINT CLASS:** `LITERATURE_CORRECTION_EVENTUAL_SECOND_EXTREMAL_TARGET`.
+**CHECKPOINT CLASS:** `INDEPENDENT_HYPERCUBE_FACE_EXCEPTION_MECHANISM_NOT_NOVELTY_CLEARED`.
 
-**WORK MODE:** `MATH`. A potentially fatal literature collision was checked before further theorem-building and found genuine. The research target has been repaired immediately rather than allowing the hourly work to optimize against a false conjecture.
+**WORK MODE:** `MATH`. Reconstructed a deterministic 12-vertex/32-edge D2C benchmark matching all published coarse invariants and then generalized its visible structure. This is an independent reconstruction: direct isomorphism to the published Figure 1 has not yet been certified from authoritative adjacency data, so the repository does not call it the published graph. Radosavljević's claimed exhaustive small-order enumeration reports a single Conjecture-3 counterexample through order 13, which strongly suggests isomorphism, but that is supporting evidence rather than the identity certificate.
 
-**INSPECTED PREDECESSOR:** `82de82825036321ecb78817550753aa05f18d768` on `main`. Its residual-defect and rooted-triangle reformulations remain valid mathematics; only the scope/target statement needed correction.
+**INSPECTED PREDECESSOR:** `e736305b286fd45d2d496eb6ec5850d40417e4a6` on `main`, which corrected the target after the 2024 literature collision.
 
-**LAST VERIFIED RESULT:** `project/research/post_ms/2026-09-17-stronger-pivot-v1/LITERATURE_CORRECTION_2024_EXCEPTION.md` records the correction and its strategic consequences.
+**LAST VERIFIED RESULT:** `project/research/post_ms/2026-09-17-stronger-pivot-v1/HYPERCUBE_FACE_EXCEPTION.md` and `check_hypercube_face_family.py` preserve the construction, hand proof and deterministic checks.
 
-**2019 CONJECTURE 3 IS FALSE AS STATED:** Radosavljević, Stanić and Živković, *Primitive diameter 2-critical graphs*, Publications de l'Institut Mathématique 115(129) (2024), 21–32, DOI `10.2298/PIM2429021R`, explicitly exhibit a D2C graph with
+For every `k>=3`, define `X_k` on
 
-`n=12, m=32`,
+`{r} union {a_1,...,a_k} union {0,1}^k`
 
-while
+by:
 
-`floor((n-1)^2/4)+1=31`.
+1. the cube vertices induce the hypercube `Q_k`;
+2. `r` is adjacent to every cube vertex;
+3. `a_i` is adjacent exactly to the cube vertices whose i-th coordinate is `0`;
+4. there are no other edges.
 
-They state that the graph has a dominating edge. This is a counterexample to Dailly–Foucaud–Hansberg Conjecture 3, but not to the Murty–Simon bound (`32<36`). The graph had already been found in Radosavljević's small-order work.
+Then `X_k` is D2C. The proof is elementary and edge-type exact:
 
-**CORRECT ACTIVE TARGET:** the live problem is the **sufficiently-large second-extremal classification**, matching the 2025 Lin–Wang Question 1:
+- for a cube edge `xy` differing in coordinate `i` with `x_i=0,y_i=1`, the pair `(a_i,y)` has unique common neighbour `x`;
+- the same pair certifies criticality of the face edge `a_i x`;
+- for a root edge `rx`, the antipodal cube vertex `bar(x)` and `x` have unique common neighbour `r` when `k>=3`.
 
-> for sufficiently large `n`, if a D2C graph has at least `M(n)=floor((n-1)^2/4)+1` edges, must it be complete bipartite or an expanded `C5` from `C5+`?
+Diameter 2 follows directly from the root, coordinate flips and common zero-coordinate cube vertices.
 
-Equivalently, for sufficiently large non-bipartite D2C graphs, seek `m<=M(n)` with equality only in `C5+`. This formulation permits finite exceptions such as the 12-vertex graph.
+The parameters are
 
-**AUTHORITATIVE `C5+` DEFINITION:** use the original 2019 Dailly–Foucaud–Hansberg paper: three consecutive vertices of `C5` are expanded to independent twin sets and
+`n=2^k+k+1`,
+`m=(k+1)2^k`.
 
-`|X2| in {floor((n-3)/2), ceil((n-3)/2)}`.
+For `k=3`, this gives `n=12,m=32`, degree sequence
 
-The 2024 paper prints a different `(n-2)/3` parameter while referring back to this family; do not use that secondary formula for extremal calculations. The original source is the project authority.
+`8,7,6,6,6,5,5,5,4,4,4,4`,
 
-**WHY THE PIVOT STILL MAKES SENSE:** the triangle-free version of the non-bipartite second-extremal bound is already established in the literature, with the expanded-`C5` family providing the large equality examples. Therefore our structural machinery is most naturally aimed at the **triangle-containing branch**, where eventual strictness below `M(n)` would complete the second-extremal picture (modulo the already-known triangle-free branch).
+a unique dominating edge `r 000`, and a primitive/twin-free graph. A randomized reconstruction search found multiple labelled hits but only one isomorphism class in the bounded sample; this is diagnostic, not exhaustive uniqueness.
 
-**RESIDUAL-DEFECT REFORMULATION REMAINS VALID:** with maximum-degree root, `b=Delta`,
+**CANONICAL PROFILE OF k=3:** root at the unique degree-8 vertex:
 
-`delta=b(n-b)-m=r-e(F)`.
+- `b=8`, `a=3`;
+- `delta=b(n-b)-m=0`, equivalently `t=0`;
+- `F=G[A]` is empty;
+- total residual count `r=0`, so **every B-source has rho=0**;
+- `B` induces `Q_3`, so `Q=e(G[B])=12` rooted triangles;
+- the 12 H-cross edges are all selected representatives, with no residual cross edge;
+- each A-label is selected four times, but every label demand is `s_i=0` because `F` is empty.
 
-The target threshold translates to
+More generally, for `X_k` the canonical root is `r`, `A={a_i}`, `B=Q_k`, `F=empty`, `t=delta=r=0`, and
 
-`delta >= b(n-b)-M(n)`
+`Q=k*2^(k-1)`.
 
-for the eventual problem. Also `Q=e(G[N(v)])` is the number of triangles through the root. These identities are independent of the false all-order conjecture.
+Each cube edge in coordinate `i` has a unique canonical quasi-edge: orient it from the endpoint with bit `1` to the endpoint with bit `0` and use label `a_i`. Thus for cube vertex `x`,
 
-**MANDATORY NEGATIVE CONTROL:** every new structural lemma intended for the eventual theorem must either hold on the published 12-vertex exception or explicitly use a hypothesis that excludes its finite mechanism. In particular, do not infer a universal `n>=12` theorem from small-order diagnostics or from the old 2019 statement.
+`q_x=weight(x)`, `p_x=k-weight(x)`, `rho_x=0`.
 
-**EXTERNAL #742 COLLISION:** unchanged. The pre-existing `Erdos742/Erdos742` Lean proof/equality formalisation remains the reason first-proof priority for #742 is not the active goal, pending independent recompilation and external acceptance.
+This is a crucial hostile control: a large selected system can coexist with **zero demand and zero residual mass**. Any eventual proof depending only on positive demand or residual h-index must explicitly exclude or price this boundary mechanism.
 
-**OLD LINE PRESERVED:** all fixed-order candidates, audits, exact-block work, h-index/receiver theory, selected-incidence Hall, and the complete mixed `{4,5}` all-E closure remain available. Canonical ledger remains **4626 exclusions / 952 survivors / 3632 whole-state closures**; no promotion changes.
+**WHY THE FINITE EXCEPTION DOES NOT SCALE AT THE SAME DENSITY:** `X_3` has `m=32>M(12)=31`. But for every `k>=4`,
 
-**AUTOMATION STATUS:** the hourly research task is being retargeted again to the **eventual second-extremal** problem and must explicitly remember that the 2019 all-order strengthening has a 12-vertex counterexample.
+`(k+1)2^k < M(2^k+k+1)`.
+
+Indeed with `N=2^k`,
+
+`(N+k)^2-4(k+1)N = N(N-2k-4)+k^2 >0`
+
+for `k>=4`. So the natural hypercube-face continuation remains D2C but immediately drops below the second-extremal threshold. This explains one concrete way a genuine finite obstruction can self-dilute rather than threaten the eventual conjecture.
+
+**IDENTITY / NOVELTY BOUNDARY:** an independently found labelled representative has graph6 `KnbI^UpaKgi\``; the deterministic construction uses another isomorphic labelling. The project has not obtained authoritative adjacency data for Figure 1 and does not claim direct identification. A quick literature search did not locate this `Q_k` face construction in named form, but no comprehensive novelty search has been done; **do not claim the infinite family as new**.
+
+**LITERATURE STATUS:** the peer-reviewed 2024 paper establishes existence of the 12/32 counterexample and says it has a dominating edge. The 2023 small-order enumeration reports a single counterexample through order 13. The 2025 Lin–Wang paper asks the sufficiently-large version and proves a substantial `C5`-free case. These remain external inputs, not project theorems.
+
+**OLD LINE PRESERVED:** all fixed-order candidates, audits, exact-block work, residual h-index/receiver theory, selected-incidence Hall and the complete mixed `{4,5}` all-E closure remain available. Canonical ledger remains **4626 exclusions / 952 survivors / 3632 whole-state closures**; no promotion changes.
+
+**AUTOMATION STATUS:** hourly task is `Eventual D2C Research`; it must keep the 12-vertex exception as a negative control and not revert to the false all-order strengthening or the closed old excess ladder.
 
 **UNPRESERVED WORK:** None after this checkpoint.
 
-**DEFERRED ADMIN:** independent fresh Lean recompilation of `Erdos742/Erdos742`; reviewer-facing README synchronization; older archive transfers; PR #2; unrelated CI/root narrative maintenance; comprehensive novelty review.
+**DEFERRED ADMIN:** authoritative Figure-1 adjacency/isomorphism certification; fresh Lean recompilation of `Erdos742/Erdos742`; reviewer-facing README synchronization; older archive transfers; PR #2; unrelated CI/root narrative maintenance; full novelty search for the hypercube-face construction.
 
-**NEXT ACTION:** MATH: obtain or reconstruct the exact 12-vertex/32-edge exception (preferably graph6 or adjacency data) and compute its canonical residual profile `(b,a,delta,Q,F,rho,p,q)`. Use it as a hostile negative control against the residual-defect, zero-source and maximum-triangle-root ideas. Identify exactly which finite mechanism lets it beat `M(12)`. Only then resume the maximum-triangle-root / Hall attack for the sufficiently-large triangle-bearing branch.
+**NEXT ACTION:** MATH: classify the **zero-residual boundary** `t=0, r=0, F=empty` in canonical coordinates. Translate the selected representatives into an orientation/edge-labelling of `G[B]`: every B-edge must be represented by a unique A-nonedge at one endpoint, and in the hypercube family these labels are coordinate directions. Derive a general constraint on `G[B]` (degree, label classes, 4-cycle/cube structure, or expansion) strong enough to show that high-density members of this boundary are finite/small, or preserve a different scalable family if one exists. Keep `X_3` as the mandatory equality/exception control and `X_k,k>=4` as scalable negative controls.
 <!-- CURRENT-STATUS:END -->
