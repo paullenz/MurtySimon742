@@ -1,0 +1,12 @@
+{
+  "all_d11_require_singleton": true,
+  "d11_graphs": 25,
+  "minimum_types": {
+    "(1, 9, 3, (3, 3, 4, 4, 4))": 10,
+    "(2, 7, 1, (3, 3, 3, 3, 4))": 15
+  },
+  "row_sha256": "858941a3e47b59631433e61bd8ced65f6a9e7cb302a0de0281201e6074e0df77",
+  "status": "PASS_D11_OPTIMAL_COVER_SINGLETON_CLASSIFICATION",
+  "tight_graphs": 1024,
+  "independent_implementations": "Python set-based lexicographic dynamic programme and C++ bit-mask lexicographic dynamic programme produced byte-identical 1024-row streams locally; same assistant, not external review."
+}

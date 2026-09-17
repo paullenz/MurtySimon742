@@ -1,21 +1,23 @@
 # Current structural review — 17 September 2026
 
-**Current five-label result: [Five-label exact support cover forces defect at least eleven](project/research/general_n/2026-09-17-d5-exact-cover-v1/THEOREM.md).** Its prerequisite is the checked [pair-covered interface and critical-edge charging theorem](project/research/general_n/2026-09-17-defect-six-v1/THEOREM.md), which in turn includes the exact graph-to-representative scope and links to the preceding treatment.
+**Current five-label result: [Five-label defect eleven is impossible](project/research/general_n/2026-09-17-d5-defect11-closure-v1/THEOREM.md).** Its immediate prerequisite is the checked [exact support-cover theorem](project/research/general_n/2026-09-17-d5-exact-cover-v1/THEOREM.md), which itself rests on the pair-covered critical-edge theorem.
 
-Under the whole-level exact-block hypothesis |T|=|H|=5, criticality turns the actual exceptional supports into a weighted cover of the ten possible tight edges. Every K-support pays at least max(0,4-|S|) units of L and every off-pool residual support pays at least that much beta. Exact enumeration of all 1024 labelled tight graphs and all 31 nonempty supports gives
+Under the whole-level exact-block hypothesis |T|=|H|=5, the current internally checked conclusion is
 
-    D >= 11,
-    W >= 36,
-    extras => W >= 56.
+    D >= 12,
+    W >= 37,
+    extras => W >= 57.
 
-The two independent implementations produce the same complete 1024-row stream, SHA256 `80aa3a20b985dab08080c5d645bdf44cadb9498ec3be636219a670e35e4943c9`. The only auxiliary minimum types are K5 minus one edge, and the degree sequence (3,3,3,3,4) with two missing edges. These are necessary tight-graph shapes, not original-graph realizations.
+The preceding exact support cover gave D>=11. Equality at eleven would force every actual exception to attain its cheapest support price and therefore beta=0. Independent exact enumeration shows that every one of the 25 auxiliary D=11 minimizers requires a singleton tight support in every cheapest cover: three singleton supports for K5 minus one edge and one for the two-missing-edge matching family.
 
-The parameter-wide predecessor remains valid: pair coverage for D<d(d-2), the critical-edge inequality `E_h(Q)<=L+floor(L/h)+beta`, and the quadratic exact-block bound `D>=ceil(d(d-1)/4)`. The previous five-label D>=8 bound is superseded by D>=11.
+Such a singleton must be a positive-demand K-label. But beta=0 forces its selected source into a full receiver pool, whose residual set contains only tight labels. The residual-union implication then bounds its F-degree by 1+4=5, whereas five residual high incidences plus positive demand require F-degree at least 6. This contradiction eliminates D=11.
 
-**Status:** internally checked candidate mathematics. Exact-block existence/coverage, attainability of D=11, sharpness, novelty and independent mathematical acceptance remain open. No catalogue promotion or unrestricted Murty-Simon proof is claimed.
+Python and C++ independently enumerate all 1024 labelled tight graphs and agree byte-for-byte on the lexicographic `(cover cost, singleton count)` row stream; SHA256 `858941a3e47b59631433e61bd8ced65f6a9e7cb302a0de0281201e6074e0df77`.
 
-## Review focus and next target
+The parameter-wide predecessor remains valid: pair coverage for D<d(d-2), the critical-edge support charge, and the quadratic exact-block bound. **Status remains internal candidate mathematics:** exact-block coverage, D=12 attainability, sharpness, novelty and independent review are open. No catalogue promotion or unrestricted proof is claimed.
 
-Review first the necessity of the support-threat cover in the predecessor, then the cheap support price `max(0,4-|S|)` and the exact finite union-cover calculation. The next mathematical unit is to impose the full exact-row identities, demand types and receiver-pool multiplicities on the two auxiliary D=11 minimum families; a minimum set cover is necessary but not sufficient for realization.
+## Next target
 
-Canonical counts remain 4626 exclusions / 952 survivors / 3632 whole-state closures. The operational source of truth is [CURRENT_STATE.md](CURRENT_STATE.md); all earlier proofs and failed routes remain preserved.
+Analyze D=12 while tracking the one unit of slack that can now appear outside the full receiver pools. The beta=0 shortcut used at eleven is no longer automatic. The correct next object is the joint support-cover / exact-row / selected-source feasibility problem, not a fresh survivor scan.
+
+Canonical counts remain 4626 exclusions / 952 survivors / 3632 whole-state closures. Use [CURRENT_STATE.md](CURRENT_STATE.md) as the operational source of truth; all earlier proofs and failed routes remain preserved.
