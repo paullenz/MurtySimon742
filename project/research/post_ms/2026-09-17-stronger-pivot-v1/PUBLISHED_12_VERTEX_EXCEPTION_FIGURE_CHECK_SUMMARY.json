@@ -1,0 +1,26 @@
+{
+  "status": "PASS_PUBLISHED_FIGURE_IS_X3",
+  "vertices": 12,
+  "edges": 32,
+  "degree_sequence": [8, 7, 6, 6, 6, 5, 5, 5, 4, 4, 4, 4],
+  "unique_dominating_edge": ["r", "H"],
+  "diameter": 2,
+  "every_edge_critical": true,
+  "cube_coordinate_map": {
+    "H": "000",
+    "G": "001",
+    "C": "010",
+    "J": "100",
+    "B": "011",
+    "I": "101",
+    "E": "110",
+    "D": "111"
+  },
+  "outer_coordinate_zero_faces": {
+    "A": ["B", "C", "G", "H"],
+    "K": ["G", "H", "I", "J"],
+    "L": ["C", "E", "H", "J"]
+  },
+  "source": "Figure 1, Radosavljevic--Stanic--Zivkovic (2024), DOI 10.2298/PIM2429021R",
+  "trust_boundary": "direct adjacency reconstruction from the authoritative published vector figure, not an author-supplied machine-readable adjacency list"
+}
