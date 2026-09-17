@@ -4,6 +4,17 @@
 <!-- CURRENT-STATUS:START -->
 ## Current status
 
+<!-- STANDALONE-PAPERS:START -->
+### Standalone-paper programme — active
+
+Two bodies of mathematics are now being developed as papers in their own right, independently of whether the live eventual-D2C programme closes:
+
+1. **Priority 1 — [stratified Hall / minimum-cut exactness](project/papers/stratified-hall-mincut/MANUSCRIPT.md).** The central theorem has been abstracted from q/c arithmetic to a two-sided crossing-dominance condition on layered directed Hall systems. Pointwise rearrangement may fail while the minimum Hall margin remains exact. A standalone proof and exhaustive abstract verifier are preserved in [`project/papers/stratified-hall-mincut/`](project/papers/stratified-hall-mincut/).
+2. **Priority 2 — [Boolean-flow / D2C stability](project/papers/boolean-flow-d2c/MANUSCRIPT.md).** The paper combines the zero-residual Boolean-coordinate structure and `n<=294` boundary cutoff with root-edge stability. The all-private branch now satisfies `t(b-t)<=2delta`, and the exact-defect all-private branch is excluded internally.
+
+**Trust boundary:** both are internal candidate theorem packages. External mathematical review and novelty assessment remain open. See the [standalone paper index](project/papers/README.md) and the individual claim ledgers before citing any result as established or new.
+<!-- STANDALONE-PAPERS:END -->
+
 **Programme reset — 17 September 2026.** Two external developments materially change the interpretation of this repository:
 
 1. A public repository, [`Erdos742/Erdos742`](https://github.com/Erdos742/Erdos742), created in August 2026 before this project, contains Lean source claiming the full Erdős #742 inequality and a separate equality-clause formalisation. Source-level dependency inspection has found no target-chain gap; the visible `sorry` in the inequality file is an unused negative statement. A fresh independent Lean/mathlib rebuild has **not** yet been performed here, so this repository does not present that work as peer-reviewed acceptance. Strategically, however, **first-solution priority for Murty–Simon / Erdős #742 is treated as unavailable unless that external proof fails audit**.
@@ -216,6 +227,12 @@ The 2,655 recovered relational candidates completed full discovery and two-imple
 This reviewer-facing navigation surface is protected. Detailed canonical status remains [`releases/REVIEW_READY_INDEX.md`](releases/REVIEW_READY_INDEX.md); new editions must update both surfaces rather than deleting this section.
 
 **Reviewer entry:** start with [`START_HERE_FOR_REVIEWERS.md`](START_HERE_FOR_REVIEWERS.md), then use the package index below.
+
+<!-- ACTIVE-STANDALONE-PAPERS:REVIEW -->
+### Active standalone paper candidates
+
+- [Stratified Hall / minimum-cut manuscript](project/papers/stratified-hall-mincut/MANUSCRIPT.md) · [claim ledger](project/papers/stratified-hall-mincut/CLAIM_LEDGER.md) · [abstract theorem](project/papers/stratified-hall-mincut/ABSTRACT_CROSSING_DOMINANCE.md).
+- [Boolean-flow D2C manuscript](project/papers/boolean-flow-d2c/MANUSCRIPT.md) · [claim ledger](project/papers/boolean-flow-d2c/CLAIM_LEDGER.md) · [all-private stability theorem](project/research/post_ms/2026-09-17-stronger-pivot-v1/ALL_PRIVATE_STABILITY.md).
 
 ### Fixed-order papers and packages
 

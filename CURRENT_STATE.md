@@ -60,7 +60,7 @@ The zero-residual Boolean-flow theorem and internal `n<=294` cutoff remain uncha
 
 [`project/papers/README.md`](project/papers/README.md) is the paper index. The Hall paper is first priority because its central theorem is now independent of D2C notation. The Boolean-flow paper develops in parallel and has strengthened through APG/exact all-private exclusion.
 
-**README SYNC:** pending one-time self-removing workflow in this transaction; it will add a prominent root-README paper banner and reviewer links without rewriting historical content.
+**README SYNC:** root README paper banner and reviewer links synchronized; historical content preserved.
 
 ## Trust boundary
 
