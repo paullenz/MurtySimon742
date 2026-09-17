@@ -1,0 +1,14 @@
+{
+  "status": "PASS_THREE_DEFECT_COMPLETE_SWITCHING_CLASSIFICATION",
+  "date": "2026-09-17",
+  "exact_k_range": [7, 12],
+  "valid_labelled_parameter_instances": 916,
+  "table_failures": 0,
+  "low_cover_types": {
+    "empty_core_g1": 18,
+    "K3_core_g1": 18
+  },
+  "low_cover_total": 36,
+  "scope": "independent finite exact audit only; universal classification remains a hand proof",
+  "negative_control": "k=4 X3 residual-zero perfect-matching mechanism is outside theorem scope"
+}
