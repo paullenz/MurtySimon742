@@ -1,80 +1,58 @@
 # Dense diameter-2-critical research — live current state
 
-> **Active target — 17 September 2026.** The 2019 all-order second-extremal strengthening is false because of a published 12-vertex, 32-edge D2C graph. The live problem is the sufficiently-large / eventual second-extremal classification around `M(n)=floor((n-1)^2/4)+1`. Existing Murty–Simon / Erdős #742 work remains preserved.
+> **Active target — 17 September 2026.** A public August 2026 repository predating this project appears to contain Lean formalizations of both the Murty–Simon inequality and equality clauses; source-level inspection has found no target-chain dependency gap, although an independent fresh rebuild remains open. Separately, the 2019 all-order second-extremal strengthening is false because of a published 12-vertex, 32-edge D2C graph. The live problem is therefore the sufficiently-large / eventual second-extremal classification around `M(n)=floor((n-1)^2/4)+1`. Existing Murty–Simon / Erdős #742 work remains preserved.
 
 <!-- CURRENT-STATUS:START -->
-**CHECKPOINT CLASS:** `ZERO_RESIDUAL_BOUNDARY_CODING_CUTOFF_294_NOT_PROMOTED`.
+**CHECKPOINT CLASS:** `FALSE_2019_DEPENDENCY_AUDIT_AND_README_SYNC_NO_PROOF_DEMOTION`.
 
-**WORK MODE:** `MATH`. Continued from the independently reconstructed hypercube-face exception. The exact zero-residual boundary has now been converted into a binary coding theorem and a finite-order obstruction.
+**WORK MODE:** `AUDIT`. User requested that the README reflect the full change of situation and asked whether the false 2019 conjecture undermines the proofs. A targeted dependency audit was therefore performed before further mathematics.
 
-**INSPECTED PREDECESSOR:** `510281fe61fb754008492a6a86c6867c93a02372` on `main`, containing the `X_k` hypercube-face D2C family and the k=3 canonical profile.
+**INSPECTED PREDECESSOR:** `32a5d27be924e6d2e6741aec7e91fc21fee35bb0` on `main`, containing the zero-residual Boolean-coding theorem and the `n<=294` cutoff.
 
-**LAST VERIFIED RESULT:** `project/research/post_ms/2026-09-17-stronger-pivot-v1/ZERO_RESIDUAL_BOUNDARY.md` plus `check_zero_residual_cutoff.py`.
-
-Assume the canonical maximum-degree-root system satisfies
+**LAST VERIFIED MATHEMATICAL RESULT:** unchanged from the predecessor. In the exact canonical boundary
 
 `t=0`, `F=empty`, hence `r=0`,
 
-and the graph is non-bipartite (equivalently here `Q=e(G[B])>0`). For each `u in B`, encode its G-neighbourhood in A by
+any non-bipartite D2C graph with
 
-`c(u) in {0,1}^a`, `c_i(u)=1 iff u a_i is an edge of G`.
+`m>=M(n)=floor((n-1)^2/4)+1`
 
-Because every H-cross edge is selected and every missing H[B] pair has exactly one selected representative:
+must satisfy `n<=294`. The proof converts `G[B]` into a directed Boolean-coordinate flow, obtains the factorial path inequality `z!<=b lambda^z`, forces `z>=ceil(a/2)` from root criticality, and finishes with an exact finite arithmetic check below the hand cutoff. This remains an internal candidate theorem; external mathematical and novelty review remain open.
 
-1. every edge `uw` of `G[B]` joins codes of Hamming distance exactly one;
-2. orient that edge from the endpoint with `0` in the changed coordinate to the endpoint with `1`;
-3. for every vertex u and every zero coordinate of c(u), there is **exactly one** outgoing edge flipping that coordinate;
-4. there are no other B-edges.
+**2019 FALSE-CONJECTURE DEPENDENCY AUDIT:** preserved at
 
-Thus the occupied codes form an upward-closed subset of the Boolean cube (with multiplicities), and the selected representatives are a directed coordinate-flow system.
+`project/research/post_ms/2026-09-17-stronger-pivot-v1/DEPENDENCY_AUDIT_2019_FALSE_CONJECTURE.md`.
 
-Put
+The audit found **no load-bearing use of Dailly–Foucaud–Hansberg Conjecture 3 as a premise** in the inspected fixed-order proofs, canonical selected/residual bridge, residual h-index derivations, Hall machinery, signed-surplus identities or zero-residual cutoff.
 
-`lambda=2b-n=b-a-1`.
+The important distinction is now explicit:
 
-For `u in B`, its directed indegree is exactly `p_u`, and maximum-degree of the root gives
+- the 2019 **Conjecture 3** all-order bound is false;
+- the same 2019 paper contains separate **proved dominating-edge theorems**, which remain valid inputs where used;
+- the D2C / total-domination-edge-critical complement correspondence used in the canonical construction is the earlier **Hanson–Wang (2003)** result, not Conjecture 3.
 
-`p_u<=lambda`.
+Accordingly, no existing project theorem is demoted merely because Conjecture 3 is false. What changes is the strategic quantifier: `M(n)` is a comparison threshold for an eventual/sufficiently-large problem, not a universal theorem.
 
-Since `Q>0`, necessarily `lambda>=1`.
+**CORRECTIONS IN THIS CHECKPOINT:**
 
-**FACTORIAL PATH LEMMA:** if a B-vertex has z zero coordinates, then it generates `z!` monotone directed paths to the all-ones fibre, while each endpoint can receive at most `lambda^z` such length-z paths. Hence
+1. `project/research/general_n/2026-09-07-residual-hindex-v1/README.md` now attributes the complement/total-domination correspondence to Hanson–Wang (2003), explicitly separates the proved 2019 dominating-edge theorem from false Conjecture 3, and states that Conjecture 3 is not a proof input.
+2. `SIGNED_SURPLUS_PIVOT.md` is marked as a historically corrected pivot; its algebra is retained while the all-order target is replaced by the eventual problem.
+3. `DEFECT_TRIANGLE_ROOT.md` now treats `M(n)` as a comparison threshold and no longer describes the false all-order statement as an established/viable universal bound.
+4. The root `README.md` is synchronized with the August 2026 external proof collision, the 2024 counterexample, this dependency audit, the new eventual target, the zero-residual `n<=294` result, and the bounded automation window.
 
-`z! <= b lambda^z`.                                    (FP)
+**EXTERNAL #742 COLLISION:** `Erdos742/Erdos742` predates this repository. Its inequality Lean source states the Formal Conjectures target and its visible `sorry` is an unused negative statement outside the target dependency chain; a separate equality formalization is also present. This is not treated as peer-reviewed acceptance until independently rebuilt/reviewed, but first-solution priority is treated as unavailable unless that external development fails audit.
 
-**ROOT-CRITICALITY FORCES A LARGE-Z VERTEX:** choose a B-vertex u with at least one zero coordinate. Its root edge `ru` cannot be certified by `(r,u)` because u has a B-neighbour. It cannot be certified by `(r,a_i)` because every A-vertex has degree at least 2 in a non-star D2C graph. Therefore deleting `ru` forces a pair `(u,w)` whose only common neighbour was r. In particular the A-supports of c(u) and c(w) are disjoint. If u has z zeros, w has at least `a-z` zeros, so some B-vertex has
+**FALSE 2019 ALL-ORDER TARGET:** Radosavljević, Stanić and Živković (2024) report a 12-vertex, 32-edge D2C graph, while `M(12)=31`. The graph is a mandatory negative control for every proposed general theorem. `LITERATURE_CORRECTION_2024_EXCEPTION.md` records the primary-source correction and the move to the sufficiently-large formulation studied in recent work.
 
-`z>=ceil(a/2)`.
-
-Combining with (FP) gives a necessary arithmetic condition for every non-bipartite zero-residual boundary realization.
-
-**SECOND-EXTREMAL CUTOFF:** in this boundary
-
-`b=a+1+lambda`, `n=2a+2+lambda`, `m=b(a+1)`.
-
-Assume also `m>=M(n)`. A hand estimate rules out `a>=1296`: the density inequality gives `lambda<=3 sqrt(a)`; the standard integral bound `z! >= (z/e)^z` with `e<3`, together with `z>=a/2`, makes `z!/(lambda^z)>2^z`, contradicting `b<=2a` once `a>=1296`.
-
-The remaining finite integer range `a<1296` is checked exactly (integer factorials, no floating-point acceptance criterion). The strongest surviving necessary arithmetic point is
-
-`a=134, lambda=24, z=67, b=159, n=294`.
-
-Therefore:
-
-> **Any non-bipartite D2C graph in the exact canonical boundary `t=0, F=empty, r=0` with `m>=floor((n-1)^2/4)+1` must have `n<=294`.**
-
-This is an internally proved, partly computer-assisted structural theorem. The arithmetic survivor at n=294 is only a necessary-conditions survivor; no graph realization is claimed.
-
-**RELATION TO THE 12-VERTEX EXCEPTION:** the hypercube-face graph `X_3` has `a=3,b=8,lambda=4,n=12` and lies inside this boundary. The family `X_k` for k>=4 remains D2C but falls below the second-extremal density. The new cutoff formalizes the broader phenomenon: this exact residual-zero mechanism cannot threaten the sufficiently-large problem beyond order 294.
-
-**IDENTITY / NOVELTY BOUNDARY:** direct isomorphism between `X_3` and the published Figure 1 remains uncertified from authoritative adjacency data, although the published enumeration plus matching invariants make it strongly likely. No novelty claim is made for the `X_k` family or the Boolean-flow lemma pending a dedicated literature comparison.
+**CURRENT POST-PIVOT STRUCTURE:** the reconstructed hypercube-face graph `X_3` has `n=12,m=32` and the canonical profile `a=3,b=8,t=0,F=empty,r=0`. The family `X_k` remains D2C for `k>=3` but lies below `M(n)` for `k>=4`. In the exact zero-residual boundary, B-edges change one A-code coordinate, orient from `0` to `1`, and every zero coordinate has exactly one outgoing flip. This yields the Boolean-flow / factorial-growth cutoff above.
 
 **OLD LINE PRESERVED:** fixed-order candidates, audits, exact-block work, residual h-index/receiver theory, selected-incidence Hall and the complete mixed `{4,5}` all-E closure remain available. Canonical ledger remains **4626 exclusions / 952 survivors / 3632 whole-state closures**; no promotion changes.
 
-**AUTOMATION STATUS:** hourly task is `Eventual D2C Research`; it must retain the published 12-vertex exception and `X_3` as hostile controls and not revert to the false all-order conjecture.
+**AUTOMATION STATUS:** hourly task is `Eventual D2C Research`. Per the user's instruction, this automated research window is bounded to three more days and a separate stop task is scheduled for **20 September 2026 at about 13:53 UK time**. The research automation must retain the published 12-vertex exception as a hostile control, must not revert to the false all-order 2019 conjecture, and must not optimize for first-proof priority on Erdős #742.
 
-**UNPRESERVED WORK:** None after this checkpoint.
+**UNPRESERVED WORK:** None after this audit/checkpoint once the commit is published.
 
-**DEFERRED ADMIN:** authoritative Figure-1 adjacency/isomorphism certification; fresh Lean recompilation of `Erdos742/Erdos742`; reviewer-facing README synchronization; older archive transfers; PR #2; unrelated CI/root narrative maintenance; full novelty search for the hypercube-face construction and Boolean-flow formulation.
+**DEFERRED ADMIN:** authoritative Figure-1 adjacency/isomorphism certification; fresh independent Lean recompilation of `Erdos742/Erdos742`; older archive transfers; PR #2; unrelated CI/root historical narrative maintenance; full novelty search for the hypercube-face construction and Boolean-flow formulation.
 
-**NEXT ACTION:** MATH: move one layer outward from the exact boundary. Treat small positive residual defect / small `r+e(F)` as perturbations of the Boolean coordinate-flow system. Seek a stability version: delete or charge a bounded number of exceptional cross incidences/F-edges so that most of `G[B]` still admits the coordinate orientation, then combine factorial expansion with the existing Hall/residual inequalities. The immediate target is an inequality of the form `n <= N(delta,e(F),...)` for triangle-containing graphs at second-extremal density, with the zero-residual theorem recovered at `(delta,e(F))=(0,0)`.
+**NEXT ACTION:** MATH: return to the perturbative Boolean-flow problem after this documentation/dependency transaction. Move one layer outward from `r=e(F)=0`: quantify how small residual mass / `F`-edge mass corrupts the coordinate-flow system, seek an inequality of the form `n<=N(delta,e(F),...)`, and use the 12-vertex graph as a regression control. Preserve the first theorem, counterexample or obstruction before broadening scope.
 <!-- CURRENT-STATUS:END -->

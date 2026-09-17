@@ -4,6 +4,8 @@
 
 **Status:** explicit candidate mathematical derivations; arithmetic REPRODUCED; independent mathematical and computational review OPEN. Nothing is promoted to PROJECT-CERTIFIED. Frozen n=25 and n=27 editions and the governed theorem ledger are unchanged. No novelty or priority is claimed. No complete order above 27 is claimed resolved.
 
+**Literature-dependency correction — 17 September 2026.** The 2019 Dailly–Foucaud–Hansberg all-order second-extremal Conjecture 3 is now known to be false. It was **not** used as a premise in the derivations below. The complement/total-domination correspondence used in Section 1 is the earlier Hanson–Wang (2003) result; the 2019 paper is relevant here only through separate proved results, including its dominating-edge theorem used in Section 6. See `project/research/post_ms/2026-09-17-stronger-pivot-v1/DEPENDENCY_AUDIT_2019_FALSE_CONJECTURE.md`.
+
 ## Main result derived in this session
 
 Candidate theorem: for n>=4, a diameter-two edge-critical graph with maximum degree
@@ -24,15 +26,16 @@ Source project manuscript: `project/reviews/n27/2026-09-07-candidate-v1/PROOF.md
 
 Published sources:
 
+- Hanson and Wang, *A note on extremal total domination edge critical graphs*, Utilitas Mathematica 63 (2003), 89–96: the D2C / total-domination-edge-critical complement correspondence used in Section 1.
 - Haynes, Henning, van der Merwe and Yeo, *A maximum degree theorem for diameter-2-critical graphs* (2014), Theorems 3.1–3.2 and Observation 3.4: https://d-nb.info/1372516379/34
-- Dailly, Foucaud and Hansberg, *Strengthening the Murty–Simon conjecture on diameter 2 critical graphs* (2019), dominating-edge reduction: https://arxiv.org/abs/1812.08420
+- Dailly, Foucaud and Hansberg, *Strengthening the Murty–Simon conjecture on diameter 2 critical graphs* (2019), https://arxiv.org/abs/1812.08420 : the proved dominating-edge results used to reduce scope in Section 6. **Their Conjecture 3 is not used as an input and is now known to be false as an all-order statement.**
 - Fan's strict edge bound, as reproduced on page 2 of Wang, *On Murty-Simon Conjecture*: https://arxiv.org/pdf/1205.4397 . Fan's original full proof was not re-audited here. The new high-degree theorem does not depend on this bound.
 
 The 2014 paper gives a published 0.7n degree result; a 2016 preprint states a 0.6756n result in its theorem, https://arxiv.org/html/1610.00360v2 . Neither is needed to derive (H). Searches did not locate the 0.630601937... statement, but no comprehensive novelty determination has been completed.
 
 ## 1. Residual setup
 
-Let G have order n, m edges and maximum degree b. A universal vertex forces G to be a star, since any edge between other vertices would be redundant. Bipartite diameter-two graphs are complete bipartite. Handle those cases separately. For remaining non-bipartite G, H=complement(G) is 3-total-domination-edge-critical by the published correspondence.
+Let G have order n, m edges and maximum degree b. A universal vertex forces G to be a star, since any edge between other vertices would be redundant. Bipartite diameter-two graphs are complete bipartite. Handle those cases separately. For remaining non-bipartite G, H=complement(G) is 3-total-domination-edge-critical by the Hanson–Wang correspondence. This is a proved structural equivalence and does not depend on the false 2019 second-extremal conjecture.
 
 Choose v of minimum H-degree a=n-1-b. Put A=N_H(v), B=V(H) minus N_H[v], C=H[A], F=complement(C) on A. Then |A|=a, |B|=b. Write d_i for degrees in F.
 
@@ -119,7 +122,7 @@ The scanner drops the nonnegative e(C[Y]) term. These are necessary conditions, 
 
 ## 6. General near-half witness reduction
 
-At n>27, the published dominating-edge result excludes non-bipartite dense graphs with a dominating edge. Every remaining witness pair uv has d_G(u)+d_G(v)<=n-1. A witness is an edge with no common neighbour, or a nonedge with exactly one common neighbour; every critical edge belongs to the unique path of length at most two of some witness. A direct witness with degree sum n would be dominating.
+At n>27, the **proved** dominating-edge result of Dailly–Foucaud–Hansberg (2019), which is logically separate from their false Conjecture 3, excludes non-bipartite dense graphs with a dominating edge. Every remaining witness pair uv has d_G(u)+d_G(v)<=n-1. A witness is an edge with no common neighbour, or a nonedge with exactly one common neighbour; every critical edge belongs to the unique path of length at most two of some witness. A direct witness with degree sum n would be dominating.
 
 For n=2s, Delta<=s gives m<=s^2; equality would make every degree s and leave no witness pair in the no-dominating-edge case.
 

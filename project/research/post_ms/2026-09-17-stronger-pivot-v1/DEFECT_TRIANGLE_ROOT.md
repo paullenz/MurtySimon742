@@ -4,6 +4,8 @@
 
 **Status:** internal structural reformulation plus finite diagnostic; not promoted. The finite diagnostic is not a proof of the general root lemma.
 
+> **Literature correction — 17 September 2026.** The 2019 Dailly–Foucaud–Hansberg all-order second-extremal Conjecture 3 is false. Throughout this file `M(n)=floor((n-1)^2/4)+1` is therefore a **comparison threshold for the sufficiently-large/eventual problem**, not an assumed universal bound. None of the identities or conditional inequalities below depends on Conjecture 3 being true.
+
 ## 1. The correct signed coordinate is `delta=r-e(F)`
 
 Retain the canonical complement-root setup. Recall
@@ -24,15 +26,15 @@ Let
 
 `M(n)=floor((n-1)^2/4)+1`.
 
-The Dailly–Foucaud–Hansberg stronger bound
+The 2019 proposed second-extremal threshold
 
 `m<=M(n)`
 
-is equivalent to
+is equivalent, whenever one is trying to establish it in a stated scope, to
 
 > `delta >= b(n-b)-M(n)`.                            (D2)
 
-This makes the change from the old Murty–Simon target explicit: the old programme often tried to rule out `delta<0`, whereas the stronger conjecture asks for a **positive linear defect** when `b` is near `n/2`.
+The all-order version is false; the live question is whether this defect inequality can be forced for all sufficiently large graphs in the appropriate non-bipartite scope. This makes the change from the old Murty–Simon target explicit: the old programme often tried to rule out `delta<0`, whereas the eventual second-extremal problem asks for a **positive linear defect** when `b` is near `n/2`.
 
 ### Parity forms
 
@@ -72,9 +74,9 @@ In particular:
 
 - `Q=0` iff the chosen maximum-degree root belongs to no triangle;
 - if `G` is triangle-free, `Q=0` for every possible root;
-- the expanded-`C5` equality family is triangle-free, so the selected/Hall system is not expected to encode those already-known equality examples.
+- the expanded-`C5` family at the comparison level is triangle-free, so the selected/Hall system is not expected to encode those equality-model examples directly.
 
-The stronger conjecture is already known in the triangle-free D2C class. Therefore the natural remaining use of this project machinery is the triangle-containing branch.
+The second-extremal threshold is already established in the triangle-free D2C class. Therefore the natural remaining use of this project machinery for the eventual problem is the triangle-containing branch.
 
 ## 3. Two universal lower bounds on the defect
 
@@ -197,11 +199,11 @@ The present degree-balance lemma sharpens the interpretation:
 - at exact half degree they have no incoming selected B-pairs and are mutually H-adjacent;
 - just above half degree their incoming selected-pair load is bounded by the small degree offset `2b-n`.
 
-So multiple-zero-source component signatures remain a useful boundary problem, but they are **not** the universal central object of the stronger conjecture.
+So multiple-zero-source component signatures remain a useful boundary problem, but they are **not** the universal central object of the eventual second-extremal problem.
 
 ## 6. The triangle-bearing branch and the root issue
 
-Dailly–Foucaud–Hansberg record that the stronger conjecture is already proved for triangle-free D2C graphs. Their conjectured large-order equality family `C5+` is triangle-free. Thus the unresolved structural work can focus on D2C graphs containing a triangle.
+The second-extremal threshold is already proved for triangle-free D2C graphs, and the expanded-`C5` large-order equality model is triangle-free. Thus the unresolved structural work for an eventual classification can focus on D2C graphs containing a triangle, while retaining the known finite counterexamples as mandatory controls.
 
 If such a graph has a maximum-degree vertex contained in a triangle, choose it as the canonical root. Then (T2) gives
 

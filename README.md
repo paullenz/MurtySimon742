@@ -1,16 +1,31 @@
-# Murty–Simon / Erdős Problem #742
+# Murty–Simon / Erdős Problem #742 — research archive and eventual D2C programme
 
 <!-- Keep the live overview and status tables here. Put dated updates below them, never above them. -->
 <!-- CURRENT-STATUS:START -->
 ## Current status
 
-**Mathematical summary synchronized through `9ee0c02b9d4d…` — tight-block rigidity, disjoint-receiver routing and the triangle-free extra-selection budget; internally derived under explicit bridge hypotheses; NOT PROMOTED.** The [multi-spare proof](project/research/general_n/2026-09-15-spare-receiver-rigidity-v1/PRESERVED_HANDOFF.md) covers **|M|=d+k with 0<=k<d**. The [disjoint-receiver proof](project/research/general_n/2026-09-15-disjoint-receiver-boundary-v1/PRESERVED_HANDOFF.md) constrains extra selections; the [subsequent triangle-free corollary](project/research/general_n/2026-09-15-triangle-free-receiver-budget-v1/PRESERVED_HANDOFF.md) gives **E<=floor(d^2/4) whenever |M|<3d**. All use the full canonical selected-representative system and the tight-block assumptions **|T|=|H|=d**. The elementary triangle-free edge inequality is standard; no novelty is claimed for it. External mathematical review remains OPEN.
+**Programme reset — 17 September 2026.** Two external developments materially change the interpretation of this repository:
 
-**Canonical ledger: 4,626 exclusions / 952 survivors / 3,632 whole-state closures.** No new catalogue replay, new exclusion count or promotion is claimed by these structural proofs or this README synchronization. The unrestricted conjecture is **not claimed proved**. Finite set and auxiliary-graph checks are not original graph realizations or catalogue exclusions. For **|M|<2d**, the stronger earlier conclusion is E=0; at **|M|=2d**, the high-source induced graph is bipartite; for **2d<|M|<3d**, only triangle-freeness and the edge budget are asserted, with an explicit five-cycle set-family control ruling out an unjustified bipartiteness claim.
+1. A public repository, [`Erdos742/Erdos742`](https://github.com/Erdos742/Erdos742), created in August 2026 before this project, contains Lean source claiming the full Erdős #742 inequality and a separate equality-clause formalisation. Source-level dependency inspection has found no target-chain gap; the visible `sorry` in the inequality file is an unused negative statement. A fresh independent Lean/mathlib rebuild has **not** yet been performed here, so this repository does not present that work as peer-reviewed acceptance. Strategically, however, **first-solution priority for Murty–Simon / Erdős #742 is treated as unavailable unless that external proof fails audit**.
+2. The stronger all-order second-extremal Conjecture 3 of Dailly–Foucaud–Hansberg (2019), with threshold `M(n)=floor((n-1)^2/4)+1`, is **false**. Radosavljević, Stanić and Živković (2024) report a 12-vertex D2C graph with 32 edges, while `M(12)=31`. The live target is therefore the **sufficiently-large / eventual second-extremal classification**, not the false all-order statement.
+
+A targeted [dependency audit](project/research/post_ms/2026-09-17-stronger-pivot-v1/DEPENDENCY_AUDIT_2019_FALSE_CONJECTURE.md) found **no load-bearing use of the false 2019 conjecture as a premise** in the inspected fixed-order proofs, canonical selected/residual bridge, residual h-index derivations, Hall machinery, signed-surplus identities or zero-residual cutoff. The important correction is attribution and quantifier, not a proof demotion: the D2C/total-domination complement correspondence is the earlier Hanson–Wang (2003) result, and the 2019 paper also contains separate proved dominating-edge theorems that remain valid.
+
+**Current post-pivot result — internal, not promoted.** In the exact canonical boundary `t=0`, `F=empty`, hence `r=0`, the B-side becomes a directed Boolean-coordinate flow. A factorial path bound combined with root criticality gives the internally checked theorem:
+
+> Any non-bipartite D2C graph in this exact boundary with `m>=floor((n-1)^2/4)+1` must have **`n<=294`**.
+
+See [`ZERO_RESIDUAL_BOUNDARY.md`](project/research/post_ms/2026-09-17-stronger-pivot-v1/ZERO_RESIDUAL_BOUNDARY.md) and its exact integer checker. The `n=294` endpoint is only a necessary-conditions survivor, not a claimed graph. The known 12-vertex exception is treated as a mandatory hostile control.
+
+**Canonical Murty–Simon ledger remains unchanged:** **4,626 exclusions / 952 survivors / 3,632 whole-state closures.** All fixed-order candidate proofs, audits, exact-block work, h-index/receiver theory, selected-incidence Hall and the complete mixed `{4,5}` all-excess closure remain preserved with their existing trust boundaries. The discovery of earlier external work changes novelty/priority, not the internal logical status of those artifacts.
+
+**Automation window:** hourly `Eventual D2C Research` is active for a bounded three-day trial and is scheduled to stop on **20 September 2026 at about 13:53 UK time**. Autonomous work must not revert to the false 2019 all-order conjecture, must retain the 12-vertex graph as a regression test, and must not optimize for first-proof priority on Erdős #742.
 
 **Live operational handoff:** [`CURRENT_STATE.md`](CURRENT_STATE.md). **Reviewers:** [`START_HERE_FOR_REVIEWERS.md`](START_HERE_FOR_REVIEWERS.md) · [`REVIEW_READY_INDEX.md`](releases/REVIEW_READY_INDEX.md) · [papers and review materials](#papers-and-review-materials).
 
-## Current status: fixed-order candidates
+## Current status: fixed-order Murty–Simon candidates
+
+These are preserved candidate proofs produced before the external August 2026 solution was discovered. External review remains open; no first-solution priority is claimed.
 
 | Scope | Preserved candidate result; external review open |
 |---|---|
@@ -25,22 +40,21 @@
 | n=34 | e(G)<=289, equality exactly K(17,17); reviewer-v2; final heavy certificate hand-replaced |
 | n=35 | e(G)<=306, equality exactly K(17,18); reviewer-v1 |
 
-## Current status: general research
-
-In this table, `m_R` denotes the receiver count `|M|`; E is the total number of extra high-source selections beyond the tight block.
+## Current status: active and preserved research
 
 | Workstream | Current recorded position and trust boundary |
 |---|---|
+| External #742 collision | `Erdos742/Erdos742` predates this project and contains Lean inequality/equality formalizations. Source-level target-chain audit is encouraging; independent fresh recompilation and expert review remain open. First-proof priority is not claimed here. |
+| False 2019 all-order strengthening | Published 12-vertex, 32-edge D2C graph exceeds `M(12)=31`; all-order Conjecture 3 is false. [Literature correction](project/research/post_ms/2026-09-17-stronger-pivot-v1/LITERATURE_CORRECTION_2024_EXCEPTION.md). |
+| Dependency audit | No inspected proof depends on false Conjecture 3 as an axiom. Hanson–Wang (2003) supplies the complement/total-domination correspondence; separate proved 2019 dominating-edge results remain legitimate inputs. [Audit](project/research/post_ms/2026-09-17-stronger-pivot-v1/DEPENDENCY_AUDIT_2019_FALSE_CONJECTURE.md). |
+| Live mathematical target | Sufficiently-large / eventual second-extremal classification around `M(n)=floor((n-1)^2/4)+1`, especially the triangle-containing branch not covered by the known triangle-free theory. |
+| Signed-surplus framework | `delta=b(n-b)-m=r-e(F)` and zero-residual-source structure extend the old residual framework into nonpositive surplus. [Corrected pivot](project/research/post_ms/2026-09-17-stronger-pivot-v1/SIGNED_SURPLUS_PIVOT.md). |
+| 12-vertex hostile control | Independently reconstructed hypercube-face family gives `X_3` with `n=12,m=32`; direct authoritative isomorphism to the published Figure 1 remains open. For `k>=4`, the same D2C family lies below the second-extremal threshold. |
+| Zero-residual Boolean flow | At `t=0,F=empty,r=0`, B-edges are one-coordinate flips; factorial expansion plus criticality yields the internal `n<=294` cutoff at `m>=M(n)`. External review/novelty open. |
 | Canonical finite frontier | **4,626 exclusions / 952 survivors / 3,632 whole-state closures**; unchanged |
-| Tight-label strict/equality families | **41 active states internally certified, NOT_PROMOTED**; 19 overlap the earlier 170 forced-core candidates, 22 are additional distinct keys |
-| Forced-core independent audit | **170 candidate exclusions and 136 survivor witnesses audited; AUDIT_COMPLETE_NOT_PROMOTED**; separate promotion gate still applies |
-| One-spare review | [OS1/OS2 dependency review](https://github.com/paullenz/MurtySimon742/blob/43dc689300eb20efa30e2b848a5326f3c5dcbd6f/CURRENT_STATE.md): no gap found under the stated assumptions; same-assistant internal review, not independent acceptance |
-| Spare-receiver structural proof | **0<=k<d**, `m_R=d+k`: high-source rigidity and k+1-occurrence residual-union bound; [full proof and checks](project/research/general_n/2026-09-15-spare-receiver-rigidity-v1/PRESERVED_HANDOFF.md); internal conditional proof, external review open |
-| Disjoint-receiver restriction | Extra high-source selections can use only pairs with disjoint tight-destination sets; at `m_R=2d`, complementary pairs give bipartiteness and `E<=floor(d^2/4)`; [preserved proof](project/research/general_n/2026-09-15-disjoint-receiver-boundary-v1/PRESERVED_HANDOFF.md); not promoted |
-| Triangle-free extension | For `m_R<3d`, `E<=floor(d^2/4)`; for `2d<m_R<3d`, bipartiteness is not asserted. [Full corollary, five-cycle control and elementary checks](project/research/general_n/2026-09-15-triangle-free-receiver-budget-v1/PRESERVED_HANDOFF.md); internal, not a new catalogue result |
-| Numerical replay | Original equality package records 4,588 Python/C++ decisions agreeing; **not freshly rerun in this continuation**. New symbolic results have not been applied to the full catalogue |
-| Next mathematical question | Connect the extra-selection budget E to forced residual-label demand when high sources can have extras. Do not reuse the rigid-case residual-union argument without a new justification |
-| Other unresolved work | State 3349 q-enumeration; transport of larger inputs; completion reporter NOT_IMPLEMENTED; separate audit promotion and external review |
+| Tight-label / Hall programme | All earlier exact-block, spare-receiver, h-index, routing, Hall-majorization and mixed `{4,5}` all-excess results remain preserved as tools, mainly for positive-surplus/high-degree branches. |
+| Forced-core independent audit | **170 candidate exclusions and 136 survivor witnesses audited; AUDIT_COMPLETE_NOT_PROMOTED**; separate promotion gate remains historical/open as recorded below. |
+| Automation | Three-day hourly trial of the eventual D2C direction; scheduled stop 20 September 2026 ~13:53 UK. |
 
 **Status-first maintenance rule:** keep this live overview and these tables before chronological updates. Refresh this block at reviewer-facing milestones; use CURRENT_STATE.md for routine research transactions. Historical next-action and policy paragraphs below are retained for auditability, not instructions overriding this overview or AGENTS.md. Every active-line commit updates CURRENT_STATE; README updates are required at substantive reviewer-facing changes and whenever README itself is edited, not on every routine checkpoint. Pause/stop instructions override further research and housekeeping.
 <!-- RELATIONAL-FULL-PROMOTION:PROMOTED -->
@@ -48,11 +62,13 @@ In this table, `m_R` denotes the receiver count `|M|`; E is the total number of 
 
 **Reviewers — start here:** [`START_HERE_FOR_REVIEWERS.md`](START_HERE_FOR_REVIEWERS.md) and [`releases/REVIEW_READY_INDEX.md`](releases/REVIEW_READY_INDEX.md). GitHub Issues/comments are preferred for counterexamples, corrections and reproducibility reports.
 
-Open, reproducible research on the Murty–Simon conjecture / Erdős Problem #742. **The unrestricted conjecture is not claimed proved.** External mathematical review, novelty assessment and independent third-party reproduction remain OPEN. The project actively welcomes hostile review, counterexamples, literature corrections and independent reproduction.
+Open, reproducible research on diameter-2-critical graphs. This repository began as a Murty–Simon / Erdős #742 attack and preserves that work in full. Following discovery of the earlier August 2026 formalized solution and the 2024 counterexample to the 2019 stronger all-order conjecture, the active programme now studies the **eventual second-extremal problem**. External mathematical review, novelty assessment and independent third-party reproduction remain OPEN. The project actively welcomes hostile review, counterexamples, literature corrections and independent reproduction.
 
 ## Dated research updates — preserved history
 
 The following dated updates retain earlier evidence, failures and next-action lists. They are superseded where applicable by the live overview above and CURRENT_STATE.md. Historical run observations are not fresh checks of running jobs. The [complete pre-layout README](archive/status-snapshots/2026-09-15/README_before_status_first.md) is also preserved byte-for-byte.
+
+**17 September 2026 — external-solution collision, false-strengthening correction and programme pivot.** A public August 2026 repository, `Erdos742/Erdos742`, was located after this project had already developed substantial fixed-order and general machinery. Its Lean source claims both the Erdős #742 inequality and Murty–Simon equality clause; source-level inspection has not found a target-chain gap, but independent fresh compilation and expert review remain outstanding. The project therefore no longer treats a first proof of #742 as the principal objective. A subsequent literature check found that Dailly–Foucaud–Hansberg Conjecture 3 (2019), initially considered as the replacement target, is already false: Radosavljević, Stanić and Živković (2024) report a 12-vertex, 32-edge D2C graph exceeding `M(12)=31`. The active objective is now the sufficiently-large/eventual form. A targeted dependency audit found no proof dependency on the false conjecture and corrected the relevant attribution/prose. The first post-pivot exact-boundary theorem gives `n<=294` under `t=0,F=empty,r=0,m>=M(n)`. Automated research is intentionally limited to a three-day trial ending 20 September 2026.
 
 **15 September 2026 — README synchronization correction.** The status-first layout was repaired at `03aba3e50706…`, but the leading mathematical summary still identified the multi-spare checkpoint and the already-treated `|M|=2d` question. This update retains that layout and reconciles the overview and table with the disjoint-receiver and triangle-free proofs through `9ee0c02b9d4d…`. The [complete preceding README](archive/status-snapshots/2026-09-15/README_before_triangle_free_sync_9ee0c02b.md) and [complete latest mathematical handoff](project/research/general_n/2026-09-15-triangle-free-receiver-budget-v1/PRESERVED_HANDOFF.md) are copied byte-for-byte. No ledger, proof, audit gate or historical failure is altered by the correction.
 
@@ -100,7 +116,7 @@ The following register is retained from the preceding README. In particular, its
 | Forced-core final artifact | GitHub Actions artifact **10396963173**, `canonical-forced-core-discovery-final`, digest `sha256:60409b6049e9436aeaaaf898509f7022abb3b3ade030359174379ba22e238705`; its `SUMMARY.json` records `promotion_status=DISCOVERY_ONLY_NOT_PROMOTED`, 170 N34 candidate exclusions, 0 N35, 136 rescanned survivors and 782 remaining survivors if the candidates validate |
 | Documentation/process guards | Every commit must pair README/CURRENT_STATE updates. Historical N30 navigation failure, red-team-history guard failure and standalone row471 paired-status process failure remain visible rather than repainted green. Fourteen historical root `README_*` / `CURRENT_STATE_*` snapshots from 14 September are preserved under [`archive/status-snapshots/2026-09-14/`](archive/status-snapshots/2026-09-14/README.md) so the root has only the two live status surfaces |
 | Commit-attribution provenance | Historical commit `aa6c41fcede3bf2e7e935a00840030ef0b9ee1df` was created by restoration run `34905883642`, whose actor and triggering actor were `paullenz`; its script used synthetic identity `Research verification <verification@users.noreply.github.com>`, which GitHub mapped to account `verification` (display name Bill Wang). The commit is retained without history rewrite; the one-off workflow is now manual-only and future workflow-created commits use canonical `github-actions[bot]`. Mathematical/canonical status unchanged. |
-| Active continuation | The full 170-exclusion/136-witness independent audit is complete and not promoted. Inspect the final receiver-price census aggregate, preserve its evidence, apply the separate reviewed promotion gate, and implement the completion reporter; see the latest checkpoint above and CURRENT_STATE.md |
+| Active continuation | Historical entry: the full 170-exclusion/136-witness independent audit completed and was not promoted at this checkpoint. Current active continuation is the eventual D2C programme described at the top of this README and in CURRENT_STATE.md. |
 
 **Checkpoint — 15 September 2026, completed forced-core canonical discovery.** The authoritative resumed-enumeration workflow **34950746007** completed successfully on `25fd9044e9d8ef52326d27f9a97732916aef5dc4`. Of the 306 canonical states whose stored witnesses failed the new forced-core theorem, exhaustive enumeration finds **170 candidate whole-state exclusions and 136 survivors**. Combined with the 646 canonical states whose stored witnesses already survive the theorem, this leaves **782 definite survivors of the forced-core route**. The final aggregate has **170 N34 candidate exclusions and 0 N35 candidate exclusions**. The earlier 124 locally certified rescue witnesses all reappear among the 136 survivors; the 24 independently audited complete exclusions all occur among the 170. The final artifact is **10396963173**, digest `sha256:60409b6049e9436aeaaaf898509f7022abb3b3ade030359174379ba22e238705`. **Canonical/promoted mathematical status is unchanged: 4,626 exclusions / 952 survivors / 3,632 whole-state closures. The 170 are discovery candidates, not ledger-promoted closures.** If and only if all 170 pass the independent audit and reviewed promotion gate, the finite frontier would become 4,796 exclusions / 782 survivors / 3,802 whole-state closures. External mathematical review remains OPEN.
 
@@ -158,9 +174,20 @@ A hostile audit can strengthen confidence, weaken a claim, expose a defect, or f
 
 ## Current research chain
 
-Specific graph orders and explicitly defined relaxed profiles are laboratories for structural principles, not substitutes for an all-order proof. The [canonical graph-to-constraint bridge](project/research/general_n/2026-09-11-canonical-bridge-v1/CANONICAL_BRIDGE.md) translates a hypothetical graph into selected quasi-edge representatives, residual incidences, label demands, missing-pair loads and incoming capacities.
+The active chain is now the **eventual dense D2C** programme:
 
-**Latest continuation:** [strict tight-label blocks](project/research/general_n/2026-09-15-tight-label-block-v1/README.md), [equality rigidity](project/research/general_n/2026-09-15-tight-label-equality-v1/README.md), [one-spare internal review](https://github.com/paullenz/MurtySimon742/blob/43dc689300eb20efa30e2b848a5326f3c5dcbd6f/CURRENT_STATE.md), [multi-spare rigidity](project/research/general_n/2026-09-15-spare-receiver-rigidity-v1/PRESERVED_HANDOFF.md), [disjoint-receiver routing](project/research/general_n/2026-09-15-disjoint-receiver-boundary-v1/PRESERVED_HANDOFF.md), and [the triangle-free budget below 3d receivers](project/research/general_n/2026-09-15-triangle-free-receiver-budget-v1/PRESERVED_HANDOFF.md). The latter symbolic work has not been applied to the full catalogue and is not promoted. Earlier routes and intermediate audit states remain below as historical evidence.
+- [Literature correction / 12-vertex exception](project/research/post_ms/2026-09-17-stronger-pivot-v1/LITERATURE_CORRECTION_2024_EXCEPTION.md).
+- [False-2019-conjecture dependency audit](project/research/post_ms/2026-09-17-stronger-pivot-v1/DEPENDENCY_AUDIT_2019_FALSE_CONJECTURE.md).
+- [Corrected signed-surplus pivot](project/research/post_ms/2026-09-17-stronger-pivot-v1/SIGNED_SURPLUS_PIVOT.md): `delta=b(n-b)-m=r-e(F)` and zero-source structure.
+- [Residual-defect / rooted-triangle interface](project/research/post_ms/2026-09-17-stronger-pivot-v1/DEFECT_TRIANGLE_ROOT.md).
+- [Hypercube-face exception family](project/research/post_ms/2026-09-17-stronger-pivot-v1/HYPERCUBE_FACE_EXCEPTION.md), including the 12-vertex hostile control mechanism.
+- [Zero-residual Boolean-flow boundary](project/research/post_ms/2026-09-17-stronger-pivot-v1/ZERO_RESIDUAL_BOUNDARY.md): internal `n<=294` cutoff at the second-extremal threshold.
+
+The immediate target is a stability/perturbation theorem away from `r=e(F)=0`: quantify how a bounded amount of residual/F-edge mass corrupts the coordinate flow, then combine factorial expansion with the existing Hall/residual inequalities. The 12-vertex graph must remain a regression test for every proposed universal statement.
+
+The earlier Murty–Simon chain remains preserved as a mathematical toolbox and audit record. Specific graph orders and explicitly defined relaxed profiles were laboratories for structural principles, not substitutes for an all-order proof. The [canonical graph-to-constraint bridge](project/research/general_n/2026-09-11-canonical-bridge-v1/CANONICAL_BRIDGE.md) translates a hypothetical graph into selected quasi-edge representatives, residual incidences, label demands, missing-pair loads and incoming capacities.
+
+**Historical latest continuation before the programme pivot:** [strict tight-label blocks](project/research/general_n/2026-09-15-tight-label-block-v1/README.md), [equality rigidity](project/research/general_n/2026-09-15-tight-label-equality-v1/README.md), [one-spare internal review](https://github.com/paullenz/MurtySimon742/blob/43dc689300eb20efa30e2b848a5326f3c5dcbd6f/CURRENT_STATE.md), [multi-spare rigidity](project/research/general_n/2026-09-15-spare-receiver-rigidity-v1/PRESERVED_HANDOFF.md), [disjoint-receiver routing](project/research/general_n/2026-09-15-disjoint-receiver-boundary-v1/PRESERVED_HANDOFF.md), and [the triangle-free budget below 3d receivers](project/research/general_n/2026-09-15-triangle-free-receiver-budget-v1/PRESERVED_HANDOFF.md). The later Hall-ramp work closes the entire mixed `{4,5}` selected-excess axis; none of this is promoted to a new all-order theorem merely by the pivot.
 
 - [Shared block slack](project/research/general_n/2026-09-14-joint-blocks-v1/README.md): one shared low-block slack budget; original707/713 and fresh708/715 at that checkpoint.
 - [Source-priced selected incidence](project/research/general_n/2026-09-14-source-sharing-v1/README.md): exact source-row dualization; restored replay34905883642 passed while the earlier failure remains preserved.
@@ -221,4 +248,4 @@ This reviewer-facing navigation surface is protected. Detailed canonical status 
 
 ## Trust boundary
 
-Hand derivation, same-assistant verification, remote CI, durable preservation and external acceptance are distinct. No timeout, missing output, unsuccessful search or floating infeasibility is proof. The canonical selected/residual bridge remains the principal correlated external-review dependency.
+Hand derivation, same-assistant verification, remote CI, durable preservation and external acceptance are distinct. No timeout, missing output, unsuccessful search or floating infeasibility is proof. The canonical selected/residual bridge remains the principal correlated external-review dependency. The external `Erdos742/Erdos742` formalization is likewise not treated as independently accepted until rebuilt/reviewed, while the false 2019 all-order conjecture is explicitly excluded from the project's proof assumptions.

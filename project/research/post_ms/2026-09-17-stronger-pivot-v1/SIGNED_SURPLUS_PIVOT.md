@@ -1,16 +1,18 @@
-# Signed-surplus pivot toward the stronger dense D2C conjecture
+# Signed-surplus pivot toward the eventual dense D2C problem
 
 17 September 2026. Research directed by Paul Lenz; derivation by ChatGPT/Geeps.
 
 **Status:** internal hand mathematics; not promoted; external mathematical review and novelty review open.
 
+> **Literature correction — 17 September 2026.** The first version of this note treated Dailly–Foucaud–Hansberg Conjecture 3 (2019) as a viable all-order target. A published 12-vertex, 32-edge D2C graph exceeds `floor((n-1)^2/4)+1`, so that all-order conjecture is false. The mathematics below does **not** use Conjecture 3 as a premise: `M(n)=floor((n-1)^2/4)+1` is retained as a comparison threshold for the sufficiently-large/eventual problem. See `LITERATURE_CORRECTION_2024_EXCEPTION.md` and `DEPENDENCY_AUDIT_2019_FALSE_CONJECTURE.md`.
+
 ## 1. Why the project target changes
 
 A public repository, `Erdos742/Erdos742`, created before the present project, contains a Lean formalisation claiming the full Erdős #742 inequality and a separate equality-clause formalisation. Source-level audit has not found a dependency gap on the target chain; the one visible `sorry` in the inequality file is an unused negative statement. A clean independent recompilation has not yet been performed here, so this is not treated as peer-reviewed acceptance. It is nevertheless enough to remove any sensible assumption of first-proof priority for the original Murty–Simon target unless the external proof later fails audit.
 
-The existing project mathematics remains useful because it is structurally different. The new active target is the stronger dense non-bipartite problem proposed by Dailly, Foucaud and Hansberg.
+The existing project mathematics remains useful because it is structurally different. The active target is now the **sufficiently-large/eventual second-extremal problem** around the threshold proposed in 2019, not the false all-order form.
 
-Their Conjecture 3 (Discrete Mathematics 342 (2019), 3142–3159, DOI 10.1016/j.disc.2019.06.023) states:
+Dailly, Foucaud and Hansberg's Conjecture 3 (Discrete Mathematics 342 (2019), 3142–3159, DOI 10.1016/j.disc.2019.06.023) proposed:
 
 > If `G` is a non-bipartite diameter-2-critical graph of order `n`, and `G` is not the exceptional six-vertex graph `H5`, then
 >
@@ -18,9 +20,11 @@ Their Conjecture 3 (Discrete Mathematics 342 (2019), 3142–3159, DOI 10.1016/j.
 >
 > with equality exactly for their expanded-five-cycle family `C5+` and thirteen listed small graphs.
 
-Qiao Lin and Xiaolin Wang, Discrete Applied Mathematics 375 (2025), 332–337, DOI 10.1016/j.dam.2025.06.025, prove that every sufficiently large `C5`-free D2C graph at or above this threshold is complete bipartite. Thus any sufficiently large non-bipartite equality example or counterexample to the stronger statement must contain a `C5`.
+That statement is now known to be false in all orders because of the published 12-vertex exception. It remains mathematically natural as an eventual comparison threshold.
 
-This file asks what survives from our residual/Hall framework when the edge count is lowered from the Turán level to this stronger threshold.
+Qiao Lin and Xiaolin Wang, Discrete Applied Mathematics 375 (2025), 332–337, DOI 10.1016/j.dam.2025.06.025, prove that every sufficiently large `C5`-free D2C graph at or above this threshold is complete bipartite. Thus any sufficiently large non-bipartite equality example or counterexample to an eventual form must contain a `C5`.
+
+This file asks what survives from our residual/Hall framework when the edge count is lowered from the Turán level to this second-extremal threshold. None of the algebra below assumes the threshold is a universal theorem.
 
 ## 2. Residual setup without assuming positive surplus
 
@@ -48,7 +52,7 @@ The selected-edge inequality also does not use positive surplus: for every selec
 
 so a positive demand `s_i=q` needs at least `q` distinct selected sources with residual degree at least `q`.
 
-The earlier proof used `t>0` only to eliminate sources with `rho_u=0`. At the stronger threshold those sources can no longer be discarded; they become the main structural object.
+The earlier proof used `t>0` only to eliminate sources with `rho_u=0`. At the second-extremal threshold those sources can no longer be discarded; they become a main structural object.
 
 ## 3. Zero-source defect lemma
 
@@ -105,7 +109,7 @@ This proves the lemma.
 - `t>0` implies there are no zero sources, recovering the old residual-activity theorem.
 - At `t=0`, every zero source has `e(F[S])=0`; its selected side can contain only edgeless components of `F`.
 
-This component-signature formulation is the main new object for the stronger conjecture.
+This component-signature formulation is the main new object for the eventual second-extremal problem.
 
 ## 4. Signed h-index inequality
 
@@ -151,7 +155,7 @@ Combining (1)–(3) yields (SH). Replacing (1) by the coarser `sum_i s_i<=ah` an
 
 When `z=0`, (SH) is exactly the earlier saturation inequality. The point is not to weaken the old theorem, but to identify the missing state variable in the signed-surplus regime.
 
-## 5. Where the stronger threshold sits in `t`
+## 5. Where the second-extremal threshold sits in `t`
 
 Define
 
@@ -161,7 +165,7 @@ and write
 
 `e=m-M(n)`.
 
-Thus `e=0` is the proposed stronger extremal level, while a counterexample to the bound has `e>=1`.
+Thus `e=0` is the **2019 proposed / eventual comparison level**. `e>=1` means the graph lies above that threshold; because the 2019 all-order conjecture is false, this is not by itself a contradiction to any valid theorem.
 
 Let
 
@@ -177,7 +181,7 @@ Therefore
 
 > `t=e+d^2-(s-1)`.                                    (T-even)
 
-At the first violating level `e=1`, positive surplus is automatic only once
+At the first above-threshold level `e=1`, positive surplus is automatic only once
 
 `d^2>=s-1`.
 
@@ -191,13 +195,13 @@ Therefore
 
 > `t=e+d(d-1)-(s-1)`.                                 (T-odd)
 
-At the first violating level `e=1`, positive surplus is automatic only once
+At the first above-threshold level `e=1`, positive surplus is automatic only once
 
 `d(d-1)>=s-1`.
 
-So the existing positive-surplus Hall/residual machinery remains potentially powerful in the high-degree branch, but it cannot by itself address the balanced-degree branch of the stronger conjecture.
+So the existing positive-surplus Hall/residual machinery remains potentially powerful in the high-degree branch, but it cannot by itself address the balanced-degree branch of the eventual problem.
 
-## 6. The predicted expanded-`C5` extremals lie on the negative side
+## 6. The expanded-`C5` comparison family lies on the negative side
 
 Take an expanded 5-cycle from `C5+`. Let three consecutive cycle vertices be replaced by nonempty independent twin classes `X1,X2,X3`, with the other two cycle vertices left single. Put
 
@@ -228,7 +232,7 @@ In both parities,
 
 for `s>1`.
 
-This is the decisive strategic fact: the conjectured extremal family is not a small perturbation of our `t>0` regime. It lives a linear distance into negative surplus. Continuing the old selected-excess ladder would therefore optimize the wrong coordinate system for the new problem.
+This is the decisive strategic fact: the natural expanded-`C5` eventual equality model is not a small perturbation of our `t>0` regime. It lives a linear distance into negative surplus. Continuing the old selected-excess ladder would therefore optimize the wrong coordinate system for the new problem.
 
 ## 7. New decomposition of the research problem
 
@@ -254,7 +258,7 @@ The objective is to show that many zero sources force a small cyclic/twin block 
 
 ### `C5` as the structural anchor
 
-Lin–Wang's 2025 theorem says that, for sufficiently large order at this density, the `C5`-free branch is already complete bipartite. Thus a non-bipartite extremal or counterexample must contain a `C5`. A promising route is to combine an actual `C5` with the zero-source component signatures rather than trying to recover `C5` indirectly from scalar inequalities.
+Lin–Wang's 2025 theorem says that, for sufficiently large order at this density, the `C5`-free branch is already complete bipartite. Thus a sufficiently large non-bipartite extremal or counterexample to an eventual classification must contain a `C5`. A promising route is to combine an actual `C5` with the zero-source component signatures rather than trying to recover `C5` indirectly from scalar inequalities.
 
 ## 8. Exact next target
 
