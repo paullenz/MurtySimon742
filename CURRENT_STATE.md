@@ -3,126 +3,165 @@
 > **Active target — 17 September 2026.** The live problem is the sufficiently-large/eventual second-extremal D2C classification around `M(n)=floor((n-1)^2/4)+1`. The false all-order 2019 strengthening is not assumed. The published order-12, size-32 D2C obstruction remains a mandatory hostile control. Murty–Simon / Erdős #742 work remains preserved but is not the live optimization target.
 
 <!-- CURRENT-STATUS:START -->
-**CHECKPOINT CLASS:** `FIRST_POSITIVE_RESIDUAL_FULL_TIGHT_LAYER_EXCLUDED_NOT_PROMOTED`.
+**CHECKPOINT CLASS:** `SECOND_POSITIVE_RESIDUAL_FULL_TIGHT_HAMMING_DEFECT_CLOSED_FOR_K_GE_17_NOT_PROMOTED`.
 
-**WORK MODE:** `EVENTUAL_D2C_MATH`. The residual-zero full-tight Boolean boundary had already been classified at predecessor `5951cbb99378524492dd7afdb09e7a4984d25f11`: only `k=2` (`H5`) and `k=4` (`X_3`) survive. This unit did not duplicate that work. It attacked the first positive-residual layer and extracted a stronger Boolean witness-code cover theorem.
+**WORK MODE:** `EVENTUAL_D2C_MATH`. This unit continued the full tight-antipode Boolean branch after the predecessor `0a311bae71ee15045926dbbe4fa3e70737c88998`. It did not return to a broad scalar census. The key move was to combine the Boolean witness-cover theorem with the preserved F-separation rule. At the first surviving layer `a=k+1,r=2k`, all A-codes are forced distinct, so residual-coordinate counts become Hamming-ball degree bounds in `F=G[A]`. This is strong enough to put the entire layer strictly below `M(n)` for `k>=17`.
 
 ## Preserved entry point
 
-For a non-bipartite D2C graph above `M(n)`, the preserved Q0 theorem forces every maximum-degree root `v` to have rooted triangles `Q=e(G[N(v)])>0`. For `n>=14`, the all-private edge-witness theorem forces a disjoint-support antipode. Tight antipodes form a matching. If they cover `B=N(v)`, write
+For a non-bipartite D2C graph above `M(n)`, the preserved Q0 theorem forces every maximum-degree root to have rooted triangles. For `n>=14`, the all-private edge-witness theorem forces a disjoint-support antipode. Tight antipodes form a matching. If they cover `B=N(v)`, write
 
 `B=P_1 dotcup ... dotcup P_k`, `|P_i|=2`, `b=2k`.
 
-Then `G[B]` is a 2-lift of `K_k`; every `A`-vertex is a Boolean transversal; and
+Then `G[B]` is a 2-lift of `K_k`; every A-vertex is a Boolean transversal; and
 
 `Q=k(k-1)`,
 
 `r=k(a-k+1)`,
 
-`delta=k(a-k+1)-e(F)`.
+`delta=r-e(F)`.
 
-The order-12/32 hostile control is exactly the `k=4,r=0` Boolean/cube normal form.
+The residual-zero classification preserves only `k=2` (`H5`) and `k=4` (`X_3`). The Boolean witness-cover theorem then gives, for `k>=5`, at least `k+1` distinct A-codes and therefore excludes the algebraic layer `a=k,r=k`.
 
-## Boolean witness-code cover
+## New theorem — Hamming residual support bounds F-degree
 
-Choose endpoint bits on the antipode fibres and let `sigma_ij` encode the 2-lift. For a Boolean code `c in {0,1}^k`, define its switched graph `L_c` on `[k]` by
+Now impose the first surviving layer
 
-`ij in E(L_c)` iff `sigma_ij xor c_i xor c_j = 1`.
+`a=k+1`, `r=2k`.
 
-Let
+The Boolean witness-cover theorem forces exactly `a=k+1` distinct codes: every A-label has a different code.
 
-`ell(c)=#{j:deg_{L_c}(j)=1}`,
+For a label `x`, let `D_x subseteq [k]` be its residual coordinate set and `R_x=|D_x|`. Every coordinate outside `D_x` is selected at `x`. The preserved selected-incidence F-separation rule says that every F-neighbour `y` agrees with `x` at each selected coordinate. Hence
 
-`phi(c)=k-ell(c)`.
+`{j:c_j(x)!=c_j(y)} subseteq D_x`.
 
-A selected H-cross incidence at source fibre `j` can occur only when `j` is a leaf of `L_c`; the unique leaf neighbour determines the rooted B-edge represented by that incidence. Multiple A-labels with the same code cannot reuse that rooted B-edge. Therefore, if `C` is the set of **distinct** A-codes,
+Because all A-codes are distinct, an F-neighbour must differ on a nonempty subset of `D_x`. Therefore
 
-> `Q <= sum_{c in C} ell(c)`.
+> `d_F(x) <= 2^{R_x}-1`.
 
-Equivalently,
+Every A-vertex already has exactly `k` B-neighbours and maximum degree is `2k`, so also
 
-> `sum_{c in C} phi(c) <= k|C|-k(k-1)`.
+> `d_F(x) <= k`.
 
-The same structure can be packaged as an orientation-code graph `Omega_sigma`: one vertex per Boolean code and one edge per physical B-edge, joining its two possible orientation-witness codes. The actual code support `C` must be a vertex cover of `Omega_sigma`.
+Thus
+
+> **HAMMING DEGREE BOUND**
+>
+> `d_F(x) <= g_k(R_x):=min(k,2^{R_x}-1)`.
+
+The exact residual ledger is
+
+`sum_x R_x = r = 2k`.
 
 Full proof:
 
-`project/research/post_ms/2026-09-17-stronger-pivot-v1/FIRST_POSITIVE_RESIDUAL_TIGHT_COVER_GAP.md`.
+`project/research/post_ms/2026-09-17-stronger-pivot-v1/SECOND_POSITIVE_RESIDUAL_HAMMING_DEFECT.md`.
 
-## New switching theorem — at least k+1 witness codes for k>=5
+## Global F-bound and second-extremal consequence
 
-Two local facts drive the proof.
+For every `k>=19` and every integer `R>=0`,
 
-1. If `k>=6`, switching a perfect matching by a genuinely nontrivial complete cut leaves at most two degree-one vertices. Thus any different switched state has `phi>=k-2`.
-2. If two distinct switched graphs each have exactly one non-leaf vertex, with exceptional coordinates `a,b`, then their switching cut is `{a,b}` (up to complement). The first graph is either:
-   - the full star centred at `a`; or
-   - `K_{1,k-3} dotcup K_2`, with the isolated edge containing `b`.
+`g_k(R) <= (k/5) R`.
 
-Assume a code cover has at most `k` distinct codes.
+The only nontrivial checks are `R=1,2,3,4`; the strongest is `15 <= 4k/5`, valid from `k=19`. For `R>=5`, simply use `g_k(R)<=k<=kR/5`.
 
-- Fewer than `k-1` codes do not have enough leaf capacity.
-- `k-1` codes would force every switched graph to be a perfect matching, impossible for `k>=5` by the residual-zero switching obstruction.
-- With exactly `k` codes, total leaf deficiency is at most `k`. Perfect-matching states are impossible for even `k>=6` because every genuinely different switch costs at least `k-2`; odd `k` has no perfect matching. Hence all `k` codes must be one-defect states.
-- Distinct one-defect states are then either a family of stars or, in the only non-star possibility, a three-state `K_{1,k-3}+K_2` triad. Neither can cover both physical B-edges over every quotient edge: the star family fails by a binary complement-sign obstruction, and the triad leaves every pair inside the common set `D` uncovered when `k>=5`.
+Therefore
 
-Therefore:
+`2e(F) <= (k/5) sum R_x = 2k^2/5`,
 
-> **BOOLEAN WITNESS-COVER THEOREM — internal candidate.** For every full tight-antipode Boolean system with `k>=5`, the set of distinct A-codes covering all rooted B-edges satisfies
+so
+
+> `e(F) <= k^2/5`.
+
+For `k=17,18`, the uniform majorant
+
+`g_k(R) <= (15/4)R`
+
+gives the integral bounds
+
+`e(F)<=63` at `k=17`,
+
+`e(F)<=67` at `k=18`.
+
+At `a=k+1`,
+
+`n=3k+2`,
+
+`m=2k^2+2k+e(F)`.
+
+For `k>=19`, the Hamming bound and the parity-independent lower estimate
+
+`M(3k+2) >= (9k^2+6k+4)/4`
+
+give
+
+`m < M(3k+2)`.
+
+The two boundary calculations are
+
+- `k=17`: `m<=675 < M(53)=677`;
+- `k=18`: `m<=751 < M(56)=757`.
+
+Hence:
+
+> **SECOND POSITIVE-RESIDUAL FULL-TIGHT DEFECT THEOREM — internal candidate.** In the full tight-antipode Boolean normal form, the layer
 >
-> `|C| >= k+1`.
-
-Since `a>=|C|`, the exact full-cover residual formula gives
-
-> `a>=k+1`,
+> `a=k+1`, `r=2k`
 >
-> `r=k(a-k+1)>=2k`.
+> lies strictly below the second-extremal comparison level for every `k>=17`.
 
-Thus the entire algebraically first positive residual layer
+Consequently an above-`M(n)` full-tight counterexample with `k>=17` must satisfy
 
-`a=k`, `r=k`
+> `a>=k+2`,
+>
+> `r=k(a-k+1)>=3k`.
 
-is impossible. Together with the residual-zero classification, there is a genuine two-layer gap away from the `H5/X_3` boundary.
+This is a density closure inside the full-tight branch, not an eventual theorem for arbitrary antipode configurations.
 
 ## Verification
 
 Files:
 
-- `FIRST_POSITIVE_RESIDUAL_TIGHT_COVER_GAP.md`
-- `check_first_positive_residual_tight_cover_gap.py`
-- `FIRST_POSITIVE_RESIDUAL_TIGHT_COVER_CHECK_SUMMARY.json`
+- `SECOND_POSITIVE_RESIDUAL_HAMMING_DEFECT.md`
+- `check_second_positive_residual_hamming_defect.py`
+- `SECOND_POSITIVE_RESIDUAL_HAMMING_CHECK_SUMMARY.json`
 
-Executed finite regression:
+Executed arithmetic replay:
 
-- all canonical switching gauges through `k=6` (1,098 signings);
-- exact minimum orientation-code vertex-cover distributions:
-  - `k=5`: minimum `8` (the theorem only requires `6`);
-  - `k=6`: minimum `10` (the theorem only requires `7`);
-- 80 one-defect switching-pair records at `k=5` and 150 at `k=6`, with no classification failure.
+- every `k=17,...,5000`;
+- 71,720 pointwise envelope records across all changing values of `g_k(R)`;
+- zero failure;
+- boundary values reproduced exactly: `(k,m_bound,M)=(17,675,677)` and `(18,751,757)`.
 
-These are regression evidence only. The universal theorem is the hand proof.
+The finite arithmetic check is evidence only. The Hamming and comparison arguments above are the hand proof.
 
 ## Negative controls and trust boundary
 
-- `k=2,r=0`: classical six-vertex `H5` mechanism remains allowed.
-- `k=4,r=0`: independent twelve-vertex `X_3` cube/Boolean mechanism remains allowed, with `n=12,m=32>M(12)=31`.
-- No all-order second-extremal statement is claimed.
+- `k=2,r=0`: classical `H5` remains allowed.
+- `k=4,r=0`: the independent `X_3` Boolean/cube construction remains allowed with `n=12,m=32>M(12)=31`.
+- The present theorem starts at `k=17` and therefore does not suppress the hostile finite mechanism.
 - External mathematical review and novelty assessment remain open.
-
-The 2024 published drawing has still not been directly certified against an authoritative adjacency list; the project does not overstate that identification.
+- No all-order second-extremal statement is claimed.
 
 ## Strategic consequence
 
-The exact Boolean exception cannot scale through either `r=0` or the first positive layer `r=k` once `k>=5`. The next full-tight layer is
+The full-tight Boolean obstruction now has three successive structural barriers:
 
-`a>=k+1`, `r>=2k`.
+1. `r=0`: only the finite `H5/X_3` switching mechanisms survive;
+2. `r=k`: impossible for `k>=5` by the Boolean witness-code cover theorem;
+3. `r=2k`: below `M(n)` for `k>=17` by the new Hamming-support defect theorem.
 
-Residual mass alone is not enough: the eventual theorem needs a lower bound on
+For sufficiently large fibre count, any above-threshold full-tight witness is therefore pushed to
 
-`delta=r-e(F)`.
+`a>=k+2`, `r>=3k`.
 
-The natural next structural input is the already-proved F-separation rule: if coordinate `j` is selected at label `x`, every F-neighbour of `x` agrees with `x` in coordinate `j`. Hence an F-edge can differ only in coordinates residual at **both** endpoints. The next unit should use this Hamming/residual support restriction to upper-bound `e(F)` in the `a=k+1,r=2k` layer, rather than running a broad scalar census.
+**NEXT ACTION:** critically attack the next layer
 
-Use `(AMC)` only when returning to unmatched/errorful antipodes. Do not revisit Q0, the closed mixed `{4,5}` ladder, or first-proof optimization for Erdős #742.
+`a=k+2`, `r=3k`.
+
+The Boolean witness-cover theorem still guarantees at least `k+1` distinct codes, so there is at most one duplicated code class. Extend the Hamming-support degree bound to this bounded-multiplicity setting, carefully pricing the extra F-edges that one duplicate code can create. Determine whether the `r=3k` layer is also below `M(n)` for all sufficiently large `k`. If the duplicate class causes a genuine obstruction, preserve its exact structure rather than hiding it.
+
+Use `(AMC)` only when returning to near-full/unmatched/errorful antipodes. Do not revisit Q0, the closed mixed `{4,5}` ladder, or first-proof optimization for Erdős #742.
 
 **UNPRESERVED WORK:** None after this current-state commit.
 <!-- CURRENT-STATUS:END -->
