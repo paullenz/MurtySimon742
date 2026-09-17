@@ -195,7 +195,7 @@ Using (3.2) and `2k=6+2S`, condition (5.1) becomes
 4x+2y-2g-6\le0. \tag{5.2}
 \]
 
-Hence only the following attachment patterns can survive the leaf-package test:
+Apart from the fixed tiny case `g=0,S=0,k=3`, only the following attachment patterns can survive the leaf-package test:
 
 1. `g=1`: the lopsided ray `(0,0,z)`;
 2. `g=2`: `(0,y,z)` with
@@ -208,7 +208,7 @@ Hence only the following attachment patterns can survive the leaf-package test:
    \]
    with the largest attachment `z` arbitrary subject to `z>=y`.
 
-Thus all other `t=0` three-defect states already satisfy `tau(Omega)>2k` before the exceptional-core edges are used.
+Thus every other nontrivial `t=0` three-defect state already satisfies `tau(Omega)>2k` before the exceptional-core edges are used.
 
 ### 5.2 At least one isolated leaf-pair: `t>=1`
 
@@ -272,4 +272,5 @@ This is more likely to yield a short externally reviewable complete three-defect
 - Formulae (3.1) and (4.4) concern only the leaf-leaf subgraph and are exact hand decompositions.
 - They give a lower bound on the full `tau(Omega_sigma)`; no claim is made here that they determine the full cover number.
 - The remaining narrow rays are not declared closed except where an independent structural theorem is already cited above.
+- The fixed `g=0,t=0,k=3` case is explicitly outside the eventual argument.
 - The order-12/32 hostile control lies in the residual-zero perfect-matching mechanism and is unaffected.
