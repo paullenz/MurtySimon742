@@ -1,0 +1,28 @@
+{
+  "status": "PASS_LEAF_RICH_SWITCHING_EXCLUSIONS",
+  "date": "2026-09-17",
+  "scope": "finite regression evidence only; universal exclusions are hand proofs",
+  "zero_signing_checks": [
+    {"k": 5, "leaf_bearing_codes": 10, "leaf_count_each": 4, "orientation_components": [5, 5], "orientation_cover_number": 8},
+    {"k": 6, "leaf_bearing_codes": 12, "leaf_count_each": 5, "orientation_components": [6, 6], "orientation_cover_number": 10},
+    {"k": 7, "leaf_bearing_codes": 14, "leaf_count_each": 6, "orientation_components": [7, 7], "orientation_cover_number": 12},
+    {"k": 8, "leaf_bearing_codes": 16, "leaf_count_each": 7, "orientation_components": [8, 8], "orientation_cover_number": 14},
+    {"k": 9, "leaf_bearing_codes": 18, "leaf_count_each": 8, "orientation_components": [9, 9], "orientation_cover_number": 16},
+    {"k": 10, "leaf_bearing_codes": 20, "leaf_count_each": 9, "orientation_components": [10, 10], "orientation_cover_number": 18},
+    {"k": 11, "leaf_bearing_codes": 22, "leaf_count_each": 10, "orientation_components": [11, 11], "orientation_cover_number": 20},
+    {"k": 12, "leaf_bearing_codes": 24, "leaf_count_each": 11, "orientation_components": [12, 12], "orientation_cover_number": 22}
+  ],
+  "perfect_matching_cover_checks": [
+    {"k": 6, "cover_lower_bound": 11, "max_A_above_M": 12, "impossible_above_M": false},
+    {"k": 8, "cover_lower_bound": 22, "max_A_above_M": 16, "impossible_above_M": true},
+    {"k": 10, "cover_lower_bound": 37, "max_A_above_M": 20, "impossible_above_M": true},
+    {"k": 12, "cover_lower_bound": 56, "max_A_above_M": 24, "impossible_above_M": true},
+    {"k": 14, "cover_lower_bound": 79, "max_A_above_M": 28, "impossible_above_M": true},
+    {"k": 16, "cover_lower_bound": 106, "max_A_above_M": 32, "impossible_above_M": true},
+    {"k": 18, "cover_lower_bound": 137, "max_A_above_M": 36, "impossible_above_M": true},
+    {"k": 20, "cover_lower_bound": 172, "max_A_above_M": 40, "impossible_above_M": true}
+  ],
+  "star_defect_thresholds": {"1": 5, "0": 6, "-1": 8},
+  "uniform_full_star_exclusion_from_k": 8,
+  "negative_control": "k=4 residual-zero X3 boundary remains outside the exclusions"
+}
