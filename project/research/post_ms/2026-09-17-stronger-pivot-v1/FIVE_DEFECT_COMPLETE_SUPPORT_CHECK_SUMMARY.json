@@ -1,0 +1,55 @@
+{
+  "status": "PASS_FIVE_DEFECT_COMPLETE_SUPPORT_EXCLUSION",
+  "support_threshold_k": 8,
+  "t0_no_pair_bounded_patterns": 23,
+  "t0_min_tau_minus_2k_by_bounded_prefix": {
+    "0,0,0,0": 1,
+    "0,0,0,1": 5,
+    "0,0,0,2": 10,
+    "0,0,0,3": 16,
+    "0,0,0,4": 18,
+    "0,0,0,5": 20,
+    "0,0,0,6": 22,
+    "0,0,0,7": 24,
+    "0,0,1,1": 12,
+    "0,0,1,2": 14,
+    "0,0,1,3": 16,
+    "0,0,1,4": 18,
+    "0,0,1,5": 20,
+    "0,0,1,6": 22,
+    "0,0,2,2": 24,
+    "0,0,2,3": 26,
+    "0,0,2,4": 28,
+    "0,1,1,1": 24,
+    "0,1,1,2": 26,
+    "0,1,1,3": 28,
+    "0,1,1,4": 30,
+    "0,1,2,2": 30,
+    "1,1,1,1": 30
+  },
+  "lopsided_t0": {
+    "base_z": 3,
+    "dangerous_rooted_core_masks": [861, 894, 895],
+    "core_descriptions": {
+      "861": "universal pendant root plus P4 on the other four exceptions",
+      "894": "universal pendant root plus C4 on the other four exceptions",
+      "895": "universal pendant root plus K4-e on the other four exceptions"
+    },
+    "exact_tau_minus_2k": {"861": 2, "894": 2, "895": 1},
+    "formula_check_z_range": [3, 8],
+    "z2_labelled_equality_cores": 5
+  },
+  "t1_ray_min_tau_minus_2k": {
+    "g1": 5,
+    "g2_y1": 14,
+    "g2_y2": 19,
+    "g2_y3": 26,
+    "g2_y4": 28,
+    "g3_1_1": 26
+  },
+  "t2_g1_min_tau_minus_2k": 13,
+  "g0_fixed_min_tau_minus_2k": {"t2": 3, "t3": 11, "t4": 23},
+  "method": "hand leaf-package finite-width reduction + hand residual ray monotonicity + exact finite five-vertex core audit; three lopsided low cores have direct all-z component formulas",
+  "negative_control": "k=4 X3 residual-zero perfect-matching mechanism is outside theorem scope",
+  "trust_boundary": "internal certificate theorem; external mathematical review and hand compression of the finite rooted-core table remain open"
+}
