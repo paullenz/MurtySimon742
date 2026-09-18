@@ -3,22 +3,17 @@
 > **Active target — 18 September 2026.** The live problem is the sufficiently-large/eventual second-extremal D2C classification around `M(n)=floor((n-1)^2/4)+1`. The false all-order 2019 Dailly–Foucaud–Hansberg strengthening is not assumed. The published 2024 order-12, size-32 D2C graph is a mandatory hostile control. Murty–Simon / Erdős #742 is preserved but is not the live optimization target.
 
 <!-- CURRENT-STATUS:START -->
-**CHECKPOINT CLASS:** `FULL_TIGHT_CLOSED_ROOTED_RESIDUAL_SPLIT_LOCAL_COUPLING_FRONTIER`.
+**CHECKPOINT CLASS:** `FULL_TIGHT_CLOSED_ROOTED_WITNESS_SLOT_HAMMING_FRONTIER`.
 
 **WORK MODE:** `EVENTUAL_D2C_MATH`.
 
 The full-tight Boolean branch remains internally closed for sufficiently large matched cores (`k>=19`). The mixed `{4,5}` selected-excess ladder is closed and is not a live branch. The active branch is the triangle-containing unmatched/errorful antipode regime.
 
-The current structural spine is
+The current structural spine is now
 
-`residual defect -> rooted-triangle transfer -> exact unmatched-slack A-edge demand -> source/Hall beta support -> complete witness channels -> pair/local stability`.
+`rooted B-edge criticality -> exact unused witness-slot residual r -> saturation / hypercube stability -> A-edge Hamming energy -> forced non-direct A-edge demand -> pair-local matched/A-U capacity`.
 
-This checkpoint adds four connected results:
-
-1. the exact residual identity is rewritten as `f=(p-lambda)(p+u)+q+E_U-delta`, so every unit of unmatched slack is also one unit of forced A-edge demand;
-2. `s<=au` gives a lower bound on `q`, while the beta-sensitive q theorem plus a new load-one compression gives a parameter-only q ceiling and hence an additional `E_U` floor;
-3. the matched-B channel gets a second aligned-code capacity using the fact that the gamma complementary pairs partition the `p` tight fibres;
-4. the complete scalar synthesis is monotone and one-dimensional, but a finite diagnostic shows that this global collapse is still too weak: the next gain must remain complementary-pair/local rather than replacing pair slack by total `S`.
+The important change at this checkpoint is conceptual: the residual variable `r` is no longer only an algebraic remainder. It exactly counts the unused `B--A` nonedge slots after one criticality witness slot is assigned injectively to every rooted triangle edge in `G[B]`.
 
 No global eventual second-extremal theorem is claimed.
 
@@ -33,7 +28,7 @@ The published Radosavljevic--Stanic--Zivkovic (2024) Figure-1 D2C graph has been
 - rooted data `p=4,b=8,a=3,u=0,lambda=4`;
 - `q=s=f=r=0`, `Q=12`, `delta=0`, `E_U=0`, `L_A=12`, `D_M=1`.
 
-Its rooted-triangle transfer is endpoint-saturated: `Q-f=12`. At the canonical root `u=0`, `F_min=0=f`, and `A` is independent. The new residual split below is exactly `0=0` on this graph.
+Its rooted form is a universal root over `Q_3`, together with three A-vertices whose B-neighbourhoods are the three coordinate-zero faces. At the canonical root it is now recognized as an **exact witness-slot saturation model**: there are exactly 12 `B--A` nonedges, exactly 12 rooted B-edges, and every nonedge slot is used once.
 
 Certification:
 
@@ -85,7 +80,7 @@ Then
 >
 > `m<=M(n) iff delta>=D_M`.                               `(RT)`
 
-Rooted triangles are an exact transfer variable:
+Rooted triangles remain an exact transfer variable:
 
 > `r+Q=L_A+2f`,                                           `(RQ1)`
 >
@@ -93,9 +88,7 @@ Rooted triangles are an exact transfer variable:
 >
 > `delta=E_U+Q-f-lambda(p+u)+p`.                          `(RQ3)`
 
-### New exact residual split
-
-Rearranging `(RQ3)` gives
+Rearranging gives the exact residual split
 
 > `f=(p-lambda)(p+u)+q+E_U-delta`.                        `(RSF)`
 
@@ -107,19 +100,168 @@ where
 
 > `F_0=(p-lambda)(p+u)-D_M+1`.
 
-The previous bound `F_min=F_0+q` remains valid but is weaker by exactly `E_U`.
-
 Above threshold,
 
 > `S<=C_0:=2(D_M-1)+lambda(p+u)-p`.                       `(C0)`
 
-Core residual packages:
+## 3. New rooted witness-slot theorem
 
-`project/research/post_ms/2026-09-18-rooted-residual-supply-v1/`,
+Define the set of rooted witness slots
 
-`project/research/post_ms/2026-09-18-residual-split-aligned-matched-v1/`.
+> `Omega={(x,z) in B x A : xz notin E(G)}`.              `(WS0)`
 
-## 3. Preserved source/Hall stack and new q/E coupling
+Since `sum_{z in A}d(z)=e(A,B)+2f`,
+
+> `|Omega|=ab-e(A,B)=L_A+2f=Q+r`.                        `(WS1)`
+
+Every edge `xy in E(G[B])` lies in the triangle `vxy`. Triangle-edge criticality therefore gives an orientation, say source `x`, head `y`, and a witness `z in A` with
+
+> `N(x) cap N(z)={y}`.                                    `(WS2)`
+
+The witness cannot lie in `B`, because `v` would be a second common neighbour. A fixed ordered pair `(x,z)` can certify only one head. Hence choosing one certificate per rooted B-edge gives an injection
+
+> `E(G[B]) -> Omega`.                                     `(WS3)`
+
+Let `W` be its image and `Upsilon=Omega\W`. Then
+
+> `|Upsilon|=r`.                                          `(WS4)`
+
+Consequently
+
+> `delta=|Upsilon|-f`.                                    `(WS5)`
+
+The second-extremal target is exactly
+
+> `|Upsilon|>=f+D_M`.                                     `(WS6)`
+
+Thus an above-`M(n)` survivor is precisely a graph in which rooted B-edge criticality leaves fewer than `f+D_M` unused B--A witness slots.
+
+Core theorem package:
+
+`project/research/post_ms/2026-09-18-rooted-witness-slot-saturation-v1/`.
+
+## 4. Exact saturation and the hypercube mechanism
+
+For `x in B`, define the rooted A-incidence code
+
+> `phi(x)=(1_{xz in E})_{z in A} in {0,1}^A`.             `(HC0)`
+
+If `r=0`, the slot injection is a bijection. Then:
+
+1. `A` is independent, so `f=0` and `delta=0`;
+2. every `B--A` nonedge slot has a unique common neighbour, lying in `B`;
+3. every edge `xy in G[B]` is separated by exactly one A-coordinate,
+   
+   > `d_H(phi(x),phi(y))=1`;                              `(HC1)`
+4. therefore `G[B]` is bipartite by the parity of `phi`;
+5. for every `z in A`, if `S_z=N_B(z)` and `C_z=B\S_z`, every `x in C_z` has exactly one B-neighbour in `S_z`.
+
+The proof that `A` is independent is itself informative. If an A-edge `yz` had different B-neighbourhoods, a saturated slot would already have an A common neighbour and could not be a rooted B-edge UCN slot. Hence `N_B(y)=N_B(z)`. But then criticality of `yz` has no possible B-witness, and an A-witness would share a B-neighbour with the source, again contradicting unique common neighbourhood.
+
+The published `X_3` graph is exactly the `a=3` saturated model with `phi(B)={0,1}^3`, `G[B]=Q_3`, and A the three coordinate-face vertices. This gives the finite exception a direct structural role in the eventual programme rather than treating it as unrelated small-order noise.
+
+## 5. Near-saturation collision identities
+
+For `(x,z) in Omega`, put
+
+> `c_B(x,z)=|N(x) cap N(z) cap B|`,
+>
+> `c_A(x,z)=|N(x) cap N(z) cap A|`.                       `(COL0)`
+
+Used slots have `c_B=1` and `c_A=0`.
+
+Define
+
+> `H_B=sum_{xy in E(B)} |N_A(x) triangle N_A(y)|`,        `(HB0)`
+>
+> `H_A=sum_{yz in E(A)} |N_B(y) triangle N_B(z)|`.        `(HA0)`
+
+Exact double counting gives
+
+> `H_B=Q+sum_{(x,z) in Upsilon} c_B(x,z)`,                `(HB1)`
+>
+> `H_A=  sum_{(x,z) in Upsilon} c_A(x,z)`.                `(HA1)`
+
+Since an A-vertex has at most `p+u` B-neighbours in the live partial-Boolean branch,
+
+> `H_B-Q<=r(p+u)`.                                        `(HB2)`
+
+Thus small `r` makes the rooted B-edge representation quantitatively close, in total edge-Hamming mass, to the saturated `d_H=1` hypercube model.
+
+## 6. New A-edge Hamming-energy residual bound
+
+An A-vertex satisfies
+
+> `d_A(z)=p+u-epsilon_z-d_U(z)`.
+
+Hence
+
+> `d_A(z)<=K_A:=min(p+u,a-1)`.                            `(KA)`
+
+Every unused slot contributes at most `K_A` to `(HA1)`, so
+
+> `H_A<=rK_A`.                                             `(HA2)`
+
+Let `c(z) in {0,1}^p` be the preserved tight-fibre Boolean code on A and define
+
+> `J_A=sum_{yz in E(A)} d_H(c(y),c(z))`.                  `(HAM1)`
+
+If an A-edge differs in `h` tight coordinates, its B-neighbourhoods differ in at least `2h` matched endpoints. Therefore
+
+> `rK_A>=H_A>=2J_A`.                                      `(HAM2)`
+
+Equivalently, for `K_A>0`,
+
+> `r>=ceil(2J_A/K_A)`.                                   `(HAM3)`
+
+This prices every A-edge according to how far it moves in the tight Boolean cube before any witness-channel split is used.
+
+A direct A-edge has complementary tight codes and therefore Hamming distance `p`. If `D` denotes direct A-edge traffic,
+
+> `rK_A>=2pD`,                                            `(DIR-R)`
+>
+> `D<=K_A r/(2p)=K_A(f+delta)/(2p)`.                     `(DIR-C)`
+
+This is independent of the preserved direct-fan surplus/stability theorems.
+
+## 7. Forced non-direct A-edge demand
+
+Write the exact A-edge witness-channel decomposition
+
+> `f=D+P_B+C`,                                             `(CH)`
+
+where `P_B` is matched-B traffic and `C` is A/U UCN traffic.
+
+Using `(DIR-C)` gives
+
+> `P_B+C`
+> ` >= [((2p-K_A)f-K_A delta)/(2p)]_+`.                  `(ND1)`
+
+Now put
+
+> `G=(p-lambda)(p+u)+q+E_U`,
+
+so `(RSF)` is `f=G-delta`. The delta terms collapse:
+
+> `P_B+C>=[(1-K_A/(2p))G-delta]_+`.                       `(ND2)`
+
+Therefore every above-threshold survivor obeys
+
+> `P_B+C`
+> ` >= [(1-K_A/(2p))((p-lambda)(p+u)+q+E_U)`
+> `      -(D_M-1)]_+`.                                    `(ND3)`
+
+This is the first bridge that uses residual geometry itself to remove a definite portion of the direct channel before the matched/A-U capacity is optimized.
+
+The preserved capacities include
+
+> `P_B<=aR_A(L_A)`,                                       `(MB)`
+>
+> `(lambda+1)C<=R_code(S)S`,                              `(AU)`
+
+and the stronger pair-resolved direct+A/U and fan packages remain available. A coarse global use of `(ND3)` with total `S` is still too weak; the gain should be retained into the pair allocation rather than collapsed immediately.
+
+## 8. Preserved source/Hall and q/E machinery
 
 For `x in A`, let `ell_x` be beta load and `k_x=p-ell_x`. The exact source-tuple hierarchy remains
 
@@ -139,78 +281,23 @@ Applying `(IST)` to all of `A` gives
 
 > `B_beta<=ap-Phi_r(a)`.                                  `(ITB)`
 
-For positive beta support `A_+={x:ell_x>0}`, define the preserved support floor `N_sup(B)`. Then
+The positive-support theorem gives the preserved `E_U` floor. The independent q coupling remains
 
-> `|A_+|>=N_sup(B_beta)`,                                 `(NSUP)`
+> `q>=ceil([u(lambda-p)-E_U]_+/2)`,                       `(QL)`
 
-and
-
-> `E_U`
-> ` >=u(p+u-1)-3au+B_beta`
-> `   +uN_sup(B_beta)-2a`.                                `(ST-E)`
-
-For parameter-only use put
-
-> `B_*=max(0,p(lambda+1-2p),pu-R_hat a)`,                 `(B*)`
-
-and
-
-> `E_*=max(0,u(p+u-1)-3au+B_*+uN_sup(B_*)-2a)`.          `(E*)`
-
-The independent beta-sensitive U-edge cap remains
+and the beta-sensitive q upper bound with load-one compression remains
 
 > `q<=au-B_beta+N_1`,                                     `(BQ)`
 
-where `N_1=|{x:ell_x=1}|`.
+with
 
-### New cross-edge q floor
+> `N_1<=floor((m_0a-B_beta)/(m_0-1))`,                    `(N1)`
 
-Since `s<=au`, the identity for `E_U` gives
+for `m_0=min(p,u)>=2`.
 
-> `q>=ceil([u(lambda-p)-E_U]_+/2)`.                       `(QL)`
+These should feed actual `q,E_U,L_A` values into `(ND3)` rather than be globalized prematurely.
 
-### New load-one compression
-
-Put `m_0=min(p,u)`. If `m_0>=2`, then
-
-> `N_1<=floor((m_0a-B_beta)/(m_0-1))`.                    `(N1)`
-
-Hence, using `B_beta>=B_*`,
-
-> `q<=Q_beta^*`
->
-> `:=min(binomial(u,2),`
-> `       au-B_*+floor((m_0a-B_*)/(m_0-1)))`.             `(QB*)`
-
-Therefore
-
-> `E_U>=[u(lambda-p)-2Q_beta^*]_+`.                       `(ECROSS)`
-
-The combined parameter-only unmatched-slack floor is
-
-> `E_hat=max(E_*,[u(lambda-p)-2Q_beta^*]_+)`.             `(EHAT)`
-
-For `m_0=1`, use only the trivial `q<=binomial(u,2)` in this step.
-
-## 4. Complete A-edge witness channels
-
-Every internal A-edge belongs to exactly one chosen channel:
-
-1. direct;
-2. matched-B witness;
-3. A/U unique-common-neighbour witness.
-
-Write their total traffics as `D`, `P_B`, `C`; then
-
-> `f=D+P_B+C`.                                             `(CH)`
-
-The preserved matched-B self-pricing theorem gives
-
-> `P_B<=aR_A(L_A)`,                                       `(MB)`
-
-where
-
-> `R_A(L)=max(2,floor((1+sqrt(1+4L))/2))`.                `(RA)`
+## 9. Preserved complete channel / local stability stack
 
 For Boolean code `c`, write
 
@@ -220,164 +307,78 @@ For Boolean code `c`, write
 
 and let `S_c,L_c` be the corresponding total/A-slack.
 
-With
+Aligned-code self-pricing remains
 
-> `D_0=5p+5u-3lambda-2`,
+> `S_c >= [(w_c/2)(3w_c/2-D_0)]_+`,                      `(AC1)`
 
-aligned-code self-pricing gives
+where
 
-> `S_c >= [(w_c/2)(3w_c/2-D_0)]_+`.                      `(AC1)`
+> `D_0=5p+5u-3lambda-2`.
 
 Define
 
 > `R_code(s)=max(0,floor((D_0+sqrt(D_0^2+12s))/3))`.      `(RC)`
 
-Then for every complementary pair with slack at most `S`,
+For a complementary pair `Pi`, direct and A/U traffic share the local capacity
 
-> `n_c,n_bar c<=R_code(S)/2`.                             `(RCH)`
+> `2(lambda+1)(D_Pi+C_Pi)`
+> ` <=R_code(S_Pi)(2L_Pi+S_Pi)`.                         `(CCP)`
 
-The preserved combined direct+A/U theorem is
+The matched-B channel self-prices via
 
-> `D+C`
-> ` <=[R_code(S)/(2(lambda+1))](2L_A+S)`.                `(GCC)`
+> `P_B<=aR_A(L_A)`,                                       `(MSP)`
 
-## 5. New aligned-code matched-B capacity
+with
 
-The preserved matched-foot complementary-pair inequality is
+> `R_A(L)=max(2,floor((1+sqrt(1+4L))/2))`.
 
-> `P_Pi`
-> ` <=g_Pi max(n_c,n_bar c)`
-> `   +sum_{i in I_Pi}min(t_i^0,t_i^1)`.                 `(CP4)`
+The newer aligned matched-B cap and direct bounded-surplus fan theorem remain preserved, but the previous scalar collapse replacing pair slack by total `S` was diagnostically too weak. The live use of these results should therefore remain complementary-pair or source-local.
 
-The gamma complementary pairs partition the `p` tight fibres, so
+## 10. External eventual reduction: C5 is mandatory
 
-> `sum_Pi g_Pi=p`.                                        `(GP)`
+Qiao Lin and Xiaolin Wang, *Discrete Applied Mathematics* 375 (2025), 332--337, DOI `10.1016/j.dam.2025.06.025`, prove that for sufficiently large `n`, every **C5-free** diameter-2-critical graph with at least
 
-Fibre polarization gives
+`floor((n-1)^2/4)+1`
 
-> `(lambda+1)sum_i min(t_i^0,t_i^1)`
-> ` <=R_A(L_A)L_A`.                                       `(POL)`
+edges is complete bipartite.
 
-Combining `(GP)`, `(POL)` and `(RCH)` gives the new second matched-B cap
+Therefore any sufficiently-large non-bipartite survivor at or above the live threshold must contain a `C5`. The live branch is already triangle-containing, so any eventual counterexample to the desired classification must contain **both a triangle and a C5**.
 
-> `P_B`
-> ` <= pR_code(S)/2`
-> `    +R_A(L_A)L_A/(lambda+1)`.                          `(AMB)`
+This is now a useful boundary condition for the near-saturation regime: the exact `r=0` model is hypercube-like/bipartite on `B`, while any eventual non-bipartite survivor must also realize a C5 somewhere in the full graph.
 
-Therefore
-
-> `P_B`
-> ` <=min(aR_A(L_A),`
-> `       pR_code(S)/2+R_A(L_A)L_A/(lambda+1))`.          `(AMB+)`
-
-Adding `(GCC)` gives the refined complete channel envelope
-
-> `f`
-> ` <=min(aR_A(L_A),`
-> `       pR_code(S)/2+R_A(L_A)L_A/(lambda+1))`
-> `   +[R_code(S)/(2(lambda+1))](2L_A+S).                 `(ACE+)`
-
-## 6. One-dimensional split feasibility
-
-For fixed `S`, substitute `L_A=S-E` into `(ACE+)` and call the right side `Cap(S,E)`.
-
-Then:
-
-- `Cap(S,E)` is nondecreasing in `S`;
-- `Cap(S,E)` is nonincreasing in `E`;
-- `chi(E):=E+ceil([u(lambda-p)-E]_+/2)` is nondecreasing in `E`.
-
-Using `(RSF+)`, `(QL)`, `S<=C_0`, and `E_U>=E_hat`, every above-threshold candidate satisfies
-
-> `F_0+chi(E_hat)<=Cap(C_0,E_hat)`.                        `(SCF)`
-
-Failure of `(SCF)` is a finite parameter-only exclusion.
-
-This is the strongest current global scalar synthesis of the source/Hall and complete-channel stacks.
-
-Core theorem:
-
-`project/research/post_ms/2026-09-18-residual-split-aligned-matched-v1/RESIDUAL_SPLIT_ALIGNED_MATCHED_CAPACITY.md`.
-
-## 7. Preserved direct bounded-surplus stability
-
-For a direct fan `D_x` of order `d`, put
-
-`W=(V\{v})\N(x)`,
-
-`h_y=epsilon_x+epsilon_y-(lambda+1)`,
-
-`eta=sum_{y in D_x}h_y`,
-
-`z=|V\(D_x union W)|=b+1-d-epsilon_x`.
-
-The four-exception theorem remains:
-
-> for `n>=23`, if `eta<=d-2` and `z<=4`, then the graph is triangle-free or `m<=M(n)`.
-
-Thus every live triangle-containing above-`M(n)` candidate of order at least 23 satisfies, for every direct fan,
-
-> `eta>=d-1`,
->
-> or
->
-> `z>=5`.                                                  `(FH5)`
-
-Equivalently,
-
-> `eta>=d-1`,
->
-> or
->
-> `d+epsilon_x<=b-4`.                                     `(FH6)`
-
-Core theorem:
-
-`project/research/post_ms/2026-09-18-combined-channel-four-exception-v1/DIRECT_FAN_BOUNDED_SURPLUS_FOUR_EXCEPTION_GATE.md`.
-
-## 8. Audit and diagnostic outcome
+## 11. Audit
 
 New package:
 
-`project/research/post_ms/2026-09-18-residual-split-aligned-matched-v1/`.
+`project/research/post_ms/2026-09-18-rooted-witness-slot-saturation-v1/`.
 
-Its checker records **850,000 algebra checks with zero failures**:
+The companion checker audits the rooted witness-slot identities on every graph-atlas D2C isomorphism class through order seven and every maximum-degree root, and separately reconstructs `X_3`:
 
-- 200,000 exact residual-split checks;
-- 200,000 cross-edge q-floor checks;
-- 150,000 load-one compression checks;
-- 200,000 aligned matched-cap algebra checks;
-- 100,000 split-cap monotonicity checks.
+- 21 D2C graph-atlas classes through order seven;
+- 50 maximum-degree roots;
+- 14 rooted B-edges checked for A-witness certificates;
+- 91 B--A nonedge slots;
+- 77 unused slots;
+- 27 saturated (`r=0`) roots;
+- zero failures of the exact collision identities or saturation consequences;
+- `X_3`: `Q=12`, `|Omega|=12`, `r=0`, `H_B=12`, `H_A=0`.
 
-A conservative finite scalar diagnostic (`3<=p<=30`, `1<=u<=2p`, root-imbalance beta floor plus `r=3` source support) finds:
+These finite checks are audit support only. The promoted claims above are hand arguments.
 
-- 56,238 parameter tuples;
-- 10,298 already beta-impossible;
-- 45,940 remaining scalar tuples;
-- zero additional generic closures from either the old collapsed channel criterion or `(SCF)`.
+## 12. Live frontier
 
-The aligned matched-B cap can reduce the old scalar channel allowance (minimum observed ratio `9/11`), but on all 21,739 scanned tuples with `F_0>0`, the old branch `aR_A(L_A)` is already the smaller matched cap. Thus the improvement does not attack the forced-A-edge region in the conservative scan.
+The strongest next move should keep the new residual geometry local rather than return to a global scalar envelope.
 
-This is the key strategic obstruction from the session: **another global replacement of pair slack by total `S` is unlikely to close the live branch.**
+Priority order:
 
-The computations are audit/diagnostic support only; the promoted claims are the hand inequalities above.
+1. combine the forced non-direct demand `(ND3)` with the **complementary-pair** A/U and matched-B capacities before summing pair slack;
+2. exploit `(HB1)/(HB2)` and the Lin--Wang C5 requirement to understand how a C5 can coexist with a near-saturated hypercube-like rooted core;
+3. use the preserved source/Hall beta-support stack to constrain `q,E_U` in the same local allocation.
 
-## 9. Live research frontier
+The new key dichotomy is:
 
-The next move should keep complementary-pair allocation or direct-fan locality intact.
+- if `r` is small, rooted B-edge criticality is close to exact hypercube saturation and A-edge tight-code Hamming energy is small;
+- if A-edge Hamming/direct mass is large, `(HAM2)` converts it into unused slots and hence residual defect, forcing more of the required A-edge mass into the already self-priced non-direct witness channels.
 
-The compact live system is now:
-
-1. exact target `delta>=D_M`;
-2. exact split `(RSF)`, so unmatched slack itself raises forced A-edge demand;
-3. source/Hall beta support plus `(QL)/(QB*)` gives `E_U` floors;
-4. complete actual-slack channel capacity `(ACE+)`;
-5. direct bounded-surplus stability `(FH5)/(FH6)`;
-6. A/U complementary-pair self-pricing from the preserved fan packages.
-
-The finite diagnostic says the scalar envelope has too much room. The highest-value next theorem should therefore be **local**: either a complementary-pair version of the residual demand that prevents all forced `f` from moving to unrelated slack-rich pairs, or an aggregate use of `(FH5)` showing that a large direct share of the forced A-edge traffic necessarily pays hole surplus before the channel sum is globalized.
-
-Do not return to the closed mixed `{4,5}` ladder, and do not optimize for first-proof priority on Erdős #742.
-
-The order-12 `X_3` exception remains explicitly allowed throughout.
+Do not return to the closed mixed `{4,5}` selected-excess ladder, and do not optimize for first-proof priority on Erdős #742.
 <!-- CURRENT-STATUS:END -->
