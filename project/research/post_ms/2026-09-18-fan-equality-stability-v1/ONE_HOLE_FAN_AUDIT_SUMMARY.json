@@ -1,0 +1,15 @@
+{
+  "date": "2026-09-18",
+  "scope": "Independent graph-atlas audit of generic one-hole fan kernels.",
+  "d2c_isomorphism_classes": 21,
+  "statistics": {
+    "generic_one_hole_fans": 7,
+    "complement_degree_checks": 14,
+    "tau_one_head_stability_checks": 7,
+    "rooted_one_hole_fans": 3,
+    "A_witness_root_hole_checks": 0,
+    "A_witness_clique_pair_checks": 0
+  },
+  "failures": 0,
+  "trust_boundary": "The atlas contains no rooted A-witness instance of the one-hole pattern, so the A-witness root-hole/clique theorem is not empirically exercised here; it rests on the hand proof. The scan audits only generic one-hole complement-matching and tau=1 stability kernels, not Boolean-code, U/A capacity, or eventual claims."
+}
