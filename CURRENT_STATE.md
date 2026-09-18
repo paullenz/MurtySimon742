@@ -3,17 +3,15 @@
 > **Active target — 18 September 2026.** The live problem is the sufficiently-large/eventual second-extremal D2C classification around `M(n)=floor((n-1)^2/4)+1`. The false all-order 2019 Dailly–Foucaud–Hansberg strengthening is not assumed. The published 2024 order-12, size-32 D2C graph is a mandatory hostile control. Murty–Simon / Erdős #742 is preserved but is not the live optimization target.
 
 <!-- CURRENT-STATUS:START -->
-**CHECKPOINT CLASS:** `FULL_TIGHT_CLOSED_ROOTED_SLOT_PAIR_CROSS_DEFICIT_FRONTIER`.
+**CHECKPOINT CLASS:** `PAIR_HALL_DENSITY_CUT_STABILITY_FRONTIER`.
 
 **WORK MODE:** `EVENTUAL_D2C_MATH`.
 
-The full-tight Boolean branch remains internally closed for sufficiently large matched cores (`k>=19`). The mixed `{4,5}` selected-excess ladder is closed. The active branch is the triangle-containing unmatched/errorful antipode regime.
+The full-tight Boolean branch remains internally closed for sufficiently large matched cores (`k>=19`). The mixed `{4,5}` selected-excess ladder is closed. The active branch is the triangle-containing unmatched/errorful antipode regime. No global eventual second-extremal theorem is claimed.
 
 The current structural spine is
 
-`rooted B-edge criticality -> exact unused-slot residual -> local A-coordinate Hamming budget -> complementary-pair internal non-direct demand -> local matched-B/A-U capacity -> residual threshold`.
-
-No global eventual second-extremal theorem is claimed.
+`rooted witness-slot residual -> local A-coordinate Hamming budget -> complementary-pair Hall demand -> exact cut decomposition -> capacity-density majorization -> beta/source localization or near-equality cut rigidity`.
 
 ## 1. Mandatory hostile control
 
@@ -24,11 +22,11 @@ The published Radosavljevic--Stanic--Zivkovic (2024) graph is exactly the projec
 - `q=s=f=r=0`, `Q=12`, `delta=0`, `E_U=0`, `L_A=12`, `D_M=1`;
 - `G[B]=Q_3`, with the three A-vertices equal to the three coordinate-zero faces.
 
+It is an exact rooted witness-slot saturation model: its 12 rooted B-edges consume all 12 B--A nonedge slots. The new Hall-density results do not exclude it: `u=0`, A is independent, and the A--U cross-deficit/beta bridge is inactive.
+
 Certification:
 
 `project/research/post_ms/2026-09-17-stronger-pivot-v1/PUBLISHED_12_VERTEX_EXCEPTION_FIGURE_CERTIFICATION.md`.
-
-It is now also the exact witness-slot saturation model: its 12 rooted B-edges consume all 12 B--A nonedge slots.
 
 ## 2. Rooted residual spine
 
@@ -52,25 +50,19 @@ With
 >
 > `S=E_U+L_A`,
 
-the preserved target identities are
+we have
 
 > `S=2delta+lambda(p+u)-p`,
 >
 > `m<=M(n) iff delta>=D_M`,
-
-where
-
-> `D_M=b(n-b)-M(n)`.
-
-Rooted triangles satisfy
-
-> `r+Q=L_A+2f`,
+>
+> `D_M=b(n-b)-M(n)`,
 >
 > `delta+Q=L_A+f`,
 >
 > `f=(p-lambda)(p+u)+q+E_U-delta`.                       `(RSF)`
 
-Thus above `M(n)` (`delta<=D_M-1`), unmatched slack itself raises the forced A-edge mass.
+Thus above `M(n)` unmatched slack itself raises the forced A-edge mass.
 
 ## 3. Exact rooted witness-slot residual
 
@@ -78,208 +70,233 @@ Define
 
 > `Omega={(x,z) in B x A : xz notin E(G)}`.
 
-Then
+Every rooted B-edge has a distinct criticality certificate slot in `Omega`. If `Upsilon` is the unused slot set, then
 
-> `|Omega|=L_A+2f=Q+r`.
-
-Every rooted B-edge `xy` lies in triangle `vxy`. Triangle-edge criticality gives an orientation and `z in A` with
-
-> `N(x) cap N(z)={y}`.
-
-A fixed `(x,z)` can certify only one head, so choosing one certificate per B-edge injects `E(G[B])` into `Omega`.
-
-Let `Upsilon` be the unused slots. Then exactly
-
+> `|Omega|=L_A+2f=Q+r`,
+>
 > `|Upsilon|=r`,
 >
 > `delta=|Upsilon|-f`.                                   `(SLOT)`
 
-Therefore the second-extremal target is exactly `|Upsilon|>=f+D_M`.
+For each `z in A`, put `r_z=|{(x,z) in Upsilon}|`. The local directional collision identity gives
+
+> `sum_{y in N_A(z)} d_H(c(y),c(z))<=r_z d_A(z)`.        `(LH)`
+
+If `d_D(z)` is the direct A-edge degree at `z`,
+
+> `p d_D(z)<=r_z d_A(z)`.                                `(LDF)`
 
 Main package:
 
 `project/research/post_ms/2026-09-18-rooted-witness-slot-saturation-v1/`.
 
-## 4. Saturation and near-saturation
+## 4. Complementary-pair Hall system
 
-If `r=0`, the slot map is bijective. Then:
-
-- `A` is independent, hence `f=delta=0`;
-- with `phi(x)=(1_{xz in E})_{z in A}`, every B-edge has `d_H(phi(x),phi(y))=1`;
-- `G[B]` is bipartite by parity of `phi`;
-- each A-neighbourhood cut is one-sided perfectly dominated from its complement.
-
-`X_3` is exactly the `a=3` saturated realization with `phi(B)={0,1}^3` and `G[B]=Q_3`.
-
-For arbitrary `r`, exact collision identities are
-
-> `H_B=Q+sum_{(x,z) in Upsilon}|N(x) cap N(z) cap B|`,
->
-> `H_A=  sum_{(x,z) in Upsilon}|N(x) cap N(z) cap A|`,
-
-where
-
-`H_B=sum_{xy in E(B)}|N_A(x) triangle N_A(y)|`,
-
-`H_A=sum_{yz in E(A)}|N_B(y) triangle N_B(z)|`.
-
-Hence `H_B-Q<=r(p+u)`.
-
-## 5. Local A-coordinate Hamming budget
-
-Let `c(z) in {0,1}^p` be the tight-fibre Boolean code on A. For each `z in A`, let
-
-> `r_z=|{(x,z) in Upsilon}|`,
-
-so `sum_z r_z=r`.
-
-The directional collision identity gives
-
-> `sum_{y in N_A(z)} |N_B(y)\N_B(z)|`
-> ` =sum_{(x,z) in Upsilon}|N(x) cap N(z) cap A|`.
-
-Therefore
-
-> `sum_{y in N_A(z)} d_H(c(y),c(z))<=r_z d_A(z)`.        `(LH)`
-
-In particular, if `d_D(z)` is direct A-edge degree at `z`, direct endpoints have complementary codes and
-
-> `p d_D(z)<=r_z d_A(z)`.                                `(LDF)`
-
-So an `alpha` fraction of direct incident A-edges forces at least `alpha p` unused rooted witness slots at the same A-coordinate.
-
-Summing recovers the global bound `2pD<=rK_A`, where `K_A=min(p+u,a-1)`.
-
-## 6. Complementary-pair residual demand
-
-For an unordered complementary tight-code pair `P={c,bar c}`, put
+For an unordered complementary tight-code pair `P={c,bar c}`, let
 
 > `A_P=A_c union A_bar c`, `a_P=|A_P|`,
 >
 > `L_P=L_c+L_bar c`, `S_P=S_c+S_bar c`,
 >
-> `R_P=sum_{z in A_P} r_z d_A(z)`,
+> `R_P=sum_{z in A_P}r_z d_A(z)`,
+>
+> `Z_P=a_Pu-e(A_P,U)`.
 
-and
-
-> `T=a-p=p+u-lambda-1`.
-
-Let `s_P=e(A_P,U)` and define the local A--U nonedge deficit
-
-> `Z_P=a_Pu-s_P>=0`.                                     `(ZP)`
-
-Its total is exactly
+The total cross deficit is exact:
 
 > `sum_P Z_P=au-s=u(p-lambda)+2q+E_U`.                   `(ZSUM)`
 
-Retaining the actual A--U split strengthens pair crowding to
+Write `T0=a-p=p+u-lambda-1`. For a pair family `X`, use additive subscripts and put `x=a_X`.
 
-> `2e(G[A_P])>=a_P(a_P-T)-L_P+Z_P`.                     `(PC)`
+Choose one criticality certificate for every non-direct A-edge. Let `t_P=P_P+C_P` be actual chosen non-direct certificate traffic sourced in pair `P`. The pair-local capacity is
 
-The local Hamming theorem gives `2pD_P<=R_P` for direct internal edges, so if `N_P` is the internal **non-direct** A-edge count,
-
-> `2N_P>=`
-> `[a_P(a_P-T)-L_P+Z_P-R_P/p]_+`.                        `(PRD)`
-
-Crucially, an internal non-direct A-edge cannot export its source pair: whichever endpoint is the chosen source still has code in `P`.
-
-## 7. Pair-local non-direct capacity
-
-Let `C_P` be A/U UCN traffic sourced from pair `P`, and `P_P` matched-B traffic sourced from `P`.
-
-The preserved aligned A/U theorem gives
-
-> `(lambda+1)C_P<=R_code(S_P)S_P`.                       `(AU-P)`
-
-For matched-B, let `g_P` be the number of tight fibres whose gamma pair is `P`, and
-
-> `h_P=sum_{i in I_P}min(t_i^0,t_i^1)`.
-
-Then
-
-> `P_P<=g_P R_code(S_P)/2+h_P`.                          `(MB-P)`
-
-The resources obey
-
-> `sum_P g_P=p`,
+> `Ccap_P=R_code(S_P)[g_P+2S_P/(lambda+1)]+2h_P`,
 >
-> `(lambda+1)sum_P h_P<=R_A(L_A)L_A`,
+> `2t_P<=Ccap_P`.                                        `(CAP)`
+
+The preserved Hall theorem is
+
+> `[x(x-T0)-L_X+Z_X-R_X/p]_+<=sum_{P in X}Ccap_P`         `(HALL-P)`
+
+for every pair family `X`.
+
+## 5. Exact Hall-cut decomposition — new frontier
+
+Let
+
+> `c_X=e(A_X,A\A_X)`,
 >
-> `sum_P R_P<=rK_A`.
+> `M_X=x(a-x)-c_X`                                        `(MCUT)`
 
-Since `N_P<=P_P+C_P`, every pair satisfies the new live feasibility theorem
+be the missing A-cut mass. Let `N_X` be internal non-direct A-edges and define
 
-> `[a_P(a_P-T)-L_P+Z_P-R_P/p]_+`
-> ` <=R_code(S_P)[g_P+2S_P/(lambda+1)]+2h_P`.            `(PAIR)`
+> `E_X=t_X-N_X>=0`,                                      `(EXPORT)`
 
-This is the first theorem that simultaneously keeps pair population, pair slack, local residual/Hamming resource, local A--U cross deficit, matched-fibre multiplicity, and two-sided matched-foot resource. Forced internal demand cannot be paid from unrelated pairs.
+which is exactly the number of crossing A-edges whose chosen source lies in `X`.
 
-Core notes:
+Direct edges never cross a complementary-pair family cut. Put
 
-`project/research/post_ms/2026-09-18-rooted-witness-slot-saturation-v1/COMPLEMENT_PAIR_RESIDUAL_DEMAND.md`,
+> `J_X=R_X/p-2D_X>=0`.                                   `(J)`
 
-`project/research/post_ms/2026-09-18-rooted-witness-slot-saturation-v1/PAIR_CROSS_DEFICIT_STRENGTHENING.md`.
+The exact A-degree identity is
 
-## 8. Preserved source/Hall stack
+> `2e(A_X)=x(x-T0)-L_X+Z_X+M_X`.                         `(DEG-CUT)`
 
-The exact source-tuple hierarchy and integrated beta-support machinery remain active. They provide:
+Define the actual Hall weight
 
-- beta-load floors and an integrated support floor;
-- `E_U` lower bounds;
-- `q>=ceil([u(lambda-p)-E_U]_+/2)`;
-- beta-sensitive q ceilings with load-one compression.
+> `w_P=2t_P+L_P-Z_P+R_P/p`.
 
-These quantities now enter `(PAIR)` through two distinct mechanisms:
+Then, exactly,
 
-1. the residual split raises total forced A-edge demand;
-2. `ZSUM=u(p-lambda)+2q+E_U` forces local A--U missing-incidence mass across the pairs.
+> `w_X-x(x-T0)=2E_X+M_X+J_X`.                            `(EXACT-HALL)`
 
-Do not collapse these to total `S` before using the pair allocation.
+For the capacity weight
 
-## 9. C5 reassessment
+> `W_P=Ccap_P+L_P-Z_P+R_P/p`,
+>
+> `kappa_P=Ccap_P-2t_P>=0`,
 
-Lin and Wang (Discrete Applied Mathematics 375 (2025), 332--337, DOI `10.1016/j.dam.2025.06.025`) prove that sufficiently-large C5-free D2C graphs at or above `M(n)` are complete bipartite.
+we have
 
-This is not extra leverage in the live partial-Boolean triangle branch. If `p>=2` and `Q>0`, a rooted B-edge certificate `N(x) cap N(z)={y}` has `z in A` and `d_B(z)>=p>=2`; choosing another `w in N_B(z)\{y}` gives the 5-cycle
+> `W_X-x(x-T0)=2E_X+M_X+J_X+kappa_X`.                    `(CAP-EXACT)`
 
-> `v-x-y-z-w-v`.
+This is a structural decomposition of Hall slack, not merely an inequality.
 
-Thus `p>=2,Q>0` already implies `C5 subseteq G` locally.
+## 6. Hall density / majorization theorem
 
-Correction note:
+For active pairs define capacity density
 
-`project/research/post_ms/2026-09-18-rooted-witness-slot-saturation-v1/C5_REASSESSMENT.md`.
+> `rho_P^cap=W_P/a_P`.
 
-## 10. Audit
+For any real `tau`, let `X_<tau={P:rho_P^cap<tau}` and `A_tau=a_{X_<tau}`. Then
 
-The new finite audit is support only; promoted results are hand proofs.
+> `A_tau<T0+tau`.                                        `(HD)`
 
-- 21 D2C graph-atlas classes through order seven;
-- 50 maximum-degree roots;
-- 14 rooted B-edges checked for A-witness certificates;
-- 91 B--A nonedge slots, 77 unused;
-- 27 saturated roots;
-- zero failures of the exact global collision identities or saturation consequences;
-- `X_3`: `Q=12`, `|Omega|=12`, `r=0`, `H_B=12`, `H_A=0`;
-- the local A-coordinate collision identity was independently checked on 87 root/coordinate instances, including 37 with `r_z=0`; failures: 0.
+For `0<=tau<=p`, more than `p-tau` A-vertices therefore lie in pair classes of capacity density at least `tau`.
 
-Audit files are in the rooted-witness-slot package.
+If a family `X` of mass `x` is entirely below density `tau`, then the stronger stability estimate holds:
 
-## 11. Live frontier
+> `2E_X+M_X+J_X+kappa_X<x(T0+tau-x)`.                    `(STAB)`
 
-The scalar route is retired as the main attack: its finite diagnostic left too much freedom because pair resources were globally interchangeable.
+If the right side is `<1`, integrality forces
 
-The next highest-value move is now a **pair-allocation/majorization theorem for `(PAIR)`**. The desired advance is to show that the fixed total
+> `E_X=M_X=0`.                                           `(RIGID)`
 
-> `sum Z_P=u(p-lambda)+2q+E_U`
+So the A-cut is complete and every crossing A-edge chooses its source endpoint outside `X`; simultaneously `J_X+kappa_X<1`.
 
-and the rooted-transfer forced A-edge mass cannot both be dispersed over complementary pairs while respecting the disjoint budgets
+## 7. Cut conservation, polarization and forced complementary capacity
 
-> `sum a_P=a`, `sum L_P=L_A`, `sum S_P=S`, `sum R_P<=rK_A`, `sum g_P=p`, and the global `h_P` budget.
+For the complementary family `bar X`:
 
-In particular, investigate whether source/Hall beta support prevents `Z_P` from being anti-correlated with the large `a_P` pairs; that would make the positive part in `(PAIR)` unavoidable on a controlled family of pairs.
+> `E_X+E_barX=c_X`,
+>
+> `M_barX=M_X`.
 
-A secondary line is the stability/classification of near-saturated `phi(B)` representations, retaining `X_3` as the exact hostile equality model.
+If `J=R/p-2D`, then
 
-Do not return to the closed mixed `{4,5}` ladder, and do not optimize for first-proof priority on Erdős #742.
+> `sigma_X+sigma_barX=2x(a-x)+J`,                        `(CONS)`
+
+where `sigma_X=w_X-x(x-T0)`.
+
+Hence
+
+> `x(x-T0)<=w_X<=x(a+p-x)+J`.                            `(SAND)`
+
+Moreover
+
+> `Ccap_barX>=2x(a-x)-2(M_X+E_X)`.                       `(COMP-CAP)`
+
+Thus a capacity-low-density family with `B=x(T0+tau-x)` forces
+
+> `Ccap_barX>2x(a-x)-2B`;                                `(COMP-FORCE)`
+
+and in the rigid `<1` case,
+
+> `Ccap_barX>=2x(a-x)`.
+
+Define the capacity Hall reserve
+
+> `Sigma_X=W_X-x(x-T0)`.
+
+For disjoint families `X,Y`, with masses `x,y`,
+
+> `Sigma_{X union Y}=Sigma_X+Sigma_Y-2xy`.                `(POL)`
+
+Therefore Hall feasibility forces
+
+> `Sigma_X+Sigma_Y>=2xy`.                                `(POL+)`
+
+Two disjoint macroscopic pair blocks cannot both be close to Hall equality.
+
+## 8. Cross-deficit localization
+
+Because
+
+> `W_P=Ccap_P+L_P-Z_P+R_P/p`,
+
+low capacity density `<tau` is equivalent to
+
+> `Z_P>Ccap_P+L_P+R_P/p-tau a_P`.                        `(OVER)`
+
+The density theorem therefore gives, for `0<=tau<=p`:
+
+> the total A-mass of pairs satisfying `(OVER)` is `<T0+tau`.
+
+Equivalently, more than `p-tau` A-vertices lie in pair classes satisfying
+
+> `Z_P<=Ccap_P+L_P+R_P/p-tau a_P`.                       `(CROSS-LOC)`
+
+This is the new bridge to the preserved beta/source-tuple stack: `Z_P` is the local A--U nonincidence deficit, while source-tuple beta support constrains which A-vertices can carry or avoid U-source obligations.
+
+Package:
+
+`project/research/post_ms/2026-09-18-hall-density-cut-stability-v1/`.
+
+## 9. Preserved beta/source stack
+
+The exact integrated source-tuple theorem remains active. For positive beta support `A_+`, `N_+=|A_+|`, every fixed `r>=3` gives
+
+> `B_beta<=N_+p-Phi_r(N_+)`.
+
+Hence `N_+>=N_sup(B_beta)`, shrinking the zero-beta cross-edge reservoir and giving preserved lower bounds on `E_U` and `r`. The previous global scalar collapses are known to be too lossy; do not collapse `(CROSS-LOC)` to total `S` before exploiting this support information.
+
+Reference:
+
+`project/research/post_ms/2026-09-18-rooted-residual-supply-v1/SOURCE_TUPLE_SUPPORT_AND_ZERO_BETA_CAPACITY.md`.
+
+## 10. Direct-fan stability remains active
+
+The bounded-surplus direct theorem remains available. For `n>=23`, a direct fan of order `d`, total hole surplus `eta<=d-2`, and at most four external exceptions is triangle-free or already satisfies `m<=M(n)`. Thus every live triangle-containing above-`M(n)` survivor has
+
+> `eta>=d-1` or `z>=5`.
+
+This is supporting structure; the current primary attack is the Hall-density/source-localization line.
+
+## 11. Audit
+
+The new Hall-density package includes an independent abstract algebra checker. Frozen audit:
+
+- random graph/partition trials: 50,000;
+- pair-class instances: 156,014;
+- family/subset checks: 834,948;
+- failures: 0.
+
+A separate development stress run completed 200,000 random trials with zero failures. These are audit support only; promoted statements are hand derived.
+
+## 12. Live frontier
+
+The previous request for a pair-allocation/majorization theorem has now produced an exact density/stability theorem. The next highest-value move is to combine `(CROSS-LOC)` with the beta/source-support decomposition **before summing over pair classes**.
+
+Two coherent routes are live:
+
+1. **Beta/local-deficit coupling.** Show that beta-forced A--U nonincidence cannot be concentrated entirely in the `<T0+tau` exceptional A-mass while the remaining `>p-tau` mass pays `Ccap_P+L_P+R_P/p-tau a_P`.
+2. **Near-equality classification.** Exploit `(RIGID)` plus `(COMP-FORCE)`: a nearly maximal low-capacity family has a complete A-cut, all crossing sources oriented from the complement, near-saturated direct/Hamming credit and near-saturated certificate capacity. Classify or exclude this geometry in the triangle-containing above-`M(n)` branch.
+
+A useful exact reserve form for any family is
+
+> `Sigma_X=sum_{P in X}Sigma_P-2sum_{P<Q in X}a_Pa_Q`.
+
+This identifies the cross-pair quadratic bill that singleton pair inequalities miss.
+
+Do not return to the closed mixed `{4,5}` ladder. Do not optimize for first-proof priority on Erdős #742. Keep `X_3` as the mandatory hostile control.
 <!-- CURRENT-STATUS:END -->
