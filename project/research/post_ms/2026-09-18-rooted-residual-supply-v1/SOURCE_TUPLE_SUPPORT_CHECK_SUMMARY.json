@@ -1,0 +1,7 @@
+{
+  "failures": 0,
+  "finite_support_trials": 111260,
+  "finite_support_valid_random": 100000,
+  "total_checks": 101176,
+  "triple_continuum_exact": 1176
+}
