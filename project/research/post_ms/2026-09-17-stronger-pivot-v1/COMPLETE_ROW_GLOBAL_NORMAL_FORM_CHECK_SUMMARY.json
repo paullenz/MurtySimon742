@@ -1,0 +1,14 @@
+{
+  "arithmetic_failures": 0,
+  "arithmetic_instances": 19824,
+  "core_failures": 0,
+  "omega_failures": 0,
+  "p_range": [
+    3,
+    10
+  ],
+  "row_failures": 0,
+  "row_instances": 2040,
+  "status": "PASS",
+  "scope": "Regression only. Hand proofs remain authoritative for the structural and Hall/private-foot theorems."
+}
