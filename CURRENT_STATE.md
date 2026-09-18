@@ -1,36 +1,56 @@
-# Dense diameter-2-critical research — live current state
+# Dense diameter-2-critical research - live current state
 
-> **Active target — 18 September 2026.** The live problem is the sufficiently-large/eventual second-extremal D2C classification around `M(n)=floor((n-1)^2/4)+1`. The false all-order 2019 Dailly–Foucaud–Hansberg strengthening is not assumed. The published 2024 order-12, size-32 D2C graph is a mandatory hostile control. Murty–Simon / Erdős #742 is preserved but is not the live optimization target.
+> **Active target - 19 September 2026.** The live problem is the sufficiently-large/eventual second-extremal D2C classification around `M(n)=floor((n-1)^2/4)+1`. The false all-order 2019 Dailly-Foucaud-Hansberg strengthening is not assumed. The published 2024 order-12, size-32 D2C graph is a mandatory hostile control. Murty-Simon / Erdos #742 is preserved but is not the live optimization target.
 
 <!-- CURRENT-STATUS:START -->
-**CHECKPOINT CLASS:** `RIGID_HALL_WITNESS_DEFICIT_FRONTIER`.
+**CHECKPOINT CLASS:** `DAILY_RED_TEAM_AUDIT_2026_09_19`.
 
-**WORK MODE:** `EVENTUAL_D2C_MATH`.
+**WORK MODE:** `AUDIT`.
 
-The full-tight Boolean branch remains internally closed for sufficiently large matched cores (`k>=19`). The mixed `{4,5}` selected-excess ladder is closed. The active branch is the triangle-containing unmatched/errorful antipode regime. No global eventual second-extremal theorem is claimed.
+**INSPECTED PREDECESSOR:** `0060acd80a376074486563bc537386fe130459d2`.
+
+**LAST VERIFIED RESULT:** The current load-bearing rooted-witness/Hall/rigid-U-witness spine survived the 19 September adversarial audit at the stated internal trust boundary; the rigid witness-deficit inequalities remain conditional on the graph-theoretic premises and are not a global eventual theorem.
+
+**UNPRESERVED WORK:** none.
+
+**DEFERRED ADMIN:** none.
+
+**NEXT ACTION:** Independently re-prove the finite source-tuple theorem, then attack the one-code rigid branch with the exact pair-capacity and crowding inequalities; in parallel build an independent graph-level regression of the rooted/Hall quantities on realizable small D2C graphs including `X_3`.
+
+The full-tight Boolean branch remains internally closed for sufficiently large matched cores (`k>=19`). The mixed `{4,5}` selected-excess ladder is closed. The active branch remains the triangle-containing unmatched/errorful antipode regime. No global eventual second-extremal theorem is claimed.
 
 The current structural spine is
 
-`rooted witness-slot residual -> local A-coordinate Hamming budget -> complementary-pair Hall demand -> exact cut decomposition -> capacity-density majorization -> beta expulsion / source-tuple obstruction -> rigid-cut code collapse -> singleton U-witness deficit/slack -> one-code outside pair-capacity trap`.
+`rooted witness-slot residual -> local A-coordinate Hamming budget -> complementary-pair Hall demand -> exact cut decomposition -> capacity-density majorization -> beta expulsion / source-tuple obstruction -> rigid-cut code collapse -> singleton U-witness deficit/slack -> one-code outside pair-capacity/crowding trap`.
 
-## 1. Mandatory hostile control
+## 1. Daily red-team finding
 
-The published Radosavljevic--Stanic--Zivkovic (2024) graph is exactly the project's `X_3`:
+The 19 September audit compared the last pre-window checkpoint `f2e85599491d9804084e9739e1cfcdc6cc088a29` with pre-audit head `0060acd80a376074486563bc537386fe130459d2` (216 intervening commits). The audit concentrated on the current load-bearing theorem spine rather than line-by-line recertifying every superseded side branch.
+
+No fatal mathematical contradiction was found in the current spine. The trust boundary is important: the Hall-density and rigid-witness checkers validate algebraic/incidence consequences on generated abstract systems; they are not independent end-to-end verification that every premise holds for every realizable D2C graph. The finite source-tuple theorem remains a high-priority independent re-proof dependency.
+
+Full audit:
+
+`project/research/post_ms/2026-09-19-daily-red-team-audit-v1/DAILY_RED_TEAM_AUDIT.md`.
+
+## 2. Mandatory hostile control
+
+The published Radosavljevic-Stanic-Zivkovic (2024) order-12, size-32 exception is represented by the project's `X_3` construction:
 
 - `n=12`, `m=32>M(12)=31`;
 - rooted data `p=4,b=8,a=3,u=0,lambda=4`;
 - `q=s=f=r=0`, `Q=12`, `delta=0`, `E_U=0`, `L_A=12`, `D_M=1`;
 - `G[B]=Q_3`, with the three A-vertices equal to the three coordinate-zero faces.
 
-It is an exact rooted witness-slot saturation model: its 12 rooted B-edges consume all 12 B--A nonedge slots. The Hall/beta/U-witness results do not exclude it: `u=0`, A is independent, and every new rigid U-witness penalty below vanishes.
+An independent audit reconstruction confirms that this graph has diameter 2 and that deletion of each of its 32 edges raises the diameter to 3. It remains the mandatory negative control. The repository's direct Figure-1 identification is an internal figure-based certification; a machine-readable author adjacency list has not been independently compared here.
 
 Certification:
 
 `project/research/post_ms/2026-09-17-stronger-pivot-v1/PUBLISHED_12_VERTEX_EXCEPTION_FIGURE_CERTIFICATION.md`.
 
-## 2. Rooted residual spine
+## 3. Rooted residual and exact witness-slot spine
 
-Around a maximum-degree root `v`, write `B=N(v)`, `A=V\N[v]`, with `p` tight antipode pairs and unmatched set `U`, `u=|U|`:
+Around a maximum-degree root `v`, write `B=N(v)`, `A=V\N[v]`, with `p` tight antipode pairs and unmatched set `U`, `u=|U|`. Then
 
 > `b=2p+u`,
 >
@@ -40,350 +60,202 @@ Put `q=e(G[U])`, `s=e_G(A,U)`, `f=e(G[A])`. Then
 
 > `Q=e(G[B])=p(p+u-1)+q`,
 >
-> `delta=b(n-b)-m=r-f`.
-
-With
-
+> `delta=b(n-b)-m=r-f`,
+>
 > `E_U=u(p+u-1)-2q-s`,
 >
 > `L_A=a(p+u)-s-2f`,
 >
-> `S=E_U+L_A`,
-
-we have
-
-> `S=2delta+lambda(p+u)-p`,
->
-> `m<=M(n) iff delta>=D_M`,
->
-> `D_M=b(n-b)-M(n)`,
+> `S=E_U+L_A=2delta+lambda(p+u)-p`,
 >
 > `delta+Q=L_A+f`,
 >
-> `f=(p-lambda)(p+u)+q+E_U-delta`.                       `(RSF)`
+> `f=(p-lambda)(p+u)+q+E_U-delta`. `(RSF)`
 
-Thus above `M(n)` unmatched slack itself raises the forced A-edge mass.
-
-## 3. Exact rooted witness-slot residual
-
-Define `Omega={(x,z) in B x A : xz notin E(G)}`. Every rooted B-edge has a distinct criticality certificate slot in `Omega`. If `Upsilon` is the unused slot set, then
+For `Omega={(x,z) in B x A : xz notin E(G)}`, every rooted B-edge has a distinct criticality-certificate slot. If `Upsilon` is the unused-slot set, then
 
 > `|Omega|=L_A+2f=Q+r`,
 >
 > `|Upsilon|=r`,
 >
-> `delta=|Upsilon|-f`.                                   `(SLOT)`
+> `delta=|Upsilon|-f`. `(SLOT)`
 
-For each `z in A`, put `r_z=|{(x,z) in Upsilon}|`. The local directional collision identity gives
+For each `z in A`, put `r_z=|{(x,z) in Upsilon}|`. The local directional collision bounds remain
 
-> `sum_{y in N_A(z)} d_H(c(y),c(z))<=r_z d_A(z)`.        `(LH)`
-
-If `d_D(z)` is direct A-edge degree,
-
-> `p d_D(z)<=r_z d_A(z)`.                                `(LDF)`
-
-Main package:
-
-`project/research/post_ms/2026-09-18-rooted-witness-slot-saturation-v1/`.
-
-## 4. Complementary-pair Hall system
-
-For an unordered complementary tight-code pair `P={c,bar c}`, let
-
-> `A_P=A_c union A_bar c`, `a_P=|A_P|`,
+> `sum_{y in N_A(z)} d_H(c(y),c(z))<=r_z d_A(z)`, `(LH)`
 >
-> `L_P=L_c+L_bar c`, `S_P=S_c+S_bar c`,
->
-> `R_P=sum_{z in A_P}r_z d_A(z)`,
->
-> `Z_P=a_Pu-e(A_P,U)`.
+> `p d_D(z)<=r_z d_A(z)`. `(LDF)`
 
-The total cross deficit is exact:
+Audit status: hand derivation rechecked; no collision/injection defect found. Still conditional on the rooted setup and criticality-certificate lemma.
 
-> `sum_P Z_P=au-s=u(p-lambda)+2q+E_U`.                   `(ZSUM)`
+Main package: `project/research/post_ms/2026-09-18-rooted-witness-slot-saturation-v1/`.
 
-Write `T0=a-p=p+u-lambda-1`. Choose one criticality certificate for every non-direct A-edge and let `t_P=P_P+C_P` be actual chosen non-direct traffic sourced in pair `P`. The pair-local capacity is
+## 4. Complementary-pair Hall system and exact cut
+
+For complementary pair `P={c,bar c}`, define the preserved pair quantities `a_P,L_P,S_P,R_P,Z_P` and actual chosen non-direct traffic `t_P`. The pair-local capacity remains
 
 > `Ccap_P=R_code(S_P)[g_P+2S_P/(lambda+1)]+2h_P`,
 >
-> `2t_P<=Ccap_P`.                                        `(CAP)`
+> `2t_P<=Ccap_P`. `(CAP)`
 
-For every pair family `X`, with `x=a_X`, the preserved Hall theorem is
+For every pair family `X`, mass `x=a_X`,
 
-> `[x(x-T0)-L_X+Z_X-R_X/p]_+<=Ccap_X`.                   `(HALL-P)`
+> `[x(x-T0)-L_X+Z_X-R_X/p]_+<=Ccap_X`. `(HALL-P)`
 
-## 5. Exact Hall-cut decomposition
+With
 
-Let
+> `M_X=x(a-x)-c_X`, `E_X=t_X-N_X`, `J_X=R_X/p-2D_X`,
 
-> `c_X=e(A_X,A\A_X)`,
+we have the exact identities
+
+> `2e(A_X)=x(x-T0)-L_X+Z_X+M_X`, `(DEG-CUT)`
 >
-> `M_X=x(a-x)-c_X`,
+> `w_X-x(x-T0)=2E_X+M_X+J_X`, `(EXACT-HALL)`
 >
-> `E_X=t_X-N_X`,
->
-> `J_X=R_X/p-2D_X`.
+> `W_X-x(x-T0)=2E_X+M_X+J_X+kappa_X`. `(CAP-EXACT)`
 
-Here `N_X,D_X` are internal non-direct/direct A-edge counts. Then
+Audit status: algebra and sign structure rechecked; random/checker evidence supports the identities, but the abstract checker is not a graph-realizability proof.
 
-> `2e(A_X)=x(x-T0)-L_X+Z_X+M_X`.                         `(DEG-CUT)`
+## 5. Hall density, rigidity and beta localization
 
-Define
+For `rho_P^cap=W_P/a_P`, a low-density family satisfies
 
-> `w_P=2t_P+L_P-Z_P+R_P/p`.
+> `A_tau<T0+tau`. `(HD)`
 
-Exactly,
+and
 
-> `w_X-x(x-T0)=2E_X+M_X+J_X`.                            `(EXACT-HALL)`
+> `2E_X+M_X+J_X+kappa_X<x(T0+tau-x)`. `(STAB)`
 
-For
+If the right side is `<1`, integrality gives
 
-> `W_P=Ccap_P+L_P-Z_P+R_P/p`,
->
-> `kappa_P=Ccap_P-2t_P>=0`,
+> `E_X=M_X=0`. `(RIGID)`
 
-we likewise have
+The reserve polarization identity remains
 
-> `W_X-x(x-T0)=2E_X+M_X+J_X+kappa_X`.                    `(CAP-EXACT)`
+> `Sigma_{X union Y}=Sigma_X+Sigma_Y-2xy`. `(POL)`
 
-Thus Hall slack decomposes into selected-source export, missing-cut mass, unused direct/Hamming credit, and unused non-direct certificate capacity.
+For beta localization,
 
-## 6. Hall density / majorization
+> `B_X<=xu-Z_X`, `(BLOCAL)`
 
-For active pairs define
+and the source-tuple theorem on the complement yields the preserved `HBL/HBL0` bounds.
 
-> `rho_P^cap=W_P/a_P`.
+Audit status: Hall-density algebra verified. The exact finite source-tuple theorem is the next independent re-proof target before this interface is treated as externally stable.
 
-For any real `tau`, let `X_<tau={P:rho_P^cap<tau}` and `A_tau=a_{X_<tau}`. Then
+Package: `project/research/post_ms/2026-09-18-hall-density-cut-stability-v1/`.
 
-> `A_tau<T0+tau`.                                        `(HD)`
+## 6. Rigid Hall cut code collapse
 
-For `0<=tau<=p`, more than `p-tau` A-vertices therefore lie in pair classes with capacity density at least `tau`.
-
-If a family `X` of mass `x` lies entirely below density `tau`, then
-
-> `2E_X+M_X+J_X+kappa_X<x(T0+tau-x)`.                    `(STAB)`
-
-If the right side is `<1`, then
-
-> `E_X=M_X=0`.                                           `(RIGID)`
-
-Hence the A-cut is complete and every crossing A-edge chooses its source outside `X`.
-
-For the complement `bar X`, if `J=R/p-2D`,
-
-> `sigma_X+sigma_barX=2x(a-x)+J`,                        `(CONS)`
->
-> `x(x-T0)<=w_X<=x(a+p-x)+J`,                            `(SAND)`
->
-> `Ccap_barX>=2x(a-x)-2(M_X+E_X)`.                       `(COMP-CAP)`
-
-Thus a rigid low-density family forces `Ccap_barX>=2x(a-x)`.
-
-## 7. Hall reserve polarization
-
-Put
-
-> `Sigma_X=W_X-x(x-T0)`.
-
-For disjoint pair families `X,Y`, masses `x,y`,
-
-> `Sigma_{X union Y}=Sigma_X+Sigma_Y-2xy`.                `(POL)`
-
-Therefore Hall feasibility forces
-
-> `Sigma_X+Sigma_Y>=2xy`.                                `(POL+)`
-
-More generally
-
-> `Sigma_X=sum_{P in X}Sigma_P-2sum_{P<Q in X}a_Pa_Q`.
-
-This exposes the exact quadratic cross-pair bill omitted by singleton pair inequalities: two disjoint macroscopic blocks cannot both sit close to Hall equality.
-
-## 8. Hall density couples directly to beta/source support
-
-For `z in A`, its pairwise-distinct designated beta sources are U-neighbours, so
-
-> `ell_z<=d_U(z)`.
-
-For a pair family `X`, define local beta load `B_X=sum_{z in A_X}ell_z`. Since `s_X=e(A_X,U)=xu-Z_X`,
-
-> `B_X<=xu-Z_X`.                                         `(BLOCAL)`
-
-If `X` lies below Hall-capacity density `tau`, then `W_X<tau x`, hence
-
-> `B_X<x(u+tau)-Ccap_X-L_X-R_X/p`.                       `(BE)`
-
-The integrated source-tuple theorem on the complement gives
-
-> `B_barX<=(a-x)p-Phi_r(a-x)`.
-
-Thus
-
-> `B_beta`
-> `<x(u+tau)+(a-x)p-Phi_r(a-x)`
-> ` -Ccap_X-L_X-R_X/p`.                                  `(HBL)`
-
-In particular
-
-> `B_beta<x(u+tau)+(a-x)p-Phi_r(a-x)`.                   `(HBL0)`
-
-Reference:
-
-`project/research/post_ms/2026-09-18-hall-density-cut-stability-v1/HALL_BETA_LOCALIZATION.md`.
-
-## 9. Rigid Hall cuts force Boolean-code collapse
-
-Assume `E_X=M_X=0`, `X` nonempty proper and `x=a_X>=3`; put `Y=A\A_X`, `y=|Y|`. Every crossing edge is sourced in Y. Let `mu_X` be the number of matched B-endpoints having exactly one neighbour in `A_X`; then `mu_X<=p`. Define
+Assume `E_X=M_X=0`, `X` nonempty proper, `x=a_X>=3`, `Y=A\A_X`, `y=|Y|`. Let `mu_X<=p` count matched B-endpoints with exactly one neighbour in `A_X` and put
 
 > `k=(x-mu_X)_+`.
 
-For every outside source, at least k singleton-head witnesses lie in U, all in the U-code class complementary to that source code. If `h_Y` distinct tight codes occur in Y, then
+If `h=h_Y` distinct tight codes occur in Y, the preserved singleton-head witness argument gives
 
-> `h_Y k<=u`,
+> `hk<=u`,
 >
-> `h_Y(x-p)_+<=u`.                                       `(COLL)`
+> `h(x-p)_+<=u`. `(COLL)`
 
-In particular `x<=p+u`; large rigid families force very few outside codes.
+Audit status: re-derived; no missing multiplicity case found.
 
-Reference:
+Reference: `project/research/post_ms/2026-09-18-hall-density-cut-stability-v1/RIGID_HALL_WITNESS_GEOMETRY.md`.
 
-`project/research/post_ms/2026-09-18-hall-density-cut-stability-v1/RIGID_HALL_WITNESS_GEOMETRY.md`.
+## 7. Rigid U-witness deficit, slack and residual pricing
 
-## 10. New: rigid U-witness deficit, slack and residual pricing
+Write `g=x-T0=p-y`. For each outside code, collect its U-witnesses. Reuse multiplicity `t` forces
 
-Keep the rigid notation above and write `h=h_Y`, `g=x-T0=p-y`.
+> `epsilon_w >= [g+t-1]_+`. `(RWI)`
 
-For each outside code d, collect all U-witnesses used by its sources. Every used witness has exactly one X-neighbour. If it is reused by `t` outside sources, then it misses all those sources and satisfies
-
-> `epsilon_w >= [g+t-1]_+`.                               `(RWI)`
-
-This yields two new exact resource floors.
-
-### A--U nonedge / beta floor
+The exact resource floors are
 
 > `Z_X>=hk(x-1)`,
 >
 > `Z_Y>=yk`,
 >
-> `Z>=k[y+h(x-1)]`.                                      `(RZ)`
+> `Z>=k[y+h(x-1)]`, `(RZ)`
+>
+> `B_beta<=au-k[y+h(x-1)]`. `(RB)`
 
-Hence
-
-> `B_beta<=au-k[y+h(x-1)]`.                              `(RB)`
-
-Keeping source-tuple capacity local gives the stronger box
+With local source-tuple capacity,
 
 > `B_X<=min{x u-hk(x-1),xp-Phi_r(x)}`,
 >
-> `B_Y<=min{y(u-k),yp-Phi_r(y)}`.                        `(RBOX)`
+> `B_Y<=min{y(u-k),yp-Phi_r(y)}`. `(RBOX)`
 
-### Multiplicity-sensitive U-slack
+For `g>=1`,
 
-If `g>=1`,
+> `E_U>=k[y+h(g-1)] = k[p-1+(h-1)(g-1)]`. `(RE+)`
 
-> `E_U>=k[y+h(g-1)]`
-> `   =k[p-1+(h-1)(g-1)]`.                               `(RE+)`
+For `g<=1`,
 
-If `g<=1`,
+> `E_U>=[yk-(1-g)u]_+`. `(RE-)`
 
-> `E_U>=[yk-(1-g)u]_+`.                                  `(RE-)`
+If `Z_rig=k[y+h(x-1)]`, `D=Z_rig-u(p-lambda)`, and `E_rig` is the appropriate right side above, then
 
-Thus for `g>=1`, even a one-code outside block costs `k(p-1)` unmatched slack; every additional outside code costs another `k(g-1)`.
+> `q+E_U>=E_rig+ceil((D-E_rig)_+/2)`. `(RQE)`
 
-### Residual/A-edge bridge
+Therefore an above-`M(n)` rigid-cut survivor satisfies the preserved A-edge floor `(RF)` and feasibility envelope `(RFEAS)`.
 
-Let
+Audit status: principal derivations rechecked and independent arithmetic replay consistent. The preserved checker is diagnostic support on abstract systems, not an independent realizability certificate.
 
-> `Z_rig=k[y+h(x-1)]`,
->
-> `D=Z_rig-u(p-lambda)`,
->
-> `E_rig=` the right side of `(RE+)` or `(RE-)`.
+## 8. One-code outside pair-capacity/crowding trap
 
-Because `Z=u(p-lambda)+2q+E_U`,
+If `h=1`, let `P={d,bar d}` be the unique outside code pair. Direct A-edges cannot lie inside Y. Every crossing and internal-Y edge is non-direct traffic sourced in P, giving
 
-> `q+E_U>=E_rig+ceil((D-E_rig)_+/2)`.                    `(RQE)`
+> `Ccap_P+L_Y >= y(p+x+k)`. `(ONE)`
 
-Therefore every above-`M(n)` rigid-cut survivor satisfies
+When `3y>=D0=5p+5u-3lambda-2`, the aligned-code crowding theorem adds
 
-> `f >= (p-lambda)(p+u)-D_M+1`
-> `     +E_rig+ceil((D-E_rig)_+/2)`.                     `(RF)`
+> `S_P>=y(3y-D0)`. `(CROWD)`
 
-This is the direct local-Hall-to-rooted-residual bridge that was missing from the previous checkpoint.
+Audit status: the degree/traffic derivation and same-code localization were rechecked without finding a local flaw. This is now the primary forward target: combine the *exact* `Ccap_P` expression with `(ONE)` and `(CROWD)` before relaxing to global scalars.
 
-### Feasibility/code-collapse envelope
+Package: `project/research/post_ms/2026-09-18-rigid-hall-witness-deficit-v1/`.
 
-With
+## 9. Supporting theorem status
 
-> `C0=2(D_M-1)+lambda(p+u)-p`
+The bounded-surplus direct theorem remains strongly supported: for `n>=23`, a direct fan of order `d>=2`, total hole surplus `eta<=d-2`, and at most four external exceptions is triangle-free or already satisfies `m<=M(n)`. Independent checks during the audit confirmed the safe-coordinate lower bound and final global quadratic inequality. Not every four-vertex kernel criticality subcase was re-derived tonight, so this theorem should be treated as strongly supported rather than fully independently re-certified until needed.
 
-and any valid independent beta lower bound `B_*`, every rigid above-M candidate must satisfy
+The integrated source-tuple theorem and beta-support inverse remain active but are singled out for independent re-proof before further promotion.
 
-> `hk<=u`,
->
-> `E_rig<=C0`,
->
-> `B_*+k[y+h(x-1)]<=au`.                                 `(RFEAS)`
+## 10. Checker and trust-boundary summary
 
-For `g>=1`, `k(p-1)>C0` kills the rigid cut outright. For `g>=2`, either
+Preserved Hall-density audit:
 
-> `k(p+g-2)<=C0`
+- 50,000 random graph/partition trials;
+- 156,014 pair-class instances;
+- 834,948 family/subset checks;
+- zero reported failures.
 
-or the entire outside A-layer has one code (`h=1`). The beta inequality gives an independent one-code trigger.
+Preserved rigid-witness audit:
 
-### One-code outside pair-capacity trap
+- 12,841 random abstract witness-incidence systems;
+- 100,000 exact integer minimization tests for `(RQE)`;
+- 1,910,960 abstract rigid parameter/code-count instances in the recorded diagnostic box;
+- 39,902 newly rejected abstract instances (28,102 U-slack, 11,800 beta deficit);
+- zero invariant failures.
 
-If `h=1`, write the unique outside code as d and `P={d,bar d}`. Direct A-edges join complementary codes, so there are no direct edges inside Y. Every crossing edge and every internal Y-edge is non-direct traffic sourced in P. The exact complete-cut degree identity and `Z_Y>=yk` give
+These are arithmetic/diagnostic checks. They do not count realizable D2C graphs and do not replace a graph-level independent implementation.
 
-> `Ccap_P+L_Y >= y(p+x+k)`.                               `(ONE)`
+## 11. Repository/status audit
 
-Thus code collapse is not an equality escape: the single outside pair must pay an explicit certificate/slack bill. The preserved aligned-code crowding theorem adds, whenever `3y>=D0=5p+5u-3lambda-2`,
+The pre-audit head `0060acd80a376074486563bc537386fe130459d2` triggered Status synchronization run `35402717100`, job `105785888407`, which failed at `Check every new commit`.
 
-> `S_P>=y(3y-D0)`.                                       `(CROWD)`
+The failure is deterministic. `scripts/check_status_sync.py` accepts `WORK MODE` values `MATH`, `ADMIN`, `AUDIT`, `STATUS`, and `RECOVERY`; the predecessor used `EVENTUAL_D2C_MATH`. It also requires the exact fields `INSPECTED PREDECESSOR`, `LAST VERIFIED RESULT`, `UNPRESERVED WORK`, `DEFERRED ADMIN`, and `NEXT ACTION`, which were absent.
 
-Package:
+This checkpoint repairs those fields. Future proof/checker/state publication should be atomic where possible, because status synchronization checks every new commit rather than only final branch state.
 
-`project/research/post_ms/2026-09-18-rigid-hall-witness-deficit-v1/`.
+README has also been refreshed at this daily reviewer-facing checkpoint: the live frontier is the rigid Hall witness-deficit / one-code trap rather than merely the earlier `n<=294` zero-residual result; the 12-vertex figure certification caveat is stated accurately; and the daily audit/report is linked.
 
-## 11. Preserved supporting stacks
+The failed CI run remains part of audit history and is not relabelled as transient.
 
-The integrated source-tuple theorem and beta-support inverse remain active:
+## 12. Next programme and stop/pivot criteria
 
-> `B_beta<=N_+p-Phi_r(N_+)`,
->
-> `N_+>=N_sup(B_beta)`.
+1. Independently re-prove the finite source-tuple theorem and beta-support inverse from definitions. Any changed subset quantifier, distinct-source requirement, or capacity term is a blocker.
+2. Attack the one-code rigid branch with exact pair-local quantities: `(ONE)` + actual `Ccap_P` + `(CROWD)`. Do not globalize away code-pair information before this combination is exhausted.
+3. Build an independent graph-level regression that computes the rooted partition, witness slots, A-codes, Hall terms and rigid-witness quantities directly on realizable small D2C graphs, including `X_3`. The first mismatch is a proof/checker blocker, not a reason to tune the test.
+4. Re-audit the remaining four-exception kernel subcases only if that theorem remains load-bearing; otherwise demote it to supporting status.
+5. If exact one-code inequalities still leave an asymptotic family, classify that geometry directly and feed forced `q,E_U,f` through `(RF)` and `delta+Q=L_A+f`. Do not add indefinite scalar relaxations.
 
-The bounded-surplus direct theorem also remains active: for `n>=23`, a direct fan of order `d`, total hole surplus `eta<=d-2`, and at most four external exceptions is triangle-free or already satisfies `m<=M(n)`. Thus every live triangle-containing above-`M(n)` survivor has `eta>=d-1` or `z>=5`.
-
-Do not collapse pair-local information to total `S` before using it; previous global scalar syntheses were audited and found too lossy.
-
-## 12. Audit
-
-The Hall-density package frozen audit remains clean:
-
-- random graph/partition trials: 50,000;
-- pair-class instances: 156,014;
-- family/subset checks: 834,948;
-- failures: 0.
-
-The new rigid-witness package adds:
-
-- 12,841 random abstract witness-incidence systems: zero failures;
-- 100,000 exact integer minimization checks for `(RQE)`: zero failures;
-- 1,910,960 abstract rigid parameter/code-count instances for `3<=p<=18`, `1<=u<=18` after imposing the older population condition `hk<=u`;
-- 39,902 of those abstract instances are newly rejected by the U-slack/beta-deficit filters (28,102 by U-slack and 11,800 by beta deficit in this diagnostic box);
-- failures: 0.
-
-These computations are audit/diagnostic support only; the promoted statements are hand derived. The parameter scan is not a count of realizable D2C graphs.
-
-## 13. Live frontier
-
-The Hall allocation problem is now sharply split.
-
-1. **Non-rigid low-density families:** continue to use `(HBL)/(HBL0)` with the strongest preserved switching beta lower bound and local resource terms. The conservative root-imbalance-only scan was too weak, so do not globalize away the local data.
-2. **Rigid families:** the old population collapse `hk<=u` is now supplemented by actual beta-deficit and U-slack bills `(RB)/(RE+)`; these either kill the rigid cut or force the outside to one code. Once `h=1`, the immediate target is the explicit one-sided pair inequality `(ONE)` together with the actual `Ccap_P` formula and aligned-code crowding. This is the most compact route to closing the rigid Hall branch.
-3. If the one-code inequality leaves an asymptotic equality family, classify that geometry directly and feed its forced `q,E_U,f` back through `(RF)` and `delta+Q=L_A+f`.
-
-Do not return to the closed mixed `{4,5}` ladder. Do not optimize for first-proof priority on Erdős #742. Keep `X_3` as the mandatory hostile control.
+Keep `X_3` as the mandatory hostile control. Do not return to the closed mixed `{4,5}` ladder. Do not optimize for first-proof priority on Erdos #742.
 <!-- CURRENT-STATUS:END -->

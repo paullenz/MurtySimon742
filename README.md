@@ -4,265 +4,172 @@
 <!-- CURRENT-STATUS:START -->
 ## Current status
 
-<!-- STANDALONE-PAPERS:START -->
-### Standalone-paper programme — active
+### Active mathematical target
 
-Two bodies of mathematics are now being developed as papers in their own right, independently of whether the live eventual-D2C programme closes:
+The live problem is the **sufficiently-large / eventual second-extremal classification for diameter-2-critical graphs** around
 
-1. **Priority 1 — [stratified Hall / minimum-cut exactness](project/papers/stratified-hall-mincut/MANUSCRIPT.md).** The central theorem has been abstracted from q/c arithmetic to a two-sided crossing-dominance condition on layered directed Hall systems. Pointwise rearrangement may fail while the minimum Hall margin remains exact. A standalone proof and exhaustive abstract verifier are preserved in [`project/papers/stratified-hall-mincut/`](project/papers/stratified-hall-mincut/).
-2. **Priority 2 — [Boolean-flow / D2C stability](project/papers/boolean-flow-d2c/MANUSCRIPT.md).** The paper combines the zero-residual Boolean-coordinate structure and `n<=294` boundary cutoff with root-edge stability. The all-private branch now satisfies `t(b-t)<=2delta`, and the exact-defect all-private branch is excluded internally.
+`M(n)=floor((n-1)^2/4)+1`.
 
-**Trust boundary:** both are internal candidate theorem packages. External mathematical review and novelty assessment remain open. See the [standalone paper index](project/papers/README.md) and the individual claim ledgers before citing any result as established or new.
-<!-- STANDALONE-PAPERS:END -->
+The stronger all-order 2019 Dailly–Foucaud–Hansberg conjecture is false: Radosavljević, Stanić and Živković (2024) give a 12-vertex D2C graph with 32 edges, while `M(12)=31`. That graph is a mandatory hostile control. Murty–Simon / Erdős #742 work remains preserved, but first-proof priority is not the active objective after discovery of the earlier `Erdos742/Erdos742` formalization.
 
-**Programme reset — 17 September 2026.** Two external developments materially change the interpretation of this repository:
+**Live handoff:** [`CURRENT_STATE.md`](CURRENT_STATE.md).
 
-1. A public repository, [`Erdos742/Erdos742`](https://github.com/Erdos742/Erdos742), created in August 2026 before this project, contains Lean source claiming the full Erdős #742 inequality and a separate equality-clause formalisation. Source-level dependency inspection has found no target-chain gap; the visible `sorry` in the inequality file is an unused negative statement. A fresh independent Lean/mathlib rebuild has **not** yet been performed here, so this repository does not present that work as peer-reviewed acceptance. Strategically, however, **first-solution priority for Murty–Simon / Erdős #742 is treated as unavailable unless that external proof fails audit**.
-2. The stronger all-order second-extremal Conjecture 3 of Dailly–Foucaud–Hansberg (2019), with threshold `M(n)=floor((n-1)^2/4)+1`, is **false**. Radosavljević, Stanić and Živković (2024) report a 12-vertex D2C graph with 32 edges, while `M(12)=31`. The live target is therefore the **sufficiently-large / eventual second-extremal classification**, not the false all-order statement.
+### Current post-pivot frontier — internal, not promoted
 
-A targeted [dependency audit](project/research/post_ms/2026-09-17-stronger-pivot-v1/DEPENDENCY_AUDIT_2019_FALSE_CONJECTURE.md) found **no load-bearing use of the false 2019 conjecture as a premise** in the inspected fixed-order proofs, canonical selected/residual bridge, residual h-index derivations, Hall machinery, signed-surplus identities or zero-residual cutoff. The important correction is attribution and quantifier, not a proof demotion: the D2C/total-domination complement correspondence is the earlier Hanson–Wang (2003) result, and the 2019 paper also contains separate proved dominating-edge theorems that remain valid.
+The earlier exact zero-residual boundary gave an internally checked cutoff `n<=294` at `m>=M(n)`. The 18 September work advanced beyond that boundary. The present load-bearing spine is
 
-**Current post-pivot result — internal, not promoted.** In the exact canonical boundary `t=0`, `F=empty`, hence `r=0`, the B-side becomes a directed Boolean-coordinate flow. A factorial path bound combined with root criticality gives the internally checked theorem:
+`rooted witness-slot residual -> local A-code Hamming budget -> complementary-pair Hall demand -> exact Hall-cut decomposition -> Hall-density rigidity -> beta/source-tuple localization -> rigid-cut code collapse -> U-witness deficit/slack -> one-code pair-capacity/crowding trap`.
 
-> Any non-bipartite D2C graph in this exact boundary with `m>=floor((n-1)^2/4)+1` must have **`n<=294`**.
+For a rigid Hall cut, outside-code diversity is now charged to actual U-witness population, A–U nonedges and unmatched slack. If the outside layer collapses to one code pair, it must satisfy the explicit bill
 
-See [`ZERO_RESIDUAL_BOUNDARY.md`](project/research/post_ms/2026-09-17-stronger-pivot-v1/ZERO_RESIDUAL_BOUNDARY.md) and its exact integer checker. The `n=294` endpoint is only a necessary-conditions survivor, not a claimed graph. The known 12-vertex exception is treated as a mandatory hostile control.
+`Ccap_P + L_Y >= y(p+x+k)`,
 
-**Canonical Murty–Simon ledger remains unchanged:** **4,626 exclusions / 952 survivors / 3,632 whole-state closures.** All fixed-order candidate proofs, audits, exact-block work, h-index/receiver theory, selected-incidence Hall and the complete mixed `{4,5}` all-excess closure remain preserved with their existing trust boundaries. The discovery of earlier external work changes novelty/priority, not the internal logical status of those artifacts.
+with the aligned same-code crowding lower bound available simultaneously. These are strong internal structural advances, **not** a completed eventual theorem.
 
-**Automation window:** hourly `Eventual D2C Research` is active for a bounded three-day trial and is scheduled to stop on **20 September 2026 at about 13:53 UK time**. Autonomous work must not revert to the false 2019 all-order conjecture, must retain the 12-vertex graph as a regression test, and must not optimize for first-proof priority on Erdős #742.
+Key packages:
 
-**Live operational handoff:** [`CURRENT_STATE.md`](CURRENT_STATE.md). **Reviewers:** [`START_HERE_FOR_REVIEWERS.md`](START_HERE_FOR_REVIEWERS.md) · [`REVIEW_READY_INDEX.md`](releases/REVIEW_READY_INDEX.md) · [papers and review materials](#papers-and-review-materials).
+- [Rooted witness-slot saturation and Hamming defect](project/research/post_ms/2026-09-18-rooted-witness-slot-saturation-v1/)
+- [Hall density / exact-cut stability](project/research/post_ms/2026-09-18-hall-density-cut-stability-v1/)
+- [Same-code complementary-pair localization](project/research/post_ms/2026-09-18-large-code-pair-v1/)
+- [Rigid Hall witness deficit and one-code trap](project/research/post_ms/2026-09-18-rigid-hall-witness-deficit-v1/)
+- [Bounded-surplus four-exception gate](project/research/post_ms/2026-09-18-combined-channel-four-exception-v1/)
 
-## Current status: fixed-order Murty–Simon candidates
+### 19 September 2026 adversarial checkpoint
 
-These are preserved candidate proofs produced before the external August 2026 solution was discovered. External review remains open; no first-solution priority is claimed.
+The [daily red-team audit](project/research/post_ms/2026-09-19-daily-red-team-audit-v1/DAILY_RED_TEAM_AUDIT.md) reviewed the preceding 24-hour research interval, using `f2e85599491d9804084e9739e1cfcdc6cc088a29` as the last pre-window comparison point and `0060acd80a376074486563bc537386fe130459d2` as the pre-audit head. GitHub reports 216 intervening commits.
+
+**Finding:** no fatal contradiction was found in the current load-bearing rooted-witness / Hall / rigid-U-witness spine. The audit nevertheless narrows the trust boundary. The Hall-density and rigid-witness checkers verify arithmetic and abstract incidence consequences; they are **not** independent end-to-end proofs that every premise holds for every realizable D2C graph. The finite source-tuple theorem remains a priority independent re-proof dependency before the newest Hall/beta interface is treated as externally stable.
+
+The audit independently reconstructed the project’s `X_3` order-12 graph and confirmed diameter 2 and edge-criticality for all 32 edges. The repository’s direct identification with the published Figure 1 remains an **internal figure-based certification**; this audit did not independently compare against a machine-readable author adjacency list.
+
+A deterministic repository-process defect was also found. Pre-audit `CURRENT_STATE.md` used work mode `EVENTUAL_D2C_MATH`, while `scripts/check_status_sync.py` accepts only `MATH`, `ADMIN`, `AUDIT`, `STATUS`, and `RECOVERY`; required handoff fields were also absent. Consequently Status synchronization run `35402717100`, job `105785888407`, failed at `Check every new commit`. This checkpoint repairs the live status schema and preserves that failed run as audit history rather than relabelling it as transient.
+
+### Trust boundary
+
+The newest theorem packages are **internal candidate mathematics**. Hand derivation, same-project checker replay, GitHub CI, independent implementation, external specialist review and publication acceptance are distinct. No finite abstract parameter scan is a count of realizable D2C graphs. No global eventual second-extremal theorem is claimed.
+
+The main remaining shared-risk interface is the graph-to-constraint chain: rooted criticality certificates, finite source-tuple capacity, Hall pair localization, and their integration on realizable D2C graphs. The next audit priority is independent re-proof and graph-level regression, not additional confidence by repetition of the same abstractions.
+
+### Canonical preserved finite ledger
+
+**4,626 exclusions / 952 survivors / 3,632 whole-state closures.** The fixed-order candidate proofs, audits, exact-block work, h-index/receiver theory, selected-incidence Hall machinery and mixed `{4,5}` all-excess closure remain preserved with their original trust boundaries. The discovery of earlier external #742 work changes priority/novelty, not the internal logical status of those artifacts.
+
+### Standalone-paper programme
+
+Two internal candidate paper packages remain under development:
+
+1. [Stratified Hall / minimum-cut exactness](project/papers/stratified-hall-mincut/MANUSCRIPT.md) — abstract two-sided crossing-dominance / Hall-margin exactness.
+2. [Boolean-flow / D2C stability](project/papers/boolean-flow-d2c/MANUSCRIPT.md) — zero-residual Boolean-coordinate structure, the `n<=294` boundary cutoff, and root-edge stability.
+
+See the [standalone paper index](project/papers/README.md) and claim ledgers before citing any result as established or new.
+
+### Current fixed-order candidate packages
 
 | Scope | Preserved candidate result; external review open |
 |---|---|
-| n=25 | e(G)<=156, equality exactly K(12,13); reviewer-v2 |
-| n=27 | e(G)<=182, equality exactly K(13,14); reviewer-v2 |
-| n=28 | e(G)<=196, equality exactly K(14,14); reviewer-v2 plus analytic hardening |
-| n=29 | e(G)<=210, equality exactly K(14,15); reviewer-v4; difficult Delta=16 branch hand-closed |
-| n=30 | e(G)<=225, equality exactly K(15,15); reviewer-v3 |
-| n=31 | e(G)<=240, equality exactly K(15,16); source-first reviewer-v1 |
-| n=32 | e(G)<=256, equality exactly K(16,16); source-first reviewer-v1 |
-| n=33 | e(G)<=272, equality exactly K(16,17); source-first reviewer-v1 |
-| n=34 | e(G)<=289, equality exactly K(17,17); reviewer-v2; final heavy certificate hand-replaced |
-| n=35 | e(G)<=306, equality exactly K(17,18); reviewer-v1 |
+| n=25 | `e(G)<=156`, equality exactly `K(12,13)`; reviewer-v2 |
+| n=27 | `e(G)<=182`, equality exactly `K(13,14)`; reviewer-v2 |
+| n=28 | `e(G)<=196`, equality exactly `K(14,14)`; reviewer-v2 plus analytic hardening |
+| n=29 | `e(G)<=210`, equality exactly `K(14,15)`; reviewer-v4; difficult `Delta=16` branch hand-closed |
+| n=30 | `e(G)<=225`, equality exactly `K(15,15)`; reviewer-v3 |
+| n=31 | `e(G)<=240`, equality exactly `K(15,16)`; source-first reviewer-v1 |
+| n=32 | `e(G)<=256`, equality exactly `K(16,16)`; source-first reviewer-v1 |
+| n=33 | `e(G)<=272`, equality exactly `K(16,17)`; source-first reviewer-v1 |
+| n=34 | `e(G)<=289`, equality exactly `K(17,17)`; reviewer-v2; final heavy certificate hand-replaced |
+| n=35 | `e(G)<=306`, equality exactly `K(17,18)`; reviewer-v1 |
 
-## Current status: active and preserved research
+### Operational programme
 
-| Workstream | Current recorded position and trust boundary |
-|---|---|
-| External #742 collision | `Erdos742/Erdos742` predates this project and contains Lean inequality/equality formalizations. Source-level target-chain audit is encouraging; independent fresh recompilation and expert review remain open. First-proof priority is not claimed here. |
-| False 2019 all-order strengthening | Published 12-vertex, 32-edge D2C graph exceeds `M(12)=31`; all-order Conjecture 3 is false. [Literature correction](project/research/post_ms/2026-09-17-stronger-pivot-v1/LITERATURE_CORRECTION_2024_EXCEPTION.md). |
-| Dependency audit | No inspected proof depends on false Conjecture 3 as an axiom. Hanson–Wang (2003) supplies the complement/total-domination correspondence; separate proved 2019 dominating-edge results remain legitimate inputs. [Audit](project/research/post_ms/2026-09-17-stronger-pivot-v1/DEPENDENCY_AUDIT_2019_FALSE_CONJECTURE.md). |
-| Live mathematical target | Sufficiently-large / eventual second-extremal classification around `M(n)=floor((n-1)^2/4)+1`, especially the triangle-containing branch not covered by the known triangle-free theory. |
-| Signed-surplus framework | `delta=b(n-b)-m=r-e(F)` and zero-residual-source structure extend the old residual framework into nonpositive surplus. [Corrected pivot](project/research/post_ms/2026-09-17-stronger-pivot-v1/SIGNED_SURPLUS_PIVOT.md). |
-| 12-vertex hostile control | Independently reconstructed hypercube-face family gives `X_3` with `n=12,m=32`; direct authoritative isomorphism to the published Figure 1 remains open. For `k>=4`, the same D2C family lies below the second-extremal threshold. |
-| Zero-residual Boolean flow | At `t=0,F=empty,r=0`, B-edges are one-coordinate flips; factorial expansion plus criticality yields the internal `n<=294` cutoff at `m>=M(n)`. External review/novelty open. |
-| Canonical finite frontier | **4,626 exclusions / 952 survivors / 3,632 whole-state closures**; unchanged |
-| Tight-label / Hall programme | All earlier exact-block, spare-receiver, h-index, routing, Hall-majorization and mixed `{4,5}` all-excess results remain preserved as tools, mainly for positive-surplus/high-degree branches. |
-| Forced-core independent audit | **170 candidate exclusions and 136 survivor witnesses audited; AUDIT_COMPLETE_NOT_PROMOTED**; separate promotion gate remains historical/open as recorded below. |
-| Automation | Three-day hourly trial of the eventual D2C direction; scheduled stop 20 September 2026 ~13:53 UK. |
+The eventual-D2C programme is continuing through **27 September 2026**, with a dedicated daily adversarial audit and repository-hygiene checkpoint. Daily audit work is reserved for attempted falsification, independent replay, README/CURRENT_STATE reconciliation and a dated 24-hour report rather than forward research. Autonomous work must not revert to the false all-order 2019 conjecture, must retain `X_3` as a regression test, and must not optimize for first-proof priority on Erdős #742.
 
-**Status-first maintenance rule:** keep this live overview and these tables before chronological updates. Refresh this block at reviewer-facing milestones; use CURRENT_STATE.md for routine research transactions. Historical next-action and policy paragraphs below are retained for auditability, not instructions overriding this overview or AGENTS.md. Every active-line commit updates CURRENT_STATE; README updates are required at substantive reviewer-facing changes and whenever README itself is edited, not on every routine checkpoint. Pause/stop instructions override further research and housekeeping.
-<!-- RELATIONAL-FULL-PROMOTION:PROMOTED -->
+**Reviewers:** [`START_HERE_FOR_REVIEWERS.md`](START_HERE_FOR_REVIEWERS.md) · [`REVIEW_READY_INDEX.md`](releases/REVIEW_READY_INDEX.md) · [papers and review materials](#papers-and-review-materials).
 <!-- CURRENT-STATUS:END -->
 
-**Reviewers — start here:** [`START_HERE_FOR_REVIEWERS.md`](START_HERE_FOR_REVIEWERS.md) and [`releases/REVIEW_READY_INDEX.md`](releases/REVIEW_READY_INDEX.md). GitHub Issues/comments are preferred for counterexamples, corrections and reproducibility reports.
+## Dated research updates — current and preserved history
 
-Open, reproducible research on diameter-2-critical graphs. This repository began as a Murty–Simon / Erdős #742 attack and preserves that work in full. Following discovery of the earlier August 2026 formalized solution and the 2024 counterexample to the 2019 stronger all-order conjecture, the active programme now studies the **eventual second-extremal problem**. External mathematical review, novelty assessment and independent third-party reproduction remain OPEN. The project actively welcomes hostile review, counterexamples, literature corrections and independent reproduction.
+**19 September 2026 — daily adversarial audit and live-state reconciliation.** No fatal contradiction was found in the current load-bearing rooted-witness/Hall/rigid-U-witness spine. The audit explicitly distinguishes hand-derived structural claims from abstract checker support, retains the finite source-tuple theorem as an independent re-proof target, confirms `X_3` as a D2C hostile control, and records the deterministic status-synchronization failure at run `35402717100` / job `105785888407`. See the [full audit](project/research/post_ms/2026-09-19-daily-red-team-audit-v1/DAILY_RED_TEAM_AUDIT.md) and [`CURRENT_STATE.md`](CURRENT_STATE.md).
 
-## Dated research updates — preserved history
+**17 September 2026 — programme reset.** External work in `Erdos742/Erdos742` changed the priority interpretation of the Murty–Simon project, while the 2024 order-12 counterexample falsified the contemplated all-order second-extremal strengthening. The active programme therefore became the sufficiently-large/eventual D2C problem. The dependency audit found no inspected fixed-order proof using the false conjecture as a premise. See [literature correction](project/research/post_ms/2026-09-17-stronger-pivot-v1/LITERATURE_CORRECTION_2024_EXCEPTION.md) and [dependency audit](project/research/post_ms/2026-09-17-stronger-pivot-v1/DEPENDENCY_AUDIT_2019_FALSE_CONJECTURE.md).
 
-The following dated updates retain earlier evidence, failures and next-action lists. They are superseded where applicable by the live overview above and CURRENT_STATE.md. Historical run observations are not fresh checks of running jobs. The [complete pre-layout README](archive/status-snapshots/2026-09-15/README_before_status_first.md) is also preserved byte-for-byte.
+### Preserved pre-audit README
 
-**17 September 2026 — external-solution collision, false-strengthening correction and programme pivot.** A public August 2026 repository, `Erdos742/Erdos742`, was located after this project had already developed substantial fixed-order and general machinery. Its Lean source claims both the Erdős #742 inequality and Murty–Simon equality clause; source-level inspection has not found a target-chain gap, but independent fresh compilation and expert review remain outstanding. The project therefore no longer treats a first proof of #742 as the principal objective. A subsequent literature check found that Dailly–Foucaud–Hansberg Conjecture 3 (2019), initially considered as the replacement target, is already false: Radosavljević, Stanić and Živković (2024) report a 12-vertex, 32-edge D2C graph exceeding `M(12)=31`. The active objective is now the sufficiently-large/eventual form. A targeted dependency audit found no proof dependency on the false conjecture and corrected the relevant attribution/prose. The first post-pivot exact-boundary theorem gives `n<=294` under `t=0,F=empty,r=0,m>=M(n)`. Automated research is intentionally limited to a three-day trial ending 20 September 2026.
+The complete root README immediately before the 19 September daily reconciliation is preserved byte-for-byte at [`archive/status-snapshots/2026-09-19/README_before_daily_red_team.md`](archive/status-snapshots/2026-09-19/README_before_daily_red_team.md). That snapshot contains the full dated 14–17 September status chronology, the historical general-research workstream register, prior audit/promotion details, workflow provenance notes, and earlier next-action lists. Those records remain part of the project evidence; this live README is intentionally status-first rather than silently deleting them.
 
-**15 September 2026 — README synchronization correction.** The status-first layout was repaired at `03aba3e50706…`, but the leading mathematical summary still identified the multi-spare checkpoint and the already-treated `|M|=2d` question. This update retains that layout and reconciles the overview and table with the disjoint-receiver and triangle-free proofs through `9ee0c02b9d4d…`. The [complete preceding README](archive/status-snapshots/2026-09-15/README_before_triangle_free_sync_9ee0c02b.md) and [complete latest mathematical handoff](project/research/general_n/2026-09-15-triangle-free-receiver-budget-v1/PRESERVED_HANDOFF.md) are copied byte-for-byte. No ledger, proof, audit gate or historical failure is altered by the correction.
-
-**2026-09-15T21:06:56.336Z — further mathematics complete: equality rigidity adds 25 whole-state certificates.** Inspected predecessor `1992778d461056d365cc0c3584b510134b2b93ed`. The [new equality proof and exact replay](project/research/general_n/2026-09-15-tight-label-equality-v1/README.md) shows that when a tight d-label block has exactly d high sources and d receivers, each high source must select exactly that block. All labels selected at the receivers must fit in every high source's residual set. The resulting scalar bound rejects **25 current states**, with **4,588/4,588 Python/C++ decisions agreeing** (164 applicable historical states, all rejected; 4,424 outside scope). The weaker preliminary pair-count bound rejected only23 active states; its non-rejections are preserved. The stronger proof also excludes911 and5915. State5802 gives the hand contradiction **eight forced labels in five residual slots**.
-
-**Reconciled progress:** this equality family and the preceding strict-block family are disjoint and certify **41 of the current952 states**. **19 overlap the earlier170 forced-core candidates; 22 additional distinct keys are new to that candidate list.** [Exact overlap and all170 job records](project/research/general_n/2026-09-15-tight-label-equality-v1/FORCED_CORE_OVERLAP.json) reconcile to the completed census aggregate. No N35 active state is rejected. These are **internally verified whole-state certificates, NOT_PROMOTED**; external review remains OPEN. Canonical counts remain **4,626 exclusions /952 survivors /3,632 whole-state closures**. Prior audit `AUDIT_COMPLETE_NOT_PROMOTED`; receiver-price census `SUCCESS`, with no jobs still running. The five repository checks on predecessor1992778 all passed; they are not remote proof execution of this new equality package. Automatic workflow-completion reporting remains `NOT_IMPLEMENTED`.
-
-**Exact next action:** first read current main's CURRENT_STATE.md on resumption. Run `python3 project/research/general_n/2026-09-15-tight-label-equality-v1/run_replay.py` to reproduce both implementations against the preceding package's frozen inputs. Continue the maths with **one spare receiver**, `|M|=d+1`: quantify each source's omitted receiver and determine how many additional selected labels can then survive. Do not extend equality rigidity to this case without a new proof. The earlier state3349 q-enumeration timeout is still unresolved. This checkpoint supersedes older next-action lists while preserving their evidence.
-
-**2026-09-15T21:00:11.085Z — current-state refresh: census COMPLETE; 16 scalar whole-state certificates, including six beyond the earlier 170.** Inspected main `021ce16b3df92b6d21240bfae7ae8b760598efbb`. The [tight-label block proof and exact replay](project/research/general_n/2026-09-15-tight-label-block-v1/README.md) gives a q-independent contradiction: five forced sources each need five distinct receivers, but only four qualify. Python and separately written C++ agree on all **4,588 frozen catalogue rows**, rejecting **16 of the current 952 survivors**. Ten overlap the previous 170 forced-core candidates; **six additional IDs are 5586,5666,5667,5672,5694,5710**. These are internally checked whole-state certificates, **NOT PROMOTED**, with external review OPEN. Canonical counts remain **4,626 exclusions / 952 survivors / 3,632 whole-state closures**. The earlier 24 saturated-barrier results remain fixed-q witness rejections. Its eight-second state3349 enumeration pilot timed out with no conclusion; code, inputs and exploratory flow results are preserved in the new package.
-
-**Completed census, superseding every older “169/170 running” observation below:** [run34999206636](https://github.com/paullenz/MurtySimon742/actions/runs/34999206636), source `52ea9f1d787736a2c93451ef05886061085af27f`, completed **SUCCESS at 2026-09-15T20:54:48Z**. Aggregate job `104561296194` reconciles all **170/170** state universes: **25,769,305,797 profiles; 15,307,737,127 aggregate rejections; zero partition-gap profiles**, exact primary core-failure reconciliation. This establishes finite empirical agreement only. [Log-derived completion evidence](project/research/general_n/2026-09-15-tight-label-block-v1/CENSUS_COMPLETION.json) identifies final artifact `10418246216`, ZIP SHA256 `783f5c65d53fc84347e954c281cb688153bde81ad62b25b7e994fe0cb803fc68`; the artifact itself was not downloaded here. No census job remains running. The earlier independent audit remains `AUDIT_COMPLETE_NOT_PROMOTED`; automatic completion reporting remains `NOT_IMPLEMENTED`.
-
-**Exact restart:** first read this file on current main. Continue the mathematics from the tight-label theorem's equality case `|M_d|=k`: every forced source must use every receiver, constraining their residual sets and low-label selections. Independently check any resulting scalar bound, preserve negative cases, and keep promotion separate. Reproduce the current Python screen with `python3 project/research/general_n/2026-09-15-tight-label-block-v1/scan_tight_blocks.py . /tmp/tight-results.json`; compare it with decoded `RESULTS.json.gz.b64`. Compile `verify_tight_blocks.cpp` and run it on `INDEPENDENT_INPUT.txt` for all4,588 independent decisions. These directions supersede the historical next-action lists below.
-
-**2026-09-15T20:47:25.492Z — saturated receiver barrier: 24 saved witnesses rejected, no whole-state claim.** On inspected main `61ef5f1cbd119da59be623b31b642ffd30335645`, the [new necessary-condition package](project/research/general_n/2026-09-15-saturated-receiver-barrier-v1/README.md) derives a prefix-capacity inequality: a vertex selecting every label eligible at its residual degree cannot receive obligations for those labels. It rejects **24/124 preserved fixed-q rescue witnesses**. A separate C++ direct check reproduces all 24 and first confirms **124/124 old-route passes**. State 3349's saved witness gives the hand contradiction **four forced obligations, only three available receiver slots**. Two preliminary screens (602 shared-core checks and 6,481 weighted-threshold checks) produced no rejections; their negative evidence is preserved. The full Python/C++ replay passed locally; no fresh remote proof run or external review is claimed. **Canonical mathematical status unchanged: 4,626 exclusions / 952 survivors / 3,632 whole-state closures.** Exact re-enumeration may find replacement q witnesses, so these 24 are not new canonical exclusions. Next action: run the saturated-prefix condition inside whole-state q enumeration for the 24 affected IDs, preserving every replacement witness and treating unfinished scans as unresolved. The completed 170-exclusion audit and its separate promotion remain as recorded below.
-
-**15 September 2026 — durable-handoff standing orders; verified audit reconciled.** Inspected main predecessor `21a6faaa73fc4a79d3c87f04ed391ae8b0a07865`; workflow observation `2026-09-15T20:29:39.674Z`. The first action on every resumption is now explicitly to read current `CURRENT_STATE.md` on main. [AGENTS.md](AGENTS.md#mandatory-first-action-and-durable-handoff) and [CANONICAL_REPOSITORY.md](CANONICAL_REPOSITORY.md#durable-checkpoint-cadence-and-timeout-recovery) require event-based and ten-minute active-work checkpoints, durable evidence before long operations, exact resume instructions, paired publication on main, and remote verification. **Automatic workflow-completion reporting is a recorded requirement, not yet implemented by this commit.**
-
-**Verified result omitted from the earlier main handoff:** independent forced-core audit [34997614970](https://github.com/paullenz/MurtySimon742/actions/runs/34997614970) completed SUCCESS at `2026-09-15T18:46:25Z` on `36239bd0bcd466e464c0bcb4546314ccce4a63ba`. Its final aggregate compared **170/170 candidate exclusions with zero field mismatches** and replayed **136/136 survivor witnesses with zero failures**, reporting `AUDIT_COMPLETE_NOT_PROMOTED`. Final artifact `10413221638` (`canonical-forced-core-independent-audit-v2-final`), ZIP SHA256 `a600e47fe0d3b4ac2a010cfa55995562e9bd8d701a219932266f542cd11d5fe6`. Independently structured internal code and successful CI remain separate from external mathematical acceptance.
-
-**Active census at the observation above:** [34999206636](https://github.com/paullenz/MurtySimon742/actions/runs/34999206636) on `52ea9f1d787736a2c93451ef05886061085af27f` has **169/170 census jobs completed successfully**; `census (14)`, job `104484546582`, remains in progress. Final aggregate reconciliation is still pending at this checkpoint. The earlier 168-job log snapshot at `2026-09-15T20:26:47Z` reported 25,015,164,907 profiles, 15,122,685,873 aggregate rejections and zero partition-only rejections; those partial counts are not a completed 170-state result or a general exactness theorem.
-
-**Canonical mathematical status unchanged: 4,626 exclusions / 952 survivors / 3,632 whole-state closures.** This documentation/policy reconciliation does not perform the separate reviewed forced-core promotion; 4,796 / 782 / 3,802 remain conditional post-promotion counts. External review remains OPEN. The earlier discovery/audit-pending observations below are preserved as dated history and superseded by this checkpoint where applicable. Next: inspect the last census job and final aggregate, preserve the audit/census outputs durably, apply the separate reviewed promotion gate, and implement/verify automatic completion reporting.
-
-## Historical general-research workstream register
-
-The following register is retained from the preceding README. In particular, its older audit-pending and paired-README policy entries are historical; the current overview, AGENTS.md and CURRENT_STATE.md take precedence.
-
-| Workstream | Latest established or recorded position |
-|---|---|
-| General maximum-degree candidate | For n>=6, Delta(G)>=(7/12)n implies e(G)<floor(n^2/4); external review and novelty assessment open |
-| Canonical finite frontier | **4,626 exclusions / 952 survivors; 3,632 quantified whole-state closures** after reviewed promotion of the fully audited relational family |
-| Relational audit/promotion | **2,655/2,655 audited keys promoted** after run **34854911792 SUCCESS** and reviewed ledger reconciliation: 2,580 N34 + 75 N35 closures; 949 N34 + 3 N35 survivors remain |
-| Forced-core routing capacity | [`forced-core-capacity-v1`](project/research/general_n/2026-09-15-forced-core-capacity-v1/README.md) closes original rows160 and338; dedicated remote replay **34944185174 SUCCESS** |
-| Fresh forced-core/high squeeze | [`fresh-forced-core-high-squeeze-v1`](project/research/general_n/2026-09-15-fresh-forced-core-high-squeeze-v1/README.md): six fresh survivors fail total receiver capacity; row490 fails `43<45` after all six receivers are forced used |
-| Original synthetic sample | **713/713 rejected.** Sample-level necessary-condition closure; canonical finite frontier unchanged |
-| Fresh synthetic sample | **715/715 rejected.** Separate seed `74220260919`; sample-level necessary-condition closure; canonical finite frontier unchanged |
-| Singleton-destination theorem | [`singleton-destination-trap-v1`](project/research/general_n/2026-09-15-singleton-destination-trap-v1/README.md) independently excludes original rows347,471,586; workflow **34910561258 SUCCESS** |
-| Row471 branch history | Exact branch packages for `e_L=39,40,41,42,43` remain preserved as independent evidence. The whole-profile singleton-destination obstruction superseded the need to attack `e_L=47` |
-| Row108 source sharing | [`conditioned-source-sharing-v1`](project/research/general_n/2026-09-14-conditioned-source-sharing-v1/README.md) excludes original row108; workflow **34906766833 / job104185160249 SUCCESS** |
-| Fresh verification | Exact standard-library replay closes all seven retained rows. Frozen parsed-result SHA256 `7357a5139417a1b48f94d8ddbb6122c57363ce70ab0c4586673a290a25c51464`; research-branch replay **34946294672 SUCCESS** |
-| Canonical forced-core discovery | [`canonical-forced-core-scan-v1`](project/research/general_n/2026-09-15-forced-core-canonical-scan-v1/README.md) completed its authoritative **306-state** exact resumed enumeration in run **34950746007 SUCCESS**. Final aggregate: **170 candidate whole-state exclusions, 136 rescanned survivors**, plus the 646 stored-witness survivors = **782 route survivors**. All 170 candidates are N34-derived; N35 contributes 0. Discovery only; not promoted |
-| Historical initial forced-core audit checkpoint | [`forced-core-canonical-audit-v1`](project/research/general_n/2026-09-15-forced-core-canonical-audit-v1/README.md) preserves **124 certified replacement witnesses**, all reconciled among the final 136 rescanned survivors. The other 12 survivor state IDs are `2454,3145,4453,4618,5163,5672,5972,7664,7851,7927,9014,9849`. The initial **24** complete exclusions still have exact field-for-field agreement between the primary and independently structured type-multiplicity scanners; all 24 occur in the final 170. Audit/promotion remains incomplete |
-| Forced-core final artifact | GitHub Actions artifact **10396963173**, `canonical-forced-core-discovery-final`, digest `sha256:60409b6049e9436aeaaaf898509f7022abb3b3ade030359174379ba22e238705`; its `SUMMARY.json` records `promotion_status=DISCOVERY_ONLY_NOT_PROMOTED`, 170 N34 candidate exclusions, 0 N35, 136 rescanned survivors and 782 remaining survivors if the candidates validate |
-| Documentation/process guards | Every commit must pair README/CURRENT_STATE updates. Historical N30 navigation failure, red-team-history guard failure and standalone row471 paired-status process failure remain visible rather than repainted green. Fourteen historical root `README_*` / `CURRENT_STATE_*` snapshots from 14 September are preserved under [`archive/status-snapshots/2026-09-14/`](archive/status-snapshots/2026-09-14/README.md) so the root has only the two live status surfaces |
-| Commit-attribution provenance | Historical commit `aa6c41fcede3bf2e7e935a00840030ef0b9ee1df` was created by restoration run `34905883642`, whose actor and triggering actor were `paullenz`; its script used synthetic identity `Research verification <verification@users.noreply.github.com>`, which GitHub mapped to account `verification` (display name Bill Wang). The commit is retained without history rewrite; the one-off workflow is now manual-only and future workflow-created commits use canonical `github-actions[bot]`. Mathematical/canonical status unchanged. |
-| Active continuation | Historical entry: the full 170-exclusion/136-witness independent audit completed and was not promoted at this checkpoint. Current active continuation is the eventual D2C programme described at the top of this README and in CURRENT_STATE.md. |
-
-**Checkpoint — 15 September 2026, completed forced-core canonical discovery.** The authoritative resumed-enumeration workflow **34950746007** completed successfully on `25fd9044e9d8ef52326d27f9a97732916aef5dc4`. Of the 306 canonical states whose stored witnesses failed the new forced-core theorem, exhaustive enumeration finds **170 candidate whole-state exclusions and 136 survivors**. Combined with the 646 canonical states whose stored witnesses already survive the theorem, this leaves **782 definite survivors of the forced-core route**. The final aggregate has **170 N34 candidate exclusions and 0 N35 candidate exclusions**. The earlier 124 locally certified rescue witnesses all reappear among the 136 survivors; the 24 independently audited complete exclusions all occur among the 170. The final artifact is **10396963173**, digest `sha256:60409b6049e9436aeaaaf898509f7022abb3b3ade030359174379ba22e238705`. **Canonical/promoted mathematical status is unchanged: 4,626 exclusions / 952 survivors / 3,632 whole-state closures. The 170 are discovery candidates, not ledger-promoted closures.** If and only if all 170 pass the independent audit and reviewed promotion gate, the finite frontier would become 4,796 exclusions / 782 survivors / 3,802 whole-state closures. External mathematical review remains OPEN.
-
-**Repository-root archival cleanup — 15 September 2026.** Six historical `README_*` snapshots and eight historical `CURRENT_STATE_*` snapshots from 14 September have been moved, byte-for-byte, to [`archive/status-snapshots/2026-09-14/`](archive/status-snapshots/2026-09-14/README.md). This is navigation/preservation work only: no historical evidence is deleted, and the live root status surfaces remain `README.md` and `CURRENT_STATE.md`. **Canonical mathematical status unchanged.**
-
-**Maintenance provenance correction — 15 September 2026.** Commit `aa6c41fcede3bf2e7e935a00840030ef0b9ee1df` was generated by successful restoration workflow run `34905883642`. GitHub records both the run actor and triggering actor as `paullenz`; the workflow script nevertheless configured the Git commit as `Research verification <verification@users.noreply.github.com>`, which GitHub mapped to the unrelated account `verification` (display name Bill Wang). That historical commit is preserved to avoid rewriting the audited chain. The one-off restoration workflow is now manual-only, completed replays are read-only, and any future workflow-created commit uses the canonical `github-actions[bot]` identity. **Mathematical and canonical status are unchanged.**
-
-**Standing order:** every commit must update the current-status blocks in BOTH this README and [`CURRENT_STATE.md`](CURRENT_STATE.md), in the same atomic commit, including an explicit unchanged-mathematics statement when appropriate. Keep these fixed-order and general summaries near the top. README changes must be additive/reconciliatory: do not silently delete or materially compress substantive historical content, especially protected audit history, failures/corrections and reviewer navigation. See [`AGENTS.md`](AGENTS.md) and [`CANONICAL_REPOSITORY.md`](CANONICAL_REPOSITORY.md).
-
-**Historical-policy clarification:** the preceding paragraph is retained verbatim as history. STATUS_SYNC_POLICY_V2 and RESEARCH_EXECUTION_POLICY_V3 now require CURRENT_STATE updates per transaction and README refreshes at substantive reviewer-facing milestones, not paired README edits on every routine checkpoint.
-
-**Canonical repository:** `paullenz/MurtySimon742`. For a restart read [`CURRENT_STATE.md`](CURRENT_STATE.md), [`RESEARCH_EVIDENCE_INDEX.md`](RESEARCH_EVIDENCE_INDEX.md), and newer commits. The complete pre-row108 root overview is preserved byte-for-byte in [`archive/status-snapshots/2026-09-14/README_PRE_ROW108_2026-09-14.md`](archive/status-snapshots/2026-09-14/README_PRE_ROW108_2026-09-14.md).
+Earlier status snapshots are preserved under [`archive/status-snapshots/`](archive/status-snapshots/).
 
 <!-- REDTEAM-HISTORY:START -->
 ## Hostile / red-team audit history and resulting proof hardening
 
-**Protected project history.** This section records what adversarial review actually changed, including defects that invalidated evidence, non-blocking errors, and proof dependencies that were removed after challenge. It is intentionally cumulative. Routine status rewrites must not delete or materially compress it; new hostile-audit results should be appended or reconciled while preserving earlier findings and links.
+**19 September 2026 — daily eventual-D2C audit.** The [full report](project/research/post_ms/2026-09-19-daily-red-team-audit-v1/DAILY_RED_TEAM_AUDIT.md) found no fatal contradiction in the current rooted-witness/Hall/rigid-U-witness spine, but it tightened the evidence labels: abstract checker success is not graph-level realizability verification; the finite source-tuple theorem is singled out for independent re-proof; the four-exception direct-fan gate is strongly supported rather than fully re-certified in this audit; and the one-code exact pair-capacity/crowding branch becomes the primary forward target. The audit also found the deterministic status-schema CI failure described above and repaired the live status surfaces.
 
-The repository intentionally preserves failed approaches and audit findings rather than silently rewriting them. Several important proof improvements exist specifically because hostile review attacked earlier versions.
+**n=29 — real historical defect found and corrected.** Hostile review found a normalization bug in the first cumulative-threshold verifier: a label-group multiplicity was counted twice. The v1 certificates remain invalid as proof evidence. A corrected v2 replay, smaller exact kernel and later hand clipping argument removed the defect and much of the computational dependency. See [public-release audit](project/reviews/n29/2026-09-08-redteam-restart-v1/PUBLIC_RELEASE_AUDIT.md), [minimal kernel](project/reviews/n29/2026-09-08-redteam-restart-v1/MINIMAL_KERNEL_REPORT.json), and [reviewer-v4](project/reviews/n29/2026-09-11-reviewer-v4/PROOF.md).
 
-### n=29 — a real defect was found, corrected, and then the computational dependency was largely removed
+**Fan dependency hardening.** A cross-cutting external critique prompted direct order-specific upper-range reductions for the fixed-order candidates, making Fan’s density theorem historical attribution rather than a logical dependency of those proofs. The two suggested selected/residual collision objections did not survive re-audit, but the resulting proof text now states the semantics explicitly. See [feedback audit](project/reviews/cross-cutting/2026-09-09-external-ai-feedback-audit-v1/REPORT.md) and [Fan-free reduction](project/research/fan-free-fixed-orders/2026-09-09-v1/FAN_FREE_REDUCTION.md).
 
-During the restarted hostile audit of the additional n=29 `Delta=16` cumulative-threshold verifier, a **real normalization bug** was found in its first version: a label-group multiplicity was counted twice. The v1 cumulative-threshold certificates are therefore **invalid as proof evidence** and the historical v1 source remains retained only for auditability. This defect did **not** affect the original n=29 direct route or the separate fully fresh implementation.
+Other retained adversarial packages include the [n=25 re-audit](project/reviews/n25/2026-09-08-reaudit-v1/README.md), [n=27 red-team audit](project/reviews/n27/2026-09-08-redteam-v1/REPORT.md), [n=28 red-team report](project/reviews/n28/2026-09-07-redteam-v1/REPORT.md), [n=30 assembly audit](project/reviews/n30/2026-09-09-candidate-v1/ASSEMBLY_AUDIT.md), and [general 7/12 hostile audit](project/research/general_n/2026-09-09-profile-integral-7-12-v1/AUDIT.md).
 
-A corrected `v2` model was replayed cleanly and again produced zero survivors. The audit then reduced the proof-critical `Delta=16` computation to a smaller trusted kernel, whose clean replay also produced zero survivors with every late exclusion rechecked by exact integer Farkas arithmetic. See the [public-release audit](project/reviews/n29/2026-09-08-redteam-restart-v1/PUBLIC_RELEASE_AUDIT.md) and [minimal-kernel report](project/reviews/n29/2026-09-08-redteam-restart-v1/MINIMAL_KERNEL_REPORT.json).
-
-On 11 September, a separate ChatGPT instance with no project background performed a hostile n=29 review supplied by the user. It independently attacked the graph-to-model bridge, residual activity, threshold capacity, isolated-C treatment, corrected LP normalization, exact Farkas semantics and the hand assembly, and reported **no fatal flaw**. It independently recovered the complete n=29 charging-domain counts and a NetworkX graph-atlas bridge regression through order 7; both were reproduced again inside this project. Crucially, the review also found a new pointwise charging bound that removed substantial upper-range computation from the logical proof chain. See the [blind external red-team follow-up](project/reviews/n29/2026-09-11-blind-external-ai-redteam-v1/FOLLOWUP.md), [reviewer-v4 proof](project/reviews/n29/2026-09-11-reviewer-v4/PROOF.md), [reviewer-v4 release package](releases/n29-reviewer-v4/README.md), and [cross-order analytic caps](project/research/fan-free-fixed-orders/2026-09-11-pointwise-analytic-caps-v1/POINTWISE_CAPS.md).
-
-A separate proof-text audit found a **non-blocking sign/order typo** in an intermediate explanatory sentence of the expanded threshold-capacity lemma. The corrected sign is exactly the direction needed for the already-used final inequality, so no numerical result or candidate status changed. The historical lemma records the correction rather than erasing it.
-
-Later on 11 September, summing threshold capacity over residual-degree tails produced a stronger demand-only inequality. A hand clipping argument gives `Q(s)<=18`, while the bridge gives `Q(s)>=16+2t` for `Delta=16`, hence `t<=1`. This closes the `n=29, Delta=16, m>=210` branch without proof-critical computation. The corrected minimal-kernel/Farkas route remains frozen as independent corroboration and audit history rather than being discarded.
-
-### Robustness milestone — Fan dependency removed after hostile challenge
-
-A later external-AI critique raised three concrete objections: two possible collision/double-counting issues in the selected/residual construction, and the fact that the fixed-order papers then in scope used G. Fan's 1987 upper-density theorem to cap the edge search. The two local semantic objections did **not** survive re-audit: selection is one representative per missing **unordered** `B`-pair, and the forced cross-edges in the residual injection cannot themselves be selected because their endpoints miss an `A`-vertex. The current editions state those points explicitly. See the [cross-cutting feedback audit](project/reviews/cross-cutting/2026-09-09-external-ai-feedback-audit-v1/REPORT.md).
-
-For the Fan point, the project deliberately went further than defending the citation. It constructed direct order-specific upper-range reductions for the five fixed-order candidates then in scope, `n=25,27,28,29,30`, so Fan's theorem became **historical attribution only**, not a logical dependency of those proofs. Every historical reviewer/proof source was retained unchanged. The replacement is documented in [`FAN_FREE_REDUCTION.md`](project/research/fan-free-fixed-orders/2026-09-09-v1/FAN_FREE_REDUCTION.md), with later analytic simplifications in [`POINTWISE_CAPS.md`](project/research/fan-free-fixed-orders/2026-09-11-pointwise-analytic-caps-v1/POINTWISE_CAPS.md).
-
-The assembled replacement passed a fresh [hostile coverage/integrity audit](project/research/fan-free-fixed-orders/2026-09-09-v1/FAN_FREE_AUDIT.md): required upper edge ranges were complete, every proof-event checkpoint had zero survivors under exact acceptance, reviewer surfaces contained no residual logical invocation of Fan, and frozen historical source hashes still matched their recorded provenance. This is internal robustness evidence, not external acceptance; graph-to-residual lemmas and short hand monotonicity arguments remain important review targets.
-
-### Other fixed-order and general hostile audits retained
-
-| Scope | Adversarial audit outcome and resulting hardening |
-|---|---|
-| `n=25` | The [8 September re-audit](project/reviews/n25/2026-09-08-reaudit-v1/README.md) replayed the complete finite domain in 16 disjoint clean-runner shards: 543,578 outer states, 3,442,212 labelled columns and 1,959 independently reconstructed final equality certificates. No blocking mathematical defect was found; terminal reconstruction was made more independent of the frozen verifier. |
-| `n=27` | The [8 September red-team audit](project/reviews/n27/2026-09-08-redteam-v1/REPORT.md) hardened a replay covering 80,978,546 canonical columns and independently reconstructed all 35,435 terminal source-cap vectors. It found a raw C++ negative-token input-acceptance weakness and an initial audit-comparator gzip-timestamp mismatch; both were explicitly guarded/corrected without changing the mathematical candidate. |
-| `n=28` | The [7 September red-team report](project/reviews/n28/2026-09-07-redteam-v1/REPORT.md) added fresh replays, independent certificate checks and graph tests. No blocking defect was found in the direct candidate route. A non-blocking standalone-helper input-validation defect was recorded and guarded rather than hidden. |
-| `n=30` | The [hostile assembly audit](project/reviews/n30/2026-09-09-candidate-v1/ASSEMBLY_AUDIT.md) attacked the stitching of the exact degree regimes and certificate branches. Later Fan-free/analytic hardening reduced several historically computational upper-range scopes while retaining the assembly evidence. |
-| General `7/12` | The [hostile audit](project/research/general_n/2026-09-09-profile-integral-7-12-v1/AUDIT.md) used separately structured exact checkers against the scalar arithmetic, finite degree-assembly exceptions and threshold certificates. Large finite regressions are treated as consistency checks, not extrapolative proof; the shared graph-to-demand/profile-integral lemmas remain the central review target. |
-
-### Preservation rule for adversarial findings
-
-A hostile audit can strengthen confidence, weaken a claim, expose a defect, or force a different proof route. All four outcomes are useful evidence. Findings that invalidate evidence must stay visible as invalidated; superseded computations remain available as corroboration/history; failed audits, counterexamples and reviewer-triggered proof changes are not to be removed merely because a later route is cleaner. The automated README guard enforces the presence of this section and its core links, but the standing order is broader: substantive historical content elsewhere in the README must also be preserved unless the user explicitly requests removal or compression.
+**Preservation rule:** a hostile audit may strengthen, weaken, invalidate or redirect a claim. All four outcomes are evidence. Invalidated and superseded computations remain visible; failed audits, counterexamples and reviewer-triggered proof changes are not to be removed because a later route is cleaner. The complete pre-audit red-team chronology is preserved in the archived README linked above.
 <!-- REDTEAM-HISTORY:END -->
 
 ## Current research chain
 
-The active chain is now the **eventual dense D2C** programme:
+The active chain is the **eventual dense D2C programme**:
 
-- [Literature correction / 12-vertex exception](project/research/post_ms/2026-09-17-stronger-pivot-v1/LITERATURE_CORRECTION_2024_EXCEPTION.md).
-- [False-2019-conjecture dependency audit](project/research/post_ms/2026-09-17-stronger-pivot-v1/DEPENDENCY_AUDIT_2019_FALSE_CONJECTURE.md).
-- [Corrected signed-surplus pivot](project/research/post_ms/2026-09-17-stronger-pivot-v1/SIGNED_SURPLUS_PIVOT.md): `delta=b(n-b)-m=r-e(F)` and zero-source structure.
-- [Residual-defect / rooted-triangle interface](project/research/post_ms/2026-09-17-stronger-pivot-v1/DEFECT_TRIANGLE_ROOT.md).
-- [Hypercube-face exception family](project/research/post_ms/2026-09-17-stronger-pivot-v1/HYPERCUBE_FACE_EXCEPTION.md), including the 12-vertex hostile control mechanism.
-- [Zero-residual Boolean-flow boundary](project/research/post_ms/2026-09-17-stronger-pivot-v1/ZERO_RESIDUAL_BOUNDARY.md): internal `n<=294` cutoff at the second-extremal threshold.
+- [Literature correction / 12-vertex exception](project/research/post_ms/2026-09-17-stronger-pivot-v1/LITERATURE_CORRECTION_2024_EXCEPTION.md)
+- [Published-figure hostile-control certification](project/research/post_ms/2026-09-17-stronger-pivot-v1/PUBLISHED_12_VERTEX_EXCEPTION_FIGURE_CERTIFICATION.md)
+- [False-2019-conjecture dependency audit](project/research/post_ms/2026-09-17-stronger-pivot-v1/DEPENDENCY_AUDIT_2019_FALSE_CONJECTURE.md)
+- [Signed-surplus pivot](project/research/post_ms/2026-09-17-stronger-pivot-v1/SIGNED_SURPLUS_PIVOT.md)
+- [Zero-residual Boolean-flow boundary](project/research/post_ms/2026-09-17-stronger-pivot-v1/ZERO_RESIDUAL_BOUNDARY.md)
+- [Rooted witness-slot saturation](project/research/post_ms/2026-09-18-rooted-witness-slot-saturation-v1/)
+- [Hall density / cut stability](project/research/post_ms/2026-09-18-hall-density-cut-stability-v1/)
+- [Same-code complementary-pair localization](project/research/post_ms/2026-09-18-large-code-pair-v1/)
+- [Rigid Hall witness deficit and one-code trap](project/research/post_ms/2026-09-18-rigid-hall-witness-deficit-v1/)
+- [19 September daily adversarial audit](project/research/post_ms/2026-09-19-daily-red-team-audit-v1/DAILY_RED_TEAM_AUDIT.md)
 
-The immediate target is a stability/perturbation theorem away from `r=e(F)=0`: quantify how a bounded amount of residual/F-edge mass corrupts the coordinate flow, then combine factorial expansion with the existing Hall/residual inequalities. The 12-vertex graph must remain a regression test for every proposed universal statement.
-
-The earlier Murty–Simon chain remains preserved as a mathematical toolbox and audit record. Specific graph orders and explicitly defined relaxed profiles were laboratories for structural principles, not substitutes for an all-order proof. The [canonical graph-to-constraint bridge](project/research/general_n/2026-09-11-canonical-bridge-v1/CANONICAL_BRIDGE.md) translates a hypothetical graph into selected quasi-edge representatives, residual incidences, label demands, missing-pair loads and incoming capacities.
-
-**Historical latest continuation before the programme pivot:** [strict tight-label blocks](project/research/general_n/2026-09-15-tight-label-block-v1/README.md), [equality rigidity](project/research/general_n/2026-09-15-tight-label-equality-v1/README.md), [one-spare internal review](https://github.com/paullenz/MurtySimon742/blob/43dc689300eb20efa30e2b848a5326f3c5dcbd6f/CURRENT_STATE.md), [multi-spare rigidity](project/research/general_n/2026-09-15-spare-receiver-rigidity-v1/PRESERVED_HANDOFF.md), [disjoint-receiver routing](project/research/general_n/2026-09-15-disjoint-receiver-boundary-v1/PRESERVED_HANDOFF.md), and [the triangle-free budget below 3d receivers](project/research/general_n/2026-09-15-triangle-free-receiver-budget-v1/PRESERVED_HANDOFF.md). The later Hall-ramp work closes the entire mixed `{4,5}` selected-excess axis; none of this is promoted to a new all-order theorem merely by the pivot.
-
-- [Shared block slack](project/research/general_n/2026-09-14-joint-blocks-v1/README.md): one shared low-block slack budget; original707/713 and fresh708/715 at that checkpoint.
-- [Source-priced selected incidence](project/research/general_n/2026-09-14-source-sharing-v1/README.md): exact source-row dualization; restored replay34905883642 passed while the earlier failure remains preserved.
-- [Stronger source-price search / witnesses](project/research/general_n/2026-09-14-source-pricing-witnesses-v1/README.md): 21/24 tested bounds improve; uncoupled witnesses for original160,338,347 show why stronger destination/residual correlation is needed. This package supplies the local destination-coupling inequalities used by the singleton theorem.
-- [Conditioned source pricing](project/research/general_n/2026-09-14-conditioned-source-pricing-v1/README.md): exact branch totals and legitimate caps. Its row471 rigidity successor closes `e_L=39,40`; run34906169745 passed the exact scan and rigidity verifier.
-- [Row471 `e_L=41` high-block closure](project/research/general_n/2026-09-15-row471-e41-v1/README.md): receiver pressure plus one common high-excess budget forces at least28 high selections from positive-pressure sources, but positive-excess high labels can carry at most24.
-- [Row471 `e_L=42,43` common-pressure split](project/research/general_n/2026-09-15-row471-e42-e43-common-pressure-v1/README.md): exact `rho=2` symmetry DP plus exact nested-high-excess DP gives source-group charge uppers `214,215<222`; remote run34909572352 passed. These branch results remain independent corroboration.
-- [Singleton destination / arc-slot Hall theorem](project/research/general_n/2026-09-15-singleton-destination-trap-v1/README.md): a `(q,rho)=(1,1)` source can only point to `q<=1`; unordered-pair Hall deficiency excludes whole original profiles347,471,586. A broader cardinality-compatible pair-slot flow independently rejects the same three and retains160,338.
-- [Forced-core receiver-capacity partition](project/research/general_n/2026-09-15-forced-core-capacity-v1/README.md): low eligibility makes the selected sets of ten `rho=1` sources identical in rows160 and338; exact labelled-routing receiver capacities cannot be partitioned across the forced labels, closing the original synthetic sample at713/713.
-- [Fresh forced-core/high-demand squeeze](project/research/general_n/2026-09-15-fresh-forced-core-high-squeeze-v1/README.md): six fresh survivors fail total receiver capacity; the seventh forces all candidate receivers used and then violates high-label selected demand `43<45`, closing the fresh sample at715/715.
-- [Canonical forced-core discovery scan](project/research/general_n/2026-09-15-forced-core-canonical-scan-v1/README.md): exact arbitrary-`r` theorem inserted into the promoted relational `q` enumeration; 646 stored witnesses survive immediately and the remaining 306 states have now completed exhaustive resumed enumeration in run34950746007: 170 candidate exclusions, 136 survivors. Discovery result only; no canonical promotion is implied.
-- [Canonical forced-core audit checkpoint](project/research/general_n/2026-09-15-forced-core-canonical-audit-v1/README.md): 124 certified replacement witnesses are among the final 136 rescanned survivors; an independent type-multiplicity implementation exactly reproduces complete stage counts on 24 of the final 170 whole-state exclusion candidates. The independent audit must now be extended before any promotion.
-- [Conditioned source sharing / row108](project/research/general_n/2026-09-14-conditioned-source-sharing-v1/README.md): exact row/type incidence plus one common source pressure excludes row108 in the stated relaxation; remote replay34906766833 succeeded.
-
-For row108, one fixed signed price vector closes24 of the32 block-total tuples surviving the older multiblock screen. The remaining eight require unit charge at least211. Exact row/type flow reduces46,662 excess histograms to1,201 feasible histograms;1,124 already have exact incidence-charge upper below211, and exact common-pressure branch-and-bound eliminates the remaining77. Complete verifier output canonical parsed-JSON SHA256: `5ea860b79516d9a34e73a67fafdb7875cd3c9c99b01594b4bf3aab2c3e8a7629`.
+The immediate priority is to independently re-prove the finite source-tuple theorem, then combine the **exact** one-code `Ccap_P` formula with `(ONE)` and `(CROWD)` before introducing any further global scalar relaxation. In parallel, build an independent graph-level regression of the rooted/Hall quantities on realizable small D2C graphs including `X_3`.
 
 ## Failures and audit gates remain first-class evidence
 
-Do not quietly delete, relabel or retrospectively clean up a failed lemma, non-closing experiment, counterexample or CI event. The454/597 simultaneous-multiblock non-rejection remains a negative predecessor result. Source-price run34904353492 remains failed even though the exact restoration replay later succeeded. N30 run34906766832 remains failed because an earlier condensed README omitted explicit frozen PDF navigation; restoring the links does not repaint that run green. Red-team-history guard run34908428824 remains failed because the start-here link was outside the protected block; the later repair does not repaint it green. Standalone row471 research-note commit `2667a909...` violated the paired-status publication order; later checkpoints correct the live surfaces but do not rewrite that predecessor as compliant. The branch-specific charge route did not itself finish row471; the later destination theorem is a distinct stronger structural route. Synthetic-sample exclusions do not change the canonical finite frontier by themselves.
+Do not quietly delete, relabel or retrospectively clean up a failed lemma, non-closing experiment, counterexample or CI event. The pre-audit Status synchronization failure `35402717100` / `105785888407` is preserved: it was caused by a status-schema mismatch and missing handoff fields, not by transient infrastructure. Historical failures and non-promoted discovery results remain documented in the preserved pre-audit README and their native packages.
 
-The 2,655 recovered relational candidates completed full discovery and two-implementation audit, then the separate reviewed ledger step. All 2,655 are now ledger-promoted with pinned hashes and zero unresolved states. This finite closure family remains conditional on the canonical bridge and does not replace external specialist review.
+Finite discovery, audit, ledger promotion and external mathematical acceptance remain separate gates. Synthetic or abstract-system rejections do not alter the canonical graph frontier by themselves.
 
 <!-- REVIEW-MATERIALS:START -->
 ## Papers and review materials
 
-This reviewer-facing navigation surface is protected. Detailed canonical status remains [`releases/REVIEW_READY_INDEX.md`](releases/REVIEW_READY_INDEX.md); new editions must update both surfaces rather than deleting this section.
+**Reviewer entry:** start with [`START_HERE_FOR_REVIEWERS.md`](START_HERE_FOR_REVIEWERS.md), then [`releases/REVIEW_READY_INDEX.md`](releases/REVIEW_READY_INDEX.md).
 
-**Reviewer entry:** start with [`START_HERE_FOR_REVIEWERS.md`](START_HERE_FOR_REVIEWERS.md), then use the package index below.
-
-<!-- ACTIVE-STANDALONE-PAPERS:REVIEW -->
 ### Active standalone paper candidates
 
-- [Stratified Hall / minimum-cut manuscript](project/papers/stratified-hall-mincut/MANUSCRIPT.md) · [claim ledger](project/papers/stratified-hall-mincut/CLAIM_LEDGER.md) · [abstract theorem](project/papers/stratified-hall-mincut/ABSTRACT_CROSSING_DOMINANCE.md).
-- [Boolean-flow D2C manuscript](project/papers/boolean-flow-d2c/MANUSCRIPT.md) · [claim ledger](project/papers/boolean-flow-d2c/CLAIM_LEDGER.md) · [all-private stability theorem](project/research/post_ms/2026-09-17-stronger-pivot-v1/ALL_PRIVATE_STABILITY.md).
+- [Stratified Hall / minimum-cut manuscript](project/papers/stratified-hall-mincut/MANUSCRIPT.md) · [claim ledger](project/papers/stratified-hall-mincut/CLAIM_LEDGER.md) · [abstract theorem](project/papers/stratified-hall-mincut/ABSTRACT_CROSSING_DOMINANCE.md)
+- [Boolean-flow D2C manuscript](project/papers/boolean-flow-d2c/MANUSCRIPT.md) · [claim ledger](project/papers/boolean-flow-d2c/CLAIM_LEDGER.md) · [all-private stability theorem](project/research/post_ms/2026-09-17-stronger-pivot-v1/ALL_PRIVATE_STABILITY.md)
 
-### Fixed-order papers and packages
+### Fixed-order reviewer packages
 
-- [`n=25 reviewer-v2`](releases/n25-reviewer-v2/README.md) — [manuscript PDF](releases/n25-reviewer-v2/N25_Reviewer_Manuscript_v2.pdf) and [verification companion PDF](releases/n25-reviewer-v2/N25_Verification_Companion_v2.pdf).
-- [`n=27 reviewer-v2`](releases/n27-reviewer-v2/README.md) — [manuscript PDF](releases/n27-reviewer-v2/N27_Reviewer_Manuscript_v2.pdf) and [verification companion PDF](releases/n27-reviewer-v2/N27_Verification_Companion_v2.pdf).
-- [`n=28 reviewer-v2`](releases/n28-reviewer-v2/README.md) — [manuscript PDF](releases/n28-reviewer-v2/N28_Reviewer_Manuscript_v2.pdf) and [verification companion PDF](releases/n28-reviewer-v2/N28_Verification_Companion_v2.pdf).
-- [`n=29 reviewer-v4`](releases/n29-reviewer-v4/README.md) — [manuscript PDF](releases/n29-reviewer-v4/N29_Reviewer_Manuscript_v4.pdf) and [verification companion PDF](releases/n29-reviewer-v4/N29_Verification_Companion_v4.pdf).
-- [`n=30 reviewer-v3`](releases/n30-reviewer-v3/README.md) — [manuscript PDF](releases/n30-reviewer-v3/N30_Reviewer_Manuscript_v3.pdf) and [verification companion PDF](releases/n30-reviewer-v3/N30_Verification_Companion_v3.pdf).
-- [`n=31 reviewer-v1`](releases/n31-reviewer-v1/README.md).
-- [`n=32 reviewer-v1`](releases/n32-reviewer-v1/README.md).
-- [`n=33 reviewer-v1`](releases/n33-reviewer-v1/README.md).
-- [`n=34 reviewer-v2`](releases/n34-reviewer-v2/README.md).
-- [`n=35 reviewer-v1`](releases/n35-reviewer-v1/README.md).
+- [`n=25 reviewer-v2`](releases/n25-reviewer-v2/README.md)
+- [`n=27 reviewer-v2`](releases/n27-reviewer-v2/README.md)
+- [`n=28 reviewer-v2`](releases/n28-reviewer-v2/README.md)
+- [`n=29 reviewer-v4`](releases/n29-reviewer-v4/README.md)
+- [`n=30 reviewer-v3`](releases/n30-reviewer-v3/README.md)
+- [`n=31 reviewer-v1`](releases/n31-reviewer-v1/README.md)
+- [`n=32 reviewer-v1`](releases/n32-reviewer-v1/README.md)
+- [`n=33 reviewer-v1`](releases/n33-reviewer-v1/README.md)
+- [`n=34 reviewer-v2`](releases/n34-reviewer-v2/README.md)
+- [`n=35 reviewer-v1`](releases/n35-reviewer-v1/README.md)
 
-### General-theory papers and reviewer packages
+### General-theory reviewer packages
 
-- [`7/12` maximum-degree reviewer-v1](releases/general-7-12-reviewer-v1/README.md).
-- [`13/22` retained maximum-degree reviewer-v1](releases/general-13-22-reviewer-v1/README.md).
-- [`293/500` retained maximum-degree reviewer-v1](releases/general-293-500-reviewer-v1/README.md).
-- [General step-back structural package](releases/general-stepback-v1/README.md).
-- [Joint-clipping reviewer-v1](releases/general-joint-clipping-reviewer-v1/README.md).
-- [Heavy-load / routing reviewer-v1](releases/general-heavy-load-reviewer-v1/README.md).
-- [Joint heavy routing](releases/general-joint-routing-reviewer-v1/README.md).
-- [Demand/tail projection reviewer-v1](releases/general-routing-tail-reviewer-v1/README.md).
-- [Compatible-destination routing reviewer-v1](releases/general-compatible-routing-reviewer-v1/README.md).
-- [Compatible-routing full-catalogue reviewer-v1](releases/general-compatible-catalogue-reviewer-v1/README.md).
-- [Closed-compatible-potential reviewer-v1](releases/general-closed-compatible-reviewer-v1/README.md).
-- [Fixed-neighbourhood / arc-realisation reviewer-v1](releases/general-arc-realisation-reviewer-v1/README.md).
+- [`7/12` maximum-degree reviewer-v1](releases/general-7-12-reviewer-v1/README.md)
+- [`13/22` retained maximum-degree reviewer-v1](releases/general-13-22-reviewer-v1/README.md)
+- [`293/500` retained maximum-degree reviewer-v1](releases/general-293-500-reviewer-v1/README.md)
+- [General step-back structural package](releases/general-stepback-v1/README.md)
+- [Joint-clipping reviewer-v1](releases/general-joint-clipping-reviewer-v1/README.md)
+- [Heavy-load / routing reviewer-v1](releases/general-heavy-load-reviewer-v1/README.md)
+- [Compatible-routing full-catalogue reviewer-v1](releases/general-compatible-catalogue-reviewer-v1/README.md)
 <!-- REVIEW-MATERIALS:END -->
 
-## Trust boundary
+## Repository policy and provenance
 
-Hand derivation, same-assistant verification, remote CI, durable preservation and external acceptance are distinct. No timeout, missing output, unsuccessful search or floating infeasibility is proof. The canonical selected/residual bridge remains the principal correlated external-review dependency. The external `Erdos742/Erdos742` formalization is likewise not treated as independently accepted until rebuilt/reviewed, while the false 2019 all-order conjecture is explicitly excluded from the project's proof assumptions.
+The canonical repository is `paullenz/MurtySimon742`. Every active research transaction must leave `CURRENT_STATE.md` parseable by `scripts/check_status_sync.py`, including the required checkpoint and handoff fields. README is refreshed at substantive reviewer-facing milestones and at the daily adversarial audit. Mathematical files, checker evidence and status should be committed atomically where practical because status synchronization checks every new commit.
+
+Historical status and audit material must remain discoverable. The 19 September archived pre-audit README is the complete preservation point for the material compressed from this live status-first surface.
