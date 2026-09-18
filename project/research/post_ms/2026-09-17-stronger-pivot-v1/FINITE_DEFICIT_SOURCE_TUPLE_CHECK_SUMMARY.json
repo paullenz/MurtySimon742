@@ -1,0 +1,14 @@
+{
+  "date": "2026-09-18",
+  "status": "ok",
+  "purpose": "audit/regression support only; theorems rest on hand double-counts",
+  "local_triple_geometry_cases": 304264,
+  "ratio_grid_points": 2001,
+  "rho_cutoff_exact": "27/14",
+  "rho_cutoff_decimal": 1.9285714285714286,
+  "F_at_cutoff_exact": "219672/7245875",
+  "P_at_cutoff_exact": "-4068/2401",
+  "Pprime_at_cutoff_exact": "-343755/343",
+  "Psecond_at_2": -1438,
+  "failures": 0
+}
