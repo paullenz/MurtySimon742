@@ -1,0 +1,13 @@
+{
+  "beta_q_vs_sparse_u_checks": 40000,
+  "beta_q_vs_sparse_u_max_difference": -0.0009311312840742381,
+  "failures": 0,
+  "finite_root_wedge_checks": 32939,
+  "finite_switching_compatible_cases": 376817,
+  "finite_switching_rejected_cases": 56252,
+  "local_code_checks": 24604,
+  "small_rho_boundary_grid_checks": 50000,
+  "small_rho_boundary_max_at": [0.0005358983848622456, 2.000005305924603],
+  "small_rho_boundary_max_margin": -0.0005182863693064066,
+  "total_checks": 580612
+}
