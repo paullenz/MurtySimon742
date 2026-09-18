@@ -3,50 +3,44 @@
 > **Active target — 18 September 2026.** The live problem is the sufficiently-large/eventual second-extremal D2C classification around `M(n)=floor((n-1)^2/4)+1`. The false all-order 2019 Dailly–Foucaud–Hansberg strengthening is not assumed. The published order-12, size-32 D2C obstruction is a mandatory hostile control. Murty–Simon / Erdős #742 work remains preserved but is not the live optimization target.
 
 <!-- CURRENT-STATUS:START -->
-**CHECKPOINT CLASS:** `FULL_TIGHT_BOOLEAN_SWITCHING_BRANCH_EVENTUALLY_CLOSED_INTERNAL_CANDIDATE_NEAR_FULL_STABILITY_NOW_ACTIVE`.
+**CHECKPOINT CLASS:** `FULL_TIGHT_BRANCH_CLOSED_NEAR_FULL_PARTIAL_BOOLEAN_NORMAL_FORM_AND_ANTIPODE_ERROR_CURVATURE_ESTABLISHED_INTERNAL_CANDIDATES`.
 
-**WORK MODE:** `EVENTUAL_D2C_MATH`. This unit did not continue the fixed-defect ladder one integer at a time. It extracted a general open-neighbourhood twin package in a minimum-defect switched state, collapsed every nonlopsided minimum-defect geometry for `d_*>=7`, closed all lopsided states for `d_*>=9` by hand residual counting, certified the remaining `d_*=7,8` finite boundaries, and thereby internally exhausted the full tight-antipode Boolean switching branch for `k>=19`.
+**WORK MODE:** `EVENTUAL_D2C_MATH`. The full tight-antipode Boolean switching branch remains internally closed for `k>=19`. The main attack has now moved into the genuinely near-full regime. This unit extracted the exact partial Boolean normal form for an arbitrary tight matching, proved that two tight pairs eliminate the private-foot branch entirely, imported the full-tight orientation graph as a necessary support subsystem, built the exact augmented orientation constraints created by unmatched B-vertices, and proved a quadratic error payment for branching in the antipode graph.
 
 ## 1. Preserved dense-root entry point
 
-For a non-bipartite D2C graph above `M(n)`, the preserved maximum-root work forces a rooted triangle at a maximum-degree root. For `n>=14`, the all-private edge-witness theorem excludes the all-private branch and forces a disjoint-support antipode.
+For a non-bipartite D2C graph above `M(n)`, the preserved root work reduces the triangle-containing maximum-root branch as follows.
 
-For an antipode `uw` at root `v`, with `B=N(v)`, `b=|B|`, `A=V\N[v]`, and `lambda=2b-n`, the exact slack identity is
+For `n>=14`, the all-private edge-witness theorem rules out the branch in which every triangle-active root neighbour has a private A-foot. Hence a dense maximum-triangle root has a disjoint-support antipode.
 
-`epsilon_u+epsilon_w=lambda+1+eta(uw)`,
+For an antipode `uw` at root `v`, with
 
-where `eta` counts vertices adjacent to neither antipode endpoint. Tight antipodes are those with `eta=0`; they form a matching. For every antipode matching `M`,
+`B=N(v)`, `b=|B|`, `A=V\N[v]`, `a=|A|`, `lambda=2b-n=b-a-1`,
 
-`b lambda + r - Q >= |M|(lambda+1)+sum_{e in M} eta(e)`  `(AMC)`.
+the exact slack identity is
 
-If tight antipodes cover all of `B`, write
+`epsilon_u+epsilon_w=lambda+1+eta(uw)`,                 `(AS)`
 
-`B=P_1 dotcup ... dotcup P_k`, `|P_i|=2`, `b=2k`.
+where `eta` counts vertices outside `{u,w,v}` adjacent to neither endpoint.
 
-Then:
+Tight antipodes are those with `eta=0`; they form a matching. For every antipode matching `M`,
 
-- `G[B]` is a 2-lift of `K_k`;
-- every A-vertex is a Boolean transversal;
-- `Q=e(G[B])=k(k-1)`;
-- `r=k(a-k+1)`;
-- `delta=r-e(F)`;
-- the actual distinct A-code support is a vertex cover of the orientation-code graph `Omega_sigma`;
-- an above-`M(n)` full-tight graph must have `a<=2k`.
+`b lambda + r - Q >= |M|(lambda+1)+sum_{e in M} eta(e)`.   `(AMC)`
 
-For a Boolean code `c`, the switched graph `L_c` has
+The canonical defect is
 
-`phi(c)=k-#{leaf coordinates of L_c}`,
+`delta=b(n-b)-m=r-e(F)`.
 
-and
+The rooted triangle count is
 
-`d_Omega(c)=k-phi(c)`.
+`Q=e(G[B])`.
 
 ## 2. Mandatory 12-vertex negative control
 
 The published Radosavljevic--Stanic--Zivkovic (2024) order-12, size-32 graph has been reconstructed directly from the authoritative Figure 1 and exactly checked. It is isomorphic to the project's `X_3`:
 
-- 12 vertices;
-- 32 edges, while `M(12)=31`;
+- `n=12`;
+- `m=32>M(12)=31`;
 - diameter 2;
 - every edge critical;
 - unique dominating edge;
@@ -60,198 +54,266 @@ Files:
 - `check_published_12_vertex_exception_figure.py`;
 - `PUBLISHED_12_VERTEX_EXCEPTION_FIGURE_CHECK_SUMMARY.json`.
 
-This is a direct figure reconstruction, not an author-supplied adjacency file. The `k=4` hostile control remains untouched by every eventual theorem below.
+This hostile control is outside every eventual threshold proved below and must remain so.
 
-## 3. Preserved fixed-defect hierarchy through six
+## 3. Preserved milestone: full-tight Boolean branch closed internally
 
-Before this unit the full-tight switching hierarchy was:
+If tight antipodes cover all of `B`, write
 
-- defect `0`: residual-zero/perfect-matching mechanism leaves only finite `H5/X_3` boundaries; above threshold the perfect-matching state is excluded;
-- defect `1`: complete one-defect regime eventually closed;
-- defect `2`: complete regime closed from `k>=14`;
-- defect `3`: complete regime closed from `k>=15`;
-- defect `4`: complete regime internally closed from `k>=19`;
-- defect `5`: support-impossible from `k>=8`;
-- defect `6`: support-impossible from `k>=9`.
+`B=P_1 dotcup ... dotcup P_k`, `|P_i|=2`, `b=2k`.
 
-The general leaf package for `d>=3` exceptional/non-leaf coordinates, pendant sizes `p_i`, `t` isolated leaf-pairs, and `g` nonempty pendant groups is
+Then:
 
-`B_d = 2 sum_i (p_i-1)_+ + 2 sum_{i<j} min(p_i,p_j)`,
+- `G[B]` is a 2-lift of `K_k`;
+- every A-vertex is a Boolean transversal;
+- `Q=k(k-1)`;
+- `r=k(a-k+1)`;
+- actual A-codes cover the orientation-code graph `Omega`;
+- an above-`M(n)` candidate has `a<=2k`.
 
-and for `t>=1`
+The complete switching hierarchy has been internally exhausted for `k>=19`:
 
-`L_d = B_d + 4tg + 2t(t-1) + 1`.
-
-Coordinatewise residual monotonicity reduces every fixed-`d`, fixed-core pendant problem to the status alphabet `0,1,>=2`.
-
-The elementary large-minimum-defect degree bound gives, for
-
-`d_* = min_c phi(c)`,
-
-`tau(Omega)>=ceil(k(k-1)/(k-d_*))`.
-
-Thus `2d_*>k+1` is already support-impossible. Before the present unit this left, for `k>=19`,
-
-`7 <= d_* <= floor((k+1)/2)`.
-
-## 4. New twin-package theorem
-
-Choose a switched state attaining the minimum defect `d=d_*`, with `ell=k-d` leaves. In the only range not already closed by the degree bound,
-
-`ell>=d-1`.
-
-Decompose the leaves into ordinary pendant groups `P_j` of sizes `p_j` attached to `g` exceptional parents, plus `t` isolated leaf-pairs. Let `Q0` be the `q=d-g` exceptional coordinates carrying no ordinary pendant group. Partition `Q0` into equal-open-neighbourhood twin classes `T`.
-
-For a twin class of size `m`, the forced orientation-code formula gives, vertex-disjointly from the old leaf-only package:
-
-- `2 K_m` from pairs inside the twin class, cover `2(m-1)`;
-- `2 K_{m,p_j}` against every pendant group, cover `2 min(m,p_j)`;
-- two `K_{m,1}` copies against each isolated leaf, total `4t` cover per twin class.
-
-Hence
-
-`tau(Omega) >= L_d + 2 sum_T [(|T|-1)+sum_j min(|T|,p_j)+2t]`.
-
-The disjointness is a hand code calculation. A collision between a twin-clique code and a pendant-star centre would force a zero-parent exceptional coordinate to have degree one, which is forbidden; the other potential collisions separate by leaf coordinate or collapse the neighbourhood classes.
-
-Full note:
-
-`MINIMUM_DEFECT_TWIN_PACKAGE_COLLAPSE.md`.
-
-## 5. General consequence: every nonlopsided minimum-defect state closes for d>=7
-
-Using `ell>=d-1`, the twin package gives strict support excess whenever:
-
-- `g>=2` ordinary pendant groups;
-- `g=1` and `t>=1`;
-- `g=0` (all leaves lie in isolated pairs).
-
-Therefore any surviving minimum-defect state with `d>=7` would have to be **pure lopsided**:
-
-- `t=0`;
-- `g=1`;
-- all `z=k-d` leaves attach to one exceptional root;
-- `z>=d-1`.
-
-This is the main structural compression of the unit. The previous exponentially widening fixed-defect family has collapsed to one ray shape for arbitrary `d`.
-
-## 6. Pure lopsided d>=10 closes uniformly
-
-Put `q=d-1` for the nonroot exceptional coordinates. The leaf-leaf package and the exact nonroot-exception/leaf twin-star package already cost
-
-`2(z-1)+2q = 2k-4`.
-
-A directed `Q0-Q0` code is absorbed by one of those star-centre codes only when its source is root-adjacent and has exactly two neighbours in `Q0`. If `b_bad` is the number of unordered exceptional pairs with an absorbed endpoint, then for `q>=5`
-
-`b_bad <= 2q-4`.
-
-Hence at least
-
-`(q^2-5q+8)/2`
-
-exceptional pairs survive. Each gives two complementary residual orientation edges. A residual code has degree at most `q`, so
-
-`tau(R_Q) >= ceil(q-5+8/q)`.
-
-For `q>=9`, i.e. `d>=10`, this is at least five, exactly what is needed beyond `2k-4`.
-
-Thus every minimum-defect state with `d_*>=10` is support-impossible: if `k-d_*<d_*-1` the elementary degree bound closes it; if `k-d_*>=d_*-1` the twin/lopsided theorem closes it.
-
-## 7. d_*=9 closes by hand
-
-For `d=9`, `q=8`. Retaining the twin-class core cliques gives lopsided package margin
-
-`2(q-h-2)`
-
-where `h` is the number of distinct open-neighbourhood classes among the eight nonroot exceptional coordinates.
-
-- `h<=5`: package already strict;
-- `h=6`: package equality, but a residual exceptional edge remains;
-- `h=7`: at least 15 quotient residual edges remain after removing the unique twin-pair edge; degree at most eight gives quotient cover at least two and full complementary cover at least four;
-- `h=8`: the worst absorbed-pair equality would force six identical root-adjacent neighbourhoods, contradicting `h=8`; at least 17 quotient edges remain, giving quotient cover at least three and full residual cover at least six.
-
-Therefore `d_*=9` is excluded without a finite core scan.
-
-## 8. d_*=7,8 finite boundary certificates
-
-### Seven defects
-
-For the pure lopsided seven-defect ray, audit at `z=3` over all rooted seven-vertex exceptional cores. The NetworkX graph atlas has 1044 unlabelled seven-vertex graphs; rooting and validity filtering leaves 4376 cores.
-
-At `z=3` the leaf package has cover four. Maximum matching reaches the required residual target in all but 15 rooted cases. Exact solution of those 15 gives minimum residual cover 19, hence minimum additive margin
-
-`4+19-2(10)=3`.
-
-Coordinatewise residual monotonicity propagates that strict margin to every larger `z`, in particular the minimum-defect range `z>=6`.
-
-### Eight defects
-
-Here `q=7`.
-
-- `h<=4`: twin package already strict;
-- `h=5`: package equality and a residual quotient edge remains;
-- `h=6`: package is two short, while the quotient residual has cover at least two, hence at least four over complementary halves;
-- `h=7`: the sole finite boundary.
-
-Enumerating all 1044 seven-vertex graph-atlas cores for `Q0` and all `2^7` root-neighbour masks leaves exactly 66513 valid all-distinct rooted cores. Every quotient residual graph has vertex-cover number at least three; there are zero cover-`<=2` cases. Thus the complementary residual contributes at least six, exceeding the four-code shortfall.
-
-Files:
-
-- `check_minimum_defect_d7_d8_lopsided_boundary.py`;
-- `MINIMUM_DEFECT_D7_D8_LOPSIDED_BOUNDARY_CHECK_SUMMARY.json`.
-
-## 9. New milestone: full-tight Boolean switching branch internally closed
-
-Combining the preserved defect `0,...,6` results with Sections 4--8 gives:
-
-> **FULL-TIGHT BOOLEAN SWITCHING EXCLUSION — internal candidate.** If tight antipodes cover all of `B` and `k>=19`, then an above-`M(n)` counterexample cannot occur.
-
-The minimum switching defect is exhausted as follows:
-
-- `0<=d_*<=6`: preserved fixed-defect results;
-- `d_*=7,8`: finite boundary certificates after the hand twin-package reduction;
-- `d_*=9`: hand residual-count closure;
-- `d_*>=10`: uniform hand twin/lopsided closure or the elementary large-defect degree bound.
+- defects `0,...,4`: structural classifications plus F-separation/defect closure;
+- defects `5,6`: support-impossible from their stated thresholds;
+- defects `7,8`: general twin-package reduction plus finite rooted-core certificates;
+- defect `9`: hand residual-count closure;
+- defects `>=10`: uniform twin/lopsided support closure or the elementary orientation-degree bound.
 
 Full synthesis:
 
 `FULL_TIGHT_SWITCHING_BRANCH_EVENTUAL_CLOSURE.md`.
 
-This is the point at which continuing to classify switching defects would be the wrong optimization target.
+Therefore the fixed-defect ladder is no longer the main target.
 
-## 10. Active frontier: lift from full-tight to near-full/errorful antipodes
+## 4. New near-full partial Boolean normal form
 
-The clean Boolean switching problem is now internally exhausted. The main mathematical attack should return to the stability layer.
+Let the complete tight-antipode matching have `p` pairs
 
-The relevant preserved facts are:
+`P_i={u_i,w_i}`, `1<=i<=p`.
 
-- all-private maximum-root triangle branch is impossible above `M(n)` for `n>=14` by edge-witness pricing;
-- therefore a dense counterexample enters the antipode branch;
-- tight antipodes form a matching;
-- errorful antipodes pay exactly through `eta` in `(AS)` and `(AMC)`;
-- a full tight matching is now eventually impossible by Section 9.
+Put
 
-The next high-value theorem is therefore a **near-full tight-matching / antipode-error stability inequality**: show that if the tight matching does not cover all of `B`, then the unmatched vertices and/or positive `eta` force enough extra canonical defect `delta` to reach `m<=M(n)`. The full-tight closure should be used as the zero-error endpoint, not reopened.
+`P=union_i P_i`, `U=B\P`, `u=|U|`,
 
-A useful first quantitative identity for a tight antipode matching of size `p`, with `u=b-2p` unmatched B-vertices, follows from `(AMC)` and the general maximum-degree inequality `r<=Q+2delta`:
+so
 
-`(b-u)(lambda+1)/2 <= b lambda + 2delta`,
+`b=2p+u`.
+
+Write
+
+`q=e(G[U])`, `s=e_G(A,U)`, `f=e(G[A])`.
+
+Tightness of every `P_i` says that each vertex outside the pair chooses exactly one endpoint. Hence:
+
+- between two tight pairs there is a perfect matching;
+- every `y in U` chooses one endpoint of every `P_i`;
+- every `x in A` chooses one endpoint of every `P_i`.
+
+Thus every vertex of `A union U` carries a partial Boolean code in `{0,1}^p`.
+
+The exact rooted counts are
+
+`Q = p(p-1)+pu+q = p(p+u-1)+q`,                        `(NF1)`
+
+`r = a(p+u)-s-Q`
+
+`  = (p+u)(a-p)+p-s-q`,                                `(NF2)`
+
+and
+
+`delta=(p+u)(a-p)+p-s-q-f`.                            `(NF3)`
+
+For unmatched B-slack,
+
+`E_U=sum_{y in U} epsilon_y = u(p+u-1)-2q-s`.          `(NF4)`
+
+For A-slack,
+
+`L_A=sum_{x in A} epsilon_x = a(p+u)-s-2f`.            `(NF5)`
+
+Each tight pair still satisfies
+
+`epsilon_{u_i}+epsilon_{w_i}=lambda+1`.
+
+Full note:
+
+`NEAR_FULL_TIGHT_MATCHING_NORMAL_FORM.md`.
+
+## 5. Two tight pairs eliminate the private-foot alternative
+
+Assume `p>=2`.
+
+Every B-vertex is triangle-active:
+
+- a matched endpoint meets every other tight pair;
+- an unmatched vertex meets every tight pair.
+
+But every A-vertex has exactly `p>=2` neighbours in the matched set `P`. Therefore no A-vertex can be a private foot with `N_B(x)={y}`.
+
+Hence the root-edge dichotomy collapses to the antipode alternative:
+
+> **NO-PRIVATE / ANTIPODE-COVER REDUCTION — internal candidate.** If `p>=2`, every vertex of `B` has an antipode partner. Every unmatched `y in U` is incident only with **errorful** antipodes, because all tight antipodes have already been placed in the matching.
+
+This is a significant stability reduction: unmatched vertices cannot escape through the previously troublesome private-foot branch.
+
+## 6. Errorful antipodes obey partial-code constraints
+
+Let `c(z)` be the partial Boolean code of `z in A union U`.
+
+If `y,z in U` are antipodes, they can share no matched neighbour, so
+
+`c(z)=bar(c(y))`.                                      `(PC1)`
+
+If `y in U` is antipodal to a matched endpoint `q in P_i`, let `q'` be the tight mate of `q`. Define `alpha(q)` by choosing
+
+- `q'` in fibre `P_i`;
+- in every other fibre, the endpoint not adjacent to `q`.
+
+Then
+
+`c(y)=alpha(q)`.                                       `(PC2)`
+
+The slack identities also give the exact local error formula
+
+`eta(yq)=epsilon_y-epsilon_q'`.                        `(PC3)`
+
+Since this antipode is errorful,
+
+`epsilon_y>=epsilon_q'+1`.                             `(PC4)`
+
+Thus every unmatched vertex is forced either into a complementary U-code relation or into one of the special matched-endpoint antipode codes, with an explicit slack payment.
+
+## 7. Full-tight support survives inside the near-full branch
+
+The physical B-edges between distinct tight pairs form exactly the ordinary full-tight 2-lift on `p` fibres. Their selected A-witnesses have exactly the same forced partial codes as in the full-tight orientation graph `Omega_P`.
+
+Therefore the realised A-code support `C_A` satisfies
+
+`tau(Omega_P) <= |C_A| <= a`.                          `(SUP)`
+
+Since
+
+`a=2p+u-lambda-1`,
+
+we have
+
+`a<=2p  iff  u<=lambda+1`.
+
+The preserved support-only full-tight results say that, for `p>=19`, every minimum switching defect `d_*>=5` has `tau(Omega_P)>2p`.
+
+Hence:
+
+> **LOW-DEFECT NEAR-FULL REDUCTION — internal candidate.** If `p>=19` and `u<=lambda+1`, then the inherited matched-pair switching problem must satisfy `d_*<=4`.
+
+Equivalently, if `d_*>=5`, then
+
+`u>=lambda+2`.
+
+The old full-tight F-separation conclusions for `d_*=0,...,4` are **not** silently imported; those low-defect cases must be re-priced with the unmatched vertices present.
+
+## 8. New augmented orientation graph Omega+
+
+The unmatched vertices generate further exact selected-witness constraints beyond the ordinary P--P graph `Omega_P`.
+
+For `y in U`, let `q_i in P_i` be its chosen endpoint.
+
+For the physical B-edge `y q_i`, the two possible orientations force the A-witness code to be one of
+
+`alpha(q_i)`
 
 or
 
-`u(lambda+1) >= b(1-lambda)-4delta`.
+`beta_i(y)`,
 
-This alone is not yet sufficient, but it identifies the correct variables for the next stability step. Positive antipode errors add directly to the left side of `(AMC)` and should only strengthen the payment.
+where `beta_i(y)` chooses `q_i` in fibre `i` and the endpoint nonadjacent to `y` in every other fibre.
 
-Do not return to the closed `{4,5}` ladder, first-proof optimization for Erdős #742, or another fixed switching-defect scan unless needed as a regression check.
+Thus every P--U edge contributes the two-code constraint
+
+`{alpha(q_i), beta_i(y)}`.                              `(AUG1)`
+
+For an edge `yz in G[U]`, the two orientations force
+
+`{bar(c(y)), bar(c(z))}`.                               `(AUG2)`
+
+Together with the ordinary P--P orientation edges, these constraints define an augmented orientation multigraph `Omega+` on `{0,1}^p`.
+
+The realised A-code support must cover **every** edge/loop of `Omega+`.
+
+Moreover the selected system retains per-source capacity: if `n_c` A-vertices realise code `c`, then at a fixed B-source at most `n_c` selected obligations can be assigned to orientation endpoint `c`.
+
+This is the correct near-full reuse of the selected/Hall machinery: a capacitated orientation-cover problem rather than another raw switching-defect scan.
+
+## 9. New theorem: branching antipodes pay quadratic error
+
+Let `J_v` be the antipode graph on `B`. Fix `w in B`, put
+
+`S=N_{J_v}(w)`, `d=|S|`,
+
+and
+
+`E_w=sum_{y in S} eta(yw)`.
+
+Two observations give a sharp local payment.
+
+1. A nonedge `yz` inside `S` is an error vertex for both antipodes `yw` and `zw`, so
+
+`binom(d,2)-e(G[S]) <= E_w/2`.
+
+2. For an edge `yz` inside `S`, D2C criticality supplies (after orientation) a witness `x` with `N(x) cap N(z)={y}`. Because `y` is antipodal to `w`, this `x` is also nonadjacent to `w`; hence `(x,z)` is an error incidence for `zw`. The charge is injective because `y` is the unique common neighbour of `x,z`. Therefore
+
+`e(G[S]) <= E_w`.
+
+Combining gives
+
+> **ANTIPODE BRANCHING ERROR THEOREM — internal candidate.**
+>
+> `3 E_w >= d(d-1)`.                                  `(ABE)`
+
+Globally,
+
+`sum_{e in E(J_v)} eta(e)
+ >= (1/6) sum_{w in B} d_J(w)(d_J(w)-1)`.              `(ABE-global)`
+
+Thus concentrating many root-edge witnesses through an antipode hub has a quadratic error cost.
+
+In the near-full `p>=2` branch, errorful antipode edges cover all `u` unmatched vertices, so additionally
+
+`sum_{e errorful} eta(e) >= ceil(u/2)`.
+
+Files:
+
+- `ANTIPODE_BRANCHING_ERROR_PAYMENT.md`;
+- `check_antipode_branching_error_payment.py`;
+- `ANTIPODE_BRANCHING_ERROR_CHECK_SUMMARY.json`.
+
+The atlas regression scans all 21 D2C isomorphism classes through order seven, all 126 roots, 125 positive-degree antipode centres and 50 branching centres. There are zero local/global violations; maximum observed antipode degree is 5 and the local inequality is attained in some cases.
+
+## 10. Active next move
+
+The clean full-tight endpoint is solved internally. The near-full state is now compressed to three interacting objects:
+
+1. a genuine `p`-fibre Boolean 2-lift core;
+2. an unmatched transversal set `U` whose vertices are all forced into errorful antipodes;
+3. the capacitated augmented selected-witness graph `Omega+`.
+
+The highest-value next theorem is a **weighted antipode-matching / augmented-Hall stability inequality**.
+
+Two possible routes are now precise rather than speculative:
+
+- convert `(ABE)` into a large-weight antipode matching, with edge weight `lambda+1+eta(e)=epsilon_x+epsilon_y`, so that `(AMC)` prices branching as well as matching-like error;
+- use the P--U constraints `(AUG1)` and per-source capacities to show that many unmatched transversals force extra A-code multiplicity/support unless the matched 2-lift lies in one of the low-defect `d_*<=4` normal forms.
+
+The second route is especially attractive when `u<=lambda+1`, because `(SUP)` has already reduced that entire range to `d_*<=4`.
+
+Do **not** return to the closed mixed `{4,5}` ladder, fixed switching-defect enumeration, or first-proof optimization for Erdős #742 except for regression/audit support.
 
 ## 11. Trust boundary
 
 - The published 12/32 graph is directly reconstructed from the authoritative figure and exactly checked, but no author-supplied adjacency file has been located.
-- The leaf-package, coordinatewise monotonicity, twin-package, lopsided residual count, and `d=9` reductions are hand structural arguments.
-- The `d=7,8` terminal boundaries are finite rooted-core certificates; older four-/five-/six-defect steps also contain finite proof-producing certificates. These remain internal theorem candidates pending external mathematical review and journal-style compression.
-- The new full-tight closure concerns only the full tight-antipode Boolean branch. Near-full, unmatched, and errorful antipode configurations remain open.
-- Exact computations are audit/certificate support, not substitutes for the unbounded structural reductions.
+- The full-tight eventual closure remains an internal candidate pending external review; several terminal steps use finite proof-producing certificates after unbounded structural reductions.
+- The near-full partial Boolean normal form, no-private reduction, code restrictions, augmented orientation constraints and antipode branching-error inequality are hand arguments.
+- The atlas scan for `(ABE)` is regression evidence only, not the proof.
+- No theorem yet converts the total branching error into enough canonical defect `delta` to close the whole near-full branch.
 - No all-order second-extremal theorem is claimed.
 
 **UNPRESERVED WORK:** None after this current-state commit.
