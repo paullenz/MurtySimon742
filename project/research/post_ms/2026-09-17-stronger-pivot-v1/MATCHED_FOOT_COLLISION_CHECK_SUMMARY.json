@@ -1,0 +1,9 @@
+{
+  "endpoint_complement_checks": 202012,
+  "failures": 0,
+  "gamma_collision_classes": 47260,
+  "gamma_collision_pairs": 64220,
+  "signings": 33866,
+  "status": "audit_support_only_hand_proofs_primary",
+  "total_checks": 347358
+}
