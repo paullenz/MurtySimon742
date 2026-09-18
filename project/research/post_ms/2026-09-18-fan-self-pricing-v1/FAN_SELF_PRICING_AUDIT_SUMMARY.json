@@ -1,0 +1,28 @@
+{
+  "date": "2026-09-18",
+  "status": "audit support only; hand proofs are primary",
+  "aligned_code_inversion": {
+    "checks": 915945,
+    "failures": 0,
+    "ranges": "D0=-30..80, s=0..300, w=0..100"
+  },
+  "self_priced_fan_substitution": {
+    "primitive_feasible_checks": 24942685,
+    "failures": 0,
+    "ranges": "D0=-15..45 step 3, L=1..15, T=-10..20 step 3, s=0..80 step 2, M<=R_code(s), d=0..20"
+  },
+  "graph_atlas_false_twin_support": {
+    "d2c_atlas_graphs_n_le_7": 21,
+    "false_twin_classes": 25,
+    "internally_active_W_vertices": 2,
+    "private_witness_checks": 2,
+    "support_cap_checks": 25,
+    "strengthened_missing_floor_checks": 25,
+    "failures": 0
+  },
+  "notes": [
+    "The arithmetic scans verify consequences of the displayed finite inequalities, not the D2C witness-localization arguments themselves.",
+    "The graph-atlas scan checks the private-support theorem and strengthened false-twin floor on all diameter-2-critical atlas graphs through order 7.",
+    "The published order-12, size-32 X_3 graph is outside the atlas scan and remains a mandatory negative control; the new rooted fan gates do not apply to it because its canonical root has u=0 and F_min=0."
+  ]
+}
