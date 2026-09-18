@@ -1,9 +1,9 @@
 # Dense diameter-2-critical research — live current state
 
-> **Active target — 18 September 2026.** The live problem is the sufficiently-large/eventual second-extremal D2C classification around `M(n)=floor((n-1)^2/4)+1`. The false all-order 2019 Dailly–Foucaud–Hansberg strengthening is not assumed. The published 2024 order-12, size-32 D2C graph is a mandatory hostile control. Murty–Simon / Erdős #742 remains preserved but is not the live optimization target.
+> **Active target — 18 September 2026.** The live problem is the sufficiently-large/eventual second-extremal D2C classification around `M(n)=floor((n-1)^2/4)+1`. The false all-order 2019 Dailly–Foucaud–Hansberg strengthening is not assumed. The published 2024 order-12, size-32 D2C graph is a mandatory hostile control. Murty–Simon / Erdős #742 is preserved but is not the live optimization target.
 
 <!-- CURRENT-STATUS:START -->
-**CHECKPOINT CLASS:** `FULL_TIGHT_CLOSED_ROOTED_RESIDUAL_FAN_EQUALITY_BETA_FEEDBACK_FRONTIER`.
+**CHECKPOINT CLASS:** `FULL_TIGHT_CLOSED_ROOTED_RESIDUAL_ONE_HOLE_FAN_CAPACITY_FRONTIER`.
 
 **WORK MODE:** `EVENTUAL_D2C_MATH`.
 
@@ -11,7 +11,7 @@ The full-tight Boolean branch remains internally closed for sufficiently large m
 
 The conceptual spine is now
 
-`residual defect -> rooted-triangle transfer -> forced A-edge mass -> complete witness channels -> macroscopic fan geometry -> equality/stability classification -> beta-sensitive fan-hole feedback -> residual closure`.
+`residual defect -> rooted-triangle transfer -> forced A-edge mass -> complete witness channels -> macroscopic fans -> equality stability -> one-hole type split -> global budget closure`.
 
 No global eventual second-extremal theorem is claimed.
 
@@ -27,19 +27,19 @@ The published Radosavljevic--Stanic--Zivkovic (2024) Figure-1 graph has been rec
 - full-tight data `p=4,b=8,a=3,u=0,lambda=4,r=0,F=empty`;
 - `Q=12`, `delta=0`, `E_U=0`, `L_A=12`, `D_M=1`, `f=0`.
 
-Its rooted-triangle transfer is endpoint-saturated: `Q-f=12`. The live unmatched/fan arguments do not suppress it: at the canonical root `u=0` and `F_min=0=f`.
+Its rooted-triangle transfer is endpoint-saturated: `Q-f=12`. At the canonical root `u=0` and `F_min=0=f`, so the live unmatched/fan machinery does not suppress it.
 
 Certification:
 
 `project/research/post_ms/2026-09-17-stronger-pivot-v1/PUBLISHED_12_VERTEX_EXCEPTION_FIGURE_CERTIFICATION.md`.
 
-## 2. Near-full normal form and exact residual target
+## 2. Residual target and rooted-triangle transfer
 
 For a maximum-degree root `v`, write
 
 `B=N(v)`, `A=V\N[v]`, `lambda=2b-n=b-a-1`.
 
-Let the complete tight-antipode matching in `B` have `p` pairs and let `U` be the unmatched part, `u=|U|`, so `b=2p+u`. Every vertex of `A union U` chooses exactly one endpoint from every tight pair and has a Boolean code in `{0,1}^p`.
+There are `p` tight antipode pairs in `B` and an unmatched set `U`, `u=|U|`, with `b=2p+u`. Every vertex of `A union U` has a Boolean code in `{0,1}^p`.
 
 Put `q=e(G[U])`, `s=e_G(A,U)`, `f=e(G[A])`. Then
 
@@ -51,7 +51,7 @@ Put `q=e(G[U])`, `s=e_G(A,U)`, `f=e(G[A])`. Then
 >
 > `delta=b(n-b)-m=r-f`.
 
-For `epsilon_z=b-d(z)`, put
+With `epsilon_z=b-d(z)`, put
 
 > `E_U=u(p+u-1)-2q-s`,
 >
@@ -71,13 +71,7 @@ Then
 >
 > `m<=M(n) iff delta>=D_M`.                               `(RT)`
 
-Thus the active target is exactly `delta>=D_M`.
-
-The separate `Q=0` / false-twin-core branch remains distinct.
-
-## 3. Rooted triangles are an exact transfer variable
-
-The exact identities are
+Rooted triangles are an exact transfer variable:
 
 > `r+Q=L_A+2f`,                                           `(RQ1)`
 >
@@ -85,26 +79,17 @@ The exact identities are
 >
 > `delta=E_U+Q-f-lambda(p+u)+p`.                          `(RQ3)`
 
-With `T_Q=Q-f`,
-
-> `L_A=delta+T_Q`,
->
-> `E_U=delta+lambda(p+u)-p-T_Q`.                          `(TR)`
-
-Every above-`M(n)` candidate satisfies
+Every above-`M(n)` candidate therefore satisfies
 
 > `f>=F_min`,                                             `(FTR)`
 
 where
 
-> `F_min=Q-lambda(p+u)+p-D_M+1`
-> `     =(p-lambda)(p+u)+q-D_M+1`.                        `(FMIN)`
+> `F_min=(p-lambda)(p+u)+q-D_M+1`.                        `(FMIN)`
 
-Core file:
+The separate `Q=0` / false-twin-core branch remains distinct.
 
-`project/research/post_ms/2026-09-18-rooted-residual-supply-v1/ROOTED_TRIANGLE_RESIDUAL_AND_BETA_DEGREE_SUPPLY.md`.
-
-## 4. Preserved switching / Hall / source-tuple stack
+## 3. Preserved switching / Hall / source-tuple stack
 
 For `x in A`, let `ell_x` be beta load and `k_x=p-ell_x`. The exact source-tuple hierarchy is
 
@@ -124,17 +109,15 @@ A switchable zero-signed matched subcore of order `sigma_0>=3` forces
 
 > `L_A>=sigma_0(sigma_0-1)`.                              `(ZS)`
 
-If `u=O(p)` and `lambda=o(p)`, every finite limit `rho=u/p` still satisfies
-
-> `rho<27/14`.
+If `u=O(p)` and `lambda=o(p)`, every finite limit `rho=u/p` still satisfies `rho<27/14`.
 
 The repaired cylinder theorem remains a finite/equality tool rather than the generic quadratic closure mechanism.
 
-## 5. Complete A-edge witness channels and fan gate
+## 4. Complete A-edge witness channels and fan gate
 
 Every internal A-edge belongs to one of three channels: direct, matched-B witness, or A/U unique-common-neighbour witness.
 
-For a direct A-edge fan around `x`, the leaves are independent complementary-code vertices. With
+For a direct A-edge fan around `x`, leaves are independent complementary-code vertices. With
 
 `W_x=(V(G)\{v})\N(x)`
 
@@ -144,33 +127,23 @@ and `H_x(y)=W_x\N(y)`,
 >
 > `|H_x(y)|=epsilon_x+epsilon_y-(lambda+1)`.              `(DFH)`
 
-Also
-
-> `L_A>=d_x(d_x-T)_+`,                                    `(DFS)`
-
-where `T=a-p=p+u-lambda-1`.
-
-For an A/U certificate fan with source `x`, distinct heads `h_i` and witnesses `w_i`,
+For an A/U fan with source `x`, distinct heads `h_i` and witnesses `w_i`,
 
 > `G[H_x,W_x]` is exactly the matching `h_iw_i`.          `(IMC)`
 
-The witness side obeys
-
-> `2e(overline{G[W_x]})`
-> ` <= d_x epsilon_x + sum_i epsilon_{w_i}`
-> `    -d_x(lambda+1)`.                                   `(WFD)`
-
-The fan-square capacity gives
+The global A/U fan-square capacity is
 
 > `C^2/a + lambda C <= K_0(E_U+L_A)`,                    `(GFS)`
 
 with `K_0=2a(a+u)/(lambda+1)+2a+u`.
 
-With matched-B traffic `P<=sigma_0a` and `f=D+P+C`, every above-threshold candidate satisfies the fan gate
+With matched-B traffic `P<=sigma_0a` and `f=D+P+C`, every above-threshold candidate satisfies
 
 > `F_min <= sigma_0a`
 > `       + aR_D(T,L_A)/2`
-> `       + min{aR_C(T,E_U+L_A),C_fan}`.                  `(RTF)`
+> `       + min{aR_C(T,E_U+L_A),C_fan}`,                  `(RTF)`
+
+where `T=a-p`.
 
 If `H=(F_min-sigma_0a)_+`, then either some source has a direct fan of order at least `H/a`, or some source has an A/U fan of order at least `H/(2a)`.
 
@@ -178,11 +151,9 @@ Core package:
 
 `project/research/post_ms/2026-09-18-a-edge-fan-rigidity-v1/`.
 
-## 6. Exact A/U fan-hole normal form
+## 5. Fan-hole normal form and exact equality classification
 
-Fix one A/U fan with source `x`, heads `h_i`, witnesses `w_i`, and order `d`.
-
-Put
+For one A/U fan define
 
 `Y_x=V(G)\({x} union N(x))`,
 
@@ -200,7 +171,7 @@ Hence
 
 > `2e(overline{G[W_x]})<=G_x`.                           `(EWM)`
 
-Every A-witness has the root `v` as a hole, so
+Every A-witness has the root as a hole, so
 
 > `|W_x intersect A|<=G_x`,
 >
@@ -210,50 +181,38 @@ Therefore
 
 > `q >= max{0,binom((d-G_x)_+,2)-floor(G_x/2)}`.         `(FQLB)`
 
-This is the first direct fan-to-rooted-triangle feedback: low-hole A/U geometry itself raises `q`, hence raises both `Q` and `F_min`.
+If `G_x=0` and `p>=1`, every witness lies in `U`, the witness set is a clique, and all but at most one matched head-witness edge is direct; for those clean indices `c(h_i)=c(x)`. In particular
 
-## 7. Zero-hole A/U equality classification
+> `q>=binom(d,2)`.                                        `(ZHQ)`
 
-If `G_x=0` and `p>=1`, then:
+## 6. Quantitative fan stability and Hamming localization
 
-1. every witness lies in `U`;
-2. `W_x` is a clique, so `q>=binom(d,2)`;
-3. all but at most one head satisfy `N(h_i) intersect Y_x={w_i}`;
-4. for every such head, `N(h_i) intersect N(w_i)=empty`;
-5. consequently `c(h_i)=c(x)`.
-
-Thus the exact equality model is a U-clique of antipodal-code witnesses together with, except for at most one index, source-code A-heads joined to the witnesses by direct matching edges.
-
-## 8. Quantitative A/U stability and Hamming localization
-
-For each head define
+Put
 
 `t_i=|N(h_i) intersect (Y_x\{w_i})|`.
 
-For a present witness edge `w_iw_j`, any chosen criticality certificate oriented from `w_i` toward `w_j` is either the matching head `h_j`, in which case `t_j<=g_i`, or a vertex of `Z_i`. A fixed hole can certify at most one target from a fixed source.
+For a witness edge oriented from `w_i` to `w_j`, the critical certificate is either the matching head `h_j`, forcing `t_j<=g_i`, or a hole in `Z_i`; each hole certifies at most one target from a fixed source.
 
-For integer `tau>=0`, let
+For integer `tau>=0`, with
 
-`B_tau={i:g_i<=tau<t_i}`.
-
-Then
+`B_tau={i:g_i<=tau<t_i}`,
 
 > `|B_tau|(|B_tau|-1)<=3G_x`.                            `(BST)`
 
-Consequently all but at most
+Hence all but at most
 
 > `floor(G_x/(tau+1))`
-> ` + floor((1+sqrt(1+12G_x))/2)`                        `(EXC)`
+> ` +floor((1+sqrt(1+12G_x))/2)`                         `(EXC)`
 
 indices satisfy `g_i,t_i<=tau`. For every such index,
 
-> `|N(h_i) intersect N(w_i)|<=tau`,                      `(NMD)`
+> `|N(h_i) intersect N(w_i)|<=tau`,
 >
 > `dist_H(c(h_i),c(x))<=tau`.                            `(HLOC)`
 
-Hence if `d=Theta(p)` and `G_x=o(p^2)`, all but `o(p)` heads lie within Hamming distance `o(p)` of the source code while every witness has the exact antipodal code. The low-hole equality model is therefore an asymptotic two-cluster Hamming configuration.
+Thus a linear fan with `G_x=o(p^2)` is an asymptotic two-cluster antipodal Hamming configuration.
 
-## 9. Beta-sensitive fan-hole capacity and rooted feedback
+## 7. Beta-sensitive fan-hole feedback
 
 The preserved beta-sensitive U-edge theorem is
 
@@ -261,114 +220,179 @@ The preserved beta-sensitive U-edge theorem is
 
 where `N_1=|{z in A:ell_z=1}|`; coarsely `Q_beta<=au-B_beta+a`.
 
-Combining `(BQ)` with `(FQLB)` gives the exact finite fan-hole floor
+Combining `(BQ)` with `(FQLB)` gives
 
 > `G_x >= [d-floor(sqrt(2Q_beta+d))]_+`.                 `(BFH)`
 
-If `z_0=|{i:g_i=0}|`, then the zero-hole witnesses form a clique in `U`, so
+If `z_0=|{i:g_i=0}|`, then
 
 > `binom(z_0,2)<=q<=Q_beta`,                              `(ZHC1)`
 >
 > `z_0<=floor((1+sqrt(1+8Q_beta))/2)`.                   `(ZHC2)`
 
-Thus whenever `Q_beta=o(p^2)`, a linear A/U fan has only `o(p)` genuinely zero-hole witnesses and must satisfy
+Thus if `Q_beta=o(p^2)`, a linear fan has only `o(p)` zero-hole witnesses and `G_x>=d-o(p)`.
 
-> `G_x>=d-o(p)`.                                         `(ABFH)`
-
-The cheapest surviving sparse-U fan is therefore not the exact equality model but a bounded-/one-hole perturbation of it.
-
-Writing
-
-`F_0=(p-lambda)(p+u)-D_M+1`,
-
-we also have the rooted feedback
+Writing `F_0=(p-lambda)(p+u)-D_M+1`, the fan also feeds back into rooted transfer:
 
 > `F_min >= F_0`
 > ` +max{0,binom((d-G_x)_+,2)-floor(G_x/2)}`.            `(RFF)`
 
-On the A/U side of the fan dichotomy, a chosen large fan must satisfy the self-consistency gate
+On the A/U side of the fan dichotomy,
 
 > `d >= (1/(2a))`
 > ` [F_0`
 > `  +max{0,binom((d-G_x)_+,2)-floor(G_x/2)}`
 > `  -sigma_0a]_+`.                                      `(AFG)`
 
-So `q` is no longer a free nuisance variable in the equality analysis: the fan pushes it up while beta-source geometry pushes it down.
-
-Follow-on file:
+Core follow-on:
 
 `project/research/post_ms/2026-09-18-fan-equality-stability-v1/BETA_SENSITIVE_FAN_HOLE_AND_ROOTED_FEEDBACK.md`.
 
-## 10. False-twin quotient theorem for the direct equality model
+## 8. New one-hole fan classification
 
-Let `D` be any false-twin class in a D2C graph, with common open neighbourhood `W`, and put `d=|D|`, `w=|W|`, with `d,w>=2`.
+The cheapest surviving sparse-U perturbation is `g_i=1`.
 
-For each `z in W`, at least one of the following holds:
+Assume an A/U fan has
 
-1. `z` has no neighbour inside `W`;
-2. some `q notin W` has `N(q) intersect W={z}`;
-3. `z` has at least `d` nonneighbours inside `W`.
+> `g_i=1` for every witness.                               `(OH)`
 
-It follows that
+Write `Z_i={z_i}`.
+
+Then the missing witness graph has maximum degree one:
+
+> `Delta(overline{G[W_x]})<=1`;                           `(OHM)`
+
+if `w_iw_j` is missing, then `z_i=w_j` and `z_j=w_i`. Thus the witness side is exactly a clique minus a matching.
+
+Split witnesses by type:
+
+`W_A=W_x intersect A`, `d_A=|W_A|`,
+
+`W_U=W_x intersect U`, `d_U=|W_U|`.
+
+### A-witness mechanism
+
+If `w_i in A`, its unique hole is the root:
+
+> `z_i=v`.                                                `(RHI)`
+
+Hence `W_A` is a same-code clique. Among the heads matched to A-witnesses, at most one is dirty; all the others satisfy
+
+> `N(h_i) intersect Y_x={w_i}`,                           `(ACLEAN)`
+>
+> `N(h_i) intersect N(w_i)=empty`,                        `(ADIR)`
+>
+> `c(h_i)=c(x)`.                                          `(ACODE)`
+
+The preserved same-code weighted edge capacity gives
+
+> `(lambda+1)binom(d_A,2)<=V_0(E_U+L_A)`,                `(AWP)`
+
+where `V_0=a+u`. Therefore
+
+> `d_A`
+> ` <= floor((1+sqrt(1+8V_0(E_U+L_A)/(lambda+1)))/2)`.   `(DAC)`
+
+### U-witness mechanism
+
+The U-witness graph is clique minus a matching, so
+
+> `q>=binom(d_U,2)-floor(d_U/2)`.                         `(OHQ)`
+
+Combining with `(BQ)` gives
+
+> `d_U<=floor(1+sqrt(2Q_beta+1))`.                       `(DUC)`
+
+### One-hole capacity
+
+Therefore every all-one-hole fan satisfies
+
+> `d<=R_A^(1)+R_U^(1)`,                                  `(OHFC)`
+
+with the two terms given by `(DAC)` and `(DUC)`.
+
+Also
+
+> `e(G[A_bar(c(x))])+q >= d^2/4-d`.                      `(OHED)`
+
+So a linear one-hole fan necessarily creates quadratic internal edge mass either in a same-code A-clique or in U.
+
+Finally the general stability theorem at `tau=1`, together with the exact A-witness result, gives:
+
+- all but at most one A-witness head has exactly code `c(x)`;
+- all but `O(sqrt(d))` remaining heads lie in the radius-one Hamming ball about `c(x)`;
+- every witness has exactly code `bar(c(x))`.
+
+The one-hole model is therefore a finite-radius Hamming object, not a generic large code class.
+
+Core file:
+
+`project/research/post_ms/2026-09-18-fan-equality-stability-v1/ONE_HOLE_FAN_CLASSIFICATION_AND_CAPACITY.md`.
+
+## 9. Direct false-twin equality theorem
+
+For any false-twin class `D` in a D2C graph with common open neighbourhood `W`, `d=|D|`, `w=|W|`, `d,w>=2`,
 
 > `2e(overline{G[W]})`
 > ` >= min(d,w-1)(2w+d-n)_+`.                            `(FTF)`
 
-For a zero-hole direct fan around `x`, all leaves are exact false twins with
+Applied to a zero-hole direct fan around `x`, where
 
-`N(y)=W_x=(V(G)\{v})\N(x)`
+`w=|W_x|=b-lambda-1+epsilon_x`,
 
-and
-
-`w=|W_x|=b-lambda-1+epsilon_x`.
-
-Hence
+this gives
 
 > `e(overline{G[W_x]})`
 > ` >= (1/2)min(d,w-1)`
 > `      (d+2epsilon_x-lambda-2)_+`.                     `(DFQ)`
 
-Since a leaf has local triangle count `e(G[W_x])`,
+A leaf has local triangle count `e(G[W_x])`, hence
 
 > `e(G[N(y)])`
 > ` <= binom(w,2)`
 > `    -(1/2)min(d,w-1)`
 > `      (d+2epsilon_x-lambda-2)_+`.                     `(DTS)`
 
-Thus a linear exact false-twin fan either forces a quadratically sparse common side (bipartite-like behaviour) or is absorbed by large root imbalance relative to centre slack.
+Thus a large exact direct fan forces a sparse/bipartite-like common side unless absorbed by root imbalance.
 
-Core equality/stability package:
+## 10. Verification at this checkpoint
 
-`project/research/post_ms/2026-09-18-fan-equality-stability-v1/`.
+Main equality/stability audit over all 21 D2C graph-atlas classes through order seven:
 
-## 11. Verification at this checkpoint
-
-The package contains the hand theorem files plus `check_fan_equality_stability.py` and a frozen JSON summary.
-
-Independent graph-atlas audit over all 21 D2C isomorphism classes through order seven:
-
-- 31 admissible unique-common-neighbour fans;
+- 31 admissible UCN fans;
 - 63 exact witness-neighbourhood checks;
-- 31 witness missing-edge checks;
 - 140 threshold-stability checks;
 - 4 zero-hole fan checks;
 - 20 false-twin classes;
-- 53 false-twin vertex-level dichotomy checks;
+- 53 false-twin vertex-level checks;
 - 20 global false-twin floor checks;
 - failures: 0.
 
-The audit is support only. Boolean/Hamming conclusions and eventual/asymptotic claims rest on the hand arguments.
+Separate one-hole audit:
 
-## 12. Live next move
+- 7 generic one-hole fans;
+- 14 complement-degree checks;
+- 7 `tau=1` stability checks;
+- 3 rooted one-hole fans;
+- failures: 0.
+
+The atlas contains no rooted A-witness one-hole instance, so the A-witness root-hole/clique theorem is supported by the hand proof rather than an empirical example. All scans are audit support only.
+
+Package:
+
+`project/research/post_ms/2026-09-18-fan-equality-stability-v1/`.
+
+## 11. Live next move
 
 Do not return to the closed mixed `{4,5}` selected-excess ladder, and do not optimize for first-proof priority on Erdős #742.
 
-The highest-value next step is now the **bounded-hole fan classification**, especially the one-hole model forced by `(BFH)/(ZHC2)` in sparse-U beta-saturated slices.
+The highest-value next move is now **bounded-hole reduction / budget closure**, not further generic fan counting.
 
-1. **A/U one-hole branch.** Distinguish A-witnesses, whose canonical hole is the root `v`, from U-witnesses, whose hole must lie elsewhere. Classify the resulting witness graph (clique minus a low-degree defect) and matching-head geometry. Combine with `(HLOC)` and same-code edge payment.
-2. **Rooted feedback.** Use `(AFG)` together with the global beta lower bounds and `(RTF)` to test whether a parameter region closes without a variational optimization.
-3. **Direct branch.** Combine `(DFQ)/(DTS)` with the location of `W_x intersect B` and `Q=e(G[B])` to convert sparse common-side geometry into residual defect.
-4. Keep the mandatory `X_3` control explicit at every step.
+1. Insert `(OHFC)` into `(RTF)` and the rooted floor `(FMIN)` to test whether one-hole-dominant fans are already impossible in a nontrivial parameter region.
+2. Extend the one-hole type split to bounded `g_i<=K`: A-witnesses always contain the root hole; U-witnesses do not. After deleting `O(Kd)` witness defects, seek a bounded union of same-code A-cliques and U near-cliques, each paid by `E_U+L_A` or `Q_beta`.
+3. Use the radius-one head localization with selected/Hall/source-tuple capacity. This is now a much smaller code-capacity problem than the previous `o(p)` Hamming ball.
+4. On the direct branch, combine `(DFQ)/(DTS)` with `W_x intersect B` and the rooted count `Q=e(G[B])` to turn common-side sparsity into residual defect.
+5. Keep `X_3` explicit as the mandatory negative control.
 
 The separate `Q=0` false-twin-core branch remains distinct.
 
