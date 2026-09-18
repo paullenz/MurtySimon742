@@ -3,7 +3,7 @@
 > **Active target — 18 September 2026.** The live problem is the sufficiently-large/eventual second-extremal D2C classification around `M(n)=floor((n-1)^2/4)+1`. The false all-order 2019 Dailly–Foucaud–Hansberg strengthening is not assumed. The published 2024 order-12, size-32 D2C graph is a mandatory hostile control. Murty–Simon / Erdős #742 remains preserved but is not the live optimization target.
 
 <!-- CURRENT-STATUS:START -->
-**CHECKPOINT CLASS:** `FULL_TIGHT_CLOSED_ROOTED_RESIDUAL_A_EDGE_FAN_RIGIDITY_FRONTIER`.
+**CHECKPOINT CLASS:** `FULL_TIGHT_CLOSED_ROOTED_RESIDUAL_FAN_EQUALITY_STABILITY_FRONTIER`.
 
 **WORK MODE:** `EVENTUAL_D2C_MATH`.
 
@@ -11,7 +11,7 @@ The full-tight Boolean branch remains internally closed for sufficiently large m
 
 The conceptual spine is now
 
-`residual defect -> rooted-triangle transfer -> forced A-edge mass -> complete A-edge witness channels -> macroscopic fan geometry -> stability/classification`.
+`residual defect -> rooted-triangle transfer -> forced A-edge mass -> complete witness channels -> macroscopic fan geometry -> equality/stability classification -> residual closure`.
 
 No global eventual second-extremal theorem is claimed.
 
@@ -30,7 +30,7 @@ For this graph
 
 `Q=12`, `delta=0`, `E_U=0`, `L_A=12`, `D_M=1`, `f=0`.
 
-Its rooted-triangle transfer is endpoint-saturated: `Q-f=12`. The current A-edge floor gives `F_min=0=f`, so every new unmatched/A-edge theorem remains compatible with the mandatory negative control.
+Its rooted-triangle transfer is endpoint-saturated: `Q-f=12`. The current A-edge floor gives `F_min=0=f`, so the unmatched/fan machinery below does not suppress the mandatory negative control.
 
 Certification file:
 
@@ -82,7 +82,7 @@ Moreover
 
 Thus the active second-extremal target is exactly `delta>=D_M`.
 
-The separate `Q=0` / false-twin-core branch remains open and must not be conflated with this triangle-containing partial-Boolean branch.
+The separate `Q=0` / false-twin-core branch remains distinct and must not be conflated with this triangle-containing partial-Boolean branch.
 
 ## 3. Rooted triangles are an exact transfer variable
 
@@ -100,7 +100,7 @@ With `T_Q:=Q-f`,
 >
 > `E_U=delta+lambda(p+u)-p-T_Q`.                          `(TR)`
 
-Every above-`M(n)` candidate therefore satisfies the direct A-edge floor
+Every above-`M(n)` candidate satisfies
 
 > `f>=F_min`,                                             `(FTR)`
 
@@ -125,11 +125,11 @@ For `x in A`, let `ell_x` be beta load and `k_x=p-ell_x`. The exact source-tuple
 
 > `sum_x binom(ell_x,r)/(p-ell_x+r)<=(1/r)binom(u,r)`     `(FDPr)`
 
-for every `r>=3`.
+for every `r>=3`, with the integrated deficit-profile consequence
 
-For every subset `L subseteq A` of size `N`,
+> `sum_{x in L}(p-ell_x)>=Phi_r(|L|)`                     `(IST)`
 
-> `sum_{x in L}(p-ell_x)>=Phi_r(N)`.                      `(IST)`
+for every `L subseteq A`.
 
 The preserved beta lower bounds include
 
@@ -137,223 +137,230 @@ The preserved beta lower bounds include
 >
 > `B_beta>=p(lambda+1-2p)_+`.                             `(RBF)`
 
-Applying `(IST)` to all of `A` and to `A_+={x:ell_x>0}` gives the integrated total-load and support restrictions used in `(ISRE)/(STDS)`.
-
 If `u=O(p)` and `lambda=o(p)`, every finite limit `rho=u/p` still satisfies
 
 > `rho<27/14`.
 
-The repaired cylinder theorem remains valid, but its generic total lower-bound mass is only `O(p)` for `u,a=O(p)`, so it is not the main quadratic closure mechanism.
+The repaired cylinder theorem remains valid but is a finite/equality tool rather than the generic quadratic closure mechanism.
 
-## 5. Complete global A-edge witness-channel theorem
-
-For a Boolean code `c`, write
-
-- `A_c={x in A:c(x)=c}`, `n_c=|A_c|`;
-- `V_c=(A union U)_c`, `N_c=|V_c|`;
-- `L_c=sum_{x in A_c}epsilon_x`;
-- `S_c=sum_{z in V_c}epsilon_z`.
+## 5. Complete A-edge witness channels and fan gate
 
 Every internal A-edge belongs to one of three criticality channels:
 
-1. **direct:** `N(x) intersect N(y)=empty`;
-2. **matched-B witness:** an external tight-core endpoint certifies the edge;
-3. **A/U witness:** after orienting the edge from an A-source `z`, a witness `w in A union U` satisfies `N(z) intersect N(w)={head}`.
+1. direct;
+2. matched-B witness;
+3. A/U unique-common-neighbour witness.
 
-The exact complete upper bound is
+The preserved complete code-resolved A-edge bound is `(AFE)`, and its fan refinement is as follows.
 
-> `f <= sigma_0 a`
-> `   + min{ 1/2 sum_c n_c n_bar(c),`
-> `          (1/(lambda+1)) sum_c n_bar(c)L_c }`
-> `   + sum_c min{ n_c N_bar(c),`
-> `                [N_bar(c)L_c+n_cS_bar(c)]/(lambda+1) }`. `(AFE)`
+For a direct A-edge fan around `x`, with order `d_x`, leaves are independent complementary-code vertices. If
 
-A coarse consequence is
+`W_x=(V(G)\{v})\N(x)`
 
-> `f<=sigma_0 a+3mu_V(E_U+L_A)/(lambda+1)`,              `(AFE3)`
-
-where `mu_V=max_c N_c`.
-
-Combining `(FTR)` and `(AFE3)` forces a macroscopic Boolean class in every surviving sublinear-root-imbalance, linearly-unmatched sequence. That conclusion is now refined further by the fan theorems below.
-
-Core file:
-
-`project/research/post_ms/2026-09-18-global-a-edge-transfer-v1/GLOBAL_A_EDGE_TRANSFER_AND_WITNESS_CHANNELS.md`.
-
-## 6. New direct-fan rigidity
-
-Fix `x in A` and let `D_x` be its direct A-neighbours, `d_x=|D_x|`.
-
-All vertices of `D_x` have code `bar(c(x))`, and:
-
-> `D_x` is independent.                                  `(DFI)`
-
-Put
-
-`W_x=(V(G)\{v})\N(x)`.
-
-For `y in D_x`, let `H_x(y)=W_x\N(y)`. Then
+and `H_x(y)=W_x\N(y)`, then
 
 > `N(y)=W_x\H_x(y)`,
 >
 > `|H_x(y)|=epsilon_x+epsilon_y-(lambda+1)`.              `(DFH)`
 
-Hence
+Also
 
-> `|N(y) triangle N(y')|`
-> ` <= |H_x(y)|+|H_x(y')|`.                              `(DFT)`
+> `L_A>=d_x(d_x-T)_+`,                                   `(DFS)`
 
-In the zero-surplus equality case all leaves of the fan are exact false twins. Thus the direct equality model is explicitly complete-bipartite-like rather than an anonymous code concentration.
+where `T=a-p=p+u-lambda-1`.
 
-The fan also pays slack once it exceeds the outside-capacity threshold
+For an A/U certificate fan with source `x`, distinct heads `h_i` and witnesses `w_i`,
 
-`T=a-p=p+u-lambda-1`:
+> `G[H_x,W_x]` is exactly the matching `h_iw_i`.          `(IMC)`
 
-> `L_A>=d_x(d_x-T)_+`.                                   `(DFS)`
-
-With
-
-`R_D(T,L)=floor((T+sqrt(T^2+4L))/2)`,
-
-the total number `D` of direct A-edges satisfies
-
-> `D<=a R_D(T,L_A)/2`.                                   `(DFC)`
-
-## 7. New A/U induced-matching fan theorem
-
-Fix an A-source `x` and all chosen A/U certificates oriented out of `x`. Let `H_x` be the distinct A-heads and `W_x` the distinct A/U witnesses, with common order `d_x`.
-
-There is a canonical bijection `h_i <-> w_i`, and
-
-> `G[H_x,W_x]` is exactly a matching.                     `(IMC)`
-
-Thus `x` is adjacent to every head and no witness, while all off-diagonal head-witness pairs are nonedges.
-
-For the witness side,
+The witness side satisfies
 
 > `2e(overline{G[W_x]})`
-> ` <= d_x epsilon_x + sum_{w in W_x}epsilon_w`
+> ` <= d_x epsilon_x + sum_i epsilon_{w_i}`
 > `    -d_x(lambda+1)`.                                   `(WFD)`
 
-So low-hole A/U fans force the witnesses, all of one complementary Boolean code, towards a clique.
+The fan-square capacity gives the global A/U traffic bound
 
-The induced-matching cut also gives the direct scorecard payment
+> `C^2/a + lambda C <= K_0(E_U+L_A)`,                    `(GFS)`
 
-> `S=E_U+L_A>=2d_x(d_x-T)_+`.                             `(AUFS)`
+with `K_0=2a(a+u)/(lambda+1)+2a+u`.
 
-With
-
-`R_C(T,S)=floor((T+sqrt(T^2+2S))/2)`,
-
-every A/U certificate fan has `d_x<=R_C(T,S)` and the total A/U certificate traffic `C` satisfies
-
-> `C<=aR_C(T,S)`.                                        `(AUFC)`
-
-## 8. New quadratic A/U traffic capacity
-
-The witness-fan near-clique information can be summed without assuming disjoint fans.
-
-For one code `c`, let `C_c` be total chosen A/U traffic sourced in `A_c`. Then for `n_c>0`,
-
-> `C_c^2/n_c + lambda C_c`
-> ` <= [2n_c/(lambda+1)]`
-> `      [N_cS_bar(c)+N_bar(c)S_c]`
-> `    +N_bar(c)L_c+n_cS_bar(c)`.                         `(FS-c)`
-
-For one unordered complementary pair `P={c,bar c}`, put
-
-`C_P=C_c+C_bar(c)`, `A_P=n_c+n_bar(c)`,
-
-`L_P=max(N_c,N_bar(c))`,
-
-`W_P=max(N_c+n_c,N_bar(c)+n_bar(c))`,
-
-`S_P=S_c+S_bar(c)`.
-
-Then
-
-> `C_P^2/A_P + lambda C_P`
-> ` <= [2A_PL_P/(lambda+1)+W_P]S_P`.                     `(FS-P)`
-
-Globally, with `V_0=a+u` and
-
-`K_0=2aV_0/(lambda+1)+a+V_0`,
-
-> `C^2/a + lambda C <= K_0 S`.                           `(GFS)`
-
-Thus
-
-> `C<=C_fan`
->
-> `=(-a lambda+sqrt(a^2lambda^2+4aK_0S))/2`.             `(GFC)`
-
-This is a new parameter-only quadratic cap for the A/U channel; it is independent of `mu_A`, `mu_V`, or a cylinder choice.
-
-## 9. Rooted-transfer fan-feasibility theorem
-
-Let `P` be chosen matched-B certificate traffic. The channel identity is
-
-`f=D+P+C`,
-
-with `P<=sigma_0a`.
-
-Combining the new fan caps gives
-
-> `f <= sigma_0a`
-> `   + aR_D(T,L_A)/2`
-> `   + min{aR_C(T,S),C_fan}`.                            `(HFFC)`
-
-Therefore every above-threshold candidate satisfies
+Writing `P` for matched-B certificate traffic, `f=D+P+C`, with `P<=sigma_0a`. Therefore every above-threshold candidate satisfies the rooted-transfer fan gate
 
 > `F_min <= sigma_0a`
 > `       + aR_D(T,L_A)/2`
-> `       + min{aR_C(T,S),C_fan}`.                        `(RTF)`
+> `       + min{aR_C(T,E_U+L_A),C_fan}`.                  `(RTF)`
 
-More structurally, if
-
-`H=(F_min-sigma_0a)_+`,
-
-then `D+C>=H`. Hence either:
-
-- **direct-fan branch:** some A-vertex has at least `H/a` direct leaves, forming an independent complementary-code near-false-twin block governed by `(DFH)`; or
-- **A/U-fan branch:** some A-source has at least `H/(2a)` distinct complementary-code witnesses and distinct A-heads, with the exact induced-matching cut `(IMC)` and near-clique witness control `(WFD)`.
-
-The previous generic “macroscopic code class” escape has therefore sharpened to two explicit macroscopic fan geometries.
+If `H=(F_min-sigma_0a)_+`, then either some source has a direct fan of order at least `H/a`, or some source has an A/U fan of order at least `H/(2a)`.
 
 Core package:
 
 `project/research/post_ms/2026-09-18-a-edge-fan-rigidity-v1/`.
 
+## 6. New exact A/U fan-hole normal form
+
+Fix one A/U fan with source `x`, heads `h_i`, witnesses `w_i`, and order `d`.
+
+Put
+
+`Y_x=V(G)\({x} union N(x))`,
+
+`Z_i=V(G)\({x,w_i} union N(x) union N(w_i))`,
+
+`g_i=|Z_i|=epsilon_x+epsilon_{w_i}-(lambda+1)`,
+
+and `G_x=sum_i g_i`.
+
+Then the witness neighbourhood is exact:
+
+> `N(w_i)={h_i} union (Y_x\({w_i} union Z_i))`.          `(EFN)`
+
+Hence
+
+> `2e(overline{G[W_x]})<=G_x`.                           `(EWM)`
+
+Every A-witness has the root `v` as a hole, so
+
+> `|W_x intersect A|<=G_x`,
+>
+> `|W_x intersect U|>=(d-G_x)_+`.                        `(AWU)`
+
+Therefore the internal U-edge count satisfies
+
+> `q >= max{0, binom((d-G_x)_+,2)-floor(G_x/2)}`.        `(FQLB)`
+
+This is a new rooted-transfer feedback: low-hole fan geometry itself raises `q`, hence raises both `Q` and `F_min`.
+
+## 7. New zero-hole A/U equality classification
+
+If `G_x=0` and `p>=1`, then:
+
+1. every witness lies in `U`;
+2. `W_x` is a clique, so `q>=binom(d,2)`;
+3. all but at most one head satisfy
+
+   `N(h_i) intersect Y_x={w_i}`;
+
+4. for every such head,
+
+   `N(h_i) intersect N(w_i)=empty`;
+
+5. consequently `c(h_i)=c(x)`.
+
+Thus the exact equality model is a U-clique of witnesses of code `bar(c(x))`, together with, except for at most one index, source-code A-heads joined to the witnesses by direct matching edges.
+
+This is substantially more rigid than the previous “same-code near-clique witness side”. In every slice with `q=o(p^2)`, a zero-hole fan of linear order is impossible.
+
+## 8. New quantitative A/U stability theorem
+
+For each head define
+
+`t_i=|N(h_i) intersect (Y_x\{w_i})|`.
+
+For a present witness edge `w_iw_j`, same-code witnesses make the edge non-direct. Any chosen criticality certificate oriented from `w_i` toward `w_j` is either:
+
+- the matching head `h_j`, in which case `t_j<=g_i`; or
+- a vertex of `Z_i`.
+
+A fixed hole in `Z_i` can certify at most one target edge from source `w_i`. Therefore at most `G_x` witness edges are hole-certified.
+
+For an integer `tau>=0`, let
+
+`B_tau={i:g_i<=tau<t_i}`.
+
+Then
+
+> `|B_tau|(|B_tau|-1)<=3G_x`.                            `(BST)`
+
+Consequently all but at most
+
+> `floor(G_x/(tau+1))`
+> ` + floor((1+sqrt(1+12G_x))/2)`                        `(EXC)`
+
+indices satisfy both `g_i<=tau` and `t_i<=tau`.
+
+For every such good index,
+
+> `|N(h_i) intersect N(w_i)|<=tau`,                      `(NMD)`
+>
+> `dist_H(c(h_i),c(x))<=tau`.                            `(HLOC)`
+
+Hence if `d=Theta(p)` and `G_x=o(p^2)`, all but `o(p)` heads lie within Hamming distance `o(p)` of the source code, while every witness has the exact antipodal code. A low-hole linear A/U fan is therefore an asymptotic two-cluster antipodal configuration, not a generic macroscopic code class.
+
+## 9. New false-twin quotient theorem for the direct equality model
+
+Let `D` be any false-twin class in a D2C graph, with common open neighbourhood `W`, and put `d=|D|`, `w=|W|`, with `d,w>=2`.
+
+For each `z in W`, at least one of the following holds:
+
+1. `z` has no neighbour inside `W`;
+2. some `q notin W` has `N(q) intersect W={z}`;
+3. `z` has at least `d` nonneighbours inside `W`.
+
+Since one outside private certifier can name only one `z`, the number of privately certified vertices of `W` is at most `n-w-d`. Therefore
+
+> `2e(overline{G[W]})`
+> ` >= min(d,w-1)(2w+d-n)_+`.                            `(FTF)`
+
+Apply this to a zero-hole direct fan around `x`. Its leaves are exact false twins with
+
+`N(y)=W_x=(V(G)\{v})\N(x)`
+
+and
+
+`w=|W_x|=b-lambda-1+epsilon_x`.
+
+Hence
+
+> `e(overline{G[W_x]})`
+> ` >= (1/2)min(d,w-1)`
+> `      (d+2epsilon_x-lambda-2)_+`.                     `(DFQ)`
+
+Because every leaf has neighbourhood `W_x`, its local triangle count is `e(G[W_x])`, giving
+
+> `e(G[N(y)])`
+> ` <= binom(w,2)`
+> `    -(1/2)min(d,w-1)`
+> `      (d+2epsilon_x-lambda-2)_+`.                     `(DTS)`
+
+Thus the exact direct-fan equality model is now classified quantitatively: a linear false-twin fan either forces a quadratically sparse common side (bipartite-like behaviour) or is absorbed by large root imbalance relative to centre slack.
+
+Core package:
+
+`project/research/post_ms/2026-09-18-fan-equality-stability-v1/`.
+
 ## 10. Verification at this checkpoint
 
 The new package contains:
 
-1. `A_EDGE_FAN_RIGIDITY_AND_QUADRATIC_TRAFFIC_CAPACITY.md` — hand theorem package;
-2. `check_a_edge_fan_geometry.py` — independent graph-atlas audit of the generic fan kernels;
-3. `A_EDGE_FAN_GEOMETRY_AUDIT_SUMMARY.json` — frozen audit summary.
+1. `FAN_EQUALITY_STABILITY_AND_FALSE_TWIN_QUOTIENT.md` — hand theorem package;
+2. `check_fan_equality_stability.py` — independent graph-atlas audit of the generic kernels;
+3. `FAN_EQUALITY_STABILITY_AUDIT_SUMMARY.json` — frozen audit summary.
 
-The audit covered all 21 graph-atlas D2C isomorphism classes through order seven and every maximum-degree root:
+The audit covers all 21 D2C graph-atlas isomorphism classes through order seven:
 
-- 43 nonempty direct fans;
-- 48 direct fan incidences;
-- 5 direct fan leaf pairs;
-- 48 exact direct-hole identities;
-- 101 external unique-common-neighbour pairs;
-- 36 two-certificate fan-pair tests with distinct heads;
-- 19 nonadjacent witness-pair hole tests;
+- 31 admissible unique-common-neighbour fans;
+- 63 exact witness-neighbourhood checks;
+- 31 witness missing-edge checks;
+- 140 threshold-stability checks;
+- 4 zero-hole fan checks;
+- 20 false-twin classes;
+- 53 false-twin vertex-level dichotomy checks;
+- 20 global false-twin floor checks;
 - failures: 0.
 
-This is audit support only. The promoted statements rest on the hand arguments.
+The audit is support only. The Boolean/Hamming conclusions and all eventual/asymptotic claims rest on the hand arguments.
 
 ## 11. Live next move
 
 Do not return to the closed mixed `{4,5}` selected-excess ladder, and do not optimize for first-proof priority on Erdős #742.
 
-The highest-value next step is a **stability/classification theorem for the two fan equality models**.
+The highest-value next step is now to turn the new equality classifications into residual defect.
 
-1. **Direct branch.** Many low-hole direct leaves around one centre are near false twins; zero hole gives an exact complete-bipartite-type block. Show that a triangle-containing near-full graph cannot sustain a linear direct fan with sublinear total hole mass unless it collapses into the separately understood false-twin/bipartite regime.
-2. **A/U branch.** A linear source fan gives an induced matching `H_x--W_x`, while low hole surplus makes `W_x` a same-code near-clique. Combine that matching cut with same-code edge payment and the rooted triangle count `Q`.
-3. Keep `(RTF)` as the finite scorecard gate: if neither fan can be structurally sustained, the rooted-transfer demand forces `delta>=D_M`.
+1. **A/U branch:** combine `(FQLB)` with `F_min=(p-lambda)(p+u)+q-D_M+1`. The fan trying to carry rooted-transfer A-edge mass itself creates `U`-edges and raises the required mass. Test whether the resulting `q -> F_min -> fan -> q` feedback closes a parameter region.
+2. **Hamming stability:** combine `(HLOC)` with selected/Hall/source-tuple capacity. A linear low-hole fan now places almost all heads in an `o(p)` Hamming ball around one code and all witnesses at the exact antipode; this is the next code-capacity object.
+3. **Direct branch:** combine `(DFQ)/(DTS)` with the location of `W_x intersect B` and `Q=e(G[B])` to turn sparse common-side geometry into a lower bound on residual defect. The exact false-twin equality model is no longer structurally anonymous.
+4. Keep `(RTF)` as the finite gate. If neither fan equality model can be sustained, rooted transfer forces `delta>=D_M`.
 
 The separate `Q=0` false-twin-core branch remains distinct.
 
