@@ -1,0 +1,13 @@
+{
+  "date": "2026-09-18",
+  "script": "check_source_tuple_beta_envelope.py",
+  "finite_3p_checks": 80155,
+  "finite_3p_failures": 0,
+  "layer_cake_checks": 10000,
+  "layer_cake_failures": 0,
+  "rational_cap_checks": 1035,
+  "rational_cap_failures": 0,
+  "total_checks": 91190,
+  "total_failures": 0,
+  "status": "audit support only; promoted statements rest on hand arguments"
+}
