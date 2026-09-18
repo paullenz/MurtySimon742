@@ -3,13 +3,16 @@
 > **Active target — 18 September 2026.** The live problem is the sufficiently-large/eventual second-extremal D2C classification around `M(n)=floor((n-1)^2/4)+1`. The false all-order 2019 Dailly–Foucaud–Hansberg strengthening is not assumed. The published 2024 order-12, size-32 D2C graph is a mandatory hostile control. Murty–Simon / Erdős #742 remains preserved but is not the live optimization target.
 
 <!-- CURRENT-STATUS:START -->
-**CHECKPOINT CLASS:** `FULL_TIGHT_CLOSED_NEAR_FULL_FINITE_DEFICIT_SOURCE_TUPLE_RATIO_GAP_27_14_INTERNAL_CANDIDATE`.
+**CHECKPOINT CLASS:** `FULL_TIGHT_CLOSED_NEAR_FULL_SUBLINEAR_LAMBDA_RATIO_GAP_LINEAR_LAMBDA_ENVELOPE_CYLINDER_CRITICALITY`.
 
-**WORK MODE:** `EVENTUAL_D2C_MATH`. The full-tight Boolean branch remains internally closed for sufficiently large matched cores (`k>=19`). The live branch is the unmatched/errorful antipode regime. The directional beta-fibre argument first improved the fixed-`lambda` linear-unmatched frontier to `limsup u/p<=2`; endpoint stability then forced a bipolar Boolean geometry. The current checkpoint shows that this ratio-two endpoint is itself impossible by a new exact finite-deficit designated-source tuple-capacity theorem, and gives the quantitative internal bound
+**WORK MODE:** `EVENTUAL_D2C_MATH`.
 
-> `limsup u/p < 27/14 = 1.928571428...`
+The full-tight Boolean branch remains internally closed for sufficiently large matched cores (`k>=19`). The live branch is the unmatched/errorful antipode regime. The principal advances now are:
 
-for every fixed `lambda` above-threshold near-full sequence with `p->infinity`.
+- exact finite-deficit source-tuple capacity;
+- the ratio gap `u/p<27/14` has been extended from fixed `lambda` to the whole sublinear regime `lambda=o(p)` (for linear-unmatched `u=O(p)` sequences);
+- alpha/beta diversion coercivity gives a first explicit semialgebraic envelope in the genuinely linear regime `lambda=Theta(p)`;
+- beta-cylinder multiplicity has now been connected directly to D2C edge criticality through a unique-common-neighbour slack/hole identity and a complementary-code dual-clique mechanism.
 
 No global eventual second-extremal theorem is claimed.
 
@@ -26,7 +29,7 @@ The published Radosavljevic--Stanic--Zivkovic (2024) Figure-1 graph has been rec
 
 See `PUBLISHED_12_VERTEX_EXCEPTION_FIGURE_CERTIFICATION.md`. It has `u=0`, so every unmatched-layer theorem below leaves it untouched.
 
-## 2. Near-full partial-Boolean framework and scorecard
+## 2. Near-full partial-Boolean framework and exact scorecard
 
 For a maximum-degree root `v`, write
 
@@ -80,9 +83,11 @@ At `lambda=-1`, this is `E_U+L_A<=2p+u-4` above threshold.
 
 Main files: `NEAR_FULL_TIGHT_MATCHING_NORMAL_FORM.md`, `GLOBAL_SLACK_DEFECT_CRITERION.md`.
 
-## 3. Preserved switching/high-complexity stability
+## 3. Preserved full-tight / switching stability
 
-A switchable zero-signed matched subcore of order `s_0>=3` forces
+If tight antipodes cover all of `B`, the switching-defect hierarchy is internally closed for `k>=19`; see `FULL_TIGHT_SWITCHING_BRANCH_EVENTUAL_CLOSURE.md`. Do not reopen the fixed-defect ladder as the main attack.
+
+In the near-full branch, a switchable zero-signed matched subcore of order `s_0>=3` forces
 
 > `L_A>=s_0(s_0-1)`.                                     `(ZS)`
 
@@ -96,13 +101,9 @@ an above-threshold candidate satisfies
 
 > `sigma_0(sigma_0-1)<=S_req-2`.                          `(SD)`
 
-Put
+Put `C=S_req-2` and
 
-`C=S_req-2`,
-
-`R=floor((1+sqrt(1+4C))/2)`,
-
-`R_*=max(2,R)`.
+`R_*=max(2,floor((1+sqrt(1+4C))/2))`.
 
 Then every unmatched row satisfies
 
@@ -112,17 +113,9 @@ and the largest projective alpha/true-twin class satisfies
 
 > `mu_alpha<=R_*`.                                        `(AC)`
 
-For fixed `lambda` and `u=O(p)`:
+## 4. Preserved selected/Hall, sparse-U, and beta geometry
 
-- `kappa_sw=p-O(sqrt(p))`;
-- every unmatched row has cover `Omega(sqrt(p))`;
-- `mu_alpha=O(sqrt(p))`.
-
-Do not return to cheap-row case enumeration.
-
-## 4. Multiplicity Hall, antipode payment, sparse U
-
-Preserved selected/Hall consequences include
+Key consequences remain:
 
 > `t_c <= n_{a_i(c)}+n_{b_i(c)}`;                         `(MH)`
 >
@@ -134,174 +127,39 @@ Preserved selected/Hall consequences include
 
 where `h` is the number of occupied complementary U-code pairs.
 
-The Boolean antipode-fan payment remains preserved:
+Selected orientation inside `U` gives
 
-- `lambda=-1`: `E_U>=ceil(u/4)`;
-- `lambda>=0`: `E_U>=min(u,ceil(u/2)+lambda)`;
-- equality is rigid (odd clique fan, regular tournament charging, complementary private holes);
-- matched antipode hubs satisfy the corresponding same-code fan inequality.
+> `e(G[S])<=sum_{y in S}n_{bar c(y)}` for every `S subseteq U`, `(UE)`
 
-Selected orientation of edges inside `U` gives, for every `S subseteq U`,
-
-> `e(G[S])<=sum_{y in S}n_{bar c(y)}`.                    `(UE)`
-
-Hence
+hence
 
 > `q <= a floor((mu_alpha+1)a/p)
 >      <=(mu_alpha+1)a^2/p`.                              `(SU)`
 
-For fixed `lambda`, `u=O(p)`,
+For `x in A`, let `ell_x` be beta load, `k_x=p-ell_x` beta deficit, `d_x=d_U(x)`, and `Y_x` the distinct designated beta sources. The beta/central decomposition gives
 
-> `q=O(p^(3/2))`.
+> `s=B_beta+C`,
 
-Thus for `u=rho p+O(1)`,
+and every U-neighbour except the designated source in a targeted fibre lies on the same central side as `x`.
 
-> `Q=p(p+u-1)+O(p^(3/2))`,
->
-> `s=rho(1+rho)p^2+O(p^(3/2))`.
-
-## 5. Beta-reuse geometry
-
-For `x in A`, let `ell_x=|I_x|` be its beta load and
-
-`Y_x={y_i:i in I_x}`
-
-its designated unmatched beta sources. The sources in `Y_x` are pairwise distinct.
-
-Put
-
-`C_x=N_U(x)\Y_x`, `c_x=|C_x|`, `d_x=d_U(x)`.
-
-Then
-
-> `d_x=ell_x+c_x`.
-
-Writing
-
-`B=sum_x ell_x=B_beta`,
-
-`C=sum_x c_x`,
-
-there is an exact partition
-
-> `s=B+C`.                                                 `(BC)`
-
-For every `i in I_x`, all U-neighbours of `x` except the single source `y_i` choose the same side of fibre `i` as `x`.
-
-## 6. Directional deficiency--Hamming budget
+## 5. Directional deficiency--Hamming and source-tuple capacity
 
 For coordinate `i`, write
 
-`u_i^0=|{y in U:c(y)_i=0}|`,
+`d_i=u_i^0-u_i^1`, `H=sum_i d_i^2`.
 
-`u_i^1=|{y in U:c(y)_i=1}|`,
+Let `P_alpha` be the directional alpha payment and
 
-`d_i=u_i^0-u_i^1`,
+`J=sum_x(p-ell_x)(u-d_x)>=0`.
 
-`H=sum_i d_i^2`.
+The preserved directional budget is
 
-Let `h_i^0,h_i^1` be alpha-oriented P--U source counts by side, and define
-
-`P_alpha=sum_i[h_i^0(u_i^1+1)+h_i^1(u_i^0+1)]`.
-
-Directional fibre capacity gives
-
-> `W:=sum_x ell_x d_x
->     <=p(u^2/2+u)-H/2-P_alpha`.                           `(DFM)`
-
-Define
-
-`J=sum_x(p-ell_x)(u-d_x)>=0`,
-
-and `h_alpha=pu-B`. Exact algebra gives
-
-> `W=uB+ps-pua+J`,
-
-hence
-
-> **DIRECTIONAL DEFICIENCY--HAMMING BUDGET**
->
 > `J+H/2+P_alpha`
 >
 > `<=p u(p+1-lambda-u/2)+u h_alpha+2p q+pE_U`.           `(DHB)`
 
-For fixed `lambda`, the preserved `h_alpha,q=O(p^(3/2))`, `E_U=O(p)` bounds imply
+The finite-deficit source-tuple hierarchy is exact. For every integer `r>=3`,
 
-> `limsup u/p<=2`.                                        `(DR2)`
-
-File: `DIRECTIONAL_BETA_FIBRE_MOMENT_AND_RATIO_TWO.md`.
-
-The earlier central-Hamming and threshold-free moment inequalities remain preserved but are superseded asymptotically by `(DHB)`.
-
-## 7. Ratio-two polarization and bipolar geometry
-
-If a fixed-`lambda` above-threshold sequence were to satisfy `u/p->2`, `(DHB)` forces
-
-`H=o(p^3)`, `J=o(p^3)`.
-
-The A-layer then polarizes into two populations:
-
-- `X`: `|X|=(2+o(1))p`, beta load `p-o(p)` on average and U-degree `p+o(p)` on average;
-- `Z=A\X`: `|Z|=(2+o(1))p`, beta load `o(p)` on average and U-degree `2p-o(p)` on average.
-
-The beta-source-pair Hamming injection is asymptotically saturated, and `U` splits into two complementary Boolean clusters of size `p+o(p)`.
-
-The exact beta-side hole identity is stronger. If `x` beta-targets fibre `i` and chooses matched endpoint `q_i'`, the number of same-side vertices of `A union U` which are neither `x` nor adjacent to `x` is
-
-> `epsilon_x-epsilon_{q_i'}`.                             `(BH)`
-
-Thus neighbours of a beta-heavy `x` lie close to `c(x)` and non-neighbours close to `bar c(x)`, with total error paid directly by degree slack. At the ratio-two endpoint the whole `A union U` layer becomes asymptotically bipolar.
-
-Files: `RATIO_TWO_POLARIZATION_AND_SOURCE_PAIR_STABILITY.md`, `BETA_SIDE_HOLE_IDENTITY_AND_BIPOLAR_CODE_GEOMETRY.md`.
-
-## 8. Full beta-load scarcity
-
-If `ell_x=p`, then every radius-one Hamming neighbour of `c(x)` occurs as a U-code. Hypercube incidence gives only `O(1)` possible full-load centre codes when `u=O(p)`, and at `u/p->2` at most four full-load A-witnesses in total.
-
-File: `FULL_BETA_LOAD_HAMMING_SPHERE_SCARCITY.md`.
-
-This exact endpoint is now subsumed by the finite-deficit theorem below.
-
-## 9. New finite-deficit pair capacity
-
-Put
-
-`k_x=p-ell_x`.
-
-For `y_i,y_j in Y_x`, their codes differ in exactly the two assigned coordinates on `I_x`, hence
-
-> `dist_H(c(y_i),c(y_j))<=k_x+2`.
-
-Combined with the source-pair multiplicity theorem
-
-`M(y,z)<=dist_H(c(y),c(z))`,
-
-this yields the exact weighted double count
-
-> **FINITE-DEFICIT PAIR CAPACITY**
->
-> `sum_x binom(ell_x,2)/(p-ell_x+2) <= binom(u,2)`.       `(FDP2)`
-
-Therefore, if
-
-`N_K=|{x:k_x<=K}|`,
-
-then
-
-> `N_K <= binom(u,2)(K+2)/binom(p-K,2)`.                 `(FDS2)`
-
-For `u=rho p+o(p)`, `K=o(p)`,
-
-> `N_K<=(rho^2+o(1))K`.
-
-This immediately contradicts the ratio-two polarization, which would require `(2-o(1))p` witnesses with sublinear deficit. Thus **the ratio-two endpoint is impossible**, not merely unstable.
-
-## 10. New source-tuple capacity hierarchy
-
-For every integer `r>=3`, fix an `r`-set `R` of designated sources. In a common witness, each source must be assigned to a coordinate where it is the unique bit minority within `R`; every other nonconstant coordinate of `R` must lie outside the witness target set. Source-coordinate selected-witness uniqueness then gives the exact weighted hierarchy
-
-> **SOURCE-TUPLE CAPACITY**
->
 > `sum_x binom(ell_x,r)/(p-ell_x+r)
 >  <= (1/r)binom(u,r)`.                                   `(FDPr)`
 
@@ -311,156 +169,255 @@ Hence if `p-K>=r`,
 >
 > `<=((K+r)/r) binom(u,r)/binom(p-K,r)`.                 `(FDSr)`
 
-The `r=3` member is stronger than the pair bound near the former ratio-two endpoint.
+The `r=3` member combined with `(DHB)` yields the preserved ratio-gap polynomial
+
+`F(rho)=L_0(rho)-6D_0(rho)-12rho^3/125`,
+
+which is positive on `[27/14,2]`.
 
 File: `FINITE_DEFICIT_SOURCE_TUPLE_CAPACITY_AND_RATIO_GAP.md`.
 
-## 11. New quantitative ratio gap: below 27/14
+## 6. Alpha--beta diversion coercivity and integrated product
 
-Assume fixed `lambda`, `p->infinity`, and along a subsequence
+For fibre `i`, let
 
-`u/p->rho<=2`.
+`m_i=min(u_i^0,u_i^1)`,
 
-From `(DHB)`,
+`P_i` be alpha directional payment, and
+
+`T_i=r_i^0 e_i^1+r_i^1 e_i^0`
+
+be beta endpoint-slack payment, where `e_i^0+e_i^1=lambda+1`.
+
+For `lambda>=0`, the new exact fibre coercivity theorem is
+
+> `P_i+((m_i+1)/(lambda+1))T_i >= m_i(m_i+1)`.           `(ABF)`
+
+Globally,
+
+> `P_alpha+[p(floor(u/2)+1)/(lambda+1)]L_A`
+> `>=sum_i m_i(m_i+1)`.                                  `(ABG)`
+
+Writing `z=u-sqrt(H/p)>=0`,
+
+> `sum_i m_i(m_i+1)>=(p/4)z(z+2)`.                       `(MIC)`
+
+The source-tuple cutoff bounds have also been integrated over the entire deficit staircase. If
+
+`C_hat_r(K)=floor(((K+r)/r)binom(u,r)/binom(p-K,r))`,
+
+then every `N` A-vertices have total beta deficit at least
+
+> `Phi_r(N)=sum_{K=0}^{p-r}(N-C_hat_r(K))_+`.             `(IST)`
+
+Combining side-occupancy thresholding with `(IST)` gives
+
+> `J>=w_T Phi_r(N_T)`.                                    `(IP)`
+
+Together `(ABG)`, `(DHB)`, `(IP)`, and the scorecard produce the exact integrated positive-`lambda` master `(IPM)` in
+
+`ALPHA_BETA_COERCIVITY_INTEGRATED_PRODUCT_AND_CYLINDER.md`.
+
+## 7. New scale result: `27/14` gap now holds for `lambda=o(p)`
+
+The fixed-`lambda` hypothesis in the earlier ratio-gap theorem is not necessary.
+
+Assume
+
+`p->infinity`, `u=O(p)`, `lambda=o(p)`,
+
+and an above-`M(n)` near-full sequence. Since
+
+`C=S_req-2=O(p(lambda+1))=o(p^2)`,
+
+we have
+
+`R_*=O(sqrt(p(lambda+1)))=o(p)`,
+
+hence
+
+`mu_alpha=o(p)`,
+
+`h_alpha<=mu_alpha a=o(p^2)`,
+
+`q=o(p^2)`,
+
+`E_U,L_A=o(p^2)`.
+
+Therefore `(DHB)` has exactly the same normalized leading term as in the fixed-`lambda` proof. Along `u/p->rho`,
 
 > `J <= [rho(2-rho)/2+o(1)]p^3`,
 >
 > `H <= [rho(2-rho)+o(1)]p^3`.
 
-Let `j` be the number of fibres with `|d_i|>=p`. Then
+The preserved triple-source argument then applies unchanged. Thus:
 
-`j/p<=gamma+o(1)`, `gamma=rho(2-rho)`.
-
-Let `L={x:ell_x>j}`. Beta-load capacity gives
-
-> `|L|/p >= L_0(rho)+o(1)`,
+> **SUBLINEAR-LAMBDA RATIO GAP — internal candidate.**
 >
-> `L_0(rho)=[rho-(rho+2)gamma]/(1-gamma)`.
-
-Every `x in L` targets a fibre with `|d_i|<p`, so side occupancy gives
-
-`u-d_U(x)>=[(rho-1)/2+o(1)]p`.
-
-Therefore
-
-> `sum_{x in L}k_x <= [D_0(rho)+o(1)]p^2`,
+> If `u=O(p)` and `lambda=o(p)`, every finite subsequential limit satisfies
 >
-> `D_0(rho)=rho(2-rho)/(rho-1)`.
+> `rho=lim u/p < 27/14`.                                  `(SLRG)`
 
-At least
+Consequently any putative sequence with `limsup u/p>=27/14` must enter a genuinely linear root-imbalance regime: after a subsequence, `lambda>=theta p` for some constant `theta>0`.
 
-`[L_0(rho)-6D_0(rho)+o(1)]p`
+File: `SUBLINEAR_LAMBDA_EXTENSION_OF_SOURCE_TUPLE_RATIO_GAP.md`.
 
-of these witnesses have `k_x<=p/6`. The triple-source capacity gives the opposite upper bound
+## 8. New linear-`lambda` envelope from alpha--beta coercivity
 
-`(12rho^3/125+o(1))p`.
+Now assume
 
-Thus every feasible limit ratio must satisfy
+`u/p->rho>0`, `lambda/p->theta>0`,
 
-> `F(rho)=L_0(rho)-6D_0(rho)-12rho^3/125<=0`.
+and put
 
-But
+`A=2+rho-theta` (`a/p->A`).
 
-`F(rho)`
+From `(MIC)`, uniformly over the Hamming imbalance,
 
-`=-rho(12rho^4-24rho^3-863rho^2+2250rho-1125)`
+> `H/2+sum_i m_i(m_i+1) >= [rho^2/6+o(1)]p^3`.           `(LC2)`
 
-` /[125(rho-1)^2]`,
+Using only the coarse preserved bounds
 
-and an elementary derivative check shows
+`h_alpha<=p a`,
 
-> `F(rho)>0` for every `rho in [27/14,2]`.
+`q<=[A^2+o(1)]p^2`,
 
-At the left endpoint exactly,
+and the scorecard term in `(IPM)`, every limiting pair must satisfy
 
-`F(27/14)=219672/7245875>0`.
-
-Therefore:
-
-> **TRIPLE-SOURCE RATIO GAP — internal candidate.**
+> `rho^2/6`
 >
-> For every fixed `lambda`, every above-`M(n)` near-full sequence with `p->infinity` satisfies
+> `<=rho(1-theta-rho/2)+rho A+2A^2`
 >
-> `limsup u/p < 27/14 = 1.928571428...`.                  `(RG3)`
+> `  +max(1,rho/(2theta))[theta(1+rho)-theta^2/2]`.       `(LCE)`
 
-The constant is deliberately non-optimized. Do not spend the next unit merely shaving it numerically.
+For `rho in [27/14,2]`, this yields the explicit upper envelope
 
-## 12. New matched-endpoint slack payment
+> `theta <= theta_-(rho)`
+>
+> `=(5rho+7-sqrt(11rho^2+4rho+1))/3`,                    `(LTE)`
 
-For tight fibre `i`, let endpoint slacks be
+and in particular
 
-`e_i^0,e_i^1`, with
+> `theta<13/4`.                                           `(L13)`
 
-`e_i^0+e_i^1=lambda+1`.
+Numerically `theta_-(27/14)=3.19939...` and `theta_-(2)=3.23996...`.
 
-Let beta source counts by side be
+This is deliberately coarse: it drops the nonnegative integrated source-product term `w_T Phi_r(N_T)`. The next linear-`lambda` attack should use that term rather than merely optimize this envelope numerically.
 
-`r_i^s=u_i^s-h_i^s`.
+File: `LINEAR_LAMBDA_COARSE_ENVELOPE_FROM_ALPHA_BETA_COERCIVITY.md`.
 
-The beta-side hole identity gives
+## 9. New beta-cylinder edge-criticality structure
 
-> `pL_A>=sum_i(r_i^0e_i^1+r_i^1e_i^0)`.                 `(BES1)`
+The beta-cylinder theorem gives, for `x in A`, a central cylinder of codimension `ell_x=p-k_x` containing all A-neighbours and
+
+> `d_A(x)>=(p-epsilon_x)_+`.
+
+Hence some full A-code class inside the cylinder contains at least
+
+> `ceil((p-epsilon_x)_+/2^{k_x})`                         `(CY3)`
+
+A-neighbours of `x`.
+
+The new D2C criticality analysis prices the edges into such a repeated class.
+
+### Unique-common-neighbour slack identity
+
+If `z,w in A union U` are nonadjacent with
+
+`N(z) cap N(w)={t}`,
+
+then the number of vertices adjacent to neither is exactly
+
+> `epsilon_z+epsilon_w-(lambda+1)`.                       `(UCH)`
+
+In particular
+
+> `epsilon_z+epsilon_w>=lambda+1`.                        `(UCS)`
+
+### Same-code edge localisation
+
+If `x,z in A` have the same Boolean code and `xz` is an edge, edge criticality supplies `w in A union U` of the complementary Boolean code such that either
+
+`N(x) cap N(w)={z}`
+
+or
+
+`N(z) cap N(w)={x}`.
+
+Thus every same-code A-edge is certified across the complementary code class.
+
+For a same-code star around `x`, outgoing witnesses are distinct and pay
+
+> `sum epsilon_w >= |O|(lambda+1-epsilon_x)`.            `(OUT)`
+
+If many incoming edges share one foot `w`, their source set `S_w` is forced dense:
+
+> `d_overline{G[S_w]}(z)
+>  <=epsilon_z+epsilon_w-(lambda+1)`.                     `(CFH)`
 
 Hence
 
-> `pL_A`
->
-> `>=(lambda+1)[(pu-sum_i|d_i|)/2-h_alpha]`.             `(BES2)`
+> `omega(G[S_w])`
+> `>=ceil(|S_w|^2/(|S_w|+sum_{z in S_w}[epsilon_z+epsilon_w-(lambda+1)]))`. `(CFC)`
 
-By Cauchy,
+### Dual-clique transfer
 
-> `L_A >= (lambda+1)
->          [u/2-(1/2)sqrt(H/p)-h_alpha/p]`,              `(BES3)`
+If one source `x` has distinct critical feet `w_i` with zero hole count, the `w_i` form a clique, are joined to the corresponding heads by exactly a perfect matching, and are anticomplete to the other heads.
 
-with the positive part understood.
+More generally, if `W` is such a witness set,
 
-This is exact and retains `lambda`; it is now the preferred bridge toward weakening the fixed-`lambda` restriction.
+> `2e(overline{G[W]})`
+> `<=sum_i[epsilon_x+epsilon_{w_i}-(lambda+1)]`.          `(ADC)`
 
-File: `BETA_MATCHED_ENDPOINT_SLACK_BALANCE_PAYMENT.md`.
+A same-code A-clique of order `r` therefore transfers at least `floor(r/2)` vertices into a complementary-code near-clique unless the relevant source/foot slacks already pay into `E_U+L_A`.
 
-## 13. Verification at this checkpoint
+File: `UNIQUE_COMMON_NEIGHBOR_SLACK_AND_CYLINDER_CRITICALITY.md`.
 
-New audit support:
+## 10. Verification added at this checkpoint
 
-`check_finite_deficit_source_tuple_capacity.py`
+New regression support:
 
-- 304,264 exact local triple-source geometry cases (`p<=6`, beta deficit `<=2`);
-- 2,001 exact rational ratio-grid points on `[27/14,2]`;
-- exact cutoff arithmetic and polynomial signs;
-- zero failures.
+`check_ucn_cylinder_and_linear_lambda_envelope.py`
 
-Frozen summary: `FINITE_DEFICIT_SOURCE_TUPLE_CHECK_SUMMARY.json`.
+replayed
 
-Earlier dense-cross Hamming, threshold-capacity, moment-capacity, multiplicity/fan, and Boolean-incidence regression suites remain preserved. Computation is audit support only; the promoted internal statements are hand arguments.
+- all 1,249 graph-atlas graphs of orders 3--7;
+- 4,424 unique-common-neighbour pairs for `(UCH)`;
+- all 21 D2C graph-atlas classes and 29 critical triangle edges for the generic edge-witness lemma;
+- 10,001 exact-rational ratio-grid points on `[27/14,2]` for the `theta=13/4` envelope sign and the `theta_-` / high-regime ordering.
 
-## 14. Full-tight branch remains closed internally
+Zero failures. Frozen summary: `UCN_CYLINDER_LINEAR_LAMBDA_CHECK_SUMMARY.json`.
 
-If tight antipodes cover all of `B`, the fixed switching-defect hierarchy remains internally closed for `k>=19`; see `FULL_TIGHT_SWITCHING_BRANCH_EVENTUAL_CLOSURE.md`. The order-12/32 `X_3` graph is a small full-tight `k=4,r=0` exception and remains explicitly allowed.
+The earlier alpha--beta/integrated-product regression also remains preserved (`632,299` algebraic checks, zero failures). Computation is audit support only; the promoted statements are the hand counting arguments.
 
-Do not reopen the fixed-defect ladder as the main attack.
+## 11. Active next move
 
-## 15. Active next move
+The research now has two genuinely different surviving scales.
 
-The ratio-two equality model has now been destroyed, and the source-tuple hierarchy gives a quantitative fixed-`lambda` gap. The next move should **not** optimize `27/14` as a decimal constant.
+### A. Large unmatched ratio
 
-Highest-value structural target:
+If `u/p>=27/14` asymptotically, the sublinear-`lambda` window is gone. The survivor must have `lambda=Theta(p)` and obey the explicit `(rho,theta)` envelope `(LCE)/(LTE)`.
 
-1. combine `(FDPr)`, `(BH)/(BES2)`, `(DHB)`, and the scorecard `(GS-A)` into a joint inequality for the distribution of `(k_x,epsilon_x,d_U(x))`;
-2. use it to force direct payment in `E_U+L_A`, rather than another ratio-only restriction;
-3. in parallel, use `(BES2)` to test whether positive/growing `lambda` can be absorbed, weakening the current fixed-`lambda` assumption.
+Highest-value next step: **put the discarded integrated product `w_T Phi_r(N_T)` back into the linear-scale optimization.** This is the intended place where source-tuple scarcity and alpha--beta coercivity should interact; merely shaving the coarse `13/4` bound is not the objective.
 
-A natural approach is a finite dyadic decomposition by beta deficit `k_x`: tuple capacity controls the number of low-deficit witnesses, `(DHB)` controls the product of beta and U-degree deficits, and `(BH)` prices low-slack witnesses which try to exhaust many fibre sides.
+### B. Low-deficit/low-slack beta witnesses
 
-The separate `Q=0` / false-twin-core branch from `MAX_TRIANGLE_OR_TWIN_REDUCTION.md` remains open and has not been conflated with this triangle/partial-Boolean branch.
+The beta-cylinder theorem now produces a repeated A-code neighbourhood, and D2C criticality converts its edges into complementary-code unique-common-neighbour witnesses. The next structural target is an **overlap-capacity theorem for many such cylinders**: show that many low-deficit/low-slack centres cannot all reuse the same complementary near-cliques without forcing additional `E_U+L_A`, or else collapse into a rigid dual-clique/matching normal form which can be attacked directly.
+
+These two attacks are complementary: the integrated-product route targets the global linear-`lambda` scale, while the cylinder-criticality route targets local equality/low-slack structure.
+
+The separate `Q=0` / false-twin-core branch from `MAX_TRIANGLE_OR_TWIN_REDUCTION.md` remains open and has not been conflated with the triangle/partial-Boolean branch.
 
 Do not return to the closed mixed `{4,5}` selected-excess ladder, arbitrary fixed-defect enumeration, or first-proof optimization for Erdős #742.
 
-## 16. Trust boundary
+## 12. Trust boundary
 
 - Published 12/32 graph: reconstructed directly from the authoritative figure; no author-supplied adjacency file located.
 - Full-tight eventual closure: internal candidate pending external review.
-- Near-full normal form, scorecard, switching stability, multiplicity Hall, fan payment, U-edge capacity, beta-reuse geometry, directional Hamming budget, beta-side hole identity, finite-deficit pair/tuple capacity, and endpoint-slack payment are hand arguments.
-- `(RG3)` is conditional on fixed `lambda`; it is not a global eventual theorem.
-- No all-order second-extremal theorem is claimed.
-- Finite computations/checkers are audit/regression support only.
+- Near-full normal form and scorecard: hand derivations.
+- Source-tuple capacity, directional Hamming, alpha--beta coercivity, integrated product, unique-common-neighbour and cylinder-criticality results: hand arguments with independent regression where stated.
+- `(SLRG)` assumes `u=O(p)` and `lambda=o(p)`; it is not a global theorem.
+- `(LCE)/(LTE)` are asymptotic necessary conditions in the linear-`lambda` regime, not a closure theorem.
+- The `X_3` negative control has `u=0` and is untouched by every new unmatched-layer result.
+- No all-order or eventual second-extremal theorem is claimed.
 <!-- CURRENT-STATUS:END -->
