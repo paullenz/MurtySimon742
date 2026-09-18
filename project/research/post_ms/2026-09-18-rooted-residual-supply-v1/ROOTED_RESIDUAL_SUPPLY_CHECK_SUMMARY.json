@@ -1,0 +1,8 @@
+{
+  "failures": 0,
+  "local_degree_supply_random": 250000,
+  "threshold_identity_exact": 19425,
+  "total_checks": 719425,
+  "transfer_algebra_random": 200000,
+  "zero_load_compression_random": 250000
+}
