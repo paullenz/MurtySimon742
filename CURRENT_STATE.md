@@ -3,7 +3,7 @@
 > **Active target — 18 September 2026.** The live problem is the sufficiently-large/eventual second-extremal D2C classification around `M(n)=floor((n-1)^2/4)+1`. The false all-order 2019 Dailly–Foucaud–Hansberg strengthening is not assumed. The published 2024 order-12, size-32 D2C graph is a mandatory hostile control. Murty–Simon / Erdős #742 is preserved but is not the live optimization target.
 
 <!-- CURRENT-STATUS:START -->
-**CHECKPOINT CLASS:** `FULL_TIGHT_CLOSED_ROOTED_RESIDUAL_COMPLEMENT_PAIR_FAN_PACKING_FRONTIER`.
+**CHECKPOINT CLASS:** `FULL_TIGHT_CLOSED_ROOTED_RESIDUAL_SELF_PRICED_FAN_FALSE_TWIN_SUPPORT_FRONTIER`.
 
 **WORK MODE:** `EVENTUAL_D2C_MATH`.
 
@@ -11,9 +11,9 @@ The full-tight Boolean branch remains internally closed for sufficiently large m
 
 The current spine is
 
-`residual defect -> rooted-triangle transfer -> forced A-edge mass -> complete witness channels -> fan geometry -> whole-code witness capacity -> complementary-pair fan packing -> large-code-class/Hall alternative OR direct false-twin branch`.
+`residual defect -> rooted-triangle transfer -> forced A-edge mass -> complete witness channels -> direct fan OR A/U fan -> false-twin private-support stability OR self-priced complementary-pair fan cost`.
 
-No global eventual second-extremal theorem is claimed.
+The previous generic “large complementary code class” escape in the A/U fan branch is no longer a free alternative: aligned-code crowding prices it into the same pair slack. No global eventual second-extremal theorem is claimed.
 
 ## 1. Mandatory negative control
 
@@ -96,6 +96,10 @@ where
 
 > `F_min=(p-lambda)(p+u)+q-D_M+1`.                        `(FMIN)`
 
+Above `M(n)`, integrality also gives the parameter-only scorecard ceiling
+
+> `S<=C_0:=2(D_M-1)+lambda(p+u)-p`.                       `(C0)`
+
 The live target is to prove `delta>=D_M` for all sufficiently large graphs in the triangle-containing branch.
 
 ## 3. Preserved switching / Hall / source-tuple stack
@@ -124,9 +128,17 @@ A switchable zero-signed matched subcore of order `sigma_0>=3` forces
 
 > `L_A>=sigma_0(sigma_0-1)`.                              `(ZS)`
 
+Thus above `M(n)`
+
+> `sigma_0<=R_A(C_0)`,                                    `(ZSC)`
+
+where
+
+> `R_A(L)=max(2,floor((1+sqrt(1+4L))/2))`.
+
 For `u=O(p)` and `lambda=o(p)`, every finite limiting unmatched ratio still satisfies `u/p<27/14` asymptotically.
 
-The repaired cylinder theorem remains a finite/equality tool rather than the generic quadratic closure mechanism.
+The repaired cylinder theorem remains useful for finite/equality diagnostics but is not the generic quadratic closure mechanism.
 
 ## 4. Complete A-edge witness channels and rooted fan gate
 
@@ -136,7 +148,7 @@ Every internal A-edge belongs to one of three critical-witness channels:
 2. matched-B witness;
 3. A/U unique-common-neighbour witness.
 
-Matched-B traffic satisfies the preserved `P_B<=sigma_0a` capacity with additional self-pricing when reuse is heavy.
+Matched-B traffic satisfies the preserved `P_B<=sigma_0a` capacity, with stronger self-pricing when reuse is heavy.
 
 For an A/U source `x`, distinct heads `h_i` and witnesses `w_i` satisfy
 
@@ -146,225 +158,284 @@ For an A/U source `x`, distinct heads `h_i` and witnesses `w_i` satisfy
 >
 > all witnesses have the one Boolean code `bar(c(x))`.   `(WCODE)`
 
-With
+Put
 
-`H=(F_min-sigma_0a)_+`,
+> `H=(F_min-sigma_0a)_+`.                                 `(H)`
 
-the rooted transfer dichotomy says:
+The rooted transfer dichotomy says:
 
-> either some source has a direct fan of order at least `H/a`,
+> either some source has a direct fan of order at least `ceil(H/a)`,
 >
 > or some source has an A/U fan of order at least `ceil(H/(2a))`. `(FG)`
 
-Core A-edge package:
+Core package:
 
 `project/research/post_ms/2026-09-18-a-edge-fan-rigidity-v1/`.
 
-## 5. Exact A/U fan-hole normal form
+## 5. Preserved A/U fan geometry
 
-For one A/U fan define
+For one A/U fan let `d=|W_x|`, and define
 
 `Z_i=V(G)\({x,w_i} union N(x) union N(w_i))`,
 
 `g_i=|Z_i|=epsilon_x+epsilon_{w_i}-(lambda+1)`,
 
-`G_x=sum_i g_i`, `d=|W_x|`.
+`G_x=sum_i g_i`.
 
-The preserved witness normal form implies
+The fan normal form gives
 
-> `2e(overline{G[W_x]})<=G_x`.                           `(EWM)`
+> `2e(overline{G[W_x]})<=G_x`.                            `(EWM)`
 
-Every A-witness has the root as one of its holes. Zero-hole witnesses therefore lie in `U`; in the exact zero-hole model the witness side is a U-clique. The one-hole model is completely classified: the witness side is a clique minus a matching, A-witnesses use the root as their unique hole, and corresponding clean heads have code `c(x)`.
-
-Preserved files:
-
-`project/research/post_ms/2026-09-18-fan-equality-stability-v1/ONE_HOLE_FAN_CLASSIFICATION_AND_CAPACITY.md`
-
-`project/research/post_ms/2026-09-18-fan-equality-stability-v1/BOUNDED_HOLE_FAN_CAPACITY.md`
-
-`project/research/post_ms/2026-09-18-fan-equality-stability-v1/INTEGRATED_FAN_HOLE_PROFILE_AND_SCORECARD.md`.
-
-## 6. Whole-code witness capacity
-
-The key reassessment is that splitting A- and U-witnesses is not the correct primary capacity model: by `(WCODE)` the entire witness graph lies in one Boolean code class.
-
-For code `gamma`, write
-
-`V_gamma={z in A union U:c(z)=gamma}`,
-
-`N_gamma=|V_gamma|`,
-
-`S_gamma=sum_{z in V_gamma}epsilon_z`.
-
-The preserved same-code weighted edge capacity is
-
-> `(lambda+1)e(G[V_gamma])`
-> ` <= N_bar(gamma)S_gamma+N_gamma S_bar(gamma)`.         `(SCE)`
-
-For a fan source `x` of code `c`, define
-
-> `E_x=floor((N_cS_bar(c)+N_bar(c)S_c)/(lambda+1))`.     `(EX)`
-
-Then
-
-> `e(G[W_x])<=E_x`,                                      `(EW)`
->
-> `E_x<=E_0:=floor((a+u)S/(lambda+1))`.                  `(E0)`
-
-Combining `(EW)` with `(EWM)` gives
-
-> `G_x >= [d(d-1)-2E_x]_+`.                              `(WCHF)`
-
-This prices A-A, A-U and U-U witness edges in one shot.
-
-## 7. Whole-fan low-hole / beta hybrid theorem
-
-For `K>=0`, let
-
-`I_K={i:g_i<=K}`, `N_K=|I_K|`,
-
-and let `A_K` count A-witnesses in `I_K`.
-
-A low-hole U-witness is adjacent to at least `d-1-K` vertices of the whole witness set; an A-witness is adjacent to at least `d-K`, because the root consumes one hole outside the witness set. Hence
-
-> `N_K(d-1-K)+A_K<=2E_x`.                                `(WFHI)`
-
-Let
-
-> `R_U(K)=max{r:r(r-K-1)<=2Q_beta}`.                     `(RUK)`
-
-For `K>=1`, `A_K>=(N_K-R_U(K))_+`, so
-
-> `N_K(d-1-K)+(N_K-R_U(K))_+<=2E_x`.                    `(HBH)`
-
-If `0<=K<=d-2`, with `t=d-1-K`,
-
-> `N_K<=min{d, floor(2E_x/t), floor((2E_x+R_U(K))/(t+1))}`. `(CX)`
-
-For `K=0`, A-witnesses are impossible and
-
-> `N_0<=min{d,R_U(0),floor(2E_x/(d-1))}`.                `(CX0)`
-
-Taking these caps thresholdwise with the preceding bounded-hole profile gives a hybrid staircase `Psi_sharp`; put
-
-> `Gamma_x(d)=max{0,d(d-1)-2E_x,Psi_sharp(d)}`.          `(GAM)`
-
-Then `G_x>=Gamma_x(d)`.
-
-## 8. Strengthened whole-code fan scorecard
+Every A-witness has the root as one of its holes. Zero-hole witnesses therefore lie in `U`; the exact zero-hole witness side is a U-clique. The one-hole model is a clique minus a matching, with the A-witness root holes explicitly classified.
 
 Put
 
 `P=p+u`, `T=P-lambda-1=a-p`.
 
-The source-degree bound is
+The coarse fan slack threshold remains
 
-> `epsilon_x<=P-d`.                                       `(SRC)`
+> `S>=2d(d-T)_+`.                                         `(AUFS)`
 
-Heads and witnesses are disjoint, and the exact hole identity gives
+The whole-code capacity and bounded-hole staircase remain available, including the source-local complementary-pair inequality
 
-> `S`
-> ` >= d(d-T)_+`
-> `   +[Gamma_x(d)+d(d-T)]_+`.                            `(WCSC)`
+> `2d^2-(T+1)d<=S_bar(c(x))+2E_x`,                        `(PFC2)`
 
-A compact finite consequence is
+where
 
-> `2d^2-(T+2)d+P <= S+2E_x`.                             `(CFC)`
+> `E_x<=M_P S_P/(lambda+1)`                               `(PE)`
 
-The complementary-pair local version is sharper:
+for the supporting complementary pair `P={c,bar c}`.
 
-> `d(d+lambda-epsilon_x)<=S_bar(c(x))+2E_x`,             `(PFC)`
+Thus
+
+> `d(2d-T-1)<=(1+2M_P/(lambda+1))S_P`.                   `(PFC3)`
+
+Preserved files:
+
+`project/research/post_ms/2026-09-18-fan-equality-stability-v1/`.
+
+## 6. Aligned-code self-pricing eliminates the large-code fan escape
+
+The earlier same-code crowding package supplies the missing composition with `(PFC3)`.
+
+For a code `c`, put
+
+`N_c=|(A union U)_c|`, `n_c=|A_c|`,
+
+`w_c=N_c+n_c`, `S_c=sum_{z:c(z)=c}epsilon_z`.
+
+Define
+
+> `D_0=T+2(a+u)+1=5p+5u-3lambda-2`.                      `(AC0)`
+
+The preserved aligned-code crowding theorem is
+
+> `S_c >= [(w_c/2)(3w_c/2-D_0)]_+`.                      `(AC1)`
+
+For any integer slack budget `s>=0`, define
+
+> `R_code(s)=max(0,floor((D_0+sqrt(D_0^2+12s))/3))`.      `(RC)`
+
+If an unordered complementary pair `Pi={c,bar c}` has pair slack `S_Pi=s`, then `(AC1)` applies separately to both sides, so
+
+> `M_Pi=max(N_c,N_bar c)<=R_code(s)`.                     `(PLC)`
+
+Hence the supporting code population is paid from the **same pair slack**. Substituting into `(PFC3)` gives the self-priced fan theorem
+
+> `d(2d-T-1)<=Psi(S_Pi)`,                                 `(SPF)`
+
+where
+
+> `Psi(s)=s(1+2R_code(s)/(lambda+1))`.                    `(PSI)`
+
+Define the exact integer fan cost
+
+> `C_pair(d)=min{s>=0:d(2d-T-1)<=Psi(s)}`,                `(SPC)`
+
+with `C_pair(d)=0` when the left side is nonpositive. Then
+
+> `S_Pi>=C_pair(d)`.                                      `(SPC2)`
+
+This removes the previous generic structural alternative “or `M_Pi` is large”. A large supporting code class is no longer free.
+
+For a floor-free reviewer form, put
+
+`R_bar(s)=(D_0+sqrt(D_0^2+12s))/3`.
+
+If `y=R_bar(s)`, then `s=y(3y-2D_0)/4`, and every fan satisfies the cubic normal form
+
+> `4(lambda+1)d(2d-T-1)`
+> ` <= y(3y-2D_0)(lambda+1+2y)`.                         `(SPF-cubic)`
+
+Core theorem:
+
+`project/research/post_ms/2026-09-18-fan-self-pricing-v1/SELF_PRICED_COMPLEMENT_PAIR_FANS_AND_ROOTED_GATE.md`.
+
+## 7. Self-priced fan packing and rooted q gate
+
+Distinct unordered complementary pairs have disjoint slack budgets. Therefore, choosing at most one fan of order `d_j` from each distinct pair gives
+
+> `sum_j C_pair(d_j)<=S`.                                 `(SPP)`
+
+This is the correct distribution-free form of complementary-pair fan packing: local code concentration has already been absorbed into the local cost.
+
+Above `M(n)`, let
+
+> `R_0=R_code(C_0)`.                                      `(R0)`
+
+Every A/U fan obeys
+
+> `d(2d-T-1)<=C_0(1+2R_0/(lambda+1))`,                   `(GF1)`
+
+and hence
+
+> `d<=floor((T+1+sqrt((T+1)^2+8C_0(1+2R_0/(lambda+1))))/4)`. `(GF2)`
+
+The actual-slack version is preferred to this global ceiling.
+
+Define
+
+> `R_D(T,L_A)=floor((T+sqrt(T^2+4L_A))/2)`,              `(RD)`
 >
-> `2d^2-(T+1)d<=S_bar(c(x))+2E_x`.                       `(PFC2)`
+> `R_AU^*(S)=max{d>=0:max(2d(d-T)_+,C_pair(d))<=S}`.     `(RAU*)`
 
-Core theorem and audit:
+The rooted fan gate implies
 
-`project/research/post_ms/2026-09-18-fan-equality-stability-v1/WHOLE_CODE_FAN_CAPACITY_AND_COMPACT_SCORECARD.md`
+> `H<=max(aR_D(T,L_A),2aR_AU^*(S))`.                     `(QG1)`
 
-`project/research/post_ms/2026-09-18-fan-equality-stability-v1/WHOLE_CODE_FAN_CAPACITY_AUDIT.md`.
+Substituting `(H)` and `(FMIN)` gives the fan-derived rooted U-edge ceiling
 
-## 9. Complementary-pair fan packing
+> `q<=sigma_0a`
+> `   +max(aR_D(T,L_A),2aR_AU^*(S))`
+> `   -(p-lambda)(p+u)+D_M-1`.                           `(QG2)`
 
-The global substitution `E_x<=E_0` is often too generous. The correct next scale is the unordered complementary pair
+Intersect `(QG2)` with the independent beta-sensitive cap `(BQ)`. Both now constrain the same `q` occurring in
 
-`P_c={c,bar(c)}`.
+> `Q=p(p+u-1)+q`
 
-Put
+and the residual identity `(RQ3)`.
 
-`S_P=S_c+S_bar(c)`,
+A convenient exact two-fan closure criterion is: with
 
-`M_P=max(N_c,N_bar(c))`,
+`d_D=ceil(H/a)`, `d_C=ceil(H/(2a))`,
 
-`L=lambda+1>0`.
+if
 
-From `(SCE)`,
+> `d_D(d_D-T)_+>L_A`                                     `(RG-D)`
 
-> `E_x<=M_P S_P/L`.                                      `(PE)`
+and
 
-Combining this with `(PFC2)` gives the new pair-local capacity
+> `max(2d_C(d_C-T)_+,C_pair(d_C))>S`,                    `(RG-C)`
 
-> `d(2d-T-1) <= (1+2M_P/L)S_P`.                         `(PFC3)`
+then the assumed above-`M(n)` candidate is impossible.
 
-Therefore every A/U fan with `d>(T+1)/2` forces
+A coarse diagnostic replacing all actual slacks by `C_0` does **not** generically close the branch; retaining the local/actual slack information is essential.
 
-> `S_P >= L d(2d-T-1)/(L+2M_P)`.                        `(PSF)`
+## 8. Direct branch: false-twin private-support theorem
 
-Use the ceiling for the finite integer lower bound.
+The exact zero-surplus direct fan has false-twin leaves. The old generic false-twin missing-edge floor has now been strengthened using edge criticality itself.
 
-This is a structural trichotomy: a large A/U fan either lies in a complementary pair with a large Boolean code population `M_P`, or it captures a substantial amount of the total slack, or it cannot exist.
+Let `D` be any false-twin class in a D2C graph, `d=|D|>=2`, with common open neighbourhood `W`, `w=|W|`. Put
 
-Because distinct unordered complementary pairs have disjoint slack budgets, choosing at most one large fan from each distinct pair yields the packing theorem
+`Z=V(G)\(D union W)`, `z=|Z|=n-d-w`,
 
-> `sum_j [ L d_j(2d_j-T-1)/(L+2M_j) ] <= S`.            `(PFP)`
+and
 
-In particular, if every selected pair has `M_j<=M` and every fan has `d_j>=D>(T+1)/2`, their number `h` satisfies
+`W^+={x in W:d_{G[W]}(x)>0}`.
 
-> `h <= S(L+2M)/(L D(2D-T-1))`.                          `(PH)`
+For every `x in W^+`, choose `x' in W` with `xx'` an edge and `u in D`. The triangle edge `ux` must have a criticality certificate. The orientation through `N(x) intersect N(y)={u}` is impossible when `d>=2`; a second false twin would be another common neighbour. Therefore the certificate has
 
-This closes the previous “perhaps fan traffic can disperse over many code pairs” loophole: dispersion itself consumes the global scorecard.
+> `N(u) intersect N(y)={x}`.
 
-Core theorem and audit:
+Since `N(u)=W`, this gives a distinct external private witness `y in Z` with
 
-`project/research/post_ms/2026-09-18-fan-equality-stability-v1/COMPLEMENT_PAIR_FAN_PACKING.md`
+> `N(y) intersect W={x}`.                                 `(FT-private)`
 
-`project/research/post_ms/2026-09-18-fan-equality-stability-v1/COMPLEMENT_PAIR_FAN_PACKING_AUDIT.md`.
+Hence there is an injection
 
-## 10. Direct false-twin branch
+> `W^+ -> Z`,                                             `(FT1)`
 
-For a zero-hole direct fan, the leaves are exact false twins. For any false-twin class `D` with common open neighbourhood `W`, `d=|D|`, `w=|W|`,
+so
+
+> `|W^+|<=z`.                                             `(FT3)`
+
+All internal edges of `W` lie on `W^+`, therefore
+
+> `e(G[W])<=binom(min(w,z),2)`.                           `(FT4)`
+
+Equivalently, the strengthened false-twin floor is
 
 > `2e(overline{G[W]})`
-> ` >= min(d,w-1)(2w+d-n)_+`.                            `(FTF)`
+> ` >= (d+2w-n)_+(n-d-1)`.                               `(FT5)`
 
-Applied to the direct fan around `x`, this turns a large fan into common-side sparsity and a rooted local-triangle deficit.
+This dominates the previous
 
-The direct branch is the second equality model and should not be mixed back into the A/U capacity optimization.
+`min(d,w-1)(d+2w-n)_+`
 
-## 11. Verification
+floor whenever the positive part is nonzero.
 
-Earlier graph-atlas checks over all 21 D2C classes through order seven found zero failures for the fan normal form, threshold stability, zero-hole equality, one-hole classification and false-twin floor.
+At least `(d+2w-n)_+=w-z` vertices of `W` are isolated in `G[W]`. In particular, if `z=0`, then `W` is independent and
 
-New exact arithmetic audits in this checkpoint:
+> `G=K_{d,w}`.                                            `(FT7)`
 
-- whole-code/hybrid profile: **12,445,875** checks, failures `0`;
-- complementary-pair fan packing: **38,342,788** primitive feasible cases, failures `0`.
+Thus the exact direct equality model is a complete-bipartite blow-up, and departures from it require distinct private external support vertices.
 
-These scans are audit support only. The promoted statements rest on the hand inequalities above.
+If `t=|W^+|`, the private witnesses also give
 
-A deliberately conservative `p<=60` diagnostic using only the maximum global above-threshold scorecard did not close the rooted fan gate. That is a useful negative result: global slack replacement destroys too much code-pair information.
+> `e(W,Z)<=zw-t(w-1)`,                                   `(FT8)`
+>
+> `e(W)<=binom(t,2)`,                                    `(FT9)`
 
-## 12. Live next move
+and therefore
+
+> `m<=dw+binom(t,2)+zw-t(w-1)+binom(z,2)`.               `(FT10)`
+
+For a zero-surplus rooted direct fan of order `d`, with source slack `epsilon_x`,
+
+> `2e(overline{G[W]})`
+> ` >= (d-lambda-2+2epsilon_x)_+(n-d-1)`.                `(ZF4)`
+
+Core theorem:
+
+`project/research/post_ms/2026-09-18-fan-self-pricing-v1/FALSE_TWIN_PRIVATE_SUPPORT_AND_BIPARTITE_STABILITY.md`.
+
+The next direct-branch target is the bounded-hole stability extension, not another Boolean-code optimization.
+
+## 9. Verification
+
+Earlier graph-atlas and arithmetic checks remain preserved, including:
+
+- all 21 D2C graph-atlas classes through order seven for the fan normal form / equality kernels;
+- whole-code/hybrid fan profile: **12,445,875** exact checks, failures `0`;
+- earlier complementary-pair fan packing: **38,342,788** primitive feasible cases, failures `0`.
+
+New independent audits at this checkpoint:
+
+- aligned-code local inversion `(AC1)->(PLC)`: **915,945** exact feasible triples, failures `0`;
+- self-priced substitution `(PFC3)+(PLC)->(SPF)`: **24,942,685** primitive feasible cases, failures `0`;
+- false-twin support on all 21 D2C graph-atlas classes through order seven: **25** false-twin classes, **2** internally active `W` vertices/private-witness tests, **25** support-cap tests and **25** strengthened missing-floor tests, failures `0`.
+
+These are audit support only. The promoted statements rest on the hand proofs.
+
+Checker and frozen summary:
+
+`project/research/post_ms/2026-09-18-fan-self-pricing-v1/check_fan_self_pricing_and_false_twins.py`
+
+`project/research/post_ms/2026-09-18-fan-self-pricing-v1/FAN_SELF_PRICING_AUDIT_SUMMARY.json`.
+
+## 10. Live next move
 
 Do not return to the closed mixed `{4,5}` selected-excess ladder and do not optimize for first-proof priority on Erdős #742.
 
-The highest-value next move is now the **large complementary-code-class alternative** created by `(PSF)/(PFP)`.
+The previous generic “large complementary-code-class/Hall alternative” has been algebraically absorbed by `(PLC)/(SPF)`. Do not reopen it as a separate branch unless a source-tuple argument needs code-local information.
 
-1. Combine `(PSF)/(PFP)` with the preserved Hall/source-tuple bounds on U-code and complementary-pair U-code mass. If `M_P` is large because of U, it should force strong row-cover / zero-signed-core structure and scorecard payment.
-2. If `M_P` is large because of A, split that code class into a sparse and dense internal-edge case. Dense same-code A-edge mass is directly expensive under criticality; sparse mass must still service the beta/cylinder and rooted fan obligations.
-3. Feed either resulting code-class cap back into `(PSF)/(PFP)` and then `(FG)/(FMIN)` to force the direct-fan branch on a parameter region.
-4. On the direct branch, combine `(FTF)` with the exact rooted triangle count `Q=p(p+u-1)+q` and residual identity `delta+Q=L_A+f` to turn common-side sparsity into a residual-defect lower bound.
-5. Keep `X_3` explicit throughout: it has `u=0`, `F_min=0` and remains a required finite exception.
+The highest-value next moves are now tightly focused:
 
-The separate `Q=0` / false-twin-core branch remains distinct.
+1. **A/U branch:** combine the self-priced fan cost `(SPC)/(SPP)` and fan-derived `q` ceiling `(QG2)` with the beta/source-tuple cap `(BQ)/(IST)`. The objective is a compact residual contradiction in the triangle-containing branch, not another free-variable optimization.
+2. **Direct branch:** extend the private-support injection from exact false twins to bounded-hole direct fans, then feed the resulting common-side sparsity directly into `Q=p(p+u-1)+q`, `delta+Q=L_A+f`, and `delta=r-f`.
+3. **Rooted synthesis:** use both branches to bound the rooted-transfer demand `F_min`; an eventual theorem should arise by showing that for sufficiently large parameters neither stability model can absorb the required A-edge mass below `D_M`.
+4. Keep `X_3` explicit throughout. It has `u=0`, `F_min=0` and remains a required finite exception.
+
+The separate `Q=0` / triangle-free / false-twin-core branch remains distinct.
 
 <!-- CURRENT-STATUS:END -->
