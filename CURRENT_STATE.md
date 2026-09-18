@@ -3,40 +3,36 @@
 > **Active target — 18 September 2026.** The live problem is the sufficiently-large/eventual second-extremal D2C classification around `M(n)=floor((n-1)^2/4)+1`. The false all-order 2019 Dailly–Foucaud–Hansberg strengthening is not assumed. The published 2024 order-12, size-32 D2C graph is a mandatory hostile control. Murty–Simon / Erdős #742 is preserved but is not the live optimization target.
 
 <!-- CURRENT-STATUS:START -->
-**CHECKPOINT CLASS:** `FULL_TIGHT_CLOSED_ROOTED_WITNESS_SLOT_HAMMING_FRONTIER`.
+**CHECKPOINT CLASS:** `FULL_TIGHT_CLOSED_ROOTED_WITNESS_SLOT_LOCAL_HAMMING_FRONTIER`.
 
 **WORK MODE:** `EVENTUAL_D2C_MATH`.
 
 The full-tight Boolean branch remains internally closed for sufficiently large matched cores (`k>=19`). The mixed `{4,5}` selected-excess ladder is closed and is not a live branch. The active branch is the triangle-containing unmatched/errorful antipode regime.
 
-The current structural spine is now
+The live structural spine is now
 
-`rooted B-edge criticality -> exact unused witness-slot residual r -> saturation / hypercube stability -> A-edge Hamming energy -> forced non-direct A-edge demand -> pair-local matched/A-U capacity`.
-
-The important change at this checkpoint is conceptual: the residual variable `r` is no longer only an algebraic remainder. It exactly counts the unused `B--A` nonedge slots after one criticality witness slot is assigned injectively to every rooted triangle edge in `G[B]`.
+`rooted B-edge criticality -> exact unused witness-slot residual -> local A-coordinate Hamming budgets -> forced non-direct A-edge demand -> complementary-pair matched/A-U capacity -> residual threshold`.
 
 No global eventual second-extremal theorem is claimed.
 
 ## 1. Mandatory negative control
 
-`M(n)=floor((n-1)^2/4)+1` is only the eventual comparison threshold.
-
-The published Radosavljevic--Stanic--Zivkovic (2024) Figure-1 D2C graph has been reconstructed exactly and is isomorphic to the project's `X_3`:
+The published Radosavljevic--Stanic--Zivkovic (2024) Figure-1 graph is exactly the project's `X_3`:
 
 - `n=12`, `m=32>M(12)=31`;
-- diameter two and every edge critical;
 - rooted data `p=4,b=8,a=3,u=0,lambda=4`;
-- `q=s=f=r=0`, `Q=12`, `delta=0`, `E_U=0`, `L_A=12`, `D_M=1`.
-
-Its rooted form is a universal root over `Q_3`, together with three A-vertices whose B-neighbourhoods are the three coordinate-zero faces. At the canonical root it is now recognized as an **exact witness-slot saturation model**: there are exactly 12 `B--A` nonedges, exactly 12 rooted B-edges, and every nonedge slot is used once.
+- `q=s=f=r=0`, `Q=12`, `delta=0`, `E_U=0`, `L_A=12`, `D_M=1`;
+- `G[B]=Q_3`, with three A-vertices equal to the three coordinate-zero faces.
 
 Certification:
 
 `project/research/post_ms/2026-09-17-stronger-pivot-v1/PUBLISHED_12_VERTEX_EXCEPTION_FIGURE_CERTIFICATION.md`.
 
+The new witness-slot language identifies `X_3` as an **exact saturation model**: its 12 rooted B-edges consume all 12 B--A nonedge slots.
+
 ## 2. Rooted residual / triangle spine
 
-For a maximum-degree root `v`, write
+Around a maximum-degree root `v`, write
 
 `B=N(v)`, `A=V\N[v]`, `lambda=2b-n=b-a-1`.
 
@@ -80,305 +76,265 @@ Then
 >
 > `m<=M(n) iff delta>=D_M`.                               `(RT)`
 
-Rooted triangles remain an exact transfer variable:
+The exact rooted-transfer identities remain
 
 > `r+Q=L_A+2f`,                                           `(RQ1)`
 >
 > `delta+Q=L_A+f`,                                        `(RQ2)`
 >
-> `delta=E_U+Q-f-lambda(p+u)+p`.                          `(RQ3)`
-
-Rearranging gives the exact residual split
-
 > `f=(p-lambda)(p+u)+q+E_U-delta`.                        `(RSF)`
 
-Thus every above-`M(n)` candidate (`delta<=D_M-1`) satisfies
+Thus above `M(n)` (`delta<=D_M-1`),
 
 > `f>=F_0+q+E_U`,                                         `(RSF+)`
 
-where
+where `F_0=(p-lambda)(p+u)-D_M+1`.
 
-> `F_0=(p-lambda)(p+u)-D_M+1`.
-
-Above threshold,
-
-> `S<=C_0:=2(D_M-1)+lambda(p+u)-p`.                       `(C0)`
-
-## 3. New rooted witness-slot theorem
-
-Define the set of rooted witness slots
-
-> `Omega={(x,z) in B x A : xz notin E(G)}`.              `(WS0)`
-
-Since `sum_{z in A}d(z)=e(A,B)+2f`,
-
-> `|Omega|=ab-e(A,B)=L_A+2f=Q+r`.                        `(WS1)`
-
-Every edge `xy in E(G[B])` lies in the triangle `vxy`. Triangle-edge criticality therefore gives an orientation, say source `x`, head `y`, and a witness `z in A` with
-
-> `N(x) cap N(z)={y}`.                                    `(WS2)`
-
-The witness cannot lie in `B`, because `v` would be a second common neighbour. A fixed ordered pair `(x,z)` can certify only one head. Hence choosing one certificate per rooted B-edge gives an injection
-
-> `E(G[B]) -> Omega`.                                     `(WS3)`
-
-Let `W` be its image and `Upsilon=Omega\W`. Then
-
-> `|Upsilon|=r`.                                          `(WS4)`
-
-Consequently
-
-> `delta=|Upsilon|-f`.                                    `(WS5)`
-
-The second-extremal target is exactly
-
-> `|Upsilon|>=f+D_M`.                                     `(WS6)`
-
-Thus an above-`M(n)` survivor is precisely a graph in which rooted B-edge criticality leaves fewer than `f+D_M` unused B--A witness slots.
-
-Core theorem package:
-
-`project/research/post_ms/2026-09-18-rooted-witness-slot-saturation-v1/`.
-
-## 4. Exact saturation and the hypercube mechanism
-
-For `x in B`, define the rooted A-incidence code
-
-> `phi(x)=(1_{xz in E})_{z in A} in {0,1}^A`.             `(HC0)`
-
-If `r=0`, the slot injection is a bijection. Then:
-
-1. `A` is independent, so `f=0` and `delta=0`;
-2. every `B--A` nonedge slot has a unique common neighbour, lying in `B`;
-3. every edge `xy in G[B]` is separated by exactly one A-coordinate,
-   
-   > `d_H(phi(x),phi(y))=1`;                              `(HC1)`
-4. therefore `G[B]` is bipartite by the parity of `phi`;
-5. for every `z in A`, if `S_z=N_B(z)` and `C_z=B\S_z`, every `x in C_z` has exactly one B-neighbour in `S_z`.
-
-The proof that `A` is independent is itself informative. If an A-edge `yz` had different B-neighbourhoods, a saturated slot would already have an A common neighbour and could not be a rooted B-edge UCN slot. Hence `N_B(y)=N_B(z)`. But then criticality of `yz` has no possible B-witness, and an A-witness would share a B-neighbour with the source, again contradicting unique common neighbourhood.
-
-The published `X_3` graph is exactly the `a=3` saturated model with `phi(B)={0,1}^3`, `G[B]=Q_3`, and A the three coordinate-face vertices. This gives the finite exception a direct structural role in the eventual programme rather than treating it as unrelated small-order noise.
-
-## 5. Near-saturation collision identities
-
-For `(x,z) in Omega`, put
-
-> `c_B(x,z)=|N(x) cap N(z) cap B|`,
->
-> `c_A(x,z)=|N(x) cap N(z) cap A|`.                       `(COL0)`
-
-Used slots have `c_B=1` and `c_A=0`.
+## 3. Rooted witness slots: exact meaning of `r`
 
 Define
 
-> `H_B=sum_{xy in E(B)} |N_A(x) triangle N_A(y)|`,        `(HB0)`
+> `Omega={(x,z) in B x A : xz notin E(G)}`.              `(WS0)`
+
+Counting B--A nonedges gives
+
+> `|Omega|=L_A+2f=Q+r`.                                   `(WS1)`
+
+Every `xy in E(G[B])` lies in the triangle `vxy`. Triangle-edge criticality gives an orientation, say source `x`, head `y`, and `z in A` such that
+
+> `N(x) cap N(z)={y}`.                                    `(WS2)`
+
+The witness cannot lie in `B`, since `v` would be a second common neighbour. A fixed ordered pair `(x,z)` can certify only one head, so choosing one certificate per B-edge injects
+
+> `E(G[B]) -> Omega`.                                     `(WS3)`
+
+Let `Upsilon` be the unused slots. Then exactly
+
+> `|Upsilon|=r`,                                          `(WS4)`
 >
-> `H_A=sum_{yz in E(A)} |N_B(y) triangle N_B(z)|`.        `(HA0)`
+> `delta=|Upsilon|-f`.                                    `(WS5)`
+
+Therefore the second-extremal target is precisely
+
+> `|Upsilon|>=f+D_M`.                                     `(WS6)`
+
+Core package:
+
+`project/research/post_ms/2026-09-18-rooted-witness-slot-saturation-v1/`.
+
+## 4. Saturation theorem and `X_3`
+
+Define the rooted A-incidence code on B by
+
+> `phi(x)=(1_{xz in E})_{z in A} in {0,1}^A`.
+
+If `r=0`, then:
+
+- `A` is independent, hence `f=delta=0`;
+- every B--A nonedge slot is used by a rooted B-edge certificate;
+- every edge `xy in G[B]` satisfies `d_H(phi(x),phi(y))=1`;
+- `G[B]` is bipartite under parity of `phi`;
+- for each `z in A`, writing `S_z=N_B(z)`, every `x in B\S_z` has exactly one neighbour in `S_z` inside `B`.
+
+Thus exact residual saturation is a hypercube-type representation. `X_3` is the canonical small hostile model: `phi(B)={0,1}^3`, `G[B]=Q_3`, and A consists of the three coordinate faces.
+
+## 5. Near-saturation collision identities
+
+For an unused or used slot `(x,z)`, put
+
+`c_B(x,z)=|N(x) cap N(z) cap B|`,
+
+`c_A(x,z)=|N(x) cap N(z) cap A|`.
+
+Used slots have `c_B=1,c_A=0`.
+
+Define
+
+> `H_B=sum_{xy in E(B)} |N_A(x) triangle N_A(y)|`,
+>
+> `H_A=sum_{yz in E(A)} |N_B(y) triangle N_B(z)|`.
 
 Exact double counting gives
 
-> `H_B=Q+sum_{(x,z) in Upsilon} c_B(x,z)`,                `(HB1)`
+> `H_B=Q+sum_{Upsilon} c_B(x,z)`,                         `(HB)`
 >
-> `H_A=  sum_{(x,z) in Upsilon} c_A(x,z)`.                `(HA1)`
-
-Since an A-vertex has at most `p+u` B-neighbours in the live partial-Boolean branch,
-
-> `H_B-Q<=r(p+u)`.                                        `(HB2)`
-
-Thus small `r` makes the rooted B-edge representation quantitatively close, in total edge-Hamming mass, to the saturated `d_H=1` hypercube model.
-
-## 6. New A-edge Hamming-energy residual bound
-
-An A-vertex satisfies
-
-> `d_A(z)=p+u-epsilon_z-d_U(z)`.
+> `H_A=  sum_{Upsilon} c_A(x,z)`.                         `(HA)`
 
 Hence
 
-> `d_A(z)<=K_A:=min(p+u,a-1)`.                            `(KA)`
+> `H_B-Q<=r(p+u)`.                                        `(HB+)`
 
-Every unused slot contributes at most `K_A` to `(HA1)`, so
+Small `r` therefore forces the rooted B-edge representation toward the saturated `d_H=1` model.
 
-> `H_A<=rK_A`.                                             `(HA2)`
+## 6. Global and local A-edge Hamming budgets
 
-Let `c(z) in {0,1}^p` be the preserved tight-fibre Boolean code on A and define
+Let `c(z) in {0,1}^p` be the preserved tight-fibre Boolean code on A and put
 
-> `J_A=sum_{yz in E(A)} d_H(c(y),c(z))`.                  `(HAM1)`
+> `J_A=sum_{yz in E(A)} d_H(c(y),c(z))`.
 
-If an A-edge differs in `h` tight coordinates, its B-neighbourhoods differ in at least `2h` matched endpoints. Therefore
+Since `d_A(z)<=K_A:=min(p+u,a-1)`, the collision identity gives
 
-> `rK_A>=H_A>=2J_A`.                                      `(HAM2)`
+> `rK_A>=H_A>=2J_A`.                                      `(HAM)`
 
-Equivalently, for `K_A>0`,
+In particular, if `D` is direct A-edge traffic, direct endpoints have complementary tight codes and
 
-> `r>=ceil(2J_A/K_A)`.                                   `(HAM3)`
+> `2pD<=rK_A`.                                            `(DIR)`
 
-This prices every A-edge according to how far it moves in the tight Boolean cube before any witness-channel split is used.
+The stronger source-local form is now the preferred one. For `z in A`, let
 
-A direct A-edge has complementary tight codes and therefore Hamming distance `p`. If `D` denotes direct A-edge traffic,
+> `r_z=|{(x,z) in Upsilon}|`,                             `(L1)`
 
-> `rK_A>=2pD`,                                            `(DIR-R)`
->
-> `D<=K_A r/(2p)=K_A(f+delta)/(2p)`.                     `(DIR-C)`
+so `sum_z r_z=r`. Then the directed collision count is exact:
 
-This is independent of the preserved direct-fan surplus/stability theorems.
+> `sum_{y in N_A(z)} |N_B(y)\N_B(z)|`
+> ` =sum_{(x,z) in Upsilon} c_A(x,z)`.                   `(L2)`
 
-## 7. Forced non-direct A-edge demand
+Therefore
 
-Write the exact A-edge witness-channel decomposition
+> `sum_{y in N_A(z)} d_H(c(y),c(z))<=r_z d_A(z)`.        `(LH)`
+
+If `d_A(z)>0`, the average tight-code length of A-edges incident with `z` is at most `r_z`.
+
+For the direct fan at `z`,
+
+> `p d_D(z)<=r_z d_A(z)`.                                `(LDF)`
+
+So an `alpha` fraction of direct incident A-edges forces at least `alpha p` unused rooted witness slots **at the same A-coordinate**. This is the locality that the preceding global scalar envelopes were missing.
+
+Companion note:
+
+`project/research/post_ms/2026-09-18-rooted-witness-slot-saturation-v1/LOCAL_SLOT_HAMMING_BUDGET.md`.
+
+## 7. Forced non-direct demand
+
+With the exact channel decomposition
 
 > `f=D+P_B+C`,                                             `(CH)`
 
-where `P_B` is matched-B traffic and `C` is A/U UCN traffic.
+where `P_B` is matched-B traffic and `C` is A/U UCN traffic, `(DIR)` and `r=f+delta` give
 
-Using `(DIR-C)` gives
+> `P_B+C >= [((2p-K_A)f-K_A delta)/(2p)]_+`.             `(ND1)`
 
-> `P_B+C`
-> ` >= [((2p-K_A)f-K_A delta)/(2p)]_+`.                  `(ND1)`
-
-Now put
+Writing
 
 > `G=(p-lambda)(p+u)+q+E_U`,
 
-so `(RSF)` is `f=G-delta`. The delta terms collapse:
+so `f=G-delta`, gives the cleaner form
 
-> `P_B+C>=[(1-K_A/(2p))G-delta]_+`.                       `(ND2)`
+> `P_B+C >= [(1-K_A/(2p))G-delta]_+`.                    `(ND2)`
 
-Therefore every above-threshold survivor obeys
+Above `M(n)`,
 
 > `P_B+C`
 > ` >= [(1-K_A/(2p))((p-lambda)(p+u)+q+E_U)`
 > `      -(D_M-1)]_+`.                                    `(ND3)`
 
-This is the first bridge that uses residual geometry itself to remove a definite portion of the direct channel before the matched/A-U capacity is optimized.
+Thus whenever `K_A<2p`, a definite part of the rooted-transfer A-edge demand must enter the already self-priced non-direct witness channels rather than being hidden in direct/complementary edges.
 
-The preserved capacities include
+## 8. Preserved source/Hall and q/E stack
 
-> `P_B<=aR_A(L_A)`,                                       `(MB)`
->
-> `(lambda+1)C<=R_code(S)S`,                              `(AU)`
-
-and the stronger pair-resolved direct+A/U and fan packages remain available. A coarse global use of `(ND3)` with total `S` is still too weak; the gain should be retained into the pair allocation rather than collapsed immediately.
-
-## 8. Preserved source/Hall and q/E machinery
-
-For `x in A`, let `ell_x` be beta load and `k_x=p-ell_x`. The exact source-tuple hierarchy remains
+The exact source-tuple hierarchy remains
 
 > `sum_x binom(ell_x,r)/(p-ell_x+r)<=(1/r)binom(u,r)`     `(FDPr)`
 
-for every `r>=3`, with integrated deficit profile
+for every `r>=3`, with integrated deficit profile and beta-support floors. In particular the preserved machinery supplies:
 
-> `sum_{x in L}(p-ell_x)>=Phi_r(|L|)`.                    `(IST)`
+- lower bounds on total beta load `B_beta`;
+- the integrated beta-support floor `N_sup(B_beta)`;
+- resulting `E_U` floors;
+- the cross-edge q floor
+  
+  > `q>=ceil([u(lambda-p)-E_U]_+/2)`;
+- the beta-sensitive q ceiling
+  
+  > `q<=au-B_beta+N_1`,
+  
+  together with load-one compression.
 
-Put `B_beta=sum_x ell_x`. The main beta floors are
+These quantities should now feed the **local** residual/witness-slot allocation rather than be collapsed immediately to one scalar `S`.
 
-> `B_beta >= [pu-R_hat a]_+`,                             `(STL)`
->
-> `B_beta >= p(lambda+1-2p)_+`.                           `(RBF)`
+## 9. Preserved pair-local channel capacity
 
-Applying `(IST)` to all of `A` gives
+For Boolean code `c`, write `n_c=|A_c|`, `N_c=|(A union U)_c|`, `w_c=N_c+n_c`, and pair slack `S_P,L_P` on `P={c,bar c}`.
 
-> `B_beta<=ap-Phi_r(a)`.                                  `(ITB)`
+Aligned-code self-pricing gives the preserved radius
 
-The positive-support theorem gives the preserved `E_U` floor. The independent q coupling remains
+> `R_code(s)=max(0,floor((D_0+sqrt(D_0^2+12s))/3))`,
 
-> `q>=ceil([u(lambda-p)-E_U]_+/2)`,                       `(QL)`
+where `D_0=5p+5u-3lambda-2`.
 
-and the beta-sensitive q upper bound with load-one compression remains
+Direct plus A/U traffic on a complementary pair satisfies
 
-> `q<=au-B_beta+N_1`,                                     `(BQ)`
+> `2(lambda+1)(D_P+C_P)`
+> ` <=R_code(S_P)(2L_P+S_P)`.                            `(CCP)`
 
-with
+Matched-B traffic self-prices through
 
-> `N_1<=floor((m_0a-B_beta)/(m_0-1))`,                    `(N1)`
+> `P_B<=aR_A(L_A)`,
 
-for `m_0=min(p,u)>=2`.
+with `R_A(L)=max(2,floor((1+sqrt(1+4L))/2))`, and the preserved fibre-polarization/complement-pair theorems give finer local information.
 
-These should feed actual `q,E_U,L_A` values into `(ND3)` rather than be globalized prematurely.
+The previous one-dimensional global collapse, replacing pair slack by total `S`, was explicitly tested and gave no generic new closures. Do not return to that scalar optimization as the main line.
 
-## 9. Preserved complete channel / local stability stack
+## 10. C5 reassessment
 
-For Boolean code `c`, write
+Lin and Wang (Discrete Applied Mathematics 375 (2025), 332--337, DOI `10.1016/j.dam.2025.06.025`) prove that sufficiently-large C5-free D2C graphs at or above `M(n)` are complete bipartite.
 
-`n_c=|A_c|`, `N_c=|(A union U)_c|`,
+This is an external consistency boundary, but it is **not extra leverage in the live partial-Boolean triangle branch**. If `p>=2` and `Q>0`, choose a rooted B-edge certificate
 
-`w_c=N_c+n_c=2n_c+t_c`,
+> `N(x) cap N(z)={y}`, with `z in A`.
 
-and let `S_c,L_c` be the corresponding total/A-slack.
+Every A-vertex has at least one B-neighbour in each tight pair, so `d_B(z)>=p>=2`. Choose `w in N_B(z)\{y}`. Since `xz` is a nonedge, the five distinct vertices
 
-Aligned-code self-pricing remains
+> `v-x-y-z-w-v`
 
-> `S_c >= [(w_c/2)(3w_c/2-D_0)]_+`,                      `(AC1)`
+form a `C5`.
 
-where
+Therefore
 
-> `D_0=5p+5u-3lambda-2`.
+> `p>=2` and `Q>0` imply `C5 subseteq G`.                 `(C5)`
 
-Define
+So the current branch already contains a C5 for a local reason; trying to exploit the Lin--Wang theorem would not advance it.
 
-> `R_code(s)=max(0,floor((D_0+sqrt(D_0^2+12s))/3))`.      `(RC)`
+Correction note:
 
-For a complementary pair `Pi`, direct and A/U traffic share the local capacity
-
-> `2(lambda+1)(D_Pi+C_Pi)`
-> ` <=R_code(S_Pi)(2L_Pi+S_Pi)`.                         `(CCP)`
-
-The matched-B channel self-prices via
-
-> `P_B<=aR_A(L_A)`,                                       `(MSP)`
-
-with
-
-> `R_A(L)=max(2,floor((1+sqrt(1+4L))/2))`.
-
-The newer aligned matched-B cap and direct bounded-surplus fan theorem remain preserved, but the previous scalar collapse replacing pair slack by total `S` was diagnostically too weak. The live use of these results should therefore remain complementary-pair or source-local.
-
-## 10. External eventual reduction: C5 is mandatory
-
-Qiao Lin and Xiaolin Wang, *Discrete Applied Mathematics* 375 (2025), 332--337, DOI `10.1016/j.dam.2025.06.025`, prove that for sufficiently large `n`, every **C5-free** diameter-2-critical graph with at least
-
-`floor((n-1)^2/4)+1`
-
-edges is complete bipartite.
-
-Therefore any sufficiently-large non-bipartite survivor at or above the live threshold must contain a `C5`. The live branch is already triangle-containing, so any eventual counterexample to the desired classification must contain **both a triangle and a C5**.
-
-This is now a useful boundary condition for the near-saturation regime: the exact `r=0` model is hypercube-like/bipartite on `B`, while any eventual non-bipartite survivor must also realize a C5 somewhere in the full graph.
+`project/research/post_ms/2026-09-18-rooted-witness-slot-saturation-v1/C5_REASSESSMENT.md`.
 
 ## 11. Audit
 
-New package:
+The new package contains finite audit support only; the promoted statements are hand arguments.
 
-`project/research/post_ms/2026-09-18-rooted-witness-slot-saturation-v1/`.
-
-The companion checker audits the rooted witness-slot identities on every graph-atlas D2C isomorphism class through order seven and every maximum-degree root, and separately reconstructs `X_3`:
+Main witness-slot audit:
 
 - 21 D2C graph-atlas classes through order seven;
 - 50 maximum-degree roots;
 - 14 rooted B-edges checked for A-witness certificates;
 - 91 B--A nonedge slots;
 - 77 unused slots;
-- 27 saturated (`r=0`) roots;
-- zero failures of the exact collision identities or saturation consequences;
+- 27 saturated roots;
+- zero failures of `(HB)`, `(HA)`, saturation consequences, or the `X_3` reconstruction;
 - `X_3`: `Q=12`, `|Omega|=12`, `r=0`, `H_B=12`, `H_A=0`.
 
-These finite checks are audit support only. The promoted claims above are hand arguments.
+The local identity `(L2)` was independently checked on 87 A-coordinate/root instances across the same 21 D2C atlas classes, including 37 coordinates with `r_z=0`; failures: 0.
+
+Files:
+
+`project/research/post_ms/2026-09-18-rooted-witness-slot-saturation-v1/check_rooted_witness_slot_saturation.py`,
+
+`project/research/post_ms/2026-09-18-rooted-witness-slot-saturation-v1/ROOTED_WITNESS_SLOT_AUDIT_SUMMARY.json`,
+
+`project/research/post_ms/2026-09-18-rooted-witness-slot-saturation-v1/LOCAL_SLOT_HAMMING_AUDIT_SUMMARY.json`.
 
 ## 12. Live frontier
 
-The strongest next move should keep the new residual geometry local rather than return to a global scalar envelope.
+The next highest-value move is to retain **both** local coordinates:
 
-Priority order:
+1. `r_z`, which prices the Hamming/direct share of A-edges incident with source `z`;
+2. complementary tight-code pair slack, which prices the matched-B and A/U witness channels.
 
-1. combine the forced non-direct demand `(ND3)` with the **complementary-pair** A/U and matched-B capacities before summing pair slack;
-2. exploit `(HB1)/(HB2)` and the Lin--Wang C5 requirement to understand how a C5 can coexist with a near-saturated hypercube-like rooted core;
-3. use the preserved source/Hall beta-support stack to constrain `q,E_U` in the same local allocation.
+The aim is a source-to-pair transport inequality: after `(LDF)` removes the locally affordable direct traffic, route the remaining incident A-edge demand to its matched/A-U complementary pair and charge that pair before summing over sources. This would directly attack the information loss identified by the failed scalar synthesis.
 
-The new key dichotomy is:
+A secondary line is to classify near-saturated `phi(B)` representations using `(HB+)`, with `X_3` retained as the exact hostile equality model.
 
-- if `r` is small, rooted B-edge criticality is close to exact hypercube saturation and A-edge tight-code Hamming energy is small;
-- if A-edge Hamming/direct mass is large, `(HAM2)` converts it into unused slots and hence residual defect, forcing more of the required A-edge mass into the already self-priced non-direct witness channels.
-
-Do not return to the closed mixed `{4,5}` selected-excess ladder, and do not optimize for first-proof priority on Erdős #742.
+Do not return to the closed mixed `{4,5}` ladder, and do not optimize for first-proof priority on Erdős #742.
 <!-- CURRENT-STATUS:END -->
