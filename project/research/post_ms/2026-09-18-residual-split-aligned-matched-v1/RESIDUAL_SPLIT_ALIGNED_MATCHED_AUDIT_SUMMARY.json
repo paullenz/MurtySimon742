@@ -1,0 +1,17 @@
+{
+  "aligned_matched_cap": 200000,
+  "algebra_checks_total": 850000,
+  "cross_edge_q_floor": 200000,
+  "diagnostic_beta_impossible": 10298,
+  "diagnostic_min_capacity_ratio": 0.8181818181818182,
+  "diagnostic_new_scalar_closures": 0,
+  "diagnostic_old_scalar_closures": 0,
+  "diagnostic_parameter_tuples": 56238,
+  "diagnostic_positive_F0": 21739,
+  "diagnostic_positive_F0_matched_improvements": 0,
+  "diagnostic_remaining": 45940,
+  "failures": 0,
+  "load_one_compression": 150000,
+  "residual_split_identity": 200000,
+  "split_cap_monotonicity": 100000
+}
