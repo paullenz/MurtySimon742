@@ -1,0 +1,9 @@
+{
+  "d2c_isomorphism_classes_through_order_7": 21,
+  "edge_checks": 156,
+  "direct_edges": 127,
+  "non_direct_externally_certified_edges": 29,
+  "total_witness_orientations": 47,
+  "failures": 0,
+  "scope": "audit support for the generic D2C critical-edge trichotomy only; not a proof of the near-full Boolean code lemmas"
+}
