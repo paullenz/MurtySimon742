@@ -1,0 +1,11 @@
+{
+  "alpha_overflow_random_exact": 200000,
+  "beta_floor_exact": 127378,
+  "common_foot_algebra": 100000,
+  "enhanced_fibre_exact": 35000,
+  "failures": 0,
+  "same_code_clique_tournaments": 33866,
+  "total_checks": 496388,
+  "triple_profile_antiderivative_exact": 144,
+  "status": "audit_support_only_hand_proofs_primary"
+}
