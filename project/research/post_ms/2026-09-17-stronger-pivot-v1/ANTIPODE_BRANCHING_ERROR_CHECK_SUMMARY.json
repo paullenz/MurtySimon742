@@ -1,0 +1,20 @@
+{
+  "scope": "NetworkX graph atlas, all D2C isomorphism classes through order 7, every root",
+  "d2c_graphs": 21,
+  "d2c_by_order": {
+    "3": 1,
+    "4": 2,
+    "5": 3,
+    "6": 5,
+    "7": 10
+  },
+  "roots_tested": 126,
+  "roots_with_antipode": 43,
+  "antipode_edges_over_roots": 106,
+  "antipode_centres": 125,
+  "branching_centres": 50,
+  "maximum_antipode_degree": 5,
+  "minimum_local_integer_margin": 0,
+  "local_violations": [],
+  "global_violations": []
+}
