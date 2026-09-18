@@ -3,390 +3,274 @@
 > **Active target — 18 September 2026.** The live problem is the sufficiently-large/eventual second-extremal D2C classification around `M(n)=floor((n-1)^2/4)+1`. The false all-order 2019 Dailly–Foucaud–Hansberg strengthening is not assumed. The published 2024 order-12, size-32 D2C graph is a mandatory hostile control. Murty–Simon / Erdős #742 work remains preserved but is not the live optimization target.
 
 <!-- CURRENT-STATUS:START -->
-**CHECKPOINT CLASS:** `FULL_TIGHT_CLOSED_NEAR_FULL_BOOLEAN_FAN_ROW_CAPACITY_FRONTIER_INTERNAL_CANDIDATES`.
+**CHECKPOINT CLASS:** `FULL_TIGHT_CLOSED_NEAR_FULL_BOOLEAN_FAN_ROW_AND_CLIQUE_CAPACITY_FRONTIER_INTERNAL_CANDIDATES`.
 
-**WORK MODE:** `EVENTUAL_D2C_MATH`. The full-tight Boolean branch remains internally closed for sufficiently large matched cores (`k>=19` in the preserved theorem). The active work is the unmatched/errorful antipode branch. The current highest-value interface is now explicit: total maximum-degree slack is exactly the extremal defect, U-antipode branching is more expensive once the partial Boolean fibres are used, and saturation of that stronger error bound forces a rigid complementary-code/private-hole configuration that can be fed into row/Hall capacity.
+**WORK MODE:** `EVENTUAL_D2C_MATH`. The full-tight Boolean branch remains internally closed for sufficiently large matched cores (`k>=19` in the preserved theorem). The active work is the unmatched/errorful antipode branch. The live objective is now to turn the strengthened U-antipode/row structure into A-side maximum-degree slack and hence into the exact second-extremal defect.
 
-## 1. Scope and mandatory negative control
+## 1. Scope and hostile control
 
-The comparison threshold is
+`M(n)=floor((n-1)^2/4)+1` is a comparison threshold, not an assumed all-order theorem.
 
-`M(n)=floor((n-1)^2/4)+1`.
-
-No all-order theorem is assumed. The Radosavljevic--Stanic--Zivkovic (2024) order-12 graph has been reconstructed directly from Figure 1 and exactly checked:
+The published Radosavljevic--Stanic--Zivkovic (2024) graph has been reconstructed from Figure 1 and checked exactly:
 
 - `n=12`, `m=32>M(12)=31`;
 - diameter 2 and every edge critical;
 - isomorphic to the project's `X_3`;
 - full-tight data `k=4,b=8,a=3,r=0,F=empty`.
 
-Files:
+See `PUBLISHED_12_VERTEX_EXCEPTION_FIGURE_CERTIFICATION.md` and its checker/summary. All eventual statements below leave this control untouched.
 
-- `PUBLISHED_12_VERTEX_EXCEPTION_FIGURE_CERTIFICATION.md`;
-- `check_published_12_vertex_exception_figure.py`;
-- `PUBLISHED_12_VERTEX_EXCEPTION_FIGURE_CHECK_SUMMARY.json`.
-
-Every eventual statement below leaves this control untouched.
-
-## 2. Preserved root/stability entry point
+## 2. Preserved root and defect framework
 
 For a maximum-degree root `v`, write
 
 `B=N(v)`, `b=|B|`, `A=V\N[v]`, `a=|A|`, `lambda=2b-n=b-a-1`,
 
-`Q=e(G[B])`, `F=G[A]`, and
+`Q=e(G[B])`, `F=G[A]`, `delta=b(n-b)-m=r-e(F)`.
 
-`delta=b(n-b)-m=r-e(F)`.
-
-For an antipode `uw` at `v`,
+For a rooted antipode `uw`,
 
 `uw notin E(G)`, `N(u) cap N(w)={v}`,
 
 and
 
-`epsilon_u+epsilon_w=lambda+1+eta(uw)`,                        `(AS)`
+`epsilon_u+epsilon_w=lambda+1+eta(uw)`,                         `(AS)`
 
-where `epsilon_x=b-d(x)` and `eta(uw)` counts vertices outside `{u,w,v}` adjacent to neither endpoint.
+where `epsilon_x=b-d(x)` and `eta(uw)` counts vertices outside `{u,w,v}` adjacent to neither endpoint. Tight antipodes have `eta=0` and form a matching.
 
-Tight antipodes have `eta=0` and form a matching. For every antipode matching `M`,
+For `n>=14`, the all-private edge-witness pricing theorem excludes the all-private branch above `M(n)` whenever a maximum-degree root lies in a triangle. `MAX_TRIANGLE_OR_TWIN_REDUCTION.md` remains the scope repair for a maximum root with `Q=0`; the false-twin-core branch is still open.
 
-`b lambda+r-Q >= |M|(lambda+1)+sum_{e in M} eta(e)`.             `(AMC)`
+## 3. Full-tight branch remains closed internally
 
-For `n>=14`, the all-private edge-witness pricing theorem excludes the all-private branch above `M(n)` whenever a maximum-degree root lies in a triangle. The separate `MAX_TRIANGLE_OR_TWIN_REDUCTION.md` remains the scope repair when a maximum root has `Q=0`; the resulting false-twin core branch is not yet closed.
-
-## 3. Full-tight branch is preserved and closed internally
-
-If tight antipodes cover all of `B`, write
-
-`B=P_1 dotcup ... dotcup P_k`, `|P_i|=2`, `b=2k`.
-
-Then `G[B]` is a 2-lift of `K_k`, every A-vertex is a Boolean transversal,
-
-`Q=k(k-1)`, `r=k(a-k+1)`,
-
-and the realised A-code support covers the full-tight orientation graph. The fixed switching-defect hierarchy has been internally exhausted for `k>=19`; see
-
-`FULL_TIGHT_SWITCHING_BRANCH_EVENTUAL_CLOSURE.md`.
+If tight antipodes cover all of `B`, write `B=P_1 dotcup ... dotcup P_k`, `|P_i|=2`. Then `G[B]` is a 2-lift of `K_k`, every A-vertex is a Boolean transversal, and the realised A-code support covers the full-tight orientation graph. The complete fixed switching-defect hierarchy is internally closed for `k>=19`; see `FULL_TIGHT_SWITCHING_BRANCH_EVENTUAL_CLOSURE.md`.
 
 Do not reopen the fixed-defect ladder as the main attack.
 
 ## 4. Near-full partial Boolean normal form
 
-Let the complete tight-antipode matching have `p` pairs
+Let the complete tight matching have `p` pairs `P_i={u_i,w_i}`, let `P` be their union, and put `U=B\P`, `u=|U|`, so `b=2p+u`.
 
-`P_i={u_i,w_i}`,
+Write `q=e(G[U])`, `s=e_G(A,U)`, `f=e(G[A])`. Every vertex of `A union U` chooses exactly one endpoint from every tight pair, giving a partial Boolean code in `{0,1}^p`.
 
-put `P=union_i P_i`, and let `U=B\P`, `u=|U|`. Then
+Exact identities:
 
-`b=2p+u`.
+`Q=p(p+u-1)+q`,                                                `(NF1)`
 
-Write
+`r=(p+u)(a-p)+p-s-q`,                                         `(NF2)`
 
-`q=e(G[U])`, `s=e_G(A,U)`, `f=e(G[A])`.
+`delta=(p+u)(a-p)+p-s-q-f`,                                   `(NF3)`
 
-Every vertex of `A union U` chooses exactly one endpoint from every tight pair, so it has a partial Boolean code in `{0,1}^p`. Exact identities are
+`E_U:=sum_{y in U}epsilon_y=u(p+u-1)-2q-s`,                    `(NF4)`
 
-`Q=p(p+u-1)+q`,                                               `(NF1)`
+`L_A:=sum_{x in A}epsilon_x=a(p+u)-s-2f`.                      `(NF5)`
 
-`r=(p+u)(a-p)+p-s-q`,                                        `(NF2)`
+If `p>=2`, private A-feet for B-root edges are impossible, so every `y in U` has an errorful antipode. U--U antipodes have complementary partial codes. If `y in U` is antipodal to a matched endpoint `q` with tight mate `q'`, then `c(y)=alpha(q)` and
 
-`delta=(p+u)(a-p)+p-s-q-f`,                                  `(NF3)`
+`eta(yq)=epsilon_y-epsilon_q'`.
 
-`E_U:=sum_{y in U}epsilon_y=u(p+u-1)-2q-s`,                   `(NF4)`
+Main file: `NEAR_FULL_TIGHT_MATCHING_NORMAL_FORM.md`.
 
-`L_A:=sum_{x in A}epsilon_x=a(p+u)-s-2f`.                     `(NF5)`
+## 5. Exact global slack criterion
 
-If `p>=2`, every B-vertex is triangle-active and every A-vertex has at least two B-neighbours from the tight fibres, so the private-foot alternative disappears. Every unmatched `y in U` therefore has an errorful antipode.
+Let `T=sum_z epsilon_z`. Then for any graph at a maximum-degree root
 
-Partial-code antipode restrictions:
+`T=nb-2m`,
 
-- U--U antipodes have complementary codes;
-- if `y in U` is antipodal to matched endpoint `q`, then `c(y)=alpha(q)`;
-- if `q'` is the tight mate of `q`, then
-
-  `eta(yq)=epsilon_y-epsilon_q'`.
-
-Files: `NEAR_FULL_TIGHT_MATCHING_NORMAL_FORM.md` and predecessor notes.
-
-## 5. Exact global slack criterion: the actual extremal target
-
-For any graph rooted at a maximum-degree vertex, let
-
-`T=sum_{z in V} epsilon_z`.
-
-Then
-
-`T=nb-2m`
-
-and
-
-> `2 delta=T-b lambda`.                                        `(GS1)`
+`2 delta=T-b lambda`.                                          `(GS1)`
 
 Moreover
 
-> `m<=M(n)` iff `T>=floor(n(lambda+2)/2)-2`.                    `(GS2)`
+> `m<=M(n)` iff `T>=floor(n(lambda+2)/2)-2`.                     `(GS2)`
 
-Thus
+Hence
 
-> `m>M(n) ==> T<=floor(n(lambda+2)/2)-4`.                       `(GS3)`
+> `m>M(n) ==> T<=floor(n(lambda+2)/2)-4`.                        `(GS3)`
 
-In the near-full decomposition, each tight pair contributes `lambda+1`, so
+In near-full form,
 
-`T=p(lambda+1)+E_U+L_A`,                                      `(GS4)`
+`T=p(lambda+1)+E_U+L_A`,                                       `(GS4)`
 
-and equivalently
+`2 delta=E_U+L_A+p-lambda(p+u)`.                               `(GS5)`
 
-> `2 delta=E_U+L_A+p-lambda(p+u)`.                             `(GS5)`
+At `lambda=-1`, the threshold is `E_U+L_A>=2p+u-2`; an above-threshold graph has `E_U+L_A<=2p+u-4`. At `lambda=0`, the threshold is `E_U+L_A>=3p+2u-2`.
 
-Important special cases:
-
-- `lambda=-1`: threshold requires `E_U+L_A>=2p+u-2`; above threshold gives `E_U+L_A<=2p+u-4`.
-- `lambda=0`: threshold requires `E_U+L_A>=3p+2u-2`; above threshold is two units below this.
-
-This corrects the strategic focus: row/Hall support is useful only insofar as it ultimately forces **combined U- plus A-side slack**, or an equivalent defect payment.
+This is the correct scorecard: support arguments matter only if they ultimately force `E_U+L_A` or equivalent defect payment.
 
 File: `GLOBAL_SLACK_DEFECT_CRITERION.md`.
 
-## 6. Row-singleton and capacity structure already preserved
+## 6. Preserved unmatched-row/Hall structure
 
-For `y in U`, let `q_i` be the endpoint chosen from `P_i`, let `K_y` be the graph on `[p]` in which `ij` is an edge iff `q_iq_j` is an edge, and put `L_y=bar K_y`.
+For `y in U`, let `q_i` be its chosen endpoint in `P_i`, let `K_y` be the graph on `[p]` induced by adjacency among the `q_i`, and put `L_y=bar K_y`.
 
 After translation by `bar c(y)`, the P--U witness constraints are
 
-`{A_i,{i}}`, where `A_i=N_{L_y}(i)`.                            `(ROW)`
+`{A_i,{i}}`, with `A_i=N_{L_y}(i)`.                             `(ROW)`
 
-The preserved exact results include:
+Preserved exact results from `UNMATCHED_ROW_KERNEL_CAPACITY_STABILITY.md`:
 
-1. `tau(Psi(K))=1` iff `K=K_p` or `K=K_{p-1} dotcup K_1`.
-2. `tau(Psi(K))<=2` iff `L=bar K` is complete bipartite, a star plus isolates, or a two-centre graph whose other vertices are leaves of exactly one centre (centre edge optional).
-3. If a row cover has size at most `t`, deleting at most `t` exceptional coordinates leaves at most `t` true-twin cliques (finite row-kernel theorem).
-4. Exact row translation:
+- `tau(Psi(K))=1` iff `K=K_p` or `K=K_{p-1} dotcup K_1`;
+- complete classification of all `tau<=2` rows;
+- fixed row cover implies a finite true-twin kernel;
+- `alpha(q_i) Delta bar c(y)=N_{L_y}(i)` and `beta_i(y) Delta bar c(y)={i}`;
+- matched-antipode eligibility is exactly isolation in `L_y`;
+- per-source Hall capacity gives `B_beta>=pu-W_alpha` and `s>=pu-W_alpha`;
+- alpha-code preimage multiplicity is the switching true-twin multiplicity of the matched 2-lift;
+- complementary beta pools are disjoint for `p>=3`.
 
-   `alpha(q_i) Delta bar c(y)=N_{L_y}(i)`,
+## 7. New Boolean antipode-fan payment
 
-   `beta_i(y) Delta bar c(y)={i}`.
+Let `J_U` be the U--U antipode graph. Fix `z in U`, let `Y=N_{J_U}(z)`, `d=|Y|`. All partners in `Y` have code `bar c(z)` and therefore share matched P-neighbours.
 
-5. Matched-antipode eligibility:
+Pricing every edge of `G[Y]` through D2C criticality gives
 
-   `c(y)=alpha(q_i') iff i is universal in K_y iff i is isolated in L_y`.
-
-6. Per-source Hall capacity gives
-
-   `B_beta>=pu-W_alpha`, `s>=pu-W_alpha`,
-
-   where `W_alpha=sum_{q in P} n_{alpha(q)}`.
-
-7. Alpha-code preimage multiplicity is exactly the largest true-twin clique appearing in a switching state of the matched 2-lift.
-8. Beta pools are radius-one Hamming spheres; complementary row classes have disjoint beta pools for `p>=3`.
-
-Main file: `UNMATCHED_ROW_KERNEL_CAPACITY_STABILITY.md` with independent finite regression.
-
-## 7. Predecessor unmatched slack floor and why it was not enough
-
-The general antipode branching theorem gave
-
-`3 sum_{y in N_J(z)} eta(yz) >= d_J(z)(d_J(z)-1)`,               `(ABE)`
-
-and led to the coarse unmatched floors
-
-- `E_U>=ceil(u/5)` at `lambda=-1`;
-- roughly `E_U>=ceil(u/3)` at `lambda>=0`.
-
-The abstract unit-error `K_{1,4}` star saturates ABE, so ABE alone could not improve those constants. This was preserved as a genuine methodological obstruction.
-
-The new work below removes that obstruction **inside the partial-Boolean near-full branch**.
-
-## 8. NEW: Boolean antipode-fan payment
-
-Assume `p>=1`. Fix an unmatched hub `z in U` and let
-
-`Y=N_{J_U}(z)`, `d=|Y|`,
-
-where `J_U` is the U--U antipode graph.
-
-All members of `Y` have the same partial Boolean code `bar c(z)`, so any two share a matched P-neighbour. For each `y in Y`, let `H_y` be the `eta(yz)` vertices adjacent to neither `y` nor `z`.
-
-If `yy'` is an edge of `G[Y]`, it cannot certify its own criticality because `y,y'` already share a P-neighbour. D2C criticality therefore supplies an external arm in `H_{y'}\Y` (or symmetrically), and the target/hole charge is injective. Counting internal holes and edge charges gives
-
-> **BOOLEAN ANTIPODE-FAN PAYMENT**
->
-> `sum_{y in Y} eta(yz)`
->
-> ` >= binom(d,2)+bar e(G[Y])`.                                  `(BAF)`
+> `sum_{y in Y} eta(yz) >= binom(d,2)+bar e(G[Y])`.               `(BAF)`
 
 In particular
 
-`2 sum_y eta(yz) >= d(d-1)`.                                   `(BAF0)`
+`2 sum_y eta(yz)>=d(d-1)`.                                     `(BAF0)`
 
-Globally over `J_U`,
+Globally,
 
-> `4 sum_{e in E(J_U)}eta(e)`
->
-> ` >= sum_z d(z)(d(z)-1)+2 sum_z bar e(G[N_{J_U}(z)])`.         `(BAF-global)`
+`4 sum_{e in E(J_U)}eta(e)`
 
-This improves the old ABE coefficient from 6 to 4 on U--U antipodes and adds an explicit neighbourhood-nonedge penalty.
+` >= sum_z d(z)(d(z)-1)+2 sum_z bar e(G[N_{J_U}(z)])`.           `(BAF-global)`
+
+This improves the old general branching coefficient from 6 to 4 on the U--U antipode graph and removes the abstract unit-error `K_{1,4}` obstruction from the partial-Boolean branch.
 
 File: `BOOLEAN_ANTIPODE_FAN_PAYMENT.md`.
 
-Independent atlas regression:
+Independent graph-atlas regression through order seven: 21 D2C classes, 50 maximum-degree roots, 9 roots with a tight pair, 3 U-antipode fan centres, one branching fan, zero fibre or BAF violations, minimum margin 0. See `check_boolean_antipode_fan_payment.py` and `BOOLEAN_ANTIPODE_FAN_PAYMENT_CHECK_SUMMARY.json`.
 
-- all 21 D2C classes through order 7;
-- 50 maximum-degree roots;
-- 9 roots with at least one tight pair;
-- 3 unmatched antipode fan centres, including one branching fan;
-- zero fibre/complement violations;
-- zero BAF violations;
-- minimum integer margin 0.
+## 8. Improved unmatched slack floors
 
-Files:
+Let `Z={y in U:epsilon_y=0}`. A zero-slack unmatched vertex cannot have a matched antipode, so assign it to a U-hub `z`. If `d_z` zero-slack partners are assigned to `z`, then
 
-- `check_boolean_antipode_fan_payment.py`;
-- `BOOLEAN_ANTIPODE_FAN_PAYMENT_CHECK_SUMMARY.json`.
+`eta_z=epsilon_z-lambda-1>=1`
 
-Finite replay is support only; the hand charge proof is the theorem basis.
+and BAF gives
 
-## 9. NEW: improved unmatched slack floors
+> `d_z<=2eta_z+1=2(epsilon_z-lambda-1)+1`.                       `(HC)`
 
-Let
+Consequently:
 
-`Z={y in U:epsilon_y=0}`.
+- `lambda=-1`: `E_U>=ceil(u/4)`;
+- `lambda>=0`, zeros present: `E_U>=ceil(u/2)+lambda`;
+- universally for `lambda>=0`: `E_U>=min(u,ceil(u/2)+lambda)`.
 
-A zero-slack unmatched vertex cannot have a matched antipode, so assign each `y in Z` to a U-antipode hub `z`. If a hub receives `d_z` zero-slack partners, then all their errors equal
+In particular at `lambda=0`, `E_U>=ceil(u/2)` rather than the previous `ceil(u/3)`.
 
-`eta_z=epsilon_z-lambda-1>=1`.
+At `lambda=-1`, any above-`M(n)` candidate must therefore have at least
 
-BAF gives
+`4+ceil(u/4)`
 
-> `d_z<=2 eta_z+1=2(epsilon_z-lambda-1)+1`.                       `(HC)`
+maximum-degree vertices in `A`.
 
-This replaces the old coefficient 3.
+## 9. Saturation is rigid: clique partners and private holes
 
-Consequences in the dense comparison regime (`lambda>=-1`):
+If one fan saturates `(HC)`, with `d=2eta+1`, equality in BAF forces:
 
-- if `lambda=-1`,
+- `G[Y]=K_d`;
+- the partner-edge charges form a regular tournament;
+- used holes are external and have hub code `c(z)`.
 
-  > `E_U>=ceil(u/4)`;                                             `(UF-1)`
-
-- if `lambda>=0` and no unmatched vertex has zero slack, `E_U>=u`;
-- if `lambda>=0` and zero-slack unmatched vertices exist,
-
-  > `E_U>=ceil(u/2)+lambda`;                                      `(UF0+)`
-
-hence universally for `lambda>=0`,
-
-> `E_U>=min(u,ceil(u/2)+lambda)`.                                 `(UF)`
-
-In particular at `lambda=0`, `E_U>=ceil(u/2)`, improving the old `ceil(u/3)` floor.
-
-At `lambda=-1`, combining `(UF-1)` with the exact above-threshold slack budget forces at least
-
-> `4+ceil(u/4)`
-
-maximum-degree vertices in `A` in any putative above-`M(n)` graph. This is a new interface with A-side/maximum-triangle-root structure.
-
-## 10. NEW: saturation is rigid — regular tournament plus private holes
-
-If one hub saturates `(HC)`, say
-
-`d=2 eta+1`,
-
-then equality in BAF forces:
-
-1. the partner set `Y` is a clique;
-2. the criticality charges orient `K_d` as a regular tournament;
-3. all holes used by those charges are external to `Y` and have hub code `c(z)`.
-
-A further edge-criticality argument shows that a hole witnessing an oriented edge from source `x` has
+A hole certifying an edge from source `x in Y` satisfies
 
 `N(h) cap Y={x}`.
 
-Different sources therefore require distinct private holes. Hence a saturated fan forces at least `d` distinct vertices outside `Y union {z}` of code `c(z)`, one private to each source in `Y`.
+Different sources therefore need distinct holes. Hence at least `d` distinct external hub-code vertices are forced, one private to each source. The two complementary code classes contain at least `2d+1` vertices in `A union U`, and
 
-Thus the two complementary code classes already contain at least `2d+1` vertices in `A union U`. If U is too small to host the private holes, then
+> `n_{c(z)}>=max(0,2d+1-u)`                                      `(PH-A)`
 
-> `n_{c(z)} >= max(0,2d+1-u)`                                   `(PH-A)`
+when U is too small to host all holes.
 
-for A-code multiplicity.
-
-For the cheapest `eta=1,d=3` fan, the three partners form a triangle and at least three distinct hub-code private holes are forced. If `u=4`, all three holes lie in A and `n_{c(z)}>=3`.
+The cheapest saturated fan (`eta=1,d=3`) is therefore a triangle of three partners plus three distinct hub-code private holes, not an abstract `K_{1,4}` error star.
 
 File: `SATURATED_BOOLEAN_FAN_PRIVATE_HOLES.md`.
 
-This replaces the old abstract `K_{1,4}` obstruction by a much more rigid possible equality object: at `lambda=-1`, the cheapest local obstruction is a slack-one hub with three zero-slack partners forming a triangle, together with a private-hole system in the complementary code class.
+## 10. Fan-to-row Hall dichotomy
 
-## 11. NEW: exact fan-to-row Hall dichotomy
-
-For a fan partner row with common code `c=bar c(z)`, put
-
-`A_i=N_L(i)` and
+For the common partner row put `A_i=N_L(i)`,
 
 `m(C)=|{i:A_i=C}|`, `D=max_C m(C)`.
 
-The exact row identity gives
+Because
 
-`alpha(q_i)=c(z) Delta A_i`.                                   `(FR1)`
+`alpha(q_i)=c(z) Delta A_i`,                                    `(FR1)`
 
-Therefore `D` is simultaneously the largest repeated alpha code among the selected matched sources and a true-twin clique size in the row graph `K`. In particular the matched-core projective-twin parameter satisfies
+`D` is both the largest repeated alpha code among the selected matched sources and a true-twin clique size in the row graph; the matched-core projective-twin parameter satisfies `mu_alpha>=D`.
 
-`mu_alpha>=D`.                                                   `(FR2)`
+For a fan with `d` partners, per-source capacity gives
 
-If the fan has `d` partners, per-source capacity at coordinate `i` gives
-
-`B_i>=(d-n_{alpha(q_i)})_+`.
-
-Summing by neighbourhood classes yields
-
-> **FAN ALPHA-SPILL**
->
 > `B_beta(Y)>=max(0,dp-Da)`.                                     `(FAS)`
 
-Let `J` be the coordinates for which `n_{alpha(q_i)}<d`. Every `i in J` forces a beta witness of the distinct code `c(z) Delta {i}`. Since a sufficient alpha class consumes at least `d` A-vertices and contains at most `D` coordinates,
+If `J` is the set of coordinates with `n_{alpha(q_i)}<d`, then each `i in J` forces a distinct beta code `c(z) Delta {i}` and
 
-> **FAN BETA-SUPPORT**
->
 > `|J|>=max(0,p-D floor(a/d))`.                                  `(FBS)`
 
-Thus a saturated low-error fan forces one of two explicit structures:
+Thus every saturated low-error fan produces either
 
-1. **large D:** a large repeated alpha/true-twin class in the matched core;
-2. **small D:** many distinct radius-one beta codes adjacent to the fan and, by antipodality, nonadjacent to its hub.
+1. a large true-twin/alpha class in the matched core, or
+2. a large explicit radius-one beta-code set adjacent to the fan and nonadjacent to its hub.
 
 File: `SATURATED_FAN_ROW_CAPACITY_DICHOTOMY.md`.
 
-This is the cleanest current bridge between the stronger antipode-error theorem and selected/Hall capacity.
+## 11. New pricing of the cheap complete row
+
+The one-code row `K_y=K_p` was previously cheap only from the support viewpoint. It actually creates the B-clique
+
+`C_y={y,q_1,...,q_p}`
+
+of size `p+1`.
+
+A general D2C clique-criticality lemma now shows: every clique of size `s>=3` has private feet for all but at most one clique source. If the clique lies in `B=N(v)`, every such foot must lie in A, because a B-foot would share the root `v` with every target.
+
+Therefore a complete unmatched row forces at least `p` distinct A-side private feet. Their codes are explicit:
+
+- a foot private to `q_i` has code `beta_i(y)=bar c(y) Delta {i}` and is nonadjacent to `y`;
+- a foot private to `y` has code `bar c(y)` and is adjacent to `y`.
+
+Hence A realises at least `p-1` of the `p` radius-one beta codes, regardless of how the selected witness row itself is covered.
+
+Moreover, a private foot of code `beta_i(y)` cannot also be a selected beta witness for `yq_i`, because the former is nonadjacent to `y` while the latter must be adjacent. If that coordinate beta-spills, then
+
+> `n_{beta_i(y)}>=2`.                                            `(CR-MULT)`
+
+File: `COMPLETE_ROW_CLIQUE_PRIVATE_FEET.md`.
+
+This means neither one-code row remains an unstructured escape:
+
+- `K_p` forces a large rooted B-clique and almost a full beta sphere of A-private feet;
+- `K_{p-1} dotcup K_1` forces a complementary U--U antipode and enters BAF.
 
 ## 12. Active next move
 
-Do **not** return to another fixed switching-defect enumeration. The next compact theorem target is the beta side of `(FBS)`.
+The next compact theorem target is **A-side pricing** of the explicit structures now forced.
 
-A beta witness `x in A` for a partner `y in Y` satisfies
+Two inputs are ready:
 
-- `x~y`;
-- `x not~z` because `y,z` are antipodes;
-- its code is one of the explicit radius-one vertices `c(z) Delta {i}`.
+1. saturated/generic fan beta support: many distinct A vertices in codes `c(z) Delta {i}`, adjacent to fan partners and nonadjacent to the hub;
+2. complete-row private feet: at least `p-1` beta-sphere code classes already occupied by A vertices that are deliberately nonadjacent to the row vertex, with beta-selected witnesses requiring additional multiplicity.
 
-The next goal is to price a large collection of such distinct beta-code A-neighbours against either
+The next goal is to show that these A-side populations force either
 
-1. A-side maximum-degree slack `L_A`, using criticality of the A--U edges / F-edges they create; or
-2. additional antipode error / matched-core switching defect.
+- a linear lower bound on `L_A`, via maximum-degree slack and criticality of their A--U/F edges; or
+- enough repeated alpha/true-twin structure to collapse the matched core into the already-classified low switching-defect normal forms.
 
-The complementary large-`D` branch should be attacked by the projective-twin/switching normal form already available for the matched core.
+A theorem of the schematic form
 
-A successful theorem of the schematic form
+`L_A + controlled U-error >= linear payment from beta/private-foot support`
 
-`L_A + (controlled U-error) >= linear function of beta-support or D`
+would plug directly into `(GS4)`--`(GS5)` and is now the highest-value route toward an externally reviewable eventual theorem.
 
-would plug directly into `(GS4)`--`(GS5)` and is now more valuable than further support-only enumeration.
-
-The Q=0/false-twin-core branch remains separate and open. Preserve it; do not silently assume a maximum-degree triangle root.
+Do not return to the closed mixed `{4,5}` ladder, arbitrary fixed-defect enumeration, or first-proof optimization for Erdős #742. The Q=0/false-twin-core branch remains separate and open.
 
 ## 13. Trust boundary
 
 - The published 12/32 graph is directly reconstructed from the authoritative figure; no author-supplied adjacency file has been located.
-- Full-tight eventual closure is an internal candidate pending external review; several finite terminal certificates remain to be journal-compressed.
-- The near-full normal form, row identities, BAF theorem, improved unmatched floors, private-hole saturation theorem and fan row-capacity inequalities are hand arguments.
+- Full-tight eventual closure is an internal candidate pending external review.
+- The near-full normal form, row identities, BAF theorem, improved unmatched floors, private-hole theorem, fan row-capacity inequalities and clique-private-foot theorem are hand arguments.
 - Atlas and exact finite computations are audit/regression support only.
-- The saturation/private-hole and row-capacity results sharply constrain equality but do not yet prove the eventual second-extremal theorem.
+- No theorem yet converts all unmatched/errorful configurations into enough `E_U+L_A` to finish the eventual second-extremal result.
 - The Q=0/twin-core branch remains separate and not closed.
 - No all-order second-extremal theorem is claimed.
 
