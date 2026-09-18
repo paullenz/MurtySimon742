@@ -20,9 +20,18 @@
     "strengthened_missing_floor_checks": 25,
     "failures": 0
   },
+  "graph_atlas_two_exception_gate": {
+    "false_twin_classes_with_z_le_2": 21,
+    "z0_classes": 17,
+    "z1_classes": 0,
+    "z2_classes": 4,
+    "z2_triangle_classes_with_W_independent": 0,
+    "z2_triangle_classes_with_W_active": 0,
+    "failures": 0
+  },
   "notes": [
     "The arithmetic scans verify consequences of the displayed finite inequalities, not the D2C witness-localization arguments themselves.",
-    "The graph-atlas scan checks the private-support theorem and strengthened false-twin floor on all diameter-2-critical atlas graphs through order 7.",
+    "The graph-atlas scan checks the private-support theorem, strengthened false-twin floor, and two-exception structural gate on all diameter-2-critical atlas graphs through order 7.",
     "The published order-12, size-32 X_3 graph is outside the atlas scan and remains a mandatory negative control; the new rooted fan gates do not apply to it because its canonical root has u=0 and F_min=0."
   ]
 }
