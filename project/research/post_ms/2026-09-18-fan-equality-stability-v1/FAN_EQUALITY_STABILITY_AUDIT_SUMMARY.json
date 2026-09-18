@@ -1,0 +1,17 @@
+{
+  "date": "2026-09-18",
+  "scope": "Independent graph-atlas audit of generic fan-equality/stability and false-twin quotient kernels.",
+  "d2c_isomorphism_classes": 21,
+  "statistics": {
+    "admissible_ucn_fans": 31,
+    "exact_neighbourhood_checks": 63,
+    "witness_missing_edge_checks": 31,
+    "threshold_stability_checks": 140,
+    "zero_hole_fans": 4,
+    "false_twin_classes": 20,
+    "false_twin_vertex_checks": 53,
+    "false_twin_global_floor_checks": 20
+  },
+  "failures": 0,
+  "trust_boundary": "Audit support only. The Boolean-code/Hamming conclusions, the project-specific identification of zero-hole A/U witnesses with U, rooted-transfer consequences, and all asymptotic/eventual claims rest on the hand arguments rather than this finite scan."
+}
