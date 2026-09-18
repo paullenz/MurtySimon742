@@ -1,0 +1,26 @@
+{
+  "date": "2026-09-18",
+  "status": "audit support only; hand proofs are authoritative",
+  "integer_envelope_checks": {
+    "z2_independent": 287980,
+    "z3_one_edge_independent": 287980,
+    "z3_path_or_triangle_independent": 7140,
+    "z2_active": 28197,
+    "z3_active_t2": 28175,
+    "z3_active_t3": 27945
+  },
+  "path_incidence_checks": 29700,
+  "triangle_incidence_checks": 28561,
+  "exact_z3_false_twin_regression": {
+    "candidate_type_models_checked": 16912,
+    "d2c_models": 43,
+    "triangle_containing_d2c_models": 17,
+    "triangle_d2c_by_number_of_Z_edges": {
+      "2": 9,
+      "3": 8
+    },
+    "second_extremal_violations": 0
+  },
+  "total_checks": 742590,
+  "failures": 0
+}
