@@ -1,0 +1,29 @@
+{
+  "date": "2026-09-18",
+  "status": "regression_support_only",
+  "support_checks": 705356,
+  "minimum_support_margin": 0,
+  "support_failures": 0,
+  "support_range": {
+    "subcore_size_min": 3,
+    "subcore_size_max": 9,
+    "omitted_singleton_choices": "none or one restricted class",
+    "omitted_cosingleton_choices": "none or one restricted class",
+    "target_sets": "every nonempty subset excluding the source",
+    "clique_sides": 2
+  },
+  "arithmetic_checks": 1230639,
+  "arithmetic_failures": 0,
+  "arithmetic_range": {
+    "deleted_centres_k": [0, 1, 2],
+    "p_max": 100,
+    "u_max": 200,
+    "lambda_min": -1,
+    "lambda_max": "min(u+1,20)"
+  },
+  "claims_checked": [
+    "restricted clique-private-foot support supplies the t-1 exclusions needed for edge-by-edge slack amplification",
+    "for subcore sizes p, p-1, p-2 the direct slack criterion is equivalent to the displayed quadratic exclusion inequalities"
+  ],
+  "trust_boundary": "Finite regression audits support bookkeeping and arithmetic only. The zero-signing subcore quadratic slack theorem is a hand D2C/private-foot argument."
+}
