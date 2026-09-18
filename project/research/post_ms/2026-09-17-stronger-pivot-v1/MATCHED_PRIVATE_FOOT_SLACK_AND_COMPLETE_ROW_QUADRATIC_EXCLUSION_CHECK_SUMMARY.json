@@ -1,0 +1,30 @@
+{
+  "date": "2026-09-18",
+  "status": "regression_support_only",
+  "support_checks": 1941976,
+  "minimum_support_margin": 0,
+  "support_failures": 0,
+  "support_range": {
+    "p_min": 3,
+    "p_max": 10,
+    "omitted_singleton_choices": "none or one coordinate",
+    "omitted_cosingleton_choices": "none or one coordinate",
+    "target_sets": "every nonempty subset of coordinates excluding the source",
+    "sides": ["Q", "Q_prime"]
+  },
+  "arithmetic_checks": 414442,
+  "arithmetic_failures": 0,
+  "arithmetic_range": {
+    "p_min": 3,
+    "p_max": 100,
+    "u_min": 1,
+    "u_max": 200,
+    "lambda_min": -1,
+    "lambda_max": "min(u+1,20)"
+  },
+  "claims_checked": [
+    "mandatory singleton/co-singleton support supplies at least t-1 distinct halfspace exclusions for every t-target private foot",
+    "the quadratic exclusion inequality is algebraically equivalent to p(p-1) >= S_req-1 over the tested integer box"
+  ],
+  "trust_boundary": "This summary audits finite support bookkeeping and arithmetic only. The D2C private-foot transfer theorem and edge-by-edge slack theorem are hand arguments."
+}
