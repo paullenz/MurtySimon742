@@ -1,0 +1,18 @@
+{
+  "code_pair_incidences_checked": 2040,
+  "complement_pairs_checked": 1020,
+  "d2c_atlas_classes": 21,
+  "generic_pair_integer_cases_checked": 1681,
+  "generic_pair_rounding_violations": 0,
+  "hypercube_p_max": 10,
+  "hypercube_p_min": 3,
+  "hypercube_violations": 0,
+  "matched_hub_baf_violations": 0,
+  "matched_hub_branching_centres": 1,
+  "matched_hub_code_violations": 0,
+  "matched_hub_min_margin": 2,
+  "matched_hub_partner_incidences": 2,
+  "matched_hubs_with_unmatched_antipodes": 1,
+  "root_instances": 126,
+  "roots_with_tight_pair": 17
+}
