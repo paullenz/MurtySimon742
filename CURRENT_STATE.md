@@ -3,9 +3,15 @@
 > **Active target — 18 September 2026.** The live problem is the sufficiently-large/eventual second-extremal D2C classification around `M(n)=floor((n-1)^2/4)+1`. The false all-order 2019 Dailly–Foucaud–Hansberg strengthening is not assumed. The published 2024 order-12, size-32 D2C graph is a mandatory hostile control. Murty–Simon / Erdős #742 work remains preserved but is not the live optimization target.
 
 <!-- CURRENT-STATUS:START -->
-**CHECKPOINT CLASS:** `FULL_TIGHT_CLOSED_NEAR_FULL_HIGH_COMPLEXITY_BETA_MULTIPLICITY_SPARSE_U_DENSE_AU_INTERNAL_CANDIDATES`.
+**CHECKPOINT CLASS:** `FULL_TIGHT_CLOSED_NEAR_FULL_DENSE_CROSS_HAMMING_RATIO_GAP_INTERNAL_CANDIDATES`.
 
-**WORK MODE:** `EVENTUAL_D2C_MATH`. The full-tight Boolean branch remains internally closed for sufficiently large matched cores (`k>=19` in the preserved theorem). The active branch is the unmatched/errorful antipode regime. Earlier work forced every above-`M(n)` linearly-unmatched candidate into high switching complexity, high unmatched-row cover, and small projective alpha classes. This checkpoint obtains the first genuinely aggregate Hall consequences in that regime: **multiplicity-level beta injectivity, small U-code classes, linear proliferation of complementary U-code types, asymptotic sparsity of `G[U]`, and a quadratically dense A--U layer whose beta witnesses have strong fibrewise exclusion geometry.**
+**WORK MODE:** `EVENTUAL_D2C_MATH`. The full-tight Boolean branch remains internally closed for sufficiently large matched cores (`k>=19` in the preserved theorem). The active branch is the unmatched/errorful antipode regime. Earlier work forced a linearly-unmatched above-`M(n)` candidate into high switching complexity, high unmatched-row cover, small alpha classes, sparse `G[U]`, and a quadratically dense `A--U` layer. The latest checkpoint converts beta-witness reuse into an exact Hamming-energy ledger and then into a cross-edge capacity bound. For fixed `lambda`, the old asymptotic endpoint `u/p=4` is now separated from the surviving region by an explicit constant gap:
+
+> `u < (31/8)p`
+
+for all sufficiently large candidates in the linear-unmatched regime.
+
+No global eventual second-extremal theorem is claimed.
 
 ## 1. Scope and mandatory hostile control
 
@@ -39,6 +45,8 @@ Write
 `q=e(G[U])`, `s=e_G(A,U)`, `f=e(G[A])`.
 
 Exact identities:
+
+`a=2p+u-lambda-1`,
 
 `Q=p(p+u-1)+q`,
 
@@ -74,37 +82,21 @@ At `lambda=-1`, `S_req=2p+u-2`, so above threshold forces
 
 Main files: `NEAR_FULL_TIGHT_MATCHING_NORMAL_FORM.md`, `GLOBAL_SLACK_DEFECT_CRITERION.md`.
 
-## 3. Preserved A-side quadratic switching stability
+## 3. Preserved A-side switching stability and row complexity
 
-The matched-target private-foot theorem gives, for a critical matched-core edge certified by `h in A`,
-
-`epsilon_h>=epsilon_t'+1`.
-
-If after switching there is a zero-signed induced subcore on `s_0>=3` tight fibres, clique criticality amplifies this to
+A zero-signed induced matched subcore on `s_0>=3` tight fibres forces
 
 > `L_A>=s_0(s_0-1)`.                                      `(ZS)`
 
-Define the switching-deletion invariant
+Define
 
-`kappa_sw=min_S tau_vc(L Delta delta(S))`
-
-for the matched signing, and put
+`kappa_sw=min_S tau_vc(L Delta delta(S))`,
 
 `sigma_0=p-kappa_sw`.
 
-Then `sigma_0` is the largest zero-signed subcore obtainable after switching, so every above-threshold candidate must satisfy
+Then every above-threshold candidate satisfies
 
 > `sigma_0(sigma_0-1)<=S_req-2`.                          `(SD)`
-
-In particular, for fixed `lambda` and `u=O(p)`,
-
-> `kappa_sw=p-O(sqrt(p))`.
-
-The exact `tau(Psi)<=2` unmatched-row classification is already absorbed by this theorem: every such row leaves a zero-signed subcore of size at least `p-2`, hence has quadratic `L_A` cost. Do not return to case-by-case cheap-row enumeration.
-
-Files: `ZERO_SIGNING_SUBCORE_QUADRATIC_SLACK_AND_TAU2_ROWS.md`, `SWITCHING_DELETION_STABILITY_FROM_A_SLACK.md`.
-
-## 4. High row cover and small alpha classes
 
 Put
 
@@ -114,23 +106,59 @@ Put
 
 `R_*=max(2,R)`.
 
-The row-kernel theorem and `(ZS)` imply that every unmatched row of an above-threshold candidate satisfies
+Every unmatched row satisfies
 
-> `tau(Psi(K_y))>=ceil(p/(R_*+1))`.                       `(RC)`
+> `tau(Psi(K_y))>=ceil(p/(R_*+1))`,                       `(RC)`
 
-The projective-twin theorem identifies
-
-`mu_alpha=max_c |alpha^{-1}(c)|`
-
-with the largest true-twin clique obtainable by switching the matched 2-lift. Hence
+and the largest projective alpha/true-twin class satisfies
 
 > `mu_alpha<=R_*`.                                         `(AC)`
 
-For fixed `lambda` and `u=O(p)`, every unmatched row has cover `Omega(sqrt(p))`, while every projective alpha class has size `O(sqrt(p))`.
+For fixed `lambda` and `u=O(p)`, this means
 
-File: `ROW_COVER_AND_ALPHA_CAP_FROM_SLACK_STABILITY.md`.
+- `kappa_sw=p-O(sqrt(p))`;
+- every unmatched row has cover `Omega(sqrt(p))`;
+- every alpha class has size `O(sqrt(p))`.
 
-## 5. Preserved antipode-fan payment
+Files: `ZERO_SIGNING_SUBCORE_QUADRATIC_SLACK_AND_TAU2_ROWS.md`, `SWITCHING_DELETION_STABILITY_FROM_A_SLACK.md`, `ROW_COVER_AND_ALPHA_CAP_FROM_SLACK_STABILITY.md`.
+
+## 4. Preserved multiplicity Hall / code-pair structure
+
+Group unmatched vertices by partial Boolean code:
+
+`t_c=|{y in U:c(y)=c}|`,
+
+and A-vertices by
+
+`n_d=|{x in A:c(x)=d}|`.
+
+For each occupied U-code `c` and coordinate `i`, beta-target injectivity gives
+
+> `t_c <= n_{a_i(c)}+n_{b_i(c)}`.                         `(MH)`
+
+If `nu_c` is the matching number of `Psi(K_c)`, then
+
+> `nu_c t_c<=a`.                                           `(MC)`
+
+For complementary U-codes,
+
+> `p(t_c+t_bar c)<=(mu_alpha+1)a`.                        `(CP)`
+
+Hence every exact U-code class and every complementary code pair has only `O(sqrt(p))` unmatched vertices when `u=O(p)` and `lambda` is fixed.
+
+Let `h` be the number of occupied complementary U-code pairs. Exact beta-pool incidence gives
+
+> `min(h,p)a>=pu-mu_alpha a`,                              `(BP)`
+
+so if `u=cp+O(1)`, then
+
+> `h >= [c/(2+c)]p-O(sqrt(p))`.
+
+Thus a linear unmatched layer must proliferate over linearly many complementary Boolean types.
+
+File: `BETA_MULTIPLICITY_CODE_PAIR_STABILITY.md`.
+
+## 5. Preserved antipode payment
 
 For a U--U antipode hub `z`, with partner set `Y` of size `d`,
 
@@ -142,250 +170,313 @@ Consequences retained:
 - `lambda>=0`: `E_U>=min(u,ceil(u/2)+lambda)`;
 - equality forces odd clique fan sets, regular tournament charging and private complementary-code holes.
 
-This checkpoint extends the same Boolean fan injection to **matched antipode hubs** whenever their unmatched partner set has one common partial code; matched antipode partners automatically do.
+The same Boolean fan injection extends to matched antipode hubs whose unmatched partners share one code. One-sided code classes therefore pay either linear unmatched slack or quadratic hub-branching slack; generic non-alpha complementary pairs at `lambda=-1` satisfy the preserved imbalance floor
 
-File: `BOOLEAN_ANTIPODE_FAN_PAYMENT.md` plus the new `BETA_MULTIPLICITY_CODE_PAIR_STABILITY.md`.
+`E_c+E_bar>=ceil(max((t+s)/4,t/3,s/3))`.
 
-## 6. New multiplicity row-edge theorem
+Files: `BOOLEAN_ANTIPODE_FAN_PAYMENT.md`, `BETA_MULTIPLICITY_CODE_PAIR_STABILITY.md`.
 
-Group unmatched vertices by partial Boolean code:
+## 6. Sparse U and dense A--U
 
-`t_c=|{y in U:c(y)=c}|`,
+For every `S subseteq U`, selected orientation of U--U edges gives
 
-and A-vertices by
-
-`n_d=|{x in A:c(x)=d}|`.
-
-For an occupied U-code `c` and coordinate `i`, all `t_c` physical P--U edges have the same two possible witness codes
-
-`a_i(c)=alpha(q_i(c))`,
-
-`b_i(c)=beta_i(c)`.
-
-The old per-source rule gives alpha capacity `n_{a_i(c)}`. The new point is **beta-target injectivity**: for a fixed matched target `q`, one A-vertex cannot beta-certify two distinct edges incident with `q`, because beta criticality requires
-
-`N(x) cap N(q)={y}`.
-
-Therefore
-
-> `t_c <= n_{a_i(c)}+n_{b_i(c)}` for every `c,i`.        `(MH)`
-
-If `nu_c` is the matching number of the row-singleton graph `Psi(K_c)`, summing `(MH)` over a code-disjoint row matching gives
-
-> `nu_c t_c<=a`,
-
-so
-
-> `t_c<=floor(a/nu_c)`
->
-> `   <=floor(a/ceil(tau(Psi(K_c))/2))`.                  `(MC)`
-
-Together with `(RC)`, every exact U-code class has size `O(sqrt(p))` when `u=O(p)`.
-
-This is a genuine multiplicity theorem, not a support statement.
-
-## 7. New complementary-pair mass cap
-
-For complementary U-codes `c,bar c`, their row graphs are the same switching row, their selected matched endpoints are tight mates, and their beta pools are disjoint for `p>=3`.
-
-Summing `(MH)` over both sides of one complementary pair `gamma={c,bar c}` gives
-
-> `p(t_c+t_bar c)<=(mu_alpha+1)a`.                       `(CP)`
-
-Hence
-
-> `t_c+t_bar c<=floor((mu_alpha+1)a/p)`.
-
-Using `(AC)`, every complementary U-code pair has total mass
-
-> `O(sqrt(p))`
-
-in the linearly-unmatched regime.
-
-File: `BETA_MULTIPLICITY_CODE_PAIR_STABILITY.md`.
-
-## 8. New global beta-pool proliferation theorem
-
-Let `H` be the occupied complementary U-code pairs and `h=|H|`. For a pair `gamma={c,bar c}`, let
-
-`S_gamma=B(c) union B(bar c)`
-
-be its two disjoint beta spheres.
-
-The global alpha-spill theorem gives
-
-`B_beta>=pu-W_alpha>=pu-mu_alpha a`.
-
-Beta-target injectivity gives, pairwise,
-
-`B_beta(gamma)<=sum_{d in S_gamma}n_d`.
-
-Hypercube incidence is exact: every Boolean A-code lies in exactly `p` complementary-pair beta unions over the whole cube. Hence over the `h` occupied pairs it is counted at most `min(h,p)` times. Therefore
-
-> **BETA-POOL PROLIFERATION**
->
-> `min(h,p)a>=pu-mu_alpha a`.                             `(BP)`
-
-In particular
-
-> `h>=max(0,ceil(pu/a-mu_alpha))`.
-
-With `(AC)`, if `u=cp+O(1)` for fixed `c>0` and fixed `lambda`, then
-
-> `h >= [c/(2+c)]p-O(sqrt(p))`.
-
-Thus a linear unmatched layer forces **linearly many complementary Boolean code-pair types**. It cannot hide in a bounded or square-root family of reusable rows.
-
-This is the first aggregate selected/Hall theorem in the high-complexity regime that scales linearly with `p`.
-
-## 9. New antipode payment by code-pair type
-
-### One-sided alpha-image classes
-
-If `t_c=t>0` but `t_bar c=0`, then no U--U antipode is available, so every vertex of the class must use a matched antipode from
-
-`R_c={q in P:alpha(q)=c}`.
-
-Let `r_c=|R_c|`. If `r_c=0`, the one-sided class is impossible. Assign the `t` vertices to matched antipode hubs and let `d_q` be the load at hub `q`. The extended partial-Boolean fan theorem gives
-
-`E_c>=max(t,sum_q binom(d_q,2))`.
-
-If `t=r_c k+s`, `0<=s<r_c`, the convex minimum is
-
-`Phi(t,r_c)=r_c binom(k,2)+s k`,
-
-so
-
-> `E_c>=max(t,Phi(t,r_c))`.                               `(OS)`
-
-Since `r_c<=mu_alpha`, concentration beyond the available alpha hubs incurs quadratic branching slack.
-
-### Generic non-alpha complementary pairs at lambda=-1
-
-If
-
-`|alpha^{-1}(c)|=|alpha^{-1}(bar c)|=0`,
-
-then every vertex on either occupied side must use a U--U antipode in the opposite code class. Writing side sizes `t,s` and slack sums `E_c,E_bar`, zero-slack fan capacity gives
-
-`t<=E_c+3E_bar`,
-
-`s<=3E_c+E_bar`.
-
-Therefore
-
-> `E_c+E_bar>=ceil(max((t+s)/4,t/3,s/3))`.               `(GI)`
-
-This recovers the old quarter-slack floor when the pair is balanced and is stronger for imbalanced generic pairs. Thus low slack forces generic complementary code pairs to be approximately balanced; heavily one-sided behaviour must pass through the exceptional alpha image and then pays `(OS)`.
-
-## 10. New capacity theorem for edges inside U
-
-For every U--U edge `yz`, the augmented orientation constraint is
-
-`{bar c(y),bar c(z)}`.
-
-Orient the edge according to its canonical selected B-source. Distinct obligations from a fixed source use distinct A-cross edges, so
-
-> `d^+(y)<=n_{bar c(y)}`.
-
-Hence for every `S subseteq U`,
-
-> `e(G[S])<=sum_{y in S}n_{bar c(y)}`.                   `(UE)`
-
-In particular
-
-`q<=sum_c t_c n_bar c<=t_max a`.
+> `e(G[S])<=sum_{y in S}n_{bar c(y)}`.                    `(UE)`
 
 Using `(CP)`,
 
 > `q <= a floor((mu_alpha+1)a/p)`
 >
-> `  <= (mu_alpha+1)a^2/p`.                              `(SU)`
+> `  <= (mu_alpha+1)a^2/p`.                               `(SU)`
 
-With `(AC)` and `u=O(p)`, fixed `lambda`,
+For fixed `lambda` and `u=O(p)`,
 
 > `q=O(p^(3/2))`.
 
-Thus if `u=Theta(p)`, the unmatched induced graph is asymptotically sparse:
-
-> `q/binom(u,2)=O(p^(-1/2))`.
-
-The exact rooted-triangle count is correspondingly
+Thus for `u=Theta(p)`, `G[U]` is asymptotically sparse and
 
 `Q=p(p+u-1)+O(p^(3/2))`.
 
-File: `UNMATCHED_INTERNAL_EDGE_CAPACITY.md`.
+The exact unmatched-slack identity then forces
 
-## 11. Sparse U forces a quadratically dense A--U layer
+> `s >= u(p+u-1)-2(R_*+1)a^2/p-(S_req-2)`.               `(AU)`
 
-From the exact slack identity,
-
-`s=u(p+u-1)-2q-E_U`.
-
-Combining `(SU)` with `(GS-A)` gives the parameter-level necessary condition
-
-> `s >= u(p+u-1)-2(R_*+1)a^2/p-(S_req-2)`.              `(AU)`
-
-If `u=cp+O(1)`, fixed `c>0`, fixed `lambda`, then
+Hence if `u=cp+O(1)`,
 
 > `s >= c(1+c)p^2-O(p^(3/2))`.
 
-Therefore the surviving high-complexity linear-unmatched regime has a sharp two-layer shape:
+So the surviving layer has sparse `U` but quadratically dense `A--U`.
 
-- `G[U]` is sparse: `q=O(p^(3/2))`;
-- the A--U cross graph is dense: `s=Theta(p^2)`.
+File: `UNMATCHED_INTERNAL_EDGE_CAPACITY.md`.
 
-The unmatched vertices must replace almost all missing U-neighbours by A-neighbours.
+## 7. Beta-witness reuse geometry, now with source-distinctness explicit
 
-## 12. New beta-witness reuse geometry
+For `x in A`, let `ell_x` be the number of beta-oriented P--U obligations whose selected cross edge uses `x`, and let `I_x` be the corresponding target fibres.
 
-For `x in A`, let `ell_x` be the number of beta-oriented P--U obligations whose selected cross edge uses `x`. Then
+For each `i in I_x`, let `y_i in U` be the designated beta source. The predecessor selected/Hall theorem says distinct beta obligations from one fixed unmatched source use distinct selected cross edges. Therefore, for fixed `x`, the sources
 
-`sum_x ell_x=B_beta>=pu-mu_alpha a`.
+> `y_i`, `i in I_x`, are pairwise distinct.
 
-Criticality of a beta-certified edge `yq` gives
+This closes an implicit injectivity point in the earlier reuse note.
 
-`x~y`, `x not~q`, `N(x) cap N(q)={y}`.
+Put
 
-Consequences:
+`Y_x={y_i:i in I_x}`,
 
-1. one `x` can beta-certify at most one target in each tight fibre, so `ell_x<=p`;
-2. if `I_x` is the set of its beta target fibres, then for each `i in I_x`, every other A/U-neighbour of `x` avoids the target endpoint `q_i` and therefore chooses its tight mate;
-3. the designated beta source in fibre `i` is the unique neighbour allowed to choose `q_i`.
+`C_x=N_U(x)\Y_x`,
 
-Thus outside its `ell_x` designated beta sources, every A/U-neighbour of `x` lies in one codimension-`ell_x` tight-fibre transversal class; the designated sources are the one-coordinate deviations from that class.
+`c_x=|C_x|`.
 
-The load bounds are
+Then
 
-> `|{x:ell_x>0}|>=ceil(u-mu_alpha a/p)`,                  `(BL1)`
+> `d_U(x)=ell_x+c_x`,
 
-and
+and, writing
 
-> `max_x ell_x>=ceil(pu/a-mu_alpha)`.                     `(BL2)`
+`B=sum_x ell_x=B_beta`,
 
-Using `(AC)`, when `u=cp+O(1)` these become
+`C=sum_x c_x`,
 
-> linearly many beta-loaded A-vertices, and
+there is an **exact beta/central partition**
+
+> `s=B+C`.                                                 `(BC)`
+
+Criticality still gives `ell_x<=p`; for every `i in I_x`, all U-neighbours of `x` except the single designated source `y_i` choose the same side of fibre `i` as `x`.
+
+File: `BETA_WITNESS_REUSE_GEOMETRY.md`, with the explicit source-distinctness audit recorded in `DENSE_CROSS_HAMMING_ENERGY_AND_RATIO_GAP.md`.
+
+## 8. New central-triple Hamming theorem
+
+Fix 0/1 labels on the tight fibres. For coordinate `i`, let
+
+`u_i^0=|{y in U:c(y)_i=0}|`,
+
+`u_i^1=|{y in U:c(y)_i=1}|`,
+
+`d_i=u_i^0-u_i^1`,
+
+`H=sum_i d_i^2`.
+
+Consider triples
+
+`(x,z,i)` with `z in C_x` and `i in I_x`.
+
+Their number is
+
+> `T=sum_x ell_x c_x`.
+
+Map `(x,z,i)` to `(y_i,z,i)`. The selected beta representative makes this map injective, and beta criticality forces `y_i,z` to disagree in coordinate `i`.
+
+The total number of ordered coordinate disagreements among U-codes is exactly
+
+> `D_U=2 sum_i u_i^0u_i^1`
 >
-> `max_x ell_x >= [c/(2+c)]p-O(sqrt(p))`.
+> `   =p u^2/2-H/2`.
 
-Indeed the **average** beta load over A is already linear in `p`.
+Therefore
 
-File: `BETA_WITNESS_REUSE_GEOMETRY.md`.
+> **CENTRAL-TRIPLE HAMMING THEOREM**
+>
+> `T+H/2<=p u^2/2`.                                       `(CH)`
 
-## 13. Verification added at this checkpoint
+This is a hand injection, not a scan-derived statement.
 
-`check_beta_multiplicity_code_pair_stability.py` independently checks the nontrivial finite/algebraic interfaces used above:
+File: `DENSE_CROSS_HAMMING_ENERGY_AND_RATIO_GAP.md`.
 
-- all 21 D2C graph-atlas classes through order seven and all 126 rooted vertices were inspected;
-- 17 rooted instances contained a tight pair;
-- the genuinely new matched-hub Boolean fan case occurred once, with two unmatched partners, zero code failures and zero BAF violations (minimum margin `2`);
-- complementary beta-pool disjointness and exact `p`-fold complement-pair incidence were checked on 1,020 complement pairs and 2,040 code incidences for `p=3,...,10`, with zero failures;
-- the rounded generic-pair imbalance lower bound was replayed on 1,681 integer cases, with zero failures.
+## 9. New exact dense-cross Hamming stability budget
 
-Frozen summary: `BETA_MULTIPLICITY_CODE_PAIR_CHECK_SUMMARY.json`.
+Define
 
-These checks are regression evidence only; the promoted internal candidate statements are based on the hand injections and counts in the notes.
+> `Z=sum_x(p-ell_x)(u-c_x)>=0`,
+
+and let
+
+> `h_alpha=pu-B`.
+
+The exact identities
+
+`ell_x c_x=u ell_x+p c_x-pu+(p-ell_x)(u-c_x)`
+
+and `s=B+C` give
+
+> `T=(u-p)B+ps-pua+Z`.
+
+Since `B=pu-h_alpha` and `s=u(p+u-1)-2q-E_U`, this simplifies exactly to
+
+> `T=p u(u-2p+lambda)`
+>
+> `  -(u-p)h_alpha-2pq-pE_U+Z`.
+
+Combining with `(CH)` gives
+
+> **DENSE-CROSS HAMMING BUDGET**
+>
+> `Z+H/2`
+>
+> `<=p u(2p-lambda-u/2)`
+>
+> `  +(u-p)h_alpha+2pq+pE_U`.                              `(HB)`
+
+When `u>=p`, use
+
+`h_alpha<=W_alpha<=mu_alpha a`
+
+to obtain the parameter-level version. Dropping `Z,H>=0` gives
+
+> `u(u/2-2p+lambda)`
+>
+> `<=((u-p)/p)mu_alpha a+2q+E_U`.                         `(HN)`
+
+For fixed `lambda`, `u=O(p)`, the right side is `O(p^(3/2))`, so first
+
+> `u<=4p-2lambda+O(sqrt(p))`.
+
+The important object for the next work is the full budget `(HB)`, not this coarse first ratio bound.
+
+## 10. New loaded-witness side-occupancy lemma
+
+The reuse geometry yields a stronger statement than merely putting `C_x` on one fibre side.
+
+For `x` with `ell_x>0` and every `i in I_x`, **all** U-neighbours of `x` except `y_i` choose the same side of fibre `i` as `x`. Thus
+
+> `d_U(x)-1<=max(u_i^0,u_i^1)`
+>
+> `         =(u+|d_i|)/2`.                                `(SO)`
+
+Equivalently,
+
+> `|d_i| >= (2d_U(x)-u-2)_+` for every `i in I_x`.
+
+For any real threshold `t>0`, put
+
+`J_t={i:|d_i|>=t}`, `j_t=|J_t|`.
+
+Then
+
+> `j_t<=H/t^2`.
+
+If `ell_x>j_t`, some target fibre lies outside `J_t`, so
+
+> `d_U(x)<=(u+t)/2+1`.                                    `(SO-t)`
+
+This is the bridge from Hamming balance to cross-edge capacity.
+
+## 11. New exact threshold capacity lemma
+
+Let
+
+`L_t={x in A:ell_x>j_t}`, `l_t=|L_t|`.
+
+Since vertices outside `L_t` carry at most `j_t` beta obligations and every A-vertex carries at most `p`,
+
+> `B<=l_t p+(a-l_t)j_t`.
+
+Hence, when `j_t<p`,
+
+> `l_t >= max(0,(B-a j_t)/(p-j_t))`.                     `(TC1)`
+
+If also `u>t+2`, side occupancy gives
+
+> `s<=au-l_t(u-t-2)/2`.                                   `(TC2)`
+
+Together `(TC1)`--`(TC2)` form the **THRESHOLD CAPACITY LEMMA**. This is a finite-parameter inequality; it does not depend on taking a limit.
+
+File: `DENSE_CROSS_THRESHOLD_CAPACITY_REFINEMENT.md`.
+
+## 12. New explicit unmatched-ratio gap: 31/8
+
+Now assume `lambda` fixed and an above-`M(n)` linear-unmatched sequence with
+
+`u=rho p+o(p)`.
+
+From `(HB)` plus the preserved alpha, `q` and slack bounds,
+
+> `H<=rho(4-rho)p^3+O(p^(5/2))`                           `(HI)`
+
+through the remaining `rho<=4+o(1)` window.
+
+Choose
+
+> `t=(7/5)p`.
+
+Then
+
+> `j_t/p <= (25/49)rho(4-rho)+o(1)`.
+
+Use the **sharp** denominator in `(TC1)` rather than the earlier crude count. Writing `j=j_t/p`, one gets
+
+> `l_t/p >= [rho-(rho+2)j]/(1-j)+o(1)`.
+
+The required cross density is
+
+> `s/p^2=rho(1+rho)+o(1)`,
+
+whereas `(TC2)` gives
+
+> `s/p^2`
+>
+> `<=rho(rho+2)`
+>
+> ` -(rho-7/5)/2 * [rho-(rho+2)j]/(1-j)+o(1)`.
+
+Using the largest allowed
+
+`j=(25/49)rho(4-rho)`
+
+reduces feasibility to a rational inequality whose left-minus-right margin is
+
+> `G(rho)`
+>
+> `=rho(125rho^3-675rho^2+595rho+567)`
+>
+> ` / [10(25rho^2-100rho+49)]`.
+
+At
+
+> `rho=31/8`,
+
+one has exactly
+
+> `G(31/8)=54343/503680>0`.
+
+The cubic numerator is strictly increasing and positive on `[31/8,4]`, while the denominator is positive there. Hence the whole interval is impossible for sufficiently large `p`.
+
+Therefore:
+
+> **EXPLICIT LINEAR-UNMATCHED RATIO GAP — internal candidate.**
+>
+> For every fixed `lambda`, every sufficiently large above-`M(n)` near-full partial-Boolean candidate in the linear-unmatched regime satisfies
+>
+> `u < (31/8)p`.                                          `(RG)`
+
+The constant is deliberately not numerically optimized. The reusable result is the threshold-capacity lemma, not the decimal boundary.
+
+Files:
+
+- `DENSE_CROSS_HAMMING_ENERGY_AND_RATIO_GAP.md`;
+- `DENSE_CROSS_THRESHOLD_CAPACITY_REFINEMENT.md`.
+
+## 13. Verification at this checkpoint
+
+`check_dense_cross_hamming_energy_and_ratio_gap.py` audits:
+
+- 5,050 exact U-code multisets for the Hamming-energy identity;
+- 1,890 product-identity cases;
+- 182,720 exact algebra cases for the dense-cross simplification;
+- the exact predecessor endpoint polynomial arithmetic.
+
+Frozen summary: `DENSE_CROSS_HAMMING_ENERGY_CHECK_SUMMARY.json`.
+
+`check_dense_cross_threshold_capacity_refinement.py` audits:
+
+- 121,170 finite beta-load capacity cases;
+- `G(31/8)=54343/503680`;
+- positivity/monotonicity endpoint arithmetic for the cubic numerator.
+
+Frozen summary: `DENSE_CROSS_THRESHOLD_CAPACITY_CHECK_SUMMARY.json`.
+
+Both suites report zero failures. These are regression/audit evidence only; the structural claims rest on the hand injections and inequalities.
+
+The earlier `check_beta_multiplicity_code_pair_stability.py` remains preserved, including its graph-atlas and Boolean incidence audits.
 
 ## 14. Full-tight branch remains closed internally
 
@@ -395,18 +486,22 @@ Do not reopen the fixed-defect ladder as the main attack.
 
 ## 15. Active next move
 
-The aggregate Hall target from the previous checkpoint has now partly succeeded. In the linear-unmatched high-complexity regime, a survivor must simultaneously have
+The dense-cross double count has now paid off. The next move should **not** be another unmatched-row classification and should not merely optimize `31/8` numerically.
 
-- high switching-deletion distance `p-O(sqrt(p))`;
-- row cover `Omega(sqrt(p))` at every unmatched vertex;
-- alpha classes `O(sqrt(p))`;
-- linearly many complementary U-code-pair types;
-- only `O(sqrt(p))` vertices per complementary pair;
-- `q=O(p^(3/2))` internal U-edges;
-- `s=Theta(p^2)` A--U edges;
-- linearly many A-vertices carrying beta witness loads on linearly many distinct tight fibres, with codimension-Theta(p) exclusion patterns on their other neighbours.
+The highest-value target is to optimize the joint finite-parameter system
 
-The next compact theorem should aggregate those **beta-reuse exclusion patterns across the dense A--U layer**. A natural double count is over triples `(x,z,i)` with `xz in E(A,U)` and `i` one of the beta target fibres used by `x`: except for the unique designated source at coordinate `i`, every such `z` is forced onto the mate side of that fibre. The goal is to show that the quadratic cross density `(AU)` is incompatible with the linear complementary-code proliferation `(BP)` unless the forced fibre choices create enough `E_U` or `L_A` to violate `(GS-A)`.
+- exact scorecard `(GS-A)`;
+- Hamming budget `(HB)`;
+- threshold capacity `(TC1)`--`(TC2)`;
+- antipode lower bounds on `E_U`;
+- alpha cap `(AC)` and U-edge cap `(SU)`;
+
+with the aim of forcing a **direct lower bound on `E_U+L_A`**, rather than only a ratio bound on `u/p`.
+
+Two coherent routes are now visible:
+
+1. derive an analytic load/U-degree/imbalance inequality that absorbs `H` and `Z` without choosing one threshold `t`;
+2. feed the threshold-capacity deficit back into degree slack on the A-side, thereby converting failed cross-edge capacity into explicit `L_A` payment.
 
 A secondary open branch remains `Q=0` / false-twin core from `MAX_TRIANGLE_OR_TWIN_REDUCTION.md`; it has not been conflated with the partial-Boolean triangle branch.
 
@@ -416,11 +511,7 @@ Do not return to the closed mixed `{4,5}` ladder, arbitrary fixed-defect enumera
 
 - The published 12/32 graph is directly reconstructed from the authoritative figure; no author-supplied adjacency file has been located.
 - Full-tight eventual closure is an internal candidate pending external review.
-- The near-full normal form, exact slack criterion, Boolean fan theorem, A-side quadratic switching theorem, multiplicity Hall inequalities, beta-pool proliferation, U-edge capacity and beta-reuse geometry are hand arguments.
+- The near-full normal form, exact slack criterion, Boolean fan theorem, A-side switching theorem, multiplicity Hall inequalities, beta-pool proliferation, U-edge capacity, beta-reuse geometry, central-triple Hamming theorem and threshold-capacity theorem are hand arguments.
+- The `31/8` ratio gap is conditional on the fixed-`lambda`, linearly-unmatched regime and is not a global eventual theorem.
 - Finite computations/checkers are audit and regression support only.
-- The new results do **not** yet close all unmatched/errorful configurations; the dense A--U exclusion double count remains open.
-- The `Q=0` / false-twin-core branch remains separate and open.
-- No all-order second-extremal theorem is claimed.
-
-**UNPRESERVED WORK:** None after this current-state commit.
 <!-- CURRENT-STATUS:END -->
