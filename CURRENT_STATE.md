@@ -3,16 +3,18 @@
 > **Active target — 18 September 2026.** The live problem is the sufficiently-large/eventual second-extremal D2C classification around `M(n)=floor((n-1)^2/4)+1`. The false all-order 2019 Dailly–Foucaud–Hansberg strengthening is not assumed. The published 2024 order-12, size-32 D2C graph is a mandatory hostile control. Murty–Simon / Erdős #742 remains preserved but is not the live optimization target.
 
 <!-- CURRENT-STATUS:START -->
-**CHECKPOINT CLASS:** `FULL_TIGHT_CLOSED_NEAR_FULL_SUBLINEAR_LAMBDA_RATIO_GAP_LINEAR_LAMBDA_ENVELOPE_CYLINDER_CRITICALITY`.
+**CHECKPOINT CLASS:** `FULL_TIGHT_CLOSED_NEAR_FULL_CONTINUUM_SOURCE_PROFILE_ENHANCED_COERCIVITY_CYLINDER_SCOPE_REPAIRED`.
 
 **WORK MODE:** `EVENTUAL_D2C_MATH`.
 
-The full-tight Boolean branch remains internally closed for sufficiently large matched cores (`k>=19`). The live branch is the unmatched/errorful antipode regime. The principal advances now are:
+The full-tight Boolean branch remains internally closed for sufficiently large matched cores (`k>=19`). The live branch is the unmatched/errorful antipode regime. This checkpoint adds four material advances:
 
-- exact finite-deficit source-tuple capacity;
-- the ratio gap `u/p<27/14` has been extended from fixed `lambda` to the whole sublinear regime `lambda=o(p)` (for linear-unmatched `u=O(p)` sequences);
-- alpha/beta diversion coercivity gives a first explicit semialgebraic envelope in the genuinely linear regime `lambda=Theta(p)`;
-- beta-cylinder multiplicity has now been connected directly to D2C edge criticality through a unique-common-neighbour slack/hole identity and a complementary-code dual-clique mechanism.
+- alpha/beta coercivity now retains and prices **excess alpha diversion** rather than discarding it;
+- the complete finite source-deficit staircase has an explicit continuum limit, giving a stronger linear-`lambda` variational master;
+- once `lambda>2p-1`, root imbalance itself forces a nonzero beta-load floor, so the integrated source term cannot be erased by alpha diversion;
+- the beta-cylinder criticality route has been **scope-corrected**: a pigeonholed cylinder class need not equal the centre's code. The correct near-code witness theorem leaves only at most `k_x` matched-B exceptional feet, all with rigid row-complement signatures.
+
+A new same-code clique theorem also converts same-code clique size directly into the global scorecard.
 
 No global eventual second-extremal theorem is claimed.
 
@@ -41,7 +43,7 @@ Let the complete tight-antipode matching in `B` have `p` pairs and put
 
 `U=B\P`, `u=|U|`, so `b=2p+u`.
 
-Every vertex of `A union U` chooses exactly one endpoint from every tight pair, hence has a partial Boolean code in `{0,1}^p`; every two tight fibres are joined by a perfect matching.
+Every vertex of `A union U` chooses exactly one endpoint from every tight pair and therefore has a Boolean code in `{0,1}^p`; every two tight fibres are joined by a perfect matching.
 
 Write
 
@@ -77,7 +79,7 @@ Then
 
 and parity gives
 
-> `m>M(n) ==> E_U+L_A<=S_req-2`.                         `(GS-A)`
+> `m>M(n) ==> E_U+L_A<=C_0:=S_req-2`.                    `(GS-A)`
 
 At `lambda=-1`, this is `E_U+L_A<=2p+u-4` above threshold.
 
@@ -99,11 +101,11 @@ With switching-deletion invariant
 
 an above-threshold candidate satisfies
 
-> `sigma_0(sigma_0-1)<=S_req-2`.                          `(SD)`
+> `sigma_0(sigma_0-1)<=C_0`.                              `(SD)`
 
-Put `C=S_req-2` and
+Put
 
-`R_*=max(2,floor((1+sqrt(1+4C))/2))`.
+`R_*=max(2,floor((1+sqrt(1+4C_0))/2))`.
 
 Then every unmatched row satisfies
 
@@ -123,9 +125,7 @@ Key consequences remain:
 >
 > `p(t_c+t_bar c)<=(mu_alpha+1)a`;                        `(CP)`
 >
-> `min(h,p)a>=pu-mu_alpha a`,                             `(BP)`
-
-where `h` is the number of occupied complementary U-code pairs.
+> `min(h,p)a>=pu-mu_alpha a`.                             `(BP)`
 
 Selected orientation inside `U` gives
 
@@ -133,16 +133,11 @@ Selected orientation inside `U` gives
 
 hence
 
-> `q <= a floor((mu_alpha+1)a/p)
->      <=(mu_alpha+1)a^2/p`.                              `(SU)`
+> `q<=a floor((mu_alpha+1)a/p)<=(mu_alpha+1)a^2/p`.       `(SU)`
 
-For `x in A`, let `ell_x` be beta load, `k_x=p-ell_x` beta deficit, `d_x=d_U(x)`, and `Y_x` the distinct designated beta sources. The beta/central decomposition gives
+For `x in A`, let `ell_x` be beta load, `k_x=p-ell_x` beta deficit, `d_x=d_U(x)`, and `Y_x` the distinct designated beta sources. The beta/central decomposition and cylinder structure remain valid.
 
-> `s=B_beta+C`,
-
-and every U-neighbour except the designated source in a targeted fibre lies on the same central side as `x`.
-
-## 5. Directional deficiency--Hamming and source-tuple capacity
+## 5. Directional Hamming and finite source-tuple capacity
 
 For coordinate `i`, write
 
@@ -158,266 +153,310 @@ The preserved directional budget is
 >
 > `<=p u(p+1-lambda-u/2)+u h_alpha+2p q+pE_U`.           `(DHB)`
 
-The finite-deficit source-tuple hierarchy is exact. For every integer `r>=3`,
+For every integer `r>=3`, the finite-deficit source-tuple hierarchy is exact:
 
-> `sum_x binom(ell_x,r)/(p-ell_x+r)
->  <= (1/r)binom(u,r)`.                                   `(FDPr)`
+> `sum_x binom(ell_x,r)/(p-ell_x+r)<=(1/r)binom(u,r)`.   `(FDPr)`
 
-Hence if `p-K>=r`,
+Hence
 
 > `|{x:k_x<=K}|`
 >
-> `<=((K+r)/r) binom(u,r)/binom(p-K,r)`.                 `(FDSr)`
+> `<=((K+r)/r)binom(u,r)/binom(p-K,r)`.                  `(FDSr)`
 
-The `r=3` member combined with `(DHB)` yields the preserved ratio-gap polynomial
+The complete cutoff staircase is
 
-`F(rho)=L_0(rho)-6D_0(rho)-12rho^3/125`,
+> `Phi_r(N)=sum_{K=0}^{p-r}(N-C_hat_r(K))_+`,            `(IST)`
 
-which is positive on `[27/14,2]`.
+with
 
-File: `FINITE_DEFICIT_SOURCE_TUPLE_CAPACITY_AND_RATIO_GAP.md`.
+`C_hat_r(K)=floor(((K+r)/r)binom(u,r)/binom(p-K,r))`.
 
-## 6. Alpha--beta diversion coercivity and integrated product
+If `j=min(p,floor(H/T^2))<p`, the side-occupancy threshold theorem gives
 
-For fibre `i`, let
+> `J>=w_T Phi_r(N_T)`,                                   `(IP)`
 
-`m_i=min(u_i^0,u_i^1)`,
+where
 
-`P_i` be alpha directional payment, and
+`w_T=(u-T)/2-1`,
 
-`T_i=r_i^0 e_i^1+r_i^1 e_i^0`
+`N_T=ceil((B_beta-aj)_+/(p-j))`,
 
-be beta endpoint-slack payment, where `e_i^0+e_i^1=lambda+1`.
+`B_beta=pu-h_alpha`.
 
-For `lambda>=0`, the new exact fibre coercivity theorem is
+## 6. Preserved ratio reductions
 
-> `P_i+((m_i+1)/(lambda+1))T_i >= m_i(m_i+1)`.           `(ABF)`
+The triple-source member of the hierarchy and `(DHB)` give the preserved sublinear-imbalance gap:
 
-Globally,
-
-> `P_alpha+[p(floor(u/2)+1)/(lambda+1)]L_A`
-> `>=sum_i m_i(m_i+1)`.                                  `(ABG)`
-
-Writing `z=u-sqrt(H/p)>=0`,
-
-> `sum_i m_i(m_i+1)>=(p/4)z(z+2)`.                       `(MIC)`
-
-The source-tuple cutoff bounds have also been integrated over the entire deficit staircase. If
-
-`C_hat_r(K)=floor(((K+r)/r)binom(u,r)/binom(p-K,r))`,
-
-then every `N` A-vertices have total beta deficit at least
-
-> `Phi_r(N)=sum_{K=0}^{p-r}(N-C_hat_r(K))_+`.             `(IST)`
-
-Combining side-occupancy thresholding with `(IST)` gives
-
-> `J>=w_T Phi_r(N_T)`.                                    `(IP)`
-
-Together `(ABG)`, `(DHB)`, `(IP)`, and the scorecard produce the exact integrated positive-`lambda` master `(IPM)` in
-
-`ALPHA_BETA_COERCIVITY_INTEGRATED_PRODUCT_AND_CYLINDER.md`.
-
-## 7. New scale result: `27/14` gap now holds for `lambda=o(p)`
-
-The fixed-`lambda` hypothesis in the earlier ratio-gap theorem is not necessary.
-
-Assume
-
-`p->infinity`, `u=O(p)`, `lambda=o(p)`,
-
-and an above-`M(n)` near-full sequence. Since
-
-`C=S_req-2=O(p(lambda+1))=o(p^2)`,
-
-we have
-
-`R_*=O(sqrt(p(lambda+1)))=o(p)`,
-
-hence
-
-`mu_alpha=o(p)`,
-
-`h_alpha<=mu_alpha a=o(p^2)`,
-
-`q=o(p^2)`,
-
-`E_U,L_A=o(p^2)`.
-
-Therefore `(DHB)` has exactly the same normalized leading term as in the fixed-`lambda` proof. Along `u/p->rho`,
-
-> `J <= [rho(2-rho)/2+o(1)]p^3`,
+> if `u=O(p)` and `lambda=o(p)`, every finite limit `rho=u/p` satisfies
 >
-> `H <= [rho(2-rho)+o(1)]p^3`.
+> `rho<27/14`.                                           `(SLRG)`
 
-The preserved triple-source argument then applies unchanged. Thus:
+Thus any sequence with `limsup u/p>=27/14` must enter a genuinely linear root-imbalance regime.
 
-> **SUBLINEAR-LAMBDA RATIO GAP — internal candidate.**
->
-> If `u=O(p)` and `lambda=o(p)`, every finite subsequential limit satisfies
->
-> `rho=lim u/p < 27/14`.                                  `(SLRG)`
+For
 
-Consequently any putative sequence with `limsup u/p>=27/14` must enter a genuinely linear root-imbalance regime: after a subsequence, `lambda>=theta p` for some constant `theta>0`.
+`u/p->rho>0`, `lambda/p->theta>0`, `A=2+rho-theta>0`,
 
-File: `SUBLINEAR_LAMBDA_EXTENSION_OF_SOURCE_TUPLE_RATIO_GAP.md`.
-
-## 8. New linear-`lambda` envelope from alpha--beta coercivity
-
-Now assume
-
-`u/p->rho>0`, `lambda/p->theta>0`,
-
-and put
-
-`A=2+rho-theta` (`a/p->A`).
-
-From `(MIC)`, uniformly over the Hamming imbalance,
-
-> `H/2+sum_i m_i(m_i+1) >= [rho^2/6+o(1)]p^3`.           `(LC2)`
-
-Using only the coarse preserved bounds
-
-`h_alpha<=p a`,
-
-`q<=[A^2+o(1)]p^2`,
-
-and the scorecard term in `(IPM)`, every limiting pair must satisfy
+the earlier coarse alpha--beta envelope gives
 
 > `rho^2/6`
 >
 > `<=rho(1-theta-rho/2)+rho A+2A^2`
 >
-> `  +max(1,rho/(2theta))[theta(1+rho)-theta^2/2]`.       `(LCE)`
+> ` +max(1,rho/(2theta))[theta(1+rho)-theta^2/2]`.        `(LCE)`
 
-For `rho in [27/14,2]`, this yields the explicit upper envelope
+For `rho in [27/14,2]` this implied the coarse bound `theta<13/4`. That remains valid but is no longer the correct final optimization object.
 
-> `theta <= theta_-(rho)`
+## 7. New enhanced alpha--beta coercivity
+
+For fibre `i`, put
+
+`m_i=min(u_i^0,u_i^1)`,
+
+`h_i=h_i^0+h_i^1`,
+
+and retain the preserved `P_i,T_i` notation. For `lambda>=0`:
+
+> `P_i+((m_i+1)/(lambda+1))T_i`
 >
-> `=(5rho+7-sqrt(11rho^2+4rho+1))/3`,                    `(LTE)`
+> `>=(m_i+1)max(m_i,h_i)`
+>
+> `=m_i(m_i+1)+(m_i+1)(h_i-m_i)_+`.                     `(EABF)`
 
-and in particular
+Thus, with
 
-> `theta<13/4`.                                           `(L13)`
+`X_alpha=sum_i(m_i+1)(h_i-m_i)_+`,
 
-Numerically `theta_-(27/14)=3.19939...` and `theta_-(2)=3.23996...`.
+> `P_alpha+[p(floor(u/2)+1)/(lambda+1)]L_A`
+>
+> `>=sum_i m_i(m_i+1)+X_alpha`.                          `(EABG)`
 
-This is deliberately coarse: it drops the nonnegative integrated source-product term `w_T Phi_r(N_T)`. The next linear-`lambda` attack should use that term rather than merely optimize this envelope numerically.
+The overflow term itself obeys, for every integer `0<=t<u/2`,
 
-File: `LINEAR_LAMBDA_COARSE_ENVELOPE_FROM_ALPHA_BETA_COERCIVITY.md`.
+> `X_alpha`
+>
+> `>=(t+1)[h_alpha-pu/2+H/(2u)-uH/(u-2t)^2]_+`.          `(AOH)`
 
-## 9. New beta-cylinder edge-criticality structure
+This is an exact finite payment: excess alpha diversion cannot be treated as free once the Hamming imbalance is known.
 
-The beta-cylinder theorem gives, for `x in A`, a central cylinder of codimension `ell_x=p-k_x` containing all A-neighbours and
+File: `ENHANCED_COERCIVITY_CONTINUUM_SOURCE_PROFILE_AND_CLIQUE_SLACK.md`.
 
-> `d_A(x)>=(p-epsilon_x)_+`.
+## 8. New root-imbalance beta floor
 
-Hence some full A-code class inside the cylinder contains at least
+Because
 
-> `ceil((p-epsilon_x)_+/2^{k_x})`                         `(CY3)`
+`h_alpha<=mu_alpha a<=pa`,
 
-A-neighbours of `x`.
+we have the exact bound
 
-The new D2C criticality analysis prices the edges into such a repeated class.
+> `B_beta>=p(lambda+1-2p)_+`.                             `(RBF)`
 
-### Unique-common-neighbour slack identity
+Consequently, if `j<p`,
 
-If `z,w in A union U` are nonadjacent with
+> `N_T`
+>
+> `>=ceil((p(lambda+1-2p)-aj)_+/(p-j))`.                 `(RBN)`
 
-`N(z) cap N(w)={t}`,
+Thus once `lambda>2p-1`, alpha diversion cannot erase beta-source scarcity.
 
-then the number of vertices adjacent to neither is exactly
+## 9. New continuum source-deficit profile and enhanced linear master
 
-> `epsilon_z+epsilon_w-(lambda+1)`.                       `(UCH)`
+Fix `r>=3`. If
 
-In particular
+`u/p->rho>0`, `N/p->nu>=0`,
 
-> `epsilon_z+epsilon_w>=lambda+1`.                        `(UCS)`
+then
 
-### Same-code edge localisation
+> `Phi_r(N)/p^2 -> phi_r(nu;rho)`,                        `(CSP)`
 
-If `x,z in A` have the same Boolean code and `xz` is an edge, edge criticality supplies `w in A union U` of the complementary Boolean code such that either
+where
 
-`N(x) cap N(w)={z}`
+> `phi_r(nu;rho)=int_0^1 [nu-(kappa/r)(rho/(1-kappa))^r]_+ d kappa`. `(CP)`
 
-or
+For `r=3`, if `kappa_*` solves
 
-`N(z) cap N(w)={x}`.
+`nu=kappa_* rho^3/[3(1-kappa_*)^3]`,
 
-Thus every same-code A-edge is certified across the complementary code class.
+then
 
-For a same-code star around `x`, outgoing witnesses are distinct and pay
+> `phi_3`
+>
+> `=nu kappa_*-(rho^3/3)[1/(2(1-kappa_*)^2)-1/(1-kappa_*)+1/2]`. `(CP3)`
 
-> `sum epsilon_w >= |O|(lambda+1-epsilon_x)`.            `(OUT)`
+Now let
 
-If many incoming edges share one foot `w`, their source set `S_w` is forced dense:
+`H/p^3->eta`, `h_alpha/p^2->alpha`, `q/p^2->xi`,
 
-> `d_overline{G[S_w]}(z)
->  <=epsilon_z+epsilon_w-(lambda+1)`.                     `(CFH)`
+and choose `sqrt(eta)<tau<rho`. Put
 
-Hence
+`x=eta/tau^2`,
 
-> `omega(G[S_w])`
-> `>=ceil(|S_w|^2/(|S_w|+sum_{z in S_w}[epsilon_z+epsilon_w-(lambda+1)]))`. `(CFC)`
+`nu=[rho-alpha-Ax]_+/(1-x)`,
 
-### Dual-clique transfer
+`c(rho,theta)=theta(1+rho)-theta^2/2`,
 
-If one source `x` has distinct critical feet `w_i` with zero hole count, the `w_i` form a clique, are joined to the corresponding heads by exactly a perfect matching, and are anticomplete to the other heads.
+`g=max(1,rho/(2theta))`.
 
-More generally, if `W` is such a witness set,
+Then every limiting above-threshold candidate satisfies
 
-> `2e(overline{G[W]})`
-> `<=sum_i[epsilon_x+epsilon_{w_i}-(lambda+1)]`.          `(ADC)`
+> `((rho-tau)/2)phi_r(nu;rho)`
+>
+> ` +eta/2+(rho-sqrt(eta))^2/4`
+>
+> ` +Omega(rho,eta,alpha)`
+>
+> `<=rho(1-theta-rho/2)+rho alpha+2xi+g c(rho,theta)`,    `(CEIPM)`
 
-A same-code A-clique of order `r` therefore transfers at least `floor(r/2)` vertices into a complementary-code near-clique unless the relevant source/foot slacks already pay into `E_U+L_A`.
+where
 
-File: `UNIQUE_COMMON_NEIGHBOR_SLACK_AND_CYLINDER_CRITICALITY.md`.
+> `Omega=sup_{0<s<rho/2}`
+>
+> `s[alpha-rho/2+eta/(2rho)-rho eta/(rho-2s)^2]_+`.      `(AOP)`
 
-## 10. Verification added at this checkpoint
+When `theta>2`, `(RBF)` allows the alpha-free replacement
+
+> `nu_0=[theta-2-Ax]_+/(1-x)`.                           `(HSP)`
+
+The old coarse `rho^2/6` Hamming/coercivity lower bound is therefore provably non-sharp on every compact subset of
+
+> `theta>2+rho/5`,                                       `(STRICT)`
+
+because its unique minimizer is `eta=rho^2/9`; at that point choosing `tau=2rho/3` gives
+
+`nu_0=(5theta-10-rho)/3>0`,
+
+hence a strictly positive continuum source-profile term.
+
+No optimized numerical replacement for `13/4` is yet promoted. The correct next global calculation is the explicit variational inequality `(CEIPM)`.
+
+## 10. Same-code clique scorecard payment
+
+The exact unique-common-neighbour identity remains
+
+> `|H(z,w)|=epsilon_z+epsilon_w-(lambda+1)`.              `(UCH)`
+
+For an actual same-code A-clique `K` of order `r>=2`, orient every clique edge by one D2C critical witness. A complementary-code witness cannot serve edges with two different heads; both source and witness multiplicities are therefore at most `r-1`. Summing `(UCH)`/`(UCS)` over all clique edges gives
+
+> `E_U+L_A>=ceil(r(lambda+1)/2)`.                         `(SCC)`
+
+Hence an above-threshold candidate has
+
+> `omega_same-code(A)`
+>
+> `<=max(1,floor(2C_0/(lambda+1)))`.                     `(SCCAP)`
+
+If one A/U incoming critical foot is reused on a same-code source block `S_w` of size `t`, the preserved common-foot clique lower bound plus `(SCCAP)` yields the quadratic hole payment
+
+> `sum_{z in S_w}[epsilon_z+epsilon_w-(lambda+1)]`
+>
+> `>=t^2/R_C-t`,                                         `(CFQ)`
+
+where
+
+`R_C=max(1,floor(2C_0/(lambda+1)))`.
+
+Also the number of distinct A/U incoming feet in such a block is at most
+
+> `floor(C_0/(lambda+1))`.                               `(CFGCAP)`
+
+File: `ENHANCED_COERCIVITY_CONTINUUM_SOURCE_PROFILE_AND_CLIQUE_SLACK.md`.
+
+## 11. Important cylinder scope correction and repaired near-code theorem
+
+The beta-cylinder theorem gives, for `x in A`,
+
+> `d_A(x)>=(p-epsilon_x)_+`,
+
+and therefore some full A-code class `R subseteq N_A(x)` of size at least
+
+> `ceil((p-epsilon_x)_+/2^{k_x})`.                       `(CY3)`
+
+**Correction:** `CY3` does not imply that the repeated code of `R` equals `c(x)`. It only agrees with `c(x)` on the beta-target coordinates. The previous same-code criticality lemmas therefore apply directly only when the code difference set is empty.
+
+The repaired theorem is as follows. Let
+
+`D={i:c_R(i)!=c(x)(i)}`.
+
+Then
+
+> `D subseteq [p]\I_x`, so `|D|<=k_x`.                  `(CR1)`
+
+For every critical edge `xz`, `z in R`:
+
+- an A/U witness is complementary to the **source** code;
+- a matched-B witness can occur only in a coordinate `i in D`, and its B-row is forced to be complementary to the source on every other tight fibre;
+- if `|R|>=2`, **no outgoing orientation from `x` can use a matched-B witness**, because that endpoint is adjacent to every member of the repeated class and would create multiple common neighbours;
+- incoming matched-B witnesses are therefore the only non-scorecard escape, and there are at most `|D|<=k_x` possible endpoint types.
+
+Thus the repeated class decomposes as
+
+> `R=O dotcup I_AU dotcup I_P`,                           `(CR2)`
+
+where `O` and `I_AU` are controlled by the existing A/U complementary-witness machinery, while `I_P` uses at most `k_x` rigid matched-row feet.
+
+If one matched endpoint `w` is reused on a source set `S_w subseteq I_P`, the unique-common-neighbour hole estimate still gives
+
+> `d_overline{G[S_w]}(z)`
+> `<=epsilon_z+epsilon_w-(lambda+1)`,                    `(CR4)`
+
+so heavy reuse forces a dense source block. However `epsilon_w` is a matched-endpoint slack and is **not** automatically part of `E_U+L_A`; it must be converted through endpoint-slack machinery or a new row-overlap argument.
+
+File: `CYLINDER_REPEATED_CLASS_WITNESS_LOCALISATION.md`.
+
+This correction narrows an implicit scope leap in the previous checkpoint and must be respected in all future cylinder arguments.
+
+## 12. Verification at this checkpoint
 
 New regression support:
 
-`check_ucn_cylinder_and_linear_lambda_envelope.py`
+`check_enhanced_coercivity_continuum_and_clique_slack.py`
 
-replayed
+with frozen summary
 
-- all 1,249 graph-atlas graphs of orders 3--7;
-- 4,424 unique-common-neighbour pairs for `(UCH)`;
-- all 21 D2C graph-atlas classes and 29 critical triangle edges for the generic edge-witness lemma;
-- 10,001 exact-rational ratio-grid points on `[27/14,2]` for the `theta=13/4` envelope sign and the `theta_-` / high-regime ordering.
+`ENHANCED_COERCIVITY_CONTINUUM_CLIQUE_CHECK_SUMMARY.json`.
 
-Zero failures. Frozen summary: `UCN_CYLINDER_LINEAR_LAMBDA_CHECK_SUMMARY.json`.
+It replayed:
 
-The earlier alpha--beta/integrated-product regression also remains preserved (`632,299` algebraic checks, zero failures). Computation is audit support only; the promoted statements are the hand counting arguments.
+- 35,000 exhaustive small enhanced-fibre configurations;
+- 200,000 deterministic exact-rational alpha-overflow stress cases;
+- 127,378 exact beta-floor cases;
+- 144 exact triple-profile antiderivative identities;
+- all 33,866 tournament orientations through order six for the clique multiplicity bookkeeping;
+- 100,000 exact-rational common-foot rearrangement cases.
 
-## 11. Active next move
+Total: **496,388 checks, zero failures**. These are audit support only; the promoted statements are the hand proofs.
 
-The research now has two genuinely different surviving scales.
+The earlier UCN/cylinder and alpha--beta/integrated-product regression suites remain preserved.
 
-### A. Large unmatched ratio
+## 13. Active next move
 
-If `u/p>=27/14` asymptotically, the sublinear-`lambda` window is gone. The survivor must have `lambda=Theta(p)` and obey the explicit `(rho,theta)` envelope `(LCE)/(LTE)`.
+There are now two tightly specified live targets.
 
-Highest-value next step: **put the discarded integrated product `w_T Phi_r(N_T)` back into the linear-scale optimization.** This is the intended place where source-tuple scarcity and alpha--beta coercivity should interact; merely shaving the coarse `13/4` bound is not the objective.
+### A. Linear-`lambda` global optimization
 
-### B. Low-deficit/low-slack beta witnesses
+Do not optimize the old coarse `(LCE)` further. Use `(CEIPM)` with the explicit continuum profile `phi_3` (and, where useful, larger fixed `r`) plus the alpha-overflow term `(AOP)`. In the `theta>2` region, use the alpha-free beta floor `(HSP)`.
 
-The beta-cylinder theorem now produces a repeated A-code neighbourhood, and D2C criticality converts its edges into complementary-code unique-common-neighbour witnesses. The next structural target is an **overlap-capacity theorem for many such cylinders**: show that many low-deficit/low-slack centres cannot all reuse the same complementary near-cliques without forcing additional `E_U+L_A`, or else collapse into a rigid dual-clique/matching normal form which can be attacked directly.
+The immediate objective is a hand-certifiable reduction of the compact `(rho,theta)` survivor, ideally one that can then be combined with the sublinear-`lambda` `27/14` gap.
 
-These two attacks are complementary: the integrated-product route targets the global linear-`lambda` scale, while the cylinder-criticality route targets local equality/low-slack structure.
+### B. Low-deficit cylinder overlap
+
+Do not assume the CY3 repeated class has code `c(x)`. Instead exploit the repaired trichotomy: a low-deficit centre has at most `k_x` matched-B exceptional incoming feet, each with a rigid row-complement signature. The next theorem should bound **reuse of those matched feet across many low-deficit centres**, converting it into endpoint-slack payment `T_i` or a rigid signed-row obstruction.
+
+This is more precise than the previous informal complementary-near-clique overlap target.
 
 The separate `Q=0` / false-twin-core branch from `MAX_TRIANGLE_OR_TWIN_REDUCTION.md` remains open and has not been conflated with the triangle/partial-Boolean branch.
 
 Do not return to the closed mixed `{4,5}` selected-excess ladder, arbitrary fixed-defect enumeration, or first-proof optimization for Erdős #742.
 
-## 12. Trust boundary
+## 14. Trust boundary
 
 - Published 12/32 graph: reconstructed directly from the authoritative figure; no author-supplied adjacency file located.
 - Full-tight eventual closure: internal candidate pending external review.
 - Near-full normal form and scorecard: hand derivations.
-- Source-tuple capacity, directional Hamming, alpha--beta coercivity, integrated product, unique-common-neighbour and cylinder-criticality results: hand arguments with independent regression where stated.
+- Source-tuple capacity, directional Hamming, enhanced alpha--beta coercivity, continuum profile, unique-common-neighbour and same-code clique payment: hand arguments with independent regression where stated.
 - `(SLRG)` assumes `u=O(p)` and `lambda=o(p)`; it is not a global theorem.
-- `(LCE)/(LTE)` are asymptotic necessary conditions in the linear-`lambda` regime, not a closure theorem.
+- `(CEIPM)` is an asymptotic necessary condition, not a closure theorem.
+- The earlier cylinder pigeonhole remains valid, but its repeated class need not equal the centre code; the repaired witness-localisation theorem is the current canonical formulation.
 - The `X_3` negative control has `u=0` and is untouched by every new unmatched-layer result.
 - No all-order or eventual second-extremal theorem is claimed.
 <!-- CURRENT-STATUS:END -->
