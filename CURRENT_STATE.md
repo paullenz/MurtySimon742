@@ -3,11 +3,11 @@
 > **Active target — 18 September 2026.** The live problem is the sufficiently-large/eventual second-extremal D2C classification around `M(n)=floor((n-1)^2/4)+1`. The false all-order 2019 Dailly–Foucaud–Hansberg strengthening is not assumed. The published 2024 order-12, size-32 D2C graph is a mandatory hostile control. Murty–Simon / Erdős #742 remains preserved but is not the live optimization target.
 
 <!-- CURRENT-STATUS:START -->
-**CHECKPOINT CLASS:** `FULL_TIGHT_CLOSED_NEAR_FULL_SOURCE_SWITCHING_ENVELOPE_FRONTIER`.
+**CHECKPOINT CLASS:** `FULL_TIGHT_CLOSED_NEAR_FULL_DISTINCT_SOURCE_Q_FRONTIER`.
 
 **WORK MODE:** `EVENTUAL_D2C_MATH`.
 
-The full-tight Boolean branch remains internally closed for sufficiently large matched cores (`k>=19`). The live branch is the triangle-containing unmatched/errorful antipode regime. The strongest current compact route is the source-tuple beta-load envelope combined with switching/Hall structure. The repaired cylinder inequality remains valid but is not the generic scale route: the source-tuple theorem itself keeps its total left side only `O(p)` when `u,a=O(p)`.
+The full-tight Boolean branch remains internally closed for sufficiently large matched cores (`k>=19`). The live branch is the triangle-containing unmatched/errorful antipode regime. The strongest compact route now combines source-tuple beta-load control, switching/Hall structure, and the new distinct-source beta ceiling / beta-sensitive U-edge theorem.
 
 No global eventual second-extremal theorem is claimed.
 
@@ -98,7 +98,7 @@ hence
 
 > `q<=a floor((mu_alpha+1)a/p)<=(mu_alpha+1)a^2/p`.       `(SU)`
 
-For `x in A`, let `ell_x` be beta load and `k_x=p-ell_x` beta deficit. The source-tuple hierarchy is
+For `x in A`, let `ell_x` be beta load, `k_x=p-ell_x`, and `Y_x` the pairwise-distinct designated unmatched beta sources. The exact source-tuple hierarchy is
 
 > `sum_x binom(ell_x,r)/(p-ell_x+r)<=(1/r)binom(u,r)`    `(FDPr)`
 
@@ -110,12 +110,6 @@ The directional Hamming/product budget and enhanced alpha-beta coercivity remain
 
 Thus any sequence with `limsup u/p>=27/14` must enter a genuinely linear root-imbalance regime.
 
-Core preserved files include:
-
-- `FINITE_DEFICIT_SOURCE_TUPLE_CAPACITY_AND_RATIO_GAP.md`;
-- `ENHANCED_COERCIVITY_CONTINUUM_SOURCE_PROFILE_AND_CLIQUE_SLACK.md`;
-- `DENSE_CROSS_HAMMING_ENERGY_AND_RATIO_GAP.md`.
-
 ## 4. Cylinder route: preserved but not generic
 
 The repaired beta-cylinder theorem and all critical-witness channels remain valid, including matched-B collision control, A/U complementary witnesses, same-code crowding, complementary-pair localization, and the distribution-free complete-cylinder inequality `(DCF)`.
@@ -124,18 +118,13 @@ However `(FDPr)` implies, for `u,a=O(p)`,
 
 > `sum_x 2^{-k_x}=O(1)`,
 
-hence the entire repaired-cylinder expression
+hence
 
 > `Gamma=sum_x ceil((p-epsilon_x)_+/2^{k_x})=O(p)`.       `(CSO)`
 
-Therefore the old plan “force the `(DCF)` left side to quadratic scale” is retired. Use the cylinder machinery only for finite/equality/stability subcases unless a new theorem reduces its witness-capacity side to `O(p)`.
+Therefore the old plan “force the `(DCF)` left side to quadratic scale” remains retired. Use the cylinder machinery for finite/equality/stability subcases unless a new theorem reduces its witness-capacity side to `O(p)`.
 
-Core files:
-
-- `project/research/post_ms/2026-09-18-large-code-pair-v1/SAME_CODE_CROWDING_COMPLEMENT_PAIR_LOCALIZATION.md`;
-- `project/research/post_ms/2026-09-18-source-tuple-envelope-v1/SOURCE_TUPLE_BETA_LOAD_ENVELOPE_AND_CYLINDER_SCALE_OBSTRUCTION.md`.
-
-## 5. Exact total beta-load envelope
+## 5. Total beta-load envelope and source-root envelope
 
 Put
 
@@ -153,179 +142,195 @@ Above threshold put `R_hat=min(p,R_*)`. Since `h_alpha<=mu_alpha a<=R_hat a`,
 
 > `B_beta >= [pu-R_hat a]_+`.                             `(STL)`
 
-Hence every above-`M(n)` partial-Boolean candidate satisfies
+Hence every above-`M(n)` candidate satisfies the parameter-only sandwich
 
 > `[pu-R_hat a]_+`
 > `<=a(p-K-1)+(K+1)U_r(K)`                               `(STS)`
 
-for every `r>=3` and `0<=K<=p-r`.
+for every `r>=3`, `0<=K<=p-r`.
 
-### Continuum form
-
-If
+In linear scaling
 
 `u/p->rho`, `lambda/p->theta`, `A=2+rho-theta>0`,
 
-and `K/p->kappa in (0,1)`, then for every fixed `r>=3`,
+`c=C_0/p^2 -> theta(1+rho)-theta^2/2`,
+
+and `R=min(1,sqrt(c))`, one has
 
 > `beta:=limsup B_beta/p^2`
-> `<= A(1-kappa)+(kappa^2/r)(rho/(1-kappa))^r`.           `(CBE)`
+> `<= A(1-kappa)+(kappa^2/r)(rho/(1-kappa))^r`            `(CBE)`
 
-If `C_0/p^2->c>=0`, then `(STL)` gives
+and
 
-> `beta >= [rho-A min(1,sqrt(c))]_+`.                    `(CBL)`
+> `beta >= [rho-A R]_+`.                                  `(CBL)`
 
-For the live above-threshold linear scaling,
+The root floor gives independently
 
-> `c=theta(1+rho)-theta^2/2`.
+> `beta >= (theta-2)_+`.                                  `(RBF)`
 
-The root-imbalance floor, valid already before switching, is
+Combining `(CBE)` and `(RBF)` yields the preserved source-root envelope `(SRE)`, which remains the main compact high-`rho` tool.
 
-> `beta>=(theta-2)_+`.                                    `(RBF)`
+## 6. New exact distinct-source beta ceiling
 
-## 6. Source-root envelope: quantitative replacement for the old strict wedge
+Because `Y_x subseteq U` and the designated beta sources are pairwise distinct,
 
-Combining `(CBE)` with `(RBF)` eliminates beta load. For every `theta>2`, fixed `r>=3` and `0<kappa<1`,
+> `ell_x<=min(p,u)`.
 
-> `theta <= Theta_r(kappa;rho)`                           `(SRE)`
+Therefore
 
-with
+> `B_beta<=a min(p,u)`.                                   `(DSB)`
 
-> `Theta_r(kappa;rho)`
-> `=[4+rho-(2+rho)kappa`
-> ` +(kappa^2/r)(rho/(1-kappa))^r]/(2-kappa)`.
+In particular, for `u<=p`,
 
-Thus
+> `B_beta<=a u`.                                          `(DSB-u)`
 
-> `theta<=inf_{0<kappa<1}Theta_r(kappa;rho)`.
+This simple ceiling is structurally much stronger than `B_beta<=ap` in the small-unmatched high-root-imbalance branch.
 
-For `r=3`, the derivative at `kappa=0` is `-rho/4`, so this is strictly stronger for every fixed `rho>0` than the old endpoint line
+Combining `(DSB-u)` with the exact root-imbalance beta floor gives the finite theorem
 
-> `theta<2+rho/2`.                                        `(SBW)`
+> `lambda<=2p-1+floor(u^2/(p+u))`                         `(FDRW)`
 
-At `rho=2` the exact optimizing `kappa` is the root in `(0,1)` of
+for every selected partial-Boolean configuration with `u<=p`; no above-threshold assumption is needed.
 
-`3kappa^4-4kappa^3+14kappa^2-28kappa+3=0`,
+In continuum form, for `0<rho<1`,
 
-and gives `theta<=2.965973...`; the tiny decimal improvement is not the main point and the cleaner rational cap `3227/1088` remains useful exposition.
+> `theta<=2+rho^2/(1+rho)`.                               `(DRW)`
 
-## 7. New switching-source exclusion in the small-rho high-imbalance branch
+The source-tuple hierarchy shows that the distinct-source ceiling cannot be asymptotically saturated by a linear A-population. Consequently, if `theta>2`,
 
-When `c<1`, `(CBL)` and `(CBE)` give the parameter-only switching-source sandwich
+> `theta<2+rho^2/(1+rho)`.                                `(SDRW)`
 
-> `rho-A sqrt(c)`
-> `<=A(1-kappa)+(kappa^2/r)(rho/(1-kappa))^r`.            `(SSS)`
+For `rho<=1/2`, this implies the clean strict one-third wedge
 
-Two clean consequences are now proved.
+> `theta<2+rho/3`.                                        `(1/3W)`
 
-### Small-unmatched exclusion
-
-Every above-threshold linear-scale survivor with `theta>2` satisfies
-
-> `rho>4/25`.                                             `(RHO16)`
-
-Proof uses `r=3`, `kappa=13/20`; at the hostile endpoint `rho=4/25, theta=2`, the required strict margin is certified exactly by
-
-> `(291161/514500)^2-8/25`
-> `=67447921/264710250000>0`.
-
-Monotonicity makes the contradiction stronger as `theta` increases.
-
-### Two-fifths wedge
-
-For every above-threshold sequence with `0<rho<=1/2` and `theta>2`,
-
-> `theta<2+(2/5)rho`.                                     `(2/5W)`
-
-Thus the surviving slice is
-
-> `4/25<rho<=1/2`,
-> `2<theta<2+(2/5)rho`.
-
-The proof uses `r=3`, `kappa=2/5`; the lower-minus-upper margin is decreasing in `rho` and remains positive at `rho=1/2`, where
-
-> `(1171/2025)^2-198/625=72163/4100625>0`.
+This supersedes the previous two-fifths wedge.
 
 Core file:
 
-`project/research/post_ms/2026-09-18-source-root-switching-v1/SOURCE_ROOT_SWITCHING_ENVELOPE_AND_WEIGHTED_U_EDGE_CAPACITY.md`.
+`project/research/post_ms/2026-09-18-distinct-source-q-v1/DISTINCT_SOURCE_BETA_CEILING_AND_Q_CAPACITY.md`.
 
-## 8. New weighted criticality theorem for all U--U edges
+## 7. New switching/distinct-source sandwich and small-rho exclusion
 
-For a code `c`, put
+Combining `(DSB-u)` with the switching beta lower bound `(STL)` gives the exact finite necessary condition
 
-`n_c=|A_c|`, `t_c=|U_c|`,
+> `pu<=a(u+R_hat)`                                        `(DSS-f)`
 
-`L_c=sum_{x in A_c}epsilon_x`, `E_c=sum_{y in U_c}epsilon_y`.
+for every above-threshold candidate with `u<=p`.
 
-Every edge of `G[U]` lies in a root triangle. Choosing one triangle-edge criticality orientation for each such edge gives an A-side complementary-code witness and the unique-common-neighbour slack payment. The resulting exact inequality is
+In continuum form,
+
+> `A(rho+R)>=rho`.                                        `(DSS)`
+
+For `0<rho<1`, `theta>2`, source-tuple non-saturation makes this strict:
+
+> `A(rho+R)>rho`.                                         `(SDSS)`
+
+This yields the new exact small-unmatched exclusion
+
+> `rho>2-sqrt(3)=0.2679491924...`                         `(RHO27)`
+
+for every above-threshold linear-scale survivor with `theta>2`.
+
+The old `rho>4/25` result is therefore superseded. Together with `(1/3W)`, the clean surviving small-rho slice is now
+
+> `2-sqrt(3)<rho<=1/2`,
+>
+> `2<theta<2+rho/3`,
+
+with the stronger implicit curve `(SDSS)` available when needed.
+
+## 8. New beta-sensitive U-edge theorem
+
+Choose one preserved A-side critical witness for each oriented edge of `G[U]`. If `w_x` is the number of chosen U-edge certificates using `x in A`, then all their sources have code `bar(c(x))`, and a fixed source-witness pair certifies at most one edge.
+
+The beta-target code rule implies that for `ell_x>=2`, the complementary U-code class is disjoint from `Y_x`; for `ell_x=1`, it can meet `Y_x` in at most one vertex. Thus, with
+
+`N_1=|{x:ell_x=1}|`,
+
+> `q<=a u-B_beta+N_1`
+> ` <=a u-B_beta+a`.                                     `(BQ)`
+
+This is exact and finite.
+
+In continuum form,
+
+> `xi:=q/p^2<=A rho-beta`.                                `(CBQ)`
+
+Combining with switching gives, in the high-root-imbalance branch,
+
+> `xi<=A(rho+R)-rho`.                                     `(SQ)`
+
+The old sparse-U continuum cap is `xi<=R A^2`. Their difference factors as
+
+> `[A(rho+R)-rho]-R A^2=(1-A)(AR-rho)`.
+
+Hence whenever `theta>2` and `A<1`, `(SQ)` is strictly stronger than the old distribution-free sparse-U cap. In particular this holds throughout `0<rho<1`, because then `A<rho<1`.
+
+This removes the previously recorded high-`theta` q-information bottleneck on the entire small-unmatched branch. Near the strict switching boundary `(SDSS)`, the permitted `q/p^2` is forced to zero.
+
+## 9. Preserved weighted U-edge theorem
+
+The independent weighted criticality theorem remains useful:
 
 > `(lambda+1)q`
 > `<=sum_c [n_bar(c) E_c+t_c L_bar(c)]`.                 `(WU)`
 
-Hence, with `mu_UA=max_c max(n_c,t_c)`,
+Hence
 
-> `(lambda+1)q<=mu_UA(E_U+L_A)`.                         `(WU2)`
+> `(lambda+1)q<=mu_UA(E_U+L_A)`                          `(WU2)`
 
-Above threshold,
+and, above threshold,
 
 > `q<=mu_UA C_0/(lambda+1)`.                              `(WU3)`
 
-In a linear-scale above-threshold sequence with `theta>0`, the complementary-pair mass bound gives `mu_UA/p<=A`, hence
+Its continuum form `(WU4)/(QMIN)` remains especially useful for `0<theta<2`. For `theta>2`, `rho<1`, the new beta-sensitive `(SQ)` is the stronger route.
 
-> `xi:=q/p^2<=A c/theta=A(rho+A)/2`.                     `(WU4)`
+## 10. Continuum enhanced IPM and revised obstruction
 
-Together with `(SU)`,
+The continuum enhanced IPM `(CEIPM)` remains a valid global necessary condition. It combines directional Hamming energy, beta-deficit/U-degree product, alpha-beta fibre coercivity, alpha overflow, source-deficit profiles, U-edge supply and the scorecard.
 
-> `xi<=A min(RA,(rho+A)/2)`,                              `(QMIN)`
+The previous checkpoint identified the high-`theta` distribution-free `q` cap as the main obstruction. That obstruction is now removed for `theta>2`, `rho<1`: use
 
-where `R=min(1,sqrt(c))`.
+> `xi<=A(rho+R)-rho`
 
-Strategic scope is important:
+instead of `xi<=R A^2` there.
 
-- for `theta<2`, `A>rho`, so `(WU4)` can improve the old `A^2` sparse-U bound;
-- for `theta>2`, `A<rho`, so `(WU4)` is weaker than the old sparse-U bound and does **not** remove the high-imbalance `q` bottleneck.
+For `rho>=1`, the distinct-source ceiling degenerates to `B_beta<=ap`; `(SRE)/(CBE)` remain the stronger compact beta tools, and a beta-sensitive `q` theorem beyond the `u<p` ceiling remains desirable.
 
-This is an exact structural theorem, not a numerical heuristic.
+For `0<theta<2`, preserve `(QMIN)` as the preferred q cap and feed it into `(CEIPM)`.
 
-## 9. Continuum enhanced IPM and current obstruction
+## 11. Verification at this checkpoint
 
-The continuum enhanced IPM `(CEIPM)` remains a valid global necessary condition. It combines directional Hamming energy, beta-deficit/U-degree product, alpha-beta fibre coercivity, alpha overflow, the continuum source-deficit profile, sparse-U control and the scorecard.
-
-The advertised `CBE/CBL -> CEIPM` coupling was reassessed this run. The beta variable can now be bounded from both sides, but in the high-`theta` branch the present distribution-free `q` allowance remains too large for the enhanced IPM to exploit those bounds sharply. The new `(WU)` theorem confirms rather than removes that obstruction: it improves `q` mainly for `theta<2`, while `(SU)` remains better for `theta>2`.
-
-Therefore do **not** spend the next run merely decimal-optimizing `(CEIPM)` in the high-`theta` region. The higher-value target is a beta-sensitive/source-tuple-sensitive bound on `q`, or directly on the combined degree supply `2q+s`.
-
-For `0<theta<2`, however, `(QMIN)` is genuinely stronger and should be inserted into `(CEIPM)`.
-
-## 10. Verification at this checkpoint
-
-Preserved audits include the exact published 12/32 `X_3` reconstruction and the earlier signed-2-lift, matched-foot, A/U-overlap, same-code and source-tuple regression suites.
+Preserved audits include the exact published 12/32 `X_3` reconstruction and the earlier signed-2-lift, matched-foot, A/U-overlap, same-code, source-tuple and source-root switching suites.
 
 New audit package:
 
-`project/research/post_ms/2026-09-18-source-root-switching-v1/check_source_root_switching.py`
+`project/research/post_ms/2026-09-18-distinct-source-q-v1/check_distinct_source_q.py`
 
 with frozen summary
 
-`SOURCE_ROOT_SWITCHING_CHECK_SUMMARY.json`:
+`DISTINCT_SOURCE_Q_CHECK_SUMMARY.json`:
 
-- small-rho switching-source grid: 100,000 checks;
-- two-fifths wedge grid: 100,500 checks;
-- source-root strict-envelope grid: 1,000 checks;
-- all 21 D2C graph-atlas classes through order seven; 14 rooted triangle-edge kernel checks at maximum-degree roots;
-- **201,514 total checks, zero failures**.
+- local beta/complement code checks through `p=8`: 24,604;
+- finite root-wedge checks: 32,939;
+- finite switching-compatible parameter checks: 376,817;
+- finite switching-rejected parameter cases recorded: 56,252;
+- small-rho boundary grid checks: 50,000;
+- beta-sensitive q versus sparse-U comparisons: 40,000;
+- **580,612 total checks, zero failures**.
 
-The two proof endpoints are also certified by exact rational positive margins. These checks are audit support only; promoted statements rest on the hand proofs.
+These checks are audit support only; promoted statements rest on the hand proofs.
 
-## 11. Active next move
+## 12. Active next move
 
 Priorities, in order:
 
-1. **High `theta>2`: derive a beta/source-tuple-sensitive upper bound for `q` or `2q+s`.** The source-root/switching envelope now controls beta traffic sharply, but the independent sparse-U cap is the main information bottleneck.
-2. **Moderate `0<theta<2`: feed `(QMIN)` into `(CEIPM)`** and seek a hand-certifiable excluded region, not merely a numerical envelope.
-3. Preserve `(SRE)/(SSS)` as the compact externally reviewable bridge: they eliminate beta and all Hamming/code-distribution variables before any variational optimization.
-4. Keep the `u=0` full-tight finite exception protected. No argument in Sections 5--9 applies to the published 12/32 graph.
-5. Do not return to the closed mixed `{4,5}` selected-excess ladder and do not optimize for first-proof priority on Erdős #742.
+1. **High `theta>2`, `rho<1`: feed `(SQ)` into `(CEIPM)`** and seek a short hand-certifiable exclusion region or scorecard contradiction. Do not revert to the obsolete distribution-free `q` cap on this slice.
+2. **High `theta>2`, `rho>=1`: seek a source-tuple-sensitive analogue of `(BQ)` that remains nontrivial once `u>=p`, or a direct bound on `2q+s` using beta-deficit/source geometry.
+3. **Moderate `0<theta<2`: feed `(QMIN)` into `(CEIPM)`** and seek a hand-certifiable excluded region rather than decimal optimization.
+4. Preserve `(DSS-f)/(SDSS)` and `(BQ)/(SQ)` as compact externally reviewable bridges: they eliminate most code-distribution variables before variational optimization.
+5. Keep the `u=0` full-tight finite exception protected. No argument in Sections 6--10 suppresses the published 12/32 graph.
+6. Do not return to the closed mixed `{4,5}` selected-excess ladder and do not optimize for first-proof priority on Erdős #742.
 
 <!-- CURRENT-STATUS:END -->
