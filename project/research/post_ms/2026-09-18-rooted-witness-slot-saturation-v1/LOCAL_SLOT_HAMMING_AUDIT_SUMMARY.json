@@ -1,0 +1,9 @@
+{
+  "date": "2026-09-18",
+  "atlas_D2C_classes_through_order_7": 21,
+  "local_A_coordinate_checks": 87,
+  "zero_local_unused_coordinates": 37,
+  "failures": 0,
+  "scope": "audits the exact local collision identity H_A^+(z)=sum_{unused (x,z)} c_A(x,z) on every maximum-degree root; tight-code Hamming consequences remain hand deductions in the live partial-Boolean branch",
+  "trust_boundary": "finite audit only; promoted results are hand proofs"
+}
