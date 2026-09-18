@@ -38,17 +38,17 @@ Key packages:
 
 The [daily red-team audit](project/research/post_ms/2026-09-19-daily-red-team-audit-v1/DAILY_RED_TEAM_AUDIT.md) reviewed the preceding 24-hour research interval, using `f2e85599491d9804084e9739e1cfcdc6cc088a29` as the last pre-window comparison point and `0060acd80a376074486563bc537386fe130459d2` as the pre-audit head. GitHub reports 216 intervening commits.
 
-**Finding:** no fatal contradiction was found in the current load-bearing rooted-witness / Hall / rigid-U-witness spine. The audit nevertheless narrows the trust boundary. The Hall-density and rigid-witness checkers verify arithmetic and abstract incidence consequences; they are **not** independent end-to-end proofs that every premise holds for every realizable D2C graph. The finite source-tuple theorem remains a priority independent re-proof dependency before the newest Hall/beta interface is treated as externally stable.
+**Finding:** no fatal contradiction was found in the current load-bearing rooted-witness / Hall / rigid-U-witness spine. The trust boundary is nevertheless narrower than same-project CI alone would suggest. The finite source-tuple capacity theorem has now been independently re-derived from its two explicit shared premises — distinct physical sources in each source set and global selected-representative uniqueness for each source-coordinate obligation — including the arbitrary-subset layer-cake deficit formula. Those two graph-to-selected-system premises, and the wider graph-to-constraint interface, remain to be independently certified end-to-end.
 
 The audit independently reconstructed the project’s `X_3` order-12 graph and confirmed diameter 2 and edge-criticality for all 32 edges. The repository’s direct identification with the published Figure 1 remains an **internal figure-based certification**; this audit did not independently compare against a machine-readable author adjacency list.
 
-A deterministic repository-process defect was also found. Pre-audit `CURRENT_STATE.md` used work mode `EVENTUAL_D2C_MATH`, while `scripts/check_status_sync.py` accepts only `MATH`, `ADMIN`, `AUDIT`, `STATUS`, and `RECOVERY`; required handoff fields were also absent. Consequently Status synchronization run `35402717100`, job `105785888407`, failed at `Check every new commit`. This checkpoint repairs the live status schema and preserves that failed run as audit history rather than relabelling it as transient.
+The audit also exposed repository-process defects in the audit checkpoint itself. Commit `03356bf3203fdc9bbd35fad97c6574eb16f3dcaa` failed Status synchronization because the guard did not parse the repository’s Markdown-bold `WORK MODE` field, and failed the N30 navigation checker because valid README directory links were treated as invalid. Follow-up commit `3d17a816eb4f95b149a5f02ef1fc36bc298b6bae` repaired both issues and its Status synchronization run `35406192884` passed. Its N30 run `35406193034` then exposed a second README-hygiene defect: the daily README compression had removed protected direct reviewer-PDF links. This checkpoint restores those protected links rather than weakening the package check.
 
 ### Trust boundary
 
 The newest theorem packages are **internal candidate mathematics**. Hand derivation, same-project checker replay, GitHub CI, independent implementation, external specialist review and publication acceptance are distinct. No finite abstract parameter scan is a count of realizable D2C graphs. No global eventual second-extremal theorem is claimed.
 
-The main remaining shared-risk interface is the graph-to-constraint chain: rooted criticality certificates, finite source-tuple capacity, Hall pair localization, and their integration on realizable D2C graphs. The next audit priority is independent re-proof and graph-level regression, not additional confidence by repetition of the same abstractions.
+The main remaining shared-risk interface is the graph-to-constraint chain: rooted criticality certificates, distinct-source/selected-obligation uniqueness, Hall pair localization, and their integration on realizable D2C graphs. The next audit priority is graph-level regression and independent premise verification, not additional confidence by repetition of the same abstractions.
 
 ### Canonical preserved finite ledger
 
@@ -87,7 +87,7 @@ The eventual-D2C programme is continuing through **27 September 2026**, with a d
 
 ## Dated research updates — current and preserved history
 
-**19 September 2026 — daily adversarial audit and live-state reconciliation.** No fatal contradiction was found in the current load-bearing rooted-witness/Hall/rigid-U-witness spine. The audit explicitly distinguishes hand-derived structural claims from abstract checker support, retains the finite source-tuple theorem as an independent re-proof target, confirms `X_3` as a D2C hostile control, and records the deterministic status-synchronization failure at run `35402717100` / job `105785888407`. See the [full audit](project/research/post_ms/2026-09-19-daily-red-team-audit-v1/DAILY_RED_TEAM_AUDIT.md) and [`CURRENT_STATE.md`](CURRENT_STATE.md).
+**19 September 2026 — daily adversarial audit and live-state reconciliation.** No fatal contradiction was found in the current load-bearing rooted-witness/Hall/rigid-U-witness spine. The audit distinguishes hand-derived structural claims from abstract checker support, independently re-derives the finite source-tuple capacity theorem conditional on its two named shared premises, confirms `X_3` as a D2C hostile control, and records/repairs deterministic status/navigation/index failures rather than classing them as transient. See the [full audit](project/research/post_ms/2026-09-19-daily-red-team-audit-v1/DAILY_RED_TEAM_AUDIT.md), [independent source-tuple re-proof](project/research/post_ms/2026-09-19-daily-red-team-audit-v1/INDEPENDENT_SOURCE_TUPLE_REPROOF.md), [process repair note](project/research/post_ms/2026-09-19-daily-red-team-audit-v1/FOLLOW_UP_PROCESS_REPAIR.md), and [`CURRENT_STATE.md`](CURRENT_STATE.md).
 
 **17 September 2026 — programme reset.** External work in `Erdos742/Erdos742` changed the priority interpretation of the Murty–Simon project, while the 2024 order-12 counterexample falsified the contemplated all-order second-extremal strengthening. The active programme therefore became the sufficiently-large/eventual D2C problem. The dependency audit found no inspected fixed-order proof using the false conjecture as a premise. See [literature correction](project/research/post_ms/2026-09-17-stronger-pivot-v1/LITERATURE_CORRECTION_2024_EXCEPTION.md) and [dependency audit](project/research/post_ms/2026-09-17-stronger-pivot-v1/DEPENDENCY_AUDIT_2019_FALSE_CONJECTURE.md).
 
@@ -100,7 +100,7 @@ Earlier status snapshots are preserved under [`archive/status-snapshots/`](archi
 <!-- REDTEAM-HISTORY:START -->
 ## Hostile / red-team audit history and resulting proof hardening
 
-**19 September 2026 — daily eventual-D2C audit.** The [full report](project/research/post_ms/2026-09-19-daily-red-team-audit-v1/DAILY_RED_TEAM_AUDIT.md) found no fatal contradiction in the current rooted-witness/Hall/rigid-U-witness spine, but it tightened the evidence labels: abstract checker success is not graph-level realizability verification; the finite source-tuple theorem is singled out for independent re-proof; the four-exception direct-fan gate is strongly supported rather than fully re-certified in this audit; and the one-code exact pair-capacity/crowding branch becomes the primary forward target. The audit also found the deterministic status-schema CI failure described above and repaired the live status surfaces.
+**19 September 2026 — daily eventual-D2C audit.** The [full report](project/research/post_ms/2026-09-19-daily-red-team-audit-v1/DAILY_RED_TEAM_AUDIT.md) found no fatal contradiction in the current rooted-witness/Hall/rigid-U-witness spine, but tightened the evidence labels: abstract checker success is not graph-level realizability verification; the source-tuple capacity theorem is now independently re-derived conditional on its graph-to-selected-system premises; the four-exception direct-fan gate is strongly supported rather than fully re-certified in this audit; and the one-code exact pair-capacity/crowding branch remains the primary forward target. The audit also found and preserved deterministic repository-process regressions.
 
 **n=29 — real historical defect found and corrected.** Hostile review found a normalization bug in the first cumulative-threshold verifier: a label-group multiplicity was counted twice. The v1 certificates remain invalid as proof evidence. A corrected v2 replay, smaller exact kernel and later hand clipping argument removed the defect and much of the computational dependency. See [public-release audit](project/reviews/n29/2026-09-08-redteam-restart-v1/PUBLIC_RELEASE_AUDIT.md), [minimal kernel](project/reviews/n29/2026-09-08-redteam-restart-v1/MINIMAL_KERNEL_REPORT.json), and [reviewer-v4](project/reviews/n29/2026-09-11-reviewer-v4/PROOF.md).
 
@@ -125,12 +125,13 @@ The active chain is the **eventual dense D2C programme**:
 - [Same-code complementary-pair localization](project/research/post_ms/2026-09-18-large-code-pair-v1/)
 - [Rigid Hall witness deficit and one-code trap](project/research/post_ms/2026-09-18-rigid-hall-witness-deficit-v1/)
 - [19 September daily adversarial audit](project/research/post_ms/2026-09-19-daily-red-team-audit-v1/DAILY_RED_TEAM_AUDIT.md)
+- [Independent finite source-tuple re-proof](project/research/post_ms/2026-09-19-daily-red-team-audit-v1/INDEPENDENT_SOURCE_TUPLE_REPROOF.md)
 
-The immediate priority is to independently re-prove the finite source-tuple theorem, then combine the **exact** one-code `Ccap_P` formula with `(ONE)` and `(CROWD)` before introducing any further global scalar relaxation. In parallel, build an independent graph-level regression of the rooted/Hall quantities on realizable small D2C graphs including `X_3`.
+The immediate priority is to verify the two remaining graph-to-selected-system premises behind the source-tuple theorem directly from rooted criticality, then combine the **exact** one-code `Ccap_P` formula with `(ONE)` and `(CROWD)` before introducing any further global scalar relaxation. In parallel, build an independent graph-level regression of the rooted/Hall quantities on realizable small D2C graphs including `X_3`.
 
 ## Failures and audit gates remain first-class evidence
 
-Do not quietly delete, relabel or retrospectively clean up a failed lemma, non-closing experiment, counterexample or CI event. The pre-audit Status synchronization failure `35402717100` / `105785888407` is preserved: it was caused by a status-schema mismatch and missing handoff fields, not by transient infrastructure. Historical failures and non-promoted discovery results remain documented in the preserved pre-audit README and their native packages.
+Do not quietly delete, relabel or retrospectively clean up a failed lemma, non-closing experiment, counterexample or CI event. The pre-audit Status synchronization failure `35402717100` / `105785888407`, audit-head failures `35405621026` / `105794668021` and `35405621004` / `105794668117`, and the first-repair N30 failure `35406193034` / `105796333427` are preserved as deterministic process findings, not transient infrastructure. Historical failures and non-promoted discovery results remain documented in the preserved pre-audit README and their native packages.
 
 Finite discovery, audit, ledger promotion and external mathematical acceptance remain separate gates. Synthetic or abstract-system rejections do not alter the canonical graph frontier by themselves.
 
@@ -146,11 +147,11 @@ Finite discovery, audit, ledger promotion and external mathematical acceptance r
 
 ### Fixed-order reviewer packages
 
-- [`n=25 reviewer-v2`](releases/n25-reviewer-v2/README.md)
-- [`n=27 reviewer-v2`](releases/n27-reviewer-v2/README.md)
-- [`n=28 reviewer-v2`](releases/n28-reviewer-v2/README.md)
-- [`n=29 reviewer-v4`](releases/n29-reviewer-v4/README.md)
-- [`n=30 reviewer-v3`](releases/n30-reviewer-v3/README.md)
+- [`n=25 reviewer-v2`](releases/n25-reviewer-v2/README.md) · [manuscript](releases/n25-reviewer-v2/N25_Reviewer_Manuscript_v2.pdf) · [verification companion](releases/n25-reviewer-v2/N25_Verification_Companion_v2.pdf)
+- [`n=27 reviewer-v2`](releases/n27-reviewer-v2/README.md) · [manuscript](releases/n27-reviewer-v2/N27_Reviewer_Manuscript_v2.pdf) · [verification companion](releases/n27-reviewer-v2/N27_Verification_Companion_v2.pdf)
+- [`n=28 reviewer-v2`](releases/n28-reviewer-v2/README.md) · [manuscript](releases/n28-reviewer-v2/N28_Reviewer_Manuscript_v2.pdf) · [verification companion](releases/n28-reviewer-v2/N28_Verification_Companion_v2.pdf)
+- [`n=29 reviewer-v4`](releases/n29-reviewer-v4/README.md) · [manuscript](releases/n29-reviewer-v4/N29_Reviewer_Manuscript_v4.pdf) · [verification companion](releases/n29-reviewer-v4/N29_Verification_Companion_v4.pdf)
+- [`n=30 reviewer-v3`](releases/n30-reviewer-v3/README.md) · [manuscript](releases/n30-reviewer-v3/N30_Reviewer_Manuscript_v3.pdf) · [verification companion](releases/n30-reviewer-v3/N30_Verification_Companion_v3.pdf)
 - [`n=31 reviewer-v1`](releases/n31-reviewer-v1/README.md)
 - [`n=32 reviewer-v1`](releases/n32-reviewer-v1/README.md)
 - [`n=33 reviewer-v1`](releases/n33-reviewer-v1/README.md)
