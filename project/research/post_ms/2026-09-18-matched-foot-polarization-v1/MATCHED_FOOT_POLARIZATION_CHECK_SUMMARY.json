@@ -1,0 +1,8 @@
+{
+  "complement_pair_capacity_cases": 11000,
+  "failures": 0,
+  "inverse_live_cap_cases": 682,
+  "paired_slack_cases": 3564,
+  "self_pricing_cases": 11750,
+  "total_checks": 26996
+}
