@@ -62,7 +62,7 @@ Hence:
 >
 > `d=2η+1`
 >
-> zero/error-homogeneous partners forces at least `d` distinct vertices outside `Y union {z}` whose neighbourhood in `Y` is a singleton. One can index them as
+> error-homogeneous partners forces at least `d` distinct vertices outside `Y union {z}` whose neighbourhood in `Y` is a singleton. One can index them as
 >
 > `h_x`, `x in Y`,
 >
@@ -123,17 +123,32 @@ At `lambda=0`, a hub of slack `e` that saturates the unmatched floor has
 
 It therefore forces `2e-1` distinct private holes of the hub code.
 
-This is the first point where the strengthened fan theorem interfaces directly with the row/Hall programme: low error is possible only by creating large, highly organised complementary-code populations, and those populations are exactly what alpha multiplicity and disjoint beta-pool bounds can see.
+This is the first point where the strengthened fan theorem interfaces directly with the row/Hall programme: low error is possible only by creating large, highly organised complementary-code populations.
 
-## 6. Next use
+## 6. Precise Hall interface and the next dichotomy
 
-The next compact target should combine (4.2) with the preserved projective-twin identity
+Equation (4.2) is an A-code **multiplicity** statement, whereas the preserved projective-twin quantity
 
-`mu_alpha = max_c |alpha^{-1}(c)|`
+`mu_alpha=max_c |alpha^{-1}(c)|`
 
-and the per-source alpha capacity. Two possible outcomes are both useful:
+is an alpha-code **preimage** statement. They must not be conflated. A large value of `n_{c(z)}` may actually provide substantial alpha capacity if many matched sources have alpha code `c(z)`.
 
-1. large forced A-multiplicity in `c(z)` spills into beta obligations for the complementary zero-partner row; or
-2. large alpha multiplicity implies a large true-twin clique in a switching state of the matched 2-lift, pushing the matched core back toward the already classified low switching-defect normal forms.
+This gives the correct next dichotomy for a saturated fan.
 
-No such closure is claimed in this note.
+Let
+
+`I_z={q in P: alpha(q)=c(z)}`.
+
+- If `I_z` is small, the forced multiplicity `n_{c(z)}` can absorb alpha-oriented obligations only at those few matched sources. The other P-U obligations of the common partner row must use their own alpha codes or spill into beta codes. The preserved per-source capacity inequality can then be applied rowwise.
+- If `I_z` is large, then
+
+  `|I_z|<=mu_alpha`
+
+  forces large projective-twin multiplicity in the matched 2-lift. By the preserved alpha/projective-twin theorem, some switching state of the matched core contains a true-twin clique of size at least `|I_z|`. That pushes the matched core toward a low switching-defect normal form, where the already-developed fixed-defect classification becomes relevant.
+
+So the useful next theorem is not the false assertion that large `n_{c(z)}` automatically causes beta spill. It is a **row-incidence dichotomy** quantifying the tradeoff between
+
+1. the number of matched sources whose alpha code equals the forced private-hole code, and
+2. beta spill from the saturated complementary row.
+
+No such numerical closure is claimed here.
