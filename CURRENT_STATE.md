@@ -3,7 +3,7 @@
 > **Active target — 18 September 2026.** The live problem is the sufficiently-large/eventual second-extremal D2C classification around `M(n)=floor((n-1)^2/4)+1`. The false all-order 2019 Dailly–Foucaud–Hansberg strengthening is not assumed. The published 2024 order-12, size-32 D2C graph is a mandatory hostile control. Murty–Simon / Erdős #742 is preserved but is not the live optimization target.
 
 <!-- CURRENT-STATUS:START -->
-**CHECKPOINT CLASS:** `FULL_TIGHT_CLOSED_ROOTED_RESIDUAL_SELF_PRICED_FAN_TWO_EXCEPTION_FRONTIER`.
+**CHECKPOINT CLASS:** `FULL_TIGHT_CLOSED_ROOTED_RESIDUAL_SELF_PRICED_AU_BOUNDED_SURPLUS_DIRECT_THREE_EXCEPTION_FRONTIER`.
 
 **WORK MODE:** `EVENTUAL_D2C_MATH`.
 
@@ -11,12 +11,9 @@ The full-tight Boolean branch remains internally closed for sufficiently large m
 
 The current spine is
 
-`residual defect -> rooted-triangle transfer -> forced A-edge mass -> complete witness channels -> direct fan OR A/U fan -> false-twin blow-up stability OR self-priced complementary-pair fan cost`.
+`residual defect -> rooted-triangle transfer -> forced A-edge mass -> complete witness channels -> direct fan OR A/U fan -> bounded-surplus bipartite stability OR self-priced complementary-pair fan cost`.
 
-Two former structural escapes are now substantially narrowed:
-
-- the A/U fan alternative “perhaps its complementary code class is huge” is no longer free, because same-code crowding prices that population into the **same pair slack**;
-- the exact direct-fan equality model cannot remain an above-`M(n)` triangle-containing graph with at most two vertices outside its false-twin bipartite core.
+The direct branch has advanced materially at this checkpoint: the private-support theorem no longer requires exact false twins. A direct fan whose **total** hole surplus is at most `d-2` still has the same private-support injection, and in an above-`M(n)` triangle-containing graph of order at least 11 it requires at least **four** external exceptions. Equivalently, every live direct fan satisfies a compact `surplus OR four exceptions` dichotomy.
 
 No global eventual second-extremal theorem is claimed.
 
@@ -31,7 +28,7 @@ The published Radosavljevic--Stanic--Zivkovic (2024) Figure-1 D2C graph has been
 - rooted data `p=4,b=8,a=3,u=0,lambda=4`;
 - `q=s=f=r=0`, `Q=12`, `delta=0`, `E_U=0`, `L_A=12`, `D_M=1`.
 
-Its rooted-triangle transfer is endpoint-saturated: `Q-f=12`. At the canonical root `u=0` and `F_min=0=f`, so no positive unmatched/fan theorem below suppresses it.
+Its rooted-triangle transfer is endpoint-saturated: `Q-f=12`. At the canonical root `u=0`, `F_min=0=f`, and `A` is independent, so there is no positive direct or A/U fan forced by the live machinery.
 
 Certification:
 
@@ -48,8 +45,6 @@ There are `p` tight antipode pairs in `B` and an unmatched set `U`, `u=|U|`, so
 `b=2p+u`,
 
 `a=2p+u-lambda-1`.
-
-Every vertex of `A union U` has a Boolean code in `{0,1}^p`.
 
 Put
 
@@ -173,21 +168,9 @@ Core package:
 
 `project/research/post_ms/2026-09-18-a-edge-fan-rigidity-v1/`.
 
-## 5. Preserved A/U fan normal form
+## 5. Self-priced A/U complementary-pair branch
 
-For one A/U fan let `d=|W_x|`, and define
-
-`g_i=epsilon_x+epsilon_{w_i}-(lambda+1)`,
-
-`G_x=sum_i g_i`.
-
-Then
-
-> `2e(overline{G[W_x]})<=G_x`.                            `(EWM)`
-
-Every A-witness has the root as one of its holes. Zero-hole witnesses therefore lie in `U`; the exact zero-hole witness side is a U-clique. The one-hole model is a clique minus a matching, with the A-witness root holes classified.
-
-Put
+For one A/U fan let `d` be its order. Put
 
 `P=p+u`, `T=P-lambda-1=a-p`, `L=lambda+1`.
 
@@ -195,23 +178,7 @@ The coarse fan slack threshold remains
 
 > `S>=2d(d-T)_+`.                                         `(AUFS)`
 
-The whole-code / bounded-hole package yields the pair-local fan inequality
-
-> `d(2d-T-1)<=(1+2M_P/L)S_P`,                            `(PFC3)`
-
-for the supporting complementary code pair, where
-
-`M_P=max(N_c,N_bar c)`, `S_P=S_c+S_bar c`.
-
-Preserved package:
-
-`project/research/post_ms/2026-09-18-fan-equality-stability-v1/`.
-
-## 6. Self-priced complementary-pair fan theorem
-
-The earlier same-code crowding theorem closes the apparent large-code escape in `(PFC3)`.
-
-For code `c`, put
+For code `c`, write
 
 `N_c=|(A union U)_c|`, `n_c=|A_c|`,
 
@@ -219,21 +186,15 @@ For code `c`, put
 
 Define
 
-> `D_0=T+2(a+u)+1=5p+5u-3lambda-2`.                      `(AC0)`
-
-The preserved aligned-code self-pricing inequality is
-
+> `D_0=T+2(a+u)+1=5p+5u-3lambda-2`,                      `(AC0)`
+>
 > `S_c >= [(w_c/2)(3w_c/2-D_0)]_+`.                      `(AC1)`
 
-For `s>=0`, define
+For a complementary pair `Pi={c,bar c}` with pair slack `s`, put
 
 > `R_code(s)=max(0,floor((D_0+sqrt(D_0^2+12s))/3))`.      `(RC)`
 
-If `Pi={c,bar c}` has pair slack `S_Pi=s`, then `(AC1)` on both sides gives
-
-> `M_Pi<=R_code(s)`.                                      `(PLC)`
-
-Therefore every A/U fan supported on `Pi` obeys
+The whole-code fan theorem plus `(AC1)` gives
 
 > `d(2d-T-1)<=Psi(S_Pi)`,                                 `(SPF)`
 
@@ -241,182 +202,217 @@ where
 
 > `Psi(s)=s(1+2R_code(s)/L)`.                             `(PSI)`
 
-Define the exact integer fan cost
+Define
 
-> `C_pair(d)=min{s>=0:d(2d-T-1)<=Psi(s)}`,                `(SPC)`
+> `C_pair(d)=min{s>=0:d(2d-T-1)<=Psi(s)}`.                `(SPC)`
 
-with `C_pair(d)=0` if the left side is nonpositive. Then
+Then every A/U fan supported on `Pi` obeys
 
 > `S_Pi>=C_pair(d)`.                                      `(SPC2)`
 
-Thus “large complementary code class” is no longer a separate free branch: if it makes the fan cheap, its own pair slack has already paid for it.
-
-For distinct complementary pairs carrying fans `d_j`, disjointness of pair slacks gives
+For distinct complementary pairs carrying fans `d_j`,
 
 > `sum_j C_pair(d_j)<=S`.                                 `(SPP)`
+
+Thus a large complementary code class is no longer a free A/U escape: if it makes a fan feasible, its own pair slack has already paid for it.
+
+The fan-derived U-edge ceiling remains
+
+> `q<=sigma_0a`
+> `   +max(aR_D(T,L_A),2aR_AU^*(S))`
+> `   -(p-lambda)(p+u)+D_M-1`,                            `(QG2)`
+
+and should be intersected with the independent beta/source cap `(BQ)`.
 
 Core theorem:
 
 `project/research/post_ms/2026-09-18-fan-self-pricing-v1/SELF_PRICED_COMPLEMENT_PAIR_FANS_AND_ROOTED_GATE.md`.
 
-## 7. A/U rooted q gate
+## 6. Direct-fan hole geometry
 
-Define
+Fix an A-source `x` and its direct fan
 
-> `R_D(T,L_A)=floor((T+sqrt(T^2+4L_A))/2)`,              `(RD)`
+`D_x={y in A:xy is direct}`, `d=|D_x|>=2`.
+
+Put
+
+`W=(V(G)\{v})\N(x)`,
+
+`H_y=W\N(y)`,
+
+`h_y=|H_y|=epsilon_x+epsilon_y-(lambda+1)`,
+
+and define the **total direct-fan hole surplus**
+
+> `eta=sum_{y in D_x}h_y`.                                `(BH0)`
+
+Write
+
+`w=|W|`, `Z=V(G)\(D_x union W)`, `z=|Z|`.
+
+The rooted identities are
+
+> `w=a+epsilon_x`,                                        `(BH1)`
 >
-> `R_AU^*(S)=max{d>=0:max(2d(d-T)_+,C_pair(d))<=S}`.     `(RAU*)`
+> `z=b+1-d-epsilon_x`.                                    `(BH2)`
 
-The rooted fan gate implies
+Since `d<=a-1`, one has `w>=d+1`.
 
-> `H<=max(aR_D(T,L_A),2aR_AU^*(S))`.                     `(QG1)`
+The exact false-twin model is `eta=0`, but the new theorem does not require exact equality.
 
-Substituting `(H)` and `(FMIN)` gives the fan-derived U-edge ceiling
+## 7. New bounded-surplus private-support theorem
 
-> `q<=sigma_0a`
-> `   +max(aR_D(T,L_A),2aR_AU^*(S))`
-> `   -(p-lambda)(p+u)+D_M-1`.                           `(QG2)`
+If
 
-Intersect `(QG2)` with the independent beta-sensitive cap `(BQ)`. Both now constrain the same `q` in
+> `eta<=d-2`,                                              `(BH5)`
 
-> `Q=p(p+u-1)+q`
+then at least two leaves have zero holes. Choosing one such leaf `y_0` gives `N(y_0)=W`.
 
-and the residual identity `(RQ3)`.
+Triangle-edge criticality then yields an injection
 
-With
+> `phi:W^+ -> Z`,                                         `(BH7)`
 
-`d_D=ceil(H/a)`, `d_C=ceil(H/(2a))`,
+where
 
-a convenient exact two-fan contradiction is
+`W^+={t in W:d_{G[W]}(t)>0}`,
 
-> `d_D(d_D-T)_+>L_A`                                     `(RG-D)`
+such that
 
-and simultaneously
+> `N(phi(t)) intersect W={t}`.                            `(BH8)`
 
-> `max(2d_C(d_C-T)_+,C_pair(d_C))>S`.                    `(RG-C)`
+The reverse triangle-edge orientation would require at least one hole incidence on `{t,q}` for every one of the other `d-1` leaves, contradicting `eta<=d-2`.
 
-A diagnostic replacing all actual slacks by `C_0` is still too coarse to close the generic branch; the local/actual slack information is essential.
+Thus
 
-## 8. Direct branch: false-twin private support
-
-The exact zero-surplus direct fan has false-twin leaves. Let `D` be any false-twin class in a D2C graph, `d=|D|>=2`, with common open neighbourhood `W`, `w=|W|`. Put
-
-`Z=V(G)\(D union W)`, `z=|Z|=n-d-w`,
-
-`W^+={x in W:d_{G[W]}(x)>0}`, `t=|W^+|`.
-
-For every `x in W^+`, triangle-edge criticality forces a distinct private witness `y in Z` satisfying
-
-> `N(y) intersect W={x}`.                                 `(FT-private)`
-
-Hence
-
-> `t<=z`,                                                  `(FT1)`
+> `t:=|W^+|<=z`,                                          `(BH9)`
 >
-> `e(G[W])<=binom(min(w,z),2)`,                           `(FT4)`
+> `e(W,Z)<=zw-t(w-1)`,                                   `(BH11)`
 >
-> `2e(overline{G[W]}) >= (d+2w-n)_+(n-d-1)`.             `(FT5)`
+> `e(G[W])<=binom(t,2)`.                                 `(BH12)`
 
-The private witnesses also give
+Since `e(D_x,W)=dw-eta`,
 
-> `e(W,Z)<=zw-t(w-1)`,                                   `(FT8)`
+> `m<=w(n-w)+binom(z,2)-t(w-1)+binom(t,2)-eta`.          `(BH13)`
 
-so
+Equivalently, every direct fan satisfies the structural dichotomy
 
-> `m<=w(n-w)+binom(z,2)-t(w-1)+binom(t,2)`.              `(FT10)`
-
-At `z=0`, this forces
-
-> `G=K_{d,w}`.                                            `(FT7)`
+> `eta>=d-1`,
+>
+> **or** the private-support injection `(BH7)-(BH8)` holds. `(BH10)`
 
 Core theorem:
 
-`project/research/post_ms/2026-09-18-fan-self-pricing-v1/FALSE_TWIN_PRIVATE_SUPPORT_AND_BIPARTITE_STABILITY.md`.
+`project/research/post_ms/2026-09-18-direct-fan-three-exception-v1/DIRECT_FAN_BOUNDED_SURPLUS_THREE_EXCEPTION_GATE.md`.
 
-## 9. New two-exception false-twin second-extremal gate
+## 8. New bounded-surplus three-exception second-extremal gate
 
 Let
 
-> `B_w=floor(n^2/4)-w(n-w)>=0`.                           `(TE4)`
+> `B_w=floor(n^2/4)-w(n-w)`.
 
-Since
+From `(BH13)`,
 
-> `floor(n^2/4)-M(n)=floor(n/2)-1`,                      `(TE5)`
-
-`(FT10)` gives the exact sufficient second-extremal criterion
-
-> `B_w+t(w-1)-binom(t,2)-binom(z,2)`
+> `B_w+eta+t(w-1)-binom(t,2)-binom(z,2)`
 > ` >= floor(n/2)-1`
 >
-> ` ==> m<=M(n)`.                                         `(TE6)`
+> ` ==> m<=M(n)`.                                         `(BH14)`
 
-This already closes the internally active `z=2` case for `n>=7`. More precisely:
+The low-exception cases now close throughout the whole total-hole range `eta<=d-2`:
 
-- `z=0`: `G` is complete bipartite;
-- `z=1`: `t<=1`, but any edge of `G[W]` would require two active endpoints, so `W` is independent and `G` is triangle-free;
-- `z=2` and `G[W]` nonempty: `t=2`, and `(TE6)` holds for every `n>=7`, hence `m<=M(n)`;
-- `z=2` and `W` independent: a direct triangle-edge criticality argument shows `G` is triangle-free. If `Z={r,s}` formed a triangle `r-s-x-r`, criticality of `rx` and `sx` forces `N_W(r)=N_W(s)={x}`, after which the triangle edge `rs` has no possible criticality witness.
+- `z<=1`: `W` is independent and the graph is triangle-free;
+- `z=2`, `G[W]` nonempty: `t=2` and `(BH14)` gives `m<=M(n)` for `n>=7`;
+- `z=2`, `W` independent and triangle-containing: triangle-edge criticality gives `d_W(r),d_W(s)<=eta+1`, hence `m<=dw+eta+3<=M(n)`;
+- `z=3`, `G[W]` nonempty: `(BH14)` gives `m<=M(n)` for `n>=11`;
+- `z=3`, `W` independent: a complete four-case analysis of `J=G[Z]` (`0,1,2,3` Z-edges) gives `m<=M(n)` whenever the graph is triangle-containing.
 
-Therefore:
+The two nontrivial incidence bounds in the independent `z=3` analysis are:
 
-> **If `n>=7`, a D2C graph with a false-twin class and `z<=2` is either complete bipartite, triangle-free, or has `m<=M(n)`.** `(TE-main)`
+- if `J=P_3`, and `E=e(W,Z)-w`, then
 
-Consequently, in the live triangle-containing above-`M(n)` branch,
+  > `E<=eta+2`;                                            `(BH29)`
 
-> `z>=3`                                                   `(TE13)`
+- if `J=K_3`, then criticality of the Z-edges forces singleton W-types on a vertex cover of `K_3`, and
 
-for every false-twin class.
+  > `E<=eta+1`.                                            `(BH33)`
 
-For an exact zero-surplus rooted direct fan of order `d`,
+Hence the main theorem is:
 
-> `z=b+1-d-epsilon_x`,
+> **If `n>=11`, a direct fan of order `d>=2` with `eta<=d-2` and `z<=3` occurs in a D2C graph, then the graph is triangle-free or `m<=M(n)`.** `(BH-main)`
 
-so any live survivor must satisfy
+Therefore every live triangle-containing above-`M(n)` candidate of order at least 11 satisfies, for every direct fan,
 
-> `d+epsilon_x<=b-2`.                                     `(ZF-gate)`
+> `eta>=d-1`,
+>
+> **or**
+>
+> `z>=4`.                                                   `(BH37)`
 
-Core theorem:
+Using `z=b+1-d-epsilon_x`, equivalently
 
-`project/research/post_ms/2026-09-18-fan-self-pricing-v1/FALSE_TWIN_TWO_EXCEPTION_SECOND_EXTREMAL_GATE.md`.
+> `eta>=d-1`,
+>
+> **or**
+>
+> `d+epsilon_x<=b-3`.                                     `(BH38)`
 
-This is the first direct-branch result in the current fan programme that reaches the actual `M(n)` threshold rather than only producing a sparsity estimate.
+This strictly improves the old exact-false-twin gate `z>=3` / `d+epsilon_x<=b-2` and extends it to nonzero bounded total hole mass.
 
-## 10. Verification
+For an exact zero-surplus direct fan (`eta=0`), every live survivor now satisfies
 
-Earlier graph-atlas and arithmetic checks remain preserved, including:
+> `z>=4`, `d+epsilon_x<=b-3`.                             `(BH40)`
 
-- all 21 D2C graph-atlas classes through order seven for the fan normal form / equality kernels;
-- whole-code/hybrid fan profile: **12,445,875** exact checks, failures `0`;
-- earlier complementary-pair fan packing: **38,342,788** primitive feasible cases, failures `0`.
+If instead `d+epsilon_x>=b-2`, then `(BH38)` forces `eta>=d-1`, so
 
-New independent audits at this checkpoint:
+> `sum_{y in D_x}epsilon_y`
+> ` >= d(lambda+2-epsilon_x)-1`.                          `(BH41)`
 
-- aligned-code local inversion `(AC1)->(PLC)`: **915,945** exact feasible triples, failures `0`;
-- self-priced substitution `(PFC3)+(PLC)->(SPF)`: **24,942,685** primitive feasible cases, failures `0`;
-- false-twin support on all 21 D2C graph-atlas classes through order seven: **25** false-twin classes, **2** internally active `W` vertices/private-witness tests, **25** support-cap tests and **25** strengthened missing-floor tests, failures `0`;
-- two-exception atlas regression: **21** false-twin classes with `z<=2` (`17` with `z=0`, `0` with `z=1`, `4` with `z=2`), with no triangle-containing `z=2` class and no failures.
+Together with the preserved degree floor, this gives
 
-These are audit support only. The promoted statements rest on the hand proofs.
+> `L_A>=epsilon_x`
+> `    +max{d(d-T)_+, d(lambda+2-epsilon_x)-1}`.          `(BH42)`
+
+Thus the near-boundary direct branch now self-prices locally in the same qualitative sense as the complementary-pair A/U branch.
+
+## 9. Verification
+
+Earlier audits remain preserved, including the A/U whole-code/profile and complementary-pair self-pricing checks, the graph-atlas fan checks, and the exact two-exception false-twin audit.
+
+New independent audit support for the bounded-surplus direct theorem:
+
+- integer envelope checks (`z=2/3`, active and independent cases): **667,417**;
+- `P_3` incidence inequalities: **29,700**;
+- `K_3` incidence inequalities: **28,561**;
+- exact `eta=0,z=3` quotient regression: **16,912** candidate type models, including **43** D2C models and **17** triangle-containing D2C models, all with `m<=M(n)`;
+- total new checks: **742,590**, failures `0`.
+
+These are audit support only; the promoted statements rest on the hand proofs.
 
 Checker and frozen summary:
 
-`project/research/post_ms/2026-09-18-fan-self-pricing-v1/check_fan_self_pricing_and_false_twins.py`
+`project/research/post_ms/2026-09-18-direct-fan-three-exception-v1/check_direct_fan_three_exception.py`
 
-`project/research/post_ms/2026-09-18-fan-self-pricing-v1/FAN_SELF_PRICING_AUDIT_SUMMARY.json`.
+`project/research/post_ms/2026-09-18-direct-fan-three-exception-v1/DIRECT_FAN_THREE_EXCEPTION_AUDIT_SUMMARY.json`.
 
-## 11. Live next move
+## 10. Live next move
 
 Do not return to the closed mixed `{4,5}` selected-excess ladder and do not optimize for first-proof priority on Erdős #742.
 
-The previous generic “large complementary-code-class/Hall alternative” has been absorbed by `(PLC)/(SPF)`. The exact direct false-twin branch is also closed through two external exceptions in the live triangle-containing above-threshold regime.
+The direct branch and A/U branch now both have genuine local self-pricing mechanisms:
 
-The highest-value next moves are now:
+- **direct:** `eta>=d-1` or at least four external exceptions, with `(BH42)` pricing the near-boundary alternative into local A-slack;
+- **A/U:** `S_Pi>=C_pair(d)` on the actual supporting complementary code pair.
 
-1. **A/U branch:** combine the self-priced fan cost `(SPC)/(SPP)` and fan-derived `q` ceiling `(QG2)` with the beta/source-tuple cap `(BQ)/(IST)`, aiming for a compact residual contradiction rather than another free-variable optimization.
-2. **Direct branch:** extend the private-support theorem from exact false twins to bounded-hole direct fans. The exact equality model now has a concrete target: any above-threshold triangle-containing survivor needs at least three external exceptions.
-3. **Rooted synthesis:** feed the improved direct and A/U branch bounds into `F_min`; the eventual theorem should come from showing that neither stability model can absorb the rooted A-edge demand below `D_M` once the core is sufficiently large.
-4. Keep `X_3` explicit throughout. It has `u=0`, `F_min=0` and remains a required finite exception.
+The highest-value next move is therefore **rooted synthesis**, not another standalone fan lemma:
 
-The separate triangle-free / false-twin-core branch remains distinct and should use the known triangle-free second-extremal results rather than be reproved here.
+1. replace the old global direct-fan radius `R_D(T,L_A)` inside the rooted fan gate by the source-resolved dichotomy `(BH38)/(BH42)`;
+2. combine that direct local cost with the A/U pair cost `(SPC)/(SPP)` and the matched-B cap `sigma_0a` to upper-bound the A-edge mass `f` demanded by `(FMIN)`;
+3. keep `q` live and intersect the resulting rooted gate with `(BQ)`, because `Q=p(p+u-1)+q` is the exact rooted-triangle transfer variable;
+4. look for a compact contradiction in `delta=r-f<D_M`, rather than reverting to a many-variable continuum optimization.
+
+A secondary direct-branch target, if the synthesis stalls, is the next stability layer `eta>=d-1`: determine whether that hole surplus can be charged globally without reusing the source slack `epsilon_x` too many times.
+
+The separate triangle-free branch remains distinct and should use the known triangle-free second-extremal results rather than be reproved here.
+
+Keep `X_3` explicit throughout. It has `u=0`, `f=0`, `F_min=0` and remains a required finite exception.
 
 <!-- CURRENT-STATUS:END -->
