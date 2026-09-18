@@ -3,11 +3,11 @@
 > **Active target — 18 September 2026.** The live problem is the sufficiently-large/eventual second-extremal D2C classification around `M(n)=floor((n-1)^2/4)+1`. The false all-order 2019 Dailly–Foucaud–Hansberg strengthening is not assumed. The published 2024 order-12, size-32 D2C graph is a mandatory hostile control. Murty–Simon / Erdős #742 work remains preserved but is not the live optimization target.
 
 <!-- CURRENT-STATUS:START -->
-**CHECKPOINT CLASS:** `FULL_TIGHT_CLOSED_NEAR_FULL_BOOLEAN_FAN_ROW_AND_CLIQUE_CAPACITY_FRONTIER_INTERNAL_CANDIDATES`.
+**CHECKPOINT CLASS:** `FULL_TIGHT_CLOSED_NEAR_FULL_QUADRATIC_A_SLACK_SWITCHING_STABILITY_AND_LARGE_ROW_COVER_INTERNAL_CANDIDATES`.
 
-**WORK MODE:** `EVENTUAL_D2C_MATH`. The full-tight Boolean branch remains internally closed for sufficiently large matched cores (`k>=19` in the preserved theorem). The active work is the unmatched/errorful antipode branch. The live objective is now to turn the strengthened U-antipode/row structure into A-side maximum-degree slack and hence into the exact second-extremal defect.
+**WORK MODE:** `EVENTUAL_D2C_MATH`. The full-tight Boolean branch remains internally closed for sufficiently large matched cores (`k>=19` in the preserved theorem). The active branch is the unmatched/errorful antipode regime. This checkpoint converts large zero-signed pieces of the tight-pair core into **quadratic A-side degree slack**, prices every exact `tau<=2` unmatched-row kernel, and forces any above-`M(n)` near-full candidate into a high switching-complexity / high row-cover regime.
 
-## 1. Scope and hostile control
+## 1. Scope and mandatory hostile control
 
 `M(n)=floor((n-1)^2/4)+1` is a comparison threshold, not an assumed all-order theorem.
 
@@ -18,9 +18,9 @@ The published Radosavljevic--Stanic--Zivkovic (2024) graph has been reconstructe
 - isomorphic to the project's `X_3`;
 - full-tight data `k=4,b=8,a=3,r=0,F=empty`.
 
-See `PUBLISHED_12_VERTEX_EXCEPTION_FIGURE_CERTIFICATION.md` and its checker/summary. All eventual statements below leave this control untouched.
+See `PUBLISHED_12_VERTEX_EXCEPTION_FIGURE_CERTIFICATION.md` and its checker/summary. Every eventual statement below leaves this control untouched.
 
-## 2. Preserved root and defect framework
+## 2. Root / defect and near-full Boolean framework
 
 For a maximum-degree root `v`, write
 
@@ -28,250 +28,318 @@ For a maximum-degree root `v`, write
 
 `Q=e(G[B])`, `F=G[A]`, `delta=b(n-b)-m=r-e(F)`.
 
-For a rooted antipode `uw`,
+Let the complete tight-antipode matching in `B` have `p` pairs
 
-`uw notin E(G)`, `N(u) cap N(w)={v}`,
+`P_i={q_i,q_i'}`, `i=1,...,p`,
 
-and
+and let `U=B\P`, `u=|U|`, so `b=2p+u`.
 
-`epsilon_u+epsilon_w=lambda+1+eta(uw)`,                         `(AS)`
+Every vertex of `A union U` chooses exactly one endpoint from every tight pair, hence has a partial Boolean code in `{0,1}^p`. Every two tight fibres are joined by a perfect matching.
 
-where `epsilon_x=b-d(x)` and `eta(uw)` counts vertices outside `{u,w,v}` adjacent to neither endpoint. Tight antipodes have `eta=0` and form a matching.
+Write `q=e(G[U])`, `s=e_G(A,U)`, `f=e(G[A])`. Exact identities:
 
-For `n>=14`, the all-private edge-witness pricing theorem excludes the all-private branch above `M(n)` whenever a maximum-degree root lies in a triangle. `MAX_TRIANGLE_OR_TWIN_REDUCTION.md` remains the scope repair for a maximum root with `Q=0`; the false-twin-core branch is still open.
+`Q=p(p+u-1)+q`,
 
-## 3. Full-tight branch remains closed internally
+`r=(p+u)(a-p)+p-s-q`,
 
-If tight antipodes cover all of `B`, write `B=P_1 dotcup ... dotcup P_k`, `|P_i|=2`. Then `G[B]` is a 2-lift of `K_k`, every A-vertex is a Boolean transversal, and the realised A-code support covers the full-tight orientation graph. The complete fixed switching-defect hierarchy is internally closed for `k>=19`; see `FULL_TIGHT_SWITCHING_BRANCH_EVENTUAL_CLOSURE.md`.
+`delta=(p+u)(a-p)+p-s-q-f`.
 
-Do not reopen the fixed-defect ladder as the main attack.
+For `epsilon_z=b-d(z)`, put
 
-## 4. Near-full partial Boolean normal form
+`E_U=sum_{y in U}epsilon_y=u(p+u-1)-2q-s`,
 
-Let the complete tight matching have `p` pairs `P_i={u_i,w_i}`, let `P` be their union, and put `U=B\P`, `u=|U|`, so `b=2p+u`.
+`L_A=sum_{x in A}epsilon_x=a(p+u)-s-2f`.
 
-Write `q=e(G[U])`, `s=e_G(A,U)`, `f=e(G[A])`. Every vertex of `A union U` chooses exactly one endpoint from every tight pair, giving a partial Boolean code in `{0,1}^p`.
+If `p>=2`, private A-feet for root edges are impossible, so every unmatched `y in U` has an errorful antipode. U--U antipodes have complementary Boolean codes.
 
-Exact identities:
+Main files: `NEAR_FULL_TIGHT_MATCHING_NORMAL_FORM.md`, `GLOBAL_SLACK_DEFECT_CRITERION.md`.
 
-`Q=p(p+u-1)+q`,                                                `(NF1)`
+## 3. Exact second-extremal scorecard
 
-`r=(p+u)(a-p)+p-s-q`,                                         `(NF2)`
-
-`delta=(p+u)(a-p)+p-s-q-f`,                                   `(NF3)`
-
-`E_U:=sum_{y in U}epsilon_y=u(p+u-1)-2q-s`,                    `(NF4)`
-
-`L_A:=sum_{x in A}epsilon_x=a(p+u)-s-2f`.                      `(NF5)`
-
-If `p>=2`, private A-feet for B-root edges are impossible, so every `y in U` has an errorful antipode. U--U antipodes have complementary partial codes. If `y in U` is antipodal to a matched endpoint `q` with tight mate `q'`, then `c(y)=alpha(q)` and
-
-`eta(yq)=epsilon_y-epsilon_q'`.
-
-Main file: `NEAR_FULL_TIGHT_MATCHING_NORMAL_FORM.md`.
-
-## 5. Exact global slack criterion
-
-Let `T=sum_z epsilon_z`. Then for any graph at a maximum-degree root
+Let `T=sum_z epsilon_z`. Then
 
 `T=nb-2m`,
 
-`2 delta=T-b lambda`.                                          `(GS1)`
+`2 delta=T-b lambda`.
 
 Moreover
 
-> `m<=M(n)` iff `T>=floor(n(lambda+2)/2)-2`.                     `(GS2)`
+> `m<=M(n)` iff `T>=floor(n(lambda+2)/2)-2`,
 
-Hence
+and parity gives
 
-> `m>M(n) ==> T<=floor(n(lambda+2)/2)-4`.                        `(GS3)`
+> `m>M(n) ==> T<=floor(n(lambda+2)/2)-4`.
 
-In near-full form,
+In the near-full normal form,
 
-`T=p(lambda+1)+E_U+L_A`,                                       `(GS4)`
+`T=p(lambda+1)+E_U+L_A`.
 
-`2 delta=E_U+L_A+p-lambda(p+u)`.                               `(GS5)`
+Put
 
-At `lambda=-1`, the threshold is `E_U+L_A>=2p+u-2`; an above-threshold graph has `E_U+L_A<=2p+u-4`. At `lambda=0`, the threshold is `E_U+L_A>=3p+2u-2`.
+`c_lambda=ceil(lambda(lambda+2)/2)`
 
-This is the correct scorecard: support arguments matter only if they ultimately force `E_U+L_A` or equivalent defect payment.
+and
 
-File: `GLOBAL_SLACK_DEFECT_CRITERION.md`.
+`S_req=p lambda+3p+u lambda+2u-c_lambda-2`.
 
-## 6. Preserved unmatched-row/Hall structure
+Then
 
-For `y in U`, let `q_i` be its chosen endpoint in `P_i`, let `K_y` be the graph on `[p]` induced by adjacency among the `q_i`, and put `L_y=bar K_y`.
+> `m<=M(n)` iff `E_U+L_A>=S_req`,
 
-After translation by `bar c(y)`, the P--U witness constraints are
+while
 
-`{A_i,{i}}`, with `A_i=N_{L_y}(i)`.                             `(ROW)`
+> `m>M(n) ==> E_U+L_A<=S_req-2`.                         `(GS-A)`
 
-Preserved exact results from `UNMATCHED_ROW_KERNEL_CAPACITY_STABILITY.md`:
+At `lambda=-1`, `S_req=2p+u-2`, so above threshold forces
 
-- `tau(Psi(K))=1` iff `K=K_p` or `K=K_{p-1} dotcup K_1`;
-- complete classification of all `tau<=2` rows;
-- fixed row cover implies a finite true-twin kernel;
-- `alpha(q_i) Delta bar c(y)=N_{L_y}(i)` and `beta_i(y) Delta bar c(y)={i}`;
-- matched-antipode eligibility is exactly isolation in `L_y`;
-- per-source Hall capacity gives `B_beta>=pu-W_alpha` and `s>=pu-W_alpha`;
-- alpha-code preimage multiplicity is the switching true-twin multiplicity of the matched 2-lift;
-- complementary beta pools are disjoint for `p>=3`.
+`E_U+L_A<=2p+u-4`.
 
-## 7. New Boolean antipode-fan payment
+This is the live numerical scorecard.
 
-Let `J_U` be the U--U antipode graph. Fix `z in U`, let `Y=N_{J_U}(z)`, `d=|Y|`. All partners in `Y` have code `bar c(z)` and therefore share matched P-neighbours.
+## 4. Preserved U-antipode/fan structure
 
-Pricing every edge of `G[Y]` through D2C criticality gives
+For a U--U antipode hub `z`, let `Y=N_{J_U}(z)`, `d=|Y|`. All partners have code `bar c(z)`. The Boolean antipode-fan theorem gives
 
-> `sum_{y in Y} eta(yz) >= binom(d,2)+bar e(G[Y])`.               `(BAF)`
-
-In particular
-
-`2 sum_y eta(yz)>=d(d-1)`.                                     `(BAF0)`
+`sum_{y in Y} eta(yz)>=binom(d,2)+bar e(G[Y])`.
 
 Globally,
 
 `4 sum_{e in E(J_U)}eta(e)`
 
-` >= sum_z d(z)(d(z)-1)+2 sum_z bar e(G[N_{J_U}(z)])`.           `(BAF-global)`
+` >= sum_z d(z)(d(z)-1)+2 sum_z bar e(G[N_{J_U}(z)])`.
 
-This improves the old general branching coefficient from 6 to 4 on the U--U antipode graph and removes the abstract unit-error `K_{1,4}` obstruction from the partial-Boolean branch.
-
-File: `BOOLEAN_ANTIPODE_FAN_PAYMENT.md`.
-
-Independent graph-atlas regression through order seven: 21 D2C classes, 50 maximum-degree roots, 9 roots with a tight pair, 3 U-antipode fan centres, one branching fan, zero fibre or BAF violations, minimum margin 0. See `check_boolean_antipode_fan_payment.py` and `BOOLEAN_ANTIPODE_FAN_PAYMENT_CHECK_SUMMARY.json`.
-
-## 8. Improved unmatched slack floors
-
-Let `Z={y in U:epsilon_y=0}`. A zero-slack unmatched vertex cannot have a matched antipode, so assign it to a U-hub `z`. If `d_z` zero-slack partners are assigned to `z`, then
-
-`eta_z=epsilon_z-lambda-1>=1`
-
-and BAF gives
-
-> `d_z<=2eta_z+1=2(epsilon_z-lambda-1)+1`.                       `(HC)`
-
-Consequently:
+Consequences retained at this checkpoint:
 
 - `lambda=-1`: `E_U>=ceil(u/4)`;
-- `lambda>=0`, zeros present: `E_U>=ceil(u/2)+lambda`;
-- universally for `lambda>=0`: `E_U>=min(u,ceil(u/2)+lambda)`.
+- `lambda>=0`: `E_U>=min(u,ceil(u/2)+lambda)`;
+- saturated fans force odd clique partner sets, regular tournament charging, and distinct external private holes of the hub code;
+- fan Hall capacity gives the true-twin / beta-sphere dichotomy recorded in `SATURATED_FAN_ROW_CAPACITY_DICHOTOMY.md`.
 
-In particular at `lambda=0`, `E_U>=ceil(u/2)` rather than the previous `ceil(u/3)`.
+These results remain available but the current advance comes from pricing A-side private feet directly.
 
-At `lambda=-1`, any above-`M(n)` candidate must therefore have at least
+## 5. Matched-target private-foot slack transfer
 
-`4+ceil(u/4)`
+Let `s,t in P` be an edge between matched-core endpoints in distinct fibres and let `t'` be the tight mate of `t`. If `h in A` certifies criticality of `st` from source `s` toward target `t`, so
 
-maximum-degree vertices in `A`.
+`h~s`, `h not~t`, `N(h) cap N(t)={s}`,
 
-## 9. Saturation is rigid: clique partners and private holes
+then every A/U-neighbour of `h` must select `t'`. Comparing degrees of `h` and `t'` gives
 
-If one fan saturates `(HC)`, with `d=2eta+1`, equality in BAF forces:
+> **PRIVATE-FOOT SLACK TRANSFER**
+>
+> `epsilon_h>=epsilon_t'+1`.                              `(PF)`
 
-- `G[Y]=K_d`;
-- the partner-edge charges form a regular tournament;
-- used holes are external and have hub code `c(z)`.
+This is valid throughout the partial-Boolean near-full regime, not only under a special signing.
 
-A hole certifying an edge from source `x in Y` satisfies
+File: `MATCHED_PRIVATE_FOOT_SLACK_AND_COMPLETE_ROW_QUADRATIC_EXCLUSION.md`.
 
-`N(h) cap Y={x}`.
+## 6. Zero-signing subcore quadratic A-slack theorem
 
-Different sources therefore need distinct holes. Hence at least `d` distinct external hub-code vertices are forced, one private to each source. The two complementary code classes contain at least `2d+1` vertices in `A union U`, and
+Suppose that after switching there is a coordinate set `R`, `|R|=s_0>=3`, on which every fibre pair is parallel. The selected endpoints on `R` form a clique `K_{s_0}`, and their mates form another `K_{s_0}`.
 
-> `n_{c(z)}>=max(0,2d+1-u)`                                      `(PH-A)`
+Rooted clique criticality supplies at least `s_0-1` restricted co-singleton A-code classes from the first clique and at least `s_0-1` restricted singleton classes from the second. These classes give the halfspace separators needed to amplify `(PF)` edge-by-edge: if one A-foot is reused on `t` critical clique edges, its degree slack is at least `t`.
 
-when U is too small to host all holes.
+Summing over all physical edges of the two cliques gives the hand theorem
 
-The cheapest saturated fan (`eta=1,d=3`) is therefore a triangle of three partners plus three distinct hub-code private holes, not an abstract `K_{1,4}` error star.
+> **ZERO-SIGNING SUBCORE QUADRATIC SLACK**
+>
+> `L_A>=s_0(s_0-1)`.                                      `(ZS)`
 
-File: `SATURATED_BOOLEAN_FAN_PRIVATE_HOLES.md`.
+This is the central new A-side pricing result.
 
-## 10. Fan-to-row Hall dichotomy
+Finite support bookkeeping was independently replayed on 705,356 restricted-sphere configurations for subcore sizes `3,...,9`, with zero failures and minimum margin 0. The exact arithmetic reductions were replayed on 1,230,639 integer configurations, also with zero failures. These are audit checks only.
 
-For the common partner row put `A_i=N_L(i)`,
+Files:
 
-`m(C)=|{i:A_i=C}|`, `D=max_C m(C)`.
+- `ZERO_SIGNING_SUBCORE_QUADRATIC_SLACK_AND_TAU2_ROWS.md`;
+- `check_zero_signing_subcore_quadratic_slack_and_tau2_rows.py`;
+- `ZERO_SIGNING_SUBCORE_QUADRATIC_SLACK_AND_TAU2_ROWS_CHECK_SUMMARY.json`.
 
-Because
+The earlier full-zero-signing special case gives
 
-`alpha(q_i)=c(z) Delta A_i`,                                    `(FR1)`
+`L_A>=p(p-1)`.
 
-`D` is both the largest repeated alpha code among the selected matched sources and a true-twin clique size in the row graph; the matched-core projective-twin parameter satisfies `mu_alpha>=D`.
+Its independent support/arithmetic regression covered 1,941,976 + 414,442 configurations with zero failures; see `MATCHED_PRIVATE_FOOT_SLACK_AND_COMPLETE_ROW_QUADRATIC_EXCLUSION*`.
 
-For a fan with `d` partners, per-source capacity gives
+## 7. Complete-row and one-code global collapse
 
-> `B_beta(Y)>=max(0,dp-Da)`.                                     `(FAS)`
+If one unmatched row has `K_y=K_p`, the entire matched 2-lift switches to
 
-If `J` is the set of coordinates with `n_{alpha(q_i)}<d`, then each `i in J` forces a distinct beta code `c(z) Delta {i}` and
+`K_p dotcup K_p`.
 
-> `|J|>=max(0,p-D floor(a/d))`.                                  `(FBS)`
+The other exact one-code row `K_y=K_{p-1} dotcup K_1` does the same after switching the isolated fibre. Hence
 
-Thus every saturated low-error fan produces either
+> any row with `tau(Psi(K_y))=1` forces the full matched core to the zero-signing switching class.
 
-1. a large true-twin/alpha class in the matched core, or
-2. a large explicit radius-one beta-code set adjacent to the fan and nonadjacent to its hub.
+Therefore every one-code row forces
 
-File: `SATURATED_FAN_ROW_CAPACITY_DICHOTOMY.md`.
+`L_A>=p(p-1)`.
 
-## 11. New pricing of the cheap complete row
+More generally, if the row sign graph `L_y=bar K_y` is complete bipartite, it is a cut, so switching one side again kills every sign and yields the same quadratic slack bound.
 
-The one-code row `K_y=K_p` was previously cheap only from the support viewpoint. It actually creates the B-clique
+Files:
 
-`C_y={y,q_1,...,q_p}`
+- `COMPLETE_ROW_GLOBAL_NORMAL_FORM.md`;
+- `ONE_CODE_ROW_GLOBAL_COLLAPSE_AND_QUADRATIC_PRICING.md`;
+- `TWO_CODE_CUT_ROW_QUADRATIC_PRICING.md`.
 
-of size `p+1`.
+For a full zero-signing core, `(GS-A)` is impossible whenever
 
-A general D2C clique-criticality lemma now shows: every clique of size `s>=3` has private feet for all but at most one clique source. If the clique lies in `B=N(v)`, every such foot must lie in A, because a B-foot would share the root `v` with every target.
+`(lambda+2)u <= p^2-(lambda+4)p+c_lambda+3`.                    `(QER)`
 
-Therefore a complete unmatched row forces at least `p` distinct A-side private feet. Their codes are explicit:
+At `lambda=-1`, an above-threshold zero-core/one-code configuration therefore requires
 
-- a foot private to `q_i` has code `beta_i(y)=bar c(y) Delta {i}` and is nonadjacent to `y`;
-- a foot private to `y` has code `bar c(y)` and is adjacent to `y`.
+`u>=p^2-3p+4`.
 
-Hence A realises at least `p-1` of the `p` radius-one beta codes, regardless of how the selected witness row itself is covered.
+Thus one-code rows are pushed out of every linearly-unmatched near-full regime.
 
-Moreover, a private foot of code `beta_i(y)` cannot also be a selected beta witness for `yq_i`, because the former is nonadjacent to `y` while the latter must be adjacent. If that coordinate beta-spills, then
+## 8. Every exact tau<=2 unmatched-row kernel is quadratically priced
 
-> `n_{beta_i(y)}>=2`.                                            `(CR-MULT)`
+The preserved exact classification says `tau(Psi(K_y))<=2` iff the row sign graph `L_y` is one of:
 
-File: `COMPLETE_ROW_CLIQUE_PRIVATE_FEET.md`.
+1. complete bipartite;
+2. a star plus isolates;
+3. a two-centre graph in which every other vertex is a leaf of exactly one centre, with the centre edge optional.
 
-This means neither one-code row remains an unstructured escape:
+The new subcore theorem prices all three:
 
-- `K_p` forces a large rooted B-clique and almost a full beta sphere of A-private feet;
-- `K_{p-1} dotcup K_1` forces a complementary U--U antipode and enters BAF.
+- complete bipartite: after switching, zero subcore size `p`, so `L_A>=p(p-1)`;
+- star plus isolates: delete the star centre, zero subcore size `p-1`, so `L_A>=(p-1)(p-2)`;
+- two-centre: delete the two centres, zero subcore size `p-2`, so `L_A>=(p-2)(p-3)`.
+
+Hence for `p>=5`, every `tau<=2` row gives the uniform floor
+
+> `L_A>=(p-2)(p-3)`.                                      `(LOW2)`
+
+In particular, throughout
+
+> `(lambda+2)u <= p^2-(lambda+8)p+c_lambda+9`,              `(LOW2-region)`
+
+an above-`M(n)` candidate must satisfy
+
+> `tau(Psi(K_y))>=3` for every `y in U`.
+
+This replaces the previous case-by-case cheap-row frontier.
+
+## 9. Global switching-deletion stability
+
+All unmatched row sign graphs lie in one switching class. If `L` is any fixed sign graph of the matched 2-lift, define
+
+`kappa_sw(L)=min_S tau_vc(L Delta delta(S))`.
+
+Equivalently, `kappa_sw` is the least number of coordinates that must be deleted so that the remaining signing becomes zero after switching. Put
+
+`sigma_0=p-kappa_sw`.
+
+Then `sigma_0` is the largest zero-signing induced subcore obtainable in any switching state. By `(ZS)`,
+
+`L_A>=sigma_0(sigma_0-1)` whenever `sigma_0>=3`.
+
+Combining with `(GS-A)`, every above-threshold candidate must satisfy
+
+> `sigma_0(sigma_0-1)<=S_req-2`.                          `(SD)`
+
+Thus
+
+> `kappa_sw >= p-floor((1+sqrt(1+4(S_req-2)))/2)`
+
+(up to the harmless size-one/two boundary).
+
+At `lambda=-1`,
+
+> `kappa_sw >= p-floor((1+sqrt(8p+4u-15))/2)`.
+
+Therefore, for fixed `lambda` and `u=O(p)`,
+
+> `m>M(n) ==> kappa_sw=p-O(sqrt(p))`.
+
+A surviving near-full candidate must be highly switching-complex; it cannot be a bounded perturbation of the zero-signing core.
+
+File: `SWITCHING_DELETION_STABILITY_FROM_A_SLACK.md`.
+
+## 10. Large row cover and alpha-capacity cap in every above-threshold candidate
+
+Let
+
+`C=S_req-2`,
+
+`R=floor((1+sqrt(1+4C))/2)`,
+
+`R_*=max(2,R)`.
+
+The row-kernel theorem says that if
+
+`t=tau(Psi(K_y))`,
+
+then outside at most `t` exceptional coordinates the row sign graph partitions into at most `t` equal-open-neighbourhood independent classes. The largest such class has size at least
+
+`ceil((p-t)/t)`
+
+and is itself a zero-signing subcore. Therefore an above-threshold candidate must have
+
+> **ROW-COVER FLOOR**
+>
+> `tau(Psi(K_y))>=ceil(p/(R_*+1))`                         `(RC)`
+
+for **every** unmatched vertex `y`.
+
+At `lambda=-1`, `C=2p+u-4`; if `u=O(p)`, then
+
+> every unmatched row has `tau(Psi(K_y))=Omega(sqrt(p))`.
+
+The projective-twin theorem says
+
+`mu_alpha=max_c |alpha^{-1}(c)|`
+
+is the largest true-twin clique obtainable by switching the matched core. Such a class is also a zero-signing subcore, so
+
+> **ALPHA TWIN CAP**
+>
+> `mu_alpha<=R_*`.                                         `(AC)`
+
+The preserved Hall inequality therefore refines to
+
+`s=e(A,U)>=pu-R_* a`.
+
+For `u=O(p)` and fixed `lambda`, a hypothetical above-threshold candidate simultaneously has
+
+- `kappa_sw=p-O(sqrt(p))`;
+- every unmatched row cover `Omega(sqrt(p))`;
+- every projective alpha/true-twin class `O(sqrt(p))`.
+
+File: `ROW_COVER_AND_ALPHA_CAP_FROM_SLACK_STABILITY.md`.
+
+## 11. Full-tight branch remains closed internally
+
+If tight antipodes cover all of `B`, the fixed switching-defect hierarchy remains internally closed for `k>=19`; see `FULL_TIGHT_SWITCHING_BRANCH_EVENTUAL_CLOSURE.md`. The full-tight order-12/32 `X_3` hostile control is a small `k=4,r=0` exception and remains explicitly allowed.
+
+Do not reopen the fixed-defect ladder as the main attack.
 
 ## 12. Active next move
 
-The next compact theorem target is **A-side pricing** of the explicit structures now forced.
+The structural frontier has changed materially. In the linearly-unmatched near-full regime, bounded/cheap row kernels are now gone **all at once**. The surviving candidate must have high row cover and no large repeated alpha class.
 
-Two inputs are ready:
+The next compact target is an **aggregate selected/Hall capacity theorem** in this high-complexity regime. The intended bridge is:
 
-1. saturated/generic fan beta support: many distinct A vertices in codes `c(z) Delta {i}`, adjacent to fan partners and nonadjacent to the hub;
-2. complete-row private feet: at least `p-1` beta-sphere code classes already occupied by A vertices that are deliberately nonadjacent to the row vertex, with beta-selected witnesses requiring additional multiplicity.
+1. every U-row needs at least `Omega(sqrt(p))` witness-code support;
+2. no alpha class can absorb more than `O(sqrt(p))` source coordinates;
+3. remaining obligations must beta-spill into radius-one code spheres and actual A--U edges;
+4. heavy reuse of beta spheres should either force A-code multiplicity/positive `L_A`, or complementary U-antipode/fan structure already priced by BAF.
 
-The next goal is to show that these A-side populations force either
+A theorem converting these facts into a lower bound on `E_U+L_A` would plug directly into `(GS-A)` and attack the second-extremal threshold itself.
 
-- a linear lower bound on `L_A`, via maximum-degree slack and criticality of their A--U/F edges; or
-- enough repeated alpha/true-twin structure to collapse the matched core into the already-classified low switching-defect normal forms.
+A secondary open branch remains `Q=0` / false-twin core from `MAX_TRIANGLE_OR_TWIN_REDUCTION.md`; it has not been conflated with the partial-Boolean triangle branch.
 
-A theorem of the schematic form
-
-`L_A + controlled U-error >= linear payment from beta/private-foot support`
-
-would plug directly into `(GS4)`--`(GS5)` and is now the highest-value route toward an externally reviewable eventual theorem.
-
-Do not return to the closed mixed `{4,5}` ladder, arbitrary fixed-defect enumeration, or first-proof optimization for Erdős #742. The Q=0/false-twin-core branch remains separate and open.
+Do not return to the closed mixed `{4,5}` ladder, arbitrary fixed-defect enumeration, or first-proof optimization for Erdős #742.
 
 ## 13. Trust boundary
 
 - The published 12/32 graph is directly reconstructed from the authoritative figure; no author-supplied adjacency file has been located.
 - Full-tight eventual closure is an internal candidate pending external review.
-- The near-full normal form, row identities, BAF theorem, improved unmatched floors, private-hole theorem, fan row-capacity inequalities and clique-private-foot theorem are hand arguments.
-- Atlas and exact finite computations are audit/regression support only.
-- No theorem yet converts all unmatched/errorful configurations into enough `E_U+L_A` to finish the eventual second-extremal result.
-- The Q=0/twin-core branch remains separate and not closed.
+- The near-full normal form, exact slack criterion, BAF theorem, private-foot slack transfer, zero-signing subcore quadratic theorem, switching-deletion stability, row-cover floor and alpha cap are hand arguments.
+- Finite computations/checkers are audit and regression support only.
+- The new results do **not** yet close all unmatched/errorful configurations: the high-row-cover aggregate Hall/beta-capacity step remains open.
+- The `Q=0` / false-twin-core branch remains separate and open.
 - No all-order second-extremal theorem is claimed.
 
 **UNPRESERVED WORK:** None after this current-state commit.
