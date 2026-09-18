@@ -3,11 +3,13 @@
 > **Active target — 18 September 2026.** The live problem is the sufficiently-large/eventual second-extremal D2C classification around `M(n)=floor((n-1)^2/4)+1`. The false all-order 2019 Dailly–Foucaud–Hansberg strengthening is not assumed. The published 2024 order-12, size-32 D2C graph is a mandatory hostile control. Murty–Simon / Erdős #742 remains preserved but is not the live optimization target.
 
 <!-- CURRENT-STATUS:START -->
-**CHECKPOINT CLASS:** `FULL_TIGHT_CLOSED_NEAR_FULL_THRESHOLD_FREE_MOMENT_CAPACITY_INTERNAL_CANDIDATE`.
+**CHECKPOINT CLASS:** `FULL_TIGHT_CLOSED_NEAR_FULL_FINITE_DEFICIT_SOURCE_TUPLE_RATIO_GAP_27_14_INTERNAL_CANDIDATE`.
 
-**WORK MODE:** `EVENTUAL_D2C_MATH`. The full-tight Boolean branch remains internally closed for sufficiently large matched cores (`k>=19` in the preserved theorem). The live branch is the unmatched/errorful antipode regime. Earlier work forced linearly-unmatched candidates into high switching complexity, small alpha capacity, sparse `G[U]`, and a quadratically dense `A--U` layer. The current checkpoint converts beta-witness reuse first into an exact Hamming-energy budget and then into a **threshold-free moment capacity inequality**. For fixed `lambda`, this sharpens the surviving linear-unmatched ratio from the old `u/p<=4+o(1)` endpoint through `31/8` to
+**WORK MODE:** `EVENTUAL_D2C_MATH`. The full-tight Boolean branch remains internally closed for sufficiently large matched cores (`k>=19`). The live branch is the unmatched/errorful antipode regime. The directional beta-fibre argument first improved the fixed-`lambda` linear-unmatched frontier to `limsup u/p<=2`; endpoint stability then forced a bipolar Boolean geometry. The current checkpoint shows that this ratio-two endpoint is itself impossible by a new exact finite-deficit designated-source tuple-capacity theorem, and gives the quantitative internal bound
 
-> `u <= (2+sqrt(2))p+O(sqrt(p))`.
+> `limsup u/p < 27/14 = 1.928571428...`
+
+for every fixed `lambda` above-threshold near-full sequence with `p->infinity`.
 
 No global eventual second-extremal theorem is claimed.
 
@@ -24,7 +26,7 @@ The published Radosavljevic--Stanic--Zivkovic (2024) Figure-1 graph has been rec
 
 See `PUBLISHED_12_VERTEX_EXCEPTION_FIGURE_CERTIFICATION.md`. It has `u=0`, so every unmatched-layer theorem below leaves it untouched.
 
-## 2. Near-full partial-Boolean framework
+## 2. Near-full partial-Boolean framework and scorecard
 
 For a maximum-degree root `v`, write
 
@@ -78,7 +80,7 @@ At `lambda=-1`, this is `E_U+L_A<=2p+u-4` above threshold.
 
 Main files: `NEAR_FULL_TIGHT_MATCHING_NORMAL_FORM.md`, `GLOBAL_SLACK_DEFECT_CRITERION.md`.
 
-## 3. Preserved high-complexity stability
+## 3. Preserved switching/high-complexity stability
 
 A switchable zero-signed matched subcore of order `s_0>=3` forces
 
@@ -118,27 +120,19 @@ For fixed `lambda` and `u=O(p)`:
 
 Do not return to cheap-row case enumeration.
 
-Files: `ZERO_SIGNING_SUBCORE_QUADRATIC_SLACK_AND_TAU2_ROWS.md`, `SWITCHING_DELETION_STABILITY_FROM_A_SLACK.md`, `ROW_COVER_AND_ALPHA_CAP_FROM_SLACK_STABILITY.md`.
+## 4. Multiplicity Hall, antipode payment, sparse U
 
-## 4. Preserved multiplicity Hall and antipode structure
+Preserved selected/Hall consequences include
 
-For an occupied U-code `c` and coordinate `i`, beta-target injectivity gives
+> `t_c <= n_{a_i(c)}+n_{b_i(c)}`;                         `(MH)`
+>
+> `nu_c t_c<=a`;                                          `(MC)`
+>
+> `p(t_c+t_bar c)<=(mu_alpha+1)a`;                        `(CP)`
+>
+> `min(h,p)a>=pu-mu_alpha a`,                             `(BP)`
 
-> `t_c <= n_{a_i(c)}+n_{b_i(c)}`.                         `(MH)`
-
-If `nu_c` is the matching number of the row-singleton graph,
-
-> `nu_c t_c<=a`.                                          `(MC)`
-
-For complementary U-codes,
-
-> `p(t_c+t_bar c)<=(mu_alpha+1)a`.                        `(CP)`
-
-If `h` is the number of occupied complementary U-code pairs, exact beta-pool incidence gives
-
-> `min(h,p)a>=pu-mu_alpha a`.                             `(BP)`
-
-Thus for fixed `lambda`, `u=Theta(p)`, each exact code class/complementary pair has only `O(sqrt(p))` mass while linearly many complementary code-pair types are occupied.
+where `h` is the number of occupied complementary U-code pairs.
 
 The Boolean antipode-fan payment remains preserved:
 
@@ -147,57 +141,40 @@ The Boolean antipode-fan payment remains preserved:
 - equality is rigid (odd clique fan, regular tournament charging, complementary private holes);
 - matched antipode hubs satisfy the corresponding same-code fan inequality.
 
-Files: `BOOLEAN_ANTIPODE_FAN_PAYMENT.md`, `BETA_MULTIPLICITY_CODE_PAIR_STABILITY.md`.
-
-## 5. Sparse U, dense A--U
-
 Selected orientation of edges inside `U` gives, for every `S subseteq U`,
 
 > `e(G[S])<=sum_{y in S}n_{bar c(y)}`.                    `(UE)`
 
-Using `(CP)`,
+Hence
 
-> `q <= a floor((mu_alpha+1)a/p)`
+> `q <= a floor((mu_alpha+1)a/p)
+>      <=(mu_alpha+1)a^2/p`.                              `(SU)`
+
+For fixed `lambda`, `u=O(p)`,
+
+> `q=O(p^(3/2))`.
+
+Thus for `u=rho p+O(1)`,
+
+> `Q=p(p+u-1)+O(p^(3/2))`,
 >
-> `  <= (mu_alpha+1)a^2/p`.                               `(SU)`
-
-Therefore, for fixed `lambda`, `u=O(p)`,
-
-> `q=O(p^(3/2))`,
-
-and for `u=Theta(p)`,
-
-> `Q=p(p+u-1)+O(p^(3/2))`.
-
-The exact unmatched-slack identity then forces
-
-> `s=u(p+u-1)-2q-E_U`
->
-> ` =Theta(p^2)`                                          `(AU)`
-
-through the above-threshold linear-unmatched regime. More precisely, if `u=rho p+O(1)`, then
-
 > `s=rho(1+rho)p^2+O(p^(3/2))`.
 
-File: `UNMATCHED_INTERNAL_EDGE_CAPACITY.md`.
+## 5. Beta-reuse geometry
 
-## 6. Beta-reuse geometry and exact beta/central partition
+For `x in A`, let `ell_x=|I_x|` be its beta load and
 
-For `x in A`, let `ell_x` be its beta load and `I_x` its beta target fibres. For `i in I_x`, let `y_i` be the designated unmatched source.
+`Y_x={y_i:i in I_x}`
 
-The selected/Hall per-source injectivity implies that the `y_i` are pairwise distinct for fixed `x`: otherwise one physical cross edge `xy` would be selected for two distinct beta obligations from the same source.
+its designated unmatched beta sources. The sources in `Y_x` are pairwise distinct.
 
 Put
 
-`Y_x={y_i:i in I_x}`,
-
-`C_x=N_U(x)\Y_x`,
-
-`c_x=|C_x|`.
+`C_x=N_U(x)\Y_x`, `c_x=|C_x|`, `d_x=d_U(x)`.
 
 Then
 
-> `d_U(x)=ell_x+c_x`.
+> `d_x=ell_x+c_x`.
 
 Writing
 
@@ -209,11 +186,9 @@ there is an exact partition
 
 > `s=B+C`.                                                 `(BC)`
 
-Criticality gives `ell_x<=p`. For every `i in I_x`, all U-neighbours of `x` except the single source `y_i` choose the same side of fibre `i` as `x`.
+For every `i in I_x`, all U-neighbours of `x` except the single source `y_i` choose the same side of fibre `i` as `x`.
 
-File: `BETA_WITNESS_REUSE_GEOMETRY.md`, with the explicit source-distinctness audit in `DENSE_CROSS_HAMMING_ENERGY_AND_RATIO_GAP.md`.
-
-## 7. Central-triple Hamming theorem
+## 6. Directional deficiency--Hamming budget
 
 For coordinate `i`, write
 
@@ -225,269 +200,267 @@ For coordinate `i`, write
 
 `H=sum_i d_i^2`.
 
-The triples
+Let `h_i^0,h_i^1` be alpha-oriented P--U source counts by side, and define
 
-`(x,z,i)` with `z in C_x`, `i in I_x`
+`P_alpha=sum_i[h_i^0(u_i^1+1)+h_i^1(u_i^0+1)]`.
 
-inject into ordered U-code coordinate disagreements by
+Directional fibre capacity gives
 
-`(x,z,i) -> (y_i,z,i)`.
-
-Hence, with
-
-`T=sum_x ell_x c_x`,
-
-> `T+H/2<=p u^2/2`.                                       `(CH)`
-
-This is a hand injection.
+> `W:=sum_x ell_x d_x
+>     <=p(u^2/2+u)-H/2-P_alpha`.                           `(DFM)`
 
 Define
 
-`Z=sum_x(p-ell_x)(u-c_x)>=0`,
+`J=sum_x(p-ell_x)(u-d_x)>=0`,
 
-and let
+and `h_alpha=pu-B`. Exact algebra gives
 
-`h_alpha=pu-B`.
+> `W=uB+ps-pua+J`,
 
-Exact algebra gives
+hence
 
-> `T=p u(u-2p+lambda)`
+> **DIRECTIONAL DEFICIENCY--HAMMING BUDGET**
 >
-> `  -(u-p)h_alpha-2pq-pE_U+Z`.
+> `J+H/2+P_alpha`
+>
+> `<=p u(p+1-lambda-u/2)+u h_alpha+2p q+pE_U`.           `(DHB)`
+
+For fixed `lambda`, the preserved `h_alpha,q=O(p^(3/2))`, `E_U=O(p)` bounds imply
+
+> `limsup u/p<=2`.                                        `(DR2)`
+
+File: `DIRECTIONAL_BETA_FIBRE_MOMENT_AND_RATIO_TWO.md`.
+
+The earlier central-Hamming and threshold-free moment inequalities remain preserved but are superseded asymptotically by `(DHB)`.
+
+## 7. Ratio-two polarization and bipolar geometry
+
+If a fixed-`lambda` above-threshold sequence were to satisfy `u/p->2`, `(DHB)` forces
+
+`H=o(p^3)`, `J=o(p^3)`.
+
+The A-layer then polarizes into two populations:
+
+- `X`: `|X|=(2+o(1))p`, beta load `p-o(p)` on average and U-degree `p+o(p)` on average;
+- `Z=A\X`: `|Z|=(2+o(1))p`, beta load `o(p)` on average and U-degree `2p-o(p)` on average.
+
+The beta-source-pair Hamming injection is asymptotically saturated, and `U` splits into two complementary Boolean clusters of size `p+o(p)`.
+
+The exact beta-side hole identity is stronger. If `x` beta-targets fibre `i` and chooses matched endpoint `q_i'`, the number of same-side vertices of `A union U` which are neither `x` nor adjacent to `x` is
+
+> `epsilon_x-epsilon_{q_i'}`.                             `(BH)`
+
+Thus neighbours of a beta-heavy `x` lie close to `c(x)` and non-neighbours close to `bar c(x)`, with total error paid directly by degree slack. At the ratio-two endpoint the whole `A union U` layer becomes asymptotically bipolar.
+
+Files: `RATIO_TWO_POLARIZATION_AND_SOURCE_PAIR_STABILITY.md`, `BETA_SIDE_HOLE_IDENTITY_AND_BIPOLAR_CODE_GEOMETRY.md`.
+
+## 8. Full beta-load scarcity
+
+If `ell_x=p`, then every radius-one Hamming neighbour of `c(x)` occurs as a U-code. Hypercube incidence gives only `O(1)` possible full-load centre codes when `u=O(p)`, and at `u/p->2` at most four full-load A-witnesses in total.
+
+File: `FULL_BETA_LOAD_HAMMING_SPHERE_SCARCITY.md`.
+
+This exact endpoint is now subsumed by the finite-deficit theorem below.
+
+## 9. New finite-deficit pair capacity
+
+Put
+
+`k_x=p-ell_x`.
+
+For `y_i,y_j in Y_x`, their codes differ in exactly the two assigned coordinates on `I_x`, hence
+
+> `dist_H(c(y_i),c(y_j))<=k_x+2`.
+
+Combined with the source-pair multiplicity theorem
+
+`M(y,z)<=dist_H(c(y),c(z))`,
+
+this yields the exact weighted double count
+
+> **FINITE-DEFICIT PAIR CAPACITY**
+>
+> `sum_x binom(ell_x,2)/(p-ell_x+2) <= binom(u,2)`.       `(FDP2)`
+
+Therefore, if
+
+`N_K=|{x:k_x<=K}|`,
+
+then
+
+> `N_K <= binom(u,2)(K+2)/binom(p-K,2)`.                 `(FDS2)`
+
+For `u=rho p+o(p)`, `K=o(p)`,
+
+> `N_K<=(rho^2+o(1))K`.
+
+This immediately contradicts the ratio-two polarization, which would require `(2-o(1))p` witnesses with sublinear deficit. Thus **the ratio-two endpoint is impossible**, not merely unstable.
+
+## 10. New source-tuple capacity hierarchy
+
+For every integer `r>=3`, fix an `r`-set `R` of designated sources. In a common witness, each source must be assigned to a coordinate where it is the unique bit minority within `R`; every other nonconstant coordinate of `R` must lie outside the witness target set. Source-coordinate selected-witness uniqueness then gives the exact weighted hierarchy
+
+> **SOURCE-TUPLE CAPACITY**
+>
+> `sum_x binom(ell_x,r)/(p-ell_x+r)
+>  <= (1/r)binom(u,r)`.                                   `(FDPr)`
+
+Hence if `p-K>=r`,
+
+> `|{x:k_x<=K}|`
+>
+> `<=((K+r)/r) binom(u,r)/binom(p-K,r)`.                 `(FDSr)`
+
+The `r=3` member is stronger than the pair bound near the former ratio-two endpoint.
+
+File: `FINITE_DEFICIT_SOURCE_TUPLE_CAPACITY_AND_RATIO_GAP.md`.
+
+## 11. New quantitative ratio gap: below 27/14
+
+Assume fixed `lambda`, `p->infinity`, and along a subsequence
+
+`u/p->rho<=2`.
+
+From `(DHB)`,
+
+> `J <= [rho(2-rho)/2+o(1)]p^3`,
+>
+> `H <= [rho(2-rho)+o(1)]p^3`.
+
+Let `j` be the number of fibres with `|d_i|>=p`. Then
+
+`j/p<=gamma+o(1)`, `gamma=rho(2-rho)`.
+
+Let `L={x:ell_x>j}`. Beta-load capacity gives
+
+> `|L|/p >= L_0(rho)+o(1)`,
+>
+> `L_0(rho)=[rho-(rho+2)gamma]/(1-gamma)`.
+
+Every `x in L` targets a fibre with `|d_i|<p`, so side occupancy gives
+
+`u-d_U(x)>=[(rho-1)/2+o(1)]p`.
 
 Therefore
 
-> **DENSE-CROSS HAMMING BUDGET**
+> `sum_{x in L}k_x <= [D_0(rho)+o(1)]p^2`,
 >
-> `Z+H/2`
+> `D_0(rho)=rho(2-rho)/(rho-1)`.
+
+At least
+
+`[L_0(rho)-6D_0(rho)+o(1)]p`
+
+of these witnesses have `k_x<=p/6`. The triple-source capacity gives the opposite upper bound
+
+`(12rho^3/125+o(1))p`.
+
+Thus every feasible limit ratio must satisfy
+
+> `F(rho)=L_0(rho)-6D_0(rho)-12rho^3/125<=0`.
+
+But
+
+`F(rho)`
+
+`=-rho(12rho^4-24rho^3-863rho^2+2250rho-1125)`
+
+` /[125(rho-1)^2]`,
+
+and an elementary derivative check shows
+
+> `F(rho)>0` for every `rho in [27/14,2]`.
+
+At the left endpoint exactly,
+
+`F(27/14)=219672/7245875>0`.
+
+Therefore:
+
+> **TRIPLE-SOURCE RATIO GAP — internal candidate.**
 >
-> `<=p u(2p-lambda-u/2)`
+> For every fixed `lambda`, every above-`M(n)` near-full sequence with `p->infinity` satisfies
 >
-> `  +(u-p)h_alpha+2pq+pE_U`.                              `(HB)`
+> `limsup u/p < 27/14 = 1.928571428...`.                  `(RG3)`
 
-For `u>=p`, `h_alpha<=mu_alpha a`. The coarse consequence in the fixed-`lambda`, linear-unmatched regime is
+The constant is deliberately non-optimized. Do not spend the next unit merely shaving it numerically.
 
-> `u<=4p-2lambda+O(sqrt(p))`.
+## 12. New matched-endpoint slack payment
 
-File: `DENSE_CROSS_HAMMING_ENERGY_AND_RATIO_GAP.md`.
+For tight fibre `i`, let endpoint slacks be
 
-## 8. Loaded-witness side occupancy and finite threshold capacity
+`e_i^0,e_i^1`, with
 
-For every beta-loaded `x` and every `i in I_x`, all U-neighbours except `y_i` lie on one side of coordinate `i`, so
+`e_i^0+e_i^1=lambda+1`.
 
-> `d_U(x)-1<=(u+|d_i|)/2`.                                `(SO)`
+Let beta source counts by side be
 
-For any `t>0`, let
+`r_i^s=u_i^s-h_i^s`.
 
-`J_t={i:|d_i|>=t}`, `j_t=|J_t|`,
+The beta-side hole identity gives
 
-`L_t={x:ell_x>j_t}`, `l_t=|L_t|`.
-
-Then
-
-> `j_t<=H/t^2`,
-
-and every `x in L_t` has
-
-> `d_U(x)<=(u+t)/2+1`.
-
-Beta-load capacity gives
-
-> `l_t >= max(0,(B-a j_t)/(p-j_t))`                       `(TC1)`
-
-when `j_t<p`, while cross-edge capacity gives
-
-> `s<=au-l_t(u-t-2)/2`                                    `(TC2)`
-
-when `u>t+2`.
-
-Choosing `t=(7/5)p` and combining `(HB)`, `(TC1)`, `(TC2)` yields the exact asymptotic internal candidate
-
-> `u < (31/8)p`
-
-for all sufficiently large fixed-`lambda` linearly-unmatched above-threshold candidates.
-
-This remains preserved as a finite-threshold tool, but is superseded asymptotically by the moment theorem below.
-
-File: `DENSE_CROSS_THRESHOLD_CAPACITY_REFINEMENT.md`.
-
-## 9. New threshold-free moment capacity theorem
-
-The side-occupancy lemma can be summed without selecting `t`.
-
-Let
-
-`d_x=d_U(x)`,
-
-`phi(t)=(2t-u-2)_+^2`.
-
-For every `i in I_x`, `(SO)` gives
-
-`|d_i| >= (2d_x-u-2)_+`.
-
-If
-
-`r_i=|{x:i in I_x}|`,
-
-then `r_i<=u` because fibre `i` has at most one beta-selected P--U obligation per unmatched source. Hence
-
-> `sum_x ell_x phi(d_x) <= sum_i r_i d_i^2 <= uH`.        `(MU)`
-
-Now put
-
-`W=sum_x ell_x d_x`.
-
-Since `(p-ell_x)(u-d_x)>=0`,
-
-> `W>=uB+ps-pua`.                                         `(MW)`
-
-Weighted Jensen with weights `ell_x/B` and the convex nondecreasing `phi` therefore yields the exact finite inequality
-
-> **THRESHOLD-FREE MOMENT CAPACITY THEOREM**
->
-> `B * [2(uB+ps-pua)/B-u-2]_+^2 <= uH`.                  `(MCAP)`
-
-Equivalently,
-
-> `B * [u+2p(s-ua)/B-2]_+^2 <= uH`.
-
-This is now the strongest compact dense-cross inequality in the project.
-
-File: `DENSE_CROSS_MOMENT_CAPACITY_THEOREM.md`.
-
-## 10. New strongest linear-unmatched ratio bound
-
-Assume `lambda` fixed and
-
-`u=rho p+o(p)`
-
-along an above-`M(n)` sequence.
-
-The preserved alpha-spill and sparse-U bounds give
-
-> `B=rho p^2+O(p^(3/2))`,
->
-> `s=rho(1+rho)p^2+O(p^(3/2))`,
->
-> `a=(rho+2)p+O(1)`.
-
-Thus `(MW)` gives
-
-> `(uB+ps-pua)/B=(rho-1)p+O(sqrt(p))`.
-
-The Hamming budget `(HB)` gives
-
-> `H<=rho(4-rho)p^3+O(p^(5/2))`.
-
-Substitute both into `(MCAP)`. For `rho>2`,
-
-> `rho(rho-2)^2 p^4`
->
-> `<=rho^2(4-rho)p^4+O(p^(7/2))`.
-
-Therefore
-
-> `(rho-2)^2<=rho(4-rho)+O(p^(-1/2))`.
-
-The upper root of the limiting quadratic
-
-`rho^2-4rho+2=0`
-
-is exactly
-
-> `rho=2+sqrt(2)`.
-
-Since the derivative of the difference at that root is positive,
-
-> **MOMENT RATIO THEOREM — internal candidate.**
->
-> For every fixed `lambda`, every sufficiently large above-`M(n)` near-full candidate in the linear-unmatched regime satisfies
->
-> `u <= (2+sqrt(2))p+O(sqrt(p))`.                         `(MR)`
+> `pL_A>=sum_i(r_i^0e_i^1+r_i^1e_i^0)`.                 `(BES1)`
 
 Hence
 
-> `limsup u/p <= 2+sqrt(2)=3.41421356...`.
+> `pL_A`
+>
+> `>=(lambda+1)[(pu-sum_i|d_i|)/2-h_alpha]`.             `(BES2)`
 
-This substantially supersedes the earlier `4+o(1)` and `31/8` boundaries. It is not asserted for arbitrary growing `lambda`.
+By Cauchy,
 
-## 11. Equality/stability shape at the new frontier
+> `L_A >= (lambda+1)
+>          [u/2-(1/2)sqrt(H/p)-h_alpha/p]`,              `(BES3)`
 
-Near equality in `(MR)` requires near equality simultaneously in several independent hand inequalities:
+with the positive part understood.
 
-1. `(p-ell_x)(u-d_x)` is small for most beta weight;
-2. weighted Jensen is nearly saturated, so beta-weighted U-degrees concentrate near `(rho-1)p`;
-3. side occupancy nearly saturates in many target fibres;
-4. the global Hamming budget `(HB)` nearly saturates.
+This is exact and retains `lambda`; it is now the preferred bridge toward weakening the fixed-`lambda` restriction.
 
-This is now a more valuable target than another code-row classification. A successful **stability-of-moment-capacity** theorem should price failure of these simultaneous equality conditions into `E_U+L_A`, which would attack `(GS-A)` directly.
+File: `BETA_MATCHED_ENDPOINT_SLACK_BALANCE_PAYMENT.md`.
 
-## 12. Verification at this checkpoint
+## 13. Verification at this checkpoint
 
-Audit support preserved:
+New audit support:
 
-### Dense-cross Hamming suite
+`check_finite_deficit_source_tuple_capacity.py`
 
-`check_dense_cross_hamming_energy_and_ratio_gap.py`
-
-- 5,050 exact U-code multisets for the Hamming-energy identity;
-- 1,890 product-identity cases;
-- 182,720 exact dense-cross algebra cases;
+- 304,264 exact local triple-source geometry cases (`p<=6`, beta deficit `<=2`);
+- 2,001 exact rational ratio-grid points on `[27/14,2]`;
+- exact cutoff arithmetic and polynomial signs;
 - zero failures.
 
-Frozen summary: `DENSE_CROSS_HAMMING_ENERGY_CHECK_SUMMARY.json`.
+Frozen summary: `FINITE_DEFICIT_SOURCE_TUPLE_CHECK_SUMMARY.json`.
 
-### Threshold-capacity suite
+Earlier dense-cross Hamming, threshold-capacity, moment-capacity, multiplicity/fan, and Boolean-incidence regression suites remain preserved. Computation is audit support only; the promoted internal statements are hand arguments.
 
-`check_dense_cross_threshold_capacity_refinement.py`
-
-- 121,170 finite beta-load capacity cases;
-- exact `31/8` endpoint arithmetic;
-- zero failures.
-
-Frozen summary: `DENSE_CROSS_THRESHOLD_CAPACITY_CHECK_SUMMARY.json`.
-
-### Moment-capacity suite
-
-`check_dense_cross_moment_capacity_theorem.py`
-
-- 201,238 finite weighted-degree/Jensen cases;
-- exact limiting polynomial/root arithmetic;
-- zero failures.
-
-Frozen summary: `DENSE_CROSS_MOMENT_CAPACITY_CHECK_SUMMARY.json`.
-
-Earlier multiplicity/fan graph-atlas and Boolean-incidence regressions remain preserved in `check_beta_multiplicity_code_pair_stability.py`.
-
-These checks are evidence only; the promoted internal candidate statements are hand arguments.
-
-## 13. Full-tight branch remains closed internally
+## 14. Full-tight branch remains closed internally
 
 If tight antipodes cover all of `B`, the fixed switching-defect hierarchy remains internally closed for `k>=19`; see `FULL_TIGHT_SWITCHING_BRANCH_EVENTUAL_CLOSURE.md`. The order-12/32 `X_3` graph is a small full-tight `k=4,r=0` exception and remains explicitly allowed.
 
 Do not reopen the fixed-defect ladder as the main attack.
 
-## 14. Active next move
+## 15. Active next move
 
-The threshold-free moment inequality is the first compact analytic bridge from dense A--U structure to the Hamming budget. The next move should **not** optimize the decimal ratio constant and should not return to row normal forms.
+The ratio-two equality model has now been destroyed, and the source-tuple hierarchy gives a quantitative fixed-`lambda` gap. The next move should **not** optimize `27/14` as a decimal constant.
 
-Priority:
+Highest-value structural target:
 
-1. prove a quantitative **stability version of `(MCAP)`**: if the moment inequality is close to equality, force the beta-weighted A-vertices into the near-equality configurations described above;
-2. show those configurations necessarily create additional A-side degree slack `L_A`, antipode error `E_U`, or forbidden reuse in the selected system;
-3. feed that payment directly into `(GS-A)`.
+1. combine `(FDPr)`, `(BH)/(BES2)`, `(DHB)`, and the scorecard `(GS-A)` into a joint inequality for the distribution of `(k_x,epsilon_x,d_U(x))`;
+2. use it to force direct payment in `E_U+L_A`, rather than another ratio-only restriction;
+3. in parallel, use `(BES2)` to test whether positive/growing `lambda` can be absorbed, weakening the current fixed-`lambda` assumption.
 
-A secondary route is to remove or weaken the fixed-`lambda` assumption by retaining the exact `lambda` terms in `(HB)` and `(MCAP)`.
+A natural approach is a finite dyadic decomposition by beta deficit `k_x`: tuple capacity controls the number of low-deficit witnesses, `(DHB)` controls the product of beta and U-degree deficits, and `(BH)` prices low-slack witnesses which try to exhaust many fibre sides.
 
 The separate `Q=0` / false-twin-core branch from `MAX_TRIANGLE_OR_TWIN_REDUCTION.md` remains open and has not been conflated with this triangle/partial-Boolean branch.
 
 Do not return to the closed mixed `{4,5}` selected-excess ladder, arbitrary fixed-defect enumeration, or first-proof optimization for Erdős #742.
 
-## 15. Trust boundary
+## 16. Trust boundary
 
 - Published 12/32 graph: reconstructed directly from the authoritative figure; no author-supplied adjacency file located.
 - Full-tight eventual closure: internal candidate pending external review.
-- Near-full normal form, scorecard, switching stability, multiplicity Hall, fan payment, U-edge capacity, beta-reuse geometry, Hamming budget, threshold capacity, and moment capacity are hand arguments.
-- `(MR)` is conditional on fixed `lambda` and the linearly-unmatched `u=Theta(p)` regime; it is not a global eventual theorem.
+- Near-full normal form, scorecard, switching stability, multiplicity Hall, fan payment, U-edge capacity, beta-reuse geometry, directional Hamming budget, beta-side hole identity, finite-deficit pair/tuple capacity, and endpoint-slack payment are hand arguments.
+- `(RG3)` is conditional on fixed `lambda`; it is not a global eventual theorem.
+- No all-order second-extremal theorem is claimed.
 - Finite computations/checkers are audit/regression support only.
 <!-- CURRENT-STATUS:END -->
