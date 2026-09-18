@@ -1,0 +1,32 @@
+{
+  "scope": "NetworkX graph atlas, every unlabelled graph of exact order p=3,...,7",
+  "orders": {
+    "3": {
+      "graphs": 4,
+      "tau_distribution": {"1": 2, "2": 1, "3": 1},
+      "one_code_degree_sequences": [[0,1,1],[2,2,2]]
+    },
+    "4": {
+      "graphs": 11,
+      "tau_distribution": {"1": 2, "2": 5, "3": 2, "4": 2},
+      "one_code_degree_sequences": [[0,2,2,2],[3,3,3,3]]
+    },
+    "5": {
+      "graphs": 34,
+      "tau_distribution": {"1": 2, "2": 6, "3": 10, "4": 9, "5": 7},
+      "one_code_degree_sequences": [[0,3,3,3,3],[4,4,4,4,4]]
+    },
+    "6": {
+      "graphs": 156,
+      "tau_distribution": {"1": 2, "2": 10, "3": 25, "4": 36, "5": 42, "6": 41},
+      "one_code_degree_sequences": [[0,4,4,4,4,4],[5,5,5,5,5,5]]
+    },
+    "7": {
+      "graphs": 1044,
+      "tau_distribution": {"1": 2, "2": 11, "3": 44, "4": 107, "5": 210, "6": 323, "7": 347},
+      "one_code_degree_sequences": [[0,5,5,5,5,5,5],[6,6,6,6,6,6,6]]
+    }
+  },
+  "violations": [],
+  "conclusion": "For every tested p, tau(Psi(K))=1 only for K_p and K_{p-1} disjoint union K_1; exactly two unlabelled graphs per order attain one-code cover."
+}
