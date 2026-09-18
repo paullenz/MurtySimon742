@@ -105,7 +105,11 @@ def main() -> None:
         fail("broken repository-relative links in review section: " + ", ".join(broken))
 
     redteam = protected_section(text, REDTEAM_START, REDTEAM_END, "red-team-history")
-    missing_redteam = [x for x in REQUIRED_REDTEAM if x not in redteam]
+    # Historical substance is semantic, not capitalization-sensitive. Keep every
+    # required token, path and phrase protected while allowing sentence/heading
+    # capitalization to change during legitimate prose maintenance.
+    redteam_fold = redteam.casefold()
+    missing_redteam = [x for x in REQUIRED_REDTEAM if x.casefold() not in redteam_fold]
     if missing_redteam:
         fail("protected red-team history lost required substance: " + ", ".join(missing_redteam))
     broken_redteam = broken_relative_links(redteam)
