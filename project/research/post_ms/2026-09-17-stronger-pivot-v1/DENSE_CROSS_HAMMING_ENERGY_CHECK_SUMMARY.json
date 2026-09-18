@@ -1,0 +1,13 @@
+{
+  "dense_cross_algebra_cases_checked": 182720,
+  "expected_F_at_endpoint": "3969/40960",
+  "failures": [],
+  "F_at_endpoint": "3969/40960",
+  "Fprime_at_endpoint": "1071/50",
+  "Fsecond_at_endpoint": "6489/200",
+  "hamming_code_multisets_checked": 5050,
+  "product_identity_cases_checked": 1890,
+  "ratio_endpoint": "63/16",
+  "status": "PASS",
+  "trust_boundary": "Regression/audit support only; the structural statements rest on the hand injections and counts in DENSE_CROSS_HAMMING_ENERGY_AND_RATIO_GAP.md."
+}
