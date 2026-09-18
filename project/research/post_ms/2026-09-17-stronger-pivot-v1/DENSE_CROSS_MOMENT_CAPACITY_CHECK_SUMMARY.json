@@ -1,0 +1,9 @@
+{
+  "derivative_of_difference_at_upper_root": "4sqrt(2)",
+  "failures": [],
+  "limiting_polynomial": "rho^2-4rho+2",
+  "status": "PASS",
+  "trust_boundary": "Finite algebra/Jensen regression only; the moment-capacity theorem is the hand argument in DENSE_CROSS_MOMENT_CAPACITY_THEOREM.md.",
+  "upper_root": "2+sqrt(2)",
+  "weighted_degree_and_jensen_cases": 201238
+}
