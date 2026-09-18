@@ -1,0 +1,55 @@
+{
+  "scope": "NetworkX graph atlas, all D2C isomorphism classes through order 7, every maximum-degree root",
+  "d2c_graphs": 21,
+  "d2c_by_order": {
+    "3": 1,
+    "4": 2,
+    "5": 3,
+    "6": 5,
+    "7": 10
+  },
+  "maximum_degree_roots": 50,
+  "roots_with_tight_pair": 9,
+  "fan_centres": 3,
+  "branching_fan_centres": 1,
+  "fan_partner_incidences": 4,
+  "minimum_integer_margin": 0,
+  "fibre_violations": [],
+  "fan_inequality_violations": [],
+  "fan_examples": [
+    {
+      "n": 7,
+      "b": 5,
+      "lambda": 3,
+      "tight_pairs": 1,
+      "u": 3,
+      "fan_degree": 2,
+      "eta_sum": 2,
+      "partner_nonedges": 1,
+      "margin": 0
+    },
+    {
+      "n": 7,
+      "b": 5,
+      "lambda": 3,
+      "tight_pairs": 1,
+      "u": 3,
+      "fan_degree": 1,
+      "eta_sum": 1,
+      "partner_nonedges": 0,
+      "margin": 1
+    },
+    {
+      "n": 7,
+      "b": 5,
+      "lambda": 3,
+      "tight_pairs": 1,
+      "u": 3,
+      "fan_degree": 1,
+      "eta_sum": 1,
+      "partner_nonedges": 0,
+      "margin": 1
+    }
+  ],
+  "status": "regression evidence only; hand proof in BOOLEAN_ANTIPODE_FAN_PAYMENT.md is the mathematical basis"
+}
