@@ -1,0 +1,13 @@
+{
+  "critical_triangle_edge_witness_failures": 0,
+  "critical_triangle_edges_checked": 29,
+  "d2c_graph_atlas_classes": 21,
+  "graph_atlas_graphs_orders_3_to_7": 1249,
+  "linear_lambda_envelope_failures": 0,
+  "linear_lambda_ratio_grid_points": 10001,
+  "maximum_theta_13_4_margin": -0.07291666666666667,
+  "minimum_theta_minus_minus_high_regime": 0.6345260661500669,
+  "total_failures": 0,
+  "unique_common_neighbour_failures": 0,
+  "unique_common_neighbour_pairs_checked": 4424
+}
