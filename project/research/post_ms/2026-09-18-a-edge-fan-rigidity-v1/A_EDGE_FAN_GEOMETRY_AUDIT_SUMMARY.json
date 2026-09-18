@@ -1,0 +1,16 @@
+{
+  "date": "2026-09-18",
+  "scope": "networkx graph atlas, all diameter-2-critical isomorphism classes through order 7, every maximum-degree root",
+  "d2c_isomorphism_classes": 21,
+  "statistics": {
+    "direct_fans": 43,
+    "direct_fan_incidences": 48,
+    "direct_fan_leaf_pairs": 5,
+    "direct_hole_identities": 48,
+    "ucn_pairs": 101,
+    "fan_pair_tests": 36,
+    "nonadjacent_witness_pair_hole_tests": 19
+  },
+  "failures": 0,
+  "trust_boundary": "Independent audit of the generic graph-theoretic fan kernels only. It does not prove the partial-Boolean degree formulas, source-code localization, or asymptotic conclusions."
+}
