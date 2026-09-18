@@ -1,0 +1,13 @@
+{
+  "checks": {
+    "aligned_au_capacity": 1562500,
+    "crowding_complement_forcing": 182696,
+    "global_aligned_code_cap": 100806,
+    "pair_traffic_localization": 20000,
+    "weighted_pair_payment": 1322928
+  },
+  "failures": [],
+  "scope": "finite algebra audit only; does not replace D2C structural proofs",
+  "status": "ok",
+  "total_checks": 3188930
+}
