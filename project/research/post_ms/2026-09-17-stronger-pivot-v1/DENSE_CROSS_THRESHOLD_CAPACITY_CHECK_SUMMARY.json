@@ -1,0 +1,12 @@
+{
+  "failures": [],
+  "G_at_endpoint": "54343/503680",
+  "N_at_endpoint": "5259/512",
+  "Nprime_at_endpoint": "63655/64",
+  "Nprime_at_four": "1195",
+  "ratio_endpoint": "31/8",
+  "status": "PASS",
+  "threshold_capacity_integer_cases": 121170,
+  "threshold_theta": "7/5",
+  "trust_boundary": "Audit support only; the threshold-capacity and asymptotic ratio arguments are hand derivations in DENSE_CROSS_THRESHOLD_CAPACITY_REFINEMENT.md."
+}
