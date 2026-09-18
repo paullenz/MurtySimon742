@@ -3,13 +3,15 @@
 > **Active target — 18 September 2026.** The live problem is the sufficiently-large/eventual second-extremal D2C classification around `M(n)=floor((n-1)^2/4)+1`. The false all-order 2019 Dailly–Foucaud–Hansberg strengthening is not assumed. The published 2024 order-12, size-32 D2C graph is a mandatory hostile control. Murty–Simon / Erdős #742 remains preserved but is not the live optimization target.
 
 <!-- CURRENT-STATUS:START -->
-**CHECKPOINT CLASS:** `FULL_TIGHT_CLOSED_ROOTED_RESIDUAL_GLOBAL_A_EDGE_FRONTIER`.
+**CHECKPOINT CLASS:** `FULL_TIGHT_CLOSED_ROOTED_RESIDUAL_A_EDGE_FAN_RIGIDITY_FRONTIER`.
 
 **WORK MODE:** `EVENTUAL_D2C_MATH`.
 
-The full-tight Boolean branch remains internally closed for sufficiently large matched cores (`k>=19`). The live branch is the triangle-containing unmatched/errorful antipode regime. The conceptual spine is now
+The full-tight Boolean branch remains internally closed for sufficiently large matched cores (`k>=19`). The live branch is the triangle-containing unmatched/errorful antipode regime.
 
-`residual defect -> rooted-triangle transfer -> forced A-edge mass -> complete A-edge witness-channel accounting -> scorecard payment or macroscopic Boolean code class`.
+The conceptual spine is now
+
+`residual defect -> rooted-triangle transfer -> forced A-edge mass -> complete A-edge witness channels -> macroscopic fan geometry -> stability/classification`.
 
 No global eventual second-extremal theorem is claimed.
 
@@ -28,7 +30,7 @@ For this graph
 
 `Q=12`, `delta=0`, `E_U=0`, `L_A=12`, `D_M=1`, `f=0`.
 
-Its rooted-triangle transfer is endpoint-saturated: `Q-f=12`. The new A-edge floor below gives `F_min=0=f`, so the negative control remains explicitly permitted.
+Its rooted-triangle transfer is endpoint-saturated: `Q-f=12`. The current A-edge floor gives `F_min=0=f`, so every new unmatched/A-edge theorem remains compatible with the mandatory negative control.
 
 Certification file:
 
@@ -92,18 +94,13 @@ The exact identities are
 >
 > `delta=E_U+Q-f-lambda(p+u)+p`.                          `(RQ3)`
 
-With `T:=Q-f`,
+With `T_Q:=Q-f`,
 
-> `L_A=delta+T`,
+> `L_A=delta+T_Q`,
 >
-> `E_U=delta+lambda(p+u)-p-T`.                            `(TR)`
+> `E_U=delta+lambda(p+u)-p-T_Q`.                          `(TR)`
 
-Hence every above-`M(n)` candidate must satisfy
-
-> `L_A-D_M+1 <= T`
-> `              <= D_M-1+lambda(p+u)-p-E_U`.            `(TW)`
-
-The transfer identity now has a direct consequence for `f`. Since `E_U>=0`, every above-threshold candidate satisfies
+Every above-`M(n)` candidate therefore satisfies the direct A-edge floor
 
 > `f>=F_min`,                                             `(FTR)`
 
@@ -112,15 +109,11 @@ where
 > `F_min:=Q-lambda(p+u)+p-D_M+1`
 > `      =(p-lambda)(p+u)+q-D_M+1`.                       `(FMIN)`
 
-Thus too-small residual defect forces internal A-edge mass directly.
+This is the live bridge from rooted triangles to internal A-edge structure.
 
-Core files:
+Core file:
 
-`project/research/post_ms/2026-09-18-rooted-residual-supply-v1/ROOTED_TRIANGLE_RESIDUAL_AND_BETA_DEGREE_SUPPLY.md`
-
-and
-
-`project/research/post_ms/2026-09-18-global-a-edge-transfer-v1/GLOBAL_A_EDGE_TRANSFER_AND_WITNESS_CHANNELS.md`.
+`project/research/post_ms/2026-09-18-rooted-residual-supply-v1/ROOTED_TRIANGLE_RESIDUAL_AND_BETA_DEGREE_SUPPLY.md`.
 
 ## 4. Preserved switching / Hall / source-tuple stack
 
@@ -128,98 +121,31 @@ A switchable zero-signed matched subcore of order `sigma_0>=3` forces
 
 > `L_A>=sigma_0(sigma_0-1)`.                              `(ZS)`
 
-Above threshold the largest switchable zero-signed subcore and largest projective alpha class are controlled by the scorecard radius
+For `x in A`, let `ell_x` be beta load and `k_x=p-ell_x`. The exact source-tuple hierarchy is
 
-`R_*=max(2,floor((1+sqrt(1+4C_0))/2))`,
-
-with `R_hat=min(p,R_*)`.
-
-For `x in A`, let `ell_x` be beta load, `k_x=p-ell_x`, and `Y_x` the pairwise-distinct designated unmatched beta sources. The exact source-tuple hierarchy is
-
-> `sum_x binom(ell_x,r)/(p-ell_x+r)<=(1/r)binom(u,r)`    `(FDPr)`
+> `sum_x binom(ell_x,r)/(p-ell_x+r)<=(1/r)binom(u,r)`     `(FDPr)`
 
 for every `r>=3`.
 
 For every subset `L subseteq A` of size `N`,
 
-> `sum_{x in L}(p-ell_x)>=Phi_r(N)`,                      `(IST)`
+> `sum_{x in L}(p-ell_x)>=Phi_r(N)`.                      `(IST)`
 
-where
-
-> `Phi_r(N)=sum_{K=0}^{p-r}(N-C_hat_r(K))_+`,
->
-> `C_hat_r(K)=floor(((K+r)/r) binom(u,r)/binom(p-K,r))`.
-
-Preserved beta lower bounds are
+The preserved beta lower bounds include
 
 > `B_beta:=sum_x ell_x >= [pu-R_hat a]_+`,                `(STL)`
 >
 > `B_beta>=p(lambda+1-2p)_+`.                             `(RBF)`
 
-Applying `(IST)` to all of `A` gives
+Applying `(IST)` to all of `A` and to `A_+={x:ell_x>0}` gives the integrated total-load and support restrictions used in `(ISRE)/(STDS)`.
 
-> `B_beta<=ap-Phi_r(a)`.                                  `(ITB)`
+If `u=O(p)` and `lambda=o(p)`, every finite limit `rho=u/p` still satisfies
 
-Applying it only to `A_+={x:ell_x>0}`, `N_+=|A_+|`, gives
+> `rho<27/14`.
 
-> `B_beta<=N_+p-Phi_r(N_+)`.                              `(BSP)`
+The repaired cylinder theorem remains valid, but its generic total lower-bound mass is only `O(p)` for `u,a=O(p)`, so it is not the main quadratic closure mechanism.
 
-Thus beta traffic forces a minimum support population `N_sup(B_beta)` and shrinks the zero-beta cross-edge reservoir.
-
-If `u=O(p)` and `lambda=o(p)`, every finite limit `rho=u/p` still satisfies `rho<27/14`.
-
-## 5. Integrated source support and beta-sensitive degree supply
-
-For each `x in A`, let `d_x=d_U(x)` and let `w_x` count chosen oriented `U--U` certificates using `x` as A-side witness.
-
-The complement-code non-neighbour lemma gives:
-
-- if `ell_x>=2`, `w_x<=u-d_x`;
-- if `ell_x=1`, `w_x<=u-d_x+1`;
-- if `ell_x=0`, use `w_x<=u`.
-
-Let
-
-`A_0={x:ell_x=0}`, `N_0=|A_0|`, `N_1=|{x:ell_x=1}|`,
-
-`s_0=sum_{x in A_0}d_U(x)`.
-
-Then
-
-> `q+s<=a u+s_0+N_1`,                                    `(QS)`
->
-> `2q+s<=2a u-B_beta+s_0+2N_1`.                          `(2QS)`
-
-Consequently
-
-> `r>=p(p-lambda)-s_0-N_1`,                              `(RLOW)`
->
-> `E_U>=u(p+u-1)-2a u+B_beta-s_0-2N_1`.                 `(ELOW)`
-
-The integrated source support gives
-
-> `s_0<=u[a-N_sup(B_beta)]`,                              `(S0ST)`
-
-hence
-
-> `E_U>=u(p+u-1)-3au+B_beta`
-> `       +u N_sup(B_beta)-2a`,                           `(ST-E)`
-
-and
-
-> `r>=p(p-lambda)-u[a-N_sup(B_beta)]-a`.                 `(ST-R)`
-
-In continuum notation `B_beta/p^2->beta`, `N_+/p->nu`, `u/p->rho`,
-
-> `nu-beta>=phi_r(nu;rho)`.                               `(CSPsup)`
-
-For `r=3`, the explicit support floor `nu_3(beta;rho)` remains available, and the parameter-only degree-supply condition is
-
-> `rho(1+rho-3A)+beta_*+rho nu_3(beta_*;rho)<=c`.         `(STDS)`
-
-The integrated whole-A source-root envelope `(ISRE)/(ISRE3)` remains the first global filter before CEIPM.
-
-## 6. New direct A-edge theorem
+## 5. Complete global A-edge witness-channel theorem
 
 For a Boolean code `c`, write
 
@@ -228,39 +154,13 @@ For a Boolean code `c`, write
 - `L_c=sum_{x in A_c}epsilon_x`;
 - `S_c=sum_{z in V_c}epsilon_z`.
 
-Call `xy in E(G[A])` **direct** when `N(x) intersect N(y)=empty`.
+Every internal A-edge belongs to one of three criticality channels:
 
-A direct A-edge must join complementary Boolean codes, and its endpoint slacks satisfy
+1. **direct:** `N(x) intersect N(y)=empty`;
+2. **matched-B witness:** an external tight-core endpoint certifies the edge;
+3. **A/U witness:** after orienting the edge from an A-source `z`, a witness `w in A union U` satisfies `N(z) intersect N(w)={head}`.
 
-> `epsilon_x+epsilon_y>=lambda+1`                         `(DES)`
-
-for `lambda>=0`.
-
-If `D` is the number of direct A-edges, then
-
-> `D<=min{ 1/2 sum_c n_c n_bar(c),`
-> `        (1/(lambda+1)) sum_c n_bar(c)L_c }`.           `(DAE)`
-
-Thus the zero-common-neighbour criticality channel is simultaneously complementary-code limited and slack limited.
-
-## 7. Complete global A-edge witness-channel theorem
-
-Every non-direct A-edge admits an oriented criticality certificate
-
-> `N(z) intersect N(w)={h}`
-
-with `z` an A-endpoint source, `h` the other endpoint, and external witness `w` either a matched tight-core endpoint or a vertex of `A union U`.
-
-The matched-B channel is bounded by the preserved `gamma(w)` collision theorem:
-
-> `M_P<=sigma_0 a`.                                       `(ABC-P)`
-
-For the A/U channel, if `C_c` is the number of chosen certificates with A-source code `c`, then fixed source-witness pairs cannot be reused for different heads and the unique-common-neighbour hole identity gives
-
-> `C_c<=min{n_c N_bar(c),`
-> `          [N_bar(c)L_c+n_cS_bar(c)]/(lambda+1)}`.       `(ABC)`
-
-Therefore, in the near-full partial-Boolean branch with `lambda>=0`,
+The exact complete upper bound is
 
 > `f <= sigma_0 a`
 > `   + min{ 1/2 sum_c n_c n_bar(c),`
@@ -268,129 +168,193 @@ Therefore, in the near-full partial-Boolean branch with `lambda>=0`,
 > `   + sum_c min{ n_c N_bar(c),`
 > `                [N_bar(c)L_c+n_cS_bar(c)]/(lambda+1) }`. `(AFE)`
 
-This accounts for all internal A-edge criticality channels:
+A coarse consequence is
 
-1. direct / no common neighbour;
-2. matched-B witness;
-3. A/U witness.
+> `f<=sigma_0 a+3mu_V(E_U+L_A)/(lambda+1)`,              `(AFE3)`
 
-No cylinder assumption is used.
+where `mu_V=max_c N_c`.
 
-With
-
-`mu_A=max_c n_c`, `mu_V=max_c N_c`, `S=E_U+L_A`,
-
-a coarse form is
-
-> `f<=sigma_0 a`
-> `  +[mu_A E_U+(mu_V+2mu_A)L_A]/(lambda+1)`,             `(AFEc)`
-
-and hence
-
-> `f<=sigma_0 a+3mu_V S/(lambda+1)`.                     `(AFE3)`
-
-The constant `3` is deliberately crude; use `(AFE)` when code-resolved data are available.
-
-## 8. Rooted-transfer / macroscopic-code dichotomy
-
-Combining `(FTR)` with `(AFE3)` gives
-
-> `F_min<=sigma_0 a+3mu_V S/(lambda+1)`.                 `(RTC)`
-
-Whenever `F_min>sigma_0a`,
-
-> `mu_V >= (lambda+1)(F_min-sigma_0a)/(3S)`.             `(MC)`
-
-Thus a large rooted-transfer demand must be absorbed either by a large switchable zero-signed core, which already pays through `(ZS)`, or by a large Boolean code class in `A union U`.
-
-A useful asymptotic corollary is now available.
-
-If
-
-`u/p->rho>0`, `u=O(p)`, `lambda=o(p)`, `lambda>=0`,
-
-and the sequence remains above `M(n)`, then
-
-- `F_min=Theta(p^2)`;
-- `S=o(p^2)`;
-- `(ZS)` gives `sigma_0=o(p)`, hence `sigma_0a=o(p^2)`;
-- the exact scorecard cap gives `S/(lambda+1)=O(p)`.
-
-Therefore
-
-> `mu_V=Omega(p)`.                                        `(MACRO)`
-
-So every surviving sublinear-root-imbalance, linearly-unmatched sequence contains a macroscopic Boolean code class in `A union U`. This is now the principal structural object to attack.
+Combining `(FTR)` and `(AFE3)` forces a macroscopic Boolean class in every surviving sublinear-root-imbalance, linearly-unmatched sequence. That conclusion is now refined further by the fan theorems below.
 
 Core file:
 
 `project/research/post_ms/2026-09-18-global-a-edge-transfer-v1/GLOBAL_A_EDGE_TRANSFER_AND_WITNESS_CHANNELS.md`.
 
-## 9. Preserved small-unmatched and variational consequences
+## 6. New direct-fan rigidity
 
-Because designated beta sources are pairwise distinct,
+Fix `x in A` and let `D_x` be its direct A-neighbours, `d_x=|D_x|`.
 
-> `ell_x<=min(p,u)`,
+All vertices of `D_x` have code `bar(c(x))`, and:
+
+> `D_x` is independent.                                  `(DFI)`
+
+Put
+
+`W_x=(V(G)\{v})\N(x)`.
+
+For `y in D_x`, let `H_x(y)=W_x\N(y)`. Then
+
+> `N(y)=W_x\H_x(y)`,
 >
-> `B_beta<=a min(p,u)`.                                   `(DSB)`
+> `|H_x(y)|=epsilon_x+epsilon_y-(lambda+1)`.              `(DFH)`
 
-For `u<=p`,
+Hence
 
-> `lambda<=2p-1+floor(u^2/(p+u))`.                       `(FDRW)`
+> `|N(y) triangle N(y')|`
+> ` <= |H_x(y)|+|H_x(y')|`.                              `(DFT)`
 
-For `0<rho<1`, high root imbalance satisfies
+In the zero-surplus equality case all leaves of the fan are exact false twins. Thus the direct equality model is explicitly complete-bipartite-like rather than an anonymous code concentration.
 
-> `theta<2+rho^2/(1+rho)`,                               `(SDRW)`
+The fan also pays slack once it exceeds the outside-capacity threshold
 
-and above threshold the switching/distinct-source sandwich gives
+`T=a-p=p+u-lambda-1`:
 
-> `rho>2-sqrt(3)`                                         `(RHO27)`
+> `L_A>=d_x(d_x-T)_+`.                                   `(DFS)`
 
-when `theta>2`.
+With
 
-The beta-sensitive U-edge theorem
+`R_D(T,L)=floor((T+sqrt(T^2+4L))/2)`,
 
-> `q<=a u-B_beta+N_1`                                     `(BQ)`
+the total number `D` of direct A-edges satisfies
 
-and the enhanced-IPM / alpha-overflow machinery remain valid supporting constraints. Test `(ISRE)/(STSUP)/(STDS)` and now `(FTR)/(AFE)/(RTC)` before returning to CEIPM optimization.
+> `D<=a R_D(T,L_A)/2`.                                   `(DFC)`
 
-The repaired beta-cylinder theorem also remains valid, but its distribution-free total mass is only `O(p)` when `u,a=O(p)`, so it is not the generic quadratic closure mechanism.
+## 7. New A/U induced-matching fan theorem
+
+Fix an A-source `x` and all chosen A/U certificates oriented out of `x`. Let `H_x` be the distinct A-heads and `W_x` the distinct A/U witnesses, with common order `d_x`.
+
+There is a canonical bijection `h_i <-> w_i`, and
+
+> `G[H_x,W_x]` is exactly a matching.                     `(IMC)`
+
+Thus `x` is adjacent to every head and no witness, while all off-diagonal head-witness pairs are nonedges.
+
+For the witness side,
+
+> `2e(overline{G[W_x]})`
+> ` <= d_x epsilon_x + sum_{w in W_x}epsilon_w`
+> `    -d_x(lambda+1)`.                                   `(WFD)`
+
+So low-hole A/U fans force the witnesses, all of one complementary Boolean code, towards a clique.
+
+The induced-matching cut also gives the direct scorecard payment
+
+> `S=E_U+L_A>=2d_x(d_x-T)_+`.                             `(AUFS)`
+
+With
+
+`R_C(T,S)=floor((T+sqrt(T^2+2S))/2)`,
+
+every A/U certificate fan has `d_x<=R_C(T,S)` and the total A/U certificate traffic `C` satisfies
+
+> `C<=aR_C(T,S)`.                                        `(AUFC)`
+
+## 8. New quadratic A/U traffic capacity
+
+The witness-fan near-clique information can be summed without assuming disjoint fans.
+
+For one code `c`, let `C_c` be total chosen A/U traffic sourced in `A_c`. Then for `n_c>0`,
+
+> `C_c^2/n_c + lambda C_c`
+> ` <= [2n_c/(lambda+1)]`
+> `      [N_cS_bar(c)+N_bar(c)S_c]`
+> `    +N_bar(c)L_c+n_cS_bar(c)`.                         `(FS-c)`
+
+For one unordered complementary pair `P={c,bar c}`, put
+
+`C_P=C_c+C_bar(c)`, `A_P=n_c+n_bar(c)`,
+
+`L_P=max(N_c,N_bar(c))`,
+
+`W_P=max(N_c+n_c,N_bar(c)+n_bar(c))`,
+
+`S_P=S_c+S_bar(c)`.
+
+Then
+
+> `C_P^2/A_P + lambda C_P`
+> ` <= [2A_PL_P/(lambda+1)+W_P]S_P`.                     `(FS-P)`
+
+Globally, with `V_0=a+u` and
+
+`K_0=2aV_0/(lambda+1)+a+V_0`,
+
+> `C^2/a + lambda C <= K_0 S`.                           `(GFS)`
+
+Thus
+
+> `C<=C_fan`
+>
+> `=(-a lambda+sqrt(a^2lambda^2+4aK_0S))/2`.             `(GFC)`
+
+This is a new parameter-only quadratic cap for the A/U channel; it is independent of `mu_A`, `mu_V`, or a cylinder choice.
+
+## 9. Rooted-transfer fan-feasibility theorem
+
+Let `P` be chosen matched-B certificate traffic. The channel identity is
+
+`f=D+P+C`,
+
+with `P<=sigma_0a`.
+
+Combining the new fan caps gives
+
+> `f <= sigma_0a`
+> `   + aR_D(T,L_A)/2`
+> `   + min{aR_C(T,S),C_fan}`.                            `(HFFC)`
+
+Therefore every above-threshold candidate satisfies
+
+> `F_min <= sigma_0a`
+> `       + aR_D(T,L_A)/2`
+> `       + min{aR_C(T,S),C_fan}`.                        `(RTF)`
+
+More structurally, if
+
+`H=(F_min-sigma_0a)_+`,
+
+then `D+C>=H`. Hence either:
+
+- **direct-fan branch:** some A-vertex has at least `H/a` direct leaves, forming an independent complementary-code near-false-twin block governed by `(DFH)`; or
+- **A/U-fan branch:** some A-source has at least `H/(2a)` distinct complementary-code witnesses and distinct A-heads, with the exact induced-matching cut `(IMC)` and near-clique witness control `(WFD)`.
+
+The previous generic “macroscopic code class” escape has therefore sharpened to two explicit macroscopic fan geometries.
+
+Core package:
+
+`project/research/post_ms/2026-09-18-a-edge-fan-rigidity-v1/`.
 
 ## 10. Verification at this checkpoint
 
-Preserved audits include the exact published 12/32 `X_3` reconstruction and the earlier signed-2-lift, matched-foot, A/U-overlap, same-code, source-tuple, source-root-switching, residual-transfer and source-support suites.
+The new package contains:
 
-New package:
+1. `A_EDGE_FAN_RIGIDITY_AND_QUADRATIC_TRAFFIC_CAPACITY.md` — hand theorem package;
+2. `check_a_edge_fan_geometry.py` — independent graph-atlas audit of the generic fan kernels;
+3. `A_EDGE_FAN_GEOMETRY_AUDIT_SUMMARY.json` — frozen audit summary.
 
-`project/research/post_ms/2026-09-18-global-a-edge-transfer-v1/`
+The audit covered all 21 graph-atlas D2C isomorphism classes through order seven and every maximum-degree root:
 
-contains
-
-1. `GLOBAL_A_EDGE_TRANSFER_AND_WITNESS_CHANNELS.md` — hand theorem package;
-2. `check_a_edge_criticality_channels.py` — independent graph-atlas trichotomy audit;
-3. `A_EDGE_CRITICALITY_AUDIT_SUMMARY.json` — results.
-
-Graph-atlas audit through order seven:
-
-- 21 D2C isomorphism classes;
-- 156 edges checked;
-- 127 direct edges;
-- 29 non-direct externally certified edges;
-- 47 total witness orientations;
+- 43 nonempty direct fans;
+- 48 direct fan incidences;
+- 5 direct fan leaf pairs;
+- 48 exact direct-hole identities;
+- 101 external unique-common-neighbour pairs;
+- 36 two-certificate fan-pair tests with distinct heads;
+- 19 nonadjacent witness-pair hole tests;
 - failures: 0.
 
-This audit supports only the generic critical-edge trichotomy. It does not prove the Boolean-code injections or `(AFE)`; promoted statements rest on the hand proofs.
+This is audit support only. The promoted statements rest on the hand arguments.
 
-## 11. Active next move
+## 11. Live next move
 
-Priorities, in order:
+Do not return to the closed mixed `{4,5}` selected-excess ladder, and do not optimize for first-proof priority on Erdős #742.
 
-1. **Attack the macroscopic Boolean code class forced by `(MACRO)/(MC)`.** Split into a dense same-code A-subgraph and a sparse one. In the dense case, combine same-code criticality/clique payment with `(AFE)` to force scorecard. In the sparse case, use the required A-edge mass `(FTR)` to force complementary-code congestion elsewhere.
-2. **Exploit the exact code-resolved `(AFE)`, not only `(AFE3)`.** The coarse factor `3mu_VS/(lambda+1)` deliberately throws away complement-pair structure. A weighted complement-pair inequality may turn a macroscopic class directly into `L_A` or `E_U` payment.
-3. **Combine `(ST-R)` with `(FTR)/(AFE)`.** Source-tuple support already controls the zero-beta reservoir and gives a residual floor; the new A-edge theorem independently controls the transfer variable. Their overlap is the most promising compact route to contradiction.
-4. **High `theta>2`, rho>=1.** Test `(ISRE3)`, `(STSUP)/(STDS)`, then the new rooted-transfer/A-edge constraints before CEIPM.
-5. **High `theta>2`, rho<1.** Preserve `(SDRW)/(RHO27)/(BQ)` and again test source support plus A-edge transfer before variational optimization.
-6. Keep the `u=0` full-tight finite exception protected. No unmatched-layer argument suppresses the published 12/32 graph, and `(FTR)` is exactly tight there with `f=0`.
-7. Do not return to the closed mixed `{4,5}` selected-excess ladder and do not optimize for first-proof priority on Erdős #742.
+The highest-value next step is a **stability/classification theorem for the two fan equality models**.
+
+1. **Direct branch.** Many low-hole direct leaves around one centre are near false twins; zero hole gives an exact complete-bipartite-type block. Show that a triangle-containing near-full graph cannot sustain a linear direct fan with sublinear total hole mass unless it collapses into the separately understood false-twin/bipartite regime.
+2. **A/U branch.** A linear source fan gives an induced matching `H_x--W_x`, while low hole surplus makes `W_x` a same-code near-clique. Combine that matching cut with same-code edge payment and the rooted triangle count `Q`.
+3. Keep `(RTF)` as the finite scorecard gate: if neither fan can be structurally sustained, the rooted-transfer demand forces `delta>=D_M`.
+
+The separate `Q=0` false-twin-core branch remains distinct.
 
 <!-- CURRENT-STATUS:END -->
