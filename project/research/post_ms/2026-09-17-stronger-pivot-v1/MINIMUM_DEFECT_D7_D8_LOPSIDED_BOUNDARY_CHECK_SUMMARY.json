@@ -1,0 +1,21 @@
+{
+  "status": "PASS_D7_D8_LOPSIDED_BOUNDARY",
+  "atlas_unlabelled_graphs_on_7_vertices": 1044,
+  "d7": {
+    "valid_rooted_cores": 4376,
+    "z_base": 3,
+    "matching_target": 17,
+    "matching_short_cases": 15,
+    "min_matching": 15,
+    "min_exact_residual_cover_among_short_cases": 19,
+    "min_leaf_plus_residual_minus_2k": 3
+  },
+  "d8_all_distinct": {
+    "valid_all_distinct_rooted_cores": 66513,
+    "max_absorbed_Q_pair_count": 9,
+    "quotient_residual_cover_le_2_cases": 0,
+    "certified_quotient_residual_cover_lower_bound": 3,
+    "certified_full_complementary_residual_cover_lower_bound": 6
+  },
+  "trust_boundary": "Finite rooted-core certificate using NetworkX graph atlas. The d=7 ray propagation and the d=8 reduction to the all-distinct case are hand structural arguments. External review remains open."
+}
