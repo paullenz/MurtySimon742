@@ -1,0 +1,27 @@
+{
+  "status": "PASS_COMPLETE_SIX_DEFECT_SUPPORT_EXCLUSION",
+  "threshold_k": 9,
+  "boundary_patterns": 31,
+  "boundary_patterns_by_t": {"0": 14, "1": 8, "2": 5, "3": 3, "4": 1},
+  "t_ge_5_leaf_package_impossible": true,
+  "lopsided_pattern": [0, 0, 0, 0, 0, 3],
+  "lopsided_audit": "separate exact 15572-core audit; unique dangerous rooted class K2 join 2K2 has tau=2k+2",
+  "generic_matching_certified_patterns": 29,
+  "generic_min_leaf_plus_matching_minus_2k": 1,
+  "valid_labelled_core_count_range": [13757, 25460],
+  "sole_generic_matching_miss": {
+    "t": 2,
+    "p": [0, 0, 0, 0, 0, 0],
+    "k": 10,
+    "core_mask": 0,
+    "greedy_matching_margin": -1,
+    "residual_decomposition": "8 K_(1,6) + 2 K_6",
+    "residual_vertex_cover": 18,
+    "leaf_cover": 5,
+    "leaf_plus_residual_cover_minus_2k": 3
+  },
+  "boundary_k8_support_equality": "lopsided z=2 with empty six-vertex exceptional core has tau=2k=16",
+  "method": "exact leaf package + coordinatewise residual monotonicity + finite explicit residual matchings + one exact component decomposition",
+  "negative_control": "published k=4 X3 residual-zero mechanism is outside theorem scope",
+  "trust_boundary": "internal finite-certificate theorem; external mathematical review and hand compression of the six-vertex core certificate remain open"
+}
