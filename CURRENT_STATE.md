@@ -3,14 +3,11 @@
 > **Active target — 18 September 2026.** The live problem is the sufficiently-large/eventual second-extremal D2C classification around `M(n)=floor((n-1)^2/4)+1`. The false all-order 2019 Dailly–Foucaud–Hansberg strengthening is not assumed. The published 2024 order-12, size-32 D2C graph is a mandatory hostile control. Murty–Simon / Erdős #742 remains preserved but is not the live optimization target.
 
 <!-- CURRENT-STATUS:START -->
-**CHECKPOINT CLASS:** `FULL_TIGHT_CLOSED_NEAR_FULL_COMPLETE_CYLINDER_FEASIBILITY_LARGE_CODE_FRONTIER`.
+**CHECKPOINT CLASS:** `FULL_TIGHT_CLOSED_NEAR_FULL_DISTRIBUTION_FREE_CYLINDER_BOUND_FRONTIER`.
 
 **WORK MODE:** `EVENTUAL_D2C_MATH`.
 
-The full-tight Boolean branch remains internally closed for sufficiently large matched cores (`k>=19`). The live branch is the unmatched/errorful antipode regime. The current near-full programme has two complementary engines:
-
-1. the source/Hamming/alpha-beta variational route for the linear-`lambda` regime; and
-2. the repaired beta-cylinder route, whose **entire critical-witness accounting is now globally closed**: matched-B feet and A/U witnesses both have exact aggregate capacities.
+The full-tight Boolean branch remains internally closed for sufficiently large matched cores (`k>=19`). The live branch is the unmatched/errorful antipode regime. The repaired beta-cylinder route now has global capacities for every witness channel, and the former residual obstruction — an unspecified macroscopic Boolean code class — has itself been priced into the scorecard. The current highest-value bridge is from the source-tuple / beta-deficit distribution to the new **parameter-only complete-cylinder upper bound**.
 
 No global eventual second-extremal theorem is claimed.
 
@@ -25,9 +22,9 @@ The published Radosavljevic--Stanic--Zivkovic (2024) Figure-1 graph has been rec
 - isomorphic to the project's `X_3`;
 - full-tight data `k=4,b=8,a=3,r=0,F=empty`.
 
-See `PUBLISHED_12_VERTEX_EXCEPTION_FIGURE_CERTIFICATION.md`. It has `u=0`, so every unmatched-layer theorem below leaves it untouched.
+See `project/research/post_ms/2026-09-17-stronger-pivot-v1/PUBLISHED_12_VERTEX_EXCEPTION_FIGURE_CERTIFICATION.md`. It has `u=0`, so every unmatched-layer theorem below leaves it untouched.
 
-## 2. Near-full normal form and scorecard
+## 2. Near-full normal form, rooted triangles, residual defect, and scorecard
 
 For a maximum-degree root `v`, write
 
@@ -37,19 +34,19 @@ Let the complete tight-antipode matching in `B` have `p` pairs and let `U` be th
 
 Put `q=e(G[U])`, `s=e_G(A,U)`, `f=e(G[A])`. Then
 
-`a=2p+u-lambda-1`,
-
-`Q=p(p+u-1)+q`,
-
-`r=(p+u)(a-p)+p-s-q`,
-
-`delta=b(n-b)-m=(p+u)(a-p)+p-s-q-f`.
+> `a=2p+u-lambda-1`,
+>
+> `Q=e(G[B])=p(p+u-1)+q`,
+>
+> `r=(p+u)(a-p)+p-s-q`,
+>
+> `delta=b(n-b)-m=(p+u)(a-p)+p-s-q-f`.
 
 For `epsilon_z=b-d(z)`, put
 
-`E_U=sum_{y in U}epsilon_y=u(p+u-1)-2q-s`,
-
-`L_A=sum_{x in A}epsilon_x=a(p+u)-s-2f`.
+> `E_U=sum_{y in U}epsilon_y=u(p+u-1)-2q-s`,
+>
+> `L_A=sum_{x in A}epsilon_x=a(p+u)-s-2f`.
 
 Let
 
@@ -67,7 +64,9 @@ and parity gives
 
 At `lambda=-1`, `C_0=2p+u-4`.
 
-## 3. Switching stability and row complexity
+The live branch is triangle-containing / partial-Boolean. The separate `Q=0` / false-twin-core branch remains open and must not be conflated with this one.
+
+## 3. Preserved switching, Hall, sparse-U, and source-tuple machinery
 
 A switchable zero-signed matched subcore of order `s_0>=3` forces
 
@@ -87,11 +86,7 @@ one has
 >
 > every unmatched row has `tau(Psi(K_y))>=ceil(p/(R_*+1))`,
 >
-> the largest projective alpha/true-twin class has `mu_alpha<=R_*`.
-
-The full-tight switching hierarchy itself is internally closed for `k>=19`; do not reopen the fixed-defect ladder as the main attack.
-
-## 4. Selected/Hall, sparse-U, source-tuple, and Hamming facts
+> the largest projective alpha / switching true-twin class has `mu_alpha<=R_*`.
 
 Preserved selected/Hall consequences include
 
@@ -131,7 +126,7 @@ A key consequence is
 
 Thus any sequence with `limsup u/p>=27/14` must enter a genuinely linear root-imbalance regime.
 
-## 5. Enhanced alpha-beta coercivity and linear-`lambda` master
+## 4. Enhanced alpha-beta coercivity and the linear-`lambda` master
 
 For fibre `i`, with `m_i=min(u_i^0,u_i^1)` and alpha load `h_i`,
 
@@ -155,7 +150,7 @@ For fixed `r>=3`, if `u/p->rho` and `N/p->nu`,
 >
 > `=int_0^1 [nu-(kappa/r)(rho/(1-kappa))^r]_+ d kappa`. `(CSP)`
 
-The continuum enhanced IPM `(CEIPM)` is the live necessary condition in the linear regime. For `theta=lambda/p>2`, the beta floor supplies the alpha-free source-profile lower bound
+The continuum enhanced IPM `(CEIPM)` is the independent global necessary condition in the linear regime. For `theta=lambda/p>2`, the beta floor supplies the alpha-free source-profile lower bound
 
 > `nu_0=[theta-2-Ax]_+/(1-x)`.                            `(HSP)`
 
@@ -163,29 +158,14 @@ The old coarse linear envelope is uniformly non-sharp on compact subsets of
 
 > `theta>2+rho/5`.                                       `(STRICT)`
 
-No optimized replacement for the old coarse `13/4` theta cap is promoted yet.
+No optimized replacement for the old coarse `13/4` theta cap is promoted.
 
-File: `ENHANCED_COERCIVITY_CONTINUUM_SOURCE_PROFILE_AND_CLIQUE_SLACK.md`.
+Core file:
+`project/research/post_ms/2026-09-17-stronger-pivot-v1/ENHANCED_COERCIVITY_CONTINUUM_SOURCE_PROFILE_AND_CLIQUE_SLACK.md`.
 
-## 6. Unique-common-neighbour and same-code payments
+## 5. Repaired cylinder localization and matched-B channel
 
-For nonadjacent vertices with exactly one common neighbour,
-
-> `|holes|=epsilon_z+epsilon_w-(lambda+1)`.               `(UCH)`
-
-If an actual same-code A-clique has order `r>=2`, then
-
-> `E_U+L_A>=ceil(r(lambda+1)/2)`.                         `(SCC)`
-
-Hence above threshold,
-
-> `omega_same-code(A)<=max(1,floor(2C_0/(lambda+1)))`.   `(SCCAP)`
-
-Common A/U witness reuse on a same-code source block forces density and a quadratic hole/clique payment. These remain the local structural tools for large code classes.
-
-## 7. Repaired beta-cylinder localisation
-
-For `x in A`, the beta-cylinder theorem supplies some full A-code class `R subseteq N_A(x)` with
+For `x in A`, the beta-cylinder theorem supplies a full A-code class `R subseteq N_A(x)` with
 
 > `|R|>=ceil((p-epsilon_x)_+/2^{k_x})`.                   `(CY3)`
 
@@ -199,92 +179,51 @@ then
 
 For a critical edge `xz`, `z in R`:
 
-- A/U witnesses are complementary to the relevant source code;
+- A/U witnesses are complementary to the relevant **source** code;
 - a matched-B witness can occur only in a differing coordinate `i in D`;
 - if `|R|>=2`, no outgoing orientation from `x` can use a matched-B witness;
 - incoming matched-B witnesses are the only exceptional channel.
 
 Never use the discarded assumption `c_R=c(x)`.
 
-## 8. Matched-foot gamma collisions and the old aggregate cap
+For a matched endpoint `w=q_i^s`, define its row-complement source code `gamma(w)`. Gamma collision classes are switchable zero-signed subcores. Put
 
-For a matched endpoint `w=q_i^s`, define its row-complement source code `gamma(w)`. An incoming matched foot obeys
+`mu_gamma=max_c |{w:gamma(w)=c}|`.
 
-> `N(z) cap N(w)={x} ==> c(z)=gamma(w)`,                  `(MF1)`
+Then
+
+> `mu_gamma<=sigma_0`,
 >
-> `t_w<=n_{gamma(w)}`.                                    `(MF2)`
-
-Gamma-collision classes are switchable zero-signed subcores. With
-
-`mu_gamma=max_c |{w:gamma(w)=c}|`,
-
-> `mu_gamma<=sigma_0`.                                    `(MF5)`
-
-Opposite endpoints satisfy
-
-> `gamma(q_i^1)=bar gamma(q_i^0)`.                        `(MF6)`
-
-The preserved aggregate and weighted caps are
-
-> `M_P<=mu_gamma a`,                                      `(MFC)`
->
-> `sum_i[t_i^0 epsilon_i^1+t_i^1 epsilon_i^0]<=mu_gamma L_A`. `(MFSP+)`
-
-## 9. New matched-foot self-pricing and fibre polarization
+> `gamma(q_i^1)=bar gamma(q_i^0)`.
 
 Define
 
-> `R_A(L_A)=max(2,floor((1+sqrt(1+4L_A))/2))`.
+`R_A(L_A)=max(2,floor((1+sqrt(1+4L_A))/2))`.
 
-Because any gamma-collision class of size at least three is a zero-signed subcore,
+Matched-foot self-pricing gives
 
-> `mu_gamma<=R_A(L_A)`.                                   `(MSP2)`
-
-Thus
-
-> `M_P<=a R_A(L_A)`.                                      `(MSP3)`
+> `mu_gamma<=R_A(L_A)`,                                   `(MSP2)`
+>
+> `M_P<=aR_A(L_A)`.                                      `(MSP3)`
 
 More sharply, if `m=ceil(M_P/a)>=3`,
 
 > `L_A>=m(m-1)`.                                          `(MSP1)`
 
-So with `a=O(p)`, quadratic matched-foot escape forces `L_A=Omega(p^2)`; if `L_A=o(p^2)`, then `M_P=o(p^2)`.
+Fibre polarization gives
 
-Also, fibre by fibre,
+> `(lambda+1)sum_i min(t_i^0,t_i^1)<=mu_gamma L_A`.      `(PT2-old)`
 
-> `t_i^0 epsilon_i^1+t_i^1 epsilon_i^0`
->
-> `>=(lambda+1)min(t_i^0,t_i^1)`.
+and the complement-majority refinement is
 
-Hence
+> `M_P<=R_A(L_A) min(a,(a+Delta_A)/2+L_A/(lambda+1))`.  `(CP7)`
 
-> `(lambda+1)sum_i min(t_i^0,t_i^1)<=mu_gamma L_A`.      `(PT2)`
+Core files:
+`CYLINDER_REPEATED_CLASS_WITNESS_LOCALISATION.md`,
+`MATCHED_FOOT_COLLISION_CAPACITY.md`, and
+`project/research/post_ms/2026-09-18-matched-foot-polarization-v1/MATCHED_FOOT_POLARIZATION_SELF_PRICING_AND_CYLINDER_SPILL.md`.
 
-For `lambda>=0`, cheap matched-foot traffic is therefore forced to be fibrewise one-sided.
-
-## 10. New complement-majority matched-foot capacity
-
-Partition A-codes into unordered complementary pairs and put
-
-`Delta_A=sum_{ {c,bar c} }|n_c-n_bar c|`,
-
-`a_pm=(a+Delta_A)/2`.
-
-Then for `lambda>=0`,
-
-> `M_P<=mu_gamma[a_pm+L_A/(lambda+1)]`.                   `(CP5)`
-
-Together with `(MFC)` and `(MSP2)`,
-
-> `M_P`
->
-> `<=R_A(L_A) min(a,(a+Delta_A)/2+L_A/(lambda+1))`.      `(CP7)`
-
-Thus near-maximal matched-B escape requires either large `L_A` or strong polarization of the A-layer between complementary Boolean code classes.
-
-File: `project/research/post_ms/2026-09-18-matched-foot-polarization-v1/MATCHED_FOOT_POLARIZATION_SELF_PRICING_AND_CYLINDER_SPILL.md`.
-
-## 11. New global A/U witness-overlap theorem
+## 6. Preserved A/U witness-overlap theorem
 
 For each Boolean code `c`, define
 
@@ -296,147 +235,255 @@ For each Boolean code `c`, define
 
 `S_c=L_c+E_c`.
 
-Every A/U cylinder certificate consists of a source `z in A` and witness `w in A union U` with
-
-> `c(w)=bar c(z)`,
->
-> `N(z) cap N(w)={head}`.
-
-A fixed ordered pair `(z,w)` can occur in at most one certification because its singleton common neighbour uniquely determines the head.
+Every A/U cylinder certificate has a source `z in A`, a witness `w in A union U` with `c(w)=bar c(z)`, and a singleton common neighbourhood. A fixed ordered pair `(z,w)` can occur at most once.
 
 If `C_c` is the number of A/U certifications whose source has code `c`, then
 
-> `C_c<=n_c N_{bar c}`,                                   `(AUC1)`
-
-and the unique-common-neighbour slack inequality gives
-
-> `(lambda+1)C_c`
+> `C_c<=n_cN_bar c`,                                     `(AUC1)`
 >
-> `<=N_{bar c}L_c+n_cS_{bar c}`.                         `(AUC3)`
+> `(lambda+1)C_c<=N_bar c L_c+n_cS_bar c`.               `(AUC3)`
 
-Therefore for `lambda>=0`,
+Hence, for `lambda>=0`,
 
 > `M_AU`
 >
-> `<=sum_c min(`
+> `<=sum_c min(n_cN_bar c,`
 >
-> `    n_cN_{bar c},`
+> `             [N_bar c L_c+n_cS_bar c]/(lambda+1))`.  `(AUC4)`
+
+The old coarse consequence was
+
+> `(lambda+1)M_AU<=(mu_V+mu_A)(E_U+L_A)`.                `(AUC5)`
+
+Combining `(CY3)`, `(CP7)` and `(AUC4)` gave the exact codewise complete-cylinder feasibility inequality `(LDCF)`.
+
+Core file:
+`project/research/post_ms/2026-09-18-matched-foot-polarization-v1/AU_WITNESS_OVERLAP_CAPACITY_AND_COMPLETE_CYLINDER_FEASIBILITY.md`.
+
+## 7. New same-code edge capacity on the whole coded layer
+
+The same-code criticality theorem now applies to **all** edges inside a Boolean class `V_c=A_c union U_c`, not only A-edges.
+
+For `p>=1`, every same-code edge has an A/U critical witness of complementary code. If the source lies in `U`, the witness must in fact lie in `A`, because two U-vertices also share the root.
+
+Let
+
+`e_c=e(G[V_c])`, `e_A(c)=e(G[A_c])`, `e_U(c)=e(G[U_c])`.
+
+Then
+
+> `e_c<=N_cN_bar c`,                                      `(SC1)`
 >
-> `    [N_{bar c}L_c+n_cS_{bar c}]/(lambda+1))`.         `(AUC4)`
-
-With
-
-`mu_A=max_c n_c`, `mu_V=max_c N_c`,
-
-one also has the coarse but useful bound
-
-> `(lambda+1)M_AU`
+> `e_A(c)<=n_cN_bar c`,                                   `(SC1A)`
 >
-> `<=mu_V L_A+mu_A(E_U+L_A)`
+> `e_U(c)<=t_cn_bar c`.                                   `(SC1U)`
+
+For `lambda>=0`,
+
+> `(lambda+1)e_c<=N_bar c S_c+N_cS_bar c`,               `(SC2)`
 >
-> `<=(mu_V+mu_A)(E_U+L_A)`.                              `(AUC5)`
+> `(lambda+1)e_A(c)<=N_bar c L_c+n_cS_bar c`,            `(SC2A)`
+>
+> `(lambda+1)e_U(c)<=n_bar c E_c+t_cL_bar c`.            `(SC2U)`
 
-Above threshold,
+The same tournament argument also extends the clique payment to every same-code clique `K subseteq V_c`:
 
-> `M_AU<=((mu_V+mu_A)C_0)/(lambda+1)`.                   `(AUC6)`
+> `E_U+L_A>=ceil(|K|(lambda+1)/2)`.                       `(SCC+)`
 
-Arbitrary cross-centre witness reuse is already included in these bounds; this closes the aggregate overlap bookkeeping gap.
+This strictly extends the earlier A-only statement.
 
-File: `project/research/post_ms/2026-09-18-matched-foot-polarization-v1/AU_WITNESS_OVERLAP_CAPACITY_AND_COMPLETE_CYLINDER_FEASIBILITY.md`.
+## 8. New degree-crowding and complementary-pair payment
 
-## 12. Complete aggregate cylinder feasibility inequality
+Put
 
-For any family `X` of beta-loaded centres, choose one repeated class `R_x` per centre and one criticality certificate per edge into that class. All certificates lie either in the A/U channel or the matched-B channel.
+> `T=a-p=p+u-lambda-1`.
 
-Combining `(CY3)`, `(CP7)` and `(AUC4)` gives the exact finite necessary condition, for `lambda>=0`,
+Exact degree crowding gives
+
+> `2e_A(c)>=n_c(n_c-T)-L_c`,                              `(CR-A)`
+>
+> `2e_U(c)>=t_c(t_c-T-1)-E_c`,                            `(CR-U)`
+>
+> `2e_c>=N_c(N_c-T)-t_c-S_c`.                             `(CR-V)`
+
+Combining these with the same-code edge capacities gives the one-sided complement-forcing inequalities
+
+> `L_c>=[n_c(n_c-T-2N_bar c)]_+`,                         `(CF-A)`
+>
+> `E_c>=[t_c(t_c-T-1-2n_bar c)]_+`,                       `(CF-U)`
+>
+> `S_c>=[N_c(N_c-T-2N_bar c)-t_c]_+`.                     `(CF-V)`
+
+Thus a large code class is no longer a free survivor: either it pays slack directly or its complementary class must also be large. The U-only version specifically requires complementary **A**-mass.
+
+For `P={c,bar c}`, put `S_P=S_c+S_bar c`, `L_P=max(N_c,N_bar c)`. Then
+
+> `S_P >= (lambda+1)[N_c(N_c-T)-t_c]_+/(2L_P+lambda+1)`, `(CPP-V)`
+
+and the symmetric pair form is
+
+> `S_P >= (lambda+1)[`
+>
+> ` N_c(N_c-T)+N_bar c(N_bar c-T)-(t_c+t_bar c)`
+>
+> `]_+/(4L_P+lambda+1)`.                                 `(CPP-P)`
+
+These turn complement congestion itself into scorecard payment.
+
+## 9. New complementary-pair localization of A/U cylinder traffic
+
+For an unordered complement pair `P={c,bar c}`, put
+
+`C_P=C_c+C_bar c`,
+
+`A_P=n_c+n_bar c`,
+
+`V_P=N_c+N_bar c`.
+
+Then
+
+> `C_P<=A_PV_P`.                                          `(PT1)`
+
+Writing `V_0=a+u`, Cauchy gives
+
+> `max_P C_P>=M_AU^2/(aV_0)`.                             `(PT2)`
+
+Thus quadratic A/U cylinder traffic in a linear-size coded layer must concentrate quadratically in **one actual complementary pair**, rather than merely producing unrelated large maxima. In that pair,
+
+> `max(n_cN_bar c,n_bar cN_c)>=M_AU^2/(2aV_0)`.          `(PT3)`
+
+Define the aligned code mass
+
+> `w_c=N_c+n_c=2n_c+t_c`,
+>
+> `mu_*=max_c w_c`.
+
+Then the old `(mu_V+mu_A)` factor improves to
+
+> `(lambda+1)M_AU<=mu_*(E_U+L_A)`.                        `(AUC5+)`
+
+Locally,
+
+> `(lambda+1)C_P<=max(w_c,w_bar c)S_P`.                  `(PT4)`
+
+Consequently,
+
+> `E_U+L_A>=`
+>
+> `(lambda+1)M_AU^2/(2aV_0^2)`,                           `(PT6)`
+
+or
+
+> `M_AU<=V_0 sqrt(2a(E_U+L_A)/(lambda+1))`.              `(PT7)`
+
+## 10. New aligned-code self-pricing and distribution-free cylinder cap
+
+The aligned concentration `mu_*` itself is explicitly bounded.
+
+Put
+
+> `D_0=T+2V_0+1=5p+5u-3lambda-2`.
+
+For every code,
+
+> `S_c >= [(w_c/2)(3w_c/2-D_0)]_+`.                      `(AC1)`
+
+Therefore, in an above-`M(n)` candidate, define
+
+> `R_code=floor((D_0+sqrt(D_0^2+12C_0))/3)`.             `(AC2)`
+
+Then
+
+> `mu_*<=R_code`.                                         `(AC3)`
+
+This closes the previous checkpoint's unspecified “macroscopic code concentration” parameter at the finite scorecard level.
+
+Combining `(AUC5+)`, `(PT7)`, and `(GS-A)` gives the **distribution-free A/U witness cap**
+
+> `M_AU <= min(`
+>
+> ` R_code C_0/(lambda+1),`
+>
+> ` V_0 sqrt(2aC_0/(lambda+1))`
+>
+> `)`.                                                    `(DAU3)`
+
+Finally, matched-foot self-pricing gives `M_P<=aR_A(C_0)`. Hence for every family `X` of beta-loaded A-centres,
 
 > `sum_{x in X} ceil((p-epsilon_x)_+/2^{k_x})`
 >
-> `<=R_A(L_A) min(a,(a+Delta_A)/2+L_A/(lambda+1))`
+> `<= aR_A(C_0)`
 >
-> `  +sum_c min(`
+> ` + min(`
 >
-> `      n_cN_{bar c},`
+> `     R_code C_0/(lambda+1),`
 >
-> `      [N_{bar c}L_c+n_cS_{bar c}]/(lambda+1))`.       `(LDCF)`
-
-This is the first aggregate cylinder inequality after the scope repair in which **every critical-witness type is globally priced**.
-
-A shorter consequence is
-
-> `sum_{x in X} ceil((p-epsilon_x)_+/2^{k_x})`
+> `     V_0 sqrt(2aC_0/(lambda+1))`
 >
-> `<=R_A(L_A) min(a,(a+Delta_A)/2+L_A/(lambda+1))`
->
-> `  +((mu_V+mu_A)(E_U+L_A))/(lambda+1)`.                `(LDCF2)`
+> `   )`.                                                 `(DCF)`
 
-In the genuine linear-imbalance scale
+`(DCF)` is the first **fully parameter-only** complete-cylinder feasibility inequality after the repeated-code scope repair: every witness channel is included and no `mu_A`, `mu_V`, `mu_*`, code-distribution, or complement-polarization variable remains on the right.
 
-`a=O(p)`, `lambda+1=Theta(p)`, `C_0=O(p^2)`,
+Core file:
+`project/research/post_ms/2026-09-18-large-code-pair-v1/SAME_CODE_CROWDING_COMPLEMENT_PAIR_LOCALIZATION.md`.
 
-a family with repeated-cylinder mass `Omega(p^2)` therefore forces at least one of
+## 11. Verification at this checkpoint
 
-> `L_A=Omega(p^2)`,
->
-> `mu_A=Omega(p)`,
->
-> `mu_V=Omega(p)`.                                        `(LCT)`
+Preserved audits include:
 
-So the cylinder attack has now been reduced to a specific structural survivor: **macroscopic Boolean code concentration**.
+- published 12/32 `X_3` exact reconstruction;
+- all 33,866 signed 2-lifts through `p=6` for matched-foot sign algebra: 347,358 checks, zero failures;
+- matched-foot polarization: 26,996 checks, zero failures;
+- A/U overlap algebra: 9,050 checks, zero failures.
 
-## 13. Verification at this checkpoint
+New finite algebra audit:
 
-Preserved matched-foot sign-algebra audit:
+`project/research/post_ms/2026-09-18-large-code-pair-v1/check_same_code_crowding_pair_localization.py`
 
-- all 33,866 signed 2-lifts through `p=6`;
-- 347,358 checks, zero failures.
+- crowding / complement forcing: 182,696 checks;
+- weighted complementary-pair payment: 1,322,928 checks;
+- aligned A/U capacity `(AUC5+)`: 1,562,500 checks;
+- complementary-pair traffic localization: 20,000 deterministic seeded tables;
+- global aligned-code cap `(AC1)--(AC3)`: 100,806 checks;
+- **3,188,930 total checks, zero failures**.
 
-New matched-foot polarization algebra audit:
+Frozen summary:
+`SAME_CODE_CROWDING_PAIR_CHECK_SUMMARY.json`.
 
-`check_matched_foot_polarization.py`
+These are audit support only; the promoted statements rest on the hand injections and degree counts.
 
-- 26,996 checks, zero failures.
+## 12. Active next move
 
-New A/U overlap algebra audit:
+The generic “large code class” split is no longer the right frontier. The new local route is:
 
-`check_au_witness_overlap_capacity.py`
+> **lower-bound the left side of `(DCF)` from the beta-deficit/source-tuple distribution.**
 
-- 9,050 exhaustive small code-class slack tables, zero failures.
+The source-tuple hierarchy and integrated finite-deficit staircase already constrain how beta mass can be distributed over deficits `k_x`; `(DCF)` prices the repeated-cylinder mass produced by low-deficit, low-slack centres. The missing compact bridge is to retain enough mass through the factor `2^{-k_x}` to contradict the parameter-only right side on a nontrivial part of the linear-`lambda` region.
 
-Frozen summaries are stored beside the scripts. These checks are audit support only; the promoted results are the hand proofs.
+Highest-value subtargets:
 
-## 14. Active next move
+1. derive an exact layer-cake / convex lower bound for
+   `sum_x (p-epsilon_x)_+ 2^{-k_x}`
+   from beta load, the source-tuple hierarchy, and `L_A`;
+2. combine that lower bound with `(DCF)` before doing any numerical envelope optimization;
+3. if near equality survives, use `(CPP-P)` and `(PT4)` to classify the few heavy complementary code pairs forced to carry the A/U traffic.
 
-The aggregate witness-overlap problem is now algebraically closed. The coherent local frontier is a **large-code-class structure theorem**.
+The independent global route remains optimization of `(CEIPM)` in the linear-`lambda` region. Prefer a hand-certifiable exclusion over decimal envelope shaving.
 
-In the linear-`lambda` regime, `(LCT)` says that a quadratic low-deficit cylinder population can survive only by spending quadratic A-slack or by creating a Boolean code class of linear order. The next structural target is therefore:
+The separate `Q=0` / false-twin-core branch remains open.
 
-> show that `mu_A=Omega(p)` or `mu_V=Omega(p)` itself forces enough `E_U+L_A`, same-code edge/clique structure, or complementary-code congestion to violate the second-extremal scorecard.
-
-Useful preserved inputs are:
-
-1. same-code edges have complementary unique-common-neighbour witnesses;
-2. same-code cliques pay `(SCC)` directly;
-3. common-foot concentration forces density/hole payment;
-4. U-code multiplicities already satisfy selected/Hall and complementary-pair caps.
-
-A promising split is to distinguish a macroscopic code class with many internal A-edges from one that is sparse/independent. The dense case should feed `(SCC)`/common-foot criticality; the sparse case must still carry the beta/source-tuple/cylinder obligations and may force complementary-code congestion.
-
-The independent global target remains optimization of `(CEIPM)` on the linear-`lambda` survivor region. Prefer a hand-certifiable exclusion over numerical envelope shaving.
-
-The separate `Q=0` / false-twin-core branch remains open and has not been conflated with the triangle/partial-Boolean branch.
-
-## 15. Trust boundary
+## 13. Trust boundary
 
 - Published 12/32 graph: reconstructed directly from the authoritative figure; no author-supplied adjacency file located.
 - Full-tight eventual closure: internal candidate pending external review.
-- Near-full normal form and scorecard: hand derivations.
-- Source-tuple hierarchy, enhanced coercivity, continuum profile, repaired cylinder localisation, matched-foot self-pricing/polarization, A/U overlap capacity and complete cylinder feasibility: hand arguments with regression where stated.
+- Near-full normal form, `Q`, residual defect `delta`, and scorecard: hand derivations.
+- Source-tuple hierarchy, enhanced coercivity, continuum profile, repaired cylinder localization, matched-foot self-pricing/polarization, and A/U overlap capacity: preserved hand arguments with regression where stated.
+- `(SC1)--(SC2U)` are new hand critical-witness injections; `(CR-A)--(CR-V)` are exact degree counts.
+- `(CF-A)--(DCF)` are finite algebraic consequences of those structural inputs.
+- Positive `(lambda+1)` capacity conclusions in the new package are promoted for `lambda>=0`.
 - `(SLRG)` assumes `u=O(p)` and `lambda=o(p)`; it is not global.
 - `(CEIPM)` is an asymptotic necessary condition, not a closure theorem.
-- `(CP5)--(LDCF)` are promoted for `lambda>=0`; the raw paired identity at `lambda=-1` has no positive `(lambda+1)` payment.
 - No arbitrary repeated cylinder class may be identified with the centre code unless `D=emptyset` is proved.
-- The new cylinder reduction does **not** itself bound `mu_A` or `mu_V`; macroscopic code concentration is the surviving obstruction.
-- `X_3` has `u=0` and is untouched by every new unmatched-layer result.
+- `X_3` has `u=0` and is untouched by every unmatched-layer result.
 - No all-order or eventual second-extremal theorem is claimed.
 <!-- CURRENT-STATUS:END -->
