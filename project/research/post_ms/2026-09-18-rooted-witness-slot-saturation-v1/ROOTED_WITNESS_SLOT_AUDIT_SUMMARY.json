@@ -1,0 +1,22 @@
+{
+  "date": "2026-09-18",
+  "package": "2026-09-18-rooted-witness-slot-saturation-v1",
+  "atlas_D2C_classes_through_order_7": 21,
+  "maximum_degree_roots": 50,
+  "rooted_B_edges": 14,
+  "BA_nonedge_slots": 91,
+  "unused_slots": 77,
+  "saturated_roots": 27,
+  "X3": {
+    "n": 12,
+    "m": 32,
+    "Q": 12,
+    "omega": 12,
+    "r": 0,
+    "H_B": 12,
+    "H_A": 0,
+    "unused": 0
+  },
+  "failures": 0,
+  "trust_boundary": "finite audit only; promoted results are hand proofs"
+}
