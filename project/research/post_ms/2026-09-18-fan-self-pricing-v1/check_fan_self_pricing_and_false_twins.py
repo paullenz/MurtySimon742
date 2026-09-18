@@ -4,12 +4,14 @@
 This checker is deliberately secondary to the hand proofs in:
   SELF_PRICED_COMPLEMENT_PAIR_FANS_AND_ROOTED_GATE.md
   FALSE_TWIN_PRIVATE_SUPPORT_AND_BIPARTITE_STABILITY.md
+  FALSE_TWIN_TWO_EXCEPTION_SECOND_EXTREMAL_GATE.md
 
 It checks:
   1. exact inversion of the aligned-code self-pricing quadratic;
   2. the substitution M_P <= R_code(S_P) into the pair fan inequality;
   3. the false-twin private-support and strengthened missing-edge floor
-     on every diameter-2-critical graph in NetworkX's graph atlas (n <= 7).
+     on every diameter-2-critical graph in NetworkX's graph atlas (n <= 7);
+  4. the z<=2 false-twin structural gate on the same atlas classes.
 """
 
 from __future__ import annotations
@@ -90,6 +92,13 @@ def audit_false_twin_support():
     private_witness_checks = 0
     support_cap_checks = 0
     missing_floor_checks = 0
+    z_le_2_classes = 0
+    z0_classes = 0
+    z1_classes = 0
+    z2_classes = 0
+    z2_triangle_independent_W = 0
+    z2_triangle_active_W = 0
+    z2_active_second_extremal_checks = 0
     failures = 0
 
     for G0 in nx.graph_atlas_g():
@@ -99,6 +108,8 @@ def audit_false_twin_support():
         if not is_d2c(G):
             continue
         d2c_graphs += 1
+
+        triangles = sum(nx.triangles(G).values()) // 3
 
         for D, W in false_twin_classes(G):
             twin_classes += 1
@@ -132,6 +143,33 @@ def audit_false_twin_support():
             if missing2 < floor2:
                 failures += 1
 
+            # Two-exception gate.
+            if z <= 2:
+                z_le_2_classes += 1
+                if z == 0:
+                    z0_classes += 1
+                    # The theorem says the graph is exactly complete bipartite.
+                    if eW != 0 or G.number_of_edges() != d * w:
+                        failures += 1
+                elif z == 1:
+                    z1_classes += 1
+                    if triangles:
+                        failures += 1
+                else:
+                    z2_classes += 1
+                    if eW == 0:
+                        if triangles:
+                            z2_triangle_independent_W += 1
+                            failures += 1
+                    else:
+                        if triangles:
+                            z2_triangle_active_W += 1
+                        if len(G) >= 7:
+                            z2_active_second_extremal_checks += 1
+                            M = ((len(G) - 1) ** 2) // 4 + 1
+                            if G.number_of_edges() > M:
+                                failures += 1
+
     return {
         "d2c_atlas_graphs": d2c_graphs,
         "false_twin_classes": twin_classes,
@@ -139,6 +177,13 @@ def audit_false_twin_support():
         "private_witness_checks": private_witness_checks,
         "support_cap_checks": support_cap_checks,
         "strengthened_missing_floor_checks": missing_floor_checks,
+        "z_le_2_classes": z_le_2_classes,
+        "z0_classes": z0_classes,
+        "z1_classes": z1_classes,
+        "z2_classes": z2_classes,
+        "z2_triangle_independent_W": z2_triangle_independent_W,
+        "z2_triangle_active_W": z2_triangle_active_W,
+        "z2_active_second_extremal_checks": z2_active_second_extremal_checks,
         "failures": failures,
     }
 
