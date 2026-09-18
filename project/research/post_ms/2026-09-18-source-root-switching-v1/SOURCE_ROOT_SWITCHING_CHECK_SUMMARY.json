@@ -1,0 +1,15 @@
+{
+  "d2c_atlas_classes": 21,
+  "exact_rho16_endpoint": [67447921, 264710250000],
+  "exact_two_fifths_endpoint": [72163, 4100625],
+  "failures": 0,
+  "rho16_grid_checks": 100000,
+  "rho16_min_at": [0.0004, 2.000001593625498],
+  "rho16_min_margin": 0.00024930014958665604,
+  "rooted_triangle_kernel_checks": 14,
+  "source_root_strict_checks": 1000,
+  "total_checks": 201514,
+  "two_fifths_grid_checks": 100500,
+  "two_fifths_min_at": [0.001, 2.0004],
+  "two_fifths_min_margin": 0.0006159973532064527
+}
