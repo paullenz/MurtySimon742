@@ -1,0 +1,21 @@
+{
+  "combined_pair_failures": 0,
+  "combined_pair_random_trials": 500000,
+  "dense_four_vertex_cases_by_edge_count": {
+    "4": 75,
+    "5": 30,
+    "6": 5
+  },
+  "dense_four_vertex_safe_cases": 110,
+  "dense_four_vertex_safe_failures": 0,
+  "eta_compression_checks": 100001,
+  "eta_compression_failures": 0,
+  "failures": 0,
+  "p4_safe_cases": 5,
+  "p4_safe_failures": 0,
+  "total_checks": 1173503,
+  "z4_active_envelope_checks": 55408,
+  "z4_active_envelope_failures": 0,
+  "z4_kernel_n23_checks": 517979,
+  "z4_kernel_n23_failures": 0
+}
