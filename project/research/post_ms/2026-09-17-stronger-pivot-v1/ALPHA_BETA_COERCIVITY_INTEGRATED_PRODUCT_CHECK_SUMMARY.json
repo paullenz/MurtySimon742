@@ -1,0 +1,21 @@
+{
+  "date": "2026-09-18",
+  "status": "PASS",
+  "scope": "algebraic audit support only; hand proofs remain authoritative",
+  "fibre_coercivity_cases": 213180,
+  "hamming_rhs_cases": 72084,
+  "tail_integration_cases": 83226,
+  "load_threshold_cases": 184730,
+  "cylinder_bookkeeping_cases": 79079,
+  "total_cases": 632299,
+  "failures": 0,
+  "claims_audited": [
+    "fibrewise alpha payment P_i >= (m_i+1) h_i",
+    "beta slack payment T_i >= (lambda+1)(m_i-h_i)_+",
+    "alpha-beta diversion coercivity",
+    "exact min-side/Hamming identity and Cauchy lower bound",
+    "integrated finite-deficit tail lower bound Phi_r",
+    "beta-load threshold count N_T",
+    "beta-cylinder degree bookkeeping"
+  ]
+}
