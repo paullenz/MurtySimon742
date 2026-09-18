@@ -3,11 +3,13 @@
 > **Active target — 18 September 2026.** The live problem is the sufficiently-large/eventual second-extremal D2C classification around `M(n)=floor((n-1)^2/4)+1`. The false all-order 2019 Dailly–Foucaud–Hansberg strengthening is not assumed. The published 2024 order-12, size-32 D2C graph is a mandatory hostile control. Murty–Simon / Erdős #742 remains preserved but is not the live optimization target.
 
 <!-- CURRENT-STATUS:START -->
-**CHECKPOINT CLASS:** `FULL_TIGHT_CLOSED_ROOTED_RESIDUAL_INTEGRATED_SOURCE_SUPPORT_FRONTIER`.
+**CHECKPOINT CLASS:** `FULL_TIGHT_CLOSED_ROOTED_RESIDUAL_GLOBAL_A_EDGE_FRONTIER`.
 
 **WORK MODE:** `EVENTUAL_D2C_MATH`.
 
-The full-tight Boolean branch remains internally closed for sufficiently large matched cores (`k>=19`). The live branch is the triangle-containing unmatched/errorful antipode regime. The conceptual spine is now residual defect `delta`, rooted-triangle transfer `T=Q-f`, integrated source-tuple beta capacity, and beta-support control of the zero-beta cross-edge reservoir.
+The full-tight Boolean branch remains internally closed for sufficiently large matched cores (`k>=19`). The live branch is the triangle-containing unmatched/errorful antipode regime. The conceptual spine is now
+
+`residual defect -> rooted-triangle transfer -> forced A-edge mass -> complete A-edge witness-channel accounting -> scorecard payment or macroscopic Boolean code class`.
 
 No global eventual second-extremal theorem is claimed.
 
@@ -22,9 +24,15 @@ The published Radosavljevic--Stanic--Zivkovic (2024) Figure-1 graph has been rec
 - isomorphic to the project's `X_3`;
 - full-tight data `p=4,b=8,a=3,u=0,lambda=4,r=0,F=empty`.
 
-See `project/research/post_ms/2026-09-17-stronger-pivot-v1/PUBLISHED_12_VERTEX_EXCEPTION_FIGURE_CERTIFICATION.md`.
+For this graph
 
-For this graph `Q=12`, `delta=0`, `E_U=0`, `L_A=12`, and the residual threshold below is `D_M=1`. Its rooted-triangle transfer window collapses exactly to `Q-f=12`. Any eventual theorem must permit this finite endpoint-saturated mechanism.
+`Q=12`, `delta=0`, `E_U=0`, `L_A=12`, `D_M=1`, `f=0`.
+
+Its rooted-triangle transfer is endpoint-saturated: `Q-f=12`. The new A-edge floor below gives `F_min=0=f`, so the negative control remains explicitly permitted.
+
+Certification file:
+
+`project/research/post_ms/2026-09-17-stronger-pivot-v1/PUBLISHED_12_VERTEX_EXCEPTION_FIGURE_CERTIFICATION.md`.
 
 ## 2. Near-full normal form and exact residual target
 
@@ -50,7 +58,7 @@ For `epsilon_z=b-d(z)`, put
 >
 > `L_A=a(p+u)-s-2f`.
 
-Put
+Let
 
 `c_lambda=ceil(lambda(lambda+2)/2)`
 
@@ -76,7 +84,7 @@ The separate `Q=0` / false-twin-core branch remains open and must not be conflat
 
 ## 3. Rooted triangles are an exact transfer variable
 
-The new transfer identities are
+The exact identities are
 
 > `r+Q=L_A+2f`,                                           `(RQ1)`
 >
@@ -84,36 +92,47 @@ The new transfer identities are
 >
 > `delta=E_U+Q-f-lambda(p+u)+p`.                          `(RQ3)`
 
-With
-
-> `T:=Q-f`,
-
-these become
+With `T:=Q-f`,
 
 > `L_A=delta+T`,
 >
 > `E_U=delta+lambda(p+u)-p-T`.                            `(TR)`
 
-Hence every above-`M(n)` candidate must place its rooted-triangle surplus in the exact window
+Hence every above-`M(n)` candidate must satisfy
 
 > `L_A-D_M+1 <= T`
 > `              <= D_M-1+lambda(p+u)-p-E_U`.            `(TW)`
 
-Core file:
+The transfer identity now has a direct consequence for `f`. Since `E_U>=0`, every above-threshold candidate satisfies
 
-`project/research/post_ms/2026-09-18-rooted-residual-supply-v1/ROOTED_TRIANGLE_RESIDUAL_AND_BETA_DEGREE_SUPPLY.md`.
+> `f>=F_min`,                                             `(FTR)`
+
+where
+
+> `F_min:=Q-lambda(p+u)+p-D_M+1`
+> `      =(p-lambda)(p+u)+q-D_M+1`.                       `(FMIN)`
+
+Thus too-small residual defect forces internal A-edge mass directly.
+
+Core files:
+
+`project/research/post_ms/2026-09-18-rooted-residual-supply-v1/ROOTED_TRIANGLE_RESIDUAL_AND_BETA_DEGREE_SUPPLY.md`
+
+and
+
+`project/research/post_ms/2026-09-18-global-a-edge-transfer-v1/GLOBAL_A_EDGE_TRANSFER_AND_WITNESS_CHANNELS.md`.
 
 ## 4. Preserved switching / Hall / source-tuple stack
 
-A switchable zero-signed matched subcore of order `s_0>=3` forces
+A switchable zero-signed matched subcore of order `sigma_0>=3` forces
 
-> `L_A>=s_0(s_0-1)`.                                     `(ZS)`
+> `L_A>=sigma_0(sigma_0-1)`.                              `(ZS)`
 
-Above threshold the largest switchable zero-signed subcore and largest projective alpha class are at most
+Above threshold the largest switchable zero-signed subcore and largest projective alpha class are controlled by the scorecard radius
 
 `R_*=max(2,floor((1+sqrt(1+4C_0))/2))`,
 
-where `C_0` is the preserved scorecard cap. Put `R_hat=min(p,R_*)`.
+with `R_hat=min(p,R_*)`.
 
 For `x in A`, let `ell_x` be beta load, `k_x=p-ell_x`, and `Y_x` the pairwise-distinct designated unmatched beta sources. The exact source-tuple hierarchy is
 
@@ -121,7 +140,7 @@ For `x in A`, let `ell_x` be beta load, `k_x=p-ell_x`, and `Y_x` the pairwise-di
 
 for every `r>=3`.
 
-The exact integrated form says that for every subset `L subseteq A` of size `N`,
+For every subset `L subseteq A` of size `N`,
 
 > `sum_{x in L}(p-ell_x)>=Phi_r(N)`,                      `(IST)`
 
@@ -131,77 +150,37 @@ where
 >
 > `C_hat_r(K)=floor(((K+r)/r) binom(u,r)/binom(p-K,r))`.
 
-The preserved beta lower bounds are
+Preserved beta lower bounds are
 
 > `B_beta:=sum_x ell_x >= [pu-R_hat a]_+`,                `(STL)`
 >
 > `B_beta>=p(lambda+1-2p)_+`.                             `(RBF)`
 
+Applying `(IST)` to all of `A` gives
+
+> `B_beta<=ap-Phi_r(a)`.                                  `(ITB)`
+
+Applying it only to `A_+={x:ell_x>0}`, `N_+=|A_+|`, gives
+
+> `B_beta<=N_+p-Phi_r(N_+)`.                              `(BSP)`
+
+Thus beta traffic forces a minimum support population `N_sup(B_beta)` and shrinks the zero-beta cross-edge reservoir.
+
 If `u=O(p)` and `lambda=o(p)`, every finite limit `rho=u/p` still satisfies `rho<27/14`.
 
-## 5. New integrated total beta envelope
+## 5. Integrated source support and beta-sensitive degree supply
 
-Applying `(IST)` to the entire A-layer gives the exact finite theorem
-
-> `B_beta<=ap-Phi_r(a)`                                   `(ITB)`
-
-for every `r>=3`.
-
-Hence every above-threshold candidate satisfies the parameter-only condition
-
-> `max(0,p(lambda+1-2p),pu-R_hat a)`
-> `<=ap-Phi_r(a)`.                                        `(ITB*)`
-
-In linear scaling
-
-`u/p->rho>0`, `lambda/p->theta`, `A=2+rho-theta>0`,
-
-`c=theta(1+rho)-theta^2/2`, `R=min(1,sqrt(c))`,
-
-put
-
-> `beta_*=max(0,theta-2,rho-A R)`.
-
-With the continuum source profile
-
-> `phi_r(nu;rho)=int_0^1 [nu-(kappa/r)(rho/(1-kappa))^r]_+ d kappa`,
-
-one gets the compact integrated source-root condition
-
-> `beta_*+phi_r(A;rho)<=A`.                               `(ISRE)`
-
-For `r=3`, if `kappa_A` is determined by
-
-> `A=rho^3 kappa_A/[3(1-kappa_A)^3]`,
-
-then `(ISRE)` becomes
-
-> `beta_*<=rho^3 kappa_A(2+kappa_A)`
-> `             /[6(1-kappa_A)^2]`.                      `(ISRE3)`
-
-This uses the whole source-deficit staircase rather than one cutoff. Preserve the older one-cutoff source-root envelope `(SRE)` as a valid comparison tool, but test `(ISRE)/(ISRE3)` before invoking more elaborate variational machinery.
-
-Core file:
-
-`project/research/post_ms/2026-09-18-rooted-residual-supply-v1/INTEGRATED_SOURCE_ROOT_ENVELOPE.md`.
-
-## 6. Beta-sensitive joint degree supply
-
-For each `x in A`, let `d_x=d_U(x)` and let `w_x` be the number of chosen oriented `U--U` criticality certificates using `x` as A-side witness.
+For each `x in A`, let `d_x=d_U(x)` and let `w_x` count chosen oriented `U--U` certificates using `x` as A-side witness.
 
 The complement-code non-neighbour lemma gives:
 
-- if `ell_x>=2`, no U-neighbour of `x` has code `bar(c(x))`, so `w_x<=u-d_x`;
-- if `ell_x=1`, at most the one designated beta source can be complementary, so `w_x<=u-d_x+1`;
+- if `ell_x>=2`, `w_x<=u-d_x`;
+- if `ell_x=1`, `w_x<=u-d_x+1`;
 - if `ell_x=0`, use `w_x<=u`.
 
 Let
 
-`A_0={x:ell_x=0}`,
-
-`N_0=|A_0|`,
-
-`N_1=|{x:ell_x=1}|`,
+`A_0={x:ell_x=0}`, `N_0=|A_0|`, `N_1=|{x:ell_x=1}|`,
 
 `s_0=sum_{x in A_0}d_U(x)`.
 
@@ -217,41 +196,11 @@ Consequently
 >
 > `E_U>=u(p+u-1)-2a u+B_beta-s_0-2N_1`.                 `(ELOW)`
 
-Thus beta traffic prices the combined `2q+s` degree supply directly; the remaining escape is localized in the zero-beta A--U reservoir `s_0`.
+The integrated source support gives
 
-## 7. New source-tuple support theorem closes the distribution-free zero-beta escape
+> `s_0<=u[a-N_sup(B_beta)]`,                              `(S0ST)`
 
-Let
-
-> `A_+={x:ell_x>0}`, `N_+=|A_+|`.
-
-Apply `(IST)` to `A_+`. Since
-
-`N_+p-B_beta=sum_{x in A_+}(p-ell_x)`,
-
-one gets the exact finite capacity
-
-> `B_beta<=N_+p-Phi_r(N_+)`.                              `(BSP)`
-
-Define
-
-> `N_r(B)=min{N:Np-Phi_r(N)>=B}`.
-
-Then
-
-> `N_+>=N_r(B_beta)`.                                     `(NS)`
-
-Combine this with the elementary distinct-source support floor
-
-> `N_+>=ceil(B_beta/min(p,u))`.
-
-Let `N_sup(B)` be the maximum of these valid lower bounds. Then
-
-> `N_0<=a-N_sup(B_beta)`,
->
-> `s_0<=u[a-N_sup(B_beta)]`.                              `(S0ST)`
-
-Substituting into the degree-supply inequalities yields
+hence
 
 > `E_U>=u(p+u-1)-3au+B_beta`
 > `       +u N_sup(B_beta)-2a`,                           `(ST-E)`
@@ -260,56 +209,124 @@ and
 
 > `r>=p(p-lambda)-u[a-N_sup(B_beta)]-a`.                 `(ST-R)`
 
-Thus the zero-beta reservoir is no longer distribution-free: required beta traffic forces a minimum number of positive-beta A-witnesses, which shrinks `s_0`.
-
-Core file:
-
-`project/research/post_ms/2026-09-18-rooted-residual-supply-v1/SOURCE_TUPLE_SUPPORT_AND_ZERO_BETA_CAPACITY.md`.
-
-## 8. Explicit continuum beta-support floor
-
-If
-
-`B_beta/p^2->beta>0`, `N_+/p->nu`,
-
-then `(BSP)` gives
+In continuum notation `B_beta/p^2->beta`, `N_+/p->nu`, `u/p->rho`,
 
 > `nu-beta>=phi_r(nu;rho)`.                               `(CSPsup)`
 
-For fixed `r`, `F_r(nu)=nu-phi_r(nu;rho)` is strictly increasing, so there is a unique support threshold `nu_r(beta;rho)>beta` satisfying
-
-> `F_r(nu_r)=beta`.
-
-For `r=3`, write
-
-> `t=6beta/rho^3`,
->
-> `kappa=t/(t+1+sqrt(3t+1))`,
->
-> `nu_3(beta;rho)=rho^3 kappa/[3(1-kappa)^3]`.            `(NU3)`
-
-Every limiting configuration has
-
-> `nu>=nu_3(beta;rho)`,                                   `(CSfloor)`
-
-and of course also `nu>=beta/min(1,rho)`.
-
-The integrated envelope `(ISRE3)` is equivalent to the support feasibility condition
-
-> `nu_3(beta_*;rho)<=A`.                                  `(STSUP)`
-
-The unmatched-slack floor strengthens to
-
-> `liminf E_U/p^2`
-> `>=rho(1+rho-3A)+beta+rho nu_3(beta;rho)`.              `(CST3)`
-
-Hence every limiting above-threshold candidate satisfies the parameter-only condition
+For `r=3`, the explicit support floor `nu_3(beta;rho)` remains available, and the parameter-only degree-supply condition is
 
 > `rho(1+rho-3A)+beta_*+rho nu_3(beta_*;rho)<=c`.         `(STDS)`
 
-This is a direct source-tuple-support / degree-supply constraint, independent of Hamming energy and alpha-overflow optimization.
+The integrated whole-A source-root envelope `(ISRE)/(ISRE3)` remains the first global filter before CEIPM.
 
-## 9. Preserved small-unmatched consequences
+## 6. New direct A-edge theorem
+
+For a Boolean code `c`, write
+
+- `A_c={x in A:c(x)=c}`, `n_c=|A_c|`;
+- `V_c=(A union U)_c`, `N_c=|V_c|`;
+- `L_c=sum_{x in A_c}epsilon_x`;
+- `S_c=sum_{z in V_c}epsilon_z`.
+
+Call `xy in E(G[A])` **direct** when `N(x) intersect N(y)=empty`.
+
+A direct A-edge must join complementary Boolean codes, and its endpoint slacks satisfy
+
+> `epsilon_x+epsilon_y>=lambda+1`                         `(DES)`
+
+for `lambda>=0`.
+
+If `D` is the number of direct A-edges, then
+
+> `D<=min{ 1/2 sum_c n_c n_bar(c),`
+> `        (1/(lambda+1)) sum_c n_bar(c)L_c }`.           `(DAE)`
+
+Thus the zero-common-neighbour criticality channel is simultaneously complementary-code limited and slack limited.
+
+## 7. Complete global A-edge witness-channel theorem
+
+Every non-direct A-edge admits an oriented criticality certificate
+
+> `N(z) intersect N(w)={h}`
+
+with `z` an A-endpoint source, `h` the other endpoint, and external witness `w` either a matched tight-core endpoint or a vertex of `A union U`.
+
+The matched-B channel is bounded by the preserved `gamma(w)` collision theorem:
+
+> `M_P<=sigma_0 a`.                                       `(ABC-P)`
+
+For the A/U channel, if `C_c` is the number of chosen certificates with A-source code `c`, then fixed source-witness pairs cannot be reused for different heads and the unique-common-neighbour hole identity gives
+
+> `C_c<=min{n_c N_bar(c),`
+> `          [N_bar(c)L_c+n_cS_bar(c)]/(lambda+1)}`.       `(ABC)`
+
+Therefore, in the near-full partial-Boolean branch with `lambda>=0`,
+
+> `f <= sigma_0 a`
+> `   + min{ 1/2 sum_c n_c n_bar(c),`
+> `          (1/(lambda+1)) sum_c n_bar(c)L_c }`
+> `   + sum_c min{ n_c N_bar(c),`
+> `                [N_bar(c)L_c+n_cS_bar(c)]/(lambda+1) }`. `(AFE)`
+
+This accounts for all internal A-edge criticality channels:
+
+1. direct / no common neighbour;
+2. matched-B witness;
+3. A/U witness.
+
+No cylinder assumption is used.
+
+With
+
+`mu_A=max_c n_c`, `mu_V=max_c N_c`, `S=E_U+L_A`,
+
+a coarse form is
+
+> `f<=sigma_0 a`
+> `  +[mu_A E_U+(mu_V+2mu_A)L_A]/(lambda+1)`,             `(AFEc)`
+
+and hence
+
+> `f<=sigma_0 a+3mu_V S/(lambda+1)`.                     `(AFE3)`
+
+The constant `3` is deliberately crude; use `(AFE)` when code-resolved data are available.
+
+## 8. Rooted-transfer / macroscopic-code dichotomy
+
+Combining `(FTR)` with `(AFE3)` gives
+
+> `F_min<=sigma_0 a+3mu_V S/(lambda+1)`.                 `(RTC)`
+
+Whenever `F_min>sigma_0a`,
+
+> `mu_V >= (lambda+1)(F_min-sigma_0a)/(3S)`.             `(MC)`
+
+Thus a large rooted-transfer demand must be absorbed either by a large switchable zero-signed core, which already pays through `(ZS)`, or by a large Boolean code class in `A union U`.
+
+A useful asymptotic corollary is now available.
+
+If
+
+`u/p->rho>0`, `u=O(p)`, `lambda=o(p)`, `lambda>=0`,
+
+and the sequence remains above `M(n)`, then
+
+- `F_min=Theta(p^2)`;
+- `S=o(p^2)`;
+- `(ZS)` gives `sigma_0=o(p)`, hence `sigma_0a=o(p^2)`;
+- the exact scorecard cap gives `S/(lambda+1)=O(p)`.
+
+Therefore
+
+> `mu_V=Omega(p)`.                                        `(MACRO)`
+
+So every surviving sublinear-root-imbalance, linearly-unmatched sequence contains a macroscopic Boolean code class in `A union U`. This is now the principal structural object to attack.
+
+Core file:
+
+`project/research/post_ms/2026-09-18-global-a-edge-transfer-v1/GLOBAL_A_EDGE_TRANSFER_AND_WITNESS_CHANNELS.md`.
+
+## 9. Preserved small-unmatched and variational consequences
 
 Because designated beta sources are pairwise distinct,
 
@@ -317,67 +334,63 @@ Because designated beta sources are pairwise distinct,
 >
 > `B_beta<=a min(p,u)`.                                   `(DSB)`
 
-For `u<=p` this gives
+For `u<=p`,
 
-> `lambda<=2p-1+floor(u^2/(p+u))`,                        `(FDRW)`
+> `lambda<=2p-1+floor(u^2/(p+u))`.                       `(FDRW)`
 
-and, in the high-root-imbalance continuum branch `0<rho<1`,
+For `0<rho<1`, high root imbalance satisfies
 
-> `theta<2+rho^2/(1+rho)`.                                `(SDRW)`
+> `theta<2+rho^2/(1+rho)`,                               `(SDRW)`
 
-Above threshold the switching/distinct-source sandwich gives
+and above threshold the switching/distinct-source sandwich gives
 
 > `rho>2-sqrt(3)`                                         `(RHO27)`
 
-for `theta>2`.
+when `theta>2`.
 
-The beta-sensitive U-edge theorem remains
+The beta-sensitive U-edge theorem
 
-> `q<=a u-B_beta+N_1`,                                    `(BQ)`
+> `q<=a u-B_beta+N_1`                                     `(BQ)`
 
-with continuum form `xi<=A rho-beta`; for `theta>2,rho<1` the switching form
+and the enhanced-IPM / alpha-overflow machinery remain valid supporting constraints. Test `(ISRE)/(STSUP)/(STDS)` and now `(FTR)/(AFE)/(RTC)` before returning to CEIPM optimization.
 
-> `xi<=A(rho+R)-rho`                                      `(SQ)`
+The repaired beta-cylinder theorem also remains valid, but its distribution-free total mass is only `O(p)` when `u,a=O(p)`, so it is not the generic quadratic closure mechanism.
 
-strictly improves the older sparse-U cap.
+## 10. Verification at this checkpoint
 
-## 10. Cylinder and enhanced-IPM machinery: preserved, supporting role
+Preserved audits include the exact published 12/32 `X_3` reconstruction and the earlier signed-2-lift, matched-foot, A/U-overlap, same-code, source-tuple, source-root-switching, residual-transfer and source-support suites.
 
-The repaired beta-cylinder theorem and all critical-witness channels remain valid. However source-tuple scarcity keeps the total distribution-free cylinder mass only `O(p)` when `u,a=O(p)`, so the old plan of forcing the complete-cylinder inequality to quadratic scale remains retired.
+New package:
 
-The continuum enhanced IPM `(CEIPM)` also remains valid. Use it only as a supporting global constraint after the parameter pair has survived `(ISRE)/(STSUP)/(STDS)`, rather than optimizing CEIPM first.
+`project/research/post_ms/2026-09-18-global-a-edge-transfer-v1/`
 
-## 11. Verification at this checkpoint
+contains
 
-Preserved audits include the exact published 12/32 `X_3` reconstruction and the earlier signed-2-lift, matched-foot, A/U-overlap, same-code, source-tuple, source-root-switching and distinct-source suites.
+1. `GLOBAL_A_EDGE_TRANSFER_AND_WITNESS_CHANNELS.md` — hand theorem package;
+2. `check_a_edge_criticality_channels.py` — independent graph-atlas trichotomy audit;
+3. `A_EDGE_CRITICALITY_AUDIT_SUMMARY.json` — results.
 
-New audit packages in
+Graph-atlas audit through order seven:
 
-`project/research/post_ms/2026-09-18-rooted-residual-supply-v1/`:
+- 21 D2C isomorphism classes;
+- 156 edges checked;
+- 127 direct edges;
+- 29 non-direct externally certified edges;
+- 47 total witness orientations;
+- failures: 0.
 
-1. `check_rooted_residual_supply.py` / `ROOTED_RESIDUAL_SUPPLY_CHECK_SUMMARY.json`:
-   - exact residual-threshold checks: 19,425;
-   - transfer-identity checks: 200,000;
-   - local degree-supply checks: 250,000;
-   - zero-load compression checks: 250,000;
-   - **719,425 checks, zero failures**.
-2. `check_source_tuple_support.py` / `SOURCE_TUPLE_SUPPORT_CHECK_SUMMARY.json`:
-   - 100,000 admissible finite source-support profiles;
-   - 1,176 exact rational triple-source continuum identities;
-   - **101,176 checks, zero failures**.
+This audit supports only the generic critical-edge trichotomy. It does not prove the Boolean-code injections or `(AFE)`; promoted statements rest on the hand proofs.
 
-Total new promoted-audit checks this session: **820,601**, zero failures. These are audit support only; promoted statements rest on the hand proofs.
-
-## 12. Active next move
+## 11. Active next move
 
 Priorities, in order:
 
-1. **Exploit `(ST-R)` together with the rooted-triangle transfer window `(TW)`.** The distribution-free zero-beta escape has now been replaced by the source-tuple support floor. The next target is a compact theorem showing that the resulting residual floor and the required value of `T=Q-f` cannot coexist for large cores unless a tightly classified endpoint structure occurs.
-2. **Price `f=e(A)` / the transfer variable directly.** Since `Q=p(p+u-1)+q` is explicit, the remaining freedom in `T=Q-f` is internal A-edge mass. Use A-edge criticality, same-code clique payment, or complementary-code witness congestion to constrain `f` relative to the source-support partition `A_+ union A_0`.
-3. **High `theta>2`, `rho>=1`.** Test `(ISRE3)`, then `(STSUP)/(STDS)`, before `(SRE)/(CEIPM)`. Do not return to a q-only attack unless a genuinely new local theorem appears.
-4. **High `theta>2`, `rho<1`.** Preserve `(SDRW)/(RHO27)/(SQ)`; again test integrated source support before variational optimization.
-5. **Moderate `0<theta<2`.** Preserve weighted `(QMIN)` and the residual-transfer formulation; the same integrated source-support machinery remains available whenever beta traffic is forced.
-6. Keep the `u=0` full-tight finite exception protected. No unmatched-layer argument suppresses the published 12/32 graph.
+1. **Attack the macroscopic Boolean code class forced by `(MACRO)/(MC)`.** Split into a dense same-code A-subgraph and a sparse one. In the dense case, combine same-code criticality/clique payment with `(AFE)` to force scorecard. In the sparse case, use the required A-edge mass `(FTR)` to force complementary-code congestion elsewhere.
+2. **Exploit the exact code-resolved `(AFE)`, not only `(AFE3)`.** The coarse factor `3mu_VS/(lambda+1)` deliberately throws away complement-pair structure. A weighted complement-pair inequality may turn a macroscopic class directly into `L_A` or `E_U` payment.
+3. **Combine `(ST-R)` with `(FTR)/(AFE)`.** Source-tuple support already controls the zero-beta reservoir and gives a residual floor; the new A-edge theorem independently controls the transfer variable. Their overlap is the most promising compact route to contradiction.
+4. **High `theta>2`, rho>=1.** Test `(ISRE3)`, `(STSUP)/(STDS)`, then the new rooted-transfer/A-edge constraints before CEIPM.
+5. **High `theta>2`, rho<1.** Preserve `(SDRW)/(RHO27)/(BQ)` and again test source support plus A-edge transfer before variational optimization.
+6. Keep the `u=0` full-tight finite exception protected. No unmatched-layer argument suppresses the published 12/32 graph, and `(FTR)` is exactly tight there with `f=0`.
 7. Do not return to the closed mixed `{4,5}` selected-excess ladder and do not optimize for first-proof priority on Erdős #742.
 
 <!-- CURRENT-STATUS:END -->
