@@ -1,0 +1,18 @@
+{
+  "date": "2026-09-18",
+  "scope": "abstract arithmetic and witness-incidence audit support only",
+  "seed": 20260918,
+  "witness_incidence_systems_checked": 12841,
+  "qe_integer_minimizations_checked": 100000,
+  "parameter_scan": {
+    "p_range": [3, 18],
+    "u_range": [1, 18],
+    "old_population_admissible_instances": 1910960,
+    "new_union_rejected": 39902,
+    "u_slack_rejected": 28102,
+    "beta_deficit_rejected": 11800,
+    "base_no_rigid_cut": 2908
+  },
+  "failures": 0,
+  "trust_boundary": "The scan counts abstract integer instances, not realizable D2C graphs. The promoted graph-theoretic statements are hand derivations in the companion theorem note; computation is diagnostic/audit support only."
+}
