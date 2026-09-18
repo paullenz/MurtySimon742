@@ -89,7 +89,10 @@ def check_v2(commit: str, parent: str | None, prior_policy: str) -> list[str]:
             if field not in new_current:
                 failures.append(f'{commit[:12]}: {CURRENT} status block missing {field}')
         if POLICY_V3 in policy:
-            mode_match = re.search(r'WORK MODE:\s*`?([A-Z]+)`?', new_current)
+            # CURRENT_STATE historically uses either plain fields or Markdown-bold
+            # fields such as **WORK MODE:** `AUDIT`. Accept both presentations while
+            # retaining the same closed set of semantic values.
+            mode_match = re.search(r'WORK MODE:(?:\*\*)?\s*`?([A-Z]+)`?', new_current)
             if not mode_match or mode_match.group(1) not in VALID_MODES:
                 failures.append(
                     f'{commit[:12]}: {CURRENT} WORK MODE must be one of '

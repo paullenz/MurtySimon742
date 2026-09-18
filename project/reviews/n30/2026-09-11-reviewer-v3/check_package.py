@@ -51,7 +51,10 @@ def main():
             target=target.split('#')[0]
             if target:
                 links+=1
-                assert (f.parent/target).is_file(),(str(f.relative_to(ROOT)),target)
+                # GitHub Markdown navigation legitimately links both files and
+                # directories. The integrity check should require a real target,
+                # not silently reject an existing directory.
+                assert (f.parent/target).exists(),(str(f.relative_to(ROOT)),target)
     root=(ROOT/'README.md').read_text()
     # The root reviewer index was renamed/reframed after this package was frozen.
     # Prefer the durable protected markers; retain the original heading fallback
