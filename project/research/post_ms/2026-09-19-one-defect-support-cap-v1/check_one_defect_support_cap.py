@@ -20,28 +20,44 @@ support_sizes=W["support_sizes"]; E1_slot_floor=W["E1_slot_floor"]
 RN_range=W["RN_range"]
 
 
-def support_cap(k,d):
-    if k>1:
-        assert d in (0,1)
-        return (k+1)*d, 4+(k-1)*d
-    assert 0<=d<=2
-    return 2*d, 4
+def F0(k,Delta):
+    """Exact safe E=1,d0=0 support-channel incidence envelope for k>1."""
+    if Delta<=2:return 2*Delta
+    return min(k+2,Delta+1)
+
+
+def psi(k,d,D):
+    """Min over X-density defect Delta of Hall payment minus witness incidence."""
+    if k==1:
+        return max(D-2*d,-4)
+    if d==1:
+        return max(D-(k+1),-(k+3))
+    assert d==0
+    # Beyond k+1, F0 is saturated while the Hall term is nondecreasing.
+    cand={0,1,2}
+    lo=max(3,min(k+1,math.floor(-D/2)))
+    hi=max(3,min(k+1,math.ceil(-D/2)))
+    cand.update((lo,hi,k+1))
+    return min(max(0,D+2*Delta)-F0(k,Delta) for Delta in cand if Delta>=0)
 
 
 def refined_pair_lhs(p,g,k,M,d,D):
-    c,J0=support_cap(k,d)
-    return p*(g+1)+k+M+max(D-c,-J0)
+    return p*(g+1)+k+M+psi(k,d,D)
 
 
-def verify_min_formula():
+def verify_psi():
     checks=0
     for k in range(1,10):
         ds=(0,1,2) if k==1 else (0,1)
         for d in ds:
-            c,J0=support_cap(k,d)
-            for D in range(-30,31):
-                brute=min(max(0,D+2*Delta)-min(c+2*Delta,J0) for Delta in range(50))
-                closed=max(D-c,-J0)
+            for D in range(-40,41):
+                if k==1:
+                    brute=min(max(0,D+2*Delta)-min(2*d+2*Delta,4) for Delta in range(20))
+                elif d==1:
+                    brute=min(max(0,D+2*Delta)-(k+1+min(2*Delta,2)) for Delta in range(20))
+                else:
+                    brute=min(max(0,D+2*Delta)-F0(k,Delta) for Delta in range(k+8))
+                closed=psi(k,d,D)
                 assert brute==closed,(k,d,D,brute,closed)
                 checks+=1
     return checks
@@ -49,7 +65,7 @@ def verify_min_formula():
 
 def main():
     c=Counter(); by_t=Counter(); qefail=[]
-    min_checks=verify_min_formula()
+    psi_checks=verify_psi()
 
     for p in range(3,19):
       for u in range(1,19):
@@ -100,7 +116,6 @@ def main():
                           if new_lhs<=cap-sig:
                               new_e1=True; new_rows+=1
 
-                              # Pointwise exact rooted q/E_U lower/upper intersection.
                               qmax=math.comb(u,2)-math.comb(k+1,2)-k-M
                               EUmax=cap-Y0-max(0,D)
                               Zplus=k*a+y*(g+2)+g
@@ -115,20 +130,15 @@ def main():
                   if r2 is not None and rupper>=r2:e2=True
 
               if old_e1:
-                  c["old_E1_states"]+=1
-                  c["old_E1_rows"]+=old_rows
+                  c["old_E1_states"]+=1; c["old_E1_rows"]+=old_rows
                   if t==1:
-                      c["t1_old_E1_states"]+=1
-                      c["t1_old_E1_rows"]+=old_rows
+                      c["t1_old_E1_states"]+=1; c["t1_old_E1_rows"]+=old_rows
               if new_e1:
-                  c["new_E1_states"]+=1
-                  c["new_E1_rows"]+=new_rows
+                  c["new_E1_states"]+=1; c["new_E1_rows"]+=new_rows
                   if t==1:
-                      c["t1_new_E1_states"]+=1
-                      c["t1_new_E1_rows"]+=new_rows
+                      c["t1_new_E1_states"]+=1; c["t1_new_E1_rows"]+=new_rows
               if old_e1 and not new_e1:
-                  c["E1_state_closures"]+=1
-                  by_t[t]+=1
+                  c["E1_state_closures"]+=1; by_t[t]+=1
 
               old_union=old_e1 or e2 or sphere
               new_union=new_e1 or e2 or sphere
@@ -140,15 +150,15 @@ def main():
 
     expected={
       "old_E1_states":53435,
-      "new_E1_states":48674,
-      "E1_state_closures":4761,
+      "new_E1_states":48677,
+      "E1_state_closures":4758,
       "old_E1_rows":1212749,
-      "new_E1_rows":1093262,
-      "new_E1_rows_qe_checked":1093262,
+      "new_E1_rows":1094326,
+      "new_E1_rows_qe_checked":1094326,
       "t1_old_E1_states":5164,
       "t1_new_E1_states":4471,
       "t1_old_E1_rows":128750,
-      "t1_new_E1_rows":111046,
+      "t1_new_E1_rows":111204,
       "old_union":64457,
       "new_union":64457,
       "new_union_rejections":0,
@@ -156,11 +166,12 @@ def main():
       "t1_new_union":5404,
     }
     bad={key:(want,c[key]) for key,want in expected.items() if c[key]!=want}
-    assert not qefail, qefail[:5]
-    assert by_t==Counter({1:693,2:674,3:644,4:596,5:541,6:442,7:365,8:290,9:195,10:138,11:82,12:56,13:27,14:12,15:6}),by_t
+    assert not qefail,qefail[:5]
+    expected_by_t=Counter({1:693,2:674,3:643,4:596,5:540,6:441,7:365,8:290,9:195,10:138,11:82,12:56,13:27,14:12,15:6})
+    assert by_t==expected_by_t,(by_t,expected_by_t)
 
     print({
-      "min_formula_checks":min_checks,
+      "psi_formula_checks":psi_checks,
       "counts":dict(c),
       "E1_state_closures_by_t":dict(sorted(by_t.items())),
       "rooted_qe_failures":len(qefail),
