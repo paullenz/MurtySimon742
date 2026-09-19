@@ -7,26 +7,26 @@
 The false all-order 2019 Dailly–Foucaud–Hansberg Conjecture 3 is **not** the target. The published 2024 D2C graph `X_3` on 12 vertices and 32 edges has `M(12)=31` and remains a mandatory negative control. The mixed `{4,5}` selected-excess ladder is closed. First-proof priority on Erdős #742 is not an optimization target.
 
 <!-- CURRENT-STATUS:START -->
-CHECKPOINT CLASS: `ONE_CODE_Z1_MINIMAL_RESERVOIR_E2_SHARED_CORE_WITNESS_SEPARATION_2026_09_19`
+CHECKPOINT CLASS: `ONE_CODE_Z1_T1_EXCEPTIONAL_GAMMA_FOOT_COLLAPSE_2026_09_19`
 
 WORK MODE: `MATH`
 
-INSPECTED PREDECESSOR: `b544edde936319444b04fa0799db6dcd90fc2ba1`
+INSPECTED PREDECESSOR: `924f98f78cee240df3b5b87ab9a07eaa9f53f07c`
 
-LAST VERIFIED RESULT: `The exact E=2,k>=3 support classification and shared-core R2+R2 pair pinch have now been pushed to selected-witness geometry. General E2 support channels obey J<=d0(k+1)+2min(Delta,B)+min(K,[Delta-B]_+), B=s-c+q, K=k(c-d0), with the closed topology-retaining Phi pair correction. R3 has automatic all-positive X-edge Hamming excess; R2+R2 has zero-rho edges only on defect-to-radius-one support pairs. The unique deepest pair-cheap R2+R2 topology for all k>=3 is h=1,c=2,d0=2. At t=1 its deep pair bill is p^2+M-k-8<=C0-sigma_P and M_+=C0-sigma_P-p^2+k+8. Throughout this shared-core arm star separation removes all 2k defect-core zero-rho edges, so r>=a+y+2+eta_2([e(X)-2]_+). On D<=-6 with pair slack s_P<=1, all three bidirected channels are active, every X-edge is positive-Hamming, Delta<=floor((s_P-D)/2), and r>=a+y+2+eta_2([Emax-floor((s_P-D)/2)]_+). The new physical refinement is that Jmax-J<=1 forces each defect witness to meet a core head; the core singleton certificate then forces both defect witnesses nonadjacent to z_*, so M>=2. Each of the three active singleton-type channels also forces the corresponding two selected outside witnesses nonadjacent, giving three additional distinct U_o nonedges and q<=binom(u,2)-binom(k+1,2)-k-M-3. Bounded replay: 49 exact/one-unit shared-core endpoint states shrink to 39 after M>=2; exact equality shrinks 48->38. The additional q-3 alone closes no further bounded states, showing that the next useful step must exploit the locations/certificates of these witness nonedges rather than another scalar q subtraction. These are abstract parameter states, not graph counts.`
+LAST VERIFIED RESULT: `Raw triangle-edge criticality of every selected outside-witness wrong-head edge gives a secondary matched foot q with gamma(q)=target code and with q lying in a support coordinate of the source head. Therefore wrong-head traffic can use only tight fibres whose gamma pair is not P={d,bar d}. At t=p-g_P=1 there is one exceptional coordinate e and every wrong-head edge in the entire minimal reservoir has source support containing e and the same graph-fixed target code c_e=gamma(q_e^d). This immediately kills the predecessor's shared-core R2+R2 d0=2 endpoint: the core witness has one-coordinate support and cannot meet two distinct defect codes. A complete E2 support case split shows the sharp t=1 traffic hierarchy: shared-core R2+R2 has J<=2k, uniquely at e=the repeated-core coordinate and target=the repeated core code, hence d0=0; one-core R2+R2 and core-containing R3 have J<=k; the remaining topologies have J<=2 or 1. Independently, raw criticality of every X-edge also forces a matched foot in the unique exceptional gamma fibre, so the exceptional gamma pair is a vertex cover of G[X]. In shared-core R2+R2 no two represented X-codes are complementary; a fixed exceptional-code vertex can use only one singleton head with its unique matched foot. Hence e(X)<=k, A>=g-1 and Delta>=binom(g,2)+kA-k. The corrected exact pair-local necessary condition is p^2+M-k+[D+2(binom(g,2)+kA-k)]_+<=C0-sigma_P, A in {g-1,g}. The old 39 exact/near d0=2 endpoint rows are not survivors; their topology is impossible.`
 
-UNPRESERVED WORK: `None. Exact E2 support classification is under project/research/post_ms/2026-09-19-e2-exact-support-v1/. Shared-core pair pinch and its checker are under project/research/post_ms/2026-09-19-e2-shared-core-pinch-v1/. The selected-witness separation theorem and an exact JSON ledger of the 39 remaining bounded exact/near states are preserved in the same shared-core package. No graph-realizability or global eventual claim is promoted.`
+UNPRESERVED WORK: `None at this checkpoint. The new theorem and independent support/arithmetic checker are preserved under project/research/post_ms/2026-09-19-exceptional-gamma-foot-v1/. The old 39-row ledger remains preserved only as a superseded historical diagnostic.`
 
 DEFERRED ADMIN: `README remains synchronized to the 19 September audit trust boundary and is intentionally lower-frequency. Refresh reviewer-facing status at the next daily adversarial checkpoint unless repository integrity requires earlier repair.`
 
-NEXT ACTION: `Stay on m=g+1,t=1,k>=3 and the exact/one-unit shared-core R2+R2 endpoint. Do not spend the next run on another scalar residual inequality: q-3 has already been tested and is too weak. Instead exploit the physical placement of the five newly explicit U-pair nonedges—z_* misses both defect witnesses and the three active support channels separate their selected witness pairs. Trace raw criticality for those witness-witness nonedges/adjacent head pairs and seek forced A/U holes, unmatched slack, or Hall-slot conflicts. Use the preserved 39-state JSON ledger as a diagnostic target, but derive graph lemmas first. Only if this endpoint survives should the 16 non-near shared-core routes be opened, then alternate R2+R2/R3. Keep k=2,k=1,m=g+2,loaded buffer,z=2,and the four-exception gate deferred. Keep X_3 and the graph-level audit boundary explicit.`
+NEXT ACTION: `Stay on m=g+1,t=1,k>=3,E=2. Do not return to the impossible d0=2 five-U-nonedge endpoint. Attack the corrected shared-core R2+R2 d0=0 exceptional-fibre geometry: e is the repeated-core coordinate, c_e is the core code, all wrong-head traffic is defect-witness-to-core, H_M is forced sparse and e(X)<=k. Intersect the new pair-local gate with the exact rooted residual/slot ledger and classify equality in e(X)<=k before opening the J<=k R2+R2/R3 alternatives. Keep k=2,k=1,m=g+2,loaded buffer,z=2,and the four-exception gate deferred. Keep X_3 and the graph-level audit boundary explicit.`
 <!-- CURRENT-STATUS:END -->
 
 ---
 
 ## 1. Mandatory audit gate
 
-This run began by rereading `CURRENT_STATE.md`, root `README.md`, the latest commits, the 19 September daily adversarial audit, `SOURCE_PREMISE_REPAIR.md`, and `RIGID_GRAPH_LEVEL_REGRESSION.md` before forward mathematics.
+This run began by rereading `CURRENT_STATE.md`, root `README.md`, the latest commits, the 19 September daily adversarial audit, `SOURCE_PREMISE_REPAIR.md`, and the independent actual-D2C graph regression before forward mathematics.
 
 Binding trust boundary:
 
@@ -38,176 +38,135 @@ Binding trust boundary:
 - exact pair-local `S_P/Ccap_P` remains mandatory;
 - four-exception gate remains subordinate.
 
-No departure from the audit's priority order occurred.
+There is no departure from the audit priority order. The predecessor explicitly asked for raw criticality on the physical selected-witness pattern; the present matched-foot collapse is exactly that repair path.
 
 ---
 
-## 2. E2 support classification retained
+## 2. Superseded predecessor endpoint
 
-For `m=g+1,t=1,k>=3`, exact `E=2` has only:
+The predecessor's exact/one-unit shared-core R2+R2 endpoint used
 
-1. R3: one radius-three singleton matched-head defect;
-2. R2+R2: two radius-two singleton matched-head defects.
+`h=1,c=2,d0=2`,
 
-With support parameters `s,q,c,d0`, put `B=s-c+q`, `K=k(c-d0)`. Then
+with the common core witness adjacent to both distinct defect heads, and produced 39 bounded parameter states after `M>=2`.
 
-`J<=d0(k+1)+2min(Delta,B)+min(K,[Delta-B]_+)`.
+That topology is now impossible.
 
-The exact pair correction is
+For an active wrong-head edge `z_s h_t`, triangle-edge criticality leaves only a matched witness `q`; generalized matched-foot localization gives
 
-`Phi_{B,0}(D)=max(D,-2B)`;
+`gamma(q)=c(h_t)`,
 
-for `K>0`,
+and `q!~b` forces q to be the d-selected endpoint in a support coordinate of the source head.
 
-`Phi=max(D,-2B)` if `D>=-2B-1`,
+The core witness has a one-coordinate support. One matched endpoint has one fixed gamma code, so it cannot support adjacency to two distinct defect codes. Thus `d0<=1`.
 
-`Phi=max(ceil(D/2)-B,-(2B+K))` if `D<=-2B-2`.
-
-Hence
-
-`p(g+1)+k+M-d0(k+1)+Phi<=C0-sigma_P`.
-
-R3: every actual X-edge positive-Hamming.
-
-R2+R2: only defect-to-radius-one support edges can have zero Hamming excess.
+Do not reuse the old `p^2+M-k-8` endpoint as a live equality model.
 
 ---
 
-## 3. Shared-core topology
+## 3. Exceptional-fibre localization
 
-For R2+R2,
+Let `P={d,bar d}`. By definition `g=g_P` is the number of tight fibres whose two gamma codes form P.
 
-`Jmax=8+2h+c(k-2)+d0`.
+Every wrong-head edge requires a matched foot with gamma equal to an X-code, while X contains neither d nor bar d. Hence wrong-head traffic can use only the `t=p-g` exceptional gamma fibres.
 
-For all `k>=3`, the unique maximum is
+At `t=1`, with exceptional coordinate e,
 
-`h=1,c=2,d0=2`.
+- every emitting source code support contains e;
+- every wrong head has the one fixed code `c_e=gamma(q_e^d)`.
 
-Thus the two radius-two defects share the repeated-core coordinate and `z_*` is adjacent to both defect heads. Here
-
-`B=3`, `K=0`, `A=g-2`, `Jmax=2k+8`.
-
-At `t=1`,
-
-`p^2+M-k-2+max(D,-6)<=T`, `T=C0-sigma_P`.
-
-Deep arm `D<=-6`:
-
-`p^2+M-k-8<=T`,
-
-`M_+=T-p^2+k+8`.
+Thus all selected-witness wrong-head traffic globally targets one code class.
 
 ---
 
-## 4. Rooted-slot pinch
+## 4. Correct E2 traffic hierarchy at t=1
 
-Star separation deletes all `2k` defect-core zero-Hamming edges. Only two private defect-to-radius-one support edges can remain zero-Hamming, so universally
+For `k>=3`:
 
-`r>=a+y+2+eta_2([e(X)-2]_+)`.
+### R2+R2
 
-On `D<=-6` with pair slack
+`(h,c)=(1,2): J<=2k`;
 
-`s_P=T-(p^2+M-k-8)<=1`,
+`(1,1)` or `(0,1): J<=k`;
 
-we have
+`(1,0): J<=2`;
 
-`[D+2Delta]_+ + (Jmax-J)<=s_P`.
+`(0,0): J<=1`.
 
-No bidirected channel can be absent, so both private zero-Hamming edges are also absent. Every X-edge is positive-Hamming and
+The unique `2k` maximum is the shared-core topology with the exceptional coordinate equal to the repeated-core coordinate and the exceptional d-endpoint gamma equal to the core code. Therefore the pair-cheapest shared-core orientation has
 
-`Delta<=floor((s_P-D)/2)`.
+`d0=0`, not `d0=2`.
+
+### R3
+
+core coordinate present: `J<=k`;
+
+core coordinate absent: `J<=1`.
+
+The shared-core R2+R2 family therefore remains the first E2 target, but with completely corrected physical orientation.
+
+---
+
+## 5. Exceptional gamma pair controls all X-edges
+
+Any edge `xy` of G[X] lies in triangles through b and Y. The same location classification as in the zero-buffer X-edge theorem leaves only a matched critical foot q. Generalized matched-foot localization gives one endpoint code equal to `gamma(q)`.
+
+At t=1, q lies in the unique exceptional gamma fibre. Hence every X-edge has an endpoint whose code belongs to the exceptional gamma pair `P_e`.
+
+In shared-core R2+R2 no two represented X-codes are complementary. Therefore `P_e` meets X in at most one code class. For a represented exceptional code c, there is one matched endpoint q_c with gamma c; a fixed pair `(x,q_c)` can have only one singleton common-neighbour head. Hence every exceptional-code X-vertex has X-degree at most one.
+
+The largest X-code class is H0 of size k, so
+
+`e(X)<=k`.
+
+Also the core witness can have at most one wrong H_M neighbour, so
+
+`A>=g-1`.
 
 With
 
-`Emax=binom(g,2)+k(g-2)`,
+`Emax(A)=binom(g,2)+kA`,
 
-`r>=a+y+2+eta_2([Emax-floor((s_P-D)/2)]_+)`.
+we have
 
-`M=M_+` is exact pair equality; `M=M_+-1` is one-unit near equality.
-
----
-
-## 5. New selected-witness separation
-
-Let defect heads be `h_1,h_2`, defect witnesses `z_1,z_2`, and common core witness `z_*`.
-
-Since `Jmax-J<=1` and `k>=3`, neither defect witness can miss all `k` reverse core incidences. Thus each `z_i` is adjacent to at least one core head `x_i`.
-
-The core certificate is
-
-`N(x_i) cap N(z_*)={b}`.
-
-Therefore `z_i z_*` must be absent, or `z_i` would be a second common neighbour. Hence
-
-`z_1 z_* notin E`, `z_2 z_* notin E`,
-
-so
-
-`M>=2`.
-
-For any active singleton-type channel between heads `h_s,h_t`, with selected witnesses `z_s,z_t`, one direction `z_s~h_t` plus
-
-`N(h_t) cap N(z_t)={b}`
-
-forces `z_s z_t` absent.
-
-All three bidirected channels are active when `s_P<=1`; therefore three additional distinct U_o witness-witness nonedges are forced. They are outside the generic independent-U_- / z_*--W_0 / M counts, so
-
-`q<=binom(u,2)-binom(k+1,2)-k-M-3`.
+`Delta>=binom(g,2)+kA-k`.
 
 ---
 
-## 6. Bounded diagnostic
+## 6. Corrected pair-local gate
 
-Previous no-E1 t=1 states: `933`.
+The preserved minimal-reservoir decomposition gives
 
-Current k>=3 frontier within them: `509`.
+`sum epsilon_selected >= p(g+1)+k+M-J`,
 
-Safe shared-core route before exact/near restriction: `65`.
+`L_X >= [D+2Delta]_+`.
 
-Exact-or-one-unit deep endpoint before witness separation: `49`; exact: `48`.
+At t=1, `g=p-1`, so `p(g+1)=p^2`. Using `J<=2k` and the new density floor gives
 
-After the newly proved `M>=2` condition:
+`p^2+M-k+[D+2(binom(g,2)+kA-k)]_+ <= C0-sigma_P`,
 
-- exact-or-one-unit: `39`;
-- exact: `38`.
+with `A in {g-1,g}`.
 
-Near by-k:
-
-`k=3:15, 4:9, 5:11, 6:4`.
-
-Exact by-k:
-
-`k=3:15, 4:9, 5:11, 6:3`.
-
-The extra `q-3` gives no further state closure on the bounded box. This negative diagnostic is preserved and redirects the next attack toward the locations of the forced nonedges rather than their scalar count.
-
-Exact diagnostic state/row ledger:
-
-`project/research/post_ms/2026-09-19-e2-shared-core-pinch-v1/WITNESS_SEPARATION_ENDPOINT_LEDGER.json`.
+This keeps the exact pair-local sigma/Ccap budget and is the live gate to feed into the rooted residual ledger.
 
 ---
 
-## 7. Preserved files
+## 7. Preserved package
 
-`project/research/post_ms/2026-09-19-e2-exact-support-v1/EXACT_E2_SUPPORT_CHANNELS.md`
+`project/research/post_ms/2026-09-19-exceptional-gamma-foot-v1/EXCEPTIONAL_GAMMA_FOOT_COLLAPSE.md`
 
-`project/research/post_ms/2026-09-19-e2-exact-support-v1/check_e2_support_channels.py`
+`project/research/post_ms/2026-09-19-exceptional-gamma-foot-v1/check_exceptional_gamma_foot.py`
 
-`project/research/post_ms/2026-09-19-e2-shared-core-pinch-v1/SHARED_CORE_R22_PAIR_PINCH.md`
+The checker exhausts only the small E2 support/exceptional-coordinate system and audits the displayed topology hierarchy. It is not D2C graph enumeration and is not part of the raw criticality proof.
 
-`project/research/post_ms/2026-09-19-e2-shared-core-pinch-v1/check_shared_core_r22_pair_pinch.py`
+The predecessor files and 39-state endpoint ledger remain in
 
-`project/research/post_ms/2026-09-19-e2-shared-core-pinch-v1/SHARED_CORE_WITNESS_SEPARATION.md`
+`project/research/post_ms/2026-09-19-e2-shared-core-pinch-v1/`
 
-`project/research/post_ms/2026-09-19-e2-shared-core-pinch-v1/WITNESS_SEPARATION_ENDPOINT_LEDGER.json`
-
-All checkers/ledgers are abstract arithmetic/topology diagnostics, not D2C graph enumeration.
+for audit history, but the `d0=2` endpoint is superseded.
 
 ---
 
 ## 8. Next work
 
-Attack the physical witness-nonedge pattern at raw criticality level. The scalar rooted budget still has substantial room; the next gain must come from proving that these specifically located U-o nonedges force additional A/U holes, matched-foot restrictions, or unmatched slack.
-
-Do not open broader branches until this endpoint has been exhausted.
+Remain on the corrected `t=1,E=2,k>=3` shared-core family. The next structural question is equality/stability in `e(X)<=k`: identify the allowed matching-like X geometry, feed its exact missing-edge count through the Hall and rooted slot ledgers, and use raw criticality of the remaining X-edges before opening any broader support topology.
