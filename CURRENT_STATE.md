@@ -7,19 +7,21 @@
 The false all-order 2019 Dailly–Foucaud–Hansberg Conjecture 3 is **not** the target. The published 2024 D2C graph `X_3` on 12 vertices and 32 edges has `M(12)=31` and remains a mandatory negative control. The mixed `{4,5}` selected-excess ladder is closed. First-proof priority on Erdős #742 is not an optimization target.
 
 <!-- CURRENT-STATUS:START -->
-CHECKPOINT CLASS: `ONE_CODE_Z1_BUFFER_ROOTED_EDGE_STRICT_LAYER_2026_09_19`
+CHECKPOINT CLASS: `ONE_CODE_Z1_FIRST_STRICT_FUNNEL_RESERVOIR_INTERRUPTED_REPAIR_2026_09_19`
 
-WORK MODE: `MATH`
+WORK MODE: `MATH_AUDIT_REPAIR`
 
-INSPECTED PREDECESSOR: `7b5dc8c2d0d511d87981080ae5c2cceb953807b0`
+INSPECTED PREDECESSOR: `d31da194cd6e0b2ef85176366a60d168d4bbf2c8`
 
-LAST VERIFIED RESULT: `The former first positive-buffer equality layer is closed by an upstream raw-criticality obstruction. In the rigid one-code common-buffer setup with d_Y(b)=0 and epsilon_b=p-g, prior work forces every buffer--X edge bx to have an outside witness z in U_o with bz in E, xz notin E, N(x)∩N(z)={b}, c(z)=bar c(x), and z anticomplete to Y. Since c(x) != bar d, choose a tight coordinate i with c(x)_i=d_i. Then z and b share the matched endpoint q_i selected by bar d. The rooted B-edge zq_i must have a singleton A-witness orientation. Forward orientation cannot use Y because Y misses q_i, and cannot use X because b is an extra common neighbour under b--X completeness. Reverse orientation cannot use Y because z is anticomplete to Y, and cannot use X because b is again an extra common neighbour. Contradiction. More generally, any outside-U buffer certificate forces a physical buffer--X nonedge. Hence d_Y(b)=0 implies epsilon_b>=p-g+1. The first strict layer epsilon_b=p-g+1 has exact defect identity epsilon_b=(p-g)+h_X+h_o and splits into one X-hole or one U_o-hole. The U_o-hole subtype is impossible. Therefore the only live first-strict unloaded geometry has one unique X-hole ba_0 and b complete to U_o. Every remaining buffer--X edge is outside-U certified; rooted matched-edge certificates funnel through a_0. Writing S_0={i:c(a_0)_i!=d_i}, every buffer-neighbour x with outside witness z_x satisfies either Type F: |{i:c(x)_i=d_i}|=1 and that unique coordinate lies in S_0, or Type R: S_0 subseteq S_x and xa_0 is a nonedge. Consequently every X-neighbour of a_0 must have code at Hamming radius p-1 from d. This is now the live structural frontier.`
+REPAIR COMMIT: `747d5ed6bd8f7c634e0a4d39b5f1df61b2db3a4f`
 
-UNPRESERVED WORK: `None. The equality-layer closure is preserved under project/research/post_ms/2026-09-19-buffer-rooted-matched-edge-collapse-v1/ and the first-strict unique-hole classification is preserved under project/research/post_ms/2026-09-19-buffer-first-strict-layer-v1/. The predecessor shared-core resource cone remains preserved as correct conditional algebra but is no longer a live graph tail because its parent equality geometry is now proved empty.`
+LAST VERIFIED RESULT: `The last independently inherited structural frontier remains the first-strict unloaded common-buffer unique-hole theorem: epsilon_b=p-g+1 forces one unique buffer--X hole ba_0, b is complete to U_o and X\{a_0}, every remaining buffer--X edge is outside-U certified, and the rooted matched-edge funnel gives the Type-F / Type-R support dichotomy described below. The interrupted commit d31da194... preserves a substantial NEW candidate theorem package (Type-R overlap collapse, disjoint agreement-block normal form, pair-local source pricing, outside-reservoir/core-separation bills, F-versus-a_0 slack conservation, Hamming-slot feedback, and m=1 all-F/all-R polarization), but this repair does NOT promote those additions to verified status until their key singleton/common-neighbour derivations are independently re-audited.`
 
-DEFERRED ADMIN: `README remains synchronized to the 19 September daily audit trust boundary. Do not erase the predecessor shared-core work; reclassify it as conditional downstream mathematics on a now-closed parent layer. Refresh reviewer-facing status at the next daily adversarial checkpoint unless repository integrity requires earlier repair.`
+UNPRESERVED WORK: `The theorem note committed at d31da194... claims a companion checker and exact diagnostic replay counts (including 248,798 coarse rows and 188,912 final abstract survivors), but repository inspection shows that project/research/post_ms/2026-09-19-first-strict-funnel-reservoir-v1/ contains only FIRST_STRICT_FUNNEL_RESERVOIR.md. No checker/script or replay artifact was preserved. Therefore all Section 13 numerical counts are REPORTED BUT UNREPRODUCED and must not be used as verified evidence. Reconstructing and preserving an independent checker is mandatory before those counts influence priorities or confidence.`
 
-NEXT ACTION: `Stay in the first strict unloaded common-buffer layer before opening the loaded buffer. Intersect the unique-hole funnel with the exact Hall X-density identity and pair-local Ccap_P. Let a_0 be the unique X non-neighbour of b. Every b-neighbour x is outside-U certified and is either Type F (its code differs from d in p-1 coordinates) or Type R (S_0 subseteq S_x and xa_0 is a nonedge). Prove a density/support dichotomy: many Type F heads should incur extreme-radius / pair-capacity cost; Type R dominance makes a_0 nearly isolated in G[X] and should force Hall slack. Preserve pair-local S_P rather than total-score substitution. If this first-strict layer survives, feed its single physical buffer hole into the rooted slot/residual ledger delta=r-e(F); only then open the loaded-buffer alternative d_Y(b)>0. Keep m=g+2,z=2,k-small side branches and the four-exception gate subordinate unless they become load-bearing. Keep X_3 and the graph-level audit boundary explicit.`
+DEFERRED ADMIN: `README remains on the 19 September daily-audit trust boundary because the interrupted checkpoint does not change the externally verified project status. Do not erase the d31da194... theorem package: preserve it as candidate conditional mathematics with the interruption warning added at repair commit 747d5ed6.... Reviewer-facing promotion should occur only after replay/audit or the next daily adversarial checkpoint.`
+
+NEXT ACTION: `BEFORE ANY NEW FORWARD MATHEMATICS, repair reproducibility and audit the interrupted package. (1) Reconstruct an independent checker for Sections 12-13 from the preserved formulas, commit it, and replay the reported counts; discrepancies are blockers, not reasons to weaken gates. (2) Independently re-derive the key hand steps most capable of invalidating downstream work: Theorem 3.1 fixed-foot Type-R overlap collapse; Theorem 4.1 disjoint agreement blocks; Theorem 6.1 LY-STRICT source floor and pair-local P0/Sigma_P; the k-chi core-separation surcharge EW-STRICT/Q-STRICT; F-EPS; and the local Hamming slot bounds R-F/R-CLASS. (3) Only if those pass, promote the m=1 polarization and attack the all-R cheapest geometry first (s=1, I=I_0, a_0 isolated in G[X], N_A(z)={a_0}), then all-F. If any upstream lemma fails, mark every dependent statement/count weakened or invalidated in CURRENT_STATE.md and pivot to the minimal corrected statement. Keep X_3 as mandatory negative control, exact pair-local Ccap_P/(ONE-P)/(CROWD) intact, and m=g+2, z=2, loaded-buffer and four-exception routes subordinate.`
 <!-- CURRENT-STATUS:END -->
 
 ---
@@ -38,6 +40,24 @@ Binding trust boundary:
 - four-exception gate remains subordinate.
 
 The predecessor proposed continuing inside the unmatched-heavy shared-core resource cone. This run departed from that downstream priority for a precise mathematical reason: a raw rooted B-edge criticality check closes the cone's parent buffer-equality hypothesis before source capacity or pair optimization is needed. The closure is therefore upstream of, and consistent with, the audit's preference for testing dominant premises before building further downstream theory.
+
+
+### 1A. Interrupted 21:00 checkpoint repair
+
+The 21:00 hourly invocation reached GitHub and committed `d31da194cd6e0b2ef85176366a60d168d4bbf2c8`, adding:
+
+- `project/research/post_ms/2026-09-19-first-strict-funnel-reservoir-v1/FIRST_STRICT_FUNNEL_RESERVOIR.md`.
+
+The invocation then failed before synchronizing this file or preserving the diagnostic checker referenced by that note. Repository inspection of the package directory confirms that the Markdown theorem note is the only preserved file. Repair commit `747d5ed6bd8f7c634e0a4d39b5f1df61b2db3a4f` adds an interruption warning directly to that note.
+
+Trust consequence:
+
+- the hand derivations in the note are preserved as candidate conditional structural results and must be independently re-audited before promotion;
+- the Section 13 scan counts are not currently reproducible from repository artifacts and are therefore not verified evidence;
+- the mandatory 19 September audit boundary is unchanged;
+- no forward line may use the reported scan counts until an independent checker is reconstructed, committed and replayed.
+
+This repair is deliberately conservative: it preserves the mathematical work that survived the failed invocation without pretending that missing computational evidence exists.
 
 ---
 
@@ -158,6 +178,7 @@ New theorem packages:
 
 - `project/research/post_ms/2026-09-19-buffer-rooted-matched-edge-collapse-v1/BUFFER_ROOTED_MATCHED_EDGE_COLLAPSE.md`
 - `project/research/post_ms/2026-09-19-buffer-first-strict-layer-v1/BUFFER_FIRST_STRICT_LAYER.md`
+- `project/research/post_ms/2026-09-19-first-strict-funnel-reservoir-v1/FIRST_STRICT_FUNNEL_RESERVOIR.md` — interrupted checkpoint; structural hand work preserved, Section 13 diagnostics unreproduced until checker reconstruction.
 
 Predecessor resource-cone package remains preserved at
 
