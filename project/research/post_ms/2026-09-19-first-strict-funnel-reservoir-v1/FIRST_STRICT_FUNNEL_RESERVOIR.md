@@ -4,6 +4,8 @@ Date: 2026-09-19
 
 Status: **internal structural theorem package**, conditional on the audited rigid one-code complete-cut hypotheses. This note continues `BUFFER_FIRST_STRICT_LAYER.md` and `MATCHED_CHANNEL_SCOPE_AUDIT.md`; it does not reopen the closed buffer-equality descendants.
 
+> **Interrupted-checkpoint repair — 2026-09-19, after commit `d31da194cd6e0b2ef85176366a60d168d4bbf2c8`.** The hourly run committed this theorem prose but failed before completing its handoff. Repository inspection shows that this directory contains only this Markdown file: the “companion checker” referenced in Sections 12–13 was not preserved. Accordingly, the numerical replay counts in Section 13 are **reported-but-unreproduced diagnostics and must not be used as verified evidence** until an independent checker is reconstructed, committed, and replayed. This repair does not promote the new structural units beyond their hand-proof status; the next run must independently audit their key singleton/common-neighbour steps before building downstream theory on them.
+
 ## 1. Audit reconciliation
 
 Before this work the live `CURRENT_STATE.md`, root `README.md`, latest commits, the 19 September daily red-team audit, the repaired source-premise proof, and the independent actual-D2C Hall/pair-capacity regression were reread.
