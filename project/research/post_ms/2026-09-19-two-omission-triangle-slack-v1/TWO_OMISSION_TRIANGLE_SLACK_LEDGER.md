@@ -363,11 +363,11 @@ For comparison, the preserved `(ONE-P)` inequality is
 
 > `Ccap_P+L_Y >= y(p+2x-g)`.                              `(ONE)`
 
-Substituting the exact Y-slack equation `(4.2)` gives
+Substituting the exact Y-slack equation `(4.2)` gives simply
 
-> `Ccap_P >= 2xy-yH_Y-nu-yu_o^*`,                        `(9.3)`
+> `Ccap_P >= 2xy-nu-H_Y`.                                 `(9.3)`
 
-only if one chooses to split `H_Y` further into the code-d forced part and the remaining outside-U holes; without such a split, `(9.2)` should simply be kept as the stronger exact crossing statement. No artificial improvement is claimed from `(ONE)`.
+As expected, `(9.2)` is stronger because `nu,H_Y>=0`. Thus `(ONE)` remains a consistency check but adds no new restriction after the exact crossing count has been proved.
 
 The aligned crowding condition remains
 
@@ -381,7 +381,7 @@ The correct synthesis is therefore structural rather than a new scalar relaxatio
 
 The next attack should keep these local quantities visible and solve the equality/near-equality intersection. Collapsing them prematurely to total `C0` is exactly the loss of geometry flagged by the previous audit.
 
-**Caution on notation.** In the preserved pair-purification package `Ccap_P` denotes the exact pair capacity `(9.1)`. It is not the earlier weighted A/U-channel bound; the latter remains a separate channel inequality. This note follows the preserved definition and does not conflate the two.
+**Caution on notation.** In the preserved pair-purification package `Ccap_P` denotes the exact pair capacity `(9.1)`. It is not the directed weighted A/U-channel bound; the latter remains a separate channel inequality. This note follows the preserved definition and does not conflate the two.
 
 ---
 
