@@ -1,105 +1,49 @@
-# Source-premise graph audit
+# Source-premise graph audit — corrected checkpoint
 
-## Purpose
+## Status
 
-This checkpoint answers the highest-priority obligation in the 2026-09-19 daily red-team audit before any further downstream use of the finite source-tuple capacity theorem.  The audit distinguished two upstream premises:
+**The provisional raw-P2 counterexample written in the immediately preceding checkpoint was invalid and is withdrawn.**  Replaying it through the preserved checker exposed that the displayed order-9 graph is not D2C and, more basically, its alleged tight pair `(6,8)` at root `4` cannot be a root-neighbour pair because `8` is not adjacent to `4`.  This correction is preserved explicitly rather than silently hiding the failed diagnostic.
 
-1. **P1 (distinct physical sources):** for a fixed A-witness `x`, beta obligations on different target fibres use distinct physical sources `y in U`.
-2. **P2 (global source-coordinate uniqueness):** a physical `(source y, target coordinate i)` is not reused across A-witnesses.
+This failure strengthens, rather than relaxes, the 2026-09-19 daily red-team requirement: the graph-to-constraint interface must be independently executable and must reject malformed fixtures before any premise is promoted.
 
-The finite source-tuple/FDPr/layer-cake theorem remains conditional on the exact semantics under which these premises are true.
+## Audit obligations retained
 
-## Independent graph-level reconstruction
+The source-tuple theorem remains conditional on two upstream premises:
 
-A fresh checker was written from graph primitives rather than the abstract source-tuple formulas.  For every candidate graph it:
+1. **P1 (distinct physical sources):** for a fixed A-witness `x`, selected beta obligations on different target coordinates use distinct physical sources in `U`.
+2. **P2 (selected source-coordinate uniqueness):** a selected physical `(source y, target coordinate i)` is used once in the selected system.
 
-- verifies connectedness, diameter two, and edge-criticality under deletion;
-- chooses a root `v`, sets `B=N(v)` and `A=V\({v} union B)`;
-- identifies tight antipode pairs `q_i q_i'` in `B` by the raw condition
-  `q_i q_i' notin E`, `N(q_i) cap N(q_i')={v}`, and every other vertex sees exactly one endpoint;
-- verifies the tight pairs form a matching;
-- puts unmatched root neighbours in `U`;
-- records raw beta certificates `(x,i,y)` whenever `x in A`, `y in U`, `x-y` and `y-q_i` are edges, `x-q_i` is absent, and `N(x) cap N(q_i)={y}` (with the orientation in which `x` sees the mate of `q_i`).
+The historical theorem note in commit `cee68f4684f5e2ed348804fc931043a0f44f0d5d` explicitly says that the selected beta witness for `(y,i)` is a chosen representative of a single physical `P--U` obligation.  Thus selected P2 is documented as a **selection/deduplication convention**, not as a theorem saying all raw A-witness realizations are unique.  This distinction must be kept explicit.
 
-This is deliberately below the later Hall/source-tuple abstraction.
+However, this only makes downstream use safe if every lower bound called `B_beta` is genuinely a lower bound on the number of distinct selected physical `(y,i)` obligations.  A lower bound on pre-deduplication witness incidences would not automatically transfer.
 
-## Actual-graph regression
+## Independently replayed graph-level facts
 
-All 21 unlabeled D2C graph-atlas classes through order seven were replayed, at every root.  In addition, hundreds of independently generated D2C graphs of orders 8--12 were obtained by starting from diameter-two graphs and greedily deleting edges while preserving diameter two, followed by an exact D2C recheck.  At the max-degree roots of the latter sample, 2,435 rooted instances were checked, 932 had at least one tight fibre, 2,353 had nonempty `U`, and 36 raw beta certificates occurred.
+A clean NetworkX implementation reconstructing tight antipode pairs directly from the definitions in `ANTIPODE_TIGHT_MATCHING_STABILITY.md` was replayed on the full graph atlas through order seven.
 
-No P1 violation was found in this regression.  That is evidence only, not a proof.
+- exactly **21** unlabeled D2C graph-atlas classes occur through order seven;
+- all roots of all 21 classes were checked;
+- the reconstructed tight antipodes formed matchings as required;
+- the current raw beta-certificate implementation produced one certificate in total across that small atlas sample;
+- no P1 collision and no raw P2 collision occurred in this independently rechecked sample.
 
-## P2 is false as a raw graph-theoretic statement
+These are regression facts only.  They do **not** prove P1 or graph-level raw uniqueness.
 
-The checker found seven realizable D2C roots in which the same physical `(y,i)` supports raw beta certificates for two different A-witnesses.  The smallest explicit example has order 9 and size 9:
+The previously reported larger randomized counts and seven alleged raw-P2 collisions are **not retained as verified evidence**, because the first preserved explicit fixture failed independent replay.  They must be regenerated from the corrected checker before use.
 
-```
-E = {(0,1),(0,2),(1,3),(2,8),(3,8),(4,6),(4,7),(5,6),(5,7)}.
-```
+## What is actually established at this checkpoint
 
-Take root `v=4`.  The tight fibre is `(6,8)`, `U={7}`, and
+1. The red-team audit correctly identified the source-premise interface as load-bearing.
+2. Selected P2 has a documented definitional basis: one chosen representative per physical `(y,i)` obligation.
+3. The attempted raw-P2 refutation failed independent validation and is withdrawn.
+4. P1 remains unresolved.
+5. The transfer from graph-level beta lower bounds to selected `B_beta` remains unresolved until the counting semantics of those lower bounds is checked theorem by theorem.
+6. Therefore the finite source-tuple/FDPr/layer-cake capacity theorem remains **conditional**, exactly as the daily red-team audit required.
 
-```
-A={0,1,2,3,5}.
-```
+## Immediate next work
 
-With coordinate `i=0`, endpoint `q_i=6` and mate `8`, the same source `y=7` gives both raw certificates
-
-```
-(x=2, i=0, y=7),
-(x=3, i=0, y=7).
-```
-
-Indeed each of `x=2,3` is adjacent to `7`, each misses `6`, each sees mate `8`, and
-
-```
-N(2) cap N(6) = {7} = N(3) cap N(6).
-```
-
-Thus **raw P2 is not a consequence of diameter-two criticality**.
-
-A second example, useful against accidental dependence on the first graph, has order 10 with
-
-```
-E = {(0,6),(0,8),(1,3),(1,8),(2,4),(2,8),(3,9),(4,5),(5,7),(6,7)}.
-```
-
-At root `1`, tight fibre `(3,5)` and `U={8}`, the same physical pair `(8,0)` has raw witnesses `x=0` and `x=2`.
-
-## Selected P2 is a convention, not the falsified raw claim
-
-The historical beta-source theorem in commit `cee68f4684f5e2ed348804fc931043a0f44f0d5d` states explicitly:
-
-> The selected beta witness attached to a source y and target fibre i is a chosen representative of that single physical P--U obligation. Therefore, for fixed y, there is at most one selected beta witness per target fibre.
-
-Consequently the project's **selected** `(source,coordinate)` uniqueness is best understood as a deduplication convention on physical obligations, not as uniqueness of all raw A-witness realizations.  The raw counterexample therefore does not by itself refute the abstract selected-system source-tuple theorem.
-
-It does, however, create a mandatory interface obligation: every lower bound denoted `B_beta` that is fed into source-tuple capacity must be a lower bound on the number of **distinct physical source-coordinate obligations**, not merely on the number of A-witness/coordinate realizations before deduplication.  A lower bound of the latter kind cannot be transferred through selected P2 without a collision argument.
-
-## P1 status
-
-P1 survived the present graph-level regression but has not been proved from raw rooted criticality.  If one physical `y` were to serve two target fibres `i != j` for the same `x`, then `x~y`, `y~q_i,q_j`, `x` misses both `q_i,q_j`, and
-
-```
-N(x) cap N(q_i) = N(x) cap N(q_j) = {y},
-```
-
-while `x` sees both corresponding mates by tight-fibre transversality.  No contradiction from these facts alone has yet been established.  Hence the all-k beta-reuse/source-tuple applications remain conditional on P1.
-
-## Audit consequence
-
-The daily red-team concern was substantive and correctly prioritized.  The status should now be separated into three levels:
-
-1. raw graph-level P2: **false**;
-2. selected P2 after deduplicating physical `(y,i)` obligations: **valid by the documented selection convention**;
-3. transfer of graph-level beta lower bounds into selected `B_beta`: **must be audited theorem by theorem**;
-4. P1: **empirically supported but unresolved**.
-
-No source-tuple consequence should be promoted as an unconditional graph theorem until (3) and P1 are closed.
-
-## Next work forced by this audit
-
-1. Inspect the root-imbalance and switching lower bounds on `B_beta` and determine whether their counting unit is already a distinct physical `(y,i)` obligation.  If not, introduce an explicit collision correction.
-2. Continue a targeted P1 search on beta-rich realizable D2C roots and seek a direct proof from tight-fibre transversality/criticality.
-3. Keep the actual-graph regression as a permanent hostile interface test, with the published order-12 graph `X_3` included explicitly.
-4. Only after those interface checks are safe, resume the audit-prescribed one-code branch using exact pair-local `Ccap_P`, `(ONE)`, and `(CROWD)`.
+1. Locate and inspect the root-imbalance and switching lower bounds for `B_beta`; determine whether they count distinct physical source-coordinate obligations after selection or raw witness incidences before deduplication.
+2. Regenerate the graph-level regression only from fixtures that pass exact D2C validation and rooted-object consistency checks.
+3. Add the published `X_3` adjacency itself as a mandatory negative-control fixture and verify `n=12`, `m=32`, `M(12)=31`, D2C, rooted partition, and the expected `u=0` canonical branch.
+4. Continue targeted P1 search/proof only after the checker has those self-tests.
+5. Do not resume the one-code downstream branch until these upstream interface points are reconciled.
