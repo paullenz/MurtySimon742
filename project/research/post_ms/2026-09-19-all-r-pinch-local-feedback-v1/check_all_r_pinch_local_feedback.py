@@ -147,7 +147,7 @@ def main():
             # Eliminate the internal edge variable. If t additional bar-C
             # witnesses exist, e(X)<=min(C(N,2),N t). The same t also bounds
             # the d- and C-coded U-neighbours of a0, giving A0-DYN.
-            for t in range(uo):
+            for t in range(J,uo):
                 epsa=max(p-y+k+1,p+u-y-t-1)
 
                 # Keep exact pair score local before using the total cap.
@@ -159,14 +159,12 @@ def main():
                 if EUmax<0:
                     continue
 
-                adj_bar=max(0,t-d)
-                Ebase=(Ecore+epsb+epsz+J*g1
-                       +(p-g1)*adj_bar)
+                Ebase=Ecore+epsb+epsz+J*p
                 if Ebase>EUmax:
                     continue
 
                 qmax=(math.comb(u,2)-math.comb(k+1,2)-k-d
-                      -math.comb(adj_bar,2))
+                      -math.comb(J,2))
                 if qmax<0:
                     continue
 
@@ -179,9 +177,15 @@ def main():
                 if (p-l)*(p+u)+qmax+EUmax<a:
                     continue
 
-                emax=min(N*(N-1)//2,N*t)
-                hall_rhs=(x*(p-y)+(ZX0+N*J)-cap+Ebase)
-                if 2*emax < hall_rhs:
+                emax=min(N*(N-1)//2,N*d)
+                hall_base=x*(p-y)+(ZX0+N*J)-cap+Ebase
+                free_per_w=max(0,x-p)
+                free_total=d*free_per_w
+                if hall_base<=2*free_total:
+                    emin=max(0,(hall_base+1)//2)
+                else:
+                    emin=max(0,hall_base-free_total)
+                if emin>emax:
                     continue
 
                 feasible=True
@@ -201,8 +205,8 @@ def main():
     expected={
         'coarse':248798,
         'predecessor_final':173347,
-        'new_final':132156,
-        'new_reject':41191,
+        'new_final':124865,
+        'new_reject':48482,
     }
     bad={k:(expected[k],st[k]) for k in expected if st[k]!=expected[k]}
     print({
