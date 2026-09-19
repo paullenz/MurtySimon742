@@ -7,82 +7,66 @@
 The false all-order 2019 Dailly–Foucaud–Hansberg Conjecture 3 is **not** the target. The published 2024 D2C graph `X_3` on 12 vertices and 32 edges has `M(12)=31` and remains a mandatory negative control. The mixed `{4,5}` selected-excess ladder is closed. First-proof priority on Erdős #742 is not an optimization target.
 
 <!-- CURRENT-STATUS:START -->
-CHECKPOINT CLASS: `ONE_CODE_Z1_MINIMAL_RESERVOIR_PAIR_RESIDUAL_PINCH_2026_09_19`
+CHECKPOINT CLASS: `ONE_CODE_Z1_MINIMAL_RESERVOIR_LOCAL_SLOT_PINCH_2026_09_19`
 
 WORK MODE: `MATH`
 
 INSPECTED PREDECESSOR: `bb5487bf01e06f541af1a0ffcf9352dfdaa1675c`
 
-LAST VERIFIED RESULT: `In the positive-buffer unloaded common-buffer minimal-reservoir layer m=g+1, disjoint X/Y slack gives L_A=L_X+L_Y and the exact Hall/score defect currency H(A,M)=A+M+[Q-(2k-1)A-kM]_+. H_min has a closed four-case formula. The outside one-code pair P has the exact local box P_0<=S_P<=C0-O_0-H(A,M); CROWD is strictly dominated by L_Y>=y(p+2), and ONE-P follows with margin y(g+2) from the exact crossing requirement 2xy<=Ccap_P. Defining sigma_P as the least local pair score meeting exact Ccap_P gives H(A,M)<=B_P=C0-O_0-sigma_P. For fixed M the least Hall cost F(M)=M+h_A(Q-kM) is V-shaped, so the exact admissible M-set is one integer interval [M_-,M_+]. The rooted residual term is also V-shaped with free optimizer M_Q=ceil([R_0]_+/(k+1)); consequently the exact pair/residual optimizer is M_hat=clamp(M_Q,M_-,M_+), eliminating the residual scan. Once M_hat is fixed, the least A-allocation is explicit; if Q-kM_hat> (2k-1)g then all g A-defects are forced and positive X-slack remains. The bounded diagnostic before the clamp refinement rejects 13,198 of the prior 123,585 abstract m=g+1 survivors, leaving 110,387; t=1 leaves 5,404. On that bounded box sigma_P=P_0 for every sharpened-score survivor.`
+LAST VERIFIED RESULT: `The m=g+1 positive-buffer minimal-reservoir branch now has an exact three-ledger interface. First, disjoint X/Y slack gives the Hall/score currency H(A,M)=A+M+[Q-(2k-1)A-kM]_+ with a closed four-case H_min. Second, exact pair-local score is retained: P_0<=S_P<=C0-O_0-H(A,M); CROWD is dominated by L_Y>=y(p+2), ONE-P follows from exact crossing Ccap_P with margin y(g+2), and sigma_P is the least local score meeting 2xy<=Ccap_P. The pair/Hall-feasible M-values form one interval [M_-,M_+], while rooted residual has free optimizer M_Q=ceil([R_0]_+/(k+1)); hence the exact combined optimizer is M_hat=clamp(M_Q,M_-,M_+). Third, feeding the preserved local witness-slot/Hamming theorem into the rigid complete cut gives the new universal surcharge r_z>=1 for every z in A, hence r>=a and f+delta>=a. In m=g+1, if h_*=d_H(c_*,d) and H_X=k h_*+sum_{h in H_M}d_H(c(h),d), then r>=y ceil(H_X/x)+k ceil(y h_*/(y+A))+g. At A=0 this sharpens to r>=y ceil(H_X/x)+k h_*+g: H_0 isolation converts code distance directly into unused rooted slots. The bounded score diagnostic rejects 13,198 of the previous 123,585 abstract m=g+1 states, leaving 110,387; t=1 leaves 5,404. These are parameter diagnostics only.`
 
-UNPRESERVED WORK: `None. The theorem notes and checker are preserved under project/research/post_ms/2026-09-19-minimal-reservoir-pair-hall-v1/.`
+UNPRESERVED WORK: `None. New theorem notes and checker are preserved under project/research/post_ms/2026-09-19-minimal-reservoir-pair-hall-v1/.`
 
 DEFERRED ADMIN: `README remains lower-frequency. Refresh reviewer-facing status at the next daily adversarial checkpoint unless repository integrity requires an earlier repair.`
 
-NEXT ACTION: `Stay on m=g+1. At the explicit extremal allocation (M_hat,A_hat), return to the rooted unused-slot/direct-Hamming ledger. Try to prove that forced z_*--H_M missing adjacencies or the residual positive X-slack consume direct/Hamming resource not yet priced by H(A,M). Treat the compatible, Hall-left and Hall-right pinch regimes separately only if one slot/Hamming lemma does not cover all three. Preserve exact S_P/Ccap_P. Do not open m=g+2, loaded r_b>0, extra buffer slack, z=2 or the four-exception gate while this line remains live.`
+NEXT ACTION: `Stay on m=g+1 and intersect the local-slot floor with r=f+delta and the explicit clamped allocation (M_hat,A_hat). Test first whether the universal r>=a or the weighted core/Y surcharge closes any of the compatible, Hall-left or Hall-right pinch regimes; if not, retain h_*=1 and all H_M-to-d Hamming distances one as the unique Hamming-cheapest geometry and classify that geometry directly. Preserve exact S_P/Ccap_P. Do not open m=g+2, loaded r_b>0, extra buffer slack, z=2 or the four-exception gate while this line remains live.`
 <!-- CURRENT-STATUS:END -->
 
 ---
 
 ## 1. Mandatory audit gate
 
-The latest daily red-team audit remains
+The binding audit is still
 
 `project/research/post_ms/2026-09-19-daily-red-team-audit-v1/DAILY_RED_TEAM_AUDIT.md`.
 
-It was reread before this run, together with the latest handoff and commits. Its verified findings, invalidations, confidence changes and stop/pivot rules remain binding.
+This run reread it, `README.md`, the latest commits, `SOURCE_PREMISE_REPAIR.md`, and `RIGID_GRAPH_LEVEL_REGRESSION.md` before advancing the mathematics.
 
-### Source-tuple premises
+The two named source premises remain established at their repaired levels: physical beta-source distinctness from raw singleton criticality; selected `(source,coordinate)` uniqueness from the one-representative convention. The finite source-tuple theorem is not promoted to unconditional graph-level closure.
 
-`project/research/post_ms/2026-09-19-source-premise-graph-audit-v1/SOURCE_PREMISE_REPAIR.md` was reread. It establishes the two named premises at the exact level used:
+The independent actual-D2C regression remains at 3,540 root-policy instances, 147 pair-capacity checks, 36 exact Hall decompositions and zero recorded graph/formula mismatches. `X_3` passes. No bounded-corpus graph realizes the full rigid complete-cut hypotheses, so the active results remain conditional hand implications.
 
-1. distinct physical beta-source identity follows from raw unique-common-neighbour criticality;
-2. global selected `(source,coordinate)` uniqueness is a selected-representative convention for one physical obligation, not raw witness uniqueness.
-
-The finite source-tuple theorem is still not promoted as unconditional graph-level closure; it remains conditional on the broader rooted selected-obligation construction.
-
-### Independent actual-D2C regression
-
-`project/research/post_ms/2026-09-19-rigid-graph-regression-v1/RIGID_GRAPH_LEVEL_REGRESSION.md` was reread. Recorded run: 3,540 root-policy instances, 147 pair-capacity checks, 36 exact Hall-cut decompositions, zero graph/formula mismatches. `X_3` passes.
-
-Coverage limitation remains explicit: no bounded-corpus graph realizes the full rigid complete Hall cut with `x>=3`, `M_X=E_X=0`. All active one-code rigid deductions remain conditional hand implications.
-
-Exact pair-local `Ccap_P`, `(ONE-P)` and `(CROWD)` remain mandatory. In the present equality geometry, `(CROWD)` and `(ONE-P)` have now been proved consequences of stronger physical bills once exact crossing `Ccap_P` is retained; they are not silently omitted.
-
-The four-exception gate remains subordinate.
+Exact `Ccap_P`, `(ONE-P)` and `(CROWD)` remain mandatory. In the current equality geometry `(ONE-P)` and `(CROWD)` are now proved consequences of stronger physical bills once exact crossing `Ccap_P` is kept; they are not omitted. The four-exception gate remains subordinate.
 
 ---
 
-## 2. Closed / superseded lines
-
-Do not reopen:
-
-- mixed `{4,5}` selected-excess ladder;
-- zero-buffer `g=p` common-buffer branch;
-- invalid positive-buffer matched reverse Orientation B or reverse-deficit scalarizations depending on it.
-
-`X_3` remains a hostile control: canonical root `u=0`, so it never enters the active positive-buffer/minimal-reservoir hypotheses.
-
----
-
-## 3. Active minimal-reservoir geometry
+## 2. Active geometry
 
 Rigid one-code complete cut:
 
 - `X--Y` complete, `x>=3`, `y>0`;
-- Y has code `d`; X contains neither `d` nor `bar d`;
+- Y code `d`; X contains neither `d` nor `bar d`;
 - `g=g_P`, `k=x-g>0`, `t=p-g>=1`;
 - `U_-=W_0 dotcup {b}`, `|W_0|=k`;
+- unloaded first buffer equality `epsilon_b=t`, with `b--X` and `b--U_o` complete;
 - `e(Y)=e(Y,U_d)=e(G[U_-])=0`;
-- unloaded buffer and first equality: `epsilon_b=t`, `b--X`, `b--U_o` complete;
 - `X=H_M dotcup H_0`, sizes `g,k`;
-- H_M heads have distinct singleton A-codes;
-- all buffer--X edges are outside-U certified;
-- `m=g+1` forces all H_0 heads to one code `c_*` and one common outside witness `z_*` of code `bar c_*`;
-- H_0 is independent;
-- `u>=x+2`, `L_Y>=y(p+2)`;
+- H_M codes are singleton A-code classes;
+- all buffer--X edges use outside unmatched witnesses;
+- minimal reservoir `m=g+1` forces H_0 to one code `c_*`, one common witness `z_*` of code `bar c_*`, and H_0 is independent;
 - `A=g-d_{H_M}(z_*)`, `M=(u_o-1)-d_{U_o\{z_*}}(z_*)`;
-- `epsilon_{z_*}=t+k+A+M`.
+- `epsilon_{z_*}=t+k+A+M`;
+- `u>=x+2`, `L_Y>=y(p+2)`.
+
+`X_3` has canonical-root `u=0` and never enters these hypotheses.
+
+---
+
+## 3. Pair/Hall currency
+
+Primary note:
+
+`project/research/post_ms/2026-09-19-minimal-reservoir-pair-hall-v1/MINIMAL_RESERVOIR_PAIR_HALL_ALLOCATION.md`.
 
 Put
 
@@ -92,109 +76,121 @@ Put
 
 `Q=x(x-T_0)+k(x-1)+x-g(g-1)+kN`.
 
----
+Then
 
-## 4. Pair/Hall defect currency
-
-Primary note:
-
-`project/research/post_ms/2026-09-19-minimal-reservoir-pair-hall-v1/MINIMAL_RESERVOIR_PAIR_HALL_ALLOCATION.md`.
-
-Exact Hall feedback:
-
-> `L_X>=[Q-(2k-1)A-kM]_+`.
-
-Since `L_A=L_X+L_Y`,
-
+> `L_X>=[Q-(2k-1)A-kM]_+`,
+>
 > `S>=E_*+Y_0+H(A,M)`,
 >
 > `H(A,M)=A+M+[Q-(2k-1)A-kM]_+`.
 
-Let `c_A=2k-1`, `c_M=k`, `C_A=c_A g`, `C_T=c_A g+c_M N`. Then
-
-- `H_min=0` if `Q<=0`;
-- `H_min=ceil(Q/c_A)` if `0<Q<=C_A`;
-- `H_min=g+ceil((Q-C_A)/c_M)` if `C_A<Q<=C_T`;
-- `H_min=g+N+Q-C_T` if `Q>C_T`.
-
-This is a justified refinement of the prior `A=0` handoff: rooted residual alone prefers `A=0`, but score/Hall prefers A-defects when `k>1` because they buy `2k-1` units of Hall relief per score unit versus k for M-defects.
+The exact H-minimum treats A as unit-cost capacity `2k-1` and M as unit-cost capacity k. For `k>1`, score/Hall can prefer `A>0` even though rooted residual alone prefers `A=0`; this is a justified refinement of the previous handoff.
 
 ---
 
-## 5. Exact pair-local gate
+## 4. Exact pair-local gate
 
 For `P={d,bar d}`,
 
-`K_P=k(p+k)+t`, `P_0=K_P+Y_0`, `O_0=t+k+g s_1`, with `E_*=K_P+O_0`.
+`K_P=k(p+k)+t`, `P_0=K_P+Y_0`, `O_0=t+k+g s_1`.
 
 Above threshold:
 
 > `P_0<=S_P<=C0-O_0-H(A,M)`.
 
-Define `D_code=5p+5u-3lambda-2` and
+Define
 
-`R_code(s)=max(0,floor((D_code+sqrt(D_code^2+12s))/3))`.
+`D_code=5p+5u-3lambda-2`,
 
-Let
+`R_code(s)=max(0,floor((D_code+sqrt(D_code^2+12s))/3))`,
 
-> `sigma_P=min{s>=P_0: R_code(s)[g+2s/(lambda+1)]>=2xy}`.
+> `sigma_P=min{s>=P_0:R_code(s)[g+2s/(lambda+1)]>=2xy}`.
 
 Then
 
-> `H(A,M)<=B_P:=C0-O_0-sigma_P`.
+> `H(A,M)<=B_P=C0-O_0-sigma_P`.
 
-Mandatory-trio simplification is proved, not assumed:
+Also
 
-- `3y-D_code=p-2u-3x-1`, so `L_Y>=y(p+2)` dominates `(CROWD)` by margin `y(2u+3x+3)` when CROWD is positive;
-- exact crossing `Ccap_P>=2xy` plus `L_Y>=y(p+2)` implies `(ONE-P)` with margin `y(g+2)`.
+`3y-D_code=p-2u-3x-1`,
 
-Thus exact crossing `Ccap_P` is the independent local pair gate in this geometry.
+so the Y-slack floor dominates positive `(CROWD)` by `y(2u+3x+3)`. Exact crossing capacity plus Y-slack implies `(ONE-P)` with margin `y(g+2)`.
 
 ---
 
-## 6. Exact pair/residual pinch
+## 5. Pair/residual pinch
 
-Continuation note:
+Continuation:
 
 `project/research/post_ms/2026-09-19-minimal-reservoir-pair-hall-v1/MINIMAL_RESERVOIR_PAIR_RESIDUAL_PINCH.md`.
 
-For fixed M define
-
-`h_A(D)=0` if `D<=0`;
-
-`h_A(D)=ceil(D/(2k-1))` if `0<D<=(2k-1)g`;
-
-`h_A(D)=g+D-(2k-1)g` if `D>(2k-1)g`.
-
-Then
+For fixed M, let `h_A(D)` be the least A-cost. Then
 
 > `F(M)=M+h_A(Q-kM)`
 
-is V-shaped, so
+is V-shaped, hence
 
 > `M_adm={M:F(M)<=B_P}=[M_-,M_+] cap Z`
 
-whenever nonempty.
+when nonempty.
 
-The rooted residual term
-
-`G(M)=E_*+M+ceil([R_0-(k+1)M]_+/2)`
-
-is also V-shaped, with free optimizer
+The rooted residual term is V-shaped with free optimizer
 
 > `M_Q=ceil([R_0]_+/(k+1))`.
 
-Therefore the exact combined optimizer is
+Thus
 
-> `M_hat=clamp(M_Q,M_-,M_+)`,
+> `M_hat=clamp(M_Q,M_-,M_+)`
 
-and
+and the exact intersected lower bound is
 
 > `q+E_U>=E_*+M_hat+ceil([R_0-(k+1)M_hat]_+/2)`.
 
-At `M_hat`, the least A-allocation is explicit from `h_A(Q-kM_hat)`. If `Q-kM_hat>(2k-1)g`, all g possible A-defects are forced and positive X-slack remains.
+The least A-allocation at `M_hat` is explicit from `h_A(Q-kM_hat)`.
 
-Three regimes are now explicit: compatible (`M_Q` inside the interval), Hall-left (`M_Q<M_-`) and Hall-right (`M_Q>M_+`).
+---
+
+## 6. New local-slot surcharge
+
+New note:
+
+`project/research/post_ms/2026-09-19-minimal-reservoir-pair-hall-v1/RIGID_CUT_LOCAL_SLOT_SURCHARGE.md`.
+
+The preserved local theorem is
+
+`sum_{w in N_A(z)}d_H(c(w),c(z))<=r_z d_A(z)`, with `sum_z r_z=r`.
+
+Because every vertex on either side of the complete X--Y cut has a neighbour of a different code,
+
+> **`r_z>=1` for every `z in A`, hence `r>=a`.**
+
+Using `r=f+delta`,
+
+> `f+delta>=a`.
+
+For the active minimal reservoir put
+
+`h_*=d_H(c_*,d)>=1`,
+
+`H_X=k h_*+sum_{h in H_M}d_H(c(h),d)>=x`.
+
+Since `e(Y)=0`, each Y vertex has A-degree x, giving
+
+> `r_y>=ceil(H_X/x)`.
+
+Star separation and H_0 independence give `d_A(x_0)<=y+A` for every core head, hence
+
+> `r_{x_0}>=ceil(y h_*/(y+A))`.
+
+Together with `r_h>=1` on H_M,
+
+> **`r>=y ceil(H_X/x)+k ceil(y h_*/(y+A))+g`.**
+
+At `A=0`, H_0 is isolated in X, so
+
+> **`r>=y ceil(H_X/x)+k h_*+g`.**
+
+Thus the Hamming-cheapest equality geometry is forced toward `h_*=1` and all H_M-to-d distances one; any larger distance pays extra local residual immediately.
 
 ---
 
@@ -204,29 +200,18 @@ Checker:
 
 `project/research/post_ms/2026-09-19-minimal-reservoir-pair-hall-v1/check_minimal_reservoir_pair_hall.py`.
 
-It verifies the closed H-minimum against brute integer minimization and replays the coarse parameter scan.
-
-From the preceding 123,585 abstract `m=g+1` survivors:
-
-- 13,198 rejected;
-- 110,387 remain.
-
-`t=1`: 116 of 5,520 rejected, 5,404 remain.
-
-On this bounded scan every sharpened-score survivor has `sigma_P=P_0`; exact Ccap therefore adds no further finite rejection in that box. This is diagnostic only, not a theorem of redundancy.
-
-These are abstract parameter states, not graph counts.
+On the same coarse bounded box, the new additive Hall floor rejects 13,198 of the prior 123,585 abstract `m=g+1` survivors, leaving 110,387. In `t=1`, 116 of 5,520 are rejected, leaving 5,404. Every bounded sharpened-score survivor has `sigma_P=P_0`, so exact Ccap adds no extra rejection there. These are abstract parameter diagnostics, not graph counts.
 
 ---
 
 ## 8. Next action
 
-Stay at `m=g+1` and the explicit `(M_hat,A_hat)` geometry.
+Remain at `m=g+1`.
 
-1. Attack the rooted unused-slot/direct-Hamming ledger with the forced `z_*--H_M` missing adjacencies and/or surviving positive X-slack.
-2. Seek one lemma valid across compatible, Hall-left and Hall-right regimes; split only if necessary.
-3. Preserve exact local `S_P` and `Ccap_P`; do not revert to total `C0` capacity.
-4. If this allocation survives, classify its graph geometry before `m=g+2`.
-5. Keep loaded buffer `r_b>0`, extra buffer slack, `z=2` and four-exception work subordinate.
+1. Intersect the local-slot floor with `r=f+delta` and the explicit `(M_hat,A_hat)` allocation.
+2. Test whether `r>=a` or the weighted slot surcharge closes any of the compatible / Hall-left / Hall-right regimes.
+3. If not, classify the unique Hamming-cheapest geometry `h_*=1`, all H_M-to-d distances one, before any enlargement to `m=g+2`.
+4. Preserve pair-local `S_P` and exact `Ccap_P` throughout.
+5. Keep loaded `r_b>0`, extra buffer slack, `z=2`, and four-exception work subordinate.
 
-Promotion level remains: internal hand structural theorem conditional on rigid one-code hypotheses, supported by exact arithmetic diagnostics; not graph-realizability evidence and not an eventual theorem.
+Promotion level: internal hand structural theorem conditional on rigid one-code hypotheses, supported by exact arithmetic diagnostics; not graph-realizability evidence and not an eventual theorem.
