@@ -7,19 +7,19 @@
 The false all-order 2019 Dailly–Foucaud–Hansberg Conjecture 3 is **not** the target. The published 2024 D2C graph `X_3` on 12 vertices and 32 edges has `M(12)=31` and remains a mandatory negative control. The mixed `{4,5}` selected-excess ladder is closed. First-proof priority on Erdős #742 is not an optimization target.
 
 <!-- CURRENT-STATUS:START -->
-CHECKPOINT CLASS: `ONE_CODE_Z1_MINIMAL_RESERVOIR_E1_PAIR_EQUALITY_SLOT_2026_09_19`
+CHECKPOINT CLASS: `ONE_CODE_Z1_MINIMAL_RESERVOIR_E2_EXACT_SUPPORT_2026_09_19`
 
 WORK MODE: `MATH`
 
-INSPECTED PREDECESSOR: `71e2b3ee8f912c7bb5b882c5d13201c5a51fb716`
+INSPECTED PREDECESSOR: `b5be3a06e7d197cdf9931883a714ca9d4e25c599`
 
-LAST VERIFIED RESULT: `The m=g+1 E=1 equality/near-equality geometry is now sharper. For d0=g-A=1, star separation already deletes all k defect-core zero-Hamming-excess edges, so at most one zero-excess X-edge remains and universally r>=a+y+1+eta([e(X)-1]_+). On the D<=-2 right arm, pair slack s<=1 forces the second singleton support channel active, hence all X-edges have positive Hamming excess and Delta<=floor((s-D)/2); at t=1 the right-arm pair bill is exactly p^2+M-3<=C0-sigma_P, so M=M_+ and M_+-1 are literal support-saturation/near-saturation rows. Exact d0=1 equality gives j_+>=[Emax-max(1,floor(-D/2))]_+. For d0=0,k>1 the previously finite-candidate correction closes to Psi=max(D,-4) for D>=-7 and Psi=max(ceil(D/2)-1,-(k+2)) for D<=-8. Exact equality has a two-singleton zone D=-3,-4,-5 with j_+=Emax-2 and a deep repeated-core zone, uniformly j_+>=[Emax-max(k+1,floor(-D/2))]_+. These j_+ floors feed directly into r>=a+y+1+eta(j_+). Bounded replay removes 261 E1 rows and 5 E1-route states (48,677->48,672), but no t=1 state: t=1 E1 rows 111,204->111,197 and E1 states remain 4,471; full union remains 64,457 and t=1 union 5,404. Exactly 933 t=1 union survivors have no E1 route, and all 933 already have an E=2 route under the retained R_N relaxation. The exact E=2 block types are now classified: for k>=3 only one R3 matched-head defect or two R2 matched-head defects; k=2 additionally allows a common-core R2; k=1 has matched R3, matched R2+R2, mixed core/matched R2, or core R3.`
+LAST VERIFIED RESULT: `The exact E=2,k>=3 minimal-reservoir support geometry is now classified at the channel-resource level. For a defect topology with total support incidences s, defect-defect intersection count q, c defect supports containing the repeated-core coordinate, d0 active common-core-witness/defect adjacencies, B=s-c+q and K=k(c-d0), the wrong-head incidence count obeys J<=d0(k+1)+2min(Delta,B)+min(K,[Delta-B]_+). The resulting pair correction has the closed form Phi_{B,0}(D)=max(D,-2B); for K>0, Phi=max(D,-2B) when D>=-2B-1 and Phi=max(ceil(D/2)-B,-(2B+K)) when D<=-2B-2. Thus p(g+1)+k+M-d0(k+1)+Phi<=C0-sigma_P is the exact topology-retaining pair gate. In R3 every X-code has radius 1 or 3, so every actual X-edge has positive Hamming excess and r>=a+y+1+eta(e(X)); the active-core R3 right arm at t=1 has pair bill p^2+M-5<=C0-sigma_P. In R2+R2 the only zero-Hamming X-edges are defect-to-radius-one head edges on defect support coordinates, giving r>=a+y+2+eta_2(j_+). On the fully saturated constant pair arm all such zero-Hamming edges are forced absent, hence r>=a+y+2+eta_2(e(X)). The deepest pair-cheap R2+R2 topology is uniquely h=1,c=2,d0=2 for every k>=3: the two radius-two defects share the repeated-core coordinate and the common core witness is adjacent to both. There B=3,K=0,Jmax=2k+8; at t=1 the deep pair bill is p^2+M-k-8<=C0-sigma_P, while star separation plus support saturation makes every surviving X-edge positive-Hamming. This creates the next explicit pair-cheap/rooted-expensive pinch family.`
 
-UNPRESERVED WORK: `None. The theorem note and independent arithmetic replay are preserved under project/research/post_ms/2026-09-19-one-defect-pair-equality-slot-v1/. The earlier over-strong d0=0 J<=4 intermediate remains visibly superseded in history by 71e2b3ee...; this checkpoint uses only the repaired repeated-core-aware envelope.`
+UNPRESERVED WORK: `None. The theorem note and independent arithmetic/topology checker are preserved under project/research/post_ms/2026-09-19-e2-exact-support-v1/. No new D2C graph-realizability claim or finite survivor count is promoted.`
 
-DEFERRED ADMIN: `README remains lower-frequency and is already synchronized to the 19 September audit trust boundary. Refresh reviewer-facing status at the next daily adversarial checkpoint unless repository integrity requires an earlier repair.`
+DEFERRED ADMIN: `README remains synchronized to the 19 September audit trust boundary and is intentionally lower-frequency. Refresh reviewer-facing status at the next daily adversarial checkpoint unless repository integrity requires earlier repair.`
 
-NEXT ACTION: `Stay on m=g+1,t=1 and move from exhausted E1 equality geometry to exact E=2 support classification, because all 933 bounded t=1 no-E1 survivors already have an E=2 route. For k>=3 first split R3 (one radius-three matched-head defect) from R2+R2 (two radius-two matched-head defects). Derive support-channel incidence envelopes before any scalar minimization: in R3 separate the three defect support coordinates into repeated-core versus singleton bidirected channels; in R2+R2 classify support overlap/disjointness and shared singleton channels. Then intersect each exact support type with pair-local S_P/Ccap_P and the rooted slot/Hamming ledger. Only afterward handle the k=2 Core-R2 type and the k=1 special placements. Do not open m=g+2, loaded buffer, z=2, or the four-exception gate while this E=2 frontier remains live. Keep X_3 and the graph-level audit boundary explicit.` 
+NEXT ACTION: `Stay on m=g+1,t=1,k>=3. Attack the unique deepest pair-cheap R2+R2 equality family h=1,c=2,d0=2 before opening any broader branch. Intersect p^2+M-k-8<=C0-sigma_P and the exact deep-saturation slot floor r>=a+y+2+eta_2([Emax-floor(-D/2)]_+) with the exact rooted identity r=(p-lambda)(p+u)+q+E_U and the preserved physical q/E_U allocation, retaining M and pair-local S_P rather than collapsing to total score. Classify exact/one-unit pair slack first. If that family survives, treat the non-deep shared-core arm, then R3 near-equality. Do not open k=2, k=1, m=g+2, loaded buffer, z=2, or the four-exception gate while this equality family remains live. Keep X_3 and the graph-level audit boundary explicit.`
 <!-- CURRENT-STATUS:END -->
 
 ---
@@ -30,7 +30,7 @@ Before forward mathematics this run reread:
 
 - `CURRENT_STATE.md`;
 - root `README.md`;
-- latest commits through `71e2b3ee8f912c7bb5b882c5d13201c5a51fb716`;
+- latest commits through `b5be3a06e7d197cdf9931883a714ca9d4e25c599`;
 - `project/research/post_ms/2026-09-19-daily-red-team-audit-v1/DAILY_RED_TEAM_AUDIT.md`;
 - `project/research/post_ms/2026-09-19-source-premise-graph-audit-v1/SOURCE_PREMISE_REPAIR.md`;
 - `project/research/post_ms/2026-09-19-rigid-graph-regression-v1/RIGID_GRAPH_LEVEL_REGRESSION.md`.
@@ -41,7 +41,7 @@ The audit requirements remain binding:
 - selected `(source,coordinate)` uniqueness is a one-selected-representative statement, not raw witness uniqueness;
 - the finite source-tuple theorem is not promoted to unconditional graph-level closure;
 - the independent actual-D2C regression remains the end-to-end premise check and retains `X_3` as the mandatory hostile control;
-- that regression recorded 3,540 root-policy instances, 147 exact pair-capacity checks, 36 Hall-cut decompositions and zero graph/formula mismatches;
+- the regression recorded 3,540 root-policy instances, 147 exact pair-capacity checks, 36 Hall-cut decompositions and zero graph/formula mismatches;
 - no bounded-corpus D2C graph realizes the full rigid complete-cut hypotheses, so the active branch remains a conditional hand implication;
 - exact pair-local `S_P/Ccap_P` remains mandatory;
 - the four-exception gate remains subordinate.
@@ -50,235 +50,147 @@ There is no departure from the audit's priority order in this checkpoint.
 
 ---
 
-## 2. Active geometry
+## 2. Why E=2 is now the live frontier
 
-Rigid one-code complete cut, positive-buffer unloaded common-buffer first equality, minimal outside reservoir `m=g+1`.
+The predecessor exhausted the useful E=1 equality/near-equality scalar line in the difficult `t=1` slice. Exactly 933 bounded `t=1` union survivors had no E1 route, and all 933 already possessed an `E=2` route under the retained distribution-sensitive relaxation. For `k>=3`, exact total excess two has only two code-block types:
 
-For the completed first noncheap layer `E=1`:
+1. `R3`: one radius-three singleton matched head;
+2. `R2+R2`: two radius-two singleton matched heads.
 
-- `X--Y` complete, `x>=3`, `y>0`, `a=x+y`;
-- Y code `d`; X contains neither `d` nor `bar d`;
-- `g=g_P`, `k=x-g>0`, `t=p-g>=1`;
-- `X=H_M dotcup H_0`, sizes `g,k`;
-- `H_M` codes are singleton classes;
-- `H_0` has one common radius-one code and one common outside witness;
-- there is one unique radius-two defect head;
-- `A=g-d_{H_M}(z_*)`, `d0=g-A`;
-- `M=(u_o-1)-d_{U_o\{z_*}}(z_*)`, `N=u-k-2`;
-- `D(A,M)=Q_H-(2k-1)A-kM`;
-- `Delta=E_max(A)-e(X)`;
-- exact pair-local `sigma_P/Ccap_P`, rooted q/E_U residual budget and local slot/Hamming theorem remain in force.
-
-The corrected support theorem from the predecessor is retained exactly:
-
-- `k>1,d0=1`: `J<=k+1+min(2Delta,2)`;
-- `k>1,d0=0`: `J<=F_k(Delta)`, with `F_k(0,1,2)=0,2,4` and `F_k(Delta)=min(k+2,Delta+1)` for `Delta>=3`;
-- `k=1`: `J<=min(2d0+2Delta,4)`.
-
-The local two-way singleton-channel hostile gadget remains a live negative control: the factor two cannot be removed from local criticality alone.
+The repeated core cannot carry excess when `k>=3`.
 
 ---
 
-## 3. New d0=1 zero-edge theorem
+## 3. Unified E=2 support ledger
 
-In `E=1,d0=1`, the repeated core support is one coordinate of the radius-two defect. The common core witness is adjacent to the defect, so star separation already forbids all k defect--core head edges.
+For either E=2 type define:
 
-The only other possible zero-Hamming-excess internal X-edge is the defect edge to a singleton radius-one class on the second defect coordinate. Hence:
+- `s`: total defect-support incidences (`3` for R3, `4` for R2+R2);
+- `q`: intersecting defect-pair count (`0` for R3, `h in {0,1}` for R2+R2);
+- `c`: number of defect supports containing the repeated-core coordinate;
+- `d0`: number of those defects adjacent to the common core witness;
+- `B=s-c+q`;
+- `K=k(c-d0)`.
 
-`# zero-rho X-edges <=1`.
+Then
 
-Therefore
+`J <= d0(k+1)+2min(Delta,B)+min(K,[Delta-B]_+)`.
 
-`r>=a+y+1+eta([e(X)-1]_+)`.
+The first term is the already-priced active repeated-core channel; `B` counts bidirected singleton-type channels; `K` is the remaining one-way repeated-core capacity.
 
-If `J>=k+2`, the second singleton support channel is active and its head edge is also forced absent. Then every actual X-edge has positive Hamming excess and
+With `D=D(A,M)`, exact Hall accounting gives the pair correction
 
-`r>=a+y+1+eta(e(X))`.
+`Phi_{B,0}(D)=max(D,-2B)`,
 
-This improvement is unconditional within the `d0=1,E=1` branch; it does not require exact pair saturation.
+and for `K>0`,
 
----
+`Phi=max(D,-2B)` when `D>=-2B-1`,
 
-## 4. d0=1 exact / near pair pinch
-
-For `D<=-2`, the exact pair correction is `-(k+3)`. If `s` is slack above the pair minimum, then
-
-`[D+2Delta]_+ + (k+3-J) <= s`.
-
-Thus for `s<=1`:
-
-- `J>=k+2`;
-- all actual X-edges have positive Hamming excess;
-- `Delta<=floor((s-D)/2)`.
-
-At exact equality:
-
-`j_+ >= [Emax-max(1,floor(-D/2))]_+`,
-
-where
-
-`Emax=binom(g,2)+k(g-1)`.
+`Phi=max(ceil(D/2)-B,-(2B+K))` when `D<=-2B-2`.
 
 Hence
 
-`r>=a+y+1+eta([Emax-max(1,floor(-D/2))]_+)`.
+`p(g+1)+k+M-d0(k+1)+Phi_{B,K}(D)<=C0-sigma_P`.
 
-For `D<=-2` with one pair-slack unit:
-
-`j_+ >= [Emax-floor((1-D)/2)]_+`.
-
-In the `t=1` slice, `g=p-1`, and the right-arm pair bill simplifies exactly to
-
-`p^2+M-3<=T`, `T=C0-sigma_P`.
-
-So
-
-`M_+=T-p^2+3`;
-
-`M=M_+` is support-saturated and `M=M_+-1` is already in the all-positive-edge regime.
+This is the topology-retaining exact E2 pair gate now in force.
 
 ---
 
-## 5. Closed d0=0 pair correction
+## 4. R3 branch
 
-For every `k>1`,
+R3 codes have radius one or three from `d`. Distinct X-code classes therefore have even Hamming distance at least two; `H_0` is independent. Consequently every X-edge has positive Hamming excess and
 
-`Psi_{k,0}(D)=min_Delta {[D+2Delta]_+-F_k(Delta)}`
+`r>=a+y+1+eta(e(X))`.
 
-has the exact closed form
+For the active-core topology `c=d0=1`, `B=2,K=0`, so
 
-`Psi_{k,0}(D)=max(D,-4)` for `D>=-7`,
+`Psi=max(D-(k+1),-(k+5))`.
 
-and
+On the right arm `D<=-4`, at `t=1`,
 
-`Psi_{k,0}(D)=max(ceil(D/2)-1,-(k+2))` for `D<=-8`.
+`p^2+M-5<=C0-sigma_P`.
 
-This supersedes only the *presentation* of the earlier safe finite-candidate minimization; it agrees with that repaired theorem.
+With pair slack `s_P`,
 
-Exact equality regimes:
+`Delta<=floor((s_P-D)/2)`,
 
-- `D>=0`: `Delta=0,1,2`;
-- `D=-1,-2`: `Delta=1,2`;
-- `D=-3,-4,-5`: uniquely `Delta=2,J=4`, necessarily two singleton bidirected channels;
-- `D=-6,-7`: transition/tie;
-- `D<=-8,k>=3`: repeated-core support is necessary.
+hence
 
-Let
-
-`Emax=binom(g,2)+kg`.
-
-At exact equality,
-
-`j_+ >= [Emax-max(k+1,floor(-D/2))]_+`.
-
-In the sharper zone `-5<=D<=-3`,
-
-`j_+=Emax-2`.
-
-Thus
-
-`r>=a+y+1+eta(j_+)`.
-
-When `D<=-2k-2`, the repeated-core support envelope is saturated and, at `t=1`, the deep pair bill becomes
-
-`p^2+M-2<=T`.
+`r>=a+y+1+eta([Emax-floor((s_P-D)/2)]_+)`.
 
 ---
 
-## 6. Diagnostic status
+## 5. R2+R2 branch
 
-The companion checker preserves the predecessor's abstract scan and changes only the newly proved rooted-slot floors.
+The two radius-two supports are distinct, so their overlap `h` is 0 or 1.
 
-Results:
+The only possible zero-Hamming X-edges are defect-to-radius-one head edges on a defect support coordinate. Every defect-defect edge and every radius-one/radius-one edge has positive Hamming excess.
 
-- support-capped E1 rows: `1,094,326 -> 1,094,065`;
-- row eliminations: `261`;
-  - d0=1 universal one-zero-edge: 199;
-  - d0=1 exact equality: 28;
-  - d0=1 one-unit right pinch: 1;
-  - d0=0 exact equality: 33;
-- E1-feasible states: `48,677 -> 48,672`;
-- E1-route closures: `5`;
-  - t=4: 2;
-  - t=8: 1;
-  - t=9: 1;
-  - t=11: 1;
-- t=1 E1 rows: `111,204 -> 111,197`;
-- t=1 E1 states: unchanged at `4,471`;
-- full union: unchanged at `64,457`;
-- t=1 union: unchanged at `5,404`.
+If `j_+` is the number of positive-Hamming internal X-edges and `eta_2(j)` is the least `q>=0` with `binom(q+2,2)>=j`, then
 
-These are abstract arithmetic parameter states, not realizable graph counts.
+`r>=a+y+2+eta_2(j_+)`.
 
-The t=1 nonmovement is itself useful: the E1 equality line is now structurally sharper, but it is no longer the right place to spend another scalar relaxation.
+On the fully saturated constant pair arm, every support channel is saturated, so every possible zero-Hamming defect/radius-one edge is absent. Thus
+
+`r>=a+y+2+eta_2(e(X))`,
+
+and exact pair equality gives
+
+`r>=a+y+2+eta_2([Emax-floor(-D/2)]_+)`.
 
 ---
 
-## 7. Exact E=2 frontier
+## 6. Dominant shared-core equality geometry
 
-Among the bounded t=1 union survivors, exactly 933 have no E1 route. Every one of those 933 has an E=2 route under the retained distribution-sensitive `R_N` relaxation.
+For R2+R2,
 
-k-distribution:
+`Jmax=8+2h+c(k-2)+d0`.
 
-`k=1:223, 2:201, 3:146, 4:104, 5:82, 6:60, 7:53, 8:47, 9:17`.
+For every `k>=3` this is uniquely maximized by
 
-The exact E=2 block types are:
+`h=1,c=2,d0=2`.
 
-### k>=3
+So the two radius-two defects share exactly the repeated-core coordinate and the common core witness is adjacent to both defect heads. Then
 
-Only:
+`B=3`, `K=0`, `Jmax=2k+8`.
 
-1. R3 — one singleton H_M head has excess 2 / radius 3;
-2. R2+R2 — two singleton H_M heads each have excess 1 / radius 2.
+At `t=1`, the fully saturated exact pair bill is
 
-The repeated core cannot carry excess because one unit would contribute at least k>2 total excess.
+`p^2+M-k-8<=C0-sigma_P`.
 
-### k=2
+At the same time:
 
-Add:
+- all `2k` defect-core zero-Hamming edges are absent by star separation;
+- the two private defect-singleton zero-Hamming edges are absent at support saturation;
+- the defect-defect edge is also absent if its bidirected channel is saturated;
+- every surviving X-edge is positive-Hamming;
+- `A=g-2` and `Emax=binom(g,2)+k(g-2)`.
 
-3. Core-R2 — common H_0 code has excess 1, contributing both units.
-
-### k=1
-
-Four placements:
-
-1. matched R3;
-2. matched R2+R2;
-3. mixed core R2 + matched R2;
-4. core R3.
-
-This is the next live classification problem.
+This is the present load-bearing equality family.
 
 ---
 
-## 8. Preserved package
+## 7. Preserved package
 
-Primary package:
-
-`project/research/post_ms/2026-09-19-one-defect-pair-equality-slot-v1/`
+`project/research/post_ms/2026-09-19-e2-exact-support-v1/`
 
 Files:
 
-- `ONE_DEFECT_PAIR_EQUALITY_SLOT_FEEDBACK.md`
-- `check_one_defect_pair_equality_slot.py`
+- `EXACT_E2_SUPPORT_CHANNELS.md`
+- `check_e2_support_channels.py`
 
-The checker is explicitly an abstract arithmetic diagnostic, not a D2C graph enumerator.
+The checker is an arithmetic/topology audit only, not a D2C graph enumerator.
 
 ---
 
-## 9. Next work
+## 8. Next work
 
-Remain in `m=g+1,t=1`.
+Remain in `m=g+1,t=1,k>=3`.
 
-First attack `E=2,k>=3`:
+1. Work first on `R2+R2`, `h=1,c=2,d0=2`.
+2. Combine the exact pair bill with the exact rooted identity and physical `q/E_U` allocation while retaining `M`.
+3. Classify exact and one-unit pair slack; convert the forced `Delta` range into an explicit rooted-slot surcharge.
+4. If the deep shared-core family survives, treat its non-deep V-arm before moving to R3 near equality.
+5. Only after those are exhausted should `k=2` or `k=1` E2 placements be opened.
 
-1. R3: one radius-three matched-head defect. There are three defect support coordinates; derive the exact selected-witness incidence envelope by separating a possible repeated-core one-way channel from singleton bidirected channels. Only then minimize against exact pair-local `Ccap_P`.
-2. R2+R2: classify whether the two radius-two supports are disjoint, meet in one coordinate, or coincide in forbidden/allowed ways under distinct singleton A-codes; determine how many singleton channels can be shared before pricing missing head edges.
-3. Feed each surviving support geometry into the local rooted-slot/Hamming ledger and exact q/E_U residual allocation.
-4. Then handle k=2 Core-R2.
-5. Handle k=1 special placements last.
-
-Do not open `m=g+2`, loaded buffer, `z=2`, or the four-exception gate while this exact E=2 line remains live.
-
-Keep `X_3`, the actual-graph regression trust boundary, and exact pair-local `S_P/Ccap_P` explicit throughout.
+Do not open `m=g+2`, loaded buffer, `z=2`, or the four-exception gate while this line remains live.
