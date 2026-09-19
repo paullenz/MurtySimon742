@@ -3,173 +3,148 @@
 > **Active target - 19 September 2026.** Sufficiently-large/eventual second-extremal diameter-2-critical classification around `M(n)=floor((n-1)^2/4)+1`. The false all-order 2019 strengthening is not assumed. The published 2024 `X_3` graph (`n=12,m=32`) remains a mandatory hostile control. Erdős #742 is preserved but is not the live optimization target.
 
 <!-- CURRENT-STATUS:START -->
-CHECKPOINT CLASS: `ONE_CODE_Z1_ZERO_BUFFER_LAMBDA7_SINGLETON_2026_09_19`
+CHECKPOINT CLASS: `ONE_CODE_Z1_ZERO_BUFFER_COMPLETE_CLOSURE_2026_09_19`
 
 WORK MODE: `MATH`
 
-INSPECTED PREDECESSOR: `db8963a3dc5b33015a67df436c9dff32a0cc7843`
+INSPECTED PREDECESSOR: `d533b50323aa7576c6bdb2078674b36f18379131`
 
-LAST VERIFIED RESULT: `Raw criticality proves the common core W_0 is anticomplete to U_o. Together with U_o independence this makes the unmatched graph exact: q=u_o, H=e_bar(W_0,U_o)=k u_o, E_U=k(p+u-2)+u_o(rho-2)+J, and q+E_U=k(p+u-2)+u_o^2+J, where J=e_bar(X,U_o)>=max(x,u_o). The exact X-slack identity remains L_X=x(lambda+1-rho)+k(x-1)+J-2e(X), with e(X)<=k(rho-p-2) from duplicate complementary-witness capacity. The stronger exact core/outside separation kills all four previous lambda=6 scalar survivors, so the zero-buffer branch is closed for lambda<=6. At lambda=7 the hand score reduction leaves exactly (p,rho,k)=(4,6,1); there e(X)=0, q=5, H=5, S=55+2J and C0=67, so only J=5 or 6 (delta=-4 or -3) remain. Thus the live zero-buffer problem is a five-by-five X--U_o incidence geometry with at most one hole beyond the code-complement matching.`
+LAST VERIFIED RESULT: `The zero-buffer g=p subbranch of the rigid one-code unloaded common-buffer geometry is now closed for every admissible lambda, not merely lambda<=6. Raw criticality first forces X--U_o anticomplete: one orientation is killed by the root/buffer or by code complementarity into U_bar d, while the reverse orientation has no A/U witness and any matched foot would require gamma=c(x), impossible because g=p gives only gamma codes d,bar d and X contains neither. The same classification then forces X independent. Consequently every unmatched vertex except b has degree one in A union U, so E_U=(u-1)(p+u-2), q=rho-1, L_Y=rho y and L_X=x lambda+k(x-1) exactly. The score gap factors as S-C0=2[H_lambda+(k-1)(k+p+rho-2)+(rho-p-2)+rho(y-2)+3]. This is positive for y>=2; when y=1, lambda=p+rho-2>=2p and H_lambda>=p^2+p, so the gap is again positive. Hence no above-M candidate realizes zero buffer slack.`
 
-UNPRESERVED WORK: `None. The W_0--U_o anticompleteness theorem, exact unmatched ledgers, lambda=6 closure, lambda=7 one-state hand reduction and arithmetic diagnostic are preserved under project/research/post_ms/2026-09-19-zero-buffer-core-outside-separation-v1/.`
+UNPRESERVED WORK: `None. The X--U_o anticompleteness theorem, X independence, exact slack/score identities, universal score-gap factorization and arithmetic diagnostic are preserved under project/research/post_ms/2026-09-19-zero-buffer-complete-separation-v1/.`
 
 DEFERRED ADMIN: `README remains lower-frequency. Refresh reviewer-facing status at the next daily adversarial checkpoint; do not spend the mathematics cadence on packaging or CI churn unless repository integrity fails.`
 
-NEXT ACTION: `Attack the lambda=7 five-by-five geometry directly. For each remaining edge h_i--z_j (i!=j) in the J=5 matching-hole state, classify both triangle-edge criticality orientations. A B-witness is impossible in the orientation whose U endpoint is the singleton source because of the root; A-witnesses are constrained by X independence and the two common Y-neighbours. The only live possibility appears to be a matched-B witness in the reverse orientation. Prove its exact coordinate/gamma restriction and show it forces an additional X--U_o hole or violates singleton common-neighbourhood. Repeat for J=6. One forced extra hole beyond J=6 closes lambda=7. Do not advance to lambda=8 or z=2 until this local geometry is exhausted.`
+NEXT ACTION: `Do not return to zero buffer or the closed mixed {4,5} ladder. Resume the corrected unloaded common-buffer branch with positive buffer slack t=p-g>=1. Re-read COMMON_BUFFER_X_EDGE_CRITICALITY_REPAIR.md and COMMON_CORE_EXACT_SLACK_AND_REVERSE_DEFICIT.md, retain the corrected matched/outside witness dichotomy, and classify the first positive-buffer geometry before scalar relaxation. Intersect it locally with exact Ccap_P, ONE-P and CROWD, then feed surviving physical holes/slack through the rooted residual ledger. Keep the four-exception gate subordinate and do not move to z=2 while this positive-buffer branch remains live.`
 
 ## Mandatory audit reconciliation
 
-Before forward mathematics this run, `CURRENT_STATE.md`, root `README.md`, recent commits, the 19 September daily red-team audit/handoff, the repaired source-premise note, and the independent actual-D2C Hall/pair-capacity regression were reread.
+Before forward mathematics this run, `CURRENT_STATE.md`, root `README.md`, latest commits, the 19 September daily red-team audit/handoff, the source-premise repair and the independent actual-D2C Hall/pair-capacity regression were reread.
 
-The audit priority remains binding. The two source-tuple premises are repaired at the raw/selected interface, but the finite source-tuple theorem is not promoted as unconditional graph closure. The independent actual-D2C regression includes `X_3`, reaches rooted partitions/codes/Hall objects/exact `Ccap_P`, and still reports zero graph/formula mismatches. No actual rigid complete Hall cut with `x>=3` has been found, so the one-code results below remain conditional hand implications. The four-exception gate remains subordinate. No weakened or invalidated line was resumed.
+The audit priority remains binding. Distinct physical beta sources and selected `(source,coordinate)` uniqueness are repaired at the exact raw/selected interface; the finite source-tuple theorem is not promoted as unconditional graph closure. The independent actual-D2C regression retains `X_3`, reaches rooted partitions, slots, codes, Hall objects and exact `Ccap_P`, and has no recorded graph/formula mismatch. No actual rigid complete Hall cut with `x>=3` has been found, so all rigid one-code conclusions remain conditional hand implications. Exact pair-local `Ccap_P`, `(ONE-P)` and `(CROWD)` remain valid; the four-exception gate remains subordinate.
 
-The present advance does not use source-tuple capacity. It is raw D2C criticality plus exact physical incidence and Boolean-code support.
+The departure from the predecessor's lambda=7 state-by-state plan is mathematically forced by a stronger raw theorem: the first criticality classification proves `X--U_o` is empty for the whole zero-buffer branch. Continuing the lambda=7 finite geometry after that discovery would preserve a superseded frontier rather than follow the strongest verified structure.
 
 ## Mandatory negative control
 
-`X_3`: `n=12`, `m=32>M(12)=31`, canonical root `a=3,b=8,p=4,u=0,Q=12,r=f=delta=0`. Every zero-buffer theorem below requires `u_o>=p+1`; `X_3` is untouched.
+`X_3`: `n=12`, `m=32>M(12)=31`, canonical root `a=3,b=8,p=4,u=0,Q=12,r=f=delta=0`. The zero-buffer theorem below requires the rigid one-code unmatched/common-buffer structure with `k>0` and `u_o>=p+1`; it does not apply to `X_3`.
 
-## Retained zero-buffer/code-simplex structure
+## Retained zero-buffer hypotheses
 
-Use the unloaded common-buffer zero-slack branch:
+Inside the unloaded common-buffer zero-slack branch:
 
-- `X--Y` complete; Y one code d; `A_bar d=empty`;
-- `g=p`, `k=x-p>0`, `x=p+k`;
-- `U_-=U_bar d=W_0 dotcup {b}`, `|W_0|=k`, and `U_-` independent;
-- b complete to X and U_o, anticomplete to Y;
-- `rho:=u-k=u_o+1`;
-- Y anticomplete to all U, so
-  `L_Y=rho(p+rho-lambda-1)`;
-- exact X-code simplex
-  `supp_A(X)={0^p,e_1,...,e_p}` with multiplicities k,1,...,1;
-- exact support duality
-  `supp_U(U_o)={1^p,1^p-e_1,...,1^p-e_p}`;
-- hence `p>=4`, `rho>=p+2`;
-- U_o is independent.
+- `X--Y` complete, `x=p+k`, `k>0`, `y>0`;
+- all Y vertices have code d, while X has neither d nor bar d;
+- `g=p`, so every matched endpoint has gamma code d or bar d;
+- `U_-=U_bar d=W_0 dotcup {b}`, `|W_0|=k`, and `U_-` is independent;
+- b is complete to X and U_o, anticomplete to Y;
+- Y is anticomplete to all U;
+- every W_0 vertex has one graph-fixed X core head;
+- U_o is independent and `W_0--U_o` is anticomplete;
+- `rho=u-k=u_o+1>=p+2`, `p>=4`;
+- `y=p+rho-lambda-1>=1`.
 
-## New core/outside anticompleteness theorem
+## New theorem 1: X--U_o anticompleteness
 
-For `w in W_0`, `z in U_o`, suppose wz is an edge. It shares the root, so a singleton witness must lie in A; since Y is anticomplete to U, it lies in X.
+For `x in X`, `z in U_o`, suppose `xz` is an edge. It lies in a triangle through b.
 
-If the witness is adjacent to w and nonadjacent to z, it must be w's unique core head; but b is adjacent to z and every X vertex, giving a second common neighbour.
+In the orientation `t~x`, `t!~z`, `N(z) cap N(t)={x}`:
 
-In the reverse orientation the witness is adjacent to z and nonadjacent to w, with singleton `N(w) cap N(a)={z}`. The absence of a matched common neighbour forces `c(a)=bar c(w)=d`, but X contains no code d.
+- a B-witness shares the root with z;
+- an X-witness shares b with z;
+- a Y-witness of code d would have to be code-complementary to z, forcing `c(z)=bar d` and hence `z in U_-`.
 
-Therefore
+In the reverse orientation `t~z`, `t!~x`, `N(x) cap N(t)={z}`:
 
-`e(W_0,U_o)=0`.
-
-## Exact unmatched and slack ledgers
-
-Let `u_o=rho-1` and `J=e_bar(X,U_o)`.
-
-The U graph now consists exactly of the b--U_o star:
-
-`q=e(G[U])=u_o`.
-
-For every `z in U_o`,
-
-`epsilon_z=rho-2+h_X(z)`.
-
-The exact U-side score is
-
-`E_U=k(p+u-2)+u_o(rho-2)+J`.
-
-Hence
-
-`q+E_U=k(p+u-2)+u_o^2+J`.
-
-The X-side identity is exactly
-
-`L_X=x(lambda+1-rho)+k(x-1)+J-2e(X)`.
-
-Put `R=rho-p-2`. Internal X-edges are neither direct nor matched-foot certified; they require complementary-code U_o witnesses. One physical source-witness pair per X-source is already consumed by its buffer-X certificate, so only the R duplicate complementary witnesses supply residual pairs. Since the largest X code class has size k,
-
-`e(X)<=kR`.
+- the root has many common B-neighbours with x;
+- a Y-witness is not adjacent to z;
+- an X-witness shares every Y vertex with x;
+- b is adjacent to x, W_0 is anticomplete to U_o, and U_o is independent;
+- a matched foot q would force `c(x)=gamma(q)`, but at g=p every gamma code is d or bar d, neither present in X.
 
 Thus
 
-`L_X >= [x(lambda+1-rho)+k(x-1)+max(x,u_o)-2kR]_+`.
+`e(X,U_o)=0`.
 
-## Closure through lambda=6
+## New theorem 2: X is independent
 
-The previous package had reduced lambda=6, under a weaker core/outside hole floor, to
+If `xx'` were an internal X-edge, one singleton orientation must have a witness adjacent to one endpoint and nonadjacent to the other.
 
-`(p,rho,k)=(4,6,1),(4,6,2),(4,7,1),(4,7,2)`.
+- Y and b are adjacent to both endpoints;
+- another X-witness has b and all of Y as extra common neighbours;
+- U_o is anticomplete to X;
+- a W_0 witness would force the source code to be d by tight-coordinate complementarity;
+- a matched foot would force the source code to equal a gamma code in `{d,bar d}`.
 
-Exact core/outside anticompleteness replaces the old H=k lower bound by H=k u_o, increasing the U-side score by `2k(u_o-1)`. That increase is 8,16,10,20 on the four states, while their old score margins were -6,-2,0,-2. All are now strictly over C0.
+All possibilities contradict the retained X-code support. Hence
 
-Therefore the zero-buffer branch is closed for every `lambda<=6`.
+`e(X)=0`.
 
-## Lambda=7 hand reduction
+## Exact unmatched and A-side ledgers
 
-Write `rho=p+s`, `s>=2`. Let case A be `k>=s-1` (x>=u_o) and case B `k<=s-2` (x<u_o).
+Every `w in W_0` now has exactly one neighbour in `A union U`, its core head. Every `z in U_o` has exactly one neighbour in `A union U`, namely b. The buffer has zero slack.
 
-Using the exact U-side floor and duplicate-support X floor, before positive-part truncation the score differences from C0 are
+Therefore
 
-A:
-`D_A=k^2+2kp+ks-10k+3p^2+5ps-29p+2s^2-20s+38`;
+`q=e(G[U])=u_o=rho-1`,
 
-B:
-`D_B=k^2+2kp+ks-11k+3p^2+5ps-29p+2s^2-19s+37`.
+`E_U=(u-1)(p+u-2)`.
 
-The raw X-slack floors are
+For Y,
 
-A:
-`X_A=k^2-3ks+12k-p^2-ps+9p`;
+`L_Y=rho y`.
 
-B:
-`X_B=k^2-3ks+11k-p^2-ps+9p+s-1`.
+For X, summing degrees over the complete X--Y cut, the x buffer edges and the k core-head edges gives
 
-A candidate requires `D_A+[X_A]_+<=0` or `D_B+[X_B]_+<=0`.
+`L_X=x lambda+k(x-1)`.
 
-Monotonicity in p,k,s reduces p>=6 immediately; at p=5 the only D_A-nonpositive points are `(s,k)=(2,1),(2,2)`, and adding X_A gives 6 and 20. At p=4 all states are positive after X-slack except
+Hence the total score is exact:
 
-`(s,k)=(2,1)`.
+`S=(u-1)(p+u-2)+rho y+x lambda+k(x-1)`.
 
-Thus lambda=7 has one scalar state:
+## Universal zero-buffer score gap
 
-`(p,rho,k)=(4,6,1)`.
+Let
 
-## Exact lambda=7 singleton geometry
+`H_lambda=floor((lambda+1)^2/4)`
 
-Here
+and use the preserved above-M ceiling
 
-- `u=7`, `u_o=5`;
-- `x=5`, `y=2`;
-- `R=0`, so `e(X)=0`;
-- `q=5`;
-- `L_Y=12`;
-- `E_U=29+J`;
-- `L_X=14+J`;
-- `S=55+2J`;
-- `C0=67`.
+`C0=(lambda+3)p+(lambda+2)u-2H_lambda-4`.
 
-Since `J>=5`, only
+With `u=k+rho`, `x=p+k`, `y=p+rho-lambda-1`, exact expansion gives
 
-`J=5` or `J=6`
+`S-C0`
 
-survive. The exact residual identity gives
+`=2[H_lambda+(k-1)(k+p+rho-2)+(rho-p-2)+rho(y-2)+3]`.
 
-`delta=J-9`,
+If `y>=2`, the bracket is at least 3, contradiction.
 
-so the possibilities are `(J,delta)=(5,-4),(6,-3)`.
+If `y=1`, then `lambda=p+rho-2>=2p`, so
 
-At J=5, the X--U_o nonedges are exactly the five code-complement pairs. At J=6 there is exactly one additional X--U_o hole.
+`H_lambda>=floor((2p+1)^2/4)=p^2+p`.
+
+The bracket reduces to
+
+`H_lambda+(k-1)(k+p+rho-2)-p+1>=p^2+1>0`.
+
+Thus:
+
+`ZERO-BUFFER COMPLETE CLOSURE: no above-M candidate realizes the rigid one-code unloaded common-buffer branch with g=p.`
+
+The prior lambda=0,...,7 staircase is subsumed by this theorem.
 
 ## Preserved package
 
-`project/research/post_ms/2026-09-19-zero-buffer-core-outside-separation-v1/`
+`project/research/post_ms/2026-09-19-zero-buffer-complete-separation-v1/`
 
-- `ZERO_BUFFER_CORE_OUTSIDE_SEPARATION_AND_LAMBDA7_FRONTIER.md`
-- `check_zero_buffer_core_outside.py`
+- `ZERO_BUFFER_COMPLETE_SEPARATION_AND_CLOSURE.md`
+- `check_zero_buffer_complete_separation.py`
 
-The checker is arithmetic audit support only. It independently verifies the lambda=6 empty scalar set under the exact separation floor and the unique lambda=7 scalar state plus its J/delta pair.
+The checker is arithmetic audit support only; the criticality theorems and score factorization above are the proof.
 
 ## Immediate frontier
 
-Classify criticality of the remaining X--U_o edges in the 5x5 lambda=7 incidence matrix. In the J=5 state every off-diagonal `h_i z_j` is an edge; in J=6 all but one off-diagonal pair remain. The edge lies in a triangle through b. One singleton orientation has no B witness because the U endpoint and any B witness share the root. A-witnesses are constrained by X independence and the two common Y-neighbours, leaving a narrowly specified matched-B orientation to analyze.
-
-A single theorem forcing two or more extra X--U_o holes closes both J=5 and J=6. Stay on this local problem before lambda=8 or z=2.
+The zero-buffer route is finished. Return to positive buffer slack `t=p-g>=1` in the corrected `r=0` common-buffer branch. Preserve the repaired two-orientation buffer-X criticality theorem: at most g reverse matched heads exist, while the remaining buffer-X edges use either matched feet with the appropriate gamma code or outside unmatched witnesses that create physical Y-holes/slack. Do not scalarize away the one-code pair before using exact `Ccap_P`, `(ONE-P)` and `(CROWD)`. The desired next milestone is a compact positive-buffer structural dichotomy that either forces a quadratic local score payment or sharply parameterizes the surviving geometry for the rooted residual ledger.
 
 <!-- CURRENT-STATUS:END -->
