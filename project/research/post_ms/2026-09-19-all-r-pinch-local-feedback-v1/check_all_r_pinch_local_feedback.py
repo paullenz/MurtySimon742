@@ -148,7 +148,7 @@ def main():
             # witnesses exist, e(X)<=min(C(N,2),N t). The same t also bounds
             # the d- and C-coded U-neighbours of a0, giving A0-DYN.
             for t in range(uo):
-                epsa=max(p-y+k+1,p+u-y-2*t-2)
+                epsa=max(p-y+k+1,p+u-y-t-1)
 
                 # Keep exact pair score local before using the total cap.
                 if sig+epsz+epsa>cap:
@@ -201,8 +201,8 @@ def main():
     expected={
         'coarse':248798,
         'predecessor_final':173347,
-        'new_final':133317,
-        'new_reject':40030,
+        'new_final':132156,
+        'new_reject':41191,
     }
     bad={k:(expected[k],st[k]) for k in expected if st[k]!=expected[k]}
     print({
