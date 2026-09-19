@@ -1,0 +1,13 @@
+{
+  "date": "2026-09-19",
+  "scan": {
+    "old_population_possible": 106368,
+    "older_shared_floor_z1_possible": 86820,
+    "common_buffer_possible": 76463,
+    "full_support_possible": 77310,
+    "either_z1_support_possible": 78167,
+    "new_z1_rejected": 8653
+  },
+  "failures": 0,
+  "trust_boundary": "Arithmetic diagnostic of the two z=1 score gates only. The support dichotomy and common-buffer/full-support inequalities are hand-derived. No actual rigid complete Hall cut with x>=3 has been found in the bounded graph corpus."
+}
