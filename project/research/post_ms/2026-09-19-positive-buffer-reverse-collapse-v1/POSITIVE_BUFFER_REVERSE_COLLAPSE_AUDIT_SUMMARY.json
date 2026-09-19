@@ -1,0 +1,60 @@
+{
+  "counts": {
+    "additional_pair_relaxation_rejections": 0,
+    "max_forced_q": 48,
+    "predecessor_positive_buffer_r0_possible": 320525,
+    "predecessor_t1_possible": 20178,
+    "rejected_by_repaired_score_floor_after_population": 40087,
+    "rejected_by_unmatched_population": 146603,
+    "repaired_structural_survivors": 133835,
+    "survivors_forcing_positive_q": 7274,
+    "t1_rejected_by_score_after_population": 2056,
+    "t1_rejected_by_unmatched_population": 12307,
+    "t1_repaired_structural_survivors": 5815
+  },
+  "date": "2026-09-19",
+  "diagnostic_grid": {
+    "lambda": "all admissible nonnegative",
+    "p": [3, 18],
+    "positive_buffer_only": true,
+    "u": [1, 18]
+  },
+  "mandatory_negative_control": {
+    "M12": 31,
+    "m": 32,
+    "n": 12,
+    "name": "X_3",
+    "status": "outside branch because u=0"
+  },
+  "pair_local": {
+    "coarse_relaxed_intersection": "no additional rejection after new structural floor on diagnostic grid",
+    "constraints_retained": [
+      "2xy<=Ccap_P",
+      "ONE-P",
+      "CROWD"
+    ]
+  },
+  "retains": [
+    "exact common-core head/slack identity",
+    "later zero-buffer reverse collapse and final zero-buffer closure",
+    "one-code pair capacity / ONE-P / CROWD",
+    "rooted residual identities"
+  ],
+  "scope": "rigid one-code z=1 unloaded common-buffer; r_b=0; positive buffer t=p-g>=1; equality epsilon_b=t",
+  "structural_results": {
+    "Z_floor": "Z >= k a + y(g+2) + g",
+    "all_buffer_X_edges_outside_U": true,
+    "core_slack_floor": "E_core >= k(p+k)",
+    "matched_head_code_classes_singleton": true,
+    "outside_witness_count_floor": "m >= g+1",
+    "reverse_orientation_B": "impossible",
+    "matched_orientation_A": "impossible for both H_0 and H_M",
+    "source_slack_floor": "L_Y >= y(p+2)",
+    "unmatched_population_floor": "u >= x+2"
+  },
+  "supersedes": [
+    "COMMON_BUFFER_X_EDGE_CRITICALITY_REPAIR.md matched reverse Orientation-B channel",
+    "COMMON_CORE_EXACT_SLACK_AND_REVERSE_DEFICIT.md reverse-deficit Sections 4 onward where matched reverse certificates are assumed"
+  ],
+  "trust_boundary": "diagnostic arithmetic only; hand proofs primary; no graph realizability claim; rigid complete-Hall hypotheses remain conditional"
+}
