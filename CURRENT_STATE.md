@@ -7,19 +7,19 @@
 The false all-order 2019 Dailly–Foucaud–Hansberg Conjecture 3 is **not** the target. The published 2024 D2C graph `X_3` on 12 vertices and 32 edges has `M(12)=31` and remains a mandatory negative control. The mixed `{4,5}` selected-excess ladder is closed. First-proof priority on Erdős #742 is not an optimization target.
 
 <!-- CURRENT-STATUS:START -->
-CHECKPOINT CLASS: `ONE_CODE_Z1_MINIMAL_RESERVOIR_NONCHEAP_DISTRIBUTED_HAMMING_2026_09_19`
+CHECKPOINT CLASS: `ONE_CODE_Z1_MINIMAL_RESERVOIR_ONE_DEFECT_WITNESS_INTERSECTION_2026_09_19`
 
 WORK MODE: `MATH`
 
-INSPECTED PREDECESSOR: `fd5cab9349310f2435259099e8253ebaefea4bd5`
+INSPECTED PREDECESSOR: `2e1f00a77bdbbc16533b03f8c71bd0cf4a13203d`
 
-LAST VERIFIED RESULT: `The m=g+1 non-Hamming-cheapest branch now has a distribution-sensitive rooted-slot theorem. Writing e_v=d_H(c(v),d)-1, E=sum_X e_v>=1, rho_vw=d_H(c(v),c(w))-1 on internal X-edges and tau_v=sum rho_vw, the local slot theorem gives r>=a+y ceil(E/x)+sum_{v in X} ceil((y e_v+tau_v)/(y+d_X(v))). In particular every noncheap state satisfies the strict sharpening r>=a+y+1. If s vertices of X carry positive Hamming excess, the remaining x-s radius-one vertices force an additional support surcharge through dense radius-one/radius-one edges: r>=a+y ceil(E/x)+s+mu([e(X)-C(x,2)+C(x-s,2)]_+). The feasible support sizes s are further restricted by the k-fold common H_0 code. Independently, same-parity excess endpoints force internal Hamming distance at least two; with C_x(E)=max_{m<=min(E,x)}m(x-m), the X surcharge is at least ceil((yE+2[e(X)-C_x(E)]_+)/(a-1)). Combining these gives a row-wise noncheap floor R_N(A,M) after substituting the exact pair-budget density lower bound e_min(A,M). This preserves exact S_P/Ccap_P and intersects directly with the rooted residual upper budget. No new full bounded-box diagnostic is promoted in this checkpoint.`
+LAST VERIFIED RESULT: `The distribution-sensitive noncheap floor R_N(A,M) has now been independently replayed on the predecessor bounded abstract box: the old 64,557 noncheap/sphere survivors fall to 64,461, a further 96 arithmetic-state exclusions, while all 5,404 t=1 states remain. The optimizer therefore motivated direct E=1 classification. A new raw-criticality support-intersection lemma proves that a selected outside buffer witness for head code c_s can be adjacent to a wrong X-head h only if the supports of c_s and c(h) relative to d intersect. In E=1 this localizes every wrong-head witness adjacency to the unique radius-two defect and forces A in {g-1,g} when k>1, or g-A<=2 when k=1. Internal Hamming geometry gives r>=a+y+1+eta([e(X)-c_1(A)]_+). More importantly, if Delta=E_max(A)-e(X), selected-witness A-incidences satisfy J<=(k+1)(g-A)+2Delta while Hall gives L_X>=D(A,M)+2Delta; the density loss cancels two-for-two, yielding the exact linear pair-external bill S-S_P>=p(g+1)+k+M-(k+1)(g-A)+D(A,M). With S_P>=sigma_P this is a new mandatory E=1 pair gate. Combining it with E>=2 R_N leaves 64,457 abstract union survivors; four more union states are excluded beyond R_N (six noncheap branches close, two rescued by the cheap-sphere branch). In t=1 all 5,404 states still survive, but 4,762 now optimize at E=1 and 642 at E>=2.`
 
-UNPRESERVED WORK: `None. The new theorem package is preserved under project/research/post_ms/2026-09-19-minimal-reservoir-noncheap-distribution-v1/. A full diagnostic replay was deliberately not promoted before preservation; the next run should implement and independently replay R_N(A,M).`
+UNPRESERVED WORK: `None. The theorem and checker are preserved under project/research/post_ms/2026-09-19-one-defect-witness-intersection-v1/.`
 
 DEFERRED ADMIN: `README remains lower-frequency. Refresh reviewer-facing status at the next daily adversarial checkpoint unless repository integrity requires an earlier repair.`
 
-NEXT ACTION: `Stay on m=g+1. Implement an independent checker for the new distribution-sensitive noncheap floor R_N(A,M), replay it against the previous 64,557 abstract survivors, and inspect t=1 first. Record which E and support pattern minimize the row floor. If E=1 dominates, classify the unique one-defect matched-head geometry directly; if core defect appears, exploit the automatic +k core surcharge; if larger E survives, use the parity-density term and zero-radius remainder before opening m=g+2. Keep exact S_P/Ccap_P, X_3, the graph-level audit boundary, and the four-exception gate's subordinate status live.`
+NEXT ACTION: `Stay on m=g+1 and t=1 first. Exploit the E=1 support-intersection geometry before opening E=2 or m=g+2. Intersect the new linear pair bill p^2+k+M-(k+1)(g-A)+D<=C0-sigma_P with the exact rooted q/E_U residual allocation. Then test whether both directed selected-witness adjacencies across a defect/radius-one support pair can coexist with the two original singleton buffer certificates; any incompatibility would cut the O(1) escape from the p^2 selected-witness slack bill. Only after exhausting E=1 should the 642 t=1 optimizer states that moved to E>=2 be split into exact E=2 support patterns. Keep exact S_P/Ccap_P, X_3, the graph-level audit boundary, and the four-exception gate's subordinate status live.`
 <!-- CURRENT-STATUS:END -->
 
 ---
@@ -58,137 +58,135 @@ Rigid one-code complete cut, positive-buffer unloaded common-buffer first equali
 - `X=H_M dotcup H_0`, sizes `g,k`;
 - H_M codes are pairwise distinct singleton A-code classes;
 - H_0 has one common code `c_*`, is independent, and uses common outside witness `z_*`;
-- exact pair/Hall variables and the predecessor minimal-reservoir pair-local spine remain in force;
+- `A=g-d_{H_M}(z_*)`, `M=(u_o-1)-d_{U_o\{z_*}}(z_*)`, `N=u-k-2`;
+- `D(A,M)=Q_H-(2k-1)A-kM` and `E_max(A)=C(g,2)+kA`;
+- exact pair-local `sigma_P/Ccap_P`, pair/Hall allocation, rooted q/E_U residual budget and local slot/Hamming theorem remain in force;
 - `X_3` has canonical-root `u=0` and does not enter these hypotheses.
 
 ---
 
-## 3. New distributional Hamming theorem
+## 3. Independent R_N replay
 
-Primary note:
+Primary new package:
 
-`project/research/post_ms/2026-09-19-minimal-reservoir-noncheap-distribution-v1/NONCHEAP_HAMMING_DISTRIBUTION.md`.
+`project/research/post_ms/2026-09-19-one-defect-witness-intersection-v1/ONE_DEFECT_WITNESS_INTERSECTION.md`.
 
-For `v in X`, put
+The predecessor noncheap theorem writes `e_v=d_H(c(v),d)-1`, `E=sum_X e_v`, and combines the exact feasible defect-support set, radius-one remainder surcharge and parity-density surcharge into the row floor `R_N(A,M)`.
 
-`e_v=d_H(c(v),d)-1>=0`,
+The independent checker in the new package reimplements that finite optimizer and obtains:
 
-`E=sum_X e_v`,
+- old coarse noncheap/sphere survivors: `64,557`;
+- after `R_N`: `64,461`;
+- extra exclusions: `96`.
 
-and on each internal X-edge `vw` put
-
-`rho_vw=d_H(c(v),c(w))-1>=0`,
-
-`tau_v=sum_{w in N_X(v)}rho_vw`.
-
-Then the preserved local slot/Hamming theorem gives
-
-> `r >= a + y ceil(E/x)`
-> `    + sum_{v in X} ceil((y e_v+tau_v)/(y+d_X(v))).`
-
-For the noncheapest branch `E>=1`, this immediately sharpens the previous coarse floor to
-
-> **`r>=a+y+1`.**
-
-The extra `+1` is forced on the X-vertex that actually carries Hamming defect; the defect cannot be paid only on the Y side.
+All 5,404 `t=1` states survive `R_N`, which confirms that the next useful move is direct optimizer geometry rather than another generic scalar relaxation.
 
 ---
 
-## 4. Concentration/dispersion floor
+## 4. Support-intersection theorem
 
-Let `P={v:e_v>0}`, `s=|P|`, and `Z=X\P`. Every edge inside Z joins two distinct one-flip codes and therefore has Hamming distance exactly two. If `mu(j)` is the least q with `C(q,2)>=j`, then
+For a selected outside witness `z_s` serving a head-code class `c_s`, A/U localization gives `c(z_s)=bar c_s` and the buffer certificate gives `N(h_s) cap N(z_s)={b}`.
 
-> `r>=a+y ceil(E/x)+s`
-> `  +mu([e(X)-C(x,2)+C(x-s,2)]_+).`
+For an X-code c define `S(c)={i:c_i!=d_i}`.
 
-The feasible support size s is restricted by the k-fold H_0 code. Writing `q=p-2` and `E=k e_*+sum_i e_i`, the exact relaxed support set `S(E)` is:
+Raw edge criticality now gives:
 
-- core-cheap: `e_*=0`, with `ceil(E/q)<=s<=min(E,g)` when `E<=gq`;
-- core-noncheap: choose `e_* in {1,...,q}`, `R=E-k e_*`; if `R=0`, `s=k`; otherwise `s=k+l` with `ceil(R/q)<=l<=min(R,g)`.
+> **If `z_s` is adjacent to a wrong X-head h, then `S(c_s) cap S(c(h))` is nonempty.**
 
-Define
+The reason is that every non-matched certificate location leaves an immediate second common neighbour; the only possible matched-endpoint escape requires a coordinate at which both the served head and the wrong head differ from d.
 
-`Gamma(E,e)=min_{s in S(E)} {s+mu([e-C(x,2)+C(x-s,2)]_+)}`.
-
-Then
-
-> `r>=a+y ceil(E/x)+Gamma(E,e(X)).`
-
-If the common H_0 code itself is noncheap (`e_*>0`), all k core heads carry defect and
-
-> **`r>=a+y+k`.**
-
-Thus the cheapest noncheap survivor is pushed toward keeping the core code at distance one and concentrating defect among H_M.
+This recovers the old all-radius-one sphere anticompleteness and extends it to small Hamming defects.
 
 ---
 
-## 5. Parity-density floor
+## 5. E=1 geometry
 
-If two X-vertices have Hamming excesses of the same parity, any edge between them has positive even code distance and therefore Hamming length at least two.
+Assume `E=1`. There is one radius-two defect head `h_D`; all other X-vertices are radius one.
 
-If m vertices have odd excess, at most `m(x-m)` internal edges can avoid this forced excess. Since `m<=min(E,x)`, define
+- If `k>1`, the defect must lie in `H_M`, so the common core witness can meet at most the defect: `A in {g-1,g}`.
+- If `k=1`, a core defect is possible and `g-A<=2`.
 
-`C_x(E)=max_{0<=m<=min(E,x)}m(x-m)`
+Every selected-witness wrong-head adjacency is incident to the unique defect.
 
-so that `C_x(E)=E(x-E)` for `E<x/2` and `C_x(E)=floor(x^2/4)` thereafter.
+An internal X-edge has zero Hamming excess only when it joins the defect to a radius-one class whose singleton coordinate lies in the defect support. Star separation bounds the number of such edges by
 
-Then
+`c_1(A)=min(2,g-1)` for `A=0`,
 
-> `sum_{vw in E(X)}rho_vw >= [e(X)-C_x(E)]_+`,
+and
 
-and the total X-side extra slot payment is at least
+`c_1(A)=min(x-1,k+1)` for `A>0`.
 
-> `ceil((yE+2[e(X)-C_x(E)]_+)/(a-1)).`
+If `eta(j)` is the least q with `C(q+1,2)>=j`, then
 
-Combining with the support floor gives
-
-> `r>=a+y ceil(E/x)`
-> ` +max{Gamma(E,e(X)), ceil((yE+2[e(X)-C_x(E)]_+)/(a-1))}`.
+> **`r>=a+y+1+eta([e(X)-c_1(A)]_+)`.**
 
 ---
 
-## 6. Exact pair/Hall feedback
+## 6. Witness-incidence / Hall cancellation
 
-Retain the predecessor pair-local gate
+Let
 
-`H(A,M)<=B_P=C0-O_0-sigma_P`
+`d=g-A`, `Delta=E_max(A)-e(X)`.
 
-and X-density floor
+Let J count A-neighbour incidences across the `g+1` selected outside witnesses. The original singleton buffer certificates imply that every wrong-head witness adjacency forces the corresponding head-head pair to be absent.
 
-`2e(X)>=Q_H+g(g-1)-B_P+2A-(k-1)M`.
+The incidences already free under star separation contribute at most `(k+1)d`; every further missing permitted X-edge can support at most two directed selected-witness incidences. Hence
 
-Define
+> `J<=(k+1)d+2Delta`.
 
-`e_min(A,M)=max(0,ceil((Q_H+g(g-1)-B_P+2A-(k-1)M)/2))`.
+Every selected outside witness w has `epsilon_w>=p-d_A(w)`, and the common witness has the exact extra `k+M`. Therefore
 
-Because the new support and parity floors are monotone in `e(X)`, use `e_min(A,M)` safely. The row-wise noncheap lower bound is
+> `sum_selected epsilon_w >= p(g+1)+k+M-J`.
 
-`R_N(A,M)=min_{1<=E<=x(p-2), S(E) nonempty}`
+The Hall identity with the physical `Z_X` floor sharpens to
 
-` {a+y ceil(E/x)`
+> `L_X>=D(A,M)+2Delta`.
 
-`  +max(Gamma(E,e_min(A,M)),`
+Since `[D+2Delta]_+-2Delta>=D`, the density loss cancels and gives
 
-`       ceil((yE+2[e_min(A,M)-C_x(E)]_+)/(a-1)))}.`
+> **`S-S_P>=p(g+1)+k+M-(k+1)(g-A)+D(A,M)`.**
 
-An actual row must also fit beneath the existing rooted residual upper budget
+With exact crossing capacity `S_P>=sigma_P`, every E=1 row must satisfy
 
-`(p-lambda)(p+u)+C(u,2)-C(k+1,2)-k-M+C0-Y_0-[D(A,M)]_+`.
+> **`p(g+1)+k+M-(k+1)(g-A)+D(A,M)<=C0-sigma_P`.**
 
-This is the current load-bearing noncheap gate. It is structural, keeps exact pair-local score separate, and directly realizes the predecessor's requested concentration/dispersion attack.
+This is the current load-bearing one-defect gate.
+
+For `t=1`, `g=p-1`, it becomes
+
+`p^2+k+M-(k+1)(g-A)+D(A,M)<=C0-sigma_P`,
+
+with `g-A<=1` for `k>1` and `g-A<=2` for `k=1`.
 
 ---
 
-## 7. Diagnostic status and next work
+## 7. Diagnostic status
 
-No new full bounded-box count is promoted at this checkpoint. The previous verified diagnostic remains 64,557 abstract survivors after the noncheap/sphere dichotomy, with all 5,404 `t=1` states retaining the old coarse noncheap relaxation.
+Combining the exact E=1 theorem with the old `R_N` optimizer restricted to `E>=2` gives:
 
-The next run should implement `R_N(A,M)` independently, replay it first on the `t=1` slice, and record the minimizing E/support geometry. The highest-value branch after that is whichever equality pattern the optimizer repeatedly selects:
+- after `R_N`: `64,461` abstract union survivors;
+- after E=1 support/witness theorem: `64,457`;
+- four further union exclusions, at `t=2,10,12,13`;
+- six noncheap branches close, two of those states remain through the separately retained cheap-sphere branch.
 
-- `E=1`: classify the unique one-defect matched-head geometry;
-- core noncheap: exploit the automatic `+k` slot surcharge;
-- larger E: combine parity-density and radius-one remainder before any larger-reservoir expansion.
+The difficult `t=1` slice remains at 5,404 states. Its minimizing noncheap geometry is now:
 
-Do not open `m=g+2`, loaded buffer, extra buffer slack, `z=2`, or the four-exception gate while this line remains live.
+- `4,762` states: E=1;
+- `642` states: E>=2.
+
+These are abstract arithmetic states, not realizable graph counts.
+
+---
+
+## 8. Next work
+
+Do not open `m=g+2`, loaded buffer, extra buffer slack, `z=2`, or the four-exception gate while the present line remains live.
+
+Stay first on `t=1`, `E=1`:
+
+1. intersect the linear pair bill with the exact rooted q/E_U allocation rather than only the row upper budget;
+2. test whether both directed selected-witness adjacencies across one defect/radius-one support pair can coexist with the two original singleton buffer certificates;
+3. preserve any forced head nonedges and feed them back into `e(X)`, Hall slack, and rooted residual capacity;
+4. only after that classify the 642 `t=1` optimizer states that have moved to E>=2, beginning with exact E=2 support patterns.
 
 Promotion level: internal structural theorem under rigid one-code hypotheses; not graph-realizability evidence and not an eventual theorem.
