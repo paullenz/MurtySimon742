@@ -7,248 +7,173 @@
 The false all-order 2019 Dailly–Foucaud–Hansberg Conjecture 3 is **not** the target. The published 2024 D2C graph `X_3` on 12 vertices and 32 edges has `M(12)=31` and remains a mandatory negative control. The mixed `{4,5}` selected-excess ladder is closed. First-proof priority on Erdős #742 is not an optimization target.
 
 <!-- CURRENT-STATUS:START -->
-CHECKPOINT CLASS: `ONE_CODE_Z1_T1_SHARED_CORE_RESOURCE_CONE_2026_09_19`
+CHECKPOINT CLASS: `ONE_CODE_Z1_BUFFER_ROOTED_EDGE_STRICT_LAYER_2026_09_19`
 
 WORK MODE: `MATH`
 
-INSPECTED PREDECESSOR: `519c9c6f0b96f57bed36a314e4b715492e375a43`
+INSPECTED PREDECESSOR: `7b5dc8c2d0d511d87981080ae5c2cceb953807b0`
 
-LAST VERIFIED RESULT: `In the corrected m=g+1,t=1,k>=3,E=2 shared-core core-target family, put N=u-k-2 and e=e(X). The exact pair-local Hall/traffic gate and the rooted q/E_U/slot ceiling collapse to the same resource W(M,e)=M+e+[R0-kM-2e]_+, where R0=Nk+k^2+2kp-ky-k+p^2-py+p+y-2. Pair capacity gives W<=B_P=C0-sigma_P-p^2<=B0, while the rooted ledger gives 2(W+1_{e>0})<=Aroot. The exact minimum W_* over 0<=M<=N,0<=e<=k has a four-piece closed form. On the deep arm R0-kN>2k, equality is unique: M=N,e=k and hence J=0; near equality obeys (k-1)(N-M)+(k-e)<=s. Asymptotically, with k/p->kappa,N/p->alpha,y/p->beta, W_*/p^2->(kappa+1)(kappa+1-beta)_+ and pair/root budgets force an explicit resource cone. For k=o(p), every survivor has liminf N/p>=alpha0=1.017515183827867..., the unique root >1 of 3a^4+12a^3+8a^2-8a-16=0; the pinch has beta=0.265268763664312... and lambda/p=1.752246420163555.... Exact Ccap_P is already satisfied at the base P0 with strict leading-order margin in this fixed/sublinear-k tail, so sigma_P/p^2->P0/p^2. Therefore the predecessor zero-survivor bounded diagnostic does not extend to a global analytic closure: a sharply parameterized unmatched-heavy tail remains. The next attack must use its located physical U-nonedges / saturated X-star / rooted triangle and source-capacity geometry, not another loose scalar relaxation.`
+LAST VERIFIED RESULT: `The former first positive-buffer equality layer is closed by an upstream raw-criticality obstruction. In the rigid one-code common-buffer setup with d_Y(b)=0 and epsilon_b=p-g, prior work forces every buffer--X edge bx to have an outside witness z in U_o with bz in E, xz notin E, N(x)∩N(z)={b}, c(z)=bar c(x), and z anticomplete to Y. Since c(x) != bar d, choose a tight coordinate i with c(x)_i=d_i. Then z and b share the matched endpoint q_i selected by bar d. The rooted B-edge zq_i must have a singleton A-witness orientation. Forward orientation cannot use Y because Y misses q_i, and cannot use X because b is an extra common neighbour under b--X completeness. Reverse orientation cannot use Y because z is anticomplete to Y, and cannot use X because b is again an extra common neighbour. Contradiction. More generally, any outside-U buffer certificate forces a physical buffer--X nonedge. Hence d_Y(b)=0 implies epsilon_b>=p-g+1. The first strict layer epsilon_b=p-g+1 has exact defect identity epsilon_b=(p-g)+h_X+h_o and splits into one X-hole or one U_o-hole. The U_o-hole subtype is impossible. Therefore the only live first-strict unloaded geometry has one unique X-hole ba_0 and b complete to U_o. Every remaining buffer--X edge is outside-U certified; rooted matched-edge certificates funnel through a_0. Writing S_0={i:c(a_0)_i!=d_i}, every buffer-neighbour x with outside witness z_x satisfies either Type F: |{i:c(x)_i=d_i}|=1 and that unique coordinate lies in S_0, or Type R: S_0 subseteq S_x and xa_0 is a nonedge. Consequently every X-neighbour of a_0 must have code at Hamming radius p-1 from d. This is now the live structural frontier.`
 
-UNPRESERVED WORK: `None at this checkpoint. The theorem note and independent arithmetic audit are preserved under project/research/post_ms/2026-09-19-shared-core-resource-cone-v1/. The predecessor fixed-foot target-injectivity theorem remains load-bearing; its bounded zero-survivor result is retained as a diagnostic only and is not extrapolated globally.`
+UNPRESERVED WORK: `None. The equality-layer closure is preserved under project/research/post_ms/2026-09-19-buffer-rooted-matched-edge-collapse-v1/ and the first-strict unique-hole classification is preserved under project/research/post_ms/2026-09-19-buffer-first-strict-layer-v1/. The predecessor shared-core resource cone remains preserved as correct conditional algebra but is no longer a live graph tail because its parent equality geometry is now proved empty.`
 
-DEFERRED ADMIN: `README remains synchronized to the 19 September daily audit trust boundary and need not be rewritten for every mathematical checkpoint. Refresh reviewer-facing status at the next daily adversarial checkpoint unless repository integrity requires earlier repair.`
+DEFERRED ADMIN: `README remains synchronized to the 19 September daily audit trust boundary. Do not erase the predecessor shared-core work; reclassify it as conditional downstream mathematics on a now-closed parent layer. Refresh reviewer-facing status at the next daily adversarial checkpoint unless repository integrity requires earlier repair.`
 
-NEXT ACTION: `Stay on the surviving shared-core tail before opening other E2 topologies. Use the deep-arm stability to feed the physically located geometry M≈N,e(X)≈k,J≈0 into the exact rooted residual identity delta=r-e(F), the rooted triangle count q, E_U, and the finite source-tuple/beta-capacity theorem. In exact deep equality use q<=(N^2+2Nk+N+2)/2 and the fact that z_* misses every one of the N remaining outside-U vertices. Seek either an analytic contradiction for the unmatched-heavy cone or a still sharper structural equality family. Only after this tail is closed or cleanly parameterized should one-core R2+R2 and core-containing R3 be opened. Keep k=2,k=1,m=g+2,loaded buffer,z=2,and the four-exception gate deferred. Keep X_3 and the graph-level audit boundary explicit.`
+NEXT ACTION: `Stay in the first strict unloaded common-buffer layer before opening the loaded buffer. Intersect the unique-hole funnel with the exact Hall X-density identity and pair-local Ccap_P. Let a_0 be the unique X non-neighbour of b. Every b-neighbour x is outside-U certified and is either Type F (its code differs from d in p-1 coordinates) or Type R (S_0 subseteq S_x and xa_0 is a nonedge). Prove a density/support dichotomy: many Type F heads should incur extreme-radius / pair-capacity cost; Type R dominance makes a_0 nearly isolated in G[X] and should force Hall slack. Preserve pair-local S_P rather than total-score substitution. If this first-strict layer survives, feed its single physical buffer hole into the rooted slot/residual ledger delta=r-e(F); only then open the loaded-buffer alternative d_Y(b)>0. Keep m=g+2,z=2,k-small side branches and the four-exception gate subordinate unless they become load-bearing. Keep X_3 and the graph-level audit boundary explicit.`
 <!-- CURRENT-STATUS:END -->
 
 ---
 
 ## 1. Mandatory audit gate
 
-This run began by rereading `CURRENT_STATE.md`, root `README.md`, the latest commit chain through `519c9c6f0b96f57bed36a314e4b715492e375a43`, the 19 September daily adversarial audit, `SOURCE_PREMISE_REPAIR.md`, the actual-D2C graph-level regression status, and the fixed-foot target-injectivity handoff before forward mathematics.
+This run began by rereading `CURRENT_STATE.md`, root `README.md`, the latest commit chain, the 19 September daily adversarial audit, `INDEPENDENT_SOURCE_TUPLE_REPROOF.md`, the repaired source-premise / actual-D2C graph-level regression status, and the current shared-core handoff before forward mathematics.
 
 Binding trust boundary:
 
-- distinct physical beta-source identity: raw-criticality proved;
-- `(source,coordinate)` uniqueness: selected representative only;
-- finite source-tuple theorem: not unconditional graph-level closure;
-- actual-D2C regression: 3,540 root-policy instances, 147 exact pair-capacity checks, 36 Hall decompositions, zero recorded mismatches, `X_3` retained;
-- no bounded actual D2C fixture realizes the full rigid complete-cut hypotheses, so the live branch remains conditional hand mathematics;
-- exact pair-local `S_P/Ccap_P` remains mandatory;
+- distinct physical beta-source identity: raw singleton-criticality proved;
+- `(source,coordinate)` uniqueness: selected-representative uniqueness only, not raw-witness uniqueness;
+- finite source-tuple capacity theorem: independently re-derived only conditional on those two named premises, not unconditional graph-level closure;
+- actual-D2C regression: `X_3` retained, zero recorded graph/formula mismatches, but no bounded fixture realizes the full rigid complete-cut hypotheses;
+- exact pair-local `S_P/Ccap_P` remains mandatory downstream;
 - four-exception gate remains subordinate.
 
-There is no departure from the audit priority order. The predecessor asked first for an analytic treatment of the corrected shared-core pair gate and, if a tail survived, for that tail to be fed into the rooted residual geometry rather than hidden by more scalar relaxations. This checkpoint does exactly that.
+The predecessor proposed continuing inside the unmatched-heavy shared-core resource cone. This run departed from that downstream priority for a precise mathematical reason: a raw rooted B-edge criticality check closes the cone's parent buffer-equality hypothesis before source capacity or pair optimization is needed. The closure is therefore upstream of, and consistent with, the audit's preference for testing dominant premises before building further downstream theory.
 
 ---
 
-## 2. Exact shared-core coordinates and one resource
+## 2. Rooted matched-edge self-pricing
 
-Stay in `m=g+1,t=1,k>=3,E=2`, corrected shared-core `R2+R2`, core-target orientation. Then
+In the positive-buffer common-buffer branch, an outside Orientation-A certificate for `bx` has
 
-`g=p-1`, `x=p+k-1`, `N=u-k-2`, `u=N+k+2`, `lambda=N+p+2-y`,
+`bz in E`, `xz notin E`, `N(x) cap N(z)={b}`,
 
-and `N>=p-1`.
+`c(z)=bar c(x)`, and z anticomplete to Y.
 
-The predecessor gives `A=g`, star-forest `G[X]`, isolated radius-two defects, core X-degree at most one, and
+Since `c(x) != bar d`, choose a tight coordinate i with `c(x)_i=d_i`. Then b and z both select the `bar d` matched endpoint `q_i`, so
 
-`J+e(X)<=k`.
+`bq_i,zq_i in E`.
 
-Write `e=e(X)` and
+The edge `zq_i` lies in the rooted B-layer. Raw rooted triangle-edge criticality therefore requires an A-witness in one of two singleton orientations.
 
-`R0=Nk+k^2+2kp-ky-k+p^2-py+p+y-2`.
+Without assuming buffer equality, either orientation forces the A-witness to lie in X and to be nonadjacent to b:
 
-The Hall bill is
+- forward `z -> q_i`: Y misses q_i; any X-witness adjacent to b has b as a second common neighbour;
+- reverse `q_i -> z`: Y cannot witness because z is anticomplete to Y; any X-witness adjacent to b again has b as a second common neighbour.
 
-`L_X >= [R0-kM-2e]_+`.
+Thus every outside-U buffer certificate forces at least one physical buffer--X hole.
 
-Define
-
-`W(M,e)=M+e+[R0-kM-2e]_+`.
-
-The exact pair-local gate is
-
-`W(M,e)<=B_P=C0-sigma_P-p^2`.
-
-Since `sigma_P>=P0`, `P0=k(p+k)+1+y(p+2)`, also `W<=B0=C0-P0-p^2`.
-
-With `epsilon=lambda mod 2`,
-
-`2B0=N^2+2Nk+2Np+6N-epsilon-2k^2-2ky+8k-p^2-2py+8p-y^2-2y-2`.
-
-The rooted q/E_U ceiling together with the star slot floor prices exactly the same resource:
-
-`2(W+1_{e>0})<=Aroot`,
-
-`Aroot=2Nk+2Ny+N-epsilon+2kp+2k+p^2+2p-y^2-2y-8`.
-
-This common-resource reduction is the main algebraic synthesis of the checkpoint.
+This lemma uses no source-tuple theorem, no selected representative uniqueness and no finite scan.
 
 ---
 
-## 3. Exact W minimizer
+## 3. Former equality layer is empty
 
-Let `W_*` be the minimum over `0<=M<=N,0<=e<=k`. Then for `k>=3`:
+In the first positive-buffer equality layer
 
-- `W_*=0` for `R0<=0`;
-- `W_*=ceil(R0/k)` for `0<R0<=kN`;
-- `W_*=N+ceil((R0-kN)/2)` for `kN<R0<=kN+2k`;
-- `W_*=N+R0-kN-k` for `R0>=kN+2k`.
+`d_Y(b)=0`, `epsilon_b=p-g`,
 
-Every shared-core survivor therefore satisfies
+the exact buffer degree floor forces b complete to X and U_o. Previous repaired criticality already proves that reverse buffer certificates and matched Orientation-A certificates are impossible, so every `bx` must use an outside-U certificate.
 
-`W_*<=B_P<=B0`,
+But the self-pricing lemma says any such certificate forces a buffer--X nonedge. Contradiction.
 
-`2W_*<=Aroot`.
+Therefore
 
-The companion checker brute-forces this exact minimization independently.
+> `d_Y(b)=0  =>  epsilon_b>=p-g+1`.
 
----
+This closes the entire parent layer for every `t=p-g>=1`. All `m=g+1`, E=1, shared-core E=2, one-core R2+R2 and R3 descendants inside the old equality layer cease to be live realizability branches. Their proved conditional implications remain archived.
 
-## 4. Deep-arm equality and stability
-
-Put
-
-`r_N=R0-kN=k^2+2kp-ky-k+p^2-py+p+y-2`.
-
-If `r_N>2k`, then
-
-`W-W_*=(k-1)(N-M)+(k-e)`.
-
-Hence exact equality uniquely forces
-
-`M=N`, `e(X)=k`, `J=0`.
-
-This is physically meaningful: the common outside witness misses all `N` remaining outside-U vertices and the X-star consumes every core leaf.
-
-At exact equality,
-
-`q <= (N^2+2Nk+N+2)/2`.
-
-If resource slack above the optimum is at most `s`, then
-
-`(k-1)(N-M)+(k-e)<=s`,
-
-so `N-M<=floor(s/(k-1))`, `k-e<=s`, and `J<=s`.
+`X_3` is untouched because it has `u=0` and never enters this branch.
 
 ---
 
-## 5. Asymptotic resource cone
+## 4. Exact first-strict buffer split
 
-For a convergent survivor sequence with
+For an unloaded buffer put
 
-`k/p->kappa`, `N/p->alpha`, `y/p->beta`,
+`h_X=e_bar({b},X)`, `h_o=e_bar({b},U_o)`.
 
-we have `alpha>=1` and
+Direct degree counting gives the exact identity
 
-`W_*/p^2 -> w=(kappa+1)(kappa+1-beta)_+`,
+> `epsilon_b=(p-g)+h_X+h_o`.
 
-`B0/p^2 -> b=(alpha^2+2alpha*kappa+2alpha-2kappa*beta-1-2beta-beta^2)/2`,
+Hence the first strict layer `epsilon_b=p-g+1` has only two possibilities:
 
-`Aroot/(2p^2) -> h=(2alpha*kappa+2alpha*beta+2kappa+1-beta^2)/2`.
+1. `h_X=1,h_o=0`;
+2. `h_X=0,h_o=1`.
 
-Necessary conditions are `w<=b` and `w<=h`.
+The second is impossible. If b is complete to X and has one U_o non-neighbour z_0, matched Orientation A is unavailable and outside Orientation A is forbidden by self-pricing. Any reverse certificate must then use the same z_0, but the fixed pair `(b,z_0)` can have at most one singleton X-head while b has x>=3 X-edges.
 
-For `beta<kappa+1`, this gives
+Thus the only first-strict unloaded subtype is
 
-`beta^2<=alpha^2+2alpha*kappa+2alpha-2kappa^2-4kappa-3`,
+> `h_X=1`, `h_o=0`.
 
-and
-
-`beta^2-2(alpha+kappa+1)beta+(2kappa^2+2kappa+1-2alpha*kappa)<=0`.
-
-Equivalently beta lies between
-
-`alpha+kappa+1-sqrt(alpha^2+4alpha*kappa+2alpha-kappa^2)`
-
-and
-
-`sqrt(alpha^2+2alpha*kappa+2alpha-2kappa^2-4kappa-3)`.
-
-Pair capacity alone already yields the safe reservoir gap
-
-`alpha>=sqrt(3kappa^2+6kappa+4)-(kappa+1)`.
+Let `a_0` be the unique X-hole. Then b is complete to U_o and to `X\{a_0}`.
 
 ---
 
-## 6. Fixed/sublinear-k pinch
+## 5. Every surviving buffer edge is outside-U certified
 
-For `k=o(p)` the cone is
+For an edge `bx`, `x!=a_0`, reverse orientation is impossible:
 
-`alpha+1-sqrt(alpha^2+2alpha)<=beta<=sqrt((alpha-1)(alpha+3))`.
+- root and matched witnesses fail by rooted common neighbours;
+- U_o is complete to b;
+- U_- shares tight matched neighbours with b;
+- Y shares at least the x-1>=2 buffer-neighbour X-vertices with b;
+- an X reverse witness has code neither d nor bar d, hence shares a tight matched neighbour with b.
 
-The two curves first meet at
-
-`alpha0=1.017515183827867...`,
-
-the unique root greater than one of
-
-`3alpha^4+12alpha^3+8alpha^2-8alpha-16=0`.
-
-At the pinch,
-
-`beta0=0.265268763664312...`,
-
-`lambda/p=1.752246420163555...`.
-
-If `beta>=1`, pair capacity gives the stronger `alpha>=sqrt(5)-1`. Therefore any fixed/sublinear-k shared-core asymptotic survivor satisfies
-
-`liminf N/p>=1.017515183827867...`,
-
-and likewise `liminf u/p>=1.017515183827867...`.
-
-This is a real structural imbalance theorem inside the conditional branch, not a global closure.
+Matched Orientation A is already excluded by the preserved matched-channel collapse. Therefore every edge from b to `X\{a_0}` uses an outside witness `z_x in U_o` with the standard complementary-code and Y-anticompleteness properties.
 
 ---
 
-## 7. Exact pair-capacity audit
+## 6. Unique-hole funnel and Boolean support dichotomy
 
-The exact `Ccap_P` obligation was retained rather than discarded. In the fixed/sublinear-k tail,
+For each such outside witness and every coordinate `i` with `c(x)_i=d_i`, the shared matched edge `z_x q_i` must use the unique buffer hole `a_0` as its rooted A-witness.
 
-`P0/p^2->beta`,
+Set
 
-`lambda/p->alpha+1-beta`,
+`S_0={i:c(a_0)_i!=d_i}`,
 
-and the pair-radius density at `P0` is
+`S_x={i:c(x)_i!=d_i}`,
 
-`(d+sqrt(d^2+12beta))/3`, where `d=2+2alpha+3beta`.
+`I_x=[p]\S_x`.
 
-Since `alpha>=1`, this is strictly larger than the crossing target density contribution `2beta`, and the remaining capacity multiplier is at least one. Thus exact crossing capacity already holds at `P0` with strict leading-order margin:
+The adjacency `z_x a_0` fixes all rooted orientations generated by this witness.
 
-`sigma_P/p^2->beta=P0/p^2`.
+- If `z_x a_0` is a nonedge, only the forward orientation is available. The fixed pair `(z_x,a_0)` can have only one singleton matched head, so `|I_x|=1`; that coordinate lies in `S_0`. This is **Type F** and `|S_x|=p-1`.
+- If `z_x a_0` is an edge, only reverse orientations are available. Then every i in `I_x` has `c(a_0)_i=d_i`, so `I_x cap S_0=emptyset`, equivalently `S_0 subseteq S_x`. The original buffer certificate then forces `xa_0` to be a nonedge. This is **Type R**.
 
-Therefore the surviving asymptotic tail is not an artifact of replacing exact `Ccap_P` by a loose score budget.
+Consequently
 
----
+> every X-neighbour of `a_0` has Hamming radius exactly `p-1` from d.
 
-## 8. Independent arithmetic audit
+All non-extreme buffer neighbours are physically separated from `a_0` and their code supports contain `S_0`.
 
-Preserved checker:
-
-`project/research/post_ms/2026-09-19-shared-core-resource-cone-v1/check_shared_core_resource_cone.py`
-
-It independently verifies:
-
-- 13,176 exact coordinate/parity identities;
-- 45,300 root same-resource rearrangements;
-- 28,350 brute-force instances of the closed `W_*` formula;
-- the `alpha0` quartic root to numerical tolerance;
-- finite `k=3` weak pair/root minima approaching the predicted pinch: `N/p=1.02,1.015,1.018,1.017` at `p=100,200,500,1000`.
-
-This is an arithmetic audit of conditional inequalities only, not graph-realizability evidence.
+This is the live bridge into Hall density and pair capacity.
 
 ---
 
-## 9. Corrected interpretation and next work
+## 7. Preserved artifacts
 
-The predecessor bounded box had zero corrected shared-core survivors, but the full analytic treatment shows that this cannot be promoted to a global closure. An unmatched-heavy asymptotic cone remains.
+New theorem packages:
 
-That negative result is useful: another pair/global score inequality is not the right next move. The surviving tail is physically rigid, especially on the deep arm, where near equality forces `M≈N`, `e≈k`, `J≈0`.
+- `project/research/post_ms/2026-09-19-buffer-rooted-matched-edge-collapse-v1/BUFFER_ROOTED_MATCHED_EDGE_COLLAPSE.md`
+- `project/research/post_ms/2026-09-19-buffer-first-strict-layer-v1/BUFFER_FIRST_STRICT_LAYER.md`
 
-The next attack is to combine those located U-nonedges and X-star edges with:
+Predecessor resource-cone package remains preserved at
 
-1. the exact rooted triangle count `q` and residual identity `delta=r-e(F)`;
-2. the finite source-tuple/beta-capacity theorem at its repaired trust boundary;
-3. raw criticality of the many specific `z_*--U_o` nonedges.
+- `project/research/post_ms/2026-09-19-shared-core-resource-cone-v1/`
 
-Only after this shared-core tail is closed or sharply classified should the tied one-core `R2+R2` and core-containing `R3` alternatives be opened.
+with its original trust boundary. It is now historical conditional downstream mathematics, not the live branch.
+
+---
+
+## 8. Next handoff
+
+Do **not** return to the old shared-core tail. Its parent equality layer is closed.
+
+Stay in the first strict unloaded layer and use the unique-hole support dichotomy against the exact Hall identity. The desired compact theorem is a two-arm obstruction:
+
+- many Type-F heads imply many radius-`p-1` codes and should be expensive under exact pair-local capacity / crowding;
+- few Type-F heads imply `a_0` has small X-degree because all Type-R heads miss it, which should force Hall slack / rooted unused-slot cost.
+
+Keep the exact pair variable `S_P`; do not replace it by total `C0`. If the unique-hole layer survives, feed the single located X-hole and its nested support geometry into `delta=r-e(F)` and Q before opening the loaded-buffer branch. The loaded branch, `z=2`, `m=g+2`, and the four-exception gate remain deferred until then.
