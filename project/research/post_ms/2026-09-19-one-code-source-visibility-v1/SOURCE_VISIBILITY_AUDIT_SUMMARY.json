@@ -1,0 +1,14 @@
+{
+  "failures": 0,
+  "omission_map_failure": null,
+  "omission_map_qualifying_checks": 2083,
+  "residual_checks": 88200,
+  "residual_failure": null,
+  "scan": {
+    "full_support_visibility_possible": 64275,
+    "older_shared_floor_z1_possible": 86820,
+    "predecessor_cap_union": 77339,
+    "visibility_union": 76584
+  },
+  "trust_boundary": "integer/combinatorial audit only; graph-level source-visibility theorem is hand-derived"
+}
