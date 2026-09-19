@@ -101,7 +101,9 @@ Also retain
 
 `Z0=(k+1)(a-1)`,
 
-`Dbase=Z0-y-u(p-lambda)`.
+`D0=Z0-u(p-lambda)`,
+
+`Dbase=D0-y=Z0-y-u(p-lambda)`.
 
 ---
 
