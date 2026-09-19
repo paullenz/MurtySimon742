@@ -3,116 +3,52 @@
 > **Active target - 19 September 2026.** The live problem is the sufficiently-large/eventual second-extremal D2C classification around `M(n)=floor((n-1)^2/4)+1`. The false all-order 2019 Dailly-Foucaud-Hansberg strengthening is not assumed. The published 2024 order-12, size-32 D2C graph `X_3` is a mandatory hostile control. Murty-Simon / Erdos #742 remains preserved but is not the live optimization target.
 
 <!-- CURRENT-STATUS:START -->
-CHECKPOINT CLASS: `ONE_CODE_Z1_TWO_OMISSION_EXACT_LEDGER_2026_09_19`
+CHECKPOINT CLASS: `ONE_CODE_Z1_OMITTED_EDGE_CRITICALITY_2026_09_19`
 
 WORK MODE: `MATH`
 
 INSPECTED PREDECESSOR: `33bb526779f65d895274c94864776975e742d7e3`
 
-LATEST THEOREM PACKAGE:
+LATEST THEOREM PACKAGES:
 
-`project/research/post_ms/2026-09-19-two-omission-triangle-slack-v1/TWO_OMISSION_TRIANGLE_SLACK_LEDGER.md`
+- `project/research/post_ms/2026-09-19-two-omission-triangle-slack-v1/TWO_OMISSION_TRIANGLE_SLACK_LEDGER.md`
+- `project/research/post_ms/2026-09-19-two-omission-triangle-slack-v1/OMITTED_EDGE_CRITICALITY_TRICHOTOMY.md`
 
-LAST VERIFIED RESULT: After rereading the current README/state, latest commits and the 19 September daily red-team audit/handoff, the run followed the audit-authorized rigid one-code branch without a priority departure. The already-repaired two source-tuple premises and actual-graph regression (including hostile `X_3`) remain mandatory upstream controls. Starting from the graph-level source-visibility purification, the minimal full-support `z=1`, `h=0` survivor is now described by exact physical correction terms rather than only scalar floors. The two-omission design has `Y=Y_1 disjoint_union Y_2`, omission vertices `o_1,o_2` sharing one duplicated X-head, regular U-witness multiplicity y and omission multiplicities `beta,alpha`. If `nu` counts omitted source--U_- pairs that are nonedges, `U_o=U\U_-`, `H_X,H_Y` count A--U_o nonedges by side, and `M` counts missing `U_- -- U_o` edges, then
+## Audit reconciliation
 
-`Z=Z0-y+nu+H_X+H_Y`,
+Before forward mathematics this run, the current `README.md`, this state file, recent commits, the 19 September daily adversarial audit/handoff and its independent source-tuple reproof were reread. There is **no departure** from the audit priority order.
 
-`L_Y=y(p-g)+nu+H_Y`,
+The trust boundary remains:
 
-`E_-=B-y+nu+M`.
+1. distinct physical-source identity and global selected `(source,coordinate)` uniqueness are independently re-derived at the raw/selected interface actually used downstream;
+2. the finite source-tuple capacity theorem remains stated **conditional on those two named premises**, not as unconditional graph-level closure;
+3. the actual-D2C regression through rooted partition, criticality slots, A-codes, Hall objects and pair-capacity quantities remains mandatory, including hostile `X_3`, with zero recorded graph/formula mismatches;
+4. only the audit-authorized rigid one-code branch is being pushed, with exact `Ccap_P`, `(ONE)`, `(CROWD)` and rooted residual bookkeeping kept distinct where appropriate.
 
-The last identity is exact, not a floor. It yields the exact rooted triangle/slack cancellation
+The closed mixed `{4,5}` selected-excess ladder remains closed. The four-exception gate remains subordinate. First-proof priority on Erdos #742 remains inactive.
 
-`Q+E_-=B-y+nu+(k+1)|U_o|+Q_rest`,
+## Mandatory negative control
 
-where `Q_rest=Q-e(U_-,U_o)>=0`. Thus moving an edge into `U_- -- U_o` raises rooted triangle count Q by one and lowers U_- slack by one: the sum is invariant. The exact residual equation becomes
+`X_3` remains an explicit hostile control: `n=12`, `m=32>M(12)=31`, diameter two, every edge critical, canonical root `a=3,b=8,p=4,u=0`, `Q=12`, `r=f=delta=0`. The current unmatched-U mechanism is inactive on that canonical root and therefore does not exclude or explain away the published exception.
 
-`2q+E_U=Dbase+nu+H_X+H_Y`,
+## Exact two-omission full-support ledger
 
-and after removing the forced U_- slack,
+In the purified rigid one-code `z=1`, `h=0`, full-support branch, write
 
-`2q+(E_U-E_-)=Z0-B-u(p-lambda)+(H_X+H_Y)-M`;
-
-notably `nu` cancels from this peeled residual equation even though it remains expensive in the scorecard. The exact score lower bound is
-
-`S>=B-y+nu+M+max{phi(g), y(p-g)+nu+H_Y}`.
-
-Hence each omitted-pair nonedge costs at least twice at the combined `L_Y+E_-` level. Near scorecard equality the branch is forced toward `nu=0` and `M=0`: omitted pairs are edges and `U_-` is complete to the rest of U.
-
-The pair-local audit obligation is retained exactly. In this purified full-support model `t_P=xy` and
-
-`2xy<=Ccap_P=R_code(S_P)[g+2S_P/L]`.
-
-Substituting the exact `L_Y` into preserved `(ONE-P)` gives only `Ccap_P>=2xy-nu-H_Y`, so the exact crossing-capacity inequality is strictly the cleaner/stronger statement. `(CROWD)` remains a separate aligned lower bound on `S_P`; do not collapse the local correction variables prematurely to total `C0`.
-
-A self-audit correction was preserved explicitly: when `nu=0`, the omitted edge `s-o(s)` and duplicated X-head `x_*` form an ordinary triangle `s-x_*-o(s)`, but this is **not** a rooted-neighbourhood triangle because `s,x_*` lie in A. It must not be credited to `Q=e(G[N(v)])`.
-
-UNPRESERVED WORK: None. The exact ledger, proof derivations, self-correction, pair-capacity reconciliation, trust boundary and next-work proposal are preserved in the theorem package above. The theorem note was corrected after hostile reread so that `(ONE)` substitutes to `Ccap_P>=2xy-nu-H_Y`, and `D0=Z0-u(p-lambda)` is explicitly defined.
-
-DEFERRED ADMIN: Root `README.md` has not yet been expanded with the one-code reservoir / z=1 closure / source-visibility / exact two-omission ledger packages. Refresh it at the next reviewer-facing status or daily-audit checkpoint. Historical Git-LFS warnings for seven legacy ZIP paths remain preserved and non-blocking.
-
-NEXT ACTION: Stay on z=1. First attack the equality/near-equality vector by raw edge-criticality, beginning with `nu=M=0`: every omitted source--U_- pair is then an edge and `U_-` is complete to `U_o`. Determine whether criticality of an omitted edge `s o(s)` can coexist with the duplicated X-head without forcing an extra A--U hole, extra B-edge/rooted triangle, or a forbidden second common neighbour. In parallel solve the exact intersection of `2xy<=Ccap_P`, `(CROWD)`, the score bound above and the refined rooted residual floor while retaining `S_P,H_X,H_Y,M,nu`. Compare the resulting full-support normal form directly with the unloaded common-buffer one-omission model. Only after these two minimal z=1 geometries are exhausted should work move to z=2. Keep the mixed `{4,5}` ladder closed, the four-exception gate subordinate, first-proof priority on Erdos #742 inactive, and `X_3` hostile.
-
-## Mandatory audit reconciliation
-
-Latest daily audit:
-
-- `project/research/post_ms/2026-09-19-daily-red-team-audit-v1/DAILY_RED_TEAM_AUDIT.md`
-- `project/research/post_ms/2026-09-19-daily-red-team-audit-v1/INDEPENDENT_SOURCE_TUPLE_REPROOF.md`
-
-The audit priority order remains: independently verify the two source-tuple premises; maintain actual-graph regression through rooted/Hall/pair-capacity objects with `X_3`; only then push exact pair-local one-code geometry and feed survivors into the residual ledger. Those upstream obligations were reread before this session and remain satisfied at their intended trust boundary. This session is a direct continuation of the audit plan, not a departure.
-
-## Upstream trust boundary
-
-### Source-tuple premises
-
-Package: `project/research/post_ms/2026-09-19-source-premise-graph-audit-v1/`.
-
-P1 remains a raw-criticality physical-source fact at the correct beta orientation. P2 remains selected-representative uniqueness for one physical rooted B-edge/source-coordinate obligation, not raw-witness uniqueness. The finite source-tuple capacity theorem is independently re-derived **conditional on these two named premises**; do not describe it as unconditional graph-level closure.
-
-### Actual graph -> Hall / pair-capacity regression
-
-Package: `project/research/post_ms/2026-09-19-rigid-graph-regression-v1/`.
-
-Recorded coverage remains 3,540 root-policy instances, 114 qualified pair/slack instances, 147 exact `Ccap_P` checks, 96 one-sided-pair checks, 36 exact Hall-cut decompositions, zero recorded graph/formula mismatches, with a genuine matched-B positive control. No actual rigid complete Hall cut with `x>=3` occurs in the bounded corpus, so the rigid one-code theorems remain conditional hand deductions from graph-regressed upstream ingredients rather than empirical graph classification.
-
-### Mandatory `X_3`
-
-The explicit fixture verifies `n=12`, `m=32>M(12)=31`, diameter two, every edge critical, canonical root `a=3,b=8,p=4,u=0`, and `Q=12,r=f=delta=0`. The present mechanism requires unmatched U-witnesses and is inactive on this canonical root. `X_3` is a hostile negative control, never evidence for an eventual theorem.
-
-## Corrected z=1 lineage
-
-Load-bearing corrected predecessor:
-
-`project/research/post_ms/2026-09-19-one-code-reservoir-v1/ONE_CODE_Z1_NEAR_SATURATION_V2.md`.
-
-The first v1 proof that all internal Y-edges selected the A/U channel remains invalid. Do not reuse it.
-
-Source-visibility purification:
-
-`project/research/post_ms/2026-09-19-one-code-source-visibility-v1/`.
-
-If `W` is the crossing U-witness union and `B_U=U_-\W`, every used witness has exactly one X-neighbour and is sterile for auxiliary same-code singleton-common-neighbour certificates with heads outside X. Therefore auxiliary traffic lives on buffers. In z=1 full support there are no buffers, so
-
-`e(Y)=e(Y,U_d)=e(G[U_-])=0`.
-
-At minimal `h=0`, full support has exactly two omission types and one duplicated X-head. One omission type is precisely the common-buffer model.
-
-## Exact two-omission correction ledger
-
-Package:
-
-`project/research/post_ms/2026-09-19-two-omission-triangle-slack-v1/`.
-
-Write `U_o=U\U_-`, `u_o=u-k-1`, and let
-
+- `U_-=U_{bar d}`, `|U_-|=k+1`, `k=x-g>0`;
+- `U_o=U\U_-`, `u_o=u-k-1`;
+- `Y=Y_1 disjoint_union Y_2`, where sources in `Y_i` omit `o_i`;
+- `o_1,o_2` share the duplicated X-head `x_*`;
 - `nu` = omitted Y--U_- nonedges;
 - `H_Y` = Y--U_o nonedges;
 - `H_X` = X--U_o nonedges;
 - `M=(k+1)u_o-e(U_-,U_o)`;
-- `Q_rest=Q-e(U_-,U_o)`.
+- `Q_rest=Q-e(U_-,U_o)`;
+- `B=(k+1)(p+k-1)`, `Z0=(k+1)(a-1)`, `D0=Z0-u(p-lambda)`, `Dbase=D0-y`.
 
-Then the exact identities are
+Source visibility already gives `e(Y)=e(Y,U_d)=e(G[U_-])=0` and every used U_- witness has exactly one X-neighbour.
+
+The exact identities proved this run are
 
 `Z=Z0-y+nu+H_X+H_Y`,
 
@@ -120,64 +56,98 @@ Then the exact identities are
 
 `E_-=B-y+nu+M`,
 
+`2q+E_U=Dbase+nu+H_X+H_Y`,
+
 `Q+E_-=B-y+nu+(k+1)u_o+Q_rest`.
 
-The individual U_- slack identity is
+Thus an edge moved into `U_- -- U_o` raises rooted triangle count Q by one and lowers U_- slack by one; `Q+E_-` is invariant under that trade.
 
-`epsilon_w=p-y+k-1+t_w+nu_w+m_w`,
+After peeling off the forced U_- slack,
 
-which also yields
+`2q+(E_U-E_-)=Z0-B-u(p-lambda)+(H_X+H_Y)-M`,
 
-`E_->=(k-1)(p+k-1)+[2(p+k-1)-y]_+`
+so `nu` cancels exactly from the peeled residual equation even though it remains expensive in the scorecard.
 
-and
+The exact score lower bound is
 
-`max(epsilon_{o_1},epsilon_{o_2}) >= [p-y+k-1+ceil(y/2)]_+`.
+`S>=B-y+nu+M+max{phi(g), y(p-g)+nu+H_Y}`.
 
-The refined residual constraints are
+Hence each omitted-pair nonedge costs at least twice at the combined `L_Y+E_-` level. Near score equality pushes toward `nu=0` and `M=0`.
 
-`2q+E_U=Dbase+nu+H_X+H_Y`,
+The refined integer residual floor is
 
 `q+E_U >= E0+ceil([D-E0]_+/2)`,
 
 with `E0=B-y+nu+M` and `D=Dbase+nu+H_X+H_Y`.
 
-These are structural hand identities/floors inside the already-purified branch, not finite-scan claims.
+A hostile reread corrected two points before preservation: `(ONE)` substitutes only to `Ccap_P>=2xy-nu-H_Y`, and an ordinary triangle `s-x_*-o(s)` is **not** a rooted-neighbourhood triangle and must not be counted in Q.
 
-## Pair-local control
+## Exact pair-local control
 
-Preserved exact capacity:
-
-`Ccap_P=R_code(S_P)[g+2S_P/L]`.
-
-In the minimal full-support branch:
+In this minimal full-support branch,
 
 `C_P=yk`, `P_P=yg`, `t_P=xy`,
 
-so
+and the exact purified pair bill is
 
-`2xy<=Ccap_P`.
+`2xy<=Ccap_P=R_code(S_P)[g+2S_P/L]`.
 
-Preserved `(ONE-P)` is weaker after exact Y-slack substitution:
+The preserved `(ONE-P)` inequality becomes only
 
-`Ccap_P>=2xy-nu-H_Y`.
+`Ccap_P>=2xy-nu-H_Y`,
 
-Keep `(CROWD)` alongside the exact capacity, but retain pair-local and physical correction variables. Do not replace everything by a total-score scalar unless the loss is explicitly audited.
+so it is weaker after the exact crossing count is known. `(CROWD)` remains an independent aligned lower bound on `S_P`. Do not collapse `S_P,H_X,H_Y,M,nu` prematurely to total `C0`.
 
-## Common buffer retained
+## New raw-criticality reduction
+
+The omitted-edge theorem package now proves the following without assuming any unverified B-degree bound.
+
+A critical edge `uv` lying in a triangle must have an external damaged vertex z in one of the two singleton-common-neighbour orientations. Apply this to an omitted edge `s o_i` under `nu=0`.
+
+If `|Y_i|>=2`, the orientation based at `o_i` is impossible: its witness must lie in X, but then every member of `Y_i` is a common neighbour of that X-witness and `o_i`, contradicting singleton common neighbourhood.
+
+Therefore every source `s` in every non-singleton omission class has an opposite-orientation certificate with `o_i z` an edge, `s z` a nonedge and
+
+`N(s) intersect N(z)={o_i}`.
+
+The witness z is forced into exactly one of three physical locations:
+
+1. **ROOT:** `z=v`, which is equivalent to `N_B(s)={o_i}` and hence `d_B(s)=1`;
+2. **OUT:** `z in U_o`, forcing a Y--U_o nonedge and therefore `H_Y>0`, with `d_X(z)=0`;
+3. **MATCHED:** z lies in the matched B-layer, forcing an edge counted by `Q_rest>0`, again with `d_X(z)=0`.
+
+Witnesses may be shared, so no per-source additive count is claimed.
+
+Consequently, if `nu=H_Y=Q_rest=0`, every source in every non-singleton omission class must satisfy `N_B(s)={o_i}`. Since `alpha+beta=y` with both omission classes nonempty, if `y>=3` at least one whole omission class is forced into B-degree one.
+
+This converts the cheapest algebraic equality vector into a sharply localized definition-level question: **can a tight-code one-code source in this rigid branch have B-degree one?** No answer is assumed until that fact is independently recovered from the foundational A-code definitions or rederived from raw criticality.
+
+## Common-buffer comparator
 
 The unloaded one-omission/common-buffer branch remains live. For z=1 support of size k there is one unused buffer. Source visibility gives
 
 `H=e(Y)+e(Y,U_d)+e_- <= y`,
 
-and any active buffer has `d_X=0`. The previously preserved loaded-buffer strengthening remains valid: if `H>0`, `Z>=k(a-1)+x+H`, with the positive buffer-slack surcharge. The unloaded `H=0` branch is the minimal one-omission comparator to the two-omission full-support model.
+and any active buffer has `d_X=0`. If `H>0`, the preserved loaded-buffer strengthening gives `Z>=k(a-1)+x+H` plus a positive buffer-slack surcharge. The unloaded `H=0` branch remains the minimal comparator to the two-omission full-support model.
 
-## Trust boundary / stop-pivot rules
+## Next action
 
-- Any actual graph/formula mismatch is an immediate blocker and triggers repair before downstream theory.
-- Keep the finite source-tuple theorem conditional on its two named premises.
+Stay on z=1 and preserve the audit ordering.
+
+1. Recover or independently rederive the exact foundational relationship between a tight A-code source and its B-neighbourhood. In particular, determine rigorously whether `d_B(s)=1` is possible in this rigid branch. Do **not** infer this from notation or from a scalar floor.
+2. If tight-code sources necessarily have at least two B-neighbours, the new trichotomy immediately excludes the strict zero-correction full-support equality vector for every `y>=3`. Preserve that as a theorem only after the premise is verified.
+3. If B-degree one is allowed, classify the sparse ROOT alternative directly by raw criticality and feed its forced geometry into `H_X,H_Y,M,Q_rest`.
+4. Then solve the exact equality/near-equality intersection of `2xy<=Ccap_P`, `(CROWD)`, the score bound and residual floor while retaining local correction variables.
+5. Compare the resulting two-omission full-support normal form with the unloaded common-buffer one-omission model. Only after both minimal z=1 geometries are exhausted should work move to z=2.
+
+## Stop / pivot rules
+
+- Any actual graph/formula mismatch is an immediate repair blocker.
+- Keep the source-tuple theorem conditional on its two named premises.
 - Do not treat finite parameter counts as D2C graph counts.
-- Do not credit ordinary A-layer triangles to rooted `Q`.
-- Exhaust the two-omission duplicated-head model and unloaded common-buffer model before beginning z=2.
-- Keep `X_3` hostile, the mixed `{4,5}` ladder closed, the four-exception gate subordinate, and first-proof priority on Erdos #742 inactive.
+- Do not credit ordinary A-layer triangles to rooted Q.
+- Do not count criticality witnesses per source without an injectivity proof.
+- Keep `X_3` hostile, mixed `{4,5}` closed, four-exception subordinate and Erdos #742 first-proof priority inactive.
+
+UNPRESERVED WORK: None. The exact ledger, hostile corrections and omitted-edge criticality trichotomy are committed. The only unfinished line is the explicitly identified foundational B-degree-one question.
 <!-- CURRENT-STATUS:END -->
