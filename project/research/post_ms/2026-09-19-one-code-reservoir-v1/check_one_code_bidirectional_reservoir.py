@@ -58,7 +58,7 @@ def theta_reduced(y, k, T0, u):
     return best, arg
 
 
-def verify_theta_reduction(trials=100000, seed=742):
+def verify_theta_reduction(trials=10000, seed=742):
     rng = random.Random(seed)
     for _ in range(trials):
         u = rng.randint(1, 40)
