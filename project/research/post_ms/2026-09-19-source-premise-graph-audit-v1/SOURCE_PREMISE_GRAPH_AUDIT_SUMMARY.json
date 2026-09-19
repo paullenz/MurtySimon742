@@ -11,7 +11,8 @@
     "selected_alpha_PU_obligations": 1,
     "selected_beta_PU_obligations": 2,
     "p1_collisions": 0,
-    "raw_p2_collisions": 0
+    "raw_p2_collisions": 0,
+    "maximum_degree_root_hall_ledgers_checked": 50
   },
   "X3": {
     "n": 12,
@@ -25,12 +26,19 @@
       "p": 4
     },
     "beta_obligations": 0,
-    "mandatory_negative_control": "PASS"
+    "mandatory_negative_control": "PASS",
+    "canonical_bridge": {
+      "Q": 12,
+      "r": 0,
+      "t": 0,
+      "S": 0
+    }
   },
   "trust_boundary": [
     "P1 has a direct hand proof from the beta unique-common-neighbour singleton.",
     "Selected P2 follows from one chosen representative per physical rooted B-edge/source-coordinate obligation.",
     "Raw P2 multiplicity is diagnostic and is not required by the source-tuple theorem.",
-    "Finite atlas/X3 replay is regression evidence only, not the proof."
+    "Finite atlas/X3 replay is regression evidence only, not the proof.",
+    "Canonical selected/residual row-column margins, exact ledger, demand, and pointwise demand forcing are replayed on all 50 maximum-degree rooted atlas instances."
   ]
 }
