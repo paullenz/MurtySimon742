@@ -3,38 +3,40 @@
 > **Active target - 19 September 2026.** The live problem is the sufficiently-large/eventual second-extremal D2C classification around `M(n)=floor((n-1)^2/4)+1`. The false all-order 2019 Dailly-Foucaud-Hansberg strengthening is not assumed. The published 2024 order-12, size-32 D2C graph is a mandatory hostile control. Murty-Simon / Erdos #742 remains preserved but is not the live optimization target.
 
 <!-- CURRENT-STATUS:START -->
-CHECKPOINT CLASS: `ONE_CODE_BIDIRECTIONAL_RESERVOIR_2026_09_19`
+CHECKPOINT CLASS: `ONE_CODE_Z1_NEAR_SATURATION_2026_09_19`
 
 WORK MODE: `MATH`
 
 INSPECTED PREDECESSOR: `a15c1d4eeb083e3d101f1be1705201e0e84b185f`
 
-LAST VERIFIED RESULT: After completing the audit-mandated graph-to-Hall/pair-capacity regression, the rigid one-code branch has been sharpened twice. First, pair purity gives `h_P=0`, at most `g_P` matched crossing witnesses per outside source, `k=(x-g_P)_+` unmatched complementary witnesses, the gamma/U score tradeoff, purified `(ONE-P)`, channel-separated `(CHAN-P)`, and direct residual feedback. Second, the new bidirectional-reservoir theorem observes that the A/U channel, same-code `Y--U_d` edges, and same-code `U_{bar d}` edges compete for the same physical `Y x U_{bar d}` source/witness pairs. This gives exact unweighted/weighted reservoir inequalities, a crowding/reservoir cylinder gate, and an explicit saturated equality model. In the saturated case `u_{bar d}=k>0`, the crossing certificates form a complete rectangular witness transversal and degree counting strengthens the unmatched slack to `E_{bar d}>=k(p+k-2)` and forces `L_Y>=y(p-g_P)`, hence `S>=max(phi(g_P),y(p-g_P))+k(p+k-2)`. The saturated U-slack feeds directly into the rooted residual `delta=r-f` ledger.
+LAST VERIFIED RESULT: The 19 September audit-mandated graph-to-Hall/pair-capacity regression has been completed with no graph/formula mismatch, and the authorized rigid one-code line has advanced materially. Pair purity gives `h_P=0`, `k=(x-g_P)_+` complementary unmatched witnesses per outside source, the gamma/U score tradeoff, purified `(ONE-P)`, `(CHAN-P)`, and residual feedback. A new bidirectional-reservoir theorem proves that A/U traffic, same-code `Y--U_d` edges and same-code `U_{bar d}` edges compete for the same physical `Y x U_{bar d}` source/witness pairs, yielding `yk+e_++e_-<=y u_-`, a weighted analogue and a crowding/reservoir cylinder gate. The saturated layer `u_{bar d}=k` is a complete rectangular witness transversal and forces `E_{bar d}>=k(p+k-2)`. The first near-saturated layer `u_{bar d}=k+1` is now classified into exactly two support types. In the common-buffer type, all `k` crossing witnesses form a saturated core, every auxiliary certificate is routed through the unique buffer, the core remains independent and pays `E>=k(p+k-2)`, and each buffer use adds one unit to the rooted A--U defect. In the full-support type, if `rho` is the number of crossing holes and `H=e_++e_-`, then `H<=rho`, `E_- >= (k+1)(p+k-1)-rho+H-2e_-`, and `Z>=k(a-1)+(a-1)-rho+H`; in particular `E_->=[(k+1)(p+k-1)-2y]_+` and `Z>=k(a-1)+(x-1)`. Both branches feed directly into the exact residual `delta=r-f` ledger.
 
-UNPRESERVED WORK: None. The first `z=u_{bar d}-k=1` near-saturation classification has been identified as the next local target but no uncommitted theorem is being relied upon.
+UNPRESERVED WORK: None. No uncommitted theorem is being relied upon.
 
-DEFERRED ADMIN: Root README does not yet list the new 19 September reservoir package; defer that reviewer-facing refresh to the next natural status/daily-audit checkpoint rather than risk a large status-only rewrite during the live mathematics. Historical Git-LFS checkout warnings for seven legacy ZIP paths remain preserved and non-blocking.
+DEFERRED ADMIN: Root README does not yet list the new 19 September reservoir/z=1 package; refresh it at the next reviewer-facing status or daily-audit checkpoint rather than spending this live theorem session on a large status-only rewrite. Historical Git-LFS checkout warnings for seven legacy ZIP paths remain preserved and non-blocking.
 
-NEXT ACTION: Stay on the audit-authorized one-code rigid line. Classify the first near-saturated layer `z=u_{bar d}-k=1`: either the crossing U-witness support has size exactly `k`, yielding a saturated core plus one buffer vertex through which every remaining `Y x U_{bar d}` reservoir use must pass, or all `k+1` complementary U vertices are used and their reuse/slack plus same-code edge mass must be charged jointly. Preserve the exact pair-local variables and feed any survivor through the residual `delta=r-f` ledger. Do not return to the mixed `{4,5}` ladder; keep the four-exception gate subordinate.
+NEXT ACTION: Stay on the exact one-code geometry. For the `z=1` common-buffer branch, combine the one-buffer routing with buffer degree/slack and `(ONE-P)/(CHAN-P)` to determine whether internal-Y traffic, `Y--U_d` traffic and the star `G[U_{bar d}]` can coexist without exceeding `C0`. For the full-support branch, keep the exact variables `rho,H,e_+,e_-` in the paired inequalities `E_- >= (k+1)(p+k-1)-rho+H-2e_-` and `Z>=k(a-1)+(a-1)-rho+H` and eliminate them jointly before relaxing to `y`. Only after the exact `z=1` layer is exhausted should `z=2` or the non-rigid Hall branch be considered. Keep the mixed `{4,5}` ladder closed and the four-exception gate subordinate.
 
 ## Mandatory audit reconciliation
 
-The most recent daily adversarial audit remains:
+The latest daily adversarial audit remains:
 
 - `project/research/post_ms/2026-09-19-daily-red-team-audit-v1/DAILY_RED_TEAM_AUDIT.md`
-- independent conditional re-proof: `project/research/post_ms/2026-09-19-daily-red-team-audit-v1/INDEPENDENT_SOURCE_TUPLE_REPROOF.md`
+- `project/research/post_ms/2026-09-19-daily-red-team-audit-v1/INDEPENDENT_SOURCE_TUPLE_REPROOF.md`
 
-The audit required, in order, independent repair of the two source-tuple premises, graph-level regression through the rooted/Hall interface with `X_3`, then exact pair-local work on the one-code rigid branch. This run follows that order. No departure from the audit's mathematical priority was made.
+Its required priority order was: repair the two source-tuple premises; build actual-graph regression through the rooted/Hall interface with `X_3`; only then push the exact pair-local one-code branch and feed survivors into the rooted residual ledger. This run followed that order. No mathematical departure from the audit's proposed priorities was made.
 
-### Upstream source-premise repair retained
+## Upstream source-premise repair retained
+
+Package:
 
 - `project/research/post_ms/2026-09-19-source-premise-graph-audit-v1/SOURCE_PREMISE_GRAPH_AUDIT.md`
 - `project/research/post_ms/2026-09-19-source-premise-graph-audit-v1/SOURCE_PREMISE_REPAIR.md`
 - `project/research/post_ms/2026-09-19-source-premise-graph-audit-v1/check_source_premises_graph_level.py`
 
-P1 is now a direct raw-criticality fact at the required beta orientation: reuse of one physical `(x,y)` at two target fibres would force the fixed set `N(x) cap N(y)` to be two different singleton tight endpoints. P2 is selected-representative uniqueness for one physical rooted B-edge/source-coordinate obligation, not raw candidate-witness uniqueness. `B_beta` counts those selected physical obligations. The earlier mislabeled alpha-as-beta checker observation remains withdrawn in the correction trail.
+P1 is a direct raw-criticality fact at the correct beta orientation: reuse of one physical `(x,y)` at two target fibres would force fixed `N(x) cap N(y)` to equal two distinct singleton tight endpoints. P2 is selected-representative uniqueness for a physical rooted B-edge/source-coordinate obligation, not raw candidate-witness uniqueness. `B_beta` counts the same selected physical obligations. The earlier checker that mislabeled the alpha orientation as beta remains explicitly withdrawn in the correction trail.
 
-## Independent actual-graph regression now reaches the pair-capacity interface
+## Independent actual-graph regression through pair capacity
 
 Package:
 
@@ -42,13 +44,13 @@ Package:
 - `project/research/post_ms/2026-09-19-rigid-graph-regression-v1/check_rigid_graph_level.py`
 - `project/research/post_ms/2026-09-19-rigid-graph-regression-v1/RIGID_GRAPH_REGRESSION_SUMMARY.json`
 
-The checker independently reconstructs actual D2C graphs through the rooted partition, tight A/U codes, rooted witness slots, direct/non-direct A-edge criticality, matched-foot gamma codes, A/U complementary witnesses, pair-local `L_P,S_P,Z_P,R_P,g_P,h_P`, exact `Ccap_P`, and exact Hall-cut decomposition. Across the recorded three certificate policies there are 3,540 root-policy instances, 114 qualified pair/slack instances, 147 pair-local `Ccap_P` checks, 96 one-sided pair checks, 36 exact Hall-cut decompositions, and zero graph/formula mismatches. A genuine matched-B A-edge positive control is exercised.
+The independent checker reconstructs actual D2C graphs through rooted partition, tight A/U codes, rooted witness slots, direct/non-direct A-edge criticality, matched-foot gamma codes, A/U complementary witnesses, pair-local `L_P,S_P,Z_P,R_P,g_P,h_P`, exact `Ccap_P`, and exact Hall-cut decomposition. The recorded three certificate policies contain 3,540 root-policy instances, 114 qualified pair/slack instances, 147 pair-local `Ccap_P` checks, 96 one-sided pair checks, 36 exact Hall-cut decompositions and zero mismatches. A genuine matched-B A-edge positive control is exercised.
 
-The corpus still contains no actual rigid complete Hall cut with `x>=3`. Therefore the rigid singleton-head and one-code theorems remain conditional hand deductions from graph-regressed upstream ingredients, not small-graph empirical claims.
+No actual rigid complete Hall cut with `x>=3` was found in the bounded corpus. Therefore the rigid singleton-head and one-code theorems below remain conditional hand deductions from graph-regressed upstream ingredients, not empirical graph claims.
 
 ### Mandatory `X_3` hostile control
 
-The graph regression continues to verify the explicit `X_3` fixture:
+The regression still verifies:
 
 - `n=12`, `m=32>M(12)=31`;
 - diameter two and every edge critical;
@@ -56,36 +58,32 @@ The graph regression continues to verify the explicit `X_3` fixture:
 - `Q=12,r=f=delta=0`;
 - no nontrivial rigid complete A-cut.
 
-The companion cube-face theorem gives an infinite D2C family `X_k`, with exact rooted slot saturation for the checked `X_3,X_4,X_5`; only `X_3` is above the target `M(n)` in those controls. Exact residual saturation is therefore not being confused with extremality.
+The companion cube-face family shows exact rooted slot saturation is scalable but does not imply above-`M(n)` density. Nothing in the new one-code mechanism suppresses `X_3`.
 
-## One-code pair purification retained
+## One-code purification retained
 
 Package:
 
 - `project/research/post_ms/2026-09-19-rigid-graph-regression-v1/ONE_CODE_PAIR_PURIFICATION.md`
 - `project/research/post_ms/2026-09-19-rigid-graph-regression-v1/check_one_code_pair_purification.py`
 
-For one outside code `d`, pair purity gives `A_{bar d}=emptyset`. If `g=g_P` is the number of matching gamma fibres, each outside source has at most `g` matched crossing witnesses and therefore at least
+For one outside code `d`, pair purity gives `A_{bar d}=emptyset`. If `g=g_P`, every outside source has at most `g` matched crossing witnesses and therefore at least
 
 `k=(x-g)_+`
 
-witnesses in `U_{bar d}`. The two-sided matched-foot term vanishes exactly:
+witnesses in `U_{bar d}`. The two-sided matched-foot term vanishes exactly: `h_P=0`.
 
-`h_P=0`.
-
-The key preserved inequalities are
+The retained key inequalities are
 
 `S>=phi(g)+(x-g)_+(p-1)` for `p-y>=1`,
 
-`R_code(S_P)[g+2S_P/L]+L_Y >= y(p+x+k)`  (`ONE-P`),
+`R_code(S_P)[g+2S_P/L]+L_Y >= y(p+x+k)` (`ONE-P`),
 
 and, for `g<=x`,
 
 `L_Y+2(u_bar L_Y+yE_bar)/L >= y(p+2x-3g)` (`CHAN-P`).
 
-The finite arithmetic diagnostic showed the useful gain comes from gamma/U resource competition and channel separation rather than a coarse total-score version of `(ONE-P)`.
-
-## New bidirectional-reservoir theorem
+## Bidirectional one-code reservoir
 
 Package:
 
@@ -94,21 +92,11 @@ Package:
 - `project/research/post_ms/2026-09-19-one-code-reservoir-v1/ONE_CODE_BIDIRECTIONAL_RESERVOIR_AUDIT_SUMMARY.json`
 - `project/research/post_ms/2026-09-19-one-code-reservoir-v1/SATURATED_RESERVOIR_REFINEMENT.md`
 
-Put `U_+=U_d`, `U_-=U_{bar d}`, with sizes `u_+,u_-`, and
-
-`e_+=e(G[Y union U_+])`, `e_-=e(G[U_-])`.
-
-Because `A_{bar d}=emptyset`, `U_+` is independent. Three certificate families all inject into the same physical `Y x U_-` pair set:
-
-1. A/U traffic `C_P`;
-2. same-code `Y--U_+` edges;
-3. same-code `U_---U_-` edges.
-
-Cross-family collisions are impossible because the fixed singleton common-neighbour set would have to be a head in three disjoint vertex classes. Therefore
+Put `U_+=U_d`, `U_-=U_{bar d}`, `e_+=e(G[Y union U_+])`, `e_-=e(G[U_-])`. Because `A_{bar d}=emptyset`, `U_+` is independent. Three certificate families inject into the same physical `Y x U_-` pair set: A/U traffic `C_P`, same-code `Y--U_+` edges, and same-code `U_---U_-` edges. Cross-family collision is impossible because the fixed singleton common-neighbour set would have to have heads in disjoint vertex classes. Thus
 
 `C_P+e(Y,U_+)+e_- <= y u_-`,
 
-and hence
+and using the crossing demand,
 
 `yk+e_++e_- <= y u_-`,
 
@@ -118,56 +106,109 @@ The weighted version is
 
 `L[yk+e_++e_-] <= u_-L_Y+yE_-`.
 
-Combining the reservoir with coded-layer crowding gives
+Combining with coded-layer crowding gives the exact cylinder gate
 
 `[(y+u_+)(y+u_+-T0)-u_+-(L_Y+E_+)]_+`
 ` +[u_-(u_--T0-1)-E_-]_+ <= 2y(u_--k)`.
 
-The scorecard-relaxed `Theta` gate derived from this rejected 17,877 of 106,368 bounded old-population states, versus 16,967 from the previous shared gamma/U floor: 910 additional robust arithmetic exclusions despite deliberately giving the whole `C0` scorecard to the crowding deficits.
+A deliberately relaxed arithmetic audit rejected 17,877 of 106,368 old-population states versus 16,967 from the prior shared gamma/U floor: 910 additional robust arithmetic exclusions. This is diagnostic only.
 
-### Saturated equality geometry
+### Saturated layer `z=u_--k=0`
 
-Let `z=u_--k`. At `z=0`, `k>0`:
-
-- `Y`, `U_+`, and `U_-` are independent in the relevant aligned layers;
-- `C_P=yk` and `P_P=yg`;
-- every physical `Y x U_-` pair is used;
-- every outside source uses all `g` gamma-`d` matched feet and all `k` unmatched complementary witnesses;
-- the `g+k=x` witness objects are in bijection with the heads in `X`.
-
-Degree counting then gives the new exact penalties
+At `u_-=k>0`, the reservoir is fully exhausted by crossing witnesses. The crossing certificate system is a complete rectangular product: every source uses all `g` relevant matched feet and all `k` unmatched complementary witnesses, and those `g+k=x` witness objects are in bijection with the heads in `X`. Exact degree counting yields
 
 `E_- >= k(p+k-2)`,
 
 `L_Y >= y(p-g+u_+) >= y(p-g)`,
 
-hence
+and therefore
 
 `S >= max(phi(g),y(p-g))+k(p+k-2)`.
 
-In the same bounded diagnostic, 89,400 states had a `k>0` saturated gamma choice surviving the older shared gamma/U score floor; only 66,402 survive this exact saturated score floor, eliminating 22,998 saturation-compatible states. This is diagnostic support, not graph enumeration.
-
-The strengthened saturated U-slack feeds into
+The strengthened U-slack feeds into
 
 `q+E_U >= E_sat+ceil([k(a-1)-u(p-lambda)-E_sat]_+/2)`,
 
-with `E_sat=k(p+k-2)`, and therefore directly raises the forced A-edge mass `f` in the rooted residual ledger.
+`E_sat=k(p+k-2)`,
+
+and hence directly raises forced A-edge mass `f`. In the bounded diagnostic, 22,998 states that had a saturated gamma choice under the older shared floor lose that choice under the exact saturated score floor.
+
+## First near-saturated layer `z=1`
+
+Package:
+
+- `project/research/post_ms/2026-09-19-one-code-reservoir-v1/ONE_CODE_Z1_NEAR_SATURATION.md`
+- `project/research/post_ms/2026-09-19-one-code-reservoir-v1/check_one_code_z1_near_saturation.py`
+- `project/research/post_ms/2026-09-19-one-code-reservoir-v1/ONE_CODE_Z1_NEAR_SATURATION_AUDIT_SUMMARY.json`
+
+Assume `u_-=k+1`, `k>0`. The union of complementary unmatched crossing witnesses has size exactly `k` or `k+1`; there is no intermediate case.
+
+### Common-buffer branch
+
+If only `k` vertices are used, every source uses the same `k`-set `W_0` and the remaining vertex `b` is a common buffer. Every `Y x W_0` physical pair is already consumed by a crossing certificate. Therefore:
+
+- `W_0` is independent;
+- every `U_-` edge is incident with `b` and must be sourced at `b`;
+- every selected auxiliary object counted by `H=e_++e_-` is routed through a distinct pair in `Y x {b}`;
+- each core witness still satisfies `epsilon_w>=p+k-2`, so `E_- >= k(p+k-2)`;
+- each actual buffer use is a new Y--U nonedge, giving
+  `Z>=k(a-1)+H`.
+
+Thus with `E_core=k(p+k-2)` and `D_core=k(a-1)+H-u(p-lambda)`,
+
+`q+E_U >= E_core+ceil([D_core-E_core]_+/2)`.
+
+### Full-support branch
+
+If all `k+1` vertices are used, let `rho` be the number of source rows with one crossing hole, so crossing incidence count is `I=yk+y-rho`. Every auxiliary object must use a crossing hole, hence `H<=rho`. Writing `e_-=e(G[U_-])`, degree counting on the `k+1` used witnesses gives
+
+`E_- >= (k+1)(p+k-1)-rho+H-2e_-`.
+
+Equivalently, since `H=e_++e_-`,
+
+`E_- >= (k+1)(p+k-1)-rho+e_+-e_-`.
+
+The safe pure floor is
+
+`E_- >= [(k+1)(p+k-1)-2y]_+`.
+
+The defect simultaneously strengthens to
+
+`Z>=k(a-1)+(a-1)-rho+H`,
+
+and hence
+
+`Z>=k(a-1)+(x-1)`.
+
+These are deliberately kept as paired exact inequalities because the same hole budget `rho` controls both possible slack relief and residual defect.
+
+### `z=1` diagnostic
+
+Across the same bounded comparison box:
+
+- old one-code population states: `106,368`;
+- states admitting a `k>0`, `k+1<=u` gamma choice under the older shared floor: `86,820`;
+- common-buffer gate survivors: `76,463`;
+- full-support gate survivors: `77,310`;
+- survivors of either support type: `78,167`.
+
+So the exact first-near-saturation score floors eliminate `8,653` states that previously admitted a `z=1` choice. These are parameter diagnostics, not graph counts.
 
 ## Trust boundary
 
 - Source-tuple finite capacity: abstract theorem independently re-derived; P1/P2 repaired at the exact raw/selected levels used.
 - `B_beta`: selected physical-obligation semantics audited.
-- Actual graph -> rooted/Hall/pair-capacity interface: independently reconstructed on a substantial bounded D2C corpus with zero mismatches; `X_3` remains mandatory.
+- Actual graph -> rooted/Hall/pair-capacity interface: independently reconstructed on a bounded D2C corpus with zero mismatches; `X_3` remains mandatory.
 - Rigid-cut existence/realizability: no positive actual-graph fixture with `x>=3` has been found; downstream rigid theorems remain conditional.
-- One-code purification and bidirectional reservoir: hand-derived structural theorems with arithmetic diagnostics; not external review and not a global eventual theorem.
+- One-code purification, reservoir, saturation and `z=1` classification: hand-derived structural mathematics with arithmetic diagnostics; not external review and not a global eventual theorem.
 - Four-exception gate: supported but not load-bearing here.
 
 ## Stop / pivot criteria
 
 1. Any actual D2C mismatch with the graph-to-pair interface is an immediate blocker and forces proof repair.
 2. Do not count abstract parameter survivors/rejections as D2C graphs.
-3. Continue exact local geometry while `z=u_--k` is small; do not erase pair information with another total scalar unless it provably closes a branch.
-4. If `z=1,2` leave an asymptotic family after exact local use, feed that family through `delta=b(n-b)-m=r-f`, `Q=e(G[N(v)])`, and the residual ledger before adding new inequalities.
+3. Exhaust the exact `z=1` variables before relaxing to `y` or proceeding to `z=2`.
+4. If `z=1,2` leave an asymptotic family after exact local use, feed it through `delta=b(n-b)-m=r-f`, `Q=e(G[N(v)])`, and the exact residual ledger before adding new global inequalities.
 5. Keep `X_3` as a hostile control and do not promote an all-order statement.
 6. Keep the mixed `{4,5}` ladder closed and do not optimize for first-proof priority on Erdos #742.
 <!-- CURRENT-STATUS:END -->
