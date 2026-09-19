@@ -276,53 +276,43 @@ Therefore the triangle ceiling strengthens to
 
 This is a physical U-edge exclusion, not a witness-incidence count.
 
-## 10. Unit IX — criticality bounds the U-degree of a_0 through the bar-C reservoir
+## 10. Unit IX — one complementary reservoir controls every extra U-neighbour of a_0
 
-The neighbour-code localization `(A0-CODE)` says that every U-neighbour of `a_0` other than z has code d or C. The same extra `bar C)-population that supports internal X-edges also limits both possibilities.
+The neighbour-code localization `(A0-CODE)` says that every U-neighbour of `a_0` other than z has code d or C. In fact both types draw on the **same** extra `bar C)-witness reservoir.
 
 Let again
 
 > `t=|U_{bar C}\{z}|`.
 
-### Lemma 10.1 — C-coded U-neighbours of a_0
+### Lemma 10.1 — C-coded neighbours
 
-> `|N_U(a_0) cap U_C| <= t`.                            `(A0-C-CAP)`
+If `w in U_C` and `a_0w in E`, the equal-code edge cannot be sourced at w: a U-source would require a witness in `A_{bar C}`, but that A-class is empty. With source `a_0`, no matched endpoint can witness because a_0 and w have the same tight code. Any A/U witness must therefore have code `bar C` and be nonadjacent to `a_0`. The distinguished z is adjacent to `a_0`, so the witness lies in `U_{bar C}\{z}`.
 
-### Proof
+### Lemma 10.2 — d-coded neighbours use the same reservoir
 
-For `w in U_C` with `a_0w in E`, the edge has equal-code endpoints. If w is chosen as source, the full coded-layer same-code theorem requires its witness to lie in `A_{bar C}`, but that A-class is empty. Hence the source must be `a_0`.
+If `w in U_d` and `a_0w in E`, an orientation sourced at w cannot use U or matched-B witnesses because w shares the root with every B-vertex; an A-witness would need code `bar d`, but `A_{bar d}=emptyset`.
 
-Because `a_0` and w have the same tight code, no matched endpoint can be adjacent to w while nonadjacent to `a_0). Any A/U witness must have code `bar C`. The distinguished z is adjacent to `a_0` and therefore cannot be the nonadjacent source-witness partner. Thus the witness lies in `U_{bar C}\{z}`.
+With source `a_0`, the only matched endpoint adjacent to w and nonadjacent to a_0 is the endpoint in the single special fibre where C differs from d. But every vertex of Y is adjacent both to a_0 (complete X--Y cut) and to that d-selected matched endpoint, so the corresponding common neighbourhood contains all of Y and cannot be a singleton. Thus the matched-foot option is impossible.
 
-For fixed source `a_0` and fixed witness, the singleton common neighbourhood determines at most one head w. Therefore the t available witnesses certify at most t such neighbours. `square`
+Hence this edge too must use a nonadjacent A/U witness of code `bar C`, necessarily in `U_{bar C}\{z}`.
 
-### Lemma 10.2 — d-coded U-neighbours of a_0
+### Theorem 10.3 — union injection
 
-> `|N_U(a_0) cap U_d| <= t+1`.                          `(A0-d-CAP)`
+For every U-neighbour `w!=z` of `a_0`, choose one of the above `bar C)-witnesses q. The ordered pair `(a_0,q)` has a graph-fixed common neighbourhood; if it is a singleton, it determines at most one head w. Therefore the two code classes cannot use the t witnesses independently:
 
-### Proof
+> `|N_U(a_0)\{z}| <= t`.                               `(A0-UNION)`
 
-Let `w in U_d` be adjacent to `a_0`. The codes C and d differ only at the special coordinate `j_*`.
+Consequently
 
-An orientation with U-source w cannot use a U or matched-B witness because both would share the root with w. An A-witness would have to avoid every matched neighbour of w and therefore have code `bar d), but `A_{bar d}=emptyset`. So the U-source orientation is impossible.
+> `d_U(a_0)<=t+1`,                                      `(A0-UDEG)`
+>
+> `epsilon_{a_0}>=p+u-y-t-1`.                          `(A0-t)`
 
-With source `a_0`, an A/U witness must have complementary code `bar C) and be nonadjacent to `a_0), giving at most the t vertices of `U_{bar C}\{z}`. There is exactly one additional matched-B possibility: the endpoint in the special fibre selected by d and not by C. Every other matched endpoint is adjacent to both source and head and cannot be the nonadjacent witness.
+Together with the core-exclusion floor `(A0+K)`,
 
-Again a fixed source-witness pair can determine at most one singleton head. Thus there are at most t+1 d-coded U-neighbours. `square`
+> `epsilon_{a_0}>=A_0(t):=max{p-y+k+1, p+u-y-t-1}`.    `(A0-DYN)`
 
-Since z itself is one U-neighbour of `a_0`, these two lemmas give
-
-> `d_U(a_0)<=2t+2`.                                     `(A0-UDEG)`
-
-As `a_0` has no X-neighbour and is complete to Y,
-
-> `epsilon_{a_0}>=p+u-y-2t-2`.                         `(A0-t)`
-
-Together with `(A0+K)`, every survivor must use the dynamic floor
-
-> `epsilon_{a_0}>=A_0(t):=max{p-y+k+1, p+u-y-2t-2}`.   `(A0-DYN)`
-
-This is a second conservation law: a small complementary witness reservoir forces `a_0) to lose U-degree directly.
+This is a particularly useful conservation law: the same extra complementary witnesses required to support internal X-edges are the **only** physical vertices capable of buying additional U-degree for `a_0`.
 
 ## 10. Unit X — pair, triangle and residual gates retained simultaneously
 
@@ -375,9 +365,9 @@ It then applies the hand theorems in this note, including the strengthened `a_0-
 
 The resulting abstract final count is:
 
-> **133,317**.
+> **132,156**.
 
-Thus **40,030** predecessor abstract pinch rows fail the new necessary system.
+Thus **41,191** predecessor abstract pinch rows fail the new necessary system.
 
 These are parameter rows, not graphs. The zero-survivor question is not answered by this scan; the value of the replay is to identify which literal resource geometry remains after the local hand deductions.
 
