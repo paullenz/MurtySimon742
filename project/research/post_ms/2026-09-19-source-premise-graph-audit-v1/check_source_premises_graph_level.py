@@ -139,6 +139,98 @@ def premise_collisions(G, v):
     return p1, raw_p2, beta
 
 
+
+def canonical_selected_system(G, v):
+    """Choose one canonical criticality representative for every rooted B-edge.
+
+    In G-language, a selected orientation source->exception with A-label x has
+    source!~x, x~exception, and N(source) cap N(x)={exception}.
+    Lexicographic choice is only to make the regression deterministic.
+    """
+    A, B, U, pairs = rooted_objects(G, v)
+    selected = []
+
+    for u, w in G.subgraph(B).edges():
+        candidates = []
+        for source, exception in ((u, w), (w, u)):
+            for x in A:
+                if G.has_edge(source, x):
+                    continue
+                if not G.has_edge(x, exception):
+                    continue
+                if set(nx.common_neighbors(G, source, x)) == {exception}:
+                    candidates.append(
+                        (repr(source), repr(x), repr(exception), source, x, exception)
+                    )
+
+        if not candidates:
+            raise AssertionError(
+                ("rooted B-edge has no canonical selected representative", v, u, w)
+            )
+
+        candidates.sort(key=lambda t: t[:3])
+        _, _, _, source, x, exception = candidates[0]
+        selected.append((source, x, exception))
+
+    source_label = [(source, x) for source, x, exception in selected]
+    if len(source_label) != len(set(source_label)):
+        raise AssertionError("selected source-label incidence graph is not simple")
+
+    return selected
+
+
+def selected_pu_ledger(G, v):
+    """Classify selected P--U obligations as alpha or beta.
+
+    Returns (physical_pu, alpha_count, beta_count, beta_records), where each
+    beta record is (x,i,y).  This is the graph-level selected system needed by
+    the source-tuple interface.
+    """
+    A, B, U, pairs = rooted_objects(G, v)
+    selected = canonical_selected_system(G, v)
+    by_pair = {
+        frozenset((source, exception)): (source, x, exception)
+        for source, x, exception in selected
+    }
+
+    alpha = beta = 0
+    beta_records = []
+
+    for i, pair in enumerate(pairs):
+        for y in U:
+            q, mate = _selected_endpoint(G, y, pair)
+            key = frozenset((y, q))
+            if key not in by_pair:
+                raise AssertionError("P--U physical edge missing from selected system")
+
+            source, x, exception = by_pair[key]
+            if source == y and exception == q:
+                beta += 1
+                beta_records.append((x, i, y))
+            elif source == q and exception == y:
+                alpha += 1
+            else:
+                raise AssertionError("selected P--U orientation does not match physical edge")
+
+    physical = len(pairs) * len(U)
+    if alpha + beta != physical:
+        raise AssertionError("selected P--U ledger does not partition physical obligations")
+
+    # Selected P2: one physical (y,i) obligation can appear at most once.
+    yi = [(y, i) for x, i, y in beta_records]
+    if len(yi) != len(set(yi)):
+        raise AssertionError("selected source-coordinate uniqueness failed")
+
+    # Selected P1, now also backed by the direct raw-criticality proof.
+    by_xy = defaultdict(set)
+    for x, i, y in beta_records:
+        by_xy[(x, y)].add(i)
+    bad = [(key, I) for key, I in by_xy.items() if len(I) > 1]
+    if bad:
+        raise AssertionError(("selected distinct-physical-source premise failed", bad))
+
+    return physical, alpha, beta, beta_records
+
 def make_x3():
     """Programmatic published 12/32 cube-face negative control."""
     G = nx.Graph()
@@ -181,6 +273,7 @@ def x3_regression():
 
 def atlas_regression():
     classes = roots = beta_count = alpha_count = 0
+    selected_edges = physical_pu = selected_alpha = selected_beta = 0
     p1_fail = []
     raw_p2_fail = []
 
@@ -197,16 +290,43 @@ def atlas_regression():
             p1, p2, beta = premise_collisions(G, v)
             beta_count += len(beta)
             alpha_count += len(raw_alpha_certificates(G, v))
+            selected_edges += len(canonical_selected_system(G, v))
+            pu, sa, sb, selected_beta_records = selected_pu_ledger(G, v)
+            physical_pu += pu
+            selected_alpha += sa
+            selected_beta += sb
             if p1:
                 p1_fail.append((classes, v, p1))
             if p2:
                 raw_p2_fail.append((classes, v, p2))
 
-    return classes, roots, beta_count, alpha_count, p1_fail, raw_p2_fail
+    return (
+        classes,
+        roots,
+        beta_count,
+        alpha_count,
+        selected_edges,
+        physical_pu,
+        selected_alpha,
+        selected_beta,
+        p1_fail,
+        raw_p2_fail,
+    )
 
 
 def main():
-    classes, roots, beta_count, alpha_count, p1, raw_p2 = atlas_regression()
+    (
+        classes,
+        roots,
+        beta_count,
+        alpha_count,
+        selected_edges,
+        physical_pu,
+        selected_alpha,
+        selected_beta,
+        p1,
+        raw_p2,
+    ) = atlas_regression()
 
     assert classes == 21, classes
     # P1 now has a direct hand proof; any graph-level collision is a blocker.
@@ -218,11 +338,15 @@ def main():
     print("roots checked:", roots)
     print("raw beta candidate certificates:", beta_count)
     print("raw alpha candidate certificates:", alpha_count)
+    print("canonical selected rooted B-edges:", selected_edges)
+    print("physical P--U obligations:", physical_pu)
+    print("selected alpha P--U obligations:", selected_alpha)
+    print("selected beta P--U obligations:", selected_beta)
     print("P1 collisions:", len(p1))
     print("raw P2 collisions (diagnostic only):", len(raw_p2))
     print("X3 canonical root (a,b,u,p):", (a, b, u, p))
     print("X3: n=12 m=32 M(12)=31 D2C PASS")
-    print("PASS: corrected beta orientation and mandatory X3 control")
+    print("PASS: corrected beta orientation, selected P--U ledger, and mandatory X3 control")
 
 
 if __name__ == "__main__":
