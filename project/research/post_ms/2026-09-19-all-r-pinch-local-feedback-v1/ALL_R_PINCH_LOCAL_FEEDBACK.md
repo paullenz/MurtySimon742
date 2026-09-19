@@ -244,7 +244,39 @@ This is the desired local feedback loop:
 
 `z-U adjacency -> X'-U hole rectangle -> Hall-forced e(X) -> extra bar-C witnesses -> U-slack`.
 
-## 9. Unit VIII — pair, triangle and residual gates retained simultaneously
+## 9. Unit VIII — adjacent additional bar-C witnesses form an independent set
+
+Let
+
+> `B={w in U_{bar C}\{z}: zw in E}`, `r_B=|B|`.
+
+By the preceding argument every vertex of B is anticomplete to A.
+
+### Theorem 9.1 — bar-C star leaves are independent
+
+> `G[B]` is edgeless.                                   `(B-INDEP)`
+
+### Proof
+
+Suppose `w_1w_2` were an edge in B. It is a same-code U--U edge, so the full coded-layer criticality theorem requires a witness in the complementary A-class `A_C=X`, regardless of which endpoint is chosen as source. But the singleton head is the other endpoint, and both `w_1,w_2` are anticomplete to X. Hence no orientation can place the other endpoint in the required common neighbourhood. Contradiction. `square`
+
+For a fixed d and a total of t additional `bar C)-vertices, at least
+
+> `r_B>=[t-d]_+`
+
+are adjacent to z. Their pairwise nonedges are disjoint from:
+
+- the internal nonedges of `U_-`;
+- the k edges missing between z and `W_0`;
+- the d edges missing between z and the remaining outside vertices.
+
+Therefore the triangle ceiling strengthens to
+
+> `q <= binom(u,2)-binom(k+1,2)-k-d-binom([t-d]_+,2)`. `(Q-BAR)`
+
+This is a physical U-edge exclusion, not a witness-incidence count.
+
+## 9. Unit IX — pair, triangle and residual gates retained simultaneously
 
 The exact pair-local threshold must be recomputed using the strengthened core floor `E_core>=k(p+k)`, not the old weak `k(p+k)-1`.
 
@@ -280,7 +312,7 @@ The last condition is the inherited equality-pinch rooted-slot requirement `r>=a
 
 No total-score substitution is made for the pair-local crossing threshold.
 
-## 10. Diagnostic replay
+## 11. Diagnostic replay
 
 A companion checker evaluates only the necessary system above on the same abstract box used by the predecessor pinch diagnostic:
 
@@ -295,13 +327,13 @@ It then applies the hand theorems in this note, including the strengthened `a_0-
 
 The resulting abstract final count is:
 
-> **134,077**.
+> **134,006**.
 
-Thus **39,270** predecessor abstract pinch rows fail the new necessary system.
+Thus **39,341** predecessor abstract pinch rows fail the new necessary system.
 
 These are parameter rows, not graphs. The zero-survivor question is not answered by this scan; the value of the replay is to identify which literal resource geometry remains after the local hand deductions.
 
-## 11. Trust boundary and next move
+## 12. Trust boundary and next move
 
 Promoted conditionally inside the audited equality pinch:
 
@@ -312,7 +344,7 @@ Promoted conditionally inside the audited equality pinch:
 5. every z-neighbour in `U_o\{z}` is anticomplete to `X'`;
 6. additional adjacent `bar C)-vertices are anticomplete to all A and pay `epsilon>=p`;
 7. internal X-edge mass requires additional `bar C) witnesses;
-8. `(H-PINCH)` is an exact Hall/criticality necessary condition when combined with the stated score floors.
+8. adjacent additional `bar C` witnesses form an independent U-set and strengthen the q ceiling by `(Q-BAR)`;\n9. `(H-PINCH)` is an exact Hall/criticality necessary condition when combined with the stated score floors.
 
 The next hand target should stay inside the remaining equality-pinch rows and classify near equality in `(H-PINCH)`. In particular:
 
