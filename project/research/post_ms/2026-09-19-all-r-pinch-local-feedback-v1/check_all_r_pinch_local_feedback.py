@@ -130,13 +130,6 @@ def main():
 
           uo=u-k-1
           N=x-1
-          epsa=p-y+k+1
-          Amin=max(phi(g),LY+epsa)
-          EUmax=cap-Amin
-          if EUmax<0:
-            st['new_reject']+=1
-            continue
-
           Ecore=k*(p+k)
           epsb=p-g+1
           g1=max(0,p-y-1)
@@ -151,15 +144,21 @@ def main():
             J=uo-1-d
             epsz=p+k-1+d
 
-            # Keep exact pair score local before using the total cap.
-            if sig+epsz+epsa>cap:
-                continue
-
             # Eliminate the internal edge variable. If t additional bar-C
-            # witnesses exist, e(X)<=min(C(N,2),N t). Hall exactness forces a
-            # lower bound on the same e(X). The z-adjacent bar-C witnesses
-            # form an independent U-set, strengthening qmax by C(adj_bar,2).
+            # witnesses exist, e(X)<=min(C(N,2),N t). The same t also bounds
+            # the d- and C-coded U-neighbours of a0, giving A0-DYN.
             for t in range(uo):
+                epsa=max(p-y+k+1,p+u-y-2*t-2)
+
+                # Keep exact pair score local before using the total cap.
+                if sig+epsz+epsa>cap:
+                    continue
+
+                Amin=max(phi(g),LY+epsa)
+                EUmax=cap-Amin
+                if EUmax<0:
+                    continue
+
                 adj_bar=max(0,t-d)
                 Ebase=(Ecore+epsb+epsz+J*g1
                        +(p-g1)*adj_bar)
@@ -193,6 +192,9 @@ def main():
                 break
 
           if feasible:
+                break
+
+          if feasible:
             st['new_final']+=1
             d_choice[chosen[0]]+=1
             t_choice[chosen[1]]+=1
@@ -202,8 +204,8 @@ def main():
     expected={
         'coarse':248798,
         'predecessor_final':173347,
-        'new_final':134006,
-        'new_reject':39341,
+        'new_final':133317,
+        'new_reject':40030,
     }
     bad={k:(expected[k],st[k]) for k in expected if st[k]!=expected[k]}
     print({
