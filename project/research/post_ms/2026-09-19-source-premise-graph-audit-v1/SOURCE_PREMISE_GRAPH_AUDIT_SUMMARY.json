@@ -1,0 +1,36 @@
+{
+  "date": "2026-09-19",
+  "scope": "independent graph-level source-premise repair regression",
+  "graph_atlas": {
+    "d2c_unlabeled_classes_through_order_7": 21,
+    "rooted_instances": 126,
+    "raw_beta_candidate_certificates": 2,
+    "raw_alpha_candidate_certificates": 1,
+    "canonical_selected_rooted_B_edges": 30,
+    "physical_PU_obligations": 3,
+    "selected_alpha_PU_obligations": 1,
+    "selected_beta_PU_obligations": 2,
+    "p1_collisions": 0,
+    "raw_p2_collisions": 0
+  },
+  "X3": {
+    "n": 12,
+    "m": 32,
+    "M_n": 31,
+    "d2c": true,
+    "canonical_root": {
+      "a": 3,
+      "b": 8,
+      "u": 0,
+      "p": 4
+    },
+    "beta_obligations": 0,
+    "mandatory_negative_control": "PASS"
+  },
+  "trust_boundary": [
+    "P1 has a direct hand proof from the beta unique-common-neighbour singleton.",
+    "Selected P2 follows from one chosen representative per physical rooted B-edge/source-coordinate obligation.",
+    "Raw P2 multiplicity is diagnostic and is not required by the source-tuple theorem.",
+    "Finite atlas/X3 replay is regression evidence only, not the proof."
+  ]
+}
