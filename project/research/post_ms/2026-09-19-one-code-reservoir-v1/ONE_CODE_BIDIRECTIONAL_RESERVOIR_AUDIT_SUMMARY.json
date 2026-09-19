@@ -1,0 +1,20 @@
+{
+  "date": "2026-09-19",
+  "theta_reduction_checks": 10000,
+  "scan": {
+    "old_population_possible": 106368,
+    "shared_gamma_plus_U_rejected": 16967,
+    "reservoir_survive": 88491,
+    "reservoir_rejected": 17877,
+    "additional_reservoir_rejections": 910
+  },
+  "additional_rejection_examples": [
+    {"p": 7, "u": 1, "lambda": 0, "a": 14, "x": 3, "y": 11, "T0": 7, "C0": 19},
+    {"p": 8, "u": 1, "lambda": 0, "a": 16, "x": 3, "y": 13, "T0": 8, "C0": 22},
+    {"p": 8, "u": 1, "lambda": 0, "a": 16, "x": 4, "y": 12, "T0": 8, "C0": 22},
+    {"p": 8, "u": 1, "lambda": 1, "a": 15, "x": 3, "y": 12, "T0": 7, "C0": 29},
+    {"p": 9, "u": 1, "lambda": 0, "a": 18, "x": 3, "y": 15, "T0": 9, "C0": 25}
+  ],
+  "failures": 0,
+  "trust_boundary": "Arithmetic audit of the scorecard-relaxed cylinder gate only. The bidirectional-reservoir theorem is hand-derived. The bounded actual-graph corpus still contains no realized rigid complete Hall cut with x>=3, so branch realizability remains conditional."
+}
