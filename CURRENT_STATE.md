@@ -3,188 +3,206 @@
 > **Active target - 19 September 2026.** Sufficiently-large/eventual second-extremal diameter-2-critical classification around `M(n)=floor((n-1)^2/4)+1`. The false all-order 2019 strengthening is not assumed. The published 2024 `X_3` graph (`n=12,m=32`) remains a mandatory hostile control. Erdős #742 is preserved but is not the live optimization target.
 
 <!-- CURRENT-STATUS:START -->
-CHECKPOINT CLASS: `ONE_CODE_Z1_ZERO_BUFFER_REVERSE_COLLAPSE_AND_LAMBDA0_EXCLUSION_2026_09_19`
+CHECKPOINT CLASS: `ONE_CODE_Z1_ZERO_BUFFER_CODE_SIMPLEX_LAMBDA3_LAST_STATE_2026_09_19`
 
 WORK MODE: `MATH`
 
-INSPECTED PREDECESSOR: `19244c3f44f082c51efb7463f1dc6aeca8a0026d`
+INSPECTED PREDECESSOR: `77ca7487e18c82d5411ed5ee92477b517f4b4f40`
 
-LAST VERIFIED RESULT: `In the repaired rigid one-code z=1 common-buffer branch at zero buffer slack g=p, the reverse Orientation-B channel is empty. Every gamma-d crossing endpoint q has one X-neighbour, so its tight gamma-bar-d mate has x-1 X-neighbours; because b is complete to X and x>=3, no mate can satisfy a reverse singleton N(b) cap N(q')={x0}. Thus R_B=empty and d=p. The matched Orientation-A channel is also empty, so all x=p+k buffer-X edges require outside-U witnesses: ell=x. Hence H_core>=k and E_core>=k(p+k); with m distinct outside witnesses, m>=ceil(x/R_A), L_Y>=y(1+m), E_W>=[x-km]_+, S_P>=k(p+k)+y(1+m), and Z>=ka+p+y(1+m). Comparing only the weakest m>=1 pair floor with the preserved above-M score ceiling gives the parameter-only necessary inequality (lambda+1-k)p+lambda u-k^2+2k+2lambda-2 floor((lambda+1)^2/4)-2>=0. For lambda=0 its left side is strictly negative for every k>=1, so the entire balanced zero-buffer rigid one-code common-buffer branch is excluded.`
+LAST VERIFIED RESULT: `Raw criticality of every zero-buffer b--U_o edge forces U_o anticomplete to Y and complement-code witnesses in X. Together with the already-proved buffer--X reverse collapse, this gives exact support duality between X and U_o. The matched crossing heads/core heads force the exact X-code simplex {0,e_1,...,e_p}, so u_o>=p+1 and p>=4. Hence Y is anticomplete to all U, L_Y=rho*y exactly, and the physical A--U hole ledger strengthens to Z>=yu+k(x-1)+max(x,u_o). The resulting quadratic score gate closes lambda=1 and lambda=2 (lambda=0 was already closed). Lambda=3 collapses to (p,rho,k)=(4,6,1),(4,6,2),(4,6,3); minimal-support extra slack closes k=3, minimal-support X-independence plus the rooted residual ledger closes k=2. The sole remaining lambda=3 state is (p,rho,k)=(4,6,1), with exactly six possible (delta,E_U,q,L_X) score tuples.`
 
-UNPRESERVED WORK: `None. Main proof is in project/research/post_ms/2026-09-19-zero-buffer-reverse-collapse-v1/ZERO_BUFFER_REVERSE_COLLAPSE.md. The parameter-only score obstruction and lambda=0 closure are in ZERO_BUFFER_SCORECARD_COLLAPSE.md in the same directory.`
+UNPRESERVED WORK: `None. The hand derivation and arithmetic diagnostic are preserved under project/research/post_ms/2026-09-19-zero-buffer-code-simplex-v1/.`
 
-DEFERRED ADMIN: `README remains lower-frequency; refresh it at the next daily adversarial audit/reviewer checkpoint if this repaired common-buffer line survives. Do not churn CI merely for bookkeeping.`
+DEFERRED ADMIN: `README remains lower-frequency. Do not spend this mathematics cadence on reviewer/CI packaging unless repository integrity fails; refresh reviewer-facing status at the next daily adversarial checkpoint.`
 
-NEXT ACTION: `Stay in the reverse-collapsed zero-buffer branch, now restricted to lambda>=1. Attack the lambda=1/small-k strip first with the full m>=ceil(x/R_A), exact Ccap_P, ONE-P, CROWD and rooted q+E_U ledger. For k>=lambda+2 the new necessary inequality already forces a quantitatively unmatched-heavy regime; intersect that with source-tuple/beta capacity before any finite scan. Do not move to z=2 until this branch is exhausted.`
+NEXT ACTION: `Stay on the sole lambda=3 zero-buffer state (p,rho,k)=(4,6,1). Attack the delta=7 equality tuple first: (delta,E_U,q,L_X)=(7,7,19,0), where the U graph is at its coarse maximum q=19 subject to the two forced U-holes, X is independent, the simplex/complement support is exact, and U_o is very dense. Apply raw triangle-edge criticality to U_o--U_o and W_0--U_o edges and preserve the first forced extra hole/slack or contradiction. Then test the five delta=8/9 tuples. Only after this lambda=3 residue is exhausted should the zero-buffer branch advance to lambda=4 or positive buffer slack; do not move to z=2.`
 
 ## Mandatory audit reconciliation
 
-Before forward mathematics this run, `CURRENT_STATE.md`, root `README.md`, the latest commits, the 19 September daily adversarial audit/handoff, the source-premise repair, and the independent actual-D2C rigid Hall/pair-capacity regression were reread. No departure from the audit priority order was made.
+Before forward mathematics this run, `CURRENT_STATE.md`, `README.md`, recent commits, the 19 September daily red-team audit/handoff, the repaired source-premise note, and the independent actual-D2C Hall/pair-capacity regression were reread.
 
-- Distinct physical beta sources are directly proved from raw rooted criticality.
-- Selected `(source,coordinate)` uniqueness is justified at the chosen-representative level for a unique physical P--U obligation.
-- The principal `B_beta` lower bounds count those same selected physical obligations.
-- The finite source-tuple theorem is not promoted as unconditional graph-level closure.
-- The independent actual-graph regression reaches rooted residual identities, tight codes, selected slots, Hall cuts and exact pair-local `Ccap_P`; its recorded run has zero graph/formula mismatches and permanently includes `X_3`.
-- No actual rigid complete Hall cut with `x>=3` has yet been found, so the live one-code results remain conditional hand implications of the rigid hypotheses.
-- Exact `Ccap_P`, `(ONE-P)` and `(CROWD)` remain load-bearing. The four-exception gate remains subordinate. The mixed `{4,5}` selected-excess ladder stays closed.
+The audit priority order remains binding. The raw distinct-source premise is proved from beta singleton criticality; selected `(source,coordinate)` uniqueness is a selected-representative convention; the finite source-tuple capacity theorem is not treated as unconditional graph closure. The actual-D2C regression reaches the rooted residual identities, codes, Hall cuts and exact `Ccap_P`, reports zero graph/formula mismatches, and retains `X_3`. No actual rigid complete Hall cut with `x>=3` has been found, so the current one-code results remain conditional hand implications. The four-exception gate remains subordinate. No weakened/invalidated line was resumed.
 
-The earlier matched-only buffer-X theorem remains withdrawn. Only the corrected matched-or-outside criticality interface may be used.
+This run did not need the finite source-tuple theorem: the advance comes from raw `b--U_o` criticality plus physical Boolean-code incidence.
 
 ## Mandatory negative control
 
-`X_3`: `n=12`, `m=32>M(12)=31`, canonical root `a=3,b=8,p=4,u=0,Q=12,r=f=delta=0`. The live common-buffer branch requires `U_-=W_0 dotcup {b}` with `k>0`; neither the reverse collapse nor the lambda=0 exclusion applies to `X_3`.
+`X_3`: `n=12`, `m=32>M(12)=31`, canonical root `a=3,b=8,p=4,u=0,Q=12,r=f=delta=0`. Every theorem below requires a nonempty zero-buffer unmatched layer with `u_o>=p+1`; `X_3` is untouched.
 
-## Live zero-buffer setup
+## Zero-buffer branch retained
 
-The branch has a complete rigid cut `X--Y`, `x=|X|>=3`, `y=|Y|>0`; all Y-sources have code `d`; X has neither code `d` nor `bar d`; `g=p`, `k=x-p>0`; `U_-=W_0 dotcup {b}`, `|W_0|=k`, `e(G[U_-])=0`; and `epsilon_b=0`, so `b--X` and `b--U_o` are complete.
+Use the unloaded common-buffer branch:
 
-The exact common-core identity remains
+- `X--Y` complete, `x>=3`, Y one code d, `A_bar d=empty`;
+- `g=p`, `k=x-p>0`, `x=p+k`;
+- `U_-=U_bar d=W_0 dotcup {b}`, `|W_0|=k`, `e(G[U_-])=0`;
+- `epsilon_b=0`, so b is complete to X and U_o and anticomplete to Y;
+- `rho:=u-k=u_o+1`, hence `u=k+rho`, `y=p+rho-lambda-1`;
+- every buffer--X edge has an outside witness in U_o;
+- `E_core=k(p+k-1)+H_core`, `H_core>=k`, hence `E_core>=k(p+k)`.
 
-> `E_core=k(p+k-1)+H_core`,
+## New raw b--U_o criticality theorem
 
-where `H_core=e_bar(W_0,U_o)`.
+For every `z in U_o`, the edge bz has only one possible triangle-edge orientation:
 
-The corrected criticality alternatives for an edge `b x` are:
+`ba_z in E`, `za_z notin E`, `N(z) cap N(a_z)={b}`
 
-- A: `b z in E`, `x z notin E`, `N(x) cap N(z)={b}`;
-- B: `x z in E`, `b z notin E`, `N(b) cap N(z)={x}`.
+with `a_z in X`. The reverse orientation would put its A-witness in Y, but then all of X would be common neighbours with b.
 
-A is either matched with `gamma(z)=c(x)` or outside unmatched with `c(z)=bar c(x)` and z anticomplete to Y. B, if possible, uses a matched endpoint of gamma-code `bar d`.
+Consequences:
 
-## Reverse-channel collapse
+- `z` is anticomplete to Y;
+- `c(a_z)=bar(c(z))`;
+- since W_0 and b are already anticomplete to Y, `e(Y,U)=0`;
+- `U_d=empty`;
+- every Y-source has exact slack `epsilon_y=rho`, so
 
-For every tight fibre `{q,q'}` with `gamma(q)=d`, `gamma(q')=bar d`, the matched crossing layer and `X--Y` completeness force
+  `L_Y=y rho=rho(p+rho-lambda-1)`;
 
-> `N_X(q)={h_M(q)}`.
+- every Y-source has beta load zero.
 
-Tight transversality gives
+## Exact code simplex and support duality
 
-> `N_X(q')=X\{h_M(q)}`,
->
-> `d_X(q')=x-1`.
+Orient tight coordinate i by the gamma-d endpoint `q_i`. Its X-neighbourhood is the singleton `{h_i}`, and the p matched heads are distinct. Therefore
 
-Since b is complete to X,
-
-> `|N(b) cap N(q')|>=x-1>=2`.
-
-Thus no q' can be a reverse singleton witness. Therefore
-
-> `R_B=emptyset`, `r_B=0`, `d=p`.                         `(REV-COLLAPSE)`
-
-The prior scalar observation that score was minimized at `d=0` was arithmetically correct, but that minimizer is not graph-realizable.
-
-## Full outside certification and physical consequences
-
-With g=p, matched gamma support contains only `d,bar d`, while X avoids both codes. Hence matched Orientation A is impossible too. Every x in X has an outside witness z in U_o with
-
-> `bz in E`, `xz notin E`, `N(x) cap N(z)={b}`,
->
-> `c(z)=bar c(x)`, and z anticomplete to Y.
-
-No physical-witness injectivity is assumed. The exact selected incidence count is
-
-> `ell=x=p+k`.                                             `(OUT-ALL)`
-
-For each core head `x=h(w)`, the outside certificate forces `wz` to be a nonedge. Distinct W_0 endpoints give k distinct physical missing pairs even if z is reused. Therefore
-
-> `H_core>=k`,
->
-> `E_core>=k(p+k)`.                                       `(CORE-NEW)`
-
-Let W be the distinct outside witnesses, m=|W|. One physical z serves only one X-code class. The preserved aligned-code cap gives
-
-> `m>=ceil(x/R_A)`.                                       `(WIT-M)`
-
-Every z is anticomplete to Y, so
-
-> `L_Y>=y(1+m)`.                                          `(WIT-LY)`
-
-If t_z X-sources use z, then `epsilon_z>=[t_z-k]_+`; hence
-
-> `E_W>=[x-km]_+`.                                        `(WIT-E)`
+- matched head `h_i` has code `e_i`;
+- every core head has code `0^p`.
 
 Thus
 
-> `S>=k(p+k)+[x-km]_+ + max{phi(p),y(1+m)}`,             `(S-REV0)`
+`supp_A(X)={0^p,e_1,...,e_p}`
 
-and on the distinguished pair
+with multiplicities k,1,...,1.
 
-> `S_P>=k(p+k)+y(1+m)`.                                   `(SP-REV0)`
+Every x in X has a buffer-edge witness in U_o of complementary code, and every z in U_o has the new b--z witness in X of complementary code. Hence
 
-The exact pair-local bill remains
+`supp_U(U_o)={1^p,1^p-e_1,...,1^p-e_p}`.
 
-> `2xy<=Ccap_P`,
->
-> `Ccap_P=R_code(S_P)*(p+2S_P/(lambda+1))`,
+Therefore
 
-simultaneously with `(ONE-P)` and `(CROWD)`.
+`u_o>=p+1`, equivalently `rho>=p+2`.
 
-The physical A--U hole count strengthens to
+The outside pair P must be disjoint from all X pairs. Direct pair-space inspection excludes p=1,2,3, so
 
-> `Z>=ka+p+y(1+m)`.                                       `(Z-REV0)`
+`p>=4`.
 
-With
+## Physical hole/rooted-residual strengthening
 
-`E0(m)=k(p+k)+[x-km]_+`,
+Y contributes all `yu` A--U holes. The k core witnesses contribute exactly `k(x-1)` X--W_0 holes. In X--U_o, the buffer-X certificates cover every X row by a hole and b--U_o criticality covers every U_o column by a hole, so there are at least `max(x,u_o)` such holes.
 
-`D(m)=ka+p+y(1+m)-u(p-lambda)`,
+Hence
 
-the exact rooted minimization is
+`Z>=yu+k(x-1)+max(x,u_o)`.
 
-> `q+E_U>=E0(m)+ceil([D(m)-E0(m)]_+/2)`.                 `(QE-REV0)`
+Since `Z=u(p-lambda)+2q+E_U` and `y-(p-lambda)=u_o`,
 
-## Parameter-only score gate and balanced closure
+`2q+E_U>=u u_o+k(x-1)+max(x,u_o)`.
 
-For an above-`M(n)` candidate, the preserved score ceiling is
+This is the live rooted residual bridge.
 
-`S<=C0`,
+## Quadratic score gate and small-lambda closure
 
-where
+The disjoint physical costs give
 
-`C0=2(D_M-1)+lambda(p+u)-p`,
+`S>=k(p+k)+rho(p+rho-lambda-1)`,
 
-and
+and simultaneously
 
-> `D_M=2p+u-floor((lambda+1)^2/4)-1`.
+`S>=k(p+k)+max{p(p-1),rho(p+rho-lambda-1)}`.
 
-Write `H_lambda=floor((lambda+1)^2/4)`. Since m>=1,
+Comparing with
 
-`S>=S_P>=k(p+k)+2y`.
+`C0=(lambda+3)p+(lambda+2)u-2 floor((lambda+1)^2/4)-4`
 
-Using `y=p+u-lambda-1-k`, every survivor must satisfy
+gives the hand necessary condition
 
-> `(lambda+1-k)p + lambda u`
-> ` -k^2+2k+2lambda-2H_lambda-2 >= 0`.                    `(PARAM-ZB)`
+`(k+rho-lambda-3)p + k(k-lambda-2) + rho(rho-2lambda-3) + 2 floor((lambda+1)^2/4)+4 <=0`.
 
-At `lambda=0` this is
+With `p>=4`, `rho>=p+2`:
 
-`(1-k)p-k^2+2k-2>=0`,
+- lambda=1 is impossible;
+- lambda=2 is impossible;
+- lambda=0 was already impossible from the previous checkpoint.
 
-whose left side is negative for every integer `k>=1`. Therefore
+Thus the zero-buffer branch is closed for `lambda<=2`.
 
-> **No above-M rigid one-code zero-buffer common-buffer candidate exists at lambda=0.** `(ZB0)`
+For lambda=3 the gate forces exactly
 
-For `lambda=1`, the coarse gate is
+`p=4`, `rho=6`, `k in {1,2,3}`.
 
-> `(2-k)p+u-k^2+2k-2>=0`.                                 `(LAM1)`
+## Minimal-support layer rho=p+2
 
-For general `lambda>0` and `k>=lambda+2`, it forces the unmatched-heavy condition
+When `rho=p+2`, U_o has exactly one vertex in every complementary simplex code. Let z_0 be the unique vertex complementary to the core code `0^p`.
 
-> `u >= ((k-lambda-1)p+k^2-2k-2lambda+2H_lambda+2)/lambda`. `(UH)`
+Every core head must use z_0 as its buffer-X witness. Thus z_0 is nonadjacent to all k core heads and all k corresponding W_0 vertices, and it is anticomplete to Y. Its degree identity forces
 
-This gate is deliberately only a first filter; the sharper m, pair-capacity, beta and rooted-residual constraints remain active.
+`epsilon_{z_0}>=k`.
 
-## Preserved comparator
+Hence
 
-The full-support `z=1,h=0` branch remains valid. Raw criticality still forces `nu=y`, and the corrected rooted triangle baseline remains `Q=p(p-1)+pu+e(G[U])`. No result in this run weakens it.
+`S>=k(p+k)+L_Y+k`.
+
+This closes the lambda=3,k=3 state: its lower score is 60 while C0=57.
+
+In the same minimal-support layer, X has no internal edge:
+
+- its simplex codes are noncomplementary for p>=4, so no direct X-edge;
+- all matched gamma codes are d/bar d, so no matched witness can serve an X-source;
+- the unique A/U witness of complementary code for each X-source is already the buffer-edge witness with fixed common neighbourhood `{b}` and cannot certify a different X-edge.
+
+Therefore `e(X)=0`, and with `e(Y)=0` and X--Y complete,
+
+`f=xy`.
+
+For lambda=3,p=4,rho=6,k=2 this gives f=36. The physical hole ledger requires `2q+E_U>=56`, while `E_U>=14`, `delta<=10`, and the residual identity gives `q+E_U=24+delta`, hence `2q+E_U<=54`. Contradiction. So k=2 is closed.
+
+## Sole lambda=3 residue
+
+Only
+
+`(lambda,p,rho,k)=(3,4,6,1)`
+
+remains in the zero-buffer branch.
+
+Its exact data are
+
+- `u=7`, `u_o=5`, `x=5`, `y=6`, `a=11`, `n=27`;
+- `f=30`, `D_M=10`;
+- `L_Y=36`, `E_U>=6`;
+- `2q+E_U>=44`;
+- `S=2delta+29`;
+- `q=e(G[U])<=19`, because `U` has seven vertices and at least the forced nonedges `wb` and `wz_0`;
+- `q+E_U=19+delta`.
+
+Thus `delta in {7,8,9}` and exactly six algebraic/physical score tuples remain:
+
+`(delta,E_U,q,L_X)`
+
+- `(7,7,19,0)`;
+- `(8,8,19,1)`, `(8,9,18,0)`;
+- `(9,9,19,2)`, `(9,10,18,1)`, `(9,11,17,0)`.
+
+These are necessity states, not graph realizability claims.
+
+## Preserved evidence
+
+New package:
+
+`project/research/post_ms/2026-09-19-zero-buffer-code-simplex-v1/`
+
+- `ZERO_BUFFER_CODE_SIMPLEX_AND_SMALL_LAMBDA_CLOSURE.md`
+- `check_zero_buffer_code_simplex.py`
+
+The checker is arithmetic audit support only. It verifies the quadratic algebra, bounded small-lambda reduction, lambda=3 k=2/k=3 arithmetic, and the six final score tuples. It is not a D2C realizability proof.
 
 ## Immediate frontier
 
-1. Restrict zero-buffer work to `lambda>=1`.
-2. Attack `lambda=1`, especially k=1 and k=2, with the full witness count m and exact `Ccap_P/(ONE-P)/(CROWD)` rather than the coarse parameter gate.
-3. For `k>=lambda+2`, intersect the forced unmatched-heavy inequality `(UH)` with source-tuple/beta capacity and `(QE-REV0)`.
-4. Seek an explicit sufficiently-large exclusion threshold or a tiny structural residue.
-5. If a residue survives, use raw criticality around the forced core--outside missing pairs and the rooted B-edge slots of the buffer--outside edges.
-6. Do not move to z=2 until this branch is exhausted.
+Attack the delta=7 equality state first. It has
+
+`(delta,E_U,q,L_X)=(7,7,19,0)`.
+
+At the coarse physical ledger level U is missing only the two already-forced U-edges, X has zero slack and no internal edges, and the five U_o code classes are fixed. The next highest-value move is raw triangle-edge criticality on the dense U_o--U_o and W_0--U_o edge set. A single forced additional U-hole or slack unit may remove this equality state; then test the five delta=8/9 states.
+
+Do not move to `z=2` while this residue is live. If lambda=3 closes, advance to lambda=4 within the same zero-buffer/code-simplex framework before abandoning the branch.
+
 <!-- CURRENT-STATUS:END -->
