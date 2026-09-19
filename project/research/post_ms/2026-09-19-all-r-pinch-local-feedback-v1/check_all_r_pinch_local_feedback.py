@@ -158,7 +158,7 @@ def main():
             # Eliminate the internal edge variable. If t additional bar-C
             # witnesses exist, e(X)<=min(C(N,2),N t). Hall exactness forces a
             # lower bound on the same e(X). The z-adjacent bar-C witnesses
-            # form an independent U-set, strengthening qmax by C(rbar,2).
+            # form an independent U-set, strengthening qmax by C(adj_bar,2).
             for t in range(uo):
                 adj_bar=max(0,t-d)
                 Ebase=(Ecore+epsb+epsz+J*g1
@@ -190,9 +190,6 @@ def main():
                 break
 
             if feasible:
-                break
-
-          if feasible:
                 break
 
           if feasible:
