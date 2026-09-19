@@ -231,6 +231,87 @@ def selected_pu_ledger(G, v):
 
     return physical, alpha, beta, beta_records
 
+
+def canonical_bridge_ledger(G, v):
+    """Reconstruct the selected/residual Hall margins from the graph itself.
+
+    This part is intended for maximum-degree roots, matching the canonical
+    bridge convention.  It verifies the exact selected count, residual ledger,
+    label demand, and the pointwise selected-edge demand forcing.
+    """
+    A, B, U, pairs = rooted_objects(G, v)
+    selected = canonical_selected_system(G, v)
+    selected_pairs = {(source, x) for source, x, exception in selected}
+
+    residual = {
+        (source, x)
+        for source in B
+        for x in A
+        if not G.has_edge(source, x) and (source, x) not in selected_pairs
+    }
+
+    rho = {
+        source: sum((source, x) in residual for x in A)
+        for source in B
+    }
+    R = {
+        x: sum((source, x) in residual for source in B)
+        for x in A
+    }
+    qrow = {
+        source: sum(s == source for s, x, exception in selected)
+        for source in B
+    }
+    xcol = {
+        x: sum(label == x for source, label, exception in selected)
+        for x in A
+    }
+
+    F = G.subgraph(A)
+    d = {x: F.degree(x) for x in A}
+    demand = {x: max(0, d[x] - R[x]) for x in A}
+
+    Q = G.subgraph(B).number_of_edges()
+    if len(selected) != Q:
+        raise AssertionError("selected representatives do not match rooted B-edge count")
+    if sum(qrow.values()) != Q or sum(xcol.values()) != Q:
+        raise AssertionError("selected Hall row/column margins do not equal Q")
+    if len(residual) != sum(rho.values()) or len(residual) != sum(R.values()):
+        raise AssertionError("residual row/column margins disagree")
+
+    for x in A:
+        if xcol[x] < demand[x]:
+            raise AssertionError("selected label degree fell below graph-derived demand")
+
+    for source, x, exception in selected:
+        if demand[x] > rho[source]:
+            raise AssertionError("pointwise selected-edge demand forcing failed")
+
+    n = G.number_of_nodes()
+    a = len(A)
+    b = len(B)
+    m = G.number_of_edges()
+    t = m - b * (n - b)
+    eC = math.comb(a, 2) - F.number_of_edges()
+    r = len(residual)
+
+    if eC + r != math.comb(a, 2) - t:
+        raise AssertionError("exact selected/residual ledger failed")
+    if sum(demand.values()) < r + 2 * t:
+        raise AssertionError("summed demand lower bound failed")
+
+    return {
+        "Q": Q,
+        "r": r,
+        "t": t,
+        "S": sum(demand.values()),
+        "qrow": qrow,
+        "xcol": xcol,
+        "rho": rho,
+        "R": R,
+        "demand": demand,
+    }
+
 def make_x3():
     """Programmatic published 12/32 cube-face negative control."""
     G = nx.Graph()
@@ -268,12 +349,18 @@ def x3_regression():
     assert len(U) == 0
     assert len(pairs) == 4
     assert not raw_beta_certificates(G, "r")
-    return len(A), len(B), len(U), len(pairs)
+    ledger = canonical_bridge_ledger(G, "r")
+    assert ledger["Q"] == 12
+    assert ledger["r"] == 0
+    assert ledger["t"] == 0
+    assert ledger["S"] == 0
+    return len(A), len(B), len(U), len(pairs), ledger["Q"], ledger["r"]
 
 
 def atlas_regression():
     classes = roots = beta_count = alpha_count = 0
     selected_edges = physical_pu = selected_alpha = selected_beta = 0
+    max_degree_root_ledgers = 0
     p1_fail = []
     raw_p2_fail = []
 
@@ -300,6 +387,10 @@ def atlas_regression():
             if p2:
                 raw_p2_fail.append((classes, v, p2))
 
+            if G.degree(v) == max(dict(G.degree()).values()):
+                canonical_bridge_ledger(G, v)
+                max_degree_root_ledgers += 1
+
     return (
         classes,
         roots,
@@ -309,6 +400,7 @@ def atlas_regression():
         physical_pu,
         selected_alpha,
         selected_beta,
+        max_degree_root_ledgers,
         p1_fail,
         raw_p2_fail,
     )
@@ -324,6 +416,7 @@ def main():
         physical_pu,
         selected_alpha,
         selected_beta,
+        max_degree_root_ledgers,
         p1,
         raw_p2,
     ) = atlas_regression()
@@ -332,7 +425,7 @@ def main():
     # P1 now has a direct hand proof; any graph-level collision is a blocker.
     assert not p1, p1
 
-    a, b, u, p = x3_regression()
+    a, b, u, p, x3_Q, x3_r = x3_regression()
 
     print("D2C atlas classes through order 7:", classes)
     print("roots checked:", roots)
@@ -342,9 +435,11 @@ def main():
     print("physical P--U obligations:", physical_pu)
     print("selected alpha P--U obligations:", selected_alpha)
     print("selected beta P--U obligations:", selected_beta)
+    print("maximum-degree rooted Hall ledgers checked:", max_degree_root_ledgers)
     print("P1 collisions:", len(p1))
     print("raw P2 collisions (diagnostic only):", len(raw_p2))
     print("X3 canonical root (a,b,u,p):", (a, b, u, p))
+    print("X3 canonical bridge (Q,r):", (x3_Q, x3_r))
     print("X3: n=12 m=32 M(12)=31 D2C PASS")
     print("PASS: corrected beta orientation, selected P--U ledger, and mandatory X3 control")
 
