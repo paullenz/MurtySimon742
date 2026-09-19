@@ -3,19 +3,19 @@
 > **Active target - 19 September 2026.** The live problem is the sufficiently-large/eventual second-extremal D2C classification around `M(n)=floor((n-1)^2/4)+1`. The false all-order 2019 Dailly-Foucaud-Hansberg strengthening is not assumed. The published 2024 order-12, size-32 D2C graph is a mandatory hostile control. Murty-Simon / Erdos #742 remains preserved but is not the live optimization target.
 
 <!-- CURRENT-STATUS:START -->
-CHECKPOINT CLASS: `ONE_CODE_Z1_TRAFFIC_REPAIRED_2026_09_19`
+CHECKPOINT CLASS: `ONE_CODE_Z1_CAP_RESIDUAL_CLOSED_2026_09_19`
 
 WORK MODE: `MATH`
 
-INSPECTED PREDECESSOR: `a15c1d4eeb083e3d101f1be1705201e0e84b185f`
+INSPECTED PREDECESSOR: `2758a0496d61fc01b47e414fe260aa3aed16cca9`
 
-LAST VERIFIED RESULT: The audit-mandated source-premise repair and actual-graph regression through the exact Hall/pair-capacity interface remain intact with zero graph/formula mismatches and with `X_3` as mandatory hostile control. The rigid one-code branch now has a load-bearing bidirectional physical-pair reservoir, saturated equality classification, and corrected first-near-saturated (`z=u_{bar d}-k=1`) theorem. An immediate hostile re-read found one overstatement in the first z=1 draft: in the full-support branch not every internal Y-edge necessarily uses the A/U channel, so `e(Y)+e(Y,U_d)+e(U_{bar d})<=rho` was too strong. The error is preserved in v1 and repaired in `ONE_CODE_Z1_NEAR_SATURATION_V2.md`. With `c_Y` the A/U-certified internal Y traffic, `A=c_Y+e(Y,U_d)+e_-` is the true physical-hole use, `A<=rho`, and matched internal traffic satisfies `e(Y)-c_Y<=y-rho`. Writing `j=rho-A`, the exact normal form survives unchanged in substance: `E_- >= B-j-2e_-`, `Z>=Z0-j`, `j+e_-<=y`, where `B=(k+1)(p+k-1)` and `Z0=(k+1)(a-1)`. Hence when `B>=2y`, with `Ebase=B-2y` and `D0=Z0-u(p-lambda)`, the hole tradeoff still cancels exactly: `q+E_U >= Ebase+ceil([D0-Ebase]_+/2)`. The common-buffer branch is also valid: because its crossing layer uses exactly g matched witnesses per source, it saturates the global matched bound `P_P<=yg`, so internal Y-edges there really are forced into the A/U channel.
+LAST VERIFIED RESULT: The 19 September audit-mandated upstream repairs remain intact: the two source-tuple premises are independently re-derived at the raw/selected level used downstream, the actual-graph regression reaches the rooted/Hall/exact pair-capacity interface with zero recorded graph/formula mismatches, and `X_3` remains an executable hostile control. Staying on the audit-authorized rigid one-code line, the corrected `z=u_{bar d}-k=1` branch has now been sharpened in both support types. In full support, the literal graph cap `e_-=e(G[U_{bar d}])<=binom(k+1,2)` combines with the corrected normal form `E_- >= B-j-2e_-`, `Z>=Z0-j`, `j+e_-<=y` to give `E_->=[B-y-min(binomial(k+1,2),y)]_+` and an exact piecewise minimum for `q+E_U` for every `B`, including the formerly unresolved strip `B<2y`. In the cap-binding substrip `y+binom(k+1,2)<B<2y`, equality forces an explicit geometry: `Y` independent, no `Y--U_d` edges, `U_{bar d}=K_{k+1}`, every source has exactly one crossing hole, and matched crossing traffic saturates `P_P=yg`. In the common-buffer branch, any genuine buffer use now pays the previously unused `x`-sized A--U defect surcharge `Z>=k(a-1)+x+H`, in addition to positive buffer slack, yielding a clean unloaded/loaded residual dichotomy. A downstream `CHAN-P` score gate has also been derived after these local floors are fixed. Independent arithmetic replay checked 524,160 exact-elimination instances and 71,424 channel-minimization instances with zero mismatches. The bounded abstract diagnostic reduces the prior corrected z=1 support-union count from 78,167 to 77,338; these are diagnostic parameter states, not realizable-graph counts.
 
-UNPRESERVED WORK: None. The traffic-accounting defect was found, preserved, repaired, and reconciled before downstream promotion.
+UNPRESERVED WORK: None. The full-support edge-cap theorem, all-B residual elimination, cap-binding equality geometry, common-buffer loaded surcharge/dichotomy, channel gate, checker and audit summary are preserved in `project/research/post_ms/2026-09-19-one-code-z1-closure-v1/`.
 
-DEFERRED ADMIN: Root `README.md` has not yet been expanded with the new reservoir/z=1 package; refresh it at the next reviewer-facing status or daily-audit checkpoint. Historical Git-LFS warnings for seven legacy ZIP paths remain preserved and non-blocking.
+DEFERRED ADMIN: Root `README.md` has not yet been expanded with the one-code reservoir / corrected z=1 / z=1-closure packages. Refresh it at the next reviewer-facing status or daily-audit checkpoint. Historical Git-LFS warnings for seven legacy ZIP paths remain preserved and non-blocking.
 
-NEXT ACTION: Use only `ONE_CODE_Z1_NEAR_SATURATION_V2.md` for the load-bearing z=1 branch. Finish the common-buffer loaded/equality cases using the buffer slack surcharge, `Z>=k(a-1)+H`, and `(ONE-P)/(CHAN-P)`. For full support, attack the remaining truncation strip `B=(k+1)(p+k-1)<2y`; in the complementary `B>=2y` regime the exact hole variables have already been eliminated from the residual ledger. Do not proceed to z=2 until these z=1 subcases are exhausted. Keep the mixed `{4,5}` ladder closed and the four-exception gate subordinate.
+NEXT ACTION: Do not jump blindly to `z=2`. First attack the two surviving `z=1` equality/near-equality geometries with the exact pair bill `(ONE-P)` and pair-local `(CHAN-P)`: (i) the full-support cap-binding model with `U_{bar d}=K_{k+1}` and saturated matched crossing traffic, and (ii) the unloaded common-buffer inert-buffer extension of the saturated rectangular model. Feed any survivors through `delta=b(n-b)-m=r-f`, the exact `Z=u(p-lambda)+2q+E_U` identity, and rooted triangle count `Q=e(G[N(v)])`. If these equality models are ruled out or sharply classified, record the structural z=1 closure before moving to `z=2`. Keep the four-exception gate subordinate, the mixed `{4,5}` ladder closed, first-proof priority on Erdos #742 inactive, and `X_3` hostile.
 
 ## Mandatory audit reconciliation
 
@@ -24,7 +24,7 @@ Latest daily audit:
 - `project/research/post_ms/2026-09-19-daily-red-team-audit-v1/DAILY_RED_TEAM_AUDIT.md`
 - `project/research/post_ms/2026-09-19-daily-red-team-audit-v1/INDEPENDENT_SOURCE_TUPLE_REPROOF.md`
 
-The required priority order was: repair the two source-tuple premises; construct actual-graph regression through rooted/Hall objects with `X_3`; only then push exact pair-local one-code geometry and feed survivors into the rooted residual ledger. This session follows that order. The z=1 correction is itself a hostile audit of the new downstream theorem and is preserved rather than silently overwritten.
+The audit priority order was: (1) independently verify the two source-tuple premises, (2) construct actual-graph regression through rooted/Hall/pair-capacity objects with `X_3`, and only then (3) push exact pair-local one-code geometry and feed it back into the residual ledger. The first two obligations had been met before this run and were re-read before forward work. This run therefore follows, rather than departs from, the audit's proposed priorities. It uses only the corrected `ONE_CODE_Z1_NEAR_SATURATION_V2.md`; the invalidated full-support v1 claim is not used.
 
 ## Upstream trust boundary
 
@@ -32,29 +32,27 @@ The required priority order was: repair the two source-tuple premises; construct
 
 Package: `project/research/post_ms/2026-09-19-source-premise-graph-audit-v1/`.
 
-P1 is a direct raw-criticality fact at the correct beta orientation: one physical `(x,y)` cannot beta-certify two target fibres because fixed `N(x) cap N(y)` cannot equal two distinct singleton tight endpoints. P2 is selected-representative uniqueness for one physical rooted B-edge/source-coordinate obligation, not raw-witness uniqueness. `B_beta` counts these selected physical obligations. The earlier alpha-as-beta checker observation remains explicitly withdrawn.
+P1 is a direct raw-criticality fact at the correct beta orientation: one physical `(x,y)` cannot beta-certify two target fibres because the fixed set `N(x) cap N(y)` cannot equal two distinct singleton tight endpoints. P2 is selected-representative uniqueness for one physical rooted B-edge/source-coordinate obligation, not raw-witness uniqueness. The finite source-tuple capacity theorem remains an independently re-derived selected-system theorem conditional on these named graph-to-selected premises; it is not promoted as unconditional graph-level closure.
 
 ### Actual graph -> Hall / pair-capacity regression
 
 Package: `project/research/post_ms/2026-09-19-rigid-graph-regression-v1/`.
 
-The independent checker reconstructs actual D2C graphs through rooted partition, tight A/U codes, rooted witness slots, direct/non-direct A-edge criticality, gamma codes, A/U complementary witnesses, pair-local `L_P,S_P,Z_P,R_P,g_P,h_P`, exact `Ccap_P`, and exact Hall cuts. Recorded coverage: 3,540 root-policy instances, 114 qualified pair/slack instances, 147 `Ccap_P` checks, 96 one-sided-pair checks, 36 exact Hall-cut decompositions, zero mismatches. A genuine matched-B positive control is exercised.
+The independent checker reconstructs actual D2C graphs through rooted partition, tight A/U codes, rooted witness slots, direct/non-direct A-edge criticality, gamma codes, A/U complementary witnesses, pair-local `L_P,S_P,Z_P,R_P,g_P,h_P`, exact `Ccap_P`, and exact Hall cuts. Recorded coverage remains 3,540 root-policy instances, 114 qualified pair/slack instances, 147 `Ccap_P` checks, 96 one-sided-pair checks, 36 exact Hall-cut decompositions, zero mismatches, with a genuine matched-B positive control.
 
-No actual rigid complete Hall cut with `x>=3` was found in the bounded corpus. All rigid one-code results remain conditional structural deductions.
+No actual rigid complete Hall cut with `x>=3` has been found in the bounded corpus. The rigid one-code results below remain conditional structural deductions from graph-regressed upstream ingredients.
 
 ### Mandatory `X_3`
 
-The explicit fixture still verifies `n=12`, `m=32>M(12)=31`, diameter two, every edge critical, canonical root `a=3,b=8,p=4,u=0`, and `Q=12,r=f=delta=0`. None of the new mechanisms excludes it.
+The explicit fixture verifies `n=12`, `m=32>M(12)=31`, diameter two, every edge critical, canonical root `a=3,b=8,p=4,u=0`, and `Q=12,r=f=delta=0`. The live `z=1` branch requires `u_-=k+1>0`, so none of the new mechanisms excludes the known order-12 exception.
 
-## One-code purification and physical-pair reservoir
+## One-code purified interface retained
 
 Pair purification (`project/research/post_ms/2026-09-19-rigid-graph-regression-v1/ONE_CODE_PAIR_PURIFICATION.md`) gives `A_{bar d}=emptyset`, `h_P=0`, and with `g=g_P`,
 
 `k=(x-g)_+`.
 
-The key local inequalities retained are
-
-`S>=phi(g)+(x-g)_+(p-1)` when `p-y>=1`,
+The load-bearing local inequalities remain
 
 `R_code(S_P)[g+2S_P/L]+L_Y >= y(p+x+k)` (`ONE-P`),
 
@@ -62,84 +60,33 @@ and
 
 `L_Y+2(u_bar L_Y+yE_bar)/L >= y(p+2x-3g)` (`CHAN-P`).
 
-The bidirectional-reservoir package is
-
-`project/research/post_ms/2026-09-19-one-code-reservoir-v1/`.
-
-With `U_+=U_d`, `U_-=U_{bar d}`, `e_+=e(G[Y union U_+])`, `e_-=e(G[U_-])`, the A/U channel, same-code `Y--U_+` channel and same-code `U_---U_-` channel inject into the same physical `Y x U_-` pairs. Thus
+The bidirectional reservoir remains
 
 `yk+e_++e_- <= y u_-`,
 
 `e_++e_- <= y(u_--k)`,
 
-and
-
 `L[yk+e_++e_-] <= u_-L_Y+yE_-`.
 
-The exact crowding/reservoir cylinder is
+## Corrected `z=1` base theorem
 
-`[(y+u_+)(y+u_+-T0)-u_+-(L_Y+E_+)]_+`
-` +[u_-(u_--T0-1)-E_-]_+ <= 2y(u_--k)`.
-
-A relaxed diagnostic adds 910 robust arithmetic exclusions beyond the earlier shared gamma/U floor; this is not a graph count.
-
-## Saturated layer `z=0`
-
-At `u_-=k>0`, the crossing certificate system is a complete rectangular witness transversal. Exact degree counting gives
-
-`E_- >= k(p+k-2)`,
-
-`L_Y >= y(p-g+u_+) >= y(p-g)`,
-
-hence
-
-`S >= max(phi(g),y(p-g))+k(p+k-2)`.
-
-The saturated U-slack feeds directly into the exact residual `delta=r-f` ledger. The bounded diagnostic removes 22,998 previously saturation-compatible parameter states.
-
-## Corrected first near-saturated layer `z=1`
-
-Load-bearing file:
+Load-bearing predecessor:
 
 `project/research/post_ms/2026-09-19-one-code-reservoir-v1/ONE_CODE_Z1_NEAR_SATURATION_V2.md`.
 
-Preserved but superseded for one full-support bookkeeping statement:
+Preserved but superseded for one full-support statement:
 
 `ONE_CODE_Z1_NEAR_SATURATION.md`.
 
-The score-gate checker/summary remain valid because their two safe floors were not affected by the correction.
+The v1 assertion `e(Y)+e(Y,U_d)+e_-<=rho` is **invalidated** in full support. The correct variables are
 
-### Common buffer
+`A=c_Y+e(Y,U_d)+e_-<=rho`,
 
-If the crossing witness union has size `k`, every source uses the same core `W_0`, and one buffer `b` is unused by crossing certificates. The crossing layer then uses exactly `yg` matched certificates and saturates `P_P<=yg`, so internal Y-edges cannot use matched certificates. All auxiliary objects genuinely route through distinct `Y x {b}` pairs. Therefore:
+`m_Y=e(Y)-c_Y<=y-rho`,
 
-- `W_0` is independent;
-- every `U_-` edge is a buffer-core edge sourced at `b`;
-- with `H=e(Y)+e(Y,U_d)+e_-`, `H<=y`;
-- `E_core>=k(p+k-2)`;
-- `Z>=k(a-1)+H`;
-- if `H>0`, `d_X(b)=0` and `epsilon_b>=[p-y+k+e_+]_+`.
+`j=rho-A`,
 
-### Full support — corrected variables
-
-If all `k+1` vertices are crossing witnesses, let
-
-- `rho` = number of crossing holes;
-- `c_Y` = internal Y-edges selected in the A/U channel;
-- `m_Y=e(Y)-c_Y` = internal Y matched traffic;
-- `A=c_Y+e(Y,U_d)+e_-` = actual auxiliary physical-hole use.
-
-Then
-
-`m_Y<=y-rho`,
-
-`A<=rho`.
-
-Put
-
-`j=rho-A`.
-
-The correct exact normal form is
+with
 
 `E_- >= B-j-2e_-`,
 
@@ -153,35 +100,140 @@ where
 
 `Z0=(k+1)(a-1)`.
 
-Thus the safe floors from v1 survive:
+## New `z=1` closure package
 
-`E_->=[B-2y]_+`,
+Package:
 
-`Z>=k(a-1)+(x-1)`.
+`project/research/post_ms/2026-09-19-one-code-z1-closure-v1/`.
 
-When `B>=2y`, let
+### 1. Full-support finite-edge cap
 
-`Ebase=B-2y`,
+Put
+
+`K=binom(k+1,2)`, `c=min(K,y)`.
+
+Since `|U_{bar d}|=k+1`,
+
+`e_-<=K`.
+
+Together with the corrected normal form this gives
+
+> `E_- >= [B-y-c]_+`.                                    `(CAP-E)`
+
+This dominates the previous `[B-2y]_+` floor whenever `K<y`.
+
+### 2. Exact residual elimination for every `B`
+
+Let
 
 `D0=Z0-u(p-lambda)`.
 
-Then the hole/edge tradeoff cancels exactly:
+Then the exact minimum forced by the corrected full-support normal form and the finite edge cap is:
 
-`q+E_U >= Ebase+ceil([D0-Ebase]_+/2)`,
+- if `B<=y`,
+  `q+E_U >= ceil([D0-y]_+/2)`;
+- if `y<B<=y+c`,
+  `q+E_U >= ceil([D0+B-2y]_+/2)`;
+- if `B>y+c`, putting `E*=B-y-c`,
+  `q+E_U >= E*+ceil([D0-B+2c]_+/2)`.
 
-so
+In all cases
 
-`f >= (p-lambda)(p+u)+Ebase+ceil([D0-Ebase]_+/2)-delta`.
+`f >= (p-lambda)(p+u)+(the applicable bound)-delta`.
 
-The bounded z=1 diagnostics are unchanged by the repair: 86,820 states admit an older-floor z=1 choice; 78,167 retain either corrected support type under the safe new score gates, so 8,653 are removed. Diagnostic only.
+Thus the old scalar stop line `B<2y` has been removed. When `K>=y` and `B>2y`, the third case specializes exactly to the previously verified formula; when `K<y`, it is stronger.
+
+### 3. Cap-binding equality geometry
+
+Inside the formerly unresolved strip, if
+
+`y+K<B<2y`,
+
+then `K<y` and the minimum full-support U-slack is
+
+`E*=B-y-K`.
+
+Equality `E_-=E*` forces
+
+`j=y-K`, `e_-=K`, `rho=y`, `A=K`,
+
+and therefore
+
+`G[U_{bar d}]=K_{k+1}`,
+
+`e(Y)=0`,
+
+`e(Y,U_d)=0`,
+
+with matched crossing traffic saturating `P_P=yg`. The equality model also satisfies
+
+`L(yk+K) <= (k+1)L_Y+yE_-`
+
+and the same-code clique payment
+
+`S>=ceil((k+1)L/2)`.
+
+The package records stability inequalities measuring the excess slack above `E*` by distance from this cap-binding corner.
+
+### 4. Common-buffer loaded surcharge and residual dichotomy
+
+Let `H=e(Y)+e(Y,U_d)+e_-`, with crossing core `W_0` of size `k` and buffer `b`.
+
+If `H>0`, the corrected predecessor already gives `d_X(b)=0`. Recording the resulting X--buffer nonedges yields the stronger defect floor
+
+> `Z>=k(a-1)+x+H`.                                       `(CB-Z+)`
+
+In the principal `p-y>=1` regime, with
+
+`Ecore=k(p+k-2)`,
+
+`Dcore=k(a-1)-u(p-lambda)`,
+
+the two support geometries satisfy:
+
+- unloaded `H=0`:
+  `q+E_U >= Ecore+ceil([Dcore-Ecore]_+/2)`;
+- loaded `H>0`, putting `Eload=Ecore+(p-y)+k`:
+  `q+E_U >= Eload+ceil([Dcore+x+1-Eload]_+/2)`.
+
+Thus any genuine buffer use pays both positive buffer slack and an `x`-sized defect surcharge.
+
+### 5. Branch-specific channel gate
+
+At `z=1`, `(CHAN-P)` becomes
+
+`alpha L_Y+beta E_- >= N`,
+
+where
+
+`alpha=L+2(k+1)`, `beta=2y`, `N=Ly(p+2x-3g)`.
+
+With gamma floor `A0=phi(g)` and any valid branch-specific `E0` on `E_-`, a necessary scalar consequence is
+
+> `S >= A0+E0+ceil([N-alpha A0-beta E0]_+/max(alpha,beta))`. `(CHAN-Z1)`
+
+This is a contradiction gate after local geometry is fixed, not a replacement for the pair-local inequality.
+
+## Arithmetic audit / diagnostic
+
+Companion checker:
+
+`project/research/post_ms/2026-09-19-one-code-z1-closure-v1/check_one_code_z1_closure_refinement.py`.
+
+Recorded independent arithmetic replay:
+
+- 524,160 full-support exact-elimination parameter instances, zero mismatches;
+- 71,424 integer channel-minimization instances, zero mismatches.
+
+On the prior coarse z=1 diagnostic box, the previous corrected support union was 78,167 abstract states. The finite-edge cap reduces this to 77,339, and `(CHAN-Z1)` to 77,338. Relative to the older shared-floor 86,820 possibilities, the safe rejection count is now 9,482 rather than 8,653. These are abstract arithmetic diagnostics only, not graph counts.
 
 ## Trust boundary / stop-pivot rules
 
-- The z=1 v1 statement `e(Y)+e(Y,U_d)+e_-<=rho` is **invalidated** for full support and must not be used. The v2 `A<=rho` repair supersedes it.
-- The corrected residual normal form and `B>=2y` exact elimination survive.
-- Any actual graph/formula mismatch is an immediate blocker.
-- Do not treat abstract parameter counts as D2C graph counts.
-- Exhaust common-buffer loaded/equality cases and the full-support `B<2y` strip before z=2.
-- Feed survivors through `delta=b(n-b)-m=r-f`, `Q=e(G[N(v)])`, and exact rooted residual identities before adding another global scalar relaxation.
-- Keep `X_3` hostile, the mixed `{4,5}` ladder closed, and first-proof priority on Erdos #742 inactive.
+- Use the corrected v2 full-support bookkeeping only; the v1 `H<=rho` statement remains invalidated.
+- The finite edge cap is a literal graph bound; the piecewise residual formula is an exact integer consequence of the corrected normal form plus that cap and has been independently brute-force checked.
+- The common-buffer `+x` surcharge uses the already-proved fact `H>0 => d_X(b)=0`; it introduces no new witness premise.
+- Any actual graph/formula mismatch remains an immediate blocker.
+- Do not treat finite parameter counts as D2C graph counts.
+- Before moving to `z=2`, use `(ONE-P)/(CHAN-P)` on the two explicit z=1 equality/near-equality geometries and feed survivors through the rooted residual and triangle ledger.
+- Keep `X_3` hostile, the mixed `{4,5}` ladder closed, the four-exception gate subordinate, and first-proof priority on Erdos #742 inactive.
 <!-- CURRENT-STATUS:END -->
