@@ -7,19 +7,19 @@
 The false all-order 2019 Dailly–Foucaud–Hansberg Conjecture 3 is **not** the target. The published 2024 D2C graph `X_3` on 12 vertices and 32 edges has `M(12)=31` and remains a mandatory negative control. The mixed `{4,5}` selected-excess ladder is closed. First-proof priority on Erdős #742 is not an optimization target.
 
 <!-- CURRENT-STATUS:START -->
-CHECKPOINT CLASS: `ONE_CODE_Z1_POSITIVE_BUFFER_MINIMAL_RESERVOIR_2026_09_19`
+CHECKPOINT CLASS: `ONE_CODE_Z1_MINIMAL_RESERVOIR_PAIR_HALL_2026_09_19`
 
 WORK MODE: `MATH`
 
-INSPECTED PREDECESSOR: `e322ccce67ceb0ac3600a6847f740f7ecc7692b3`
+INSPECTED PREDECESSOR: `bb5487bf01e06f541af1a0ffcf9352dfdaa1675c`
 
-LAST VERIFIED RESULT: `In the positive-buffer unloaded common-buffer equality branch, the minimal outside-reservoir layer m=g+1 forces all k core heads to share one A-code c_* and one outside witness z_* of code bar c_*. The core code class has exactly k A-vertices and its complement at most one A-vertex; the core class is independent. The common witness is anticomplete to W_0 and has the exact slack identity epsilon(z_*)=t+k+A_*+M_*. Its outside-neighbour star is anticomplete to the whole core head block, yielding e(X)<=binom(g,2)+kA_* and an exact Hall-slack lower bound. These feed a strengthened scorecard and a one-dimensional rooted residual edge/nonedge tradeoff. On the bounded diagnostic, exact minimization of the m=g+1 score over A_*,M_* rejects 10,250 of the 133,835 predecessor repaired abstract states; these are parameter diagnostics, not graph counts.`
+LAST VERIFIED RESULT: `In the positive-buffer unloaded common-buffer minimal outside-reservoir layer m=g+1, the X- and Y-slack bills are disjoint and therefore additive: L_A=L_X+L_Y. Writing A=A_*, M=M_*, N=u-k-2 and Q=x(x-T0)+k(x-1)+x-g(g-1)+kN, the exact score/Hall defect term is H(A,M)=A+M+[Q-(2k-1)A-kM]_+. Its integer minimum has a closed four-case formula obtained by treating A-defects as unit-cost Hall-relief capacity 2k-1 and M-defects as unit-cost capacity k. This yields S>=E_*+y(p+2)+H_min. Pair-local score is retained exactly: for P={d,bar d}, S_P>=P_0=k(p+k)+t+y(p+2), while compulsory score outside P is at least O_0+H(A,M), O_0=t+k+g[t-k+1]_+. Thus above threshold P_0<=S_P<=C0-O_0-H(A,M). In this geometry CROWD is strictly implied by L_Y>=y(p+2), because 3y-D_code=p-2u-3x-1, and ONE-P is implied with margin y(g+2) once the exact crossing capacity 2xy<=Ccap_P is imposed. Defining sigma_P as the least local score meeting exact Ccap_P gives the compact pair gate H(A,M)<=C0-O_0-sigma_P. The admissible M-values are then intersected with QE-MR rather than optimized independently. The bounded diagnostic rejects 13,198 of the previous 123,585 abstract m=g+1 survivors, leaving 110,387; in the t=1 slice it rejects 116 of 5,520, leaving 5,404. On that bounded box sigma_P=P_0 for every new survivor, so exact Ccap adds no further finite rejection there.`
 
-UNPRESERVED WORK: `None. The hand theorem and diagnostic checker are preserved under project/research/post_ms/2026-09-19-minimal-outside-reservoir-v1/.`
+UNPRESERVED WORK: `None. The theorem note and diagnostic checker are preserved under project/research/post_ms/2026-09-19-minimal-reservoir-pair-hall-v1/.`
 
 DEFERRED ADMIN: `README remains lower-frequency. Refresh reviewer-facing status at the next daily adversarial checkpoint unless repository integrity requires an earlier repair.`
 
-NEXT ACTION: `Remain on m=g+1. First attack the equality geometry A_*=0, where z_* is complete to H_M and therefore H_0 is isolated inside G[X]. Intersect the resulting exact L_X/Z_X allocation with pair-local Ccap_P, ONE-P and CROWD without replacing S_P by total C0; then feed the survivor geometry into the rooted unused-slot/Hamming ledger and QE-MR. Only if the minimal reservoir survives should m=g+2 be opened. Keep loaded r_b>0, extra buffer slack and the four-exception gate subordinate; do not move to z=2.`
+NEXT ACTION: `Stay on m=g+1. Use the exact admissible-M set M_adm={M: M+h_A(Q-kM)<=C0-O_0-sigma_P} together with QE-MR to classify the low-score/low-residual intersection. The key tension is now explicit: score/Hall prefers the more efficient A-defects when k>1, whereas rooted residual relief sees only M-defects and therefore prefers M. Feed the forced A/M allocation into the rooted unused-slot/Hamming ledger and direct/Hamming credit before opening m=g+2. Keep loaded r_b>0, extra buffer slack, z=2 and the four-exception gate subordinate.`
 <!-- CURRENT-STATUS:END -->
 
 ---
@@ -30,11 +30,11 @@ The latest daily red-team audit remains
 
 `project/research/post_ms/2026-09-19-daily-red-team-audit-v1/DAILY_RED_TEAM_AUDIT.md`.
 
-Its verified findings, invalidations and stop/pivot rules remain binding.
+Its verified findings, invalidations, confidence changes and stop/pivot rules remain binding.
 
 ### Source-tuple premises
 
-`project/research/post_ms/2026-09-19-source-premise-graph-audit-v1/SOURCE_PREMISE_REPAIR.md` re-establishes the two named upstream premises at the exact level used:
+`project/research/post_ms/2026-09-19-source-premise-graph-audit-v1/SOURCE_PREMISE_REPAIR.md` was reread before the present extension. It establishes the two named upstream premises at the exact level used:
 
 1. distinct physical beta-source identity follows directly from raw unique-common-neighbour criticality;
 2. global selected `(source,coordinate)` uniqueness is a selected-representative convention for one physical obligation, not raw witness uniqueness.
@@ -43,13 +43,13 @@ The finite source-tuple capacity theorem remains conditional on the broader root
 
 ### Independent actual-D2C regression
 
-`project/research/post_ms/2026-09-19-rigid-graph-regression-v1/` independently reconstructs actual D2C graphs through the maximum-degree rooted partition, tight antipodes, A/U codes, rooted slots, A-edge criticality channels, gamma codes, Hall cuts, pair-local quantities and exact `Ccap_P`.
+`project/research/post_ms/2026-09-19-rigid-graph-regression-v1/RIGID_GRAPH_LEVEL_REGRESSION.md` was also reread. The recorded actual-graph run has 3,540 root-policy instances, 147 pair-capacity checks, 36 exact Hall-cut decompositions and zero graph/formula mismatches. `X_3` passes.
 
-Recorded run: 3,540 root-policy instances, 147 pair-capacity checks, 36 exact Hall-cut decompositions, zero graph/formula mismatches. `X_3` passes.
+Coverage limitation remains explicit: no graph in the bounded corpus realizes the full rigid complete Hall cut with `x>=3`, `M_X=E_X=0`. All one-code rigid deductions therefore remain conditional hand implications, not empirical graph classifications.
 
-Coverage limitation remains explicit: the bounded corpus contains no actual D2C fixture realizing the full rigid complete Hall cut with `x>=3`, `M_X=E_X=0`. All one-code rigid conclusions below therefore remain hand implications conditional on those hypotheses.
+The exact one-code `Ccap_P`, `(ONE-P)` and `(CROWD)` obligations remain mandatory. In the present minimal-reservoir equality geometry, the new theorem proves that `(CROWD)` and `(ONE-P)` are consequences of stronger physical bills once exact crossing `Ccap_P` is retained; they are not silently dropped.
 
-The exact one-code `Ccap_P`, `(ONE-P)` and `(CROWD)` constraints remain mandatory on every survivor. The four-exception gate is subordinate.
+The four-exception gate remains subordinate.
 
 ---
 
@@ -61,15 +61,13 @@ Do not reopen:
 - the zero-buffer `g=p` common-buffer branch, closed in `2026-09-19-zero-buffer-complete-separation-v1`;
 - the invalid positive-buffer matched reverse Orientation B and any reverse-deficit scalarization that depended on it.
 
-The repaired positive-buffer theorem is preserved in
+The repaired positive-buffer theorem is
 
 `project/research/post_ms/2026-09-19-positive-buffer-reverse-collapse-v1/POSITIVE_BUFFER_REVERSE_COLLAPSE_AND_HEAD_DICHOTOMY.md`.
 
-It proves in the first positive-buffer equality geometry that **all** buffer--X certificates use outside unmatched witnesses, with no matched channel.
-
 ---
 
-## 3. Active branch before the present run
+## 3. Active branch
 
 Rigid one-code complete cut:
 
@@ -78,155 +76,175 @@ Rigid one-code complete cut:
 - `g=g_P`, `k=x-g>0`, `t=p-g>=1`;
 - `U_-=W_0 dotcup {b}`, `|W_0|=k`;
 - `e(Y)=e(Y,U_d)=e(G[U_-])=0`;
-- unloaded buffer `r_b=0`;
-- first buffer equality `epsilon_b=t`, so `b--X` and `b--U_o` are complete;
-- `X=H_M dotcup H_0`, with `|H_M|=g`, `|H_0|=k`;
+- unloaded buffer `r_b=0` and first buffer equality `epsilon_b=t`, so `b--X` and `b--U_o` are complete;
+- `X=H_M dotcup H_0`, `|H_M|=g`, `|H_0|=k`;
 - H_M heads have pairwise distinct singleton A-code classes;
 - every buffer--X edge is outside-U certified;
-- distinct outside witness population `m>=g+1`, hence `u>=x+2`;
-- `L_Y>=y(p+2)`;
-- current physical floors `(S+)`, `(Z+)`, exact rooted residual feedback, `Ccap_P`, `(ONE-P)`, `(CROWD)` remain valid.
+- minimal outside-reservoir `m=g+1` forces all H_0 heads to share code `c_*` and common outside witness `z_*` of code `bar c_*`;
+- H_0 is independent;
+- `u>=x+2` and `L_Y>=y(p+2)`;
+- `A=A_*=g-d_{H_M}(z_*)`, `M=M_*=(u_o-1)-d_{U_o\{z_*}}(z_*)`;
+- `epsilon_{z_*}=t+k+A+M`.
 
-The predecessor diagnostic left 133,835 abstract equality states in the coarse box; no graph-realizability interpretation is permitted.
+The mandatory negative control `X_3` has `u=0` and never enters these hypotheses.
 
 ---
 
-## 4. New minimal-reservoir classification: `m=g+1`
+## 4. New pair/Hall allocation theorem
 
 Primary note:
 
-`project/research/post_ms/2026-09-19-minimal-outside-reservoir-v1/MINIMAL_OUTSIDE_RESERVOIR_CORE_COLLAPSE.md`.
+`project/research/post_ms/2026-09-19-minimal-reservoir-pair-hall-v1/MINIMAL_RESERVOIR_PAIR_HALL_ALLOCATION.md`.
 
-At `m=g+1`, the g singleton H_M heads consume g distinct witnesses and the core block has exactly one remaining selected outside witness `z_*`.
+Put
 
-### 4.1 Core-code collapse
+`N=u-k-2`, `s_1=[t-k+1]_+`,
 
-All core heads use `z_*`, so
+`E_*=k(p+k)+2t+k+g s_1`, `Y_0=y(p+2)`,
 
-`c(x)=c_*` for all `x in H_0`, and `c(z_*)=bar c_*`.
+`B_X=x(x-T_0)+k(x-1)+x-g(g-1)`, `Q=B_X+kN`.
 
-Moreover
+The star separation and exact Hall identity give
 
-> `n_{c_*}=k`, `n_{bar c_*}<=1`.
+> `L_X>=[Q-(2k-1)A-kM]_+`.
 
-No H_M head can share `c_*`, because H_M head codes are singleton A-code classes.
+Because X and Y partition A,
 
-### 4.2 Core independence
+> `L_A=L_X+L_Y`.
 
-`G[H_0]` is independent. A hypothetical core-core edge has no valid criticality witness: matched feet cannot distinguish equal codes; Y and b see both; X and outside-U witnesses carry extra common neighbours; and a graph-fixed W_0 witness shares a tight matched neighbour because `c_*` is neither `d` nor `bar d`.
+Hence
 
-Hence the existing exact code-crowding identity gives
+> `S>=E_*+Y_0+H(A,M)`,
+>
+> `H(A,M)=A+M+[Q-(2k-1)A-kM]_+`.
 
-> `L_{c_*}>=[k(k-T_0)]_+`, `T_0=a-p`.
+### Exact defect-currency elimination
 
-### 4.3 Exact common-witness slack
+Let `c_A=2k-1`, `c_M=k`, `C_A=c_A g`, `C_T=c_A g+c_M N`. Then
 
-Every `w in W_0` is nonadjacent to `z_*`.
+`H_min=0` for `Q<=0`;
+
+`H_min=ceil(Q/c_A)` for `0<Q<=C_A`;
+
+`H_min=g+ceil((Q-C_A)/c_M)` for `C_A<Q<=C_T`;
+
+`H_min=g+N+Q-C_T` for `Q>C_T`.
+
+Thus
+
+> `S>=E_*+Y_0+H_min`.
+
+This corrects an optimization asymmetry in the previous handoff: `A=0` is preferred by the rooted residual ledger, but for `k>1` an A-defect buys `2k-1` Hall-relief units while an M-defect buys only k. Score/Hall can therefore prefer `A>0`. The line is not abandoned; the two ledgers must be intersected.
+
+---
+
+## 5. Exact pair-local allocation
+
+For the outside pair `P={d,bar d}`,
+
+`K_P=k(p+k)+t`,
+
+> `S_P>=P_0:=K_P+Y_0`.
+
+Put
+
+`O_0=t+k+g s_1`, so `E_*=K_P+O_0`.
+
+All X-slack and the remaining compulsory unmatched slack lie outside P, so above threshold
+
+> `P_0<=S_P<=C0-O_0-H(A,M)`.
+
+This is the local score box used for capacity; no replacement `S_P=C0` is allowed.
 
 Let
 
-`A_*=g-d_{H_M}(z_*)`,
+`D_code=5p+5u-3lambda-2`,
 
-`M_*=(u_o-1)-d_{U_o\{z_*}}(z_*)`, `u_o=u-k-1`.
+`R_code(s)=max(0,floor((D_code+sqrt(D_code^2+12s))/3))`.
 
-Then the common witness has the exact degree-slack identity
+Define
 
-> **`epsilon_{z_*}=t+k+A_*+M_*`.**
+> `sigma_P=min{s>=P_0: R_code(s)[g+2s/(lambda+1)]>=2xy}`.
 
-In particular `epsilon_{z_*}>=t+k`; the generic multiplicity floor had only exposed `t` for a witness carrying all k core heads.
+Then every survivor must satisfy
 
-With `s_1=[t-k+1]_+`, the unmatched slack satisfies
+> `H(A,M)<=B_P:=C0-O_0-sigma_P`,
 
-> `E_U>=k(p+k)+2t+k+g s_1+A_*+M_*`.
+and therefore
 
-### 4.4 Star separation
+> `H_min<=B_P`.
 
-If an outside vertex `w!=z_*` is adjacent to `z_*`, then it is anticomplete to all H_0. If an H_M head is adjacent to `z_*`, it is likewise anticomplete to H_0.
+### Mandatory trio reconciliation
 
-Thus, writing `d_*=u_o-1-M_*`,
+The crowding term has
 
-> `e_bar(H_0,N_{U_o}(z_*))=k d_*`,
->
-> `e(X)<=binom(g,2)+kA_*`.
+`3y-D_code=p-2u-3x-1`,
 
-This is a structural degree-vs-separation dichotomy, not witness-incidence bookkeeping.
+so `L_Y>=y(p+2)` exceeds the positive `(CROWD)` right side by `y(2u+3x+3)`.
 
-### 4.5 Hall feedback
+Further, exact crossing capacity `Ccap_P>=2xy` plus `L_Y>=y(p+2)` implies `(ONE-P)` with margin `y(g+2)`.
 
-The rigid exact Hall identity
-
-`2e(X)=x(x-T_0)-L_X+Z_X`
-
-and the physical X--U holes give
-
-> `Z_X>=k(x-1)+x+A_*+k d_*`,
-
-hence
-
-> `L_X >= [x(x-T_0)+k(x-1)+x+A_*+k d_* -g(g-1)-2kA_*]_+`.
-
-The cheapest `A_*=0` geometry therefore has `z_*` complete to H_M and the entire core block H_0 isolated inside `G[X]`.
-
-### 4.6 Score and rooted residual
-
-The minimal-reservoir score floor is
-
-`S>=k(p+k)+2t+k+g s_1+A_*+M_*`
-
-`   +max{y(p+2),phi(g),[k(k-T_0)]_+,LX_*(A_*,M_*)}`.
-
-For physical A--U holes,
-
-> `Z>=Z_+ + A_*+k(u_o-1-M_*)`,
-
-where the predecessor `Z_+=ka+y(g+2)+g` remains valid.
-
-Putting
-
-`E_*=k(p+k)+2t+k+g s_1`,
-
-`R_0=Z_+ + k(u_o-1)-u(p-lambda)-E_*`,
-
-the exact rooted identity reduces to the one-dimensional edge/nonedge tradeoff
-
-> `q+E_U >= min_{0<=M<=u_o-1}`
-> ` {E_*+M+ceil([R_0-(k+1)M]_+/2)}`.
-
-The variable `A_*` cancels from `Z-E_U` and only increases the objective directly; the residual minimizer therefore prefers `A_*=0`. This identifies the next equality geometry rather than merely lowering a scalar bound.
+Thus exact crossing `Ccap_P` is the independent pair gate in this equality layer, while `(ONE-P)` and `(CROWD)` remain explicitly checked consequences.
 
 ---
 
-## 5. Diagnostic support
+## 6. Pair/residual intersection
+
+For fixed M, define `D=Q-kM`, `c_A=2k-1`, and
+
+`h_A(D)=0` if `D<=0`;
+
+`h_A(D)=ceil(D/c_A)` if `0<D<=c_A g`;
+
+`h_A(D)=g+D-c_A g` if `D>c_A g`.
+
+Then
+
+> `M_adm={0<=M<=N: M+h_A(Q-kM)<=B_P}`
+
+is exactly the set of M-values which can be completed by some A-value without violating the pair-local score/capacity gate.
+
+The rooted residual must now be minimized only over this set:
+
+> `q+E_U >= min_{M in M_adm}`
+> `{E_*+M+ceil([R_0-(k+1)M]_+/2)}`.
+
+This is the live structural pinch: Hall/score tends to spend A, rooted residual tends to spend M.
+
+---
+
+## 7. Diagnostic support
 
 Checker:
 
-`project/research/post_ms/2026-09-19-minimal-outside-reservoir-v1/check_minimal_outside_reservoir.py`.
+`project/research/post_ms/2026-09-19-minimal-reservoir-pair-hall-v1/check_minimal_reservoir_pair_hall.py`.
 
-On the same coarse bounded box as the predecessor positive-buffer diagnostic, 133,835 abstract states survive the already-promoted population and score floors (5,815 with `t=1`).
+It brute-force verifies the closed `H_min` formula on a finite integer box and replays the same coarse parameter scan as the preceding diagnostic.
 
-For the `m=g+1` comparator only, exact minimization over integer `A_*` and `M_*` rejects 10,250, leaving 123,585. In the `t=1` slice, 295 are rejected and 5,520 remain.
+Starting from the preceding 123,585 abstract `m=g+1` survivors:
 
-These are abstract parameter-state diagnostics, not graph counts. The calculation does not claim to exclude `m>g+1`.
+- 13,198 are rejected by the additive Hall score;
+- 110,387 remain.
+
+For `t=1`:
+
+- 116 of 5,520 are rejected;
+- 5,404 remain.
+
+In this bounded scan, every sharpened-score survivor has `sigma_P=P_0`, so the exact pair gate adds no further rejection. This is diagnostic only and must not be promoted to a general theorem.
+
+These are abstract integer parameter states, not graph counts.
 
 ---
 
-## 6. Mandatory negative control
+## 8. Next action
 
-`X_3`: `n=12`, `m=32>M(12)=31`, canonical root `a=3`, `b=8`, `p=4`, `u=0`, `Q=12`, `r=f=delta=0`.
+Remain at `m=g+1`.
 
-The active branch requires `k>0`, a common buffer, positive buffer slack and `m>=g+1` outside unmatched witnesses. `X_3` never enters the branch. Any later simplification that excludes it without an explicit branch/size hypothesis is a red flag.
+1. Classify `M_adm` and the minimizers of the intersected `QE-MR` bound, especially the transition where Hall wants A-defects but residual wants M-defects.
+2. Feed the resulting forced A/M allocation into the rooted unused-slot/Hamming/direct-credit ledger; this is now more promising than another total-score relaxation.
+3. Preserve exact pair-local `S_P` and `Ccap_P` throughout.
+4. If the low-score/low-residual intersection survives, classify its graph geometry before opening `m=g+2`.
+5. Keep loaded buffer `r_b>0`, extra buffer slack, `z=2` and the four-exception gate subordinate.
 
----
-
-## 7. Next action
-
-Stay on `m=g+1` and start from `A_*=0`.
-
-1. Use `z_*--H_M` completeness plus `H_0` isolation in `G[X]` to sharpen the exact Hall allocation, not merely total `L_X`.
-2. Intersect that allocation with exact `Ccap_P`, `(ONE-P)` and `(CROWD)` while retaining `S_P` and the outside-pair slack separately.
-3. Feed the survivor into the local rooted unused-slot/Hamming ledger and `(QE-MR)`.
-4. If the equality layer fails, quantify the first `A_*>0` / `M_*>0` stability cost.
-5. Only if `m=g+1` survives should `m=g+2` be opened.
-6. Keep `r_b>0`, extra buffer slack and the four-exception gate subordinate. Do not move to `z=2` while this line remains live.
-
-Promotion level remains: internal hand structural theorem conditional on rigid one-code hypotheses, supported by exact arithmetic diagnostics, not graph realizability evidence and not an eventual theorem.
+Promotion level remains: internal hand structural theorem conditional on the rigid one-code hypotheses, with exact arithmetic diagnostics; not graph-realizability evidence and not an eventual theorem.
