@@ -1,133 +1,119 @@
 # CURRENT_STATE.md
 
 **Canonical repository:** `paullenz/MurtySimon742`  
-**Date:** 2026-09-19  
+**Date:** 2026-09-20  
 **Active target:** eventual / sufficiently-large second-extremal structure for dense diameter-2-critical graphs around `M(n)=floor((n-1)^2/4)+1`.
 
 The false all-order 2019 Dailly–Foucaud–Hansberg Conjecture 3 is **not** the target. The published 2024 D2C hostile control `X_3` has 12 vertices and 32 edges while `M(12)=31`; it remains mandatory. The mixed `{4,5}` selected-excess ladder is closed. First-proof priority on Erdős #742 is not an optimization target.
 
 <!-- CURRENT-STATUS:START -->
-CHECKPOINT CLASS: `ONE_CODE_Z1_FIRST_STRICT_FUNNEL_EXACT_CORE_PINCH_2026_09_19`
+CHECKPOINT CLASS: `DAILY_RED_TEAM_ALL_R_PINCH_AUDIT_2026_09_20`
 
-WORK MODE: `MATH`
+WORK MODE: `AUDIT`
 
-INSPECTED PREDECESSOR: `7f5e2800ba891aec6618c3d53ecc3e7cc7ec481e`
+INSPECTED PREDECESSOR: `1b31449427c81b76b3da9140e61dd55b18a739f0`
 
-LAST VERIFIED RESULT: `The interrupted first-strict funnel package has now been independently repaired and re-audited inside the same conditional rigid one-code complete-cut branch. The unique-hole frontier remains: epsilon_b=p-g+1 forces one unique buffer--X hole ba_0, b is complete to U_o and X\{a_0}, every surviving buffer--X edge has an outside-U certificate, and the rooted matched-edge funnel splits heads into Type F and Type R. Independent re-derivation verifies Type-R overlap collapse, pairwise-disjoint nonempty agreement blocks for distinct buffer-neighbour code classes, graph-fixed selected witnesses for Type-R classes, LY-STRICT, the weak chi=1 EW/Q surcharge, F-EPS, the Type-F Hamming-slot transfer, R-CLASS, and m=1 all-F/all-R polarization. A missing physical reservoir condition m<=|U_o|=u-k-1 was found and repaired; the interrupted 188,912 survivor count is superseded. A second audit restored the already-proved exact common-core identity E_core=k(p+k-1)+H_core with H_core>=k-1 in the weakest unique-hole route; the broad-box exact-core diagnostic independently replays as 248,798 coarse rows, 208,684 pair survivors, and 174,769 final abstract survivors. These are parameter diagnostics, not D2C graph counts. In the m=1 branch, every geometry except one literal all-R equality pinch pays r>=a+y. The only pinch avoiding that discrete +y bill has s=1, I=I_0, all X in one tight code class C at Hamming distance one from d, a_0 isolated in G[X], one outside witness z with N_A(z)={a_0}, epsilon_z>=p-1, epsilon_a0>=p-y+1, and full-class capacity x<=R_A.`
+LAST VERIFIED RESULT: `The 20 September daily adversarial audit found no fatal contradiction in the final repaired one-code / first-strict / one-witness / all-R equality-pinch chain, but it keeps the entire chain conditional on the rigid complete-cut hypotheses. Independent replays reproduced the source-premise atlas counts (21 D2C classes, 126 roots, 2 beta and 1 alpha raw certificates, zero P1/raw-P2 collisions), X_3 as a 12-vertex 32-edge D2C hostile control, the exact-core diagnostic (248,798 coarse; 208,684 pair; 174,769 final), and the latest all-R diagnostic (173,347 predecessor final; 124,528 new final; 48,819 rejected). The latest hand package survives spot-checking of z-neighbour purification, e(X)<=Nd, witness self-pricing, the piecewise e_req formula, and z/a0 score conservation. A major coverage gap remains: the actual-graph regression has zero positive rigid complete Hall cuts with x>=3. The audit also confirms that the earlier alpha/beta checker evidence, matched-only common-buffer orientation theorem, 188,912 first-strict count, 179,735 intermediate count, and 178,572 weak-core one-witness count are superseded and must not be revived.`
 
-UNPRESERVED WORK: `None known. The interrupted theorem prose is preserved in project/research/post_ms/2026-09-19-first-strict-funnel-reservoir-v1/FIRST_STRICT_FUNNEL_RESERVOIR.md; the independent repair audit is FIRST_STRICT_FUNNEL_REPAIR_AUDIT.md; reconstructed broad checker is check_first_strict_funnel_reservoir.py; exact-core correction is check_first_strict_exact_core.py; the one-witness structural pinch is ONE_WITNESS_POLARIZATION_PINCH.md; and the corrected pinch diagnostic is check_one_witness_pinch.py. The earlier reported 188,912, 179,735 and 178,572 survivor counts are historical/superseded diagnostics and must not be used as current evidence.`
+UNPRESERVED WORK: `None known. The daily audit is preserved at project/research/post_ms/2026-09-20-daily-red-team-audit-v1/DAILY_RED_TEAM_AUDIT.md. The audited head was 1b31449427c81b76b3da9140e61dd55b18a739f0. Invalidated and superseded results remain preserved in their native packages and git history.`
 
-DEFERRED ADMIN: `README remains correctly anchored to the 19 September daily adversarial trust boundary. The present advances are internal conditional mathematics and diagnostics; do not promote them as an eventual theorem or graph-realizability result. Reviewer-facing README refresh belongs at the next daily audit or a genuine theorem-level milestone.`
+DEFERRED ADMIN: `The root README is refreshed at this audit checkpoint and the pre-audit README is preserved under archive/status-snapshots/2026-09-20/. One minor checker-hygiene item remains: the t loop / t-choice distribution in check_all_r_pinch_local_feedback.py is dead after the purified d-based rewrite and should be cleaned before reviewer-facing release; it does not affect the 124,528 final count.`
 
-NEXT ACTION: `Stay on the single m=1 all-R equality pinch before opening larger reservoirs or loaded buffers. First trace raw criticality of the remaining a_0--U, X--U and same-code X edges in the literal geometry s=1, I=I_0, all X one code, a_0 isolated in G[X], N_A(z)={a_0}. Search specifically for additional located U-nonedges or forced A--U holes; feed them into Q-STRICT, exact E_U score, and delta=r-e(F). Preserve exact pair-local Ccap_P/(ONE-P)/(CROWD); do not replace pair score by total score. If the pinch survives, classify its exact equality incidence pattern before considering multi-witness m>=2. Treat the exact-core broad scan and one-witness scan only as diagnostics. Keep loaded-buffer, m=g+2, z=2 and the four-exception route subordinate unless the pinch closes or a new audit makes them load-bearing.`
+NEXT ACTION: `First independently re-derive the full coded-layer same-code criticality theorem and ordered (source,witness) injectivity used by all-R Units VI/XII/XIII directly from raw D2C edge criticality. Any missing witness location or reuse pattern blocks X-d-CAP and X-WIT-PAY. Only after that audit passes, solve the literal all-R local optimization with d, per-witness loads, z/a0 conservation, exact pair-local Ccap_P, ONE-P and CROWD retained simultaneously. In parallel or immediately after, attack the zero-positive-fixture rigid-cut coverage gap: construct an actual D2C rigid-cut fixture or prove the rigid singleton-head implication independently at publication standard; if repeated constructions yield none, test whether nonrealizability itself is the closure. Feed survivors into the exact rooted residual ledger using physical U-holes/slack. Do not infer a threshold from a bounded scan. Keep m>=2, loaded-buffer, z=2 and the four-exception route subordinate until this audited arm closes or proves insufficient.`
 <!-- CURRENT-STATUS:END -->
 
 ---
 
-## 1. Binding 19 September adversarial-audit gate
+## 1. Binding 20 September adversarial-audit gate
 
-The latest daily red-team audit remains mandatory input. Its trust boundary is unchanged:
+The latest daily red-team audit supersedes earlier handoff priorities where they conflict.
 
-- distinct physical beta-source identity is proved directly from raw singleton criticality;
-- global `(source,coordinate)` uniqueness is selected-representative uniqueness, not raw-witness uniqueness;
-- the finite source-tuple capacity theorem is independently re-derived only conditional on those two graph-to-selected-system premises;
-- the actual-D2C regression retains `X_3` and has zero recorded graph/formula mismatches, but no bounded actual-D2C fixture realizes the full rigid complete-cut hypotheses;
-- exact pair-local `Ccap_P`, `(ONE-P)` and `(CROWD)` remain mandatory in the one-code branch;
-- the four-exception gate remains supporting/subordinate unless it becomes load-bearing.
+### Verified or independently reproduced
 
-Reference: `project/research/post_ms/2026-09-19-daily-red-team-audit-v1/DAILY_RED_TEAM_AUDIT.md` and its source-premise follow-up materials.
+- Raw P1 distinct physical beta-source identity is a direct singleton-common-neighbour consequence.
+- P2 is selected-representative uniqueness for one physical `(source,coordinate)` obligation, not raw-witness uniqueness.
+- The corrected source-premise atlas replay gives 21 D2C classes through order seven, 126 roots, 2 raw beta certificates, 1 raw alpha certificate and zero P1/raw-P2 collisions.
+- `X_3` independently replays as D2C with `n=12`, `m=32>M(12)=31`; `X_4` and `X_5` also replay as D2C but lie below their corresponding `M(n)` values.
+- The exact-core first-strict diagnostic independently replays as `248,798 / 208,684 / 174,769` for coarse / pair / final rows.
+- The all-R diagnostic independently replays as `173,347` predecessor final rows and `124,528` new final rows, rejecting `48,819`.
+- The piecewise `e_req(d)` formula was brute-force checked against its defining inequality with zero off-by-one mismatches on a broad integer test range.
 
----
+### Superseded or invalidated evidence
 
-## 2. Interrupted-checkpoint repair and independent reconstruction
+Do not reuse as current evidence:
 
-Commit `d31da194...` preserved a substantial first-strict funnel theorem note but omitted its claimed companion checker. That interruption was explicitly marked rather than papered over. The repair then reconstructed the arithmetic independently from the prose formulas and re-derived the principal hand lemmas.
+- the pre-repair alpha-labelled-as-beta graph checker result;
+- the matched-only common-buffer Orientation-A theorem invalidated and replaced at `14af481cf888c6cb3a8c22f5a51a01c75474a281`;
+- the first-strict 188,912 count that omitted `m<=|U_o|`;
+- the 179,735 intermediate diagnostic once exact common-core pricing is restored;
+- the 178,572 one-witness count using the obsolete weak core floor;
+- any abstract survivor count as a graph count or realizability statement.
 
-The repair found a real finite-model omission:
+### Unresolved high-risk interfaces
 
-> `1 <= m <= |U_o| = u-k-1`.
+1. No actual D2C fixture in the bounded regression realizes a rigid complete Hall cut with `x>=3`; later rigid one-code mathematics therefore remains a conditional hand implication.
+2. The full coded-layer same-code criticality theorem and ordered `(source,witness)` injectivity are now repeatedly load-bearing in the all-R package and should receive a fresh raw-criticality proof audit before more deductions are stacked on them.
+3. Exact pair-local `Ccap_P`, `(ONE-P)` and `(CROWD)` must remain local; total-score substitutions are not allowed in the live branch.
 
-The legacy finite diagnostic had allowed rows with no physical outside reservoir despite requiring outside-U certificates. Adding that physical condition and explicit nonnegativity of the rooted triangle ceiling changed the broad-box final survivor count from 188,912 to 179,735. This correction did **not** invalidate the hand support-block lemmas; it invalidated promotion of the legacy numerical distribution.
-
-Reference: `project/research/post_ms/2026-09-19-first-strict-funnel-reservoir-v1/FIRST_STRICT_FUNNEL_REPAIR_AUDIT.md`.
-
----
-
-## 3. Exact common-core pricing correction
-
-The repaired broad diagnostic still used a deliberately weak historical core floor. The already-proved unloaded common-core identity is stronger:
-
-> `E_core = k(p+k-1) + H_core`,
-
-and in the weakest unique-hole (`chi=1`) route,
-
-> `H_core >= k-1`.
-
-Restoring this exact upstream price yields the current broad abstract diagnostic:
-
-- coarse rows: **248,798**;
-- exact-core pair survivors: **208,684**;
-- exact-core pair rejects: **40,114**;
-- exact-core final survivors: **174,769**;
-- residual rejects after the pair gate: **33,915**.
-
-An independent arithmetic replay during the present handoff reproduced all five counts exactly. The checker remains an abstract parameter diagnostic, **not** a D2C graph enumerator or realizability proof.
-
-Reference: `project/research/post_ms/2026-09-19-first-strict-funnel-reservoir-v1/check_first_strict_exact_core.py`.
+Reference: `project/research/post_ms/2026-09-20-daily-red-team-audit-v1/DAILY_RED_TEAM_AUDIT.md`.
 
 ---
 
-## 4. One-witness polarization pinch
+## 2. Current live mathematical frontier
 
-Inside the independently re-audited first-strict branch, suppose the selected outside-reservoir population has minimum physical size `m=1`.
+The active conditional branch is the literal `m=1` all-R equality pinch produced by the independently repaired first-strict funnel.
 
-Then all buffer-neighbour heads have one code and the geometry polarizes completely:
+Its fixed geometry is:
 
-- **all-F:** the common agreement block is one coordinate in `S_0`;
-- **all-R:** the common block is a nonempty subset of `I_0`, the unique outside witness satisfies `N_A(z)={a_0}`, and `a_0` is isolated from `X\{a_0}`.
+- `A=X dotcup Y`, `X--Y` complete, `|X|=x>=3`, `|Y|=y>0`;
+- all of `X` has one tight code `C`, all of `Y` code `d`, and `d_H(C,d)=1`;
+- `a_0` is the unique buffer non-neighbour in `X` and is isolated in `G[X]`;
+- the unique selected outside witness `z` satisfies `N_A(z)={a_0}`;
+- `W_0` is the common core and both `a_0--W_0` and `z--W_0` are empty.
 
-The exact Hamming bills imply:
+For `d` equal to the number of `z`-nonneighbours in `U_o\{z}` and `J=u_o-1-d`, the latest local package proves conditionally:
 
-- all-F always pays `r>=a+y`;
-- all-R with a proper block `I proper subset I_0` pays `r>=a+y`;
-- all-R with `I=I_0` but `s>=2` pays `r>=a+y`.
+- every `z`-neighbour in `U_o\{z}` has code `bar C`, is A-anticomplete, and the J-set is independent;
+- internal X-edge witnesses must come from at most d `z`-nonneighbour complementary vertices, so `e(X)<=N d`, `N=x-1`;
+- their selected load gives `E_D >= [e(X)-d(x-p)_+]_+`;
+- exact Hall feedback gives `2e(X)>=B_d+[e(X)-d(x-p)_+]_+` and the corresponding piecewise `e_req(d)`;
+- `epsilon_z+epsilon_{a_0}>=2p+k+u-y-2` is independent of d.
 
-Therefore the **only** one-witness model capable of avoiding the discrete `+y` rooted-slot surcharge is
+The current broad-box diagnostic leaves **124,528 abstract rows**. This is a diagnostic of necessary conditions only. There is no eventual theorem, no realizability classification, and no justified threshold `n_0`.
 
-> `s=1`, `I=I_0`, all of X in one common code class `C` with `d_H(C,d)=1`.
-
-In this equality pinch:
-
-- `a_0` is isolated in `G[X]`;
-- the unique selected outside witness `z` has `N_A(z)={a_0}` and `c(z)=bar C`;
-- for each `x in X\{a_0}`, `N(x) cap N(z)={b}`;
-- `epsilon_z>=p-1` and `epsilon_a0>=p-y+1`;
-- full-class capacity is `x<=R_A`, not merely `x-1<=R_A`.
-
-Reference: `ONE_WITNESS_POLARIZATION_PINCH.md` in the same package.
-
-The corrected exact-core one-witness diagnostic gives:
-
-- pair survivors: **206,935**;
-- final abstract survivors: **173,347**.
-
-These counts were independently replayed during this handoff and are diagnostic only.
+Key package: `project/research/post_ms/2026-09-19-all-r-pinch-local-feedback-v1/ALL_R_PINCH_LOCAL_FEEDBACK.md`.
 
 ---
 
-## 5. Current theorem/obstruction frontier
+## 3. Important repaired dependency chain
 
-The highest-value live question is no longer a broad F/R resource optimization. It is whether the literal all-R equality pinch can exist under raw diameter-2-criticality.
+The current branch must be read through the repaired artifacts, not the invalidated intermediate claims:
 
-The local configuration to attack is:
+1. `2026-09-19-source-premise-graph-audit-v1/SOURCE_PREMISE_REPAIR.md` — fixes alpha/beta semantics and P1/P2 trust boundary.
+2. `2026-09-19-rigid-graph-regression-v1/RIGID_GRAPH_LEVEL_REGRESSION.md` — actual-graph regression through Hall/pair capacity; zero positive rigid cuts is an explicit coverage gap.
+3. `2026-09-19-common-buffer-criticality-repair-v1/COMMON_BUFFER_X_EDGE_CRITICALITY_REPAIR.md` — invalidates the matched-only orientation theorem and replaces it with matched-or-outside criticality.
+4. `2026-09-19-first-strict-funnel-reservoir-v1/FIRST_STRICT_FUNNEL_REPAIR_AUDIT.md` — reconstructs the interrupted checker, adds physical `m<=|U_o|`, and re-audits support-block lemmas.
+5. `2026-09-19-first-strict-funnel-reservoir-v1/ONE_WITNESS_POLARIZATION_PINCH.md` — compresses `m=1` to the unique cheap all-R equality arm.
+6. `2026-09-19-all-r-pinch-local-feedback-v1/ALL_R_PINCH_LOCAL_FEEDBACK.md` — current local feedback package.
 
-- all X share one tight code `C`, differing from `d` in exactly one coordinate;
-- `a_0` is the unique buffer non-neighbour and is isolated in `G[X]`;
-- the unique outside witness `z` is adjacent to `a_0` and anticomplete to every other A-vertex;
-- `b` is adjacent to `z` and to every `X\{a_0}` vertex;
-- each edge `bx`, `x!=a_0`, has `z` as its outside certificate;
-- the reverse matched-edge funnel gives fixed singleton relations `N(q_i) cap N(a_0)={z}` on every agreement coordinate.
+The 24-hour comparison from `0060acd80a376074486563bc537386fe130459d2` to the audited head contains 114 commits. The high repair density is itself a reason not to promote same-hour closures beyond their stated conditional scope before the next daily audit.
 
-The next structural proof should trace criticality around this fixed incidence pattern and locate additional physical U-holes/A-U holes. Any such located holes are more valuable than another global scalar relaxation because they can be charged simultaneously through `Q=e(G[U])`, `E_U`, rooted unused slots, and `delta=r-e(F)`.
+---
 
-Do not reopen the already-closed buffer-equality descendants or the mixed `{4,5}` ladder. Do not treat finite scans as proof. Preserve failures and counterexamples explicitly.
+## 4. Repository / CI audit
+
+At the audited head `1b31449427c81b76b3da9140e61dd55b18a739f0`, GitHub Actions Status synchronization run `35473850313`, job `105979551184`, failed in `Check every new commit`.
+
+This was not an infrastructure failure. The commit advanced `ALL_R_PINCH_LOCAL_FEEDBACK.md` while `CURRENT_STATE.md` still described the earlier first-strict frontier. The daily checkpoint repairs that handoff gap and refreshes the README.
+
+The status guard remains a process guard, not a proof checker. A passing guard means the handoff changed when the repository changed; it does not validate the mathematics.
+
+---
+
+## 5. Mandatory next-hours programme
+
+1. Re-prove same-code criticality / ordered source-witness injection directly from raw D2C criticality. Stop immediately on any extra witness location or reusable ordered pair.
+2. If item 1 survives, perform the exact local all-R optimization retaining `d`, per-witness loads, `ZA0-CONS`, exact `Ccap_P`, `(ONE-P)` and `(CROWD)`. If an unbounded family survives, classify it instead of adding weak scalar cuts.
+3. Resolve the rigid-cut coverage gap by finding a positive actual fixture or independently proving the rigid implication at publication standard. If fixtures remain absent, test direct nonrealizability.
+4. Feed surviving geometry to `Q=e(G[U])`, `E_U`, `r`, `f` and `delta=r-e(F)` using physical holes/slack. Never promote a bounded scan to an asymptotic threshold.
+5. Keep larger reservoirs / loaded buffers / `z=2` / four-exception work subordinate until this arm closes or is shown insufficient.
