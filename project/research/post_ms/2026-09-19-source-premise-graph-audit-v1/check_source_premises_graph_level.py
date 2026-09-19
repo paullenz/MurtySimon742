@@ -1,11 +1,13 @@
 #!/usr/bin/env python3
 """Independent graph-level regression for source-tuple premises.
 
-This checker intentionally reconstructs the rooted objects from actual D2C graphs.
-It does not import the abstract source-tuple implementation.
+This checker reconstructs rooted objects from actual D2C graphs and rejects any
+fixture that fails D2C before examining source-premise semantics.  It deliberately
+does not import the abstract source-tuple implementation.
 
-Requires networkx.  The two explicit counterexamples in main() are dependency-light
-regression fixtures for raw P2 failure.
+The previous revision contained provisional alleged raw-P2 fixtures which failed
+this exact validation; they have been removed and the failure is documented in
+SOURCE_PREMISE_GRAPH_AUDIT.md.
 """
 from collections import defaultdict
 import itertools
@@ -13,7 +15,7 @@ import networkx as nx
 
 
 def is_d2c(G):
-    if not nx.is_connected(G):
+    if G.number_of_nodes() < 3 or not nx.is_connected(G):
         return False
     if nx.diameter(G) != 2:
         return False
@@ -26,7 +28,8 @@ def is_d2c(G):
 
 
 def tight_pair(G, v, u, w):
-    if G.has_edge(u, w):
+    """Raw tight-antipode definition at root v."""
+    if u not in G[v] or w not in G[v] or G.has_edge(u, w):
         return False
     if set(nx.common_neighbors(G, u, w)) != {v}:
         return False
@@ -47,16 +50,17 @@ def rooted_objects(G, v):
             pairs.append((u, w))
     flat = [z for e in pairs for z in e]
     if len(flat) != len(set(flat)):
-        raise AssertionError("tight antipode pairs do not form a matching")
+        raise AssertionError("tight antipodes failed matching property")
     U = B - set(flat)
     return A, B, U, pairs
 
 
 def oriented_beta_certificates(G, v):
-    """Return raw certificates (x,i,y,q,mate).
+    """Low-level candidate certificates (x,i,y,q,mate).
 
-    Each tight pair is tried in both orientations.  A raw certificate records
-    a graph realization; it has NOT been deduplicated by physical (y,i).
+    This implements only the raw unique-common-neighbour geometry used in the
+    source audit.  It has not been declared equivalent to every later selected
+    beta object; that interface remains under audit.
     """
     A, B, U, pairs = rooted_objects(G, v)
     out = []
@@ -73,75 +77,51 @@ def oriented_beta_certificates(G, v):
     return out
 
 
-def premise_violations(G, v):
+def premise_collisions(G, v):
     certs = oriented_beta_certificates(G, v)
-    # P1: one fixed x reuses physical y on two distinct target fibres.
     by_xy = defaultdict(set)
-    for x, i, y, q, mate in certs:
-        by_xy[(x, y)].add(i)
-    p1 = [(x, y, sorted(I)) for (x, y), I in by_xy.items() if len(I) > 1]
-
-    # Raw P2: one fixed physical (y,i) has multiple A-witness realizations.
     by_yi = defaultdict(set)
     for x, i, y, q, mate in certs:
+        by_xy[(x, y)].add(i)
         by_yi[(y, i)].add(x)
-    p2 = [(y, i, sorted(X)) for (y, i), X in by_yi.items() if len(X) > 1]
-    return p1, p2, certs
-
-
-def make_graph(n, edges):
-    G = nx.Graph()
-    G.add_nodes_from(range(n))
-    G.add_edges_from(edges)
-    return G
-
-
-def check_fixture(n, edges, root, expected_yi, expected_xs):
-    G = make_graph(n, edges)
-    assert is_d2c(G)
-    p1, p2, certs = premise_violations(G, root)
-    assert not p1
-    found = {(y, i): set(xs) for y, i, xs in p2}
-    assert found[expected_yi] == set(expected_xs), (found, certs)
-    return certs
+    p1 = [(x, y, sorted(I)) for (x, y), I in by_xy.items() if len(I) > 1]
+    raw_p2 = [(y, i, sorted(X)) for (y, i), X in by_yi.items() if len(X) > 1]
+    return p1, raw_p2, certs
 
 
 def atlas_regression():
-    count = 0
+    classes = roots = cert_count = 0
     p1_fail = []
-    p2_fail = []
+    raw_p2_fail = []
     for G0 in nx.graph_atlas_g():
         if G0.number_of_nodes() < 3:
             continue
         G = nx.convert_node_labels_to_integers(G0)
         if not is_d2c(G):
             continue
-        count += 1
+        classes += 1
         for v in G.nodes():
-            p1, p2, certs = premise_violations(G, v)
+            roots += 1
+            p1, p2, certs = premise_collisions(G, v)
+            cert_count += len(certs)
             if p1:
-                p1_fail.append((count, v, p1))
+                p1_fail.append((classes, v, p1))
             if p2:
-                p2_fail.append((count, v, p2))
-    return count, p1_fail, p2_fail
+                raw_p2_fail.append((classes, v, p2))
+    return classes, roots, cert_count, p1_fail, raw_p2_fail
 
 
 def main():
-    e9 = [(0,1),(0,2),(1,3),(2,8),(3,8),(4,6),(4,7),(5,6),(5,7)]
-    c9 = check_fixture(9, e9, 4, (7, 0), {2, 3})
-
-    e10 = [(0,6),(0,8),(1,3),(1,8),(2,4),(2,8),(3,9),(4,5),(5,7),(6,7)]
-    c10 = check_fixture(10, e10, 1, (8, 0), {0, 2})
-
-    count, p1, p2 = atlas_regression()
-    assert count == 21, count
+    classes, roots, cert_count, p1, p2 = atlas_regression()
+    assert classes == 21, classes
     assert not p1, p1
-    print("fixture n=9 raw certificates:", c9)
-    print("fixture n=10 raw certificates:", c10)
-    print("D2C atlas classes through order 7:", count)
-    print("atlas P1 violations:", len(p1))
-    print("atlas raw P2 violations:", len(p2))
-    print("PASS: explicit realizable D2C fixtures refute raw P2")
+    assert not p2, p2
+    print("D2C atlas classes through order 7:", classes)
+    print("roots checked:", roots)
+    print("raw beta-candidate certificates:", cert_count)
+    print("P1 collisions:", len(p1))
+    print("raw P2 collisions:", len(p2))
+    print("PASS: atlas regression; P1/P2 remain unproved graph-level premises")
 
 
 if __name__ == "__main__":
