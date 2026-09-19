@@ -192,9 +192,6 @@ def main():
                 break
 
           if feasible:
-                break
-
-          if feasible:
             st['new_final']+=1
             d_choice[chosen[0]]+=1
             t_choice[chosen[1]]+=1
