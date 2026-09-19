@@ -3,343 +3,229 @@
 > **Active target - 19 September 2026.** The live problem is the sufficiently-large/eventual second-extremal D2C classification around `M(n)=floor((n-1)^2/4)+1`. The false all-order 2019 Dailly-Foucaud-Hansberg strengthening is not assumed. The published 2024 order-12, size-32 D2C graph `X_3` is a mandatory hostile control. Murty-Simon / Erdos #742 remains preserved but is not the live optimization target.
 
 <!-- CURRENT-STATUS:START -->
-CHECKPOINT CLASS: `ONE_CODE_Z1_CRITICALITY_COLLAPSE_2026_09_19`
+CHECKPOINT CLASS: `ONE_CODE_Z1_COMMON_BUFFER_ORIENTATION_REPAIR_2026_09_19`
 
 WORK MODE: `MATH`
 
-INSPECTED PREDECESSOR: `760891ad5e3f6ab7f62d769187b5e72cc75b351a`
+INSPECTED PREDECESSOR: `c884e045fe9d757ec2c0d8f4ea245bcba7b72dc6`
 
-LATEST THEOREM PACKAGES:
+LAST VERIFIED RESULT: `The previous matched-only classification of the minimal r=0 common-buffer edge b--x contained a raw criticality orientation error and is withdrawn. The corrected theorem says at most g reverse orientations exist, so at least k=x-g edges use the other orientation; each such certificate is either a matched foot with gamma=c(x) or an outside unmatched witness z in U_o with c(z)=bar c(x) and z anticomplete to Y. In the zero-buffer case g=p, the matched option is impossible and all k forced certificates are outside-U. Outside reuse forces H_Y>=ym and yields a repaired score/residual floor.`
 
-- `project/research/post_ms/2026-09-19-two-omission-criticality-collapse-v1/OMITTED_PAIR_NONEDGE_FORCING.md`
-- `project/research/post_ms/2026-09-19-two-omission-criticality-collapse-v1/OUTSIDE_U_EXACT_BALANCE.md`
-- `project/research/post_ms/2026-09-19-two-omission-criticality-collapse-v1/OUTSIDE_U_SCORE_ELIMINATION.md`
-- `project/research/post_ms/2026-09-19-common-buffer-criticality-v1/UNLOADED_COMMON_BUFFER_SOURCE_EDGE_DICHOTOMY.md`
-- `project/research/post_ms/2026-09-19-common-buffer-criticality-v1/ANTICOMPLETE_BUFFER_X_EDGE_TRICHOTOMY.md`
-- `project/research/post_ms/2026-09-19-common-buffer-criticality-v1/check_z1_criticality_collapse.py`
+UNPRESERVED WORK: `None. The invalidated statement, replacement theorem, arithmetic checker, audit scope and next frontier are preserved in project/research/post_ms/2026-09-19-common-buffer-criticality-repair-v1/.`
+
+DEFERRED ADMIN: `Do not churn CI or reviewer packaging during this mathematics run. README remains lower-frequency and should be refreshed at the next daily audit/reviewer milestone if this repair survives the next attack.`
+
+NEXT ACTION: `Stay on z=1 common-buffer. First attack the zero-buffer g=p subbranch with the new forced outside-U load, retaining the local pair score S_P and intersecting SP-LOCAL with exact Ccap_P, exact crossing traffic, ONE-P and CROWD. Feed any surviving local geometry through QE-CB into the rooted residual ledger. Then treat p-g>0 via the matched-cap/outside-hole dichotomy and only afterwards return to r>0. Do not move to z=2 or resurrect the invalid matched-only demand unless a separately proved restriction removes the outside-U channel.`
 
 ## Audit reconciliation
 
-Before any forward mathematics this run, the current `CURRENT_STATE.md`, root `README.md`, recent commits, the 19 September daily adversarial/red-team audit and handoff, the independent source-tuple reproof, the source-premise graph audit/repair, and the independent actual-D2C Hall/pair-capacity regression were reread.
+Before forward mathematics this run, `CURRENT_STATE.md`, `README.md`, recent commits, the 19 September daily adversarial/red-team audit/handoff, the source-premise repair, the finite source-tuple trust boundary and the independent actual-D2C Hall/pair-capacity regression were reread.
 
-There is **no departure** from the latest audit priority order.
+There is no departure from the audit priority order:
 
-The trust boundary remains:
+1. distinct physical-source identity and selected `(source,coordinate)` uniqueness remain independently repaired at the raw/selected interface;
+2. the finite source-tuple theorem is not promoted as unconditional graph-level closure;
+3. the independent actual-D2C regression remains mandatory, includes `X_3`, and still records zero graph/formula mismatches;
+4. there is still no positive actual-graph fixture realizing the rigid complete Hall cut with `x>=3`, so the one-code results remain conditional hand structural implications;
+5. exact pair-local `Ccap_P`, `(ONE-P)` and `(CROWD)` remain load-bearing and are not replaced by a coarse total-score collapse;
+6. the four-exception gate remains subordinate; the closed mixed `{4,5}` ladder stays closed; first-proof priority on Erdos #742 stays inactive.
 
-1. distinct physical-source identity and global selected `(source,coordinate)` uniqueness have been independently re-derived at the exact raw/selected interface used downstream;
-2. the finite source-tuple capacity theorem remains described as conditional on those named premises rather than as unconditional graph-level closure;
-3. the independent actual-D2C regression through rooted partition, criticality slots, A-codes, Hall objects, gamma codes and pair-local capacity remains mandatory, includes hostile `X_3`, and still records zero graph/formula mismatches;
-4. the regression still has **no positive actual-graph fixture realizing a rigid complete Hall cut with `x>=3`**. The rigid one-code deductions below are therefore hand structural implications conditional on those rigid hypotheses, not empirical claims that such a cut occurs in a graph;
-5. only the audit-authorized one-code rigid branch is being pushed. Exact `Ccap_P`, `(ONE)` and `(CROWD)` remain distinct from the rooted residual ledger; no collapse to total `C0` is being substituted for the local geometry.
-
-The closed mixed `{4,5}` selected-excess ladder remains closed. The four-exception gate remains subordinate. First-proof priority on Erdos #742 remains inactive.
+The new repair is itself an audit-driven departure from the *previous handoff*, not from the daily audit: the handoff proposed a gamma/code attack because it assumed a matched-only criticality localization. The raw orientation check invalidated that premise, so continuing the code-only line would have violated the user's instruction not to build downstream theory on a weakened premise.
 
 ## Mandatory negative control
 
-`X_3` remains explicit and untouched: `n=12`, `m=32>M(12)=31`, diameter two, every edge critical, canonical root `a=3,b=8,p=4,u=0`, `Q=12`, `r=f=delta=0`. Every theorem added this run uses a nonempty unmatched-U mechanism and is inactive on that canonical root. Nothing here repairs the false all-order 2019 conjecture by accidentally excluding its published counterexample.
+`X_3` remains explicit and untouched: `n=12`, `m=32>M(12)=31`, diameter two, every edge critical, canonical root `a=3,b=8,p=4,u=0`, `Q=12`, `r=f=delta=0`. All common-buffer statements below require a nonempty unmatched-U mechanism (`k+1<=u`) and therefore do not exclude `X_3`.
 
-## Full-support z=1: omitted pairs are forced nonedges
+## Scope of the invalidation
 
-Retain the purified one-code `z=1`, `h=0`, full-support setup:
+The affected file is
 
-- `X--Y` is a complete rigid A-cut, `x=|X|>=3`, `y=|Y|`;
-- every source in Y has code d, with `A_d=Y` and `A_{bar d}=emptyset`;
+`project/research/post_ms/2026-09-19-common-buffer-criticality-v1/ANTICOMPLETE_BUFFER_X_EDGE_TRICHOTOMY.md`.
+
+Its old Orientation I required simultaneously
+
+`x z in E`, `b z notin E`, `N(x) cap N(z)={b}`,
+
+which is impossible because `b z` is a nonedge. Therefore its matched-only Orientation-I localization and the consequent unconditional `>=k` gamma-aligned matched-foot demand are **withdrawn**.
+
+The following predecessor results survive this check:
+
+- `UNLOADED_COMMON_BUFFER_SOURCE_EDGE_DICHOTOMY.md`, including source--buffer triangle-freeness for `r>0`, the rectangular Y-hole product, the buffer/Y slack formulas and the common-buffer score floor;
+- `check_z1_criticality_collapse.py`, because it does not use the faulty follow-on;
+- the full-support `OMITTED_PAIR_NONEDGE_FORCING.md` theorem `nu=y`; a hostile reread found its two criticality orientations correctly paired with their singleton heads;
+- the source-premise repair, graph-level regression, exact pair capacity, `(ONE-P)` and `(CROWD)`.
+
+## Corrected minimal r=0 common-buffer theorem
+
+Retain the unloaded common-buffer equality geometry:
+
+- `X--Y` complete, `x=|X|>=3`, `y=|Y|>0`;
+- all Y-sources have code d, `A_{bar d}=emptyset`;
 - `g=g_P`, `k=x-g>0`;
-- `U_-=U_{bar d}`, `|U_-|=k+1`;
-- `U_o=U\U_-`, `u_o=u-k-1`;
-- source visibility gives `e(Y)=e(Y,U_d)=e(G[U_-])=0`;
-- the full-support omission map has exactly two omitted vertices `o_1,o_2`, with every source omitting exactly one.
+- `U_-=W_0 dotcup {b}`, `|W_0|=k`;
+- `e(Y)=e(Y,U_d)=e(G[U_-])=0`;
+- `r=d_Y(b)=0`;
+- `epsilon_b=p-g`, so b is complete to X and `U_o`.
 
-A hostile raw-criticality pass now eliminates **every possible certificate for an omitted pair that is an edge**.
+Every `b x` edge lies in a triangle. The two correct criticality orientations are:
 
-The key definition-level facts are:
+`(A)` `b z in E`, `x z notin E`, `N(x) cap N(z)={b}`;
 
-1. two tight-code vertices have no common matched-B neighbour iff their codes are complementary;
-2. the old Orientation A is impossible for **every** source, not only for a non-singleton omission class: the witness would lie in X but complementarity would force code d, contradicting `A_d=Y`;
-3. the ROOT alternative is impossible because every A-source has one matched B-neighbour in each of the p tight fibres; if its omitted unmatched vertex were also adjacent then `d_B(s)>=p+1>=2`, so `N_B(s)={o_i}` cannot occur;
-4. the OUT alternative is impossible because singleton common neighbourhood with an unmatched head forces an outside witness to have code `bar d`, putting it back in `U_-` rather than `U_o`;
-5. the MATCHED alternative is impossible because generalized matched-foot localization gives gamma code d, while in the `h=0` crossing classification every source already uses **all** g gamma-d matched feet as its crossing witnesses, with graph-fixed singleton X heads.
+`(B)` `x z in E`, `b z notin E`, `N(b) cap N(z)={x}`.
 
-Therefore:
+Orientation B still has only matched witnesses with `gamma(z)=bar d`, and each matched foot has at most one singleton X-head. Hence at most g buffer--X edges can use B, so at least
 
-> `nu=y`.                                                  `(FS-NU)`
+> `k=x-g`
 
-Every source is nonadjacent to its unique omitted `U_-` vertex. This supersedes the predecessor heuristic that near score equality might push `nu` toward zero: `nu=0` is not realizable in this branch.
+edges use A.
 
-The exact full-support ledger consequently simplifies to
+Corrected Orientation A has exactly two surviving locations:
 
-> `Z=Z0+H_X+H_Y`,                                         `(FS-Z)`
->
-> `L_Y=y(p-g+1)+H_Y`,                                     `(FS-LY)`
->
-> `E_-=B+M`,                                               `(FS-E)`
->
-> `2q+E_U=D0+H_X+H_Y`,                                    `(FS-R)`
+1. matched B, with `gamma(z)=c(x)`;
+2. `z in U_o`, with `c(z)=bar c(x)` and z anticomplete to all of Y.
+
+Thus choose k forced-A edges and split their X-sources into matched and outside sets of sizes `q_M,ell`:
+
+> `q_M+ell=k`.                                             `(MO1)`
+
+No injectivity is asserted.
+
+## Aligned-code capacity and forced outside load
+
+For `lambda>=0` and an above-threshold candidate, use the preserved aligned-code cap
+
+`w_c=2n_c+t_c<=R_code(C0)`,
 
 where
 
-`B=(k+1)(p+k-1)`,
+`D0=5p+5u-3lambda-2`,
 
-`Z0=(k+1)(a-1)`,
+`R_code(C0)=floor((D0+sqrt(D0^2+12C0))/3)`.
 
-`D0=Z0-u(p-lambda)`,
+Put
 
-`M=(k+1)u_o-e(U_-,U_o)`.
+> `R_A=floor(R_code(C0)/2)`.
 
-In particular the apparent `-y` savings in both A--U holes and `U_-` slack disappear exactly.
+Then every A-code class has size at most `R_A`.
 
-The score floor is now
+Matched Orientation-A feet for X-sources cannot lie in the g fibres whose gamma pair is `{d,bar d}`. The remaining `p-g` fibres expose at most `2(p-g)` usable gamma codes. Hence
 
-> `S>=B+M+max{phi(g),y(p-g+1)+H_Y}`.                      `(FS-S0)`
+> `q_M<=2(p-g)R_A`,
 
-The exact pair-local crossing bill remains
+and therefore
 
-> `2xy<=Ccap_P=R_code(S_P)[g+2S_P/L]`.                    `(FS-CAP)`
+> `ell >= ell_0=[k-2(p-g)R_A]_+`.                         `(OUT-FORCE)`
 
-The old `(ONE-P)` substitution is weaker after the exact crossing count is known; `(CROWD)` remains independently useful. Do not replace `S_P` by total score before the local intersection is exhausted.
+If `epsilon_b=0`, then `g=p`, so the matched capacity is zero and
 
-## Rooted triangle correction: q is the unmatched internal edge count
+> `ell=k=x-p`.                                             `(ZERO-OUT)`
 
-A second hostile correction was found while reconciling the full-support ledger with the foundational rooted-triangle identity.
+This is the key reversal of the invalid handoff: **zero buffer slack forces outside-U certificates, not matched gamma-aligned certificates.**
 
-Tight fibres force
+## Outside-witness holes and score
 
-> `e(G[P])=p(p-1)`,
->
-> `e(P,U)=pu`.
+Let W be the set of distinct outside witnesses chosen for the ell sources, `m=|W|`, and let `t_z` be the reuse load of z. A fixed z can serve only one X-code class, so `t_z<=R_A`, giving
 
-Hence
+> `m>=ceil(ell/R_A)`                                       `(REUSE)`
 
-> `Q=p(p+u-1)+e(G[U])`.
+when `ell>0`.
 
-The preserved canonical identity is
+Each z is anticomplete to Y, hence
 
-> `Q=p(p+u-1)+q`.
+> `H_Y>=ym`.                                               `(HY)`
 
-Therefore:
+It is also nonadjacent to its `t_z` served X-sources, and its U-slack satisfies
 
-> `q=e(G[U])`.                                             `(Q-U)`
+> `epsilon_z>=[p-x+t_z]_+`.
 
-This matters because the predecessor variable
+Thus
 
-`Q_rest=Q-e(U_-,U_o)`
+> `E_W>= [ell-(x-p)m]_+`.                                 `(EW)`
 
-contains the forced baseline `p(p-1)+pu`; it is **not** a small correction which can be set to zero. In the present branch
+For `r=0` the Y-slack identity is exact:
 
-> `Q_rest=p(p-1)+pu+e(G[U_o])>0`.
+> `L_Y=y(p-g+1)+H_Y`,
 
-Any earlier hypothetical state using `Q_rest=0` in this branch is invalid and must not be cited as an equality geometry.
+so
 
-Use instead the genuinely residual quantity
+> `L_Y>=y(p-g+1+m)`.                                      `(LYM)`
 
-> `Q_o=e(G[U_o])`.
+With `E_core=k(p+k-2)`, the repaired score floor is
 
-Since `e(G[U_-])=0`,
+> `S>=E_core+(p-g)+E_W+max{phi(g),y(p-g+1+m)}`.          `(S-REPAIR)`
 
-> `q=(k+1)u_o-M+Q_o`.                                     `(Q-O)`
+The one-code pair itself satisfies the sharper local floor
 
-## Exact outside-U degree balance
+> `S_P>=E_core+(p-g)+y(p-g+1+m)`.                         `(SP-LOCAL)`
 
-For each `z in U_o`, define
+This is the quantity to intersect next with exact pair-local capacity rather than replacing it by total C0.
 
-- `h_z=a-d_A(z)`;
-- `m_z=(k+1)-d_{U_-}(z)`;
-- `d_o(z)=d_{G[U_o]}(z)`.
+## Rooted residual feedback
 
-A direct degree sum gives the exact vertexwise identity
+Physical A--U nonedges obey
 
-> `h_z+m_z=(p+k+1-lambda)+d_o(z)+epsilon_z`.              `(OUT-1)`
+> `Z>=k(a-1)+y+ym+ell`.                                   `(Z-REPAIR)`
 
-Summing over `U_o`, with `H=H_X+H_Y` and `E_o=sum_{U_o}epsilon`, gives
+The terms are: `k(x-1)` X-holes from the common core, `y(k+1)` Y-holes to core plus buffer, `ym` Y-holes to the outside witnesses, and ell chosen X--outside witness nonedges.
 
-> `H+M=u_o(p+k+1-lambda)+2Q_o+E_o`.                       `(OUT-2)`
+Using
 
-Thus `H,M,Q_o,E_o` are one physical ledger, not independent correction knobs.
-
-Two useful exact consequences are
-
-> `q+E_U=B+(k+1)u_o+Q_o+E_o`,                             `(OUT-QE)`
+`Z=u(p-lambda)+2q+E_U`
 
 and
 
-> `Q+E_-=p(p+u-1)+B+(k+1)u_o+Q_o`.                       `(OUT-Q)`
+`E_U>=E0:=E_core+(p-g)+E_W`,
 
-The `U_- -- U_o` edge choice cancels exactly from these combinations.
+put
 
-Using only the physical capacity `H_X<=xu_o`, with `x=g+k`, gives
+`D_CB=k(a-1)+y+ym+ell-u(p-lambda)`.
 
-> `H_Y+M>=u_o(p-g+1-lambda)+2Q_o+E_o`.                    `(OUT-SPILL)`
+Then
 
-Minimizing exactly over whether that forced spill is paid as Y-holes or missing `U_- -- U_o` edges yields the compact full-support score theorem
+> `q+E_U>=E0+ceil([D_CB-E0]_+/2)`.                       `(QE-CB)`
 
-> `S >= B + max{ phi(g),`
-> `               y(p-g+1)`
-> `               +[u_o(p-g+1-lambda)+2Q_o]_+ }`.         `(FS-S1)`
+Together with
 
-In particular
+`f=(p-lambda)(p+u)+q+E_U-delta`,
 
-> `S >= B + max{ phi(g),`
-> `               y(p-g+1)`
-> `               +u_o[p-g+1-lambda]_+ }`.                `(FS-S2)`
+this feeds the repaired common-buffer geometry directly into the residual defect ledger.
 
-At `lambda=0` this becomes
+At zero buffer slack (`g=p`, `ell=k`) the nonedge floor simplifies to
 
-> `S>=B+max{phi(g),(y+u_o)(p-g+1)}`.
+> `Z>=ka+y(1+m)`.                                         `(Z-ZERO)`
 
-Each internal `U_o` edge costs two units in the non-gamma branch until the gamma term dominates. Near-minimal full-support geometry is therefore pushed toward an independent `U_o` layer.
+## Diagnostic audit
 
-A bounded arithmetic diagnostic on the existing coarse grid records 59,028 full-support abstract parameter survivors under `(FS-S2)`, versus 59,500 after only the forced-`nu` base score floor. These are **not graph counts**.
+Companion checker:
 
-## Unloaded common-buffer comparator: source-buffer edges are triangle-free
+`project/research/post_ms/2026-09-19-common-buffer-criticality-repair-v1/check_common_buffer_x_edge_repair.py`.
 
-The other minimal `z=1` support type is the common-buffer branch. Write
+It audits the convex outside-witness slack inequality and replays the same coarse integer parameter box as the predecessor. It records:
 
-`U_-=W_0 disjoint_union {b}`,
+- 16,065 exhaustive small convex-reuse checks, minimum margin zero, failures zero;
+- 345,219 abstract r=0 equality `(p,u,lambda,x,g)` branches passing the predecessor scalar floor;
+- 17,174 with positive forced outside load under `(OUT-FORCE)`;
+- in this box, all 17,174 are exactly the zero-buffer `g=p` cases;
+- 113 zero-buffer abstract branches rejected by the repaired Y-hole score floor;
+- 17,061 zero-buffer abstract branches remain.
 
-with `|W_0|=k`; every source uses all of `W_0`, while b is unused by crossing certificates.
+These are diagnostic parameter-branch counts, not D2C graph counts.
 
-The cheapest comparator has
+## Preserved full-support comparator
 
-> `e(Y)=e(Y,U_d)=e(G[U_-])=0`.                             `(CB-0)`
+The full-support `z=1,h=0` branch remains the more expensive comparator. Raw criticality still forces every omitted source--`U_-` pair to be a nonedge (`nu=y`), and its corrected rooted-triangle baseline remains
 
-The preserved core floor is
+`Q=p(p-1)+pu+e(G[U])`.
 
-> `E_core>=k(p+k-2)`.                                      `(CB-CORE)`
+No claim from the current repair weakens that branch.
 
-Let
+## Immediate research frontier
 
-`r=d_Y(b)`,
+The highest-value next theorem is now narrower than the invalid handoff suggested:
 
-`d_o=d_{U_o}(b)`.
-
-Raw criticality now proves:
-
-> every source-buffer edge `s b` is triangle-free.        `(CB-DIR)`
-
-The proof again eliminates both triangle-edge singleton orientations by pair purity, tight-code complementarity, rigid cut completeness, `U_-` independence and saturated gamma-d crossing use.
-
-Consequences for `r>0`:
-
-1. the buffer is anticomplete to X:
-   > `d_X(b)=0`;                                           `(CB-X0)`
-2. every buffer--`U_o` neighbour is nonadjacent to every source adjacent to b, so
-   > `H_Y>=r d_o`;                                         `(CB-RECT)`
-3. the buffer slack is exact:
-   > `epsilon_b=p+k+u_o-r-d_o`;                            `(CB-EB)`
-4. the Y-slack is exact:
-   > `L_Y=y(p-g+1)-r+H_Y`.                                 `(CB-LY)`
-
-Therefore for fixed `r>=1`, putting
-
-`A0=phi(g)`, `P0=p+k+u_o`, `L_r=y(p-g+1)-r`,
-
-one has
-
-> `S>=E_core+P0-r-d_o+max{A0,L_r+r d_o}`,                 `(CB-R)`
-
-with `0<=d_o<=min(u_o,P0-r)`. This is a one-dimensional integer profile whose minimum occurs at a clamped integer adjacent to `(A0-L_r)/r` (or on the flat boundary when `r=1`).
-
-For `r=0`, b is anticomplete to Y and may use X. Direct degree counting gives
-
-> `epsilon_b>=p-g`,                                        `(CB-E0)`
->
-> `L_Y>=y(p-g+1)`,                                         `(CB-L0)`
-
-hence
-
-> `S>=E_core+(p-g)+max{phi(g),y(p-g+1)}`.                 `(CB-S0)`
-
-Equality in `(CB-E0)` forces the buffer complete to X and complete to `U_o`; zero buffer slack additionally forces `g=p`.
-
-The unified unloaded common-buffer score theorem is the minimum over `r=0,...,y` of these exact one-dimensional profiles.
-
-A deterministic arithmetic replay of the same abstract parameter box reproduces the predecessor gates and records:
-
-- old shared z=1 floor survivors: `86,820`;
-- predecessor common-buffer survivors: `76,463`;
-- predecessor full-support survivors: `77,310`;
-- predecessor either-support survivors: `78,167`;
-- criticality-sharpened common-buffer survivors: `64,892`;
-- criticality-sharpened full-support survivors: `59,028`;
-- criticality-sharpened either-support survivors: `64,892`;
-- additional exclusions relative to the older shared z=1 floor: `21,928`.
-
-Among new common-buffer survivors the cheapest branch is `r=0` in 40,589 abstract states and `r>0` in 24,303. These figures are diagnostic parameter counts only. On this grid every new full-support survivor is contained in the new common-buffer survivor set, so the **common-buffer branch is now the limiting minimal z=1 comparator**.
-
-## Minimal r=0 equality geometry: buffer-X edges become matched-foot obligations
-
-Because `r=0` is now frequently the cheapest surviving common-buffer model, the exact buffer-slack equality geometry was pushed one step further rather than moving to `z=2`.
-
-Assume
-
-> `epsilon_b=p-g`,                                        `(CB-EQ)`
-
-so b is complete to X and complete to `U_o`.
-
-Every edge `b x0`, `x0 in X`, lies in a triangle: `c(x0)` is neither d nor `bar d`, while `c(b)=bar d`, so the codes agree in at least one tight coordinate and share a matched neighbour.
-
-Raw D2C criticality gives two possible singleton orientations. Under `(CB-EQ)` they collapse as follows.
-
-### Orientation I
-
-Source `x0`, matched foot z, singleton head b:
-
-> `gamma(z)=c(x0)`.                                       `(CB-I)`
-
-All root, A and unmatched-B locations are excluded; completeness of `b--U_o` removes the otherwise possible outside-unmatched channel.
-
-### Orientation II
-
-Source b, matched foot z, singleton head `x0`:
-
-> `gamma(z)=bar d`.                                       `(CB-II)`
-
-There are exactly g such matched endpoints. For a fixed matched endpoint z, the graph set `N(b) intersect N(z)` is fixed, so if it is a singleton it determines at most one X-head. Therefore at most g of the x buffer-X edges can use Orientation II.
-
-Since `k=x-g`, at least
-
-> `k`                                                      `(CB-K)`
-
-vertices of X require Orientation-I matched feet whose gamma code equals their own tight code.
-
-No injectivity among these Orientation-I feet is claimed. The safe conclusion is a **source/code demand**, not k distinct physical matched endpoints. The set of X-codes occurring among those at least k sources must occur in the matched gamma-code support.
-
-This is the next load-bearing compatibility between the rigid Hall family and the signed tight-fibre core.
-
-## Exact pair-local control remains active
-
-Throughout both support types the audit-requested local pair tools remain live:
-
-- exact `Ccap_P`;
-- `(ONE)` where it adds information rather than merely restating the crossing count;
-- `(CROWD)`;
-- channel separation and gamma-collision pricing.
-
-Do not replace local `S_P` by total `S`/`C0` as the primary next move. Previous global scalar relaxations were explicitly diagnosed as too generous.
-
-## Next action
-
-Stay on `z=1`; **do not move to `z=2` yet**.
-
-The current priority is the unloaded common-buffer branch, especially the `r=0`, minimal-buffer-slack geometry.
-
-1. Group the at least k Orientation-I X-sources by tight code. Do **not** assume their matched feet are distinct.
-2. Couple their code multiplicities to the matched gamma support and the existing gamma-collision / switchable zero-signed-subcore penalty. Seek a compact dichotomy: code concentration must pay quadratic A-slack, while code dispersion must force many constrained gamma rows.
-3. Intersect that dichotomy with the exact outside-pair `Ccap_P` and `(CROWD)` bill before any total-score collapse.
-4. In parallel, classify the `r>0` branch further: triangle-free source-buffer edges plus the rectangular `H_Y>=r d_o` payment may force a stronger direct-edge/slack obstruction.
-5. Retain the full-support branch as a sharpened comparator; revisit it only if a new local constraint makes it competitive with common-buffer.
-6. Only after both common-buffer subbranches have been structurally exhausted should work move to `z=2`.
-
-## Stop / pivot rules
-
-- Any actual graph/formula mismatch is an immediate repair blocker.
-- Keep the source-tuple theorem conditional on its two named premises.
-- Retain the actual-graph regression and `X_3` as mandatory controls.
-- Do not treat finite parameter counts as D2C graph counts.
-- Do not credit ordinary A-layer triangles to rooted Q.
-- Use `Q_o=e(G[U_o])`, not `Q_rest`, as the residual outside-unmatched triangle correction.
-- Do not infer witness injectivity from per-source criticality; explicitly prove physical uniqueness before multiplying obligations.
-- Do not return to mixed `{4,5}`, first-proof Erdős #742 optimization, or the four-exception gate unless the latter becomes genuinely load-bearing.
-
-UNPRESERVED WORK: None. All completed theorem, correction, diagnostic and common-buffer criticality work from this run is committed. The next unfinished line is exactly the code-multiplicity/gamma-support attack described above.
+1. **Zero-buffer first.** With `g=p`, all k forced Orientation-A certificates are outside-U. Use their forced local pair slack `(SP-LOCAL)` and residual floor `(QE-CB)`.
+2. **Exact pair intersection.** Keep `S_P` live and impose `2xy<=Ccap_P`, exact `Ccap_P=R_code(S_P)[g+2S_P/(lambda+1)]`, `(ONE-P)` and `(CROWD)` simultaneously. Do not substitute total C0 until the local feasibility interval has been exhausted.
+3. **Then `p-g>0`.** Use `q_M<=2(p-g)R_A` and the outside-hole surcharge together. Do not assume distinct matched feet.
+4. **Then `r>0`.** The source--buffer triangle-free/rectangular-hole theorem is still valid and can be attacked after the corrected r=0 equality branch.
+5. Do not move to `z=2` while these minimal `z=1` geometries remain live.
 <!-- CURRENT-STATUS:END -->
