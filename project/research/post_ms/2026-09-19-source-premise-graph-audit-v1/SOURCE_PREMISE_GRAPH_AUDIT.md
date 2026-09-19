@@ -1,5 +1,7 @@
 # Source-premise graph audit — corrected checkpoint
 
+> **SUPERSEDING CORRECTION — 19 September 2026.** The checker version discussed in the historical material below mislabeled the alpha/matched-source orientation as beta. Its statements about beta P1/P2 are therefore not current evidence. The corrected orientation, direct P1 proof, selected-P2 proof, B_beta counting audit, executable X_3 fixture and graph-derived selected/Hall ledger are preserved in [SOURCE_PREMISE_REPAIR.md](SOURCE_PREMISE_REPAIR.md). Historical discussion below is retained as an audit trail; any statement there that P1 remains unresolved is superseded by the repair note.
+
 ## Status
 
 **The provisional raw-P2 counterexample written in the immediately preceding checkpoint was invalid and is withdrawn.**  Replaying it through the preserved checker exposed that the displayed order-9 graph is not D2C and, more basically, its alleged tight pair `(6,8)` at root `4` cannot be a root-neighbour pair because `8` is not adjacent to `4`.  This correction is preserved explicitly rather than silently hiding the failed diagnostic.
