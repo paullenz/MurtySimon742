@@ -4,197 +4,130 @@
 **Date:** 2026-09-19  
 **Active target:** eventual / sufficiently-large second-extremal structure for dense diameter-2-critical graphs around `M(n)=floor((n-1)^2/4)+1`.
 
-The false all-order 2019 Dailly–Foucaud–Hansberg Conjecture 3 is **not** the target. The published 2024 D2C graph `X_3` on 12 vertices and 32 edges has `M(12)=31` and remains a mandatory negative control. The mixed `{4,5}` selected-excess ladder is closed. First-proof priority on Erdős #742 is not an optimization target.
+The false all-order 2019 Dailly–Foucaud–Hansberg Conjecture 3 is **not** the target. The published 2024 D2C hostile control `X_3` has 12 vertices and 32 edges while `M(12)=31`; it remains mandatory. The mixed `{4,5}` selected-excess ladder is closed. First-proof priority on Erdős #742 is not an optimization target.
 
 <!-- CURRENT-STATUS:START -->
-CHECKPOINT CLASS: `ONE_CODE_Z1_FIRST_STRICT_FUNNEL_RESERVOIR_INTERRUPTED_REPAIR_2026_09_19`
+CHECKPOINT CLASS: `ONE_CODE_Z1_FIRST_STRICT_FUNNEL_EXACT_CORE_PINCH_2026_09_19`
 
-WORK MODE: `MATH_AUDIT_REPAIR`
+WORK MODE: `MATH`
 
-INSPECTED PREDECESSOR: `d31da194cd6e0b2ef85176366a60d168d4bbf2c8`
+INSPECTED PREDECESSOR: `7f5e2800ba891aec6618c3d53ecc3e7cc7ec481e`
 
-REPAIR COMMIT: `747d5ed6bd8f7c634e0a4d39b5f1df61b2db3a4f`
+LAST VERIFIED RESULT: `The interrupted first-strict funnel package has now been independently repaired and re-audited inside the same conditional rigid one-code complete-cut branch. The unique-hole frontier remains: epsilon_b=p-g+1 forces one unique buffer--X hole ba_0, b is complete to U_o and X\{a_0}, every surviving buffer--X edge has an outside-U certificate, and the rooted matched-edge funnel splits heads into Type F and Type R. Independent re-derivation verifies Type-R overlap collapse, pairwise-disjoint nonempty agreement blocks for distinct buffer-neighbour code classes, graph-fixed selected witnesses for Type-R classes, LY-STRICT, the weak chi=1 EW/Q surcharge, F-EPS, the Type-F Hamming-slot transfer, R-CLASS, and m=1 all-F/all-R polarization. A missing physical reservoir condition m<=|U_o|=u-k-1 was found and repaired; the interrupted 188,912 survivor count is superseded. A second audit restored the already-proved exact common-core identity E_core=k(p+k-1)+H_core with H_core>=k-1 in the weakest unique-hole route; the broad-box exact-core diagnostic independently replays as 248,798 coarse rows, 208,684 pair survivors, and 174,769 final abstract survivors. These are parameter diagnostics, not D2C graph counts. In the m=1 branch, every geometry except one literal all-R equality pinch pays r>=a+y. The only pinch avoiding that discrete +y bill has s=1, I=I_0, all X in one tight code class C at Hamming distance one from d, a_0 isolated in G[X], one outside witness z with N_A(z)={a_0}, epsilon_z>=p-1, epsilon_a0>=p-y+1, and full-class capacity x<=R_A.`
 
-LAST VERIFIED RESULT: `The last independently inherited structural frontier remains the first-strict unloaded common-buffer unique-hole theorem: epsilon_b=p-g+1 forces one unique buffer--X hole ba_0, b is complete to U_o and X\{a_0}, every remaining buffer--X edge is outside-U certified, and the rooted matched-edge funnel gives the Type-F / Type-R support dichotomy described below. The interrupted commit d31da194... preserves a substantial NEW candidate theorem package (Type-R overlap collapse, disjoint agreement-block normal form, pair-local source pricing, outside-reservoir/core-separation bills, F-versus-a_0 slack conservation, Hamming-slot feedback, and m=1 all-F/all-R polarization), but this repair does NOT promote those additions to verified status until their key singleton/common-neighbour derivations are independently re-audited.`
+UNPRESERVED WORK: `None known. The interrupted theorem prose is preserved in project/research/post_ms/2026-09-19-first-strict-funnel-reservoir-v1/FIRST_STRICT_FUNNEL_RESERVOIR.md; the independent repair audit is FIRST_STRICT_FUNNEL_REPAIR_AUDIT.md; reconstructed broad checker is check_first_strict_funnel_reservoir.py; exact-core correction is check_first_strict_exact_core.py; the one-witness structural pinch is ONE_WITNESS_POLARIZATION_PINCH.md; and the corrected pinch diagnostic is check_one_witness_pinch.py. The earlier reported 188,912, 179,735 and 178,572 survivor counts are historical/superseded diagnostics and must not be used as current evidence.`
 
-UNPRESERVED WORK: `The theorem note committed at d31da194... claims a companion checker and exact diagnostic replay counts (including 248,798 coarse rows and 188,912 final abstract survivors), but repository inspection shows that project/research/post_ms/2026-09-19-first-strict-funnel-reservoir-v1/ contains only FIRST_STRICT_FUNNEL_RESERVOIR.md. No checker/script or replay artifact was preserved. Therefore all Section 13 numerical counts are REPORTED BUT UNREPRODUCED and must not be used as verified evidence. Reconstructing and preserving an independent checker is mandatory before those counts influence priorities or confidence.`
+DEFERRED ADMIN: `README remains correctly anchored to the 19 September daily adversarial trust boundary. The present advances are internal conditional mathematics and diagnostics; do not promote them as an eventual theorem or graph-realizability result. Reviewer-facing README refresh belongs at the next daily audit or a genuine theorem-level milestone.`
 
-DEFERRED ADMIN: `README remains on the 19 September daily-audit trust boundary because the interrupted checkpoint does not change the externally verified project status. Do not erase the d31da194... theorem package: preserve it as candidate conditional mathematics with the interruption warning added at repair commit 747d5ed6.... Reviewer-facing promotion should occur only after replay/audit or the next daily adversarial checkpoint.`
-
-NEXT ACTION: `BEFORE ANY NEW FORWARD MATHEMATICS, repair reproducibility and audit the interrupted package. (1) Reconstruct an independent checker for Sections 12-13 from the preserved formulas, commit it, and replay the reported counts; discrepancies are blockers, not reasons to weaken gates. (2) Independently re-derive the key hand steps most capable of invalidating downstream work: Theorem 3.1 fixed-foot Type-R overlap collapse; Theorem 4.1 disjoint agreement blocks; Theorem 6.1 LY-STRICT source floor and pair-local P0/Sigma_P; the k-chi core-separation surcharge EW-STRICT/Q-STRICT; F-EPS; and the local Hamming slot bounds R-F/R-CLASS. (3) Only if those pass, promote the m=1 polarization and attack the all-R cheapest geometry first (s=1, I=I_0, a_0 isolated in G[X], N_A(z)={a_0}), then all-F. If any upstream lemma fails, mark every dependent statement/count weakened or invalidated in CURRENT_STATE.md and pivot to the minimal corrected statement. Keep X_3 as mandatory negative control, exact pair-local Ccap_P/(ONE-P)/(CROWD) intact, and m=g+2, z=2, loaded-buffer and four-exception routes subordinate.`
+NEXT ACTION: `Stay on the single m=1 all-R equality pinch before opening larger reservoirs or loaded buffers. First trace raw criticality of the remaining a_0--U, X--U and same-code X edges in the literal geometry s=1, I=I_0, all X one code, a_0 isolated in G[X], N_A(z)={a_0}. Search specifically for additional located U-nonedges or forced A--U holes; feed them into Q-STRICT, exact E_U score, and delta=r-e(F). Preserve exact pair-local Ccap_P/(ONE-P)/(CROWD); do not replace pair score by total score. If the pinch survives, classify its exact equality incidence pattern before considering multi-witness m>=2. Treat the exact-core broad scan and one-witness scan only as diagnostics. Keep loaded-buffer, m=g+2, z=2 and the four-exception route subordinate unless the pinch closes or a new audit makes them load-bearing.`
 <!-- CURRENT-STATUS:END -->
 
 ---
 
-## 1. Mandatory audit gate
+## 1. Binding 19 September adversarial-audit gate
 
-This run began by rereading `CURRENT_STATE.md`, root `README.md`, the latest commit chain, the 19 September daily adversarial audit, `INDEPENDENT_SOURCE_TUPLE_REPROOF.md`, the repaired source-premise / actual-D2C graph-level regression status, and the current shared-core handoff before forward mathematics.
+The latest daily red-team audit remains mandatory input. Its trust boundary is unchanged:
 
-Binding trust boundary:
+- distinct physical beta-source identity is proved directly from raw singleton criticality;
+- global `(source,coordinate)` uniqueness is selected-representative uniqueness, not raw-witness uniqueness;
+- the finite source-tuple capacity theorem is independently re-derived only conditional on those two graph-to-selected-system premises;
+- the actual-D2C regression retains `X_3` and has zero recorded graph/formula mismatches, but no bounded actual-D2C fixture realizes the full rigid complete-cut hypotheses;
+- exact pair-local `Ccap_P`, `(ONE-P)` and `(CROWD)` remain mandatory in the one-code branch;
+- the four-exception gate remains supporting/subordinate unless it becomes load-bearing.
 
-- distinct physical beta-source identity: raw singleton-criticality proved;
-- `(source,coordinate)` uniqueness: selected-representative uniqueness only, not raw-witness uniqueness;
-- finite source-tuple capacity theorem: independently re-derived only conditional on those two named premises, not unconditional graph-level closure;
-- actual-D2C regression: `X_3` retained, zero recorded graph/formula mismatches, but no bounded fixture realizes the full rigid complete-cut hypotheses;
-- exact pair-local `S_P/Ccap_P` remains mandatory downstream;
-- four-exception gate remains subordinate.
-
-The predecessor proposed continuing inside the unmatched-heavy shared-core resource cone. This run departed from that downstream priority for a precise mathematical reason: a raw rooted B-edge criticality check closes the cone's parent buffer-equality hypothesis before source capacity or pair optimization is needed. The closure is therefore upstream of, and consistent with, the audit's preference for testing dominant premises before building further downstream theory.
-
-
-### 1A. Interrupted 21:00 checkpoint repair
-
-The 21:00 hourly invocation reached GitHub and committed `d31da194cd6e0b2ef85176366a60d168d4bbf2c8`, adding:
-
-- `project/research/post_ms/2026-09-19-first-strict-funnel-reservoir-v1/FIRST_STRICT_FUNNEL_RESERVOIR.md`.
-
-The invocation then failed before synchronizing this file or preserving the diagnostic checker referenced by that note. Repository inspection of the package directory confirms that the Markdown theorem note is the only preserved file. Repair commit `747d5ed6bd8f7c634e0a4d39b5f1df61b2db3a4f` adds an interruption warning directly to that note.
-
-Trust consequence:
-
-- the hand derivations in the note are preserved as candidate conditional structural results and must be independently re-audited before promotion;
-- the Section 13 scan counts are not currently reproducible from repository artifacts and are therefore not verified evidence;
-- the mandatory 19 September audit boundary is unchanged;
-- no forward line may use the reported scan counts until an independent checker is reconstructed, committed and replayed.
-
-This repair is deliberately conservative: it preserves the mathematical work that survived the failed invocation without pretending that missing computational evidence exists.
+Reference: `project/research/post_ms/2026-09-19-daily-red-team-audit-v1/DAILY_RED_TEAM_AUDIT.md` and its source-premise follow-up materials.
 
 ---
 
-## 2. Rooted matched-edge self-pricing
+## 2. Interrupted-checkpoint repair and independent reconstruction
 
-In the positive-buffer common-buffer branch, an outside Orientation-A certificate for `bx` has
+Commit `d31da194...` preserved a substantial first-strict funnel theorem note but omitted its claimed companion checker. That interruption was explicitly marked rather than papered over. The repair then reconstructed the arithmetic independently from the prose formulas and re-derived the principal hand lemmas.
 
-`bz in E`, `xz notin E`, `N(x) cap N(z)={b}`,
+The repair found a real finite-model omission:
 
-`c(z)=bar c(x)`, and z anticomplete to Y.
+> `1 <= m <= |U_o| = u-k-1`.
 
-Since `c(x) != bar d`, choose a tight coordinate i with `c(x)_i=d_i`. Then b and z both select the `bar d` matched endpoint `q_i`, so
+The legacy finite diagnostic had allowed rows with no physical outside reservoir despite requiring outside-U certificates. Adding that physical condition and explicit nonnegativity of the rooted triangle ceiling changed the broad-box final survivor count from 188,912 to 179,735. This correction did **not** invalidate the hand support-block lemmas; it invalidated promotion of the legacy numerical distribution.
 
-`bq_i,zq_i in E`.
-
-The edge `zq_i` lies in the rooted B-layer. Raw rooted triangle-edge criticality therefore requires an A-witness in one of two singleton orientations.
-
-Without assuming buffer equality, either orientation forces the A-witness to lie in X and to be nonadjacent to b:
-
-- forward `z -> q_i`: Y misses q_i; any X-witness adjacent to b has b as a second common neighbour;
-- reverse `q_i -> z`: Y cannot witness because z is anticomplete to Y; any X-witness adjacent to b again has b as a second common neighbour.
-
-Thus every outside-U buffer certificate forces at least one physical buffer--X hole.
-
-This lemma uses no source-tuple theorem, no selected representative uniqueness and no finite scan.
+Reference: `project/research/post_ms/2026-09-19-first-strict-funnel-reservoir-v1/FIRST_STRICT_FUNNEL_REPAIR_AUDIT.md`.
 
 ---
 
-## 3. Former equality layer is empty
+## 3. Exact common-core pricing correction
 
-In the first positive-buffer equality layer
+The repaired broad diagnostic still used a deliberately weak historical core floor. The already-proved unloaded common-core identity is stronger:
 
-`d_Y(b)=0`, `epsilon_b=p-g`,
+> `E_core = k(p+k-1) + H_core`,
 
-the exact buffer degree floor forces b complete to X and U_o. Previous repaired criticality already proves that reverse buffer certificates and matched Orientation-A certificates are impossible, so every `bx` must use an outside-U certificate.
+and in the weakest unique-hole (`chi=1`) route,
 
-But the self-pricing lemma says any such certificate forces a buffer--X nonedge. Contradiction.
+> `H_core >= k-1`.
 
-Therefore
+Restoring this exact upstream price yields the current broad abstract diagnostic:
 
-> `d_Y(b)=0  =>  epsilon_b>=p-g+1`.
+- coarse rows: **248,798**;
+- exact-core pair survivors: **208,684**;
+- exact-core pair rejects: **40,114**;
+- exact-core final survivors: **174,769**;
+- residual rejects after the pair gate: **33,915**.
 
-This closes the entire parent layer for every `t=p-g>=1`. All `m=g+1`, E=1, shared-core E=2, one-core R2+R2 and R3 descendants inside the old equality layer cease to be live realizability branches. Their proved conditional implications remain archived.
+An independent arithmetic replay during the present handoff reproduced all five counts exactly. The checker remains an abstract parameter diagnostic, **not** a D2C graph enumerator or realizability proof.
 
-`X_3` is untouched because it has `u=0` and never enters this branch.
-
----
-
-## 4. Exact first-strict buffer split
-
-For an unloaded buffer put
-
-`h_X=e_bar({b},X)`, `h_o=e_bar({b},U_o)`.
-
-Direct degree counting gives the exact identity
-
-> `epsilon_b=(p-g)+h_X+h_o`.
-
-Hence the first strict layer `epsilon_b=p-g+1` has only two possibilities:
-
-1. `h_X=1,h_o=0`;
-2. `h_X=0,h_o=1`.
-
-The second is impossible. If b is complete to X and has one U_o non-neighbour z_0, matched Orientation A is unavailable and outside Orientation A is forbidden by self-pricing. Any reverse certificate must then use the same z_0, but the fixed pair `(b,z_0)` can have at most one singleton X-head while b has x>=3 X-edges.
-
-Thus the only first-strict unloaded subtype is
-
-> `h_X=1`, `h_o=0`.
-
-Let `a_0` be the unique X-hole. Then b is complete to U_o and to `X\{a_0}`.
+Reference: `project/research/post_ms/2026-09-19-first-strict-funnel-reservoir-v1/check_first_strict_exact_core.py`.
 
 ---
 
-## 5. Every surviving buffer edge is outside-U certified
+## 4. One-witness polarization pinch
 
-For an edge `bx`, `x!=a_0`, reverse orientation is impossible:
+Inside the independently re-audited first-strict branch, suppose the selected outside-reservoir population has minimum physical size `m=1`.
 
-- root and matched witnesses fail by rooted common neighbours;
-- U_o is complete to b;
-- U_- shares tight matched neighbours with b;
-- Y shares at least the x-1>=2 buffer-neighbour X-vertices with b;
-- an X reverse witness has code neither d nor bar d, hence shares a tight matched neighbour with b.
+Then all buffer-neighbour heads have one code and the geometry polarizes completely:
 
-Matched Orientation A is already excluded by the preserved matched-channel collapse. Therefore every edge from b to `X\{a_0}` uses an outside witness `z_x in U_o` with the standard complementary-code and Y-anticompleteness properties.
+- **all-F:** the common agreement block is one coordinate in `S_0`;
+- **all-R:** the common block is a nonempty subset of `I_0`, the unique outside witness satisfies `N_A(z)={a_0}`, and `a_0` is isolated from `X\{a_0}`.
 
----
+The exact Hamming bills imply:
 
-## 6. Unique-hole funnel and Boolean support dichotomy
+- all-F always pays `r>=a+y`;
+- all-R with a proper block `I proper subset I_0` pays `r>=a+y`;
+- all-R with `I=I_0` but `s>=2` pays `r>=a+y`.
 
-For each such outside witness and every coordinate `i` with `c(x)_i=d_i`, the shared matched edge `z_x q_i` must use the unique buffer hole `a_0` as its rooted A-witness.
+Therefore the **only** one-witness model capable of avoiding the discrete `+y` rooted-slot surcharge is
 
-Set
+> `s=1`, `I=I_0`, all of X in one common code class `C` with `d_H(C,d)=1`.
 
-`S_0={i:c(a_0)_i!=d_i}`,
+In this equality pinch:
 
-`S_x={i:c(x)_i!=d_i}`,
+- `a_0` is isolated in `G[X]`;
+- the unique selected outside witness `z` has `N_A(z)={a_0}` and `c(z)=bar C`;
+- for each `x in X\{a_0}`, `N(x) cap N(z)={b}`;
+- `epsilon_z>=p-1` and `epsilon_a0>=p-y+1`;
+- full-class capacity is `x<=R_A`, not merely `x-1<=R_A`.
 
-`I_x=[p]\S_x`.
+Reference: `ONE_WITNESS_POLARIZATION_PINCH.md` in the same package.
 
-The adjacency `z_x a_0` fixes all rooted orientations generated by this witness.
+The corrected exact-core one-witness diagnostic gives:
 
-- If `z_x a_0` is a nonedge, only the forward orientation is available. The fixed pair `(z_x,a_0)` can have only one singleton matched head, so `|I_x|=1`; that coordinate lies in `S_0`. This is **Type F** and `|S_x|=p-1`.
-- If `z_x a_0` is an edge, only reverse orientations are available. Then every i in `I_x` has `c(a_0)_i=d_i`, so `I_x cap S_0=emptyset`, equivalently `S_0 subseteq S_x`. The original buffer certificate then forces `xa_0` to be a nonedge. This is **Type R**.
+- pair survivors: **206,935**;
+- final abstract survivors: **173,347**.
 
-Consequently
-
-> every X-neighbour of `a_0` has Hamming radius exactly `p-1` from d.
-
-All non-extreme buffer neighbours are physically separated from `a_0` and their code supports contain `S_0`.
-
-This is the live bridge into Hall density and pair capacity.
+These counts were independently replayed during this handoff and are diagnostic only.
 
 ---
 
-## 7. Preserved artifacts
+## 5. Current theorem/obstruction frontier
 
-New theorem packages:
+The highest-value live question is no longer a broad F/R resource optimization. It is whether the literal all-R equality pinch can exist under raw diameter-2-criticality.
 
-- `project/research/post_ms/2026-09-19-buffer-rooted-matched-edge-collapse-v1/BUFFER_ROOTED_MATCHED_EDGE_COLLAPSE.md`
-- `project/research/post_ms/2026-09-19-buffer-first-strict-layer-v1/BUFFER_FIRST_STRICT_LAYER.md`
-- `project/research/post_ms/2026-09-19-first-strict-funnel-reservoir-v1/FIRST_STRICT_FUNNEL_RESERVOIR.md` — interrupted checkpoint; structural hand work preserved, Section 13 diagnostics unreproduced until checker reconstruction.
+The local configuration to attack is:
 
-Predecessor resource-cone package remains preserved at
+- all X share one tight code `C`, differing from `d` in exactly one coordinate;
+- `a_0` is the unique buffer non-neighbour and is isolated in `G[X]`;
+- the unique outside witness `z` is adjacent to `a_0` and anticomplete to every other A-vertex;
+- `b` is adjacent to `z` and to every `X\{a_0}` vertex;
+- each edge `bx`, `x!=a_0`, has `z` as its outside certificate;
+- the reverse matched-edge funnel gives fixed singleton relations `N(q_i) cap N(a_0)={z}` on every agreement coordinate.
 
-- `project/research/post_ms/2026-09-19-shared-core-resource-cone-v1/`
+The next structural proof should trace criticality around this fixed incidence pattern and locate additional physical U-holes/A-U holes. Any such located holes are more valuable than another global scalar relaxation because they can be charged simultaneously through `Q=e(G[U])`, `E_U`, rooted unused slots, and `delta=r-e(F)`.
 
-with its original trust boundary. It is now historical conditional downstream mathematics, not the live branch.
-
----
-
-## 8. Next handoff
-
-Do **not** return to the old shared-core tail. Its parent equality layer is closed.
-
-Stay in the first strict unloaded layer and use the unique-hole support dichotomy against the exact Hall identity. The desired compact theorem is a two-arm obstruction:
-
-- many Type-F heads imply many radius-`p-1` codes and should be expensive under exact pair-local capacity / crowding;
-- few Type-F heads imply `a_0` has small X-degree because all Type-R heads miss it, which should force Hall slack / rooted unused-slot cost.
-
-Keep the exact pair variable `S_P`; do not replace it by total `C0`. If the unique-hole layer survives, feed the single located X-hole and its nested support geometry into `delta=r-e(F)` and Q before opening the loaded-buffer branch. The loaded branch, `z=2`, `m=g+2`, and the four-exception gate remain deferred until then.
+Do not reopen the already-closed buffer-equality descendants or the mixed `{4,5}` ladder. Do not treat finite scans as proof. Preserve failures and counterexamples explicitly.
