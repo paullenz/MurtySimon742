@@ -1,0 +1,1081 @@
+{
+  "date": "2026-09-19",
+  "new_physical_constraints": {
+    "M_min": 2,
+    "additional_q_nonedge_count": 3,
+    "reason": "both defect witnesses miss z_*; all three bidirected selected-witness channels force witness-witness nonedges"
+  },
+  "scope": "bounded abstract t=1 no-E1 shared-core R2+R2 exact/one-unit endpoint diagnostic; not graph-realizability",
+  "states": [
+    {
+      "C0": 84,
+      "a": 15,
+      "g": 3,
+      "has_exact_row": true,
+      "k": 3,
+      "lambda": 4,
+      "p": 4,
+      "qualifying_rows": [
+        {
+          "D": -14,
+          "Emin_row": 1,
+          "M": 2,
+          "e_pin": 7,
+          "pair_slack": 0,
+          "rupper_after_q_minus_3": 82,
+          "slot_floor": 24
+        },
+        {
+          "D": -17,
+          "Emin_row": 1,
+          "M": 3,
+          "e_pin": 8,
+          "pair_slack": 1,
+          "rupper_after_q_minus_3": 78,
+          "slot_floor": 24
+        }
+      ],
+      "sigma_P": 76,
+      "u": 12,
+      "x": 6,
+      "y": 9
+    },
+    {
+      "C0": 91,
+      "a": 16,
+      "g": 3,
+      "has_exact_row": true,
+      "k": 3,
+      "lambda": 4,
+      "p": 4,
+      "qualifying_rows": [
+        {
+          "D": -14,
+          "Emin_row": 1,
+          "M": 2,
+          "e_pin": 7,
+          "pair_slack": 0,
+          "rupper_after_q_minus_3": 98,
+          "slot_floor": 25
+        },
+        {
+          "D": -17,
+          "Emin_row": 1,
+          "M": 3,
+          "e_pin": 8,
+          "pair_slack": 1,
+          "rupper_after_q_minus_3": 94,
+          "slot_floor": 25
+        }
+      ],
+      "sigma_P": 83,
+      "u": 13,
+      "x": 6,
+      "y": 10
+    },
+    {
+      "C0": 98,
+      "a": 17,
+      "g": 3,
+      "has_exact_row": true,
+      "k": 3,
+      "lambda": 4,
+      "p": 4,
+      "qualifying_rows": [
+        {
+          "D": -14,
+          "Emin_row": 1,
+          "M": 2,
+          "e_pin": 7,
+          "pair_slack": 0,
+          "rupper_after_q_minus_3": 116,
+          "slot_floor": 26
+        },
+        {
+          "D": -17,
+          "Emin_row": 1,
+          "M": 3,
+          "e_pin": 8,
+          "pair_slack": 1,
+          "rupper_after_q_minus_3": 112,
+          "slot_floor": 26
+        }
+      ],
+      "sigma_P": 90,
+      "u": 14,
+      "x": 6,
+      "y": 11
+    },
+    {
+      "C0": 105,
+      "a": 18,
+      "g": 3,
+      "has_exact_row": true,
+      "k": 3,
+      "lambda": 4,
+      "p": 4,
+      "qualifying_rows": [
+        {
+          "D": -14,
+          "Emin_row": 1,
+          "M": 2,
+          "e_pin": 7,
+          "pair_slack": 0,
+          "rupper_after_q_minus_3": 136,
+          "slot_floor": 27
+        },
+        {
+          "D": -17,
+          "Emin_row": 1,
+          "M": 3,
+          "e_pin": 8,
+          "pair_slack": 1,
+          "rupper_after_q_minus_3": 132,
+          "slot_floor": 27
+        }
+      ],
+      "sigma_P": 97,
+      "u": 15,
+      "x": 6,
+      "y": 12
+    },
+    {
+      "C0": 112,
+      "a": 19,
+      "g": 3,
+      "has_exact_row": true,
+      "k": 3,
+      "lambda": 4,
+      "p": 4,
+      "qualifying_rows": [
+        {
+          "D": -14,
+          "Emin_row": 1,
+          "M": 2,
+          "e_pin": 7,
+          "pair_slack": 0,
+          "rupper_after_q_minus_3": 158,
+          "slot_floor": 28
+        },
+        {
+          "D": -17,
+          "Emin_row": 1,
+          "M": 3,
+          "e_pin": 8,
+          "pair_slack": 1,
+          "rupper_after_q_minus_3": 154,
+          "slot_floor": 28
+        }
+      ],
+      "sigma_P": 104,
+      "u": 16,
+      "x": 6,
+      "y": 13
+    },
+    {
+      "C0": 119,
+      "a": 20,
+      "g": 3,
+      "has_exact_row": true,
+      "k": 3,
+      "lambda": 4,
+      "p": 4,
+      "qualifying_rows": [
+        {
+          "D": -14,
+          "Emin_row": 1,
+          "M": 2,
+          "e_pin": 7,
+          "pair_slack": 0,
+          "rupper_after_q_minus_3": 182,
+          "slot_floor": 29
+        },
+        {
+          "D": -17,
+          "Emin_row": 1,
+          "M": 3,
+          "e_pin": 8,
+          "pair_slack": 1,
+          "rupper_after_q_minus_3": 178,
+          "slot_floor": 29
+        }
+      ],
+      "sigma_P": 111,
+      "u": 17,
+      "x": 6,
+      "y": 14
+    },
+    {
+      "C0": 126,
+      "a": 21,
+      "g": 3,
+      "has_exact_row": true,
+      "k": 3,
+      "lambda": 4,
+      "p": 4,
+      "qualifying_rows": [
+        {
+          "D": -14,
+          "Emin_row": 1,
+          "M": 2,
+          "e_pin": 7,
+          "pair_slack": 0,
+          "rupper_after_q_minus_3": 208,
+          "slot_floor": 30
+        },
+        {
+          "D": -17,
+          "Emin_row": 1,
+          "M": 3,
+          "e_pin": 8,
+          "pair_slack": 1,
+          "rupper_after_q_minus_3": 204,
+          "slot_floor": 30
+        }
+      ],
+      "sigma_P": 118,
+      "u": 18,
+      "x": 6,
+      "y": 15
+    },
+    {
+      "C0": 111,
+      "a": 18,
+      "g": 4,
+      "has_exact_row": true,
+      "k": 3,
+      "lambda": 5,
+      "p": 5,
+      "qualifying_rows": [
+        {
+          "D": -8,
+          "Emin_row": 1,
+          "M": 2,
+          "e_pin": 10,
+          "pair_slack": 0,
+          "rupper_after_q_minus_3": 104,
+          "slot_floor": 28
+        }
+      ],
+      "sigma_P": 94,
+      "u": 13,
+      "x": 7,
+      "y": 11
+    },
+    {
+      "C0": 119,
+      "a": 19,
+      "g": 4,
+      "has_exact_row": true,
+      "k": 3,
+      "lambda": 5,
+      "p": 5,
+      "qualifying_rows": [
+        {
+          "D": -8,
+          "Emin_row": 1,
+          "M": 2,
+          "e_pin": 10,
+          "pair_slack": 0,
+          "rupper_after_q_minus_3": 123,
+          "slot_floor": 29
+        }
+      ],
+      "sigma_P": 102,
+      "u": 14,
+      "x": 7,
+      "y": 12
+    },
+    {
+      "C0": 127,
+      "a": 20,
+      "g": 4,
+      "has_exact_row": true,
+      "k": 3,
+      "lambda": 5,
+      "p": 5,
+      "qualifying_rows": [
+        {
+          "D": -8,
+          "Emin_row": 1,
+          "M": 2,
+          "e_pin": 10,
+          "pair_slack": 0,
+          "rupper_after_q_minus_3": 144,
+          "slot_floor": 30
+        }
+      ],
+      "sigma_P": 110,
+      "u": 15,
+      "x": 7,
+      "y": 13
+    },
+    {
+      "C0": 135,
+      "a": 21,
+      "g": 4,
+      "has_exact_row": true,
+      "k": 3,
+      "lambda": 5,
+      "p": 5,
+      "qualifying_rows": [
+        {
+          "D": -8,
+          "Emin_row": 1,
+          "M": 2,
+          "e_pin": 10,
+          "pair_slack": 0,
+          "rupper_after_q_minus_3": 167,
+          "slot_floor": 31
+        }
+      ],
+      "sigma_P": 118,
+      "u": 16,
+      "x": 7,
+      "y": 14
+    },
+    {
+      "C0": 143,
+      "a": 22,
+      "g": 4,
+      "has_exact_row": true,
+      "k": 3,
+      "lambda": 5,
+      "p": 5,
+      "qualifying_rows": [
+        {
+          "D": -8,
+          "Emin_row": 1,
+          "M": 2,
+          "e_pin": 10,
+          "pair_slack": 0,
+          "rupper_after_q_minus_3": 192,
+          "slot_floor": 32
+        }
+      ],
+      "sigma_P": 126,
+      "u": 17,
+      "x": 7,
+      "y": 15
+    },
+    {
+      "C0": 151,
+      "a": 23,
+      "g": 4,
+      "has_exact_row": true,
+      "k": 3,
+      "lambda": 5,
+      "p": 5,
+      "qualifying_rows": [
+        {
+          "D": -8,
+          "Emin_row": 1,
+          "M": 2,
+          "e_pin": 10,
+          "pair_slack": 0,
+          "rupper_after_q_minus_3": 219,
+          "slot_floor": 33
+        }
+      ],
+      "sigma_P": 134,
+      "u": 18,
+      "x": 7,
+      "y": 16
+    },
+    {
+      "C0": 173,
+      "a": 24,
+      "g": 7,
+      "has_exact_row": true,
+      "k": 3,
+      "lambda": 9,
+      "p": 8,
+      "qualifying_rows": [
+        {
+          "D": -20,
+          "Emin_row": 6,
+          "M": 2,
+          "e_pin": 26,
+          "pair_slack": 0,
+          "rupper_after_q_minus_3": 174,
+          "slot_floor": 38
+        }
+      ],
+      "sigma_P": 142,
+      "u": 17,
+      "x": 10,
+      "y": 14
+    },
+    {
+      "C0": 183,
+      "a": 25,
+      "g": 7,
+      "has_exact_row": true,
+      "k": 3,
+      "lambda": 9,
+      "p": 8,
+      "qualifying_rows": [
+        {
+          "D": -20,
+          "Emin_row": 6,
+          "M": 2,
+          "e_pin": 26,
+          "pair_slack": 0,
+          "rupper_after_q_minus_3": 203,
+          "slot_floor": 39
+        }
+      ],
+      "sigma_P": 152,
+      "u": 18,
+      "x": 10,
+      "y": 15
+    },
+    {
+      "C0": 194,
+      "a": 26,
+      "g": 8,
+      "has_exact_row": true,
+      "k": 3,
+      "lambda": 10,
+      "p": 9,
+      "qualifying_rows": [
+        {
+          "D": -16,
+          "Emin_row": 8,
+          "M": 2,
+          "e_pin": 33,
+          "pair_slack": 0,
+          "rupper_after_q_minus_3": 186,
+          "slot_floor": 41
+        }
+      ],
+      "sigma_P": 159,
+      "u": 17,
+      "x": 11,
+      "y": 15
+    },
+    {
+      "C0": 205,
+      "a": 27,
+      "g": 8,
+      "has_exact_row": true,
+      "k": 3,
+      "lambda": 10,
+      "p": 9,
+      "qualifying_rows": [
+        {
+          "D": -16,
+          "Emin_row": 8,
+          "M": 2,
+          "e_pin": 33,
+          "pair_slack": 0,
+          "rupper_after_q_minus_3": 217,
+          "slot_floor": 42
+        }
+      ],
+      "sigma_P": 170,
+      "u": 18,
+      "x": 11,
+      "y": 16
+    },
+    {
+      "C0": 226,
+      "a": 29,
+      "g": 9,
+      "has_exact_row": true,
+      "k": 3,
+      "lambda": 11,
+      "p": 10,
+      "qualifying_rows": [
+        {
+          "D": -11,
+          "Emin_row": 11,
+          "M": 2,
+          "e_pin": 41,
+          "pair_slack": 0,
+          "rupper_after_q_minus_3": 226,
+          "slot_floor": 45
+        }
+      ],
+      "sigma_P": 184,
+      "u": 18,
+      "x": 12,
+      "y": 17
+    },
+    {
+      "C0": 281,
+      "a": 35,
+      "g": 12,
+      "has_exact_row": true,
+      "k": 3,
+      "lambda": 15,
+      "p": 13,
+      "qualifying_rows": [
+        {
+          "D": -27,
+          "Emin_row": 20,
+          "M": 2,
+          "e_pin": 67,
+          "pair_slack": 0,
+          "rupper_after_q_minus_3": 307,
+          "slot_floor": 54
+        }
+      ],
+      "sigma_P": 221,
+      "u": 18,
+      "x": 15,
+      "y": 20
+    },
+    {
+      "C0": 202,
+      "a": 27,
+      "g": 7,
+      "has_exact_row": true,
+      "k": 4,
+      "lambda": 9,
+      "p": 8,
+      "qualifying_rows": [
+        {
+          "D": -23,
+          "Emin_row": 5,
+          "M": 2,
+          "e_pin": 29,
+          "pair_slack": 0,
+          "rupper_after_q_minus_3": 191,
+          "slot_floor": 42
+        }
+      ],
+      "sigma_P": 163,
+      "u": 17,
+      "x": 11,
+      "y": 16
+    },
+    {
+      "C0": 212,
+      "a": 28,
+      "g": 7,
+      "has_exact_row": true,
+      "k": 4,
+      "lambda": 9,
+      "p": 8,
+      "qualifying_rows": [
+        {
+          "D": -23,
+          "Emin_row": 5,
+          "M": 2,
+          "e_pin": 29,
+          "pair_slack": 0,
+          "rupper_after_q_minus_3": 220,
+          "slot_floor": 43
+        }
+      ],
+      "sigma_P": 173,
+      "u": 18,
+      "x": 11,
+      "y": 17
+    },
+    {
+      "C0": 216,
+      "a": 29,
+      "g": 8,
+      "has_exact_row": true,
+      "k": 4,
+      "lambda": 10,
+      "p": 9,
+      "qualifying_rows": [
+        {
+          "D": -17,
+          "Emin_row": 7,
+          "M": 2,
+          "e_pin": 37,
+          "pair_slack": 0,
+          "rupper_after_q_minus_3": 206,
+          "slot_floor": 45
+        }
+      ],
+      "sigma_P": 173,
+      "u": 17,
+      "x": 12,
+      "y": 17
+    },
+    {
+      "C0": 227,
+      "a": 30,
+      "g": 8,
+      "has_exact_row": true,
+      "k": 4,
+      "lambda": 10,
+      "p": 9,
+      "qualifying_rows": [
+        {
+          "D": -17,
+          "Emin_row": 7,
+          "M": 2,
+          "e_pin": 37,
+          "pair_slack": 0,
+          "rupper_after_q_minus_3": 237,
+          "slot_floor": 46
+        }
+      ],
+      "sigma_P": 184,
+      "u": 18,
+      "x": 12,
+      "y": 18
+    },
+    {
+      "C0": 268,
+      "a": 34,
+      "g": 12,
+      "has_exact_row": true,
+      "k": 4,
+      "lambda": 15,
+      "p": 13,
+      "qualifying_rows": [
+        {
+          "D": -34,
+          "Emin_row": 17,
+          "M": 2,
+          "e_pin": 70,
+          "pair_slack": 0,
+          "rupper_after_q_minus_3": 278,
+          "slot_floor": 54
+        }
+      ],
+      "sigma_P": 208,
+      "u": 17,
+      "x": 16,
+      "y": 18
+    },
+    {
+      "C0": 280,
+      "a": 35,
+      "g": 12,
+      "has_exact_row": true,
+      "k": 4,
+      "lambda": 15,
+      "p": 13,
+      "qualifying_rows": [
+        {
+          "D": -34,
+          "Emin_row": 17,
+          "M": 2,
+          "e_pin": 70,
+          "pair_slack": 0,
+          "rupper_after_q_minus_3": 313,
+          "slot_floor": 55
+        }
+      ],
+      "sigma_P": 220,
+      "u": 18,
+      "x": 16,
+      "y": 19
+    },
+    {
+      "C0": 175,
+      "a": 25,
+      "g": 5,
+      "has_exact_row": true,
+      "k": 5,
+      "lambda": 7,
+      "p": 6,
+      "qualifying_rows": [
+        {
+          "D": -28,
+          "Emin_row": 1,
+          "M": 3,
+          "e_pin": 25,
+          "pair_slack": 0,
+          "rupper_after_q_minus_3": 167,
+          "slot_floor": 39
+        }
+      ],
+      "sigma_P": 139,
+      "u": 17,
+      "x": 10,
+      "y": 15
+    },
+    {
+      "C0": 184,
+      "a": 26,
+      "g": 5,
+      "has_exact_row": true,
+      "k": 5,
+      "lambda": 7,
+      "p": 6,
+      "qualifying_rows": [
+        {
+          "D": -28,
+          "Emin_row": 1,
+          "M": 3,
+          "e_pin": 25,
+          "pair_slack": 0,
+          "rupper_after_q_minus_3": 194,
+          "slot_floor": 40
+        }
+      ],
+      "sigma_P": 148,
+      "u": 18,
+      "x": 10,
+      "y": 16
+    },
+    {
+      "C0": 186,
+      "a": 26,
+      "g": 6,
+      "has_exact_row": true,
+      "k": 5,
+      "lambda": 8,
+      "p": 7,
+      "qualifying_rows": [
+        {
+          "D": -22,
+          "Emin_row": 3,
+          "M": 3,
+          "e_pin": 31,
+          "pair_slack": 0,
+          "rupper_after_q_minus_3": 178,
+          "slot_floor": 41
+        }
+      ],
+      "sigma_P": 146,
+      "u": 17,
+      "x": 11,
+      "y": 15
+    },
+    {
+      "C0": 196,
+      "a": 27,
+      "g": 6,
+      "has_exact_row": true,
+      "k": 5,
+      "lambda": 8,
+      "p": 7,
+      "qualifying_rows": [
+        {
+          "D": -22,
+          "Emin_row": 3,
+          "M": 3,
+          "e_pin": 31,
+          "pair_slack": 0,
+          "rupper_after_q_minus_3": 207,
+          "slot_floor": 42
+        }
+      ],
+      "sigma_P": 156,
+      "u": 18,
+      "x": 11,
+      "y": 16
+    },
+    {
+      "C0": 197,
+      "a": 27,
+      "g": 7,
+      "has_exact_row": true,
+      "k": 5,
+      "lambda": 9,
+      "p": 8,
+      "qualifying_rows": [
+        {
+          "D": -16,
+          "Emin_row": 5,
+          "M": 3,
+          "e_pin": 38,
+          "pair_slack": 0,
+          "rupper_after_q_minus_3": 191,
+          "slot_floor": 43
+        }
+      ],
+      "sigma_P": 153,
+      "u": 17,
+      "x": 12,
+      "y": 15
+    },
+    {
+      "C0": 208,
+      "a": 28,
+      "g": 7,
+      "has_exact_row": true,
+      "k": 5,
+      "lambda": 9,
+      "p": 8,
+      "qualifying_rows": [
+        {
+          "D": -16,
+          "Emin_row": 5,
+          "M": 3,
+          "e_pin": 38,
+          "pair_slack": 0,
+          "rupper_after_q_minus_3": 222,
+          "slot_floor": 44
+        }
+      ],
+      "sigma_P": 164,
+      "u": 18,
+      "x": 12,
+      "y": 16
+    },
+    {
+      "C0": 236,
+      "a": 31,
+      "g": 11,
+      "has_exact_row": true,
+      "k": 5,
+      "lambda": 14,
+      "p": 12,
+      "qualifying_rows": [
+        {
+          "D": -42,
+          "Emin_row": 13,
+          "M": 3,
+          "e_pin": 65,
+          "pair_slack": 0,
+          "rupper_after_q_minus_3": 245,
+          "slot_floor": 51
+        }
+      ],
+      "sigma_P": 181,
+      "u": 17,
+      "x": 16,
+      "y": 15
+    },
+    {
+      "C0": 248,
+      "a": 32,
+      "g": 11,
+      "has_exact_row": true,
+      "k": 5,
+      "lambda": 14,
+      "p": 12,
+      "qualifying_rows": [
+        {
+          "D": -42,
+          "Emin_row": 13,
+          "M": 3,
+          "e_pin": 65,
+          "pair_slack": 0,
+          "rupper_after_q_minus_3": 278,
+          "slot_floor": 52
+        }
+      ],
+      "sigma_P": 193,
+      "u": 18,
+      "x": 16,
+      "y": 16
+    },
+    {
+      "C0": 250,
+      "a": 32,
+      "g": 7,
+      "has_exact_row": true,
+      "k": 5,
+      "lambda": 8,
+      "p": 8,
+      "qualifying_rows": [
+        {
+          "D": -30,
+          "Emin_row": 4,
+          "M": 4,
+          "e_pin": 38,
+          "pair_slack": 0,
+          "rupper_after_q_minus_3": 269,
+          "slot_floor": 48
+        }
+      ],
+      "sigma_P": 203,
+      "u": 17,
+      "x": 12,
+      "y": 20
+    },
+    {
+      "C0": 261,
+      "a": 33,
+      "g": 7,
+      "has_exact_row": true,
+      "k": 5,
+      "lambda": 8,
+      "p": 8,
+      "qualifying_rows": [
+        {
+          "D": -30,
+          "Emin_row": 4,
+          "M": 4,
+          "e_pin": 38,
+          "pair_slack": 0,
+          "rupper_after_q_minus_3": 302,
+          "slot_floor": 49
+        }
+      ],
+      "sigma_P": 214,
+      "u": 18,
+      "x": 12,
+      "y": 21
+    },
+    {
+      "C0": 271,
+      "a": 34,
+      "g": 11,
+      "has_exact_row": true,
+      "k": 5,
+      "lambda": 13,
+      "p": 12,
+      "qualifying_rows": [
+        {
+          "D": -54,
+          "Emin_row": 12,
+          "M": 4,
+          "e_pin": 71,
+          "pair_slack": 0,
+          "rupper_after_q_minus_3": 296,
+          "slot_floor": 55
+        }
+      ],
+      "sigma_P": 211,
+      "u": 17,
+      "x": 16,
+      "y": 18
+    },
+    {
+      "C0": 283,
+      "a": 35,
+      "g": 11,
+      "has_exact_row": true,
+      "k": 5,
+      "lambda": 13,
+      "p": 12,
+      "qualifying_rows": [
+        {
+          "D": -54,
+          "Emin_row": 12,
+          "M": 4,
+          "e_pin": 71,
+          "pair_slack": 0,
+          "rupper_after_q_minus_3": 331,
+          "slot_floor": 56
+        }
+      ],
+      "sigma_P": 223,
+      "u": 18,
+      "x": 16,
+      "y": 19
+    },
+    {
+      "C0": 220,
+      "a": 29,
+      "g": 4,
+      "has_exact_row": true,
+      "k": 6,
+      "lambda": 6,
+      "p": 5,
+      "qualifying_rows": [
+        {
+          "D": -32,
+          "Emin_row": 1,
+          "M": 3,
+          "e_pin": 24,
+          "pair_slack": 0,
+          "rupper_after_q_minus_3": 229,
+          "slot_floor": 44
+        },
+        {
+          "D": -38,
+          "Emin_row": 1,
+          "M": 4,
+          "e_pin": 27,
+          "pair_slack": 1,
+          "rupper_after_q_minus_3": 224,
+          "slot_floor": 45
+        }
+      ],
+      "sigma_P": 174,
+      "u": 17,
+      "x": 10,
+      "y": 19
+    },
+    {
+      "C0": 230,
+      "a": 30,
+      "g": 4,
+      "has_exact_row": true,
+      "k": 6,
+      "lambda": 6,
+      "p": 5,
+      "qualifying_rows": [
+        {
+          "D": -32,
+          "Emin_row": 1,
+          "M": 3,
+          "e_pin": 24,
+          "pair_slack": 0,
+          "rupper_after_q_minus_3": 260,
+          "slot_floor": 45
+        },
+        {
+          "D": -38,
+          "Emin_row": 1,
+          "M": 4,
+          "e_pin": 27,
+          "pair_slack": 1,
+          "rupper_after_q_minus_3": 255,
+          "slot_floor": 46
+        }
+      ],
+      "sigma_P": 184,
+      "u": 18,
+      "x": 10,
+      "y": 20
+    },
+    {
+      "C0": 257,
+      "a": 33,
+      "g": 9,
+      "has_exact_row": true,
+      "k": 6,
+      "lambda": 12,
+      "p": 10,
+      "qualifying_rows": [
+        {
+          "D": -44,
+          "Emin_row": 9,
+          "M": 4,
+          "e_pin": 56,
+          "pair_slack": 0,
+          "rupper_after_q_minus_3": 282,
+          "slot_floor": 54
+        }
+      ],
+      "sigma_P": 199,
+      "u": 17,
+      "x": 15,
+      "y": 18
+    },
+    {
+      "C0": 269,
+      "a": 34,
+      "g": 9,
+      "has_exact_row": true,
+      "k": 6,
+      "lambda": 12,
+      "p": 10,
+      "qualifying_rows": [
+        {
+          "D": -44,
+          "Emin_row": 9,
+          "M": 4,
+          "e_pin": 56,
+          "pair_slack": 0,
+          "rupper_after_q_minus_3": 317,
+          "slot_floor": 55
+        }
+      ],
+      "sigma_P": 211,
+      "u": 18,
+      "x": 15,
+      "y": 19
+    }
+  ],
+  "summary": {
+    "qualifying_rows": 72,
+    "states": 39,
+    "states_with_exact_pair_row": 38
+  }
+}
