@@ -276,7 +276,55 @@ Therefore the triangle ceiling strengthens to
 
 This is a physical U-edge exclusion, not a witness-incidence count.
 
-## 9. Unit IX — pair, triangle and residual gates retained simultaneously
+## 10. Unit IX — criticality bounds the U-degree of a_0 through the bar-C reservoir
+
+The neighbour-code localization `(A0-CODE)` says that every U-neighbour of `a_0` other than z has code d or C. The same extra `bar C)-population that supports internal X-edges also limits both possibilities.
+
+Let again
+
+> `t=|U_{bar C}\{z}|`.
+
+### Lemma 10.1 — C-coded U-neighbours of a_0
+
+> `|N_U(a_0) cap U_C| <= t`.                            `(A0-C-CAP)`
+
+### Proof
+
+For `w in U_C` with `a_0w in E`, the edge has equal-code endpoints. If w is chosen as source, the full coded-layer same-code theorem requires its witness to lie in `A_{bar C}`, but that A-class is empty. Hence the source must be `a_0`.
+
+Because `a_0` and w have the same tight code, no matched endpoint can be adjacent to w while nonadjacent to `a_0). Any A/U witness must have code `bar C`. The distinguished z is adjacent to `a_0` and therefore cannot be the nonadjacent source-witness partner. Thus the witness lies in `U_{bar C}\{z}`.
+
+For fixed source `a_0` and fixed witness, the singleton common neighbourhood determines at most one head w. Therefore the t available witnesses certify at most t such neighbours. `square`
+
+### Lemma 10.2 — d-coded U-neighbours of a_0
+
+> `|N_U(a_0) cap U_d| <= t+1`.                          `(A0-d-CAP)`
+
+### Proof
+
+Let `w in U_d` be adjacent to `a_0`. The codes C and d differ only at the special coordinate `j_*`.
+
+An orientation with U-source w cannot use a U or matched-B witness because both would share the root with w. An A-witness would have to avoid every matched neighbour of w and therefore have code `bar d), but `A_{bar d}=emptyset`. So the U-source orientation is impossible.
+
+With source `a_0`, an A/U witness must have complementary code `bar C) and be nonadjacent to `a_0), giving at most the t vertices of `U_{bar C}\{z}`. There is exactly one additional matched-B possibility: the endpoint in the special fibre selected by d and not by C. Every other matched endpoint is adjacent to both source and head and cannot be the nonadjacent witness.
+
+Again a fixed source-witness pair can determine at most one singleton head. Thus there are at most t+1 d-coded U-neighbours. `square`
+
+Since z itself is one U-neighbour of `a_0`, these two lemmas give
+
+> `d_U(a_0)<=2t+2`.                                     `(A0-UDEG)`
+
+As `a_0` has no X-neighbour and is complete to Y,
+
+> `epsilon_{a_0}>=p+u-y-2t-2`.                         `(A0-t)`
+
+Together with `(A0+K)`, every survivor must use the dynamic floor
+
+> `epsilon_{a_0}>=A_0(t):=max{p-y+k+1, p+u-y-2t-2}`.   `(A0-DYN)`
+
+This is a second conservation law: a small complementary witness reservoir forces `a_0) to lose U-degree directly.
+
+## 10. Unit X — pair, triangle and residual gates retained simultaneously
 
 The exact pair-local threshold must be recomputed using the strengthened core floor `E_core>=k(p+k)`, not the old weak `k(p+k)-1`.
 
@@ -312,7 +360,7 @@ The last condition is the inherited equality-pinch rooted-slot requirement `r>=a
 
 No total-score substitution is made for the pair-local crossing threshold.
 
-## 11. Diagnostic replay
+## 12. Diagnostic replay
 
 A companion checker evaluates only the necessary system above on the same abstract box used by the predecessor pinch diagnostic:
 
@@ -327,13 +375,13 @@ It then applies the hand theorems in this note, including the strengthened `a_0-
 
 The resulting abstract final count is:
 
-> **134,006**.
+> **133,317**.
 
-Thus **39,341** predecessor abstract pinch rows fail the new necessary system.
+Thus **40,030** predecessor abstract pinch rows fail the new necessary system.
 
 These are parameter rows, not graphs. The zero-survivor question is not answered by this scan; the value of the replay is to identify which literal resource geometry remains after the local hand deductions.
 
-## 12. Trust boundary and next move
+## 13. Trust boundary and next move
 
 Promoted conditionally inside the audited equality pinch:
 
