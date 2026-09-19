@@ -350,7 +350,104 @@ The last condition is the inherited equality-pinch rooted-slot requirement `r>=a
 
 No total-score substitution is made for the pair-local crossing threshold.
 
-## 12. Diagnostic replay
+
+
+## 12. Further sharpening — purified fanout and internal-X witness pricing
+
+The preceding Units VI--X admit a stronger synthesis. The statements below supersede the weaker generic `J-SLACK`, `BAR-UPGRADE`, and `[t-d]_+` relaxations when working in the literal all-R equality pinch.
+
+### Unit XII — z-neighbour purification
+
+If `w in U_o\{z}` and `zw in E`, then `c(w)=bar C`.
+
+Indeed, a rooted B-edge certificate for `zw` cannot use a B-witness because the root would be an extra common neighbour. The orientation sourced at z cannot use `X'` (Theorem 6.1 makes w anticomplete to `X'`), cannot use `a_0` (adjacent to z), and cannot use Y because z and every Y-vertex share the tight matched endpoint in the unique coordinate where C differs from d. Hence the opposite orientation is forced, its A-witness is `a_0` because `N_A(z)={a_0}`, and `N(w) cap N(a_0)={z}` forces `c(w)=bar C`.
+
+Thus the exact J outside neighbours of z satisfy:
+
+> `J=u_o-1-d <= t:=|U_{bar C}\{z}|`.                  `(Z-PUR)`
+
+Every one is A-anticomplete, has `epsilon>=p`, and the J-set is independent. Therefore
+
+> `E_J>=Jp`,                                            `(J-PAY+)`
+>
+> `q<=binom(u,2)-binom(k+1,2)-k-d-binom(J,2)`.         `(Q-J)`
+
+### Unit XIII — only z-nonneighbours can witness internal X-edges
+
+The J purified z-neighbours are A-anticomplete, so none can be adjacent to the head of an internal X-edge and none can serve as its complementary-code witness.
+
+Every internal X-edge therefore uses a vertex of `U_{bar C}\{z}` which is nonadjacent to z. There are at most d such physical vertices. Ordered source-witness injectivity gives
+
+> `e(X)<=N d`, where `N=x-1`.                         `(X-d-CAP)`
+
+This directly opposes the Hall lower bound: buying X-edge witness capacity requires increasing d, which simultaneously raises `epsilon_z` and changes the physical U-edge ceiling.
+
+### Unit XIV — the internal-X witness load self-prices
+
+Let D be the set of at most d `bar C)-vertices actually used to certify internal X-edges. For `w in D`, let `r_w` be its number of selected internal-X certificates. The associated X-sources are distinct for fixed w, and every Y-vertex is adjacent to every such source; hence w is anticomplete to Y and to those `r_w` sources.
+
+Degree counting gives
+
+> `epsilon_w >= [p-x+r_w]_+`.
+
+Since `sum_w r_w=e(X)` and `|D|<=d`,
+
+> `E_D >= [e(X)-d(x-p)_+]_+`.                          `(X-WIT-PAY)`
+
+Let
+
+> `E_0(d)=k(p+k)+(p-g+1)+(p+k-1+d)+Jp`,
+>
+> `B_d=x(p-y)+Z_X^0+NJ-C_0+E_0(d)`,
+>
+> `c_d=d(x-p)_+`.
+
+Then the exact Hall identity and `(X-WIT-PAY)` imply
+
+> `2e(X)>=B_d+[e(X)-c_d]_+`.                            `(H-WIT)`
+
+Equivalently the relaxed minimum internal-edge mass is
+
+> `e_req(d)=0` if `B_d<=0`;
+>
+> `e_req(d)=ceil(B_d/2)` if `0<B_d<=2c_d`;
+>
+> `e_req(d)=B_d-c_d` if `B_d>2c_d`.                  `(E-REQ)`
+
+Every survivor must satisfy
+
+> `e_req(d)<=min{binom(N,2),Nd}`.                       `(E-FEAS)`
+
+Dropping only the nonnegative witness-slack term yields an explicit lower bound on d. Put `J_0=u-k-2` and
+
+> `R_0=x(p-y)+Z_X^0+NJ_0-C_0`
+> `    +k(p+k)+(p-g+1)+(p+k-1)+J_0p`.
+
+Since `B_d=R_0-d(N+p-1)`, the capacity `2e(X)<=2Nd` gives
+
+> `d(3N+p-1)>=R_0`.                                    `(d-LOW)`
+
+Thus
+> `d>=ceil([R_0]_+/(3N+p-1))`.
+
+### Unit XV — z/a_0 U-degree conservation
+
+The J outside neighbours of z are A-anticomplete, so none is adjacent to `a_0`. The k core vertices and buffer b also miss `a_0`. Therefore every U-neighbour of `a_0` other than z must lie among the d outside vertices nonadjacent to z:
+
+> `d_U(a_0)<=d+1`.                                      `(A0-d-DEG)`
+
+Since `a_0` is complete to Y and isolated in X,
+
+> `epsilon_{a_0}>=p+u-y-d-1`.                          `(A0-d)`
+
+Together with `epsilon_z=p+k-1+d`, this gives the d-independent conservation law
+
+> `epsilon_z+epsilon_{a_0}>=2p+k+u-y-2`.               `(ZA0-CONS)`
+
+Thus changing one z--outside edge into a nonedge can buy at most one new a_0--outside edge; it cannot reduce their combined score price.
+
+
+## 13. Diagnostic replay
 
 A companion checker evaluates only the necessary system above on the same abstract box used by the predecessor pinch diagnostic:
 
@@ -365,13 +462,13 @@ It then applies the hand theorems in this note, including the strengthened `a_0-
 
 The resulting abstract final count is:
 
-> **132,156**.
+> **124,528**.
 
-Thus **41,191** predecessor abstract pinch rows fail the new necessary system.
+Thus **48,819** predecessor abstract pinch rows fail the new necessary system.
 
 These are parameter rows, not graphs. The zero-survivor question is not answered by this scan; the value of the replay is to identify which literal resource geometry remains after the local hand deductions.
 
-## 13. Trust boundary and next move
+## 14. Trust boundary and next move
 
 Promoted conditionally inside the audited equality pinch:
 
