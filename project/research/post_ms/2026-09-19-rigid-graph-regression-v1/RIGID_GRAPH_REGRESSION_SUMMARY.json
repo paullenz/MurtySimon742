@@ -1,0 +1,64 @@
+{
+  "date": "2026-09-19",
+  "objective": "independent actual-graph regression of the rooted tight-code / Hall / pair-capacity interface",
+  "certificate_policies": [
+    "lex",
+    "matched_first",
+    "au_first"
+  ],
+  "atlas": {
+    "D2C_classes_through_order_7": 21,
+    "maximum_degree_roots": 50
+  },
+  "generated_corpus": {
+    "method": "random-order edge minimization from K_n, with final D2C re-verification",
+    "orders": "8..14",
+    "graphs_per_order": 100,
+    "actual_D2C_graphs": 700,
+    "maximum_degree_roots": 1127
+  },
+  "fixed_fixtures": {
+    "hall_cut_n8": {
+      "graph6": "GdJ@^O",
+      "n": 8,
+      "m": 13,
+      "root": 7
+    },
+    "matched_candidate_n10": {
+      "graph6": "INPCw[`gW",
+      "n": 10,
+      "m": 19,
+      "root": 6,
+      "purpose": "matched_first policy exercises a genuine matched-B A-edge criticality certificate"
+    }
+  },
+  "cube_face_controls": {
+    "X_3": {"n": 12, "m": 32, "M": 31, "p": 4, "u": 0, "Q": 12, "r": 0, "f": 0},
+    "X_4": {"n": 21, "m": 80, "M": 101, "p": 0, "u": 16, "Q": 32, "r": 0, "f": 0},
+    "X_5": {"n": 38, "m": 192, "M": 343, "p": 0, "u": 32, "Q": 80, "r": 0, "f": 0}
+  },
+  "root_policy_regression_totals": {
+    "roots": 3540,
+    "qualified_roots": 114,
+    "rooted_residual_identities": 114,
+    "local_slot_checks": 255,
+    "pair_capacity_checks": 147,
+    "one_sided_pair_checks": 96,
+    "A_edges": 75,
+    "direct_A_edges": 27,
+    "nondirect_A_edges": 48,
+    "matched_A_certificates": 1,
+    "Hall_cut_checks": 36,
+    "rigid_cuts": 0
+  },
+  "additional_search": {
+    "random_twin_duplication_D2C_trials": 5000,
+    "rigid_cut_hits": 0,
+    "targeted_generated_complete_pair_cut_search": "orders 8..17, 300 seeds/order",
+    "qualified_roots_tested_in_targeted_search": 64,
+    "complete_pair_cut_hits": 0
+  },
+  "failures": 0,
+  "coverage_gap": "No actual rigid complete Hall cut with x>=3 was found in the bounded realizable corpus, so the rigid singleton-head block is implemented but not dynamically exercised by a positive graph fixture. The one-code purification remains a hand theorem built from independently regressed upstream ingredients, not an observed small-graph configuration.",
+  "trust_boundary": "Actual-graph regression is evidence against graph-to-constraint transcription errors, not a proof of universal premises or graph realizability of abstract survivor states."
+}
