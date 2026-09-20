@@ -159,9 +159,55 @@ For the exact low-k ray, `q=1`, so
 
 This is a physical certificate-capacity statement, not a score relaxation.
 
-## 7. Consequence for the coefficient-1/2 endpoint
+## 7. Certificate witnesses themselves carry a located quadratic hole price
 
-The pure-F0 half-barrier endpoint has `e=o(1)`. But `(FY-ESTAR)` says that any sequence with `y/p` bounded below by a positive constant needs a positive-density exceptional witness reservoir.
+The preceding capacity theorem can be strengthened without identifying the atypical witness class.
+
+If `r` is a forward witness for `ty0`, then `(FY-F0)` implies
+
+`N_Y(t) cap N_Y(r)={y0}`.
+
+For a typical t, `|Y\N_Y(t)|=o(p)`. Hence
+
+> `d_Y(r)<=1+|Y\N_Y(t)|=o(p)`,
+
+so every distinct forward-witness vertex is **Y-sparse** and contributes
+
+> `y-o(p)=q p-o(p)`                                      `(FY-FHOLE)`
+
+located Y--B nonedges.
+
+If `r` is a reverse witness, `(FY-X0)` says it is X-anticomplete. Since `x=p+1` in the residual-one `k=2` branch, every distinct reverse-witness vertex contributes
+
+> `p+1`                                                  `(FY-RHOLE)`
+
+located X--B nonedges.
+
+Let `f p+o(p)` and `r p+o(p)` be the numbers of distinct forward- and reverse-witness vertices used by the typical T--Y edge set, and write `tau=|T|/p`. The same fixed-pair injection gives the certificate-capacity constraint
+
+> `tau*f + q*r >= tau*q`.                                `(FY-FR-CAP)`
+
+The located witness-hole bill is
+
+> `(Z_Y+Z_X)/p^2 >= q*f+r-o(1)`.                         `(FY-FR-HOLE)`
+
+Minimizing `q f+r` subject to `(FY-FR-CAP)` gives
+
+> **`(Z_Y+Z_X)/p^2 >= min{q^2,tau}-o(1)`.**             `(FY-LOC)`
+
+Indeed a forward witness buys `tau` units of certificate capacity at cost q, while a reverse witness buys q units at cost one.
+
+At the pure-F0 endpoint `tau->1`; since `0<q<=1`, this becomes
+
+> **`(Z_Y+Z_X)/p^2 >= q^2-o(1)`.**                      `(FY-LOC-PURE)`
+
+This directly contradicts the half-barrier equality requirement `Z_X+Z_Y=o(p^2)` whenever q is bounded below. It is stronger than merely observing that the atypical witness density is positive.
+
+On the exact low-k stress ray q tends to one, so F0--Y criticality alone forces an additional located-hole coefficient asymptotic to one on top of the independent-reservoir half coefficient. Thus the physical defect is driven to the leading-order ceiling scale `3/2 p^2`; the remaining question there is now lower-order rigidity, not another missing quadratic term.
+
+## 8. Consequence for the coefficient-1/2 endpoint
+
+The pure-F0 half-barrier endpoint has `e=o(1)` and `Z_X+Z_Y=o(p^2)`. Both `(FY-ESTAR)` and the stronger `(FY-LOC-PURE)` rule this out whenever `y/p` is bounded below by a positive constant.
 
 Therefore:
 
@@ -175,20 +221,17 @@ cannot approach the compressed half-barrier endpoint. Its only remaining coeffic
 
 More generally, any hypothetical sequence that still approaches coefficient `1/2` after the compressed additive theorem must leave the high-Y regime:
 
-> **near-half survival forces `y/p ->0` unless a positive-density non-F0 certificate reservoir is paid for.** `(FY-REDIR)`
+> **near-half survival forces `y/p ->0` unless a positive-density, quadratically priced certificate reservoir is paid for.** `(FY-REDIR)`
 
-The latter alternative is precisely the kind of positive-density departure that the stability estimate `(FY-STAB)` and the predecessor class bills are designed to price.
+## 9. Trust boundary and next attack
 
-## 8. Trust boundary and next attack
-
-This note does **not** yet claim a new explicit global coefficient greater than `1/2`: converting the positive-density exceptional certificate reservoir in `(FY-ESTAR)` into the sharpest disjoint rooted-defect currency requires one more accounting step, because not every atypical certificate vertex need lie outside the predecessor D-density variable.
+This note does **not** yet claim a finite-order closure. The new high-Y obstruction is asymptotic and conditional on the compressed pure-F0 normal form; the positive located witness-hole price must still be combined with the exact lower-order score/rooted ledger if one wants an explicit finite threshold.
 
 The next highest-value work is therefore:
 
 1. hostile-replay the forward/reverse witness exclusions in Sections 4--5 against the exact rooted vertex partition;
-2. identify the cheapest allowed atypical forward and X-anticomplete reverse witness classes;
-3. charge the mandatory density `e_*(q)` into disjoint `E_U/Z_X/Z_Y/M_U` currencies;
-4. combine that charge with `(FY-STAB)` to obtain an explicit coefficient strictly above `1/2` on every `y>=q0 p` regime;
-5. treat the redirected `y=o(p)` regime through `g0=p-y` and the existing large-gap / rooted residual ledger rather than by further high-Y F0 algebra.
+2. combine `(FY-LOC-PURE)` with the exact ray score ceiling `C0=floor((3p^2+10p-4)/2)` and retain lower-order terms rather than only leading coefficients;
+3. if the exact ray survives at leading equality, classify the witness sets that make `(FY-FR-CAP)` and `(FY-FR-HOLE)` simultaneously sharp;
+4. treat the redirected `y=o(p)` regime through `g0=p-y` and the existing large-gap / rooted residual ledger rather than by further high-Y F0 algebra.
 
 Global audit caveat unchanged: the rigid complete Hall-cut reachability problem remains upstream and unresolved; `X_3` remains the mandatory negative control.
