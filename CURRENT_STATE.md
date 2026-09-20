@@ -7,27 +7,27 @@
 `X_3` (12 vertices, 32 edges, versus `M(12)=31`) remains the mandatory negative control. The false all-order 2019 Dailly–Foucaud–Hansberg Conjecture 3 is not the target. The mixed `{4,5}` selected-excess ladder is closed. First-proof priority on Erdős #742 is not the optimization target.
 
 <!-- CURRENT-STATUS:START -->
-CHECKPOINT CLASS: `ONE_CODE_R1_K2_HALF_RAY_PRIVATE_FOOT_HU_FORCING_2026_09_20`
+CHECKPOINT CLASS: `ONE_CODE_R1_K2_HALF_RAY_HU_DEFICIT_TWO_BARRIER_2026_09_20`
 
 WORK MODE: `MATH`
 
-INSPECTED PREDECESSOR: `7e6c442a09eb6b5969571398c603cae8d2dfeb4f`; before forward mathematics this invocation reread CURRENT_STATE.md, README.md, latest commits, the 20 September daily red-team audit, residual-one/low-k profiles, general Y--U capacity, rooted/score ledgers, H/Y polarization and H--H certificate split. The audit gate remained binding.
+INSPECTED PREDECESSOR: `ccc6526bbd8131ce79dfdca4351b6df5667669b1`; before forward mathematics this invocation reread CURRENT_STATE.md, README.md, the latest commit interval after `be5a0a1...`, the 20 September daily red-team audit, the H--U B-layer correction, its dependency audit, the general corrected H--U capacity theorem, the exact capacity-deficit decomposition and the rooted layer-separation guard. The audit gate remained binding. The prior private-foot H--U line was not continued because the newer correction invalidates it.
 
-LAST VERIFIED RESULT: `The off-ray chain was hostile-replayed and inserted into a normalized variable ledger. For bounded ratios theta=y/p, kappa=c/p, eta=b/p and q=C/p^2, Y0=eta theta+max{0,theta(kappa-2eta),(q/eta)^2} and Z0=max{kappa theta+eta,eta+Y0}; every asymptotic survivor must satisfy F=Z0+Y0+kappa(kappa-theta)-2q <= S0=((1+kappa)^2-theta^2)/2, while rooted-Q feedback forces kappa>=sqrt(2(theta^2+theta+1))-(1+theta). At theta=1 the score gap is strictly positive for every kappa>0 by a complete three-case proof, so the bounded-ratio high-Y endpoint is closed. The first simple intermediate direction theta=kappa=1/2 has an exact family p=2t,c=y=t,lambda=2t-1,u=t+1,x=2t+1,k=2,m=2t-1. A same-session hostile replay caught and corrected the impossible literal assignment b=0: selected witnesses W_s lie in B0, so b>=2; the corrected minimal assignment is b=2, B0=W_s, with C=e(B0,D)<=2(t-1). This corrected ray still survives score, rooted-Q, exact Ccap_P, ONE-P and CROWD with quadratic margin; e(Y)=0, e(Y,U)=O(p), e(U)=O(p). H-side localization gives at most u triangle-free H--U edges. For triangular t h_i, no t-sourced U witness is possible; if d_H(t)>=2 no t-sourced Y witness is possible; if also d_Y(t)>0 no A_X witness is possible. NEW: in that H-multi/Y-active t-sourced case the matched witness is forced to the private foot q_i. Therefore N(t) cap N(q_i)={h_i}; writing U_i^-={w in U:c(w)_i=bar(d)_i}, this forces N_U(t) cap U_i^-=empty. Conversely any reverse U-witness for h_i->t has endpoint-indexed code bar(d) xor e_i and d_Y=0, so reverse-U H--U capacity is at most sum r_i<=u. The live obstruction is now overlap/control of these private-coordinate U-hole slices, not aggregate pair capacity.`
+LAST VERIFIED RESULT: `The current live H--U chain is the corrected B-layer orientation-capacity theorem, not HU-PRIVATE/HU-QI/HU-IHOLE. On the corrected intermediate half-ray p=2t,c=y=t,u=t+1,h=2t-1, write a=2M_H-R_q, b=h-R_j, c0=(u-2)-S and Delta=a+b+c0. Every shared U-resource lies in the residual-bar column P=U_j^- outside the two selected witnesses, so if g=|U\P| then g<=c0. Every residual-q_j-saturated H-row has exactly one P-neighbour, giving e(H,U)<=(h-b)(g+1)+bu and hence 2M_H+u-2-Delta <= h c0+b(u-c0-1). Therefore Delta(h+1)>=2M_H+u-2 and Delta>=ceil((2M_H+t-1)/(2t)). A second placement inequality is S<= (h-b)g+bu, hence u-2-c0 <= (h-b)c0+bu. A complete hostile classification of Delta=1 then closes all three cases for t>=5: pure private deficit is impossible by S placement; the single residual-slot deficit forces H complete and one row to carry t-1 shared edges, contradicting d_U<=3 for t>=5; the single shared-capacity deficit forces one residual-plus head t_*, all S=t-2 edges to be reverse-U with distinct endpoint-indexed witnesses, H complete, and then every residual-bar U vertex H-anticomplete, contradicting q_j saturation. Thus Delta>=2 and L_H>=3t+1 for t>=5. The structural value is the concentration normal form, not the constant score improvement.`
 
-UNPRESERVED WORK: `None after preservation. New/updated notes: ONE_CODE_R1_K2_OFFRAY_NORMALIZED_SCORE_AND_HIGH_Y_GAP.md; corrected ONE_CODE_R1_K2_INTERMEDIATE_HALF_RAY.md; corrected ONE_CODE_R1_K2_HALF_RAY_HU_TRIANGLE_SCOPE.md; expanded ONE_CODE_R1_K2_HALF_RAY_HU_ORIENTATION_FILTER.md with private-foot forcing; diagnostic check_offray_normalized_score.py. One heavier SciPy diagnostic timed out and was replaced; no proof depends on computation.`
+UNPRESERVED WORK: `None after preservation. New note: ONE_CODE_R1_K2_HALF_RAY_HU_DEFICIT_TWO_BARRIER.md. The invalid private-foot coordinate-slice chain remains superseded and was not used.`
 
-DEFERRED ADMIN: `README remains deliberately at the independently audited public checkpoint. Do not promote same-session off-ray/high-Y/half-ray results before the next daily hostile audit. The initial same-session b=0 interpretation is explicitly superseded by the mandatory b>=2 correction. Historical notes remain preserved. The prior golden dual-witness model remains superseded.`
+DEFERRED ADMIN: `README remains deliberately at the independently audited public checkpoint. Do not promote same-session corrected H--U/deficit results before the next daily hostile audit. The 20 September B-layer correction and dependency audit are preserved explicitly; historical invalid private-foot claims remain as superseded evidence rather than being erased.`
 
-NEXT ACTION: `Hostile-replay HU-PRIVATE/HU-IHOLE first. Then aggregate the coordinate-slice exclusions N_U(t) cap U_i^-=empty for H-multi/Y-active vertices while retaining endpoint populations r_i and the two B0 witnesses. The central question is whether many t-sourced H edges force enough distinct U-nonedges through source-coordinate uniqueness / code incidence, while the alternative reverse-U and triangle-free arms have only O(u) endpoint-indexed capacity. Keep non-U reverse orientations explicit rather than silently discarding them. In parallel quantify the high-Y exclusion wedge and isolate unbounded c/p. Keep y=o(p) on the separate large-gap/rooted-residual route.`
+NEXT ACTION: `Hostile-replay the deficit-two theorem first, especially the Delta=1 c0=1 argument that reverse-U witnesses become H-anticomplete when H is complete. Then attack Delta=d=o(p): g<=c0 leaves at most d residual-plus U heads, while all but b<=d H-rows have exactly one residual-bar neighbour and the Theta(p) shared load must concentrate through those few heads or few unsaturated rows. Track each reverse-U edge's distinct endpoint-indexed witness and physical U--U edge, combine with the already-proved e(U)=O(p) half-ray sparsity and ordered-pair injection, and seek Delta=Omega(p) or a finite hostile normal form. Keep the general corrected H-slack term (kappa-theta)_+ in the off-ray normalized score. Separately retain the audit-priority rigid-interface coverage gap; do not infer realizability from this conditional branch.`
 
-AUDIT GATE: `The 20 September daily red-team audit remains binding. P1/P2 semantics are repaired; raw same-code criticality and ordered (source,witness) injection independently passed in later repair work; X_3 remains mandatory; exact pair-local Ccap_P/(ONE-P)/(CROWD) remain load-bearing whenever invoked; finite scans are diagnostics only; superseded evidence stays superseded; bounded actual-D2C regression still has zero positive rigid complete Hall-cut fixtures with x>=3.`
+AUDIT GATE: `The 20 September daily red-team audit remains binding. P1/P2 semantics are repaired; raw same-code criticality and ordered (source,witness) injection independently passed in later repair work; X_3 remains mandatory; exact pair-local Ccap_P/(ONE-P)/(CROWD) remain load-bearing whenever invoked; finite scans are diagnostics only; superseded evidence stays superseded; bounded actual-D2C regression still has zero positive rigid complete Hall-cut fixtures with x>=3. The newer rooted layer-separation guard is now also mandatory lint: a B-source cannot use a B-witness for a non-root singleton head.`
 
 SECOND STRICT: `Provisional exact unloaded second-strict chain remains finite-order: mixed y=1 x=3 gives n<=16; x=4 n<=19; x>=5 n<=33; two-X-hole arm n<=816; (0,2) empty; mixed y>=2 internally closed. Conditional on the rigid one-code interface and predecessor closures, no exact unloaded second-strict survivor remains for n>=817. Pending hostile replay.`
 
-R1 K2 LIVE CHAIN: `Residual-one common hub/beta fan -> k=2,J2=empty -> global H/Y polarization -> B0 source collapse -> e(Y)=0 -> all Y--U edges triangular -> reverse B0 capacity/isolation -> exact high-Y ray closed -> off-ray normalized score/rooted obstruction -> theta=1 endpoint closed -> corrected minimal-B0 half-ray survives aggregate gates -> H--U triangle exceptions <=u -> H--U orientation filter -> H-multi/Y-active t-sourced edges forced through private foot q_i -> coordinate-slice U-hole condition -> next: overlap/injection of those slices.`
+R1 K2 LIVE CHAIN: `Residual-one common hub/beta fan -> k=2,J2=empty -> global H/Y polarization -> B0 source collapse -> e(Y)=0 -> sparse Y--U/U half-ray -> corrected H--U B-layer witness classification -> general H-slack L_H>=h(u-y+1)-u+2 -> exact H--U capacity-deficit decomposition -> residual-column localization g<=c0 -> deficit/placement inequalities -> half-ray Delta>=2 for t>=5 -> next: small-Delta concentration through few residual-plus heads / unsaturated H rows.`
 
-R1 K2 SUPERSESSION: `Do not return to the exact kappa=theta=1 ray, the golden dual-witness model, or the literal b=0 half-ray. The latter was caught and corrected before handoff. The live bounded-ratio problem is the b=2 minimal-B0 half-ray and its private-coordinate H--U criticality; unbounded c/p remains separate.`
+R1 K2 SUPERSESSION: `Do not return to the exact kappa=theta=1 ray, the golden dual-witness model, the literal b=0 half-ray, or the invalid HU-PRIVATE/HU-QI/HU-IHOLE private-foot H--U chain. The current bounded-ratio half-ray frontier is the corrected B-layer H--U capacity and its residual-column deficit geometry.`
 <!-- CURRENT-STATUS:END -->
 
 ---
@@ -44,40 +44,27 @@ Binding constraints:
 - exact pair-local `Ccap_P`, `(ONE-P)`, `(CROWD)` whenever invoked;
 - finite scans are diagnostics only;
 - superseded evidence stays superseded;
-- same-session closures stay provisional until hostile replay.
+- same-session closures stay provisional until hostile replay;
+- rooted layer separation: if source and witness both lie in `B=N(v)`, they share the root and cannot define a non-root singleton common-neighbour equation.
 
 ## Session ledger — current invocation
 
-**Invocation start:** 21:28:21 BST.  
-**Planned preservation cutoff:** 21:55:38 BST.
+**Invocation start:** 22:26:59 BST.  
+**Planned preservation cutoff:** 22:55:38 BST.
 
 Substantive units completed:
-1. reconciled CURRENT_STATE.md, README.md, live commits and the daily red-team audit before forward mathematics;
-2. hostile-replayed `e(Y)=0`;
-3. replayed all-Y--U triangularity;
-4. replayed high-Y D reverse B0 witness location;
-5. replayed B0--D isolation and multiplicity divisor b;
-6. derived normalized Y-hole coefficient Y0;
-7. derived simultaneous total-hole coefficient Z0;
-8. localized e(U) and inserted it into the rooted identity;
-9. derived normalized score F<=S0;
-10. normalized rooted-Q feedback and obtained the kappa ratio floor;
-11. proved theta=1 score gap strictly positive by three cases;
-12. added a diagnostic grid after pivoting from a timed-out heavier diagnostic;
-13. isolated the intermediate theta=kappa=1/2 density direction;
-14. evaluated exact score/rooted margins;
-15. tested exact Ccap_P, ONE-P and CROWD, all open;
-16. localized H--U triangle exceptions to endpoint-indexed code classes;
-17. bounded total triangle-free H--U edges by u;
-18. caught the impossible b=0 assignment because W_s subseteq B0;
-19. corrected the exact ray to b=2 and re-derived its physical/score bounds;
-20. corrected the Y--U interpretation to global O(p) sparsity rather than pointwise degree<=1;
-21. proved no t-sourced U witness exists for an H--U edge and no Y witness when d_H(t)>=2;
-22. proved that if d_H(t)>=2 and d_Y(t)>0 then any t-sourced triangular H--U certificate is matched-layer;
-23. proved any reverse U-witness for h_i->t is Y-anticomplete with endpoint-indexed code bar(d) xor e_i, hence total reverse-U H--U capacity is at most u;
-24. refined the matched-layer arm: a Y-active t rules out every d-selected matched endpoint, while h_i selects the bar-d endpoint only at private coordinate i, forcing the witness exactly to q_i;
-25. extracted the coordinate-slice consequence N_U(t) cap U_i^-=empty for every such private-foot t-sourced certificate.
+1. reconciled CURRENT_STATE.md, README.md, the eight newer commits after the predecessor handoff and the 20 September red-team audit before forward mathematics;
+2. accepted the newer B-layer correction as load-bearing and explicitly abandoned the invalid private-foot H--U line;
+3. localized every shared H--U capacity resource to the residual-bar U column and proved `g<=c0`;
+4. converted residual-q_j saturation into the exact H--U degree bound `(h-b)(g+1)+bu` and the deficit inequality `2M_H+u-2-Delta <= h c0+b(u-c0-1)`;
+5. derived the half-ray quantitative bound `Delta>=ceil((2M_H+t-1)/(2t))`;
+6. derived the independent shared-edge placement inequality `u-2-c0 <= (h-b)c0+bu`;
+7. hostile-classified all three `Delta=1` allocations;
+8. ruled out the pure-private deficit immediately;
+9. ruled out the single residual-slot deficit for `t>=5` by forcing H complete and then exceeding the unsaturated row's exact degree capacity;
+10. ruled out the single shared-capacity deficit by forcing one residual-plus head, distinct reverse-U endpoint witnesses, H complete, and finally an H-anticomplete residual-bar column contradicting q_j saturation;
+11. concluded the conditional half-ray barrier `Delta>=2`, equivalently `L_H>=3t+1`, for every `t>=5`.
 
-**Live unfinished line:** aggregate private-coordinate slice exclusions with source-coordinate uniqueness / code incidence while retaining r_i and the two B0 witnesses; separately high-Y wedge and unbounded c/p.
+**Live unfinished line:** generalize the concentration argument from `Delta=1` to `Delta=d=o(p)`, combining few residual-plus heads / few unsaturated rows with distinct reverse-U endpoint witnesses, physical U--U edges and the pre-existing `e(U)=O(p)` bound.
 
-**Stop reason:** preservation checkpoint after twenty-five tightly connected mathematical/audit units. The remaining half-ray problem is now a concrete private-coordinate U-hole overlap problem.
+**Stop reason:** reached the preservation phase after a late-start session; the corrected H--U frontier and all new derivations were durably preserved before the next invocation.
