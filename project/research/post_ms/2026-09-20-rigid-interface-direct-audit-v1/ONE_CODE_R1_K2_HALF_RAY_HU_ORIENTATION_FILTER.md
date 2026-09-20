@@ -1,4 +1,4 @@
-# Residual-one k=2 half-ray: first H--U orientation filter
+# Residual-one k=2 half-ray: H--U orientation filter and private-foot forcing
 
 Date: 2026-09-20
 
@@ -15,6 +15,7 @@ with `h_i in H` and `t in U`. Recall:
 - every Y vertex is adjacent to every H vertex;
 - every U vertex is adjacent to the root;
 - for `h_i`, `c(h_i)=d xor e_i`;
+- `q_i` is the private matched endpoint selected by `bar d` in coordinate i and is the unique A_X neighbour in that private fibre;
 - only `O(p)` H--U edges can be triangle-free, so the present triangle-edge regime contains every quadratic H--U bulk.
 
 Assume first that
@@ -59,11 +60,49 @@ Combining with `(HU-F1)` and `(HU-F2)` gives:
 
 > **If `d_H(t)>=2` and `d_Y(t)>0`, then every t-sourced certificate for a triangular H--U edge `t h_i` must use the matched layer.** `(HU-MATCHED-ONLY)`
 
-This is a genuine location theorem, not a count.
-
 On the corrected intermediate half-ray, global H/Y polarization already forces `d_Y(t)<=1` whenever `d_H(t)>0`. Hence `(HU-MATCHED-ONLY)` applies exactly to the H-multi-neighbour vertices carrying their unique possible Y-edge.
 
-## 5. Reverse U-witnesses are endpoint-indexed
+## 5. The matched witness is forced to the private foot q_i
+
+Continue under `d_H(t)>=2` and `d_Y(t)>0`, and suppose the edge `t h_i` is t-sourced. By `(HU-MATCHED-ONLY)` let r be its matched-layer witness:
+
+`N(t) cap N(r)={h_i}`.                                   `(HU-M0)`
+
+Because r must be adjacent to h_i, inspect the matched coordinates selected by `h_i=d xor e_i`.
+
+- In coordinate i, h_i selects the `bar d` endpoint `q_i`.
+- In every other private coordinate l, h_i agrees with d and selects the d-endpoint.
+- At the residual coordinate j, `J2=empty` means h_i again agrees with d and selects the d-endpoint.
+
+Every d-endpoint is adjacent to every Y vertex, while t has a Y-neighbour y0. Hence choosing any d-endpoint for r would make y0 a second common neighbour of t and r in `(HU-M0)`.
+
+Therefore the only possible matched witness is
+
+> **`r=q_i`.**                                            `(HU-PRIVATE)`
+
+Thus the t-sourced certificate is forced into the exact singleton equation
+
+> **`N(t) cap N(q_i)={h_i}`.**                            `(HU-QI)`
+
+This is substantially sharper than mere matched-layer localization.
+
+## 6. Coordinate hole consequence
+
+Because q_i is the `bar d` endpoint in coordinate i, every U vertex w whose code selects q_i is adjacent to q_i. Equation `(HU-QI)` therefore forces t to be nonadjacent to every such w except the prescribed head h_i is in A_X, not U.
+
+Equivalently, if
+
+`U_i^-={w in U : c(w)_i=bar d_i}`,                       `(HU-UI)`
+
+then every t-sourced H-edge of the present type forces
+
+> **`N_U(t) cap U_i^-=empty`.**                           `(HU-IHOLE)`
+
+So each private-foot orientation deletes a whole coordinate slice from the U-neighbourhood of t. Distinct H-head indices correspond to distinct private coordinates.
+
+This is the first non-scalar mechanism on the intermediate half-ray: a U vertex using several t-sourced H certificates accumulates several coordinate restrictions on its possible U-neighbours.
+
+## 7. Reverse U-witnesses are endpoint-indexed
 
 Consider instead an orientation sourced at h_i with singleton head t, using a U-witness w:
 
@@ -93,22 +132,18 @@ Summing over i,
 
 > **the total number of reverse-U-certified H--U edges is at most `sum_i r_i <= u`.** `(HU-RCAP)`
 
-## 6. Combined H-side exceptional reservoir
+## 8. Combined H-side exceptional reservoir
 
-Three phenomena are now charged to the same endpoint-indexed populations r_i:
+Three phenomena are charged to the same endpoint-indexed populations r_i:
 
 1. U-certified H--H edges sourced at h_i;
 2. possible triangle-free H--U edges incident with h_i;
 3. reverse-U-certified triangular H--U edges sourced at h_i.
 
-Each of the three totals is O(u), and all use the same disjoint code reservoir across i. This does not yet justify adding their counts, because one physical U vertex may participate in more than one role. But it does show that no quadratic H-side family can be explained by endpoint-indexed U witnesses alone.
+Each total is O(u), and all use the same disjoint code reservoir across i. They cannot simply be added because one physical U vertex may play several roles, but no quadratic H-side family can be explained by endpoint-indexed U witnesses alone.
 
-Consequently any quadratic H--U incidence on the corrected half-ray must be carried mainly by
+The new private-foot forcing adds a different alternative: any H-multi/Y-active U vertex whose incident H-edge is t-sourced must pay a coordinate-slice exclusion `(HU-IHOLE)` in its U-neighbourhood.
 
-- matched-layer t-sourced certificates,
-- non-U reverse certificates,
-- or U vertices with very low H-degree.
-
-The next attack should retain matched-coordinate identity in the first arm rather than replacing it by a scalar witness count.
+The next attack should aggregate these exclusions only after controlling overlaps between the coordinate slices `U_i^-`; source-coordinate uniqueness or a direct code-incidence argument is the natural tool.
 
 Upstream caveat unchanged: bounded actual-D2C regression still has zero positive rigid complete Hall-cut fixtures with `x>=3`; `X_3` remains mandatory.
