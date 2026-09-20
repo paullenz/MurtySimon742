@@ -10,29 +10,37 @@ Let `D` be the set of distinct source codes represented in `Y`, `h=|D|`, and `y_
 
 For a represented source code `d`, define
 
-`mu_d := |{w : w is a tight matched endpoint, gamma(w)=d, |N(w) cap A_X|=1}|`.
+`M_d := {w : w is a tight matched endpoint, gamma(w)=d, |N(w) cap A_X|=1}`,
 
-The key point is that these are the matched endpoints that are physically capable of serving as rigid singleton-head witnesses for a `d`-coded source.
+`mu_d:=|M_d|`,
+
+and let
+
+`rho_d:=|{h(w):w in M_d}|`
+
+be the number of **distinct A_X heads** that occur among those singleton endpoints. Then `rho_d<=mu_d`.
 
 Fix one tight fibre `{q_i,r_i}`. Its two endpoints partition `A_X`, so
 
 `d_{A_X}(q_i)+d_{A_X}(r_i)=x`.
 
-Since `x>=3`, both degrees cannot equal one. Therefore **at most one endpoint of a tight fibre is a singleton on `A_X`**, irrespective of its gamma code. Summing over the `p` tight fibres gives the global budget
+Since `x>=3`, both degrees cannot equal one. Therefore **at most one endpoint of a tight fibre is a singleton on `A_X`**, irrespective of its gamma code. Summing over the `p` tight fibres gives
 
-> **`sum_{d in D} mu_d <= p`.**                            `(SGB-1)`
+> `sum_{d in D} mu_d <= p`, and hence **`sum_{d in D} rho_d<=p`.** `(SGB-1)`
 
-This is strictly sharper for the present purpose than the earlier bound `sum_d g_{P(d)}<=2p`, because a gamma-compatible endpoint that is not singleton on `A_X` cannot certify a rigid crossing edge.
+The head-support form is the sharper one for witness capacity: several singleton endpoints of the same gamma code may have the same head, but a fixed source can use matched singleton witnesses on at most `rho_d` distinct crossing heads.
 
 ## 2. Exact code-specific U demand
 
 Fix a source `s in Y_d`. The direct rigid-interface audit proves that its `x` crossing edges require `x` distinct physical singleton-head witnesses, all in tight matched endpoints or `U`.
 
-At most `mu_d` of those witnesses can be matched endpoints. Hence every `d`-coded source needs at least
+Its selected matched witnesses have distinct heads. Every such head belongs to the physical head-support set counted by `rho_d`. Therefore at most `rho_d` crossing heads can be matched-certified, and every `d`-coded source needs at least
 
-> `k_d := [x-mu_d]_+`                                     `(SGB-2)`
+> `k_d := [x-rho_d]_+`                                    `(SGB-2)`
 
 physical `U` witnesses.
+
+This is at least as strong as the endpoint-count version `[x-mu_d]_+` and can be strictly stronger when one head has several private coordinates.
 
 Every such `U` witness has tight code `bar d`. Distinct source codes have distinct complementary `U`-code classes. Thus, writing
 
@@ -42,9 +50,9 @@ we have
 
 > **`u>=K`.**                                              `(SGB-3)`
 
-Using `[x-mu_d]_+ >= x-mu_d` and `(SGB-1)`,
+Using `[x-rho_d]_+ >= x-rho_d` and `(SGB-1)`,
 
-`K >= h x-sum_d mu_d >= h x-p`.
+`K >= h x-sum_d rho_d >= h x-p`.
 
 Since `K>=0`,
 
@@ -68,11 +76,11 @@ Since every `y_d>=1`, `(SGB-ZX)` and `(SGB-ZY)` give the compact global conseque
 
 > **`Z >= xK >= x[h x-p]_+`.**                            `(SGB-Z)`
 
-A multiplicity-sensitive companion bound follows from `k_d >= x-mu_d`:
+A multiplicity-sensitive companion bound follows from `k_d >= x-rho_d`:
 
-`sum_d y_d k_d >= x y-sum_d y_d mu_d`.
+`sum_d y_d k_d >= x y-sum_d y_d rho_d`.
 
-Because `max_d y_d <= y-h+1` and `sum_d mu_d<=p`,
+Because `max_d y_d <= y-h+1` and `sum_d rho_d<=p`,
 
 > **`Z_Y >= [x y-p(y-h+1)]_+`.**                          `(SGB-ZY2)`
 
@@ -102,7 +110,7 @@ Thus
 
 > **`E_U >= sum_d k_d(g0-1+y_d) >= g0 K >= g0[h x-p]_+`.** `(SGB-EU+)`
 
-When `g0<=1`, the predecessor convex-truncation argument remains valid with the sharper singleton demand `k_d`:
+When `g0<=1`, the predecessor convex-truncation argument remains valid with the sharper distinct-head demand `k_d`:
 
 > **`E_U >= [sum_d y_d k_d-(1-g0)u]_+`.**                 `(SGB-EU-)`
 
@@ -110,18 +118,18 @@ When `g0<=1`, the predecessor convex-truncation argument remains valid with the 
 
 The sharpening uses three physically different statements and does not identify incidences that are only witness selections:
 
-1. `(SGB-1)` counts **physical tight matched endpoints** with singleton `A_X` neighbourhoods. One fibre contributes at most one.
-2. `(SGB-3)` counts **physical U vertices** in disjoint tight-code classes. Reuse across sources of the same code is allowed; only the population required by one source is retained.
-3. `(SGB-ZY)` counts **physical source--U nonedges**. If one U witness is reused by several sources, those are still different graph edges/nonedges, so the multiplicity is legitimate.
+1. `(SGB-1)` counts physical tight matched singleton endpoints and then their distinct head support. One fibre contributes at most one endpoint, and `rho_d<=mu_d` prevents repeated private coordinates of one head from being treated as extra crossing heads.
+2. `(SGB-3)` counts physical U vertices in disjoint tight-code classes. Reuse across sources of the same code is allowed; only the population required by one source is retained.
+3. `(SGB-ZY)` counts physical source--U nonedges. If one U witness is reused by several sources, those are still different graph nonedges, so the multiplicity is legitimate.
 
 No selected `(source,coordinate)` injectivity theorem is needed beyond the direct rigid singleton-head fact that one fixed source requires distinct witnesses for its distinct crossing heads.
 
 ## 6. Strategic consequence
 
-The empirical zero-fixture problem is now more constrained. Any exact rigid Hall cut with `x>=3` and `h` represented outside source codes must pay, before pair-local one-code purification,
+Any exact rigid Hall cut with `x>=3` and `h` represented outside source codes must pay, before pair-local one-code purification,
 
 - `u>= [h x-p]_+` physical complementary-code U vertices;
 - `Z>=x[h x-p]_+` located A--U holes;
 - and, for `g0>=1`, `E_U>=g0[h x-p]_+` U-slack.
 
-The correct next step is to feed these sharpened singleton-resource bills into the exact rooted identity and the Hall near-equality provenance, while keeping pair-local quantities separate. In the one-code case `h=1`, the sharper object is still the exact `mu_d` / actual `k_*` tradeoff and the private-coordinate theorem; in the multi-code case `(SGB-4)` is a new global obstruction that should replace the older `u+2p` relaxation.
+The correct next step is to feed these sharpened singleton-resource bills into the exact rooted identity and the Hall near-equality provenance, while keeping pair-local quantities separate. In the one-code case `h=1`, the sharper objects are the exact distinct-head support `rho_d`, the actual per-source U count, and the private-coordinate theorem; in the multi-code case `(SGB-4)` should replace the older universal `u+2p` relaxation.
