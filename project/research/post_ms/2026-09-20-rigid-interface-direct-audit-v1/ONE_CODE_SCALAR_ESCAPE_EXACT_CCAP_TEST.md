@@ -1,4 +1,4 @@
-# Explicit scalar escape family versus exact pair capacity
+# Explicit scalar escape family versus exact pair-local gates
 
 Date: 2026-09-20
 
@@ -13,17 +13,31 @@ Use the infinite family preserved in `ONE_CODE_NEAR_RIGID_SCALAR_ESCAPE_FAMILY.m
 - minimum-source U-witness count `k=3t`, escape count `d=t`, matched-covered head count `m=2t`,
 - `t>=2`.
 
-The previously computed exact scalar score floor is
+For the pair-local test take the natural scalar assignment
 
-`S_floor = 9t^2+5t-2 + floor(4t^2-3t/2)+1`,
+- `g_P=m=2t`,
+- `k_P=x-g_P=3t=k`,
+- `rho=2t`.
 
-and the above-M ceiling is
+This is a parameter-level assignment only; no graph realization is asserted.
 
-`C0=20t^2+10t-4`.
+The witness-class slack floor, which is actually located in the complementary `U_bar d` class and therefore in `S_P`, is
+
+> `E_pair=9t^2+5t-2`.
+
+Separately, the A_X collision/Hamming floor is outside the pair P and contributes at least
+
+> `L_X=floor(4t^2-3t/2)+1`.
+
+Thus the total scalar floor is `E_pair+L_X`, while the pair-local tests below deliberately use only
+
+> `S_P=E_pair`.
+
+This corrects an intermediate same-session draft that substituted the total scalar floor for `S_P`; that substitution was too generous to the pair capacity. The corrected smaller pair slack still leaves a large margin.
 
 ## Exact Ccap_P test
 
-The preserved exact complementary-pair capacity is
+The preserved one-code pair capacity is
 
 `Ccap_P = R_code(S_P)[g_P+2S_P/(lambda+1)]`,
 
@@ -41,37 +55,56 @@ On this family,
 
 `D0=23t+1`, `lambda+1=4t`, and `2xy=10t^2`.
 
-To make the capacity test deliberately hostile, set the nonnegative pair term `g_P` to zero and take only `S_P=S_floor`. Since `sqrt(D0^2+12S_P)>=D0`,
+Since `sqrt(D0^2+12S_P)>=D0`,
 
-`R_code(S_floor)>=floor(2D0/3)>=15t+1` for `t>=2`.
+`R_code(S_P)>=floor(2D0/3)>=15t+1` for `t>=2`.
 
 Also
 
-`S_floor > 13t^2+(7/2)t-2`,
+`g_P+2S_P/(lambda+1)`
+`=2t+(9t^2+5t-2)/(2t)`
+`=(13/2)t+5/2-1/t`.
 
-so
+Therefore
 
-`2S_floor/(lambda+1)=S_floor/(2t) > (13/2)t+7/4-1/t`.
+`Ccap_P >= (15t+1)((13/2)t+5/2-1/t)`.
 
-Therefore, already at `g_P=0`,
+For every `t>=2` this is strictly larger than `10t^2=2xy`; the leading coefficient is `97.5`, versus `10`. Hence:
 
-`Ccap_P > (15t+1)((13/2)t+7/4-1/t)`.
+> **exact Ccap_P does not eliminate the scalar escape family even when only the pair-located witness-class slack is supplied to it.**
 
-For every `t>=2` this is strictly larger than `10t^2=2xy` (indeed the leading coefficient is `97.5`, versus `10`). Hence:
+## Exact ONE-P test
 
-> **exact Ccap_P by itself does not eliminate the scalar escape family; it has a large quadratic margin even under the hostile choice g_P=0.**
+The purified one-code theorem gives
 
-This is stronger than merely observing that the coarse global score survives: one of the audit-mandated exact local gates has now been checked explicitly and is not the missing mechanism for this family.
+`R_code(S_P)[g_P+2S_P/(lambda+1)] + L_Y`
+`>= y(p+x+k_P)`.
+
+On this family the right-hand side is
+
+`y(p+x+k_P)=t(3t+5t+3t)=11t^2`.
+
+The first term on the left is exactly `Ccap_P`, already bounded below by a quantity with leading coefficient `97.5t^2`. Therefore, even after setting the nonnegative `L_Y` term to zero,
+
+> `Ccap_P > 11t^2`
+
+for every `t>=2`.
+
+Thus:
+
+> **the exact purified `(ONE-P)` inequality also has a very large positive margin on this parameter ray.**
+
+This is a method diagnostic only: it says the scalar inequality does not rule out the ray, not that the pair geometry is physically realizable.
 
 ## Exact CROWD scalar floor
 
-The preserved pair-crowding scalar floor used in the exact local feasibility envelope is
+The preserved pair-crowding floor is
 
 `S_P >= s_crowd=[y(3y-D0)]_+`.
 
-On this family,
+Here
 
-`3y-D0 = 3t-(23t+1) = -20t-1`,
+`3y-D0=3t-(23t+1)=-20t-1`,
 
 so
 
@@ -79,15 +112,16 @@ so
 
 for every `t>=1`.
 
-Thus the aggregate `(CROWD)` floor also does not touch this family. This does **not** say that all distribution-sensitive consequences of the pair geometry are vacuous; only that the preserved scalar crowding floor is identically zero on this scaling direction.
+Thus the scalar `(CROWD)` floor is identically vacuous on this direction.
 
 ## Consequence
 
-Two audit-mandated local scalar gates can now be ruled out as the missing contradiction on this family:
+All three audit-mandated **aggregate pair-local scalar gates** have now been tested on the explicit ray:
 
-- exact `Ccap_P` has very large positive margin even under `g_P=0`;
-- the preserved scalar `CROWD` floor is identically zero.
+- exact `Ccap_P` has a large quadratic margin;
+- purified `(ONE-P)` has a large quadratic margin even with `L_Y=0`;
+- scalar `(CROWD)` is identically zero.
 
-The next load-bearing tests are therefore the parts that retain *distribution and physical location* rather than only local aggregate capacity: exact `(ONE-P)` with the pair halves kept separate, the distinct singleton-head parameter `rho` rather than only `m<=rho`, exact rooted residual / located U-nonedge feedback, and graph-level realizability of the rigid interface itself.
+Therefore another aggregation of those same inequalities cannot close this ray. The next load-bearing mechanisms are the pieces that retain physical distribution and location: whether `rho=2t` can actually coexist with the required singleton matched-head geometry, the exact per-vertex witness reuse and located X--U/Y--U nonedges, rooted residual/defect feedback, and ultimately graph-level realizability of the rigid interface itself.
 
 No claim is made that the family survives those stronger tests. Bounded actual-D2C regression still has zero positive rigid complete Hall-cut fixtures with `x>=3`, and `X_3` remains the mandatory negative control.
