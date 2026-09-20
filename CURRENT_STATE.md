@@ -9,39 +9,29 @@
 <!-- CURRENT-STATUS:START -->
 CHECKPOINT CLASS: `ONE_CODE_R1_BETA_WITNESS_MULTIPLICITY_2026_09_20`
 
-WORK MODE: `MATH_AFTER_AUDIT_GATE`
+WORK MODE: `MATH`
 
-LATEST_RECONCILED_PREDECESSOR_HEAD: `aa9f246c2df30d3765b361c6ff19163fa9b1252d`.
+INSPECTED PREDECESSOR: `aa9f246c2df30d3765b361c6ff19163fa9b1252d` plus the complete newer one-code chain `d532bca...`, `4d07e27...`, `6bb6531...`, `ccd5794...`; CURRENT_STATE, README, latest commits, and the 20 September daily red-team audit were reread before forward mathematics.
 
-LATEST_THIS_RUN_COMMITS: `04f5e2bd234407babb522c5a72679c1a906f7cec` (residual-one hub criticality), `bb0ceb44ba2af1e416f9570d8e7178126da88e51` (escape-ray arithmetic replay), `5604d67169a6d733c91c1f2883d4470e336f1c0a` (beta-witness multiplicity tradeoff), plus this state synchronization commit.
+LAST VERIFIED RESULT: `Same-session conditional r=1 package: the residual matched endpoint q_j is a common physical hub. Every selected spoke z_h q_j is forced into beta orientation; its A-witness a_h lies in K\{h}, h a_h is a nonedge, W_s--Y is empty, E(W_s,U_bar(d)) is empty, and K--H is empty. Retaining f(h)=a_h with image size s and indegrees r_a yields at least k-floor(s/2) distinct K-nonedges, P>=sum r_a[lambda+r_a-epsilon_a]_+ forced W_s--escape nonedges, and the conservation law L_A+2P>=lambda s+k. These are same-session results pending hostile replay, not promoted graph-level closure.`
 
-LAST VERIFIED/AUDITED BASE: `The 20 September daily red-team audit remains binding. P1/P2 semantics are repaired; raw same-code criticality and ordered (source,witness) injection independently passed in later repair work; X_3 remains mandatory; exact pair-local Ccap_P/(ONE-P)/(CROWD) remain load-bearing whenever invoked; finite scans are diagnostics only; and bounded actual-D2C regression still has zero positive rigid complete Hall-cut fixtures with x>=3. The zero-positive-fixture interface remains the dominant global risk.`
+UNPRESERVED WORK: `None. The hub theorem, arithmetic replay, beta-witness multiplicity theorem, and this exact handoff are all committed. The local arithmetic replay was independently re-executed for t=2..1000 and passed.`
 
-SECOND_STRICT_STATUS: `Same-session candidate chain closes the exact unloaded second-strict layer to finite order: mixed y=1 x=3 gives n<=16; x=4 n<=19; x>=5 n<=33; two-X-hole arm n<=816; (0,2) empty; mixed y>=2 internally closed. Conditional on the rigid one-code interface and predecessor closures, no exact unloaded second-strict survivor remains for n>=817. These remain provisional pending hostile replay.`
+DEFERRED ADMIN: `README remains deliberately at the independently audited public checkpoint; do not promote same-session r=1 claims before the next daily hostile audit. Earlier same-session commits in this invocation triggered status-sync failures because CURRENT_STATE was not updated on every individual commit; the present head repairs the required live fields. Do not rewrite research history merely to cosmetically erase those historical CI failures.`
 
-RIGID_INTERFACE_AUDIT: `The raw-criticality reconstruction supports M_X=E_X=0 => complete A-cut, selected crossing sources in Y, x distinct physical singleton-head witnesses per source, witnesses only in tight matched endpoints or U, x<=p+u, and complementary U-code concentration. Reachability is still unresolved; graph regression has zero positive fixtures.`
+NEXT ACTION: `First hostile-replay ONE_CODE_R1_RESIDUAL_HUB_CRITICALITY.md and ONE_CODE_R1_BETA_WITNESS_MULTIPLICITY.md, especially the forced beta orientation/code localization, W_s--Y and W_s--U_bar(d) anticompleteness, K--H anticompleteness, t_a>=lambda+1+r_a-epsilon_a, and L_A+2P>=lambda s+k. If they survive, jointly optimize (s,r_a,epsilon_a,P) with exact pair-local Ccap_P/(ONE-P)/(CROWD) and the rooted residual identity. Test whether near-permutation maps (large s) or concentrated maps (small s) can support an unbounded family. Keep the zero-positive actual-D2C rigid-fixture caveat active throughout.`
 
-USED_WITNESS_INDEPENDENCE_REPLAY: `07f6ae6... hostile-replayed G[W]=empty and E_W>=k_P(p+k_P-2), with the orientation correction that the valid same-code U--U source must be chosen before renaming. It deliberately did not claim W anticomplete to unused U_bar(d).`
+AUDIT GATE: `The 20 September daily red-team audit remains binding. P1/P2 semantics are repaired; raw same-code criticality and ordered (source,witness) injection independently passed in later repair work; X_3 remains mandatory; exact pair-local Ccap_P/(ONE-P)/(CROWD) remain load-bearing whenever invoked; finite scans are diagnostics only; and bounded actual-D2C regression still has zero positive rigid complete Hall-cut fixtures with x>=3.`
 
-PSI_PHYS_AND_Q: `6bb6531... gives the exact Psi_phys ellipse 3R^2+4RS+4S^2<=10c^2+40c+44 in u>=c, hence n<=6c+18+sqrt(55c^2+220c+242), but c remains unbounded. 4d07e27... gives q<=d_U u-d_U(d_U+1)/2 and the exact residual-r rooted-Q inequality.`
+SECOND STRICT: `Provisional exact unloaded second-strict chain is finite-order: mixed y=1 x=3 gives n<=16; x=4 n<=19; x>=5 n<=33; two-X-hole arm n<=816; (0,2) empty; mixed y>=2 internally closed. Conditional on the rigid one-code interface and predecessor closures, no exact unloaded second-strict survivor remains for n>=817. Pending hostile replay.`
 
-PRIVATE_COORDINATE_EXHAUSTION: `d532bca... gives r=p-m=c-d_U. If k>0 then r>=1, d_U<=c-1 and k>=u-c+1. At r=1 all U-certified heads have the single code C=d xor e_j.`
+R1 PREDECESSOR: `At r=p-m=c-d_U=1, K has code C=d xor e_j, matched heads h_i have support {i} or {i,j}, A_bar(C)=empty for p>=3, |U_bar(C)|<=c-1, and e(K)<=k(c-1). The exact stress family c=p=2t,y=1,g0=2t-1,lambda=4t-2,u=x=3t,k=t+1,d_U=2t-1,m=p-1,n=10t+2 survives predecessor aggregate gates.`
 
-R1_PREDECESSOR_PROFILE: `ccd5794... gives r=1: K has code C=d xor e_j; matched heads h_i have support {i} or {i,j}; A_bar(C)=empty for p>=3; |U_bar(C)|<=c-1; e(K)<=k(c-1). aa9f246... records the exact unbounded parameter stress family c=p=2t,y=1,g0=2t-1,lambda=4t-2,u=x=3t,k=t+1,d_U=2t-1,m=p-1,n=10t+2, which survives the predecessor aggregate gates.`
+R1 HUB: `Direct criticality of h z_h recycles the original crossing certificate. The live rooted edge z_h q_j instead forces beta witness a_h in K\{h}. Hence h a_h is absent, N_Y(z_h)=empty, N_A(z_h)={h}, E(W_s,U_bar(d))=empty, and E(K,H)=empty.`
 
-R1_HUB_CRITICALITY: `Direct criticality of h z_h recycles the original crossing certificate and is a dead end. The residual endpoint q_j is a common hub for all K-heads and selected W_s witnesses. Raw rooted B-edge criticality forces every z_h q_j spoke into beta orientation; its A-witness a_h has code exactly C and lies in K\{h}, h a_h is a nonedge, and N_Y(z_h)=empty. Hence N_A(z_h)={h} and k>=2.`
+R1 MULTIPLICITY: `For f:K->K, r_a=|f^{-1}(a)| and s=|im f|, the beta arcs use at least k-floor(s/2) distinct missing K-edges. If t_a=d_U(a), then K--H=empty gives t_a>=lambda+1+r_a-epsilon_a. The singleton equations force P>=sum r_a(t_a-1)>=sum r_a[lambda+r_a-epsilon_a]_+. Exact one-variable minimization gives L_A+2P>=lambda s+k. Also q<=k(c-1)+binom(c-1,2)-P and, for p>=4, L_X>x g0-p/2+max{k(p+1)-2floor(s/2),k(p+k-2c)}.`
 
-R1_SAME_CODE_AND_X_SPLIT: `The new Y-anticompleteness closes the orientation gap left by the general W replay: E(W_s,U_bar(d))=empty. Applying rooted criticality to every private-coordinate edge z_h q_i gives E(K,H)=empty, so G[A_X]=G[K] dotcup G[H] with no cross edges.`
-
-R1_BETA_MAP_BASIC: `Choosing one hub beta witness per h gives a fixed-point-free map f:K->K, f(h)=a_h, on missing K-edges. Consequently bar G[K] has minimum degree at least one and e(K)<=binom(k,2)-ceil(k/2). Together with e(K)<=k(c-1), this yields the s-free strengthened L_X floor in ONE_CODE_R1_RESIDUAL_HUB_CRITICALITY.md. P1/P2 do not by themselves bound k: the beta obligations have distinct physical sources z_h at the same coordinate j.`
-
-R1_BETA_MULTIPLICITY: `Retain r_a=|f^{-1}(a)| and s=|im f|. The k beta arcs occupy at least k-floor(s/2) distinct missing K-edges, so e(K)<=binom(k,2)-k+floor(s/2). If t_a=d_U(a) and epsilon_a is A-slack, K--H=empty and the r_a preimages give t_a>=lambda+1+r_a-epsilon_a. The singleton equation N(z_h) cap N(a_h)={q_j} forces at least P>=sum r_a(t_a-1)>=sum r_a[lambda+r_a-epsilon_a]_+ additional W_s--(U\W_s) nonedges. Exact minimization gives the conservation law L_A+2P>=lambda s+k. Consequently q<=k(c-1)+binom(c-1,2)-P and every survivor satisfies k(x+y-1)+lambda s+k<=u(p-lambda)+2(c-1)u-c(c-1)+C0. The same s sharpens X-slack to L_X>x g0-p/2+max{k(p+1)-2floor(s/2),k(p+k-2c)} for p>=4.`
-
-R1_STRESS_TEST: `On aa9f246...'s exact family, the s-free hub theorem gives L_X>=8t^2-3t+2ceil((t+1)/2), E_W>=3t^2+2t-1, leaving positive score margin t^2+7t-3-2ceil((t+1)/2) and rooted-Q margin 3t^2+8t-4-2ceil((t+1)/2) for all t>=2. The new s-dependent multiplicity package has not yet been jointly optimized with these floors. No closure is claimed.`
-
-PROCESS_NOTE: `README remains deliberately at the independently audited public checkpoint. Same-session r=1 results stay provisional until the next adversarial replay. The branch is still conditional on reaching a rigid complete Hall cut, and zero positive actual-D2C rigid fixtures with x>=3 remain the dominant interface risk.`
-
-NEXT_ACTION: `First hostile-replay both new r=1 notes, especially forced beta orientation/code localization, W_s--Y and W_s--U_bar(d) anticompleteness, K--H anticompleteness, and the multiplicity degree identity t_a>=lambda+1+r_a-epsilon_a. If they survive, jointly optimize over s, the beta indegrees r_a, A-slack, forced W--escape holes P, exact Ccap_P/(ONE-P)/(CROWD), and the rooted residual identity. The target is to determine whether near-permutation maps (large s) or concentrated maps (small s) can support an unbounded family. Keep the zero-positive actual-D2C rigid-fixture caveat active throughout.`
+R1 STRESS TEST: `On the exact t-family, the s-free hub theorem gives L_X>=8t^2-3t+2ceil((t+1)/2) and E_W>=3t^2+2t-1. The score margin remains t^2+7t-3-2ceil((t+1)/2)>0 and the rooted-Q margin remains 3t^2+8t-4-2ceil((t+1)/2)>0 for every t>=2. No branch closure is claimed; the new s-dependent package has not yet been jointly optimized with all exact local gates.`
 <!-- CURRENT-STATUS:END -->
 
 ---
@@ -66,20 +56,17 @@ Binding constraints:
 `audited rooted/Hall setup`
 `-> rigid singleton-head implication`
 `-> provisional unloaded second-strict finite-order closure`
-`-> singleton matched budget`
 `-> one-code private-coordinate exhaustion r=c-d_U`
 `-> hostile-replayed W independence / quadratic U price`
 `-> exact Psi_phys ellipse and rooted-Q feedback`
 `-> residual-one normal form`
 `-> exact residual-one scalar escape family`
 `-> common residual hub q_j`
-`-> forced beta spoke orientation with witness map f:K->K`
+`-> forced beta witness map f:K->K`
 `-> W_s--Y=empty and W_s--U_bar(d)=empty`
 `-> K--H=empty`
-`-> image-size/multiplicity tradeoff between missing K-edges and forced W--escape holes`
-`-> exact stress family still not closed by the presently separated scalar inequalities`.
-
-The public README remains deliberately at the independently audited checkpoint. Do not promote these same-session rigid-interface refinements before daily red-team replay.
+`-> image-size/multiplicity tradeoff between K-holes and forced W--escape holes`
+`-> exact stress family still not closed by presently separated scalar inequalities`.
 
 ## Session ledger — current invocation
 
@@ -88,20 +75,21 @@ The public README remains deliberately at the independently audited checkpoint. 
 
 Substantive units completed:
 
-1. reread `CURRENT_STATE.md`, README, the 20 September daily red-team audit and all commits newer than the stale handoff through `aa9f246...`, reconciling the live frontier before forward mathematics;
-2. identified the direct head-witness recycling obstruction for `h z_h` and pivoted to rooted matched-hub edges;
-3. exposed the literal residual-coordinate hub `q_j` common to all K-heads and selected W_s witnesses;
-4. proved the reverse orientation of every `z_h q_j` spoke impossible and localized every forward beta witness to `a_h in K\{h}`, forcing `h a_h` nonedges and W_s--Y anticompleteness;
-5. used W_s--Y anticompleteness to strengthen same-code U geometry to `E(W_s,U_bar(d))=empty` at r=1;
-6. applied rooted criticality to private-coordinate edges `z_h q_i` and proved `E(K,H)=empty`;
-7. converted hub beta certificates into a missing-edge budget on K and combined it with complement-code capacity;
-8. combined the exact X-degree identity, `e(H)<p/4`, `Z_X>=k(x-1)` and the X decomposition to obtain the stronger r=1 L_X floor;
-9. fed that floor into the rooted-Q ledger and stress-tested the exact `aa9f246...` family, proving it remains unbounded at the separated scalar level rather than hiding the failure behind a bounded scan;
-10. audited P1/P2 against the one-coordinate geometry and proved they do not themselves imply constant k because sources vary while the coordinate is fixed;
-11. retained the beta-witness image size `s` and indegrees `r_a`, proving `k-floor(s/2)` distinct missing K-edges;
-12. derived the repeated-witness degree/forced-hole inequality `P>=sum r_a[lambda+r_a-epsilon_a]_+` and the exact conservation law `L_A+2P>=lambda s+k`;
-13. fed P into the U-edge ceiling and obtained the s-sensitive rooted-Q condition together with the s-sensitive X-slack floor, exposing a concrete joint optimization problem rather than another one-dimensional relaxation.
+1. reconciled CURRENT_STATE, README, newest commits and the daily audit through `aa9f246...`;
+2. identified the head-witness recycling obstruction and pivoted to rooted matched-hub edges;
+3. exposed the common residual hub `q_j`;
+4. forced every `z_h q_j` spoke into beta orientation and localized `a_h in K\{h}`;
+5. proved W_s--Y anticompleteness and then `E(W_s,U_bar(d))=empty`;
+6. proved `E(K,H)=empty` from private-coordinate rooted edges;
+7. converted beta spokes into a missing-edge budget on K and combined it with complement-code capacity;
+8. derived the stronger r=1 L_X floor from the exact X-degree identity and near-rigid H-sparsity;
+9. fed that floor into rooted-Q and stress-tested the exact unbounded t-family;
+10. audited P1/P2 and proved that one shared coordinate does not itself bound k because the physical sources differ;
+11. retained image size s and indegrees r_a, proving at least `k-floor(s/2)` distinct K-nonedges;
+12. derived the repeated-witness forced-hole inequality and `L_A+2P>=lambda s+k`;
+13. fed P into q and obtained the s-sensitive rooted-Q and X-slack conditions;
+14. performed preservation/CI audit, found the live status-sync schema failure, diagnosed the exact missing fields and invalid WORK MODE value from workflow logs, and repaired CURRENT_STATE at the head rather than ignoring the infrastructure failure.
 
-**Live unfinished line:** independent hostile replay of the two new r=1 notes, then joint optimization of `(s,r_a,epsilon_a,P)` with exact pair-local gates and rooted residual bookkeeping. The key dichotomy is now explicit: small s forces many K-holes; large s raises the `lambda s` rooted-Q price.
+**Live unfinished line:** hostile-replay the two new r=1 theorem notes, then jointly optimize `(s,r_a,epsilon_a,P)` with exact pair-local gates and rooted residual bookkeeping. The physical dichotomy is now explicit: small s forces many K-holes; large s raises the `lambda s` rooted-Q price.
 
-**Stop reason:** preservation phase reached after thirteen tightly connected substantive units. No mathematical blocker and no clean-checkpoint early stop; the remaining work is the next coherent structural optimization, not a missing-tool problem.
+**Stop reason:** preservation phase reached after fourteen substantive/reliability units. No mathematical blocker and no clean-checkpoint early stop.
