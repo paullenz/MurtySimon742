@@ -2,11 +2,11 @@
 
 Date: 2026-09-20
 
-Status: **same-session method diagnostic / exact parameter ray**, conditional on the residual-one `k=2,J2=empty` interface and the hostile-replayed off-ray capacity package. This is **not a graph construction**. Its purpose is to identify the first simple scaling direction that survives the newly strengthened score/rooted package after the `y/p -> 1` endpoint has been closed.
+Status: **same-session corrected method diagnostic / exact parameter ray**, conditional on the residual-one `k=2,J2=empty` interface and the hostile-replayed off-ray capacity package. This is **not a graph construction**. A same-session draft incorrectly set `B0=empty`; that is impossible because the two selected complementary witnesses lie in `B0`. The corrected minimal physical assignment is `|B0|=2`. All conclusions below use that correction.
 
-## 1. Exact ray
+## 1. Exact ray and mandatory B0 floor
 
-For every integer `t>=2`, set
+For every integer `t>=4`, set
 
 - `p=2t`,
 - `c=t`,
@@ -16,16 +16,35 @@ For every integer `t>=2`, set
 - `x=p+1=2t+1`,
 - `k=2`,
 - `m=p-1=2t-1`,
-- residual dimension `r=1`,
-- `b=|B0|=0`, hence `C=e(B0,D)=0`.
+- residual dimension `r=1`.
 
-The normalized parameters are therefore
+The two selected U-witnesses `W_s` have code `bar d` and exactly one A_X-neighbour, their selected K-head. In particular they have no H-neighbour, so
 
-`theta=y/p=1/2`, `kappa=c/p=1/2`, `eta=0`, `q=0`.
+> **`W_s subseteq B0={w in U_bar(d):d_H(w)=0}`.**        `(HR-BMIN)`
 
-This is the simplest exact point well inside the intermediate-theta relaxed survivor wedge exposed by the new off-ray normalized theorem.
+Hence `b=|B0|>=2`. The cheapest exact assignment is therefore
 
-## 2. New off-ray score theorem leaves a large margin
+> **`b=2`, with `B0=W_s`.**                               `(HR-B2)`
+
+Put `D=U\B0`; then `|D|=t-1`. The cross-edge count
+
+`C=e(B0,D)`
+
+is not set to zero; only
+
+`0<=C<=2(t-1)`.
+
+Thus the normalized parameters remain
+
+`theta=y/p=1/2`, `kappa=c/p=1/2`,
+
+while
+
+`eta=b/p=1/t ->0`, `q=C/p^2->0`.
+
+So the same normalized intermediate point survives, but the literal finite geometry contains the mandatory two selected B0 witnesses.
+
+## 2. Exact score ceiling
 
 The exact score ceiling is
 
@@ -39,67 +58,82 @@ Therefore
 
 > **`C0=4t^2+7t-3`.**                                   `(HR-C0)`
 
-Because `B0=empty`, the general Y--U capacity theorem gives
+## 3. Corrected physical score floor still leaves a quadratic margin
 
-`Z_YU >= |D|(y-1)=(t+1)(t-1)=t^2-1`.
+The general Y--U capacity theorem gives
 
-The global H/Y polarization gives the same leading baseline for total A--U holes:
+`Z_YU>=max{by, |D|(y-1)}`.
 
-`Z >= t^2-1`.
+With `b=2`, `|D|=t-1`, `y=t`, the second arm dominates for `t>=4`:
 
-Also every U--U edge must be sourced from D and every D source has oriented U--U source capacity at most two, hence
+> **`Z_YU >= (t-1)^2`.**                                 `(HR-ZY)`
 
-`e(U)<=2|D|=2t+2`.
+The two selected B0 witnesses are Y-anticomplete and each has exactly one X-neighbour. Therefore each contributes
+
+`(x-1)+y=2t+t=3t`
+
+located A--U holes, for `6t` holes in total. Every D vertex lies in the outside escape reservoir and global H/Y polarization contributes at least
+
+`min{|H|,y-1}=t-1`
+
+holes. These vertex blocks are disjoint, so
+
+> **`Z >= 6t+(t-1)^2=t^2+4t+1`.**                       `(HR-Z)`
+
+B0 is independent. Every D source has oriented U--U source capacity at most two, hence
+
+`e(U)<=C+2|D|<=4(t-1)`.                                  `(HR-UE)`
 
 Since `p-lambda=1`, the exact rooted identity gives
 
-`E_U=Z-u(p-lambda)-2e(U)`
+`E_U=Z-u(p-lambda)-2e(U)`,
 
 and therefore
 
-> `E_U >= t^2-5t-6`.                                    `(HR-E)`
+> **`E_U >= t^2-5t+8`.**                                 `(HR-E)`
 
-Because `e(Y)=0`, the exact Y-side slack identity gives
+Because `e(Y)=0`,
 
-> `L_Y=Z_YU-y >= t^2-t-1`.                              `(HR-LY)`
+`L_Y=Z_YU-y`,
 
-Thus the new package certifies only
+so
 
-> **`E_U+L_A >= 2t^2-6t-7`,**                            `(HR-SCORE-LB)`
+> **`L_Y >= t^2-3t+1`.**                                 `(HR-LY)`
 
-which is far below `(HR-C0)` asymptotically. In normalized language the floor coefficient is `1/2`, while the ceiling coefficient is `1`.
+Consequently
 
-So the intermediate half-ray is not a numerical boundary artefact; it has a genuine quadratic score margin.
+> **`E_U+L_A >= 2t^2-8t+9`.**                            `(HR-SCORE-LB)`
 
-## 3. Rooted-Q feedback also remains open
+This is still far below `C0=4t^2+7t-3`; the leading score-floor coefficient is `2` in t^2 versus ceiling coefficient `4`.
+
+Thus the intermediate half-ray remains a genuine aggregate-method escape after correcting the impossible `b=0` assignment.
+
+## 4. Rooted-Q feedback remains open
 
 The residual-one rooted-Q necessary inequality is
 
 `2(x+y-1)+phi(p-1)`
 ` <= u(p-lambda)+2(c-1)u-(c-1)c+C0`.
 
-On the present ray,
+The left side is
 
-left side
-`=6t+(2t-1)(2t-2)`
-`=4t^2+2`,
+`6t+(2t-1)(2t-2)=4t^2+2`,
 
 while the right side is
 
-`(t+1)+(t^2+t-2)+C0`
-`=5t^2+9t-4`.
+`(t+1)+(t^2+t-2)+C0=5t^2+9t-4`.
 
 Hence the rooted margin is
 
-> **`t^2+9t-6>0` for every `t>=1`.**                     `(HR-ROOT)`
+> **`t^2+9t-6>0`.**                                      `(HR-ROOT)`
 
-The new ratio restriction is correspondingly satisfied with large margin:
+The normalized rooted restriction is likewise satisfied with margin:
 
-`1 < kappa theta+S0 = 1/4+1 = 5/4`.
+`1 < kappa theta+S0 = 5/4`.
 
-## 4. Audit-mandated exact pair-local scalar gates
+## 5. Audit-mandated exact pair-local scalar gates
 
-Take the natural minimum pair count
+Take
 
 `g_P=m=2t-1`,
 
@@ -109,14 +143,11 @@ so
 
 The selected complementary used-witness pair contributes the safe pair-located slack floor
 
-`S_P >= k(p+k-2)=2p=4t`.
+`S_P>=k(p+k-2)=2p=4t`.
 
-For a hostile lower-capacity test, set `S_P=4t`.
+For the hostile lower-capacity test set `S_P=4t`. Then
 
-The exact pair parameter is
-
-`D0=5p+5u-3lambda-2`
-`  =9t+6`.
+`D0=5p+5u-3lambda-2=9t+6`.
 
 The exact capacity is
 
@@ -128,13 +159,11 @@ with
 
 Since the square root is at least D0,
 
-`R_code(4t) >= floor(2(9t+6)/3)=6t+4`.
+`R_code(4t)>=6t+4`,
 
-Also
+and
 
-`g_P+2S_P/(lambda+1)`
-`=(2t-1)+8t/(2t)`
-`=2t+3`.
+`g_P+2S_P/(lambda+1)=(2t-1)+8t/(2t)=2t+3`.
 
 Therefore
 
@@ -142,53 +171,47 @@ Therefore
 
 The crossing demand is only
 
-`2xy=2(2t+1)t=4t^2+2t`.
+`2xy=4t^2+2t`,
 
-Thus exact `Ccap_P` has a large positive margin.
+and purified `(ONE-P)` asks only
 
-For purified `(ONE-P)`, the right side is
+`y(p+x+k_P)=4t^2+3t`.
 
-`y(p+x+k_P)=t(2t+2t+1+2)=4t^2+3t`,
+Both have large positive margin. Finally
 
-again far below `(HR-CCAP)` even with `L_Y=0`.
+`3y-D0=-6t-6<0`,
 
-Finally
+so scalar `(CROWD)` is zero.
 
-`3y-D0=3t-(9t+6)=-6t-6<0`,
+Hence all three audit-mandated aggregate pair-local scalar gates remain open on this corrected ray.
 
-so the scalar `(CROWD)` floor is identically zero.
+## 6. Corrected literal geometry
 
-Hence:
+The correction changes the pointwise interpretation but not the asymptotic sparsity:
 
-> **all three audit-mandated aggregate pair-local scalar gates remain open on the half-ray.** `(HR-PAIR)`
+1. `B0=W_s` in the minimal assignment, so exactly two mandatory selected witnesses are H/Y-anticomplete;
+2. `e(Y)=0`;
+3. every Y--U edge is triangular;
+4. high-Y vertices in D must reverse-certify through one of the two B0 witnesses, hence
+   `e(Y,D)<=yb+|D|=3t-1`;
+5. therefore `e(Y,U)=O(p)` even though an individual D vertex may have Y-degree larger than one;
+6. `e(U)<=4t-4=O(p)` by B0 independence plus D-source capacity.
 
-This says only that those scalar inequalities do not eliminate the parameter ray; it is not realizability evidence.
+Thus the correct physical normal form is not “every U vertex has Y-degree at most one”. It is:
 
-## 5. Literal geometry forced by b=0
+> **Y is independent, Y--U is globally sparse, U is globally sparse, and only two physical B0 vertices provide all high-Y reverse-certificate capacity.** `(HR-PHYS)`
 
-The ray is much more rigid physically than the margins above suggest.
+That is an even more concentrated witness bottleneck and should be retained explicitly.
 
-Because `B0=empty`:
+## 7. Next raw-criticality target
 
-1. every U vertex lies in D;
-2. every U vertex has at most one Y-neighbour (otherwise the reverse-certificate theorem would require a B0 witness);
-3. `e(Y)=0`;
-4. every existing Y--U edge is triangular;
-5. every U--U edge must be sourced at a D endpoint, and each D source has capacity at most two, so `e(U)<=2u`;
-6. global H/Y polarization forces every U vertex either H-anticomplete or Y-sparse; here Y-sparsity is already universal.
+Do not re-optimize the aggregate pair scalars; they have quadratic margin. Attack the sparse Y/U system through the H layer.
 
-Thus a hypothetical realization of the half-ray has an asymptotically independent Y layer, an asymptotically sparse U layer, and only O(p) Y--U edges, while the score ceiling still permits it because `c` and `g0` balance at half scale.
+In particular:
 
-This is now a much cleaner physical target than the old exact `c=p,y=p-1` stress family.
+- keep the two selected B0 witnesses explicit rather than replacing them by normalized eta=0;
+- retain the endpoint-indexed U-code classes that certify H--H edges;
+- exploit that all but O(p) H--U edges are triangular (companion H--U triangle-scope lemma);
+- orient that triangular bulk and test whether two B0 witnesses can supply the required reverse-certificate load without creating additional H/Y/U hole rectangles.
 
-## 6. Next raw-criticality target
-
-Do **not** spend another session optimizing the aggregate pair scalars on this ray; they have quadratic positive margin.
-
-The next useful question is literal:
-
-> with `B0=empty`, can a residual-one `k=2,J2=empty` D2C configuration have every U vertex of Y-degree at most one while Y is independent and U has only O(p) internal edges, yet still meet the maximum-degree/criticality requirements of all H--U and H--H edges?
-
-The most promising attack is the H-side compensator. Since Y and U are both sparse on this ray, the exact degree-slack identities force a large fraction of H vertices to obtain their missing degree internally in H or through H--U incidence. Retain private matched-foot witness identities for H--H edges rather than replacing them by an edge count.
-
-The upstream caveat remains unchanged: zero positive actual-D2C rigid complete Hall-cut fixtures with `x>=3` in bounded regression; `X_3` remains mandatory.
+Upstream caveat unchanged: bounded actual-D2C regression still has zero positive rigid complete Hall-cut fixtures with `x>=3`; `X_3` remains mandatory.
