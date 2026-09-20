@@ -7,27 +7,27 @@
 `X_3` (12 vertices, 32 edges, versus `M(12)=31`) remains the mandatory negative control. The false all-order 2019 Dailly–Foucaud–Hansberg Conjecture 3 is not the target. The mixed `{4,5}` selected-excess ladder is closed. First-proof priority on Erdős #742 is not the optimization target.
 
 <!-- CURRENT-STATUS:START -->
-CHECKPOINT CLASS: `ONE_CODE_R1_K2_EXACT_LOW_RAY_CLOSED_GENERAL_YU_CAPACITY_2026_09_20`
+CHECKPOINT CLASS: `ONE_CODE_R1_K2_OFFRAY_NORMALIZED_SCORE_HIGH_Y_ENDPOINT_CLOSED_2026_09_20`
 
 WORK MODE: `MATH`
 
-INSPECTED PREDECESSOR: `49cf219d759dfeebe447f7af7cf8f86dab836272`; before forward mathematics this invocation reread CURRENT_STATE.md, README.md, the latest commits, the 20 September daily red-team audit, the global H/Y polarization, B0 source-collapse, weighted source-collapse optimization, residual-one/private-coordinate profile, residual-hub theorem, and the exact A-side compensator identity. The audit gate remained binding throughout.
+INSPECTED PREDECESSOR: `7e6c442a09eb6b5969571398c603cae8d2dfeb4f`; before forward mathematics this invocation reread CURRENT_STATE.md, README.md, the latest commits, the 20 September daily red-team audit, the residual-one profile, the low-k escape normal form, the general Y--U triangle/capacity theorem, the weighted rooted ledger, the rooted-Q feedback inequality, the A-side compensator identity, and the global H/Y polarization. The audit gate remained binding throughout.
 
-LAST VERIFIED RESULT: `Same-session conditional strengthening and exact-ray asymptotic closure, followed by an off-ray structural generalization. First, G[Y] is exactly independent: a putative Y--Y edge requires a U_bar(d) witness; B0 is Y-anticomplete, while every U_bar(d) witness outside B0 has an H-neighbour which is an illicit second common neighbour because Y is complete to H. Every H--H edge is either private-foot certified or U-certified by an endpoint-indexed Y-anticomplete class, and at most u=p+1 H--H edges can be U-certified. Every Y--U edge is triangular: noncomplementary codes share a tight matched endpoint; a bar(d) endpoint is either B0 and hence Y-anticomplete, or H-positive and hence shares an H-neighbour with Y. Therefore every non-B0 vertex with at least two Y-neighbours is reverse-certified through an X-anticomplete B0 witness. Ordered (Y-source,B0-witness) capacity and an independent B0--D cross-edge isolation charge yield, on the exact low-k ray, the score floor F(eta,t)=1+2eta-2eta t+max{[1-2eta]_+,t^2}; exact minimization gives 2-2/(3sqrt(3))=1.6150998205...>3/2. Hence no unbounded sequence survives on the exact k=2,J2=empty low-k ray. The triangle/capacity/isolation package then generalizes without the exact-ray specialization: for general residual-one k=2,J2=empty, with B=B0, D=U\B, e(Y,D_2)<=y|B| for D_2={t:d_Y(t)>=2}, e(Y,D)<=y|B|+|D|, and if C=e(B,D), O=[C-2|D|]_+, then Z_{Y,D}>=[O(O-|B|)/|B|^2]_+. Equivalently Z_{Y,U}>=|B|y+max{0, y(|D|-|B|)-|D|, O(O-|B|)/|B|^2}. This is the compact off-ray object for the next variable-parameter score optimization.`
+LAST VERIFIED RESULT: `The live handoff's load-bearing off-ray chain was independently replayed in order with no new defect found at its stated conditional scope: (i) e(Y)=0; (ii) every Y--U edge is triangular in residual-one k=2,J2=empty; (iii) every non-B0 vertex with at least two Y-neighbours is reverse-certified through an X-anticomplete B0 witness; (iv) the B0--D isolation charge really has multiplicity divisor b=|B0|. The general theorem was then inserted into the variable score/rooted ledger. For bounded ratios theta=y/p, kappa=c/p, eta=b/p and q=C/p^2, define Y0=eta theta+max{0,theta(kappa-2eta),(q/eta)^2} (with the eta=0 limiting arm theta kappa) and Z0=max{kappa theta+eta,eta+Y0}. Then every asymptotic survivor must satisfy F=Z0+Y0+kappa(kappa-theta)-2q <= S0=((1+kappa)^2-theta^2)/2. Independently rooted-Q feedback forces 1<=kappa theta+S0, equivalently kappa>=sqrt(2(theta^2+theta+1))-(1+theta). At theta=1 the score gap is strictly positive for every kappa>0. Writing t=q/eta, the gap is bounded below by D=kappa^2/2-kappa+2eta(1-t)+max{kappa-2eta,t^2}; a complete three-case proof shows D>0. Thus the high-Y endpoint y/p->1 is asymptotically impossible in the bounded-ratio branch, strictly generalizing the old exact kappa=1 stress-ray closure.`
 
-UNPRESERVED WORK: `None after atomic preservation. New notes: ONE_CODE_R1_K2_Y_INDEPENDENCE_AND_HH_CERTIFICATE_SPLIT.md, ONE_CODE_R1_K2_LOW_A_SLACK_NORMAL_FORM_AND_TRIANGLE_SCOPE.md, ONE_CODE_R1_K2_ALL_YU_TRIANGULAR_AND_EXACT_RAY_ASYMPTOTIC_CLOSURE.md, and ONE_CODE_R1_K2_GENERAL_YU_TRIANGLE_CAPACITY.md. New diagnostic: check_exact_ray_score_closure.py. The finite diagnostic is not proof.`
+UNPRESERVED WORK: `None after preservation. New theorem note: ONE_CODE_R1_K2_OFFRAY_NORMALIZED_SCORE_AND_HIGH_Y_GAP.md. New diagnostic: check_offray_normalized_score.py. A first continuous SciPy diagnostic attempt hit the execution timeout; the run pivoted immediately to a lightweight vectorized/coarse-grid diagnostic. No mathematical claim depends on either computation.`
 
-DEFERRED ADMIN: `README remains deliberately at the independently audited public checkpoint. Do not promote same-session Y-independence, all-YU-triangularity, H--H certificate split, B0--D isolation, the exact-ray finite-order theorem, or the off-ray capacity theorem before the next daily hostile audit. Historical notes remain preserved. The prior q=1 golden forward/reverse/dual witness split and W_min curve remain superseded. The earlier triangle-scope warning remains historically correct as a general warning, but its apparent blocker in this residual-one k=2,J2=empty branch is superseded by the theorem that every Y--U edge is triangular.`
+DEFERRED ADMIN: `README remains deliberately at the independently audited public checkpoint. Do not promote the same-session Y-independence, all-YU-triangularity, off-ray normalized score theorem, rooted ratio restriction, or high-Y endpoint closure before the next daily hostile audit. Historical notes remain preserved. The prior q=1 golden forward/reverse/dual witness split and W_min curve remain superseded.`
 
-NEXT ACTION: `Independently hostile-replay the now-load-bearing chain in this order: (i) Y-independence; (ii) all-YU-triangularity; (iii) reverse B0 witness location for high-Y D vertices; (iv) the B0--D isolation charge and its multiplicity divisor b; (v) the eta/q score minimization. If all survive, do not revisit the exact stress ray. Instead insert the general exact hole bound from ONE_CODE_R1_K2_GENERAL_YU_TRIANGLE_CAPACITY.md into the variable-parameter score/rooted ledger using x=p+1, u=c+1, lambda=c+p-y-1 and g0=p-y. Retain y/p, c/p, b/p and C/p^2 until the final optimization. Keep y=o(p) on the existing large-gap/rooted residual route.`
+NEXT ACTION: `Hostile-replay the new off-ray score synthesis, especially the general Y-side slack identity and the simultaneous use of global H/Y polarization with B0 isolation. Then quantify the high-Y exclusion wedge away from theta=1 rather than revisiting the exact ray. The coarse diagnostic suggests relaxed survivors migrate into an intermediate wedge as theta drops (for example theta=0.99 leaves sampled kappa roughly 0.45--0.64, while theta=0.999 had no sampled survivor), but this is diagnostic only. Analytically characterize the first surviving scaling direction in (theta,kappa,eta,q), feed it into exact pair-local Ccap_P/(ONE-P)/(CROWD), and keep y=o(p) on the separate large-gap/rooted-residual route. Also isolate or close the unbounded-ratio c/p regime before promoting a global high-Y theorem.`
 
 AUDIT GATE: `The 20 September daily red-team audit remains binding. P1/P2 semantics are repaired; raw same-code criticality and ordered (source,witness) injection independently passed in later repair work; X_3 remains mandatory; exact pair-local Ccap_P/(ONE-P)/(CROWD) remain load-bearing whenever invoked; finite scans are diagnostics only; superseded evidence stays superseded; bounded actual-D2C regression still has zero positive rigid complete Hall-cut fixtures with x>=3.`
 
 SECOND STRICT: `Provisional exact unloaded second-strict chain remains finite-order: mixed y=1 x=3 gives n<=16; x=4 n<=19; x>=5 n<=33; two-X-hole arm n<=816; (0,2) empty; mixed y>=2 internally closed. Conditional on the rigid one-code interface and predecessor closures, no exact unloaded second-strict survivor remains for n>=817. Pending hostile replay.`
 
-R1 K2 LIVE CHAIN: `Residual-one common hub/beta fan -> k=2,J2=empty low-k branch -> global escape H/Y polarization -> B0 H/Y-antichain and U-source collapse -> exact Y-independence -> H--H private-foot/U certificate dichotomy -> all Y--U edges triangular -> high-Y D edges reverse-certified through B0 -> Y-hole capacity + B0--D isolation -> exact eta/q score optimization closes exact low-k ray -> same triangle/capacity/isolation package generalized to variable y,c. Next: hostile replay then variable-parameter score/rooted optimization.`
+R1 K2 LIVE CHAIN: `Residual-one common hub/beta fan -> k=2,J2=empty -> global H/Y polarization -> B0 H/Y-antichain and U-source collapse -> e(Y)=0 -> all Y--U edges triangular -> reverse B0 capacity + B0--D isolation -> exact low-k ray closed -> off-ray exact capacity theorem -> normalized (theta,kappa,eta,q) score/rooted obstruction -> theta=1 endpoint strictly closed for every positive bounded kappa -> next: quantify high-Y wedge and attack first intermediate survivor.`
 
-R1 K2 SUPERSESSION: `The predecessor dense-Y compensator interpretation is false: e(Y)=0 exactly. The temporary concern that H-free Y--U edges might escape reverse-certificate analysis by being triangle-free is resolved throughout residual-one k=2,J2=empty: every Y--U edge is triangular because noncomplementary codes share a tight matched endpoint, while complementary bar(d) endpoints are either B0 (Y-anticomplete) or H-positive (triangle through H). The general warning remains valid outside this proved scope: never apply the two-orientation lemma to an arbitrary edge without establishing a triangle.`
+R1 K2 SUPERSESSION: `Do not return to the exact kappa=theta=1 ray or the superseded golden dual-witness model. The exact ray is already conditionally closed and the new theorem shows the theta=1 obstruction is not special to kappa=1. The live problem is the intermediate theta<1 wedge plus the unbounded-ratio c/p possibility.`
 <!-- CURRENT-STATUS:END -->
 
 ---
@@ -55,40 +55,35 @@ Binding constraints:
 `-> k=2,J2=empty low-k branch`
 `-> global escape H/Y polarization`
 `-> B0 H/Y-antichain and source collapse`
-`-> Y--Y compensation eliminated: e(Y)=0`
-`-> H--H certificate split: private foot or endpoint-indexed U witness`
+`-> e(Y)=0`
 `-> all Y--U edges triangular`
 `-> high-Y non-B0 vertices reverse-certified through B0`
-`-> reverse-witness capacity plus B0--D isolation holes`
-`-> exact eta/q score floor 2-2/(3sqrt(3))`
-`-> exact low-k ray finite-order`
-`-> triangle/capacity/isolation theorem generalized off-ray`
-`-> next: variable y,c score/rooted optimization`.
+`-> Y-hole capacity plus B0--D isolation`
+`-> exact low-k ray closure`
+`-> off-ray exact capacity theorem`
+`-> normalized variable score/rooted obstruction`
+`-> theta=1 high-Y endpoint closed for every positive bounded kappa`
+`-> next: intermediate-theta wedge / pair-local attack`.
 
 ## Session ledger — current invocation
 
-**Invocation start:** 21:01:08 BST.  
+**Invocation start:** 21:28:21 BST.  
 **Planned preservation cutoff:** 21:55:38 BST.
 
 Substantive units completed:
-1. reconciled CURRENT_STATE.md, README.md, live head `49cf219...`, latest commits, and the 20 September daily red-team audit before forward mathematics;
-2. independently replayed the global escape H/Y polarization and found no new flaw at its stated triangle-edge scope;
-3. replayed the B0 Y-antichain, B0 independence, and oriented U-source collapse, preserving their conditional scope;
-4. audited the supposed dense-Y compensator arm and proved the stronger exact theorem `e(Y)=0`;
-5. derived the exact H--H certificate dichotomy: private foot or endpoint-indexed Y-anticomplete U witness;
-6. summed the endpoint-indexed witness classes to show that at most `u=p+1` H--H edges can be U-certified globally;
-7. proved that the B+-touched H-set S has `e(H[S])<=p+1` and derived the complementary B+ slack bill;
-8. synthesized the quantitative low-A-slack normal form: H dense, Y independent, H--U sparse, Y--U dense, U sparse, and B0 small;
-9. hostile-tested a tempting extension of reverse-certificate capacity to H-free Y--U edges and initially isolated the genuine triangle-scope issue;
-10. derived the exact triangle-free endpoint-slack bill `epsilon_t+epsilon_y>=p` as the safe fallback;
-11. resolved the apparent blocker by proving every Y--U edge is triangular from tight-coordinate common-neighbour geometry plus the bar(d) split;
-12. used valid triangle-edge criticality to force every high-Y non-B0 edge into the reverse orientation through an X-anticomplete B0 witness and obtained the fixed `(Y-source,B0-witness)` capacity bound;
-13. independently derived the B0--D cross-edge isolation charge and its Cauchy/multiplicity lower bound;
-14. combined source collapse, exact degree identity, Y-hole capacity, and isolation in the legitimate score ledger and reduced the exact ray to a two-variable `(eta,q)` optimization;
-15. minimized the score floor analytically, obtaining `2-2/(3sqrt(3))=1.6150998205...>3/2`, proving there is no unbounded exact-ray survivor;
-16. added a conservative finite diagnostic checker. It reports the relaxed finite lower bound first staying above exact C0 at p=114 through p=10000, but this remains diagnostic rather than a claimed theorem threshold;
-17. generalized the all-YU-triangular / reverse-B0 capacity / isolation theorem off the exact ray, obtaining exact bounds in variables `(y,u,b,C)` and setting up the next variable-parameter optimization.
+1. reconciled CURRENT_STATE.md, README.md, live commits through `7e6c442...`, and the 20 September daily red-team audit before forward mathematics;
+2. independently hostile-replayed `e(Y)=0` from raw same-code criticality and found no new scope defect;
+3. independently replayed the all-Y--U-triangular theorem, including the complementary-code B0/H-positive split;
+4. replayed the high-Y D reverse-orientation theorem and re-established the B0 witness location;
+5. replayed the B0--D isolation charging argument and verified the multiplicity divisor b;
+6. derived the off-ray normalized Y-hole coefficient `Y0` in `(theta,kappa,eta,q)`;
+7. combined B0 H/Y anticompleteness with global H/Y polarization to derive the simultaneous total-hole coefficient `Z0`;
+8. localized U edges as `e(U)=C+O(|D|)` in the bounded-ratio regime and inserted this into the exact rooted identity;
+9. derived the normalized score necessary condition `F<=S0`;
+10. independently normalized the rooted-Q feedback inequality and obtained the exact ratio floor `kappa>=sqrt(2(theta^2+theta+1))-(1+theta)`;
+11. specialized the score to theta=1 and proved strict positivity of the score gap for every kappa>0 by a complete three-case analysis in `(eta,t=q/eta)`;
+12. added a diagnostic grid checker for the intermediate-theta wedge. A heavier SciPy attempt timed out and was immediately replaced; no proof relies on the diagnostic.
 
-**Live unfinished line:** hostile-replay the exact-ray closure once more, then insert the general Y-hole/cross-isolation theorem into the residual-one k=2 score/rooted formulas with variable `y,c,g0,lambda`. Preserve y=o(p) as a separate large-gap branch.
+**Live unfinished line:** turn the endpoint closure into an explicit analytic high-Y exclusion wedge, then identify the first intermediate-theta normalized survivor and test it against exact pair-local `Ccap_P/(ONE-P)/(CROWD)`. Separately audit the unbounded `c/p` regime.
 
-**Stop reason:** preservation checkpoint after seventeen tightly connected mathematical/audit units. The exact stress family is conditionally finite-order and the key mechanism has been generalized off-ray; no further exact-ray optimization is warranted.
+**Stop reason:** preservation checkpoint after twelve tightly connected mathematical/audit units. The exact ray is no longer the live target; the variable branch has been reduced to an intermediate-theta wedge plus an unbounded-ratio regime.
