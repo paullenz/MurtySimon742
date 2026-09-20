@@ -14,37 +14,36 @@ The stronger all-order 2019 Dailly-Foucaud-Hansberg conjecture is false: the pub
 
 **Live handoff:** [`CURRENT_STATE.md`](CURRENT_STATE.md).
 
-### 20 September 2026 adversarial checkpoint
+### 21 September 2026 adversarial checkpoint
 
-The [20 September daily red-team audit](project/research/post_ms/2026-09-20-daily-red-team-audit-v1/DAILY_RED_TEAM_AUDIT.md) reviewed the 114-commit interval from `0060acd80a376074486563bc537386fe130459d2` through audited head `1b31449427c81b76b3da9140e61dd55b18a739f0`.
+The [21 September daily red-team audit](project/research/post_ms/2026-09-21-daily-red-team-audit-v1/DAILY_RED_TEAM_AUDIT.md) reviewed the live interval through pre-audit head `4a7cf5ab4b94451a9e502cd901c906ab9890b048` and separately audited session utilisation.
 
-**Finding:** no fatal contradiction was found in the final repaired one-code / first-strict / one-witness / all-R equality-pinch chain. The conclusion remains deliberately narrow: this is a conditional necessary-condition programme, not an eventual theorem, no threshold `n_0` has been established, and the bounded actual-graph regression still has **zero positive rigid complete Hall cuts with `x>=3`**.
+**Mathematical finding:** no fatal contradiction was found in the final corrected local one-code / H–U / superconstant-deficit chain under its stated upstream hypotheses. Raw same-code criticality and ordered `(source,witness)` injectivity survive independent derivation, and the corrected H–U layer/capacity mechanism survives targeted replay. The latest global `Delta-h = Omega(t^(2/3))` package is nevertheless only **provisionally supported and conditional**: the bounded actual-D2C regression still contains **zero positive rigid complete Hall-cut fixtures with `x>=3`**, and this audit did not independently reconstruct every `N=0,1,2,3` equality-face exclusion from first principles. There is still no eventual theorem and no justified threshold `n_0`.
 
-The audit independently reproduced the corrected source-premise atlas counts, the `X_3` hostile control, the exact-core first-strict arithmetic and the latest all-R arithmetic. It also confirmed that several earlier pieces of evidence must remain superseded: the alpha-labelled-as-beta source checker result; the matched-only common-buffer Orientation-A theorem; the 188,912 first-strict count; the 179,735 intermediate count after exact-core restoration; and the 178,572 weak-core one-witness count.
+**Process finding:** the audited 24-hour session record is inadequate for a day-wide utilisation claim. Of 23 scheduled forward-research windows, 22 have no telemetry. One 23:00 record is incomplete; a second 23:00 record is complete but began 29m50s late and logged 21m30s of forward work. The resulting **85.4% utilisation applies only to that one verified 25m10s available window**, not to the day. A mandatory telemetry schema is now preserved at [`project/research/session_logs/SESSION_LOG_SCHEMA.md`](project/research/session_logs/SESSION_LOG_SCHEMA.md).
 
-At the latest local frontier, the literal `m=1` all-R equality pinch has been reduced to an exact `d/J` resource geometry. Every outside neighbour of `z` is forced into the complementary code, is A-anticomplete and belongs to an independent set; internal X-edge witnesses must come from at most `d` complementary `z`-nonneighbours; their selected load self-prices; and the combined `z/a_0` slack has a `d`-independent lower bound. The current broad-box necessary-condition diagnostic leaves **124,528 abstract rows**. These are parameter rows, not graphs.
-
-The next proof audit is deliberately upstream: independently re-derive the full coded-layer same-code criticality theorem and ordered `(source,witness)` injectivity directly from raw D2C edge criticality before further deductions are stacked on them.
+The pre-audit Status synchronization run `35543011012` / job `106163951722` failed. This checkpoint restores the enforced `CURRENT_STATE.md` handoff schema and preserves the failure as process evidence rather than rewriting history.
 
 ### Current load-bearing chain
 
-`rooted criticality -> selected/residual Hall ledger -> exact complementary-pair capacity -> rigid cut -> one-code purification -> common-buffer repair -> first-strict funnel -> m=1 polarization -> all-R equality pinch -> exact local d/J feedback`.
+`rooted criticality -> selected/residual Hall ledger -> exact complementary-pair capacity -> rigid cut -> one-code purification -> corrected H–U B-layer classification -> capacity-deficit decomposition -> residual-slot collapse -> equality-face exclusions -> provisional global superconstant H-slack deficit`.
 
 Key current packages:
 
 - [19 September source-premise repair](project/research/post_ms/2026-09-19-source-premise-graph-audit-v1/SOURCE_PREMISE_REPAIR.md)
 - [Actual-graph rigid/Hall regression](project/research/post_ms/2026-09-19-rigid-graph-regression-v1/RIGID_GRAPH_LEVEL_REGRESSION.md)
-- [Common-buffer criticality repair](project/research/post_ms/2026-09-19-common-buffer-criticality-repair-v1/COMMON_BUFFER_X_EDGE_CRITICALITY_REPAIR.md)
-- [First-strict funnel repair audit](project/research/post_ms/2026-09-19-first-strict-funnel-reservoir-v1/FIRST_STRICT_FUNNEL_REPAIR_AUDIT.md)
-- [One-witness polarization pinch](project/research/post_ms/2026-09-19-first-strict-funnel-reservoir-v1/ONE_WITNESS_POLARIZATION_PINCH.md)
-- [All-R equality-pinch local feedback](project/research/post_ms/2026-09-19-all-r-pinch-local-feedback-v1/ALL_R_PINCH_LOCAL_FEEDBACK.md)
-- [20 September daily red-team audit](project/research/post_ms/2026-09-20-daily-red-team-audit-v1/DAILY_RED_TEAM_AUDIT.md)
+- [20 September same-code raw-criticality audit](project/research/post_ms/2026-09-20-same-code-raw-criticality-audit-v1/SAME_CODE_RAW_CRITICALITY_AUDIT.md)
+- [Corrected H–U B-layer theorem](project/research/post_ms/2026-09-20-rigid-interface-direct-audit-v1/ONE_CODE_R1_K2_HALF_RAY_HU_B_LAYER_CORRECTION_AND_SLACK_THEOREM.md)
+- [H–U capacity-deficit decomposition](project/research/post_ms/2026-09-20-rigid-interface-direct-audit-v1/ONE_CODE_R1_K2_HU_CAPACITY_DEFICIT_DECOMPOSITION.md)
+- [Residual-slot collapse](project/research/post_ms/2026-09-20-rigid-interface-direct-audit-v1/ONE_CODE_R1_K2_HALF_RAY_RESIDUAL_SLOT_COLLAPSE.md)
+- [Corrected global superconstant deficit](project/research/post_ms/2026-09-20-rigid-interface-direct-audit-v1/ONE_CODE_R1_K2_HALF_RAY_GLOBAL_SUPERCONSTANT_DEFICIT.md)
+- [21 September daily red-team audit](project/research/post_ms/2026-09-21-daily-red-team-audit-v1/DAILY_RED_TEAM_AUDIT.md)
 
 ### Trust boundary
 
 The newest packages are **internal candidate mathematics**. Hand derivation, checker replay, actual-graph regression, same-project CI, independent proof review, external specialist review and publication acceptance are distinct gates. Finite abstract parameter scans are not graph counts. The zero-positive-fixture rigid-cut gap remains explicit and is not evidence either for realizability or impossibility.
 
-The source-tuple P1/P2 interface is now repaired at the semantics actually used: P1 is raw distinct physical beta-source identity, while P2 is selected-representative uniqueness for a single physical `(source,coordinate)` obligation. The remaining high-risk interface is the conditional rigid-cut/same-code criticality chain.
+Invalidated material remains preserved. In particular, the old `HU-PRIVATE/HU-QI/HU-IHOLE` chain is not admissible, and the first uncorrected superconstant formulas from commit `945dc220...` are superseded by the self-head correction beginning at `99cd7367...`.
 
 ### Canonical preserved finite ledger
 
@@ -76,25 +75,29 @@ See the [standalone paper index](project/papers/README.md) and claim ledgers bef
 
 ### Operational programme
 
-The eventual-D2C programme continues through 27 September 2026 with a dedicated daily adversarial checkpoint. Each daily audit is reserved for attempted falsification, independent replay, repo/README/CURRENT_STATE reconciliation and a dated 24-hour report rather than forward research. Autonomous forward work must inherit the latest audit gate, retain `X_3`, and not revive superseded evidence.
+The eventual-D2C programme continues through 27 September 2026 with a dedicated daily adversarial checkpoint. Each daily audit is reserved for attempted falsification, independent replay, session-utilisation audit, repo/README/CURRENT_STATE reconciliation and a dated 24-hour report rather than forward research. Autonomous forward work must inherit the latest audit gate, retain `X_3`, and not revive superseded evidence.
 
 **Reviewers:** [`START_HERE_FOR_REVIEWERS.md`](START_HERE_FOR_REVIEWERS.md) · [`REVIEW_READY_INDEX.md`](releases/REVIEW_READY_INDEX.md) · [papers and review materials](#papers-and-review-materials).
 <!-- CURRENT-STATUS:END -->
 
 ## Dated research updates - current and preserved history
 
-**20 September 2026 - daily adversarial audit and all-R frontier reconciliation.** The audit found no fatal contradiction in the repaired live chain, but kept its conditional scope. It independently replayed the source-premise and arithmetic checks, retained the zero-positive-fixture rigid-cut gap as the dominant interface risk, identified a dead `t` diagnostic output in the latest checker, and found that the audited head had outrun both `CURRENT_STATE.md` and the README. This checkpoint reconciles those handoffs. See the [full audit](project/research/post_ms/2026-09-20-daily-red-team-audit-v1/DAILY_RED_TEAM_AUDIT.md) and [`CURRENT_STATE.md`](CURRENT_STATE.md).
+**21 September 2026 - daily adversarial audit, superconstant frontier and telemetry repair.** The audit retained the corrected local superconstant-deficit result only at conditional/provisional status, kept the zero-positive-fixture rigid-cut gap as the dominant graph-level risk, and found that day-wide session utilisation could not be verified because most hourly telemetry was missing. A durable session-log schema was added and the live status handoff was reconciled after a Status synchronization failure. See the [full audit](project/research/post_ms/2026-09-21-daily-red-team-audit-v1/DAILY_RED_TEAM_AUDIT.md), [`CURRENT_STATE.md`](CURRENT_STATE.md), and [telemetry schema](project/research/session_logs/SESSION_LOG_SCHEMA.md).
 
-**19 September 2026 - first daily adversarial audit and repair day.** The prior [daily red-team audit](project/research/post_ms/2026-09-19-daily-red-team-audit-v1/DAILY_RED_TEAM_AUDIT.md) independently re-derived the finite source-tuple capacity theorem conditional on its named premises and confirmed `X_3`. Subsequent work on 19 September repaired the alpha/beta orientation error, rebuilt actual-graph Hall/pair-capacity regression, repaired a common-buffer criticality orientation, restored the missing physical outside-reservoir condition, and compressed the live branch to the all-R equality pinch.
+**20 September 2026 - daily adversarial audit and all-R frontier reconciliation.** The audit found no fatal contradiction in the repaired live chain, but kept its conditional scope. It independently replayed the source-premise and arithmetic checks, retained the zero-positive-fixture rigid-cut gap as the dominant interface risk, identified a dead `t` diagnostic output in the latest checker, and found that the audited head had outrun both `CURRENT_STATE.md` and the README. See the [full audit](project/research/post_ms/2026-09-20-daily-red-team-audit-v1/DAILY_RED_TEAM_AUDIT.md).
+
+**19 September 2026 - first daily adversarial audit and repair day.** The [daily red-team audit](project/research/post_ms/2026-09-19-daily-red-team-audit-v1/DAILY_RED_TEAM_AUDIT.md) independently re-derived the finite source-tuple capacity theorem conditional on its named premises and confirmed `X_3`. Subsequent work repaired the alpha/beta orientation error, rebuilt actual-graph Hall/pair-capacity regression, repaired a common-buffer criticality orientation, restored the missing physical outside-reservoir condition, and compressed the live branch to the all-R equality pinch.
 
 **17 September 2026 - programme reset.** External work in `Erdos742/Erdos742` changed the priority interpretation of the Murty-Simon project, while the 2024 order-12 counterexample falsified the contemplated all-order second-extremal strengthening. The active programme therefore became the sufficiently-large/eventual D2C problem. See [literature correction](project/research/post_ms/2026-09-17-stronger-pivot-v1/LITERATURE_CORRECTION_2024_EXCEPTION.md) and [dependency audit](project/research/post_ms/2026-09-17-stronger-pivot-v1/DEPENDENCY_AUDIT_2019_FALSE_CONJECTURE.md).
 
 ### Preserved status snapshots
 
-The complete root README immediately before this checkpoint is preserved byte-for-byte at [`archive/status-snapshots/2026-09-20/README_before_daily_red_team.md`](archive/status-snapshots/2026-09-20/README_before_daily_red_team.md). The 19 September pre-audit README remains preserved at [`archive/status-snapshots/2026-09-19/README_before_daily_red_team.md`](archive/status-snapshots/2026-09-19/README_before_daily_red_team.md). Earlier snapshots remain under [`archive/status-snapshots/`](archive/status-snapshots/).
+The pre-20-September and pre-19-September root README snapshots remain preserved under [`archive/status-snapshots/`](archive/status-snapshots/). No historical snapshot or invalidated proof artifact was deleted by this audit.
 
 <!-- REDTEAM-HISTORY:START -->
 ## Hostile / red-team audit history and resulting proof hardening
+
+**21 September 2026 - daily eventual-D2C audit.** The audit found no fatal contradiction in the corrected local H–U/superconstant chain but retained it as a conditional branch theorem. It elevated the unexercised rigid-cut realizability interface and small equality-face reconstruction as the next mathematical audit gates, and separately found severe telemetry incompleteness plus a Status synchronization failure. The exact report is [DAILY_RED_TEAM_AUDIT.md](project/research/post_ms/2026-09-21-daily-red-team-audit-v1/DAILY_RED_TEAM_AUDIT.md).
 
 **20 September 2026 - daily eventual-D2C audit.** The audit found no fatal contradiction in the final repaired all-R local package, but retained the conditional rigid-cut trust boundary and the zero-positive-fixture gap. It independently replayed the current arithmetic, confirmed that several older counts and orientation claims remain superseded, and made the same-code criticality / ordered witness-injection theorem the next mandatory raw-criticality audit. The exact report is [DAILY_RED_TEAM_AUDIT.md](project/research/post_ms/2026-09-20-daily-red-team-audit-v1/DAILY_RED_TEAM_AUDIT.md).
 
@@ -118,8 +121,6 @@ The active chain is the **eventual dense D2C programme**:
 - [Literature correction / 12-vertex exception](project/research/post_ms/2026-09-17-stronger-pivot-v1/LITERATURE_CORRECTION_2024_EXCEPTION.md)
 - [Published-figure hostile-control certification](project/research/post_ms/2026-09-17-stronger-pivot-v1/PUBLISHED_12_VERTEX_EXCEPTION_FIGURE_CERTIFICATION.md)
 - [False-2019-conjecture dependency audit](project/research/post_ms/2026-09-17-stronger-pivot-v1/DEPENDENCY_AUDIT_2019_FALSE_CONJECTURE.md)
-- [Signed-surplus pivot](project/research/post_ms/2026-09-17-stronger-pivot-v1/SIGNED_SURPLUS_PIVOT.md)
-- [Zero-residual Boolean-flow boundary](project/research/post_ms/2026-09-17-stronger-pivot-v1/ZERO_RESIDUAL_BOUNDARY.md)
 - [Rooted witness-slot saturation](project/research/post_ms/2026-09-18-rooted-witness-slot-saturation-v1/)
 - [Hall density / cut stability](project/research/post_ms/2026-09-18-hall-density-cut-stability-v1/)
 - [Same-code complementary-pair localization](project/research/post_ms/2026-09-18-large-code-pair-v1/)
@@ -127,15 +128,13 @@ The active chain is the **eventual dense D2C programme**:
 - [19 September daily adversarial audit](project/research/post_ms/2026-09-19-daily-red-team-audit-v1/DAILY_RED_TEAM_AUDIT.md)
 - [Source-premise repair](project/research/post_ms/2026-09-19-source-premise-graph-audit-v1/SOURCE_PREMISE_REPAIR.md)
 - [Actual-graph rigid/Hall regression](project/research/post_ms/2026-09-19-rigid-graph-regression-v1/RIGID_GRAPH_LEVEL_REGRESSION.md)
-- [Common-buffer criticality repair](project/research/post_ms/2026-09-19-common-buffer-criticality-repair-v1/COMMON_BUFFER_X_EDGE_CRITICALITY_REPAIR.md)
-- [First-strict funnel repair](project/research/post_ms/2026-09-19-first-strict-funnel-reservoir-v1/FIRST_STRICT_FUNNEL_REPAIR_AUDIT.md)
-- [One-witness equality pinch](project/research/post_ms/2026-09-19-first-strict-funnel-reservoir-v1/ONE_WITNESS_POLARIZATION_PINCH.md)
-- [All-R equality-pinch local feedback](project/research/post_ms/2026-09-19-all-r-pinch-local-feedback-v1/ALL_R_PINCH_LOCAL_FEEDBACK.md)
-- [20 September daily adversarial audit](project/research/post_ms/2026-09-20-daily-red-team-audit-v1/DAILY_RED_TEAM_AUDIT.md)
+- [20 September same-code raw-criticality audit](project/research/post_ms/2026-09-20-same-code-raw-criticality-audit-v1/SAME_CODE_RAW_CRITICALITY_AUDIT.md)
+- [Corrected H–U capacity chain](project/research/post_ms/2026-09-20-rigid-interface-direct-audit-v1/)
+- [21 September daily adversarial audit](project/research/post_ms/2026-09-21-daily-red-team-audit-v1/DAILY_RED_TEAM_AUDIT.md)
 
 ## Failures and audit gates remain first-class evidence
 
-Do not quietly delete, relabel or retrospectively clean up a failed lemma, non-closing experiment, counterexample or CI event. Historical deterministic process failures remain evidence, including `35402717100` / `105785888407`, `35405621026` / `105794668021`, `35405621004` / `105794668117`, `35406193034` / `105796333427`, and `35406504877` / `105797249965`. The 20 September audit additionally records Status synchronization failure `35473850313` / `105979551184` at audited head `1b31449427c81b76b3da9140e61dd55b18a739f0`; it was a stale-handoff failure, not transient infrastructure.
+Do not quietly delete, relabel or retrospectively clean up a failed lemma, non-closing experiment, counterexample or CI event. Historical deterministic process failures remain evidence, including `35402717100` / `105785888407`, `35405621026` / `105794668021`, `35405621004` / `105794668117`, `35406193034` / `105796333427`, and `35406504877` / `105797249965`. The 20 September stale-handoff failure `35473850313` / `105979551184` remains preserved. The 21 September audit additionally records Status synchronization failure `35543011012` / `106163951722` at pre-audit head `4a7cf5ab4b94451a9e502cd901c906ab9890b048`.
 
 Finite discovery, audit, ledger promotion and external mathematical acceptance remain separate gates. Synthetic or abstract-system rejections do not alter the canonical graph frontier by themselves.
 
@@ -177,9 +176,3 @@ Finite discovery, audit, ledger promotion and external mathematical acceptance r
 - [Closed-compatible reviewer-v1](releases/general-closed-compatible-reviewer-v1/README.md)
 - [Arc-realisation reviewer-v1](releases/general-arc-realisation-reviewer-v1/README.md)
 <!-- REVIEW-MATERIALS:END -->
-
-## Repository policy and provenance
-
-The canonical repository is `paullenz/MurtySimon742`. Every active research transaction must leave `CURRENT_STATE.md` parseable by `scripts/check_status_sync.py`, including the required checkpoint and handoff fields. README is refreshed at substantive reviewer-facing milestones and at the daily adversarial audit. Mathematical files, checker evidence and status should be committed atomically where practical because Status synchronization checks every new commit.
-
-Historical status and audit material must remain discoverable. Daily snapshots preserve the pre-audit root README rather than silently deleting prior status prose. The latest audit conclusions supersede earlier next-action lists wherever they conflict.

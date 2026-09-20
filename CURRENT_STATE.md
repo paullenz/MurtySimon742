@@ -1,76 +1,95 @@
 # CURRENT_STATE.md
 
 **Canonical repository:** `paullenz/MurtySimon742`  
-**Date:** 2026-09-20  
+**Date:** 2026-09-21  
 **Active target:** eventual / sufficiently-large second-extremal structure for dense diameter-2-critical graphs around `M(n)=floor((n-1)^2/4)+1`.
 
 `X_3` (12 vertices, 32 edges, versus `M(12)=31`) remains the mandatory negative control. The false all-order 2019 Dailly–Foucaud–Hansberg Conjecture 3 is not the target. The mixed `{4,5}` selected-excess ladder is closed. First-proof priority on Erdős #742 is not the optimization target.
 
 <!-- CURRENT-STATUS:START -->
-CHECKPOINT CLASS: `ONE_CODE_R1_K2_HALF_RAY_GLOBAL_SUPERCONSTANT_DEFICIT_CORRECTED_2026_09_20`
+CHECKPOINT CLASS: `DAILY_RED_TEAM_AUDIT_2026_09_21`
 
-WORK MODE: `MATH / PRE-MIDNIGHT PRESERVATION COMPLETE`
+WORK MODE: `AUDIT`
 
-INSPECTED PREDECESSOR: before forward mathematics this invocation reread `CURRENT_STATE.md`, `README.md`, the latest commits, the 20 September daily red-team audit, `ONE_CODE_R1_K2_HALF_RAY_RESIDUAL_SLOT_COLLAPSE.md`, the corrected H--U B-layer theorem, exact H--U capacity-deficit decomposition, private-spoke obstruction and H--H certificate split. The audit gate remained binding. The invalid H--U private-foot coordinate-slice chain was not reused.
+INSPECTED PREDECESSOR: audited pre-audit head `4a7cf5ab4b94451a9e502cd901c906ab9890b048`; reread the 20 September daily audit, raw same-code criticality audit, corrected H–U B-layer theorem, H–U capacity-deficit decomposition, residual-slot collapse and corrected global superconstant-deficit candidate; inspected all telemetry records under `project/research/session_logs/` for the audited 24-hour period; cross-checked branch/commit history, README, CURRENT_STATE, active status-synchronization CI and the hourly research schedule.
 
-LAST REPLAYED RESULT: the predecessor residual-slot collapse theorem was independently replayed at its stated conditional scope. Endpoint-indexed U vertices are H-anticomplete; saturated residual-`q_j` rows are independent; physical D=2 carrier clustering gives `a+c0>=binom(N,2)` and `Delta>=h-N+binom(N,2)`; the predecessor `Delta>=h=2t-1`, hence `L_H>=5t-2`, survives replay.
+LAST VERIFIED RESULT: raw same-code criticality and ordered `(source,witness)` injectivity survive independent derivation at their stated raw-criticality scope. The corrected H–U B-layer replacement and the H–U capacity-deficit/residual-slot machinery survive targeted hostile replay. The corrected superconstant-deficit chain is **provisionally supported, conditional on the rigid complete-Hall-cut / one-code interface**, but is not promoted to an eventual graph theorem: bounded actual-D2C regression still contains zero positive rigid complete Hall-cut fixtures with `x>=3`, and this audit did not independently reconstruct every small equality-face exclusion from first principles.
 
-NEW SAME-SESSION CANDIDATE: `project/research/post_ms/2026-09-20-rigid-interface-direct-audit-v1/ONE_CODE_R1_K2_HALF_RAY_GLOBAL_SUPERCONSTANT_DEFICIT.md`. On the corrected half-ray `p=2t,c=y=t,u=t+1,h=2t-1`, write `s=Delta-h`. All equality faces `Delta=h` are excluded for `t>=5`, giving `Delta>=h+1=2t`, `L_H>=5t-1`.
+UNPRESERVED WORK: none known at audit handoff. The two existing 23:00 telemetry records remain preserved exactly as historical evidence; one is incomplete and is not backfilled.
 
-A preservation-stage consistency audit found and corrected one overcount before handoff: a common U-vertex for `(h_i,q_l)` can itself be the singleton head for one reverse-private slot using the physical edge `h_iw`; it is therefore wrong to declare every such slot unavailable. After charging one self-head recovery per source, the degree bills become `d(d-2)<=a` for exceptional residual-bar H-neighbourhoods and `(d_H-1)(d_H-3)<=a` for outside-P vertices. The B1 row bound likewise uses `a_i>=m_i-1` when a row has a single B1 neighbour. The correction changes finite constants but not the asymptotic result.
+DEFERRED ADMIN: the preceding head's Status synchronization run `35543011012`, job `106163951722`, failed because the repository's live status handoff had drifted from the enforced status schema. This audit repairs the handoff schema and documents the failure rather than deleting it. Historical commits are not rewritten.
 
-The corrected outside-P matched-spoke lemma still shows that an H-positive outside-P U-vertex has at most one H-neighbour on a d-bit coordinate. Combining the corrected P/Q degree bounds, B1 touched-row bill, shared-resource capacity, and EC-12 gives
-
-` t <= 1+2D+3tau(D)+D kappa(D)`,
-
-where `D=s+(3+sqrt(9+8s))/2`, `tau(D)=1+sqrt(1+D)`, and `kappa(D)=2+sqrt(1+D)`. Hence the same-session candidate conclusion remains
-
-` s >= (1-o(1)) t^(2/3)`,
-
-so `Delta>=h+(1-o(1))t^(2/3)` and `L_H>=5t-2+(1-o(1))t^(2/3)`. This is pending the midnight adversarial audit and must not be promoted before replay.
-
-HOSTILE NORMAL FORM RESOLVED: before the outside-P matched-spoke lemma, the existing equations admitted an abstract `g=1,s=1` star in which one outside-P U-head appeared able to carry linearly many reverse-U certificates. The corrected matched-spoke argument still kills that escape after allowing one self-head recovery per H-source. The star was diagnostic only, not an actual D2C graph.
-
-DEFERRED ADMIN: README remains deliberately at the independently audited public checkpoint. Historical invalid claims remain preserved as superseded evidence.
-
-NEXT ACTION: midnight audit should attack the corrected theorem first, especially (i) outside-P matched-spoke witness location, (ii) one-self-head-per-source accounting, (iii) B1 bound, (iv) the claim that H-positive non-B1 U vertices occupy at most the `c0` unused shared-resource slots, (v) `S<=e(H,U)<=a+3tau(a)+c0 kappa(a)`, and (vi) the asymptotic conversion. If it survives, feed the superconstant H-slack excess into the exact score/rooted ledger.
-
-AUDIT GATE: the 20 September daily red-team audit remains binding. P1/P2 semantics are repaired; raw same-code criticality and ordered `(source,witness)` injection independently passed later repair; `X_3` remains mandatory; exact pair-local `Ccap_P/(ONE-P)/(CROWD)` remain load-bearing whenever invoked; finite scans are diagnostics only; superseded evidence stays superseded; bounded actual-D2C regression still has zero positive rigid complete Hall-cut fixtures with `x>=3`. Rooted layer separation is mandatory lint: a B-source cannot use a B-witness for a non-root singleton head.
-
-R1 K2 LIVE CHAIN: residual-one hub/beta fan -> `k=2,J2=empty` -> H/Y polarization -> `e(Y)=0` -> corrected H--U B-layer classification -> capacity-deficit decomposition -> residual-column localization -> private-spoke carrier restriction -> residual-slot collapse `Delta>=h` -> equality-face exclusion -> corrected outside-P matched-spoke lemma -> candidate global `Delta-h=Omega(t^(2/3))` -> next: midnight hostile replay and score/rooted feedback.
-
-R1 K2 SUPERSESSION: do not return to the exact `kappa=theta=1` ray, golden dual-witness model, literal `b=0` half-ray, invalid `HU-PRIVATE/HU-QI/HU-IHOLE` chain, or the obsolete constant/square-root small-Delta frontier as the main line. Also do not use the first uncorrected `SC-P/SC-Q` formulas from commit `945dc220...`; commit `99cd7367...` supersedes them.
+NEXT ACTION: (1) independently reconstruct the `N=0,1,2,3` equality-face exclusions that feed `Delta>=h+1` and the global superconstant theorem; stop/pivot immediately on any unproved case. (2) Attack the zero-positive-fixture gap: either construct a real D2C graph satisfying the rigid complete-Hall-cut hypotheses or derive a direct non-realizability theorem from raw criticality; do not infer impossibility from bounded search. (3) Only if those interfaces survive, feed the verified superconstant H-slack into the exact rooted residual ledger and seek a graph-level contradiction/threshold. (4) Keep larger-reservoir/four-exception branches subordinate unless they become load-bearing.
 <!-- CURRENT-STATUS:END -->
 
 ---
 
-## Binding audit gate
+## Latest adversarial audit — 21 September 2026
 
-Latest daily audit: `project/research/post_ms/2026-09-20-daily-red-team-audit-v1/DAILY_RED_TEAM_AUDIT.md`.
+Full report: `project/research/post_ms/2026-09-21-daily-red-team-audit-v1/DAILY_RED_TEAM_AUDIT.md`.
 
-Binding constraints:
-- repaired P1/P2 semantics;
-- raw same-code criticality / ordered `(source,witness)` injection independently passed in later repair;
-- `X_3` mandatory negative control;
-- zero positive actual D2C rigid complete Hall cuts with `x>=3` in bounded regression;
-- exact pair-local `Ccap_P`, `(ONE-P)`, `(CROWD)` whenever invoked;
-- finite scans are diagnostics only;
-- superseded evidence stays superseded;
-- same-session closures stay provisional until hostile replay;
-- rooted layer separation: if source and witness both lie in `B=N(v)`, they share the root and cannot define a non-root singleton common-neighbour equation.
+### Verified / provisionally supported
 
-## Session telemetry — current invocation
+- **Verified at raw-criticality scope:** same-code edge orientation, complementary-code witness location and ordered `(source,witness)` injectivity from `project/research/post_ms/2026-09-20-same-code-raw-criticality-audit-v1/SAME_CODE_RAW_CRITICALITY_AUDIT.md`.
+- **Verified correction:** the old H–U private-foot coordinate-slice chain remains invalid because U sources and matched witnesses lie in `B=N(v)` and share the root; the corrected H–U B-layer classification is the only admissible replacement.
+- **Targeted replay passed:** exact H–U capacity-deficit decomposition and residual-slot collapse, including endpoint-indexed H-anticompleteness and the carrier/independence bills used to reach `Delta>=h`.
+- **Provisionally supported only:** `ONE_CODE_R1_K2_HALF_RAY_GLOBAL_SUPERCONSTANT_DEFICIT.md`. After its same-session self-head correction, the local B1, P/Q and outside-P matched-spoke bills are internally consistent in targeted replay, and the asymptotic conversion from `t <= 1+2D+3tau(D)+D kappa(D)` to `s=Delta-h = Omega(t^(2/3))` is arithmetically sound. The theorem remains conditional on upstream rigid/one-code hypotheses and has not been independently reconstructed line-by-line in this audit.
 
-**Actual start:** 2026-09-20 23:30:28 BST.  
-**Planned preservation cutoff:** 2026-09-20 23:55:38 BST.  
-**Forward-research stop:** 2026-09-20 23:51:58 BST.  
-**Preservation start:** 2026-09-20 23:51:58 BST.  
-**Preservation complete:** 2026-09-20 23:52:21 BST.  
-**Wall-clock span to preservation complete:** 21m53s.  
-**Forward-research span:** 21m30s.  
-**Preservation span:** 23s.  
-**Substantive units:** 14.  
-**Stop reason:** the invocation began late, leaving only 25m10s to the cutoff. Forward work continued until 3m40s before cutoff because a preservation-stage self-audit found and repaired a material finite-accounting overclaim; preservation then took priority before the separate midnight audit.  
-**Full telemetry:** `project/research/session_logs/2026-09-20/2026-09-20T23-30-28+01-00.md`.
+### Weakened / invalidated / superseded
 
-The normal >=50-minute target does not apply because fewer than 55 minutes were available before the mandatory midnight-audit cutoff.
+- The historical `HU-PRIVATE/HU-QI/HU-IHOLE` chain remains **invalidated** and must not re-enter the proof spine.
+- The first uncorrected superconstant formulas from commit `945dc220...` remain **superseded** by the self-head correction beginning at `99cd7367...`.
+- Any reading of the superconstant package as a graph-level eventual theorem is **invalid**. It is a conditional necessary-condition result inside an interface whose realizability remains unexercised by actual-D2C regression.
+- The audited head's claim of clean repository synchronization is **weakened by CI evidence**: Status synchronization run `35543011012`, job `106163951722`, failed. This audit repairs current handoff text but preserves the failure as process evidence.
+
+### Unresolved risks
+
+1. **Rigid-cut realizability gap remains dominant.** Bounded actual-D2C regression still has zero positive rigid complete Hall-cut fixtures with `x>=3`; bounded absence is neither proof of impossibility nor evidence of existence.
+2. **Small equality-face dependency.** The corrected global superconstant result depends on exclusions of all `Delta=h` faces (`N=0,1,2,3`) for `t>=5`; this audit did not independently rederive each from raw graph criticality.
+3. **High theorem/repair velocity.** The audited interval contains 271 commits from the previous daily checkpoint to pre-audit head, including same-session theorem correction. This raises process risk and makes independent replay a mandatory gate before promotion.
+4. **Telemetry failure.** Most scheduled hourly windows in the audited period have no session log. The only fully verified record begins very late; an earlier duplicate record for the same scheduled trigger is incomplete. No historical time is inferred or fabricated.
+
+### Confidence change
+
+Confidence increased in the **local raw-criticality and corrected H–U mechanisms**, but did **not** increase in the existence of a complete eventual theorem. Confidence in process/repository traceability was reduced because the session-telemetry record is mostly absent and the current head failed the Status synchronization check. Future mathematical promotion requires both hostile theorem replay and complete telemetry/handoff discipline.
+
+## Verified session-utilisation audit — preceding 24 hours
+
+Hourly research is scheduled at `HH:00:38` for hours `01` through `23`, with the midnight hour reserved for audit. Under the audit rule, missing or internally incomplete telemetry is **UNVERIFIED/NONCOMPLIANT** and no duration is inferred from commits, prose or unit counts.
+
+| Scheduled trigger (BST) | Actual start | Forward stop | Preservation complete | Wall span | Forward span | Units | Early-stop check | Stop reason | >=50m target | Audit status |
+|---|---|---|---|---:|---:|---:|---|---|---|---|
+| 01:00:38–22:00:38 (22 windows) | missing | missing | missing | — | — | — | missing | missing | unverified | **UNVERIFIED/NONCOMPLIANT** |
+| 23:00:38 — log `230244_BST.md` | 23:02:44 (+2:06) | PENDING | PENDING | unverified | unverified | 19 | PENDING | PENDING | unverified | **UNVERIFIED/NONCOMPLIANT** |
+| 23:00:38 — log `2026-09-20T23-30-28+01-00.md` | 23:30:28 (+29:50) | 23:51:58 | 23:52:21 | 21m53s to preservation | **21m30s** | 14 | recorded at 23:47:43; guard ceased to apply and self-audit resumed repair | late start left 25m10s to cutoff; preservation took priority | **N/A**: <55m available | **VERIFIED telemetry; timing-compliant for available window** |
+
+**Aggregate from verified telemetry only:**
+
+- scheduled forward-research windows in period: **23**;
+- scheduled windows with no telemetry at all: **22**;
+- additional incomplete telemetry records: **1**;
+- fully verified run records: **1**;
+- verified available research-window minutes (actual start to mandatory cutoff): **25m10s = 25.1667 min**;
+- verified forward-research minutes: **21m30s = 21.5 min**;
+- utilisation over **verified available time only**: **85.4%**;
+- fully verified compliant records: **1**;
+- verified short runs under an applicable >=50m target: **0**;
+- unverified/noncompliant scheduled windows or incomplete records: **23** (22 missing windows + 1 incomplete duplicate record);
+- observed late starts among logged records: **2** (+2m06s and +29m50s);
+- no unexplained idle gap is asserted: the only detailed ledger has timestamped substantive work through its forward stop, and the evidence is insufficient to label its internal gaps as idle.
+
+**Important limitation:** 85.4% is **not** a whole-day utilisation estimate. It is only the utilisation fraction of the one run for which both available-time and forward-research durations are independently logged. The preceding 22 scheduled windows are unknown, not zero-duration and not reconstructed from commits.
+
+### Telemetry repair now binding
+
+The durable schema is `project/research/session_logs/SESSION_LOG_SCHEMA.md`. Every future forward run must create exactly one finalized log for its scheduled trigger and record all mandatory timestamps and fields. If a run is a retry/re-entry, it must identify the parent scheduled trigger and a distinct run-instance ID; duplicate logs may not silently masquerade as separate scheduled windows. `PENDING` fields must be finalized before handoff or explicitly marked `UNVERIFIED/NONCOMPLIANT`. Historical missing timestamps must never be backfilled from commit times or unit counts.
+
+## Mandatory constraints for future work
+
+- Read this latest-audit section before any forward mathematics.
+- Preserve `X_3` as the mandatory hostile control.
+- Do not revive invalidated H–U private-foot arguments or the uncorrected superconstant formulas.
+- Treat finite scans as diagnostics only; do not convert parameter-row exhaustion into graph-level proof.
+- Treat the global superconstant deficit as conditional/provisional until the small equality faces and rigid-cut interface have hostile independent closure.
+- If a positive actual-D2C rigid-cut fixture appears, replay every downstream quantity directly on it before further theory.
+- Follow `project/research/session_logs/SESSION_LOG_SCHEMA.md` and finalize one telemetry record per run.
