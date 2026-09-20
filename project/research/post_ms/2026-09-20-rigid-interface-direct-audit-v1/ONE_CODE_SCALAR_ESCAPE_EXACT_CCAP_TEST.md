@@ -63,13 +63,31 @@ For every `t>=2` this is strictly larger than `10t^2=2xy` (indeed the leading co
 
 This is stronger than merely observing that the coarse global score survives: one of the audit-mandated exact local gates has now been checked explicitly and is not the missing mechanism for this family.
 
+## Exact CROWD scalar floor
+
+The preserved pair-crowding scalar floor used in the exact local feasibility envelope is
+
+`S_P >= s_crowd=[y(3y-D0)]_+`.
+
+On this family,
+
+`3y-D0 = 3t-(23t+1) = -20t-1`,
+
+so
+
+> `s_crowd=0`
+
+for every `t>=1`.
+
+Thus the aggregate `(CROWD)` floor also does not touch this family. This does **not** say that all distribution-sensitive consequences of the pair geometry are vacuous; only that the preserved scalar crowding floor is identically zero on this scaling direction.
+
 ## Consequence
 
-The next load-bearing tests are therefore the parts that retain *distribution and physical location* rather than only local aggregate capacity:
+Two audit-mandated local scalar gates can now be ruled out as the missing contradiction on this family:
 
-1. exact `(ONE-P)` and `(CROWD)` with the pair halves kept separate;
-2. the distinct singleton-head parameter `rho` rather than only `m<=rho`;
-3. exact rooted residual / located U-nonedge feedback;
-4. graph-level realizability of the rigid interface itself.
+- exact `Ccap_P` has very large positive margin even under `g_P=0`;
+- the preserved scalar `CROWD` floor is identically zero.
+
+The next load-bearing tests are therefore the parts that retain *distribution and physical location* rather than only local aggregate capacity: exact `(ONE-P)` with the pair halves kept separate, the distinct singleton-head parameter `rho` rather than only `m<=rho`, exact rooted residual / located U-nonedge feedback, and graph-level realizability of the rigid interface itself.
 
 No claim is made that the family survives those stronger tests. Bounded actual-D2C regression still has zero positive rigid complete Hall-cut fixtures with `x>=3`, and `X_3` remains the mandatory negative control.
