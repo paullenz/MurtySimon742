@@ -153,8 +153,131 @@ For `m=2` there are exactly three cover geometries:
 2. **two-head cover:** `|X'|=2`, hence `x=3`;
 3. **mixed cover:** one distinguished head `x_*` and one distinguished witness `z_*`; every other head has eligible neighbourhood exactly `{z_*}`, and every other outside witness has eligible neighbourhood exactly `{x_*}` (the centre edge `x_*z_*` is optional).
 
-This is the next compact structural frontier after `(MAX-M1-CLOSED)`. It is a statement about raw physical eligibility, not selected witness incidences.
+This is a statement about raw physical eligibility, not selected witness incidences.
 
-## 8. Next attack
+## 8. Reverse-fan upgrade: the whole outside reservoir is visible to the Y-ledger
 
-Start with `m=2` under the three König-cover geometries. Choose representatives only after fixing the raw cover. Then classify the selected pairs into F/R and intersect the cover with the already-proved disjoint agreement-block theorem and exact pair-local `Ccap_P/(ONE-P)/(CROWD)`. The mixed double-star geometry is especially rigid: a maximum matching forces one noncentral head to use the central witness and the central head to use a noncentral witness, while all remaining leaves are forced to the corresponding centre. This creates a highly polarized physical load profile suitable for the source-slack and rooted residual ledger.
+Put
+
+`omega=|U_o|=u-k-1`.
+
+The raw reverse-fan theorem says every physical `z in U_o` certifies at least one buffer edge. The standard outside-certificate localization then makes every such `z` anticomplete to `Y`. The unloaded common core and buffer are also anticomplete to `Y`. Hence
+
+> `Y--U` is empty throughout the first-strict unloaded branch.       `(YU0)`
+
+Since every `y0 in Y` has `d_A(y0)=x`, its slack is not merely bounded by the number of selected witnesses; it is exact:
+
+> `epsilon_{y0}=p+u-x=p-g+1+omega`.                   `(Y-EXACT)`
+
+Therefore
+
+> `L_Y=y(p-g+1+omega)`.                                `(LY-PHYSICAL)`
+
+This strictly strengthens the earlier selected-witness floor `y(p-g+1+m)` whenever the physical reservoir has unused leaves (`omega>m`). It is important for the `m=2` mixed/two-head cover geometries, where `omega` can exceed two.
+
+## 9. Eligibility components are code components
+
+For every raw eligibility edge `xz`, outside localization gives
+
+> `c(z)=bar c(x)`.
+
+Therefore one physical outside vertex can certify heads from only one tight X-code class. Conversely every head and every outside vertex is nonisolated in `H`. Thus `H` is the disjoint union of nonempty bipartite code components
+
+`H_C = H[X'_C,U_{bar C}]`,
+
+one for each X-code `C` represented in `X'`.
+
+If `h` is the number of distinct X-codes in `X'`, then
+
+> `m=nu(H)=sum_C nu(H_C) >= h`.                         `(CODE-MATCH)`
+
+For `m=2`, necessarily `h in {1,2}`.
+
+If `h=2`, each code component has matching number one. Since it has no isolated vertices internally, each component is a star. Consequently for each of the two code classes:
+
+- if it contains at least two heads, it has exactly one physical complementary-code outside witness;
+- if it contains at least two physical outside witnesses, it contains exactly one head.
+
+This physical statement is stronger than selected representative uniqueness.
+
+## 10. Single-code obstruction for maximal `m>=2`
+
+Assume `h=1`; write the common X'-code as `C`. Then every physical outside vertex has code `bar C` by Section 9. Suppose
+
+`d_H(C,d)>=2`.
+
+Choose a coordinate `j` where `C` differs from `d`. Because `|X'|>=2`, choose a head `x in X'` for which `a_0` cannot be the unique A-witness for the edge `xq_j`: if `a_0` has zero or at least two neighbours in `X'`, any suitable/nonadjacent head works; if it has exactly one, choose another head.
+
+The same raw criticality exhaustion as in Section 5 applies with one change: there may now be several outside witnesses, but every one has code `bar C`, and therefore every one misses `q_j`. All other fixed extra-common-neighbour obstructions remain. Hence the edge `xq_j` has no singleton criticality certificate.
+
+Therefore every single-code survivor must satisfy
+
+> `d_H(C,d)=1`.                                         `(ONECODE-R1)`
+
+For `p>=3`, this has agreement block size `p-1>=2`, so it cannot be Type F (a Type-F block is a singleton). Thus every representative in a maximal selection is Type R. A maximum matching of size `m>=2` supplies two distinct selected outside witnesses on two heads of the same code, but the Type-R fixed-foot overlap theorem forces those witnesses to be identical. Contradiction.
+
+Hence
+
+> `p>=3 and m>=2  =>  h>=2`.                            `(NO-ONECODE)`
+
+In particular for maximal `m=2`, `p>=3` forces exactly two X-code classes.
+
+## 11. Bulk-block covering lemma
+
+Now take `m=2`, `p>=3`, so there are exactly two code classes `C,D` with disjoint nonempty agreement blocks `I_C,I_D` from the preserved funnel theorem.
+
+Suppose class `C` contains at least two heads. Choose a head `x` in that class so that `a_0` cannot uniquely witness the matched edge considered below (the same zero/one/many-neighbour choice as in Section 10).
+
+For every coordinate `j notin I_C`, the edge `xq_j` has the fixed triangle through `b`. Exhaust raw criticality exactly as above. The only new possible witness not already eliminated is an outside vertex from the *other* code class `D`. Such a vertex has code `bar D` and is adjacent to `q_j` exactly when `D_j=d_j`, i.e. exactly when `j in I_D`.
+
+Therefore criticality of every such edge forces
+
+> `[p]\I_C subseteq I_D`.
+
+The agreement blocks are disjoint, so the reverse inclusion is automatic. Hence
+
+> `I_D=[p]\I_C`, and `I_C dotcup I_D=[p]`.              `(BLOCK-PARTITION)`
+
+Thus as soon as either of the two classes is a bulk class (multiplicity at least two), the two agreement blocks partition all tight coordinates.
+
+## 12. Consequence: the large-X two-witness branch is forced F/R complementary
+
+If `x>=4`, then `|X'|=x-1>=3`; with only two code classes, at least one class is bulk. Hence `(BLOCK-PARTITION)` applies.
+
+Class types are determined by their blocks:
+
+- F-blocks are singletons contained in `S_0`;
+- R-blocks are nonempty subsets of `I_0=[p]\S_0`.
+
+For `p>=3`, the partition has the following consequences:
+
+- **FF** is impossible: two singleton blocks can partition `[p]` only when `p=2`;
+- **RR** is impossible: both blocks lie in `I_0` and cannot cover the nonempty set `S_0`;
+- therefore the classes are exactly **one F and one R**.
+
+Moreover partitioning forces
+
+> `|S_0|=1`, `I_F=S_0`, `I_R=I_0`.                     `(FR-NORMAL)`
+
+Equivalently the two X'-codes are complementary: the R-code differs from `d` on the unique coordinate `S_0`, while the F-code agrees with `d` there and differs on all remaining coordinates.
+
+So the entire maximal `m=2`, `p>=3`, `x>=4` branch has the rigid normal form
+
+> **one F code, one R code, complementary to each other, with `S_0` a singleton.**
+
+The R-code has exactly one physical outside witness: any eligible witness for an R-block must be adjacent to `a_0`, and the reverse fixed-foot singleton at any coordinate of `I_R` determines that physical witness uniquely. Hence:
+
+- if the F class is also bulk, it too has one physical witness (its matching-one component is a star with at least two heads), so `omega=2`;
+- if `omega>2`, the F class must consist of exactly one head, all extra physical outside witnesses belong to its complementary-code star, and the R class contains the remaining `x-2` heads served by its unique physical witness.
+
+This is the live two-witness structural pinch.
+
+## 13. Next attack
+
+The `m=1` branch is now closed. For `m=2`, the remaining work splits cleanly:
+
+1. `p>=3,x>=4`: attack the F/R complementary normal form of Section 12 with the exact physical Y-price `(LY-PHYSICAL)`, pair-local `Ccap_P/(ONE-P)/(CROWD)`, and the rooted residual ledger. Separate `omega=2` from the `omega>2` case, where the F side is one head with a physical witness star and the R side is a bulk class with one graph-fixed witness.
+2. `x=3`: both code classes may be singleton and the bulk-block lemma need not fire; retain as a small-head exceptional slice and price it through the pair/residual ledger.
+3. `p<=2`: retain as a small-fibre exceptional slice; do not let it obstruct the sufficiently-large structural theorem.
+
+The next hand target should be to close or finitely pinch `omega>2` in the complementary F/R normal form. Every extra F-star witness is anticomplete to Y by `(YU0)`, increases the exact pair-local source bill by `y`, and is physically tied to the unique F head. That is the most direct place to combine the new raw certificate geometry with the audited pair-local capacity machinery.
