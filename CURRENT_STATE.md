@@ -7,29 +7,31 @@
 `X_3` (12 vertices, 32 edges, versus `M(12)=31`) remains the mandatory negative control. The false all-order 2019 Dailly–Foucaud–Hansberg Conjecture 3 is not the target. The mixed `{4,5}` selected-excess ladder is closed. First-proof priority on Erdős #742 is not the optimization target.
 
 <!-- CURRENT-STATUS:START -->
-CHECKPOINT CLASS: `FIRST_STRICT_MAXIMAL_M2_FR_RAW_EDGE_COLLAPSE_2026_09_20`
+CHECKPOINT CLASS: `UNLOADED_BUFFER_FIRST_STRICT_COMPLETE_CLOSURE_SECOND_STRICT_REDUCTION_2026_09_20`
 
 WORK MODE: `MATH_AFTER_AUDIT_GATE`
 
-INSPECTED_PREDECESSOR_HEAD: `d981985a7f1acecfd45e27ceb517436b206f580c`
+INSPECTED_PREDECESSOR_HEAD: `625e67116e473889e1a9e2d61b9418dd458abee0`
 
-LATEST_NEW_COMMITS: `401247423e04c1180a9d4401f7a26f9a9887af80` (raw-edge collapse theorem package), `13d83c51ac7a4e093fd2e7998da7a70db0101efb` (companion diagnostic).
+LATEST_NEW_COMMITS: `266a1917be4d905d5fa065bba49ebd908aed9946` (complete first-strict closure), `53d27a9f74ed6b6c71d645b18b95e6fc3ca49b98` (exact second-strict initial reduction and exceptional-capacity inequality).
 
-LAST VERIFIED/AUDITED BASE: `The 20 September daily red-team audit remains binding. P1/P2 semantics are repaired; the raw same-code criticality theorem and ordered (source,witness) injection were independently re-derived and passed; X_3 remains mandatory; exact pair-local Ccap_P/(ONE-P)/(CROWD) remain load-bearing; finite scans remain diagnostics only; and bounded actual-D2C regression still has zero positive rigid complete Hall-cut fixtures with x>=3.`
+LAST VERIFIED/AUDITED BASE: `The 20 September daily red-team audit remains binding. P1/P2 semantics are repaired; the raw same-code criticality theorem and ordered (source,witness) injection were independently re-derived and passed; X_3 remains mandatory; exact pair-local Ccap_P/(ONE-P)/(CROWD) remain load-bearing where used; finite scans remain diagnostics only; and bounded actual-D2C regression still has zero positive rigid complete Hall-cut fixtures with x>=3.`
 
-PREDECESSOR CORRECTION: `The m=2 bulk-block proof at MAXIMAL_SELECTION_MATCHING_AND_M1_CLOSURE.md Section 11 had a radius-one scope omission. M2_BULK_BLOCK_SCOPE_CORRECTION.md repairs it. The final large-X normal form survives: for maximal m=2, p>=3, x>=4 there are exactly two complementary X' code classes, one F and one R, |S_0|=1, I_F=S_0 and I_R=I_0. Future work must cite the correction rather than the unqualified Section 11 argument.`
+PREDECESSOR_CORRECTION: `The immediate predecessor 625e671... found an upstream omitted matched-neighbour obstruction and proved Type F impossible throughout the first-strict unloaded branch. This supersedes the same-day F/R m=2 reservoir/raw-edge/exact-Hall branches as live realizability arguments. Their algebra remains preserved historically below an empty Type-F parent.`
 
-NEW INTERNAL CANDIDATE RESULT: `In the corrected maximal-m=2, p>=3, x>=4, omega=|U_o|>2 F/R normal form, let f be the unique F-head, R_X the x-2 R-heads, z_R the unique R-witness and Z_F=U_o\{z_R}. Raw same-code criticality plus the fixed certificate identities N(f)∩N(z)={b} for z in Z_F and N(r)∩N(z_R)={b} for r in R_X force: (i) Z_F--R_X empty; (ii) z_R--Z_F empty; (iii) z_R f absent and hence N_A(z_R)={a_0}; (iv) every z in Z_F is A-anticomplete; therefore G[U_o] is edgeless. This gives epsilon_z>=p+omega-1 for z in Z_F, epsilon_zR>=p+omega-2 and E_Uo>=omega^2+(p-1)omega-1, together with q<=C(u,2)-C(k+1,2)-C(omega,2)-(k-1). A second raw criticality exhaustion forces f--R_X empty, then G[R_X] empty, and finally a_0f absent. Since Type R already gives a_0--R_X empty, G[X] is entirely edgeless in this branch.`
+NEW INTERNAL CANDIDATE RESULT: `The remaining all-R first-strict branch also collapses upstream. For any represented R-code C and any j in nonempty S_0, the matched edge x q_j has no raw criticality certificate if d_H(C,d)>=2: the preserved radius>=2 matched-edge exhaustion applies, and the only possible extra rescue from another outside code D would require j in I_D, impossible because all R blocks lie in I_0 while j lies in S_0. Hence every R-code has radius one. Since I_C subseteq I_0, radius one forces |S_0|=1 and I_C=I_0 for every class, so there is only one X'-code class. The all-R class/witness bijection then gives m=omega=h=1, contradicting the already-closed maximal m=1 all-R branch. Therefore the entire unloaded first-strict layer epsilon_b=p-g+1 is empty.`
 
-PAIR_LOCAL CONSEQUENCE: `Let Sigma_P(omega) be the exact pair-local threshold incorporating exact core floor, buffer slack, physical Y-price L_Y=y(p-g+1+omega), CROWD and Ccap_P. Since U_o has neither d nor bar d code for p>=3, every omega>2 survivor obeys Sigma_P(omega)+omega^2+(p-1)omega-1<=C0. Do not replace Sigma_P by total score.`
+BUFFER_FLOOR: `With the exact identity epsilon_b=(p-g)+h_X+h_o, the equality layer h_X+h_o=0 and now the first-strict layer h_X+h_o=1 are both empty. Every surviving unloaded common-buffer configuration therefore satisfies h_X+h_o>=2 and epsilon_b>=p-g+2.`
 
-DIAGNOSTIC STATUS: `A same-session independent implementation of the strengthened physical-reservoir gate over the historical broad box gives omega>2 base 182396, pair survivors 171981, score survivors 103860 and conservative rooted-residual survivors 73663. The committed checker check_m2_fr_raw_edge_collapse.py records these expected values. They are abstract necessary-condition rows, not graph counts, and must be independently replayed before reviewer-facing use. The diagnostic deliberately does NOT scalarize the new e(X)=0 theorem.`
+SECOND_STRICT_STATUS: `At equality epsilon_b=p-g+2 only (h_X,h_o)=(2,0),(1,1),(0,2) are possible. The (0,2) subtype is empty: outside Orientation A is forbidden when h_X=0 and the two physical U_o non-neighbours can reverse-certify at most two buffer--X heads, fewer than x>=3. In the mixed (1,1) subtype, the unique U_o hole z_0 can reverse-certify at most one buffer edge; at least x-2 heads are outside-certified and the unique-X-hole funnel plus NO-F makes all of those heads Type R, so d_X(a_0)<=1. If H is the number of those R heads and s=|S_0|>=2, every S_0 matched-edge obligation must be certified by z_0. Ordered-pair injectivity gives Hs<=H+s, equivalently (H-1)(s-1)<=1. Thus x>=5 forces |S_0|=1; x=4 with s>=2 forces the exact exceptional corner H=s=2. In the (2,0) subtype every buffer edge is outside-certified and each head has a two-foot coordinate cover through the two X-holes.`
 
-UNPRESERVED_WORK: `None from this invocation. New theorem and checker are committed. The strongest unused consequence is e(X)=0 itself: it has not yet been reinserted into the exact Hall-density identity / rooted residual ledger.`
+DEPENDENCY_CLEANUP: `Once the new first-strict closure is independently audited, maximal-m1/m2/F-R calculations from earlier on 20 September are historical conditional mathematics below an empty first-strict parent. Do not cite them as the reason the branch closes. The live unloaded buffer frontier is now exact second-strict epsilon_b=p-g+2.`
 
-DEFERRED_ADMIN: `README intentionally remains at the independently audited 20 September public checkpoint. Same-hour m=2 closures are provisional until adversarial replay. Historical m=1 and all-R d/J/grid work remains preserved with its original trust boundaries.`
+UNPRESERVED_WORK: `None from this invocation.`
 
-NEXT_ACTION: `First independently replay check_m2_fr_raw_edge_collapse.py and hostile-audit the new raw edge exclusions, especially cross-code f--R_X and a_0f. If they pass, exploit e(X)=0 exactly in the Hall-density / residual ledger rather than adding another weak scalar score inequality. Attempt an analytic contradiction or characterize any surviving scaling family. Only then split omega=2, x=3 and p<=2. Keep loaded-buffer, z=2 and four-exception routes subordinate. In parallel, retain the zero-positive-fixture rigid-cut interface as the dominant global audit risk.`
+DEFERRED_ADMIN: `README intentionally remains at the independently audited 20 September public checkpoint. These same-session closures are provisional until adversarial replay. Historical invalidations/superseded counts remain preserved in their native files.`
+
+NEXT_ACTION: `First hostile-audit FIRST_STRICT_COMPLETE_CLOSURE.md, especially the transfer of the radius>=2 matched-edge exhaustion to an arbitrary all-R multi-code class and the use of the already-closed m=1 all-R branch. If it passes, treat epsilon_b>=p-g+2 as the live unloaded buffer floor. Then attack the exact second-strict layer: (1) mixed (1,1): with x>=5 reduce to |S_0|=1 and price the single exceptional z_0 across higher-radius R heads; isolate/close the x=3,4 tails separately; (2) two-X-hole (2,0): derive the exact two-foot support normal form from the two graph-fixed hole pairs and feed it into the rooted residual ledger. Keep loaded-buffer, z=2 and four-exception routes subordinate. In parallel, the zero-positive-fixture rigid-cut interface remains the dominant global audit risk.`
 <!-- CURRENT-STATUS:END -->
 
 ---
@@ -43,49 +45,50 @@ Still binding:
 - repaired P1/P2 semantics;
 - `X_3` mandatory negative control;
 - zero positive actual-D2C rigid complete Hall cuts with `x>=3` in bounded regression;
-- exact pair-local `Ccap_P`, `(ONE-P)`, `(CROWD)`;
+- exact pair-local `Ccap_P`, `(ONE-P)`, `(CROWD)` whenever the pair machinery is invoked;
 - finite parameter rows are diagnostics only;
-- superseded alpha/beta evidence, invalid matched-only common-buffer orientation and historical 188,912 / 179,735 / 178,572 counts stay superseded;
+- superseded alpha/beta evidence, invalid matched-only common-buffer orientation and historical finite counts stay superseded;
 - same-hour closures remain provisional until independently re-derived.
 
 Raw same-code audit: `project/research/post_ms/2026-09-20-same-code-raw-criticality-audit-v1/SAME_CODE_RAW_CRITICALITY_AUDIT.md` — passed.
 
 ## Live structural chain
 
-`audited rigid first-strict unique-hole`
-`-> raw outside eligibility graph H`
-`-> maximal representative image m=nu(H)`
-`-> maximal m=1 completely closed`
-`-> maximal m=2, p>=3, x>=4 has two corrected complementary F/R code classes`
-`-> omega>2: one F-head f, bulk R_X, unique R-witness z_R, F-star reservoir Z_F`
-`-> full U_o independence + A-anticomplete Z_F + N_A(z_R)={a_0}`
-`-> E_Uo>=omega^2+(p-1)omega-1 and full binom(omega,2) q loss`
-`-> raw cross-code exhaustion gives G[X]=empty`
-`-> exact Hall/residual reinsertion is the live unfinished line.`
+`audited rigid first-strict setup`
+`-> predecessor Type-F elimination (NO-F)`
+`-> arbitrary all-R radius>=2 matched-edge obstruction at S_0`
+`-> every R class radius one`
+`-> one R-code only`
+`-> m=omega=h=1`
+`-> preserved maximal-m1 all-R contradiction`
+`-> first-strict unloaded layer empty`
+`-> epsilon_b>=p-g+2`
+`-> exact second-strict split: (2,0) or (1,1); (0,2) empty`
+`-> mixed-hole exceptional-capacity inequality (H-1)(|S_0|-1)<=1`
+`-> two-X-hole two-foot funnel / mixed singleton-S_0 regime are live.`
 
-Key files:
+Key new files:
 
-- `project/research/post_ms/2026-09-20-maximal-selection-matching-v1/MAXIMAL_SELECTION_MATCHING_AND_M1_CLOSURE.md`
-- `project/research/post_ms/2026-09-20-maximal-selection-matching-v1/M2_BULK_BLOCK_SCOPE_CORRECTION.md`
-- `project/research/post_ms/2026-09-20-maximal-selection-matching-v1/M2_FR_RESERVOIR.md`
-- `project/research/post_ms/2026-09-20-maximal-selection-matching-v1/M2_FR_RAW_EDGE_COLLAPSE.md`
-- `project/research/post_ms/2026-09-20-maximal-selection-matching-v1/check_m2_fr_raw_edge_collapse.py`
+- `project/research/post_ms/2026-09-20-first-strict-type-f-elimination-v1/TYPE_F_ELIMINATION_AND_DEPENDENCY_AUDIT.md`
+- `project/research/post_ms/2026-09-20-first-strict-complete-closure-v1/FIRST_STRICT_COMPLETE_CLOSURE.md`
+- `project/research/post_ms/2026-09-20-second-strict-initial-reduction-v1/SECOND_STRICT_INITIAL_REDUCTION.md`
 
 ## Session ledger — current invocation
 
-**Invocation start:** 03:27:23 BST.  
-**Planned preservation cutoff:** 03:55:38 BST.
+**Invocation start:** 04:30:06 BST.  
+**Planned preservation cutoff:** 04:55:38 BST.
 
 Substantive units completed:
 
-1. reconciled the stale handoff against the newer maximal-m=2 commit chain and mandatory radius-one scope correction;
-2. proved `Z_F--R_X` is empty from the raw same-code theorem plus fixed eligibility common-neighbour sets;
-3. proved `z_R--Z_F` is empty, upgrading the previous `Z_F` independence to full `G[U_o]` independence;
-4. proved `z_Rf` is absent and hence `N_A(z_R)={a_0}`;
-5. proved every F-star witness is A-anticomplete and derived the sharp physical outside-reservoir bill `E_Uo>=omega^2+(p-1)omega-1` plus full `binom(omega,2)` rooted-triangle loss;
-6. exhausted raw criticality for the complementary X-code edges, proving `f--R_X` empty, then `G[R_X]` empty, then `a_0f` absent, hence `G[X]=empty`;
-7. combined the physical reservoir with the exact pair-local threshold and independently scanned the broad diagnostic box, reducing omega>2 residual rows from the predecessor 110759 to 73663 without yet using the full force of `e(X)=0`.
+1. reconciled the stale handoff against the newer `625e671...` upstream Type-F elimination and the binding 20 September red-team audit;
+2. independently checked the Type-F contradiction at the tight-code level and accepted NO-F provisionally for this handoff;
+3. generalized the corrected radius-at-least-two matched-edge obstruction to an arbitrary all-R multi-code class using a coordinate `j in S_0`;
+4. proved every surviving R-code would have Hamming radius one, forcing `|S_0|=1`, `I_C=I_0`, a single code class and hence the already-closed `m=1` all-R contradiction; this closes the entire first-strict unloaded layer and raises the buffer floor to `epsilon_b>=p-g+2`;
+5. classified the exact second-strict physical split and closed the `(h_X,h_o)=(0,2)` subtype;
+6. reduced the mixed `(1,1)` subtype to at most one reverse buffer edge plus at least `x-2` outside-certified Type-R heads, giving `d_X(a_0)<=1`;
+7. derived the exceptional matched-edge capacity inequality `Hs<=H+s`, equivalently `(H-1)(s-1)<=1`, so every unbounded mixed family has `|S_0|=1`;
+8. extracted the two-foot coordinate-cover formulation for the `(2,0)` subtype.
 
-**Live unfinished line:** independently replay/audit the new edge-collapse theorem, then insert `e(X)=0` into the exact Hall-density and rooted residual identities to seek an analytic closure or explicit scaling family.
+**Live unfinished line:** independently hostile-audit the first-strict complete closure; then push mixed `(1,1)` in the singleton-`S_0` regime by pricing the unique exceptional vertex `z_0`, and derive the exact two-foot support normal form for `(2,0)`.
 
-**Stop reason:** preservation cutoff approached after a shortened late-start window; no mathematical blocker and no early clean-checkpoint stop.
+**Stop reason:** preservation cutoff approached after a shortened late-start window; no mathematical blocker and no clean-checkpoint early stop.
