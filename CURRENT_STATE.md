@@ -9,13 +9,13 @@
 <!-- CURRENT-STATUS:START -->
 CHECKPOINT CLASS: `ONE_CODE_R1_K2_HALF_RAY_GLOBAL_SUPERCONSTANT_DEFICIT_2026_09_20`
 
-WORK MODE: `MATH / PRE-MIDNIGHT PRESERVATION`
+WORK MODE: `MATH / PRE-MIDNIGHT PRESERVATION COMPLETE`
 
 INSPECTED PREDECESSOR: before forward mathematics this invocation reread `CURRENT_STATE.md`, `README.md`, the latest commits, the 20 September daily red-team audit, `ONE_CODE_R1_K2_HALF_RAY_RESIDUAL_SLOT_COLLAPSE.md`, the corrected H--U B-layer theorem, exact H--U capacity-deficit decomposition, private-spoke obstruction and H--H certificate split. The audit gate remained binding. The invalid H--U private-foot coordinate-slice chain was not reused.
 
-LAST REPLAYED RESULT: the predecessor residual-slot collapse theorem was independently replayed at its stated conditional scope. In particular endpoint-indexed U vertices are H-anticomplete; saturated residual-`q_j` rows are independent; physical D=2 carrier clustering gives `a+c0>=binom(N,2)` and `Delta>=h-N+binom(N,2)`; the predecessor `Delta>=h=2t-1`, hence `L_H>=5t-2`, survives replay.
+LAST REPLAYED RESULT: the predecessor residual-slot collapse theorem was independently replayed at its stated conditional scope. Endpoint-indexed U vertices are H-anticomplete; saturated residual-`q_j` rows are independent; physical D=2 carrier clustering gives `a+c0>=binom(N,2)` and `Delta>=h-N+binom(N,2)`; the predecessor `Delta>=h=2t-1`, hence `L_H>=5t-2`, survives replay.
 
-NEW SAME-SESSION CANDIDATE: `project/research/post_ms/2026-09-20-rigid-interface-direct-audit-v1/ONE_CODE_R1_K2_HALF_RAY_GLOBAL_SUPERCONSTANT_DEFICIT.md`. On the corrected half-ray `p=2t,c=y=t,u=t+1,h=2t-1`, write `s=Delta-h`. First, all equality faces `Delta=h` are excluded for `t>=5`, giving `Delta>=h+1=2t`, `L_H>=5t-1`. More importantly, raw criticality of outside-P matched spokes shows that an H-positive outside-P U-vertex has at most one H-neighbour on a d-bit coordinate; its remaining H-neighbours form an independent set and generate directed holes unavailable to `R_q`, so `(d_H-1)(d_H-2)<=a`. Combining this with the analogous residual-bar bound, the B1 touched-row bill, shared-resource capacity, and EC-12 gives the explicit necessary condition
+NEW SAME-SESSION CANDIDATE: `project/research/post_ms/2026-09-20-rigid-interface-direct-audit-v1/ONE_CODE_R1_K2_HALF_RAY_GLOBAL_SUPERCONSTANT_DEFICIT.md`. On the corrected half-ray `p=2t,c=y=t,u=t+1,h=2t-1`, write `s=Delta-h`. All equality faces `Delta=h` are excluded for `t>=5`, giving `Delta>=h+1=2t`, `L_H>=5t-1`. More importantly, raw criticality of outside-P matched spokes shows that an H-positive outside-P U-vertex has at most one H-neighbour on a d-bit coordinate; its remaining H-neighbours form an independent set and generate directed holes unavailable to `R_q`, so `(d_H-1)(d_H-2)<=a`. Combining this with the analogous residual-bar bound, the B1 touched-row bill, shared-resource capacity, and EC-12 gives the explicit necessary condition
 
 ` t <= 1+2D+3rho(D)+D kappa(D)`,
 
@@ -61,11 +61,12 @@ Binding constraints:
 **Planned preservation cutoff:** 2026-09-20 23:55:38 BST.  
 **Forward-research stop:** 2026-09-20 23:48:07 BST.  
 **Preservation start:** 2026-09-20 23:48:07 BST.  
-**Preservation complete:** pending final repository consistency check.  
-**Wall-clock span:** pending.  
+**Preservation complete:** 2026-09-20 23:49:16 BST.  
+**Wall-clock span to preservation complete:** 18m48s.  
 **Forward-research span:** 17m39s.  
+**Preservation span:** 1m09s.  
 **Substantive units:** 13.  
 **Stop reason:** the invocation began late, leaving only 25m10s to the preservation cutoff; forward exploration stopped with 7m31s remaining so the new theorem, telemetry and handoff could be preserved before the separate midnight audit.  
 **Full telemetry:** `project/research/session_logs/2026-09-20/2026-09-20T23-30-28+01-00.md`.
 
-The normal >=50-minute research target does not apply to this late-start invocation because fewer than 55 minutes were available before the mandatory midnight-audit cutoff. The run is to be judged against use of essentially all of the available shortened window.
+The normal >=50-minute research target does not apply to this late-start invocation because fewer than 55 minutes were available before the mandatory midnight-audit cutoff. The shortened-window requirement was to use essentially all of the available pre-cutoff research window and preserve before midnight.
