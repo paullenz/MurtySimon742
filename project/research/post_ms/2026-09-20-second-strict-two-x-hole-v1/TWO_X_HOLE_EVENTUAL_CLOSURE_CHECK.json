@@ -1,0 +1,29 @@
+{
+  "date": "2026-09-20",
+  "status": "diagnostic replay only; not proof evidence",
+  "class_route_rows": 301,
+  "square_identity_rows": 3608425,
+  "sample_box": {
+    "x": [4, 40],
+    "p": [1, 30],
+    "omega": [1, 60],
+    "y": "2..min(2p+omega,70)",
+    "eps": 1,
+    "L": "max(x-2,omega)"
+  },
+  "x_ge_16_min_sample_gap_Phi_minus_3omega": 47,
+  "x_ge_16_sample_minimizer": [16, 1, 30, 4],
+  "quadratic_floor_reduced_check": {
+    "p": [1, 40],
+    "omega": [1, 40],
+    "y": [0, 80],
+    "minimum_integer_slack_8Q_minus_7S2": 20,
+    "minimum_location": [1, 1, 0]
+  },
+  "derived_order_cap": 816,
+  "notes": [
+    "The analytic proof, not this finite replay, establishes the x>=16 contradiction and n<=816 tail bound.",
+    "The square decomposition 8(Phi0-3omega)=t^2+N' was checked exactly on 3,608,425 integer rows.",
+    "The class inequality 11m-8F<=3m+16 was checked on every feasible (m,s) pair in 1..100 after imposing ms<=m+2s."
+  ]
+}
