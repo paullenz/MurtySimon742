@@ -7,19 +7,19 @@
 `X_3` (12 vertices, 32 edges, versus `M(12)=31`) remains the mandatory negative control. The false all-order 2019 Dailly–Foucaud–Hansberg Conjecture 3 is not the target. The mixed `{4,5}` selected-excess ladder is closed. First-proof priority on Erdős #742 is not the optimization target.
 
 <!-- CURRENT-STATUS:START -->
-CHECKPOINT CLASS: `ONE_CODE_R1_K2_WEIGHTED_LEDGER_GAP_2026_09_20`
+CHECKPOINT CLASS: `ONE_CODE_R1_K2_D1_ENDPOINT_2026_09_20`
 
 WORK MODE: `MATH`
 
 INSPECTED PREDECESSOR: `089adc54409622c4a73f07a18e69e412920ea73e`; before forward mathematics this invocation reread CURRENT_STATE.md, README.md, the latest commits, the 20 September daily red-team audit, the k=2 heavy-reservoir exception budget and singleton-cost notes, and the earlier heavy-endpoint / low-k orientation packages. The stale handoff was explicitly reconciled with newer commits `a0353ae...`, `6157031...`, and `089adc5...` before any new theorem was built.
 
-LAST VERIFIED RESULT: `Same-session conditional continuation: the predecessor U--U singleton degree-sum lemma was independently replayed. A K-free escape touching even one selected witness z_h is forced by the existing raw B-edge theorem into N(t) cap N(h)={z_h}, hence is Y-anticomplete and anticomplete to the entire K-heavy reservoir. Therefore only fully K/W_s-free exceptions F0 can repair K-heavy internal or K-heavy--Y edges. Internal-edge U--U certificates and K-heavy--Y U--U certificates share one physical (source,witness) incidence budget. On the exact low-k ray this yields 3E_R+2E_F+3A+yq>=r(r-1), where q counts X-anticomplete exceptional witnesses. Together with their located X-hole blocks, E_R+E_F+A+Z_X^0>=r(r-1)/3 independently of the exception-set size. Any W_s-free non-K-heavy escape has an exact H/Y/E sector deficit p-4+epsilon+d_K and hence at least (p-2)/2 distinct physical sector holes per vertex. Partitioning the p-1 escapes into K-heavy, W_s-free non-K-heavy, one-W_s K-free, W-heavy, and mixed classes gives D_phys=E_U+Z_X+Z_Y+[binom(u,2)-e(U)] >= q(q-1)/3. Optimizing the five simultaneous class bounds improves this asymptotically to liminf D_phys/p^2 >= tau=(13-sqrt(69))/50=0.0938675.... The exact score/rooted ceilings still allow this coarse amount of defect: on the ray E_U+L_A<=C0 and Z+L_A+2M_U<=p(p+1)+C0, so unweighted D_phys growth alone cannot close the branch. The next problem is weighted/location-sensitive partition optimization.`
+LAST VERIFIED RESULT: `Same-session conditional continuation. The U--U singleton degree-sum lemma was independently replayed. Any K-free escape touching even one selected witness z_h is forced by the existing raw B-edge theorem into N(t) cap N(h)={z_h}, hence is Y-anticomplete and anticomplete to the entire K-heavy reservoir; only fully K/W_s-free exceptions F0 can repair K-heavy internal or K-heavy--Y edges. Internal-edge U--U certificates and K-heavy--Y U--U certificates share one graph-fixed (source,witness) incidence budget. On the exact low-k ray, retaining the actual K-heavy/F0 sizes gives the coefficient-sensitive conservation (1+2f/p)E_R+(2r/p)E_F+3A+yq>=r(r-1), with q the X-anticomplete opposite-orientation witness count. Every W_s-free non-K-heavy escape has exact H/Y/E deficit p-4+epsilon+d_K. A five-class synthesis first gave a coarse Omega(p^2) defect, then additive physical accounting sharpened the global asymptotic bound to liminf D_phys/p^2 >= tau_add=(7-sqrt(33))/8=0.156929669..., where D_phys=E_U+Z_X+Z_Y+[binom(u,2)-e(U)]. The coarse optimizer uses only K-heavy R and W_s-free non-K-heavy D. A separate coupled R/F0 calculation proves coefficient at least 1/4 when D is fully-free. Therefore any sequence approaching the current lower envelope must contain a linear population of D1 vertices: W_s-free escapes with exactly one K-neighbour. The exact score/rooted ceilings still allow the coarse quadratic defect, so the next target is literal D1 criticality / exact weighted placement, not another unweighted scalar floor.`
 
-UNPRESERVED WORK: `None. ONE_CODE_R1_K2_EXCEPTION_ORIENTATION_CONSERVATION.md, ONE_CODE_R1_K2_F0_SECTOR_DEFICIT.md, ONE_CODE_R1_K2_GLOBAL_QUADRATIC_DEFECT.md, ONE_CODE_R1_K2_WEIGHTED_LEDGER_GAP.md, and this handoff are committed. No finite scan was used for the new results.`
+UNPRESERVED WORK: `None. ONE_CODE_R1_K2_EXCEPTION_ORIENTATION_CONSERVATION.md, ONE_CODE_R1_K2_F0_SECTOR_DEFICIT.md, ONE_CODE_R1_K2_GLOBAL_QUADRATIC_DEFECT.md, ONE_CODE_R1_K2_WEIGHTED_LEDGER_GAP.md, ONE_CODE_R1_K2_EXCEPTION_COEFFICIENT_REFINEMENT.md, ONE_CODE_R1_K2_RF0_COUPLED_MINIMUM.md, ONE_CODE_R1_K2_ADDITIVE_PARTITION_MINIMUM.md, and this handoff are committed. No finite scan was used for the new results.`
 
 DEFERRED ADMIN: `README remains deliberately at the independently audited public checkpoint. Do not promote the same-session k=2 exception/global-defect claims before the next daily hostile audit. Historical invalidated/superseded claims and CI failures remain preserved.`
 
-NEXT ACTION: `First hostile-replay OC-INERT, OC-IJ, OC-XCAP, OC-MAIN, GD-DEF/GD-DSECT and the five-way partition, especially the claim that only F0 can repair K-heavy edges and that J_X<=yq uses the correct ordered source/witness pair. If they survive, solve the weighted partition program using the exact score inequality E_U+L_A<=C0 and exact rooted inequality Z+L_A+2M_U<=u(p-lambda)+2binom(u,2)+C0. Keep the class currencies separate: mixed -> E_U; F1/W-heavy -> Z_Y; D -> (Z_X,Z_Y,M_U); K-heavy -> coupled (E_R,E_F,A,q). If the weighted minimum remains feasible asymptotically, preserve its class proportions and attack that literal geometry by raw criticality.`
+NEXT ACTION: `First hostile-replay OC-INERT, the shared I+J_U pair budget, J_X<=yq, the coefficient-sensitive CR-MAIN inequality, the D-sector distinct-hole conversion, and AP-NONR additivity. If they survive, attack the D1 endpoint directly: t is W_s-free with exactly one K-neighbour and exact H/Y/E deficit p-3+epsilon_t; use raw criticality of its incident K/H/Y/U edges and the residual-hub/private-coordinate geometry to force Y-sparsity, H-sparsity, or a large missing block to the K-heavy population. In parallel retain exact weighted score/rooted currencies E_U, Z_X, Z_Y and M_U; do not collapse them back to D_phys. If D1 admits a cheap normal form, preserve it explicitly and feed it to the exact rooted residual ledger.`
 
 AUDIT GATE: `The 20 September daily red-team audit remains binding. P1/P2 semantics are repaired; raw same-code criticality and ordered (source,witness) injection independently passed in later repair work; X_3 remains mandatory; exact pair-local Ccap_P/(ONE-P)/(CROWD) remain load-bearing whenever invoked; finite scans are diagnostics only; superseded evidence stays superseded; bounded actual-D2C regression still has zero positive rigid complete Hall-cut fixtures with x>=3.`
 
@@ -29,13 +29,13 @@ R1 PREDECESSOR: `At residual dimension one, the common hub q_j, forced beta fan,
 
 R1 K2 HEAVY RESERVOIR: `Predecessor raw-criticality work shows heavy-only K-heavy and W-heavy reservoirs acquire quadratic slack/located-hole bills. K-heavy internal edges have native H/q_i capacity tied to H-nonneighbours; W-heavy vertices are Y-anticomplete and K-heavy/W-heavy cross pairs are absent.`
 
-R1 K2 EXCEPTION BUDGET: `Any U-exception for a K-heavy internal edge or K-heavy--Y edge must be K-free. Predecessor singleton pricing gives epsilon_w+epsilon_t>=p+c-y-1 for every U--U singleton source/witness pair; on the low-k ray the price is p.`
+R1 K2 EXCEPTION ORIENTATION: `A K-free escape adjacent to z_h satisfies N(t) cap N(h)={z_h}, hence is Y-anticomplete and anticomplete to every K-heavy escape. It cannot repair K-heavy internal or Y edges. Only F0, anticomplete to both K and W_s, remains as U-repair capacity. Internal and Y-edge U--U certificates share one source/witness incidence budget. The sharpened form is p(I+J_U)<=fE_R+rE_F. Opposite Y-edge orientations require X-anticomplete F0 witnesses and satisfy J_X<=yq. Hence (1+2f/p)E_R+(2r/p)E_F+3A+yq>=r(r-1).`
 
-R1 K2 EXCEPTION ORIENTATION: `New same-session theorem: a K-free escape adjacent to z_h satisfies N(t) cap N(h)={z_h}, hence is Y-anticomplete and anticomplete to every K-heavy escape. It therefore cannot repair K-heavy internal or Y edges. Only F0, anticomplete to both K and W_s, remains as repair capacity. Internal and Y-edge U--U certificates share one source/witness incidence budget I+J_U<=E_R+E_F on the ray. Opposite Y-edge orientations require X-anticomplete F0 witnesses and satisfy J_X<=yq. Combining with the exact edge-capacity identity gives 3E_R+2E_F+3A+yq>=r(r-1).`
+R1 K2 SECTOR DEFECT: `Every W_s-free non-K-heavy t with d_K(t)<=1 has exact alpha_H+beta_Y+gamma_E=p-4+epsilon_t+d_K(t); since epsilon_t>=2, a set D of d such vertices contributes at least d(p-2)/2 distinct H--U, Y--U, or U--U defects. Fully-free F0 vertices satisfy the sharper exact formula with d_K=0 and their coupled R/F0 endpoint has asymptotic D_RF>=p^2/4.`
 
-R1 K2 GLOBAL DEFECT: `Let D_phys=E_U+Z_X+Z_Y+M_U with M_U=binom(u,2)-e(U). Any W_s-free non-K-heavy vertex has exact H/Y/E deficit p-4+epsilon+d_K and at least p-2 such incidences. The five escape classes are R=K-heavy, D=W_s-free non-K-heavy, F1=K-free with one W_s neighbour, S=W-heavy, M=mixed. Their simultaneous bills imply liminf D_phys/p^2 >= tau=(13-sqrt(69))/50=0.0938675...; the earlier q(q-1)/3 bound is a coarse finite corollary. This is a physical quadratic-defect theorem, not yet a rooted-ledger contradiction.`
+R1 K2 ADDITIVE MINIMUM: `Partition escapes into R=K-heavy, D=W_s-free non-K-heavy, T=F1 union W-heavy, M=mixed. Physical disjointness gives D_phys>=d(p-2)/2+theta(p-1+r)+m(p+1), while exception conservation gives D_phys>=r(r-1)/3. Optimizing yields liminf D_phys/p^2 >= (7-sqrt(33))/8=0.156929669..., with coarse optimizer r/p=(sqrt(33)-3)/4 and D/p=1-r/p, theta,m ->0. Since an R/F0-only endpoint costs at least 1/4, any sequence near this lower envelope must contain linearly many D1 vertices with exactly one K-neighbour.`
 
-R1 K2 WEIGHTED GAP: `The preserved exact score/rooted ceilings can be written E_U+L_A<=C0 and Z+L_A+2M_U<=u(p-lambda)+2binom(u,2)+C0. On the low-k ray this is Z+L_A+2M_U<=p(p+1)+C0. Adding them leaves a leading upper coefficient 4p^2, so the coarse 0.09387p^2 D_phys theorem cannot close the ray by itself. The required next move is a weighted class optimization, not another unweighted scalar floor.`
+R1 K2 WEIGHTED GAP: `Exact score/rooted ceilings are E_U+L_A<=C0 and Z+L_A+2M_U<=u(p-lambda)+2binom(u,2)+C0. On the low-k ray the latter is Z+L_A+2M_U<=p(p+1)+C0. These still permit the present coarse quadratic coefficient. Closure now requires D1 local structure and/or exact weighted class placement rather than another unweighted total-defect bound.`
 <!-- CURRENT-STATUS:END -->
 
 ---
@@ -62,20 +62,19 @@ Binding constraints:
 `-> provisional unloaded second-strict finite-order closure`
 `-> one-code private-coordinate exhaustion`
 `-> residual-one common hub / beta fan`
-`-> physical repricing and private F/R matrix`
 `-> k=2 low-k/high-y exact parameter escape`
-`-> beta cross-hole / one-sided escape partition`
-`-> heavy endpoint raw criticality`
-`-> heavy-reservoir quadratic capacity`
+`-> one-sided escape partition`
+`-> heavy-reservoir raw-criticality capacity`
 `-> K-free exception budget and U--U singleton cost`
-`-> selected-witness-touching K-free exceptions proved inert`
-`-> shared internal/Y U--U exception incidence budget`
-`-> exception-independent quadratic K-heavy bill`
-`-> fully-free / K-light sector deficit`
-`-> five-class global Omega(p^2) physical defect`
-`-> exact asymptotic coefficient tau=0.0938675...`
-`-> coarse weighted-ledger gap exposed`
-`-> live exact class-weighted rooted/score optimization`.
+`-> selected-witness-touching K-free exceptions inert`
+`-> shared internal/Y exception incidence budget`
+`-> coefficient-sensitive exception conservation`
+`-> W_s-free sector deficit`
+`-> global additive Omega(p^2) physical defect`
+`-> R/F0 endpoint coefficient >=1/4`
+`-> global additive coefficient tau_add=0.156929669...`
+`-> D1 (one K-neighbour, W_s-free) isolated as live cheap endpoint`
+`-> live D1 raw-criticality / exact weighted-rooted attack`.
 
 ## Session ledger — current invocation
 
@@ -84,17 +83,20 @@ Binding constraints:
 
 Substantive units completed:
 
-1. reconciled CURRENT_STATE, README, the latest commits through `089adc5...`, and the 20 September daily red-team audit before forward mathematics;
+1. reconciled CURRENT_STATE, README, latest commits through `089adc5...`, and the 20 September daily red-team audit before forward mathematics;
 2. independently hostile-replayed the U--U singleton degree-sum lemma from the exact U-degree identity;
-3. combined the general heavy-endpoint forward orientation with K-free exceptions and proved that any K-free escape touching W_s is Y-anticomplete and anticomplete to the K-heavy reservoir;
-4. isolated the fully K/W_s-free class F0 as the only U-exception class that can repair K-heavy internal or K-heavy--Y edges;
-5. proved internal and Y-edge U--U certificates share one graph-fixed `(source,witness)` incidence budget, giving `I+J_U<=E_R+E_F` on the low-k ray;
-6. bounded the opposite Y-edge orientation by X-anticomplete witness count `J_X<=yq` and retained their full located X-hole blocks;
-7. combined the shared exception budget with the exact K-heavy edge-capacity identity to obtain `3E_R+2E_F+3A+yq>=r(r-1)` and the exception-independent quadratic physical corollary;
+3. proved that any K-free escape touching W_s is Y-anticomplete and anticomplete to the K-heavy reservoir;
+4. isolated fully K/W_s-free F0 as the only U-exception class able to repair K-heavy internal or K-heavy--Y edges;
+5. proved internal and Y-edge U--U certificates share one graph-fixed `(source,witness)` incidence budget;
+6. bounded opposite-orientation Y-edge repair by X-anticomplete witness count and retained their full located X-hole blocks;
+7. combined the shared exception budget with exact K-heavy edge capacity to obtain an exception-independent quadratic K-heavy bill;
 8. derived the exact H/Y/E sector-deficit identity for fully-free exceptions and converted it to distinct physical holes;
-9. identified and repaired the omitted one-K-neighbour / W_s-free class, extended the sector bill to every W_s-free non-K-heavy vertex, and synthesized the five-way global quadratic-defect theorem;
-10. optimized the five simultaneous class bounds analytically, obtaining `tau=(13-sqrt(69))/50=0.0938675...`, then reconstructed the exact score/rooted weighted ceilings and proved that the unweighted quadratic theorem still leaves a genuine coefficient gap rather than falsely claiming closure.
+9. identified the omitted one-K-neighbour / W_s-free class and extended the sector bill to every W_s-free non-K-heavy escape;
+10. synthesized and optimized the five-class global quadratic defect, then reconstructed the exact weighted score/rooted ceilings and exposed the remaining coefficient gap rather than claiming closure;
+11. hostile-replayed the new exception-orientation chain and sharpened it to `(1+2f/p)E_R+(2r/p)E_F+3A+yq>=r(r-1)` by retaining the actual F0 and K-heavy sizes;
+12. solved the coupled R/F0 endpoint analytically, proving asymptotic physical-defect coefficient at least `1/4` with the minimum at a balanced R/F0 split;
+13. exploited additivity of physically disjoint non-R currencies to raise the global coefficient to `(7-sqrt(33))/8=0.156929669...` and isolated a linear D1 population as necessary near the current coarse minimum.
 
-**Live unfinished line:** independently replay the new exception-orientation / partition synthesis first, then solve the exact weighted partition minimum with separate score/rooted currencies. Do not collapse `D_phys` directly into total score.
+**Live unfinished line:** hostile-replay the latest coefficient/additivity synthesis first, then attack D1 directly by raw criticality while keeping exact score/rooted currencies separate.
 
-**Stop reason:** preservation phase after ten tightly connected mathematical/audit units, with the next coherent weighted optimization explicitly handed off. No mathematical blocker and no premature theorem-stop.
+**Stop reason:** final preservation checkpoint after thirteen tightly connected mathematical/audit units. No mathematical blocker; the next coherent D1 structural line is preserved for immediate continuation without overlapping the next scheduled research invocation.
