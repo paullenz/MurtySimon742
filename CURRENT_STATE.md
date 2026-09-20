@@ -7,29 +7,27 @@
 `X_3` (12 vertices, 32 edges, versus `M(12)=31`) remains the mandatory negative control. The false all-order 2019 Dailly–Foucaud–Hansberg Conjecture 3 is not the target. The mixed `{4,5}` selected-excess ladder is closed. First-proof priority on Erdős #742 is not the optimization target.
 
 <!-- CURRENT-STATUS:START -->
-CHECKPOINT CLASS: `ONE_CODE_R1_K2_COMPRESSED_GLOBAL_7_16_2026_09_20`
+CHECKPOINT CLASS: `ONE_CODE_R1_K2_COMPRESSED_GLOBAL_HALF_2026_09_20`
 
 WORK MODE: `MATH`
 
-INSPECTED PREDECESSOR: `ba87a2d24605c6d0b6d5e809794ed795456cb5f7`; before forward mathematics this invocation reread CURRENT_STATE.md, README.md, the latest nine commits beyond the prior user-facing handoff, the 20 September daily red-team audit, the D1 q_j split audit, nonhub private-spoke/code-independence package, W_s-free private-spoke theorem, K-heavy hub rectangle, cross-code localization/capacity theorem, and the latest global Y-cap coefficient note. The stale CURRENT_STATE handoff was explicitly reconciled with the live repository before acting.
+INSPECTED PREDECESSOR: `baffe19b28a402133b19d4b1139231eee449e2e4`; this invocation began by reconciling the stale handoff with live head `ba87a2d...`, rereading CURRENT_STATE.md, README.md, the 20 September red-team audit, the newest D1/private-spoke/cross-code/capacity/Y-cap files, and then preserving the intermediate compressed `7/16` theorem atomically at `baffe19...` before immediately reassessing and continuing.
 
-LAST VERIFIED RESULT: `Same-session conditional continuation. Hostile replay found no new witness-location defect in the cross-code complement-capacity theorem. The W_s-free private-spoke forward/Y-killing versus reverse/H-consuming dichotomy extends to fully free F0 vertices. An F0 vertex adjacent to q_j likewise has a forward branch forcing Y-anticompleteness and anticompleteness to the K-heavy reservoir, or a reverse H-witness branch with an injective H--F0 hub-neighbour rectangle. Therefore the same cheap-endpoint compression applies to F0: hub-neighbour density and positive private-support density carry positive located-hole cost, so asymptotically cheap F0 mass is driven to proper-support q_j-nonneighbours. In the compressed normal form, let alpha be K-heavy density and delta the W_s-free non-K-heavy density. The proper-support D-set is independent and nonhub R vertices have at most two neighbours into it, giving M_U >= (alpha*delta+delta^2/2-o(1))p^2. K-heavy Y-capacity with F0 density phi<=delta gives Z_Y(R)>=(alpha(1-delta)-o(1))p^2. Thus D_phys/p^2 >= alpha+delta^2/2. Combining simultaneously with the predecessor additive class floor D_phys/p^2 >= 1-alpha-delta/2 yields the exact compressed barrier max{1-alpha-delta/2,alpha+delta^2/2}>=7/16. Equality occurs at alpha=5/16, delta=1/2, with residual mixed density 3/16 and no linear F1/W-heavy sector; equality in the Y-cap step forces the D-sector asymptotically to F0. Hence the new compressed hostile endpoint is R:F0:M = 5:8:3 rather than the predecessor K-heavy/D1 mixture.`
+LAST VERIFIED RESULT: `Same-session conditional strengthening. The W_s--U_bar(d) anticompleteness plus general complement-witness capacity implies that, in the compressed normal form, the dominant proper-support q_j-nonneighbour W_s-free set P is not only independent but has only O(p) total edges to the entire escape reservoir outside P: compressed nonhub K-heavy vertices cannot have code bar(d), while every F1/W-heavy/mixed vertex touches W_s and therefore cannot have code bar(d). Thus M_U(P,E) >= (delta-delta^2/2-o(1))p^2. K-heavy Y-capacity adds the disjoint block Z_Y(R)>=(alpha(1-delta)-o(1))p^2, giving L2=delta-delta^2/2+alpha(1-delta). The predecessor additive class theorem gives L1=1-alpha-delta/2. These simultaneous bounds imply max(L1,L2)>=1/2 for every admissible alpha,delta, so the earlier same-session 7/16 bound is superseded by a compressed global half barrier. Equality before further feedback requires alpha=mu=(1-delta)/2, theta=0 and D asymptotically all F0. A mixed vertex, however, has at most two neighbours in P, and those missing P-neighbours are disjoint from the p+1 mandatory mixing holes, so epsilon_mixed>=p+|P|-1 and the mixed coefficient is 1+delta. This destroys every interior equality point 0<delta<1. The only relaxed coefficient-1/2 endpoints left are: (A) pure compressed F0; or (B) no D/T mass and R:M=1:1.`
 
-UNPRESERVED WORK: `None after the atomic preservation commit. ONE_CODE_R1_K2_COMPRESSED_GLOBAL_7_16.md and this handoff are preserved together. No finite scan was used.`
+UNPRESERVED WORK: `None after the atomic preservation commit. ONE_CODE_R1_K2_COMPRESSED_GLOBAL_7_16.md, ONE_CODE_R1_K2_COMPRESSED_GLOBAL_HALF_BARRIER.md, and this handoff are preserved. No finite scan was used.`
 
-DEFERRED ADMIN: `README remains deliberately at the independently audited public checkpoint. Do not promote the same-session 7/16 barrier or F0 hub/private-spoke extensions before the next daily hostile audit. Historical invalidated/superseded claims and CI failures remain preserved.`
+DEFERRED ADMIN: `README remains deliberately at the independently audited public checkpoint. Do not promote the same-session compressed half barrier, F0 extensions, or endpoint classification before the next daily hostile audit. Historical invalidated/superseded claims and failed CI evidence remain preserved.`
 
-NEXT ACTION: `First independently hostile-replay the new F0 q_j forward/reverse exhaustion, the extension of private-spoke compression to F0, and the disjointness/accounting in the compressed 7/16 synthesis. If they survive, attack the equality normal form R:F0:M=5:8:3 directly. The highest-value literal target is the F0--mixed interface: classify mixed-vertex private-coordinate and q_j certificates, test whether mixed vertices can remain linearly dense while F0 is proper-support/nonhub and R has d_Y<=F0-capacity, and feed any forced U--U or Y/U holes into the exact weighted rooted residual ledger. Keep hub/support departure penalties explicit rather than replacing them by another unweighted scalar.`
+NEXT ACTION: `First hostile-replay the new half-barrier proof, especially: (i) the claim that every T/M vertex has code != bar(d) from W_s--U_bar(d) anticompleteness; (ii) the use of nonhub R to exclude code bar(d); (iii) complement-capacity conversion to O(p) P--outside edges; (iv) disjointness of the p+1 mixed slack holes from P. If all survive, attack the two coefficient-1/2 endpoints directly. Endpoint A (pure F0): use exact F0 sector equality, A--U edge criticality and maximum-degree saturation. Endpoint B (R:M=1:1): classify the two aligned mixed types forced by beta cross exclusions and apply raw R--M U--U criticality with no F0 repair capacity. Keep exact weighted currencies E_U,Z_X,Z_Y,M_U separate.`
 
 AUDIT GATE: `The 20 September daily red-team audit remains binding. P1/P2 semantics are repaired; raw same-code criticality and ordered (source,witness) injection independently passed in later repair work; X_3 remains mandatory; exact pair-local Ccap_P/(ONE-P)/(CROWD) remain load-bearing whenever invoked; finite scans are diagnostics only; superseded evidence stays superseded; bounded actual-D2C regression still has zero positive rigid complete Hall-cut fixtures with x>=3.`
 
 SECOND STRICT: `Provisional exact unloaded second-strict chain remains finite-order: mixed y=1 x=3 gives n<=16; x=4 n<=19; x>=5 n<=33; two-X-hole arm n<=816; (0,2) empty; mixed y>=2 internally closed. Conditional on the rigid one-code interface and predecessor closures, no exact unloaded second-strict survivor remains for n>=817. Pending hostile replay.`
 
-R1 PREDECESSOR: `At residual dimension one, the common hub q_j, beta fan, W_s--Y and W_s--U_bar(d) anticompleteness, K--H anticompleteness, physical selected-witness repricing, orientation-covering theorem, k=2 low-k/high-y escape, D1 hub/private-spoke compression, K-heavy hub rectangle, and cross-code complement localization/capacity are the active conditional spine.`
+R1 K2 LIVE CHAIN: `Residual-one common hub/beta fan -> exact low-k k=2 ray -> one-sided escape partition -> heavy/F0/D1 budgets -> D1 and K-heavy hub/private-spoke compression -> raw cross-code complement localization -> proper-support nonhub global independence -> complement-witness degree capacity -> Y-cap global coefficient -> F0 hub/private-spoke compression -> compressed proper-support P normal form -> global compressed half barrier -> two remaining equality endpoints: pure F0 or R:M=1:1.`
 
-R1 K2 GLOBAL COEFFICIENT: `Predecessor unweighted synthesis raised the global low-ray coefficient to tau_Y=(13-sqrt(105))/8≈0.34413 with relaxed K-heavy density ≈0.31174, zero F0 density and the remainder in D. Cross-code capacity then showed a compressed R+D1 endpoint costs at least 1/2. The present session extends the compression to F0 and proves a global compressed barrier 7/16 with relaxed proportions R:F0:M=5:8:3.`
-
-R1 K2 COMPRESSED BARRIER: `Under the normal form in which all but o(p) W_s-free non-K-heavy escapes are proper-support q_j-nonneighbours and all but o(p) K-heavy escapes miss q_j, write densities alpha=R/p and delta=D/p. Then M_U(D)+M_U(R,D) >= (delta^2/2+alpha*delta-o(1))p^2 and Z_Y(R)>=(alpha(1-delta)-o(1))p^2, so D_phys/p^2>=alpha+delta^2/2. The additive class theorem simultaneously gives >=1-alpha-delta/2. Their max has exact minimum 7/16 at alpha=5/16, delta=1/2, leaving mixed density 3/16; equality forces D asymptotically F0.`
+R1 K2 COMPRESSED HALF: `Let alpha=|R|/p and delta=|D|/p under the compressed normal form. P, the proper-support nonhub part of D, has density delta, is independent, and every escape outside P except o(p) exceptions has at most two neighbours in P. Thus M_U(P,E)/p^2 >= delta-delta^2/2-o(1). Since F0 density phi<=delta, K-heavy Y-capacity gives Z_Y(R)/p^2>=alpha(1-delta)-o(1), so L2=delta-delta^2/2+alpha(1-delta). The additive partition gives L1>=1-alpha-delta/2. Therefore max(L1,L2)>=1/2. Mixed-to-P complement capacity further gives epsilon_mixed/p >=1+delta-o(1), eliminating all interior equality points; only pure F0 and R:M=1:1 remain at coefficient 1/2 in the relaxed model.`
 <!-- CURRENT-STATUS:END -->
 
 ---
@@ -39,15 +37,14 @@ R1 K2 COMPRESSED BARRIER: `Under the normal form in which all but o(p) W_s-free 
 Latest daily audit: `project/research/post_ms/2026-09-20-daily-red-team-audit-v1/DAILY_RED_TEAM_AUDIT.md`.
 
 Binding constraints:
-
 - repaired P1/P2 semantics;
-- raw same-code criticality / ordered `(source,witness)` injection independently passed in the subsequent upstream repair;
+- raw same-code criticality / ordered `(source,witness)` injection independently passed in later repair;
 - `X_3` mandatory negative control;
 - zero positive actual D2C rigid complete Hall cuts with `x>=3` in bounded regression;
 - exact pair-local `Ccap_P`, `(ONE-P)`, `(CROWD)` whenever invoked;
 - finite scans are diagnostics only;
 - superseded evidence stays superseded;
-- same-session closures stay provisional until independent adversarial replay.
+- same-session closures stay provisional until hostile replay.
 
 ## Live structural chain
 
@@ -57,16 +54,14 @@ Binding constraints:
 `-> one-code residual-one common hub / beta fan`
 `-> k=2 low-k/high-y escape`
 `-> heavy/F0/D1 class partition`
-`-> D1 and K-heavy hub/private-spoke compression`
-`-> general cross-code complement localization`
-`-> proper-support nonhub global independence`
-`-> complement-witness degree capacity`
-`-> global Y-cap coefficient tau_Y≈0.34413`
-`-> F0 hub/private-spoke compression`
-`-> compressed W_s-free normal form`
-`-> global compressed defect barrier 7/16`
-`-> equality target R:F0:M=5:8:3`
-`-> live F0--mixed / weighted-rooted attack`.
+`-> hub/private-spoke compression`
+`-> cross-code complement localization`
+`-> proper-support P independence`
+`-> complement-witness capacity into P`
+`-> F0 compression`
+`-> compressed global half barrier`
+`-> pure-F0 or R:M=1:1 endpoints`
+`-> live endpoint raw-criticality attack`.
 
 ## Session ledger — current invocation
 
@@ -74,15 +69,17 @@ Binding constraints:
 **Planned preservation cutoff:** 18:55:38 BST.
 
 Substantive units completed:
+1. reconciled CURRENT_STATE.md, README.md, live commits through `ba87a2d...`, and the 20 September daily red-team audit before forward mathematics;
+2. hostile-replayed the general cross-code complement-localization/capacity theorem from raw rooted B-edge criticality;
+3. extended the private-spoke forward/Y-killing versus reverse/H-consuming theorem to F0;
+4. classified F0 residual-hub edges into forward Y/R-anticomplete or reverse injective-H rectangle branches;
+5. transferred private-support sparsification to F0 and obtained the compressed W_s-free proper-support endpoint;
+6. derived and optimized the intermediate compressed `7/16` barrier, preserved atomically at `baffe19...`, and immediately reassessed rather than stopping;
+7. observed that W_s--U_bar(d) anticompleteness forces every T/M source away from code bar(d), so complement capacity applies to P from the entire outside reservoir;
+8. upgraded the missing-U bill to `delta-delta^2/2`, combined it with K-heavy Y-capacity and the additive class floor, and proved the compressed global coefficient is at least `1/2`;
+9. retained the P-missing pairs inside mixed U-slack and proved `epsilon_mixed>=p+|P|-1`, which eliminates all interior coefficient-1/2 equality mixtures;
+10. isolated the only two relaxed half-barrier endpoints: pure compressed F0, or a half K-heavy / half mixed reservoir with no D/T mass.
 
-1. reconciled CURRENT_STATE.md, README.md, the live nine-commit advance through `ba87a2d...`, and the 20 September daily red-team audit before forward mathematics;
-2. hostile-replayed the cross-code complement-localization/capacity theorem from raw rooted B-edge criticality and graph-fixed source/witness singleton identity;
-3. extended the private-spoke forward/Y-killing versus reverse/H-consuming theorem to fully-free F0 vertices;
-4. classified F0 residual-hub edges: forward forces Y/R anticompleteness, reverse forces injective H witnesses and an H--F0 off-diagonal rectangle;
-5. transferred the private-support sparsification mechanism to F0, showing cheap F0 mass is pushed toward proper-support q_j-nonneighbours;
-6. combined global proper-support independence, R-to-proper-support complement capacity, and the K-heavy Y-cap into the compressed bound D_phys/p^2>=alpha+delta^2/2;
-7. optimized that bound simultaneously with the predecessor additive class floor and obtained the exact compressed barrier 7/16 at alpha=5/16, delta=1/2, exposing the new equality normal form R:F0:M=5:8:3.
+**Live unfinished line:** independently replay the half-barrier accounting, then attack pure-F0 and R:M=1:1 endpoints directly by raw edge criticality. Endpoint B is especially concrete because every mixed vertex has exactly one K-neighbour and one selected-witness neighbour with the same head index, while no F0 repair witnesses exist.
 
-**Live unfinished line:** hostile-replay the new F0 extensions and 7/16 accounting, then attack the F0--mixed interface at the 5:8:3 normal form with exact weighted rooted currencies and raw private-coordinate criticality.
-
-**Stop reason:** preservation checkpoint after seven tightly connected mathematical/audit units within the shortened available window. No mathematical blocker; the next coherent structural line is preserved for immediate continuation.
+**Stop reason:** preservation checkpoint after ten tightly connected mathematical/audit units within the shortened research window. No mathematical blocker; the next endpoint attack is preserved for immediate continuation.
