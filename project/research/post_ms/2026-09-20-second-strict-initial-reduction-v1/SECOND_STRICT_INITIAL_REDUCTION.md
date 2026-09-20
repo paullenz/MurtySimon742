@@ -81,7 +81,42 @@ Therefore the mathematically correct next target is to bound the **matched-edge 
 
 A fixed ordered pair `(q_j,z_0)` can certify at most one X-head for each coordinate `j`; ordered `(x,z_0)` pairs are likewise graph-fixed. Any closure must account for these physical obligations rather than treating `z_0` as an unlimited exception.
 
-## 5. Two-X-hole subtype: two-foot funnel
+## 5. Mixed-hole exceptional-capacity inequality
+
+Let `H` be the number of outside-certified Type-R heads. By Section 2,
+
+`H>=x-2`.
+
+Put `s=|S_0|`. Suppose `s>=2`. Then every Type-R head has Hamming radius at least two from `d`, because its difference set contains all of `S_0`.
+
+Fix an outside-certified head `x` and `j in S_0`. The edge `xq_j` lies in the fixed triangle through `b`. The radius-at-least-two matched-edge exhaustion from the first-strict closure eliminates every ordinary witness: other R-code outside witnesses miss `q_j`; common-core `bar d` witnesses have another shared `bar d` matched endpoint; Y sees all R heads at `q_j`; and the remaining rooted/A locations carry the preserved extra-common-neighbour obstructions. Thus the exceptional physical vertex `z_0` must certify every one of the `Hs` obligations `(x,j)`.
+
+There are only two possible orientations.
+
+1. `q_j -> x` uses ordered pair `(q_j,z_0)`. For fixed `j`, the graph-fixed common-neighbour set of that pair can be the singleton `{x}` for at most one head. Hence this orientation can cover at most `s` obligations in total.
+2. `x -> q_j` uses ordered pair `(x,z_0)`. For fixed `x`, the graph-fixed common-neighbour set can be the singleton `{q_j}` for at most one coordinate. Hence this orientation can cover at most `H` obligations in total.
+
+Therefore
+
+> **`Hs <= H+s`.**                                      `(MIX-CAP)`
+
+Equivalently
+
+> **`(H-1)(s-1)<=1`.**                                  `(MIX-CAP')`
+
+This has immediate structural consequences:
+
+- if `x>=5`, then `H>=3`, so necessarily `s=1`;
+- if `x=4` and `s>=2`, then necessarily `H=2` and `s=2`, so exactly one buffer--X edge uses the exceptional reverse channel;
+- for `x=3`, the inequality leaves the expected small-head exceptional tail.
+
+Thus every unbounded mixed-hole family is forced into the singleton-support regime
+
+> `|S_0|=1`.                                             `(MIX-S0-1-EVENTUAL)`
+
+The remaining task in that regime is to distinguish radius-one R heads (`I_x=I_0`) from higher-radius R heads and price the single `S_0` matched-edge obligation for the latter through `z_0`.
+
+## 6. Two-X-hole subtype: two-foot funnel
 
 Assume `(h_X,h_o)=(2,0)` and name the two buffer--X holes `a_0,a_1`. Then `b` is complete to `U_o`.
 
@@ -100,11 +135,11 @@ For a fixed pair `(z,a_j)`, the forward singleton can occur for at most one matc
 
 So the `(2,0)` subtype is not a free two-hole generalization: each head's tight agreement coordinates must be routed through only two graph-fixed physical pairs, with at most one forward coordinate per foot.
 
-## 6. Next targets
+## 7. Next targets
 
 The exact second-strict frontier is now sharply separated:
 
-1. **mixed `(1,1)`:** one exceptional reverse vertex `z_0`, at least `x-2` Type-R outside-certified heads, and `d_X(a_0)<=1`; attack the total number of `S_0` matched-edge obligations that `z_0` can rescue;
+1. **mixed `(1,1)`:** one exceptional reverse vertex `z_0`, at least `x-2` Type-R outside-certified heads, `d_X(a_0)<=1`, and the exact exceptional-capacity inequality `(H-1)(|S_0|-1)<=1`; every unbounded family has `|S_0|=1`;
 2. **two-X-hole `(2,0)`:** every surviving buffer edge is outside-certified and each head has a two-foot coordinate cover; derive the exact two-foot support normal form and feed it into the rooted residual ledger.
 
 The `(0,2)` subtype is empty. Loaded-buffer, `z=2` and four-exception branches remain subordinate until this exact second-strict layer is resolved.
