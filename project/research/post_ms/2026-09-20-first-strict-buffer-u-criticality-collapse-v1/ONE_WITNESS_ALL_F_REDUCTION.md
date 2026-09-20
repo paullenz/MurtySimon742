@@ -1,4 +1,4 @@
-# Surviving one-witness branch: all-F reduction for y>=2
+# Surviving one-witness branch: all-F isolation and head saturation
 
 Date: 2026-09-20
 
@@ -16,11 +16,51 @@ For `m=1` all-F:
 
 The generic theorem `BUFFER_UO_Y_ANTICOMPLETENESS.md` gives `E(U_o,Y)=emptyset` and `U_o cap V_{bar d}=emptyset`.
 
-Assume in this note that `y>=2`.
+## 2. z misses the entire common core — no y assumption
 
-## 2. Every X'--Y edge must be core-certified
+Every core vertex `w in W_0` has a graph-fixed unique X-head `h(w)`.
 
-Fix `x in X'`, `y_0 in Y`. The edge `xy_0` lies in a triangle because C and d agree at the coordinate `i_0`. Apply raw triangle-edge criticality.
+If `h(w) in X'`, then `wh(w) in E` while the buffer certificate gives `N(h(w)) cap N(z)={b}`. Hence `wz` would make w an illicit second common neighbour.
+
+If `h(w)=a_0`, the forward funnel gives `N(z) cap N(a_0)={q_{i_0}}`; again `wz` would make w an illicit second common neighbour because `wa_0 in E`.
+
+Therefore, without assuming y>=2,
+
+> `z--W_0` is empty.                                    `(F-ZCORE)`
+
+## 3. z has no second outside-U neighbour
+
+Suppose `w in U_o\{z}` and `zw in E`.
+
+- For every `x in X'`, `N(x) cap N(z)={b}` forces `xw` to be a nonedge.
+- `N(z) cap N(a_0)={q_{i_0}}` forces `a_0w` to be a nonedge.
+- `BUFFER_UO_Y_ANTICOMPLETENESS.md` forces `w--Y` to be empty.
+
+Thus w is anticomplete to all of A. But z itself is also anticomplete to A.
+
+The U--U edge zw lies in a triangle through the root. Raw triangle-edge criticality cannot use a root-neighbour witness: with a U-source the root would be an extra common neighbour distinct from the U-head. Hence any witness must lie in A. In either orientation the witness would have to be adjacent to the opposite endpoint, yet both z and w are A-anticomplete. No certificate exists, contradiction.
+
+Therefore
+
+> `N_U(z)={b}`.                                         `(F-ZISO)`
+
+This is an exact physical statement, not a score relaxation.
+
+Since z has exactly the root, p selected tight matched endpoints and b as neighbours,
+
+> `d(z)=p+2`,
+>
+> `epsilon_z=p+u-2`.                                    `(F-ZEXACT)`
+
+The internal independent set `U_-=W_0 dotcup {b}` contributes `binom(k+1,2)` missing U-pairs. The additional `u-2` missing pairs from z to every U-vertex except b are disjoint from those. Hence
+
+> `q<=binom(u,2)-binom(k+1,2)-(u-2)`.                  `(F-QEXACT)`
+
+This exact witness isolation holds for **all y>=1** in the all-F polarization.
+
+## 4. For y>=2 every X'--Y edge must be core-certified
+
+Now assume `y>=2`. Fix `x in X'`, `y_0 in Y`. The edge `xy_0` lies in a triangle because C and d agree at coordinate `i_0`. Apply raw triangle-edge criticality.
 
 ### Source x, head y_0
 
@@ -44,7 +84,7 @@ Therefore the edge `xy_0` can be certified only by a core vertex whose unique X-
 
 This conclusion holds for every y_0 in Y. Hence **every vertex of X' must occur as a core head.**
 
-## 3. Head saturation
+## 5. Head saturation for y>=2
 
 The core-head map `W_0 -> X` is injective and `|W_0|=k`. Since all N=x-1 vertices of X' must be heads,
 
@@ -54,44 +94,28 @@ But `k=x-g` and `g>=0`, so
 
 > `g<=1`, and `k in {x-1,x}`.                           `(F-GATE)`
 
-Thus the surviving `m=1`, `y>=2` branch is not a broad g-range: it is confined to the two head-saturated cases g=1 and g=0.
+Thus the surviving `m=1`, `y>=2` branch is confined to the two head-saturated cases g=1 and g=0.
 
-## 4. z misses the entire common core
-
-If a core vertex w has head `x in X'`, then `wx in E`. The outside buffer certificate gives `N(x) cap N(z)={b}`. Therefore `wz` must be a nonedge, otherwise w is a second common neighbour.
-
-If `k=x-1` (g=1), every core head lies in X', so z misses all k core vertices.
-
-If `k=x` (g=0), injectivity makes the core-head map a bijection onto X: x-1 core vertices head X', and the remaining core vertex heads `a_0`. The forward funnel has `N(z) cap N(a_0)={q_{i_0}}`; hence the remaining core vertex also misses z, otherwise it is another common neighbour of z and `a_0`.
-
-Therefore in both head-saturated cases
-
-> `z--W_0` is empty.                                    `(F-ZCORE)`
-
-Since z is already anticomplete to A, direct degree counting gives
-
-> `epsilon_z>=p+k`.                                     `(F-ZPAY)`
-
-and the rooted triangle ceiling gains k physical U--U holes:
-
-> `q<=binom(u,2)-binom(k+1,2)-k`.                       `(F-Q)`
-
-## 5. Current surviving one-witness geometry
+## 6. Current surviving one-witness geometry
 
 Combining the all-R collapse with this theorem, every `m=1` first-strict survivor satisfies the exact all-F Hamming bill
 
 `r >= x + y[p-1-floor((p-2)/x)] >= a+y`,
 
-and when `y>=2` it additionally satisfies
+and for every y it has the exact witness isolation
+
+- `z--W_0=empty`;
+- `N_U(z)={b}`;
+- `epsilon_z=p+u-2`;
+- `q<=binom(u,2)-binom(k+1,2)-(u-2)`.
+
+When `y>=2` it additionally has
 
 - `g in {0,1}`;
-- every X' vertex is a distinct common-core head;
-- `z--W_0` is empty;
-- `epsilon_z>=p+k`;
-- the strengthened q ceiling `(F-Q)`.
+- every X' vertex is a distinct common-core head.
 
-The separate `y=1` all-F slice remains live because the unique Y-head allows a differing-fibre matched endpoint to certify X->Y edges; it should be handled separately rather than importing the y>=2 argument.
+The separate `y=1` all-F slice remains live because the unique Y-head allows a differing-fibre matched endpoint to certify X->Y edges; it should be handled separately rather than importing the head-saturation argument.
 
-## 6. Next attack
+## 7. Next attack
 
-For y>=2 the branch has collapsed to two explicit head-saturated regimes. The highest-value next calculation is to combine `(F-GATE)/(F-ZPAY)/(F-Q)` with exact pair-local score and the all-F Hamming-slot lower bound, looking for a direct residual contradiction. The y=1 slice needs its own matched-foot analysis.
+The unique selected outside witness is now almost completely isolated, and its slack grows as `p+u-2`. The highest-value next calculation is to combine `(F-ZEXACT)/(F-QEXACT)`, the exact pair-local threshold and the all-F Hamming-slot lower bound. For `y>=2`, do this only in the two regimes g=0 and g=1. Keep y=1 separate and inspect its matched-foot certificates directly.
