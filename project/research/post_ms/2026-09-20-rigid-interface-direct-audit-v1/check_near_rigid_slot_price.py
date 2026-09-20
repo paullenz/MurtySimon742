@@ -1,12 +1,13 @@
 #!/usr/bin/env python3
 """Audit-only arithmetic diagnostic for ONE_CODE_NEAR_RIGID_SLOT_PRICE.md.
 
-This does not enumerate graphs.  It compares the new near-equality slot-price
+This does not enumerate graphs. It compares the new near-equality slot-price
 floor with the older gamma/U score floor over a broad abstract integer box.
 The promoted mathematics is the hand theorem, not these counts.
-"""
 
-from math import floor
+The rigid cut is proper, so Y is nonempty. Since g0=p-y, the diagnostic uses
+1<=g0<=p-1 rather than admitting the spurious y=0 boundary.
+"""
 
 
 def phi(g: int) -> int:
@@ -47,7 +48,7 @@ def main():
 
     for p in range(3, 21):
         for x in range(3, 31):
-            for g0 in range(1, p + 1):
+            for g0 in range(1, p):  # y=p-g0 >= 1
                 for gP in range(0, p + 1):
                     checked += 1
                     old = old_floor(p, x, gP)
