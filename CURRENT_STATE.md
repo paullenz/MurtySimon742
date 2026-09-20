@@ -7,31 +7,33 @@
 `X_3` (12 vertices, 32 edges, versus `M(12)=31`) remains the mandatory negative control. The false all-order 2019 Dailly–Foucaud–Hansberg Conjecture 3 is not the target. The mixed `{4,5}` selected-excess ladder is closed. First-proof priority on Erdős #742 is not the optimization target.
 
 <!-- CURRENT-STATUS:START -->
-CHECKPOINT CLASS: `UNLOADED_BUFFER_FIRST_STRICT_COMPLETE_CLOSURE_SECOND_STRICT_REDUCTION_2026_09_20`
+CHECKPOINT CLASS: `SECOND_STRICT_MIXED_Y1_X_INDEPENDENCE_TWO_X_HOLE_NORMAL_FORM_2026_09_20`
 
 WORK MODE: `MATH_AFTER_AUDIT_GATE`
 
-INSPECTED_PREDECESSOR_HEAD: `625e67116e473889e1a9e2d61b9418dd458abee0`
+INSPECTED_PREDECESSOR_HEAD: `114c050f1e409633f66d7b24089c1397450d21d5`
 
-LATEST_NEW_COMMITS: `266a1917be4d905d5fa065bba49ebd908aed9946` (complete first-strict closure), `53d27a9f74ed6b6c71d645b18b95e6fc3ca49b98` (exact second-strict initial reduction and exceptional-capacity inequality).
+LATEST_NEW_COMMITS: `c4c117686614c37d70eea8775a2dc151eb373ede` (analytic mixed `(1,1)` closure for `y>=2`), `3d06a2b7b0d558681fd8d72a37abca507580d78b` (two-X-hole two-foot/core-saturation normal form), `114c050f1e409633f66d7b24089c1397450d21d5` (large-head mixed `y=1` classification), `7f0b54e8d96afc5014ef3d4f323d46f36aedf04c` (hostile y=1 Fz extension), `78089aa8d96da0ff519492e406edb0464506b18d` (independent algebra replay checker).
 
-LAST VERIFIED/AUDITED BASE: `The 20 September daily red-team audit remains binding. P1/P2 semantics are repaired; the raw same-code criticality theorem and ordered (source,witness) injection were independently re-derived and passed; X_3 remains mandatory; exact pair-local Ccap_P/(ONE-P)/(CROWD) remain load-bearing where used; finite scans remain diagnostics only; and bounded actual-D2C regression still has zero positive rigid complete Hall-cut fixtures with x>=3.`
+LAST VERIFIED/AUDITED BASE: `The 20 September daily red-team audit remains binding. P1/P2 semantics are repaired; the raw same-code criticality theorem and ordered (source,witness) injection were independently re-derived and passed; X_3 remains mandatory; exact pair-local Ccap_P/(ONE-P)/(CROWD) remain load-bearing whenever invoked; finite scans remain diagnostics only; and bounded actual-D2C regression still has zero positive rigid complete Hall-cut fixtures with x>=3. The zero-positive-fixture rigid-cut interface remains the dominant global audit risk.`
 
-PREDECESSOR_CORRECTION: `The immediate predecessor 625e671... found an upstream omitted matched-neighbour obstruction and proved Type F impossible throughout the first-strict unloaded branch. This supersedes the same-day F/R m=2 reservoir/raw-edge/exact-Hall branches as live realizability arguments. Their algebra remains preserved historically below an empty Type-F parent.`
+FIRST_STRICT_STATUS: `Same-session internal candidate closure: Type F is impossible; the remaining all-R first-strict branch collapses to radius-one, one code class and the already-closed maximal-m1 all-R contradiction. Thus the unloaded first-strict layer epsilon_b=p-g+1 is internally closed and the live unloaded floor is epsilon_b>=p-g+2. This remains below daily-audit/publication grade until independently replayed at the next adversarial checkpoint.`
 
-NEW INTERNAL CANDIDATE RESULT: `The remaining all-R first-strict branch also collapses upstream. For any represented R-code C and any j in nonempty S_0, the matched edge x q_j has no raw criticality certificate if d_H(C,d)>=2: the preserved radius>=2 matched-edge exhaustion applies, and the only possible extra rescue from another outside code D would require j in I_D, impossible because all R blocks lie in I_0 while j lies in S_0. Hence every R-code has radius one. Since I_C subseteq I_0, radius one forces |S_0|=1 and I_C=I_0 for every class, so there is only one X'-code class. The all-R class/witness bijection then gives m=omega=h=1, contradicting the already-closed maximal m=1 all-R branch. Therefore the entire unloaded first-strict layer epsilon_b=p-g+1 is empty.`
+SECOND_STRICT_SPLIT: `At exact equality epsilon_b=p-g+2 the physical defect split is (h_X,h_o)=(2,0),(1,1),(0,2). The (0,2) subtype is internally closed. The mixed (1,1) subtype and the two-X-hole (2,0) subtype are the live branches.`
 
-BUFFER_FLOOR: `With the exact identity epsilon_b=(p-g)+h_X+h_o, the equality layer h_X+h_o=0 and now the first-strict layer h_X+h_o=1 are both empty. Every surviving unloaded common-buffer configuration therefore satisfies h_X+h_o>=2 and epsilon_b>=p-g+2.`
+MIXED_YGE2_STATUS: `Commit c4c117... gives an analytic internal closure of the mixed (1,1) branch for y>=2. Its chain normalizes z_0 to code bar d, collapses all X to one radius-one code, proves G[X] and G[U_o] edgeless, saturates the common-core head map to k=x-1,g=1, and combines exact score/rooted bounds into 4B+A=-(F+2P)/2 with F+2P>0. This invocation independently reconstructed the COMB identity from definitions and replayed 313,348 broad-box integer rows with zero identity/positivity failures; minimum F+2P in that audit box was 6. This is diagnostic confirmation of the algebra, not a substitute for independent hostile review of all witness-location exclusions.`
 
-SECOND_STRICT_STATUS: `At equality epsilon_b=p-g+2 only (h_X,h_o)=(2,0),(1,1),(0,2) are possible. The (0,2) subtype is empty: outside Orientation A is forbidden when h_X=0 and the two physical U_o non-neighbours can reverse-certify at most two buffer--X heads, fewer than x>=3. In the mixed (1,1) subtype, the unique U_o hole z_0 can reverse-certify at most one buffer edge; at least x-2 heads are outside-certified and the unique-X-hole funnel plus NO-F makes all of those heads Type R, so d_X(a_0)<=1. If H is the number of those R heads and s=|S_0|>=2, every S_0 matched-edge obligation must be certified by z_0. Ordered-pair injectivity gives Hs<=H+s, equivalently (H-1)(s-1)<=1. Thus x>=5 forces |S_0|=1; x=4 with s>=2 forces the exact exceptional corner H=s=2. In the (2,0) subtype every buffer edge is outside-certified and each head has a two-foot coordinate cover through the two X-holes.`
+MIXED_Y1_STATUS: `For p>=2,x>=5 the predecessor 114c050... classifies the remaining y=1 mixed branch into R, Fx, Fz according to the raw certificate of a_0y. R has all X in one radius-one code and G[X]=empty. Fx has code multiset C^(x-1) dotcup D with the D-head the unique reverse-buffer head and G[X]=empty. Fz has z_0 itself certifying a_0->y and at most one higher-radius Type-R head. New same-session work 7f0b54... proves the entire Fz X-layer is also independent: the radius-one C-class is independent by same-code criticality, and a direct two-orientation exhaustion kills every edge from the possible higher-radius head h to a C-vertex. Therefore every large-head mixed y=1 geometry now satisfies e(X)=0. If the exceptional Fz head exists, N_X(z_0)={h}, N_Y(z_0)={y}, N_U(z_0)=emptyset, epsilon_z0>=p+k+omega-2, and r>=x+2. A failed attack is explicitly preserved: criticality of z_0h simply recycles q_j as certificate, and criticality of z_0y recycles a_0, so those edges create no new obligation.`
 
-DEPENDENCY_CLEANUP: `Once the new first-strict closure is independently audited, maximal-m1/m2/F-R calculations from earlier on 20 September are historical conditional mathematics below an empty first-strict parent. Do not cite them as the reason the branch closes. The live unloaded buffer frontier is now exact second-strict epsilon_b=p-g+2.`
+TWO_X_HOLE_STATUS: `Commit 3d06a2b... establishes the exact two-foot routing normal form in the (2,0) subtype. For y>=2,x>=4 every X-vertex is a common-core head, so k=x,g=0 and W_0<->X is a bijection. Every outside vertex certifies a real buffer head and forces a distinct core--outside hole, giving E_core>=x(p+x-1)+|U_o|. For each buffer head, every tight agreement coordinate must route through one of the two physical X-hole feet: an adjacent foot reverse-covers only its own agreement coordinates; a nonadjacent foot forward-covers at most one coordinate and then forces Hamming distance one between head and foot. This branch remains open.`
 
-UNPRESERVED_WORK: `None from this invocation.`
+DEPENDENCY_CLEANUP: `Earlier first-strict maximal-m1/m2/F-R reservoir calculations remain historically preserved below a now-internally-closed parent and are not the reason for closure. The mixed y>=2 and y=1 second-strict packages are same-session candidates; do not promote them to README/public theorem status before adversarial replay. Exact pair-local score must not be replaced by total score before its geometry is extracted.`
 
-DEFERRED_ADMIN: `README intentionally remains at the independently audited 20 September public checkpoint. These same-session closures are provisional until adversarial replay. Historical invalidations/superseded counts remain preserved in their native files.`
+UNPRESERVED_WORK: `None from this invocation. The hostile y=1 extension and independent mixed-y>=2 algebra checker are committed.`
 
-NEXT_ACTION: `First hostile-audit FIRST_STRICT_COMPLETE_CLOSURE.md, especially the transfer of the radius>=2 matched-edge exhaustion to an arbitrary all-R multi-code class and the use of the already-closed m=1 all-R branch. If it passes, treat epsilon_b>=p-g+2 as the live unloaded buffer floor. Then attack the exact second-strict layer: (1) mixed (1,1): with x>=5 reduce to |S_0|=1 and price the single exceptional z_0 across higher-radius R heads; isolate/close the x=3,4 tails separately; (2) two-X-hole (2,0): derive the exact two-foot support normal form from the two graph-fixed hole pairs and feed it into the rooted residual ledger. Keep loaded-buffer, z=2 and four-exception routes subordinate. In parallel, the zero-positive-fixture rigid-cut interface remains the dominant global audit risk.`
+DEFERRED_ADMIN: `README intentionally remains at the independently audited 20 September public checkpoint. Do not update the public status until the new first-strict and second-strict closures survive the next adversarial checkpoint. Historical invalidations and superseded counts remain preserved in their native files.`
+
+NEXT_ACTION: `First independently hostile-audit 7f0b54..., especially the Fz h--C edge exhaustion and the inference e(X)=0 in all large-head y=1 cases. If it passes, substitute e(X)=0 plus case-specific z_0/U-side physical bills into the exact score cap, pair-local Ccap_P/(ONE-P)/(CROWD), and rooted identity. Prioritize the exceptional-Fz arm using epsilon_z0>=p+k+omega-2 and r>=x+2; then treat R, Fx and no-exception Fz, preserving x=3,4 as small-head tails. In parallel continue the (2,0) branch by combining the two-foot support normal form with the core-head bijection to bound same-code class multiplicities/outside witness reuse before applying scalar capacity. The loaded-buffer, z=2 and four-exception routes remain subordinate unless these exact second-strict arms stall. The zero-positive-fixture rigid-cut interface must remain explicit throughout.`
 <!-- CURRENT-STATUS:END -->
 
 ---
@@ -54,41 +56,47 @@ Raw same-code audit: `project/research/post_ms/2026-09-20-same-code-raw-critical
 
 ## Live structural chain
 
-`audited rigid first-strict setup`
-`-> predecessor Type-F elimination (NO-F)`
-`-> arbitrary all-R radius>=2 matched-edge obstruction at S_0`
-`-> every R class radius one`
-`-> one R-code only`
-`-> m=omega=h=1`
-`-> preserved maximal-m1 all-R contradiction`
-`-> first-strict unloaded layer empty`
-`-> epsilon_b>=p-g+2`
-`-> exact second-strict split: (2,0) or (1,1); (0,2) empty`
-`-> mixed-hole exceptional-capacity inequality (H-1)(|S_0|-1)<=1`
-`-> two-X-hole two-foot funnel / mixed singleton-S_0 regime are live.`
+`audited rigid one-code setup`
+`-> Type-F elimination`
+`-> internal first-strict all-R closure`
+`-> unloaded buffer floor epsilon_b>=p-g+2`
+`-> exact second-strict split`
+`-> (0,2) empty`
+`-> mixed (1,1): y>=2 internally closed analytically`
+`-> mixed y=1 large-head trichotomy R/Fx/Fz`
+`-> new e(X)=0 in all three large-head y=1 cases`
+`-> two-X-hole (2,0): g=0 core saturation + exact two-foot support routing`
+`-> live tasks: exact y=1 physical/rooted pricing and two-foot/core-bijection collision analysis.`
 
-Key new files:
+Key current files:
 
-- `project/research/post_ms/2026-09-20-first-strict-type-f-elimination-v1/TYPE_F_ELIMINATION_AND_DEPENDENCY_AUDIT.md`
+- `project/research/post_ms/2026-09-20-daily-red-team-audit-v1/DAILY_RED_TEAM_AUDIT.md`
+- `project/research/post_ms/2026-09-20-same-code-raw-criticality-audit-v1/SAME_CODE_RAW_CRITICALITY_AUDIT.md`
 - `project/research/post_ms/2026-09-20-first-strict-complete-closure-v1/FIRST_STRICT_COMPLETE_CLOSURE.md`
 - `project/research/post_ms/2026-09-20-second-strict-initial-reduction-v1/SECOND_STRICT_INITIAL_REDUCTION.md`
+- `project/research/post_ms/2026-09-20-second-strict-mixed-yge2-closure-v1/SECOND_STRICT_MIXED_YGE2_CLOSURE.md`
+- `project/research/post_ms/2026-09-20-second-strict-two-x-hole-v1/SECOND_STRICT_TWO_X_HOLE_NORMAL_FORM.md`
+- `project/research/post_ms/2026-09-20-second-strict-mixed-y1-v1/SECOND_STRICT_MIXED_Y1_CLASSIFICATION.md`
+- `project/research/post_ms/2026-09-20-second-strict-y1-hostile-extension-v1/SECOND_STRICT_Y1_HOSTILE_EXTENSION.md`
+- `project/research/post_ms/2026-09-20-second-strict-y1-hostile-extension-v1/check_mixed_yge2_algebra.py`
 
 ## Session ledger — current invocation
 
-**Invocation start:** 04:30:06 BST.  
-**Planned preservation cutoff:** 04:55:38 BST.
+**Invocation start:** 06:29:19 BST.  
+**Planned preservation cutoff:** 06:55:38 BST.
 
 Substantive units completed:
 
-1. reconciled the stale handoff against the newer `625e671...` upstream Type-F elimination and the binding 20 September red-team audit;
-2. independently checked the Type-F contradiction at the tight-code level and accepted NO-F provisionally for this handoff;
-3. generalized the corrected radius-at-least-two matched-edge obstruction to an arbitrary all-R multi-code class using a coordinate `j in S_0`;
-4. proved every surviving R-code would have Hamming radius one, forcing `|S_0|=1`, `I_C=I_0`, a single code class and hence the already-closed `m=1` all-R contradiction; this closes the entire first-strict unloaded layer and raises the buffer floor to `epsilon_b>=p-g+2`;
-5. classified the exact second-strict physical split and closed the `(h_X,h_o)=(0,2)` subtype;
-6. reduced the mixed `(1,1)` subtype to at most one reverse buffer edge plus at least `x-2` outside-certified Type-R heads, giving `d_X(a_0)<=1`;
-7. derived the exceptional matched-edge capacity inequality `Hs<=H+s`, equivalently `(H-1)(s-1)<=1`, so every unbounded mixed family has `|S_0|=1`;
-8. extracted the two-foot coordinate-cover formulation for the `(2,0)` subtype.
+1. reconciled the stale handoff against three newer second-strict commits (`c4c117...`, `3d06a2...`, `114c050...`) and reread the binding 20 September daily audit and README before forward work;
+2. independently reconstructed the algebraic endgame of the mixed `y>=2` closure, exactly verifying `4B+A=-(F+2P)/2` from the project definitions;
+3. built and replayed an independent pure-Python diagnostic over 313,348 integer rows, finding zero COMB-identity or `F+2P>0` failures and preserving the checker;
+4. hostile-reread the large-head `y=1` R/Fx/Fz trichotomy and found no immediate omitted witness location;
+5. tested a natural attack on the exceptional Fz head and found a genuine recycling obstruction: `q_j` automatically certifies `z_0h` and `a_0` automatically certifies `z_0y`, so reapplying criticality there yields no new obligation;
+6. extracted the exceptional-Fz physical isolation `N_X(z_0)={h}`, `N_Y(z_0)={y}`, `N_U(z_0)=emptyset` and the resulting slack floor `epsilon_z0>=p+k+omega-2`;
+7. proved the Fz radius-one C-class independent directly from the audited same-code theorem;
+8. performed a full two-orientation raw-criticality exhaustion for a hypothetical edge between the exceptional higher-radius Fz head and a C-vertex, closing that edge and proving `G[X]=emptyset` in Fz; combined with predecessor R/Fx results, every large-head mixed y=1 case now has `e(X)=0`;
+9. extracted the stronger exceptional-Fz rooted-slot floor `r>=x+2` and preserved the ordinary-outside independence consequences that are safe at current evidence level.
 
-**Live unfinished line:** independently hostile-audit the first-strict complete closure; then push mixed `(1,1)` in the singleton-`S_0` regime by pricing the unique exceptional vertex `z_0`, and derive the exact two-foot support normal form for `(2,0)`.
+**Live unfinished line:** independently replay the new Fz h--C exclusion, then use `e(X)=0` to do exact case-specific score/pair/rooted optimization in the large-head y=1 mixed tail. The exceptional-Fz arm is first because its `z_0` is physically isolated and expensive. The two-X-hole branch remains the parallel structural target.
 
-**Stop reason:** preservation cutoff approached after a shortened late-start window; no mathematical blocker and no clean-checkpoint early stop.
+**Stop reason:** shortened late-start window approaching the preservation phase; no mathematical blocker and no clean-checkpoint early stop.
