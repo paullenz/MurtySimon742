@@ -2,7 +2,7 @@
 
 Date: 2026-09-20
 
-Status: same-session structural diagnostic, conditional on the rigid one-code interface and the parameter ray already preserved. This is not a graph construction.
+Status: same-session structural theorem/diagnostic, conditional on the rigid one-code interface and the parameter ray already preserved. This is not a graph construction.
 
 ## 1. Setup
 
@@ -16,9 +16,9 @@ Every outside source needs at least `k_P=3t` distinct U witnesses, hence
 
 > `3t<=w<=4t`.                                             `(1.1)`
 
-Every selected witness has code `bar d`. Because the A-cut is complete, a selected U witness can have only one neighbour in `A_X`: any second X-neighbour would be a second common neighbour with the source. Thus every vertex of W has exactly one X-neighbour.
+Every selected witness has code `bar d`. Because the A-cut is complete, a selected U witness can have only one neighbour in `A_X`: any second X-neighbour would be a second common neighbour with the source. Thus every vertex `z in W` has exactly one X-neighbour, denote it `h(z)`.
 
-Across all y=t sources there are at least
+Across all `y=t` sources there are at least
 
 > `I>=yk_P=3t^2`                                          `(1.2)`
 
@@ -26,11 +26,25 @@ selected source-witness incidences. Each such incidence is a Y--W nonedge. There
 
 > `Z_Y(W)>=3t^2`.                                         `(1.3)`
 
-## 2. Same-code W-edge capacity
+## 2. Used complementary witnesses are independent
 
-All vertices of W have code `bar d`. For every same-code edge inside W, raw same-code criticality orients the edge with its source in W and a witness in `A_d=Y`. The usual ordered `(source,witness)` injection therefore applies to this restricted edge family and gives
+All vertices of W have code `bar d`.
 
-> `e(W)<=w y = wt`.                                       `(2.1)`
+Suppose `zz'` were an edge of `G[W]`. Raw same-code criticality for a U--U edge says that, after orienting the edge, its source may be taken as one endpoint, say z, and its unique-common-neighbour witness must lie in `A_d=Y`; call it y. The certificate would require
+
+> `N(z) cap N(y)={z'}`.
+
+But z is a selected crossing witness, so it has the unique X-neighbour `h(z)`. The rigid A-cut is complete, hence every `y in Y` is adjacent to every vertex of `A_X`, in particular to `h(z)`. Therefore
+
+`h(z) in N(z) cap N(y)`.
+
+Since `h(z) in A_X` whereas `z' in U`, this is a second common neighbour, contradicting the certificate.
+
+Thus
+
+> **`e(W)=0`.**                                            `(2.1)`
+
+This is strictly stronger than the generic same-code capacity `e(W)<=wy`: the singleton X-head forced by the rigid crossing certificate blocks every possible Y-witness for a same-code W-edge.
 
 No assumption is made that all complementary U vertices are used, and no assumption is made that the same witness set is used by every Y-source.
 
@@ -44,49 +58,54 @@ For W:
 
 - its total X-degree is exactly w;
 - its Y-edge count is at most `wt-3t^2` by `(1.3)`;
-- its U-edge incidence count is at most `2e(W)+w(4t-w)`.
+- `G[W]` is independent by `(2.1)`;
+- its U-neighbours outside W contribute at most `w(4t-w)` incidences.
 
 Hence
 
 `w(7t-1)-E_W`
-`<=w+(wt-3t^2)+2e(W)+w(4t-w)`.
+`<=w+(wt-3t^2)+w(4t-w)`.
 
 Rearranging,
 
-> `E_W >= w(2t+w-2)+3t^2-2e(W)`.                         `(3.1)`
-
-Using `(2.1)`,
-
-> `E_W >= w(w-2)+3t^2`.                                   `(3.2)`
+> `E_W >= w(2t+w-2)+3t^2`.                               `(3.1)`
 
 Since `w>=3t` and `t>=2`, the right side is minimized at `w=3t`, so
 
-> **`E_W >= 12t^2-6t`.**                                  `(3.3)`
+> **`E_W >= 18t^2-6t`.**                                  `(3.2)`
 
-This is a strictly stronger physical price than the earlier aggregate witness-class floor `9t^2+5t-2` for all sufficiently large t. It does not assume witness-population saturation `w=k_P`; it allows the selected witness union to range all the way up to u=4t.
+This is a major strengthening of the earlier aggregate witness-class floor `9t^2+5t-2`. It is fully physical: it uses the actual selected witness incidences, their forced singleton X-neighbourhoods, their forced Y-nonedges, and raw same-code criticality.
 
-## 4. The ray still survives total score
+## 4. The infinite ray collapses to a finite tail
 
 The independent near-rigid Hamming-slot floor on `A_X` is
 
 > `L_X>=floor(4t^2-3t/2)+1`.                              `(4.1)`
 
-Thus the strengthened physical total-score floor is
+Thus
 
-> `S>=12t^2-6t+floor(4t^2-3t/2)+1`.                       `(4.2)`
+> `S>=18t^2-6t+floor(4t^2-3t/2)+1`.                       `(4.2)`
 
-The above-M ceiling remains
+The above-M ceiling is
 
 > `C0=20t^2+10t-4`.                                       `(4.3)`
 
-Their difference is positive for every `t>=2` and grows quadratically; asymptotically the lower floor has leading coefficient 16 while C0 has leading coefficient 20.
+Direct comparison gives
 
-Therefore:
+> `18t^2-6t+floor(4t^2-3t/2)+1 > C0`
 
-> **even after charging the actual selected witness incidences, their forced Y-nonedges, exact singleton X-neighbourhoods, and restricted same-code W-edge capacity, the explicit ray remains scalar-feasible.**
+for every
 
-This materially narrows the missing mechanism. Another score-only aggregation is not the right next step. The next attack must use the *location* of those nonedges/edges in the rooted residual identity, stronger per-vertex reuse structure, or prove that the rigid complete-cut event itself is not graph-realizable.
+> **`t>=9`.**                                              `(4.4)`
+
+Therefore the explicit infinite scalar escape family is **not** physically viable asymptotically:
+
+> **the ray is closed for t>=9, leaving only the finite parameter tail `2<=t<=8` for any further realization test.**
+
+Equivalently, on this ray the conditional order `n=16t+1` is at most 129.
+
+This is exactly the kind of structural gain the scalar diagnostics were pointing toward: the aggregate `Ccap_P/(ONE-P)/(CROWD)` inequalities all had room, but the *location* of the selected U witnesses makes their same-code edges impossible and doubles the leading witness-slack price.
 
 ## 5. Trust boundary
 
-No D2C graph realizing this pattern is known. Bounded actual-D2C regression still has zero positive rigid complete Hall-cut fixtures with `x>=3`, and `X_3` remains the mandatory negative control. This note is a conditional structural/method diagnostic only.
+This is still conditional on the rigid one-code interface and the preceding source/Hall machinery. No positive actual-D2C rigid complete Hall-cut fixture with `x>=3` is known in bounded regression, and `X_3` remains the mandatory negative control. The finite tail `2<=t<=8` is not declared realizable; it is simply not excluded by `(4.2)` alone.
