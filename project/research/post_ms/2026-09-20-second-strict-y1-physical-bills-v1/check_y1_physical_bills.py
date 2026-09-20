@@ -4,6 +4,11 @@
 This scans an abstract parameter box only. Rows are not D2C graphs and no
 finite count is used as proof. The exceptional-Fz formulas include the later
 structural theorem that kills all D--E outside cross-class edges.
+
+20 Sep correction: exact second-strict buffer slack is eps_b=p-g+2. Because
+the root has maximum degree, every slack is nonnegative. Rows with eps_b<0
+are physically impossible and are rejected here. Earlier survivor counts that
+did not impose this gate remain historical/superseded diagnostics.
 """
 
 from math import ceil
@@ -29,6 +34,8 @@ def common(p, x, g, omega):
     C0 = 2 * (D_M - 1) + lam * (p + u) - p
     E_core = k * (p + k - 1)
     eps_b = p - g + 2
+    if eps_b < 0:
+        return None
     return k, u, lam, C0, E_core, eps_b
 
 
@@ -105,6 +112,7 @@ def main():
                             counts[case] += 1
 
     print(f"box=p:2..{P_MAX}, x:5..{X_MAX}, omega:2..{OMEGA_MAX}, 1<=g<x")
+    print("physical gate: eps_b=p-g+2>=0")
     for case in ("R", "Fz0", "Fx", "Fz1"):
         print(f"{case}: tested={tested[case]} survivors={counts[case]}")
 
