@@ -9,7 +9,7 @@
 <!-- CURRENT-STATUS:START -->
 CHECKPOINT CLASS: `ONE_CODE_R1_K2_HALF_RAY_GLOBAL_SUPERCONSTANT_DEFICIT_CORRECTED_2026_09_20`
 
-WORK MODE: `MATH / PRE-MIDNIGHT PRESERVATION`
+WORK MODE: `MATH / PRE-MIDNIGHT PRESERVATION COMPLETE`
 
 INSPECTED PREDECESSOR: before forward mathematics this invocation reread `CURRENT_STATE.md`, `README.md`, the latest commits, the 20 September daily red-team audit, `ONE_CODE_R1_K2_HALF_RAY_RESIDUAL_SLOT_COLLAPSE.md`, the corrected H--U B-layer theorem, exact H--U capacity-deficit decomposition, private-spoke obstruction and H--H certificate split. The audit gate remained binding. The invalid H--U private-foot coordinate-slice chain was not reused.
 
@@ -17,7 +17,7 @@ LAST REPLAYED RESULT: the predecessor residual-slot collapse theorem was indepen
 
 NEW SAME-SESSION CANDIDATE: `project/research/post_ms/2026-09-20-rigid-interface-direct-audit-v1/ONE_CODE_R1_K2_HALF_RAY_GLOBAL_SUPERCONSTANT_DEFICIT.md`. On the corrected half-ray `p=2t,c=y=t,u=t+1,h=2t-1`, write `s=Delta-h`. All equality faces `Delta=h` are excluded for `t>=5`, giving `Delta>=h+1=2t`, `L_H>=5t-1`.
 
-A preservation-stage consistency audit found and corrected one overcount before handoff: a common U-vertex for `(h_i,q_l)` can itself be the singleton head for **one** reverse-private slot using the physical edge `h_iw`; it is therefore wrong to declare every such slot unavailable. After charging one self-head recovery per source, the degree bills become `d(d-2)<=a` for exceptional residual-bar H-neighbourhoods and `(d_H-1)(d_H-3)<=a` for outside-P vertices. The B1 row bound likewise uses `a_i>=m_i-1` when a row has a single B1 neighbour. The correction changes finite constants but not the asymptotic result.
+A preservation-stage consistency audit found and corrected one overcount before handoff: a common U-vertex for `(h_i,q_l)` can itself be the singleton head for one reverse-private slot using the physical edge `h_iw`; it is therefore wrong to declare every such slot unavailable. After charging one self-head recovery per source, the degree bills become `d(d-2)<=a` for exceptional residual-bar H-neighbourhoods and `(d_H-1)(d_H-3)<=a` for outside-P vertices. The B1 row bound likewise uses `a_i>=m_i-1` when a row has a single B1 neighbour. The correction changes finite constants but not the asymptotic result.
 
 The corrected outside-P matched-spoke lemma still shows that an H-positive outside-P U-vertex has at most one H-neighbour on a d-bit coordinate. Combining the corrected P/Q degree bounds, B1 touched-row bill, shared-resource capacity, and EC-12 gives
 
@@ -63,12 +63,14 @@ Binding constraints:
 
 **Actual start:** 2026-09-20 23:30:28 BST.  
 **Planned preservation cutoff:** 2026-09-20 23:55:38 BST.  
-**Forward-research stop:** 2026-09-20 23:51:58 BST (extended after preservation-stage self-audit found and repaired the self-head accounting issue).  
+**Forward-research stop:** 2026-09-20 23:51:58 BST.  
 **Preservation start:** 2026-09-20 23:51:58 BST.  
-**Preservation complete:** pending final consistency/telemetry write.  
+**Preservation complete:** 2026-09-20 23:52:21 BST.  
+**Wall-clock span to preservation complete:** 21m53s.  
 **Forward-research span:** 21m30s.  
+**Preservation span:** 23s.  
 **Substantive units:** 14.  
-**Stop reason:** the invocation began late, leaving only 25m10s to the cutoff; forward work continued until 3m40s before cutoff after a preservation-stage self-audit found and repaired a material finite-accounting overclaim.  
+**Stop reason:** the invocation began late, leaving only 25m10s to the cutoff. Forward work continued until 3m40s before cutoff because a preservation-stage self-audit found and repaired a material finite-accounting overclaim; preservation then took priority before the separate midnight audit.  
 **Full telemetry:** `project/research/session_logs/2026-09-20/2026-09-20T23-30-28+01-00.md`.
 
 The normal >=50-minute target does not apply because fewer than 55 minutes were available before the mandatory midnight-audit cutoff.
