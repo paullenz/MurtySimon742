@@ -1,0 +1,36 @@
+{
+  "date": "2026-09-20",
+  "status": "diagnostic replay only; finite rows are not graphs and not proof evidence",
+  "correction": "enforce exact physical buffer slack epsilon_b=p-g+2>=0",
+  "original_box": {
+    "p": [2, 20],
+    "x": [5, 30],
+    "omega": [2, 24],
+    "g": "1..x-1"
+  },
+  "corrected_original_box": {
+    "R": {"tested": 121486, "survivors": 86},
+    "Fz0": {"tested": 121486, "survivors": 86},
+    "Fx": {"tested": 121486, "survivors": 17},
+    "Fz1": {"tested": 116204, "survivors": 38}
+  },
+  "superseded_survivor_counts_without_buffer_nonnegativity": {
+    "R": 2821,
+    "Fz0": 2840,
+    "Fx": 691,
+    "Fz1": 2276
+  },
+  "expanded_replay_box": {
+    "p": [2, 30],
+    "x": [5, 60],
+    "omega": [2, 50],
+    "result": "same survivor counts as corrected original box",
+    "survivor_maxima": {
+      "R": {"p": 5, "x": 8, "g": 7, "omega": 10, "k": 4},
+      "Fz0": {"p": 5, "x": 8, "g": 7, "omega": 10, "k": 4},
+      "Fx": {"p": 3, "x": 7, "g": 5, "omega": 7, "k": 3},
+      "Fz1": {"p": 5, "x": 8, "g": 7, "omega": 8, "k": 3}
+    }
+  },
+  "analytic_conclusion": "LARGE_HEAD_Y1_FINITE_ORDER_CLOSURE.md proves n<=33 for every p>=2,x>=5 mixed-y1 survivor; diagnostic counts are confirmation only."
+}
