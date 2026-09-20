@@ -7,39 +7,37 @@
 `X_3` (12 vertices, 32 edges, versus `M(12)=31`) remains the mandatory negative control. The false all-order 2019 Dailly–Foucaud–Hansberg Conjecture 3 is not the target. The mixed `{4,5}` selected-excess ladder is closed. First-proof priority on Erdős #742 is not the optimization target.
 
 <!-- CURRENT-STATUS:START -->
-CHECKPOINT CLASS: `SECOND_STRICT_MIXED_Y1_OUTSIDE_INDEPENDENCE_K1_SCALING_2026_09_20`
+CHECKPOINT CLASS: `SECOND_STRICT_TWO_X_HOLE_FINITE_ORDER_CLOSURE_2026_09_20`
 
 WORK MODE: `MATH_AFTER_AUDIT_GATE`
 
-INSPECTED_PREDECESSOR_HEAD: `114c050f1e409633f66d7b24089c1397450d21d5`
+INSPECTED_PREDECESSOR_HEAD: `338210b5066502d22d332e3ace2bab2627382a20`
 
-LATEST_NEW_COMMITS: `c4c117686614c37d70eea8775a2dc151eb373ede` (analytic mixed `(1,1)` closure for `y>=2`), `3d06a2b7b0d558681fd8d72a37abca507580d78b` (two-X-hole two-foot/core-saturation normal form), `114c050f1e409633f66d7b24089c1397450d21d5` (large-head mixed `y=1` classification), `7f0b54e8d96afc5014ef3d4f323d46f36aedf04c` (hostile Fz extension and all-case X-independence), `26090648e7ec0d0f4d4230f6773ab1aa108c118b` (case-specific y=1 physical bills), `e1148d97f022c85af19311f336bfda46258a9aa9` (exceptional-Fz cross-class edge closure), `98bfea37307c59ce6cfc24209cc949aa64c03627` / `512c4c534e44d9ff94ff710762f26a65129d8ee9` (updated diagnostic/replay), `881512041ecbd738733b93a0a557f2cde0369ecb` (exact unbounded k=1 scalar scaling diagnosis).
+LATEST_NEW_COMMITS: `e1a7228aa338a528711e57bc888e298dae26d092` (physical forward-routing surcharge for represented hole-code classes), `98a10ab51cb80980f6cce10cbdbf440dd784cd87` (bounded distinguished-resource closure for x>=14), `ab3e45169516c758fa55fb5e92cee07281dacd3c` (complete two-X-hole analytic closure for x>=16), `9ccf6be0f64dd5ad888cd84bdd476988a8cb50ec` (global finite-order bound n<=816), `9cbfb9123ad90ef866768b996a5df88e4417a318` (hostile margin/slot audit), `7d9bdb5ee6956221208788883154a046077c1c63` / `0f1a19d2f0af16270ef4d9f4776bcb2da602da43` (independent diagnostic checker and replay output).
 
 LAST VERIFIED/AUDITED BASE: `The 20 September daily red-team audit remains binding. P1/P2 semantics are repaired; the raw same-code criticality theorem and ordered (source,witness) injection were independently re-derived and passed; X_3 remains mandatory; exact pair-local Ccap_P/(ONE-P)/(CROWD) remain load-bearing whenever invoked; finite scans remain diagnostics only; and bounded actual-D2C regression still has zero positive rigid complete Hall-cut fixtures with x>=3. The zero-positive-fixture rigid-cut interface remains the dominant global audit risk.`
 
-FIRST_STRICT_STATUS: `Same-session internal candidate closure: Type F is impossible; the remaining all-R first-strict branch collapses to radius one, one code class and the already-closed maximal-m1 all-R contradiction. Thus the unloaded first-strict layer epsilon_b=p-g+1 is internally closed and the live unloaded floor is epsilon_b>=p-g+2. This remains provisional until the next independent adversarial replay.`
+FIRST_STRICT_STATUS: `Same-session candidate closure remains: Type F is impossible and the remaining all-R first-strict arm collapses to the already-closed maximal-m1 all-R contradiction, giving the provisional unloaded floor epsilon_b>=p-g+2. This still awaits the next daily adversarial replay.`
 
-SECOND_STRICT_SPLIT: `At exact equality epsilon_b=p-g+2 the physical defect split is (h_X,h_o)=(2,0),(1,1),(0,2). The (0,2) subtype is internally closed. The mixed (1,1) subtype and the two-X-hole (2,0) subtype are the live branches.`
+SECOND_STRICT_SPLIT: `At epsilon_b=p-g+2 the exact physical split is (h_X,h_o)=(2,0),(1,1),(0,2). The (0,2) arm is internally closed. Mixed (1,1), y>=2 is internally closed analytically. The large-head mixed y=1 tail and the two-X-hole (2,0) arm were the live branches at the start of this invocation.`
 
-MIXED_YGE2_STATUS: `Commit c4c117... gives an analytic internal closure of mixed (1,1) for y>=2. Its chain normalizes z_0 to code bar d, collapses all X to one radius-one code, proves G[X] and G[U_o] edgeless, saturates the common-core head map to k=x-1,g=1, and combines exact score/rooted bounds into 4B+A=-(F+2P)/2 with F+2P>0. This invocation independently reconstructed the COMB identity and replayed 313,348 broad-box integer rows with zero identity/positivity failures; minimum F+2P in that audit box was 6. This is arithmetic confirmation, not a substitute for hostile review of all witness-location exclusions.`
+MIXED_Y1_STATUS: `For p>=2,x>=5 the mixed y=1 branch is reduced to R/Fx/Fz with e(X)=0. Physical U-side work gives G[U_o]=empty in no-exception Fz, Fx, and exceptional Fz; the R arm has only one possible z_0--U_o^* edge. Exceptional Fz has N_X(z_0)={h}, N_Y(z_0)={y}, N_U(z_0)=emptyset, epsilon_z0>=p+k+omega-2, r>=x+2. Its total-score/rooted system has a genuine unbounded scalar family k=1, omega=x-p+t, lambda=p+t. That family still requires pair-local/Hall or rigid-interface work; do not attack it by merely enlarging the old scalar scan.`
 
-MIXED_Y1_STATUS: `For p>=2,x>=5 the predecessor 114c050... classifies y=1 into R, Fx and Fz according to the raw certificate of a_0y. New work 7f0b54... proves Fz also has G[X]=empty: the radius-one C-class is independent and a direct two-orientation exhaustion kills every edge from the possible higher-radius Fz head h to a C-vertex. Therefore every large-head y=1 mixed geometry now satisfies e(X)=0. If the exceptional Fz head exists, N_X(z_0)={h}, N_Y(z_0)={y}, N_U(z_0)=emptyset, epsilon_z0>=p+k+omega-2, and r>=x+2. The attempted iterative attack on z_0h/z_0y is dead because q_j/a_0 recycle as certificates; this obstruction is preserved.`
+TWO_X_HOLE_PREDECESSOR: `Before this invocation, commits 19459d45..., e37cfa5e..., f7a36e13..., 338210b5... had advanced the (2,0) branch beyond the stale handoff: exact X-slack accounting; localization of every internal U_o edge to the two physical hole-code witness classes; analytic closure when neither hole code is represented; and the class routing capacity m_C s_C<=2m_C+2s_C, strengthened to m_C s_C<=m_C+2s_C for a represented physical hole code.`
 
-Y1_PHYSICAL_BILLS: `Commit 26090648... derives case-specific U-side bills. R has G[U_o^*]=empty and d_{U_o^*}(z_0)<=1; no-exception Fz and Fx have G[U_o]=empty; Fx also forces the complementary exceptional head t anticomplete to U_o^*, giving epsilon_t>=p+k+omega-3 and L_X>=x(p+k)+omega-2. Exceptional Fz initially split U_o^* into D and E=bar c(h) classes. Commit e1148d97... then proves every D--E outside edge impossible by raw same-code/complementary-witness criticality, so exceptional Fz also has G[U_o]=empty. Its strengthened bills are q<=(k+1)(omega-1), E(U_o^*)>=(omega-1)[p-x+omega]_+, epsilon_z0>=p+k+omega-2, r>=x+2.`
+TWO_X_HOLE_FORWARD_SURCHARGE: `New theorem e1a7228... converts the hole-code routing capacity into physical score/rooted cost. For a represented hole code C with witness population m_C and agreement size s_C, at least F_C=s_C[m_C-2]_+ distinct witnesses must forward-route through the opposite physical hole. Each such route forces one additional X--U_o hole and one additional core--U_o hole, disjoint from the J-incidence holes. With F_H=sum F_C: E_core>=x(p+x-1)+L+F_H; L_X>=x(p+x-y)-(x-2)+L+F_H-2e_X; q<=(x+1)omega-L-F_H+M_H; E(U_o)>=[omega(p-x)+2L+2F_H]_+. Extreme s_C=1 head classes also force the precise local Hamming-slot floor r>=x+y[1+ceil(N_ext(p-2)/x)].`
 
-Y1_DIAGNOSTIC: `The current abstract necessary-condition checker (finite diagnostic only) on 2<=p<=20,5<=x<=30,2<=omega<=24,1<=g<x gives: R 2,821 survivors / 178,010 tested; no-exception Fz 2,840 / 178,010; Fx 691 / 178,010; exceptional Fz 2,276 / 171,237. The earlier exceptional-Fz 12,109 count with an alpha*beta cross-edge allowance is superseded because the cross-class edge mechanism is now proved impossible. These are parameter rows, not graphs.`
+TWO_X_HOLE_EVENTUAL_CLOSURE: `Let Phi be the exact positive-combination obstruction from the no-hole-code proof and M=M_H the distinguished hole-code witness resource. General density rebates give A<=A0+2M and B<=B0+3M. Forward traffic sharpens these to A<=A0+2M-2F_H, B<=B0+3M-2F_H, so every survivor needs Phi<=11M-8F_H. For each represented hole class, 11m-8s[m-2]_+<=3m+16. Distinct physical hole codes therefore give Phi<=3omega+32. Completing the square yields Phi-3omega>32 for every x>=16, so the whole core-saturated two-X-hole branch is analytically impossible for x>=16. Same-hole-code configurations are already in the bounded M<=4 arm and close for x>=14.`
 
-UNBOUNDED_SCALAR_FAMILY: `The exceptional-Fz total-score/rooted system is genuinely unbounded, not merely a finite-box tail. Commit 88151204... isolates k=1 (g=x-1), omega=x-p+t, t>=0. Then lambda=p+t and the exact scalar margins reduce to 2A=eps-p^2+2pt-t^2+4t+2x-7 and 2B=eps-p^2-t^2+4t+4x-11. For every fixed admissible (p,t), sufficiently large x satisfies both. Therefore no argument using only the present total-score floor plus rooted q/E_U ceiling can close exceptional Fz. This is the daily-audit stop/pivot condition: the next attack must use information discarded by scalar aggregation, especially exact pair-local Ccap_P/(ONE-P)/(CROWD), selected/residual Hall structure, or a direct nonrealizability proof of the rigid k=1 interface.`
+TWO_X_HOLE_FINITE_ORDER: `The remaining 4<=x<=15 head tail is itself globally bounded. The universal necessary condition Phi<=11M and M<=2omega combine with the positive-orthant quadratic floor Q>=7(p+omega)^2/8 and lambda>=0 to give p+omega<=(8/7)(10x+22)<=196. Then y<=2p+omega<=392 and the rooted partition identity n=2x+y+2p+omega+2 gives the coarse explicit bound n<=816. Thus, conditional on the current structural chain, the exact second-strict two-X-hole arm is impossible for n>=817. This is an analytic finite-order reduction, not a bounded-scan inference.`
 
-TWO_X_HOLE_STATUS: `Commit 3d06a2b... establishes the exact two-foot routing normal form in (2,0). For y>=2,x>=4 every X-vertex is a common-core head, so k=x,g=0 and W_0<->X is a bijection. Every outside vertex certifies a real buffer head and forces a distinct core--outside hole, giving E_core>=x(p+x-1)+|U_o|. Each head agreement coordinate must route through one of the two physical X-hole feet: an adjacent foot reverse-covers only its agreement coordinates; a nonadjacent foot forward-covers at most one coordinate and forces Hamming distance one. This branch remains open.`
+TWO_X_HOLE_AUDIT: `A same-session hostile check tested the main possible accounting failure: whether allowing internal X-edges could lower the baseline rooted requirement r>=x+y. The audited local Hamming theorem gives r_z>=1 for every A-vertex solely from the complete unequal-code X--Y cut, regardless of internal X-density. Therefore the 2M/3M and forward-surcharge margin coefficients survive this check. An independent checker replayed 3,608,425 square-identity rows; the minimum sampled Phi-3omega gap for x>=16 was 47 at (x,p,omega,y)=(16,1,30,4), while the proof uses analytic completed-square bounds.`
 
-DEPENDENCY_CLEANUP: `Earlier first-strict maximal-m1/m2/F-R reservoir calculations remain historical below an internally closed parent. The second-strict packages are same-session candidates and must not be promoted to README/public theorem status before adversarial replay. Exact pair-local score must not be replaced by total score before its geometry is extracted.`
+DEPENDENCY_CLEANUP: `The two-X-hole branch is now a same-session candidate finite-order arm rather than a live asymptotic family. Do not promote it to README/public theorem status until independent adversarial replay. Earlier first-strict m=1/m=2/F-R reservoir calculations remain historical below an internally closed parent. Exact pair-local score must not be replaced by total score before geometry is extracted in branches where pair capacity remains load-bearing.`
 
-UNPRESERVED_WORK: `None from this invocation. The hostile y=1 extension, physical-bills theorem, exceptional-Fz cross-class closure, diagnostics, and exact k=1 scaling diagnosis are committed.`
+DEFERRED_ADMIN: `README intentionally remains at the independently audited 20 September checkpoint. The new two-X-hole closures are same-session candidates and should be promoted only after red-team replay.`
 
-DEFERRED_ADMIN: `README intentionally remains at the independently audited 20 September public checkpoint. Historical invalidations and superseded counts remain preserved in their native files.`
-
-NEXT_ACTION: `First hostile-audit e1148d97..., especially the claim that a D--E U_o edge forces an A witness of complementary source code and that the unique H witness h is excluded by its fixed buffer-certificate singleton. If it passes, do NOT enlarge the scalar scan: the exceptional-Fz k=1 family is analytically unbounded under current total-score/rooted inequalities. Attack that family with the exact pair-local Ccap_P/(ONE-P)/(CROWD) and selected/residual Hall ledger before aggregation, or try to prove the k=1 rigid-cut interface itself unrealizable. In parallel, independently replay the Fz h--C exclusion and continue the (2,0) two-X-hole branch by combining its two-foot support normal form with the core-head bijection to bound code-class multiplicities and outside-witness reuse. Preserve x=3,4 mixed y=1 as explicit small-head tails. Loaded-buffer, z=2 and four-exception routes remain subordinate unless these exact second-strict arms stall.`
+NEXT_ACTION: `First independently hostile-audit the new two-X-hole chain, especially (i) forward-route hole disjointness, (ii) the margin coefficients A<=A0+2M-2F_H and B<=B0+3M-2F_H, and (iii) Phi<=11M as a general pre-specialization inequality. If it passes, treat the (2,0) arm as finite-order (n<=816) for eventual work and return the main asymptotic attack to mixed y=1 exceptional Fz: characterize the k=1, omega=x-p+t family using exact pair-local Ccap_P/(ONE-P)/(CROWD), selected/residual Hall data, or prove the rigid k=1 interface nonrealizable. Preserve x=3,4 mixed y=1 and other non-exception y=1 cases as explicit tails until analytically bounded. Loaded-buffer, z=2 and the four-exception route remain subordinate unless the exact second-strict arms are exhausted.`
 <!-- CURRENT-STATUS:END -->
 
 ---
@@ -53,66 +51,52 @@ Still binding:
 - repaired P1/P2 semantics;
 - `X_3` mandatory negative control;
 - zero positive actual-D2C rigid complete Hall cuts with `x>=3` in bounded regression;
-- exact pair-local `Ccap_P`, `(ONE-P)`, `(CROWD)` whenever the pair machinery is invoked;
+- exact pair-local `Ccap_P`, `(ONE-P)`, `(CROWD)` whenever pair machinery is invoked;
 - finite parameter rows are diagnostics only;
 - superseded alpha/beta evidence, invalid matched-only common-buffer orientation and historical finite counts stay superseded;
-- same-hour closures remain provisional until independently re-derived.
+- same-session closures remain provisional until independently replayed.
 
 Raw same-code audit: `project/research/post_ms/2026-09-20-same-code-raw-criticality-audit-v1/SAME_CODE_RAW_CRITICALITY_AUDIT.md` — passed.
 
 ## Live structural chain
 
 `audited rigid one-code setup`
-`-> Type-F elimination`
-`-> internal first-strict all-R closure`
+`-> provisional first-strict closure`
 `-> unloaded floor epsilon_b>=p-g+2`
 `-> exact second-strict split`
 `-> (0,2) empty`
-`-> mixed (1,1), y>=2 internally closed analytically`
-`-> mixed y=1 large-head R/Fx/Fz`
-`-> e(X)=0 in all three`
-`-> physical U-side classification`
-`-> exceptional Fz D--E cross edges impossible`
-`-> G[U_o]=empty in every exceptional-Fz large-head geometry`
-`-> scalar survivor family diagnosed exactly as unbounded k=1 scaling`
-`-> live task moves upstream to pair-local/Hall or rigid-interface nonrealizability`
-`|| two-X-hole (2,0): g=0 core saturation + exact two-foot routing remains live.`
+`-> mixed (1,1), y>=2 internally closed`
+`-> mixed y=1 R/Fx/Fz; exceptional Fz has explicit unbounded k=1 scalar family`
+`|| (2,0) two-X-hole -> core saturation -> physical X/U_o edge localization -> represented-hole routing -> forward surcharge -> x>=16 analytic closure -> n<=816 finite-order tail.`
 
-Key current files:
+Key new two-X-hole files:
 
-- `project/research/post_ms/2026-09-20-daily-red-team-audit-v1/DAILY_RED_TEAM_AUDIT.md`
-- `project/research/post_ms/2026-09-20-same-code-raw-criticality-audit-v1/SAME_CODE_RAW_CRITICALITY_AUDIT.md`
-- `project/research/post_ms/2026-09-20-second-strict-mixed-yge2-closure-v1/SECOND_STRICT_MIXED_YGE2_CLOSURE.md`
-- `project/research/post_ms/2026-09-20-second-strict-two-x-hole-v1/SECOND_STRICT_TWO_X_HOLE_NORMAL_FORM.md`
-- `project/research/post_ms/2026-09-20-second-strict-mixed-y1-v1/SECOND_STRICT_MIXED_Y1_CLASSIFICATION.md`
-- `project/research/post_ms/2026-09-20-second-strict-y1-hostile-extension-v1/SECOND_STRICT_Y1_HOSTILE_EXTENSION.md`
-- `project/research/post_ms/2026-09-20-second-strict-y1-physical-bills-v1/SECOND_STRICT_Y1_PHYSICAL_BILLS.md`
-- `project/research/post_ms/2026-09-20-second-strict-y1-physical-bills-v1/EXCEPTIONAL_FZ_CROSS_CLASS_CLOSURE.md`
-- `project/research/post_ms/2026-09-20-second-strict-y1-physical-bills-v1/Y1_PHYSICAL_BILLS_DIAGNOSTIC.md`
-- `project/research/post_ms/2026-09-20-second-strict-y1-physical-bills-v1/EXCEPTIONAL_FZ_K1_SCALING.md`
+- `project/research/post_ms/2026-09-20-second-strict-two-x-hole-v1/TWO_X_HOLE_MATCHED_ROUTING_CAPACITY.md`
+- `project/research/post_ms/2026-09-20-second-strict-two-x-hole-v1/TWO_X_HOLE_HOLE_CLASS_FORWARD_SURCHARGE.md`
+- `project/research/post_ms/2026-09-20-second-strict-two-x-hole-v1/TWO_X_HOLE_BOUNDED_HOLE_RESOURCE_CLOSURE.md`
+- `project/research/post_ms/2026-09-20-second-strict-two-x-hole-v1/TWO_X_HOLE_EVENTUAL_X16_CLOSURE.md`
+- `project/research/post_ms/2026-09-20-second-strict-two-x-hole-v1/TWO_X_HOLE_FINITE_ORDER_BOUND.md`
+- `project/research/post_ms/2026-09-20-second-strict-two-x-hole-v1/TWO_X_HOLE_EVENTUAL_CLOSURE_MARGIN_AUDIT.md`
+- `project/research/post_ms/2026-09-20-second-strict-two-x-hole-v1/check_two_x_hole_eventual_closure.py`
+- `project/research/post_ms/2026-09-20-second-strict-two-x-hole-v1/TWO_X_HOLE_EVENTUAL_CLOSURE_CHECK.json`
 
 ## Session ledger — current invocation
 
-**Invocation start:** 06:29:19 BST.  
-**Planned preservation cutoff:** 06:55:38 BST.
+**Invocation start:** 07:27:41 BST.  
+**Planned preservation cutoff:** 07:55:38 BST.
 
 Substantive units completed:
 
-1. reconciled the stale handoff against the newer second-strict commits and reread the binding daily audit/README before forward work;
-2. independently reconstructed the mixed-y>=2 algebraic endgame and verified `4B+A=-(F+2P)/2` exactly;
-3. built/replayed an independent 313,348-row diagnostic with zero identity or positivity failures and preserved it;
-4. hostile-reread the large-head y=1 R/Fx/Fz trichotomy and found no immediate omitted witness channel;
-5. found and preserved the certificate-recycling obstruction on exceptional-Fz `z_0h` and `z_0y`;
-6. derived the exceptional-Fz physical isolation `N_X(z_0)={h}`, `N_Y(z_0)={y}`, `N_U(z_0)=emptyset` and `epsilon_z0>=p+k+omega-2`;
-7. proved the Fz radius-one C-class independent;
-8. performed a full two-orientation criticality exhaustion for a hypothetical h--C edge, proving `G[X]=emptyset` in Fz and hence in all large-head y=1 cases;
-9. extracted the stronger exceptional-Fz rooted floor `r>=x+2`;
-10. derived case-specific physical U-side bills for R, no-exception Fz and Fx, including U_o independence in Fz0/Fx, the R one-edge cap, and the strengthened Fx exceptional-head slack;
-11. constructed and independently replayed the y=1 physical-bills checker, identifying exceptional Fz as the initially broadest scalar tail;
-12. attacked that tail structurally and proved D-coded and E=bar c(h)-coded ordinary outside vertices cannot be adjacent, eliminating the apparent cross-class `alpha*beta` U-edge resource;
-13. strengthened exceptional Fz to `G[U_o]=empty`, updated its q/slack bills, and independently replayed the same diagnostic box: its survivor count fell from the superseded 12,109 to 2,276;
-14. diagnosed the remaining exceptional-Fz scalar tail analytically: k=1, omega=x-p+t gives exact margins `(K1-A)/(K1-B)`, proving the current scalar system has a genuine unbounded family and forcing the next attack back to pair-local/Hall geometry rather than another weak total-score inequality.
+1. reread `CURRENT_STATE.md`, README, the 20 September daily red-team audit and the latest commit chain before forward work; reconciled the stale handoff against `19459d45...`, `e37cfa5e...`, `f7a36e13...`, and `338210b5...`;
+2. hostile-checked the new class-routing inequality and extracted a quantitative forward-routing floor `F_C=s_C[m_C-2]_+` for represented physical hole-code classes;
+3. proved every forced forward route creates two new located physical holes, producing simultaneous common-core, X-slack, outside-slack and q surcharges;
+4. derived the extreme-radius Hamming-slot floor for the only unbounded distinguished witness regime;
+5. combined the exact positive-combination obstruction with `M_H<=8` to close the bounded distinguished-resource arm analytically for `x>=14`;
+6. optimized the forward-surcharge rebate per hole class, obtaining `11m-8F_C<=3m+16`, and completed the entire two-X-hole branch analytically for `x>=16`;
+7. derived the coercive quadratic bound `Phi>=7(p+omega)^2/8-10x(p+omega)` and converted the remaining `x<=15` tail into the explicit global bounds `p+omega<=196`, `y<=392`, `n<=816`;
+8. performed a hostile local-slot audit of the represented-resource margin accounting and confirmed that internal X-edges do not invalidate `r>=x+y`;
+9. built an independent diagnostic checker and replayed 3,608,425 exact square-identity rows plus the routing/net inequalities, with minimum sampled `Phi-3omega=47` for `x>=16`; preserved the replay output separately.
 
-**Live unfinished line:** independently hostile-audit the exceptional-Fz D--E cross-edge closure; then attack the exact k=1 scaling family with pair-local Ccap_P/(ONE-P)/(CROWD) and the selected/residual Hall ledger, or prove the rigid k=1 interface nonrealizable. In parallel, the two-X-hole support/core-bijection branch remains structurally live.
+**Live unfinished line:** independent adversarial replay of the forward-route physical holes and the `Phi<=11M-8F_H` margin combination; if it survives, the two-X-hole arm is finite-order and the main asymptotic frontier returns to exceptional-Fz `k=1, omega=x-p+t`, where pair-local/Hall geometry or rigid-interface nonrealizability is required.
 
-**Stop reason:** preservation phase reached after a shortened late-start window; no mathematical blocker and no clean-checkpoint early stop. The main forward line is explicitly identified rather than hidden behind another finite scan.
+**Stop reason:** preservation phase for the shortened late-start window; no mathematical blocker and no clean-checkpoint early stop. Forward work continued through the analytic finite-order reduction and an independent margin/checker audit before handoff.
