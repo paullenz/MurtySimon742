@@ -7,19 +7,23 @@
 `X_3` (12 vertices, 32 edges, versus `M(12)=31`) remains the mandatory negative control. The false all-order 2019 Dailly–Foucaud–Hansberg Conjecture 3 is not the target. The mixed `{4,5}` selected-excess ladder is closed. First-proof priority on Erdős #742 is not the optimization target.
 
 <!-- CURRENT-STATUS:START -->
-CHECKPOINT CLASS: `ALL_R_GRID_RESIDUAL_MAXIMIZER_2026_09_20`
+CHECKPOINT CLASS: `FIRST_STRICT_MAXIMAL_SELECTION_M1_Y1_LITERAL_POINT_2026_09_20`
 
 WORK MODE: `MATH_AFTER_AUDIT_GATE`
 
-INSPECTED PREDECESSOR: `c3a82e10a89406770d71ed613671296ee7f0f302`
+INSPECTED PREDECESSOR: `3ff8c1535c5cae08344cef1c4e9fe943273ea155`
 
-LAST VERIFIED RESULT: `The 20 September daily red-team audit remains binding. Its mandatory same-code raw-criticality / ordered (source,witness) audit passed independently at c3a82e10.... Inside the literal all-R equality pinch this run proves g=x-k>=1; exact m-sensitive internal-witness score/hole bills; fixed-head C/D classification of every X--Y certificate for y>=2; a residual g-by-y certificate-grid dichotomy s_D>=g OR s_C>=y; full independence of the entire outside cross-witness population; d>=m+min(g,y); epsilon_z+epsilon_{a_0}>=2p+k+u-y+m+min(g,y)-2; and a q surcharge of at least binom(min(g,y),2) physical U--U holes. Type-aware cross loads give Z_X>=Z_X^0+NJ+e+m+R_C+s_D(x-1) and Z>=Z_0+NJ+e+m(y+1)+gy+s_C(y-1)+s_D(x-1). In y=1, the edge a_0y cannot use the special matched foot and forces one outside bar-C witness. The grid structure compresses the rooted residual condition to a one-dimensional d-gate R_grid(d,m)>=a. Its exact first differences show the maximum occurs only at the score-switch neighbours and d=T-2,T-1 (with clipped endpoints), reducing the d-search to a constant-size candidate set independent of u. This maximizer-location algebra was independently brute-force checked over T<60, all lower endpoints, -10<=A<100 and 0<=phi<50 with zero mismatches; a repository checker is preserved.`
+LAST VERIFIED/AUDITED BASE: `The 20 September daily red-team audit remains binding. The audit-mandated raw same-code criticality / ordered (source,witness) injection audit passed independently. Subsequent pre-invocation commits proved generic U_o--Y anticompleteness, the outside-U reverse fan, the complete m=1 all-R collapse, and the surviving all-F reduction. These remain conditional on the rigid first-strict hypotheses; the bounded actual-D2C regression still has zero positive rigid complete Hall-cut fixtures with x>=3.`
 
-UNPRESERVED WORK: `None. Live package: project/research/post_ms/2026-09-20-all-r-exact-local-optimization-v1/. Key files: ALL_R_EXACT_LOCAL_OPTIMIZATION.md; CROSS_EDGE_RESERVOIR_SHARPENING.md; TYPED_CROSS_HOLE_LEDGER.md; CROSS_GRID_COVER_DICHOTOMY.md; CROSS_WITNESS_INDEPENDENCE.md; CROSS_WITNESS_FULL_INDEPENDENCE.md; GRID_CONSERVATION_COROLLARY.md; Y1_SPECIAL_FOOT_OBSTRUCTION.md; GRID_RESIDUAL_GATE.md; GRID_RESIDUAL_MAXIMIZER.md; check_grid_residual_maximizer.py; plus exact-local/cross-reservoir diagnostics.`
+NEW INTERNAL CANDIDATE RESULTS THIS INVOCATION: `In the m=1 all-F geometry every outside vertex has at most one X' neighbour and misses a_0, so d_A(w)<=1; the whole outside population pays E_{U_o}>=u_o(p+u_o-2), while q<=(k+1)u_o-k. This gives an exact completed-square population gate (T-k-3)^2<=R(p,k,g,y)+eta and removes the old uncontrolled fixed-shape T tail. More importantly, the generic reverse fan allows a canonical MAXIMAL selected-witness convention: choose valid buffer-edge representatives to maximize the number m of distinct physical outside witnesses. Under that convention m=1 forces |U_o|=1, i.e. T=0 and u=k+2. In the surviving all-F m=1 branch this gives q=1 and exact E_U=(k+1)(p+k)+(p-g+1), hence exact r=k^2+ky+gk+gp+g-p^2+py-p+2y. For y>=2, raw same-code/internal-X analysis gives G[X'] empty, d_{X'}(a_0)<=1, e(X)<=g<=1; combining the exact degree ledger, total score cap and r>=0 closes both head-saturated cases g=0,1 analytically. The only maximal-selection m=1 slice left has y=1. Exact score plus rooted/Hamming constraints reduce that slice to the single parameter point (p,k,g,x,y,u,lambda)=(3,1,2,3,1,3,4), with q=1, r=5 and e(X)=1.`
 
-DEFERRED ADMIN: `README intentionally remains at the independently audited 20 September checkpoint; do not promote same-hour conditional sharpenings before independent replay/adversarial review. The inherited dead t-choice output in check_all_r_pinch_local_feedback.py remains low-priority reviewer-facing cleanup.`
+CRITICAL CAVEAT: `The maximal-witness normalization is a new selected-representative convention and is not yet independently adversarially audited. It appears compatible with the repaired P2 semantics because P2 is explicitly selected-representative uniqueness, not raw-witness uniqueness. Before publication-level use, the next audit must check that every downstream Hall/source-tuple statement invoked after re-selection is invariant under changing valid representatives. Until that passes, the maximal-selection closure is internal candidate mathematics, not an externally verified graph theorem.`
 
-NEXT_ACTION: `First independently replay the new committed exact-local/cross-reservoir diagnostics and build a total typed checker retaining (d,m,e,s_C,s_D,R_C,R_D), ZX-TYPED/Z-TYPED and full CROSS-INDEP. Analytically substitute the constant-size d-maximizer candidates from GRID_RESIDUAL_MAXIMIZER.md into R-GRID and classify any unbounded parameter families rather than scanning d. Structurally split row-saturated and column-saturated residual-grid regimes and seek genuinely new multi-witness interactions; do not reuse the dead witness--head iteration because it recycles the original source certificate. Keep y=1 separate. After this local arm reaches a natural closure, return to the audit's zero-positive-fixture rigid complete-cut interface. Exact pair-local Ccap_P, ONE-P and CROWD remain local. No bounded scan may be promoted to an asymptotic threshold. Larger reservoirs, loaded-buffer, z=2 and four-exception work stay subordinate.`
+UNPRESERVED WORK: `None. New package is project/research/post_ms/2026-09-20-first-strict-buffer-u-criticality-collapse-v1/. New files this invocation: ALL_F_OUTSIDE_LAYER_COLLAPSE.md; ALL_F_OUTSIDE_SCORE_GATE.md; MAXIMAL_OUTSIDE_WITNESS_SELECTION.md; MAXIMAL_SELECTION_GENERIC.md; MAXIMAL_M1_EXACT_LEDGER.md; MAXIMAL_M1_X_COLLAPSE.md; MAXIMAL_M1_YGE2_CLOSURE.md; MAXIMAL_M1_Y1_PINCH.md.`
+
+DEFERRED ADMIN: `README intentionally remains at the independently audited 20 September checkpoint. Do not promote these same-hour candidate closures publicly before the maximal-selection invariance check / next adversarial audit. Historical all-R d/J/grid work remains preserved as valid conditional mathematics on a parent m=1 all-R geometry now proved empty; positive-T m=1 all-F diagnostics remain valid for non-maximal representative choices but are no longer the preferred graph-level partition if maximal selection survives audit.`
+
+NEXT_ACTION: `First attack the single literal maximal-m1 y=1 point (p,k,g,x,y,u,lambda)=(3,1,2,3,1,3,4) directly from raw criticality / actual graph reconstruction. The geometry has one core vertex, one outside witness, q=1, r=5, X' independent and exactly one a_0--X' edge. Attempt complete witness-location reconstruction and, if possible, build/check the resulting actual graph as a hostile fixture; this also directly addresses the audit's zero-positive-fixture risk. In parallel or immediately after, independently audit the maximal-selection representative normalization against every downstream selected/Hall theorem. If the literal point is impossible and the normalization passes, maximal m=1 is completely closed and the live first-strict frontier becomes maximal m>=2. Do not reopen the historical all-R grid tail, loaded buffer, z=2 or four-exception routes first. Keep exact pair-local Ccap_P/(ONE-P)/(CROWD) local and retain X_3.`
 <!-- CURRENT-STATUS:END -->
 
 ---
@@ -28,88 +32,66 @@ NEXT_ACTION: `First independently replay the new committed exact-local/cross-res
 
 Latest daily audit: `project/research/post_ms/2026-09-20-daily-red-team-audit-v1/DAILY_RED_TEAM_AUDIT.md`.
 
-Still binding: repaired P1/P2 semantics; `X_3`; zero positive actual-D2C rigid complete Hall cuts with `x>=3` in bounded regression; exact pair-local `Ccap_P`, `(ONE-P)`, `(CROWD)`; finite rows are diagnostics only; superseded alpha/beta evidence, invalid matched-only common-buffer orientation, and historical 188,912 / 179,735 / 178,572 counts stay superseded.
+Still binding:
 
-The audit-mandated same-code raw-criticality proof at `project/research/post_ms/2026-09-20-same-code-raw-criticality-audit-v1/SAME_CODE_RAW_CRITICALITY_AUDIT.md` passed.
+- repaired P1/P2 semantics;
+- `X_3` as mandatory negative control;
+- zero positive actual-D2C rigid complete Hall cuts with `x>=3` in bounded regression;
+- exact pair-local `Ccap_P`, `(ONE-P)`, `(CROWD)`;
+- finite parameter rows are diagnostics only;
+- superseded alpha/beta evidence, invalid matched-only common-buffer orientation and historical 188,912 / 179,735 / 178,572 counts remain superseded;
+- same-hour theorem velocity is itself an audit risk: new closures remain provisional until independently re-derived.
 
-## Live formulas
+The audit-mandated raw proof is preserved at `project/research/post_ms/2026-09-20-same-code-raw-criticality-audit-v1/SAME_CODE_RAW_CRITICALITY_AUDIT.md` and passed.
 
-For y>=2 put `h=min(g,y)`, `T=u-k-2`, `J=T-d`. Internal witnesses: `m<=d`, `m<=e<=m(x-2)` for m>0, `P_int=[e-m(x-p-2)]_+`.
+## Live first-strict chain
 
-Residual certificate grid:
+The current internal chain is:
 
-`R_C+R_D=gy`, `s_C<=R_C<=s_C g`, `s_D<=R_D<=s_D y`, `s_D>=g OR s_C>=y`, `m+s_C+s_D<=d`.
+`audited rigid first-strict unique-hole branch`
+`-> U_o--Y anticompleteness`
+`-> every b--U_o edge reverse-certified through X'`
+`-> one-witness polarization`
+`-> all-R m=1 empty`
+`-> all-F m=1`
+`-> maximal selected-witness normalization (PROVISIONAL AUDIT GATE)`
+`-> m=1 => U_o={z}, T=0, q=1, exact U score`
+`-> y>=2 empty`
+`-> y=1 single literal parameter point`.
 
-Type-aware bills:
+Key exact formulas under maximal-selection m=1:
 
-`P_cross >= [R_C-s_C[x-p+1]_+]_+ + R_D+s_D(p-y-1)`,
+`u=k+2`, `q=1`,
 
-`epsilon_{a_0}>=p+u-y-d+m+s_C+s_D-1`,
+`E_U=(k+1)(p+k)+(p-g+1)`,
 
-`Z_X>=Z_X^0+NJ+e+m+R_C+s_D(x-1)`,
+`r=k^2+ky+gk+gp+g-p^2+py-p+2y`.
 
-`Z>=Z_0+NJ+e+m(y+1)+gy+s_C(y-1)+s_D(x-1)`,
+For the final y=1 point:
 
-`q<=binom(u,2)-binom(k+1,2)-k-d-binom(J,2)-binom(s_C+s_D,2)`.
+`(p,k,g,x,y,u,lambda)=(3,1,2,3,1,3,4)`,
 
-Compact grid bills:
+`q=1`, `r=5`, `e(X)=1`.
 
-`d>=m+h`,
+## Session ledger — current invocation
 
-`epsilon_z+epsilon_{a_0}>=2p+k+u-y+m+h-2`,
-
-`q<=Q_grid(d)=binom(u,2)-binom(k+1,2)-k-d-binom(T-d,2)-binom(h,2)`.
-
-With `L_Y=y(p-g+2)`,
-
-`E_U<=C0-max{phi(g),L_Y+p+u-y-d+m+h-1}`.
-
-The rooted identity gives the one-dimensional necessary gate
-
-`a<=R_grid(d,m)=(p-lambda)(p+u)+Q_grid(d)+C0-max{phi(g),L_Y+p+u-y-d+m+h-1}`
-
-for some integer `m+h<=d<=T`.
-
-Let `A=L_Y+p+u-y+m+h-1`. Then
-
-`Q_grid(d+1)-Q_grid(d)=T-d-2`;
-
-when `A-d>=phi(g)`, `R_grid(d+1)-R_grid(d)=T-d-1`;
-
-when `A-d<=phi(g)`, the difference is `T-d-2`.
-
-Hence the maximum needs checking only at clipped values among `floor(A-phi(g))`, `floor(A-phi(g))+1`, `T-2`, `T-1`, plus an endpoint if clipping removes its neighbour.
-
-## Diagnostic evidence labels
-
-Independently audited predecessor: 173,347 equality-pinch rows; 124,528 after the d-based package.
-
-Same-hour provisional: 78,582 total under exact `(d,m,e)` plus crude cross capacity; 71,996 total under type-relaxed cross population/score; focused typed e=0 slice 62,800 after physical holes, 60,552 after grid cover, 58,999 after same-type independence; y=1 mandatory outside witness reduces its slice 4,607 -> 4,523, giving combined focused current e=0 slice 58,915. No total typed count stronger than 71,996 is promoted yet.
-
-## Session ledger
-
-**Invocation start:** ~01:29 BST.  
-**Preservation cutoff:** ~01:55 BST.
+**Invocation start:** ~02:30:56 BST.  
+**Planned preservation cutoff:** ~02:55:38 BST.
 
 Substantive units completed:
 
-1. audit/raw-criticality reconciliation;
-2. `g>=1` core-head gate;
-3. m-sensitive z/a0 conservation;
-4. internal-witness physical `Z_X/Z` ledger;
-5. exact fixed-m load price and Hall gate;
-6. raw complete-cut C/D witness-star classification;
-7. cross/internal witness disjointness and cross slack bill;
-8. typed cross physical-hole ledger;
-9. residual grid-cover dichotomy;
-10. same-type cross-witness independence;
-11. parameter-only grid conservation synthesis;
-12. y=1 special-foot obstruction;
-13. certificate-recycling obstruction for naive witness--head iteration;
-14. full C--D cross-type independence;
-15. grid-compressed one-dimensional rooted residual gate;
-16. exact constant-size candidate classification for the d-maximizer, independently brute-force checked with zero mismatches in the stated range.
+1. proved every outside all-F vertex has X'-degree at most one;
+2. proved the entire all-F outside layer is anticomplete to `a_0`;
+3. converted the whole outside population into quadratic score and linear-q bills;
+4. solved the resulting outside-population score gate as an exact completed square and parity-step concavity law;
+5. observed that one-witness all-F graphs with a second outside vertex admit a two-witness re-selection;
+6. lifted that to a generic maximal-witness normalization upstream of the F/R split: maximal `m=1 => |U_o|=1`;
+7. derived the exact `q=1`, exact U-score and exact rooted-r ledger for maximal m=1;
+8. proved `G[X']` is edgeless in the maximal all-F branch;
+9. proved `d_{X'}(a_0)<=1`, and for y>=2 obtained `e(X)<=g<=1` plus an exact X-score ledger;
+10. analytically closed every maximal-selection m=1 case with `y>=2` using total score plus `r>=0`;
+11. reduced the remaining `y=1` slice to the single literal order-14 rooted parameter point `(3,1,2,3,1,3,4)` with `q=1,r=5,e(X)=1`.
 
-**Live unfinished line:** total typed checker; substitution/classification of the explicit d-maximizer cases; structural interaction in row-saturated/column-saturated regimes.
+**Live unfinished line:** direct raw-criticality reconstruction / hostile actual-graph check of that single y=1 point; independent adversarial verification that maximal representative selection preserves every downstream selected/Hall hypothesis; if both resolve positively for closure, move to maximal `m>=2`.
 
-**Stop reason:** preservation cutoff approached; no mathematical blocker.
+**Stop reason:** preservation cutoff approached; no mathematical blocker. The run did not stop on completion of an intermediate theorem.
