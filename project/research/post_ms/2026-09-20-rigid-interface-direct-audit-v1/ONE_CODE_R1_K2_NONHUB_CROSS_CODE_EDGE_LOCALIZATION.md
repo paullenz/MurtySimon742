@@ -2,7 +2,7 @@
 
 Date: 2026-09-20
 
-Status: **same-session raw re-derivation**, conditional on the rooted coded-layer setup and `J2=empty`. This deliberately derives the needed statement from rooted B-edge criticality rather than extrapolating the same-code theorem. No finite scan is used.
+Status: **same-session raw re-derivation plus accounting correction**, conditional on the rooted coded-layer setup and `J2=empty`. This deliberately derives the needed statement from rooted B-edge criticality rather than extrapolating the same-code theorem. No finite scan is used.
 
 This note materially strengthens the preceding code-class independence result. At the all-radius-one endpoint, two q_j-nonneighbour U-vertices with proper private supports cannot be adjacent **even when their codes are different**.
 
@@ -73,22 +73,30 @@ The preceding private-spoke theorem showed that any D1 sequence approaching the 
 
 A full support `S=I` has size `p-1`. Therefore `L=o(p^2)` permits only `o(p)` full-support D1 vertices. All but o(p) of the linear D1 population lie in P.
 
-If the D1 density is `beta`, the new independent-set bill gives asymptotically
+If the D1 density is beta, the new independent-set bill gives asymptotically
 
 > **`M_U(D1) >= (beta^2/2-o(1))p^2`.**                   `(CE-D1)`
 
-Thus the former cheap D1 endpoint carries an additional quadratic U-edge deficit that cannot be avoided by spreading vertices over distinct singleton or small support codes.
+Thus the formerly permissive distinct-singleton-support model fails: changing the support code does not permit U--U adjacency when neither endpoint has a represented complementary A-code.
 
-This directly invalidates the earlier tentative hostile idea that a near-bijection between D1 vertices and singleton private supports could escape same-code collisions. Distinct codes do not help because neither endpoint has a represented complementary A-code.
+### Accounting caveat
 
-## 5. Strategic consequence
+`(CE-D1)` must **not** simply be added to the predecessor unweighted D-sector lower bound. The D-sector proof already converts the exact sector deficit into a lower bound containing `M_U`, and the same missing D1--D1 pairs can be part of that conversion. The new theorem is therefore primarily a **location theorem**: it forces a quadratic portion of the D1 defect specifically into missing U--U pairs.
 
-The current additive optimizer must be redone with the new D1 independence price. At the coarse R+D1 level, with normalized K-heavy density alpha and D1 density beta=1-alpha, the physical defect now obeys at least
+That location matters because the exact rooted residual inequality weights `M_U` with coefficient two, whereas H--U and Y--U holes enter with coefficient one. Future optimization must retain this coefficient rather than treating `(CE-D1)` as an independent additive `D_phys` term.
 
-`max{alpha^2/3, (1-alpha)/2 + (1-alpha)^2/2}`
+## 5. Weighted strategic consequence
 
-before the newer hub/private-spoke positive terms are added.
+The current D1 optimizer should now be revisited in the exact weighted rooted ledger with the simultaneous constraints
 
-The next step is to optimize this exact two-term envelope, then check whether the minimizing point remains compatible with the weighted rooted/score ceilings. If it still survives, its new R:D1 ratio is the correct literal geometry for further raw-criticality attack.
+- the exact D1 sector identity;
+- `M_U(D1)>=binom(|P_D|,2)`, where `P_D` is the proper-support nonhub D1 population;
+- the q_j-neighbour penalty from the weighted split theorem;
+- the private-support-density penalty from the nonhub spoke theorem;
+- the independent K-heavy conservation bill.
+
+The structural effect is strong even before that optimization: any cheap linear D1 population is pushed toward q_j-nonneighbours and sparse support, but those same conditions make almost the whole D1 population an independent set in U. Thus its unavoidable quadratic defect is now **rooted-weighted in the expensive U-edge currency** rather than freely distributable among H/Y/U sectors.
+
+The next exact calculation should ask whether this location change is enough to rule out the former `(7-sqrt(33))/8` coarse optimizer. If not, the minimizing weighted R:D1 geometry is the correct next raw-criticality target.
 
 Global caveat unchanged: bounded actual-D2C regression still has zero positive rigid complete Hall-cut fixtures with `x>=3`; the theorem is conditional on reaching the coded rigid interface.
