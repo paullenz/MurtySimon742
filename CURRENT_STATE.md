@@ -7,23 +7,29 @@
 `X_3` (12 vertices, 32 edges, versus `M(12)=31`) remains the mandatory negative control. The false all-order 2019 Dailly–Foucaud–Hansberg Conjecture 3 is not the target. The mixed `{4,5}` selected-excess ladder is closed. First-proof priority on Erdős #742 is not the optimization target.
 
 <!-- CURRENT-STATUS:START -->
-CHECKPOINT CLASS: `FIRST_STRICT_MAXIMAL_SELECTION_M1_Y1_LITERAL_POINT_2026_09_20`
+CHECKPOINT CLASS: `FIRST_STRICT_MAXIMAL_M2_FR_RAW_EDGE_COLLAPSE_2026_09_20`
 
 WORK MODE: `MATH_AFTER_AUDIT_GATE`
 
-INSPECTED PREDECESSOR: `3ff8c1535c5cae08344cef1c4e9fe943273ea155`
+INSPECTED_PREDECESSOR_HEAD: `d981985a7f1acecfd45e27ceb517436b206f580c`
 
-LAST VERIFIED/AUDITED BASE: `The 20 September daily red-team audit remains binding. Its raw same-code criticality / ordered (source,witness) audit passed independently. Pre-invocation work also proved generic U_o--Y anticompleteness, the outside-U reverse fan, the complete m=1 all-R collapse and the surviving all-F reduction. The bounded actual-D2C regression still has zero positive rigid complete Hall-cut fixtures with x>=3.`
+LATEST_NEW_COMMITS: `401247423e04c1180a9d4401f7a26f9a9887af80` (raw-edge collapse theorem package), `13d83c51ac7a4e093fd2e7998da7a70db0101efb` (companion diagnostic).
 
-NEW INTERNAL CANDIDATE RESULT: `Choose valid outside-U certificates for the buffer edges so as to maximize the number m of distinct physical witnesses before defining F/R types or Hall objects. The generic reverse fan then implies m=1 => |U_o|=1, hence T=0,u=k+2. In the surviving all-F branch q=1 and E_U=(k+1)(p+k)+(p-g+1), giving exact r=k^2+ky+gk+gp+g-p^2+py-p+2y. Raw same-code/internal-X analysis closes every y>=2 case analytically. The remaining y=1 slice reduces to the single point (p,k,g,x,y,u,lambda)=(3,1,2,3,1,3,4), with q=1,r=5,e(X)=1. The entire outside all-F population also satisfies d_A(w)<=1, E_Uo>=u_o(p+u_o-2), q<=(k+1)u_o-k, yielding an exact completed-square reservoir cap.`
+LAST VERIFIED/AUDITED BASE: `The 20 September daily red-team audit remains binding. P1/P2 semantics are repaired; the raw same-code criticality theorem and ordered (source,witness) injection were independently re-derived and passed; X_3 remains mandatory; exact pair-local Ccap_P/(ONE-P)/(CROWD) remain load-bearing; finite scans remain diagnostics only; and bounded actual-D2C regression still has zero positive rigid complete Hall-cut fixtures with x>=3.`
 
-MAXIMAL-SELECTION SCOPE AUDIT: `The logically safe order is: choose a maximal valid representative system first; only then define m and derive F/R and downstream selected objects. No F/R label is transported across re-selection. Once maximal m=1 gives U_o={z}, representative ambiguity disappears. This matches repaired P2 semantics, which are selected-representative rather than raw-witness uniqueness. A next-day file-level adversarial check is still required to confirm no checker/theorem hard-coded a deterministic tie-breaker incompatible with this normalization.`
+PREDECESSOR CORRECTION: `The m=2 bulk-block proof at MAXIMAL_SELECTION_MATCHING_AND_M1_CLOSURE.md Section 11 had a radius-one scope omission. M2_BULK_BLOCK_SCOPE_CORRECTION.md repairs it. The final large-X normal form survives: for maximal m=2, p>=3, x>=4 there are exactly two complementary X' code classes, one F and one R, |S_0|=1, I_F=S_0 and I_R=I_0. Future work must cite the correction rather than the unqualified Section 11 argument.`
 
-UNPRESERVED WORK: `None. Live package: project/research/post_ms/2026-09-20-first-strict-buffer-u-criticality-collapse-v1/. New files this invocation: ALL_F_OUTSIDE_LAYER_COLLAPSE.md; ALL_F_OUTSIDE_SCORE_GATE.md; MAXIMAL_OUTSIDE_WITNESS_SELECTION.md; MAXIMAL_SELECTION_GENERIC.md; MAXIMAL_M1_EXACT_LEDGER.md; MAXIMAL_M1_X_COLLAPSE.md; MAXIMAL_M1_YGE2_CLOSURE.md; MAXIMAL_M1_Y1_PINCH.md; MAXIMAL_SELECTION_SCOPE_AUDIT.md.`
+NEW INTERNAL CANDIDATE RESULT: `In the corrected maximal-m=2, p>=3, x>=4, omega=|U_o|>2 F/R normal form, let f be the unique F-head, R_X the x-2 R-heads, z_R the unique R-witness and Z_F=U_o\{z_R}. Raw same-code criticality plus the fixed certificate identities N(f)∩N(z)={b} for z in Z_F and N(r)∩N(z_R)={b} for r in R_X force: (i) Z_F--R_X empty; (ii) z_R--Z_F empty; (iii) z_R f absent and hence N_A(z_R)={a_0}; (iv) every z in Z_F is A-anticomplete; therefore G[U_o] is edgeless. This gives epsilon_z>=p+omega-1 for z in Z_F, epsilon_zR>=p+omega-2 and E_Uo>=omega^2+(p-1)omega-1, together with q<=C(u,2)-C(k+1,2)-C(omega,2)-(k-1). A second raw criticality exhaustion forces f--R_X empty, then G[R_X] empty, and finally a_0f absent. Since Type R already gives a_0--R_X empty, G[X] is entirely edgeless in this branch.`
 
-DEFERRED ADMIN: `README intentionally remains at the independently audited 20 September checkpoint. Do not promote these same-hour candidate closures publicly before the next adversarial audit. Historical all-R d/J/grid work remains preserved as valid conditional mathematics on a parent all-R geometry now proved empty. Positive-T m=1 all-F calculations remain valid for non-maximal representative choices but are not the preferred graph-level partition if maximal selection survives audit.`
+PAIR_LOCAL CONSEQUENCE: `Let Sigma_P(omega) be the exact pair-local threshold incorporating exact core floor, buffer slack, physical Y-price L_Y=y(p-g+1+omega), CROWD and Ccap_P. Since U_o has neither d nor bar d code for p>=3, every omega>2 survivor obeys Sigma_P(omega)+omega^2+(p-1)omega-1<=C0. Do not replace Sigma_P by total score.`
 
-NEXT_ACTION: `Attack the single literal maximal-m1 y=1 point (3,1,2,3,1,3,4) by complete raw-criticality reconstruction and, if possible, an actual-graph D2C check. This directly addresses the zero-positive-fixture risk. Independently check maximal-selection compatibility against original selected/Hall construction files. If the literal point is impossible and the normalization passes, maximal m=1 is completely closed and the live first-strict frontier becomes maximal m>=2. Do not reopen historical all-R grid, loaded-buffer, z=2 or four-exception routes first. Keep exact pair-local Ccap_P/(ONE-P)/(CROWD) local and retain X_3.`
+DIAGNOSTIC STATUS: `A same-session independent implementation of the strengthened physical-reservoir gate over the historical broad box gives omega>2 base 182396, pair survivors 171981, score survivors 103860 and conservative rooted-residual survivors 73663. The committed checker check_m2_fr_raw_edge_collapse.py records these expected values. They are abstract necessary-condition rows, not graph counts, and must be independently replayed before reviewer-facing use. The diagnostic deliberately does NOT scalarize the new e(X)=0 theorem.`
+
+UNPRESERVED_WORK: `None from this invocation. New theorem and checker are committed. The strongest unused consequence is e(X)=0 itself: it has not yet been reinserted into the exact Hall-density identity / rooted residual ledger.`
+
+DEFERRED_ADMIN: `README intentionally remains at the independently audited 20 September public checkpoint. Same-hour m=2 closures are provisional until adversarial replay. Historical m=1 and all-R d/J/grid work remains preserved with its original trust boundaries.`
+
+NEXT_ACTION: `First independently replay check_m2_fr_raw_edge_collapse.py and hostile-audit the new raw edge exclusions, especially cross-code f--R_X and a_0f. If they pass, exploit e(X)=0 exactly in the Hall-density / residual ledger rather than adding another weak scalar score inequality. Attempt an analytic contradiction or characterize any surviving scaling family. Only then split omega=2, x=3 and p<=2. Keep loaded-buffer, z=2 and four-exception routes subordinate. In parallel, retain the zero-positive-fixture rigid-cut interface as the dominant global audit risk.`
 <!-- CURRENT-STATUS:END -->
 
 ---
@@ -33,6 +39,7 @@ NEXT_ACTION: `Attack the single literal maximal-m1 y=1 point (3,1,2,3,1,3,4) by 
 Latest daily audit: `project/research/post_ms/2026-09-20-daily-red-team-audit-v1/DAILY_RED_TEAM_AUDIT.md`.
 
 Still binding:
+
 - repaired P1/P2 semantics;
 - `X_3` mandatory negative control;
 - zero positive actual-D2C rigid complete Hall cuts with `x>=3` in bounded regression;
@@ -43,49 +50,42 @@ Still binding:
 
 Raw same-code audit: `project/research/post_ms/2026-09-20-same-code-raw-criticality-audit-v1/SAME_CODE_RAW_CRITICALITY_AUDIT.md` — passed.
 
-## Live chain
+## Live structural chain
 
 `audited rigid first-strict unique-hole`
-`-> U_o--Y anticomplete`
-`-> every b--U_o edge reverse-certified through X'`
-`-> maximal selected-witness choice`
-`-> m=1 => U_o={z}, T=0`
-`-> all-R empty`
-`-> all-F exact q/U ledger`
-`-> y>=2 empty`
-`-> y=1 literal point`.
+`-> raw outside eligibility graph H`
+`-> maximal representative image m=nu(H)`
+`-> maximal m=1 completely closed`
+`-> maximal m=2, p>=3, x>=4 has two corrected complementary F/R code classes`
+`-> omega>2: one F-head f, bulk R_X, unique R-witness z_R, F-star reservoir Z_F`
+`-> full U_o independence + A-anticomplete Z_F + N_A(z_R)={a_0}`
+`-> E_Uo>=omega^2+(p-1)omega-1 and full binom(omega,2) q loss`
+`-> raw cross-code exhaustion gives G[X]=empty`
+`-> exact Hall/residual reinsertion is the live unfinished line.`
 
-Key maximal-m1 identities:
+Key files:
 
-`u=k+2`, `q=1`,
-
-`E_U=(k+1)(p+k)+(p-g+1)`,
-
-`r=k^2+ky+gk+gp+g-p^2+py-p+2y`.
-
-Final y=1 point:
-
-`(p,k,g,x,y,u,lambda)=(3,1,2,3,1,3,4)`, `q=1`, `r=5`, `e(X)=1`.
+- `project/research/post_ms/2026-09-20-maximal-selection-matching-v1/MAXIMAL_SELECTION_MATCHING_AND_M1_CLOSURE.md`
+- `project/research/post_ms/2026-09-20-maximal-selection-matching-v1/M2_BULK_BLOCK_SCOPE_CORRECTION.md`
+- `project/research/post_ms/2026-09-20-maximal-selection-matching-v1/M2_FR_RESERVOIR.md`
+- `project/research/post_ms/2026-09-20-maximal-selection-matching-v1/M2_FR_RAW_EDGE_COLLAPSE.md`
+- `project/research/post_ms/2026-09-20-maximal-selection-matching-v1/check_m2_fr_raw_edge_collapse.py`
 
 ## Session ledger — current invocation
 
-**Invocation start:** ~02:30:56 BST.  
-**Preservation cutoff:** ~02:55:38 BST.
+**Invocation start:** 03:27:23 BST.  
+**Planned preservation cutoff:** 03:55:38 BST.
 
 Substantive units completed:
-1. proved every outside all-F vertex has X'-degree at most one;
-2. proved the whole all-F outside layer misses `a_0`;
-3. converted the outside population into quadratic score and linear-q bills;
-4. solved its score gate as an exact completed-square/parity concavity law;
-5. found the two-witness re-selection obstruction to non-maximal all-F m=1;
-6. lifted maximal-witness normalization upstream of the F/R split;
-7. derived exact q, U-score and rooted-r for maximal m=1;
-8. proved `G[X']` edgeless;
-9. proved `d_{X'}(a_0)<=1` and the y>=2 internal-X/score ledger;
-10. analytically closed maximal m=1 for every `y>=2`;
-11. reduced y=1 to the single literal order-14 rooted point `(3,1,2,3,1,3,4)`;
-12. performed a same-session scope audit showing the safe maximal-selection order is selection-first then F/R/Hall construction, narrowing the remaining risk to a file-level implementation/tie-breaking audit.
 
-**Live unfinished line:** direct raw-criticality reconstruction / hostile actual-graph check of the single y=1 point; file-level verification of maximal-selection compatibility; then maximal `m>=2` if the one-witness point closes.
+1. reconciled the stale handoff against the newer maximal-m=2 commit chain and mandatory radius-one scope correction;
+2. proved `Z_F--R_X` is empty from the raw same-code theorem plus fixed eligibility common-neighbour sets;
+3. proved `z_R--Z_F` is empty, upgrading the previous `Z_F` independence to full `G[U_o]` independence;
+4. proved `z_Rf` is absent and hence `N_A(z_R)={a_0}`;
+5. proved every F-star witness is A-anticomplete and derived the sharp physical outside-reservoir bill `E_Uo>=omega^2+(p-1)omega-1` plus full `binom(omega,2)` rooted-triangle loss;
+6. exhausted raw criticality for the complementary X-code edges, proving `f--R_X` empty, then `G[R_X]` empty, then `a_0f` absent, hence `G[X]=empty`;
+7. combined the physical reservoir with the exact pair-local threshold and independently scanned the broad diagnostic box, reducing omega>2 residual rows from the predecessor 110759 to 73663 without yet using the full force of `e(X)=0`.
 
-**Stop reason:** preservation cutoff approached; no mathematical blocker. The run did not stop at an intermediate clean checkpoint.
+**Live unfinished line:** independently replay/audit the new edge-collapse theorem, then insert `e(X)=0` into the exact Hall-density and rooted residual identities to seek an analytic closure or explicit scaling family.
+
+**Stop reason:** preservation cutoff approached after a shortened late-start window; no mathematical blocker and no early clean-checkpoint stop.
