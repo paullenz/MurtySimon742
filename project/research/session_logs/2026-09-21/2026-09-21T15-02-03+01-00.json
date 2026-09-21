@@ -65,16 +65,22 @@
       "completed_at": "2026-09-21T15:21:07+01:00",
       "result": "All edges internal to P0 union P1 satisfy e(P0)+e(P1)+e(P0,P1)<=rq. Same-parity edges inject into distinct missing cross-parity pairs via physical singleton common-neighbour certificates.",
       "artifact": "project/research/post_ms/2026-09-21-q3-star-support-v1/PARITY_BLOCK_SUBSTITUTION_BOUND.md"
+    },
+    {
+      "id": 9,
+      "completed_at": "2026-09-21T15:22:25+01:00",
+      "result": "Derived joint parity-star missing-pair ledger: with M missing P0-P1 pairs and I same-parity edges, parity-star plus star edges <=s+2(M-I), so the full parity/star block <=rq+M+s-I. Remaining risk is controlling M.",
+      "artifact": "project/research/post_ms/2026-09-21-q3-star-support-v1/PARITY_STAR_MISSING_PAIR_LEDGER.md"
     }
   ],
-  "number_of_substantive_units": 8,
+  "number_of_substantive_units": 9,
   "early_stop_check_time": null,
   "early_stop_check_result": null,
   "tool_infrastructure_failures": [
     "python-sat was absent; installed into the disposable workspace dependency directory and validated against three actual D2C controls."
   ],
   "commit_shas_produced": [],
-  "live_unfinished_line": "Bound parity-star incidence jointly with missing P0-P1 pairs and star antipode-bridge leaves; combine with coordinate and star-forest bounds.",
+  "live_unfinished_line": "Control missing parity pairs M via centre-spoke P0 singleton obligations or coordinate incidence; combine with rooted residual defect.",
   "stop_reason": "IN_PROGRESS",
   "target_status": "IN_PROGRESS",
   "audit_reconciliation": "Latest daily audit prioritizes raw criticality and actual graph realizability. This run follows that priority by hostile-reviewing and attacking the reduced opposite-edge-plane actual core; conditional Hall/source-tuple results are not advanced.",

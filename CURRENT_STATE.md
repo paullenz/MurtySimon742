@@ -5,19 +5,19 @@ Canonical repository: `paullenz/MurtySimon742`. Date: 21 September 2026.
 Active target: the eventual / sufficiently-large second-extremal problem around M(n)=floor((n-1)^2/4)+1. The general theorem and a uniform threshold remain open. X3 (12 vertices,32 edges,M(12)=31) remains mandatory. Do not revive the false all-order conjecture or the closed mixed {4,5} ladder.
 
 <!-- CURRENT-STATUS:START -->
-CHECKPOINT CLASS: `INTERNAL_PARITY_BLOCK_SUBSTITUTION_BOUND`
+CHECKPOINT CLASS: `INTERNAL_PARITY_STAR_MISSING_PAIR_LEDGER`
 
 WORK MODE: `MATH`
 
-INSPECTED PREDECESSOR: `c9dc2413e39bc4258fddd6530496f14b1ecc280a`.
+INSPECTED PREDECESSOR: `6f08bcc498e5527d2d924b113f9ab2543f50ecb2`.
 
-LAST VERIFIED RESULT: For arbitrary parity multiplicities r,q in the sole four-centre orbit, e(P0)+e(P1)+e(P0,P1)<=rq. Same-parity edges physically inject into distinct missing cross-parity pairs. Together with the star-forest theorem this isolates parity-star incidence as the main remaining density interface.
+LAST VERIFIED RESULT: In the four-centre parity-plane branch, if M is the number of missing P0-P1 pairs and I the same-parity edge count, parity-star plus star edges are at most s+2(M-I); the full parity/star block is at most rq+M+s-I. Every charge uses a physical singleton common neighbour.
 
 UNPRESERVED WORK: None after this entry checkpoint.
 
 DEFERRED ADMIN: Broad historical README maintenance and CI polling; neither blocks the core attack.
 
-NEXT ACTION: Bound parity-star incidence jointly with missing P0-P1 pairs and star antipode-bridge leaves; then combine with coordinate and star-forest bounds.
+NEXT ACTION: Control M via centre-spoke P0 singleton obligations or coordinate incidence, then combine the block ledger with rooted residual defect.
 <!-- CURRENT-STATUS:END -->
 
 ## Reviewable current package
