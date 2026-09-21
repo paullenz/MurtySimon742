@@ -5,19 +5,19 @@ Canonical repository: `paullenz/MurtySimon742`. Date: 21 September 2026.
 Active target: the eventual / sufficiently-large second-extremal problem around M(n)=floor((n-1)^2/4)+1. The general theorem and a uniform threshold remain open. X3 (12 vertices,32 edges,M(12)=31) remains mandatory. Do not revive the false all-order conjecture or the closed mixed {4,5} ladder.
 
 <!-- CURRENT-STATUS:START -->
-CHECKPOINT CLASS: `INTERNAL_PARITY_PLANE_STAR_FOREST_NECESSITY`
+CHECKPOINT CLASS: `INTERNAL_ORDER_20_EXTREMAL_CLASSIFICATION`
 
 WORK MODE: `MATH`
 
-INSPECTED PREDECESSOR: `b86539842d98d3bf94704581588d60c756a8b297`.
+INSPECTED PREDECESSOR: `03b3eda2a58ecf45cb3a5f0c9ae32c95d4c39cc4`.
 
-LAST VERIFIED RESULT: In every exactly-four-centre parity-plane graph, arbitrary star multiplicities induce a star forest; e(S)<=s-1. This is now a necessary structural theorem, not only a construction hypothesis. Order-19 uniqueness and corrected orbit exclusions remain intact.
+LAST VERIFIED RESULT: In the exactly-four-centre branch, every n=20 graph has m<=73. Equality is unique up to cube symmetry: all six coordinate codes joined to the sole P0 hub, and the four stars induce K1,3. A complete code-multiset MaxSAT audit agrees; the bound has a hand proof.
 
 UNPRESERVED WORK: None after this entry checkpoint.
 
 DEFERRED ADMIN: Broad historical README maintenance and CI polling; neither blocks the core attack.
 
-NEXT ACTION: Control coordinate-parity and parity-star edges to convert the star-forest theorem into a full parity-plane density bound.
+NEXT ACTION: Generalize the order-20 counting to arbitrary parity-plane multiplicities and feed it into M(n)-m.
 <!-- CURRENT-STATUS:END -->
 
 ## Reviewable current package
