@@ -65,21 +65,24 @@ Live local spine inside the conditional one-code interface is now:
 
 Only after this literal realizability filter should rooted-Q, residual-defect, exact pair-local Hall or H–U machinery be invoked.
 
-## Session telemetry — current run
+## Session telemetry — latest invocation
 
-Full record: `project/research/session_logs/2026-09-21/2026-09-21T01-27-33+01-00-a.md`.
+Full record: `project/research/session_logs/2026-09-21/2026-09-21T01-57-45+01-00-a.md`.
 
-- actual start: **2026-09-21 01:27:33 BST**;
+- scheduled trigger: **2026-09-21 01:00:38 BST**;
+- actual start: **2026-09-21 01:57:45 BST** (57m07s late);
 - preservation cutoff: **2026-09-21 01:55:38 BST**;
-- forward-research stop / preservation start: **2026-09-21 01:48:32 BST** (GitHub server timestamp of stop-marker commit `b062fb23660fefd62a85f958032382808fa8efa2`);
-- preservation complete: **2026-09-21 01:50:38 BST** (GitHub server timestamp of README synchronization commit `287dba82bfaa14f41a352c71490b37d3c64b132f`);
-- wall-clock span to preservation complete: **23m05s**;
-- forward-research span: **20m59s**;
-- preservation span: **2m06s**;
-- substantive units: **18**;
-- >=50-minute target: **not applicable** because only 28m05s existed from actual start to mandatory cutoff;
-- early-stop guard: at authoritative 01:47 BST check, more than eight minutes remained and a coherent next theorem existed, so research continued; preservation began after the 01:48 check;
-- stop reason: mandatory preservation window reached after a late invocation; no mathematical blocker claimed.
+- forward-research stop: **2026-09-21 01:57:45 BST**;
+- preservation start: **2026-09-21 01:58:07 BST**;
+- preservation complete: **pending final telemetry update**;
+- wall-clock span to preservation complete: **pending final telemetry update**;
+- forward-research span: **0m00s**;
+- substantive units: **0**;
+- >=50-minute target: **not applicable** because the invocation began after the mandatory cutoff and therefore had 0m00s of pre-cutoff research window available;
+- early-stop guard: **not applicable**; cutoff had already passed at invocation;
+- stop reason: delayed invocation began after the mandatory preservation cutoff, so no forward mathematics was started and the run pivoted directly to telemetry/state preservation to avoid overlapping the next trigger.
+
+Previous fully measured forward run: `project/research/session_logs/2026-09-21/2026-09-21T01-27-33+01-00-a.md` (20m59s forward-research span from a 28m05s shortened window).
 
 ## Mandatory constraints for future work
 
