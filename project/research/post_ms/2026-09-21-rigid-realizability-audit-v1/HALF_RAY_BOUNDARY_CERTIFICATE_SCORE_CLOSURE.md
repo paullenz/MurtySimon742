@@ -1,8 +1,8 @@
-# Corrected residual-one half-ray: raw boundary-certificate score closure
+# Corrected residual-one half-ray: raw boundary-certificate realizability closure
 
 Date: 2026-09-21
 
-Status: conditional structural theorem for the corrected rigid one-code half-ray. The core closure uses the post-audit raw boundary-code-edge trichotomy, universal opposite-endpoint independence, the corrected half-ray parameter ledger, the preserved gamma-collision theorem, and the corrected H/Y slack floors. A stronger finite threshold uses only the already audited predecessor residual-slot floor `Delta>=h`; the disputed equality-face strengthening is not needed.
+Status: **closed at the raw boundary level** within the corrected rigid one-code interface. The key contradiction is a physical U-code-class population count and does not require the score ceiling, rooted-Q feedback, pair-local scalar gates, residual-slot equality faces, or the candidate superconstant H--U deficit theorem. The score calculations below are retained as an independent backup/audit trail.
 
 This note is deliberately upstream of the superseded H--U private-foot route.
 
@@ -25,9 +25,9 @@ The X-side consists of
 
 Hence every occupied X-code class has size at most two, and the unique size-two class is the K-code `d xor e_j`.
 
-The exact score ceiling is
+The exact score ceiling, used only in the backup calculation, is
 
-> **`E_U+L_A <= C0=4t^2+7t-3`.**                         `(1.1)`
+> `E_U+L_A <= C0=4t^2+7t-3`.                             `(1.1)`
 
 ## 2. Every tight coordinate is boundary-exposed and none is universal
 
@@ -35,7 +35,7 @@ For every tight coordinate i,
 
 > `i in I(d,X)`.
 
-Indeed, at the residual coordinate j every H-code agrees with d. At a private coordinate i choose any distinct private head `h_l`; its code agrees with d at i.
+At the residual coordinate j every H-code agrees with d. At a private coordinate i choose any distinct private head `h_l`; its code agrees with d at i.
 
 On the other hand
 
@@ -63,17 +63,53 @@ For fixed source `q_i^{d_i}`, one physical witness cannot certify two distinct Y
 
 Thus at least
 
-> `f_i>=t-r_i`                                            `(3.2)`
+> `f_i>=t-r_i>=t-2>0`                                    `(3.2)`
 
-outside sources use U-forward certificates. Since `t>=4` and `r_i<=2`, `f_i>0` on every coordinate.
+outside sources use U-forward certificates at **every** coordinate.
 
-## 4. Exact U-slack bill at one coordinate
+## 4. Pure population contradiction
 
-Every U-forward witness at coordinate i has code
+A U-forward witness at coordinate i has the forced one-match code
 
-`bar d xor e_i`
+> `bar d xor e_i`.
 
-and is X-anticomplete. If one such witness w serves `t_w` outside sources, the exact U-degree identity gives
+Therefore `(3.2)` implies that, for every one of the p=2t coordinates, the corresponding U-code class
+
+`U_{bar d xor e_i}`
+
+is nonempty.
+
+These p code classes are pairwise disjoint because their codes are distinct. Consequently any literal realization would require
+
+> `u>=p=2t`.                                              `(4.1)`
+
+But the corrected half-ray has
+
+> `u=t+1`.                                                `(4.2)`
+
+For every `t>=2`, `t+1<2t`, contradicting `(4.1)`.
+
+### Raw boundary closure theorem
+
+> **There is no actual D2C realization of the corrected residual-one k=2 intermediate half-ray for any `t>=4`.**
+
+The contradiction uses only:
+
+1. the literal half-ray X-code multiplicities;
+2. boundary exposure `I=[p]`;
+3. `C=empty`, hence no matched-forward arm;
+4. the raw reverse-code rule and fixed-source injectivity;
+5. the forced U-forward code `bar d xor e_i`.
+
+It does **not** use the global source-tuple capacity theorem or either of its two audit-sensitive upstream premises.
+
+This is stronger and cleaner than the score closure first derived in this session.
+
+## 5. Independent backup: exact U-slack bill
+
+The population contradiction already finishes the ray. Retaining the same geometry gives an independent quantitative check.
+
+If one U-forward witness w at coordinate i serves `t_w` outside sources, the exact U-degree identity gives
 
 `epsilon_w >= p-y+t_w = t+t_w`.
 
@@ -81,118 +117,46 @@ Let W_i be the actual witness set at coordinate i. Then
 
 `sum_{w in W_i} epsilon_w`
 ` >= t|W_i|+f_i`
-` >= t+(t-r_i)`
-` =2t-r_i`.                                               `(4.1)`
+` >= 2t-r_i`.                                             `(5.1)`
 
-The one-match witness codes `bar d xor e_i` are distinct over i, so the W_i are pairwise disjoint. Summing over all p=2t coordinates gives the raw boundary floor
+The W_i are pairwise disjoint, so
 
-> **`E_U >= 4t^2-sum_i r_i`.**                           `(4.2)`
+> `E_U >= 4t^2-sum_i r_i >=4t^2-4t`.                    `(5.2)`
 
-The coarse bound `r_i<=2` already gives
+Together with the corrected H/Y floor `L_A>=t^2`, this already contradicts `(1.1)` for `t>=11`.
 
-> **`E_U>=4t^2-4t`.**                                    `(4.3)`
-
-Together with the corrected H/Y floor `L_A>=t^2`, this alone yields
-
-`E_U+L_A>=5t^2-4t`,
-
-which contradicts `(1.1)` for every `t>=11`.
-
-Thus the half-ray is already eventually closed without any residual-slot equality analysis.
-
-## 5. Gamma refinement: closure for t>=10 from the raw boundary package
+## 6. Independent backup: gamma refinement
 
 Let
 
 `g=|{i: gamma_i=d xor e_j}|`,
 
-the number of coordinates whose forced reverse code is the unique size-two K-code.
+the number of coordinates whose forced reverse code is the unique size-two K-code. Every other occupied forced gamma class has size at most one, so
 
-Every other occupied forced gamma class has size at most one, so
+`sum_i r_i<=p+g=2t+g`,
 
-> `sum_i r_i <= p+g=2t+g`.                               `(5.1)`
+and hence
 
-Therefore
+`E_U>=4t^2-2t-g`.                                        `(6.1)`
 
-> `E_U>=4t^2-2t-g`.                                      `(5.2)`
+The preserved gamma-collision theorem gives
 
-The preserved gamma-collision theorem says that a common gamma class on g tight coordinates, for `g>=3`, forces
+`L_A>=max{t^2,g(g-1)}`.                                  `(6.2)`
 
-`L_A>=g(g-1)`.
+The exact minimum of `(6.1)+(6.2)` over `0<=g<=2t` is
 
-Independently, corrected H/Y accounting gives `L_A>=t^2`. Hence
+> `E_U+L_A>=5t^2-3t`.                                    `(6.3)`
 
-> `L_A>=max{t^2,g(g-1)}`.                                `(5.3)`
+This contradicts `(1.1)` for every `t>=10`.
 
-Combining `(5.2)` and `(5.3)`,
+If one additionally uses the midnight-audited predecessor residual-slot floor `Delta>=h=2t-1`, then `L_A>=t^2+2t-1` and the score contradiction sharpens to every `t>=8`. These finite-threshold refinements are now strategically unnecessary because Section 4 rules out the entire ray.
 
-`E_U+L_A >= 4t^2-2t-g+max{t^2,g(g-1)}`.                 `(5.4)`
+## 7. Strategic consequence
 
-This expression has an exact minimum over `0<=g<=2t`:
+The intermediate half-ray was previously treated as an unbounded method escape because aggregate pair-local and rooted-Q gates had quadratic margin. It is not a realizability escape. Raw B--A boundary criticality forces a nonempty, coordinate-distinct one-match U-code class for every tight coordinate, but the ray has fewer unmatched vertices than tight coordinates.
 
-- for `g<=t`, the maximum is t^2 and the minimum occurs at g=t, giving `5t^2-3t`;
-- for `g>=t+1`, the gamma term is active and the expression is increasing in g, so its minimum is at g=t+1, giving `5t^2-2t-1`, which is larger for t>=2.
-
-Therefore
-
-> **`E_U+L_A >= 5t^2-3t`.**                              `(5.5)`
-
-Against `(1.1)`, the gap is
-
-`(5t^2-3t)-(4t^2+7t-3)=t^2-10t+3`.
-
-This is positive for every integer
-
-> **`t>=10`.**                                            `(5.6)`
-
-### Core closure theorem
-
-> **No actual D2C realization of the corrected rigid one-code half-ray can exist for `t>=10`.**
-
-This conclusion uses raw boundary criticality plus already corrected score/gamma machinery; it does not use the disputed equality-face strengthening from the 20 September late session.
-
-## 6. Audited residual-slot floor sharpens the finite threshold to t>=8
-
-The midnight audit retained the predecessor residual-slot theorem
-
-`Delta>=h=2t-1`
-
-as independently secure. Since `L_H=3t-1+Delta`, this gives
-
-`L_H>=5t-2`.
-
-Together with the corrected Y floor
-
-`L_Y>=t^2-3t+1`,
-
-we obtain
-
-> `L_A>=t^2+2t-1`.                                       `(6.1)`
-
-Replace t^2 by this stronger independent floor in `(5.3)`. The exact minimum becomes
-
-> **`E_U+L_A >= 5t^2-t-2`.**                             `(6.2)`
-
-Indeed the baseline branch remains active through `g=t+1`, where it gives `5t^2-t-2`; at `g=t+2` the gamma branch gives `5t^2`, and it then increases.
-
-Comparing `(6.2)` with `(1.1)` gives the gap
-
-`t^2-8t+1`,
-
-which is positive for every integer
-
-> **`t>=8`.**                                             `(6.3)`
-
-Thus the audited residual-slot floor improves the finite closure threshold from 10 to 8, without using `Delta>=h+1` or the candidate global superconstant theorem.
-
-Only the finite diagnostic values `t=4,5,6,7` remain outside this particular half-ray score contradiction.
-
-## 7. Why this changes the live strategy
-
-The intermediate half-ray was previously treated as an unbounded method escape because aggregate pair-local and rooted-Q gates had quadratic margin. Raw boundary criticality changes that conclusion: the B--A boundary itself forces almost all `Y q_i^{d_i}` edges into expensive, coordinate-distinct U-forward witness classes. The cost is quadratic and lands directly in E_U, the score currency that could not be hidden by the earlier aggregate optimizations.
-
-Therefore the half-ray no longer deserves further asymptotic H--U carrier optimization. For the eventual theorem programme, it is closed within the conditional rigid interface. The high-value frontier moves back upstream to realizability of general rigid cuts and to showing that any sufficiently-large survivor must enter a boundary profile with similarly expensive U-forward or gamma-collision structure.
+Therefore no further asymptotic H--U carrier optimization should be spent on this ray. The live frontier moves back upstream to general rigid-cut realizability: determine how broadly the same exposed-coordinate versus available-U-class obstruction applies before specializing to residual-one survivor algebra.
 
 ## 8. Scope and caveat
 
-This is still conditional on reaching the rigid complete-Hall-cut / one-code interface. Bounded actual-D2C regression contains zero positive rigid complete pair-family cuts with `x>=3`; X_3 remains the mandatory negative control. The result is therefore not an unconditional eventual second-extremal theorem.
+This theorem remains conditional on reaching the rigid complete-Hall-cut / one-code interface. Bounded actual-D2C regression contains zero positive rigid complete pair-family cuts with `x>=3`; X_3 remains the mandatory negative control. The result closes this diagnostic branch; it is not an unconditional eventual second-extremal theorem.
