@@ -53,17 +53,14 @@ Key files:
 Full record: `project/research/session_logs/2026-09-21/2026-09-21T09-57-59+01-00-a.md`.
 
 - actual start: **2026-09-21 09:57:59 BST**;
-- scheduled trigger: **09:00:38 BST**;
-- next trigger: **10:00:38 BST**;
-- preservation cutoff: **09:55:38 BST**;
-- forward-research stop: **09:57:59 BST**;
-- preservation start: **09:58:10 BST**;
-- preservation complete: **PENDING final telemetry update**;
-- wall-clock span: **PENDING**;
+- preservation cutoff: **2026-09-21 09:55:38 BST**;
+- forward-research stop: **2026-09-21 09:57:59 BST**;
+- preservation complete: **2026-09-21 09:59:10 BST**;
+- wall-clock span to recorded final-report timestamp: **1m21s (1.350 min)**;
 - forward-research span: **0m00s**;
 - substantive units: **0**;
-- stop reason: invocation began after the mandatory preservation cutoff, so no forward mathematics was started.
-- >=50-minute target: **not applicable** because no valid pre-cutoff research window remained.
+- stop reason: invocation began after the mandatory preservation cutoff, so no forward mathematics was started;
+- >=50-minute target: **not applicable**, because no valid pre-cutoff research window remained.
 
 ## Live handoff / next action
 
