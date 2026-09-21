@@ -69,21 +69,20 @@ Only after this literal realizability filter should rooted-Q, residual-defect, e
 
 Full record: `project/research/session_logs/2026-09-21/2026-09-21T05-59-12+01-00-a.md`.
 
-- scheduled trigger: **2026-09-21 05:00:38 BST**;
-- actual start: **2026-09-21 05:59:12 BST** (58m34s late);
+- actual start: **2026-09-21 05:59:12 BST**;
 - preservation cutoff: **2026-09-21 05:55:38 BST**;
 - forward-research stop: **2026-09-21 05:59:12 BST**;
 - preservation start: **2026-09-21 05:59:43 BST**;
 - preservation complete: **2026-09-21 06:00:01 BST**;
-- final-report timestamp: **2026-09-21 06:01:01 BST**;
-- wall-clock session span: **1m49s**;
+- final-report timestamp: **UNVERIFIED**; the previously recorded 06:01:01 timestamp preceded a final `CURRENT_STATE.md` synchronization and therefore was not immediately before the actual report;
+- wall-clock session span: **UNVERIFIED**;
 - forward-research span: **0m00s**;
 - preservation span: **0m18s**;
 - substantive units: **0**;
 - >=50-minute target: **not applicable** because the invocation began after the mandatory cutoff and therefore had 0m00s of valid pre-cutoff research window available;
 - early-stop guard: **not applicable**; cutoff had already passed at invocation;
-- process compliance: **NONCOMPLIANT** because final telemetry/state synchronization extended beyond the next scheduled trigger while correcting the mandatory final-report timestamp;
-- stop reason: delayed invocation began after the mandatory preservation cutoff, so no forward mathematics was started; preservation then overran the next trigger while final telemetry was corrected.
+- process compliance: **NONCOMPLIANT** because final preservation extended beyond the next trigger and exact final-report timing could not be durably recorded after all repository synchronization;
+- stop reason: delayed invocation began after the mandatory preservation cutoff, so no forward mathematics was started; preservation then overran the next trigger, and the overall wall-clock duration is therefore not certified.
 
 Previous measured late-start runs: `project/research/session_logs/2026-09-21/2026-09-21T03-59-26+01-00-a.md` and `project/research/session_logs/2026-09-21/2026-09-21T01-57-45+01-00-a.md` (both 0m00s forward-research span; both began after cutoff).
 
