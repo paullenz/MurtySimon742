@@ -50,6 +50,10 @@ First hostile-review the two newest nonparity-plane proofs at physical-vertex sc
 
 Five through eight star centres, nontransversal codes and the general eventual density theorem remain open. Keep rigid Hall work conditional until an actual qualifying graph interface is supplied. This is consistent with the latest audit's priority on raw criticality and graph realizability.
 
+## Five-centre frontier
+
+The 56 labelled five-centre supports reduce to three cube-automorphism orbits. Exact one-copy scanning leaves one feasible orbit: the support whose three-point complement is an independent parity triple, with a unique minimum n=21,m=77 model. This base has a proved one-parameter P1-twin family. A natural complete P0--P1 extension passes every graph-level D2C replay for 1<=r,q<=20 and has n=20+r+q and m=rq+4(r+q)+73. This supplies a quadratic-density positive control with positive linear gap from M(n); a uniform arbitrary-multiplicity proof is the next gate.
+
 Latest continuation: `OPPOSITE_EDGE_PARITY_FACTOR_REDUCTION.md` removes parity multiplicity from opposite-edge-plane core realizability and gives an exact fixed-core expansion gap recurrence. The next search/proof should use one vertex of each parity, preserving arbitrary coordinate/star multiplicities.
 
 ## Full four-centre classification and density closure

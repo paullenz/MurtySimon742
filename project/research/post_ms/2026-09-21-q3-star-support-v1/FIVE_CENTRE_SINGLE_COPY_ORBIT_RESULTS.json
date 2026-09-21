@@ -1,0 +1,127 @@
+{
+  "cube_automorphism_count": 48,
+  "five_centre_orbit_count": 3,
+  "scope": "one physical vertex per star centre; arbitrary subset of the eight nonstar antipodal-transversal codes",
+  "rows": [
+    {
+      "star_support": [
+        0,
+        1,
+        2,
+        3,
+        4
+      ],
+      "complement": [
+        5,
+        6,
+        7
+      ],
+      "tested_halfcode_subsets": 256,
+      "minimum_halfcode_count": null,
+      "minimum_models": []
+    },
+    {
+      "star_support": [
+        0,
+        1,
+        2,
+        4,
+        7
+      ],
+      "complement": [
+        3,
+        5,
+        6
+      ],
+      "tested_halfcode_subsets": 255,
+      "minimum_halfcode_count": 7,
+      "minimum_models": [
+        {
+          "halfcodes": [
+            "C00",
+            "C01",
+            "C10",
+            "C11",
+            "C20",
+            "C21",
+            "P1"
+          ],
+          "codes": [
+            "C00",
+            "C01",
+            "C10",
+            "C11",
+            "C20",
+            "C21",
+            "P1",
+            "S0",
+            "S1",
+            "S2",
+            "S4",
+            "S7"
+          ],
+          "A_edges": [
+            [
+              0,
+              6
+            ],
+            [
+              1,
+              6
+            ],
+            [
+              2,
+              6
+            ],
+            [
+              3,
+              6
+            ],
+            [
+              4,
+              6
+            ],
+            [
+              5,
+              6
+            ],
+            [
+              7,
+              11
+            ],
+            [
+              8,
+              10
+            ],
+            [
+              9,
+              10
+            ]
+          ],
+          "n": 21,
+          "m": 77,
+          "M_n": 101,
+          "deficit_from_M": 24,
+          "direct_D2C_replay": true
+        }
+      ]
+    },
+    {
+      "star_support": [
+        0,
+        1,
+        2,
+        5,
+        6
+      ],
+      "complement": [
+        3,
+        4,
+        7
+      ],
+      "tested_halfcode_subsets": 256,
+      "minimum_halfcode_count": null,
+      "minimum_models": []
+    }
+  ]
+}

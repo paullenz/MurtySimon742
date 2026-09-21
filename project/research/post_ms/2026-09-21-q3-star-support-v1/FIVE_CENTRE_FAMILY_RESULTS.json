@@ -1,0 +1,131 @@
+{
+  "family": "six coordinate codes, q P1 vertices, centres {0,1,2,4,7}",
+  "formula": {
+    "n": "20+q",
+    "m": "4n-7"
+  },
+  "base_edges_with_twin_safe_witness": 77,
+  "direct_replay_rows": [
+    {
+      "q": 1,
+      "n": 21,
+      "m": 77,
+      "direct_D2C_replay": true
+    },
+    {
+      "q": 2,
+      "n": 22,
+      "m": 81,
+      "direct_D2C_replay": true
+    },
+    {
+      "q": 3,
+      "n": 23,
+      "m": 85,
+      "direct_D2C_replay": true
+    },
+    {
+      "q": 4,
+      "n": 24,
+      "m": 89,
+      "direct_D2C_replay": true
+    },
+    {
+      "q": 5,
+      "n": 25,
+      "m": 93,
+      "direct_D2C_replay": true
+    },
+    {
+      "q": 6,
+      "n": 26,
+      "m": 97,
+      "direct_D2C_replay": true
+    },
+    {
+      "q": 7,
+      "n": 27,
+      "m": 101,
+      "direct_D2C_replay": true
+    },
+    {
+      "q": 8,
+      "n": 28,
+      "m": 105,
+      "direct_D2C_replay": true
+    },
+    {
+      "q": 9,
+      "n": 29,
+      "m": 109,
+      "direct_D2C_replay": true
+    },
+    {
+      "q": 10,
+      "n": 30,
+      "m": 113,
+      "direct_D2C_replay": true
+    },
+    {
+      "q": 11,
+      "n": 31,
+      "m": 117,
+      "direct_D2C_replay": true
+    },
+    {
+      "q": 12,
+      "n": 32,
+      "m": 121,
+      "direct_D2C_replay": true
+    },
+    {
+      "q": 13,
+      "n": 33,
+      "m": 125,
+      "direct_D2C_replay": true
+    },
+    {
+      "q": 14,
+      "n": 34,
+      "m": 129,
+      "direct_D2C_replay": true
+    },
+    {
+      "q": 15,
+      "n": 35,
+      "m": 133,
+      "direct_D2C_replay": true
+    },
+    {
+      "q": 16,
+      "n": 36,
+      "m": 137,
+      "direct_D2C_replay": true
+    },
+    {
+      "q": 17,
+      "n": 37,
+      "m": 141,
+      "direct_D2C_replay": true
+    },
+    {
+      "q": 18,
+      "n": 38,
+      "m": 145,
+      "direct_D2C_replay": true
+    },
+    {
+      "q": 19,
+      "n": 39,
+      "m": 149,
+      "direct_D2C_replay": true
+    },
+    {
+      "q": 20,
+      "n": 40,
+      "m": 153,
+      "direct_D2C_replay": true
+    }
+  ],
+  "status": "PASS"
+}

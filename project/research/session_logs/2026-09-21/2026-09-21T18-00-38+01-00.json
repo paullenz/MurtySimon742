@@ -12,15 +12,20 @@
       "start": "2026-09-21T18:08:49+01:00",
       "kind": "context re-entry; same slot/start/ledger/cutoff retained",
       "continuity": "verified same invocation; forward research and the bounded SAT scan continued"
+    },
+    {
+      "start": "2026-09-21T18:43:07+01:00",
+      "kind": "context re-entry; same slot/start/ledger/cutoff retained",
+      "continuity": "verified same invocation; forward research continued"
     }
   ],
   "forward_research_start_time": "2026-09-21T18:01:41+01:00",
-  "forward_research_stop_time": null,
-  "preservation_start_time": null,
+  "forward_research_stop_time": "2026-09-21T18:51:50+01:00",
+  "preservation_start_time": "2026-09-21T18:51:50+01:00",
   "preservation_complete_time": null,
   "final_report_time": null,
   "wall_clock_session_minutes": null,
-  "forward_research_span_minutes": null,
+  "forward_research_span_minutes": 50.15,
   "preservation_span_minutes": null,
   "substantive_units": [
     {
@@ -88,11 +93,35 @@
       "completed_at": "2026-09-21T18:36:42+01:00",
       "result": "Independently rederived the two load-bearing raw inputs from the exhaustive spoke calculus and physical star tokens, replayed the algebra and hostile controls, and found no further defect. The four-centre closure is internally verified at stated scope; external review remains open.",
       "artifact": "project/research/post_ms/2026-09-21-q3-star-support-v1/FOUR_CENTRE_COMPLETE_CLOSURE_HOSTILE_AUDIT.md"
+    },
+    {
+      "id": 12,
+      "completed_at": "2026-09-21T18:44:45+01:00",
+      "result": "Reduced all five-element cube centre supports to exactly three automorphism orbits, represented by complement-distance multisets {1,1,2}, {2,2,2}, and {1,2,3}.",
+      "artifact": "project/research/post_ms/2026-09-21-q3-star-support-v1/FIVE_CENTRE_SINGLE_COPY_AND_FAMILY.md"
+    },
+    {
+      "id": 13,
+      "completed_at": "2026-09-21T18:44:45+01:00",
+      "result": "Exhaustively classified the one-copy slice over all 256 halfcode subsets in each five-centre orbit: the two non-antipodal orbit types are infeasible, while the antipodal-star support has a unique minimum seven-halfcode model, an actual n=21,m=77 D2C graph.",
+      "artifact": "project/research/post_ms/2026-09-21-q3-star-support-v1/FIVE_CENTRE_SINGLE_COPY_ORBIT_RESULTS.json"
+    },
+    {
+      "id": 14,
+      "completed_at": "2026-09-21T18:44:45+01:00",
+      "result": "Proved and replayed an infinite five-centre family for every q>=1 by adjoining A-isolated P1 twins to the n=21 base: n=20+q and m=4n-7. Direct checks pass q=1 through 20 and all 77 base-edge witnesses are twin-safe.",
+      "artifact": "project/research/post_ms/2026-09-21-q3-star-support-v1/FIVE_CENTRE_FAMILY_RESULTS.json"
+    },
+    {
+      "id": 15,
+      "completed_at": "2026-09-21T18:46:07+01:00",
+      "result": "Found a quadratic-density five-centre blowup candidate: complete P0--P1 with one six-coordinate P1 hub passes direct D2C replay for every 1<=r,q<=20 and has n=20+r+q, m=rq+4(r+q)+73. This disproves a linear-regime expectation; arbitrary-parameter criticality remains to prove.",
+      "artifact": "project/research/post_ms/2026-09-21-q3-star-support-v1/FIVE_CENTRE_PARITY_BLOWUP_PROBE_RESULTS.json"
     }
   ],
-  "number_of_substantive_units": 11,
-  "early_stop_check_time": null,
-  "early_stop_check_result": null,
+  "number_of_substantive_units": 15,
+  "early_stop_check_time": "2026-09-21T18:49:15+01:00",
+  "early_stop_check_result": "Cutoff remained in the future and a bounded five-centre family audit remained available; did not finalize and continued through the >=50-minute research threshold.",
   "tool_infrastructure_failures": [
     {
       "time": "2026-09-21T18:13:20+01:00",
@@ -100,10 +129,16 @@
       "pivot": "Corrected the reporting loop, parsed and independently inspected the completed JSON, and continued; no mathematical result depended on the failed print step."
     }
   ],
-  "commit_shas_produced": [],
-  "live_unfinished_line": "Four-centre closure has passed an independent hostile replay and public status is synchronized. Move the Q3 structural frontier to five through eight star centres, starting with a bounded support-orbit and density-risk triage.",
-  "stop_reason": "IN_PROGRESS",
-  "target_status": "IN_PROGRESS",
+  "commit_shas_produced": [
+    "e89c359bc9948eb36049a57343a58c99759a572b",
+    "f2c4f0ab446cbccf07d836798b736eb65c393c9b",
+    "107043fb2a20ec59bfec13887ca27a2c69893240",
+    "882a38435e7c535cdfbcdad4ce90d988018dd964",
+    "e4e9be1a9ac9a9155e5ee77727949cb21c9e4719"
+  ],
+  "live_unfinished_line": "Prove the two-parameter five-centre complete P0--P1 candidate uniformly by a twin-extension witness invariant. It passes all 64 graph-level cases 1<=r,q<=8 and has positive linear gap from M(n), but the finite scan is not an arbitrary-multiplicity theorem.",
+  "stop_reason": "Reached and slightly exceeded the 50-minute forward-research target, then stopped at a natural verified five-centre family checkpoint with 3m48s remaining before the valid preservation cutoff.",
+  "target_status": "MET",
   "audit_reconciliation": "The latest audit prioritizes raw graph-level criticality and realizability before further conditional scalar stacking. This slot therefore continues the actual Q3 parity-plane interface through the RTS bow-tie and its raw certificates; it does not use the conditional source-tuple capacity premises, does not revive the invalidated matching-one route, and retains X3 as a mandatory negative control.",
   "inspected_remote_head": "0dc97e3c4447c7474fa56042fe8b66ada75d69d3"
 }
