@@ -7,6 +7,11 @@
     {
       "start": "2026-09-21T17:03:31+01:00",
       "kind": "initial entry"
+    },
+    {
+      "start": "2026-09-21T17:36:13+01:00",
+      "kind": "context re-entry; same slot/start/ledger/cutoff retained",
+      "continuity": "verified same invocation; forward research did not stop"
     }
   ],
   "forward_research_start_time": "2026-09-21T17:04:05+01:00",
@@ -47,14 +52,26 @@
       "completed_at": "2026-09-21T17:29:51+01:00",
       "result": "Combined the unconditional missing-pair ledger with the budget gate: the four-centre branch closes whenever M-I<=D(u,s), in particular whenever s>=ceil((r+q)/2). Any counterexample must have s<(r+q)/2 and M-I>D.",
       "artifact": "project/research/post_ms/2026-09-21-q3-star-support-v1/FOUR_CENTRE_LARGE_STAR_CLOSURE.md"
+    },
+    {
+      "id": 6,
+      "completed_at": "2026-09-21T17:35:19+01:00",
+      "result": "Sharpened the surviving parameter wedge: any four-centre counterexample must have s<ceil((r+q)/2), U>=D+1, rq>=D+1, and both parity populations strictly exceed s/2; equivalently min(r,q)(r+q-min(r,q))>=D+1.",
+      "artifact": "project/research/post_ms/2026-09-21-q3-star-support-v1/FOUR_CENTRE_SURVIVOR_PARAMETER_WEDGE.md"
     }
   ],
-  "number_of_substantive_units": 5,
+  "number_of_substantive_units": 6,
   "early_stop_check_time": null,
   "early_stop_check_result": null,
-  "tool_infrastructure_failures": [],
+  "tool_infrastructure_failures": [
+    {
+      "time": "2026-09-21T17:18:00+01:00",
+      "failure": "Exact MaxSAT and cardinality-decision attempts for joint multiplicity three exceeded bounded time limits.",
+      "pivot": "Switched to targeted SAT witnesses, finite hostile ladders, and analytic density budgeting; research continued."
+    }
+  ],
   "commit_shas_produced": [],
-  "live_unfinished_line": "Exploit the surviving small-star/high-missing-pair regime s<(r+q)/2 and M-I>D; seek a fan/replication lower bound on s or a sharper upper bound on M-I.",
+  "live_unfinished_line": "Exploit the exact survivor wedge, beginning with the parity/star-block triangle-free subcase and then forcing a triangle-supported criticality obstruction.",
   "stop_reason": "IN_PROGRESS",
   "target_status": "IN_PROGRESS",
   "audit_reconciliation": "The latest daily audit prioritizes raw graph criticality, actual D2C regression, and direct attack on interface realizability before further scalar theory. The matching-one target is exactly such a raw physical-certificate obstruction inside an actual realizable parity-star branch; conditional Hall/source-tuple machinery remains untouched.",

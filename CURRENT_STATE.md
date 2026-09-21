@@ -5,19 +5,19 @@ Canonical repository: `paullenz/MurtySimon742`. Date: 21 September 2026.
 Active target: the eventual / sufficiently-large second-extremal problem around M(n)=floor((n-1)^2/4)+1. The general theorem and a uniform threshold remain open. X3 (12 vertices,32 edges,M(12)=31) remains mandatory. Do not revive the false all-order conjecture or the closed mixed {4,5} ladder.
 
 <!-- CURRENT-STATUS:START -->
-CHECKPOINT CLASS: `FOUR_CENTRE_BUDGETED_CANCELLATION_AND_LARGE_STAR_CLOSURE`
+CHECKPOINT CLASS: `FOUR_CENTRE_SURVIVOR_PARAMETER_WEDGE`
 
 WORK MODE: `MATH`
 
 INSPECTED PREDECESSOR: `ff35a12f8fb0381bd443b96a5fbf5f6b85761b96`.
 
-LAST VERIFIED RESULT: Exact cancellation is not needed. If the parity/star block has excess epsilon over rq+s, the full four-centre graph satisfies m<=M(n) whenever epsilon<=D(u,s)=floor((u+s)^2/4)-floor(u^2/4)-s-3; D>=9. Unconditionally the branch closes when M-I<=D, hence whenever s>=ceil((r+q)/2). Matching-one and one-tree-component remain explicitly invalidated by actual D2C graphs.
+LAST VERIFIED RESULT: Exact cancellation is not needed. If the parity/star block has excess epsilon over rq+s, the full graph satisfies m<=M(n) whenever epsilon<=D(u,s). Thus any surviving four-centre counterexample has s<ceil((r+q)/2), U=M-I>=D+1, rq>=D+1, and both r>s/2 and q>s/2. Matching-one and one-tree-component remain explicitly invalidated by actual D2C graphs.
 
 UNPRESERVED WORK: None after this invalidation/repair checkpoint.
 
 DEFERRED ADMIN: Broad historical cleanup; it does not block the raw matching-one attack.
 
-NEXT ACTION: Work only in the surviving regime s<(r+q)/2 and M-I>D. Combine the four-centre fan/replication constraints with the large missing-pair requirement to force additional star population or density loss; retain the split-tree ladder as a hostile control.
+NEXT ACTION: First close the parity/star-block triangle-free subcase using Mantel plus the five-coordinate edge cap; then every survivor must contain a triangle in that block, exposing a triangle-criticality target inside the exact parameter wedge.
 <!-- CURRENT-STATUS:END -->
 
 ## Reviewable current package
