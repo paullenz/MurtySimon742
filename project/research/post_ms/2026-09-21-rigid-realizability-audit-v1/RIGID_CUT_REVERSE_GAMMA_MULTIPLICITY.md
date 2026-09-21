@@ -1,149 +1,77 @@
-# Reverse-gamma multiplicity obstruction for rigid-cut realizability
+# Reverse-gamma multiplicity obstruction — corrected scope
 
 Date: 2026-09-21
 
-Status: synthesis of the raw boundary-code-edge trichotomy with the preserved gamma-collision theorem and the post-audit global matched-leaf collapse. This is a necessary condition for a rigid complete Hall cut to be realizable in an actual D2C graph; it does not assume the later half-ray geometry.
+Status: **scope-corrected / partially superseded.** The same-session theorem `RIGID_CUT_BOUNDARY_CODE_EDGE_TRICHOTOMY.md` has now been strengthened: if an outside code class `Y_d` has multiplicity at least two, the X-reverse arm is impossible outright. Therefore the reverse-gamma multiplicity machinery below is relevant only to **singleton outside code classes `y_d=1`**. Earlier wording that treated reverse-only coordinates with `y_d>=2` as a live realization channel is superseded.
 
-## 1. General reverse-only coordinate compression
+## 1. Why repeated outside codes have no reverse-only coordinates
 
-Keep the notation of `RIGID_CUT_BOUNDARY_CODE_EDGE_TRICHOTOMY.md`. Fix one outside code d and let
+Fix `y in Y_d` and an exposed coordinate i. An X-reverse witness w would have to satisfy
 
-`Y_d={y in Y:c(y)=d}`, `y_d=|Y_d|`.
+`N(q_i^{d_i}) cap N(w)={y}`.
 
-Let
+But w lies in X and the rigid cut is complete, so w sees every vertex of `Y_d`. The matched source `q_i^{d_i}` also sees every vertex of `Y_d`, because they all have bit `d_i` at coordinate i. Thus
 
-`R_d^rev = I(d,X) \ (U_0(d,X) union L(d,X))`
+`Y_d subseteq N(q_i^{d_i}) cap N(w)`.
 
-be the coordinates having neither coarse U-forward support nor matched-leaf forward support. Put
+Hence if `y_d>=2` the required singleton is impossible.
 
-`r=|R_d^rev|`.
+Therefore
 
-For every `i in R_d^rev`, Corollary 3.1 of the trichotomy gives
+> **`y_d>=2 => R_d^rev=empty`.**                         `(1.1)`
 
-`|X_{gamma_i}| >= y_d`,
+All exposed coordinates for a repeated outside code must be U-forward or matched-forward.
 
-where `gamma_i=gamma(q_i^{d_i})`.
+## 2. Singleton outside code: reverse-gamma multiplicity remains valid
 
-Distinct gamma codes correspond to disjoint X-code classes. Therefore, if `r>0`,
+Now assume `y_d=1`. Reverse-only coordinates may exist. Let
 
-`#{ gamma_i : i in R_d^rev } <= floor(x/y_d)`.
+`R_d^rev=I(d,X)\(U_0(d,X) union L(d,X))`, `r=|R_d^rev|`.
 
-In particular `y_d<=x` is necessary whenever a reverse-only coordinate exists.
+For each reverse-only coordinate i, the witness lies in the forced class `X_{gamma_i}`. Since `y_d=1`, nonemptiness is the only class-size requirement.
 
-Put
+Let s be the number of distinct occupied forced gamma classes among these r coordinates. Certainly `s<=x`. Pigeonhole gives a gamma class repeated on at least
 
-`s=floor(x/y_d)`.
+`g>=ceil(r/s)>=ceil(r/x)`
 
-If `s>=1`, pigeonhole gives a gamma code repeated on at least
+coordinates. The preserved gamma-collision theorem then yields `L_A>=g(g-1)` for `g>=3`.
 
-`g >= ceil(r/s)`
+Thus the former score-based multiplicity bound remains a legitimate, though weak, tool for singleton outside code classes.
 
-of the reverse-only coordinates.
+## 3. Global support split after correction
 
-The preserved gamma-collision theorem says that a common gamma class on `g>=3` tight fibres forces
+For every represented outside code d:
 
-`L_A >= g(g-1)`.
+- if `y_d>=2`, **only the two forward mechanisms exist**;
+- if `y_d=1`, U-forward, matched-forward and X-reverse are all potentially available.
 
-### Theorem 1.1 — reverse-gamma multiplicity bill
+The global matched-leaf theorem still gives at most two matched-forward heads. Distinct U-forward coordinates still require distinct one-match U-code classes.
 
-If `r>0`, then either `y_d>x`, which is impossible, or `s>=1` and, with
+Therefore, for repeated outside code classes,
 
-`g=ceil(r/s)`,
+> **`|I(d,X)| <= |U_0(d,X)|+2 <= u+2`.**                `(3.1)`
 
-one has `g<=2` or `L_A>=g(g-1)`.
+In the one-code branch, retaining the minimum-source complementary witness class improves u to the escape reservoir `e=u-k=c-r`.
 
-For an above-M candidate with the preserved score ceiling `L_A<=C0`, this gives
+## 4. Superseded statements
 
-> **`r <= s G(C0)`**,                                     `(1.1)`
+The earlier same-session formulas
 
-where
+`r <= floor(x/y_d)G(C0)`
 
-`G(C0)=max(2, floor((1+sqrt(1+4C0))/2))`.
+for general `y_d`, and the corresponding “large reverse class versus U-forward” alternative for a repeated one-code block, are no longer the right live statements. For `y_d>=2`, reverse-only coordinates do not exist, so those inequalities are merely vacuous weakenings and must not be used to preserve a parameter family that fails the forward population test.
 
-The `max(2,...)` is deliberate: the safe gamma-collision floor is zero for multiplicity one or two.
+In particular:
 
-## 2. Global exposed-coordinate master inequality
+- the corrected intermediate half-ray is killed outright by forward population;
+- the preserved large-gap scalar escape family is also killed outright once full exposure and the escape-reservoir count are applied.
 
-The raw trichotomy partitions every exposed coordinate into three support channels:
+## 5. Live use
 
-1. a coordinate with at least one U-forward witness;
-2. a coordinate with matched-leaf forward support;
-3. a reverse-only coordinate.
+Keep gamma multiplicity only for singleton outside code classes. For repeated one-code blocks, use `ONE_CODE_FULL_BOUNDARY_EXPOSURE_THEOREM.md`, whose live condition is
 
-Different U-forward coordinates require different one-match U-code classes, so the first set has size at most u. The global matched-leaf collapse theorem proves that the second set has size at most two. Therefore
+`p<=c-r+2`
 
-> `r >= |I(d,X)|-u-2`.                                   `(2.1)`
+when `m>=2,y>=2`, sharpened to `p<=c-r` when there is no matched-forward support.
 
-Combining `(2.1)` with `(1.1)` yields:
-
-### Theorem 2.1 — boundary exposure master bound
-
-For an above-M rigid complete cut and one outside code d with `y_d>=1`, if reverse-only coordinates exist then necessarily `y_d<=x` and
-
-> **`|I(d,X)| <= u+2+floor(x/y_d) G(C0)`.**              `(2.2)`
-
-If `y_d>x`, reverse-only support is impossible and the sharper bound is
-
-> **`|I(d,X)|<=u+2`.**                                   `(2.3)`
-
-The theorem requires no two-sided complementary pair inside X. It is a general raw-realizability constraint for every represented outside code.
-
-This is particularly useful when boundary exposure is itself forced by the X-code geometry: then a large I cannot be hidden in aggregate Hall capacity; it must be physically routed through at most u one-match U-code classes, at most two matched leaves, and a gamma-collision-limited reverse reservoir.
-
-## 3. Two-sided occupied X-pairs force full boundary exposure
-
-Now specialize to the one-code outside branch `Y=A_d`.
-
-Suppose X contains a complementary pair class in which **both orientations are occupied**: there are vertices of codes c and `bar c` in X.
-
-Then at every tight coordinate i, exactly one of `c_i,bar c_i` equals `d_i`. Therefore
-
-`I(d,X)=[p]`.
-
-Moreover no coordinate is universal across X, because c and `bar c` disagree at every coordinate. Hence
-
-`C(d,X)=empty`,
-
-so the matched-forward mechanism is unavailable on **every** coordinate.
-
-The coarse U-forward support uses distinct one-match codes `bar d xor e_i`; consequently at most u coordinates can have U-forward support. Thus at least
-
-`r >= (p-u)_+`
-
-coordinates are reverse-only.
-
-### Theorem 3.1 — two-sided-pair realizability obstruction
-
-In a rigid complete one-code cut with a two-sided occupied complementary pair inside X, put `s=floor(x/y)`.
-
-If `p>u`, then necessarily `s>=1`, so `y<=x`. Furthermore, with
-
-`g=ceil((p-u)/s)`,
-
-either `g<=2` or
-
-`L_A>=g(g-1)`.
-
-For an above-M candidate,
-
-> **`p-u <= floor(x/y) G(C0)`**                          `(3.1)`
-
-is necessary.
-
-Equivalently, whenever
-
-`p-u > floor(x/y) G(C0)`,
-
-every complementary pair class represented inside X must be one-sided occupied.
-
-## 4. Structural interpretation
-
-The general obstruction is strongest when
-
-- the exposed-coordinate count exceeds the unmatched rooted reservoir;
-- the outside code class is not tiny compared with X;
-- and the A-slack ceiling is small.
-
-Too few coordinates can be handled by unmatched forward witnesses, matched-forward support is globally O(1), and the remaining coordinates demand large reverse X-code classes. Either those gamma classes are too numerous to fit in X or many coordinates share one gamma class, triggering the gamma-collision theorem.
-
-This does not yet prove nonrealizability of all rigid cuts. It does, however, turn the empirical zero-positive-fixture gap into a compact structural inequality that can be tested directly against all one-code survivor parameter ranges and against future actual-graph regression fixtures.
+This correction is a material strengthening of the raw realizability audit and should supersede the earlier reverse-gamma branch in CURRENT_STATE and README summaries.
