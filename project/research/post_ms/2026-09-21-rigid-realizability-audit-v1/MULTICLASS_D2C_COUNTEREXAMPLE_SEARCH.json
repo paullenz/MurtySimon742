@@ -1,0 +1,22 @@
+{
+  "date": "2026-09-21",
+  "objective": "Search directly for an actual D2C root with |A|>=4, at least one tight matched pair, and at least two complementary A code-pair classes.",
+  "generator": "Start from Erdos-Renyi graphs of orders 8..18 at densities 0.25,0.30,0.35,0.40,0.45,0.50,0.55,0.60,0.70,0.80; retain connected diameter-2 starts; greedily delete edges in deterministic random order until inclusion-minimal diameter 2 (D2C).",
+  "results": {
+    "diameter_2_starts": 1158,
+    "actual_D2C_graphs": 1158,
+    "all_roots_tested": 15321,
+    "roots_with_p_positive": 268,
+    "roots_with_A_at_least_4_and_p_positive": 244,
+    "roots_with_multiple_A_code_pair_classes": 2,
+    "roots_with_A_at_least_4_and_multiple_A_code_pair_classes": 0
+  },
+  "atlas_crosscheck": {
+    "D2C_graphs_through_order_7": 21,
+    "all_roots": 126,
+    "roots_with_p_positive": 17,
+    "roots_with_A_at_least_4_and_p_positive": 6,
+    "roots_with_A_at_least_4_and_multiple_A_code_pair_classes": 0
+  },
+  "interpretation": "The earlier complete-Hall-cut zero-hit phenomenon persists under a materially different D2C generator and all-root scan. Among 244 diversified generated roots with |A|>=4 and p>0, none has more than one complementary A code-pair class. This is strong bounded evidence for a graph-level single-pair-class obstruction, not a proof. The two generated multi-class roots have |A|<4 and therefore cannot support a rigid cut with |X|>=3 and nonempty Y."
+}
