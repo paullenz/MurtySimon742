@@ -67,3 +67,12 @@ The former matching-one and one-tree-component targets are false, as is universa
     epsilon <= floor(s(r+q-2)/2)   for q>=1,
 
 with `epsilon=0` when `q=0`. The budget `D(u,s)` exceeds this cap by at least 11, proving `m<=M(n)` for every exactly-four-centre graph in the stated scope. `FOUR_CENTRE_COMPLETE_DENSITY_CLOSURE.md` gives the proof and `FOUR_CENTRE_COMPLETE_CLOSURE_HOSTILE_AUDIT.md` independently replays its load-bearing raw inputs. Five through eight centres are now the Q3 star-support frontier.
+
+
+## Five-centre proved family package — 19:00 continuation
+
+The complete-P0--P1 construction is now proved D2C for every positive pair of multiplicities by a uniform twin-safe witness invariant. A stronger S7-hub family permits arbitrary coordinate, parity and leaf-star multiplicities and has exact internal extremum
+
+    4n-6+floor((n-20)^2/4).
+
+A repeated-S7 family has `6n-49`: it is one edge denser at orders 23--25, ties at 22 and 26, and loses to the quadratic family from 27 onward. Both remain a positive linear distance below `M(n)`. Exact small fixed-population enumeration distinguishes the three labelled/one-symmetry-class order-21 models and two order-22 population mechanisms. Every maximum root in the arbitrary S7-hub family has `p=0`, so the positive rigid-Hall fixture gap persists. These are construction-family theorems, not a global five-centre upper bound. The hostile audit is in `FIVE_CENTRE_FAMILY_HOSTILE_AUDIT.md`.
