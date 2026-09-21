@@ -5,19 +5,19 @@ Canonical repository: `paullenz/MurtySimon742`. Date: 21 September 2026.
 Active target: the eventual / sufficiently-large second-extremal problem around M(n)=floor((n-1)^2/4)+1. The general theorem and a uniform threshold remain open. X3 (12 vertices,32 edges,M(12)=31) remains mandatory. Do not revive the false all-order conjecture or the closed mixed {4,5} ladder.
 
 <!-- CURRENT-STATUS:START -->
-CHECKPOINT CLASS: `INTERNAL_FOUR_CENTRE_RESIDUAL_DEFECT_GATE`
+CHECKPOINT CLASS: `INTERNAL_COMPLETE_PARITY_BLOCK_DENSITY_CLOSURE`
 
 WORK MODE: `MATH`
 
-INSPECTED PREDECESSOR: `ea60ea18060e1a2214e77c91fd13b9e267b8043f`.
+INSPECTED PREDECESSOR: `ae1462ea4176cca3b4163a09bfda108e5e97b2d0`.
 
-LAST VERIFIED RESULT: The complete four-centre branch obeys e(A)<=2C+rq+M+s-I and therefore explicit rooted-defect and M(n)-m lower bounds. Here C counts physical complementary-coordinate pairs, M missing P0-P1 pairs and I same-parity edges. Remaining density risk is joint control of 2C+M.
+LAST VERIFIED RESULT: The entire complete P0-P1 subbranch of the four-centre parity-plane case satisfies m<=M(n) for every order, including P1 empty. Completeness eliminates same-parity and parity-star edges; coordinates contribute at most rt and the star forest at most s-1. Any surviving counterexample requires M>0.
 
 UNPRESERVED WORK: None after this entry checkpoint.
 
 DEFERRED ADMIN: Broad historical README maintenance and CI polling; neither blocks the core attack.
 
-NEXT ACTION: Prove competition between complementary-coordinate capacity C and missing parity pairs M through their shared P0 certificate resources; test the gate on actual families.
+NEXT ACTION: Attack M>0 using centre-spoke private P0 witnesses and unique-common-neighbour V charges; show missing parity pairs cannot create enough net density.
 <!-- CURRENT-STATUS:END -->
 
 ## Reviewable current package
