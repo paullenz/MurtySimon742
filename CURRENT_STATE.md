@@ -90,6 +90,7 @@ Full telemetry: `project/research/session_logs/2026-09-21/2026-09-21T18-00-38+01
 - Actual start: 18:00:38 BST; preservation cutoff: 18:55:38 BST.
 - Same-slot context re-entries: 18:08:49 and 18:43:07 BST; neither reset the start, ledger, cutoff or target.
 - Forward research: 18:01:41--18:51:50 BST = 50m09s (50.15 min).
+- Preservation complete: 18:52:55 BST; wall-clock span through preservation 52m17s (52.2833333333 min); preservation span 1m05s (1.0833333333 min).
 - Substantive units: 15.
 - Stop reason: reached and slightly exceeded the 50-minute target, then stopped at a natural verified five-centre family checkpoint for preservation.
 - >=50-minute target: MET.

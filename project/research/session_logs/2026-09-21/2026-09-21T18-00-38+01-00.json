@@ -22,11 +22,11 @@
   "forward_research_start_time": "2026-09-21T18:01:41+01:00",
   "forward_research_stop_time": "2026-09-21T18:51:50+01:00",
   "preservation_start_time": "2026-09-21T18:51:50+01:00",
-  "preservation_complete_time": null,
+  "preservation_complete_time": "2026-09-21T18:52:55+01:00",
   "final_report_time": null,
-  "wall_clock_session_minutes": null,
+  "wall_clock_session_minutes": 52.2833333333,
   "forward_research_span_minutes": 50.15,
-  "preservation_span_minutes": null,
+  "preservation_span_minutes": 1.0833333333,
   "substantive_units": [
     {
       "id": 1,
@@ -134,7 +134,8 @@
     "f2c4f0ab446cbccf07d836798b736eb65c393c9b",
     "107043fb2a20ec59bfec13887ca27a2c69893240",
     "882a38435e7c535cdfbcdad4ce90d988018dd964",
-    "e4e9be1a9ac9a9155e5ee77727949cb21c9e4719"
+    "e4e9be1a9ac9a9155e5ee77727949cb21c9e4719",
+    "a20d513f78c09fa77252c4b1b52a8f6dba700ea8"
   ],
   "live_unfinished_line": "Prove the two-parameter five-centre complete P0--P1 candidate uniformly by a twin-extension witness invariant. It passes all 64 graph-level cases 1<=r,q<=8 and has positive linear gap from M(n), but the finite scan is not an arbitrary-multiplicity theorem.",
   "stop_reason": "Reached and slightly exceeded the 50-minute forward-research target, then stopped at a natural verified five-centre family checkpoint with 3m48s remaining before the valid preservation cutoff.",
