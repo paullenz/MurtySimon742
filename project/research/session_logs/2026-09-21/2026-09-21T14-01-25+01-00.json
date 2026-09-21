@@ -81,6 +81,12 @@
       "completed_at": "2026-09-21T14:41:56+01:00",
       "result": "Structural degree-sum proof gives p=0 at both maximum-degree roots for all balanced five-coordinate family members; exact rooted ledger Q=13, f=15+r, delta=18+6r+4q derived and independently replayed.",
       "artifact": "project/research/post_ms/2026-09-21-q3-star-support-v1/MAXIMUM_ROOT_RESIDUAL_LEDGER.md"
+    },
+    {
+      "id": 11,
+      "completed_at": "2026-09-21T14:44:29+01:00",
+      "result": "Exhaustive raw local certificate calculus and fixed-point soundness induction audited against 28,934 literal edge deletions in 916 populations; exact equality of 11,720 lost-pair certificates. Global Hall premises remain conditional.",
+      "artifact": "project/research/post_ms/2026-09-21-q3-star-support-v1/RAW_CERTIFICATE_CALCULUS_AND_AUDIT.md"
     }
   ],
   "early_stop_check_time": null,
@@ -98,7 +104,8 @@
     "06f330a05402360584b091f1b8aaebd87973c585",
     "aaafb32b9b36cca1dcd88b84ddb2811275522a29",
     "c58d02216a00215a7b0170886581446dfaa30b15",
-    "4fcddc0e8361eb9144a64db2505692a27ebab4c6"
+    "4fcddc0e8361eb9144a64db2505692a27ebab4c6",
+    "0d0e5a214a747e47bc6da30d001b66aacf5a4b6a"
   ],
   "live_unfinished_line": "Audit the raw necessary-code elimination calculus and scope of the compact star-support theorem package.",
   "stop_reason": "IN_PROGRESS",

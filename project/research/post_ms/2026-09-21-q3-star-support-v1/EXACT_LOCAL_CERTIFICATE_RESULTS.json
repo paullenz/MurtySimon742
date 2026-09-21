@@ -1,0 +1,10 @@
+{
+  "cases": 916,
+  "exhaustive_two_A_populations": 512,
+  "seeded_larger_populations": 400,
+  "actual_D2C_controls": 4,
+  "deleted_edges_compared": 28934,
+  "individual_lost_distance_two_pairs": 11720,
+  "result": "all exact certificate sets equal independent edge-deletion reachability",
+  "scope": "Local certificate completeness and physical uniqueness; no claim arbitrary generated fixtures are D2C; no Hall/global-source premise promotion."
+}

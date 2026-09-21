@@ -7,19 +7,19 @@
 `X_3` (12 vertices, 32 edges, versus `M(12)=31`) remains the mandatory negative control. The false all-order 2019 Dailly–Foucaud–Hansberg Conjecture 3 is not the target. First-proof priority on Erdős #742 is not the optimization target.
 
 <!-- CURRENT-STATUS:START -->
-CHECKPOINT CLASS: `VERIFIED_INTERNAL_MAXIMUM_ROOT_P_ZERO_LEDGER`
+CHECKPOINT CLASS: `AUDIT_COMPLETE_RAW_LOCAL_CERTIFICATE_CALCULUS`
 
 WORK MODE: `MATH`
 
-INSPECTED PREDECESSOR: `4fcddc0e8361eb9144a64db2505692a27ebab4c6`.
+INSPECTED PREDECESSOR: `0d0e5a214a747e47bc6da30d001b66aacf5a4b6a`.
 
-LAST VERIFIED RESULT: For the entire balanced five-coordinate infinite family, maximum-degree roots have p=0 by a short degree-sum obstruction, Q=13, f=15+r and delta=18+6r+4q. The new actual graphs provably lie outside the matched-pair interface. Six parameter pairs independently replay the exact residual ledger.
+LAST VERIFIED RESULT: Exact local criticality calculus and soundness induction for necessary type pruning pass independent reachability replay on 28,934 edge deletions across 916 code populations. Global source premises and rigid Hall coverage are not promoted.
 
 UNPRESERVED WORK: None.
 
 DEFERRED ADMIN: Consolidate superseded live-state paragraphs and refresh reviewer summary during final preservation.
 
-NEXT ACTION: Audit the raw certificate elimination calculus and scope of the compact star-support theorem package before final preservation.
+NEXT ACTION: Analyze the remaining coordinate-face four-centre orbit using the newly audited physical spoke/bridge calculus.
 <!-- CURRENT-STATUS:END -->
 
 ## Current Q3 graph-level results
