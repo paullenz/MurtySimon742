@@ -2,22 +2,29 @@
 
 Canonical repository: `paullenz/MurtySimon742`. Date: 21 September 2026.
 
-Active target: the eventual / sufficiently-large second-extremal problem around M(n)=floor((n-1)^2/4)+1. The general theorem and a uniform threshold remain open. X3 (12 vertices,32 edges,M(12)=31) remains mandatory. Do not revive the false all-order conjecture or the closed mixed {4,5} ladder.
+Active target: a genuinely independent proof of Erdős #742 / the Murty–Simon inequality e(G)<=floor(n^2/4), preferably with the equality characterization. Forward priority is the project’s own complement / residual / Hall / profile / realizability route, not a reconstruction of the external e+disj+X proof. First live strip: n/2 < Delta(G) < 7n/12, using the elementary Delta<=n/2 bound on one side and the preserved internally checked candidate 7/12 theorem on the other. The 7/12 theorem remains candidate/internal-review mathematics. A 24-focused-session go/no-go gate now applies. Prior eventual-D2C work remains preserved but is no longer the active forward objective.
 
 <!-- CURRENT-STATUS:START -->
-CHECKPOINT CLASS: `FIVE_CENTRE_QUADRATIC_FAMILY_CANDIDATE`
+CHECKPOINT CLASS: `INDEPENDENT_742_PIVOT`
 
 WORK MODE: `MATH`
 
-INSPECTED PREDECESSOR: `0dc97e3c4447c7474fa56042fe8b66ada75d69d3`.
+PIVOT COMMIT: `5825c203da78ecaefaa63568f0883de25518df9f`.
 
-LAST VERIFIED RESULT: The entire exactly-four-star-centre Q3 antipodal-transversal branch is density-closed and hostile-replayed. Five-centre supports have three cube orbits. In the one-copy slice only the complement-{2,2,2} orbit is feasible, with a unique minimum n=21,m=77 model. Its P1-twin extension is proved for every q>=1. A complete P0--P1 two-parameter extension passes all 400 direct D2C checks for 1<=r,q<=20 and has n=20+r+q, m=rq+4(r+q)+73, but arbitrary-parameter criticality is not yet proved.
+ACTIVE OBJECTIVE: Close the Murty–Simon inequality independently of the external `Erdos742/Erdos742` proof, preferably including equality uniqueness. The first attack is the maximum-degree strip
+[
+n/2 < \Delta(G) < 7n/12.
+]
 
-UNPRESERVED WORK: None after this invalidation/repair checkpoint.
+INHERITED BOUNDARY RESULTS:
+- `Delta<=n/2` gives `e(G)<=n^2/4` immediately by degree sum.
+- Preserved candidate theorem: `n>=6` and `Delta>=7n/12` imply `e(G)<floor(n^2/4)`; internal exact audits are green but independent/external review remains open.
 
-DEFERRED ADMIN: Broad historical cleanup; it does not block the raw matching-one attack.
+FIRST ATTACK: Re-open the canonical 7/12 profile-integral proof, identify the exact first obstruction to lowering the threshold, sharpen toward `1/2`, and distinguish scalar/profile survivors from graph-realizable configurations. Use newer raw-criticality / realizability machinery against non-realizable survivor families. Treat balanced complete bipartite graphs as the expected equality boundary.
 
-NEXT ACTION: Prove the two-parameter five-centre complete P0--P1 candidate by a uniform twin-extension witness invariant. Its balanced gap below M(n) is positive linear. Do not infer arbitrary multiplicity from the 8-by-8 scan, and do not generalize either negative one-copy orbit to larger populations.
+SUCCESS SIGNALS FOR FIRST 24 FOCUSED SESSIONS: (1) any strict threshold improvement below 7/12; (2) a new rigorous rigidity/realizability theorem materially shrinking the strip; or (3) a finite-dimensional obstruction with a credible closure path. If none occurs, explicitly reassess rather than continue by inertia.
+
+HISTORICAL STATUS: The five-centre / eventual-D2C programme and all related audits, controls, failures and candidate results remain preserved and reusable, but are now subordinate to the independent-#742 target.
 <!-- CURRENT-STATUS:END -->
 
 ## Reviewable current package
