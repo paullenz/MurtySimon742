@@ -47,15 +47,19 @@ unconditional in the stated band.
 Trust: direct candidate set-theoretic consequence of the inherited raw
 A-side domination lemma.
 
-## Candidate corollary D — positive-density high-codegree cluster
+## Candidate corollary D — positive-density high-codegree cluster (scope corrected 22 September)
 
 `POSITIVE_DENSITY_CODEGREE_CLUSTER.md`
 
-In the rational plateau band, asymptotically more than 21.7% of selected pair
+Under the full exact plateau normalization stated in the corrected note
+(including both selected-mass bounds, the lower endpoint/degree hypotheses and
+the upper endpoint/degree cap), asymptotically more than 21.7% of selected pair
 occurrences—and at least `0.00351a^2` distinct pairs—have F-codegree at least
-`a/5`.
+`a/5`.  The original shorthand "plateau band" omitted hypotheses and must not
+be used as a broader theorem.
 
-Trust: exact arithmetic consequence of C under the stated band hypotheses.
+Trust: exact arithmetic consequence of C under the corrected joint
+hypotheses; not a general profile-band theorem.
 
 ## Hostile replay
 

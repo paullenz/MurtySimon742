@@ -29,9 +29,12 @@ The first focused session produced two candidate-level results:
    concentration as the only escape.  A uniform endpoint cap removes even
    that escape and gives the unconditional band bound `>0.2484a-0.997`.
 6. [`POSITIVE_DENSITY_CODEGREE_CLUSTER.md`](POSITIVE_DENSITY_CODEGREE_CLUSTER.md)
-   converts the average into a concrete obstruction: asymptotically more than
-   21.7% of selected pair occurrences, representing at least `0.00351a^2`
-   distinct pairs, have F-codegree at least `a/5`.
+   converts the average into a concrete obstruction under the full exact
+   plateau normalization: asymptotically more than 21.7% of selected pair
+   occurrences, representing at least `0.00351a^2` distinct pairs, have
+   F-codegree at least `a/5`.  A 22 September audit corrected omitted
+   lower-degree/endpoint and upper selected-mass hypotheses; this is not a
+   general profile-band theorem.
 7. [`GRAPH_TO_THRESHOLD_HOSTILE_REPLAY.md`](GRAPH_TO_THRESHOLD_HOSTILE_REPLAY.md)
    independently rederives the shared graph-to-profile spine.  It finds no
    blocker and makes the delicate residual-or-selected supplement dichotomy

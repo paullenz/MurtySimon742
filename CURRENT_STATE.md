@@ -1,31 +1,61 @@
 # CURRENT_STATE.md
 
-Canonical repository: `paullenz/MurtySimon742`. Date: 21 September 2026.
+Canonical repository: `paullenz/MurtySimon742`. Date: 22 September 2026.
 
-Active target: a genuinely independent proof of Erdős #742 / the Murty–Simon inequality e(G)<=floor(n^2/4), preferably with the equality characterization. Forward priority is the project’s own complement / residual / Hall / profile / realizability route, not a reconstruction of the external e+disj+X proof. First live strip: n/2 < Delta(G) < 7n/12, using the elementary Delta<=n/2 bound on one side and the preserved internally checked candidate 7/12 theorem on the other. The 7/12 theorem remains candidate/internal-review mathematics. A 24-focused-session go/no-go gate now applies. Prior eventual-D2C work remains preserved but is no longer the active forward objective.
+Active target: a genuinely independent proof of Erdős #742 / the Murty–Simon inequality e(G)<=floor(n^2/4), preferably with the equality characterization. Forward priority is the project’s own complement / residual / Hall / profile / realizability route, not a reconstruction of the external e+disj+X proof. The first focused session produced the internally checked candidate threshold `Delta>=250n/429`, shrinking the live strip to `n/2<Delta<250n/429`. The theorem and its inherited graph-to-profile spine remain candidate/internal-review mathematics. A 24-focused-session go/no-go gate applies. Prior eventual-D2C work remains preserved but is no longer the active forward objective.
 
 <!-- CURRENT-STATUS:START -->
-CHECKPOINT CLASS: `INDEPENDENT_742_PIVOT`
+CHECKPOINT CLASS: `DAILY_RED_TEAM_AUDIT_2026_09_22`
 
-WORK MODE: `MATH`
+WORK MODE: `AUDIT`
 
-PIVOT COMMIT: `5825c203da78ecaefaa63568f0883de25518df9f`.
+INSPECTED PREDECESSOR: audited head `0d11049574fce97f4630a4b71e8da78edbb7836c`; read the 21 September audit handoff, all later session logs, the independent pivot and strip packages, the canonical `7/12` proof/checker, recent commits/diffs, README and status guard. Pivot commit: `5825c203da78ecaefaa63568f0883de25518df9f`.
 
-ACTIVE OBJECTIVE: Close the Murty–Simon inequality independently of the external `Erdos742/Erdos742` proof, preferably including equality uniqueness. The first attack is the maximum-degree strip
-[
-n/2 < \Delta(G) < 7n/12.
-]
+LAST VERIFIED RESULT: focused session 1's candidate theorem `n>=6` and `Delta>=250n/429` implies `e(G)<floor(n^2/4)` survives exact rational replay, convex degree assembly, all eight finite exceptional rows, inherited `7/12` checking and a line-by-line internal graph-to-profile replay. No dependency on the external `e+disj+X` proof was found. The theorem remains conditional on the shared internally reviewed graph-to-profile bridge and is not externally verified. The scalar/Hall plateau is a relaxation, not an actual graph.
 
-INHERITED BOUNDARY RESULTS:
-- `Delta<=n/2` gives `e(G)<=n^2/4` immediately by degree sum.
-- Preserved candidate theorem: `n>=6` and `Delta>=7n/12` imply `e(G)<floor(n^2/4)`; internal exact audits are green but independent/external review remains open.
+UNPRESERVED WORK: none known. The dated audit note and PDF are preserved in the repository. Historical `PENDING` telemetry fields remain unfilled rather than reconstructed.
 
-FIRST ATTACK: Re-open the canonical 7/12 profile-integral proof, identify the exact first obstruction to lowering the threshold, sharpen toward `1/2`, and distinguish scalar/profile survivors from graph-realizable configurations. Use newer raw-criticality / realizability machinery against non-realizable survivor families. Treat balanced complete bipartite graphs as the expected equality boundary.
+DEFERRED ADMIN: remote CI confirmation after publication. The audited predecessor itself fails `scripts/check_status_sync.py --head HEAD` because commit `0d110495...` did not update the protected CURRENT-STATUS block; this audit repairs the live handoff without rewriting history.
 
-SUCCESS SIGNALS FOR FIRST 24 FOCUSED SESSIONS: (1) any strict threshold improvement below 7/12; (2) a new rigorous rigidity/realizability theorem materially shrinking the strip; or (3) a finite-dimensional obstruction with a credible closure path. If none occurs, explicitly reassess rather than continue by inertia.
+NEXT ACTION: independently reconstruct the complete selected-quasi-edge/profile lemma from raw D2C criticality in a standalone note, then build an actual-graph regression of every bridge inequality under multiple legal selections. Freeze `250/429` on any source/supplement reuse or choice-dependence gap. Only after that gate, attack the corrected high-codegree cluster and separately preserve the zero-demand balanced complete-bipartite equality branch.
 
-HISTORICAL STATUS: The five-centre / eventual-D2C programme and all related audits, controls, failures and candidate results remain preserved and reusable, but are now subordinate to the independent-#742 target.
+FOCUSED-SESSION COUNT: `1/24`. The go/no-go gate is not due. Session 1 met a success criterion by strictly improving the threshold, but the gate remains binding.
+
+MANDATORY CONSTRAINTS: do not treat scalar/profile feasibility as graph realizability; do not use the external `e+disj+X` core; do not use `POSITIVE_DENSITY_CODEGREE_CLUSTER.md` outside its corrected joint hypotheses; retain `X_3` and balanced complete bipartite graphs of both parities as controls; bounded negative search is not nonrealizability.
 <!-- CURRENT-STATUS:END -->
+
+## Latest adversarial audit - 22 September 2026
+
+Full report: `project/research/general_n/2026-09-22-daily-red-team-audit-v1/DAILY_RED_TEAM_AUDIT.md`.
+
+### Verified / retained at candidate scope
+
+- Exact arithmetic for `121/1569`, `250/429`, the threshold/order ladder and all finite exceptional rows passed independently executed repository checkers.
+- The source-demand, supplement-dichotomy, threshold-capacity and profile-projection algebra survived targeted internal replay.  This raises confidence but is not external verification.
+- The selected-signature union and robust stability lemmas survive direct set/counting review conditional on the inherited raw domination statement.
+- Source dependency search found no use of the external `Erdos742/Erdos742` universal `e+disj+X` inequality in the new or inherited profile package.
+
+### Weakened / corrected
+
+- `POSITIVE_DENSITY_CODEGREE_CLUSTER.md` was overbroad as written: it omitted hypotheses required by robust stability and gave only the lower selected-mass bound although the preceding average bound uses the upper bound.  It is repaired to the full exact plateau normalization.  Its arithmetic survives; it is not a general profile-band theorem.
+- The improved threshold is not a complete strip proof and does not settle equality.  Odd balanced complete bipartite graphs lie inside the remaining strip with `Delta=(n+1)/2`.
+- The rational plateau is an asymptotic aggregated relaxation, not an actual D2C construction.
+
+### Utilisation and process findings
+
+- 23 forward slots were scheduled; 14 have some telemetry and 9 have none.
+- Five slots have fully verified whole-slot records; four met 50 minutes and one recorded 48 minutes.
+- Closed non-overlapping intervals prove at least 371m25s of forward work and 195 substantive units, but whole-day utilisation is UNVERIFIED because of missing and `PENDING` boundaries.
+- The audited predecessor fails the protected status guard; README also retained stale eventual-D2C wording below its correct top-level pivot statement.  Both are repaired by this audit.
+
+### Next-hours order and stop criteria
+
+1. Reconstruct the graph-to-profile bridge independently from raw criticality.
+2. Regress that construction on actual D2C graphs, balanced complete bipartite graphs and `X_3` under multiple legal selections.
+3. Attack the corrected high-codegree cluster only after the bridge gates pass.
+4. Develop a separate zero-/near-zero-demand equality-stability branch.
+
+Stop and freeze the threshold on any graph-bridge flaw; stop any route that returns to scalar/Hall marginals already defeated by the plateau; reject any equality argument excluding odd balanced complete bipartite graphs.
 
 ## Reviewable current package
 
@@ -120,6 +150,6 @@ Full telemetry: `project/research/session_logs/2026-09-21/2026-09-21T19-01-53+01
 
 Candidate/internal result: for every n>=6, Delta(G)>=250n/429 implies e(G)<floor(n^2/4). The proof uses the shared graph-to-profile spine, the sharpened exact scalar certificate f(x)<121/1569, a continuous assembly for a>=65, and exact threshold-capacity closure of the eight exceptional a-values. This strictly improves 7/12, but remains internally checked and not externally reviewed.
 
-The exact first scalar/Hall obstruction is now isolated: an asymptotic uniform-demand plateau survives scalar capacity, full selected Hall, graphical margins, and simultaneous selected/residual incidence. Raw criticality nevertheless forces a new selected-signature union law. It implies a positive-density family of selected label pairs with F-codegree at least a/5. The next task is a raw-criticality upper bound or classification for that family; this is the first graph-realizability obstruction beyond the plateau.
+The exact first scalar/Hall obstruction is now isolated: an asymptotic uniform-demand plateau survives scalar capacity, full selected Hall, graphical margins, and simultaneous selected/residual incidence. Raw criticality nevertheless forces a new selected-signature union law. Under the full exact plateau normalization corrected by the 22 September audit, it implies a positive-density family of selected label pairs with F-codegree at least a/5. The next task is a raw-criticality upper bound or classification for that family after independent bridge verification; this is the first graph-realizability obstruction beyond the plateau.
 
 Telemetry: actual start 2026-09-21T20:00:28+01:00; cutoff 2026-09-21T20:55:38+01:00; forward-research stop 2026-09-21T20:52:59+01:00; preservation complete 2026-09-21T20:55:43+01:00; wall-clock span 55.25 minutes; forward-research span 51.35 minutes; 12 substantive units; >=50-minute target met. Full record: project/research/session_logs/2026-09-21/2026-09-21T20-00-28+01-00.json.

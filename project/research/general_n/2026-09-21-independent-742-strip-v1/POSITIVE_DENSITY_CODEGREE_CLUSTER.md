@@ -3,18 +3,28 @@
 21 September 2026.
 
 **Status:** candidate quantitative consequence of the robust signature theorem,
-within the inherited canonical bridge and the stated plateau-band hypotheses.
+within the inherited canonical bridge and the corrected joint plateau
+hypotheses below.  The hypothesis list was narrowed by the 22 September audit.
 
-## Statement
+## Statement (corrected audit scope)
 
-Retain the rational plateau band
+Retain the exact rational plateau normalization, or a profile band satisfying
+all of these hypotheses simultaneously:
 
 ```text
-x=X=1/4,
+lambda=1,
+x_i>=x*a for every endpoint used below, with x=1/4,
+d_F(i)>=d*a where d=27/64,
+d_F(i), C_i<=c*a with c=6771/16000,
+Q=sum_u q_u satisfies x*a^2<=Q<=X*a^2 with x=X=1/4,
 beta=b/a<=139/100,
-d_F(i), C_i <= c*a with c=6771/16000,
-Q>=x*a^2.
 ```
+
+Thus the selected-mass bounds force `Q=a^2/4` in this normalization.  The
+original statement listed only `Q>=a^2/4` and omitted the lower-degree and
+selected-endpoint assumptions.  Robust stability uses the upper bound on `Q`,
+while the convexity step below uses the lower bound.  The correction narrows
+the theorem to the hypotheses actually used; none of the arithmetic changes.
 
 Let a **selected pair occurrence** be a triple `(u,{i,k})` with
 `{i,k} subset S_u`.  The endpoint-cap version of robust signature stability
@@ -72,7 +82,8 @@ D=\sum_u\binom{q_u}{2}
 \ge\frac{25}{1112}a^3-\frac18a^2
 \tag{PC3}
 
-for the stated band (the right side is increasing in `Q` once `a>=3`).
+for the stated normalization (the right side is increasing in `Q` once
+`a>=3`).
 Each unordered label pair can occur at no more than `b<=beta*a` physical
 sources.  Combining (PC1)--(PC3), the number of **distinct** pairs with
 `c_F(i,k)>=a/5` is at least
@@ -99,4 +110,3 @@ criticality forbids a positive density of pairs having simultaneously
 or those pairs organize into a bounded cluster/blow-up geometry.  The latter
 can be classified against the source/supplement pair injection.  Another
 scalar profile inequality cannot see (PC4).
-

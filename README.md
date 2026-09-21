@@ -1,4 +1,4 @@
-# Murty-Simon / Erdos Problem #742 - research archive and eventual D2C programme
+# Murty-Simon / Erdos Problem #742 - independent proof programme and research archive
 
 <!-- Keep the live overview and status tables here. Put dated updates below them, never above them. -->
 <!-- CURRENT-STATUS:START -->
@@ -9,7 +9,7 @@
 The live problem is now a **genuinely independent proof of Erdős #742 / the Murty–Simon inequality**
 `e(G)<=floor(n^2/4)`, preferably with the stronger equality characterization that equality forces the balanced complete bipartite graph. The external `Erdos742/Erdos742` proof based on the universal `e+disj+X` inequality is a benchmark, not the route to be reconstructed.
 
-The first attack is the maximum-degree strip `n/2 < Delta(G) < 7n/12`: `Delta<=n/2` is immediate from degree sum, while the project has a preserved internally checked candidate theorem closing `Delta>=7n/12`. The active programme is to push that threshold toward `1/2`, identify the exact obstruction, separate scalar/profile survivors from actual graph realizability, and use the project's residual/Hall/profile plus newer realizability machinery to close or rigidify the strip. A 24-focused-session go/no-go gate applies. See [the pivot note](project/research/general_n/2026-09-21-independent-742-pivot-v1/README.md).
+The first focused session improved the internally checked candidate threshold from `7/12` to `250/429`: for `n>=6`, `Delta(G)>=250n/429` implies `e(G)<floor(n^2/4)`. The live strip is therefore `n/2<Delta(G)<250n/429`. The active programme must now verify the shared graph-to-profile bridge independently, separate scalar/profile survivors from actual graph realizability, and close or rigidify the strip without losing the balanced complete-bipartite equality cases. A 24-focused-session go/no-go gate applies; the count is `1/24`. See [the pivot note](project/research/general_n/2026-09-21-independent-742-pivot-v1/README.md) and [22 September audit](project/research/general_n/2026-09-22-daily-red-team-audit-v1/DAILY_RED_TEAM_AUDIT.md).
 
 The previous eventual / sufficiently-large second-extremal programme remains fully preserved below as reusable research and historical status, but it is no longer the primary forward objective.
 
@@ -17,7 +17,7 @@ The previous eventual / sufficiently-large second-extremal programme remains ful
 
 ### 21 September 2026: first independent-#742 strip improvement
 
-The first focused session produced an internally checked candidate improvement: for n>=6, Delta(G)>=250n/429 implies e(G)<floor(n^2/4), strictly below 7/12. It also isolates the exact scalar/Hall plateau and derives a positive-density high-codegree signature obstruction for the next raw-criticality attack. These results are not externally reviewed. See the [theorem index](project/research/general_n/2026-09-21-independent-742-strip-v1/THEOREM_INDEX.md).
+The first focused session produced an internally checked candidate improvement: for n>=6, Delta(G)>=250n/429 implies e(G)<floor(n^2/4), strictly below 7/12. It also isolates the exact scalar/Hall plateau and derives a selected-signature rigidity obstruction for the next raw-criticality attack. The 22 September audit retained the threshold but corrected the downstream positive-density corollary to its full exact-plateau hypotheses; it is not a general profile-band theorem. These results are not externally reviewed. See the [theorem index](project/research/general_n/2026-09-21-independent-742-strip-v1/THEOREM_INDEX.md).
 
 
 ### 21 September 2026: sharp Q3 star-support theorem
@@ -109,12 +109,14 @@ See the [standalone paper index](project/papers/README.md) and claim ledgers bef
 
 ### Operational programme
 
-The eventual-D2C programme continues through 27 September 2026 with a dedicated daily adversarial checkpoint. Each daily audit is reserved for attempted falsification, independent replay, session-utilisation audit, repo/README/CURRENT_STATE reconciliation and a dated 24-hour report rather than forward research. Autonomous forward work must inherit the latest audit gate, retain `X_3`, and not revive superseded evidence.
+The independent-#742 programme continues with a dedicated daily adversarial checkpoint. Each daily audit is reserved for attempted falsification, independent replay, session-utilisation audit, repo/README/CURRENT_STATE reconciliation and a dated 24-hour report rather than forward research. Autonomous forward work must inherit the latest audit gate, retain `X_3` and balanced complete bipartite controls, and not revive superseded evidence. Earlier eventual-D2C work remains historical/reusable rather than the live objective.
 
 **Reviewers:** [`START_HERE_FOR_REVIEWERS.md`](START_HERE_FOR_REVIEWERS.md) · [`REVIEW_READY_INDEX.md`](releases/REVIEW_READY_INDEX.md) · [papers and review materials](#papers-and-review-materials).
 <!-- CURRENT-STATUS:END -->
 
 ## Dated research updates - current and preserved history
+
+**22 September 2026 - independent-#742 daily adversarial audit.** Exact replay retained the internally checked `250/429` maximum-degree threshold and found no dependency on the external `e+disj+X` proof core. The audit corrected the hypothesis scope of the positive-density codegree corollary, kept the shared graph-to-profile bridge as the principal review risk, made odd-order balanced complete bipartite equality an explicit control, and found incomplete day-wide telemetry plus a stale status-guard failure at audited head `0d110495...`. See the [full audit](project/research/general_n/2026-09-22-daily-red-team-audit-v1/DAILY_RED_TEAM_AUDIT.md).
 
 **21 September 2026 - four-centre closure and five-centre frontier.** The entire exactly-four-centre Q3 antipodal-transversal branch now satisfies `m<=M(n)` after a separate hostile replay. Five-centre supports reduce to three cube orbits; one orbit has an actual n=21,m=77 minimum model, a proved P1-twin family, and a simultaneous-parity quadratic candidate passing all 400 direct checks through multiplicity twenty. Arbitrary two-parameter criticality remains to be proved. See the [theorem index](project/research/post_ms/2026-09-21-q3-star-support-v1/THEOREM_AND_REVIEW_INDEX.md).
 
@@ -135,6 +137,8 @@ The pre-20-September and pre-19-September root README snapshots remain preserved
 <!-- REDTEAM-HISTORY:START -->
 ## Hostile / red-team audit history and resulting proof hardening
 
+**22 September 2026 - first independent-#742 audit.** The candidate all-order implication `Delta>=250n/429 => e(G)<floor(n^2/4)` survived exact scalar, finite-degree and inherited-profile replay. The downstream high-codegree density corollary was narrowed after its statement omitted hypotheses and reversed the role of an upper selected-mass bound. The shared graph-to-profile bridge, graph realizability and balanced complete-bipartite equality geometry remain open gates. The exact report is [DAILY_RED_TEAM_AUDIT.md](project/research/general_n/2026-09-22-daily-red-team-audit-v1/DAILY_RED_TEAM_AUDIT.md).
+
 **21 September 2026 - daily eventual-D2C audit.** The audit found no fatal contradiction in the corrected local H–U/superconstant chain but retained it as a conditional branch theorem. It elevated the unexercised rigid-cut realizability interface and small equality-face reconstruction as the next mathematical audit gates, and separately found severe telemetry incompleteness plus a Status synchronization failure. The exact report is [DAILY_RED_TEAM_AUDIT.md](project/research/post_ms/2026-09-21-daily-red-team-audit-v1/DAILY_RED_TEAM_AUDIT.md).
 
 **20 September 2026 - daily eventual-D2C audit.** The audit found no fatal contradiction in the final repaired all-R local package, but retained the conditional rigid-cut trust boundary and the zero-positive-fixture gap. It independently replayed the current arithmetic, confirmed that several older counts and orientation claims remain superseded, and made the same-code criticality / ordered witness-injection theorem the next mandatory raw-criticality audit. The exact report is [DAILY_RED_TEAM_AUDIT.md](project/research/post_ms/2026-09-20-daily-red-team-audit-v1/DAILY_RED_TEAM_AUDIT.md).
@@ -154,7 +158,17 @@ The pre-20-September and pre-19-September root README snapshots remain preserved
 
 ## Current research chain
 
-The active chain is the **eventual dense D2C programme**:
+The active chain is the **independent Erdos #742 maximum-degree-strip programme**:
+
+- [Independent-#742 pivot](project/research/general_n/2026-09-21-independent-742-pivot-v1/README.md)
+- [First strip package and theorem index](project/research/general_n/2026-09-21-independent-742-strip-v1/THEOREM_INDEX.md)
+- [Improved threshold and scalar obstruction](project/research/general_n/2026-09-21-independent-742-strip-v1/FIRST_OBSTRUCTION_AND_39_67.md)
+- [Graph-to-threshold hostile replay](project/research/general_n/2026-09-21-independent-742-strip-v1/GRAPH_TO_THRESHOLD_HOSTILE_REPLAY.md)
+- [Full-Hall plateau obstruction](project/research/general_n/2026-09-21-independent-742-strip-v1/FULL_HALL_PLATEAU_OBSTRUCTION.md)
+- [Selected-signature rigidity](project/research/general_n/2026-09-21-independent-742-strip-v1/SIGNATURE_UNION_RIGIDITY.md)
+- [22 September daily adversarial audit](project/research/general_n/2026-09-22-daily-red-team-audit-v1/DAILY_RED_TEAM_AUDIT.md)
+
+The following eventual-D2C chain is preserved as **historical/reusable work**, not the live objective:
 
 - [Literature correction / 12-vertex exception](project/research/post_ms/2026-09-17-stronger-pivot-v1/LITERATURE_CORRECTION_2024_EXCEPTION.md)
 - [Published-figure hostile-control certification](project/research/post_ms/2026-09-17-stronger-pivot-v1/PUBLISHED_12_VERTEX_EXCEPTION_FIGURE_CERTIFICATION.md)

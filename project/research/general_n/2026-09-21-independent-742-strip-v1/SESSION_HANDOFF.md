@@ -16,10 +16,12 @@
 3. **Graph-realizability rigidity.**  Physical selected-source identity gives
    the signature union theorem
    `|union_{i in N_F(j)} X_i|<=C_j` and a global second-moment/codegree
-   inequality.  In the plateau band this forces average co-selected-pair
-   F-codegree `>0.2484a-0.997`; asymptotically more than 21.7% of selected pair
-   occurrences, representing at least `0.00351a^2` distinct pairs, have
-   F-codegree at least `a/5`.
+   inequality.  In the exact plateau normalization this forces average
+   co-selected-pair F-codegree `>0.2484a-0.997`; under the full corrected joint
+   hypotheses, asymptotically more than 21.7% of selected pair occurrences,
+   representing at least `0.00351a^2` distinct pairs, have F-codegree at least
+   `a/5`.  The 22 September audit found that the original corollary statement
+   omitted hypotheses and narrowed it; do not use it as a general band theorem.
 4. **Trust-boundary replay.**  The shared graph-to-demand and
    threshold-capacity spine was independently rederived.  No blocker was
    found; the delicate supplement step is valid only through an explicit
