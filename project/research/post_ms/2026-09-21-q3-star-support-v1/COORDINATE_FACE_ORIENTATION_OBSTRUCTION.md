@@ -35,3 +35,7 @@ Both complementary orientations are mandatory, contradicting diameter two. The i
 If C21 has exactly one physical vertex, it cannot be adjacent to a star: such an edge would need to be that star's unique antipode bridge, while the star's direction-2 spoke would then require a second bridge from the diagonal star class. But this argument does NOT extend to multiple C21 copies: a nonadjacent second copy can be a singleton spoke witness. Any subsequent proof must preserve that physical distinction.
 
 The lower order count is four star centres, four other coordinate codes, two parity codes and at least one C21 vertex: at least eleven A vertices and hence n>=20. Realizability, multiple outward-face copies and sharp density remain open.
+
+## Superseded branch status
+
+`COORDINATE_FACE_PLANE_IMPOSSIBLE.md` subsequently eliminates the outward orientation for arbitrary physical multiplicities. This file remains the necessary first half of that proof.

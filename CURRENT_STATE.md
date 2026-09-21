@@ -5,19 +5,19 @@ Canonical repository: `paullenz/MurtySimon742`. Date: 21 September 2026.
 Active target: the eventual / sufficiently-large second-extremal problem around M(n)=floor((n-1)^2/4)+1. The general theorem and a uniform threshold remain open. X3 (12 vertices,32 edges,M(12)=31) remains mandatory. Do not revive the false all-order conjecture or the closed mixed {4,5} ladder.
 
 <!-- CURRENT-STATUS:START -->
-CHECKPOINT CLASS: `INTERNAL_OPPOSITE_EDGE_PLANE_IMPOSSIBLE`
+CHECKPOINT CLASS: `INTERNAL_EXACT_FOUR_CENTRE_PARITY_CLASSIFICATION`
 
 WORK MODE: `MATH`
 
-INSPECTED PREDECESSOR: `856d5000acb7294341a34b87ae31397f9f3707d3`.
+INSPECTED PREDECESSOR: `ae4094e7acdcb8d5e4f40357c96803f760f96174`.
 
-LAST VERIFIED RESULT: The opposite-parallel-edge affine-plane star support is impossible for arbitrary physical multiplicities. Missing-code physical matching plus raw spoke criticality traps every C10 A-neighbour inside C10, contradicting diameter two to mandatory C11. Only parity-plane and coordinate-face four-centre supports remain.
+LAST VERIFIED RESULT: Both nonparity affine-plane orbits are impossible for arbitrary multiplicities. Hence any exactly four-centre star support is a parity class, and the explicit parity-plane families show this is sharp. The proof is raw physical criticality plus diameter two, independent of SAT/Hall/source-tuple premises.
 
 UNPRESERVED WORK: None after this entry checkpoint.
 
 DEFERRED ADMIN: Broad historical README maintenance and CI polling; neither blocks the core attack.
 
-NEXT ACTION: Hostile-review the arbitrary-multiplicity exclusion, then apply the same physical spoke calculus to the sole open coordinate-face four-centre orbit.
+NEXT ACTION: Independently audit both orbit exclusions, update the compact theorem, then seek a density/structure theorem inside the sole realizable parity-plane orbit.
 <!-- CURRENT-STATUS:END -->
 
 ## Reviewable current package

@@ -29,16 +29,22 @@
       "completed_at": "2026-09-21T15:08:48+01:00",
       "result": "Arbitrary-multiplicity proof eliminates the opposite-parallel-edge four-star support: physical missing-code matching plus two C10 spoke constraints force C10 A-neighbourhoods inside C10, contradicting diameter to mandatory C11.",
       "artifact": "project/research/post_ms/2026-09-21-q3-star-support-v1/OPPOSITE_EDGE_PLANE_IMPOSSIBLE.md"
+    },
+    {
+      "id": 3,
+      "completed_at": "2026-09-21T15:10:42+01:00",
+      "result": "Arbitrary-multiplicity proof eliminates the coordinate-face four-star support. Missing-face physical matchings and two C10 spoke constraints leave no common A-neighbour between mandatory complementary C10,C11 classes.",
+      "artifact": "project/research/post_ms/2026-09-21-q3-star-support-v1/COORDINATE_FACE_PLANE_IMPOSSIBLE.md"
     }
   ],
-  "number_of_substantive_units": 2,
+  "number_of_substantive_units": 3,
   "early_stop_check_time": null,
   "early_stop_check_result": null,
   "tool_infrastructure_failures": [
     "python-sat was absent; installed into the disposable workspace dependency directory and validated against three actual D2C controls."
   ],
   "commit_shas_produced": [],
-  "live_unfinished_line": "Hostile-review the new arbitrary-multiplicity exclusion; then attack the sole open four-centre coordinate-face orbit.",
+  "live_unfinished_line": "Hostile audit both new orbit exclusions; synthesize exact four-centre parity-class classification and explore density/structure inside that sole realizable orbit.",
   "stop_reason": "IN_PROGRESS",
   "target_status": "IN_PROGRESS",
   "audit_reconciliation": "Latest daily audit prioritizes raw criticality and actual graph realizability. This run follows that priority by hostile-reviewing and attacking the reduced opposite-edge-plane actual core; conditional Hall/source-tuple results are not advanced.",
