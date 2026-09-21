@@ -15,12 +15,12 @@
     }
   ],
   "forward_research_start_time": "2026-09-21T15:02:46+01:00",
-  "forward_research_stop_time": null,
-  "preservation_start_time": null,
+  "forward_research_stop_time": "2026-09-21T15:55:44+01:00",
+  "preservation_start_time": "2026-09-21T15:55:44+01:00",
   "preservation_complete_time": null,
   "final_report_time": null,
   "wall_clock_session_minutes": null,
-  "forward_research_span_minutes": null,
+  "forward_research_span_minutes": 52.9666666667,
   "preservation_span_minutes": null,
   "substantive_units": [
     {
@@ -186,10 +186,38 @@
   "tool_infrastructure_failures": [
     "python-sat was absent; installed into the disposable workspace dependency directory and validated against three actual D2C controls."
   ],
-  "commit_shas_produced": [],
-  "live_unfinished_line": "Give a raw proof that no star can uniquely bridge two vertex-disjoint parity nonedges; this matching-one lemma closes missing-pair cancellation.",
-  "stop_reason": "IN_PROGRESS",
-  "target_status": "IN_PROGRESS",
+  "commit_shas_produced": [
+    "0b3bcf",
+    "856d500",
+    "ae4094",
+    "578305",
+    "9e56c0",
+    "b865398",
+    "03b3eda",
+    "c9dc241",
+    "6f08bcc",
+    "ea60ea",
+    "ae1462",
+    "91c86b",
+    "cb41a9",
+    "bd62d1",
+    "754e9d",
+    "19717cc",
+    "488dcd1",
+    "31a592b",
+    "b6a05f0",
+    "590edea",
+    "12c7d3d",
+    "fb068a1",
+    "50a5f03",
+    "0f451c7",
+    "8198559",
+    "b581f8e",
+    "999c5f8"
+  ],
+  "live_unfinished_line": "Prove the raw matching-one lemma: one physical even star cannot be the unique common A-neighbour of two vertex-disjoint missing P0-P1 pairs.",
+  "stop_reason": "Reached the valid preservation cutoff after the final bounded hostile-core replay; stopped new exploration and preserved the matching-one handoff.",
+  "target_status": "MET: verified continuous forward-research interval 15:02:46--15:55:44 is 52m58s.",
   "audit_reconciliation": "Latest daily audit prioritizes raw criticality and actual graph realizability. This run follows that priority by hostile-reviewing and attacking the reduced opposite-edge-plane actual core; conditional Hall/source-tuple results are not advanced.",
   "inspected_remote_head": "8d8855aa572cc4d5d31967316b3b99604bcbba18"
 }

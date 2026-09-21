@@ -51,3 +51,11 @@ First hostile-review the two newest nonparity-plane proofs at physical-vertex sc
 Five through eight star centres, nontransversal codes and the general eventual density theorem remain open. Keep rigid Hall work conditional until an actual qualifying graph interface is supplied. This is consistent with the latest audit's priority on raw criticality and graph realizability.
 
 Latest continuation: `OPPOSITE_EDGE_PARITY_FACTOR_REDUCTION.md` removes parity multiplicity from opposite-edge-plane core realizability and gives an exact fixed-core expansion gap recurrence. The next search/proof should use one vertex of each parity, preserving arbitrary coordinate/star multiplicities.
+
+## 15:00 continuation: full four-centre classification and parity-star density frontier
+
+The nonparity affine-plane orbits are now eliminated for arbitrary multiplicity. Hence exactly four star centres occur only on a parity plane. Order 19 is unique up to cube symmetry and has 66 edges; at order 20 the exact maximum is 73 with the unique six-coordinate-hub plus `K1,3` structure.
+
+For arbitrary parity-plane multiplicities, the star graph is a star forest, parity substitution gives `e(P0)+e(P1)+e(P0,P1)<=rq`, and the complete-parity and parity-star-anticomplete subbranches satisfy `m<=M(n)` at every order. An actual `n=26,m=104` parity-star graph is preserved as a mandatory positive control.
+
+The live density frontier is `PARITY_STAR_MATCHING_ONE_TARGET.md`. The sharp bound `e(R∪T∪S)<=rq+s` reduces to the assertion that each high-bridge star's valid missing-pair certificate graph has at most one tree component. It is enough to prove the stronger compact lemma that this graph has matching number at most one. Exact SAT rejects the matching-two core while independently scaling star, coordinate and parity multiplicities through eight, but no arbitrary-multiplicity proof is claimed.

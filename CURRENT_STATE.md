@@ -5,19 +5,19 @@ Canonical repository: `paullenz/MurtySimon742`. Date: 21 September 2026.
 Active target: the eventual / sufficiently-large second-extremal problem around M(n)=floor((n-1)^2/4)+1. The general theorem and a uniform threshold remain open. X3 (12 vertices,32 edges,M(12)=31) remains mandatory. Do not revive the false all-order conjecture or the closed mixed {4,5} ladder.
 
 <!-- CURRENT-STATUS:START -->
-CHECKPOINT CLASS: `PARITY_STAR_CROSS_COMPONENT_RESOURCE_CLASSIFICATION`
+CHECKPOINT CLASS: `FOUR_CENTRE_PARITY_STAR_MATCHING_ONE_FRONTIER`
 
 WORK MODE: `MATH`
 
-INSPECTED PREDECESSOR: `12c7d3d38da6ea1eb79dbb216d81a82eaaf832db`.
+INSPECTED PREDECESSOR: `999c5f8ac1a4ae2c550d3973ad672e6bc7d74c93`.
 
-LAST VERIFIED RESULT: If a high-bridge star certificate graph H_x has components of bipartition sizes (a,b) and (c,d), all ad+bc cross pairs are either present parity edges or have extra common neighbours in parity/star classes; coordinate vertices are impossible. Parity extra bridges consume same-parity edges already charged to occupied missing pairs. This exposes exactly the M/I/star-overlap resources needed to exclude a second tree component.
+LAST VERIFIED RESULT: Exactly four star centres force parity-plane support. The remaining parity-star density loss reduces to one local lemma: a high-bridge star's valid missing-pair certificate graph should have matching number at most one. That lemma implies e(R∪T∪S)<=rq+s and removes the +M-I term. Exact graph SAT rejects the matching-two core while separately scaling star, coordinate and parity multiplicities through eight; arbitrary multiplicity remains open.
 
-UNPRESERVED WORK: None after this checkpoint.
+UNPRESERVED WORK: None after final preservation.
 
-DEFERRED ADMIN: README and theorem-index synthesis belongs in final preservation.
+DEFERRED ADMIN: External review and proof of matching-one; finite UNSAT is not promoted.
 
-NEXT ACTION: Quantify the ad+bc cross-component demand against M, I and repeated-star overlap. A proof that each H_x has at most one tree component yields e(R∪T∪S)<=rq+s and closes the four-centre density branch via the residual ledger.
+NEXT ACTION: Prove from raw spoke/edge criticality that one even star cannot uniquely bridge two vertex-disjoint missing P0-P1 pairs. If false, construct the first actual H_x with matching number two and feed its resource cost into the residual ledger.
 <!-- CURRENT-STATUS:END -->
 
 ## Reviewable current package
@@ -57,3 +57,15 @@ Current slot ledger: `project/research/session_logs/2026-09-21/2026-09-21T14-01-
 - Substantive units: 15. >=50-minute target: UNVERIFIABLE. Telemetry compliance: NONCOMPLIANT because the full-slot research duration cannot be verified; this does not imply that the earlier segment did no work or identify a cause of re-entry.
 - Preservation complete: 14:57:52 BST; recorded final-report time: 2026-09-21T14:58:42+01:00; wall-clock session span: 57m17s (57.2833333333 min). Preservation span: 1m55s. Full-slot forward-research span remains UNVERIFIED; verified continuation is 22m10s.
 - Stop reason: reached the valid preservation cutoff; stopped exploration and handed off the reduced opposite-edge-plane core.
+
+
+### Current 15:00 slot
+
+Full telemetry: `project/research/session_logs/2026-09-21/2026-09-21T15-02-03+01-00.json`.
+
+- Actual start: 15:02:03 BST; preservation cutoff: 15:55:38 BST.
+- Forward research: 15:02:46--15:55:44 BST = 52m58s (52.9666666667 min), continuously documented across same-slot context re-entry.
+- Preservation complete: PENDING until final telemetry commit; wall-clock and preservation spans PENDING.
+- Substantive units: 26.
+- Stop reason: reached the valid cutoff after the last bounded hostile-core replay; stopped exploration for preservation.
+- >=50-minute target: MET.

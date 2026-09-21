@@ -20,6 +20,8 @@ The newest [review index](project/research/post_ms/2026-09-21-q3-star-support-v1
 
 Two actual infinite families give positive linear gaps below M(n). The five-coordinate family improves the six-coordinate family only from n=26 onward (ties at 24,25). The latest [parity-factor reduction](project/research/post_ms/2026-09-21-q3-star-support-v1/OPPOSITE_EDGE_PARITY_FACTOR_REDUCTION.md) reduces the opposite-edge-plane existence problem to one copy of each parity code; fixed-core parity expansions are eventually below M(n), without a uniform threshold over cores.
 
+The four-centre branch is now completely classified at the support level: only parity-plane support is realizable. Exact order results give a unique order-19 graph with 66 edges and a unique order-20 extremal structure with 73 edges. The parity-star interface is genuinely realizable (an n=26,m=104 graph is a positive control), and its remaining density loss has been reduced to a local matching-one lemma for missing parity-pair certificates. Finite SAT rejects the minimal matching-two core across star, coordinate and parity multiplicities through eight; this is evidence, not the missing general proof.
+
 The raw certificate calculus passes 28,934 independent edge-deletion comparisons. The new graphs add no positive rigid-Hall fixture: all their checked maximum-degree roots have p=0, and this is proved for the balanced five-coordinate family. These are internal results awaiting external review, not a general eventual theorem. The current priority is raw realizability of the reduced nonparity-plane cores; the earlier conditional interface below remains preserved.
 
 ### 21 September 2026 post-audit forward correction
