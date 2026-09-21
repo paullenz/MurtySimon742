@@ -7,33 +7,49 @@
 `X_3` (12 vertices, 32 edges, versus `M(12)=31`) remains the mandatory negative control. The false all-order 2019 Dailly–Foucaud–Hansberg Conjecture 3 is not the target. The mixed `{4,5}` selected-excess ladder is closed. First-proof priority on Erdős #742 is not the optimization target.
 
 <!-- CURRENT-STATUS:START -->
-CHECKPOINT CLASS: `FORWARD_POST_AUDIT_2026_09_21_0148_BST`
+CHECKPOINT CLASS: `FORWARD_POST_AUDIT_2026_09_21_STRONG_BOUNDARY_WEDGE`
 
 WORK MODE: `FORWARD_RESEARCH_PRESERVED`
 
-INSPECTED PREDECESSOR: 21 September daily red-team audit and post-audit rigid-realizability commits through the raw boundary-code-edge trichotomy, universal opposite-endpoint independence, reverse-gamma note and independent half-ray equality replay. The audit's two priorities were followed: the `N=0,1,2,3` equality faces were independently replayed, and the zero-positive-fixture gap was attacked directly from raw graph criticality rather than by another scalar Hall optimization.
+INSPECTED PREDECESSOR: the 21 September daily red-team audit, README, recent commits, the corrected repeated-code boundary trichotomy/full-exposure package, and the immediately preceding 08:04 session through `ONE_CODE_GLOBAL_BOUNDARY_SCORE_WEDGE.md`. The audit's dominant graph-level warning remains binding: bounded actual-D2C regression has zero positive rigid complete Hall-cut fixtures with `x>=3`.
 
-LAST VERIFIED RESULT: **repeated outside-code classes eliminate the X-reverse boundary arm.** If `Y_d` contains at least two vertices, an X-reverse witness `w in X` for `y q_i^{d_i}` is impossible because both `q_i^{d_i}` and `w` are adjacent to every vertex of `Y_d`, so their common-neighbour set cannot be the singleton `{y}`. In the rigid one-code branch with at least two matched-selected heads, those heads force full boundary exposure `I(d,X)=[p]`. A minimum outside source has `k` selected complementary U-witnesses in `U_bar d`; none can populate the one-match boundary classes `U_{bar d xor e_i}`. Writing residual dimension `r=p-m`, the available boundary-forward escape population is exactly `e=u-k=c-r`.
+LAST VERIFIED RESULT: **inside the conditional repeated rigid one-code branch `y>=2,m>=2`, the used U-forward boundary witnesses have a much stronger extra-U tradeoff than the previous service-counted floor.** Write `ell=|L|<=2`, `q=p-ell`, `d=e-q`, and `|W|=q+a` with `0<=a<=d`. At least `q-a` boundary coordinates retain a singleton physical U-forward witness; each such witness serves all `y` outside sources and is therefore Y-anticomplete. Raw B-edge criticality then forces every edge from a singleton witness to any extra U-vertex (including complementary-code vertices) to orient forward through the fixed X-code class `X_{d xor e_i}`. Fixed ordered `(w,x)` singleton-head injectivity gives at most `x` such physical repair edges globally. Consequently
 
-MAIN NEW THEOREM: for a repeated one-code rigid cut (`y>=2,m>=2`), every one of the `p` exposed coordinates must route through U-forward or matched-forward support. Let `C=C(d,X)` be the universal-coordinate set and `L=L(d,X)` the matched-forward head set. Then
+`E_U >= (q+a)(g0+q+a-1)+yq + max{0,(q-a)(d+k-a)-x}+k(p-1)`
 
-`p <= c-r+|L|`,
+for some integer `0<=a<=d`.
 
-with the exact leaf bounds
+MAIN NEW THEOREM: combining that finite raw bill with the exact score ceiling gives the **strong repeated-code boundary wedge**
 
-- `|C|=0` or `|C|>=3`: `|L|=0`, hence **`c>=p+r`**;
-- `|C|=1`: `|L|<=1`, hence **`c>=p+r-1`**;
-- `|C|=2`: `|L|<=2`, hence **`c>=p+r-2`**, and equality requires the two universal coordinates to form an isolated `K_2` in the matched-row graph.
+**`(r+g0+d)/p >= sqrt(2)-1-o(1) = 0.4142135623...-o(1)`**
 
-This is a raw graph-realizability condition. It does not use the score ceiling, rooted-Q inequality, pair-local Hall capacity, gamma-collision theorem, or the audit-sensitive source-tuple capacity theorem.
+for every unbounded survivor in this branch. This replaces the earlier 6.09% wedge. The proof uses `x=p+k-r` and does **not** use the independent global U-bound or the audit-sensitive source-tuple capacity theorem. A same-session hostile replay of the singleton-coordinate rectangle, complementary-code case, physical ordered-pair injection and asymptotic sign conditions passed at the stated conditional scope.
 
-CONSEQUENCES: (1) the corrected residual-one intermediate half-ray is unrealizable for every stated `t>=4`; (2) the 20 September large-gap scalar escape family `p=3t,c=2t,m=2t,r=t,y=t` is also unrealizable for every `t>=2`; (3) the repaired half-ray equality theorem `Delta>=h+1` passed a second hostile replay, but is now strategically subordinate because the half-ray dies upstream; (4) reverse-gamma multiplicity remains a live channel only for singleton outside-code classes `y_d=1` and must not be used to preserve repeated-code geometries.
+ENDPOINT STABILITY: any survivor sequence approaching equality in the strong wedge is forced into
 
-SAME-SESSION CORRECTION: an intermediate residual-one gamma/U wedge and a more permissive reverse-only branch were derived before the repeated-code singleton-common-neighbour obstruction was noticed. They have been explicitly marked superseded rather than deleted. See `REPEATED_CODE_REVERSE_EXCLUSION_DEPENDENCY_CORRECTION.md`.
+`d/p -> sqrt(2)-1`, while `r/p,g0/p,k/p,a/p ->0`.
 
-UNRESOLVED GLOBAL RISK: bounded actual-D2C regression still contains **zero positive rigid complete Hall-cut fixtures with `x>=3`**. This run establishes stronger necessary conditions *inside* that interface; it does not prove the interface reachable or impossible in general and does not produce an eventual second-extremal theorem.
+Hence `u/p,c/p,lambda/p->sqrt(2)`, `x/p,y/p->1`, `n/p->4+sqrt(2)`, and the equality-profile rooted-gap density is
 
-NEXT ACTION: intersect the new near-maximal rooted-gap condition (`c>=p+r` generically, with only the exact `|C|=1,2` relaxations) with the exact residual defect `delta=b(n-b)-m=r-e(F)`, rooted triangle count `Q=e(G[N(v)])`, and exact pair-local Hall/score identities. Separately classify the only qualitatively different one-code regimes: `m<=1` and singleton outside block `y=1`. Maintain actual-graph regression and `X_3`. Do **not** return to asymptotic H–U optimization of the now-unrealizable half-ray, and do not revive repeated-code reverse-gamma branches.
+`c/n -> (2sqrt(2)-1)/7 = 0.261203874...`.
+
+This is an equality-profile statement, not a global `c/n` theorem.
+
+FINITE ANTECEDENT: on the minimal-W face `a=0`, writing `h=r+g0`, every finite survivor satisfies `N_min<=0`, where
+
+`N_min = p^2-2p(d+h)-d^2+h^2 +2k(p-d-h-3) +ell^2-2ell p+4ell -2d+2r-10p+7`.
+
+For `k=ell=h=0` this reduces to `p^2-2pd-d^2-2d-10p+7<=0`, whose leading root is `d/p=sqrt(2)-1`.
+
+CONSEQUENCES: the scalar d escape is no longer a free population reservoir. It must trade off either (i) extra physical boundary-witness multiplicity, which enlarges the independent W-layer and its service slack, or (ii) a large rectangular singleton-W/extra-U hole block that can receive only linearly many X-certified repair edges. The old residual-one half-ray remains dead upstream and must not be revived.
+
+UNRESOLVED GLOBAL RISK: the entire result remains conditional on reaching the rigid complete one-code interface. The zero-positive-fixture actual-D2C gap is unchanged and no eventual theorem or threshold `n_0` is claimed.
+
+UNPRESERVED WORK: none from this invocation. The live next derivation is deliberately left as a clean handoff: feed the exact finite strong-wedge inequality and endpoint rectangular-hole profile into the rooted residual defect `delta=b(n-b)-m=r-e(F)` and rooted triangle count `Q=e(G[N(v)])`; separately extend the finite strong-wedge optimization from `a=0` to arbitrary `0<=a<=d` without weakening the raw singleton-coordinate bill.
+
+DEFERRED ADMIN: README has not yet been rewritten around the 41.42% wedge in this shortened invocation; the theorem files and CURRENT_STATE are canonical for the next run. The incomplete 08:04 predecessor telemetry remains historical/incomplete and must not be backfilled from commit times.
+
+NEXT ACTION: first hostile-replay the finite `N_min` algebra and the new strong-wedge note from raw variables; then feed the verified rectangular W-versus-extra-U hole block into the exact residual-defect/rooted-Q ledger. Maintain `X_3` and actual-graph regression. Do not return to the superseded H–U private-foot route, repeated-code reverse-gamma channels, or the dead half-ray.
 <!-- CURRENT-STATUS:END -->
 
 ---
@@ -42,55 +58,38 @@ NEXT ACTION: intersect the new near-maximal rooted-gap condition (`c>=p+r` gener
 
 Full report: `project/research/post_ms/2026-09-21-daily-red-team-audit-v1/DAILY_RED_TEAM_AUDIT.md`.
 
-The audit verified raw same-code criticality and ordered `(source,witness)` injectivity at their stated scope, retained the corrected H–U B-layer/capacity machinery under the rigid one-code hypotheses, kept the old H–U private-foot coordinate-slice chain invalidated, and identified the unexercised rigid-cut realizability interface as the dominant graph-level risk. It also required independent reconstruction of the half-ray equality faces; that reconstruction has now been completed twice and passed at its conditional scope.
+The audit verified raw same-code criticality and ordered `(source,witness)` injectivity at their stated scope, retained the corrected H–U B-layer/capacity machinery under the rigid one-code hypotheses, kept the old H–U private-foot coordinate-slice chain invalidated, and identified the unexercised rigid-cut realizability interface as the dominant graph-level risk. Historical hourly utilisation remains mostly unverified; missing timestamps are never reconstructed from commit volume or theorem count.
 
-The audit's process warning remains binding: historical hourly utilisation is mostly unverified because telemetry was absent. No missing historical timestamps are reconstructed from commits or output volume.
+## Current proof spine
 
-## Post-audit forward correction and new proof spine
+`raw boundary triangle criticality -> repeated-code reverse exclusion -> full boundary exposure -> matched-leaf bound -> exact U-forward reservoir -> used-boundary-W independence -> service-counted W slack -> singleton-coordinate extra-U repair capacity -> strong sqrt(2)-1 boundary wedge -> rooted residual-defect/Q feedback (next)`.
 
-Key files from this run:
+Key new files:
 
-- `project/research/post_ms/2026-09-21-rigid-realizability-audit-v1/RIGID_CUT_BOUNDARY_CODE_EDGE_TRICHOTOMY.md` — corrected repeated-code reverse exclusion.
-- `project/research/post_ms/2026-09-21-rigid-realizability-audit-v1/GLOBAL_MATCHED_LEAF_COLLAPSE_AND_PARTIAL_U_BILL.md` — global matched-forward leaf bound.
-- `project/research/post_ms/2026-09-21-rigid-realizability-audit-v1/ONE_CODE_FULL_BOUNDARY_EXPOSURE_THEOREM.md` — full exposure, exact `e=c-r`, and repeated-code forward-only theorem.
-- `project/research/post_ms/2026-09-21-rigid-realizability-audit-v1/RESIDUAL_ONE_BOUNDARY_POPULATION_OBSTRUCTION.md` — corrected residual-one consequence.
-- `project/research/post_ms/2026-09-21-rigid-realizability-audit-v1/HALF_RAY_BOUNDARY_CERTIFICATE_SCORE_CLOSURE.md` — half-ray raw population closure; score calculations retained only as backup.
-- `project/research/post_ms/2026-09-21-rigid-realizability-audit-v1/HALF_RAY_EQUALITY_FACE_SECOND_HOSTILE_REPLAY.md` — second equality-face replay.
-- `project/research/post_ms/2026-09-21-rigid-realizability-audit-v1/REPEATED_CODE_REVERSE_EXCLUSION_DEPENDENCY_CORRECTION.md` — explicit supersession/dependency map.
-- `project/research/post_ms/2026-09-21-rigid-realizability-audit-v1/RIGID_CUT_REVERSE_GAMMA_MULTIPLICITY.md` — corrected scope: singleton outside code only.
-
-Live local spine inside the conditional one-code interface is now:
-
-`raw boundary triangle criticality -> repeated-code reverse exclusion -> global matched-leaf collapse -> full boundary exposure for m>=2 -> selected complementary U-class exclusion -> exact boundary-forward reservoir e=c-r -> p<=c-r+|L(C)|`.
-
-Only after this literal realizability filter should rooted-Q, residual-defect, exact pair-local Hall or H–U machinery be invoked.
+- `project/research/post_ms/2026-09-21-rigid-realizability-audit-v1/ONE_CODE_BOUNDARY_EXTRA_U_TRADEOFF.md`
+- `project/research/post_ms/2026-09-21-rigid-realizability-audit-v1/ONE_CODE_GLOBAL_BOUNDARY_STRONG_WEDGE.md`
+- predecessor: `project/research/post_ms/2026-09-21-rigid-realizability-audit-v1/ONE_CODE_GLOBAL_BOUNDARY_SCORE_WEDGE.md`
 
 ## Session telemetry — latest invocation
 
-Full record: `project/research/session_logs/2026-09-21/2026-09-21T05-59-12+01-00-a.md`.
+Full record: `project/research/session_logs/2026-09-21/2026-09-21T08-31-33+01-00-a.md`.
 
-- actual start: **2026-09-21 05:59:12 BST**;
-- preservation cutoff: **2026-09-21 05:55:38 BST**;
-- forward-research stop: **2026-09-21 05:59:12 BST**;
-- preservation start: **2026-09-21 05:59:43 BST**;
-- preservation complete: **2026-09-21 06:00:01 BST**;
-- final-report timestamp: **UNVERIFIED**; the previously recorded 06:01:01 timestamp preceded a final `CURRENT_STATE.md` synchronization and therefore was not immediately before the actual report;
-- wall-clock session span: **UNVERIFIED**;
-- forward-research span: **0m00s**;
-- preservation span: **0m18s**;
-- substantive units: **0**;
-- >=50-minute target: **not applicable** because the invocation began after the mandatory cutoff and therefore had 0m00s of valid pre-cutoff research window available;
-- early-stop guard: **not applicable**; cutoff had already passed at invocation;
-- process compliance: **NONCOMPLIANT** because final preservation extended beyond the next trigger and exact final-report timing could not be durably recorded after all repository synchronization;
-- stop reason: delayed invocation began after the mandatory preservation cutoff, so no forward mathematics was started; preservation then overran the next trigger, and the overall wall-clock duration is therefore not certified.
-
-Previous measured late-start runs: `project/research/session_logs/2026-09-21/2026-09-21T03-59-26+01-00-a.md` and `project/research/session_logs/2026-09-21/2026-09-21T01-57-45+01-00-a.md` (both 0m00s forward-research span; both began after cutoff).
+- actual start: **2026-09-21 08:31:33 BST**;
+- preservation cutoff: **2026-09-21 08:55:38 BST**;
+- forward-research stop: **2026-09-21 08:47:56 BST**;
+- preservation start: **2026-09-21 08:47:56 BST**;
+- forward-research span: **16m23s**;
+- substantive units: **9**;
+- early-stop check: **08:47:56 BST; preservation permitted because 7m42s remained to cutoff**;
+- preservation complete / final report / wall-clock span: **pending final telemetry write**;
+- >=50-minute target: **not applicable** because only 24m05s existed from actual start to preservation cutoff;
+- process note: one coarse Python grid timed out; the derivation pivoted immediately to exact symbolic algebra and no claim depends on the failed computation.
 
 ## Mandatory constraints for future work
 
-- Read the 21 September daily audit and this post-audit correction before forward mathematics.
+- Read the 21 September daily audit and this handoff before forward mathematics.
 - Preserve `X_3` as mandatory hostile control.
 - Do not revive invalidated H–U private-foot arguments, uncorrected superconstant formulas, the superseded residual-one wedge, or repeated-code reverse-gamma branches.
-- Treat the new forward-only theorem as conditional on the rigid complete one-code interface; do not promote it to a graph-level eventual theorem without closing/reaching that interface.
+- Treat all strong-boundary results as conditional on the rigid complete one-code interface; do not promote them to a graph-level eventual theorem without closing/reaching that interface.
 - Finite scans are diagnostics, not substitutes for structural proof.
 - Every future run must finalize one telemetry record under `project/research/session_logs/` with measured timestamps and no inferred historical duration.
