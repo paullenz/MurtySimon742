@@ -65,6 +65,26 @@ def replay(centres):
         return {'centres':centres,'reason':'two mandatory bridges disable every star-edge certificate','required_types':{h:sorted(v) for h,v in required.items()}}
     raise AssertionError(('Unclosed three-centre support',centres))
 
+def replay_four():
+    data=[]
+    for centres in combinations(range(8),4):
+        r=relation(centres);R=symmetric_pairs(r)
+        mandatory={f'S{c}' for c in centres}|forced_halfcubes(centres,R)
+        conflicts=[(h,k) for h,k in r['diameter_incompatible_codes'] if h in mandatory and k in mandatory]
+        cubes=[]
+        for s in range(8):
+            for i in range(3):
+                t=s^(1<<i)
+                if s>t:continue
+                h=f'C{i}{(s>>i)&1}';k=f'C{i}{(t>>i)&1}'
+                badh=k in mandatory and not any(t not in CODES[l] and (h,l) in R and (k,l) in R for l in r['names'])
+                badk=h in mandatory and not any(s not in CODES[l] and (h,l) in R and (k,l) in R for l in r['names'])
+                if badh and badk:cubes.append((s,t))
+        xor=centres[0]^centres[1]^centres[2]^centres[3]
+        assert bool(conflicts or cubes)==bool(xor),centres
+        data.append({'centres':centres,'xor':xor,'status':'excluded' if xor else 'unresolved affine plane','diameter_obstructions':conflicts,'cube_obstructions':cubes})
+    return data
+
 def main():
     data=[replay(c) for c in combinations(range(8),3)]
     kinds=Counter(tuple(sorted((a^b).bit_count() for a,b in combinations(d['centres'],2))) for d in data)
@@ -77,8 +97,8 @@ def main():
                 covered.add(tuple(sorted(t^sum(((c>>j)&1)<<p[j] for j in range(3)) for c in rep)))
     assert covered==set(combinations(range(8),3))
     result={'scope':'All 56 supports of exactly three distinct star centres; arbitrary multiplicities',
-            'symmetry_counts':{str(k):v for k,v in kinds.items()},'exclusions':data}
+            'symmetry_counts':{str(k):v for k,v in kinds.items()},'exclusions':data,'four_centre_supports':replay_four()}
     Path(__file__).with_name('THREE_CENTRE_REPLAY_RESULTS.json').write_text(json.dumps(result,indent=2)+'\n')
-    print('PASS:',dict(kinds),'; all 56 supports excluded by the stated physical obstructions')
+    print('PASS:',dict(kinds),'; all 56 three-centre supports excluded; 56 nonplane four-centre supports excluded; 14 affine planes unresolved')
 
 if __name__=='__main__':main()

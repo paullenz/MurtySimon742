@@ -7,19 +7,19 @@
 `X_3` (12 vertices, 32 edges, versus `M(12)=31`) remains the mandatory negative control. The false all-order 2019 Dailly–Foucaud–Hansberg Conjecture 3 is not the target. First-proof priority on Erdős #742 is not the optimization target.
 
 <!-- CURRENT-STATUS:START -->
-CHECKPOINT CLASS: `REPLAYED_INTERNAL_Q3_AT_LEAST_FOUR_STAR_CENTRES`
+CHECKPOINT CLASS: `INTERNAL_Q3_MINIMAL_STAR_SUPPORT_AFFINE_PLANE`
 
 WORK MODE: `MATH`
 
-INSPECTED PREDECESSOR: `3e701a929d468a7a116a3d6dc8270794c1730375`; full three-centre hand proof and independent obstruction replay.
+INSPECTED PREDECESSOR: `6ce5a2d0d95bba37651613bebc7688d303cc092c`; three-centre hand theorem and raw relation replay.
 
-LAST VERIFIED RESULT: all 56 three-centre supports now pass independent obstruction replay, including cube-isometry coverage and all alternative star-edge certificates in the parity-triangle case. Nonempty star support requires at least four distinct centres, at Q3-transversal scope only.
+LAST VERIFIED RESULT: nonempty star support has at least four centres; if exactly four, their xor is zero, so they form an affine plane. All 56 nonplane four-centre supports are excluded by diameter/clean-entry obstructions, with all 70 supports replayed. The remaining 14 planes are unresolved, not graph fixtures.
 
 UNPRESERVED WORK: None. Mathematical status unchanged at entry; hourly continuity correction and 14:00 slot ledger are preserved with this handoff.
 
 DEFERRED ADMIN: README top-level status still needs a compact pointer to the completed Q3 odd-halfcube classification, star certificate table and new minimal two-star-class exact-M closure. Defer the larger README rewrite to the next safe preservation window rather than risk overlap.
 
-NEXT ACTION: derive a sound support-propagation rule incorporating clean cube entries and mandatory distinct antipode bridges; inspect the remaining four-centre symmetry classes.
+NEXT ACTION: analyze the three affine-plane star-support orbits using raw witness uniqueness; seek an actual graph fixture or a further multiplicity-independent obstruction.
 <!-- CURRENT-STATUS:END -->
 
 ## Current Q3 graph-level results
@@ -120,3 +120,7 @@ Independent replay: `project/research/post_ms/2026-09-21-q3-star-support-v1/STAR
 `project/research/post_ms/2026-09-21-q3-star-support-v1/THREE_CENTRE_SUPPORTS_IMPOSSIBLE.md` covers the three cube-isometry types with distance triples (1,1,2), (1,2,3), (2,2,2). This is an arbitrary-multiplicity claim at the stated Q3-transversal scope. Unit 4 completed 2026-09-21T14:17:47+01:00.
 
 Unit 5 replay completed 2026-09-21T14:20:29+01:00. Results: `project/research/post_ms/2026-09-21-q3-star-support-v1/THREE_CENTRE_REPLAY_RESULTS.json`.
+
+## Minimal star support has additive structure
+
+`project/research/post_ms/2026-09-21-q3-star-support-v1/FOUR_CENTRE_AFFINE_PLANE_NECESSITY.md` closes the 56 nonplane four-centre supports. The remaining 14 are six coordinate faces, six opposite-edge planes and two parity tetrahedra. Unit 6 completed 2026-09-21T14:23:20+01:00.

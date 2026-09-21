@@ -47,6 +47,12 @@
       "completed_at": "2026-09-21T14:20:29+01:00",
       "result": "Independent hostile replay reconstructs all 56 three-centre exclusions, checks cube-isometry coverage, clean entry obstruction and absence of every alternative star-edge certificate.",
       "artifact": "project/research/post_ms/2026-09-21-q3-star-support-v1/check_three_centres.py"
+    },
+    {
+      "id": 6,
+      "completed_at": "2026-09-21T14:23:20+01:00",
+      "result": "Structural clean-entry lemma excludes all 56 nonplane four-centre supports. Any four-centre star support must be one of 14 affine planes (three cube-isometry orbits).",
+      "artifact": "project/research/post_ms/2026-09-21-q3-star-support-v1/FOUR_CENTRE_AFFINE_PLANE_NECESSITY.md"
     }
   ],
   "early_stop_check_time": null,
@@ -59,7 +65,8 @@
     "7b8a119f970990942df3dfe49a2bd00d75ece051",
     "03590dd66568c793605647febc749f6dd075385f",
     "8d642667d333c52e1b79be9e4755f032cf62f847",
-    "3e701a929d468a7a116a3d6dc8270794c1730375"
+    "3e701a929d468a7a116a3d6dc8270794c1730375",
+    "6ce5a2d0d95bba37651613bebc7688d303cc092c"
   ],
   "live_unfinished_line": "Audit-priority raw Q3 criticality: extend or invalidate the two-opposite-star coordinate-multiplicity branch.",
   "stop_reason": "IN_PROGRESS",
