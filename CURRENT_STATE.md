@@ -25,15 +25,7 @@ MAIN NEW THEOREM: combining that finite raw bill with the exact score ceiling gi
 
 for every unbounded survivor in this branch. This replaces the earlier 6.09% wedge. The proof uses `x=p+k-r` and does **not** use the independent global U-bound or the audit-sensitive source-tuple capacity theorem. A same-session hostile replay of the singleton-coordinate rectangle, complementary-code case, physical ordered-pair injection and asymptotic sign conditions passed at the stated conditional scope.
 
-ENDPOINT STABILITY: any survivor sequence approaching equality in the strong wedge is forced into
-
-`d/p -> sqrt(2)-1`, while `r/p,g0/p,k/p,a/p ->0`.
-
-Hence `u/p,c/p,lambda/p->sqrt(2)`, `x/p,y/p->1`, `n/p->4+sqrt(2)`, and the equality-profile rooted-gap density is
-
-`c/n -> (2sqrt(2)-1)/7 = 0.261203874...`.
-
-This is an equality-profile statement, not a global `c/n` theorem.
+ENDPOINT STABILITY: any survivor sequence approaching equality in the strong wedge is forced into `d/p -> sqrt(2)-1`, while `r/p,g0/p,k/p,a/p ->0`. Hence `u/p,c/p,lambda/p->sqrt(2)`, `x/p,y/p->1`, `n/p->4+sqrt(2)`, and the equality-profile rooted-gap density is `c/n -> (2sqrt(2)-1)/7 = 0.261203874...`. This is an equality-profile statement, not a global `c/n` theorem.
 
 FINITE ANTECEDENT: on the minimal-W face `a=0`, writing `h=r+g0`, every finite survivor satisfies `N_min<=0`, where
 
@@ -78,13 +70,15 @@ Full record: `project/research/session_logs/2026-09-21/2026-09-21T08-31-33+01-00
 - preservation cutoff: **2026-09-21 08:55:38 BST**;
 - forward-research stop: **2026-09-21 08:47:56 BST**;
 - preservation start: **2026-09-21 08:47:56 BST**;
-- preservation complete (substantive state/theorem preservation): **2026-09-21 08:49:16 BST**;
+- preservation complete: **2026-09-21 08:51:26 BST**;
+- wall-clock session span (start through preservation complete): **19m53s**;
 - forward-research span: **16m23s**;
+- preservation span: **3m30s**;
 - substantive units: **9**;
 - early-stop check: **08:47:56 BST; preservation permitted because 7m42s remained to cutoff**;
-- final report / total wall-clock span: **pending final telemetry write**;
 - >=50-minute target: **not applicable** because only 24m05s existed from actual start to preservation cutoff;
-- process note: one coarse Python grid timed out; the derivation pivoted immediately to exact symbolic algebra and no claim depends on the failed computation. Status synchronization initially failed because `WORK MODE` used a noncanonical value; this was diagnosed from workflow logs and repaired to `MATH` during the preservation window.
+- stop reason: forward exploration stopped at a clean post-theorem checkpoint inside the final preservation reserve; no mathematical blocker was asserted;
+- process note: one coarse Python grid timed out and was replaced by exact symbolic algebra. Status synchronization initially failed because `WORK MODE` used a noncanonical value; workflow logs were inspected, the field was repaired to `MATH`, and the subsequent Status synchronization run succeeded.
 
 ## Mandatory constraints for future work
 
