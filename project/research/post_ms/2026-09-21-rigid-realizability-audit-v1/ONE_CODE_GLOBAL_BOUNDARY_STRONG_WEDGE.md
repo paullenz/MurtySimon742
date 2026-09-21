@@ -2,7 +2,7 @@
 
 Date: 2026-09-21
 
-Status: asymptotic necessary condition inside the repeated rigid one-code `y>=2,m>=2` interface. This strengthens the earlier `(sqrt(71)-8)/7` wedge by inserting the raw singleton-coordinate extra-U bill proved in `ONE_CODE_BOUNDARY_EXTRA_U_TRADEOFF.md`. It remains conditional on reaching the rigid complete one-code interface.
+Status: exact/asymptotic necessary conditions inside the repeated rigid one-code `y>=2,m>=2` interface. This strengthens the earlier `(sqrt(71)-8)/7` wedge by inserting the raw singleton-coordinate extra-U bill proved in `ONE_CODE_BOUNDARY_EXTRA_U_TRADEOFF.md`. It remains conditional on reaching the rigid complete one-code interface.
 
 ## 1. Coordinates
 
@@ -18,11 +18,7 @@ and the standard exact relation `x=p+u-c`. Therefore
 
 > **`x=p+k-r`.** `(1.1)`
 
-Set
-
-`rho=r/p`, `beta=g0/p`, `delta=d/p`, `alpha=a/p`, `kappa=k/p`,
-
-and
+Set `rho=r/p`, `beta=g0/p`, `delta=d/p`, `alpha=a/p`, `kappa=k/p`, and
 
 > **`sigma=rho+beta+delta`.** `(1.2)`
 
@@ -74,50 +70,72 @@ This is positive exactly for `sigma<sqrt(2)-1`. Therefore every unbounded repeat
 >
 > **`=0.4142135623...-o(1)`.** `(4.2)`
 
-## 5. Endpoint stability profile
+## 5. Exact finite inequality on the minimal-W face
 
-The proof gives more than the numerical threshold. Let a survivor sequence satisfy
+When `a=0`, the full finite bill is
 
-> `sigma -> s0:=sqrt(2)-1`.
+`E_U >= q(2p-ell-1)+q(d+k)-x+k(p-1)`.
 
-Because the base lower bound in `(4.1)` tends to zero at `s0`, every nonnegative correction in `(3.3)` must also tend to zero. At `s0<1/2`, the coefficients of both kappa and alpha stay bounded away from zero. Hence
+Substitute `q=p-ell`, `x=p+k-r`, `u=p-ell+d+k`, `lambda=p+r+g0+d-ell-1` into the exact score ceiling
 
-> **`alpha ->0`, `kappa->0`.** `(5.1)`
+`E_U<=S<=C0=(lambda+2)(p+u)+p-A_lambda`
 
-Moreover the base expression is minimized only when `delta=sigma`; therefore
+and use the preserved lower bound
 
-> **`delta-sigma ->0`.** `(5.2)`
+`2A_lambda >= lambda^2+2lambda+8`.
 
-Since `sigma=rho+beta+delta` with all three terms nonnegative,
+A necessary condition for any finite minimal-W survivor is then
 
-> **`rho+beta ->0`.** `(5.3)`
+> **`0 >= N_min`,** `(5.1)`
+
+where, writing `h=r+g0`,
+
+> **`N_min = p^2-2p(d+h)-d^2+h^2`**
+>
+> **`       +2k(p-d-h-3)`**
+>
+> **`       +ell^2-2ell p+4ell`**
+>
+> **`       -2d+2r-10p+7`.** `(5.2)`
+
+This is the finite antecedent of the asymptotic square-root threshold; no numerical scan is needed. In particular, when `k=0`, `ell=0` and `h=0`, it reduces to
+
+> **`p^2-2pd-d^2-2d-10p+7<=0`,** `(5.3)`
+
+whose leading root is exactly `d/p=sqrt(2)-1`. Thus the endpoint identified asymptotically is already visible in the exact integer score inequality, with only linear finite-size corrections.
+
+## 6. Endpoint stability profile
+
+Let a survivor sequence satisfy `sigma -> s0:=sqrt(2)-1`. Because the base lower bound tends to zero at `s0`, every nonnegative correction in `(3.3)` must also tend to zero. At `s0<1/2`, the coefficients of both kappa and alpha stay bounded away from zero. Hence
+
+> **`alpha ->0`, `kappa->0`.** `(6.1)`
+
+Moreover the base expression is minimized only when `delta=sigma`; therefore `delta-sigma->0`. Since `sigma=rho+beta+delta`,
+
+> **`rho+beta ->0`.** `(6.2)`
 
 Thus every asymptotically cheapest survivor is forced into the unique macroscopic profile
 
 > **`d/p -> sqrt(2)-1`,**
 >
-> **`r/p ->0`, `g0/p ->0`, `k/p ->0`, `a/p ->0`.** `(5.4)`
+> **`r/p ->0`, `g0/p ->0`, `k/p ->0`, `a/p ->0`.** `(6.3)`
 
-The standard identities then give
+The standard identities give
 
-> **`u/p -> sqrt(2)`, `c/p -> sqrt(2)`, `lambda/p -> sqrt(2)`, `x/p ->1`, `y/p ->1`.** `(5.5)`
+> **`u/p -> sqrt(2)`, `c/p -> sqrt(2)`, `lambda/p -> sqrt(2)`, `x/p ->1`, `y/p ->1`.** `(6.4)`
 
 Using `n=4p+2u-lambda`,
 
-> **`n/p ->4+sqrt(2)`.** `(5.6)`
+> **`n/p ->4+sqrt(2)`.** `(6.5)`
 
-Consequently the rooted-gap parameter has the endpoint density
+Consequently
 
-> **`c/n -> sqrt(2)/(4+sqrt(2))=(2sqrt(2)-1)/7 =0.261203874...`.** `(5.7)`
+> **`c/n -> sqrt(2)/(4+sqrt(2))=(2sqrt(2)-1)/7 =0.261203874...`.** `(6.6)`
 
-This is not a global lower bound on `c/n` for every survivor: it describes the only asymptotic geometry that can approach equality in the new boundary wedge. It is nevertheless a sharp stability target for the next rooted-defect/Q replay.
+This is an equality-profile density, not a global c/n lower bound for every survivor.
 
-## 6. Structural interpretation
+## 7. Structural interpretation and trust boundary
 
-The strong wedge does not use the independent global U-bound. Near equality, neither complementary selected witnesses nor boundary-service splitting can carry macroscopic mass. Almost all the necessary 41.42% escape is forced into **extra forward-population** `d`, while the used boundary witness set remains asymptotically minimal. In that geometry the singleton-coordinate theorem exposes a rectangular W-versus-extra-U hole block of asymptotic size `(sqrt(2)-1)p^2`, up to only linear X-certified repairs.
+Near equality, neither complementary selected witnesses nor boundary-service splitting can carry macroscopic mass. Almost all the necessary 41.42% escape is forced into extra forward-population d, while the used boundary witness set remains asymptotically minimal. The singleton-coordinate theorem then exposes a rectangular W-versus-extra-U hole block of asymptotic size `(sqrt(2)-1)p^2`, up to only linear X-certified repairs.
 
-This is substantially narrower than the three-arm escape permitted by the earlier 6.09% wedge and supplies a concrete normal form for the rooted residual-defect attack.
-
-## 7. Trust boundary and next test
-
-This remains a theorem inside the rigid one-code interface; it does not solve the zero-positive-fixture graph-level gap. The next high-value tasks are: retain the linear `x=p+k-r` correction to derive a finite version of the wedge; then feed the endpoint profile and rectangular hole block into the exact residual defect `delta=b(n-b)-m=r-e(F)` and rooted triangle count Q. The old half-ray remains dead and should not be revisited.
+This remains a theorem inside the rigid one-code interface; it does not solve the zero-positive-fixture graph-level gap. The next high-value task is to feed the finite inequality and endpoint profile into the exact residual defect `delta=b(n-b)-m=r-e(F)` and rooted triangle count Q while maintaining X_3 and actual-graph regression. The old half-ray remains dead.
