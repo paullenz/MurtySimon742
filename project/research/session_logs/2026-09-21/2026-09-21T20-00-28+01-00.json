@@ -5,7 +5,8 @@
   "segment_entries": [
     "2026-09-21T20:00:28+01:00",
     "2026-09-21T20:01:38+01:00",
-    "2026-09-21T20:32:15+01:00"
+    "2026-09-21T20:32:15+01:00",
+    "2026-09-21T20:59:15+01:00"
   ],
   "next_scheduled_trigger_time": "2026-09-21T21:00:38+01:00",
   "preservation_cutoff_time": "2026-09-21T20:55:38+01:00",
@@ -90,4 +91,10 @@
   "live_unfinished_line": "Prove a raw-criticality upper bound or classification for the positive-density family of selected label pairs having F-codegree at least a/5; this is the first graph-realizability obstruction beyond the scalar/Hall plateau.",
   "stop_reason": "Forward research stopped for the scheduled preservation window after exceeding 50 minutes; a coherent next raw-criticality line remains preserved for the next slot.",
   "compliance_status": "COMPLIANT_TARGET_MET"
+  ,"late_segment_reconciliation": {
+    "segment_start_time": "2026-09-21T20:59:15+01:00",
+    "forward_research_minutes": 0,
+    "classification": "post-cutoff zero-research reconciliation segment",
+    "effect_on_slot_totals": "none"
+  }
 }
