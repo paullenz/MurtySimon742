@@ -30,26 +30,32 @@ Therefore this whole branch exceeds `M(n)` only at `n=12`, where `a=3` and the g
 
 Write the antipode of `s∈B` as `bar s`.
 
-### 1. Root-edge criticality forces antipodal-free A-neighbourhoods
+### 1. Diameter two forces every A-neighbourhood to dominate Q3
 
-Fix `s∈B`. After deleting the root edge `vs`, every pair entirely in `B∪{v}` except a pair involving `s` still has a root-mediated path of length at most two. For the edge `vs` to be critical, the only possible B-vertex that can lose its unique length-two path to `s` through `v` is `bar s`: in `Q3`, every distance-two B-vertex already has cube common neighbours with `s`, while an adjacent B-vertex remains adjacent to `s`; the antipode is the unique B-vertex nonadjacent to `s` with no cube common neighbour with `s`.
+Fix `x∈A` and write `H=N_B(x)`. Because `A` is independent and `v` has no neighbours in `A`, if `t∈B\H`, every two-path from `x` to `t` must have its middle vertex in `B`. Therefore `H` dominates `Q3`.
 
-Thus `s` and `bar s` must have no common A-neighbour. Equivalently, for every `x∈A`, `N_B(x)` contains at most one vertex from each antipodal pair. Hence
+In particular `|H|>=2`; a singleton cannot dominate Q3.
 
-`|N_B(x)|<=4`.
+### 2. Root-edge criticality forces antipodal-free A-neighbourhoods
 
-### 2. Diameter two forces domination of Q3
+Fix `s∈B` and delete the root edge `vs`.
 
-Because `A` is independent and `v` has no neighbours in `A`, if `x∈A` and `t∈B\N_B(x)`, every two-path from `x` to `t` must have its middle vertex in `B`. Therefore `N_B(x)` dominates `Q3`.
+The only possible new distance-greater-than-two pair involving the root and an A-vertex would be `(v,x)` with `N_B(x)={s}`. Step 1 rules this out.
 
-So each `H=N_B(x)` is an antipodal-free dominating set of `Q3`.
+Among B-vertices, an adjacent vertex remains adjacent to `s`; every distance-two cube vertex already has a cube common neighbour with `s`; and the antipode `bar s` is the unique B-vertex nonadjacent to `s` with no cube common neighbour with `s`. Pairs involving an A-vertex but not the root cannot use `vs` in a length-two path, because A has no root neighbours.
+
+Hence criticality of `vs` forces `(s,bar s)` to lose its unique length-two path through `v`. Thus `s` and `bar s` have no common A-neighbour.
+
+Equivalently, every `H=N_B(x)` contains at most one vertex from each antipodal pair, so `|H|<=4`.
+
+Combining Steps 1 and 2, each A-neighbourhood is an antipodal-free dominating set of `Q3`.
 
 ### 3. Antipodal-free dominating sets of Q3 are exactly the eight odd affine halfcubes
 
-First, no antipodal-free set of size at most three dominates `Q3`.
+No antipodal-free set of size at most three dominates `Q3`.
 
 - Size one is immediate.
-- A dominating 2-set in `Q3` must be an antipodal pair, excluded here.
+- A dominating 2-set in `Q3` must be an antipodal pair: only two disjoint closed neighbourhoods of size four can cover all eight cube vertices, and this occurs exactly for antipodes.
 - For size three, translate one chosen vertex to `000`. Antipodal-freeness excludes `111`. To dominate `111`, one of the other two chosen vertices must have Hamming weight two; after permuting coordinates take it to be `110`, which excludes its antipode `001`. The third chosen vertex is then either a weight-one vertex among `100,010` (up to the symmetry fixing `110`) or a weight-two vertex among `101,011`; in either case one of `011,101` respectively is left undominated. Hence size three is impossible.
 
 Therefore `|H|=4`. Antipodal-freeness then says H contains exactly one vertex from each antipodal pair.
@@ -76,7 +82,7 @@ Distinct directions have affine-halfcube intersection of size two, so no further
 
 ### 5. Criticality of cube edges forces all three coordinate directions
 
-Let `st` be a cube edge flipping coordinate j. Deleting `st` cannot hurt any B-B distance because the root remains a common neighbour; it cannot hurt any A-A distance because their length-two paths use common B-neighbours and no cube edge. Hence a criticality witness for `st` must be an A-B nonedge whose unique B-middle vertex is one endpoint of `st`.
+Let `st` be a cube edge flipping coordinate j. Deleting `st` cannot hurt any B-B distance because the root remains a common neighbour; it cannot hurt any A-A distance because their length-two paths use common B-neighbours and no cube edge; and it cannot hurt a root-A distance because those paths use root-B and B-A edges. Hence a criticality witness for `st` must be an A-B nonedge whose unique B-middle vertex is one endpoint of `st`.
 
 For an A-vertex with halfcube `H={z:l·z=epsilon}`, if `t∉H`, the number of cube neighbours of `t` lying in H is exactly the Hamming weight `wt(l)`. Thus `st` can be the unique H-entry edge at `t` iff `wt(l)=1` and the unique support coordinate of l is j.
 
@@ -95,6 +101,10 @@ With `M(n)=floor((n-1)^2/4)+1`,
 `M(n)-m = floor((n-1)^2/4)-4n+17 = floor((n-9)^2/4)-3`.
 
 Since `a=n-9>=3`, the only negative value is at `a=3` (`n=12`), where the graph is precisely the three-coordinate instance and hence isomorphic to X3. At `a=4` (`n=13`) the gap is one.
+
+## Hostile-replay correction incorporated
+
+An initial proof draft stated the root-edge argument before excluding the alternative certificate `(v,x)` with `N_B(x)={s}`. That ordering was too quick: deleting `vs` could indeed make `d(v,x)>2` if `x` had the singleton B-neighbourhood `{s}`. The diameter-two domination lemma above rules such a vertex out, so the theorem survives after putting domination first. This correction is recorded explicitly rather than silently erased.
 
 ## Scope
 
