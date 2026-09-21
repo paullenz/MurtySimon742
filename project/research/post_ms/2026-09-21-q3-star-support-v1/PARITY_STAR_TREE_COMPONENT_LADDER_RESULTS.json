@@ -1,0 +1,12 @@
+{
+  "scope": "exact full-D2C SAT diagnostics with all six coordinate codes, k copies of each even star code, r=q=k, and one star forced to have d disjoint-edge components in H_x",
+  "warning": "finite diagnostic only; no unbounded family is claimed",
+  "rows": [
+    {"d": 2, "k": 4, "sat": true, "seconds": 0.115},
+    {"d": 3, "k": 6, "sat": true, "seconds": 0.547},
+    {"d": 4, "k": 8, "sat": true, "seconds": 4.025},
+    {"d": 5, "k": 10, "sat": true, "seconds": 17.549114227294922},
+    {"d": 6, "k": 12, "sat": true, "seconds": 77.48251342773438}
+  ],
+  "construction_constraints": "x is adjacent to exactly d selected P0 and d selected P1 vertices; d diagonal pairs are missing with x as unique common A-neighbour; every off-diagonal selected cross pair is present"
+}

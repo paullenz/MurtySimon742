@@ -29,14 +29,32 @@
       "completed_at": "2026-09-21T17:12:29+01:00",
       "result": "Constructed an actual n=39,m=176 D2C graph with H_x equal to two disjoint tree edges, falsifying both the one-tree-component target and h+L<=s. Repaired the exact accounting to h+L<=s+g, where g=(M-I)-nu; the graph satisfies 17<=19 and still has block 30<=rq+s=32.",
       "artifact": "project/research/post_ms/2026-09-21-q3-star-support-v1/MATCHING_ONE_INVALIDATION_AND_REPAIR.md"
+    },
+    {
+      "id": 3,
+      "completed_at": "2026-09-21T17:23:59+01:00",
+      "result": "Extended the actual split-tree obstruction to an exact finite ladder with d=2,...,6 disjoint H_x tree components at joint multiplicity k=2d. This rules out any constant component bound; no infinite family is claimed.",
+      "artifact": "project/research/post_ms/2026-09-21-q3-star-support-v1/MANY_TREE_COMPONENTS_DIAGNOSTIC.md"
+    },
+    {
+      "id": 4,
+      "completed_at": "2026-09-21T17:26:55+01:00",
+      "result": "Derived a budgeted density theorem: if the parity/star block exceeds rq+s by epsilon, the full four-centre graph still satisfies m<=M(n) whenever epsilon<=D(u,s). Uniformly D>=9, so exact cancellation was unnecessarily strong.",
+      "artifact": "project/research/post_ms/2026-09-21-q3-star-support-v1/FOUR_CENTRE_BUDGETED_CANCELLATION_GATE.md"
+    },
+    {
+      "id": 5,
+      "completed_at": "2026-09-21T17:29:51+01:00",
+      "result": "Combined the unconditional missing-pair ledger with the budget gate: the four-centre branch closes whenever M-I<=D(u,s), in particular whenever s>=ceil((r+q)/2). Any counterexample must have s<(r+q)/2 and M-I>D.",
+      "artifact": "project/research/post_ms/2026-09-21-q3-star-support-v1/FOUR_CENTRE_LARGE_STAR_CLOSURE.md"
     }
   ],
-  "number_of_substantive_units": 2,
+  "number_of_substantive_units": 5,
   "early_stop_check_time": null,
   "early_stop_check_result": null,
   "tool_infrastructure_failures": [],
   "commit_shas_produced": [],
-  "live_unfinished_line": "Attack the corrected capacity-aware target h+L<=s+g; identify how unused missing-pair capacity g pays for extra tree components.",
+  "live_unfinished_line": "Exploit the surviving small-star/high-missing-pair regime s<(r+q)/2 and M-I>D; seek a fan/replication lower bound on s or a sharper upper bound on M-I.",
   "stop_reason": "IN_PROGRESS",
   "target_status": "IN_PROGRESS",
   "audit_reconciliation": "The latest daily audit prioritizes raw graph criticality, actual D2C regression, and direct attack on interface realizability before further scalar theory. The matching-one target is exactly such a raw physical-certificate obstruction inside an actual realizable parity-star branch; conditional Hall/source-tuple machinery remains untouched.",

@@ -5,19 +5,19 @@ Canonical repository: `paullenz/MurtySimon742`. Date: 21 September 2026.
 Active target: the eventual / sufficiently-large second-extremal problem around M(n)=floor((n-1)^2/4)+1. The general theorem and a uniform threshold remain open. X3 (12 vertices,32 edges,M(12)=31) remains mandatory. Do not revive the false all-order conjecture or the closed mixed {4,5} ladder.
 
 <!-- CURRENT-STATUS:START -->
-CHECKPOINT CLASS: `MATCHING_ONE_INVALIDATED_CAPACITY_REPAIR`
+CHECKPOINT CLASS: `FOUR_CENTRE_BUDGETED_CANCELLATION_AND_LARGE_STAR_CLOSURE`
 
 WORK MODE: `MATH`
 
-INSPECTED PREDECESSOR: `f7e659ad5449294316c089438638407a00ebb46a`.
+INSPECTED PREDECESSOR: `ff35a12f8fb0381bd443b96a5fbf5f6b85761b96`.
 
-LAST VERIFIED RESULT: The matching-one and at-most-one-tree-component targets are false under joint multiplicity scaling. Actual D2C counterexamples occur at n=33 and n=39. The n=39 graph has h+L=17>s=16, but unused missing-pair capacity g=3 repairs the exact condition to h+L<=s+g (17<=19); its parity/star block still satisfies 30<=rq+s=32.
+LAST VERIFIED RESULT: Exact cancellation is not needed. If the parity/star block has excess epsilon over rq+s, the full four-centre graph satisfies m<=M(n) whenever epsilon<=D(u,s)=floor((u+s)^2/4)-floor(u^2/4)-s-3; D>=9. Unconditionally the branch closes when M-I<=D, hence whenever s>=ceil((r+q)/2). Matching-one and one-tree-component remain explicitly invalidated by actual D2C graphs.
 
 UNPRESERVED WORK: None after this invalidation/repair checkpoint.
 
 DEFERRED ADMIN: Broad historical cleanup; it does not block the raw matching-one attack.
 
-NEXT ACTION: Prove or falsify the capacity-aware inequality h+L<=s+g, with g=(M-I)-nu. Trace how every tree component beyond the available star tokens forces an unused unoccupied missing pair; preserve actual split-tree graphs as mandatory hostile controls.
+NEXT ACTION: Work only in the surviving regime s<(r+q)/2 and M-I>D. Combine the four-centre fan/replication constraints with the large missing-pair requirement to force additional star population or density loss; retain the split-tree ladder as a hostile control.
 <!-- CURRENT-STATUS:END -->
 
 ## Reviewable current package
