@@ -5,19 +5,19 @@ Canonical repository: `paullenz/MurtySimon742`. Date: 21 September 2026.
 Active target: the eventual / sufficiently-large second-extremal problem around M(n)=floor((n-1)^2/4)+1. The general theorem and a uniform threshold remain open. X3 (12 vertices,32 edges,M(12)=31) remains mandatory. Do not revive the false all-order conjecture or the closed mixed {4,5} ladder.
 
 <!-- CURRENT-STATUS:START -->
-CHECKPOINT CLASS: `INTERNAL_PARITY_STAR_MISSING_PAIR_LEDGER`
+CHECKPOINT CLASS: `INTERNAL_FOUR_CENTRE_RESIDUAL_DEFECT_GATE`
 
 WORK MODE: `MATH`
 
-INSPECTED PREDECESSOR: `6f08bcc498e5527d2d924b113f9ab2543f50ecb2`.
+INSPECTED PREDECESSOR: `ea60ea18060e1a2214e77c91fd13b9e267b8043f`.
 
-LAST VERIFIED RESULT: In the four-centre parity-plane branch, if M is the number of missing P0-P1 pairs and I the same-parity edge count, parity-star plus star edges are at most s+2(M-I); the full parity/star block is at most rq+M+s-I. Every charge uses a physical singleton common neighbour.
+LAST VERIFIED RESULT: The complete four-centre branch obeys e(A)<=2C+rq+M+s-I and therefore explicit rooted-defect and M(n)-m lower bounds. Here C counts physical complementary-coordinate pairs, M missing P0-P1 pairs and I same-parity edges. Remaining density risk is joint control of 2C+M.
 
 UNPRESERVED WORK: None after this entry checkpoint.
 
 DEFERRED ADMIN: Broad historical README maintenance and CI polling; neither blocks the core attack.
 
-NEXT ACTION: Control M via centre-spoke P0 singleton obligations or coordinate incidence, then combine the block ledger with rooted residual defect.
+NEXT ACTION: Prove competition between complementary-coordinate capacity C and missing parity pairs M through their shared P0 certificate resources; test the gate on actual families.
 <!-- CURRENT-STATUS:END -->
 
 ## Reviewable current package

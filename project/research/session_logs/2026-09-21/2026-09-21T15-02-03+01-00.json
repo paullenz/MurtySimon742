@@ -71,16 +71,22 @@
       "completed_at": "2026-09-21T15:22:25+01:00",
       "result": "Derived joint parity-star missing-pair ledger: with M missing P0-P1 pairs and I same-parity edges, parity-star plus star edges <=s+2(M-I), so the full parity/star block <=rq+M+s-I. Remaining risk is controlling M.",
       "artifact": "project/research/post_ms/2026-09-21-q3-star-support-v1/PARITY_STAR_MISSING_PAIR_LEDGER.md"
+    },
+    {
+      "id": 10,
+      "completed_at": "2026-09-21T15:24:15+01:00",
+      "result": "Combined coordinate substitution and parity-star ledger into e(A)<=2C+rq+M+s-I, yielding explicit lower bounds for rooted defect delta and M(n)-m throughout the four-centre branch. Remaining obstruction isolated as joint control of 2C+M.",
+      "artifact": "project/research/post_ms/2026-09-21-q3-star-support-v1/FOUR_CENTRE_RESIDUAL_DEFECT_GATE.md"
     }
   ],
-  "number_of_substantive_units": 9,
+  "number_of_substantive_units": 10,
   "early_stop_check_time": null,
   "early_stop_check_result": null,
   "tool_infrastructure_failures": [
     "python-sat was absent; installed into the disposable workspace dependency directory and validated against three actual D2C controls."
   ],
   "commit_shas_produced": [],
-  "live_unfinished_line": "Control missing parity pairs M via centre-spoke P0 singleton obligations or coordinate incidence; combine with rooted residual defect.",
+  "live_unfinished_line": "Prove competition between complementary-coordinate capacity C and missing parity pairs M through shared P0 physical certificates; test gate on exact actual families.",
   "stop_reason": "IN_PROGRESS",
   "target_status": "IN_PROGRESS",
   "audit_reconciliation": "Latest daily audit prioritizes raw criticality and actual graph realizability. This run follows that priority by hostile-reviewing and attacking the reduced opposite-edge-plane actual core; conditional Hall/source-tuple results are not advanced.",
