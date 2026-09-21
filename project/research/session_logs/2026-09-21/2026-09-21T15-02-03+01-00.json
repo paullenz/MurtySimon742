@@ -17,13 +17,22 @@
   "wall_clock_session_minutes": null,
   "forward_research_span_minutes": null,
   "preservation_span_minutes": null,
-  "substantive_units": [],
-  "number_of_substantive_units": 0,
+  "substantive_units": [
+    {
+      "id": 1,
+      "completed_at": "2026-09-21T15:04:37+01:00",
+      "result": "Exact SAT encoding excludes the entire minimal n=20 opposite-edge core with all A-edges free and five nearby enlarged multisets; X3 and both known star families are positive controls. Scope remains bounded multiplicity.",
+      "artifact": "project/research/post_ms/2026-09-21-q3-star-support-v1/OPPOSITE_EDGE_CORE_EXACT_SEARCH.md"
+    }
+  ],
+  "number_of_substantive_units": 1,
   "early_stop_check_time": null,
   "early_stop_check_result": null,
-  "tool_infrastructure_failures": [],
+  "tool_infrastructure_failures": [
+    "python-sat was absent; installed into the disposable workspace dependency directory and validated against three actual D2C controls."
+  ],
   "commit_shas_produced": [],
-  "live_unfinished_line": "Recover exact predecessor, latest audit, and reduced opposite-edge-plane core.",
+  "live_unfinished_line": "Extract a physical proof of minimal-core impossibility and determine the first necessary multiplicity.",
   "stop_reason": "IN_PROGRESS",
   "target_status": "IN_PROGRESS",
   "audit_reconciliation": "Latest daily audit prioritizes raw criticality and actual graph realizability. This run follows that priority by hostile-reviewing and attacking the reduced opposite-edge-plane actual core; conditional Hall/source-tuple results are not advanced.",

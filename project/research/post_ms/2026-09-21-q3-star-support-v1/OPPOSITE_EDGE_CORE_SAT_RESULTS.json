@@ -1,0 +1,137 @@
+{
+  "scope": "Exact over every A-edge for listed fixed physical code multisets; UNSAT applies only to that multiset, never arbitrary multiplicity.",
+  "rows": [
+    {
+      "sat": false,
+      "n": 20,
+      "variables": 4503,
+      "clauses": 9921,
+      "seconds": 0.004374230999928841,
+      "A_edges": [],
+      "codes": [
+        "C00",
+        "C10",
+        "C11",
+        "C20",
+        "C21",
+        "P0",
+        "P1",
+        "S0",
+        "S1",
+        "S6",
+        "S7"
+      ]
+    },
+    {
+      "sat": false,
+      "n": 21,
+      "variables": 5352,
+      "clauses": 12483,
+      "seconds": 0.005230663000475033,
+      "A_edges": [],
+      "codes": [
+        "C00",
+        "C10",
+        "C11",
+        "C20",
+        "C21",
+        "P0",
+        "P1",
+        "S0",
+        "S1",
+        "S6",
+        "S7",
+        "S0"
+      ]
+    },
+    {
+      "sat": false,
+      "n": 21,
+      "variables": 5352,
+      "clauses": 12483,
+      "seconds": 0.008664829999361245,
+      "A_edges": [],
+      "codes": [
+        "C00",
+        "C10",
+        "C11",
+        "C20",
+        "C21",
+        "P0",
+        "P1",
+        "S0",
+        "S1",
+        "S6",
+        "S7",
+        "S6"
+      ]
+    },
+    {
+      "sat": false,
+      "n": 22,
+      "variables": 6305,
+      "clauses": 15506,
+      "seconds": 0.008617880000201694,
+      "A_edges": [],
+      "codes": [
+        "C00",
+        "C10",
+        "C11",
+        "C20",
+        "C21",
+        "P0",
+        "P1",
+        "S0",
+        "S1",
+        "S6",
+        "S7",
+        "S0",
+        "S6"
+      ]
+    },
+    {
+      "sat": false,
+      "n": 21,
+      "variables": 5352,
+      "clauses": 12416,
+      "seconds": 0.006565738000062993,
+      "A_edges": [],
+      "codes": [
+        "C00",
+        "C10",
+        "C11",
+        "C20",
+        "C21",
+        "P0",
+        "P1",
+        "S0",
+        "S1",
+        "S6",
+        "S7",
+        "C10"
+      ]
+    },
+    {
+      "sat": false,
+      "n": 21,
+      "variables": 5352,
+      "clauses": 12416,
+      "seconds": 0.005908920999900147,
+      "A_edges": [],
+      "codes": [
+        "C00",
+        "C10",
+        "C11",
+        "C20",
+        "C21",
+        "P0",
+        "P1",
+        "S0",
+        "S1",
+        "S6",
+        "S7",
+        "C21"
+      ]
+    }
+  ]
+}

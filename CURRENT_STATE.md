@@ -5,19 +5,19 @@ Canonical repository: `paullenz/MurtySimon742`. Date: 21 September 2026.
 Active target: the eventual / sufficiently-large second-extremal problem around M(n)=floor((n-1)^2/4)+1. The general theorem and a uniform threshold remain open. X3 (12 vertices,32 edges,M(12)=31) remains mandatory. Do not revive the false all-order conjecture or the closed mixed {4,5} ladder.
 
 <!-- CURRENT-STATUS:START -->
-CHECKPOINT CLASS: `IN_PROGRESS_OPPOSITE_EDGE_CORE`
+CHECKPOINT CLASS: `EXACT_BOUNDED_OPPOSITE_EDGE_CORE_UNSAT`
 
 WORK MODE: `MATH`
 
-INSPECTED PREDECESSOR: `8d8855aa572cc4d5d31967316b3b99604bcbba18`.
+INSPECTED PREDECESSOR: `0b3bcf689677d46dc691e7abf04e7031ed6f54be`.
 
-LAST VERIFIED RESULT: Mathematical status at entry unchanged: the four-centre Q3-transversal theorem is sharp at n=19; the opposite-edge support has a reduced one-P0/one-P1 core whose realizability is open. This run follows the daily audit by working from raw criticality and actual graph realizability, not conditional source-tuple capacity.
+LAST VERIFIED RESULT: Exact SAT with all A-edges free excludes the minimal n=20 opposite-edge core and five nearby physical multisets. X3 and both known star families validate the encoding. This is bounded multiplicity, not nonexistence for the support orbit.
 
 UNPRESERVED WORK: None after this entry checkpoint.
 
 DEFERRED ADMIN: Broad historical README maintenance and CI polling; neither blocks the core attack.
 
-NEXT ACTION: Hostile-review the parity-factor collapse at physical-vertex scope, then derive or refute the reduced opposite-edge core using exact graph constraints.
+NEXT ACTION: Extract a physical obstruction and determine which code multiplicity must increase in any surviving opposite-edge core.
 <!-- CURRENT-STATUS:END -->
 
 ## Reviewable current package
