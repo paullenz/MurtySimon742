@@ -40,9 +40,21 @@
       "completed_at": "2026-09-21T18:13:48+01:00",
       "result": "Completed an exact uniform graph-level grid: with six coordinate codes and 2<=r,q<=8, equal star multiplicities one and two reject the RTS bow-tie, while multiplicity three is feasible exactly for r>=4 throughout the tested rectangle. This is diagnostic, not an arbitrary-multiplicity theorem.",
       "artifact": "project/research/post_ms/2026-09-21-q3-star-support-v1/RTS_BOWTIE_REALIZABILITY_RESULTS.json"
+    },
+    {
+      "id": 4,
+      "completed_at": "2026-09-21T18:20:34+01:00",
+      "result": "Found that the actual n=33 RTS control has parity/star block B=21>rq+s=20. This is a literal D2C counterexample to universal exact cancellation; the budgeted-excess theorem survives.",
+      "artifact": "project/research/post_ms/2026-09-21-q3-star-support-v1/PARITY_STAR_EXACT_CANCELLATION_COUNTEREXAMPLE.md"
+    },
+    {
+      "id": 5,
+      "completed_at": "2026-09-21T18:20:34+01:00",
+      "result": "Exact fixed-multiset MaxSAT proves max B=21=rq+s+1 under the smallest saved RTS constraints, independently confirming and quantifying the exact-cancellation failure.",
+      "artifact": "project/research/post_ms/2026-09-21-q3-star-support-v1/RTS_BOWTIE_BLOCK_MAXSAT_RESULTS.json"
     }
   ],
-  "number_of_substantive_units": 3,
+  "number_of_substantive_units": 5,
   "early_stop_check_time": null,
   "early_stop_check_result": null,
   "tool_infrastructure_failures": [
@@ -53,7 +65,7 @@
     }
   ],
   "commit_shas_produced": [],
-  "live_unfinished_line": "Derive a genuine population or density tax behind RTS-bow-tie realizability. Finite symmetric controls first appear at three copies per star class and r>=4, but the proof must come from raw centre-spoke or coordinate competition, not extrapolation.",
+  "live_unfinished_line": "Exact cancellation B<=rq+s is false by one edge. Bound the genuine excess epsilon=B-rq-s against the much larger safe budget D(u,s), using fan replication, missing-pair capacity, and coordinate competition.",
   "stop_reason": "IN_PROGRESS",
   "target_status": "IN_PROGRESS",
   "audit_reconciliation": "The latest audit prioritizes raw graph-level criticality and realizability before further conditional scalar stacking. This slot therefore continues the actual Q3 parity-plane interface through the RTS bow-tie and its raw certificates; it does not use the conditional source-tuple capacity premises, does not revive the invalidated matching-one route, and retains X3 as a mandatory negative control.",

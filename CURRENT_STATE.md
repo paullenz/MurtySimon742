@@ -5,19 +5,19 @@ Canonical repository: `paullenz/MurtySimon742`. Date: 21 September 2026.
 Active target: the eventual / sufficiently-large second-extremal problem around M(n)=floor((n-1)^2/4)+1. The general theorem and a uniform threshold remain open. X3 (12 vertices,32 edges,M(12)=31) remains mandatory. Do not revive the false all-order conjecture or the closed mixed {4,5} ladder.
 
 <!-- CURRENT-STATUS:START -->
-CHECKPOINT CLASS: `RTS_BOWTIE_ACTUAL_D2C_REALIZABILITY`
+CHECKPOINT CLASS: `PARITY_STAR_EXACT_CANCELLATION_INVALIDATED`
 
 WORK MODE: `MATH`
 
 INSPECTED PREDECESSOR: `0dc97e3c4447c7474fa56042fe8b66ada75d69d3`.
 
-LAST VERIFIED RESULT: The locally saturated RTS bow-tie is graph-realizable. Actual n=33,m=143 and n=34,m=148 D2C controls realize it with the fourth cross pair respectively present and missing, so neither status can drive a universal closure. In the exact uniform grid with six coordinates, 2<=r,q<=8, equal star multiplicities one and two are UNSAT; multiplicity three is SAT exactly for r>=4. The finite threshold is diagnostic only.
+LAST VERIFIED RESULT: The locally saturated RTS bow-tie is graph-realizable with either fourth-pair status. More importantly, the actual n=33 control has B=21>rq+s=20, disproving universal exact parity-star cancellation; exact fixed-multiset MaxSAT confirms max B=rq+s+1. The unconditional B<=rq+s+U ledger and the budgeted-excess closure survive, and this example has epsilon=1<<D=93.
 
 UNPRESERVED WORK: None after this invalidation/repair checkpoint.
 
 DEFERRED ADMIN: Broad historical cleanup; it does not block the raw matching-one attack.
 
-NEXT ACTION: Derive a genuine population/density tax behind RTS realizability from centre-spoke and coordinate-P0 certificate competition. Do not assume either fourth-pair status and do not extrapolate the finite symmetric threshold as a theorem.
+NEXT ACTION: Replace exact cancellation by a proved quantitative excess bound epsilon=B-rq-s against D(u,s). Use raw fan replication and matching-capacity accounting; do not assume either fourth-pair status or extrapolate the finite symmetric threshold.
 <!-- CURRENT-STATUS:END -->
 
 ## Reviewable current package

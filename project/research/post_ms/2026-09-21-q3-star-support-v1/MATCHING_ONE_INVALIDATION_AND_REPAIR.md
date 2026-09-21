@@ -1,5 +1,7 @@
 # Matching-one invalidation and exact repair
 
+**Later correction:** `PARITY_STAR_EXACT_CANCELLATION_COUNTEREXAMPLE.md` gives an actual D2C graph with `B=rq+s+1`. Thus exact block cancellation is itself false in general; only the algebraic conditional criteria and the later budgeted-excess theorem survive.
+
 21 September 2026. Actual graph-level counterexamples; prior finite inference withdrawn.
 
 ## What failed

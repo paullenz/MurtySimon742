@@ -1,6 +1,6 @@
-# Missing-pair cancellation: original reduction and corrected capacity target
+# Missing-pair cancellation: historical reduction; exact target now false
 
-21 September 2026. The matching reduction remains rigorous, but the proposed shortcut `h+L<=s` is false. See `MATCHING_ONE_INVALIDATION_AND_REPAIR.md` for actual counterexamples and the repaired target `h+L<=s+g`.
+21 September 2026. The matching reduction remains rigorous, but both the proposed shortcut `h+L<=s` and the hoped-for unconditional conclusion `B<=rq+s` are false. See `MATCHING_ONE_INVALIDATION_AND_REPAIR.md` and `PARITY_STAR_EXACT_CANCELLATION_COUNTEREXAMPLE.md`. The budgeted excess theorem is the active replacement.
 
 Let `R=P0`, `T=P1`, and let `S` be the four-centre star population. Retain `M=rq-e(R,T)` and `I=e(R)+e(T)`. For a star vertex `x`, its bridge degree is its number of `T` neighbours plus its number of different-centre star neighbours.
 
