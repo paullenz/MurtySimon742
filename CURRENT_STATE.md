@@ -70,3 +70,15 @@ Full telemetry: `project/research/session_logs/2026-09-21/2026-09-21T15-02-03+01
 - Stop reason: reached the valid cutoff after the last bounded hostile-core replay; stopped exploration for preservation.
 - Late same-slot segment: 15:58:54 BST, after cutoff; zero forward research, preservation/reconciliation only. Earlier verified research total and target result remain unchanged.
 - >=50-minute target: MET.
+
+### Current 17:00 slot
+
+Full telemetry: `project/research/session_logs/2026-09-21/2026-09-21T17-03-31+01-00.json`.
+
+- Actual start: 17:03:31 BST; preservation cutoff: 17:55:38 BST.
+- Same-slot context re-entry: 17:36:13 BST; it did not reset the start, ledger, cutoff or target.
+- Forward research: 17:04:05--17:52:05 BST = 48m00s (48.0 min).
+- Preservation complete: 17:53:22 BST; wall-clock span through preservation 49m51s (49.85 min); preservation span 1m17s (1.2833333333 min).
+- Substantive units: 10.
+- Stop reason: stopped forward exploration at 17:52:05 for end-of-slot preservation after using the shortened window through the final minutes before the valid cutoff.
+- >=50-minute target: NOT MET. Actual entry left 52m07s before cutoff, below the normal 55-minute allocation; the verified research span is reported without adding undocumented time. This is a shortened-window shortfall, not the strict normal-window early-stop classification.
