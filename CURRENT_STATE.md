@@ -68,4 +68,5 @@ Full telemetry: `project/research/session_logs/2026-09-21/2026-09-21T15-02-03+01
 - Preservation complete: 15:56:41 BST; wall-clock span 54m38s (54.6333333333 min); preservation span 0m57s (0.95 min).
 - Substantive units: 26.
 - Stop reason: reached the valid cutoff after the last bounded hostile-core replay; stopped exploration for preservation.
+- Late same-slot segment: 15:58:54 BST, after cutoff; zero forward research, preservation/reconciliation only. Earlier verified research total and target result remain unchanged.
 - >=50-minute target: MET.

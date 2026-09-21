@@ -12,6 +12,16 @@
       "segment_entry_time": "2026-09-21T15:34:41+01:00",
       "kind": "context re-entry; same scheduled slot, original start, ledger, target, and cutoff retained",
       "continuity": "verified same invocation; forward research did not stop"
+    },
+    {
+      "segment_entry_time": "2026-09-21T15:58:54+01:00",
+      "kind": "late same-slot re-entry after valid cutoff and prior final report",
+      "forward_research_start_time": null,
+      "forward_research_stop_time": "2026-09-21T15:58:54+01:00",
+      "forward_research_span_minutes": 0.0,
+      "preservation_start_time": "2026-09-21T15:58:54+01:00",
+      "preservation_complete_time": null,
+      "stop_reason": "valid cutoff already passed; zero-research reconciliation/preservation only"
     }
   ],
   "forward_research_start_time": "2026-09-21T15:02:46+01:00",
@@ -218,7 +228,7 @@
     "6829681"
   ],
   "live_unfinished_line": "Prove the raw matching-one lemma: one physical even star cannot be the unique common A-neighbour of two vertex-disjoint missing P0-P1 pairs.",
-  "stop_reason": "Reached the valid preservation cutoff after the final bounded hostile-core replay; stopped new exploration and preserved the matching-one handoff.",
+  "stop_reason": "Reached the valid cutoff after the final bounded hostile-core replay; later same-slot re-entry at 15:58:54 was a zero-research preservation segment.",
   "target_status": "MET: verified continuous forward-research interval 15:02:46--15:55:44 is 52m58s.",
   "audit_reconciliation": "Latest daily audit prioritizes raw criticality and actual graph realizability. This run follows that priority by hostile-reviewing and attacking the reduced opposite-edge-plane actual core; conditional Hall/source-tuple results are not advanced.",
   "inspected_remote_head": "8d8855aa572cc4d5d31967316b3b99604bcbba18"
