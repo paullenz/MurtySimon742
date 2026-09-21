@@ -9,7 +9,7 @@
 <!-- CURRENT-STATUS:START -->
 CHECKPOINT CLASS: `FORWARD_POST_AUDIT_2026_09_21_STRONG_BOUNDARY_WEDGE`
 
-WORK MODE: `FORWARD_RESEARCH_PRESERVED`
+WORK MODE: `MATH`
 
 INSPECTED PREDECESSOR: the 21 September daily red-team audit, README, recent commits, the corrected repeated-code boundary trichotomy/full-exposure package, and the immediately preceding 08:04 session through `ONE_CODE_GLOBAL_BOUNDARY_SCORE_WEDGE.md`. The audit's dominant graph-level warning remains binding: bounded actual-D2C regression has zero positive rigid complete Hall-cut fixtures with `x>=3`.
 
@@ -78,12 +78,13 @@ Full record: `project/research/session_logs/2026-09-21/2026-09-21T08-31-33+01-00
 - preservation cutoff: **2026-09-21 08:55:38 BST**;
 - forward-research stop: **2026-09-21 08:47:56 BST**;
 - preservation start: **2026-09-21 08:47:56 BST**;
+- preservation complete (substantive state/theorem preservation): **2026-09-21 08:49:16 BST**;
 - forward-research span: **16m23s**;
 - substantive units: **9**;
 - early-stop check: **08:47:56 BST; preservation permitted because 7m42s remained to cutoff**;
-- preservation complete / final report / wall-clock span: **pending final telemetry write**;
+- final report / total wall-clock span: **pending final telemetry write**;
 - >=50-minute target: **not applicable** because only 24m05s existed from actual start to preservation cutoff;
-- process note: one coarse Python grid timed out; the derivation pivoted immediately to exact symbolic algebra and no claim depends on the failed computation.
+- process note: one coarse Python grid timed out; the derivation pivoted immediately to exact symbolic algebra and no claim depends on the failed computation. Status synchronization initially failed because `WORK MODE` used a noncanonical value; this was diagnosed from workflow logs and repaired to `MATH` during the preservation window.
 
 ## Mandatory constraints for future work
 
