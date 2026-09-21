@@ -29,6 +29,12 @@
       "completed_at": "2026-09-21T14:11:22+01:00",
       "result": "Independent raw bitset certificate-relation replay confirms antipodal-pair restrictions under all four orientations; 16 actual D2C family controls and an edge-added negative control pass.",
       "artifact": "project/research/post_ms/2026-09-21-q3-star-support-v1/check_star_support.py"
+    },
+    {
+      "id": 3,
+      "completed_at": "2026-09-21T14:13:22+01:00",
+      "result": "Uniform hand proof excludes every two-centre star support via an isolated separating coordinate pair; all 28 supports pass independent raw-type replay. Thus nonempty star support has at least three distinct centres.",
+      "artifact": "project/research/post_ms/2026-09-21-q3-star-support-v1/AT_LEAST_THREE_STAR_CENTRES.md"
     }
   ],
   "early_stop_check_time": null,
@@ -38,7 +44,8 @@
   ],
   "commit_shas_produced": [
     "f7564e2d113545005c863d11078b56ae168e6388",
-    "7b8a119f970990942df3dfe49a2bd00d75ece051"
+    "7b8a119f970990942df3dfe49a2bd00d75ece051",
+    "03590dd66568c793605647febc749f6dd075385f"
   ],
   "live_unfinished_line": "Audit-priority raw Q3 criticality: extend or invalidate the two-opposite-star coordinate-multiplicity branch.",
   "stop_reason": "IN_PROGRESS",

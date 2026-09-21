@@ -7,19 +7,19 @@
 `X_3` (12 vertices, 32 edges, versus `M(12)=31`) remains the mandatory negative control. The false all-order 2019 Dailly–Foucaud–Hansberg Conjecture 3 is not the target. First-proof priority on Erdős #742 is not the optimization target.
 
 <!-- CURRENT-STATUS:START -->
-CHECKPOINT CLASS: `VERIFIED_INTERNAL_Q3_ANTIPODAL_STAR_SUPPORT_REPLAY`
+CHECKPOINT CLASS: `VERIFIED_INTERNAL_Q3_AT_LEAST_THREE_STAR_CENTRES`
 
 WORK MODE: `MATH`
 
-INSPECTED PREDECESSOR: `7b8a119f970990942df3dfe49a2bd00d75ece051`; new opposite-centre proof and independent raw bitset checker.
+INSPECTED PREDECESSOR: `03590dd66568c793605647febc749f6dd075385f`; opposite-centre obstruction and independent raw necessary-code checker.
 
-LAST VERIFIED RESULT: antipodal star-support nonexistence survives an independent raw certificate-relation replay for all four antipodal orientations. Actual-graph controls include X3 and 15 further parity-bridge fixtures; one added-edge negative control is rejected. These checks support the scoped hand proof, not a general eventual theorem.
+LAST VERIFIED RESULT: a uniform raw-criticality proof excludes all one- and two-centre star supports under the Q3 antipodal-transversal hypothesis, regardless of multiplicity. All 28 two-centre supports pass independent finite-type replay. Nonempty support needs at least three distinct centres; external review remains open.
 
 UNPRESERVED WORK: None. Mathematical status unchanged at entry; hourly continuity correction and 14:00 slot ledger are preserved with this handoff.
 
 DEFERRED ADMIN: README top-level status still needs a compact pointer to the completed Q3 odd-halfcube classification, star certificate table and new minimal two-star-class exact-M closure. Defer the larger README rewrite to the next safe preservation window rather than risk overlap.
 
-NEXT ACTION: independently reconstruct the finite neighbour restrictions from raw cube bitsets, then attack two nonopposite star centres.
+NEXT ACTION: classify three-centre supports by cube symmetry and test whether mandatory spoke witnesses force diameter-incompatible coordinate populations.
 <!-- CURRENT-STATUS:END -->
 
 ## Current Q3 graph-level results
@@ -110,3 +110,7 @@ Current slot: actual start 14:01:25 BST, cutoff 14:55:38 BST, research stop/pres
 `project/research/post_ms/2026-09-21-q3-star-support-v1/TWO_ANTIPODAL_CENTRES_IMPOSSIBLE.md` proves a stronger candidate than the prior minimal-face bound: arbitrary coordinate/parity multiplicities do not rescue one antipodal pair of star centres. All coordinate vertices become A-isolated; both opposite star types force incompatible opposite coordinate classes. Older narrower statements remain preserved. Unit 1 completed 2026-09-21T14:08:16+01:00.
 
 Independent replay: `project/research/post_ms/2026-09-21-q3-star-support-v1/STAR_SUPPORT_CHECK_RESULTS.json`. Exploratory necessary-relation outputs also narrow distance-one and distance-two star pairs; their full exclusion remains the next hand-proof task. Unit 2 completed 2026-09-21T14:11:22+01:00.
+
+## Two-centre closure
+
+`project/research/post_ms/2026-09-21-q3-star-support-v1/AT_LEAST_THREE_STAR_CENTRES.md` gives a uniform separating-coordinate proof for any two distinct centres. This closes the arbitrary multiplicity/parity extension requested by the predecessor. Unit 3 completed 2026-09-21T14:13:22+01:00.

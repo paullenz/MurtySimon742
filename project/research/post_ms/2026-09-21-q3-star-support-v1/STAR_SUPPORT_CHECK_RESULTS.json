@@ -1,5 +1,203 @@
 {
   "description": "Necessary code-relation replay, not enumeration of all graphs",
+  "all_28_two_centre_supports": [
+    {
+      "stars": [
+        0,
+        1
+      ],
+      "separating_coordinate_pairs_isolated": true
+    },
+    {
+      "stars": [
+        0,
+        2
+      ],
+      "separating_coordinate_pairs_isolated": true
+    },
+    {
+      "stars": [
+        0,
+        3
+      ],
+      "separating_coordinate_pairs_isolated": true
+    },
+    {
+      "stars": [
+        0,
+        4
+      ],
+      "separating_coordinate_pairs_isolated": true
+    },
+    {
+      "stars": [
+        0,
+        5
+      ],
+      "separating_coordinate_pairs_isolated": true
+    },
+    {
+      "stars": [
+        0,
+        6
+      ],
+      "separating_coordinate_pairs_isolated": true
+    },
+    {
+      "stars": [
+        0,
+        7
+      ],
+      "separating_coordinate_pairs_isolated": true
+    },
+    {
+      "stars": [
+        1,
+        2
+      ],
+      "separating_coordinate_pairs_isolated": true
+    },
+    {
+      "stars": [
+        1,
+        3
+      ],
+      "separating_coordinate_pairs_isolated": true
+    },
+    {
+      "stars": [
+        1,
+        4
+      ],
+      "separating_coordinate_pairs_isolated": true
+    },
+    {
+      "stars": [
+        1,
+        5
+      ],
+      "separating_coordinate_pairs_isolated": true
+    },
+    {
+      "stars": [
+        1,
+        6
+      ],
+      "separating_coordinate_pairs_isolated": true
+    },
+    {
+      "stars": [
+        1,
+        7
+      ],
+      "separating_coordinate_pairs_isolated": true
+    },
+    {
+      "stars": [
+        2,
+        3
+      ],
+      "separating_coordinate_pairs_isolated": true
+    },
+    {
+      "stars": [
+        2,
+        4
+      ],
+      "separating_coordinate_pairs_isolated": true
+    },
+    {
+      "stars": [
+        2,
+        5
+      ],
+      "separating_coordinate_pairs_isolated": true
+    },
+    {
+      "stars": [
+        2,
+        6
+      ],
+      "separating_coordinate_pairs_isolated": true
+    },
+    {
+      "stars": [
+        2,
+        7
+      ],
+      "separating_coordinate_pairs_isolated": true
+    },
+    {
+      "stars": [
+        3,
+        4
+      ],
+      "separating_coordinate_pairs_isolated": true
+    },
+    {
+      "stars": [
+        3,
+        5
+      ],
+      "separating_coordinate_pairs_isolated": true
+    },
+    {
+      "stars": [
+        3,
+        6
+      ],
+      "separating_coordinate_pairs_isolated": true
+    },
+    {
+      "stars": [
+        3,
+        7
+      ],
+      "separating_coordinate_pairs_isolated": true
+    },
+    {
+      "stars": [
+        4,
+        5
+      ],
+      "separating_coordinate_pairs_isolated": true
+    },
+    {
+      "stars": [
+        4,
+        6
+      ],
+      "separating_coordinate_pairs_isolated": true
+    },
+    {
+      "stars": [
+        4,
+        7
+      ],
+      "separating_coordinate_pairs_isolated": true
+    },
+    {
+      "stars": [
+        5,
+        6
+      ],
+      "separating_coordinate_pairs_isolated": true
+    },
+    {
+      "stars": [
+        5,
+        7
+      ],
+      "separating_coordinate_pairs_isolated": true
+    },
+    {
+      "stars": [
+        6,
+        7
+      ],
+      "separating_coordinate_pairs_isolated": true
+    }
+  ],
   "antipodal_pairs": [
     {
       "stars": [

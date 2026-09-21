@@ -103,17 +103,27 @@ def main():
     for r in antipodal:
         assert all(not(h.startswith('C') or k.startswith('C')) for h,k in r['allowed_pairs'])
         assert len([p for p in r['diameter_incompatible_codes'] if p[0][0]=='C' and p[1][0]=='C'])==3
+    pairs=[relation((c,d)) for c,d in combinations(B,2)]
+    for r in pairs:
+        c,d=r['stars']; edges=r['allowed_pairs']
+        for i in range(3):
+            if ((c^d)>>i)&1:
+                for e in (0,1):
+                    k=f'C{i}{e}'
+                    assert not any(k in pair for pair in edges),(c,d,i,e)
+                assert (f'C{i}0',f'C{i}1') in r['diameter_incompatible_codes']
     singles=[relation((c,)) for c in B]
     assert all(r['no_antipode_bridge'] for r in singles)
     def summary(r):
         return {**{k:v for k,v in r.items() if k!='rounds'},'elimination_round_sizes':[len(t) for t in r['rounds']]}
     output={'description':'Necessary code-relation replay, not enumeration of all graphs',
+            'all_28_two_centre_supports':[{'stars':r['stars'],'separating_coordinate_pairs_isolated':True} for r in pairs],
             'antipodal_pairs':[summary(r) for r in antipodal],'single_centres':[summary(r) for r in singles],'graph_controls':controls,
             'negative_control_added_coordinate_edge_rejected':True,
             'two_centre_distances':{str(d):summary(relation((0,(1<<d)-1))) for d in (1,2,3)}}
     path=Path(__file__).with_name('STAR_SUPPORT_CHECK_RESULTS.json')
     path.write_text(json.dumps(output,indent=2)+'\n')
-    print('PASS: 16-code identities, four antipodal supports, eight single supports, 16 raw D2C controls, one negative control')
+    print('PASS: 16-code identities, all 28 two-centre supports, eight single supports, 16 raw D2C controls, one negative control')
     for d,r in output['two_centre_distances'].items():
         print('distance',d,'allowed pairs',r['allowed_pairs'],'unbridgeable',r['no_antipode_bridge'])
 
