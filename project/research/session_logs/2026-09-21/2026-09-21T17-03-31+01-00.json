@@ -18,7 +18,7 @@
   "forward_research_stop_time": "2026-09-21T17:52:05+01:00",
   "preservation_start_time": "2026-09-21T17:52:05+01:00",
   "preservation_complete_time": "2026-09-21T17:53:22+01:00",
-  "final_report_time": null,
+  "final_report_time": "2026-09-21T17:55:06+01:00",
   "wall_clock_session_minutes": 49.85,
   "forward_research_span_minutes": 48.0,
   "preservation_span_minutes": 1.2833333333,
@@ -102,7 +102,8 @@
     "4f3529c03950fd9c76aee84a89a0e6216a058e3c",
     "5039646ec0fd9e675fa460b305d37c060f1c8362",
     "f95e6d9c61d21e227178e168f947fe6d2412538d",
-    "1eef8981865713dc8612816f39e6575f42da8b1d"
+    "1eef8981865713dc8612816f39e6575f42da8b1d",
+    "f97b9e9641fab9a850aebca38c3008e6ee7d8757"
   ],
   "live_unfinished_line": "The RTS bow-tie is locally saturated. Next test its present cross edge and fourth cross pair against star centre-spoke and coordinate-P0 certificate competition; no third-pair inference is available from the four arms alone.",
   "stop_reason": "Stopped forward exploration at 17:52:05 for end-of-slot preservation after using the shortened window through the final minutes before the valid cutoff.",
