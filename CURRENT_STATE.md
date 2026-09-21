@@ -7,19 +7,19 @@
 `X_3` (12 vertices, 32 edges, versus `M(12)=31`) remains the mandatory negative control. The false all-order 2019 Dailly–Foucaud–Hansberg Conjecture 3 is not the target. First-proof priority on Erdős #742 is not the optimization target.
 
 <!-- CURRENT-STATUS:START -->
-CHECKPOINT CLASS: `INTERNAL_Q3_PARITY_PLANE_SHARP_ORDER_19`
+CHECKPOINT CLASS: `VERIFIED_INTERNAL_NEW_GRAPH_HALL_INTERFACE_LIMITATION`
 
 WORK MODE: `MATH`
 
-INSPECTED PREDECESSOR: `aaafb32b9b36cca1dcd88b84ddb2811275522a29`; six-coordinate realizable star family and raw star fan.
+INSPECTED PREDECESSOR: `c58d02216a00215a7b0170886581446dfaa30b15`.
 
-LAST VERIFIED RESULT: missing-coordinate matching lemma gives sharp n>=19 within the parity-plane star-support class. A 19-vertex 66-edge fixture attains it; an infinite quadratic-density extension has exact gap floor((9n-139)/2). Thirty direct graph checks and 66 explicit edge-deletion certificates pass; no all-support minimum or global density optimum claimed.
+LAST VERIFIED RESULT: Ten actual parity-plane star fixtures pass the independent graph checker at all maximum-degree roots and three policies. All 105 new root-policy runs have p=0; only X3 supplies the three qualified runs and 18 Hall cuts. Zero rigid cuts: positive rigid-interface coverage remains open. Prior sharp support/order results unchanged.
 
-UNPRESERVED WORK: None. Mathematical status unchanged at entry; hourly continuity correction and 14:00 slot ledger are preserved with this handoff.
+UNPRESERVED WORK: None.
 
-DEFERRED ADMIN: README top-level status still needs a compact pointer to the completed Q3 odd-halfcube classification, star certificate table and new minimal two-star-class exact-M closure. Defer the larger README rewrite to the next safe preservation window rather than risk overlap.
+DEFERRED ADMIN: Consolidate superseded live-state paragraphs and refresh reviewer summary during final preservation.
 
-NEXT ACTION: hostile-audit the missing-coordinate matching argument and the compact structural package; investigate constraints on the other two affine-plane support orbits without discarding the new actual fixtures.
+NEXT ACTION: Derive the structural maximum-root p=0 explanation for the five-coordinate dense family; retain the conditional Hall boundary.
 <!-- CURRENT-STATUS:END -->
 
 ## Current Q3 graph-level results

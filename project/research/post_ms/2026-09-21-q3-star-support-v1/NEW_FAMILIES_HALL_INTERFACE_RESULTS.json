@@ -1,0 +1,559 @@
+{
+  "fixtures": [
+    {
+      "fixture": "X3",
+      "n": 12,
+      "m": 32,
+      "M": 31,
+      "maximum_degree": 8,
+      "roots": [
+        {
+          "root": "r",
+          "a": 3,
+          "b": 8,
+          "p": 4,
+          "u": 0,
+          "lambda": 4,
+          "Q": 12,
+          "stats": {
+            "roots": 3,
+            "qualified_roots": 3,
+            "rooted_residual_identities": 3,
+            "local_slot_checks": 9,
+            "pair_capacity_checks": 21,
+            "one_sided_pair_checks": 9,
+            "A_edges": 0,
+            "direct_A_edges": 0,
+            "nondirect_A_edges": 0,
+            "matched_A_certificates": 0,
+            "Hall_cut_checks": 18
+          }
+        }
+      ]
+    },
+    {
+      "fixture": "five_1_0",
+      "n": 19,
+      "m": 66,
+      "M": 82,
+      "maximum_degree": 10,
+      "roots": [
+        {
+          "root": 1,
+          "a": 8,
+          "b": 10,
+          "p": 0,
+          "u": 10,
+          "lambda": 1,
+          "Q": 13,
+          "stats": {
+            "roots": 3
+          }
+        },
+        {
+          "root": 2,
+          "a": 8,
+          "b": 10,
+          "p": 0,
+          "u": 10,
+          "lambda": 1,
+          "Q": 13,
+          "stats": {
+            "roots": 3
+          }
+        }
+      ]
+    },
+    {
+      "fixture": "five_1_1",
+      "n": 20,
+      "m": 71,
+      "M": 91,
+      "maximum_degree": 11,
+      "roots": [
+        {
+          "root": 1,
+          "a": 8,
+          "b": 11,
+          "p": 0,
+          "u": 11,
+          "lambda": 2,
+          "Q": 13,
+          "stats": {
+            "roots": 3
+          }
+        },
+        {
+          "root": 2,
+          "a": 8,
+          "b": 11,
+          "p": 0,
+          "u": 11,
+          "lambda": 2,
+          "Q": 13,
+          "stats": {
+            "roots": 3
+          }
+        }
+      ]
+    },
+    {
+      "fixture": "five_2_2",
+      "n": 22,
+      "m": 82,
+      "M": 111,
+      "maximum_degree": 12,
+      "roots": [
+        {
+          "root": 1,
+          "a": 9,
+          "b": 12,
+          "p": 0,
+          "u": 12,
+          "lambda": 2,
+          "Q": 13,
+          "stats": {
+            "roots": 3
+          }
+        },
+        {
+          "root": 2,
+          "a": 9,
+          "b": 12,
+          "p": 0,
+          "u": 12,
+          "lambda": 2,
+          "Q": 13,
+          "stats": {
+            "roots": 3
+          }
+        }
+      ]
+    },
+    {
+      "fixture": "five_4_4",
+      "n": 26,
+      "m": 110,
+      "M": 157,
+      "maximum_degree": 14,
+      "roots": [
+        {
+          "root": 1,
+          "a": 11,
+          "b": 14,
+          "p": 0,
+          "u": 14,
+          "lambda": 2,
+          "Q": 13,
+          "stats": {
+            "roots": 3
+          }
+        },
+        {
+          "root": 2,
+          "a": 11,
+          "b": 14,
+          "p": 0,
+          "u": 14,
+          "lambda": 2,
+          "Q": 13,
+          "stats": {
+            "roots": 3
+          }
+        }
+      ]
+    },
+    {
+      "fixture": "five_8_8",
+      "n": 34,
+      "m": 190,
+      "M": 273,
+      "maximum_degree": 18,
+      "roots": [
+        {
+          "root": 1,
+          "a": 15,
+          "b": 18,
+          "p": 0,
+          "u": 18,
+          "lambda": 2,
+          "Q": 13,
+          "stats": {
+            "roots": 3
+          }
+        },
+        {
+          "root": 2,
+          "a": 15,
+          "b": 18,
+          "p": 0,
+          "u": 18,
+          "lambda": 2,
+          "Q": 13,
+          "stats": {
+            "roots": 3
+          }
+        }
+      ]
+    },
+    {
+      "fixture": "six_1_0",
+      "n": 20,
+      "m": 73,
+      "M": 91,
+      "maximum_degree": 10,
+      "roots": [
+        {
+          "root": 1,
+          "a": 9,
+          "b": 10,
+          "p": 0,
+          "u": 10,
+          "lambda": 0,
+          "Q": 14,
+          "stats": {
+            "roots": 3
+          }
+        },
+        {
+          "root": 2,
+          "a": 9,
+          "b": 10,
+          "p": 0,
+          "u": 10,
+          "lambda": 0,
+          "Q": 14,
+          "stats": {
+            "roots": 3
+          }
+        },
+        {
+          "root": 4,
+          "a": 9,
+          "b": 10,
+          "p": 0,
+          "u": 10,
+          "lambda": 0,
+          "Q": 14,
+          "stats": {
+            "roots": 3
+          }
+        },
+        {
+          "root": 7,
+          "a": 9,
+          "b": 10,
+          "p": 0,
+          "u": 10,
+          "lambda": 0,
+          "Q": 12,
+          "stats": {
+            "roots": 3
+          }
+        },
+        {
+          "root": 19,
+          "a": 9,
+          "b": 10,
+          "p": 0,
+          "u": 10,
+          "lambda": 0,
+          "Q": 12,
+          "stats": {
+            "roots": 3
+          }
+        }
+      ]
+    },
+    {
+      "fixture": "six_1_1",
+      "n": 21,
+      "m": 78,
+      "M": 101,
+      "maximum_degree": 11,
+      "roots": [
+        {
+          "root": 1,
+          "a": 9,
+          "b": 11,
+          "p": 0,
+          "u": 11,
+          "lambda": 1,
+          "Q": 14,
+          "stats": {
+            "roots": 3
+          }
+        },
+        {
+          "root": 2,
+          "a": 9,
+          "b": 11,
+          "p": 0,
+          "u": 11,
+          "lambda": 1,
+          "Q": 14,
+          "stats": {
+            "roots": 3
+          }
+        },
+        {
+          "root": 4,
+          "a": 9,
+          "b": 11,
+          "p": 0,
+          "u": 11,
+          "lambda": 1,
+          "Q": 14,
+          "stats": {
+            "roots": 3
+          }
+        },
+        {
+          "root": 7,
+          "a": 9,
+          "b": 11,
+          "p": 0,
+          "u": 11,
+          "lambda": 1,
+          "Q": 12,
+          "stats": {
+            "roots": 3
+          }
+        },
+        {
+          "root": 19,
+          "a": 9,
+          "b": 11,
+          "p": 0,
+          "u": 11,
+          "lambda": 1,
+          "Q": 12,
+          "stats": {
+            "roots": 3
+          }
+        }
+      ]
+    },
+    {
+      "fixture": "six_2_2",
+      "n": 23,
+      "m": 89,
+      "M": 122,
+      "maximum_degree": 12,
+      "roots": [
+        {
+          "root": 1,
+          "a": 10,
+          "b": 12,
+          "p": 0,
+          "u": 12,
+          "lambda": 1,
+          "Q": 14,
+          "stats": {
+            "roots": 3
+          }
+        },
+        {
+          "root": 2,
+          "a": 10,
+          "b": 12,
+          "p": 0,
+          "u": 12,
+          "lambda": 1,
+          "Q": 14,
+          "stats": {
+            "roots": 3
+          }
+        },
+        {
+          "root": 4,
+          "a": 10,
+          "b": 12,
+          "p": 0,
+          "u": 12,
+          "lambda": 1,
+          "Q": 14,
+          "stats": {
+            "roots": 3
+          }
+        },
+        {
+          "root": 7,
+          "a": 10,
+          "b": 12,
+          "p": 0,
+          "u": 12,
+          "lambda": 1,
+          "Q": 12,
+          "stats": {
+            "roots": 3
+          }
+        },
+        {
+          "root": 19,
+          "a": 10,
+          "b": 12,
+          "p": 0,
+          "u": 12,
+          "lambda": 1,
+          "Q": 12,
+          "stats": {
+            "roots": 3
+          }
+        }
+      ]
+    },
+    {
+      "fixture": "six_4_4",
+      "n": 27,
+      "m": 117,
+      "M": 170,
+      "maximum_degree": 14,
+      "roots": [
+        {
+          "root": 1,
+          "a": 12,
+          "b": 14,
+          "p": 0,
+          "u": 14,
+          "lambda": 1,
+          "Q": 14,
+          "stats": {
+            "roots": 3
+          }
+        },
+        {
+          "root": 2,
+          "a": 12,
+          "b": 14,
+          "p": 0,
+          "u": 14,
+          "lambda": 1,
+          "Q": 14,
+          "stats": {
+            "roots": 3
+          }
+        },
+        {
+          "root": 4,
+          "a": 12,
+          "b": 14,
+          "p": 0,
+          "u": 14,
+          "lambda": 1,
+          "Q": 14,
+          "stats": {
+            "roots": 3
+          }
+        },
+        {
+          "root": 7,
+          "a": 12,
+          "b": 14,
+          "p": 0,
+          "u": 14,
+          "lambda": 1,
+          "Q": 12,
+          "stats": {
+            "roots": 3
+          }
+        },
+        {
+          "root": 19,
+          "a": 12,
+          "b": 14,
+          "p": 0,
+          "u": 14,
+          "lambda": 1,
+          "Q": 12,
+          "stats": {
+            "roots": 3
+          }
+        }
+      ]
+    },
+    {
+      "fixture": "six_8_8",
+      "n": 35,
+      "m": 197,
+      "M": 290,
+      "maximum_degree": 18,
+      "roots": [
+        {
+          "root": 1,
+          "a": 16,
+          "b": 18,
+          "p": 0,
+          "u": 18,
+          "lambda": 1,
+          "Q": 14,
+          "stats": {
+            "roots": 3
+          }
+        },
+        {
+          "root": 2,
+          "a": 16,
+          "b": 18,
+          "p": 0,
+          "u": 18,
+          "lambda": 1,
+          "Q": 14,
+          "stats": {
+            "roots": 3
+          }
+        },
+        {
+          "root": 4,
+          "a": 16,
+          "b": 18,
+          "p": 0,
+          "u": 18,
+          "lambda": 1,
+          "Q": 14,
+          "stats": {
+            "roots": 3
+          }
+        },
+        {
+          "root": 7,
+          "a": 16,
+          "b": 18,
+          "p": 0,
+          "u": 18,
+          "lambda": 1,
+          "Q": 12,
+          "stats": {
+            "roots": 3
+          }
+        },
+        {
+          "root": 19,
+          "a": 16,
+          "b": 18,
+          "p": 0,
+          "u": 18,
+          "lambda": 1,
+          "Q": 12,
+          "stats": {
+            "roots": 3
+          }
+        }
+      ]
+    }
+  ],
+  "totals": {
+    "roots": 108,
+    "qualified_roots": 3,
+    "rooted_residual_identities": 3,
+    "local_slot_checks": 9,
+    "pair_capacity_checks": 21,
+    "one_sided_pair_checks": 9,
+    "A_edges": 0,
+    "direct_A_edges": 0,
+    "nondirect_A_edges": 0,
+    "matched_A_certificates": 0,
+    "Hall_cut_checks": 18
+  },
+  "scope": "Maximum-degree roots only; three certificate policies; all Hall cuts where <=12 active code-pairs. Zero rigid cuts is absence of coverage, not verification of the rigid branch."
+}
