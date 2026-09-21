@@ -14,36 +14,54 @@ The stronger all-order 2019 Dailly-Foucaud-Hansberg conjecture is false: the pub
 
 **Live handoff:** [`CURRENT_STATE.md`](CURRENT_STATE.md).
 
-### 21 September 2026 adversarial checkpoint
+### 21 September 2026 post-audit forward correction
 
-The [21 September daily red-team audit](project/research/post_ms/2026-09-21-daily-red-team-audit-v1/DAILY_RED_TEAM_AUDIT.md) reviewed the live interval through pre-audit head `4a7cf5ab4b94451a9e502cd901c906ab9890b048` and separately audited session utilisation.
+The midnight [daily red-team audit](project/research/post_ms/2026-09-21-daily-red-team-audit-v1/DAILY_RED_TEAM_AUDIT.md) elevated two immediate obligations: independently reconstruct the small half-ray equality faces and attack the zero-positive-fixture rigid-cut gap directly from raw criticality. Both were addressed in the next forward session.
 
-**Mathematical finding:** no fatal contradiction was found in the final corrected local one-code / H–U / superconstant-deficit chain under its stated upstream hypotheses. Raw same-code criticality and ordered `(source,witness)` injectivity survive independent derivation, and the corrected H–U layer/capacity mechanism survives targeted replay. The latest global `Delta-h = Omega(t^(2/3))` package is nevertheless only **provisionally supported and conditional**: the bounded actual-D2C regression still contains **zero positive rigid complete Hall-cut fixtures with `x>=3`**, and this audit did not independently reconstruct every `N=0,1,2,3` equality-face exclusion from first principles. There is still no eventual theorem and no justified threshold `n_0`.
+**Equality-face gate:** a second independent replay of the repaired `N=0,1,2,3` cases passed at the stated conditional scope, so `Delta>=h+1` is no longer waiting on that audit gate. It is now strategically subordinate, however, because a stronger upstream boundary argument eliminates the entire diagnostic half-ray before H–U carrier optimization is needed.
 
-**Process finding:** the audited 24-hour session record is inadequate for a day-wide utilisation claim. Of 23 scheduled forward-research windows, 22 have no telemetry. One 23:00 record is incomplete; a second 23:00 record is complete but began 29m50s late and logged 21m30s of forward work. The resulting **85.4% utilisation applies only to that one verified 25m10s available window**, not to the day. A mandatory telemetry schema is now preserved at [`project/research/session_logs/SESSION_LOG_SCHEMA.md`](project/research/session_logs/SESSION_LOG_SCHEMA.md).
+**New raw realizability theorem:** for a rigid one-code outside block `Y=A_d` with multiplicity `y>=2` and at least two matched-selected heads `m>=2`, those heads force **full boundary exposure** `I(d,X)=[p]`. More importantly, the X-reverse orientation of a boundary edge is impossible: the matched source and any X-witness would share every vertex of the repeated same-code block, so their common-neighbour set cannot be a singleton. Thus every exposed coordinate must route through U-forward or matched-forward support.
 
-The pre-audit Status synchronization run `35543011012` / job `106163951722` failed. This checkpoint restores the enforced `CURRENT_STATE.md` handoff schema and preserves the failure as process evidence rather than rewriting history.
+A minimum outside source has `k` selected complementary U-witnesses in `U_bar d`, none of which can populate a one-match boundary class `U_{bar d xor e_i}`. Writing residual dimension `r=p-m`, the exact available boundary-forward population is
 
-### Current load-bearing chain
+`e=u-k=c-r`.
 
-`rooted criticality -> selected/residual Hall ledger -> exact complementary-pair capacity -> rigid cut -> one-code purification -> corrected H–U B-layer classification -> capacity-deficit decomposition -> residual-slot collapse -> equality-face exclusions -> provisional global superconstant H-slack deficit`.
+If `C=C(d,X)` is the universal-coordinate set, the matched-forward leaf count satisfies
+
+- `|C|=0` or `|C|>=3`: no matched-forward heads, so **`c>=p+r`**;
+- `|C|=1`: at most one matched-forward head, so **`c>=p+r-1`**;
+- `|C|=2`: at most two, so **`c>=p+r-2`**, with equality requiring the two universal coordinates to form an isolated matched-row `K_2`.
+
+This is a literal graph-realizability condition inside the rigid one-code interface. It does not use the score ceiling, rooted-Q, pair-local Hall capacity, gamma collision or the audit-sensitive source-tuple capacity theorem.
+
+Two important 20 September scalar escape families are therefore **not graph-realizable**: the corrected residual-one intermediate half-ray, and the large-gap family `p=3t,c=2t,m=2t,r=t,y=t`. Their survival of earlier scalar inequalities reflected a missing boundary-criticality condition, not a genuine candidate geometry. Reverse-gamma multiplicity remains relevant only for singleton outside-code classes `y_d=1`; same-session notes that allowed repeated-code reverse-only coordinates have been explicitly corrected or marked superseded.
+
+There is still **no eventual theorem and no justified threshold `n_0`**. The bounded actual-D2C regression still contains **zero positive rigid complete Hall-cut fixtures with `x>=3`**. The new theorem is a stronger necessary condition inside that unexercised interface, not evidence that the interface is reachable or impossible in general.
+
+### Current load-bearing direction
+
+`rooted criticality -> selected/residual Hall ledger -> exact pair capacity -> rigid cut -> one-code purification -> raw B–A boundary trichotomy -> repeated-code reverse exclusion -> full boundary exposure (m>=2) -> complementary U-class exclusion -> exact forward reservoir e=c-r -> c>=p+r-|L(C)|`.
+
+The next high-value step is to intersect this near-maximal rooted-gap condition with the exact residual defect `delta=b(n-b)-m=r-e(F)`, rooted triangle count `Q=e(G[N(v)])`, and pair-local Hall/score identities. The qualitatively separate one-code regimes are `m<=1` and singleton outside block `y=1`.
 
 Key current packages:
 
+- [21 September daily red-team audit](project/research/post_ms/2026-09-21-daily-red-team-audit-v1/DAILY_RED_TEAM_AUDIT.md)
+- [Raw boundary-code-edge trichotomy, corrected](project/research/post_ms/2026-09-21-rigid-realizability-audit-v1/RIGID_CUT_BOUNDARY_CODE_EDGE_TRICHOTOMY.md)
+- [Global matched-leaf collapse](project/research/post_ms/2026-09-21-rigid-realizability-audit-v1/GLOBAL_MATCHED_LEAF_COLLAPSE_AND_PARTIAL_U_BILL.md)
+- [Full boundary exposure / forward-only theorem](project/research/post_ms/2026-09-21-rigid-realizability-audit-v1/ONE_CODE_FULL_BOUNDARY_EXPOSURE_THEOREM.md)
+- [Corrected residual-one consequence](project/research/post_ms/2026-09-21-rigid-realizability-audit-v1/RESIDUAL_ONE_BOUNDARY_POPULATION_OBSTRUCTION.md)
+- [Half-ray raw population closure](project/research/post_ms/2026-09-21-rigid-realizability-audit-v1/HALF_RAY_BOUNDARY_CERTIFICATE_SCORE_CLOSURE.md)
+- [Second equality-face hostile replay](project/research/post_ms/2026-09-21-rigid-realizability-audit-v1/HALF_RAY_EQUALITY_FACE_SECOND_HOSTILE_REPLAY.md)
+- [Dependency correction map](project/research/post_ms/2026-09-21-rigid-realizability-audit-v1/REPEATED_CODE_REVERSE_EXCLUSION_DEPENDENCY_CORRECTION.md)
 - [19 September source-premise repair](project/research/post_ms/2026-09-19-source-premise-graph-audit-v1/SOURCE_PREMISE_REPAIR.md)
 - [Actual-graph rigid/Hall regression](project/research/post_ms/2026-09-19-rigid-graph-regression-v1/RIGID_GRAPH_LEVEL_REGRESSION.md)
-- [20 September same-code raw-criticality audit](project/research/post_ms/2026-09-20-same-code-raw-criticality-audit-v1/SAME_CODE_RAW_CRITICALITY_AUDIT.md)
-- [Corrected H–U B-layer theorem](project/research/post_ms/2026-09-20-rigid-interface-direct-audit-v1/ONE_CODE_R1_K2_HALF_RAY_HU_B_LAYER_CORRECTION_AND_SLACK_THEOREM.md)
-- [H–U capacity-deficit decomposition](project/research/post_ms/2026-09-20-rigid-interface-direct-audit-v1/ONE_CODE_R1_K2_HU_CAPACITY_DEFICIT_DECOMPOSITION.md)
-- [Residual-slot collapse](project/research/post_ms/2026-09-20-rigid-interface-direct-audit-v1/ONE_CODE_R1_K2_HALF_RAY_RESIDUAL_SLOT_COLLAPSE.md)
-- [Corrected global superconstant deficit](project/research/post_ms/2026-09-20-rigid-interface-direct-audit-v1/ONE_CODE_R1_K2_HALF_RAY_GLOBAL_SUPERCONSTANT_DEFICIT.md)
-- [21 September daily red-team audit](project/research/post_ms/2026-09-21-daily-red-team-audit-v1/DAILY_RED_TEAM_AUDIT.md)
 
 ### Trust boundary
 
 The newest packages are **internal candidate mathematics**. Hand derivation, checker replay, actual-graph regression, same-project CI, independent proof review, external specialist review and publication acceptance are distinct gates. Finite abstract parameter scans are not graph counts. The zero-positive-fixture rigid-cut gap remains explicit and is not evidence either for realizability or impossibility.
 
-Invalidated material remains preserved. In particular, the old `HU-PRIVATE/HU-QI/HU-IHOLE` chain is not admissible, and the first uncorrected superconstant formulas from commit `945dc220...` are superseded by the self-head correction beginning at `99cd7367...`.
+Invalidated/superseded material remains preserved. In particular, the old `HU-PRIVATE/HU-QI/HU-IHOLE` chain is not admissible; the first uncorrected superconstant formulas from commit `945dc220...` remain superseded; and the same-session residual-one reverse-capacity wedge is marked superseded after the repeated-code reverse exclusion.
 
 ### Canonical preserved finite ledger
 
@@ -81,6 +99,8 @@ The eventual-D2C programme continues through 27 September 2026 with a dedicated 
 <!-- CURRENT-STATUS:END -->
 
 ## Dated research updates - current and preserved history
+
+**21 September 2026 - post-audit boundary-realizability correction.** Raw boundary criticality now shows that a repeated outside code class cannot use the X-reverse boundary orientation. In the one-code branch with at least two matched-selected heads this combines with full boundary exposure and the exact escape reservoir `e=c-r` to force `c>=p+r` generically, with only the precisely described one-/two-universal-coordinate relaxations. The corrected intermediate half-ray and the preserved large-gap scalar escape family are therefore not literal graph candidates. A dependency-correction note preserves the same-session reverse-capacity route that this stronger observation superseded. See [`CURRENT_STATE.md`](CURRENT_STATE.md) and [the forward-only theorem](project/research/post_ms/2026-09-21-rigid-realizability-audit-v1/ONE_CODE_FULL_BOUNDARY_EXPOSURE_THEOREM.md).
 
 **21 September 2026 - daily adversarial audit, superconstant frontier and telemetry repair.** The audit retained the corrected local superconstant-deficit result only at conditional/provisional status, kept the zero-positive-fixture rigid-cut gap as the dominant graph-level risk, and found that day-wide session utilisation could not be verified because most hourly telemetry was missing. A durable session-log schema was added and the live status handoff was reconciled after a Status synchronization failure. See the [full audit](project/research/post_ms/2026-09-21-daily-red-team-audit-v1/DAILY_RED_TEAM_AUDIT.md), [`CURRENT_STATE.md`](CURRENT_STATE.md), and [telemetry schema](project/research/session_logs/SESSION_LOG_SCHEMA.md).
 
@@ -131,6 +151,7 @@ The active chain is the **eventual dense D2C programme**:
 - [20 September same-code raw-criticality audit](project/research/post_ms/2026-09-20-same-code-raw-criticality-audit-v1/SAME_CODE_RAW_CRITICALITY_AUDIT.md)
 - [Corrected H–U capacity chain](project/research/post_ms/2026-09-20-rigid-interface-direct-audit-v1/)
 - [21 September daily adversarial audit](project/research/post_ms/2026-09-21-daily-red-team-audit-v1/DAILY_RED_TEAM_AUDIT.md)
+- [21 September rigid-boundary realizability package](project/research/post_ms/2026-09-21-rigid-realizability-audit-v1/)
 
 ## Failures and audit gates remain first-class evidence
 
