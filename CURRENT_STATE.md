@@ -7,19 +7,19 @@
 `X_3` (12 vertices, 32 edges, versus `M(12)=31`) remains the mandatory negative control. The false all-order 2019 Dailly–Foucaud–Hansberg Conjecture 3 is not the target. First-proof priority on Erdős #742 is not the optimization target.
 
 <!-- CURRENT-STATUS:START -->
-CHECKPOINT CLASS: `VERIFIED_INTERNAL_COORDINATE_FACE_ORIENTATION`
+CHECKPOINT CLASS: `BOUNDED_DIAGNOSTIC_NOT_NONEXISTENCE`
 
 WORK MODE: `MATH`
 
-INSPECTED PREDECESSOR: `2516db1b6e35b502774676bbf7a94310d721d151`.
+INSPECTED PREDECESSOR: `6fbcf40c9fa41e1dc08f87b0e1ea17d697bfe718`.
 
-LAST VERIFIED RESULT: A coordinate-face four-centre support forces its outward coordinate code present and inward code absent; n>=20. Unique-bridge proof excludes the inward-only case for arbitrary multiplicities. The outward branch is open, especially multiple outward-code copies.
+LAST VERIFIED RESULT: Mathematical status unchanged. Bounded 1200-trial outward-face fixture diagnostic found no example; no nonexistence conclusion or unit-count increment. Exact best failed fixtures preserved.
 
 UNPRESERVED WORK: None.
 
 DEFERRED ADMIN: Consolidate superseded live-state paragraphs and refresh reviewer summary during final preservation.
 
-NEXT ACTION: Hostile-retest the coordinate-face orientation proof, preserving the distinction between missing code and an adjacent physical copy.
+NEXT ACTION: Prove the parity-code obligation in the opposite-parallel-edge support using missing-coordinate physical matchings.
 <!-- CURRENT-STATUS:END -->
 
 ## Current Q3 graph-level results

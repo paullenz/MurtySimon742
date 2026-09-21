@@ -112,7 +112,8 @@
     "c58d02216a00215a7b0170886581446dfaa30b15",
     "4fcddc0e8361eb9144a64db2505692a27ebab4c6",
     "0d0e5a214a747e47bc6da30d001b66aacf5a4b6a",
-    "2516db1b6e35b502774676bbf7a94310d721d151"
+    "2516db1b6e35b502774676bbf7a94310d721d151",
+    "6fbcf40c9fa41e1dc08f87b0e1ea17d697bfe718"
   ],
   "live_unfinished_line": "Coordinate-face support: outward C21 copies and realizability remain open; opposing-edge affine-plane support and larger supports open.",
   "stop_reason": "IN_PROGRESS",
@@ -121,6 +122,13 @@
     {
       "time": "2026-09-21T14:37:59+01:00",
       "result": "same slot after context compaction; research continuation, no new deadline"
+    }
+  ],
+  "auxiliary_diagnostics": [
+    {
+      "completed_at": "2026-09-21T14:49:11+01:00",
+      "result": "1200 seeded greedy-deletion trials in coordinate-face outward branch found no D2C fixture; best retained 8 noncritical fixed edges. No nonexistence inference; not counted as substantive unit.",
+      "artifact": "project/research/post_ms/2026-09-21-q3-star-support-v1/COORDINATE_FACE_SEARCH_RESULTS.json"
     }
   ]
 }
