@@ -148,16 +148,22 @@
       "completed_at": "2026-09-21T15:50:32+01:00",
       "result": "The minimal two-component pattern with both cross pairs present remains exact UNSAT after adding unrestricted balanced parity populations r=q=2 through 8 on the fixed eight-star support. This rules out parity multiplicity as the repair in that hostile pattern.",
       "artifact": "project/research/post_ms/2026-09-21-q3-star-support-v1/PARITY_STAR_SPLIT_SCALE_RESULTS.json"
+    },
+    {
+      "id": 22,
+      "completed_at": "2026-09-21T15:51:07+01:00",
+      "result": "The alternative minimal closure, with all four parity pairs missing and jointly bridged by two star vertices, is also UNSAT for r=q=2 through 8. Any split certificate graph needs distributed extra bridges or larger star multiplicity.",
+      "artifact": "project/research/post_ms/2026-09-21-q3-star-support-v1/PARITY_STAR_SPLIT_SECOND_STAR_SCALE_RESULTS.json"
     }
   ],
-  "number_of_substantive_units": 21,
+  "number_of_substantive_units": 22,
   "early_stop_check_time": null,
   "early_stop_check_result": null,
   "tool_infrastructure_failures": [
     "python-sat was absent; installed into the disposable workspace dependency directory and validated against three actual D2C controls."
   ],
   "commit_shas_produced": [],
-  "live_unfinished_line": "Classify the remaining cross-component closures using extra parity/star common neighbours; present-cross closure is UNSAT through r=q=8.",
+  "live_unfinished_line": "Search distributed extra-common-neighbour closures or increased star multiplicity for the first actual H_x with two tree components.",
   "stop_reason": "IN_PROGRESS",
   "target_status": "IN_PROGRESS",
   "audit_reconciliation": "Latest daily audit prioritizes raw criticality and actual graph realizability. This run follows that priority by hostile-reviewing and attacking the reduced opposite-edge-plane actual core; conditional Hall/source-tuple results are not advanced.",

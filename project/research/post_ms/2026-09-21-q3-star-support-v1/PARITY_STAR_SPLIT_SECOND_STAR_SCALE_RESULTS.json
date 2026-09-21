@@ -1,0 +1,47 @@
+{
+  "scope": "fixed six coordinates and two copies of each even star; four missing pairs jointly bridged by S0 and S3",
+  "rows": [
+    {
+      "r": 2,
+      "q": 2,
+      "sat": false,
+      "seconds": 0.015888452529907227
+    },
+    {
+      "r": 3,
+      "q": 3,
+      "sat": false,
+      "seconds": 0.02111673355102539
+    },
+    {
+      "r": 4,
+      "q": 4,
+      "sat": false,
+      "seconds": 0.0337522029876709
+    },
+    {
+      "r": 5,
+      "q": 5,
+      "sat": false,
+      "seconds": 0.05541491508483887
+    },
+    {
+      "r": 6,
+      "q": 6,
+      "sat": false,
+      "seconds": 0.10114121437072754
+    },
+    {
+      "r": 7,
+      "q": 7,
+      "sat": false,
+      "seconds": 0.2557222843170166
+    },
+    {
+      "r": 8,
+      "q": 8,
+      "sat": false,
+      "seconds": 0.2083137035369873
+    }
+  ]
+}
