@@ -58,9 +58,15 @@
       "completed_at": "2026-09-21T17:35:19+01:00",
       "result": "Sharpened the surviving parameter wedge: any four-centre counterexample must have s<ceil((r+q)/2), U>=D+1, rq>=D+1, and both parity populations strictly exceed s/2; equivalently min(r,q)(r+q-min(r,q))>=D+1.",
       "artifact": "project/research/post_ms/2026-09-21-q3-star-support-v1/FOUR_CENTRE_SURVIVOR_PARAMETER_WEDGE.md"
+    },
+    {
+      "id": 7,
+      "completed_at": "2026-09-21T17:42:25+01:00",
+      "result": "Closed the entire triangle-free parity/star-block subcase by combining Mantel with the five-coordinate complementary-pair cap and a two-case algebraic comparison. Every surviving four-centre counterexample must contain a triangle using a star vertex.",
+      "artifact": "project/research/post_ms/2026-09-21-q3-star-support-v1/FOUR_CENTRE_TRIANGLE_FREE_BLOCK_CLOSURE.md"
     }
   ],
-  "number_of_substantive_units": 6,
+  "number_of_substantive_units": 7,
   "early_stop_check_time": null,
   "early_stop_check_result": null,
   "tool_infrastructure_failures": [
@@ -71,7 +77,7 @@
     }
   ],
   "commit_shas_produced": [],
-  "live_unfinished_line": "Exploit the exact survivor wedge, beginning with the parity/star-block triangle-free subcase and then forcing a triangle-supported criticality obstruction.",
+  "live_unfinished_line": "Classify the now-mandatory star-containing triangles in the parity/star block and charge their forced raw-criticality losses into D(u,s).",
   "stop_reason": "IN_PROGRESS",
   "target_status": "IN_PROGRESS",
   "audit_reconciliation": "The latest daily audit prioritizes raw graph criticality, actual D2C regression, and direct attack on interface realizability before further scalar theory. The matching-one target is exactly such a raw physical-certificate obstruction inside an actual realizable parity-star branch; conditional Hall/source-tuple machinery remains untouched.",

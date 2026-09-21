@@ -5,19 +5,19 @@ Canonical repository: `paullenz/MurtySimon742`. Date: 21 September 2026.
 Active target: the eventual / sufficiently-large second-extremal problem around M(n)=floor((n-1)^2/4)+1. The general theorem and a uniform threshold remain open. X3 (12 vertices,32 edges,M(12)=31) remains mandatory. Do not revive the false all-order conjecture or the closed mixed {4,5} ladder.
 
 <!-- CURRENT-STATUS:START -->
-CHECKPOINT CLASS: `FOUR_CENTRE_SURVIVOR_PARAMETER_WEDGE`
+CHECKPOINT CLASS: `FOUR_CENTRE_TRIANGLE_FREE_BLOCK_CLOSED`
 
 WORK MODE: `MATH`
 
 INSPECTED PREDECESSOR: `ff35a12f8fb0381bd443b96a5fbf5f6b85761b96`.
 
-LAST VERIFIED RESULT: Exact cancellation is not needed. If the parity/star block has excess epsilon over rq+s, the full graph satisfies m<=M(n) whenever epsilon<=D(u,s). Thus any surviving four-centre counterexample has s<ceil((r+q)/2), U=M-I>=D+1, rq>=D+1, and both r>s/2 and q>s/2. Matching-one and one-tree-component remain explicitly invalidated by actual D2C graphs.
+LAST VERIFIED RESULT: Every exactly-four-centre parity-plane graph whose parity/star block is triangle-free satisfies m<=M(n). The proof combines Mantel with the raw coordinate cap E_coord<=min(rt,2 floor((t-3)^2/4)+2). Thus every survivor has a star-containing triangle in addition to s<ceil((r+q)/2), U>=D+1, rq>=D+1, and r,q>s/2. Matching-one and one-tree-component remain invalidated.
 
 UNPRESERVED WORK: None after this invalidation/repair checkpoint.
 
 DEFERRED ADMIN: Broad historical cleanup; it does not block the raw matching-one attack.
 
-NEXT ACTION: First close the parity/star-block triangle-free subcase using Mantel plus the five-coordinate edge cap; then every survivor must contain a triangle in that block, exposing a triangle-criticality target inside the exact parameter wedge.
+NEXT ACTION: Classify the possible star-containing triangle types in the parity/star block and derive their raw deletion-certificate losses. Feed the strongest loss into the budget D(u,s); retain actual D2C split-tree graphs as hostile controls.
 <!-- CURRENT-STATUS:END -->
 
 ## Reviewable current package
