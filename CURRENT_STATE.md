@@ -43,11 +43,11 @@ AUDIT-PRIORITY RECONCILIATION: the 09:00 predecessor independently reconstructed
 
 UNRESOLVED GLOBAL RISK: the entire result remains conditional on reaching the rigid complete one-code interface. The zero-positive-fixture actual-D2C gap is unchanged; no eventual theorem or threshold `n_0` is claimed. `X_3` remains mandatory.
 
-UNPRESERVED WORK: none from this invocation once the theorem note and telemetry finalize. The live mathematical frontier is the `rho=0` endpoint polynomial beyond `sigma=0.53`; it is the first family to attack if sharpening the constant, but graph-level rigid-cut realizability/X3 regression remains at least as important strategically.
+UNPRESERVED WORK: none from this invocation. The live mathematical frontier is the `rho=0` endpoint polynomial beyond `sigma=0.53`; it is the first family to attack if sharpening the constant, but graph-level rigid-cut realizability/X3 regression remains at least as important strategically.
 
-DEFERRED ADMIN: README was read and remains broadly correct on target/trust boundary, but it still advertises the older `sqrt(2)-1` wedge in its live status section. This run prioritizes clean theorem/state/telemetry preservation before the hourly cutoff; README should be reconciled to the 0.53 theorem in the next clean preservation opportunity or daily audit. Historical incomplete telemetry must not be backfilled from commits.
+DEFERRED ADMIN: README was read and remains broadly correct on target/trust boundary, but it still advertises the older `sqrt(2)-1` wedge in its live status section. This run prioritized clean theorem/state/telemetry preservation before the hourly cutoff; README should be reconciled to the 0.53 theorem in the next clean preservation opportunity or daily audit. Historical incomplete telemetry must not be backfilled from commits.
 
-TELEMETRY IN PROGRESS: full record `project/research/session_logs/2026-09-21/2026-09-21T09-28-15+01-00-a.md`; actual start 09:28:15 BST; cutoff 09:55:38 BST; forward research stopped 09:47:52 BST; preservation started 09:47:52 BST; ten substantive units. Preservation-complete and final-report timestamps will be filled from fresh clock readings, not inferred.
+TELEMETRY FINALIZED: full record `project/research/session_logs/2026-09-21/2026-09-21T09-28-15+01-00-a.md`; actual start 09:28:15 BST; cutoff 09:55:38 BST; forward research stopped 09:47:52 BST; preservation completed 09:49:45 BST; final-report timestamp 09:51:35 BST; wall-clock span 23m20s; forward-research span 19m37s; preservation span 1m53s; ten substantive units. The >=50-minute target was not applicable to this re-entry because only 27m23s existed from measured start to cutoff. Forward exploration stopped only after the early-stop gate opened with 7m46s remaining.
 
 NEXT ACTION: first independently replay `ONE_CODE_ROOTED_RECTANGLE_Q_WEDGE.md`; then either (i) sharpen the exact `rho=0` endpoint polynomial structurally beyond 0.53, or (ii) give priority to the audit-dominant actual-D2C rigid-cut realizability interface and identify the first graph-derived stage at which positive `x>=3` fixtures disappear. Maintain `X_3`; do not revive invalidated H-U private-foot arguments, repeated-code reverse-gamma channels, the dead half-ray, or superseded scalar wedges.
 <!-- CURRENT-STATUS:END -->
@@ -81,13 +81,15 @@ Full record: `project/research/session_logs/2026-09-21/2026-09-21T09-28-15+01-00
 - preservation cutoff: **2026-09-21 09:55:38 BST**;
 - forward-research stop: **2026-09-21 09:47:52 BST**;
 - preservation start: **2026-09-21 09:47:52 BST**;
-- preservation complete: **PENDING fresh timestamp**;
-- wall-clock span: **PENDING**;
+- preservation complete: **2026-09-21 09:49:45 BST**;
+- final-report timestamp: **2026-09-21 09:51:35 BST**;
+- wall-clock span: **23m20s**;
 - forward-research span: **19m37s**;
+- preservation span: **1m53s**;
 - substantive units: **10**;
 - early-stop check: **09:47:52 BST; preservation permitted because 7m46s remained to cutoff**;
 - >=50-minute target: **not applicable to this re-entry**, because only 27m23s existed from measured start to cutoff;
-- stop reason: forward exploration stopped only after the <8-minute early-stop gate opened, then preservation began.
+- stop reason: forward exploration stopped only after the <8-minute early-stop gate opened, then theorem/state/telemetry preservation completed before cutoff.
 
 ## Mandatory constraints for future work
 
