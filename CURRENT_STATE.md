@@ -65,7 +65,7 @@ Full telemetry: `project/research/session_logs/2026-09-21/2026-09-21T15-02-03+01
 
 - Actual start: 15:02:03 BST; preservation cutoff: 15:55:38 BST.
 - Forward research: 15:02:46--15:55:44 BST = 52m58s (52.9666666667 min), continuously documented across same-slot context re-entry.
-- Preservation complete: 15:56:41 BST; wall-clock span 54m38s (54.6333333333 min); preservation span 0m57s (0.95 min).
+- Preservation complete after late-segment reconciliation: 15:59:30 BST; wall-clock slot span 57m27s (57.45 min); verified preservation intervals total 1m33s (1.55 min).
 - Substantive units: 26.
 - Stop reason: reached the valid cutoff after the last bounded hostile-core replay; stopped exploration for preservation.
 - Late same-slot segment: 15:58:54 BST, after cutoff; zero forward research, preservation/reconciliation only. Earlier verified research total and target result remain unchanged.
