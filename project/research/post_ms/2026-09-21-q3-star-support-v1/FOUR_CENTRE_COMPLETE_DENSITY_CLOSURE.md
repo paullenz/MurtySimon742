@@ -24,6 +24,12 @@ At least five coordinate codes and all four star-centre classes occur, so `t>=5`
 
 Let `A=e(R,S)`. Let `H` be the high-bridge star vertices incident with a high-bridge `T--S` edge, put `k=|H|`, let `T_H` count those edges, and let `L` count the low-bridge `T--S` edges plus `e(S)`.
 
+## The `q=0` boundary
+
+If `q=0`, then `M=I=U=0`. The missing-pair injection forces `e(R,S)=0`, there are no `T--S` edges, and the star-forest theorem gives `e(S)<=s-1`. Hence `B<=s-1<rq+s`, so `epsilon=0` and the density closure is immediate.
+
+Assume henceforth that `q>=1`.
+
 ## Symmetric excess bound
 
 Parity substitution gives `e(R union T)=rq-U`, hence
@@ -38,7 +44,7 @@ The star-token injection assigns every edge counted by `L` to a distinct low-bri
 
     L+k <= s.                               (3)
 
-Trivially `T_H<=kq`. Combining (1)--(3),
+Trivially `T_H<=kq`. Combining (1)--(3), and using `q-1>=0`,
 
     B-rq-s <= s(r-1)+k(q-1)-U
              <= s(r+q-2)-U
@@ -48,9 +54,9 @@ The unconditional missing-pair ledger independently gives `epsilon<=U`. If `epsi
 
     2 epsilon <= s(w-2).
 
-If `epsilon=0` the same final bound is automatic. Thus, with the right side truncated at zero when `w<2`,
+If `epsilon=0` the same final bound is automatic. Thus for `q>=1` (and hence `w>=2`),
 
-    epsilon <= max(0,floor(s(w-2)/2)).      (5)
+    epsilon <= floor(s(w-2)/2).             (5)
 
 This is the missing quantitative replacement for the false exact-cancellation inequality.
 
@@ -60,12 +66,12 @@ The budgeted cancellation theorem closes the graph whenever `epsilon<=D(u,s)`, w
 
     D(u,s)=floor((u+s)^2/4)-floor(u^2/4)-s-3.
 
-For `w>=2`, the floor-difference inequality gives
+The floor-difference inequality gives
 
     D(u,s)-floor(s(w-2)/2)
       >= floor(st/2+s^2/4)-3.
 
-Since `t>=5` and `s>=4`, the final expression is at least `11`. For `w<2`, (5) gives `epsilon=0` and the closure is immediate. Therefore `epsilon<=D` in all cases, proving `m<=M(n)`.
+Since `t>=5` and `s>=4`, the final expression is at least `11`. Together with the separately closed `q=0` boundary, this proves `epsilon<=D` in all cases and hence `m<=M(n)`.
 
 ## Hostile controls and dependency boundary
 

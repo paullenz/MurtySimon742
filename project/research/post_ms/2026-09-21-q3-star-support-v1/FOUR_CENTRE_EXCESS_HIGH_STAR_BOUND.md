@@ -11,7 +11,7 @@ Let `H` be the set of physical star vertices of bridge degree at least two and p
 
 ## Excess theorem
 
-Every graph in the branch satisfies
+If `q=0`, then `U=0` and the missing-pair ledger gives `epsilon=0`. For `q>=1`, every graph in the branch satisfies
 
     epsilon <= min(U, k(q-1)) <= min(U, s(q-1)).       (1)
 
@@ -35,7 +35,7 @@ Using these two inequalities in (2) gives
 
     B-rq-s <= T_H-k.
 
-Each of the `k` high stars has at most `q` neighbours in `T`, so `T_H<=kq`; this proves `epsilon<=k(q-1)<=s(q-1)`. The old unconditional ledger gives `epsilon<=U`, completing (1).
+Each of the `k` high stars has at most `q` neighbours in `T`, so `T_H<=kq`; because `q-1>=0`, this proves `epsilon<=k(q-1)<=s(q-1)`. The old unconditional ledger gives `epsilon<=U`, completing (1). The separate `q=0` statement avoids the invalid sign reversal that would result from replacing `k(q-1)` by `s(q-1)` when `q-1<0`.
 
 The actual `n=33` RTS control has `epsilon=1`, showing that zero cannot replace the left side. It has `k>0`, so it is consistent with (1).
 
@@ -49,7 +49,7 @@ The budgeted cancellation theorem closes the branch whenever `epsilon<=D`. Thus 
 
     s(q-1) <= D(u,s).                                  (3)
 
-There is a simple explicit gate. Since
+For `q>=1` there is a simple explicit gate. Since
 
     D-s(q-1)
       >= floor(s(2(t+r-q)+s)/4)-3,

@@ -8,7 +8,7 @@ Let G be a diameter-two-critical graph with a vertex v such that G[N(v)] is Q3 a
 
 If a star occurs, at least four distinct star centres occur. If exactly four occur, they form an affine plane of F_2^3. In that four-centre case n>=19; equality is attained by an explicit 19-vertex 66-edge graph. At order 19 the support must be a parity plane: either nonparity plane orbit requires n>=20.
 
-The lower bound on star-support size and the lower order bound at exactly four centres are both sharp. This does not bound the minimum order at five through eight centres or settle the full eventual second-extremal problem.
+The lower bound on star-support size and the lower order bound at exactly four centres are both sharp. In addition, the complete exactly-four-centre branch now satisfies `m<=M(n)` at every order. This does not bound the minimum order at five through eight centres or settle the full eventual second-extremal problem.
 
 ## Proof route
 
@@ -52,10 +52,14 @@ Five through eight star centres, nontransversal codes and the general eventual d
 
 Latest continuation: `OPPOSITE_EDGE_PARITY_FACTOR_REDUCTION.md` removes parity multiplicity from opposite-edge-plane core realizability and gives an exact fixed-core expansion gap recurrence. The next search/proof should use one vertex of each parity, preserving arbitrary coordinate/star multiplicities.
 
-## 15:00 continuation: full four-centre classification and parity-star density frontier
+## Full four-centre classification and density closure
 
 The nonparity affine-plane orbits are now eliminated for arbitrary multiplicity. Hence exactly four star centres occur only on a parity plane. Order 19 is unique up to cube symmetry and has 66 edges; at order 20 the exact maximum is 73 with the unique six-coordinate-hub plus `K1,3` structure.
 
 For arbitrary parity-plane multiplicities, the star graph is a star forest, parity substitution gives `e(P0)+e(P1)+e(P0,P1)<=rq`, and the complete-parity and parity-star-anticomplete subbranches satisfy `m<=M(n)` at every order. An actual `n=26,m=104` parity-star graph is preserved as a mandatory positive control.
 
-The live density frontier is `PARITY_STAR_MATCHING_ONE_TARGET.md`. The sharp bound `e(R∪T∪S)<=rq+s` reduces to the assertion that each high-bridge star's valid missing-pair certificate graph has at most one tree component. It is enough to prove the stronger compact lemma that this graph has matching number at most one. Exact SAT rejects the matching-two core while independently scaling star, coordinate and parity multiplicities through eight, but no arbitrary-multiplicity proof is claimed.
+The former matching-one and one-tree-component targets are false, as is universal exact cancellation `e(R∪T∪S)<=rq+s`; actual D2C controls witness every failure. The repaired proof allows excess `epsilon` and derives
+
+    epsilon <= floor(s(r+q-2)/2)   for q>=1,
+
+with `epsilon=0` when `q=0`. The budget `D(u,s)` exceeds this cap by at least 11, proving `m<=M(n)` for every exactly-four-centre graph in the stated scope. `FOUR_CENTRE_COMPLETE_DENSITY_CLOSURE.md` gives the proof and `FOUR_CENTRE_COMPLETE_CLOSURE_HOSTILE_AUDIT.md` independently replays its load-bearing raw inputs. Five through eight centres are now the Q3 star-support frontier.

@@ -11,13 +11,13 @@ WORK MODE: `MATH`
 
 INSPECTED PREDECESSOR: `0dc97e3c4447c7474fa56042fe8b66ada75d69d3`.
 
-LAST VERIFIED RESULT: The entire exactly-four-star-centre Q3 antipodal-transversal branch is density-closed: every such D2C graph satisfies m<=M(n). The key replacement for false exact cancellation is epsilon<=max(0,floor(s(r+q-2)/2)); the budget D exceeds this cap by at least 11 when r+q>=2. The actual epsilon=1 RTS control is retained as a hostile test. Five through eight centres and nontransversal codes remain open.
+LAST VERIFIED RESULT: The entire exactly-four-star-centre Q3 antipodal-transversal branch is density-closed and has passed a separate hostile replay of both load-bearing raw inputs. For q>=1, epsilon<=floor(s(r+q-2)/2) and D exceeds this cap by at least 11; q=0 has epsilon=0. Actual RTS controls retain the false exact-cancellation case. Five through eight centres and nontransversal codes remain open.
 
 UNPRESERVED WORK: None after this invalidation/repair checkpoint.
 
 DEFERRED ADMIN: Broad historical cleanup; it does not block the raw matching-one attack.
 
-NEXT ACTION: Independently hostile-audit the two load-bearing raw inputs (every star has a P0 nonneighbour; L+k<=s), synchronize the theorem/review index, then move the Q3 frontier to five through eight star centres. Do not promote beyond Q3 antipodal-transversal scope.
+NEXT ACTION: Move the Q3 structural frontier to five through eight star centres. Begin with a bounded support-orbit and density-risk triage using the raw type relation and actual D2C controls; do not promote beyond antipodal-transversal scope.
 <!-- CURRENT-STATUS:END -->
 
 ## Reviewable current package

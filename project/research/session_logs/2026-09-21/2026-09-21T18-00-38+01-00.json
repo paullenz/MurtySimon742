@@ -76,9 +76,21 @@
       "completed_at": "2026-09-21T18:31:54+01:00",
       "result": "Compared the symmetric excess cap with D(u,s) and closed the entire exactly-four-centre Q3 antipodal-transversal branch: every such D2C graph satisfies m<=M(n), with at least eleven units of budget slack when r+q>=2.",
       "artifact": "project/research/post_ms/2026-09-21-q3-star-support-v1/FOUR_CENTRE_COMPLETE_DENSITY_CLOSURE.md"
+    },
+    {
+      "id": 10,
+      "completed_at": "2026-09-21T18:34:39+01:00",
+      "result": "Hostile-audited the load-bearing injections and found a q=0 sign boundary in the written k(q-1)<=s(q-1) step. Split q=0 separately (where U=e(R,S)=0 and epsilon=0); the full closure survives unchanged for q>=1.",
+      "artifact": "project/research/post_ms/2026-09-21-q3-star-support-v1/FOUR_CENTRE_COMPLETE_DENSITY_CLOSURE.md"
+    },
+    {
+      "id": 11,
+      "completed_at": "2026-09-21T18:36:42+01:00",
+      "result": "Independently rederived the two load-bearing raw inputs from the exhaustive spoke calculus and physical star tokens, replayed the algebra and hostile controls, and found no further defect. The four-centre closure is internally verified at stated scope; external review remains open.",
+      "artifact": "project/research/post_ms/2026-09-21-q3-star-support-v1/FOUR_CENTRE_COMPLETE_CLOSURE_HOSTILE_AUDIT.md"
     }
   ],
-  "number_of_substantive_units": 9,
+  "number_of_substantive_units": 11,
   "early_stop_check_time": null,
   "early_stop_check_result": null,
   "tool_infrastructure_failures": [
@@ -89,7 +101,7 @@
     }
   ],
   "commit_shas_produced": [],
-  "live_unfinished_line": "The exactly-four-centre branch is density-closed. Independently hostile-audit the centre-spoke nonneighbour and star-token injections, update the review index, then move the Q3 frontier to five through eight star centres.",
+  "live_unfinished_line": "Four-centre closure has passed an independent hostile replay and public status is synchronized. Move the Q3 structural frontier to five through eight star centres, starting with a bounded support-orbit and density-risk triage.",
   "stop_reason": "IN_PROGRESS",
   "target_status": "IN_PROGRESS",
   "audit_reconciliation": "The latest audit prioritizes raw graph-level criticality and realizability before further conditional scalar stacking. This slot therefore continues the actual Q3 parity-plane interface through the RTS bow-tie and its raw certificates; it does not use the conditional source-tuple capacity premises, does not revive the invalidated matching-one route, and retains X3 as a mandatory negative control.",
