@@ -7,19 +7,19 @@
 `X_3` (12 vertices, 32 edges, versus `M(12)=31`) remains the mandatory negative control. The false all-order 2019 Dailly–Foucaud–Hansberg Conjecture 3 is not the target. First-proof priority on Erdős #742 is not the optimization target.
 
 <!-- CURRENT-STATUS:START -->
-CHECKPOINT CLASS: `INTERNAL_Q3_REALIZABLE_PARITY_PLANE_STAR_FAMILY`
+CHECKPOINT CLASS: `INTERNAL_Q3_PARITY_PLANE_SHARP_ORDER_19`
 
 WORK MODE: `MATH`
 
-INSPECTED PREDECESSOR: `06f330a05402360584b091f1b8aaebd87973c585`; minimal affine-plane necessity and raw code support replay.
+INSPECTED PREDECESSOR: `aaafb32b9b36cca1dcd88b84ddb2811275522a29`; six-coordinate realizable star family and raw star fan.
 
-LAST VERIFIED RESULT: explicit infinite actual-D2C family realizes exactly four even-parity star centres, so the support lower bound is sharp. Dense specialization for every n>=20 has m=M(n)-(5n-82). Hand proof covers every pair/edge type; 22 direct graph controls and one invalid-forest control pass. No optimality/eventual closure claimed.
+LAST VERIFIED RESULT: missing-coordinate matching lemma gives sharp n>=19 within the parity-plane star-support class. A 19-vertex 66-edge fixture attains it; an infinite quadratic-density extension has exact gap floor((9n-139)/2). Thirty direct graph checks and 66 explicit edge-deletion certificates pass; no all-support minimum or global density optimum claimed.
 
 UNPRESERVED WORK: None. Mathematical status unchanged at entry; hourly continuity correction and 14:00 slot ledger are preserved with this handoff.
 
 DEFERRED ADMIN: README top-level status still needs a compact pointer to the completed Q3 odd-halfcube classification, star certificate table and new minimal two-star-class exact-M closure. Defer the larger README rewrite to the next safe preservation window rather than risk overlap.
 
-NEXT ACTION: independently audit the new family and determine which parts of the parity-plane graph structure are forced versus construction choices; keep the other two affine-plane orbits open.
+NEXT ACTION: hostile-audit the missing-coordinate matching argument and the compact structural package; investigate constraints on the other two affine-plane support orbits without discarding the new actual fixtures.
 <!-- CURRENT-STATUS:END -->
 
 ## Current Q3 graph-level results
@@ -128,3 +128,7 @@ Unit 5 replay completed 2026-09-21T14:20:29+01:00. Results: `project/research/po
 ## Actual four-centre star family
 
 `project/research/post_ms/2026-09-21-q3-star-support-v1/PARITY_PLANE_STAR_FOREST_FAMILY.md` constructs star-forest attachments to an even-parity hub and complete parity bipartite block. This supplies an infinite actual graph control and shows four centres are attainable. Smallest specialization n=20,m=73; balanced dense specialization has gap 5n-82. Unit 7 completed 2026-09-21T14:27:55+01:00.
+
+## Sharp parity-plane minimum and improved density family
+
+`project/research/post_ms/2026-09-21-q3-star-support-v1/PARITY_PLANE_MINIMUM_ORDER_AND_IMPROVED_FAMILY.md` proves n>=19 within this support class and attains it. The earlier n=20 family remains valid but is not minimum-order. A failed all-six-coordinate inference is explicitly preserved. Unit 8 completed 2026-09-21T14:32:06+01:00.
