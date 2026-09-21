@@ -7,19 +7,19 @@
 `X_3` (12 vertices, 32 edges, versus `M(12)=31`) remains the mandatory negative control. The false all-order 2019 Dailly–Foucaud–Hansberg Conjecture 3 is not the target. First-proof priority on Erdős #742 is not the optimization target.
 
 <!-- CURRENT-STATUS:START -->
-CHECKPOINT CLASS: `IN_PROGRESS_2026_09_21_1400_CONTINUITY_REPAIR_AND_Q3_EXTENSION`
+CHECKPOINT CLASS: `WIP_INTERNAL_Q3_ANTIPODAL_STAR_SUPPORT_NONEXISTENCE`
 
 WORK MODE: `MATH`
 
-INSPECTED PREDECESSOR: main `bcac363d4a91a9ecc23eeff6a64985b5e0bc6942`; latest daily audit, README, exact Q3 input notes and the three 09:00-slot logs.
+INSPECTED PREDECESSOR: `f7564e2d113545005c863d11078b56ae168e6388`; raw Q3 certificate table, star fan and two-centre face notes; latest daily audit.
 
-LAST VERIFIED RESULT: inside the raw Q3 antipodal-transversal branch, the minimal face with exactly two opposite star-centre classes plus exactly one vertex in each of the six coordinate-halfcube codes satisfies `e(G)<=M(n)`. The closure survived independent same-session hostile replay by fresh 16-code enumeration, domination/disjointness checks, physical injection replay and floor arithmetic. This is graph-level only within its explicit code-population scope and uses no conditional rigid-cut/Hall machinery.
+LAST VERIFIED RESULT: a new internally derived raw-criticality proof excludes every nonempty star support contained in one antipodal centre pair, regardless of coordinate/parity multiplicities. Needs independent replay; no general-Q3/eventual closure claimed.
 
 UNPRESERVED WORK: None. Mathematical status unchanged at entry; hourly continuity correction and 14:00 slot ledger are preserved with this handoff.
 
 DEFERRED ADMIN: README top-level status still needs a compact pointer to the completed Q3 odd-halfcube classification, star certificate table and new minimal two-star-class exact-M closure. Defer the larger README rewrite to the next safe preservation window rather than risk overlap.
 
-NEXT ACTION: extend the minimal two-star-class closure to arbitrary coordinate multiplicity using `e(S)<=pq`, `missing(S,T)>=3s`, `E_noncomp(C)<=2M_comp(C)` and the fixed-direction coordinate product bounds. The uncontrolled terms are cross-direction coordinate density plus parity/star-parity interactions. In parallel, treat a third star-centre class as the other principal escape. Do not return to conditional 0.53-wedge sharpening unless the graph-level Q3 route stalls.
+NEXT ACTION: independently reconstruct the finite neighbour restrictions from raw cube bitsets, then attack two nonopposite star centres.
 <!-- CURRENT-STATUS:END -->
 
 ## Current Q3 graph-level results
@@ -104,3 +104,7 @@ Full record: `project/research/session_logs/2026-09-21/2026-09-21T13-30-18+01-00
 The scheduled trigger is the accounting unit; re-entry never resets the start, target or cutoff. No eight-minute early-stop permission exists. All prior late-segment target exemptions must be reconciled at slot level. Preserve missing historical timing as UNVERIFIED. Full correction and the 09:00 regression: `project/research/session_logs/2026-09-21/HOURLY_CONTINUITY_CORRECTION.md`.
 
 Current slot: actual start 14:01:25 BST, cutoff 14:55:38 BST, research stop/preservation completion pending, units 0, status IN_PROGRESS. Ledger: `project/research/session_logs/2026-09-21/2026-09-21T14-01-25+01-00.json`.
+
+## New star-support obstruction
+
+`project/research/post_ms/2026-09-21-q3-star-support-v1/TWO_ANTIPODAL_CENTRES_IMPOSSIBLE.md` proves a stronger candidate than the prior minimal-face bound: arbitrary coordinate/parity multiplicities do not rescue one antipodal pair of star centres. All coordinate vertices become A-isolated; both opposite star types force incompatible opposite coordinate classes. Older narrower statements remain preserved. Unit 1 completed 2026-09-21T14:08:16+01:00.
