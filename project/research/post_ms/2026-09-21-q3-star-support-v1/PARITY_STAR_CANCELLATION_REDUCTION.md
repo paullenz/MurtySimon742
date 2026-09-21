@@ -32,3 +32,15 @@ For all seven exact MaxSAT optima in `PARITY_STAR_MAXSAT_GRID.json`, the checker
 - the `(r,q)=(3,3)` case: `h=0`, `L=8`, `s-L=0`.
 
 Thus every optimum satisfies the cancellation criterion exactly and hence explains `e(A)=rq+14` after the six coordinate edges. In particular, the repeated `h=1` cases refute the simpler proposed proof that hard obligations always have a saturating matching. The next theorem target is now precise: prove `h+L<=s` from raw star-centre criticality, or find an actual graph violating it.
+
+## Exact local form of the missing lemma
+
+For a high-bridge star `x`, form the bipartite certificate graph `H_x`: its vertices are the `R` and `T` neighbours of `x`, and `rt` is an edge exactly when `rt` is missing and `x` is its unique common A-neighbour. Raw criticality says `H_x` has no isolated vertices. Distinct stars have disjoint target-pair sets because a target pair has a unique common star.
+
+The hard-obligation matching at `x` is the vertex--edge incidence matching of `H_x`. In any graph without isolated vertices, its deficiency is exactly the number of tree components: each tree has one fewer edge than vertices, while every component containing a cycle admits a vertex-to-distinct-edge assignment. Therefore
+
+    h = sum_x tau(H_x),
+
+where the sum is over high-bridge stars and `tau` counts tree components. Since every low-bridge bucket edge consumes a low-bridge star token, every high-bridge star is among the `s-L` unused tokens. It follows that `h+L<=s`, and hence `e(R union T union S)<=rq+s`, whenever every `H_x` has at most one tree component.
+
+This isolates the genuine local obstruction: a counterexample must contain a high-bridge star whose valid missing-pair certificate graph has at least two tree components. The checker finds no such star across the seven exact optima and all 56 saved satisfiable `2<=r,q<=8` parameter-grid models. This 63-model replay is evidence only; excluding the disconnected-tree pattern from raw criticality remains the proof task.

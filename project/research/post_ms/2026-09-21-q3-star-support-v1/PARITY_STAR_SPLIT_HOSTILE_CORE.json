@@ -1,0 +1,109 @@
+{
+  "cases": [
+    {
+      "scope": "fixed six coordinates, two copies each even star, r=q=2",
+      "forced_star": "S0[0]",
+      "forced_present": [
+        [
+          6,
+          14
+        ],
+        [
+          6,
+          15
+        ],
+        [
+          6,
+          16
+        ],
+        [
+          6,
+          17
+        ],
+        [
+          14,
+          17
+        ],
+        [
+          15,
+          16
+        ]
+      ],
+      "forced_absent": [
+        [
+          14,
+          16
+        ],
+        [
+          15,
+          17
+        ]
+      ],
+      "sat": false,
+      "seconds": 0.017269134521484375,
+      "meaning": "smallest split-pair pattern with cross parity edges forced present"
+    },
+    {
+      "scope": "fixed six coordinates, two copies each even star, r=q=2",
+      "forced_stars": [
+        "S0[0]",
+        "S3[0]"
+      ],
+      "forced_present": [
+        [
+          6,
+          14
+        ],
+        [
+          6,
+          15
+        ],
+        [
+          6,
+          16
+        ],
+        [
+          6,
+          17
+        ],
+        [
+          8,
+          14
+        ],
+        [
+          8,
+          15
+        ],
+        [
+          8,
+          16
+        ],
+        [
+          8,
+          17
+        ]
+      ],
+      "forced_absent": [
+        [
+          14,
+          16
+        ],
+        [
+          14,
+          17
+        ],
+        [
+          15,
+          16
+        ],
+        [
+          15,
+          17
+        ]
+      ],
+      "sat": false,
+      "seconds": 0.016192197799682617,
+      "meaning": "cross missing pairs bridged by a second star"
+    }
+  ]
+}

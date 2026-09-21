@@ -1,0 +1,642 @@
+{
+  "scope": "saved exact optima plus saved satisfiable parameter models",
+  "sets": [
+    {
+      "source": "PARITY_STAR_MAXSAT_GRID.json",
+      "models": 7,
+      "violations": [],
+      "rows": [
+        {
+          "r": 2,
+          "q": 1,
+          "high_bridge_stars": [
+            {
+              "star_index": 10,
+              "bridge_degree": 4,
+              "certificate_components": 1,
+              "tree_components": 1
+            }
+          ],
+          "local_condition": true
+        },
+        {
+          "r": 2,
+          "q": 2,
+          "high_bridge_stars": [
+            {
+              "star_index": 11,
+              "bridge_degree": 4,
+              "certificate_components": 1,
+              "tree_components": 1
+            }
+          ],
+          "local_condition": true
+        },
+        {
+          "r": 2,
+          "q": 3,
+          "high_bridge_stars": [
+            {
+              "star_index": 13,
+              "bridge_degree": 4,
+              "certificate_components": 1,
+              "tree_components": 1
+            }
+          ],
+          "local_condition": true
+        },
+        {
+          "r": 2,
+          "q": 4,
+          "high_bridge_stars": [
+            {
+              "star_index": 12,
+              "bridge_degree": 4,
+              "certificate_components": 1,
+              "tree_components": 1
+            }
+          ],
+          "local_condition": true
+        },
+        {
+          "r": 3,
+          "q": 1,
+          "high_bridge_stars": [
+            {
+              "star_index": 12,
+              "bridge_degree": 4,
+              "certificate_components": 1,
+              "tree_components": 1
+            }
+          ],
+          "local_condition": true
+        },
+        {
+          "r": 3,
+          "q": 2,
+          "high_bridge_stars": [
+            {
+              "star_index": 8,
+              "bridge_degree": 4,
+              "certificate_components": 1,
+              "tree_components": 1
+            }
+          ],
+          "local_condition": true
+        },
+        {
+          "r": 3,
+          "q": 3,
+          "high_bridge_stars": [],
+          "local_condition": true
+        }
+      ]
+    },
+    {
+      "source": "PARITY_STAR_PARAMETER_GRID.json",
+      "models": 56,
+      "violations": [],
+      "rows": [
+        {
+          "r": 2,
+          "q": 1,
+          "high_bridge_stars": [
+            {
+              "star_index": 13,
+              "bridge_degree": 4,
+              "certificate_components": 1,
+              "tree_components": 1
+            }
+          ],
+          "local_condition": true
+        },
+        {
+          "r": 2,
+          "q": 2,
+          "high_bridge_stars": [
+            {
+              "star_index": 7,
+              "bridge_degree": 4,
+              "certificate_components": 1,
+              "tree_components": 1
+            }
+          ],
+          "local_condition": true
+        },
+        {
+          "r": 2,
+          "q": 3,
+          "high_bridge_stars": [
+            {
+              "star_index": 13,
+              "bridge_degree": 4,
+              "certificate_components": 1,
+              "tree_components": 1
+            }
+          ],
+          "local_condition": true
+        },
+        {
+          "r": 2,
+          "q": 4,
+          "high_bridge_stars": [
+            {
+              "star_index": 11,
+              "bridge_degree": 4,
+              "certificate_components": 1,
+              "tree_components": 1
+            }
+          ],
+          "local_condition": true
+        },
+        {
+          "r": 2,
+          "q": 5,
+          "high_bridge_stars": [
+            {
+              "star_index": 6,
+              "bridge_degree": 4,
+              "certificate_components": 1,
+              "tree_components": 1
+            }
+          ],
+          "local_condition": true
+        },
+        {
+          "r": 2,
+          "q": 6,
+          "high_bridge_stars": [
+            {
+              "star_index": 6,
+              "bridge_degree": 4,
+              "certificate_components": 1,
+              "tree_components": 1
+            }
+          ],
+          "local_condition": true
+        },
+        {
+          "r": 2,
+          "q": 7,
+          "high_bridge_stars": [
+            {
+              "star_index": 8,
+              "bridge_degree": 4,
+              "certificate_components": 1,
+              "tree_components": 1
+            }
+          ],
+          "local_condition": true
+        },
+        {
+          "r": 2,
+          "q": 8,
+          "high_bridge_stars": [
+            {
+              "star_index": 6,
+              "bridge_degree": 4,
+              "certificate_components": 1,
+              "tree_components": 1
+            }
+          ],
+          "local_condition": true
+        },
+        {
+          "r": 3,
+          "q": 1,
+          "high_bridge_stars": [
+            {
+              "star_index": 12,
+              "bridge_degree": 4,
+              "certificate_components": 1,
+              "tree_components": 1
+            }
+          ],
+          "local_condition": true
+        },
+        {
+          "r": 3,
+          "q": 2,
+          "high_bridge_stars": [
+            {
+              "star_index": 12,
+              "bridge_degree": 4,
+              "certificate_components": 1,
+              "tree_components": 1
+            }
+          ],
+          "local_condition": true
+        },
+        {
+          "r": 3,
+          "q": 3,
+          "high_bridge_stars": [
+            {
+              "star_index": 8,
+              "bridge_degree": 3,
+              "certificate_components": 0,
+              "tree_components": 0
+            }
+          ],
+          "local_condition": true
+        },
+        {
+          "r": 3,
+          "q": 4,
+          "high_bridge_stars": [
+            {
+              "star_index": 7,
+              "bridge_degree": 4,
+              "certificate_components": 1,
+              "tree_components": 1
+            }
+          ],
+          "local_condition": true
+        },
+        {
+          "r": 3,
+          "q": 5,
+          "high_bridge_stars": [
+            {
+              "star_index": 8,
+              "bridge_degree": 4,
+              "certificate_components": 1,
+              "tree_components": 1
+            }
+          ],
+          "local_condition": true
+        },
+        {
+          "r": 3,
+          "q": 6,
+          "high_bridge_stars": [
+            {
+              "star_index": 6,
+              "bridge_degree": 4,
+              "certificate_components": 1,
+              "tree_components": 1
+            }
+          ],
+          "local_condition": true
+        },
+        {
+          "r": 3,
+          "q": 7,
+          "high_bridge_stars": [],
+          "local_condition": true
+        },
+        {
+          "r": 3,
+          "q": 8,
+          "high_bridge_stars": [
+            {
+              "star_index": 8,
+              "bridge_degree": 4,
+              "certificate_components": 1,
+              "tree_components": 1
+            }
+          ],
+          "local_condition": true
+        },
+        {
+          "r": 4,
+          "q": 1,
+          "high_bridge_stars": [],
+          "local_condition": true
+        },
+        {
+          "r": 4,
+          "q": 2,
+          "high_bridge_stars": [
+            {
+              "star_index": 6,
+              "bridge_degree": 4,
+              "certificate_components": 1,
+              "tree_components": 1
+            }
+          ],
+          "local_condition": true
+        },
+        {
+          "r": 4,
+          "q": 3,
+          "high_bridge_stars": [
+            {
+              "star_index": 7,
+              "bridge_degree": 4,
+              "certificate_components": 1,
+              "tree_components": 1
+            }
+          ],
+          "local_condition": true
+        },
+        {
+          "r": 4,
+          "q": 4,
+          "high_bridge_stars": [],
+          "local_condition": true
+        },
+        {
+          "r": 4,
+          "q": 5,
+          "high_bridge_stars": [
+            {
+              "star_index": 6,
+              "bridge_degree": 4,
+              "certificate_components": 1,
+              "tree_components": 1
+            }
+          ],
+          "local_condition": true
+        },
+        {
+          "r": 4,
+          "q": 6,
+          "high_bridge_stars": [],
+          "local_condition": true
+        },
+        {
+          "r": 4,
+          "q": 7,
+          "high_bridge_stars": [],
+          "local_condition": true
+        },
+        {
+          "r": 4,
+          "q": 8,
+          "high_bridge_stars": [],
+          "local_condition": true
+        },
+        {
+          "r": 5,
+          "q": 1,
+          "high_bridge_stars": [],
+          "local_condition": true
+        },
+        {
+          "r": 5,
+          "q": 2,
+          "high_bridge_stars": [
+            {
+              "star_index": 9,
+              "bridge_degree": 3,
+              "certificate_components": 0,
+              "tree_components": 0
+            }
+          ],
+          "local_condition": true
+        },
+        {
+          "r": 5,
+          "q": 3,
+          "high_bridge_stars": [],
+          "local_condition": true
+        },
+        {
+          "r": 5,
+          "q": 4,
+          "high_bridge_stars": [
+            {
+              "star_index": 10,
+              "bridge_degree": 4,
+              "certificate_components": 1,
+              "tree_components": 1
+            }
+          ],
+          "local_condition": true
+        },
+        {
+          "r": 5,
+          "q": 5,
+          "high_bridge_stars": [],
+          "local_condition": true
+        },
+        {
+          "r": 5,
+          "q": 6,
+          "high_bridge_stars": [],
+          "local_condition": true
+        },
+        {
+          "r": 5,
+          "q": 7,
+          "high_bridge_stars": [],
+          "local_condition": true
+        },
+        {
+          "r": 5,
+          "q": 8,
+          "high_bridge_stars": [
+            {
+              "star_index": 12,
+              "bridge_degree": 4,
+              "certificate_components": 1,
+              "tree_components": 1
+            }
+          ],
+          "local_condition": true
+        },
+        {
+          "r": 6,
+          "q": 1,
+          "high_bridge_stars": [
+            {
+              "star_index": 10,
+              "bridge_degree": 3,
+              "certificate_components": 0,
+              "tree_components": 0
+            }
+          ],
+          "local_condition": true
+        },
+        {
+          "r": 6,
+          "q": 2,
+          "high_bridge_stars": [],
+          "local_condition": true
+        },
+        {
+          "r": 6,
+          "q": 3,
+          "high_bridge_stars": [
+            {
+              "star_index": 6,
+              "bridge_degree": 4,
+              "certificate_components": 1,
+              "tree_components": 1
+            }
+          ],
+          "local_condition": true
+        },
+        {
+          "r": 6,
+          "q": 4,
+          "high_bridge_stars": [],
+          "local_condition": true
+        },
+        {
+          "r": 6,
+          "q": 5,
+          "high_bridge_stars": [
+            {
+              "star_index": 8,
+              "bridge_degree": 4,
+              "certificate_components": 1,
+              "tree_components": 1
+            }
+          ],
+          "local_condition": true
+        },
+        {
+          "r": 6,
+          "q": 6,
+          "high_bridge_stars": [],
+          "local_condition": true
+        },
+        {
+          "r": 6,
+          "q": 7,
+          "high_bridge_stars": [],
+          "local_condition": true
+        },
+        {
+          "r": 6,
+          "q": 8,
+          "high_bridge_stars": [],
+          "local_condition": true
+        },
+        {
+          "r": 7,
+          "q": 1,
+          "high_bridge_stars": [
+            {
+              "star_index": 12,
+              "bridge_degree": 3,
+              "certificate_components": 0,
+              "tree_components": 0
+            }
+          ],
+          "local_condition": true
+        },
+        {
+          "r": 7,
+          "q": 2,
+          "high_bridge_stars": [],
+          "local_condition": true
+        },
+        {
+          "r": 7,
+          "q": 3,
+          "high_bridge_stars": [],
+          "local_condition": true
+        },
+        {
+          "r": 7,
+          "q": 4,
+          "high_bridge_stars": [
+            {
+              "star_index": 12,
+              "bridge_degree": 4,
+              "certificate_components": 1,
+              "tree_components": 1
+            }
+          ],
+          "local_condition": true
+        },
+        {
+          "r": 7,
+          "q": 5,
+          "high_bridge_stars": [],
+          "local_condition": true
+        },
+        {
+          "r": 7,
+          "q": 6,
+          "high_bridge_stars": [],
+          "local_condition": true
+        },
+        {
+          "r": 7,
+          "q": 7,
+          "high_bridge_stars": [],
+          "local_condition": true
+        },
+        {
+          "r": 7,
+          "q": 8,
+          "high_bridge_stars": [],
+          "local_condition": true
+        },
+        {
+          "r": 8,
+          "q": 1,
+          "high_bridge_stars": [],
+          "local_condition": true
+        },
+        {
+          "r": 8,
+          "q": 2,
+          "high_bridge_stars": [],
+          "local_condition": true
+        },
+        {
+          "r": 8,
+          "q": 3,
+          "high_bridge_stars": [
+            {
+              "star_index": 10,
+              "bridge_degree": 4,
+              "certificate_components": 1,
+              "tree_components": 1
+            }
+          ],
+          "local_condition": true
+        },
+        {
+          "r": 8,
+          "q": 4,
+          "high_bridge_stars": [
+            {
+              "star_index": 8,
+              "bridge_degree": 3,
+              "certificate_components": 0,
+              "tree_components": 0
+            }
+          ],
+          "local_condition": true
+        },
+        {
+          "r": 8,
+          "q": 5,
+          "high_bridge_stars": [],
+          "local_condition": true
+        },
+        {
+          "r": 8,
+          "q": 6,
+          "high_bridge_stars": [
+            {
+              "star_index": 7,
+              "bridge_degree": 4,
+              "certificate_components": 1,
+              "tree_components": 1
+            }
+          ],
+          "local_condition": true
+        },
+        {
+          "r": 8,
+          "q": 7,
+          "high_bridge_stars": [],
+          "local_condition": true
+        },
+        {
+          "r": 8,
+          "q": 8,
+          "high_bridge_stars": [],
+          "local_condition": true
+        }
+      ]
+    }
+  ]
+}

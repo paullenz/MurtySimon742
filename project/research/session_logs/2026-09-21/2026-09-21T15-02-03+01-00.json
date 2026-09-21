@@ -124,16 +124,28 @@
       "completed_at": "2026-09-21T15:46:08+01:00",
       "result": "Reduced the sharp parity-star bound to the exact deficiency inequality h+L<=s in an obligation-to-missing-pair matching. All seven MaxSAT optima satisfy it sharply; six also refute the tempting stronger claim that every hard obligation can be matched.",
       "artifact": "project/research/post_ms/2026-09-21-q3-star-support-v1/PARITY_STAR_CANCELLATION_REDUCTION.md"
+    },
+    {
+      "id": 18,
+      "completed_at": "2026-09-21T15:47:42+01:00",
+      "result": "Identified the exact local obstruction: matching deficiency h equals the sum of tree-component counts in high-bridge star certificate graphs H_x. Thus the sharp block bound follows if each H_x has at most one tree component. All 63 saved models pass this local condition.",
+      "artifact": "project/research/post_ms/2026-09-21-q3-star-support-v1/PARITY_STAR_CANCELLATION_REDUCTION.md"
+    },
+    {
+      "id": 19,
+      "completed_at": "2026-09-21T15:48:40+01:00",
+      "result": "Exact full-D2C SAT rejects both smallest closures of a two-tree-component hostile core at r=q=2: present cross pairs and cross pairs jointly bridged by a second star. Larger extra-common-neighbour patterns remain open.",
+      "artifact": "project/research/post_ms/2026-09-21-q3-star-support-v1/PARITY_STAR_SPLIT_HOSTILE_CORE.md"
     }
   ],
-  "number_of_substantive_units": 17,
+  "number_of_substantive_units": 19,
   "early_stop_check_time": null,
   "early_stop_check_result": null,
   "tool_infrastructure_failures": [
     "python-sat was absent; installed into the disposable workspace dependency directory and validated against three actual D2C controls."
   ],
   "commit_shas_produced": [],
-  "live_unfinished_line": "Prove h+L<=s from raw four-centre star criticality, or search an actual D2C counterexample outside the fixed eight-star grid.",
+  "live_unfinished_line": "Classify possible extra common neighbours of cross pairs between distinct tree components of H_x; exclude them or construct a larger actual counterexample.",
   "stop_reason": "IN_PROGRESS",
   "target_status": "IN_PROGRESS",
   "audit_reconciliation": "Latest daily audit prioritizes raw criticality and actual graph realizability. This run follows that priority by hostile-reviewing and attacking the reduced opposite-edge-plane actual core; conditional Hall/source-tuple results are not advanced.",

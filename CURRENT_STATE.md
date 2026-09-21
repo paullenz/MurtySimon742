@@ -5,19 +5,19 @@ Canonical repository: `paullenz/MurtySimon742`. Date: 21 September 2026.
 Active target: the eventual / sufficiently-large second-extremal problem around M(n)=floor((n-1)^2/4)+1. The general theorem and a uniform threshold remain open. X3 (12 vertices,32 edges,M(12)=31) remains mandatory. Do not revive the false all-order conjecture or the closed mixed {4,5} ladder.
 
 <!-- CURRENT-STATUS:START -->
-CHECKPOINT CLASS: `PARITY_STAR_CANCELLATION_REDUCED_TO_H_PLUS_L`
+CHECKPOINT CLASS: `PARITY_STAR_LOCAL_TREE_COMPONENT_OBSTRUCTION`
 
 WORK MODE: `MATH`
 
-INSPECTED PREDECESSOR: `b6a05f0edc11484f8997db019a328f33e3d74ca6`.
+INSPECTED PREDECESSOR: `590edead22f189b1f45b31f01adc83475df2ed08`.
 
-LAST VERIFIED RESULT: The desired sharp parity-star block bound e(R∪T∪S)<=rq+s follows exactly from h+L<=s, where h is the matching deficiency of hard parity-star obligations against unoccupied missing parity pairs and L is the bridge-leaf/star-forest bucket. All seven fixed-multiset exact optima satisfy the condition sharply. Six have h=1, so the stronger saturating-matching shortcut is false.
+LAST VERIFIED RESULT: For every high-bridge star x, the hard-obligation matching deficiency is exactly the number of tree components of its valid missing-pair certificate graph H_x. Therefore the sharp parity-star bound follows if each H_x has at most one tree component. All 63 saved actual models satisfy this. Full-D2C SAT rejects the two smallest split-component closures, but the general exclusion is open.
 
 UNPRESERVED WORK: None after this checkpoint.
 
 DEFERRED ADMIN: README and theorem-index synthesis belongs in final preservation.
 
-NEXT ACTION: Prove h+L<=s from raw four-centre star criticality, or search a graph-level counterexample beyond the eight-star slice. Preserve the n=26 fixture and seven optima as positive/equality controls.
+NEXT ACTION: Classify the extra common neighbours of cross pairs between different tree components of H_x. Present cross pairs and one second star bridging all cross pairs are already exact UNSAT negative controls.
 <!-- CURRENT-STATUS:END -->
 
 ## Reviewable current package
