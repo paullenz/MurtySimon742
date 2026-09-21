@@ -5,19 +5,19 @@ Canonical repository: `paullenz/MurtySimon742`. Date: 21 September 2026.
 Active target: the eventual / sufficiently-large second-extremal problem around M(n)=floor((n-1)^2/4)+1. The general theorem and a uniform threshold remain open. X3 (12 vertices,32 edges,M(12)=31) remains mandatory. Do not revive the false all-order conjecture or the closed mixed {4,5} ladder.
 
 <!-- CURRENT-STATUS:START -->
-CHECKPOINT CLASS: `VERIFIED_ACTUAL_PARITY_STAR_FIXTURE`
+CHECKPOINT CLASS: `INTERNAL_PARITY_STAR_FAN_TAX`
 
 WORK MODE: `MATH`
 
-INSPECTED PREDECESSOR: `cb41a9d27ab44c30dbbfbcc193711f9e0ea14d3f`.
+INSPECTED PREDECESSOR: `bd62d1b8299f90a8864c8efa9b4aef56dd56f4c3`.
 
-LAST VERIFIED RESULT: Parity-star incidence is realizable: an actual n=26,m=104 D2C fixture with two copies of every star centre, r=2,q=1 passes direct graph deletion replay. Its deficit is 53. Any proposed obstruction must retain this mandatory positive control. A P1-star incidence forces that P1 vertex to meet all four star-centre classes.
+LAST VERIFIED RESULT: Every active P1 vertex has a four-centre star fan; with z active P1 vertices, 4z<=s+M-I. A P0-star edge forces r>=2 and a duplicate of that star centre. The actual n=26 fixture realizes the interface and remains far below M(n).
 
 UNPRESERVED WORK: None after this entry checkpoint.
 
 DEFERRED ADMIN: Broad historical README maintenance and CI polling; neither blocks the core attack.
 
-NEXT ACTION: Convert the forced P1 four-centre fan and same-centre replication into a density tax; retain the n=26 fixture as mandatory positive control.
+NEXT ACTION: Combine the fan/replication tax with the defect gate to obtain a quantitative gap for parity-star-active graphs; test exact fixture expansions.
 <!-- CURRENT-STATUS:END -->
 
 ## Reviewable current package

@@ -95,16 +95,22 @@
       "completed_at": "2026-09-21T15:30:32+01:00",
       "result": "Constructed and independently verified an actual n=26,m=104 parity-star D2C fixture. It realizes the missing-pair V interface, has deficit 53, and becomes a mandatory positive control. Bounded grid suggests two copies of each star centre are needed but no global minimum claimed.",
       "artifact": "project/research/post_ms/2026-09-21-q3-star-support-v1/PARITY_STAR_ACTUAL_FIXTURE.md"
+    },
+    {
+      "id": 14,
+      "completed_at": "2026-09-21T15:31:28+01:00",
+      "result": "Every P1 vertex incident to stars has neighbors in all four centre classes; with z active P1 vertices, 4z<=s+M-I. Any P0-star edge forces r>=2 and a second physical copy of its star centre.",
+      "artifact": "project/research/post_ms/2026-09-21-q3-star-support-v1/PARITY_STAR_FAN_TAX.md"
     }
   ],
-  "number_of_substantive_units": 13,
+  "number_of_substantive_units": 14,
   "early_stop_check_time": null,
   "early_stop_check_result": null,
   "tool_infrastructure_failures": [
     "python-sat was absent; installed into the disposable workspace dependency directory and validated against three actual D2C controls."
   ],
   "commit_shas_produced": [],
-  "live_unfinished_line": "Derive a density tax from the forced P1 four-centre star fan and same-centre replication; maintain n=26 fixture as mandatory positive control.",
+  "live_unfinished_line": "Use fan tax and P0/star replication to derive a quantitative gap for parity-star-active graphs; test exact fixture expansions.",
   "stop_reason": "IN_PROGRESS",
   "target_status": "IN_PROGRESS",
   "audit_reconciliation": "Latest daily audit prioritizes raw criticality and actual graph realizability. This run follows that priority by hostile-reviewing and attacking the reduced opposite-edge-plane actual core; conditional Hall/source-tuple results are not advanced.",
