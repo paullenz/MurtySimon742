@@ -53,6 +53,12 @@
       "completed_at": "2026-09-21T14:23:20+01:00",
       "result": "Structural clean-entry lemma excludes all 56 nonplane four-centre supports. Any four-centre star support must be one of 14 affine planes (three cube-isometry orbits).",
       "artifact": "project/research/post_ms/2026-09-21-q3-star-support-v1/FOUR_CENTRE_AFFINE_PLANE_NECESSITY.md"
+    },
+    {
+      "id": 7,
+      "completed_at": "2026-09-21T14:27:55+01:00",
+      "result": "Explicit star-forest/parity-plane construction gives an infinite actual D2C family; four-centre support bound is sharp. Dense specialization exists for every n>=20 and has exact M(n)-m=5n-82. All edge types hand-certified; 22 raw graph checks and a negative control pass.",
+      "artifact": "project/research/post_ms/2026-09-21-q3-star-support-v1/PARITY_PLANE_STAR_FOREST_FAMILY.md"
     }
   ],
   "early_stop_check_time": null,
@@ -66,7 +72,8 @@
     "03590dd66568c793605647febc749f6dd075385f",
     "8d642667d333c52e1b79be9e4755f032cf62f847",
     "3e701a929d468a7a116a3d6dc8270794c1730375",
-    "6ce5a2d0d95bba37651613bebc7688d303cc092c"
+    "6ce5a2d0d95bba37651613bebc7688d303cc092c",
+    "06f330a05402360584b091f1b8aaebd87973c585"
   ],
   "live_unfinished_line": "Audit-priority raw Q3 criticality: extend or invalidate the two-opposite-star coordinate-multiplicity branch.",
   "stop_reason": "IN_PROGRESS",
