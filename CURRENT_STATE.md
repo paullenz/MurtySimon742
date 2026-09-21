@@ -75,8 +75,8 @@ Full record: `project/research/session_logs/2026-09-21/2026-09-21T03-59-26+01-00
 - forward-research stop: **2026-09-21 03:59:26 BST**;
 - preservation start: **2026-09-21 03:59:58 BST**;
 - preservation complete: **2026-09-21 04:00:45 BST**;
-- final-report timestamp: **2026-09-21 04:01:27 BST**;
-- wall-clock session span: **2m01s**;
+- final-report timestamp: **2026-09-21 04:02:28 BST**;
+- wall-clock session span: **3m02s**;
 - forward-research span: **0m00s**;
 - preservation span: **0m47s**;
 - substantive units: **0**;
