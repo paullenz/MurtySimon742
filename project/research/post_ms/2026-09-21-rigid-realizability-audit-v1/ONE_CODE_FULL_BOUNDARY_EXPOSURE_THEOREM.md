@@ -37,15 +37,9 @@ Moreover every selected coordinate is nonuniversal because its own head `d xor e
 
 ## 3. Population consequence
 
-The global matched-leaf theorem gives
+The global matched-leaf theorem gives `|L(d,X)|<=2`.
 
-`|L(d,X)|<=2`.
-
-Let
-
-`rho=max_c |X_c|`
-
-be the largest X-code-class multiplicity.
+Let `rho=max_c |X_c|` be the largest X-code-class multiplicity.
 
 At a coordinate with no matched-forward support, at most rho Y-heads can reverse-certify because the forced reverse witnesses all lie in one X-code class and fixed-source injectivity makes distinct Y-heads require distinct physical witnesses.
 
@@ -77,9 +71,7 @@ The direct singleton-head audit gives more than the crude u-capacity. Fix a mini
 
 the number of U-vertices outside this mandatory complementary code class.
 
-A boundary U-forward witness has code `bar d xor e_i`, never `bar d`. Therefore **none of the k mandatory complementary witnesses can populate a boundary one-match class**.
-
-Consequently the number of coordinates with any U-forward support is at most e, not merely u.
+A boundary U-forward witness has code `bar d xor e_i`, never `bar d`. Therefore none of the k mandatory complementary witnesses can populate a boundary one-match class. Consequently the number of coordinates with any U-forward support is at most e, not merely u.
 
 ### Theorem 4.1 — escape-reservoir boundary bound
 
@@ -103,7 +95,23 @@ and if `C=empty`,
 
 > **`p<=e=u-k`.**                                        `(4.5)`
 
-This is often much stronger than the u-version because k can be a linear fraction of U.
+The preserved one-code occupancy theorem gives the independent exact bound
+
+> **`0<=e=u-k<=c`.**                                     `(4.6)`
+
+Therefore `(4.2)` has the coarser but parameter-only consequence
+
+> **`p<=c+2+floor(x/y)G(C0)`.**                          `(4.7)`
+
+If `y>rho`, then
+
+> **`p<=c+2`;**                                           `(4.8)`
+
+and if also `C=empty`,
+
+> **`p<=c`.**                                             `(4.9)`
+
+Thus whenever the rooted gap c is substantially smaller than p, literal realizability forces a large reverse X-code class (`rho>=y`) and a correspondingly heavy reverse-gamma channel. The old scalar theory could not see this because it treated the selected `U_bar d` population as if it remained available for arbitrary boundary routing.
 
 ## 5. Reverse-gamma alternative
 
@@ -145,7 +153,7 @@ Thus that scalar family remains only if X can supply linear reverse-gamma capaci
 
 `ceil((2t-2)/5)`,
 
-and therefore a corresponding collision bill. This does not by itself contradict the previously recorded scalar score ceiling, but it identifies a new **literal physical requirement** omitted from the old method diagnostic. Any future use of that family must carry this reverse-only load explicitly.
+and therefore a corresponding collision bill. This does not by itself contradict the previously recorded scalar score ceiling, but it identifies a new literal physical requirement omitted from the old method diagnostic. Any future use of that family must carry this reverse-only load explicitly.
 
 ## 8. Scope
 
