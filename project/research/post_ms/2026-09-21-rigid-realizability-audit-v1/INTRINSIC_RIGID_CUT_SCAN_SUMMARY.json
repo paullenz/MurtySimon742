@@ -4,7 +4,8 @@
   "scope": {
     "mandatory_negative_control": "X3, all roots",
     "atlas": "all unlabeled D2C graphs through order 7, maximum-degree roots",
-    "generated": "120 deterministic greedy actual-D2C graphs for each n=8..18, maximum-degree roots"
+    "generated": "120 deterministic greedy actual-D2C graphs for each n=8..18, maximum-degree roots",
+    "orientation_policy": "both orientations X|Y and Y|X of every nontrivial code-pair partition are tested"
   },
   "stats": {
     "roots_tested": 2078,
@@ -12,5 +13,6 @@
     "generated_actual_D2C_graphs": 1320
   },
   "intrinsically_orientable_rigid_complete_cut_hits": 0,
+  "self_audit": "The first implementation incorrectly quotiented complementary set partitions even though certificate orientation is asymmetric. This was caught immediately, removed, and the full corpus was rerun with both orientations. The zero-hit result survived unchanged. Commit 30867a2692979c693f819b789a5f42c760c7835e contains the corrected scanner.",
   "interpretation": "No tested actual-D2C root has a code-pair cut X|Y with |X|>=3, Y nonempty, complete X-Y adjacency, and a raw Y->X criticality witness in B for every crossing edge. This is stronger bounded negative evidence than the earlier fixed-certificate-policy regression, but is not a proof of universal non-realizability. X3 is explicitly included and has no hit."
 }
