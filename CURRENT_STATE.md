@@ -74,9 +74,10 @@ Full record: `project/research/session_logs/2026-09-21/2026-09-21T01-57-45+01-00
 - preservation cutoff: **2026-09-21 01:55:38 BST**;
 - forward-research stop: **2026-09-21 01:57:45 BST**;
 - preservation start: **2026-09-21 01:58:07 BST**;
-- preservation complete: **pending final telemetry update**;
-- wall-clock span to preservation complete: **pending final telemetry update**;
+- preservation complete: **2026-09-21 01:59:20 BST**;
+- wall-clock span to preservation complete: **1m35s**;
 - forward-research span: **0m00s**;
+- preservation span: **1m13s**;
 - substantive units: **0**;
 - >=50-minute target: **not applicable** because the invocation began after the mandatory cutoff and therefore had 0m00s of pre-cutoff research window available;
 - early-stop guard: **not applicable**; cutoff had already passed at invocation;
