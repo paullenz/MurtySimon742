@@ -1,0 +1,28 @@
+{
+  "scheduled_trigger_time": "2026-09-21T14:00:38+01:00",
+  "actual_start_time": "2026-09-21T14:01:25+01:00",
+  "next_scheduled_trigger_time": "2026-09-21T15:00:38+01:00",
+  "preservation_cutoff_time": "2026-09-21T14:55:38+01:00",
+  "segments": [
+    {
+      "start": "2026-09-21T14:01:25+01:00",
+      "kind": "initial entry"
+    }
+  ],
+  "forward_research_start_time": null,
+  "forward_research_stop_time": null,
+  "preservation_start_time": null,
+  "preservation_complete_time": null,
+  "final_report_time": null,
+  "wall_clock_session_minutes": null,
+  "forward_research_span_minutes": null,
+  "preservation_span_minutes": null,
+  "substantive_units": [],
+  "early_stop_check_time": null,
+  "early_stop_check_result": null,
+  "tool_infrastructure_failures": [],
+  "commit_shas_produced": [],
+  "live_unfinished_line": "Audit-priority raw Q3 criticality: extend or invalidate the two-opposite-star coordinate-multiplicity branch.",
+  "stop_reason": "IN_PROGRESS",
+  "target_status": "IN_PROGRESS"
+}

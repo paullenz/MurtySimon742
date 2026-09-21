@@ -7,15 +7,15 @@
 `X_3` (12 vertices, 32 edges, versus `M(12)=31`) remains the mandatory negative control. The false all-order 2019 Dailly–Foucaud–Hansberg Conjecture 3 is not the target. First-proof priority on Erdős #742 is not the optimization target.
 
 <!-- CURRENT-STATUS:START -->
-CHECKPOINT CLASS: `FORWARD_2026_09_21_Q3_STAR_MINIMAL_FACE_CLOSURE`
+CHECKPOINT CLASS: `IN_PROGRESS_2026_09_21_1400_CONTINUITY_REPAIR_AND_Q3_EXTENSION`
 
 WORK MODE: `MATH`
 
-INSPECTED PREDECESSOR: 21 September daily red-team audit; README; prior CURRENT_STATE; recent Q3 commits through `59aa405325a547835ad30bbc1ac302332283f503`; current-session telemetry and all nine new theorem/audit units.
+INSPECTED PREDECESSOR: main `bcac363d4a91a9ecc23eeff6a64985b5e0bc6942`; latest daily audit, README, exact Q3 input notes and the three 09:00-slot logs.
 
 LAST VERIFIED RESULT: inside the raw Q3 antipodal-transversal branch, the minimal face with exactly two opposite star-centre classes plus exactly one vertex in each of the six coordinate-halfcube codes satisfies `e(G)<=M(n)`. The closure survived independent same-session hostile replay by fresh 16-code enumeration, domination/disjointness checks, physical injection replay and floor arithmetic. This is graph-level only within its explicit code-population scope and uses no conditional rigid-cut/Hall machinery.
 
-UNPRESERVED WORK: none. All nine substantive units, hostile replay, final telemetry and this handoff are committed.
+UNPRESERVED WORK: None. Mathematical status unchanged at entry; hourly continuity correction and 14:00 slot ledger are preserved with this handoff.
 
 DEFERRED ADMIN: README top-level status still needs a compact pointer to the completed Q3 odd-halfcube classification, star certificate table and new minimal two-star-class exact-M closure. Defer the larger README rewrite to the next safe preservation window rather than risk overlap.
 
@@ -98,3 +98,9 @@ Full record: `project/research/session_logs/2026-09-21/2026-09-21T13-30-18+01-00
 - Treat all 0.53-wedge results as conditional on the rigid complete one-code interface.
 - Finite scans are diagnostics, not substitutes for structural proof.
 - Every run must finalize one telemetry record with measured timestamps and no inferred duration.
+
+## Hourly continuity correction — effective 21 September
+
+The scheduled trigger is the accounting unit; re-entry never resets the start, target or cutoff. No eight-minute early-stop permission exists. All prior late-segment target exemptions must be reconciled at slot level. Preserve missing historical timing as UNVERIFIED. Full correction and the 09:00 regression: `project/research/session_logs/2026-09-21/HOURLY_CONTINUITY_CORRECTION.md`.
+
+Current slot: actual start 14:01:25 BST, cutoff 14:55:38 BST, research stop/preservation completion pending, units 0, status IN_PROGRESS. Ledger: `project/research/session_logs/2026-09-21/2026-09-21T14-01-25+01-00.json`.
