@@ -14,8 +14,8 @@
     }
   ],
   "forward_research_start_time": "2026-09-21T14:05:42+01:00",
-  "forward_research_stop_time": null,
-  "preservation_start_time": null,
+  "forward_research_stop_time": "2026-09-21T14:55:57+01:00",
+  "preservation_start_time": "2026-09-21T14:55:57+01:00",
   "preservation_complete_time": null,
   "final_report_time": null,
   "wall_clock_session_minutes": null,
@@ -113,8 +113,8 @@
       "artifact": "project/research/post_ms/2026-09-21-q3-star-support-v1/OPPOSITE_EDGE_PARITY_FACTOR_REDUCTION.md"
     }
   ],
-  "early_stop_check_time": null,
-  "early_stop_check_result": null,
+  "early_stop_check_time": "2026-09-21T14:55:57+01:00",
+  "early_stop_check_result": "Cutoff reached; stop new exploration and preserve, without advancing the deadline.",
   "tool_infrastructure_failures": [
     "Direct git push unavailable: no GitHub HTTPS credential. Authorized GitHub connector atomic tree/commit/ref publication succeeded as fallback."
   ],
@@ -134,11 +134,12 @@
     "6fbcf40c9fa41e1dc08f87b0e1ea17d697bfe718",
     "522827aa1fee823b5fdbd002aee0e1ec24ec509a",
     "7ec5a57bfc091b679983f1c51f686192e703fef3",
-    "67537c7dc7db246b36cdd2cdefb3bf97c5babf98"
+    "67537c7dc7db246b36cdd2cdefb3bf97c5babf98",
+    "6343e2a33d5732cc3daaad5c80d1511adae2d63f"
   ],
-  "live_unfinished_line": "Both nonparity affine-plane support orbits require n>=20 but realizability remains open. Next attack: opposite-edge plane with mandatory star matching, isolated coordinate population and both parities.",
-  "stop_reason": "IN_PROGRESS",
-  "target_status": "IN_PROGRESS",
+  "live_unfinished_line": "Hostile-review nonparity-plane and parity-factor proofs, then attack opposite-edge-plane core realizability with one vertex of each parity, the mandatory star matching and isolated direction-0 coordinate population.",
+  "stop_reason": "Reached the valid preservation cutoff; 15 substantive units preserved; remaining opposite-edge-plane core realizability handed off.",
+  "target_status": "UNVERIFIABLE: earliest segment has no close timestamp; verified continuation alone does not establish the whole-slot total.",
   "continuation_checks": [
     {
       "time": "2026-09-21T14:37:59+01:00",
@@ -151,5 +152,27 @@
       "result": "1200 seeded greedy-deletion trials in coordinate-face outward branch found no D2C fixture; best retained 8 noncritical fixed edges. No nonexistence inference; not counted as substantive unit.",
       "artifact": "project/research/post_ms/2026-09-21-q3-star-support-v1/COORDINATE_FACE_SEARCH_RESULTS.json"
     }
-  ]
+  ],
+  "early_stop_checks": [
+    {
+      "time": "2026-09-21T14:55:33+01:00",
+      "result": "Cutoff still in future; continued exact parity-expansion arithmetic and scope audit. Completion of 15 units did not authorize early finalization."
+    }
+  ],
+  "number_of_substantive_units": 15,
+  "research_intervals": [
+    {
+      "start": "2026-09-21T14:05:42+01:00",
+      "stop": null,
+      "status": "UNVERIFIED segment close: re-entry at 14:33:47 has no preceding stop timestamp; do not backfill from unit or commit times."
+    },
+    {
+      "start": "2026-09-21T14:33:47+01:00",
+      "stop": "2026-09-21T14:55:57+01:00",
+      "status": "Documented continuation span; includes recovery/checkpoint time, not measured active time."
+    }
+  ],
+  "verified_research_span_minutes": 22.166666666666668,
+  "forward_research_envelope_minutes": 50.25,
+  "telemetry_compliance": "NONCOMPLIANT: full-slot research duration UNVERIFIED; historical missing boundary retained rather than inferred."
 }

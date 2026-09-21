@@ -14,6 +14,14 @@ The stronger all-order 2019 Dailly-Foucaud-Hansberg conjecture is false: the pub
 
 **Live handoff:** [`CURRENT_STATE.md`](CURRENT_STATE.md).
 
+### 21 September 2026: sharp Q3 star-support theorem
+
+The newest [review index](project/research/post_ms/2026-09-21-q3-star-support-v1/THEOREM_AND_REVIEW_INDEX.md) gives a scoped structural theorem: for a D2C graph with a Q3 root neighbourhood and antipodal-transversal outside codes, nonempty star support has at least four centres. Exactly four centres form an affine plane and require at least 19 vertices; an explicit 19-vertex, 66-edge graph attains the bound. Both nonparity plane orbits require at least 20 vertices. Five through eight centres and nontransversal codes remain open.
+
+Two actual infinite families give positive linear gaps below M(n). The five-coordinate family improves the six-coordinate family only from n=26 onward (ties at 24,25). The latest [parity-factor reduction](project/research/post_ms/2026-09-21-q3-star-support-v1/OPPOSITE_EDGE_PARITY_FACTOR_REDUCTION.md) reduces the opposite-edge-plane existence problem to one copy of each parity code; fixed-core parity expansions are eventually below M(n), without a uniform threshold over cores.
+
+The raw certificate calculus passes 28,934 independent edge-deletion comparisons. The new graphs add no positive rigid-Hall fixture: all their checked maximum-degree roots have p=0, and this is proved for the balanced five-coordinate family. These are internal results awaiting external review, not a general eventual theorem. The current priority is raw realizability of the reduced nonparity-plane cores; the earlier conditional interface below remains preserved.
+
 ### 21 September 2026 post-audit forward correction
 
 The midnight [daily red-team audit](project/research/post_ms/2026-09-21-daily-red-team-audit-v1/DAILY_RED_TEAM_AUDIT.md) elevated two immediate obligations: independently reconstruct the small half-ray equality faces and attack the zero-positive-fixture rigid-cut gap directly from raw criticality. Both were addressed in the next forward session.
@@ -38,11 +46,11 @@ Two important 20 September scalar escape families are therefore **not graph-real
 
 There is still **no eventual theorem and no justified threshold `n_0`**. The bounded actual-D2C regression still contains **zero positive rigid complete Hall-cut fixtures with `x>=3`**. The new theorem is a stronger necessary condition inside that unexercised interface, not evidence that the interface is reachable or impossible in general.
 
-### Current load-bearing direction
+### Preserved conditional interface and earlier direction
 
 `rooted criticality -> selected/residual Hall ledger -> exact pair capacity -> rigid cut -> one-code purification -> raw B–A boundary trichotomy -> repeated-code reverse exclusion -> full boundary exposure (m>=2) -> complementary U-class exclusion -> exact forward reservoir e=c-r -> c>=p+r-|L(C)|`.
 
-The next high-value step is to intersect this near-maximal rooted-gap condition with the exact residual defect `delta=b(n-b)-m=r-e(F)`, rooted triangle count `Q=e(G[N(v)])`, and pair-local Hall/score identities. The qualitatively separate one-code regimes are `m<=1` and singleton outside block `y=1`.
+Within this conditional interface, the earlier proposed step was to intersect this near-maximal rooted-gap condition with the exact residual defect `delta=b(n-b)-m=r-e(F)`, rooted triangle count `Q=e(G[N(v)])`, and pair-local Hall/score identities. The qualitatively separate one-code regimes are `m<=1` and singleton outside block `y=1`.
 
 Key current packages:
 

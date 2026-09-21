@@ -22,3 +22,5 @@ At fixed k=r+q the densest such expansion balances r,q. Its gap is
 For each fixed collapsed core this is (n0-11)k/2+O(1), with n0>=20. Thus parity expansion of any fixed realizable core lies below M(n) for all sufficiently large expansion sizes. This does not provide a uniform threshold over growing cores and does not establish that the core exists.
 
 The next bounded task is therefore core realizability with exactly one P0 and one P1, retaining arbitrary star/coordinate multiplicities and the forced matching. Parity multiplicity need not be searched.
+
+Exact arithmetic audit: if g(k) denotes the balanced-expansion gap above, then g(k+2)-g(k)=n0-11. Thus each parity subsequence increases by at least nine at every two-vertex expansion. Its initial values are g(2)=M(n0)-m0 and g(3)=M(n0+1)-m0-5. This gives a direct fixed-core eventual bound without relying on asymptotic notation.
