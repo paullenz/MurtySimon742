@@ -52,6 +52,20 @@ The graph has
 
 `m=8+12+4a+pq = 20+4a+pq = 4n-16+pq`.
 
+At the Q3 root,
+
+- `b=8`;
+- the four antipodal B-pairs remain tight, so `p_root=4` and `u_root=0` in the rooted tight-pair notation;
+- `Q=e(B)=12`;
+- `f=e(A)=pq`;
+- `delta=b(n-b)-m = 4a-12-pq`.
+
+Therefore the exact rooted identity `delta=r-f` gives
+
+`r=4a-12=4(a-3)`,
+
+**independent of the parity split and of the quadratic internal density `pq`.** This makes the family a particularly clean hostile control for any future use of `(r,f,delta,Q)`: increasing the complete bipartite parity core changes f and delta but leaves the physical residual count r fixed and linear.
+
 For a fixed a, this construction is densest when the mandatory coordinate population is minimal (`c=3`) and the remaining `a-3` vertices are split as evenly as possible between the two parity sides. Then
 
 `m_dense(a)=20+4a+floor((a-3)^2/4)`.
@@ -78,6 +92,8 @@ This is a genuine graph-level escape from the independent-A X3 blow-up, and it e
 More importantly, it shows that opposite-side geometry can support **quadratic A-density** while preserving D2C: if p and q are balanced, `pq=Theta(a^2)`. The unavoidable price is that at least three coordinate A-vertices must remain outside that dense parity split to certify the three cube directions. Those three mandatory witness populations create the linear extremal deficit above.
 
 So the correct graph-level question is sharper than “can multiple/opposite code classes occur?” They can, abundantly. The eventual near-M problem should ask whether one can reduce the mandatory coordinate-witness tax, or whether raw criticality forces a linear defect whenever a fixed Q3 root is used to support a dense opposite-parity A-core.
+
+This family is triangle-containing for every size because every cube edge together with the root forms a triangle. It is therefore an infinite explicit hostile/control family on the **triangle-containing** side of the eventual second-extremal problem, not a triangle-free artefact.
 
 ## Diagnostic search provenance
 
