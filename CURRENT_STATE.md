@@ -9,7 +9,7 @@
 <!-- CURRENT-STATUS:START -->
 CHECKPOINT CLASS: `FORWARD_POST_AUDIT_2026_09_21_0148_BST`
 
-WORK MODE: `FORWARD_RESEARCH_PRESERVATION`
+WORK MODE: `FORWARD_RESEARCH_PRESERVED`
 
 INSPECTED PREDECESSOR: 21 September daily red-team audit and post-audit rigid-realizability commits through the raw boundary-code-edge trichotomy, universal opposite-endpoint independence, reverse-gamma note and independent half-ray equality replay. The audit's two priorities were followed: the `N=0,1,2,3` equality faces were independently replayed, and the zero-positive-fixture gap was attacked directly from raw graph criticality rather than by another scalar Hall optimization.
 
@@ -72,9 +72,10 @@ Full record: `project/research/session_logs/2026-09-21/2026-09-21T01-27-33+01-00
 - actual start: **2026-09-21 01:27:33 BST**;
 - preservation cutoff: **2026-09-21 01:55:38 BST**;
 - forward-research stop / preservation start: **2026-09-21 01:48:32 BST** (GitHub server timestamp of stop-marker commit `b062fb23660fefd62a85f958032382808fa8efa2`);
-- preservation complete: **PENDING FINAL PRESERVATION MARKER**;
-- wall-clock span to preservation complete: **PENDING**;
+- preservation complete: **2026-09-21 01:50:38 BST** (GitHub server timestamp of README synchronization commit `287dba82bfaa14f41a352c71490b37d3c64b132f`);
+- wall-clock span to preservation complete: **23m05s**;
 - forward-research span: **20m59s**;
+- preservation span: **2m06s**;
 - substantive units: **18**;
 - >=50-minute target: **not applicable** because only 28m05s existed from actual start to mandatory cutoff;
 - early-stop guard: at authoritative 01:47 BST check, more than eight minutes remained and a coherent next theorem existed, so research continued; preservation began after the 01:48 check;
