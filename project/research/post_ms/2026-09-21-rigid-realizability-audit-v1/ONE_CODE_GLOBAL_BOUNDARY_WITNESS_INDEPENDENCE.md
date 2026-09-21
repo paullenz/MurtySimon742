@@ -8,13 +8,13 @@ Status: raw graph-theoretic theorem inside the repeated rigid one-code interface
 
 Let `Y=A_d`, `y>=2`, and let the selected matched-head count satisfy `m>=2`. Full exposure gives `I(d,X)=[p]`. Repeated-code reverse exclusion says every exposed coordinate is U-forward or matched-forward.
 
-Let `L=L(d,X)` be the matched-forward head set. For each coordinate `i notin L`, let `W_i` be the set of actual unmatched vertices that are used as U-forward witnesses for at least one boundary edge
+Let `L=L(d,X)` be the matched-forward head set and write `ell=|L|`. For each coordinate `i notin L`, choose one actual U-forward witness for every boundary edge
 
 `y q_i^{d_i}`, `y in Y`.
 
-Put
+Let `W_i` be the set of unmatched vertices used by these chosen certificates and put
 
-`W = union_{i notin L} W_i`.
+`W = union_{i notin L} W_i`, `W=|W|`.
 
 Every `W_i` is nonempty, every vertex in `W_i` has code `bar d xor e_i`, and the raw boundary theorem gives
 
@@ -22,7 +22,11 @@ Every `W_i` is nonempty, every vertex in `W_i` has code `bar d xor e_i`, and the
 
 Because the one-match code classes are distinct,
 
-> **`|W|>=p-|L|`.**                                     `(1.2)`
+> **`W>=p-ell`.**                                       `(1.2)`
+
+For `w in W`, let `t_w` be the number of chosen boundary edges for which w is the U-forward witness. Since every pair `(y,i)` with `y in Y`, `i notin L`, contributes exactly one chosen witness,
+
+> **`sum_{w in W} t_w = y(p-ell)`.**                    `(1.3)`
 
 ## 2. The used boundary-witness set W is independent
 
@@ -40,62 +44,72 @@ Therefore
 
 > **`G[W]` is independent.**                             `(2.1)`
 
-This holds even if i=j: every used U-forward witness in the same one-match class still shares coordinate i with every Y-code-d candidate witness, so the same obstruction applies.
+This holds even if i=j.
 
-## 3. General quadratic U-slack floor
+## 3. Service-counted U-slack floor
 
-Write `W=|W|`. For any `w in W`:
+For any `w in W`:
 
-- w sees the root;
-- w sees exactly one endpoint of every tight pair, hence exactly p matched vertices;
-- w sees no X-vertex;
-- w sees no vertex of W by `(2.1)`;
-- at most all y vertices of Y;
-- at most the `u-W` unmatched vertices outside W.
+- w misses every X-vertex by `(1.1)`;
+- w is nonadjacent to every outside source for which it is the chosen U-forward witness, so it misses at least `t_w` Y-vertices;
+- w misses the other `W-1` vertices of W by `(2.1)`.
 
-Thus
+For an unmatched rooted neighbour z, the exact degree-deficit identity is
 
-`deg(w) <= 1+p+y+(u-W)`.
+`epsilon_z = z_A + m_U(z) - (a-p)`,
 
-Since the root degree is `b=2p+u`,
+where `z_A` and `m_U(z)` count its missing A- and U-neighbours. Applying this to w gives
 
-> **`epsilon_w >= p+W-y-1 = g0+W-1`.**                 `(3.1)`
+`epsilon_w >= x+t_w+(W-1)-(a-p)`.
 
-Summing over W gives
+Since `a=x+y` and `g0=p-y`,
 
-> **`E_U >= W(g0+W-1)`.**                               `(3.2)`
+> **`epsilon_w >= g0+t_w+W-1`.**                        `(3.1)`
 
-Using `(1.2)` and `g0>=1`, the right side is increasing in W, so
+Summing and using `(1.3)`,
 
-> **`E_U >= (p-|L|)(g0+p-|L|-1)`.**                    `(3.3)`
+`E_W >= W(g0+W-1)+y(p-ell)`.
 
-The global matched-leaf theorem has `|L|<=2`. Hence every repeated one-code rigid cut with `m>=2` carries a quadratic U-slack bill from the boundary witnesses alone:
+The first term is increasing in W for `g0>=1`, and `W>=p-ell`. Therefore
 
-> **`E_U >= (p-2)(g0+p-3)`**                            `(3.4)`
+`E_W >= (p-ell)(g0+p-ell-1)+y(p-ell)`.
 
-as a universal coarse form, with the stronger facewise bounds
+Because `g0+y=p`, this collapses exactly to
 
-- `C=empty` or `|C|>=3`: `L=empty`, so **`E_U>=p(g0+p-1)`**;
-- `|C|=1`: **`E_U>=(p-1)(g0+p-2)`**;
-- `|C|=2`: use the exact `|L|` in `(3.3)`.
+> **`E_U >= E_W >= (p-ell)(2p-ell-1)`.**                `(3.2)`
 
-## 4. Why this is stronger than the exact-equality argument
+This is independent of y, g0, e, u and the multiplicities inside the one-match code classes.
 
-The earlier `e=p` theorem obtained A-anticompleteness of a unique witness in every coordinate class and then independence. The present argument needs neither uniqueness nor Y-anticompleteness. It uses only:
+The facewise forms are
 
-1. every *used* U-forward witness is X-anticomplete;
-2. any rooted B-edge between two such witnesses would need an A-witness;
-3. X cannot supply that witness;
-4. every Y candidate shares a forced matched neighbour with the B-source.
+- `C=empty` or `|C|>=3`: `ell=0`, so **`E_U>=p(2p-1)`**;
+- `|C|=1`: `ell<=1`, so **`E_U>=2(p-1)^2`**;
+- `|C|=2`: use the exact ell, with the universal coarse floor **`E_U>=(p-2)(2p-3)`**.
 
-Thus the quadratic boundary bill persists for arbitrary U-forward multiplicities and arbitrary `e>=p-|L|`.
+## 4. Complementary selected U-witnesses add a disjoint bill
+
+Let k be the minimum number of selected complementary U-witnesses used by an outside source. Across all outside sources, let K be the union of actual selected complementary-code witnesses. Every vertex of K has code `bar d`, so `K cap W=empty`.
+
+If `z in K` is used by `t_z` outside sources, singleton-head criticality forces it to have exactly one X-neighbour and to miss all `t_z` source vertices. Hence
+
+`epsilon_z >= g0+t_z-1`.
+
+The total selected source-witness incidence is at least `yk`, and `|K|>=k`. Since `g0>=1`, summing gives
+
+> **`E_K>=k(p-1)`.**                                    `(4.1)`
+
+Combining the physically disjoint W and K layers gives the general repeated-code boundary bill
+
+> **`E_U >= (p-ell)(2p-ell-1)+k(p-1)`.**               `(4.2)`
+
+This extends the earlier exact `e=p` repair-reservoir formula to arbitrary boundary-forward multiplicity.
 
 ## 5. Strategic consequence
 
-The old scalar rooted-Q hostile family was only the sharp equality example. More generally, the entire repeated-code `m>=2` branch pays order `p^2` U-slack whenever p is large, before any H--U carrier analysis or source-tuple capacity is invoked.
+The old scalar rooted-Q hostile family was only the sharp equality example. The entire repeated-code `m>=2` branch now pays roughly `2p^2` U-slack before any H--U carrier analysis or source-tuple capacity is invoked, plus a further `k(p-1)` bill for complementary selected witnesses.
 
-The next step is to combine `(3.3)` with the exact score ceiling and the independent U-bound, while retaining the full-boundary gap `c>=p+r-|L|`. This should convert the physical boundary witness set into a macroscopic restriction on `g0,r,c` for the whole repeated-code branch rather than merely the `e=p` face.
+The next step is to combine `(4.2)` with the exact score ceiling, the occupancy identity `e=c-r`, the relation `u=e+k`, the full-boundary requirement `p<=e+ell`, and the independent U-bound. This converts the physical boundary witness set into a macroscopic parameter wedge for the whole repeated-code branch rather than merely the `e=p` face.
 
 ## 6. Scope
 
-No source-tuple capacity theorem, global selected `(source,coordinate)` uniqueness, rooted-Q inequality, or superseded H--U private-foot argument is used. The independence proof is direct raw D2C criticality plus tight-code transversality.
+No source-tuple capacity theorem, global selected `(source,coordinate)` uniqueness, rooted-Q inequality, or superseded H--U private-foot argument is used. The independence proof is direct raw D2C criticality plus tight-code transversality; the service-counted slack uses only the rooted degree identity and one selected witness per physical boundary edge.
