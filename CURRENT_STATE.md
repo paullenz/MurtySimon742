@@ -101,3 +101,16 @@ Full telemetry: `project/research/session_logs/2026-09-21/2026-09-21T18-00-38+01
 - Substantive units: 15.
 - Stop reason: reached and slightly exceeded the 50-minute target, then stopped at a natural verified five-centre family checkpoint for preservation.
 - >=50-minute target: MET.
+
+
+### Completed 19:00 D2C continuation (subordinate after independent-#742 pivot)
+
+This slot completed and hostile-replayed the five-centre positive-control family package before discovering the newer concurrent pivot above. The results remain preserved as reusable structural work, but the next session must follow the independent-#742 objective rather than continue the subordinate D2C line by inertia.
+
+Full telemetry: `project/research/session_logs/2026-09-21/2026-09-21T19-01-53+01-00.json`.
+
+- Actual start: 19:01:53 BST; preservation cutoff: 19:55:38 BST.
+- Forward research: 19:02:39--19:53:30 BST = 50m51s (50.85 min).
+- Preservation complete: 19:54:27 BST; wall-clock span 52m34s (52.5666666667 min); preservation span 0m57s (0.95 min).
+- Substantive units: 16; >=50-minute target: MET.
+- Stop reason: reached the target and stopped at the completed family hostile-audit and bounded negative-orbit checkpoint for preservation.
