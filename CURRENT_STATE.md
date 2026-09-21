@@ -7,19 +7,19 @@
 `X_3` (12 vertices, 32 edges, versus `M(12)=31`) remains the mandatory negative control. The false all-order 2019 Dailly–Foucaud–Hansberg Conjecture 3 is not the target. First-proof priority on Erdős #742 is not the optimization target.
 
 <!-- CURRENT-STATUS:START -->
-CHECKPOINT CLASS: `BOUNDED_DIAGNOSTIC_NOT_NONEXISTENCE`
+CHECKPOINT CLASS: `VERIFIED_INTERNAL_OPPOSITE_EDGE_PARITY_OBLIGATION`
 
 WORK MODE: `MATH`
 
-INSPECTED PREDECESSOR: `6fbcf40c9fa41e1dc08f87b0e1ea17d697bfe718`.
+INSPECTED PREDECESSOR: `522827aa1fee823b5fdbd002aee0e1ec24ec509a`.
 
-LAST VERIFIED RESULT: Mathematical status unchanged. Bounded 1200-trial outward-face fixture diagnostic found no example; no nonexistence conclusion or unit-count increment. Exact best failed fixtures preserved.
+LAST VERIFIED RESULT: Opposite-edge affine-plane support forces exactly one direction-0 coordinate code, both parity codes, four other coordinate codes and a physical star matching; n>=20. Together with the face result, both nonparity four-centre orbits have order at least 20.
 
 UNPRESERVED WORK: None.
 
 DEFERRED ADMIN: Consolidate superseded live-state paragraphs and refresh reviewer summary during final preservation.
 
-NEXT ACTION: Prove the parity-code obligation in the opposite-parallel-edge support using missing-coordinate physical matchings.
+NEXT ACTION: Independently audit the two new nonparity-plane obligations and deduce the scoped sharp minimum order for all four-centre supports.
 <!-- CURRENT-STATUS:END -->
 
 ## Current Q3 graph-level results
