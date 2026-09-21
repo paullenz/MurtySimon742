@@ -12,3 +12,5 @@ Exact SAT rejects both simplest ways to keep the cross pairs outside this certif
 Both formulas are UNSAT under full diameter-two and every-edge-critical constraints. The clauses and scopes are recorded in `PARITY_STAR_SPLIT_HOSTILE_CORE.json`.
 
 This does not eliminate a split certificate graph in general: a cross pair could have a more complicated extra common-neighbour pattern, and larger multiplicities were not encoded. It does show that neither the complete-cross closure nor the single-second-star closure realizes the minimal obstruction. The next attack should classify the possible extra common neighbours of cross pairs under the four even star codes.
+
+The present-cross pattern was then replayed with two copies of each star class and balanced parity populations `r=q=2,...,8`; every instance is UNSAT. This shows the obstruction persists after adding unrestricted extra parity vertices within that exact support, but remains a bounded multiplicity result.

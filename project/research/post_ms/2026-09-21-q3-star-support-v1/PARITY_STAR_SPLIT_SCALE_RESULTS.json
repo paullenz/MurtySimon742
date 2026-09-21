@@ -1,0 +1,47 @@
+{
+  "scope": "fixed six coordinates and two copies of each even star; local split pattern with present cross pairs",
+  "rows": [
+    {
+      "r": 2,
+      "q": 2,
+      "sat": false,
+      "seconds": 0.015961408615112305
+    },
+    {
+      "r": 3,
+      "q": 3,
+      "sat": false,
+      "seconds": 0.02447962760925293
+    },
+    {
+      "r": 4,
+      "q": 4,
+      "sat": false,
+      "seconds": 0.03956317901611328
+    },
+    {
+      "r": 5,
+      "q": 5,
+      "sat": false,
+      "seconds": 0.05871295928955078
+    },
+    {
+      "r": 6,
+      "q": 6,
+      "sat": false,
+      "seconds": 0.10351037979125977
+    },
+    {
+      "r": 7,
+      "q": 7,
+      "sat": false,
+      "seconds": 0.19815802574157715
+    },
+    {
+      "r": 8,
+      "q": 8,
+      "sat": false,
+      "seconds": 0.2643418312072754
+    }
+  ]
+}
