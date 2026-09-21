@@ -5,19 +5,19 @@ Canonical repository: `paullenz/MurtySimon742`. Date: 21 September 2026.
 Active target: the eventual / sufficiently-large second-extremal problem around M(n)=floor((n-1)^2/4)+1. The general theorem and a uniform threshold remain open. X3 (12 vertices,32 edges,M(12)=31) remains mandatory. Do not revive the false all-order conjecture or the closed mixed {4,5} ladder.
 
 <!-- CURRENT-STATUS:START -->
-CHECKPOINT CLASS: `INTERNAL_EXACT_FOUR_CENTRE_PARITY_CLASSIFICATION`
+CHECKPOINT CLASS: `AUDIT_REPAIRED_FOUR_CENTRE_PARITY_CLASSIFICATION`
 
 WORK MODE: `MATH`
 
-INSPECTED PREDECESSOR: `ae4094e7acdcb8d5e4f40357c96803f760f96174`.
+INSPECTED PREDECESSOR: `578305edd5b6e362381012a8de562f779b792569`.
 
-LAST VERIFIED RESULT: Both nonparity affine-plane orbits are impossible for arbitrary multiplicities. Hence any exactly four-centre star support is a parity class, and the explicit parity-plane families show this is sharp. The proof is raw physical criticality plus diameter two, independent of SAT/Hall/source-tuple premises.
+LAST VERIFIED RESULT: Hostile replay caught and repaired an omitted C21 code in the first opposite-edge proof. Corrected: C21 is forced to bridge C10/C11 and destroys both clean orientations of cube edge 4--6. Coordinate-face exclusion survived. Thus exactly four centres still force a parity class, now with an explicit correction record and independent bitset replay.
 
 UNPRESERVED WORK: None after this entry checkpoint.
 
 DEFERRED ADMIN: Broad historical README maintenance and CI polling; neither blocks the core attack.
 
-NEXT ACTION: Independently audit both orbit exclusions, update the compact theorem, then seek a density/structure theorem inside the sole realizable parity-plane orbit.
+NEXT ACTION: Synthesize the corrected theorem and seek a structural/density theorem inside the sole realizable parity-plane orbit.
 <!-- CURRENT-STATUS:END -->
 
 ## Reviewable current package

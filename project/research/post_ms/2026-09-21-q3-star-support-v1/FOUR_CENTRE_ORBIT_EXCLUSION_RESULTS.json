@@ -1,0 +1,47 @@
+{
+  "opposite_edge": {
+    "available_codes": [
+      "C00",
+      "C10",
+      "C11",
+      "C20",
+      "C21",
+      "P0",
+      "P1",
+      "S0",
+      "S1",
+      "S6",
+      "S7"
+    ],
+    "C10_neighbor_codes_after_spokes_1_0": [
+      "C10",
+      "C21"
+    ]
+  },
+  "coordinate_face": {
+    "available_codes": [
+      "C00",
+      "C01",
+      "C10",
+      "C11",
+      "C21",
+      "P0",
+      "P1",
+      "S0",
+      "S1",
+      "S2",
+      "S3"
+    ],
+    "C10_neighbor_codes_after_spokes_4_5": [
+      "C10",
+      "S0",
+      "S1"
+    ]
+  },
+  "orbit_counts": {
+    "opposite_edge": 6,
+    "coordinate_face": 6,
+    "parity_plane": 2
+  },
+  "result": "all primitive singleton/reverse tables, antipode-membership exclusions and 14-plane orbit coverage pass"
+}
