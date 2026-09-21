@@ -12,11 +12,11 @@
   "forward_research_start_time": "2026-09-21T19:02:39+01:00",
   "forward_research_stop_time": "2026-09-21T19:53:30+01:00",
   "preservation_start_time": "2026-09-21T19:53:30+01:00",
-  "preservation_complete_time": null,
+  "preservation_complete_time": "2026-09-21T19:54:27+01:00",
   "final_report_time": null,
-  "wall_clock_session_minutes": null,
+  "wall_clock_session_minutes": 52.5666666667,
   "forward_research_span_minutes": 50.85,
-  "preservation_span_minutes": null,
+  "preservation_span_minutes": 0.95,
   "substantive_units": [
     {
       "id": 1,
@@ -127,7 +127,8 @@
   ],
   "commit_shas_produced": [
     "6fed4a5386e573bd88c452e38d1f1fc719405c9b",
-    "35660c30627db18a1b610f09192e6b429c8ba78c"
+    "35660c30627db18a1b610f09192e6b429c8ba78c",
+    "fe39a3d8bb9c4c2eeb75c317e85a3c49c47924e0"
   ],
   "live_unfinished_line": "The five-centre positive-control families are proved and hostile-replayed. Next attack arbitrary A-graph classification on the positive orbit and asymmetric-multiplicity realizability of the other two orbits; the 96-case equal-multiplicity grid is negative but not a theorem.",
   "stop_reason": "Reached and exceeded the 50-minute forward-research target, then stopped at the completed five-centre hostile-audit and bounded negative-orbit checkpoint for preservation before the valid cutoff.",
