@@ -6,11 +6,12 @@
 
 ### Active mathematical target
 
-The live problem is the **sufficiently-large / eventual second-extremal classification for diameter-2-critical graphs** around
+The live problem is now a **genuinely independent proof of Erdős #742 / the Murty–Simon inequality**
+`e(G)<=floor(n^2/4)`, preferably with the stronger equality characterization that equality forces the balanced complete bipartite graph. The external `Erdos742/Erdos742` proof based on the universal `e+disj+X` inequality is a benchmark, not the route to be reconstructed.
 
-`M(n)=floor((n-1)^2/4)+1`.
+The first attack is the maximum-degree strip `n/2 < Delta(G) < 7n/12`: `Delta<=n/2` is immediate from degree sum, while the project has a preserved internally checked candidate theorem closing `Delta>=7n/12`. The active programme is to push that threshold toward `1/2`, identify the exact obstruction, separate scalar/profile survivors from actual graph realizability, and use the project's residual/Hall/profile plus newer realizability machinery to close or rigidify the strip. A 24-focused-session go/no-go gate applies. See [the pivot note](project/research/general_n/2026-09-21-independent-742-pivot-v1/README.md).
 
-The stronger all-order 2019 Dailly-Foucaud-Hansberg conjecture is false: the published 2024 order-12 hostile control `X_3` has 32 edges while `M(12)=31`. It remains mandatory. Murty-Simon / Erdos #742 fixed-order material remains preserved, but first-proof priority there is not the active optimization target.
+The previous eventual / sufficiently-large second-extremal programme remains fully preserved below as reusable research and historical status, but it is no longer the primary forward objective.
 
 **Live handoff:** [`CURRENT_STATE.md`](CURRENT_STATE.md).
 
