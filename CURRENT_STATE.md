@@ -67,23 +67,23 @@ Only after this literal realizability filter should rooted-Q, residual-defect, e
 
 ## Session telemetry — latest invocation
 
-Full record: `project/research/session_logs/2026-09-21/2026-09-21T01-57-45+01-00-a.md`.
+Full record: `project/research/session_logs/2026-09-21/2026-09-21T03-59-26+01-00-a.md`.
 
-- scheduled trigger: **2026-09-21 01:00:38 BST**;
-- actual start: **2026-09-21 01:57:45 BST** (57m07s late);
-- preservation cutoff: **2026-09-21 01:55:38 BST**;
-- forward-research stop: **2026-09-21 01:57:45 BST**;
-- preservation start: **2026-09-21 01:58:07 BST**;
-- preservation complete: **2026-09-21 01:59:20 BST**;
-- wall-clock span to preservation complete: **1m35s**;
+- scheduled trigger: **2026-09-21 03:00:38 BST**;
+- actual start: **2026-09-21 03:59:26 BST** (58m48s late);
+- preservation cutoff: **2026-09-21 03:55:38 BST**;
+- forward-research stop: **2026-09-21 03:59:26 BST**;
+- preservation start: **2026-09-21 03:59:58 BST**;
+- preservation complete: **2026-09-21 04:00:45 BST**;
+- wall-clock session span to preservation complete: **1m19s**;
 - forward-research span: **0m00s**;
-- preservation span: **1m13s**;
+- preservation span: **0m47s**;
 - substantive units: **0**;
-- >=50-minute target: **not applicable** because the invocation began after the mandatory cutoff and therefore had 0m00s of pre-cutoff research window available;
+- >=50-minute target: **not applicable** because the invocation began after the mandatory cutoff and therefore had 0m00s of valid pre-cutoff research window available;
 - early-stop guard: **not applicable**; cutoff had already passed at invocation;
-- stop reason: delayed invocation began after the mandatory preservation cutoff, so no forward mathematics was started and the run pivoted directly to telemetry/state preservation to avoid overlapping the next trigger.
+- stop reason: delayed invocation began after the mandatory preservation cutoff, so no forward mathematics was started and the run pivoted directly to telemetry/state preservation.
 
-Previous fully measured forward run: `project/research/session_logs/2026-09-21/2026-09-21T01-27-33+01-00-a.md` (20m59s forward-research span from a 28m05s shortened window).
+Previous measured late-start run: `project/research/session_logs/2026-09-21/2026-09-21T01-57-45+01-00-a.md` (0m00s forward-research span; invocation also began after cutoff).
 
 ## Mandatory constraints for future work
 
