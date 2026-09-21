@@ -5,19 +5,19 @@ Canonical repository: `paullenz/MurtySimon742`. Date: 21 September 2026.
 Active target: the eventual / sufficiently-large second-extremal problem around M(n)=floor((n-1)^2/4)+1. The general theorem and a uniform threshold remain open. X3 (12 vertices,32 edges,M(12)=31) remains mandatory. Do not revive the false all-order conjecture or the closed mixed {4,5} ladder.
 
 <!-- CURRENT-STATUS:START -->
-CHECKPOINT CLASS: `VERIFIED_ACTUAL_PARITY_STAR_HALL_INTERFACE_P_ZERO`
+CHECKPOINT CLASS: `EXACT_PARITY_STAR_MAXSAT_GRID_RQ_PLUS_14`
 
 WORK MODE: `MATH`
 
-INSPECTED PREDECESSOR: `754e9d1567a951be5822c70948b32e4146c5d396`.
+INSPECTED PREDECESSOR: `488dcd1bb619ea724c023ba6c8e3dfe09e152518`.
 
-LAST VERIFIED RESULT: The actual n=26 parity-star fixture passes independent rooted regression, but all four maximum-degree roots have p=0, lambda=2 and Q=18 or21. It expands actual-graph coverage without adding a positive rigid Hall cut; source-tuple premises remain conditional.
+LAST VERIFIED RESULT: For the fixed multiset of all six coordinate codes and two copies of each even star code, exact graph-level MaxSAT gives e(A)=rq+14 on seven parameter pairs (r=2,3; q through 4/3). This is finite evidence, not a general theorem; every returned graph passes direct D2C replay.
 
-UNPRESERVED WORK: None after this entry checkpoint.
+UNPRESERVED WORK: None after this checkpoint.
 
-DEFERRED ADMIN: Broad historical README maintenance and CI polling; neither blocks the core attack.
+DEFERRED ADMIN: README synthesis belongs in final preservation.
 
-NEXT ACTION: Use the parity-star fixture as a mandatory control while deriving a quantitative density tax; do not return to rigid Hall until an actual p>0 maximum root exists.
+NEXT ACTION: Prove or break the fixed-eight-star cancellation by tracing unoccupied missing P0-P1 pairs through the four forced star fans; do not infer the formula outside the exact grid.
 <!-- CURRENT-STATUS:END -->
 
 ## Reviewable current package
