@@ -6,21 +6,28 @@
   "segments": [
     {
       "start": "2026-09-21T14:01:25+01:00",
-      "kind": "initial entry"
+      "kind": "initial entry",
+      "forward_research_start_time": "2026-09-21T14:05:42+01:00",
+      "forward_research_stop_time": null,
+      "close_status": "UNVERIFIED; earlier segment close was not recorded before re-entry"
     },
     {
       "start": "2026-09-21T14:33:47+01:00",
-      "kind": "evidenced re-entry in same scheduled slot; predecessor ledger and remote head agree; start/cutoff not reset"
+      "kind": "evidenced re-entry in same scheduled slot; predecessor ledger and remote head agree; start/cutoff not reset",
+      "forward_research_start_time": "2026-09-21T14:33:47+01:00",
+      "forward_research_stop_time": "2026-09-21T14:55:57+01:00",
+      "verified_span_minutes": 22.166666666666668,
+      "relation_to_slot": "VERIFIED from same scheduled trigger, existing ledger and remote predecessor; earliest start retained"
     }
   ],
   "forward_research_start_time": "2026-09-21T14:05:42+01:00",
   "forward_research_stop_time": "2026-09-21T14:55:57+01:00",
   "preservation_start_time": "2026-09-21T14:55:57+01:00",
-  "preservation_complete_time": null,
-  "final_report_time": null,
-  "wall_clock_session_minutes": null,
+  "preservation_complete_time": "2026-09-21T14:57:52+01:00",
+  "final_report_time": "2026-09-21T14:58:42+01:00",
+  "wall_clock_session_minutes": 57.28333333333333,
   "forward_research_span_minutes": null,
-  "preservation_span_minutes": null,
+  "preservation_span_minutes": 1.9166666666666667,
   "substantive_units": [
     {
       "id": 1,
@@ -135,7 +142,8 @@
     "522827aa1fee823b5fdbd002aee0e1ec24ec509a",
     "7ec5a57bfc091b679983f1c51f686192e703fef3",
     "67537c7dc7db246b36cdd2cdefb3bf97c5babf98",
-    "6343e2a33d5732cc3daaad5c80d1511adae2d63f"
+    "6343e2a33d5732cc3daaad5c80d1511adae2d63f",
+    "e3078339a4ba80d4d71ea38738541e9d655c2b17"
   ],
   "live_unfinished_line": "Hostile-review nonparity-plane and parity-factor proofs, then attack opposite-edge-plane core realizability with one vertex of each parity, the mandatory star matching and isolated direction-0 coordinate population.",
   "stop_reason": "Reached the valid preservation cutoff; 15 substantive units preserved; remaining opposite-edge-plane core realizability handed off.",
@@ -174,5 +182,14 @@
   ],
   "verified_research_span_minutes": 22.166666666666668,
   "forward_research_envelope_minutes": 50.25,
-  "telemetry_compliance": "NONCOMPLIANT: full-slot research duration UNVERIFIED; historical missing boundary retained rather than inferred."
+  "telemetry_compliance": "NONCOMPLIANT: full-slot research duration UNVERIFIED; historical missing boundary retained rather than inferred.",
+  "arithmetic_verified_at": "2026-09-21T14:58:42+01:00",
+  "duration_verification": {
+    "wall_clock_seconds": 3437,
+    "verified_continuation_seconds": 1330,
+    "preservation_seconds": 115,
+    "outer_research_envelope_seconds_not_credited": 3015,
+    "full_slot_union": "UNVERIFIED because the earlier stop timestamp is absent"
+  },
+  "closing_commit_note": "The commit containing this final ledger is identified by repository history; no self-referential SHA is fabricated."
 }

@@ -5,17 +5,17 @@ Canonical repository: `paullenz/MurtySimon742`. Date: 21 September 2026.
 Active target: the eventual / sufficiently-large second-extremal problem around M(n)=floor((n-1)^2/4)+1. The general theorem and a uniform threshold remain open. X3 (12 vertices,32 edges,M(12)=31) remains mandatory. Do not revive the false all-order conjecture or the closed mixed {4,5} ladder.
 
 <!-- CURRENT-STATUS:START -->
-CHECKPOINT CLASS: `VERIFIED_INTERNAL_SCOPED_THEOREM_AND_PRESERVATION`
+CHECKPOINT CLASS: `PRESERVED_SCOPED_THEOREM_TELEMETRY_INCOMPLETE`
 
 WORK MODE: `ADMIN` (final preservation after the valid cutoff; successor returns to MATH).
 
-INSPECTED PREDECESSOR: `6343e2a33d5732cc3daaad5c80d1511adae2d63f`.
+INSPECTED PREDECESSOR: `e3078339a4ba80d4d71ea38738541e9d655c2b17`.
 
 LAST VERIFIED RESULT: At Q3-antipodal-transversal scope, nonempty star support has at least four centres; exactly four centres form an affine plane and force n>=19, attained by an explicit n=19,m=66 graph. Both nonparity plane orbits require n>=20. Opposite-edge-plane parity populations factor exactly, reducing core realizability to one copy per parity. Fixed-core parity expansions eventually lie below M(n), without a uniform core-independent threshold. Fifteen substantive units completed; exact scope and corrections below.
 
 Canonical preserved finite ledger unchanged: 4,626 exclusions / 952 survivors / 3,632 whole-state closures. Internal derivation and replay are not external review or publication.
 
-UNPRESERVED WORK: None after this checkpoint. Closing telemetry timestamps will be appended after remote preservation is confirmed.
+UNPRESERVED WORK: None. Mathematical package and closing telemetry are included in this verified checkpoint; the missing historical research-stop boundary remains explicitly UNVERIFIED.
 
 DEFERRED ADMIN: No CI gate awaited; broad historical README rewrite deferred. Root archive/LFS placeholder was not modified or staged.
 
@@ -57,5 +57,5 @@ Current slot ledger: `project/research/session_logs/2026-09-21/2026-09-21T14-01-
 - Preservation cutoff: 14:55:38 BST; measured forward-research stop: 14:55:57 BST (19 seconds after cutoff; deadline was not advanced).
 - Verified continuation research span: 22m10s (22.1666666667 min). Full-slot forward-research span: UNVERIFIED because the preceding segment has no recorded stop. The 50m15s outer research envelope is not credited as a verified union.
 - Substantive units: 15. >=50-minute target: UNVERIFIABLE. Telemetry compliance: NONCOMPLIANT because the full-slot research duration cannot be verified; this does not imply that the earlier segment did no work or identify a cause of re-entry.
-- Preservation completion, final report and wall-clock span: pending closing checkpoint after remote preservation confirmation.
+- Preservation complete: 14:57:52 BST; recorded final-report time: 2026-09-21T14:58:42+01:00; wall-clock session span: 57m17s (57.2833333333 min). Preservation span: 1m55s. Full-slot forward-research span remains UNVERIFIED; verified continuation is 22m10s.
 - Stop reason: reached the valid preservation cutoff; stopped exploration and handed off the reduced opposite-edge-plane core.
