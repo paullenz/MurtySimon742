@@ -1,8 +1,8 @@
-# Boundary witnesses versus extra noncomplementary U-vertices
+# Boundary witnesses versus extra U-vertices
 
 Date: 2026-09-21
 
-Status: raw structural theorem inside the repeated rigid one-code `y>=2,m>=2` interface. This note is deliberately narrower than the scalar `d=e-(p-ell)` arm: it controls extra **noncomplementary-code** U-vertices. Extra vertices of code `bar d` require a separate treatment and are not silently charged here.
+Status: raw structural theorem inside the repeated rigid one-code `y>=2,m>=2` interface. Sections 2--4 first control extra noncomplementary-code U-vertices. Section 5 shows that on the cheapest/minimal used-boundary-witness face the same capacity bound automatically extends to **all** extra U-vertices, including complementary-code vertices.
 
 ## 1. Setup
 
@@ -38,8 +38,6 @@ For an orientation from z to w, tight matched transversality forces an A-witness
 
 Hence the orientation is from w to z. Avoiding a tight matched common neighbour forces the A-witness code to be `bar c(w)=d xor e_i`, which is not d and therefore lies in X. Since the rigid cut is complete, this X-witness is adjacent to every vertex of Y. Singleton-head criticality `N(w) cap N(x)={z}` therefore forces w to have no Y-neighbour. `square`
 
-This is a useful dichotomy: a used boundary witness that touches even one extra noncomplementary U-vertex must pay all y outside-code A-holes.
-
 ## 3. Exact local tradeoff
 
 The existing service-counted proof gave
@@ -55,8 +53,6 @@ Summing over W gives
 > **`E_W >= W(g0+W-1)+y(p-ell)+Wh-Q + sum_{q_w>0}(y-t_w)`,** `(3.2)`
 
 where `Q=e(W,R)=sum q_w`.
-
-This strictly refines the earlier boundary-service floor unless the extra R-population is almost completely joined to W in a way that also makes every participating boundary witness already serve essentially all y outside sources.
 
 ## 4. Fixed-coordinate witness capacity
 
@@ -80,18 +76,66 @@ In the cheapest used-witness face `|W_i|=1` for every U-forward coordinate (ther
 
 > **`Q<=x`.** `(4.3)`
 
-Equation `(3.2)` then becomes the clean additional defect bill
+For extra noncomplementary vertices alone, `(3.2)` then gives
 
 > **`E_W >= (p-ell)(2p-ell-1) +(p-ell)h-x`.** `(4.4)`
 
-Thus if the forward-population excess is realized by h extra noncomplementary U-vertices while the boundary witness set remains minimal, those extra vertices are not a free repair reservoir: making them adjacent to the boundary witnesses requires at least one distinct X witness per physical W--R edge, and at most x such edges can be supported in the minimal-W face.
+## 5. Minimal-W face: complementary excess is not an escape
 
-## 5. What this does and does not resolve
+Assume now the minimal used-witness face
 
-This attacks a real portion of the `d` escape arm exposed by the global score wedge. It does **not** yet charge extra U-vertices of complementary code `bar d`; those can potentially use the reverse orientation with a Y-witness on W--U edges and must be separated. Nor does `(4.2)` by itself control large multiplicities `|W_i|`; there the same X-code class may be reused across different physical sources w, although each fixed `(w,x)` has only one singleton head.
+> **`W=p-ell`, equivalently `|W_i|=1` for every U-forward coordinate.**
 
-The next useful split is therefore:
+Because the total service count is `y(p-ell)` and every unique witness can serve at most y boundary sources, equality forces
 
-1. minimal/near-minimal boundary-witness multiplicity, where `(4.4)` converts noncomplementary forward excess directly into quadratic/linear-X slack;
-2. large `|W|- (p-ell)`, where service splitting already creates source deficits and should be combined with `(3.2)`;
-3. complementary-code excess, which needs its own raw B-edge/diameter audit rather than being folded into d by scalar bookkeeping.
+> **`t_w=y` for every `w in W`.** `(5.1)`
+
+Hence every w is already Y-anticomplete, without using Theorem 2.1.
+
+Let
+
+`R_all=U\W`, `h_all=|R_all|`.
+
+This now includes vertices of code `bar d`. Consider any edge wz with `w in W_i`, `z in R_all`.
+
+- If it oriented from z to w, the A-witness would have to be adjacent to w. For `c(z)=bar d` its forced complementary witness code is d, hence the witness would lie in Y; but `(5.1)` makes w Y-anticomplete. For `c(z)!=bar d`, Section 2 already excludes this orientation.
+- Therefore **every** W--R_all edge orients from w to z through a witness in `X_{d xor e_i}`.
+
+The same fixed-pair singleton-head injection gives
+
+> **`d_{R_all}(w)<=x_i`** and therefore, because there is one w per coordinate,
+>
+> **`e(W,R_all)<=sum_i x_i<=x`.** `(5.2)`
+
+Since every missing W--R_all edge contributes to the U-hole term of the corresponding w,
+
+> **`E_W >= (p-ell)(2p-ell-1)+(p-ell)h_all-x`.** `(5.3)`
+
+Using `u=e+k=(p-ell+d)+k` on this face,
+
+`h_all=u-(p-ell)=d+k`,
+
+so the raw minimal-W bill is
+
+> **`E_W >= (p-ell)(2p-ell-1)+(p-ell)(d+k)-x`.** `(5.4)`
+
+The disjoint complementary selected-witness bill from the previous theorem remains
+
+`E_K>=k(p-1)`
+
+for the actual selected witness union. Thus, without identifying K with all complementary-code U-vertices,
+
+> **`E_U >= (p-ell)(2p-ell-1)+(p-ell)(d+k)-x+k(p-1)`.** `(5.5)`
+
+Any overlap in the underlying missing W--K physical edges is legitimate here: `E_U` is a sum of vertex degree deficits, so a missing U--U edge contributes to each endpoint's deficit.
+
+Equation `(5.5)` is the first direct charge on the entire scalar d-arm in the minimal-W geometry. Large d can avoid that charge only by leaving the minimal-W face, i.e. by splitting boundary service among multiple witnesses per coordinate.
+
+## 6. Remaining multiplicity escape
+
+The d-arm is therefore compressed to a clear dichotomy:
+
+1. **minimal W:** all extra U-population, regardless of code, incurs `(5.5)`;
+2. **nonminimal W:** `W-(p-ell)>0`, so the fixed total `y(p-ell)` service is split among more physical witnesses. The exact tradeoff `(3.2)` already records the resulting service deficits, but a sharp global lower bound as a function of `W-(p-ell)` remains to be extracted.
+
+This is now the highest-value continuation. A successful lower bound on the service-splitting term would turn the global d escape into a genuine second quadratic cost rather than a scalar reservoir.
