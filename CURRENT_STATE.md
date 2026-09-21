@@ -5,19 +5,19 @@ Canonical repository: `paullenz/MurtySimon742`. Date: 21 September 2026.
 Active target: the eventual / sufficiently-large second-extremal problem around M(n)=floor((n-1)^2/4)+1. The general theorem and a uniform threshold remain open. X3 (12 vertices,32 edges,M(12)=31) remains mandatory. Do not revive the false all-order conjecture or the closed mixed {4,5} ladder.
 
 <!-- CURRENT-STATUS:START -->
-CHECKPOINT CLASS: `EXACT_BOUNDED_OPPOSITE_EDGE_CORE_UNSAT`
+CHECKPOINT CLASS: `INTERNAL_OPPOSITE_EDGE_PLANE_IMPOSSIBLE`
 
 WORK MODE: `MATH`
 
-INSPECTED PREDECESSOR: `0b3bcf689677d46dc691e7abf04e7031ed6f54be`.
+INSPECTED PREDECESSOR: `856d5000acb7294341a34b87ae31397f9f3707d3`.
 
-LAST VERIFIED RESULT: Exact SAT with all A-edges free excludes the minimal n=20 opposite-edge core and five nearby physical multisets. X3 and both known star families validate the encoding. This is bounded multiplicity, not nonexistence for the support orbit.
+LAST VERIFIED RESULT: The opposite-parallel-edge affine-plane star support is impossible for arbitrary physical multiplicities. Missing-code physical matching plus raw spoke criticality traps every C10 A-neighbour inside C10, contradicting diameter two to mandatory C11. Only parity-plane and coordinate-face four-centre supports remain.
 
 UNPRESERVED WORK: None after this entry checkpoint.
 
 DEFERRED ADMIN: Broad historical README maintenance and CI polling; neither blocks the core attack.
 
-NEXT ACTION: Extract a physical obstruction and determine which code multiplicity must increase in any surviving opposite-edge core.
+NEXT ACTION: Hostile-review the arbitrary-multiplicity exclusion, then apply the same physical spoke calculus to the sole open coordinate-face four-centre orbit.
 <!-- CURRENT-STATUS:END -->
 
 ## Reviewable current package

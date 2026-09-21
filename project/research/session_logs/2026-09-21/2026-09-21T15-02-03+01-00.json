@@ -23,16 +23,22 @@
       "completed_at": "2026-09-21T15:04:37+01:00",
       "result": "Exact SAT encoding excludes the entire minimal n=20 opposite-edge core with all A-edges free and five nearby enlarged multisets; X3 and both known star families are positive controls. Scope remains bounded multiplicity.",
       "artifact": "project/research/post_ms/2026-09-21-q3-star-support-v1/OPPOSITE_EDGE_CORE_EXACT_SEARCH.md"
+    },
+    {
+      "id": 2,
+      "completed_at": "2026-09-21T15:08:48+01:00",
+      "result": "Arbitrary-multiplicity proof eliminates the opposite-parallel-edge four-star support: physical missing-code matching plus two C10 spoke constraints force C10 A-neighbourhoods inside C10, contradicting diameter to mandatory C11.",
+      "artifact": "project/research/post_ms/2026-09-21-q3-star-support-v1/OPPOSITE_EDGE_PLANE_IMPOSSIBLE.md"
     }
   ],
-  "number_of_substantive_units": 1,
+  "number_of_substantive_units": 2,
   "early_stop_check_time": null,
   "early_stop_check_result": null,
   "tool_infrastructure_failures": [
     "python-sat was absent; installed into the disposable workspace dependency directory and validated against three actual D2C controls."
   ],
   "commit_shas_produced": [],
-  "live_unfinished_line": "Extract a physical proof of minimal-core impossibility and determine the first necessary multiplicity.",
+  "live_unfinished_line": "Hostile-review the new arbitrary-multiplicity exclusion; then attack the sole open four-centre coordinate-face orbit.",
   "stop_reason": "IN_PROGRESS",
   "target_status": "IN_PROGRESS",
   "audit_reconciliation": "Latest daily audit prioritizes raw criticality and actual graph realizability. This run follows that priority by hostile-reviewing and attacking the reduced opposite-edge-plane actual core; conditional Hall/source-tuple results are not advanced.",

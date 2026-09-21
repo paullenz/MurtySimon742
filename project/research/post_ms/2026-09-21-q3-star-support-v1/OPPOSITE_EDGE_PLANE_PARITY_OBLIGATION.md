@@ -38,3 +38,7 @@ Direction-1 and direction-2 star leaf spokes have their reverse centres outside 
 ## Next issue
 
 The surviving support has an isolated direction-0 coordinate population and a mandatory matching in one parity pair of star classes, while both parity populations occur. Determining whether all remaining cube-edge and spoke certificates can coexist is the next coherent bounded problem. Necessary type-pair survival is not an existence proof.
+
+## Superseded branch status
+
+A later same-day proof, `OPPOSITE_EDGE_PLANE_IMPOSSIBLE.md`, eliminates this support for arbitrary physical multiplicities. The obligations above remain historically valid but are no longer a live existence branch.
