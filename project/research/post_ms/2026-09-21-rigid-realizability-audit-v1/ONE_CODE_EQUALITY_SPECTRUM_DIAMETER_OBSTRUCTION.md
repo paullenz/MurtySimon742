@@ -6,28 +6,55 @@ Status: raw structural theorem inside the rigid complete one-code interface. Thi
 
 ## 1. Setup
 
-Let `Y=A_d` be a repeated outside block, `y>=2`, with selected matched-head count `m>=2`. Assume the generic universal-coordinate face `|C|=0` or `|C|>=3`, so the matched-forward head set is empty, `L=empty`.
+Let `Y=A_d` be a repeated outside block, `y>=2`, with selected matched-head count `m>=2`. The full-boundary theorem gives
 
-The full-boundary theorem gives `p<=u-k`. The equality-spectrum note showed that equality in the population lower bound `u>=p`, namely `u=p`, forces
+`p <= u-k+|L|`,
 
-- `k=0`;
-- exactly one U-vertex `w_i` of code `bar d xor e_i` for every coordinate `i`;
-- every `w_i` is X-anticomplete;
-- there are no other U-vertices.
+where `L=L(d,X)` is the matched-forward support set and `k>=0` is the selected complementary-U count of a minimum outside source. Therefore
 
-For every selected matched-head coordinate `i in S`, the corresponding head `h_i in X` has code `d xor e_i`.
+`u >= p-|L|`.
 
-## 2. The unique boundary witness is Y-anticomplete
+Suppose equality holds:
 
-Fix a coordinate `i` and a source `y0 in Y`.
+> `u=p-|L|`.                                           `(1.1)`
 
-Because `y>=2`, the X-reverse arm of the boundary trichotomy is impossible. Because `L=empty`, matched-forward support is impossible. Therefore the boundary edge
+Then equality in the cover forces `k=0`, every coordinate outside L to be U-forward, and U to be exhausted by exactly one vertex
+
+`w_i in U_{bar d xor e_i}`
+
+for each `i notin L`. There are no other U-vertices. Every such `w_i` is X-anticomplete.
+
+For every selected matched-head coordinate `i in S`, the corresponding head `h_i in X` has code
+
+`c(h_i)=d xor e_i`.
+
+Full exposure also gives `C subseteq [p]\S`.
+
+## 2. Equality always leaves a selected coordinate U-forward
+
+We first check the only possible obstruction to the argument: could all selected coordinates lie in L?
+
+- If `C=empty` or `|C|>=3`, then `L=empty`.
+- If `|C|=1`, then `|L|<=1`, while `m=|S|>=2`, so `S\L` is nonempty.
+- If `|C|=2`, any universal coordinate that is a global leaf already sees the other universal coordinate. Hence its sole possible neighbour, and therefore the head it supports, is the **other coordinate in C**. Thus `L subseteq C`. Since `C cap S=empty`, again `S cap L=empty`.
+
+Therefore in every universal-coordinate face there exists
+
+> **`i in S\L`.**                                      `(2.1)`
+
+That coordinate is necessarily U-forward under equality `(1.1)`.
+
+## 3. The unique aligned boundary witness is Y-anticomplete
+
+Fix `i in S\L` and a source `y0 in Y`.
+
+Because `y>=2`, the X-reverse arm of the boundary trichotomy is impossible. Because `i notin L`, matched-forward support is impossible. Therefore the boundary edge
 
 `y0 q_i^{d_i}`
 
 must use a U-forward witness of code `bar d xor e_i`.
 
-Under `u=p`, there is exactly one such vertex, namely `w_i`. Hence `w_i` is the U-forward witness for coordinate `i` for **every** source `y0 in Y`.
+Under population equality there is exactly one such vertex, namely `w_i`. Hence `w_i` is the U-forward witness at coordinate i for **every** source `y0 in Y`.
 
 The forward singleton condition is
 
@@ -35,17 +62,13 @@ The forward singleton condition is
 
 In particular `y0 w_i` is not an edge. Since `y0` was arbitrary,
 
-> **`N_Y(w_i)=empty` for every i.**                    `(2.1)`
+> **`N_Y(w_i)=empty`.**                                `(3.1)`
 
-The boundary theorem already gives `N_X(w_i)=empty`, so equality forces
+The boundary theorem already gives `N_X(w_i)=empty`, so
 
-> **`N_A(w_i)=empty` for every i.**                    `(2.2)`
+> **`N_A(w_i)=empty`.**                                `(3.2)`
 
-Thus the whole U-layer is A-anticomplete on the equality face.
-
-## 3. Complementary selected head and witness have no common neighbour
-
-Fix any selected coordinate `i in S` (such an i exists because `m>=2`).
+## 4. Complementary selected head and witness have no common neighbour
 
 The selected head and its aligned U-forward witness have complementary tight codes:
 
@@ -53,51 +76,45 @@ The selected head and its aligned U-forward witness have complementary tight cod
 
 `c(w_i)=bar d xor e_i = overline{c(h_i)}`.
 
-Hence tight-fibre transversality gives **no common matched endpoint** in B.
+Hence tight-fibre transversality gives no common matched endpoint in B.
 
 They also have no common neighbour elsewhere:
 
-- the root `v` is not adjacent to `h_i in A`;
-- every unmatched vertex lies in U, and equality makes every U-vertex X-anticomplete, so no U-vertex is adjacent to `h_i`;
-- by `(2.2)`, `w_i` has no neighbour in A at all.
+- the root v is not adjacent to `h_i in A`;
+- equality exhausts U by U-forward witnesses, every one of which is X-anticomplete, so no unmatched vertex is adjacent to `h_i`;
+- by `(3.2)`, `w_i` has no neighbour in A.
 
 Therefore
 
-> **`N(h_i) cap N(w_i)=empty`.**                        `(3.1)`
+> **`N(h_i) cap N(w_i)=empty`.**                        `(4.1)`
 
-Also `h_i w_i` is not an edge because every U-forward witness is X-anticomplete.
+Also `h_iw_i` is not an edge because every U-forward witness is X-anticomplete. Thus `dist(h_i,w_i)>2`, contradicting diameter two.
 
-Thus `dist(h_i,w_i)>2`, contradicting the assumption that G has diameter two.
-
-## 4. Theorem
+## 5. Theorem — strict boundary-population inequality
 
 > **Equality-spectrum diameter obstruction.**  
-> In a repeated one-code rigid cut with `y>=2`, `m>=2`, and generic universal-coordinate face `|C|=0` or `|C|>=3`, the equality case `u=p` is impossible. Hence
+> In every repeated one-code rigid cut with `y>=2` and `m>=2`, population equality `u=p-|L|` is impossible. Therefore
 >
-> **`u>=p+1`.**                                        `(4.1)`
+> **`u >= p-|L|+1`.**                                  `(5.1)`
 
-This is stronger than the previous population lower bound `u>=p` and uses neither rooted-Q nor score accounting.
+Combining with the global leaf theorem gives the exact facewise consequences
 
-## 5. Immediate hostile-family consequence
+- `C=empty` or `|C|>=3`: **`u>=p+1`**;
+- `|C|=1`: **`u>=p`**;
+- `|C|=2`: **`u>=p-|L|+1>=p-1`**.
+
+There is no surviving `m=2,L=S` exception: in the two-universal-coordinate face simultaneous matched-forward support is internal to C, so `L subseteq C` while `S cap C=empty`.
+
+## 6. Immediate hostile-family consequence
 
 The exact scalar family
 
 `g0=1, y=p-1, c=u=p, lambda=p, x=p, k=0, m=p, r=0`
 
-from `ONE_CODE_ROOTED_Q_HOSTILE_SCALAR_FAMILY.md` lies in the generic `C=empty` face and has `u=p`. Therefore it is **not physically realizable**, even before invoking rooted-Q or any score inequality.
+from `ONE_CODE_ROOTED_Q_HOSTILE_SCALAR_FAMILY.md` lies in the generic `C=empty` face and has `u=p`. It violates `(5.1)` and is therefore **not physically realizable**, even before invoking rooted-Q or any score inequality.
 
-Its failure mechanism is literal diameter-two failure: full boundary equality forces U to be A-anticomplete, while each selected head `h_i` is paired with an aligned complementary-code `w_i` having no possible common neighbour.
-
-## 6. Exceptional faces
-
-The same argument immediately excludes population equality whenever at least one selected matched-head coordinate is U-forward and the equality population exhausts U by boundary witnesses. Thus:
-
-- on `|C|=1`, equality `u=p-1` is impossible because `m>=2` and at most one coordinate can be matched-forward, leaving at least one selected coordinate U-forward;
-- on `|C|=2`, equality `u=p-2` is impossible whenever `m>=3`, because at most two coordinates are matched-forward;
-- the only population-equality geometry not eliminated by this argument is the sharp exceptional possibility `|C|=2`, `m=2`, `L=S`, where both selected coordinates are matched-forward and no aligned selected coordinate is forced to have a U-forward witness.
-
-These are direct consequences of the same diameter-two argument and should be treated as the corrected population frontier.
+Its failure mechanism is literal diameter-two failure: full boundary equality forces the aligned U-witness to be A-anticomplete, while its selected head has complementary tight code, leaving the pair with no common neighbour.
 
 ## 7. Scope
 
-No source-tuple capacity theorem, global selected `(source,coordinate)` uniqueness, H--U private-foot argument, finite scan, or score inequality is used. The only inputs are the corrected repeated-code boundary trichotomy, full exposure/equality spectrum, and diameter two.
+No source-tuple capacity theorem, global selected `(source,coordinate)` uniqueness, H--U private-foot argument, finite scan, or score inequality is used. The only inputs are the corrected repeated-code boundary trichotomy, full exposure/equality spectrum, the global matched-leaf theorem, tight-code transversality, and diameter two.
