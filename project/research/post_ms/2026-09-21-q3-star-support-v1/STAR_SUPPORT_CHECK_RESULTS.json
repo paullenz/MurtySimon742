@@ -1,0 +1,873 @@
+{
+  "description": "Necessary code-relation replay, not enumeration of all graphs",
+  "antipodal_pairs": [
+    {
+      "stars": [
+        0,
+        7
+      ],
+      "names": [
+        "C00",
+        "C01",
+        "C10",
+        "C11",
+        "C20",
+        "C21",
+        "P0",
+        "P1",
+        "S0",
+        "S7"
+      ],
+      "allowed_pairs": [
+        [
+          "P0",
+          "P1"
+        ],
+        [
+          "S0",
+          "S0"
+        ],
+        [
+          "S0",
+          "S7"
+        ],
+        [
+          "S7",
+          "S7"
+        ]
+      ],
+      "no_antipode_bridge": [],
+      "diameter_incompatible_codes": [
+        [
+          "C00",
+          "C01"
+        ],
+        [
+          "C10",
+          "C11"
+        ],
+        [
+          "C20",
+          "C21"
+        ]
+      ],
+      "elimination_round_sizes": [
+        72,
+        22
+      ]
+    },
+    {
+      "stars": [
+        1,
+        6
+      ],
+      "names": [
+        "C00",
+        "C01",
+        "C10",
+        "C11",
+        "C20",
+        "C21",
+        "P0",
+        "P1",
+        "S1",
+        "S6"
+      ],
+      "allowed_pairs": [
+        [
+          "P0",
+          "P1"
+        ],
+        [
+          "S1",
+          "S1"
+        ],
+        [
+          "S1",
+          "S6"
+        ],
+        [
+          "S6",
+          "S6"
+        ]
+      ],
+      "no_antipode_bridge": [],
+      "diameter_incompatible_codes": [
+        [
+          "C00",
+          "C01"
+        ],
+        [
+          "C10",
+          "C11"
+        ],
+        [
+          "C20",
+          "C21"
+        ]
+      ],
+      "elimination_round_sizes": [
+        72,
+        22
+      ]
+    },
+    {
+      "stars": [
+        2,
+        5
+      ],
+      "names": [
+        "C00",
+        "C01",
+        "C10",
+        "C11",
+        "C20",
+        "C21",
+        "P0",
+        "P1",
+        "S2",
+        "S5"
+      ],
+      "allowed_pairs": [
+        [
+          "P0",
+          "P1"
+        ],
+        [
+          "S2",
+          "S2"
+        ],
+        [
+          "S2",
+          "S5"
+        ],
+        [
+          "S5",
+          "S5"
+        ]
+      ],
+      "no_antipode_bridge": [],
+      "diameter_incompatible_codes": [
+        [
+          "C00",
+          "C01"
+        ],
+        [
+          "C10",
+          "C11"
+        ],
+        [
+          "C20",
+          "C21"
+        ]
+      ],
+      "elimination_round_sizes": [
+        72,
+        22
+      ]
+    },
+    {
+      "stars": [
+        3,
+        4
+      ],
+      "names": [
+        "C00",
+        "C01",
+        "C10",
+        "C11",
+        "C20",
+        "C21",
+        "P0",
+        "P1",
+        "S3",
+        "S4"
+      ],
+      "allowed_pairs": [
+        [
+          "P0",
+          "P1"
+        ],
+        [
+          "S3",
+          "S3"
+        ],
+        [
+          "S3",
+          "S4"
+        ],
+        [
+          "S4",
+          "S4"
+        ]
+      ],
+      "no_antipode_bridge": [],
+      "diameter_incompatible_codes": [
+        [
+          "C00",
+          "C01"
+        ],
+        [
+          "C10",
+          "C11"
+        ],
+        [
+          "C20",
+          "C21"
+        ]
+      ],
+      "elimination_round_sizes": [
+        72,
+        22
+      ]
+    }
+  ],
+  "single_centres": [
+    {
+      "stars": [
+        0
+      ],
+      "names": [
+        "C00",
+        "C01",
+        "C10",
+        "C11",
+        "C20",
+        "C21",
+        "P0",
+        "P1",
+        "S0"
+      ],
+      "allowed_pairs": [
+        [
+          "P0",
+          "P1"
+        ]
+      ],
+      "no_antipode_bridge": [
+        [
+          "S0",
+          7
+        ]
+      ],
+      "diameter_incompatible_codes": [
+        [
+          "C00",
+          "C01"
+        ],
+        [
+          "C10",
+          "C11"
+        ],
+        [
+          "C20",
+          "C21"
+        ]
+      ],
+      "elimination_round_sizes": [
+        71,
+        8
+      ]
+    },
+    {
+      "stars": [
+        1
+      ],
+      "names": [
+        "C00",
+        "C01",
+        "C10",
+        "C11",
+        "C20",
+        "C21",
+        "P0",
+        "P1",
+        "S1"
+      ],
+      "allowed_pairs": [
+        [
+          "P0",
+          "P1"
+        ]
+      ],
+      "no_antipode_bridge": [
+        [
+          "S1",
+          6
+        ]
+      ],
+      "diameter_incompatible_codes": [
+        [
+          "C00",
+          "C01"
+        ],
+        [
+          "C10",
+          "C11"
+        ],
+        [
+          "C20",
+          "C21"
+        ]
+      ],
+      "elimination_round_sizes": [
+        71,
+        8
+      ]
+    },
+    {
+      "stars": [
+        2
+      ],
+      "names": [
+        "C00",
+        "C01",
+        "C10",
+        "C11",
+        "C20",
+        "C21",
+        "P0",
+        "P1",
+        "S2"
+      ],
+      "allowed_pairs": [
+        [
+          "P0",
+          "P1"
+        ]
+      ],
+      "no_antipode_bridge": [
+        [
+          "S2",
+          5
+        ]
+      ],
+      "diameter_incompatible_codes": [
+        [
+          "C00",
+          "C01"
+        ],
+        [
+          "C10",
+          "C11"
+        ],
+        [
+          "C20",
+          "C21"
+        ]
+      ],
+      "elimination_round_sizes": [
+        71,
+        8
+      ]
+    },
+    {
+      "stars": [
+        3
+      ],
+      "names": [
+        "C00",
+        "C01",
+        "C10",
+        "C11",
+        "C20",
+        "C21",
+        "P0",
+        "P1",
+        "S3"
+      ],
+      "allowed_pairs": [
+        [
+          "P0",
+          "P1"
+        ]
+      ],
+      "no_antipode_bridge": [
+        [
+          "S3",
+          4
+        ]
+      ],
+      "diameter_incompatible_codes": [
+        [
+          "C00",
+          "C01"
+        ],
+        [
+          "C10",
+          "C11"
+        ],
+        [
+          "C20",
+          "C21"
+        ]
+      ],
+      "elimination_round_sizes": [
+        71,
+        8
+      ]
+    },
+    {
+      "stars": [
+        4
+      ],
+      "names": [
+        "C00",
+        "C01",
+        "C10",
+        "C11",
+        "C20",
+        "C21",
+        "P0",
+        "P1",
+        "S4"
+      ],
+      "allowed_pairs": [
+        [
+          "P0",
+          "P1"
+        ]
+      ],
+      "no_antipode_bridge": [
+        [
+          "S4",
+          3
+        ]
+      ],
+      "diameter_incompatible_codes": [
+        [
+          "C00",
+          "C01"
+        ],
+        [
+          "C10",
+          "C11"
+        ],
+        [
+          "C20",
+          "C21"
+        ]
+      ],
+      "elimination_round_sizes": [
+        71,
+        8
+      ]
+    },
+    {
+      "stars": [
+        5
+      ],
+      "names": [
+        "C00",
+        "C01",
+        "C10",
+        "C11",
+        "C20",
+        "C21",
+        "P0",
+        "P1",
+        "S5"
+      ],
+      "allowed_pairs": [
+        [
+          "P0",
+          "P1"
+        ]
+      ],
+      "no_antipode_bridge": [
+        [
+          "S5",
+          2
+        ]
+      ],
+      "diameter_incompatible_codes": [
+        [
+          "C00",
+          "C01"
+        ],
+        [
+          "C10",
+          "C11"
+        ],
+        [
+          "C20",
+          "C21"
+        ]
+      ],
+      "elimination_round_sizes": [
+        71,
+        8
+      ]
+    },
+    {
+      "stars": [
+        6
+      ],
+      "names": [
+        "C00",
+        "C01",
+        "C10",
+        "C11",
+        "C20",
+        "C21",
+        "P0",
+        "P1",
+        "S6"
+      ],
+      "allowed_pairs": [
+        [
+          "P0",
+          "P1"
+        ]
+      ],
+      "no_antipode_bridge": [
+        [
+          "S6",
+          1
+        ]
+      ],
+      "diameter_incompatible_codes": [
+        [
+          "C00",
+          "C01"
+        ],
+        [
+          "C10",
+          "C11"
+        ],
+        [
+          "C20",
+          "C21"
+        ]
+      ],
+      "elimination_round_sizes": [
+        71,
+        8
+      ]
+    },
+    {
+      "stars": [
+        7
+      ],
+      "names": [
+        "C00",
+        "C01",
+        "C10",
+        "C11",
+        "C20",
+        "C21",
+        "P0",
+        "P1",
+        "S7"
+      ],
+      "allowed_pairs": [
+        [
+          "P0",
+          "P1"
+        ]
+      ],
+      "no_antipode_bridge": [
+        [
+          "S7",
+          0
+        ]
+      ],
+      "diameter_incompatible_codes": [
+        [
+          "C00",
+          "C01"
+        ],
+        [
+          "C10",
+          "C11"
+        ],
+        [
+          "C20",
+          "C21"
+        ]
+      ],
+      "elimination_round_sizes": [
+        71,
+        8
+      ]
+    }
+  ],
+  "graph_controls": [
+    {
+      "p": 0,
+      "q": 0,
+      "n": 12,
+      "m": 32,
+      "d2c": true
+    },
+    {
+      "p": 0,
+      "q": 1,
+      "n": 13,
+      "m": 36,
+      "d2c": true
+    },
+    {
+      "p": 0,
+      "q": 2,
+      "n": 14,
+      "m": 40,
+      "d2c": true
+    },
+    {
+      "p": 0,
+      "q": 3,
+      "n": 15,
+      "m": 44,
+      "d2c": true
+    },
+    {
+      "p": 1,
+      "q": 0,
+      "n": 13,
+      "m": 36,
+      "d2c": true
+    },
+    {
+      "p": 1,
+      "q": 1,
+      "n": 14,
+      "m": 41,
+      "d2c": true
+    },
+    {
+      "p": 1,
+      "q": 2,
+      "n": 15,
+      "m": 46,
+      "d2c": true
+    },
+    {
+      "p": 1,
+      "q": 3,
+      "n": 16,
+      "m": 51,
+      "d2c": true
+    },
+    {
+      "p": 2,
+      "q": 0,
+      "n": 14,
+      "m": 40,
+      "d2c": true
+    },
+    {
+      "p": 2,
+      "q": 1,
+      "n": 15,
+      "m": 46,
+      "d2c": true
+    },
+    {
+      "p": 2,
+      "q": 2,
+      "n": 16,
+      "m": 52,
+      "d2c": true
+    },
+    {
+      "p": 2,
+      "q": 3,
+      "n": 17,
+      "m": 58,
+      "d2c": true
+    },
+    {
+      "p": 3,
+      "q": 0,
+      "n": 15,
+      "m": 44,
+      "d2c": true
+    },
+    {
+      "p": 3,
+      "q": 1,
+      "n": 16,
+      "m": 51,
+      "d2c": true
+    },
+    {
+      "p": 3,
+      "q": 2,
+      "n": 17,
+      "m": 58,
+      "d2c": true
+    },
+    {
+      "p": 3,
+      "q": 3,
+      "n": 18,
+      "m": 65,
+      "d2c": true
+    }
+  ],
+  "negative_control_added_coordinate_edge_rejected": true,
+  "two_centre_distances": {
+    "1": {
+      "stars": [
+        0,
+        1
+      ],
+      "names": [
+        "C00",
+        "C01",
+        "C10",
+        "C11",
+        "C20",
+        "C21",
+        "P0",
+        "P1",
+        "S0",
+        "S1"
+      ],
+      "allowed_pairs": [
+        [
+          "C11",
+          "S0"
+        ],
+        [
+          "C11",
+          "S1"
+        ],
+        [
+          "C21",
+          "S0"
+        ],
+        [
+          "C21",
+          "S1"
+        ],
+        [
+          "P0",
+          "P1"
+        ]
+      ],
+      "no_antipode_bridge": [],
+      "diameter_incompatible_codes": [
+        [
+          "C00",
+          "C01"
+        ],
+        [
+          "C10",
+          "C11"
+        ],
+        [
+          "C20",
+          "C21"
+        ]
+      ],
+      "elimination_round_sizes": [
+        74,
+        16
+      ]
+    },
+    "2": {
+      "stars": [
+        0,
+        3
+      ],
+      "names": [
+        "C00",
+        "C01",
+        "C10",
+        "C11",
+        "C20",
+        "C21",
+        "P0",
+        "P1",
+        "S0",
+        "S3"
+      ],
+      "allowed_pairs": [
+        [
+          "P0",
+          "P1"
+        ],
+        [
+          "S0",
+          "S3"
+        ]
+      ],
+      "no_antipode_bridge": [],
+      "diameter_incompatible_codes": [
+        [
+          "C00",
+          "C01"
+        ],
+        [
+          "C10",
+          "C11"
+        ],
+        [
+          "C20",
+          "C21"
+        ]
+      ],
+      "elimination_round_sizes": [
+        86,
+        10
+      ]
+    },
+    "3": {
+      "stars": [
+        0,
+        7
+      ],
+      "names": [
+        "C00",
+        "C01",
+        "C10",
+        "C11",
+        "C20",
+        "C21",
+        "P0",
+        "P1",
+        "S0",
+        "S7"
+      ],
+      "allowed_pairs": [
+        [
+          "P0",
+          "P1"
+        ],
+        [
+          "S0",
+          "S0"
+        ],
+        [
+          "S0",
+          "S7"
+        ],
+        [
+          "S7",
+          "S7"
+        ]
+      ],
+      "no_antipode_bridge": [],
+      "diameter_incompatible_codes": [
+        [
+          "C00",
+          "C01"
+        ],
+        [
+          "C10",
+          "C11"
+        ],
+        [
+          "C20",
+          "C21"
+        ]
+      ],
+      "elimination_round_sizes": [
+        72,
+        22
+      ]
+    }
+  }
+}
