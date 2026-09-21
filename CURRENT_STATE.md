@@ -6,9 +6,10 @@
 
 `X_3` (12 vertices, 32 edges, versus `M(12)=31`) remains the mandatory negative control. The false all-order 2019 Dailly–Foucaud–Hansberg Conjecture 3 is not the target. The mixed `{4,5}` selected-excess ladder is closed. First-proof priority on Erdős #742 is not the optimization target.
 
+<!-- CURRENT-STATUS:START -->
 CHECKPOINT CLASS: `FORWARD_2026_09_21_Q3_HALFCUBE_PALETTE_CLASSIFICATION`
 
-WORK MODE: graph-level hostile reconstruction / negative-control classification, chosen in direct response to the 21 September audit's dominant rigid-realizability risk.
+WORK MODE: `MATH`
 
 INSPECTED PREDECESSOR: 21 September daily red-team audit; README; prior live state; recent commits through `ed6b9efcc12fb0745f0b6e93d50f7a67b2255a62`; prior 11:00 session telemetry and its X3 extension/blow-up handoff.
 
@@ -19,6 +20,7 @@ UNPRESERVED WORK: none of the mathematical results listed below; all theorem not
 DEFERRED ADMIN: README top-level status still needs a compact pointer to the new Q3 palette classification/dense parity-bridge family; deferred rather than risking a large README rewrite during the preservation cutoff.
 
 NEXT ACTION: independently replay `Q3_HALFCUBE_PALETTE_COMPLETE_CLASSIFICATION.md` edge-deletion case by case; if it survives, use its exact linear-gap maximum as a graph-level control for the triangle-containing eventual problem, then attack the first raw-criticality mechanism allowing a Q3-root A-to-B neighbourhood outside the odd-halfcube palette. Do not spend the next hour merely sharpening the conditional 0.53 scalar wedge unless the graph-level route stalls.
+<!-- CURRENT-STATUS:END -->
 
 ## Current mathematical checkpoint
 
