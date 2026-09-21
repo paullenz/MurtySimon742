@@ -1,0 +1,1353 @@
+{
+  "scope": "equal multiplicities only; exact D2C SAT; diagnostic, not arbitrary-multiplicity proof",
+  "case_count": 96,
+  "feasible_count": 0,
+  "feasible": [],
+  "rows": [
+    {
+      "support": [
+        0,
+        1,
+        2,
+        3,
+        4
+      ],
+      "coordinate_multiplicity": 1,
+      "each_parity_multiplicity": 0,
+      "each_star_multiplicity": 1,
+      "satisfiable": false,
+      "model": null
+    },
+    {
+      "support": [
+        0,
+        1,
+        2,
+        3,
+        4
+      ],
+      "coordinate_multiplicity": 1,
+      "each_parity_multiplicity": 0,
+      "each_star_multiplicity": 2,
+      "satisfiable": false,
+      "model": null
+    },
+    {
+      "support": [
+        0,
+        1,
+        2,
+        3,
+        4
+      ],
+      "coordinate_multiplicity": 1,
+      "each_parity_multiplicity": 0,
+      "each_star_multiplicity": 3,
+      "satisfiable": false,
+      "model": null
+    },
+    {
+      "support": [
+        0,
+        1,
+        2,
+        3,
+        4
+      ],
+      "coordinate_multiplicity": 1,
+      "each_parity_multiplicity": 0,
+      "each_star_multiplicity": 4,
+      "satisfiable": false,
+      "model": null
+    },
+    {
+      "support": [
+        0,
+        1,
+        2,
+        3,
+        4
+      ],
+      "coordinate_multiplicity": 1,
+      "each_parity_multiplicity": 1,
+      "each_star_multiplicity": 1,
+      "satisfiable": false,
+      "model": null
+    },
+    {
+      "support": [
+        0,
+        1,
+        2,
+        3,
+        4
+      ],
+      "coordinate_multiplicity": 1,
+      "each_parity_multiplicity": 1,
+      "each_star_multiplicity": 2,
+      "satisfiable": false,
+      "model": null
+    },
+    {
+      "support": [
+        0,
+        1,
+        2,
+        3,
+        4
+      ],
+      "coordinate_multiplicity": 1,
+      "each_parity_multiplicity": 1,
+      "each_star_multiplicity": 3,
+      "satisfiable": false,
+      "model": null
+    },
+    {
+      "support": [
+        0,
+        1,
+        2,
+        3,
+        4
+      ],
+      "coordinate_multiplicity": 1,
+      "each_parity_multiplicity": 1,
+      "each_star_multiplicity": 4,
+      "satisfiable": false,
+      "model": null
+    },
+    {
+      "support": [
+        0,
+        1,
+        2,
+        3,
+        4
+      ],
+      "coordinate_multiplicity": 1,
+      "each_parity_multiplicity": 2,
+      "each_star_multiplicity": 1,
+      "satisfiable": false,
+      "model": null
+    },
+    {
+      "support": [
+        0,
+        1,
+        2,
+        3,
+        4
+      ],
+      "coordinate_multiplicity": 1,
+      "each_parity_multiplicity": 2,
+      "each_star_multiplicity": 2,
+      "satisfiable": false,
+      "model": null
+    },
+    {
+      "support": [
+        0,
+        1,
+        2,
+        3,
+        4
+      ],
+      "coordinate_multiplicity": 1,
+      "each_parity_multiplicity": 2,
+      "each_star_multiplicity": 3,
+      "satisfiable": false,
+      "model": null
+    },
+    {
+      "support": [
+        0,
+        1,
+        2,
+        3,
+        4
+      ],
+      "coordinate_multiplicity": 1,
+      "each_parity_multiplicity": 2,
+      "each_star_multiplicity": 4,
+      "satisfiable": false,
+      "model": null
+    },
+    {
+      "support": [
+        0,
+        1,
+        2,
+        3,
+        4
+      ],
+      "coordinate_multiplicity": 1,
+      "each_parity_multiplicity": 3,
+      "each_star_multiplicity": 1,
+      "satisfiable": false,
+      "model": null
+    },
+    {
+      "support": [
+        0,
+        1,
+        2,
+        3,
+        4
+      ],
+      "coordinate_multiplicity": 1,
+      "each_parity_multiplicity": 3,
+      "each_star_multiplicity": 2,
+      "satisfiable": false,
+      "model": null
+    },
+    {
+      "support": [
+        0,
+        1,
+        2,
+        3,
+        4
+      ],
+      "coordinate_multiplicity": 1,
+      "each_parity_multiplicity": 3,
+      "each_star_multiplicity": 3,
+      "satisfiable": false,
+      "model": null
+    },
+    {
+      "support": [
+        0,
+        1,
+        2,
+        3,
+        4
+      ],
+      "coordinate_multiplicity": 1,
+      "each_parity_multiplicity": 3,
+      "each_star_multiplicity": 4,
+      "satisfiable": false,
+      "model": null
+    },
+    {
+      "support": [
+        0,
+        1,
+        2,
+        3,
+        4
+      ],
+      "coordinate_multiplicity": 2,
+      "each_parity_multiplicity": 0,
+      "each_star_multiplicity": 1,
+      "satisfiable": false,
+      "model": null
+    },
+    {
+      "support": [
+        0,
+        1,
+        2,
+        3,
+        4
+      ],
+      "coordinate_multiplicity": 2,
+      "each_parity_multiplicity": 0,
+      "each_star_multiplicity": 2,
+      "satisfiable": false,
+      "model": null
+    },
+    {
+      "support": [
+        0,
+        1,
+        2,
+        3,
+        4
+      ],
+      "coordinate_multiplicity": 2,
+      "each_parity_multiplicity": 0,
+      "each_star_multiplicity": 3,
+      "satisfiable": false,
+      "model": null
+    },
+    {
+      "support": [
+        0,
+        1,
+        2,
+        3,
+        4
+      ],
+      "coordinate_multiplicity": 2,
+      "each_parity_multiplicity": 0,
+      "each_star_multiplicity": 4,
+      "satisfiable": false,
+      "model": null
+    },
+    {
+      "support": [
+        0,
+        1,
+        2,
+        3,
+        4
+      ],
+      "coordinate_multiplicity": 2,
+      "each_parity_multiplicity": 1,
+      "each_star_multiplicity": 1,
+      "satisfiable": false,
+      "model": null
+    },
+    {
+      "support": [
+        0,
+        1,
+        2,
+        3,
+        4
+      ],
+      "coordinate_multiplicity": 2,
+      "each_parity_multiplicity": 1,
+      "each_star_multiplicity": 2,
+      "satisfiable": false,
+      "model": null
+    },
+    {
+      "support": [
+        0,
+        1,
+        2,
+        3,
+        4
+      ],
+      "coordinate_multiplicity": 2,
+      "each_parity_multiplicity": 1,
+      "each_star_multiplicity": 3,
+      "satisfiable": false,
+      "model": null
+    },
+    {
+      "support": [
+        0,
+        1,
+        2,
+        3,
+        4
+      ],
+      "coordinate_multiplicity": 2,
+      "each_parity_multiplicity": 1,
+      "each_star_multiplicity": 4,
+      "satisfiable": false,
+      "model": null
+    },
+    {
+      "support": [
+        0,
+        1,
+        2,
+        3,
+        4
+      ],
+      "coordinate_multiplicity": 2,
+      "each_parity_multiplicity": 2,
+      "each_star_multiplicity": 1,
+      "satisfiable": false,
+      "model": null
+    },
+    {
+      "support": [
+        0,
+        1,
+        2,
+        3,
+        4
+      ],
+      "coordinate_multiplicity": 2,
+      "each_parity_multiplicity": 2,
+      "each_star_multiplicity": 2,
+      "satisfiable": false,
+      "model": null
+    },
+    {
+      "support": [
+        0,
+        1,
+        2,
+        3,
+        4
+      ],
+      "coordinate_multiplicity": 2,
+      "each_parity_multiplicity": 2,
+      "each_star_multiplicity": 3,
+      "satisfiable": false,
+      "model": null
+    },
+    {
+      "support": [
+        0,
+        1,
+        2,
+        3,
+        4
+      ],
+      "coordinate_multiplicity": 2,
+      "each_parity_multiplicity": 2,
+      "each_star_multiplicity": 4,
+      "satisfiable": false,
+      "model": null
+    },
+    {
+      "support": [
+        0,
+        1,
+        2,
+        3,
+        4
+      ],
+      "coordinate_multiplicity": 2,
+      "each_parity_multiplicity": 3,
+      "each_star_multiplicity": 1,
+      "satisfiable": false,
+      "model": null
+    },
+    {
+      "support": [
+        0,
+        1,
+        2,
+        3,
+        4
+      ],
+      "coordinate_multiplicity": 2,
+      "each_parity_multiplicity": 3,
+      "each_star_multiplicity": 2,
+      "satisfiable": false,
+      "model": null
+    },
+    {
+      "support": [
+        0,
+        1,
+        2,
+        3,
+        4
+      ],
+      "coordinate_multiplicity": 2,
+      "each_parity_multiplicity": 3,
+      "each_star_multiplicity": 3,
+      "satisfiable": false,
+      "model": null
+    },
+    {
+      "support": [
+        0,
+        1,
+        2,
+        3,
+        4
+      ],
+      "coordinate_multiplicity": 2,
+      "each_parity_multiplicity": 3,
+      "each_star_multiplicity": 4,
+      "satisfiable": false,
+      "model": null
+    },
+    {
+      "support": [
+        0,
+        1,
+        2,
+        3,
+        4
+      ],
+      "coordinate_multiplicity": 3,
+      "each_parity_multiplicity": 0,
+      "each_star_multiplicity": 1,
+      "satisfiable": false,
+      "model": null
+    },
+    {
+      "support": [
+        0,
+        1,
+        2,
+        3,
+        4
+      ],
+      "coordinate_multiplicity": 3,
+      "each_parity_multiplicity": 0,
+      "each_star_multiplicity": 2,
+      "satisfiable": false,
+      "model": null
+    },
+    {
+      "support": [
+        0,
+        1,
+        2,
+        3,
+        4
+      ],
+      "coordinate_multiplicity": 3,
+      "each_parity_multiplicity": 0,
+      "each_star_multiplicity": 3,
+      "satisfiable": false,
+      "model": null
+    },
+    {
+      "support": [
+        0,
+        1,
+        2,
+        3,
+        4
+      ],
+      "coordinate_multiplicity": 3,
+      "each_parity_multiplicity": 0,
+      "each_star_multiplicity": 4,
+      "satisfiable": false,
+      "model": null
+    },
+    {
+      "support": [
+        0,
+        1,
+        2,
+        3,
+        4
+      ],
+      "coordinate_multiplicity": 3,
+      "each_parity_multiplicity": 1,
+      "each_star_multiplicity": 1,
+      "satisfiable": false,
+      "model": null
+    },
+    {
+      "support": [
+        0,
+        1,
+        2,
+        3,
+        4
+      ],
+      "coordinate_multiplicity": 3,
+      "each_parity_multiplicity": 1,
+      "each_star_multiplicity": 2,
+      "satisfiable": false,
+      "model": null
+    },
+    {
+      "support": [
+        0,
+        1,
+        2,
+        3,
+        4
+      ],
+      "coordinate_multiplicity": 3,
+      "each_parity_multiplicity": 1,
+      "each_star_multiplicity": 3,
+      "satisfiable": false,
+      "model": null
+    },
+    {
+      "support": [
+        0,
+        1,
+        2,
+        3,
+        4
+      ],
+      "coordinate_multiplicity": 3,
+      "each_parity_multiplicity": 1,
+      "each_star_multiplicity": 4,
+      "satisfiable": false,
+      "model": null
+    },
+    {
+      "support": [
+        0,
+        1,
+        2,
+        3,
+        4
+      ],
+      "coordinate_multiplicity": 3,
+      "each_parity_multiplicity": 2,
+      "each_star_multiplicity": 1,
+      "satisfiable": false,
+      "model": null
+    },
+    {
+      "support": [
+        0,
+        1,
+        2,
+        3,
+        4
+      ],
+      "coordinate_multiplicity": 3,
+      "each_parity_multiplicity": 2,
+      "each_star_multiplicity": 2,
+      "satisfiable": false,
+      "model": null
+    },
+    {
+      "support": [
+        0,
+        1,
+        2,
+        3,
+        4
+      ],
+      "coordinate_multiplicity": 3,
+      "each_parity_multiplicity": 2,
+      "each_star_multiplicity": 3,
+      "satisfiable": false,
+      "model": null
+    },
+    {
+      "support": [
+        0,
+        1,
+        2,
+        3,
+        4
+      ],
+      "coordinate_multiplicity": 3,
+      "each_parity_multiplicity": 2,
+      "each_star_multiplicity": 4,
+      "satisfiable": false,
+      "model": null
+    },
+    {
+      "support": [
+        0,
+        1,
+        2,
+        3,
+        4
+      ],
+      "coordinate_multiplicity": 3,
+      "each_parity_multiplicity": 3,
+      "each_star_multiplicity": 1,
+      "satisfiable": false,
+      "model": null
+    },
+    {
+      "support": [
+        0,
+        1,
+        2,
+        3,
+        4
+      ],
+      "coordinate_multiplicity": 3,
+      "each_parity_multiplicity": 3,
+      "each_star_multiplicity": 2,
+      "satisfiable": false,
+      "model": null
+    },
+    {
+      "support": [
+        0,
+        1,
+        2,
+        3,
+        4
+      ],
+      "coordinate_multiplicity": 3,
+      "each_parity_multiplicity": 3,
+      "each_star_multiplicity": 3,
+      "satisfiable": false,
+      "model": null
+    },
+    {
+      "support": [
+        0,
+        1,
+        2,
+        3,
+        4
+      ],
+      "coordinate_multiplicity": 3,
+      "each_parity_multiplicity": 3,
+      "each_star_multiplicity": 4,
+      "satisfiable": false,
+      "model": null
+    },
+    {
+      "support": [
+        0,
+        1,
+        2,
+        5,
+        6
+      ],
+      "coordinate_multiplicity": 1,
+      "each_parity_multiplicity": 0,
+      "each_star_multiplicity": 1,
+      "satisfiable": false,
+      "model": null
+    },
+    {
+      "support": [
+        0,
+        1,
+        2,
+        5,
+        6
+      ],
+      "coordinate_multiplicity": 1,
+      "each_parity_multiplicity": 0,
+      "each_star_multiplicity": 2,
+      "satisfiable": false,
+      "model": null
+    },
+    {
+      "support": [
+        0,
+        1,
+        2,
+        5,
+        6
+      ],
+      "coordinate_multiplicity": 1,
+      "each_parity_multiplicity": 0,
+      "each_star_multiplicity": 3,
+      "satisfiable": false,
+      "model": null
+    },
+    {
+      "support": [
+        0,
+        1,
+        2,
+        5,
+        6
+      ],
+      "coordinate_multiplicity": 1,
+      "each_parity_multiplicity": 0,
+      "each_star_multiplicity": 4,
+      "satisfiable": false,
+      "model": null
+    },
+    {
+      "support": [
+        0,
+        1,
+        2,
+        5,
+        6
+      ],
+      "coordinate_multiplicity": 1,
+      "each_parity_multiplicity": 1,
+      "each_star_multiplicity": 1,
+      "satisfiable": false,
+      "model": null
+    },
+    {
+      "support": [
+        0,
+        1,
+        2,
+        5,
+        6
+      ],
+      "coordinate_multiplicity": 1,
+      "each_parity_multiplicity": 1,
+      "each_star_multiplicity": 2,
+      "satisfiable": false,
+      "model": null
+    },
+    {
+      "support": [
+        0,
+        1,
+        2,
+        5,
+        6
+      ],
+      "coordinate_multiplicity": 1,
+      "each_parity_multiplicity": 1,
+      "each_star_multiplicity": 3,
+      "satisfiable": false,
+      "model": null
+    },
+    {
+      "support": [
+        0,
+        1,
+        2,
+        5,
+        6
+      ],
+      "coordinate_multiplicity": 1,
+      "each_parity_multiplicity": 1,
+      "each_star_multiplicity": 4,
+      "satisfiable": false,
+      "model": null
+    },
+    {
+      "support": [
+        0,
+        1,
+        2,
+        5,
+        6
+      ],
+      "coordinate_multiplicity": 1,
+      "each_parity_multiplicity": 2,
+      "each_star_multiplicity": 1,
+      "satisfiable": false,
+      "model": null
+    },
+    {
+      "support": [
+        0,
+        1,
+        2,
+        5,
+        6
+      ],
+      "coordinate_multiplicity": 1,
+      "each_parity_multiplicity": 2,
+      "each_star_multiplicity": 2,
+      "satisfiable": false,
+      "model": null
+    },
+    {
+      "support": [
+        0,
+        1,
+        2,
+        5,
+        6
+      ],
+      "coordinate_multiplicity": 1,
+      "each_parity_multiplicity": 2,
+      "each_star_multiplicity": 3,
+      "satisfiable": false,
+      "model": null
+    },
+    {
+      "support": [
+        0,
+        1,
+        2,
+        5,
+        6
+      ],
+      "coordinate_multiplicity": 1,
+      "each_parity_multiplicity": 2,
+      "each_star_multiplicity": 4,
+      "satisfiable": false,
+      "model": null
+    },
+    {
+      "support": [
+        0,
+        1,
+        2,
+        5,
+        6
+      ],
+      "coordinate_multiplicity": 1,
+      "each_parity_multiplicity": 3,
+      "each_star_multiplicity": 1,
+      "satisfiable": false,
+      "model": null
+    },
+    {
+      "support": [
+        0,
+        1,
+        2,
+        5,
+        6
+      ],
+      "coordinate_multiplicity": 1,
+      "each_parity_multiplicity": 3,
+      "each_star_multiplicity": 2,
+      "satisfiable": false,
+      "model": null
+    },
+    {
+      "support": [
+        0,
+        1,
+        2,
+        5,
+        6
+      ],
+      "coordinate_multiplicity": 1,
+      "each_parity_multiplicity": 3,
+      "each_star_multiplicity": 3,
+      "satisfiable": false,
+      "model": null
+    },
+    {
+      "support": [
+        0,
+        1,
+        2,
+        5,
+        6
+      ],
+      "coordinate_multiplicity": 1,
+      "each_parity_multiplicity": 3,
+      "each_star_multiplicity": 4,
+      "satisfiable": false,
+      "model": null
+    },
+    {
+      "support": [
+        0,
+        1,
+        2,
+        5,
+        6
+      ],
+      "coordinate_multiplicity": 2,
+      "each_parity_multiplicity": 0,
+      "each_star_multiplicity": 1,
+      "satisfiable": false,
+      "model": null
+    },
+    {
+      "support": [
+        0,
+        1,
+        2,
+        5,
+        6
+      ],
+      "coordinate_multiplicity": 2,
+      "each_parity_multiplicity": 0,
+      "each_star_multiplicity": 2,
+      "satisfiable": false,
+      "model": null
+    },
+    {
+      "support": [
+        0,
+        1,
+        2,
+        5,
+        6
+      ],
+      "coordinate_multiplicity": 2,
+      "each_parity_multiplicity": 0,
+      "each_star_multiplicity": 3,
+      "satisfiable": false,
+      "model": null
+    },
+    {
+      "support": [
+        0,
+        1,
+        2,
+        5,
+        6
+      ],
+      "coordinate_multiplicity": 2,
+      "each_parity_multiplicity": 0,
+      "each_star_multiplicity": 4,
+      "satisfiable": false,
+      "model": null
+    },
+    {
+      "support": [
+        0,
+        1,
+        2,
+        5,
+        6
+      ],
+      "coordinate_multiplicity": 2,
+      "each_parity_multiplicity": 1,
+      "each_star_multiplicity": 1,
+      "satisfiable": false,
+      "model": null
+    },
+    {
+      "support": [
+        0,
+        1,
+        2,
+        5,
+        6
+      ],
+      "coordinate_multiplicity": 2,
+      "each_parity_multiplicity": 1,
+      "each_star_multiplicity": 2,
+      "satisfiable": false,
+      "model": null
+    },
+    {
+      "support": [
+        0,
+        1,
+        2,
+        5,
+        6
+      ],
+      "coordinate_multiplicity": 2,
+      "each_parity_multiplicity": 1,
+      "each_star_multiplicity": 3,
+      "satisfiable": false,
+      "model": null
+    },
+    {
+      "support": [
+        0,
+        1,
+        2,
+        5,
+        6
+      ],
+      "coordinate_multiplicity": 2,
+      "each_parity_multiplicity": 1,
+      "each_star_multiplicity": 4,
+      "satisfiable": false,
+      "model": null
+    },
+    {
+      "support": [
+        0,
+        1,
+        2,
+        5,
+        6
+      ],
+      "coordinate_multiplicity": 2,
+      "each_parity_multiplicity": 2,
+      "each_star_multiplicity": 1,
+      "satisfiable": false,
+      "model": null
+    },
+    {
+      "support": [
+        0,
+        1,
+        2,
+        5,
+        6
+      ],
+      "coordinate_multiplicity": 2,
+      "each_parity_multiplicity": 2,
+      "each_star_multiplicity": 2,
+      "satisfiable": false,
+      "model": null
+    },
+    {
+      "support": [
+        0,
+        1,
+        2,
+        5,
+        6
+      ],
+      "coordinate_multiplicity": 2,
+      "each_parity_multiplicity": 2,
+      "each_star_multiplicity": 3,
+      "satisfiable": false,
+      "model": null
+    },
+    {
+      "support": [
+        0,
+        1,
+        2,
+        5,
+        6
+      ],
+      "coordinate_multiplicity": 2,
+      "each_parity_multiplicity": 2,
+      "each_star_multiplicity": 4,
+      "satisfiable": false,
+      "model": null
+    },
+    {
+      "support": [
+        0,
+        1,
+        2,
+        5,
+        6
+      ],
+      "coordinate_multiplicity": 2,
+      "each_parity_multiplicity": 3,
+      "each_star_multiplicity": 1,
+      "satisfiable": false,
+      "model": null
+    },
+    {
+      "support": [
+        0,
+        1,
+        2,
+        5,
+        6
+      ],
+      "coordinate_multiplicity": 2,
+      "each_parity_multiplicity": 3,
+      "each_star_multiplicity": 2,
+      "satisfiable": false,
+      "model": null
+    },
+    {
+      "support": [
+        0,
+        1,
+        2,
+        5,
+        6
+      ],
+      "coordinate_multiplicity": 2,
+      "each_parity_multiplicity": 3,
+      "each_star_multiplicity": 3,
+      "satisfiable": false,
+      "model": null
+    },
+    {
+      "support": [
+        0,
+        1,
+        2,
+        5,
+        6
+      ],
+      "coordinate_multiplicity": 2,
+      "each_parity_multiplicity": 3,
+      "each_star_multiplicity": 4,
+      "satisfiable": false,
+      "model": null
+    },
+    {
+      "support": [
+        0,
+        1,
+        2,
+        5,
+        6
+      ],
+      "coordinate_multiplicity": 3,
+      "each_parity_multiplicity": 0,
+      "each_star_multiplicity": 1,
+      "satisfiable": false,
+      "model": null
+    },
+    {
+      "support": [
+        0,
+        1,
+        2,
+        5,
+        6
+      ],
+      "coordinate_multiplicity": 3,
+      "each_parity_multiplicity": 0,
+      "each_star_multiplicity": 2,
+      "satisfiable": false,
+      "model": null
+    },
+    {
+      "support": [
+        0,
+        1,
+        2,
+        5,
+        6
+      ],
+      "coordinate_multiplicity": 3,
+      "each_parity_multiplicity": 0,
+      "each_star_multiplicity": 3,
+      "satisfiable": false,
+      "model": null
+    },
+    {
+      "support": [
+        0,
+        1,
+        2,
+        5,
+        6
+      ],
+      "coordinate_multiplicity": 3,
+      "each_parity_multiplicity": 0,
+      "each_star_multiplicity": 4,
+      "satisfiable": false,
+      "model": null
+    },
+    {
+      "support": [
+        0,
+        1,
+        2,
+        5,
+        6
+      ],
+      "coordinate_multiplicity": 3,
+      "each_parity_multiplicity": 1,
+      "each_star_multiplicity": 1,
+      "satisfiable": false,
+      "model": null
+    },
+    {
+      "support": [
+        0,
+        1,
+        2,
+        5,
+        6
+      ],
+      "coordinate_multiplicity": 3,
+      "each_parity_multiplicity": 1,
+      "each_star_multiplicity": 2,
+      "satisfiable": false,
+      "model": null
+    },
+    {
+      "support": [
+        0,
+        1,
+        2,
+        5,
+        6
+      ],
+      "coordinate_multiplicity": 3,
+      "each_parity_multiplicity": 1,
+      "each_star_multiplicity": 3,
+      "satisfiable": false,
+      "model": null
+    },
+    {
+      "support": [
+        0,
+        1,
+        2,
+        5,
+        6
+      ],
+      "coordinate_multiplicity": 3,
+      "each_parity_multiplicity": 1,
+      "each_star_multiplicity": 4,
+      "satisfiable": false,
+      "model": null
+    },
+    {
+      "support": [
+        0,
+        1,
+        2,
+        5,
+        6
+      ],
+      "coordinate_multiplicity": 3,
+      "each_parity_multiplicity": 2,
+      "each_star_multiplicity": 1,
+      "satisfiable": false,
+      "model": null
+    },
+    {
+      "support": [
+        0,
+        1,
+        2,
+        5,
+        6
+      ],
+      "coordinate_multiplicity": 3,
+      "each_parity_multiplicity": 2,
+      "each_star_multiplicity": 2,
+      "satisfiable": false,
+      "model": null
+    },
+    {
+      "support": [
+        0,
+        1,
+        2,
+        5,
+        6
+      ],
+      "coordinate_multiplicity": 3,
+      "each_parity_multiplicity": 2,
+      "each_star_multiplicity": 3,
+      "satisfiable": false,
+      "model": null
+    },
+    {
+      "support": [
+        0,
+        1,
+        2,
+        5,
+        6
+      ],
+      "coordinate_multiplicity": 3,
+      "each_parity_multiplicity": 2,
+      "each_star_multiplicity": 4,
+      "satisfiable": false,
+      "model": null
+    },
+    {
+      "support": [
+        0,
+        1,
+        2,
+        5,
+        6
+      ],
+      "coordinate_multiplicity": 3,
+      "each_parity_multiplicity": 3,
+      "each_star_multiplicity": 1,
+      "satisfiable": false,
+      "model": null
+    },
+    {
+      "support": [
+        0,
+        1,
+        2,
+        5,
+        6
+      ],
+      "coordinate_multiplicity": 3,
+      "each_parity_multiplicity": 3,
+      "each_star_multiplicity": 2,
+      "satisfiable": false,
+      "model": null
+    },
+    {
+      "support": [
+        0,
+        1,
+        2,
+        5,
+        6
+      ],
+      "coordinate_multiplicity": 3,
+      "each_parity_multiplicity": 3,
+      "each_star_multiplicity": 3,
+      "satisfiable": false,
+      "model": null
+    },
+    {
+      "support": [
+        0,
+        1,
+        2,
+        5,
+        6
+      ],
+      "coordinate_multiplicity": 3,
+      "each_parity_multiplicity": 3,
+      "each_star_multiplicity": 4,
+      "satisfiable": false,
+      "model": null
+    }
+  ],
+  "status": "PASS"
+}

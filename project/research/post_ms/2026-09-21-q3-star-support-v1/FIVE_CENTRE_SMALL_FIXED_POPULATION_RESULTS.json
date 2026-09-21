@@ -1,0 +1,308 @@
+{
+  "scope": "one physical copy of every selected code; fixed star support {0,1,2,4,7}",
+  "minimum_halfcode_count": 7,
+  "order_21": {
+    "feasible_halfcode_subsets": [
+      {
+        "halfcodes": [
+          "C00",
+          "C01",
+          "C10",
+          "C11",
+          "C20",
+          "C21",
+          "P1"
+        ],
+        "A_graphs": [
+          [
+            [
+              "C00",
+              "P1"
+            ],
+            [
+              "C01",
+              "P1"
+            ],
+            [
+              "C10",
+              "P1"
+            ],
+            [
+              "C11",
+              "P1"
+            ],
+            [
+              "C20",
+              "P1"
+            ],
+            [
+              "C21",
+              "P1"
+            ],
+            [
+              "S0",
+              "S7"
+            ],
+            [
+              "S1",
+              "S4"
+            ],
+            [
+              "S2",
+              "S4"
+            ]
+          ],
+          [
+            [
+              "C00",
+              "P1"
+            ],
+            [
+              "C01",
+              "P1"
+            ],
+            [
+              "C10",
+              "P1"
+            ],
+            [
+              "C11",
+              "P1"
+            ],
+            [
+              "C20",
+              "P1"
+            ],
+            [
+              "C21",
+              "P1"
+            ],
+            [
+              "S0",
+              "S7"
+            ],
+            [
+              "S1",
+              "S2"
+            ],
+            [
+              "S2",
+              "S4"
+            ]
+          ],
+          [
+            [
+              "C00",
+              "P1"
+            ],
+            [
+              "C01",
+              "P1"
+            ],
+            [
+              "C10",
+              "P1"
+            ],
+            [
+              "C11",
+              "P1"
+            ],
+            [
+              "C20",
+              "P1"
+            ],
+            [
+              "C21",
+              "P1"
+            ],
+            [
+              "S0",
+              "S7"
+            ],
+            [
+              "S1",
+              "S2"
+            ],
+            [
+              "S1",
+              "S4"
+            ]
+          ]
+        ]
+      }
+    ],
+    "labeled_A_graph_count": 3,
+    "isomorphism_note": "the three star paths are related by permutations of cube coordinates",
+    "edge_count": 77
+  },
+  "order_22_full_halfcodes": {
+    "labeled_A_graph_count": 7,
+    "A_edge_distribution": {
+      "11": 1,
+      "10": 6
+    },
+    "unique_maximum_A_graph": [
+      [
+        "C00",
+        "P1"
+      ],
+      [
+        "C01",
+        "P1"
+      ],
+      [
+        "C10",
+        "P1"
+      ],
+      [
+        "C11",
+        "P1"
+      ],
+      [
+        "C20",
+        "P1"
+      ],
+      [
+        "C21",
+        "P1"
+      ],
+      [
+        "P0",
+        "P1"
+      ],
+      [
+        "S0",
+        "S7"
+      ],
+      [
+        "S1",
+        "S7"
+      ],
+      [
+        "S2",
+        "S7"
+      ],
+      [
+        "S4",
+        "S7"
+      ]
+    ],
+    "maximum_edge_count": 83
+  },
+  "order_22_one_extra_from_minimum_population": {
+    "rows": [
+      {
+        "extra_type": "P0",
+        "labeled_A_graph_count": 7,
+        "A_edge_distribution": {
+          "10": 6,
+          "11": 1
+        },
+        "maximum_edge_count": 83
+      },
+      {
+        "extra_type": "C00",
+        "labeled_A_graph_count": 3,
+        "A_edge_distribution": {
+          "10": 3
+        },
+        "maximum_edge_count": 82
+      },
+      {
+        "extra_type": "C01",
+        "labeled_A_graph_count": 3,
+        "A_edge_distribution": {
+          "10": 3
+        },
+        "maximum_edge_count": 82
+      },
+      {
+        "extra_type": "C10",
+        "labeled_A_graph_count": 3,
+        "A_edge_distribution": {
+          "10": 3
+        },
+        "maximum_edge_count": 82
+      },
+      {
+        "extra_type": "C11",
+        "labeled_A_graph_count": 3,
+        "A_edge_distribution": {
+          "10": 3
+        },
+        "maximum_edge_count": 82
+      },
+      {
+        "extra_type": "C20",
+        "labeled_A_graph_count": 3,
+        "A_edge_distribution": {
+          "10": 3
+        },
+        "maximum_edge_count": 82
+      },
+      {
+        "extra_type": "C21",
+        "labeled_A_graph_count": 3,
+        "A_edge_distribution": {
+          "10": 3
+        },
+        "maximum_edge_count": 82
+      },
+      {
+        "extra_type": "P1",
+        "labeled_A_graph_count": 24,
+        "A_edge_distribution": {
+          "9": 24
+        },
+        "maximum_edge_count": 81
+      },
+      {
+        "extra_type": "S0",
+        "labeled_A_graph_count": 0,
+        "A_edge_distribution": {},
+        "maximum_edge_count": null
+      },
+      {
+        "extra_type": "S1",
+        "labeled_A_graph_count": 4,
+        "A_edge_distribution": {
+          "9": 2,
+          "10": 2
+        },
+        "maximum_edge_count": 82
+      },
+      {
+        "extra_type": "S2",
+        "labeled_A_graph_count": 4,
+        "A_edge_distribution": {
+          "9": 2,
+          "10": 2
+        },
+        "maximum_edge_count": 82
+      },
+      {
+        "extra_type": "S4",
+        "labeled_A_graph_count": 4,
+        "A_edge_distribution": {
+          "10": 2,
+          "9": 2
+        },
+        "maximum_edge_count": 82
+      },
+      {
+        "extra_type": "S7",
+        "labeled_A_graph_count": 55,
+        "A_edge_distribution": {
+          "11": 34,
+          "10": 21
+        },
+        "maximum_edge_count": 83
+      }
+    ],
+    "83_edge_extra_types": [
+      "P0",
+      "S7"
+    ]
+  },
+  "status": "PASS"
+}

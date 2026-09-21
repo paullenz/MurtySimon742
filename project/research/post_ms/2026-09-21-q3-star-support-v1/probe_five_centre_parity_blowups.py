@@ -37,6 +37,14 @@ def main():
             expected = r * q + 4 * (r + q) + 73
             M = (n - 1) ** 2 // 4 + 1
             assert n == 20 + r + q and m == expected and M > m
+            u = r + q
+            d = abs(r - q)
+            exact_gap = (
+                11 * u // 2 + 18 + d * d // 4
+                if u % 2 == 0
+                else (11 * u + 37) // 2 + (d * d - 1) // 4
+            )
+            assert M - m == exact_gap
             rows.append({
                 "r": r,
                 "q": q,

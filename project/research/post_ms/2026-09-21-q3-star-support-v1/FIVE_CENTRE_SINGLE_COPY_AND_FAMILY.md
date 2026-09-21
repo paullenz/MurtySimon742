@@ -67,9 +67,14 @@ passes all 400 pairs `1<=r,q<=20`, with
     n = 20+r+q,
     m = rq+4(r+q)+73.
 
-Thus five-centre support does admit quadratic-density parity blowups.  For
-balanced `r,q` their gap from `M(n)` is still positive linear (exactly
-`11(r+q)/2+18` when `r+q` is even, and `6(r+q)+18` when it is odd).  The finite
-grid is a strong candidate for a two-parameter family, but arbitrary-parameter
-D2C criticality has not yet been proved; the next run should establish a
-uniform twin-extension witness invariant rather than infer it from the scan.
+Thus five-centre support does admit quadratic-density parity blowups.  The
+uniform twin-extension proof is now given in
+`FIVE_CENTRE_TWO_PARAMETER_FAMILY_THEOREM.md`.  Writing `u=r+q` and
+`d=|r-q|`, the exact gap from `M(n)` is
+
+    11u/2+18+d^2/4                 if u is even,
+    (11u+37)/2+(d^2-1)/4           if u is odd.
+
+This corrects the earlier same-session odd-`u` shorthand `6u+18`, which was
+arithmetically false.  The family theorem itself and its edge formula are
+unchanged.
