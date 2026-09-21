@@ -5,19 +5,19 @@ Canonical repository: `paullenz/MurtySimon742`. Date: 21 September 2026.
 Active target: the eventual / sufficiently-large second-extremal problem around M(n)=floor((n-1)^2/4)+1. The general theorem and a uniform threshold remain open. X3 (12 vertices,32 edges,M(12)=31) remains mandatory. Do not revive the false all-order conjecture or the closed mixed {4,5} ladder.
 
 <!-- CURRENT-STATUS:START -->
-CHECKPOINT CLASS: `EXACT_PARITY_STAR_MAXSAT_GRID_RQ_PLUS_14`
+CHECKPOINT CLASS: `PARITY_STAR_CANCELLATION_REDUCED_TO_H_PLUS_L`
 
 WORK MODE: `MATH`
 
-INSPECTED PREDECESSOR: `488dcd1bb619ea724c023ba6c8e3dfe09e152518`.
+INSPECTED PREDECESSOR: `b6a05f0edc11484f8997db019a328f33e3d74ca6`.
 
-LAST VERIFIED RESULT: For the fixed multiset of all six coordinate codes and two copies of each even star code, exact graph-level MaxSAT gives e(A)=rq+14 on seven parameter pairs (r=2,3; q through 4/3). This is finite evidence, not a general theorem; every returned graph passes direct D2C replay.
+LAST VERIFIED RESULT: The desired sharp parity-star block bound e(R∪T∪S)<=rq+s follows exactly from h+L<=s, where h is the matching deficiency of hard parity-star obligations against unoccupied missing parity pairs and L is the bridge-leaf/star-forest bucket. All seven fixed-multiset exact optima satisfy the condition sharply. Six have h=1, so the stronger saturating-matching shortcut is false.
 
 UNPRESERVED WORK: None after this checkpoint.
 
-DEFERRED ADMIN: README synthesis belongs in final preservation.
+DEFERRED ADMIN: README and theorem-index synthesis belongs in final preservation.
 
-NEXT ACTION: Prove or break the fixed-eight-star cancellation by tracing unoccupied missing P0-P1 pairs through the four forced star fans; do not infer the formula outside the exact grid.
+NEXT ACTION: Prove h+L<=s from raw four-centre star criticality, or search a graph-level counterexample beyond the eight-star slice. Preserve the n=26 fixture and seven optima as positive/equality controls.
 <!-- CURRENT-STATUS:END -->
 
 ## Reviewable current package

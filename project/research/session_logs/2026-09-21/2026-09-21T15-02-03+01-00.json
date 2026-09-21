@@ -118,16 +118,22 @@
       "completed_at": "2026-09-21T15:41:14+01:00",
       "result": "Exact weighted MaxSAT on seven fixed eight-star multisets gives e(A)=rq+14 throughout r=2,3 and q<=4 (q<=3 for r=3). This converts parity-star existence into a sharp missing-pair cancellation conjecture; no general theorem claimed.",
       "artifact": "project/research/post_ms/2026-09-21-q3-star-support-v1/PARITY_STAR_FIXED_MULTIPLICITY_MAXSAT.md"
+    },
+    {
+      "id": 17,
+      "completed_at": "2026-09-21T15:46:08+01:00",
+      "result": "Reduced the sharp parity-star bound to the exact deficiency inequality h+L<=s in an obligation-to-missing-pair matching. All seven MaxSAT optima satisfy it sharply; six also refute the tempting stronger claim that every hard obligation can be matched.",
+      "artifact": "project/research/post_ms/2026-09-21-q3-star-support-v1/PARITY_STAR_CANCELLATION_REDUCTION.md"
     }
   ],
-  "number_of_substantive_units": 16,
+  "number_of_substantive_units": 17,
   "early_stop_check_time": null,
   "early_stop_check_result": null,
   "tool_infrastructure_failures": [
     "python-sat was absent; installed into the disposable workspace dependency directory and validated against three actual D2C controls."
   ],
   "commit_shas_produced": [],
-  "live_unfinished_line": "Prove or falsify the fixed-eight-star cancellation e(A)<=rq+14 by classifying how unoccupied missing parity pairs can support parity-star edges.",
+  "live_unfinished_line": "Prove h+L<=s from raw four-centre star criticality, or search an actual D2C counterexample outside the fixed eight-star grid.",
   "stop_reason": "IN_PROGRESS",
   "target_status": "IN_PROGRESS",
   "audit_reconciliation": "Latest daily audit prioritizes raw criticality and actual graph realizability. This run follows that priority by hostile-reviewing and attacking the reduced opposite-edge-plane actual core; conditional Hall/source-tuple results are not advanced.",
