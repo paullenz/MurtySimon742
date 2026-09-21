@@ -41,6 +41,12 @@
       "completed_at": "2026-09-21T14:17:47+01:00",
       "result": "Three cube-symmetry hand cases exclude every three-centre star support; uses clean cube-entry obstruction and unique antipode-bridge capacity. Nonempty star support requires at least four centres.",
       "artifact": "project/research/post_ms/2026-09-21-q3-star-support-v1/THREE_CENTRE_SUPPORTS_IMPOSSIBLE.md"
+    },
+    {
+      "id": 5,
+      "completed_at": "2026-09-21T14:20:29+01:00",
+      "result": "Independent hostile replay reconstructs all 56 three-centre exclusions, checks cube-isometry coverage, clean entry obstruction and absence of every alternative star-edge certificate.",
+      "artifact": "project/research/post_ms/2026-09-21-q3-star-support-v1/check_three_centres.py"
     }
   ],
   "early_stop_check_time": null,
@@ -52,7 +58,8 @@
     "f7564e2d113545005c863d11078b56ae168e6388",
     "7b8a119f970990942df3dfe49a2bd00d75ece051",
     "03590dd66568c793605647febc749f6dd075385f",
-    "8d642667d333c52e1b79be9e4755f032cf62f847"
+    "8d642667d333c52e1b79be9e4755f032cf62f847",
+    "3e701a929d468a7a116a3d6dc8270794c1730375"
   ],
   "live_unfinished_line": "Audit-priority raw Q3 criticality: extend or invalidate the two-opposite-star coordinate-multiplicity branch.",
   "stop_reason": "IN_PROGRESS",

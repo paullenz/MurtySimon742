@@ -7,19 +7,19 @@
 `X_3` (12 vertices, 32 edges, versus `M(12)=31`) remains the mandatory negative control. The false all-order 2019 Dailly–Foucaud–Hansberg Conjecture 3 is not the target. First-proof priority on Erdős #742 is not the optimization target.
 
 <!-- CURRENT-STATUS:START -->
-CHECKPOINT CLASS: `INTERNAL_Q3_AT_LEAST_FOUR_STAR_CENTRES`
+CHECKPOINT CLASS: `REPLAYED_INTERNAL_Q3_AT_LEAST_FOUR_STAR_CENTRES`
 
 WORK MODE: `MATH`
 
-INSPECTED PREDECESSOR: `8d642667d333c52e1b79be9e4755f032cf62f847`; two-centre theorem and raw type-relation checker.
+INSPECTED PREDECESSOR: `3e701a929d468a7a116a3d6dc8270794c1730375`; full three-centre hand proof and independent obstruction replay.
 
-LAST VERIFIED RESULT: internally derived three-case hand proof excludes all three-centre supports; together with prior results nonempty star support requires at least four distinct centres. Full independent replay of the new physical bridge/cube-edge argument is next; no eventual closure claimed.
+LAST VERIFIED RESULT: all 56 three-centre supports now pass independent obstruction replay, including cube-isometry coverage and all alternative star-edge certificates in the parity-triangle case. Nonempty star support requires at least four distinct centres, at Q3-transversal scope only.
 
 UNPRESERVED WORK: None. Mathematical status unchanged at entry; hourly continuity correction and 14:00 slot ledger are preserved with this handoff.
 
 DEFERRED ADMIN: README top-level status still needs a compact pointer to the completed Q3 odd-halfcube classification, star certificate table and new minimal two-star-class exact-M closure. Defer the larger README rewrite to the next safe preservation window rather than risk overlap.
 
-NEXT ACTION: hostile-replay the three-centre proof and encode its clean cube-entry/bridge-capacity checks before investigating four-centre survivors.
+NEXT ACTION: derive a sound support-propagation rule incorporating clean cube entries and mandatory distinct antipode bridges; inspect the remaining four-centre symmetry classes.
 <!-- CURRENT-STATUS:END -->
 
 ## Current Q3 graph-level results
@@ -118,3 +118,5 @@ Independent replay: `project/research/post_ms/2026-09-21-q3-star-support-v1/STAR
 ## Three-centre closure
 
 `project/research/post_ms/2026-09-21-q3-star-support-v1/THREE_CENTRE_SUPPORTS_IMPOSSIBLE.md` covers the three cube-isometry types with distance triples (1,1,2), (1,2,3), (2,2,2). This is an arbitrary-multiplicity claim at the stated Q3-transversal scope. Unit 4 completed 2026-09-21T14:17:47+01:00.
+
+Unit 5 replay completed 2026-09-21T14:20:29+01:00. Results: `project/research/post_ms/2026-09-21-q3-star-support-v1/THREE_CENTRE_REPLAY_RESULTS.json`.
