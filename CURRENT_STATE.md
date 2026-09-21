@@ -7,19 +7,19 @@
 `X_3` (12 vertices, 32 edges, versus `M(12)=31`) remains the mandatory negative control. The false all-order 2019 Dailly–Foucaud–Hansberg Conjecture 3 is not the target. First-proof priority on Erdős #742 is not the optimization target.
 
 <!-- CURRENT-STATUS:START -->
-CHECKPOINT CLASS: `VERIFIED_INTERNAL_NEW_GRAPH_HALL_INTERFACE_LIMITATION`
+CHECKPOINT CLASS: `VERIFIED_INTERNAL_MAXIMUM_ROOT_P_ZERO_LEDGER`
 
 WORK MODE: `MATH`
 
-INSPECTED PREDECESSOR: `c58d02216a00215a7b0170886581446dfaa30b15`.
+INSPECTED PREDECESSOR: `4fcddc0e8361eb9144a64db2505692a27ebab4c6`.
 
-LAST VERIFIED RESULT: Ten actual parity-plane star fixtures pass the independent graph checker at all maximum-degree roots and three policies. All 105 new root-policy runs have p=0; only X3 supplies the three qualified runs and 18 Hall cuts. Zero rigid cuts: positive rigid-interface coverage remains open. Prior sharp support/order results unchanged.
+LAST VERIFIED RESULT: For the entire balanced five-coordinate infinite family, maximum-degree roots have p=0 by a short degree-sum obstruction, Q=13, f=15+r and delta=18+6r+4q. The new actual graphs provably lie outside the matched-pair interface. Six parameter pairs independently replay the exact residual ledger.
 
 UNPRESERVED WORK: None.
 
 DEFERRED ADMIN: Consolidate superseded live-state paragraphs and refresh reviewer summary during final preservation.
 
-NEXT ACTION: Derive the structural maximum-root p=0 explanation for the five-coordinate dense family; retain the conditional Hall boundary.
+NEXT ACTION: Audit the raw certificate elimination calculus and scope of the compact star-support theorem package before final preservation.
 <!-- CURRENT-STATUS:END -->
 
 ## Current Q3 graph-level results

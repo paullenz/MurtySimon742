@@ -75,6 +75,12 @@
       "completed_at": "2026-09-21T14:39:43+01:00",
       "result": "Independent Hall regression of ten actual star fixtures reveals p=0 at all maximum-degree roots; 108 root-policy checks pass including X3, but no new rigid-cut coverage. Audit confidence boundary preserved.",
       "artifact": "project/research/post_ms/2026-09-21-q3-star-support-v1/NEW_FAMILIES_HALL_INTERFACE.md"
+    },
+    {
+      "id": 10,
+      "completed_at": "2026-09-21T14:41:56+01:00",
+      "result": "Structural degree-sum proof gives p=0 at both maximum-degree roots for all balanced five-coordinate family members; exact rooted ledger Q=13, f=15+r, delta=18+6r+4q derived and independently replayed.",
+      "artifact": "project/research/post_ms/2026-09-21-q3-star-support-v1/MAXIMUM_ROOT_RESIDUAL_LEDGER.md"
     }
   ],
   "early_stop_check_time": null,
@@ -91,9 +97,10 @@
     "6ce5a2d0d95bba37651613bebc7688d303cc092c",
     "06f330a05402360584b091f1b8aaebd87973c585",
     "aaafb32b9b36cca1dcd88b84ddb2811275522a29",
-    "c58d02216a00215a7b0170886581446dfaa30b15"
+    "c58d02216a00215a7b0170886581446dfaa30b15",
+    "4fcddc0e8361eb9144a64db2505692a27ebab4c6"
   ],
-  "live_unfinished_line": "Derive the maximum-root p=0 obstruction for the new parity-plane family; package scope and raw-criticality proof dependencies.",
+  "live_unfinished_line": "Audit the raw necessary-code elimination calculus and scope of the compact star-support theorem package.",
   "stop_reason": "IN_PROGRESS",
   "target_status": "IN_PROGRESS",
   "continuation_checks": [
