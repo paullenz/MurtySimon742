@@ -1,18 +1,16 @@
-# Rigid one-code cuts with at least two matched-selected heads: full boundary exposure
+# Rigid one-code cuts with at least two matched-selected heads: full boundary exposure and forward-only routing
 
 Date: 2026-09-21
 
-Status: raw realizability theorem inside the rigid complete one-code interface. It generalizes the residual-one population obstruction to arbitrary residual matched-coordinate dimension and uses only the post-audit boundary trichotomy, the global matched-leaf collapse, and the independently audited singleton-head witness location.
+Status: raw realizability theorem inside the rigid complete one-code interface. **21 September strengthened correction:** for a one-code outside block of multiplicity `y>=2`, the X-reverse boundary arm is impossible altogether. The resulting theorem is substantially stronger than the earlier reverse-gamma alternative and supersedes any downstream treatment that allowed reverse-only coordinates for such a block.
 
 ## 1. Setup
 
-Let `Y=A_d` be the one-code outside block of a rigid complete cut. Suppose at least two X-heads are supplied by distinct tight matched coordinates. Write the selected matched-head coordinates as S, `|S|=m>=2`.
+Let `Y=A_d` be the one-code outside block of a rigid complete cut, with `y=|Y|`. Suppose at least two X-heads are supplied by distinct tight matched coordinates. Write the selected matched-head coordinates as S, `|S|=m>=2`.
 
 For each `i in S`, the corresponding matched-selected head has code
 
 `d xor e_i`.
-
-Let `I(d,X)` and `C(d,X)` be the exposed and universal coordinate sets of the boundary trichotomy.
 
 ## 2. Full exposure
 
@@ -22,56 +20,30 @@ If `m>=2`, then
 
 > **`I(d,X)=[p]`.**                                      `(2.1)`
 
-### Proof
+For a coordinate outside S, every matched-selected head agrees with d there. For a coordinate `j in S`, any other selected head agrees with d at j. Hence every tight coordinate is exposed.
 
-Fix a tight coordinate j.
+Moreover every selected coordinate is nonuniversal because its own head disagrees with d there, so
 
-- If `j notin S`, every matched-selected head `d xor e_i` with `i in S` agrees with d at j.
-- If `j in S`, choose another selected coordinate `i in S`, `i!=j` (possible because m>=2). The head `d xor e_i` agrees with d at j.
+> `C(d,X) subseteq [p]\S`, hence `|C|<=p-m`.             `(2.2)`
 
-Thus every coordinate has some X-head agreeing with d. `square`
+## 3. If y>=2, reverse is impossible everywhere
 
-Moreover every selected coordinate is nonuniversal because its own head `d xor e_i` disagrees with d there. Therefore
+The corrected boundary theorem proves that when the outside code class contains at least two vertices, no X-reverse certificate can exist on any exposed boundary edge. Indeed, source `q_i^{d_i}` and every witness in X share all of Y as common neighbours, not a singleton.
 
-> **`C(d,X) subseteq [p]\S`, so `|C|<=p-m`.**            `(2.2)`
+Therefore for `y>=2` every one of the p exposed coordinates must be covered by either
 
-## 3. Population consequence
+1. U-forward support, or
+2. matched-forward support.
 
-The global matched-leaf theorem gives `|L(d,X)|<=2`.
-
-Let `rho=max_c |X_c|` be the largest X-code-class multiplicity.
-
-At a coordinate with no matched-forward support, at most rho Y-heads can reverse-certify because the forced reverse witnesses all lie in one X-code class and fixed-source injectivity makes distinct Y-heads require distinct physical witnesses.
-
-Hence if
-
-> **`y>rho`,**                                            `(3.1)`
-
-then every one of the `p-|L|` nonmatched coordinates requires a U-forward witness. Different coordinates require different one-match U-code classes `bar d xor e_i`. Therefore
-
-> **`p-|L|<=u`.**                                        `(3.2)`
-
-Using `|L|<=2`:
-
-### Corollary 3.1 — full-exposure population obstruction
-
-For every rigid complete one-code cut with `m>=2` and `y>rho`,
-
-> **`p<=u+2`.**                                          `(3.3)`
-
-If `C=empty`, matched-forward support vanishes and this sharpens to
-
-> **`p<=u`.**                                            `(3.4)`
+The global matched-leaf theorem gives at most two coordinates of the second type.
 
 ## 4. Complementary witness-class refinement
 
-Fix a minimum outside source of code d and let k be its number of selected U-witnesses. Every one of those k witnesses has code `bar d`. Put
+Fix a minimum outside source and let k be its number of selected U-witnesses. All k have code `bar d`. Put
 
-`e=u-k`,
+`e=u-k`.
 
-the number of U-vertices outside this mandatory complementary code class.
-
-A boundary U-forward witness has code `bar d xor e_i`, never `bar d`. Therefore none of the k mandatory complementary witnesses can populate a boundary one-match class. Consequently the number of coordinates with any U-forward support is at most e, not merely u.
+A boundary U-forward witness has code `bar d xor e_i`, never `bar d`, so none of the mandatory k complementary witnesses can populate a boundary one-match class. Distinct boundary coordinates require distinct one-match U-code classes. Therefore at most e coordinates can be U-forward.
 
 The preserved one-code occupancy identity is
 
@@ -81,90 +53,89 @@ Writing
 
 `r=p-m`
 
-for the residual matched-coordinate dimension gives the exact relation
+for the residual matched-coordinate dimension gives
 
 > **`e=c-r`.**                                            `(4.1)`
 
-This is stronger than the coarse `e<=c`: every residual matched coordinate removes one unit from the boundary U-forward reservoir.
+### Theorem 4.1 — repeated one-code boundary obstruction
 
-### Theorem 4.1 — residual-sensitive escape-reservoir bound
+For every rigid complete one-code cut with
 
-For a rigid complete one-code cut with `m>=2`,
+- `m>=2`, and
+- `y>=2`,
 
-> **at most `e=c-r` exposed coordinates can use the U-forward arm.** `(4.2)`
+one necessarily has
 
-Combining with the global matched-leaf bound and reverse-gamma multiplicity gives
+> **`p <= c-r+2`.**                                      `(4.2)`
 
-> **`p <= c-r+2+floor(x/y) G(C0)`**                      `(4.3)`
+Equivalently,
 
-for an above-M candidate whenever reverse-only coordinates occur; if `y>x`, the reverse-only arm is impossible and
+> **`c >= p+r-2`.**                                      `(4.3)`
 
-> **`p<=c-r+2`.**                                        `(4.4)`
+This is a pure graph-realizability condition. It does not use the score ceiling, rooted-Q inequality, pair-local Hall capacity, gamma-collision theorem, or the audit-sensitive source-tuple capacity theorem.
 
-If additionally `y>rho`, every nonmatched coordinate must U-forward, so
+If `C(d,X)=empty`, matched-forward support vanishes and the bound sharpens to
 
-> **`p<=c-r+2`;**                                         `(4.5)`
+> **`p<=c-r`, equivalently `c>=p+r`.**                   `(4.4)`
 
-and if `C=empty`,
+Thus the rooted gap c must be essentially as large as the tight dimension plus the residual dimension before a repeated one-code rigid cut can even realize its B--A boundary edges.
 
-> **`p<=c-r`.**                                           `(4.6)`
+## 5. What happened to the reverse-gamma branch
 
-Thus when c is substantially smaller than `p+r`, literal realizability forces a large reverse X-code class (`rho>=y`) and a correspondingly heavy reverse-gamma channel.
+Earlier same-session notes allowed coordinates with no forward support to be “reverse-only” provided X contained a large enough forced gamma class. That was too weak for repeated outside codes.
 
-Equivalently, irrespective of score, at least
+For `y>=2` the reverse arm is not expensive; it is **impossible**. The reason is physical and immediate: any X-witness and the matched source `q_i^{d_i}` share every vertex of the same-code class Y.
 
-> **`p-c+r-2`**                                           `(4.7)`
+Therefore all reverse-gamma multiplicity calculations for a one-code block with `y>=2` are now superseded as possible realization channels. They may remain relevant only for singleton outside code classes (`y_d=1`) in a multi-code setting.
 
-coordinates are reverse-only whenever this quantity is positive, except that the exact count may be larger if fewer than `c-r` one-match U classes are actually occupied.
+## 6. Residual-one consequence
 
-This ties the raw boundary obstruction directly to the residual dimension r that appears in the eventual defect programme.
+For residual dimension one, `r=1` and `m=p-1>=2`. Hence every repeated one-code residual-one realization satisfies
 
-## 5. Reverse-gamma alternative
+> **`c>=p-1`.**                                          `(6.1)`
 
-When large reverse classes exist, `(4.3)` makes the physical dichotomy explicit. Full exposure gives p boundary coordinates, but only
+If the residual coordinate is nonuniversal (`C=empty`, as happens whenever at least one residual-code K-head is present), then
 
-- `c-r` coordinates can be routed through one-match U-forward classes;
-- at most two can use matched leaves;
-- all remaining coordinates are reverse-only and must be absorbed by X gamma classes of size at least y.
+> **`c>=p+1`.**                                          `(6.2)`
 
-Repeated use of those gamma classes incurs the gamma-collision A-slack bill. There is no fourth aggregate-capacity channel.
+The corrected intermediate half-ray has `p=2t`, `c=t`, `r=1`, `y=t>=4`, and `C=empty`. It violates `(6.2)` for every t, so the entire half-ray is impossible without any score calculation.
 
-This is exactly the interface missing from the earlier scalar near-rigid escape analysis: the large selected `U_bar d` population consumes unmatched population but cannot help with boundary U-forward routing.
+## 7. Large-gap scalar escape family is also unrealizable
 
-## 6. Relation to residual-one closure
+The preserved scalar diagnostic family had
 
-Residual dimension one has `r=1`, so the exact boundary-forward reservoir is
+`p=3t, c=2t, m=2t, r=t, y=t`.
 
-`e=c-1`.
+For every `t>=2`, Theorem 4.1 would require
 
-On the corrected intermediate half-ray `c=t`, hence `e=t-1`. Every X reverse class has size at most two while `y=t>=4`, and `C=empty`; `(4.6)` would require
+`3t <= 2t-t+2=t+2`,
 
-`2t=p<=t-1`,
+which fails for `t>=2`.
 
-an immediate contradiction. Thus the pure half-ray closure is an instance of the general residual-sensitive theorem.
+Hence:
 
-## 7. Relation to the large-gap scalar escape family
+> **the large-gap scalar escape family is not a literal graph-realizability escape.**
 
-For the preserved diagnostic family
+Its survival of the old scalar score package reflected a missing boundary-criticality constraint, not a genuine candidate geometry.
 
-`p=3t, c=2t, m=2t`,
+This is strategically important: both of the principal explicit one-code scalar escape families preserved on 20 September are now killed by the same raw boundary mechanism.
 
-one has residual dimension `r=t` and therefore
+## 8. Remaining one-code regimes
 
-`e=c-r=t`,
+For a repeated one-code outside block (`y>=2`) with `m>=2`, there are no reverse-only coordinates. The only way to survive is to have a boundary U-forward reservoir of size at least `p-2`, i.e.
 
-agreeing with the explicit `u-k` count. Since all p=3t boundary coordinates are exposed, at least
+`e=c-r>=p-2`,
 
-> **`p-e-2=2t-2`**                                      `(7.1)`
+with at most two coordinates delegated to matched leaves.
 
-coordinates must be reverse-only.
+Therefore the live one-code frontier is compressed to:
 
-With `x=5t,y=t`, `floor(x/y)=5`, so the reverse-gamma theorem forces a repeated gamma multiplicity at least
+1. **very large rooted gap:** `c>=p+r-2`;
+2. the small matched-head cases `m<=1`;
+3. singleton outside blocks `y=1`, where the reverse arm may still exist.
 
-`ceil((2t-2)/5)`,
+These are the correct next branches to intersect with the rooted residual defect `delta`, triangle count Q, and exact pair-local Hall machinery.
 
-and therefore a corresponding collision bill. This does not by itself contradict the previously recorded scalar score ceiling, but it identifies a linear physical reverse-only load omitted from the old method diagnostic.
+## 9. Scope
 
-## 8. Scope
-
-This is a necessary condition conditional on the rigid complete one-code interface. It does not assert that the interface itself is reachable from an arbitrary D2C graph. Bounded actual-D2C regression still has zero positive rigid complete pair-family cuts with `x>=3`; X_3 remains the mandatory negative control.
+This is a necessary condition conditional on the rigid complete one-code interface. It does not prove that the interface is reachable from an arbitrary D2C graph. Bounded actual-D2C regression still has zero positive rigid complete pair-family cuts with `x>=3`; X_3 remains the mandatory negative control.
