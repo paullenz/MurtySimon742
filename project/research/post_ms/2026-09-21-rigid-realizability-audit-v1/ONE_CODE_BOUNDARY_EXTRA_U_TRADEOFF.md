@@ -2,140 +2,136 @@
 
 Date: 2026-09-21
 
-Status: raw structural theorem inside the repeated rigid one-code `y>=2,m>=2` interface. Sections 2--4 first control extra noncomplementary-code U-vertices. Section 5 shows that on the cheapest/minimal used-boundary-witness face the same capacity bound automatically extends to **all** extra U-vertices, including complementary-code vertices.
+Status: raw structural theorem inside the repeated rigid one-code `y>=2,m>=2` interface. The final theorem below controls the entire extra-U population, including complementary-code vertices, by combining service multiplicity with the singleton-coordinate witness rows.
 
 ## 1. Setup
 
-Let `Y=A_d`, `y>=2`, and use the corrected full-boundary theorem. Let `L` be the matched-forward head set, `ell=|L|`, and choose one U-forward certificate for every boundary edge `y q_i^{d_i}` with `i notin L`. Let `W_i` be the used U-witnesses in coordinate i and `W=union W_i`. Every `w in W_i` has
+Let `Y=A_d`, `y>=2`, and use the corrected full-boundary theorem. Let `L` be the matched-forward head set, `ell=|L|`, and write
+
+`q=p-ell`.
+
+Choose one U-forward certificate for every boundary edge `y q_i^{d_i}` with `i notin L`. Let `W_i` be the used U-witnesses in coordinate i and `W=union W_i`. Every `w in W_i` has
 
 `c(w)=bar d xor e_i`, `N_X(w)=empty`,
 
 and the previously proved theorem gives `G[W]` independent.
 
-Put
+For `w in W`, let `t_w` be the number of chosen boundary edges served by w. Then
 
-`T={z in U : c(z) != bar d}`
+`sum_{w in W} t_w = yq`, `1<=t_w<=y`.
 
-and `R=T\W`, `h=|R|`. For `w in W`, let `t_w` be the number of chosen boundary edges served by w, and `q_w=d_R(w)`.
+Write
+
+`|W|=q+a`,
+
+so `a>=0` measures extra physical boundary-witness multiplicity. Since W is disjoint from the k selected complementary witnesses and `e=u-k=q+d`, one has
+
+> **`0<=a<=d`.** `(1.1)`
 
 ## 2. One noncomplementary U-neighbour forces full Y-anticompleteness
 
-### Theorem 2.1
+If `w in W_i`, z is unmatched with `c(z)!=bar d`, and wz is an edge, raw criticality of the triangular B-edge can only orient from w to z. Its witness lies in `X_{d xor e_i}`, and singleton-head criticality forces
 
-If `w in W_i`, `z in R`, and `wz` is an edge, then raw criticality of the triangular B-edge `wz` can only orient from w to z. Its witness lies in
+> **`N_Y(w)=empty`.** `(2.1)`
 
-`X_{d xor e_i}`,
+The reverse orientation would require an A-witness of code `bar c(z)` adjacent to w; because w is X-anticomplete this would have to lie in Y, forcing `c(z)=bar d`, contradiction.
 
-and in particular
+## 3. Local service / extra-U tradeoff
 
-> **`N_Y(w)=empty`.**
+For the extra noncomplementary population R, with `h=|R|`, `q_w=d_R(w)`, the exact degree-deficit identity gives
 
-### Proof
+> **`epsilon_w >= g0+t_w+|W|-1 +(h-q_w)+(y-t_w)1_{q_w>0}`.** `(3.1)`
 
-Both w and z lie in `B=N(v)`, so a B-witness in either orientation would share the root with the B-source; the witness must lie in A.
-
-For an orientation from z to w, tight matched transversality forces an A-witness of code `bar c(z)` adjacent to w. Because w is X-anticomplete, such a witness would have to lie in Y. But Y has the unique code d, which would force `bar c(z)=d`, i.e. `c(z)=bar d`, contrary to `z in R`.
-
-Hence the orientation is from w to z. Avoiding a tight matched common neighbour forces the A-witness code to be `bar c(w)=d xor e_i`, which is not d and therefore lies in X. Since the rigid cut is complete, this X-witness is adjacent to every vertex of Y. Singleton-head criticality `N(w) cap N(x)={z}` therefore forces w to have no Y-neighbour. `square`
-
-## 3. Exact local tradeoff
-
-The existing service-counted proof gave
-
-`epsilon_w >= g0+t_w+W-1`
-
-from X-anticompleteness, the `t_w` served source holes and W-independence. Theorem 2.1 sharpens this. Missing R-edges contribute `h-q_w` further U-holes, and if `q_w>0` then all Y is missing rather than merely the `t_w` served sources. Thus
-
-> **`epsilon_w >= g0+t_w+W-1 +(h-q_w)+(y-t_w) 1_{q_w>0}`.** `(3.1)`
-
-Summing over W gives
-
-> **`E_W >= W(g0+W-1)+y(p-ell)+Wh-Q + sum_{q_w>0}(y-t_w)`,** `(3.2)`
-
-where `Q=e(W,R)=sum q_w`.
+This records both missing extra-U edges and the fact that touching one noncomplementary extra vertex makes w Y-anticomplete.
 
 ## 4. Fixed-coordinate witness capacity
 
-### Theorem 4.1
+For fixed `w in W_i`, every distinct noncomplementary extra-U neighbour requires a distinct physical witness in `X_{d xor e_i}`. Hence
 
-For fixed `w in W_i`, distinct neighbours `z in R` require distinct physical witnesses in `X_{d xor e_i}`. Consequently
+> **`d_R(w)<=x_i:=|X_{d xor e_i}|`.** `(4.1)`
 
-> **`q_w <= x_i:=|X_{d xor e_i}|`.** `(4.1)`
+The classes `X_{d xor e_i}` are pairwise distinct and `sum_i x_i<=x`.
 
-### Proof
+## 5. Minimal-W face
 
-Theorem 2.1 forces every edge wz to be certified in the orientation from w with an X-witness x of the fixed code `d xor e_i`, satisfying `N(w) cap N(x)={z}`. A fixed ordered physical pair `(w,x)` cannot have two different singleton heads z and z'. Therefore distinct R-neighbours require distinct x. `square`
+If `a=0`, then there is exactly one used boundary witness per U-forward coordinate. Total service forces `t_w=y` for every such w, hence W is Y-anticomplete. The reverse orientation is then impossible even for complementary-code extra vertices. For `R_all=U\W`, every W--R_all edge must orient from w through `X_{d xor e_i}`. Therefore
 
-Hence
+`e(W,R_all)<=x`.
 
-> **`Q <= sum_i |W_i| x_i`.** `(4.2)`
+Since `|R_all|=d+k`,
 
-The code classes `X_{d xor e_i}` are pairwise distinct, so `sum_i x_i<=x`.
+> **`E_W >= q(2p-ell-1)+q(d+k)-x`.** `(5.1)`
 
-In the cheapest used-witness face `|W_i|=1` for every U-forward coordinate (therefore `W=p-ell` and each unique witness serves all y boundary edges at its coordinate), `(4.2)` simplifies to
+Together with the disjoint selected-complementary bill `E_K>=k(p-1)`, this gives
 
-> **`Q<=x`.** `(4.3)`
+> **`E_U >= q(2p-ell-1)+q(d+k)-x+k(p-1)`.** `(5.2)`
 
-For extra noncomplementary vertices alone, `(3.2)` then gives
+## 6. General singleton-coordinate barrier
 
-> **`E_W >= (p-ell)(2p-ell-1) +(p-ell)h-x`.** `(4.4)`
+The preceding mechanism does not require *all* coordinate witness sets to be singletons. Let
 
-## 5. Minimal-W face: complementary excess is not an escape
+`S0={i notin L: |W_i|=1}`
 
-Assume now the minimal used-witness face
+and `q0=|S0|`.
 
-> **`W=p-ell`, equivalently `|W_i|=1` for every U-forward coordinate.**
+Every nonsingleton coordinate consumes at least one of the a extra physical witnesses, so
 
-Because the total service count is `y(p-ell)` and every unique witness can serve at most y boundary sources, equality forces
+> **`q0>=q-a`.** `(6.1)`
 
-> **`t_w=y` for every `w in W`.** `(5.1)`
+(When `a>q`, use the trivial `q0>=0`.)
 
-Hence every w is already Y-anticomplete, without using Theorem 2.1.
+For each `i in S0`, the unique w_i must serve all y boundary sources at coordinate i, so
 
-Let
+> **`t_{w_i}=y` and `N_Y(w_i)=empty`.** `(6.2)`
+
+Now put
 
 `R_all=U\W`, `h_all=|R_all|`.
 
-This now includes vertices of code `bar d`. Consider any edge wz with `w in W_i`, `z in R_all`.
+Using `u=e+k=q+d+k` and `|W|=q+a`,
 
-- If it oriented from z to w, the A-witness would have to be adjacent to w. For `c(z)=bar d` its forced complementary witness code is d, hence the witness would lie in Y; but `(5.1)` makes w Y-anticomplete. For `c(z)!=bar d`, Section 2 already excludes this orientation.
-- Therefore **every** W--R_all edge orients from w to z through a witness in `X_{d xor e_i}`.
+> **`h_all=d+k-a`.** `(6.3)`
 
-The same fixed-pair singleton-head injection gives
+For every singleton-coordinate witness w_i and every z in R_all, an edge w_i z cannot orient from z to w_i:
 
-> **`d_{R_all}(w)<=x_i`** and therefore, because there is one w per coordinate,
+- if `c(z)=bar d`, the required reverse witness has code d and lies in Y, but w_i is Y-anticomplete;
+- otherwise the reverse orientation is already excluded by Section 2.
+
+Hence every such edge must orient from w_i to z through a witness in the fixed class `X_{d xor e_i}`. For fixed w_i, distinct heads z require distinct physical X-witnesses. Summing over the pairwise-distinct singleton coordinate classes gives
+
+> **`e(W_0,R_all)<=sum_{i in S0} x_i<=x`,** `(6.4)`
+
+where `W_0={w_i:i in S0}`.
+
+Therefore at least
+
+> **`q0 h_all-x >= (q-a)(d+k-a)-x`** `(6.5)`
+
+W_0--R_all edges are missing whenever the right side is positive. These missing U-edges are not included in the earlier service-counted floor.
+
+The service-counted theorem gives
+
+`E_W >= |W|(g0+|W|-1)+yq`
+
+before this extra term. Thus the whole repeated-code branch satisfies the new finite bound
+
+> **`E_W >= (q+a)(g0+q+a-1)+yq + max{0,(q-a)(d+k-a)-x}`.** `(6.6)`
+
+Finally W and the selected complementary witness union K are disjoint code layers, so adding the preserved `E_K>=k(p-1)` bill is legitimate:
+
+> **`E_U >= (q+a)(g0+q+a-1)+yq`**
 >
-> **`e(W,R_all)<=sum_i x_i<=x`.** `(5.2)`
+> **`      + max{0,(q-a)(d+k-a)-x}+k(p-1)`,**             `(6.7)`
+>
+> for some integer **`0<=a<=d`**.
 
-Since every missing W--R_all edge contributes to the U-hole term of the corresponding w,
+This is a substantially sharper normal form than the previous scalar d parameter. It shows exactly how d can escape: it must choose between
 
-> **`E_W >= (p-ell)(2p-ell-1)+(p-ell)h_all-x`.** `(5.3)`
+1. **witness multiplicity** `a`, which enlarges the independent W-layer and therefore the quadratic service floor; and
+2. **unconsumed extra U-population** `d-a`, which creates a rectangular singleton-W versus extra-U hole block unless X contains enough coordinate-specific witnesses to certify the corresponding physical edges.
 
-Using `u=e+k=(p-ell+d)+k` on this face,
+The complementary-code reservoir is included: it cannot bypass the singleton rows.
 
-`h_all=u-(p-ell)=d+k`,
+## 7. Next optimization target
 
-so the raw minimal-W bill is
-
-> **`E_W >= (p-ell)(2p-ell-1)+(p-ell)(d+k)-x`.** `(5.4)`
-
-The disjoint complementary selected-witness bill from the previous theorem remains
-
-`E_K>=k(p-1)`
-
-for the actual selected witness union. Thus, without identifying K with all complementary-code U-vertices,
-
-> **`E_U >= (p-ell)(2p-ell-1)+(p-ell)(d+k)-x+k(p-1)`.** `(5.5)`
-
-Any overlap in the underlying missing W--K physical edges is legitimate here: `E_U` is a sum of vertex degree deficits, so a missing U--U edge contributes to each endpoint's deficit.
-
-Equation `(5.5)` is the first direct charge on the entire scalar d-arm in the minimal-W geometry. Large d can avoid that charge only by leaving the minimal-W face, i.e. by splitting boundary service among multiple witnesses per coordinate.
-
-## 6. Remaining multiplicity escape
-
-The d-arm is therefore compressed to a clear dichotomy:
-
-1. **minimal W:** all extra U-population, regardless of code, incurs `(5.5)`;
-2. **nonminimal W:** `W-(p-ell)>0`, so the fixed total `y(p-ell)` service is split among more physical witnesses. The exact tradeoff `(3.2)` already records the resulting service deficits, but a sharp global lower bound as a function of `W-(p-ell)` remains to be extracted.
-
-This is now the highest-value continuation. A successful lower bound on the service-splitting term would turn the global d escape into a genuine second quadratic cost rather than a scalar reservoir.
+Equation `(6.7)` should now replace the coarser boundary bill in the exact score ceiling. The next question is whether minimizing over `a in [0,d]` upgrades the 6.09% macroscopic wedge, or closes a full neighborhood of the old small-`r`, small-`g0` escape. Any asymptotic optimization must retain the `x` term explicitly until an independently justified relation between x and the one-code parameters is inserted.
