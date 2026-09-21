@@ -10,12 +10,12 @@
     }
   ],
   "forward_research_start_time": "2026-09-21T19:02:39+01:00",
-  "forward_research_stop_time": null,
-  "preservation_start_time": null,
+  "forward_research_stop_time": "2026-09-21T19:53:30+01:00",
+  "preservation_start_time": "2026-09-21T19:53:30+01:00",
   "preservation_complete_time": null,
   "final_report_time": null,
   "wall_clock_session_minutes": null,
-  "forward_research_span_minutes": null,
+  "forward_research_span_minutes": 50.85,
   "preservation_span_minutes": null,
   "substantive_units": [
     {
@@ -110,19 +110,28 @@
     },
     {
       "id": 16,
-      "completed_at": "2026-09-21T19:43:20+01:00",
-      "result": "Extended exact graph-level rejection of the two one-copy-negative five-centre support orbits across 96 equal-multiplicity cases (coordinates 1..3, parities 0..3, stars 1..4), with zero feasible graphs. This is bounded evidence only; any surviving realization must exploit asymmetric populations or lie beyond the grid.",
+      "completed_at": "2026-09-21T19:53:30+01:00",
+      "result": "Extended exact graph-level rejection of the two one-copy-negative five-centre support orbits across 96 equal-multiplicity and 200 seeded asymmetric-multiplicity cases, with zero feasible graphs. This is bounded evidence only, not an arbitrary-multiplicity theorem.",
       "artifact": "project/research/post_ms/2026-09-21-q3-star-support-v1/FIVE_CENTRE_NEGATIVE_ORBIT_PROBE_RESULTS.json"
     }
   ],
   "number_of_substantive_units": 16,
-  "early_stop_check_time": null,
-  "early_stop_check_result": null,
-  "tool_infrastructure_failures": [],
-  "commit_shas_produced": [],
+  "early_stop_check_time": "2026-09-21T19:48:42+01:00",
+  "early_stop_check_result": "Cutoff remained in the future and bounded asymmetric-orbit and consistency audits remained available; did not finalize and continued through the >=50-minute research threshold.",
+  "tool_infrastructure_failures": [
+    {
+      "time": "2026-09-21T19:46:00+01:00",
+      "failure": "The prior-turn in-memory atomic checkpoint helper was unavailable in the new invocation.",
+      "pivot": "Reconstructed the GitHub blob/tree/commit checkpoint path against the live remote head and preserved all new artifacts without overwriting concurrent work."
+    }
+  ],
+  "commit_shas_produced": [
+    "6fed4a5386e573bd88c452e38d1f1fc719405c9b",
+    "35660c30627db18a1b610f09192e6b429c8ba78c"
+  ],
   "live_unfinished_line": "The five-centre positive-control families are proved and hostile-replayed. Next attack arbitrary A-graph classification on the positive orbit and asymmetric-multiplicity realizability of the other two orbits; the 96-case equal-multiplicity grid is negative but not a theorem.",
-  "stop_reason": "IN_PROGRESS",
-  "target_status": "IN_PROGRESS",
-  "audit_reconciliation": "The latest audit requires raw graph-level realizability and criticality before further conditional scalar stacking. This slot therefore attacks the actual five-centre D2C family by explicit edge-deletion witnesses, retains X3 as the mandatory negative control, and does not use the conditional source-tuple capacity theorem or revive invalidated matching-one arguments.",
-  "inspected_remote_head": "a1d5588e5969793286a8c51d07860775ec7d1f33"
+  "stop_reason": "Reached and exceeded the 50-minute forward-research target, then stopped at the completed five-centre hostile-audit and bounded negative-orbit checkpoint for preservation before the valid cutoff.",
+  "target_status": "MET",
+  "audit_reconciliation": "The latest audit requires raw graph-level realizability and criticality before further conditional scalar stacking. This slot therefore attacked actual five-centre D2C families by explicit edge-deletion witnesses, retained X3, and did not use the conditional source-tuple capacity theorem. At 19:47 a newer concurrent remote handoff was discovered which pivots the active programme to an independent #742 proof; this completed D2C package is therefore preserved as subordinate historical work and the next handoff must honor that newer objective.",
+  "inspected_remote_head": "local snapshot a1d5588e5969793286a8c51d07860775ec7d1f33; live concurrent head cf110cd03e6e1aaae92921002710a570a4c7978f discovered before preservation"
 }

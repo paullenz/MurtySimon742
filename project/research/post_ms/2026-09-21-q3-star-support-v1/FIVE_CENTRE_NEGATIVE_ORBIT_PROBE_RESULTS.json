@@ -1349,5 +1349,5609 @@
       "model": null
     }
   ],
+  "seeded_asymmetric_case_count": 200,
+  "seeded_asymmetric_feasible_count": 0,
+  "seeded_asymmetric_rows": [
+    {
+      "support": [
+        0,
+        1,
+        2,
+        3,
+        4
+      ],
+      "trial": 0,
+      "halfcode_multiplicities": [
+        2,
+        0,
+        3,
+        2,
+        2,
+        4,
+        4,
+        3
+      ],
+      "star_multiplicities": [
+        2,
+        1,
+        1,
+        3,
+        4
+      ],
+      "satisfiable": false
+    },
+    {
+      "support": [
+        0,
+        1,
+        2,
+        3,
+        4
+      ],
+      "trial": 1,
+      "halfcode_multiplicities": [
+        1,
+        2,
+        4,
+        2,
+        2,
+        3,
+        0,
+        4
+      ],
+      "star_multiplicities": [
+        3,
+        1,
+        4,
+        4,
+        2
+      ],
+      "satisfiable": false
+    },
+    {
+      "support": [
+        0,
+        1,
+        2,
+        3,
+        4
+      ],
+      "trial": 2,
+      "halfcode_multiplicities": [
+        3,
+        4,
+        0,
+        2,
+        3,
+        1,
+        0,
+        4
+      ],
+      "star_multiplicities": [
+        4,
+        2,
+        1,
+        4,
+        1
+      ],
+      "satisfiable": false
+    },
+    {
+      "support": [
+        0,
+        1,
+        2,
+        3,
+        4
+      ],
+      "trial": 3,
+      "halfcode_multiplicities": [
+        4,
+        1,
+        1,
+        4,
+        2,
+        0,
+        4,
+        0
+      ],
+      "star_multiplicities": [
+        2,
+        1,
+        2,
+        4,
+        2
+      ],
+      "satisfiable": false
+    },
+    {
+      "support": [
+        0,
+        1,
+        2,
+        3,
+        4
+      ],
+      "trial": 4,
+      "halfcode_multiplicities": [
+        1,
+        4,
+        0,
+        0,
+        3,
+        4,
+        2,
+        2
+      ],
+      "star_multiplicities": [
+        3,
+        2,
+        1,
+        2,
+        3
+      ],
+      "satisfiable": false
+    },
+    {
+      "support": [
+        0,
+        1,
+        2,
+        3,
+        4
+      ],
+      "trial": 5,
+      "halfcode_multiplicities": [
+        3,
+        0,
+        4,
+        1,
+        0,
+        1,
+        4,
+        1
+      ],
+      "star_multiplicities": [
+        4,
+        4,
+        2,
+        1,
+        1
+      ],
+      "satisfiable": false
+    },
+    {
+      "support": [
+        0,
+        1,
+        2,
+        3,
+        4
+      ],
+      "trial": 6,
+      "halfcode_multiplicities": [
+        4,
+        1,
+        4,
+        3,
+        0,
+        2,
+        3,
+        3
+      ],
+      "star_multiplicities": [
+        2,
+        2,
+        1,
+        1,
+        4
+      ],
+      "satisfiable": false
+    },
+    {
+      "support": [
+        0,
+        1,
+        2,
+        3,
+        4
+      ],
+      "trial": 7,
+      "halfcode_multiplicities": [
+        0,
+        3,
+        4,
+        0,
+        4,
+        1,
+        1,
+        1
+      ],
+      "star_multiplicities": [
+        3,
+        3,
+        1,
+        2,
+        3
+      ],
+      "satisfiable": false
+    },
+    {
+      "support": [
+        0,
+        1,
+        2,
+        3,
+        4
+      ],
+      "trial": 8,
+      "halfcode_multiplicities": [
+        4,
+        2,
+        4,
+        1,
+        1,
+        3,
+        1,
+        4
+      ],
+      "star_multiplicities": [
+        1,
+        3,
+        4,
+        2,
+        2
+      ],
+      "satisfiable": false
+    },
+    {
+      "support": [
+        0,
+        1,
+        2,
+        3,
+        4
+      ],
+      "trial": 9,
+      "halfcode_multiplicities": [
+        4,
+        2,
+        4,
+        4,
+        0,
+        1,
+        2,
+        2
+      ],
+      "star_multiplicities": [
+        1,
+        3,
+        1,
+        1,
+        2
+      ],
+      "satisfiable": false
+    },
+    {
+      "support": [
+        0,
+        1,
+        2,
+        3,
+        4
+      ],
+      "trial": 10,
+      "halfcode_multiplicities": [
+        0,
+        2,
+        3,
+        0,
+        2,
+        3,
+        0,
+        4
+      ],
+      "star_multiplicities": [
+        4,
+        3,
+        2,
+        4,
+        2
+      ],
+      "satisfiable": false
+    },
+    {
+      "support": [
+        0,
+        1,
+        2,
+        3,
+        4
+      ],
+      "trial": 11,
+      "halfcode_multiplicities": [
+        3,
+        2,
+        2,
+        4,
+        2,
+        3,
+        1,
+        0
+      ],
+      "star_multiplicities": [
+        1,
+        2,
+        1,
+        4,
+        3
+      ],
+      "satisfiable": false
+    },
+    {
+      "support": [
+        0,
+        1,
+        2,
+        3,
+        4
+      ],
+      "trial": 12,
+      "halfcode_multiplicities": [
+        2,
+        4,
+        4,
+        3,
+        1,
+        1,
+        2,
+        4
+      ],
+      "star_multiplicities": [
+        1,
+        1,
+        4,
+        4,
+        2
+      ],
+      "satisfiable": false
+    },
+    {
+      "support": [
+        0,
+        1,
+        2,
+        3,
+        4
+      ],
+      "trial": 13,
+      "halfcode_multiplicities": [
+        1,
+        3,
+        3,
+        0,
+        1,
+        3,
+        1,
+        2
+      ],
+      "star_multiplicities": [
+        3,
+        2,
+        2,
+        1,
+        3
+      ],
+      "satisfiable": false
+    },
+    {
+      "support": [
+        0,
+        1,
+        2,
+        3,
+        4
+      ],
+      "trial": 14,
+      "halfcode_multiplicities": [
+        0,
+        1,
+        3,
+        4,
+        0,
+        0,
+        1,
+        3
+      ],
+      "star_multiplicities": [
+        4,
+        2,
+        1,
+        2,
+        3
+      ],
+      "satisfiable": false
+    },
+    {
+      "support": [
+        0,
+        1,
+        2,
+        3,
+        4
+      ],
+      "trial": 15,
+      "halfcode_multiplicities": [
+        0,
+        3,
+        0,
+        4,
+        2,
+        3,
+        0,
+        3
+      ],
+      "star_multiplicities": [
+        3,
+        1,
+        2,
+        4,
+        1
+      ],
+      "satisfiable": false
+    },
+    {
+      "support": [
+        0,
+        1,
+        2,
+        3,
+        4
+      ],
+      "trial": 16,
+      "halfcode_multiplicities": [
+        2,
+        0,
+        4,
+        3,
+        4,
+        4,
+        0,
+        4
+      ],
+      "star_multiplicities": [
+        3,
+        3,
+        1,
+        1,
+        3
+      ],
+      "satisfiable": false
+    },
+    {
+      "support": [
+        0,
+        1,
+        2,
+        3,
+        4
+      ],
+      "trial": 17,
+      "halfcode_multiplicities": [
+        1,
+        0,
+        3,
+        4,
+        3,
+        4,
+        1,
+        0
+      ],
+      "star_multiplicities": [
+        1,
+        4,
+        3,
+        4,
+        4
+      ],
+      "satisfiable": false
+    },
+    {
+      "support": [
+        0,
+        1,
+        2,
+        3,
+        4
+      ],
+      "trial": 18,
+      "halfcode_multiplicities": [
+        2,
+        1,
+        2,
+        0,
+        1,
+        0,
+        4,
+        1
+      ],
+      "star_multiplicities": [
+        2,
+        4,
+        1,
+        2,
+        2
+      ],
+      "satisfiable": false
+    },
+    {
+      "support": [
+        0,
+        1,
+        2,
+        3,
+        4
+      ],
+      "trial": 19,
+      "halfcode_multiplicities": [
+        1,
+        2,
+        3,
+        2,
+        0,
+        0,
+        2,
+        4
+      ],
+      "star_multiplicities": [
+        2,
+        1,
+        2,
+        2,
+        1
+      ],
+      "satisfiable": false
+    },
+    {
+      "support": [
+        0,
+        1,
+        2,
+        3,
+        4
+      ],
+      "trial": 20,
+      "halfcode_multiplicities": [
+        4,
+        2,
+        0,
+        2,
+        1,
+        3,
+        2,
+        1
+      ],
+      "star_multiplicities": [
+        2,
+        4,
+        3,
+        4,
+        4
+      ],
+      "satisfiable": false
+    },
+    {
+      "support": [
+        0,
+        1,
+        2,
+        3,
+        4
+      ],
+      "trial": 21,
+      "halfcode_multiplicities": [
+        3,
+        4,
+        2,
+        2,
+        4,
+        1,
+        3,
+        0
+      ],
+      "star_multiplicities": [
+        4,
+        3,
+        2,
+        3,
+        4
+      ],
+      "satisfiable": false
+    },
+    {
+      "support": [
+        0,
+        1,
+        2,
+        3,
+        4
+      ],
+      "trial": 22,
+      "halfcode_multiplicities": [
+        3,
+        4,
+        4,
+        2,
+        3,
+        3,
+        4,
+        4
+      ],
+      "star_multiplicities": [
+        3,
+        4,
+        3,
+        3,
+        4
+      ],
+      "satisfiable": false
+    },
+    {
+      "support": [
+        0,
+        1,
+        2,
+        3,
+        4
+      ],
+      "trial": 23,
+      "halfcode_multiplicities": [
+        0,
+        0,
+        4,
+        3,
+        3,
+        1,
+        4,
+        2
+      ],
+      "star_multiplicities": [
+        3,
+        3,
+        4,
+        3,
+        2
+      ],
+      "satisfiable": false
+    },
+    {
+      "support": [
+        0,
+        1,
+        2,
+        3,
+        4
+      ],
+      "trial": 24,
+      "halfcode_multiplicities": [
+        2,
+        2,
+        3,
+        4,
+        4,
+        2,
+        4,
+        4
+      ],
+      "star_multiplicities": [
+        1,
+        2,
+        2,
+        1,
+        2
+      ],
+      "satisfiable": false
+    },
+    {
+      "support": [
+        0,
+        1,
+        2,
+        3,
+        4
+      ],
+      "trial": 25,
+      "halfcode_multiplicities": [
+        0,
+        2,
+        0,
+        4,
+        0,
+        4,
+        2,
+        0
+      ],
+      "star_multiplicities": [
+        2,
+        3,
+        4,
+        2,
+        1
+      ],
+      "satisfiable": false
+    },
+    {
+      "support": [
+        0,
+        1,
+        2,
+        3,
+        4
+      ],
+      "trial": 26,
+      "halfcode_multiplicities": [
+        0,
+        3,
+        3,
+        2,
+        4,
+        2,
+        1,
+        3
+      ],
+      "star_multiplicities": [
+        4,
+        3,
+        4,
+        3,
+        1
+      ],
+      "satisfiable": false
+    },
+    {
+      "support": [
+        0,
+        1,
+        2,
+        3,
+        4
+      ],
+      "trial": 27,
+      "halfcode_multiplicities": [
+        4,
+        3,
+        0,
+        0,
+        2,
+        2,
+        1,
+        3
+      ],
+      "star_multiplicities": [
+        1,
+        3,
+        3,
+        4,
+        4
+      ],
+      "satisfiable": false
+    },
+    {
+      "support": [
+        0,
+        1,
+        2,
+        3,
+        4
+      ],
+      "trial": 28,
+      "halfcode_multiplicities": [
+        1,
+        3,
+        0,
+        0,
+        3,
+        4,
+        3,
+        1
+      ],
+      "star_multiplicities": [
+        4,
+        1,
+        2,
+        4,
+        1
+      ],
+      "satisfiable": false
+    },
+    {
+      "support": [
+        0,
+        1,
+        2,
+        3,
+        4
+      ],
+      "trial": 29,
+      "halfcode_multiplicities": [
+        1,
+        4,
+        3,
+        3,
+        1,
+        3,
+        3,
+        3
+      ],
+      "star_multiplicities": [
+        2,
+        4,
+        4,
+        3,
+        2
+      ],
+      "satisfiable": false
+    },
+    {
+      "support": [
+        0,
+        1,
+        2,
+        3,
+        4
+      ],
+      "trial": 30,
+      "halfcode_multiplicities": [
+        4,
+        0,
+        4,
+        2,
+        0,
+        4,
+        0,
+        3
+      ],
+      "star_multiplicities": [
+        1,
+        3,
+        2,
+        1,
+        4
+      ],
+      "satisfiable": false
+    },
+    {
+      "support": [
+        0,
+        1,
+        2,
+        3,
+        4
+      ],
+      "trial": 31,
+      "halfcode_multiplicities": [
+        2,
+        3,
+        4,
+        1,
+        2,
+        3,
+        0,
+        3
+      ],
+      "star_multiplicities": [
+        2,
+        1,
+        1,
+        2,
+        2
+      ],
+      "satisfiable": false
+    },
+    {
+      "support": [
+        0,
+        1,
+        2,
+        3,
+        4
+      ],
+      "trial": 32,
+      "halfcode_multiplicities": [
+        3,
+        2,
+        1,
+        4,
+        3,
+        0,
+        3,
+        1
+      ],
+      "star_multiplicities": [
+        4,
+        3,
+        4,
+        1,
+        1
+      ],
+      "satisfiable": false
+    },
+    {
+      "support": [
+        0,
+        1,
+        2,
+        3,
+        4
+      ],
+      "trial": 33,
+      "halfcode_multiplicities": [
+        2,
+        4,
+        3,
+        3,
+        4,
+        2,
+        4,
+        4
+      ],
+      "star_multiplicities": [
+        1,
+        2,
+        4,
+        4,
+        3
+      ],
+      "satisfiable": false
+    },
+    {
+      "support": [
+        0,
+        1,
+        2,
+        3,
+        4
+      ],
+      "trial": 34,
+      "halfcode_multiplicities": [
+        4,
+        4,
+        0,
+        2,
+        2,
+        0,
+        2,
+        2
+      ],
+      "star_multiplicities": [
+        4,
+        1,
+        1,
+        3,
+        3
+      ],
+      "satisfiable": false
+    },
+    {
+      "support": [
+        0,
+        1,
+        2,
+        3,
+        4
+      ],
+      "trial": 35,
+      "halfcode_multiplicities": [
+        4,
+        4,
+        2,
+        2,
+        0,
+        0,
+        0,
+        3
+      ],
+      "star_multiplicities": [
+        3,
+        4,
+        3,
+        3,
+        3
+      ],
+      "satisfiable": false
+    },
+    {
+      "support": [
+        0,
+        1,
+        2,
+        3,
+        4
+      ],
+      "trial": 36,
+      "halfcode_multiplicities": [
+        0,
+        1,
+        0,
+        1,
+        2,
+        3,
+        1,
+        2
+      ],
+      "star_multiplicities": [
+        4,
+        1,
+        1,
+        3,
+        1
+      ],
+      "satisfiable": false
+    },
+    {
+      "support": [
+        0,
+        1,
+        2,
+        3,
+        4
+      ],
+      "trial": 37,
+      "halfcode_multiplicities": [
+        4,
+        3,
+        4,
+        4,
+        4,
+        3,
+        0,
+        3
+      ],
+      "star_multiplicities": [
+        3,
+        3,
+        2,
+        2,
+        1
+      ],
+      "satisfiable": false
+    },
+    {
+      "support": [
+        0,
+        1,
+        2,
+        3,
+        4
+      ],
+      "trial": 38,
+      "halfcode_multiplicities": [
+        3,
+        0,
+        2,
+        1,
+        4,
+        1,
+        0,
+        3
+      ],
+      "star_multiplicities": [
+        2,
+        2,
+        2,
+        4,
+        1
+      ],
+      "satisfiable": false
+    },
+    {
+      "support": [
+        0,
+        1,
+        2,
+        3,
+        4
+      ],
+      "trial": 39,
+      "halfcode_multiplicities": [
+        2,
+        0,
+        3,
+        1,
+        3,
+        4,
+        1,
+        3
+      ],
+      "star_multiplicities": [
+        1,
+        1,
+        3,
+        1,
+        2
+      ],
+      "satisfiable": false
+    },
+    {
+      "support": [
+        0,
+        1,
+        2,
+        3,
+        4
+      ],
+      "trial": 40,
+      "halfcode_multiplicities": [
+        4,
+        2,
+        1,
+        4,
+        0,
+        2,
+        0,
+        3
+      ],
+      "star_multiplicities": [
+        1,
+        4,
+        2,
+        4,
+        4
+      ],
+      "satisfiable": false
+    },
+    {
+      "support": [
+        0,
+        1,
+        2,
+        3,
+        4
+      ],
+      "trial": 41,
+      "halfcode_multiplicities": [
+        4,
+        2,
+        2,
+        2,
+        1,
+        1,
+        4,
+        0
+      ],
+      "star_multiplicities": [
+        1,
+        1,
+        3,
+        1,
+        1
+      ],
+      "satisfiable": false
+    },
+    {
+      "support": [
+        0,
+        1,
+        2,
+        3,
+        4
+      ],
+      "trial": 42,
+      "halfcode_multiplicities": [
+        4,
+        0,
+        2,
+        1,
+        2,
+        4,
+        0,
+        4
+      ],
+      "star_multiplicities": [
+        3,
+        3,
+        4,
+        3,
+        3
+      ],
+      "satisfiable": false
+    },
+    {
+      "support": [
+        0,
+        1,
+        2,
+        3,
+        4
+      ],
+      "trial": 43,
+      "halfcode_multiplicities": [
+        0,
+        0,
+        1,
+        2,
+        3,
+        0,
+        4,
+        2
+      ],
+      "star_multiplicities": [
+        3,
+        1,
+        1,
+        1,
+        4
+      ],
+      "satisfiable": false
+    },
+    {
+      "support": [
+        0,
+        1,
+        2,
+        3,
+        4
+      ],
+      "trial": 44,
+      "halfcode_multiplicities": [
+        0,
+        3,
+        2,
+        3,
+        0,
+        3,
+        1,
+        4
+      ],
+      "star_multiplicities": [
+        4,
+        2,
+        1,
+        1,
+        4
+      ],
+      "satisfiable": false
+    },
+    {
+      "support": [
+        0,
+        1,
+        2,
+        3,
+        4
+      ],
+      "trial": 45,
+      "halfcode_multiplicities": [
+        1,
+        0,
+        2,
+        1,
+        1,
+        3,
+        2,
+        2
+      ],
+      "star_multiplicities": [
+        2,
+        4,
+        4,
+        1,
+        4
+      ],
+      "satisfiable": false
+    },
+    {
+      "support": [
+        0,
+        1,
+        2,
+        3,
+        4
+      ],
+      "trial": 46,
+      "halfcode_multiplicities": [
+        4,
+        3,
+        1,
+        4,
+        4,
+        2,
+        1,
+        2
+      ],
+      "star_multiplicities": [
+        1,
+        4,
+        1,
+        4,
+        2
+      ],
+      "satisfiable": false
+    },
+    {
+      "support": [
+        0,
+        1,
+        2,
+        3,
+        4
+      ],
+      "trial": 47,
+      "halfcode_multiplicities": [
+        0,
+        3,
+        1,
+        1,
+        2,
+        2,
+        1,
+        0
+      ],
+      "star_multiplicities": [
+        4,
+        3,
+        4,
+        4,
+        4
+      ],
+      "satisfiable": false
+    },
+    {
+      "support": [
+        0,
+        1,
+        2,
+        3,
+        4
+      ],
+      "trial": 48,
+      "halfcode_multiplicities": [
+        4,
+        1,
+        4,
+        4,
+        1,
+        1,
+        3,
+        0
+      ],
+      "star_multiplicities": [
+        2,
+        2,
+        3,
+        4,
+        2
+      ],
+      "satisfiable": false
+    },
+    {
+      "support": [
+        0,
+        1,
+        2,
+        3,
+        4
+      ],
+      "trial": 49,
+      "halfcode_multiplicities": [
+        0,
+        1,
+        4,
+        2,
+        4,
+        4,
+        3,
+        3
+      ],
+      "star_multiplicities": [
+        4,
+        4,
+        1,
+        2,
+        3
+      ],
+      "satisfiable": false
+    },
+    {
+      "support": [
+        0,
+        1,
+        2,
+        3,
+        4
+      ],
+      "trial": 50,
+      "halfcode_multiplicities": [
+        3,
+        0,
+        4,
+        3,
+        0,
+        0,
+        4,
+        4
+      ],
+      "star_multiplicities": [
+        4,
+        4,
+        1,
+        4,
+        2
+      ],
+      "satisfiable": false
+    },
+    {
+      "support": [
+        0,
+        1,
+        2,
+        3,
+        4
+      ],
+      "trial": 51,
+      "halfcode_multiplicities": [
+        4,
+        3,
+        3,
+        0,
+        1,
+        1,
+        3,
+        1
+      ],
+      "star_multiplicities": [
+        1,
+        2,
+        4,
+        2,
+        2
+      ],
+      "satisfiable": false
+    },
+    {
+      "support": [
+        0,
+        1,
+        2,
+        3,
+        4
+      ],
+      "trial": 52,
+      "halfcode_multiplicities": [
+        3,
+        2,
+        4,
+        4,
+        0,
+        3,
+        0,
+        3
+      ],
+      "star_multiplicities": [
+        1,
+        2,
+        4,
+        3,
+        2
+      ],
+      "satisfiable": false
+    },
+    {
+      "support": [
+        0,
+        1,
+        2,
+        3,
+        4
+      ],
+      "trial": 53,
+      "halfcode_multiplicities": [
+        3,
+        0,
+        1,
+        4,
+        4,
+        0,
+        3,
+        1
+      ],
+      "star_multiplicities": [
+        2,
+        3,
+        3,
+        2,
+        3
+      ],
+      "satisfiable": false
+    },
+    {
+      "support": [
+        0,
+        1,
+        2,
+        3,
+        4
+      ],
+      "trial": 54,
+      "halfcode_multiplicities": [
+        2,
+        2,
+        1,
+        1,
+        3,
+        2,
+        2,
+        3
+      ],
+      "star_multiplicities": [
+        1,
+        2,
+        1,
+        3,
+        1
+      ],
+      "satisfiable": false
+    },
+    {
+      "support": [
+        0,
+        1,
+        2,
+        3,
+        4
+      ],
+      "trial": 55,
+      "halfcode_multiplicities": [
+        3,
+        1,
+        0,
+        0,
+        1,
+        1,
+        3,
+        4
+      ],
+      "star_multiplicities": [
+        4,
+        3,
+        4,
+        3,
+        1
+      ],
+      "satisfiable": false
+    },
+    {
+      "support": [
+        0,
+        1,
+        2,
+        3,
+        4
+      ],
+      "trial": 56,
+      "halfcode_multiplicities": [
+        1,
+        2,
+        0,
+        1,
+        2,
+        2,
+        3,
+        0
+      ],
+      "star_multiplicities": [
+        2,
+        4,
+        1,
+        4,
+        3
+      ],
+      "satisfiable": false
+    },
+    {
+      "support": [
+        0,
+        1,
+        2,
+        3,
+        4
+      ],
+      "trial": 57,
+      "halfcode_multiplicities": [
+        3,
+        2,
+        3,
+        3,
+        3,
+        3,
+        3,
+        0
+      ],
+      "star_multiplicities": [
+        1,
+        1,
+        3,
+        2,
+        3
+      ],
+      "satisfiable": false
+    },
+    {
+      "support": [
+        0,
+        1,
+        2,
+        3,
+        4
+      ],
+      "trial": 58,
+      "halfcode_multiplicities": [
+        1,
+        4,
+        2,
+        4,
+        3,
+        0,
+        0,
+        1
+      ],
+      "star_multiplicities": [
+        2,
+        3,
+        4,
+        4,
+        3
+      ],
+      "satisfiable": false
+    },
+    {
+      "support": [
+        0,
+        1,
+        2,
+        3,
+        4
+      ],
+      "trial": 59,
+      "halfcode_multiplicities": [
+        1,
+        4,
+        1,
+        1,
+        3,
+        1,
+        1,
+        0
+      ],
+      "star_multiplicities": [
+        2,
+        1,
+        4,
+        4,
+        2
+      ],
+      "satisfiable": false
+    },
+    {
+      "support": [
+        0,
+        1,
+        2,
+        3,
+        4
+      ],
+      "trial": 60,
+      "halfcode_multiplicities": [
+        3,
+        3,
+        1,
+        3,
+        1,
+        0,
+        3,
+        1
+      ],
+      "star_multiplicities": [
+        1,
+        3,
+        2,
+        1,
+        2
+      ],
+      "satisfiable": false
+    },
+    {
+      "support": [
+        0,
+        1,
+        2,
+        3,
+        4
+      ],
+      "trial": 61,
+      "halfcode_multiplicities": [
+        0,
+        4,
+        0,
+        1,
+        1,
+        0,
+        2,
+        3
+      ],
+      "star_multiplicities": [
+        2,
+        4,
+        1,
+        3,
+        3
+      ],
+      "satisfiable": false
+    },
+    {
+      "support": [
+        0,
+        1,
+        2,
+        3,
+        4
+      ],
+      "trial": 62,
+      "halfcode_multiplicities": [
+        4,
+        4,
+        1,
+        0,
+        2,
+        2,
+        4,
+        4
+      ],
+      "star_multiplicities": [
+        1,
+        4,
+        1,
+        2,
+        4
+      ],
+      "satisfiable": false
+    },
+    {
+      "support": [
+        0,
+        1,
+        2,
+        3,
+        4
+      ],
+      "trial": 63,
+      "halfcode_multiplicities": [
+        2,
+        3,
+        0,
+        0,
+        4,
+        3,
+        3,
+        4
+      ],
+      "star_multiplicities": [
+        3,
+        4,
+        2,
+        4,
+        4
+      ],
+      "satisfiable": false
+    },
+    {
+      "support": [
+        0,
+        1,
+        2,
+        3,
+        4
+      ],
+      "trial": 64,
+      "halfcode_multiplicities": [
+        1,
+        0,
+        1,
+        0,
+        2,
+        4,
+        1,
+        0
+      ],
+      "star_multiplicities": [
+        3,
+        3,
+        3,
+        2,
+        2
+      ],
+      "satisfiable": false
+    },
+    {
+      "support": [
+        0,
+        1,
+        2,
+        3,
+        4
+      ],
+      "trial": 65,
+      "halfcode_multiplicities": [
+        3,
+        1,
+        4,
+        3,
+        3,
+        1,
+        3,
+        4
+      ],
+      "star_multiplicities": [
+        2,
+        3,
+        2,
+        2,
+        2
+      ],
+      "satisfiable": false
+    },
+    {
+      "support": [
+        0,
+        1,
+        2,
+        3,
+        4
+      ],
+      "trial": 66,
+      "halfcode_multiplicities": [
+        2,
+        3,
+        1,
+        3,
+        0,
+        4,
+        2,
+        2
+      ],
+      "star_multiplicities": [
+        3,
+        3,
+        1,
+        1,
+        4
+      ],
+      "satisfiable": false
+    },
+    {
+      "support": [
+        0,
+        1,
+        2,
+        3,
+        4
+      ],
+      "trial": 67,
+      "halfcode_multiplicities": [
+        1,
+        0,
+        0,
+        3,
+        0,
+        3,
+        1,
+        3
+      ],
+      "star_multiplicities": [
+        4,
+        1,
+        3,
+        3,
+        3
+      ],
+      "satisfiable": false
+    },
+    {
+      "support": [
+        0,
+        1,
+        2,
+        3,
+        4
+      ],
+      "trial": 68,
+      "halfcode_multiplicities": [
+        4,
+        3,
+        2,
+        2,
+        0,
+        2,
+        3,
+        2
+      ],
+      "star_multiplicities": [
+        2,
+        1,
+        2,
+        1,
+        1
+      ],
+      "satisfiable": false
+    },
+    {
+      "support": [
+        0,
+        1,
+        2,
+        3,
+        4
+      ],
+      "trial": 69,
+      "halfcode_multiplicities": [
+        0,
+        1,
+        2,
+        1,
+        4,
+        0,
+        4,
+        3
+      ],
+      "star_multiplicities": [
+        3,
+        1,
+        4,
+        1,
+        1
+      ],
+      "satisfiable": false
+    },
+    {
+      "support": [
+        0,
+        1,
+        2,
+        3,
+        4
+      ],
+      "trial": 70,
+      "halfcode_multiplicities": [
+        0,
+        3,
+        2,
+        1,
+        0,
+        2,
+        1,
+        2
+      ],
+      "star_multiplicities": [
+        1,
+        2,
+        3,
+        1,
+        3
+      ],
+      "satisfiable": false
+    },
+    {
+      "support": [
+        0,
+        1,
+        2,
+        3,
+        4
+      ],
+      "trial": 71,
+      "halfcode_multiplicities": [
+        4,
+        4,
+        4,
+        3,
+        2,
+        2,
+        4,
+        0
+      ],
+      "star_multiplicities": [
+        3,
+        3,
+        2,
+        3,
+        3
+      ],
+      "satisfiable": false
+    },
+    {
+      "support": [
+        0,
+        1,
+        2,
+        3,
+        4
+      ],
+      "trial": 72,
+      "halfcode_multiplicities": [
+        0,
+        2,
+        2,
+        1,
+        4,
+        4,
+        3,
+        3
+      ],
+      "star_multiplicities": [
+        3,
+        4,
+        4,
+        2,
+        3
+      ],
+      "satisfiable": false
+    },
+    {
+      "support": [
+        0,
+        1,
+        2,
+        3,
+        4
+      ],
+      "trial": 73,
+      "halfcode_multiplicities": [
+        1,
+        4,
+        4,
+        4,
+        1,
+        3,
+        1,
+        0
+      ],
+      "star_multiplicities": [
+        4,
+        4,
+        4,
+        1,
+        2
+      ],
+      "satisfiable": false
+    },
+    {
+      "support": [
+        0,
+        1,
+        2,
+        3,
+        4
+      ],
+      "trial": 74,
+      "halfcode_multiplicities": [
+        3,
+        4,
+        0,
+        1,
+        3,
+        1,
+        1,
+        0
+      ],
+      "star_multiplicities": [
+        2,
+        3,
+        2,
+        1,
+        3
+      ],
+      "satisfiable": false
+    },
+    {
+      "support": [
+        0,
+        1,
+        2,
+        3,
+        4
+      ],
+      "trial": 75,
+      "halfcode_multiplicities": [
+        2,
+        3,
+        4,
+        3,
+        3,
+        4,
+        0,
+        2
+      ],
+      "star_multiplicities": [
+        1,
+        1,
+        2,
+        1,
+        1
+      ],
+      "satisfiable": false
+    },
+    {
+      "support": [
+        0,
+        1,
+        2,
+        3,
+        4
+      ],
+      "trial": 76,
+      "halfcode_multiplicities": [
+        3,
+        4,
+        3,
+        1,
+        3,
+        0,
+        0,
+        4
+      ],
+      "star_multiplicities": [
+        3,
+        4,
+        3,
+        4,
+        1
+      ],
+      "satisfiable": false
+    },
+    {
+      "support": [
+        0,
+        1,
+        2,
+        3,
+        4
+      ],
+      "trial": 77,
+      "halfcode_multiplicities": [
+        2,
+        3,
+        3,
+        3,
+        0,
+        4,
+        1,
+        1
+      ],
+      "star_multiplicities": [
+        4,
+        3,
+        3,
+        2,
+        4
+      ],
+      "satisfiable": false
+    },
+    {
+      "support": [
+        0,
+        1,
+        2,
+        3,
+        4
+      ],
+      "trial": 78,
+      "halfcode_multiplicities": [
+        4,
+        4,
+        3,
+        3,
+        3,
+        0,
+        1,
+        4
+      ],
+      "star_multiplicities": [
+        2,
+        2,
+        1,
+        1,
+        4
+      ],
+      "satisfiable": false
+    },
+    {
+      "support": [
+        0,
+        1,
+        2,
+        3,
+        4
+      ],
+      "trial": 79,
+      "halfcode_multiplicities": [
+        1,
+        3,
+        0,
+        0,
+        3,
+        3,
+        2,
+        0
+      ],
+      "star_multiplicities": [
+        2,
+        1,
+        3,
+        2,
+        2
+      ],
+      "satisfiable": false
+    },
+    {
+      "support": [
+        0,
+        1,
+        2,
+        3,
+        4
+      ],
+      "trial": 80,
+      "halfcode_multiplicities": [
+        2,
+        2,
+        3,
+        3,
+        0,
+        3,
+        1,
+        1
+      ],
+      "star_multiplicities": [
+        1,
+        2,
+        1,
+        1,
+        2
+      ],
+      "satisfiable": false
+    },
+    {
+      "support": [
+        0,
+        1,
+        2,
+        3,
+        4
+      ],
+      "trial": 81,
+      "halfcode_multiplicities": [
+        3,
+        2,
+        0,
+        2,
+        4,
+        1,
+        2,
+        2
+      ],
+      "star_multiplicities": [
+        4,
+        2,
+        1,
+        1,
+        2
+      ],
+      "satisfiable": false
+    },
+    {
+      "support": [
+        0,
+        1,
+        2,
+        3,
+        4
+      ],
+      "trial": 82,
+      "halfcode_multiplicities": [
+        4,
+        3,
+        4,
+        1,
+        4,
+        1,
+        1,
+        4
+      ],
+      "star_multiplicities": [
+        2,
+        2,
+        4,
+        3,
+        4
+      ],
+      "satisfiable": false
+    },
+    {
+      "support": [
+        0,
+        1,
+        2,
+        3,
+        4
+      ],
+      "trial": 83,
+      "halfcode_multiplicities": [
+        0,
+        2,
+        4,
+        2,
+        2,
+        1,
+        0,
+        2
+      ],
+      "star_multiplicities": [
+        4,
+        1,
+        1,
+        1,
+        2
+      ],
+      "satisfiable": false
+    },
+    {
+      "support": [
+        0,
+        1,
+        2,
+        3,
+        4
+      ],
+      "trial": 84,
+      "halfcode_multiplicities": [
+        2,
+        3,
+        0,
+        0,
+        0,
+        3,
+        4,
+        3
+      ],
+      "star_multiplicities": [
+        3,
+        3,
+        4,
+        4,
+        3
+      ],
+      "satisfiable": false
+    },
+    {
+      "support": [
+        0,
+        1,
+        2,
+        3,
+        4
+      ],
+      "trial": 85,
+      "halfcode_multiplicities": [
+        0,
+        4,
+        1,
+        0,
+        1,
+        2,
+        4,
+        3
+      ],
+      "star_multiplicities": [
+        4,
+        4,
+        3,
+        3,
+        1
+      ],
+      "satisfiable": false
+    },
+    {
+      "support": [
+        0,
+        1,
+        2,
+        3,
+        4
+      ],
+      "trial": 86,
+      "halfcode_multiplicities": [
+        2,
+        2,
+        2,
+        2,
+        2,
+        4,
+        1,
+        1
+      ],
+      "star_multiplicities": [
+        3,
+        3,
+        2,
+        3,
+        3
+      ],
+      "satisfiable": false
+    },
+    {
+      "support": [
+        0,
+        1,
+        2,
+        3,
+        4
+      ],
+      "trial": 87,
+      "halfcode_multiplicities": [
+        3,
+        1,
+        2,
+        3,
+        0,
+        0,
+        1,
+        2
+      ],
+      "star_multiplicities": [
+        3,
+        4,
+        2,
+        2,
+        1
+      ],
+      "satisfiable": false
+    },
+    {
+      "support": [
+        0,
+        1,
+        2,
+        3,
+        4
+      ],
+      "trial": 88,
+      "halfcode_multiplicities": [
+        0,
+        2,
+        3,
+        3,
+        0,
+        0,
+        1,
+        3
+      ],
+      "star_multiplicities": [
+        2,
+        1,
+        2,
+        2,
+        1
+      ],
+      "satisfiable": false
+    },
+    {
+      "support": [
+        0,
+        1,
+        2,
+        3,
+        4
+      ],
+      "trial": 89,
+      "halfcode_multiplicities": [
+        4,
+        1,
+        0,
+        4,
+        4,
+        3,
+        4,
+        0
+      ],
+      "star_multiplicities": [
+        3,
+        3,
+        3,
+        4,
+        2
+      ],
+      "satisfiable": false
+    },
+    {
+      "support": [
+        0,
+        1,
+        2,
+        3,
+        4
+      ],
+      "trial": 90,
+      "halfcode_multiplicities": [
+        1,
+        3,
+        2,
+        3,
+        3,
+        4,
+        3,
+        3
+      ],
+      "star_multiplicities": [
+        3,
+        4,
+        2,
+        2,
+        3
+      ],
+      "satisfiable": false
+    },
+    {
+      "support": [
+        0,
+        1,
+        2,
+        3,
+        4
+      ],
+      "trial": 91,
+      "halfcode_multiplicities": [
+        3,
+        0,
+        0,
+        2,
+        4,
+        4,
+        4,
+        1
+      ],
+      "star_multiplicities": [
+        1,
+        1,
+        1,
+        1,
+        3
+      ],
+      "satisfiable": false
+    },
+    {
+      "support": [
+        0,
+        1,
+        2,
+        3,
+        4
+      ],
+      "trial": 92,
+      "halfcode_multiplicities": [
+        2,
+        1,
+        0,
+        3,
+        3,
+        2,
+        0,
+        1
+      ],
+      "star_multiplicities": [
+        1,
+        3,
+        4,
+        2,
+        1
+      ],
+      "satisfiable": false
+    },
+    {
+      "support": [
+        0,
+        1,
+        2,
+        3,
+        4
+      ],
+      "trial": 93,
+      "halfcode_multiplicities": [
+        2,
+        4,
+        3,
+        3,
+        1,
+        1,
+        1,
+        2
+      ],
+      "star_multiplicities": [
+        1,
+        2,
+        2,
+        3,
+        3
+      ],
+      "satisfiable": false
+    },
+    {
+      "support": [
+        0,
+        1,
+        2,
+        3,
+        4
+      ],
+      "trial": 94,
+      "halfcode_multiplicities": [
+        1,
+        3,
+        2,
+        2,
+        4,
+        0,
+        1,
+        2
+      ],
+      "star_multiplicities": [
+        4,
+        2,
+        2,
+        4,
+        2
+      ],
+      "satisfiable": false
+    },
+    {
+      "support": [
+        0,
+        1,
+        2,
+        3,
+        4
+      ],
+      "trial": 95,
+      "halfcode_multiplicities": [
+        4,
+        2,
+        1,
+        1,
+        0,
+        4,
+        2,
+        1
+      ],
+      "star_multiplicities": [
+        1,
+        1,
+        1,
+        4,
+        3
+      ],
+      "satisfiable": false
+    },
+    {
+      "support": [
+        0,
+        1,
+        2,
+        3,
+        4
+      ],
+      "trial": 96,
+      "halfcode_multiplicities": [
+        1,
+        0,
+        3,
+        0,
+        0,
+        3,
+        1,
+        3
+      ],
+      "star_multiplicities": [
+        3,
+        2,
+        4,
+        4,
+        3
+      ],
+      "satisfiable": false
+    },
+    {
+      "support": [
+        0,
+        1,
+        2,
+        3,
+        4
+      ],
+      "trial": 97,
+      "halfcode_multiplicities": [
+        3,
+        1,
+        0,
+        0,
+        2,
+        4,
+        1,
+        3
+      ],
+      "star_multiplicities": [
+        1,
+        1,
+        1,
+        4,
+        2
+      ],
+      "satisfiable": false
+    },
+    {
+      "support": [
+        0,
+        1,
+        2,
+        3,
+        4
+      ],
+      "trial": 98,
+      "halfcode_multiplicities": [
+        0,
+        2,
+        2,
+        0,
+        4,
+        1,
+        2,
+        3
+      ],
+      "star_multiplicities": [
+        2,
+        3,
+        4,
+        1,
+        1
+      ],
+      "satisfiable": false
+    },
+    {
+      "support": [
+        0,
+        1,
+        2,
+        3,
+        4
+      ],
+      "trial": 99,
+      "halfcode_multiplicities": [
+        1,
+        4,
+        1,
+        0,
+        3,
+        2,
+        0,
+        3
+      ],
+      "star_multiplicities": [
+        3,
+        2,
+        4,
+        3,
+        4
+      ],
+      "satisfiable": false
+    },
+    {
+      "support": [
+        0,
+        1,
+        2,
+        5,
+        6
+      ],
+      "trial": 0,
+      "halfcode_multiplicities": [
+        4,
+        0,
+        0,
+        4,
+        4,
+        3,
+        4,
+        4
+      ],
+      "star_multiplicities": [
+        1,
+        4,
+        2,
+        3,
+        2
+      ],
+      "satisfiable": false
+    },
+    {
+      "support": [
+        0,
+        1,
+        2,
+        5,
+        6
+      ],
+      "trial": 1,
+      "halfcode_multiplicities": [
+        2,
+        2,
+        1,
+        1,
+        0,
+        2,
+        2,
+        0
+      ],
+      "star_multiplicities": [
+        3,
+        3,
+        1,
+        4,
+        2
+      ],
+      "satisfiable": false
+    },
+    {
+      "support": [
+        0,
+        1,
+        2,
+        5,
+        6
+      ],
+      "trial": 2,
+      "halfcode_multiplicities": [
+        1,
+        3,
+        1,
+        0,
+        2,
+        0,
+        3,
+        0
+      ],
+      "star_multiplicities": [
+        1,
+        4,
+        2,
+        3,
+        1
+      ],
+      "satisfiable": false
+    },
+    {
+      "support": [
+        0,
+        1,
+        2,
+        5,
+        6
+      ],
+      "trial": 3,
+      "halfcode_multiplicities": [
+        4,
+        4,
+        3,
+        2,
+        2,
+        2,
+        2,
+        0
+      ],
+      "star_multiplicities": [
+        1,
+        3,
+        4,
+        3,
+        2
+      ],
+      "satisfiable": false
+    },
+    {
+      "support": [
+        0,
+        1,
+        2,
+        5,
+        6
+      ],
+      "trial": 4,
+      "halfcode_multiplicities": [
+        4,
+        3,
+        0,
+        4,
+        2,
+        3,
+        2,
+        0
+      ],
+      "star_multiplicities": [
+        3,
+        4,
+        2,
+        4,
+        4
+      ],
+      "satisfiable": false
+    },
+    {
+      "support": [
+        0,
+        1,
+        2,
+        5,
+        6
+      ],
+      "trial": 5,
+      "halfcode_multiplicities": [
+        2,
+        0,
+        3,
+        3,
+        2,
+        3,
+        0,
+        1
+      ],
+      "star_multiplicities": [
+        1,
+        1,
+        3,
+        3,
+        2
+      ],
+      "satisfiable": false
+    },
+    {
+      "support": [
+        0,
+        1,
+        2,
+        5,
+        6
+      ],
+      "trial": 6,
+      "halfcode_multiplicities": [
+        4,
+        4,
+        0,
+        0,
+        2,
+        1,
+        0,
+        0
+      ],
+      "star_multiplicities": [
+        2,
+        2,
+        1,
+        4,
+        3
+      ],
+      "satisfiable": false
+    },
+    {
+      "support": [
+        0,
+        1,
+        2,
+        5,
+        6
+      ],
+      "trial": 7,
+      "halfcode_multiplicities": [
+        2,
+        0,
+        4,
+        1,
+        4,
+        0,
+        3,
+        0
+      ],
+      "star_multiplicities": [
+        1,
+        2,
+        3,
+        4,
+        4
+      ],
+      "satisfiable": false
+    },
+    {
+      "support": [
+        0,
+        1,
+        2,
+        5,
+        6
+      ],
+      "trial": 8,
+      "halfcode_multiplicities": [
+        1,
+        1,
+        1,
+        4,
+        2,
+        0,
+        0,
+        2
+      ],
+      "star_multiplicities": [
+        1,
+        1,
+        3,
+        3,
+        2
+      ],
+      "satisfiable": false
+    },
+    {
+      "support": [
+        0,
+        1,
+        2,
+        5,
+        6
+      ],
+      "trial": 9,
+      "halfcode_multiplicities": [
+        3,
+        2,
+        4,
+        3,
+        2,
+        3,
+        1,
+        1
+      ],
+      "star_multiplicities": [
+        4,
+        2,
+        2,
+        2,
+        1
+      ],
+      "satisfiable": false
+    },
+    {
+      "support": [
+        0,
+        1,
+        2,
+        5,
+        6
+      ],
+      "trial": 10,
+      "halfcode_multiplicities": [
+        3,
+        3,
+        3,
+        4,
+        2,
+        3,
+        3,
+        1
+      ],
+      "star_multiplicities": [
+        2,
+        4,
+        2,
+        2,
+        1
+      ],
+      "satisfiable": false
+    },
+    {
+      "support": [
+        0,
+        1,
+        2,
+        5,
+        6
+      ],
+      "trial": 11,
+      "halfcode_multiplicities": [
+        1,
+        3,
+        2,
+        0,
+        2,
+        3,
+        2,
+        2
+      ],
+      "star_multiplicities": [
+        4,
+        2,
+        3,
+        2,
+        4
+      ],
+      "satisfiable": false
+    },
+    {
+      "support": [
+        0,
+        1,
+        2,
+        5,
+        6
+      ],
+      "trial": 12,
+      "halfcode_multiplicities": [
+        2,
+        1,
+        0,
+        1,
+        0,
+        4,
+        4,
+        1
+      ],
+      "star_multiplicities": [
+        3,
+        1,
+        4,
+        1,
+        1
+      ],
+      "satisfiable": false
+    },
+    {
+      "support": [
+        0,
+        1,
+        2,
+        5,
+        6
+      ],
+      "trial": 13,
+      "halfcode_multiplicities": [
+        3,
+        2,
+        3,
+        0,
+        0,
+        4,
+        2,
+        1
+      ],
+      "star_multiplicities": [
+        3,
+        3,
+        3,
+        3,
+        3
+      ],
+      "satisfiable": false
+    },
+    {
+      "support": [
+        0,
+        1,
+        2,
+        5,
+        6
+      ],
+      "trial": 14,
+      "halfcode_multiplicities": [
+        4,
+        0,
+        1,
+        4,
+        3,
+        0,
+        4,
+        0
+      ],
+      "star_multiplicities": [
+        2,
+        3,
+        3,
+        4,
+        3
+      ],
+      "satisfiable": false
+    },
+    {
+      "support": [
+        0,
+        1,
+        2,
+        5,
+        6
+      ],
+      "trial": 15,
+      "halfcode_multiplicities": [
+        0,
+        4,
+        2,
+        1,
+        4,
+        1,
+        2,
+        2
+      ],
+      "star_multiplicities": [
+        4,
+        4,
+        3,
+        3,
+        3
+      ],
+      "satisfiable": false
+    },
+    {
+      "support": [
+        0,
+        1,
+        2,
+        5,
+        6
+      ],
+      "trial": 16,
+      "halfcode_multiplicities": [
+        2,
+        1,
+        2,
+        1,
+        4,
+        4,
+        3,
+        1
+      ],
+      "star_multiplicities": [
+        4,
+        1,
+        1,
+        1,
+        3
+      ],
+      "satisfiable": false
+    },
+    {
+      "support": [
+        0,
+        1,
+        2,
+        5,
+        6
+      ],
+      "trial": 17,
+      "halfcode_multiplicities": [
+        3,
+        1,
+        4,
+        4,
+        4,
+        4,
+        4,
+        0
+      ],
+      "star_multiplicities": [
+        1,
+        3,
+        2,
+        3,
+        1
+      ],
+      "satisfiable": false
+    },
+    {
+      "support": [
+        0,
+        1,
+        2,
+        5,
+        6
+      ],
+      "trial": 18,
+      "halfcode_multiplicities": [
+        2,
+        0,
+        3,
+        1,
+        0,
+        0,
+        2,
+        4
+      ],
+      "star_multiplicities": [
+        2,
+        1,
+        1,
+        2,
+        2
+      ],
+      "satisfiable": false
+    },
+    {
+      "support": [
+        0,
+        1,
+        2,
+        5,
+        6
+      ],
+      "trial": 19,
+      "halfcode_multiplicities": [
+        4,
+        1,
+        0,
+        0,
+        2,
+        1,
+        2,
+        2
+      ],
+      "star_multiplicities": [
+        1,
+        1,
+        2,
+        3,
+        1
+      ],
+      "satisfiable": false
+    },
+    {
+      "support": [
+        0,
+        1,
+        2,
+        5,
+        6
+      ],
+      "trial": 20,
+      "halfcode_multiplicities": [
+        2,
+        0,
+        4,
+        1,
+        3,
+        2,
+        1,
+        3
+      ],
+      "star_multiplicities": [
+        1,
+        1,
+        4,
+        2,
+        2
+      ],
+      "satisfiable": false
+    },
+    {
+      "support": [
+        0,
+        1,
+        2,
+        5,
+        6
+      ],
+      "trial": 21,
+      "halfcode_multiplicities": [
+        2,
+        3,
+        0,
+        3,
+        0,
+        3,
+        3,
+        1
+      ],
+      "star_multiplicities": [
+        2,
+        2,
+        2,
+        1,
+        3
+      ],
+      "satisfiable": false
+    },
+    {
+      "support": [
+        0,
+        1,
+        2,
+        5,
+        6
+      ],
+      "trial": 22,
+      "halfcode_multiplicities": [
+        4,
+        0,
+        4,
+        4,
+        4,
+        1,
+        2,
+        1
+      ],
+      "star_multiplicities": [
+        2,
+        4,
+        3,
+        2,
+        2
+      ],
+      "satisfiable": false
+    },
+    {
+      "support": [
+        0,
+        1,
+        2,
+        5,
+        6
+      ],
+      "trial": 23,
+      "halfcode_multiplicities": [
+        0,
+        4,
+        0,
+        0,
+        3,
+        0,
+        0,
+        0
+      ],
+      "star_multiplicities": [
+        2,
+        4,
+        3,
+        3,
+        3
+      ],
+      "satisfiable": false
+    },
+    {
+      "support": [
+        0,
+        1,
+        2,
+        5,
+        6
+      ],
+      "trial": 24,
+      "halfcode_multiplicities": [
+        0,
+        4,
+        4,
+        0,
+        2,
+        3,
+        2,
+        1
+      ],
+      "star_multiplicities": [
+        2,
+        1,
+        1,
+        4,
+        2
+      ],
+      "satisfiable": false
+    },
+    {
+      "support": [
+        0,
+        1,
+        2,
+        5,
+        6
+      ],
+      "trial": 25,
+      "halfcode_multiplicities": [
+        1,
+        4,
+        1,
+        4,
+        4,
+        0,
+        4,
+        3
+      ],
+      "star_multiplicities": [
+        1,
+        3,
+        2,
+        2,
+        1
+      ],
+      "satisfiable": false
+    },
+    {
+      "support": [
+        0,
+        1,
+        2,
+        5,
+        6
+      ],
+      "trial": 26,
+      "halfcode_multiplicities": [
+        2,
+        1,
+        3,
+        0,
+        0,
+        1,
+        2,
+        2
+      ],
+      "star_multiplicities": [
+        1,
+        3,
+        4,
+        4,
+        3
+      ],
+      "satisfiable": false
+    },
+    {
+      "support": [
+        0,
+        1,
+        2,
+        5,
+        6
+      ],
+      "trial": 27,
+      "halfcode_multiplicities": [
+        3,
+        4,
+        3,
+        1,
+        3,
+        2,
+        1,
+        1
+      ],
+      "star_multiplicities": [
+        2,
+        1,
+        3,
+        4,
+        1
+      ],
+      "satisfiable": false
+    },
+    {
+      "support": [
+        0,
+        1,
+        2,
+        5,
+        6
+      ],
+      "trial": 28,
+      "halfcode_multiplicities": [
+        1,
+        2,
+        1,
+        4,
+        4,
+        1,
+        2,
+        3
+      ],
+      "star_multiplicities": [
+        2,
+        3,
+        3,
+        3,
+        2
+      ],
+      "satisfiable": false
+    },
+    {
+      "support": [
+        0,
+        1,
+        2,
+        5,
+        6
+      ],
+      "trial": 29,
+      "halfcode_multiplicities": [
+        0,
+        1,
+        3,
+        3,
+        0,
+        0,
+        2,
+        3
+      ],
+      "star_multiplicities": [
+        1,
+        3,
+        1,
+        2,
+        4
+      ],
+      "satisfiable": false
+    },
+    {
+      "support": [
+        0,
+        1,
+        2,
+        5,
+        6
+      ],
+      "trial": 30,
+      "halfcode_multiplicities": [
+        2,
+        3,
+        4,
+        2,
+        2,
+        0,
+        4,
+        4
+      ],
+      "star_multiplicities": [
+        1,
+        1,
+        3,
+        4,
+        4
+      ],
+      "satisfiable": false
+    },
+    {
+      "support": [
+        0,
+        1,
+        2,
+        5,
+        6
+      ],
+      "trial": 31,
+      "halfcode_multiplicities": [
+        0,
+        0,
+        1,
+        1,
+        0,
+        1,
+        0,
+        0
+      ],
+      "star_multiplicities": [
+        4,
+        4,
+        1,
+        2,
+        3
+      ],
+      "satisfiable": false
+    },
+    {
+      "support": [
+        0,
+        1,
+        2,
+        5,
+        6
+      ],
+      "trial": 32,
+      "halfcode_multiplicities": [
+        2,
+        3,
+        1,
+        4,
+        1,
+        1,
+        1,
+        0
+      ],
+      "star_multiplicities": [
+        4,
+        2,
+        2,
+        4,
+        2
+      ],
+      "satisfiable": false
+    },
+    {
+      "support": [
+        0,
+        1,
+        2,
+        5,
+        6
+      ],
+      "trial": 33,
+      "halfcode_multiplicities": [
+        0,
+        3,
+        3,
+        1,
+        1,
+        1,
+        0,
+        4
+      ],
+      "star_multiplicities": [
+        3,
+        3,
+        3,
+        1,
+        2
+      ],
+      "satisfiable": false
+    },
+    {
+      "support": [
+        0,
+        1,
+        2,
+        5,
+        6
+      ],
+      "trial": 34,
+      "halfcode_multiplicities": [
+        2,
+        0,
+        2,
+        4,
+        0,
+        0,
+        3,
+        1
+      ],
+      "star_multiplicities": [
+        3,
+        4,
+        4,
+        1,
+        4
+      ],
+      "satisfiable": false
+    },
+    {
+      "support": [
+        0,
+        1,
+        2,
+        5,
+        6
+      ],
+      "trial": 35,
+      "halfcode_multiplicities": [
+        1,
+        4,
+        2,
+        2,
+        3,
+        3,
+        4,
+        4
+      ],
+      "star_multiplicities": [
+        1,
+        4,
+        1,
+        1,
+        3
+      ],
+      "satisfiable": false
+    },
+    {
+      "support": [
+        0,
+        1,
+        2,
+        5,
+        6
+      ],
+      "trial": 36,
+      "halfcode_multiplicities": [
+        4,
+        1,
+        0,
+        0,
+        3,
+        0,
+        3,
+        1
+      ],
+      "star_multiplicities": [
+        3,
+        3,
+        1,
+        4,
+        1
+      ],
+      "satisfiable": false
+    },
+    {
+      "support": [
+        0,
+        1,
+        2,
+        5,
+        6
+      ],
+      "trial": 37,
+      "halfcode_multiplicities": [
+        0,
+        2,
+        3,
+        0,
+        4,
+        0,
+        2,
+        4
+      ],
+      "star_multiplicities": [
+        4,
+        3,
+        2,
+        3,
+        2
+      ],
+      "satisfiable": false
+    },
+    {
+      "support": [
+        0,
+        1,
+        2,
+        5,
+        6
+      ],
+      "trial": 38,
+      "halfcode_multiplicities": [
+        2,
+        1,
+        2,
+        3,
+        1,
+        2,
+        1,
+        0
+      ],
+      "star_multiplicities": [
+        2,
+        3,
+        3,
+        1,
+        3
+      ],
+      "satisfiable": false
+    },
+    {
+      "support": [
+        0,
+        1,
+        2,
+        5,
+        6
+      ],
+      "trial": 39,
+      "halfcode_multiplicities": [
+        1,
+        0,
+        2,
+        2,
+        3,
+        1,
+        4,
+        0
+      ],
+      "star_multiplicities": [
+        2,
+        1,
+        2,
+        4,
+        1
+      ],
+      "satisfiable": false
+    },
+    {
+      "support": [
+        0,
+        1,
+        2,
+        5,
+        6
+      ],
+      "trial": 40,
+      "halfcode_multiplicities": [
+        4,
+        4,
+        3,
+        0,
+        2,
+        1,
+        3,
+        3
+      ],
+      "star_multiplicities": [
+        4,
+        1,
+        2,
+        4,
+        3
+      ],
+      "satisfiable": false
+    },
+    {
+      "support": [
+        0,
+        1,
+        2,
+        5,
+        6
+      ],
+      "trial": 41,
+      "halfcode_multiplicities": [
+        3,
+        3,
+        3,
+        2,
+        4,
+        0,
+        4,
+        4
+      ],
+      "star_multiplicities": [
+        1,
+        4,
+        2,
+        4,
+        1
+      ],
+      "satisfiable": false
+    },
+    {
+      "support": [
+        0,
+        1,
+        2,
+        5,
+        6
+      ],
+      "trial": 42,
+      "halfcode_multiplicities": [
+        4,
+        0,
+        0,
+        1,
+        4,
+        1,
+        4,
+        4
+      ],
+      "star_multiplicities": [
+        3,
+        2,
+        3,
+        3,
+        3
+      ],
+      "satisfiable": false
+    },
+    {
+      "support": [
+        0,
+        1,
+        2,
+        5,
+        6
+      ],
+      "trial": 43,
+      "halfcode_multiplicities": [
+        0,
+        2,
+        4,
+        3,
+        1,
+        3,
+        3,
+        2
+      ],
+      "star_multiplicities": [
+        1,
+        2,
+        2,
+        1,
+        4
+      ],
+      "satisfiable": false
+    },
+    {
+      "support": [
+        0,
+        1,
+        2,
+        5,
+        6
+      ],
+      "trial": 44,
+      "halfcode_multiplicities": [
+        1,
+        0,
+        3,
+        1,
+        0,
+        1,
+        3,
+        0
+      ],
+      "star_multiplicities": [
+        4,
+        4,
+        2,
+        3,
+        1
+      ],
+      "satisfiable": false
+    },
+    {
+      "support": [
+        0,
+        1,
+        2,
+        5,
+        6
+      ],
+      "trial": 45,
+      "halfcode_multiplicities": [
+        0,
+        2,
+        1,
+        0,
+        1,
+        0,
+        4,
+        3
+      ],
+      "star_multiplicities": [
+        1,
+        2,
+        2,
+        3,
+        3
+      ],
+      "satisfiable": false
+    },
+    {
+      "support": [
+        0,
+        1,
+        2,
+        5,
+        6
+      ],
+      "trial": 46,
+      "halfcode_multiplicities": [
+        0,
+        3,
+        3,
+        1,
+        3,
+        1,
+        4,
+        2
+      ],
+      "star_multiplicities": [
+        3,
+        4,
+        4,
+        2,
+        1
+      ],
+      "satisfiable": false
+    },
+    {
+      "support": [
+        0,
+        1,
+        2,
+        5,
+        6
+      ],
+      "trial": 47,
+      "halfcode_multiplicities": [
+        0,
+        2,
+        2,
+        1,
+        4,
+        3,
+        4,
+        3
+      ],
+      "star_multiplicities": [
+        3,
+        4,
+        2,
+        1,
+        3
+      ],
+      "satisfiable": false
+    },
+    {
+      "support": [
+        0,
+        1,
+        2,
+        5,
+        6
+      ],
+      "trial": 48,
+      "halfcode_multiplicities": [
+        4,
+        1,
+        0,
+        1,
+        1,
+        2,
+        3,
+        3
+      ],
+      "star_multiplicities": [
+        2,
+        4,
+        2,
+        4,
+        2
+      ],
+      "satisfiable": false
+    },
+    {
+      "support": [
+        0,
+        1,
+        2,
+        5,
+        6
+      ],
+      "trial": 49,
+      "halfcode_multiplicities": [
+        0,
+        0,
+        4,
+        0,
+        2,
+        4,
+        1,
+        4
+      ],
+      "star_multiplicities": [
+        3,
+        3,
+        2,
+        4,
+        2
+      ],
+      "satisfiable": false
+    },
+    {
+      "support": [
+        0,
+        1,
+        2,
+        5,
+        6
+      ],
+      "trial": 50,
+      "halfcode_multiplicities": [
+        4,
+        4,
+        0,
+        1,
+        0,
+        1,
+        0,
+        4
+      ],
+      "star_multiplicities": [
+        1,
+        2,
+        1,
+        4,
+        2
+      ],
+      "satisfiable": false
+    },
+    {
+      "support": [
+        0,
+        1,
+        2,
+        5,
+        6
+      ],
+      "trial": 51,
+      "halfcode_multiplicities": [
+        4,
+        1,
+        4,
+        0,
+        0,
+        0,
+        0,
+        4
+      ],
+      "star_multiplicities": [
+        4,
+        2,
+        1,
+        3,
+        3
+      ],
+      "satisfiable": false
+    },
+    {
+      "support": [
+        0,
+        1,
+        2,
+        5,
+        6
+      ],
+      "trial": 52,
+      "halfcode_multiplicities": [
+        3,
+        0,
+        0,
+        1,
+        0,
+        3,
+        2,
+        3
+      ],
+      "star_multiplicities": [
+        3,
+        1,
+        1,
+        3,
+        4
+      ],
+      "satisfiable": false
+    },
+    {
+      "support": [
+        0,
+        1,
+        2,
+        5,
+        6
+      ],
+      "trial": 53,
+      "halfcode_multiplicities": [
+        3,
+        1,
+        1,
+        2,
+        1,
+        2,
+        2,
+        4
+      ],
+      "star_multiplicities": [
+        3,
+        4,
+        3,
+        4,
+        2
+      ],
+      "satisfiable": false
+    },
+    {
+      "support": [
+        0,
+        1,
+        2,
+        5,
+        6
+      ],
+      "trial": 54,
+      "halfcode_multiplicities": [
+        2,
+        2,
+        0,
+        1,
+        2,
+        0,
+        2,
+        2
+      ],
+      "star_multiplicities": [
+        3,
+        4,
+        1,
+        1,
+        2
+      ],
+      "satisfiable": false
+    },
+    {
+      "support": [
+        0,
+        1,
+        2,
+        5,
+        6
+      ],
+      "trial": 55,
+      "halfcode_multiplicities": [
+        2,
+        1,
+        4,
+        2,
+        3,
+        1,
+        3,
+        0
+      ],
+      "star_multiplicities": [
+        4,
+        4,
+        1,
+        3,
+        4
+      ],
+      "satisfiable": false
+    },
+    {
+      "support": [
+        0,
+        1,
+        2,
+        5,
+        6
+      ],
+      "trial": 56,
+      "halfcode_multiplicities": [
+        0,
+        0,
+        3,
+        0,
+        1,
+        0,
+        0,
+        2
+      ],
+      "star_multiplicities": [
+        4,
+        4,
+        2,
+        2,
+        3
+      ],
+      "satisfiable": false
+    },
+    {
+      "support": [
+        0,
+        1,
+        2,
+        5,
+        6
+      ],
+      "trial": 57,
+      "halfcode_multiplicities": [
+        0,
+        2,
+        3,
+        4,
+        0,
+        3,
+        0,
+        2
+      ],
+      "star_multiplicities": [
+        1,
+        1,
+        2,
+        4,
+        1
+      ],
+      "satisfiable": false
+    },
+    {
+      "support": [
+        0,
+        1,
+        2,
+        5,
+        6
+      ],
+      "trial": 58,
+      "halfcode_multiplicities": [
+        1,
+        3,
+        3,
+        1,
+        4,
+        4,
+        2,
+        1
+      ],
+      "star_multiplicities": [
+        1,
+        1,
+        4,
+        3,
+        4
+      ],
+      "satisfiable": false
+    },
+    {
+      "support": [
+        0,
+        1,
+        2,
+        5,
+        6
+      ],
+      "trial": 59,
+      "halfcode_multiplicities": [
+        4,
+        2,
+        3,
+        4,
+        0,
+        3,
+        0,
+        1
+      ],
+      "star_multiplicities": [
+        3,
+        3,
+        4,
+        1,
+        1
+      ],
+      "satisfiable": false
+    },
+    {
+      "support": [
+        0,
+        1,
+        2,
+        5,
+        6
+      ],
+      "trial": 60,
+      "halfcode_multiplicities": [
+        0,
+        0,
+        0,
+        0,
+        1,
+        1,
+        0,
+        4
+      ],
+      "star_multiplicities": [
+        3,
+        2,
+        2,
+        4,
+        2
+      ],
+      "satisfiable": false
+    },
+    {
+      "support": [
+        0,
+        1,
+        2,
+        5,
+        6
+      ],
+      "trial": 61,
+      "halfcode_multiplicities": [
+        0,
+        1,
+        2,
+        0,
+        3,
+        4,
+        0,
+        0
+      ],
+      "star_multiplicities": [
+        1,
+        2,
+        2,
+        2,
+        1
+      ],
+      "satisfiable": false
+    },
+    {
+      "support": [
+        0,
+        1,
+        2,
+        5,
+        6
+      ],
+      "trial": 62,
+      "halfcode_multiplicities": [
+        4,
+        0,
+        2,
+        3,
+        4,
+        2,
+        2,
+        2
+      ],
+      "star_multiplicities": [
+        4,
+        4,
+        2,
+        3,
+        2
+      ],
+      "satisfiable": false
+    },
+    {
+      "support": [
+        0,
+        1,
+        2,
+        5,
+        6
+      ],
+      "trial": 63,
+      "halfcode_multiplicities": [
+        2,
+        4,
+        0,
+        1,
+        4,
+        3,
+        1,
+        0
+      ],
+      "star_multiplicities": [
+        2,
+        2,
+        4,
+        4,
+        1
+      ],
+      "satisfiable": false
+    },
+    {
+      "support": [
+        0,
+        1,
+        2,
+        5,
+        6
+      ],
+      "trial": 64,
+      "halfcode_multiplicities": [
+        0,
+        4,
+        0,
+        1,
+        2,
+        2,
+        4,
+        1
+      ],
+      "star_multiplicities": [
+        2,
+        3,
+        4,
+        2,
+        3
+      ],
+      "satisfiable": false
+    },
+    {
+      "support": [
+        0,
+        1,
+        2,
+        5,
+        6
+      ],
+      "trial": 65,
+      "halfcode_multiplicities": [
+        2,
+        1,
+        2,
+        3,
+        2,
+        3,
+        1,
+        0
+      ],
+      "star_multiplicities": [
+        1,
+        3,
+        1,
+        1,
+        2
+      ],
+      "satisfiable": false
+    },
+    {
+      "support": [
+        0,
+        1,
+        2,
+        5,
+        6
+      ],
+      "trial": 66,
+      "halfcode_multiplicities": [
+        2,
+        1,
+        2,
+        1,
+        0,
+        3,
+        0,
+        2
+      ],
+      "star_multiplicities": [
+        2,
+        1,
+        2,
+        1,
+        3
+      ],
+      "satisfiable": false
+    },
+    {
+      "support": [
+        0,
+        1,
+        2,
+        5,
+        6
+      ],
+      "trial": 67,
+      "halfcode_multiplicities": [
+        1,
+        2,
+        1,
+        2,
+        1,
+        0,
+        3,
+        2
+      ],
+      "star_multiplicities": [
+        2,
+        2,
+        1,
+        1,
+        4
+      ],
+      "satisfiable": false
+    },
+    {
+      "support": [
+        0,
+        1,
+        2,
+        5,
+        6
+      ],
+      "trial": 68,
+      "halfcode_multiplicities": [
+        2,
+        1,
+        3,
+        4,
+        2,
+        0,
+        0,
+        1
+      ],
+      "star_multiplicities": [
+        3,
+        2,
+        3,
+        4,
+        2
+      ],
+      "satisfiable": false
+    },
+    {
+      "support": [
+        0,
+        1,
+        2,
+        5,
+        6
+      ],
+      "trial": 69,
+      "halfcode_multiplicities": [
+        0,
+        0,
+        1,
+        1,
+        2,
+        0,
+        4,
+        0
+      ],
+      "star_multiplicities": [
+        3,
+        1,
+        3,
+        2,
+        3
+      ],
+      "satisfiable": false
+    },
+    {
+      "support": [
+        0,
+        1,
+        2,
+        5,
+        6
+      ],
+      "trial": 70,
+      "halfcode_multiplicities": [
+        0,
+        4,
+        0,
+        4,
+        1,
+        0,
+        0,
+        2
+      ],
+      "star_multiplicities": [
+        1,
+        2,
+        4,
+        4,
+        3
+      ],
+      "satisfiable": false
+    },
+    {
+      "support": [
+        0,
+        1,
+        2,
+        5,
+        6
+      ],
+      "trial": 71,
+      "halfcode_multiplicities": [
+        2,
+        2,
+        2,
+        4,
+        4,
+        2,
+        0,
+        4
+      ],
+      "star_multiplicities": [
+        2,
+        2,
+        1,
+        3,
+        3
+      ],
+      "satisfiable": false
+    },
+    {
+      "support": [
+        0,
+        1,
+        2,
+        5,
+        6
+      ],
+      "trial": 72,
+      "halfcode_multiplicities": [
+        1,
+        3,
+        3,
+        0,
+        2,
+        3,
+        4,
+        3
+      ],
+      "star_multiplicities": [
+        4,
+        3,
+        4,
+        2,
+        3
+      ],
+      "satisfiable": false
+    },
+    {
+      "support": [
+        0,
+        1,
+        2,
+        5,
+        6
+      ],
+      "trial": 73,
+      "halfcode_multiplicities": [
+        1,
+        4,
+        2,
+        1,
+        3,
+        1,
+        0,
+        3
+      ],
+      "star_multiplicities": [
+        3,
+        1,
+        2,
+        1,
+        2
+      ],
+      "satisfiable": false
+    },
+    {
+      "support": [
+        0,
+        1,
+        2,
+        5,
+        6
+      ],
+      "trial": 74,
+      "halfcode_multiplicities": [
+        3,
+        4,
+        3,
+        3,
+        0,
+        0,
+        4,
+        2
+      ],
+      "star_multiplicities": [
+        3,
+        2,
+        3,
+        4,
+        1
+      ],
+      "satisfiable": false
+    },
+    {
+      "support": [
+        0,
+        1,
+        2,
+        5,
+        6
+      ],
+      "trial": 75,
+      "halfcode_multiplicities": [
+        2,
+        2,
+        0,
+        2,
+        3,
+        1,
+        3,
+        1
+      ],
+      "star_multiplicities": [
+        3,
+        4,
+        3,
+        4,
+        4
+      ],
+      "satisfiable": false
+    },
+    {
+      "support": [
+        0,
+        1,
+        2,
+        5,
+        6
+      ],
+      "trial": 76,
+      "halfcode_multiplicities": [
+        0,
+        1,
+        0,
+        3,
+        4,
+        0,
+        1,
+        0
+      ],
+      "star_multiplicities": [
+        4,
+        3,
+        4,
+        3,
+        4
+      ],
+      "satisfiable": false
+    },
+    {
+      "support": [
+        0,
+        1,
+        2,
+        5,
+        6
+      ],
+      "trial": 77,
+      "halfcode_multiplicities": [
+        0,
+        1,
+        2,
+        2,
+        3,
+        3,
+        1,
+        0
+      ],
+      "star_multiplicities": [
+        2,
+        1,
+        1,
+        4,
+        3
+      ],
+      "satisfiable": false
+    },
+    {
+      "support": [
+        0,
+        1,
+        2,
+        5,
+        6
+      ],
+      "trial": 78,
+      "halfcode_multiplicities": [
+        1,
+        0,
+        1,
+        4,
+        2,
+        4,
+        2,
+        3
+      ],
+      "star_multiplicities": [
+        2,
+        3,
+        4,
+        2,
+        2
+      ],
+      "satisfiable": false
+    },
+    {
+      "support": [
+        0,
+        1,
+        2,
+        5,
+        6
+      ],
+      "trial": 79,
+      "halfcode_multiplicities": [
+        3,
+        3,
+        3,
+        3,
+        4,
+        3,
+        2,
+        2
+      ],
+      "star_multiplicities": [
+        3,
+        4,
+        2,
+        2,
+        4
+      ],
+      "satisfiable": false
+    },
+    {
+      "support": [
+        0,
+        1,
+        2,
+        5,
+        6
+      ],
+      "trial": 80,
+      "halfcode_multiplicities": [
+        2,
+        3,
+        1,
+        1,
+        0,
+        3,
+        3,
+        3
+      ],
+      "star_multiplicities": [
+        2,
+        4,
+        3,
+        3,
+        1
+      ],
+      "satisfiable": false
+    },
+    {
+      "support": [
+        0,
+        1,
+        2,
+        5,
+        6
+      ],
+      "trial": 81,
+      "halfcode_multiplicities": [
+        0,
+        3,
+        0,
+        2,
+        2,
+        0,
+        1,
+        4
+      ],
+      "star_multiplicities": [
+        4,
+        4,
+        2,
+        4,
+        4
+      ],
+      "satisfiable": false
+    },
+    {
+      "support": [
+        0,
+        1,
+        2,
+        5,
+        6
+      ],
+      "trial": 82,
+      "halfcode_multiplicities": [
+        2,
+        4,
+        0,
+        0,
+        2,
+        1,
+        1,
+        4
+      ],
+      "star_multiplicities": [
+        1,
+        1,
+        3,
+        2,
+        1
+      ],
+      "satisfiable": false
+    },
+    {
+      "support": [
+        0,
+        1,
+        2,
+        5,
+        6
+      ],
+      "trial": 83,
+      "halfcode_multiplicities": [
+        3,
+        0,
+        3,
+        2,
+        1,
+        2,
+        0,
+        0
+      ],
+      "star_multiplicities": [
+        3,
+        3,
+        3,
+        4,
+        4
+      ],
+      "satisfiable": false
+    },
+    {
+      "support": [
+        0,
+        1,
+        2,
+        5,
+        6
+      ],
+      "trial": 84,
+      "halfcode_multiplicities": [
+        2,
+        1,
+        2,
+        3,
+        0,
+        3,
+        4,
+        4
+      ],
+      "star_multiplicities": [
+        1,
+        3,
+        4,
+        2,
+        2
+      ],
+      "satisfiable": false
+    },
+    {
+      "support": [
+        0,
+        1,
+        2,
+        5,
+        6
+      ],
+      "trial": 85,
+      "halfcode_multiplicities": [
+        2,
+        3,
+        1,
+        1,
+        1,
+        2,
+        1,
+        2
+      ],
+      "star_multiplicities": [
+        1,
+        3,
+        1,
+        1,
+        3
+      ],
+      "satisfiable": false
+    },
+    {
+      "support": [
+        0,
+        1,
+        2,
+        5,
+        6
+      ],
+      "trial": 86,
+      "halfcode_multiplicities": [
+        0,
+        1,
+        0,
+        3,
+        2,
+        0,
+        4,
+        3
+      ],
+      "star_multiplicities": [
+        1,
+        2,
+        2,
+        4,
+        2
+      ],
+      "satisfiable": false
+    },
+    {
+      "support": [
+        0,
+        1,
+        2,
+        5,
+        6
+      ],
+      "trial": 87,
+      "halfcode_multiplicities": [
+        3,
+        0,
+        0,
+        2,
+        4,
+        0,
+        0,
+        2
+      ],
+      "star_multiplicities": [
+        3,
+        1,
+        2,
+        2,
+        3
+      ],
+      "satisfiable": false
+    },
+    {
+      "support": [
+        0,
+        1,
+        2,
+        5,
+        6
+      ],
+      "trial": 88,
+      "halfcode_multiplicities": [
+        0,
+        2,
+        0,
+        2,
+        4,
+        2,
+        1,
+        0
+      ],
+      "star_multiplicities": [
+        2,
+        2,
+        4,
+        4,
+        1
+      ],
+      "satisfiable": false
+    },
+    {
+      "support": [
+        0,
+        1,
+        2,
+        5,
+        6
+      ],
+      "trial": 89,
+      "halfcode_multiplicities": [
+        0,
+        4,
+        0,
+        4,
+        4,
+        4,
+        1,
+        1
+      ],
+      "star_multiplicities": [
+        1,
+        2,
+        4,
+        4,
+        2
+      ],
+      "satisfiable": false
+    },
+    {
+      "support": [
+        0,
+        1,
+        2,
+        5,
+        6
+      ],
+      "trial": 90,
+      "halfcode_multiplicities": [
+        1,
+        4,
+        4,
+        3,
+        2,
+        4,
+        1,
+        2
+      ],
+      "star_multiplicities": [
+        1,
+        3,
+        4,
+        4,
+        3
+      ],
+      "satisfiable": false
+    },
+    {
+      "support": [
+        0,
+        1,
+        2,
+        5,
+        6
+      ],
+      "trial": 91,
+      "halfcode_multiplicities": [
+        3,
+        1,
+        0,
+        2,
+        4,
+        4,
+        2,
+        4
+      ],
+      "star_multiplicities": [
+        2,
+        2,
+        2,
+        4,
+        1
+      ],
+      "satisfiable": false
+    },
+    {
+      "support": [
+        0,
+        1,
+        2,
+        5,
+        6
+      ],
+      "trial": 92,
+      "halfcode_multiplicities": [
+        3,
+        2,
+        4,
+        4,
+        3,
+        3,
+        2,
+        1
+      ],
+      "star_multiplicities": [
+        1,
+        1,
+        3,
+        2,
+        4
+      ],
+      "satisfiable": false
+    },
+    {
+      "support": [
+        0,
+        1,
+        2,
+        5,
+        6
+      ],
+      "trial": 93,
+      "halfcode_multiplicities": [
+        3,
+        4,
+        4,
+        4,
+        3,
+        1,
+        2,
+        1
+      ],
+      "star_multiplicities": [
+        4,
+        4,
+        2,
+        1,
+        4
+      ],
+      "satisfiable": false
+    },
+    {
+      "support": [
+        0,
+        1,
+        2,
+        5,
+        6
+      ],
+      "trial": 94,
+      "halfcode_multiplicities": [
+        3,
+        4,
+        4,
+        3,
+        4,
+        1,
+        1,
+        2
+      ],
+      "star_multiplicities": [
+        3,
+        2,
+        1,
+        4,
+        4
+      ],
+      "satisfiable": false
+    },
+    {
+      "support": [
+        0,
+        1,
+        2,
+        5,
+        6
+      ],
+      "trial": 95,
+      "halfcode_multiplicities": [
+        2,
+        3,
+        1,
+        2,
+        4,
+        4,
+        2,
+        2
+      ],
+      "star_multiplicities": [
+        1,
+        2,
+        4,
+        2,
+        2
+      ],
+      "satisfiable": false
+    },
+    {
+      "support": [
+        0,
+        1,
+        2,
+        5,
+        6
+      ],
+      "trial": 96,
+      "halfcode_multiplicities": [
+        1,
+        1,
+        4,
+        0,
+        0,
+        3,
+        3,
+        3
+      ],
+      "star_multiplicities": [
+        3,
+        3,
+        4,
+        4,
+        2
+      ],
+      "satisfiable": false
+    },
+    {
+      "support": [
+        0,
+        1,
+        2,
+        5,
+        6
+      ],
+      "trial": 97,
+      "halfcode_multiplicities": [
+        2,
+        3,
+        3,
+        2,
+        1,
+        1,
+        0,
+        1
+      ],
+      "star_multiplicities": [
+        4,
+        3,
+        2,
+        3,
+        2
+      ],
+      "satisfiable": false
+    },
+    {
+      "support": [
+        0,
+        1,
+        2,
+        5,
+        6
+      ],
+      "trial": 98,
+      "halfcode_multiplicities": [
+        3,
+        0,
+        4,
+        0,
+        3,
+        3,
+        3,
+        4
+      ],
+      "star_multiplicities": [
+        3,
+        1,
+        3,
+        1,
+        4
+      ],
+      "satisfiable": false
+    },
+    {
+      "support": [
+        0,
+        1,
+        2,
+        5,
+        6
+      ],
+      "trial": 99,
+      "halfcode_multiplicities": [
+        2,
+        4,
+        3,
+        4,
+        1,
+        4,
+        0,
+        1
+      ],
+      "star_multiplicities": [
+        3,
+        2,
+        1,
+        4,
+        4
+      ],
+      "satisfiable": false
+    }
+  ],
   "status": "PASS"
 }
