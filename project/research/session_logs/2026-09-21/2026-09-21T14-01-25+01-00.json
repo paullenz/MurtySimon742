@@ -105,6 +105,12 @@
       "completed_at": "2026-09-21T14:52:09+01:00",
       "result": "Synthesized sharp n>=19 theorem for every four-centre support from all three affine-plane orbits; corrected overbroad density comparison: five-coordinate family improves six-coordinate only for n>=26, ties n24,25. Exact formulas and historical timestamps unchanged.",
       "artifact": "project/research/post_ms/2026-09-21-q3-star-support-v1/THEOREM_AND_REVIEW_INDEX.md"
+    },
+    {
+      "id": 15,
+      "completed_at": "2026-09-21T14:54:46+01:00",
+      "result": "Opposite-edge-plane parity populations form an isolated complete bipartite A-component; exact twin collapse/expansion reduces core realizability to one copy of each parity, and any fixed core has eventual positive linear gap. No uniform threshold or existence claim.",
+      "artifact": "project/research/post_ms/2026-09-21-q3-star-support-v1/OPPOSITE_EDGE_PARITY_FACTOR_REDUCTION.md"
     }
   ],
   "early_stop_check_time": null,
@@ -127,7 +133,8 @@
     "2516db1b6e35b502774676bbf7a94310d721d151",
     "6fbcf40c9fa41e1dc08f87b0e1ea17d697bfe718",
     "522827aa1fee823b5fdbd002aee0e1ec24ec509a",
-    "7ec5a57bfc091b679983f1c51f686192e703fef3"
+    "7ec5a57bfc091b679983f1c51f686192e703fef3",
+    "67537c7dc7db246b36cdd2cdefb3bf97c5babf98"
   ],
   "live_unfinished_line": "Both nonparity affine-plane support orbits require n>=20 but realizability remains open. Next attack: opposite-edge plane with mandatory star matching, isolated coordinate population and both parities.",
   "stop_reason": "IN_PROGRESS",
