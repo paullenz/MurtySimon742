@@ -5,19 +5,19 @@ Canonical repository: `paullenz/MurtySimon742`. Date: 21 September 2026.
 Active target: the eventual / sufficiently-large second-extremal problem around M(n)=floor((n-1)^2/4)+1. The general theorem and a uniform threshold remain open. X3 (12 vertices,32 edges,M(12)=31) remains mandatory. Do not revive the false all-order conjecture or the closed mixed {4,5} ladder.
 
 <!-- CURRENT-STATUS:START -->
-CHECKPOINT CLASS: `INTERNAL_ORDER_20_EXTREMAL_CLASSIFICATION`
+CHECKPOINT CLASS: `INTERNAL_PARITY_BLOCK_SUBSTITUTION_BOUND`
 
 WORK MODE: `MATH`
 
-INSPECTED PREDECESSOR: `03b3eda2a58ecf45cb3a5f0c9ae32c95d4c39cc4`.
+INSPECTED PREDECESSOR: `c9dc2413e39bc4258fddd6530496f14b1ecc280a`.
 
-LAST VERIFIED RESULT: In the exactly-four-centre branch, every n=20 graph has m<=73. Equality is unique up to cube symmetry: all six coordinate codes joined to the sole P0 hub, and the four stars induce K1,3. A complete code-multiset MaxSAT audit agrees; the bound has a hand proof.
+LAST VERIFIED RESULT: For arbitrary parity multiplicities r,q in the sole four-centre orbit, e(P0)+e(P1)+e(P0,P1)<=rq. Same-parity edges physically inject into distinct missing cross-parity pairs. Together with the star-forest theorem this isolates parity-star incidence as the main remaining density interface.
 
 UNPRESERVED WORK: None after this entry checkpoint.
 
 DEFERRED ADMIN: Broad historical README maintenance and CI polling; neither blocks the core attack.
 
-NEXT ACTION: Generalize the order-20 counting to arbitrary parity-plane multiplicities and feed it into M(n)-m.
+NEXT ACTION: Bound parity-star incidence jointly with missing P0-P1 pairs and star antipode-bridge leaves; then combine with coordinate and star-forest bounds.
 <!-- CURRENT-STATUS:END -->
 
 ## Reviewable current package
