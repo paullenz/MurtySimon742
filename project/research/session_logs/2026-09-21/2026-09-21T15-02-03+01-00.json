@@ -101,16 +101,22 @@
       "completed_at": "2026-09-21T15:31:28+01:00",
       "result": "Every P1 vertex incident to stars has neighbors in all four centre classes; with z active P1 vertices, 4z<=s+M-I. Any P0-star edge forces r>=2 and a second physical copy of its star centre.",
       "artifact": "project/research/post_ms/2026-09-21-q3-star-support-v1/PARITY_STAR_FAN_TAX.md"
+    },
+    {
+      "id": 15,
+      "completed_at": "2026-09-21T15:33:32+01:00",
+      "result": "Independent rooted/Hall regression of the actual n=26 parity-star fixture: four maximum roots, all p=0, lambda=2, Q=18 or21; no rigid cut. Expands graph coverage while preserving the source-premise trust boundary.",
+      "artifact": "project/research/post_ms/2026-09-21-q3-star-support-v1/PARITY_STAR_HALL_INTERFACE.md"
     }
   ],
-  "number_of_substantive_units": 14,
+  "number_of_substantive_units": 15,
   "early_stop_check_time": null,
   "early_stop_check_result": null,
   "tool_infrastructure_failures": [
     "python-sat was absent; installed into the disposable workspace dependency directory and validated against three actual D2C controls."
   ],
   "commit_shas_produced": [],
-  "live_unfinished_line": "Use fan tax and P0/star replication to derive a quantitative gap for parity-star-active graphs; test exact fixture expansions.",
+  "live_unfinished_line": "Use parity-star fixture as mandatory control while deriving a quantitative density tax; rigid Hall interface remains unexercised because all maximum roots have p=0.",
   "stop_reason": "IN_PROGRESS",
   "target_status": "IN_PROGRESS",
   "audit_reconciliation": "Latest daily audit prioritizes raw criticality and actual graph realizability. This run follows that priority by hostile-reviewing and attacking the reduced opposite-edge-plane actual core; conditional Hall/source-tuple results are not advanced.",

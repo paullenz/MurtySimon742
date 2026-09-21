@@ -5,19 +5,19 @@ Canonical repository: `paullenz/MurtySimon742`. Date: 21 September 2026.
 Active target: the eventual / sufficiently-large second-extremal problem around M(n)=floor((n-1)^2/4)+1. The general theorem and a uniform threshold remain open. X3 (12 vertices,32 edges,M(12)=31) remains mandatory. Do not revive the false all-order conjecture or the closed mixed {4,5} ladder.
 
 <!-- CURRENT-STATUS:START -->
-CHECKPOINT CLASS: `INTERNAL_PARITY_STAR_FAN_TAX`
+CHECKPOINT CLASS: `VERIFIED_ACTUAL_PARITY_STAR_HALL_INTERFACE_P_ZERO`
 
 WORK MODE: `MATH`
 
-INSPECTED PREDECESSOR: `bd62d1b8299f90a8864c8efa9b4aef56dd56f4c3`.
+INSPECTED PREDECESSOR: `754e9d1567a951be5822c70948b32e4146c5d396`.
 
-LAST VERIFIED RESULT: Every active P1 vertex has a four-centre star fan; with z active P1 vertices, 4z<=s+M-I. A P0-star edge forces r>=2 and a duplicate of that star centre. The actual n=26 fixture realizes the interface and remains far below M(n).
+LAST VERIFIED RESULT: The actual n=26 parity-star fixture passes independent rooted regression, but all four maximum-degree roots have p=0, lambda=2 and Q=18 or21. It expands actual-graph coverage without adding a positive rigid Hall cut; source-tuple premises remain conditional.
 
 UNPRESERVED WORK: None after this entry checkpoint.
 
 DEFERRED ADMIN: Broad historical README maintenance and CI polling; neither blocks the core attack.
 
-NEXT ACTION: Combine the fan/replication tax with the defect gate to obtain a quantitative gap for parity-star-active graphs; test exact fixture expansions.
+NEXT ACTION: Use the parity-star fixture as a mandatory control while deriving a quantitative density tax; do not return to rigid Hall until an actual p>0 maximum root exists.
 <!-- CURRENT-STATUS:END -->
 
 ## Reviewable current package

@@ -1,0 +1,58 @@
+{
+  "n": 26,
+  "m": 104,
+  "maximum_roots": [
+    {
+      "root": 1,
+      "degree": 14,
+      "a": 11,
+      "b": 14,
+      "p": 0,
+      "u": 14,
+      "lambda": 2,
+      "Q": 18,
+      "stats": {
+        "roots": 3
+      }
+    },
+    {
+      "root": 2,
+      "degree": 14,
+      "a": 11,
+      "b": 14,
+      "p": 0,
+      "u": 14,
+      "lambda": 2,
+      "Q": 21,
+      "stats": {
+        "roots": 3
+      }
+    },
+    {
+      "root": 4,
+      "degree": 14,
+      "a": 11,
+      "b": 14,
+      "p": 0,
+      "u": 14,
+      "lambda": 2,
+      "Q": 21,
+      "stats": {
+        "roots": 3
+      }
+    },
+    {
+      "root": 7,
+      "degree": 14,
+      "a": 11,
+      "b": 14,
+      "p": 0,
+      "u": 14,
+      "lambda": 2,
+      "Q": 21,
+      "stats": {
+        "roots": 3
+      }
+    }
+  ]
+}
