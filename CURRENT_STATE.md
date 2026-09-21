@@ -11,13 +11,13 @@ WORK MODE: `MATH`
 
 INSPECTED PREDECESSOR: `ff35a12f8fb0381bd443b96a5fbf5f6b85761b96`.
 
-LAST VERIFIED RESULT: Every exactly-four-centre parity-plane graph whose parity/star block is triangle-free satisfies m<=M(n). The proof combines Mantel with the raw coordinate cap E_coord<=min(rt,2 floor((t-3)^2/4)+2). Thus every survivor has a star-containing triangle in addition to s<ceil((r+q)/2), U>=D+1, rq>=D+1, and r,q>s/2. Matching-one and one-tree-component remain invalidated.
+LAST VERIFIED RESULT: Every exactly-four-centre parity-plane graph whose parity/star block is triangle-free satisfies m<=M(n). The proof combines Mantel with the raw coordinate cap E_coord<=min(rt,2 floor((t-3)^2/4)+2). Thus every survivor has a triangle in that block (not necessarily star-containing, because same-parity edges are allowed), in addition to s<ceil((r+q)/2), U>=D+1, rq>=D+1, and r,q>s/2. Matching-one and one-tree-component remain invalidated.
 
 UNPRESERVED WORK: None after this invalidation/repair checkpoint.
 
 DEFERRED ADMIN: Broad historical cleanup; it does not block the raw matching-one attack.
 
-NEXT ACTION: Classify the possible star-containing triangle types in the parity/star block and derive their raw deletion-certificate losses. Feed the strongest loss into the budget D(u,s); retain actual D2C split-tree graphs as hostile controls.
+NEXT ACTION: Split the mandatory block triangle into parity-only and star-containing types and derive their raw deletion-certificate losses. Feed the strongest substitution/bridge loss into D(u,s); retain actual D2C split-tree graphs as hostile controls.
 <!-- CURRENT-STATUS:END -->
 
 ## Reviewable current package

@@ -64,7 +64,7 @@ Since `t>2(w+s)+6`, the final expression is positive (indeed `t-2w+2s>4s+6`, and
 
 ## Consequence and next target
 
-The exact survivor wedge now has a structural, rather than merely scalar, extra condition: its parity/star block contains a triangle. Because the pure parity graph is bipartite, every such triangle uses at least one star vertex. The next raw-criticality task is therefore to classify the possible star-containing triangle types and charge the forced local certificate losses back into the budget `D(u,s)`.
+The exact survivor wedge now has a structural, rather than merely scalar, extra condition: its parity/star block contains a triangle. Same-parity edges are allowed, so this does **not** yet force the triangle to use a star. The next raw-criticality task is to split parity-only triangles from star-containing triangles and charge the relevant substitution or bridge losses back into the budget `D(u,s)`.
 
 ## Trust boundary
 
