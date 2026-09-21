@@ -1,0 +1,31 @@
+{
+  "scheduled_trigger_time": "2026-09-21T18:00:38+01:00",
+  "actual_start_time": "2026-09-21T18:00:38+01:00",
+  "next_scheduled_trigger_time": "2026-09-21T19:00:38+01:00",
+  "preservation_cutoff_time": "2026-09-21T18:55:38+01:00",
+  "segments": [
+    {
+      "start": "2026-09-21T18:00:38+01:00",
+      "kind": "initial entry"
+    }
+  ],
+  "forward_research_start_time": null,
+  "forward_research_stop_time": null,
+  "preservation_start_time": null,
+  "preservation_complete_time": null,
+  "final_report_time": null,
+  "wall_clock_session_minutes": null,
+  "forward_research_span_minutes": null,
+  "preservation_span_minutes": null,
+  "substantive_units": [],
+  "number_of_substantive_units": 0,
+  "early_stop_check_time": null,
+  "early_stop_check_result": null,
+  "tool_infrastructure_failures": [],
+  "commit_shas_produced": [],
+  "live_unfinished_line": "Reload CURRENT_STATE, README, latest commits, and latest red-team audit; then resume the RTS bow-tie through its present edge, fourth cross pair, centre spokes, and coordinate competition.",
+  "stop_reason": "IN_PROGRESS",
+  "target_status": "IN_PROGRESS",
+  "audit_reconciliation": null,
+  "inspected_remote_head": null
+}
