@@ -5,19 +5,19 @@ Canonical repository: `paullenz/MurtySimon742`. Date: 21 September 2026.
 Active target: the eventual / sufficiently-large second-extremal problem around M(n)=floor((n-1)^2/4)+1. The general theorem and a uniform threshold remain open. X3 (12 vertices,32 edges,M(12)=31) remains mandatory. Do not revive the false all-order conjecture or the closed mixed {4,5} ladder.
 
 <!-- CURRENT-STATUS:START -->
-CHECKPOINT CLASS: `INTERNAL_PARITY_STAR_ANTICOMPLETE_DENSITY_CLOSURE`
+CHECKPOINT CLASS: `VERIFIED_ACTUAL_PARITY_STAR_FIXTURE`
 
 WORK MODE: `MATH`
 
-INSPECTED PREDECESSOR: `91c86bd2ce0e16b238917bdc35903ca727d90ee4`.
+INSPECTED PREDECESSOR: `cb41a9d27ab44c30dbbfbcc193711f9e0ea14d3f`.
 
-LAST VERIFIED RESULT: Every exactly-four-centre graph with parity-star anticompleteness satisfies m<=M(n), even with missing P0-P1 pairs and same-parity substitutions. Therefore an actual parity-star edge is the sole remaining density obstruction in the complete four-centre branch.
+LAST VERIFIED RESULT: Parity-star incidence is realizable: an actual n=26,m=104 D2C fixture with two copies of every star centre, r=2,q=1 passes direct graph deletion replay. Its deficit is 53. Any proposed obstruction must retain this mandatory positive control. A P1-star incidence forces that P1 vertex to meet all four star-centre classes.
 
 UNPRESERVED WORK: None after this entry checkpoint.
 
 DEFERRED ADMIN: Broad historical README maintenance and CI polling; neither blocks the core attack.
 
-NEXT ACTION: Resolve existence/nonexistence of parity-star edges with repeated same-centre star copies; preserve physical centre-spoke witnesses and missing-pair V structures.
+NEXT ACTION: Convert the forced P1 four-centre fan and same-centre replication into a density tax; retain the n=26 fixture as mandatory positive control.
 <!-- CURRENT-STATUS:END -->
 
 ## Reviewable current package

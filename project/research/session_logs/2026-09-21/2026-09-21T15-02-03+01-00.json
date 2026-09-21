@@ -89,16 +89,22 @@
       "completed_at": "2026-09-21T15:28:01+01:00",
       "result": "Closed the whole parity-star-anticomplete subbranch at all orders: coordinate edges <=rt, all parity edges <=rq and nonisolated star forest <=s-1 imply m<=M(n). Any four-centre counterexample must contain a physical parity-star edge.",
       "artifact": "project/research/post_ms/2026-09-21-q3-star-support-v1/PARITY_STAR_ANTICOMPLETE_DENSITY_CLOSURE.md"
+    },
+    {
+      "id": 13,
+      "completed_at": "2026-09-21T15:30:32+01:00",
+      "result": "Constructed and independently verified an actual n=26,m=104 parity-star D2C fixture. It realizes the missing-pair V interface, has deficit 53, and becomes a mandatory positive control. Bounded grid suggests two copies of each star centre are needed but no global minimum claimed.",
+      "artifact": "project/research/post_ms/2026-09-21-q3-star-support-v1/PARITY_STAR_ACTUAL_FIXTURE.md"
     }
   ],
-  "number_of_substantive_units": 12,
+  "number_of_substantive_units": 13,
   "early_stop_check_time": null,
   "early_stop_check_result": null,
   "tool_infrastructure_failures": [
     "python-sat was absent; installed into the disposable workspace dependency directory and validated against three actual D2C controls."
   ],
   "commit_shas_produced": [],
-  "live_unfinished_line": "Resolve existence/nonexistence of parity-star edges with repeated same-centre star copies; this is now the sole four-centre density obstruction.",
+  "live_unfinished_line": "Derive a density tax from the forced P1 four-centre star fan and same-centre replication; maintain n=26 fixture as mandatory positive control.",
   "stop_reason": "IN_PROGRESS",
   "target_status": "IN_PROGRESS",
   "audit_reconciliation": "Latest daily audit prioritizes raw criticality and actual graph realizability. This run follows that priority by hostile-reviewing and attacking the reduced opposite-edge-plane actual core; conditional Hall/source-tuple results are not advanced.",
