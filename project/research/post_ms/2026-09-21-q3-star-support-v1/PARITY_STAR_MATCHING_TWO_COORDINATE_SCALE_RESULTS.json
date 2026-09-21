@@ -1,0 +1,45 @@
+{
+  "scope": "two copies each star, r=q=2; unique matching-two core; coordinate multiplicity 1 through 8",
+  "rows": [
+    {
+      "copies_per_coordinate_code": 1,
+      "sat": false,
+      "seconds": 0.013188600540161133
+    },
+    {
+      "copies_per_coordinate_code": 2,
+      "sat": false,
+      "seconds": 0.03386831283569336
+    },
+    {
+      "copies_per_coordinate_code": 3,
+      "sat": false,
+      "seconds": 0.06685233116149902
+    },
+    {
+      "copies_per_coordinate_code": 4,
+      "sat": false,
+      "seconds": 0.13419556617736816
+    },
+    {
+      "copies_per_coordinate_code": 5,
+      "sat": false,
+      "seconds": 0.3531663417816162
+    },
+    {
+      "copies_per_coordinate_code": 6,
+      "sat": false,
+      "seconds": 0.5139856338500977
+    },
+    {
+      "copies_per_coordinate_code": 7,
+      "sat": false,
+      "seconds": 0.8737585544586182
+    },
+    {
+      "copies_per_coordinate_code": 8,
+      "sat": false,
+      "seconds": 1.2665302753448486
+    }
+  ]
+}
