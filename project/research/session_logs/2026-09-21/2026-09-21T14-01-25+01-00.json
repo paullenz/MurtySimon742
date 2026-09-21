@@ -87,6 +87,12 @@
       "completed_at": "2026-09-21T14:44:29+01:00",
       "result": "Exhaustive raw local certificate calculus and fixed-point soundness induction audited against 28,934 literal edge deletions in 916 populations; exact equality of 11,720 lost-pair certificates. Global Hall premises remain conditional.",
       "artifact": "project/research/post_ms/2026-09-21-q3-star-support-v1/RAW_CERTIFICATE_CALCULUS_AND_AUDIT.md"
+    },
+    {
+      "id": 12,
+      "completed_at": "2026-09-21T14:47:10+01:00",
+      "result": "Coordinate-face four-star support forces the outward coordinate code present and inward code absent, using unique physical diagonal matching and resulting halfcube isolation; n>=20. Multiple outward-code copies remain an explicit risk.",
+      "artifact": "project/research/post_ms/2026-09-21-q3-star-support-v1/COORDINATE_FACE_ORIENTATION_OBSTRUCTION.md"
     }
   ],
   "early_stop_check_time": null,
@@ -105,9 +111,10 @@
     "aaafb32b9b36cca1dcd88b84ddb2811275522a29",
     "c58d02216a00215a7b0170886581446dfaa30b15",
     "4fcddc0e8361eb9144a64db2505692a27ebab4c6",
-    "0d0e5a214a747e47bc6da30d001b66aacf5a4b6a"
+    "0d0e5a214a747e47bc6da30d001b66aacf5a4b6a",
+    "2516db1b6e35b502774676bbf7a94310d721d151"
   ],
-  "live_unfinished_line": "Audit the raw necessary-code elimination calculus and scope of the compact star-support theorem package.",
+  "live_unfinished_line": "Coordinate-face support: outward C21 copies and realizability remain open; opposing-edge affine-plane support and larger supports open.",
   "stop_reason": "IN_PROGRESS",
   "target_status": "IN_PROGRESS",
   "continuation_checks": [

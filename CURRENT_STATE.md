@@ -7,19 +7,19 @@
 `X_3` (12 vertices, 32 edges, versus `M(12)=31`) remains the mandatory negative control. The false all-order 2019 Dailly–Foucaud–Hansberg Conjecture 3 is not the target. First-proof priority on Erdős #742 is not the optimization target.
 
 <!-- CURRENT-STATUS:START -->
-CHECKPOINT CLASS: `AUDIT_COMPLETE_RAW_LOCAL_CERTIFICATE_CALCULUS`
+CHECKPOINT CLASS: `VERIFIED_INTERNAL_COORDINATE_FACE_ORIENTATION`
 
 WORK MODE: `MATH`
 
-INSPECTED PREDECESSOR: `0d0e5a214a747e47bc6da30d001b66aacf5a4b6a`.
+INSPECTED PREDECESSOR: `2516db1b6e35b502774676bbf7a94310d721d151`.
 
-LAST VERIFIED RESULT: Exact local criticality calculus and soundness induction for necessary type pruning pass independent reachability replay on 28,934 edge deletions across 916 code populations. Global source premises and rigid Hall coverage are not promoted.
+LAST VERIFIED RESULT: A coordinate-face four-centre support forces its outward coordinate code present and inward code absent; n>=20. Unique-bridge proof excludes the inward-only case for arbitrary multiplicities. The outward branch is open, especially multiple outward-code copies.
 
 UNPRESERVED WORK: None.
 
 DEFERRED ADMIN: Consolidate superseded live-state paragraphs and refresh reviewer summary during final preservation.
 
-NEXT ACTION: Analyze the remaining coordinate-face four-centre orbit using the newly audited physical spoke/bridge calculus.
+NEXT ACTION: Hostile-retest the coordinate-face orientation proof, preserving the distinction between missing code and an adjacent physical copy.
 <!-- CURRENT-STATUS:END -->
 
 ## Current Q3 graph-level results
