@@ -35,6 +35,12 @@
       "completed_at": "2026-09-21T14:13:22+01:00",
       "result": "Uniform hand proof excludes every two-centre star support via an isolated separating coordinate pair; all 28 supports pass independent raw-type replay. Thus nonempty star support has at least three distinct centres.",
       "artifact": "project/research/post_ms/2026-09-21-q3-star-support-v1/AT_LEAST_THREE_STAR_CENTRES.md"
+    },
+    {
+      "id": 4,
+      "completed_at": "2026-09-21T14:17:47+01:00",
+      "result": "Three cube-symmetry hand cases exclude every three-centre star support; uses clean cube-entry obstruction and unique antipode-bridge capacity. Nonempty star support requires at least four centres.",
+      "artifact": "project/research/post_ms/2026-09-21-q3-star-support-v1/THREE_CENTRE_SUPPORTS_IMPOSSIBLE.md"
     }
   ],
   "early_stop_check_time": null,
@@ -45,7 +51,8 @@
   "commit_shas_produced": [
     "f7564e2d113545005c863d11078b56ae168e6388",
     "7b8a119f970990942df3dfe49a2bd00d75ece051",
-    "03590dd66568c793605647febc749f6dd075385f"
+    "03590dd66568c793605647febc749f6dd075385f",
+    "8d642667d333c52e1b79be9e4755f032cf62f847"
   ],
   "live_unfinished_line": "Audit-priority raw Q3 criticality: extend or invalidate the two-opposite-star coordinate-multiplicity branch.",
   "stop_reason": "IN_PROGRESS",
