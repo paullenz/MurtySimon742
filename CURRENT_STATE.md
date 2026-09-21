@@ -65,7 +65,7 @@ Full telemetry: `project/research/session_logs/2026-09-21/2026-09-21T15-02-03+01
 
 - Actual start: 15:02:03 BST; preservation cutoff: 15:55:38 BST.
 - Forward research: 15:02:46--15:55:44 BST = 52m58s (52.9666666667 min), continuously documented across same-slot context re-entry.
-- Preservation complete: PENDING until final telemetry commit; wall-clock and preservation spans PENDING.
+- Preservation complete: 15:56:41 BST; wall-clock span 54m38s (54.6333333333 min); preservation span 0m57s (0.95 min).
 - Substantive units: 26.
 - Stop reason: reached the valid cutoff after the last bounded hostile-core replay; stopped exploration for preservation.
 - >=50-minute target: MET.
