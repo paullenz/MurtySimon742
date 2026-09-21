@@ -5,19 +5,19 @@ Canonical repository: `paullenz/MurtySimon742`. Date: 21 September 2026.
 Active target: the eventual / sufficiently-large second-extremal problem around M(n)=floor((n-1)^2/4)+1. The general theorem and a uniform threshold remain open. X3 (12 vertices,32 edges,M(12)=31) remains mandatory. Do not revive the false all-order conjecture or the closed mixed {4,5} ladder.
 
 <!-- CURRENT-STATUS:START -->
-CHECKPOINT CLASS: `FOUR_CENTRE_BLOCK_TRIANGLE_TAXONOMY`
+CHECKPOINT CLASS: `RTS_BOWTIE_LOCAL_SATURATION`
 
 WORK MODE: `MATH`
 
 INSPECTED PREDECESSOR: `ff35a12f8fb0381bd443b96a5fbf5f6b85761b96`.
 
-LAST VERIFIED RESULT: Every survivor has a triangle in its parity/star block. The exact part-pattern taxonomy excludes SSS and TSS. A parity-only triangle spends at least one occupied missing pair; every star-containing triangle spends at least two unoccupied pairs. In particular RTS is not a one-toll exception: its R-S certificate creates a second T bridge, forcing T-S to be second-kind and producing a crossed second missing pair.
+LAST VERIFIED RESULT: Every survivor has a block triangle. SSS and TSS are impossible; parity-only triangles spend occupied missing pairs and every star triangle spends at least two unoccupied pairs. The RTS case expands to a four-arm bow-tie, but its two crossed missing pairs certify all four arms exactly. Thus arm criticality alone cannot force a third pair; a stronger loss must use the present cross edge, fourth cross pair, centre spokes, or coordinate competition.
 
 UNPRESERVED WORK: None after this invalidation/repair checkpoint.
 
 DEFERRED ADMIN: Broad historical cleanup; it does not block the raw matching-one attack.
 
-NEXT ACTION: Analyze the expanded RTS bow-tie: one present R-T edge, two crossed unoccupied missing pairs and four arms at one star. Test whether the remaining two arms must reuse those pairs or force replication/coordinate loss, then feed the result into D(u,s).
+NEXT ACTION: Attack the locally saturated RTS bow-tie through the present edge rt and fourth pair r't', together with centre-spoke or coordinate-P0 certificate competition. Do not attempt the now-refuted third-pair inference from arm criticality alone.
 <!-- CURRENT-STATUS:END -->
 
 ## Reviewable current package

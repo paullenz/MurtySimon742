@@ -15,12 +15,12 @@
     }
   ],
   "forward_research_start_time": "2026-09-21T17:04:05+01:00",
-  "forward_research_stop_time": null,
-  "preservation_start_time": null,
+  "forward_research_stop_time": "2026-09-21T17:52:05+01:00",
+  "preservation_start_time": "2026-09-21T17:52:05+01:00",
   "preservation_complete_time": null,
   "final_report_time": null,
   "wall_clock_session_minutes": null,
-  "forward_research_span_minutes": null,
+  "forward_research_span_minutes": 48.0,
   "preservation_span_minutes": null,
   "substantive_units": [
     {
@@ -76,11 +76,17 @@
       "completed_at": "2026-09-21T17:47:30+01:00",
       "result": "Closed the apparent one-toll RTS exception: its R-S certificate creates a second T-neighbour of the star, forcing the original T-S edge into the second-kind bucket and a distinct crossed missing pair. Every star-containing block triangle therefore consumes at least two unoccupied missing pairs.",
       "artifact": "project/research/post_ms/2026-09-21-q3-star-support-v1/FOUR_CENTRE_BLOCK_TRIANGLE_TAXONOMY.md"
+    },
+    {
+      "id": 10,
+      "completed_at": "2026-09-21T17:49:29+01:00",
+      "result": "Proved the RTS expansion is locally saturated: the two crossed missing pairs certify all four parity-star arms in pairs, so raw arm criticality cannot force a third missing pair. Any stronger loss must use the present cross edge, fourth cross pair, centre spokes, or coordinate competition.",
+      "artifact": "project/research/post_ms/2026-09-21-q3-star-support-v1/RTS_BOWTIE_LOCAL_SATURATION.md"
     }
   ],
-  "number_of_substantive_units": 9,
-  "early_stop_check_time": null,
-  "early_stop_check_result": null,
+  "number_of_substantive_units": 10,
+  "early_stop_check_time": "2026-09-21T17:50:21+01:00",
+  "early_stop_check_result": "Cutoff remained in the future and bounded proof/consistency auditing remained. Did not finalize; continued through that audit before preservation.",
   "tool_infrastructure_failures": [
     {
       "time": "2026-09-21T17:18:00+01:00",
@@ -88,10 +94,17 @@
       "pivot": "Switched to targeted SAT witnesses, finite hostile ladders, and analytic density budgeting; research continued."
     }
   ],
-  "commit_shas_produced": [],
-  "live_unfinished_line": "Analyze the expanded RTS bow-tie (one present cross edge, two crossed unoccupied missing pairs, four star arms) and determine whether raw criticality forces further replication or coordinate loss.",
-  "stop_reason": "IN_PROGRESS",
-  "target_status": "IN_PROGRESS",
+  "commit_shas_produced": [
+    "ff35a12f8fb0381bd443b96a5fbf5f6b85761b96",
+    "b372cc22678406757e3454328c4fd55cde45de6f",
+    "ab9e901e4752cb8282fba61de4699d1138ffc53c",
+    "4f3529c03950fd9c76aee84a89a0e6216a058e3c",
+    "5039646ec0fd9e675fa460b305d37c060f1c8362",
+    "f95e6d9c61d21e227178e168f947fe6d2412538d"
+  ],
+  "live_unfinished_line": "The RTS bow-tie is locally saturated. Next test its present cross edge and fourth cross pair against star centre-spoke and coordinate-P0 certificate competition; no third-pair inference is available from the four arms alone.",
+  "stop_reason": "Stopped forward exploration for end-of-slot preservation after using the shortened window through the final minutes before the valid cutoff.",
+  "target_status": "NOT_MET_SHORTENED_WINDOW: 48m00s verified forward research; actual entry left 52m07s before cutoff, below the normal 55-minute allocation; no undocumented time credited.",
   "audit_reconciliation": "The latest daily audit prioritizes raw graph criticality, actual D2C regression, and direct attack on interface realizability before further scalar theory. The matching-one target is exactly such a raw physical-certificate obstruction inside an actual realizable parity-star branch; conditional Hall/source-tuple machinery remains untouched.",
   "inspected_remote_head": "2f6a9d83afaa9c3cc9f05c03c8ddaac68901b20a"
 }
