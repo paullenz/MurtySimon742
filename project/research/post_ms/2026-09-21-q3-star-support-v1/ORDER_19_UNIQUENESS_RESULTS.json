@@ -1,0 +1,208 @@
+{
+  "rows": [
+    {
+      "missing": "C00",
+      "possible_A_edges": 15,
+      "D2C_models": 1,
+      "edge_counts": {
+        "6": 1
+      },
+      "unique_A_edges": [
+        [
+          "C10",
+          "P0"
+        ],
+        [
+          "C11",
+          "P0"
+        ],
+        [
+          "C20",
+          "P0"
+        ],
+        [
+          "C21",
+          "P0"
+        ],
+        [
+          "S0",
+          "S6"
+        ],
+        [
+          "S3",
+          "S5"
+        ]
+      ]
+    },
+    {
+      "missing": "C01",
+      "possible_A_edges": 15,
+      "D2C_models": 1,
+      "edge_counts": {
+        "6": 1
+      },
+      "unique_A_edges": [
+        [
+          "C10",
+          "P0"
+        ],
+        [
+          "C11",
+          "P0"
+        ],
+        [
+          "C20",
+          "P0"
+        ],
+        [
+          "C21",
+          "P0"
+        ],
+        [
+          "S0",
+          "S6"
+        ],
+        [
+          "S3",
+          "S5"
+        ]
+      ]
+    },
+    {
+      "missing": "C10",
+      "possible_A_edges": 15,
+      "D2C_models": 1,
+      "edge_counts": {
+        "6": 1
+      },
+      "unique_A_edges": [
+        [
+          "C00",
+          "P0"
+        ],
+        [
+          "C01",
+          "P0"
+        ],
+        [
+          "C20",
+          "P0"
+        ],
+        [
+          "C21",
+          "P0"
+        ],
+        [
+          "S0",
+          "S5"
+        ],
+        [
+          "S3",
+          "S6"
+        ]
+      ]
+    },
+    {
+      "missing": "C11",
+      "possible_A_edges": 15,
+      "D2C_models": 1,
+      "edge_counts": {
+        "6": 1
+      },
+      "unique_A_edges": [
+        [
+          "C00",
+          "P0"
+        ],
+        [
+          "C01",
+          "P0"
+        ],
+        [
+          "C20",
+          "P0"
+        ],
+        [
+          "C21",
+          "P0"
+        ],
+        [
+          "S0",
+          "S5"
+        ],
+        [
+          "S3",
+          "S6"
+        ]
+      ]
+    },
+    {
+      "missing": "C20",
+      "possible_A_edges": 15,
+      "D2C_models": 1,
+      "edge_counts": {
+        "6": 1
+      },
+      "unique_A_edges": [
+        [
+          "C00",
+          "P0"
+        ],
+        [
+          "C01",
+          "P0"
+        ],
+        [
+          "C10",
+          "P0"
+        ],
+        [
+          "C11",
+          "P0"
+        ],
+        [
+          "S0",
+          "S3"
+        ],
+        [
+          "S5",
+          "S6"
+        ]
+      ]
+    },
+    {
+      "missing": "C21",
+      "possible_A_edges": 15,
+      "D2C_models": 1,
+      "edge_counts": {
+        "6": 1
+      },
+      "unique_A_edges": [
+        [
+          "C00",
+          "P0"
+        ],
+        [
+          "C01",
+          "P0"
+        ],
+        [
+          "C10",
+          "P0"
+        ],
+        [
+          "C11",
+          "P0"
+        ],
+        [
+          "S0",
+          "S3"
+        ],
+        [
+          "S5",
+          "S6"
+        ]
+      ]
+    }
+  ]
+}

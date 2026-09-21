@@ -41,16 +41,22 @@
       "completed_at": "2026-09-21T15:12:32+01:00",
       "result": "Hostile replay caught omitted C21 in the first opposite-edge proof. Corrected proof forces C21 bridges between C10,C11 and then kills both clean orientations of cube edge 4--6. Coordinate-face proof survives; all 14 affine-plane orbits independently replayed.",
       "artifact": "project/research/post_ms/2026-09-21-q3-star-support-v1/NONPARITY_ORBIT_HOSTILE_REPLAY.md"
+    },
+    {
+      "id": 5,
+      "completed_at": "2026-09-21T15:14:14+01:00",
+      "result": "Classified the equality case: at n=19 the exactly-four-centre graph is unique up to cube isometry, with five coordinates, one P0, four stars, four coordinate-hub edges and the forced star perfect matching; m=66. All six orientations replay uniquely.",
+      "artifact": "project/research/post_ms/2026-09-21-q3-star-support-v1/ORDER_19_UNIQUENESS.md"
     }
   ],
-  "number_of_substantive_units": 4,
+  "number_of_substantive_units": 5,
   "early_stop_check_time": null,
   "early_stop_check_result": null,
   "tool_infrastructure_failures": [
     "python-sat was absent; installed into the disposable workspace dependency directory and validated against three actual D2C controls."
   ],
   "commit_shas_produced": [],
-  "live_unfinished_line": "Synthesize corrected parity-class classification, then characterize/density-bound the sole realizable four-centre parity-plane orbit.",
+  "live_unfinished_line": "Extend the equality classification to an edge bound/stability statement for larger parity-plane populations.",
   "stop_reason": "IN_PROGRESS",
   "target_status": "IN_PROGRESS",
   "audit_reconciliation": "Latest daily audit prioritizes raw criticality and actual graph realizability. This run follows that priority by hostile-reviewing and attacking the reduced opposite-edge-plane actual core; conditional Hall/source-tuple results are not advanced.",
