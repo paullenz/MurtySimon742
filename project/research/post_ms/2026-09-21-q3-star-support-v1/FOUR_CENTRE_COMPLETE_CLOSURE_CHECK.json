@@ -1,0 +1,51 @@
+{
+  "parameter_scan": {
+    "t": [
+      5,
+      80
+    ],
+    "r": [
+      1,
+      80
+    ],
+    "q": [
+      0,
+      80
+    ],
+    "s": [
+      4,
+      40
+    ],
+    "minimum_D_minus_symmetric_cap": 9,
+    "first_minimizer_t_r_q_s": [
+      5,
+      1,
+      0,
+      4
+    ],
+    "minimum_D_minus_symmetric_cap_for_w_at_least_2": 11,
+    "first_w_at_least_2_minimizer_t_r_q_s": [
+      5,
+      1,
+      1,
+      4
+    ]
+  },
+  "actual_D2C_controls": [
+    {
+      "fixture": "fourth_present_control",
+      "U": 4,
+      "B": 21,
+      "epsilon": 1,
+      "symmetric_cap": 24
+    },
+    {
+      "fixture": "fourth_missing_control",
+      "U": 6,
+      "B": 22,
+      "epsilon": 0,
+      "symmetric_cap": 30
+    }
+  ],
+  "status": "PASS"
+}

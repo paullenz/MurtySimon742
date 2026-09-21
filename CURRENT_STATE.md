@@ -5,19 +5,19 @@ Canonical repository: `paullenz/MurtySimon742`. Date: 21 September 2026.
 Active target: the eventual / sufficiently-large second-extremal problem around M(n)=floor((n-1)^2/4)+1. The general theorem and a uniform threshold remain open. X3 (12 vertices,32 edges,M(12)=31) remains mandatory. Do not revive the false all-order conjecture or the closed mixed {4,5} ladder.
 
 <!-- CURRENT-STATUS:START -->
-CHECKPOINT CLASS: `PARITY_STAR_EXCESS_BOUND_AND_P1_DOMINANCE_GATE`
+CHECKPOINT CLASS: `EXACTLY_FOUR_STAR_CENTRES_DENSITY_CLOSED`
 
 WORK MODE: `MATH`
 
 INSPECTED PREDECESSOR: `0dc97e3c4447c7474fa56042fe8b66ada75d69d3`.
 
-LAST VERIFIED RESULT: Exact cancellation is false, but its quantitative replacement is proved: epsilon=max(0,B-rq-s)<=min(U,k(q-1))<=min(U,s(q-1)), where k is the number of high-bridge stars. Combining this with the budget D closes the branch whenever s(2(t+r-q)+s)>=12. Thus every survivor is strongly P1-dominant: q>t+r+floor((s-ceil(12/s))/2), besides the earlier survivor-wedge conditions.
+LAST VERIFIED RESULT: The entire exactly-four-star-centre Q3 antipodal-transversal branch is density-closed: every such D2C graph satisfies m<=M(n). The key replacement for false exact cancellation is epsilon<=max(0,floor(s(r+q-2)/2)); the budget D exceeds this cap by at least 11 when r+q>=2. The actual epsilon=1 RTS control is retained as a hostile test. Five through eight centres and nontransversal codes remain open.
 
 UNPRESERVED WORK: None after this invalidation/repair checkpoint.
 
 DEFERRED ADMIN: Broad historical cleanup; it does not block the raw matching-one attack.
 
-NEXT ACTION: Attack only the strongly P1-dominant wedge left by the new excess gate. Use missing-pair scarcity, the four-centre fan, or a second bound on high T-star incidence; do not return to exact cancellation or assume either fourth-pair status.
+NEXT ACTION: Independently hostile-audit the two load-bearing raw inputs (every star has a P0 nonneighbour; L+k<=s), synchronize the theorem/review index, then move the Q3 frontier to five through eight star centres. Do not promote beyond Q3 antipodal-transversal scope.
 <!-- CURRENT-STATUS:END -->
 
 ## Reviewable current package
