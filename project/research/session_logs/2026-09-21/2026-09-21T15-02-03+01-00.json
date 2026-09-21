@@ -154,16 +154,28 @@
       "completed_at": "2026-09-21T15:51:07+01:00",
       "result": "The alternative minimal closure, with all four parity pairs missing and jointly bridged by two star vertices, is also UNSAT for r=q=2 through 8. Any split certificate graph needs distributed extra bridges or larger star multiplicity.",
       "artifact": "project/research/post_ms/2026-09-21-q3-star-support-v1/PARITY_STAR_SPLIT_SECOND_STAR_SCALE_RESULTS.json"
+    },
+    {
+      "id": 23,
+      "completed_at": "2026-09-21T15:51:58+01:00",
+      "result": "Both simple split-component closures stay exact UNSAT as each star-centre multiplicity grows from 2 through 8 at r=q=2; larger star multiplicity does not repair those cores.",
+      "artifact": "project/research/post_ms/2026-09-21-q3-star-support-v1/PARITY_STAR_SPLIT_STAR_MULTIPLICITY_RESULTS.json"
+    },
+    {
+      "id": 24,
+      "completed_at": "2026-09-21T15:52:41+01:00",
+      "result": "Directly forcing one star to be the unique common neighbour of two vertex-disjoint missing parity pairs is UNSAT for uniform star multiplicities 2 through 8. This identifies matching-number-one for every H_x as the single compact lemma that would prove sharp missing-pair cancellation.",
+      "artifact": "project/research/post_ms/2026-09-21-q3-star-support-v1/PARITY_STAR_MATCHING_ONE_TARGET.md"
     }
   ],
-  "number_of_substantive_units": 22,
+  "number_of_substantive_units": 24,
   "early_stop_check_time": null,
   "early_stop_check_result": null,
   "tool_infrastructure_failures": [
     "python-sat was absent; installed into the disposable workspace dependency directory and validated against three actual D2C controls."
   ],
   "commit_shas_produced": [],
-  "live_unfinished_line": "Search distributed extra-common-neighbour closures or increased star multiplicity for the first actual H_x with two tree components.",
+  "live_unfinished_line": "Prove the matching-one lemma: a physical even star cannot uniquely bridge two vertex-disjoint missing P0-P1 pairs. This would give e(parity+star)<=rq+s.",
   "stop_reason": "IN_PROGRESS",
   "target_status": "IN_PROGRESS",
   "audit_reconciliation": "Latest daily audit prioritizes raw criticality and actual graph realizability. This run follows that priority by hostile-reviewing and attacking the reduced opposite-edge-plane actual core; conditional Hall/source-tuple results are not advanced.",

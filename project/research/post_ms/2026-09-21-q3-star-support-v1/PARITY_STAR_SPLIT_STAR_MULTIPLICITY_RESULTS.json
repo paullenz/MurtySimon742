@@ -1,0 +1,89 @@
+{
+  "scope": "six coordinates, r=q=2, equal star multiplicity 2 through 8",
+  "rows": [
+    {
+      "copies_per_star_class": 2,
+      "case": "present_cross",
+      "sat": false,
+      "seconds": 0.015822172164916992
+    },
+    {
+      "copies_per_star_class": 2,
+      "case": "second_star",
+      "sat": false,
+      "seconds": 0.01303243637084961
+    },
+    {
+      "copies_per_star_class": 3,
+      "case": "present_cross",
+      "sat": false,
+      "seconds": 0.023234128952026367
+    },
+    {
+      "copies_per_star_class": 3,
+      "case": "second_star",
+      "sat": false,
+      "seconds": 0.024840831756591797
+    },
+    {
+      "copies_per_star_class": 4,
+      "case": "present_cross",
+      "sat": false,
+      "seconds": 0.04826068878173828
+    },
+    {
+      "copies_per_star_class": 4,
+      "case": "second_star",
+      "sat": false,
+      "seconds": 0.04247689247131348
+    },
+    {
+      "copies_per_star_class": 5,
+      "case": "present_cross",
+      "sat": false,
+      "seconds": 0.055889129638671875
+    },
+    {
+      "copies_per_star_class": 5,
+      "case": "second_star",
+      "sat": false,
+      "seconds": 0.05214428901672363
+    },
+    {
+      "copies_per_star_class": 6,
+      "case": "present_cross",
+      "sat": false,
+      "seconds": 0.07920694351196289
+    },
+    {
+      "copies_per_star_class": 6,
+      "case": "second_star",
+      "sat": false,
+      "seconds": 0.08084225654602051
+    },
+    {
+      "copies_per_star_class": 7,
+      "case": "present_cross",
+      "sat": false,
+      "seconds": 0.10972166061401367
+    },
+    {
+      "copies_per_star_class": 7,
+      "case": "second_star",
+      "sat": false,
+      "seconds": 0.10605502128601074
+    },
+    {
+      "copies_per_star_class": 8,
+      "case": "present_cross",
+      "sat": false,
+      "seconds": 0.1465141773223877
+    },
+    {
+      "copies_per_star_class": 8,
+      "case": "second_star",
+      "sat": false,
+      "seconds": 0.16614151000976562
+    }
+  ]
+}

@@ -1,0 +1,40 @@
+{
+  "scope": "six coordinates, r=q=2; one star x is forced to be the unique common A-neighbour of two vertex-disjoint missing parity pairs",
+  "rows": [
+    {
+      "copies_per_star_class": 2,
+      "sat": false,
+      "seconds": 0.014802694320678711
+    },
+    {
+      "copies_per_star_class": 3,
+      "sat": false,
+      "seconds": 0.024352312088012695
+    },
+    {
+      "copies_per_star_class": 4,
+      "sat": false,
+      "seconds": 0.04057669639587402
+    },
+    {
+      "copies_per_star_class": 5,
+      "sat": false,
+      "seconds": 0.05512881278991699
+    },
+    {
+      "copies_per_star_class": 6,
+      "sat": false,
+      "seconds": 0.10847854614257812
+    },
+    {
+      "copies_per_star_class": 7,
+      "sat": false,
+      "seconds": 0.11629891395568848
+    },
+    {
+      "copies_per_star_class": 8,
+      "sat": false,
+      "seconds": 0.1352856159210205
+    }
+  ]
+}
