@@ -7,19 +7,19 @@
 `X_3` (12 vertices, 32 edges, versus `M(12)=31`) remains the mandatory negative control. The false all-order 2019 Dailly–Foucaud–Hansberg Conjecture 3 is not the target. First-proof priority on Erdős #742 is not the optimization target.
 
 <!-- CURRENT-STATUS:START -->
-CHECKPOINT CLASS: `VERIFIED_INTERNAL_OPPOSITE_EDGE_PARITY_OBLIGATION`
+CHECKPOINT CLASS: `INTERNAL_SHARP_FOUR_CENTRE_ORDER_THEOREM`
 
 WORK MODE: `MATH`
 
-INSPECTED PREDECESSOR: `522827aa1fee823b5fdbd002aee0e1ec24ec509a`.
+INSPECTED PREDECESSOR: `7ec5a57bfc091b679983f1c51f686192e703fef3`.
 
-LAST VERIFIED RESULT: Opposite-edge affine-plane support forces exactly one direction-0 coordinate code, both parity codes, four other coordinate codes and a physical star matching; n>=20. Together with the face result, both nonparity four-centre orbits have order at least 20.
+LAST VERIFIED RESULT: All four-centre supports have n>=19, attained in the parity-plane orbit; both nonparity orbits require n>=20. Density comparison corrected: new family is denser only at n>=26, ties at n24,25. Exact formulas unchanged.
 
 UNPRESERVED WORK: None.
 
 DEFERRED ADMIN: Consolidate superseded live-state paragraphs and refresh reviewer summary during final preservation.
 
-NEXT ACTION: Independently audit the two new nonparity-plane obligations and deduce the scoped sharp minimum order for all four-centre supports.
+NEXT ACTION: Audit physical matching dependencies and exact telemetry through the preservation cutoff; next research attack is opposite-edge-plane realizability.
 <!-- CURRENT-STATUS:END -->
 
 ## Current Q3 graph-level results

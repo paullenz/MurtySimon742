@@ -99,6 +99,12 @@
       "completed_at": "2026-09-21T14:50:23+01:00",
       "result": "Opposite-parallel-edge four-star support forces exactly one isolated direction-0 coordinate code, both parity codes, four other coordinates and a physical star matching; n>=20.",
       "artifact": "project/research/post_ms/2026-09-21-q3-star-support-v1/OPPOSITE_EDGE_PLANE_PARITY_OBLIGATION.md"
+    },
+    {
+      "id": 14,
+      "completed_at": "2026-09-21T14:52:09+01:00",
+      "result": "Synthesized sharp n>=19 theorem for every four-centre support from all three affine-plane orbits; corrected overbroad density comparison: five-coordinate family improves six-coordinate only for n>=26, ties n24,25. Exact formulas and historical timestamps unchanged.",
+      "artifact": "project/research/post_ms/2026-09-21-q3-star-support-v1/THEOREM_AND_REVIEW_INDEX.md"
     }
   ],
   "early_stop_check_time": null,
@@ -120,7 +126,8 @@
     "0d0e5a214a747e47bc6da30d001b66aacf5a4b6a",
     "2516db1b6e35b502774676bbf7a94310d721d151",
     "6fbcf40c9fa41e1dc08f87b0e1ea17d697bfe718",
-    "522827aa1fee823b5fdbd002aee0e1ec24ec509a"
+    "522827aa1fee823b5fdbd002aee0e1ec24ec509a",
+    "7ec5a57bfc091b679983f1c51f686192e703fef3"
   ],
   "live_unfinished_line": "Both nonparity affine-plane support orbits require n>=20 but realizability remains open. Next attack: opposite-edge plane with mandatory star matching, isolated coordinate population and both parities.",
   "stop_reason": "IN_PROGRESS",

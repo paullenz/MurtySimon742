@@ -1,0 +1,51 @@
+# Sharp star-support theorem and graph-level trust boundary
+
+21 September 2026. Internally proved and independently replayed; external review and novelty assessment remain open.
+
+## Compact structural theorem
+
+Let G be a diameter-two-critical graph with a vertex v such that G[N(v)] is Q3 and every outside vertex has an antipodal-transversal neighbourhood in Q3. Such codes are exactly the six coordinate halfcubes, two parity halfcubes and eight closed-neighbourhood stars S_c.
+
+If a star occurs, at least four distinct star centres occur. If exactly four occur, they form an affine plane of F_2^3. In that four-centre case n>=19; equality is attained by an explicit 19-vertex 66-edge graph. At order 19 the support must be a parity plane: either nonparity plane orbit requires n>=20.
+
+The lower bound on star-support size and the lower order bound at exactly four centres are both sharp. This does not bound the minimum order at five through eight centres or settle the full eventual second-extremal problem.
+
+## Proof route
+
+1. `RAW_CERTIFICATE_CALCULUS_AND_AUDIT.md`: exhaustive raw edge-deletion certificates; soundness of type-relation elimination for arbitrary physical multiplicities.
+2. `AT_LEAST_THREE_STAR_CENTRES.md` and `THREE_CENTRE_SUPPORTS_IMPOSSIBLE.md`: one, two and three centres are impossible, by isolation, clean cube-entry and unique-bridge obstructions.
+3. `FOUR_CENTRE_AFFINE_PLANE_NECESSITY.md`: the 56 nonplane four-centre supports are impossible; 14 affine planes remain in three symmetry orbits.
+4. `PARITY_PLANE_MINIMUM_ORDER_AND_IMPROVED_FAMILY.md`: missing-coordinate physical matching forces five coordinate codes plus the appropriate parity code; n>=19 and the explicit fixture attains it.
+5. `COORDINATE_FACE_ORIENTATION_OBSTRUCTION.md`: coordinate-face support forces the outward face code, four other coordinate codes and both parities; n>=20.
+6. `OPPOSITE_EDGE_PLANE_PARITY_OBLIGATION.md`: opposite-edge-plane support forces exactly one direction-0 coordinate code, four other coordinates, both parities and a physical star matching; n>=20.
+
+The earlier opposite-star-pair density bounds are superseded by nonrealizability of that support, rather than promoted into an all-code density theorem.
+
+## Actual dense families and correction
+
+For every n>=19 the five-coordinate family has
+
+    M(n)-m = floor((9n-139)/2).
+
+The six-coordinate family exists for every n>=20 and has
+
+    M(n)-m = 5n-82.
+
+The new five-coordinate family improves minimum order and eventually density. Its edge count minus the six-coordinate count equals ceil((n-25)/2): it is smaller for n=20 through 23, equal at 24 and 25, and larger for n>=26. Earlier shorthand calling it simply denser was too broad; the exact formulas were correct. Historical unit timestamps are unchanged.
+
+Both are quadratic-density, triangle-containing D2C families, with a positive linear gap below M(n). Neither is an eventual counterexample, and neither density formula is an optimality theorem over all graphs in its support class.
+
+## Independent evidence and remaining interface gap
+
+- Raw reachability exactly matches the certificate calculus on 28,934 edge deletions across 916 code populations.
+- The five-coordinate family has 30 actual D2C checks and all 66 explicit deletion witnesses at its smallest fixture; the six-coordinate family has 22 actual D2C checks.
+- The independent prior Hall checker passes 108 root-policy runs including X3. All 105 runs from the new fixtures have p=0. Zero positive rigid cuts were added.
+- `MAXIMUM_ROOT_RESIDUAL_LEDGER.md` proves p=0 throughout the balanced five-coordinate family, with Q=13 and exact positive linear residual defect. Its Q3 construction root is not a qualifying maximum-degree root.
+- The finite source-tuple theorem remains conditional on its named global premises. Local certificate validation is not global source-identity closure.
+- X3 remains the mandatory 12-vertex, 32-edge negative control to the false all-order conjecture (M(12)=31).
+
+## Prioritized handoff
+
+First hostile-review the two newest nonparity-plane proofs at physical-vertex scope. Then determine realizability of the opposite-edge-plane support with its mandatory matching and isolated coordinate population, or exploit that structure for a density bound. The coordinate-face outward branch remains open; a bounded 1200-trial search found no fixture but supplies no nonexistence proof. In particular, adjacency to one outward-code copy does not exclude a nonadjacent copy from serving as a spoke witness.
+
+Five through eight star centres, nontransversal codes and the general eventual density theorem remain open. Keep rigid Hall work conditional until an actual qualifying graph interface is supplied. This is consistent with the latest audit's priority on raw criticality and graph realizability.

@@ -68,6 +68,6 @@ Both C20 and C21 are forced: S7's direction-2 leaf at 3 requires C20 (alternativ
 
 ## Conclusion and trust boundary
 
-The 56 nonplane four-centre supports are excluded for arbitrary multiplicities of all allowed codes. The remaining 14 four-centre supports are precisely the affine planes. No claim is made that any of them is realizable. Five through eight centres and nontransversal A-codes remain open.
+The 56 nonplane four-centre supports are excluded for arbitrary multiplicities of all allowed codes. The remaining 14 four-centre supports are precisely the affine planes. At this checkpoint realizability was open. Subsequent files in this package realize the parity plane and analyze the other two orbits; see THEOREM_AND_REVIEW_INDEX.md. Five through eight centres and nontransversal A-codes remain open.
 
 This finite geometry reduction should guide the next structural work: analyze the three affine-plane orbits directly, keeping physical witness uniqueness and cube-edge criticality explicit. It is stronger than a finite search over bounded graph sizes, because each excluded support covers unbounded code multiplicities.

@@ -1,4 +1,4 @@
-# Parity-plane support: exact minimum order and a denser family
+# Parity-plane support: exact minimum order and a dense extension
 
 Date: 21 September 2026. Status: internally proved at stated scope; external review and novelty assessment open.
 
@@ -11,7 +11,7 @@ Moreover, for every n>=19 there is a triangle-containing D2C graph with exactly 
     m = 26+4(n-9)+floor((n-18)^2/4),
     M(n)-m = floor((9n-139)/2).
 
-This improves the earlier six-coordinate construction, but is not an optimal-density theorem over the support class.
+This lowers the minimum construction order and improves the earlier six-coordinate family asymptotically, but is not an optimal-density theorem over the support class. The six-coordinate family is denser at n=20,21,22,23; they tie at n=24,25; this five-coordinate family is denser for every n>=26. The exact edge difference is ceil((n-25)/2).
 
 ## 1. A missing coordinate code forces a physical matching
 
