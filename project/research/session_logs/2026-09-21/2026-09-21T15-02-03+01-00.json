@@ -83,16 +83,22 @@
       "completed_at": "2026-09-21T15:25:57+01:00",
       "result": "Closed the full complete-parity subbranch: if P0-P1 is complete (including P1 empty), arbitrary-multiplicity four-centre graphs satisfy m<=M(n). Any surviving counterexample must have a missing physical parity pair.",
       "artifact": "project/research/post_ms/2026-09-21-q3-star-support-v1/COMPLETE_PARITY_BLOCK_DENSITY_CLOSURE.md"
+    },
+    {
+      "id": 12,
+      "completed_at": "2026-09-21T15:28:01+01:00",
+      "result": "Closed the whole parity-star-anticomplete subbranch at all orders: coordinate edges <=rt, all parity edges <=rq and nonisolated star forest <=s-1 imply m<=M(n). Any four-centre counterexample must contain a physical parity-star edge.",
+      "artifact": "project/research/post_ms/2026-09-21-q3-star-support-v1/PARITY_STAR_ANTICOMPLETE_DENSITY_CLOSURE.md"
     }
   ],
-  "number_of_substantive_units": 11,
+  "number_of_substantive_units": 12,
   "early_stop_check_time": null,
   "early_stop_check_result": null,
   "tool_infrastructure_failures": [
     "python-sat was absent; installed into the disposable workspace dependency directory and validated against three actual D2C controls."
   ],
   "commit_shas_produced": [],
-  "live_unfinished_line": "Attack M>0: use centre-spoke private P0 witnesses and unique-common-neighbour V charges to show missing parity pairs cannot create enough net density.",
+  "live_unfinished_line": "Resolve existence/nonexistence of parity-star edges with repeated same-centre star copies; this is now the sole four-centre density obstruction.",
   "stop_reason": "IN_PROGRESS",
   "target_status": "IN_PROGRESS",
   "audit_reconciliation": "Latest daily audit prioritizes raw criticality and actual graph realizability. This run follows that priority by hostile-reviewing and attacking the reduced opposite-edge-plane actual core; conditional Hall/source-tuple results are not advanced.",

@@ -5,19 +5,19 @@ Canonical repository: `paullenz/MurtySimon742`. Date: 21 September 2026.
 Active target: the eventual / sufficiently-large second-extremal problem around M(n)=floor((n-1)^2/4)+1. The general theorem and a uniform threshold remain open. X3 (12 vertices,32 edges,M(12)=31) remains mandatory. Do not revive the false all-order conjecture or the closed mixed {4,5} ladder.
 
 <!-- CURRENT-STATUS:START -->
-CHECKPOINT CLASS: `INTERNAL_COMPLETE_PARITY_BLOCK_DENSITY_CLOSURE`
+CHECKPOINT CLASS: `INTERNAL_PARITY_STAR_ANTICOMPLETE_DENSITY_CLOSURE`
 
 WORK MODE: `MATH`
 
-INSPECTED PREDECESSOR: `ae1462ea4176cca3b4163a09bfda108e5e97b2d0`.
+INSPECTED PREDECESSOR: `91c86bd2ce0e16b238917bdc35903ca727d90ee4`.
 
-LAST VERIFIED RESULT: The entire complete P0-P1 subbranch of the four-centre parity-plane case satisfies m<=M(n) for every order, including P1 empty. Completeness eliminates same-parity and parity-star edges; coordinates contribute at most rt and the star forest at most s-1. Any surviving counterexample requires M>0.
+LAST VERIFIED RESULT: Every exactly-four-centre graph with parity-star anticompleteness satisfies m<=M(n), even with missing P0-P1 pairs and same-parity substitutions. Therefore an actual parity-star edge is the sole remaining density obstruction in the complete four-centre branch.
 
 UNPRESERVED WORK: None after this entry checkpoint.
 
 DEFERRED ADMIN: Broad historical README maintenance and CI polling; neither blocks the core attack.
 
-NEXT ACTION: Attack M>0 using centre-spoke private P0 witnesses and unique-common-neighbour V charges; show missing parity pairs cannot create enough net density.
+NEXT ACTION: Resolve existence/nonexistence of parity-star edges with repeated same-centre star copies; preserve physical centre-spoke witnesses and missing-pair V structures.
 <!-- CURRENT-STATUS:END -->
 
 ## Reviewable current package
