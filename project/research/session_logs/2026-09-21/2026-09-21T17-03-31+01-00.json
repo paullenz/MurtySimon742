@@ -64,9 +64,21 @@
       "completed_at": "2026-09-21T17:42:25+01:00",
       "result": "Closed the entire triangle-free parity/star-block subcase by combining Mantel with the five-coordinate complementary-pair cap and a two-case algebraic comparison. Every surviving four-centre counterexample must contain a triangle in that block; the triangle need not use a star because same-parity edges are allowed.",
       "artifact": "project/research/post_ms/2026-09-21-q3-star-support-v1/FOUR_CENTRE_TRIANGLE_FREE_BLOCK_CLOSURE.md"
+    },
+    {
+      "id": 8,
+      "completed_at": "2026-09-21T17:46:24+01:00",
+      "result": "Classified all parity/star-block triangle part patterns. SSS and TSS are impossible; RRS and TTS each force one occupied plus two unoccupied missing parity pairs, while RSS forces two unoccupied pairs.",
+      "artifact": "project/research/post_ms/2026-09-21-q3-star-support-v1/FOUR_CENTRE_BLOCK_TRIANGLE_TAXONOMY.md"
+    },
+    {
+      "id": 9,
+      "completed_at": "2026-09-21T17:47:30+01:00",
+      "result": "Closed the apparent one-toll RTS exception: its R-S certificate creates a second T-neighbour of the star, forcing the original T-S edge into the second-kind bucket and a distinct crossed missing pair. Every star-containing block triangle therefore consumes at least two unoccupied missing pairs.",
+      "artifact": "project/research/post_ms/2026-09-21-q3-star-support-v1/FOUR_CENTRE_BLOCK_TRIANGLE_TAXONOMY.md"
     }
   ],
-  "number_of_substantive_units": 7,
+  "number_of_substantive_units": 9,
   "early_stop_check_time": null,
   "early_stop_check_result": null,
   "tool_infrastructure_failures": [
@@ -77,7 +89,7 @@
     }
   ],
   "commit_shas_produced": [],
-  "live_unfinished_line": "Split the now-mandatory parity/star-block triangle into parity-only and star-containing types, then charge substitution or bridge losses into D(u,s).",
+  "live_unfinished_line": "Analyze the expanded RTS bow-tie (one present cross edge, two crossed unoccupied missing pairs, four star arms) and determine whether raw criticality forces further replication or coordinate loss.",
   "stop_reason": "IN_PROGRESS",
   "target_status": "IN_PROGRESS",
   "audit_reconciliation": "The latest daily audit prioritizes raw graph criticality, actual D2C regression, and direct attack on interface realizability before further scalar theory. The matching-one target is exactly such a raw physical-certificate obstruction inside an actual realizable parity-star branch; conditional Hall/source-tuple machinery remains untouched.",

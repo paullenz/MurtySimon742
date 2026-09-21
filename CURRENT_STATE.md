@@ -5,19 +5,19 @@ Canonical repository: `paullenz/MurtySimon742`. Date: 21 September 2026.
 Active target: the eventual / sufficiently-large second-extremal problem around M(n)=floor((n-1)^2/4)+1. The general theorem and a uniform threshold remain open. X3 (12 vertices,32 edges,M(12)=31) remains mandatory. Do not revive the false all-order conjecture or the closed mixed {4,5} ladder.
 
 <!-- CURRENT-STATUS:START -->
-CHECKPOINT CLASS: `FOUR_CENTRE_TRIANGLE_FREE_BLOCK_CLOSED`
+CHECKPOINT CLASS: `FOUR_CENTRE_BLOCK_TRIANGLE_TAXONOMY`
 
 WORK MODE: `MATH`
 
 INSPECTED PREDECESSOR: `ff35a12f8fb0381bd443b96a5fbf5f6b85761b96`.
 
-LAST VERIFIED RESULT: Every exactly-four-centre parity-plane graph whose parity/star block is triangle-free satisfies m<=M(n). The proof combines Mantel with the raw coordinate cap E_coord<=min(rt,2 floor((t-3)^2/4)+2). Thus every survivor has a triangle in that block (not necessarily star-containing, because same-parity edges are allowed), in addition to s<ceil((r+q)/2), U>=D+1, rq>=D+1, and r,q>s/2. Matching-one and one-tree-component remain invalidated.
+LAST VERIFIED RESULT: Every survivor has a triangle in its parity/star block. The exact part-pattern taxonomy excludes SSS and TSS. A parity-only triangle spends at least one occupied missing pair; every star-containing triangle spends at least two unoccupied pairs. In particular RTS is not a one-toll exception: its R-S certificate creates a second T bridge, forcing T-S to be second-kind and producing a crossed second missing pair.
 
 UNPRESERVED WORK: None after this invalidation/repair checkpoint.
 
 DEFERRED ADMIN: Broad historical cleanup; it does not block the raw matching-one attack.
 
-NEXT ACTION: Split the mandatory block triangle into parity-only and star-containing types and derive their raw deletion-certificate losses. Feed the strongest substitution/bridge loss into D(u,s); retain actual D2C split-tree graphs as hostile controls.
+NEXT ACTION: Analyze the expanded RTS bow-tie: one present R-T edge, two crossed unoccupied missing pairs and four arms at one star. Test whether the remaining two arms must reuse those pairs or force replication/coordinate loss, then feed the result into D(u,s).
 <!-- CURRENT-STATUS:END -->
 
 ## Reviewable current package
