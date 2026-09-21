@@ -41,6 +41,8 @@ UNPRESERVED WORK: none from this invocation. The live next derivation is deliber
 
 DEFERRED ADMIN: README has not yet been rewritten around the 41.42% wedge in this shortened invocation; the theorem files and CURRENT_STATE are canonical for the next run. The incomplete 08:04 predecessor telemetry remains historical/incomplete and must not be backfilled from commit times.
 
+TELEMETRY FINALIZED: full record `project/research/session_logs/2026-09-21/2026-09-21T08-31-33+01-00-a.md`; nine substantive units, forward-research span 16m23s, preservation complete 08:51:26 BST, final-report timestamp 08:53:20 BST.
+
 NEXT ACTION: first hostile-replay the finite `N_min` algebra and the new strong-wedge note from raw variables; then feed the verified rectangular W-versus-extra-U hole block into the exact residual-defect/rooted-Q ledger. Maintain `X_3` and actual-graph regression. Do not return to the superseded H–U private-foot route, repeated-code reverse-gamma channels, or the dead half-ray.
 <!-- CURRENT-STATUS:END -->
 
@@ -71,14 +73,15 @@ Full record: `project/research/session_logs/2026-09-21/2026-09-21T08-31-33+01-00
 - forward-research stop: **2026-09-21 08:47:56 BST**;
 - preservation start: **2026-09-21 08:47:56 BST**;
 - preservation complete: **2026-09-21 08:51:26 BST**;
-- wall-clock session span (start through preservation complete): **19m53s**;
+- final-report timestamp: **2026-09-21 08:53:20 BST**;
+- wall-clock session span: **21m47s**;
 - forward-research span: **16m23s**;
 - preservation span: **3m30s**;
 - substantive units: **9**;
 - early-stop check: **08:47:56 BST; preservation permitted because 7m42s remained to cutoff**;
 - >=50-minute target: **not applicable** because only 24m05s existed from actual start to preservation cutoff;
 - stop reason: forward exploration stopped at a clean post-theorem checkpoint inside the final preservation reserve; no mathematical blocker was asserted;
-- process note: one coarse Python grid timed out and was replaced by exact symbolic algebra. Status synchronization initially failed because `WORK MODE` used a noncanonical value; workflow logs were inspected, the field was repaired to `MATH`, and the subsequent Status synchronization run succeeded.
+- process note: one coarse Python grid timed out and was replaced by exact symbolic algebra. Status synchronization initially failed because `WORK MODE` used a noncanonical value; this was diagnosed and repaired. A later timing-only state commit was correctly rejected because the CURRENT-STATUS block was unchanged; final telemetry is now explicitly recorded inside the status block.
 
 ## Mandatory constraints for future work
 
