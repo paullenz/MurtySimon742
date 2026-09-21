@@ -5,21 +5,19 @@ Canonical repository: `paullenz/MurtySimon742`. Date: 21 September 2026.
 Active target: the eventual / sufficiently-large second-extremal problem around M(n)=floor((n-1)^2/4)+1. The general theorem and a uniform threshold remain open. X3 (12 vertices,32 edges,M(12)=31) remains mandatory. Do not revive the false all-order conjecture or the closed mixed {4,5} ladder.
 
 <!-- CURRENT-STATUS:START -->
-CHECKPOINT CLASS: `PRESERVED_SCOPED_THEOREM_TELEMETRY_INCOMPLETE`
+CHECKPOINT CLASS: `IN_PROGRESS_OPPOSITE_EDGE_CORE`
 
-WORK MODE: `ADMIN` (final preservation after the valid cutoff; successor returns to MATH).
+WORK MODE: `MATH`
 
-INSPECTED PREDECESSOR: `e3078339a4ba80d4d71ea38738541e9d655c2b17`.
+INSPECTED PREDECESSOR: `8d8855aa572cc4d5d31967316b3b99604bcbba18`.
 
-LAST VERIFIED RESULT: At Q3-antipodal-transversal scope, nonempty star support has at least four centres; exactly four centres form an affine plane and force n>=19, attained by an explicit n=19,m=66 graph. Both nonparity plane orbits require n>=20. Opposite-edge-plane parity populations factor exactly, reducing core realizability to one copy per parity. Fixed-core parity expansions eventually lie below M(n), without a uniform core-independent threshold. Fifteen substantive units completed; exact scope and corrections below.
+LAST VERIFIED RESULT: Mathematical status at entry unchanged: the four-centre Q3-transversal theorem is sharp at n=19; the opposite-edge support has a reduced one-P0/one-P1 core whose realizability is open. This run follows the daily audit by working from raw criticality and actual graph realizability, not conditional source-tuple capacity.
 
-Canonical preserved finite ledger unchanged: 4,626 exclusions / 952 survivors / 3,632 whole-state closures. Internal derivation and replay are not external review or publication.
+UNPRESERVED WORK: None after this entry checkpoint.
 
-UNPRESERVED WORK: None. Mathematical package and closing telemetry are included in this verified checkpoint; the missing historical research-stop boundary remains explicitly UNVERIFIED.
+DEFERRED ADMIN: Broad historical README maintenance and CI polling; neither blocks the core attack.
 
-DEFERRED ADMIN: No CI gate awaited; broad historical README rewrite deferred. Root archive/LFS placeholder was not modified or staged.
-
-NEXT ACTION: Read the review index, hostile-review the two nonparity-plane proofs and parity-factor reduction, then attack opposite-edge-plane core realizability with one P0 and one P1, its mandatory physical star matching and isolated direction-0 coordinate population. Keep arbitrary coordinate/star multiplicities. Do not infer nonexistence from the failed bounded outward-face search.
+NEXT ACTION: Hostile-review the parity-factor collapse at physical-vertex scope, then derive or refute the reduced opposite-edge core using exact graph constraints.
 <!-- CURRENT-STATUS:END -->
 
 ## Reviewable current package
