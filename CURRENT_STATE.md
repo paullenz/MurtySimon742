@@ -100,17 +100,17 @@ The audit verified raw same-code criticality and ordered `(source,witness)` inje
 
 ## Latest invocation telemetry
 
-Full record: `project/research/session_logs/2026-09-21/2026-09-21T11-28-31+01-00-a.md`.
+Full record: `project/research/session_logs/2026-09-21/2026-09-21T11-58-17+01-00-a.md`.
 
-- actual start: **2026-09-21 11:28:31 BST**;
+- actual start: **2026-09-21 11:58:17 BST**;
 - preservation cutoff: **2026-09-21 11:55:38 BST**;
-- forward-research stop: **2026-09-21 11:48:30 BST**;
-- preservation complete: **PENDING final telemetry close**;
-- wall-clock span: **PENDING final telemetry close**;
-- forward-research span: **19m59s (19.983 min)**;
-- substantive units: **9**;
-- stop reason: mandatory preservation phase began with <8 minutes to cutoff at a clean theorem checkpoint;
-- >=50-minute target: **not applicable**, because this invocation began late and supplied only 27m07s before the preservation cutoff.
+- forward-research stop: **2026-09-21 11:58:17 BST**;
+- preservation complete: **2026-09-21 11:59:20 BST**;
+- wall-clock span to preservation complete: **1m03s (1.050 min)**;
+- forward-research span: **0m00s (0.000 min)**;
+- substantive units: **0**;
+- stop reason: invocation began 2m39s after the mandatory preservation cutoff, so no forward mathematics was started to avoid overlap with the next hourly invocation;
+- >=50-minute target: **not applicable**, because no valid forward-research window remained.
 
 ## Mandatory constraints
 
