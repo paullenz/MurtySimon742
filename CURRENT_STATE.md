@@ -5,17 +5,17 @@ Canonical repository: `paullenz/MurtySimon742`. Date: 21 September 2026.
 Active target: the eventual / sufficiently-large second-extremal problem around M(n)=floor((n-1)^2/4)+1. The general theorem and a uniform threshold remain open. X3 (12 vertices,32 edges,M(12)=31) remains mandatory. Do not revive the false all-order conjecture or the closed mixed {4,5} ladder.
 
 <!-- CURRENT-STATUS:START -->
-CHECKPOINT CLASS: `FOUR_CENTRE_PARITY_STAR_MATCHING_ONE_FRONTIER`
+CHECKPOINT CLASS: `MATCHING_ONE_RAW_CRITICALITY_ATTACK_IN_PROGRESS`
 
 WORK MODE: `MATH`
 
-INSPECTED PREDECESSOR: `999c5f8ac1a4ae2c550d3973ad672e6bc7d74c93`.
+INSPECTED PREDECESSOR: `2f6a9d83afaa9c3cc9f05c03c8ddaac68901b20a`.
 
 LAST VERIFIED RESULT: Exactly four star centres force parity-plane support. The remaining parity-star density loss reduces to one local lemma: a high-bridge star's valid missing-pair certificate graph should have matching number at most one. That lemma implies e(R∪T∪S)<=rq+s and removes the +M-I term. Exact graph SAT rejects the matching-two core while separately scaling star, coordinate and parity multiplicities through eight; arbitrary multiplicity remains open.
 
-UNPRESERVED WORK: None after final preservation.
+UNPRESERVED WORK: New slot telemetry started; no mathematical unit yet.
 
-DEFERRED ADMIN: External review and proof of matching-one; finite UNSAT is not promoted.
+DEFERRED ADMIN: Broad historical cleanup; it does not block the raw matching-one attack.
 
 NEXT ACTION: Prove from raw spoke/edge criticality that one even star cannot uniquely bridge two vertex-disjoint missing P0-P1 pairs. If false, construct the first actual H_x with matching number two and feed its resource cost into the residual ledger.
 <!-- CURRENT-STATUS:END -->
