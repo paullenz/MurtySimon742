@@ -74,16 +74,49 @@ whenever `r_i<y` and i has no matched-forward support.
 
 Distinct coordinates use distinct one-match U-code classes `bar d xor e_i`, so these slack bills are physically disjoint and add in `E_U`.
 
-## 4. Master boundary count
+## 4. Nonempty-class count: a pure realizability obstruction
 
-Let `J=I\L` be the exposed coordinates without matched-forward support. For each `i in J`, either `r_i>=y`, or the coordinate pays at least `p-r_i` U-slack when `p>=y`.
+The same disjointness gives a stronger conclusion before any score is used.
 
-Independently, the reverse-gamma multiplicity theorem bounds the number of coordinates that can be carried by repeated large reverse classes under the A-slack ceiling. Together with `|L|<=2`, this gives the clean qualitative dichotomy:
+Let
 
-> almost all exposed coordinates must either consume a distinct one-match U-forward class with located U-slack, or force large repeated gamma classes in X and hence gamma-collision A-slack.
+`J_<={i in I\L : r_i<y}`.
 
-This is the correct raw-realizability interface to feed into one-code survivor geometry; matched-forward support is only an O(1) exceptional channel.
+For every `i in J_<`, `(3.1)` gives `f_i>0`, so `W_i` is nonempty. Since the W_i lie in pairwise distinct U-code classes,
 
-## 5. Audit boundary
+> **`|J_<| <= u`.**                                      `(4.1)`
 
-No graph-level reachability claim is made. The bounded actual-D2C regression still contains zero positive rigid complete pair-family cuts with `x>=3`; X_3 remains the mandatory negative control. The theorem above is a necessary condition *if* such a cut is realized.
+Equivalently,
+
+> **`|I| <= |L|+u+|{i in I\L:r_i>=y}|`.**               `(4.2)`
+
+Using Theorem 2.1,
+
+> **`|I| <= u+2+|{i in I\L:r_i>=y}|`.**                 `(4.3)`
+
+In particular, if every reverse gamma class has size strictly below y, then
+
+> **`|I(d,X)| <= u+2`.**                                 `(4.4)`
+
+If `C=empty`, then `L=empty` and this sharpens to
+
+> **`|I(d,X)| <= u`.**                                   `(4.5)`
+
+This is a raw boundary-realizability theorem: it does not use the global score, rooted-Q, Hall capacity, or source-tuple capacity theorem.
+
+## 5. Master boundary dichotomy
+
+The reverse-gamma multiplicity theorem controls coordinates with `r_i>=y`: a reverse class large enough to absorb an entire outside code class must be physically large in X, and repeated use of the same gamma class creates the gamma-collision A-slack bill.
+
+Thus `(4.3)` yields a compact structural alternative for every rigid complete one-code cut:
+
+1. exposed coordinates are limited by the available unmatched population u (plus at most two matched-leaf exceptions); or
+2. many exposed coordinates must be carried by X gamma classes of size at least y, which is constrained by the X population and by gamma-collision slack.
+
+When `p>=y`, coordinates in the first arm also carry the located U-slack floor `(3.4)`.
+
+This is the correct raw-realizability interface to feed into one-code survivor geometry. It explains why the scalar Hall/score gates can remain open even though a literal graph realization may already be impossible: the missing constraint is the number of **distinct nonempty one-match U-code classes**, not just their aggregate slack.
+
+## 6. Audit boundary
+
+No unconditional graph-level reachability claim is made. The bounded actual-D2C regression still contains zero positive rigid complete pair-family cuts with `x>=3`; X_3 remains the mandatory negative control. The theorems above are necessary conditions *if* such a cut is realized.
