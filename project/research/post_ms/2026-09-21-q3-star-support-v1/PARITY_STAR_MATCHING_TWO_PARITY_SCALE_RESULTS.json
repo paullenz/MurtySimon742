@@ -1,0 +1,47 @@
+{
+  "scope": "six coordinate codes, two copies each star; unique matching-two core; r=q=2 through 8",
+  "rows": [
+    {
+      "r": 2,
+      "q": 2,
+      "sat": false,
+      "seconds": 0.014123678207397461
+    },
+    {
+      "r": 3,
+      "q": 3,
+      "sat": false,
+      "seconds": 0.02664637565612793
+    },
+    {
+      "r": 4,
+      "q": 4,
+      "sat": false,
+      "seconds": 0.03890728950500488
+    },
+    {
+      "r": 5,
+      "q": 5,
+      "sat": false,
+      "seconds": 0.12332701683044434
+    },
+    {
+      "r": 6,
+      "q": 6,
+      "sat": false,
+      "seconds": 0.12498807907104492
+    },
+    {
+      "r": 7,
+      "q": 7,
+      "sat": false,
+      "seconds": 0.1855628490447998
+    },
+    {
+      "r": 8,
+      "q": 8,
+      "sat": false,
+      "seconds": 0.2405695915222168
+    }
+  ]
+}

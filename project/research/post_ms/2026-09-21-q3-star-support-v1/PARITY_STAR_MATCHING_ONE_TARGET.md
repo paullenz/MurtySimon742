@@ -17,3 +17,4 @@ The exact SAT encoding in `PARITY_STAR_TRUE_SPLIT_CORE_RESULTS.json` forces a ph
 A proof must now start from two unique pairs `r0t0,r1t1` at the same star and use raw spoke criticality to contradict D2C, without relying on finite multiplicity. That lemma would close the missing-pair cancellation step in one stroke. Until proved, the improved density inequality remains conditional.
 
 The same matching-two core remains UNSAT when every coordinate-code multiplicity is increased uniformly from one through eight (two copies per star class, `r=q=2`). Coordinate witness capacity therefore does not repair the hostile core in this exact range.
+The matching-two core is also UNSAT for balanced parity multiplicities `r=q=2,...,8` on the fixed eight-star, six-coordinate support. Thus none of the three natural multiplicity axes repairs it in the tested range.

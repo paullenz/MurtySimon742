@@ -172,16 +172,22 @@
       "completed_at": "2026-09-21T15:54:15+01:00",
       "result": "The true matching-two hostile core stays exact UNSAT as every coordinate-code multiplicity grows uniformly from 1 through 8. Extra coordinate witness capacity does not repair the obstruction in this range.",
       "artifact": "project/research/post_ms/2026-09-21-q3-star-support-v1/PARITY_STAR_MATCHING_TWO_COORDINATE_SCALE_RESULTS.json"
+    },
+    {
+      "id": 26,
+      "completed_at": "2026-09-21T15:54:50+01:00",
+      "result": "The true matching-two hostile core remains exact UNSAT for balanced parity multiplicities r=q=2 through 8. Star, coordinate and parity multiplicity scaling all fail to repair the same compact obstruction.",
+      "artifact": "project/research/post_ms/2026-09-21-q3-star-support-v1/PARITY_STAR_MATCHING_TWO_PARITY_SCALE_RESULTS.json"
     }
   ],
-  "number_of_substantive_units": 25,
-  "early_stop_check_time": null,
-  "early_stop_check_result": null,
+  "number_of_substantive_units": 26,
+  "early_stop_check_time": "2026-09-21T15:54:15+01:00",
+  "early_stop_check_result": "Cutoff still future and a bounded hostile-core parity-multiplicity replay remains; continue, do not finalize.",
   "tool_infrastructure_failures": [
     "python-sat was absent; installed into the disposable workspace dependency directory and validated against three actual D2C controls."
   ],
   "commit_shas_produced": [],
-  "live_unfinished_line": "Prove matching-one from raw criticality; finite hostile core is UNSAT through star and coordinate multiplicity eight.",
+  "live_unfinished_line": "Give a raw proof that no star can uniquely bridge two vertex-disjoint parity nonedges; this matching-one lemma closes missing-pair cancellation.",
   "stop_reason": "IN_PROGRESS",
   "target_status": "IN_PROGRESS",
   "audit_reconciliation": "Latest daily audit prioritizes raw criticality and actual graph realizability. This run follows that priority by hostile-reviewing and attacking the reduced opposite-edge-plane actual core; conditional Hall/source-tuple results are not advanced.",
