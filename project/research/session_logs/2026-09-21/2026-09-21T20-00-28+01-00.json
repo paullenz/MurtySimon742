@@ -74,17 +74,20 @@
   ],
   "forward_research_stop_time": "2026-09-21T20:52:59+01:00",
   "preservation_start_time": "2026-09-21T20:52:59+01:00",
-  "preservation_complete_time": null,
-  "final_report_time": null,
-  "wall_clock_session_minutes": null,
+  "preservation_complete_time": "2026-09-21T20:55:43+01:00",
+  "final_report_time": "2026-09-21T20:55:43+01:00",
+  "wall_clock_session_minutes": 55.25,
   "forward_research_span_minutes": 51.35,
-  "preservation_span_minutes": null,
+  "preservation_span_minutes": 2.73,
   "substantive_unit_count": 12,
   "early_stop_check_time": "2026-09-21T20:50:56+01:00",
   "early_stop_check_result": "CONTINUE: cutoff remains in the future and a bounded exact check of the all-order threshold boundary is still available; do not finalize.",
   "tool_infrastructure_failures": [],
-  "commit_shas": [],
+  "commit_shas": [
+    "a69487d826eb0a687f7a0f3889a077a35a8284f8",
+    "fd9f816c84e66254c13b78848eef0a94dd4f62cc"
+  ],
   "live_unfinished_line": "Prove a raw-criticality upper bound or classification for the positive-density family of selected label pairs having F-codegree at least a/5; this is the first graph-realizability obstruction beyond the scalar/Hall plateau.",
   "stop_reason": "Forward research stopped for the scheduled preservation window after exceeding 50 minutes; a coherent next raw-criticality line remains preserved for the next slot.",
-  "compliance_status": "PRESERVING"
+  "compliance_status": "COMPLIANT_TARGET_MET"
 }
