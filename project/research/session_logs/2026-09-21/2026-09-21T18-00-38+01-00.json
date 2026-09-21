@@ -7,9 +7,14 @@
     {
       "start": "2026-09-21T18:00:38+01:00",
       "kind": "initial entry"
+    },
+    {
+      "start": "2026-09-21T18:08:49+01:00",
+      "kind": "context re-entry; same slot/start/ledger/cutoff retained",
+      "continuity": "verified same invocation; forward research and the bounded SAT scan continued"
     }
   ],
-  "forward_research_start_time": null,
+  "forward_research_start_time": "2026-09-21T18:01:41+01:00",
   "forward_research_stop_time": null,
   "preservation_start_time": null,
   "preservation_complete_time": null,
@@ -17,15 +22,40 @@
   "wall_clock_session_minutes": null,
   "forward_research_span_minutes": null,
   "preservation_span_minutes": null,
-  "substantive_units": [],
-  "number_of_substantive_units": 0,
+  "substantive_units": [
+    {
+      "id": 1,
+      "completed_at": "2026-09-21T18:11:49+01:00",
+      "result": "Constructed and directly replayed an actual n=33,m=143 D2C graph containing the locally saturated RTS bow-tie, proving that this triangle geometry is graph-realizable.",
+      "artifact": "project/research/post_ms/2026-09-21-q3-star-support-v1/RTS_BOWTIE_REALIZABILITY_RESULTS.json"
+    },
+    {
+      "id": 2,
+      "completed_at": "2026-09-21T18:11:49+01:00",
+      "result": "Constructed an actual n=34,m=148 D2C RTS-bow-tie control with the fourth cross pair missing, while the n=33 control has it present. Therefore neither fourth-pair status is universally forced.",
+      "artifact": "project/research/post_ms/2026-09-21-q3-star-support-v1/RTS_BOWTIE_ACTUAL_D2C_CONTROLS.md"
+    },
+    {
+      "id": 3,
+      "completed_at": "2026-09-21T18:13:48+01:00",
+      "result": "Completed an exact uniform graph-level grid: with six coordinate codes and 2<=r,q<=8, equal star multiplicities one and two reject the RTS bow-tie, while multiplicity three is feasible exactly for r>=4 throughout the tested rectangle. This is diagnostic, not an arbitrary-multiplicity theorem.",
+      "artifact": "project/research/post_ms/2026-09-21-q3-star-support-v1/RTS_BOWTIE_REALIZABILITY_RESULTS.json"
+    }
+  ],
+  "number_of_substantive_units": 3,
   "early_stop_check_time": null,
   "early_stop_check_result": null,
-  "tool_infrastructure_failures": [],
+  "tool_infrastructure_failures": [
+    {
+      "time": "2026-09-21T18:13:20+01:00",
+      "failure": "The RTS replay script's final reporting loop raised KeyError after the result JSON and all graph checks had completed.",
+      "pivot": "Corrected the reporting loop, parsed and independently inspected the completed JSON, and continued; no mathematical result depended on the failed print step."
+    }
+  ],
   "commit_shas_produced": [],
-  "live_unfinished_line": "Reload CURRENT_STATE, README, latest commits, and latest red-team audit; then resume the RTS bow-tie through its present edge, fourth cross pair, centre spokes, and coordinate competition.",
+  "live_unfinished_line": "Derive a genuine population or density tax behind RTS-bow-tie realizability. Finite symmetric controls first appear at three copies per star class and r>=4, but the proof must come from raw centre-spoke or coordinate competition, not extrapolation.",
   "stop_reason": "IN_PROGRESS",
   "target_status": "IN_PROGRESS",
-  "audit_reconciliation": null,
-  "inspected_remote_head": null
+  "audit_reconciliation": "The latest audit prioritizes raw graph-level criticality and realizability before further conditional scalar stacking. This slot therefore continues the actual Q3 parity-plane interface through the RTS bow-tie and its raw certificates; it does not use the conditional source-tuple capacity premises, does not revive the invalidated matching-one route, and retains X3 as a mandatory negative control.",
+  "inspected_remote_head": "0dc97e3c4447c7474fa56042fe8b66ada75d69d3"
 }

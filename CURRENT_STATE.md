@@ -5,19 +5,19 @@ Canonical repository: `paullenz/MurtySimon742`. Date: 21 September 2026.
 Active target: the eventual / sufficiently-large second-extremal problem around M(n)=floor((n-1)^2/4)+1. The general theorem and a uniform threshold remain open. X3 (12 vertices,32 edges,M(12)=31) remains mandatory. Do not revive the false all-order conjecture or the closed mixed {4,5} ladder.
 
 <!-- CURRENT-STATUS:START -->
-CHECKPOINT CLASS: `RTS_BOWTIE_LOCAL_SATURATION`
+CHECKPOINT CLASS: `RTS_BOWTIE_ACTUAL_D2C_REALIZABILITY`
 
 WORK MODE: `MATH`
 
-INSPECTED PREDECESSOR: `ff35a12f8fb0381bd443b96a5fbf5f6b85761b96`.
+INSPECTED PREDECESSOR: `0dc97e3c4447c7474fa56042fe8b66ada75d69d3`.
 
-LAST VERIFIED RESULT: Every survivor has a block triangle. SSS and TSS are impossible; parity-only triangles spend occupied missing pairs and every star triangle spends at least two unoccupied pairs. The RTS case expands to a four-arm bow-tie, but its two crossed missing pairs certify all four arms exactly. Thus arm criticality alone cannot force a third pair; a stronger loss must use the present cross edge, fourth cross pair, centre spokes, or coordinate competition.
+LAST VERIFIED RESULT: The locally saturated RTS bow-tie is graph-realizable. Actual n=33,m=143 and n=34,m=148 D2C controls realize it with the fourth cross pair respectively present and missing, so neither status can drive a universal closure. In the exact uniform grid with six coordinates, 2<=r,q<=8, equal star multiplicities one and two are UNSAT; multiplicity three is SAT exactly for r>=4. The finite threshold is diagnostic only.
 
 UNPRESERVED WORK: None after this invalidation/repair checkpoint.
 
 DEFERRED ADMIN: Broad historical cleanup; it does not block the raw matching-one attack.
 
-NEXT ACTION: Attack the locally saturated RTS bow-tie through the present edge rt and fourth pair r't', together with centre-spoke or coordinate-P0 certificate competition. Do not attempt the now-refuted third-pair inference from arm criticality alone.
+NEXT ACTION: Derive a genuine population/density tax behind RTS realizability from centre-spoke and coordinate-P0 certificate competition. Do not assume either fourth-pair status and do not extrapolate the finite symmetric threshold as a theorem.
 <!-- CURRENT-STATUS:END -->
 
 ## Reviewable current package
