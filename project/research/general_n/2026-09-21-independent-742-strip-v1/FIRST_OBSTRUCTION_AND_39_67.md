@@ -155,7 +155,75 @@ Hence
 \tag{S39}
 \]
 
-## 4. Degree assembly
+## 4. All-order strict improvement: `250/429`
+
+Before optimizing the asymptotic endpoint, combine (S39) with the preserved
+exact threshold certificate.  Assume
+
+\[
+b\ge\frac{250}{429}n.
+\]
+
+Since `n=a+b+1`, this is `179b>=250(a+1)`, and hence
+
+\[
+b-n/2\ge\frac{71(a+1)}{358}.
+\]
+
+The continuous degree difference is
+
+\[
+D(a)=\frac{5041(a+1)^2}{128164}-\frac14
+     -\frac{121a^2}{3138}-\frac a8.
+\]
+
+Exact arithmetic gives
+
+```text
+D(64) = -534086/50272329,
+D(65) = 17187305/402178632 > 0,
+D(66)-D(65) = 22081621/402178632 > 0.
+```
+
+Its quadratic coefficient is positive, so every `a>=65` is closed.  Direct
+integer degree assembly for `2<=a<=64` fails only at
+
+```text
+a = 4, 6, 9, 11, 14, 19, 24, 29.
+```
+
+For these rows the least eligible degrees, required surpluses, and preserved
+exact threshold-capacity upper bounds on `S-r` are:
+
+| `a` | least `b` | required `t` | upper `S-r` |
+|---:|---:|---:|---:|
+| 4 | 7 | 1 | 1 |
+| 6 | 10 | 2 | 2 |
+| 9 | 14 | 4 | 5 |
+| 11 | 17 | 6 | 8 |
+| 14 | 21 | 9 | 13 |
+| 19 | 28 | 16 | 26 |
+| 24 | 35 | 25 | 43 |
+| 29 | 42 | 36 | 64 |
+
+Every final entry is strictly below twice the required surplus.  The cases
+`a=0` (star) and `a=1` (edgeless `F`, so `t<=0`) are the canonical separate
+closures.  Therefore the internally checked candidate theorem is
+
+\[
+\boxed{
+n\ge6,\quad\Delta(G)\ge\frac{250}{429}n
+\Longrightarrow e(G)<\left\lfloor\frac{n^2}{4}\right\rfloor .
+}
+\tag{T250}
+
+This is an all-order strict improvement:
+
+```text
+250/429 = 0.5827505827... < 7/12 = 0.5833333333....
+```
+
+## 5. Near-ceiling asymptotic endpoint `39/67`
 
 Assume `b>=39n/67`.  Since `n=a+b+1`,
 
@@ -241,6 +309,20 @@ all `a>=A`.  Combining below `7/12` as above needs only
 | `85/146` | 0.58219178... | 346 | 831 |
 | `39/67` | 0.58208955... | 1950 | 4681 |
 
+For review, the exact boundary signs and first forward differences are:
+
+| threshold | `D_alpha(A-1)` | `D_alpha(A)` | `D_alpha(A+1)-D_alpha(A)` |
+|---:|---:|---:|---:|
+| `116/199` | `-103645/21617682` | `4326773/86470728` | `4907365/86470728` |
+| `88/151` | `-434953/16606296` | `169/6276` | `908963/16606296` |
+| `46/79` | `-73993/1518792` | `599/1139094` | `25171/506264` |
+| `85/146` | `-126365/15568664` | `476429/11676498` | `765953/15568664` |
+| `39/67` | `-26669/1230096` | `43251/1640128` | `236671/4920384` |
+
+Every quadratic coefficient is positive, so later forward differences only
+increase.  The displayed `A` values are therefore minimal for this continuous
+degree assembly.
+
 Thus the first focused session yields both a near-ceiling asymptotic
 improvement and a smaller-order usable form, for example
 
@@ -251,7 +333,7 @@ n\ge149,\quad\Delta(G)\ge\frac{88}{151}n
 
 All rows retain the inherited candidate trust boundary.
 
-## 5. What remains graph-theoretic
+## 6. What remains graph-theoretic
 
 The new threshold is still bounded below by the uniform plateau obstruction.
 The next high-value question is therefore not another scalar Taylor

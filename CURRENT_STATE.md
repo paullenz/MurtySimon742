@@ -114,3 +114,12 @@ Full telemetry: `project/research/session_logs/2026-09-21/2026-09-21T19-01-53+01
 - Preservation complete: 19:54:27 BST; wall-clock span 52m34s (52.5666666667 min); preservation span 0m57s (0.95 min).
 - Substantive units: 16; >=50-minute target: MET.
 - Stop reason: reached the target and stopped at the completed family hostile-audit and bounded negative-orbit checkpoint for preservation.
+
+
+## 20:00 independent-#742 focused session 1
+
+Candidate/internal result: for every n>=6, Delta(G)>=250n/429 implies e(G)<floor(n^2/4). The proof uses the shared graph-to-profile spine, the sharpened exact scalar certificate f(x)<121/1569, a continuous assembly for a>=65, and exact threshold-capacity closure of the eight exceptional a-values. This strictly improves 7/12, but remains internally checked and not externally reviewed.
+
+The exact first scalar/Hall obstruction is now isolated: an asymptotic uniform-demand plateau survives scalar capacity, full selected Hall, graphical margins, and simultaneous selected/residual incidence. Raw criticality nevertheless forces a new selected-signature union law. It implies a positive-density family of selected label pairs with F-codegree at least a/5. The next task is a raw-criticality upper bound or classification for that family; this is the first graph-realizability obstruction beyond the plateau.
+
+Telemetry: actual start 2026-09-21T20:00:28+01:00; cutoff 2026-09-21T20:55:38+01:00; forward-research stop 2026-09-21T20:52:59+01:00; forward-research span 51.35 minutes; 12 substantive units. Full record: project/research/session_logs/2026-09-21/2026-09-21T20-00-28+01-00.json.

@@ -1,5 +1,8 @@
 # Independent #742 strip attack — session 1
 
+Start with [`THEOREM_INDEX.md`](THEOREM_INDEX.md) for claims, dependencies and
+trust levels.
+
 The first focused session produced two candidate-level results:
 
 1. [`FIRST_OBSTRUCTION_AND_39_67.md`](FIRST_OBSTRUCTION_AND_39_67.md)
@@ -7,12 +10,10 @@ The first focused session produced two candidate-level results:
    saturates the decoupled profile integral.  It gives the exact scalar barrier
    `alpha_*=0.5820656900...`; movement toward `1/2` now requires a genuine
    graph-realizability input.
-2. The same note sharpens the rational polynomial certificate and derives
-   `Delta>=39n/67 => e(G)<floor(n^2/4)` for `n>=4681`, conditional on the
-   inherited candidate graph-to-profile lemma and the preserved `7/12`
-   candidate.  This is a strict numerical improvement over `7/12`.
-   Its exact tradeoff ladder also gives the more usable
-   `Delta>=88n/151` closure for `n>=149`.
+2. The same note sharpens the rational polynomial certificate and derives the
+   all-order candidate `Delta>=250n/429 => e(G)<floor(n^2/4)` for `n>=6`.
+   This is a strict numerical improvement over `7/12`.  The near-scalar-ceiling
+   endpoint `39/67` holds for `n>=4681`.
 3. [`FULL_HALL_PLATEAU_OBSTRUCTION.md`](FULL_HALL_PLATEAU_OBSTRUCTION.md)
    proves that a rational plateau on the counterexample side survives the
    full selected-incidence Hall system, graphical residual degrees, global

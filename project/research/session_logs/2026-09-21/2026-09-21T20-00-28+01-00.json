@@ -1,0 +1,90 @@
+{
+  "title": "Independent #742 Research",
+  "scheduled_trigger_time": "2026-09-21T20:00:38+01:00",
+  "actual_start_time": "2026-09-21T20:00:28+01:00",
+  "segment_entries": [
+    "2026-09-21T20:00:28+01:00",
+    "2026-09-21T20:01:38+01:00",
+    "2026-09-21T20:32:15+01:00"
+  ],
+  "next_scheduled_trigger_time": "2026-09-21T21:00:38+01:00",
+  "preservation_cutoff_time": "2026-09-21T20:55:38+01:00",
+  "forward_research_start_time": "2026-09-21T20:01:38+01:00",
+  "substantive_unit_ledger": [
+    {
+      "completed_time": "2026-09-21T20:05:16+01:00",
+      "unit": 1,
+      "result": "Re-opened the live pivot, audit, reviewer package and canonical proof; isolated the decoupled scalar maximum as the first quantitative obstruction. Exact numerical reconnaissance locates max P near q=0.345054 and shows the existing polynomial minorant has enough margin for a rational sharpening below 5/64."
+    },
+    {
+      "completed_time": "2026-09-21T20:10:54+01:00",
+      "unit": 2,
+      "result": "Proved a strict candidate threshold improvement: the exact rational scalar bound f(x)<121/1569 gives t<121a^2/3138+a/8 and, after degree assembly with the preserved 7/12 candidate, Delta>=39n/67 implies e(G)<floor(n^2/4) for n>=4681."
+    },
+    {
+      "completed_time": "2026-09-21T20:10:54+01:00",
+      "unit": 3,
+      "result": "Identified the exact first obstruction to pushing toward 1/2: a uniform-demand continuum plateau saturates threshold capacity and the nested source budget, with unique scalar maximizer xi=0.238114... and limiting profile-only ratio alpha*=0.58206569.... Thus further progress requires graph realizability, not scalar optimization. Exact checker passed."
+    },
+    {
+      "completed_time": "2026-09-21T20:17:38+01:00",
+      "unit": 4,
+      "result": "Built an exact rational asymptotic obstruction at demand height 1/4 and b/a=139/100. It lies 61/160000*a^2 above the Turan-side requirement yet survives threshold capacity, residual degree graphicality, full selected-incidence Hall, endpoint loads, global orientation balance, and pair uniqueness. This isolates the missing input as joint physical residual-set/F-neighbourhood containment under raw criticality."
+    },
+    {
+      "completed_time": "2026-09-21T20:21:41+01:00",
+      "unit": 5,
+      "result": "Proved selected-signature union rigidity: for every label j, the union of selected-source signatures of N_F(j) has size at most C_j, yielding an exact global second-moment/codegree inequality. In the rational plateau, co-selected label pairs must have average F-codegree >14283a/51200-o(a)>0.2789a-o(a), a graph-realizability rigidity not visible to Hall margins."
+    },
+    {
+      "completed_time": "2026-09-21T20:26:04+01:00",
+      "unit": 6,
+      "result": "Derived and exactly checked a threshold/order Pareto ladder from the sharpened scalar bound: 116/199 for n>=128, 88/151 for n>=149, 46/79 for n>=490, 85/146 for n>=831, and the near-ceiling 39/67 for n>=4681. Each is strictly below 7/12 and retains the inherited candidate trust boundary."
+    },
+    {
+      "completed_time": "2026-09-21T20:29:10+01:00",
+      "unit": 7,
+      "result": "Proved a robust signature-stability theorem for profile bands: bounded selected-row load forces a quantitative linear lower bound on weighted average F-codegree; in the certified 1/4 plateau band this is >0.2766a-1.111. The sole escape is selected-load concentration, giving a clean clustering-versus-concentration dichotomy for the next raw-criticality attack."
+    },
+    {
+      "completed_time": "2026-09-21T20:30:26+01:00",
+      "unit": 8,
+      "result": "Closed the concentration escape under a uniform endpoint cap: any active row has q_u<=p_u+q_u<=C_i for an actually selected label. Substitution into robust stability yields an unconditional plateau-band average F-codegree bound >1265625a/5094049-2250/2257>0.2484a-0.997."
+    },
+    {
+      "completed_time": "2026-09-21T20:32:50+01:00",
+      "unit": 9,
+      "result": "Converted average rigidity into a positive-density object: asymptotically >21.70% of selected pair occurrences have F-codegree at least a/5, representing at least (0.00351-o(1))a^2 distinct high-codegree label pairs. This gives a finite-density cluster/raw-criticality target rather than another scalar inequality."
+    },
+    {
+      "completed_time": "2026-09-21T20:36:37+01:00",
+      "unit": 10,
+      "result": "Independently replayed the load-bearing graph-to-demand, source-demand injection, threshold-capacity, and Cauchy layers shared by the 7/12 and new threshold proofs. No blocker found. The delicate supplement step is valid via an explicit residual-or-selected dichotomy; 177,120 exact threshold algebra triples passed. External review status remains open."
+    },
+    {
+      "completed_time": "2026-09-21T20:38:27+01:00",
+      "unit": 11,
+      "result": "Hostile-repaired the plateau obstruction against a simultaneous-incidence objection: high-source selected and residual matrices admit disjoint biregular layers with fixed margin, while the low tail supplies residual column remainder >13/2000*a. Thus the obstruction survives joint selected/residual graphicality, not only separate margin checks."
+    },
+    {
+      "completed_time": "2026-09-21T20:48:38+01:00",
+      "unit": 12,
+      "result": "Upgraded the threshold result to an all-order candidate: for every n>=6, Delta>=250n/429 implies e(G)<floor(n^2/4). The continuous assembly closes a>=65; exact enumeration leaves only a={4,6,9,11,14,19,24,29}, all closed by the preserved threshold-capacity certificates. This no longer needs the old 7/12 degree assembly."
+    }
+  ],
+  "forward_research_stop_time": "2026-09-21T20:52:59+01:00",
+  "preservation_start_time": "2026-09-21T20:52:59+01:00",
+  "preservation_complete_time": null,
+  "final_report_time": null,
+  "wall_clock_session_minutes": null,
+  "forward_research_span_minutes": 51.35,
+  "preservation_span_minutes": null,
+  "substantive_unit_count": 12,
+  "early_stop_check_time": "2026-09-21T20:50:56+01:00",
+  "early_stop_check_result": "CONTINUE: cutoff remains in the future and a bounded exact check of the all-order threshold boundary is still available; do not finalize.",
+  "tool_infrastructure_failures": [],
+  "commit_shas": [],
+  "live_unfinished_line": "Prove a raw-criticality upper bound or classification for the positive-density family of selected label pairs having F-codegree at least a/5; this is the first graph-realizability obstruction beyond the scalar/Hall plateau.",
+  "stop_reason": "Forward research stopped for the scheduled preservation window after exceeding 50 minutes; a coherent next raw-criticality line remains preserved for the next slot.",
+  "compliance_status": "PRESERVING"
+}

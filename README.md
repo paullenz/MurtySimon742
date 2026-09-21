@@ -15,6 +15,11 @@ The previous eventual / sufficiently-large second-extremal programme remains ful
 
 **Live handoff:** [`CURRENT_STATE.md`](CURRENT_STATE.md).
 
+### 21 September 2026: first independent-#742 strip improvement
+
+The first focused session produced an internally checked candidate improvement: for n>=6, Delta(G)>=250n/429 implies e(G)<floor(n^2/4), strictly below 7/12. It also isolates the exact scalar/Hall plateau and derives a positive-density high-codegree signature obstruction for the next raw-criticality attack. These results are not externally reviewed. See the [theorem index](project/research/general_n/2026-09-21-independent-742-strip-v1/THEOREM_INDEX.md).
+
+
 ### 21 September 2026: sharp Q3 star-support theorem
 
 The newest [review index](project/research/post_ms/2026-09-21-q3-star-support-v1/THEOREM_AND_REVIEW_INDEX.md) gives a scoped structural theorem: for a D2C graph with a Q3 root neighbourhood and antipodal-transversal outside codes, nonempty star support has at least four centres. Exactly four centres form an affine plane and require at least 19 vertices; an explicit 19-vertex, 66-edge graph attains the bound. Both nonparity plane orbits require at least 20 vertices. Five through eight centres and nontransversal codes remain open.

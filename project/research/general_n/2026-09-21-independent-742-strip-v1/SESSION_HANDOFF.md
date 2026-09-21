@@ -4,7 +4,7 @@
 
 1. **Strict threshold improvement.**  The profile scalar certificate sharpens
    from `5/64` to `121/1569`.  Exact degree assembly gives a tradeoff ladder,
-   including `Delta>=88n/151` for `n>=149` and the near-scalar-ceiling
+   including the all-order `Delta>=250n/429` for `n>=6` and the near-scalar-ceiling
    `Delta>=39n/67` for `n>=4681`.  These are candidate results conditional on
    the inherited graph-to-profile spine and preserved `7/12` candidate.
 2. **First obstruction isolated.**  The scalar ceiling was independently
@@ -49,4 +49,3 @@ distinct co-selected pairs with F-codegree at least `a/5` below
 `(0.00351-o(1))a^2`.  Do not return to scalar minorant optimization: `39/67`
 is already within about `2.4e-5` of the scalar ceiling, and the rational
 plateau proves that Hall/profile marginals alone cannot reach `1/2`.
-
