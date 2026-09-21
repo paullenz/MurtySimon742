@@ -5,19 +5,19 @@ Canonical repository: `paullenz/MurtySimon742`. Date: 21 September 2026.
 Active target: the eventual / sufficiently-large second-extremal problem around M(n)=floor((n-1)^2/4)+1. The general theorem and a uniform threshold remain open. X3 (12 vertices,32 edges,M(12)=31) remains mandatory. Do not revive the false all-order conjecture or the closed mixed {4,5} ladder.
 
 <!-- CURRENT-STATUS:START -->
-CHECKPOINT CLASS: `MATCHING_ONE_RAW_CRITICALITY_ATTACK_IN_PROGRESS`
+CHECKPOINT CLASS: `MATCHING_ONE_INVALIDATED_CAPACITY_REPAIR`
 
 WORK MODE: `MATH`
 
-INSPECTED PREDECESSOR: `2f6a9d83afaa9c3cc9f05c03c8ddaac68901b20a`.
+INSPECTED PREDECESSOR: `f7e659ad5449294316c089438638407a00ebb46a`.
 
-LAST VERIFIED RESULT: Exactly four star centres force parity-plane support. The remaining parity-star density loss reduces to one local lemma: a high-bridge star's valid missing-pair certificate graph should have matching number at most one. That lemma implies e(R∪T∪S)<=rq+s and removes the +M-I term. Exact graph SAT rejects the matching-two core while separately scaling star, coordinate and parity multiplicities through eight; arbitrary multiplicity remains open.
+LAST VERIFIED RESULT: The matching-one and at-most-one-tree-component targets are false under joint multiplicity scaling. Actual D2C counterexamples occur at n=33 and n=39. The n=39 graph has h+L=17>s=16, but unused missing-pair capacity g=3 repairs the exact condition to h+L<=s+g (17<=19); its parity/star block still satisfies 30<=rq+s=32.
 
-UNPRESERVED WORK: New slot telemetry started; no mathematical unit yet.
+UNPRESERVED WORK: None after this invalidation/repair checkpoint.
 
 DEFERRED ADMIN: Broad historical cleanup; it does not block the raw matching-one attack.
 
-NEXT ACTION: Prove from raw spoke/edge criticality that one even star cannot uniquely bridge two vertex-disjoint missing P0-P1 pairs. If false, construct the first actual H_x with matching number two and feed its resource cost into the residual ledger.
+NEXT ACTION: Prove or falsify the capacity-aware inequality h+L<=s+g, with g=(M-I)-nu. Trace how every tree component beyond the available star tokens forces an unused unoccupied missing pair; preserve actual split-tree graphs as mandatory hostile controls.
 <!-- CURRENT-STATUS:END -->
 
 ## Reviewable current package

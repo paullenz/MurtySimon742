@@ -17,13 +17,26 @@
   "wall_clock_session_minutes": null,
   "forward_research_span_minutes": null,
   "preservation_span_minutes": null,
-  "substantive_units": [],
-  "number_of_substantive_units": 0,
+  "substantive_units": [
+    {
+      "id": 1,
+      "completed_at": "2026-09-21T17:10:00+01:00",
+      "result": "Found and directly replayed an actual n=33,m=142 D2C graph where one star uniquely bridges two vertex-disjoint missing parity pairs. This falsifies the proposed matching-one lemma; the first H_x is K2,2 and cyclic.",
+      "artifact": "project/research/post_ms/2026-09-21-q3-star-support-v1/PARITY_STAR_MATCHING_TWO_JOINT_SCALE_RESULTS.json"
+    },
+    {
+      "id": 2,
+      "completed_at": "2026-09-21T17:12:29+01:00",
+      "result": "Constructed an actual n=39,m=176 D2C graph with H_x equal to two disjoint tree edges, falsifying both the one-tree-component target and h+L<=s. Repaired the exact accounting to h+L<=s+g, where g=(M-I)-nu; the graph satisfies 17<=19 and still has block 30<=rq+s=32.",
+      "artifact": "project/research/post_ms/2026-09-21-q3-star-support-v1/MATCHING_ONE_INVALIDATION_AND_REPAIR.md"
+    }
+  ],
+  "number_of_substantive_units": 2,
   "early_stop_check_time": null,
   "early_stop_check_result": null,
   "tool_infrastructure_failures": [],
   "commit_shas_produced": [],
-  "live_unfinished_line": "Read mandatory state/audit inputs, then attack the raw matching-one lemma for parity-star certificates.",
+  "live_unfinished_line": "Attack the corrected capacity-aware target h+L<=s+g; identify how unused missing-pair capacity g pays for extra tree components.",
   "stop_reason": "IN_PROGRESS",
   "target_status": "IN_PROGRESS",
   "audit_reconciliation": "The latest daily audit prioritizes raw graph criticality, actual D2C regression, and direct attack on interface realizability before further scalar theory. The matching-one target is exactly such a raw physical-certificate obstruction inside an actual realizable parity-star branch; conditional Hall/source-tuple machinery remains untouched.",

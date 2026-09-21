@@ -1,6 +1,6 @@
-# Missing-pair cancellation: exact residual condition
+# Missing-pair cancellation: original reduction and corrected capacity target
 
-21 September 2026. Rigorous reduction plus finite-model audit; the final structural inequality remains open.
+21 September 2026. The matching reduction remains rigorous, but the proposed shortcut `h+L<=s` is false. See `MATCHING_ONE_INVALIDATION_AND_REPAIR.md` for actual counterexamples and the repaired target `h+L<=s+g`.
 
 Let `R=P0`, `T=P1`, and let `S` be the four-centre star population. Retain `M=rq-e(R,T)` and `I=e(R)+e(T)`. For a star vertex `x`, its bridge degree is its number of `T` neighbours plus its number of different-centre star neighbours.
 

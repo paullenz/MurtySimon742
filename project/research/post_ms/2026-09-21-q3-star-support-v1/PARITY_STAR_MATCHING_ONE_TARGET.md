@@ -1,6 +1,6 @@
-# The matching-one target for parity-star cancellation
+# The matching-one target for parity-star cancellation — SUPERSEDED
 
-21 September 2026. Precise proof target; finite evidence is exact but no general theorem is claimed.
+21 September 2026. **Superseded by actual counterexamples in `MATCHING_ONE_INVALIDATION_AND_REPAIR.md`.** The finite evidence below was exact on its stated one-axis grids, but the inferred target is false under joint multiplicity scaling.
 
 The local certificate graph `H_x` of a high-bridge star has no isolated vertices. If its matching number is at most one, then every edge shares one endpoint: `H_x` is a single nontrivial star component. Consequently it has exactly one tree component, so the matching-deficiency reduction gives
 
