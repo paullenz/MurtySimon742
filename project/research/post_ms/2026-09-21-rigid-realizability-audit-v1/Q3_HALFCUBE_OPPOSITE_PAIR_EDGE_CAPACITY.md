@@ -44,6 +44,18 @@ Therefore any choice of one criticality certificate per A-edge gives the exact p
 
 This is a graph-level witness-capacity inequality; no selected-system injection premise is being imported.
 
+## Exact auxiliary reduction
+
+Let `R` be the set of unordered opposite-side A-pairs. Because non-opposite odd halfcubes intersect in B, every non-R pair in A already has a B-mediated two-path independent of the A-graph. An R-pair has no common B-neighbour, so diameter two requires it to be adjacent in `G[A]` or to have at least one common A-neighbour.
+
+Thus the A-subgraph is an **R-distance-two connector**: every required pair in R has A-distance at most two. The raw witness lemma says more: every A-edge must be essential to at least one such required pair. In other words, after the Q3 halfcube palette is fixed, the internal A-edge problem reduces exactly to an edge-minimal distance-two connector for the opposite-pair relation R, together with the separate root/cube/A-B criticality constraints.
+
+If `E_opp` is the number of opposite-side A-edges and `P_1` is the number of opposite-side A-nonedges having exactly one common A-neighbour, then the same physical argument sharpens `(OPP)` to
+
+`f <= E_opp + 2 P_1 <= 2 P_opp`.
+
+Pairs with two or more common A-neighbours cannot certify any A-edge at all.
+
 ## Consequences
 
 ### Compatible palette recovers A-independence
@@ -86,7 +98,21 @@ so along a fixed-defect near-extremal sequence one obtains
 
 for at least one l.
 
-Hence the only way the Q3 halfcube-palette branch can move from the sparse X3 blow-up toward quadratic edge density is through a macroscopic opposite-orientation regime. The next structural target is therefore not another compatible-palette inequality but the geometry of many opposite-side pairs and their unique A-middle vertices.
+There is also a direction-concentration consequence. Writing `s_l=a_{l,0}+a_{l,1}`,
+
+`P_opp <= (1/4) sum_l s_l^2`.
+
+Hence near-extremality implies
+
+`sum_l s_l^2 >= a^2/2-O(C+1)`.
+
+Since `sum_l s_l=a`,
+
+`max_l s_l >= (sum_l s_l^2)/a >= a/2-o(a)`.
+
+So at least half of the A-layer asymptotically lies in the two opposite sides of a **single linear direction**. This is a graph-level concentration conclusion inside the halfcube-palette branch and is qualitatively reminiscent of the one-code purification seen downstream in the selected/Hall machinery, but it is derived here from raw A-edge criticality alone.
+
+Hence the only way the Q3 halfcube-palette branch can move from the sparse X3 blow-up toward quadratic edge density is through a macroscopic opposite-orientation regime, concentrated in at least one direction. The next structural target is the geometry of many opposite-side pairs and their unique A-middle vertices.
 
 ## Scope and caution
 
