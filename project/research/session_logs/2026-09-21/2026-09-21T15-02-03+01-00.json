@@ -18,7 +18,7 @@
   "forward_research_stop_time": "2026-09-21T15:55:44+01:00",
   "preservation_start_time": "2026-09-21T15:55:44+01:00",
   "preservation_complete_time": "2026-09-21T15:56:41+01:00",
-  "final_report_time": null,
+  "final_report_time": "2026-09-21T15:57:03+01:00",
   "wall_clock_session_minutes": 54.6333333333,
   "forward_research_span_minutes": 52.9666666667,
   "preservation_span_minutes": 0.95,
@@ -213,7 +213,9 @@
     "0f451c7",
     "8198559",
     "b581f8e",
-    "999c5f8"
+    "999c5f8",
+    "dcbdfb1",
+    "6829681"
   ],
   "live_unfinished_line": "Prove the raw matching-one lemma: one physical even star cannot be the unique common A-neighbour of two vertex-disjoint missing P0-P1 pairs.",
   "stop_reason": "Reached the valid preservation cutoff after the final bounded hostile-core replay; stopped new exploration and preserved the matching-one handoff.",
