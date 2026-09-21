@@ -47,16 +47,22 @@
       "completed_at": "2026-09-21T15:14:14+01:00",
       "result": "Classified the equality case: at n=19 the exactly-four-centre graph is unique up to cube isometry, with five coordinates, one P0, four stars, four coordinate-hub edges and the forced star perfect matching; m=66. All six orientations replay uniquely.",
       "artifact": "project/research/post_ms/2026-09-21-q3-star-support-v1/ORDER_19_UNIQUENESS.md"
+    },
+    {
+      "id": 6,
+      "completed_at": "2026-09-21T15:16:31+01:00",
+      "result": "For arbitrary multiplicities in the sole four-centre parity-plane orbit, the induced star graph is necessarily a star forest; hence e(S)<=s-1. This upgrades a construction hypothesis to a structural theorem.",
+      "artifact": "project/research/post_ms/2026-09-21-q3-star-support-v1/PARITY_PLANE_STAR_FOREST_NECESSITY.md"
     }
   ],
-  "number_of_substantive_units": 5,
+  "number_of_substantive_units": 6,
   "early_stop_check_time": null,
   "early_stop_check_result": null,
   "tool_infrastructure_failures": [
     "python-sat was absent; installed into the disposable workspace dependency directory and validated against three actual D2C controls."
   ],
   "commit_shas_produced": [],
-  "live_unfinished_line": "Extend the equality classification to an edge bound/stability statement for larger parity-plane populations.",
+  "live_unfinished_line": "Control coordinate-parity and parity-star edges to turn the star-forest theorem into a full parity-plane density bound.",
   "stop_reason": "IN_PROGRESS",
   "target_status": "IN_PROGRESS",
   "audit_reconciliation": "Latest daily audit prioritizes raw criticality and actual graph realizability. This run follows that priority by hostile-reviewing and attacking the reduced opposite-edge-plane actual core; conditional Hall/source-tuple results are not advanced.",
