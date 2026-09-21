@@ -52,9 +52,21 @@
       "completed_at": "2026-09-21T18:20:34+01:00",
       "result": "Exact fixed-multiset MaxSAT proves max B=21=rq+s+1 under the smallest saved RTS constraints, independently confirming and quantifying the exact-cancellation failure.",
       "artifact": "project/research/post_ms/2026-09-21-q3-star-support-v1/RTS_BOWTIE_BLOCK_MAXSAT_RESULTS.json"
+    },
+    {
+      "id": 6,
+      "completed_at": "2026-09-21T18:26:11+01:00",
+      "result": "Proved the unconditional quantitative replacement for exact cancellation: epsilon=max(0,B-rq-s)<=min(U,k(q-1))<=min(U,s(q-1)), where k is the number of high-bridge stars.",
+      "artifact": "project/research/post_ms/2026-09-21-q3-star-support-v1/FOUR_CENTRE_EXCESS_HIGH_STAR_BOUND.md"
+    },
+    {
+      "id": 7,
+      "completed_at": "2026-09-21T18:26:11+01:00",
+      "result": "Fed the new excess bound into the density budget: the branch closes whenever s(2(t+r-q)+s)>=12. Hence every survivor must satisfy q>t+r+floor((s-ceil(12/s))/2), a strongly P1-dominant wedge.",
+      "artifact": "project/research/post_ms/2026-09-21-q3-star-support-v1/FOUR_CENTRE_EXCESS_HIGH_STAR_BOUND.md"
     }
   ],
-  "number_of_substantive_units": 5,
+  "number_of_substantive_units": 7,
   "early_stop_check_time": null,
   "early_stop_check_result": null,
   "tool_infrastructure_failures": [
@@ -65,7 +77,7 @@
     }
   ],
   "commit_shas_produced": [],
-  "live_unfinished_line": "Exact cancellation B<=rq+s is false by one edge. Bound the genuine excess epsilon=B-rq-s against the much larger safe budget D(u,s), using fan replication, missing-pair capacity, and coordinate competition.",
+  "live_unfinished_line": "Only the strongly P1-dominant wedge q>t+r+floor((s-ceil(12/s))/2) survives the proved epsilon<=s(q-1) gate. Seek the symmetric/missing-pair or fan constraint that closes this one-sided regime.",
   "stop_reason": "IN_PROGRESS",
   "target_status": "IN_PROGRESS",
   "audit_reconciliation": "The latest audit prioritizes raw graph-level criticality and realizability before further conditional scalar stacking. This slot therefore continues the actual Q3 parity-plane interface through the RTS bow-tie and its raw certificates; it does not use the conditional source-tuple capacity premises, does not revive the invalidated matching-one route, and retains X3 as a mandatory negative control.",

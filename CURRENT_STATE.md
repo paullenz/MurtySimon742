@@ -5,19 +5,19 @@ Canonical repository: `paullenz/MurtySimon742`. Date: 21 September 2026.
 Active target: the eventual / sufficiently-large second-extremal problem around M(n)=floor((n-1)^2/4)+1. The general theorem and a uniform threshold remain open. X3 (12 vertices,32 edges,M(12)=31) remains mandatory. Do not revive the false all-order conjecture or the closed mixed {4,5} ladder.
 
 <!-- CURRENT-STATUS:START -->
-CHECKPOINT CLASS: `PARITY_STAR_EXACT_CANCELLATION_INVALIDATED`
+CHECKPOINT CLASS: `PARITY_STAR_EXCESS_BOUND_AND_P1_DOMINANCE_GATE`
 
 WORK MODE: `MATH`
 
 INSPECTED PREDECESSOR: `0dc97e3c4447c7474fa56042fe8b66ada75d69d3`.
 
-LAST VERIFIED RESULT: The locally saturated RTS bow-tie is graph-realizable with either fourth-pair status. More importantly, the actual n=33 control has B=21>rq+s=20, disproving universal exact parity-star cancellation; exact fixed-multiset MaxSAT confirms max B=rq+s+1. The unconditional B<=rq+s+U ledger and the budgeted-excess closure survive, and this example has epsilon=1<<D=93.
+LAST VERIFIED RESULT: Exact cancellation is false, but its quantitative replacement is proved: epsilon=max(0,B-rq-s)<=min(U,k(q-1))<=min(U,s(q-1)), where k is the number of high-bridge stars. Combining this with the budget D closes the branch whenever s(2(t+r-q)+s)>=12. Thus every survivor is strongly P1-dominant: q>t+r+floor((s-ceil(12/s))/2), besides the earlier survivor-wedge conditions.
 
 UNPRESERVED WORK: None after this invalidation/repair checkpoint.
 
 DEFERRED ADMIN: Broad historical cleanup; it does not block the raw matching-one attack.
 
-NEXT ACTION: Replace exact cancellation by a proved quantitative excess bound epsilon=B-rq-s against D(u,s). Use raw fan replication and matching-capacity accounting; do not assume either fourth-pair status or extrapolate the finite symmetric threshold.
+NEXT ACTION: Attack only the strongly P1-dominant wedge left by the new excess gate. Use missing-pair scarcity, the four-centre fan, or a second bound on high T-star incidence; do not return to exact cancellation or assume either fourth-pair status.
 <!-- CURRENT-STATUS:END -->
 
 ## Reviewable current package
