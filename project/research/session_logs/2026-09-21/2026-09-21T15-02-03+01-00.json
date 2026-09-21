@@ -7,6 +7,11 @@
     {
       "start": "2026-09-21T15:02:03+01:00",
       "kind": "initial entry"
+    },
+    {
+      "segment_entry_time": "2026-09-21T15:34:41+01:00",
+      "kind": "context re-entry; same scheduled slot, original start, ledger, target, and cutoff retained",
+      "continuity": "verified same invocation; forward research did not stop"
     }
   ],
   "forward_research_start_time": "2026-09-21T15:02:46+01:00",
@@ -116,7 +121,7 @@
     "python-sat was absent; installed into the disposable workspace dependency directory and validated against three actual D2C controls."
   ],
   "commit_shas_produced": [],
-  "live_unfinished_line": "Use parity-star fixture as mandatory control while deriving a quantitative density tax; rigid Hall interface remains unexercised because all maximum roots have p=0.",
+  "live_unfinished_line": "Derive and verify a stable parametric construction behind the all-SAT parity-star parameter grid; then measure its density against M(n).",
   "stop_reason": "IN_PROGRESS",
   "target_status": "IN_PROGRESS",
   "audit_reconciliation": "Latest daily audit prioritizes raw criticality and actual graph realizability. This run follows that priority by hostile-reviewing and attacking the reduced opposite-edge-plane actual core; conditional Hall/source-tuple results are not advanced.",
