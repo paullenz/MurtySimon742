@@ -2,9 +2,11 @@
 """Independent actual-D2C scan for intrinsically orientable rigid complete A-cuts.
 
 Unlike the earlier regression this does not fix an A-edge certificate policy first.
-For each rooted code-pair cut X|Y it asks the graph-intrinsic existence question:
-are all X-Y edges present, and does every crossing edge admit at least one raw
-criticality certificate oriented from Y to X with witness in B=N(v)?
+For each oriented rooted code-pair cut X|Y it asks the graph-intrinsic existence
+question: are all X-Y edges present, and does every crossing edge admit at
+least one raw criticality certificate oriented from Y to X with witness in
+B=N(v)?  Both orientations of every unordered partition are tested because
+Y->X orientability is not symmetric.
 
 A positive hit is therefore a candidate realizability witness for the rigid
 Hall branch before any arbitrary certificate-policy choice.  A negative bounded
@@ -72,10 +74,9 @@ def intrinsic_cuts(G,v,max_active=14):
     active=list(classes)
     if len(active)<2 or len(active)>max_active: return []
     out=[]
+    # Do NOT quotient by set-complement: X|Y and Y|X have different required
+    # certificate orientations, so both masks must be tested.
     for mask in range(1,(1<<len(active))-1):
-        # X|Y and Y|X are different orientations, but fixing the first active
-        # class in X removes a redundant set-complement traversal here.
-        if not (mask&1): continue
         X=set().union(*(classes[active[i]] for i in range(len(active)) if mask>>i&1))
         Y=A-X
         if len(X)<3 or not Y: continue
