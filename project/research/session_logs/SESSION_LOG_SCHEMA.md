@@ -101,13 +101,13 @@ If at least 50 minutes were genuinely available from the earliest actual session
 - At least 50 **verified** minutes of forward research are required.
 - Less than 50 verified minutes is NONCOMPLIANT unless all reasonable mathematical, audit, repair, regression, hostile-example, derivation, and checker avenues were genuinely blocked by unavailable information/capability.
 - Completing a theorem, reaching a clean checkpoint, context compaction, tool failure, GitHub write, or report readiness is not by itself an exception.
-- If fewer than 55 minutes were available because the first invocation was late, mark target applicability N/A and preserve the lateness.
+- If fewer than 50 minutes were available from earliest actual start to research cutoff because the first invocation was late, mark target applicability N/A and preserve the lateness.
 
 ## Early-stop check
 
 Before beginning final preservation, obtain a fresh timestamp.
 
-If more than 8 minutes remain before cutoff and any sensible next mathematical/audit step exists, continue forward research. Record the check and result.
+If more than 5 minutes remain before research cutoff and any sensible next mathematical/audit step exists, continue forward research. Record the check and result.
 
 ## No-lost-hour rule
 
