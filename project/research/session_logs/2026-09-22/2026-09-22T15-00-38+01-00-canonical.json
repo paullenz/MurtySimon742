@@ -11,9 +11,9 @@
     {
       "segment_id": "segment-1",
       "actual_start": "2026-09-22T15:04:10+01:00",
-      "actual_stop": "PENDING",
+      "actual_stop": "2026-09-22T15:51:48+01:00",
       "role": "forward_research",
-      "notes": "Current invocation; mandatory reads completed and durable start being published before mathematics."
+      "notes": "Current invocation; mandatory reads and durable STARTED record preceded mathematics. Nine research units were closed and published atomically."
     },
     {
       "segment_id": "segment-2",
@@ -79,13 +79,19 @@
       "unit": 9
     }
   ],
-  "forward_research_stop": "PENDING",
-  "preservation_start": "PENDING",
-  "preservation_complete": "PENDING",
-  "final_report_time": "PENDING",
-  "wall_clock_span_to_preservation_complete": "PENDING",
+  "forward_research_stop": "2026-09-22T15:51:48+01:00",
+  "preservation_start": "2026-09-22T15:53:37+01:00",
+  "preservation_complete": "2026-09-22T15:53:47+01:00",
+  "final_report_time": "2026-09-22T15:53:47+01:00",
+  "wall_clock_span_to_preservation_complete": {
+    "seconds": 2977,
+    "human": "49m37s"
+  },
   "verified_forward_research_span_seconds": 1959,
-  "preservation_span": "PENDING",
+  "preservation_span": {
+    "seconds": 10,
+    "human": "0m10s"
+  },
   "substantive_unit_count": 9,
   "timestamped_unit_ledger": [
     {
@@ -143,12 +149,12 @@
       "result": "Exact source-population enumeration and supplement forcing eliminate both surviving (2,2,1^6) cores: each has one source multiset and zero supplement-feasible populations. Thus all r=10 support-eight partitions are internally closed; support nine remains."
     }
   ],
-  "early_stop_check_time": "PENDING",
-  "early_stop_check_result": "PENDING",
-  "stop_reason": "PENDING",
+  "early_stop_check_time": "2026-09-22T15:53:37+01:00",
+  "early_stop_check_result": "Only one second remained before the research cutoff, so the >5-minute continuation condition was false; began preservation.",
+  "stop_reason": "Stopped forward research at the completed supplement-closure checkpoint before the 15:53:38 cutoff and finalized preservation.",
   "target_50m_applies": "NO (49m28s available from observed start to cutoff)",
   "target_50m_met": "N/A",
-  "compliance_status": "STARTED / LIVE",
+  "compliance_status": "COMPLETED / TARGET_NA_LATE_START",
   "infrastructure_failures": [],
   "commit_shas": [
     "f0ee37d131ccef891bf2932bdfcbaf5a99ff349f",
@@ -161,8 +167,9 @@
     "9153645f216c36778daed2bee037353d0c4dbf34",
     "79ee8583079bd7c81b9b037f779966c7b2cec03c",
     "56acab3ae5cf4d92f4f812729f05331b5a67bef4",
-    "56acab3ae5cf4d92f4f812729f05331b5a67bef4"
+    "56acab3ae5cf4d92f4f812729f05331b5a67bef4",
+    "37cef88e0e58005111648ce556f85ec4a05d78ab"
   ],
-  "live_unfinished_line": "Only the r=10 support-nine partition (2,1^8) remains before any strict r=10 closure/S extension; equality scope remains unchanged.",
+  "live_unfinished_line": "The sole r=10 support-nine partition (2,1^8) remains before any strict r=10 closure or extension beyond S<=11; equality scope remains unchanged.",
   "historical_fragments": []
 }

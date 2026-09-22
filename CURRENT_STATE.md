@@ -7,15 +7,15 @@ Active target: a genuinely independent proof of Erdős #742 / the Murty–Simon 
 <!-- CURRENT-STATUS:START -->
 CHECKPOINT CLASS: VERIFIED_INTERNAL_NOT_PROMOTED
 
-WORK MODE: MATH
+WORK MODE: PRESERVATION_COMPLETE
 
-INSPECTED PREDECESSOR: 56acab3ae5cf4d92f4f812729f05331b5a67bef4.
+INSPECTED PREDECESSOR: 37cef88e0e58005111648ce556f85ec4a05d78ab.
 
-LAST VERIFIED RESULT: Strict r=9 closure/replay retained (internal edge bound through S<=11). At r=10, supports <=7 and both support-eight partitions are now internally closed. For (2,2,1^6), the two source-feasible cores each have one source multiset and zero supplement-feasible populations. Only support-nine (2,1^8) remains; no r=10 closure/S extension yet.
+LAST VERIFIED RESULT: Strict r=9 closure/replay retained (internal edge bound through S<=11). At r=10, supports <=7 and both support-eight partitions are internally closed. For (2,2,1^6), the two source-feasible cores each have one source multiset and zero supplement-feasible populations. Only support-nine (2,1^8) remains; no r=10 closure/S extension yet.
 
-EVIDENCE: `project/research/general_n/2026-09-22-r10-quotient-v1/R10_22111111_SUPPLEMENT_CLOSURE.md`; exact supplement script/results; prior r=10 packages.
+EVIDENCE: `project/research/general_n/2026-09-22-r10-quotient-v1/`; exact quotient, source and supplement programs/results; canonical commit chain.
 
-SESSION UTILISATION: Trigger 15:00:38 BST; actual start 15:04:10; cutoff 15:53:38; hard close 15:59:38. Nine closed intervals; verified total 1959s (32m39s); units 9; target NO/N/A; LIVE. Canonical: `project/research/session_logs/2026-09-22/2026-09-22T15-00-38+01-00-canonical.json`.
+SESSION UTILISATION: Trigger 15:00:38 BST; actual start 15:04:10; nine closed intervals; verified total 1959s (32m39s); forward stop 15:51:48; cutoff 15:53:38; preservation complete 15:53:47; units 9; 50-minute target NO/N/A because only 49m28s was available at entry; COMPLETED / TARGET_NA_LATE_START. Canonical: `project/research/session_logs/2026-09-22/2026-09-22T15-00-38+01-00-canonical.json`.
 
 UNPRESERVED WORK: None.
 
@@ -23,7 +23,7 @@ DEFERRED ADMIN: Historical missing-slot reconciliation; standalone health-check 
 
 NEXT ACTION: Enumerate and source-screen the sole r=10 support-nine partition (2,1^8).
 
-FOCUSED-SESSION COUNT: 1/24 completed before this trigger; this trigger pending.
+FOCUSED-SESSION COUNT: 1/24; this shortened late-start trigger receives no focused-session credit.
 
 MANDATORY CONSTRAINTS: Independent route; internal computer-assisted trust; actual graph realizability; balanced equality controls; no fabricated intervals.
 <!-- CURRENT-STATUS:END -->
