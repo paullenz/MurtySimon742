@@ -12,6 +12,8 @@ independently rederives that boundary for continuity.  The new work here is the
 exact `121/1569` certificate, the threshold/order ladder, and the subsequent
 graph-realizability obstruction/rigidity analysis in this package.
 
+**Domain clarification (22 September 2026):** the profile formulas and strict surplus bound (S39) require `a>=1`. When `a=0`, D2C forces a star and `t=0`; Section 4 handles that case separately. No maximum-degree threshold claim is changed.
+
 ## 1. Inherited ledger
 
 Use the notation of the canonical profile-integral proof:

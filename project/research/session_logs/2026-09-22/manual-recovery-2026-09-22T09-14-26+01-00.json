@@ -15,22 +15,42 @@
     {
       "segment_id": "startup-1",
       "actual_start": "2026-09-22T09:14:26+01:00",
-      "actual_stop": null,
+      "actual_stop": "2026-09-22T09:17:27+01:00",
       "role": "reconciliation",
       "notes": "Read current handoff and policy; fulfilled a concurrent read-only health check; no mathematics before durable STARTED publication."
+    },
+    {
+      "segment_id": "research-1",
+      "actual_start": "2026-09-22T09:17:27+01:00",
+      "actual_stop": "2026-09-22T09:21:49+01:00",
+      "role": "forward_research",
+      "notes": "Independent raw bridge reconstruction and a=0 domain audit."
     }
   ],
-  "forward_research_intervals": [],
+  "forward_research_intervals": [
+    {
+      "start": "2026-09-22T09:17:27+01:00",
+      "stop": "2026-09-22T09:21:49+01:00",
+      "evidence": "RAW_PROFILE_BRIDGE.md and scope corrections, timestamped at completion"
+    }
+  ],
   "forward_research_stop": null,
   "preservation_start": null,
   "preservation_complete": null,
   "final_report_time": null,
   "wall_clock_span_to_preservation_complete": null,
-  "verified_forward_research_span": 0,
+  "verified_forward_research_span": 262,
   "verified_forward_research_span_units": "seconds",
   "preservation_span": null,
-  "substantive_unit_count": 0,
-  "timestamped_unit_ledger": [],
+  "substantive_unit_count": 1,
+  "timestamped_unit_ledger": [
+    {
+      "completed_at": "2026-09-22T09:21:49+01:00",
+      "unit": "Reconstruct choice-independent graph-to-profile bridge and correct strict surplus domain at a=0",
+      "result": "No bridge blocker found; star scope defect repaired; thresholds unchanged",
+      "artifact": "project/research/general_n/2026-09-22-raw-profile-bridge-v1/RAW_PROFILE_BRIDGE.md"
+    }
+  ],
   "early_stop_check_time": null,
   "early_stop_check_result": null,
   "stop_reason": null,
@@ -38,9 +58,17 @@
   "target_50m_met": "N/A",
   "target_reason": "Manual recovery; 39m12s from first observed entry to research cutoff, fewer than 50 minutes. No historical scheduled-slot credit.",
   "compliance_status": "IN_PROGRESS",
-  "infrastructure_failures": [],
-  "commit_shas": [],
-  "live_unfinished_line": "Independently reconstruct selected-quasi-edge/profile bridge from raw D2C criticality.",
+  "infrastructure_failures": [
+    {
+      "time": "2026-09-22T09:19:32+01:00",
+      "error": "Default Python has no networkx",
+      "pivot": "Use independent standard-library graph algorithms instead; mathematics continued."
+    }
+  ],
+  "commit_shas": [
+    "01ab408115867d02b629d77d55b5af78bdecccef"
+  ],
+  "live_unfinished_line": "Implement actual-graph profile regression using direct diameter/deletion checks and all legal selection choices when feasible.",
   "historical_fragments": [],
   "scheduled_session_credit": 0,
   "focused_session_credit": 0

@@ -5,27 +5,27 @@ Canonical repository: `paullenz/MurtySimon742`. Date: 22 September 2026.
 Active target: a genuinely independent proof of Erdős #742 / the Murty–Simon inequality e(G)<=floor(n^2/4), preferably with the equality characterization. Forward priority is the project’s own complement / residual / Hall / profile / realizability route, not a reconstruction of the external e+disj+X proof. The first focused session produced the internally checked candidate threshold `Delta>=250n/429`, shrinking the live strip to `n/2<Delta<250n/429`. The theorem and its inherited graph-to-profile spine remain candidate/internal-review mathematics. A 24-focused-session go/no-go gate applies. Prior eventual-D2C work remains preserved but is no longer the active forward objective.
 
 <!-- CURRENT-STATUS:START -->
-CHECKPOINT CLASS: `MANUAL_RECOVERY_STARTED_2026_09_22`
+CHECKPOINT CLASS: `RAW_PROFILE_BRIDGE_REDERIVED_SCOPE_REPAIRED`
 
 WORK MODE: `MATH`
 
-INSPECTED PREDECESSOR: `bc19a249c173c7df60de262409b5cffadf427e23`. Read CURRENT_STATE first, then unchanged AGENTS.md and the updated telemetry schema; no existing 22 September session directory was present.
+INSPECTED PREDECESSOR: `01ab408115867d02b629d77d55b5af78bdecccef`; followed the 22 September audit priority and the durable manual-recovery start.
 
-LAST VERIFIED RESULT: Mathematical status unchanged from the 22 September audit. The candidate `250/429` threshold remains conditional on its internally reviewed graph-to-profile bridge. This checkpoint establishes only a durable manual-recovery start.
+LAST VERIFIED RESULT: Independent raw-criticality reconstruction of the selected/profile bridge for EVERY legal selection and maximum-degree root found no blocking flaw. The strict surplus statement needs `a>=1`; a star has `a=0,t=0` and refutes the unqualified strict display. Corrected the 7/12 and S39 source statements. Their threshold assemblies already handle stars separately, so threshold claims and internal/external trust boundaries are unchanged. Full proof: `project/research/general_n/2026-09-22-raw-profile-bridge-v1/RAW_PROFILE_BRIDGE.md`.
 
-RECOVERY STATUS: Replacement invocation entered; first direct clock observation was 09:14:26 BST. The STARTED record is `project/research/session_logs/2026-09-22/manual-recovery-2026-09-22T09-14-26+01-00.json`. Substantive execution and recurring scheduling recovery still require evidence. The eleven historical gaps remain unverified; this manual run cannot backfill them.
+RECOVERY STATUS: Real mathematical output is now preserved by the replacement invocation. This proves one recovery run executed a substantive unit; it does not verify future scheduled reliability or fill the eleven historical gaps.
 
-SESSION UTILISATION: Manual entry 09:14:26 BST; next scheduled trigger 10:00:38 BST; research cutoff 09:53:38 BST; hard close 09:59:38 BST. Closed forward intervals: none yet. Verified forward seconds: 0. Substantive units: 0. Fifty-minute target: N/A for this shortened manual window. Status: IN_PROGRESS.
+SESSION UTILISATION: Manual entry 09:14:26 BST; first closed research interval 09:17:27--09:21:49 BST (262 seconds); 1 substantive unit. Next trigger 10:00:38; cutoff 09:53:38; hard close 09:59:38. Fifty-minute target N/A for the shortened manual window. Session still IN_PROGRESS. Record: `project/research/session_logs/2026-09-22/manual-recovery-2026-09-22T09-14-26+01-00.json`.
 
-UNPRESERVED WORK: None. No mathematical unit has started before this remote STARTED record.
+UNPRESERVED WORK: None after this checkpoint.
 
-DEFERRED ADMIN: Monitor repeated execution separately; preserve the recovery incident and audit trail. The health check is read-only and must not count this administrative start as research progress.
+DEFERRED ADMIN: Confirm later scheduled completion through the read-only health check; do not count recovery/admin commits as additional sessions. Default Python lacked networkx; use standard-library graph methods instead.
 
-NEXT ACTION: Independently reconstruct the complete selected-quasi-edge/profile bridge from raw D2C criticality using the current audited source notes; then implement actual-graph regression across legal selections. Freeze dependent threshold claims on any bridge failure.
+NEXT ACTION: Build an independent actual-graph checker of all selected/profile objects, source injections, supplement forcing and exact threshold inequalities under multiple legal selections. Include both parities of balanced complete bipartite graphs and X_3, and separately report positive-demand coverage.
 
-FOCUSED-SESSION COUNT: `1/24` completed at the last audit; current manual run earns no credit merely by starting.
+FOCUSED-SESSION COUNT: `1/24` completed at prior audit; current manual session is ongoing and is not backdated into a historical slot.
 
-MANDATORY CONSTRAINTS: Independent #742 objective; no external e+disj+X proof core; distinguish scalar feasibility from graph realizability; retain X_3 and balanced complete bipartite controls of both parities; preserve all failure evidence.
+MANDATORY CONSTRAINTS: Keep independent #742 scope; no external e+disj+X core; no abstract-to-graph promotion; retain equality controls; freeze dependent claims on any actual bridge failure.
 <!-- CURRENT-STATUS:END -->
 
 ## Latest adversarial audit - 22 September 2026

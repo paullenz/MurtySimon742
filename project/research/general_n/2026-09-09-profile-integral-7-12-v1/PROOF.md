@@ -13,7 +13,7 @@ a = n-1-b,
 t = m-b(n-b).
 ```
 
-The argument proves the strengthened universal surplus bound
+For `a>=1`, the argument proves the strengthened universal surplus bound
 
 \[
 \boxed{t<\frac{5a^2}{128}+\frac a8.}
@@ -317,7 +317,7 @@ hence
 \boxed{t<\frac{5a^2}{128}+\frac a8.}
 \]
 
-This proves (P+).
+This proves (P+) for `a>=1`. The `a=0` star case has `t=0` and is handled separately in the degree assembly; the strict displayed surplus bound is not asserted there.
 
 ## 5. Degree assembly for 7/12
 
