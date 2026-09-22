@@ -1,0 +1,47 @@
+{
+  "schema_version": "1.0",
+  "session_id": "2026-09-22T21:00:38+01:00",
+  "scheduled_trigger": "2026-09-22T21:00:38+01:00",
+  "trigger_attribution": {
+    "status": "VERIFIED",
+    "method": "Current invocation task identity, supplied Europe/London hourly schedule, and runtime datetime 2026-09-22T21:02:19+01:00 identify the 21:00:38 trigger; no historical record or last_run_time used."
+  },
+  "earliest_actual_start": "2026-09-22T21:02:43+01:00",
+  "next_trigger": "2026-09-22T22:00:38+01:00",
+  "research_cutoff": "2026-09-22T21:53:38+01:00",
+  "hard_close_deadline": "2026-09-22T21:59:38+01:00",
+  "lateness_seconds": 125,
+  "segments": [
+    {
+      "segment_id": "segment-1",
+      "actual_start": "2026-09-22T21:02:43+01:00",
+      "actual_stop": null,
+      "role": "forward_research",
+      "notes": "Current scheduled invocation; mandatory repository reads completed and durable STARTED checkpoint published before mathematics."
+    }
+  ],
+  "forward_research_intervals": [],
+  "verified_forward_span_seconds": 0,
+  "forward_stop": null,
+  "preservation_start": null,
+  "preservation_complete": null,
+  "wall_clock_span_seconds": null,
+  "substantive_unit_count": 0,
+  "substantive_unit_ledger": [],
+  "early_stop_check": null,
+  "stop_reason": null,
+  "failures_and_pivots": [],
+  "commit_shas": [
+    "ce26dceaad7a8766e0c8b5c3aca7ca666c01ed27"
+  ],
+  "unfinished_line": "Shard exact source feasibility for the 16,447 r=12 support-nine strict cores, then supplement feasibility and supports ten-eleven.",
+  "target": {
+    "applicable": true,
+    "required_seconds": 3000,
+    "available_seconds": 3055,
+    "achieved_verified_seconds": 0,
+    "result": "LIVE",
+    "reason": "Earliest actual start left 50m55s before cutoff."
+  },
+  "compliance_status": "STARTED"
+}
