@@ -1,0 +1,313 @@
+{
+  "kernels": 16,
+  "found": 0,
+  "exhausted": 16,
+  "truncated": 0,
+  "rows": [
+    {
+      "index": 0,
+      "mask": 5691760,
+      "R": [
+        1,
+        1,
+        1,
+        1,
+        1,
+        2,
+        2,
+        2
+      ],
+      "status": "EXHAUSTED",
+      "nodes": 16790,
+      "leaves": 3239,
+      "seconds": 1.273919,
+      "witness": null
+    },
+    {
+      "index": 1,
+      "mask": 5192304,
+      "R": [
+        2,
+        2,
+        2,
+        1,
+        1,
+        1,
+        1,
+        1
+      ],
+      "status": "EXHAUSTED",
+      "nodes": 28631,
+      "leaves": 4450,
+      "seconds": 1.98118,
+      "witness": null
+    },
+    {
+      "index": 2,
+      "mask": 6215777,
+      "R": [
+        1,
+        1,
+        1,
+        1,
+        1,
+        2,
+        2,
+        2
+      ],
+      "status": "EXHAUSTED",
+      "nodes": 19286,
+      "leaves": 3921,
+      "seconds": 1.265566,
+      "witness": null
+    },
+    {
+      "index": 3,
+      "mask": 14334528,
+      "R": [
+        2,
+        1,
+        1,
+        1,
+        1,
+        2,
+        2,
+        1
+      ],
+      "status": "EXHAUSTED",
+      "nodes": 39882,
+      "leaves": 9553,
+      "seconds": 3.174087,
+      "witness": null
+    },
+    {
+      "index": 4,
+      "mask": 14588096,
+      "R": [
+        2,
+        1,
+        1,
+        1,
+        1,
+        2,
+        2,
+        1
+      ],
+      "status": "EXHAUSTED",
+      "nodes": 45645,
+      "leaves": 12289,
+      "seconds": 3.311757,
+      "witness": null
+    },
+    {
+      "index": 5,
+      "mask": 15391072,
+      "R": [
+        1,
+        1,
+        1,
+        1,
+        1,
+        2,
+        2,
+        2
+      ],
+      "status": "EXHAUSTED",
+      "nodes": 30458,
+      "leaves": 8623,
+      "seconds": 1.945815,
+      "witness": null
+    },
+    {
+      "index": 6,
+      "mask": 23804464,
+      "R": [
+        1,
+        1,
+        1,
+        1,
+        1,
+        2,
+        2,
+        2
+      ],
+      "status": "EXHAUSTED",
+      "nodes": 29707,
+      "leaves": 8460,
+      "seconds": 1.523846,
+      "witness": null
+    },
+    {
+      "index": 7,
+      "mask": 23804464,
+      "R": [
+        1,
+        1,
+        2,
+        1,
+        2,
+        1,
+        1,
+        2
+      ],
+      "status": "EXHAUSTED",
+      "nodes": 14292,
+      "leaves": 2512,
+      "seconds": 1.198981,
+      "witness": null
+    },
+    {
+      "index": 8,
+      "mask": 48674816,
+      "R": [
+        2,
+        1,
+        1,
+        2,
+        1,
+        2,
+        1,
+        1
+      ],
+      "status": "EXHAUSTED",
+      "nodes": 137308,
+      "leaves": 46804,
+      "seconds": 9.24541,
+      "witness": null
+    },
+    {
+      "index": 9,
+      "mask": 48730368,
+      "R": [
+        2,
+        1,
+        2,
+        1,
+        2,
+        1,
+        1,
+        1
+      ],
+      "status": "EXHAUSTED",
+      "nodes": 234658,
+      "leaves": 81607,
+      "seconds": 12.594903,
+      "witness": null
+    },
+    {
+      "index": 10,
+      "mask": 52869680,
+      "R": [
+        1,
+        1,
+        1,
+        1,
+        2,
+        2,
+        1,
+        2
+      ],
+      "status": "EXHAUSTED",
+      "nodes": 20746,
+      "leaves": 3240,
+      "seconds": 1.429455,
+      "witness": null
+    },
+    {
+      "index": 11,
+      "mask": 52869680,
+      "R": [
+        1,
+        2,
+        2,
+        1,
+        1,
+        1,
+        1,
+        2
+      ],
+      "status": "EXHAUSTED",
+      "nodes": 27343,
+      "leaves": 4600,
+      "seconds": 1.825798,
+      "witness": null
+    },
+    {
+      "index": 12,
+      "mask": 133695682,
+      "R": [
+        1,
+        1,
+        1,
+        1,
+        1,
+        2,
+        2,
+        2
+      ],
+      "status": "EXHAUSTED",
+      "nodes": 28663,
+      "leaves": 4720,
+      "seconds": 1.689967,
+      "witness": null
+    },
+    {
+      "index": 13,
+      "mask": 142036048,
+      "R": [
+        1,
+        1,
+        1,
+        1,
+        2,
+        1,
+        2,
+        2
+      ],
+      "status": "EXHAUSTED",
+      "nodes": 22843,
+      "leaves": 5318,
+      "seconds": 1.381752,
+      "witness": null
+    },
+    {
+      "index": 14,
+      "mask": 149654084,
+      "R": [
+        1,
+        1,
+        1,
+        1,
+        1,
+        2,
+        2,
+        2
+      ],
+      "status": "EXHAUSTED",
+      "nodes": 39892,
+      "leaves": 11481,
+      "seconds": 1.916138,
+      "witness": null
+    },
+    {
+      "index": 15,
+      "mask": 267911299,
+      "R": [
+        1,
+        1,
+        1,
+        1,
+        1,
+        2,
+        2,
+        2
+      ],
+      "status": "EXHAUSTED",
+      "nodes": 56470,
+      "leaves": 9437,
+      "seconds": 2.340399,
+      "witness": null
+    }
+  ],
+  "scope": "Exact DFS when EXHAUSTED; FOUND gives an abstract source/supplement witness; TRUNCATED is undecided. Not graph realization."
+}

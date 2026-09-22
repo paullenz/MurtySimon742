@@ -51,14 +51,20 @@
       "stop": "2026-09-22T17:19:29+01:00",
       "seconds": 0,
       "evidence": "one-supplement replay on 16 MILP witness populations"
+    },
+    {
+      "start": "2026-09-22T17:21:53+01:00",
+      "stop": "2026-09-22T17:22:07+01:00",
+      "seconds": 14,
+      "evidence": "corrected pivoted exact DFS over all source multisets for 16 support-eight kernels"
     }
   ],
-  "verified_forward_span_seconds": 642,
+  "verified_forward_span_seconds": 656,
   "forward_stop": "PENDING",
   "preservation_start": "PENDING",
   "preservation_complete": "PENDING",
   "wall_clock_span_seconds": "PENDING",
-  "substantive_unit_count": 5,
+  "substantive_unit_count": 6,
   "substantive_unit_ledger": [
     {
       "completed_at": "2026-09-22T17:05:05+01:00",
@@ -84,6 +90,11 @@
       "completed_at": "2026-09-22T17:19:29+01:00",
       "unit": "hostile supplement replay on MILP witnesses",
       "result": "All 16 particular MILP witness populations fail inherited one-supplement condition; alternative populations remain undecided."
+    },
+    {
+      "completed_at": "2026-09-22T17:22:07+01:00",
+      "unit": "exact supplement forcing for remaining r=11 support-eight kernels",
+      "result": "0 supplement-feasible, 16 exhaustively rejected, 0 truncated; support eight internally closed."
     }
   ],
   "early_stop_check": {
@@ -100,9 +111,10 @@
     "8ec0aa31dadd32dbcc22e1e3ae7f6826efa258b4",
     "416ca3c136161afecbc8f913cb72ebb14a552752",
     "067f0c74c8a6568ba53de9e01220e669fdcf830c",
-    "bc75030d5c73335dd7eb93668d83c70bd57754ad"
+    "bc75030d5c73335dd7eb93668d83c70bd57754ad",
+    "a9a662ac68e10d55b1d0bc544568f4170c3901b2"
   ],
-  "unfinished_line": "Early-exit exact search for an alternative supplement-feasible population in each of 16 kernels.",
+  "unfinished_line": "Enumerate and screen r=11 supports nine and ten.",
   "target": {
     "applicable": true,
     "available_seconds": 3160,

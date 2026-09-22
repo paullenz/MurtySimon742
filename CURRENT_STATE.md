@@ -9,23 +9,23 @@ CHECKPOINT CLASS: VERIFIED_INTERNAL_NOT_PROMOTED
 
 WORK MODE: FORWARD_RESEARCH_LIVE
 
-INSPECTED PREDECESSOR: bc75030d5c73335dd7eb93668d83c70bd57754ad.
+INSPECTED PREDECESSOR: a9a662ac68e10d55b1d0bc544568f4170c3901b2.
 
-LAST VERIFIED RESULT: At r=11 support eight, two partitions are source-infeasible and (2,2,2,1^5) is reduced to 16 source-feasible rows. The inherited one-supplement test rejects the particular MILP witness population for each of all 16 rows. This is a hostile-witness result only: alternative source populations remain possible, so no support-eight closure is claimed.
+LAST VERIFIED RESULT: The r=11 support-eight screen is internally closed. Partitions (4,1^7) and (3,2,1^6) have no physical-source population. For (2,2,2,1^5), only 16 of 1,670 strict cores passed the source MILP; a corrected pivoted exact DFS exhaustively tested all source multisets for those 16 and found no one-supplement-feasible population (0 found, 16 exhausted, 0 truncated). Supports nine and ten remain. General theorem and equality remain open.
 
-EVIDENCE: `r11_support8_milp_witness_supplements.py` and JSON output in `project/research/general_n/2026-09-22-r11-quotient-v1/`; canonical telemetry.
+EVIDENCE: `r11_support8_earlyexit.py` and JSON output, together with three source-screen shards in `project/research/general_n/2026-09-22-r11-quotient-v1/`; canonical telemetry.
 
-SESSION UTILISATION: Trigger 17:00:38 BST; actual start 17:00:58; five closed intervals; verified total 642s (10m42s); five substantive units; cutoff 17:53:38; target YES/PENDING; LIVE.
+SESSION UTILISATION: Trigger 17:00:38 BST; actual start 17:00:58; six closed intervals; verified total 656s (10m56s); six substantive units; cutoff 17:53:38; target YES/PENDING; LIVE.
 
 UNPRESERVED WORK: None at this checkpoint.
 
 DEFERRED ADMIN: Historical reconciliation and prose-only README edits.
 
-NEXT ACTION: Search alternative source populations per kernel with early exit and bounded per-kernel time, preserving exact undecided rows instead of enumerating all populations.
+NEXT ACTION: Enumerate r=11 support-nine strict core orbits by residual partition, then apply the source screen shardwise.
 
 FOCUSED-SESSION COUNT: 1/24; current trigger credit pending final compliance.
 
-MANDATORY CONSTRAINTS: Failure of one witness is not universal source-population failure; do not promote the finite result to graph realization.
+MANDATORY CONSTRAINTS: This is internal computer-assisted closure at the quotient/source/supplement layer, not graph realization or external verification.
 <!-- CURRENT-STATUS:END -->
 
 ## Latest adversarial audit - 22 September 2026
