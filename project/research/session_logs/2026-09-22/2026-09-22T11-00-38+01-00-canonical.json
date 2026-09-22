@@ -32,6 +32,13 @@
       "actual_stop": "2026-09-22T11:06:51+01:00",
       "role": "forward_research",
       "notes": "Actual graph replay of local cycle and residual-mass-five closure."
+    },
+    {
+      "segment_id": "research-3",
+      "actual_start": "2026-09-22T11:07:13+01:00",
+      "actual_stop": "2026-09-22T11:08:46+01:00",
+      "role": "forward_research",
+      "notes": "Exact optimistic r=6 residual-core classification."
     }
   ],
   "forward_research_intervals": [
@@ -44,6 +51,11 @@
       "start": "2026-09-22T11:04:50+01:00",
       "stop": "2026-09-22T11:06:51+01:00",
       "evidence": "LOCAL_CYCLE_REGRESSION.md, check_local_cycle.py, LOCAL_CYCLE_RESULTS.json"
+    },
+    {
+      "start": "2026-09-22T11:07:13+01:00",
+      "stop": "2026-09-22T11:08:46+01:00",
+      "evidence": "R6_CORE_SCREEN.md, screen_r6_core.py, R6_CORE_SCREEN.json"
     }
   ],
   "forward_research_stop": null,
@@ -51,10 +63,10 @@
   "preservation_complete": null,
   "final_report_time": null,
   "wall_clock_span_to_preservation_complete": null,
-  "verified_forward_research_span": 205,
+  "verified_forward_research_span": 298,
   "verified_forward_research_span_units": "seconds",
   "preservation_span": null,
-  "substantive_unit_count": 2,
+  "substantive_unit_count": 3,
   "timestamped_unit_ledger": [
     {
       "completed_at": "2026-09-22T11:04:00+01:00",
@@ -67,6 +79,12 @@
       "unit": "Local cycle hostile graph replay",
       "result": "PASS 68741 assignments; 704 r<=5 cases (578 nonempty F), 863 balanced equality controls. Exact local-cycle premise absent; S6/7 unexercised.",
       "artifact": "project/research/general_n/2026-09-22-zero-demand-equality-v1/LOCAL_CYCLE_REGRESSION.md"
+    },
+    {
+      "completed_at": "2026-09-22T11:08:46+01:00",
+      "unit": "Residual-mass-six optimistic core screen",
+      "result": "All partitions except (2,1,1,1,1) eliminated at necessary-relaxation level; 31 labelled survivors reduce to four unit-permutation orbits. No graph realization asserted.",
+      "artifact": "project/research/general_n/2026-09-22-zero-demand-equality-v1/R6_CORE_SCREEN.md"
     }
   ],
   "early_stop_check_time": null,
@@ -78,9 +96,9 @@
   "compliance_status": "IN_PROGRESS",
   "infrastructure_failures": [],
   "commit_shas": [
-    "6b75fbecbcdc90638cd7bf6a2b8c02cf6d313fe1"
+    "fd03a6fb07facfb2b28c20f0607b87b93d303c70"
   ],
-  "live_unfinished_line": "Classify r=6 equality/positive-core shapes using the exact core ledger; preserve abstract-vs-graph caveat.",
+  "live_unfinished_line": "Enumerate physical source-state multisets for the four r=6 core orbits, then impose legal supplements.",
   "historical_fragments": [],
   "focused_session_credit": 0,
   "predecessor_session": "project/research/session_logs/2026-09-22/2026-09-22T10-00-38+01-00-canonical.json"

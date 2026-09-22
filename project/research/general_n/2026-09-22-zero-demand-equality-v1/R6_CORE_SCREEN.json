@@ -1,0 +1,317 @@
+{
+  "(6,)": {
+    "support": 1,
+    "core_graphs_checked_after_local_filters": 1,
+    "strict_survivors_labelled": 0,
+    "strict_survivor_orbits": 0,
+    "orbit_representatives": []
+  },
+  "(5, 1)": {
+    "support": 2,
+    "core_graphs_checked_after_local_filters": 2,
+    "strict_survivors_labelled": 0,
+    "strict_survivor_orbits": 0,
+    "orbit_representatives": []
+  },
+  "(4, 2)": {
+    "support": 2,
+    "core_graphs_checked_after_local_filters": 2,
+    "strict_survivors_labelled": 0,
+    "strict_survivor_orbits": 0,
+    "orbit_representatives": []
+  },
+  "(4, 1, 1)": {
+    "support": 3,
+    "core_graphs_checked_after_local_filters": 8,
+    "strict_survivors_labelled": 0,
+    "strict_survivor_orbits": 0,
+    "orbit_representatives": []
+  },
+  "(3, 3)": {
+    "support": 2,
+    "core_graphs_checked_after_local_filters": 2,
+    "strict_survivors_labelled": 0,
+    "strict_survivor_orbits": 0,
+    "orbit_representatives": []
+  },
+  "(3, 2, 1)": {
+    "support": 3,
+    "core_graphs_checked_after_local_filters": 8,
+    "strict_survivors_labelled": 0,
+    "strict_survivor_orbits": 0,
+    "orbit_representatives": []
+  },
+  "(3, 1, 1, 1)": {
+    "support": 4,
+    "core_graphs_checked_after_local_filters": 64,
+    "strict_survivors_labelled": 0,
+    "strict_survivor_orbits": 0,
+    "orbit_representatives": []
+  },
+  "(2, 2, 2)": {
+    "support": 3,
+    "core_graphs_checked_after_local_filters": 8,
+    "strict_survivors_labelled": 0,
+    "strict_survivor_orbits": 0,
+    "orbit_representatives": []
+  },
+  "(2, 2, 1, 1)": {
+    "support": 4,
+    "core_graphs_checked_after_local_filters": 64,
+    "strict_survivors_labelled": 0,
+    "strict_survivor_orbits": 0,
+    "orbit_representatives": []
+  },
+  "(2, 1, 1, 1, 1)": {
+    "support": 5,
+    "core_graphs_checked_after_local_filters": 656,
+    "strict_survivors_labelled": 31,
+    "strict_survivor_orbits": 4,
+    "orbit_representatives": [
+      {
+        "representative": {
+          "edges": [
+            [
+              0,
+              1
+            ],
+            [
+              0,
+              2
+            ],
+            [
+              0,
+              3
+            ],
+            [
+              0,
+              4
+            ],
+            [
+              1,
+              2
+            ],
+            [
+              1,
+              3
+            ],
+            [
+              2,
+              3
+            ]
+          ],
+          "degrees": [
+            4,
+            3,
+            3,
+            3,
+            1
+          ],
+          "P": [
+            0,
+            1,
+            2,
+            3
+          ],
+          "N": [
+            4
+          ],
+          "t_upper": 1,
+          "selected_lower_bounds": [
+            2,
+            2,
+            2,
+            2,
+            0
+          ]
+        },
+        "labelled_count": 4
+      },
+      {
+        "representative": {
+          "edges": [
+            [
+              0,
+              1
+            ],
+            [
+              0,
+              2
+            ],
+            [
+              0,
+              3
+            ],
+            [
+              0,
+              4
+            ],
+            [
+              1,
+              2
+            ],
+            [
+              1,
+              4
+            ],
+            [
+              2,
+              3
+            ]
+          ],
+          "degrees": [
+            4,
+            3,
+            3,
+            2,
+            2
+          ],
+          "P": [
+            0,
+            1,
+            2,
+            3,
+            4
+          ],
+          "N": [],
+          "t_upper": 1,
+          "selected_lower_bounds": [
+            2,
+            2,
+            2,
+            1,
+            1
+          ]
+        },
+        "labelled_count": 12
+      },
+      {
+        "representative": {
+          "edges": [
+            [
+              0,
+              1
+            ],
+            [
+              0,
+              2
+            ],
+            [
+              0,
+              3
+            ],
+            [
+              1,
+              3
+            ],
+            [
+              1,
+              4
+            ],
+            [
+              2,
+              3
+            ],
+            [
+              2,
+              4
+            ]
+          ],
+          "degrees": [
+            3,
+            3,
+            3,
+            3,
+            2
+          ],
+          "P": [
+            0,
+            1,
+            2,
+            3,
+            4
+          ],
+          "N": [],
+          "t_upper": 1,
+          "selected_lower_bounds": [
+            1,
+            2,
+            2,
+            2,
+            1
+          ]
+        },
+        "labelled_count": 12
+      },
+      {
+        "representative": {
+          "edges": [
+            [
+              0,
+              1
+            ],
+            [
+              0,
+              2
+            ],
+            [
+              0,
+              3
+            ],
+            [
+              0,
+              4
+            ],
+            [
+              1,
+              3
+            ],
+            [
+              1,
+              4
+            ],
+            [
+              2,
+              3
+            ],
+            [
+              2,
+              4
+            ]
+          ],
+          "degrees": [
+            4,
+            3,
+            3,
+            3,
+            3
+          ],
+          "P": [
+            0,
+            1,
+            2,
+            3,
+            4
+          ],
+          "N": [],
+          "t_upper": 2,
+          "selected_lower_bounds": [
+            2,
+            2,
+            2,
+            2,
+            2
+          ]
+        },
+        "labelled_count": 3
+      }
+    ]
+  },
+  "(1, 1, 1, 1, 1, 1)": {
+    "support": 6,
+    "core_graphs_checked_after_local_filters": 1858,
+    "strict_survivors_labelled": 0,
+    "strict_survivor_orbits": 0,
+    "orbit_representatives": []
+  }
+}
