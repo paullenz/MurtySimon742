@@ -9,23 +9,23 @@ CHECKPOINT CLASS: VERIFIED_INTERNAL_NOT_PROMOTED
 
 WORK MODE: MATH
 
-INSPECTED PREDECESSOR: d5641ea6024631127362e8a7a6f97fdb32fcd73a.
+INSPECTED PREDECESSOR: d1765ff25aeb2630d36342779d0eda1fd5412f3c.
 
-LAST VERIFIED RESULT: Internal strict r=10 closure/edge bound through S<=12 retained. At r=11, every partition of support <=6 is now internally closed. Supplement forcing eliminates the four support-six source survivors (1,80,2,2 source populations; zero supplement-feasible). Supports 7 through 10 remain; no S<=13 extension.
+LAST VERIFIED RESULT: Internal strict r=10 closure/edge bound through S<=12 retained; r=11 supports <=6 closed. Exact automorphism quotient for the five support-seven partitions gives 118,476 coloured core orbits and 293 optimistic strict survivors (2,59,22,151,59). Source feasibility is pending; supports 8-10 remain.
 
-EVIDENCE: `project/research/general_n/2026-09-22-r11-quotient-v1/R11_SUPPORT6_SUPPLEMENT_CLOSURE.md`; exact code/summary.
+EVIDENCE: `project/research/general_n/2026-09-22-r11-quotient-v1/R11_SUPPORT7_CORE_CENSUS.md`; exact generator and 293-row ledger.
 
-SESSION UTILISATION: Trigger 16:00:38 BST; actual start 16:03:51; cutoff 16:53:38. Seven closed intervals; verified total 579s (9m39s); units 7; target NO/N/A; LIVE. Canonical: `project/research/session_logs/2026-09-22/2026-09-22T16-00-38+01-00-canonical.json`.
+SESSION UTILISATION: Trigger 16:00:38 BST; actual start 16:03:51; cutoff 16:53:38. Eight closed intervals; verified total 591s (9m51s); units 8; target NO/N/A; LIVE. Canonical: `project/research/session_logs/2026-09-22/2026-09-22T16-00-38+01-00-canonical.json`.
 
 UNPRESERVED WORK: None.
 
 DEFERRED ADMIN: Historical missing-slot reconciliation.
 
-NEXT ACTION: Exact r=11 support-seven quotient/source screen.
+NEXT ACTION: Exact physical-source screen for 293 support-seven strict cores.
 
 FOCUSED-SESSION COUNT: 1/24; this shortened late-start trigger pending and receives no automatic credit.
 
-MANDATORY CONSTRAINTS: Source feasibility is not graph realization; internal finite computation is not external verification.
+MANDATORY CONSTRAINTS: Optimistic core feasibility is not graph realization; internal finite computation is not external verification.
 <!-- CURRENT-STATUS:END -->
 
 ## Latest adversarial audit - 22 September 2026
