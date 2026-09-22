@@ -25,6 +25,13 @@
       "actual_stop": "2026-09-22T09:21:49+01:00",
       "role": "forward_research",
       "notes": "Independent raw bridge reconstruction and a=0 domain audit."
+    },
+    {
+      "segment_id": "research-2",
+      "actual_start": "2026-09-22T09:23:39+01:00",
+      "actual_stop": "2026-09-22T09:28:00+01:00",
+      "role": "forward_research",
+      "notes": "Wrote and ran independent standard-library actual-graph profile checker."
     }
   ],
   "forward_research_intervals": [
@@ -32,6 +39,11 @@
       "start": "2026-09-22T09:17:27+01:00",
       "stop": "2026-09-22T09:21:49+01:00",
       "evidence": "RAW_PROFILE_BRIDGE.md and scope corrections, timestamped at completion"
+    },
+    {
+      "start": "2026-09-22T09:23:39+01:00",
+      "stop": "2026-09-22T09:28:00+01:00",
+      "evidence": "check_raw_profile.py, RESULTS.json and ACTUAL_GRAPH_REGRESSION.md"
     }
   ],
   "forward_research_stop": null,
@@ -39,16 +51,22 @@
   "preservation_complete": null,
   "final_report_time": null,
   "wall_clock_span_to_preservation_complete": null,
-  "verified_forward_research_span": 262,
+  "verified_forward_research_span": 523,
   "verified_forward_research_span_units": "seconds",
   "preservation_span": null,
-  "substantive_unit_count": 1,
+  "substantive_unit_count": 2,
   "timestamped_unit_ledger": [
     {
       "completed_at": "2026-09-22T09:21:49+01:00",
       "unit": "Reconstruct choice-independent graph-to-profile bridge and correct strict surplus domain at a=0",
       "result": "No bridge blocker found; star scope defect repaired; thresholds unchanged",
       "artifact": "project/research/general_n/2026-09-22-raw-profile-bridge-v1/RAW_PROFILE_BRIDGE.md"
+    },
+    {
+      "completed_at": "2026-09-22T09:28:00+01:00",
+      "unit": "Independent actual-graph reconstruction and exhaustive legal-selection regression",
+      "result": "PASS: 757 graphs, 1256 roots, 2722 assignments, 153 positive-demand assignments, both supplement branches exercised.",
+      "artifact": "project/research/general_n/2026-09-22-raw-profile-bridge-v1/ACTUAL_GRAPH_REGRESSION.md"
     }
   ],
   "early_stop_check_time": null,
@@ -66,9 +84,10 @@
     }
   ],
   "commit_shas": [
-    "01ab408115867d02b629d77d55b5af78bdecccef"
+    "01ab408115867d02b629d77d55b5af78bdecccef",
+    "6d2bb26d604602cbd91c0a57dcaf369aace9b727"
   ],
-  "live_unfinished_line": "Implement actual-graph profile regression using direct diameter/deletion checks and all legal selection choices when feasible.",
+  "live_unfinished_line": "Extract the high-load selected-supplement witness and audit its exact graph and selected edges.",
   "historical_fragments": [],
   "scheduled_session_credit": 0,
   "focused_session_credit": 0

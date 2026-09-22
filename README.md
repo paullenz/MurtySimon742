@@ -13,7 +13,7 @@ The first focused session improved the internally checked candidate threshold fr
 
 The previous eventual / sufficiently-large second-extremal programme remains fully preserved below as reusable research and historical status, but it is no longer the primary forward objective.
 
-**22 September bridge reconstruction:** a fresh raw-criticality derivation retains the selected/profile bridge for every legal selection. It also corrects the displayed strict surplus bounds to `a>=1`: stars have `a=0,t=0` and are handled separately in the degree assembly. The candidate thresholds are unchanged; actual-graph regression and external review remain open. See [the standalone reconstruction](project/research/general_n/2026-09-22-raw-profile-bridge-v1/RAW_PROFILE_BRIDGE.md).
+**22 September bridge reconstruction:** a fresh raw-criticality derivation retains the selected/profile bridge for every legal selection. It also corrects the displayed strict surplus bounds to `a>=1`: stars have `a=0,t=0` and are handled separately in the degree assembly. The candidate thresholds are unchanged; bounded actual-graph regression now passes 757 graphs and all 2,722 legal selections at their maximum-degree roots, including 153 positive-demand assignments; external review remains open. See [the regression report](project/research/general_n/2026-09-22-raw-profile-bridge-v1/ACTUAL_GRAPH_REGRESSION.md). See [the standalone reconstruction](project/research/general_n/2026-09-22-raw-profile-bridge-v1/RAW_PROFILE_BRIDGE.md).
 
 **Live handoff:** [`CURRENT_STATE.md`](CURRENT_STATE.md).
 
