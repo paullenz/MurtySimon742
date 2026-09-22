@@ -84,7 +84,10 @@ for R in parts(8):
             labelled += 1
             cm = canonical_mask(mask, pairs, pair_index, perms)
             if cm not in reps:
-                edges, deg, P, N, t = data
+                # Recompute all vertex-indexed data on the canonical mask.
+                # The originating labelled representative may use a different
+                # ordering inside an equal-R colour class.
+                edges, deg, P, N, t = survivor(R, pairs, cm)
                 reps[cm] = {
                     "mask": cm,
                     "edges": [list(e) for e in pairs if cm >> pair_index[e] & 1],

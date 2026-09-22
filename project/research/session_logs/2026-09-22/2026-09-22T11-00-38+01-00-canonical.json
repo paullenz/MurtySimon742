@@ -137,6 +137,13 @@
       "actual_stop": "2026-09-22T11:39:04+01:00",
       "role": "forward_research",
       "notes": "Exact colour-preserving isomorphism quotient of all 11350 labelled r=8 strict core survivors."
+    },
+    {
+      "segment_id": "research-16",
+      "actual_start": "2026-09-22T11:40:01+01:00",
+      "actual_stop": "2026-09-22T11:41:44+01:00",
+      "role": "forward_research",
+      "notes": "Repaired vertex-index provenance in r8 canonical representatives, then exact physical-source screened all 68 orbits."
     }
   ],
   "forward_research_intervals": [
@@ -219,6 +226,11 @@
       "start": "2026-09-22T11:37:18+01:00",
       "stop": "2026-09-22T11:39:04+01:00",
       "evidence": "R8_CORE_ORBITS.md, canonicalize_r8_cores.py, R8_CORE_ORBITS.json"
+    },
+    {
+      "start": "2026-09-22T11:40:01+01:00",
+      "stop": "2026-09-22T11:41:44+01:00",
+      "evidence": "R8_STRICT_SOURCE_CLOSURE.md, corrected canonicalize_r8_cores.py/R8_CORE_ORBITS.json, screen_r8_orbit_sources.py, R8_ORBIT_SOURCE_SCREEN.json"
     }
   ],
   "forward_research_stop": null,
@@ -226,10 +238,10 @@
   "preservation_complete": null,
   "final_report_time": null,
   "wall_clock_span_to_preservation_complete": null,
-  "verified_forward_research_span": 1524,
+  "verified_forward_research_span": 1627,
   "verified_forward_research_span_units": "seconds",
   "preservation_span": null,
-  "substantive_unit_count": 15,
+  "substantive_unit_count": 16,
   "timestamped_unit_ledger": [
     {
       "completed_at": "2026-09-22T11:04:00+01:00",
@@ -320,6 +332,12 @@
       "unit": "Exact r=8 colour-preserving core quotient",
       "result": "11350 labelled survivors collapse to 68 exact R-colour-preserving orbits; after the closed 22211 control, 67 orbits in four partitions remain for source screening.",
       "artifact": "project/research/general_n/2026-09-22-zero-demand-equality-v1/R8_CORE_ORBITS.md"
+    },
+    {
+      "completed_at": "2026-09-22T11:41:44+01:00",
+      "unit": "Exact r=8 physical-source closure",
+      "result": "67/68 core orbits are source-infeasible; the sole feasible 22211 orbit is already supplement-infeasible. Therefore r=8 implies t<=0, extending the internal computer-assisted edge bound to S<=10.",
+      "artifact": "project/research/general_n/2026-09-22-zero-demand-equality-v1/R8_STRICT_SOURCE_CLOSURE.md"
     }
   ],
   "early_stop_check_time": null,
@@ -331,9 +349,9 @@
   "compliance_status": "IN_PROGRESS",
   "infrastructure_failures": [],
   "commit_shas": [
-    "5eaa2fee306ce2325c66e82b2cfe7a02a9941d7a"
+    "d6d8553c9ce13d0b88767d1b0bdca729f28e40a0"
   ],
-  "live_unfinished_line": "Run the exact physical-source DP on all 67 remaining r=8 strict core orbits, retaining the closed (2,2,2,1,1) orbit as a regression control.",
+  "live_unfinished_line": "Attack the r=8 equality boundary f=r: enumerate equality core orbits, physical-source populations, and exact supplement forcing, with S=8 balanced equality as the control.",
   "historical_fragments": [],
   "focused_session_credit": 0,
   "predecessor_session": "project/research/session_logs/2026-09-22/2026-09-22T10-00-38+01-00-canonical.json",
@@ -351,6 +369,7 @@
   ],
   "failures_and_pivots": [
     "Detected stale in-memory serialization of screen_r6_equality.py: committed source lacked two filters used to generate JSON. Corrected source byte-reproduces JSON; no result change.",
-    "Duplicate 11:00-trigger invocation interrupted the live writer at 11:34:19–11:36:27; reconciled as zero-credit administrative segment, then original session resumed."
+    "Duplicate 11:00-trigger invocation interrupted the live writer at 11:34:19–11:36:27; reconciled as zero-credit administrative segment, then original session resumed.",
+    "Found canonical-mask/index provenance defect in newly created r8 quotient: edge mask was canonical but vertex-indexed degree/P data came from a pre-canonical representative. Recomputed all indexed data on the canonical mask before source screening; orbit counts unchanged."
   ]
 }

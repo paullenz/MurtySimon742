@@ -1,0 +1,610 @@
+{
+  "(3, 2, 1, 1, 1)": {
+    "orbits_tested": 2,
+    "source_feasible_orbits": 0,
+    "rows": [
+      {
+        "orbit": 1,
+        "canonical_mask": 1008,
+        "source_feasible": false,
+        "single_source_patterns": 76,
+        "memo_states": 360,
+        "source_witness_states": null
+      },
+      {
+        "orbit": 2,
+        "canonical_mask": 1009,
+        "source_feasible": false,
+        "single_source_patterns": 65,
+        "memo_states": 360,
+        "source_witness_states": null
+      }
+    ],
+    "scope": "Exact physical-source necessary condition on colour-preserving core orbits; not graph realizability."
+  },
+  "(3, 1, 1, 1, 1, 1)": {
+    "orbits_tested": 5,
+    "source_feasible_orbits": 0,
+    "rows": [
+      {
+        "orbit": 1,
+        "canonical_mask": 1759,
+        "source_feasible": false,
+        "single_source_patterns": 135,
+        "memo_states": 562,
+        "source_witness_states": null
+      },
+      {
+        "orbit": 2,
+        "canonical_mask": 1887,
+        "source_feasible": false,
+        "single_source_patterns": 133,
+        "memo_states": 1185,
+        "source_witness_states": null
+      },
+      {
+        "orbit": 3,
+        "canonical_mask": 5919,
+        "source_feasible": false,
+        "single_source_patterns": 141,
+        "memo_states": 1375,
+        "source_witness_states": null
+      },
+      {
+        "orbit": 4,
+        "canonical_mask": 7055,
+        "source_feasible": false,
+        "single_source_patterns": 121,
+        "memo_states": 883,
+        "source_witness_states": null
+      },
+      {
+        "orbit": 5,
+        "canonical_mask": 7071,
+        "source_feasible": false,
+        "single_source_patterns": 114,
+        "memo_states": 847,
+        "source_witness_states": null
+      }
+    ],
+    "scope": "Exact physical-source necessary condition on colour-preserving core orbits; not graph realizability."
+  },
+  "(2, 2, 2, 1, 1)": {
+    "orbits_tested": 1,
+    "source_feasible_orbits": 1,
+    "rows": [
+      {
+        "orbit": 1,
+        "canonical_mask": 511,
+        "source_feasible": true,
+        "single_source_patterns": 52,
+        "memo_states": 918,
+        "source_witness_states": [
+          [
+            1,
+            1,
+            1,
+            2,
+            2
+          ],
+          [
+            1,
+            2,
+            2,
+            1,
+            1
+          ],
+          [
+            2,
+            1,
+            2,
+            1,
+            1
+          ],
+          [
+            2,
+            2,
+            1,
+            1,
+            1
+          ]
+        ]
+      }
+    ],
+    "scope": "Exact physical-source necessary condition on colour-preserving core orbits; not graph realizability."
+  },
+  "(2, 2, 1, 1, 1, 1)": {
+    "orbits_tested": 29,
+    "source_feasible_orbits": 0,
+    "rows": [
+      {
+        "orbit": 1,
+        "canonical_mask": 1022,
+        "source_feasible": false,
+        "single_source_patterns": 133,
+        "memo_states": 1613,
+        "source_witness_states": null
+      },
+      {
+        "orbit": 2,
+        "canonical_mask": 1789,
+        "source_feasible": false,
+        "single_source_patterns": 135,
+        "memo_states": 779,
+        "source_witness_states": null
+      },
+      {
+        "orbit": 3,
+        "canonical_mask": 1917,
+        "source_feasible": false,
+        "single_source_patterns": 129,
+        "memo_states": 1307,
+        "source_witness_states": null
+      },
+      {
+        "orbit": 4,
+        "canonical_mask": 2013,
+        "source_feasible": false,
+        "single_source_patterns": 126,
+        "memo_states": 1184,
+        "source_witness_states": null
+      },
+      {
+        "orbit": 5,
+        "canonical_mask": 2014,
+        "source_feasible": false,
+        "single_source_patterns": 123,
+        "memo_states": 1130,
+        "source_witness_states": null
+      },
+      {
+        "orbit": 6,
+        "canonical_mask": 5662,
+        "source_feasible": false,
+        "single_source_patterns": 196,
+        "memo_states": 540,
+        "source_witness_states": null
+      },
+      {
+        "orbit": 7,
+        "canonical_mask": 5918,
+        "source_feasible": false,
+        "single_source_patterns": 153,
+        "memo_states": 933,
+        "source_witness_states": null
+      },
+      {
+        "orbit": 8,
+        "canonical_mask": 5949,
+        "source_feasible": false,
+        "single_source_patterns": 127,
+        "memo_states": 1198,
+        "source_witness_states": null
+      },
+      {
+        "orbit": 9,
+        "canonical_mask": 6383,
+        "source_feasible": false,
+        "single_source_patterns": 135,
+        "memo_states": 1106,
+        "source_witness_states": null
+      },
+      {
+        "orbit": 10,
+        "canonical_mask": 6391,
+        "source_feasible": false,
+        "single_source_patterns": 132,
+        "memo_states": 1653,
+        "source_witness_states": null
+      },
+      {
+        "orbit": 11,
+        "canonical_mask": 6397,
+        "source_feasible": false,
+        "single_source_patterns": 131,
+        "memo_states": 1527,
+        "source_witness_states": null
+      },
+      {
+        "orbit": 12,
+        "canonical_mask": 6398,
+        "source_feasible": false,
+        "single_source_patterns": 127,
+        "memo_states": 1598,
+        "source_witness_states": null
+      },
+      {
+        "orbit": 13,
+        "canonical_mask": 6654,
+        "source_feasible": false,
+        "single_source_patterns": 117,
+        "memo_states": 1572,
+        "source_witness_states": null
+      },
+      {
+        "orbit": 14,
+        "canonical_mask": 6686,
+        "source_feasible": false,
+        "single_source_patterns": 184,
+        "memo_states": 906,
+        "source_witness_states": null
+      },
+      {
+        "orbit": 15,
+        "canonical_mask": 6814,
+        "source_feasible": false,
+        "single_source_patterns": 146,
+        "memo_states": 856,
+        "source_witness_states": null
+      },
+      {
+        "orbit": 16,
+        "canonical_mask": 6845,
+        "source_feasible": false,
+        "single_source_patterns": 122,
+        "memo_states": 1053,
+        "source_witness_states": null
+      },
+      {
+        "orbit": 17,
+        "canonical_mask": 6875,
+        "source_feasible": false,
+        "single_source_patterns": 127,
+        "memo_states": 1242,
+        "source_witness_states": null
+      },
+      {
+        "orbit": 18,
+        "canonical_mask": 6905,
+        "source_feasible": false,
+        "single_source_patterns": 124,
+        "memo_states": 1172,
+        "source_witness_states": null
+      },
+      {
+        "orbit": 19,
+        "canonical_mask": 7067,
+        "source_feasible": false,
+        "single_source_patterns": 122,
+        "memo_states": 1112,
+        "source_witness_states": null
+      },
+      {
+        "orbit": 20,
+        "canonical_mask": 7070,
+        "source_feasible": false,
+        "single_source_patterns": 122,
+        "memo_states": 778,
+        "source_witness_states": null
+      },
+      {
+        "orbit": 21,
+        "canonical_mask": 7100,
+        "source_feasible": false,
+        "single_source_patterns": 118,
+        "memo_states": 1007,
+        "source_witness_states": null
+      },
+      {
+        "orbit": 22,
+        "canonical_mask": 7101,
+        "source_feasible": false,
+        "single_source_patterns": 112,
+        "memo_states": 979,
+        "source_witness_states": null
+      },
+      {
+        "orbit": 23,
+        "canonical_mask": 15374,
+        "source_feasible": false,
+        "single_source_patterns": 169,
+        "memo_states": 645,
+        "source_witness_states": null
+      },
+      {
+        "orbit": 24,
+        "canonical_mask": 15375,
+        "source_feasible": false,
+        "single_source_patterns": 142,
+        "memo_states": 636,
+        "source_witness_states": null
+      },
+      {
+        "orbit": 25,
+        "canonical_mask": 15390,
+        "source_feasible": false,
+        "single_source_patterns": 157,
+        "memo_states": 591,
+        "source_witness_states": null
+      },
+      {
+        "orbit": 26,
+        "canonical_mask": 15420,
+        "source_feasible": false,
+        "single_source_patterns": 140,
+        "memo_states": 633,
+        "source_witness_states": null
+      },
+      {
+        "orbit": 27,
+        "canonical_mask": 15421,
+        "source_feasible": false,
+        "single_source_patterns": 122,
+        "memo_states": 598,
+        "source_witness_states": null
+      },
+      {
+        "orbit": 28,
+        "canonical_mask": 15481,
+        "source_feasible": false,
+        "single_source_patterns": 116,
+        "memo_states": 863,
+        "source_witness_states": null
+      },
+      {
+        "orbit": 29,
+        "canonical_mask": 15541,
+        "source_feasible": false,
+        "single_source_patterns": 120,
+        "memo_states": 974,
+        "source_witness_states": null
+      }
+    ],
+    "scope": "Exact physical-source necessary condition on colour-preserving core orbits; not graph realizability."
+  },
+  "(2, 1, 1, 1, 1, 1, 1)": {
+    "orbits_tested": 31,
+    "source_feasible_orbits": 0,
+    "rows": [
+      {
+        "orbit": 1,
+        "canonical_mask": 40463,
+        "source_feasible": false,
+        "single_source_patterns": 367,
+        "memo_states": 1134,
+        "source_witness_states": null
+      },
+      {
+        "orbit": 2,
+        "canonical_mask": 40471,
+        "source_feasible": false,
+        "single_source_patterns": 348,
+        "memo_states": 1650,
+        "source_witness_states": null
+      },
+      {
+        "orbit": 3,
+        "canonical_mask": 40478,
+        "source_feasible": false,
+        "single_source_patterns": 359,
+        "memo_states": 1689,
+        "source_witness_states": null
+      },
+      {
+        "orbit": 4,
+        "canonical_mask": 40499,
+        "source_feasible": false,
+        "single_source_patterns": 350,
+        "memo_states": 2939,
+        "source_witness_states": null
+      },
+      {
+        "orbit": 5,
+        "canonical_mask": 40502,
+        "source_feasible": false,
+        "single_source_patterns": 332,
+        "memo_states": 2409,
+        "source_witness_states": null
+      },
+      {
+        "orbit": 6,
+        "canonical_mask": 43791,
+        "source_feasible": false,
+        "single_source_patterns": 364,
+        "memo_states": 1190,
+        "source_witness_states": null
+      },
+      {
+        "orbit": 7,
+        "canonical_mask": 43815,
+        "source_feasible": false,
+        "single_source_patterns": 331,
+        "memo_states": 1246,
+        "source_witness_states": null
+      },
+      {
+        "orbit": 8,
+        "canonical_mask": 43821,
+        "source_feasible": false,
+        "single_source_patterns": 340,
+        "memo_states": 1413,
+        "source_witness_states": null
+      },
+      {
+        "orbit": 9,
+        "canonical_mask": 44303,
+        "source_feasible": false,
+        "single_source_patterns": 348,
+        "memo_states": 950,
+        "source_witness_states": null
+      },
+      {
+        "orbit": 10,
+        "canonical_mask": 44311,
+        "source_feasible": false,
+        "single_source_patterns": 337,
+        "memo_states": 1458,
+        "source_witness_states": null
+      },
+      {
+        "orbit": 11,
+        "canonical_mask": 44315,
+        "source_feasible": false,
+        "single_source_patterns": 335,
+        "memo_states": 1484,
+        "source_witness_states": null
+      },
+      {
+        "orbit": 12,
+        "canonical_mask": 44317,
+        "source_feasible": false,
+        "single_source_patterns": 333,
+        "memo_states": 1429,
+        "source_witness_states": null
+      },
+      {
+        "orbit": 13,
+        "canonical_mask": 44318,
+        "source_feasible": false,
+        "single_source_patterns": 348,
+        "memo_states": 1626,
+        "source_witness_states": null
+      },
+      {
+        "orbit": 14,
+        "canonical_mask": 44339,
+        "source_feasible": false,
+        "single_source_patterns": 333,
+        "memo_states": 2621,
+        "source_witness_states": null
+      },
+      {
+        "orbit": 15,
+        "canonical_mask": 44341,
+        "source_feasible": false,
+        "single_source_patterns": 322,
+        "memo_states": 2241,
+        "source_witness_states": null
+      },
+      {
+        "orbit": 16,
+        "canonical_mask": 44342,
+        "source_feasible": false,
+        "single_source_patterns": 329,
+        "memo_states": 2473,
+        "source_witness_states": null
+      },
+      {
+        "orbit": 17,
+        "canonical_mask": 44348,
+        "source_feasible": false,
+        "single_source_patterns": 319,
+        "memo_states": 2231,
+        "source_witness_states": null
+      },
+      {
+        "orbit": 18,
+        "canonical_mask": 58895,
+        "source_feasible": false,
+        "single_source_patterns": 327,
+        "memo_states": 2175,
+        "source_witness_states": null
+      },
+      {
+        "orbit": 19,
+        "canonical_mask": 58903,
+        "source_feasible": false,
+        "single_source_patterns": 334,
+        "memo_states": 1364,
+        "source_witness_states": null
+      },
+      {
+        "orbit": 20,
+        "canonical_mask": 58909,
+        "source_feasible": false,
+        "single_source_patterns": 332,
+        "memo_states": 2300,
+        "source_witness_states": null
+      },
+      {
+        "orbit": 21,
+        "canonical_mask": 58931,
+        "source_feasible": false,
+        "single_source_patterns": 369,
+        "memo_states": 788,
+        "source_witness_states": null
+      },
+      {
+        "orbit": 22,
+        "canonical_mask": 120327,
+        "source_feasible": false,
+        "single_source_patterns": 301,
+        "memo_states": 1777,
+        "source_witness_states": null
+      },
+      {
+        "orbit": 23,
+        "canonical_mask": 120331,
+        "source_feasible": false,
+        "single_source_patterns": 307,
+        "memo_states": 1934,
+        "source_witness_states": null
+      },
+      {
+        "orbit": 24,
+        "canonical_mask": 120334,
+        "source_feasible": false,
+        "single_source_patterns": 314,
+        "memo_states": 2047,
+        "source_witness_states": null
+      },
+      {
+        "orbit": 25,
+        "canonical_mask": 120335,
+        "source_feasible": false,
+        "single_source_patterns": 278,
+        "memo_states": 1628,
+        "source_witness_states": null
+      },
+      {
+        "orbit": 26,
+        "canonical_mask": 120347,
+        "source_feasible": false,
+        "single_source_patterns": 277,
+        "memo_states": 1663,
+        "source_witness_states": null
+      },
+      {
+        "orbit": 27,
+        "canonical_mask": 120349,
+        "source_feasible": false,
+        "single_source_patterns": 285,
+        "memo_states": 1795,
+        "source_witness_states": null
+      },
+      {
+        "orbit": 28,
+        "canonical_mask": 377927,
+        "source_feasible": false,
+        "single_source_patterns": 334,
+        "memo_states": 2485,
+        "source_witness_states": null
+      },
+      {
+        "orbit": 29,
+        "canonical_mask": 377935,
+        "source_feasible": false,
+        "single_source_patterns": 301,
+        "memo_states": 2117,
+        "source_witness_states": null
+      },
+      {
+        "orbit": 30,
+        "canonical_mask": 377948,
+        "source_feasible": false,
+        "single_source_patterns": 363,
+        "memo_states": 2700,
+        "source_witness_states": null
+      },
+      {
+        "orbit": 31,
+        "canonical_mask": 377949,
+        "source_feasible": false,
+        "single_source_patterns": 315,
+        "memo_states": 2354,
+        "source_witness_states": null
+      }
+    ],
+    "scope": "Exact physical-source necessary condition on colour-preserving core orbits; not graph realizability."
+  }
+}
