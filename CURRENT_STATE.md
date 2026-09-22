@@ -9,19 +9,19 @@ CHECKPOINT CLASS: SUBSTANTIVE_RESEARCH_CHECKPOINT
 
 WORK MODE: MATH
 
-INSPECTED PREDECESSOR: 7752a94de4b11d1ea313bda3f9b8caa862fdf292.
+INSPECTED PREDECESSOR: e4da769b3045c41fd641baf5620f13c2cb7cd6a5.
 
-LAST VERIFIED RESULT: Exact physical-source feasibility reduces 203 r=8 equality-core orbits to 39; source-population enumeration and supplements remain before any equality extension.
+LAST VERIFIED RESULT: All 2,103 physical-source populations across the 39 source-feasible r=8 equality orbits fail necessary supplement forcing. Internally this gives 1<=r<=8 => f<=r-1 and balanced equality through S<=8.
 
 EVIDENCE: `project/research/session_logs/2026-09-22/2026-09-22T11-00-38+01-00-canonical.json`; `project/research/general_n/2026-09-22-zero-demand-equality-v1/`.
 
-SESSION UTILISATION: Trigger 2026-09-22 11:00:38 BST; earliest 11:01:19; next 12:00:38; cutoff 11:53:38; hard close 11:59:38. Closed intervals: 11:02:36–11:04:00, 11:04:50–11:06:51, 11:07:13–11:08:46, 11:09:08–11:11:53, 11:12:15–11:12:38, 11:13:23–11:14:27, 11:14:53–11:16:02, 11:16:23–11:18:32, 11:19:08–11:20:21, 11:20:42–11:22:03, 11:22:29–11:24:22, 11:24:49–11:26:13, 11:26:56–11:28:51, 11:29:19–11:30:35, 11:31:09–11:33:17, 11:37:18–11:39:04, 11:40:01–11:41:44, 11:43:03–11:45:53, 11:46:51–11:47:54; total 1860 seconds; units 18; preservation pending; target YES/PENDING; IN_PROGRESS. Stop reason: active. Canonical: `project/research/session_logs/2026-09-22/2026-09-22T11-00-38+01-00-canonical.json`.
+SESSION UTILISATION: Trigger 2026-09-22 11:00:38 BST; earliest 11:01:19; next 12:00:38; cutoff 11:53:38; hard close 11:59:38. Closed intervals: 11:02:36–11:04:00, 11:04:50–11:06:51, 11:07:13–11:08:46, 11:09:08–11:11:53, 11:12:15–11:12:38, 11:13:23–11:14:27, 11:14:53–11:16:02, 11:16:23–11:18:32, 11:19:08–11:20:21, 11:20:42–11:22:03, 11:22:29–11:24:22, 11:24:49–11:26:13, 11:26:56–11:28:51, 11:29:19–11:30:35, 11:31:09–11:33:17, 11:37:18–11:39:04, 11:40:01–11:41:44, 11:43:03–11:45:53, 11:46:51–11:47:54, 11:48:48–11:50:36; total 1968 seconds; units 19; preservation pending; target YES/PENDING; IN_PROGRESS. Stop reason: active. Canonical: `project/research/session_logs/2026-09-22/2026-09-22T11-00-38+01-00-canonical.json`.
 
 UNPRESERVED WORK: None beyond named unfinished line.
 
 DEFERRED ADMIN: Historical missing-slot reconciliation and schedule maintenance.
 
-NEXT ACTION: Enumerate source populations for 39 surviving r=8 equality orbits and apply supplement forcing.
+NEXT ACTION: Develop a quotient-first r=9 strict census or strengthen the analytic source obstruction.
 
 FOCUSED-SESSION COUNT: 1/24 completed before this trigger; this trigger credit 0.
 

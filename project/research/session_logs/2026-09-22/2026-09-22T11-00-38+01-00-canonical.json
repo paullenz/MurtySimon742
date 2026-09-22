@@ -158,6 +158,13 @@
       "actual_stop": "2026-09-22T11:47:54+01:00",
       "role": "forward_research",
       "notes": "Exact boolean physical-source feasibility on all 203 r8 equality core orbits."
+    },
+    {
+      "segment_id": "research-19",
+      "actual_start": "2026-09-22T11:48:48+01:00",
+      "actual_stop": "2026-09-22T11:50:36+01:00",
+      "role": "forward_research",
+      "notes": "Exact enumeration of all r8 equality source populations and necessary B-layer supplement forcing."
     }
   ],
   "forward_research_intervals": [
@@ -255,6 +262,11 @@
       "start": "2026-09-22T11:46:51+01:00",
       "stop": "2026-09-22T11:47:54+01:00",
       "evidence": "R8_EQUALITY_SOURCE_FEASIBILITY.md, screen_r8_equality_source_feasibility.py, R8_EQUALITY_SOURCE_FEASIBILITY.json"
+    },
+    {
+      "start": "2026-09-22T11:48:48+01:00",
+      "stop": "2026-09-22T11:50:36+01:00",
+      "evidence": "R8_EQUALITY_SUPPLEMENT_CLOSURE.md, check_r8_equality_supplements.py, R8_EQUALITY_SUPPLEMENT_SCREEN.json"
     }
   ],
   "forward_research_stop": null,
@@ -262,10 +274,10 @@
   "preservation_complete": null,
   "final_report_time": null,
   "wall_clock_span_to_preservation_complete": null,
-  "verified_forward_research_span": 1860,
+  "verified_forward_research_span": 1968,
   "verified_forward_research_span_units": "seconds",
   "preservation_span": null,
-  "substantive_unit_count": 18,
+  "substantive_unit_count": 19,
   "timestamped_unit_ledger": [
     {
       "completed_at": "2026-09-22T11:04:00+01:00",
@@ -374,6 +386,12 @@
       "unit": "R8 equality physical-source feasibility",
       "result": "Exact boolean source DP reduces 203 equality core orbits to 39 source-feasible orbits across six partitions; population enumeration and supplements remain.",
       "artifact": "project/research/general_n/2026-09-22-zero-demand-equality-v1/R8_EQUALITY_SOURCE_FEASIBILITY.md"
+    },
+    {
+      "completed_at": "2026-09-22T11:50:36+01:00",
+      "unit": "R8 equality supplement closure",
+      "result": "Across 39 source-feasible orbits, all 2103 physical-source populations fail exact necessary supplement forcing. Hence 1<=r<=8 implies f<=r-1 and internally checked balanced equality extends through S<=8.",
+      "artifact": "project/research/general_n/2026-09-22-zero-demand-equality-v1/R8_EQUALITY_SUPPLEMENT_CLOSURE.md"
     }
   ],
   "early_stop_check_time": null,
@@ -385,9 +403,9 @@
   "compliance_status": "IN_PROGRESS",
   "infrastructure_failures": [],
   "commit_shas": [
-    "7752a94de4b11d1ea313bda3f9b8caa862fdf292"
+    "e4da769b3045c41fd641baf5620f13c2cb7cd6a5"
   ],
-  "live_unfinished_line": "Enumerate physical-source populations for the 39 feasible r=8 equality orbits and apply exact supplement forcing; preserve balanced S=8 equality controls.",
+  "live_unfinished_line": "At r=9, derive a quotient-first strict-surplus census or strengthen the analytic source obstruction; retain edge bound S<=10 and equality through S<=8 at internal computer-assisted trust.",
   "historical_fragments": [],
   "focused_session_credit": 0,
   "predecessor_session": "project/research/session_logs/2026-09-22/2026-09-22T10-00-38+01-00-canonical.json",

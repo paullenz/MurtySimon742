@@ -1,0 +1,275 @@
+{
+  "(5, 1, 1, 1)/orbit_1": {
+    "source_multisets_tested": 6,
+    "residual_free_types_available": 1,
+    "supplement_feasible": 0,
+    "first_survivors": [],
+    "scope": "Necessary singleton supplement forcing; capped survivor storage at 3."
+  },
+  "(5, 1, 1, 1)/orbit_2": {
+    "source_multisets_tested": 1,
+    "residual_free_types_available": 1,
+    "supplement_feasible": 0,
+    "first_survivors": [],
+    "scope": "Necessary singleton supplement forcing; capped survivor storage at 3."
+  },
+  "(5, 1, 1, 1)/orbit_3": {
+    "source_multisets_tested": 1,
+    "residual_free_types_available": 1,
+    "supplement_feasible": 0,
+    "first_survivors": [],
+    "scope": "Necessary singleton supplement forcing; capped survivor storage at 3."
+  },
+  "(3, 2, 1, 1, 1)/orbit_3": {
+    "source_multisets_tested": 27,
+    "residual_free_types_available": 2,
+    "supplement_feasible": 0,
+    "first_survivors": [],
+    "scope": "Necessary singleton supplement forcing; capped survivor storage at 3."
+  },
+  "(3, 2, 1, 1, 1)/orbit_5": {
+    "source_multisets_tested": 3,
+    "residual_free_types_available": 1,
+    "supplement_feasible": 0,
+    "first_survivors": [],
+    "scope": "Necessary singleton supplement forcing; capped survivor storage at 3."
+  },
+  "(3, 2, 1, 1, 1)/orbit_7": {
+    "source_multisets_tested": 1,
+    "residual_free_types_available": 1,
+    "supplement_feasible": 0,
+    "first_survivors": [],
+    "scope": "Necessary singleton supplement forcing; capped survivor storage at 3."
+  },
+  "(3, 2, 1, 1, 1)/orbit_9": {
+    "source_multisets_tested": 340,
+    "residual_free_types_available": 2,
+    "supplement_feasible": 0,
+    "first_survivors": [],
+    "scope": "Necessary singleton supplement forcing; capped survivor storage at 3."
+  },
+  "(3, 2, 1, 1, 1)/orbit_10": {
+    "source_multisets_tested": 26,
+    "residual_free_types_available": 2,
+    "supplement_feasible": 0,
+    "first_survivors": [],
+    "scope": "Necessary singleton supplement forcing; capped survivor storage at 3."
+  },
+  "(3, 2, 1, 1, 1)/orbit_11": {
+    "source_multisets_tested": 26,
+    "residual_free_types_available": 2,
+    "supplement_feasible": 0,
+    "first_survivors": [],
+    "scope": "Necessary singleton supplement forcing; capped survivor storage at 3."
+  },
+  "(3, 2, 1, 1, 1)/orbit_13": {
+    "source_multisets_tested": 108,
+    "residual_free_types_available": 2,
+    "supplement_feasible": 0,
+    "first_survivors": [],
+    "scope": "Necessary singleton supplement forcing; capped survivor storage at 3."
+  },
+  "(3, 2, 1, 1, 1)/orbit_14": {
+    "source_multisets_tested": 6,
+    "residual_free_types_available": 1,
+    "supplement_feasible": 0,
+    "first_survivors": [],
+    "scope": "Necessary singleton supplement forcing; capped survivor storage at 3."
+  },
+  "(3, 2, 1, 1, 1)/orbit_15": {
+    "source_multisets_tested": 2,
+    "residual_free_types_available": 1,
+    "supplement_feasible": 0,
+    "first_survivors": [],
+    "scope": "Necessary singleton supplement forcing; capped survivor storage at 3."
+  },
+  "(3, 1, 1, 1, 1, 1)/orbit_11": {
+    "source_multisets_tested": 3,
+    "residual_free_types_available": 1,
+    "supplement_feasible": 0,
+    "first_survivors": [],
+    "scope": "Necessary singleton supplement forcing; capped survivor storage at 3."
+  },
+  "(2, 2, 2, 1, 1)/orbit_1": {
+    "source_multisets_tested": 5,
+    "residual_free_types_available": 1,
+    "supplement_feasible": 0,
+    "first_survivors": [],
+    "scope": "Necessary singleton supplement forcing; capped survivor storage at 3."
+  },
+  "(2, 2, 2, 1, 1)/orbit_2": {
+    "source_multisets_tested": 10,
+    "residual_free_types_available": 1,
+    "supplement_feasible": 0,
+    "first_survivors": [],
+    "scope": "Necessary singleton supplement forcing; capped survivor storage at 3."
+  },
+  "(2, 2, 2, 1, 1)/orbit_3": {
+    "source_multisets_tested": 69,
+    "residual_free_types_available": 2,
+    "supplement_feasible": 0,
+    "first_survivors": [],
+    "scope": "Necessary singleton supplement forcing; capped survivor storage at 3."
+  },
+  "(2, 2, 2, 1, 1)/orbit_6": {
+    "source_multisets_tested": 1,
+    "residual_free_types_available": 1,
+    "supplement_feasible": 0,
+    "first_survivors": [],
+    "scope": "Necessary singleton supplement forcing; capped survivor storage at 3."
+  },
+  "(2, 2, 1, 1, 1, 1)/orbit_39": {
+    "source_multisets_tested": 7,
+    "residual_free_types_available": 1,
+    "supplement_feasible": 0,
+    "first_survivors": [],
+    "scope": "Necessary singleton supplement forcing; capped survivor storage at 3."
+  },
+  "(2, 2, 1, 1, 1, 1)/orbit_41": {
+    "source_multisets_tested": 1240,
+    "residual_free_types_available": 2,
+    "supplement_feasible": 0,
+    "first_survivors": [],
+    "scope": "Necessary singleton supplement forcing; capped survivor storage at 3."
+  },
+  "(2, 2, 1, 1, 1, 1)/orbit_42": {
+    "source_multisets_tested": 16,
+    "residual_free_types_available": 1,
+    "supplement_feasible": 0,
+    "first_survivors": [],
+    "scope": "Necessary singleton supplement forcing; capped survivor storage at 3."
+  },
+  "(2, 2, 1, 1, 1, 1)/orbit_43": {
+    "source_multisets_tested": 2,
+    "residual_free_types_available": 1,
+    "supplement_feasible": 0,
+    "first_survivors": [],
+    "scope": "Necessary singleton supplement forcing; capped survivor storage at 3."
+  },
+  "(2, 2, 1, 1, 1, 1)/orbit_44": {
+    "source_multisets_tested": 2,
+    "residual_free_types_available": 1,
+    "supplement_feasible": 0,
+    "first_survivors": [],
+    "scope": "Necessary singleton supplement forcing; capped survivor storage at 3."
+  },
+  "(2, 2, 1, 1, 1, 1)/orbit_45": {
+    "source_multisets_tested": 2,
+    "residual_free_types_available": 1,
+    "supplement_feasible": 0,
+    "first_survivors": [],
+    "scope": "Necessary singleton supplement forcing; capped survivor storage at 3."
+  },
+  "(2, 2, 1, 1, 1, 1)/orbit_47": {
+    "source_multisets_tested": 8,
+    "residual_free_types_available": 1,
+    "supplement_feasible": 0,
+    "first_survivors": [],
+    "scope": "Necessary singleton supplement forcing; capped survivor storage at 3."
+  },
+  "(2, 2, 1, 1, 1, 1)/orbit_49": {
+    "source_multisets_tested": 13,
+    "residual_free_types_available": 1,
+    "supplement_feasible": 0,
+    "first_survivors": [],
+    "scope": "Necessary singleton supplement forcing; capped survivor storage at 3."
+  },
+  "(2, 2, 1, 1, 1, 1)/orbit_50": {
+    "source_multisets_tested": 24,
+    "residual_free_types_available": 1,
+    "supplement_feasible": 0,
+    "first_survivors": [],
+    "scope": "Necessary singleton supplement forcing; capped survivor storage at 3."
+  },
+  "(2, 2, 1, 1, 1, 1)/orbit_51": {
+    "source_multisets_tested": 26,
+    "residual_free_types_available": 1,
+    "supplement_feasible": 0,
+    "first_survivors": [],
+    "scope": "Necessary singleton supplement forcing; capped survivor storage at 3."
+  },
+  "(2, 2, 1, 1, 1, 1)/orbit_73": {
+    "source_multisets_tested": 1,
+    "residual_free_types_available": 1,
+    "supplement_feasible": 0,
+    "first_survivors": [],
+    "scope": "Necessary singleton supplement forcing; capped survivor storage at 3."
+  },
+  "(2, 2, 1, 1, 1, 1)/orbit_74": {
+    "source_multisets_tested": 3,
+    "residual_free_types_available": 1,
+    "supplement_feasible": 0,
+    "first_survivors": [],
+    "scope": "Necessary singleton supplement forcing; capped survivor storage at 3."
+  },
+  "(2, 2, 1, 1, 1, 1)/orbit_77": {
+    "source_multisets_tested": 2,
+    "residual_free_types_available": 1,
+    "supplement_feasible": 0,
+    "first_survivors": [],
+    "scope": "Necessary singleton supplement forcing; capped survivor storage at 3."
+  },
+  "(2, 1, 1, 1, 1, 1, 1)/orbit_18": {
+    "source_multisets_tested": 1,
+    "residual_free_types_available": 1,
+    "supplement_feasible": 0,
+    "first_survivors": [],
+    "scope": "Necessary singleton supplement forcing; capped survivor storage at 3."
+  },
+  "(2, 1, 1, 1, 1, 1, 1)/orbit_26": {
+    "source_multisets_tested": 8,
+    "residual_free_types_available": 1,
+    "supplement_feasible": 0,
+    "first_survivors": [],
+    "scope": "Necessary singleton supplement forcing; capped survivor storage at 3."
+  },
+  "(2, 1, 1, 1, 1, 1, 1)/orbit_28": {
+    "source_multisets_tested": 38,
+    "residual_free_types_available": 1,
+    "supplement_feasible": 0,
+    "first_survivors": [],
+    "scope": "Necessary singleton supplement forcing; capped survivor storage at 3."
+  },
+  "(2, 1, 1, 1, 1, 1, 1)/orbit_35": {
+    "source_multisets_tested": 6,
+    "residual_free_types_available": 1,
+    "supplement_feasible": 0,
+    "first_survivors": [],
+    "scope": "Necessary singleton supplement forcing; capped survivor storage at 3."
+  },
+  "(2, 1, 1, 1, 1, 1, 1)/orbit_42": {
+    "source_multisets_tested": 4,
+    "residual_free_types_available": 1,
+    "supplement_feasible": 0,
+    "first_survivors": [],
+    "scope": "Necessary singleton supplement forcing; capped survivor storage at 3."
+  },
+  "(2, 1, 1, 1, 1, 1, 1)/orbit_48": {
+    "source_multisets_tested": 10,
+    "residual_free_types_available": 1,
+    "supplement_feasible": 0,
+    "first_survivors": [],
+    "scope": "Necessary singleton supplement forcing; capped survivor storage at 3."
+  },
+  "(2, 1, 1, 1, 1, 1, 1)/orbit_54": {
+    "source_multisets_tested": 22,
+    "residual_free_types_available": 1,
+    "supplement_feasible": 0,
+    "first_survivors": [],
+    "scope": "Necessary singleton supplement forcing; capped survivor storage at 3."
+  },
+  "(2, 1, 1, 1, 1, 1, 1)/orbit_56": {
+    "source_multisets_tested": 9,
+    "residual_free_types_available": 1,
+    "supplement_feasible": 0,
+    "first_survivors": [],
+    "scope": "Necessary singleton supplement forcing; capped survivor storage at 3."
+  },
+  "(2, 1, 1, 1, 1, 1, 1)/orbit_58": {
+    "source_multisets_tested": 24,
+    "residual_free_types_available": 1,
+    "supplement_feasible": 0,
+    "first_survivors": [],
+    "scope": "Necessary singleton supplement forcing; capped survivor storage at 3."
+  }
+}
