@@ -5,25 +5,25 @@ Canonical repository: `paullenz/MurtySimon742`. Date: 22 September 2026.
 Active target: a genuinely independent proof of Erdős #742 / the Murty–Simon inequality e(G)<=floor(n^2/4), preferably with the equality characterization. Forward priority is the project’s own complement / residual / Hall / profile / realizability route, not a reconstruction of the external e+disj+X proof. The first focused session produced the internally checked candidate threshold `Delta>=250n/429`, shrinking the live strip to `n/2<Delta<250n/429`. The theorem and its inherited graph-to-profile spine remain candidate/internal-review mathematics. A 24-focused-session go/no-go gate applies. Prior eventual-D2C work remains preserved but is no longer the active forward objective.
 
 <!-- CURRENT-STATUS:START -->
-CHECKPOINT CLASS: VERIFIED_INTERNAL_NOT_PROMOTED
+CHECKPOINT CLASS: STARTED
 
-WORK MODE: PRESERVATION_COMPLETE
+WORK MODE: MATH
 
-INSPECTED PREDECESSOR: 37cef88e0e58005111648ce556f85ec4a05d78ab.
+INSPECTED PREDECESSOR: 3f04e6af2a4fbe791e1b0163b4fa02dbececdd52.
 
-LAST VERIFIED RESULT: Strict r=9 closure/replay retained (internal edge bound through S<=11). At r=10, supports <=7 and both support-eight partitions are internally closed. For (2,2,1^6), the two source-feasible cores each have one source multiset and zero supplement-feasible populations. Only support-nine (2,1^8) remains; no r=10 closure/S extension yet.
+LAST VERIFIED RESULT: Inherited strict r=9 closure (internal edge bound through S<=11) and r=10 closure through support eight. No new mathematics yet in this slot. Sole remaining r=10 branch is support-nine (2,1^8).
 
-EVIDENCE: `project/research/general_n/2026-09-22-r10-quotient-v1/`; exact quotient, source and supplement programs/results; canonical commit chain.
+EVIDENCE: Prior package `project/research/general_n/2026-09-22-r10-quotient-v1/`; current canonical STARTED record.
 
-SESSION UTILISATION: Trigger 15:00:38 BST; actual start 15:04:10; nine closed intervals; verified total 1959s (32m39s); forward stop 15:51:48; cutoff 15:53:38; preservation complete 15:53:47; units 9; 50-minute target NO/N/A because only 49m28s was available at entry; COMPLETED / TARGET_NA_LATE_START. Canonical: `project/research/session_logs/2026-09-22/2026-09-22T15-00-38+01-00-canonical.json`.
+SESSION UTILISATION: Trigger 16:00:38 BST; actual start 16:03:51; cutoff 16:53:38; hard close 16:59:38. No closed intervals yet; target NO/N/A because only 49m47s was available at entry; LIVE. Canonical: `project/research/session_logs/2026-09-22/2026-09-22T16-00-38+01-00-canonical.json`.
 
 UNPRESERVED WORK: None.
 
-DEFERRED ADMIN: Historical missing-slot reconciliation; standalone health-check relocation; optional README polishing.
+DEFERRED ADMIN: Historical missing-slot reconciliation; optional README polishing.
 
-NEXT ACTION: Enumerate and source-screen the sole r=10 support-nine partition (2,1^8).
+NEXT ACTION: Enumerate and source-screen r=10 support-nine partition (2,1^8).
 
-FOCUSED-SESSION COUNT: 1/24; this shortened late-start trigger receives no focused-session credit.
+FOCUSED-SESSION COUNT: 1/24; this shortened late-start trigger pending and receives no automatic credit.
 
 MANDATORY CONSTRAINTS: Independent route; internal computer-assisted trust; actual graph realizability; balanced equality controls; no fabricated intervals.
 <!-- CURRENT-STATUS:END -->
