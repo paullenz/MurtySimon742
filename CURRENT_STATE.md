@@ -1,34 +1,46 @@
 # CURRENT_STATE.md
 
-Canonical repository: `paullenz/MurtySimon742`. Date: 22 September 2026.
+Canonical repository: `paullenz/MurtySimon742`. Date: 23 September 2026.
 
 Active target: a genuinely independent proof of Erdős #742 / the Murty–Simon inequality e(G)<=floor(n^2/4), preferably with the equality characterization. Forward priority is the project’s own complement / residual / Hall / profile / realizability route, not a reconstruction of the external e+disj+X proof. The first focused session produced the internally checked candidate threshold `Delta>=250n/429`, shrinking the live strip to `n/2<Delta<250n/429`. The theorem and its inherited graph-to-profile spine remain candidate/internal-review mathematics. A 24-focused-session go/no-go gate applies. Prior eventual-D2C work remains preserved but is no longer the active forward objective.
 
 <!-- CURRENT-STATUS:START -->
-CHECKPOINT CLASS: ADMIN_CONFIGURATION_APPLIED_LAUNCHES_UNVERIFIED
+CHECKPOINT CLASS: DAILY_ADVERSARIAL_AUDIT_COMPLETE
 
-WORK MODE: ADMIN
+WORK MODE: RED_TEAM_AUDIT
 
-INSPECTED PREDECESSOR: 4b13f71482f4ff9b2c81aa783dbcfa682f0c3e8d.
+INSPECTED PREDECESSOR: 320ff91c4b3b1c64e98349788f9f971f65a9ef01.
 
-LAST VERIFIED RESULT: The complete support-ten partition (2,2,1^8) source screen is exact: 42 of 6,386 strict kernels are source-feasible, 6,344 are source-infeasible, and none is solver-unknown. The supplement identity adapter is repaired, but its 42-kernel solve was interrupted at cutoff without a result. Thus r=12 remains internally closed through support nine plus support-ten partition (3,1^9); the (2,2,1^8) supplement screen remains open.
+LAST VERIFIED RESULT: The independently reconstructed graph-to-profile bridge replays on 757 actual D2C graphs, 1,256 maximum-degree roots and all 2,722 legal selections. The internal finite pipeline retains the edge bound through S<=13 and balanced-complete-bipartite equality through S<=8. Two corrupted saved evidence files were found, preserved and regenerated from source; the repaired r=8 and r=11 cross-file audits pass. These are internal candidate/computer-assisted results, not external verification or a full proof.
 
-EVIDENCE: source shards 0-7 and repaired supplement wrapper under project/research/general_n/2026-09-22-independent-742-r12-quotient/; canonical telemetry at project/research/session_logs/2026-09-22/2026-09-22T22-00-38+01-00-canonical.json.
+EVIDENCE: project/research/general_n/2026-09-23-daily-red-team-audit-v1/DAILY_RED_TEAM_AUDIT.md; repaired r=8/r=11 ledgers and preserved `.corrupted-at-320ff91` originals; audit helper checkers in the same directory.
 
-SESSION UTILISATION: Trigger 22:00:38 BST; authoritative entry 22:00:33; verified intervals [22:03:39,22:08:20], [22:09:27,22:13:48], [22:14:49,22:19:11], [22:20:07,22:24:05], [22:25:06,22:29:45], [22:30:38,22:35:06], [22:36:00,22:40:33]; verified total 1862s (31m02s); nine substantive units; forward stop/preservation start 22:52:27; cutoff 22:53:38; preservation complete 22:53:39; 50-minute target applicable and NOT MET; SHORT/NONCOMPLIANT.
+SESSION UTILISATION: 23 scheduled triggers are now represented canonically. Eight scheduled sessions RAN with 233m56s of closed forward intervals and 100 units; one manual recovery adds 11m10s and three units without scheduled credit. Classifications: 0 target-met, 5 SHORT, 3 LATE-START/TARGET-N/A, 2 MISSED/NO-FORWARD, 13 UNVERIFIED/MISSING. Utilisation is 57.25% over the eight windows with evidenced availability and intervals only; it is not whole-day utilisation.
 
 UNPRESERVED WORK: None.
 
-DEFERRED ADMIN: Verify actual launches/checkpoints for 23 September 01:00:38, 02:00:38 and 03:00:38 BST at the first audit after they are due. Configuration readback passed; delivery recovery is not yet established.
+DEFERRED ADMIN: Verify actual launches/checkpoints for 23 September 01:00:38, 02:00:38 and 03:00:38 BST at the first audit after they are due. They were future at this audit; configuration readback is not launch evidence.
 
-OPERATIONAL CHANGE: Mathematical state unchanged. Standalone research task 6aab2d04da4c81919448e011b1b46cf8 is enabled with conversation_id=null, starting 23 September 01:00:38 BST, 115 hourly non-midnight triggers through 27 September. The old same-chat research/health tasks are paused. The prospective target is 40 minutes, with launch coverage reported separately. Audit and stop prompts were updated and remain enabled on their existing schedules. Readback verified 22 September 23:13:26 BST; actual post-cutover launches remain UNVERIFIED. See project/research/session_logs/2026-09-22/LAUNCH_RELIABILITY_REPAIR.md.
+OPERATIONAL CHANGE: From 23 September 01:00:38 BST the standalone independent-#742 cadence uses a 40-minute target, with RAN, duration compliance and focused-session credit reported separately. Historical 50-minute records are unchanged. The old same-chat research and health tasks remain paused. Actual post-cutover delivery is still UNVERIFIED.
 
-NEXT ACTION: Resume the repaired exact supplement screen on the 42 source-feasible support-ten kernels; then close/classify support eleven.
+NEXT ACTION: Finish the exact helper-aware supplement screen on the 42 r=12 support-ten (2,2,1^8) kernels. Then independently reimplement one load-bearing r=11 orbit/source stage before extending demand or returning to threshold work.
 
 FOCUSED-SESSION COUNT: 1/24; this short session receives no focused-session credit.
 
-MANDATORY CONSTRAINTS: The unfinished solver is not mathematical evidence; the internal finite pipeline does not establish graph realizability; equality remains characterized only through S<=8; the general theorem remains open.
+MANDATORY CONSTRAINTS: The unfinished r=12 solver is not evidence; finite profile feasibility is not graph realizability; equality is characterized only through S<=8; the 250/429 threshold is internal candidate mathematics; balanced complete bipartite graphs and X_3 remain mandatory controls; no use of the external e+disj+X core; the general theorem remains open. Freeze a finite conclusion on any independent count mismatch.
 <!-- CURRENT-STATUS:END -->
+
+## Latest adversarial audit - 23 September 2026
+
+Full report: `project/research/general_n/2026-09-23-daily-red-team-audit-v1/DAILY_RED_TEAM_AUDIT.md`.
+
+- Raw bridge regression PASS: 757 graphs, 1,256 maximum-degree roots, 2,722 legal selections, 153 positive-demand selections, both supplement branches.
+- Zero-demand equality survives both parities and preserves odd balanced complete-bipartite equality geometry.
+- Internal bounded-demand status retained: edge bound through S<=13; equality through S<=8. No threshold below 250/429 and no S<=14 claim.
+- Two committed evidence files were truncated/corrupt. Their originals are preserved; clean source regeneration makes the r=8 and r=11 replays pass.
+- Residual-free supplement helpers do not reopen r=10 or r=11 in the hostile tests recorded by the audit.
+- Focused-session count remains 1/24. Eight useful scheduled research runs occurred, but none met the historical 50-minute qualification. The gate is not due.
+- Prospective launch recovery is judged only by observed STARTED/checkpoint artifacts, beginning with the first three 40-minute-policy triggers.
 
 ## Latest adversarial audit - 22 September 2026
 
