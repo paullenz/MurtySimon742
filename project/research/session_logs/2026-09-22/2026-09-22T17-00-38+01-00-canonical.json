@@ -1,0 +1,51 @@
+{
+  "schema_version": "1.0",
+  "session_id": "2026-09-22T17:00:38+01:00",
+  "scheduled_trigger": "2026-09-22T17:00:38+01:00",
+  "trigger_attribution": {
+    "status": "VERIFIED_FROM_CURRENT_INVOCATION_METADATA",
+    "method": "Current automation task identity, supplied Europe/London schedule, and runtime metadata uniquely identify the 17:00:38 BST trigger.",
+    "immutable_run_id_available": false
+  },
+  "earliest_actual_start": "2026-09-22T17:00:58+01:00",
+  "next_trigger": "2026-09-22T18:00:38+01:00",
+  "research_cutoff": "2026-09-22T17:53:38+01:00",
+  "hard_close_deadline": "2026-09-22T17:59:38+01:00",
+  "lateness_seconds": 20,
+  "segments": [
+    {
+      "segment_id": "segment-1",
+      "actual_start": "2026-09-22T17:00:58+01:00",
+      "actual_stop": "PENDING",
+      "role": "forward_research",
+      "notes": "Initial invocation; mandatory source reads completed; durable STARTED checkpoint before mathematics."
+    }
+  ],
+  "forward_research_intervals": [],
+  "verified_forward_span_seconds": 0,
+  "forward_stop": "PENDING",
+  "preservation_start": "PENDING",
+  "preservation_complete": "PENDING",
+  "wall_clock_span_seconds": "PENDING",
+  "substantive_unit_count": 0,
+  "substantive_unit_ledger": [],
+  "early_stop_check": {
+    "time": "PENDING",
+    "result": "PENDING"
+  },
+  "stop_reason": "PENDING",
+  "failures_and_pivots": [
+    "Inherited interrupted monolithic r=11 support-eight screen; pivoting to per-partition shards."
+  ],
+  "commit_shas": [
+    "9ca8e9276684a7f79d18b1f896fd8aaa34babfcd"
+  ],
+  "unfinished_line": "Shard r=11 support-eight source screening by partition, then examine supports nine and ten.",
+  "target": {
+    "applicable": true,
+    "available_seconds": 3160,
+    "required_seconds": 3000,
+    "result": "PENDING"
+  },
+  "compliance_status": "STARTED_LIVE"
+}

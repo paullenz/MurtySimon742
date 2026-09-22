@@ -7,25 +7,25 @@ Active target: a genuinely independent proof of Erdős #742 / the Murty–Simon 
 <!-- CURRENT-STATUS:START -->
 CHECKPOINT CLASS: VERIFIED_INTERNAL_NOT_PROMOTED
 
-WORK MODE: PRESERVATION_COMPLETE
+WORK MODE: FORWARD_RESEARCH_LIVE
 
-INSPECTED PREDECESSOR: e47e26dcc2e71be56d5394ff5f9d4d83130349d4.
+INSPECTED PREDECESSOR: 9ca8e9276684a7f79d18b1f896fd8aaa34babfcd.
 
-LAST VERIFIED RESULT: Internal strict r=10 closure is independently replayed, extending the internal edge bound through S<=12. At r=11, every partition of support <=7 is internally closed. Support eight has exactly 2,496 optimistic strict cores. A monolithic exact source screen was interrupted after 17m16s without a final aggregate; no support-eight feasibility or closure claim is made. Supports 9-10 remain.
+LAST VERIFIED RESULT: Internal strict r=10 closure is independently replayed, extending the internal edge bound through S<=12. At r=11, every partition of support <=7 is internally closed. Support eight has exactly 2,496 optimistic strict cores across partitions (4,1^7), (3,2,1^6), and (2,2,2,1^5). The previous monolithic exact source screen was interrupted without an aggregate.
 
-EVIDENCE: `project/research/general_n/2026-09-22-r10-quotient-v1/`; `project/research/general_n/2026-09-22-r11-quotient-v1/`; canonical telemetry.
+EVIDENCE: canonical STARTED telemetry for the 17:00:38 BST trigger; inherited packages under `project/research/general_n/2026-09-22-r10-quotient-v1/` and `project/research/general_n/2026-09-22-r11-quotient-v1/`.
 
-SESSION UTILISATION: Trigger 16:00:38 BST; actual start 16:03:51; eleven closed intervals; verified total 1716s (28m36s); forward stop 16:52:33; cutoff 16:53:38; preservation complete 16:52:54; units 11; target NO/N/A because only 49m47s was available; COMPLETED / TARGET_NA_LATE_START / CHECKPOINT_BACKSTOP_BREACH_19S. Canonical: `project/research/session_logs/2026-09-22/2026-09-22T16-00-38+01-00-canonical.json`.
+SESSION UTILISATION: Trigger 17:00:38 BST; actual start 17:00:58; zero closed forward intervals at STARTED checkpoint; research cutoff 17:53:38; hard close 17:59:38; target YES/PENDING; STARTED/LIVE. Canonical: `project/research/session_logs/2026-09-22/2026-09-22T17-00-38+01-00-canonical.json`.
 
-UNPRESERVED WORK: None; the interrupted process produced no final aggregate.
+UNPRESERVED WORK: None at durable start.
 
-DEFERRED ADMIN: Historical missing-slot reconciliation.
+DEFERRED ADMIN: Historical missing-slot reconciliation and prose-only README edits.
 
-NEXT ACTION: Shard r=11 support-eight source screening by partition, checkpointing each completed case; then support nine and ten.
+NEXT ACTION: Shard the r=11 support-eight physical-source screen by partition, beginning with (4,1^7), and checkpoint each exact aggregate before proceeding.
 
-FOCUSED-SESSION COUNT: 1/24; this shortened late-start trigger receives no focused-session credit.
+FOCUSED-SESSION COUNT: 1/24; current trigger credit pending final compliance.
 
-MANDATORY CONSTRAINTS: Do not infer results from interrupted computation; internal finite work is not external verification or graph realization.
+MANDATORY CONSTRAINTS: Do not infer results from interrupted computation; internal finite work is not external verification or graph realization; balanced complete bipartite equality controls remain mandatory.
 <!-- CURRENT-STATUS:END -->
 
 ## Latest adversarial audit - 22 September 2026
