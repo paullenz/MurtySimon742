@@ -9,11 +9,11 @@ CHECKPOINT CLASS: FINALIZED_RESEARCH_SESSION
 
 WORK MODE: MATH
 
-INSPECTED PREDECESSOR: 1fc02134cc976df9a5815d5e3994f6d58fc4f72c
+INSPECTED PREDECESSOR: 8a45922411fcd410a4d75b67610e8d9744cf9510
 
-LAST VERIFIED RESULT: Internal S<=7 edge bound and S<=4 equality; finite source-kernel supplement exclusions preserved. Full independent proof remains open.
+LAST VERIFIED RESULT: Mathematics unchanged: internal S<=7 edge bound and S<=4 equality. Eleven units saved; full proof open. Final telemetry records 35m40s, short of the applicable 50-minute target.
 
-SESSION UTILISATION: Trigger 2026-09-22T10:00:38+01:00; earliest 2026-09-22T10:02:42+01:00; next 2026-09-22T11:00:38+01:00; cutoff 2026-09-22T10:53:38+01:00; hard close 2026-09-22T10:59:38+01:00. Closed intervals: 10:03:41–10:08:19, 10:09:03–10:14:15, 10:15:45–10:18:54, 10:20:00–10:22:39, 10:24:43–10:30:13, 10:31:01–10:33:13, 10:34:30–10:37:09, 10:41:05–10:42:01, 10:42:54–10:45:12, 10:45:32–10:47:32, 10:47:57–10:49:16, 10:49:42–10:50:08, 10:50:33–10:53:15; total 2140 seconds; units 11; preservation pending; target YES/NO; SHORT/NONCOMPLIANT. Stop reason: Stopped 23 seconds before research cutoff for final preservation; 50-minute target missed. Preservation, monitoring and context-reentry gaps excluded; no blocked-avenues exception claimed.. Canonical: `project/research/session_logs/2026-09-22/2026-09-22T10-00-38+01-00-canonical.json`.
+SESSION UTILISATION: Trigger 2026-09-22T10:00:38+01:00; earliest 2026-09-22T10:02:42+01:00; next 2026-09-22T11:00:38+01:00; cutoff 2026-09-22T10:53:38+01:00; hard close 2026-09-22T10:59:38+01:00. Closed intervals: 10:03:41–10:08:19, 10:09:03–10:14:15, 10:15:45–10:18:54, 10:20:00–10:22:39, 10:24:43–10:30:13, 10:31:01–10:33:13, 10:34:30–10:37:09, 10:41:05–10:42:01, 10:42:54–10:45:12, 10:45:32–10:47:32, 10:47:57–10:49:16, 10:49:42–10:50:08, 10:50:33–10:53:15; total 2140 seconds; units 11; preservation 2026-09-22T10:54:12+01:00; target YES/NO; SHORT/NONCOMPLIANT. Stop reason: Stopped 23 seconds before research cutoff for final preservation; 50-minute target missed. Preservation, monitoring and context-reentry gaps excluded; no blocked-avenues exception claimed.. Canonical: `project/research/session_logs/2026-09-22/2026-09-22T10-00-38+01-00-canonical.json`.
 
 UNPRESERVED WORK: None beyond explicitly named unfinished line.
 

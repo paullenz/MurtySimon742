@@ -3,7 +3,7 @@
   "scheduled_trigger": "2026-09-22T10:00:38+01:00",
   "scheduled_trigger_attribution": "Invocation identifies scheduled research task; DTSTART equals this first trigger. Not inferred from wall clock.",
   "run_kind": "SCHEDULED",
-  "status": "FINALIZING",
+  "status": "COMPLETED_SHORT",
   "earliest_actual_start": "2026-09-22T10:02:42+01:00",
   "runtime_entry_metadata": "2026-09-22T10:02:08+01:00",
   "next_scheduled_trigger": "2026-09-22T11:00:38+01:00",
@@ -116,6 +116,13 @@
       "actual_stop": "2026-09-22T10:53:15+01:00",
       "role": "forward_research",
       "notes": "Legal-supplement exclusion of diamond and all six one-link source survivors; isolate disjoint-triangle component proof obligation."
+    },
+    {
+      "segment_id": "final-preservation",
+      "actual_start": "2026-09-22T10:53:15+01:00",
+      "actual_stop": "2026-09-22T10:54:12+01:00",
+      "role": "preservation",
+      "notes": "All final mathematics saved; final metadata prepared after one remote verification. Zero forward credit."
     }
   ],
   "forward_research_intervals": [
@@ -187,12 +194,12 @@
   ],
   "forward_research_stop": "2026-09-22T10:53:15+01:00",
   "preservation_start": "2026-09-22T10:53:15+01:00",
-  "preservation_complete": null,
-  "final_report_time": null,
-  "wall_clock_span_to_preservation_complete": null,
+  "preservation_complete": "2026-09-22T10:54:12+01:00",
+  "final_report_time": "2026-09-22T10:54:12+01:00",
+  "wall_clock_span_to_preservation_complete": 3090,
   "verified_forward_research_span": 2140,
   "verified_forward_research_span_units": "seconds",
-  "preservation_span": null,
+  "preservation_span": 57,
   "substantive_unit_count": 11,
   "timestamped_unit_ledger": [
     {
@@ -281,7 +288,8 @@
     "03924f3af8b0a45a572ebc1b5671535dd84637fe",
     "4940c5bb48b9b2dc4010cd8b828a1e18059e0873",
     "dd6951a01fba05dc9512377bd32ae28ec8b53224",
-    "1fc02134cc976df9a5815d5e3994f6d58fc4f72c"
+    "1fc02134cc976df9a5815d5e3994f6d58fc4f72c",
+    "8a45922411fcd410a4d75b67610e8d9744cf9510"
   ],
   "live_unfinished_line": "Independently audit localized unit-triangle cycle contradiction and finite-kernel supplement exclusions; retain S<=7 edge bound and S<=4 equality until promoted.",
   "historical_fragments": [],
@@ -297,5 +305,18 @@
       "result": "Current durable substantive checkpoint 10:47:32 verified; preceding 09 canonical still404. No changed health alert; original research resumed."
     }
   ],
-  "focused_session_credit_note": "Not added to completed compliant focused-session count; SHORT attempt retained for daily audit, never counted more than once."
+  "focused_session_credit_note": "Not added to completed compliant focused-session count; SHORT attempt retained for daily audit, never counted more than once.",
+  "final_report_time_evidence": "Observed report-preparation timestamp; not a fabricated future delivery timestamp.",
+  "preservation_complete_evidence": "All mathematical artifacts and closed intervals remotely published and verified in 8a45922411fcd410a4d75b67610e8d9744cf9510; final closure metadata prepared at this observed timestamp.",
+  "time_span_units": "seconds",
+  "failures_and_pivots": [
+    "50-minute target missed; no all-avenues-blocked exception.",
+    "General independent-support nonempty cases with >=3 labels absent from actual fixtures; retained proof caveat.",
+    "S=6,7 not directly exercised by graph suite (maximum observed S=5).",
+    "Nonmaximum-root C5 blow-up invalidates removing the maximum-root hypothesis.",
+    "Necessary leaf/diamond source patterns were not treated as actual graphs; supplement exclusions and remaining component localization preserved separately."
+  ],
+  "interval_accounting": "Union of 13 closed non-overlapping observed intervals only; all checkpoint/monitor/re-entry gaps excluded. All mandatory fields finalized; measured shortfall remains NONCOMPLIANT.",
+  "handoff_mathematical_status": "INTERNAL_CANDIDATE; S<=7 edge bound, S<=4 balanced-bipartite equality. Full strip open; equality kernel follow-on not promoted.",
+  "canonical_session_utilisation_summary": "Session utilisation — 22 September 2026, 10:00:38 BST; actual start 10:02:42; verified forward research 35m40s; 11 substantive units; forward stop 10:53:15; cutoff 10:53:38; preservation complete 10:54:12; 50-minute target applicable, NOT MET; SHORT/NONCOMPLIANT."
 }
