@@ -22,8 +22,9 @@
   "manual_recovery": {
     "predecessor_requested": true,
     "predecessor_execution_verified": false,
-    "replacement_requested": false,
-    "replacement_request_planned_after_publication": true
+    "replacement_requested": true,
+    "replacement_request_clock_observed_before_call": "2026-09-22T09:13:12+01:00",
+    "replacement_execution_verified": false
   },
   "midnight_audit": "UNCHANGED",
   "unrelated_automations": "UNCHANGED",

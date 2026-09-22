@@ -1,0 +1,9 @@
+{
+  "clock_observed_before_request": "2026-09-22T09:13:12+01:00",
+  "automation_id": "6ab23822ccfc819180460a39e879b68a",
+  "request_accepted": true,
+  "response_message": "Immediate run requested. The saved schedule is unchanged.",
+  "execution_verified": false,
+  "completion_verified": false,
+  "published_handoff_before_request": "448831064349ffd104c473f4877f525862e367eb"
+}
