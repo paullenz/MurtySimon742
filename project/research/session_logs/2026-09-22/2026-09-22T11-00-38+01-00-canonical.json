@@ -109,6 +109,13 @@
       "actual_stop": "2026-09-22T11:28:51+01:00",
       "role": "forward_research",
       "notes": "Supplement forcing exclusion of all 211 r=7 equality source populations, including residual-free N-state supplement types."
+    },
+    {
+      "segment_id": "research-13",
+      "actual_start": "2026-09-22T11:29:19+01:00",
+      "actual_stop": "2026-09-22T11:30:35+01:00",
+      "role": "forward_research",
+      "notes": "Exact labelled optimistic r=8 strict-surplus core census."
     }
   ],
   "forward_research_intervals": [
@@ -176,6 +183,11 @@
       "start": "2026-09-22T11:26:56+01:00",
       "stop": "2026-09-22T11:28:51+01:00",
       "evidence": "R7_SUPPLEMENT_EXCLUSION.md, check_r7_supplements.py, R7_SUPPLEMENT_SCREEN.json"
+    },
+    {
+      "start": "2026-09-22T11:29:19+01:00",
+      "stop": "2026-09-22T11:30:35+01:00",
+      "evidence": "R8_CORE_CENSUS.md, screen_r8_core_counts.py, R8_CORE_CENSUS.json"
     }
   ],
   "forward_research_stop": null,
@@ -183,10 +195,10 @@
   "preservation_complete": null,
   "final_report_time": null,
   "wall_clock_span_to_preservation_complete": null,
-  "verified_forward_research_span": 1214,
+  "verified_forward_research_span": 1290,
   "verified_forward_research_span_units": "seconds",
   "preservation_span": null,
-  "substantive_unit_count": 12,
+  "substantive_unit_count": 13,
   "timestamped_unit_ledger": [
     {
       "completed_at": "2026-09-22T11:04:00+01:00",
@@ -259,6 +271,12 @@
       "unit": "Residual-mass-seven supplement obstruction and equality closure",
       "result": "All 211 source populations fail necessary supplement forcing even with residual-free N-types; internal r<=7 f<r, S<=9 bound and S<=7 balanced equality.",
       "artifact": "project/research/general_n/2026-09-22-zero-demand-equality-v1/R7_SUPPLEMENT_EXCLUSION.md"
+    },
+    {
+      "completed_at": "2026-09-22T11:30:35+01:00",
+      "unit": "Residual-mass-eight strict core census",
+      "result": "Five of 21 partitions survive with 11350 labelled optimistic cores; degree/P signatures saved, not isomorphism orbits. No theorem extension.",
+      "artifact": "project/research/general_n/2026-09-22-zero-demand-equality-v1/R8_CORE_CENSUS.md"
     }
   ],
   "early_stop_check_time": null,
@@ -270,9 +288,9 @@
   "compliance_status": "IN_PROGRESS",
   "infrastructure_failures": [],
   "commit_shas": [
-    "76da06e8c227266c708dfbe5441583924dcafef8"
+    "8a885d4e0c8f1351797a89db1e8d00e6a3d99e9d"
   ],
-  "live_unfinished_line": "Independently replay r6/r7 outputs and begin r8 strict-surplus core classification; do not extrapolate low-r computation to full strip.",
+  "live_unfinished_line": "Quotient/screen 11,350 r=8 optimistic cores through physical source states, preferably by signature/canonical hashing with independent replay.",
   "historical_fragments": [],
   "focused_session_credit": 0,
   "predecessor_session": "project/research/session_logs/2026-09-22/2026-09-22T10-00-38+01-00-canonical.json",
