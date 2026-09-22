@@ -40,6 +40,12 @@
       "stop": "2026-09-22T15:23:17+01:00",
       "seconds": 92,
       "unit": 4
+    },
+    {
+      "start": "2026-09-22T15:24:29+01:00",
+      "stop": "2026-09-22T15:29:10+01:00",
+      "seconds": 281,
+      "unit": 5
     }
   ],
   "forward_research_stop": "PENDING",
@@ -47,9 +53,9 @@
   "preservation_complete": "PENDING",
   "final_report_time": "PENDING",
   "wall_clock_span_to_preservation_complete": "PENDING",
-  "verified_forward_research_span_seconds": 750,
+  "verified_forward_research_span_seconds": 1031,
   "preservation_span": "PENDING",
-  "substantive_unit_count": 4,
+  "substantive_unit_count": 5,
   "timestamped_unit_ledger": [
     {
       "unit": 1,
@@ -74,6 +80,12 @@
       "start": "2026-09-22T15:21:45+01:00",
       "completed": "2026-09-22T15:23:17+01:00",
       "result": "Independent Burnside audit reproduces 1044/79,264 quotient counts and 69 inequivalent strict masks; independent MILP/HiGHS replay finds all 69 physical-source systems infeasible."
+    },
+    {
+      "unit": 5,
+      "start": "2026-09-22T15:24:29+01:00",
+      "completed": "2026-09-22T15:29:10+01:00",
+      "result": "Exact r=10 core/source quotient through support seven leaves exactly two source-feasible t=1 orbits: (2,2,2,2,1,1) mask 3515 and (2,2,2,1,1,1,1) mask 401020."
     }
   ],
   "early_stop_check_time": "PENDING",
@@ -88,8 +100,9 @@
     "31785aa1695de5b4e470efb74e7e8659188d4220",
     "d3cbbb330dce26f4f553bc0c2aed1062d9776715",
     "d8e05ed49a9ae1198389935474d5b1001faa1cfd",
-    "9bd0f6c5cccea9b8735597a5f6949073e16af6f5"
+    "9bd0f6c5cccea9b8735597a5f6949073e16af6f5",
+    "6d476ae08dd3971713d4a7ca4ac925c2cf92bba1"
   ],
-  "live_unfinished_line": "Begin quotient-first r=10 strict triage, preserving equality scope separately.",
+  "live_unfinished_line": "Apply exact supplement forcing to r=10 masks 3515 and 401020; supports eight and nine remain unscreened.",
   "historical_fragments": []
 }
