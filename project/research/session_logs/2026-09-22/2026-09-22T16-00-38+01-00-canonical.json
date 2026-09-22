@@ -14,6 +14,13 @@
       "actual_stop": "PENDING",
       "role": "forward_research",
       "notes": "Current invocation; mandatory CURRENT_STATE/AGENTS/schema and scoped mathematical reads completed before durable STARTED publication."
+    },
+    {
+      "segment_id": "segment-2",
+      "actual_start": "2026-09-22T16:35:53+01:00",
+      "actual_stop": "2026-09-22T16:35:53+01:00",
+      "role": "reconciliation",
+      "notes": "Same-trigger duplicate invocation metadata arrived during active computation; existing writer continued, zero separate research credit."
     }
   ],
   "forward_research_intervals": [
@@ -154,7 +161,9 @@
   "target_50m_applies": "NO (49m47s available from observed start to cutoff)",
   "target_50m_met": "N/A",
   "compliance_status": "STARTED / LIVE",
-  "infrastructure_failures": [],
+  "infrastructure_failures": [
+    "Support-eight source screen launched at 16:35:17 as local execution session 92272; preservation backstop checkpoint recorded at 16:45:36, 19 seconds beyond ten minutes. No result or elapsed computation is credited until a closed boundary is observed."
+  ],
   "commit_shas": [
     "3f04e6af2a4fbe791e1b0163b4fa02dbececdd52",
     "5127017df62c21d41c7449dbced6a81716216db4",
@@ -175,7 +184,9 @@
     "00bb1cb39815520119dacfd97a30bd7559c8d35c",
     "00bb1cb39815520119dacfd97a30bd7559c8d35c",
     "7b4b2df81625211a80a06f68408ddfe03be3ae37",
-    "7b4b2df81625211a80a06f68408ddfe03be3ae37"
+    "7b4b2df81625211a80a06f68408ddfe03be3ae37",
+    "413a5865c813f4e4f64e042b73ef4361567a0383",
+    "413a5865c813f4e4f64e042b73ef4361567a0383"
   ],
   "live_unfinished_line": "Source-screen 2496 r=11 support-eight strict cores; supports nine and ten remain.",
   "historical_fragments": []

@@ -5,27 +5,27 @@ Canonical repository: `paullenz/MurtySimon742`. Date: 22 September 2026.
 Active target: a genuinely independent proof of Erdős #742 / the Murty–Simon inequality e(G)<=floor(n^2/4), preferably with the equality characterization. Forward priority is the project’s own complement / residual / Hall / profile / realizability route, not a reconstruction of the external e+disj+X proof. The first focused session produced the internally checked candidate threshold `Delta>=250n/429`, shrinking the live strip to `n/2<Delta<250n/429`. The theorem and its inherited graph-to-profile spine remain candidate/internal-review mathematics. A 24-focused-session go/no-go gate applies. Prior eventual-D2C work remains preserved but is no longer the active forward objective.
 
 <!-- CURRENT-STATUS:START -->
-CHECKPOINT CLASS: VERIFIED_INTERNAL_NOT_PROMOTED
+CHECKPOINT CLASS: IN_PROGRESS
 
 WORK MODE: MATH
 
-INSPECTED PREDECESSOR: 7b4b2df81625211a80a06f68408ddfe03be3ae37.
+INSPECTED PREDECESSOR: 413a5865c813f4e4f64e042b73ef4361567a0383.
 
-LAST VERIFIED RESULT: Internal strict r=10 closure/edge bound through S<=12 retained; r=11 supports <=7 closed. Exact support-eight quotient gives 1,034,432 coloured core orbits and 2,496 optimistic strict candidates across (4,1^7), (3,2,1^6), (2,2,2,1^5), distributed 26,800,1670. Source feasibility pending; supports 9-10 remain.
+LAST VERIFIED RESULT: Internal strict r=10 closure/edge bound through S<=12 retained; r=11 supports <=7 closed. The r=11 support-eight quotient has 2,496 strict candidates. Exact source screen is active as execution session 92272; no result is claimed yet.
 
-EVIDENCE: `project/research/general_n/2026-09-22-r11-quotient-v1/R11_SUPPORT8_CORE_CENSUS.md`; exact generator and 2496-row ledger.
+EVIDENCE: Saved source-screen code; active execution session 92272. Backstop checkpoint at 16:45:36 was 19 seconds late.
 
-SESSION UTILISATION: Trigger 16:00:38 BST; actual start 16:03:51; cutoff 16:53:38. Ten closed intervals; verified total 680s (11m20s); units 10; target NO/N/A; LIVE. Canonical: `project/research/session_logs/2026-09-22/2026-09-22T16-00-38+01-00-canonical.json`.
+SESSION UTILISATION: Trigger 16:00:38 BST; actual start 16:03:51; cutoff 16:53:38. Ten closed intervals; verified total 680s (11m20s); units 10; target NO/N/A; LIVE. Active unit begun 16:35:17 is not yet credited. Canonical: `project/research/session_logs/2026-09-22/2026-09-22T16-00-38+01-00-canonical.json`.
 
-UNPRESERVED WORK: None.
+UNPRESERVED WORK: Active source-screen computation session 92272; result pending.
 
 DEFERRED ADMIN: Historical missing-slot reconciliation.
 
-NEXT ACTION: Exact physical-source screen for 2496 support-eight strict cores.
+NEXT ACTION: Observe source-screen completion, close its interval, and preserve the result or honest timeout.
 
 FOCUSED-SESSION COUNT: 1/24; this shortened late-start trigger pending and receives no automatic credit.
 
-MANDATORY CONSTRAINTS: Optimistic core feasibility is not graph realization; internal finite computation is not external verification.
+MANDATORY CONSTRAINTS: Do not infer computation time; no source/result claim until durable closure.
 <!-- CURRENT-STATUS:END -->
 
 ## Latest adversarial audit - 22 September 2026
