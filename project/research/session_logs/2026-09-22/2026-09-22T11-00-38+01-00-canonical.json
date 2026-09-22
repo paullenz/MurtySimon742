@@ -116,6 +116,20 @@
       "actual_stop": "2026-09-22T11:30:35+01:00",
       "role": "forward_research",
       "notes": "Exact labelled optimistic r=8 strict-surplus core census."
+    },
+    {
+      "segment_id": "research-14",
+      "actual_start": "2026-09-22T11:31:09+01:00",
+      "actual_stop": "2026-09-22T11:33:17+01:00",
+      "role": "forward_research",
+      "notes": "Bounded r8 example source probe and exact follow-on closure of its sole source-feasible (2,2,2,1,1) core."
+    },
+    {
+      "segment_id": "same-trigger-reentry-1",
+      "actual_start": "2026-09-22T11:34:19+01:00",
+      "actual_stop": "2026-09-22T11:36:27+01:00",
+      "role": "reconciliation",
+      "notes": "Duplicate invocation for same 11:00:38 scheduled trigger. Mandatory CURRENT_STATE/AGENTS/schema/canonical reads completed; live writer retained. This interval receives zero forward-research credit."
     }
   ],
   "forward_research_intervals": [
@@ -188,6 +202,11 @@
       "start": "2026-09-22T11:29:19+01:00",
       "stop": "2026-09-22T11:30:35+01:00",
       "evidence": "R8_CORE_CENSUS.md, screen_r8_core_counts.py, R8_CORE_CENSUS.json"
+    },
+    {
+      "start": "2026-09-22T11:31:09+01:00",
+      "stop": "2026-09-22T11:33:17+01:00",
+      "evidence": "R8_EXAMPLE_AND_22211.md, probe_r8_examples.py, R8_EXAMPLE_PROBE.json, check_r8_22211_kernel.py, R8_22211_KERNEL.json"
     }
   ],
   "forward_research_stop": null,
@@ -195,10 +214,10 @@
   "preservation_complete": null,
   "final_report_time": null,
   "wall_clock_span_to_preservation_complete": null,
-  "verified_forward_research_span": 1290,
+  "verified_forward_research_span": 1418,
   "verified_forward_research_span_units": "seconds",
   "preservation_span": null,
-  "substantive_unit_count": 13,
+  "substantive_unit_count": 14,
   "timestamped_unit_ledger": [
     {
       "completed_at": "2026-09-22T11:04:00+01:00",
@@ -277,6 +296,12 @@
       "unit": "Residual-mass-eight strict core census",
       "result": "Five of 21 partitions survive with 11350 labelled optimistic cores; degree/P signatures saved, not isomorphism orbits. No theorem extension.",
       "artifact": "project/research/general_n/2026-09-22-zero-demand-equality-v1/R8_CORE_CENSUS.md"
+    },
+    {
+      "completed_at": "2026-09-22T11:33:17+01:00",
+      "unit": "R8 example probe and exact (2,2,2,1,1) closure",
+      "result": "27 examples probed; only unique 22211 core source-feasible. Its sole source multiset fails supplement forcing, closing that full partition. Four r8 partitions remain; no global bound extension.",
+      "artifact": "project/research/general_n/2026-09-22-zero-demand-equality-v1/R8_EXAMPLE_AND_22211.md"
     }
   ],
   "early_stop_check_time": null,
@@ -288,9 +313,9 @@
   "compliance_status": "IN_PROGRESS",
   "infrastructure_failures": [],
   "commit_shas": [
-    "8a885d4e0c8f1351797a89db1e8d00e6a3d99e9d"
+    "acc0db8ba9de80368b11b6a4915545fa6ec884ff"
   ],
-  "live_unfinished_line": "Quotient/screen 11,350 r=8 optimistic cores through physical source states, preferably by signature/canonical hashing with independent replay.",
+  "live_unfinished_line": "Canonicalize or source-screen all labelled survivors in the four remaining r=8 partitions; sample failures are not theorem evidence.",
   "historical_fragments": [],
   "focused_session_credit": 0,
   "predecessor_session": "project/research/session_logs/2026-09-22/2026-09-22T10-00-38+01-00-canonical.json",
@@ -299,9 +324,15 @@
       "observed_at": "2026-09-22T11:13:13+01:00",
       "completed_at": "2026-09-22T11:13:23+01:00",
       "result": "Current 11 slot durable and fresh at 11:11:53; preceding 10 slot remains SHORT/NONCOMPLIANT. Original research resumed."
+    },
+    {
+      "observed_at": "2026-09-22T11:34:19+01:00",
+      "completed_at": "2026-09-22T11:36:27+01:00",
+      "result": "Same-trigger duplicate reconciled into canonical session after mandatory reads; no competing writer and no research credit for interruption."
     }
   ],
   "failures_and_pivots": [
-    "Detected stale in-memory serialization of screen_r6_equality.py: committed source lacked two filters used to generate JSON. Corrected source byte-reproduces JSON; no result change."
+    "Detected stale in-memory serialization of screen_r6_equality.py: committed source lacked two filters used to generate JSON. Corrected source byte-reproduces JSON; no result change.",
+    "Duplicate 11:00-trigger invocation interrupted the live writer at 11:34:19–11:36:27; reconciled as zero-credit administrative segment, then original session resumed."
   ]
 }

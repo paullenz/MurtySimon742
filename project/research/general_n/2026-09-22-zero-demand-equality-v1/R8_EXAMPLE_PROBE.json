@@ -1,0 +1,447 @@
+{
+  "(3, 2, 1, 1, 1)": {
+    "examples_tested": 2,
+    "source_feasible_examples": 0,
+    "rows": [
+      {
+        "example": 1,
+        "source_feasible": false,
+        "single_source_patterns": 76,
+        "memo_states": 360,
+        "degrees": [
+          0,
+          3,
+          3,
+          3,
+          3
+        ],
+        "t_upper": 1
+      },
+      {
+        "example": 2,
+        "source_feasible": false,
+        "single_source_patterns": 65,
+        "memo_states": 360,
+        "degrees": [
+          1,
+          4,
+          3,
+          3,
+          3
+        ],
+        "t_upper": 1
+      }
+    ],
+    "scope": "Only first saved labelled examples, not all cores or signatures."
+  },
+  "(3, 1, 1, 1, 1, 1)": {
+    "examples_tested": 8,
+    "source_feasible_examples": 0,
+    "rows": [
+      {
+        "example": 1,
+        "source_feasible": false,
+        "single_source_patterns": 135,
+        "memo_states": 562,
+        "degrees": [
+          5,
+          3,
+          3,
+          3,
+          3,
+          1
+        ],
+        "t_upper": 1
+      },
+      {
+        "example": 2,
+        "source_feasible": false,
+        "single_source_patterns": 133,
+        "memo_states": 1185,
+        "degrees": [
+          5,
+          3,
+          3,
+          3,
+          2,
+          2
+        ],
+        "t_upper": 1
+      },
+      {
+        "example": 3,
+        "source_feasible": false,
+        "single_source_patterns": 133,
+        "memo_states": 1185,
+        "degrees": [
+          5,
+          3,
+          3,
+          2,
+          3,
+          2
+        ],
+        "t_upper": 1
+      },
+      {
+        "example": 4,
+        "source_feasible": false,
+        "single_source_patterns": 133,
+        "memo_states": 1185,
+        "degrees": [
+          5,
+          3,
+          3,
+          3,
+          2,
+          2
+        ],
+        "t_upper": 1
+      },
+      {
+        "example": 5,
+        "source_feasible": false,
+        "single_source_patterns": 135,
+        "memo_states": 562,
+        "degrees": [
+          5,
+          3,
+          3,
+          3,
+          1,
+          3
+        ],
+        "t_upper": 1
+      },
+      {
+        "example": 6,
+        "source_feasible": false,
+        "single_source_patterns": 133,
+        "memo_states": 1185,
+        "degrees": [
+          5,
+          3,
+          3,
+          2,
+          2,
+          3
+        ],
+        "t_upper": 1
+      },
+      {
+        "example": 7,
+        "source_feasible": false,
+        "single_source_patterns": 133,
+        "memo_states": 1185,
+        "degrees": [
+          5,
+          3,
+          3,
+          2,
+          3,
+          2
+        ],
+        "t_upper": 1
+      },
+      {
+        "example": 8,
+        "source_feasible": false,
+        "single_source_patterns": 133,
+        "memo_states": 1185,
+        "degrees": [
+          5,
+          3,
+          3,
+          2,
+          2,
+          3
+        ],
+        "t_upper": 1
+      }
+    ],
+    "scope": "Only first saved labelled examples, not all cores or signatures."
+  },
+  "(2, 2, 2, 1, 1)": {
+    "examples_tested": 1,
+    "source_feasible_examples": 1,
+    "rows": [
+      {
+        "example": 1,
+        "source_feasible": true,
+        "single_source_patterns": 52,
+        "memo_states": 918,
+        "degrees": [
+          4,
+          4,
+          4,
+          3,
+          3
+        ],
+        "t_upper": 1
+      }
+    ],
+    "scope": "Only first saved labelled examples, not all cores or signatures."
+  },
+  "(2, 2, 1, 1, 1, 1)": {
+    "examples_tested": 8,
+    "source_feasible_examples": 0,
+    "rows": [
+      {
+        "example": 1,
+        "source_feasible": false,
+        "single_source_patterns": 133,
+        "memo_states": 1613,
+        "degrees": [
+          4,
+          4,
+          3,
+          3,
+          2,
+          2
+        ],
+        "t_upper": 1
+      },
+      {
+        "example": 2,
+        "source_feasible": false,
+        "single_source_patterns": 133,
+        "memo_states": 1613,
+        "degrees": [
+          4,
+          4,
+          3,
+          2,
+          3,
+          2
+        ],
+        "t_upper": 1
+      },
+      {
+        "example": 3,
+        "source_feasible": false,
+        "single_source_patterns": 135,
+        "memo_states": 779,
+        "degrees": [
+          4,
+          4,
+          3,
+          3,
+          3,
+          1
+        ],
+        "t_upper": 1
+      },
+      {
+        "example": 4,
+        "source_feasible": false,
+        "single_source_patterns": 129,
+        "memo_states": 1307,
+        "degrees": [
+          4,
+          4,
+          3,
+          3,
+          2,
+          2
+        ],
+        "t_upper": 1
+      },
+      {
+        "example": 5,
+        "source_feasible": false,
+        "single_source_patterns": 129,
+        "memo_states": 1307,
+        "degrees": [
+          4,
+          4,
+          3,
+          2,
+          3,
+          2
+        ],
+        "t_upper": 1
+      },
+      {
+        "example": 6,
+        "source_feasible": false,
+        "single_source_patterns": 135,
+        "memo_states": 779,
+        "degrees": [
+          4,
+          4,
+          3,
+          3,
+          3,
+          1
+        ],
+        "t_upper": 1
+      },
+      {
+        "example": 7,
+        "source_feasible": false,
+        "single_source_patterns": 129,
+        "memo_states": 1307,
+        "degrees": [
+          4,
+          4,
+          3,
+          3,
+          2,
+          2
+        ],
+        "t_upper": 1
+      },
+      {
+        "example": 8,
+        "source_feasible": false,
+        "single_source_patterns": 129,
+        "memo_states": 1307,
+        "degrees": [
+          4,
+          4,
+          3,
+          2,
+          3,
+          2
+        ],
+        "t_upper": 1
+      }
+    ],
+    "scope": "Only first saved labelled examples, not all cores or signatures."
+  },
+  "(2, 1, 1, 1, 1, 1, 1)": {
+    "examples_tested": 8,
+    "source_feasible_examples": 0,
+    "rows": [
+      {
+        "example": 1,
+        "source_feasible": false,
+        "single_source_patterns": 367,
+        "memo_states": 1134,
+        "degrees": [
+          4,
+          3,
+          3,
+          3,
+          3,
+          1,
+          1
+        ],
+        "t_upper": 1
+      },
+      {
+        "example": 2,
+        "source_feasible": false,
+        "single_source_patterns": 348,
+        "memo_states": 1650,
+        "degrees": [
+          4,
+          3,
+          3,
+          3,
+          2,
+          2,
+          1
+        ],
+        "t_upper": 1
+      },
+      {
+        "example": 3,
+        "source_feasible": false,
+        "single_source_patterns": 348,
+        "memo_states": 1650,
+        "degrees": [
+          4,
+          3,
+          3,
+          2,
+          3,
+          2,
+          1
+        ],
+        "t_upper": 1
+      },
+      {
+        "example": 4,
+        "source_feasible": false,
+        "single_source_patterns": 348,
+        "memo_states": 1650,
+        "degrees": [
+          4,
+          3,
+          2,
+          3,
+          3,
+          2,
+          1
+        ],
+        "t_upper": 1
+      },
+      {
+        "example": 5,
+        "source_feasible": false,
+        "single_source_patterns": 359,
+        "memo_states": 1689,
+        "degrees": [
+          4,
+          2,
+          3,
+          3,
+          3,
+          2,
+          1
+        ],
+        "t_upper": 1
+      },
+      {
+        "example": 6,
+        "source_feasible": false,
+        "single_source_patterns": 348,
+        "memo_states": 1650,
+        "degrees": [
+          4,
+          3,
+          3,
+          3,
+          2,
+          1,
+          2
+        ],
+        "t_upper": 1
+      },
+      {
+        "example": 7,
+        "source_feasible": false,
+        "single_source_patterns": 348,
+        "memo_states": 1650,
+        "degrees": [
+          4,
+          3,
+          3,
+          2,
+          3,
+          1,
+          2
+        ],
+        "t_upper": 1
+      },
+      {
+        "example": 8,
+        "source_feasible": false,
+        "single_source_patterns": 348,
+        "memo_states": 1650,
+        "degrees": [
+          4,
+          3,
+          2,
+          3,
+          3,
+          1,
+          2
+        ],
+        "t_upper": 1
+      }
+    ],
+    "scope": "Only first saved labelled examples, not all cores or signatures."
+  }
+}

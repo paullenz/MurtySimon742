@@ -1,6 +1,7 @@
 #!/usr/bin/env python3
 """Exact labelled/core-signature first pass for optimistic r=8 strict surplus."""
-import itertools,json
+import itertools,json,sys
+from pathlib import Path
 
 def parts(n,hi=None):
     if n==0:yield ();return
@@ -34,4 +35,6 @@ for R in parts(8):
     out[str(R)]={'support':k,'core_graphs_checked_after_local_filters':checked,
       'strict_survivors_labelled':survivors,'degree_P_signature_counts':signatures,
       'first_examples':examples,'scope':'Labelled necessary relaxation; signatures are not graph-isomorphism orbits.'}
-print(json.dumps(out,indent=2))
+payload=json.dumps(out,indent=2)+'\n'
+if '--output' in sys.argv:Path(sys.argv[sys.argv.index('--output')+1]).write_text(payload)
+else:print(payload,end='')

@@ -9,19 +9,19 @@ CHECKPOINT CLASS: SUBSTANTIVE_RESEARCH_CHECKPOINT
 
 WORK MODE: MATH
 
-INSPECTED PREDECESSOR: 8a885d4e0c8f1351797a89db1e8d00e6a3d99e9d.
+INSPECTED PREDECESSOR: acc0db8ba9de80368b11b6a4915545fa6ec884ff.
 
-LAST VERIFIED RESULT: Exact labelled first pass finds 11,350 optimistic r=8 strict-surplus cores across five partitions; no graph or theorem promotion.
+LAST VERIFIED RESULT: A bounded r=8 example probe closes the entire (2,2,2,1,1) strict-surplus partition by source/supplement obstruction; sample failures in four other partitions are not theorem evidence.
 
 EVIDENCE: `project/research/session_logs/2026-09-22/2026-09-22T11-00-38+01-00-canonical.json`; `project/research/general_n/2026-09-22-zero-demand-equality-v1/`.
 
-SESSION UTILISATION: Trigger 2026-09-22 11:00:38 BST; earliest 11:01:19; next 12:00:38; cutoff 11:53:38; hard close 11:59:38. Closed intervals: 11:02:36–11:04:00, 11:04:50–11:06:51, 11:07:13–11:08:46, 11:09:08–11:11:53, 11:12:15–11:12:38, 11:13:23–11:14:27, 11:14:53–11:16:02, 11:16:23–11:18:32, 11:19:08–11:20:21, 11:20:42–11:22:03, 11:22:29–11:24:22, 11:24:49–11:26:13, 11:26:56–11:28:51, 11:29:19–11:30:35; total 1290 seconds; units 13; preservation pending; target YES/PENDING; IN_PROGRESS. Stop reason: active. Canonical: `project/research/session_logs/2026-09-22/2026-09-22T11-00-38+01-00-canonical.json`.
+SESSION UTILISATION: Trigger 2026-09-22 11:00:38 BST; earliest 11:01:19; next 12:00:38; cutoff 11:53:38; hard close 11:59:38. Closed intervals: 11:02:36–11:04:00, 11:04:50–11:06:51, 11:07:13–11:08:46, 11:09:08–11:11:53, 11:12:15–11:12:38, 11:13:23–11:14:27, 11:14:53–11:16:02, 11:16:23–11:18:32, 11:19:08–11:20:21, 11:20:42–11:22:03, 11:22:29–11:24:22, 11:24:49–11:26:13, 11:26:56–11:28:51, 11:29:19–11:30:35, 11:31:09–11:33:17; total 1418 seconds; units 14; preservation pending; target YES/PENDING; IN_PROGRESS. Stop reason: active. Canonical: `project/research/session_logs/2026-09-22/2026-09-22T11-00-38+01-00-canonical.json`.
 
 UNPRESERVED WORK: None beyond named unfinished line.
 
 DEFERRED ADMIN: Historical missing-slot reconciliation and schedule maintenance.
 
-NEXT ACTION: Quotient/screen 11,350 r=8 optimistic cores through physical source states, preferably by signature/canonical hashing with independent replay.
+NEXT ACTION: Canonicalize or source-screen all labelled survivors in the four remaining r=8 partitions.
 
 FOCUSED-SESSION COUNT: 1/24 completed before this trigger; this trigger credit 0.
 
