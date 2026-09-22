@@ -1,0 +1,26 @@
+{
+  "status": "PASS",
+  "strict_rows": {
+    "support8": 2496,
+    "support9": 3273,
+    "support10": 280
+  },
+  "source_survivors": {
+    "support8": 16,
+    "support9": 8,
+    "support10": 3
+  },
+  "supplement_survivors": {
+    "support8": 0,
+    "support9": 0,
+    "support10": 0
+  },
+  "checks": [
+    "every strict row has independently recomputed degrees",
+    "every strict row satisfies local capacity and has matching positive strict value",
+    "all source survivors belong to their raw strict census",
+    "all source and supplement aggregates agree across files",
+    "support-ten unit-induced maximum degree is at most two"
+  ],
+  "scope": "Independent cross-file/formula replay; it does not independently reimplement orbit isomorphism reduction or the source/supplement algorithms."
+}

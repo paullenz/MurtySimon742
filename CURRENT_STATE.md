@@ -9,23 +9,23 @@ CHECKPOINT CLASS: VERIFIED_INTERNAL_NOT_PROMOTED
 
 WORK MODE: FORWARD_RESEARCH_LIVE
 
-INSPECTED PREDECESSOR: 329e7bb6bc00254835cda847b40dac26a1fff6f5.
+INSPECTED PREDECESSOR: 634818a6a93710421045db9f1cbcdc5fafb5f8b0.
 
-LAST VERIFIED RESULT: Every r=11 residual partition is internally closed under the quotient/source/supplement pipeline, extending the internal computer-assisted edge bound through residual demand S<=13. Equality remains characterized only through S<=8; the general theorem remains open.
+LAST VERIFIED RESULT: The complete r=11 finite pipeline passed a fresh cross-file/formula replay: 2,496 support-eight, 3,273 support-nine, and 280 support-ten strict rows all have independently recomputed degrees, local capacity, and positive strict values; source survivors are exactly 16, 8, and 3; supplement survivors are zero in every support. This corroborates the internal S<=13 edge bound, while explicitly not replaying graph-isomorphism reduction or independently reimplementing source/supplement algorithms.
 
-EVIDENCE: complete r11 artifacts under `project/research/general_n/2026-09-22-r11-quotient-v1/`; canonical STARTED telemetry.
+EVIDENCE: `audit_r11_pipeline.py/json` in `project/research/general_n/2026-09-22-r11-quotient-v1/`; canonical telemetry.
 
-SESSION UTILISATION: Trigger 18:00:38 BST; actual start 18:04:09; zero closed forward intervals at STARTED checkpoint; research cutoff 18:53:38; hard close 18:59:38; target N/A because 49m29s was available; STARTED/LIVE. Canonical: `project/research/session_logs/2026-09-22/2026-09-22T18-00-38+01-00-canonical.json`.
+SESSION UTILISATION: Trigger 18:00:38 BST; actual start 18:04:09; closed forward interval 18:05:32--18:06:42 (70s); one substantive unit; cutoff 18:53:38; target N/A late start; LIVE.
 
-UNPRESERVED WORK: None at durable start.
+UNPRESERVED WORK: None at this checkpoint.
 
-DEFERRED ADMIN: Historical missing-slot reconciliation and prose-only README edits.
+DEFERRED ADMIN: Historical reconciliation and prose-only README edits.
 
-NEXT ACTION: Independently replay the complete r=11 closure from saved raw masks/results and reject any cross-file inconsistency before opening the r=12 frontier.
+NEXT ACTION: Independently replay the source/supplement decision on the 27 surviving kernels with an alternative formulation, then open r=12 only if that gate passes.
 
 FOCUSED-SESSION COUNT: 1/24; current trigger credit pending final compliance.
 
-MANDATORY CONSTRAINTS: Internal finite work is not external verification or graph realization; balanced complete-bipartite equality controls remain mandatory.
+MANDATORY CONSTRAINTS: Cross-file consistency is weaker than independent algorithmic replay; internal finite work is not external verification or graph realization.
 <!-- CURRENT-STATUS:END -->
 
 ## Latest adversarial audit - 22 September 2026
