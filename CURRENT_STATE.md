@@ -5,27 +5,27 @@ Canonical repository: `paullenz/MurtySimon742`. Date: 22 September 2026.
 Active target: a genuinely independent proof of Erdős #742 / the Murty–Simon inequality e(G)<=floor(n^2/4), preferably with the equality characterization. Forward priority is the project’s own complement / residual / Hall / profile / realizability route, not a reconstruction of the external e+disj+X proof. The first focused session produced the internally checked candidate threshold `Delta>=250n/429`, shrinking the live strip to `n/2<Delta<250n/429`. The theorem and its inherited graph-to-profile spine remain candidate/internal-review mathematics. A 24-focused-session go/no-go gate applies. Prior eventual-D2C work remains preserved but is no longer the active forward objective.
 
 <!-- CURRENT-STATUS:START -->
-CHECKPOINT CLASS: STARTED_RESEARCH_SESSION
+CHECKPOINT CLASS: WIP_UNVERIFIED
 
 WORK MODE: MATH
 
-INSPECTED PREDECESSOR: f0ee37d131ccef891bf2932bdfcbaf5a99ff349f.
+INSPECTED PREDECESSOR: 31785aa1695de5b4e470efb74e7e8659188d4220.
 
-LAST VERIFIED RESULT: No new mathematics yet. Inherited internal result: the finite pipeline closes strict residual mass r=8 and balanced equality through r=8; edge bound through S<=10. General theorem open.
+LAST VERIFIED RESULT: Internal exact necessary-condition computation closes every r=9 partition of residual support <=7 except two physical-source-feasible orbits in (2,2,1,1,1,1,1), masks 120436 and 378090. Both have ten core edges, all labels in P, degree multiset (3,3,3,3,3,3,2), and optimistic t=1. This is not graph realizability or a demand-bound extension.
 
-EVIDENCE: `project/research/session_logs/2026-09-22/2026-09-22T15-00-38+01-00-canonical.json`; `project/research/general_n/2026-09-22-zero-demand-equality-v1/`.
+EVIDENCE: `project/research/general_n/2026-09-22-r9-quotient-v1/R9_SUPPORT_LE7_SCREEN.md`; `project/research/general_n/2026-09-22-r9-quotient-v1/screen_r9_quotient_sources.py`; `project/research/session_logs/2026-09-22/2026-09-22T15-00-38+01-00-canonical.json`.
 
-SESSION UTILISATION: Trigger 2026-09-22 15:00:38 BST; actual start 15:04:10; next 16:00:38; cutoff 15:53:38; hard close 15:59:38. Closed intervals: none yet; verified total 0; units 0; preservation PENDING; target NO/N/A because only 49m28s remained at actual start; STARTED/LIVE. Canonical: `project/research/session_logs/2026-09-22/2026-09-22T15-00-38+01-00-canonical.json`.
+SESSION UTILISATION: Trigger 15:00:38 BST; actual start 15:04:10; cutoff 15:53:38; hard close 15:59:38. Closed interval 15:05:54–15:11:52 (358s); verified total 5m58s; units 1; preservation checkpoint complete on publication; target NO/N/A (49m28s available); LIVE. Canonical: `project/research/session_logs/2026-09-22/2026-09-22T15-00-38+01-00-canonical.json`.
 
-UNPRESERVED WORK: None. Forward mathematics has not begun.
+UNPRESERVED WORK: None.
 
 DEFERRED ADMIN: Historical missing-slot reconciliation; standalone health-check relocation; optional README polishing.
 
-NEXT ACTION: Begin quotient-first r=9 strict-surplus work, first by reading the current finite-pipeline statements/checkers and deriving the smallest complete r=9 quotient/core search.
+NEXT ACTION: Apply exact supplement forcing to the two support-seven r=9 kernels, preserving any survivor or contradiction before starting support-eight work.
 
 FOCUSED-SESSION COUNT: 1/24 completed before this trigger; this trigger pending.
 
-MANDATORY CONSTRAINTS: Independent route; internal-candidate trust; actual graph realizability; balanced equality controls; no fabricated intervals.
+MANDATORY CONSTRAINTS: Independent route; internal-candidate/computer-assisted trust; actual graph realizability; balanced equality controls; no fabricated intervals.
 <!-- CURRENT-STATUS:END -->
 
 ## Latest adversarial audit - 22 September 2026
