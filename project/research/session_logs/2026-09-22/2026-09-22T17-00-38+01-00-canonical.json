@@ -45,6 +45,12 @@
       "stop": "2026-09-22T17:18:00+01:00",
       "seconds": 551,
       "evidence": "bounded exact source-multiset/supplement enumeration; interrupted without aggregate"
+    },
+    {
+      "start": "2026-09-22T17:19:29+01:00",
+      "stop": "2026-09-22T17:19:29+01:00",
+      "seconds": 0,
+      "evidence": "one-supplement replay on 16 MILP witness populations"
     }
   ],
   "verified_forward_span_seconds": 642,
@@ -52,7 +58,7 @@
   "preservation_start": "PENDING",
   "preservation_complete": "PENDING",
   "wall_clock_span_seconds": "PENDING",
-  "substantive_unit_count": 4,
+  "substantive_unit_count": 5,
   "substantive_unit_ledger": [
     {
       "completed_at": "2026-09-22T17:05:05+01:00",
@@ -73,6 +79,11 @@
       "completed_at": "2026-09-22T17:18:00+01:00",
       "unit": "attempt exact all-source-population supplement forcing on 16 kernels",
       "result": "Interrupted after 9m11s without aggregate; no mathematical result claimed; pivot required."
+    },
+    {
+      "completed_at": "2026-09-22T17:19:29+01:00",
+      "unit": "hostile supplement replay on MILP witnesses",
+      "result": "All 16 particular MILP witness populations fail inherited one-supplement condition; alternative populations remain undecided."
     }
   ],
   "early_stop_check": {
@@ -88,9 +99,10 @@
     "5c0ba6a454767e4a930b370b7687d6165e9b4d08",
     "8ec0aa31dadd32dbcc22e1e3ae7f6826efa258b4",
     "416ca3c136161afecbc8f913cb72ebb14a552752",
-    "067f0c74c8a6568ba53de9e01220e669fdcf830c"
+    "067f0c74c8a6568ba53de9e01220e669fdcf830c",
+    "bc75030d5c73335dd7eb93668d83c70bd57754ad"
   ],
-  "unfinished_line": "Formulate bounded one-supplement feasibility for 16 support-eight survivors.",
+  "unfinished_line": "Early-exit exact search for an alternative supplement-feasible population in each of 16 kernels.",
   "target": {
     "applicable": true,
     "available_seconds": 3160,

@@ -1,0 +1,247 @@
+{
+  "kernels": 16,
+  "witness_supplement_feasible": 0,
+  "rows": [
+    {
+      "mask": 5691760,
+      "R": [
+        1,
+        1,
+        1,
+        1,
+        1,
+        2,
+        2,
+        2
+      ],
+      "source_count": 3,
+      "milp_witness_supplement_feasible": false
+    },
+    {
+      "mask": 5192304,
+      "R": [
+        2,
+        2,
+        2,
+        1,
+        1,
+        1,
+        1,
+        1
+      ],
+      "source_count": 4,
+      "milp_witness_supplement_feasible": false
+    },
+    {
+      "mask": 6215777,
+      "R": [
+        1,
+        1,
+        1,
+        1,
+        1,
+        2,
+        2,
+        2
+      ],
+      "source_count": 3,
+      "milp_witness_supplement_feasible": false
+    },
+    {
+      "mask": 14334528,
+      "R": [
+        2,
+        1,
+        1,
+        1,
+        1,
+        2,
+        2,
+        1
+      ],
+      "source_count": 3,
+      "milp_witness_supplement_feasible": false
+    },
+    {
+      "mask": 14588096,
+      "R": [
+        2,
+        1,
+        1,
+        1,
+        1,
+        2,
+        2,
+        1
+      ],
+      "source_count": 3,
+      "milp_witness_supplement_feasible": false
+    },
+    {
+      "mask": 15391072,
+      "R": [
+        1,
+        1,
+        1,
+        1,
+        1,
+        2,
+        2,
+        2
+      ],
+      "source_count": 4,
+      "milp_witness_supplement_feasible": false
+    },
+    {
+      "mask": 23804464,
+      "R": [
+        1,
+        1,
+        1,
+        1,
+        1,
+        2,
+        2,
+        2
+      ],
+      "source_count": 4,
+      "milp_witness_supplement_feasible": false
+    },
+    {
+      "mask": 23804464,
+      "R": [
+        1,
+        1,
+        2,
+        1,
+        2,
+        1,
+        1,
+        2
+      ],
+      "source_count": 4,
+      "milp_witness_supplement_feasible": false
+    },
+    {
+      "mask": 48674816,
+      "R": [
+        2,
+        1,
+        1,
+        2,
+        1,
+        2,
+        1,
+        1
+      ],
+      "source_count": 5,
+      "milp_witness_supplement_feasible": false
+    },
+    {
+      "mask": 48730368,
+      "R": [
+        2,
+        1,
+        2,
+        1,
+        2,
+        1,
+        1,
+        1
+      ],
+      "source_count": 4,
+      "milp_witness_supplement_feasible": false
+    },
+    {
+      "mask": 52869680,
+      "R": [
+        1,
+        1,
+        1,
+        1,
+        2,
+        2,
+        1,
+        2
+      ],
+      "source_count": 4,
+      "milp_witness_supplement_feasible": false
+    },
+    {
+      "mask": 52869680,
+      "R": [
+        1,
+        2,
+        2,
+        1,
+        1,
+        1,
+        1,
+        2
+      ],
+      "source_count": 4,
+      "milp_witness_supplement_feasible": false
+    },
+    {
+      "mask": 133695682,
+      "R": [
+        1,
+        1,
+        1,
+        1,
+        1,
+        2,
+        2,
+        2
+      ],
+      "source_count": 4,
+      "milp_witness_supplement_feasible": false
+    },
+    {
+      "mask": 142036048,
+      "R": [
+        1,
+        1,
+        1,
+        1,
+        2,
+        1,
+        2,
+        2
+      ],
+      "source_count": 5,
+      "milp_witness_supplement_feasible": false
+    },
+    {
+      "mask": 149654084,
+      "R": [
+        1,
+        1,
+        1,
+        1,
+        1,
+        2,
+        2,
+        2
+      ],
+      "source_count": 5,
+      "milp_witness_supplement_feasible": false
+    },
+    {
+      "mask": 267911299,
+      "R": [
+        1,
+        1,
+        1,
+        1,
+        1,
+        2,
+        2,
+        2
+      ],
+      "source_count": 5,
+      "milp_witness_supplement_feasible": false
+    }
+  ],
+  "scope": "Checks one MILP witness per kernel only; failure does not prove that every source population fails."
+}

@@ -9,23 +9,23 @@ CHECKPOINT CLASS: VERIFIED_INTERNAL_NOT_PROMOTED
 
 WORK MODE: FORWARD_RESEARCH_LIVE
 
-INSPECTED PREDECESSOR: 067f0c74c8a6568ba53de9e01220e669fdcf830c.
+INSPECTED PREDECESSOR: bc75030d5c73335dd7eb93668d83c70bd57754ad.
 
-LAST VERIFIED RESULT: At r=11 support eight, partitions (4,1^7) and (3,2,1^6) are source-infeasible. Partition (2,2,2,1^5) is reduced from 1,670 strict cores to 16 source-feasible rows, all with t_upper=1. An exact enumerator for all source multisets plus inherited one-supplement forcing was interrupted after 9m11s without a final aggregate; no closure is inferred.
+LAST VERIFIED RESULT: At r=11 support eight, two partitions are source-infeasible and (2,2,2,1^5) is reduced to 16 source-feasible rows. The inherited one-supplement test rejects the particular MILP witness population for each of all 16 rows. This is a hostile-witness result only: alternative source populations remain possible, so no support-eight closure is claimed.
 
-EVIDENCE: source-screen JSON files plus the preserved failed enumerator `r11_support8_case2_supplements.py` in `project/research/general_n/2026-09-22-r11-quotient-v1/`; canonical telemetry.
+EVIDENCE: `r11_support8_milp_witness_supplements.py` and JSON output in `project/research/general_n/2026-09-22-r11-quotient-v1/`; canonical telemetry.
 
-SESSION UTILISATION: Trigger 17:00:38 BST; actual start 17:00:58; four closed intervals; verified total 642s (10m42s); four substantive units including one bounded failed computation; cutoff 17:53:38; target YES/PENDING; LIVE.
+SESSION UTILISATION: Trigger 17:00:38 BST; actual start 17:00:58; five closed intervals; verified total 642s (10m42s); five substantive units; cutoff 17:53:38; target YES/PENDING; LIVE.
 
-UNPRESERVED WORK: None; interrupted enumerator produced an empty output file and no claim.
+UNPRESERVED WORK: None at this checkpoint.
 
 DEFERRED ADMIN: Historical reconciliation and prose-only README edits.
 
-NEXT ACTION: Pivot from unbounded all-populations enumeration to a bounded per-kernel feasibility formulation for the one-supplement condition.
+NEXT ACTION: Search alternative source populations per kernel with early exit and bounded per-kernel time, preserving exact undecided rows instead of enumerating all populations.
 
 FOCUSED-SESSION COUNT: 1/24; current trigger credit pending final compliance.
 
-MANDATORY CONSTRAINTS: Do not infer results from interrupted computation; the 16 rows remain abstract source feasibility only.
+MANDATORY CONSTRAINTS: Failure of one witness is not universal source-population failure; do not promote the finite result to graph realization.
 <!-- CURRENT-STATUS:END -->
 
 ## Latest adversarial audit - 22 September 2026
