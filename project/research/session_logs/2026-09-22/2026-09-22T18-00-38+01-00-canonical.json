@@ -45,14 +45,20 @@
       "stop": "2026-09-22T18:18:43+01:00",
       "seconds": 45,
       "evidence": "exact r=12 support-six quotient/source screen"
+    },
+    {
+      "start": "2026-09-22T18:20:19+01:00",
+      "stop": "2026-09-22T18:20:20+01:00",
+      "seconds": 1,
+      "evidence": "combined source/supplement MILP for three r=12 support-six kernels"
     }
   ],
-  "verified_forward_span_seconds": 568,
+  "verified_forward_span_seconds": 569,
   "forward_stop": "PENDING",
   "preservation_start": "PENDING",
   "preservation_complete": "PENDING",
   "wall_clock_span_seconds": "PENDING",
-  "substantive_unit_count": 4,
+  "substantive_unit_count": 5,
   "substantive_unit_ledger": [
     {
       "completed_at": "2026-09-22T18:06:42+01:00",
@@ -73,6 +79,11 @@
       "completed_at": "2026-09-22T18:18:43+01:00",
       "unit": "r=12 support-six exact screen",
       "result": "11 partitions, 230 strict orbits, 3 source-feasible kernels, all in (4,2,2,2,1,1)."
+    },
+    {
+      "completed_at": "2026-09-22T18:20:20+01:00",
+      "unit": "r=12 support-six supplement forcing",
+      "result": "3/3 combined source/supplement MILPs infeasible; 0 unknown; support six internally closed."
     }
   ],
   "early_stop_check": {
@@ -86,9 +97,10 @@
     "634818a6a93710421045db9f1cbcdc5fafb5f8b0",
     "6a159d60a257346984d4269c7b65d7de15ce76ae",
     "522d1dbde17bde6ca468a042a17175d307fef0ca",
-    "b77c36943399dbe2f5c2fe2b1dbff397e0750760"
+    "b77c36943399dbe2f5c2fe2b1dbff397e0750760",
+    "e0e945f26051f812463dfb24c97a858f436fae17"
   ],
-  "unfinished_line": "Supplement-force three r=12 support-six kernels; then supports 7-11.",
+  "unfinished_line": "Enumerate and screen r=12 supports 7 through 11.",
   "target": {
     "applicable": false,
     "available_seconds": 2969,

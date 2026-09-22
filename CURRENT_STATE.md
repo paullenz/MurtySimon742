@@ -9,21 +9,21 @@ CHECKPOINT CLASS: VERIFIED_INTERNAL_NOT_PROMOTED
 
 WORK MODE: FORWARD_RESEARCH_LIVE
 
-INSPECTED PREDECESSOR: b77c36943399dbe2f5c2fe2b1dbff397e0750760.
+INSPECTED PREDECESSOR: e0e945f26051f812463dfb24c97a858f436fae17.
 
-LAST VERIFIED RESULT: r=12 is internally closed for supports <=5. Exact support-six enumeration covers all 11 residual partitions and 230 strict quotient orbits. Physical-source screening rejects 227; exactly 3 source-feasible kernels remain, all in partition (4,2,2,2,1,1), and require supplement forcing. No support-six closure is yet claimed.
+LAST VERIFIED RESULT: r=12 is internally closed through support six. Supports <=5 have no source-feasible quotient. Support six has 230 strict orbits; its only 3 source-feasible kernels, all in partition (4,2,2,2,1,1), are infeasible in the combined source/supplement MILP with zero unknown cases. Supports 7 through 11 remain.
 
-EVIDENCE: `project/research/general_n/2026-09-22-r12-quotient-v1/r12_support6.py/json` and counts; canonical telemetry.
+EVIDENCE: complete support<=5 and support-six artifacts under `project/research/general_n/2026-09-22-r12-quotient-v1/`; canonical telemetry.
 
-SESSION UTILISATION: Trigger 18:00:38 BST; actual start 18:04:09; four closed intervals; verified total 568s (9m28s); four substantive units; cutoff 18:53:38; target N/A late start; LIVE.
+SESSION UTILISATION: Trigger 18:00:38 BST; actual start 18:04:09; five closed intervals; verified total 569s (9m29s); five substantive units; cutoff 18:53:38; target N/A late start; LIVE.
 
 UNPRESERVED WORK: None at this checkpoint.
 
-NEXT ACTION: Apply an exact combined source/supplement MILP to the three (4,2,2,2,1,1) kernels, then proceed to support seven.
+NEXT ACTION: Enumerate r=12 support-seven strict cores by residual partition and apply a sharded physical-source screen.
 
 FOCUSED-SESSION COUNT: 1/24; current trigger credit pending final compliance.
 
-MANDATORY CONSTRAINTS: Three abstract source-feasible kernels remain; do not claim r=12 support-six closure yet.
+MANDATORY CONSTRAINTS: Internal MILP closure is not graph realization or external verification; S<=14 is not claimed until all supports close.
 <!-- CURRENT-STATUS:END -->
 
 ## Latest adversarial audit - 22 September 2026
