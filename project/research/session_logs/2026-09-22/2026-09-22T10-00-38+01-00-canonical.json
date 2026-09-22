@@ -25,6 +25,13 @@
       "actual_stop": "2026-09-22T10:08:19+01:00",
       "role": "forward_research",
       "notes": "Mandatory mathematical source review and direct zero-demand equality proof, both parities."
+    },
+    {
+      "segment_id": "research-2",
+      "actual_start": "2026-09-22T10:09:03+01:00",
+      "actual_stop": "2026-09-22T10:14:15+01:00",
+      "role": "forward_research",
+      "notes": "Build and run actual-graph equality/orientation checker; hostile replay and low-residual diagnostics."
     }
   ],
   "forward_research_intervals": [
@@ -32,6 +39,11 @@
       "start": "2026-09-22T10:03:41+01:00",
       "stop": "2026-09-22T10:08:19+01:00",
       "evidence": "ZERO_DEMAND_EQUALITY.md"
+    },
+    {
+      "start": "2026-09-22T10:09:03+01:00",
+      "stop": "2026-09-22T10:14:15+01:00",
+      "evidence": "EQUALITY_REGRESSION.md, check_equality_boundary.py, EQUALITY_RESULTS.json"
     }
   ],
   "forward_research_stop": null,
@@ -39,16 +51,22 @@
   "preservation_complete": null,
   "final_report_time": null,
   "wall_clock_span_to_preservation_complete": null,
-  "verified_forward_research_span": 278,
+  "verified_forward_research_span": 590,
   "verified_forward_research_span_units": "seconds",
   "preservation_span": null,
-  "substantive_unit_count": 1,
+  "substantive_unit_count": 2,
   "timestamped_unit_ledger": [
     {
       "completed_at": "2026-09-22T10:08:19+01:00",
       "unit": "Zero-demand equality rigidity",
       "result": "Internal proof: S=0 implies the bound with equality exactly balanced complete bipartite; odd parity closed by Boolean indegree-one expansion.",
       "artifact": "project/research/general_n/2026-09-22-zero-demand-equality-v1/ZERO_DEMAND_EQUALITY.md"
+    },
+    {
+      "completed_at": "2026-09-22T10:14:15+01:00",
+      "unit": "Actual graph equality/orientation replay and noncritical impostor",
+      "result": "PASS 1396 fixtures, 2783 roots, 68741 assignments; 56 roots sampled, others exhaustive; both equality parities checked.",
+      "artifact": "project/research/general_n/2026-09-22-zero-demand-equality-v1/EQUALITY_REGRESSION.md"
     }
   ],
   "early_stop_check_time": null,
@@ -60,9 +78,10 @@
   "compliance_status": "IN_PROGRESS",
   "infrastructure_failures": [],
   "commit_shas": [
-    "4ddec2c1db2ec95293b98a385740d7e0345b651e"
+    "4ddec2c1db2ec95293b98a385740d7e0345b651e",
+    "fc05fdbf12a1adac2d57d063232f255300333342"
   ],
-  "live_unfinished_line": "Regress Boolean orientation and equality argument on actual graphs; analyze residual-one obstruction.",
+  "live_unfinished_line": "Prove the residual-one/two obstruction and the low positive-demand equality gap.",
   "historical_fragments": [],
   "focused_session_credit": 0
 }

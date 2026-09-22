@@ -2,6 +2,9 @@
 
 <!-- Keep the live overview and status tables here. Put dated updates below them, never above them. -->
 <!-- CURRENT-STATUS:START -->
+
+**22 September equality branch:** A new [internal zero-demand equality proof](project/research/general_n/2026-09-22-zero-demand-equality-v1/ZERO_DEMAND_EQUALITY.md) closes S=0 with equality exactly balanced complete bipartite, including odd order. [Actual-graph replay](project/research/general_n/2026-09-22-zero-demand-equality-v1/EQUALITY_REGRESSION.md) passed 1,396 fixtures and 68,741 legal assignments (56 roots sampled). This does not close the positive-demand strip or constitute external review.
+
 ## Current status
 
 ### Active mathematical target
