@@ -9,21 +9,21 @@ CHECKPOINT CLASS: VERIFIED_INTERNAL_NOT_PROMOTED
 
 WORK MODE: FORWARD_RESEARCH_LIVE
 
-INSPECTED PREDECESSOR: 635d07b626af00085688f3b5a003f51aab6cc485.
+INSPECTED PREDECESSOR: c0fde0bb7785738a069dcf048f5fd02b359b543a.
 
-LAST VERIFIED RESULT: r=12 is internally closed through support six. Exact support-seven orbit enumeration covers all 7 residual partitions, 249,552 residual-coloured core orbits, and 2,179 optimistic strict candidates. Counts by partition are 88, 450, 237, 534, 409, 389, and 72. Physical-source screening is next; no support-seven closure is yet claimed.
+LAST VERIFIED RESULT: r=12 is internally closed through support six. At support seven, exact physical-source screening rejects 2,177 of 2,179 strict cores and leaves exactly two source-feasible kernels, both in residual partition (2,2,2,2,2,1,1), with t_upper=1. Exact supplement forcing remains; no support-seven closure is yet claimed.
 
-EVIDENCE: `r12_support7_orbits.cpp`, counts, and mask file in the r12 quotient package; canonical telemetry.
+EVIDENCE: support-seven orbit census and `r12_support7_sources.py/json` in the r12 quotient package; canonical telemetry.
 
-SESSION UTILISATION: Trigger 18:00:38 BST; actual start 18:04:09; six closed intervals; verified total 571s (9m31s); six substantive units; cutoff 18:53:38; target N/A late start; LIVE.
+SESSION UTILISATION: Trigger 18:00:38 BST; actual start 18:04:09; seven closed intervals; verified total 989s (16m29s); seven substantive units; cutoff 18:53:38; target N/A late start; LIVE.
 
 UNPRESERVED WORK: None at this checkpoint.
 
-NEXT ACTION: Shard the 2,179 support-seven strict cores by residual partition and apply exact integer physical-source feasibility.
+NEXT ACTION: Apply combined source/supplement MILP to the two support-seven kernels; then scope support-eight partitions.
 
 FOCUSED-SESSION COUNT: 1/24; current trigger credit pending final compliance.
 
-MANDATORY CONSTRAINTS: Strict quotient census is not source feasibility or graph realization; no S<=14 extension yet.
+MANDATORY CONSTRAINTS: Two abstract source-feasible kernels remain; no r=12 support-seven or S<=14 closure yet.
 <!-- CURRENT-STATUS:END -->
 
 ## Latest adversarial audit - 22 September 2026
