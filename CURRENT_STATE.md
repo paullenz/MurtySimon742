@@ -9,23 +9,23 @@ CHECKPOINT CLASS: VERIFIED_INTERNAL_NOT_PROMOTED
 
 WORK MODE: FORWARD_RESEARCH_LIVE
 
-INSPECTED PREDECESSOR: a9a662ac68e10d55b1d0bc544568f4170c3901b2.
+INSPECTED PREDECESSOR: ab0a475be153792ed014c01a750f7bd32b855c60.
 
-LAST VERIFIED RESULT: The r=11 support-eight screen is internally closed. Partitions (4,1^7) and (3,2,1^6) have no physical-source population. For (2,2,2,1^5), only 16 of 1,670 strict cores passed the source MILP; a corrected pivoted exact DFS exhaustively tested all source multisets for those 16 and found no one-supplement-feasible population (0 found, 16 exhausted, 0 truncated). Supports nine and ten remain. General theorem and equality remain open.
+LAST VERIFIED RESULT: r=11 is internally closed through support eight. Exact support-nine orbit enumeration over all 274,668 unlabelled nine-vertex cores produced 2,208,612 residual-coloured orbits for (3,1^8), with 125 optimistic strict candidates, and 8,295,664 coloured orbits for (2,2,1^7), with 3,148 strict candidates. The combined 3,273 candidates await physical-source screening.
 
-EVIDENCE: `r11_support8_earlyexit.py` and JSON output, together with three source-screen shards in `project/research/general_n/2026-09-22-r11-quotient-v1/`; canonical telemetry.
+EVIDENCE: `r11_support9_orbits.cpp`, counts, and masks under `project/research/general_n/2026-09-22-r11-quotient-v1/`; canonical telemetry.
 
-SESSION UTILISATION: Trigger 17:00:38 BST; actual start 17:00:58; six closed intervals; verified total 656s (10m56s); six substantive units; cutoff 17:53:38; target YES/PENDING; LIVE.
+SESSION UTILISATION: Trigger 17:00:38 BST; actual start 17:00:58; seven closed intervals; verified total 820s (13m40s); seven substantive units; cutoff 17:53:38; target YES/PENDING; LIVE.
 
 UNPRESERVED WORK: None at this checkpoint.
 
 DEFERRED ADMIN: Historical reconciliation and prose-only README edits.
 
-NEXT ACTION: Enumerate r=11 support-nine strict core orbits by residual partition, then apply the source screen shardwise.
+NEXT ACTION: Apply the exact integer physical-source MILP screen to both support-nine partitions shardwise.
 
 FOCUSED-SESSION COUNT: 1/24; current trigger credit pending final compliance.
 
-MANDATORY CONSTRAINTS: This is internal computer-assisted closure at the quotient/source/supplement layer, not graph realization or external verification.
+MANDATORY CONSTRAINTS: Orbit/strict-core feasibility is not graph realization; equality controls remain mandatory.
 <!-- CURRENT-STATUS:END -->
 
 ## Latest adversarial audit - 22 September 2026

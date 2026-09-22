@@ -57,14 +57,20 @@
       "stop": "2026-09-22T17:22:07+01:00",
       "seconds": 14,
       "evidence": "corrected pivoted exact DFS over all source multisets for 16 support-eight kernels"
+    },
+    {
+      "start": "2026-09-22T17:23:04+01:00",
+      "stop": "2026-09-22T17:25:48+01:00",
+      "seconds": 164,
+      "evidence": "exact r=11 support-nine orbit and strict-core enumeration"
     }
   ],
-  "verified_forward_span_seconds": 656,
+  "verified_forward_span_seconds": 820,
   "forward_stop": "PENDING",
   "preservation_start": "PENDING",
   "preservation_complete": "PENDING",
   "wall_clock_span_seconds": "PENDING",
-  "substantive_unit_count": 6,
+  "substantive_unit_count": 7,
   "substantive_unit_ledger": [
     {
       "completed_at": "2026-09-22T17:05:05+01:00",
@@ -95,6 +101,11 @@
       "completed_at": "2026-09-22T17:22:07+01:00",
       "unit": "exact supplement forcing for remaining r=11 support-eight kernels",
       "result": "0 supplement-feasible, 16 exhaustively rejected, 0 truncated; support eight internally closed."
+    },
+    {
+      "completed_at": "2026-09-22T17:25:48+01:00",
+      "unit": "r=11 support-nine orbit census",
+      "result": "10,504,276 coloured orbits across two partitions; 3,273 optimistic strict candidates (125 + 3,148)."
     }
   ],
   "early_stop_check": {
@@ -112,9 +123,10 @@
     "416ca3c136161afecbc8f913cb72ebb14a552752",
     "067f0c74c8a6568ba53de9e01220e669fdcf830c",
     "bc75030d5c73335dd7eb93668d83c70bd57754ad",
-    "a9a662ac68e10d55b1d0bc544568f4170c3901b2"
+    "a9a662ac68e10d55b1d0bc544568f4170c3901b2",
+    "ab0a475be153792ed014c01a750f7bd32b855c60"
   ],
-  "unfinished_line": "Enumerate and screen r=11 supports nine and ten.",
+  "unfinished_line": "Physical-source screen the 3,273 support-nine candidates, then handle support ten.",
   "target": {
     "applicable": true,
     "available_seconds": 3160,

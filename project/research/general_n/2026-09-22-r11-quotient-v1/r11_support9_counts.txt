@@ -1,0 +1,10 @@
+unlabelled2=2
+unlabelled3=4
+unlabelled4=11
+unlabelled5=34
+unlabelled6=156
+unlabelled7=1044
+unlabelled8=12346
+unlabelled9=274668
+case=0 coloured=2208612 strict=125
+case=1 coloured=8295664 strict=3148
