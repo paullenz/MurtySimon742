@@ -9,17 +9,17 @@ CHECKPOINT CLASS: VERIFIED_INTERNAL_NOT_PROMOTED
 
 WORK MODE: MATH
 
-INSPECTED PREDECESSOR: b6d69cabc478ea2030d1d0f4499897bb34d7e622.
+INSPECTED PREDECESSOR: 1fe8b879c5317419e30da2c19f6272496672684f.
 
-LAST VERIFIED RESULT: Support-ten partition (2,2,1^8) source shard 6/8 rejects all 798 strict kernels, with zero solver-unknown cases. Across shards 0-6, 32 source-feasible kernels remain among 5,587 screened kernels.
+LAST VERIFIED RESULT: The complete support-ten partition (2,2,1^8) source screen is finished: all 6,386 strict kernels were decided, 42 are source-feasible, 6,344 are source-infeasible, and none is solver-unknown. Shard 7/8 itself rejects all 799 kernels.
 
-EVIDENCE: project/research/general_n/2026-09-22-independent-742-r12-quotient/r12_support10_case1_source_chunk6.json; canonical telemetry at project/research/session_logs/2026-09-22/2026-09-22T22-00-38+01-00-canonical.json.
+EVIDENCE: project/research/general_n/2026-09-22-independent-742-r12-quotient/r12_support10_case1_source_chunk7.json and source shards 0-7; canonical telemetry at project/research/session_logs/2026-09-22/2026-09-22T22-00-38+01-00-canonical.json.
 
-SESSION UTILISATION: Trigger 22:00:38 BST; authoritative entry 22:00:33; six closed intervals totaling 1589s (26m29s); six substantive units; cutoff 22:53:38; 50-minute target applies and remains pending.
+SESSION UTILISATION: Trigger 22:00:38 BST; authoritative entry 22:00:33; seven closed intervals totaling 1862s (31m02s); seven substantive units; cutoff 22:53:38; 50-minute target applies and remains pending.
 
 UNPRESERVED WORK: None.
 
-NEXT ACTION: Run and checkpoint support-ten case-1 source chunk 7/8, then supplement-screen the full survivor set.
+NEXT ACTION: Aggregate the 42 source-feasible kernels and supplement-screen them exactly.
 
 FOCUSED-SESSION COUNT: 1/24; current-session credit pending.
 

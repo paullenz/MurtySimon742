@@ -59,6 +59,12 @@
       "stop": "2026-09-22T22:35:06+01:00",
       "seconds": 268,
       "unit": "Source screen shard 6/8 for support-ten partition (2,2,1^8)."
+    },
+    {
+      "start": "2026-09-22T22:36:00+01:00",
+      "stop": "2026-09-22T22:40:33+01:00",
+      "seconds": 273,
+      "unit": "Source screen shard 7/8 for support-ten partition (2,2,1^8)."
     }
   ],
   "forward_research_stop": "PENDING",
@@ -67,12 +73,12 @@
   "final_report_time": "PENDING",
   "wall_clock_span_to_preservation_complete": "PENDING",
   "verified_forward_research_span": {
-    "seconds": 1589,
-    "human": "26m29s",
-    "basis": "Union of six closed intervals."
+    "seconds": 1862,
+    "human": "31m02s",
+    "basis": "Union of seven closed intervals."
   },
   "preservation_span": "PENDING",
-  "substantive_unit_count": 6,
+  "substantive_unit_count": 7,
   "timestamped_unit_ledger": [
     {
       "unit": 1,
@@ -115,6 +121,13 @@
       "complete": "2026-09-22T22:35:06+01:00",
       "result": "Shard 6/8 screened 798 strict kernels: 0 source-feasible, 798 source-infeasible, 0 solver-unknown.",
       "evidence": "project/research/general_n/2026-09-22-independent-742-r12-quotient/r12_support10_case1_source_chunk6.json"
+    },
+    {
+      "unit": 7,
+      "start": "2026-09-22T22:36:00+01:00",
+      "complete": "2026-09-22T22:40:33+01:00",
+      "result": "Shard 7/8 screened 799 strict kernels: 0 source-feasible, 799 source-infeasible, 0 solver-unknown. Full source screen complete: 42 feasible of 6,386, no unknown.",
+      "evidence": "project/research/general_n/2026-09-22-independent-742-r12-quotient/r12_support10_case1_source_chunk7.json"
     }
   ],
   "early_stop_check_time": "PENDING",
@@ -155,9 +168,14 @@
       "kind": "UNIT_5",
       "sha": "b6d69cabc478ea2030d1d0f4499897bb34d7e622",
       "published_at": "2026-09-22T22:30:25+01:00"
+    },
+    {
+      "kind": "UNIT_6",
+      "sha": "1fe8b879c5317419e30da2c19f6272496672684f",
+      "published_at": "2026-09-22T22:35:46+01:00"
     }
   ],
-  "live_unfinished_line": "Run support-ten case-1 source chunk 7, aggregate all source survivors, and supplement-screen them.",
+  "live_unfinished_line": "Aggregate the 42 source-feasible support-ten case-1 kernels and supplement-screen them.",
   "historical_fragments": [],
   "started_record_published_at": "2026-09-22T22:03:10+01:00"
 }

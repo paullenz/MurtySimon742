@@ -1,0 +1,26 @@
+{
+  "chunk": 7,
+  "chunks": 8,
+  "feasible_rows": [],
+  "partition": [
+    2,
+    2,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1
+  ],
+  "range": [
+    5587,
+    6386
+  ],
+  "scope": "Integer physical-source necessary condition encoded as MILP; internal computer-assisted result, not graph realization.",
+  "solver_unknown": 0,
+  "source_feasible": 0,
+  "strict_core_orbits": 799,
+  "unknown_rows": []
+}
