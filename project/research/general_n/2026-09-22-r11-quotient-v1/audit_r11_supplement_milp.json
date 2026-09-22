@@ -1,0 +1,401 @@
+{
+  "kernels": 27,
+  "feasible": 0,
+  "infeasible": 27,
+  "unknown": 0,
+  "by_support": {
+    "8": {
+      "kernels": 16,
+      "feasible": 0
+    },
+    "9": {
+      "kernels": 8,
+      "feasible": 0
+    },
+    "10": {
+      "kernels": 3,
+      "feasible": 0
+    }
+  },
+  "rows": [
+    {
+      "index": 0,
+      "support": 8,
+      "key": [
+        5691760,
+        null,
+        null
+      ],
+      "patterns": 578,
+      "helper_constraints": 501,
+      "status": 2,
+      "success": false,
+      "message": "The problem is infeasible. (HiGHS Status 8: model_status is Infeasible; primal_status is None)"
+    },
+    {
+      "index": 1,
+      "support": 8,
+      "key": [
+        5192304,
+        null,
+        null
+      ],
+      "patterns": 572,
+      "helper_constraints": 487,
+      "status": 2,
+      "success": false,
+      "message": "The problem is infeasible. (HiGHS Status 8: model_status is Infeasible; primal_status is None)"
+    },
+    {
+      "index": 2,
+      "support": 8,
+      "key": [
+        6215777,
+        null,
+        null
+      ],
+      "patterns": 600,
+      "helper_constraints": 545,
+      "status": 2,
+      "success": false,
+      "message": "The problem is infeasible. (HiGHS Status 8: model_status is Infeasible; primal_status is None)"
+    },
+    {
+      "index": 3,
+      "support": 8,
+      "key": [
+        14334528,
+        null,
+        null
+      ],
+      "patterns": 680,
+      "helper_constraints": 645,
+      "status": 2,
+      "success": false,
+      "message": "The problem is infeasible. (HiGHS Status 8: model_status is Infeasible; primal_status is None)"
+    },
+    {
+      "index": 4,
+      "support": 8,
+      "key": [
+        14588096,
+        null,
+        null
+      ],
+      "patterns": 683,
+      "helper_constraints": 636,
+      "status": 2,
+      "success": false,
+      "message": "The problem is infeasible. (HiGHS Status 8: model_status is Infeasible; primal_status is None)"
+    },
+    {
+      "index": 5,
+      "support": 8,
+      "key": [
+        15391072,
+        null,
+        null
+      ],
+      "patterns": 605,
+      "helper_constraints": 564,
+      "status": 2,
+      "success": false,
+      "message": "The problem is infeasible. (HiGHS Status 8: model_status is Infeasible; primal_status is None)"
+    },
+    {
+      "index": 6,
+      "support": 8,
+      "key": [
+        23804464,
+        null,
+        null
+      ],
+      "patterns": 600,
+      "helper_constraints": 552,
+      "status": 2,
+      "success": false,
+      "message": "The problem is infeasible. (HiGHS Status 8: model_status is Infeasible; primal_status is None)"
+    },
+    {
+      "index": 7,
+      "support": 8,
+      "key": [
+        23804464,
+        null,
+        null
+      ],
+      "patterns": 597,
+      "helper_constraints": 545,
+      "status": 2,
+      "success": false,
+      "message": "The problem is infeasible. (HiGHS Status 8: model_status is Infeasible; primal_status is None)"
+    },
+    {
+      "index": 8,
+      "support": 8,
+      "key": [
+        48674816,
+        null,
+        null
+      ],
+      "patterns": 829,
+      "helper_constraints": 837,
+      "status": 2,
+      "success": false,
+      "message": "The problem is infeasible. (HiGHS Status 8: model_status is Infeasible; primal_status is None)"
+    },
+    {
+      "index": 9,
+      "support": 8,
+      "key": [
+        48730368,
+        null,
+        null
+      ],
+      "patterns": 859,
+      "helper_constraints": 913,
+      "status": 2,
+      "success": false,
+      "message": "The problem is infeasible. (HiGHS Status 8: model_status is Infeasible; primal_status is None)"
+    },
+    {
+      "index": 10,
+      "support": 8,
+      "key": [
+        52869680,
+        null,
+        null
+      ],
+      "patterns": 622,
+      "helper_constraints": 599,
+      "status": 2,
+      "success": false,
+      "message": "The problem is infeasible. (HiGHS Status 8: model_status is Infeasible; primal_status is None)"
+    },
+    {
+      "index": 11,
+      "support": 8,
+      "key": [
+        52869680,
+        null,
+        null
+      ],
+      "patterns": 617,
+      "helper_constraints": 581,
+      "status": 2,
+      "success": false,
+      "message": "The problem is infeasible. (HiGHS Status 8: model_status is Infeasible; primal_status is None)"
+    },
+    {
+      "index": 12,
+      "support": 8,
+      "key": [
+        133695682,
+        null,
+        null
+      ],
+      "patterns": 655,
+      "helper_constraints": 661,
+      "status": 2,
+      "success": false,
+      "message": "The problem is infeasible. (HiGHS Status 8: model_status is Infeasible; primal_status is None)"
+    },
+    {
+      "index": 13,
+      "support": 8,
+      "key": [
+        142036048,
+        null,
+        null
+      ],
+      "patterns": 617,
+      "helper_constraints": 580,
+      "status": 2,
+      "success": false,
+      "message": "The problem is infeasible. (HiGHS Status 8: model_status is Infeasible; primal_status is None)"
+    },
+    {
+      "index": 14,
+      "support": 8,
+      "key": [
+        149654084,
+        null,
+        null
+      ],
+      "patterns": 640,
+      "helper_constraints": 647,
+      "status": 2,
+      "success": false,
+      "message": "The problem is infeasible. (HiGHS Status 8: model_status is Infeasible; primal_status is None)"
+    },
+    {
+      "index": 15,
+      "support": 8,
+      "key": [
+        267911299,
+        null,
+        null
+      ],
+      "patterns": 741,
+      "helper_constraints": 871,
+      "status": 2,
+      "success": false,
+      "message": "The problem is infeasible. (HiGHS Status 8: model_status is Infeasible; primal_status is None)"
+    },
+    {
+      "index": 16,
+      "support": 9,
+      "key": [
+        3942950032,
+        null,
+        null
+      ],
+      "patterns": 1500,
+      "helper_constraints": 1646,
+      "status": 2,
+      "success": false,
+      "message": "The problem is infeasible. (HiGHS Status 8: model_status is Infeasible; primal_status is None)"
+    },
+    {
+      "index": 17,
+      "support": 9,
+      "key": [
+        3942951048,
+        null,
+        null
+      ],
+      "patterns": 1597,
+      "helper_constraints": 1906,
+      "status": 2,
+      "success": false,
+      "message": "The problem is infeasible. (HiGHS Status 8: model_status is Infeasible; primal_status is None)"
+    },
+    {
+      "index": 18,
+      "support": 9,
+      "key": [
+        3942951048,
+        null,
+        null
+      ],
+      "patterns": 1584,
+      "helper_constraints": 1852,
+      "status": 2,
+      "success": false,
+      "message": "The problem is infeasible. (HiGHS Status 8: model_status is Infeasible; primal_status is None)"
+    },
+    {
+      "index": 19,
+      "support": 9,
+      "key": [
+        3942983812,
+        null,
+        null
+      ],
+      "patterns": 1635,
+      "helper_constraints": 1994,
+      "status": 2,
+      "success": false,
+      "message": "The problem is infeasible. (HiGHS Status 8: model_status is Infeasible; primal_status is None)"
+    },
+    {
+      "index": 20,
+      "support": 9,
+      "key": [
+        3945013648,
+        null,
+        null
+      ],
+      "patterns": 1508,
+      "helper_constraints": 1640,
+      "status": 2,
+      "success": false,
+      "message": "The problem is infeasible. (HiGHS Status 8: model_status is Infeasible; primal_status is None)"
+    },
+    {
+      "index": 21,
+      "support": 9,
+      "key": [
+        3945015426,
+        null,
+        null
+      ],
+      "patterns": 1549,
+      "helper_constraints": 1740,
+      "status": 2,
+      "success": false,
+      "message": "The problem is infeasible. (HiGHS Status 8: model_status is Infeasible; primal_status is None)"
+    },
+    {
+      "index": 22,
+      "support": 9,
+      "key": [
+        14632405184,
+        null,
+        null
+      ],
+      "patterns": 1590,
+      "helper_constraints": 1845,
+      "status": 2,
+      "success": false,
+      "message": "The problem is infeasible. (HiGHS Status 8: model_status is Infeasible; primal_status is None)"
+    },
+    {
+      "index": 23,
+      "support": 9,
+      "key": [
+        14647084176,
+        null,
+        null
+      ],
+      "patterns": 1721,
+      "helper_constraints": 2222,
+      "status": 2,
+      "success": false,
+      "message": "The problem is infeasible. (HiGHS Status 8: model_status is Infeasible; primal_status is None)"
+    },
+    {
+      "index": 24,
+      "support": 10,
+      "key": [
+        null,
+        74207424,
+        73
+      ],
+      "patterns": 4159,
+      "helper_constraints": 5888,
+      "status": 2,
+      "success": false,
+      "message": "The problem is infeasible. (HiGHS Status 8: model_status is Infeasible; primal_status is None)"
+    },
+    {
+      "index": 25,
+      "support": 10,
+      "key": [
+        null,
+        78270656,
+        97
+      ],
+      "patterns": 3964,
+      "helper_constraints": 5319,
+      "status": 2,
+      "success": false,
+      "message": "The problem is infeasible. (HiGHS Status 8: model_status is Infeasible; primal_status is None)"
+    },
+    {
+      "index": 26,
+      "support": 10,
+      "key": [
+        null,
+        1292419201,
+        21
+      ],
+      "patterns": 4585,
+      "helper_constraints": 7188,
+      "status": 2,
+      "success": false,
+      "message": "The problem is infeasible. (HiGHS Status 8: model_status is Infeasible; primal_status is None)"
+    }
+  ],
+  "scope": "Independent combined source/supplement MILP replay; numerical MILP certificate status is internal computer-assisted evidence, not graph realization."
+}

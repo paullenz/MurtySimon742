@@ -27,19 +27,30 @@
       "stop": "2026-09-22T18:06:42+01:00",
       "seconds": 70,
       "evidence": "independent r=11 cross-file/formula replay"
+    },
+    {
+      "start": "2026-09-22T18:07:45+01:00",
+      "stop": "2026-09-22T18:14:23+01:00",
+      "seconds": 398,
+      "evidence": "independent combined source/supplement MILP replay for 27 r=11 kernels"
     }
   ],
-  "verified_forward_span_seconds": 70,
+  "verified_forward_span_seconds": 468,
   "forward_stop": "PENDING",
   "preservation_start": "PENDING",
   "preservation_complete": "PENDING",
   "wall_clock_span_seconds": "PENDING",
-  "substantive_unit_count": 1,
+  "substantive_unit_count": 2,
   "substantive_unit_ledger": [
     {
       "completed_at": "2026-09-22T18:06:42+01:00",
       "unit": "independent r=11 cross-file/formula replay",
       "result": "PASS on 6,049 strict rows, 27 source survivors, zero supplement survivors; orbit/source algorithms not independently reimplemented."
+    },
+    {
+      "completed_at": "2026-09-22T18:14:23+01:00",
+      "unit": "independent combined source/supplement MILP replay",
+      "result": "27/27 kernels infeasible; 0 feasible, 0 unknown; supports 8/9/10 all corroborated."
     }
   ],
   "early_stop_check": {
@@ -50,9 +61,10 @@
   "failures_and_pivots": [],
   "commit_shas": [
     "329e7bb6bc00254835cda847b40dac26a1fff6f5",
-    "634818a6a93710421045db9f1cbcdc5fafb5f8b0"
+    "634818a6a93710421045db9f1cbcdc5fafb5f8b0",
+    "6a159d60a257346984d4269c7b65d7de15ce76ae"
   ],
-  "unfinished_line": "Alternative algorithmic replay of 27 r=11 source survivors, then r=12 frontier.",
+  "unfinished_line": "Open r=12 frontier; orbit isomorphism replay remains an r=11 audit item.",
   "target": {
     "applicable": false,
     "available_seconds": 2969,

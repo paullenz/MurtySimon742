@@ -9,23 +9,23 @@ CHECKPOINT CLASS: VERIFIED_INTERNAL_NOT_PROMOTED
 
 WORK MODE: FORWARD_RESEARCH_LIVE
 
-INSPECTED PREDECESSOR: 634818a6a93710421045db9f1cbcdc5fafb5f8b0.
+INSPECTED PREDECESSOR: 6a159d60a257346984d4269c7b65d7de15ce76ae.
 
-LAST VERIFIED RESULT: The complete r=11 finite pipeline passed a fresh cross-file/formula replay: 2,496 support-eight, 3,273 support-nine, and 280 support-ten strict rows all have independently recomputed degrees, local capacity, and positive strict values; source survivors are exactly 16, 8, and 3; supplement survivors are zero in every support. This corroborates the internal S<=13 edge bound, while explicitly not replaying graph-isomorphism reduction or independently reimplementing source/supplement algorithms.
+LAST VERIFIED RESULT: The r=11 closure has now passed two replay layers. Cross-file/formula checks pass on all 6,049 strict rows. A newly formulated combined source/supplement MILP—independent of the earlier multiset DFS—finds all 27 source-surviving kernels infeasible: 16 at support eight, 8 at support nine, and 3 at support ten, with zero solver-unknown cases. This materially corroborates the internal S<=13 edge bound; orbit isomorphism reduction remains not independently reimplemented.
 
-EVIDENCE: `audit_r11_pipeline.py/json` in `project/research/general_n/2026-09-22-r11-quotient-v1/`; canonical telemetry.
+EVIDENCE: `audit_r11_pipeline.py/json` and `audit_r11_supplement_milp.py/json` in the r11 quotient package; canonical telemetry.
 
-SESSION UTILISATION: Trigger 18:00:38 BST; actual start 18:04:09; closed forward interval 18:05:32--18:06:42 (70s); one substantive unit; cutoff 18:53:38; target N/A late start; LIVE.
+SESSION UTILISATION: Trigger 18:00:38 BST; actual start 18:04:09; closed intervals 18:05:32--18:06:42 and 18:07:45--18:14:23; verified total 468s (7m48s); two substantive units; cutoff 18:53:38; target N/A late start; LIVE.
 
 UNPRESERVED WORK: None at this checkpoint.
 
 DEFERRED ADMIN: Historical reconciliation and prose-only README edits.
 
-NEXT ACTION: Independently replay the source/supplement decision on the 27 surviving kernels with an alternative formulation, then open r=12 only if that gate passes.
+NEXT ACTION: Open the r=12 frontier by enumerating its integer residual partitions and deriving support-wise structural degree reductions before selecting a tractable exact shard.
 
 FOCUSED-SESSION COUNT: 1/24; current trigger credit pending final compliance.
 
-MANDATORY CONSTRAINTS: Cross-file consistency is weaker than independent algorithmic replay; internal finite work is not external verification or graph realization.
+MANDATORY CONSTRAINTS: MILP infeasibility is internal numerical computer-assisted evidence; orbit reduction is not independently replayed; no graph-realization claim.
 <!-- CURRENT-STATUS:END -->
 
 ## Latest adversarial audit - 22 September 2026
