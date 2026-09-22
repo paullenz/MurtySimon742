@@ -5,25 +5,25 @@ Canonical repository: `paullenz/MurtySimon742`. Date: 22 September 2026.
 Active target: a genuinely independent proof of Erdős #742 / the Murty–Simon inequality e(G)<=floor(n^2/4), preferably with the equality characterization. Forward priority is the project’s own complement / residual / Hall / profile / realizability route, not a reconstruction of the external e+disj+X proof. The first focused session produced the internally checked candidate threshold `Delta>=250n/429`, shrinking the live strip to `n/2<Delta<250n/429`. The theorem and its inherited graph-to-profile spine remain candidate/internal-review mathematics. A 24-focused-session go/no-go gate applies. Prior eventual-D2C work remains preserved but is no longer the active forward objective.
 
 <!-- CURRENT-STATUS:START -->
-CHECKPOINT CLASS: STARTED
+CHECKPOINT CLASS: VERIFIED_INTERNAL_NOT_PROMOTED
 
 WORK MODE: MATH
 
-INSPECTED PREDECESSOR: ae6562563ffbd9e4f2e7aa0f08bdf8c525837279.
+INSPECTED PREDECESSOR: 862cf8dabbbd4592502b86b525fa909f3bec8b1e.
 
-LAST VERIFIED RESULT: Mathematical state inherited unchanged: r=12 is internally closed through support nine; support-ten partition (3,1^9) is closed; partition (2,2,1^8) has 6,386 strict kernels and source shard 0/8 leaves 10 survivors with no solver-unknown cases. This distinct 22:00:38 session is live.
+LAST VERIFIED RESULT: Support-ten partition (2,2,1^8) source shard 1/8 screened 798 strict kernels: 11 source-feasible, 787 source-infeasible, and zero solver-unknown cases. Together with shard 0, 21 source-feasible kernels remain among the first 1,596 of 6,386.
 
-EVIDENCE: canonical telemetry at project/research/session_logs/2026-09-22/2026-09-22T22-00-38+01-00-canonical.json; support-ten artifacts under project/research/general_n/2026-09-22-independent-742-r12-quotient/.
+EVIDENCE: project/research/general_n/2026-09-22-independent-742-r12-quotient/r12_support10_case1_source_chunk1.json; canonical telemetry at project/research/session_logs/2026-09-22/2026-09-22T22-00-38+01-00-canonical.json.
 
-SESSION UTILISATION: Trigger 22:00:38 BST; authoritative entry 22:00:33 (five seconds early); research cutoff 22:53:38; hard-close deadline 22:59:38; no forward interval closed yet; 50-minute target applies.
+SESSION UTILISATION: Trigger 22:00:38 BST; authoritative entry 22:00:33; one closed interval [22:03:39,22:08:20] = 281s (4m41s); one substantive unit; cutoff 22:53:38; 50-minute target applies and remains pending.
 
 UNPRESERVED WORK: None.
 
-NEXT ACTION: Run and checkpoint support-ten case-1 source chunk 1/8, then continue chunks 2-7 and supplement-screen all survivors.
+NEXT ACTION: Run and checkpoint support-ten case-1 source chunk 2/8.
 
-FOCUSED-SESSION COUNT: 1/24; credit pending final utilization and mathematical result.
+FOCUSED-SESSION COUNT: 1/24; current-session credit pending.
 
-MANDATORY CONSTRAINTS: The internal finite pipeline does not establish graph realizability; equality remains characterized only through S<=8; the general theorem remains open.
+MANDATORY CONSTRAINTS: Source feasibility is only a necessary condition; the finite pipeline does not establish graph realizability; equality remains characterized only through S<=8; the general theorem remains open.
 <!-- CURRENT-STATUS:END -->
 
 ## Latest adversarial audit - 22 September 2026
