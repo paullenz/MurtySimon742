@@ -9,23 +9,23 @@ CHECKPOINT CLASS: VERIFIED_INTERNAL_NOT_PROMOTED
 
 WORK MODE: FORWARD_RESEARCH_LIVE
 
-INSPECTED PREDECESSOR: 416ca3c136161afecbc8f913cb72ebb14a552752.
+INSPECTED PREDECESSOR: 067f0c74c8a6568ba53de9e01220e669fdcf830c.
 
-LAST VERIFIED RESULT: At r=11, support <=7 is closed. The exact integer physical-source screen closes support-eight partitions (4,1^7) and (3,2,1^6). For (2,2,2,1^5), 1,654 of 1,670 optimistic strict cores are source-infeasible; 16 source-feasible rows remain and zero solver-unknown cases occurred. Each survivor has t_upper=1 and requires supplement analysis. No support-eight closure is yet claimed.
+LAST VERIFIED RESULT: At r=11 support eight, partitions (4,1^7) and (3,2,1^6) are source-infeasible. Partition (2,2,2,1^5) is reduced from 1,670 strict cores to 16 source-feasible rows, all with t_upper=1. An exact enumerator for all source multisets plus inherited one-supplement forcing was interrupted after 9m11s without a final aggregate; no closure is inferred.
 
-EVIDENCE: the three `r11_support8_sources_case*.json` files and `r11_support8_sources_milp.py` in `project/research/general_n/2026-09-22-r11-quotient-v1/`; canonical telemetry.
+EVIDENCE: source-screen JSON files plus the preserved failed enumerator `r11_support8_case2_supplements.py` in `project/research/general_n/2026-09-22-r11-quotient-v1/`; canonical telemetry.
 
-SESSION UTILISATION: Trigger 17:00:38 BST; actual start 17:00:58; closed intervals 17:04:14--17:05:05, 17:06:08--17:06:21, 17:07:20--17:07:47; verified total 91s; three substantive units; cutoff 17:53:38; target YES/PENDING; LIVE.
+SESSION UTILISATION: Trigger 17:00:38 BST; actual start 17:00:58; four closed intervals; verified total 642s (10m42s); four substantive units including one bounded failed computation; cutoff 17:53:38; target YES/PENDING; LIVE.
 
-UNPRESERVED WORK: None at this checkpoint.
+UNPRESERVED WORK: None; interrupted enumerator produced an empty output file and no claim.
 
 DEFERRED ADMIN: Historical reconciliation and prose-only README edits.
 
-NEXT ACTION: Independently replay the 16 source-feasible rows and enumerate their single-supplement options against the strict edge-bound target.
+NEXT ACTION: Pivot from unbounded all-populations enumeration to a bounded per-kernel feasibility formulation for the one-supplement condition.
 
 FOCUSED-SESSION COUNT: 1/24; current trigger credit pending final compliance.
 
-MANDATORY CONSTRAINTS: The 16 rows are abstract physical-source feasibility only, not graph realizations; no r=11 support-eight closure without supplement handling.
+MANDATORY CONSTRAINTS: Do not infer results from interrupted computation; the 16 rows remain abstract source feasibility only.
 <!-- CURRENT-STATUS:END -->
 
 ## Latest adversarial audit - 22 September 2026

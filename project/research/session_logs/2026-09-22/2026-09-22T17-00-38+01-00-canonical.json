@@ -39,14 +39,20 @@
       "stop": "2026-09-22T17:07:47+01:00",
       "seconds": 27,
       "evidence": "case-2 physical-source MILP aggregate"
+    },
+    {
+      "start": "2026-09-22T17:08:49+01:00",
+      "stop": "2026-09-22T17:18:00+01:00",
+      "seconds": 551,
+      "evidence": "bounded exact source-multiset/supplement enumeration; interrupted without aggregate"
     }
   ],
-  "verified_forward_span_seconds": 91,
+  "verified_forward_span_seconds": 642,
   "forward_stop": "PENDING",
   "preservation_start": "PENDING",
   "preservation_complete": "PENDING",
   "wall_clock_span_seconds": "PENDING",
-  "substantive_unit_count": 3,
+  "substantive_unit_count": 4,
   "substantive_unit_ledger": [
     {
       "completed_at": "2026-09-22T17:05:05+01:00",
@@ -62,6 +68,11 @@
       "completed_at": "2026-09-22T17:07:47+01:00",
       "unit": "r=11 support-eight case 2 physical-source screen",
       "result": "1,654/1,670 strict cores source-infeasible; 16 source-feasible; 0 solver-unknown; all survivors have t_upper=1."
+    },
+    {
+      "completed_at": "2026-09-22T17:18:00+01:00",
+      "unit": "attempt exact all-source-population supplement forcing on 16 kernels",
+      "result": "Interrupted after 9m11s without aggregate; no mathematical result claimed; pivot required."
     }
   ],
   "early_stop_check": {
@@ -70,14 +81,16 @@
   },
   "stop_reason": "PENDING",
   "failures_and_pivots": [
-    "Inherited interrupted monolithic r=11 support-eight screen; pivoting to per-partition shards."
+    "Inherited interrupted monolithic r=11 support-eight screen; pivoting to per-partition shards.",
+    "All-populations supplement enumeration on 16 support-eight kernels exceeded bounded runtime and was interrupted at 17:18:00; pivot to bounded feasibility."
   ],
   "commit_shas": [
     "5c0ba6a454767e4a930b370b7687d6165e9b4d08",
     "8ec0aa31dadd32dbcc22e1e3ae7f6826efa258b4",
-    "416ca3c136161afecbc8f913cb72ebb14a552752"
+    "416ca3c136161afecbc8f913cb72ebb14a552752",
+    "067f0c74c8a6568ba53de9e01220e669fdcf830c"
   ],
-  "unfinished_line": "Resolve 16 support-eight source-feasible rows via one-supplement analysis; then supports nine and ten.",
+  "unfinished_line": "Formulate bounded one-supplement feasibility for 16 support-eight survivors.",
   "target": {
     "applicable": true,
     "available_seconds": 3160,
