@@ -63,6 +63,12 @@
       "stop": "2026-09-22T18:30:47+01:00",
       "seconds": 418,
       "evidence": "exact physical-source screen of 2,179 r=12 support-seven cores"
+    },
+    {
+      "start": "2026-09-22T18:31:59+01:00",
+      "stop": "2026-09-22T18:31:59+01:00",
+      "seconds": 0,
+      "evidence": "combined source/supplement MILP for two r=12 support-seven kernels"
     }
   ],
   "verified_forward_span_seconds": 989,
@@ -70,7 +76,7 @@
   "preservation_start": "PENDING",
   "preservation_complete": "PENDING",
   "wall_clock_span_seconds": "PENDING",
-  "substantive_unit_count": 7,
+  "substantive_unit_count": 8,
   "substantive_unit_ledger": [
     {
       "completed_at": "2026-09-22T18:06:42+01:00",
@@ -106,6 +112,11 @@
       "completed_at": "2026-09-22T18:30:47+01:00",
       "unit": "r=12 support-seven source screen",
       "result": "2,177/2,179 source-infeasible; two source-feasible kernels in (2^5,1,1), both t_upper=1."
+    },
+    {
+      "completed_at": "2026-09-22T18:31:59+01:00",
+      "unit": "r=12 support-seven supplement forcing",
+      "result": "2/2 combined MILPs infeasible; 0 unknown; support seven internally closed."
     }
   ],
   "early_stop_check": {
@@ -122,9 +133,10 @@
     "b77c36943399dbe2f5c2fe2b1dbff397e0750760",
     "e0e945f26051f812463dfb24c97a858f436fae17",
     "635d07b626af00085688f3b5a003f51aab6cc485",
-    "c0fde0bb7785738a069dcf048f5fd02b359b543a"
+    "c0fde0bb7785738a069dcf048f5fd02b359b543a",
+    "217ac415d6fe666b9a8c211e25ab3ac78e3c7c00"
   ],
-  "unfinished_line": "Supplement-force two support-seven kernels; then supports 8-11.",
+  "unfinished_line": "Enumerate and screen r=12 supports 8 through 11.",
   "target": {
     "applicable": false,
     "available_seconds": 2969,

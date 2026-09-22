@@ -1,0 +1,29 @@
+{
+  "kernels": 2,
+  "feasible": 0,
+  "infeasible": 2,
+  "unknown": 0,
+  "rows": [
+    {
+      "index": 0,
+      "partition": "(1, 1, 2, 2, 2, 2, 2)",
+      "mask": 521588,
+      "patterns": 236,
+      "helper_constraints": 195,
+      "status": 2,
+      "success": false,
+      "message": "The problem is infeasible. (HiGHS Status 8: model_status is Infeasible; primal_status is None)"
+    },
+    {
+      "index": 1,
+      "partition": "(2, 2, 1, 1, 2, 2, 2)",
+      "mask": 2093056,
+      "patterns": 473,
+      "helper_constraints": 511,
+      "status": 2,
+      "success": false,
+      "message": "The problem is infeasible. (HiGHS Status 8: model_status is Infeasible; primal_status is None)"
+    }
+  ],
+  "scope": "Combined integer source/supplement MILP; internal computer-assisted evidence, not graph realization."
+}

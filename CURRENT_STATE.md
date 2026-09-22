@@ -9,21 +9,21 @@ CHECKPOINT CLASS: VERIFIED_INTERNAL_NOT_PROMOTED
 
 WORK MODE: FORWARD_RESEARCH_LIVE
 
-INSPECTED PREDECESSOR: c0fde0bb7785738a069dcf048f5fd02b359b543a.
+INSPECTED PREDECESSOR: 217ac415d6fe666b9a8c211e25ab3ac78e3c7c00.
 
-LAST VERIFIED RESULT: r=12 is internally closed through support six. At support seven, exact physical-source screening rejects 2,177 of 2,179 strict cores and leaves exactly two source-feasible kernels, both in residual partition (2,2,2,2,2,1,1), with t_upper=1. Exact supplement forcing remains; no support-seven closure is yet claimed.
+LAST VERIFIED RESULT: r=12 is internally closed through support seven. Supports <=6 are closed. At support seven, 2,177 of 2,179 strict cores are source-infeasible; the remaining two (2,2,2,2,2,1,1) kernels are both infeasible in the combined source/supplement MILP with zero unknown cases. Supports 8 through 11 remain.
 
-EVIDENCE: support-seven orbit census and `r12_support7_sources.py/json` in the r12 quotient package; canonical telemetry.
+EVIDENCE: complete support-seven orbit/source/supplement artifacts in the r12 quotient package; canonical telemetry.
 
-SESSION UTILISATION: Trigger 18:00:38 BST; actual start 18:04:09; seven closed intervals; verified total 989s (16m29s); seven substantive units; cutoff 18:53:38; target N/A late start; LIVE.
+SESSION UTILISATION: Trigger 18:00:38 BST; actual start 18:04:09; eight closed intervals; verified total 989s (16m29s); eight substantive units; cutoff 18:53:38; target N/A late start; LIVE.
 
 UNPRESERVED WORK: None at this checkpoint.
 
-NEXT ACTION: Apply combined source/supplement MILP to the two support-seven kernels; then scope support-eight partitions.
+NEXT ACTION: Enumerate all r=12 support-eight residual-coloured strict cores, shard by partition, and preserve exact counts before source screening.
 
 FOCUSED-SESSION COUNT: 1/24; current trigger credit pending final compliance.
 
-MANDATORY CONSTRAINTS: Two abstract source-feasible kernels remain; no r=12 support-seven or S<=14 closure yet.
+MANDATORY CONSTRAINTS: Internal finite closure is not external verification or graph realization; no S<=14 claim until supports 8-11 close.
 <!-- CURRENT-STATUS:END -->
 
 ## Latest adversarial audit - 22 September 2026
