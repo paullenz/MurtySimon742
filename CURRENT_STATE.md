@@ -9,21 +9,21 @@ CHECKPOINT CLASS: VERIFIED_INTERNAL_NOT_PROMOTED
 
 WORK MODE: FORWARD_RESEARCH_LIVE
 
-INSPECTED PREDECESSOR: 662e11ed380c85ddad821e439228563499909792.
+INSPECTED PREDECESSOR: 4125a45262cfad936d8e6ca9a11f145c32696693.
 
-LAST VERIFIED RESULT: r=11 is internally closed through support eight. At support nine, (3,1^8) is source-infeasible. For (2,2,1^7), the integer source MILP rejects 3,140 of 3,148 strict cores and leaves 8 source-feasible rows, with zero solver-unknown cases. All 8 have t_upper=1 and require exact supplement forcing; no support-nine closure is yet claimed.
+LAST VERIFIED RESULT: r=11 is internally closed through support nine. Support-eight closure uses sharded source MILPs plus exact supplement DFS. At support nine, (3,1^8) has no source-feasible core; (2,2,1^7) reduces to 8 source-feasible kernels, and exact pivoted DFS exhaustively rejects all source multisets under the inherited one-supplement condition (0 found, 8 exhausted). Only support ten, residual partition (2,1^9), remains before full r=11 closure.
 
-EVIDENCE: `r11_support9_sources_case0.json` and `r11_support9_sources_case1.json` under the r11 quotient package; canonical telemetry.
+EVIDENCE: support-nine orbit census, source shards, and `r11_support9_earlyexit.py/json` under the r11 quotient package; canonical telemetry.
 
-SESSION UTILISATION: Trigger 17:00:38 BST; actual start 17:00:58; nine closed intervals; verified total 1090s (18m10s); nine substantive units; cutoff 17:53:38; target YES/PENDING; LIVE.
+SESSION UTILISATION: Trigger 17:00:38 BST; actual start 17:00:58; ten closed intervals; verified total 1109s (18m29s); ten substantive units; cutoff 17:53:38; target YES/PENDING; LIVE.
 
 UNPRESERVED WORK: None at this checkpoint.
 
-NEXT ACTION: Run a pivoted exact early-exit DFS over all source multisets for the 8 support-nine survivors and apply one-supplement forcing.
+NEXT ACTION: Develop a bounded support-ten reduction for residual partition (2,1^9), avoiding a blind scan of all 12,005,168 unlabelled ten-vertex cores if a structural filter is available.
 
 FOCUSED-SESSION COUNT: 1/24; current trigger credit pending final compliance.
 
-MANDATORY CONSTRAINTS: The 8 rows are abstract source-feasible kernels only; do not infer graph realizability.
+MANDATORY CONSTRAINTS: Full r=11 closure is not claimed until support ten is closed; internal finite work is not graph realization.
 <!-- CURRENT-STATUS:END -->
 
 ## Latest adversarial audit - 22 September 2026

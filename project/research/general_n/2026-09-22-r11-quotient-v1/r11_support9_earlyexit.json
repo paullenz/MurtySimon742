@@ -1,0 +1,168 @@
+{
+  "kernels": 8,
+  "found": 0,
+  "exhausted": 8,
+  "rows": [
+    {
+      "index": 0,
+      "mask": 3942950032,
+      "R": [
+        1,
+        1,
+        1,
+        1,
+        1,
+        2,
+        1,
+        1,
+        2
+      ],
+      "status": "EXHAUSTED",
+      "nodes": 59628,
+      "leaves": 14923,
+      "seconds": 10.188239,
+      "witness": null
+    },
+    {
+      "index": 1,
+      "mask": 3942951048,
+      "R": [
+        1,
+        1,
+        1,
+        1,
+        1,
+        2,
+        1,
+        1,
+        2
+      ],
+      "status": "EXHAUSTED",
+      "nodes": 66393,
+      "leaves": 15379,
+      "seconds": 11.578328,
+      "witness": null
+    },
+    {
+      "index": 2,
+      "mask": 3942951048,
+      "R": [
+        1,
+        1,
+        1,
+        2,
+        1,
+        1,
+        2,
+        1,
+        1
+      ],
+      "status": "EXHAUSTED",
+      "nodes": 95675,
+      "leaves": 26951,
+      "seconds": 14.204494,
+      "witness": null
+    },
+    {
+      "index": 3,
+      "mask": 3942983812,
+      "R": [
+        1,
+        1,
+        1,
+        1,
+        1,
+        2,
+        1,
+        1,
+        2
+      ],
+      "status": "EXHAUSTED",
+      "nodes": 85033,
+      "leaves": 22486,
+      "seconds": 13.402182,
+      "witness": null
+    },
+    {
+      "index": 4,
+      "mask": 3945013648,
+      "R": [
+        1,
+        1,
+        1,
+        1,
+        2,
+        1,
+        1,
+        2,
+        1
+      ],
+      "status": "EXHAUSTED",
+      "nodes": 45002,
+      "leaves": 9247,
+      "seconds": 9.002782,
+      "witness": null
+    },
+    {
+      "index": 5,
+      "mask": 3945015426,
+      "R": [
+        1,
+        1,
+        1,
+        2,
+        1,
+        1,
+        2,
+        1,
+        1
+      ],
+      "status": "EXHAUSTED",
+      "nodes": 55807,
+      "leaves": 12917,
+      "seconds": 9.940495,
+      "witness": null
+    },
+    {
+      "index": 6,
+      "mask": 14632405184,
+      "R": [
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        2,
+        1,
+        2
+      ],
+      "status": "EXHAUSTED",
+      "nodes": 82301,
+      "leaves": 20729,
+      "seconds": 13.469752,
+      "witness": null
+    },
+    {
+      "index": 7,
+      "mask": 14647084176,
+      "R": [
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        2,
+        1,
+        2
+      ],
+      "status": "EXHAUSTED",
+      "nodes": 166761,
+      "leaves": 58390,
+      "seconds": 18.598291,
+      "witness": null
+    }
+  ],
+  "scope": "Exact DFS: EXHAUSTED rules out all abstract source multisets under inherited one-supplement condition; not graph realization."
+}
