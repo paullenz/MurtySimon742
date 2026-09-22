@@ -64,6 +64,12 @@
       "stop": "2026-09-22T16:29:20+01:00",
       "seconds": 12,
       "unit": 8
+    },
+    {
+      "start": "2026-09-22T16:30:42+01:00",
+      "stop": "2026-09-22T16:31:57+01:00",
+      "seconds": 75,
+      "unit": 9
     }
   ],
   "forward_research_stop": "PENDING",
@@ -71,9 +77,9 @@
   "preservation_complete": "PENDING",
   "final_report_time": "PENDING",
   "wall_clock_span_to_preservation_complete": "PENDING",
-  "verified_forward_research_span_seconds": 591,
+  "verified_forward_research_span_seconds": 666,
   "preservation_span": "PENDING",
-  "substantive_unit_count": 8,
+  "substantive_unit_count": 9,
   "timestamped_unit_ledger": [
     {
       "unit": 1,
@@ -122,6 +128,12 @@
       "start": "2026-09-22T16:29:08+01:00",
       "completed": "2026-09-22T16:29:20+01:00",
       "result": "Exact automorphism-quotient census for all five r=11 support-seven partitions: 118,476 coloured core orbits total; optimistic strict survivors by partition 2,59,22,151,59 (293 total). Physical-source screen pending."
+    },
+    {
+      "unit": 9,
+      "start": "2026-09-22T16:30:42+01:00",
+      "completed": "2026-09-22T16:31:57+01:00",
+      "result": "Exact physical-source feasibility rejects all 293 r=11 support-seven strict cores across all five partitions. Therefore r=11 supports <=7 are internally closed; supports 8-10 remain."
     }
   ],
   "early_stop_check_time": "PENDING",
@@ -147,8 +159,10 @@
     "d5641ea6024631127362e8a7a6f97fdb32fcd73a",
     "d5641ea6024631127362e8a7a6f97fdb32fcd73a",
     "d1765ff25aeb2630d36342779d0eda1fd5412f3c",
-    "d1765ff25aeb2630d36342779d0eda1fd5412f3c"
+    "d1765ff25aeb2630d36342779d0eda1fd5412f3c",
+    "00bb1cb39815520119dacfd97a30bd7559c8d35c",
+    "00bb1cb39815520119dacfd97a30bd7559c8d35c"
   ],
-  "live_unfinished_line": "Source-screen 293 r=11 support-seven strict cores; supports 8 through 10 remain.",
+  "live_unfinished_line": "r=11 supports <=7 closed; quotient/source screening for support-eight partitions and above remains.",
   "historical_fragments": []
 }
