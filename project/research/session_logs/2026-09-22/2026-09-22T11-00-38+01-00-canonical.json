@@ -3,7 +3,7 @@
   "scheduled_trigger": "2026-09-22T11:00:38+01:00",
   "scheduled_trigger_attribution": "Invocation explicitly identifies Independent #742 Research and its hourly DTSTART/RRULE; this is the 11:00:38 due trigger, not inferred from wall clock.",
   "run_kind": "SCHEDULED",
-  "status": "STARTED",
+  "status": "COMPLETED",
   "earliest_actual_start": "2026-09-22T11:01:19+01:00",
   "runtime_entry_metadata": "2026-09-22T11:00:56+01:00",
   "next_scheduled_trigger": "2026-09-22T12:00:38+01:00",
@@ -172,6 +172,13 @@
       "actual_stop": "2026-09-22T11:52:11+01:00",
       "role": "forward_research",
       "notes": "Cross-file consistency verification of every r8 strict/equality census and screen total."
+    },
+    {
+      "segment_id": "preservation-final",
+      "actual_start": "2026-09-22T11:52:11+01:00",
+      "actual_stop": "2026-09-22T11:53:48+01:00",
+      "role": "preservation",
+      "notes": "Published final r8 consistency checkpoint, reconciled commit ledger, finalized canonical telemetry and CURRENT_STATE."
     }
   ],
   "forward_research_intervals": [
@@ -281,14 +288,14 @@
       "evidence": "verify_r8_pipeline.py, R8_PIPELINE_VERIFICATION.json"
     }
   ],
-  "forward_research_stop": null,
-  "preservation_start": null,
-  "preservation_complete": null,
-  "final_report_time": null,
-  "wall_clock_span_to_preservation_complete": null,
+  "forward_research_stop": "2026-09-22T11:52:11+01:00",
+  "preservation_start": "2026-09-22T11:52:11+01:00",
+  "preservation_complete": "2026-09-22T11:53:48+01:00",
+  "final_report_time": "2026-09-22T11:53:48+01:00",
+  "wall_clock_span_to_preservation_complete": 3149,
   "verified_forward_research_span": 2001,
   "verified_forward_research_span_units": "seconds",
-  "preservation_span": null,
+  "preservation_span": 97,
   "substantive_unit_count": 20,
   "timestamped_unit_ledger": [
     {
@@ -412,16 +419,36 @@
       "artifact": "project/research/general_n/2026-09-22-zero-demand-equality-v1/R8_PIPELINE_VERIFICATION.json"
     }
   ],
-  "early_stop_check_time": null,
-  "early_stop_check_result": null,
-  "stop_reason": null,
+  "early_stop_check_time": "2026-09-22T11:51:38+01:00",
+  "early_stop_check_result": "Only 120 seconds remained to the research cutoff (<5 minutes). Completed one bounded cross-file verification unit through 11:52:11, then began preservation with 87 seconds remaining.",
+  "stop_reason": "Forward research stopped 87 seconds before the 11:53:38 cutoff to complete durable preservation and finalization before the hard-close deadline.",
   "target_50m_applies": "YES",
-  "target_50m_met": "PENDING",
+  "target_50m_met": "NO",
   "available_seconds_from_earliest_start": 3139,
-  "compliance_status": "IN_PROGRESS",
+  "compliance_status": "SHORT/NONCOMPLIANT",
   "infrastructure_failures": [],
   "commit_shas": [
-    "219f19a6d3b9b4dd4b9137dac09f23a0bf643bc7"
+    "78db3c724027fc2bf79e664f541122416b8391ec",
+    "6b75fbecbcdc90638cd7bf6a2b8c02cf6d313fe1",
+    "fd03a6fb07facfb2b28c20f0607b87b93d303c70",
+    "fb0841713d4fcb8ce2ca44b667076b8da71004ea",
+    "6c3ed130e220819ec243e359b6274002c0c6a82e",
+    "a3a47fed71120539884c826c7371e56160190dc8",
+    "972f6f5aab980826dbdaaff556488d230462cbb6",
+    "ec7ee7ec652de4f8ae9d3ac9423e23798c2554f8",
+    "92141ee5ac6a37ff5b5a842bb499270917debe58",
+    "ef8e5be64f06a9b0366f250aef9e7261bc79a35d",
+    "f853c48ae6ba5886230c1fced1e4b687f3183bc9",
+    "76da06e8c227266c708dfbe5441583924dcafef8",
+    "8a885d4e0c8f1351797a89db1e8d00e6a3d99e9d",
+    "acc0db8ba9de80368b11b6a4915545fa6ec884ff",
+    "5eaa2fee306ce2325c66e82b2cfe7a02a9941d7a",
+    "d6d8553c9ce13d0b88767d1b0bdca729f28e40a0",
+    "f80696f214f0956093f83af729b837129664eb4b",
+    "7752a94de4b11d1ea313bda3f9b8caa862fdf292",
+    "e4da769b3045c41fd641baf5620f13c2cb7cd6a5",
+    "219f19a6d3b9b4dd4b9137dac09f23a0bf643bc7",
+    "4b52badec2bc57b4be9dc2399d99a030d1f2aa0e"
   ],
   "live_unfinished_line": "At r=9, derive a quotient-first strict-surplus census or strengthen the analytic source obstruction; current trusted internal thresholds are edge S<=10 and equality S<=8.",
   "historical_fragments": [],
