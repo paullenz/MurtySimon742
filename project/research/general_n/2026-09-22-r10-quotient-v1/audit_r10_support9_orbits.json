@@ -1,0 +1,7 @@
+{
+  "burnside_unlabelled_graphs_n8": 12346,
+  "burnside_rooted_coloured_orbits": 2208612,
+  "strict_rows_replayed": 146,
+  "strict_canonical_forms_unique": 146,
+  "pass": true
+}

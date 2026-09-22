@@ -9,19 +9,19 @@ CHECKPOINT CLASS: VERIFIED_INTERNAL_NOT_PROMOTED
 
 WORK MODE: MATH
 
-INSPECTED PREDECESSOR: d6e3c636de8544efc6f5494107b13ad75e03d507.
+INSPECTED PREDECESSOR: 8bf64b261dd6a7ac7af55d5c69fedb8f18b3df49.
 
-LAST VERIFIED RESULT: Exact support-nine source feasibility rejects all 146 optimistic strict cores for residual demand r=10. Together with prior support <=8 closures, every r=10 partition is internally closed: strict t<=0, extending the internal edge bound through S<=12. Equality characterization remains through S<=8 only; the general theorem remains open.
+LAST VERIFIED RESULT: Strict r=10 closure and edge bound through S<=12 retained. Independent Burnside calculation reproduces 12,346 unlabelled unit graphs and 2,208,612 rooted/coloured orbits; direct canonical replay confirms all 146 strict candidates are pairwise inequivalent and their stored ledger values. Source infeasibility still awaits an independent-method replay.
 
-EVIDENCE: `project/research/general_n/2026-09-22-r10-quotient-v1/R10_COMPLETE_CLOSURE.md`; exact support-nine canonical generator, 146-mask ledger, source screen/result; earlier support <=8 package.
+EVIDENCE: `project/research/general_n/2026-09-22-r10-quotient-v1/R10_SUPPORT9_INDEPENDENT_AUDIT.md`; saved audit code/result.
 
-SESSION UTILISATION: Trigger 16:00:38 BST; actual start 16:03:51; cutoff 16:53:38. Two closed intervals; verified total 443s (7m23s); units 2; target NO/N/A; LIVE. Canonical: `project/research/session_logs/2026-09-22/2026-09-22T16-00-38+01-00-canonical.json`.
+SESSION UTILISATION: Trigger 16:00:38 BST; actual start 16:03:51; cutoff 16:53:38. Three closed intervals; verified total 472s (7m52s); units 3; target NO/N/A; LIVE. Canonical: `project/research/session_logs/2026-09-22/2026-09-22T16-00-38+01-00-canonical.json`.
 
 UNPRESERVED WORK: None.
 
 DEFERRED ADMIN: Historical missing-slot reconciliation.
 
-NEXT ACTION: Independently audit support-nine quotient coverage and source infeasibility before advancing to r=11.
+NEXT ACTION: Independent MILP or equivalent replay of zero source feasibility for all 146 support-nine cores.
 
 FOCUSED-SESSION COUNT: 1/24; this shortened late-start trigger pending and receives no automatic credit.
 
