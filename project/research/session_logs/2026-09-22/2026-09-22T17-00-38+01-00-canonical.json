@@ -87,14 +87,20 @@
       "stop": "2026-09-22T17:38:49+01:00",
       "seconds": 144,
       "evidence": "support-ten structural max-degree reduction and exact orbit census"
+    },
+    {
+      "start": "2026-09-22T17:40:35+01:00",
+      "stop": "2026-09-22T17:42:50+01:00",
+      "seconds": 135,
+      "evidence": "support-ten physical-source MILP aggregate"
     }
   ],
-  "verified_forward_span_seconds": 1253,
+  "verified_forward_span_seconds": 1388,
   "forward_stop": "PENDING",
   "preservation_start": "PENDING",
   "preservation_complete": "PENDING",
   "wall_clock_span_seconds": "PENDING",
-  "substantive_unit_count": 11,
+  "substantive_unit_count": 12,
   "substantive_unit_ledger": [
     {
       "completed_at": "2026-09-22T17:05:05+01:00",
@@ -150,6 +156,11 @@
       "completed_at": "2026-09-22T17:38:49+01:00",
       "unit": "r=11 support-ten structural reduction and census",
       "result": "Unit-induced max degree <=2; 70 unlabelled unit cores, 3,430 attachment-coloured orbits, 280 strict candidates."
+    },
+    {
+      "completed_at": "2026-09-22T17:42:50+01:00",
+      "unit": "r=11 support-ten source screen",
+      "result": "277/280 source-infeasible; 3 source-feasible; 0 solver-unknown; each survivor t_upper=1."
     }
   ],
   "early_stop_check": {
@@ -172,9 +183,10 @@
     "fdf1c3b14bf8b18da1ee7c99feb82ed2680630f2",
     "662e11ed380c85ddad821e439228563499909792",
     "4125a45262cfad936d8e6ca9a11f145c32696693",
-    "b7fe1e9657c450039b4e6b2ee4f76ee0b2716b53"
+    "b7fe1e9657c450039b4e6b2ee4f76ee0b2716b53",
+    "da97c09d3225585201261a238204de4d7db001ea"
   ],
-  "unfinished_line": "Physical-source and supplement screen 280 r=11 support-ten candidates.",
+  "unfinished_line": "Exact supplement forcing for three r=11 support-ten survivors.",
   "target": {
     "applicable": true,
     "available_seconds": 3160,

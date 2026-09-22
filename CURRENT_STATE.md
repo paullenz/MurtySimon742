@@ -9,21 +9,21 @@ CHECKPOINT CLASS: VERIFIED_INTERNAL_NOT_PROMOTED
 
 WORK MODE: FORWARD_RESEARCH_LIVE
 
-INSPECTED PREDECESSOR: b7fe1e9657c450039b4e6b2ee4f76ee0b2716b53.
+INSPECTED PREDECESSOR: da97c09d3225585201261a238204de4d7db001ea.
 
-LAST VERIFIED RESULT: r=11 is internally closed through support nine. For the sole support-ten partition R=(2,1^9), local capacity forces the nine unit-residual vertices to induce maximum degree at most two: final unit degree is at most three, and degree three requires adjacency to the unique residual-two vertex. This reduces the census to 70 unlabelled nine-vertex unit cores, 3,430 attachment-coloured orbits, and exactly 280 optimistic strict candidates.
+LAST VERIFIED RESULT: r=11 is internally closed through support nine. Support ten R=(2,1^9) reduces structurally to 280 optimistic strict cores. The integer physical-source MILP rejects 277 and leaves exactly 3 source-feasible kernels, with zero solver-unknown cases. Each survivor has t_upper=1 and a three-source witness; exact all-population supplement forcing remains.
 
-EVIDENCE: `r11_support10_orbits.cpp`, counts, and 280-row mask file under the r11 quotient package; canonical telemetry.
+EVIDENCE: `r11_support10_sources_milp.py` and `r11_support10_sources.json` under the r11 quotient package; canonical telemetry.
 
-SESSION UTILISATION: Trigger 17:00:38 BST; actual start 17:00:58; eleven closed intervals; verified total 1253s (20m53s); eleven substantive units; cutoff 17:53:38; target YES/PENDING; LIVE.
+SESSION UTILISATION: Trigger 17:00:38 BST; actual start 17:00:58; twelve closed intervals; verified total 1388s (23m08s); twelve substantive units; cutoff 17:53:38; target YES/PENDING; LIVE.
 
 UNPRESERVED WORK: None at this checkpoint.
 
-NEXT ACTION: Apply an exact physical-source feasibility screen to the 280 support-ten candidates, followed by supplement forcing for any survivors.
+NEXT ACTION: Exhaustively enumerate source multisets for the 3 support-ten survivors and apply the inherited one-supplement forcing condition.
 
 FOCUSED-SESSION COUNT: 1/24; current trigger credit pending final compliance.
 
-MANDATORY CONSTRAINTS: The structural reduction and orbit census remain internal computer-assisted mathematics; no full r=11 closure yet.
+MANDATORY CONSTRAINTS: Three abstract source-feasible kernels remain; full r=11 closure is not yet claimed.
 <!-- CURRENT-STATUS:END -->
 
 ## Latest adversarial audit - 22 September 2026
