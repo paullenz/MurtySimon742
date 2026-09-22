@@ -33,14 +33,20 @@
       "stop": "2026-09-22T17:06:21+01:00",
       "seconds": 13,
       "evidence": "case-1 physical-source MILP aggregate"
+    },
+    {
+      "start": "2026-09-22T17:07:20+01:00",
+      "stop": "2026-09-22T17:07:47+01:00",
+      "seconds": 27,
+      "evidence": "case-2 physical-source MILP aggregate"
     }
   ],
-  "verified_forward_span_seconds": 64,
+  "verified_forward_span_seconds": 91,
   "forward_stop": "PENDING",
   "preservation_start": "PENDING",
   "preservation_complete": "PENDING",
   "wall_clock_span_seconds": "PENDING",
-  "substantive_unit_count": 2,
+  "substantive_unit_count": 3,
   "substantive_unit_ledger": [
     {
       "completed_at": "2026-09-22T17:05:05+01:00",
@@ -51,6 +57,11 @@
       "completed_at": "2026-09-22T17:06:21+01:00",
       "unit": "r=11 support-eight case 1 physical-source screen",
       "result": "800/800 strict cores MILP-infeasible; 0 solver-unknown; partition (3,2,1^6) internally closed at source-necessity layer."
+    },
+    {
+      "completed_at": "2026-09-22T17:07:47+01:00",
+      "unit": "r=11 support-eight case 2 physical-source screen",
+      "result": "1,654/1,670 strict cores source-infeasible; 16 source-feasible; 0 solver-unknown; all survivors have t_upper=1."
     }
   ],
   "early_stop_check": {
@@ -63,9 +74,10 @@
   ],
   "commit_shas": [
     "5c0ba6a454767e4a930b370b7687d6165e9b4d08",
-    "8ec0aa31dadd32dbcc22e1e3ae7f6826efa258b4"
+    "8ec0aa31dadd32dbcc22e1e3ae7f6826efa258b4",
+    "416ca3c136161afecbc8f913cb72ebb14a552752"
   ],
-  "unfinished_line": "Screen support-eight case 2, then supports nine and ten.",
+  "unfinished_line": "Resolve 16 support-eight source-feasible rows via one-supplement analysis; then supports nine and ten.",
   "target": {
     "applicable": true,
     "available_seconds": 3160,

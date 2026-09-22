@@ -9,23 +9,23 @@ CHECKPOINT CLASS: VERIFIED_INTERNAL_NOT_PROMOTED
 
 WORK MODE: FORWARD_RESEARCH_LIVE
 
-INSPECTED PREDECESSOR: 8ec0aa31dadd32dbcc22e1e3ae7f6826efa258b4.
+INSPECTED PREDECESSOR: 416ca3c136161afecbc8f913cb72ebb14a552752.
 
-LAST VERIFIED RESULT: At r=11, all support <=7 partitions are closed. At support eight, the exact integer physical-source screen now closes (4,1^7) and (3,2,1^6): respectively 26 and 800 optimistic strict cores, all source-infeasible, with zero solver-unknown cases. Only the 1,670-core partition (2,2,2,1^5) remains at support eight.
+LAST VERIFIED RESULT: At r=11, support <=7 is closed. The exact integer physical-source screen closes support-eight partitions (4,1^7) and (3,2,1^6). For (2,2,2,1^5), 1,654 of 1,670 optimistic strict cores are source-infeasible; 16 source-feasible rows remain and zero solver-unknown cases occurred. Each survivor has t_upper=1 and requires supplement analysis. No support-eight closure is yet claimed.
 
-EVIDENCE: `project/research/general_n/2026-09-22-r11-quotient-v1/r11_support8_sources_case0.json`; `project/research/general_n/2026-09-22-r11-quotient-v1/r11_support8_sources_case1.json`; canonical telemetry.
+EVIDENCE: the three `r11_support8_sources_case*.json` files and `r11_support8_sources_milp.py` in `project/research/general_n/2026-09-22-r11-quotient-v1/`; canonical telemetry.
 
-SESSION UTILISATION: Trigger 17:00:38 BST; actual start 17:00:58; closed intervals 17:04:14--17:05:05 and 17:06:08--17:06:21; verified total 64s; two substantive units; cutoff 17:53:38; target YES/PENDING; LIVE. Canonical: `project/research/session_logs/2026-09-22/2026-09-22T17-00-38+01-00-canonical.json`.
+SESSION UTILISATION: Trigger 17:00:38 BST; actual start 17:00:58; closed intervals 17:04:14--17:05:05, 17:06:08--17:06:21, 17:07:20--17:07:47; verified total 91s; three substantive units; cutoff 17:53:38; target YES/PENDING; LIVE.
 
 UNPRESERVED WORK: None at this checkpoint.
 
 DEFERRED ADMIN: Historical reconciliation and prose-only README edits.
 
-NEXT ACTION: Run the exact physical-source MILP screen on support-eight case 2, partition (2,2,2,1^5), and checkpoint its aggregate.
+NEXT ACTION: Independently replay the 16 source-feasible rows and enumerate their single-supplement options against the strict edge-bound target.
 
 FOCUSED-SESSION COUNT: 1/24; current trigger credit pending final compliance.
 
-MANDATORY CONSTRAINTS: Internal finite work is not external verification or graph realization; balanced complete bipartite equality controls remain mandatory.
+MANDATORY CONSTRAINTS: The 16 rows are abstract physical-source feasibility only, not graph realizations; no r=11 support-eight closure without supplement handling.
 <!-- CURRENT-STATUS:END -->
 
 ## Latest adversarial audit - 22 September 2026
