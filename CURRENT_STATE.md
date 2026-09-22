@@ -5,25 +5,25 @@ Canonical repository: `paullenz/MurtySimon742`. Date: 22 September 2026.
 Active target: a genuinely independent proof of Erdős #742 / the Murty–Simon inequality e(G)<=floor(n^2/4), preferably with the equality characterization. Forward priority is the project’s own complement / residual / Hall / profile / realizability route, not a reconstruction of the external e+disj+X proof. The first focused session produced the internally checked candidate threshold `Delta>=250n/429`, shrinking the live strip to `n/2<Delta<250n/429`. The theorem and its inherited graph-to-profile spine remain candidate/internal-review mathematics. A 24-focused-session go/no-go gate applies. Prior eventual-D2C work remains preserved but is no longer the active forward objective.
 
 <!-- CURRENT-STATUS:START -->
-CHECKPOINT CLASS: VERIFIED_INTERNAL_NOT_PROMOTED
+CHECKPOINT CLASS: EXECUTION_FAILURE_PRESERVED
 
 WORK MODE: SESSION_FINALIZED
 
-INSPECTED PREDECESSOR: a4e47a80220891e3d799da0cda330fb2339b5605.
+INSPECTED PREDECESSOR: 5ec96adb8dd6ef0dc5475442e991ddf2d00f21ac.
 
-LAST VERIFIED RESULT: r=12 is internally closed through support eight. The exact support-nine quotient census completed: 274,668 unlabelled nine-vertex graphs; 37,186,308 colored core orbits across three residual partitions; and 16,447 strict cores (84, 3,988, 12,375 by partition). The successful census start boundary was not authoritatively captured, so that unit receives zero verified-time credit and session utilisation remains UNVERIFIED/NONCOMPLIANT.
+LAST VERIFIED RESULT: No mathematics was performed in the 19:00:38 BST slot. Actual entry was 19:58:31, after the 19:53:38 research cutoff. The prior mathematical state remains: r=12 internally closed through support eight, with 16,447 support-nine strict cores awaiting source screening.
 
-EVIDENCE: deterministic r=12 quotient scripts and exact outputs through support nine; canonical telemetry at project/research/session_logs/2026-09-22/2026-09-22T18-00-38+01-00-canonical.json.
+EVIDENCE: canonical late-no-research telemetry at project/research/session_logs/2026-09-22/2026-09-22T19-00-38+01-00-canonical.json.
 
-SESSION UTILISATION: Trigger 18:00:38 BST; actual start 18:04:09; fifteen closed verified intervals; verified total 1053s (17m33s); sixteen substantive units; forward stop 18:49:49; cutoff 18:53:38; preservation complete 18:52:04; target N/A because only 49m29s was available; UNVERIFIED/NONCOMPLIANT.
+SESSION UTILISATION: Trigger 19:00:38 BST; actual start 19:58:31; zero closed forward intervals; verified research 0s; zero substantive units; cutoff 19:53:38; preservation complete 19:58:55; target N/A after cutoff; MISSED/LATE_NO_RESEARCH/NONCOMPLIANT.
 
-UNPRESERVED WORK: None. The support-nine mask stream is preserved exactly as deterministic gzip.
+UNPRESERVED WORK: None; no forward work occurred.
 
-NEXT ACTION: Shard exact source feasibility across the three support-nine partitions; test survivors for supplement feasibility; then continue supports ten and eleven.
+NEXT ACTION: The 20:00 trigger must start a distinct session and resume support-nine source screening.
 
-FOCUSED-SESSION COUNT: 1/24; this late-start, unverified-boundary trigger receives no focused-session credit.
+FOCUSED-SESSION COUNT: 1/24; this missed slot receives no credit.
 
-MANDATORY CONSTRAINTS: Support-nine source/supplement screening and supports ten-eleven remain; no r=12 closure yet. Abstract finite infeasibility is not graph realization. Equality remains characterized only through S<=8; the general theorem remains open.
+MANDATORY CONSTRAINTS: Do not backdate work or merge this missed slot into the next trigger.
 <!-- CURRENT-STATUS:END -->
 
 ## Latest adversarial audit - 22 September 2026

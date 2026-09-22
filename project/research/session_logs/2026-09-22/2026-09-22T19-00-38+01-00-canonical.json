@@ -1,0 +1,58 @@
+{
+  "schema_version": "1.0",
+  "session_id": "2026-09-22T19:00:38+01:00",
+  "scheduled_trigger": "2026-09-22T19:00:38+01:00",
+  "trigger_attribution": {
+    "status": "VERIFIED",
+    "method": "Current invocation task identity, supplied Europe/London hourly schedule, and runtime datetime 2026-09-22T19:58:05+01:00 identify the 19:00:38 trigger; no historical record or last_run_time used."
+  },
+  "earliest_actual_start": "2026-09-22T19:58:31+01:00",
+  "next_trigger": "2026-09-22T20:00:38+01:00",
+  "research_cutoff": "2026-09-22T19:53:38+01:00",
+  "hard_close_deadline": "2026-09-22T19:59:38+01:00",
+  "lateness_seconds": 3473,
+  "segments": [
+    {
+      "segment_id": "segment-1",
+      "actual_start": "2026-09-22T19:58:31+01:00",
+      "actual_stop": "2026-09-22T19:58:55+01:00",
+      "role": "late_no_research",
+      "notes": "Invocation arrived 4m53s after the research cutoff. Mandatory reads and failure preservation only; no mathematics and no scheduled research credit."
+    }
+  ],
+  "forward_research_intervals": [],
+  "verified_forward_span_seconds": 0,
+  "forward_stop": null,
+  "preservation_start": "2026-09-22T19:58:31+01:00",
+  "preservation_complete": "2026-09-22T19:58:55+01:00",
+  "wall_clock_span_seconds": 24,
+  "substantive_unit_count": 0,
+  "substantive_unit_ledger": [],
+  "early_stop_check": {
+    "checked_at": "2026-09-22T19:58:31+01:00",
+    "time_remaining_seconds": 0,
+    "result": "NO_FORWARD_RESEARCH",
+    "reason": "Invocation arrived after the 19:53:38 research cutoff."
+  },
+  "stop_reason": "Late delivery after research cutoff; recorded without backdating work and finalized before the hard-close deadline.",
+  "failures_and_pivots": [
+    {
+      "at": "2026-09-22T19:58:31+01:00",
+      "failure": "The 19:00:38 scheduled research invocation was not delivered until after its 19:53:38 research cutoff.",
+      "pivot": "Performed mandatory reads and preserved a late-no-research canonical record; did not consume the 20:00 trigger."
+    }
+  ],
+  "commit_shas": [
+    "5ec96adb8dd6ef0dc5475442e991ddf2d00f21ac"
+  ],
+  "unfinished_line": "Resume from the finalized 18:00 handoff: shard exact source feasibility for 16,447 r=12 support-nine strict cores, then supplement feasibility and supports ten-eleven.",
+  "target": {
+    "applicable": false,
+    "required_seconds": 3000,
+    "available_seconds": 0,
+    "achieved_verified_seconds": 0,
+    "result": "N/A_LATE_AFTER_CUTOFF",
+    "reason": "No research window remained at actual start."
+  },
+  "compliance_status": "MISSED/LATE_NO_RESEARCH/NONCOMPLIANT"
+}
