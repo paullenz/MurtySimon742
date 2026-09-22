@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 """Necessary physical-source screen for r=7 product-equality core orbits."""
-import itertools,json
+import itertools,json,sys
 from pathlib import Path
 data=json.loads(Path('R7_EQUALITY_CORE_SCREEN.json').read_text());out={}
 for partition,entry in data.items():
@@ -38,4 +38,8 @@ for partition,entry in data.items():
           'residual_free_N_patterns_omitted':free_p_assertions,
           'surviving_source_multisets':count[0],'first_survivors':examples,
           'scope':'Necessary C-source states; zero-label attachments, supplements, B-edges and criticality omitted.'}
-print(json.dumps(out,indent=2))
+payload=json.dumps(out,indent=2)+'\n'
+if '--output' in sys.argv:
+    Path(sys.argv[sys.argv.index('--output')+1]).write_text(payload)
+else:
+    print(payload,end='')

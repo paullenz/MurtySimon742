@@ -1,0 +1,86 @@
+{
+  "(4, 1, 1, 1)/orbit_1": {
+    "source_multisets_tested": 6,
+    "residual_free_types_available": 1,
+    "supplement_feasible": 0,
+    "first_survivors": [],
+    "scope": "Necessary B-edge forcing only; free N-state obligations, A-common neighbours, criticality and graph realization relaxed."
+  },
+  "(4, 1, 1, 1)/orbit_2": {
+    "source_multisets_tested": 1,
+    "residual_free_types_available": 1,
+    "supplement_feasible": 0,
+    "first_survivors": [],
+    "scope": "Necessary B-edge forcing only; free N-state obligations, A-common neighbours, criticality and graph realization relaxed."
+  },
+  "(4, 1, 1, 1)/orbit_3": {
+    "source_multisets_tested": 1,
+    "residual_free_types_available": 1,
+    "supplement_feasible": 0,
+    "first_survivors": [],
+    "scope": "Necessary B-edge forcing only; free N-state obligations, A-common neighbours, criticality and graph realization relaxed."
+  },
+  "(2, 2, 1, 1, 1)/orbit_3": {
+    "source_multisets_tested": 2,
+    "residual_free_types_available": 1,
+    "supplement_feasible": 0,
+    "first_survivors": [],
+    "scope": "Necessary B-edge forcing only; free N-state obligations, A-common neighbours, criticality and graph realization relaxed."
+  },
+  "(2, 2, 1, 1, 1)/orbit_4": {
+    "source_multisets_tested": 16,
+    "residual_free_types_available": 1,
+    "supplement_feasible": 0,
+    "first_survivors": [],
+    "scope": "Necessary B-edge forcing only; free N-state obligations, A-common neighbours, criticality and graph realization relaxed."
+  },
+  "(2, 2, 1, 1, 1)/orbit_5": {
+    "source_multisets_tested": 26,
+    "residual_free_types_available": 2,
+    "supplement_feasible": 0,
+    "first_survivors": [],
+    "scope": "Necessary B-edge forcing only; free N-state obligations, A-common neighbours, criticality and graph realization relaxed."
+  },
+  "(2, 2, 1, 1, 1)/orbit_7": {
+    "source_multisets_tested": 2,
+    "residual_free_types_available": 1,
+    "supplement_feasible": 0,
+    "first_survivors": [],
+    "scope": "Necessary B-edge forcing only; free N-state obligations, A-common neighbours, criticality and graph realization relaxed."
+  },
+  "(2, 2, 1, 1, 1)/orbit_12": {
+    "source_multisets_tested": 104,
+    "residual_free_types_available": 2,
+    "supplement_feasible": 0,
+    "first_survivors": [],
+    "scope": "Necessary B-edge forcing only; free N-state obligations, A-common neighbours, criticality and graph realization relaxed."
+  },
+  "(2, 2, 1, 1, 1)/orbit_17": {
+    "source_multisets_tested": 4,
+    "residual_free_types_available": 1,
+    "supplement_feasible": 0,
+    "first_survivors": [],
+    "scope": "Necessary B-edge forcing only; free N-state obligations, A-common neighbours, criticality and graph realization relaxed."
+  },
+  "(2, 1, 1, 1, 1, 1)/orbit_16": {
+    "source_multisets_tested": 5,
+    "residual_free_types_available": 1,
+    "supplement_feasible": 0,
+    "first_survivors": [],
+    "scope": "Necessary B-edge forcing only; free N-state obligations, A-common neighbours, criticality and graph realization relaxed."
+  },
+  "(2, 1, 1, 1, 1, 1)/orbit_20": {
+    "source_multisets_tested": 42,
+    "residual_free_types_available": 1,
+    "supplement_feasible": 0,
+    "first_survivors": [],
+    "scope": "Necessary B-edge forcing only; free N-state obligations, A-common neighbours, criticality and graph realization relaxed."
+  },
+  "(2, 1, 1, 1, 1, 1)/orbit_21": {
+    "source_multisets_tested": 2,
+    "residual_free_types_available": 1,
+    "supplement_feasible": 0,
+    "first_survivors": [],
+    "scope": "Necessary B-edge forcing only; free N-state obligations, A-common neighbours, criticality and graph realization relaxed."
+  }
+}

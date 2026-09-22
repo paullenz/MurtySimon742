@@ -9,19 +9,19 @@ CHECKPOINT CLASS: SUBSTANTIVE_RESEARCH_CHECKPOINT
 
 WORK MODE: MATH
 
-INSPECTED PREDECESSOR: f853c48ae6ba5886230c1fced1e4b687f3183bc9.
+INSPECTED PREDECESSOR: 76da06e8c227266c708dfbe5441583924dcafef8.
 
-LAST VERIFIED RESULT: Exact source screen reduces r=7 equality from 51 cores to 12 orbits and 211 necessary source populations; equality remains open.
+LAST VERIFIED RESULT: All 211 r=7 equality source populations fail a necessary B-layer condition; internal candidate scope gives S<=9 edge bound and S<=7 balanced equality. Full strip remains open.
 
 EVIDENCE: `project/research/session_logs/2026-09-22/2026-09-22T11-00-38+01-00-canonical.json`; `project/research/general_n/2026-09-22-zero-demand-equality-v1/`.
 
-SESSION UTILISATION: Trigger 2026-09-22 11:00:38 BST; earliest 11:01:19; next 12:00:38; cutoff 11:53:38; hard close 11:59:38. Closed intervals: 11:02:36–11:04:00, 11:04:50–11:06:51, 11:07:13–11:08:46, 11:09:08–11:11:53, 11:12:15–11:12:38, 11:13:23–11:14:27, 11:14:53–11:16:02, 11:16:23–11:18:32, 11:19:08–11:20:21, 11:20:42–11:22:03, 11:22:29–11:24:22, 11:24:49–11:26:13; total 1099 seconds; units 11; preservation pending; target YES/PENDING; IN_PROGRESS. Stop reason: active. Canonical: `project/research/session_logs/2026-09-22/2026-09-22T11-00-38+01-00-canonical.json`.
+SESSION UTILISATION: Trigger 2026-09-22 11:00:38 BST; earliest 11:01:19; next 12:00:38; cutoff 11:53:38; hard close 11:59:38. Closed intervals: 11:02:36–11:04:00, 11:04:50–11:06:51, 11:07:13–11:08:46, 11:09:08–11:11:53, 11:12:15–11:12:38, 11:13:23–11:14:27, 11:14:53–11:16:02, 11:16:23–11:18:32, 11:19:08–11:20:21, 11:20:42–11:22:03, 11:22:29–11:24:22, 11:24:49–11:26:13, 11:26:56–11:28:51; total 1214 seconds; units 12; preservation pending; target YES/PENDING; IN_PROGRESS. Stop reason: active. Canonical: `project/research/session_logs/2026-09-22/2026-09-22T11-00-38+01-00-canonical.json`.
 
 UNPRESERVED WORK: None beyond named unfinished line.
 
 DEFERRED ADMIN: Historical missing-slot reconciliation and schedule maintenance.
 
-NEXT ACTION: Apply supplement forcing to all 211 r=7 equality source populations, then independently replay any zero-survivor conclusion.
+NEXT ACTION: Independently replay r6/r7 outputs and begin r8 strict-surplus core classification; do not extrapolate low-r computation to full strip.
 
 FOCUSED-SESSION COUNT: 1/24 completed before this trigger; this trigger credit 0.
 
