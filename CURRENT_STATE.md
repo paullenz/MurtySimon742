@@ -5,25 +5,27 @@ Canonical repository: `paullenz/MurtySimon742`. Date: 22 September 2026.
 Active target: a genuinely independent proof of Erdős #742 / the Murty–Simon inequality e(G)<=floor(n^2/4), preferably with the equality characterization. Forward priority is the project’s own complement / residual / Hall / profile / realizability route, not a reconstruction of the external e+disj+X proof. The first focused session produced the internally checked candidate threshold `Delta>=250n/429`, shrinking the live strip to `n/2<Delta<250n/429`. The theorem and its inherited graph-to-profile spine remain candidate/internal-review mathematics. A 24-focused-session go/no-go gate applies. Prior eventual-D2C work remains preserved but is no longer the active forward objective.
 
 <!-- CURRENT-STATUS:START -->
-CHECKPOINT CLASS: FINALIZED_RESEARCH_SESSION
+CHECKPOINT CLASS: STARTED
 
 WORK MODE: MATH
 
-INSPECTED PREDECESSOR: 8a45922411fcd410a4d75b67610e8d9744cf9510
+INSPECTED PREDECESSOR: 97b89e23e33ab5eae18d01103278ddd500df177d.
 
-LAST VERIFIED RESULT: Mathematics unchanged: internal S<=7 edge bound and S<=4 equality. Eleven units saved; full proof open. Final telemetry records 35m40s, short of the applicable 50-minute target.
+LAST VERIFIED RESULT: New 11:00:38 scheduled session durably started before forward mathematics. Inherited internal result: S<=7 edge bound, equality characterized through S<=4; full independent proof open.
 
-SESSION UTILISATION: Trigger 2026-09-22T10:00:38+01:00; earliest 2026-09-22T10:02:42+01:00; next 2026-09-22T11:00:38+01:00; cutoff 2026-09-22T10:53:38+01:00; hard close 2026-09-22T10:59:38+01:00. Closed intervals: 10:03:41–10:08:19, 10:09:03–10:14:15, 10:15:45–10:18:54, 10:20:00–10:22:39, 10:24:43–10:30:13, 10:31:01–10:33:13, 10:34:30–10:37:09, 10:41:05–10:42:01, 10:42:54–10:45:12, 10:45:32–10:47:32, 10:47:57–10:49:16, 10:49:42–10:50:08, 10:50:33–10:53:15; total 2140 seconds; units 11; preservation 2026-09-22T10:54:12+01:00; target YES/NO; SHORT/NONCOMPLIANT. Stop reason: Stopped 23 seconds before research cutoff for final preservation; 50-minute target missed. Preservation, monitoring and context-reentry gaps excluded; no blocked-avenues exception claimed.. Canonical: `project/research/session_logs/2026-09-22/2026-09-22T10-00-38+01-00-canonical.json`.
+EVIDENCE: `project/research/session_logs/2026-09-22/2026-09-22T11-00-38+01-00-canonical.json`; prior package `project/research/general_n/2026-09-22-zero-demand-equality-v1/`.
 
-UNPRESERVED WORK: None beyond explicitly named unfinished line.
+SESSION UTILISATION: Trigger 2026-09-22 11:00:38 BST; earliest actual start 11:01:19; next trigger 12:00:38; research cutoff 11:53:38; hard close 11:59:38. Closed forward intervals: none; total 0 seconds; units 0; preservation pending; target YES/PENDING; IN_PROGRESS. Canonical: `project/research/session_logs/2026-09-22/2026-09-22T11-00-38+01-00-canonical.json`.
 
-DEFERRED ADMIN: No schedule/CI maintenance. Missing old slots remain unverified.
+UNPRESERVED WORK: None.
 
-NEXT ACTION: Independently audit localized unit-triangle cycle contradiction and finite-kernel supplement exclusions; retain S<=7 edge bound and S<=4 equality until promoted.
+DEFERRED ADMIN: Historical missing-slot reconciliation and schedule maintenance.
 
-FOCUSED-SESSION COUNT: 1/24 previously completed; this trigger credited 0 exactly once.
+NEXT ACTION: Independently audit the localized unit-triangle cycle contradiction and finite-kernel supplement exclusions.
 
-MANDATORY CONSTRAINTS: Independent route; candidate/internal trust; actual graph realizability; no fabricated durations; no credit for re-entry.
+FOCUSED-SESSION COUNT: 1/24 completed before this trigger; this live session has zero credit.
+
+MANDATORY CONSTRAINTS: Independent route; internal-candidate trust; actual graph realizability; balanced complete-bipartite equality controls; no fabricated intervals.
 <!-- CURRENT-STATUS:END -->
 
 ## Latest adversarial audit - 22 September 2026
