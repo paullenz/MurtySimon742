@@ -9,17 +9,17 @@ CHECKPOINT CLASS: SUBSTANTIVE_RESEARCH_CHECKPOINT
 
 WORK MODE: MATH
 
-INSPECTED PREDECESSOR: 03924f3af8b0a45a572ebc1b5671535dd84637fe
+INSPECTED PREDECESSOR: 4940c5bb48b9b2dc4010cd8b828a1e18059e0873
 
-LAST VERIFIED RESULT: Internal S<=4 closure passed 68,741 selected assignments; independent-support theorem has seven nonempty actual cases, none with >=3 support labels.
+LAST VERIFIED RESULT: Internal proof gives S<=7 edge bound, with equality rigidity retained only through S<=4; full strip remains open.
 
-SESSION UTILISATION: Trigger 2026-09-22T10:00:38+01:00; earliest 2026-09-22T10:02:42+01:00; next 2026-09-22T11:00:38+01:00; cutoff 2026-09-22T10:53:38+01:00; hard close 2026-09-22T10:59:38+01:00. Closed intervals: 10:03:41–10:08:19, 10:09:03–10:14:15, 10:15:45–10:18:54, 10:20:00–10:22:39, 10:24:43–10:30:13, 10:31:01–10:33:13, 10:34:30–10:37:09, 10:41:05–10:42:01, 10:42:54–10:45:12; total 1753 seconds; units 8; preservation pending; target YES/PENDING; IN_PROGRESS. Stop reason: active. Canonical: `project/research/session_logs/2026-09-22/2026-09-22T10-00-38+01-00-canonical.json`.
+SESSION UTILISATION: Trigger 2026-09-22T10:00:38+01:00; earliest 2026-09-22T10:02:42+01:00; next 2026-09-22T11:00:38+01:00; cutoff 2026-09-22T10:53:38+01:00; hard close 2026-09-22T10:59:38+01:00. Closed intervals: 10:03:41–10:08:19, 10:09:03–10:14:15, 10:15:45–10:18:54, 10:20:00–10:22:39, 10:24:43–10:30:13, 10:31:01–10:33:13, 10:34:30–10:37:09, 10:41:05–10:42:01, 10:42:54–10:45:12, 10:45:32–10:47:32; total 1873 seconds; units 9; preservation pending; target YES/PENDING; IN_PROGRESS. Stop reason: active. Canonical: `project/research/session_logs/2026-09-22/2026-09-22T10-00-38+01-00-canonical.json`.
 
 UNPRESERVED WORK: None beyond explicitly named unfinished line.
 
 DEFERRED ADMIN: No schedule/CI maintenance. Missing old slots remain unverified.
 
-NEXT ACTION: Exploit core ledger for <=3 support and r=5 classification.
+NEXT ACTION: Replay positive-core identity and r5 obstruction, then attack remaining equality core/source compatibility.
 
 FOCUSED-SESSION COUNT: 1/24 previously completed; this trigger credited 0 exactly once.
 
