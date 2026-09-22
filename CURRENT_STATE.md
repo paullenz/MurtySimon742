@@ -9,23 +9,23 @@ CHECKPOINT CLASS: VERIFIED_INTERNAL_NOT_PROMOTED
 
 WORK MODE: FORWARD_RESEARCH_LIVE
 
-INSPECTED PREDECESSOR: 6a159d60a257346984d4269c7b65d7de15ce76ae.
+INSPECTED PREDECESSOR: 522d1dbde17bde6ca468a042a17175d307fef0ca.
 
-LAST VERIFIED RESULT: The r=11 closure has now passed two replay layers. Cross-file/formula checks pass on all 6,049 strict rows. A newly formulated combined source/supplement MILP—independent of the earlier multiset DFS—finds all 27 source-surviving kernels infeasible: 16 at support eight, 8 at support nine, and 3 at support ten, with zero solver-unknown cases. This materially corroborates the internal S<=13 edge bound; orbit isomorphism reduction remains not independently reimplemented.
+LAST VERIFIED RESULT: The independently reformulated r=11 replay remains clean. The r=12 frontier is now internally closed for every residual partition of support at most five: all 47 partitions were enumerated; only (8,1^4) and (7,2,1^3) yield strict quotient cores, with 4 and 8 orbits respectively; all 12 are physical-source infeasible. Supports 6 through 11 remain.
 
-EVIDENCE: `audit_r11_pipeline.py/json` and `audit_r11_supplement_milp.py/json` in the r11 quotient package; canonical telemetry.
+EVIDENCE: `project/research/general_n/2026-09-22-r12-quotient-v1/r12_support_le5.py/json` and counts; canonical telemetry.
 
-SESSION UTILISATION: Trigger 18:00:38 BST; actual start 18:04:09; closed intervals 18:05:32--18:06:42 and 18:07:45--18:14:23; verified total 468s (7m48s); two substantive units; cutoff 18:53:38; target N/A late start; LIVE.
+SESSION UTILISATION: Trigger 18:00:38 BST; actual start 18:04:09; three closed intervals; verified total 523s (8m43s); three substantive units; cutoff 18:53:38; target N/A late start; LIVE.
 
 UNPRESERVED WORK: None at this checkpoint.
 
 DEFERRED ADMIN: Historical reconciliation and prose-only README edits.
 
-NEXT ACTION: Open the r=12 frontier by enumerating its integer residual partitions and deriving support-wise structural degree reductions before selecting a tractable exact shard.
+NEXT ACTION: Enumerate and source-screen all r=12 support-six partitions; checkpoint exact survivors before supplement analysis.
 
 FOCUSED-SESSION COUNT: 1/24; current trigger credit pending final compliance.
 
-MANDATORY CONSTRAINTS: MILP infeasibility is internal numerical computer-assisted evidence; orbit reduction is not independently replayed; no graph-realization claim.
+MANDATORY CONSTRAINTS: r=12 support<=5 is internal finite closure only; the S<=14 edge-bound extension is not claimed until all supports close.
 <!-- CURRENT-STATUS:END -->
 
 ## Latest adversarial audit - 22 September 2026

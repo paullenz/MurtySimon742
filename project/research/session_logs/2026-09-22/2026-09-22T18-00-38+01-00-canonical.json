@@ -33,14 +33,20 @@
       "stop": "2026-09-22T18:14:23+01:00",
       "seconds": 398,
       "evidence": "independent combined source/supplement MILP replay for 27 r=11 kernels"
+    },
+    {
+      "start": "2026-09-22T18:15:21+01:00",
+      "stop": "2026-09-22T18:16:16+01:00",
+      "seconds": 55,
+      "evidence": "exact r=12 support<=5 quotient/source screen"
     }
   ],
-  "verified_forward_span_seconds": 468,
+  "verified_forward_span_seconds": 523,
   "forward_stop": "PENDING",
   "preservation_start": "PENDING",
   "preservation_complete": "PENDING",
   "wall_clock_span_seconds": "PENDING",
-  "substantive_unit_count": 2,
+  "substantive_unit_count": 3,
   "substantive_unit_ledger": [
     {
       "completed_at": "2026-09-22T18:06:42+01:00",
@@ -51,6 +57,11 @@
       "completed_at": "2026-09-22T18:14:23+01:00",
       "unit": "independent combined source/supplement MILP replay",
       "result": "27/27 kernels infeasible; 0 feasible, 0 unknown; supports 8/9/10 all corroborated."
+    },
+    {
+      "completed_at": "2026-09-22T18:16:16+01:00",
+      "unit": "r=12 support at most five exact screen",
+      "result": "47 partitions; 12 strict orbits total; 0 source-feasible; supports <=5 internally closed."
     }
   ],
   "early_stop_check": {
@@ -62,9 +73,10 @@
   "commit_shas": [
     "329e7bb6bc00254835cda847b40dac26a1fff6f5",
     "634818a6a93710421045db9f1cbcdc5fafb5f8b0",
-    "6a159d60a257346984d4269c7b65d7de15ce76ae"
+    "6a159d60a257346984d4269c7b65d7de15ce76ae",
+    "522d1dbde17bde6ca468a042a17175d307fef0ca"
   ],
-  "unfinished_line": "Open r=12 frontier; orbit isomorphism replay remains an r=11 audit item.",
+  "unfinished_line": "Enumerate and screen r=12 supports 6 through 11.",
   "target": {
     "applicable": false,
     "available_seconds": 2969,
