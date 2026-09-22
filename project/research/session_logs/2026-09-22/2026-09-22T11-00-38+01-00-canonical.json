@@ -88,6 +88,13 @@
       "actual_stop": "2026-09-22T11:22:03+01:00",
       "role": "forward_research",
       "notes": "Exact physical-source exclusion for all 15 optimistic r=7 strict-surplus cores."
+    },
+    {
+      "segment_id": "research-10",
+      "actual_start": "2026-09-22T11:22:29+01:00",
+      "actual_stop": "2026-09-22T11:24:22+01:00",
+      "role": "forward_research",
+      "notes": "R7 equality core classification and explicit repair of stale serialized r6 equality-screen source."
     }
   ],
   "forward_research_intervals": [
@@ -140,6 +147,11 @@
       "start": "2026-09-22T11:20:42+01:00",
       "stop": "2026-09-22T11:22:03+01:00",
       "evidence": "R7_SOURCE_EXCLUSION.md, screen_r7_sources.py, R7_SOURCE_SCREEN.json"
+    },
+    {
+      "start": "2026-09-22T11:22:29+01:00",
+      "stop": "2026-09-22T11:24:22+01:00",
+      "evidence": "R7_EQUALITY_CORE_SCREEN.md, screen_r7_equality.py, R7_EQUALITY_CORE_SCREEN.json; corrected screen_r6_equality.py"
     }
   ],
   "forward_research_stop": null,
@@ -147,10 +159,10 @@
   "preservation_complete": null,
   "final_report_time": null,
   "wall_clock_span_to_preservation_complete": null,
-  "verified_forward_research_span": 902,
+  "verified_forward_research_span": 1015,
   "verified_forward_research_span_units": "seconds",
   "preservation_span": null,
-  "substantive_unit_count": 9,
+  "substantive_unit_count": 10,
   "timestamped_unit_ledger": [
     {
       "completed_at": "2026-09-22T11:04:00+01:00",
@@ -205,6 +217,12 @@
       "unit": "Residual-mass-seven source-state exclusion",
       "result": "All 15 optimistic r7 strict-surplus core orbits have zero exact source multisets; internal computer-assisted r7 implies t<=0 and S<=9 edge bound. Equality scope unchanged.",
       "artifact": "project/research/general_n/2026-09-22-zero-demand-equality-v1/R7_SOURCE_EXCLUSION.md"
+    },
+    {
+      "completed_at": "2026-09-22T11:24:22+01:00",
+      "unit": "R7 equality core classification and r6 provenance repair",
+      "result": "R7 t=0 reduces to 51 optimistic orbits across four partitions. Repaired committed r6 script now byte-reproduces saved JSON; downstream conclusions unchanged.",
+      "artifact": "project/research/general_n/2026-09-22-zero-demand-equality-v1/R7_EQUALITY_CORE_SCREEN.md"
     }
   ],
   "early_stop_check_time": null,
@@ -216,9 +234,9 @@
   "compliance_status": "IN_PROGRESS",
   "infrastructure_failures": [],
   "commit_shas": [
-    "92141ee5ac6a37ff5b5a842bb499270917debe58"
+    "ef8e5be64f06a9b0366f250aef9e7261bc79a35d"
   ],
-  "live_unfinished_line": "Independently replay the r=6/r=7 finite pipeline and attack r=7 product equality or r=8 strict surplus.",
+  "live_unfinished_line": "Screen 51 r=7 equality core/slack orbits through source states with digest/replay safeguards.",
   "historical_fragments": [],
   "focused_session_credit": 0,
   "predecessor_session": "project/research/session_logs/2026-09-22/2026-09-22T10-00-38+01-00-canonical.json",
@@ -228,5 +246,8 @@
       "completed_at": "2026-09-22T11:13:23+01:00",
       "result": "Current 11 slot durable and fresh at 11:11:53; preceding 10 slot remains SHORT/NONCOMPLIANT. Original research resumed."
     }
+  ],
+  "failures_and_pivots": [
+    "Detected stale in-memory serialization of screen_r6_equality.py: committed source lacked two filters used to generate JSON. Corrected source byte-reproduces JSON; no result change."
   ]
 }

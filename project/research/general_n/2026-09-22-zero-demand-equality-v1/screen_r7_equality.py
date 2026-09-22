@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Optimistic equality-core screen at r=6; candidates are not graphs."""
+"""Optimistic equality-core screen at r=7; candidates are not graphs."""
 import itertools,json
 
 def parts(n,hi=None):
@@ -25,15 +25,14 @@ def canonical(R,edges,h):
     return min(forms)
 
 out={}
-for R in parts(6):
+for R in parts(7):
     k=len(R);pairs=list(itertools.combinations(range(k),2));classes={};labelled=0
     for mask in range(1<<len(pairs)):
         edges=[pairs[q] for q in range(len(pairs)) if mask>>q&1]
         deg=[0]*k;neigh=[[] for _ in R]
         for i,j in edges:deg[i]+=1;deg[j]+=1;neigh[i].append(j);neigh[j].append(i)
         if any(R[i]+R[j]<2 for i,j in edges):continue
-        if not edges:continue  # independent residual support gives f<r
-        # Exclude a unit-residual cycle component by LOCAL_TRIANGLE_AUDIT.
+        if not edges:continue
         adj=[set() for _ in R]
         for i,j in edges:adj[i].add(j);adj[j].add(i)
         seen=set();unit_cycle=False
@@ -43,8 +42,7 @@ for R in parts(6):
             while stack:
                 i=stack.pop()
                 for j in adj[i]-seen:seen.add(j);comp.add(j);stack.append(j)
-            if len(comp)>=3 and all(R[i]==1 and len(adj[i])==2 for i in comp):
-                unit_cycle=True
+            if len(comp)>=3 and all(R[i]==1 and len(adj[i])==2 for i in comp):unit_cycle=True
         if unit_cycle:continue
         P=[i for i in range(k) if deg[i]>R[i]];N=[i for i in range(k) if i not in P]
         if any((deg[i]-R[i])**2>sum(R[j] for j in neigh[i]) for i in P):continue
