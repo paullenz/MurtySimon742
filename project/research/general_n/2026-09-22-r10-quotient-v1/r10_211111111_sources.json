@@ -1,0 +1,17 @@
+{
+  "R": [
+    2,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1
+  ],
+  "core_orbits": 146,
+  "source_feasible": 0,
+  "rows": [],
+  "scope": "Exact physical-source necessary condition; not graph realization."
+}

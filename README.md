@@ -3,7 +3,7 @@
 <!-- Keep the live overview and status tables here. Put dated updates below them, never above them. -->
 <!-- CURRENT-STATUS:START -->
 
-**22 September equality branch:** Internal [zero-demand rigidity](project/research/general_n/2026-09-22-zero-demand-equality-v1/ZERO_DEMAND_EQUALITY.md), [residual support](project/research/general_n/2026-09-22-zero-demand-equality-v1/LOW_RESIDUAL_OBSTRUCTION.md), [local-cycle closure](project/research/general_n/2026-09-22-zero-demand-equality-v1/LOCAL_TRIANGLE_AUDIT.md) and the exact [residual-six supplement obstruction](project/research/general_n/2026-09-22-zero-demand-equality-v1/R6_SUPPLEMENT_EXCLUSION.md) now prove the edge bound for total demand S<=10 and balanced complete-bipartite equality for S<=8. The residual-seven and residual-eight equality screens, and the residual-eight strict-surplus source/supplement screens, have zero survivors. These are internal candidate/computer-assisted results, not external verification. The bounded graph suite does not exercise S=6,7,8 or the local-cycle premise. The positive-demand strip remains open.
+**22 September equality branch:** Internal [zero-demand rigidity](project/research/general_n/2026-09-22-zero-demand-equality-v1/ZERO_DEMAND_EQUALITY.md), residual-support analysis, and exact residual quotient/source/supplement screens now prove the edge bound for total demand S<=12 and balanced complete-bipartite equality through S<=8. The r=10 strict pipeline is completely closed, including the 2,208,612-orbit support-nine quotient. These are internal candidate/computer-assisted results, not external verification. The positive-demand strip and the broader equality characterization remain open.
 
 ## Current status
 

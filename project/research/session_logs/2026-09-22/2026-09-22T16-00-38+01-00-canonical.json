@@ -22,6 +22,12 @@
       "stop": "2026-09-22T16:07:15+01:00",
       "seconds": 15,
       "unit": 1
+    },
+    {
+      "start": "2026-09-22T16:08:39+01:00",
+      "stop": "2026-09-22T16:15:47+01:00",
+      "seconds": 428,
+      "unit": 2
     }
   ],
   "forward_research_stop": "PENDING",
@@ -29,15 +35,21 @@
   "preservation_complete": "PENDING",
   "final_report_time": "PENDING",
   "wall_clock_span_to_preservation_complete": "PENDING",
-  "verified_forward_research_span_seconds": 15,
+  "verified_forward_research_span_seconds": 443,
   "preservation_span": "PENDING",
-  "substantive_unit_count": 1,
+  "substantive_unit_count": 2,
   "timestamped_unit_ledger": [
     {
       "unit": 1,
       "start": "2026-09-22T16:07:00+01:00",
       "completed": "2026-09-22T16:07:15+01:00",
       "result": "Exact canonical-augmentation enumeration for r=10 support-nine (2,1^8): unlabeled graph counts reproduce 2,4,11,34,156,1044,12346 through n=8; 2,208,612 rooted colour-preserving orbits; optimistic capacity filter leaves 146 strict-surplus core orbits."
+    },
+    {
+      "unit": 2,
+      "start": "2026-09-22T16:08:39+01:00",
+      "completed": "2026-09-22T16:15:47+01:00",
+      "result": "Exact physical-source feasibility rejects all 146 support-nine optimistic cores. Consequently every r=10 residual partition is internally closed, giving strict t<=0 for r=10 and extending the internal edge bound through S<=12. Equality characterization remains only through S<=8."
     }
   ],
   "early_stop_check_time": "PENDING",
@@ -49,8 +61,10 @@
   "infrastructure_failures": [],
   "commit_shas": [
     "3f04e6af2a4fbe791e1b0163b4fa02dbececdd52",
-    "5127017df62c21d41c7449dbced6a81716216db4"
+    "5127017df62c21d41c7449dbced6a81716216db4",
+    "d6e3c636de8544efc6f5494107b13ad75e03d507",
+    "d6e3c636de8544efc6f5494107b13ad75e03d507"
   ],
-  "live_unfinished_line": "Source-screen 146 support-nine strict core orbits, then supplement-close any survivors; no r=10 closure yet.",
+  "live_unfinished_line": "Independently audit the r=10 support-nine canonical quotient/source screen; then advance to r=11 or strengthen equality scope. General theorem remains open.",
   "historical_fragments": []
 }

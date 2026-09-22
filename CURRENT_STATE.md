@@ -9,23 +9,23 @@ CHECKPOINT CLASS: VERIFIED_INTERNAL_NOT_PROMOTED
 
 WORK MODE: MATH
 
-INSPECTED PREDECESSOR: 5127017df62c21d41c7449dbced6a81716216db4.
+INSPECTED PREDECESSOR: d6e3c636de8544efc6f5494107b13ad75e03d507.
 
-LAST VERIFIED RESULT: Exact canonical augmentation closes the r=10 support-nine core quotient: 12,346 unlabelled unit graphs, 2,208,612 rooted colour-preserving orbits, and 146 optimistic strict-surplus cores. Source feasibility remains to be tested. Prior r=9 closure and r=10 closure through support eight retained.
+LAST VERIFIED RESULT: Exact support-nine source feasibility rejects all 146 optimistic strict cores for residual demand r=10. Together with prior support <=8 closures, every r=10 partition is internally closed: strict t<=0, extending the internal edge bound through S<=12. Equality characterization remains through S<=8 only; the general theorem remains open.
 
-EVIDENCE: `project/research/general_n/2026-09-22-r10-quotient-v1/R10_211111111_CORE_CENSUS.md`; exact C++ generator and 146-mask ledger.
+EVIDENCE: `project/research/general_n/2026-09-22-r10-quotient-v1/R10_COMPLETE_CLOSURE.md`; exact support-nine canonical generator, 146-mask ledger, source screen/result; earlier support <=8 package.
 
-SESSION UTILISATION: Trigger 16:00:38 BST; actual start 16:03:51; cutoff 16:53:38. One closed interval; verified total 15s; units 1; target NO/N/A; LIVE. Canonical: `project/research/session_logs/2026-09-22/2026-09-22T16-00-38+01-00-canonical.json`.
+SESSION UTILISATION: Trigger 16:00:38 BST; actual start 16:03:51; cutoff 16:53:38. Two closed intervals; verified total 443s (7m23s); units 2; target NO/N/A; LIVE. Canonical: `project/research/session_logs/2026-09-22/2026-09-22T16-00-38+01-00-canonical.json`.
 
 UNPRESERVED WORK: None.
 
-DEFERRED ADMIN: Historical missing-slot reconciliation; optional README polishing.
+DEFERRED ADMIN: Historical missing-slot reconciliation.
 
-NEXT ACTION: Exact physical-source feasibility screen for the 146 support-nine core orbits.
+NEXT ACTION: Independently audit support-nine quotient coverage and source infeasibility before advancing to r=11.
 
 FOCUSED-SESSION COUNT: 1/24; this shortened late-start trigger pending and receives no automatic credit.
 
-MANDATORY CONSTRAINTS: Internal finite computation is not graph realization; preserve balanced equality controls.
+MANDATORY CONSTRAINTS: Internal finite computation is not external verification or graph realization; preserve balanced equality controls.
 <!-- CURRENT-STATUS:END -->
 
 ## Latest adversarial audit - 22 September 2026
