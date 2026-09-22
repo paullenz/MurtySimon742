@@ -5,31 +5,25 @@ Canonical repository: `paullenz/MurtySimon742`. Date: 22 September 2026.
 Active target: a genuinely independent proof of Erdős #742 / the Murty–Simon inequality e(G)<=floor(n^2/4), preferably with the equality characterization. Forward priority is the project’s own complement / residual / Hall / profile / realizability route, not a reconstruction of the external e+disj+X proof. The first focused session produced the internally checked candidate threshold `Delta>=250n/429`, shrinking the live strip to `n/2<Delta<250n/429`. The theorem and its inherited graph-to-profile spine remain candidate/internal-review mathematics. A 24-focused-session go/no-go gate applies. Prior eventual-D2C work remains preserved but is no longer the active forward objective.
 
 <!-- CURRENT-STATUS:START -->
-CHECKPOINT CLASS: LATE_ENTRY_NO_RESEARCH_UNVERIFIED
+CHECKPOINT CLASS: STARTED_RESEARCH_SESSION
 
-WORK MODE: RECOVERY
+WORK MODE: MATH
 
-INSPECTED PREDECESSOR: f3d44c45866a77adb4d3842da71e91976c04d17f.
+INSPECTED PREDECESSOR: f0ee37d131ccef891bf2932bdfcbaf5a99ff349f.
 
-LAST VERIFIED RESULT: Mathematical status unchanged by this administrative repair. The independently derived finite pipeline now closes strict residual mass r=8 and the r=8 equality boundary: internally checked edge bound through S<=10 and balanced equality through S<=8. The general theorem remains open.
+LAST VERIFIED RESULT: No new mathematics yet. Inherited internal result: the finite pipeline closes strict residual mass r=8 and balanced equality through r=8; edge bound through S<=10. General theorem open.
 
-EVIDENCE: `project/research/session_logs/2026-09-22/2026-09-22T13-23-48+01-00-admin-repair.md`; `project/research/session_logs/2026-09-22/2026-09-22T11-00-38+01-00-canonical.json`; `project/research/general_n/2026-09-22-zero-demand-equality-v1/`.
+EVIDENCE: `project/research/session_logs/2026-09-22/2026-09-22T15-00-38+01-00-canonical.json`; `project/research/general_n/2026-09-22-zero-demand-equality-v1/`.
 
-LAST RESEARCH SESSION UTILISATION (unchanged): Trigger 2026-09-22 11:00:38 BST; earliest 11:01:19; next 12:00:38; cutoff 11:53:38; hard close 11:59:38. Closed intervals: 11:02:36–11:04:00, 11:04:50–11:06:51, 11:07:13–11:08:46, 11:09:08–11:11:53, 11:12:15–11:12:38, 11:13:23–11:14:27, 11:14:53–11:16:02, 11:16:23–11:18:32, 11:19:08–11:20:21, 11:20:42–11:22:03, 11:22:29–11:24:22, 11:24:49–11:26:13, 11:26:56–11:28:51, 11:29:19–11:30:35, 11:31:09–11:33:17, 11:37:18–11:39:04, 11:40:01–11:41:44, 11:43:03–11:45:53, 11:46:51–11:47:54, 11:48:48–11:50:36, 11:51:38–11:52:11; total 2001 seconds; units 20; preservation 2026-09-22T11:53:48+01:00; target YES/NO; SHORT/NONCOMPLIANT. Stop reason: Forward research stopped 87 seconds before the 11:53:38 cutoff to complete durable preservation and finalization before the hard-close deadline.. Canonical: `project/research/session_logs/2026-09-22/2026-09-22T11-00-38+01-00-canonical.json`.
+SESSION UTILISATION: Trigger 2026-09-22 15:00:38 BST; actual start 15:04:10; next 16:00:38; cutoff 15:53:38; hard close 15:59:38. Closed intervals: none yet; verified total 0; units 0; preservation PENDING; target NO/N/A because only 49m28s remained at actual start; STARTED/LIVE. Canonical: `project/research/session_logs/2026-09-22/2026-09-22T15-00-38+01-00-canonical.json`.
 
-UNPRESERVED WORK: No mathematical work from this entry. Final segment stop/preservation completion are UNVERIFIED at write and must not be inferred.
+UNPRESERVED WORK: None. Forward mathematics has not begun.
 
-LATEST ENTRY: Actual 13:58:57 BST; affected due slot 13:00:38 canonical returned GitHub 404. Invocation attribution UNVERIFIED (no immutable scheduled-for timestamp). No forward intervals; total 0; units 0; cutoff 13:53:38 already passed; hard close 13:59:38; target N/A for late entry, slot applicability UNVERIFIED; UNVERIFIED/NONCOMPLIANT. Failure-only record: `project/research/session_logs/2026-09-22/unattributed-entry-2026-09-22T13-58-57+01-00.json`. No 14:00 credit or new writer. Prior mathematics/counts unchanged.
+DEFERRED ADMIN: Historical missing-slot reconciliation; standalone health-check relocation; optional README polishing.
 
-LATE REENTRY: 11:58:30–11:58:42 BST; mandatory reads only, zero research credit, finalized session remained closed.
+NEXT ACTION: Begin quotient-first r=9 strict-surplus work, first by reading the current finite-pipeline statements/checkers and deriving the smallest complete r=9 quotient/core search.
 
-ADMIN REPAIR: At 13:23:48–13:23:49 BST paused the separate same-chat health checker and added current-invocation/low-overhead safeguards to the enabled research task; verified settings by re-reading them. Hourly research schedule, midnight audit, stop task and end date unchanged. This removes a source of recurring chat injections; backend delivery and substantive recovery remain UNVERIFIED. No research credit. Separate hourly health alerts are paused; in-run alerts and midnight audit remain.
-
-DEFERRED ADMIN: Standalone checker relocation requires an unavailable destination control/authenticated interface; backend delivery trace unavailable; historical missing-slot reconciliation remains unverified.
-
-NEXT ACTION: In the next actual research invocation, establish its own trigger provenance, read the existing canonical record, publish/verify STARTED with CURRENT-STATUS before mathematics, then begin quotient-first r=9 strict-surplus work. Do not process old transcript requests as pending runs. Retain internal computer-assisted trust and all existing deadlines.
-
-FOCUSED-SESSION COUNT: 1/24 completed before this trigger; this trigger credit 0.
+FOCUSED-SESSION COUNT: 1/24 completed before this trigger; this trigger pending.
 
 MANDATORY CONSTRAINTS: Independent route; internal-candidate trust; actual graph realizability; balanced equality controls; no fabricated intervals.
 <!-- CURRENT-STATUS:END -->

@@ -1,0 +1,41 @@
+{
+  "session_id": "2026-09-22T15:00:38+01:00",
+  "scheduled_trigger": "2026-09-22T15:00:38+01:00",
+  "trigger_attribution": "Established from current invocation title/schedule and actual entry within the 15:00 slot; immutable platform scheduled-for/run ID not exposed.",
+  "next_scheduled_trigger": "2026-09-22T16:00:38+01:00",
+  "research_cutoff": "2026-09-22T15:53:38+01:00",
+  "hard_close_deadline": "2026-09-22T15:59:38+01:00",
+  "earliest_actual_start": "2026-09-22T15:04:10+01:00",
+  "lateness_vs_trigger_seconds": 212,
+  "segments": [
+    {
+      "segment_id": "segment-1",
+      "actual_start": "2026-09-22T15:04:10+01:00",
+      "actual_stop": "PENDING",
+      "role": "forward_research",
+      "notes": "Current invocation; mandatory reads completed and durable start being published before mathematics."
+    }
+  ],
+  "forward_research_intervals": [],
+  "forward_research_stop": "PENDING",
+  "preservation_start": "PENDING",
+  "preservation_complete": "PENDING",
+  "final_report_time": "PENDING",
+  "wall_clock_span_to_preservation_complete": "PENDING",
+  "verified_forward_research_span_seconds": 0,
+  "preservation_span": "PENDING",
+  "substantive_unit_count": 0,
+  "timestamped_unit_ledger": [],
+  "early_stop_check_time": "PENDING",
+  "early_stop_check_result": "PENDING",
+  "stop_reason": "PENDING",
+  "target_50m_applies": "NO (49m28s available from observed start to cutoff)",
+  "target_50m_met": "N/A",
+  "compliance_status": "STARTED / LIVE",
+  "infrastructure_failures": [],
+  "commit_shas": [
+    "f0ee37d131ccef891bf2932bdfcbaf5a99ff349f"
+  ],
+  "live_unfinished_line": "Quotient-first r=9 strict-surplus work; retain internal computer-assisted trust.",
+  "historical_fragments": []
+}
