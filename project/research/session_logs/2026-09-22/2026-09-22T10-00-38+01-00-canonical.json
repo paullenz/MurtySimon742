@@ -81,6 +81,13 @@
       "actual_stop": "2026-09-22T10:42:01+01:00",
       "role": "forward_research",
       "notes": "Independent residual support saturation proof and two-column/r<=4 corollaries."
+    },
+    {
+      "segment_id": "research-8",
+      "actual_start": "2026-09-22T10:42:54+01:00",
+      "actual_stop": "2026-09-22T10:45:12+01:00",
+      "role": "forward_research",
+      "notes": "Actual graph residual-support regression and exact core-ledger diagnostics."
     }
   ],
   "forward_research_intervals": [
@@ -123,6 +130,11 @@
       "start": "2026-09-22T10:41:05+01:00",
       "stop": "2026-09-22T10:42:01+01:00",
       "evidence": "INDEPENDENT_RESIDUAL_SUPPORT.md"
+    },
+    {
+      "start": "2026-09-22T10:42:54+01:00",
+      "stop": "2026-09-22T10:45:12+01:00",
+      "evidence": "SUPPORT_REGRESSION.md, check_support.py, SUPPORT_RESULTS.json"
     }
   ],
   "forward_research_stop": null,
@@ -130,10 +142,10 @@
   "preservation_complete": null,
   "final_report_time": null,
   "wall_clock_span_to_preservation_complete": null,
-  "verified_forward_research_span": 1615,
+  "verified_forward_research_span": 1753,
   "verified_forward_research_span_units": "seconds",
   "preservation_span": null,
-  "substantive_unit_count": 7,
+  "substantive_unit_count": 8,
   "timestamped_unit_ledger": [
     {
       "completed_at": "2026-09-22T10:08:19+01:00",
@@ -176,6 +188,12 @@
       "unit": "Independent residual support and two-column saturation exclusion",
       "result": "Internal proof: independent F[C] or <=2 residual labels forces f<r; r<=4 and S<=4 closed; exact core surplus ledger.",
       "artifact": "project/research/general_n/2026-09-22-zero-demand-equality-v1/INDEPENDENT_RESIDUAL_SUPPORT.md"
+    },
+    {
+      "completed_at": "2026-09-22T10:45:12+01:00",
+      "unit": "Actual graph residual support and core ledger replay",
+      "result": "PASS 68741 core identities, 980 independent-support cases (7 nonempty), 700 <=2 support cases; general >=3 support nonempty branch absent.",
+      "artifact": "project/research/general_n/2026-09-22-zero-demand-equality-v1/SUPPORT_REGRESSION.md"
     }
   ],
   "early_stop_check_time": null,
@@ -193,9 +211,10 @@
     "3626bd0d06f19a212f425d8c0b76a2ee41f61cf3",
     "abb43b424c6fbfe3945eaf87fc0f2b397355e4c7",
     "aadbcb44e869acc5b16a0ea3553056b3731d2812",
-    "2754a3685667a5a2d8f64f7bb01cd058715d9ef9"
+    "2754a3685667a5a2d8f64f7bb01cd058715d9ef9",
+    "03924f3af8b0a45a572ebc1b5671535dd84637fe"
   ],
-  "live_unfinished_line": "Regress independent residual support and exact core surplus ledger, then attack positive-demand residual core.",
+  "live_unfinished_line": "Exploit core ledger for <=3 support and r=5 classification.",
   "historical_fragments": [],
   "focused_session_credit": 0,
   "ancillary_checks": [
