@@ -1,0 +1,16 @@
+{
+  "R": [
+    3,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1
+  ],
+  "core_orbits": 52,
+  "source_feasible": 0,
+  "rows": [],
+  "scope": "Exact physical-source necessary condition on colour-preserving core orbits; not graph realization."
+}

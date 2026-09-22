@@ -9,19 +9,19 @@ CHECKPOINT CLASS: VERIFIED_INTERNAL_NOT_PROMOTED
 
 WORK MODE: MATH
 
-INSPECTED PREDECESSOR: a95cf9d74ec34cf192eb4c3396fa02f6c036b6b2.
+INSPECTED PREDECESSOR: 9153645f216c36778daed2bee037353d0c4dbf34.
 
-LAST VERIFIED RESULT: Strict r=9 internal closure/replay retained (edge bound through S<=11). At r=10, exact core/source/supplement enumeration now closes every residual partition of support <=7; mask 3515's 72 source populations and mask 401020's unique population are all supplement-infeasible. Supports eight/nine remain; no r=10 closure or new S-bound.
+LAST VERIFIED RESULT: Strict r=9 closure/replay retained (internal edge bound through S<=11). At r=10, all supports <=7 and support-eight partition (3,1^7) are internally closed; the latter has 79,264 rooted core orbits, 52 optimistic strict survivors, zero source-feasible. Remaining: (2,2,1^6) and support-nine (2,1^8). No r=10 closure/S extension.
 
-EVIDENCE: `project/research/general_n/2026-09-22-r10-quotient-v1/R10_SUPPORT_LE7_SCREEN.md`; `project/research/general_n/2026-09-22-r10-quotient-v1/R10_SUPPORT_LE7_SUPPLEMENT_CLOSURE.md`; `project/research/general_n/2026-09-22-r10-quotient-v1/check_r10_support7_supplements.py`; saved JSON results.
+EVIDENCE: `project/research/general_n/2026-09-22-r10-quotient-v1/R10_31111111_CLOSURE.md`; exact generator, 52 masks, source screen/results; prior r=10 support<=7 package.
 
-SESSION UTILISATION: Trigger 15:00:38 BST; actual start 15:04:10; cutoff 15:53:38; hard close 15:59:38. Six closed intervals; verified total 1095s (18m15s); units 6; target NO/N/A; LIVE. Canonical: `project/research/session_logs/2026-09-22/2026-09-22T15-00-38+01-00-canonical.json`.
+SESSION UTILISATION: Trigger 15:00:38 BST; actual start 15:04:10; cutoff 15:53:38; hard close 15:59:38. Seven closed intervals; verified total 1270s (21m10s); units 7; target NO/N/A; LIVE. Canonical: `project/research/session_logs/2026-09-22/2026-09-22T15-00-38+01-00-canonical.json`.
 
 UNPRESERVED WORK: None.
 
 DEFERRED ADMIN: Historical missing-slot reconciliation; standalone health-check relocation; optional README polishing.
 
-NEXT ACTION: Enumerate r=10 residual support eight by colour-preserving quotient and source feasibility; retain support nine and equality scope as open.
+NEXT ACTION: Enumerate r=10 partition (2,2,1,1,1,1,1,1) under S2×S6, then support nine if time permits.
 
 FOCUSED-SESSION COUNT: 1/24 completed before this trigger; this trigger pending.
 
