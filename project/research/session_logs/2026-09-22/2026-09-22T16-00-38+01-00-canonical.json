@@ -16,16 +16,30 @@
       "notes": "Current invocation; mandatory CURRENT_STATE/AGENTS/schema and scoped mathematical reads completed before durable STARTED publication."
     }
   ],
-  "forward_research_intervals": [],
+  "forward_research_intervals": [
+    {
+      "start": "2026-09-22T16:07:00+01:00",
+      "stop": "2026-09-22T16:07:15+01:00",
+      "seconds": 15,
+      "unit": 1
+    }
+  ],
   "forward_research_stop": "PENDING",
   "preservation_start": "PENDING",
   "preservation_complete": "PENDING",
   "final_report_time": "PENDING",
   "wall_clock_span_to_preservation_complete": "PENDING",
-  "verified_forward_research_span_seconds": 0,
+  "verified_forward_research_span_seconds": 15,
   "preservation_span": "PENDING",
-  "substantive_unit_count": 0,
-  "timestamped_unit_ledger": [],
+  "substantive_unit_count": 1,
+  "timestamped_unit_ledger": [
+    {
+      "unit": 1,
+      "start": "2026-09-22T16:07:00+01:00",
+      "completed": "2026-09-22T16:07:15+01:00",
+      "result": "Exact canonical-augmentation enumeration for r=10 support-nine (2,1^8): unlabeled graph counts reproduce 2,4,11,34,156,1044,12346 through n=8; 2,208,612 rooted colour-preserving orbits; optimistic capacity filter leaves 146 strict-surplus core orbits."
+    }
+  ],
   "early_stop_check_time": "PENDING",
   "early_stop_check_result": "PENDING",
   "stop_reason": "PENDING",
@@ -34,8 +48,9 @@
   "compliance_status": "STARTED / LIVE",
   "infrastructure_failures": [],
   "commit_shas": [
-    "3f04e6af2a4fbe791e1b0163b4fa02dbececdd52"
+    "3f04e6af2a4fbe791e1b0163b4fa02dbececdd52",
+    "5127017df62c21d41c7449dbced6a81716216db4"
   ],
-  "live_unfinished_line": "Enumerate and source-screen the sole r=10 support-nine partition (2,1^8); if strict survivors remain, apply supplement forcing.",
+  "live_unfinished_line": "Source-screen 146 support-nine strict core orbits, then supplement-close any survivors; no r=10 closure yet.",
   "historical_fragments": []
 }

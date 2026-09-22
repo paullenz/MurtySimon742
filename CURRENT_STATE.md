@@ -5,27 +5,27 @@ Canonical repository: `paullenz/MurtySimon742`. Date: 22 September 2026.
 Active target: a genuinely independent proof of Erdős #742 / the Murty–Simon inequality e(G)<=floor(n^2/4), preferably with the equality characterization. Forward priority is the project’s own complement / residual / Hall / profile / realizability route, not a reconstruction of the external e+disj+X proof. The first focused session produced the internally checked candidate threshold `Delta>=250n/429`, shrinking the live strip to `n/2<Delta<250n/429`. The theorem and its inherited graph-to-profile spine remain candidate/internal-review mathematics. A 24-focused-session go/no-go gate applies. Prior eventual-D2C work remains preserved but is no longer the active forward objective.
 
 <!-- CURRENT-STATUS:START -->
-CHECKPOINT CLASS: STARTED
+CHECKPOINT CLASS: VERIFIED_INTERNAL_NOT_PROMOTED
 
 WORK MODE: MATH
 
-INSPECTED PREDECESSOR: 3f04e6af2a4fbe791e1b0163b4fa02dbececdd52.
+INSPECTED PREDECESSOR: 5127017df62c21d41c7449dbced6a81716216db4.
 
-LAST VERIFIED RESULT: Inherited strict r=9 closure (internal edge bound through S<=11) and r=10 closure through support eight. No new mathematics yet in this slot. Sole remaining r=10 branch is support-nine (2,1^8).
+LAST VERIFIED RESULT: Exact canonical augmentation closes the r=10 support-nine core quotient: 12,346 unlabelled unit graphs, 2,208,612 rooted colour-preserving orbits, and 146 optimistic strict-surplus cores. Source feasibility remains to be tested. Prior r=9 closure and r=10 closure through support eight retained.
 
-EVIDENCE: Prior package `project/research/general_n/2026-09-22-r10-quotient-v1/`; current canonical STARTED record.
+EVIDENCE: `project/research/general_n/2026-09-22-r10-quotient-v1/R10_211111111_CORE_CENSUS.md`; exact C++ generator and 146-mask ledger.
 
-SESSION UTILISATION: Trigger 16:00:38 BST; actual start 16:03:51; cutoff 16:53:38; hard close 16:59:38. No closed intervals yet; target NO/N/A because only 49m47s was available at entry; LIVE. Canonical: `project/research/session_logs/2026-09-22/2026-09-22T16-00-38+01-00-canonical.json`.
+SESSION UTILISATION: Trigger 16:00:38 BST; actual start 16:03:51; cutoff 16:53:38. One closed interval; verified total 15s; units 1; target NO/N/A; LIVE. Canonical: `project/research/session_logs/2026-09-22/2026-09-22T16-00-38+01-00-canonical.json`.
 
 UNPRESERVED WORK: None.
 
 DEFERRED ADMIN: Historical missing-slot reconciliation; optional README polishing.
 
-NEXT ACTION: Enumerate and source-screen r=10 support-nine partition (2,1^8).
+NEXT ACTION: Exact physical-source feasibility screen for the 146 support-nine core orbits.
 
 FOCUSED-SESSION COUNT: 1/24; this shortened late-start trigger pending and receives no automatic credit.
 
-MANDATORY CONSTRAINTS: Independent route; internal computer-assisted trust; actual graph realizability; balanced equality controls; no fabricated intervals.
+MANDATORY CONSTRAINTS: Internal finite computation is not graph realization; preserve balanced equality controls.
 <!-- CURRENT-STATUS:END -->
 
 ## Latest adversarial audit - 22 September 2026
