@@ -9,19 +9,19 @@ CHECKPOINT CLASS: VERIFIED_INTERNAL_NOT_PROMOTED
 
 WORK MODE: MATH
 
-INSPECTED PREDECESSOR: 073c741a940a6bb109b3f4ab3d50af9dff82a8fe.
+INSPECTED PREDECESSOR: b6affeb014835b3c9b6b669f39af6922b055c4da.
 
-LAST VERIFIED RESULT: Strict r=10 closure is independently replayed end-to-end: Burnside/canonical quotient audit reproduces 12,346 and 2,208,612 orbit counts and 146 inequivalent strict cores; independent SciPy/HiGHS MILP declares all 146 source systems infeasible. Internal edge bound through S<=12 retained. Equality remains through S<=8; general theorem open.
+LAST VERIFIED RESULT: Strict r=10 closure independently replayed; internal edge bound through S<=12. At r=11, every residual partition of support <=5 is now exactly source-closed: 12 optimistic strict orbits across (7,1^4) and (6,2,1^3), zero source-feasible. Higher supports remain; no S<=13 extension.
 
-EVIDENCE: `project/research/general_n/2026-09-22-r10-quotient-v1/R10_SUPPORT9_INDEPENDENT_AUDIT.md`; exact audit scripts/results.
+EVIDENCE: `project/research/general_n/2026-09-22-r11-quotient-v1/R11_SUPPORT_LE5_SCREEN.md`; exact code/result.
 
-SESSION UTILISATION: Trigger 16:00:38 BST; actual start 16:03:51; cutoff 16:53:38. Four closed intervals; verified total 484s (8m04s); units 4; target NO/N/A; LIVE. Canonical: `project/research/session_logs/2026-09-22/2026-09-22T16-00-38+01-00-canonical.json`.
+SESSION UTILISATION: Trigger 16:00:38 BST; actual start 16:03:51; cutoff 16:53:38. Five closed intervals; verified total 494s (8m14s); units 5; target NO/N/A; LIVE. Canonical: `project/research/session_logs/2026-09-22/2026-09-22T16-00-38+01-00-canonical.json`.
 
 UNPRESERVED WORK: None.
 
 DEFERRED ADMIN: Historical missing-slot reconciliation.
 
-NEXT ACTION: Advance the finite strict pipeline to r=11, beginning with exact low-support quotient/source localization.
+NEXT ACTION: Exact r=11 support-six quotient/source screen.
 
 FOCUSED-SESSION COUNT: 1/24; this shortened late-start trigger pending and receives no automatic credit.
 
