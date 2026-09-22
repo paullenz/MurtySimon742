@@ -9,23 +9,23 @@ CHECKPOINT CLASS: VERIFIED_INTERNAL_NOT_PROMOTED
 
 WORK MODE: FORWARD_RESEARCH_LIVE
 
-INSPECTED PREDECESSOR: 9ca8e9276684a7f79d18b1f896fd8aaa34babfcd.
+INSPECTED PREDECESSOR: 5c0ba6a454767e4a930b370b7687d6165e9b4d08.
 
-LAST VERIFIED RESULT: Internal strict r=10 closure is independently replayed, extending the internal edge bound through S<=12. At r=11, every partition of support <=7 is internally closed. Support eight has exactly 2,496 optimistic strict cores across partitions (4,1^7), (3,2,1^6), and (2,2,2,1^5). The previous monolithic exact source screen was interrupted without an aggregate.
+LAST VERIFIED RESULT: Internal strict r=10 closure is independently replayed through S<=12. At r=11, all support <=7 partitions are closed. For support eight, the (4,1^7) shard has 26 optimistic strict core orbits; an integer physical-source MILP found all 26 infeasible with zero solver-unknown cases. This internally closes that partition at the source-necessity layer. The two remaining support-eight partitions have 800 and 1,670 strict cores.
 
-EVIDENCE: canonical STARTED telemetry for the 17:00:38 BST trigger; inherited packages under `project/research/general_n/2026-09-22-r10-quotient-v1/` and `project/research/general_n/2026-09-22-r11-quotient-v1/`.
+EVIDENCE: `project/research/general_n/2026-09-22-r11-quotient-v1/r11_support8_sources_milp.py`; `project/research/general_n/2026-09-22-r11-quotient-v1/r11_support8_sources_case0.json`; canonical telemetry.
 
-SESSION UTILISATION: Trigger 17:00:38 BST; actual start 17:00:58; zero closed forward intervals at STARTED checkpoint; research cutoff 17:53:38; hard close 17:59:38; target YES/PENDING; STARTED/LIVE. Canonical: `project/research/session_logs/2026-09-22/2026-09-22T17-00-38+01-00-canonical.json`.
+SESSION UTILISATION: Trigger 17:00:38 BST; actual start 17:00:58; closed forward interval 17:04:14--17:05:05 (51s); one substantive unit; cutoff 17:53:38; target YES/PENDING; LIVE. Canonical: `project/research/session_logs/2026-09-22/2026-09-22T17-00-38+01-00-canonical.json`.
 
-UNPRESERVED WORK: None at durable start.
+UNPRESERVED WORK: None at this checkpoint.
 
-DEFERRED ADMIN: Historical missing-slot reconciliation and prose-only README edits.
+DEFERRED ADMIN: Historical reconciliation and prose-only README edits.
 
-NEXT ACTION: Shard the r=11 support-eight physical-source screen by partition, beginning with (4,1^7), and checkpoint each exact aggregate before proceeding.
+NEXT ACTION: Run the same exact physical-source MILP screen on support-eight case 1, partition (3,2,1^6), and checkpoint its aggregate.
 
 FOCUSED-SESSION COUNT: 1/24; current trigger credit pending final compliance.
 
-MANDATORY CONSTRAINTS: Do not infer results from interrupted computation; internal finite work is not external verification or graph realization; balanced complete bipartite equality controls remain mandatory.
+MANDATORY CONSTRAINTS: Internal finite work is not external verification or graph realization; balanced complete bipartite equality controls remain mandatory.
 <!-- CURRENT-STATUS:END -->
 
 ## Latest adversarial audit - 22 September 2026
