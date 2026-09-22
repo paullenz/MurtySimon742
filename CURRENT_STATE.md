@@ -5,25 +5,25 @@ Canonical repository: `paullenz/MurtySimon742`. Date: 22 September 2026.
 Active target: a genuinely independent proof of Erdős #742 / the Murty–Simon inequality e(G)<=floor(n^2/4), preferably with the equality characterization. Forward priority is the project’s own complement / residual / Hall / profile / realizability route, not a reconstruction of the external e+disj+X proof. The first focused session produced the internally checked candidate threshold `Delta>=250n/429`, shrinking the live strip to `n/2<Delta<250n/429`. The theorem and its inherited graph-to-profile spine remain candidate/internal-review mathematics. A 24-focused-session go/no-go gate applies. Prior eventual-D2C work remains preserved but is no longer the active forward objective.
 
 <!-- CURRENT-STATUS:START -->
-CHECKPOINT CLASS: `RAW_PROFILE_ACTUAL_GRAPH_REGRESSION_PASS`
+CHECKPOINT CLASS: `SELECTED_SUPPLEMENT_PHYSICAL_WITNESS_VERIFIED`
 
 WORK MODE: `MATH`
 
-INSPECTED PREDECESSOR: `b90f650f929ee5791121c1965561f2282b9c2f08`; this includes an automatic preserved 7/12 audit artifact following our prior mathematical commit. Its live handoff was unchanged; this checkpoint preserves that concurrent tree.
+INSPECTED PREDECESSOR: `a5e1efe9657db4a251df60b97299bb4d25cc79fe`; retained the prior bridge proof and graph regression.
 
-LAST VERIFIED RESULT: New independent standard-library checker passed 757 actual D2C graphs, 1,256 maximum-degree roots and all 2,722 legal selection assignments at those roots. Of these, 153 assignments have positive demand; both residual and selected-edge supplement branches occur. BFS independently checked 8,374 edge deletions. Integer radical enclosures verified the profile inequalities. Thirty roots have choice-dependent profiles. No positive-surplus graph was found. This is bounded internal regression, not a universal graph enumeration or external verification. The a>=1 scope repair and candidate thresholds are unchanged.
+LAST VERIFIED RESULT: Preserved an explicit 14-vertex, 31-edge D2C graph where a supplement's other heavy-label edge is selected, not residual. The all-residual shortcut is false on a physical graph; the corrected source-demand dichotomy remains valid. All six legal selections at its maximum-degree root passed. This is a finite internal witness, not a positive-surplus graph or smallest-order assertion. Prior bridge and 757-graph regression results remain preserved.
 
 EVIDENCE: `project/research/general_n/2026-09-22-raw-profile-bridge-v1/RAW_PROFILE_BRIDGE.md`, `ACTUAL_GRAPH_REGRESSION.md`, `check_raw_profile.py`, `RESULTS.json`.
 
-RECOVERY STATUS: Two substantive research units preserved by the replacement's manual run. Future scheduled reliability remains unverified; no historical gap is backfilled.
+RECOVERY STATUS: Three substantive research units preserved by the replacement's manual run. Future scheduled reliability remains unverified; no historical gap is backfilled.
 
-SESSION UTILISATION: Manual entry 09:14:26 BST. Closed intervals: 09:17:27--09:21:49 and 09:23:39--09:28:00; total 523 seconds (8m43s); 2 substantive units. Cutoff 09:53:38; hard close 09:59:38; fifty-minute target N/A. IN_PROGRESS. Record: `project/research/session_logs/2026-09-22/manual-recovery-2026-09-22T09-14-26+01-00.json`.
+SESSION UTILISATION: Manual entry 09:14:26 BST; 3 substantive units, 670 verified forward seconds in closed intervals. Last forward stop 2026-09-22T09:34:14+01:00; cutoff 09:53:38; hard close 09:59:38; target N/A; IN_PROGRESS. Record: `project/research/session_logs/2026-09-22/manual-recovery-2026-09-22T09-14-26+01-00.json`.
 
 UNPRESERVED WORK: None after this checkpoint.
 
 DEFERRED ADMIN: Later scheduled reliability is for the health check. No CI polling is needed for this mathematical checkpoint.
 
-NEXT ACTION: Extract and audit the actual graph and selection exercising the selected-edge supplement branch, then inspect choice dependence and the zero-demand equality boundary.
+NEXT ACTION: Analyze the zero-demand equality boundary directly from the now reconstructed ledger; preserve any rigidity theorem with explicit equality controls.
 
 FOCUSED-SESSION COUNT: `1/24` completed previously; the current manual run remains in progress and cannot replace a historical scheduled slot.
 

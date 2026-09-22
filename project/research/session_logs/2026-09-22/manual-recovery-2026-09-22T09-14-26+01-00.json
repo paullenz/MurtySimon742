@@ -32,6 +32,13 @@
       "actual_stop": "2026-09-22T09:28:00+01:00",
       "role": "forward_research",
       "notes": "Wrote and ran independent standard-library actual-graph profile checker."
+    },
+    {
+      "segment_id": "research-3",
+      "actual_start": "2026-09-22T09:31:47+01:00",
+      "actual_stop": "2026-09-22T09:34:14+01:00",
+      "role": "forward_research",
+      "notes": "Extracted and directly interpreted a non-vacuous selected-supplement witness."
     }
   ],
   "forward_research_intervals": [
@@ -44,6 +51,11 @@
       "start": "2026-09-22T09:23:39+01:00",
       "stop": "2026-09-22T09:28:00+01:00",
       "evidence": "check_raw_profile.py, RESULTS.json and ACTUAL_GRAPH_REGRESSION.md"
+    },
+    {
+      "start": "2026-09-22T09:31:47+01:00",
+      "stop": "2026-09-22T09:34:14+01:00",
+      "evidence": "SELECTED_SUPPLEMENT_WITNESS.md and complete adjacency/selection data"
     }
   ],
   "forward_research_stop": null,
@@ -51,10 +63,10 @@
   "preservation_complete": null,
   "final_report_time": null,
   "wall_clock_span_to_preservation_complete": null,
-  "verified_forward_research_span": 523,
+  "verified_forward_research_span": 670,
   "verified_forward_research_span_units": "seconds",
   "preservation_span": null,
-  "substantive_unit_count": 2,
+  "substantive_unit_count": 3,
   "timestamped_unit_ledger": [
     {
       "completed_at": "2026-09-22T09:21:49+01:00",
@@ -67,6 +79,12 @@
       "unit": "Independent actual-graph reconstruction and exhaustive legal-selection regression",
       "result": "PASS: 757 graphs, 1256 roots, 2722 assignments, 153 positive-demand assignments, both supplement branches exercised.",
       "artifact": "project/research/general_n/2026-09-22-raw-profile-bridge-v1/ACTUAL_GRAPH_REGRESSION.md"
+    },
+    {
+      "completed_at": "2026-09-22T09:34:14+01:00",
+      "unit": "Actual D2C counterexample to the all-residual supplement shortcut",
+      "result": "14 vertices, 31 edges, six legal selections; selected and residual supplement cases both explicit.",
+      "artifact": "project/research/general_n/2026-09-22-raw-profile-bridge-v1/SELECTED_SUPPLEMENT_WITNESS.md"
     }
   ],
   "early_stop_check_time": null,
@@ -85,9 +103,10 @@
   ],
   "commit_shas": [
     "01ab408115867d02b629d77d55b5af78bdecccef",
-    "6d2bb26d604602cbd91c0a57dcaf369aace9b727"
+    "6d2bb26d604602cbd91c0a57dcaf369aace9b727",
+    "a5e1efe9657db4a251df60b97299bb4d25cc79fe"
   ],
-  "live_unfinished_line": "Extract the high-load selected-supplement witness and audit its exact graph and selected edges.",
+  "live_unfinished_line": "Analyze zero-demand equality and seek a concise rigidity consequence beyond the bridge.",
   "historical_fragments": [],
   "scheduled_session_credit": 0,
   "focused_session_credit": 0
