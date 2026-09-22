@@ -25,6 +25,13 @@
       "actual_stop": "2026-09-22T11:04:00+01:00",
       "role": "forward_research",
       "notes": "Independent local cycle audit and closure of the final residual-mass-five equality shape."
+    },
+    {
+      "segment_id": "research-2",
+      "actual_start": "2026-09-22T11:04:50+01:00",
+      "actual_stop": "2026-09-22T11:06:51+01:00",
+      "role": "forward_research",
+      "notes": "Actual graph replay of local cycle and residual-mass-five closure."
     }
   ],
   "forward_research_intervals": [
@@ -32,6 +39,11 @@
       "start": "2026-09-22T11:02:36+01:00",
       "stop": "2026-09-22T11:04:00+01:00",
       "evidence": "LOCAL_TRIANGLE_AUDIT.md"
+    },
+    {
+      "start": "2026-09-22T11:04:50+01:00",
+      "stop": "2026-09-22T11:06:51+01:00",
+      "evidence": "LOCAL_CYCLE_REGRESSION.md, check_local_cycle.py, LOCAL_CYCLE_RESULTS.json"
     }
   ],
   "forward_research_stop": null,
@@ -39,16 +51,22 @@
   "preservation_complete": null,
   "final_report_time": null,
   "wall_clock_span_to_preservation_complete": null,
-  "verified_forward_research_span": 84,
+  "verified_forward_research_span": 205,
   "verified_forward_research_span_units": "seconds",
   "preservation_span": null,
-  "substantive_unit_count": 1,
+  "substantive_unit_count": 2,
   "timestamped_unit_ledger": [
     {
       "completed_at": "2026-09-22T11:04:00+01:00",
       "unit": "Local unit-triangle audit and r=5 equality closure",
       "result": "Internal candidate proof: local unit-residual F-cycle impossible under t=0 and b>|Q|; all r=5 equality shapes excluded; r<=5 implies f<r; S<=5 balanced-bipartite equality.",
       "artifact": "project/research/general_n/2026-09-22-zero-demand-equality-v1/LOCAL_TRIANGLE_AUDIT.md"
+    },
+    {
+      "completed_at": "2026-09-22T11:06:51+01:00",
+      "unit": "Local cycle hostile graph replay",
+      "result": "PASS 68741 assignments; 704 r<=5 cases (578 nonempty F), 863 balanced equality controls. Exact local-cycle premise absent; S6/7 unexercised.",
+      "artifact": "project/research/general_n/2026-09-22-zero-demand-equality-v1/LOCAL_CYCLE_REGRESSION.md"
     }
   ],
   "early_stop_check_time": null,
@@ -60,9 +78,9 @@
   "compliance_status": "IN_PROGRESS",
   "infrastructure_failures": [],
   "commit_shas": [
-    "78db3c724027fc2bf79e664f541122416b8391ec"
+    "6b75fbecbcdc90638cd7bf6a2b8c02cf6d313fe1"
   ],
-  "live_unfinished_line": "Hostile-check the local cycle proof and classify the r=6 positive-core/equality shapes without treating scalar survivors as graphs.",
+  "live_unfinished_line": "Classify r=6 equality/positive-core shapes using the exact core ledger; preserve abstract-vs-graph caveat.",
   "historical_fragments": [],
   "focused_session_credit": 0,
   "predecessor_session": "project/research/session_logs/2026-09-22/2026-09-22T10-00-38+01-00-canonical.json"

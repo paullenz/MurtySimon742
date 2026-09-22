@@ -9,19 +9,19 @@ CHECKPOINT CLASS: SUBSTANTIVE_RESEARCH_CHECKPOINT
 
 WORK MODE: MATH
 
-INSPECTED PREDECESSOR: 78db3c724027fc2bf79e664f541122416b8391ec.
+INSPECTED PREDECESSOR: 6b75fbecbcdc90638cd7bf6a2b8c02cf6d313fe1.
 
-LAST VERIFIED RESULT: Internal candidate audit closes all r<=5 product-equality shapes; S<=5 now has balanced complete-bipartite equality. Full strip and S=6,7 equality remain open.
+LAST VERIFIED RESULT: Actual-graph replay passes 704 r<=5 assignments and all balanced equality controls; the exact local-cycle premise and S=6,7 remain unexercised.
 
 EVIDENCE: `project/research/session_logs/2026-09-22/2026-09-22T11-00-38+01-00-canonical.json`; `project/research/general_n/2026-09-22-zero-demand-equality-v1/`.
 
-SESSION UTILISATION: Trigger 2026-09-22 11:00:38 BST; earliest 11:01:19; next 12:00:38; cutoff 11:53:38; hard close 11:59:38. Closed intervals: 11:02:36–11:04:00; total 84 seconds; units 1; preservation pending; target YES/PENDING; IN_PROGRESS. Stop reason: active. Canonical: `project/research/session_logs/2026-09-22/2026-09-22T11-00-38+01-00-canonical.json`.
+SESSION UTILISATION: Trigger 2026-09-22 11:00:38 BST; earliest 11:01:19; next 12:00:38; cutoff 11:53:38; hard close 11:59:38. Closed intervals: 11:02:36–11:04:00, 11:04:50–11:06:51; total 205 seconds; units 2; preservation pending; target YES/PENDING; IN_PROGRESS. Stop reason: active. Canonical: `project/research/session_logs/2026-09-22/2026-09-22T11-00-38+01-00-canonical.json`.
 
 UNPRESERVED WORK: None beyond named unfinished line.
 
 DEFERRED ADMIN: Historical missing-slot reconciliation and schedule maintenance.
 
-NEXT ACTION: Hostile-check the local cycle proof and classify the r=6 positive-core/equality shapes without treating scalar survivors as graphs.
+NEXT ACTION: Classify r=6 equality/positive-core shapes using the exact core ledger; preserve abstract-vs-graph caveat.
 
 FOCUSED-SESSION COUNT: 1/24 completed before this trigger; this trigger credit 0.
 
