@@ -18,9 +18,9 @@
     {
       "segment_id": "segment-1",
       "actual_start": "2026-09-22T22:00:33+01:00",
-      "actual_stop": "PENDING",
+      "actual_stop": "2026-09-22T22:52:27+01:00",
       "role": "forward_research",
-      "notes": "Mandatory reads and STARTED publication precede forward mathematics."
+      "notes": "Forward session closed at the observed interruption boundary; only explicitly closed unit intervals are credited."
     }
   ],
   "forward_research_intervals": [
@@ -67,8 +67,8 @@
       "unit": "Source screen shard 7/8 for support-ten partition (2,2,1^8)."
     }
   ],
-  "forward_research_stop": "PENDING",
-  "preservation_start": "PENDING",
+  "forward_research_stop": "2026-09-22T22:52:27+01:00",
+  "preservation_start": "2026-09-22T22:52:27+01:00",
   "preservation_complete": "PENDING",
   "final_report_time": "PENDING",
   "wall_clock_span_to_preservation_complete": "PENDING",
@@ -78,7 +78,7 @@
     "basis": "Union of seven closed intervals."
   },
   "preservation_span": "PENDING",
-  "substantive_unit_count": 8,
+  "substantive_unit_count": 9,
   "timestamped_unit_ledger": [
     {
       "unit": 1,
@@ -135,21 +135,34 @@
       "complete": "2026-09-22T22:44:37+01:00",
       "result": "FAILED_ROUTE: supplement wrapper crashed before producing a result because reused solver expected row['mask']; no research interval credited. Repair is to map the existing unit_graph/a_mask/b_mask identity into mask.",
       "evidence": "project/research/general_n/2026-09-22-independent-742-r12-quotient/r12_support10_case1_supplement_milp.py"
+    },
+    {
+      "unit": 9,
+      "start": "UNVERIFIED",
+      "complete": "2026-09-22T22:52:27+01:00",
+      "result": "BOUNDED_TIMEOUT: repaired 42-kernel supplement solve remained active near cutoff and was interrupted without a result; no interval credited.",
+      "evidence": "project/research/general_n/2026-09-22-independent-742-r12-quotient/r12_support10_case1_supplement_milp.py"
     }
   ],
-  "early_stop_check_time": "PENDING",
-  "early_stop_check_result": "PENDING",
-  "stop_reason": "PENDING",
+  "early_stop_check_time": "2026-09-22T22:52:27+01:00",
+  "early_stop_check_result": "Less than five minutes remained before the 22:53:38 cutoff; stopped the active bounded solve and began preservation.",
+  "stop_reason": "Research cutoff reached with the repaired 42-kernel supplement solve unfinished; process interrupted and preserved.",
   "target_50m_applies": "YES",
-  "target_50m_met": "PENDING",
+  "target_50m_met": "NO",
   "target_50m_basis": "53m00s available from scheduled trigger to research cutoff.",
-  "compliance_status": "STARTED",
+  "compliance_status": "SHORT/NONCOMPLIANT",
   "infrastructure_failures": [
     {
       "time": "2026-09-22T22:44:37+01:00",
       "operation": "support-ten supplement MILP wrapper",
       "error": "KeyError: 'mask' in reused reporting path",
       "pivot": "Preserve failure; add non-mathematical row identity adapter; rerun."
+    },
+    {
+      "time": "2026-09-22T22:52:27+01:00",
+      "operation": "repaired support-ten supplement MILP",
+      "error": "No completion before cutoff; interrupted with exit 130.",
+      "pivot": "Preserve repaired wrapper and resume the 42-kernel solve next session."
     }
   ],
   "commit_shas": [
@@ -192,9 +205,14 @@
       "kind": "UNIT_7",
       "sha": "6783acc621b0f6176ee0d35cd5a0e4e8a6745f12",
       "published_at": "2026-09-22T22:41:15+01:00"
+    },
+    {
+      "kind": "UNIT_8_FAILURE",
+      "sha": "d71bb2b2f2fd59d65e50786704cacdbba7968826",
+      "published_at": "2026-09-22T22:44:37+01:00"
     }
   ],
-  "live_unfinished_line": "Repair support-ten supplement row identity adapter and rerun the 42-kernel exact screen.",
+  "live_unfinished_line": "Resume the repaired exact supplement screen on the 42 source-feasible support-ten (2,2,1^8) kernels; then close/classify support eleven.",
   "historical_fragments": [],
   "started_record_published_at": "2026-09-22T22:03:10+01:00"
 }

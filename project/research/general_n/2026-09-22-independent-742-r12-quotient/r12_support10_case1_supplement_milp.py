@@ -10,6 +10,8 @@ ROWS = []
 for chunk in range(8):
     data = json.load(open(f"r12_support10_case1_source_chunk{chunk}.json"))
     for row in data["feasible_rows"]:
+        row = dict(row)
+        row["mask"] = [row["unit_graph"], row["a_mask"], row["b_mask"]]
         ROWS.append((str(tuple(row["R"])), row))
 
 
