@@ -69,15 +69,21 @@
   ],
   "forward_research_stop": "2026-09-22T22:52:27+01:00",
   "preservation_start": "2026-09-22T22:52:27+01:00",
-  "preservation_complete": "PENDING",
-  "final_report_time": "PENDING",
-  "wall_clock_span_to_preservation_complete": "PENDING",
+  "preservation_complete": "2026-09-22T22:53:39+01:00",
+  "final_report_time": "2026-09-22T22:53:39+01:00",
+  "wall_clock_span_to_preservation_complete": {
+    "seconds": 3186,
+    "human": "53m06s"
+  },
   "verified_forward_research_span": {
     "seconds": 1862,
     "human": "31m02s",
-    "basis": "Union of seven closed intervals."
+    "basis": "Union of seven closed, non-overlapping evidenced intervals."
   },
-  "preservation_span": "PENDING",
+  "preservation_span": {
+    "seconds": 72,
+    "human": "1m12s"
+  },
   "substantive_unit_count": 9,
   "timestamped_unit_ledger": [
     {
@@ -210,6 +216,11 @@
       "kind": "UNIT_8_FAILURE",
       "sha": "d71bb2b2f2fd59d65e50786704cacdbba7968826",
       "published_at": "2026-09-22T22:44:37+01:00"
+    },
+    {
+      "kind": "PRESERVATION",
+      "sha": "7e251bd20dc49f0a416dd147a09a9fa7372427b9",
+      "published_at": "2026-09-22T22:53:29+01:00"
     }
   ],
   "live_unfinished_line": "Resume the repaired exact supplement screen on the 42 source-feasible support-ten (2,2,1^8) kernels; then close/classify support eleven.",
