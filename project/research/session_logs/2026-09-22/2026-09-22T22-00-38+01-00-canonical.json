@@ -78,7 +78,7 @@
     "basis": "Union of seven closed intervals."
   },
   "preservation_span": "PENDING",
-  "substantive_unit_count": 7,
+  "substantive_unit_count": 8,
   "timestamped_unit_ledger": [
     {
       "unit": 1,
@@ -128,6 +128,13 @@
       "complete": "2026-09-22T22:40:33+01:00",
       "result": "Shard 7/8 screened 799 strict kernels: 0 source-feasible, 799 source-infeasible, 0 solver-unknown. Full source screen complete: 42 feasible of 6,386, no unknown.",
       "evidence": "project/research/general_n/2026-09-22-independent-742-r12-quotient/r12_support10_case1_source_chunk7.json"
+    },
+    {
+      "unit": 8,
+      "start": "UNVERIFIED",
+      "complete": "2026-09-22T22:44:37+01:00",
+      "result": "FAILED_ROUTE: supplement wrapper crashed before producing a result because reused solver expected row['mask']; no research interval credited. Repair is to map the existing unit_graph/a_mask/b_mask identity into mask.",
+      "evidence": "project/research/general_n/2026-09-22-independent-742-r12-quotient/r12_support10_case1_supplement_milp.py"
     }
   ],
   "early_stop_check_time": "PENDING",
@@ -137,7 +144,14 @@
   "target_50m_met": "PENDING",
   "target_50m_basis": "53m00s available from scheduled trigger to research cutoff.",
   "compliance_status": "STARTED",
-  "infrastructure_failures": [],
+  "infrastructure_failures": [
+    {
+      "time": "2026-09-22T22:44:37+01:00",
+      "operation": "support-ten supplement MILP wrapper",
+      "error": "KeyError: 'mask' in reused reporting path",
+      "pivot": "Preserve failure; add non-mathematical row identity adapter; rerun."
+    }
+  ],
   "commit_shas": [
     {
       "kind": "STARTED",
@@ -173,9 +187,14 @@
       "kind": "UNIT_6",
       "sha": "1fe8b879c5317419e30da2c19f6272496672684f",
       "published_at": "2026-09-22T22:35:46+01:00"
+    },
+    {
+      "kind": "UNIT_7",
+      "sha": "6783acc621b0f6176ee0d35cd5a0e4e8a6745f12",
+      "published_at": "2026-09-22T22:41:15+01:00"
     }
   ],
-  "live_unfinished_line": "Aggregate the 42 source-feasible support-ten case-1 kernels and supplement-screen them.",
+  "live_unfinished_line": "Repair support-ten supplement row identity adapter and rerun the 42-kernel exact screen.",
   "historical_fragments": [],
   "started_record_published_at": "2026-09-22T22:03:10+01:00"
 }

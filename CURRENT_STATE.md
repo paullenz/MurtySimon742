@@ -5,25 +5,25 @@ Canonical repository: `paullenz/MurtySimon742`. Date: 22 September 2026.
 Active target: a genuinely independent proof of Erdős #742 / the Murty–Simon inequality e(G)<=floor(n^2/4), preferably with the equality characterization. Forward priority is the project’s own complement / residual / Hall / profile / realizability route, not a reconstruction of the external e+disj+X proof. The first focused session produced the internally checked candidate threshold `Delta>=250n/429`, shrinking the live strip to `n/2<Delta<250n/429`. The theorem and its inherited graph-to-profile spine remain candidate/internal-review mathematics. A 24-focused-session go/no-go gate applies. Prior eventual-D2C work remains preserved but is no longer the active forward objective.
 
 <!-- CURRENT-STATUS:START -->
-CHECKPOINT CLASS: VERIFIED_INTERNAL_NOT_PROMOTED
+CHECKPOINT CLASS: FAILED_ROUTE
 
 WORK MODE: MATH
 
-INSPECTED PREDECESSOR: 1fe8b879c5317419e30da2c19f6272496672684f.
+INSPECTED PREDECESSOR: 6783acc621b0f6176ee0d35cd5a0e4e8a6745f12.
 
-LAST VERIFIED RESULT: The complete support-ten partition (2,2,1^8) source screen is finished: all 6,386 strict kernels were decided, 42 are source-feasible, 6,344 are source-infeasible, and none is solver-unknown. Shard 7/8 itself rejects all 799 kernels.
+LAST VERIFIED RESULT: The complete support-ten (2,2,1^8) source screen remains valid: 42 of 6,386 kernels survive, none unknown. The first supplement wrapper attempt failed before a mathematical result because the reused solver's reporting path expected row["mask"], while support-ten rows use unit_graph/a_mask/b_mask. No supplement conclusion or interval credit is claimed.
 
-EVIDENCE: project/research/general_n/2026-09-22-independent-742-r12-quotient/r12_support10_case1_source_chunk7.json and source shards 0-7; canonical telemetry at project/research/session_logs/2026-09-22/2026-09-22T22-00-38+01-00-canonical.json.
+EVIDENCE: project/research/general_n/2026-09-22-independent-742-r12-quotient/r12_support10_case1_supplement_milp.py; canonical telemetry at project/research/session_logs/2026-09-22/2026-09-22T22-00-38+01-00-canonical.json.
 
-SESSION UTILISATION: Trigger 22:00:38 BST; authoritative entry 22:00:33; seven closed intervals totaling 1862s (31m02s); seven substantive units; cutoff 22:53:38; 50-minute target applies and remains pending.
+SESSION UTILISATION: Trigger 22:00:38 BST; authoritative entry 22:00:33; seven closed intervals totaling 1862s (31m02s); eight substantive units including this uncredited preserved failure; cutoff 22:53:38; 50-minute target applies and remains pending.
 
 UNPRESERVED WORK: None.
 
-NEXT ACTION: Aggregate the 42 source-feasible kernels and supplement-screen them exactly.
+NEXT ACTION: Add the identity adapter and rerun the exact 42-kernel supplement screen.
 
 FOCUSED-SESSION COUNT: 1/24; current-session credit pending.
 
-MANDATORY CONSTRAINTS: Source feasibility is only a necessary condition; the finite pipeline does not establish graph realizability; equality remains characterized only through S<=8; the general theorem remains open.
+MANDATORY CONSTRAINTS: The failed wrapper is not mathematical evidence; source feasibility is only necessary; graph realizability and the general theorem remain open.
 <!-- CURRENT-STATUS:END -->
 
 ## Latest adversarial audit - 22 September 2026
