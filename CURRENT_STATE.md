@@ -9,23 +9,21 @@ CHECKPOINT CLASS: VERIFIED_INTERNAL_NOT_PROMOTED
 
 WORK MODE: FORWARD_RESEARCH_LIVE
 
-INSPECTED PREDECESSOR: 522d1dbde17bde6ca468a042a17175d307fef0ca.
+INSPECTED PREDECESSOR: b77c36943399dbe2f5c2fe2b1dbff397e0750760.
 
-LAST VERIFIED RESULT: The independently reformulated r=11 replay remains clean. The r=12 frontier is now internally closed for every residual partition of support at most five: all 47 partitions were enumerated; only (8,1^4) and (7,2,1^3) yield strict quotient cores, with 4 and 8 orbits respectively; all 12 are physical-source infeasible. Supports 6 through 11 remain.
+LAST VERIFIED RESULT: r=12 is internally closed for supports <=5. Exact support-six enumeration covers all 11 residual partitions and 230 strict quotient orbits. Physical-source screening rejects 227; exactly 3 source-feasible kernels remain, all in partition (4,2,2,2,1,1), and require supplement forcing. No support-six closure is yet claimed.
 
-EVIDENCE: `project/research/general_n/2026-09-22-r12-quotient-v1/r12_support_le5.py/json` and counts; canonical telemetry.
+EVIDENCE: `project/research/general_n/2026-09-22-r12-quotient-v1/r12_support6.py/json` and counts; canonical telemetry.
 
-SESSION UTILISATION: Trigger 18:00:38 BST; actual start 18:04:09; three closed intervals; verified total 523s (8m43s); three substantive units; cutoff 18:53:38; target N/A late start; LIVE.
+SESSION UTILISATION: Trigger 18:00:38 BST; actual start 18:04:09; four closed intervals; verified total 568s (9m28s); four substantive units; cutoff 18:53:38; target N/A late start; LIVE.
 
 UNPRESERVED WORK: None at this checkpoint.
 
-DEFERRED ADMIN: Historical reconciliation and prose-only README edits.
-
-NEXT ACTION: Enumerate and source-screen all r=12 support-six partitions; checkpoint exact survivors before supplement analysis.
+NEXT ACTION: Apply an exact combined source/supplement MILP to the three (4,2,2,2,1,1) kernels, then proceed to support seven.
 
 FOCUSED-SESSION COUNT: 1/24; current trigger credit pending final compliance.
 
-MANDATORY CONSTRAINTS: r=12 support<=5 is internal finite closure only; the S<=14 edge-bound extension is not claimed until all supports close.
+MANDATORY CONSTRAINTS: Three abstract source-feasible kernels remain; do not claim r=12 support-six closure yet.
 <!-- CURRENT-STATUS:END -->
 
 ## Latest adversarial audit - 22 September 2026
