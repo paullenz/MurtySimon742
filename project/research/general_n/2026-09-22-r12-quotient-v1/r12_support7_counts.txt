@@ -1,0 +1,8 @@
+unlabelled7=1044
+case=0 coloured=5096 strict=88
+case=1 coloured=24416 strict=450
+case=2 coloured=24416 strict=237
+case=3 coloured=55472 strict=534
+case=4 coloured=55472 strict=409
+case=5 coloured=71552 strict=389
+case=6 coloured=13128 strict=72

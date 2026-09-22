@@ -9,21 +9,21 @@ CHECKPOINT CLASS: VERIFIED_INTERNAL_NOT_PROMOTED
 
 WORK MODE: FORWARD_RESEARCH_LIVE
 
-INSPECTED PREDECESSOR: e0e945f26051f812463dfb24c97a858f436fae17.
+INSPECTED PREDECESSOR: 635d07b626af00085688f3b5a003f51aab6cc485.
 
-LAST VERIFIED RESULT: r=12 is internally closed through support six. Supports <=5 have no source-feasible quotient. Support six has 230 strict orbits; its only 3 source-feasible kernels, all in partition (4,2,2,2,1,1), are infeasible in the combined source/supplement MILP with zero unknown cases. Supports 7 through 11 remain.
+LAST VERIFIED RESULT: r=12 is internally closed through support six. Exact support-seven orbit enumeration covers all 7 residual partitions, 249,552 residual-coloured core orbits, and 2,179 optimistic strict candidates. Counts by partition are 88, 450, 237, 534, 409, 389, and 72. Physical-source screening is next; no support-seven closure is yet claimed.
 
-EVIDENCE: complete support<=5 and support-six artifacts under `project/research/general_n/2026-09-22-r12-quotient-v1/`; canonical telemetry.
+EVIDENCE: `r12_support7_orbits.cpp`, counts, and mask file in the r12 quotient package; canonical telemetry.
 
-SESSION UTILISATION: Trigger 18:00:38 BST; actual start 18:04:09; five closed intervals; verified total 569s (9m29s); five substantive units; cutoff 18:53:38; target N/A late start; LIVE.
+SESSION UTILISATION: Trigger 18:00:38 BST; actual start 18:04:09; six closed intervals; verified total 571s (9m31s); six substantive units; cutoff 18:53:38; target N/A late start; LIVE.
 
 UNPRESERVED WORK: None at this checkpoint.
 
-NEXT ACTION: Enumerate r=12 support-seven strict cores by residual partition and apply a sharded physical-source screen.
+NEXT ACTION: Shard the 2,179 support-seven strict cores by residual partition and apply exact integer physical-source feasibility.
 
 FOCUSED-SESSION COUNT: 1/24; current trigger credit pending final compliance.
 
-MANDATORY CONSTRAINTS: Internal MILP closure is not graph realization or external verification; S<=14 is not claimed until all supports close.
+MANDATORY CONSTRAINTS: Strict quotient census is not source feasibility or graph realization; no S<=14 extension yet.
 <!-- CURRENT-STATUS:END -->
 
 ## Latest adversarial audit - 22 September 2026

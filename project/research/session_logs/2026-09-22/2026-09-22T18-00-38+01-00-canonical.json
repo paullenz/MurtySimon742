@@ -51,14 +51,20 @@
       "stop": "2026-09-22T18:20:20+01:00",
       "seconds": 1,
       "evidence": "combined source/supplement MILP for three r=12 support-six kernels"
+    },
+    {
+      "start": "2026-09-22T18:22:24+01:00",
+      "stop": "2026-09-22T18:22:26+01:00",
+      "seconds": 2,
+      "evidence": "exact r=12 support-seven orbit census"
     }
   ],
-  "verified_forward_span_seconds": 569,
+  "verified_forward_span_seconds": 571,
   "forward_stop": "PENDING",
   "preservation_start": "PENDING",
   "preservation_complete": "PENDING",
   "wall_clock_span_seconds": "PENDING",
-  "substantive_unit_count": 5,
+  "substantive_unit_count": 6,
   "substantive_unit_ledger": [
     {
       "completed_at": "2026-09-22T18:06:42+01:00",
@@ -84,6 +90,11 @@
       "completed_at": "2026-09-22T18:20:20+01:00",
       "unit": "r=12 support-six supplement forcing",
       "result": "3/3 combined source/supplement MILPs infeasible; 0 unknown; support six internally closed."
+    },
+    {
+      "completed_at": "2026-09-22T18:22:26+01:00",
+      "unit": "r=12 support-seven orbit census",
+      "result": "249,552 coloured orbits; 2,179 strict candidates across seven partitions."
     }
   ],
   "early_stop_check": {
@@ -98,9 +109,10 @@
     "6a159d60a257346984d4269c7b65d7de15ce76ae",
     "522d1dbde17bde6ca468a042a17175d307fef0ca",
     "b77c36943399dbe2f5c2fe2b1dbff397e0750760",
-    "e0e945f26051f812463dfb24c97a858f436fae17"
+    "e0e945f26051f812463dfb24c97a858f436fae17",
+    "635d07b626af00085688f3b5a003f51aab6cc485"
   ],
-  "unfinished_line": "Enumerate and screen r=12 supports 7 through 11.",
+  "unfinished_line": "Physical-source and supplement screen r=12 support seven; then supports 8-11.",
   "target": {
     "applicable": false,
     "available_seconds": 2969,
