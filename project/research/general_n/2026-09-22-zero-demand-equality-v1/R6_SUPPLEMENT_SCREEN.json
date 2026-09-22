@@ -1,0 +1,93 @@
+{
+  "(3, 1, 1, 1)/orbit_1": {
+    "source_multisets_tested": 6,
+    "supplement_feasible": 0,
+    "first_survivors": [],
+    "test": "Every selected incidence has an active B-edge forcing exactly that incidence, or a universal supplement when its source has one selected label.",
+    "scope": "Necessary B-layer condition only; candidate edges are not jointly checked for A-common-neighbour uniqueness or D2C realization."
+  },
+  "(3, 1, 1, 1)/orbit_2": {
+    "source_multisets_tested": 1,
+    "supplement_feasible": 0,
+    "first_survivors": [],
+    "test": "Every selected incidence has an active B-edge forcing exactly that incidence, or a universal supplement when its source has one selected label.",
+    "scope": "Necessary B-layer condition only; candidate edges are not jointly checked for A-common-neighbour uniqueness or D2C realization."
+  },
+  "(3, 1, 1, 1)/orbit_3": {
+    "source_multisets_tested": 1,
+    "supplement_feasible": 0,
+    "first_survivors": [],
+    "test": "Every selected incidence has an active B-edge forcing exactly that incidence, or a universal supplement when its source has one selected label.",
+    "scope": "Necessary B-layer condition only; candidate edges are not jointly checked for A-common-neighbour uniqueness or D2C realization."
+  },
+  "(2, 2, 1, 1)/orbit_1": {
+    "source_multisets_tested": 3,
+    "supplement_feasible": 0,
+    "first_survivors": [],
+    "test": "Every selected incidence has an active B-edge forcing exactly that incidence, or a universal supplement when its source has one selected label.",
+    "scope": "Necessary B-layer condition only; candidate edges are not jointly checked for A-common-neighbour uniqueness or D2C realization."
+  },
+  "(2, 1, 1, 1, 1)/orbit_1": {
+    "source_multisets_tested": 0,
+    "supplement_feasible": 0,
+    "first_survivors": [],
+    "test": "Every selected incidence has an active B-edge forcing exactly that incidence, or a universal supplement when its source has one selected label.",
+    "scope": "Necessary B-layer condition only; candidate edges are not jointly checked for A-common-neighbour uniqueness or D2C realization."
+  },
+  "(2, 1, 1, 1, 1)/orbit_2": {
+    "source_multisets_tested": 0,
+    "supplement_feasible": 0,
+    "first_survivors": [],
+    "test": "Every selected incidence has an active B-edge forcing exactly that incidence, or a universal supplement when its source has one selected label.",
+    "scope": "Necessary B-layer condition only; candidate edges are not jointly checked for A-common-neighbour uniqueness or D2C realization."
+  },
+  "(2, 1, 1, 1, 1)/orbit_3": {
+    "source_multisets_tested": 0,
+    "supplement_feasible": 0,
+    "first_survivors": [],
+    "test": "Every selected incidence has an active B-edge forcing exactly that incidence, or a universal supplement when its source has one selected label.",
+    "scope": "Necessary B-layer condition only; candidate edges are not jointly checked for A-common-neighbour uniqueness or D2C realization."
+  },
+  "(2, 1, 1, 1, 1)/orbit_4": {
+    "source_multisets_tested": 20,
+    "supplement_feasible": 0,
+    "first_survivors": [],
+    "test": "Every selected incidence has an active B-edge forcing exactly that incidence, or a universal supplement when its source has one selected label.",
+    "scope": "Necessary B-layer condition only; candidate edges are not jointly checked for A-common-neighbour uniqueness or D2C realization."
+  },
+  "(2, 1, 1, 1, 1)/orbit_5": {
+    "source_multisets_tested": 0,
+    "supplement_feasible": 0,
+    "first_survivors": [],
+    "test": "Every selected incidence has an active B-edge forcing exactly that incidence, or a universal supplement when its source has one selected label.",
+    "scope": "Necessary B-layer condition only; candidate edges are not jointly checked for A-common-neighbour uniqueness or D2C realization."
+  },
+  "(2, 1, 1, 1, 1)/orbit_6": {
+    "source_multisets_tested": 0,
+    "supplement_feasible": 0,
+    "first_survivors": [],
+    "test": "Every selected incidence has an active B-edge forcing exactly that incidence, or a universal supplement when its source has one selected label.",
+    "scope": "Necessary B-layer condition only; candidate edges are not jointly checked for A-common-neighbour uniqueness or D2C realization."
+  },
+  "(2, 1, 1, 1, 1)/orbit_7": {
+    "source_multisets_tested": 0,
+    "supplement_feasible": 0,
+    "first_survivors": [],
+    "test": "Every selected incidence has an active B-edge forcing exactly that incidence, or a universal supplement when its source has one selected label.",
+    "scope": "Necessary B-layer condition only; candidate edges are not jointly checked for A-common-neighbour uniqueness or D2C realization."
+  },
+  "(2, 1, 1, 1, 1)/orbit_8": {
+    "source_multisets_tested": 0,
+    "supplement_feasible": 0,
+    "first_survivors": [],
+    "test": "Every selected incidence has an active B-edge forcing exactly that incidence, or a universal supplement when its source has one selected label.",
+    "scope": "Necessary B-layer condition only; candidate edges are not jointly checked for A-common-neighbour uniqueness or D2C realization."
+  },
+  "(2, 1, 1, 1, 1)/orbit_9": {
+    "source_multisets_tested": 0,
+    "supplement_feasible": 0,
+    "first_survivors": [],
+    "test": "Every selected incidence has an active B-edge forcing exactly that incidence, or a universal supplement when its source has one selected label.",
+    "scope": "Necessary B-layer condition only; candidate edges are not jointly checked for A-common-neighbour uniqueness or D2C realization."
+  }
+}

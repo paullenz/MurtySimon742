@@ -9,19 +9,19 @@ CHECKPOINT CLASS: SUBSTANTIVE_RESEARCH_CHECKPOINT
 
 WORK MODE: MATH
 
-INSPECTED PREDECESSOR: a3a47fed71120539884c826c7371e56160190dc8.
+INSPECTED PREDECESSOR: 972f6f5aab980826dbdaaff556488d230462cbb6.
 
-LAST VERIFIED RESULT: Exact necessary source-state screen reduces r=6 equality to five core orbits and 31 abstract source multisets; equality remains open.
+LAST VERIFIED RESULT: Internal exact B-layer screen eliminates all r=6 equality kernels; candidate scope reaches S<=8 for the edge bound and S<=6 for balanced equality. Full strip remains open.
 
 EVIDENCE: `project/research/session_logs/2026-09-22/2026-09-22T11-00-38+01-00-canonical.json`; `project/research/general_n/2026-09-22-zero-demand-equality-v1/`.
 
-SESSION UTILISATION: Trigger 2026-09-22 11:00:38 BST; earliest 11:01:19; next 12:00:38; cutoff 11:53:38; hard close 11:59:38. Closed intervals: 11:02:36–11:04:00, 11:04:50–11:06:51, 11:07:13–11:08:46, 11:09:08–11:11:53, 11:12:15–11:12:38, 11:13:23–11:14:27, 11:14:53–11:16:02; total 619 seconds; units 6; preservation pending; target YES/PENDING; IN_PROGRESS. Stop reason: active. Canonical: `project/research/session_logs/2026-09-22/2026-09-22T11-00-38+01-00-canonical.json`.
+SESSION UTILISATION: Trigger 2026-09-22 11:00:38 BST; earliest 11:01:19; next 12:00:38; cutoff 11:53:38; hard close 11:59:38. Closed intervals: 11:02:36–11:04:00, 11:04:50–11:06:51, 11:07:13–11:08:46, 11:09:08–11:11:53, 11:12:15–11:12:38, 11:13:23–11:14:27, 11:14:53–11:16:02, 11:16:23–11:18:32; total 748 seconds; units 7; preservation pending; target YES/PENDING; IN_PROGRESS. Stop reason: active. Canonical: `project/research/session_logs/2026-09-22/2026-09-22T11-00-38+01-00-canonical.json`.
 
 UNPRESERVED WORK: None beyond named unfinished line.
 
 DEFERRED ADMIN: Historical missing-slot reconciliation and schedule maintenance.
 
-NEXT ACTION: Apply legal-supplement uniqueness and selected-B-edge injectivity to all 31 r=6 equality source multisets.
+NEXT ACTION: Independently hostile-audit the r=6 finite reductions, then classify r=7 strict-surplus cores.
 
 FOCUSED-SESSION COUNT: 1/24 completed before this trigger; this trigger credit 0.
 
