@@ -1,0 +1,4819 @@
+{
+  "(8,)": {
+    "support": 1,
+    "colour_preserving_permutations": 1,
+    "strict_survivors_labelled": 0,
+    "strict_survivor_orbits": 0,
+    "orbit_representatives": [],
+    "scope": "Exact quotient under permutations preserving residual masses R."
+  },
+  "(7, 1)": {
+    "support": 2,
+    "colour_preserving_permutations": 1,
+    "strict_survivors_labelled": 0,
+    "strict_survivor_orbits": 0,
+    "orbit_representatives": [],
+    "scope": "Exact quotient under permutations preserving residual masses R."
+  },
+  "(6, 2)": {
+    "support": 2,
+    "colour_preserving_permutations": 1,
+    "strict_survivors_labelled": 0,
+    "strict_survivor_orbits": 0,
+    "orbit_representatives": [],
+    "scope": "Exact quotient under permutations preserving residual masses R."
+  },
+  "(6, 1, 1)": {
+    "support": 3,
+    "colour_preserving_permutations": 2,
+    "strict_survivors_labelled": 0,
+    "strict_survivor_orbits": 0,
+    "orbit_representatives": [],
+    "scope": "Exact quotient under permutations preserving residual masses R."
+  },
+  "(5, 3)": {
+    "support": 2,
+    "colour_preserving_permutations": 1,
+    "strict_survivors_labelled": 0,
+    "strict_survivor_orbits": 0,
+    "orbit_representatives": [],
+    "scope": "Exact quotient under permutations preserving residual masses R."
+  },
+  "(5, 2, 1)": {
+    "support": 3,
+    "colour_preserving_permutations": 1,
+    "strict_survivors_labelled": 0,
+    "strict_survivor_orbits": 0,
+    "orbit_representatives": [],
+    "scope": "Exact quotient under permutations preserving residual masses R."
+  },
+  "(5, 1, 1, 1)": {
+    "support": 4,
+    "colour_preserving_permutations": 6,
+    "strict_survivors_labelled": 0,
+    "strict_survivor_orbits": 0,
+    "orbit_representatives": [],
+    "scope": "Exact quotient under permutations preserving residual masses R."
+  },
+  "(4, 4)": {
+    "support": 2,
+    "colour_preserving_permutations": 2,
+    "strict_survivors_labelled": 0,
+    "strict_survivor_orbits": 0,
+    "orbit_representatives": [],
+    "scope": "Exact quotient under permutations preserving residual masses R."
+  },
+  "(4, 3, 1)": {
+    "support": 3,
+    "colour_preserving_permutations": 1,
+    "strict_survivors_labelled": 0,
+    "strict_survivor_orbits": 0,
+    "orbit_representatives": [],
+    "scope": "Exact quotient under permutations preserving residual masses R."
+  },
+  "(4, 2, 2)": {
+    "support": 3,
+    "colour_preserving_permutations": 2,
+    "strict_survivors_labelled": 0,
+    "strict_survivor_orbits": 0,
+    "orbit_representatives": [],
+    "scope": "Exact quotient under permutations preserving residual masses R."
+  },
+  "(4, 2, 1, 1)": {
+    "support": 4,
+    "colour_preserving_permutations": 2,
+    "strict_survivors_labelled": 0,
+    "strict_survivor_orbits": 0,
+    "orbit_representatives": [],
+    "scope": "Exact quotient under permutations preserving residual masses R."
+  },
+  "(4, 1, 1, 1, 1)": {
+    "support": 5,
+    "colour_preserving_permutations": 24,
+    "strict_survivors_labelled": 0,
+    "strict_survivor_orbits": 0,
+    "orbit_representatives": [],
+    "scope": "Exact quotient under permutations preserving residual masses R."
+  },
+  "(3, 3, 2)": {
+    "support": 3,
+    "colour_preserving_permutations": 2,
+    "strict_survivors_labelled": 0,
+    "strict_survivor_orbits": 0,
+    "orbit_representatives": [],
+    "scope": "Exact quotient under permutations preserving residual masses R."
+  },
+  "(3, 3, 1, 1)": {
+    "support": 4,
+    "colour_preserving_permutations": 4,
+    "strict_survivors_labelled": 0,
+    "strict_survivor_orbits": 0,
+    "orbit_representatives": [],
+    "scope": "Exact quotient under permutations preserving residual masses R."
+  },
+  "(3, 2, 2, 1)": {
+    "support": 4,
+    "colour_preserving_permutations": 2,
+    "strict_survivors_labelled": 0,
+    "strict_survivor_orbits": 0,
+    "orbit_representatives": [],
+    "scope": "Exact quotient under permutations preserving residual masses R."
+  },
+  "(3, 2, 1, 1, 1)": {
+    "support": 5,
+    "colour_preserving_permutations": 6,
+    "strict_survivors_labelled": 2,
+    "strict_survivor_orbits": 2,
+    "orbit_representatives": [
+      {
+        "mask": 1008,
+        "edges": [
+          [
+            1,
+            2
+          ],
+          [
+            1,
+            3
+          ],
+          [
+            1,
+            4
+          ],
+          [
+            2,
+            3
+          ],
+          [
+            2,
+            4
+          ],
+          [
+            3,
+            4
+          ]
+        ],
+        "degrees": [
+          0,
+          3,
+          3,
+          3,
+          3
+        ],
+        "P": [
+          1,
+          2,
+          3,
+          4
+        ],
+        "N": [
+          0
+        ],
+        "t_upper": 1,
+        "selected_lower_bounds": [
+          0,
+          1,
+          2,
+          2,
+          2
+        ]
+      },
+      {
+        "mask": 1009,
+        "edges": [
+          [
+            0,
+            1
+          ],
+          [
+            1,
+            2
+          ],
+          [
+            1,
+            3
+          ],
+          [
+            1,
+            4
+          ],
+          [
+            2,
+            3
+          ],
+          [
+            2,
+            4
+          ],
+          [
+            3,
+            4
+          ]
+        ],
+        "degrees": [
+          1,
+          4,
+          3,
+          3,
+          3
+        ],
+        "P": [
+          1,
+          2,
+          3,
+          4
+        ],
+        "N": [
+          0
+        ],
+        "t_upper": 1,
+        "selected_lower_bounds": [
+          0,
+          2,
+          2,
+          2,
+          2
+        ]
+      }
+    ],
+    "scope": "Exact quotient under permutations preserving residual masses R."
+  },
+  "(3, 1, 1, 1, 1, 1)": {
+    "support": 6,
+    "colour_preserving_permutations": 120,
+    "strict_survivors_labelled": 157,
+    "strict_survivor_orbits": 5,
+    "orbit_representatives": [
+      {
+        "mask": 1759,
+        "edges": [
+          [
+            0,
+            1
+          ],
+          [
+            0,
+            2
+          ],
+          [
+            0,
+            3
+          ],
+          [
+            0,
+            4
+          ],
+          [
+            0,
+            5
+          ],
+          [
+            1,
+            3
+          ],
+          [
+            1,
+            4
+          ],
+          [
+            2,
+            3
+          ],
+          [
+            2,
+            4
+          ]
+        ],
+        "degrees": [
+          5,
+          3,
+          3,
+          3,
+          3,
+          1
+        ],
+        "P": [
+          0,
+          1,
+          2,
+          3,
+          4
+        ],
+        "N": [
+          5
+        ],
+        "t_upper": 1,
+        "selected_lower_bounds": [
+          2,
+          2,
+          2,
+          2,
+          2,
+          0
+        ]
+      },
+      {
+        "mask": 1887,
+        "edges": [
+          [
+            0,
+            1
+          ],
+          [
+            0,
+            2
+          ],
+          [
+            0,
+            3
+          ],
+          [
+            0,
+            4
+          ],
+          [
+            0,
+            5
+          ],
+          [
+            1,
+            3
+          ],
+          [
+            1,
+            5
+          ],
+          [
+            2,
+            3
+          ],
+          [
+            2,
+            4
+          ]
+        ],
+        "degrees": [
+          5,
+          3,
+          3,
+          3,
+          2,
+          2
+        ],
+        "P": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5
+        ],
+        "N": [],
+        "t_upper": 1,
+        "selected_lower_bounds": [
+          2,
+          2,
+          2,
+          2,
+          1,
+          1
+        ]
+      },
+      {
+        "mask": 5919,
+        "edges": [
+          [
+            0,
+            1
+          ],
+          [
+            0,
+            2
+          ],
+          [
+            0,
+            3
+          ],
+          [
+            0,
+            4
+          ],
+          [
+            0,
+            5
+          ],
+          [
+            1,
+            5
+          ],
+          [
+            2,
+            3
+          ],
+          [
+            2,
+            4
+          ],
+          [
+            3,
+            4
+          ]
+        ],
+        "degrees": [
+          5,
+          2,
+          3,
+          3,
+          3,
+          2
+        ],
+        "P": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5
+        ],
+        "N": [],
+        "t_upper": 1,
+        "selected_lower_bounds": [
+          2,
+          1,
+          2,
+          2,
+          2,
+          1
+        ]
+      },
+      {
+        "mask": 7055,
+        "edges": [
+          [
+            0,
+            1
+          ],
+          [
+            0,
+            2
+          ],
+          [
+            0,
+            3
+          ],
+          [
+            0,
+            4
+          ],
+          [
+            1,
+            4
+          ],
+          [
+            1,
+            5
+          ],
+          [
+            2,
+            3
+          ],
+          [
+            2,
+            5
+          ],
+          [
+            3,
+            4
+          ]
+        ],
+        "degrees": [
+          4,
+          3,
+          3,
+          3,
+          3,
+          2
+        ],
+        "P": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5
+        ],
+        "N": [],
+        "t_upper": 1,
+        "selected_lower_bounds": [
+          1,
+          2,
+          2,
+          2,
+          2,
+          1
+        ]
+      },
+      {
+        "mask": 7071,
+        "edges": [
+          [
+            0,
+            1
+          ],
+          [
+            0,
+            2
+          ],
+          [
+            0,
+            3
+          ],
+          [
+            0,
+            4
+          ],
+          [
+            0,
+            5
+          ],
+          [
+            1,
+            4
+          ],
+          [
+            1,
+            5
+          ],
+          [
+            2,
+            3
+          ],
+          [
+            2,
+            5
+          ],
+          [
+            3,
+            4
+          ]
+        ],
+        "degrees": [
+          5,
+          3,
+          3,
+          3,
+          3,
+          3
+        ],
+        "P": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5
+        ],
+        "N": [],
+        "t_upper": 2,
+        "selected_lower_bounds": [
+          2,
+          2,
+          2,
+          2,
+          2,
+          2
+        ]
+      }
+    ],
+    "scope": "Exact quotient under permutations preserving residual masses R."
+  },
+  "(2, 2, 2, 2)": {
+    "support": 4,
+    "colour_preserving_permutations": 24,
+    "strict_survivors_labelled": 0,
+    "strict_survivor_orbits": 0,
+    "orbit_representatives": [],
+    "scope": "Exact quotient under permutations preserving residual masses R."
+  },
+  "(2, 2, 2, 1, 1)": {
+    "support": 5,
+    "colour_preserving_permutations": 12,
+    "strict_survivors_labelled": 1,
+    "strict_survivor_orbits": 1,
+    "orbit_representatives": [
+      {
+        "mask": 511,
+        "edges": [
+          [
+            0,
+            1
+          ],
+          [
+            0,
+            2
+          ],
+          [
+            0,
+            3
+          ],
+          [
+            0,
+            4
+          ],
+          [
+            1,
+            2
+          ],
+          [
+            1,
+            3
+          ],
+          [
+            1,
+            4
+          ],
+          [
+            2,
+            3
+          ],
+          [
+            2,
+            4
+          ]
+        ],
+        "degrees": [
+          4,
+          4,
+          4,
+          3,
+          3
+        ],
+        "P": [
+          0,
+          1,
+          2,
+          3,
+          4
+        ],
+        "N": [],
+        "t_upper": 1,
+        "selected_lower_bounds": [
+          2,
+          2,
+          2,
+          2,
+          2
+        ]
+      }
+    ],
+    "scope": "Exact quotient under permutations preserving residual masses R."
+  },
+  "(2, 2, 1, 1, 1, 1)": {
+    "support": 6,
+    "colour_preserving_permutations": 48,
+    "strict_survivors_labelled": 685,
+    "strict_survivor_orbits": 29,
+    "orbit_representatives": [
+      {
+        "mask": 1022,
+        "edges": [
+          [
+            0,
+            2
+          ],
+          [
+            0,
+            3
+          ],
+          [
+            0,
+            4
+          ],
+          [
+            0,
+            5
+          ],
+          [
+            1,
+            2
+          ],
+          [
+            1,
+            3
+          ],
+          [
+            1,
+            4
+          ],
+          [
+            1,
+            5
+          ],
+          [
+            2,
+            3
+          ]
+        ],
+        "degrees": [
+          4,
+          4,
+          3,
+          3,
+          2,
+          2
+        ],
+        "P": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5
+        ],
+        "N": [],
+        "t_upper": 1,
+        "selected_lower_bounds": [
+          2,
+          2,
+          2,
+          2,
+          1,
+          1
+        ]
+      },
+      {
+        "mask": 1789,
+        "edges": [
+          [
+            0,
+            1
+          ],
+          [
+            0,
+            3
+          ],
+          [
+            0,
+            4
+          ],
+          [
+            0,
+            5
+          ],
+          [
+            1,
+            2
+          ],
+          [
+            1,
+            3
+          ],
+          [
+            1,
+            4
+          ],
+          [
+            2,
+            3
+          ],
+          [
+            2,
+            4
+          ]
+        ],
+        "degrees": [
+          4,
+          4,
+          3,
+          3,
+          3,
+          1
+        ],
+        "P": [
+          0,
+          1,
+          2,
+          3,
+          4
+        ],
+        "N": [
+          5
+        ],
+        "t_upper": 1,
+        "selected_lower_bounds": [
+          2,
+          2,
+          2,
+          2,
+          2,
+          0
+        ]
+      },
+      {
+        "mask": 1917,
+        "edges": [
+          [
+            0,
+            1
+          ],
+          [
+            0,
+            3
+          ],
+          [
+            0,
+            4
+          ],
+          [
+            0,
+            5
+          ],
+          [
+            1,
+            2
+          ],
+          [
+            1,
+            3
+          ],
+          [
+            1,
+            5
+          ],
+          [
+            2,
+            3
+          ],
+          [
+            2,
+            4
+          ]
+        ],
+        "degrees": [
+          4,
+          4,
+          3,
+          3,
+          2,
+          2
+        ],
+        "P": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5
+        ],
+        "N": [],
+        "t_upper": 1,
+        "selected_lower_bounds": [
+          2,
+          2,
+          2,
+          2,
+          1,
+          1
+        ]
+      },
+      {
+        "mask": 2013,
+        "edges": [
+          [
+            0,
+            1
+          ],
+          [
+            0,
+            3
+          ],
+          [
+            0,
+            4
+          ],
+          [
+            0,
+            5
+          ],
+          [
+            1,
+            3
+          ],
+          [
+            1,
+            4
+          ],
+          [
+            1,
+            5
+          ],
+          [
+            2,
+            3
+          ],
+          [
+            2,
+            4
+          ]
+        ],
+        "degrees": [
+          4,
+          4,
+          2,
+          3,
+          3,
+          2
+        ],
+        "P": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5
+        ],
+        "N": [],
+        "t_upper": 1,
+        "selected_lower_bounds": [
+          2,
+          2,
+          1,
+          2,
+          2,
+          1
+        ]
+      },
+      {
+        "mask": 2014,
+        "edges": [
+          [
+            0,
+            2
+          ],
+          [
+            0,
+            3
+          ],
+          [
+            0,
+            4
+          ],
+          [
+            0,
+            5
+          ],
+          [
+            1,
+            3
+          ],
+          [
+            1,
+            4
+          ],
+          [
+            1,
+            5
+          ],
+          [
+            2,
+            3
+          ],
+          [
+            2,
+            4
+          ]
+        ],
+        "degrees": [
+          4,
+          3,
+          3,
+          3,
+          3,
+          2
+        ],
+        "P": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5
+        ],
+        "N": [],
+        "t_upper": 1,
+        "selected_lower_bounds": [
+          2,
+          1,
+          2,
+          2,
+          2,
+          1
+        ]
+      },
+      {
+        "mask": 5662,
+        "edges": [
+          [
+            0,
+            2
+          ],
+          [
+            0,
+            3
+          ],
+          [
+            0,
+            4
+          ],
+          [
+            0,
+            5
+          ],
+          [
+            2,
+            3
+          ],
+          [
+            2,
+            4
+          ],
+          [
+            3,
+            4
+          ]
+        ],
+        "degrees": [
+          4,
+          0,
+          3,
+          3,
+          3,
+          1
+        ],
+        "P": [
+          0,
+          2,
+          3,
+          4
+        ],
+        "N": [
+          1,
+          5
+        ],
+        "t_upper": 1,
+        "selected_lower_bounds": [
+          2,
+          0,
+          2,
+          2,
+          2,
+          0
+        ]
+      },
+      {
+        "mask": 5918,
+        "edges": [
+          [
+            0,
+            2
+          ],
+          [
+            0,
+            3
+          ],
+          [
+            0,
+            4
+          ],
+          [
+            0,
+            5
+          ],
+          [
+            1,
+            5
+          ],
+          [
+            2,
+            3
+          ],
+          [
+            2,
+            4
+          ],
+          [
+            3,
+            4
+          ]
+        ],
+        "degrees": [
+          4,
+          1,
+          3,
+          3,
+          3,
+          2
+        ],
+        "P": [
+          0,
+          2,
+          3,
+          4,
+          5
+        ],
+        "N": [
+          1
+        ],
+        "t_upper": 1,
+        "selected_lower_bounds": [
+          2,
+          0,
+          2,
+          2,
+          2,
+          1
+        ]
+      },
+      {
+        "mask": 5949,
+        "edges": [
+          [
+            0,
+            1
+          ],
+          [
+            0,
+            3
+          ],
+          [
+            0,
+            4
+          ],
+          [
+            0,
+            5
+          ],
+          [
+            1,
+            2
+          ],
+          [
+            1,
+            5
+          ],
+          [
+            2,
+            3
+          ],
+          [
+            2,
+            4
+          ],
+          [
+            3,
+            4
+          ]
+        ],
+        "degrees": [
+          4,
+          3,
+          3,
+          3,
+          3,
+          2
+        ],
+        "P": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5
+        ],
+        "N": [],
+        "t_upper": 1,
+        "selected_lower_bounds": [
+          2,
+          1,
+          2,
+          2,
+          2,
+          1
+        ]
+      },
+      {
+        "mask": 6383,
+        "edges": [
+          [
+            0,
+            1
+          ],
+          [
+            0,
+            2
+          ],
+          [
+            0,
+            3
+          ],
+          [
+            0,
+            4
+          ],
+          [
+            1,
+            2
+          ],
+          [
+            1,
+            3
+          ],
+          [
+            1,
+            4
+          ],
+          [
+            2,
+            5
+          ],
+          [
+            3,
+            4
+          ]
+        ],
+        "degrees": [
+          4,
+          4,
+          3,
+          3,
+          3,
+          1
+        ],
+        "P": [
+          0,
+          1,
+          2,
+          3,
+          4
+        ],
+        "N": [
+          5
+        ],
+        "t_upper": 1,
+        "selected_lower_bounds": [
+          2,
+          2,
+          2,
+          2,
+          2,
+          0
+        ]
+      },
+      {
+        "mask": 6391,
+        "edges": [
+          [
+            0,
+            1
+          ],
+          [
+            0,
+            2
+          ],
+          [
+            0,
+            3
+          ],
+          [
+            0,
+            5
+          ],
+          [
+            1,
+            2
+          ],
+          [
+            1,
+            3
+          ],
+          [
+            1,
+            4
+          ],
+          [
+            2,
+            5
+          ],
+          [
+            3,
+            4
+          ]
+        ],
+        "degrees": [
+          4,
+          4,
+          3,
+          3,
+          2,
+          2
+        ],
+        "P": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5
+        ],
+        "N": [],
+        "t_upper": 1,
+        "selected_lower_bounds": [
+          2,
+          2,
+          2,
+          2,
+          1,
+          1
+        ]
+      },
+      {
+        "mask": 6397,
+        "edges": [
+          [
+            0,
+            1
+          ],
+          [
+            0,
+            3
+          ],
+          [
+            0,
+            4
+          ],
+          [
+            0,
+            5
+          ],
+          [
+            1,
+            2
+          ],
+          [
+            1,
+            3
+          ],
+          [
+            1,
+            4
+          ],
+          [
+            2,
+            5
+          ],
+          [
+            3,
+            4
+          ]
+        ],
+        "degrees": [
+          4,
+          4,
+          2,
+          3,
+          3,
+          2
+        ],
+        "P": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5
+        ],
+        "N": [],
+        "t_upper": 1,
+        "selected_lower_bounds": [
+          2,
+          2,
+          1,
+          2,
+          2,
+          1
+        ]
+      },
+      {
+        "mask": 6398,
+        "edges": [
+          [
+            0,
+            2
+          ],
+          [
+            0,
+            3
+          ],
+          [
+            0,
+            4
+          ],
+          [
+            0,
+            5
+          ],
+          [
+            1,
+            2
+          ],
+          [
+            1,
+            3
+          ],
+          [
+            1,
+            4
+          ],
+          [
+            2,
+            5
+          ],
+          [
+            3,
+            4
+          ]
+        ],
+        "degrees": [
+          4,
+          3,
+          3,
+          3,
+          3,
+          2
+        ],
+        "P": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5
+        ],
+        "N": [],
+        "t_upper": 1,
+        "selected_lower_bounds": [
+          2,
+          1,
+          2,
+          2,
+          2,
+          1
+        ]
+      },
+      {
+        "mask": 6654,
+        "edges": [
+          [
+            0,
+            2
+          ],
+          [
+            0,
+            3
+          ],
+          [
+            0,
+            4
+          ],
+          [
+            0,
+            5
+          ],
+          [
+            1,
+            2
+          ],
+          [
+            1,
+            3
+          ],
+          [
+            1,
+            4
+          ],
+          [
+            1,
+            5
+          ],
+          [
+            2,
+            5
+          ],
+          [
+            3,
+            4
+          ]
+        ],
+        "degrees": [
+          4,
+          4,
+          3,
+          3,
+          3,
+          3
+        ],
+        "P": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5
+        ],
+        "N": [],
+        "t_upper": 2,
+        "selected_lower_bounds": [
+          2,
+          2,
+          2,
+          2,
+          2,
+          2
+        ]
+      },
+      {
+        "mask": 6686,
+        "edges": [
+          [
+            0,
+            2
+          ],
+          [
+            0,
+            3
+          ],
+          [
+            0,
+            4
+          ],
+          [
+            0,
+            5
+          ],
+          [
+            2,
+            3
+          ],
+          [
+            2,
+            5
+          ],
+          [
+            3,
+            4
+          ]
+        ],
+        "degrees": [
+          4,
+          0,
+          3,
+          3,
+          2,
+          2
+        ],
+        "P": [
+          0,
+          2,
+          3,
+          4,
+          5
+        ],
+        "N": [
+          1
+        ],
+        "t_upper": 1,
+        "selected_lower_bounds": [
+          2,
+          0,
+          2,
+          2,
+          1,
+          1
+        ]
+      },
+      {
+        "mask": 6814,
+        "edges": [
+          [
+            0,
+            2
+          ],
+          [
+            0,
+            3
+          ],
+          [
+            0,
+            4
+          ],
+          [
+            0,
+            5
+          ],
+          [
+            1,
+            4
+          ],
+          [
+            2,
+            3
+          ],
+          [
+            2,
+            5
+          ],
+          [
+            3,
+            4
+          ]
+        ],
+        "degrees": [
+          4,
+          1,
+          3,
+          3,
+          3,
+          2
+        ],
+        "P": [
+          0,
+          2,
+          3,
+          4,
+          5
+        ],
+        "N": [
+          1
+        ],
+        "t_upper": 1,
+        "selected_lower_bounds": [
+          2,
+          0,
+          2,
+          2,
+          2,
+          1
+        ]
+      },
+      {
+        "mask": 6845,
+        "edges": [
+          [
+            0,
+            1
+          ],
+          [
+            0,
+            3
+          ],
+          [
+            0,
+            4
+          ],
+          [
+            0,
+            5
+          ],
+          [
+            1,
+            2
+          ],
+          [
+            1,
+            4
+          ],
+          [
+            2,
+            3
+          ],
+          [
+            2,
+            5
+          ],
+          [
+            3,
+            4
+          ]
+        ],
+        "degrees": [
+          4,
+          3,
+          3,
+          3,
+          3,
+          2
+        ],
+        "P": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5
+        ],
+        "N": [],
+        "t_upper": 1,
+        "selected_lower_bounds": [
+          2,
+          1,
+          2,
+          2,
+          2,
+          1
+        ]
+      },
+      {
+        "mask": 6875,
+        "edges": [
+          [
+            0,
+            1
+          ],
+          [
+            0,
+            2
+          ],
+          [
+            0,
+            4
+          ],
+          [
+            0,
+            5
+          ],
+          [
+            1,
+            3
+          ],
+          [
+            1,
+            4
+          ],
+          [
+            2,
+            3
+          ],
+          [
+            2,
+            5
+          ],
+          [
+            3,
+            4
+          ]
+        ],
+        "degrees": [
+          4,
+          3,
+          3,
+          3,
+          3,
+          2
+        ],
+        "P": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5
+        ],
+        "N": [],
+        "t_upper": 1,
+        "selected_lower_bounds": [
+          2,
+          1,
+          2,
+          2,
+          2,
+          1
+        ]
+      },
+      {
+        "mask": 6905,
+        "edges": [
+          [
+            0,
+            1
+          ],
+          [
+            0,
+            4
+          ],
+          [
+            0,
+            5
+          ],
+          [
+            1,
+            2
+          ],
+          [
+            1,
+            3
+          ],
+          [
+            1,
+            4
+          ],
+          [
+            2,
+            3
+          ],
+          [
+            2,
+            5
+          ],
+          [
+            3,
+            4
+          ]
+        ],
+        "degrees": [
+          3,
+          4,
+          3,
+          3,
+          3,
+          2
+        ],
+        "P": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5
+        ],
+        "N": [],
+        "t_upper": 1,
+        "selected_lower_bounds": [
+          1,
+          2,
+          2,
+          2,
+          2,
+          1
+        ]
+      },
+      {
+        "mask": 7067,
+        "edges": [
+          [
+            0,
+            1
+          ],
+          [
+            0,
+            2
+          ],
+          [
+            0,
+            4
+          ],
+          [
+            0,
+            5
+          ],
+          [
+            1,
+            4
+          ],
+          [
+            1,
+            5
+          ],
+          [
+            2,
+            3
+          ],
+          [
+            2,
+            5
+          ],
+          [
+            3,
+            4
+          ]
+        ],
+        "degrees": [
+          4,
+          3,
+          3,
+          2,
+          3,
+          3
+        ],
+        "P": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5
+        ],
+        "N": [],
+        "t_upper": 1,
+        "selected_lower_bounds": [
+          2,
+          1,
+          2,
+          1,
+          2,
+          2
+        ]
+      },
+      {
+        "mask": 7070,
+        "edges": [
+          [
+            0,
+            2
+          ],
+          [
+            0,
+            3
+          ],
+          [
+            0,
+            4
+          ],
+          [
+            0,
+            5
+          ],
+          [
+            1,
+            4
+          ],
+          [
+            1,
+            5
+          ],
+          [
+            2,
+            3
+          ],
+          [
+            2,
+            5
+          ],
+          [
+            3,
+            4
+          ]
+        ],
+        "degrees": [
+          4,
+          2,
+          3,
+          3,
+          3,
+          3
+        ],
+        "P": [
+          0,
+          2,
+          3,
+          4,
+          5
+        ],
+        "N": [
+          1
+        ],
+        "t_upper": 1,
+        "selected_lower_bounds": [
+          2,
+          0,
+          2,
+          2,
+          2,
+          2
+        ]
+      },
+      {
+        "mask": 7100,
+        "edges": [
+          [
+            0,
+            3
+          ],
+          [
+            0,
+            4
+          ],
+          [
+            0,
+            5
+          ],
+          [
+            1,
+            2
+          ],
+          [
+            1,
+            4
+          ],
+          [
+            1,
+            5
+          ],
+          [
+            2,
+            3
+          ],
+          [
+            2,
+            5
+          ],
+          [
+            3,
+            4
+          ]
+        ],
+        "degrees": [
+          3,
+          3,
+          3,
+          3,
+          3,
+          3
+        ],
+        "P": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5
+        ],
+        "N": [],
+        "t_upper": 1,
+        "selected_lower_bounds": [
+          1,
+          1,
+          2,
+          2,
+          2,
+          2
+        ]
+      },
+      {
+        "mask": 7101,
+        "edges": [
+          [
+            0,
+            1
+          ],
+          [
+            0,
+            3
+          ],
+          [
+            0,
+            4
+          ],
+          [
+            0,
+            5
+          ],
+          [
+            1,
+            2
+          ],
+          [
+            1,
+            4
+          ],
+          [
+            1,
+            5
+          ],
+          [
+            2,
+            3
+          ],
+          [
+            2,
+            5
+          ],
+          [
+            3,
+            4
+          ]
+        ],
+        "degrees": [
+          4,
+          4,
+          3,
+          3,
+          3,
+          3
+        ],
+        "P": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5
+        ],
+        "N": [],
+        "t_upper": 2,
+        "selected_lower_bounds": [
+          2,
+          2,
+          2,
+          2,
+          2,
+          2
+        ]
+      },
+      {
+        "mask": 15374,
+        "edges": [
+          [
+            0,
+            2
+          ],
+          [
+            0,
+            3
+          ],
+          [
+            0,
+            4
+          ],
+          [
+            2,
+            4
+          ],
+          [
+            2,
+            5
+          ],
+          [
+            3,
+            4
+          ],
+          [
+            3,
+            5
+          ]
+        ],
+        "degrees": [
+          3,
+          0,
+          3,
+          3,
+          3,
+          2
+        ],
+        "P": [
+          0,
+          2,
+          3,
+          4,
+          5
+        ],
+        "N": [
+          1
+        ],
+        "t_upper": 1,
+        "selected_lower_bounds": [
+          1,
+          0,
+          2,
+          2,
+          2,
+          1
+        ]
+      },
+      {
+        "mask": 15375,
+        "edges": [
+          [
+            0,
+            1
+          ],
+          [
+            0,
+            2
+          ],
+          [
+            0,
+            3
+          ],
+          [
+            0,
+            4
+          ],
+          [
+            2,
+            4
+          ],
+          [
+            2,
+            5
+          ],
+          [
+            3,
+            4
+          ],
+          [
+            3,
+            5
+          ]
+        ],
+        "degrees": [
+          4,
+          1,
+          3,
+          3,
+          3,
+          2
+        ],
+        "P": [
+          0,
+          2,
+          3,
+          4,
+          5
+        ],
+        "N": [
+          1
+        ],
+        "t_upper": 1,
+        "selected_lower_bounds": [
+          2,
+          0,
+          2,
+          2,
+          2,
+          1
+        ]
+      },
+      {
+        "mask": 15390,
+        "edges": [
+          [
+            0,
+            2
+          ],
+          [
+            0,
+            3
+          ],
+          [
+            0,
+            4
+          ],
+          [
+            0,
+            5
+          ],
+          [
+            2,
+            4
+          ],
+          [
+            2,
+            5
+          ],
+          [
+            3,
+            4
+          ],
+          [
+            3,
+            5
+          ]
+        ],
+        "degrees": [
+          4,
+          0,
+          3,
+          3,
+          3,
+          3
+        ],
+        "P": [
+          0,
+          2,
+          3,
+          4,
+          5
+        ],
+        "N": [
+          1
+        ],
+        "t_upper": 2,
+        "selected_lower_bounds": [
+          2,
+          0,
+          2,
+          2,
+          2,
+          2
+        ]
+      },
+      {
+        "mask": 15420,
+        "edges": [
+          [
+            0,
+            3
+          ],
+          [
+            0,
+            4
+          ],
+          [
+            0,
+            5
+          ],
+          [
+            1,
+            2
+          ],
+          [
+            2,
+            4
+          ],
+          [
+            2,
+            5
+          ],
+          [
+            3,
+            4
+          ],
+          [
+            3,
+            5
+          ]
+        ],
+        "degrees": [
+          3,
+          1,
+          3,
+          3,
+          3,
+          3
+        ],
+        "P": [
+          0,
+          2,
+          3,
+          4,
+          5
+        ],
+        "N": [
+          1
+        ],
+        "t_upper": 1,
+        "selected_lower_bounds": [
+          1,
+          0,
+          2,
+          2,
+          2,
+          2
+        ]
+      },
+      {
+        "mask": 15421,
+        "edges": [
+          [
+            0,
+            1
+          ],
+          [
+            0,
+            3
+          ],
+          [
+            0,
+            4
+          ],
+          [
+            0,
+            5
+          ],
+          [
+            1,
+            2
+          ],
+          [
+            2,
+            4
+          ],
+          [
+            2,
+            5
+          ],
+          [
+            3,
+            4
+          ],
+          [
+            3,
+            5
+          ]
+        ],
+        "degrees": [
+          4,
+          2,
+          3,
+          3,
+          3,
+          3
+        ],
+        "P": [
+          0,
+          2,
+          3,
+          4,
+          5
+        ],
+        "N": [
+          1
+        ],
+        "t_upper": 1,
+        "selected_lower_bounds": [
+          2,
+          0,
+          2,
+          2,
+          2,
+          2
+        ]
+      },
+      {
+        "mask": 15481,
+        "edges": [
+          [
+            0,
+            1
+          ],
+          [
+            0,
+            4
+          ],
+          [
+            0,
+            5
+          ],
+          [
+            1,
+            2
+          ],
+          [
+            1,
+            3
+          ],
+          [
+            2,
+            4
+          ],
+          [
+            2,
+            5
+          ],
+          [
+            3,
+            4
+          ],
+          [
+            3,
+            5
+          ]
+        ],
+        "degrees": [
+          3,
+          3,
+          3,
+          3,
+          3,
+          3
+        ],
+        "P": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5
+        ],
+        "N": [],
+        "t_upper": 1,
+        "selected_lower_bounds": [
+          1,
+          1,
+          2,
+          2,
+          2,
+          2
+        ]
+      },
+      {
+        "mask": 15541,
+        "edges": [
+          [
+            0,
+            1
+          ],
+          [
+            0,
+            3
+          ],
+          [
+            0,
+            5
+          ],
+          [
+            1,
+            2
+          ],
+          [
+            1,
+            4
+          ],
+          [
+            2,
+            4
+          ],
+          [
+            2,
+            5
+          ],
+          [
+            3,
+            4
+          ],
+          [
+            3,
+            5
+          ]
+        ],
+        "degrees": [
+          3,
+          3,
+          3,
+          3,
+          3,
+          3
+        ],
+        "P": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5
+        ],
+        "N": [],
+        "t_upper": 1,
+        "selected_lower_bounds": [
+          1,
+          1,
+          2,
+          2,
+          2,
+          2
+        ]
+      }
+    ],
+    "scope": "Exact quotient under permutations preserving residual masses R."
+  },
+  "(2, 1, 1, 1, 1, 1, 1)": {
+    "support": 7,
+    "colour_preserving_permutations": 720,
+    "strict_survivors_labelled": 10505,
+    "strict_survivor_orbits": 31,
+    "orbit_representatives": [
+      {
+        "mask": 40463,
+        "edges": [
+          [
+            0,
+            1
+          ],
+          [
+            0,
+            2
+          ],
+          [
+            0,
+            3
+          ],
+          [
+            0,
+            4
+          ],
+          [
+            1,
+            5
+          ],
+          [
+            1,
+            6
+          ],
+          [
+            2,
+            3
+          ],
+          [
+            2,
+            4
+          ],
+          [
+            3,
+            4
+          ]
+        ],
+        "degrees": [
+          4,
+          3,
+          3,
+          3,
+          3,
+          1,
+          1
+        ],
+        "P": [
+          0,
+          1,
+          2,
+          3,
+          4
+        ],
+        "N": [
+          5,
+          6
+        ],
+        "t_upper": 1,
+        "selected_lower_bounds": [
+          2,
+          2,
+          2,
+          2,
+          2,
+          0,
+          0
+        ]
+      },
+      {
+        "mask": 40471,
+        "edges": [
+          [
+            0,
+            1
+          ],
+          [
+            0,
+            2
+          ],
+          [
+            0,
+            3
+          ],
+          [
+            0,
+            5
+          ],
+          [
+            1,
+            5
+          ],
+          [
+            1,
+            6
+          ],
+          [
+            2,
+            3
+          ],
+          [
+            2,
+            4
+          ],
+          [
+            3,
+            4
+          ]
+        ],
+        "degrees": [
+          4,
+          3,
+          3,
+          3,
+          2,
+          2,
+          1
+        ],
+        "P": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5
+        ],
+        "N": [
+          6
+        ],
+        "t_upper": 1,
+        "selected_lower_bounds": [
+          2,
+          2,
+          2,
+          2,
+          1,
+          1,
+          0
+        ]
+      },
+      {
+        "mask": 40478,
+        "edges": [
+          [
+            0,
+            2
+          ],
+          [
+            0,
+            3
+          ],
+          [
+            0,
+            4
+          ],
+          [
+            0,
+            5
+          ],
+          [
+            1,
+            5
+          ],
+          [
+            1,
+            6
+          ],
+          [
+            2,
+            3
+          ],
+          [
+            2,
+            4
+          ],
+          [
+            3,
+            4
+          ]
+        ],
+        "degrees": [
+          4,
+          2,
+          3,
+          3,
+          3,
+          2,
+          1
+        ],
+        "P": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5
+        ],
+        "N": [
+          6
+        ],
+        "t_upper": 1,
+        "selected_lower_bounds": [
+          2,
+          1,
+          2,
+          2,
+          2,
+          1,
+          0
+        ]
+      },
+      {
+        "mask": 40499,
+        "edges": [
+          [
+            0,
+            1
+          ],
+          [
+            0,
+            2
+          ],
+          [
+            0,
+            5
+          ],
+          [
+            0,
+            6
+          ],
+          [
+            1,
+            5
+          ],
+          [
+            1,
+            6
+          ],
+          [
+            2,
+            3
+          ],
+          [
+            2,
+            4
+          ],
+          [
+            3,
+            4
+          ]
+        ],
+        "degrees": [
+          4,
+          3,
+          3,
+          2,
+          2,
+          2,
+          2
+        ],
+        "P": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5,
+          6
+        ],
+        "N": [],
+        "t_upper": 1,
+        "selected_lower_bounds": [
+          2,
+          2,
+          2,
+          1,
+          1,
+          1,
+          1
+        ]
+      },
+      {
+        "mask": 40502,
+        "edges": [
+          [
+            0,
+            2
+          ],
+          [
+            0,
+            3
+          ],
+          [
+            0,
+            5
+          ],
+          [
+            0,
+            6
+          ],
+          [
+            1,
+            5
+          ],
+          [
+            1,
+            6
+          ],
+          [
+            2,
+            3
+          ],
+          [
+            2,
+            4
+          ],
+          [
+            3,
+            4
+          ]
+        ],
+        "degrees": [
+          4,
+          2,
+          3,
+          3,
+          2,
+          2,
+          2
+        ],
+        "P": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5,
+          6
+        ],
+        "N": [],
+        "t_upper": 1,
+        "selected_lower_bounds": [
+          2,
+          1,
+          2,
+          2,
+          1,
+          1,
+          1
+        ]
+      },
+      {
+        "mask": 43791,
+        "edges": [
+          [
+            0,
+            1
+          ],
+          [
+            0,
+            2
+          ],
+          [
+            0,
+            3
+          ],
+          [
+            0,
+            4
+          ],
+          [
+            1,
+            4
+          ],
+          [
+            1,
+            5
+          ],
+          [
+            2,
+            3
+          ],
+          [
+            2,
+            5
+          ],
+          [
+            3,
+            4
+          ]
+        ],
+        "degrees": [
+          4,
+          3,
+          3,
+          3,
+          3,
+          2,
+          0
+        ],
+        "P": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5
+        ],
+        "N": [
+          6
+        ],
+        "t_upper": 1,
+        "selected_lower_bounds": [
+          2,
+          2,
+          2,
+          2,
+          2,
+          1,
+          0
+        ]
+      },
+      {
+        "mask": 43815,
+        "edges": [
+          [
+            0,
+            1
+          ],
+          [
+            0,
+            2
+          ],
+          [
+            0,
+            3
+          ],
+          [
+            0,
+            6
+          ],
+          [
+            1,
+            4
+          ],
+          [
+            1,
+            5
+          ],
+          [
+            2,
+            3
+          ],
+          [
+            2,
+            5
+          ],
+          [
+            3,
+            4
+          ]
+        ],
+        "degrees": [
+          4,
+          3,
+          3,
+          3,
+          2,
+          2,
+          1
+        ],
+        "P": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5
+        ],
+        "N": [
+          6
+        ],
+        "t_upper": 1,
+        "selected_lower_bounds": [
+          2,
+          2,
+          2,
+          2,
+          1,
+          1,
+          0
+        ]
+      },
+      {
+        "mask": 43821,
+        "edges": [
+          [
+            0,
+            1
+          ],
+          [
+            0,
+            3
+          ],
+          [
+            0,
+            4
+          ],
+          [
+            0,
+            6
+          ],
+          [
+            1,
+            4
+          ],
+          [
+            1,
+            5
+          ],
+          [
+            2,
+            3
+          ],
+          [
+            2,
+            5
+          ],
+          [
+            3,
+            4
+          ]
+        ],
+        "degrees": [
+          4,
+          3,
+          2,
+          3,
+          3,
+          2,
+          1
+        ],
+        "P": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5
+        ],
+        "N": [
+          6
+        ],
+        "t_upper": 1,
+        "selected_lower_bounds": [
+          2,
+          2,
+          1,
+          2,
+          2,
+          1,
+          0
+        ]
+      },
+      {
+        "mask": 44303,
+        "edges": [
+          [
+            0,
+            1
+          ],
+          [
+            0,
+            2
+          ],
+          [
+            0,
+            3
+          ],
+          [
+            0,
+            4
+          ],
+          [
+            1,
+            4
+          ],
+          [
+            1,
+            6
+          ],
+          [
+            2,
+            3
+          ],
+          [
+            2,
+            5
+          ],
+          [
+            3,
+            4
+          ]
+        ],
+        "degrees": [
+          4,
+          3,
+          3,
+          3,
+          3,
+          1,
+          1
+        ],
+        "P": [
+          0,
+          1,
+          2,
+          3,
+          4
+        ],
+        "N": [
+          5,
+          6
+        ],
+        "t_upper": 1,
+        "selected_lower_bounds": [
+          2,
+          2,
+          2,
+          2,
+          2,
+          0,
+          0
+        ]
+      },
+      {
+        "mask": 44311,
+        "edges": [
+          [
+            0,
+            1
+          ],
+          [
+            0,
+            2
+          ],
+          [
+            0,
+            3
+          ],
+          [
+            0,
+            5
+          ],
+          [
+            1,
+            4
+          ],
+          [
+            1,
+            6
+          ],
+          [
+            2,
+            3
+          ],
+          [
+            2,
+            5
+          ],
+          [
+            3,
+            4
+          ]
+        ],
+        "degrees": [
+          4,
+          3,
+          3,
+          3,
+          2,
+          2,
+          1
+        ],
+        "P": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5
+        ],
+        "N": [
+          6
+        ],
+        "t_upper": 1,
+        "selected_lower_bounds": [
+          2,
+          2,
+          2,
+          2,
+          1,
+          1,
+          0
+        ]
+      },
+      {
+        "mask": 44315,
+        "edges": [
+          [
+            0,
+            1
+          ],
+          [
+            0,
+            2
+          ],
+          [
+            0,
+            4
+          ],
+          [
+            0,
+            5
+          ],
+          [
+            1,
+            4
+          ],
+          [
+            1,
+            6
+          ],
+          [
+            2,
+            3
+          ],
+          [
+            2,
+            5
+          ],
+          [
+            3,
+            4
+          ]
+        ],
+        "degrees": [
+          4,
+          3,
+          3,
+          2,
+          3,
+          2,
+          1
+        ],
+        "P": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5
+        ],
+        "N": [
+          6
+        ],
+        "t_upper": 1,
+        "selected_lower_bounds": [
+          2,
+          2,
+          2,
+          1,
+          2,
+          1,
+          0
+        ]
+      },
+      {
+        "mask": 44317,
+        "edges": [
+          [
+            0,
+            1
+          ],
+          [
+            0,
+            3
+          ],
+          [
+            0,
+            4
+          ],
+          [
+            0,
+            5
+          ],
+          [
+            1,
+            4
+          ],
+          [
+            1,
+            6
+          ],
+          [
+            2,
+            3
+          ],
+          [
+            2,
+            5
+          ],
+          [
+            3,
+            4
+          ]
+        ],
+        "degrees": [
+          4,
+          3,
+          2,
+          3,
+          3,
+          2,
+          1
+        ],
+        "P": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5
+        ],
+        "N": [
+          6
+        ],
+        "t_upper": 1,
+        "selected_lower_bounds": [
+          2,
+          2,
+          1,
+          2,
+          2,
+          1,
+          0
+        ]
+      },
+      {
+        "mask": 44318,
+        "edges": [
+          [
+            0,
+            2
+          ],
+          [
+            0,
+            3
+          ],
+          [
+            0,
+            4
+          ],
+          [
+            0,
+            5
+          ],
+          [
+            1,
+            4
+          ],
+          [
+            1,
+            6
+          ],
+          [
+            2,
+            3
+          ],
+          [
+            2,
+            5
+          ],
+          [
+            3,
+            4
+          ]
+        ],
+        "degrees": [
+          4,
+          2,
+          3,
+          3,
+          3,
+          2,
+          1
+        ],
+        "P": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5
+        ],
+        "N": [
+          6
+        ],
+        "t_upper": 1,
+        "selected_lower_bounds": [
+          2,
+          1,
+          2,
+          2,
+          2,
+          1,
+          0
+        ]
+      },
+      {
+        "mask": 44339,
+        "edges": [
+          [
+            0,
+            1
+          ],
+          [
+            0,
+            2
+          ],
+          [
+            0,
+            5
+          ],
+          [
+            0,
+            6
+          ],
+          [
+            1,
+            4
+          ],
+          [
+            1,
+            6
+          ],
+          [
+            2,
+            3
+          ],
+          [
+            2,
+            5
+          ],
+          [
+            3,
+            4
+          ]
+        ],
+        "degrees": [
+          4,
+          3,
+          3,
+          2,
+          2,
+          2,
+          2
+        ],
+        "P": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5,
+          6
+        ],
+        "N": [],
+        "t_upper": 1,
+        "selected_lower_bounds": [
+          2,
+          2,
+          2,
+          1,
+          1,
+          1,
+          1
+        ]
+      },
+      {
+        "mask": 44341,
+        "edges": [
+          [
+            0,
+            1
+          ],
+          [
+            0,
+            3
+          ],
+          [
+            0,
+            5
+          ],
+          [
+            0,
+            6
+          ],
+          [
+            1,
+            4
+          ],
+          [
+            1,
+            6
+          ],
+          [
+            2,
+            3
+          ],
+          [
+            2,
+            5
+          ],
+          [
+            3,
+            4
+          ]
+        ],
+        "degrees": [
+          4,
+          3,
+          2,
+          3,
+          2,
+          2,
+          2
+        ],
+        "P": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5,
+          6
+        ],
+        "N": [],
+        "t_upper": 1,
+        "selected_lower_bounds": [
+          2,
+          2,
+          1,
+          2,
+          1,
+          1,
+          1
+        ]
+      },
+      {
+        "mask": 44342,
+        "edges": [
+          [
+            0,
+            2
+          ],
+          [
+            0,
+            3
+          ],
+          [
+            0,
+            5
+          ],
+          [
+            0,
+            6
+          ],
+          [
+            1,
+            4
+          ],
+          [
+            1,
+            6
+          ],
+          [
+            2,
+            3
+          ],
+          [
+            2,
+            5
+          ],
+          [
+            3,
+            4
+          ]
+        ],
+        "degrees": [
+          4,
+          2,
+          3,
+          3,
+          2,
+          2,
+          2
+        ],
+        "P": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5,
+          6
+        ],
+        "N": [],
+        "t_upper": 1,
+        "selected_lower_bounds": [
+          2,
+          1,
+          2,
+          2,
+          1,
+          1,
+          1
+        ]
+      },
+      {
+        "mask": 44348,
+        "edges": [
+          [
+            0,
+            3
+          ],
+          [
+            0,
+            4
+          ],
+          [
+            0,
+            5
+          ],
+          [
+            0,
+            6
+          ],
+          [
+            1,
+            4
+          ],
+          [
+            1,
+            6
+          ],
+          [
+            2,
+            3
+          ],
+          [
+            2,
+            5
+          ],
+          [
+            3,
+            4
+          ]
+        ],
+        "degrees": [
+          4,
+          2,
+          2,
+          3,
+          3,
+          2,
+          2
+        ],
+        "P": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5,
+          6
+        ],
+        "N": [],
+        "t_upper": 1,
+        "selected_lower_bounds": [
+          2,
+          1,
+          1,
+          2,
+          2,
+          1,
+          1
+        ]
+      },
+      {
+        "mask": 58895,
+        "edges": [
+          [
+            0,
+            1
+          ],
+          [
+            0,
+            2
+          ],
+          [
+            0,
+            3
+          ],
+          [
+            0,
+            4
+          ],
+          [
+            1,
+            5
+          ],
+          [
+            1,
+            6
+          ],
+          [
+            2,
+            5
+          ],
+          [
+            2,
+            6
+          ],
+          [
+            3,
+            4
+          ]
+        ],
+        "degrees": [
+          4,
+          3,
+          3,
+          2,
+          2,
+          2,
+          2
+        ],
+        "P": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5,
+          6
+        ],
+        "N": [],
+        "t_upper": 1,
+        "selected_lower_bounds": [
+          2,
+          2,
+          2,
+          1,
+          1,
+          1,
+          1
+        ]
+      },
+      {
+        "mask": 58903,
+        "edges": [
+          [
+            0,
+            1
+          ],
+          [
+            0,
+            2
+          ],
+          [
+            0,
+            3
+          ],
+          [
+            0,
+            5
+          ],
+          [
+            1,
+            5
+          ],
+          [
+            1,
+            6
+          ],
+          [
+            2,
+            5
+          ],
+          [
+            2,
+            6
+          ],
+          [
+            3,
+            4
+          ]
+        ],
+        "degrees": [
+          4,
+          3,
+          3,
+          2,
+          1,
+          3,
+          2
+        ],
+        "P": [
+          0,
+          1,
+          2,
+          3,
+          5,
+          6
+        ],
+        "N": [
+          4
+        ],
+        "t_upper": 1,
+        "selected_lower_bounds": [
+          2,
+          2,
+          2,
+          1,
+          0,
+          2,
+          1
+        ]
+      },
+      {
+        "mask": 58909,
+        "edges": [
+          [
+            0,
+            1
+          ],
+          [
+            0,
+            3
+          ],
+          [
+            0,
+            4
+          ],
+          [
+            0,
+            5
+          ],
+          [
+            1,
+            5
+          ],
+          [
+            1,
+            6
+          ],
+          [
+            2,
+            5
+          ],
+          [
+            2,
+            6
+          ],
+          [
+            3,
+            4
+          ]
+        ],
+        "degrees": [
+          4,
+          3,
+          2,
+          2,
+          2,
+          3,
+          2
+        ],
+        "P": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5,
+          6
+        ],
+        "N": [],
+        "t_upper": 1,
+        "selected_lower_bounds": [
+          2,
+          2,
+          1,
+          1,
+          1,
+          2,
+          1
+        ]
+      },
+      {
+        "mask": 58931,
+        "edges": [
+          [
+            0,
+            1
+          ],
+          [
+            0,
+            2
+          ],
+          [
+            0,
+            5
+          ],
+          [
+            0,
+            6
+          ],
+          [
+            1,
+            5
+          ],
+          [
+            1,
+            6
+          ],
+          [
+            2,
+            5
+          ],
+          [
+            2,
+            6
+          ],
+          [
+            3,
+            4
+          ]
+        ],
+        "degrees": [
+          4,
+          3,
+          3,
+          1,
+          1,
+          3,
+          3
+        ],
+        "P": [
+          0,
+          1,
+          2,
+          5,
+          6
+        ],
+        "N": [
+          3,
+          4
+        ],
+        "t_upper": 1,
+        "selected_lower_bounds": [
+          2,
+          2,
+          2,
+          0,
+          0,
+          2,
+          2
+        ]
+      },
+      {
+        "mask": 120327,
+        "edges": [
+          [
+            0,
+            1
+          ],
+          [
+            0,
+            2
+          ],
+          [
+            0,
+            3
+          ],
+          [
+            1,
+            5
+          ],
+          [
+            1,
+            6
+          ],
+          [
+            2,
+            4
+          ],
+          [
+            2,
+            6
+          ],
+          [
+            3,
+            4
+          ],
+          [
+            3,
+            5
+          ]
+        ],
+        "degrees": [
+          3,
+          3,
+          3,
+          3,
+          2,
+          2,
+          2
+        ],
+        "P": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5,
+          6
+        ],
+        "N": [],
+        "t_upper": 1,
+        "selected_lower_bounds": [
+          1,
+          2,
+          2,
+          2,
+          1,
+          1,
+          1
+        ]
+      },
+      {
+        "mask": 120331,
+        "edges": [
+          [
+            0,
+            1
+          ],
+          [
+            0,
+            2
+          ],
+          [
+            0,
+            4
+          ],
+          [
+            1,
+            5
+          ],
+          [
+            1,
+            6
+          ],
+          [
+            2,
+            4
+          ],
+          [
+            2,
+            6
+          ],
+          [
+            3,
+            4
+          ],
+          [
+            3,
+            5
+          ]
+        ],
+        "degrees": [
+          3,
+          3,
+          3,
+          2,
+          3,
+          2,
+          2
+        ],
+        "P": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5,
+          6
+        ],
+        "N": [],
+        "t_upper": 1,
+        "selected_lower_bounds": [
+          1,
+          2,
+          2,
+          1,
+          2,
+          1,
+          1
+        ]
+      },
+      {
+        "mask": 120334,
+        "edges": [
+          [
+            0,
+            2
+          ],
+          [
+            0,
+            3
+          ],
+          [
+            0,
+            4
+          ],
+          [
+            1,
+            5
+          ],
+          [
+            1,
+            6
+          ],
+          [
+            2,
+            4
+          ],
+          [
+            2,
+            6
+          ],
+          [
+            3,
+            4
+          ],
+          [
+            3,
+            5
+          ]
+        ],
+        "degrees": [
+          3,
+          2,
+          3,
+          3,
+          3,
+          2,
+          2
+        ],
+        "P": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5,
+          6
+        ],
+        "N": [],
+        "t_upper": 1,
+        "selected_lower_bounds": [
+          1,
+          1,
+          2,
+          2,
+          2,
+          1,
+          1
+        ]
+      },
+      {
+        "mask": 120335,
+        "edges": [
+          [
+            0,
+            1
+          ],
+          [
+            0,
+            2
+          ],
+          [
+            0,
+            3
+          ],
+          [
+            0,
+            4
+          ],
+          [
+            1,
+            5
+          ],
+          [
+            1,
+            6
+          ],
+          [
+            2,
+            4
+          ],
+          [
+            2,
+            6
+          ],
+          [
+            3,
+            4
+          ],
+          [
+            3,
+            5
+          ]
+        ],
+        "degrees": [
+          4,
+          3,
+          3,
+          3,
+          3,
+          2,
+          2
+        ],
+        "P": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5,
+          6
+        ],
+        "N": [],
+        "t_upper": 2,
+        "selected_lower_bounds": [
+          2,
+          2,
+          2,
+          2,
+          2,
+          1,
+          1
+        ]
+      },
+      {
+        "mask": 120347,
+        "edges": [
+          [
+            0,
+            1
+          ],
+          [
+            0,
+            2
+          ],
+          [
+            0,
+            4
+          ],
+          [
+            0,
+            5
+          ],
+          [
+            1,
+            5
+          ],
+          [
+            1,
+            6
+          ],
+          [
+            2,
+            4
+          ],
+          [
+            2,
+            6
+          ],
+          [
+            3,
+            4
+          ],
+          [
+            3,
+            5
+          ]
+        ],
+        "degrees": [
+          4,
+          3,
+          3,
+          2,
+          3,
+          3,
+          2
+        ],
+        "P": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5,
+          6
+        ],
+        "N": [],
+        "t_upper": 2,
+        "selected_lower_bounds": [
+          2,
+          2,
+          2,
+          1,
+          2,
+          2,
+          1
+        ]
+      },
+      {
+        "mask": 120349,
+        "edges": [
+          [
+            0,
+            1
+          ],
+          [
+            0,
+            3
+          ],
+          [
+            0,
+            4
+          ],
+          [
+            0,
+            5
+          ],
+          [
+            1,
+            5
+          ],
+          [
+            1,
+            6
+          ],
+          [
+            2,
+            4
+          ],
+          [
+            2,
+            6
+          ],
+          [
+            3,
+            4
+          ],
+          [
+            3,
+            5
+          ]
+        ],
+        "degrees": [
+          4,
+          3,
+          2,
+          3,
+          3,
+          3,
+          2
+        ],
+        "P": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5,
+          6
+        ],
+        "N": [],
+        "t_upper": 2,
+        "selected_lower_bounds": [
+          2,
+          2,
+          1,
+          2,
+          2,
+          2,
+          1
+        ]
+      },
+      {
+        "mask": 377927,
+        "edges": [
+          [
+            0,
+            1
+          ],
+          [
+            0,
+            2
+          ],
+          [
+            0,
+            3
+          ],
+          [
+            1,
+            2
+          ],
+          [
+            1,
+            6
+          ],
+          [
+            2,
+            6
+          ],
+          [
+            3,
+            4
+          ],
+          [
+            3,
+            5
+          ],
+          [
+            4,
+            5
+          ]
+        ],
+        "degrees": [
+          3,
+          3,
+          3,
+          3,
+          2,
+          2,
+          2
+        ],
+        "P": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5,
+          6
+        ],
+        "N": [],
+        "t_upper": 1,
+        "selected_lower_bounds": [
+          1,
+          2,
+          2,
+          2,
+          1,
+          1,
+          1
+        ]
+      },
+      {
+        "mask": 377935,
+        "edges": [
+          [
+            0,
+            1
+          ],
+          [
+            0,
+            2
+          ],
+          [
+            0,
+            3
+          ],
+          [
+            0,
+            4
+          ],
+          [
+            1,
+            2
+          ],
+          [
+            1,
+            6
+          ],
+          [
+            2,
+            6
+          ],
+          [
+            3,
+            4
+          ],
+          [
+            3,
+            5
+          ],
+          [
+            4,
+            5
+          ]
+        ],
+        "degrees": [
+          4,
+          3,
+          3,
+          3,
+          3,
+          2,
+          2
+        ],
+        "P": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5,
+          6
+        ],
+        "N": [],
+        "t_upper": 2,
+        "selected_lower_bounds": [
+          2,
+          2,
+          2,
+          2,
+          2,
+          1,
+          1
+        ]
+      },
+      {
+        "mask": 377948,
+        "edges": [
+          [
+            0,
+            3
+          ],
+          [
+            0,
+            4
+          ],
+          [
+            0,
+            5
+          ],
+          [
+            1,
+            2
+          ],
+          [
+            1,
+            6
+          ],
+          [
+            2,
+            6
+          ],
+          [
+            3,
+            4
+          ],
+          [
+            3,
+            5
+          ],
+          [
+            4,
+            5
+          ]
+        ],
+        "degrees": [
+          3,
+          2,
+          2,
+          3,
+          3,
+          3,
+          2
+        ],
+        "P": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5,
+          6
+        ],
+        "N": [],
+        "t_upper": 1,
+        "selected_lower_bounds": [
+          1,
+          1,
+          1,
+          2,
+          2,
+          2,
+          1
+        ]
+      },
+      {
+        "mask": 377949,
+        "edges": [
+          [
+            0,
+            1
+          ],
+          [
+            0,
+            3
+          ],
+          [
+            0,
+            4
+          ],
+          [
+            0,
+            5
+          ],
+          [
+            1,
+            2
+          ],
+          [
+            1,
+            6
+          ],
+          [
+            2,
+            6
+          ],
+          [
+            3,
+            4
+          ],
+          [
+            3,
+            5
+          ],
+          [
+            4,
+            5
+          ]
+        ],
+        "degrees": [
+          4,
+          3,
+          2,
+          3,
+          3,
+          3,
+          2
+        ],
+        "P": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5,
+          6
+        ],
+        "N": [],
+        "t_upper": 2,
+        "selected_lower_bounds": [
+          2,
+          2,
+          1,
+          2,
+          2,
+          2,
+          1
+        ]
+      }
+    ],
+    "scope": "Exact quotient under permutations preserving residual masses R."
+  },
+  "(1, 1, 1, 1, 1, 1, 1, 1)": {
+    "support": 8,
+    "colour_preserving_permutations": 40320,
+    "strict_survivors_labelled": 0,
+    "strict_survivor_orbits": 0,
+    "orbit_representatives": [],
+    "scope": "Exact quotient under permutations preserving residual masses R."
+  }
+}
