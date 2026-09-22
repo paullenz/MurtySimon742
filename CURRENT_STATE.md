@@ -5,11 +5,11 @@ Canonical repository: `paullenz/MurtySimon742`. Date: 22 September 2026.
 Active target: a genuinely independent proof of Erdős #742 / the Murty–Simon inequality e(G)<=floor(n^2/4), preferably with the equality characterization. Forward priority is the project’s own complement / residual / Hall / profile / realizability route, not a reconstruction of the external e+disj+X proof. The first focused session produced the internally checked candidate threshold `Delta>=250n/429`, shrinking the live strip to `n/2<Delta<250n/429`. The theorem and its inherited graph-to-profile spine remain candidate/internal-review mathematics. A 24-focused-session go/no-go gate applies. Prior eventual-D2C work remains preserved but is no longer the active forward objective.
 
 <!-- CURRENT-STATUS:START -->
-CHECKPOINT CLASS: SESSION_FINALIZED
+CHECKPOINT CLASS: ADMIN_CONFIGURATION_PREPARED_NOT_ACTIVATED
 
-WORK MODE: SESSION_FINALIZED
+WORK MODE: ADMIN
 
-INSPECTED PREDECESSOR: 7e251bd20dc49f0a416dd147a09a9fa7372427b9.
+INSPECTED PREDECESSOR: 3728f8ae7cd12d83efd85220ad121d04bb4199bb.
 
 LAST VERIFIED RESULT: The complete support-ten partition (2,2,1^8) source screen is exact: 42 of 6,386 strict kernels are source-feasible, 6,344 are source-infeasible, and none is solver-unknown. The supplement identity adapter is repaired, but its 42-kernel solve was interrupted at cutoff without a result. Thus r=12 remains internally closed through support nine plus support-ten partition (3,1^9); the (2,2,1^8) supplement screen remains open.
 
@@ -18,6 +18,10 @@ EVIDENCE: source shards 0-7 and repaired supplement wrapper under project/resear
 SESSION UTILISATION: Trigger 22:00:38 BST; authoritative entry 22:00:33; verified intervals [22:03:39,22:08:20], [22:09:27,22:13:48], [22:14:49,22:19:11], [22:20:07,22:24:05], [22:25:06,22:29:45], [22:30:38,22:35:06], [22:36:00,22:40:33]; verified total 1862s (31m02s); nine substantive units; forward stop/preservation start 22:52:27; cutoff 22:53:38; preservation complete 22:53:39; 50-minute target applicable and NOT MET; SHORT/NONCOMPLIANT.
 
 UNPRESERVED WORK: None.
+
+DEFERRED ADMIN: Activate and verify the prepared standalone research cutover; first three post-cutover launches remain unverified.
+
+OPERATIONAL CHANGE: Mathematical state unchanged. Prepared standalone research from 23 September 01:00:38 BST with a prospective 40-minute target and separate launch accounting. Existing end date and audit remain. See project/research/session_logs/2026-09-22/LAUNCH_RELIABILITY_REPAIR.md.
 
 NEXT ACTION: Resume the repaired exact supplement screen on the 42 source-feasible support-ten kernels; then close/classify support eleven.
 

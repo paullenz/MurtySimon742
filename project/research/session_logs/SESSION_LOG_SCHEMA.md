@@ -1,5 +1,15 @@
 # Forward-research session telemetry schema
 
+## Prospective launch-first policy (23 September 2026 01:00:38 BST)
+
+The user prioritizes reliable scheduled starts over a 50-minute minimum. For triggers from the effective timestamp onward, use a 40-minute research target. Sessions before it retain the policy and classifications in force at the time; never rewrite their timestamps or credits.
+
+Report three distinct quantities: (1) scheduled sessions with any durable substantive research (RAN), (2) sessions meeting the applicable duration target, and (3) focused sessions credited toward the mathematical go/no-go gate. RAN is not conditional on meeting the duration target. Audit/manual/admin runs are separate. A post-cutover focused research session with a complete evidenced record and at least 40 verified minutes may qualify for the existing gate; the mathematical gate criteria and end date are unchanged.
+
+Use `research_target_minutes: 40`, `target_40m_applies` and `target_40m_met` in new records. Historical `target_50m_*` fields are retained and interpreted under the old policy; their absence is not an error in a new 40-minute record. Record `launch_status`, observed `started_record_published_at`, and first substantive checkpoint time where evidenced. Aim for durable STARTED by trigger+5 minutes and the first substantive checkpoint within ten minutes of actual entry. Missing boundaries remain UNVERIFIED.
+
+All canonical identities, preservation rules, no-overlap deadlines and historical truthfulness requirements below continue to apply.
+
 Effective prospectively from 22 September 2026. This is a process/audit contract, not mathematical evidence.
 
 ## Core accounting rule: one scheduled trigger = one session
@@ -41,8 +51,9 @@ Each canonical record must contain at minimum:
 - `early_stop_check_time`
 - `early_stop_check_result`
 - `stop_reason`
-- `target_50m_applies`: YES / NO / UNVERIFIED
-- `target_50m_met`: YES / NO / N/A / UNVERIFIED
+- `research_target_minutes`: 40 for post-cutover sessions
+- `target_40m_applies`: YES / NO / UNVERIFIED (historical pre-cutover records use `target_50m_applies`)
+- `target_40m_met`: YES / NO / N/A / UNVERIFIED (historical pre-cutover records use `target_50m_met`)
 - `compliance_status`
 - `infrastructure_failures`
 - `commit_shas`
@@ -100,20 +111,23 @@ Every period claimed as forward research must be represented by an evidenced clo
 
 The canonical verified forward-research span is the union of the closed non-overlapping intervals only.
 
-## 50-minute target
+## Versioned research-duration target
 
-If at least 50 minutes were genuinely available from the earliest actual session start to the research cutoff, the >=50-minute target applies.
+For scheduled triggers before 23 September 2026 01:00:38 BST, retain the original 50-minute target and evidence. From that trigger onward, target 40 verified minutes whenever at least 40 minutes are available between earliest actual start and research cutoff. A late start with less available time is target N/A, with its lateness and actual useful work still reported.
 
-- At least 50 **verified** minutes of forward research are required.
-- Less than 50 verified minutes is NONCOMPLIANT unless all reasonable mathematical, audit, repair, regression, hostile-example, derivation, and checker avenues were genuinely blocked by unavailable information/capability.
-- Completing a theorem, reaching a clean checkpoint, context compaction, tool failure, GitHub write, or report readiness is not by itself an exception.
-- If fewer than 50 minutes were available from earliest actual start to research cutoff because the first invocation was late, mark target applicability N/A and preserve the lateness.
+Once the applicable target is met, preserve at a natural checkpoint and finish cleanly. Do not chase extra minutes at the expense of the next launch. If below target with useful work available and more than five minutes before cutoff, continue. A failed proof or tool calls for a bounded mathematical pivot where possible.
+
+A short session with durable substantive work is RAN / SHORT, not MISSED. Missing launch evidence and no-research deliveries are separate failures. Do not manufacture duration or waive the mathematical trust gates to improve a metric.
+
+Prospectively observe timestamps before actual derivation, coding, testing or mathematical review, and at their ends. Such research is not limited to solver runtime. Exclude administration, idle time, checkpoint writes and unobserved gaps. No historical thought time may be reconstructed from these instructions.
 
 ## Early-stop check
 
-Before beginning final preservation, obtain a fresh timestamp.
+Before final preservation obtain a fresh timestamp and record the decision.
 
-If more than 5 minutes remain before research cutoff and any sensible next mathematical/audit step exists, continue forward research. Record the check and result.
+- If 40 verified minutes have been reached in a post-cutover session, finish at a natural checkpoint and preserve.
+- If below the applicable target, more than five minutes remain before cutoff, and useful mathematical work exists, continue.
+- In every case obey research cutoff and hard close; never consume the next trigger.
 
 ## No-lost-hour rule
 

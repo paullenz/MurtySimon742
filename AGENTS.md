@@ -1,5 +1,17 @@
 # Research-agent standing orders
 
+## Launch reliability priority — effective 23 September 2026 01:00:38 BST
+
+User correction on 22 September: "Missed starts is more important. 24 sessions of 40 mins is better than 10 of 50."
+
+- Prioritize all 23 scheduled research starts plus the separate midnight audit. A session with durable substantive work counts as RAN even when short; report launch coverage separately from duration compliance and the focused-session gate.
+- Prospectively target 40 verified research minutes, not 50. At 40 minutes, finish at a natural checkpoint and preserve before the existing deadlines; do not extend a run to chase 50 or consume the next trigger. Historical records/credits are unchanged.
+- Use the standalone research task `6aab2d04da4c81919448e011b1b46cf8` with the fully replaced independent-#742 prompt. Its old eventual-D2C purpose is retired. The old same-chat research `6ab23822ccfc819180460a39e879b68a` and health checker stay paused after cutover.
+- Start from this repository, not old conversation context. Obtain actual time, read CURRENT_STATE first, then the policy/schema and needed mathematical inputs. Aim for a remotely verified STARTED record by scheduled trigger + five minutes and a substantive checkpoint within ten minutes of actual entry.
+- Preserve the seven-minute research cutoff and one-minute hard-close buffer, immediate per-unit checkpoints, and all mathematical trust boundaries below. A missed launch or late entry remains visible; no inferred work, catch-up bursts or duplicate writers.
+- The audit must test the first three post-cutover launches and report actual coverage. Saved settings do not establish scheduler recovery. Original end date: 27 September 2026.
+- See `project/research/session_logs/2026-09-22/LAUNCH_RELIABILITY_REPAIR.md` and the versioned telemetry rules. This prospective user-directed policy overrides earlier 50-minute wording for post-cutover sessions only.
+
 Canonical repository: `paullenz/MurtySimon742` (ID 1359206057).
 
 ## Mandatory first action and durable live handoff
