@@ -1,0 +1,49 @@
+{
+  "schema_version": "1.0",
+  "session_id": "2026-09-22T18:00:38+01:00",
+  "scheduled_trigger": "2026-09-22T18:00:38+01:00",
+  "trigger_attribution": {
+    "status": "VERIFIED_FROM_CURRENT_INVOCATION_METADATA",
+    "method": "Current automation task identity, supplied Europe/London schedule, and runtime metadata uniquely identify the 18:00:38 BST trigger.",
+    "immutable_run_id_available": false
+  },
+  "earliest_actual_start": "2026-09-22T18:04:09+01:00",
+  "next_trigger": "2026-09-22T19:00:38+01:00",
+  "research_cutoff": "2026-09-22T18:53:38+01:00",
+  "hard_close_deadline": "2026-09-22T18:59:38+01:00",
+  "lateness_seconds": 211,
+  "segments": [
+    {
+      "segment_id": "segment-1",
+      "actual_start": "2026-09-22T18:04:09+01:00",
+      "actual_stop": "PENDING",
+      "role": "forward_research",
+      "notes": "Initial invocation; mandatory source reads completed; durable STARTED checkpoint before mathematics."
+    }
+  ],
+  "forward_research_intervals": [],
+  "verified_forward_span_seconds": 0,
+  "forward_stop": "PENDING",
+  "preservation_start": "PENDING",
+  "preservation_complete": "PENDING",
+  "wall_clock_span_seconds": "PENDING",
+  "substantive_unit_count": 0,
+  "substantive_unit_ledger": [],
+  "early_stop_check": {
+    "time": "PENDING",
+    "result": "PENDING"
+  },
+  "stop_reason": "PENDING",
+  "failures_and_pivots": [],
+  "commit_shas": [
+    "329e7bb6bc00254835cda847b40dac26a1fff6f5"
+  ],
+  "unfinished_line": "Independently replay r=11 closure; then open r=12 frontier; equality extension remains separate.",
+  "target": {
+    "applicable": false,
+    "available_seconds": 2969,
+    "required_seconds": 3000,
+    "result": "N/A_LATE_START"
+  },
+  "compliance_status": "STARTED_LIVE"
+}

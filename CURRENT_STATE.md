@@ -7,25 +7,25 @@ Active target: a genuinely independent proof of Erdős #742 / the Murty–Simon 
 <!-- CURRENT-STATUS:START -->
 CHECKPOINT CLASS: VERIFIED_INTERNAL_NOT_PROMOTED
 
-WORK MODE: PRESERVATION_COMPLETE
+WORK MODE: FORWARD_RESEARCH_LIVE
 
-INSPECTED PREDECESSOR: a80d3f3836552653c762cb78b847983d6246dc7e.
+INSPECTED PREDECESSOR: 329e7bb6bc00254835cda847b40dac26a1fff6f5.
 
-LAST VERIFIED RESULT: Every r=11 residual partition is internally closed under the quotient/source/supplement pipeline. This session closed supports 8, 9, and 10; support ten reduced to 280 strict cores, then 3 source-feasible kernels, all exhaustively rejected by the one-supplement condition. The internal computer-assisted edge bound now covers residual demand S<=13. Equality remains characterized only through S<=8; the general theorem remains open.
+LAST VERIFIED RESULT: Every r=11 residual partition is internally closed under the quotient/source/supplement pipeline, extending the internal computer-assisted edge bound through residual demand S<=13. Equality remains characterized only through S<=8; the general theorem remains open.
 
-EVIDENCE: complete r11 artifacts under `project/research/general_n/2026-09-22-r11-quotient-v1/`; README synchronization; canonical telemetry.
+EVIDENCE: complete r11 artifacts under `project/research/general_n/2026-09-22-r11-quotient-v1/`; canonical STARTED telemetry.
 
-SESSION UTILISATION: Trigger 17:00:38 BST; actual start 17:00:58; thirteen closed forward intervals; verified total 1597s (26m37s); forward stop 17:47:52; cutoff 17:53:38; preservation complete 17:50:31; thirteen substantive units; target YES/NOT MET; SHORT/NONCOMPLIANT. Canonical: `project/research/session_logs/2026-09-22/2026-09-22T17-00-38+01-00-canonical.json`.
+SESSION UTILISATION: Trigger 18:00:38 BST; actual start 18:04:09; zero closed forward intervals at STARTED checkpoint; research cutoff 18:53:38; hard close 18:59:38; target N/A because 49m29s was available; STARTED/LIVE. Canonical: `project/research/session_logs/2026-09-22/2026-09-22T18-00-38+01-00-canonical.json`.
 
-UNPRESERVED WORK: None.
+UNPRESERVED WORK: None at durable start.
 
-DEFERRED ADMIN: Historical missing-slot reconciliation.
+DEFERRED ADMIN: Historical missing-slot reconciliation and prose-only README edits.
 
-NEXT ACTION: Independently replay the complete r=11 pipeline and begin the r=12 frontier only after that audit gate; separately extend equality stability beyond S<=8.
+NEXT ACTION: Independently replay the complete r=11 closure from saved raw masks/results and reject any cross-file inconsistency before opening the r=12 frontier.
 
-FOCUSED-SESSION COUNT: 1/24; this short session receives no focused-session credit.
+FOCUSED-SESSION COUNT: 1/24; current trigger credit pending final compliance.
 
-MANDATORY CONSTRAINTS: r=11 closure is internal/computer-assisted and conditional on inherited quotient lemmas; it is not external verification or graph realization.
+MANDATORY CONSTRAINTS: Internal finite work is not external verification or graph realization; balanced complete-bipartite equality controls remain mandatory.
 <!-- CURRENT-STATUS:END -->
 
 ## Latest adversarial audit - 22 September 2026
