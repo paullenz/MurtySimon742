@@ -87,14 +87,20 @@
       "stop": "2026-09-22T18:36:10+01:00",
       "seconds": 7,
       "evidence": "support-eight case-1 source MILP"
+    },
+    {
+      "start": "2026-09-22T18:38:50+01:00",
+      "stop": "2026-09-22T18:38:53+01:00",
+      "seconds": 3,
+      "unit": "r=12 support-eight (3,3,1^6) source screen"
     }
   ],
-  "verified_forward_span_seconds": 1001,
+  "verified_forward_span_seconds": 1004,
   "forward_stop": "PENDING",
   "preservation_start": "PENDING",
   "preservation_complete": "PENDING",
   "wall_clock_span_seconds": "PENDING",
-  "substantive_unit_count": 11,
+  "substantive_unit_count": 12,
   "substantive_unit_ledger": [
     {
       "completed_at": "2026-09-22T18:06:42+01:00",
@@ -150,6 +156,11 @@
       "completed_at": "2026-09-22T18:36:10+01:00",
       "unit": "r=12 support-eight (4,2,1^6) source screen",
       "result": "387/387 source-infeasible; 0 solver-unknown."
+    },
+    {
+      "completed_at": "2026-09-22T18:38:53+01:00",
+      "unit": "r=12 support-eight (3,3,1^6) source screen",
+      "result": "191/191 source-infeasible; 0 solver-unknown."
     }
   ],
   "early_stop_check": {
@@ -170,9 +181,10 @@
     "217ac415d6fe666b9a8c211e25ab3ac78e3c7c00",
     "db48b302a2b0d4bdc6035d245d0672bf99520119",
     "468ba1b65c6363e337d07b6b7c4f3f30f697dcbe",
-    "838c81b52ea773b3207ea12435125441a42f21b2"
+    "838c81b52ea773b3207ea12435125441a42f21b2",
+    "41e1e69ef7d94bd7e1811f3d241ed6b883354fe8"
   ],
-  "unfinished_line": "Screen r=12 support-eight cases 2-4; then supports 9-11.",
+  "unfinished_line": "Screen r=12 support-eight cases 3 and 4, then run supplement feasibility on any source survivors.",
   "target": {
     "applicable": false,
     "available_seconds": 2969,

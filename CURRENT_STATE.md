@@ -9,21 +9,21 @@ CHECKPOINT CLASS: VERIFIED_INTERNAL_NOT_PROMOTED
 
 WORK MODE: FORWARD_RESEARCH_LIVE
 
-INSPECTED PREDECESSOR: 838c81b52ea773b3207ea12435125441a42f21b2.
+INSPECTED PREDECESSOR: 41e1e69ef7d94bd7e1811f3d241ed6b883354fe8.
 
-LAST VERIFIED RESULT: r=12 is internally closed through support seven. At support eight, cases (5,1^7) and (4,2,1^6) are now source-infeasible: respectively 11/11 and 387/387 strict cores rejected with zero solver-unknown cases. Three shards remain, containing 191, 1,997, and 1,173 strict cores.
+LAST VERIFIED RESULT: r=12 is internally closed through support seven. At support eight, cases (5,1^7), (4,2,1^6), and (3,3,1^6) are source-infeasible: 11/11, 387/387, and 191/191 strict cores rejected with zero solver-unknown cases. Two shards remain, containing 1,997 and 1,173 strict cores.
 
-EVIDENCE: support-eight census and source case-0/case-1 JSON in the r12 quotient package; canonical telemetry.
+EVIDENCE: support-eight census and source case-0/case-1/case-2 JSON in the r12 quotient package; canonical telemetry.
 
-SESSION UTILISATION: Trigger 18:00:38 BST; actual start 18:04:09; eleven closed intervals; verified total 1001s (16m41s); eleven substantive units; cutoff 18:53:38; target N/A late start; LIVE.
+SESSION UTILISATION: Trigger 18:00:38 BST; actual start 18:04:09; twelve closed intervals; verified total 1004s (16m44s); twelve substantive units; cutoff 18:53:38; target N/A late start; LIVE.
 
 UNPRESERVED WORK: None at this checkpoint.
 
-NEXT ACTION: Screen support-eight case 2, partition (3,3,1^6), then cases 3 and 4.
+NEXT ACTION: Screen support-eight cases 3 and 4, then run supplement feasibility on any source survivors.
 
 FOCUSED-SESSION COUNT: 1/24; current trigger credit pending final compliance.
 
-MANDATORY CONSTRAINTS: Three support-eight shards remain; no overall support-eight closure yet.
+MANDATORY CONSTRAINTS: Two support-eight shards remain; no overall support-eight closure yet.
 <!-- CURRENT-STATUS:END -->
 
 ## Latest adversarial audit - 22 September 2026
