@@ -23,7 +23,8 @@ Each canonical record must contain at minimum:
 - `session_id`: exactly the scheduled trigger timestamp
 - `scheduled_trigger`
 - `next_scheduled_trigger`
-- `mandatory_preservation_cutoff`
+- `research_cutoff`
+- `hard_close_deadline`
 - `earliest_actual_start`
 - `lateness_vs_trigger`
 - `segments`: ordered array of every invocation/re-entry/reconciliation segment
@@ -57,6 +58,19 @@ Each element of `segments` must state:
 - `notes`
 - any missing boundary as `UNVERIFIED`, never guessed
 
+## Timing and anti-overlap rule
+
+For hourly forward sessions:
+
+- `research_cutoff = next_scheduled_trigger - 7 minutes`
+- `hard_close_deadline = next_scheduled_trigger - 1 minute`
+
+Forward research must stop by `research_cutoff`. Preservation, CURRENT_STATE synchronization, telemetry finalization and report preparation must finish by `hard_close_deadline`.
+
+Do not perform optional cleanup or reconciliation past the hard-close deadline. Leave unfinished reconciliation to the audit rather than consuming the next trigger.
+
+If prior-session cleanup nevertheless crosses the next trigger, it remains attached to the prior session. The new trigger still has its own distinct canonical session identity and must not be silently lost.
+
 ## Start-of-session rule
 
 Before repository reading or mathematics:
@@ -82,7 +96,7 @@ The canonical verified forward-research span is the union of the closed non-over
 
 ## 50-minute target
 
-If at least 55 minutes were genuinely available from the earliest actual session start to the preservation cutoff, the >=50-minute target applies.
+If at least 50 minutes were genuinely available from the earliest actual session start to the research cutoff, the >=50-minute target applies.
 
 - At least 50 **verified** minutes of forward research are required.
 - Less than 50 verified minutes is NONCOMPLIANT unless all reasonable mathematical, audit, repair, regression, hostile-example, derivation, and checker avenues were genuinely blocked by unavailable information/capability.
