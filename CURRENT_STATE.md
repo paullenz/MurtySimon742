@@ -5,23 +5,23 @@ Canonical repository: `paullenz/MurtySimon742`. Date: 22 September 2026.
 Active target: a genuinely independent proof of Erdős #742 / the Murty–Simon inequality e(G)<=floor(n^2/4), preferably with the equality characterization. Forward priority is the project’s own complement / residual / Hall / profile / realizability route, not a reconstruction of the external e+disj+X proof. The first focused session produced the internally checked candidate threshold `Delta>=250n/429`, shrinking the live strip to `n/2<Delta<250n/429`. The theorem and its inherited graph-to-profile spine remain candidate/internal-review mathematics. A 24-focused-session go/no-go gate applies. Prior eventual-D2C work remains preserved but is no longer the active forward objective.
 
 <!-- CURRENT-STATUS:START -->
-CHECKPOINT CLASS: WIP_UNVERIFIED
+CHECKPOINT CLASS: VERIFIED_INTERNAL_NOT_PROMOTED
 
 WORK MODE: MATH
 
-INSPECTED PREDECESSOR: 31785aa1695de5b4e470efb74e7e8659188d4220.
+INSPECTED PREDECESSOR: d3cbbb330dce26f4f553bc0c2aed1062d9776715.
 
-LAST VERIFIED RESULT: Internal exact necessary-condition computation closes every r=9 partition of residual support <=7 except two physical-source-feasible orbits in (2,2,1,1,1,1,1), masks 120436 and 378090. Both have ten core edges, all labels in P, degree multiset (3,3,3,3,3,3,2), and optimistic t=1. This is not graph realizability or a demand-bound extension.
+LAST VERIFIED RESULT: Exact supplement forcing eliminates the two remaining source-feasible r=9 support-seven kernels. Therefore the internal finite necessary-condition pipeline closes every strict r=9 partition of support <=7. All-unit support nine is separately closed; only support-eight (2,1,1,1,1,1,1,1) remains. No full r=9 theorem or demand-bound extension yet.
 
-EVIDENCE: `project/research/general_n/2026-09-22-r9-quotient-v1/R9_SUPPORT_LE7_SCREEN.md`; `project/research/general_n/2026-09-22-r9-quotient-v1/screen_r9_quotient_sources.py`; `project/research/session_logs/2026-09-22/2026-09-22T15-00-38+01-00-canonical.json`.
+EVIDENCE: `project/research/general_n/2026-09-22-r9-quotient-v1/R9_SUPPORT_LE7_SCREEN.md`; `project/research/general_n/2026-09-22-r9-quotient-v1/R9_SUPPORT_LE7_SUPPLEMENT_CLOSURE.md`; `project/research/general_n/2026-09-22-r9-quotient-v1/check_r9_support7_supplements.py`; `project/research/general_n/2026-09-22-r9-quotient-v1/R9_SUPPORT7_SUPPLEMENT_RESULTS.json`.
 
-SESSION UTILISATION: Trigger 15:00:38 BST; actual start 15:04:10; cutoff 15:53:38; hard close 15:59:38. Closed interval 15:05:54–15:11:52 (358s); verified total 5m58s; units 1; preservation checkpoint complete on publication; target NO/N/A (49m28s available); LIVE. Canonical: `project/research/session_logs/2026-09-22/2026-09-22T15-00-38+01-00-canonical.json`.
+SESSION UTILISATION: Trigger 15:00:38 BST; actual start 15:04:10; cutoff 15:53:38; hard close 15:59:38. Closed intervals 15:05:54–15:11:52 and 15:13:04–15:14:02; verified total 416s (6m56s); units 2; target NO/N/A; LIVE. Canonical: `project/research/session_logs/2026-09-22/2026-09-22T15-00-38+01-00-canonical.json`.
 
 UNPRESERVED WORK: None.
 
 DEFERRED ADMIN: Historical missing-slot reconciliation; standalone health-check relocation; optional README polishing.
 
-NEXT ACTION: Apply exact supplement forcing to the two support-seven r=9 kernels, preserving any survivor or contradiction before starting support-eight work.
+NEXT ACTION: Attack the sole unclosed strict r=9 partition (2,1,1,1,1,1,1,1) using symmetry-aware graph generation or an analytic quotient reduction.
 
 FOCUSED-SESSION COUNT: 1/24 completed before this trigger; this trigger pending.
 

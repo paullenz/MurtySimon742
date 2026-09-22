@@ -22,6 +22,12 @@
       "stop": "2026-09-22T15:11:52+01:00",
       "seconds": 358,
       "unit": 1
+    },
+    {
+      "start": "2026-09-22T15:13:04+01:00",
+      "stop": "2026-09-22T15:14:02+01:00",
+      "seconds": 58,
+      "unit": 2
     }
   ],
   "forward_research_stop": "PENDING",
@@ -29,15 +35,21 @@
   "preservation_complete": "PENDING",
   "final_report_time": "PENDING",
   "wall_clock_span_to_preservation_complete": "PENDING",
-  "verified_forward_research_span_seconds": 358,
+  "verified_forward_research_span_seconds": 416,
   "preservation_span": "PENDING",
-  "substantive_unit_count": 1,
+  "substantive_unit_count": 2,
   "timestamped_unit_ledger": [
     {
       "unit": 1,
       "start": "2026-09-22T15:05:54+01:00",
       "completed": "2026-09-22T15:11:52+01:00",
       "result": "Exact quotient/source screen for every r=9 residual partition with support <=7; two source-feasible orbits remain, both in (2,2,1,1,1,1,1). Corrected an unsafe full N-slack subtraction before saving."
+    },
+    {
+      "unit": 2,
+      "start": "2026-09-22T15:13:04+01:00",
+      "completed": "2026-09-22T15:14:02+01:00",
+      "result": "Exact supplement forcing eliminates both remaining support-seven r=9 source-feasible kernels: masks 120436 (1 population) and 378090 (2 populations), zero supplement-feasible."
     }
   ],
   "early_stop_check_time": "PENDING",
@@ -49,8 +61,9 @@
   "infrastructure_failures": [],
   "commit_shas": [
     "f0ee37d131ccef891bf2932bdfcbaf5a99ff349f",
-    "31785aa1695de5b4e470efb74e7e8659188d4220"
+    "31785aa1695de5b4e470efb74e7e8659188d4220",
+    "d3cbbb330dce26f4f553bc0c2aed1062d9776715"
   ],
-  "live_unfinished_line": "Apply exact supplement forcing to r=9 masks 120436 and 378090; then attack support-eight partition.",
+  "live_unfinished_line": "Only strict r=9 residual partition still unclosed: support-eight (2,1,1,1,1,1,1,1).",
   "historical_fragments": []
 }
