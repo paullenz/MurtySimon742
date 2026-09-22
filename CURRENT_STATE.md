@@ -9,19 +9,19 @@ CHECKPOINT CLASS: SUBSTANTIVE_RESEARCH_CHECKPOINT
 
 WORK MODE: MATH
 
-INSPECTED PREDECESSOR: ec7ee7ec652de4f8ae9d3ac9423e23798c2554f8.
+INSPECTED PREDECESSOR: 92141ee5ac6a37ff5b5a842bb499270917debe58.
 
-LAST VERIFIED RESULT: Exact optimistic screen reduces r=7 strict surplus to 15 residual-core orbits across three partitions; no graph realization asserted.
+LAST VERIFIED RESULT: Exact physical-source screen eliminates all 15 optimistic r=7 strict-surplus cores; internal candidate edge-bound scope reaches S<=9. Equality scope remains S<=6.
 
 EVIDENCE: `project/research/session_logs/2026-09-22/2026-09-22T11-00-38+01-00-canonical.json`; `project/research/general_n/2026-09-22-zero-demand-equality-v1/`.
 
-SESSION UTILISATION: Trigger 2026-09-22 11:00:38 BST; earliest 11:01:19; next 12:00:38; cutoff 11:53:38; hard close 11:59:38. Closed intervals: 11:02:36–11:04:00, 11:04:50–11:06:51, 11:07:13–11:08:46, 11:09:08–11:11:53, 11:12:15–11:12:38, 11:13:23–11:14:27, 11:14:53–11:16:02, 11:16:23–11:18:32, 11:19:08–11:20:21; total 821 seconds; units 8; preservation pending; target YES/PENDING; IN_PROGRESS. Stop reason: active. Canonical: `project/research/session_logs/2026-09-22/2026-09-22T11-00-38+01-00-canonical.json`.
+SESSION UTILISATION: Trigger 2026-09-22 11:00:38 BST; earliest 11:01:19; next 12:00:38; cutoff 11:53:38; hard close 11:59:38. Closed intervals: 11:02:36–11:04:00, 11:04:50–11:06:51, 11:07:13–11:08:46, 11:09:08–11:11:53, 11:12:15–11:12:38, 11:13:23–11:14:27, 11:14:53–11:16:02, 11:16:23–11:18:32, 11:19:08–11:20:21, 11:20:42–11:22:03; total 902 seconds; units 9; preservation pending; target YES/PENDING; IN_PROGRESS. Stop reason: active. Canonical: `project/research/session_logs/2026-09-22/2026-09-22T11-00-38+01-00-canonical.json`.
 
 UNPRESERVED WORK: None beyond named unfinished line.
 
 DEFERRED ADMIN: Historical missing-slot reconciliation and schedule maintenance.
 
-NEXT ACTION: Impose exact physical source-state multisets on the 15 r=7 strict-surplus core orbits.
+NEXT ACTION: Independently replay the r=6/r=7 finite pipeline and attack r=7 product equality or r=8 strict surplus.
 
 FOCUSED-SESSION COUNT: 1/24 completed before this trigger; this trigger credit 0.
 
