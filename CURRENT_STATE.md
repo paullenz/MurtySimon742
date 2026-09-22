@@ -9,23 +9,23 @@ CHECKPOINT CLASS: VERIFIED_INTERNAL_NOT_PROMOTED
 
 WORK MODE: MATH
 
-INSPECTED PREDECESSOR: d3cbbb330dce26f4f553bc0c2aed1062d9776715.
+INSPECTED PREDECESSOR: d8e05ed49a9ae1198389935474d5b1001faa1cfd.
 
-LAST VERIFIED RESULT: Exact supplement forcing eliminates the two remaining source-feasible r=9 support-seven kernels. Therefore the internal finite necessary-condition pipeline closes every strict r=9 partition of support <=7. All-unit support nine is separately closed; only support-eight (2,1,1,1,1,1,1,1) remains. No full r=9 theorem or demand-bound extension yet.
+LAST VERIFIED RESULT: Internal computer-assisted finite pipeline now closes strict residual mass r=9: support<=7 closes by quotient/source/supplement screens; support-eight has 79,264 rooted core orbits, 69 optimistic strict survivors and zero physical-source-feasible; support-nine all-unit is separately excluded. Hence strict counterprofiles require r>=10 and the internal edge bound extends through S<=11. Equality scope and general theorem unchanged.
 
-EVIDENCE: `project/research/general_n/2026-09-22-r9-quotient-v1/R9_SUPPORT_LE7_SCREEN.md`; `project/research/general_n/2026-09-22-r9-quotient-v1/R9_SUPPORT_LE7_SUPPLEMENT_CLOSURE.md`; `project/research/general_n/2026-09-22-r9-quotient-v1/check_r9_support7_supplements.py`; `project/research/general_n/2026-09-22-r9-quotient-v1/R9_SUPPORT7_SUPPLEMENT_RESULTS.json`.
+EVIDENCE: `project/research/general_n/2026-09-22-r9-quotient-v1/R9_STRICT_CLOSURE.md`; `project/research/general_n/2026-09-22-r9-quotient-v1/enumerate_r9_support8_orbits.cpp`; `project/research/general_n/2026-09-22-r9-quotient-v1/R9_SUPPORT8_CORE_MASKS.txt`; `project/research/general_n/2026-09-22-r9-quotient-v1/screen_r9_support8_sources.py`; `project/research/general_n/2026-09-22-r9-quotient-v1/R9_SUPPORT8_SOURCE_RESULTS.json`.
 
-SESSION UTILISATION: Trigger 15:00:38 BST; actual start 15:04:10; cutoff 15:53:38; hard close 15:59:38. Closed intervals 15:05:54–15:11:52 and 15:13:04–15:14:02; verified total 416s (6m56s); units 2; target NO/N/A; LIVE. Canonical: `project/research/session_logs/2026-09-22/2026-09-22T15-00-38+01-00-canonical.json`.
+SESSION UTILISATION: Trigger 15:00:38 BST; actual start 15:04:10; cutoff 15:53:38; hard close 15:59:38. Closed intervals 15:05:54–15:11:52, 15:13:04–15:14:02, 15:15:46–15:19:48; verified total 658s (10m58s); units 3; target NO/N/A; LIVE. Canonical: `project/research/session_logs/2026-09-22/2026-09-22T15-00-38+01-00-canonical.json`.
 
 UNPRESERVED WORK: None.
 
 DEFERRED ADMIN: Historical missing-slot reconciliation; standalone health-check relocation; optional README polishing.
 
-NEXT ACTION: Attack the sole unclosed strict r=9 partition (2,1,1,1,1,1,1,1) using symmetry-aware graph generation or an analytic quotient reduction.
+NEXT ACTION: Independently replay the r=9 pipeline, audit the rooted quotient/counts and cross-check every saved support-eight mask before any promotion; then begin r=10 triage if sound.
 
 FOCUSED-SESSION COUNT: 1/24 completed before this trigger; this trigger pending.
 
-MANDATORY CONSTRAINTS: Independent route; internal-candidate/computer-assisted trust; actual graph realizability; balanced equality controls; no fabricated intervals.
+MANDATORY CONSTRAINTS: Independent route; internal computer-assisted trust; actual graph realizability; balanced equality controls; no fabricated intervals.
 <!-- CURRENT-STATUS:END -->
 
 ## Latest adversarial audit - 22 September 2026
