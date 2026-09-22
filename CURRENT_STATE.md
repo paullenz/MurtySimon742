@@ -5,23 +5,23 @@ Canonical repository: `paullenz/MurtySimon742`. Date: 22 September 2026.
 Active target: a genuinely independent proof of Erdős #742 / the Murty–Simon inequality e(G)<=floor(n^2/4), preferably with the equality characterization. Forward priority is the project’s own complement / residual / Hall / profile / realizability route, not a reconstruction of the external e+disj+X proof. The first focused session produced the internally checked candidate threshold `Delta>=250n/429`, shrinking the live strip to `n/2<Delta<250n/429`. The theorem and its inherited graph-to-profile spine remain candidate/internal-review mathematics. A 24-focused-session go/no-go gate applies. Prior eventual-D2C work remains preserved but is no longer the active forward objective.
 
 <!-- CURRENT-STATUS:START -->
-CHECKPOINT CLASS: `SCHEDULED_RESEARCH_STARTED`
+CHECKPOINT CLASS: `ZERO_DEMAND_EQUALITY_INTERNAL_PROOF`
 
 WORK MODE: `MATH`
 
-INSPECTED PREDECESSOR: `2d378be74a754cbaa705e16d7f9a717ada018252`.
+INSPECTED PREDECESSOR: `4ddec2c1db2ec95293b98a385740d7e0345b651e`.
 
-LAST VERIFIED RESULT: Mathematical status unchanged. Durable start for the 10:00:38 BST scheduled trigger; no new mathematics claimed yet. The interrupted manual recovery remains separately closed and receives no scheduled credit.
+LAST VERIFIED RESULT: Internal proof closes zero-demand equality: S=0 forces e(G)<=floor(n^2/4), with equality exactly balanced complete bipartite. Odd parity uses exact Boolean flips and indegree-one expansion. Not external review; positive-demand strip remains open.
 
 EVIDENCE: `project/research/session_logs/2026-09-22/2026-09-22T10-00-38+01-00-canonical.json`; latest bridge package `project/research/general_n/2026-09-22-raw-profile-bridge-v1/`.
 
-SESSION UTILISATION: Trigger 2026-09-22 10:00:38 BST; earliest observed start 10:02:42 BST (124 seconds late); next trigger 11:00:38; research cutoff 10:53:38; hard close 10:59:38. Closed forward intervals none; verified total 0 seconds; substantive units 0; final preservation pending; target YES/PENDING; IN_PROGRESS.
+SESSION UTILISATION: Trigger 2026-09-22 10:00:38 BST; earliest observed start 10:02:42; next 11:00:38; research cutoff 10:53:38; hard close 10:59:38. Closed interval 10:03:41–10:08:19; verified total 278 seconds; units 1; final preservation pending; target YES/PENDING; IN_PROGRESS. Canonical record: `project/research/session_logs/2026-09-22/2026-09-22T10-00-38+01-00-canonical.json`.
 
 UNPRESERVED WORK: None.
 
 DEFERRED ADMIN: No schedule or CI maintenance. Ancillary monitoring does not replace this research task.
 
-NEXT ACTION: Read the latest audit and bridge proof, then derive the zero-demand equality branch with both balanced-bipartite parities as controls.
+NEXT ACTION: Regress the exact Boolean orientation and zero-demand equality on actual graphs, then analyze the residual-one boundary.
 
 FOCUSED-SESSION COUNT: `1/24` previously completed; this session not yet credited.
 

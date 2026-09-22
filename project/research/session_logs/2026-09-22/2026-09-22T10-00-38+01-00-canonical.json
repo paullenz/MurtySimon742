@@ -16,20 +16,41 @@
       "segment_id": "entry-1",
       "actual_start": "2026-09-22T10:02:42+01:00",
       "role": "reconciliation",
-      "notes": "Mandatory policy and existing canonical read; canonical absent (404). Durable start before mathematics."
+      "notes": "Mandatory policy and existing canonical read; canonical absent (404). Durable start before mathematics.",
+      "actual_stop": "2026-09-22T10:03:41+01:00"
+    },
+    {
+      "segment_id": "research-1",
+      "actual_start": "2026-09-22T10:03:41+01:00",
+      "actual_stop": "2026-09-22T10:08:19+01:00",
+      "role": "forward_research",
+      "notes": "Mandatory mathematical source review and direct zero-demand equality proof, both parities."
     }
   ],
-  "forward_research_intervals": [],
+  "forward_research_intervals": [
+    {
+      "start": "2026-09-22T10:03:41+01:00",
+      "stop": "2026-09-22T10:08:19+01:00",
+      "evidence": "ZERO_DEMAND_EQUALITY.md"
+    }
+  ],
   "forward_research_stop": null,
   "preservation_start": null,
   "preservation_complete": null,
   "final_report_time": null,
   "wall_clock_span_to_preservation_complete": null,
-  "verified_forward_research_span": 0,
+  "verified_forward_research_span": 278,
   "verified_forward_research_span_units": "seconds",
   "preservation_span": null,
-  "substantive_unit_count": 0,
-  "timestamped_unit_ledger": [],
+  "substantive_unit_count": 1,
+  "timestamped_unit_ledger": [
+    {
+      "completed_at": "2026-09-22T10:08:19+01:00",
+      "unit": "Zero-demand equality rigidity",
+      "result": "Internal proof: S=0 implies the bound with equality exactly balanced complete bipartite; odd parity closed by Boolean indegree-one expansion.",
+      "artifact": "project/research/general_n/2026-09-22-zero-demand-equality-v1/ZERO_DEMAND_EQUALITY.md"
+    }
+  ],
   "early_stop_check_time": null,
   "early_stop_check_result": null,
   "stop_reason": null,
@@ -38,8 +59,10 @@
   "available_seconds_from_earliest_start": 3056,
   "compliance_status": "IN_PROGRESS",
   "infrastructure_failures": [],
-  "commit_shas": [],
-  "live_unfinished_line": "Read mathematical inputs and attack zero-demand equality from the independently reconstructed ledger.",
+  "commit_shas": [
+    "4ddec2c1db2ec95293b98a385740d7e0345b651e"
+  ],
+  "live_unfinished_line": "Regress Boolean orientation and equality argument on actual graphs; analyze residual-one obstruction.",
   "historical_fragments": [],
   "focused_session_credit": 0
 }
