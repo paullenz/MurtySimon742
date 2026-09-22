@@ -1,0 +1,123 @@
+{
+  "status": "PASS",
+  "counts": {
+    "graphs": 1396,
+    "bfs_deletion_checks": 39846,
+    "exhausted_roots": 2727,
+    "degree_identity_checks": 647582,
+    "zero_demand": 60540,
+    "zero_demand_equality": 863,
+    "zero_demand_equality_odd": 275,
+    "selections": 68741,
+    "S_0": 60540,
+    "S_at_most_2_bound_checks": 68556,
+    "S_at_most_2_equality_checks": 863,
+    "S_at_most_three_cases": 68703,
+    "zero_demand_equality_even": 588,
+    "residual_edge_charge_checks": 1288964,
+    "low_residual_checks": 82,
+    "unit_column_cases": 71,
+    "unit_column_nonempty_F_cases": 60,
+    "unit_column_degree_two_cases": 0,
+    "two_column_with_unit_cases": 514,
+    "r_at_most_three_cases": 469,
+    "robust_arc_checks": 523327,
+    "exact_boolean_arcs": 922,
+    "nonempty_zero_residual_roots": 384,
+    "single_residual_label_checks": 30,
+    "S_1": 6907,
+    "zero_residual_endpoint_checks": 88,
+    "nonempty_single_residual_label_checks": 6,
+    "S_2": 1109,
+    "sampled_roots": 56,
+    "S_3": 147,
+    "S_4": 34,
+    "S_5": 4
+  },
+  "elapsed_seconds": 57.11508049099939,
+  "source_sha256": "565b392d707d87c1effd0e0db066caeb8ca8721156fb31f2683e4ff1d2af18f4",
+  "dependencies": [
+    "check_raw_profile.py",
+    "extract_supplement_witness.py",
+    "RESULTS.json"
+  ],
+  "noncritical_impostor": {
+    "n": 5,
+    "m": 6,
+    "edges": [
+      [
+        0,
+        2
+      ],
+      [
+        0,
+        3
+      ],
+      [
+        0,
+        4
+      ],
+      [
+        1,
+        3
+      ],
+      [
+        1,
+        4
+      ],
+      [
+        2,
+        3
+      ]
+    ],
+    "deletable_edge": [
+      0,
+      3
+    ]
+  },
+  "fixture_ledger_sha256": "74b2166c218867b5ccb6090846e813ac7cb4900f6c402817fd744bf9150e2b5b",
+  "fixture_ledger_reference": "Same deterministic fixture/root construction as EQUALITY_RESULTS.json; source parameters unchanged.",
+  "unit_column_source_sha256": "f6728a49120960540daaf24fb0610b56789b284ff2e758eb44b82db16b8cf4bd",
+  "witnesses": {
+    "unit_column_nonempty_F": {
+      "n": 5,
+      "root": 0,
+      "R": {
+        "1": 1,
+        "2": 1
+      },
+      "d": {
+        "1": 1,
+        "2": 1
+      },
+      "selection": [],
+      "edges": [
+        [
+          0,
+          3
+        ],
+        [
+          0,
+          4
+        ],
+        [
+          1,
+          2
+        ],
+        [
+          1,
+          4
+        ],
+        [
+          2,
+          3
+        ]
+      ]
+    }
+  },
+  "repeated_source_kernel": {
+    "source_partitions_checked": 26439,
+    "survivors": 0,
+    "scope": "finite replay of the proof kernel, including repeated sources; not a graph search"
+  }
+}

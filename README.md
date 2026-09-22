@@ -3,7 +3,7 @@
 <!-- Keep the live overview and status tables here. Put dated updates below them, never above them. -->
 <!-- CURRENT-STATUS:START -->
 
-**22 September equality branch:** A new [internal zero-demand equality proof](project/research/general_n/2026-09-22-zero-demand-equality-v1/ZERO_DEMAND_EQUALITY.md) closes S=0 with equality exactly balanced complete bipartite, including odd order. [Actual-graph replay](project/research/general_n/2026-09-22-zero-demand-equality-v1/EQUALITY_REGRESSION.md) passed 1,396 fixtures and 68,741 legal assignments (56 roots sampled). This does not close the positive-demand strip or constitute external review.
+**22 September equality branch:** Internal [zero-demand rigidity](project/research/general_n/2026-09-22-zero-demand-equality-v1/ZERO_DEMAND_EQUALITY.md), [residual support](project/research/general_n/2026-09-22-zero-demand-equality-v1/LOW_RESIDUAL_OBSTRUCTION.md) and [unit-column cycle exclusion](project/research/general_n/2026-09-22-zero-demand-equality-v1/UNIT_RESIDUAL_COLUMNS.md) now close total demand S<=3 with exactly balanced complete-bipartite equality. Bounded [graph and scope replay](project/research/general_n/2026-09-22-zero-demand-equality-v1/UNIT_COLUMN_REGRESSION.md) preserves a nonmaximum-root counterexample and explicit sampling/non-vacuity caveats. The positive-demand strip remains open; this is not external verification.
 
 ## Current status
 
