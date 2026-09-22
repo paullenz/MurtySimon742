@@ -5,27 +5,27 @@ Canonical repository: `paullenz/MurtySimon742`. Date: 22 September 2026.
 Active target: a genuinely independent proof of Erdős #742 / the Murty–Simon inequality e(G)<=floor(n^2/4), preferably with the equality characterization. Forward priority is the project’s own complement / residual / Hall / profile / realizability route, not a reconstruction of the external e+disj+X proof. The first focused session produced the internally checked candidate threshold `Delta>=250n/429`, shrinking the live strip to `n/2<Delta<250n/429`. The theorem and its inherited graph-to-profile spine remain candidate/internal-review mathematics. A 24-focused-session go/no-go gate applies. Prior eventual-D2C work remains preserved but is no longer the active forward objective.
 
 <!-- CURRENT-STATUS:START -->
-CHECKPOINT CLASS: STARTED
+CHECKPOINT CLASS: SUBSTANTIVE_RESEARCH_CHECKPOINT
 
 WORK MODE: MATH
 
-INSPECTED PREDECESSOR: 97b89e23e33ab5eae18d01103278ddd500df177d.
+INSPECTED PREDECESSOR: 78db3c724027fc2bf79e664f541122416b8391ec.
 
-LAST VERIFIED RESULT: New 11:00:38 scheduled session durably started before forward mathematics. Inherited internal result: S<=7 edge bound, equality characterized through S<=4; full independent proof open.
+LAST VERIFIED RESULT: Internal candidate audit closes all r<=5 product-equality shapes; S<=5 now has balanced complete-bipartite equality. Full strip and S=6,7 equality remain open.
 
-EVIDENCE: `project/research/session_logs/2026-09-22/2026-09-22T11-00-38+01-00-canonical.json`; prior package `project/research/general_n/2026-09-22-zero-demand-equality-v1/`.
+EVIDENCE: `project/research/session_logs/2026-09-22/2026-09-22T11-00-38+01-00-canonical.json`; `project/research/general_n/2026-09-22-zero-demand-equality-v1/`.
 
-SESSION UTILISATION: Trigger 2026-09-22 11:00:38 BST; earliest actual start 11:01:19; next trigger 12:00:38; research cutoff 11:53:38; hard close 11:59:38. Closed forward intervals: none; total 0 seconds; units 0; preservation pending; target YES/PENDING; IN_PROGRESS. Canonical: `project/research/session_logs/2026-09-22/2026-09-22T11-00-38+01-00-canonical.json`.
+SESSION UTILISATION: Trigger 2026-09-22 11:00:38 BST; earliest 11:01:19; next 12:00:38; cutoff 11:53:38; hard close 11:59:38. Closed intervals: 11:02:36–11:04:00; total 84 seconds; units 1; preservation pending; target YES/PENDING; IN_PROGRESS. Stop reason: active. Canonical: `project/research/session_logs/2026-09-22/2026-09-22T11-00-38+01-00-canonical.json`.
 
-UNPRESERVED WORK: None.
+UNPRESERVED WORK: None beyond named unfinished line.
 
 DEFERRED ADMIN: Historical missing-slot reconciliation and schedule maintenance.
 
-NEXT ACTION: Independently audit the localized unit-triangle cycle contradiction and finite-kernel supplement exclusions.
+NEXT ACTION: Hostile-check the local cycle proof and classify the r=6 positive-core/equality shapes without treating scalar survivors as graphs.
 
-FOCUSED-SESSION COUNT: 1/24 completed before this trigger; this live session has zero credit.
+FOCUSED-SESSION COUNT: 1/24 completed before this trigger; this trigger credit 0.
 
-MANDATORY CONSTRAINTS: Independent route; internal-candidate trust; actual graph realizability; balanced complete-bipartite equality controls; no fabricated intervals.
+MANDATORY CONSTRAINTS: Independent route; internal-candidate trust; actual graph realizability; balanced equality controls; no fabricated intervals.
 <!-- CURRENT-STATUS:END -->
 
 ## Latest adversarial audit - 22 September 2026

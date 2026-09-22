@@ -18,19 +18,39 @@
       "actual_stop": "2026-09-22T11:01:35+01:00",
       "role": "reconciliation",
       "notes": "Mandatory CURRENT_STATE, AGENTS, schema and absent-canonical reads; durable start publication. Zero forward credit."
+    },
+    {
+      "segment_id": "research-1",
+      "actual_start": "2026-09-22T11:02:36+01:00",
+      "actual_stop": "2026-09-22T11:04:00+01:00",
+      "role": "forward_research",
+      "notes": "Independent local cycle audit and closure of the final residual-mass-five equality shape."
     }
   ],
-  "forward_research_intervals": [],
+  "forward_research_intervals": [
+    {
+      "start": "2026-09-22T11:02:36+01:00",
+      "stop": "2026-09-22T11:04:00+01:00",
+      "evidence": "LOCAL_TRIANGLE_AUDIT.md"
+    }
+  ],
   "forward_research_stop": null,
   "preservation_start": null,
   "preservation_complete": null,
   "final_report_time": null,
   "wall_clock_span_to_preservation_complete": null,
-  "verified_forward_research_span": 0,
+  "verified_forward_research_span": 84,
   "verified_forward_research_span_units": "seconds",
   "preservation_span": null,
-  "substantive_unit_count": 0,
-  "timestamped_unit_ledger": [],
+  "substantive_unit_count": 1,
+  "timestamped_unit_ledger": [
+    {
+      "completed_at": "2026-09-22T11:04:00+01:00",
+      "unit": "Local unit-triangle audit and r=5 equality closure",
+      "result": "Internal candidate proof: local unit-residual F-cycle impossible under t=0 and b>|Q|; all r=5 equality shapes excluded; r<=5 implies f<r; S<=5 balanced-bipartite equality.",
+      "artifact": "project/research/general_n/2026-09-22-zero-demand-equality-v1/LOCAL_TRIANGLE_AUDIT.md"
+    }
+  ],
   "early_stop_check_time": null,
   "early_stop_check_result": null,
   "stop_reason": null,
@@ -39,8 +59,10 @@
   "available_seconds_from_earliest_start": 3139,
   "compliance_status": "IN_PROGRESS",
   "infrastructure_failures": [],
-  "commit_shas": [],
-  "live_unfinished_line": "Independently audit the localized unit-triangle component argument and prior finite-kernel supplement exclusions.",
+  "commit_shas": [
+    "78db3c724027fc2bf79e664f541122416b8391ec"
+  ],
+  "live_unfinished_line": "Hostile-check the local cycle proof and classify the r=6 positive-core/equality shapes without treating scalar survivors as graphs.",
   "historical_fragments": [],
   "focused_session_credit": 0,
   "predecessor_session": "project/research/session_logs/2026-09-22/2026-09-22T10-00-38+01-00-canonical.json"
