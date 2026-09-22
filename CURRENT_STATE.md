@@ -7,15 +7,15 @@ Active target: a genuinely independent proof of Erdős #742 / the Murty–Simon 
 <!-- CURRENT-STATUS:START -->
 CHECKPOINT CLASS: VERIFIED_INTERNAL_NOT_PROMOTED
 
-WORK MODE: PRESERVATION_IN_PROGRESS
+WORK MODE: PRESERVATION_COMPLETE
 
-INSPECTED PREDECESSOR: d10d7f7c8c507545fee996ab3c1e0a700314b07b.
+INSPECTED PREDECESSOR: a80d3f3836552653c762cb78b847983d6246dc7e.
 
 LAST VERIFIED RESULT: Every r=11 residual partition is internally closed under the quotient/source/supplement pipeline. This session closed supports 8, 9, and 10; support ten reduced to 280 strict cores, then 3 source-feasible kernels, all exhaustively rejected by the one-supplement condition. The internal computer-assisted edge bound now covers residual demand S<=13. Equality remains characterized only through S<=8; the general theorem remains open.
 
-EVIDENCE: complete r11 artifacts under `project/research/general_n/2026-09-22-r11-quotient-v1/`; canonical telemetry.
+EVIDENCE: complete r11 artifacts under `project/research/general_n/2026-09-22-r11-quotient-v1/`; README synchronization; canonical telemetry.
 
-SESSION UTILISATION: Trigger 17:00:38 BST; actual start 17:00:58; thirteen closed forward intervals; verified total 1597s (26m37s); forward stop 17:47:52; cutoff 17:53:38; preservation started 17:48:55; thirteen substantive units; target YES/NOT MET; SHORT/NONCOMPLIANT pending final preservation timestamp. Canonical: `project/research/session_logs/2026-09-22/2026-09-22T17-00-38+01-00-canonical.json`.
+SESSION UTILISATION: Trigger 17:00:38 BST; actual start 17:00:58; thirteen closed forward intervals; verified total 1597s (26m37s); forward stop 17:47:52; cutoff 17:53:38; preservation complete 17:50:31; thirteen substantive units; target YES/NOT MET; SHORT/NONCOMPLIANT. Canonical: `project/research/session_logs/2026-09-22/2026-09-22T17-00-38+01-00-canonical.json`.
 
 UNPRESERVED WORK: None.
 
@@ -23,7 +23,7 @@ DEFERRED ADMIN: Historical missing-slot reconciliation.
 
 NEXT ACTION: Independently replay the complete r=11 pipeline and begin the r=12 frontier only after that audit gate; separately extend equality stability beyond S<=8.
 
-FOCUSED-SESSION COUNT: 1/24; this short session does not receive focused-session credit.
+FOCUSED-SESSION COUNT: 1/24; this short session receives no focused-session credit.
 
 MANDATORY CONSTRAINTS: r=11 closure is internal/computer-assisted and conditional on inherited quotient lemmas; it is not external verification or graph realization.
 <!-- CURRENT-STATUS:END -->

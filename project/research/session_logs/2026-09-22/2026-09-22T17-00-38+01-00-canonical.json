@@ -23,7 +23,7 @@
     {
       "segment_id": "segment-2",
       "actual_start": "2026-09-22T17:48:55+01:00",
-      "actual_stop": "PENDING",
+      "actual_stop": "2026-09-22T17:50:31+01:00",
       "role": "preservation",
       "notes": "Final telemetry, CURRENT_STATE, and README synchronization."
     }
@@ -111,8 +111,8 @@
   "verified_forward_span_seconds": 1597,
   "forward_stop": "2026-09-22T17:47:52+01:00",
   "preservation_start": "2026-09-22T17:48:55+01:00",
-  "preservation_complete": "PENDING",
-  "wall_clock_span_seconds": "PENDING",
+  "preservation_complete": "2026-09-22T17:50:31+01:00",
+  "wall_clock_span_seconds": 2973,
   "substantive_unit_count": 13,
   "substantive_unit_ledger": [
     {
@@ -204,14 +204,16 @@
     "b7fe1e9657c450039b4e6b2ee4f76ee0b2716b53",
     "da97c09d3225585201261a238204de4d7db001ea",
     "5929f58e717c583d531cd4114fb68f58aa4a87e3",
-    "d10d7f7c8c507545fee996ab3c1e0a700314b07b"
+    "d10d7f7c8c507545fee996ab3c1e0a700314b07b",
+    "a80d3f3836552653c762cb78b847983d6246dc7e"
   ],
   "unfinished_line": "Independent replay of full r=11 closure; equality extension beyond S<=8; then r=12 frontier.",
   "target": {
     "applicable": true,
     "available_seconds": 3160,
     "required_seconds": 3000,
-    "result": "NOT_MET"
+    "result": "NOT_MET_1597_OF_3000_SECONDS"
   },
-  "compliance_status": "SHORT_NONCOMPLIANT_PRESERVATION_PENDING"
+  "compliance_status": "SHORT_NONCOMPLIANT",
+  "preservation_span_seconds": 96
 }
