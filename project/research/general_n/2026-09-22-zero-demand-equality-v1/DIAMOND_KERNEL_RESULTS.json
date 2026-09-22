@@ -1,0 +1,103 @@
+{
+  "diamond_heavy_degree_three": {
+    "edges": [
+      [
+        0,
+        1
+      ],
+      [
+        0,
+        2
+      ],
+      [
+        0,
+        3
+      ],
+      [
+        1,
+        2
+      ],
+      [
+        1,
+        3
+      ]
+    ],
+    "R": [
+      2,
+      1,
+      1,
+      1
+    ],
+    "selected_lower_bounds": [
+      1,
+      2,
+      1,
+      1
+    ],
+    "patterns": 28,
+    "survivor_multisets": 1,
+    "first_survivors": [
+      [
+        [
+          1,
+          2,
+          1,
+          1
+        ],
+        [
+          2,
+          1,
+          1,
+          2
+        ],
+        [
+          2,
+          1,
+          2,
+          1
+        ]
+      ]
+    ],
+    "scope": "Necessary source patterns only; no supplements, source-source edges, or D2C realization asserted."
+  },
+  "diamond_heavy_degree_two": {
+    "edges": [
+      [
+        1,
+        2
+      ],
+      [
+        1,
+        3
+      ],
+      [
+        2,
+        3
+      ],
+      [
+        0,
+        1
+      ],
+      [
+        0,
+        2
+      ]
+    ],
+    "R": [
+      2,
+      1,
+      1,
+      1
+    ],
+    "selected_lower_bounds": [
+      0,
+      2,
+      2,
+      1
+    ],
+    "patterns": 27,
+    "survivor_multisets": 0,
+    "first_survivors": [],
+    "scope": "Necessary source patterns only; no supplements, source-source edges, or D2C realization asserted."
+  }
+}

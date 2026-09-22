@@ -95,6 +95,20 @@
       "actual_stop": "2026-09-22T10:47:32+01:00",
       "role": "forward_research",
       "notes": "Positive residual-core identity, <=3 support exclusion and r=5 K4 source-capacity obstruction."
+    },
+    {
+      "segment_id": "research-10a",
+      "actual_start": "2026-09-22T10:47:57+01:00",
+      "actual_stop": "2026-09-22T10:49:16+01:00",
+      "role": "forward_research",
+      "notes": "Core identity graph regression and necessary physical-source diamond enumeration."
+    },
+    {
+      "segment_id": "research-10b",
+      "actual_start": "2026-09-22T10:49:42+01:00",
+      "actual_stop": "2026-09-22T10:50:08+01:00",
+      "role": "forward_research",
+      "notes": "Core identity graph regression and necessary physical-source diamond enumeration."
     }
   ],
   "forward_research_intervals": [
@@ -147,6 +161,16 @@
       "start": "2026-09-22T10:45:32+01:00",
       "stop": "2026-09-22T10:47:32+01:00",
       "evidence": "RESIDUAL_CORE_LOCALIZATION.md"
+    },
+    {
+      "start": "2026-09-22T10:47:57+01:00",
+      "stop": "2026-09-22T10:49:16+01:00",
+      "evidence": "CORE_REGRESSION.md, CORE_RESULTS.json, DIAMOND_KERNEL_RESULTS.json"
+    },
+    {
+      "start": "2026-09-22T10:49:42+01:00",
+      "stop": "2026-09-22T10:50:08+01:00",
+      "evidence": "CORE_REGRESSION.md, CORE_RESULTS.json, DIAMOND_KERNEL_RESULTS.json"
     }
   ],
   "forward_research_stop": null,
@@ -154,10 +178,10 @@
   "preservation_complete": null,
   "final_report_time": null,
   "wall_clock_span_to_preservation_complete": null,
-  "verified_forward_research_span": 1873,
+  "verified_forward_research_span": 1978,
   "verified_forward_research_span_units": "seconds",
   "preservation_span": null,
-  "substantive_unit_count": 9,
+  "substantive_unit_count": 10,
   "timestamped_unit_ledger": [
     {
       "completed_at": "2026-09-22T10:08:19+01:00",
@@ -212,6 +236,12 @@
       "unit": "Residual core localization and r5 strict-surplus exclusion",
       "result": "Internal proof <=3 residual labels imply f<r; r5 implies f<=r; S<=7 edge bound, equality characterization only S<=4. Remaining r5 equality cores explicitly isolated.",
       "artifact": "project/research/general_n/2026-09-22-zero-demand-equality-v1/RESIDUAL_CORE_LOCALIZATION.md"
+    },
+    {
+      "completed_at": "2026-09-22T10:50:08+01:00",
+      "unit": "Core regression and residual-five diamond kernels",
+      "result": "PASS 68741 positive-core identities, 1982 <=3-support cases and 186 r5 cases. No r5 equality or S6/7 actual fixtures. Diamond source patterns: heavy-degree2 none; heavy-degree3 one necessary survivor, not a graph.",
+      "artifact": "project/research/general_n/2026-09-22-zero-demand-equality-v1/CORE_REGRESSION.md"
     }
   ],
   "early_stop_check_time": null,
@@ -231,15 +261,21 @@
     "aadbcb44e869acc5b16a0ea3553056b3731d2812",
     "2754a3685667a5a2d8f64f7bb01cd058715d9ef9",
     "03924f3af8b0a45a572ebc1b5671535dd84637fe",
-    "4940c5bb48b9b2dc4010cd8b828a1e18059e0873"
+    "4940c5bb48b9b2dc4010cd8b828a1e18059e0873",
+    "dd6951a01fba05dc9512377bd32ae28ec8b53224"
   ],
-  "live_unfinished_line": "Replay positive-core identity and r5 obstruction, then attack remaining equality core/source compatibility.",
+  "live_unfinished_line": "Attack legal supplements of unique diamond source survivor and remaining T-neighbor equality shapes.",
   "historical_fragments": [],
   "focused_session_credit": 0,
   "ancillary_checks": [
     {
       "observed_at": "2026-09-22T10:19:06+01:00",
       "result": "Read-only monitor verified remote current start and latest substantive checkpoint; preceding 09 slot canonical absent (404), already reported; same research session resumed."
+    },
+    {
+      "observed_at": "2026-09-22T10:49:25+01:00",
+      "completed_at": "2026-09-22T10:49:42+01:00",
+      "result": "Current durable substantive checkpoint 10:47:32 verified; preceding 09 canonical still404. No changed health alert; original research resumed."
     }
   ]
 }
