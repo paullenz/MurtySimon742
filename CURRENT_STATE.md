@@ -5,25 +5,27 @@ Canonical repository: `paullenz/MurtySimon742`. Date: 22 September 2026.
 Active target: a genuinely independent proof of Erdős #742 / the Murty–Simon inequality e(G)<=floor(n^2/4), preferably with the equality characterization. Forward priority is the project’s own complement / residual / Hall / profile / realizability route, not a reconstruction of the external e+disj+X proof. The first focused session produced the internally checked candidate threshold `Delta>=250n/429`, shrinking the live strip to `n/2<Delta<250n/429`. The theorem and its inherited graph-to-profile spine remain candidate/internal-review mathematics. A 24-focused-session go/no-go gate applies. Prior eventual-D2C work remains preserved but is no longer the active forward objective.
 
 <!-- CURRENT-STATUS:START -->
-CHECKPOINT CLASS: FINALIZED_RESEARCH_SESSION
+CHECKPOINT CLASS: ADMIN_REPAIR_EXECUTION_UNVERIFIED
 
-WORK MODE: MATH
+WORK MODE: ADMIN
 
-INSPECTED PREDECESSOR: 4b52badec2bc57b4be9dc2399d99a030d1f2aa0e.
+INSPECTED PREDECESSOR: 7c38944e1544b0400557a04edec1bb10096ee86d.
 
-LAST VERIFIED RESULT: The independently derived finite pipeline now closes strict residual mass r=8 and the r=8 equality boundary: internally checked edge bound through S<=10 and balanced equality through S<=8. The general theorem remains open.
+LAST VERIFIED RESULT: Mathematical status unchanged by this administrative repair. The independently derived finite pipeline now closes strict residual mass r=8 and the r=8 equality boundary: internally checked edge bound through S<=10 and balanced equality through S<=8. The general theorem remains open.
 
-EVIDENCE: `project/research/session_logs/2026-09-22/2026-09-22T11-00-38+01-00-canonical.json`; `project/research/general_n/2026-09-22-zero-demand-equality-v1/`.
+EVIDENCE: `project/research/session_logs/2026-09-22/2026-09-22T13-23-48+01-00-admin-repair.md`; `project/research/session_logs/2026-09-22/2026-09-22T11-00-38+01-00-canonical.json`; `project/research/general_n/2026-09-22-zero-demand-equality-v1/`.
 
-SESSION UTILISATION: Trigger 2026-09-22 11:00:38 BST; earliest 11:01:19; next 12:00:38; cutoff 11:53:38; hard close 11:59:38. Closed intervals: 11:02:36–11:04:00, 11:04:50–11:06:51, 11:07:13–11:08:46, 11:09:08–11:11:53, 11:12:15–11:12:38, 11:13:23–11:14:27, 11:14:53–11:16:02, 11:16:23–11:18:32, 11:19:08–11:20:21, 11:20:42–11:22:03, 11:22:29–11:24:22, 11:24:49–11:26:13, 11:26:56–11:28:51, 11:29:19–11:30:35, 11:31:09–11:33:17, 11:37:18–11:39:04, 11:40:01–11:41:44, 11:43:03–11:45:53, 11:46:51–11:47:54, 11:48:48–11:50:36, 11:51:38–11:52:11; total 2001 seconds; units 20; preservation 2026-09-22T11:53:48+01:00; target YES/NO; SHORT/NONCOMPLIANT. Stop reason: Forward research stopped 87 seconds before the 11:53:38 cutoff to complete durable preservation and finalization before the hard-close deadline.. Canonical: `project/research/session_logs/2026-09-22/2026-09-22T11-00-38+01-00-canonical.json`.
+LAST RESEARCH SESSION UTILISATION (unchanged): Trigger 2026-09-22 11:00:38 BST; earliest 11:01:19; next 12:00:38; cutoff 11:53:38; hard close 11:59:38. Closed intervals: 11:02:36–11:04:00, 11:04:50–11:06:51, 11:07:13–11:08:46, 11:09:08–11:11:53, 11:12:15–11:12:38, 11:13:23–11:14:27, 11:14:53–11:16:02, 11:16:23–11:18:32, 11:19:08–11:20:21, 11:20:42–11:22:03, 11:22:29–11:24:22, 11:24:49–11:26:13, 11:26:56–11:28:51, 11:29:19–11:30:35, 11:31:09–11:33:17, 11:37:18–11:39:04, 11:40:01–11:41:44, 11:43:03–11:45:53, 11:46:51–11:47:54, 11:48:48–11:50:36, 11:51:38–11:52:11; total 2001 seconds; units 20; preservation 2026-09-22T11:53:48+01:00; target YES/NO; SHORT/NONCOMPLIANT. Stop reason: Forward research stopped 87 seconds before the 11:53:38 cutoff to complete durable preservation and finalization before the hard-close deadline.. Canonical: `project/research/session_logs/2026-09-22/2026-09-22T11-00-38+01-00-canonical.json`.
 
 UNPRESERVED WORK: None beyond named unfinished line.
 
 LATE REENTRY: 11:58:30–11:58:42 BST; mandatory reads only, zero research credit, finalized session remained closed.
 
-DEFERRED ADMIN: Historical missing-slot reconciliation and schedule maintenance.
+ADMIN REPAIR: At 13:23:48–13:23:49 BST paused the separate same-chat health checker and added current-invocation/low-overhead safeguards to the enabled research task; verified settings by re-reading them. Hourly research schedule, midnight audit, stop task and end date unchanged. This removes a source of recurring chat injections; backend delivery and substantive recovery remain UNVERIFIED. No research credit. Separate hourly health alerts are paused; in-run alerts and midnight audit remain.
 
-NEXT ACTION: Begin quotient-first r=9 strict-surplus work in the next scheduled session; retain all results at internal computer-assisted trust.
+DEFERRED ADMIN: Standalone checker relocation requires an unavailable destination control/authenticated interface; backend delivery trace unavailable; historical missing-slot reconciliation remains unverified.
+
+NEXT ACTION: In the next actual research invocation, establish its own trigger provenance, read the existing canonical record, publish/verify STARTED with CURRENT-STATUS before mathematics, then begin quotient-first r=9 strict-surplus work. Do not process old transcript requests as pending runs. Retain internal computer-assisted trust and all existing deadlines.
 
 FOCUSED-SESSION COUNT: 1/24 completed before this trigger; this trigger credit 0.
 
