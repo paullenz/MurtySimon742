@@ -1,0 +1,905 @@
+{
+  "(6,)": {
+    "labelled_equality_candidates": 0,
+    "candidate_orbits": 0,
+    "orbit_representatives": []
+  },
+  "(5, 1)": {
+    "labelled_equality_candidates": 0,
+    "candidate_orbits": 0,
+    "orbit_representatives": []
+  },
+  "(4, 2)": {
+    "labelled_equality_candidates": 0,
+    "candidate_orbits": 0,
+    "orbit_representatives": []
+  },
+  "(4, 1, 1)": {
+    "labelled_equality_candidates": 0,
+    "candidate_orbits": 0,
+    "orbit_representatives": []
+  },
+  "(3, 3)": {
+    "labelled_equality_candidates": 0,
+    "candidate_orbits": 0,
+    "orbit_representatives": []
+  },
+  "(3, 2, 1)": {
+    "labelled_equality_candidates": 0,
+    "candidate_orbits": 0,
+    "orbit_representatives": []
+  },
+  "(3, 1, 1, 1)": {
+    "labelled_equality_candidates": 7,
+    "candidate_orbits": 3,
+    "orbit_representatives": [
+      {
+        "representative": {
+          "edges": [
+            [
+              0,
+              1
+            ],
+            [
+              1,
+              2
+            ],
+            [
+              1,
+              3
+            ],
+            [
+              2,
+              3
+            ]
+          ],
+          "core_degrees": [
+            1,
+            3,
+            2,
+            2
+          ],
+          "P": [
+            1,
+            2,
+            3
+          ],
+          "N": [
+            0
+          ],
+          "h": [
+            0,
+            0,
+            0,
+            0
+          ],
+          "actual_degrees": [
+            3,
+            3,
+            2,
+            2
+          ],
+          "selected_lower_bounds": [
+            0,
+            2,
+            1,
+            1
+          ]
+        },
+        "labelled_count": 3
+      },
+      {
+        "representative": {
+          "edges": [
+            [
+              0,
+              1
+            ],
+            [
+              0,
+              2
+            ],
+            [
+              1,
+              2
+            ],
+            [
+              1,
+              3
+            ],
+            [
+              2,
+              3
+            ]
+          ],
+          "core_degrees": [
+            2,
+            3,
+            3,
+            2
+          ],
+          "P": [
+            1,
+            2,
+            3
+          ],
+          "N": [
+            0
+          ],
+          "h": [
+            0,
+            0,
+            0,
+            0
+          ],
+          "actual_degrees": [
+            3,
+            3,
+            3,
+            2
+          ],
+          "selected_lower_bounds": [
+            0,
+            2,
+            2,
+            1
+          ]
+        },
+        "labelled_count": 3
+      },
+      {
+        "representative": {
+          "edges": [
+            [
+              0,
+              1
+            ],
+            [
+              0,
+              2
+            ],
+            [
+              0,
+              3
+            ],
+            [
+              1,
+              2
+            ],
+            [
+              1,
+              3
+            ],
+            [
+              2,
+              3
+            ]
+          ],
+          "core_degrees": [
+            3,
+            3,
+            3,
+            3
+          ],
+          "P": [
+            1,
+            2,
+            3
+          ],
+          "N": [
+            0
+          ],
+          "h": [
+            0,
+            0,
+            0,
+            0
+          ],
+          "actual_degrees": [
+            3,
+            3,
+            3,
+            3
+          ],
+          "selected_lower_bounds": [
+            0,
+            2,
+            2,
+            2
+          ]
+        },
+        "labelled_count": 1
+      }
+    ]
+  },
+  "(2, 2, 2)": {
+    "labelled_equality_candidates": 0,
+    "candidate_orbits": 0,
+    "orbit_representatives": []
+  },
+  "(2, 2, 1, 1)": {
+    "labelled_equality_candidates": 1,
+    "candidate_orbits": 1,
+    "orbit_representatives": [
+      {
+        "representative": {
+          "edges": [
+            [
+              0,
+              1
+            ],
+            [
+              0,
+              2
+            ],
+            [
+              0,
+              3
+            ],
+            [
+              1,
+              2
+            ],
+            [
+              1,
+              3
+            ],
+            [
+              2,
+              3
+            ]
+          ],
+          "core_degrees": [
+            3,
+            3,
+            3,
+            3
+          ],
+          "P": [
+            0,
+            1,
+            2,
+            3
+          ],
+          "N": [],
+          "h": [
+            0,
+            0,
+            0,
+            0
+          ],
+          "actual_degrees": [
+            3,
+            3,
+            3,
+            3
+          ],
+          "selected_lower_bounds": [
+            1,
+            1,
+            2,
+            2
+          ]
+        },
+        "labelled_count": 1
+      }
+    ]
+  },
+  "(2, 1, 1, 1, 1)": {
+    "labelled_equality_candidates": 109,
+    "candidate_orbits": 9,
+    "orbit_representatives": [
+      {
+        "representative": {
+          "edges": [
+            [
+              0,
+              1
+            ],
+            [
+              0,
+              2
+            ],
+            [
+              0,
+              3
+            ],
+            [
+              0,
+              4
+            ],
+            [
+              1,
+              2
+            ],
+            [
+              1,
+              3
+            ]
+          ],
+          "core_degrees": [
+            4,
+            3,
+            2,
+            2,
+            1
+          ],
+          "P": [
+            0,
+            1,
+            2,
+            3
+          ],
+          "N": [
+            4
+          ],
+          "h": [
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          "actual_degrees": [
+            4,
+            3,
+            2,
+            2,
+            1
+          ],
+          "selected_lower_bounds": [
+            2,
+            2,
+            1,
+            1,
+            0
+          ]
+        },
+        "labelled_count": 12
+      },
+      {
+        "representative": {
+          "edges": [
+            [
+              0,
+              1
+            ],
+            [
+              0,
+              2
+            ],
+            [
+              0,
+              3
+            ],
+            [
+              1,
+              2
+            ],
+            [
+              1,
+              3
+            ],
+            [
+              2,
+              3
+            ]
+          ],
+          "core_degrees": [
+            3,
+            3,
+            3,
+            3,
+            0
+          ],
+          "P": [
+            0,
+            1,
+            2,
+            3
+          ],
+          "N": [
+            4
+          ],
+          "h": [
+            0,
+            0,
+            0,
+            0,
+            1
+          ],
+          "actual_degrees": [
+            3,
+            3,
+            3,
+            3,
+            0
+          ],
+          "selected_lower_bounds": [
+            1,
+            2,
+            2,
+            2,
+            0
+          ]
+        },
+        "labelled_count": 4
+      },
+      {
+        "representative": {
+          "edges": [
+            [
+              0,
+              1
+            ],
+            [
+              0,
+              2
+            ],
+            [
+              0,
+              4
+            ],
+            [
+              1,
+              2
+            ],
+            [
+              1,
+              3
+            ],
+            [
+              2,
+              3
+            ]
+          ],
+          "core_degrees": [
+            3,
+            3,
+            3,
+            2,
+            1
+          ],
+          "P": [
+            0,
+            1,
+            2,
+            3
+          ],
+          "N": [
+            4
+          ],
+          "h": [
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          "actual_degrees": [
+            3,
+            3,
+            3,
+            2,
+            1
+          ],
+          "selected_lower_bounds": [
+            1,
+            2,
+            2,
+            1,
+            0
+          ]
+        },
+        "labelled_count": 12
+      },
+      {
+        "representative": {
+          "edges": [
+            [
+              0,
+              1
+            ],
+            [
+              0,
+              2
+            ],
+            [
+              0,
+              3
+            ],
+            [
+              0,
+              4
+            ],
+            [
+              1,
+              4
+            ],
+            [
+              2,
+              3
+            ]
+          ],
+          "core_degrees": [
+            4,
+            2,
+            2,
+            2,
+            2
+          ],
+          "P": [
+            0,
+            1,
+            2,
+            3,
+            4
+          ],
+          "N": [],
+          "h": [
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          "actual_degrees": [
+            4,
+            2,
+            2,
+            2,
+            2
+          ],
+          "selected_lower_bounds": [
+            2,
+            1,
+            1,
+            1,
+            1
+          ]
+        },
+        "labelled_count": 3
+      },
+      {
+        "representative": {
+          "edges": [
+            [
+              0,
+              1
+            ],
+            [
+              0,
+              2
+            ],
+            [
+              0,
+              3
+            ],
+            [
+              1,
+              2
+            ],
+            [
+              1,
+              4
+            ],
+            [
+              2,
+              3
+            ]
+          ],
+          "core_degrees": [
+            3,
+            3,
+            3,
+            2,
+            1
+          ],
+          "P": [
+            0,
+            1,
+            2,
+            3
+          ],
+          "N": [
+            4
+          ],
+          "h": [
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          "actual_degrees": [
+            3,
+            3,
+            3,
+            2,
+            1
+          ],
+          "selected_lower_bounds": [
+            1,
+            2,
+            2,
+            1,
+            0
+          ]
+        },
+        "labelled_count": 24
+      },
+      {
+        "representative": {
+          "edges": [
+            [
+              0,
+              1
+            ],
+            [
+              0,
+              3
+            ],
+            [
+              0,
+              4
+            ],
+            [
+              1,
+              2
+            ],
+            [
+              1,
+              4
+            ],
+            [
+              2,
+              3
+            ]
+          ],
+          "core_degrees": [
+            3,
+            3,
+            2,
+            2,
+            2
+          ],
+          "P": [
+            0,
+            1,
+            2,
+            3,
+            4
+          ],
+          "N": [],
+          "h": [
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          "actual_degrees": [
+            3,
+            3,
+            2,
+            2,
+            2
+          ],
+          "selected_lower_bounds": [
+            1,
+            2,
+            1,
+            1,
+            1
+          ]
+        },
+        "labelled_count": 24
+      },
+      {
+        "representative": {
+          "edges": [
+            [
+              0,
+              1
+            ],
+            [
+              1,
+              3
+            ],
+            [
+              1,
+              4
+            ],
+            [
+              2,
+              3
+            ],
+            [
+              2,
+              4
+            ]
+          ],
+          "core_degrees": [
+            1,
+            3,
+            2,
+            2,
+            2
+          ],
+          "P": [
+            1,
+            2,
+            3,
+            4
+          ],
+          "N": [
+            0
+          ],
+          "h": [
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          "actual_degrees": [
+            2,
+            3,
+            2,
+            2,
+            2
+          ],
+          "selected_lower_bounds": [
+            0,
+            2,
+            1,
+            1,
+            1
+          ]
+        },
+        "labelled_count": 12
+      },
+      {
+        "representative": {
+          "edges": [
+            [
+              0,
+              1
+            ],
+            [
+              0,
+              2
+            ],
+            [
+              1,
+              3
+            ],
+            [
+              1,
+              4
+            ],
+            [
+              2,
+              3
+            ],
+            [
+              2,
+              4
+            ]
+          ],
+          "core_degrees": [
+            2,
+            3,
+            3,
+            2,
+            2
+          ],
+          "P": [
+            1,
+            2,
+            3,
+            4
+          ],
+          "N": [
+            0
+          ],
+          "h": [
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          "actual_degrees": [
+            2,
+            3,
+            3,
+            2,
+            2
+          ],
+          "selected_lower_bounds": [
+            0,
+            2,
+            2,
+            1,
+            1
+          ]
+        },
+        "labelled_count": 6
+      },
+      {
+        "representative": {
+          "edges": [
+            [
+              0,
+              1
+            ],
+            [
+              0,
+              3
+            ],
+            [
+              1,
+              3
+            ],
+            [
+              1,
+              4
+            ],
+            [
+              2,
+              3
+            ],
+            [
+              2,
+              4
+            ]
+          ],
+          "core_degrees": [
+            2,
+            3,
+            2,
+            3,
+            2
+          ],
+          "P": [
+            1,
+            2,
+            3,
+            4
+          ],
+          "N": [
+            0
+          ],
+          "h": [
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          "actual_degrees": [
+            2,
+            3,
+            2,
+            3,
+            2
+          ],
+          "selected_lower_bounds": [
+            0,
+            2,
+            1,
+            2,
+            1
+          ]
+        },
+        "labelled_count": 12
+      }
+    ]
+  },
+  "(1, 1, 1, 1, 1, 1)": {
+    "labelled_equality_candidates": 0,
+    "candidate_orbits": 0,
+    "orbit_representatives": []
+  }
+}
