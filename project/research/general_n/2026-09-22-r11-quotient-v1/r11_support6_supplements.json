@@ -1,0 +1,29 @@
+{
+  "R": [
+    3,
+    2,
+    2,
+    2,
+    1,
+    1
+  ],
+  "cases": {
+    "15870": {
+      "source_multisets": 1,
+      "supplement_feasible": 0
+    },
+    "16352": {
+      "source_multisets": 80,
+      "supplement_feasible": 0
+    },
+    "16360": {
+      "source_multisets": 2,
+      "supplement_feasible": 0
+    },
+    "16376": {
+      "source_multisets": 2,
+      "supplement_feasible": 0
+    }
+  },
+  "scope": "Exact internal source-population and supplement forcing."
+}

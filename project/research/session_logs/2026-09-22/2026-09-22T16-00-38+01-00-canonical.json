@@ -52,6 +52,12 @@
       "stop": "2026-09-22T16:24:21+01:00",
       "seconds": 42,
       "unit": 6
+    },
+    {
+      "start": "2026-09-22T16:26:13+01:00",
+      "stop": "2026-09-22T16:26:56+01:00",
+      "seconds": 43,
+      "unit": 7
     }
   ],
   "forward_research_stop": "PENDING",
@@ -59,9 +65,9 @@
   "preservation_complete": "PENDING",
   "final_report_time": "PENDING",
   "wall_clock_span_to_preservation_complete": "PENDING",
-  "verified_forward_research_span_seconds": 536,
+  "verified_forward_research_span_seconds": 579,
   "preservation_span": "PENDING",
-  "substantive_unit_count": 6,
+  "substantive_unit_count": 7,
   "timestamped_unit_ledger": [
     {
       "unit": 1,
@@ -98,6 +104,12 @@
       "start": "2026-09-22T16:23:39+01:00",
       "completed": "2026-09-22T16:24:21+01:00",
       "result": "Exact r=11 support-six quotient/source screen closes six of seven partitions; (3,2,2,2,1,1) leaves four source-feasible t=1 cores at masks 15870,16352,16360,16376 requiring supplement forcing."
+    },
+    {
+      "unit": 7,
+      "start": "2026-09-22T16:26:13+01:00",
+      "completed": "2026-09-22T16:26:56+01:00",
+      "result": "Exact multiset enumeration plus supplement forcing closes all four r=11 support-six source survivors: source populations 1,80,2,2 for masks 15870,16352,16360,16376, respectively; zero supplement-feasible in every case."
     }
   ],
   "early_stop_check_time": "PENDING",
@@ -119,8 +131,10 @@
     "b6affeb014835b3c9b6b669f39af6922b055c4da",
     "b6affeb014835b3c9b6b669f39af6922b055c4da",
     "5c4ab257193a6d7f268bff26f1bfb73774b41a25",
-    "5c4ab257193a6d7f268bff26f1bfb73774b41a25"
+    "5c4ab257193a6d7f268bff26f1bfb73774b41a25",
+    "d5641ea6024631127362e8a7a6f97fdb32fcd73a",
+    "d5641ea6024631127362e8a7a6f97fdb32fcd73a"
   ],
-  "live_unfinished_line": "Apply exact supplement forcing to four r=11 support-six (3,2,2,2,1,1) cores; supports >=7 remain.",
+  "live_unfinished_line": "r=11 supports <=6 closed; exact quotient/source pipeline for supports 7 through 10 remains.",
   "historical_fragments": []
 }
