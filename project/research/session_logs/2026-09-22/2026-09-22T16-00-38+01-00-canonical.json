@@ -70,6 +70,12 @@
       "stop": "2026-09-22T16:31:57+01:00",
       "seconds": 75,
       "unit": 9
+    },
+    {
+      "start": "2026-09-22T16:33:41+01:00",
+      "stop": "2026-09-22T16:33:55+01:00",
+      "seconds": 14,
+      "unit": 10
     }
   ],
   "forward_research_stop": "PENDING",
@@ -77,9 +83,9 @@
   "preservation_complete": "PENDING",
   "final_report_time": "PENDING",
   "wall_clock_span_to_preservation_complete": "PENDING",
-  "verified_forward_research_span_seconds": 666,
+  "verified_forward_research_span_seconds": 680,
   "preservation_span": "PENDING",
-  "substantive_unit_count": 9,
+  "substantive_unit_count": 10,
   "timestamped_unit_ledger": [
     {
       "unit": 1,
@@ -134,6 +140,12 @@
       "start": "2026-09-22T16:30:42+01:00",
       "completed": "2026-09-22T16:31:57+01:00",
       "result": "Exact physical-source feasibility rejects all 293 r=11 support-seven strict cores across all five partitions. Therefore r=11 supports <=7 are internally closed; supports 8-10 remain."
+    },
+    {
+      "unit": 10,
+      "start": "2026-09-22T16:33:41+01:00",
+      "completed": "2026-09-22T16:33:55+01:00",
+      "result": "Exact r=11 support-eight automorphism quotient: coloured core orbit counts 79,264; 483,040; 472,128 for partitions (4,1^7),(3,2,1^6),(2,2,2,1^5), with 26,800,1670 optimistic strict survivors (2496 total). Source screen pending."
     }
   ],
   "early_stop_check_time": "PENDING",
@@ -161,8 +173,10 @@
     "d1765ff25aeb2630d36342779d0eda1fd5412f3c",
     "d1765ff25aeb2630d36342779d0eda1fd5412f3c",
     "00bb1cb39815520119dacfd97a30bd7559c8d35c",
-    "00bb1cb39815520119dacfd97a30bd7559c8d35c"
+    "00bb1cb39815520119dacfd97a30bd7559c8d35c",
+    "7b4b2df81625211a80a06f68408ddfe03be3ae37",
+    "7b4b2df81625211a80a06f68408ddfe03be3ae37"
   ],
-  "live_unfinished_line": "r=11 supports <=7 closed; quotient/source screening for support-eight partitions and above remains.",
+  "live_unfinished_line": "Source-screen 2496 r=11 support-eight strict cores; supports nine and ten remain.",
   "historical_fragments": []
 }
