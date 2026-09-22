@@ -1,0 +1,20 @@
+{
+  "case": 0,
+  "feasible_rows": [],
+  "partition": [
+    3,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1
+  ],
+  "scope": "Integer physical-source necessary condition encoded as MILP; internal computer-assisted result, not graph realization.",
+  "solver_unknown": 0,
+  "source_feasible": 0,
+  "strict_core_orbits": 125,
+  "unknown_rows": []
+}

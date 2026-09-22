@@ -9,23 +9,21 @@ CHECKPOINT CLASS: VERIFIED_INTERNAL_NOT_PROMOTED
 
 WORK MODE: FORWARD_RESEARCH_LIVE
 
-INSPECTED PREDECESSOR: ab0a475be153792ed014c01a750f7bd32b855c60.
+INSPECTED PREDECESSOR: fdf1c3b14bf8b18da1ee7c99feb82ed2680630f2.
 
-LAST VERIFIED RESULT: r=11 is internally closed through support eight. Exact support-nine orbit enumeration over all 274,668 unlabelled nine-vertex cores produced 2,208,612 residual-coloured orbits for (3,1^8), with 125 optimistic strict candidates, and 8,295,664 coloured orbits for (2,2,1^7), with 3,148 strict candidates. The combined 3,273 candidates await physical-source screening.
+LAST VERIFIED RESULT: r=11 is internally closed through support eight. At support nine, the (3,1^8) partition has 125 optimistic strict core orbits; the integer physical-source MILP rejects all 125 with zero solver-unknown cases. The (2,2,1^7) partition still has 3,148 candidates awaiting screening.
 
-EVIDENCE: `r11_support9_orbits.cpp`, counts, and masks under `project/research/general_n/2026-09-22-r11-quotient-v1/`; canonical telemetry.
+EVIDENCE: `r11_support9_sources_milp.py` and `r11_support9_sources_case0.json` under the r11 quotient package; canonical telemetry.
 
-SESSION UTILISATION: Trigger 17:00:38 BST; actual start 17:00:58; seven closed intervals; verified total 820s (13m40s); seven substantive units; cutoff 17:53:38; target YES/PENDING; LIVE.
+SESSION UTILISATION: Trigger 17:00:38 BST; actual start 17:00:58; eight closed intervals; verified total 832s (13m52s); eight substantive units; cutoff 17:53:38; target YES/PENDING; LIVE.
 
 UNPRESERVED WORK: None at this checkpoint.
 
-DEFERRED ADMIN: Historical reconciliation and prose-only README edits.
-
-NEXT ACTION: Apply the exact integer physical-source MILP screen to both support-nine partitions shardwise.
+NEXT ACTION: Screen all 3,148 (2,2,1^7) support-nine candidates by the same integer physical-source condition.
 
 FOCUSED-SESSION COUNT: 1/24; current trigger credit pending final compliance.
 
-MANDATORY CONSTRAINTS: Orbit/strict-core feasibility is not graph realization; equality controls remain mandatory.
+MANDATORY CONSTRAINTS: Source infeasibility is an internal necessary-condition closure, not graph realization.
 <!-- CURRENT-STATUS:END -->
 
 ## Latest adversarial audit - 22 September 2026
