@@ -3,7 +3,7 @@
   "scheduled_trigger": "2026-09-22T10:00:38+01:00",
   "scheduled_trigger_attribution": "Invocation identifies scheduled research task; DTSTART equals this first trigger. Not inferred from wall clock.",
   "run_kind": "SCHEDULED",
-  "status": "STARTED",
+  "status": "FINALIZING",
   "earliest_actual_start": "2026-09-22T10:02:42+01:00",
   "runtime_entry_metadata": "2026-09-22T10:02:08+01:00",
   "next_scheduled_trigger": "2026-09-22T11:00:38+01:00",
@@ -109,6 +109,13 @@
       "actual_stop": "2026-09-22T10:50:08+01:00",
       "role": "forward_research",
       "notes": "Core identity graph regression and necessary physical-source diamond enumeration."
+    },
+    {
+      "segment_id": "research-11",
+      "actual_start": "2026-09-22T10:50:33+01:00",
+      "actual_stop": "2026-09-22T10:53:15+01:00",
+      "role": "forward_research",
+      "notes": "Legal-supplement exclusion of diamond and all six one-link source survivors; isolate disjoint-triangle component proof obligation."
     }
   ],
   "forward_research_intervals": [
@@ -171,17 +178,22 @@
       "start": "2026-09-22T10:49:42+01:00",
       "stop": "2026-09-22T10:50:08+01:00",
       "evidence": "CORE_REGRESSION.md, CORE_RESULTS.json, DIAMOND_KERNEL_RESULTS.json"
+    },
+    {
+      "start": "2026-09-22T10:50:33+01:00",
+      "stop": "2026-09-22T10:53:15+01:00",
+      "evidence": "EQUALITY_SOURCE_HANDOFF.md, leaf_source_kernel.py, LEAF_KERNEL_RESULTS.json"
     }
   ],
-  "forward_research_stop": null,
-  "preservation_start": null,
+  "forward_research_stop": "2026-09-22T10:53:15+01:00",
+  "preservation_start": "2026-09-22T10:53:15+01:00",
   "preservation_complete": null,
   "final_report_time": null,
   "wall_clock_span_to_preservation_complete": null,
-  "verified_forward_research_span": 1978,
+  "verified_forward_research_span": 2140,
   "verified_forward_research_span_units": "seconds",
   "preservation_span": null,
-  "substantive_unit_count": 10,
+  "substantive_unit_count": 11,
   "timestamped_unit_ledger": [
     {
       "completed_at": "2026-09-22T10:08:19+01:00",
@@ -242,15 +254,21 @@
       "unit": "Core regression and residual-five diamond kernels",
       "result": "PASS 68741 positive-core identities, 1982 <=3-support cases and 186 r5 cases. No r5 equality or S6/7 actual fixtures. Diamond source patterns: heavy-degree2 none; heavy-degree3 one necessary survivor, not a graph.",
       "artifact": "project/research/general_n/2026-09-22-zero-demand-equality-v1/CORE_REGRESSION.md"
+    },
+    {
+      "completed_at": "2026-09-22T10:53:15+01:00",
+      "unit": "Equality source kernels and legal-supplement exclusions",
+      "result": "Heavy-degree3 diamond and six one-link survivors fail legal supplements; disjoint-triangle localization deferred for independent audit. Public equality scope unchanged.",
+      "artifact": "project/research/general_n/2026-09-22-zero-demand-equality-v1/EQUALITY_SOURCE_HANDOFF.md"
     }
   ],
-  "early_stop_check_time": null,
-  "early_stop_check_result": null,
-  "stop_reason": null,
+  "early_stop_check_time": "2026-09-22T10:53:15+01:00",
+  "early_stop_check_result": "23 seconds remain to research cutoff; no further substantive unit begun; finalize preservation before hard close.",
+  "stop_reason": "Stopped 23 seconds before research cutoff for final preservation; 50-minute target missed. Preservation, monitoring and context-reentry gaps excluded; no blocked-avenues exception claimed.",
   "target_50m_applies": "YES",
-  "target_50m_met": "PENDING",
+  "target_50m_met": "NO",
   "available_seconds_from_earliest_start": 3056,
-  "compliance_status": "IN_PROGRESS",
+  "compliance_status": "SHORT/NONCOMPLIANT",
   "infrastructure_failures": [],
   "commit_shas": [
     "4ddec2c1db2ec95293b98a385740d7e0345b651e",
@@ -262,9 +280,10 @@
     "2754a3685667a5a2d8f64f7bb01cd058715d9ef9",
     "03924f3af8b0a45a572ebc1b5671535dd84637fe",
     "4940c5bb48b9b2dc4010cd8b828a1e18059e0873",
-    "dd6951a01fba05dc9512377bd32ae28ec8b53224"
+    "dd6951a01fba05dc9512377bd32ae28ec8b53224",
+    "1fc02134cc976df9a5815d5e3994f6d58fc4f72c"
   ],
-  "live_unfinished_line": "Attack legal supplements of unique diamond source survivor and remaining T-neighbor equality shapes.",
+  "live_unfinished_line": "Independently audit localized unit-triangle cycle contradiction and finite-kernel supplement exclusions; retain S<=7 edge bound and S<=4 equality until promoted.",
   "historical_fragments": [],
   "focused_session_credit": 0,
   "ancillary_checks": [
@@ -277,5 +296,6 @@
       "completed_at": "2026-09-22T10:49:42+01:00",
       "result": "Current durable substantive checkpoint 10:47:32 verified; preceding 09 canonical still404. No changed health alert; original research resumed."
     }
-  ]
+  ],
+  "focused_session_credit_note": "Not added to completed compliant focused-session count; SHORT attempt retained for daily audit, never counted more than once."
 }
