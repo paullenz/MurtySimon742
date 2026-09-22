@@ -46,6 +46,12 @@
       "stop": "2026-09-22T15:29:10+01:00",
       "seconds": 281,
       "unit": 5
+    },
+    {
+      "start": "2026-09-22T15:30:12+01:00",
+      "stop": "2026-09-22T15:31:16+01:00",
+      "seconds": 64,
+      "unit": 6
     }
   ],
   "forward_research_stop": "PENDING",
@@ -53,9 +59,9 @@
   "preservation_complete": "PENDING",
   "final_report_time": "PENDING",
   "wall_clock_span_to_preservation_complete": "PENDING",
-  "verified_forward_research_span_seconds": 1031,
+  "verified_forward_research_span_seconds": 1095,
   "preservation_span": "PENDING",
-  "substantive_unit_count": 5,
+  "substantive_unit_count": 6,
   "timestamped_unit_ledger": [
     {
       "unit": 1,
@@ -86,6 +92,12 @@
       "start": "2026-09-22T15:24:29+01:00",
       "completed": "2026-09-22T15:29:10+01:00",
       "result": "Exact r=10 core/source quotient through support seven leaves exactly two source-feasible t=1 orbits: (2,2,2,2,1,1) mask 3515 and (2,2,2,1,1,1,1) mask 401020."
+    },
+    {
+      "unit": 6,
+      "start": "2026-09-22T15:30:12+01:00",
+      "completed": "2026-09-22T15:31:16+01:00",
+      "result": "Exact supplement forcing eliminates both r=10 source-feasible cores through support seven: mask 3515 (72 populations) and mask 401020 (1), zero supplement-feasible."
     }
   ],
   "early_stop_check_time": "PENDING",
@@ -101,8 +113,9 @@
     "d3cbbb330dce26f4f553bc0c2aed1062d9776715",
     "d8e05ed49a9ae1198389935474d5b1001faa1cfd",
     "9bd0f6c5cccea9b8735597a5f6949073e16af6f5",
-    "6d476ae08dd3971713d4a7ca4ac925c2cf92bba1"
+    "6d476ae08dd3971713d4a7ca4ac925c2cf92bba1",
+    "a95cf9d74ec34cf192eb4c3396fa02f6c036b6b2"
   ],
-  "live_unfinished_line": "Apply exact supplement forcing to r=10 masks 3515 and 401020; supports eight and nine remain unscreened.",
+  "live_unfinished_line": "r=10 supports eight and nine remain; support ten all-unit separately closed.",
   "historical_fragments": []
 }

@@ -5,23 +5,23 @@ Canonical repository: `paullenz/MurtySimon742`. Date: 22 September 2026.
 Active target: a genuinely independent proof of Erdős #742 / the Murty–Simon inequality e(G)<=floor(n^2/4), preferably with the equality characterization. Forward priority is the project’s own complement / residual / Hall / profile / realizability route, not a reconstruction of the external e+disj+X proof. The first focused session produced the internally checked candidate threshold `Delta>=250n/429`, shrinking the live strip to `n/2<Delta<250n/429`. The theorem and its inherited graph-to-profile spine remain candidate/internal-review mathematics. A 24-focused-session go/no-go gate applies. Prior eventual-D2C work remains preserved but is no longer the active forward objective.
 
 <!-- CURRENT-STATUS:START -->
-CHECKPOINT CLASS: WIP_UNVERIFIED
+CHECKPOINT CLASS: VERIFIED_INTERNAL_NOT_PROMOTED
 
 WORK MODE: MATH
 
-INSPECTED PREDECESSOR: 6d476ae08dd3971713d4a7ca4ac925c2cf92bba1.
+INSPECTED PREDECESSOR: a95cf9d74ec34cf192eb4c3396fa02f6c036b6b2.
 
-LAST VERIFIED RESULT: Strict r=9 internal closure/replay retained, extending the internal edge bound through S<=11. New r=10 quotient/source triage through support seven leaves exactly two source-feasible t=1 orbits: partition (2,2,2,2,1,1) mask 3515 and partition (2,2,2,1,1,1,1) mask 401020. Supports eight/nine remain; no r=10 closure.
+LAST VERIFIED RESULT: Strict r=9 internal closure/replay retained (edge bound through S<=11). At r=10, exact core/source/supplement enumeration now closes every residual partition of support <=7; mask 3515's 72 source populations and mask 401020's unique population are all supplement-infeasible. Supports eight/nine remain; no r=10 closure or new S-bound.
 
-EVIDENCE: `project/research/general_n/2026-09-22-r10-quotient-v1/R10_SUPPORT_LE7_SCREEN.md`; `project/research/general_n/2026-09-22-r10-quotient-v1/screen_r10_quotient_sources.py`; `project/research/general_n/2026-09-22-r10-quotient-v1/R10_SUPPORT_LE7_RESULTS.json`; r=9 audit package.
+EVIDENCE: `project/research/general_n/2026-09-22-r10-quotient-v1/R10_SUPPORT_LE7_SCREEN.md`; `project/research/general_n/2026-09-22-r10-quotient-v1/R10_SUPPORT_LE7_SUPPLEMENT_CLOSURE.md`; `project/research/general_n/2026-09-22-r10-quotient-v1/check_r10_support7_supplements.py`; saved JSON results.
 
-SESSION UTILISATION: Trigger 15:00:38 BST; actual start 15:04:10; cutoff 15:53:38; hard close 15:59:38. Five closed intervals; verified total 1031s (17m11s); units 5; target NO/N/A; LIVE. Canonical: `project/research/session_logs/2026-09-22/2026-09-22T15-00-38+01-00-canonical.json`.
+SESSION UTILISATION: Trigger 15:00:38 BST; actual start 15:04:10; cutoff 15:53:38; hard close 15:59:38. Six closed intervals; verified total 1095s (18m15s); units 6; target NO/N/A; LIVE. Canonical: `project/research/session_logs/2026-09-22/2026-09-22T15-00-38+01-00-canonical.json`.
 
 UNPRESERVED WORK: None.
 
 DEFERRED ADMIN: Historical missing-slot reconciliation; standalone health-check relocation; optional README polishing.
 
-NEXT ACTION: Apply exact supplement forcing to r=10 masks 3515 and 401020, then tackle supports eight and nine if closed.
+NEXT ACTION: Enumerate r=10 residual support eight by colour-preserving quotient and source feasibility; retain support nine and equality scope as open.
 
 FOCUSED-SESSION COUNT: 1/24 completed before this trigger; this trigger pending.
 
