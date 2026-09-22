@@ -5,27 +5,27 @@ Canonical repository: `paullenz/MurtySimon742`. Date: 22 September 2026.
 Active target: a genuinely independent proof of Erdős #742 / the Murty–Simon inequality e(G)<=floor(n^2/4), preferably with the equality characterization. Forward priority is the project’s own complement / residual / Hall / profile / realizability route, not a reconstruction of the external e+disj+X proof. The first focused session produced the internally checked candidate threshold `Delta>=250n/429`, shrinking the live strip to `n/2<Delta<250n/429`. The theorem and its inherited graph-to-profile spine remain candidate/internal-review mathematics. A 24-focused-session go/no-go gate applies. Prior eventual-D2C work remains preserved but is no longer the active forward objective.
 
 <!-- CURRENT-STATUS:START -->
-CHECKPOINT CLASS: IN_PROGRESS
+CHECKPOINT CLASS: VERIFIED_INTERNAL_NOT_PROMOTED
 
-WORK MODE: MATH
+WORK MODE: PRESERVATION_COMPLETE
 
-INSPECTED PREDECESSOR: 413a5865c813f4e4f64e042b73ef4361567a0383.
+INSPECTED PREDECESSOR: e47e26dcc2e71be56d5394ff5f9d4d83130349d4.
 
-LAST VERIFIED RESULT: Internal strict r=10 closure/edge bound through S<=12 retained; r=11 supports <=7 closed. The r=11 support-eight quotient has 2,496 strict candidates. Exact source screen is active as execution session 92272; no result is claimed yet.
+LAST VERIFIED RESULT: Internal strict r=10 closure is independently replayed, extending the internal edge bound through S<=12. At r=11, every partition of support <=7 is internally closed. Support eight has exactly 2,496 optimistic strict cores. A monolithic exact source screen was interrupted after 17m16s without a final aggregate; no support-eight feasibility or closure claim is made. Supports 9-10 remain.
 
-EVIDENCE: Saved source-screen code; active execution session 92272. Backstop checkpoint at 16:45:36 was 19 seconds late.
+EVIDENCE: `project/research/general_n/2026-09-22-r10-quotient-v1/`; `project/research/general_n/2026-09-22-r11-quotient-v1/`; canonical telemetry.
 
-SESSION UTILISATION: Trigger 16:00:38 BST; actual start 16:03:51; cutoff 16:53:38. Ten closed intervals; verified total 680s (11m20s); units 10; target NO/N/A; LIVE. Active unit begun 16:35:17 is not yet credited. Canonical: `project/research/session_logs/2026-09-22/2026-09-22T16-00-38+01-00-canonical.json`.
+SESSION UTILISATION: Trigger 16:00:38 BST; actual start 16:03:51; eleven closed intervals; verified total 1716s (28m36s); forward stop 16:52:33; cutoff 16:53:38; preservation complete 16:52:54; units 11; target NO/N/A because only 49m47s was available; COMPLETED / TARGET_NA_LATE_START / CHECKPOINT_BACKSTOP_BREACH_19S. Canonical: `project/research/session_logs/2026-09-22/2026-09-22T16-00-38+01-00-canonical.json`.
 
-UNPRESERVED WORK: Active source-screen computation session 92272; result pending.
+UNPRESERVED WORK: None; the interrupted process produced no final aggregate.
 
 DEFERRED ADMIN: Historical missing-slot reconciliation.
 
-NEXT ACTION: Observe source-screen completion, close its interval, and preserve the result or honest timeout.
+NEXT ACTION: Shard r=11 support-eight source screening by partition, checkpointing each completed case; then support nine and ten.
 
-FOCUSED-SESSION COUNT: 1/24; this shortened late-start trigger pending and receives no automatic credit.
+FOCUSED-SESSION COUNT: 1/24; this shortened late-start trigger receives no focused-session credit.
 
-MANDATORY CONSTRAINTS: Do not infer computation time; no source/result claim until durable closure.
+MANDATORY CONSTRAINTS: Do not infer results from interrupted computation; internal finite work is not external verification or graph realization.
 <!-- CURRENT-STATUS:END -->
 
 ## Latest adversarial audit - 22 September 2026

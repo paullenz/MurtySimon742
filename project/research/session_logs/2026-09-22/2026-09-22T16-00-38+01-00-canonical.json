@@ -11,9 +11,9 @@
     {
       "segment_id": "segment-1",
       "actual_start": "2026-09-22T16:03:51+01:00",
-      "actual_stop": "PENDING",
+      "actual_stop": "2026-09-22T16:52:33+01:00",
       "role": "forward_research",
-      "notes": "Current invocation; mandatory CURRENT_STATE/AGENTS/schema and scoped mathematical reads completed before durable STARTED publication."
+      "notes": "Mandatory reads and durable STARTED publication preceded eleven closed research units; final unit was an honestly interrupted exact computation."
     },
     {
       "segment_id": "segment-2",
@@ -83,16 +83,28 @@
       "stop": "2026-09-22T16:33:55+01:00",
       "seconds": 14,
       "unit": 10
+    },
+    {
+      "start": "2026-09-22T16:35:17+01:00",
+      "stop": "2026-09-22T16:52:33+01:00",
+      "seconds": 1036,
+      "unit": 11
     }
   ],
-  "forward_research_stop": "PENDING",
-  "preservation_start": "PENDING",
-  "preservation_complete": "PENDING",
-  "final_report_time": "PENDING",
-  "wall_clock_span_to_preservation_complete": "PENDING",
-  "verified_forward_research_span_seconds": 680,
-  "preservation_span": "PENDING",
-  "substantive_unit_count": 10,
+  "forward_research_stop": "2026-09-22T16:52:33+01:00",
+  "preservation_start": "2026-09-22T16:52:33+01:00",
+  "preservation_complete": "2026-09-22T16:52:54+01:00",
+  "final_report_time": "2026-09-22T16:52:54+01:00",
+  "wall_clock_span_to_preservation_complete": {
+    "seconds": 2943,
+    "human": "49m03s"
+  },
+  "verified_forward_research_span_seconds": 1716,
+  "preservation_span": {
+    "seconds": 21,
+    "human": "0m21s"
+  },
+  "substantive_unit_count": 11,
   "timestamped_unit_ledger": [
     {
       "unit": 1,
@@ -153,14 +165,20 @@
       "start": "2026-09-22T16:33:41+01:00",
       "completed": "2026-09-22T16:33:55+01:00",
       "result": "Exact r=11 support-eight automorphism quotient: coloured core orbit counts 79,264; 483,040; 472,128 for partitions (4,1^7),(3,2,1^6),(2,2,2,1^5), with 26,800,1670 optimistic strict survivors (2496 total). Source screen pending."
+    },
+    {
+      "unit": 11,
+      "start": "2026-09-22T16:35:17+01:00",
+      "completed": "2026-09-22T16:52:33+01:00",
+      "result": "Attempted exact parallel dynamic-program source screen for all 2496 r=11 support-eight strict cores. It produced no final aggregate within 17m16s and was interrupted before cutoff for preservation. No feasibility claim is made; next run should shard by partition/case and checkpoint partial aggregates."
     }
   ],
-  "early_stop_check_time": "PENDING",
-  "early_stop_check_result": "PENDING",
-  "stop_reason": "PENDING",
+  "early_stop_check_time": "2026-09-22T16:52:33+01:00",
+  "early_stop_check_result": "Only 65 seconds remained before the research cutoff; the >5-minute continuation condition was false. Interrupted the unfinished computation and began preservation.",
+  "stop_reason": "Interrupted the unfinished 2496-case support-eight source screen at a closed boundary to preserve before the hard deadline.",
   "target_50m_applies": "NO (49m47s available from observed start to cutoff)",
   "target_50m_met": "N/A",
-  "compliance_status": "STARTED / LIVE",
+  "compliance_status": "COMPLETED / TARGET_NA_LATE_START / CHECKPOINT_BACKSTOP_BREACH_19S",
   "infrastructure_failures": [
     "Support-eight source screen launched at 16:35:17 as local execution session 92272; preservation backstop checkpoint recorded at 16:45:36, 19 seconds beyond ten minutes. No result or elapsed computation is credited until a closed boundary is observed."
   ],
@@ -186,8 +204,10 @@
     "7b4b2df81625211a80a06f68408ddfe03be3ae37",
     "7b4b2df81625211a80a06f68408ddfe03be3ae37",
     "413a5865c813f4e4f64e042b73ef4361567a0383",
-    "413a5865c813f4e4f64e042b73ef4361567a0383"
+    "413a5865c813f4e4f64e042b73ef4361567a0383",
+    "e47e26dcc2e71be56d5394ff5f9d4d83130349d4",
+    "e47e26dcc2e71be56d5394ff5f9d4d83130349d4"
   ],
-  "live_unfinished_line": "Source-screen 2496 r=11 support-eight strict cores; supports nine and ten remain.",
+  "live_unfinished_line": "r=11 supports <=7 are closed. Support eight has 2496 strict cores; source feasibility is unresolved after an interrupted monolithic screen. Shard by the three partitions next. Supports nine and ten also remain.",
   "historical_fragments": []
 }
