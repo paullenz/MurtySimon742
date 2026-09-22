@@ -9,21 +9,21 @@ CHECKPOINT CLASS: VERIFIED_INTERNAL_NOT_PROMOTED
 
 WORK MODE: FORWARD_RESEARCH_LIVE
 
-INSPECTED PREDECESSOR: fdf1c3b14bf8b18da1ee7c99feb82ed2680630f2.
+INSPECTED PREDECESSOR: 662e11ed380c85ddad821e439228563499909792.
 
-LAST VERIFIED RESULT: r=11 is internally closed through support eight. At support nine, the (3,1^8) partition has 125 optimistic strict core orbits; the integer physical-source MILP rejects all 125 with zero solver-unknown cases. The (2,2,1^7) partition still has 3,148 candidates awaiting screening.
+LAST VERIFIED RESULT: r=11 is internally closed through support eight. At support nine, (3,1^8) is source-infeasible. For (2,2,1^7), the integer source MILP rejects 3,140 of 3,148 strict cores and leaves 8 source-feasible rows, with zero solver-unknown cases. All 8 have t_upper=1 and require exact supplement forcing; no support-nine closure is yet claimed.
 
-EVIDENCE: `r11_support9_sources_milp.py` and `r11_support9_sources_case0.json` under the r11 quotient package; canonical telemetry.
+EVIDENCE: `r11_support9_sources_case0.json` and `r11_support9_sources_case1.json` under the r11 quotient package; canonical telemetry.
 
-SESSION UTILISATION: Trigger 17:00:38 BST; actual start 17:00:58; eight closed intervals; verified total 832s (13m52s); eight substantive units; cutoff 17:53:38; target YES/PENDING; LIVE.
+SESSION UTILISATION: Trigger 17:00:38 BST; actual start 17:00:58; nine closed intervals; verified total 1090s (18m10s); nine substantive units; cutoff 17:53:38; target YES/PENDING; LIVE.
 
 UNPRESERVED WORK: None at this checkpoint.
 
-NEXT ACTION: Screen all 3,148 (2,2,1^7) support-nine candidates by the same integer physical-source condition.
+NEXT ACTION: Run a pivoted exact early-exit DFS over all source multisets for the 8 support-nine survivors and apply one-supplement forcing.
 
 FOCUSED-SESSION COUNT: 1/24; current trigger credit pending final compliance.
 
-MANDATORY CONSTRAINTS: Source infeasibility is an internal necessary-condition closure, not graph realization.
+MANDATORY CONSTRAINTS: The 8 rows are abstract source-feasible kernels only; do not infer graph realizability.
 <!-- CURRENT-STATUS:END -->
 
 ## Latest adversarial audit - 22 September 2026
