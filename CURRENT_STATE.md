@@ -9,23 +9,23 @@ CHECKPOINT CLASS: VERIFIED_INTERNAL_NOT_PROMOTED
 
 WORK MODE: MATH
 
-INSPECTED PREDECESSOR: b6affeb014835b3c9b6b669f39af6922b055c4da.
+INSPECTED PREDECESSOR: 5c4ab257193a6d7f268bff26f1bfb73774b41a25.
 
-LAST VERIFIED RESULT: Strict r=10 closure independently replayed; internal edge bound through S<=12. At r=11, every residual partition of support <=5 is now exactly source-closed: 12 optimistic strict orbits across (7,1^4) and (6,2,1^3), zero source-feasible. Higher supports remain; no S<=13 extension.
+LAST VERIFIED RESULT: Internal strict r=10 closure/edge bound through S<=12 retained. At r=11, supports <=5 are source-closed. The exact support-six screen closes six partitions and leaves four source-feasible t=1 cores in (3,2,2,2,1,1), masks 15870, 16352, 16360 and 16376, pending supplement forcing. Supports >=7 remain.
 
-EVIDENCE: `project/research/general_n/2026-09-22-r11-quotient-v1/R11_SUPPORT_LE5_SCREEN.md`; exact code/result.
+EVIDENCE: `project/research/general_n/2026-09-22-r11-quotient-v1/R11_SUPPORT6_SCREEN.md`; exact code/result.
 
-SESSION UTILISATION: Trigger 16:00:38 BST; actual start 16:03:51; cutoff 16:53:38. Five closed intervals; verified total 494s (8m14s); units 5; target NO/N/A; LIVE. Canonical: `project/research/session_logs/2026-09-22/2026-09-22T16-00-38+01-00-canonical.json`.
+SESSION UTILISATION: Trigger 16:00:38 BST; actual start 16:03:51; cutoff 16:53:38. Six closed intervals; verified total 536s (8m56s); units 6; target NO/N/A; LIVE. Canonical: `project/research/session_logs/2026-09-22/2026-09-22T16-00-38+01-00-canonical.json`.
 
 UNPRESERVED WORK: None.
 
 DEFERRED ADMIN: Historical missing-slot reconciliation.
 
-NEXT ACTION: Exact r=11 support-six quotient/source screen.
+NEXT ACTION: Exact supplement forcing for masks 15870, 16352, 16360 and 16376.
 
 FOCUSED-SESSION COUNT: 1/24; this shortened late-start trigger pending and receives no automatic credit.
 
-MANDATORY CONSTRAINTS: Internal finite computation is not external verification or graph realization; preserve balanced equality controls.
+MANDATORY CONSTRAINTS: Source feasibility is not graph realization; internal finite computation is not external verification.
 <!-- CURRENT-STATUS:END -->
 
 ## Latest adversarial audit - 22 September 2026
