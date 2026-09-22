@@ -1,0 +1,11 @@
+{
+  "orbits_tested": 69,
+  "milp_feasible": 0,
+  "all_status_infeasible": true,
+  "pattern_range": [
+    640,
+    946
+  ],
+  "solver": "scipy.optimize.milp / HiGHS",
+  "scope": "Independent integer-linear feasibility replay."
+}

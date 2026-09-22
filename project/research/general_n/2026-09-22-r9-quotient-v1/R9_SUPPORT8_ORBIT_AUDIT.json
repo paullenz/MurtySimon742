@@ -1,0 +1,12 @@
+{
+  "unit_graph_orbits_burnside": 1044,
+  "rooted_coloured_graph_orbits_burnside": 79264,
+  "saved_strict_orbits": 69,
+  "pairwise_colour_inequivalent": 69,
+  "t_upper_counts": {
+    "1": 60,
+    "2": 9
+  },
+  "mask_sha256": "5bf755609d1c8f7ea7b513aaec15a224a442e45c11516e63e462be8f15f57297",
+  "scope": "Independent Burnside/group-action and saved-mask invariant audit; source DP audited separately."
+}

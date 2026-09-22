@@ -9,19 +9,19 @@ CHECKPOINT CLASS: VERIFIED_INTERNAL_NOT_PROMOTED
 
 WORK MODE: MATH
 
-INSPECTED PREDECESSOR: d8e05ed49a9ae1198389935474d5b1001faa1cfd.
+INSPECTED PREDECESSOR: 9bd0f6c5cccea9b8735597a5f6949073e16af6f5.
 
-LAST VERIFIED RESULT: Internal computer-assisted finite pipeline now closes strict residual mass r=9: support<=7 closes by quotient/source/supplement screens; support-eight has 79,264 rooted core orbits, 69 optimistic strict survivors and zero physical-source-feasible; support-nine all-unit is separately excluded. Hence strict counterprofiles require r>=10 and the internal edge bound extends through S<=11. Equality scope and general theorem unchanged.
+LAST VERIFIED RESULT: Strict r=9 closure independently replayed: Burnside counts reproduce 1044 unit-graph and 79,264 rooted-coloured orbits; 69 saved strict masks are pairwise inequivalent; an independent MILP/HiGHS formulation finds all 69 source systems infeasible. Internal edge bound through S<=11 retained. Equality scope/general theorem unchanged.
 
-EVIDENCE: `project/research/general_n/2026-09-22-r9-quotient-v1/R9_STRICT_CLOSURE.md`; `project/research/general_n/2026-09-22-r9-quotient-v1/enumerate_r9_support8_orbits.cpp`; `project/research/general_n/2026-09-22-r9-quotient-v1/R9_SUPPORT8_CORE_MASKS.txt`; `project/research/general_n/2026-09-22-r9-quotient-v1/screen_r9_support8_sources.py`; `project/research/general_n/2026-09-22-r9-quotient-v1/R9_SUPPORT8_SOURCE_RESULTS.json`.
+EVIDENCE: `project/research/general_n/2026-09-22-r9-quotient-v1/R9_STRICT_CLOSURE.md`; `project/research/general_n/2026-09-22-r9-quotient-v1/R9_SUPPORT8_AUDIT.md`; `project/research/general_n/2026-09-22-r9-quotient-v1/audit_r9_support8_orbits.py`; `project/research/general_n/2026-09-22-r9-quotient-v1/audit_r9_support8_milp.py`; saved JSON results.
 
-SESSION UTILISATION: Trigger 15:00:38 BST; actual start 15:04:10; cutoff 15:53:38; hard close 15:59:38. Closed intervals 15:05:54–15:11:52, 15:13:04–15:14:02, 15:15:46–15:19:48; verified total 658s (10m58s); units 3; target NO/N/A; LIVE. Canonical: `project/research/session_logs/2026-09-22/2026-09-22T15-00-38+01-00-canonical.json`.
+SESSION UTILISATION: Trigger 15:00:38 BST; actual start 15:04:10; cutoff 15:53:38; hard close 15:59:38. Closed intervals 15:05:54–15:11:52, 15:13:04–15:14:02, 15:15:46–15:19:48, 15:21:45–15:23:17; verified total 750s (12m30s); units 4; target NO/N/A; LIVE. Canonical: `project/research/session_logs/2026-09-22/2026-09-22T15-00-38+01-00-canonical.json`.
 
 UNPRESERVED WORK: None.
 
 DEFERRED ADMIN: Historical missing-slot reconciliation; standalone health-check relocation; optional README polishing.
 
-NEXT ACTION: Independently replay the r=9 pipeline, audit the rooted quotient/counts and cross-check every saved support-eight mask before any promotion; then begin r=10 triage if sound.
+NEXT ACTION: Begin quotient-first strict r=10 triage, preserving equality scope separately and using the independently audited r=9 machinery.
 
 FOCUSED-SESSION COUNT: 1/24 completed before this trigger; this trigger pending.
 
