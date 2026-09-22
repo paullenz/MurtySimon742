@@ -7,23 +7,23 @@ Active target: a genuinely independent proof of Erdős #742 / the Murty–Simon 
 <!-- CURRENT-STATUS:START -->
 CHECKPOINT CLASS: VERIFIED_INTERNAL_NOT_PROMOTED
 
-WORK MODE: PRESERVATION_LIVE
+WORK MODE: SESSION_FINALIZED
 
-INSPECTED PREDECESSOR: ae3dbfdf17a0644fd54abda9e8f98baad0035be8.
+INSPECTED PREDECESSOR: a4e47a80220891e3d799da0cda330fb2339b5605.
 
-LAST VERIFIED RESULT: r=12 is internally closed through support eight. The exact support-nine quotient census completed: 274,668 unlabelled nine-vertex graphs; 37,186,308 colored core orbits across three residual partitions; and 16,447 strict cores (84, 3,988, 12,375 by partition). The successful census start boundary was not authoritatively captured, so the unit receives zero verified-time credit.
+LAST VERIFIED RESULT: r=12 is internally closed through support eight. The exact support-nine quotient census completed: 274,668 unlabelled nine-vertex graphs; 37,186,308 colored core orbits across three residual partitions; and 16,447 strict cores (84, 3,988, 12,375 by partition). The successful census start boundary was not authoritatively captured, so that unit receives zero verified-time credit and session utilisation remains UNVERIFIED/NONCOMPLIANT.
 
-EVIDENCE: deterministic support-nine census source, counts, compressed exact mask stream, and canonical telemetry in the r12 quotient package.
+EVIDENCE: deterministic r=12 quotient scripts and exact outputs through support nine; canonical telemetry at project/research/session_logs/2026-09-22/2026-09-22T18-00-38+01-00-canonical.json.
 
-SESSION UTILISATION: Trigger 18:00:38 BST; actual start 18:04:09; fifteen verified closed intervals; verified total 1053s (17m33s); sixteen substantive units; forward stop 18:49:49; cutoff 18:53:38; target N/A late start; PRESERVATION LIVE.
+SESSION UTILISATION: Trigger 18:00:38 BST; actual start 18:04:09; fifteen closed verified intervals; verified total 1053s (17m33s); sixteen substantive units; forward stop 18:49:49; cutoff 18:53:38; preservation complete 18:52:04; target N/A because only 49m29s was available; UNVERIFIED/NONCOMPLIANT.
 
-UNPRESERVED WORK: None at this checkpoint.
+UNPRESERVED WORK: None. The support-nine mask stream is preserved exactly as deterministic gzip.
 
-NEXT ACTION: Finalize telemetry and handoff. Next research session should shard support-nine source feasibility.
+NEXT ACTION: Shard exact source feasibility across the three support-nine partitions; test survivors for supplement feasibility; then continue supports ten and eleven.
 
-FOCUSED-SESSION COUNT: 1/24; current trigger credit pending final compliance.
+FOCUSED-SESSION COUNT: 1/24; this late-start, unverified-boundary trigger receives no focused-session credit.
 
-MANDATORY CONSTRAINTS: Support-nine source/supplement screening and supports ten-eleven remain; no r=12 closure yet. The support-nine census has an unverified start boundary and contributes zero verified time.
+MANDATORY CONSTRAINTS: Support-nine source/supplement screening and supports ten-eleven remain; no r=12 closure yet. Abstract finite infeasibility is not graph realization. Equality remains characterized only through S<=8; the general theorem remains open.
 <!-- CURRENT-STATUS:END -->
 
 ## Latest adversarial audit - 22 September 2026

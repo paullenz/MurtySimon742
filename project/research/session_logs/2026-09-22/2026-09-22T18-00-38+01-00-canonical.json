@@ -23,7 +23,7 @@
     {
       "segment_id": "segment-2",
       "actual_start": "2026-09-22T18:50:10+01:00",
-      "actual_stop": null,
+      "actual_stop": "2026-09-22T18:52:04+01:00",
       "role": "preservation",
       "notes": "Final preservation after fresh early-stop check found under five minutes remaining before research cutoff."
     }
@@ -123,8 +123,8 @@
   "verified_forward_span_seconds": 1053,
   "forward_stop": "2026-09-22T18:49:49+01:00",
   "preservation_start": "2026-09-22T18:50:10+01:00",
-  "preservation_complete": "PENDING",
-  "wall_clock_span_seconds": "PENDING",
+  "preservation_complete": "2026-09-22T18:52:04+01:00",
+  "wall_clock_span_seconds": 2875,
   "substantive_unit_count": 16,
   "substantive_unit_ledger": [
     {
@@ -214,7 +214,7 @@
     "result": "BEGIN_PRESERVATION",
     "reason": "Only 3m28s remained before the 18:53:38 research cutoff, below the five-minute continuation threshold."
   },
-  "stop_reason": "PENDING",
+  "stop_reason": "Forward research stopped at 18:49:49; the 18:50:10 early-stop check found only 3m28s before cutoff, so preservation began and completed before the hard-close deadline.",
   "failures_and_pivots": [
     {
       "at": "2026-09-22T18:40:47+01:00",
@@ -244,14 +244,17 @@
     "00b43e52a1eebc0cac604b3bde01ce63a3c0fba9",
     "644bfbfd035f562fc5fd78046f613651e50e330d",
     "1f2853fbcb8a9711b9b953382dba82b16fa71fd9",
-    "ae3dbfdf17a0644fd54abda9e8f98baad0035be8"
+    "ae3dbfdf17a0644fd54abda9e8f98baad0035be8",
+    "a4e47a80220891e3d799da0cda330fb2339b5605"
   ],
   "unfinished_line": "Run exact source feasibility on the 16,447 r=12 support-nine strict cores, sharded by the three residual partitions; then run supplement feasibility on survivors and continue to supports ten and eleven.",
   "target": {
     "applicable": false,
-    "available_seconds": 2969,
     "required_seconds": 3000,
-    "result": "N/A_LATE_START"
+    "available_seconds": 2969,
+    "achieved_verified_seconds": 1053,
+    "result": "N/A_LATE_START",
+    "reason": "Earliest actual start 18:04:09 left 49m29s before the 18:53:38 research cutoff."
   },
-  "compliance_status": "STARTED_LIVE"
+  "compliance_status": "UNVERIFIED/NONCOMPLIANT_TARGET_NA_LATE_START"
 }
