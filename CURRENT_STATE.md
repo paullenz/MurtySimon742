@@ -9,21 +9,21 @@ CHECKPOINT CLASS: VERIFIED_INTERNAL_NOT_PROMOTED
 
 WORK MODE: FORWARD_RESEARCH_LIVE
 
-INSPECTED PREDECESSOR: ce26dceaad7a8766e0c8b5c3aca7ca666c01ed27.
+INSPECTED PREDECESSOR: 59279a5cec68af26305df7928c090c59a8f7c039.
 
-LAST VERIFIED RESULT: New 21:00:38 BST session durably started. Prior mathematical state: r=12 is internally closed through support eight; support nine has 16,447 strict cores across three partitions awaiting exact source screening. No work from the missed 20:00 slot is attributed here.
+LAST VERIFIED RESULT: r=12 remains internally closed through support eight. At support nine, partition (4,1^8) is now source-infeasible: all 84 strict cores rejected with zero solver-unknown cases. Two source shards remain with 3,988 and 12,375 strict cores.
 
-EVIDENCE: canonical STARTED telemetry at project/research/session_logs/2026-09-22/2026-09-22T21-00-38+01-00-canonical.json.
+EVIDENCE: support-nine census and case-0 source JSON in the r12 quotient package; canonical telemetry.
 
-SESSION UTILISATION: Trigger 21:00:38 BST; actual start 21:02:43; zero closed intervals; verified total 0s; zero substantive units; cutoff 21:53:38; 50-minute target applicable; LIVE.
+SESSION UTILISATION: Trigger 21:00:38 BST; actual start 21:02:43; one closed interval; verified total 8s; one substantive unit; cutoff 21:53:38; 50-minute target applicable; LIVE.
 
-UNPRESERVED WORK: None before mathematics.
+UNPRESERVED WORK: None at this checkpoint.
 
-NEXT ACTION: Shard support-nine source feasibility across its three residual partitions.
+NEXT ACTION: Screen support-nine case 1, then case 2 and supplement feasibility.
 
 FOCUSED-SESSION COUNT: 1/24; current trigger credit pending final compliance.
 
-MANDATORY CONSTRAINTS: Exact finite/profile infeasibility is not graph realization; balanced complete bipartite graphs remain equality controls.
+MANDATORY CONSTRAINTS: Two support-nine source shards remain; no r=12 closure yet.
 <!-- CURRENT-STATUS:END -->
 
 ## Latest adversarial audit - 22 September 2026

@@ -20,26 +20,40 @@
       "notes": "Current scheduled invocation; mandatory repository reads completed and durable STARTED checkpoint published before mathematics."
     }
   ],
-  "forward_research_intervals": [],
-  "verified_forward_span_seconds": 0,
+  "forward_research_intervals": [
+    {
+      "start": "2026-09-22T21:04:57+01:00",
+      "stop": "2026-09-22T21:05:05+01:00",
+      "seconds": 8,
+      "unit": "r=12 support-nine (4,1^8) source screen"
+    }
+  ],
+  "verified_forward_span_seconds": 8,
   "forward_stop": null,
   "preservation_start": null,
   "preservation_complete": null,
   "wall_clock_span_seconds": null,
-  "substantive_unit_count": 0,
-  "substantive_unit_ledger": [],
+  "substantive_unit_count": 1,
+  "substantive_unit_ledger": [
+    {
+      "completed_at": "2026-09-22T21:05:05+01:00",
+      "unit": "r=12 support-nine (4,1^8) source screen",
+      "result": "84/84 strict cores source-infeasible; 0 solver-unknown."
+    }
+  ],
   "early_stop_check": null,
   "stop_reason": null,
   "failures_and_pivots": [],
   "commit_shas": [
-    "ce26dceaad7a8766e0c8b5c3aca7ca666c01ed27"
+    "ce26dceaad7a8766e0c8b5c3aca7ca666c01ed27",
+    "59279a5cec68af26305df7928c090c59a8f7c039"
   ],
-  "unfinished_line": "Shard exact source feasibility for the 16,447 r=12 support-nine strict cores, then supplement feasibility and supports ten-eleven.",
+  "unfinished_line": "Screen r=12 support-nine cases (3,2,1^7) and (2,2,2,1^6), then run supplement feasibility on any survivors.",
   "target": {
     "applicable": true,
     "required_seconds": 3000,
     "available_seconds": 3055,
-    "achieved_verified_seconds": 0,
+    "achieved_verified_seconds": 8,
     "result": "LIVE",
     "reason": "Earliest actual start left 50m55s before cutoff."
   },
