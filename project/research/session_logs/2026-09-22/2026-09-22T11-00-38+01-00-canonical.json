@@ -151,6 +151,13 @@
       "actual_stop": "2026-09-22T11:45:53+01:00",
       "role": "forward_research",
       "notes": "Exact r8 equality-core enumeration and colour-preserving canonical quotient; health monitor ran read-only during the computation without cancelling it."
+    },
+    {
+      "segment_id": "research-18",
+      "actual_start": "2026-09-22T11:46:51+01:00",
+      "actual_stop": "2026-09-22T11:47:54+01:00",
+      "role": "forward_research",
+      "notes": "Exact boolean physical-source feasibility on all 203 r8 equality core orbits."
     }
   ],
   "forward_research_intervals": [
@@ -243,6 +250,11 @@
       "start": "2026-09-22T11:43:03+01:00",
       "stop": "2026-09-22T11:45:53+01:00",
       "evidence": "R8_EQUALITY_CORE_CENSUS.md, screen_r8_equality.py, R8_EQUALITY_CORE_SCREEN.json"
+    },
+    {
+      "start": "2026-09-22T11:46:51+01:00",
+      "stop": "2026-09-22T11:47:54+01:00",
+      "evidence": "R8_EQUALITY_SOURCE_FEASIBILITY.md, screen_r8_equality_source_feasibility.py, R8_EQUALITY_SOURCE_FEASIBILITY.json"
     }
   ],
   "forward_research_stop": null,
@@ -250,10 +262,10 @@
   "preservation_complete": null,
   "final_report_time": null,
   "wall_clock_span_to_preservation_complete": null,
-  "verified_forward_research_span": 1797,
+  "verified_forward_research_span": 1860,
   "verified_forward_research_span_units": "seconds",
   "preservation_span": null,
-  "substantive_unit_count": 17,
+  "substantive_unit_count": 18,
   "timestamped_unit_ledger": [
     {
       "completed_at": "2026-09-22T11:04:00+01:00",
@@ -356,6 +368,12 @@
       "unit": "Exact r=8 equality-core census",
       "result": "After all-unit/local filters and exact slack, 26838 labelled equality candidates reduce to 203 exact colour-preserving orbits across seven residual partitions.",
       "artifact": "project/research/general_n/2026-09-22-zero-demand-equality-v1/R8_EQUALITY_CORE_CENSUS.md"
+    },
+    {
+      "completed_at": "2026-09-22T11:47:54+01:00",
+      "unit": "R8 equality physical-source feasibility",
+      "result": "Exact boolean source DP reduces 203 equality core orbits to 39 source-feasible orbits across six partitions; population enumeration and supplements remain.",
+      "artifact": "project/research/general_n/2026-09-22-zero-demand-equality-v1/R8_EQUALITY_SOURCE_FEASIBILITY.md"
     }
   ],
   "early_stop_check_time": null,
@@ -367,9 +385,9 @@
   "compliance_status": "IN_PROGRESS",
   "infrastructure_failures": [],
   "commit_shas": [
-    "f80696f214f0956093f83af729b837129664eb4b"
+    "7752a94de4b11d1ea313bda3f9b8caa862fdf292"
   ],
-  "live_unfinished_line": "Apply exact physical-source feasibility to all 203 r=8 equality orbits, then supplement forcing to any survivors; preserve balanced S=8 equality controls.",
+  "live_unfinished_line": "Enumerate physical-source populations for the 39 feasible r=8 equality orbits and apply exact supplement forcing; preserve balanced S=8 equality controls.",
   "historical_fragments": [],
   "focused_session_credit": 0,
   "predecessor_session": "project/research/session_logs/2026-09-22/2026-09-22T10-00-38+01-00-canonical.json",

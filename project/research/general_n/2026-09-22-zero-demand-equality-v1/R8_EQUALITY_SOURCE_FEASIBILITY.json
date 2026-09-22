@@ -1,0 +1,2878 @@
+{
+  "(8,)": {
+    "orbits_tested": 0,
+    "source_feasible_orbits": 0,
+    "rows": [],
+    "scope": "Boolean exact physical-source necessary condition; source-population enumeration and supplements omitted."
+  },
+  "(7, 1)": {
+    "orbits_tested": 0,
+    "source_feasible_orbits": 0,
+    "rows": [],
+    "scope": "Boolean exact physical-source necessary condition; source-population enumeration and supplements omitted."
+  },
+  "(6, 2)": {
+    "orbits_tested": 0,
+    "source_feasible_orbits": 0,
+    "rows": [],
+    "scope": "Boolean exact physical-source necessary condition; source-population enumeration and supplements omitted."
+  },
+  "(6, 1, 1)": {
+    "orbits_tested": 0,
+    "source_feasible_orbits": 0,
+    "rows": [],
+    "scope": "Boolean exact physical-source necessary condition; source-population enumeration and supplements omitted."
+  },
+  "(5, 3)": {
+    "orbits_tested": 0,
+    "source_feasible_orbits": 0,
+    "rows": [],
+    "scope": "Boolean exact physical-source necessary condition; source-population enumeration and supplements omitted."
+  },
+  "(5, 2, 1)": {
+    "orbits_tested": 0,
+    "source_feasible_orbits": 0,
+    "rows": [],
+    "scope": "Boolean exact physical-source necessary condition; source-population enumeration and supplements omitted."
+  },
+  "(5, 1, 1, 1)": {
+    "orbits_tested": 3,
+    "source_feasible_orbits": 3,
+    "rows": [
+      {
+        "orbit": 1,
+        "source_feasible": true,
+        "single_source_patterns": 32,
+        "memo_states": 108,
+        "first_witness_states": [
+          [
+            0,
+            2,
+            0,
+            0
+          ],
+          [
+            2,
+            0,
+            0,
+            0
+          ],
+          [
+            2,
+            0,
+            0,
+            0
+          ],
+          [
+            2,
+            0,
+            0,
+            0
+          ],
+          [
+            2,
+            1,
+            1,
+            2
+          ],
+          [
+            2,
+            1,
+            2,
+            1
+          ]
+        ]
+      },
+      {
+        "orbit": 2,
+        "source_feasible": true,
+        "single_source_patterns": 27,
+        "memo_states": 154,
+        "first_witness_states": [
+          [
+            2,
+            0,
+            0,
+            0
+          ],
+          [
+            2,
+            0,
+            0,
+            0
+          ],
+          [
+            2,
+            1,
+            1,
+            2
+          ],
+          [
+            2,
+            1,
+            2,
+            1
+          ],
+          [
+            2,
+            2,
+            1,
+            1
+          ]
+        ]
+      },
+      {
+        "orbit": 3,
+        "source_feasible": true,
+        "single_source_patterns": 25,
+        "memo_states": 158,
+        "first_witness_states": [
+          [
+            2,
+            0,
+            0,
+            0
+          ],
+          [
+            2,
+            0,
+            0,
+            0
+          ],
+          [
+            2,
+            1,
+            1,
+            2
+          ],
+          [
+            2,
+            1,
+            2,
+            1
+          ],
+          [
+            2,
+            2,
+            1,
+            1
+          ]
+        ]
+      }
+    ],
+    "scope": "Boolean exact physical-source necessary condition; source-population enumeration and supplements omitted."
+  },
+  "(4, 4)": {
+    "orbits_tested": 0,
+    "source_feasible_orbits": 0,
+    "rows": [],
+    "scope": "Boolean exact physical-source necessary condition; source-population enumeration and supplements omitted."
+  },
+  "(4, 3, 1)": {
+    "orbits_tested": 0,
+    "source_feasible_orbits": 0,
+    "rows": [],
+    "scope": "Boolean exact physical-source necessary condition; source-population enumeration and supplements omitted."
+  },
+  "(4, 2, 2)": {
+    "orbits_tested": 0,
+    "source_feasible_orbits": 0,
+    "rows": [],
+    "scope": "Boolean exact physical-source necessary condition; source-population enumeration and supplements omitted."
+  },
+  "(4, 2, 1, 1)": {
+    "orbits_tested": 0,
+    "source_feasible_orbits": 0,
+    "rows": [],
+    "scope": "Boolean exact physical-source necessary condition; source-population enumeration and supplements omitted."
+  },
+  "(4, 1, 1, 1, 1)": {
+    "orbits_tested": 5,
+    "source_feasible_orbits": 0,
+    "rows": [
+      {
+        "orbit": 1,
+        "source_feasible": false,
+        "single_source_patterns": 73,
+        "memo_states": 299,
+        "first_witness_states": null
+      },
+      {
+        "orbit": 2,
+        "source_feasible": false,
+        "single_source_patterns": 62,
+        "memo_states": 283,
+        "first_witness_states": null
+      },
+      {
+        "orbit": 3,
+        "source_feasible": false,
+        "single_source_patterns": 63,
+        "memo_states": 296,
+        "first_witness_states": null
+      },
+      {
+        "orbit": 4,
+        "source_feasible": false,
+        "single_source_patterns": 56,
+        "memo_states": 283,
+        "first_witness_states": null
+      },
+      {
+        "orbit": 5,
+        "source_feasible": false,
+        "single_source_patterns": 52,
+        "memo_states": 277,
+        "first_witness_states": null
+      }
+    ],
+    "scope": "Boolean exact physical-source necessary condition; source-population enumeration and supplements omitted."
+  },
+  "(3, 3, 2)": {
+    "orbits_tested": 0,
+    "source_feasible_orbits": 0,
+    "rows": [],
+    "scope": "Boolean exact physical-source necessary condition; source-population enumeration and supplements omitted."
+  },
+  "(3, 3, 1, 1)": {
+    "orbits_tested": 0,
+    "source_feasible_orbits": 0,
+    "rows": [],
+    "scope": "Boolean exact physical-source necessary condition; source-population enumeration and supplements omitted."
+  },
+  "(3, 2, 2, 1)": {
+    "orbits_tested": 0,
+    "source_feasible_orbits": 0,
+    "rows": [],
+    "scope": "Boolean exact physical-source necessary condition; source-population enumeration and supplements omitted."
+  },
+  "(3, 2, 1, 1, 1)": {
+    "orbits_tested": 21,
+    "source_feasible_orbits": 9,
+    "rows": [
+      {
+        "orbit": 1,
+        "source_feasible": false,
+        "single_source_patterns": 57,
+        "memo_states": 829,
+        "first_witness_states": null
+      },
+      {
+        "orbit": 2,
+        "source_feasible": false,
+        "single_source_patterns": 53,
+        "memo_states": 579,
+        "first_witness_states": null
+      },
+      {
+        "orbit": 3,
+        "source_feasible": true,
+        "single_source_patterns": 85,
+        "memo_states": 355,
+        "first_witness_states": [
+          [
+            0,
+            1,
+            2,
+            1,
+            1
+          ],
+          [
+            0,
+            2,
+            1,
+            1,
+            2
+          ],
+          [
+            0,
+            2,
+            1,
+            2,
+            1
+          ],
+          [
+            2,
+            0,
+            0,
+            0,
+            0
+          ],
+          [
+            2,
+            0,
+            0,
+            0,
+            0
+          ],
+          [
+            2,
+            0,
+            0,
+            0,
+            0
+          ]
+        ]
+      },
+      {
+        "orbit": 4,
+        "source_feasible": false,
+        "single_source_patterns": 72,
+        "memo_states": 460,
+        "first_witness_states": null
+      },
+      {
+        "orbit": 5,
+        "source_feasible": true,
+        "single_source_patterns": 68,
+        "memo_states": 414,
+        "first_witness_states": [
+          [
+            0,
+            2,
+            2,
+            1,
+            1
+          ],
+          [
+            2,
+            0,
+            0,
+            0,
+            0
+          ],
+          [
+            2,
+            1,
+            1,
+            2,
+            1
+          ],
+          [
+            2,
+            2,
+            1,
+            1,
+            2
+          ]
+        ]
+      },
+      {
+        "orbit": 6,
+        "source_feasible": false,
+        "single_source_patterns": 61,
+        "memo_states": 457,
+        "first_witness_states": null
+      },
+      {
+        "orbit": 7,
+        "source_feasible": true,
+        "single_source_patterns": 57,
+        "memo_states": 416,
+        "first_witness_states": [
+          [
+            2,
+            1,
+            1,
+            1,
+            2
+          ],
+          [
+            2,
+            2,
+            1,
+            2,
+            1
+          ],
+          [
+            2,
+            2,
+            2,
+            1,
+            1
+          ]
+        ]
+      },
+      {
+        "orbit": 8,
+        "source_feasible": false,
+        "single_source_patterns": 53,
+        "memo_states": 434,
+        "first_witness_states": null
+      },
+      {
+        "orbit": 9,
+        "source_feasible": true,
+        "single_source_patterns": 97,
+        "memo_states": 192,
+        "first_witness_states": [
+          [
+            0,
+            0,
+            2,
+            0,
+            0
+          ],
+          [
+            0,
+            2,
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            2,
+            0,
+            0,
+            0
+          ],
+          [
+            2,
+            0,
+            0,
+            0,
+            0
+          ],
+          [
+            2,
+            0,
+            1,
+            1,
+            2
+          ],
+          [
+            2,
+            0,
+            1,
+            2,
+            1
+          ]
+        ]
+      },
+      {
+        "orbit": 10,
+        "source_feasible": true,
+        "single_source_patterns": 82,
+        "memo_states": 260,
+        "first_witness_states": [
+          [
+            0,
+            2,
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            2,
+            0,
+            0,
+            0
+          ],
+          [
+            2,
+            0,
+            1,
+            1,
+            2
+          ],
+          [
+            2,
+            0,
+            1,
+            2,
+            1
+          ],
+          [
+            2,
+            0,
+            2,
+            1,
+            1
+          ]
+        ]
+      },
+      {
+        "orbit": 11,
+        "source_feasible": true,
+        "single_source_patterns": 76,
+        "memo_states": 252,
+        "first_witness_states": [
+          [
+            0,
+            2,
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            2,
+            0,
+            0,
+            0
+          ],
+          [
+            2,
+            0,
+            1,
+            1,
+            2
+          ],
+          [
+            2,
+            0,
+            1,
+            2,
+            1
+          ],
+          [
+            2,
+            0,
+            2,
+            1,
+            1
+          ]
+        ]
+      },
+      {
+        "orbit": 12,
+        "source_feasible": false,
+        "single_source_patterns": 65,
+        "memo_states": 396,
+        "first_witness_states": null
+      },
+      {
+        "orbit": 13,
+        "source_feasible": true,
+        "single_source_patterns": 97,
+        "memo_states": 207,
+        "first_witness_states": [
+          [
+            0,
+            0,
+            2,
+            0,
+            0
+          ],
+          [
+            0,
+            2,
+            1,
+            1,
+            2
+          ],
+          [
+            0,
+            2,
+            1,
+            2,
+            1
+          ],
+          [
+            2,
+            0,
+            0,
+            0,
+            0
+          ],
+          [
+            2,
+            0,
+            0,
+            0,
+            0
+          ],
+          [
+            2,
+            0,
+            0,
+            0,
+            0
+          ]
+        ]
+      },
+      {
+        "orbit": 14,
+        "source_feasible": true,
+        "single_source_patterns": 77,
+        "memo_states": 274,
+        "first_witness_states": [
+          [
+            0,
+            2,
+            2,
+            1,
+            1
+          ],
+          [
+            2,
+            0,
+            0,
+            0,
+            0
+          ],
+          [
+            2,
+            0,
+            1,
+            2,
+            1
+          ],
+          [
+            2,
+            2,
+            1,
+            1,
+            2
+          ]
+        ]
+      },
+      {
+        "orbit": 15,
+        "source_feasible": true,
+        "single_source_patterns": 67,
+        "memo_states": 278,
+        "first_witness_states": [
+          [
+            2,
+            0,
+            1,
+            1,
+            2
+          ],
+          [
+            2,
+            2,
+            1,
+            2,
+            1
+          ],
+          [
+            2,
+            2,
+            2,
+            1,
+            1
+          ]
+        ]
+      },
+      {
+        "orbit": 16,
+        "source_feasible": false,
+        "single_source_patterns": 82,
+        "memo_states": 292,
+        "first_witness_states": null
+      },
+      {
+        "orbit": 17,
+        "source_feasible": false,
+        "single_source_patterns": 69,
+        "memo_states": 388,
+        "first_witness_states": null
+      },
+      {
+        "orbit": 18,
+        "source_feasible": false,
+        "single_source_patterns": 67,
+        "memo_states": 272,
+        "first_witness_states": null
+      },
+      {
+        "orbit": 19,
+        "source_feasible": false,
+        "single_source_patterns": 58,
+        "memo_states": 360,
+        "first_witness_states": null
+      },
+      {
+        "orbit": 20,
+        "source_feasible": false,
+        "single_source_patterns": 76,
+        "memo_states": 360,
+        "first_witness_states": null
+      },
+      {
+        "orbit": 21,
+        "source_feasible": false,
+        "single_source_patterns": 65,
+        "memo_states": 360,
+        "first_witness_states": null
+      }
+    ],
+    "scope": "Boolean exact physical-source necessary condition; source-population enumeration and supplements omitted."
+  },
+  "(3, 1, 1, 1, 1, 1)": {
+    "orbits_tested": 15,
+    "source_feasible_orbits": 1,
+    "rows": [
+      {
+        "orbit": 1,
+        "source_feasible": false,
+        "single_source_patterns": 173,
+        "memo_states": 528,
+        "first_witness_states": null
+      },
+      {
+        "orbit": 2,
+        "source_feasible": false,
+        "single_source_patterns": 161,
+        "memo_states": 888,
+        "first_witness_states": null
+      },
+      {
+        "orbit": 3,
+        "source_feasible": false,
+        "single_source_patterns": 158,
+        "memo_states": 1691,
+        "first_witness_states": null
+      },
+      {
+        "orbit": 4,
+        "source_feasible": false,
+        "single_source_patterns": 157,
+        "memo_states": 556,
+        "first_witness_states": null
+      },
+      {
+        "orbit": 5,
+        "source_feasible": false,
+        "single_source_patterns": 143,
+        "memo_states": 606,
+        "first_witness_states": null
+      },
+      {
+        "orbit": 6,
+        "source_feasible": false,
+        "single_source_patterns": 146,
+        "memo_states": 796,
+        "first_witness_states": null
+      },
+      {
+        "orbit": 7,
+        "source_feasible": false,
+        "single_source_patterns": 141,
+        "memo_states": 1260,
+        "first_witness_states": null
+      },
+      {
+        "orbit": 8,
+        "source_feasible": false,
+        "single_source_patterns": 140,
+        "memo_states": 1214,
+        "first_witness_states": null
+      },
+      {
+        "orbit": 9,
+        "source_feasible": false,
+        "single_source_patterns": 153,
+        "memo_states": 924,
+        "first_witness_states": null
+      },
+      {
+        "orbit": 10,
+        "source_feasible": false,
+        "single_source_patterns": 148,
+        "memo_states": 1424,
+        "first_witness_states": null
+      },
+      {
+        "orbit": 11,
+        "source_feasible": true,
+        "single_source_patterns": 175,
+        "memo_states": 684,
+        "first_witness_states": [
+          [
+            0,
+            2,
+            0,
+            0,
+            0,
+            0
+          ],
+          [
+            2,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          [
+            2,
+            1,
+            1,
+            2,
+            2,
+            1
+          ],
+          [
+            2,
+            1,
+            2,
+            1,
+            1,
+            2
+          ]
+        ]
+      },
+      {
+        "orbit": 12,
+        "source_feasible": false,
+        "single_source_patterns": 148,
+        "memo_states": 776,
+        "first_witness_states": null
+      },
+      {
+        "orbit": 13,
+        "source_feasible": false,
+        "single_source_patterns": 150,
+        "memo_states": 829,
+        "first_witness_states": null
+      },
+      {
+        "orbit": 14,
+        "source_feasible": false,
+        "single_source_patterns": 130,
+        "memo_states": 741,
+        "first_witness_states": null
+      },
+      {
+        "orbit": 15,
+        "source_feasible": false,
+        "single_source_patterns": 134,
+        "memo_states": 784,
+        "first_witness_states": null
+      }
+    ],
+    "scope": "Boolean exact physical-source necessary condition; source-population enumeration and supplements omitted."
+  },
+  "(2, 2, 2, 2)": {
+    "orbits_tested": 0,
+    "source_feasible_orbits": 0,
+    "rows": [],
+    "scope": "Boolean exact physical-source necessary condition; source-population enumeration and supplements omitted."
+  },
+  "(2, 2, 2, 1, 1)": {
+    "orbits_tested": 6,
+    "source_feasible_orbits": 4,
+    "rows": [
+      {
+        "orbit": 1,
+        "source_feasible": true,
+        "single_source_patterns": 58,
+        "memo_states": 865,
+        "first_witness_states": [
+          [
+            0,
+            2,
+            0,
+            0,
+            0
+          ],
+          [
+            1,
+            1,
+            1,
+            2,
+            2
+          ],
+          [
+            1,
+            2,
+            2,
+            1,
+            1
+          ],
+          [
+            2,
+            0,
+            0,
+            0,
+            0
+          ],
+          [
+            2,
+            1,
+            2,
+            1,
+            1
+          ]
+        ]
+      },
+      {
+        "orbit": 2,
+        "source_feasible": true,
+        "single_source_patterns": 54,
+        "memo_states": 658,
+        "first_witness_states": [
+          [
+            0,
+            0,
+            2,
+            0,
+            0
+          ],
+          [
+            1,
+            1,
+            1,
+            2,
+            2
+          ],
+          [
+            1,
+            2,
+            2,
+            1,
+            1
+          ],
+          [
+            2,
+            0,
+            0,
+            0,
+            0
+          ],
+          [
+            2,
+            2,
+            1,
+            1,
+            1
+          ]
+        ]
+      },
+      {
+        "orbit": 3,
+        "source_feasible": true,
+        "single_source_patterns": 76,
+        "memo_states": 306,
+        "first_witness_states": [
+          [
+            0,
+            0,
+            2,
+            0,
+            0
+          ],
+          [
+            0,
+            0,
+            2,
+            0,
+            0
+          ],
+          [
+            1,
+            1,
+            0,
+            2,
+            2
+          ],
+          [
+            2,
+            2,
+            0,
+            1,
+            1
+          ],
+          [
+            2,
+            2,
+            0,
+            1,
+            1
+          ]
+        ]
+      },
+      {
+        "orbit": 4,
+        "source_feasible": false,
+        "single_source_patterns": 65,
+        "memo_states": 522,
+        "first_witness_states": null
+      },
+      {
+        "orbit": 5,
+        "source_feasible": false,
+        "single_source_patterns": 58,
+        "memo_states": 528,
+        "first_witness_states": null
+      },
+      {
+        "orbit": 6,
+        "source_feasible": true,
+        "single_source_patterns": 55,
+        "memo_states": 700,
+        "first_witness_states": [
+          [
+            1,
+            1,
+            2,
+            2,
+            1
+          ],
+          [
+            1,
+            2,
+            1,
+            1,
+            2
+          ],
+          [
+            2,
+            0,
+            0,
+            0,
+            0
+          ],
+          [
+            2,
+            2,
+            2,
+            1,
+            1
+          ]
+        ]
+      }
+    ],
+    "scope": "Boolean exact physical-source necessary condition; source-population enumeration and supplements omitted."
+  },
+  "(2, 2, 1, 1, 1, 1)": {
+    "orbits_tested": 95,
+    "source_feasible_orbits": 13,
+    "rows": [
+      {
+        "orbit": 1,
+        "source_feasible": false,
+        "single_source_patterns": 153,
+        "memo_states": 1757,
+        "first_witness_states": null
+      },
+      {
+        "orbit": 2,
+        "source_feasible": false,
+        "single_source_patterns": 172,
+        "memo_states": 1088,
+        "first_witness_states": null
+      },
+      {
+        "orbit": 3,
+        "source_feasible": false,
+        "single_source_patterns": 166,
+        "memo_states": 704,
+        "first_witness_states": null
+      },
+      {
+        "orbit": 4,
+        "source_feasible": false,
+        "single_source_patterns": 159,
+        "memo_states": 1196,
+        "first_witness_states": null
+      },
+      {
+        "orbit": 5,
+        "source_feasible": false,
+        "single_source_patterns": 152,
+        "memo_states": 1054,
+        "first_witness_states": null
+      },
+      {
+        "orbit": 6,
+        "source_feasible": false,
+        "single_source_patterns": 155,
+        "memo_states": 1230,
+        "first_witness_states": null
+      },
+      {
+        "orbit": 7,
+        "source_feasible": false,
+        "single_source_patterns": 151,
+        "memo_states": 1891,
+        "first_witness_states": null
+      },
+      {
+        "orbit": 8,
+        "source_feasible": false,
+        "single_source_patterns": 145,
+        "memo_states": 1754,
+        "first_witness_states": null
+      },
+      {
+        "orbit": 9,
+        "source_feasible": false,
+        "single_source_patterns": 217,
+        "memo_states": 660,
+        "first_witness_states": null
+      },
+      {
+        "orbit": 10,
+        "source_feasible": false,
+        "single_source_patterns": 174,
+        "memo_states": 623,
+        "first_witness_states": null
+      },
+      {
+        "orbit": 11,
+        "source_feasible": false,
+        "single_source_patterns": 148,
+        "memo_states": 863,
+        "first_witness_states": null
+      },
+      {
+        "orbit": 12,
+        "source_feasible": false,
+        "single_source_patterns": 160,
+        "memo_states": 802,
+        "first_witness_states": null
+      },
+      {
+        "orbit": 13,
+        "source_feasible": false,
+        "single_source_patterns": 147,
+        "memo_states": 888,
+        "first_witness_states": null
+      },
+      {
+        "orbit": 14,
+        "source_feasible": false,
+        "single_source_patterns": 145,
+        "memo_states": 842,
+        "first_witness_states": null
+      },
+      {
+        "orbit": 15,
+        "source_feasible": false,
+        "single_source_patterns": 145,
+        "memo_states": 566,
+        "first_witness_states": null
+      },
+      {
+        "orbit": 16,
+        "source_feasible": false,
+        "single_source_patterns": 152,
+        "memo_states": 1024,
+        "first_witness_states": null
+      },
+      {
+        "orbit": 17,
+        "source_feasible": false,
+        "single_source_patterns": 143,
+        "memo_states": 803,
+        "first_witness_states": null
+      },
+      {
+        "orbit": 18,
+        "source_feasible": false,
+        "single_source_patterns": 170,
+        "memo_states": 1133,
+        "first_witness_states": null
+      },
+      {
+        "orbit": 19,
+        "source_feasible": false,
+        "single_source_patterns": 142,
+        "memo_states": 1445,
+        "first_witness_states": null
+      },
+      {
+        "orbit": 20,
+        "source_feasible": false,
+        "single_source_patterns": 149,
+        "memo_states": 1001,
+        "first_witness_states": null
+      },
+      {
+        "orbit": 21,
+        "source_feasible": false,
+        "single_source_patterns": 146,
+        "memo_states": 1701,
+        "first_witness_states": null
+      },
+      {
+        "orbit": 22,
+        "source_feasible": false,
+        "single_source_patterns": 142,
+        "memo_states": 1492,
+        "first_witness_states": null
+      },
+      {
+        "orbit": 23,
+        "source_feasible": false,
+        "single_source_patterns": 142,
+        "memo_states": 1013,
+        "first_witness_states": null
+      },
+      {
+        "orbit": 24,
+        "source_feasible": false,
+        "single_source_patterns": 135,
+        "memo_states": 1328,
+        "first_witness_states": null
+      },
+      {
+        "orbit": 25,
+        "source_feasible": false,
+        "single_source_patterns": 132,
+        "memo_states": 1224,
+        "first_witness_states": null
+      },
+      {
+        "orbit": 26,
+        "source_feasible": false,
+        "single_source_patterns": 230,
+        "memo_states": 540,
+        "first_witness_states": null
+      },
+      {
+        "orbit": 27,
+        "source_feasible": false,
+        "single_source_patterns": 196,
+        "memo_states": 540,
+        "first_witness_states": null
+      },
+      {
+        "orbit": 28,
+        "source_feasible": false,
+        "single_source_patterns": 208,
+        "memo_states": 582,
+        "first_witness_states": null
+      },
+      {
+        "orbit": 29,
+        "source_feasible": false,
+        "single_source_patterns": 179,
+        "memo_states": 570,
+        "first_witness_states": null
+      },
+      {
+        "orbit": 30,
+        "source_feasible": false,
+        "single_source_patterns": 196,
+        "memo_states": 540,
+        "first_witness_states": null
+      },
+      {
+        "orbit": 31,
+        "source_feasible": false,
+        "single_source_patterns": 168,
+        "memo_states": 540,
+        "first_witness_states": null
+      },
+      {
+        "orbit": 32,
+        "source_feasible": false,
+        "single_source_patterns": 148,
+        "memo_states": 512,
+        "first_witness_states": null
+      },
+      {
+        "orbit": 33,
+        "source_feasible": false,
+        "single_source_patterns": 144,
+        "memo_states": 808,
+        "first_witness_states": null
+      },
+      {
+        "orbit": 34,
+        "source_feasible": false,
+        "single_source_patterns": 180,
+        "memo_states": 540,
+        "first_witness_states": null
+      },
+      {
+        "orbit": 35,
+        "source_feasible": false,
+        "single_source_patterns": 157,
+        "memo_states": 540,
+        "first_witness_states": null
+      },
+      {
+        "orbit": 36,
+        "source_feasible": false,
+        "single_source_patterns": 162,
+        "memo_states": 984,
+        "first_witness_states": null
+      },
+      {
+        "orbit": 37,
+        "source_feasible": false,
+        "single_source_patterns": 148,
+        "memo_states": 984,
+        "first_witness_states": null
+      },
+      {
+        "orbit": 38,
+        "source_feasible": false,
+        "single_source_patterns": 153,
+        "memo_states": 933,
+        "first_witness_states": null
+      },
+      {
+        "orbit": 39,
+        "source_feasible": true,
+        "single_source_patterns": 140,
+        "memo_states": 1096,
+        "first_witness_states": [
+          [
+            0,
+            0,
+            2,
+            0,
+            0,
+            0
+          ],
+          [
+            1,
+            2,
+            1,
+            2,
+            1,
+            1
+          ],
+          [
+            2,
+            1,
+            1,
+            1,
+            2,
+            1
+          ],
+          [
+            2,
+            2,
+            0,
+            1,
+            1,
+            2
+          ]
+        ]
+      },
+      {
+        "orbit": 40,
+        "source_feasible": false,
+        "single_source_patterns": 136,
+        "memo_states": 863,
+        "first_witness_states": null
+      },
+      {
+        "orbit": 41,
+        "source_feasible": true,
+        "single_source_patterns": 220,
+        "memo_states": 1102,
+        "first_witness_states": [
+          [
+            0,
+            2,
+            0,
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            2,
+            0,
+            0,
+            0,
+            0
+          ],
+          [
+            1,
+            0,
+            1,
+            2,
+            1,
+            2
+          ],
+          [
+            1,
+            0,
+            2,
+            1,
+            2,
+            1
+          ],
+          [
+            2,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          [
+            2,
+            0,
+            0,
+            0,
+            0,
+            0
+          ]
+        ]
+      },
+      {
+        "orbit": 42,
+        "source_feasible": true,
+        "single_source_patterns": 172,
+        "memo_states": 1186,
+        "first_witness_states": [
+          [
+            1,
+            0,
+            2,
+            1,
+            1,
+            2
+          ],
+          [
+            1,
+            2,
+            1,
+            2,
+            2,
+            1
+          ],
+          [
+            2,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          [
+            2,
+            2,
+            1,
+            1,
+            0,
+            0
+          ]
+        ]
+      },
+      {
+        "orbit": 43,
+        "source_feasible": true,
+        "single_source_patterns": 147,
+        "memo_states": 1053,
+        "first_witness_states": [
+          [
+            1,
+            1,
+            2,
+            2,
+            1,
+            0
+          ],
+          [
+            1,
+            2,
+            1,
+            1,
+            2,
+            2
+          ],
+          [
+            2,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          [
+            2,
+            2,
+            1,
+            1,
+            1,
+            1
+          ]
+        ]
+      },
+      {
+        "orbit": 44,
+        "source_feasible": true,
+        "single_source_patterns": 142,
+        "memo_states": 1450,
+        "first_witness_states": [
+          [
+            1,
+            1,
+            2,
+            1,
+            2,
+            1
+          ],
+          [
+            1,
+            2,
+            1,
+            2,
+            1,
+            2
+          ],
+          [
+            2,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          [
+            2,
+            2,
+            1,
+            1,
+            0,
+            0
+          ]
+        ]
+      },
+      {
+        "orbit": 45,
+        "source_feasible": true,
+        "single_source_patterns": 142,
+        "memo_states": 1118,
+        "first_witness_states": [
+          [
+            1,
+            0,
+            2,
+            2,
+            1,
+            1
+          ],
+          [
+            1,
+            2,
+            1,
+            1,
+            2,
+            2
+          ],
+          [
+            2,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          [
+            2,
+            2,
+            1,
+            1,
+            1,
+            1
+          ]
+        ]
+      },
+      {
+        "orbit": 46,
+        "source_feasible": false,
+        "single_source_patterns": 153,
+        "memo_states": 1148,
+        "first_witness_states": null
+      },
+      {
+        "orbit": 47,
+        "source_feasible": true,
+        "single_source_patterns": 151,
+        "memo_states": 1741,
+        "first_witness_states": [
+          [
+            1,
+            1,
+            2,
+            1,
+            2,
+            1
+          ],
+          [
+            1,
+            2,
+            1,
+            2,
+            1,
+            2
+          ],
+          [
+            2,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          [
+            2,
+            2,
+            1,
+            0,
+            0,
+            1
+          ]
+        ]
+      },
+      {
+        "orbit": 48,
+        "source_feasible": false,
+        "single_source_patterns": 148,
+        "memo_states": 1310,
+        "first_witness_states": null
+      },
+      {
+        "orbit": 49,
+        "source_feasible": true,
+        "single_source_patterns": 141,
+        "memo_states": 422,
+        "first_witness_states": [
+          [
+            0,
+            0,
+            0,
+            0,
+            0,
+            2
+          ],
+          [
+            1,
+            1,
+            2,
+            2,
+            2,
+            0
+          ],
+          [
+            2,
+            2,
+            1,
+            1,
+            1,
+            1
+          ],
+          [
+            2,
+            2,
+            1,
+            1,
+            1,
+            1
+          ]
+        ]
+      },
+      {
+        "orbit": 50,
+        "source_feasible": true,
+        "single_source_patterns": 140,
+        "memo_states": 219,
+        "first_witness_states": [
+          [
+            0,
+            0,
+            0,
+            0,
+            0,
+            2
+          ],
+          [
+            0,
+            0,
+            0,
+            0,
+            2,
+            0
+          ],
+          [
+            1,
+            1,
+            2,
+            2,
+            1,
+            1
+          ],
+          [
+            2,
+            2,
+            1,
+            1,
+            1,
+            1
+          ],
+          [
+            2,
+            2,
+            1,
+            1,
+            1,
+            1
+          ]
+        ]
+      },
+      {
+        "orbit": 51,
+        "source_feasible": true,
+        "single_source_patterns": 137,
+        "memo_states": 459,
+        "first_witness_states": [
+          [
+            0,
+            0,
+            0,
+            0,
+            0,
+            2
+          ],
+          [
+            1,
+            1,
+            2,
+            2,
+            2,
+            1
+          ],
+          [
+            2,
+            2,
+            1,
+            1,
+            0,
+            0
+          ],
+          [
+            2,
+            2,
+            1,
+            1,
+            1,
+            1
+          ]
+        ]
+      },
+      {
+        "orbit": 52,
+        "source_feasible": false,
+        "single_source_patterns": 205,
+        "memo_states": 609,
+        "first_witness_states": null
+      },
+      {
+        "orbit": 53,
+        "source_feasible": false,
+        "single_source_patterns": 174,
+        "memo_states": 598,
+        "first_witness_states": null
+      },
+      {
+        "orbit": 54,
+        "source_feasible": false,
+        "single_source_patterns": 196,
+        "memo_states": 966,
+        "first_witness_states": null
+      },
+      {
+        "orbit": 55,
+        "source_feasible": false,
+        "single_source_patterns": 167,
+        "memo_states": 945,
+        "first_witness_states": null
+      },
+      {
+        "orbit": 56,
+        "source_feasible": false,
+        "single_source_patterns": 184,
+        "memo_states": 906,
+        "first_witness_states": null
+      },
+      {
+        "orbit": 57,
+        "source_feasible": false,
+        "single_source_patterns": 162,
+        "memo_states": 919,
+        "first_witness_states": null
+      },
+      {
+        "orbit": 58,
+        "source_feasible": false,
+        "single_source_patterns": 142,
+        "memo_states": 861,
+        "first_witness_states": null
+      },
+      {
+        "orbit": 59,
+        "source_feasible": false,
+        "single_source_patterns": 135,
+        "memo_states": 1310,
+        "first_witness_states": null
+      },
+      {
+        "orbit": 60,
+        "source_feasible": false,
+        "single_source_patterns": 163,
+        "memo_states": 580,
+        "first_witness_states": null
+      },
+      {
+        "orbit": 61,
+        "source_feasible": false,
+        "single_source_patterns": 146,
+        "memo_states": 584,
+        "first_witness_states": null
+      },
+      {
+        "orbit": 62,
+        "source_feasible": false,
+        "single_source_patterns": 163,
+        "memo_states": 964,
+        "first_witness_states": null
+      },
+      {
+        "orbit": 63,
+        "source_feasible": false,
+        "single_source_patterns": 142,
+        "memo_states": 909,
+        "first_witness_states": null
+      },
+      {
+        "orbit": 64,
+        "source_feasible": false,
+        "single_source_patterns": 158,
+        "memo_states": 928,
+        "first_witness_states": null
+      },
+      {
+        "orbit": 65,
+        "source_feasible": false,
+        "single_source_patterns": 141,
+        "memo_states": 936,
+        "first_witness_states": null
+      },
+      {
+        "orbit": 66,
+        "source_feasible": false,
+        "single_source_patterns": 155,
+        "memo_states": 903,
+        "first_witness_states": null
+      },
+      {
+        "orbit": 67,
+        "source_feasible": false,
+        "single_source_patterns": 139,
+        "memo_states": 884,
+        "first_witness_states": null
+      },
+      {
+        "orbit": 68,
+        "source_feasible": false,
+        "single_source_patterns": 146,
+        "memo_states": 856,
+        "first_witness_states": null
+      },
+      {
+        "orbit": 69,
+        "source_feasible": false,
+        "single_source_patterns": 142,
+        "memo_states": 836,
+        "first_witness_states": null
+      },
+      {
+        "orbit": 70,
+        "source_feasible": false,
+        "single_source_patterns": 133,
+        "memo_states": 1168,
+        "first_witness_states": null
+      },
+      {
+        "orbit": 71,
+        "source_feasible": false,
+        "single_source_patterns": 134,
+        "memo_states": 1276,
+        "first_witness_states": null
+      },
+      {
+        "orbit": 72,
+        "source_feasible": false,
+        "single_source_patterns": 133,
+        "memo_states": 808,
+        "first_witness_states": null
+      },
+      {
+        "orbit": 73,
+        "source_feasible": true,
+        "single_source_patterns": 143,
+        "memo_states": 1488,
+        "first_witness_states": [
+          [
+            1,
+            2,
+            2,
+            1,
+            1,
+            1
+          ],
+          [
+            2,
+            1,
+            1,
+            1,
+            2,
+            1
+          ],
+          [
+            2,
+            2,
+            1,
+            2,
+            1,
+            2
+          ]
+        ]
+      },
+      {
+        "orbit": 74,
+        "source_feasible": true,
+        "single_source_patterns": 137,
+        "memo_states": 1292,
+        "first_witness_states": [
+          [
+            1,
+            2,
+            1,
+            2,
+            0,
+            0
+          ],
+          [
+            2,
+            1,
+            2,
+            1,
+            2,
+            1
+          ],
+          [
+            2,
+            2,
+            1,
+            1,
+            1,
+            2
+          ]
+        ]
+      },
+      {
+        "orbit": 75,
+        "source_feasible": false,
+        "single_source_patterns": 138,
+        "memo_states": 916,
+        "first_witness_states": null
+      },
+      {
+        "orbit": 76,
+        "source_feasible": false,
+        "single_source_patterns": 135,
+        "memo_states": 863,
+        "first_witness_states": null
+      },
+      {
+        "orbit": 77,
+        "source_feasible": true,
+        "single_source_patterns": 135,
+        "memo_states": 1192,
+        "first_witness_states": [
+          [
+            1,
+            1,
+            2,
+            2,
+            0,
+            0
+          ],
+          [
+            2,
+            2,
+            1,
+            1,
+            1,
+            2
+          ],
+          [
+            2,
+            2,
+            1,
+            1,
+            2,
+            1
+          ]
+        ]
+      },
+      {
+        "orbit": 78,
+        "source_feasible": false,
+        "single_source_patterns": 131,
+        "memo_states": 828,
+        "first_witness_states": null
+      },
+      {
+        "orbit": 79,
+        "source_feasible": false,
+        "single_source_patterns": 220,
+        "memo_states": 531,
+        "first_witness_states": null
+      },
+      {
+        "orbit": 80,
+        "source_feasible": false,
+        "single_source_patterns": 187,
+        "memo_states": 483,
+        "first_witness_states": null
+      },
+      {
+        "orbit": 81,
+        "source_feasible": false,
+        "single_source_patterns": 154,
+        "memo_states": 716,
+        "first_witness_states": null
+      },
+      {
+        "orbit": 82,
+        "source_feasible": false,
+        "single_source_patterns": 190,
+        "memo_states": 522,
+        "first_witness_states": null
+      },
+      {
+        "orbit": 83,
+        "source_feasible": false,
+        "single_source_patterns": 157,
+        "memo_states": 768,
+        "first_witness_states": null
+      },
+      {
+        "orbit": 84,
+        "source_feasible": false,
+        "single_source_patterns": 169,
+        "memo_states": 645,
+        "first_witness_states": null
+      },
+      {
+        "orbit": 85,
+        "source_feasible": false,
+        "single_source_patterns": 142,
+        "memo_states": 636,
+        "first_witness_states": null
+      },
+      {
+        "orbit": 86,
+        "source_feasible": false,
+        "single_source_patterns": 157,
+        "memo_states": 591,
+        "first_witness_states": null
+      },
+      {
+        "orbit": 87,
+        "source_feasible": false,
+        "single_source_patterns": 180,
+        "memo_states": 513,
+        "first_witness_states": null
+      },
+      {
+        "orbit": 88,
+        "source_feasible": false,
+        "single_source_patterns": 181,
+        "memo_states": 516,
+        "first_witness_states": null
+      },
+      {
+        "orbit": 89,
+        "source_feasible": false,
+        "single_source_patterns": 156,
+        "memo_states": 507,
+        "first_witness_states": null
+      },
+      {
+        "orbit": 90,
+        "source_feasible": false,
+        "single_source_patterns": 134,
+        "memo_states": 714,
+        "first_witness_states": null
+      },
+      {
+        "orbit": 91,
+        "source_feasible": false,
+        "single_source_patterns": 154,
+        "memo_states": 471,
+        "first_witness_states": null
+      },
+      {
+        "orbit": 92,
+        "source_feasible": false,
+        "single_source_patterns": 132,
+        "memo_states": 670,
+        "first_witness_states": null
+      },
+      {
+        "orbit": 93,
+        "source_feasible": false,
+        "single_source_patterns": 140,
+        "memo_states": 633,
+        "first_witness_states": null
+      },
+      {
+        "orbit": 94,
+        "source_feasible": false,
+        "single_source_patterns": 132,
+        "memo_states": 433,
+        "first_witness_states": null
+      },
+      {
+        "orbit": 95,
+        "source_feasible": false,
+        "single_source_patterns": 136,
+        "memo_states": 501,
+        "first_witness_states": null
+      }
+    ],
+    "scope": "Boolean exact physical-source necessary condition; source-population enumeration and supplements omitted."
+  },
+  "(2, 1, 1, 1, 1, 1, 1)": {
+    "orbits_tested": 58,
+    "source_feasible_orbits": 9,
+    "rows": [
+      {
+        "orbit": 1,
+        "source_feasible": false,
+        "single_source_patterns": 473,
+        "memo_states": 788,
+        "first_witness_states": null
+      },
+      {
+        "orbit": 2,
+        "source_feasible": false,
+        "single_source_patterns": 427,
+        "memo_states": 834,
+        "first_witness_states": null
+      },
+      {
+        "orbit": 3,
+        "source_feasible": false,
+        "single_source_patterns": 396,
+        "memo_states": 937,
+        "first_witness_states": null
+      },
+      {
+        "orbit": 4,
+        "source_feasible": false,
+        "single_source_patterns": 399,
+        "memo_states": 956,
+        "first_witness_states": null
+      },
+      {
+        "orbit": 5,
+        "source_feasible": false,
+        "single_source_patterns": 439,
+        "memo_states": 1072,
+        "first_witness_states": null
+      },
+      {
+        "orbit": 6,
+        "source_feasible": false,
+        "single_source_patterns": 424,
+        "memo_states": 1714,
+        "first_witness_states": null
+      },
+      {
+        "orbit": 7,
+        "source_feasible": false,
+        "single_source_patterns": 418,
+        "memo_states": 1562,
+        "first_witness_states": null
+      },
+      {
+        "orbit": 8,
+        "source_feasible": false,
+        "single_source_patterns": 415,
+        "memo_states": 723,
+        "first_witness_states": null
+      },
+      {
+        "orbit": 9,
+        "source_feasible": false,
+        "single_source_patterns": 404,
+        "memo_states": 1155,
+        "first_witness_states": null
+      },
+      {
+        "orbit": 10,
+        "source_feasible": false,
+        "single_source_patterns": 396,
+        "memo_states": 1072,
+        "first_witness_states": null
+      },
+      {
+        "orbit": 11,
+        "source_feasible": false,
+        "single_source_patterns": 413,
+        "memo_states": 1222,
+        "first_witness_states": null
+      },
+      {
+        "orbit": 12,
+        "source_feasible": false,
+        "single_source_patterns": 394,
+        "memo_states": 1933,
+        "first_witness_states": null
+      },
+      {
+        "orbit": 13,
+        "source_feasible": false,
+        "single_source_patterns": 383,
+        "memo_states": 1602,
+        "first_witness_states": null
+      },
+      {
+        "orbit": 14,
+        "source_feasible": false,
+        "single_source_patterns": 408,
+        "memo_states": 1373,
+        "first_witness_states": null
+      },
+      {
+        "orbit": 15,
+        "source_feasible": false,
+        "single_source_patterns": 404,
+        "memo_states": 1325,
+        "first_witness_states": null
+      },
+      {
+        "orbit": 16,
+        "source_feasible": false,
+        "single_source_patterns": 383,
+        "memo_states": 1862,
+        "first_witness_states": null
+      },
+      {
+        "orbit": 17,
+        "source_feasible": false,
+        "single_source_patterns": 398,
+        "memo_states": 2092,
+        "first_witness_states": null
+      },
+      {
+        "orbit": 18,
+        "source_feasible": true,
+        "single_source_patterns": 367,
+        "memo_states": 2526,
+        "first_witness_states": [
+          [
+            1,
+            1,
+            1,
+            2,
+            2,
+            2,
+            1
+          ],
+          [
+            1,
+            2,
+            2,
+            1,
+            1,
+            1,
+            2
+          ],
+          [
+            2,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          [
+            2,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ]
+        ]
+      },
+      {
+        "orbit": 19,
+        "source_feasible": false,
+        "single_source_patterns": 460,
+        "memo_states": 1224,
+        "first_witness_states": null
+      },
+      {
+        "orbit": 20,
+        "source_feasible": false,
+        "single_source_patterns": 445,
+        "memo_states": 1896,
+        "first_witness_states": null
+      },
+      {
+        "orbit": 21,
+        "source_feasible": false,
+        "single_source_patterns": 421,
+        "memo_states": 1272,
+        "first_witness_states": null
+      },
+      {
+        "orbit": 22,
+        "source_feasible": false,
+        "single_source_patterns": 460,
+        "memo_states": 720,
+        "first_witness_states": null
+      },
+      {
+        "orbit": 23,
+        "source_feasible": false,
+        "single_source_patterns": 427,
+        "memo_states": 2388,
+        "first_witness_states": null
+      },
+      {
+        "orbit": 24,
+        "source_feasible": false,
+        "single_source_patterns": 390,
+        "memo_states": 1188,
+        "first_witness_states": null
+      },
+      {
+        "orbit": 25,
+        "source_feasible": false,
+        "single_source_patterns": 415,
+        "memo_states": 1260,
+        "first_witness_states": null
+      },
+      {
+        "orbit": 26,
+        "source_feasible": true,
+        "single_source_patterns": 389,
+        "memo_states": 1926,
+        "first_witness_states": [
+          [
+            1,
+            2,
+            1,
+            2,
+            0,
+            0,
+            0
+          ],
+          [
+            2,
+            1,
+            1,
+            1,
+            2,
+            1,
+            2
+          ],
+          [
+            2,
+            1,
+            2,
+            1,
+            1,
+            2,
+            1
+          ]
+        ]
+      },
+      {
+        "orbit": 27,
+        "source_feasible": false,
+        "single_source_patterns": 381,
+        "memo_states": 1791,
+        "first_witness_states": null
+      },
+      {
+        "orbit": 28,
+        "source_feasible": true,
+        "single_source_patterns": 369,
+        "memo_states": 2238,
+        "first_witness_states": [
+          [
+            0,
+            0,
+            0,
+            2,
+            0,
+            0,
+            0
+          ],
+          [
+            1,
+            2,
+            1,
+            1,
+            0,
+            0,
+            2
+          ],
+          [
+            2,
+            1,
+            0,
+            0,
+            1,
+            2,
+            0
+          ],
+          [
+            2,
+            1,
+            2,
+            1,
+            2,
+            1,
+            1
+          ]
+        ]
+      },
+      {
+        "orbit": 29,
+        "source_feasible": false,
+        "single_source_patterns": 410,
+        "memo_states": 1315,
+        "first_witness_states": null
+      },
+      {
+        "orbit": 30,
+        "source_feasible": false,
+        "single_source_patterns": 408,
+        "memo_states": 1335,
+        "first_witness_states": null
+      },
+      {
+        "orbit": 31,
+        "source_feasible": false,
+        "single_source_patterns": 397,
+        "memo_states": 2051,
+        "first_witness_states": null
+      },
+      {
+        "orbit": 32,
+        "source_feasible": false,
+        "single_source_patterns": 412,
+        "memo_states": 2390,
+        "first_witness_states": null
+      },
+      {
+        "orbit": 33,
+        "source_feasible": false,
+        "single_source_patterns": 432,
+        "memo_states": 1208,
+        "first_witness_states": null
+      },
+      {
+        "orbit": 34,
+        "source_feasible": false,
+        "single_source_patterns": 393,
+        "memo_states": 2116,
+        "first_witness_states": null
+      },
+      {
+        "orbit": 35,
+        "source_feasible": true,
+        "single_source_patterns": 389,
+        "memo_states": 3266,
+        "first_witness_states": [
+          [
+            1,
+            1,
+            2,
+            1,
+            2,
+            2,
+            1
+          ],
+          [
+            1,
+            2,
+            1,
+            2,
+            1,
+            1,
+            2
+          ],
+          [
+            2,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          [
+            2,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ]
+        ]
+      },
+      {
+        "orbit": 36,
+        "source_feasible": false,
+        "single_source_patterns": 391,
+        "memo_states": 1272,
+        "first_witness_states": null
+      },
+      {
+        "orbit": 37,
+        "source_feasible": false,
+        "single_source_patterns": 403,
+        "memo_states": 1426,
+        "first_witness_states": null
+      },
+      {
+        "orbit": 38,
+        "source_feasible": false,
+        "single_source_patterns": 368,
+        "memo_states": 1601,
+        "first_witness_states": null
+      },
+      {
+        "orbit": 39,
+        "source_feasible": false,
+        "single_source_patterns": 373,
+        "memo_states": 1692,
+        "first_witness_states": null
+      },
+      {
+        "orbit": 40,
+        "source_feasible": false,
+        "single_source_patterns": 375,
+        "memo_states": 1013,
+        "first_witness_states": null
+      },
+      {
+        "orbit": 41,
+        "source_feasible": false,
+        "single_source_patterns": 389,
+        "memo_states": 1115,
+        "first_witness_states": null
+      },
+      {
+        "orbit": 42,
+        "source_feasible": true,
+        "single_source_patterns": 374,
+        "memo_states": 1670,
+        "first_witness_states": [
+          [
+            1,
+            2,
+            1,
+            2,
+            0,
+            0,
+            0
+          ],
+          [
+            2,
+            1,
+            1,
+            1,
+            2,
+            1,
+            2
+          ],
+          [
+            2,
+            1,
+            2,
+            1,
+            1,
+            2,
+            1
+          ]
+        ]
+      },
+      {
+        "orbit": 43,
+        "source_feasible": false,
+        "single_source_patterns": 360,
+        "memo_states": 1542,
+        "first_witness_states": null
+      },
+      {
+        "orbit": 44,
+        "source_feasible": false,
+        "single_source_patterns": 382,
+        "memo_states": 1838,
+        "first_witness_states": null
+      },
+      {
+        "orbit": 45,
+        "source_feasible": false,
+        "single_source_patterns": 365,
+        "memo_states": 1677,
+        "first_witness_states": null
+      },
+      {
+        "orbit": 46,
+        "source_feasible": false,
+        "single_source_patterns": 376,
+        "memo_states": 1789,
+        "first_witness_states": null
+      },
+      {
+        "orbit": 47,
+        "source_feasible": false,
+        "single_source_patterns": 370,
+        "memo_states": 1703,
+        "first_witness_states": null
+      },
+      {
+        "orbit": 48,
+        "source_feasible": true,
+        "single_source_patterns": 362,
+        "memo_states": 2057,
+        "first_witness_states": [
+          [
+            0,
+            0,
+            0,
+            2,
+            0,
+            0,
+            0
+          ],
+          [
+            1,
+            2,
+            1,
+            1,
+            1,
+            2,
+            1
+          ],
+          [
+            2,
+            1,
+            1,
+            0,
+            2,
+            0,
+            0
+          ],
+          [
+            2,
+            1,
+            2,
+            1,
+            1,
+            1,
+            2
+          ]
+        ]
+      },
+      {
+        "orbit": 49,
+        "source_feasible": false,
+        "single_source_patterns": 351,
+        "memo_states": 2652,
+        "first_witness_states": null
+      },
+      {
+        "orbit": 50,
+        "source_feasible": false,
+        "single_source_patterns": 361,
+        "memo_states": 1510,
+        "first_witness_states": null
+      },
+      {
+        "orbit": 51,
+        "source_feasible": false,
+        "single_source_patterns": 366,
+        "memo_states": 2615,
+        "first_witness_states": null
+      },
+      {
+        "orbit": 52,
+        "source_feasible": false,
+        "single_source_patterns": 397,
+        "memo_states": 860,
+        "first_witness_states": null
+      },
+      {
+        "orbit": 53,
+        "source_feasible": false,
+        "single_source_patterns": 366,
+        "memo_states": 1564,
+        "first_witness_states": null
+      },
+      {
+        "orbit": 54,
+        "source_feasible": true,
+        "single_source_patterns": 410,
+        "memo_states": 424,
+        "first_witness_states": [
+          [
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            2
+          ],
+          [
+            0,
+            2,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          [
+            2,
+            1,
+            1,
+            2,
+            2,
+            1,
+            1
+          ],
+          [
+            2,
+            1,
+            2,
+            1,
+            1,
+            2,
+            1
+          ]
+        ]
+      },
+      {
+        "orbit": 55,
+        "source_feasible": false,
+        "single_source_patterns": 346,
+        "memo_states": 1554,
+        "first_witness_states": null
+      },
+      {
+        "orbit": 56,
+        "source_feasible": true,
+        "single_source_patterns": 350,
+        "memo_states": 1209,
+        "first_witness_states": [
+          [
+            0,
+            0,
+            2,
+            0,
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            2,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          [
+            2,
+            1,
+            1,
+            1,
+            2,
+            2,
+            1
+          ],
+          [
+            2,
+            1,
+            1,
+            2,
+            1,
+            1,
+            2
+          ]
+        ]
+      },
+      {
+        "orbit": 57,
+        "source_feasible": false,
+        "single_source_patterns": 352,
+        "memo_states": 1679,
+        "first_witness_states": null
+      },
+      {
+        "orbit": 58,
+        "source_feasible": true,
+        "single_source_patterns": 380,
+        "memo_states": 1725,
+        "first_witness_states": [
+          [
+            0,
+            0,
+            2,
+            0,
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            2,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          [
+            2,
+            1,
+            1,
+            1,
+            2,
+            1,
+            2
+          ],
+          [
+            2,
+            1,
+            1,
+            2,
+            1,
+            2,
+            1
+          ]
+        ]
+      }
+    ],
+    "scope": "Boolean exact physical-source necessary condition; source-population enumeration and supplements omitted."
+  },
+  "(1, 1, 1, 1, 1, 1, 1, 1)": {
+    "orbits_tested": 0,
+    "source_feasible_orbits": 0,
+    "rows": [],
+    "scope": "Boolean exact physical-source necessary condition; source-population enumeration and supplements omitted."
+  }
+}
