@@ -71,6 +71,12 @@
       "stop": "2026-09-22T15:46:21+01:00",
       "seconds": 603,
       "unit": 8
+    },
+    {
+      "start": "2026-09-22T15:50:22+01:00",
+      "stop": "2026-09-22T15:51:48+01:00",
+      "seconds": 86,
+      "unit": 9
     }
   ],
   "forward_research_stop": "PENDING",
@@ -78,9 +84,9 @@
   "preservation_complete": "PENDING",
   "final_report_time": "PENDING",
   "wall_clock_span_to_preservation_complete": "PENDING",
-  "verified_forward_research_span_seconds": 1873,
+  "verified_forward_research_span_seconds": 1959,
   "preservation_span": "PENDING",
-  "substantive_unit_count": 8,
+  "substantive_unit_count": 9,
   "timestamped_unit_ledger": [
     {
       "unit": 1,
@@ -129,6 +135,12 @@
       "start": "2026-09-22T15:36:18+01:00",
       "completed": "2026-09-22T15:46:21+01:00",
       "result": "Exact S2xS6 quotient/source screen for r=10 partition (2,2,1^6): 156 unit-graph orbits, 250,240 rooted/coloured orbits, 792 optimistic strict survivors, exactly two physical-source-feasible t=1 cores (masks 15402149 and 48374421). These require supplement closure; no graph realization claimed."
+    },
+    {
+      "unit": 9,
+      "start": "2026-09-22T15:50:22+01:00",
+      "completed": "2026-09-22T15:51:48+01:00",
+      "result": "Exact source-population enumeration and supplement forcing eliminate both surviving (2,2,1^6) cores: each has one source multiset and zero supplement-feasible populations. Thus all r=10 support-eight partitions are internally closed; support nine remains."
     }
   ],
   "early_stop_check_time": "PENDING",
@@ -147,8 +159,10 @@
     "6d476ae08dd3971713d4a7ca4ac925c2cf92bba1",
     "a95cf9d74ec34cf192eb4c3396fa02f6c036b6b2",
     "9153645f216c36778daed2bee037353d0c4dbf34",
-    "79ee8583079bd7c81b9b037f779966c7b2cec03c"
+    "79ee8583079bd7c81b9b037f779966c7b2cec03c",
+    "56acab3ae5cf4d92f4f812729f05331b5a67bef4",
+    "56acab3ae5cf4d92f4f812729f05331b5a67bef4"
   ],
-  "live_unfinished_line": "r=10 partition (2,2,1^6) has two source-feasible t=1 cores requiring exact supplement closure; support-nine (2,1^8) also remains.",
+  "live_unfinished_line": "Only the r=10 support-nine partition (2,1^8) remains before any strict r=10 closure/S extension; equality scope remains unchanged.",
   "historical_fragments": []
 }
