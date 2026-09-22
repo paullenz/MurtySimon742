@@ -44,14 +44,20 @@
       "stop": "2026-09-22T21:20:15+01:00",
       "seconds": 224,
       "unit": "r=12 support-nine (2,2,2,1^6) source screen chunk 1/4"
+    },
+    {
+      "start": "2026-09-22T21:21:13+01:00",
+      "stop": "2026-09-22T21:24:59+01:00",
+      "seconds": 226,
+      "unit": "r=12 support-nine (2,2,2,1^6) source screen chunk 2/4"
     }
   ],
-  "verified_forward_span_seconds": 721,
+  "verified_forward_span_seconds": 947,
   "forward_stop": null,
   "preservation_start": null,
   "preservation_complete": null,
   "wall_clock_span_seconds": null,
-  "substantive_unit_count": 4,
+  "substantive_unit_count": 5,
   "substantive_unit_ledger": [
     {
       "completed_at": "2026-09-22T21:05:05+01:00",
@@ -72,6 +78,11 @@
       "completed_at": "2026-09-22T21:20:15+01:00",
       "unit": "r=12 support-nine (2,2,2,1^6) source screen chunk 1/4",
       "result": "3,094/3,094 strict cores source-infeasible; 0 solver-unknown."
+    },
+    {
+      "completed_at": "2026-09-22T21:24:59+01:00",
+      "unit": "r=12 support-nine (2,2,2,1^6) source screen chunk 2/4",
+      "result": "3,094/3,094 strict cores source-infeasible; 0 solver-unknown."
     }
   ],
   "early_stop_check": null,
@@ -82,14 +93,15 @@
     "59279a5cec68af26305df7928c090c59a8f7c039",
     "9ff6cc082f7d9dda69f2a16ca94c47384c7ba5f2",
     "1b5e98d96e693fe7bfd4325217edfae604c4d950",
-    "4b4a6f1ce221fbb1f883d818dbcdff31c0f7b8f3"
+    "4b4a6f1ce221fbb1f883d818dbcdff31c0f7b8f3",
+    "df0bf2dc6a356976e6d10a54ea23418d53267b09"
   ],
-  "unfinished_line": "Complete chunks 2-3 of r=12 support-nine case (2,2,2,1^6), then supplement-screen the 35 known source survivors plus any new survivors.",
+  "unfinished_line": "Complete chunk 3 of r=12 support-nine case (2,2,2,1^6), then supplement-screen the 35 known source survivors plus any new survivors.",
   "target": {
     "applicable": true,
     "required_seconds": 3000,
     "available_seconds": 3055,
-    "achieved_verified_seconds": 721,
+    "achieved_verified_seconds": 947,
     "result": "LIVE",
     "reason": "Earliest actual start left 50m55s before cutoff."
   },
