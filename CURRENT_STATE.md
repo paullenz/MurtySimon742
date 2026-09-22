@@ -9,21 +9,21 @@ CHECKPOINT CLASS: VERIFIED_INTERNAL_NOT_PROMOTED
 
 WORK MODE: FORWARD_RESEARCH_LIVE
 
-INSPECTED PREDECESSOR: 217f1bc6755f4f4601f73cf31a42ea7a73394c77.
+INSPECTED PREDECESSOR: 3aaf97096210c3e670218d82fe2f627f1eee9f46.
 
-LAST VERIFIED RESULT: r=12 is internally closed through support nine. At support ten, partition (3,1^9) is also internally closed: the structural census yielded 287 strict kernels, and exact source MILP rejects all 287 with zero solver-unknown cases.
+LAST VERIFIED RESULT: r=12 is internally closed through support nine, and support-ten partition (3,1^9) is closed. The remaining support-ten partition (2,2,1^8) now has an exact structural census: 46 unlabelled max-degree-two unit cores, 104,981 colored two-heavy attachment orbits, and 6,386 strict kernels.
 
-EVIDENCE: support-ten case-0 census/source scripts and exact outputs; canonical telemetry.
+EVIDENCE: support-ten case-1 census source, counts, compressed exact mask stream, and canonical telemetry.
 
-SESSION UTILISATION: Trigger 21:00:38 BST; actual start 21:02:43; nine closed intervals; verified total 1399s (23m19s); nine substantive units; cutoff 21:53:38; 50-minute target applicable; LIVE.
+SESSION UTILISATION: Trigger 21:00:38 BST; actual start 21:02:43; ten closed intervals; verified total 1414s (23m34s); ten substantive units; cutoff 21:53:38; 50-minute target applicable; LIVE.
 
 UNPRESERVED WORK: None at this checkpoint.
 
-NEXT ACTION: Derive and enumerate support-ten partition (2,2,1^8), then support eleven.
+NEXT ACTION: Source-screen the 6,386 (2,2,1^8) kernels, then support eleven.
 
 FOCUSED-SESSION COUNT: 1/24; current trigger credit pending final compliance.
 
-MANDATORY CONSTRAINTS: One support-ten partition and support eleven remain; no r=12 closure yet.
+MANDATORY CONSTRAINTS: Source/supplement screening and support eleven remain; no r=12 closure yet.
 <!-- CURRENT-STATUS:END -->
 
 ## Latest adversarial audit - 22 September 2026

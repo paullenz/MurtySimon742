@@ -74,14 +74,20 @@
       "stop": "2026-09-22T21:39:55+01:00",
       "seconds": 115,
       "unit": "r=12 support-ten partition (3,1^9) source screen"
+    },
+    {
+      "start": "2026-09-22T21:42:18+01:00",
+      "stop": "2026-09-22T21:42:33+01:00",
+      "seconds": 15,
+      "unit": "r=12 support-ten partition (2,2,1^8) structural quotient census"
     }
   ],
-  "verified_forward_span_seconds": 1399,
+  "verified_forward_span_seconds": 1414,
   "forward_stop": null,
   "preservation_start": null,
   "preservation_complete": null,
   "wall_clock_span_seconds": null,
-  "substantive_unit_count": 9,
+  "substantive_unit_count": 10,
   "substantive_unit_ledger": [
     {
       "completed_at": "2026-09-22T21:05:05+01:00",
@@ -127,6 +133,11 @@
       "completed_at": "2026-09-22T21:39:55+01:00",
       "unit": "r=12 support-ten partition (3,1^9) source screen",
       "result": "287/287 strict kernels source-infeasible; 0 solver-unknown. Partition closed internally."
+    },
+    {
+      "completed_at": "2026-09-22T21:42:33+01:00",
+      "unit": "r=12 support-ten partition (2,2,1^8) structural quotient census",
+      "result": "Exact reduction to 46 unlabelled max-degree-two unit cores, 104,981 colored two-heavy attachment orbits, and 6,386 strict kernels."
     }
   ],
   "early_stop_check": null,
@@ -153,14 +164,15 @@
     "06af73ac431008b5a0d38c013b9ab6a15d57f133",
     "4f549295acb8fe8a6b306592d99cc2da6859fd34",
     "1df04922c8a6bab9620f150ada876f09199cb47f",
-    "217f1bc6755f4f4601f73cf31a42ea7a73394c77"
+    "217f1bc6755f4f4601f73cf31a42ea7a73394c77",
+    "3aaf97096210c3e670218d82fe2f627f1eee9f46"
   ],
-  "unfinished_line": "Treat r=12 support-ten partition (2,2,1^8) and support eleven; derive structural reductions before exact source/supplement screening.",
+  "unfinished_line": "Source-screen the 6,386 r=12 support-ten (2,2,1^8) kernels, then treat support eleven.",
   "target": {
     "applicable": true,
     "required_seconds": 3000,
     "available_seconds": 3055,
-    "achieved_verified_seconds": 1399,
+    "achieved_verified_seconds": 1414,
     "result": "LIVE",
     "reason": "Earliest actual start left 50m55s before cutoff."
   },
