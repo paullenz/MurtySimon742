@@ -81,14 +81,20 @@
       "stop": "2026-09-22T17:34:59+01:00",
       "seconds": 19,
       "evidence": "exact supplement DFS for eight support-nine survivors"
+    },
+    {
+      "start": "2026-09-22T17:36:25+01:00",
+      "stop": "2026-09-22T17:38:49+01:00",
+      "seconds": 144,
+      "evidence": "support-ten structural max-degree reduction and exact orbit census"
     }
   ],
-  "verified_forward_span_seconds": 1109,
+  "verified_forward_span_seconds": 1253,
   "forward_stop": "PENDING",
   "preservation_start": "PENDING",
   "preservation_complete": "PENDING",
   "wall_clock_span_seconds": "PENDING",
-  "substantive_unit_count": 10,
+  "substantive_unit_count": 11,
   "substantive_unit_ledger": [
     {
       "completed_at": "2026-09-22T17:05:05+01:00",
@@ -139,6 +145,11 @@
       "completed_at": "2026-09-22T17:34:59+01:00",
       "unit": "exact supplement forcing for support-nine survivors",
       "result": "0 found, 8 exhaustively rejected; r=11 internally closed through support nine."
+    },
+    {
+      "completed_at": "2026-09-22T17:38:49+01:00",
+      "unit": "r=11 support-ten structural reduction and census",
+      "result": "Unit-induced max degree <=2; 70 unlabelled unit cores, 3,430 attachment-coloured orbits, 280 strict candidates."
     }
   ],
   "early_stop_check": {
@@ -160,9 +171,10 @@
     "ab0a475be153792ed014c01a750f7bd32b855c60",
     "fdf1c3b14bf8b18da1ee7c99feb82ed2680630f2",
     "662e11ed380c85ddad821e439228563499909792",
-    "4125a45262cfad936d8e6ca9a11f145c32696693"
+    "4125a45262cfad936d8e6ca9a11f145c32696693",
+    "b7fe1e9657c450039b4e6b2ee4f76ee0b2716b53"
   ],
-  "unfinished_line": "Close r=11 support ten, residual partition (2,1^9).",
+  "unfinished_line": "Physical-source and supplement screen 280 r=11 support-ten candidates.",
   "target": {
     "applicable": true,
     "available_seconds": 3160,

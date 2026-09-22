@@ -9,21 +9,21 @@ CHECKPOINT CLASS: VERIFIED_INTERNAL_NOT_PROMOTED
 
 WORK MODE: FORWARD_RESEARCH_LIVE
 
-INSPECTED PREDECESSOR: 4125a45262cfad936d8e6ca9a11f145c32696693.
+INSPECTED PREDECESSOR: b7fe1e9657c450039b4e6b2ee4f76ee0b2716b53.
 
-LAST VERIFIED RESULT: r=11 is internally closed through support nine. Support-eight closure uses sharded source MILPs plus exact supplement DFS. At support nine, (3,1^8) has no source-feasible core; (2,2,1^7) reduces to 8 source-feasible kernels, and exact pivoted DFS exhaustively rejects all source multisets under the inherited one-supplement condition (0 found, 8 exhausted). Only support ten, residual partition (2,1^9), remains before full r=11 closure.
+LAST VERIFIED RESULT: r=11 is internally closed through support nine. For the sole support-ten partition R=(2,1^9), local capacity forces the nine unit-residual vertices to induce maximum degree at most two: final unit degree is at most three, and degree three requires adjacency to the unique residual-two vertex. This reduces the census to 70 unlabelled nine-vertex unit cores, 3,430 attachment-coloured orbits, and exactly 280 optimistic strict candidates.
 
-EVIDENCE: support-nine orbit census, source shards, and `r11_support9_earlyexit.py/json` under the r11 quotient package; canonical telemetry.
+EVIDENCE: `r11_support10_orbits.cpp`, counts, and 280-row mask file under the r11 quotient package; canonical telemetry.
 
-SESSION UTILISATION: Trigger 17:00:38 BST; actual start 17:00:58; ten closed intervals; verified total 1109s (18m29s); ten substantive units; cutoff 17:53:38; target YES/PENDING; LIVE.
+SESSION UTILISATION: Trigger 17:00:38 BST; actual start 17:00:58; eleven closed intervals; verified total 1253s (20m53s); eleven substantive units; cutoff 17:53:38; target YES/PENDING; LIVE.
 
 UNPRESERVED WORK: None at this checkpoint.
 
-NEXT ACTION: Develop a bounded support-ten reduction for residual partition (2,1^9), avoiding a blind scan of all 12,005,168 unlabelled ten-vertex cores if a structural filter is available.
+NEXT ACTION: Apply an exact physical-source feasibility screen to the 280 support-ten candidates, followed by supplement forcing for any survivors.
 
 FOCUSED-SESSION COUNT: 1/24; current trigger credit pending final compliance.
 
-MANDATORY CONSTRAINTS: Full r=11 closure is not claimed until support ten is closed; internal finite work is not graph realization.
+MANDATORY CONSTRAINTS: The structural reduction and orbit census remain internal computer-assisted mathematics; no full r=11 closure yet.
 <!-- CURRENT-STATUS:END -->
 
 ## Latest adversarial audit - 22 September 2026
