@@ -60,6 +60,13 @@
       "actual_stop": "2026-09-22T11:14:27+01:00",
       "role": "forward_research",
       "notes": "Exact optimistic r=6 product-equality core/slack classification."
+    },
+    {
+      "segment_id": "research-6",
+      "actual_start": "2026-09-22T11:14:53+01:00",
+      "actual_stop": "2026-09-22T11:16:02+01:00",
+      "role": "forward_research",
+      "notes": "Exact necessary physical-source screen of r=6 equality core/slack orbits."
     }
   ],
   "forward_research_intervals": [
@@ -92,6 +99,11 @@
       "start": "2026-09-22T11:13:23+01:00",
       "stop": "2026-09-22T11:14:27+01:00",
       "evidence": "R6_EQUALITY_CORE_SCREEN.md, screen_r6_equality.py, R6_EQUALITY_CORE_SCREEN.json"
+    },
+    {
+      "start": "2026-09-22T11:14:53+01:00",
+      "stop": "2026-09-22T11:16:02+01:00",
+      "evidence": "R6_EQUALITY_SOURCE_SCREEN.md, screen_r6_equality_sources.py, R6_EQUALITY_SOURCE_SCREEN.json"
     }
   ],
   "forward_research_stop": null,
@@ -99,10 +111,10 @@
   "preservation_complete": null,
   "final_report_time": null,
   "wall_clock_span_to_preservation_complete": null,
-  "verified_forward_research_span": 550,
+  "verified_forward_research_span": 619,
   "verified_forward_research_span_units": "seconds",
   "preservation_span": null,
-  "substantive_unit_count": 5,
+  "substantive_unit_count": 6,
   "timestamped_unit_ledger": [
     {
       "completed_at": "2026-09-22T11:04:00+01:00",
@@ -133,6 +145,12 @@
       "unit": "Residual-mass-six product-equality core classification",
       "result": "Exact necessary relaxation reduces t=0 at r6 to 13 orbits: 3 for (3,1,1,1), 1 for (2,2,1,1), 9 for (2,1,1,1,1). No realization asserted.",
       "artifact": "project/research/general_n/2026-09-22-zero-demand-equality-v1/R6_EQUALITY_CORE_SCREEN.md"
+    },
+    {
+      "completed_at": "2026-09-22T11:16:02+01:00",
+      "unit": "Residual-mass-six equality source screen",
+      "result": "Eight of 13 core/slack orbits eliminated; five core orbits and 31 necessary source multisets remain. No graph realization or equality closure asserted.",
+      "artifact": "project/research/general_n/2026-09-22-zero-demand-equality-v1/R6_EQUALITY_SOURCE_SCREEN.md"
     }
   ],
   "early_stop_check_time": null,
@@ -144,9 +162,9 @@
   "compliance_status": "IN_PROGRESS",
   "infrastructure_failures": [],
   "commit_shas": [
-    "6c3ed130e220819ec243e359b6274002c0c6a82e"
+    "a3a47fed71120539884c826c7371e56160190dc8"
   ],
-  "live_unfinished_line": "Screen 13 r=6 equality core/slack orbits through exact physical-source states without overconstraining zero-residual attachments.",
+  "live_unfinished_line": "Apply legal-supplement uniqueness and selected-B-edge injectivity to all 31 r=6 equality source multisets.",
   "historical_fragments": [],
   "focused_session_credit": 0,
   "predecessor_session": "project/research/session_logs/2026-09-22/2026-09-22T10-00-38+01-00-canonical.json",
