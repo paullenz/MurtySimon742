@@ -9,19 +9,19 @@ CHECKPOINT CLASS: SUBSTANTIVE_RESEARCH_CHECKPOINT
 
 WORK MODE: MATH
 
-INSPECTED PREDECESSOR: fd03a6fb07facfb2b28c20f0607b87b93d303c70.
+INSPECTED PREDECESSOR: fb0841713d4fcb8ce2ca44b667076b8da71004ea.
 
-LAST VERIFIED RESULT: Exact necessary-core screen reduces strict r=6 surplus to four orbits of partition (2,1,1,1,1); no survivor is promoted to a graph.
+LAST VERIFIED RESULT: Exact physical-source screen kills all four optimistic r=6 strict-surplus cores; internal candidate edge-bound scope advances to S<=8. Equality above S=5 remains open.
 
 EVIDENCE: `project/research/session_logs/2026-09-22/2026-09-22T11-00-38+01-00-canonical.json`; `project/research/general_n/2026-09-22-zero-demand-equality-v1/`.
 
-SESSION UTILISATION: Trigger 2026-09-22 11:00:38 BST; earliest 11:01:19; next 12:00:38; cutoff 11:53:38; hard close 11:59:38. Closed intervals: 11:02:36–11:04:00, 11:04:50–11:06:51, 11:07:13–11:08:46; total 298 seconds; units 3; preservation pending; target YES/PENDING; IN_PROGRESS. Stop reason: active. Canonical: `project/research/session_logs/2026-09-22/2026-09-22T11-00-38+01-00-canonical.json`.
+SESSION UTILISATION: Trigger 2026-09-22 11:00:38 BST; earliest 11:01:19; next 12:00:38; cutoff 11:53:38; hard close 11:59:38. Closed intervals: 11:02:36–11:04:00, 11:04:50–11:06:51, 11:07:13–11:08:46, 11:09:08–11:11:53; total 463 seconds; units 4; preservation pending; target YES/PENDING; IN_PROGRESS. Stop reason: active. Canonical: `project/research/session_logs/2026-09-22/2026-09-22T11-00-38+01-00-canonical.json`.
 
 UNPRESERVED WORK: None beyond named unfinished line.
 
 DEFERRED ADMIN: Historical missing-slot reconciliation and schedule maintenance.
 
-NEXT ACTION: Enumerate physical source-state multisets for the four r=6 core orbits, then impose legal supplements.
+NEXT ACTION: Classify r=6 product-equality cores (t=0) and retain equality trust boundary; then begin r=7 strict screen.
 
 FOCUSED-SESSION COUNT: 1/24 completed before this trigger; this trigger credit 0.
 

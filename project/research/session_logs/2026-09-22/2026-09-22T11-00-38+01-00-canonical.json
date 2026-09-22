@@ -39,6 +39,13 @@
       "actual_stop": "2026-09-22T11:08:46+01:00",
       "role": "forward_research",
       "notes": "Exact optimistic r=6 residual-core classification."
+    },
+    {
+      "segment_id": "research-4",
+      "actual_start": "2026-09-22T11:09:08+01:00",
+      "actual_stop": "2026-09-22T11:11:53+01:00",
+      "role": "forward_research",
+      "notes": "Exact physical-source multiset exclusion for four optimistic r=6 strict-surplus cores."
     }
   ],
   "forward_research_intervals": [
@@ -56,6 +63,11 @@
       "start": "2026-09-22T11:07:13+01:00",
       "stop": "2026-09-22T11:08:46+01:00",
       "evidence": "R6_CORE_SCREEN.md, screen_r6_core.py, R6_CORE_SCREEN.json"
+    },
+    {
+      "start": "2026-09-22T11:09:08+01:00",
+      "stop": "2026-09-22T11:11:53+01:00",
+      "evidence": "R6_SOURCE_EXCLUSION.md, screen_r6_sources.py, R6_SOURCE_SCREEN.json"
     }
   ],
   "forward_research_stop": null,
@@ -63,10 +75,10 @@
   "preservation_complete": null,
   "final_report_time": null,
   "wall_clock_span_to_preservation_complete": null,
-  "verified_forward_research_span": 298,
+  "verified_forward_research_span": 463,
   "verified_forward_research_span_units": "seconds",
   "preservation_span": null,
-  "substantive_unit_count": 3,
+  "substantive_unit_count": 4,
   "timestamped_unit_ledger": [
     {
       "completed_at": "2026-09-22T11:04:00+01:00",
@@ -85,6 +97,12 @@
       "unit": "Residual-mass-six optimistic core screen",
       "result": "All partitions except (2,1,1,1,1) eliminated at necessary-relaxation level; 31 labelled survivors reduce to four unit-permutation orbits. No graph realization asserted.",
       "artifact": "project/research/general_n/2026-09-22-zero-demand-equality-v1/R6_CORE_SCREEN.md"
+    },
+    {
+      "completed_at": "2026-09-22T11:11:53+01:00",
+      "unit": "Residual-mass-six physical-source exclusion",
+      "result": "Computer-assisted internal candidate: all four optimistic strict-surplus core orbits have zero exact residual/source-state multisets; r6 implies t<=0; S<=8 edge bound. Equality at r6 remains open.",
+      "artifact": "project/research/general_n/2026-09-22-zero-demand-equality-v1/R6_SOURCE_EXCLUSION.md"
     }
   ],
   "early_stop_check_time": null,
@@ -96,9 +114,9 @@
   "compliance_status": "IN_PROGRESS",
   "infrastructure_failures": [],
   "commit_shas": [
-    "fd03a6fb07facfb2b28c20f0607b87b93d303c70"
+    "fb0841713d4fcb8ce2ca44b667076b8da71004ea"
   ],
-  "live_unfinished_line": "Enumerate physical source-state multisets for the four r=6 core orbits, then impose legal supplements.",
+  "live_unfinished_line": "Classify r=6 product-equality cores (t=0) and retain equality trust boundary; then begin r=7 strict screen.",
   "historical_fragments": [],
   "focused_session_credit": 0,
   "predecessor_session": "project/research/session_logs/2026-09-22/2026-09-22T10-00-38+01-00-canonical.json"
