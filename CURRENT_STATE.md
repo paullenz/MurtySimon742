@@ -9,21 +9,21 @@ CHECKPOINT CLASS: VERIFIED_INTERNAL_NOT_PROMOTED
 
 WORK MODE: FORWARD_RESEARCH_LIVE
 
-INSPECTED PREDECESSOR: 1b5e98d96e693fe7bfd4325217edfae604c4d950.
+INSPECTED PREDECESSOR: 4b4a6f1ce221fbb1f883d818dbcdff31c0f7b8f3.
 
-LAST VERIFIED RESULT: r=12 remains internally closed through support eight. At support nine, cases 0-1 are source-infeasible. In case 2, chunk 0 screened 3,093 strict cores: 35 source-feasible, 3,058 source-infeasible, and zero solver-unknown. Three chunks remain.
+LAST VERIFIED RESULT: r=12 remains internally closed through support eight. Support-nine source cases 0-1 are closed. In case 2, chunks 0-1 have screened 6,187 strict cores: exactly 35 source-feasible, 6,152 source-infeasible, zero solver-unknown. Two chunks remain.
 
-EVIDENCE: chunked support-nine source script and chunk-0 JSON in the r12 quotient package; canonical telemetry.
+EVIDENCE: support-nine chunked source script and chunk-0/chunk-1 JSON; canonical telemetry.
 
-SESSION UTILISATION: Trigger 21:00:38 BST; actual start 21:02:43; three closed intervals; verified total 497s (8m17s); three substantive units; cutoff 21:53:38; 50-minute target applicable; LIVE.
+SESSION UTILISATION: Trigger 21:00:38 BST; actual start 21:02:43; four closed intervals; verified total 721s (12m01s); four substantive units; cutoff 21:53:38; 50-minute target applicable; LIVE.
 
 UNPRESERVED WORK: None at this checkpoint.
 
-NEXT ACTION: Run case-2 chunks 1-3, then supplement-screen all source survivors.
+NEXT ACTION: Run case-2 chunks 2-3, then supplement-screen all survivors.
 
 FOCUSED-SESSION COUNT: 1/24; current trigger credit pending final compliance.
 
-MANDATORY CONSTRAINTS: Three source chunks and supplement feasibility remain; no support-nine or r=12 closure yet.
+MANDATORY CONSTRAINTS: Two source chunks and supplement feasibility remain; no support-nine or r=12 closure yet.
 <!-- CURRENT-STATUS:END -->
 
 ## Latest adversarial audit - 22 September 2026
