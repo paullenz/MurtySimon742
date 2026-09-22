@@ -5,11 +5,11 @@ Canonical repository: `paullenz/MurtySimon742`. Date: 23 September 2026.
 Active target: a genuinely independent proof of Erdős #742 / the Murty–Simon inequality e(G)<=floor(n^2/4), preferably with the equality characterization. Forward priority is the project’s own complement / residual / Hall / profile / realizability route, not a reconstruction of the external e+disj+X proof. The first focused session produced the internally checked candidate threshold `Delta>=250n/429`, shrinking the live strip to `n/2<Delta<250n/429`. The theorem and its inherited graph-to-profile spine remain candidate/internal-review mathematics. A 24-focused-session go/no-go gate applies. Prior eventual-D2C work remains preserved but is no longer the active forward objective.
 
 <!-- CURRENT-STATUS:START -->
-CHECKPOINT CLASS: DAILY_ADVERSARIAL_AUDIT_COMPLETE
+CHECKPOINT CLASS: DAILY_ADVERSARIAL_AUDIT_COMPLETE_TELEMETRY_TIMESTAMP_CORRECTED
 
-WORK MODE: RED_TEAM_AUDIT
+WORK MODE: AUDIT
 
-INSPECTED PREDECESSOR: 320ff91c4b3b1c64e98349788f9f971f65a9ef01.
+INSPECTED PREDECESSOR: d9e77cc6abb1bca1b0b13752ce5b993a4959edeb.
 
 LAST VERIFIED RESULT: The independently reconstructed graph-to-profile bridge replays on 757 actual D2C graphs, 1,256 maximum-degree roots and all 2,722 legal selections. The internal finite pipeline retains the edge bound through S<=13 and balanced-complete-bipartite equality through S<=8. Two corrupted saved evidence files were found, preserved and regenerated from source; the repaired r=8 and r=11 cross-file audits pass. These are internal candidate/computer-assisted results, not external verification or a full proof.
 
@@ -17,7 +17,7 @@ EVIDENCE: project/research/general_n/2026-09-23-daily-red-team-audit-v1/DAILY_RE
 
 SESSION UTILISATION: 23 scheduled triggers are now represented canonically. Eight scheduled sessions RAN with 233m56s of closed forward intervals and 100 units; one manual recovery adds 11m10s and three units without scheduled credit. Classifications: 0 target-met, 5 SHORT, 3 LATE-START/TARGET-N/A, 2 MISSED/NO-FORWARD, 13 UNVERIFIED/MISSING. Utilisation is 57.25% over the eight windows with evidenced availability and intervals only; it is not whole-day utilisation.
 
-UNPRESERVED WORK: None.
+UNPRESERVED WORK: None. The audit-created 23:00 canonical record now names the actual midnight audit trigger rather than the invalid textual hour `24:00`; no mathematical or utilisation result changed.
 
 DEFERRED ADMIN: Verify actual launches/checkpoints for 23 September 01:00:38, 02:00:38 and 03:00:38 BST at the first audit after they are due. They were future at this audit; configuration readback is not launch evidence.
 
