@@ -9,21 +9,21 @@ CHECKPOINT CLASS: VERIFIED_INTERNAL_NOT_PROMOTED
 
 WORK MODE: FORWARD_RESEARCH_LIVE
 
-INSPECTED PREDECESSOR: 06af73ac431008b5a0d38c013b9ab6a15d57f133.
+INSPECTED PREDECESSOR: 4f549295acb8fe8a6b306592d99cc2da6859fd34.
 
-LAST VERIFIED RESULT: The r=12 support-nine exact source screen is complete. Cases (4,1^8) and (3,2,1^7) have no source survivors. Case (2,2,2,1^6) has 36 source-feasible kernels among 12,375 strict cores; all other strict cores are source-infeasible and there are zero solver-unknown cases.
+LAST VERIFIED RESULT: r=12 is internally closed through support nine. The exact support-nine source screen left 36 kernels, all in partition (2,2,2,1^6); a combined source/supplement MILP rejects all 36 with zero solver-unknown cases.
 
-EVIDENCE: support-nine census, case-0/case-1 JSON, and four case-2 chunk JSON files; canonical telemetry.
+EVIDENCE: complete support-nine census, source shards, supplement script/output, and canonical telemetry in the r12 quotient package.
 
-SESSION UTILISATION: Trigger 21:00:38 BST; actual start 21:02:43; six closed intervals; verified total 1169s (19m29s); six substantive units; cutoff 21:53:38; 50-minute target applicable; LIVE.
+SESSION UTILISATION: Trigger 21:00:38 BST; actual start 21:02:43; seven closed intervals; verified total 1217s (20m17s); seven substantive units; cutoff 21:53:38; 50-minute target applicable; LIVE.
 
 UNPRESERVED WORK: None at this checkpoint.
 
-NEXT ACTION: Supplement-screen all 36 support-nine source survivors; if closed, continue supports ten and eleven.
+NEXT ACTION: Enumerate supports ten and eleven, then source/supplement-screen their strict kernels.
 
 FOCUSED-SESSION COUNT: 1/24; current trigger credit pending final compliance.
 
-MANDATORY CONSTRAINTS: Supplement feasibility remains; no support-nine or r=12 closure yet.
+MANDATORY CONSTRAINTS: Supports ten-eleven remain; no r=12 closure yet. Abstract finite infeasibility is not graph realization.
 <!-- CURRENT-STATUS:END -->
 
 ## Latest adversarial audit - 22 September 2026

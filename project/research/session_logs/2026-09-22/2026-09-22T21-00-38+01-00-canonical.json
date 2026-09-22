@@ -56,14 +56,20 @@
       "stop": "2026-09-22T21:29:44+01:00",
       "seconds": 222,
       "unit": "r=12 support-nine (2,2,2,1^6) source screen chunk 3/4"
+    },
+    {
+      "start": "2026-09-22T21:31:39+01:00",
+      "stop": "2026-09-22T21:32:27+01:00",
+      "seconds": 48,
+      "unit": "r=12 support-nine combined source/supplement MILP"
     }
   ],
-  "verified_forward_span_seconds": 1169,
+  "verified_forward_span_seconds": 1217,
   "forward_stop": null,
   "preservation_start": null,
   "preservation_complete": null,
   "wall_clock_span_seconds": null,
-  "substantive_unit_count": 6,
+  "substantive_unit_count": 7,
   "substantive_unit_ledger": [
     {
       "completed_at": "2026-09-22T21:05:05+01:00",
@@ -94,11 +100,22 @@
       "completed_at": "2026-09-22T21:29:44+01:00",
       "unit": "r=12 support-nine (2,2,2,1^6) source screen chunk 3/4",
       "result": "3,093 source-infeasible; 1 source-feasible kernel (mask 68585259782); 0 solver-unknown. Case 2 totals 36 source survivors from 12,375 strict cores."
+    },
+    {
+      "completed_at": "2026-09-22T21:32:27+01:00",
+      "unit": "r=12 support-nine combined source/supplement MILP",
+      "result": "All 36 source-feasible kernels supplement-infeasible; 0 feasible and 0 solver-unknown. Support nine closed internally."
     }
   ],
   "early_stop_check": null,
   "stop_reason": null,
-  "failures_and_pivots": [],
+  "failures_and_pivots": [
+    {
+      "at": "2026-09-22T21:31:29+01:00",
+      "failure": "First supplement invocation was not retained after an execution-session handle was not captured; output file remained empty.",
+      "pivot": "Reran from a fresh authoritative 21:31:39 start, preserved the completed output, and credited only the rerun interval."
+    }
+  ],
   "commit_shas": [
     "ce26dceaad7a8766e0c8b5c3aca7ca666c01ed27",
     "59279a5cec68af26305df7928c090c59a8f7c039",
@@ -106,14 +123,15 @@
     "1b5e98d96e693fe7bfd4325217edfae604c4d950",
     "4b4a6f1ce221fbb1f883d818dbcdff31c0f7b8f3",
     "df0bf2dc6a356976e6d10a54ea23418d53267b09",
-    "06af73ac431008b5a0d38c013b9ab6a15d57f133"
+    "06af73ac431008b5a0d38c013b9ab6a15d57f133",
+    "4f549295acb8fe8a6b306592d99cc2da6859fd34"
   ],
-  "unfinished_line": "Supplement-screen all 36 r=12 support-nine source survivors; if closed, enumerate supports ten and eleven.",
+  "unfinished_line": "Enumerate r=12 support-ten and support-eleven strict quotient cases; source/supplement-screen survivors to seek full r=12 closure.",
   "target": {
     "applicable": true,
     "required_seconds": 3000,
     "available_seconds": 3055,
-    "achieved_verified_seconds": 1169,
+    "achieved_verified_seconds": 1217,
     "result": "LIVE",
     "reason": "Earliest actual start left 50m55s before cutoff."
   },

@@ -1,0 +1,369 @@
+{
+  "kernels": 36,
+  "feasible": 0,
+  "infeasible": 36,
+  "unknown": 0,
+  "rows": [
+    {
+      "index": 0,
+      "partition": "(1, 2, 2, 2, 1, 1, 1, 1, 1)",
+      "mask": 1295184064,
+      "patterns": 1321,
+      "helper_constraints": 1290,
+      "status": 2,
+      "success": false,
+      "message": "The problem is infeasible. (HiGHS Status 8: model_status is Infeasible; primal_status is None)"
+    },
+    {
+      "index": 1,
+      "partition": "(1, 2, 1, 1, 2, 1, 1, 1, 2)",
+      "mask": 1295575200,
+      "patterns": 1348,
+      "helper_constraints": 1373,
+      "status": 2,
+      "success": false,
+      "message": "The problem is infeasible. (HiGHS Status 8: model_status is Infeasible; primal_status is None)"
+    },
+    {
+      "index": 2,
+      "partition": "(1, 2, 2, 1, 2, 1, 1, 1, 1)",
+      "mask": 1295575200,
+      "patterns": 1341,
+      "helper_constraints": 1344,
+      "status": 2,
+      "success": false,
+      "message": "The problem is infeasible. (HiGHS Status 8: model_status is Infeasible; primal_status is None)"
+    },
+    {
+      "index": 3,
+      "partition": "(1, 1, 2, 1, 2, 1, 1, 1, 2)",
+      "mask": 1295675524,
+      "patterns": 1344,
+      "helper_constraints": 1389,
+      "status": 2,
+      "success": false,
+      "message": "The problem is infeasible. (HiGHS Status 8: model_status is Infeasible; primal_status is None)"
+    },
+    {
+      "index": 4,
+      "partition": "(1, 1, 2, 1, 2, 1, 1, 2, 1)",
+      "mask": 1295675524,
+      "patterns": 1334,
+      "helper_constraints": 1348,
+      "status": 2,
+      "success": false,
+      "message": "The problem is infeasible. (HiGHS Status 8: model_status is Infeasible; primal_status is None)"
+    },
+    {
+      "index": 5,
+      "partition": "(1, 2, 2, 1, 2, 1, 1, 1, 1)",
+      "mask": 1295675524,
+      "patterns": 1325,
+      "helper_constraints": 1310,
+      "status": 2,
+      "success": false,
+      "message": "The problem is infeasible. (HiGHS Status 8: model_status is Infeasible; primal_status is None)"
+    },
+    {
+      "index": 6,
+      "partition": "(1, 2, 1, 1, 1, 2, 1, 2, 1)",
+      "mask": 1299738754,
+      "patterns": 1400,
+      "helper_constraints": 1496,
+      "status": 2,
+      "success": false,
+      "message": "The problem is infeasible. (HiGHS Status 8: model_status is Infeasible; primal_status is None)"
+    },
+    {
+      "index": 7,
+      "partition": "(2, 1, 1, 2, 1, 1, 1, 1, 2)",
+      "mask": 1383426144,
+      "patterns": 1317,
+      "helper_constraints": 1317,
+      "status": 2,
+      "success": false,
+      "message": "The problem is infeasible. (HiGHS Status 8: model_status is Infeasible; primal_status is None)"
+    },
+    {
+      "index": 8,
+      "partition": "(1, 1, 1, 1, 2, 2, 1, 1, 2)",
+      "mask": 1383426144,
+      "patterns": 1309,
+      "helper_constraints": 1274,
+      "status": 2,
+      "success": false,
+      "message": "The problem is infeasible. (HiGHS Status 8: model_status is Infeasible; primal_status is None)"
+    },
+    {
+      "index": 9,
+      "partition": "(1, 1, 1, 2, 2, 2, 1, 1, 1)",
+      "mask": 1383426144,
+      "patterns": 1327,
+      "helper_constraints": 1355,
+      "status": 2,
+      "success": false,
+      "message": "The problem is infeasible. (HiGHS Status 8: model_status is Infeasible; primal_status is None)"
+    },
+    {
+      "index": 10,
+      "partition": "(2, 1, 1, 2, 1, 1, 1, 1, 2)",
+      "mask": 1383490656,
+      "patterns": 1327,
+      "helper_constraints": 1291,
+      "status": 2,
+      "success": false,
+      "message": "The problem is infeasible. (HiGHS Status 8: model_status is Infeasible; primal_status is None)"
+    },
+    {
+      "index": 11,
+      "partition": "(1, 2, 1, 2, 1, 1, 1, 1, 2)",
+      "mask": 1383493704,
+      "patterns": 1370,
+      "helper_constraints": 1429,
+      "status": 2,
+      "success": false,
+      "message": "The problem is infeasible. (HiGHS Status 8: model_status is Infeasible; primal_status is None)"
+    },
+    {
+      "index": 12,
+      "partition": "(1, 2, 2, 2, 1, 1, 1, 1, 1)",
+      "mask": 1383493704,
+      "patterns": 1369,
+      "helper_constraints": 1419,
+      "status": 2,
+      "success": false,
+      "message": "The problem is infeasible. (HiGHS Status 8: model_status is Infeasible; primal_status is None)"
+    },
+    {
+      "index": 13,
+      "partition": "(2, 1, 1, 1, 2, 2, 1, 1, 1)",
+      "mask": 1455042688,
+      "patterns": 1557,
+      "helper_constraints": 1712,
+      "status": 2,
+      "success": false,
+      "message": "The problem is infeasible. (HiGHS Status 8: model_status is Infeasible; primal_status is None)"
+    },
+    {
+      "index": 14,
+      "partition": "(2, 1, 2, 1, 1, 1, 1, 2, 1)",
+      "mask": 1595556384,
+      "patterns": 1594,
+      "helper_constraints": 1761,
+      "status": 2,
+      "success": false,
+      "message": "The problem is infeasible. (HiGHS Status 8: model_status is Infeasible; primal_status is None)"
+    },
+    {
+      "index": 15,
+      "partition": "(1, 1, 1, 1, 2, 2, 1, 1, 2)",
+      "mask": 3660763328,
+      "patterns": 1382,
+      "helper_constraints": 1449,
+      "status": 2,
+      "success": false,
+      "message": "The problem is infeasible. (HiGHS Status 8: model_status is Infeasible; primal_status is None)"
+    },
+    {
+      "index": 16,
+      "partition": "(1, 1, 1, 1, 2, 2, 1, 1, 2)",
+      "mask": 3660989120,
+      "patterns": 1426,
+      "helper_constraints": 1570,
+      "status": 2,
+      "success": false,
+      "message": "The problem is infeasible. (HiGHS Status 8: model_status is Infeasible; primal_status is None)"
+    },
+    {
+      "index": 17,
+      "partition": "(1, 1, 1, 1, 1, 1, 2, 2, 2)",
+      "mask": 3669639297,
+      "patterns": 1485,
+      "helper_constraints": 1737,
+      "status": 2,
+      "success": false,
+      "message": "The problem is infeasible. (HiGHS Status 8: model_status is Infeasible; primal_status is None)"
+    },
+    {
+      "index": 18,
+      "partition": "(1, 1, 1, 1, 1, 1, 2, 2, 2)",
+      "mask": 3734520196,
+      "patterns": 1493,
+      "helper_constraints": 1749,
+      "status": 2,
+      "success": false,
+      "message": "The problem is infeasible. (HiGHS Status 8: model_status is Infeasible; primal_status is None)"
+    },
+    {
+      "index": 19,
+      "partition": "(1, 1, 1, 1, 1, 1, 2, 2, 2)",
+      "mask": 3734552705,
+      "patterns": 1505,
+      "helper_constraints": 1780,
+      "status": 2,
+      "success": false,
+      "message": "The problem is infeasible. (HiGHS Status 8: model_status is Infeasible; primal_status is None)"
+    },
+    {
+      "index": 20,
+      "partition": "(1, 1, 1, 1, 1, 1, 2, 2, 2)",
+      "mask": 3935872144,
+      "patterns": 1381,
+      "helper_constraints": 1454,
+      "status": 2,
+      "success": false,
+      "message": "The problem is infeasible. (HiGHS Status 8: model_status is Infeasible; primal_status is None)"
+    },
+    {
+      "index": 21,
+      "partition": "(1, 1, 2, 1, 1, 1, 2, 1, 2)",
+      "mask": 3935872144,
+      "patterns": 1378,
+      "helper_constraints": 1446,
+      "status": 2,
+      "success": false,
+      "message": "The problem is infeasible. (HiGHS Status 8: model_status is Infeasible; primal_status is None)"
+    },
+    {
+      "index": 22,
+      "partition": "(1, 1, 1, 1, 1, 1, 2, 2, 2)",
+      "mask": 3935873160,
+      "patterns": 1461,
+      "helper_constraints": 1670,
+      "status": 2,
+      "success": false,
+      "message": "The problem is infeasible. (HiGHS Status 8: model_status is Infeasible; primal_status is None)"
+    },
+    {
+      "index": 23,
+      "partition": "(1, 1, 2, 1, 1, 1, 2, 1, 2)",
+      "mask": 3935873160,
+      "patterns": 1452,
+      "helper_constraints": 1638,
+      "status": 2,
+      "success": false,
+      "message": "The problem is infeasible. (HiGHS Status 8: model_status is Infeasible; primal_status is None)"
+    },
+    {
+      "index": 24,
+      "partition": "(1, 1, 1, 1, 1, 1, 2, 2, 2)",
+      "mask": 3935888400,
+      "patterns": 1439,
+      "helper_constraints": 1517,
+      "status": 2,
+      "success": false,
+      "message": "The problem is infeasible. (HiGHS Status 8: model_status is Infeasible; primal_status is None)"
+    },
+    {
+      "index": 25,
+      "partition": "(1, 1, 1, 1, 1, 1, 2, 2, 2)",
+      "mask": 3935889416,
+      "patterns": 1444,
+      "helper_constraints": 1527,
+      "status": 2,
+      "success": false,
+      "message": "The problem is infeasible. (HiGHS Status 8: model_status is Infeasible; primal_status is None)"
+    },
+    {
+      "index": 26,
+      "partition": "(1, 1, 1, 1, 1, 1, 2, 2, 2)",
+      "mask": 3935969928,
+      "patterns": 1424,
+      "helper_constraints": 1571,
+      "status": 2,
+      "success": false,
+      "message": "The problem is infeasible. (HiGHS Status 8: model_status is Infeasible; primal_status is None)"
+    },
+    {
+      "index": 27,
+      "partition": "(1, 1, 2, 1, 1, 1, 2, 1, 2)",
+      "mask": 3935969928,
+      "patterns": 1412,
+      "helper_constraints": 1532,
+      "status": 2,
+      "success": false,
+      "message": "The problem is infeasible. (HiGHS Status 8: model_status is Infeasible; primal_status is None)"
+    },
+    {
+      "index": 28,
+      "partition": "(1, 1, 1, 1, 1, 1, 2, 2, 2)",
+      "mask": 3940032904,
+      "patterns": 1470,
+      "helper_constraints": 1691,
+      "status": 2,
+      "success": false,
+      "message": "The problem is infeasible. (HiGHS Status 8: model_status is Infeasible; primal_status is None)"
+    },
+    {
+      "index": 29,
+      "partition": "(1, 1, 1, 1, 1, 1, 2, 2, 2)",
+      "mask": 3940098177,
+      "patterns": 1408,
+      "helper_constraints": 1522,
+      "status": 2,
+      "success": false,
+      "message": "The problem is infeasible. (HiGHS Status 8: model_status is Infeasible; primal_status is None)"
+    },
+    {
+      "index": 30,
+      "partition": "(2, 1, 1, 2, 1, 1, 2, 1, 1)",
+      "mask": 3951642624,
+      "patterns": 1924,
+      "helper_constraints": 2322,
+      "status": 2,
+      "success": false,
+      "message": "The problem is infeasible. (HiGHS Status 8: model_status is Infeasible; primal_status is None)"
+    },
+    {
+      "index": 31,
+      "partition": "(2, 1, 1, 2, 1, 1, 2, 1, 1)",
+      "mask": 3951707136,
+      "patterns": 2008,
+      "helper_constraints": 2512,
+      "status": 2,
+      "success": false,
+      "message": "The problem is infeasible. (HiGHS Status 8: model_status is Infeasible; primal_status is None)"
+    },
+    {
+      "index": 32,
+      "partition": "(1, 1, 1, 1, 1, 1, 2, 2, 2)",
+      "mask": 6091772496,
+      "patterns": 1381,
+      "helper_constraints": 1452,
+      "status": 2,
+      "success": false,
+      "message": "The problem is infeasible. (HiGHS Status 8: model_status is Infeasible; primal_status is None)"
+    },
+    {
+      "index": 33,
+      "partition": "(1, 1, 1, 1, 1, 1, 2, 2, 2)",
+      "mask": 6091774020,
+      "patterns": 1479,
+      "helper_constraints": 1716,
+      "status": 2,
+      "success": false,
+      "message": "The problem is infeasible. (HiGHS Status 8: model_status is Infeasible; primal_status is None)"
+    },
+    {
+      "index": 34,
+      "partition": "(1, 1, 1, 1, 1, 1, 2, 2, 2)",
+      "mask": 6093934657,
+      "patterns": 1402,
+      "helper_constraints": 1508,
+      "status": 2,
+      "success": false,
+      "message": "The problem is infeasible. (HiGHS Status 8: model_status is Infeasible; primal_status is None)"
+    },
+    {
+      "index": 35,
+      "partition": "(1, 1, 1, 1, 1, 1, 2, 2, 2)",
+      "mask": 68585259782,
+      "patterns": 1589,
+      "helper_constraints": 1862,
+      "status": 2,
+      "success": false,
+      "message": "The problem is infeasible. (HiGHS Status 8: model_status is Infeasible; primal_status is None)"
+    }
+  ],
+  "scope": "Combined integer source/supplement MILP; internal computer-assisted evidence, not graph realization."
+}
