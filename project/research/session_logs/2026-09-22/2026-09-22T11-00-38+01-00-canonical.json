@@ -74,6 +74,13 @@
       "actual_stop": "2026-09-22T11:18:32+01:00",
       "role": "forward_research",
       "notes": "Exact B-layer supplement forcing exclusion of all 31 r=6 equality source multisets."
+    },
+    {
+      "segment_id": "research-8",
+      "actual_start": "2026-09-22T11:19:08+01:00",
+      "actual_stop": "2026-09-22T11:20:21+01:00",
+      "role": "forward_research",
+      "notes": "Exact optimistic residual-mass-seven strict-surplus core classification."
     }
   ],
   "forward_research_intervals": [
@@ -116,6 +123,11 @@
       "start": "2026-09-22T11:16:23+01:00",
       "stop": "2026-09-22T11:18:32+01:00",
       "evidence": "R6_SUPPLEMENT_EXCLUSION.md, check_r6_supplements.py, R6_SUPPLEMENT_SCREEN.json"
+    },
+    {
+      "start": "2026-09-22T11:19:08+01:00",
+      "stop": "2026-09-22T11:20:21+01:00",
+      "evidence": "R7_CORE_SCREEN.md, screen_r7_core.py, R7_CORE_SCREEN.json"
     }
   ],
   "forward_research_stop": null,
@@ -123,10 +135,10 @@
   "preservation_complete": null,
   "final_report_time": null,
   "wall_clock_span_to_preservation_complete": null,
-  "verified_forward_research_span": 748,
+  "verified_forward_research_span": 821,
   "verified_forward_research_span_units": "seconds",
   "preservation_span": null,
-  "substantive_unit_count": 7,
+  "substantive_unit_count": 8,
   "timestamped_unit_ledger": [
     {
       "completed_at": "2026-09-22T11:04:00+01:00",
@@ -169,6 +181,12 @@
       "unit": "Residual-mass-six supplement obstruction and equality closure",
       "result": "All 31 exact necessary source populations fail B-layer supplement forcing; internal computer-assisted r<=6 f<r, S<=8 edge bound and S<=6 balanced equality.",
       "artifact": "project/research/general_n/2026-09-22-zero-demand-equality-v1/R6_SUPPLEMENT_EXCLUSION.md"
+    },
+    {
+      "completed_at": "2026-09-22T11:20:21+01:00",
+      "unit": "Residual-mass-seven optimistic strict core screen",
+      "result": "Only partitions (3,1^4),(2,2,1^3),(2,1^5) survive; 621 labelled cores reduce to 15 orbits. Necessary relaxation only.",
+      "artifact": "project/research/general_n/2026-09-22-zero-demand-equality-v1/R7_CORE_SCREEN.md"
     }
   ],
   "early_stop_check_time": null,
@@ -180,9 +198,9 @@
   "compliance_status": "IN_PROGRESS",
   "infrastructure_failures": [],
   "commit_shas": [
-    "972f6f5aab980826dbdaaff556488d230462cbb6"
+    "ec7ee7ec652de4f8ae9d3ac9423e23798c2554f8"
   ],
-  "live_unfinished_line": "Independently hostile-audit the r=6 finite reductions, then classify r=7 strict-surplus cores.",
+  "live_unfinished_line": "Impose exact physical source-state multisets on the 15 r=7 strict-surplus core orbits.",
   "historical_fragments": [],
   "focused_session_credit": 0,
   "predecessor_session": "project/research/session_logs/2026-09-22/2026-09-22T10-00-38+01-00-canonical.json",
