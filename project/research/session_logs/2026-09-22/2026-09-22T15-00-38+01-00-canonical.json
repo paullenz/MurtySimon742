@@ -14,6 +14,13 @@
       "actual_stop": "PENDING",
       "role": "forward_research",
       "notes": "Current invocation; mandatory reads completed and durable start being published before mathematics."
+    },
+    {
+      "segment_id": "segment-2",
+      "actual_start": "2026-09-22T15:36:22+01:00",
+      "actual_stop": "2026-09-22T15:36:22+01:00",
+      "role": "reconciliation",
+      "notes": "Same-trigger duplicate invocation metadata arrived while segment-1 was actively computing; continued the existing writer with zero separate research credit."
     }
   ],
   "forward_research_intervals": [
@@ -58,6 +65,12 @@
       "stop": "2026-09-22T15:35:18+01:00",
       "seconds": 175,
       "unit": 7
+    },
+    {
+      "start": "2026-09-22T15:36:18+01:00",
+      "stop": "2026-09-22T15:46:21+01:00",
+      "seconds": 603,
+      "unit": 8
     }
   ],
   "forward_research_stop": "PENDING",
@@ -65,9 +78,9 @@
   "preservation_complete": "PENDING",
   "final_report_time": "PENDING",
   "wall_clock_span_to_preservation_complete": "PENDING",
-  "verified_forward_research_span_seconds": 1270,
+  "verified_forward_research_span_seconds": 1873,
   "preservation_span": "PENDING",
-  "substantive_unit_count": 7,
+  "substantive_unit_count": 8,
   "timestamped_unit_ledger": [
     {
       "unit": 1,
@@ -110,6 +123,12 @@
       "start": "2026-09-22T15:32:23+01:00",
       "completed": "2026-09-22T15:35:18+01:00",
       "result": "Exact quotient/source screen closes r=10 support-eight partition (3,1,1,1,1,1,1,1): 79,264 rooted core orbits, 52 optimistic strict survivors, zero source-feasible."
+    },
+    {
+      "unit": 8,
+      "start": "2026-09-22T15:36:18+01:00",
+      "completed": "2026-09-22T15:46:21+01:00",
+      "result": "Exact S2xS6 quotient/source screen for r=10 partition (2,2,1^6): 156 unit-graph orbits, 250,240 rooted/coloured orbits, 792 optimistic strict survivors, exactly two physical-source-feasible t=1 cores (masks 15402149 and 48374421). These require supplement closure; no graph realization claimed."
     }
   ],
   "early_stop_check_time": "PENDING",
@@ -127,8 +146,9 @@
     "9bd0f6c5cccea9b8735597a5f6949073e16af6f5",
     "6d476ae08dd3971713d4a7ca4ac925c2cf92bba1",
     "a95cf9d74ec34cf192eb4c3396fa02f6c036b6b2",
-    "9153645f216c36778daed2bee037353d0c4dbf34"
+    "9153645f216c36778daed2bee037353d0c4dbf34",
+    "79ee8583079bd7c81b9b037f779966c7b2cec03c"
   ],
-  "live_unfinished_line": "r=10 partitions (2,2,1,1,1,1,1,1) and support-nine (2,1^8) remain.",
+  "live_unfinished_line": "r=10 partition (2,2,1^6) has two source-feasible t=1 cores requiring exact supplement closure; support-nine (2,1^8) also remains.",
   "historical_fragments": []
 }

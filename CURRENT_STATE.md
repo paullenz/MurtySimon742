@@ -9,19 +9,19 @@ CHECKPOINT CLASS: VERIFIED_INTERNAL_NOT_PROMOTED
 
 WORK MODE: MATH
 
-INSPECTED PREDECESSOR: 9153645f216c36778daed2bee037353d0c4dbf34.
+INSPECTED PREDECESSOR: 79ee8583079bd7c81b9b037f779966c7b2cec03c.
 
-LAST VERIFIED RESULT: Strict r=9 closure/replay retained (internal edge bound through S<=11). At r=10, all supports <=7 and support-eight partition (3,1^7) are internally closed; the latter has 79,264 rooted core orbits, 52 optimistic strict survivors, zero source-feasible. Remaining: (2,2,1^6) and support-nine (2,1^8). No r=10 closure/S extension.
+LAST VERIFIED RESULT: Strict r=9 closure/replay retained (internal edge bound through S<=11). At r=10, supports <=7 and partition (3,1^7) are closed. For partition (2,2,1^6), exact S2xS6 enumeration gives 250,240 rooted core orbits, 792 optimistic strict survivors, and exactly two physical-source-feasible t=1 cores (masks 15402149 and 48374421). They require supplement closure. Support-nine (2,1^8) remains. No r=10 closure/S extension.
 
-EVIDENCE: `project/research/general_n/2026-09-22-r10-quotient-v1/R10_31111111_CLOSURE.md`; exact generator, 52 masks, source screen/results; prior r=10 support<=7 package.
+EVIDENCE: `project/research/general_n/2026-09-22-r10-quotient-v1/R10_22111111_SOURCE_CENSUS.md`; exact generator, 792 masks, source screen/results; prior r=10 packages.
 
-SESSION UTILISATION: Trigger 15:00:38 BST; actual start 15:04:10; cutoff 15:53:38; hard close 15:59:38. Seven closed intervals; verified total 1270s (21m10s); units 7; target NO/N/A; LIVE. Canonical: `project/research/session_logs/2026-09-22/2026-09-22T15-00-38+01-00-canonical.json`.
+SESSION UTILISATION: Trigger 15:00:38 BST; actual start 15:04:10; cutoff 15:53:38; hard close 15:59:38. Eight closed intervals; verified total 1873s (31m13s); units 8; target NO/N/A; LIVE. Canonical: `project/research/session_logs/2026-09-22/2026-09-22T15-00-38+01-00-canonical.json`.
 
 UNPRESERVED WORK: None.
 
 DEFERRED ADMIN: Historical missing-slot reconciliation; standalone health-check relocation; optional README polishing.
 
-NEXT ACTION: Enumerate r=10 partition (2,2,1,1,1,1,1,1) under S2×S6, then support nine if time permits.
+NEXT ACTION: Apply exact supplement forcing to masks 15402149 and 48374421; then support-nine (2,1^8).
 
 FOCUSED-SESSION COUNT: 1/24 completed before this trigger; this trigger pending.
 
