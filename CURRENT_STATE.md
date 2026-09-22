@@ -9,17 +9,17 @@ CHECKPOINT CLASS: VERIFIED_INTERNAL_NOT_PROMOTED
 
 WORK MODE: MATH
 
-INSPECTED PREDECESSOR: 6edb36af3288bf514a35ff1a58bd66c76a270537.
+INSPECTED PREDECESSOR: 97cb87c5805c15732f2b8dc6526fbc7d5731c2a2.
 
-LAST VERIFIED RESULT: Support-ten partition (2,2,1^8) source shard 4/8 screened 798 strict kernels: 6 source-feasible, 792 source-infeasible, and zero solver-unknown. Across shards 0-4, 27 source-feasible kernels remain among 3,991 screened kernels.
+LAST VERIFIED RESULT: Support-ten partition (2,2,1^8) source shard 5/8 screened 798 strict kernels: 5 source-feasible, 793 source-infeasible, and zero solver-unknown. Across shards 0-5, 32 source-feasible kernels remain among 4,789 screened kernels.
 
-EVIDENCE: project/research/general_n/2026-09-22-independent-742-r12-quotient/r12_support10_case1_source_chunk4.json; canonical telemetry at project/research/session_logs/2026-09-22/2026-09-22T22-00-38+01-00-canonical.json.
+EVIDENCE: project/research/general_n/2026-09-22-independent-742-r12-quotient/r12_support10_case1_source_chunk5.json; canonical telemetry at project/research/session_logs/2026-09-22/2026-09-22T22-00-38+01-00-canonical.json.
 
-SESSION UTILISATION: Trigger 22:00:38 BST; authoritative entry 22:00:33; four closed intervals totaling 1042s (17m22s); four substantive units; cutoff 22:53:38; 50-minute target applies and remains pending.
+SESSION UTILISATION: Trigger 22:00:38 BST; authoritative entry 22:00:33; five closed intervals totaling 1321s (22m01s); five substantive units; cutoff 22:53:38; 50-minute target applies and remains pending.
 
 UNPRESERVED WORK: None.
 
-NEXT ACTION: Run and checkpoint support-ten case-1 source chunk 5/8.
+NEXT ACTION: Run and checkpoint support-ten case-1 source chunk 6/8.
 
 FOCUSED-SESSION COUNT: 1/24; current-session credit pending.
 
