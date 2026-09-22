@@ -105,14 +105,20 @@
       "stop": "2026-09-22T18:43:53+01:00",
       "seconds": 19,
       "unit": "r=12 support-eight (2,2,2,2,1^4) source screen"
+    },
+    {
+      "start": "2026-09-22T18:45:09+01:00",
+      "stop": "2026-09-22T18:45:12+01:00",
+      "seconds": 3,
+      "unit": "r=12 support-eight combined source/supplement MILP"
     }
   ],
-  "verified_forward_span_seconds": 1050,
+  "verified_forward_span_seconds": 1053,
   "forward_stop": "PENDING",
   "preservation_start": "PENDING",
   "preservation_complete": "PENDING",
   "wall_clock_span_seconds": "PENDING",
-  "substantive_unit_count": 14,
+  "substantive_unit_count": 15,
   "substantive_unit_ledger": [
     {
       "completed_at": "2026-09-22T18:06:42+01:00",
@@ -183,6 +189,11 @@
       "completed_at": "2026-09-22T18:43:53+01:00",
       "unit": "r=12 support-eight (2,2,2,2,1^4) source screen",
       "result": "1,169/1,173 source-infeasible; 4 source-feasible; 0 solver-unknown."
+    },
+    {
+      "completed_at": "2026-09-22T18:45:12+01:00",
+      "unit": "r=12 support-eight combined source/supplement MILP",
+      "result": "All 8 source-feasible kernels supplement-infeasible; 0 feasible and 0 solver-unknown. Support eight closed internally."
     }
   ],
   "early_stop_check": {
@@ -212,9 +223,10 @@
     "838c81b52ea773b3207ea12435125441a42f21b2",
     "41e1e69ef7d94bd7e1811f3d241ed6b883354fe8",
     "00b43e52a1eebc0cac604b3bde01ce63a3c0fba9",
-    "644bfbfd035f562fc5fd78046f613651e50e330d"
+    "644bfbfd035f562fc5fd78046f613651e50e330d",
+    "1f2853fbcb8a9711b9b953382dba82b16fa71fd9"
   ],
-  "unfinished_line": "Test all eight r=12 support-eight source survivors against combined source/supplement feasibility.",
+  "unfinished_line": "Enumerate r=12 support-nine strict quotient cases, then shard exact source feasibility.",
   "target": {
     "applicable": false,
     "available_seconds": 2969,

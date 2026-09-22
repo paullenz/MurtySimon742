@@ -9,21 +9,21 @@ CHECKPOINT CLASS: VERIFIED_INTERNAL_NOT_PROMOTED
 
 WORK MODE: FORWARD_RESEARCH_LIVE
 
-INSPECTED PREDECESSOR: 644bfbfd035f562fc5fd78046f613651e50e330d.
+INSPECTED PREDECESSOR: 1f2853fbcb8a9711b9b953382dba82b16fa71fd9.
 
-LAST VERIFIED RESULT: r=12 is internally closed through support seven. The exact support-eight source screen is complete: among 3,759 strict cores, eight are source-feasible and all others are source-infeasible, with zero solver-unknown cases. Four survivors occur in partition (3,2,2,1^5) and four in (2,2,2,2,1^4).
+LAST VERIFIED RESULT: r=12 is internally closed through support eight. The support-eight census contains 3,759 strict cores; only eight pass exact source feasibility, and a combined source/supplement MILP rejects all eight with zero solver-unknown cases.
 
-EVIDENCE: corrected support-eight census and all five partition-sharded source JSON files in the r12 quotient package; canonical telemetry.
+EVIDENCE: corrected support-eight census, five source shards, supplement script/output, and canonical telemetry in the r12 quotient package.
 
-SESSION UTILISATION: Trigger 18:00:38 BST; actual start 18:04:09; fourteen closed intervals; verified total 1050s (17m30s); fourteen substantive units; cutoff 18:53:38; target N/A late start; LIVE.
+SESSION UTILISATION: Trigger 18:00:38 BST; actual start 18:04:09; fifteen closed intervals; verified total 1053s (17m33s); fifteen substantive units; cutoff 18:53:38; target N/A late start; LIVE.
 
 UNPRESERVED WORK: None at this checkpoint.
 
-NEXT ACTION: Test all eight support-eight source survivors against combined source/supplement feasibility.
+NEXT ACTION: Enumerate support-nine strict quotient cases, then shard exact source feasibility.
 
 FOCUSED-SESSION COUNT: 1/24; current trigger credit pending final compliance.
 
-MANDATORY CONSTRAINTS: Supplement feasibility remains; no overall support-eight closure yet.
+MANDATORY CONSTRAINTS: Support nine and above remain; no r=12 closure yet. Abstract finite infeasibility is not graph realization.
 <!-- CURRENT-STATUS:END -->
 
 ## Latest adversarial audit - 22 September 2026
