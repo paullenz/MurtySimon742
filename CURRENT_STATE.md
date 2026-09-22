@@ -5,23 +5,23 @@ Canonical repository: `paullenz/MurtySimon742`. Date: 22 September 2026.
 Active target: a genuinely independent proof of Erdős #742 / the Murty–Simon inequality e(G)<=floor(n^2/4), preferably with the equality characterization. Forward priority is the project’s own complement / residual / Hall / profile / realizability route, not a reconstruction of the external e+disj+X proof. The first focused session produced the internally checked candidate threshold `Delta>=250n/429`, shrinking the live strip to `n/2<Delta<250n/429`. The theorem and its inherited graph-to-profile spine remain candidate/internal-review mathematics. A 24-focused-session go/no-go gate applies. Prior eventual-D2C work remains preserved but is no longer the active forward objective.
 
 <!-- CURRENT-STATUS:START -->
-CHECKPOINT CLASS: `LOW_RESIDUAL_HOSTILE_REPLAY_PASS`
+CHECKPOINT CLASS: `UNIT_RESIDUAL_COLUMN_CYCLE_OBSTRUCTION`
 
 WORK MODE: `MATH`
 
-INSPECTED PREDECESSOR: `3626bd0d06f19a212f425d8c0b76a2ee41f61cf3`.
+INSPECTED PREDECESSOR: `abb43b424c6fbfe3945eaf87fc0f2b397355e4c7`.
 
-LAST VERIFIED RESULT: The residual-support candidate lemmas passed 1,288,964 actual F-edge checks, 88 zero-residual-endpoint checks and 30 single-column cases including six nonempty. A physical r=4,f=1 single-column witness and sharp C5 r=2,f=1 control are preserved. S<=2 equality closure remains internal; positive-demand strip still open.
+LAST VERIFIED RESULT: Internal cycle-saturation proof excludes f>=r whenever all residual columns have degree <=1 and r>0. Combined support classification closes r<=3 and S<=3, preserving balanced bipartite equality; at r=4 only the (2,2) column partition remains. This is a bounded-profile advance, not full strip closure or external review.
 
 EVIDENCE: `project/research/general_n/2026-09-22-zero-demand-equality-v1/LOW_RESIDUAL_OBSTRUCTION.md`; `project/research/general_n/2026-09-22-zero-demand-equality-v1/ZERO_DEMAND_EQUALITY.md`; `project/research/general_n/2026-09-22-zero-demand-equality-v1/EQUALITY_REGRESSION.md`; `project/research/session_logs/2026-09-22/2026-09-22T10-00-38+01-00-canonical.json`.
 
-SESSION UTILISATION: Trigger 2026-09-22 10:00:38 BST; earliest 10:02:42; next 11:00:38; cutoff 10:53:38; hard close 10:59:38. Four closed intervals in canonical record: 10:03:41–10:08:19, 10:09:03–10:14:15, 10:15:45–10:18:54, 10:20:00–10:22:39. Total 938 seconds; units 4; preservation pending; target YES/PENDING; IN_PROGRESS. Record: `project/research/session_logs/2026-09-22/2026-09-22T10-00-38+01-00-canonical.json`.
+SESSION UTILISATION: Trigger 2026-09-22 10:00:38 BST; earliest 10:02:42; next 11:00:38; cutoff 10:53:38; hard close 10:59:38. Closed intervals 10:03:41–10:08:19, 10:09:03–10:14:15, 10:15:45–10:18:54, 10:20:00–10:22:39, 10:24:43–10:30:13. Total 1268 seconds; units 5; preservation pending; target YES/PENDING; IN_PROGRESS. Record: `project/research/session_logs/2026-09-22/2026-09-22T10-00-38+01-00-canonical.json`.
 
 UNPRESERVED WORK: None.
 
 DEFERRED ADMIN: No schedule or CI maintenance. Ancillary monitoring does not replace this research task.
 
-NEXT ACTION: Classify residual mass three using the residual-label partition; then quantify slack in the one-column star branch.
+NEXT ACTION: Hostile-regress the all-unit-column theorem, then classify the remaining r=4 partition (2,2).
 
 FOCUSED-SESSION COUNT: `1/24` previously completed; this session not yet credited.
 

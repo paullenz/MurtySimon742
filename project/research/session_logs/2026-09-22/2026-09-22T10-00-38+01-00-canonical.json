@@ -46,6 +46,13 @@
       "actual_stop": "2026-09-22T10:22:39+01:00",
       "role": "forward_research",
       "notes": "Exact graph regression of residual edge-charge and one-column obstruction with nonempty physical witnesses."
+    },
+    {
+      "segment_id": "research-5",
+      "actual_start": "2026-09-22T10:24:43+01:00",
+      "actual_stop": "2026-09-22T10:30:13+01:00",
+      "role": "forward_research",
+      "notes": "Derive all-unit-column cycle-saturation exclusion and full r<=3 classification; reduce r4 to (2,2)."
     }
   ],
   "forward_research_intervals": [
@@ -68,6 +75,11 @@
       "start": "2026-09-22T10:20:00+01:00",
       "stop": "2026-09-22T10:22:39+01:00",
       "evidence": "LOW_RESIDUAL_REGRESSION.md, check_low_residual.py, LOW_RESIDUAL_RESULTS.json"
+    },
+    {
+      "start": "2026-09-22T10:24:43+01:00",
+      "stop": "2026-09-22T10:30:13+01:00",
+      "evidence": "UNIT_RESIDUAL_COLUMNS.md"
     }
   ],
   "forward_research_stop": null,
@@ -75,10 +87,10 @@
   "preservation_complete": null,
   "final_report_time": null,
   "wall_clock_span_to_preservation_complete": null,
-  "verified_forward_research_span": 938,
+  "verified_forward_research_span": 1268,
   "verified_forward_research_span_units": "seconds",
   "preservation_span": null,
-  "substantive_unit_count": 4,
+  "substantive_unit_count": 5,
   "timestamped_unit_ledger": [
     {
       "completed_at": "2026-09-22T10:08:19+01:00",
@@ -103,6 +115,12 @@
       "unit": "Hostile replay of low-residual structure",
       "result": "PASS 1,288,964 edge-charge checks; 88 zero-residual endpoints; 30 one-column cases including six nonempty; 82 low-residual cases.",
       "artifact": "project/research/general_n/2026-09-22-zero-demand-equality-v1/LOW_RESIDUAL_REGRESSION.md"
+    },
+    {
+      "completed_at": "2026-09-22T10:30:13+01:00",
+      "unit": "Unit residual-column theorem and r<=3 closure",
+      "result": "Internal proof all R_i<=1 with r>0 gives f<r; r<=3 closed; S<=3 bound/equality; only (2,2) remains at r=4.",
+      "artifact": "project/research/general_n/2026-09-22-zero-demand-equality-v1/UNIT_RESIDUAL_COLUMNS.md"
     }
   ],
   "early_stop_check_time": null,
@@ -117,9 +135,10 @@
     "4ddec2c1db2ec95293b98a385740d7e0345b651e",
     "fc05fdbf12a1adac2d57d063232f255300333342",
     "d5745ea7aede7d24e18904ccc755240f6a23da70",
-    "3626bd0d06f19a212f425d8c0b76a2ee41f61cf3"
+    "3626bd0d06f19a212f425d8c0b76a2ee41f61cf3",
+    "abb43b424c6fbfe3945eaf87fc0f2b397355e4c7"
   ],
-  "live_unfinished_line": "Classify residual mass three, then derive quantitative one-column slack.",
+  "live_unfinished_line": "Regress unit-column theorem, then attack the residual (2,2) core.",
   "historical_fragments": [],
   "focused_session_credit": 0,
   "ancillary_checks": [
