@@ -33,4 +33,24 @@ Verify the task readback: replacement enabled with conversation_id=null, exact b
 
 The first three replacement triggers (23 September 01:00:38, 02:00:38, 03:00:38 BST) are the initial launch test. Each needs an actual canonical STARTED publication and a substantive durable checkpoint, with launch delay and measured work reported. At the next audit compare every due trigger against artifacts, including absent records. Do not declare the day recovered from task settings or last_run_time.
 
-Status at this preparation commit: CONFIGURATION_PREPARED_NOT_ACTIVATED. Activation/readback will be recorded separately. Mathematical state and latest research next action are unchanged.
+Preparation was published in commit 4b13f71482f4ff9b2c81aa783dbcfa682f0c3e8d. Mathematical state and latest research next action are unchanged.
+
+
+## Activation and readback — 22 September 2026 23:13:26 BST
+
+Status: CONFIGURATION_APPLIED; ACTUAL_LAUNCH_RECOVERY_UNVERIFIED.
+
+The replacement was enabled at 23:12:48 BST, after the old same-chat research task was paused. A subsequent private task read verified all eight checks:
+
+1. Replacement enabled and conversation_id=null.
+2. Saved research prompt exactly matches STANDALONE_RESEARCH_PROMPT.txt (without its terminal newline).
+3. Saved schedule exactly matches the validated DTSTART/RRULE/COUNT configuration.
+4. Old same-chat research disabled.
+5. Midnight audit enabled with launch-first counting, historical-target preservation and the first-three-launch review.
+6. Stop task enabled with the replacement ID and original 28 September 00:05 schedule.
+7. Same-chat health checker disabled.
+8. Earlier retired research disabled.
+
+No immediate run was requested, no historical catch-up burst was created, and no scheduled start is credited by this administrative change. The first replacement trigger remains 23 September 01:00:38 BST. The scheduler exposes no backend queue trace; these verified configuration changes do not prove a root cause or guarantee delivery.
+
+The prior 22:00 record remains 31m02s under its original 50-minute policy. It is not upgraded by the prospective 40-minute policy. The last mathematical NEXT ACTION is unchanged.
