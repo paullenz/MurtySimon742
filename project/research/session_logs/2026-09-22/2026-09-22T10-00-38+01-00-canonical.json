@@ -39,6 +39,13 @@
       "actual_stop": "2026-09-22T10:18:54+01:00",
       "role": "forward_research",
       "notes": "Prove residual-(0,1) adjacency exclusion, single-column saturation obstruction and r<=2/S<=2 branch."
+    },
+    {
+      "segment_id": "research-4",
+      "actual_start": "2026-09-22T10:20:00+01:00",
+      "actual_stop": "2026-09-22T10:22:39+01:00",
+      "role": "forward_research",
+      "notes": "Exact graph regression of residual edge-charge and one-column obstruction with nonempty physical witnesses."
     }
   ],
   "forward_research_intervals": [
@@ -56,6 +63,11 @@
       "start": "2026-09-22T10:15:45+01:00",
       "stop": "2026-09-22T10:18:54+01:00",
       "evidence": "LOW_RESIDUAL_OBSTRUCTION.md"
+    },
+    {
+      "start": "2026-09-22T10:20:00+01:00",
+      "stop": "2026-09-22T10:22:39+01:00",
+      "evidence": "LOW_RESIDUAL_REGRESSION.md, check_low_residual.py, LOW_RESIDUAL_RESULTS.json"
     }
   ],
   "forward_research_stop": null,
@@ -63,10 +75,10 @@
   "preservation_complete": null,
   "final_report_time": null,
   "wall_clock_span_to_preservation_complete": null,
-  "verified_forward_research_span": 779,
+  "verified_forward_research_span": 938,
   "verified_forward_research_span_units": "seconds",
   "preservation_span": null,
-  "substantive_unit_count": 3,
+  "substantive_unit_count": 4,
   "timestamped_unit_ledger": [
     {
       "completed_at": "2026-09-22T10:08:19+01:00",
@@ -85,6 +97,12 @@
       "unit": "Single-residual-label saturation obstruction and low-demand closure",
       "result": "Internal proof: R_i+R_j>=2 on F-edges; one residual column implies f<r; r=1,2 imply f<=r-1; S<=2 bound and equality closed.",
       "artifact": "project/research/general_n/2026-09-22-zero-demand-equality-v1/LOW_RESIDUAL_OBSTRUCTION.md"
+    },
+    {
+      "completed_at": "2026-09-22T10:22:39+01:00",
+      "unit": "Hostile replay of low-residual structure",
+      "result": "PASS 1,288,964 edge-charge checks; 88 zero-residual endpoints; 30 one-column cases including six nonempty; 82 low-residual cases.",
+      "artifact": "project/research/general_n/2026-09-22-zero-demand-equality-v1/LOW_RESIDUAL_REGRESSION.md"
     }
   ],
   "early_stop_check_time": null,
@@ -98,9 +116,10 @@
   "commit_shas": [
     "4ddec2c1db2ec95293b98a385740d7e0345b651e",
     "fc05fdbf12a1adac2d57d063232f255300333342",
-    "d5745ea7aede7d24e18904ccc755240f6a23da70"
+    "d5745ea7aede7d24e18904ccc755240f6a23da70",
+    "3626bd0d06f19a212f425d8c0b76a2ee41f61cf3"
   ],
-  "live_unfinished_line": "Hostile-regress residual support lemmas and investigate the three-residual core.",
+  "live_unfinished_line": "Classify residual mass three, then derive quantitative one-column slack.",
   "historical_fragments": [],
   "focused_session_credit": 0,
   "ancillary_checks": [
