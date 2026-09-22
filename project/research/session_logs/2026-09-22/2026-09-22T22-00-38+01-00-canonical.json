@@ -1,0 +1,52 @@
+{
+  "session_id": "2026-09-22T22:00:38+01:00",
+  "scheduled_trigger": "2026-09-22T22:00:38+01:00",
+  "trigger_attribution": {
+    "status": "VERIFIED",
+    "method": "Current invocation task identity plus supplied hourly schedule and runtime metadata; delivery occurred five seconds before the named 22:00:38 trigger. No historical record or last_run_time was used.",
+    "invocation_runtime": "2026-09-22T22:00:11+01:00"
+  },
+  "next_scheduled_trigger": "2026-09-22T23:00:38+01:00",
+  "research_cutoff": "2026-09-22T22:53:38+01:00",
+  "hard_close_deadline": "2026-09-22T22:59:38+01:00",
+  "earliest_actual_start": "2026-09-22T22:00:33+01:00",
+  "lateness_vs_trigger": {
+    "seconds": 0,
+    "note": "Authoritative entry was five seconds before the scheduled trigger; no research is credited before the trigger."
+  },
+  "segments": [
+    {
+      "segment_id": "segment-1",
+      "actual_start": "2026-09-22T22:00:33+01:00",
+      "actual_stop": "PENDING",
+      "role": "forward_research",
+      "notes": "Mandatory reads and STARTED publication precede forward mathematics."
+    }
+  ],
+  "forward_research_intervals": [],
+  "forward_research_stop": "PENDING",
+  "preservation_start": "PENDING",
+  "preservation_complete": "PENDING",
+  "final_report_time": "PENDING",
+  "wall_clock_span_to_preservation_complete": "PENDING",
+  "verified_forward_research_span": {
+    "seconds": 0,
+    "human": "0m00s",
+    "basis": "No closed interval yet."
+  },
+  "preservation_span": "PENDING",
+  "substantive_unit_count": 0,
+  "timestamped_unit_ledger": [],
+  "early_stop_check_time": "PENDING",
+  "early_stop_check_result": "PENDING",
+  "stop_reason": "PENDING",
+  "target_50m_applies": "YES",
+  "target_50m_met": "PENDING",
+  "target_50m_basis": "53m00s available from scheduled trigger to research cutoff.",
+  "compliance_status": "STARTED",
+  "infrastructure_failures": [],
+  "commit_shas": [],
+  "live_unfinished_line": "Run support-ten case-1 source chunks 1-7, supplement-screen survivors, then support eleven.",
+  "historical_fragments": [],
+  "started_record_published_at": "2026-09-22T22:03:10+01:00"
+}

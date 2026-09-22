@@ -5,23 +5,23 @@ Canonical repository: `paullenz/MurtySimon742`. Date: 22 September 2026.
 Active target: a genuinely independent proof of Erdős #742 / the Murty–Simon inequality e(G)<=floor(n^2/4), preferably with the equality characterization. Forward priority is the project’s own complement / residual / Hall / profile / realizability route, not a reconstruction of the external e+disj+X proof. The first focused session produced the internally checked candidate threshold `Delta>=250n/429`, shrinking the live strip to `n/2<Delta<250n/429`. The theorem and its inherited graph-to-profile spine remain candidate/internal-review mathematics. A 24-focused-session go/no-go gate applies. Prior eventual-D2C work remains preserved but is no longer the active forward objective.
 
 <!-- CURRENT-STATUS:START -->
-CHECKPOINT CLASS: VERIFIED_INTERNAL_NOT_PROMOTED
+CHECKPOINT CLASS: STARTED
 
-WORK MODE: SESSION_FINALIZED
+WORK MODE: MATH
 
-INSPECTED PREDECESSOR: 54f2b4f394e273d0d827735e053bf1c796a1cd64.
+INSPECTED PREDECESSOR: ae6562563ffbd9e4f2e7aa0f08bdf8c525837279.
 
-LAST VERIFIED RESULT: r=12 is internally closed through support nine. Support-ten partition (3,1^9) is internally closed after 287/287 strict kernels fail exact source feasibility. Partition (2,2,1^8) has an exact 6,386-kernel census; the first 798-kernel source shard leaves 10 survivors and zero solver-unknown cases. Seven source shards, supplement screening, and support eleven remain.
+LAST VERIFIED RESULT: Mathematical state inherited unchanged: r=12 is internally closed through support nine; support-ten partition (3,1^9) is closed; partition (2,2,1^8) has 6,386 strict kernels and source shard 0/8 leaves 10 survivors with no solver-unknown cases. This distinct 22:00:38 session is live.
 
-EVIDENCE: complete support-nine package; support-ten structural census and source artifacts; canonical telemetry at project/research/session_logs/2026-09-22/2026-09-22T21-00-38+01-00-canonical.json.
+EVIDENCE: canonical telemetry at project/research/session_logs/2026-09-22/2026-09-22T22-00-38+01-00-canonical.json; support-ten artifacts under project/research/general_n/2026-09-22-independent-742-r12-quotient/.
 
-SESSION UTILISATION: Trigger 21:00:38 BST; actual start 21:02:43; eleven closed intervals; verified total 1708s (28m28s); eleven substantive units; forward stop 21:49:33; cutoff 21:53:38; preservation complete 21:50:47; 50-minute target applicable and NOT MET; SHORT/NONCOMPLIANT.
+SESSION UTILISATION: Trigger 22:00:38 BST; authoritative entry 22:00:33 (five seconds early); research cutoff 22:53:38; hard-close deadline 22:59:38; no forward interval closed yet; 50-minute target applies.
 
 UNPRESERVED WORK: None.
 
-NEXT ACTION: Complete support-ten case-1 source chunks 1-7, supplement-screen all survivors, then close or classify support eleven.
+NEXT ACTION: Run and checkpoint support-ten case-1 source chunk 1/8, then continue chunks 2-7 and supplement-screen all survivors.
 
-FOCUSED-SESSION COUNT: 1/24; this short session receives no focused-session credit.
+FOCUSED-SESSION COUNT: 1/24; credit pending final utilization and mathematical result.
 
 MANDATORY CONSTRAINTS: The internal finite pipeline does not establish graph realizability; equality remains characterized only through S<=8; the general theorem remains open.
 <!-- CURRENT-STATUS:END -->
