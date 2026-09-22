@@ -95,6 +95,13 @@
       "actual_stop": "2026-09-22T11:24:22+01:00",
       "role": "forward_research",
       "notes": "R7 equality core classification and explicit repair of stale serialized r6 equality-screen source."
+    },
+    {
+      "segment_id": "research-11",
+      "actual_start": "2026-09-22T11:24:49+01:00",
+      "actual_stop": "2026-09-22T11:26:13+01:00",
+      "role": "forward_research",
+      "notes": "Exact necessary source-state screen for 51 r=7 equality core/slack orbits."
     }
   ],
   "forward_research_intervals": [
@@ -152,6 +159,11 @@
       "start": "2026-09-22T11:22:29+01:00",
       "stop": "2026-09-22T11:24:22+01:00",
       "evidence": "R7_EQUALITY_CORE_SCREEN.md, screen_r7_equality.py, R7_EQUALITY_CORE_SCREEN.json; corrected screen_r6_equality.py"
+    },
+    {
+      "start": "2026-09-22T11:24:49+01:00",
+      "stop": "2026-09-22T11:26:13+01:00",
+      "evidence": "R7_EQUALITY_SOURCE_SCREEN.md, screen_r7_equality_sources.py, R7_EQUALITY_SOURCE_SCREEN.json"
     }
   ],
   "forward_research_stop": null,
@@ -159,10 +171,10 @@
   "preservation_complete": null,
   "final_report_time": null,
   "wall_clock_span_to_preservation_complete": null,
-  "verified_forward_research_span": 1015,
+  "verified_forward_research_span": 1099,
   "verified_forward_research_span_units": "seconds",
   "preservation_span": null,
-  "substantive_unit_count": 10,
+  "substantive_unit_count": 11,
   "timestamped_unit_ledger": [
     {
       "completed_at": "2026-09-22T11:04:00+01:00",
@@ -223,6 +235,12 @@
       "unit": "R7 equality core classification and r6 provenance repair",
       "result": "R7 t=0 reduces to 51 optimistic orbits across four partitions. Repaired committed r6 script now byte-reproduces saved JSON; downstream conclusions unchanged.",
       "artifact": "project/research/general_n/2026-09-22-zero-demand-equality-v1/R7_EQUALITY_CORE_SCREEN.md"
+    },
+    {
+      "completed_at": "2026-09-22T11:26:13+01:00",
+      "unit": "R7 product-equality source screen",
+      "result": "39/51 core orbits eliminated; 12 orbits and 211 necessary source multisets remain. No graph/equality promotion.",
+      "artifact": "project/research/general_n/2026-09-22-zero-demand-equality-v1/R7_EQUALITY_SOURCE_SCREEN.md"
     }
   ],
   "early_stop_check_time": null,
@@ -234,9 +252,9 @@
   "compliance_status": "IN_PROGRESS",
   "infrastructure_failures": [],
   "commit_shas": [
-    "ef8e5be64f06a9b0366f250aef9e7261bc79a35d"
+    "f853c48ae6ba5886230c1fced1e4b687f3183bc9"
   ],
-  "live_unfinished_line": "Screen 51 r=7 equality core/slack orbits through source states with digest/replay safeguards.",
+  "live_unfinished_line": "Apply supplement forcing to all 211 r=7 equality source populations, then independently replay any zero-survivor conclusion.",
   "historical_fragments": [],
   "focused_session_credit": 0,
   "predecessor_session": "project/research/session_logs/2026-09-22/2026-09-22T10-00-38+01-00-canonical.json",

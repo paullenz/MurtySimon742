@@ -1,0 +1,3609 @@
+{
+  "(4, 1, 1, 1)/orbit_1": {
+    "R": [
+      4,
+      1,
+      1,
+      1
+    ],
+    "edges": [
+      [
+        0,
+        1
+      ],
+      [
+        1,
+        2
+      ],
+      [
+        1,
+        3
+      ],
+      [
+        2,
+        3
+      ]
+    ],
+    "h": [
+      0,
+      0,
+      0,
+      0
+    ],
+    "P": [
+      1,
+      2,
+      3
+    ],
+    "selected_lower_bounds": [
+      0,
+      2,
+      1,
+      1
+    ],
+    "single_source_patterns": 32,
+    "residual_free_N_patterns_omitted": 0,
+    "surviving_source_multisets": 6,
+    "first_survivors": [
+      [
+        [
+          0,
+          2,
+          0,
+          0
+        ],
+        [
+          2,
+          0,
+          0,
+          0
+        ],
+        [
+          2,
+          0,
+          0,
+          0
+        ],
+        [
+          2,
+          1,
+          1,
+          2
+        ],
+        [
+          2,
+          1,
+          2,
+          1
+        ]
+      ]
+    ],
+    "scope": "Necessary C-source states; zero-label attachments, supplements, B-edges and criticality omitted."
+  },
+  "(4, 1, 1, 1)/orbit_2": {
+    "R": [
+      4,
+      1,
+      1,
+      1
+    ],
+    "edges": [
+      [
+        0,
+        1
+      ],
+      [
+        0,
+        2
+      ],
+      [
+        1,
+        2
+      ],
+      [
+        1,
+        3
+      ],
+      [
+        2,
+        3
+      ]
+    ],
+    "h": [
+      0,
+      0,
+      0,
+      0
+    ],
+    "P": [
+      1,
+      2,
+      3
+    ],
+    "selected_lower_bounds": [
+      0,
+      2,
+      2,
+      1
+    ],
+    "single_source_patterns": 27,
+    "residual_free_N_patterns_omitted": 0,
+    "surviving_source_multisets": 1,
+    "first_survivors": [
+      [
+        [
+          2,
+          0,
+          0,
+          0
+        ],
+        [
+          2,
+          1,
+          1,
+          2
+        ],
+        [
+          2,
+          1,
+          2,
+          1
+        ],
+        [
+          2,
+          2,
+          1,
+          1
+        ]
+      ]
+    ],
+    "scope": "Necessary C-source states; zero-label attachments, supplements, B-edges and criticality omitted."
+  },
+  "(4, 1, 1, 1)/orbit_3": {
+    "R": [
+      4,
+      1,
+      1,
+      1
+    ],
+    "edges": [
+      [
+        0,
+        1
+      ],
+      [
+        0,
+        2
+      ],
+      [
+        0,
+        3
+      ],
+      [
+        1,
+        2
+      ],
+      [
+        1,
+        3
+      ],
+      [
+        2,
+        3
+      ]
+    ],
+    "h": [
+      0,
+      0,
+      0,
+      0
+    ],
+    "P": [
+      1,
+      2,
+      3
+    ],
+    "selected_lower_bounds": [
+      0,
+      2,
+      2,
+      2
+    ],
+    "single_source_patterns": 25,
+    "residual_free_N_patterns_omitted": 0,
+    "surviving_source_multisets": 1,
+    "first_survivors": [
+      [
+        [
+          2,
+          0,
+          0,
+          0
+        ],
+        [
+          2,
+          1,
+          1,
+          2
+        ],
+        [
+          2,
+          1,
+          2,
+          1
+        ],
+        [
+          2,
+          2,
+          1,
+          1
+        ]
+      ]
+    ],
+    "scope": "Necessary C-source states; zero-label attachments, supplements, B-edges and criticality omitted."
+  },
+  "(3, 1, 1, 1, 1)/orbit_1": {
+    "R": [
+      3,
+      1,
+      1,
+      1,
+      1
+    ],
+    "edges": [
+      [
+        0,
+        1
+      ],
+      [
+        0,
+        2
+      ],
+      [
+        0,
+        3
+      ],
+      [
+        0,
+        4
+      ],
+      [
+        1,
+        2
+      ],
+      [
+        1,
+        3
+      ],
+      [
+        2,
+        3
+      ]
+    ],
+    "h": [
+      0,
+      0,
+      0,
+      0,
+      0
+    ],
+    "P": [
+      0,
+      1,
+      2,
+      3
+    ],
+    "selected_lower_bounds": [
+      1,
+      2,
+      2,
+      2,
+      0
+    ],
+    "single_source_patterns": 65,
+    "residual_free_N_patterns_omitted": 0,
+    "surviving_source_multisets": 0,
+    "first_survivors": [],
+    "scope": "Necessary C-source states; zero-label attachments, supplements, B-edges and criticality omitted."
+  },
+  "(3, 1, 1, 1, 1)/orbit_2": {
+    "R": [
+      3,
+      1,
+      1,
+      1,
+      1
+    ],
+    "edges": [
+      [
+        0,
+        1
+      ],
+      [
+        0,
+        2
+      ],
+      [
+        0,
+        3
+      ],
+      [
+        0,
+        4
+      ],
+      [
+        1,
+        2
+      ],
+      [
+        1,
+        4
+      ],
+      [
+        2,
+        3
+      ]
+    ],
+    "h": [
+      0,
+      0,
+      0,
+      0,
+      0
+    ],
+    "P": [
+      0,
+      1,
+      2,
+      3,
+      4
+    ],
+    "selected_lower_bounds": [
+      1,
+      2,
+      2,
+      1,
+      1
+    ],
+    "single_source_patterns": 61,
+    "residual_free_N_patterns_omitted": 0,
+    "surviving_source_multisets": 0,
+    "first_survivors": [],
+    "scope": "Necessary C-source states; zero-label attachments, supplements, B-edges and criticality omitted."
+  },
+  "(3, 1, 1, 1, 1)/orbit_3": {
+    "R": [
+      3,
+      1,
+      1,
+      1,
+      1
+    ],
+    "edges": [
+      [
+        0,
+        1
+      ],
+      [
+        1,
+        3
+      ],
+      [
+        1,
+        4
+      ],
+      [
+        2,
+        3
+      ],
+      [
+        2,
+        4
+      ]
+    ],
+    "h": [
+      0,
+      0,
+      0,
+      0,
+      0
+    ],
+    "P": [
+      1,
+      2,
+      3,
+      4
+    ],
+    "selected_lower_bounds": [
+      0,
+      2,
+      1,
+      1,
+      1
+    ],
+    "single_source_patterns": 73,
+    "residual_free_N_patterns_omitted": 0,
+    "surviving_source_multisets": 0,
+    "first_survivors": [],
+    "scope": "Necessary C-source states; zero-label attachments, supplements, B-edges and criticality omitted."
+  },
+  "(3, 1, 1, 1, 1)/orbit_4": {
+    "R": [
+      3,
+      1,
+      1,
+      1,
+      1
+    ],
+    "edges": [
+      [
+        0,
+        1
+      ],
+      [
+        0,
+        2
+      ],
+      [
+        1,
+        3
+      ],
+      [
+        1,
+        4
+      ],
+      [
+        2,
+        3
+      ],
+      [
+        2,
+        4
+      ]
+    ],
+    "h": [
+      0,
+      0,
+      0,
+      0,
+      0
+    ],
+    "P": [
+      1,
+      2,
+      3,
+      4
+    ],
+    "selected_lower_bounds": [
+      0,
+      2,
+      2,
+      1,
+      1
+    ],
+    "single_source_patterns": 62,
+    "residual_free_N_patterns_omitted": 0,
+    "surviving_source_multisets": 0,
+    "first_survivors": [],
+    "scope": "Necessary C-source states; zero-label attachments, supplements, B-edges and criticality omitted."
+  },
+  "(3, 1, 1, 1, 1)/orbit_5": {
+    "R": [
+      3,
+      1,
+      1,
+      1,
+      1
+    ],
+    "edges": [
+      [
+        0,
+        1
+      ],
+      [
+        0,
+        3
+      ],
+      [
+        1,
+        3
+      ],
+      [
+        1,
+        4
+      ],
+      [
+        2,
+        3
+      ],
+      [
+        2,
+        4
+      ]
+    ],
+    "h": [
+      0,
+      0,
+      0,
+      0,
+      0
+    ],
+    "P": [
+      1,
+      2,
+      3,
+      4
+    ],
+    "selected_lower_bounds": [
+      0,
+      2,
+      1,
+      2,
+      1
+    ],
+    "single_source_patterns": 63,
+    "residual_free_N_patterns_omitted": 0,
+    "surviving_source_multisets": 0,
+    "first_survivors": [],
+    "scope": "Necessary C-source states; zero-label attachments, supplements, B-edges and criticality omitted."
+  },
+  "(3, 1, 1, 1, 1)/orbit_6": {
+    "R": [
+      3,
+      1,
+      1,
+      1,
+      1
+    ],
+    "edges": [
+      [
+        0,
+        1
+      ],
+      [
+        0,
+        2
+      ],
+      [
+        0,
+        3
+      ],
+      [
+        1,
+        3
+      ],
+      [
+        1,
+        4
+      ],
+      [
+        2,
+        3
+      ],
+      [
+        2,
+        4
+      ]
+    ],
+    "h": [
+      0,
+      0,
+      0,
+      0,
+      0
+    ],
+    "P": [
+      1,
+      2,
+      3,
+      4
+    ],
+    "selected_lower_bounds": [
+      0,
+      2,
+      2,
+      2,
+      1
+    ],
+    "single_source_patterns": 56,
+    "residual_free_N_patterns_omitted": 0,
+    "surviving_source_multisets": 0,
+    "first_survivors": [],
+    "scope": "Necessary C-source states; zero-label attachments, supplements, B-edges and criticality omitted."
+  },
+  "(2, 2, 1, 1, 1)/orbit_1": {
+    "R": [
+      2,
+      2,
+      1,
+      1,
+      1
+    ],
+    "edges": [
+      [
+        0,
+        1
+      ],
+      [
+        0,
+        2
+      ],
+      [
+        0,
+        3
+      ],
+      [
+        0,
+        4
+      ],
+      [
+        1,
+        2
+      ],
+      [
+        1,
+        3
+      ],
+      [
+        1,
+        4
+      ]
+    ],
+    "h": [
+      0,
+      0,
+      0,
+      0,
+      0
+    ],
+    "P": [
+      0,
+      1,
+      2,
+      3,
+      4
+    ],
+    "selected_lower_bounds": [
+      2,
+      2,
+      1,
+      1,
+      1
+    ],
+    "single_source_patterns": 65,
+    "residual_free_N_patterns_omitted": 0,
+    "surviving_source_multisets": 0,
+    "first_survivors": [],
+    "scope": "Necessary C-source states; zero-label attachments, supplements, B-edges and criticality omitted."
+  },
+  "(2, 2, 1, 1, 1)/orbit_2": {
+    "R": [
+      2,
+      2,
+      1,
+      1,
+      1
+    ],
+    "edges": [
+      [
+        0,
+        1
+      ],
+      [
+        0,
+        2
+      ],
+      [
+        0,
+        3
+      ],
+      [
+        0,
+        4
+      ],
+      [
+        1,
+        2
+      ],
+      [
+        1,
+        3
+      ],
+      [
+        2,
+        3
+      ]
+    ],
+    "h": [
+      0,
+      0,
+      0,
+      0,
+      0
+    ],
+    "P": [
+      0,
+      1,
+      2,
+      3
+    ],
+    "selected_lower_bounds": [
+      2,
+      1,
+      2,
+      2,
+      0
+    ],
+    "single_source_patterns": 65,
+    "residual_free_N_patterns_omitted": 0,
+    "surviving_source_multisets": 0,
+    "first_survivors": [],
+    "scope": "Necessary C-source states; zero-label attachments, supplements, B-edges and criticality omitted."
+  },
+  "(2, 2, 1, 1, 1)/orbit_3": {
+    "R": [
+      2,
+      2,
+      1,
+      1,
+      1
+    ],
+    "edges": [
+      [
+        0,
+        1
+      ],
+      [
+        0,
+        2
+      ],
+      [
+        0,
+        3
+      ],
+      [
+        0,
+        4
+      ],
+      [
+        1,
+        2
+      ],
+      [
+        1,
+        4
+      ],
+      [
+        2,
+        3
+      ]
+    ],
+    "h": [
+      0,
+      0,
+      0,
+      0,
+      0
+    ],
+    "P": [
+      0,
+      1,
+      2,
+      3,
+      4
+    ],
+    "selected_lower_bounds": [
+      2,
+      1,
+      2,
+      1,
+      1
+    ],
+    "single_source_patterns": 62,
+    "residual_free_N_patterns_omitted": 0,
+    "surviving_source_multisets": 2,
+    "first_survivors": [
+      [
+        [
+          1,
+          1,
+          2,
+          1,
+          2
+        ],
+        [
+          1,
+          2,
+          1,
+          2,
+          1
+        ],
+        [
+          2,
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          2,
+          2,
+          1,
+          1,
+          0
+        ]
+      ]
+    ],
+    "scope": "Necessary C-source states; zero-label attachments, supplements, B-edges and criticality omitted."
+  },
+  "(2, 2, 1, 1, 1)/orbit_4": {
+    "R": [
+      2,
+      2,
+      1,
+      1,
+      1
+    ],
+    "edges": [
+      [
+        0,
+        2
+      ],
+      [
+        0,
+        3
+      ],
+      [
+        0,
+        4
+      ],
+      [
+        1,
+        2
+      ],
+      [
+        1,
+        3
+      ],
+      [
+        1,
+        4
+      ],
+      [
+        2,
+        3
+      ]
+    ],
+    "h": [
+      0,
+      0,
+      0,
+      0,
+      0
+    ],
+    "P": [
+      0,
+      1,
+      2,
+      3,
+      4
+    ],
+    "selected_lower_bounds": [
+      1,
+      1,
+      2,
+      2,
+      1
+    ],
+    "single_source_patterns": 59,
+    "residual_free_N_patterns_omitted": 0,
+    "surviving_source_multisets": 16,
+    "first_survivors": [
+      [
+        [
+          0,
+          0,
+          0,
+          0,
+          2
+        ],
+        [
+          1,
+          2,
+          1,
+          2,
+          1
+        ],
+        [
+          2,
+          1,
+          2,
+          1,
+          1
+        ],
+        [
+          2,
+          2,
+          1,
+          1,
+          0
+        ]
+      ]
+    ],
+    "scope": "Necessary C-source states; zero-label attachments, supplements, B-edges and criticality omitted."
+  },
+  "(2, 2, 1, 1, 1)/orbit_5": {
+    "R": [
+      2,
+      2,
+      1,
+      1,
+      1
+    ],
+    "edges": [
+      [
+        0,
+        2
+      ],
+      [
+        0,
+        3
+      ],
+      [
+        0,
+        4
+      ],
+      [
+        2,
+        3
+      ],
+      [
+        2,
+        4
+      ]
+    ],
+    "h": [
+      0,
+      0,
+      0,
+      0,
+      0
+    ],
+    "P": [
+      0,
+      2,
+      3,
+      4
+    ],
+    "selected_lower_bounds": [
+      1,
+      0,
+      2,
+      1,
+      1
+    ],
+    "single_source_patterns": 85,
+    "residual_free_N_patterns_omitted": 1,
+    "surviving_source_multisets": 26,
+    "first_survivors": [
+      [
+        [
+          0,
+          2,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          2,
+          0,
+          0,
+          0
+        ],
+        [
+          1,
+          0,
+          2,
+          1,
+          1
+        ],
+        [
+          2,
+          0,
+          1,
+          1,
+          2
+        ],
+        [
+          2,
+          0,
+          1,
+          2,
+          1
+        ]
+      ]
+    ],
+    "scope": "Necessary C-source states; zero-label attachments, supplements, B-edges and criticality omitted."
+  },
+  "(2, 2, 1, 1, 1)/orbit_6": {
+    "R": [
+      2,
+      2,
+      1,
+      1,
+      1
+    ],
+    "edges": [
+      [
+        0,
+        1
+      ],
+      [
+        0,
+        2
+      ],
+      [
+        0,
+        3
+      ],
+      [
+        0,
+        4
+      ],
+      [
+        2,
+        3
+      ],
+      [
+        2,
+        4
+      ]
+    ],
+    "h": [
+      0,
+      0,
+      0,
+      0,
+      0
+    ],
+    "P": [
+      0,
+      2,
+      3,
+      4
+    ],
+    "selected_lower_bounds": [
+      2,
+      0,
+      2,
+      1,
+      1
+    ],
+    "single_source_patterns": 72,
+    "residual_free_N_patterns_omitted": 0,
+    "surviving_source_multisets": 0,
+    "first_survivors": [],
+    "scope": "Necessary C-source states; zero-label attachments, supplements, B-edges and criticality omitted."
+  },
+  "(2, 2, 1, 1, 1)/orbit_7": {
+    "R": [
+      2,
+      2,
+      1,
+      1,
+      1
+    ],
+    "edges": [
+      [
+        0,
+        2
+      ],
+      [
+        0,
+        3
+      ],
+      [
+        0,
+        4
+      ],
+      [
+        1,
+        3
+      ],
+      [
+        2,
+        3
+      ],
+      [
+        2,
+        4
+      ]
+    ],
+    "h": [
+      0,
+      0,
+      0,
+      0,
+      0
+    ],
+    "P": [
+      0,
+      2,
+      3,
+      4
+    ],
+    "selected_lower_bounds": [
+      1,
+      0,
+      2,
+      2,
+      1
+    ],
+    "single_source_patterns": 68,
+    "residual_free_N_patterns_omitted": 0,
+    "surviving_source_multisets": 2,
+    "first_survivors": [
+      [
+        [
+          1,
+          2,
+          2,
+          1,
+          1
+        ],
+        [
+          2,
+          0,
+          1,
+          2,
+          1
+        ],
+        [
+          2,
+          2,
+          1,
+          1,
+          2
+        ]
+      ]
+    ],
+    "scope": "Necessary C-source states; zero-label attachments, supplements, B-edges and criticality omitted."
+  },
+  "(2, 2, 1, 1, 1)/orbit_8": {
+    "R": [
+      2,
+      2,
+      1,
+      1,
+      1
+    ],
+    "edges": [
+      [
+        0,
+        1
+      ],
+      [
+        0,
+        2
+      ],
+      [
+        0,
+        3
+      ],
+      [
+        0,
+        4
+      ],
+      [
+        1,
+        3
+      ],
+      [
+        2,
+        3
+      ],
+      [
+        2,
+        4
+      ]
+    ],
+    "h": [
+      0,
+      0,
+      0,
+      0,
+      0
+    ],
+    "P": [
+      0,
+      2,
+      3,
+      4
+    ],
+    "selected_lower_bounds": [
+      2,
+      0,
+      2,
+      2,
+      1
+    ],
+    "single_source_patterns": 61,
+    "residual_free_N_patterns_omitted": 0,
+    "surviving_source_multisets": 0,
+    "first_survivors": [],
+    "scope": "Necessary C-source states; zero-label attachments, supplements, B-edges and criticality omitted."
+  },
+  "(2, 2, 1, 1, 1)/orbit_9": {
+    "R": [
+      2,
+      2,
+      1,
+      1,
+      1
+    ],
+    "edges": [
+      [
+        0,
+        1
+      ],
+      [
+        0,
+        3
+      ],
+      [
+        0,
+        4
+      ],
+      [
+        1,
+        2
+      ],
+      [
+        1,
+        3
+      ],
+      [
+        2,
+        3
+      ],
+      [
+        2,
+        4
+      ]
+    ],
+    "h": [
+      0,
+      0,
+      0,
+      0,
+      0
+    ],
+    "P": [
+      0,
+      1,
+      2,
+      3,
+      4
+    ],
+    "selected_lower_bounds": [
+      1,
+      1,
+      2,
+      2,
+      1
+    ],
+    "single_source_patterns": 58,
+    "residual_free_N_patterns_omitted": 0,
+    "surviving_source_multisets": 0,
+    "first_survivors": [],
+    "scope": "Necessary C-source states; zero-label attachments, supplements, B-edges and criticality omitted."
+  },
+  "(2, 2, 1, 1, 1)/orbit_10": {
+    "R": [
+      2,
+      2,
+      1,
+      1,
+      1
+    ],
+    "edges": [
+      [
+        0,
+        1
+      ],
+      [
+        0,
+        3
+      ],
+      [
+        0,
+        4
+      ],
+      [
+        1,
+        3
+      ],
+      [
+        1,
+        4
+      ],
+      [
+        2,
+        3
+      ],
+      [
+        2,
+        4
+      ]
+    ],
+    "h": [
+      0,
+      0,
+      0,
+      0,
+      0
+    ],
+    "P": [
+      0,
+      1,
+      2,
+      3,
+      4
+    ],
+    "selected_lower_bounds": [
+      1,
+      1,
+      1,
+      2,
+      2
+    ],
+    "single_source_patterns": 57,
+    "residual_free_N_patterns_omitted": 0,
+    "surviving_source_multisets": 0,
+    "first_survivors": [],
+    "scope": "Necessary C-source states; zero-label attachments, supplements, B-edges and criticality omitted."
+  },
+  "(2, 2, 1, 1, 1)/orbit_11": {
+    "R": [
+      2,
+      2,
+      1,
+      1,
+      1
+    ],
+    "edges": [
+      [
+        0,
+        2
+      ],
+      [
+        0,
+        3
+      ],
+      [
+        0,
+        4
+      ],
+      [
+        1,
+        3
+      ],
+      [
+        1,
+        4
+      ],
+      [
+        2,
+        3
+      ],
+      [
+        2,
+        4
+      ]
+    ],
+    "h": [
+      0,
+      0,
+      0,
+      0,
+      0
+    ],
+    "P": [
+      0,
+      2,
+      3,
+      4
+    ],
+    "selected_lower_bounds": [
+      1,
+      0,
+      2,
+      2,
+      2
+    ],
+    "single_source_patterns": 57,
+    "residual_free_N_patterns_omitted": 0,
+    "surviving_source_multisets": 0,
+    "first_survivors": [],
+    "scope": "Necessary C-source states; zero-label attachments, supplements, B-edges and criticality omitted."
+  },
+  "(2, 2, 1, 1, 1)/orbit_12": {
+    "R": [
+      2,
+      2,
+      1,
+      1,
+      1
+    ],
+    "edges": [
+      [
+        0,
+        2
+      ],
+      [
+        2,
+        3
+      ],
+      [
+        2,
+        4
+      ],
+      [
+        3,
+        4
+      ]
+    ],
+    "h": [
+      0,
+      0,
+      0,
+      0,
+      0
+    ],
+    "P": [
+      2,
+      3,
+      4
+    ],
+    "selected_lower_bounds": [
+      0,
+      0,
+      2,
+      1,
+      1
+    ],
+    "single_source_patterns": 97,
+    "residual_free_N_patterns_omitted": 1,
+    "surviving_source_multisets": 104,
+    "first_survivors": [
+      [
+        [
+          0,
+          0,
+          2,
+          0,
+          0
+        ],
+        [
+          0,
+          2,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          2,
+          0,
+          0,
+          0
+        ],
+        [
+          2,
+          0,
+          1,
+          1,
+          2
+        ],
+        [
+          2,
+          0,
+          1,
+          2,
+          1
+        ]
+      ]
+    ],
+    "scope": "Necessary C-source states; zero-label attachments, supplements, B-edges and criticality omitted."
+  },
+  "(2, 2, 1, 1, 1)/orbit_13": {
+    "R": [
+      2,
+      2,
+      1,
+      1,
+      1
+    ],
+    "edges": [
+      [
+        0,
+        2
+      ],
+      [
+        0,
+        3
+      ],
+      [
+        2,
+        3
+      ],
+      [
+        2,
+        4
+      ],
+      [
+        3,
+        4
+      ]
+    ],
+    "h": [
+      0,
+      0,
+      0,
+      0,
+      0
+    ],
+    "P": [
+      2,
+      3,
+      4
+    ],
+    "selected_lower_bounds": [
+      0,
+      0,
+      2,
+      2,
+      1
+    ],
+    "single_source_patterns": 82,
+    "residual_free_N_patterns_omitted": 1,
+    "surviving_source_multisets": 0,
+    "first_survivors": [],
+    "scope": "Necessary C-source states; zero-label attachments, supplements, B-edges and criticality omitted."
+  },
+  "(2, 2, 1, 1, 1)/orbit_14": {
+    "R": [
+      2,
+      2,
+      1,
+      1,
+      1
+    ],
+    "edges": [
+      [
+        0,
+        1
+      ],
+      [
+        0,
+        2
+      ],
+      [
+        0,
+        3
+      ],
+      [
+        2,
+        3
+      ],
+      [
+        2,
+        4
+      ],
+      [
+        3,
+        4
+      ]
+    ],
+    "h": [
+      0,
+      0,
+      0,
+      0,
+      0
+    ],
+    "P": [
+      0,
+      2,
+      3,
+      4
+    ],
+    "selected_lower_bounds": [
+      1,
+      0,
+      2,
+      2,
+      1
+    ],
+    "single_source_patterns": 69,
+    "residual_free_N_patterns_omitted": 0,
+    "surviving_source_multisets": 0,
+    "first_survivors": [],
+    "scope": "Necessary C-source states; zero-label attachments, supplements, B-edges and criticality omitted."
+  },
+  "(2, 2, 1, 1, 1)/orbit_15": {
+    "R": [
+      2,
+      2,
+      1,
+      1,
+      1
+    ],
+    "edges": [
+      [
+        0,
+        2
+      ],
+      [
+        0,
+        3
+      ],
+      [
+        0,
+        4
+      ],
+      [
+        2,
+        3
+      ],
+      [
+        2,
+        4
+      ],
+      [
+        3,
+        4
+      ]
+    ],
+    "h": [
+      0,
+      1,
+      0,
+      0,
+      0
+    ],
+    "P": [
+      0,
+      2,
+      3,
+      4
+    ],
+    "selected_lower_bounds": [
+      1,
+      0,
+      2,
+      2,
+      2
+    ],
+    "single_source_patterns": 76,
+    "residual_free_N_patterns_omitted": 1,
+    "surviving_source_multisets": 0,
+    "first_survivors": [],
+    "scope": "Necessary C-source states; zero-label attachments, supplements, B-edges and criticality omitted."
+  },
+  "(2, 2, 1, 1, 1)/orbit_16": {
+    "R": [
+      2,
+      2,
+      1,
+      1,
+      1
+    ],
+    "edges": [
+      [
+        0,
+        1
+      ],
+      [
+        0,
+        2
+      ],
+      [
+        0,
+        3
+      ],
+      [
+        0,
+        4
+      ],
+      [
+        2,
+        3
+      ],
+      [
+        2,
+        4
+      ],
+      [
+        3,
+        4
+      ]
+    ],
+    "h": [
+      0,
+      1,
+      0,
+      0,
+      0
+    ],
+    "P": [
+      0,
+      2,
+      3,
+      4
+    ],
+    "selected_lower_bounds": [
+      2,
+      0,
+      2,
+      2,
+      2
+    ],
+    "single_source_patterns": 65,
+    "residual_free_N_patterns_omitted": 0,
+    "surviving_source_multisets": 0,
+    "first_survivors": [],
+    "scope": "Necessary C-source states; zero-label attachments, supplements, B-edges and criticality omitted."
+  },
+  "(2, 2, 1, 1, 1)/orbit_17": {
+    "R": [
+      2,
+      2,
+      1,
+      1,
+      1
+    ],
+    "edges": [
+      [
+        0,
+        3
+      ],
+      [
+        1,
+        2
+      ],
+      [
+        2,
+        3
+      ],
+      [
+        2,
+        4
+      ],
+      [
+        3,
+        4
+      ]
+    ],
+    "h": [
+      0,
+      0,
+      0,
+      0,
+      0
+    ],
+    "P": [
+      2,
+      3,
+      4
+    ],
+    "selected_lower_bounds": [
+      0,
+      0,
+      2,
+      2,
+      1
+    ],
+    "single_source_patterns": 77,
+    "residual_free_N_patterns_omitted": 0,
+    "surviving_source_multisets": 4,
+    "first_survivors": [
+      [
+        [
+          0,
+          2,
+          1,
+          2,
+          1
+        ],
+        [
+          2,
+          0,
+          2,
+          1,
+          1
+        ],
+        [
+          2,
+          2,
+          1,
+          1,
+          2
+        ]
+      ]
+    ],
+    "scope": "Necessary C-source states; zero-label attachments, supplements, B-edges and criticality omitted."
+  },
+  "(2, 2, 1, 1, 1)/orbit_18": {
+    "R": [
+      2,
+      2,
+      1,
+      1,
+      1
+    ],
+    "edges": [
+      [
+        0,
+        3
+      ],
+      [
+        0,
+        4
+      ],
+      [
+        1,
+        2
+      ],
+      [
+        2,
+        3
+      ],
+      [
+        2,
+        4
+      ],
+      [
+        3,
+        4
+      ]
+    ],
+    "h": [
+      0,
+      0,
+      0,
+      0,
+      0
+    ],
+    "P": [
+      2,
+      3,
+      4
+    ],
+    "selected_lower_bounds": [
+      0,
+      0,
+      2,
+      2,
+      2
+    ],
+    "single_source_patterns": 67,
+    "residual_free_N_patterns_omitted": 0,
+    "surviving_source_multisets": 0,
+    "first_survivors": [],
+    "scope": "Necessary C-source states; zero-label attachments, supplements, B-edges and criticality omitted."
+  },
+  "(2, 2, 1, 1, 1)/orbit_19": {
+    "R": [
+      2,
+      2,
+      1,
+      1,
+      1
+    ],
+    "edges": [
+      [
+        0,
+        1
+      ],
+      [
+        0,
+        3
+      ],
+      [
+        0,
+        4
+      ],
+      [
+        1,
+        2
+      ],
+      [
+        2,
+        3
+      ],
+      [
+        2,
+        4
+      ],
+      [
+        3,
+        4
+      ]
+    ],
+    "h": [
+      0,
+      0,
+      0,
+      0,
+      0
+    ],
+    "P": [
+      0,
+      2,
+      3,
+      4
+    ],
+    "selected_lower_bounds": [
+      1,
+      0,
+      2,
+      2,
+      2
+    ],
+    "single_source_patterns": 58,
+    "residual_free_N_patterns_omitted": 0,
+    "surviving_source_multisets": 0,
+    "first_survivors": [],
+    "scope": "Necessary C-source states; zero-label attachments, supplements, B-edges and criticality omitted."
+  },
+  "(2, 1, 1, 1, 1, 1)/orbit_1": {
+    "R": [
+      2,
+      1,
+      1,
+      1,
+      1,
+      1
+    ],
+    "edges": [
+      [
+        0,
+        1
+      ],
+      [
+        0,
+        2
+      ],
+      [
+        0,
+        3
+      ],
+      [
+        0,
+        4
+      ],
+      [
+        1,
+        2
+      ],
+      [
+        1,
+        3
+      ],
+      [
+        2,
+        3
+      ]
+    ],
+    "h": [
+      0,
+      0,
+      0,
+      0,
+      0,
+      1
+    ],
+    "P": [
+      0,
+      1,
+      2,
+      3
+    ],
+    "selected_lower_bounds": [
+      2,
+      2,
+      2,
+      2,
+      0,
+      0
+    ],
+    "single_source_patterns": 196,
+    "residual_free_N_patterns_omitted": 1,
+    "surviving_source_multisets": 0,
+    "first_survivors": [],
+    "scope": "Necessary C-source states; zero-label attachments, supplements, B-edges and criticality omitted."
+  },
+  "(2, 1, 1, 1, 1, 1)/orbit_2": {
+    "R": [
+      2,
+      1,
+      1,
+      1,
+      1,
+      1
+    ],
+    "edges": [
+      [
+        0,
+        1
+      ],
+      [
+        0,
+        2
+      ],
+      [
+        0,
+        4
+      ],
+      [
+        0,
+        5
+      ],
+      [
+        1,
+        2
+      ],
+      [
+        1,
+        3
+      ],
+      [
+        2,
+        3
+      ]
+    ],
+    "h": [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+    ],
+    "P": [
+      0,
+      1,
+      2,
+      3
+    ],
+    "selected_lower_bounds": [
+      2,
+      2,
+      2,
+      1,
+      0,
+      0
+    ],
+    "single_source_patterns": 179,
+    "residual_free_N_patterns_omitted": 0,
+    "surviving_source_multisets": 0,
+    "first_survivors": [],
+    "scope": "Necessary C-source states; zero-label attachments, supplements, B-edges and criticality omitted."
+  },
+  "(2, 1, 1, 1, 1, 1)/orbit_3": {
+    "R": [
+      2,
+      1,
+      1,
+      1,
+      1,
+      1
+    ],
+    "edges": [
+      [
+        0,
+        1
+      ],
+      [
+        0,
+        2
+      ],
+      [
+        0,
+        3
+      ],
+      [
+        0,
+        4
+      ],
+      [
+        1,
+        2
+      ],
+      [
+        1,
+        4
+      ],
+      [
+        2,
+        3
+      ]
+    ],
+    "h": [
+      0,
+      0,
+      0,
+      0,
+      0,
+      1
+    ],
+    "P": [
+      0,
+      1,
+      2,
+      3,
+      4
+    ],
+    "selected_lower_bounds": [
+      2,
+      2,
+      2,
+      1,
+      1,
+      0
+    ],
+    "single_source_patterns": 184,
+    "residual_free_N_patterns_omitted": 1,
+    "surviving_source_multisets": 0,
+    "first_survivors": [],
+    "scope": "Necessary C-source states; zero-label attachments, supplements, B-edges and criticality omitted."
+  },
+  "(2, 1, 1, 1, 1, 1)/orbit_4": {
+    "R": [
+      2,
+      1,
+      1,
+      1,
+      1,
+      1
+    ],
+    "edges": [
+      [
+        0,
+        1
+      ],
+      [
+        0,
+        2
+      ],
+      [
+        0,
+        3
+      ],
+      [
+        0,
+        5
+      ],
+      [
+        1,
+        2
+      ],
+      [
+        1,
+        4
+      ],
+      [
+        2,
+        3
+      ]
+    ],
+    "h": [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+    ],
+    "P": [
+      0,
+      1,
+      2,
+      3
+    ],
+    "selected_lower_bounds": [
+      2,
+      2,
+      2,
+      1,
+      0,
+      0
+    ],
+    "single_source_patterns": 174,
+    "residual_free_N_patterns_omitted": 0,
+    "surviving_source_multisets": 0,
+    "first_survivors": [],
+    "scope": "Necessary C-source states; zero-label attachments, supplements, B-edges and criticality omitted."
+  },
+  "(2, 1, 1, 1, 1, 1)/orbit_5": {
+    "R": [
+      2,
+      1,
+      1,
+      1,
+      1,
+      1
+    ],
+    "edges": [
+      [
+        0,
+        1
+      ],
+      [
+        0,
+        3
+      ],
+      [
+        0,
+        4
+      ],
+      [
+        0,
+        5
+      ],
+      [
+        1,
+        2
+      ],
+      [
+        1,
+        4
+      ],
+      [
+        2,
+        3
+      ]
+    ],
+    "h": [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+    ],
+    "P": [
+      0,
+      1,
+      2,
+      3,
+      4
+    ],
+    "selected_lower_bounds": [
+      2,
+      2,
+      1,
+      1,
+      1,
+      0
+    ],
+    "single_source_patterns": 167,
+    "residual_free_N_patterns_omitted": 0,
+    "surviving_source_multisets": 0,
+    "first_survivors": [],
+    "scope": "Necessary C-source states; zero-label attachments, supplements, B-edges and criticality omitted."
+  },
+  "(2, 1, 1, 1, 1, 1)/orbit_6": {
+    "R": [
+      2,
+      1,
+      1,
+      1,
+      1,
+      1
+    ],
+    "edges": [
+      [
+        0,
+        1
+      ],
+      [
+        0,
+        2
+      ],
+      [
+        0,
+        3
+      ],
+      [
+        0,
+        4
+      ],
+      [
+        1,
+        4
+      ],
+      [
+        1,
+        5
+      ],
+      [
+        2,
+        3
+      ]
+    ],
+    "h": [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+    ],
+    "P": [
+      0,
+      1,
+      2,
+      3,
+      4
+    ],
+    "selected_lower_bounds": [
+      2,
+      2,
+      1,
+      1,
+      1,
+      0
+    ],
+    "single_source_patterns": 172,
+    "residual_free_N_patterns_omitted": 0,
+    "surviving_source_multisets": 0,
+    "first_survivors": [],
+    "scope": "Necessary C-source states; zero-label attachments, supplements, B-edges and criticality omitted."
+  },
+  "(2, 1, 1, 1, 1, 1)/orbit_7": {
+    "R": [
+      2,
+      1,
+      1,
+      1,
+      1,
+      1
+    ],
+    "edges": [
+      [
+        0,
+        1
+      ],
+      [
+        0,
+        2
+      ],
+      [
+        0,
+        4
+      ],
+      [
+        0,
+        5
+      ],
+      [
+        1,
+        4
+      ],
+      [
+        1,
+        5
+      ],
+      [
+        2,
+        3
+      ]
+    ],
+    "h": [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+    ],
+    "P": [
+      0,
+      1,
+      2,
+      4,
+      5
+    ],
+    "selected_lower_bounds": [
+      2,
+      2,
+      1,
+      0,
+      1,
+      1
+    ],
+    "single_source_patterns": 170,
+    "residual_free_N_patterns_omitted": 0,
+    "surviving_source_multisets": 0,
+    "first_survivors": [],
+    "scope": "Necessary C-source states; zero-label attachments, supplements, B-edges and criticality omitted."
+  },
+  "(2, 1, 1, 1, 1, 1)/orbit_8": {
+    "R": [
+      2,
+      1,
+      1,
+      1,
+      1,
+      1
+    ],
+    "edges": [
+      [
+        0,
+        2
+      ],
+      [
+        0,
+        3
+      ],
+      [
+        0,
+        4
+      ],
+      [
+        0,
+        5
+      ],
+      [
+        1,
+        4
+      ],
+      [
+        1,
+        5
+      ],
+      [
+        2,
+        3
+      ]
+    ],
+    "h": [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+    ],
+    "P": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "selected_lower_bounds": [
+      2,
+      1,
+      1,
+      1,
+      1,
+      1
+    ],
+    "single_source_patterns": 163,
+    "residual_free_N_patterns_omitted": 0,
+    "surviving_source_multisets": 0,
+    "first_survivors": [],
+    "scope": "Necessary C-source states; zero-label attachments, supplements, B-edges and criticality omitted."
+  },
+  "(2, 1, 1, 1, 1, 1)/orbit_9": {
+    "R": [
+      2,
+      1,
+      1,
+      1,
+      1,
+      1
+    ],
+    "edges": [
+      [
+        0,
+        1
+      ],
+      [
+        0,
+        2
+      ],
+      [
+        0,
+        3
+      ],
+      [
+        1,
+        3
+      ],
+      [
+        1,
+        4
+      ],
+      [
+        2,
+        3
+      ],
+      [
+        2,
+        4
+      ]
+    ],
+    "h": [
+      0,
+      0,
+      0,
+      0,
+      0,
+      1
+    ],
+    "P": [
+      0,
+      1,
+      2,
+      3,
+      4
+    ],
+    "selected_lower_bounds": [
+      1,
+      2,
+      2,
+      2,
+      1,
+      0
+    ],
+    "single_source_patterns": 169,
+    "residual_free_N_patterns_omitted": 1,
+    "surviving_source_multisets": 0,
+    "first_survivors": [],
+    "scope": "Necessary C-source states; zero-label attachments, supplements, B-edges and criticality omitted."
+  },
+  "(2, 1, 1, 1, 1, 1)/orbit_10": {
+    "R": [
+      2,
+      1,
+      1,
+      1,
+      1,
+      1
+    ],
+    "edges": [
+      [
+        0,
+        1
+      ],
+      [
+        0,
+        2
+      ],
+      [
+        0,
+        5
+      ],
+      [
+        1,
+        3
+      ],
+      [
+        1,
+        4
+      ],
+      [
+        2,
+        3
+      ],
+      [
+        2,
+        4
+      ]
+    ],
+    "h": [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+    ],
+    "P": [
+      0,
+      1,
+      2,
+      3,
+      4
+    ],
+    "selected_lower_bounds": [
+      1,
+      2,
+      2,
+      1,
+      1,
+      0
+    ],
+    "single_source_patterns": 154,
+    "residual_free_N_patterns_omitted": 0,
+    "surviving_source_multisets": 0,
+    "first_survivors": [],
+    "scope": "Necessary C-source states; zero-label attachments, supplements, B-edges and criticality omitted."
+  },
+  "(2, 1, 1, 1, 1, 1)/orbit_11": {
+    "R": [
+      2,
+      1,
+      1,
+      1,
+      1,
+      1
+    ],
+    "edges": [
+      [
+        0,
+        1
+      ],
+      [
+        0,
+        3
+      ],
+      [
+        0,
+        5
+      ],
+      [
+        1,
+        3
+      ],
+      [
+        1,
+        4
+      ],
+      [
+        2,
+        3
+      ],
+      [
+        2,
+        4
+      ]
+    ],
+    "h": [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+    ],
+    "P": [
+      0,
+      1,
+      2,
+      3,
+      4
+    ],
+    "selected_lower_bounds": [
+      1,
+      2,
+      1,
+      2,
+      1,
+      0
+    ],
+    "single_source_patterns": 157,
+    "residual_free_N_patterns_omitted": 0,
+    "surviving_source_multisets": 0,
+    "first_survivors": [],
+    "scope": "Necessary C-source states; zero-label attachments, supplements, B-edges and criticality omitted."
+  },
+  "(2, 1, 1, 1, 1, 1)/orbit_12": {
+    "R": [
+      2,
+      1,
+      1,
+      1,
+      1,
+      1
+    ],
+    "edges": [
+      [
+        0,
+        1
+      ],
+      [
+        0,
+        2
+      ],
+      [
+        0,
+        3
+      ],
+      [
+        1,
+        3
+      ],
+      [
+        1,
+        5
+      ],
+      [
+        2,
+        3
+      ],
+      [
+        2,
+        4
+      ]
+    ],
+    "h": [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+    ],
+    "P": [
+      0,
+      1,
+      2,
+      3
+    ],
+    "selected_lower_bounds": [
+      1,
+      2,
+      2,
+      2,
+      0,
+      0
+    ],
+    "single_source_patterns": 163,
+    "residual_free_N_patterns_omitted": 0,
+    "surviving_source_multisets": 0,
+    "first_survivors": [],
+    "scope": "Necessary C-source states; zero-label attachments, supplements, B-edges and criticality omitted."
+  },
+  "(2, 1, 1, 1, 1, 1)/orbit_13": {
+    "R": [
+      2,
+      1,
+      1,
+      1,
+      1,
+      1
+    ],
+    "edges": [
+      [
+        0,
+        1
+      ],
+      [
+        0,
+        2
+      ],
+      [
+        0,
+        4
+      ],
+      [
+        1,
+        3
+      ],
+      [
+        1,
+        5
+      ],
+      [
+        2,
+        3
+      ],
+      [
+        2,
+        4
+      ]
+    ],
+    "h": [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+    ],
+    "P": [
+      0,
+      1,
+      2,
+      3,
+      4
+    ],
+    "selected_lower_bounds": [
+      1,
+      2,
+      2,
+      1,
+      1,
+      0
+    ],
+    "single_source_patterns": 158,
+    "residual_free_N_patterns_omitted": 0,
+    "surviving_source_multisets": 0,
+    "first_survivors": [],
+    "scope": "Necessary C-source states; zero-label attachments, supplements, B-edges and criticality omitted."
+  },
+  "(2, 1, 1, 1, 1, 1)/orbit_14": {
+    "R": [
+      2,
+      1,
+      1,
+      1,
+      1,
+      1
+    ],
+    "edges": [
+      [
+        0,
+        1
+      ],
+      [
+        0,
+        3
+      ],
+      [
+        0,
+        4
+      ],
+      [
+        1,
+        3
+      ],
+      [
+        1,
+        5
+      ],
+      [
+        2,
+        3
+      ],
+      [
+        2,
+        4
+      ]
+    ],
+    "h": [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+    ],
+    "P": [
+      0,
+      1,
+      2,
+      3,
+      4
+    ],
+    "selected_lower_bounds": [
+      1,
+      2,
+      1,
+      2,
+      1,
+      0
+    ],
+    "single_source_patterns": 155,
+    "residual_free_N_patterns_omitted": 0,
+    "surviving_source_multisets": 0,
+    "first_survivors": [],
+    "scope": "Necessary C-source states; zero-label attachments, supplements, B-edges and criticality omitted."
+  },
+  "(2, 1, 1, 1, 1, 1)/orbit_15": {
+    "R": [
+      2,
+      1,
+      1,
+      1,
+      1,
+      1
+    ],
+    "edges": [
+      [
+        0,
+        2
+      ],
+      [
+        0,
+        3
+      ],
+      [
+        0,
+        4
+      ],
+      [
+        1,
+        3
+      ],
+      [
+        1,
+        5
+      ],
+      [
+        2,
+        3
+      ],
+      [
+        2,
+        4
+      ]
+    ],
+    "h": [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+    ],
+    "P": [
+      0,
+      1,
+      2,
+      3,
+      4
+    ],
+    "selected_lower_bounds": [
+      1,
+      1,
+      2,
+      2,
+      1,
+      0
+    ],
+    "single_source_patterns": 163,
+    "residual_free_N_patterns_omitted": 0,
+    "surviving_source_multisets": 0,
+    "first_survivors": [],
+    "scope": "Necessary C-source states; zero-label attachments, supplements, B-edges and criticality omitted."
+  },
+  "(2, 1, 1, 1, 1, 1)/orbit_16": {
+    "R": [
+      2,
+      1,
+      1,
+      1,
+      1,
+      1
+    ],
+    "edges": [
+      [
+        0,
+        1
+      ],
+      [
+        0,
+        4
+      ],
+      [
+        0,
+        5
+      ],
+      [
+        1,
+        3
+      ],
+      [
+        1,
+        5
+      ],
+      [
+        2,
+        3
+      ],
+      [
+        2,
+        4
+      ]
+    ],
+    "h": [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+    ],
+    "P": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "selected_lower_bounds": [
+      1,
+      2,
+      1,
+      1,
+      1,
+      1
+    ],
+    "single_source_patterns": 154,
+    "residual_free_N_patterns_omitted": 0,
+    "surviving_source_multisets": 5,
+    "first_survivors": [
+      [
+        [
+          1,
+          2,
+          0,
+          0,
+          2,
+          1
+        ],
+        [
+          2,
+          1,
+          1,
+          2,
+          1,
+          1
+        ],
+        [
+          2,
+          1,
+          2,
+          1,
+          0,
+          2
+        ]
+      ]
+    ],
+    "scope": "Necessary C-source states; zero-label attachments, supplements, B-edges and criticality omitted."
+  },
+  "(2, 1, 1, 1, 1, 1)/orbit_17": {
+    "R": [
+      2,
+      1,
+      1,
+      1,
+      1,
+      1
+    ],
+    "edges": [
+      [
+        0,
+        3
+      ],
+      [
+        0,
+        4
+      ],
+      [
+        0,
+        5
+      ],
+      [
+        1,
+        3
+      ],
+      [
+        1,
+        5
+      ],
+      [
+        2,
+        3
+      ],
+      [
+        2,
+        4
+      ]
+    ],
+    "h": [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+    ],
+    "P": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "selected_lower_bounds": [
+      1,
+      1,
+      1,
+      2,
+      1,
+      1
+    ],
+    "single_source_patterns": 148,
+    "residual_free_N_patterns_omitted": 0,
+    "surviving_source_multisets": 0,
+    "first_survivors": [],
+    "scope": "Necessary C-source states; zero-label attachments, supplements, B-edges and criticality omitted."
+  },
+  "(2, 1, 1, 1, 1, 1)/orbit_18": {
+    "R": [
+      2,
+      1,
+      1,
+      1,
+      1,
+      1
+    ],
+    "edges": [
+      [
+        0,
+        1
+      ],
+      [
+        0,
+        2
+      ],
+      [
+        0,
+        3
+      ],
+      [
+        1,
+        5
+      ],
+      [
+        2,
+        3
+      ],
+      [
+        2,
+        4
+      ],
+      [
+        3,
+        4
+      ]
+    ],
+    "h": [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+    ],
+    "P": [
+      0,
+      1,
+      2,
+      3,
+      4
+    ],
+    "selected_lower_bounds": [
+      1,
+      1,
+      2,
+      2,
+      1,
+      0
+    ],
+    "single_source_patterns": 162,
+    "residual_free_N_patterns_omitted": 0,
+    "surviving_source_multisets": 0,
+    "first_survivors": [],
+    "scope": "Necessary C-source states; zero-label attachments, supplements, B-edges and criticality omitted."
+  },
+  "(2, 1, 1, 1, 1, 1)/orbit_19": {
+    "R": [
+      2,
+      1,
+      1,
+      1,
+      1,
+      1
+    ],
+    "edges": [
+      [
+        0,
+        2
+      ],
+      [
+        0,
+        3
+      ],
+      [
+        0,
+        4
+      ],
+      [
+        1,
+        5
+      ],
+      [
+        2,
+        3
+      ],
+      [
+        2,
+        4
+      ],
+      [
+        3,
+        4
+      ]
+    ],
+    "h": [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+    ],
+    "P": [
+      0,
+      2,
+      3,
+      4
+    ],
+    "selected_lower_bounds": [
+      1,
+      0,
+      2,
+      2,
+      2,
+      0
+    ],
+    "single_source_patterns": 180,
+    "residual_free_N_patterns_omitted": 1,
+    "surviving_source_multisets": 0,
+    "first_survivors": [],
+    "scope": "Necessary C-source states; zero-label attachments, supplements, B-edges and criticality omitted."
+  },
+  "(2, 1, 1, 1, 1, 1)/orbit_20": {
+    "R": [
+      2,
+      1,
+      1,
+      1,
+      1,
+      1
+    ],
+    "edges": [
+      [
+        0,
+        1
+      ],
+      [
+        0,
+        2
+      ],
+      [
+        0,
+        5
+      ],
+      [
+        1,
+        5
+      ],
+      [
+        2,
+        3
+      ],
+      [
+        2,
+        4
+      ],
+      [
+        3,
+        4
+      ]
+    ],
+    "h": [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+    ],
+    "P": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "selected_lower_bounds": [
+      1,
+      1,
+      2,
+      1,
+      1,
+      1
+    ],
+    "single_source_patterns": 165,
+    "residual_free_N_patterns_omitted": 0,
+    "surviving_source_multisets": 42,
+    "first_survivors": [
+      [
+        [
+          0,
+          0,
+          0,
+          0,
+          0,
+          2
+        ],
+        [
+          1,
+          2,
+          2,
+          0,
+          0,
+          1
+        ],
+        [
+          2,
+          0,
+          1,
+          1,
+          2,
+          0
+        ],
+        [
+          2,
+          1,
+          1,
+          2,
+          1,
+          1
+        ]
+      ]
+    ],
+    "scope": "Necessary C-source states; zero-label attachments, supplements, B-edges and criticality omitted."
+  },
+  "(2, 1, 1, 1, 1, 1)/orbit_21": {
+    "R": [
+      2,
+      1,
+      1,
+      1,
+      1,
+      1
+    ],
+    "edges": [
+      [
+        0,
+        1
+      ],
+      [
+        1,
+        4
+      ],
+      [
+        1,
+        5
+      ],
+      [
+        2,
+        3
+      ],
+      [
+        2,
+        5
+      ],
+      [
+        3,
+        4
+      ]
+    ],
+    "h": [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+    ],
+    "P": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "selected_lower_bounds": [
+      0,
+      2,
+      1,
+      1,
+      1,
+      1
+    ],
+    "single_source_patterns": 175,
+    "residual_free_N_patterns_omitted": 0,
+    "surviving_source_multisets": 2,
+    "first_survivors": [
+      [
+        [
+          0,
+          2,
+          0,
+          0,
+          0,
+          0
+        ],
+        [
+          2,
+          1,
+          1,
+          2,
+          1,
+          2
+        ],
+        [
+          2,
+          1,
+          2,
+          1,
+          2,
+          1
+        ]
+      ]
+    ],
+    "scope": "Necessary C-source states; zero-label attachments, supplements, B-edges and criticality omitted."
+  },
+  "(2, 1, 1, 1, 1, 1)/orbit_22": {
+    "R": [
+      2,
+      1,
+      1,
+      1,
+      1,
+      1
+    ],
+    "edges": [
+      [
+        0,
+        1
+      ],
+      [
+        0,
+        2
+      ],
+      [
+        1,
+        4
+      ],
+      [
+        1,
+        5
+      ],
+      [
+        2,
+        3
+      ],
+      [
+        2,
+        5
+      ],
+      [
+        3,
+        4
+      ]
+    ],
+    "h": [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+    ],
+    "P": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "selected_lower_bounds": [
+      0,
+      2,
+      2,
+      1,
+      1,
+      1
+    ],
+    "single_source_patterns": 148,
+    "residual_free_N_patterns_omitted": 0,
+    "surviving_source_multisets": 0,
+    "first_survivors": [],
+    "scope": "Necessary C-source states; zero-label attachments, supplements, B-edges and criticality omitted."
+  },
+  "(2, 1, 1, 1, 1, 1)/orbit_23": {
+    "R": [
+      2,
+      1,
+      1,
+      1,
+      1,
+      1
+    ],
+    "edges": [
+      [
+        0,
+        2
+      ],
+      [
+        0,
+        3
+      ],
+      [
+        1,
+        4
+      ],
+      [
+        1,
+        5
+      ],
+      [
+        2,
+        3
+      ],
+      [
+        2,
+        5
+      ],
+      [
+        3,
+        4
+      ]
+    ],
+    "h": [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+    ],
+    "P": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "selected_lower_bounds": [
+      0,
+      1,
+      2,
+      2,
+      1,
+      1
+    ],
+    "single_source_patterns": 150,
+    "residual_free_N_patterns_omitted": 0,
+    "surviving_source_multisets": 0,
+    "first_survivors": [],
+    "scope": "Necessary C-source states; zero-label attachments, supplements, B-edges and criticality omitted."
+  }
+}

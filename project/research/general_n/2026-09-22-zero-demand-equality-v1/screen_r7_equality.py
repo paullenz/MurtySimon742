@@ -1,6 +1,7 @@
 #!/usr/bin/env python3
 """Optimistic equality-core screen at r=7; candidates are not graphs."""
-import itertools,json
+import itertools,json,sys
+from pathlib import Path
 
 def parts(n,hi=None):
     if n==0:yield ();return
@@ -65,4 +66,8 @@ for R in parts(7):
             classes[key]['labelled_count']+=1
     out[str(R)]={'labelled_equality_candidates':labelled,'candidate_orbits':len(classes),
       'orbit_representatives':list(classes.values())}
-print(json.dumps(out,indent=2))
+payload=json.dumps(out,indent=2)+'\n'
+if '--output' in sys.argv:
+    Path(sys.argv[sys.argv.index('--output')+1]).write_text(payload)
+else:
+    print(payload,end='')
