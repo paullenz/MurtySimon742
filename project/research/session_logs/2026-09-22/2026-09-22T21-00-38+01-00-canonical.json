@@ -15,9 +15,16 @@
     {
       "segment_id": "segment-1",
       "actual_start": "2026-09-22T21:02:43+01:00",
-      "actual_stop": null,
+      "actual_stop": "2026-09-22T21:49:33+01:00",
       "role": "forward_research",
       "notes": "Current scheduled invocation; mandatory repository reads completed and durable STARTED checkpoint published before mathematics."
+    },
+    {
+      "segment_id": "segment-2",
+      "actual_start": "2026-09-22T21:49:47+01:00",
+      "actual_stop": null,
+      "role": "preservation",
+      "notes": "Fresh early-stop check found under five minutes remaining before cutoff; began preservation."
     }
   ],
   "forward_research_intervals": [
@@ -80,14 +87,20 @@
       "stop": "2026-09-22T21:42:33+01:00",
       "seconds": 15,
       "unit": "r=12 support-ten partition (2,2,1^8) structural quotient census"
+    },
+    {
+      "start": "2026-09-22T21:44:39+01:00",
+      "stop": "2026-09-22T21:49:33+01:00",
+      "seconds": 294,
+      "unit": "r=12 support-ten (2,2,1^8) source screen chunk 0/8"
     }
   ],
-  "verified_forward_span_seconds": 1414,
-  "forward_stop": null,
-  "preservation_start": null,
+  "verified_forward_span_seconds": 1708,
+  "forward_stop": "2026-09-22T21:49:33+01:00",
+  "preservation_start": "2026-09-22T21:49:47+01:00",
   "preservation_complete": null,
   "wall_clock_span_seconds": null,
-  "substantive_unit_count": 10,
+  "substantive_unit_count": 11,
   "substantive_unit_ledger": [
     {
       "completed_at": "2026-09-22T21:05:05+01:00",
@@ -138,9 +151,19 @@
       "completed_at": "2026-09-22T21:42:33+01:00",
       "unit": "r=12 support-ten partition (2,2,1^8) structural quotient census",
       "result": "Exact reduction to 46 unlabelled max-degree-two unit cores, 104,981 colored two-heavy attachment orbits, and 6,386 strict kernels."
+    },
+    {
+      "completed_at": "2026-09-22T21:49:33+01:00",
+      "unit": "r=12 support-ten (2,2,1^8) source screen chunk 0/8",
+      "result": "798 strict kernels screened; 10 source-feasible, 788 source-infeasible, 0 solver-unknown."
     }
   ],
-  "early_stop_check": null,
+  "early_stop_check": {
+    "checked_at": "2026-09-22T21:49:47+01:00",
+    "time_remaining_seconds": 231,
+    "result": "BEGIN_PRESERVATION",
+    "reason": "Only 3m51s remained before the 21:53:38 research cutoff, below the five-minute continuation threshold."
+  },
   "stop_reason": null,
   "failures_and_pivots": [
     {
@@ -165,14 +188,15 @@
     "4f549295acb8fe8a6b306592d99cc2da6859fd34",
     "1df04922c8a6bab9620f150ada876f09199cb47f",
     "217f1bc6755f4f4601f73cf31a42ea7a73394c77",
-    "3aaf97096210c3e670218d82fe2f627f1eee9f46"
+    "3aaf97096210c3e670218d82fe2f627f1eee9f46",
+    "3b5ba3f7bafc1a1efa7962d34a4a2e8173d8bd8f"
   ],
-  "unfinished_line": "Source-screen the 6,386 r=12 support-ten (2,2,1^8) kernels, then treat support eleven.",
+  "unfinished_line": "Complete chunks 1-7 of r=12 support-ten (2,2,1^8) source screening; supplement-screen all survivors; then support eleven.",
   "target": {
     "applicable": true,
     "required_seconds": 3000,
     "available_seconds": 3055,
-    "achieved_verified_seconds": 1414,
+    "achieved_verified_seconds": 1708,
     "result": "LIVE",
     "reason": "Earliest actual start left 50m55s before cutoff."
   },

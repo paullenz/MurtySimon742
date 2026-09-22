@@ -7,23 +7,23 @@ Active target: a genuinely independent proof of Erdős #742 / the Murty–Simon 
 <!-- CURRENT-STATUS:START -->
 CHECKPOINT CLASS: VERIFIED_INTERNAL_NOT_PROMOTED
 
-WORK MODE: FORWARD_RESEARCH_LIVE
+WORK MODE: PRESERVATION_LIVE
 
-INSPECTED PREDECESSOR: 3aaf97096210c3e670218d82fe2f627f1eee9f46.
+INSPECTED PREDECESSOR: 3b5ba3f7bafc1a1efa7962d34a4a2e8173d8bd8f.
 
-LAST VERIFIED RESULT: r=12 is internally closed through support nine, and support-ten partition (3,1^9) is closed. The remaining support-ten partition (2,2,1^8) now has an exact structural census: 46 unlabelled max-degree-two unit cores, 104,981 colored two-heavy attachment orbits, and 6,386 strict kernels.
+LAST VERIFIED RESULT: r=12 is internally closed through support nine; support-ten partition (3,1^9) is closed. For partition (2,2,1^8), the exact census has 6,386 strict kernels. Source chunk 0 screened 798: 10 source-feasible, 788 source-infeasible, zero solver-unknown. Seven chunks remain.
 
-EVIDENCE: support-ten case-1 census source, counts, compressed exact mask stream, and canonical telemetry.
+EVIDENCE: support-ten case-1 census, chunked source script, chunk-0 JSON, and canonical telemetry.
 
-SESSION UTILISATION: Trigger 21:00:38 BST; actual start 21:02:43; ten closed intervals; verified total 1414s (23m34s); ten substantive units; cutoff 21:53:38; 50-minute target applicable; LIVE.
+SESSION UTILISATION: Trigger 21:00:38 BST; actual start 21:02:43; eleven closed intervals; verified total 1708s (28m28s); eleven substantive units; forward stop 21:49:33; cutoff 21:53:38; 50-minute target applicable; PRESERVATION LIVE.
 
 UNPRESERVED WORK: None at this checkpoint.
 
-NEXT ACTION: Source-screen the 6,386 (2,2,1^8) kernels, then support eleven.
+NEXT ACTION: Finalize this session. Next research slot should complete chunks 1-7, supplement-screen survivors, then treat support eleven.
 
-FOCUSED-SESSION COUNT: 1/24; current trigger credit pending final compliance.
+FOCUSED-SESSION COUNT: 1/24; current trigger will receive no credit unless final utilisation meets the binding target.
 
-MANDATORY CONSTRAINTS: Source/supplement screening and support eleven remain; no r=12 closure yet.
+MANDATORY CONSTRAINTS: Seven source chunks, supplement feasibility, and support eleven remain; no r=12 closure yet.
 <!-- CURRENT-STATUS:END -->
 
 ## Latest adversarial audit - 22 September 2026
