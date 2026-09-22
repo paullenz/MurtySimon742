@@ -27,19 +27,30 @@
       "stop": "2026-09-22T17:05:05+01:00",
       "seconds": 51,
       "evidence": "case-0 physical-source MILP aggregate"
+    },
+    {
+      "start": "2026-09-22T17:06:08+01:00",
+      "stop": "2026-09-22T17:06:21+01:00",
+      "seconds": 13,
+      "evidence": "case-1 physical-source MILP aggregate"
     }
   ],
-  "verified_forward_span_seconds": 51,
+  "verified_forward_span_seconds": 64,
   "forward_stop": "PENDING",
   "preservation_start": "PENDING",
   "preservation_complete": "PENDING",
   "wall_clock_span_seconds": "PENDING",
-  "substantive_unit_count": 1,
+  "substantive_unit_count": 2,
   "substantive_unit_ledger": [
     {
       "completed_at": "2026-09-22T17:05:05+01:00",
       "unit": "r=11 support-eight case 0 physical-source screen",
       "result": "26/26 strict cores MILP-infeasible; 0 solver-unknown; partition (4,1^7) internally closed at source-necessity layer."
+    },
+    {
+      "completed_at": "2026-09-22T17:06:21+01:00",
+      "unit": "r=11 support-eight case 1 physical-source screen",
+      "result": "800/800 strict cores MILP-infeasible; 0 solver-unknown; partition (3,2,1^6) internally closed at source-necessity layer."
     }
   ],
   "early_stop_check": {
@@ -51,9 +62,10 @@
     "Inherited interrupted monolithic r=11 support-eight screen; pivoting to per-partition shards."
   ],
   "commit_shas": [
-    "5c0ba6a454767e4a930b370b7687d6165e9b4d08"
+    "5c0ba6a454767e4a930b370b7687d6165e9b4d08",
+    "8ec0aa31dadd32dbcc22e1e3ae7f6826efa258b4"
   ],
-  "unfinished_line": "Screen support-eight cases 1 and 2, then supports nine and ten.",
+  "unfinished_line": "Screen support-eight case 2, then supports nine and ten.",
   "target": {
     "applicable": true,
     "available_seconds": 3160,
