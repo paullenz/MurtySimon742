@@ -19,6 +19,8 @@ SESSION UTILISATION: Trigger 2026-09-22 11:00:38 BST; earliest 11:01:19; next 12
 
 UNPRESERVED WORK: None beyond named unfinished line.
 
+LATE REENTRY: 11:58:30–11:58:42 BST; mandatory reads only, zero research credit, finalized session remained closed.
+
 DEFERRED ADMIN: Historical missing-slot reconciliation and schedule maintenance.
 
 NEXT ACTION: Begin quotient-first r=9 strict-surplus work in the next scheduled session; retain all results at internal computer-assisted trust.
