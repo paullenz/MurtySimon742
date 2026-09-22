@@ -9,21 +9,21 @@ CHECKPOINT CLASS: VERIFIED_INTERNAL_NOT_PROMOTED
 
 WORK MODE: FORWARD_RESEARCH_LIVE
 
-INSPECTED PREDECESSOR: 00b43e52a1eebc0cac604b3bde01ce63a3c0fba9.
+INSPECTED PREDECESSOR: 644bfbfd035f562fc5fd78046f613651e50e330d.
 
-LAST VERIFIED RESULT: r=12 is internally closed through support seven. At support eight, cases 0-2 are source-infeasible. Case 3, partition (3,2,2,1^5), has exactly four source-feasible strict cores out of 1,997, with zero solver-unknown cases. The deterministic mask stream was regenerated after a truncated local artifact was detected; its exact per-case counts are 11, 387, 191, 1,997, and 1,173.
+LAST VERIFIED RESULT: r=12 is internally closed through support seven. The exact support-eight source screen is complete: among 3,759 strict cores, eight are source-feasible and all others are source-infeasible, with zero solver-unknown cases. Four survivors occur in partition (3,2,2,1^5) and four in (2,2,2,2,1^4).
 
-EVIDENCE: corrected support-eight mask/count census and source case-0 through case-3 JSON in the r12 quotient package; canonical telemetry.
+EVIDENCE: corrected support-eight census and all five partition-sharded source JSON files in the r12 quotient package; canonical telemetry.
 
-SESSION UTILISATION: Trigger 18:00:38 BST; actual start 18:04:09; thirteen closed intervals; verified total 1031s (17m11s); thirteen substantive units; cutoff 18:53:38; target N/A late start; LIVE.
+SESSION UTILISATION: Trigger 18:00:38 BST; actual start 18:04:09; fourteen closed intervals; verified total 1050s (17m30s); fourteen substantive units; cutoff 18:53:38; target N/A late start; LIVE.
 
 UNPRESERVED WORK: None at this checkpoint.
 
-NEXT ACTION: Screen support-eight case 4, then test all source survivors against supplement feasibility.
+NEXT ACTION: Test all eight support-eight source survivors against combined source/supplement feasibility.
 
 FOCUSED-SESSION COUNT: 1/24; current trigger credit pending final compliance.
 
-MANDATORY CONSTRAINTS: Case 4 and supplement feasibility remain; no overall support-eight closure yet. The failed truncated-artifact invocation and regeneration time received no research credit.
+MANDATORY CONSTRAINTS: Supplement feasibility remains; no overall support-eight closure yet.
 <!-- CURRENT-STATUS:END -->
 
 ## Latest adversarial audit - 22 September 2026
