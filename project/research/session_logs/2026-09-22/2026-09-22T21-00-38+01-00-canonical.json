@@ -26,19 +26,30 @@
       "stop": "2026-09-22T21:05:05+01:00",
       "seconds": 8,
       "unit": "r=12 support-nine (4,1^8) source screen"
+    },
+    {
+      "start": "2026-09-22T21:06:03+01:00",
+      "stop": "2026-09-22T21:10:38+01:00",
+      "seconds": 275,
+      "unit": "r=12 support-nine (3,2,1^7) source screen"
     }
   ],
-  "verified_forward_span_seconds": 8,
+  "verified_forward_span_seconds": 283,
   "forward_stop": null,
   "preservation_start": null,
   "preservation_complete": null,
   "wall_clock_span_seconds": null,
-  "substantive_unit_count": 1,
+  "substantive_unit_count": 2,
   "substantive_unit_ledger": [
     {
       "completed_at": "2026-09-22T21:05:05+01:00",
       "unit": "r=12 support-nine (4,1^8) source screen",
       "result": "84/84 strict cores source-infeasible; 0 solver-unknown."
+    },
+    {
+      "completed_at": "2026-09-22T21:10:38+01:00",
+      "unit": "r=12 support-nine (3,2,1^7) source screen",
+      "result": "3,988/3,988 strict cores source-infeasible; 0 solver-unknown."
     }
   ],
   "early_stop_check": null,
@@ -46,14 +57,15 @@
   "failures_and_pivots": [],
   "commit_shas": [
     "ce26dceaad7a8766e0c8b5c3aca7ca666c01ed27",
-    "59279a5cec68af26305df7928c090c59a8f7c039"
+    "59279a5cec68af26305df7928c090c59a8f7c039",
+    "9ff6cc082f7d9dda69f2a16ca94c47384c7ba5f2"
   ],
-  "unfinished_line": "Screen r=12 support-nine cases (3,2,1^7) and (2,2,2,1^6), then run supplement feasibility on any survivors.",
+  "unfinished_line": "Screen r=12 support-nine case (2,2,2,1^6), then run supplement feasibility on any survivors.",
   "target": {
     "applicable": true,
     "required_seconds": 3000,
     "available_seconds": 3055,
-    "achieved_verified_seconds": 8,
+    "achieved_verified_seconds": 283,
     "result": "LIVE",
     "reason": "Earliest actual start left 50m55s before cutoff."
   },

@@ -9,21 +9,21 @@ CHECKPOINT CLASS: VERIFIED_INTERNAL_NOT_PROMOTED
 
 WORK MODE: FORWARD_RESEARCH_LIVE
 
-INSPECTED PREDECESSOR: 59279a5cec68af26305df7928c090c59a8f7c039.
+INSPECTED PREDECESSOR: 9ff6cc082f7d9dda69f2a16ca94c47384c7ba5f2.
 
-LAST VERIFIED RESULT: r=12 remains internally closed through support eight. At support nine, partition (4,1^8) is now source-infeasible: all 84 strict cores rejected with zero solver-unknown cases. Two source shards remain with 3,988 and 12,375 strict cores.
+LAST VERIFIED RESULT: r=12 remains internally closed through support eight. At support nine, partitions (4,1^8) and (3,2,1^7) are source-infeasible: all 84 and 3,988 strict cores rejected with zero solver-unknown cases. One shard remains with 12,375 strict cores.
 
-EVIDENCE: support-nine census and case-0 source JSON in the r12 quotient package; canonical telemetry.
+EVIDENCE: support-nine census and source case-0/case-1 JSON in the r12 quotient package; canonical telemetry.
 
-SESSION UTILISATION: Trigger 21:00:38 BST; actual start 21:02:43; one closed interval; verified total 8s; one substantive unit; cutoff 21:53:38; 50-minute target applicable; LIVE.
+SESSION UTILISATION: Trigger 21:00:38 BST; actual start 21:02:43; two closed intervals; verified total 283s (4m43s); two substantive units; cutoff 21:53:38; 50-minute target applicable; LIVE.
 
 UNPRESERVED WORK: None at this checkpoint.
 
-NEXT ACTION: Screen support-nine case 1, then case 2 and supplement feasibility.
+NEXT ACTION: Screen support-nine case 2, then run supplement feasibility on any survivors.
 
 FOCUSED-SESSION COUNT: 1/24; current trigger credit pending final compliance.
 
-MANDATORY CONSTRAINTS: Two support-nine source shards remain; no r=12 closure yet.
+MANDATORY CONSTRAINTS: One support-nine source shard remains; no r=12 closure yet.
 <!-- CURRENT-STATUS:END -->
 
 ## Latest adversarial audit - 22 September 2026
