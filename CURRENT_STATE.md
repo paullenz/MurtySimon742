@@ -9,21 +9,21 @@ CHECKPOINT CLASS: VERIFIED_INTERNAL_NOT_PROMOTED
 
 WORK MODE: FORWARD_RESEARCH_LIVE
 
-INSPECTED PREDECESSOR: 41e1e69ef7d94bd7e1811f3d241ed6b883354fe8.
+INSPECTED PREDECESSOR: 00b43e52a1eebc0cac604b3bde01ce63a3c0fba9.
 
-LAST VERIFIED RESULT: r=12 is internally closed through support seven. At support eight, cases (5,1^7), (4,2,1^6), and (3,3,1^6) are source-infeasible: 11/11, 387/387, and 191/191 strict cores rejected with zero solver-unknown cases. Two shards remain, containing 1,997 and 1,173 strict cores.
+LAST VERIFIED RESULT: r=12 is internally closed through support seven. At support eight, cases 0-2 are source-infeasible. Case 3, partition (3,2,2,1^5), has exactly four source-feasible strict cores out of 1,997, with zero solver-unknown cases. The deterministic mask stream was regenerated after a truncated local artifact was detected; its exact per-case counts are 11, 387, 191, 1,997, and 1,173.
 
-EVIDENCE: support-eight census and source case-0/case-1/case-2 JSON in the r12 quotient package; canonical telemetry.
+EVIDENCE: corrected support-eight mask/count census and source case-0 through case-3 JSON in the r12 quotient package; canonical telemetry.
 
-SESSION UTILISATION: Trigger 18:00:38 BST; actual start 18:04:09; twelve closed intervals; verified total 1004s (16m44s); twelve substantive units; cutoff 18:53:38; target N/A late start; LIVE.
+SESSION UTILISATION: Trigger 18:00:38 BST; actual start 18:04:09; thirteen closed intervals; verified total 1031s (17m11s); thirteen substantive units; cutoff 18:53:38; target N/A late start; LIVE.
 
 UNPRESERVED WORK: None at this checkpoint.
 
-NEXT ACTION: Screen support-eight cases 3 and 4, then run supplement feasibility on any source survivors.
+NEXT ACTION: Screen support-eight case 4, then test all source survivors against supplement feasibility.
 
 FOCUSED-SESSION COUNT: 1/24; current trigger credit pending final compliance.
 
-MANDATORY CONSTRAINTS: Two support-eight shards remain; no overall support-eight closure yet.
+MANDATORY CONSTRAINTS: Case 4 and supplement feasibility remain; no overall support-eight closure yet. The failed truncated-artifact invocation and regeneration time received no research credit.
 <!-- CURRENT-STATUS:END -->
 
 ## Latest adversarial audit - 22 September 2026

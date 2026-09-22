@@ -93,14 +93,20 @@
       "stop": "2026-09-22T18:38:53+01:00",
       "seconds": 3,
       "unit": "r=12 support-eight (3,3,1^6) source screen"
+    },
+    {
+      "start": "2026-09-22T18:41:40+01:00",
+      "stop": "2026-09-22T18:42:07+01:00",
+      "seconds": 27,
+      "unit": "r=12 support-eight (3,2,2,1^5) source screen"
     }
   ],
-  "verified_forward_span_seconds": 1004,
+  "verified_forward_span_seconds": 1031,
   "forward_stop": "PENDING",
   "preservation_start": "PENDING",
   "preservation_complete": "PENDING",
   "wall_clock_span_seconds": "PENDING",
-  "substantive_unit_count": 12,
+  "substantive_unit_count": 13,
   "substantive_unit_ledger": [
     {
       "completed_at": "2026-09-22T18:06:42+01:00",
@@ -161,6 +167,11 @@
       "completed_at": "2026-09-22T18:38:53+01:00",
       "unit": "r=12 support-eight (3,3,1^6) source screen",
       "result": "191/191 source-infeasible; 0 solver-unknown."
+    },
+    {
+      "completed_at": "2026-09-22T18:42:07+01:00",
+      "unit": "r=12 support-eight (3,2,2,1^5) source screen",
+      "result": "1,993/1,997 source-infeasible; 4 source-feasible; 0 solver-unknown."
     }
   ],
   "early_stop_check": {
@@ -168,7 +179,13 @@
     "result": "PENDING"
   },
   "stop_reason": "PENDING",
-  "failures_and_pivots": [],
+  "failures_and_pivots": [
+    {
+      "at": "2026-09-22T18:40:47+01:00",
+      "failure": "The preserved support-eight mask stream was truncated during case 3 (one malformed final row; cases 3-4 incomplete), causing the first case-3 source invocation to fail.",
+      "pivot": "Regenerated the deterministic orbit stream, verified the old prefix and exact per-case counts 11/387/191/1997/1173, then reran case 3. No failed or regeneration time credited."
+    }
+  ],
   "commit_shas": [
     "329e7bb6bc00254835cda847b40dac26a1fff6f5",
     "634818a6a93710421045db9f1cbcdc5fafb5f8b0",
@@ -182,9 +199,10 @@
     "db48b302a2b0d4bdc6035d245d0672bf99520119",
     "468ba1b65c6363e337d07b6b7c4f3f30f697dcbe",
     "838c81b52ea773b3207ea12435125441a42f21b2",
-    "41e1e69ef7d94bd7e1811f3d241ed6b883354fe8"
+    "41e1e69ef7d94bd7e1811f3d241ed6b883354fe8",
+    "00b43e52a1eebc0cac604b3bde01ce63a3c0fba9"
   ],
-  "unfinished_line": "Screen r=12 support-eight cases 3 and 4, then run supplement feasibility on any source survivors.",
+  "unfinished_line": "Screen r=12 support-eight case 4, then test the four case-3 source survivors (and any case-4 survivors) against supplement feasibility.",
   "target": {
     "applicable": false,
     "available_seconds": 2969,
