@@ -62,14 +62,20 @@
       "stop": "2026-09-22T21:32:27+01:00",
       "seconds": 48,
       "unit": "r=12 support-nine combined source/supplement MILP"
+    },
+    {
+      "start": "2026-09-22T21:35:25+01:00",
+      "stop": "2026-09-22T21:36:32+01:00",
+      "seconds": 67,
+      "unit": "r=12 support-ten partition (3,1^9) structural quotient census"
     }
   ],
-  "verified_forward_span_seconds": 1217,
+  "verified_forward_span_seconds": 1284,
   "forward_stop": null,
   "preservation_start": null,
   "preservation_complete": null,
   "wall_clock_span_seconds": null,
-  "substantive_unit_count": 7,
+  "substantive_unit_count": 8,
   "substantive_unit_ledger": [
     {
       "completed_at": "2026-09-22T21:05:05+01:00",
@@ -105,6 +111,11 @@
       "completed_at": "2026-09-22T21:32:27+01:00",
       "unit": "r=12 support-nine combined source/supplement MILP",
       "result": "All 36 source-feasible kernels supplement-infeasible; 0 feasible and 0 solver-unknown. Support nine closed internally."
+    },
+    {
+      "completed_at": "2026-09-22T21:36:32+01:00",
+      "unit": "r=12 support-ten partition (3,1^9) structural quotient census",
+      "result": "Exact reduction to 70 unlabelled max-degree-two unit cores, 4,872 colored heavy-neighbour orbits, and 287 strict kernels."
     }
   ],
   "early_stop_check": null,
@@ -114,6 +125,11 @@
       "at": "2026-09-22T21:31:29+01:00",
       "failure": "First supplement invocation was not retained after an execution-session handle was not captured; output file remained empty.",
       "pivot": "Reran from a fresh authoritative 21:31:39 start, preserved the completed output, and credited only the rerun interval."
+    },
+    {
+      "at": "2026-09-22T21:35:04+01:00",
+      "failure": "Executor transport disconnected during the first compilation attempt for the support-ten census.",
+      "pivot": "Resumed the same canonical session after recovery; reran from an authoritative 21:35:25 start and credited only the successful interval."
     }
   ],
   "commit_shas": [
@@ -124,14 +140,15 @@
     "4b4a6f1ce221fbb1f883d818dbcdff31c0f7b8f3",
     "df0bf2dc6a356976e6d10a54ea23418d53267b09",
     "06af73ac431008b5a0d38c013b9ab6a15d57f133",
-    "4f549295acb8fe8a6b306592d99cc2da6859fd34"
+    "4f549295acb8fe8a6b306592d99cc2da6859fd34",
+    "1df04922c8a6bab9620f150ada876f09199cb47f"
   ],
-  "unfinished_line": "Enumerate r=12 support-ten and support-eleven strict quotient cases; source/supplement-screen survivors to seek full r=12 closure.",
+  "unfinished_line": "Source-screen the 287 r=12 support-ten (3,1^9) kernels, then treat partition (2,2,1^8) and support eleven.",
   "target": {
     "applicable": true,
     "required_seconds": 3000,
     "available_seconds": 3055,
-    "achieved_verified_seconds": 1217,
+    "achieved_verified_seconds": 1284,
     "result": "LIVE",
     "reason": "Earliest actual start left 50m55s before cutoff."
   },
