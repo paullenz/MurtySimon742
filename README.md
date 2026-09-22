@@ -3,7 +3,7 @@
 <!-- Keep the live overview and status tables here. Put dated updates below them, never above them. -->
 <!-- CURRENT-STATUS:START -->
 
-**22 September equality branch:** Internal [zero-demand rigidity](project/research/general_n/2026-09-22-zero-demand-equality-v1/ZERO_DEMAND_EQUALITY.md), residual-support analysis, and exact residual quotient/source/supplement screens now prove the edge bound for total demand S<=12 and balanced complete-bipartite equality through S<=8. The r=10 strict pipeline is completely closed, including the 2,208,612-orbit support-nine quotient. These are internal candidate/computer-assisted results, not external verification. The positive-demand strip and the broader equality characterization remain open.
+**22 September equality branch:** Internal [zero-demand rigidity](project/research/general_n/2026-09-22-zero-demand-equality-v1/ZERO_DEMAND_EQUALITY.md), residual-support analysis, and exact residual quotient/source/supplement screens now prove the edge bound for total demand S<=13 and balanced complete-bipartite equality through S<=8. The r=11 strict pipeline is completely closed: support eight and nine were sharded through exact source/supplement screens, while the sole support-ten partition reduced structurally to 280 strict cores and then three source-feasible kernels, all supplement-infeasible. These are internal candidate/computer-assisted results, not external verification. The positive-demand strip and the broader equality characterization remain open.
 
 ## Current status
 
