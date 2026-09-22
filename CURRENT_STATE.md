@@ -5,29 +5,27 @@ Canonical repository: `paullenz/MurtySimon742`. Date: 22 September 2026.
 Active target: a genuinely independent proof of Erdős #742 / the Murty–Simon inequality e(G)<=floor(n^2/4), preferably with the equality characterization. Forward priority is the project’s own complement / residual / Hall / profile / realizability route, not a reconstruction of the external e+disj+X proof. The first focused session produced the internally checked candidate threshold `Delta>=250n/429`, shrinking the live strip to `n/2<Delta<250n/429`. The theorem and its inherited graph-to-profile spine remain candidate/internal-review mathematics. A 24-focused-session go/no-go gate applies. Prior eventual-D2C work remains preserved but is no longer the active forward objective.
 
 <!-- CURRENT-STATUS:START -->
-CHECKPOINT CLASS: `INTERRUPTION_RECONCILED_NOT_SCHEDULER_VERIFIED`
+CHECKPOINT CLASS: `SCHEDULED_RESEARCH_STARTED`
 
-WORK MODE: `RECOVERY`
+WORK MODE: `MATH`
 
-INSPECTED PREDECESSOR: `5c408fa8629af7211c08127ee29f1fb3509ce8ad`.
+INSPECTED PREDECESSOR: `2d378be74a754cbaa705e16d7f9a717ada018252`.
 
-LAST VERIFIED RESULT: Mathematical status unchanged: three preserved internal units reconstruct the raw profile bridge, regress 757 actual D2C graphs and exhibit the selected-supplement branch on a physical graph. No theorem promotion.
+LAST VERIFIED RESULT: Mathematical status unchanged. Durable start for the 10:00:38 BST scheduled trigger; no new mathematics claimed yet. The interrupted manual recovery remains separately closed and receives no scheduled credit.
 
-EVIDENCE: `project/research/operations/2026-09-22-schedule-recovery/INTERRUPTION_CORRECTION.md`; `project/research/general_n/2026-09-22-raw-profile-bridge-v1/`; `project/research/session_logs/2026-09-22/manual-recovery-2026-09-22T09-14-26+01-00.json`.
+EVIDENCE: `project/research/session_logs/2026-09-22/2026-09-22T10-00-38+01-00-canonical.json`; latest bridge package `project/research/general_n/2026-09-22-raw-profile-bridge-v1/`.
 
-RECOVERY STATUS: The assistant ended the manual recovery after treating an ancillary health-check request as replacing research. Both saved task prompts now explicitly prevent that instruction conflict. The original missed launches remain unexplained; scheduled execution is still unverified. This manual run is closed as interrupted, not left live.
+SESSION UTILISATION: Trigger 2026-09-22 10:00:38 BST; earliest observed start 10:02:42 BST (124 seconds late); next trigger 11:00:38; research cutoff 10:53:38; hard close 10:59:38. Closed forward intervals none; verified total 0 seconds; substantive units 0; final preservation pending; target YES/PENDING; IN_PROGRESS.
 
-SESSION UTILISATION: MANUAL_RECOVERY; scheduled trigger none; actual start 09:14:26 BST; closed forward intervals 09:17:27–09:21:49, 09:23:39–09:28:00 and 09:31:47–09:34:14; total 670 seconds (11m10s); 3 substantive units; forward stop 09:34:14; cutoff 09:53:38. Original final-preservation/report boundaries UNVERIFIED. Stop reason: task-instruction collision and premature turn ending. Target N/A; NONCOMPLIANT_INTERRUPTED_UNVERIFIED_CLOSURE. Reconciled on user challenge at 09:41:24 BST, with no research credit.
+UNPRESERVED WORK: None.
 
-UNPRESERVED WORK: None of the three completed mathematical units.
+DEFERRED ADMIN: No schedule or CI maintenance. Ancillary monitoring does not replace this research task.
 
-DEFERRED ADMIN: Verify the replacement's first due 10:00:38 BST session from remote STARTED, substantive checkpoints and final closure; prompt changes alone do not establish reliable execution.
+NEXT ACTION: Read the latest audit and bridge proof, then derive the zero-demand equality branch with both balanced-bipartite parities as controls.
 
-NEXT ACTION: At the next research entry, analyze the zero-demand equality boundary directly from the reconstructed ledger; preserve any rigidity theorem with explicit equality controls.
+FOCUSED-SESSION COUNT: `1/24` previously completed; this session not yet credited.
 
-FOCUSED-SESSION COUNT: `1/24`; no increment for the interrupted manual run.
-
-MANDATORY CONSTRAINTS: Independent #742 route; internal trust level; graph-realizability distinction; X_3 and both bipartite parities; freeze dependent claims on any bridge failure.
+MANDATORY CONSTRAINTS: Independent #742 route; candidate/internal trust; physical graph realizability; no fabricated durations; same trigger across re-entry; preserve each completed substantive unit.
 <!-- CURRENT-STATUS:END -->
 
 ## Latest adversarial audit - 22 September 2026
