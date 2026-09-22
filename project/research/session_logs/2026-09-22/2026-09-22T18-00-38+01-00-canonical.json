@@ -16,9 +16,16 @@
     {
       "segment_id": "segment-1",
       "actual_start": "2026-09-22T18:04:09+01:00",
-      "actual_stop": "PENDING",
+      "actual_stop": "2026-09-22T18:49:49+01:00",
       "role": "forward_research",
       "notes": "Initial invocation; mandatory source reads completed; durable STARTED checkpoint before mathematics."
+    },
+    {
+      "segment_id": "segment-2",
+      "actual_start": "2026-09-22T18:50:10+01:00",
+      "actual_stop": null,
+      "role": "preservation",
+      "notes": "Final preservation after fresh early-stop check found under five minutes remaining before research cutoff."
     }
   ],
   "forward_research_intervals": [
@@ -114,11 +121,11 @@
     }
   ],
   "verified_forward_span_seconds": 1053,
-  "forward_stop": "PENDING",
-  "preservation_start": "PENDING",
+  "forward_stop": "2026-09-22T18:49:49+01:00",
+  "preservation_start": "2026-09-22T18:50:10+01:00",
   "preservation_complete": "PENDING",
   "wall_clock_span_seconds": "PENDING",
-  "substantive_unit_count": 15,
+  "substantive_unit_count": 16,
   "substantive_unit_ledger": [
     {
       "completed_at": "2026-09-22T18:06:42+01:00",
@@ -194,11 +201,18 @@
       "completed_at": "2026-09-22T18:45:12+01:00",
       "unit": "r=12 support-eight combined source/supplement MILP",
       "result": "All 8 source-feasible kernels supplement-infeasible; 0 feasible and 0 solver-unknown. Support eight closed internally."
+    },
+    {
+      "completed_at": "2026-09-22T18:49:49+01:00",
+      "unit": "r=12 support-nine exact quotient census",
+      "result": "274,668 unlabelled nine-vertex graphs; three partitions produced 2,208,612/16,343,872/18,633,824 colored core orbits and 84/3,988/12,375 strict cores (16,447 total). Interval start boundary was not authoritatively captured, so this unit receives zero verified-time credit."
     }
   ],
   "early_stop_check": {
-    "time": "PENDING",
-    "result": "PENDING"
+    "checked_at": "2026-09-22T18:50:10+01:00",
+    "time_remaining_seconds": 208,
+    "result": "BEGIN_PRESERVATION",
+    "reason": "Only 3m28s remained before the 18:53:38 research cutoff, below the five-minute continuation threshold."
   },
   "stop_reason": "PENDING",
   "failures_and_pivots": [
@@ -206,6 +220,11 @@
       "at": "2026-09-22T18:40:47+01:00",
       "failure": "The preserved support-eight mask stream was truncated during case 3 (one malformed final row; cases 3-4 incomplete), causing the first case-3 source invocation to fail.",
       "pivot": "Regenerated the deterministic orbit stream, verified the old prefix and exact per-case counts 11/387/191/1997/1173, then reran case 3. No failed or regeneration time credited."
+    },
+    {
+      "at": "2026-09-22T18:49:49+01:00",
+      "failure": "The successful support-nine census invocation omitted an authoritative start timestamp after a prior interrupted invocation.",
+      "pivot": "Preserved the completed exact census but claimed no forward interval or time for it; start boundary remains UNVERIFIED."
     }
   ],
   "commit_shas": [
@@ -224,9 +243,10 @@
     "41e1e69ef7d94bd7e1811f3d241ed6b883354fe8",
     "00b43e52a1eebc0cac604b3bde01ce63a3c0fba9",
     "644bfbfd035f562fc5fd78046f613651e50e330d",
-    "1f2853fbcb8a9711b9b953382dba82b16fa71fd9"
+    "1f2853fbcb8a9711b9b953382dba82b16fa71fd9",
+    "ae3dbfdf17a0644fd54abda9e8f98baad0035be8"
   ],
-  "unfinished_line": "Enumerate r=12 support-nine strict quotient cases, then shard exact source feasibility.",
+  "unfinished_line": "Run exact source feasibility on the 16,447 r=12 support-nine strict cores, sharded by the three residual partitions; then run supplement feasibility on survivors and continue to supports ten and eleven.",
   "target": {
     "applicable": false,
     "available_seconds": 2969,

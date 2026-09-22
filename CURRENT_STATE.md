@@ -7,23 +7,23 @@ Active target: a genuinely independent proof of Erdős #742 / the Murty–Simon 
 <!-- CURRENT-STATUS:START -->
 CHECKPOINT CLASS: VERIFIED_INTERNAL_NOT_PROMOTED
 
-WORK MODE: FORWARD_RESEARCH_LIVE
+WORK MODE: PRESERVATION_LIVE
 
-INSPECTED PREDECESSOR: 1f2853fbcb8a9711b9b953382dba82b16fa71fd9.
+INSPECTED PREDECESSOR: ae3dbfdf17a0644fd54abda9e8f98baad0035be8.
 
-LAST VERIFIED RESULT: r=12 is internally closed through support eight. The support-eight census contains 3,759 strict cores; only eight pass exact source feasibility, and a combined source/supplement MILP rejects all eight with zero solver-unknown cases.
+LAST VERIFIED RESULT: r=12 is internally closed through support eight. The exact support-nine quotient census completed: 274,668 unlabelled nine-vertex graphs; 37,186,308 colored core orbits across three residual partitions; and 16,447 strict cores (84, 3,988, 12,375 by partition). The successful census start boundary was not authoritatively captured, so the unit receives zero verified-time credit.
 
-EVIDENCE: corrected support-eight census, five source shards, supplement script/output, and canonical telemetry in the r12 quotient package.
+EVIDENCE: deterministic support-nine census source, counts, compressed exact mask stream, and canonical telemetry in the r12 quotient package.
 
-SESSION UTILISATION: Trigger 18:00:38 BST; actual start 18:04:09; fifteen closed intervals; verified total 1053s (17m33s); fifteen substantive units; cutoff 18:53:38; target N/A late start; LIVE.
+SESSION UTILISATION: Trigger 18:00:38 BST; actual start 18:04:09; fifteen verified closed intervals; verified total 1053s (17m33s); sixteen substantive units; forward stop 18:49:49; cutoff 18:53:38; target N/A late start; PRESERVATION LIVE.
 
 UNPRESERVED WORK: None at this checkpoint.
 
-NEXT ACTION: Enumerate support-nine strict quotient cases, then shard exact source feasibility.
+NEXT ACTION: Finalize telemetry and handoff. Next research session should shard support-nine source feasibility.
 
 FOCUSED-SESSION COUNT: 1/24; current trigger credit pending final compliance.
 
-MANDATORY CONSTRAINTS: Support nine and above remain; no r=12 closure yet. Abstract finite infeasibility is not graph realization.
+MANDATORY CONSTRAINTS: Support-nine source/supplement screening and supports ten-eleven remain; no r=12 closure yet. The support-nine census has an unverified start boundary and contributes zero verified time.
 <!-- CURRENT-STATUS:END -->
 
 ## Latest adversarial audit - 22 September 2026
