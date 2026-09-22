@@ -9,21 +9,21 @@ CHECKPOINT CLASS: VERIFIED_INTERNAL_NOT_PROMOTED
 
 WORK MODE: FORWARD_RESEARCH_LIVE
 
-INSPECTED PREDECESSOR: da97c09d3225585201261a238204de4d7db001ea.
+INSPECTED PREDECESSOR: 5929f58e717c583d531cd4114fb68f58aa4a87e3.
 
-LAST VERIFIED RESULT: r=11 is internally closed through support nine. Support ten R=(2,1^9) reduces structurally to 280 optimistic strict cores. The integer physical-source MILP rejects 277 and leaves exactly 3 source-feasible kernels, with zero solver-unknown cases. Each survivor has t_upper=1 and a three-source witness; exact all-population supplement forcing remains.
+LAST VERIFIED RESULT: Every r=11 residual partition is now internally closed under the quotient/source/supplement pipeline. Supports <=7 were inherited; this session closed supports 8 and 9, reduced support ten R=(2,1^9) to 280 strict cores, then to 3 source-feasible kernels, and exhaustively rejected all three under the one-supplement condition (0 found, 3 exhausted). This extends the internal computer-assisted edge bound through residual demand S<=13. Equality remains characterized only through S<=8; the general theorem remains open.
 
-EVIDENCE: `r11_support10_sources_milp.py` and `r11_support10_sources.json` under the r11 quotient package; canonical telemetry.
+EVIDENCE: complete r11 support-eight, support-nine, and support-ten census/source/supplement artifacts under `project/research/general_n/2026-09-22-r11-quotient-v1/`; canonical telemetry.
 
-SESSION UTILISATION: Trigger 17:00:38 BST; actual start 17:00:58; twelve closed intervals; verified total 1388s (23m08s); twelve substantive units; cutoff 17:53:38; target YES/PENDING; LIVE.
+SESSION UTILISATION: Trigger 17:00:38 BST; actual start 17:00:58; thirteen closed intervals; verified total 1597s (26m37s); thirteen substantive units; cutoff 17:53:38; target YES/PENDING; LIVE.
 
 UNPRESERVED WORK: None at this checkpoint.
 
-NEXT ACTION: Exhaustively enumerate source multisets for the 3 support-ten survivors and apply the inherited one-supplement forcing condition.
+NEXT ACTION: Cross-check totals and dependency consistency across every r=11 shard; if time remains, identify the r=12 partition frontier without beginning an unfinishable enumeration.
 
 FOCUSED-SESSION COUNT: 1/24; current trigger credit pending final compliance.
 
-MANDATORY CONSTRAINTS: Three abstract source-feasible kernels remain; full r=11 closure is not yet claimed.
+MANDATORY CONSTRAINTS: r=11 closure is internal/computer-assisted and conditional on inherited quotient lemmas; it is not external verification or graph realization.
 <!-- CURRENT-STATUS:END -->
 
 ## Latest adversarial audit - 22 September 2026

@@ -93,14 +93,20 @@
       "stop": "2026-09-22T17:42:50+01:00",
       "seconds": 135,
       "evidence": "support-ten physical-source MILP aggregate"
+    },
+    {
+      "start": "2026-09-22T17:44:23+01:00",
+      "stop": "2026-09-22T17:47:52+01:00",
+      "seconds": 209,
+      "evidence": "exact supplement DFS for three support-ten source kernels"
     }
   ],
-  "verified_forward_span_seconds": 1388,
+  "verified_forward_span_seconds": 1597,
   "forward_stop": "PENDING",
   "preservation_start": "PENDING",
   "preservation_complete": "PENDING",
   "wall_clock_span_seconds": "PENDING",
-  "substantive_unit_count": 12,
+  "substantive_unit_count": 13,
   "substantive_unit_ledger": [
     {
       "completed_at": "2026-09-22T17:05:05+01:00",
@@ -161,6 +167,11 @@
       "completed_at": "2026-09-22T17:42:50+01:00",
       "unit": "r=11 support-ten source screen",
       "result": "277/280 source-infeasible; 3 source-feasible; 0 solver-unknown; each survivor t_upper=1."
+    },
+    {
+      "completed_at": "2026-09-22T17:47:52+01:00",
+      "unit": "exact supplement forcing for r=11 support ten",
+      "result": "0 found, 3 exhaustively rejected; every r=11 partition internally closed; edge bound extended through S<=13."
     }
   ],
   "early_stop_check": {
@@ -184,9 +195,10 @@
     "662e11ed380c85ddad821e439228563499909792",
     "4125a45262cfad936d8e6ca9a11f145c32696693",
     "b7fe1e9657c450039b4e6b2ee4f76ee0b2716b53",
-    "da97c09d3225585201261a238204de4d7db001ea"
+    "da97c09d3225585201261a238204de4d7db001ea",
+    "5929f58e717c583d531cd4114fb68f58aa4a87e3"
   ],
-  "unfinished_line": "Exact supplement forcing for three r=11 support-ten survivors.",
+  "unfinished_line": "Cross-check full r=11 closure; equality still only through S<=8; general theorem open.",
   "target": {
     "applicable": true,
     "available_seconds": 3160,

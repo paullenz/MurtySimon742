@@ -1,0 +1,38 @@
+{
+  "kernels": 3,
+  "found": 0,
+  "exhausted": 3,
+  "rows": [
+    {
+      "index": 0,
+      "unit_mask": 74207424,
+      "heavy_neighbours": 73,
+      "status": "EXHAUSTED",
+      "nodes": 413938,
+      "leaves": 86873,
+      "seconds": 117.141858,
+      "witness": null
+    },
+    {
+      "index": 1,
+      "unit_mask": 78270656,
+      "heavy_neighbours": 97,
+      "status": "EXHAUSTED",
+      "nodes": 280718,
+      "leaves": 64794,
+      "seconds": 90.991364,
+      "witness": null
+    },
+    {
+      "index": 2,
+      "unit_mask": 1292419201,
+      "heavy_neighbours": 21,
+      "status": "EXHAUSTED",
+      "nodes": 838667,
+      "leaves": 149408,
+      "seconds": 209.055724,
+      "witness": null
+    }
+  ],
+  "scope": "Exact DFS: EXHAUSTED rejects all abstract source multisets under inherited one-supplement condition; not graph realization."
+}
