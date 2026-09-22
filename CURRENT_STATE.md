@@ -5,23 +5,23 @@ Canonical repository: `paullenz/MurtySimon742`. Date: 22 September 2026.
 Active target: a genuinely independent proof of Erdős #742 / the Murty–Simon inequality e(G)<=floor(n^2/4), preferably with the equality characterization. Forward priority is the project’s own complement / residual / Hall / profile / realizability route, not a reconstruction of the external e+disj+X proof. The first focused session produced the internally checked candidate threshold `Delta>=250n/429`, shrinking the live strip to `n/2<Delta<250n/429`. The theorem and its inherited graph-to-profile spine remain candidate/internal-review mathematics. A 24-focused-session go/no-go gate applies. Prior eventual-D2C work remains preserved but is no longer the active forward objective.
 
 <!-- CURRENT-STATUS:START -->
-CHECKPOINT CLASS: `ZERO_DEMAND_EQUALITY_GRAPH_REGRESSION_PASS`
+CHECKPOINT CLASS: `LOW_RESIDUAL_SUPPORT_INTERNAL_PROOF`
 
 WORK MODE: `MATH`
 
-INSPECTED PREDECESSOR: `fc05fdbf12a1adac2d57d063232f255300333342`.
+INSPECTED PREDECESSOR: `d5745ea7aede7d24e18904ccc755240f6a23da70`.
 
-LAST VERIFIED RESULT: Internal zero-demand equality proof passed actual-graph replay on 1396 fixtures / 2783 roots / 68741 assignments, including both balanced parities and a rejected five-vertex impostor. Of the roots, 56 were sampled, not exhausted. Positive-demand strip and external review remain open.
+LAST VERIFIED RESULT: New internal structural proof forbids residual-(0,1) F-edges and saturation when residual mass is supported on one A-label. It follows that r=1 or 2 gives f<=r-1, and S<=2 satisfies the conjectured bound with only balanced bipartite equality. Positive-demand strip remains open; new lemmas still need graph regression and external review.
 
-EVIDENCE: `project/research/session_logs/2026-09-22/2026-09-22T10-00-38+01-00-canonical.json`; latest bridge package `project/research/general_n/2026-09-22-raw-profile-bridge-v1/`.
+EVIDENCE: `project/research/general_n/2026-09-22-zero-demand-equality-v1/LOW_RESIDUAL_OBSTRUCTION.md`; `project/research/general_n/2026-09-22-zero-demand-equality-v1/ZERO_DEMAND_EQUALITY.md`; `project/research/general_n/2026-09-22-zero-demand-equality-v1/EQUALITY_REGRESSION.md`; `project/research/session_logs/2026-09-22/2026-09-22T10-00-38+01-00-canonical.json`.
 
-SESSION UTILISATION: Trigger 2026-09-22 10:00:38 BST; earliest 10:02:42; next 11:00:38; cutoff 10:53:38; hard close 10:59:38. Closed intervals 10:03:41–10:08:19 and 10:09:03–10:14:15; total 590 seconds; units 2; preservation pending; target YES/PENDING; IN_PROGRESS. Record: `project/research/session_logs/2026-09-22/2026-09-22T10-00-38+01-00-canonical.json`.
+SESSION UTILISATION: Trigger 2026-09-22 10:00:38 BST; earliest 10:02:42; next 11:00:38; cutoff 10:53:38; hard close 10:59:38. Closed intervals 10:03:41–10:08:19, 10:09:03–10:14:15, 10:15:45–10:18:54; total 779 seconds; units 3; preservation pending; target YES/PENDING; IN_PROGRESS. Record: `project/research/session_logs/2026-09-22/2026-09-22T10-00-38+01-00-canonical.json`.
 
 UNPRESERVED WORK: None.
 
 DEFERRED ADMIN: No schedule or CI maintenance. Ancillary monitoring does not replace this research task.
 
-NEXT ACTION: Prove or refute a low-residual obstruction from raw criticality; do not infer it from missing finite fixtures.
+NEXT ACTION: Hostile-regress the residual support lemmas and investigate the three-residual core; no inference from absent fixtures.
 
 FOCUSED-SESSION COUNT: `1/24` previously completed; this session not yet credited.
 

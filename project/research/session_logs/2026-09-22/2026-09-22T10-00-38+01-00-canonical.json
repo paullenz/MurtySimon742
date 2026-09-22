@@ -32,6 +32,13 @@
       "actual_stop": "2026-09-22T10:14:15+01:00",
       "role": "forward_research",
       "notes": "Build and run actual-graph equality/orientation checker; hostile replay and low-residual diagnostics."
+    },
+    {
+      "segment_id": "research-3",
+      "actual_start": "2026-09-22T10:15:45+01:00",
+      "actual_stop": "2026-09-22T10:18:54+01:00",
+      "role": "forward_research",
+      "notes": "Prove residual-(0,1) adjacency exclusion, single-column saturation obstruction and r<=2/S<=2 branch."
     }
   ],
   "forward_research_intervals": [
@@ -44,6 +51,11 @@
       "start": "2026-09-22T10:09:03+01:00",
       "stop": "2026-09-22T10:14:15+01:00",
       "evidence": "EQUALITY_REGRESSION.md, check_equality_boundary.py, EQUALITY_RESULTS.json"
+    },
+    {
+      "start": "2026-09-22T10:15:45+01:00",
+      "stop": "2026-09-22T10:18:54+01:00",
+      "evidence": "LOW_RESIDUAL_OBSTRUCTION.md"
     }
   ],
   "forward_research_stop": null,
@@ -51,10 +63,10 @@
   "preservation_complete": null,
   "final_report_time": null,
   "wall_clock_span_to_preservation_complete": null,
-  "verified_forward_research_span": 590,
+  "verified_forward_research_span": 779,
   "verified_forward_research_span_units": "seconds",
   "preservation_span": null,
-  "substantive_unit_count": 2,
+  "substantive_unit_count": 3,
   "timestamped_unit_ledger": [
     {
       "completed_at": "2026-09-22T10:08:19+01:00",
@@ -67,6 +79,12 @@
       "unit": "Actual graph equality/orientation replay and noncritical impostor",
       "result": "PASS 1396 fixtures, 2783 roots, 68741 assignments; 56 roots sampled, others exhaustive; both equality parities checked.",
       "artifact": "project/research/general_n/2026-09-22-zero-demand-equality-v1/EQUALITY_REGRESSION.md"
+    },
+    {
+      "completed_at": "2026-09-22T10:18:54+01:00",
+      "unit": "Single-residual-label saturation obstruction and low-demand closure",
+      "result": "Internal proof: R_i+R_j>=2 on F-edges; one residual column implies f<r; r=1,2 imply f<=r-1; S<=2 bound and equality closed.",
+      "artifact": "project/research/general_n/2026-09-22-zero-demand-equality-v1/LOW_RESIDUAL_OBSTRUCTION.md"
     }
   ],
   "early_stop_check_time": null,
@@ -79,9 +97,16 @@
   "infrastructure_failures": [],
   "commit_shas": [
     "4ddec2c1db2ec95293b98a385740d7e0345b651e",
-    "fc05fdbf12a1adac2d57d063232f255300333342"
+    "fc05fdbf12a1adac2d57d063232f255300333342",
+    "d5745ea7aede7d24e18904ccc755240f6a23da70"
   ],
-  "live_unfinished_line": "Prove the residual-one/two obstruction and the low positive-demand equality gap.",
+  "live_unfinished_line": "Hostile-regress residual support lemmas and investigate the three-residual core.",
   "historical_fragments": [],
-  "focused_session_credit": 0
+  "focused_session_credit": 0,
+  "ancillary_checks": [
+    {
+      "observed_at": "2026-09-22T10:19:06+01:00",
+      "result": "Read-only monitor verified remote current start and latest substantive checkpoint; preceding 09 slot canonical absent (404), already reported; same research session resumed."
+    }
+  ]
 }
