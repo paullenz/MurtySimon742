@@ -5,27 +5,25 @@ Canonical repository: `paullenz/MurtySimon742`. Date: 22 September 2026.
 Active target: a genuinely independent proof of Erdős #742 / the Murty–Simon inequality e(G)<=floor(n^2/4), preferably with the equality characterization. Forward priority is the project’s own complement / residual / Hall / profile / realizability route, not a reconstruction of the external e+disj+X proof. The first focused session produced the internally checked candidate threshold `Delta>=250n/429`, shrinking the live strip to `n/2<Delta<250n/429`. The theorem and its inherited graph-to-profile spine remain candidate/internal-review mathematics. A 24-focused-session go/no-go gate applies. Prior eventual-D2C work remains preserved but is no longer the active forward objective.
 
 <!-- CURRENT-STATUS:START -->
-CHECKPOINT CLASS: `UNIT_COLUMN_SCOPE_HOSTILE_REPLAY_PASS`
+CHECKPOINT CLASS: SUBSTANTIVE_RESEARCH_CHECKPOINT
 
-WORK MODE: `MATH`
+WORK MODE: MATH
 
-INSPECTED PREDECESSOR: `aadbcb44e869acc5b16a0ea3553056b3731d2812`.
+INSPECTED PREDECESSOR: 2754a3685667a5a2d8f64f7bb01cd058715d9ef9
 
-LAST VERIFIED RESULT: S<=3 internal closure and unit-column theorem passed bounded graph replay. The maximum-root hypothesis is essential: an explicit D2C C5 blow-up at a nonmaximum root has all R_i=1 and f=r=4. Actual degree-two unit-column cases were absent, so the cycle argument retains a non-vacuity caveat; 26,439 abstract source partitions support its repeated-source kernel.
+LAST VERIFIED RESULT: Internal independent-support proof closes all two-column supports, r<=4 and S<=4; full strip remains open.
 
-EVIDENCE: `project/research/general_n/2026-09-22-zero-demand-equality-v1/LOW_RESIDUAL_OBSTRUCTION.md`; `project/research/general_n/2026-09-22-zero-demand-equality-v1/ZERO_DEMAND_EQUALITY.md`; `project/research/general_n/2026-09-22-zero-demand-equality-v1/EQUALITY_REGRESSION.md`; `project/research/session_logs/2026-09-22/2026-09-22T10-00-38+01-00-canonical.json`.
+SESSION UTILISATION: Trigger 2026-09-22T10:00:38+01:00; earliest 2026-09-22T10:02:42+01:00; next 2026-09-22T11:00:38+01:00; cutoff 2026-09-22T10:53:38+01:00; hard close 2026-09-22T10:59:38+01:00. Closed intervals: 10:03:41–10:08:19, 10:09:03–10:14:15, 10:15:45–10:18:54, 10:20:00–10:22:39, 10:24:43–10:30:13, 10:31:01–10:33:13, 10:34:30–10:37:09, 10:41:05–10:42:01; total 1615 seconds; units 7; preservation pending; target YES/PENDING; IN_PROGRESS. Stop reason: active. Canonical: `project/research/session_logs/2026-09-22/2026-09-22T10-00-38+01-00-canonical.json`.
 
-SESSION UTILISATION: Trigger 2026-09-22 10:00:38 BST; earliest 10:02:42; next 11:00:38; cutoff 10:53:38; hard close 10:59:38. Closed intervals: 10:03:41–10:08:19, 10:09:03–10:14:15, 10:15:45–10:18:54, 10:20:00–10:22:39, 10:24:43–10:30:13, 10:31:01–10:33:13; total 1400 seconds; units 6; preservation pending; target YES/PENDING; IN_PROGRESS. Record: `project/research/session_logs/2026-09-22/2026-09-22T10-00-38+01-00-canonical.json`.
+UNPRESERVED WORK: None beyond explicitly named unfinished line.
 
-UNPRESERVED WORK: None.
+DEFERRED ADMIN: No schedule/CI maintenance. Missing old slots remain unverified.
 
-DEFERRED ADMIN: No schedule or CI maintenance. Ancillary monitoring does not replace this research task.
+NEXT ACTION: Regress independent residual support and exact core surplus ledger, then attack positive-demand residual core.
 
-NEXT ACTION: Resolve or reduce the r=4 residual-column partition (2,2) from actual criticality.
+FOCUSED-SESSION COUNT: 1/24 previously completed; this trigger credited 0 exactly once.
 
-FOCUSED-SESSION COUNT: `1/24` previously completed; this session not yet credited.
-
-MANDATORY CONSTRAINTS: Independent #742 route; candidate/internal trust; physical graph realizability; no fabricated durations; same trigger across re-entry; preserve each completed substantive unit.
+MANDATORY CONSTRAINTS: Independent route; candidate/internal trust; actual graph realizability; no fabricated durations; no credit for re-entry.
 <!-- CURRENT-STATUS:END -->
 
 ## Latest adversarial audit - 22 September 2026
