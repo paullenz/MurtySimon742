@@ -9,19 +9,19 @@ CHECKPOINT CLASS: VERIFIED_INTERNAL_NOT_PROMOTED
 
 WORK MODE: MATH
 
-INSPECTED PREDECESSOR: 8bf64b261dd6a7ac7af55d5c69fedb8f18b3df49.
+INSPECTED PREDECESSOR: 073c741a940a6bb109b3f4ab3d50af9dff82a8fe.
 
-LAST VERIFIED RESULT: Strict r=10 closure and edge bound through S<=12 retained. Independent Burnside calculation reproduces 12,346 unlabelled unit graphs and 2,208,612 rooted/coloured orbits; direct canonical replay confirms all 146 strict candidates are pairwise inequivalent and their stored ledger values. Source infeasibility still awaits an independent-method replay.
+LAST VERIFIED RESULT: Strict r=10 closure is independently replayed end-to-end: Burnside/canonical quotient audit reproduces 12,346 and 2,208,612 orbit counts and 146 inequivalent strict cores; independent SciPy/HiGHS MILP declares all 146 source systems infeasible. Internal edge bound through S<=12 retained. Equality remains through S<=8; general theorem open.
 
-EVIDENCE: `project/research/general_n/2026-09-22-r10-quotient-v1/R10_SUPPORT9_INDEPENDENT_AUDIT.md`; saved audit code/result.
+EVIDENCE: `project/research/general_n/2026-09-22-r10-quotient-v1/R10_SUPPORT9_INDEPENDENT_AUDIT.md`; exact audit scripts/results.
 
-SESSION UTILISATION: Trigger 16:00:38 BST; actual start 16:03:51; cutoff 16:53:38. Three closed intervals; verified total 472s (7m52s); units 3; target NO/N/A; LIVE. Canonical: `project/research/session_logs/2026-09-22/2026-09-22T16-00-38+01-00-canonical.json`.
+SESSION UTILISATION: Trigger 16:00:38 BST; actual start 16:03:51; cutoff 16:53:38. Four closed intervals; verified total 484s (8m04s); units 4; target NO/N/A; LIVE. Canonical: `project/research/session_logs/2026-09-22/2026-09-22T16-00-38+01-00-canonical.json`.
 
 UNPRESERVED WORK: None.
 
 DEFERRED ADMIN: Historical missing-slot reconciliation.
 
-NEXT ACTION: Independent MILP or equivalent replay of zero source feasibility for all 146 support-nine cores.
+NEXT ACTION: Advance the finite strict pipeline to r=11, beginning with exact low-support quotient/source localization.
 
 FOCUSED-SESSION COUNT: 1/24; this shortened late-start trigger pending and receives no automatic credit.
 

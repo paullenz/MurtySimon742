@@ -1,0 +1,1178 @@
+{
+  "cases": 146,
+  "status_counts": {
+    "2": 146
+  },
+  "feasible": 0,
+  "rows": [
+    {
+      "unit_mask": 841824,
+      "heavy_neighbour_mask": 7,
+      "patterns": 1649,
+      "status": 2,
+      "success": false,
+      "message": "The problem is infeasible. (HiGHS Status 8: model_status is Infeasible; primal_status is None)"
+    },
+    {
+      "unit_mask": 841824,
+      "heavy_neighbour_mask": 15,
+      "patterns": 1479,
+      "status": 2,
+      "success": false,
+      "message": "The problem is infeasible. (HiGHS Status 8: model_status is Infeasible; primal_status is None)"
+    },
+    {
+      "unit_mask": 841824,
+      "heavy_neighbour_mask": 21,
+      "patterns": 1671,
+      "status": 2,
+      "success": false,
+      "message": "The problem is infeasible. (HiGHS Status 8: model_status is Infeasible; primal_status is None)"
+    },
+    {
+      "unit_mask": 841824,
+      "heavy_neighbour_mask": 23,
+      "patterns": 1490,
+      "status": 2,
+      "success": false,
+      "message": "The problem is infeasible. (HiGHS Status 8: model_status is Infeasible; primal_status is None)"
+    },
+    {
+      "unit_mask": 841824,
+      "heavy_neighbour_mask": 28,
+      "patterns": 1709,
+      "status": 2,
+      "success": false,
+      "message": "The problem is infeasible. (HiGHS Status 8: model_status is Infeasible; primal_status is None)"
+    },
+    {
+      "unit_mask": 841824,
+      "heavy_neighbour_mask": 29,
+      "patterns": 1517,
+      "status": 2,
+      "success": false,
+      "message": "The problem is infeasible. (HiGHS Status 8: model_status is Infeasible; primal_status is None)"
+    },
+    {
+      "unit_mask": 841824,
+      "heavy_neighbour_mask": 60,
+      "patterns": 1589,
+      "status": 2,
+      "success": false,
+      "message": "The problem is infeasible. (HiGHS Status 8: model_status is Infeasible; primal_status is None)"
+    },
+    {
+      "unit_mask": 841824,
+      "heavy_neighbour_mask": 85,
+      "patterns": 1509,
+      "status": 2,
+      "success": false,
+      "message": "The problem is infeasible. (HiGHS Status 8: model_status is Infeasible; primal_status is None)"
+    },
+    {
+      "unit_mask": 873568,
+      "heavy_neighbour_mask": 7,
+      "patterns": 1664,
+      "status": 2,
+      "success": false,
+      "message": "The problem is infeasible. (HiGHS Status 8: model_status is Infeasible; primal_status is None)"
+    },
+    {
+      "unit_mask": 873568,
+      "heavy_neighbour_mask": 15,
+      "patterns": 1489,
+      "status": 2,
+      "success": false,
+      "message": "The problem is infeasible. (HiGHS Status 8: model_status is Infeasible; primal_status is None)"
+    },
+    {
+      "unit_mask": 873568,
+      "heavy_neighbour_mask": 19,
+      "patterns": 1680,
+      "status": 2,
+      "success": false,
+      "message": "The problem is infeasible. (HiGHS Status 8: model_status is Infeasible; primal_status is None)"
+    },
+    {
+      "unit_mask": 873568,
+      "heavy_neighbour_mask": 21,
+      "patterns": 1690,
+      "status": 2,
+      "success": false,
+      "message": "The problem is infeasible. (HiGHS Status 8: model_status is Infeasible; primal_status is None)"
+    },
+    {
+      "unit_mask": 873568,
+      "heavy_neighbour_mask": 22,
+      "patterns": 1696,
+      "status": 2,
+      "success": false,
+      "message": "The problem is infeasible. (HiGHS Status 8: model_status is Infeasible; primal_status is None)"
+    },
+    {
+      "unit_mask": 873568,
+      "heavy_neighbour_mask": 23,
+      "patterns": 1509,
+      "status": 2,
+      "success": false,
+      "message": "The problem is infeasible. (HiGHS Status 8: model_status is Infeasible; primal_status is None)"
+    },
+    {
+      "unit_mask": 873568,
+      "heavy_neighbour_mask": 28,
+      "patterns": 1735,
+      "status": 2,
+      "success": false,
+      "message": "The problem is infeasible. (HiGHS Status 8: model_status is Infeasible; primal_status is None)"
+    },
+    {
+      "unit_mask": 873568,
+      "heavy_neighbour_mask": 29,
+      "patterns": 1537,
+      "status": 2,
+      "success": false,
+      "message": "The problem is infeasible. (HiGHS Status 8: model_status is Infeasible; primal_status is None)"
+    },
+    {
+      "unit_mask": 873568,
+      "heavy_neighbour_mask": 51,
+      "patterns": 1512,
+      "status": 2,
+      "success": false,
+      "message": "The problem is infeasible. (HiGHS Status 8: model_status is Infeasible; primal_status is None)"
+    },
+    {
+      "unit_mask": 873568,
+      "heavy_neighbour_mask": 54,
+      "patterns": 1527,
+      "status": 2,
+      "success": false,
+      "message": "The problem is infeasible. (HiGHS Status 8: model_status is Infeasible; primal_status is None)"
+    },
+    {
+      "unit_mask": 873568,
+      "heavy_neighbour_mask": 57,
+      "patterns": 1548,
+      "status": 2,
+      "success": false,
+      "message": "The problem is infeasible. (HiGHS Status 8: model_status is Infeasible; primal_status is None)"
+    },
+    {
+      "unit_mask": 873568,
+      "heavy_neighbour_mask": 58,
+      "patterns": 1570,
+      "status": 2,
+      "success": false,
+      "message": "The problem is infeasible. (HiGHS Status 8: model_status is Infeasible; primal_status is None)"
+    },
+    {
+      "unit_mask": 873568,
+      "heavy_neighbour_mask": 102,
+      "patterns": 1531,
+      "status": 2,
+      "success": false,
+      "message": "The problem is infeasible. (HiGHS Status 8: model_status is Infeasible; primal_status is None)"
+    },
+    {
+      "unit_mask": 5050592,
+      "heavy_neighbour_mask": 7,
+      "patterns": 1833,
+      "status": 2,
+      "success": false,
+      "message": "The problem is infeasible. (HiGHS Status 8: model_status is Infeasible; primal_status is None)"
+    },
+    {
+      "unit_mask": 5050592,
+      "heavy_neighbour_mask": 11,
+      "patterns": 1769,
+      "status": 2,
+      "success": false,
+      "message": "The problem is infeasible. (HiGHS Status 8: model_status is Infeasible; primal_status is None)"
+    },
+    {
+      "unit_mask": 5050592,
+      "heavy_neighbour_mask": 14,
+      "patterns": 1786,
+      "status": 2,
+      "success": false,
+      "message": "The problem is infeasible. (HiGHS Status 8: model_status is Infeasible; primal_status is None)"
+    },
+    {
+      "unit_mask": 5050592,
+      "heavy_neighbour_mask": 15,
+      "patterns": 1600,
+      "status": 2,
+      "success": false,
+      "message": "The problem is infeasible. (HiGHS Status 8: model_status is Infeasible; primal_status is None)"
+    },
+    {
+      "unit_mask": 5050592,
+      "heavy_neighbour_mask": 25,
+      "patterns": 1763,
+      "status": 2,
+      "success": false,
+      "message": "The problem is infeasible. (HiGHS Status 8: model_status is Infeasible; primal_status is None)"
+    },
+    {
+      "unit_mask": 5050592,
+      "heavy_neighbour_mask": 27,
+      "patterns": 1586,
+      "status": 2,
+      "success": false,
+      "message": "The problem is infeasible. (HiGHS Status 8: model_status is Infeasible; primal_status is None)"
+    },
+    {
+      "unit_mask": 5050592,
+      "heavy_neighbour_mask": 30,
+      "patterns": 1598,
+      "status": 2,
+      "success": false,
+      "message": "The problem is infeasible. (HiGHS Status 8: model_status is Infeasible; primal_status is None)"
+    },
+    {
+      "unit_mask": 5050592,
+      "heavy_neighbour_mask": 56,
+      "patterns": 1871,
+      "status": 2,
+      "success": false,
+      "message": "The problem is infeasible. (HiGHS Status 8: model_status is Infeasible; primal_status is None)"
+    },
+    {
+      "unit_mask": 5050592,
+      "heavy_neighbour_mask": 57,
+      "patterns": 1659,
+      "status": 2,
+      "success": false,
+      "message": "The problem is infeasible. (HiGHS Status 8: model_status is Infeasible; primal_status is None)"
+    },
+    {
+      "unit_mask": 5050592,
+      "heavy_neighbour_mask": 69,
+      "patterns": 1889,
+      "status": 2,
+      "success": false,
+      "message": "The problem is infeasible. (HiGHS Status 8: model_status is Infeasible; primal_status is None)"
+    },
+    {
+      "unit_mask": 5050592,
+      "heavy_neighbour_mask": 71,
+      "patterns": 1707,
+      "status": 2,
+      "success": false,
+      "message": "The problem is infeasible. (HiGHS Status 8: model_status is Infeasible; primal_status is None)"
+    },
+    {
+      "unit_mask": 5050592,
+      "heavy_neighbour_mask": 77,
+      "patterns": 1636,
+      "status": 2,
+      "success": false,
+      "message": "The problem is infeasible. (HiGHS Status 8: model_status is Infeasible; primal_status is None)"
+    },
+    {
+      "unit_mask": 5179456,
+      "heavy_neighbour_mask": 15,
+      "patterns": 1845,
+      "status": 2,
+      "success": false,
+      "message": "The problem is infeasible. (HiGHS Status 8: model_status is Infeasible; primal_status is None)"
+    },
+    {
+      "unit_mask": 5179456,
+      "heavy_neighbour_mask": 27,
+      "patterns": 1845,
+      "status": 2,
+      "success": false,
+      "message": "The problem is infeasible. (HiGHS Status 8: model_status is Infeasible; primal_status is None)"
+    },
+    {
+      "unit_mask": 5179456,
+      "heavy_neighbour_mask": 29,
+      "patterns": 1904,
+      "status": 2,
+      "success": false,
+      "message": "The problem is infeasible. (HiGHS Status 8: model_status is Infeasible; primal_status is None)"
+    },
+    {
+      "unit_mask": 5179456,
+      "heavy_neighbour_mask": 57,
+      "patterns": 1989,
+      "status": 2,
+      "success": false,
+      "message": "The problem is infeasible. (HiGHS Status 8: model_status is Infeasible; primal_status is None)"
+    },
+    {
+      "unit_mask": 5179456,
+      "heavy_neighbour_mask": 60,
+      "patterns": 2069,
+      "status": 2,
+      "success": false,
+      "message": "The problem is infeasible. (HiGHS Status 8: model_status is Infeasible; primal_status is None)"
+    },
+    {
+      "unit_mask": 5179456,
+      "heavy_neighbour_mask": 71,
+      "patterns": 1959,
+      "status": 2,
+      "success": false,
+      "message": "The problem is infeasible. (HiGHS Status 8: model_status is Infeasible; primal_status is None)"
+    },
+    {
+      "unit_mask": 5179456,
+      "heavy_neighbour_mask": 75,
+      "patterns": 1895,
+      "status": 2,
+      "success": false,
+      "message": "The problem is infeasible. (HiGHS Status 8: model_status is Infeasible; primal_status is None)"
+    },
+    {
+      "unit_mask": 5179456,
+      "heavy_neighbour_mask": 77,
+      "patterns": 1912,
+      "status": 2,
+      "success": false,
+      "message": "The problem is infeasible. (HiGHS Status 8: model_status is Infeasible; primal_status is None)"
+    },
+    {
+      "unit_mask": 5179456,
+      "heavy_neighbour_mask": 78,
+      "patterns": 1986,
+      "status": 2,
+      "success": false,
+      "message": "The problem is infeasible. (HiGHS Status 8: model_status is Infeasible; primal_status is None)"
+    },
+    {
+      "unit_mask": 5179456,
+      "heavy_neighbour_mask": 89,
+      "patterns": 1899,
+      "status": 2,
+      "success": false,
+      "message": "The problem is infeasible. (HiGHS Status 8: model_status is Infeasible; primal_status is None)"
+    },
+    {
+      "unit_mask": 5179456,
+      "heavy_neighbour_mask": 90,
+      "patterns": 1944,
+      "status": 2,
+      "success": false,
+      "message": "The problem is infeasible. (HiGHS Status 8: model_status is Infeasible; primal_status is None)"
+    },
+    {
+      "unit_mask": 5179456,
+      "heavy_neighbour_mask": 92,
+      "patterns": 1970,
+      "status": 2,
+      "success": false,
+      "message": "The problem is infeasible. (HiGHS Status 8: model_status is Infeasible; primal_status is None)"
+    },
+    {
+      "unit_mask": 5179456,
+      "heavy_neighbour_mask": 120,
+      "patterns": 2041,
+      "status": 2,
+      "success": false,
+      "message": "The problem is infeasible. (HiGHS Status 8: model_status is Infeasible; primal_status is None)"
+    },
+    {
+      "unit_mask": 5179456,
+      "heavy_neighbour_mask": 195,
+      "patterns": 1987,
+      "status": 2,
+      "success": false,
+      "message": "The problem is infeasible. (HiGHS Status 8: model_status is Infeasible; primal_status is None)"
+    },
+    {
+      "unit_mask": 5179456,
+      "heavy_neighbour_mask": 197,
+      "patterns": 2057,
+      "status": 2,
+      "success": false,
+      "message": "The problem is infeasible. (HiGHS Status 8: model_status is Infeasible; primal_status is None)"
+    },
+    {
+      "unit_mask": 5179456,
+      "heavy_neighbour_mask": 201,
+      "patterns": 1941,
+      "status": 2,
+      "success": false,
+      "message": "The problem is infeasible. (HiGHS Status 8: model_status is Infeasible; primal_status is None)"
+    },
+    {
+      "unit_mask": 5179456,
+      "heavy_neighbour_mask": 204,
+      "patterns": 1994,
+      "status": 2,
+      "success": false,
+      "message": "The problem is infeasible. (HiGHS Status 8: model_status is Infeasible; primal_status is None)"
+    },
+    {
+      "unit_mask": 5179456,
+      "heavy_neighbour_mask": 216,
+      "patterns": 1944,
+      "status": 2,
+      "success": false,
+      "message": "The problem is infeasible. (HiGHS Status 8: model_status is Infeasible; primal_status is None)"
+    },
+    {
+      "unit_mask": 5183488,
+      "heavy_neighbour_mask": 15,
+      "patterns": 1902,
+      "status": 2,
+      "success": false,
+      "message": "The problem is infeasible. (HiGHS Status 8: model_status is Infeasible; primal_status is None)"
+    },
+    {
+      "unit_mask": 5183488,
+      "heavy_neighbour_mask": 27,
+      "patterns": 1893,
+      "status": 2,
+      "success": false,
+      "message": "The problem is infeasible. (HiGHS Status 8: model_status is Infeasible; primal_status is None)"
+    },
+    {
+      "unit_mask": 5183488,
+      "heavy_neighbour_mask": 30,
+      "patterns": 1999,
+      "status": 2,
+      "success": false,
+      "message": "The problem is infeasible. (HiGHS Status 8: model_status is Infeasible; primal_status is None)"
+    },
+    {
+      "unit_mask": 5183488,
+      "heavy_neighbour_mask": 57,
+      "patterns": 1979,
+      "status": 2,
+      "success": false,
+      "message": "The problem is infeasible. (HiGHS Status 8: model_status is Infeasible; primal_status is None)"
+    },
+    {
+      "unit_mask": 5183488,
+      "heavy_neighbour_mask": 58,
+      "patterns": 2086,
+      "status": 2,
+      "success": false,
+      "message": "The problem is infeasible. (HiGHS Status 8: model_status is Infeasible; primal_status is None)"
+    },
+    {
+      "unit_mask": 5183488,
+      "heavy_neighbour_mask": 71,
+      "patterns": 2001,
+      "status": 2,
+      "success": false,
+      "message": "The problem is infeasible. (HiGHS Status 8: model_status is Infeasible; primal_status is None)"
+    },
+    {
+      "unit_mask": 5183488,
+      "heavy_neighbour_mask": 75,
+      "patterns": 1923,
+      "status": 2,
+      "success": false,
+      "message": "The problem is infeasible. (HiGHS Status 8: model_status is Infeasible; primal_status is None)"
+    },
+    {
+      "unit_mask": 5183488,
+      "heavy_neighbour_mask": 78,
+      "patterns": 2065,
+      "status": 2,
+      "success": false,
+      "message": "The problem is infeasible. (HiGHS Status 8: model_status is Infeasible; primal_status is None)"
+    },
+    {
+      "unit_mask": 5183488,
+      "heavy_neighbour_mask": 90,
+      "patterns": 2020,
+      "status": 2,
+      "success": false,
+      "message": "The problem is infeasible. (HiGHS Status 8: model_status is Infeasible; primal_status is None)"
+    },
+    {
+      "unit_mask": 5183488,
+      "heavy_neighbour_mask": 198,
+      "patterns": 2224,
+      "status": 2,
+      "success": false,
+      "message": "The problem is infeasible. (HiGHS Status 8: model_status is Infeasible; primal_status is None)"
+    },
+    {
+      "unit_mask": 5607488,
+      "heavy_neighbour_mask": 15,
+      "patterns": 1751,
+      "status": 2,
+      "success": false,
+      "message": "The problem is infeasible. (HiGHS Status 8: model_status is Infeasible; primal_status is None)"
+    },
+    {
+      "unit_mask": 5607488,
+      "heavy_neighbour_mask": 27,
+      "patterns": 1758,
+      "status": 2,
+      "success": false,
+      "message": "The problem is infeasible. (HiGHS Status 8: model_status is Infeasible; primal_status is None)"
+    },
+    {
+      "unit_mask": 5607488,
+      "heavy_neighbour_mask": 29,
+      "patterns": 1817,
+      "status": 2,
+      "success": false,
+      "message": "The problem is infeasible. (HiGHS Status 8: model_status is Infeasible; primal_status is None)"
+    },
+    {
+      "unit_mask": 5607488,
+      "heavy_neighbour_mask": 53,
+      "patterns": 1862,
+      "status": 2,
+      "success": false,
+      "message": "The problem is infeasible. (HiGHS Status 8: model_status is Infeasible; primal_status is None)"
+    },
+    {
+      "unit_mask": 5607488,
+      "heavy_neighbour_mask": 60,
+      "patterns": 1951,
+      "status": 2,
+      "success": false,
+      "message": "The problem is infeasible. (HiGHS Status 8: model_status is Infeasible; primal_status is None)"
+    },
+    {
+      "unit_mask": 5607488,
+      "heavy_neighbour_mask": 135,
+      "patterns": 1841,
+      "status": 2,
+      "success": false,
+      "message": "The problem is infeasible. (HiGHS Status 8: model_status is Infeasible; primal_status is None)"
+    },
+    {
+      "unit_mask": 5607488,
+      "heavy_neighbour_mask": 141,
+      "patterns": 1833,
+      "status": 2,
+      "success": false,
+      "message": "The problem is infeasible. (HiGHS Status 8: model_status is Infeasible; primal_status is None)"
+    },
+    {
+      "unit_mask": 5607488,
+      "heavy_neighbour_mask": 153,
+      "patterns": 1851,
+      "status": 2,
+      "success": false,
+      "message": "The problem is infeasible. (HiGHS Status 8: model_status is Infeasible; primal_status is None)"
+    },
+    {
+      "unit_mask": 5607488,
+      "heavy_neighbour_mask": 156,
+      "patterns": 1862,
+      "status": 2,
+      "success": false,
+      "message": "The problem is infeasible. (HiGHS Status 8: model_status is Infeasible; primal_status is None)"
+    },
+    {
+      "unit_mask": 5607488,
+      "heavy_neighbour_mask": 180,
+      "patterns": 1906,
+      "status": 2,
+      "success": false,
+      "message": "The problem is infeasible. (HiGHS Status 8: model_status is Infeasible; primal_status is None)"
+    },
+    {
+      "unit_mask": 5670976,
+      "heavy_neighbour_mask": 15,
+      "patterns": 1746,
+      "status": 2,
+      "success": false,
+      "message": "The problem is infeasible. (HiGHS Status 8: model_status is Infeasible; primal_status is None)"
+    },
+    {
+      "unit_mask": 5670976,
+      "heavy_neighbour_mask": 23,
+      "patterns": 1745,
+      "status": 2,
+      "success": false,
+      "message": "The problem is infeasible. (HiGHS Status 8: model_status is Infeasible; primal_status is None)"
+    },
+    {
+      "unit_mask": 5670976,
+      "heavy_neighbour_mask": 27,
+      "patterns": 1761,
+      "status": 2,
+      "success": false,
+      "message": "The problem is infeasible. (HiGHS Status 8: model_status is Infeasible; primal_status is None)"
+    },
+    {
+      "unit_mask": 5670976,
+      "heavy_neighbour_mask": 29,
+      "patterns": 1816,
+      "status": 2,
+      "success": false,
+      "message": "The problem is infeasible. (HiGHS Status 8: model_status is Infeasible; primal_status is None)"
+    },
+    {
+      "unit_mask": 5670976,
+      "heavy_neighbour_mask": 30,
+      "patterns": 1825,
+      "status": 2,
+      "success": false,
+      "message": "The problem is infeasible. (HiGHS Status 8: model_status is Infeasible; primal_status is None)"
+    },
+    {
+      "unit_mask": 5670976,
+      "heavy_neighbour_mask": 51,
+      "patterns": 1767,
+      "status": 2,
+      "success": false,
+      "message": "The problem is infeasible. (HiGHS Status 8: model_status is Infeasible; primal_status is None)"
+    },
+    {
+      "unit_mask": 5670976,
+      "heavy_neighbour_mask": 53,
+      "patterns": 1851,
+      "status": 2,
+      "success": false,
+      "message": "The problem is infeasible. (HiGHS Status 8: model_status is Infeasible; primal_status is None)"
+    },
+    {
+      "unit_mask": 5670976,
+      "heavy_neighbour_mask": 54,
+      "patterns": 1863,
+      "status": 2,
+      "success": false,
+      "message": "The problem is infeasible. (HiGHS Status 8: model_status is Infeasible; primal_status is None)"
+    },
+    {
+      "unit_mask": 5670976,
+      "heavy_neighbour_mask": 60,
+      "patterns": 1968,
+      "status": 2,
+      "success": false,
+      "message": "The problem is infeasible. (HiGHS Status 8: model_status is Infeasible; primal_status is None)"
+    },
+    {
+      "unit_mask": 5670976,
+      "heavy_neighbour_mask": 71,
+      "patterns": 1780,
+      "status": 2,
+      "success": false,
+      "message": "The problem is infeasible. (HiGHS Status 8: model_status is Infeasible; primal_status is None)"
+    },
+    {
+      "unit_mask": 5670976,
+      "heavy_neighbour_mask": 75,
+      "patterns": 1813,
+      "status": 2,
+      "success": false,
+      "message": "The problem is infeasible. (HiGHS Status 8: model_status is Infeasible; primal_status is None)"
+    },
+    {
+      "unit_mask": 5670976,
+      "heavy_neighbour_mask": 77,
+      "patterns": 1804,
+      "status": 2,
+      "success": false,
+      "message": "The problem is infeasible. (HiGHS Status 8: model_status is Infeasible; primal_status is None)"
+    },
+    {
+      "unit_mask": 5670976,
+      "heavy_neighbour_mask": 78,
+      "patterns": 1887,
+      "status": 2,
+      "success": false,
+      "message": "The problem is infeasible. (HiGHS Status 8: model_status is Infeasible; primal_status is None)"
+    },
+    {
+      "unit_mask": 5670976,
+      "heavy_neighbour_mask": 83,
+      "patterns": 1785,
+      "status": 2,
+      "success": false,
+      "message": "The problem is infeasible. (HiGHS Status 8: model_status is Infeasible; primal_status is None)"
+    },
+    {
+      "unit_mask": 5670976,
+      "heavy_neighbour_mask": 85,
+      "patterns": 1788,
+      "status": 2,
+      "success": false,
+      "message": "The problem is infeasible. (HiGHS Status 8: model_status is Infeasible; primal_status is None)"
+    },
+    {
+      "unit_mask": 5670976,
+      "heavy_neighbour_mask": 86,
+      "patterns": 1846,
+      "status": 2,
+      "success": false,
+      "message": "The problem is infeasible. (HiGHS Status 8: model_status is Infeasible; primal_status is None)"
+    },
+    {
+      "unit_mask": 5670976,
+      "heavy_neighbour_mask": 89,
+      "patterns": 1840,
+      "status": 2,
+      "success": false,
+      "message": "The problem is infeasible. (HiGHS Status 8: model_status is Infeasible; primal_status is None)"
+    },
+    {
+      "unit_mask": 5670976,
+      "heavy_neighbour_mask": 90,
+      "patterns": 1918,
+      "status": 2,
+      "success": false,
+      "message": "The problem is infeasible. (HiGHS Status 8: model_status is Infeasible; primal_status is None)"
+    },
+    {
+      "unit_mask": 5670976,
+      "heavy_neighbour_mask": 92,
+      "patterns": 1907,
+      "status": 2,
+      "success": false,
+      "message": "The problem is infeasible. (HiGHS Status 8: model_status is Infeasible; primal_status is None)"
+    },
+    {
+      "unit_mask": 5670976,
+      "heavy_neighbour_mask": 99,
+      "patterns": 1796,
+      "status": 2,
+      "success": false,
+      "message": "The problem is infeasible. (HiGHS Status 8: model_status is Infeasible; primal_status is None)"
+    },
+    {
+      "unit_mask": 5670976,
+      "heavy_neighbour_mask": 101,
+      "patterns": 1818,
+      "status": 2,
+      "success": false,
+      "message": "The problem is infeasible. (HiGHS Status 8: model_status is Infeasible; primal_status is None)"
+    },
+    {
+      "unit_mask": 5670976,
+      "heavy_neighbour_mask": 102,
+      "patterns": 1875,
+      "status": 2,
+      "success": false,
+      "message": "The problem is infeasible. (HiGHS Status 8: model_status is Infeasible; primal_status is None)"
+    },
+    {
+      "unit_mask": 5670976,
+      "heavy_neighbour_mask": 105,
+      "patterns": 1806,
+      "status": 2,
+      "success": false,
+      "message": "The problem is infeasible. (HiGHS Status 8: model_status is Infeasible; primal_status is None)"
+    },
+    {
+      "unit_mask": 5670976,
+      "heavy_neighbour_mask": 106,
+      "patterns": 1868,
+      "status": 2,
+      "success": false,
+      "message": "The problem is infeasible. (HiGHS Status 8: model_status is Infeasible; primal_status is None)"
+    },
+    {
+      "unit_mask": 5670976,
+      "heavy_neighbour_mask": 108,
+      "patterns": 1891,
+      "status": 2,
+      "success": false,
+      "message": "The problem is infeasible. (HiGHS Status 8: model_status is Infeasible; primal_status is None)"
+    },
+    {
+      "unit_mask": 5670976,
+      "heavy_neighbour_mask": 113,
+      "patterns": 1811,
+      "status": 2,
+      "success": false,
+      "message": "The problem is infeasible. (HiGHS Status 8: model_status is Infeasible; primal_status is None)"
+    },
+    {
+      "unit_mask": 5670976,
+      "heavy_neighbour_mask": 114,
+      "patterns": 1865,
+      "status": 2,
+      "success": false,
+      "message": "The problem is infeasible. (HiGHS Status 8: model_status is Infeasible; primal_status is None)"
+    },
+    {
+      "unit_mask": 5670976,
+      "heavy_neighbour_mask": 116,
+      "patterns": 1911,
+      "status": 2,
+      "success": false,
+      "message": "The problem is infeasible. (HiGHS Status 8: model_status is Infeasible; primal_status is None)"
+    },
+    {
+      "unit_mask": 5670976,
+      "heavy_neighbour_mask": 120,
+      "patterns": 1937,
+      "status": 2,
+      "success": false,
+      "message": "The problem is infeasible. (HiGHS Status 8: model_status is Infeasible; primal_status is None)"
+    },
+    {
+      "unit_mask": 5670976,
+      "heavy_neighbour_mask": 195,
+      "patterns": 1835,
+      "status": 2,
+      "success": false,
+      "message": "The problem is infeasible. (HiGHS Status 8: model_status is Infeasible; primal_status is None)"
+    },
+    {
+      "unit_mask": 5670976,
+      "heavy_neighbour_mask": 197,
+      "patterns": 1866,
+      "status": 2,
+      "success": false,
+      "message": "The problem is infeasible. (HiGHS Status 8: model_status is Infeasible; primal_status is None)"
+    },
+    {
+      "unit_mask": 5670976,
+      "heavy_neighbour_mask": 198,
+      "patterns": 1849,
+      "status": 2,
+      "success": false,
+      "message": "The problem is infeasible. (HiGHS Status 8: model_status is Infeasible; primal_status is None)"
+    },
+    {
+      "unit_mask": 5670976,
+      "heavy_neighbour_mask": 204,
+      "patterns": 1870,
+      "status": 2,
+      "success": false,
+      "message": "The problem is infeasible. (HiGHS Status 8: model_status is Infeasible; primal_status is None)"
+    },
+    {
+      "unit_mask": 5670976,
+      "heavy_neighbour_mask": 209,
+      "patterns": 1838,
+      "status": 2,
+      "success": false,
+      "message": "The problem is infeasible. (HiGHS Status 8: model_status is Infeasible; primal_status is None)"
+    },
+    {
+      "unit_mask": 5670976,
+      "heavy_neighbour_mask": 210,
+      "patterns": 1842,
+      "status": 2,
+      "success": false,
+      "message": "The problem is infeasible. (HiGHS Status 8: model_status is Infeasible; primal_status is None)"
+    },
+    {
+      "unit_mask": 5670976,
+      "heavy_neighbour_mask": 212,
+      "patterns": 1851,
+      "status": 2,
+      "success": false,
+      "message": "The problem is infeasible. (HiGHS Status 8: model_status is Infeasible; primal_status is None)"
+    },
+    {
+      "unit_mask": 5670976,
+      "heavy_neighbour_mask": 216,
+      "patterns": 1899,
+      "status": 2,
+      "success": false,
+      "message": "The problem is infeasible. (HiGHS Status 8: model_status is Infeasible; primal_status is None)"
+    },
+    {
+      "unit_mask": 5670976,
+      "heavy_neighbour_mask": 240,
+      "patterns": 1859,
+      "status": 2,
+      "success": false,
+      "message": "The problem is infeasible. (HiGHS Status 8: model_status is Infeasible; primal_status is None)"
+    },
+    {
+      "unit_mask": 5675008,
+      "heavy_neighbour_mask": 15,
+      "patterns": 1810,
+      "status": 2,
+      "success": false,
+      "message": "The problem is infeasible. (HiGHS Status 8: model_status is Infeasible; primal_status is None)"
+    },
+    {
+      "unit_mask": 5675008,
+      "heavy_neighbour_mask": 27,
+      "patterns": 1823,
+      "status": 2,
+      "success": false,
+      "message": "The problem is infeasible. (HiGHS Status 8: model_status is Infeasible; primal_status is None)"
+    },
+    {
+      "unit_mask": 5675008,
+      "heavy_neighbour_mask": 30,
+      "patterns": 1921,
+      "status": 2,
+      "success": false,
+      "message": "The problem is infeasible. (HiGHS Status 8: model_status is Infeasible; primal_status is None)"
+    },
+    {
+      "unit_mask": 5675008,
+      "heavy_neighbour_mask": 51,
+      "patterns": 1837,
+      "status": 2,
+      "success": false,
+      "message": "The problem is infeasible. (HiGHS Status 8: model_status is Infeasible; primal_status is None)"
+    },
+    {
+      "unit_mask": 5675008,
+      "heavy_neighbour_mask": 53,
+      "patterns": 1864,
+      "status": 2,
+      "success": false,
+      "message": "The problem is infeasible. (HiGHS Status 8: model_status is Infeasible; primal_status is None)"
+    },
+    {
+      "unit_mask": 5675008,
+      "heavy_neighbour_mask": 54,
+      "patterns": 1969,
+      "status": 2,
+      "success": false,
+      "message": "The problem is infeasible. (HiGHS Status 8: model_status is Infeasible; primal_status is None)"
+    },
+    {
+      "unit_mask": 5675008,
+      "heavy_neighbour_mask": 60,
+      "patterns": 2005,
+      "status": 2,
+      "success": false,
+      "message": "The problem is infeasible. (HiGHS Status 8: model_status is Infeasible; primal_status is None)"
+    },
+    {
+      "unit_mask": 5675008,
+      "heavy_neighbour_mask": 102,
+      "patterns": 1954,
+      "status": 2,
+      "success": false,
+      "message": "The problem is infeasible. (HiGHS Status 8: model_status is Infeasible; primal_status is None)"
+    },
+    {
+      "unit_mask": 7537168,
+      "heavy_neighbour_mask": 15,
+      "patterns": 1739,
+      "status": 2,
+      "success": false,
+      "message": "The problem is infeasible. (HiGHS Status 8: model_status is Infeasible; primal_status is None)"
+    },
+    {
+      "unit_mask": 7537168,
+      "heavy_neighbour_mask": 23,
+      "patterns": 1773,
+      "status": 2,
+      "success": false,
+      "message": "The problem is infeasible. (HiGHS Status 8: model_status is Infeasible; primal_status is None)"
+    },
+    {
+      "unit_mask": 7537168,
+      "heavy_neighbour_mask": 29,
+      "patterns": 1783,
+      "status": 2,
+      "success": false,
+      "message": "The problem is infeasible. (HiGHS Status 8: model_status is Infeasible; primal_status is None)"
+    },
+    {
+      "unit_mask": 7537168,
+      "heavy_neighbour_mask": 30,
+      "patterns": 1837,
+      "status": 2,
+      "success": false,
+      "message": "The problem is infeasible. (HiGHS Status 8: model_status is Infeasible; primal_status is None)"
+    },
+    {
+      "unit_mask": 7537168,
+      "heavy_neighbour_mask": 51,
+      "patterns": 1859,
+      "status": 2,
+      "success": false,
+      "message": "The problem is infeasible. (HiGHS Status 8: model_status is Infeasible; primal_status is None)"
+    },
+    {
+      "unit_mask": 7537168,
+      "heavy_neighbour_mask": 53,
+      "patterns": 1845,
+      "status": 2,
+      "success": false,
+      "message": "The problem is infeasible. (HiGHS Status 8: model_status is Infeasible; primal_status is None)"
+    },
+    {
+      "unit_mask": 7537168,
+      "heavy_neighbour_mask": 60,
+      "patterns": 1838,
+      "status": 2,
+      "success": false,
+      "message": "The problem is infeasible. (HiGHS Status 8: model_status is Infeasible; primal_status is None)"
+    },
+    {
+      "unit_mask": 7537168,
+      "heavy_neighbour_mask": 71,
+      "patterns": 1756,
+      "status": 2,
+      "success": false,
+      "message": "The problem is infeasible. (HiGHS Status 8: model_status is Infeasible; primal_status is None)"
+    },
+    {
+      "unit_mask": 7537168,
+      "heavy_neighbour_mask": 77,
+      "patterns": 1843,
+      "status": 2,
+      "success": false,
+      "message": "The problem is infeasible. (HiGHS Status 8: model_status is Infeasible; primal_status is None)"
+    },
+    {
+      "unit_mask": 7537168,
+      "heavy_neighbour_mask": 85,
+      "patterns": 1798,
+      "status": 2,
+      "success": false,
+      "message": "The problem is infeasible. (HiGHS Status 8: model_status is Infeasible; primal_status is None)"
+    },
+    {
+      "unit_mask": 7537168,
+      "heavy_neighbour_mask": 86,
+      "patterns": 1864,
+      "status": 2,
+      "success": false,
+      "message": "The problem is infeasible. (HiGHS Status 8: model_status is Infeasible; primal_status is None)"
+    },
+    {
+      "unit_mask": 7537168,
+      "heavy_neighbour_mask": 92,
+      "patterns": 1910,
+      "status": 2,
+      "success": false,
+      "message": "The problem is infeasible. (HiGHS Status 8: model_status is Infeasible; primal_status is None)"
+    },
+    {
+      "unit_mask": 7537168,
+      "heavy_neighbour_mask": 116,
+      "patterns": 1859,
+      "status": 2,
+      "success": false,
+      "message": "The problem is infeasible. (HiGHS Status 8: model_status is Infeasible; primal_status is None)"
+    },
+    {
+      "unit_mask": 7537168,
+      "heavy_neighbour_mask": 204,
+      "patterns": 2013,
+      "status": 2,
+      "success": false,
+      "message": "The problem is infeasible. (HiGHS Status 8: model_status is Infeasible; primal_status is None)"
+    },
+    {
+      "unit_mask": 15400961,
+      "heavy_neighbour_mask": 15,
+      "patterns": 1820,
+      "status": 2,
+      "success": false,
+      "message": "The problem is infeasible. (HiGHS Status 8: model_status is Infeasible; primal_status is None)"
+    },
+    {
+      "unit_mask": 15400961,
+      "heavy_neighbour_mask": 29,
+      "patterns": 1803,
+      "status": 2,
+      "success": false,
+      "message": "The problem is infeasible. (HiGHS Status 8: model_status is Infeasible; primal_status is None)"
+    },
+    {
+      "unit_mask": 15400961,
+      "heavy_neighbour_mask": 39,
+      "patterns": 1837,
+      "status": 2,
+      "success": false,
+      "message": "The problem is infeasible. (HiGHS Status 8: model_status is Infeasible; primal_status is None)"
+    },
+    {
+      "unit_mask": 15400961,
+      "heavy_neighbour_mask": 43,
+      "patterns": 1845,
+      "status": 2,
+      "success": false,
+      "message": "The problem is infeasible. (HiGHS Status 8: model_status is Infeasible; primal_status is None)"
+    },
+    {
+      "unit_mask": 15400961,
+      "heavy_neighbour_mask": 45,
+      "patterns": 1827,
+      "status": 2,
+      "success": false,
+      "message": "The problem is infeasible. (HiGHS Status 8: model_status is Infeasible; primal_status is None)"
+    },
+    {
+      "unit_mask": 15400961,
+      "heavy_neighbour_mask": 57,
+      "patterns": 1858,
+      "status": 2,
+      "success": false,
+      "message": "The problem is infeasible. (HiGHS Status 8: model_status is Infeasible; primal_status is None)"
+    },
+    {
+      "unit_mask": 15400961,
+      "heavy_neighbour_mask": 60,
+      "patterns": 1951,
+      "status": 2,
+      "success": false,
+      "message": "The problem is infeasible. (HiGHS Status 8: model_status is Infeasible; primal_status is None)"
+    },
+    {
+      "unit_mask": 15400961,
+      "heavy_neighbour_mask": 108,
+      "patterns": 1944,
+      "status": 2,
+      "success": false,
+      "message": "The problem is infeasible. (HiGHS Status 8: model_status is Infeasible; primal_status is None)"
+    },
+    {
+      "unit_mask": 15400961,
+      "heavy_neighbour_mask": 116,
+      "patterns": 2000,
+      "status": 2,
+      "success": false,
+      "message": "The problem is infeasible. (HiGHS Status 8: model_status is Infeasible; primal_status is None)"
+    },
+    {
+      "unit_mask": 48373761,
+      "heavy_neighbour_mask": 15,
+      "patterns": 2085,
+      "status": 2,
+      "success": false,
+      "message": "The problem is infeasible. (HiGHS Status 8: model_status is Infeasible; primal_status is None)"
+    },
+    {
+      "unit_mask": 48373761,
+      "heavy_neighbour_mask": 23,
+      "patterns": 2045,
+      "status": 2,
+      "success": false,
+      "message": "The problem is infeasible. (HiGHS Status 8: model_status is Infeasible; primal_status is None)"
+    },
+    {
+      "unit_mask": 48373761,
+      "heavy_neighbour_mask": 29,
+      "patterns": 2024,
+      "status": 2,
+      "success": false,
+      "message": "The problem is infeasible. (HiGHS Status 8: model_status is Infeasible; primal_status is None)"
+    },
+    {
+      "unit_mask": 48373761,
+      "heavy_neighbour_mask": 60,
+      "patterns": 2112,
+      "status": 2,
+      "success": false,
+      "message": "The problem is infeasible. (HiGHS Status 8: model_status is Infeasible; primal_status is None)"
+    },
+    {
+      "unit_mask": 48373761,
+      "heavy_neighbour_mask": 113,
+      "patterns": 2155,
+      "status": 2,
+      "success": false,
+      "message": "The problem is infeasible. (HiGHS Status 8: model_status is Infeasible; primal_status is None)"
+    },
+    {
+      "unit_mask": 48373761,
+      "heavy_neighbour_mask": 116,
+      "patterns": 2210,
+      "status": 2,
+      "success": false,
+      "message": "The problem is infeasible. (HiGHS Status 8: model_status is Infeasible; primal_status is None)"
+    }
+  ],
+  "scope": "Independent integer linear feasibility replay using SciPy/HiGHS."
+}
