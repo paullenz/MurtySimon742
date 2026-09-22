@@ -1,0 +1,40 @@
+{
+  "run_kind": "UNATTRIBUTED_LATE_ENTRY",
+  "session_id": "UNVERIFIED",
+  "scheduled_trigger": null,
+  "trigger_attribution": "UNVERIFIED: invocation identifies research task and runtime time 13:58:40 BST, but no immutable scheduled-for timestamp; 13:00:38 is the affected due slot, not asserted invocation identity.",
+  "affected_due_slot": "2026-09-22T13:00:38+01:00",
+  "earliest_actual_start": "2026-09-22T13:58:57+01:00",
+  "segments": [
+    {
+      "segment_id": "entry-13-58-57",
+      "actual_start": "2026-09-22T13:58:57+01:00",
+      "actual_stop": "UNVERIFIED",
+      "role": "late_no_research",
+      "notes": "Mandatory reads and failure preservation only. No forward work; final segment stop not yet evidenced at write."
+    }
+  ],
+  "forward_research_intervals": [],
+  "verified_forward_research_span": 0,
+  "substantive_unit_count": 0,
+  "timestamped_unit_ledger": [],
+  "research_cutoff": "2026-09-22T13:53:38+01:00",
+  "hard_close_deadline": "2026-09-22T13:59:38+01:00",
+  "next_scheduled_trigger": "2026-09-22T14:00:38+01:00",
+  "early_stop_check_time": "2026-09-22T13:59:21+01:00",
+  "early_stop_check_result": "Research cutoff already passed before actual entry.",
+  "stop_reason": "Late entry after research cutoff; preserve failure without claiming 14:00 or backdated credit.",
+  "preservation_start": "2026-09-22T13:59:21+01:00",
+  "preservation_complete": "UNVERIFIED at write; remote commit is publication evidence, not inferred research time.",
+  "target_50m_applies": "UNVERIFIED at slot level; no research window available to this entry",
+  "target_50m_met": "N/A for this entry",
+  "compliance_status": "UNVERIFIED/NONCOMPLIANT; NO FORWARD RESEARCH",
+  "infrastructure_failures": [
+    "13:00:38 canonical fetch: GitHub API error 404 Not Found. General repository reads succeeded. Backend launch cause unverified."
+  ],
+  "commit_shas": [
+    "f3d44c45866a77adb4d3842da71e91976c04d17f"
+  ],
+  "live_unfinished_line": "Next properly attributed research invocation: durable STARTED before quotient-first r=9. Existing time-box unchanged.",
+  "focused_session_credit": 0
+}
