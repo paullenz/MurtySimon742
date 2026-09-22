@@ -1,0 +1,159 @@
+{
+  "assembly": {
+    "D53": "123/3200",
+    "exceptions": [
+      {
+        "HS_cases": 21,
+        "a": 4,
+        "cap_S_minus_r": 1,
+        "least_b": 7,
+        "required_t": 1,
+        "threshold_cases": 48,
+        "witness_HS": [
+          1,
+          4
+        ]
+      },
+      {
+        "HS_cases": 80,
+        "a": 6,
+        "cap_S_minus_r": 2,
+        "least_b": 10,
+        "required_t": 2,
+        "threshold_cases": 290,
+        "witness_HS": [
+          1,
+          6
+        ]
+      },
+      {
+        "HS_cases": 296,
+        "a": 9,
+        "cap_S_minus_r": 5,
+        "least_b": 14,
+        "required_t": 4,
+        "threshold_cases": 1668,
+        "witness_HS": [
+          2,
+          18
+        ]
+      },
+      {
+        "HS_cases": 560,
+        "a": 11,
+        "cap_S_minus_r": 8,
+        "least_b": 17,
+        "required_t": 6,
+        "threshold_cases": 3905,
+        "witness_HS": [
+          2,
+          22
+        ]
+      },
+      {
+        "HS_cases": 1196,
+        "a": 14,
+        "cap_S_minus_r": 13,
+        "least_b": 21,
+        "required_t": 9,
+        "threshold_cases": 10738,
+        "witness_HS": [
+          3,
+          42
+        ]
+      },
+      {
+        "HS_cases": 3096,
+        "a": 19,
+        "cap_S_minus_r": 26,
+        "least_b": 28,
+        "required_t": 16,
+        "threshold_cases": 38133,
+        "witness_HS": [
+          5,
+          79
+        ]
+      },
+      {
+        "HS_cases": 6371,
+        "a": 24,
+        "cap_S_minus_r": 43,
+        "least_b": 35,
+        "required_t": 25,
+        "threshold_cases": 99728,
+        "witness_HS": [
+          6,
+          126
+        ]
+      },
+      {
+        "HS_cases": 11396,
+        "a": 29,
+        "cap_S_minus_r": 64,
+        "least_b": 42,
+        "required_t": 36,
+        "threshold_cases": 216398,
+        "witness_HS": [
+          8,
+          208
+        ]
+      },
+      {
+        "HS_cases": 18546,
+        "a": 34,
+        "cap_S_minus_r": 90,
+        "least_b": 49,
+        "required_t": 49,
+        "threshold_cases": 414018,
+        "witness_HS": [
+          9,
+          276
+        ]
+      },
+      {
+        "HS_cases": 28196,
+        "a": 39,
+        "cap_S_minus_r": 121,
+        "least_b": 56,
+        "required_t": 64,
+        "threshold_cases": 723463,
+        "witness_HS": [
+          11,
+          369
+        ]
+      },
+      {
+        "HS_cases": 40721,
+        "a": 44,
+        "cap_S_minus_r": 155,
+        "least_b": 63,
+        "required_t": 81,
+        "threshold_cases": 1180608,
+        "witness_HS": [
+          12,
+          462
+        ]
+      }
+    ],
+    "forward_53": "177/3200"
+  },
+  "degree_pairs_regressed": 1874246,
+  "scalar": {
+    "B_half": "181/256",
+    "Q_7_20": "-1631127391/30720000000",
+    "Qprime_cap": "-365/64",
+    "core_half": "7/8",
+    "gap_coefficients": [
+      "0",
+      "0",
+      "0",
+      "1/16",
+      "-7/64",
+      "-3/128",
+      "-9/1024"
+    ],
+    "margin": "11/216000",
+    "tail_7_20": "43868404489/12288000000000"
+  },
+  "schema": "profile-integral-7-12-independent-audit-v1"
+}
