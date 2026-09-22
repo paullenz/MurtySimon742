@@ -1,0 +1,11 @@
+{
+  "strict_labelled": 11350,
+  "strict_orbits": 68,
+  "strict_source_feasible": 1,
+  "equality_labelled": 26838,
+  "equality_orbits": 203,
+  "equality_source_feasible": 39,
+  "equality_source_populations": 2103,
+  "equality_supplement_survivors": 0,
+  "all_cross_file_assertions": "PASS"
+}

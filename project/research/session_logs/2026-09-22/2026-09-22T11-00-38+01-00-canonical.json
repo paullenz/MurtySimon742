@@ -165,6 +165,13 @@
       "actual_stop": "2026-09-22T11:50:36+01:00",
       "role": "forward_research",
       "notes": "Exact enumeration of all r8 equality source populations and necessary B-layer supplement forcing."
+    },
+    {
+      "segment_id": "research-20",
+      "actual_start": "2026-09-22T11:51:38+01:00",
+      "actual_stop": "2026-09-22T11:52:11+01:00",
+      "role": "forward_research",
+      "notes": "Cross-file consistency verification of every r8 strict/equality census and screen total."
     }
   ],
   "forward_research_intervals": [
@@ -267,6 +274,11 @@
       "start": "2026-09-22T11:48:48+01:00",
       "stop": "2026-09-22T11:50:36+01:00",
       "evidence": "R8_EQUALITY_SUPPLEMENT_CLOSURE.md, check_r8_equality_supplements.py, R8_EQUALITY_SUPPLEMENT_SCREEN.json"
+    },
+    {
+      "start": "2026-09-22T11:51:38+01:00",
+      "stop": "2026-09-22T11:52:11+01:00",
+      "evidence": "verify_r8_pipeline.py, R8_PIPELINE_VERIFICATION.json"
     }
   ],
   "forward_research_stop": null,
@@ -274,10 +286,10 @@
   "preservation_complete": null,
   "final_report_time": null,
   "wall_clock_span_to_preservation_complete": null,
-  "verified_forward_research_span": 1968,
+  "verified_forward_research_span": 2001,
   "verified_forward_research_span_units": "seconds",
   "preservation_span": null,
-  "substantive_unit_count": 19,
+  "substantive_unit_count": 20,
   "timestamped_unit_ledger": [
     {
       "completed_at": "2026-09-22T11:04:00+01:00",
@@ -392,6 +404,12 @@
       "unit": "R8 equality supplement closure",
       "result": "Across 39 source-feasible orbits, all 2103 physical-source populations fail exact necessary supplement forcing. Hence 1<=r<=8 implies f<=r-1 and internally checked balanced equality extends through S<=8.",
       "artifact": "project/research/general_n/2026-09-22-zero-demand-equality-v1/R8_EQUALITY_SUPPLEMENT_CLOSURE.md"
+    },
+    {
+      "completed_at": "2026-09-22T11:52:11+01:00",
+      "unit": "R8 pipeline cross-file verification",
+      "result": "All strict/equality census, source-feasibility, population, and supplement totals agree across artifacts; all assertions pass.",
+      "artifact": "project/research/general_n/2026-09-22-zero-demand-equality-v1/R8_PIPELINE_VERIFICATION.json"
     }
   ],
   "early_stop_check_time": null,
@@ -403,9 +421,9 @@
   "compliance_status": "IN_PROGRESS",
   "infrastructure_failures": [],
   "commit_shas": [
-    "e4da769b3045c41fd641baf5620f13c2cb7cd6a5"
+    "219f19a6d3b9b4dd4b9137dac09f23a0bf643bc7"
   ],
-  "live_unfinished_line": "At r=9, derive a quotient-first strict-surplus census or strengthen the analytic source obstruction; retain edge bound S<=10 and equality through S<=8 at internal computer-assisted trust.",
+  "live_unfinished_line": "At r=9, derive a quotient-first strict-surplus census or strengthen the analytic source obstruction; current trusted internal thresholds are edge S<=10 and equality S<=8.",
   "historical_fragments": [],
   "focused_session_credit": 0,
   "predecessor_session": "project/research/session_logs/2026-09-22/2026-09-22T10-00-38+01-00-canonical.json",
