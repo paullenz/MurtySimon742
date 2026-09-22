@@ -22,7 +22,7 @@
     {
       "segment_id": "segment-2",
       "actual_start": "2026-09-22T21:49:47+01:00",
-      "actual_stop": null,
+      "actual_stop": "2026-09-22T21:50:47+01:00",
       "role": "preservation",
       "notes": "Fresh early-stop check found under five minutes remaining before cutoff; began preservation."
     }
@@ -98,8 +98,8 @@
   "verified_forward_span_seconds": 1708,
   "forward_stop": "2026-09-22T21:49:33+01:00",
   "preservation_start": "2026-09-22T21:49:47+01:00",
-  "preservation_complete": null,
-  "wall_clock_span_seconds": null,
+  "preservation_complete": "2026-09-22T21:50:47+01:00",
+  "wall_clock_span_seconds": 2884,
   "substantive_unit_count": 11,
   "substantive_unit_ledger": [
     {
@@ -164,7 +164,7 @@
     "result": "BEGIN_PRESERVATION",
     "reason": "Only 3m51s remained before the 21:53:38 research cutoff, below the five-minute continuation threshold."
   },
-  "stop_reason": null,
+  "stop_reason": "Forward research stopped after the 21:49:33 substantive checkpoint; the fresh 21:49:47 early-stop check found under five minutes before cutoff, and preservation completed before hard close.",
   "failures_and_pivots": [
     {
       "at": "2026-09-22T21:31:29+01:00",
@@ -189,7 +189,8 @@
     "1df04922c8a6bab9620f150ada876f09199cb47f",
     "217f1bc6755f4f4601f73cf31a42ea7a73394c77",
     "3aaf97096210c3e670218d82fe2f627f1eee9f46",
-    "3b5ba3f7bafc1a1efa7962d34a4a2e8173d8bd8f"
+    "3b5ba3f7bafc1a1efa7962d34a4a2e8173d8bd8f",
+    "54f2b4f394e273d0d827735e053bf1c796a1cd64"
   ],
   "unfinished_line": "Complete chunks 1-7 of r=12 support-ten (2,2,1^8) source screening; supplement-screen all survivors; then support eleven.",
   "target": {
@@ -197,8 +198,8 @@
     "required_seconds": 3000,
     "available_seconds": 3055,
     "achieved_verified_seconds": 1708,
-    "result": "LIVE",
-    "reason": "Earliest actual start left 50m55s before cutoff."
+    "result": "NOT_MET",
+    "reason": "Only 28m28s of closed verified forward research was recorded despite 50m55s being available."
   },
-  "compliance_status": "STARTED"
+  "compliance_status": "SHORT/NONCOMPLIANT"
 }

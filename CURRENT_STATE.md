@@ -7,23 +7,23 @@ Active target: a genuinely independent proof of Erdős #742 / the Murty–Simon 
 <!-- CURRENT-STATUS:START -->
 CHECKPOINT CLASS: VERIFIED_INTERNAL_NOT_PROMOTED
 
-WORK MODE: PRESERVATION_LIVE
+WORK MODE: SESSION_FINALIZED
 
-INSPECTED PREDECESSOR: 3b5ba3f7bafc1a1efa7962d34a4a2e8173d8bd8f.
+INSPECTED PREDECESSOR: 54f2b4f394e273d0d827735e053bf1c796a1cd64.
 
-LAST VERIFIED RESULT: r=12 is internally closed through support nine; support-ten partition (3,1^9) is closed. For partition (2,2,1^8), the exact census has 6,386 strict kernels. Source chunk 0 screened 798: 10 source-feasible, 788 source-infeasible, zero solver-unknown. Seven chunks remain.
+LAST VERIFIED RESULT: r=12 is internally closed through support nine. Support-ten partition (3,1^9) is internally closed after 287/287 strict kernels fail exact source feasibility. Partition (2,2,1^8) has an exact 6,386-kernel census; the first 798-kernel source shard leaves 10 survivors and zero solver-unknown cases. Seven source shards, supplement screening, and support eleven remain.
 
-EVIDENCE: support-ten case-1 census, chunked source script, chunk-0 JSON, and canonical telemetry.
+EVIDENCE: complete support-nine package; support-ten structural census and source artifacts; canonical telemetry at project/research/session_logs/2026-09-22/2026-09-22T21-00-38+01-00-canonical.json.
 
-SESSION UTILISATION: Trigger 21:00:38 BST; actual start 21:02:43; eleven closed intervals; verified total 1708s (28m28s); eleven substantive units; forward stop 21:49:33; cutoff 21:53:38; 50-minute target applicable; PRESERVATION LIVE.
+SESSION UTILISATION: Trigger 21:00:38 BST; actual start 21:02:43; eleven closed intervals; verified total 1708s (28m28s); eleven substantive units; forward stop 21:49:33; cutoff 21:53:38; preservation complete 21:50:47; 50-minute target applicable and NOT MET; SHORT/NONCOMPLIANT.
 
-UNPRESERVED WORK: None at this checkpoint.
+UNPRESERVED WORK: None.
 
-NEXT ACTION: Finalize this session. Next research slot should complete chunks 1-7, supplement-screen survivors, then treat support eleven.
+NEXT ACTION: Complete support-ten case-1 source chunks 1-7, supplement-screen all survivors, then close or classify support eleven.
 
-FOCUSED-SESSION COUNT: 1/24; current trigger will receive no credit unless final utilisation meets the binding target.
+FOCUSED-SESSION COUNT: 1/24; this short session receives no focused-session credit.
 
-MANDATORY CONSTRAINTS: Seven source chunks, supplement feasibility, and support eleven remain; no r=12 closure yet.
+MANDATORY CONSTRAINTS: The internal finite pipeline does not establish graph realizability; equality remains characterized only through S<=8; the general theorem remains open.
 <!-- CURRENT-STATUS:END -->
 
 ## Latest adversarial audit - 22 September 2026
