@@ -144,6 +144,13 @@
       "actual_stop": "2026-09-22T11:41:44+01:00",
       "role": "forward_research",
       "notes": "Repaired vertex-index provenance in r8 canonical representatives, then exact physical-source screened all 68 orbits."
+    },
+    {
+      "segment_id": "research-17",
+      "actual_start": "2026-09-22T11:43:03+01:00",
+      "actual_stop": "2026-09-22T11:45:53+01:00",
+      "role": "forward_research",
+      "notes": "Exact r8 equality-core enumeration and colour-preserving canonical quotient; health monitor ran read-only during the computation without cancelling it."
     }
   ],
   "forward_research_intervals": [
@@ -231,6 +238,11 @@
       "start": "2026-09-22T11:40:01+01:00",
       "stop": "2026-09-22T11:41:44+01:00",
       "evidence": "R8_STRICT_SOURCE_CLOSURE.md, corrected canonicalize_r8_cores.py/R8_CORE_ORBITS.json, screen_r8_orbit_sources.py, R8_ORBIT_SOURCE_SCREEN.json"
+    },
+    {
+      "start": "2026-09-22T11:43:03+01:00",
+      "stop": "2026-09-22T11:45:53+01:00",
+      "evidence": "R8_EQUALITY_CORE_CENSUS.md, screen_r8_equality.py, R8_EQUALITY_CORE_SCREEN.json"
     }
   ],
   "forward_research_stop": null,
@@ -238,10 +250,10 @@
   "preservation_complete": null,
   "final_report_time": null,
   "wall_clock_span_to_preservation_complete": null,
-  "verified_forward_research_span": 1627,
+  "verified_forward_research_span": 1797,
   "verified_forward_research_span_units": "seconds",
   "preservation_span": null,
-  "substantive_unit_count": 16,
+  "substantive_unit_count": 17,
   "timestamped_unit_ledger": [
     {
       "completed_at": "2026-09-22T11:04:00+01:00",
@@ -338,6 +350,12 @@
       "unit": "Exact r=8 physical-source closure",
       "result": "67/68 core orbits are source-infeasible; the sole feasible 22211 orbit is already supplement-infeasible. Therefore r=8 implies t<=0, extending the internal computer-assisted edge bound to S<=10.",
       "artifact": "project/research/general_n/2026-09-22-zero-demand-equality-v1/R8_STRICT_SOURCE_CLOSURE.md"
+    },
+    {
+      "completed_at": "2026-09-22T11:45:53+01:00",
+      "unit": "Exact r=8 equality-core census",
+      "result": "After all-unit/local filters and exact slack, 26838 labelled equality candidates reduce to 203 exact colour-preserving orbits across seven residual partitions.",
+      "artifact": "project/research/general_n/2026-09-22-zero-demand-equality-v1/R8_EQUALITY_CORE_CENSUS.md"
     }
   ],
   "early_stop_check_time": null,
@@ -349,9 +367,9 @@
   "compliance_status": "IN_PROGRESS",
   "infrastructure_failures": [],
   "commit_shas": [
-    "d6d8553c9ce13d0b88767d1b0bdca729f28e40a0"
+    "f80696f214f0956093f83af729b837129664eb4b"
   ],
-  "live_unfinished_line": "Attack the r=8 equality boundary f=r: enumerate equality core orbits, physical-source populations, and exact supplement forcing, with S=8 balanced equality as the control.",
+  "live_unfinished_line": "Apply exact physical-source feasibility to all 203 r=8 equality orbits, then supplement forcing to any survivors; preserve balanced S=8 equality controls.",
   "historical_fragments": [],
   "focused_session_credit": 0,
   "predecessor_session": "project/research/session_logs/2026-09-22/2026-09-22T10-00-38+01-00-canonical.json",
@@ -365,6 +383,11 @@
       "observed_at": "2026-09-22T11:34:19+01:00",
       "completed_at": "2026-09-22T11:36:27+01:00",
       "result": "Same-trigger duplicate reconciled into canonical session after mandatory reads; no competing writer and no research credit for interruption."
+    },
+    {
+      "observed_at": "2026-09-22T11:44:42+01:00",
+      "completed_at": "2026-09-22T11:45:37+01:00",
+      "result": "Read-only health check: current 11 slot fresh at 11:41:44 and preceding 10 slot unchanged SHORT/NONCOMPLIANT; no new alert. Equality census computation continued concurrently and original research resumed."
     }
   ],
   "failures_and_pivots": [
