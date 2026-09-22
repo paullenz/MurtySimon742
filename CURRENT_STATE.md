@@ -9,21 +9,21 @@ CHECKPOINT CLASS: VERIFIED_INTERNAL_NOT_PROMOTED
 
 WORK MODE: FORWARD_RESEARCH_LIVE
 
-INSPECTED PREDECESSOR: 468ba1b65c6363e337d07b6b7c4f3f30f697dcbe.
+INSPECTED PREDECESSOR: 838c81b52ea773b3207ea12435125441a42f21b2.
 
-LAST VERIFIED RESULT: r=12 is internally closed through support seven. At support eight, exact enumeration gives 3,759 strict candidates across five partitions. The first shard, (5,1^7), has 11 strict cores and all 11 are physical-source infeasible with zero solver-unknown cases. Four shards remain.
+LAST VERIFIED RESULT: r=12 is internally closed through support seven. At support eight, cases (5,1^7) and (4,2,1^6) are now source-infeasible: respectively 11/11 and 387/387 strict cores rejected with zero solver-unknown cases. Three shards remain, containing 191, 1,997, and 1,173 strict cores.
 
-EVIDENCE: support-eight census plus `r12_support8_sources_milp.py` and case-0 JSON in the r12 quotient package; canonical telemetry.
+EVIDENCE: support-eight census and source case-0/case-1 JSON in the r12 quotient package; canonical telemetry.
 
-SESSION UTILISATION: Trigger 18:00:38 BST; actual start 18:04:09; ten closed intervals; verified total 994s (16m34s); ten substantive units; cutoff 18:53:38; target N/A late start; LIVE.
+SESSION UTILISATION: Trigger 18:00:38 BST; actual start 18:04:09; eleven closed intervals; verified total 1001s (16m41s); eleven substantive units; cutoff 18:53:38; target N/A late start; LIVE.
 
 UNPRESERVED WORK: None at this checkpoint.
 
-NEXT ACTION: Screen support-eight case 1, partition (4,2,1^6), then continue the remaining shards.
+NEXT ACTION: Screen support-eight case 2, partition (3,3,1^6), then cases 3 and 4.
 
 FOCUSED-SESSION COUNT: 1/24; current trigger credit pending final compliance.
 
-MANDATORY CONSTRAINTS: Four support-eight shards remain; do not infer overall closure.
+MANDATORY CONSTRAINTS: Three support-eight shards remain; no overall support-eight closure yet.
 <!-- CURRENT-STATUS:END -->
 
 ## Latest adversarial audit - 22 September 2026
