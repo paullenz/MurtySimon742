@@ -1,0 +1,26 @@
+{
+  "research": {
+    "count": 129,
+    "first": "2026-09-22T10:00:38+01:00",
+    "last": "2026-09-27T23:00:38+01:00",
+    "minimum_gap_minutes": 60
+  },
+  "health": {
+    "count": 135,
+    "first": "2026-09-22T09:15:00+01:00",
+    "last": "2026-09-27T23:15:00+01:00",
+    "minimum_gap_minutes": 60
+  },
+  "process_guard": {
+    "status": "PASS",
+    "scope": "isolated two-commit snapshot of changed files and standing orders",
+    "output": "Live handoff synchronization PASS: 1 commit(s) inspected. Content truth and mathematical scope still require review.",
+    "mathematical_verification": false
+  },
+  "historical_gaps": {
+    "count": 11,
+    "execution": "UNVERIFIED",
+    "fabricated_durations": false
+  },
+  "scheduler_execution": "NOT_VERIFIED"
+}

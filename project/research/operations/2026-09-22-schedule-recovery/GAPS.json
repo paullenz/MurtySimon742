@@ -1,0 +1,114 @@
+{
+  "kind": "RETROSPECTIVE_EVIDENCE_RECONCILIATION",
+  "as_of": "2026-09-22T09:01:59+01:00",
+  "baseline_head": "7499d32d03eee71d985ca6faf30bb590563bca1d",
+  "classification": "UNVERIFIED_MISSING_TELEMETRY",
+  "not_a_research_session": true,
+  "slots": [
+    {
+      "scheduled_trigger": "2026-09-21T21:00:38+01:00",
+      "actual_start": null,
+      "actual_stop": null,
+      "verified_forward_minutes": null,
+      "status": "UNVERIFIED_MISSING_TELEMETRY",
+      "completed_session_credit": 0,
+      "reason": "No saved completed research record located at inspected head; execution failure versus unsaved work is unresolved."
+    },
+    {
+      "scheduled_trigger": "2026-09-21T22:00:38+01:00",
+      "actual_start": null,
+      "actual_stop": null,
+      "verified_forward_minutes": null,
+      "status": "UNVERIFIED_MISSING_TELEMETRY",
+      "completed_session_credit": 0,
+      "reason": "No saved completed research record located at inspected head; execution failure versus unsaved work is unresolved."
+    },
+    {
+      "scheduled_trigger": "2026-09-21T23:00:38+01:00",
+      "actual_start": null,
+      "actual_stop": null,
+      "verified_forward_minutes": null,
+      "status": "UNVERIFIED_MISSING_TELEMETRY",
+      "completed_session_credit": 0,
+      "reason": "No saved completed research record located at inspected head; execution failure versus unsaved work is unresolved."
+    },
+    {
+      "scheduled_trigger": "2026-09-22T01:00:38+01:00",
+      "actual_start": null,
+      "actual_stop": null,
+      "verified_forward_minutes": null,
+      "status": "UNVERIFIED_MISSING_TELEMETRY",
+      "completed_session_credit": 0,
+      "reason": "No saved completed research record located at inspected head; execution failure versus unsaved work is unresolved."
+    },
+    {
+      "scheduled_trigger": "2026-09-22T02:00:38+01:00",
+      "actual_start": null,
+      "actual_stop": null,
+      "verified_forward_minutes": null,
+      "status": "UNVERIFIED_MISSING_TELEMETRY",
+      "completed_session_credit": 0,
+      "reason": "No saved completed research record located at inspected head; execution failure versus unsaved work is unresolved."
+    },
+    {
+      "scheduled_trigger": "2026-09-22T03:00:38+01:00",
+      "actual_start": null,
+      "actual_stop": null,
+      "verified_forward_minutes": null,
+      "status": "UNVERIFIED_MISSING_TELEMETRY",
+      "completed_session_credit": 0,
+      "reason": "No saved completed research record located at inspected head; execution failure versus unsaved work is unresolved."
+    },
+    {
+      "scheduled_trigger": "2026-09-22T04:00:38+01:00",
+      "actual_start": null,
+      "actual_stop": null,
+      "verified_forward_minutes": null,
+      "status": "UNVERIFIED_MISSING_TELEMETRY",
+      "completed_session_credit": 0,
+      "reason": "No saved completed research record located at inspected head; execution failure versus unsaved work is unresolved."
+    },
+    {
+      "scheduled_trigger": "2026-09-22T05:00:38+01:00",
+      "actual_start": null,
+      "actual_stop": null,
+      "verified_forward_minutes": null,
+      "status": "UNVERIFIED_MISSING_TELEMETRY",
+      "completed_session_credit": 0,
+      "reason": "No saved completed research record located at inspected head; execution failure versus unsaved work is unresolved."
+    },
+    {
+      "scheduled_trigger": "2026-09-22T06:00:38+01:00",
+      "actual_start": null,
+      "actual_stop": null,
+      "verified_forward_minutes": null,
+      "status": "UNVERIFIED_MISSING_TELEMETRY",
+      "completed_session_credit": 0,
+      "reason": "No saved completed research record located at inspected head; execution failure versus unsaved work is unresolved."
+    },
+    {
+      "scheduled_trigger": "2026-09-22T07:00:38+01:00",
+      "actual_start": null,
+      "actual_stop": null,
+      "verified_forward_minutes": null,
+      "status": "UNVERIFIED_MISSING_TELEMETRY",
+      "completed_session_credit": 0,
+      "reason": "No saved completed research record located at inspected head; execution failure versus unsaved work is unresolved."
+    },
+    {
+      "scheduled_trigger": "2026-09-22T08:00:38+01:00",
+      "actual_start": null,
+      "actual_stop": null,
+      "verified_forward_minutes": null,
+      "status": "UNVERIFIED_MISSING_TELEMETRY",
+      "completed_session_credit": 0,
+      "reason": "No saved completed research record located at inspected head; execution failure versus unsaved work is unresolved."
+    }
+  ],
+  "notes": [
+    "Midnight audit excluded from forward-research count and evidenced separately.",
+    "09:00 on 22 September was ongoing during this inspection; not classified as a completed missed slot.",
+    "Unknown historical duration is null, not a fabricated zero.",
+    "Manual recovery, monitor setup and admin commits earn no focused-session credit."
+  ]
+}

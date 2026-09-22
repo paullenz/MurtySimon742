@@ -5,23 +5,27 @@ Canonical repository: `paullenz/MurtySimon742`. Date: 22 September 2026.
 Active target: a genuinely independent proof of Erdős #742 / the Murty–Simon inequality e(G)<=floor(n^2/4), preferably with the equality characterization. Forward priority is the project’s own complement / residual / Hall / profile / realizability route, not a reconstruction of the external e+disj+X proof. The first focused session produced the internally checked candidate threshold `Delta>=250n/429`, shrinking the live strip to `n/2<Delta<250n/429`. The theorem and its inherited graph-to-profile spine remain candidate/internal-review mathematics. A 24-focused-session go/no-go gate applies. Prior eventual-D2C work remains preserved but is no longer the active forward objective.
 
 <!-- CURRENT-STATUS:START -->
-CHECKPOINT CLASS: `DAILY_RED_TEAM_AUDIT_2026_09_22`
+CHECKPOINT CLASS: `SCHEDULE_RECOVERY_2026_09_22_EXECUTION_NOT_YET_VERIFIED`
 
-WORK MODE: `AUDIT`
+WORK MODE: `RECOVERY`
 
-INSPECTED PREDECESSOR: audited head `0d11049574fce97f4630a4b71e8da78edbb7836c`; read the 21 September audit handoff, all later session logs, the independent pivot and strip packages, the canonical `7/12` proof/checker, recent commits/diffs, README and status guard. Pivot commit: `5825c203da78ecaefaa63568f0883de25518df9f`.
+INSPECTED PREDECESSOR: `7499d32d03eee71d985ca6faf30bb590563bca1d`; the 22 September audit and canonical session schema were read. Recovery observation began at 09:01:59 BST.
 
-LAST VERIFIED RESULT: focused session 1's candidate theorem `n>=6` and `Delta>=250n/429` implies `e(G)<floor(n^2/4)` survives exact rational replay, convex degree assembly, all eight finite exceptional rows, inherited `7/12` checking and a line-by-line internal graph-to-profile replay. No dependency on the external `e+disj+X` proof was found. The theorem remains conditional on the shared internally reviewed graph-to-profile bridge and is not externally verified. The scalar/Hall plateau is a relaxation, not an actual graph.
+LAST VERIFIED RESULT: Mathematical status unchanged. The internally reviewed candidate `Delta>=250n/429` threshold and its shared graph-to-profile bridge retain exactly the 22 September audit's trust boundary. No new mathematical work or focused session is credited by this recovery.
 
-UNPRESERVED WORK: none known. The dated audit note and PDF are preserved in the repository. Historical `PENDING` telemetry fields remain unfilled rather than reconstructed.
+RECOVERY STATUS: Eleven due forward slots (21 September 21:00--23:00 and 22 September 01:00--08:00 BST) have no verified completed research record at the inspected head. Missing execution versus unsaved work is unresolved. The midnight audit is evidenced separately. An immediate run request on the predecessor was accepted but produced no saved start record during recovery; it was then retired. A manual recovery request on the replacement is planned after this handoff is saved. No execution/completion is claimed. The stalled task has been disabled and replaced in the fresh recovery conversation; the hourly schedule has been registered from 22 September 10:00:38 BST through 27 September 23:00:38 BST (129 future research triggers; midnight excluded). A separate read-only health check is scheduled at :15 through 27 September, beginning today at 09:15 BST. Detailed before/after settings and the historical gap ledger are in `project/research/operations/2026-09-22-schedule-recovery/`.
 
-DEFERRED ADMIN: remote CI confirmation after publication. The audited predecessor itself fails `scripts/check_status_sync.py --head HEAD` because commit `0d110495...` did not update the protected CURRENT-STATUS block; this audit repairs the live handoff without rewriting history.
+PROCESS REPAIR: Resolve the startup read/write-order contradiction by reading this handoff first, then AGENTS.md/schema, then remotely publishing the STARTED record plus CURRENT-STATUS before forward mathematics. Close and preserve evidenced intervals after each substantive unit; ten minutes is the maximum checkpoint backstop. Retain the fifty-minute target, one-trigger/one-session accounting, audit constraints and anti-overlap buffers. Manual recovery earns no backdated scheduled-slot credit. Treat health/recovery/admin commits as non-research.
+
+UNPRESERVED WORK: None known. All recovery artifacts in this checkpoint are administrative; there is no newly preserved mathematical result.
+
+DEFERRED ADMIN: Verify a real substantive execution checkpoint and subsequent scheduled completion. Root cause is unresolved because detailed backend run logs are not exposed by the automation tools and browser history requires sign-in. Do not claim a scheduler fix solely from configuration, an enabled flag, or last_run_time. The read-only health task must surface missing starts, stale checkpoints, incomplete closure and monitor errors.
 
 NEXT ACTION: independently reconstruct the complete selected-quasi-edge/profile lemma from raw D2C criticality in a standalone note, then build an actual-graph regression of every bridge inequality under multiple legal selections. Freeze `250/429` on any source/supplement reuse or choice-dependence gap. Only after that gate, attack the corrected high-codegree cluster and separately preserve the zero-demand balanced complete-bipartite equality branch.
 
-FOCUSED-SESSION COUNT: `1/24`. The go/no-go gate is not due. Session 1 met a success criterion by strictly improving the threshold, but the gate remains binding.
+FOCUSED-SESSION COUNT: `1/24` remains the last verified count. Do not increment it for restart requests, the health monitor, administrative fixes or unverified historical slots.
 
-MANDATORY CONSTRAINTS: do not treat scalar/profile feasibility as graph realizability; do not use the external `e+disj+X` core; do not use `POSITIVE_DENSITY_CODEGREE_CLUSTER.md` outside its corrected joint hypotheses; retain `X_3` and balanced complete bipartite graphs of both parities as controls; bounded negative search is not nonrealizability.
+MANDATORY CONSTRAINTS: Preserve the 22 September audit's corrected codegree hypotheses, graph-realizability distinction, independent-proof objective, X_3 and both parities of balanced complete bipartite controls. Freeze dependent threshold claims if the raw-criticality bridge fails. Do not restore the superseded eventual-D2C objective.
 <!-- CURRENT-STATUS:END -->
 
 ## Latest adversarial audit - 22 September 2026

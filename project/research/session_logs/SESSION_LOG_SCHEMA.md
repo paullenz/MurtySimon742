@@ -73,13 +73,19 @@ If prior-session cleanup nevertheless crosses the next trigger, it remains attac
 
 ## Start-of-session rule
 
-Before repository reading or mathematics:
+Before forward mathematics:
 
 1. obtain an authoritative Europe/London current timestamp;
-2. identify the scheduled trigger to which this invocation belongs;
-3. open or update that trigger's canonical record;
-4. append the new segment;
-5. record actual start, next trigger, cutoff, and lateness.
+2. make CURRENT_STATE.md on main the first repository read, then read AGENTS.md and this schema;
+3. identify the scheduled trigger from invocation evidence; do not guess attribution from current clock time;
+4. read the existing canonical record, append the new segment, and record actual start, next trigger, cutoff, and lateness;
+5. publish the STARTED canonical record and the updated CURRENT-STATUS block atomically to main, preserving concurrent changes; verify that publication once.
+
+This ordering resolves the former contradiction between "before repository reading" and the mandatory first-read standing order. If attribution is unavailable, mark it UNVERIFIED. If another segment has a recent substantive checkpoint and is still within its slot, avoid a competing writer and explicitly report the overlap.
+
+Every completed substantive unit must be checkpointed before the next begins, as required by AGENTS.md. Close the unit's evidenced research interval at the observed boundary and include it with the unit ledger and CURRENT_STATE.md in the same remote checkpoint. Ten minutes is a maximum preservation backstop while active, not an early-stop permission. A local-only file does not establish a durable start or heartbeat.
+
+If source access or preservation fails, report the exact error and affected trigger. Follow the bounded fallback rule in AGENTS.md and preserve what is possible. Never report a failed run as successful or silently suppress its failure.
 
 A context reset or re-entry **does not create a new session** and does not reset the target or clock.
 
@@ -147,3 +153,11 @@ For each trigger, reconcile all fragment files and re-entries into the single ca
 Aggregate utilisation must be computed only from evidenced closed intervals. Separately report partial verified forward minutes as a lower bound where full-session telemetry is incomplete.
 
 Historical records from before this schema remain evidence but are not to be rewritten with invented times.
+
+## Manual recovery runs
+
+A requested immediate recovery is not a backdated scheduled session. Use a separate file named `manual-recovery-<actual-start>.json`, set `run_kind: MANUAL_RECOVERY`, `scheduled_trigger: null`, and identify the run by its actual observed start. Keep its evidenced intervals and output, but give it no historical scheduled-slot credit. Stop before the next actual scheduled trigger using the same seven-minute/one-minute buffers. It does not clear a missing-slot finding or increment the focused-session count merely by starting.
+
+## Execution health checks
+
+A separate read-only health check may compare due triggers against remote canonical records. Missing STARTED records, stale checkpoints, incomplete finalization, and access errors must be distinguished. An enabled task or automation last_run_time proves neither substantive execution nor saved mathematics. A recovery/admin checkpoint is not a research heartbeat. Health checks must not create competing research writers or retry loops. The midnight audit still enumerates every scheduled slot and independently verifies duration/compliance.
