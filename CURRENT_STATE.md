@@ -5,18 +5,18 @@ Canonical repository: `paullenz/MurtySimon742`. Date: 23 September 2026.
 Active target: a genuinely independent proof of Erdős #742 / the Murty–Simon inequality e(G)<=floor(n^2/4), preferably with the equality characterization. Forward priority is the project’s own complement / residual / Hall / profile / realizability route, not a reconstruction of the external e+disj+X proof. The first focused session produced the internally checked candidate threshold `Delta>=250n/429`, shrinking the live strip to `n/2<Delta<250n/429`. The theorem and its inherited graph-to-profile spine remain candidate/internal-review mathematics. A 24-focused-session go/no-go gate applies. Prior eventual-D2C work remains preserved but is no longer the active forward objective.
 
 <!-- CURRENT-STATUS:START -->
-CHECKPOINT CLASS: VERIFIED_INTERNAL_N18_PREFIX_30600_ACTIVE
+CHECKPOINT CLASS: VERIFIED_INTERNAL_N18_PREFIX_31100_ACTIVE
 WORK MODE: MATH
-INSPECTED PREDECESSOR: d2282d94ec092c8cef5cd4ba8dc3668eb9850914.
-LAST VERIFIED RESULT: Exact n=18, Delta=10 range 30,501-30,600 is complete with zero abstract survivors. Closest exact deficit 19 versus Dmax 16, gap 3. Stable-index closure extends through 30,600 apart from index 20,851 separately graph-excluded. Internal evidence only; full row closure remains open.
-ACTIVE SESSION: Scheduled 20:00:38; actual entry 20:01:26; STARTED 20:02:19; first substantive checkpoint prepared 20:05:22; cutoff 20:53:38; hard close 20:59:38. Immutable delivery identity UNVERIFIED.
-VERIFIED FORWARD SPAN: 1m55s.
+INSPECTED PREDECESSOR: da468fc7b15c61d02a69f1c2bf84a5fb2fdfc735.
+LAST VERIFIED RESULT: Exact n=18, Delta=10 range 30,601-31,100 is complete with zero abstract survivors. Closest exact deficit 21 versus Dmax 16, gap 5. Stable-index closure extends through 31,100 apart from index 20,851 separately graph-excluded. Internal evidence only; full row closure remains open.
+ACTIVE SESSION: Scheduled 20:00:38; actual entry 20:01:26; STARTED 20:02:19; first substantive checkpoint 20:05:22; cutoff 20:53:38; hard close 20:59:38. Immutable delivery identity UNVERIFIED.
+VERIFIED FORWARD SPAN: 7m41s.
 SESSION RESULT: ACTIVE; 40-minute target PENDING.
-SUBSTANTIVE UNITS: 1. Focused-session counter remains 5/24 pending completion.
+SUBSTANTIVE UNITS: 2. Focused-session counter remains 5/24 pending completion.
 CANONICAL RECORD: project/research/session_logs/2026-09-23/2026-09-23T20-00-38+01-00-canonical.json.
 UNPRESERVED WORK: None after this checkpoint.
 DEFERRED ADMIN: Stale telemetry and audit prose/PDF count correction.
-NEXT ACTION: Continue exact stable-index enumeration from 30,601; stop at the next distinct live abstract survivor for graph-level realizability.
+NEXT ACTION: Continue exact stable-index enumeration from 31,101; stop at the next distinct live abstract survivor for graph-level realizability.
 MANDATORY CONSTRAINTS: Internal evidence only; abstract feasibility is not graph realizability; S<=14 conditional; equality only through S<=8; balanced complete bipartite and X_3 controls; general theorem open.
 <!-- CURRENT-STATUS:END -->
 
