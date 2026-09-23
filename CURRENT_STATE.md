@@ -5,18 +5,18 @@ Canonical repository: `paullenz/MurtySimon742`. Date: 23 September 2026.
 Active target: a genuinely independent proof of Erdős #742 / the Murty–Simon inequality e(G)<=floor(n^2/4), preferably with the equality characterization. Forward priority is the project’s own complement / residual / Hall / profile / realizability route, not a reconstruction of the external e+disj+X proof. The first focused session produced the internally checked candidate threshold `Delta>=250n/429`, shrinking the live strip to `n/2<Delta<250n/429`. The theorem and its inherited graph-to-profile spine remain candidate/internal-review mathematics. A 24-focused-session go/no-go gate applies. Prior eventual-D2C work remains preserved but is no longer the active forward objective.
 
 <!-- CURRENT-STATUS:START -->
-CHECKPOINT CLASS: STARTED_LIVE_STRIP_ELIG_COLLISION
+CHECKPOINT CLASS: VERIFIED_INTERNAL_THIRD_BATCH_COLLISION_SCREEN
 WORK MODE: MATH
 INSPECTED PREDECESSOR: b67d73be41214916c90ac31c23838061a3825d51.
 LAST VERIFIED RESULT: The recovered 09:00 session proved the graph-level eligibility condition 2s_i>h_i for positive demand and added a graph-level surplus envelope. Fresh actual-D2C live-strip searches refute unrestricted injectivity but have not found an ELIG--ELIG collision in the large-surplus regime. The 09:00 telemetry is still administratively stale; its mathematical artifacts are durable.
 ACTIVE SESSION: Scheduled trigger 2026-09-23T10:00:38+01:00; actual start 10:00:51; research cutoff 10:53:38; hard close 10:59:38; 40-minute target applies. Trigger attribution uses the current invocation title and supplied hourly schedule; immutable delivery identity is UNVERIFIED.
-VERIFIED FORWARD INTERVALS: None yet.
-VERIFIED FORWARD SPAN: 0m00s.
-SUBSTANTIVE UNITS: 0.
+VERIFIED FORWARD INTERVALS: 10:04:48--10:06:58 BST.
+VERIFIED FORWARD SPAN: 2m10s.
+SUBSTANTIVE UNITS: 1 complete. A disjoint 1,800-graph fully certified actual-D2C batch produced 103 live-strip maximum-root states, no E>=15 root, 56 collision images, one ELIG--ELIG collision, and live-strip collision multiplicity three.
 CANONICAL RECORD: project/research/session_logs/2026-09-23/2026-09-23T10-00-38+01-00-canonical.json.
 UNPRESERVED WORK: None.
 DEFERRED ADMIN: Finalize stale 09:00 telemetry in the audit; correct prior audit prose/PDF from 42 to 32.
-NEXT ACTION: Attack ELIG--ELIG crossed-supplement collisions in the live strip using the new graph-level surplus envelope; prove impossibility or derive a quantitative residual/degree charge sufficient to reduce the 5.65 pair-lift gap.
+NEXT ACTION: Inspect the single third-batch ELIG--ELIG collision, solve its exact forced-collision maximum-demand problem, and isolate the graph quantity keeping its envelope below 15.
 FOCUSED-SESSION COUNT: 3/24 before this session.
 TARGET RESULT: PENDING.
 MANDATORY CONSTRAINTS: S<=14 is internal/computer-assisted and conditional on the audited bridge; profile feasibility is not graph realizability; equality only through S<=8; balanced complete bipartite graphs and X_3 remain controls; no external e+disj+X core; general theorem open.

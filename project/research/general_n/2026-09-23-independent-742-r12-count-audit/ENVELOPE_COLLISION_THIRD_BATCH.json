@@ -1,0 +1,24 @@
+{
+  "generator": "BigInt deterministic greedy edge deletion; full every-edge criticality certification",
+  "range": {
+    "n": [
+      19,
+      36
+    ],
+    "seeds": [
+      200,
+      299
+    ]
+  },
+  "graphs": 1800,
+  "certified": 1800,
+  "live_strip_max_root_states": 103,
+  "roots_E_ge_15": 0,
+  "max_E": 11,
+  "collision_images": 56,
+  "eligible_endpoint_collision_images": 1,
+  "E_ge_15_collision_images": 0,
+  "E_ge_15_ELIG_ELIG_collision_images": 0,
+  "max_collision_multiplicity": 3,
+  "examples": []
+}
