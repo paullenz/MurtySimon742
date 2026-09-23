@@ -5,19 +5,19 @@ Canonical repository: `paullenz/MurtySimon742`. Date: 23 September 2026.
 Active target: a genuinely independent proof of Erdős #742 / the Murty–Simon inequality e(G)<=floor(n^2/4), preferably with the equality characterization. Forward priority is the project’s own complement / residual / Hall / profile / realizability route, not a reconstruction of the external e+disj+X proof. The first focused session produced the internally checked candidate threshold `Delta>=250n/429`, shrinking the live strip to `n/2<Delta<250n/429`. The theorem and its inherited graph-to-profile spine remain candidate/internal-review mathematics. A 24-focused-session go/no-go gate applies. Prior eventual-D2C work remains preserved but is no longer the active forward objective.
 
 <!-- CURRENT-STATUS:START -->
-CHECKPOINT CLASS: VERIFIED_INTERNAL_N18_ROW_PREFIX_8850
+CHECKPOINT CLASS: VERIFIED_INTERNAL_N18_ROW_SHARDING_READY_8900
 WORK MODE: MATH
-INSPECTED PREDECESSOR: 54562f7d8195144f6d0b255e985d9752cb8c2ce0.
-LAST VERIFIED RESULT: The strengthened n=18,Delta=10 replay now covers scalar candidates 1-8,850 after four separately proved tuple exclusions: zero survivors, global closest gap 1. Exact solver-free enumeration gives 54,816 scalar candidates among 70,959 full patterns, so the remaining 45,966 candidates require bounded deterministic sharding rather than serial completion in this slot.
+INSPECTED PREDECESSOR: 144be889a06db5f1e139ddb61dc0f20bc1571704.
+LAST VERIFIED RESULT: Prefix scalar 1-8,900 is solved with zero survivors. Exact deterministic --stop-scalar support was validated on the complete 8,851-8,900 shard, whose closest result has deficit 25 (gap 9). The full post-exclusion row contains 54,816 scalar candidates.
 ACTIVE SESSION: Scheduled trigger 2026-09-23T15:00:38+01:00; actual entry 15:00:47; STARTED verified 15:02:43; cutoff 15:53:38; hard close 15:59:38. Immutable delivery identity is UNVERIFIED.
-VERIFIED FORWARD SPAN: 5m36s.
+VERIFIED FORWARD SPAN: 5m59s.
 SESSION RESULT: RAN/ACTIVE; 40-minute target applies.
-SUBSTANTIVE UNITS: 2. Focused-session counter remains 4/24 pending finalization.
+SUBSTANTIVE UNITS: 3. Focused-session counter remains 4/24 pending finalization.
 CANONICAL RECORD: project/research/session_logs/2026-09-23/2026-09-23T15-00-38+01-00-canonical.json.
 UNPRESERVED WORK: None after this checkpoint.
 DEFERRED ADMIN: Audit/finalize stale 09:00, 11:00 and 13:00 telemetry; correct prior audit prose/PDF from 42 to 32.
-NEXT ACTION: Add deterministic scalar start/stop shard bounds and run disjoint post-8,850 shards; preserve any first survivor or exact zero-survivor shard closures.
-MANDATORY CONSTRAINTS: The 1-8,850 prefix is not row closure; abstract feasibility is not graph realizability; S<=14 remains conditional on the audited bridge; equality only through S<=8; balanced complete bipartite graphs and X_3 remain controls; no external e+disj+X core; general theorem open.
+NEXT ACTION: Run disjoint exact scalar shards above 8,900; preserve any survivor immediately or aggregate completed zero-survivor shard closures.
+MANDATORY CONSTRAINTS: Prefix closure is not row closure; abstract feasibility is not graph realizability; S<=14 remains conditional on the audited bridge; equality only through S<=8; balanced complete bipartite graphs and X_3 remain controls; no external e+disj+X core; general theorem open.
 <!-- CURRENT-STATUS:END -->
 
 ## Latest adversarial audit - 23 September 2026

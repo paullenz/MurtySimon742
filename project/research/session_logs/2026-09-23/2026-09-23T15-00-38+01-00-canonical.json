@@ -35,6 +35,12 @@
       "stop": "2026-09-23T15:10:21+01:00",
       "seconds": 284,
       "unit": "Extended the deterministic strengthened n=18,Delta=10 replay from scalar 7,701 through 8,850 and computed the exact remaining row size."
+    },
+    {
+      "start": "2026-09-23T15:11:48+01:00",
+      "stop": "2026-09-23T15:12:11+01:00",
+      "seconds": 23,
+      "unit": "Implemented and validated exact scalar start/stop shard bounds on the 8,851-8,900 range."
     }
   ],
   "forward_research_stop": "PENDING",
@@ -42,9 +48,9 @@
   "preservation_complete": "PENDING",
   "final_report_time": "PENDING",
   "wall_clock_span_to_preservation_complete": "PENDING",
-  "verified_forward_research_span": "00:05:36",
+  "verified_forward_research_span": "00:05:59",
   "preservation_span": "PENDING",
-  "substantive_unit_count": 2,
+  "substantive_unit_count": 3,
   "timestamped_unit_ledger": [
     {
       "unit": 1,
@@ -59,6 +65,13 @@
       "complete": "2026-09-23T15:10:21+01:00",
       "result": "Scalar candidates 7,701-8,850 / full patterns through 11,795 produced zero survivors; local resumed-segment best gap was 5, while global prefix best remains 1. A solver-free traversal established exact row totals of 54,816 scalar candidates among 70,959 full patterns after the four separately excluded tuples, showing that serial completion cannot fit this slot.",
       "evidence": "project/research/general_n/2026-09-23-independent-742-r15-near-equality/N18_ROW_RESUME_8850.md"
+    },
+    {
+      "unit": 3,
+      "start": "2026-09-23T15:11:48+01:00",
+      "complete": "2026-09-23T15:12:11+01:00",
+      "result": "Added --stop-scalar with an explicit range_complete FINAL record. The validation shard 8,851-8,900 completed, found zero survivors, and reported local closest deficit 25 (gap 9). This enables disjoint bounded parallel replay without conflating incomplete processes with closed shards.",
+      "evidence": "project/research/general_n/2026-09-23-independent-742-r15-near-equality/N18_ROW_SHARDING.md"
     }
   ],
   "early_stop_check_time": "PENDING",
@@ -74,8 +87,9 @@
   "commit_shas": [
     "17500411b9e6ccb72552f5a305436ffb5b721e34",
     "54562f7d8195144f6d0b255e985d9752cb8c2ce0",
-    "PENDING_UNIT2_COMMIT"
+    "144be889a06db5f1e139ddb61dc0f20bc1571704",
+    "PENDING_UNIT3_COMMIT"
   ],
-  "live_unfinished_line": "Strengthened row prefix through scalar 8,850 / pattern 11,795 has zero survivors; 54,816 scalar candidates total. Implement bounded deterministic shards before further replay.",
+  "live_unfinished_line": "Prefix 1-8,900 is solved with zero survivors. Launch disjoint bounded shards above 8,900 using exact range_complete evidence.",
   "historical_fragments": []
 }

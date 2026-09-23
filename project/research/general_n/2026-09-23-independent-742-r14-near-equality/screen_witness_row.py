@@ -5,7 +5,8 @@ from screen_demand_15_16 import partitions, f
 from witness_deficit_milp import solve_aggregated
 
 
-def main(n, Delta, stop_first=False, skip_tuples=None, resume_scalar=0):
+def main(n, Delta, stop_first=False, skip_tuples=None,
+         resume_scalar=0, stop_scalar=None):
     skip_tuples = set() if skip_tuples is None else set(skip_tuples)
     rho = 2 * Delta - n
     Dmax = n * rho // 2 - 2 if n % 2 == 0 else (n * rho - 3) // 2
@@ -43,6 +44,21 @@ def main(n, Delta, stop_first=False, skip_tuples=None, resume_scalar=0):
                             "resume_target": resume_scalar,
                         }), flush=True)
                     continue
+                if stop_scalar is not None and scalar_pass > stop_scalar:
+                    result = {
+                        "n": n, "Delta": Delta, "rho": rho,
+                        "Dmax": Dmax, "a": a,
+                        "patterns_tested": tested,
+                        "scalar_pass": scalar_pass - 1,
+                        "range_start": resume_scalar + 1,
+                        "range_stop": stop_scalar,
+                        "range_complete": True,
+                        "abstract_survivor_count": len(abstract_survivors),
+                        "abstract_survivors": abstract_survivors,
+                        "closest_result": best_excluded,
+                    }
+                    print("FINAL "+json.dumps(result), flush=True)
+                    return
                 out = solve_aggregated(list(p), list(xs), rho, Delta, 10)
                 out["total_demand"] = total
                 if out["minimum_deficit"] is not None:
@@ -97,5 +113,8 @@ if __name__ == "__main__":
     resume_scalar = 0
     if "--resume-scalar" in sys.argv:
         resume_scalar = int(sys.argv[sys.argv.index("--resume-scalar") + 1])
+    stop_scalar = None
+    if "--stop-scalar" in sys.argv:
+        stop_scalar = int(sys.argv[sys.argv.index("--stop-scalar") + 1])
     main(int(sys.argv[1]), int(sys.argv[2]),
-         "--stop-first" in sys.argv, skip, resume_scalar)
+         "--stop-first" in sys.argv, skip, resume_scalar, stop_scalar)
