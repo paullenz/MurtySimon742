@@ -78,6 +78,12 @@
       "stop": "2026-09-23T10:33:36+01:00",
       "seconds": 144,
       "unit": "Proved the subset-union Hall envelope is exactly attainable at the certificate-assignment interface; replayed exact DP on 169 live-strip actual-graph roots."
+    },
+    {
+      "start": "2026-09-23T10:35:24+01:00",
+      "stop": "2026-09-23T10:40:21+01:00",
+      "seconds": 297,
+      "unit": "Extended the exact-H actual-D2C screen to n=50 on a third disjoint 5,100-graph batch."
     }
   ],
   "forward_research_stop": "PENDING",
@@ -85,9 +91,9 @@
   "preservation_complete": "PENDING",
   "final_report_time": "PENDING",
   "wall_clock_span_to_preservation_complete": "PENDING",
-  "verified_forward_research_span": "00:19:11",
+  "verified_forward_research_span": "00:24:08",
   "preservation_span": "PENDING",
-  "substantive_unit_count": 7,
+  "substantive_unit_count": 8,
   "timestamped_unit_ledger": [
     {
       "unit": 1,
@@ -137,6 +143,13 @@
       "complete": "2026-09-23T10:33:36+01:00",
       "result": "Exactness theorem: certificate-assignment optimum S*=H. Inclusion-minimal maximizers have >h_i/2 label-private edges; assign those first and all shared union edges arbitrarily. Exact DP agreed on 169/169 roots, max 4,150 states.",
       "evidence": "project/research/general_n/2026-09-23-independent-742-r12-count-audit/HALL_ENVELOPE_EXACTNESS.md"
+    },
+    {
+      "unit": 8,
+      "start": "2026-09-23T10:35:24+01:00",
+      "complete": "2026-09-23T10:40:21+01:00",
+      "result": "5,100/5,100 graphs certified over n=17..50; 228 live-strip maximum roots; max E=14, max exact H=9; no H>=15 root.",
+      "evidence": "project/research/general_n/2026-09-23-independent-742-r12-count-audit/EXACT_HALL_BATCH_THREE.json"
     }
   ],
   "early_stop_check_time": "PENDING",
@@ -153,6 +166,6 @@
     "09:00 predecessor telemetry remains PENDING after hard close; reconciliation deferred."
   ],
   "commit_shas": [],
-  "live_unfinished_line": "Use exact H as the primary actual-graph obstruction; extend the disjoint live-strip screen and derive structural consequences of H>=15.",
+  "live_unfinished_line": "Derive structural consequences of an H>=15 inclusion-minimal maximizer, especially private-certificate lower bounds and their collision/degree implications.",
   "historical_fragments": []
 }

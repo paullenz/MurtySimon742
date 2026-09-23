@@ -1,0 +1,24 @@
+{
+  "generator": "Python Mersenne-Twister complete-graph greedy deletion; full independent every-edge certification",
+  "range": {
+    "seed": [
+      750,
+      899
+    ],
+    "n": [
+      17,
+      50
+    ]
+  },
+  "stats": {
+    "graphs": 5100,
+    "certified": 5100,
+    "live_roots": 228,
+    "E_ge_15": 0,
+    "H_ge_15": 0,
+    "max_E": 14,
+    "max_H": 9,
+    "scalar_gap_total": 130
+  },
+  "examples": []
+}
