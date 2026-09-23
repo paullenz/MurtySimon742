@@ -13,7 +13,7 @@
   "launch_status": "STARTED",
   "started_record_prepared_at": "2026-09-23T20:02:19+01:00",
   "started_record_published_at": "2026-09-23T20:02:19+01:00",
-  "first_substantive_checkpoint_time": "PENDING",
+  "first_substantive_checkpoint_time": "2026-09-23T20:05:22+01:00",
   "segments": [
     {
       "segment_id": "segment-1",
@@ -23,16 +23,31 @@
       "notes": "19:00 predecessor finalized before this trigger; no overlap."
     }
   ],
-  "forward_research_intervals": [],
+  "forward_research_intervals": [
+    {
+      "start": "2026-09-23T20:02:39+01:00",
+      "stop": "2026-09-23T20:04:34+01:00",
+      "seconds": 115,
+      "unit": "Exact stable-index range 30,501-30,600 closed with zero abstract survivors; closest gap 3."
+    }
+  ],
   "forward_research_stop": "PENDING",
   "preservation_start": "PENDING",
   "preservation_complete": "PENDING",
   "final_report_time": "PENDING",
   "wall_clock_span_to_preservation_complete": "PENDING",
-  "verified_forward_research_span": "00:00:00",
+  "verified_forward_research_span": "00:01:55",
   "preservation_span": "PENDING",
-  "substantive_unit_count": 0,
-  "timestamped_unit_ledger": [],
+  "substantive_unit_count": 1,
+  "timestamped_unit_ledger": [
+    {
+      "unit": 1,
+      "start": "2026-09-23T20:02:39+01:00",
+      "complete": "2026-09-23T20:04:34+01:00",
+      "result": "Closed exact stable-index range 30,501-30,600 with zero abstract survivors. Closest tuple d=(4,4,4,3), x=(4,4,4,4), h=(4,4,4,5) has minimum deficit 19, three above Dmax=16.",
+      "evidence": "project/research/general_n/2026-09-23-independent-742-r20-row-closure/N18_RANGE_30501_30600.md"
+    }
+  ],
   "early_stop_check_time": "PENDING",
   "early_stop_check_result": "PENDING",
   "stop_reason": "PENDING",
@@ -44,6 +59,6 @@
   "compliance_status": "PENDING",
   "infrastructure_failures": [],
   "commit_shas": [],
-  "live_unfinished_line": "Continue exact stable-index enumeration from 30,501.",
+  "live_unfinished_line": "Continue exact stable-index enumeration from 30,601; full n=18 row closure remains open.",
   "historical_fragments": []
 }
