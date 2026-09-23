@@ -35,6 +35,12 @@
       "stop": "2026-09-23T14:13:39+01:00",
       "seconds": 297,
       "unit": "Enumerated all unlabeled seven-vertex witness graphs and solved the exact weighted criticality-certificate cover, proving minimum star slack 30 with five or six available Z-certificates."
+    },
+    {
+      "start": "2026-09-23T14:15:24+01:00",
+      "stop": "2026-09-23T14:16:46+01:00",
+      "seconds": 82,
+      "unit": "Exhaustively screened the relevant dense eight-witness graphs and excluded the remaining D=16 equality case, closing the n=18 tuple d=(8,7),x=h=(8,7)."
     }
   ],
   "forward_research_stop": "PENDING",
@@ -42,9 +48,9 @@
   "preservation_complete": "PENDING",
   "final_report_time": "PENDING",
   "wall_clock_span_to_preservation_complete": "PENDING",
-  "verified_forward_research_span": "00:06:38",
+  "verified_forward_research_span": "00:08:00",
   "preservation_span": "PENDING",
-  "substantive_unit_count": 2,
+  "substantive_unit_count": 3,
   "timestamped_unit_ledger": [
     {
       "unit": 1,
@@ -59,6 +65,13 @@
       "complete": "2026-09-23T14:13:39+01:00",
       "result": "All 1,044 unlabeled graphs on seven witness vertices were screened by an exact weighted set-cover model of the D2C Z-certificate condition. With either |Z|<=5 or |Z|<=6 the minimum of 2*missing_edges+certificate_cost is 30. Therefore the n=18 tuple under D<=16 forces delta_i=delta_j=7, exactly two endpoint-deficit units, D=16, and zero deficit elsewhere.",
       "evidence": "project/research/general_n/2026-09-23-independent-742-r14-near-equality/STAR7_EXACT_CERTIFICATE_COVER.md"
+    },
+    {
+      "unit": 3,
+      "start": "2026-09-23T14:15:24+01:00",
+      "complete": "2026-09-23T14:16:46+01:00",
+      "result": "Every eight-vertex witness graph compatible with star slack<=34 has at most six missing edges. Exhaustively extending all seven-vertex atlas representatives tested 1,264 labeled forms; exact certificate cover with |Z|<=5 or 6 has minimum slack 40. The forced D=16 tuple supplies at most 34, so d=(8,7),x=h=(8,7) is graph-infeasible for all D<=16.",
+      "evidence": "project/research/general_n/2026-09-23-independent-742-r14-near-equality/STAR8_DENSE_CERTIFICATE_COVER.md"
     }
   ],
   "early_stop_check_time": "PENDING",
@@ -75,8 +88,9 @@
   ],
   "commit_shas": [
     "e376569636b7917bd58a92fd5a81cb1275d42cb0",
-    "2d3ee9fab2fe8bba8891d5c66c06d9734df43bd3"
+    "2d3ee9fab2fe8bba8891d5c66c06d9734df43bd3",
+    "5988761a65dc054ee7d2ce6e53a74a116fb5b1d7"
   ],
-  "live_unfinished_line": "Compute the exact eight-witness certificate-cover minimum with |Z|<=5 in the only relevant range star slack<=34; if its minimum is at least 35, the n=18 tuple is excluded.",
+  "live_unfinished_line": "Continue the complete n=18,Delta=10 abstract row past the excluded d=(8,7),x=(8,7) tuple; preserve the next survivor and apply exact certificate-cover bounds, or close the row.",
   "historical_fragments": []
 }

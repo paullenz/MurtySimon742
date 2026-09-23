@@ -1,0 +1,18 @@
+{
+  "x": 8,
+  "relevant_max_star_slack": 34,
+  "implied_max_missing_edges": 6,
+  "max_certificates": 5,
+  "labelled_extensions_tested": 1264,
+  "feasible_certificate_graphs": 488,
+  "minimum": {
+    "star_slack": 40,
+    "missing_edges": 6,
+    "certificate_cost": 28,
+    "labelled_graph_mask": 268367708
+  },
+  "cross_check_max_certificates_6": {
+    "minimum_star_slack": 40,
+    "feasible_certificate_graphs": 1263
+  }
+}

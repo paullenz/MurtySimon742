@@ -139,11 +139,69 @@ def screen_atlas(x=7, max_certificates=6):
     }
 
 
+def screen_dense_eight(max_missing=6, max_certificates=5):
+    # Every eight-vertex graph has a vertex-deleted seven-vertex graph.
+    # Extend each unlabeled atlas representative by all 2^7 neighbourhoods;
+    # filtering by total missing edges gives exhaustive coverage (with benign
+    # duplicates) of the dense range relevant to a bounded star slack.
+    x = 8
+    edges = edge_list(x)
+    edge_index = {e: k for k, e in enumerate(edges)}
+    atlas = [g for g in nx.graph_atlas_g() if len(g) == 7]
+    tested = feasible = 0
+    best = None
+    seen = set()
+    for g in atlas:
+        base_missing = 21 - g.number_of_edges()
+        if base_missing > max_missing:
+            continue
+        for neighbourhood in range(1 << 7):
+            new_missing = 7 - neighbourhood.bit_count()
+            if base_missing + new_missing > max_missing:
+                continue
+            graph = 0
+            for u, v in g.edges():
+                graph |= 1 << edge_index[(min(u, v), max(u, v))]
+            for u in range(7):
+                if neighbourhood >> u & 1:
+                    graph |= 1 << edge_index[(u, 7)]
+            if graph in seen:
+                continue
+            seen.add(graph)
+            tested += 1
+            beta, chosen = cover_cost(x, graph, max_certificates)
+            if beta is None:
+                continue
+            feasible += 1
+            missing_count = 28 - graph.bit_count()
+            slack = 2 * missing_count + beta
+            row = {
+                "edges": graph.bit_count(),
+                "missing_edges": missing_count,
+                "certificate_cost": beta,
+                "star_slack": slack,
+                "certificates": chosen,
+                "labelled_graph_mask": graph,
+            }
+            if best is None or slack < best["star_slack"]:
+                best = row
+    return {
+        "x": 8,
+        "max_missing": max_missing,
+        "max_certificates": max_certificates,
+        "labelled_extensions_tested": tested,
+        "feasible_certificate_graphs": feasible,
+        "minimum": best,
+    }
+
+
 if __name__ == "__main__":
     x = int(sys.argv[1]) if len(sys.argv) > 1 else 7
     missing = int(sys.argv[2]) if len(sys.argv) > 2 else 3
     certs = int(sys.argv[3]) if len(sys.argv) > 3 else 6
-    if len(sys.argv) > 4 and sys.argv[4] == "atlas":
+    if len(sys.argv) > 4 and sys.argv[4] == "dense8":
+        print(json.dumps(screen_dense_eight(missing, certs), indent=2))
+    elif len(sys.argv) > 4 and sys.argv[4] == "atlas":
         print(json.dumps(screen_atlas(x, certs), indent=2))
     else:
         print(json.dumps(screen(x, missing, certs), indent=2))
