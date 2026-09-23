@@ -1,0 +1,51 @@
+{
+  "schema_version": "launch-first-v1",
+  "run_kind": "SCHEDULED_RESEARCH",
+  "session_id": "2026-09-23T17:00:38+01:00",
+  "scheduled_trigger": "2026-09-23T17:00:38+01:00",
+  "next_scheduled_trigger": "2026-09-23T18:00:38+01:00",
+  "research_cutoff": "2026-09-23T17:53:38+01:00",
+  "hard_close_deadline": "2026-09-23T17:59:38+01:00",
+  "trigger_attribution_method": "launch_recovery_watchdog; current-hour 17:00:38 Europe/London trigger; primary scheduled launch had no durable STARTED record when checked",
+  "trigger_attribution_ambiguity": "UNVERIFIED: no immutable delivery identifier beyond current watchdog invocation and schedule identity",
+  "earliest_actual_start": "2026-09-23T17:07:58+01:00",
+  "lateness_vs_trigger": "00:07:20",
+  "launch_status": "STARTED_RECOVERY",
+  "started_record_prepared_at": "2026-09-23T17:07:58+01:00",
+  "started_record_published_at": "2026-09-23T17:07:58+01:00",
+  "first_substantive_checkpoint_time": "PENDING",
+  "segments": [
+    {
+      "segment_id": "segment-1-recovery",
+      "actual_start": "2026-09-23T17:07:58+01:00",
+      "actual_stop": "UNVERIFIED",
+      "role": "forward_research",
+      "notes": "Primary scheduled launch was missing; this watchdog recovered the same trigger. No duplicate session or credit."
+    }
+  ],
+  "forward_research_intervals": [],
+  "forward_research_stop": "PENDING",
+  "preservation_start": "PENDING",
+  "preservation_complete": "PENDING",
+  "final_report_time": "PENDING",
+  "wall_clock_span_to_preservation_complete": "PENDING",
+  "verified_forward_research_span": "00:00:00",
+  "preservation_span": "PENDING",
+  "substantive_unit_count": 0,
+  "timestamped_unit_ledger": [],
+  "early_stop_check_time": "PENDING",
+  "early_stop_check_result": "PENDING",
+  "stop_reason": "PENDING",
+  "research_target_minutes": 40,
+  "target_40m_applies": true,
+  "target_40m_met": "PENDING",
+  "session_run_status": "STARTED",
+  "focused_session_credit": "PENDING; this is recovery of the original 17:00 trigger only",
+  "compliance_status": "STARTED_RECOVERY; launch target missed because primary launch had no durable STARTED evidence by watchdog entry",
+  "infrastructure_failures": [
+    "Primary scheduled launch for 17:00:38 had no durable STARTED record when recovery watchdog checked."
+  ],
+  "commit_shas": [],
+  "live_unfinished_line": "Resume the repository's exact n=18 stable-index row closure from the latest preserved boundary; stop at the next live abstract survivor for graph-level realizability.",
+  "historical_fragments": []
+}
