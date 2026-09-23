@@ -5,20 +5,19 @@ Canonical repository: `paullenz/MurtySimon742`. Date: 23 September 2026.
 Active target: a genuinely independent proof of Erdős #742 / the Murty–Simon inequality e(G)<=floor(n^2/4), preferably with the equality characterization. Forward priority is the project’s own complement / residual / Hall / profile / realizability route, not a reconstruction of the external e+disj+X proof. The first focused session produced the internally checked candidate threshold `Delta>=250n/429`, shrinking the live strip to `n/2<Delta<250n/429`. The theorem and its inherited graph-to-profile spine remain candidate/internal-review mathematics. A 24-focused-session go/no-go gate applies. Prior eventual-D2C work remains preserved but is no longer the active forward objective.
 
 <!-- CURRENT-STATUS:START -->
-CHECKPOINT CLASS: VERIFIED_INTERNAL_MINIMAL_HALL_GEOMETRY
-WORK MODE: MATH
+CHECKPOINT CLASS: VERIFIED_INTERNAL_DEFICIT_MATCHING_REDUCTION
+WORK MODE: PRESERVATION
 INSPECTED PREDECESSOR: b67d73be41214916c90ac31c23838061a3825d51.
-LAST VERIFIED RESULT: If L is inclusion-minimal among exact-H maximizers, let P_i be certificate edges private to i within L and q the number of union edges shared by at least two labels. Then 2|P_i|-h_i>=1 for every i and H=sum_i(2|P_i|-h_i)+2q. Thus any H>=15 obstruction must carry at least fifteen units of private surplus plus twice its overlap. In the second-batch top-root replay, maximum H=10 occurs at n=40 with two labels, private surpluses 6 and 2, and one shared union edge.
-ACTIVE SESSION: Scheduled trigger 2026-09-23T10:00:38+01:00; actual start 10:00:51; research cutoff 10:53:38; hard close 10:59:38; 40-minute target applies. A same-trigger watchdog re-entry at 10:43 found the primary run active and received no duplicate credit. Trigger attribution uses the current invocation title and supplied hourly schedule; immutable delivery identity is UNVERIFIED.
-VERIFIED FORWARD INTERVALS: 10:04:48--10:06:58; 10:08:12--10:08:28; 10:09:08--10:10:13; 10:11:53--10:14:39; 10:15:48--10:19:47; 10:21:45--10:25:05; 10:26:39--10:29:50; 10:31:12--10:33:36; 10:35:24--10:40:21; 10:41:52--10:45:18 BST.
-VERIFIED FORWARD SPAN: 27m34s.
-SUBSTANTIVE UNITS: 9 complete. The exact-H obstruction now has an explicit private/shared decomposition; no H>=15 root has been observed.
+LAST VERIFIED RESULT: Let rho=2Delta-n and delta_x=Delta-d(x). Every private certificate witness (i,t) has a unique common neighbor, so d(i)+d(t)<=n-1 and delta_i+delta_t>=rho+1. If a strict counterexample has m>floor(n^2/4), its total degree deficit D=sum delta_x is at most n rho/2-2 for even n and (n rho-3)/2 for odd n. Hence any matching in the private-witness graph has size at most floor(D/(rho+1)); by Konig, all private witnesses have a vertex cover of that size. For cover X subset L and Y subset B, every label outside X satisfies h_i<=2|Y|-1.
+ACTIVE SESSION: Scheduled trigger 2026-09-23T10:00:38+01:00; actual start 10:00:51; research stopped 10:50:48; hard close 10:59:38. A same-trigger watchdog re-entry at 10:43 found the primary run active and received no duplicate credit. Trigger attribution uses the current invocation title and supplied hourly schedule; immutable delivery identity is UNVERIFIED.
+VERIFIED FORWARD SPAN: 31m00s across ten closed intervals.
+SUBSTANTIVE UNITS: 10 complete. Exact H, its minimal-maximizer geometry, three fresh actual-D2C screens, and the deficit matching reduction are durable.
 CANONICAL RECORD: project/research/session_logs/2026-09-23/2026-09-23T10-00-38+01-00-canonical.json.
 UNPRESERVED WORK: None.
 DEFERRED ADMIN: Finalize stale 09:00 telemetry in the audit; correct prior audit prose/PDF from 42 to 32.
-NEXT ACTION: Use the unique-common-neighbor injection behind private edges to relate H>=15 to B-edge and degree budgets, then test the inequality on hostile top-H roots.
+NEXT ACTION: Analyze the concentrated-cover branch: for a minimum cover X union Y, combine h_i<=2|Y|-1 outside X with H>=15 and the live strip.
 FOCUSED-SESSION COUNT: 3/24 before this session.
-TARGET RESULT: PENDING.
+TARGET RESULT: 40-minute target NOT MET; final telemetry pending.
 MANDATORY CONSTRAINTS: S<=14 is internal/computer-assisted and conditional on the audited bridge; H is exact only for the defined graph-level certificate-choice interface; equality only through S<=8; balanced complete bipartite graphs and X_3 remain controls; no external e+disj+X core; general theorem open.
 <!-- CURRENT-STATUS:END -->
 

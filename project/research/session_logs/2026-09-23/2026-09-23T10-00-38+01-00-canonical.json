@@ -90,6 +90,12 @@
       "stop": "2026-09-23T10:45:18+01:00",
       "seconds": 206,
       "unit": "Derived the private-edge decomposition of an inclusion-minimal H-maximizer and inspected the twelve highest-H roots of the second fresh batch."
+    },
+    {
+      "start": "2026-09-23T10:47:22+01:00",
+      "stop": "2026-09-23T10:50:48+01:00",
+      "seconds": 206,
+      "unit": "Derived the degree-deficit matching/vertex-cover reduction for the private-certificate witness graph and checked the top-H negative control."
     }
   ],
   "forward_research_stop": "PENDING",
@@ -97,9 +103,9 @@
   "preservation_complete": "PENDING",
   "final_report_time": "PENDING",
   "wall_clock_span_to_preservation_complete": "PENDING",
-  "verified_forward_research_span": "00:27:34",
+  "verified_forward_research_span": "00:31:00",
   "preservation_span": "PENDING",
-  "substantive_unit_count": 9,
+  "substantive_unit_count": 10,
   "timestamped_unit_ledger": [
     {
       "unit": 1,
@@ -163,6 +169,13 @@
       "complete": "2026-09-23T10:45:18+01:00",
       "result": "For minimal maximizing L, private counts p_i satisfy 2p_i-h_i>=1 and H=sum_i(2p_i-h_i)+2q, where q counts shared union edges. Thus H>=15 forces either large private surplus or quantified overlap. Top-root replay: max H=10 at n=40 with private surpluses 6,2 and q=1.",
       "evidence": "project/research/general_n/2026-09-23-independent-742-r12-count-audit/MINIMAL_HALL_MAXIMIZER_GEOMETRY.md"
+    },
+    {
+      "unit": 10,
+      "start": "2026-09-23T10:47:22+01:00",
+      "complete": "2026-09-23T10:50:48+01:00",
+      "result": "For rho=2Delta-n and deficit delta_x=Delta-d(x), every private witness edge it satisfies delta_i+delta_t>=rho+1. A strict counterexample has total deficit D<n rho/2 (exact parity budgets saved), so the witness graph matching number and minimum vertex cover are at most floor(D/(rho+1)). The top H=10 graph is a valid negative control: m=171 versus floor(n^2/4)=400 and D=498 versus strict-counterexample budget at most 38.",
+      "evidence": "project/research/general_n/2026-09-23-independent-742-r12-count-audit/DEFICIT_MATCHING_REDUCTION.md"
     }
   ],
   "early_stop_check_time": "PENDING",
@@ -179,7 +192,7 @@
     "09:00 predecessor telemetry remains PENDING after hard close; reconciliation deferred."
   ],
   "commit_shas": [],
-  "live_unfinished_line": "Exploit the unique-common-neighbor injection behind each private edge to relate H>=15 to B-edge and degree budgets; test the resulting inequality on hostile top-H roots.",
+  "live_unfinished_line": "Analyze the concentrated-cover branch: for a minimum cover X union Y of the private-witness graph, every label outside X has h_i<=2|Y|-1; combine this with H>=15 and the unresolved strip.",
   "historical_fragments": [],
   "same_trigger_reentries": [
     {
