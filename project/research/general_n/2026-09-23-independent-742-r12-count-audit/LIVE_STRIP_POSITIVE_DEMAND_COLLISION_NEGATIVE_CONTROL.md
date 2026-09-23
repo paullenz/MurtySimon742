@@ -19,6 +19,8 @@ The full legal selection is:
 
 The total demand of this selection is S=3, so this is a negative control for the collision route only. It is not a Murty--Simon counterexample and does not challenge the internal S<=14 closure. It refutes only the proposed universal statement that live-strip crossed-supplement collisions cannot join two positive-demand labels.
 
-A second ELIG--ELIG collision in the same graph, on labels {3,6} with supplements {0,20}, does not admit both labels positive demand under the exact certificate-choice dynamic program.
+An exact MILP over all legal certificate choices, with the four collision certificates forced and both collided labels constrained positive, shows that the maximum possible total demand for this graph/root/collision is **S=3**. Thus this negative control cannot be lifted into the S>=15 regime by a different legal completion.
 
-Route consequence: retire categorical live-strip demand-positive injectivity. Keep the proved supplement-pair congestion bound M_pq <= codeg_{G[B]}(p,q) and move to a quantitative charge using demand magnitude, collision multiplicity, B-two-path congestion and especially the large-surplus regime. The present negative control has d_1+d_4=3 and total S=3, suggesting that the S>=15 regime forced by any strict residual counterexample remains the relevant place for a sharpened theorem.
+A second ELIG--ELIG collision in the same graph, on labels {3,6} with supplements {0,20}, is infeasible when both collided labels are constrained positive demand.
+
+Route consequence: retire categorical live-strip demand-positive injectivity. Keep the proved supplement-pair congestion bound M_pq <= codeg_{G[B]}(p,q) and move to a quantitative charge using demand magnitude, collision multiplicity, B-two-path congestion and especially the large-surplus regime. The present negative control has d_1+d_4=3 and globally maximal forced-collision S=3, so the S>=15 regime forced by any strict residual counterexample remains the relevant place for a sharpened theorem.
