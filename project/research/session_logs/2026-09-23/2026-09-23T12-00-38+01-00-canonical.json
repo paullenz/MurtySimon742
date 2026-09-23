@@ -41,16 +41,28 @@
       "stop": "2026-09-23T12:45:46+01:00",
       "seconds": 1448,
       "unit": "Derived the graph-source capacity x_i <= (Delta-h_i)(Delta-2), closed n=15,Delta=8 by the scalar screen, and exhaustively closed n=16,Delta=9 by the corrected exact abstract witness-deficit MILP."
+    },
+    {
+      "start": "2026-09-23T12:48:00+01:00",
+      "stop": "2026-09-23T12:48:15+01:00",
+      "seconds": 15,
+      "unit": "Exhaustively closed corrected abstract witness row n=17, Delta=9."
+    },
+    {
+      "start": "2026-09-23T12:48:15+01:00",
+      "stop": "2026-09-23T12:48:37+01:00",
+      "seconds": 22,
+      "unit": "Found and preserved the first corrected abstract survivor at n=18, Delta=10."
     }
   ],
-  "forward_research_stop": "PENDING",
+  "forward_research_stop": "2026-09-23T12:48:37+01:00",
   "preservation_start": "PENDING",
   "preservation_complete": "PENDING",
   "final_report_time": "PENDING",
   "wall_clock_span_to_preservation_complete": "PENDING",
-  "verified_forward_research_span": "00:31:00",
+  "verified_forward_research_span": "00:31:37",
   "preservation_span": "PENDING",
-  "substantive_unit_count": 4,
+  "substantive_unit_count": 6,
   "timestamped_unit_ledger": [
     {
       "unit": 1,
@@ -79,6 +91,20 @@
       "complete": "2026-09-23T12:45:46+01:00",
       "result": "For every positive assigned label, h_i<Delta and x_i<=(Delta-h_i)(Delta-2). With these graph-source necessary conditions, n=15,Delta=8 has 14,413 enumerated patterns and zero scalar survivors; n=16,Delta=9 has 14,413 patterns, 7,008 exact-MILP candidates and zero abstract survivors. The closest n=16 pattern d=(7,7,1), x=(7,7,1) needs D=15 versus Dmax=14.",
       "evidence": "project/research/general_n/2026-09-23-independent-742-r12-count-audit/SOURCE_CAPACITY_ROWS_15_16.md"
+    },
+    {
+      "unit": 5,
+      "start": "2026-09-23T12:48:00+01:00",
+      "complete": "2026-09-23T12:48:15+01:00",
+      "result": "Exhaustive corrected n=17,Delta=9 screen: 29,181 symmetry-reduced patterns, 9 scalar passes, zero exact-MILP survivors; closest minimum deficit 18 versus Dmax=7.",
+      "evidence": "project/research/general_n/2026-09-23-independent-742-r12-count-audit/WITNESS_DEFICIT_ROWS_17_18.md"
+    },
+    {
+      "unit": 6,
+      "start": "2026-09-23T12:48:15+01:00",
+      "complete": "2026-09-23T12:48:37+01:00",
+      "result": "First corrected abstract survivor appears at n=18,Delta=10: d=(8,7), x=(8,7), h=(8,7), minimum deficit 13 <= Dmax=16, with seven shared right endpoints and one label-0-only endpoint. Actual graph realizability is unproved.",
+      "evidence": "project/research/general_n/2026-09-23-independent-742-r12-count-audit/WITNESS_DEFICIT_ROWS_17_18.md"
     }
   ],
   "early_stop_check_time": "PENDING",
@@ -98,8 +124,9 @@
     "2bbf86050c0bdd09521527c650f90b571b669f8b",
     "8f33cc9e2397c010ca785382ebdc8ae36b20948a",
     "08786f119fdef58b336c49945db62f1e2f50b986",
-    "a79bcbd22a63ed4c7b7e764797232010ead528c9"
+    "a79bcbd22a63ed4c7b7e764797232010ead528c9",
+    "c1ad0a83caf4f9ddf8e855c7ca8369aa7af46122"
   ],
-  "live_unfinished_line": "Start a timestamped corrected screen at n=17, Delta=9; preserve the first surviving abstract assigned-witness pattern or the completed row.",
+  "live_unfinished_line": "Test actual graph realizability of the n=18, Delta=10 abstract survivor d=(8,7), x=(8,7), h=(8,7), preserving either a certified D2C realization or an explicit graph-level obstruction.",
   "historical_fragments": []
 }

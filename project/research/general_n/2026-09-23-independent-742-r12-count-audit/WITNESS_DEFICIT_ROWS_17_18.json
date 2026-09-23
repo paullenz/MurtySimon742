@@ -1,0 +1,51 @@
+{
+  "row_17_9": {
+    "patterns_tested": 29181,
+    "scalar_pass": 9,
+    "abstract_survivor_count": 0,
+    "closest_minimum_deficit": 18,
+    "Dmax": 7
+  },
+  "row_18_10": {
+    "stopped_after_first_survivor": true,
+    "patterns_tested": 965,
+    "scalar_pass": 1,
+    "survivor": {
+      "d": [
+        8,
+        7
+      ],
+      "x": [
+        8,
+        7
+      ],
+      "h": [
+        8,
+        7
+      ],
+      "minimum_deficit": 13,
+      "Dmax": 16,
+      "centre_deficits": [
+        7,
+        6
+      ],
+      "right_types": [
+        {
+          "labels": [
+            0
+          ],
+          "deficit": 0,
+          "multiplicity": 1
+        },
+        {
+          "labels": [
+            0,
+            1
+          ],
+          "deficit": 0,
+          "multiplicity": 7
+        }
+      ]
+    }
+  }
+}
