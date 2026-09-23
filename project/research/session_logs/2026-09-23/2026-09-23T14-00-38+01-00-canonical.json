@@ -29,6 +29,12 @@
       "stop": "2026-09-23T14:04:55+01:00",
       "seconds": 101,
       "unit": "Used nested exact source geometry to exclude the deficit-14 optimizer of the n=18,Delta=10 tuple."
+    },
+    {
+      "start": "2026-09-23T14:08:42+01:00",
+      "stop": "2026-09-23T14:13:39+01:00",
+      "seconds": 297,
+      "unit": "Enumerated all unlabeled seven-vertex witness graphs and solved the exact weighted criticality-certificate cover, proving minimum star slack 30 with five or six available Z-certificates."
     }
   ],
   "forward_research_stop": "PENDING",
@@ -36,9 +42,9 @@
   "preservation_complete": "PENDING",
   "final_report_time": "PENDING",
   "wall_clock_span_to_preservation_complete": "PENDING",
-  "verified_forward_research_span": "00:01:41",
+  "verified_forward_research_span": "00:06:38",
   "preservation_span": "PENDING",
-  "substantive_unit_count": 1,
+  "substantive_unit_count": 2,
   "timestamped_unit_ledger": [
     {
       "unit": 1,
@@ -46,6 +52,13 @@
       "complete": "2026-09-23T14:04:55+01:00",
       "result": "For the deficit-14 optimizer, T_j subset T_i with |T_i|=8,|T_j|=7 and unique p in T_i\\T_j. Then C_i subset C_j=C_i union {p}. Every shared witness t has its i-source in C_i, so j-uniqueness forces t nonadjacent to p. Since p is also nonadjacent to i, p has at least eight nonneighbors and degree at most 9, contradicting optimizer deficit delta_p=0 (degree 10).",
       "evidence": "project/research/general_n/2026-09-23-independent-742-r14-near-equality/N18_DEFICIT14_NESTED_SOURCE_OBSTRUCTION.md"
+    },
+    {
+      "unit": 2,
+      "start": "2026-09-23T14:08:42+01:00",
+      "complete": "2026-09-23T14:13:39+01:00",
+      "result": "All 1,044 unlabeled graphs on seven witness vertices were screened by an exact weighted set-cover model of the D2C Z-certificate condition. With either |Z|<=5 or |Z|<=6 the minimum of 2*missing_edges+certificate_cost is 30. Therefore the n=18 tuple under D<=16 forces delta_i=delta_j=7, exactly two endpoint-deficit units, D=16, and zero deficit elsewhere.",
+      "evidence": "project/research/general_n/2026-09-23-independent-742-r14-near-equality/STAR7_EXACT_CERTIFICATE_COVER.md"
     }
   ],
   "early_stop_check_time": "PENDING",
@@ -61,8 +74,9 @@
     "13:00 predecessor did not finalize its canonical record before its hard deadline; its latest durable mathematics was retained and its stale telemetry was not rewritten."
   ],
   "commit_shas": [
-    "e376569636b7917bd58a92fd5a81cb1275d42cb0"
+    "e376569636b7917bd58a92fd5a81cb1275d42cb0",
+    "2d3ee9fab2fe8bba8891d5c66c06d9734df43bd3"
   ],
-  "live_unfinished_line": "Re-solve the n=18,Delta=10 tuple with the nested-source obstruction encoded, then test every remaining deficit-15/16 optimizer or close the tuple.",
+  "live_unfinished_line": "Compute the exact eight-witness certificate-cover minimum with |Z|<=5 in the only relevant range star slack<=34; if its minimum is at least 35, the n=18 tuple is excluded.",
   "historical_fragments": []
 }

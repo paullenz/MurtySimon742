@@ -1,0 +1,18 @@
+{
+  "x": 7,
+  "unlabelled_graphs_tested": 1044,
+  "with_Z_at_most_5": {
+    "feasible_graphs": 1043,
+    "minimum_star_slack": 30,
+    "minimum_missing_edges": 7,
+    "certificate_cost": 16,
+    "graph6": "FreVw"
+  },
+  "with_Z_at_most_6": {
+    "feasible_graphs": 1044,
+    "minimum_star_slack": 30,
+    "minimum_missing_edges": 7,
+    "certificate_cost": 16,
+    "graph6": "FreVw"
+  }
+}
