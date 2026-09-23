@@ -5,39 +5,37 @@ Canonical repository: `paullenz/MurtySimon742`. Date: 23 September 2026.
 Active target: a genuinely independent proof of Erdős #742 / the Murty–Simon inequality e(G)<=floor(n^2/4), preferably with the equality characterization. Forward priority is the project’s own complement / residual / Hall / profile / realizability route, not a reconstruction of the external e+disj+X proof. The first focused session produced the internally checked candidate threshold `Delta>=250n/429`, shrinking the live strip to `n/2<Delta<250n/429`. The theorem and its inherited graph-to-profile spine remain candidate/internal-review mathematics. A 24-focused-session go/no-go gate applies. Prior eventual-D2C work remains preserved but is no longer the active forward objective.
 
 <!-- CURRENT-STATUS:START -->
-CHECKPOINT CLASS: WIP_SURVIVOR_SHARDS_1200_PROGRESS
+CHECKPOINT CLASS: SCHEDULED_RESEARCH_FINAL_COUNT_RECONCILED
 
 WORK MODE: MATH
 
-INSPECTED PREDECESSOR: f2f951e538c297243b4dbb02140fc8f96df97f5b.
+INSPECTED PREDECESSOR: bd09c2e04d7d6d19400cd56eaa964b955f01ce4e.
 
-LAST VERIFIED RESULT: The eight committed r=12 support-ten `(2,2,1^8)` source shards cover all 6,386 saved strict kernels but contain 32 distinct feasible rows, with counts `[10,11,0,0,6,5,0,0]`, not the reported 42. A fresh replay attempt completed 800 kernels with 10 feasible and zero unknown before a bounded performance pivot; this partial result does not reconcile the total. Freeze the r=12 supplement conclusion and any `S<=14` consequence pending source-stage reconciliation. The prior internally audited edge bound through `S<=13` and equality through `S<=8` are not changed.
+LAST VERIFIED RESULT: The r=12 support-ten source count is 32, not 42. The discrepancy is an accounting double-count: shard 0 supplied 10 in the preceding session and shards 1--7 supplied 22; the old handoff counted the first ten twice. All eight saved shard payloads and unit records agree on 32 across 6,386 kernels with zero solver-unknown. This repairs the count only, not the source algorithm. No r=12 supplement closure or S<=14 claim is authorized.
 
-ACTIVE SESSION: Scheduled trigger 2026-09-23T01:00:38+01:00; actual start 2026-09-23T01:01:57+01:00; lateness 1m19s; research cutoff 01:53:38; hard close 01:59:38; 40-minute target applies. Trigger attribution uses the current invocation title and supplied hourly schedule; immutable delivery identity is UNVERIFIED.
+IMPACT: The legacy supplement wrapper dynamically loads the saved rows, so the prose miscount did not omit kernels. Its reused solver excludes residual-free helper types. The preserved new helper-aware screen admits them under the audit's optimistic semantics; infeasibility would be useful at the abstract profile layer, while feasibility would remain only a survivor and never graph realizability.
 
-VERIFIED FORWARD INTERVALS: 01:06:53--01:08:48 BST; 01:14:11--01:19:11 BST; 01:21:27--01:22:16 BST; 01:23:26--01:31:52 BST. The last interval covers helper-screen implementation followed by continuous survivor-bearing replay through its durable progress checkpoint.
+ACTIVE SESSION: Scheduled trigger 2026-09-23T01:00:38+01:00; actual start 01:01:57; STARTED published 01:06:05 (27 seconds outside the five-minute target); research cutoff 01:53:38; hard close 01:59:38.
 
-VERIFIED FORWARD SPAN: 16m10s.
+VERIFIED FORWARD INTERVALS: 01:06:53--01:08:48; 01:14:11--01:19:11; 01:21:27--01:22:16; 01:23:26--01:31:52; 01:44:33--01:45:56; 01:47:05--01:47:42 BST.
 
-SUBSTANTIVE UNITS: 5, with unit 5 still in progress.
+VERIFIED FORWARD SPAN: 18m10s.
+
+SUBSTANTIVE UNITS: 7. Session RAN; 40-minute target NOT MET; focused-session credit NO; compliance SHORT/NONCOMPLIANT.
+
+FAILURE: Workspace re-entry terminated survivor-replay executor session 84454. Only the durable 1,200/3,192 checkpoint (11 feasible, zero unknown) is credited. A transient later 2,400-row observation has no preserved boundary/final output and is not used. A fresh checkout also failed to complete within two minutes. These are disclosed infrastructure losses, not mathematical evidence.
 
 CANONICAL RECORD: project/research/session_logs/2026-09-23/2026-09-23T01-00-38+01-00-canonical.json.
 
-LAST RUN: Local executor session 12718 ran 01:14:11--01:19:11 BST and was interrupted at an exact progress checkpoint: 800/6,386 kernels, 10 feasible, zero unknown. No aggregate conclusion is drawn from the partial run.
+UNPRESERVED WORK: None; the destroyed executor's unfinalized computation is explicitly discarded. Preservation completed at 01:51:19 BST in cc4745afd78183e4948431f7cf89f5942d8aa691.
 
-ACTIVE RUN: Local executor session 84454 launched at 01:23:26 BST on survivor-bearing shards 0,1,4,5. At 01:31:52 it had completed 1,200/3,192 kernels with 11 feasible and zero unknown. This is an in-progress heartbeat, not a completed-shard result. The preserved helper-aware supplement screen includes residual-free helpers under the audit's optimistic semantics; it has not yet been executed.
+DEFERRED ADMIN: Correct the daily-audit prose/PDF from 42 to 32; verify the first three post-cutover launches at the next audit. No settings claim substitutes for observed telemetry.
 
-UNPRESERVED WORK: None before launch; active computation has not yet produced a result.
+NEXT ACTION: Run `screen_support10_case1_helpers.py` on the corrected 32 saved survivors. Then complete a fresh source-shard replay before any r=12/S<=14 promotion; only afterward independently reimplement the designated r=11 orbit/source stage.
 
-DEFERRED ADMIN: Verify the first three post-cutover launches at the next audit; no settings claim substitutes for observed telemetry.
+FOCUSED-SESSION COUNT: 1/24; this session receives no credit because it has 18m10s of verified research, below 40 minutes.
 
-NEXT ACTION: Collect executor session 84454 and compare its identities/counts with `[10,11,6,5]`; then execute the preserved helper-aware supplement screen on the reconciled saved survivors.
-
-FOCUSED-SESSION COUNT: 1/24 before this session; credit pending a complete evidenced >=40-minute focused record.
-
-TARGET RESULT: PENDING. STARTED checkpoint published at 01:06:05 BST, 27 seconds outside the five-minute launch target after a local git authentication failure and successful GitHub-connector fallback. Session status RAN; preservation completion PENDING; compliance pending finalization.
-
-MANDATORY CONSTRAINTS: The unfinished r=12 solver is not evidence; finite profile feasibility is not graph realizability; equality is characterized only through S<=8; the 250/429 threshold is internal candidate mathematics; balanced complete bipartite graphs and X_3 remain mandatory controls; no use of the external e+disj+X core; the general theorem remains open. Freeze a finite conclusion on any independent count mismatch.
+MANDATORY CONSTRAINTS: Finite profile feasibility is not graph realizability; equality is characterized only through S<=8; the 250/429 threshold remains internal candidate mathematics; balanced complete bipartite graphs and X_3 remain controls; no external e+disj+X core; general theorem open.
 <!-- CURRENT-STATUS:END -->
 
 ## Latest adversarial audit - 23 September 2026
