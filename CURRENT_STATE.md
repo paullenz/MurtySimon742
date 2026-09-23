@@ -31,7 +31,7 @@ NEXT ACTION: At the next independently delivered trigger, resume the live-strip 
 
 FOCUSED-SESSION COUNT: 3/24; unchanged.
 
-TARGET RESULT: N/A because actual entry occurred after the research cutoff. Session NO_RESEARCH/MISSED.
+TARGET RESULT: N/A because actual entry occurred after the research cutoff. Session NO_RESEARCH/MISSED; telemetry finalized 8 seconds after hard close and is NONCOMPLIANT.
 
 MANDATORY CONSTRAINTS: S<=14 is internal/computer-assisted and conditional on the audited bridge; profile feasibility is not graph realizability; equality only through S<=8; balanced complete bipartite graphs and X_3 remain controls; no external e+disj+X core; general theorem open.
 <!-- CURRENT-STATUS:END -->
