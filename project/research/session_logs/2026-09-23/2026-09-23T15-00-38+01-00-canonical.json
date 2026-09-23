@@ -41,6 +41,12 @@
       "stop": "2026-09-23T15:12:11+01:00",
       "seconds": 23,
       "unit": "Implemented and validated exact scalar start/stop shard bounds on the 8,851-8,900 range."
+    },
+    {
+      "start": "2026-09-23T15:13:24+01:00",
+      "stop": "2026-09-23T15:28:18+01:00",
+      "seconds": 894,
+      "unit": "Ran six disjoint exact row shards, closed three zero-survivor ranges, and found the first strengthened abstract survivor at scalar 14,440."
     }
   ],
   "forward_research_stop": "PENDING",
@@ -48,9 +54,9 @@
   "preservation_complete": "PENDING",
   "final_report_time": "PENDING",
   "wall_clock_span_to_preservation_complete": "PENDING",
-  "verified_forward_research_span": "00:05:59",
+  "verified_forward_research_span": "00:20:53",
   "preservation_span": "PENDING",
-  "substantive_unit_count": 3,
+  "substantive_unit_count": 4,
   "timestamped_unit_ledger": [
     {
       "unit": 1,
@@ -72,6 +78,13 @@
       "complete": "2026-09-23T15:12:11+01:00",
       "result": "Added --stop-scalar with an explicit range_complete FINAL record. The validation shard 8,851-8,900 completed, found zero survivors, and reported local closest deficit 25 (gap 9). This enables disjoint bounded parallel replay without conflating incomplete processes with closed shards.",
       "evidence": "project/research/general_n/2026-09-23-independent-742-r15-near-equality/N18_ROW_SHARDING.md"
+    },
+    {
+      "unit": 4,
+      "start": "2026-09-23T15:13:24+01:00",
+      "complete": "2026-09-23T15:28:18+01:00",
+      "result": "Closed zero-survivor shards 8,901-10,900, 14,901-16,900 and 16,901-18,900. The 12,901-14,900 shard found the first strengthened abstract survivor at scalar 14,440 and stopped: d=x=h=(5,5,5), centre deficits (5,5,5), four shared triple endpoints of deficit 0 and one shared triple endpoint of deficit 1, total deficit 16=Dmax. Incomplete shards 10,901-12,900 and 18,901-20,900 were interrupted and receive no closure credit.",
+      "evidence": "project/research/general_n/2026-09-23-independent-742-r15-near-equality/N18_FIRST_STRENGTHENED_ABSTRACT_SURVIVOR.md"
     }
   ],
   "early_stop_check_time": "PENDING",
@@ -88,8 +101,9 @@
     "17500411b9e6ccb72552f5a305436ffb5b721e34",
     "54562f7d8195144f6d0b255e985d9752cb8c2ce0",
     "144be889a06db5f1e139ddb61dc0f20bc1571704",
-    "PENDING_UNIT3_COMMIT"
+    "da5274d735b79abab53205b9c5acd259cb4eba5c",
+    "PENDING_UNIT4_COMMIT"
   ],
-  "live_unfinished_line": "Prefix 1-8,900 is solved with zero survivors. Launch disjoint bounded shards above 8,900 using exact range_complete evidence.",
+  "live_unfinished_line": "Test graph-level realizability of the scalar-14,440 tuple d=x=h=(5,5,5) with five common witnesses and deficit allocation (5,5,5;0,0,0,0,1). Abstract feasibility is not graph realizability.",
   "historical_fragments": []
 }
