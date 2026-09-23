@@ -5,17 +5,17 @@ Canonical repository: `paullenz/MurtySimon742`. Date: 23 September 2026.
 Active target: a genuinely independent proof of Erdős #742 / the Murty–Simon inequality e(G)<=floor(n^2/4), preferably with the equality characterization. Forward priority is the project’s own complement / residual / Hall / profile / realizability route, not a reconstruction of the external e+disj+X proof. The first focused session produced the internally checked candidate threshold `Delta>=250n/429`, shrinking the live strip to `n/2<Delta<250n/429`. The theorem and its inherited graph-to-profile spine remain candidate/internal-review mathematics. A 24-focused-session go/no-go gate applies. Prior eventual-D2C work remains preserved but is no longer the active forward objective.
 
 <!-- CURRENT-STATUS:START -->
-CHECKPOINT CLASS: FINALIZED_10_SESSION_EXACT_HALL_DEFICIT_COVER
-WORK MODE: CLOSED
-INSPECTED PREDECESSOR: b67d73be41214916c90ac31c23838061a3825d51.
-LAST VERIFIED RESULT: The graph-level certificate-choice optimum is exactly H=max_L(2|union C_i|-sum h_i). Three fresh disjoint screens covered 12,900 independently every-edge-certified actual D2C graphs and 747 live-strip maximum roots, finding no H>=15 root. An inclusion-minimal H obstruction decomposes into positive private surpluses plus twice shared-edge overlap. For rho=2Delta-n, its private-witness graph obeys delta_i+delta_t>=rho+1; under a strict counterexample's small total degree-deficit budget, the witness graph has a minimum vertex cover of size at most floor(D/(rho+1)).
-COMPLETED SESSION: Scheduled trigger 2026-09-23T10:00:38+01:00; actual start 10:00:51; STARTED published 10:03:20; first substantive checkpoint 10:08:00; research stop 10:50:48; preservation complete 10:52:51. Launch and first-checkpoint targets were met. Same-trigger watchdog re-entries at 10:43 and 10:58 received no duplicate credit; the latter arrived after finalization and did not reopen mathematics. Immutable delivery identity remains UNVERIFIED.
-VERIFIED FORWARD SPAN: 31m00s across ten closed intervals.
-SESSION RESULT: RAN; 40-minute target applied and was NOT MET. Only 2m50s remained at the natural final research checkpoint, so work stopped under the less-than-five-minute continuation rule. No undocumented time was credited.
-SUBSTANTIVE UNITS: 10. Final focused-session credit NOT GRANTED; counter remains 3/24.
-CANONICAL RECORD: project/research/session_logs/2026-09-23/2026-09-23T10-00-38+01-00-canonical.json.
-PRESERVATION: Complete on main before the 10:59:38 hard close.
-DEFERRED ADMIN: Finalize stale 09:00 telemetry in the audit; correct prior audit prose/PDF from 42 to 32.
+CHECKPOINT CLASS: STARTED_11_SESSION_RECOVERED_LAUNCH
+WORK MODE: MATH
+INSPECTED PREDECESSOR: 5163e37f2d870b15d89977d7b4e365d8f625a88b.
+LAST VERIFIED RESULT: Mathematical status inherited unchanged from the finalized 10:00 session: H=max_L(2|union C_i|-sum h_i) at the defined graph-level certificate-choice interface; fresh actual-D2C screens found no H>=15 live-strip root; an inclusion-minimal H obstruction yields a private-witness graph with delta_i+delta_t>=rho+1 and a small cover under the strict-counterexample deficit budget.
+ACTIVE SESSION: Scheduled trigger 2026-09-23T11:00:38+01:00; watchdog actual entry 11:04:13; the primary launch had produced no durable canonical STARTED record. Recovery uses the same scheduled session identity and receives no duplicate credit. Canonical STARTED commit c764fd3946ca41277bbd1c69c3807a9037f3b7b1 was published at 11:05:39, one second after the trigger+5m target; launch target therefore MISSED by 1s. Immutable delivery identity remains UNVERIFIED.
+VERIFIED FORWARD SPAN: 0m00s so far; live session.
+SESSION RESULT: ACTIVE_RECOVERY; research_target_minutes=40; target applies because >40 minutes remained from watchdog entry to cutoff.
+SUBSTANTIVE UNITS: 0 so far. Focused-session credit not yet determined; counter remains 3/24 pending finalization.
+CANONICAL RECORD: project/research/session_logs/2026-09-23/2026-09-23T11-00-38+01-00-canonical.json.
+UNPRESERVED WORK: None.
+DEFERRED ADMIN: Finalize stale 09:00 telemetry in the audit; correct prior audit prose/PDF from 42 to 32; reconcile STARTED publication timestamp into canonical at first substantive checkpoint.
 NEXT ACTION: Analyze the concentrated-cover branch: for a minimum cover X union Y, every label outside X has h_i<=2|Y|-1; combine this with H>=15 and the unresolved strip.
 MANDATORY CONSTRAINTS: S<=14 is internal/computer-assisted and conditional on the audited bridge; H is exact only for the defined graph-level certificate-choice interface; equality only through S<=8; balanced complete bipartite graphs and X_3 remain controls; no external e+disj+X core; general theorem open.
 <!-- CURRENT-STATUS:END -->
