@@ -29,6 +29,12 @@
       "stop": "2026-09-23T15:04:11+01:00",
       "seconds": 52,
       "unit": "Implemented deterministic scalar-index resumption and tested new strengthened-row candidates 7,401 through 7,700 with zero survivors."
+    },
+    {
+      "start": "2026-09-23T15:05:37+01:00",
+      "stop": "2026-09-23T15:10:21+01:00",
+      "seconds": 284,
+      "unit": "Extended the deterministic strengthened n=18,Delta=10 replay from scalar 7,701 through 8,850 and computed the exact remaining row size."
     }
   ],
   "forward_research_stop": "PENDING",
@@ -36,9 +42,9 @@
   "preservation_complete": "PENDING",
   "final_report_time": "PENDING",
   "wall_clock_span_to_preservation_complete": "PENDING",
-  "verified_forward_research_span": "00:00:52",
+  "verified_forward_research_span": "00:05:36",
   "preservation_span": "PENDING",
-  "substantive_unit_count": 1,
+  "substantive_unit_count": 2,
   "timestamped_unit_ledger": [
     {
       "unit": 1,
@@ -46,6 +52,13 @@
       "complete": "2026-09-23T15:04:11+01:00",
       "result": "Added a deterministic --resume-scalar boundary to the row screen. Re-scanning reproduced the prior index mapping (scalar 7,000 at pattern 9,738; scalar 7,400 at pattern 10,202), then candidates 7,401-7,700 / patterns through 10,544 produced zero abstract survivors. The resumed segment's local best gap was 3; the prior global best gap 1 remains. No row closure claimed.",
       "evidence": "project/research/general_n/2026-09-23-independent-742-r15-near-equality/N18_ROW_RESUME_7700.md"
+    },
+    {
+      "unit": 2,
+      "start": "2026-09-23T15:05:37+01:00",
+      "complete": "2026-09-23T15:10:21+01:00",
+      "result": "Scalar candidates 7,701-8,850 / full patterns through 11,795 produced zero survivors; local resumed-segment best gap was 5, while global prefix best remains 1. A solver-free traversal established exact row totals of 54,816 scalar candidates among 70,959 full patterns after the four separately excluded tuples, showing that serial completion cannot fit this slot.",
+      "evidence": "project/research/general_n/2026-09-23-independent-742-r15-near-equality/N18_ROW_RESUME_8850.md"
     }
   ],
   "early_stop_check_time": "PENDING",
@@ -60,8 +73,9 @@
   "infrastructure_failures": [],
   "commit_shas": [
     "17500411b9e6ccb72552f5a305436ffb5b721e34",
-    "PENDING_UNIT1_COMMIT"
+    "54562f7d8195144f6d0b255e985d9752cb8c2ce0",
+    "PENDING_UNIT2_COMMIT"
   ],
-  "live_unfinished_line": "Resume strengthened n=18,Delta=10 replay at scalar index 7,700 / all-pattern index 10,544 using --resume-scalar 7700.",
+  "live_unfinished_line": "Strengthened row prefix through scalar 8,850 / pattern 11,795 has zero survivors; 54,816 scalar candidates total. Implement bounded deterministic shards before further replay.",
   "historical_fragments": []
 }
