@@ -5,27 +5,33 @@ Canonical repository: `paullenz/MurtySimon742`. Date: 23 September 2026.
 Active target: a genuinely independent proof of Erdős #742 / the Murty–Simon inequality e(G)<=floor(n^2/4), preferably with the equality characterization. Forward priority is the project’s own complement / residual / Hall / profile / realizability route, not a reconstruction of the external e+disj+X proof. The first focused session produced the internally checked candidate threshold `Delta>=250n/429`, shrinking the live strip to `n/2<Delta<250n/429`. The theorem and its inherited graph-to-profile spine remain candidate/internal-review mathematics. A 24-focused-session go/no-go gate applies. Prior eventual-D2C work remains preserved but is no longer the active forward objective.
 
 <!-- CURRENT-STATUS:START -->
-CHECKPOINT CLASS: DAILY_ADVERSARIAL_AUDIT_COMPLETE_TELEMETRY_TIMESTAMP_CORRECTED
+CHECKPOINT CLASS: SCHEDULED_RESEARCH_STARTED
 
-WORK MODE: AUDIT
+WORK MODE: MATH
 
-INSPECTED PREDECESSOR: d9e77cc6abb1bca1b0b13752ce5b993a4959edeb.
+INSPECTED PREDECESSOR: f2f951e538c297243b4dbb02140fc8f96df97f5b.
 
-LAST VERIFIED RESULT: The independently reconstructed graph-to-profile bridge replays on 757 actual D2C graphs, 1,256 maximum-degree roots and all 2,722 legal selections. The internal finite pipeline retains the edge bound through S<=13 and balanced-complete-bipartite equality through S<=8. Two corrupted saved evidence files were found, preserved and regenerated from source; the repaired r=8 and r=11 cross-file audits pass. These are internal candidate/computer-assisted results, not external verification or a full proof.
+LAST VERIFIED RESULT: Mathematical status unchanged at launch. The independently reconstructed graph-to-profile bridge replays on 757 actual D2C graphs, 1,256 maximum-degree roots and 2,722 legal selections; the internal finite pipeline retains the edge bound through S<=13 and balanced-complete-bipartite equality through S<=8. These remain internal candidate/computer-assisted results, not external verification or a full proof.
 
-EVIDENCE: project/research/general_n/2026-09-23-daily-red-team-audit-v1/DAILY_RED_TEAM_AUDIT.md; repaired r=8/r=11 ledgers and preserved `.corrupted-at-320ff91` originals; audit helper checkers in the same directory.
+ACTIVE SESSION: Scheduled trigger 2026-09-23T01:00:38+01:00; actual start 2026-09-23T01:01:57+01:00; lateness 1m19s; research cutoff 01:53:38; hard close 01:59:38; 40-minute target applies. Trigger attribution uses the current invocation title and supplied hourly schedule; immutable delivery identity is UNVERIFIED.
 
-SESSION UTILISATION: 23 scheduled triggers are now represented canonically. Eight scheduled sessions RAN with 233m56s of closed forward intervals and 100 units; one manual recovery adds 11m10s and three units without scheduled credit. Classifications: 0 target-met, 5 SHORT, 3 LATE-START/TARGET-N/A, 2 MISSED/NO-FORWARD, 13 UNVERIFIED/MISSING. Utilisation is 57.25% over the eight windows with evidenced availability and intervals only; it is not whole-day utilisation.
+VERIFIED FORWARD INTERVALS: None yet; launch administration is excluded.
 
-UNPRESERVED WORK: None. The audit-created 23:00 canonical record now names the actual midnight audit trigger rather than the invalid textual hour `24:00`; no mathematical or utilisation result changed.
+VERIFIED FORWARD SPAN: 0m00s.
 
-DEFERRED ADMIN: Verify actual launches/checkpoints for 23 September 01:00:38, 02:00:38 and 03:00:38 BST at the first audit after they are due. They were future at this audit; configuration readback is not launch evidence.
+SUBSTANTIVE UNITS: 0.
 
-OPERATIONAL CHANGE: From 23 September 01:00:38 BST the standalone independent-#742 cadence uses a 40-minute target, with RAN, duration compliance and focused-session credit reported separately. Historical 50-minute records are unchanged. The old same-chat research and health tasks remain paused. Actual post-cutover delivery is still UNVERIFIED.
+CANONICAL RECORD: project/research/session_logs/2026-09-23/2026-09-23T01-00-38+01-00-canonical.json.
+
+UNPRESERVED WORK: None at launch.
+
+DEFERRED ADMIN: Verify the first three post-cutover launches at the next audit; no settings claim substitutes for observed telemetry.
 
 NEXT ACTION: Finish the exact helper-aware supplement screen on the 42 r=12 support-ten (2,2,1^8) kernels. Then independently reimplement one load-bearing r=11 orbit/source stage before extending demand or returning to threshold work.
 
-FOCUSED-SESSION COUNT: 1/24; this short session receives no focused-session credit.
+FOCUSED-SESSION COUNT: 1/24 before this session; credit pending a complete evidenced >=40-minute focused record.
+
+TARGET RESULT: PENDING. Session status STARTED; preservation completion PENDING; compliance STARTED_PENDING_FINALIZATION.
 
 MANDATORY CONSTRAINTS: The unfinished r=12 solver is not evidence; finite profile feasibility is not graph realizability; equality is characterized only through S<=8; the 250/429 threshold is internal candidate mathematics; balanced complete bipartite graphs and X_3 remain mandatory controls; no use of the external e+disj+X core; the general theorem remains open. Freeze a finite conclusion on any independent count mismatch.
 <!-- CURRENT-STATUS:END -->
