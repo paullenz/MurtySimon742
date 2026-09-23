@@ -1,0 +1,39 @@
+{
+  "fresh_identities": [
+    [
+      6,
+      521588,
+      [
+        1,
+        1,
+        2,
+        2,
+        2,
+        2,
+        2
+      ]
+    ],
+    [
+      6,
+      2093056,
+      [
+        2,
+        2,
+        1,
+        1,
+        2,
+        2,
+        2
+      ]
+    ]
+  ],
+  "fresh_identity_sha256": "68e890ff159dd5acbfbd5fe19cccd95b254a80d3172acf37ad7fce9aa222b66c",
+  "identity_match": true,
+  "pass": true,
+  "saved_identity_sha256": "68e890ff159dd5acbfbd5fe19cccd95b254a80d3172acf37ad7fce9aa222b66c",
+  "scope": "Aggregate of fresh shardable integer replay; exact physical-source necessary condition only, not graph realization.",
+  "shards": 16,
+  "solver_unknown": 0,
+  "source_feasible": 2,
+  "strict_core_orbits": 2179
+}

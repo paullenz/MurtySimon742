@@ -5,7 +5,7 @@ Canonical repository: `paullenz/MurtySimon742`. Date: 23 September 2026.
 Active target: a genuinely independent proof of Erdős #742 / the Murty–Simon inequality e(G)<=floor(n^2/4), preferably with the equality characterization. Forward priority is the project’s own complement / residual / Hall / profile / realizability route, not a reconstruction of the external e+disj+X proof. The first focused session produced the internally checked candidate threshold `Delta>=250n/429`, shrinking the live strip to `n/2<Delta<250n/429`. The theorem and its inherited graph-to-profile spine remain candidate/internal-review mathematics. A 24-focused-session go/no-go gate applies. Prior eventual-D2C work remains preserved but is no longer the active forward objective.
 
 <!-- CURRENT-STATUS:START -->
-CHECKPOINT CLASS: VERIFIED_INTERNAL_SUPPORT7_REPLAY_SHARD0
+CHECKPOINT CLASS: VERIFIED_INTERNAL_SUPPORT7_REPLAY_COMPLETE
 
 WORK MODE: MATH
 
@@ -15,11 +15,11 @@ LAST VERIFIED RESULT: Internal strict residual closure now extends through r=12,
 
 ACTIVE SESSION: Scheduled trigger 2026-09-23T06:00:38+01:00; actual start 06:03:18; research cutoff 06:53:38; hard close 06:59:38; 40-minute target applies. Trigger attribution uses the current invocation title and supplied hourly schedule; immutable delivery identity is UNVERIFIED.
 
-VERIFIED FORWARD INTERVALS: 06:05:04--06:06:57 BST.
+VERIFIED FORWARD INTERVALS: 06:05:04--06:06:57; 06:08:45--06:09:47 BST.
 
-VERIFIED FORWARD SPAN: 1m53s.
+VERIFIED FORWARD SPAN: 2m55s.
 
-SUBSTANTIVE UNITS: 1 complete. A shardable independent MILP restatement of the support-seven physical-source screen passed shard 0/16: 136 cores, zero feasible, zero unknown.
+SUBSTANTIVE UNITS: 2 complete. The full fresh shardable support-seven replay passed all 2,179 cores with exactly the two saved identities and zero unknowns.
 
 CANONICAL RECORD: project/research/session_logs/2026-09-23/2026-09-23T06-00-38+01-00-canonical.json.
 
@@ -27,7 +27,7 @@ UNPRESERVED WORK: None after this checkpoint.
 
 DEFERRED ADMIN: Correct prior audit prose/PDF from 42 to 32; audit launch coverage separately.
 
-NEXT ACTION: Run and aggregate support-seven replay shards 1--15; require 2,179 total cores, exactly two saved identities, zero unknowns, and exact identity agreement before retaining S<=14.
+NEXT ACTION: Proceed to the audit's graph-level positive-demand stress: identify whether any raw D2C bridge fixtures with positive demand realize the dense selected-signature plateau constraints, retaining X_3 and both balanced complete-bipartite parities as controls.
 
 FOCUSED-SESSION COUNT: 3/24 before this session.
 

@@ -1,0 +1,26 @@
+{
+  "feasible_identity_sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+  "feasible_rows": [],
+  "identity_match_for_fresh_feasible": true,
+  "partition": [
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1
+  ],
+  "range": [
+    136,
+    272
+  ],
+  "saved_matching_identity_sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+  "scope": "Fresh integer replay of the exact physical-source necessary condition; not graph realization.",
+  "shard": 1,
+  "shards": 16,
+  "solver_unknown": 0,
+  "source_feasible": 0,
+  "strict_core_orbits": 136,
+  "unknown_rows": []
+}

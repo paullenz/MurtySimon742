@@ -1,0 +1,197 @@
+{
+  "feasible_identity_sha256": "68e890ff159dd5acbfbd5fe19cccd95b254a80d3172acf37ad7fce9aa222b66c",
+  "feasible_rows": [
+    {
+      "R": [
+        1,
+        1,
+        2,
+        2,
+        2,
+        2,
+        2
+      ],
+      "case": 6,
+      "degrees": [
+        3,
+        3,
+        4,
+        4,
+        4,
+        4,
+        4
+      ],
+      "mask": 521588,
+      "message": "Optimization terminated successfully. (HiGHS Status 7: Optimal)",
+      "need": [
+        2,
+        2,
+        2,
+        2,
+        2,
+        2,
+        2
+      ],
+      "patterns": 236,
+      "population": [
+        {
+          "count": 1,
+          "state": [
+            1,
+            1,
+            1,
+            1,
+            2,
+            2,
+            2
+          ]
+        },
+        {
+          "count": 1,
+          "state": [
+            1,
+            1,
+            2,
+            2,
+            1,
+            1,
+            2
+          ]
+        },
+        {
+          "count": 1,
+          "state": [
+            1,
+            2,
+            1,
+            2,
+            1,
+            2,
+            1
+          ]
+        },
+        {
+          "count": 1,
+          "state": [
+            2,
+            1,
+            2,
+            1,
+            2,
+            1,
+            1
+          ]
+        }
+      ],
+      "status": 0,
+      "t_upper": 1
+    },
+    {
+      "R": [
+        2,
+        2,
+        1,
+        1,
+        2,
+        2,
+        2
+      ],
+      "case": 6,
+      "degrees": [
+        0,
+        0,
+        3,
+        3,
+        4,
+        4,
+        4
+      ],
+      "mask": 2093056,
+      "message": "Optimization terminated successfully. (HiGHS Status 7: Optimal)",
+      "need": [
+        0,
+        0,
+        2,
+        2,
+        2,
+        2,
+        2
+      ],
+      "patterns": 473,
+      "population": [
+        {
+          "count": 1,
+          "state": [
+            0,
+            2,
+            1,
+            1,
+            1,
+            2,
+            2
+          ]
+        },
+        {
+          "count": 1,
+          "state": [
+            0,
+            2,
+            2,
+            2,
+            1,
+            1,
+            1
+          ]
+        },
+        {
+          "count": 1,
+          "state": [
+            2,
+            0,
+            1,
+            1,
+            2,
+            1,
+            2
+          ]
+        },
+        {
+          "count": 1,
+          "state": [
+            2,
+            0,
+            1,
+            1,
+            2,
+            2,
+            1
+          ]
+        }
+      ],
+      "status": 0,
+      "t_upper": 1
+    }
+  ],
+  "identity_match_for_fresh_feasible": true,
+  "partition": [
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1
+  ],
+  "range": [
+    2042,
+    2179
+  ],
+  "saved_matching_identity_sha256": "68e890ff159dd5acbfbd5fe19cccd95b254a80d3172acf37ad7fce9aa222b66c",
+  "scope": "Fresh integer replay of the exact physical-source necessary condition; not graph realization.",
+  "shard": 15,
+  "shards": 16,
+  "solver_unknown": 0,
+  "source_feasible": 2,
+  "strict_core_orbits": 137,
+  "unknown_rows": []
+}
