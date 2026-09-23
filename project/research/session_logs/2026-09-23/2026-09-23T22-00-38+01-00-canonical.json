@@ -65,11 +65,11 @@
   ],
   "forward_research_stop": "2026-09-23T22:50:01+01:00",
   "preservation_start": "2026-09-23T22:50:17+01:00",
-  "preservation_complete": "PENDING",
-  "final_report_time": "PENDING",
-  "wall_clock_span_to_preservation_complete": "PENDING",
+  "preservation_complete": "2026-09-23T22:51:35+01:00",
+  "final_report_time": "2026-09-23T22:51:47+01:00",
+  "wall_clock_span_to_preservation_complete": "00:49:53",
   "verified_forward_research_span": "00:32:05",
-  "preservation_span": "PENDING",
+  "preservation_span": "00:01:18",
   "substantive_unit_count": 4,
   "timestamped_unit_ledger": [
     {
@@ -109,7 +109,7 @@
   "target_40m_met": false,
   "session_run_status": "RAN",
   "focused_session_credit": "No new gate credit; counter remains 6/24 because verified research was below 40 minutes.",
-  "compliance_status": "SUBSTANTIVE_BUT_TARGET_NOT_MET; STARTED and first checkpoint targets met; exact closed intervals only; preservation finalization pending.",
+  "compliance_status": "SUBSTANTIVE_BUT_TARGET_NOT_MET; STARTED published within five minutes and first substantive checkpoint within ten minutes; 32m05s closed verified research; two incomplete attempts explicitly uncredited; finalized before cutoff and hard close.",
   "infrastructure_failures": [
     "Executor-session key changed during the attempted 37,501-38,500 run; the process terminated without a completion boundary, so no time or result from that attempt was credited.",
     "Oversized attempted range 38,301-40,300 was stopped after observed progress through 38,650 because it could not safely finish before cutoff; its time and partial result were not credited. The completed bounded replay supersedes its prefix."
@@ -118,7 +118,8 @@
     "d3c9e6f453759654ea5554993bca04bc85575fb9",
     "6ee1629235eaff61d4dd4d626b9eea934c322f79",
     "af62f04551dd6e5c39d6437f98fc660f615a9c74",
-    "de1b5d81e294d052e1ec0ff116d0f66e315245cd"
+    "de1b5d81e294d052e1ec0ff116d0f66e315245cd",
+    "b24f9afadc2382676e4fe3aadb497de5abf6dd9e"
   ],
   "live_unfinished_line": "Continue exact stable-index enumeration from 39,251; full n=18 row closure remains open.",
   "historical_fragments": []
