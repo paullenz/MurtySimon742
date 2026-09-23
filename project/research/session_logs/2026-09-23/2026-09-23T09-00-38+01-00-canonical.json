@@ -28,6 +28,18 @@
       "stop": "2026-09-23T09:34:31+01:00",
       "seconds": 338,
       "unit": "Fresh independent live-strip actual-D2C collision search and exact demand-feasibility DP."
+    },
+    {
+      "start": "2026-09-23T09:35:51+01:00",
+      "stop": "2026-09-23T09:36:15+01:00",
+      "seconds": 24,
+      "unit": "Derived supplement-pair congestion charge and quantified failure of its degree-only relaxation."
+    },
+    {
+      "start": "2026-09-23T09:37:17+01:00",
+      "stop": "2026-09-23T09:38:28+01:00",
+      "seconds": 71,
+      "unit": "Derived graph-level positive-demand eligibility filter and tested it on every live-strip collision."
     }
   ],
   "forward_research_stop": "PENDING",
@@ -35,9 +47,9 @@
   "preservation_complete": "PENDING",
   "final_report_time": "PENDING",
   "wall_clock_span_to_preservation_complete": "PENDING",
-  "verified_forward_research_span": "00:05:38",
+  "verified_forward_research_span": "00:07:13",
   "preservation_span": "PENDING",
-  "substantive_unit_count": 1,
+  "substantive_unit_count": 3,
   "timestamped_unit_ledger": [
     {
       "unit": 1,
@@ -45,6 +57,20 @@
       "complete": "2026-09-23T09:34:31+01:00",
       "result": "Fresh independent generation/certification of 480 D2C graphs found 62 live-strip maximum-degree root states, 404 co-selected F-edge candidate occurrences and 13 crossed-supplement collision images. Unrestricted live-strip injectivity is refuted; all 13 collisions have multiplicity two, and exact certificate-choice DP found 0/13 allowing both collided labels positive demand.",
       "evidence": "project/research/general_n/2026-09-23-independent-742-r12-count-audit/LIVE_STRIP_COLLISION_RECOVERY_CHECK.md"
+    },
+    {
+      "unit": 2,
+      "start": "2026-09-23T09:35:51+01:00",
+      "complete": "2026-09-23T09:36:15+01:00",
+      "result": "Proved supplement-pair congestion bound M_pq<=codeg_{G[B]}(p,q), hence C<=sum_u binom(d_B(u),2)<=sum_u binom(b-a-1+q_u,2). Degree-only plateau relaxation remains too weak by factor about 84.03.",
+      "evidence": "project/research/general_n/2026-09-23-independent-742-r12-count-audit/SUPPLEMENT_PAIR_CONGESTION_BOUND.md"
+    },
+    {
+      "unit": 3,
+      "start": "2026-09-23T09:37:17+01:00",
+      "complete": "2026-09-23T09:38:28+01:00",
+      "result": "Proved graph-level necessary condition for positive demand: if h_i is B-H-degree and s_i counts unique-common-neighbour selectable incidences, then d_i>0 requires 2s_i>h_i. Every one of the 13 fresh live-strip collisions has at least one endpoint with 2s_i-h_i<=-2.",
+      "evidence": "project/research/general_n/2026-09-23-independent-742-r12-count-audit/POSITIVE_DEMAND_GRAPH_ELIGIBILITY_FILTER.md"
     }
   ],
   "first_substantive_checkpoint_time": "2026-09-23T09:35:06+01:00",
@@ -57,16 +83,19 @@
   "target_note": "Recovery entry left less than 40 minutes before the fixed research cutoff; no time before actual recovery entry may be credited.",
   "session_run_status": "RAN",
   "focused_session_credit": "NO; late recovery cannot reach 40 verified minutes before cutoff",
-  "compliance_status": "ACTIVE_RECOVERED_LATE_START; substantive checkpoint preserved",
+  "compliance_status": "ACTIVE_RECOVERED_LATE_START; three substantive units preserved",
   "infrastructure_failures": [
     "Primary scheduled launch lacked a durable STARTED record before recovery.",
     "Initial recovery STARTED publication could not atomically update CURRENT_STATE.md because the available connector exposes full-file replacement rather than a safe block patch; canonical STARTED was published first rather than delay mathematics. CURRENT_STATE synchronization remains required before finalization."
   ],
   "commit_shas": [
     "ba0b54ec36b223b1e5cbf5b59e089228a151755a",
-    "39f8b114dc795b2b97021757274a800eeddce051"
+    "39f8b114dc795b2b97021757274a800eeddce051",
+    "94dde79772eeb4e839373484c0fe6016598068de",
+    "acf087fb73c82f58b185989faf158f8f86056ce8",
+    "db9ce8255c7ffbf87834639b0865854f9d1b3fc9"
   ],
-  "live_unfinished_line": "Prove or refute live-strip positive-demand collision exclusion using exact motif and demand inequalities; unrestricted live-strip injectivity is now refuted.",
+  "live_unfinished_line": "Attack ELIG--ELIG collisions: prove impossible in live strip or charge their supplement-pair congestion to extra residual/degree load; unrestricted live-strip injectivity is refuted.",
   "historical_fragments": [],
   "current_state_sync": "PENDING"
 }
