@@ -1,0 +1,21 @@
+{
+  "status": "VERIFIED_INTERNAL_PROMOTION",
+  "strict_residual_closure_through_r": 12,
+  "edge_bound_supported_through_S": 14,
+  "equality_supported_through_S": 8,
+  "r12_saved_source_survivors_by_support": {"6": 3, "7": 2, "8": 8, "9": 36, "10": 32},
+  "r12_saved_source_survivors_total": 81,
+  "helper_aware_feasible": 0,
+  "helper_aware_infeasible": 81,
+  "helper_aware_unknown": 0,
+  "residual_free_helper_discharges_support6_to_9": 604,
+  "support10_fresh_replay": {
+    "strict_kernels": 6386,
+    "survivors": 32,
+    "unknown": 0,
+    "per_shard": [10, 11, 0, 0, 6, 5, 0, 0],
+    "exact_saved_identity_match": true
+  },
+  "logical_transfer": "A strict counterexample has S>=r+2; strict closure through r=12 therefore excludes strict counterexamples when S<=14.",
+  "trust": "Internal computer-assisted necessary-condition result conditional on the audited graph-to-profile bridge; not external verification, not graph realizability, not a full-strip theorem."
+}

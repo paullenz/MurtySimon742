@@ -1,0 +1,14 @@
+{
+  "status": "VERIFIED_INTERNAL_NOT_PROMOTED",
+  "kernels": 5,
+  "support6_kernels": 3,
+  "support7_kernels": 2,
+  "feasible": 0,
+  "infeasible": 5,
+  "unknown": 0,
+  "residual_free_types_min": 1,
+  "residual_free_types_max": 4,
+  "free_discharges_total": 104,
+  "script_sha256": "1736f46268c38448a07f417c80485a29ba9d9d31168ddbf9d9e9f4a8e62db54b",
+  "scope": "Optimistic residual-free-helper screen over all saved r=12 support-6/7 source survivors; reuses saved source rows and the support-ten helper MILP."
+}
