@@ -36,6 +36,12 @@
       "stop": "2026-09-23T01:19:11+01:00",
       "seconds": 300,
       "unit": "Fresh full source-stage replay attempt; bounded performance pivot after an exact progress checkpoint."
+    },
+    {
+      "start": "2026-09-23T01:21:27+01:00",
+      "stop": "2026-09-23T01:22:16+01:00",
+      "seconds": 49,
+      "unit": "Implement and syntax-check deterministic shard-group replay with survivor-identity comparison."
     }
   ],
   "forward_research_stop": "PENDING",
@@ -43,9 +49,9 @@
   "preservation_complete": "PENDING",
   "final_report_time": "PENDING",
   "wall_clock_span_to_preservation_complete": "PENDING",
-  "verified_forward_research_span": "00:06:55",
+  "verified_forward_research_span": "00:07:44",
   "preservation_span": "PENDING",
-  "substantive_unit_count": 2,
+  "substantive_unit_count": 3,
   "timestamped_unit_ledger": [
     {
       "unit": 1,
@@ -60,6 +66,13 @@
       "complete": "2026-09-23T01:19:11+01:00",
       "result": "BOUNDED_PIVOT: fresh replay completed 800/6,386 kernels with 10 feasible and zero unknown; stopped at the observed progress boundary because the projected full run would jeopardize the research cutoff. Partial count is not promoted.",
       "evidence": "project/research/general_n/2026-09-23-independent-742-r12-count-audit/R12_SUPPORT10_COUNT_MISMATCH.md"
+    },
+    {
+      "unit": 3,
+      "start": "2026-09-23T01:21:27+01:00",
+      "complete": "2026-09-23T01:22:16+01:00",
+      "result": "Replay driver now supports deterministic shard groups, per-shard counts, identity digests and direct saved-identity comparison; syntax check passed.",
+      "evidence": "project/research/general_n/2026-09-23-independent-742-r12-count-audit/replay_support10_case1_sources.py"
     }
   ],
   "early_stop_check_time": "PENDING",
@@ -107,6 +120,11 @@
       "unit": 2,
       "status": "COMPLETE_BOUNDED_PERFORMANCE_PIVOT",
       "evidence": "project/research/general_n/2026-09-23-independent-742-r12-count-audit/R12_SUPPORT10_COUNT_MISMATCH.md"
+    },
+    {
+      "unit": 3,
+      "status": "COMPLETE_REPLAY_DRIVER_SHARDING",
+      "evidence": "project/research/general_n/2026-09-23-independent-742-r12-count-audit/replay_support10_case1_sources.py"
     }
   ]
 }

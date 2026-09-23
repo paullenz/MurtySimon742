@@ -5,7 +5,7 @@ Canonical repository: `paullenz/MurtySimon742`. Date: 23 September 2026.
 Active target: a genuinely independent proof of Erdős #742 / the Murty–Simon inequality e(G)<=floor(n^2/4), preferably with the equality characterization. Forward priority is the project’s own complement / residual / Hall / profile / realizability route, not a reconstruction of the external e+disj+X proof. The first focused session produced the internally checked candidate threshold `Delta>=250n/429`, shrinking the live strip to `n/2<Delta<250n/429`. The theorem and its inherited graph-to-profile spine remain candidate/internal-review mathematics. A 24-focused-session go/no-go gate applies. Prior eventual-D2C work remains preserved but is no longer the active forward objective.
 
 <!-- CURRENT-STATUS:START -->
-CHECKPOINT CLASS: FAILED_ROUTE_BOUNDED_REPLAY_PIVOT
+CHECKPOINT CLASS: WIP_SHARD_REPLAY_READY
 
 WORK MODE: MATH
 
@@ -15,11 +15,11 @@ LAST VERIFIED RESULT: The eight committed r=12 support-ten `(2,2,1^8)` source sh
 
 ACTIVE SESSION: Scheduled trigger 2026-09-23T01:00:38+01:00; actual start 2026-09-23T01:01:57+01:00; lateness 1m19s; research cutoff 01:53:38; hard close 01:59:38; 40-minute target applies. Trigger attribution uses the current invocation title and supplied hourly schedule; immutable delivery identity is UNVERIFIED.
 
-VERIFIED FORWARD INTERVALS: 01:06:53--01:08:48 BST (independent saved-shard aggregate audit); 01:14:11--01:19:11 BST (fresh replay attempt and bounded performance pivot).
+VERIFIED FORWARD INTERVALS: 01:06:53--01:08:48 BST (independent saved-shard aggregate audit); 01:14:11--01:19:11 BST (fresh replay attempt and bounded performance pivot); 01:21:27--01:22:16 BST (deterministic shard-group replay driver).
 
-VERIFIED FORWARD SPAN: 6m55s.
+VERIFIED FORWARD SPAN: 7m44s.
 
-SUBSTANTIVE UNITS: 2.
+SUBSTANTIVE UNITS: 3.
 
 CANONICAL RECORD: project/research/session_logs/2026-09-23/2026-09-23T01-00-38+01-00-canonical.json.
 
@@ -29,7 +29,7 @@ UNPRESERVED WORK: None before launch; active computation has not yet produced a 
 
 DEFERRED ADMIN: Verify the first three post-cutover launches at the next audit; no settings claim substitutes for observed telemetry.
 
-NEXT ACTION: Replay the four saved survivor-bearing shards (0,1,4,5) as a bounded group and compare their identities/counts `[10,11,6,5]`; then replay the four zero-survivor shards. Only after reconciliation run the helper-aware supplement screen.
+NEXT ACTION: Run the preserved driver on survivor-bearing shards `0,1,4,5` with nine workers and compare their identities/counts `[10,11,6,5]`; then replay the zero-survivor shards. Only after reconciliation run the helper-aware supplement screen.
 
 FOCUSED-SESSION COUNT: 1/24 before this session; credit pending a complete evidenced >=40-minute focused record.
 
