@@ -39,3 +39,28 @@ The survivor-bearing replay of shards 0, 1, 4 and 5 subsequently reached a
 durable in-progress checkpoint at 1,200 of 3,192 kernels: 11 feasible and zero
 solver-unknown.  This is an execution heartbeat, not a completed-shard claim;
 the same run continues toward the exact identity comparison.
+
+
+## Accounting-layer reconciliation
+
+The discrepancy is now resolved as a bookkeeping error, not as evidence of ten
+missing kernels.  The preceding 21:00 session recorded shard 0 with 10
+survivors.  The 22:00 continuation recorded shards 1--7 with
+`11+0+0+6+5+0+0=22` survivors.  Hence the canonical saved total is
+`10+22=32`.  The erroneous 42 is exactly obtained by counting the initial ten
+a second time.  All eight saved shard payloads and their individual unit records
+agree with 32, cover 6,386 kernels, and record no solver-unknown row.
+
+This repairs the count only.  It does not independently reimplement the source
+MILP and does not authorize `S<=14`.  The legacy supplement wrapper loads rows
+dynamically, so the prose error did not omit ten kernels from its attempted
+screen.  However, that wrapper reuses a solver which excludes residual-free
+helper types.  The newly preserved `screen_support10_case1_helpers.py` includes
+them under the audit's optimistic semantics and is therefore the required next
+screen over the corrected 32-row set.
+
+The fresh survivor-bearing replay reached a durable checkpoint at 1,200/3,192
+kernels (11 feasible, zero unknown).  A later transient observation reached
+2,400/3,192 (27 feasible, zero unknown), but workspace re-entry destroyed the
+process boundary and final output; that observation is disclosed but is not
+credited as a result.  A clean rerun remains required before promotion.

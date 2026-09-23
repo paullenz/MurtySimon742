@@ -19,9 +19,16 @@
     {
       "segment_id": "segment-1",
       "actual_start": "2026-09-23T01:01:57+01:00",
-      "actual_stop": "PENDING",
+      "actual_stop": "UNVERIFIED_AFTER_2026-09-23T01:31:52+01:00",
       "role": "forward_research",
-      "notes": "Launch and continuity initialization; administration excluded from research intervals."
+      "notes": "Original workspace; durable research boundaries close at 01:31:52. Later transient output reached 2,400/3,192 but its timestamp and final process boundary were lost on workspace re-entry, so it receives no duration or mathematical credit."
+    },
+    {
+      "segment_id": "segment-2",
+      "actual_start": "2026-09-23T01:41:12+01:00",
+      "actual_stop": "2026-09-23T01:47:42+01:00",
+      "role": "reconciliation",
+      "notes": "Same-trigger re-entry. Repository recovery and clone time excluded; credited only two closed mathematical review intervals."
     }
   ],
   "forward_research_intervals": [
@@ -35,87 +42,129 @@
       "start": "2026-09-23T01:14:11+01:00",
       "stop": "2026-09-23T01:19:11+01:00",
       "seconds": 300,
-      "unit": "Fresh full source-stage replay attempt; bounded performance pivot after an exact progress checkpoint."
+      "unit": "Fresh full source-stage replay attempt; bounded performance pivot after exact progress checkpoint."
     },
     {
       "start": "2026-09-23T01:21:27+01:00",
       "stop": "2026-09-23T01:22:16+01:00",
       "seconds": 49,
-      "unit": "Implement and syntax-check deterministic shard-group replay with survivor-identity comparison."
+      "unit": "Deterministic shard-group replay implementation and syntax check."
     },
     {
       "start": "2026-09-23T01:23:26+01:00",
       "stop": "2026-09-23T01:24:56+01:00",
       "seconds": 90,
-      "unit": "Implement and syntax-check r=12 helper-aware supplement MILP with residual-free helper semantics while shard replay runs."
+      "unit": "Helper-aware supplement MILP implementation and syntax check."
     },
     {
       "start": "2026-09-23T01:24:56+01:00",
       "stop": "2026-09-23T01:31:52+01:00",
       "seconds": 416,
-      "unit": "Survivor-bearing shard replay through the 1,200/3,192 durable progress checkpoint."
+      "unit": "Survivor-bearing source replay through durable 1,200/3,192 progress checkpoint."
+    },
+    {
+      "start": "2026-09-23T01:44:33+01:00",
+      "stop": "2026-09-23T01:45:56+01:00",
+      "seconds": 83,
+      "unit": "Cross-session ledger reconciliation proving the reported 42 is a bookkeeping double-count; canonical saved count is 32."
+    },
+    {
+      "start": "2026-09-23T01:47:05+01:00",
+      "stop": "2026-09-23T01:47:42+01:00",
+      "seconds": 37,
+      "unit": "Impact review: legacy wrapper dynamically loads 32 rows but omits residual-free helpers; new helper-aware screen is required."
     }
   ],
-  "forward_research_stop": "PENDING",
-  "preservation_start": "PENDING",
-  "preservation_complete": "PENDING",
-  "final_report_time": "PENDING",
-  "wall_clock_span_to_preservation_complete": "PENDING",
-  "verified_forward_research_span": "00:16:10",
-  "preservation_span": "PENDING",
-  "substantive_unit_count": 5,
+  "forward_research_stop": "2026-09-23T01:47:42+01:00",
+  "preservation_start": "2026-09-23T01:48:16+01:00",
+  "preservation_complete": "PENDING_FINAL_CONFIRMATION",
+  "final_report_time": "PENDING_FINAL_CONFIRMATION",
+  "wall_clock_span_to_preservation_complete": "PENDING_FINAL_CONFIRMATION",
+  "verified_forward_research_span": {
+    "seconds": 1090,
+    "human": "18m10s",
+    "basis": "Union of seven closed, non-overlapping evidenced intervals only; unbounded re-entry gap and transient 2,400-row output excluded."
+  },
+  "preservation_span": "PENDING_FINAL_CONFIRMATION",
+  "substantive_unit_count": 7,
   "timestamped_unit_ledger": [
     {
       "unit": 1,
       "start": "2026-09-23T01:06:53+01:00",
       "complete": "2026-09-23T01:08:48+01:00",
-      "result": "COUNT_MISMATCH_FREEZE: the eight saved source shards cover 6,386 kernels but contain 32 distinct feasible rows, not the reported 42; shard counts are [10,11,0,0,6,5,0,0].",
+      "result": "COUNT_MISMATCH_FREEZE: eight saved shards contain 32 distinct feasible rows, not reported 42.",
       "evidence": "project/research/general_n/2026-09-23-independent-742-r12-count-audit/R12_SUPPORT10_COUNT_MISMATCH.md"
     },
     {
       "unit": 2,
       "start": "2026-09-23T01:14:11+01:00",
       "complete": "2026-09-23T01:19:11+01:00",
-      "result": "BOUNDED_PIVOT: fresh replay completed 800/6,386 kernels with 10 feasible and zero unknown; stopped at the observed progress boundary because the projected full run would jeopardize the research cutoff. Partial count is not promoted.",
+      "result": "BOUNDED_PIVOT: full replay reached 800/6,386, 10 feasible, 0 unknown; stopped on projected cutoff risk.",
       "evidence": "project/research/general_n/2026-09-23-independent-742-r12-count-audit/R12_SUPPORT10_COUNT_MISMATCH.md"
     },
     {
       "unit": 3,
       "start": "2026-09-23T01:21:27+01:00",
       "complete": "2026-09-23T01:22:16+01:00",
-      "result": "Replay driver now supports deterministic shard groups, per-shard counts, identity digests and direct saved-identity comparison; syntax check passed.",
+      "result": "Replay driver sharded deterministically with per-shard identity comparison; syntax PASS.",
       "evidence": "project/research/general_n/2026-09-23-independent-742-r12-count-audit/replay_support10_case1_sources.py"
     },
     {
       "unit": 4,
       "start": "2026-09-23T01:23:26+01:00",
       "complete": "2026-09-23T01:24:56+01:00",
-      "result": "Implemented a helper-aware r=12 supplement MILP that admits residual-free helper types under the audit's optimistic semantics; syntax check passed. Infeasibility is meaningful at the abstract profile layer, while feasibility remains only a survivor.",
+      "result": "Implemented helper-aware supplement MILP admitting residual-free helpers under audited optimistic semantics; syntax PASS.",
       "evidence": "project/research/general_n/2026-09-23-independent-742-r12-count-audit/screen_support10_case1_helpers.py"
     },
     {
       "unit": 5,
       "start": "2026-09-23T01:24:56+01:00",
-      "complete": "IN_PROGRESS",
-      "result": "DURABLE_PROGRESS: survivor-bearing replay completed 1,200/3,192 kernels with 11 feasible and zero solver-unknown; no shard conclusion yet.",
+      "complete": "INTERRUPTED_AFTER_DURABLE_2026-09-23T01:31:52+01:00_CHECKPOINT",
+      "result": "Durably recorded 1,200/3,192 survivor-bearing kernels: 11 feasible, 0 unknown. Transient later output reached 2,400 with 27 feasible, 0 unknown, but is not credited or treated as a result because workspace re-entry destroyed its boundary and final output.",
       "evidence": "project/research/general_n/2026-09-23-independent-742-r12-count-audit/R12_SUPPORT10_COUNT_MISMATCH.md"
+    },
+    {
+      "unit": 6,
+      "start": "2026-09-23T01:44:33+01:00",
+      "complete": "2026-09-23T01:45:56+01:00",
+      "result": "Resolved the 42-versus-32 discrepancy at the accounting layer: predecessor shard 0 contributed 10; continuation shards contributed 11+0+0+6+5+0+0=22; the old 42 equals the initial 10 counted twice. Saved shards and their unit records agree on 32.",
+      "evidence": "project/research/general_n/2026-09-23-independent-742-r12-count-audit/R12_SUPPORT10_COUNT_MISMATCH.md"
+    },
+    {
+      "unit": 7,
+      "start": "2026-09-23T01:47:05+01:00",
+      "complete": "2026-09-23T01:47:42+01:00",
+      "result": "Impact check: legacy supplement wrapper dynamically loads all saved rows, so the prose miscount did not omit kernels; however its reused solver excludes residual-free helper types. The new helper-aware script is the required next screen.",
+      "evidence": "project/research/general_n/2026-09-23-independent-742-r12-count-audit/screen_support10_case1_helpers.py"
     }
   ],
-  "early_stop_check_time": "PENDING",
-  "early_stop_check_result": "PENDING",
-  "stop_reason": "PENDING",
+  "early_stop_check_time": "2026-09-23T01:48:16+01:00",
+  "early_stop_check_result": "5m22s remained before cutoff, but workspace re-entry had terminated the active compute namespace and a fresh checkout had not completed after two minutes. No bounded solver run could safely finish and preserve; began final preservation.",
+  "stop_reason": "Stopped after resolving the count as a bookkeeping double-count and preserving the corrected 32-row next action; the active shard replay was lost on workspace re-entry and the 40-minute target could no longer be reached with evidenced work before cutoff.",
   "research_target_minutes": 40,
   "target_40m_applies": "YES",
-  "target_40m_met": "PENDING",
-  "session_run_status": "STARTED",
-  "focused_session_credit": "PENDING",
-  "compliance_status": "STARTED_PENDING_FINALIZATION",
+  "target_40m_met": "NO",
+  "session_run_status": "RAN",
+  "focused_session_credit": "NO",
+  "compliance_status": "SHORT/NONCOMPLIANT",
   "infrastructure_failures": [
     {
       "time": "2026-09-23T01:03:35+01:00",
       "operation": "initial local git push",
       "error": "HTTPS credentials unavailable to git CLI",
-      "pivot": "Used the requested authenticated GitHub connector to create one atomic tree/commit and fast-forward main; remote confirmation completed at 01:06:17."
+      "pivot": "Used authenticated GitHub connector; atomic STARTED commit reached main at 01:06:05."
+    },
+    {
+      "time": "2026-09-23T01:41:12+01:00",
+      "operation": "workspace/context re-entry during survivor-bearing replay",
+      "error": "Executor session 84454 and its final boundary/output became unavailable; only the previously durable 1,200/3,192 checkpoint is credited. Transient 2,400 progress is disclosed but not used.",
+      "pivot": "Re-read CURRENT_STATE first, reconciled the arithmetic discrepancy directly from canonical unit ledgers, and preserved a clean next action."
+    },
+    {
+      "time": "2026-09-23T01:41:41+01:00",
+      "operation": "fresh repository checkout",
+      "error": "Clone did not complete after two minutes and was interrupted before checkout; no mathematical result depended on it.",
+      "pivot": "Used authenticated GitHub reads for the bounded reconciliation and impact review."
     }
   ],
   "commit_shas": [
@@ -123,52 +172,91 @@
       "kind": "STARTED",
       "sha": "28f01aea1f1de1f215e47d7bfb36d5bb3f1417ca",
       "published_at": "2026-09-23T01:06:05+01:00"
+    },
+    {
+      "kind": "UNIT_1_COUNT_FREEZE",
+      "sha": "bdde006e06a9dfc037f23cd83e9a012dc8887f44"
+    },
+    {
+      "kind": "REPLAY_DRIVER",
+      "sha": "ffc9d79862c5ea985bc9577124cace6b79f86f03"
+    },
+    {
+      "kind": "ACTIVE_RUN_RECORD",
+      "sha": "154fbce9237497775e9bf4b09aebb7761198e12d"
+    },
+    {
+      "kind": "BOUNDED_PIVOT",
+      "sha": "09b93868736f14613352eb24a1a365889724dc65"
+    },
+    {
+      "kind": "SHARD_DRIVER",
+      "sha": "cf783446dd76a802e448578a5e5787eeaa142a69"
+    },
+    {
+      "kind": "HELPER_SCREEN",
+      "sha": "e1e9dae36d5f70d762573e05290e9087e0ed9e1e"
+    },
+    {
+      "kind": "DURABLE_PROGRESS",
+      "sha": "33ef68849e4a4a850895af2f2022297138ebb2e0"
     }
   ],
   "prior_run": {
     "kind": "fresh full source-stage replay",
     "executor_session_id": 12718,
     "launched_at": "2026-09-23T01:14:11+01:00",
-    "status": "INTERRUPTED_AT_PROGRESS_CHECKPOINT",
     "stopped_at": "2026-09-23T01:19:11+01:00",
-    "progress": "800/6386 kernels; 10 feasible; 0 unknown",
+    "status": "INTERRUPTED_AT_PROGRESS_CHECKPOINT",
+    "progress": "800/6386; 10 feasible; 0 unknown",
     "exit_code": 130
   },
   "active_run": {
-    "kind": "fresh survivor-bearing shard replay",
+    "kind": "survivor-bearing shard replay",
     "executor_session_id": 84454,
     "launched_at": "2026-09-23T01:23:26+01:00",
-    "selected_shards": [0, 1, 4, 5],
-    "status": "RUNNING",
-    "progress_at_2026-09-23T01:31:52+01:00": "1200/3192 kernels; 11 feasible; 0 unknown"
+    "status": "TERMINATED_BY_WORKSPACE_REENTRY",
+    "last_durable_progress": "1200/3192; 11 feasible; 0 unknown at 01:31:52",
+    "later_uncredited_observation": "2400/3192; 27 feasible; 0 unknown; timestamp/final boundary unavailable",
+    "disposition": "No result claimed; rerun required."
   },
-  "live_unfinished_line": "Collect survivor-bearing shard replay session 84454, compare counts and identities, then run the preserved helper-aware supplement screen.",
+  "live_unfinished_line": "Run screen_support10_case1_helpers.py on the corrected 32 saved survivors; then complete fresh source-shard replay before any r=12/S<=14 promotion. Correct audit prose from 42 to 32 without claiming source-algorithm independence.",
   "historical_fragments": [],
   "research_units": [
     {
       "unit": 1,
-      "status": "COMPLETE_COUNT_MISMATCH_FREEZE",
+      "status": "COMPLETE",
       "evidence": "project/research/general_n/2026-09-23-independent-742-r12-count-audit/R12_SUPPORT10_COUNT_MISMATCH.md"
     },
     {
       "unit": 2,
-      "status": "COMPLETE_BOUNDED_PERFORMANCE_PIVOT",
+      "status": "COMPLETE",
       "evidence": "project/research/general_n/2026-09-23-independent-742-r12-count-audit/R12_SUPPORT10_COUNT_MISMATCH.md"
     },
     {
       "unit": 3,
-      "status": "COMPLETE_REPLAY_DRIVER_SHARDING",
+      "status": "COMPLETE",
       "evidence": "project/research/general_n/2026-09-23-independent-742-r12-count-audit/replay_support10_case1_sources.py"
     },
     {
       "unit": 4,
-      "status": "COMPLETE_HELPER_SCREEN_IMPLEMENTATION",
+      "status": "COMPLETE",
       "evidence": "project/research/general_n/2026-09-23-independent-742-r12-count-audit/screen_support10_case1_helpers.py"
     },
     {
       "unit": 5,
-      "status": "IN_PROGRESS_SURVIVOR_SHARD_REPLAY",
+      "status": "INTERRUPTED_PARTIAL",
       "evidence": "project/research/general_n/2026-09-23-independent-742-r12-count-audit/R12_SUPPORT10_COUNT_MISMATCH.md"
+    },
+    {
+      "unit": 6,
+      "status": "COMPLETE",
+      "evidence": "project/research/general_n/2026-09-23-independent-742-r12-count-audit/R12_SUPPORT10_COUNT_MISMATCH.md"
+    },
+    {
+      "unit": 7,
+      "status": "COMPLETE",
+      "evidence": "project/research/general_n/2026-09-23-independent-742-r12-count-audit/screen_support10_case1_helpers.py"
     }
   ]
 }
