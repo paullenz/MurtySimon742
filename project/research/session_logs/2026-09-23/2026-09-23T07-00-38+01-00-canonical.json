@@ -1,0 +1,51 @@
+{
+  "schema_version": "launch-first-v1",
+  "run_kind": "SCHEDULED_RESEARCH",
+  "session_id": "2026-09-23T07:00:38+01:00",
+  "scheduled_trigger": "2026-09-23T07:00:38+01:00",
+  "next_scheduled_trigger": "2026-09-23T08:00:38+01:00",
+  "research_cutoff": "2026-09-23T07:53:38+01:00",
+  "hard_close_deadline": "2026-09-23T07:59:38+01:00",
+  "trigger_attribution_method": "current invocation title Independent #742 Research plus supplied Europe/London hourly schedule; selected current 07:00:38 trigger",
+  "trigger_attribution_ambiguity": "UNVERIFIED: runtime supplied no immutable delivery identifier",
+  "earliest_actual_start": "2026-09-23T07:59:51+01:00",
+  "lateness_vs_trigger": "00:59:13",
+  "launch_status": "MISSED_LATE_ENTRY",
+  "started_record_prepared_at": "2026-09-23T07:59:51+01:00",
+  "started_record_published_at": "NOT_APPLICABLE_AFTER_HARD_CLOSE",
+  "first_substantive_checkpoint_time": "N/A",
+  "segments": [
+    {
+      "segment_id": "segment-1",
+      "actual_start": "2026-09-23T07:59:51+01:00",
+      "actual_stop": "2026-09-23T07:59:51+01:00",
+      "role": "late_no_research",
+      "notes": "Invocation arrived 00:06:13 after research cutoff and 00:00:13 after hard close. No mathematics started."
+    }
+  ],
+  "forward_research_intervals": [],
+  "forward_research_stop": "N/A",
+  "preservation_start": "2026-09-23T07:59:51+01:00",
+  "preservation_complete": "LATE_AFTER_HARD_CLOSE",
+  "final_report_time": "LATE_AFTER_HARD_CLOSE",
+  "wall_clock_span_to_preservation_complete": "UNVERIFIED",
+  "verified_forward_research_span": "00:00:00",
+  "preservation_span": "UNVERIFIED",
+  "substantive_unit_count": 0,
+  "timestamped_unit_ledger": [],
+  "early_stop_check_time": "2026-09-23T07:59:51+01:00",
+  "early_stop_check_result": "Research cutoff and hard close already passed; no research permitted.",
+  "stop_reason": "MISSED: invocation arrived after both research cutoff and hard close.",
+  "research_target_minutes": 40,
+  "target_40m_applies": "NO",
+  "target_40m_met": "N/A",
+  "session_run_status": "NO_RESEARCH",
+  "focused_session_credit": "NO",
+  "compliance_status": "NONCOMPLIANT_MISSED_LAUNCH_AND_LATE_TELEMETRY",
+  "infrastructure_failures": [
+    "Scheduled invocation delivered 59m13s after trigger, 6m13s after research cutoff, and 13s after hard close."
+  ],
+  "commit_shas": [],
+  "live_unfinished_line": "At next independent trigger, resume live-strip collision multiplicity search and weighted charge; no catch-up.",
+  "historical_fragments": []
+}

@@ -5,33 +5,33 @@ Canonical repository: `paullenz/MurtySimon742`. Date: 23 September 2026.
 Active target: a genuinely independent proof of Erdős #742 / the Murty–Simon inequality e(G)<=floor(n^2/4), preferably with the equality characterization. Forward priority is the project’s own complement / residual / Hall / profile / realizability route, not a reconstruction of the external e+disj+X proof. The first focused session produced the internally checked candidate threshold `Delta>=250n/429`, shrinking the live strip to `n/2<Delta<250n/429`. The theorem and its inherited graph-to-profile spine remain candidate/internal-review mathematics. A 24-focused-session go/no-go gate applies. Prior eventual-D2C work remains preserved but is no longer the active forward objective.
 
 <!-- CURRENT-STATUS:START -->
-CHECKPOINT CLASS: SESSION_COMPLETE_RAN_SHORT_REUSE_NEGATIVE_CONTROL
+CHECKPOINT CLASS: SESSION_MISSED_LATE_ENTRY
 
-WORK MODE: MATH
+WORK MODE: STATUS
 
-INSPECTED PREDECESSOR: 59f87d961d6b3c7a1fca627b7851a4e7ac372ad4.
+INSPECTED PREDECESSOR: db6bf24ca9b6e6f1444a32917f5b564e7cb8eea2.
 
-LAST VERIFIED RESULT: Internal strict residual closure now extends through r=12, supporting the edge bound through S<=14 because every strict counterexample has S>=r+2. The coverage manifest finds 81 saved r=12 source survivors across supports 6--10; all 81 are helper-aware infeasible with zero unknowns. Fresh replay covers all 6,386 support-ten case-1 kernels. Equality remains supported only through S<=8; this is not external verification, graph realizability, a full-strip theorem, or a lower threshold.
+LAST VERIFIED RESULT: Mathematical status unchanged from the completed 06:00 session: internal strict residual closure supports the edge bound through S<=14; equality only through S<=8; the live strip remains n/2<Delta<250n/429. No mathematics was performed in this missed session.
 
-COMPLETED SESSION: Scheduled trigger 2026-09-23T06:00:38+01:00; actual start 06:03:18; forward research stopped 06:51:31; substantive preservation verified 06:53:06; same-trigger finalization re-entry 06:58:29 with zero research; 40-minute target NOT MET. Trigger attribution uses the current invocation title and supplied hourly schedule; immutable delivery identity is UNVERIFIED.
+COMPLETED SESSION: Scheduled trigger 2026-09-23T07:00:38+01:00; actual entry 07:59:51; research cutoff 07:53:38 and hard close 07:59:38 were already past. Trigger attribution uses the current invocation title and supplied hourly schedule; immutable delivery identity is UNVERIFIED.
 
-VERIFIED FORWARD INTERVALS: 06:05:04--06:06:57; 06:08:45--06:09:47; 06:19:43--06:20:37; 06:23:00--06:24:23; 06:25:48--06:27:38; 06:30:28--06:31:39; 06:34:30--06:34:54; 06:38:09--06:40:50; 06:43:20--06:46:31; 06:48:47--06:51:31 BST.
+VERIFIED FORWARD INTERVALS: None.
 
-VERIFIED FORWARD SPAN: 17m13s.
+VERIFIED FORWARD SPAN: 0m00s.
 
-SUBSTANTIVE UNITS: 10 complete. Fresh expansion to 480 independently certified actual-D2C graphs refutes both universal collision injectivity and multiplicity two. An explicit multiplicity-three legal selection has both collided labels demand-positive, but lies outside the live degree strip at Delta/n=7/9.
+SUBSTANTIVE UNITS: 0.
 
-CANONICAL RECORD: project/research/session_logs/2026-09-23/2026-09-23T06-00-38+01-00-canonical.json.
+CANONICAL RECORD: project/research/session_logs/2026-09-23/2026-09-23T07-00-38+01-00-canonical.json.
 
-UNPRESERVED WORK: None after this checkpoint.
+UNPRESERVED WORK: None.
 
 DEFERRED ADMIN: Correct prior audit prose/PDF from 42 to 32; audit launch coverage separately.
 
-NEXT ACTION: Restrict collision search and analysis to n/2<Delta<250n/429, retaining surplus/demand weights. Seek a quantitative charge for m-fold collisions; categorical injectivity and multiplicity-two claims are refuted.
+NEXT ACTION: At the next independently delivered trigger, resume the live-strip collision-multiplicity search and weighted-charge analysis. Do not catch up this missed slot.
 
-FOCUSED-SESSION COUNT: 3/24 after this session; unchanged because the evidenced session did not reach 40 minutes.
+FOCUSED-SESSION COUNT: 3/24; unchanged.
 
-TARGET RESULT: NOT MET (17m13s verified research); session RAN with durable substantive work; no 24-session gate credit.
+TARGET RESULT: N/A because actual entry occurred after the research cutoff. Session NO_RESEARCH/MISSED; telemetry itself finalized after hard close and is NONCOMPLIANT.
 
 MANDATORY CONSTRAINTS: S<=14 is internal/computer-assisted and conditional on the audited bridge; profile feasibility is not graph realizability; equality only through S<=8; balanced complete bipartite graphs and X_3 remain controls; no external e+disj+X core; general theorem open.
 <!-- CURRENT-STATUS:END -->
