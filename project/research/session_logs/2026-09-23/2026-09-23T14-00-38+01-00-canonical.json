@@ -58,7 +58,7 @@
   "forward_research_stop": "2026-09-23T14:53:19+01:00",
   "preservation_start": "2026-09-23T14:53:55+01:00",
   "preservation_complete": "2026-09-23T14:54:20+01:00",
-  "final_report_time": "PENDING",
+  "final_report_time": "2026-09-23T14:55:32+01:00",
   "wall_clock_span_to_preservation_complete": "00:53:50",
   "verified_forward_research_span": "00:41:28",
   "preservation_span": "00:00:25",
@@ -117,7 +117,7 @@
     "2d3ee9fab2fe8bba8891d5c66c06d9734df43bd3",
     "5988761a65dc054ee7d2ce6e53a74a116fb5b1d7",
     "470d88367322ca49af313fd16258120afbde5506",
-    "PENDING_FINAL_ATOMIC_COMMIT"
+    "298ec41e57d277c096e7ee85324229d217df51b8"
   ],
   "live_unfinished_line": "Strengthened n=18,Delta=10 row replay remains incomplete after 7,400 scalar candidates / 10,202 full patterns. Resume from a durable checkpoint or rerun deterministically; do not claim row closure.",
   "historical_fragments": []
