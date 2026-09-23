@@ -18,7 +18,7 @@
     {
       "segment_id": "segment-1",
       "actual_start": "2026-09-23T14:00:30+01:00",
-      "actual_stop": "PENDING",
+      "actual_stop": "2026-09-23T14:53:19+01:00",
       "role": "forward_research",
       "notes": "13:00 predecessor slot had expired. Its canonical was stale ACTIVE, but latest substantive commit was 9e412514 at 13:26 BST; no overlap with the 14:00 slot was possible."
     }
@@ -47,16 +47,22 @@
       "stop": "2026-09-23T14:23:09+01:00",
       "seconds": 279,
       "unit": "Excluded the second n=18 tuple by nested source geometry, strengthened the abstract MILP with finite certificate floors and delta_i<=h_i, and eliminated the next two tuples at deficits 17 and 18."
+    },
+    {
+      "start": "2026-09-23T14:24:30+01:00",
+      "stop": "2026-09-23T14:53:19+01:00",
+      "seconds": 1729,
+      "unit": "Ran the strengthened complete n=18,Delta=10 row screen from the first unclosed tuple through an exact cutoff boundary; 7,400 scalar candidates and 10,202 full deficit patterns tested, zero abstract survivors, best remaining gap one."
     }
   ],
-  "forward_research_stop": "PENDING",
-  "preservation_start": "PENDING",
-  "preservation_complete": "PENDING",
+  "forward_research_stop": "2026-09-23T14:53:19+01:00",
+  "preservation_start": "2026-09-23T14:53:55+01:00",
+  "preservation_complete": "2026-09-23T14:54:20+01:00",
   "final_report_time": "PENDING",
-  "wall_clock_span_to_preservation_complete": "PENDING",
-  "verified_forward_research_span": "00:12:39",
-  "preservation_span": "PENDING",
-  "substantive_unit_count": 4,
+  "wall_clock_span_to_preservation_complete": "00:53:50",
+  "verified_forward_research_span": "00:41:28",
+  "preservation_span": "00:00:25",
+  "substantive_unit_count": 5,
   "timestamped_unit_ledger": [
     {
       "unit": 1,
@@ -85,17 +91,24 @@
       "complete": "2026-09-23T14:23:09+01:00",
       "result": "For d=(8,7),x=(8,8), certificate bounds force centre deficits (8,8), zero endpoint deficits and identical witness sets. Their complements satisfy C_j subset C_i with unique p in C_i\\C_j; shared-source uniqueness makes p miss all eight witnesses and j, so degree(p)<=8, contradicting delta_p=0. With certified n18 star floors and delta_i<=h_i encoded, tuples (8,6,1)/(8,6,1) and (8,5,2)/(8,5,2) have minima 17 and 18 >Dmax16. A broader row replay was stopped at 850 scalar passes for immediate preservation and receives no completion credit.",
       "evidence": "project/research/general_n/2026-09-23-independent-742-r14-near-equality/N18_SECOND_TUPLE_AND_STRENGTHENED_MILP.md"
+    },
+    {
+      "unit": 5,
+      "start": "2026-09-23T14:24:30+01:00",
+      "complete": "2026-09-23T14:53:19+01:00",
+      "result": "The strengthened n=18,Delta=10 row replay tested 7,400 scalar candidates and 10,202 complete deficit patterns after skipping the four separately excluded leading tuples. It found zero abstract survivors. The closest tested case required one more deficit unit than Dmax=16. Execution was stopped at the exact forward-research cutoff, so the untested suffix remains open and no row-closure claim is made.",
+      "evidence": "project/research/general_n/2026-09-23-independent-742-r14-near-equality/N18_STRENGTHENED_ROW_PARTIAL_7400.md"
     }
   ],
-  "early_stop_check_time": "PENDING",
-  "early_stop_check_result": "PENDING",
-  "stop_reason": "PENDING",
+  "early_stop_check_time": "2026-09-23T14:53:19+01:00",
+  "early_stop_check_result": "NOT_EARLY: research continued to 19 seconds before the 14:53:38 cutoff and exceeded 40 verified minutes.",
+  "stop_reason": "Reached the forward-research cutoff with the strengthened row replay incomplete; stopped at the exact evidenced boundary for preservation.",
   "research_target_minutes": 40,
-  "target_40m_applies": "YES",
-  "target_40m_met": "PENDING",
-  "session_run_status": "RAN_ACTIVE",
-  "focused_session_credit": "PENDING",
-  "compliance_status": "STARTED_WITH_STALE_PREDECESSOR_TELEMETRY",
+  "target_40m_applies": true,
+  "target_40m_met": true,
+  "session_run_status": "RAN",
+  "focused_session_credit": "QUALIFIES; prospective 40-minute focused-session counter advances from 3/24 to 4/24.",
+  "compliance_status": "COMPLIANT_WITH_STALE_PREDECESSOR_TELEMETRY_NOTED",
   "infrastructure_failures": [
     "13:00 predecessor did not finalize its canonical record before its hard deadline; its latest durable mathematics was retained and its stale telemetry was not rewritten."
   ],
@@ -103,8 +116,9 @@
     "e376569636b7917bd58a92fd5a81cb1275d42cb0",
     "2d3ee9fab2fe8bba8891d5c66c06d9734df43bd3",
     "5988761a65dc054ee7d2ce6e53a74a116fb5b1d7",
-    "470d88367322ca49af313fd16258120afbde5506"
+    "470d88367322ca49af313fd16258120afbde5506",
+    "PENDING_FINAL_ATOMIC_COMMIT"
   ],
-  "live_unfinished_line": "Resume the strengthened complete n=18,Delta=10 row replay after the four excluded tuples; preserve the next survivor or close the row.",
+  "live_unfinished_line": "Strengthened n=18,Delta=10 row replay remains incomplete after 7,400 scalar candidates / 10,202 full patterns. Resume from a durable checkpoint or rerun deterministically; do not claim row closure.",
   "historical_fragments": []
 }
