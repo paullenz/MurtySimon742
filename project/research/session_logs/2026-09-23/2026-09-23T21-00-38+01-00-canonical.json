@@ -21,28 +21,21 @@
     }
   ],
   "forward_research_intervals": [
-    {
-      "start": "2026-09-23T21:13:01+01:00",
-      "stop": "2026-09-23T21:14:01+01:00",
-      "duration_seconds": 60,
-      "evidence": "Exact stable-index replay 33401-33600 plus completed result emission."
-    }
+    {"start":"2026-09-23T21:13:01+01:00","stop":"2026-09-23T21:14:01+01:00","duration_seconds":60,"evidence":"Exact stable-index replay 33401-33600 plus complete JSON parse."},
+    {"start":"2026-09-23T21:16:35+01:00","stop":"2026-09-23T21:18:28+01:00","duration_seconds":113,"evidence":"Exact continuation 33601-33900 plus bounded failed 33601-34600 attempt; successful results retained."},
+    {"start":"2026-09-23T21:19:26+01:00","stop":"2026-09-23T21:23:30+01:00","duration_seconds":244,"evidence":"Exact continuation through 35300; includes a failed large 34501-34800 attempt subsequently covered exactly by smaller shards."}
   ],
   "forward_research_stop": "PENDING",
   "preservation_start": "PENDING",
   "preservation_complete": "PENDING",
   "final_report_time": "PENDING",
   "wall_clock_span_to_preservation_complete": "PENDING",
-  "verified_forward_research_span": "00:01:00",
+  "verified_forward_research_span": "00:06:57",
   "preservation_span": "PENDING",
-  "substantive_unit_count": 1,
+  "substantive_unit_count": 2,
   "timestamped_unit_ledger": [
-    {
-      "unit": 1,
-      "interval": "2026-09-23T21:13:01+01:00/2026-09-23T21:14:01+01:00",
-      "result": "Exact stable indices 33401-33600 complete; 200 candidates; zero new abstract survivors; closest index 33401 exact deficit 25 vs Dmax 16, gap +9; next 33601.",
-      "artifact": "project/research/general_n/2026-09-23-independent-742-r21-row-closure/N18_RANGE_33401_33600.md"
-    }
+    {"unit":1,"interval":"2026-09-23T21:13:01+01:00/2026-09-23T21:14:01+01:00","result":"Exact stable indices 33401-33600 complete; 200 candidates; zero new abstract survivors; closest gap +9; next 33601.","artifact":"project/research/general_n/2026-09-23-independent-742-r21-row-closure/N18_RANGE_33401_33600.md"},
+    {"unit":2,"intervals":["2026-09-23T21:16:35+01:00/2026-09-23T21:18:28+01:00","2026-09-23T21:19:26+01:00/2026-09-23T21:23:30+01:00"],"result":"Exact stable indices 33601-35300 covered by successful shards; 1700 candidates; zero new abstract survivors; closest stable index 34073 deficit 22 vs Dmax 16, gap +6; next 35301. One killed large shard was not used as evidence and was re-covered by smaller successful shards.","artifact":"project/research/general_n/2026-09-23-independent-742-r21-row-closure/N18_RANGE_33601_35300.md"}
   ],
   "early_stop_check_time": "PENDING",
   "early_stop_check_result": "PENDING",
@@ -53,8 +46,8 @@
   "session_run_status": "ACTIVE_RECOVERED",
   "focused_session_credit": "PENDING; counter remains 6/24.",
   "compliance_status": "NONCOMPLIANT_LATE_START: primary launch missing; recovery STARTED after +5-minute target. First substantive checkpoint met the +10-minute-from-entry target.",
-  "infrastructure_failures": ["Primary scheduled launch lacked durable STARTED evidence before recovery."],
-  "commit_shas": ["e2cbcd575491f976335e6c4f1bbdd39602dddbcb"],
-  "live_unfinished_line": "Continue exact stable-index enumeration from 33,601; full n=18 row closure remains open.",
+  "infrastructure_failures": ["Primary scheduled launch lacked durable STARTED evidence before recovery.","Two oversized local shard wrappers were killed by the execution wrapper before useful completion; all claimed ranges were covered by completed smaller shards."],
+  "commit_shas": ["e2cbcd575491f976335e6c4f1bbdd39602dddbcb","f1ff7181786039324ff05e50b346dd56ae833098","92459b0310ac36c944ddd9998519872b40da53b5"],
+  "live_unfinished_line": "Continue exact stable-index enumeration from 35,301; full n=18 row closure remains open.",
   "historical_fragments": []
 }
