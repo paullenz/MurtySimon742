@@ -5,15 +5,15 @@ Canonical repository: `paullenz/MurtySimon742`. Date: 23 September 2026.
 Active target: a genuinely independent proof of Erdős #742 / the Murty–Simon inequality e(G)<=floor(n^2/4), preferably with the equality characterization. Forward priority is the project’s own complement / residual / Hall / profile / realizability route, not a reconstruction of the external e+disj+X proof. The first focused session produced the internally checked candidate threshold `Delta>=250n/429`, shrinking the live strip to `n/2<Delta<250n/429`. The theorem and its inherited graph-to-profile spine remain candidate/internal-review mathematics. A 24-focused-session go/no-go gate applies. Prior eventual-D2C work remains preserved but is no longer the active forward objective.
 
 <!-- CURRENT-STATUS:START -->
-CHECKPOINT CLASS: VERIFIED_INTERNAL_REUSE_NEGATIVE_CONTROL
+CHECKPOINT CLASS: SESSION_COMPLETE_RAN_SHORT_REUSE_NEGATIVE_CONTROL
 
 WORK MODE: MATH
 
-INSPECTED PREDECESSOR: 22edfcc3394614f1c627db8e3c475b79c32652ef.
+INSPECTED PREDECESSOR: 59f87d961d6b3c7a1fca627b7851a4e7ac372ad4.
 
 LAST VERIFIED RESULT: Internal strict residual closure now extends through r=12, supporting the edge bound through S<=14 because every strict counterexample has S>=r+2. The coverage manifest finds 81 saved r=12 source survivors across supports 6--10; all 81 are helper-aware infeasible with zero unknowns. Fresh replay covers all 6,386 support-ten case-1 kernels. Equality remains supported only through S<=8; this is not external verification, graph realizability, a full-strip theorem, or a lower threshold.
 
-ACTIVE SESSION: Scheduled trigger 2026-09-23T06:00:38+01:00; actual start 06:03:18; research cutoff 06:53:38; hard close 06:59:38; 40-minute target applies. Trigger attribution uses the current invocation title and supplied hourly schedule; immutable delivery identity is UNVERIFIED.
+COMPLETED SESSION: Scheduled trigger 2026-09-23T06:00:38+01:00; actual start 06:03:18; forward research stopped 06:51:31; substantive preservation verified 06:53:06; 40-minute target NOT MET. Trigger attribution uses the current invocation title and supplied hourly schedule; immutable delivery identity is UNVERIFIED.
 
 VERIFIED FORWARD INTERVALS: 06:05:04--06:06:57; 06:08:45--06:09:47; 06:19:43--06:20:37; 06:23:00--06:24:23; 06:25:48--06:27:38; 06:30:28--06:31:39; 06:34:30--06:34:54; 06:38:09--06:40:50; 06:43:20--06:46:31; 06:48:47--06:51:31 BST.
 
@@ -29,9 +29,9 @@ DEFERRED ADMIN: Correct prior audit prose/PDF from 42 to 32; audit launch covera
 
 NEXT ACTION: Restrict collision search and analysis to n/2<Delta<250n/429, retaining surplus/demand weights. Seek a quantitative charge for m-fold collisions; categorical injectivity and multiplicity-two claims are refuted.
 
-FOCUSED-SESSION COUNT: 3/24 before this session.
+FOCUSED-SESSION COUNT: 3/24 after this session; unchanged because the evidenced session did not reach 40 minutes.
 
-TARGET RESULT: PENDING.
+TARGET RESULT: NOT MET (17m13s verified research); session RAN with durable substantive work; no 24-session gate credit.
 
 MANDATORY CONSTRAINTS: S<=14 is internal/computer-assisted and conditional on the audited bridge; profile feasibility is not graph realizability; equality only through S<=8; balanced complete bipartite graphs and X_3 remain controls; no external e+disj+X core; general theorem open.
 <!-- CURRENT-STATUS:END -->
