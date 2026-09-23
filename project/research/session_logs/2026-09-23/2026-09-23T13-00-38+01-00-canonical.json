@@ -1,0 +1,51 @@
+{
+  "schema_version": "launch-first-v1",
+  "run_kind": "SCHEDULED_RESEARCH",
+  "session_id": "2026-09-23T13:00:38+01:00",
+  "scheduled_trigger": "2026-09-23T13:00:38+01:00",
+  "next_scheduled_trigger": "2026-09-23T14:00:38+01:00",
+  "research_cutoff": "2026-09-23T13:53:38+01:00",
+  "hard_close_deadline": "2026-09-23T13:59:38+01:00",
+  "trigger_attribution_method": "secondary_launch_recovery_watchdog runtime metadata; same-hour 13:00:38 Europe/London trigger selected after canonical absence check",
+  "trigger_attribution_ambiguity": "UNVERIFIED: runtime supplied no immutable primary-delivery identifier",
+  "earliest_actual_start": "2026-09-23T13:08:53+01:00",
+  "lateness_vs_trigger": "00:08:15",
+  "launch_status": "STARTED_RECOVERED_SECONDARY_WATCHDOG",
+  "started_record_prepared_at": "2026-09-23T13:08:53+01:00",
+  "started_record_published_at": "PENDING",
+  "first_substantive_checkpoint_time": "PENDING",
+  "segments": [
+    {
+      "segment_id": "segment-1",
+      "actual_start": "2026-09-23T13:08:53+01:00",
+      "actual_stop": "PENDING",
+      "role": "forward_research",
+      "notes": "Secondary watchdog recovery. No durable STARTED record existed for the 13:00:38 trigger when checked; primary and first watchdog launch opportunities therefore lacked durable start evidence."
+    }
+  ],
+  "forward_research_intervals": [],
+  "forward_research_stop": "PENDING",
+  "preservation_start": "PENDING",
+  "preservation_complete": "PENDING",
+  "final_report_time": "PENDING",
+  "wall_clock_span_to_preservation_complete": "PENDING",
+  "verified_forward_research_span": "00:00:00",
+  "preservation_span": "PENDING",
+  "substantive_unit_count": 0,
+  "timestamped_unit_ledger": [],
+  "early_stop_check_time": "PENDING",
+  "early_stop_check_result": "PENDING",
+  "stop_reason": "PENDING",
+  "research_target_minutes": 40,
+  "target_40m_applies": "YES",
+  "target_40m_met": "PENDING",
+  "session_run_status": "STARTED_RECOVERED",
+  "focused_session_credit": "PENDING",
+  "compliance_status": "ACTIVE_RECOVERED_LATE_START",
+  "infrastructure_failures": [
+    "No durable canonical STARTED record existed for the 13:00:38 trigger at secondary-watchdog inspection; recovery began at 13:08:53 BST."
+  ],
+  "commit_shas": [],
+  "live_unfinished_line": "Test actual graph realizability of the n=18, Delta=10 abstract survivor d=(8,7), x=(8,7), h=(8,7), preserving either a certified D2C realization or an explicit graph-level obstruction.",
+  "historical_fragments": []
+}
