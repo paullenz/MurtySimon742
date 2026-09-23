@@ -1,0 +1,51 @@
+{
+  "session_id": "2026-09-23T09:00:38+01:00",
+  "scheduled_trigger": "2026-09-23T09:00:38+01:00",
+  "next_scheduled_trigger": "2026-09-23T10:00:38+01:00",
+  "research_cutoff": "2026-09-23T09:53:38+01:00",
+  "hard_close_deadline": "2026-09-23T09:59:38+01:00",
+  "earliest_actual_start": "2026-09-23T09:26:51+01:00",
+  "lateness_vs_trigger": "26m13s",
+  "trigger_attribution": {
+    "method": "manual_launch_recovery",
+    "status": "VERIFIED_BY_CURRENT_RECOVERY_TASK_IDENTITY",
+    "notes": "Primary 09:00 scheduled launch had no durable canonical STARTED record when recovery inspected the repository. This record recovers the same scheduled trigger; it is not a second session and receives no duplicate credit."
+  },
+  "launch_status": "RECOVERED_LATE_START",
+  "started_record_published_at": "2026-09-23T09:27:00+01:00",
+  "segments": [
+    {
+      "segment_id": "recovery-1",
+      "actual_start": "2026-09-23T09:26:51+01:00",
+      "actual_stop": "PENDING",
+      "role": "forward_research",
+      "notes": "Manual launch recovery of the same 09:00 trigger after missing primary STARTED evidence."
+    }
+  ],
+  "forward_research_intervals": [],
+  "forward_research_stop": "PENDING",
+  "preservation_start": "PENDING",
+  "preservation_complete": "PENDING",
+  "final_report_time": "PENDING",
+  "wall_clock_span_to_preservation_complete": "PENDING",
+  "verified_forward_research_span": "0m00s at STARTED checkpoint",
+  "preservation_span": "PENDING",
+  "substantive_unit_count": 0,
+  "timestamped_unit_ledger": [],
+  "first_substantive_checkpoint_time": "PENDING",
+  "early_stop_check_time": "PENDING",
+  "early_stop_check_result": "PENDING",
+  "stop_reason": "PENDING",
+  "research_target_minutes": 40,
+  "target_40m_applies": "NO",
+  "target_40m_met": "N/A",
+  "target_note": "Recovery entry left less than 40 minutes before the fixed research cutoff; no time before actual recovery entry may be credited.",
+  "compliance_status": "ACTIVE_RECOVERED_LATE_START",
+  "infrastructure_failures": [
+    "Primary scheduled launch lacked a durable STARTED record before recovery."
+  ],
+  "commit_shas": [],
+  "live_unfinished_line": "Resume live-strip collision-multiplicity search and weighted-charge analysis from repository NEXT ACTION.",
+  "historical_fragments": [],
+  "current_state_sync": "PENDING_DUE_CONNECTOR_FULL_FILE_REPLACEMENT_LIMITATION_AT_INITIAL_RECOVERY_WRITE"
+}
