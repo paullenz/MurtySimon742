@@ -35,6 +35,13 @@
       "actual_stop": "2026-09-23T22:50:01+01:00",
       "role": "forward_research",
       "notes": "Same-trigger re-entry arrived while the bounded 39,001-39,250 process was already running; it continued the same session and created no duplicate credit."
+    },
+    {
+      "segment_id": "segment-4",
+      "actual_start": "2026-09-23T22:59:45+01:00",
+      "actual_stop": "2026-09-23T22:59:45+01:00",
+      "role": "administrative_reentry",
+      "notes": "Same-trigger re-entry was observed seven seconds after hard close. No mathematics reopened, no research time credited, and no duplicate session credit."
     }
   ],
   "forward_research_intervals": [
@@ -122,5 +129,11 @@
     "b24f9afadc2382676e4fe3aadb497de5abf6dd9e"
   ],
   "live_unfinished_line": "Continue exact stable-index enumeration from 39,251; full n=18 row closure remains open.",
-  "historical_fragments": []
+  "historical_fragments": [
+    {
+      "observed_at": "2026-09-23T22:59:45+01:00",
+      "kind": "late_same_trigger_reentry",
+      "effect": "Canonical append only after hard close; finalized research result unchanged."
+    }
+  ]
 }
