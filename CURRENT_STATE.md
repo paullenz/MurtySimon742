@@ -5,18 +5,18 @@ Canonical repository: `paullenz/MurtySimon742`. Date: 23 September 2026.
 Active target: a genuinely independent proof of Erdős #742 / the Murty–Simon inequality e(G)<=floor(n^2/4), preferably with the equality characterization. Forward priority is the project’s own complement / residual / Hall / profile / realizability route, not a reconstruction of the external e+disj+X proof. The first focused session produced the internally checked candidate threshold `Delta>=250n/429`, shrinking the live strip to `n/2<Delta<250n/429`. The theorem and its inherited graph-to-profile spine remain candidate/internal-review mathematics. A 24-focused-session go/no-go gate applies. Prior eventual-D2C work remains preserved but is no longer the active forward objective.
 
 <!-- CURRENT-STATUS:START -->
-CHECKPOINT CLASS: STARTED_RECOVERY_17_00
+CHECKPOINT CLASS: STARTED_18_00
 WORK MODE: MATH
-INSPECTED PREDECESSOR: 659a26cd26c322522dd56fef65a9625113b8d5c4.
-LAST VERIFIED RESULT: Exact stable-index n=18, Delta=10 enumeration now gives fresh zero-survivor coverage 18,901-20,320, with 19,321-20,320 preserved in commit 659a26cd26c322522dd56fef65a9625113b8d5c4. This remains abstract assigned-witness evidence, not graph-level realizability or an external theorem.
-ACTIVE SESSION: Scheduled trigger 2026-09-23T17:00:38+01:00; launch-recovery watchdog actual entry 17:07:58 after no durable STARTED evidence from the primary launch; canonical STARTED published in 476e55cd97332ff7d2879b583b63b96543360eac; forward research cutoff 17:53:38; hard close 17:59:38. This is recovery of the same trigger, not duplicate credit, and does not prove scheduler reliability.
+INSPECTED PREDECESSOR: 9424ff01cfdde90a7d25ca23858a5fcddc7cc370.
+LAST VERIFIED RESULT: Exact stable-index n=18, Delta=10 enumeration has fresh zero-survivor coverage through 20,320, and stable index 20,851 is the separately audited d=x=h=(5,5,5) structural case already excluded by the bounded exact D2C model. This remains internal graph/profile evidence, not an external theorem.
+ACTIVE SESSION: Scheduled trigger 2026-09-23T18:00:38+01:00; actual entry 18:03:44; STARTED prepared 2026-09-23T18:06:13+01:00; forward research cutoff 18:53:38; hard close 18:59:38. Immutable delivery identity is UNVERIFIED.
 VERIFIED FORWARD SPAN: 0m00s at STARTED checkpoint.
-SESSION RESULT: STARTED_RECOVERY; 40-minute target PENDING.
+SESSION RESULT: STARTED; 40-minute target PENDING.
 SUBSTANTIVE UNITS: 0. Focused-session counter remains 4/24 pending completed evidenced duration.
-CANONICAL RECORD: project/research/session_logs/2026-09-23/2026-09-23T17-00-38+01-00-canonical.json.
-UNPRESERVED WORK: None; mathematics has not begun after recovery checkpoint.
-DEFERRED ADMIN: Audit/finalize stale 09:00, 11:00, 13:00 and 16:00 telemetry; correct prior audit prose/PDF from 42 to 32; STARTED canonical/status were published as two sequential commits because the available contents write primitive could not create the requested two-file atomic commit without delaying recovery further.
-NEXT ACTION: Continue exact stable-index enumeration immediately above 20,320, preserving exact closed ranges; stop at the next live abstract survivor for graph-level realizability. Do not treat abstract source/profile feasibility as graph existence.
+CANONICAL RECORD: project/research/session_logs/2026-09-23/2026-09-23T18-00-38+01-00-canonical.json.
+UNPRESERVED WORK: None; mathematics has not begun after STARTED checkpoint.
+DEFERRED ADMIN: Finalize stale 09:00, 11:00, 13:00, 16:00 and 17:00 telemetry; correct prior audit prose/PDF from 42 to 32.
+NEXT ACTION: Continue exact stable-index enumeration immediately above 20,851, preserving exact closed ranges; stop at the next distinct live abstract survivor for graph-level realizability.
 MANDATORY CONSTRAINTS: SAT evidence is internal, not external acceptance; partial shard boundaries are not closures; abstract feasibility is not graph realizability; S<=14 remains conditional on the audited bridge; equality only through S<=8; balanced complete bipartite graphs and X_3 remain controls; no external e+disj+X core; general theorem open.
 <!-- CURRENT-STATUS:END -->
 
