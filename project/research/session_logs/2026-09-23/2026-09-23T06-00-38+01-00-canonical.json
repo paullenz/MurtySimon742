@@ -53,6 +53,12 @@
       "stop": "2026-09-23T06:27:38+01:00",
       "seconds": 110,
       "unit": "BFS-certified 600 fresh D2C graphs on 17--22 vertices plus balanced-K and X_3 controls; audited 41,353 selections and exact plateau deficits."
+    },
+    {
+      "start": "2026-09-23T06:30:28+01:00",
+      "stop": "2026-09-23T06:31:39+01:00",
+      "seconds": 71,
+      "unit": "Derived and proved the pair-lift inequality and its summed source form; replayed 200 high-ranked actual-D2C fixtures, finding no violation and tight direct-term examples."
     }
   ],
   "forward_research_stop": "PENDING",
@@ -60,9 +66,9 @@
   "preservation_complete": "PENDING",
   "final_report_time": "PENDING",
   "wall_clock_span_to_preservation_complete": "PENDING",
-  "verified_forward_research_span": "00:07:02",
+  "verified_forward_research_span": "00:08:13",
   "preservation_span": "PENDING",
-  "substantive_unit_count": 5,
+  "substantive_unit_count": 6,
   "timestamped_unit_ledger": [
     {
       "unit": 1,
@@ -98,6 +104,13 @@
       "complete": "2026-09-23T06:27:38+01:00",
       "result": "600/600 generated graphs passed independent BFS D2C certification; 41,353 selections gave 4,837 positive-demand, 112 high-load, 0 positive-surplus, 0 exact-plateau. Balanced K_4..K_20 parities and X_3 passed controls.",
       "evidence": "project/research/general_n/2026-09-23-independent-742-r12-count-audit/POSITIVE_DEMAND_BFS_EXPANSION.md"
+    },
+    {
+      "unit": 6,
+      "start": "2026-09-23T06:30:28+01:00",
+      "complete": "2026-09-23T06:31:39+01:00",
+      "result": "Proved c_F(i,k)<=rho_u+c_R(i,k) for co-selected labels and a stronger summed source inequality. 200-fixture replay passed; tight direct-term witnesses show sourcewise use alone is insufficient.",
+      "evidence": "project/research/general_n/2026-09-23-independent-742-r12-count-audit/PAIR_LIFT_INEQUALITY.md"
     }
   ],
   "early_stop_check_time": "PENDING",
@@ -129,6 +142,6 @@
       "published_at": "2026-09-23T06:11:40+01:00"
     }
   ],
-  "live_unfinished_line": "Derive and test a density-sensitive repeated-high-codegree-pair bound using surplus/endpoint mass; it must allow the saved local high-load witnesses.",
+  "live_unfinished_line": "Sum the pair-lift inequality globally and seek a cross-source reuse bound that survives the tight n=15 direct-term witness.",
   "historical_fragments": []
 }

@@ -5,21 +5,21 @@ Canonical repository: `paullenz/MurtySimon742`. Date: 23 September 2026.
 Active target: a genuinely independent proof of Erdős #742 / the Murty–Simon inequality e(G)<=floor(n^2/4), preferably with the equality characterization. Forward priority is the project’s own complement / residual / Hall / profile / realizability route, not a reconstruction of the external e+disj+X proof. The first focused session produced the internally checked candidate threshold `Delta>=250n/429`, shrinking the live strip to `n/2<Delta<250n/429`. The theorem and its inherited graph-to-profile spine remain candidate/internal-review mathematics. A 24-focused-session go/no-go gate applies. Prior eventual-D2C work remains preserved but is no longer the active forward objective.
 
 <!-- CURRENT-STATUS:START -->
-CHECKPOINT CLASS: VERIFIED_INTERNAL_HIGH_LOAD_BFS_EXPANDED
+CHECKPOINT CLASS: PROVED_INTERNAL_PAIR_LIFT_INSUFFICIENT_ALONE
 
 WORK MODE: MATH
 
-INSPECTED PREDECESSOR: 1a4efef5d16696218941c2380a9633f5ef05bee0.
+INSPECTED PREDECESSOR: 1ed3a9a749243cc9af3e2b5acd6c4e4ea6fa4244.
 
 LAST VERIFIED RESULT: Internal strict residual closure now extends through r=12, supporting the edge bound through S<=14 because every strict counterexample has S>=r+2. The coverage manifest finds 81 saved r=12 source survivors across supports 6--10; all 81 are helper-aware infeasible with zero unknowns. Fresh replay covers all 6,386 support-ten case-1 kernels. Equality remains supported only through S<=8; this is not external verification, graph realizability, a full-strip theorem, or a lower threshold.
 
 ACTIVE SESSION: Scheduled trigger 2026-09-23T06:00:38+01:00; actual start 06:03:18; research cutoff 06:53:38; hard close 06:59:38; 40-minute target applies. Trigger attribution uses the current invocation title and supplied hourly schedule; immutable delivery identity is UNVERIFIED.
 
-VERIFIED FORWARD INTERVALS: 06:05:04--06:06:57; 06:08:45--06:09:47; 06:19:43--06:20:37; 06:23:00--06:24:23; 06:25:48--06:27:38 BST.
+VERIFIED FORWARD INTERVALS: 06:05:04--06:06:57; 06:08:45--06:09:47; 06:19:43--06:20:37; 06:23:00--06:24:23; 06:25:48--06:27:38; 06:30:28--06:31:39 BST.
 
-VERIFIED FORWARD SPAN: 7m02s.
+VERIFIED FORWARD SPAN: 8m13s.
 
-SUBSTANTIVE UNITS: 5 complete. An independently BFS-certified expansion adds 600 actual D2C graphs, 41,353 selections, 4,837 positive-demand and 112 high-load selections; zero positive-surplus and zero exact-plateau instances. Balanced-K controls of both parities and X_3 passed.
+SUBSTANTIVE UNITS: 6 complete. Proved a pair-lift inequality coupling F-codegree of co-selected labels to direct residual labels and common residual sources. It passed 200 hostile fixtures, but local witnesses can saturate the direct term, so sourcewise use alone is insufficient.
 
 CANONICAL RECORD: project/research/session_logs/2026-09-23/2026-09-23T06-00-38+01-00-canonical.json.
 
@@ -27,7 +27,7 @@ UNPRESERVED WORK: None after this checkpoint.
 
 DEFERRED ADMIN: Correct prior audit prose/PDF from 42 to 32; audit launch coverage separately.
 
-NEXT ACTION: Turn the empirical route restriction into a density-sensitive lemma candidate: bound repeated high-codegree pair occurrences using surplus/endpoint mass, explicitly allowing the saved local high-load witnesses. Test the candidate numerically before promotion.
+NEXT ACTION: Sum the pair-lift inequality globally and seek a non-marginal reuse bound for direct residual labels/common residual pairs across different physical sources. Any bound must survive the tight n=15 direct-term witness.
 
 FOCUSED-SESSION COUNT: 3/24 before this session.
 

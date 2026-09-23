@@ -1,0 +1,274 @@
+{
+  "fixtures": 200,
+  "violations": 0,
+  "minimum_pair_slack": 1,
+  "minimum_summed_slack": 0,
+  "tight_pair_fixtures": 0,
+  "tight_summed_fixtures": 200,
+  "examples": [
+    {
+      "n": 15,
+      "seed": 55,
+      "root": 13,
+      "violations": 0,
+      "minPairSlack": 2,
+      "minSumSlack": 0,
+      "sourceRows": [
+        {
+          "u": 4,
+          "q": 2,
+          "lhs": 2,
+          "direct": 2,
+          "indirect": 0,
+          "slack": 0
+        },
+        {
+          "u": 8,
+          "q": 2,
+          "lhs": 2,
+          "direct": 2,
+          "indirect": 0,
+          "slack": 0
+        }
+      ]
+    },
+    {
+      "n": 16,
+      "seed": 55,
+      "root": 7,
+      "violations": 0,
+      "minPairSlack": 4,
+      "minSumSlack": 0,
+      "sourceRows": [
+        {
+          "u": 3,
+          "q": 3,
+          "lhs": 4,
+          "direct": 4,
+          "indirect": 4,
+          "slack": 4
+        },
+        {
+          "u": 12,
+          "q": 3,
+          "lhs": 2,
+          "direct": 2,
+          "indirect": 3,
+          "slack": 3
+        }
+      ]
+    },
+    {
+      "n": 16,
+      "seed": 55,
+      "root": 7,
+      "violations": 0,
+      "minPairSlack": 4,
+      "minSumSlack": 0,
+      "sourceRows": [
+        {
+          "u": 3,
+          "q": 3,
+          "lhs": 4,
+          "direct": 4,
+          "indirect": 4,
+          "slack": 4
+        },
+        {
+          "u": 12,
+          "q": 3,
+          "lhs": 4,
+          "direct": 4,
+          "indirect": 4,
+          "slack": 4
+        }
+      ]
+    },
+    {
+      "n": 15,
+      "seed": 0,
+      "root": 12,
+      "violations": 0,
+      "minPairSlack": 4,
+      "minSumSlack": 0,
+      "sourceRows": [
+        {
+          "u": 13,
+          "q": 2,
+          "lhs": 1,
+          "direct": 1,
+          "indirect": 0,
+          "slack": 0
+        },
+        {
+          "u": 14,
+          "q": 2,
+          "lhs": 1,
+          "direct": 1,
+          "indirect": 0,
+          "slack": 0
+        }
+      ]
+    },
+    {
+      "n": 12,
+      "seed": 29,
+      "root": 5,
+      "violations": 0,
+      "minPairSlack": 1,
+      "minSumSlack": 0,
+      "sourceRows": [
+        {
+          "u": 7,
+          "q": 2,
+          "lhs": 2,
+          "direct": 2,
+          "indirect": 0,
+          "slack": 0
+        }
+      ]
+    },
+    {
+      "n": 12,
+      "seed": 78,
+      "root": 6,
+      "violations": 0,
+      "minPairSlack": 1,
+      "minSumSlack": 0,
+      "sourceRows": [
+        {
+          "u": 11,
+          "q": 2,
+          "lhs": 2,
+          "direct": 2,
+          "indirect": 0,
+          "slack": 0
+        }
+      ]
+    },
+    {
+      "n": 14,
+      "seed": 66,
+      "root": 10,
+      "violations": 0,
+      "minPairSlack": 3,
+      "minSumSlack": 0,
+      "sourceRows": [
+        {
+          "u": 12,
+          "q": 2,
+          "lhs": 2,
+          "direct": 2,
+          "indirect": 1,
+          "slack": 1
+        }
+      ]
+    },
+    {
+      "n": 16,
+      "seed": 33,
+      "root": 0,
+      "violations": 0,
+      "minPairSlack": 4,
+      "minSumSlack": 0,
+      "sourceRows": [
+        {
+          "u": 14,
+          "q": 2,
+          "lhs": 2,
+          "direct": 2,
+          "indirect": 0,
+          "slack": 0
+        }
+      ]
+    },
+    {
+      "n": 16,
+      "seed": 65,
+      "root": 5,
+      "violations": 0,
+      "minPairSlack": 2,
+      "minSumSlack": 0,
+      "sourceRows": [
+        {
+          "u": 2,
+          "q": 2,
+          "lhs": 1,
+          "direct": 1,
+          "indirect": 0,
+          "slack": 0
+        },
+        {
+          "u": 10,
+          "q": 2,
+          "lhs": 2,
+          "direct": 2,
+          "indirect": 1,
+          "slack": 1
+        }
+      ]
+    },
+    {
+      "n": 16,
+      "seed": 65,
+      "root": 5,
+      "violations": 0,
+      "minPairSlack": 2,
+      "minSumSlack": 0,
+      "sourceRows": [
+        {
+          "u": 2,
+          "q": 2,
+          "lhs": 1,
+          "direct": 1,
+          "indirect": 0,
+          "slack": 0
+        },
+        {
+          "u": 10,
+          "q": 2,
+          "lhs": 2,
+          "direct": 2,
+          "indirect": 1,
+          "slack": 1
+        }
+      ]
+    },
+    {
+      "n": 15,
+      "seed": 17,
+      "root": 12,
+      "violations": 0,
+      "minPairSlack": 4,
+      "minSumSlack": 0,
+      "sourceRows": [
+        {
+          "u": 6,
+          "q": 3,
+          "lhs": 3,
+          "direct": 2,
+          "indirect": 4,
+          "slack": 3
+        }
+      ]
+    },
+    {
+      "n": 15,
+      "seed": 17,
+      "root": 12,
+      "violations": 0,
+      "minPairSlack": 4,
+      "minSumSlack": 0,
+      "sourceRows": [
+        {
+          "u": 6,
+          "q": 3,
+          "lhs": 3,
+          "direct": 3,
+          "indirect": 3,
+          "slack": 3
+        }
+      ]
+    }
+  ]
+}
