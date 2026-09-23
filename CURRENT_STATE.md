@@ -5,18 +5,18 @@ Canonical repository: `paullenz/MurtySimon742`. Date: 23 September 2026.
 Active target: a genuinely independent proof of Erdős #742 / the Murty–Simon inequality e(G)<=floor(n^2/4), preferably with the equality characterization. Forward priority is the project’s own complement / residual / Hall / profile / realizability route, not a reconstruction of the external e+disj+X proof. The first focused session produced the internally checked candidate threshold `Delta>=250n/429`, shrinking the live strip to `n/2<Delta<250n/429`. The theorem and its inherited graph-to-profile spine remain candidate/internal-review mathematics. A 24-focused-session go/no-go gate applies. Prior eventual-D2C work remains preserved but is no longer the active forward objective.
 
 <!-- CURRENT-STATUS:START -->
-CHECKPOINT CLASS: STARTED_15_00_SESSION
+CHECKPOINT CLASS: VERIFIED_INTERNAL_N18_ROW_RESUMED_7700
 WORK MODE: MATH
 INSPECTED PREDECESSOR: 838658ffda0075b2cba4d809da5568707636fc45.
-LAST VERIFIED RESULT: Unchanged from the finalized 14:00 session: four leading n=18,Delta=10 tuples are excluded; a strengthened replay tested 7,400 scalar candidates and 10,202 patterns with zero survivors, but its suffix remains untested.
-ACTIVE SESSION: Scheduled trigger 2026-09-23T15:00:38+01:00; actual entry 15:00:47; STARTED prepared/published 15:01:33; cutoff 15:53:38; hard close 15:59:38. Immutable delivery identity is UNVERIFIED.
-VERIFIED FORWARD SPAN: 0m00s.
-SESSION RESULT: STARTED; 40-minute target applies.
-SUBSTANTIVE UNITS: 0. Focused-session counter remains 4/24 pending finalization.
+LAST VERIFIED RESULT: Deterministic resumption reproduced the prior scalar/pattern boundary and extended the strengthened n=18,Delta=10 replay through scalar candidate 7,700 / full pattern 10,544. New candidates 7,401-7,700 produced zero survivors; their local best gap is 3, while the earlier global best gap 1 remains. No row-closure claim is made.
+ACTIVE SESSION: Scheduled trigger 2026-09-23T15:00:38+01:00; actual entry 15:00:47; STARTED verified 15:02:43; cutoff 15:53:38; hard close 15:59:38. Immutable delivery identity is UNVERIFIED.
+VERIFIED FORWARD SPAN: 0m52s.
+SESSION RESULT: RAN/ACTIVE; 40-minute target applies.
+SUBSTANTIVE UNITS: 1. Focused-session counter remains 4/24 pending finalization.
 CANONICAL RECORD: project/research/session_logs/2026-09-23/2026-09-23T15-00-38+01-00-canonical.json.
-UNPRESERVED WORK: None; mathematics has not yet begun.
+UNPRESERVED WORK: None after this checkpoint.
 DEFERRED ADMIN: Audit/finalize stale 09:00, 11:00 and 13:00 telemetry; correct prior audit prose/PDF from 42 to 32.
-NEXT ACTION: Resume the deterministic strengthened n=18,Delta=10 row replay past the prior 7,400-scalar/10,202-pattern tested prefix; preserve the first survivor or complete the row.
+NEXT ACTION: Continue deterministic strengthened n=18,Delta=10 row replay with --resume-scalar 7700; preserve the first survivor or complete the row.
 MANDATORY CONSTRAINTS: Partial replay gets no completion credit; abstract feasibility is not graph realizability; S<=14 remains conditional on the audited bridge; equality only through S<=8; balanced complete bipartite graphs and X_3 remain controls; no external e+disj+X core; general theorem open.
 <!-- CURRENT-STATUS:END -->
 

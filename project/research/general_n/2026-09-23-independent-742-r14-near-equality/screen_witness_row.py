@@ -5,7 +5,7 @@ from screen_demand_15_16 import partitions, f
 from witness_deficit_milp import solve_aggregated
 
 
-def main(n, Delta, stop_first=False, skip_tuples=None):
+def main(n, Delta, stop_first=False, skip_tuples=None, resume_scalar=0):
     skip_tuples = set() if skip_tuples is None else set(skip_tuples)
     rho = 2 * Delta - n
     Dmax = n * rho // 2 - 2 if n % 2 == 0 else (n * rho - 3) // 2
@@ -35,6 +35,14 @@ def main(n, Delta, stop_first=False, skip_tuples=None):
                 if sum(xs) > Delta * (Delta - 1) // 2:
                     continue
                 scalar_pass += 1
+                if scalar_pass <= resume_scalar:
+                    if scalar_pass % 500 == 0:
+                        print(json.dumps({
+                            "resume_scalar_scanned": scalar_pass,
+                            "all_patterns_tested": tested,
+                            "resume_target": resume_scalar,
+                        }), flush=True)
+                    continue
                 out = solve_aggregated(list(p), list(xs), rho, Delta, 10)
                 out["total_demand"] = total
                 if out["minimum_deficit"] is not None:
@@ -86,5 +94,8 @@ if __name__ == "__main__":
             ((8, 6, 1), (8, 6, 1)),
             ((8, 5, 2), (8, 5, 2)),
         })
+    resume_scalar = 0
+    if "--resume-scalar" in sys.argv:
+        resume_scalar = int(sys.argv[sys.argv.index("--resume-scalar") + 1])
     main(int(sys.argv[1]), int(sys.argv[2]),
-         "--stop-first" in sys.argv, skip)
+         "--stop-first" in sys.argv, skip, resume_scalar)
