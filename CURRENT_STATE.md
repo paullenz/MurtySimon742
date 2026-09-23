@@ -5,7 +5,7 @@ Canonical repository: `paullenz/MurtySimon742`. Date: 23 September 2026.
 Active target: a genuinely independent proof of Erdős #742 / the Murty–Simon inequality e(G)<=floor(n^2/4), preferably with the equality characterization. Forward priority is the project’s own complement / residual / Hall / profile / realizability route, not a reconstruction of the external e+disj+X proof. The first focused session produced the internally checked candidate threshold `Delta>=250n/429`, shrinking the live strip to `n/2<Delta<250n/429`. The theorem and its inherited graph-to-profile spine remain candidate/internal-review mathematics. A 24-focused-session go/no-go gate applies. Prior eventual-D2C work remains preserved but is no longer the active forward objective.
 
 <!-- CURRENT-STATUS:START -->
-CHECKPOINT CLASS: WIP_UNVERIFIED_COUNT_MISMATCH_FREEZE
+CHECKPOINT CLASS: WIP_REPLAY_DRIVER_READY
 
 WORK MODE: MATH
 
@@ -23,11 +23,11 @@ SUBSTANTIVE UNITS: 1.
 
 CANONICAL RECORD: project/research/session_logs/2026-09-23/2026-09-23T01-00-38+01-00-canonical.json.
 
-UNPRESERVED WORK: None after this checkpoint.
+UNPRESERVED WORK: None after this checkpoint. The fresh full-replay driver is preserved but has not yet produced a result.
 
 DEFERRED ADMIN: Verify the first three post-cutover launches at the next audit; no settings claim substitutes for observed telemetry.
 
-NEXT ACTION: Independently replay or reimplement the r=12 support-ten source stage to reconcile 32 saved survivors against the reported 42; only then run the helper-aware supplement screen on the reconciled set.
+NEXT ACTION: Run `project/research/general_n/2026-09-23-independent-742-r12-count-audit/replay_support10_case1_sources.py` across all 6,386 committed kernels. Compare its survivor identity digest to the saved 32-row set; only then run the supplement screen on the reconciled set.
 
 FOCUSED-SESSION COUNT: 1/24 before this session; credit pending a complete evidenced >=40-minute focused record.
 
