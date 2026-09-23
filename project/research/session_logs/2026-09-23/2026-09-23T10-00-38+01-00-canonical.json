@@ -72,6 +72,12 @@
       "stop": "2026-09-23T10:29:50+01:00",
       "seconds": 191,
       "unit": "Ran a larger disjoint 5,200-graph fully certified Hall-envelope screen and exact assignment DP on its scalar false positive."
+    },
+    {
+      "start": "2026-09-23T10:31:12+01:00",
+      "stop": "2026-09-23T10:33:36+01:00",
+      "seconds": 144,
+      "unit": "Proved the subset-union Hall envelope is exactly attainable at the certificate-assignment interface; replayed exact DP on 169 live-strip actual-graph roots."
     }
   ],
   "forward_research_stop": "PENDING",
@@ -79,9 +85,9 @@
   "preservation_complete": "PENDING",
   "final_report_time": "PENDING",
   "wall_clock_span_to_preservation_complete": "PENDING",
-  "verified_forward_research_span": "00:16:47",
+  "verified_forward_research_span": "00:19:11",
   "preservation_span": "PENDING",
-  "substantive_unit_count": 6,
+  "substantive_unit_count": 7,
   "timestamped_unit_ledger": [
     {
       "unit": 1,
@@ -124,6 +130,13 @@
       "complete": "2026-09-23T10:29:50+01:00",
       "result": "5,200/5,200 graphs certified; 350 live-strip roots; one E>=15 root (E=17), zero H>=15 roots (max H=10). Exact assignment on the E=17 root equals H=6 across 227 count vectors.",
       "evidence": "project/research/general_n/2026-09-23-independent-742-r12-count-audit/SUBSET_UNION_HALL_BATCH_TWO.json"
+    },
+    {
+      "unit": 7,
+      "start": "2026-09-23T10:31:12+01:00",
+      "complete": "2026-09-23T10:33:36+01:00",
+      "result": "Exactness theorem: certificate-assignment optimum S*=H. Inclusion-minimal maximizers have >h_i/2 label-private edges; assign those first and all shared union edges arbitrarily. Exact DP agreed on 169/169 roots, max 4,150 states.",
+      "evidence": "project/research/general_n/2026-09-23-independent-742-r12-count-audit/HALL_ENVELOPE_EXACTNESS.md"
     }
   ],
   "early_stop_check_time": "PENDING",
@@ -140,6 +153,6 @@
     "09:00 predecessor telemetry remains PENDING after hard close; reconciliation deferred."
   ],
   "commit_shas": [],
-  "live_unfinished_line": "Independently compute exact assignment maxima for the two first-batch scalar E>=15 roots; then extend the fresh H screen toward larger n.",
+  "live_unfinished_line": "Use exact H as the primary actual-graph obstruction; extend the disjoint live-strip screen and derive structural consequences of H>=15.",
   "historical_fragments": []
 }

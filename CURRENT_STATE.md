@@ -5,21 +5,21 @@ Canonical repository: `paullenz/MurtySimon742`. Date: 23 September 2026.
 Active target: a genuinely independent proof of Erdős #742 / the Murty–Simon inequality e(G)<=floor(n^2/4), preferably with the equality characterization. Forward priority is the project’s own complement / residual / Hall / profile / realizability route, not a reconstruction of the external e+disj+X proof. The first focused session produced the internally checked candidate threshold `Delta>=250n/429`, shrinking the live strip to `n/2<Delta<250n/429`. The theorem and its inherited graph-to-profile spine remain candidate/internal-review mathematics. A 24-focused-session go/no-go gate applies. Prior eventual-D2C work remains preserved but is no longer the active forward objective.
 
 <!-- CURRENT-STATUS:START -->
-CHECKPOINT CLASS: VERIFIED_INTERNAL_SUBSET_UNION_HALL_BATCH_TWO
+CHECKPOINT CLASS: VERIFIED_INTERNAL_HALL_ENVELOPE_EXACTNESS
 WORK MODE: MATH
 INSPECTED PREDECESSOR: b67d73be41214916c90ac31c23838061a3825d51.
-LAST VERIFIED RESULT: The graph-level subset-union envelope H was screened on a second disjoint batch of 5,200 independently every-edge-certified D2C graphs. Its 350 live-strip maximum roots include one scalar false positive E=17, but no H>=15 root; maximum H is 10. Exact certificate assignment on the E=17 root has maximum S=6 across 227 reachable count vectors, equal to H for that root.
+LAST VERIFIED RESULT: At the graph-level certificate-assignment interface, H=max_L(2|union C_i|-sum h_i) is the exact maximum possible demand, not only an upper bound. Choose an inclusion-minimal maximizing L; removing any i strictly lowers the objective, so i has more than h_i/2 certificate edges private relative to L. Assign these private edges first, then every remaining union edge to any incident label. All labels remain positive and the attained demand equals H. Exact assignment DP agreed with H on all 169 first-batch live-strip roots (maximum 4,150 reachable count vectors).
 ACTIVE SESSION: Scheduled trigger 2026-09-23T10:00:38+01:00; actual start 10:00:51; research cutoff 10:53:38; hard close 10:59:38; 40-minute target applies. Trigger attribution uses the current invocation title and supplied hourly schedule; immutable delivery identity is UNVERIFIED.
-VERIFIED FORWARD INTERVALS: 10:04:48--10:06:58; 10:08:12--10:08:28; 10:09:08--10:10:13; 10:11:53--10:14:39; 10:15:48--10:19:47; 10:21:45--10:25:05; 10:26:39--10:29:50 BST.
-VERIFIED FORWARD SPAN: 16m47s.
-SUBSTANTIVE UNITS: 6 complete. Across the two new Hall-envelope batches: 7,800 certified graphs, 519 live-strip roots, three scalar E>=15 roots, zero H>=15 roots.
+VERIFIED FORWARD INTERVALS: 10:04:48--10:06:58; 10:08:12--10:08:28; 10:09:08--10:10:13; 10:11:53--10:14:39; 10:15:48--10:19:47; 10:21:45--10:25:05; 10:26:39--10:29:50; 10:31:12--10:33:36 BST.
+VERIFIED FORWARD SPAN: 19m11s.
+SUBSTANTIVE UNITS: 7 complete. H is now an exact graph-level certificate-selection optimum; no graph-realizability promotion beyond that interface is claimed.
 CANONICAL RECORD: project/research/session_logs/2026-09-23/2026-09-23T10-00-38+01-00-canonical.json.
 UNPRESERVED WORK: None.
 DEFERRED ADMIN: Finalize stale 09:00 telemetry in the audit; correct prior audit prose/PDF from 42 to 32.
-NEXT ACTION: Compute exact assignment maxima for the two first-batch scalar false positives, then extend the H screen at larger n.
+NEXT ACTION: Use exact H as the primary actual-graph obstruction; extend the disjoint live-strip screen and derive structural consequences forced by H>=15.
 FOCUSED-SESSION COUNT: 3/24 before this session.
 TARGET RESULT: PENDING.
-MANDATORY CONSTRAINTS: S<=14 is internal/computer-assisted and conditional on the audited bridge; H is a graph-level necessary envelope, not a theorem of abstract profiles; equality only through S<=8; balanced complete bipartite graphs and X_3 remain controls; no external e+disj+X core; general theorem open.
+MANDATORY CONSTRAINTS: S<=14 is internal/computer-assisted and conditional on the audited bridge; H is exact only for the defined graph-level certificate-choice interface; equality only through S<=8; balanced complete bipartite graphs and X_3 remain controls; no external e+disj+X core; general theorem open.
 <!-- CURRENT-STATUS:END -->
 
 ## Latest adversarial audit - 23 September 2026

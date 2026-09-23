@@ -1,0 +1,36 @@
+{
+  "schema": "hall-envelope-exactness-replay-v1",
+  "range": {
+    "seed": [
+      450,
+      549
+    ],
+    "n": [
+      17,
+      42
+    ]
+  },
+  "live_strip_max_root_states": 169,
+  "mismatches": 0,
+  "max_reachable_count_vectors": 4150,
+  "scalar_false_positive_exact": [
+    {
+      "n": 22,
+      "seed": 522,
+      "root": 14,
+      "E": 15,
+      "H": 5,
+      "exact_S": 5,
+      "states": 4150
+    },
+    {
+      "n": 18,
+      "seed": 530,
+      "root": 12,
+      "E": 19,
+      "H": 7,
+      "exact_S": 7,
+      "states": 408
+    }
+  ]
+}
