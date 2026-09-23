@@ -5,19 +5,19 @@ Canonical repository: `paullenz/MurtySimon742`. Date: 23 September 2026.
 Active target: a genuinely independent proof of Erdős #742 / the Murty–Simon inequality e(G)<=floor(n^2/4), preferably with the equality characterization. Forward priority is the project’s own complement / residual / Hall / profile / realizability route, not a reconstruction of the external e+disj+X proof. The first focused session produced the internally checked candidate threshold `Delta>=250n/429`, shrinking the live strip to `n/2<Delta<250n/429`. The theorem and its inherited graph-to-profile spine remain candidate/internal-review mathematics. A 24-focused-session go/no-go gate applies. Prior eventual-D2C work remains preserved but is no longer the active forward objective.
 
 <!-- CURRENT-STATUS:START -->
-CHECKPOINT CLASS: STARTED_14_INDEPENDENT
+CHECKPOINT CLASS: VERIFIED_INTERNAL_N18_DEFICIT14_OPTIMIZER_EXCLUDED
 WORK MODE: MATH
 INSPECTED PREDECESSOR: 9e4125140e232db54fa073f086f23f145764b183.
-LAST VERIFIED RESULT: The 13-deficit optimizer for n=18,Delta=10 is excluded, and the strict star-slack refinement sum epsilon_t >= binom(x,2)+1 holds for every assigned-witness star with x>=3. The tuple d=(8,7),x=(8,7),h=(8,7) remains abstractly feasible at deficit 14<=16; actual D2C realizability remains open.
-ACTIVE SESSION: Scheduled trigger 2026-09-23T14:00:38+01:00; actual entry 14:00:30; cutoff 14:53:38; hard close 14:59:38. Immutable delivery identity is UNVERIFIED.
-VERIFIED FORWARD SPAN: 0m00s at STARTED publication.
-SESSION RESULT: STARTED; 40-minute target applies.
-SUBSTANTIVE UNITS: 0. Focused-session counter remains 3/24 pending finalization.
+LAST VERIFIED RESULT: The strict-star deficit-14 optimizer for n=18,Delta=10 is graph-infeasible. Its witness sets satisfy T_j subset T_i with unique p in T_i\T_j, hence C_i subset C_j=C_i union {p}. Shared-witness source uniqueness forces all seven vertices of T_j nonadjacent to p; p is also nonadjacent to label i. Thus d(p)<=9, contradicting the optimizer's delta_p=0. The tuple itself is not yet excluded at deficit 15 or 16.
+ACTIVE SESSION: Scheduled trigger 2026-09-23T14:00:38+01:00; actual entry 14:00:30; STARTED verified 14:03:14; cutoff 14:53:38; hard close 14:59:38. Immutable delivery identity is UNVERIFIED.
+VERIFIED FORWARD SPAN: 1m41s.
+SESSION RESULT: RAN/ACTIVE; 40-minute target applies.
+SUBSTANTIVE UNITS: 1. Focused-session counter remains 3/24 pending finalization.
 CANONICAL RECORD: project/research/session_logs/2026-09-23/2026-09-23T14-00-38+01-00-canonical.json.
-UNPRESERVED WORK: None.
+UNPRESERVED WORK: None after this checkpoint.
 DEFERRED ADMIN: Audit/finalize stale 09:00, 11:00 and 13:00 telemetry; correct prior audit prose/PDF from 42 to 32.
-NEXT ACTION: Use STRICT-STAR and exact source geometry to test the n=18,Delta=10 tuple d=(8,7),x=(8,7),h=(8,7); preserve either a full exclusion or an actual D2C realization.
-MANDATORY CONSTRAINTS: Abstract witness feasibility is not graph realizability; S<=14 remains conditional on the audited bridge; equality only through S<=8; balanced complete bipartite graphs and X_3 remain controls; no external e+disj+X core; general theorem open.
+NEXT ACTION: Re-solve the n=18,Delta=10 tuple with the nested-source obstruction encoded, then test every remaining deficit-15/16 optimizer or close the tuple.
+MANDATORY CONSTRAINTS: Optimizer exclusion is not tuple exclusion; abstract witness feasibility is not graph realizability; S<=14 remains conditional on the audited bridge; equality only through S<=8; balanced complete bipartite graphs and X_3 remain controls; no external e+disj+X core; general theorem open.
 <!-- CURRENT-STATUS:END -->
 
 ## Latest adversarial audit - 23 September 2026

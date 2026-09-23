@@ -12,8 +12,8 @@
   "lateness_vs_trigger": "-00:00:08",
   "launch_status": "STARTED",
   "started_record_prepared_at": "2026-09-23T14:02:35+01:00",
-  "started_record_published_at": "PENDING",
-  "first_substantive_checkpoint_time": "PENDING",
+  "started_record_published_at": "2026-09-23T14:03:14+01:00",
+  "first_substantive_checkpoint_time": "2026-09-23T14:04:55+01:00",
   "segments": [
     {
       "segment_id": "segment-1",
@@ -23,29 +23,46 @@
       "notes": "13:00 predecessor slot had expired. Its canonical was stale ACTIVE, but latest substantive commit was 9e412514 at 13:26 BST; no overlap with the 14:00 slot was possible."
     }
   ],
-  "forward_research_intervals": [],
+  "forward_research_intervals": [
+    {
+      "start": "2026-09-23T14:03:14+01:00",
+      "stop": "2026-09-23T14:04:55+01:00",
+      "seconds": 101,
+      "unit": "Used nested exact source geometry to exclude the deficit-14 optimizer of the n=18,Delta=10 tuple."
+    }
+  ],
   "forward_research_stop": "PENDING",
   "preservation_start": "PENDING",
   "preservation_complete": "PENDING",
   "final_report_time": "PENDING",
   "wall_clock_span_to_preservation_complete": "PENDING",
-  "verified_forward_research_span": "00:00:00",
+  "verified_forward_research_span": "00:01:41",
   "preservation_span": "PENDING",
-  "substantive_unit_count": 0,
-  "timestamped_unit_ledger": [],
+  "substantive_unit_count": 1,
+  "timestamped_unit_ledger": [
+    {
+      "unit": 1,
+      "start": "2026-09-23T14:03:14+01:00",
+      "complete": "2026-09-23T14:04:55+01:00",
+      "result": "For the deficit-14 optimizer, T_j subset T_i with |T_i|=8,|T_j|=7 and unique p in T_i\\T_j. Then C_i subset C_j=C_i union {p}. Every shared witness t has its i-source in C_i, so j-uniqueness forces t nonadjacent to p. Since p is also nonadjacent to i, p has at least eight nonneighbors and degree at most 9, contradicting optimizer deficit delta_p=0 (degree 10).",
+      "evidence": "project/research/general_n/2026-09-23-independent-742-r14-near-equality/N18_DEFICIT14_NESTED_SOURCE_OBSTRUCTION.md"
+    }
+  ],
   "early_stop_check_time": "PENDING",
   "early_stop_check_result": "PENDING",
   "stop_reason": "PENDING",
   "research_target_minutes": 40,
   "target_40m_applies": "YES",
   "target_40m_met": "PENDING",
-  "session_run_status": "STARTED",
+  "session_run_status": "RAN_ACTIVE",
   "focused_session_credit": "PENDING",
   "compliance_status": "STARTED_WITH_STALE_PREDECESSOR_TELEMETRY",
   "infrastructure_failures": [
     "13:00 predecessor did not finalize its canonical record before its hard deadline; its latest durable mathematics was retained and its stale telemetry was not rewritten."
   ],
-  "commit_shas": [],
-  "live_unfinished_line": "Use STRICT-STAR and exact source geometry to test the n=18,Delta=10 tuple d=(8,7),x=(8,7),h=(8,7); preserve either a full exclusion or an actual D2C realization.",
+  "commit_shas": [
+    "e376569636b7917bd58a92fd5a81cb1275d42cb0"
+  ],
+  "live_unfinished_line": "Re-solve the n=18,Delta=10 tuple with the nested-source obstruction encoded, then test every remaining deficit-15/16 optimizer or close the tuple.",
   "historical_fragments": []
 }
