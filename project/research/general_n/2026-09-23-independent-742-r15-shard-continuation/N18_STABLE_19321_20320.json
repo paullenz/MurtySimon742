@@ -1,0 +1,19 @@
+{
+  "schema": "witness-deficit-stable-index-range-v1",
+  "date": "2026-09-23",
+  "n": 18,
+  "Delta": 10,
+  "rho": 2,
+  "Dmax": 16,
+  "stable_index_start": 19321,
+  "stable_index_stop": 20320,
+  "enumerated": 1000,
+  "range_complete": true,
+  "abstract_survivor_count": 0,
+  "known_graph_excluded_survivor_count": 0,
+  "completed_chunks": [[19321,19440],[19441,19560],[19561,19680],[19681,19800],[19801,19920],[19921,20000],[20001,20040],[20041,20080],[20081,20120],[20121,20160],[20161,20200],[20201,20240],[20241,20280],[20281,20320]],
+  "discarded_attempts": [[19921,20040],[20001,20080]],
+  "discarded_attempt_note": "Two larger batches hit the execution timeout before producing durable output. They are not credited and do not contribute to range closure; their indices were rerun successfully in smaller exact batches.",
+  "method": "Exact stable-index enumeration plus the repository aggregated incidence-pattern MILP using the preserved parallel_stable_shard.py helper. Each completed chunk returned range_complete=true and zero abstract survivors.",
+  "scope_note": "Combined with the separately preserved exact range 18,901-19,320, this now gives fresh exact zero-survivor coverage 18,901-20,320. It is abstract assigned-witness evidence, not a graph-level theorem."
+}
