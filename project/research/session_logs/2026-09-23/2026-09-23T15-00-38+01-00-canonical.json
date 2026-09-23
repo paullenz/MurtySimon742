@@ -1,0 +1,51 @@
+{
+  "schema_version": "launch-first-v1",
+  "run_kind": "SCHEDULED_RESEARCH",
+  "session_id": "2026-09-23T15:00:38+01:00",
+  "scheduled_trigger": "2026-09-23T15:00:38+01:00",
+  "next_scheduled_trigger": "2026-09-23T16:00:38+01:00",
+  "research_cutoff": "2026-09-23T15:53:38+01:00",
+  "hard_close_deadline": "2026-09-23T15:59:38+01:00",
+  "trigger_attribution_method": "current invocation title Independent #742 Research plus supplied Europe/London hourly schedule; selected current 15:00:38 trigger",
+  "trigger_attribution_ambiguity": "UNVERIFIED: runtime supplied no immutable delivery identifier",
+  "earliest_actual_start": "2026-09-23T15:00:47+01:00",
+  "lateness_vs_trigger": "00:00:09",
+  "launch_status": "STARTED",
+  "started_record_prepared_at": "2026-09-23T15:01:33+01:00",
+  "started_record_published_at": "2026-09-23T15:01:33+01:00",
+  "first_substantive_checkpoint_time": "PENDING",
+  "segments": [
+    {
+      "segment_id": "segment-1",
+      "actual_start": "2026-09-23T15:00:47+01:00",
+      "actual_stop": "PENDING",
+      "role": "forward_research",
+      "notes": "14:00 predecessor finalized at commit 838658ff before this trigger; no overlap."
+    }
+  ],
+  "forward_research_intervals": [],
+  "forward_research_stop": "PENDING",
+  "preservation_start": "PENDING",
+  "preservation_complete": "PENDING",
+  "final_report_time": "PENDING",
+  "wall_clock_span_to_preservation_complete": "PENDING",
+  "verified_forward_research_span": "00:00:00",
+  "preservation_span": "PENDING",
+  "substantive_unit_count": 0,
+  "timestamped_unit_ledger": [],
+  "early_stop_check_time": "PENDING",
+  "early_stop_check_result": "PENDING",
+  "stop_reason": "PENDING",
+  "research_target_minutes": 40,
+  "target_40m_applies": true,
+  "target_40m_met": "PENDING",
+  "session_run_status": "STARTED",
+  "focused_session_credit": "PENDING; focused counter remains 4/24.",
+  "compliance_status": "STARTED_ON_TIME",
+  "infrastructure_failures": [],
+  "commit_shas": [
+    "PENDING_STARTED_COMMIT"
+  ],
+  "live_unfinished_line": "Resume deterministic strengthened n=18,Delta=10 row replay beyond the prior tested 7,400-scalar/10,202-pattern prefix; first survivor or complete row requires immediate preservation.",
+  "historical_fragments": []
+}

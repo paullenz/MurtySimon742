@@ -5,19 +5,19 @@ Canonical repository: `paullenz/MurtySimon742`. Date: 23 September 2026.
 Active target: a genuinely independent proof of Erdős #742 / the Murty–Simon inequality e(G)<=floor(n^2/4), preferably with the equality characterization. Forward priority is the project’s own complement / residual / Hall / profile / realizability route, not a reconstruction of the external e+disj+X proof. The first focused session produced the internally checked candidate threshold `Delta>=250n/429`, shrinking the live strip to `n/2<Delta<250n/429`. The theorem and its inherited graph-to-profile spine remain candidate/internal-review mathematics. A 24-focused-session go/no-go gate applies. Prior eventual-D2C work remains preserved but is no longer the active forward objective.
 
 <!-- CURRENT-STATUS:START -->
-CHECKPOINT CLASS: VERIFIED_INTERNAL_N18_FOUR_TUPLES_EXCLUDED_PLUS_PARTIAL_ROW_7400
-WORK MODE: PRESERVED
-INSPECTED PREDECESSOR: 9e4125140e232db54fa073f086f23f145764b183.
-LAST VERIFIED RESULT: Four leading n=18,Delta=10 tuples are excluded. The strengthened residual row replay then tested 7,400 scalar candidates and 10,202 complete deficit patterns, finding zero survivors; the closest tested pattern is one deficit unit over Dmax=16. The cutoff interrupted the replay, so the untested suffix remains open and no row-closure claim is made.
-ACTIVE SESSION: Scheduled trigger 2026-09-23T14:00:38+01:00; actual entry 14:00:30; STARTED verified 14:03:14; forward research stopped 14:53:19 before the 14:53:38 cutoff; hard close 14:59:38. Immutable delivery identity is UNVERIFIED.
-VERIFIED FORWARD SPAN: 41m28s.
-SESSION RESULT: RAN; 40-minute target MET.
-SUBSTANTIVE UNITS: 5. Prospective focused-session counter advances to 4/24.
-CANONICAL RECORD: project/research/session_logs/2026-09-23/2026-09-23T14-00-38+01-00-canonical.json.
-UNPRESERVED WORK: None after this checkpoint.
+CHECKPOINT CLASS: STARTED_15_00_SESSION
+WORK MODE: MATH
+INSPECTED PREDECESSOR: 838658ffda0075b2cba4d809da5568707636fc45.
+LAST VERIFIED RESULT: Unchanged from the finalized 14:00 session: four leading n=18,Delta=10 tuples are excluded; a strengthened replay tested 7,400 scalar candidates and 10,202 patterns with zero survivors, but its suffix remains untested.
+ACTIVE SESSION: Scheduled trigger 2026-09-23T15:00:38+01:00; actual entry 15:00:47; STARTED prepared/published 15:01:33; cutoff 15:53:38; hard close 15:59:38. Immutable delivery identity is UNVERIFIED.
+VERIFIED FORWARD SPAN: 0m00s.
+SESSION RESULT: STARTED; 40-minute target applies.
+SUBSTANTIVE UNITS: 0. Focused-session counter remains 4/24 pending finalization.
+CANONICAL RECORD: project/research/session_logs/2026-09-23/2026-09-23T15-00-38+01-00-canonical.json.
+UNPRESERVED WORK: None; mathematics has not yet begun.
 DEFERRED ADMIN: Audit/finalize stale 09:00, 11:00 and 13:00 telemetry; correct prior audit prose/PDF from 42 to 32.
-NEXT ACTION: Resume the deterministic strengthened n=18,Delta=10 row replay after the 7,400-scalar/10,202-pattern boundary; preserve the first survivor or complete the untested suffix. If a survivor appears, test actual D2C source geometry before any theorem promotion.
-MANDATORY CONSTRAINTS: Partial replay gets no completion credit; finite certificate-cover verification is internal, not external acceptance; abstract witness feasibility is not graph realizability; S<=14 remains conditional on the audited bridge; equality only through S<=8; balanced complete bipartite graphs and X_3 remain controls; no external e+disj+X core; general theorem open.
+NEXT ACTION: Resume the deterministic strengthened n=18,Delta=10 row replay past the prior 7,400-scalar/10,202-pattern tested prefix; preserve the first survivor or complete the row.
+MANDATORY CONSTRAINTS: Partial replay gets no completion credit; abstract feasibility is not graph realizability; S<=14 remains conditional on the audited bridge; equality only through S<=8; balanced complete bipartite graphs and X_3 remain controls; no external e+disj+X core; general theorem open.
 <!-- CURRENT-STATUS:END -->
 
 ## Latest adversarial audit - 23 September 2026
