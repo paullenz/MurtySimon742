@@ -64,11 +64,11 @@
   ],
   "forward_research_stop": "2026-09-23T20:48:14+01:00",
   "preservation_start": "2026-09-23T20:49:19+01:00",
-  "preservation_complete": "PENDING",
-  "final_report_time": "PENDING",
-  "wall_clock_span_to_preservation_complete": "PENDING",
+  "preservation_complete": "2026-09-23T20:49:34+01:00",
+  "final_report_time": "2026-09-23T20:49:58+01:00",
+  "wall_clock_span_to_preservation_complete": "00:48:08",
   "verified_forward_research_span": "00:41:00",
-  "preservation_span": "PENDING",
+  "preservation_span": "00:00:15",
   "substantive_unit_count": 5,
   "timestamped_unit_ledger": [
     {
@@ -122,7 +122,8 @@
     "da468fc7b15c61d02a69f1c2bf84a5fb2fdfc735",
     "5ec8280d4ec0d63f69c095e5c5cbc79dd9c17bd3",
     "a4f0a239dee64c097e238f6026cd91aa5fad7a6a",
-    "1dc6f1fb86c3d9a996631e40675c8871509a0025"
+    "1dc6f1fb86c3d9a996631e40675c8871509a0025",
+    "06edd361f8f022fe64e1f8aa4626d34e969ba8f0"
   ],
   "live_unfinished_line": "Continue exact stable-index enumeration from 33,401; full n=18 row closure remains open.",
   "historical_fragments": []
