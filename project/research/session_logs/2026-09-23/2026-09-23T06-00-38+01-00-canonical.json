@@ -14,17 +14,66 @@
   "started_record_prepared_at": "2026-09-23T06:03:52+01:00",
   "started_record_published_at": "2026-09-23T06:05:04+01:00",
   "first_substantive_checkpoint_time": "2026-09-23T06:08:32+01:00",
-  "segments": [{"segment_id":"segment-1","actual_start":"2026-09-23T06:03:18+01:00","actual_stop":"PENDING","role":"forward_research","notes":"Launch administration excluded from verified research intervals."}],
-  "forward_research_intervals": [{"start":"2026-09-23T06:05:04+01:00","stop":"2026-09-23T06:06:57+01:00","seconds":113,"unit":"Built a shardable MILP replay equivalent to the saved recursive support-seven source screen; fixed one path bug; shard 0/16 passed 136 cores with zero feasible and zero unknown."},{"start":"2026-09-23T06:08:45+01:00","stop":"2026-09-23T06:09:47+01:00","seconds":62,"unit":"Ran shards 1--15 and a hostile aggregate verifier: 2,179 cores, exactly two feasible identities, zero unknowns, exact saved-identity digest match."}],
+  "segments": [
+    {
+      "segment_id": "segment-1",
+      "actual_start": "2026-09-23T06:03:18+01:00",
+      "actual_stop": "PENDING",
+      "role": "forward_research",
+      "notes": "Launch administration excluded from verified research intervals."
+    }
+  ],
+  "forward_research_intervals": [
+    {
+      "start": "2026-09-23T06:05:04+01:00",
+      "stop": "2026-09-23T06:06:57+01:00",
+      "seconds": 113,
+      "unit": "Built a shardable MILP replay equivalent to the saved recursive support-seven source screen; fixed one path bug; shard 0/16 passed 136 cores with zero feasible and zero unknown."
+    },
+    {
+      "start": "2026-09-23T06:08:45+01:00",
+      "stop": "2026-09-23T06:09:47+01:00",
+      "seconds": 62,
+      "unit": "Ran shards 1--15 and a hostile aggregate verifier: 2,179 cores, exactly two feasible identities, zero unknowns, exact saved-identity digest match."
+    },
+    {
+      "start": "2026-09-23T06:19:43+01:00",
+      "stop": "2026-09-23T06:20:37+01:00",
+      "seconds": 54,
+      "unit": "Audited all 12 saved actual-graph positive-demand examples at selected-pair/codegree level; derived that S=1 forces an empty high-load set J."
+    }
+  ],
   "forward_research_stop": "PENDING",
   "preservation_start": "PENDING",
   "preservation_complete": "PENDING",
   "final_report_time": "PENDING",
   "wall_clock_span_to_preservation_complete": "PENDING",
-  "verified_forward_research_span": "00:02:55",
+  "verified_forward_research_span": "00:03:49",
   "preservation_span": "PENDING",
-  "substantive_unit_count": 2,
-  "timestamped_unit_ledger": [{"unit":1,"start":"2026-09-23T06:05:04+01:00","complete":"2026-09-23T06:06:57+01:00","result":"Shardable support-seven MILP replay implemented; shard 0/16: 136 cores, 0 feasible, 0 unknown, fresh feasible identity agrees with saved subset.","evidence":"project/research/general_n/2026-09-23-independent-742-r12-count-audit/R12_SUPPORT7_SOURCE_REPLAY_SHARD00.json"},{"unit":2,"start":"2026-09-23T06:08:45+01:00","complete":"2026-09-23T06:09:47+01:00","result":"Full support-seven fresh replay PASS: 2,179 cores, 2 feasible identities, 0 unknown, exact saved digest 68e890ff159dd5acbfbd5fe19cccd95b254a80d3172acf37ad7fce9aa222b66c.","evidence":"project/research/general_n/2026-09-23-independent-742-r12-count-audit/R12_SUPPORT7_SOURCE_REPLAY_AGGREGATE.json"}],
+  "substantive_unit_count": 3,
+  "timestamped_unit_ledger": [
+    {
+      "unit": 1,
+      "start": "2026-09-23T06:05:04+01:00",
+      "complete": "2026-09-23T06:06:57+01:00",
+      "result": "Shardable support-seven MILP replay implemented; shard 0/16: 136 cores, 0 feasible, 0 unknown, fresh feasible identity agrees with saved subset.",
+      "evidence": "project/research/general_n/2026-09-23-independent-742-r12-count-audit/R12_SUPPORT7_SOURCE_REPLAY_SHARD00.json"
+    },
+    {
+      "unit": 2,
+      "start": "2026-09-23T06:08:45+01:00",
+      "complete": "2026-09-23T06:09:47+01:00",
+      "result": "Full support-seven fresh replay PASS: 2,179 cores, 2 feasible identities, 0 unknown, exact saved digest 68e890ff159dd5acbfbd5fe19cccd95b254a80d3172acf37ad7fce9aa222b66c.",
+      "evidence": "project/research/general_n/2026-09-23-independent-742-r12-count-audit/R12_SUPPORT7_SOURCE_REPLAY_AGGREGATE.json"
+    },
+    {
+      "unit": 3,
+      "start": "2026-09-23T06:19:43+01:00",
+      "complete": "2026-09-23T06:20:37+01:00",
+      "result": "Saved-witness stress: all 12 have S=1 and t<0; 7 selected-pair occurrences, 2 meeting c_F>=a/5, no high-load instance. S=1 rigorously forces J empty.",
+      "evidence": "project/research/general_n/2026-09-23-independent-742-r12-count-audit/POSITIVE_DEMAND_SAVED_WITNESS_AUDIT.json"
+    }
+  ],
   "early_stop_check_time": "PENDING",
   "early_stop_check_result": "PENDING",
   "stop_reason": "PENDING",
@@ -34,8 +83,26 @@
   "session_run_status": "STARTED",
   "focused_session_credit": "PENDING",
   "compliance_status": "STARTED",
-  "infrastructure_failures": [],
-  "commit_shas": [],
-  "live_unfinished_line": "Stress graph-level positive-demand fixtures against dense selected-signature plateau constraints, retaining X_3 and both balanced complete-bipartite parities as controls.",
+  "infrastructure_failures": [
+    "Local execution service disconnected during the planned expanded greedy-fixture run; preserved a direct audit of saved GitHub witnesses and deferred fresh generation."
+  ],
+  "commit_shas": [
+    {
+      "kind": "STARTED",
+      "sha": "d5b4ae20902d183f7334de315894080e6d0dfdde",
+      "published_at": "2026-09-23T06:05:04+01:00"
+    },
+    {
+      "kind": "SUPPORT7_SHARD0",
+      "sha": "3b05d4948b35a669ee531c6aab3be677f4a9e70b",
+      "published_at": "2026-09-23T06:08:32+01:00"
+    },
+    {
+      "kind": "SUPPORT7_COMPLETE",
+      "sha": "22ea776e11d08357226f7575a7b74308bae123b8",
+      "published_at": "2026-09-23T06:11:40+01:00"
+    }
+  ],
+  "live_unfinished_line": "Extract or freshly generate the two known high-load threshold witnesses, then audit selected-pair codegrees and exact plateau hypotheses.",
   "historical_fragments": []
 }
