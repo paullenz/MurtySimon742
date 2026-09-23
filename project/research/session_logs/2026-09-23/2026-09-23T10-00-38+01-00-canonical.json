@@ -25,7 +25,7 @@
     {
       "segment_id": "segment-2-watchdog-reentry",
       "actual_start": "2026-09-23T10:09:08+01:00",
-      "actual_stop": "PENDING",
+      "actual_stop": "2026-09-23T10:52:51+01:00",
       "role": "forward_research",
       "notes": "Same 10:00 trigger; watchdog found the session active and continued it without duplicate credit."
     }
@@ -98,13 +98,13 @@
       "unit": "Derived the degree-deficit matching/vertex-cover reduction for the private-certificate witness graph and checked the top-H negative control."
     }
   ],
-  "forward_research_stop": "PENDING",
-  "preservation_start": "PENDING",
-  "preservation_complete": "PENDING",
-  "final_report_time": "PENDING",
-  "wall_clock_span_to_preservation_complete": "PENDING",
+  "forward_research_stop": "2026-09-23T10:50:48+01:00",
+  "preservation_start": "2026-09-23T10:50:48+01:00",
+  "preservation_complete": "2026-09-23T10:52:51+01:00",
+  "final_report_time": "2026-09-23T10:52:51+01:00",
+  "wall_clock_span_to_preservation_complete": "00:52:00",
   "verified_forward_research_span": "00:31:00",
-  "preservation_span": "PENDING",
+  "preservation_span": "00:02:03",
   "substantive_unit_count": 10,
   "timestamped_unit_ledger": [
     {
@@ -178,21 +178,33 @@
       "evidence": "project/research/general_n/2026-09-23-independent-742-r12-count-audit/DEFICIT_MATCHING_REDUCTION.md"
     }
   ],
-  "early_stop_check_time": "PENDING",
-  "early_stop_check_result": "PENDING",
-  "stop_reason": "PENDING",
+  "early_stop_check_time": "2026-09-23T10:50:48+01:00",
+  "early_stop_check_result": "40-minute target not met; only 2m50s remained before forward-research cutoff, below the five-minute continuation threshold, so final preservation began.",
+  "stop_reason": "Stopped at a natural deficit-matching reduction checkpoint with 2m50s remaining before the research cutoff and preserved before hard close.",
   "research_target_minutes": 40,
   "target_40m_applies": "YES",
-  "target_40m_met": "PENDING",
-  "session_run_status": "STARTED",
-  "focused_session_credit": "PENDING",
-  "compliance_status": "STARTED_WITH_ONE_CONCURRENT_REF_RETRY",
+  "target_40m_met": "NO",
+  "session_run_status": "RAN",
+  "focused_session_credit": "NOT_GRANTED: 31m00s verified, below prospective 40-minute gate.",
+  "compliance_status": "RAN_TARGET_SHORTFALL_FINALIZED_ON_TIME",
   "infrastructure_failures": [
     "Initial STARTED ref update raced with final 09:00 mathematical commits and was rejected non-fast-forward; one bounded rebase fallback used.",
     "09:00 predecessor telemetry remains PENDING after hard close; reconciliation deferred."
   ],
-  "commit_shas": [],
-  "live_unfinished_line": "Analyze the concentrated-cover branch: for a minimum cover X union Y of the private-witness graph, every label outside X has h_i<=2|Y|-1; combine this with H>=15 and the unresolved strip.",
+  "commit_shas": [
+    "b5e910568844b2f87727a2322c56675702df2a9d",
+    "2a6be1e9ac45474c1105d7d1441dbb0e00cb90b5",
+    "4cdecc857d7b8dbd91482c4b6d0877d5a2bb0a55",
+    "eba90160036f218ad5be441b89f287922b3c818d",
+    "372435c7a064a08479f47a4479d0817fe5538c4b",
+    "49684995d61aadde1aa0c4bfddcd03ac3ee009c4",
+    "4f1687ed9bf481fe8bffee782fc3d3ab9a9a5248",
+    "a07f212ceb8de4716ff686fb4d63f1b2dcf2d5f9",
+    "2693b56ae0ecec3eafc7b2a152f8a092eaec0aea",
+    "8228526c32d4fbe55c38e39b4571a7a0f03244a9",
+    "f447d39c40a5b5e796558dcf7be0c2bbc3fff568"
+  ],
+  "live_unfinished_line": "Analyze the concentrated-cover branch: for a minimum cover X union Y of the private-witness graph, every label outside X has h_i<=2|Y|-1; combine this with H>=15 and the live strip.",
   "historical_fragments": [],
   "same_trigger_reentries": [
     {
