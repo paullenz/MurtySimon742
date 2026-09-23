@@ -22,17 +22,32 @@
       "notes": "Manual launch recovery of the same 09:00 trigger after missing primary STARTED evidence."
     }
   ],
-  "forward_research_intervals": [],
+  "forward_research_intervals": [
+    {
+      "start": "2026-09-23T09:28:53+01:00",
+      "stop": "2026-09-23T09:34:31+01:00",
+      "seconds": 338,
+      "unit": "Fresh independent live-strip actual-D2C collision search and exact demand-feasibility DP."
+    }
+  ],
   "forward_research_stop": "PENDING",
   "preservation_start": "PENDING",
   "preservation_complete": "PENDING",
   "final_report_time": "PENDING",
   "wall_clock_span_to_preservation_complete": "PENDING",
-  "verified_forward_research_span": "0m00s at STARTED checkpoint",
+  "verified_forward_research_span": "00:05:38",
   "preservation_span": "PENDING",
-  "substantive_unit_count": 0,
-  "timestamped_unit_ledger": [],
-  "first_substantive_checkpoint_time": "PENDING",
+  "substantive_unit_count": 1,
+  "timestamped_unit_ledger": [
+    {
+      "unit": 1,
+      "start": "2026-09-23T09:28:53+01:00",
+      "complete": "2026-09-23T09:34:31+01:00",
+      "result": "Fresh independent generation/certification of 480 D2C graphs found 62 live-strip maximum-degree root states, 404 co-selected F-edge candidate occurrences and 13 crossed-supplement collision images. Unrestricted live-strip injectivity is refuted; all 13 collisions have multiplicity two, and exact certificate-choice DP found 0/13 allowing both collided labels positive demand.",
+      "evidence": "project/research/general_n/2026-09-23-independent-742-r12-count-audit/LIVE_STRIP_COLLISION_RECOVERY_CHECK.md"
+    }
+  ],
+  "first_substantive_checkpoint_time": "2026-09-23T09:35:06+01:00",
   "early_stop_check_time": "PENDING",
   "early_stop_check_result": "PENDING",
   "stop_reason": "PENDING",
@@ -40,12 +55,18 @@
   "target_40m_applies": "NO",
   "target_40m_met": "N/A",
   "target_note": "Recovery entry left less than 40 minutes before the fixed research cutoff; no time before actual recovery entry may be credited.",
-  "compliance_status": "ACTIVE_RECOVERED_LATE_START",
+  "session_run_status": "RAN",
+  "focused_session_credit": "NO; late recovery cannot reach 40 verified minutes before cutoff",
+  "compliance_status": "ACTIVE_RECOVERED_LATE_START; substantive checkpoint preserved",
   "infrastructure_failures": [
-    "Primary scheduled launch lacked a durable STARTED record before recovery."
+    "Primary scheduled launch lacked a durable STARTED record before recovery.",
+    "Initial recovery STARTED publication could not atomically update CURRENT_STATE.md because the available connector exposes full-file replacement rather than a safe block patch; canonical STARTED was published first rather than delay mathematics. CURRENT_STATE synchronization remains required before finalization."
   ],
-  "commit_shas": [],
-  "live_unfinished_line": "Resume live-strip collision-multiplicity search and weighted-charge analysis from repository NEXT ACTION.",
+  "commit_shas": [
+    "ba0b54ec36b223b1e5cbf5b59e089228a151755a",
+    "39f8b114dc795b2b97021757274a800eeddce051"
+  ],
+  "live_unfinished_line": "Prove or refute live-strip positive-demand collision exclusion using exact motif and demand inequalities; unrestricted live-strip injectivity is now refuted.",
   "historical_fragments": [],
-  "current_state_sync": "PENDING_DUE_CONNECTOR_FULL_FILE_REPLACEMENT_LIMITATION_AT_INITIAL_RECOVERY_WRITE"
+  "current_state_sync": "PENDING"
 }
