@@ -13,7 +13,7 @@
   "launch_status": "STARTED",
   "started_record_prepared_at": "2026-09-23T02:02:12+01:00",
   "started_record_published_at": "2026-09-23T02:02:32+01:00",
-  "first_substantive_checkpoint_time": "PENDING_REMOTE_CONFIRMATION",
+  "first_substantive_checkpoint_time": "2026-09-23T02:07:00+01:00",
   "segments": [
     {
       "segment_id": "segment-1",
@@ -29,6 +29,12 @@
       "stop": "2026-09-23T02:06:06+01:00",
       "seconds": 142,
       "unit": "Helper-aware supplement MILP syntax replay and active 32-kernel computation through durable run checkpoint."
+    },
+    {
+      "start": "2026-09-23T02:06:06+01:00",
+      "stop": "2026-09-23T02:13:07+01:00",
+      "seconds": 421,
+      "unit": "Completed helper-aware screen and classified exact aggregate output over all 32 corrected source survivors."
     }
   ],
   "forward_research_stop": "PENDING",
@@ -36,16 +42,16 @@
   "preservation_complete": "PENDING",
   "final_report_time": "PENDING",
   "wall_clock_span_to_preservation_complete": "PENDING",
-  "verified_forward_research_span": "00:02:22",
+  "verified_forward_research_span": "00:09:23",
   "preservation_span": "PENDING",
   "substantive_unit_count": 1,
   "timestamped_unit_ledger": [
     {
       "unit": 1,
       "start": "2026-09-23T02:03:44+01:00",
-      "complete": "IN_PROGRESS",
-      "result": "RUNNING: helper-aware supplement screen launched on 32 saved survivors; no output at 02:06:06.",
-      "evidence": "project/research/general_n/2026-09-23-independent-742-r12-count-audit/screen_support10_case1_helpers.py"
+      "complete": "2026-09-23T02:13:07+01:00",
+      "result": "All 32 corrected source survivors infeasible in the helper-aware supplement MILP; 0 feasible and 0 unknown. Each kernel has one all-zero residual-free type and zero free discharges.",
+      "evidence": "project/research/general_n/2026-09-23-independent-742-r12-count-audit/R12_SUPPORT10_HELPER_SCREEN_RESULT.json"
     }
   ],
   "early_stop_check_time": "PENDING",
@@ -63,15 +69,20 @@
       "kind": "STARTED",
       "sha": "6d48f4d8c0406e2db91a34052c710acc5a6599ca",
       "published_at": "2026-09-23T02:02:32+01:00"
+    },
+    {
+      "kind": "ACTIVE_RUN",
+      "sha": "6e0c520fa4b9c5146647fa145846fbb50d7e4352",
+      "published_at": "2026-09-23T02:07:00+01:00"
     }
   ],
-  "live_unfinished_line": "Collect helper-aware screen session 70308 and preserve exact row classifications.",
+  "live_unfinished_line": "Replay exact source stage over the 6,386 strict kernels; start with zero-survivor shards 2,3,6,7.",
   "historical_fragments": [],
   "research_units": [
     {
       "unit": 1,
-      "status": "IN_PROGRESS_HELPER_SCREEN",
-      "evidence": "project/research/general_n/2026-09-23-independent-742-r12-count-audit/screen_support10_case1_helpers.py"
+      "status": "COMPLETE_INTERNAL_NOT_PROMOTED",
+      "evidence": "project/research/general_n/2026-09-23-independent-742-r12-count-audit/R12_SUPPORT10_HELPER_SCREEN_RESULT.json"
     }
   ],
   "launch_target_result": "MET_BY_00:03:06",
@@ -79,8 +90,10 @@
     "executor_session_id": 70308,
     "kind": "32-kernel helper-aware supplement MILP",
     "launched_at": "2026-09-23T02:03:44+01:00",
+    "stopped_at": "2026-09-23T02:13:07+01:00",
     "workers": 9,
-    "status": "RUNNING",
-    "last_observation": "2026-09-23T02:06:06+01:00; no output yet"
+    "status": "COMPLETE",
+    "exit_code": 0,
+    "summary": "32 infeasible; 0 feasible; 0 unknown"
   }
 }

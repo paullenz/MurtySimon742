@@ -1,0 +1,28 @@
+{
+  "partition": [2, 2, 1, 1, 1, 1, 1, 1, 1, 1],
+  "input_strict_kernels": 6386,
+  "input_source_survivors": 32,
+  "source_survivors_by_shard": [10, 11, 0, 0, 6, 5, 0, 0],
+  "helper_screen": {
+    "kernels": 32,
+    "feasible": 0,
+    "infeasible": 32,
+    "unknown": 0,
+    "all_solver_status": 2,
+    "solver_status_message": "HiGHS Status 8: model_status is Infeasible",
+    "residual_free_types_per_kernel": 1,
+    "free_discharges_total": 0,
+    "patterns_min": 3478,
+    "patterns_max": 4017,
+    "helper_constraints_min": 4296,
+    "helper_constraints_max": 5803
+  },
+  "execution": {
+    "start": "2026-09-23T02:03:44+01:00",
+    "stop": "2026-09-23T02:13:07+01:00",
+    "workers": 9,
+    "exit_code": 0,
+    "script_sha256": "a533881c9439d01238ef7708ba962e1c43e5a2d4abfe004af53b4616e8a731b2"
+  },
+  "scope": "Internal computer-assisted infeasibility of the helper-aware abstract necessary-condition system over the 32 saved source survivors. This is not graph realizability, external verification, or by itself an S<=14 theorem; the source-stage replay and graph-to-profile bridge trust gates remain."
+}
