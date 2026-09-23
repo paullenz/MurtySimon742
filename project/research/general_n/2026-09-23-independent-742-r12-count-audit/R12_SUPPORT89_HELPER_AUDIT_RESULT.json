@@ -1,0 +1,19 @@
+{
+  "status": "VERIFIED_INTERNAL_NOT_PROMOTED",
+  "kernels": 44,
+  "support8_kernels": 8,
+  "support9_kernels": 36,
+  "feasible": 0,
+  "infeasible": 44,
+  "unknown": 0,
+  "residual_free_types_min": 1,
+  "residual_free_types_max": 2,
+  "free_discharges_total": 500,
+  "execution": {
+    "first_attempt": "failed because the initial manifest named absent zero-survivor case files; no mathematical result credited",
+    "corrected_run_start": "2026-09-23T03:35:11+01:00",
+    "exit_code": 0,
+    "script_sha256": "fd637881640d449a8f868a26461d578be4a864f5dd3ba4833d0a9875645bfa8b"
+  },
+  "interpretation": "All saved r=12 support-8/9 source survivors remain infeasible when optimistic residual-free helper types are admitted. Four rows have nonzero free-helper discharges, so the check is substantive. This reuses saved source rows and the support-ten helper MILP; it is not an independent source reimplementation or graph-realizability result."
+}
