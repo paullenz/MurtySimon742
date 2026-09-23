@@ -1,25 +1,36 @@
 # CURRENT_STATE.md
 
-Canonical repository: `paullenz/MurtySimon742`. Date: 23 September 2026.
+Canonical repository: `paullenz/MurtySimon742`. Date: 24 September 2026.
 
 Active target: a genuinely independent proof of Erdős #742 / the Murty–Simon inequality e(G)<=floor(n^2/4), preferably with the equality characterization. Forward priority is the project’s own complement / residual / Hall / profile / realizability route, not a reconstruction of the external e+disj+X proof. The first focused session produced the internally checked candidate threshold `Delta>=250n/429`, shrinking the live strip to `n/2<Delta<250n/429`. The theorem and its inherited graph-to-profile spine remain candidate/internal-review mathematics. A 24-focused-session go/no-go gate applies. Prior eventual-D2C work remains preserved but is no longer the active forward objective.
 
 <!-- CURRENT-STATUS:START -->
-CHECKPOINT CLASS: STARTED_RECOVERY_2026-09-23T23-00-38
-WORK MODE: MATH
-INSPECTED PREDECESSOR: 81756343d24d121930219f17edaabd435e955318.
-LAST VERIFIED RESULT: Exact n=18, Delta=10 stable-index closure extends through 39,250 with no new abstract survivors, apart from index 20,851 separately excluded by the audited graph-level 555 model. The last shard's closest exact deficit was 27 versus Dmax 16, gap 11. Internal evidence only; full row closure remains open.
-SESSION: Scheduled 23:00:38; launch-recovery actual entry 23:04:21.680010; primary scheduled launch had no durable STARTED record. Durable STARTED publication occurred via this recovery checkpoint and exceeded the trigger+5-minute aim; exact commit time to be reconciled at finalization.
-VERIFIED FORWARD SPAN: 0m00s at STARTED checkpoint.
-SESSION RESULT: ACTIVE_RECOVERED; 40-minute target applies; no duplicate credit.
-SUBSTANTIVE UNITS: 0. Focused-session counter remains 6/24 pending completed evidenced work.
-CANONICAL RECORD: project/research/session_logs/2026-09-23/2026-09-23T23-00-38+01-00-canonical.json.
+CHECKPOINT CLASS: DAILY_ADVERSARIAL_AUDIT_COMPLETE_2026-09-24
+WORK MODE: AUDIT
+INSPECTED PREDECESSOR: 083dc162be599fe102274c4ce23f4f99ba5c7476.
+LAST VERIFIED RESULT: The retained audited finite edge bound remains S<=13. The r=12 support-ten source count is corrected to 32 and the 6,386 source kernels replay cleanly, but the load-bearing helper screen did not reproduce: the same script SHA returned 32 HiGHS timeouts/UNKNOWN and zero proved infeasibilities under its 180-second per-row limit. The saved earlier run claims 32 infeasibilities; S<=14 is frozen pending decisive independent reproduction or certificates. Equality remains supported only through S<=8. No threshold below 250/429 and no general theorem is claimed.
+AUDIT RESULT: Unrestricted crossed-supplement injectivity is false on actual D2C controls; use demand-restricted Hall eligibility/congestion only. The same-day cap x_i<=n-Delta-1 is invalid and superseded; assigned witnesses lie in B and only x_i<=Delta follows. The n=18 stable-index scan through 39,250 is abstract evidence, with the 555 tuple separately excluded by a staged exact D2C UNSAT model.
+SESSION UTILISATION: 23 forward triggers; 23 canonical records after one audit reconciliation; 18 contain evidenced substantive research; 15 are fully finalized; 5 met the 40-minute target; 4 COMPLIANT, 8 SHORT/NONCOMPLIANT, 1 LATE-START/N/A-TARGET, 4 MISSED/NO-FORWARD-RESEARCH, 6 UNVERIFIED/MISSING-TELEMETRY. Fully finalized records contain 402m25s forward work over 622m01s evidenced available windows (64.70% over those windows only). All closed intervals give a 432m09.31s lower bound. Substantive units: 85.
+FOCUSED-SESSION COUNT: 6/24. The gate is not due. Its provisional mathematical success condition is met by the 250/429 threshold improvement; demand 15/16 is a credible finite-dimensional obstruction.
+CANONICAL AUDIT: project/research/general_n/2026-09-24-daily-red-team-audit-v1/DAILY_RED_TEAM_AUDIT.md.
+TELEMETRY RECONCILIATION: project/research/session_logs/2026-09-23/AUDIT_RECONCILIATION_2026-09-24.md.
 UNPRESERVED WORK: None.
-FAILURES: Primary scheduled launch missing; durable STARTED publication missed the +5-minute aim. No mathematics has yet been credited in this recovered segment.
-DEFERRED ADMIN: Reconcile incomplete 21:00 telemetry; other stale telemetry and audit count correction.
-NEXT ACTION: Continue exact stable-index enumeration from 39,251; stop at the next distinct live abstract survivor, then subject any survivor to the audited graph-level realization model.
-MANDATORY CONSTRAINTS: Internal evidence only; abstract feasibility is not graph realizability; S<=14 conditional; equality only through S<=8; balanced-bipartite and X_3 controls retained; general theorem open.
+FAILURES: 05:00 had no launch record; 04:00, 07:00, 08:00 and 23:00 delivered zero forward research; six useful records were not finalized. Durable STARTED met trigger+5 for only 10/23 triggers. The 03:00 final report crossed the 04:00 trigger, but causation for the later missed delivery is unknown.
+DEFERRED ADMIN: Historical incomplete records retain UNVERIFIED boundaries; do not fabricate closure. Independently reimplement the r=12 finite encoders before reviewer promotion.
+NEXT ACTION: Resolve the 32 support-ten helper timeouts with independently checkable infeasibility certificates or a second solver/encoding. S<=14 remains frozen until all rows are decisively and reproducibly classified. Only after that gate may the n=18 stable-index diagnostic resume from 39,251; graph-level demand-15/16 remains the theorem-facing target.
+MANDATORY CONSTRAINTS: Internal evidence only; abstract/profile feasibility is not graph realizability; retained finite bound S<=13 and equality only through S<=8; S<=14 frozen by support-ten nonreproduction; unrestricted crossed-supplement injectivity and x_i<=n-Delta-1 are forbidden; balanced complete-bipartite graphs of both parities and X_3 remain controls; external e+disj+X core may not be imported; general theorem open.
 <!-- CURRENT-STATUS:END -->
+
+## Latest adversarial audit - 24 September 2026
+
+Full report: `project/research/general_n/2026-09-24-daily-red-team-audit-v1/DAILY_RED_TEAM_AUDIT.md`.
+
+- Candidate threshold retained at `250/429`; unresolved strip and full equality theorem remain open.
+- The corrected r=12 source replay gives 32 survivors, not 42, but the support-ten helper screen did not reproduce: all 32 fresh rows timed out. `S<=14` is frozen; the retained audited bound remains `S<=13`.
+- Unrestricted crossed-supplement injectivity is refuted by actual D2C collisions. The demand-restricted Hall/congestion replacement remains open.
+- The false cap `x_i<=n-Delta-1` is explicitly invalidated; no final claim relies on it.
+- The n=18 `Delta=10` finite obstruction has a staged exact D2C exclusion for the `(5,5,5)` tuple and an abstract stable-index prefix through 39,250. This does not close the strip.
+- Focused-session count is `6/24`. Five of 23 scheduled sessions met the prospective 40-minute target; primary launch/finalization reliability remains inadequate.
 
 ## Latest adversarial audit - 23 September 2026
 

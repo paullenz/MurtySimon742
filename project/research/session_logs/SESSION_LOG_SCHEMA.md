@@ -69,6 +69,13 @@ Each element of `segments` must state:
 - `notes`
 - any missing boundary as `UNVERIFIED`, never guessed
 
+Each element of `forward_research_intervals` must use the exact keys
+`start`, `stop`, `seconds`, and `unit`. `seconds` is an integer equal to the
+closed interval length. Do not substitute `end`, `duration`, or
+`duration_seconds`. Historical variants remain evidence, but the daily audit
+must normalize them explicitly and must not silently omit their time from the
+lower-bound union.
+
 ## Timing and anti-overlap rule
 
 For hourly forward sessions:

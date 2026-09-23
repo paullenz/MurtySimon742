@@ -1,14 +1,24 @@
 # r=12 internal closure review
 
-Status: `VERIFIED_INTERNAL_PROMOTION`; not externally verified.
+Status: `FROZEN_BY_2026-09-24_AUDIT`; not externally verified.
 
-## Conclusion
+Audit correction, 24 September 2026: the source-stage replay and corrected
+32-row count remain valid internal evidence, but the load-bearing support-ten
+helper screen did not reproduce. A fresh run of the identical script SHA with
+its committed 180-second per-row limit returned 32 solver timeouts/UNKNOWN and
+zero proved infeasibilities. The saved earlier run claims 32 infeasibilities;
+it is preserved, not declared false. This promotion is frozen until decisive
+independent reproduction or checkable infeasibility certificates exist. The
+retained audited edge-bound range is `S<=13`.
 
-The repository's bounded-demand chain may now be promoted, at its existing
-computer-assisted trust boundary, from strict residual closure through `r=11`
-to strict residual closure through `r=12`.  Since every strict counterexample
-obeys `S >= r+2`, this raises the internally supported edge-bound range from
-`S<=13` to `S<=14`.  Equality remains proved only through `S<=8`.
+## Conclusion (superseded by the 24 September audit)
+
+The audited promotion to strict residual closure through `r=12` is **not
+currently justified**.  The source stage reaches 32 support-ten rows, but the
+load-bearing helper stage is unresolved because a fresh same-script replay
+timed out on every row.  The retained internally supported edge-bound range is
+therefore `S<=13`; the proposed `S<=14` promotion remains frozen.  Equality
+remains proved only through `S<=8`.
 
 This does not prove Murty--Simon in the remaining positive-demand strip, lower
 the `250/429` candidate threshold, or establish the full equality theorem.
@@ -31,16 +41,20 @@ the `250/429` candidate threshold, or establish the full equality theorem.
 - Support ten: partition `(3,1^9)` has zero source survivors.  For
   `(2,2,1^8)`, a fresh replay of all 6,386 strict kernels reproduced exactly
   32 distinct survivors with per-shard counts `[10,11,0,0,6,5,0,0]`, zero
-  unknowns and exact saved identities.  All 32 are helper-aware infeasible.
+  unknowns and exact saved identities.  The saved helper result classifies all
+  32 as infeasible, but a fresh replay classified all 32 as UNKNOWN after the
+  committed time limit.  Their helper-aware status is therefore unresolved.
 - The audited predecessor identifies this support-ten partition as the sole
   remaining r=12 obstruction; the analytic high-support lemmas continue to
   handle supports eleven and twelve.
 
-Across supports six through ten, 81 saved source survivors were screened under
-optimistic residual-free-helper semantics and all 81 are infeasible with zero
-unknowns.  Residual-free types discharge 604 obligations in the support-six
-through-nine screens, so the hostile extension is substantive rather than a
-vacuous rerun.
+Across supports six through nine, 49 saved source survivors were freshly
+screened under optimistic residual-free-helper semantics and all 49 are
+infeasible with zero unknowns.  The additional 32 support-ten rows have a saved
+infeasible classification but yielded 32 UNKNOWN timeouts in the fresh audit
+replay.  Residual-free types discharge 604 obligations in the support-six
+through-nine screens, so that reproduced part of the hostile extension is
+substantive rather than a vacuous rerun.
 
 ## Trust boundary
 

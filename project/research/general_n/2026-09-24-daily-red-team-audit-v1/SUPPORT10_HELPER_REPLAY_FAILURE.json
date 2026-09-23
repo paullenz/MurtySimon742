@@ -1,0 +1,19 @@
+{
+  "audit_date": "2026-09-24",
+  "audited_predecessor": "083dc162be599fe102274c4ce23f4f99ba5c7476",
+  "command": "python project/research/general_n/2026-09-23-independent-742-r12-count-audit/screen_support10_case1_helpers.py",
+  "script_sha256": "a533881c9439d01238ef7708ba962e1c43e5a2d4abfe004af53b4616e8a731b2",
+  "script_time_limit_seconds_per_row": 180,
+  "workers": 9,
+  "kernels": 32,
+  "feasible": 0,
+  "infeasible": 0,
+  "unknown": 32,
+  "solver_status": 1,
+  "solver_message": "Time limit reached. (HiGHS Status 13: model_status is Time limit reached; primal_status is None)",
+  "comparison": {
+    "saved_result": "R12_SUPPORT10_HELPER_SCREEN_RESULT.json claims 0 feasible, 32 infeasible, 0 unknown using the same script SHA and time limit.",
+    "audit_result": "The fresh audit execution classified all 32 rows UNKNOWN. No row reproduced status 2 infeasible.",
+    "interpretation": "This may reflect runtime-resource differences, but it is a nonreproduction of the load-bearing computation. The saved result is not declared false; S<=14 is frozen pending a reproducible certificate or independent implementation."
+  }
+}
