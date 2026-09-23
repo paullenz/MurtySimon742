@@ -5,18 +5,18 @@ Canonical repository: `paullenz/MurtySimon742`. Date: 23 September 2026.
 Active target: a genuinely independent proof of Erdős #742 / the Murty–Simon inequality e(G)<=floor(n^2/4), preferably with the equality characterization. Forward priority is the project’s own complement / residual / Hall / profile / realizability route, not a reconstruction of the external e+disj+X proof. The first focused session produced the internally checked candidate threshold `Delta>=250n/429`, shrinking the live strip to `n/2<Delta<250n/429`. The theorem and its inherited graph-to-profile spine remain candidate/internal-review mathematics. A 24-focused-session go/no-go gate applies. Prior eventual-D2C work remains preserved but is no longer the active forward objective.
 
 <!-- CURRENT-STATUS:START -->
-CHECKPOINT CLASS: STARTED_12_SESSION
+CHECKPOINT CLASS: VERIFIED_INTERNAL_MULTISTAR_COMPRESSION
 WORK MODE: MATH
 INSPECTED PREDECESSOR: 2fe23cf62d5cd7abffb7bf74c372a6cae407c86f.
-LAST VERIFIED RESULT: The expired 11:00 writer durably reduced every H>=15 obstruction to a deletion-minimal legal assignment with total demand 15 or 16. Its shared-overlap absorption, quadratic star-slack, and finite demand-pattern artifacts are retained; its canonical session telemetry remained stale ACTIVE after hard close and is not being rewritten here.
-ACTIVE SESSION: Scheduled trigger 2026-09-23T12:00:38+01:00; actual start 12:02:29; cutoff 12:53:38; hard close 12:59:38. Trigger attribution uses the current invocation and supplied hourly schedule; immutable delivery identity is UNVERIFIED.
-VERIFIED FORWARD SPAN: 0m00s; mathematics starting after mandatory launch publication.
-SESSION RESULT: STARTED; research_target_minutes=40; target applies.
-SUBSTANTIVE UNITS: 0. Focused-session counter remains 3/24 before this session.
+LAST VERIFIED RESULT: Summing the quadratic star-slack inequalities over all demand-positive labels gives sum_i x_i delta_i + sum_t r_t delta_t >= X(rho+1)+sum_i binom(x_i,2). With q=max(max_i x_i,max_t r_t), the left side is at most qD. The assigned-witness collision charge gives q<=h_max=max_i(2x_i-d_i). Hence every deletion-minimal demand-15/16 obstruction obeys h_max D >= X(rho+1)+sum_i binom(x_i,2), and max_i x_i<4D+1.
+ACTIVE SESSION: Scheduled trigger 2026-09-23T12:00:38+01:00; actual start 12:02:29; STARTED published 12:05:35; cutoff 12:53:38; hard close 12:59:38. Launch was within the five-minute target by three seconds; immutable delivery identity is UNVERIFIED.
+VERIFIED FORWARD SPAN: 1m19s.
+SESSION RESULT: RAN/ACTIVE; 40-minute target applies.
+SUBSTANTIVE UNITS: 1. Focused-session counter remains 3/24 pending finalization.
 CANONICAL RECORD: project/research/session_logs/2026-09-23/2026-09-23T12-00-38+01-00-canonical.json.
 UNPRESERVED WORK: None.
 DEFERRED ADMIN: Audit/finalize stale 09:00 and 11:00 telemetry; correct prior audit prose/PDF from 42 to 32.
-NEXT ACTION: Retain the 15/16 normal form and combine quadratic star-slack across labels; control endpoint-deficit multiplicity using assigned-edge/source geometry.
+NEXT ACTION: Enumerate the finite 15/16 demand patterns against the compressed multi-star inequality and exact strict-counterexample deficit budget; identify the first surviving rows.
 MANDATORY CONSTRAINTS: S<=14 is internal/computer-assisted and conditional on the audited bridge; H is exact only for the defined graph-level certificate-choice interface; equality only through S<=8; balanced complete bipartite graphs and X_3 remain controls; no external e+disj+X core; general theorem open.
 <!-- CURRENT-STATUS:END -->
 

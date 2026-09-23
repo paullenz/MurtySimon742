@@ -12,8 +12,8 @@
   "lateness_vs_trigger": "00:01:51",
   "launch_status": "STARTED",
   "started_record_prepared_at": "2026-09-23T12:04:28+01:00",
-  "started_record_published_at": "PENDING",
-  "first_substantive_checkpoint_time": "PENDING",
+  "started_record_published_at": "2026-09-23T12:05:35+01:00",
+  "first_substantive_checkpoint_time": "2026-09-23T12:07:14+01:00",
   "segments": [
     {
       "segment_id": "segment-1",
@@ -23,16 +23,31 @@
       "notes": "11:00 writer's slot had expired; its canonical remained stale ACTIVE, but latest mathematical commits were inspected and no overlap with its closed slot was possible."
     }
   ],
-  "forward_research_intervals": [],
+  "forward_research_intervals": [
+    {
+      "start": "2026-09-23T12:05:55+01:00",
+      "stop": "2026-09-23T12:07:14+01:00",
+      "seconds": 79,
+      "unit": "Derived the multiplicity-compressed multi-star slack inequality for a demand-15/16 assigned-witness obstruction."
+    }
+  ],
   "forward_research_stop": "PENDING",
   "preservation_start": "PENDING",
   "preservation_complete": "PENDING",
   "final_report_time": "PENDING",
   "wall_clock_span_to_preservation_complete": "PENDING",
-  "verified_forward_research_span": "00:00:00",
+  "verified_forward_research_span": "00:01:19",
   "preservation_span": "PENDING",
-  "substantive_unit_count": 0,
-  "timestamped_unit_ledger": [],
+  "substantive_unit_count": 1,
+  "timestamped_unit_ledger": [
+    {
+      "unit": 1,
+      "start": "2026-09-23T12:05:55+01:00",
+      "complete": "2026-09-23T12:07:14+01:00",
+      "result": "If q=max(max_i x_i,max_t r_t), X=sum_i x_i, then qD>=X(rho+1)+sum_i binom(x_i,2). Since q<=h_max=max_i(2x_i-d_i), every 15/16 normal-form obstruction satisfies the corresponding scalar inequality; in particular max x_i<4D+1.",
+      "evidence": "project/research/general_n/2026-09-23-independent-742-r12-count-audit/MULTISTAR_MULTIPLICITY_COMPRESSION.md"
+    }
+  ],
   "early_stop_check_time": "PENDING",
   "early_stop_check_result": "PENDING",
   "stop_reason": "PENDING",
@@ -46,6 +61,6 @@
     "11:00 predecessor missed final canonical closure before its hard deadline; its durable math commits were retained and its stale ACTIVE telemetry was not rewritten."
   ],
   "commit_shas": [],
-  "live_unfinished_line": "Retain the 15/16 normal form and combine quadratic star-slack across labels; control endpoint-deficit multiplicity using assigned-edge/source geometry.",
+  "live_unfinished_line": "Enumerate the finite 15/16 demand patterns against the compressed multi-star inequality and exact strict-counterexample deficit budget; identify the first surviving rows.",
   "historical_fragments": []
 }
