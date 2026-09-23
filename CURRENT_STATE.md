@@ -5,7 +5,7 @@ Canonical repository: `paullenz/MurtySimon742`. Date: 23 September 2026.
 Active target: a genuinely independent proof of Erdős #742 / the Murty–Simon inequality e(G)<=floor(n^2/4), preferably with the equality characterization. Forward priority is the project’s own complement / residual / Hall / profile / realizability route, not a reconstruction of the external e+disj+X proof. The first focused session produced the internally checked candidate threshold `Delta>=250n/429`, shrinking the live strip to `n/2<Delta<250n/429`. The theorem and its inherited graph-to-profile spine remain candidate/internal-review mathematics. A 24-focused-session go/no-go gate applies. Prior eventual-D2C work remains preserved but is no longer the active forward objective.
 
 <!-- CURRENT-STATUS:START -->
-CHECKPOINT CLASS: SCHEDULED_06_STARTED
+CHECKPOINT CLASS: VERIFIED_INTERNAL_SUPPORT7_REPLAY_SHARD0
 
 WORK MODE: MATH
 
@@ -15,19 +15,19 @@ LAST VERIFIED RESULT: Internal strict residual closure now extends through r=12,
 
 ACTIVE SESSION: Scheduled trigger 2026-09-23T06:00:38+01:00; actual start 06:03:18; research cutoff 06:53:38; hard close 06:59:38; 40-minute target applies. Trigger attribution uses the current invocation title and supplied hourly schedule; immutable delivery identity is UNVERIFIED.
 
-VERIFIED FORWARD INTERVALS: None yet.
+VERIFIED FORWARD INTERVALS: 06:05:04--06:06:57 BST.
 
-VERIFIED FORWARD SPAN: 0m00s.
+VERIFIED FORWARD SPAN: 1m53s.
 
-SUBSTANTIVE UNITS: 0 at launch.
+SUBSTANTIVE UNITS: 1 complete. A shardable independent MILP restatement of the support-seven physical-source screen passed shard 0/16: 136 cores, zero feasible, zero unknown.
 
 CANONICAL RECORD: project/research/session_logs/2026-09-23/2026-09-23T06-00-38+01-00-canonical.json.
 
-UNPRESERVED WORK: None.
+UNPRESERVED WORK: None after this checkpoint.
 
 DEFERRED ADMIN: Correct prior audit prose/PDF from 42 to 32; audit launch coverage separately.
 
-NEXT ACTION: Build a shardable fresh replay of the r=12 support-seven source stage and compare its two survivor identities; any mismatch freezes S<=14. Then proceed to the audit's graph-level positive-demand stress.
+NEXT ACTION: Run and aggregate support-seven replay shards 1--15; require 2,179 total cores, exactly two saved identities, zero unknowns, and exact identity agreement before retaining S<=14.
 
 FOCUSED-SESSION COUNT: 3/24 before this session.
 
