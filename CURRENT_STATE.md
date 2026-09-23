@@ -5,18 +5,18 @@ Canonical repository: `paullenz/MurtySimon742`. Date: 23 September 2026.
 Active target: a genuinely independent proof of Erdős #742 / the Murty–Simon inequality e(G)<=floor(n^2/4), preferably with the equality characterization. Forward priority is the project’s own complement / residual / Hall / profile / realizability route, not a reconstruction of the external e+disj+X proof. The first focused session produced the internally checked candidate threshold `Delta>=250n/429`, shrinking the live strip to `n/2<Delta<250n/429`. The theorem and its inherited graph-to-profile spine remain candidate/internal-review mathematics. A 24-focused-session go/no-go gate applies. Prior eventual-D2C work remains preserved but is no longer the active forward objective.
 
 <!-- CURRENT-STATUS:START -->
-CHECKPOINT CLASS: STARTED_11_SESSION_RECOVERED_LAUNCH
+CHECKPOINT CLASS: STARTED_12_SESSION
 WORK MODE: MATH
-INSPECTED PREDECESSOR: 5163e37f2d870b15d89977d7b4e365d8f625a88b.
-LAST VERIFIED RESULT: Mathematical status inherited unchanged from the finalized 10:00 session: H=max_L(2|union C_i|-sum h_i) at the defined graph-level certificate-choice interface; fresh actual-D2C screens found no H>=15 live-strip root; an inclusion-minimal H obstruction yields a private-witness graph with delta_i+delta_t>=rho+1 and a small cover under the strict-counterexample deficit budget.
-ACTIVE SESSION: Scheduled trigger 2026-09-23T11:00:38+01:00; watchdog actual entry 11:04:13; the primary launch had produced no durable canonical STARTED record. Recovery uses the same scheduled session identity and receives no duplicate credit. Canonical STARTED commit c764fd3946ca41277bbd1c69c3807a9037f3b7b1 was published at 11:05:39, one second after the trigger+5m target; launch target therefore MISSED by 1s. Immutable delivery identity remains UNVERIFIED.
-VERIFIED FORWARD SPAN: 0m00s so far; live session.
-SESSION RESULT: ACTIVE_RECOVERY; research_target_minutes=40; target applies because >40 minutes remained from watchdog entry to cutoff.
-SUBSTANTIVE UNITS: 0 so far. Focused-session credit not yet determined; counter remains 3/24 pending finalization.
-CANONICAL RECORD: project/research/session_logs/2026-09-23/2026-09-23T11-00-38+01-00-canonical.json.
+INSPECTED PREDECESSOR: 2fe23cf62d5cd7abffb7bf74c372a6cae407c86f.
+LAST VERIFIED RESULT: The expired 11:00 writer durably reduced every H>=15 obstruction to a deletion-minimal legal assignment with total demand 15 or 16. Its shared-overlap absorption, quadratic star-slack, and finite demand-pattern artifacts are retained; its canonical session telemetry remained stale ACTIVE after hard close and is not being rewritten here.
+ACTIVE SESSION: Scheduled trigger 2026-09-23T12:00:38+01:00; actual start 12:02:29; cutoff 12:53:38; hard close 12:59:38. Trigger attribution uses the current invocation and supplied hourly schedule; immutable delivery identity is UNVERIFIED.
+VERIFIED FORWARD SPAN: 0m00s; mathematics starting after mandatory launch publication.
+SESSION RESULT: STARTED; research_target_minutes=40; target applies.
+SUBSTANTIVE UNITS: 0. Focused-session counter remains 3/24 before this session.
+CANONICAL RECORD: project/research/session_logs/2026-09-23/2026-09-23T12-00-38+01-00-canonical.json.
 UNPRESERVED WORK: None.
-DEFERRED ADMIN: Finalize stale 09:00 telemetry in the audit; correct prior audit prose/PDF from 42 to 32; reconcile STARTED publication timestamp into canonical at first substantive checkpoint.
-NEXT ACTION: Analyze the concentrated-cover branch: for a minimum cover X union Y, every label outside X has h_i<=2|Y|-1; combine this with H>=15 and the unresolved strip.
+DEFERRED ADMIN: Audit/finalize stale 09:00 and 11:00 telemetry; correct prior audit prose/PDF from 42 to 32.
+NEXT ACTION: Retain the 15/16 normal form and combine quadratic star-slack across labels; control endpoint-deficit multiplicity using assigned-edge/source geometry.
 MANDATORY CONSTRAINTS: S<=14 is internal/computer-assisted and conditional on the audited bridge; H is exact only for the defined graph-level certificate-choice interface; equality only through S<=8; balanced complete bipartite graphs and X_3 remain controls; no external e+disj+X core; general theorem open.
 <!-- CURRENT-STATUS:END -->
 
