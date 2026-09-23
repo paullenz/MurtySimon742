@@ -18,9 +18,16 @@
     {
       "segment_id": "segment-1",
       "actual_start": "2026-09-23T22:01:42+01:00",
-      "actual_stop": "UNVERIFIED",
+      "actual_stop": "2026-09-23T22:11:28+01:00",
       "role": "forward_research",
       "notes": "21:00 predecessor had no heartbeat after 21:30 and its hard-close deadline passed; no overlap."
+    },
+    {
+      "segment_id": "segment-2",
+      "actual_start": "2026-09-23T22:11:09+01:00",
+      "actual_stop": "UNVERIFIED",
+      "role": "forward_research",
+      "notes": "Same-trigger re-entry continued the 22:00 session after an executor-session transport interruption; no duplicate session credit."
     }
   ],
   "forward_research_intervals": [
@@ -29,6 +36,12 @@
       "stop": "2026-09-23T22:06:29+01:00",
       "seconds": 176,
       "unit": "Exact stable-index range 37,301-37,500 closed with zero abstract survivors; closest gap 10."
+    },
+    {
+      "start": "2026-09-23T22:11:43+01:00",
+      "stop": "2026-09-23T22:22:21+01:00",
+      "seconds": 638,
+      "unit": "Exact stable-index range 37,501-38,300 closed with zero abstract survivors; closest gap 8."
     }
   ],
   "forward_research_stop": "PENDING",
@@ -36,9 +49,9 @@
   "preservation_complete": "PENDING",
   "final_report_time": "PENDING",
   "wall_clock_span_to_preservation_complete": "PENDING",
-  "verified_forward_research_span": "00:02:56",
+  "verified_forward_research_span": "00:13:34",
   "preservation_span": "PENDING",
-  "substantive_unit_count": 1,
+  "substantive_unit_count": 2,
   "timestamped_unit_ledger": [
     {
       "unit": 1,
@@ -46,6 +59,13 @@
       "complete": "2026-09-23T22:06:29+01:00",
       "result": "Closed exact stable-index range 37,301-37,500 with zero abstract survivors. Closest tuple d=(4,3,3,2,2,1), x=(4,5,5,2,2,1), h=(4,7,7,2,2,1) has minimum deficit 26, ten above Dmax=16.",
       "evidence": "project/research/general_n/2026-09-23-independent-742-r22-row-closure/N18_RANGE_37301_37500.md"
+    },
+    {
+      "unit": 2,
+      "start": "2026-09-23T22:11:43+01:00",
+      "complete": "2026-09-23T22:22:21+01:00",
+      "result": "Closed exact stable-index range 37,501-38,300 with zero abstract survivors. Closest tuple d=(4,3,3,2,2,1), x=(5,3,3,2,2,2), h=(6,3,3,2,2,3) has minimum deficit 24, eight above Dmax=16.",
+      "evidence": "project/research/general_n/2026-09-23-independent-742-r22-row-closure/N18_RANGE_37501_38300.md"
     }
   ],
   "early_stop_check_time": "PENDING",
@@ -57,8 +77,13 @@
   "session_run_status": "ACTIVE",
   "focused_session_credit": "PENDING; counter remains 6/24.",
   "compliance_status": "PENDING",
-  "infrastructure_failures": [],
-  "commit_shas": [],
-  "live_unfinished_line": "Continue exact stable-index enumeration from 37,501; full n=18 row closure remains open.",
+  "infrastructure_failures": [
+    "Executor-session key changed during the attempted 37,501-38,500 run; the process terminated without a completion boundary, so no time or result from that attempt was credited."
+  ],
+  "commit_shas": [
+    "d3c9e6f453759654ea5554993bca04bc85575fb9",
+    "6ee1629235eaff61d4dd4d626b9eea934c322f79"
+  ],
+  "live_unfinished_line": "Continue exact stable-index enumeration from 38,301; full n=18 row closure remains open.",
   "historical_fragments": []
 }
