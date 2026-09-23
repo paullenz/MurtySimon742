@@ -25,7 +25,7 @@
     {
       "segment_id": "segment-2-same-trigger-reentry",
       "actual_start": "2026-09-23T18:35:47+01:00",
-      "actual_stop": "UNVERIFIED",
+      "actual_stop": "2026-09-23T18:50:04+01:00",
       "role": "forward_research",
       "notes": "Re-entry continued the already active 18:00 writer; no duplicate session or credit."
     }
@@ -66,16 +66,22 @@
       "stop": "2026-09-23T18:46:40+01:00",
       "seconds": 290,
       "unit": "Exact stable-index range 27,901-28,200 closed with zero abstract survivors; closest gap 10."
+    },
+    {
+      "start": "2026-09-23T18:48:04+01:00",
+      "stop": "2026-09-23T18:50:04+01:00",
+      "seconds": 120,
+      "unit": "Exact stable-index range 28,201-28,300 closed with zero abstract survivors; closest gap 12."
     }
   ],
-  "forward_research_stop": "PENDING",
-  "preservation_start": "PENDING",
+  "forward_research_stop": "2026-09-23T18:50:04+01:00",
+  "preservation_start": "2026-09-23T18:51:28+01:00",
   "preservation_complete": "PENDING",
   "final_report_time": "PENDING",
   "wall_clock_span_to_preservation_complete": "PENDING",
-  "verified_forward_research_span": "00:29:21",
+  "verified_forward_research_span": "00:31:21",
   "preservation_span": "PENDING",
-  "substantive_unit_count": 6,
+  "substantive_unit_count": 7,
   "timestamped_unit_ledger": [
     {
       "unit": 1,
@@ -118,17 +124,24 @@
       "complete": "2026-09-23T18:46:40+01:00",
       "result": "Closed exact stable-index range 27,901-28,200 with zero abstract survivors. Closest tuple d=(5,3,2,2,1,1,1), x=(6,6,2,2,2,2,2) has exact minimum deficit 26, ten above Dmax=16.",
       "evidence": "project/research/general_n/2026-09-23-independent-742-r18-row-closure/N18_RANGE_27901_28200.md"
+    },
+    {
+      "unit": 7,
+      "start": "2026-09-23T18:48:04+01:00",
+      "complete": "2026-09-23T18:50:04+01:00",
+      "result": "Closed exact stable-index range 28,201-28,300 with zero abstract survivors. Closest tuple d=(5,3,2,2,1,1,1), x=(6,6,4,3,2,2,2) has exact minimum deficit 28, twelve above Dmax=16.",
+      "evidence": "project/research/general_n/2026-09-23-independent-742-r18-row-closure/N18_RANGE_28201_28300.md"
     }
   ],
-  "early_stop_check_time": "PENDING",
-  "early_stop_check_result": "PENDING",
-  "stop_reason": "PENDING",
+  "early_stop_check_time": "2026-09-23T18:50:04+01:00",
+  "early_stop_check_result": "NOT_EARLY: only 3m34s remained before cutoff, below the five-minute continuation threshold; stopped at a completed exact shard for preservation.",
+  "stop_reason": "Completed the final bounded shard with fewer than five minutes remaining before cutoff; stopped for clean preservation.",
   "research_target_minutes": 40,
   "target_40m_applies": true,
-  "target_40m_met": "PENDING",
-  "session_run_status": "RAN_ACTIVE",
-  "focused_session_credit": "PENDING; counter remains 4/24",
-  "compliance_status": "ACTIVE_NONCOMPLIANT_LAUNCH: STARTED published 35 seconds beyond trigger+5 minutes; first substantive checkpoint within ten minutes of actual entry",
+  "target_40m_met": false,
+  "session_run_status": "RAN",
+  "focused_session_credit": "DOES NOT QUALIFY; verified research 31m21s is below 40 minutes. Counter remains 4/24.",
+  "compliance_status": "NONCOMPLIANT_LAUNCH: STARTED published 35 seconds beyond trigger+5 minutes; research cutoff respected.",
   "infrastructure_failures": [
     "STARTED publication completed at 18:06:13, 35 seconds after the five-minute target."
   ],
@@ -138,8 +151,9 @@
     "f72224a721857c0feee97b2efee770c7ca3e8860",
     "4ded9beebebd0c0a55fa2f8b68f07c9758161302",
     "d7b40ec9367a7541b6359eff5a3b155b06bca0cc",
-    "3bd67e4c1fd97375918e891b3c3fe4c2d00b24fa"
+    "3bd67e4c1fd97375918e891b3c3fe4c2d00b24fa",
+    "f0c838c06e432badb226d885b609a9e6af1f91e3"
   ],
-  "live_unfinished_line": "If more than five minutes remain before cutoff, run one final small bounded shard from 28,201; otherwise finalize.",
+  "live_unfinished_line": "Continue exact stable-index enumeration from 28,301; full n=18 row closure remains open.",
   "historical_fragments": []
 }
