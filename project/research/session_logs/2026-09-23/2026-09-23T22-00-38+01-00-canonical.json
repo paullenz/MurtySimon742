@@ -42,6 +42,12 @@
       "stop": "2026-09-23T22:22:21+01:00",
       "seconds": 638,
       "unit": "Exact stable-index range 37,501-38,300 closed with zero abstract survivors; closest gap 8."
+    },
+    {
+      "start": "2026-09-23T22:30:10+01:00",
+      "stop": "2026-09-23T22:44:08+01:00",
+      "seconds": 838,
+      "unit": "Exact stable-index range 38,301-39,000 closed with zero abstract survivors; closest gap 10."
     }
   ],
   "forward_research_stop": "PENDING",
@@ -49,9 +55,9 @@
   "preservation_complete": "PENDING",
   "final_report_time": "PENDING",
   "wall_clock_span_to_preservation_complete": "PENDING",
-  "verified_forward_research_span": "00:13:34",
+  "verified_forward_research_span": "00:27:32",
   "preservation_span": "PENDING",
-  "substantive_unit_count": 2,
+  "substantive_unit_count": 3,
   "timestamped_unit_ledger": [
     {
       "unit": 1,
@@ -66,6 +72,13 @@
       "complete": "2026-09-23T22:22:21+01:00",
       "result": "Closed exact stable-index range 37,501-38,300 with zero abstract survivors. Closest tuple d=(4,3,3,2,2,1), x=(5,3,3,2,2,2), h=(6,3,3,2,2,3) has minimum deficit 24, eight above Dmax=16.",
       "evidence": "project/research/general_n/2026-09-23-independent-742-r22-row-closure/N18_RANGE_37501_38300.md"
+    },
+    {
+      "unit": 3,
+      "start": "2026-09-23T22:30:10+01:00",
+      "complete": "2026-09-23T22:44:08+01:00",
+      "result": "Closed exact stable-index range 38,301-39,000 with zero abstract survivors. Closest tuple d=(4,3,3,2,1,1,1), x=(4,3,3,4,2,2,2), h=(4,3,3,6,3,3,3) has minimum deficit 26, ten above Dmax=16.",
+      "evidence": "project/research/general_n/2026-09-23-independent-742-r22-row-closure/N18_RANGE_38301_39000.md"
     }
   ],
   "early_stop_check_time": "PENDING",
@@ -78,12 +91,14 @@
   "focused_session_credit": "PENDING; counter remains 6/24.",
   "compliance_status": "PENDING",
   "infrastructure_failures": [
-    "Executor-session key changed during the attempted 37,501-38,500 run; the process terminated without a completion boundary, so no time or result from that attempt was credited."
+    "Executor-session key changed during the attempted 37,501-38,500 run; the process terminated without a completion boundary, so no time or result from that attempt was credited.",
+    "Oversized attempted range 38,301-40,300 was stopped after observed progress through 38,650 because it could not safely finish before cutoff; its time and partial result were not credited. The completed bounded replay supersedes its prefix."
   ],
   "commit_shas": [
     "d3c9e6f453759654ea5554993bca04bc85575fb9",
-    "6ee1629235eaff61d4dd4d626b9eea934c322f79"
+    "6ee1629235eaff61d4dd4d626b9eea934c322f79",
+    "af62f04551dd6e5c39d6437f98fc660f615a9c74"
   ],
-  "live_unfinished_line": "Continue exact stable-index enumeration from 38,301; full n=18 row closure remains open.",
+  "live_unfinished_line": "Continue exact stable-index enumeration from 39,001; full n=18 row closure remains open.",
   "historical_fragments": []
 }
