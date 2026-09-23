@@ -59,6 +59,12 @@
       "stop": "2026-09-23T06:31:39+01:00",
       "seconds": 71,
       "unit": "Derived and proved the pair-lift inequality and its summed source form; replayed 200 high-ranked actual-D2C fixtures, finding no violation and tight direct-term examples."
+    },
+    {
+      "start": "2026-09-23T06:34:30+01:00",
+      "stop": "2026-09-23T06:34:54+01:00",
+      "seconds": 24,
+      "unit": "Combined robust codegree lower bound with pair-lift marginal upper bound; exact leading coefficients expose a 5.6479 asymptotic closure gap."
     }
   ],
   "forward_research_stop": "PENDING",
@@ -66,9 +72,9 @@
   "preservation_complete": "PENDING",
   "final_report_time": "PENDING",
   "wall_clock_span_to_preservation_complete": "PENDING",
-  "verified_forward_research_span": "00:08:13",
+  "verified_forward_research_span": "00:08:37",
   "preservation_span": "PENDING",
-  "substantive_unit_count": 6,
+  "substantive_unit_count": 7,
   "timestamped_unit_ledger": [
     {
       "unit": 1,
@@ -111,6 +117,13 @@
       "complete": "2026-09-23T06:31:39+01:00",
       "result": "Proved c_F(i,k)<=rho_u+c_R(i,k) for co-selected labels and a stronger summed source inequality. 200-fixture replay passed; tight direct-term witnesses show sourcewise use alone is insufficient.",
       "evidence": "project/research/general_n/2026-09-23-independent-742-r12-count-audit/PAIR_LIFT_INEQUALITY.md"
+    },
+    {
+      "unit": 7,
+      "start": "2026-09-23T06:34:30+01:00",
+      "complete": "2026-09-23T06:34:54+01:00",
+      "result": "Exact coefficient accounting: pair-lift sourcewise upper 32304441/1024000000 versus robust lower 31640625/5664582488, a factor-5.6479 gap; required retained capacity <=17.706%.",
+      "evidence": "project/research/general_n/2026-09-23-independent-742-r12-count-audit/PAIR_LIFT_CLOSURE_GAP.md"
     }
   ],
   "early_stop_check_time": "PENDING",
@@ -142,6 +155,6 @@
       "published_at": "2026-09-23T06:11:40+01:00"
     }
   ],
-  "live_unfinished_line": "Sum the pair-lift inequality globally and seek a cross-source reuse bound that survives the tight n=15 direct-term witness.",
+  "live_unfinished_line": "Seek a cross-source reuse injection saving >5.65; reject any factorized sourcewise bound.",
   "historical_fragments": []
 }
