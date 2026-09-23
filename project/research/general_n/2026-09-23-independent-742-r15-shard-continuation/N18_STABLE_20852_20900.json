@@ -1,0 +1,30 @@
+{
+  "schema": "witness-deficit-stable-index-range-v1",
+  "date": "2026-09-23",
+  "n": 18,
+  "Delta": 10,
+  "rho": 2,
+  "Dmax": 16,
+  "stable_index_start": 20852,
+  "stable_index_stop": 20900,
+  "enumerated": 49,
+  "range_complete": true,
+  "abstract_survivor_count": 0,
+  "known_graph_excluded_survivor_count": 0,
+  "closest_result": {
+    "stable_index": 20879,
+    "total_demand": 15,
+    "demands": [5,4,2,1,1,1,1],
+    "x": [6,5,4,2,2,2,1],
+    "h": [7,6,6,3,3,3,1],
+    "minimum_deficit": 27,
+    "gap_vs_Dmax": 11,
+    "solver_status": 0
+  },
+  "research_interval": {
+    "start": "2026-09-23T16:15:54.997667+01:00",
+    "stop": "2026-09-23T16:16:15.044419+01:00"
+  },
+  "method": "Exact stable-index enumeration using the repository's strengthened scalar filters followed by the existing aggregated incidence-pattern MILP on each of 49 indices; eight local worker processes, OMP_NUM_THREADS=1.",
+  "scope_note": "Together with the separately preserved exact index 20,851 this proves zero abstract survivors on indices 20,851-20,900. It still does not close 18,901-20,900 because the predecessor only records 18,901-20,850 as a partial observation rather than a completed exact shard. Abstract assigned-witness infeasibility is not graph-level realizability."
+}
