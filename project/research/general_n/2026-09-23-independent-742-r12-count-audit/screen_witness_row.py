@@ -5,7 +5,7 @@ from screen_demand_15_16 import partitions, f
 from witness_deficit_milp import solve_aggregated
 
 
-def main(n, Delta):
+def main(n, Delta, stop_first=False):
     rho = 2 * Delta - n
     Dmax = n * rho // 2 - 2 if n % 2 == 0 else (n * rho - 3) // 2
     a = n - 1 - Delta
@@ -16,13 +16,16 @@ def main(n, Delta):
         for p in partitions(total):
             if len(p) > a or (total == 16 and min(p) < 2):
                 continue
-            ranges = [range(d, (Delta + d) // 2 + 1) for d in p]
+            # Every assigned witness needs a source in N_B(i), so h_i<Delta.
+            ranges = [range(d, (Delta - 1 + d) // 2 + 1) for d in p]
             for xs in itertools.product(*ranges):
                 if any(p[j] == p[j-1] and xs[j] > xs[j-1]
                        for j in range(1, len(p))):
                     continue
                 tested += 1
                 hs = [2*x-d for x,d in zip(xs,p)]
+                if any(x > (Delta-h)*(Delta-2) for x,h in zip(xs,hs)):
+                    continue
                 rhs = sum(f(x, rho) for x in xs)
                 if max(hs) * Dmax < rhs:
                     continue
@@ -36,6 +39,20 @@ def main(n, Delta):
                     out["gap_vs_Dmax"] = gap
                     if gap <= 0:
                         abstract_survivors.append(out)
+                        print("SURVIVOR "+json.dumps(out), flush=True)
+                        if stop_first:
+                            result = {
+                                "n": n, "Delta": Delta, "rho": rho,
+                                "Dmax": Dmax, "a": a,
+                                "patterns_tested": tested,
+                                "scalar_pass": scalar_pass,
+                                "abstract_survivor_count": 1,
+                                "abstract_survivors": abstract_survivors,
+                                "closest_result": out,
+                                "stopped_after_first_survivor": True,
+                            }
+                            print("FINAL "+json.dumps(result))
+                            return
                     if best_excluded is None or gap < best_excluded["gap_vs_Dmax"]:
                         best_excluded = out
                 if scalar_pass % 50 == 0:
@@ -56,4 +73,5 @@ def main(n, Delta):
 
 
 if __name__ == "__main__":
-    main(int(sys.argv[1]), int(sys.argv[2]))
+    main(int(sys.argv[1]), int(sys.argv[2]),
+         len(sys.argv) > 3 and sys.argv[3] == "--stop-first")

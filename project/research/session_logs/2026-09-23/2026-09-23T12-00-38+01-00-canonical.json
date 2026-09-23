@@ -35,6 +35,12 @@
       "stop": "2026-09-23T12:14:42+01:00",
       "seconds": 333,
       "unit": "Built an exact integer witness-deficit MILP retaining endpoint reuse, collision degrees, pair deficits and every quadratic star inequality; tested the strongest first scalar survivor."
+    },
+    {
+      "start": "2026-09-23T12:21:38+01:00",
+      "stop": "2026-09-23T12:45:46+01:00",
+      "seconds": 1448,
+      "unit": "Derived the graph-source capacity x_i <= (Delta-h_i)(Delta-2), closed n=15,Delta=8 by the scalar screen, and exhaustively closed n=16,Delta=9 by the corrected exact abstract witness-deficit MILP."
     }
   ],
   "forward_research_stop": "PENDING",
@@ -42,9 +48,9 @@
   "preservation_complete": "PENDING",
   "final_report_time": "PENDING",
   "wall_clock_span_to_preservation_complete": "PENDING",
-  "verified_forward_research_span": "00:06:52",
+  "verified_forward_research_span": "00:31:00",
   "preservation_span": "PENDING",
-  "substantive_unit_count": 3,
+  "substantive_unit_count": 4,
   "timestamped_unit_ledger": [
     {
       "unit": 1,
@@ -66,6 +72,13 @@
       "complete": "2026-09-23T12:19:49+01:00",
       "result": "Exhaustive n=14, Delta=8 abstract assigned-witness screen: 5,334 symmetry-reduced demand/witness patterns; 878 passed the compressed scalar filter; zero passed the exact deficit MILP. Closest pattern d=(8,7), x=(8,7) needs D=13 versus Dmax=12.",
       "evidence": "project/research/general_n/2026-09-23-independent-742-r12-count-audit/WITNESS_DEFICIT_ROW_14_8.md"
+    },
+    {
+      "unit": 4,
+      "start": "2026-09-23T12:21:38+01:00",
+      "complete": "2026-09-23T12:45:46+01:00",
+      "result": "For every positive assigned label, h_i<Delta and x_i<=(Delta-h_i)(Delta-2). With these graph-source necessary conditions, n=15,Delta=8 has 14,413 enumerated patterns and zero scalar survivors; n=16,Delta=9 has 14,413 patterns, 7,008 exact-MILP candidates and zero abstract survivors. The closest n=16 pattern d=(7,7,1), x=(7,7,1) needs D=15 versus Dmax=14.",
+      "evidence": "project/research/general_n/2026-09-23-independent-742-r12-count-audit/SOURCE_CAPACITY_ROWS_15_16.md"
     }
   ],
   "early_stop_check_time": "PENDING",
@@ -81,7 +94,12 @@
     "11:00 predecessor missed final canonical closure before its hard deadline; its durable math commits were retained and its stale ACTIVE telemetry was not rewritten.",
     "Unit 3 start boundary was not authoritatively timestamped after preservation; its result is durable but its elapsed research time is excluded from verified duration."
   ],
-  "commit_shas": [],
-  "live_unfinished_line": "Start a timestamped exact MILP screen of the n=15, Delta=8 row; preserve any abstract witness survivor, otherwise continue in increasing n.",
+  "commit_shas": [
+    "2bbf86050c0bdd09521527c650f90b571b669f8b",
+    "8f33cc9e2397c010ca785382ebdc8ae36b20948a",
+    "08786f119fdef58b336c49945db62f1e2f50b986",
+    "a79bcbd22a63ed4c7b7e764797232010ead528c9"
+  ],
+  "live_unfinished_line": "Start a timestamped corrected screen at n=17, Delta=9; preserve the first surviving abstract assigned-witness pattern or the completed row.",
   "historical_fragments": []
 }

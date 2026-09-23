@@ -1,0 +1,36 @@
+{
+  "n15_Delta8": {
+    "patterns_tested": 14413,
+    "scalar_pass": 0,
+    "abstract_survivor_count": 0
+  },
+  "n16_Delta9": {
+    "patterns_tested": 14413,
+    "scalar_pass": 7008,
+    "abstract_survivor_count": 0,
+    "closest": {
+      "d": [
+        7,
+        7,
+        1
+      ],
+      "x": [
+        7,
+        7,
+        1
+      ],
+      "h": [
+        7,
+        7,
+        1
+      ],
+      "minimum_deficit": 15,
+      "Dmax": 14
+    }
+  },
+  "necessary_conditions": [
+    "h_i < Delta for x_i>0",
+    "x_i <= (Delta-h_i)(Delta-2)"
+  ],
+  "trust": "internal abstract assigned-witness exclusion; graph-to-profile bridge remains controlling"
+}
