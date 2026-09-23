@@ -83,7 +83,11 @@ def main():
         "feasible_identity_sha256": digest,
         "feasible_identities": ids,
         "matches_saved_feasible_identities": ids == saved_ids,
-        "scope": "Fresh execution of all 6,386 committed per-kernel source MILPs; reuses the committed mathematical encoding and is not an independent reimplementation of that encoding.",
+        "scope": (
+            f"Fresh execution of {len(tasks)} committed per-kernel source MILPs "
+            f"from selected shards {shards}; reuses the committed mathematical "
+            "encoding and is not an independent reimplementation of that encoding."
+        ),
     }, indent=2, sort_keys=True))
     print("RESULT_END")
 

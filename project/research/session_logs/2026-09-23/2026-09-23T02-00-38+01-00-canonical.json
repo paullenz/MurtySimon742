@@ -35,16 +35,46 @@
       "stop": "2026-09-23T02:13:07+01:00",
       "seconds": 421,
       "unit": "Completed helper-aware screen and classified exact aggregate output over all 32 corrected source survivors."
+    },
+    {
+      "start": "2026-09-23T02:18:39+01:00",
+      "stop": "2026-09-23T02:35:37+01:00",
+      "seconds": 1018,
+      "unit": "Reviewed replay inputs and ran shards 2,3,6,7 through durable 2400/3194 progress; workspace re-entry terminated the executor and no completion result is credited."
+    },
+    {
+      "start": "2026-09-23T02:35:37+01:00",
+      "stop": "2026-09-23T02:44:22+01:00",
+      "seconds": 525,
+      "unit": "Completed exact source replay for shards 2,3: 1597 kernels, zero feasible, zero unknown, exact saved-identity match."
+    },
+    {
+      "start": "2026-09-23T02:44:42+01:00",
+      "stop": "2026-09-23T02:49:10+01:00",
+      "seconds": 268,
+      "unit": "Completed exact source replay for shard 6: 798 kernels, zero feasible, zero unknown, exact saved-identity match."
+    },
+    {
+      "start": "2026-09-23T02:49:44+01:00",
+      "stop": "2026-09-23T02:50:03+01:00",
+      "seconds": 19,
+      "unit": "Reviewed source encoder success/status semantics and exact shard boundaries."
+    },
+    {
+      "start": "2026-09-23T02:50:39+01:00",
+      "stop": "2026-09-23T02:50:56+01:00",
+      "seconds": 17,
+      "unit": "Corrected overbroad partial-replay scope label and syntax-tested the driver."
     }
   ],
-  "forward_research_stop": "PENDING",
-  "preservation_start": "PENDING",
+  "forward_research_stop": "2026-09-23T02:50:56+01:00",
+  "preservation_start": "2026-09-23T02:50:56+01:00",
   "preservation_complete": "PENDING",
   "final_report_time": "PENDING",
   "wall_clock_span_to_preservation_complete": "PENDING",
-  "verified_forward_research_span": "00:09:23",
+  "verified_forward_research_span": "00:40:10",
   "preservation_span": "PENDING",
-  "substantive_unit_count": 1,
+  "substantive_unit_count": 3,
   "timestamped_unit_ledger": [
     {
       "unit": 1,
@@ -52,18 +82,34 @@
       "complete": "2026-09-23T02:13:07+01:00",
       "result": "All 32 corrected source survivors infeasible in the helper-aware supplement MILP; 0 feasible and 0 unknown. Each kernel has one all-zero residual-free type and zero free discharges.",
       "evidence": "project/research/general_n/2026-09-23-independent-742-r12-count-audit/R12_SUPPORT10_HELPER_SCREEN_RESULT.json"
+    },
+    {
+      "unit": 2,
+      "start": "2026-09-23T02:18:39+01:00",
+      "complete": "2026-09-23T02:49:10+01:00",
+      "result": "Completed fresh source replay of shards 2,3,6: 2395 strict kernels, zero feasible, zero unknown, exact saved-identity agreement. Broader attempt terminated at 2400/3194 and was not credited.",
+      "evidence": "project/research/general_n/2026-09-23-independent-742-r12-count-audit/R12_SUPPORT10_SOURCE_REPLAY_SESSION_RESULT.json"
+    },
+    {
+      "unit": 3,
+      "start": "2026-09-23T02:49:44+01:00",
+      "complete": "2026-09-23T02:50:56+01:00",
+      "result": "Reviewed encoder semantics and corrected the replay driver's overbroad partial-run scope label; counts and models were unaffected.",
+      "evidence": "project/research/general_n/2026-09-23-independent-742-r12-count-audit/replay_support10_case1_sources.py"
     }
   ],
-  "early_stop_check_time": "PENDING",
-  "early_stop_check_result": "PENDING",
-  "stop_reason": "PENDING",
+  "early_stop_check_time": "2026-09-23T02:50:56+01:00",
+  "early_stop_check_result": "40-minute target reached at a natural completed-shard and corrected-driver checkpoint.",
+  "stop_reason": "Reached 40m10s verified research and stopped before cutoff for preservation.",
   "research_target_minutes": 40,
   "target_40m_applies": "YES",
-  "target_40m_met": "PENDING",
-  "session_run_status": "STARTED",
-  "focused_session_credit": "PENDING",
-  "compliance_status": "STARTED_PENDING_FINALIZATION",
-  "infrastructure_failures": [],
+  "target_40m_met": "YES",
+  "session_run_status": "RAN",
+  "focused_session_credit": "QUALIFIES_AS_2_OF_24",
+  "compliance_status": "COMPLIANT_PENDING_REMOTE_PRESERVATION_CONFIRMATION",
+  "infrastructure_failures": [
+    "Workspace re-entry terminated the 2,3,6,7 replay after durable 2400/3194 progress; no completion result from that attempt was credited."
+  ],
   "commit_shas": [
     {
       "kind": "STARTED",
@@ -76,13 +122,23 @@
       "published_at": "2026-09-23T02:07:00+01:00"
     }
   ],
-  "live_unfinished_line": "Replay exact source stage over the 6,386 strict kernels; start with zero-survivor shards 2,3,6,7.",
+  "live_unfinished_line": "Complete fresh source replays for shards 7,0,1,4,5, requiring exact saved-identity agreement.",
   "historical_fragments": [],
   "research_units": [
     {
       "unit": 1,
       "status": "COMPLETE_INTERNAL_NOT_PROMOTED",
       "evidence": "project/research/general_n/2026-09-23-independent-742-r12-count-audit/R12_SUPPORT10_HELPER_SCREEN_RESULT.json"
+    },
+    {
+      "unit": 2,
+      "status": "COMPLETE_INTERNAL_PARTIAL_SOURCE_REPLAY",
+      "evidence": "project/research/general_n/2026-09-23-independent-742-r12-count-audit/R12_SUPPORT10_SOURCE_REPLAY_SESSION_RESULT.json"
+    },
+    {
+      "unit": 3,
+      "status": "COMPLETE_REPORTING_SCOPE_FIX",
+      "evidence": "project/research/general_n/2026-09-23-independent-742-r12-count-audit/replay_support10_case1_sources.py"
     }
   ],
   "launch_target_result": "MET_BY_00:03:06",

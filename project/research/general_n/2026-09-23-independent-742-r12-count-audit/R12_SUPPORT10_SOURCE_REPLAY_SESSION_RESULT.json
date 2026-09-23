@@ -1,0 +1,43 @@
+{
+  "partition": [2, 2, 1, 1, 1, 1, 1, 1, 1, 1],
+  "completed_shards": [2, 3, 6],
+  "strict_kernels_replayed": 2395,
+  "source_feasible_by_shard": {"2": 0, "3": 0, "6": 0},
+  "source_feasible_total": 0,
+  "solver_unknown_total": 0,
+  "matches_saved_feasible_identities": true,
+  "empty_identity_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+  "completed_runs": [
+    {
+      "shards": [2, 3],
+      "strict_kernels": 1597,
+      "start": "2026-09-23T02:35:37+01:00",
+      "executor_measured_seconds": 525,
+      "exit_code": 0
+    },
+    {
+      "shards": [6],
+      "strict_kernels": 798,
+      "start": "2026-09-23T02:44:42+01:00",
+      "executor_measured_seconds": 268,
+      "exit_code": 0
+    }
+  ],
+  "terminated_attempt": {
+    "shards": [2, 3, 6, 7],
+    "last_durable_progress": "2400/3194",
+    "feasible_at_last_progress": 0,
+    "unknown_at_last_progress": 0,
+    "completion_credited": false,
+    "termination_observed": "2026-09-23T02:35:37+01:00",
+    "cause": "workspace re-entry terminated executor session"
+  },
+  "driver_correction": {
+    "issue": "partial-shard runs used an overbroad scope string claiming all 6,386 kernels",
+    "effect_on_counts": "none",
+    "fix": "scope now reports the selected shards and actual task count",
+    "corrected_script_sha256": "c858deaed1511c88c6a3597a8df1ab7aed18b64807e2cddd33b0577c9799b06f"
+  },
+  "remaining_shards_for_fresh_full_replay": [0, 1, 4, 5, 7],
+  "scope": "Fresh execution of the committed source MILP on 2,395 kernels in shards 2,3,6. It reuses the committed encoding, is not an independent reimplementation, is not graph realizability, and does not authorize S<=14 while five shards remain unreplayed."
+}
