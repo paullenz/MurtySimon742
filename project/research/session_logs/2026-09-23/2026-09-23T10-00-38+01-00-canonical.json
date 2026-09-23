@@ -189,7 +189,8 @@
   "compliance_status": "RAN_TARGET_SHORTFALL_FINALIZED_ON_TIME",
   "infrastructure_failures": [
     "Initial STARTED ref update raced with final 09:00 mathematical commits and was rejected non-fast-forward; one bounded rebase fallback used.",
-    "09:00 predecessor telemetry remains PENDING after hard close; reconciliation deferred."
+    "09:00 predecessor telemetry remains PENDING after hard close; reconciliation deferred.",
+    "Same-trigger post-finalization invocation arrived at 10:58:04, after research cutoff; recorded without reopening mathematics."
   ],
   "commit_shas": [
     "b5e910568844b2f87727a2322c56675702df2a9d",
@@ -210,6 +211,10 @@
     {
       "observed_at": "2026-09-23T10:43:00+01:00",
       "disposition": "Primary session already active with eight durable checkpoints; continued same canonical session, no duplicate credit."
+    },
+    {
+      "observed_at": "2026-09-23T10:58:04+01:00",
+      "disposition": "Post-finalization same-trigger re-entry after research cutoff; zero additional research, no duplicate session credit, final result unchanged."
     }
   ]
 }
