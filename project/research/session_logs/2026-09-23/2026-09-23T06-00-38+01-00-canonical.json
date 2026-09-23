@@ -71,6 +71,12 @@
       "stop": "2026-09-23T06:40:50+01:00",
       "seconds": 161,
       "unit": "Proved the crossed-supplement residual lift for same-source co-selected F-edges; audited 200 actual-D2C fixtures, finding 228/228 local lifts and zero repeated cross-source images, with global injectivity explicitly unproved."
+    },
+    {
+      "start": "2026-09-23T06:43:20+01:00",
+      "stop": "2026-09-23T06:46:31+01:00",
+      "seconds": 191,
+      "unit": "Reconstructed all legal endpoint-label certificates on 41 actual-D2C graph/root states; refuted unrestricted cross-source injectivity with six collision images, classified the forced motif, and found no collision with both labels demand-positive."
     }
   ],
   "forward_research_stop": "PENDING",
@@ -78,9 +84,9 @@
   "preservation_complete": "PENDING",
   "final_report_time": "PENDING",
   "wall_clock_span_to_preservation_complete": "PENDING",
-  "verified_forward_research_span": "00:11:18",
+  "verified_forward_research_span": "00:14:29",
   "preservation_span": "PENDING",
-  "substantive_unit_count": 8,
+  "substantive_unit_count": 9,
   "timestamped_unit_ledger": [
     {
       "unit": 1,
@@ -137,6 +143,13 @@
       "complete": "2026-09-23T06:40:50+01:00",
       "result": "Crossed-supplement lift proved locally. 200-fixture audit: 431 co-selected pair occurrences, 228 F-edges, zero crossed-residual violations, zero repeated label-pair/supplement-pair image; cross-source injectivity remains a conjectural next step.",
       "evidence": "project/research/general_n/2026-09-23-independent-742-r12-count-audit/CROSSED_SUPPLEMENT_LIFT.md"
+    },
+    {
+      "unit": 9,
+      "start": "2026-09-23T06:43:20+01:00",
+      "complete": "2026-09-23T06:46:31+01:00",
+      "result": "Unrestricted crossed-image injectivity refuted by a legal n=16 selection. Six collision images exist among 41 reconstructed graph/root states; exhaustive local-choice DP found zero where both collided labels can have positive demand.",
+      "evidence": "project/research/general_n/2026-09-23-independent-742-r12-count-audit/CROSS_SOURCE_COLLISION.md"
     }
   ],
   "early_stop_check_time": "PENDING",
@@ -168,6 +181,6 @@
       "published_at": "2026-09-23T06:11:40+01:00"
     }
   ],
-  "live_unfinished_line": "Prove/refute cross-source injectivity of crossed-supplement images; classify collisions if present.",
+  "live_unfinished_line": "Prove/refute demand-restricted collision exclusion; charge multiplicity to forced crossed residual degree.",
   "historical_fragments": []
 }

@@ -5,21 +5,21 @@ Canonical repository: `paullenz/MurtySimon742`. Date: 23 September 2026.
 Active target: a genuinely independent proof of Erdős #742 / the Murty–Simon inequality e(G)<=floor(n^2/4), preferably with the equality characterization. Forward priority is the project’s own complement / residual / Hall / profile / realizability route, not a reconstruction of the external e+disj+X proof. The first focused session produced the internally checked candidate threshold `Delta>=250n/429`, shrinking the live strip to `n/2<Delta<250n/429`. The theorem and its inherited graph-to-profile spine remain candidate/internal-review mathematics. A 24-focused-session go/no-go gate applies. Prior eventual-D2C work remains preserved but is no longer the active forward objective.
 
 <!-- CURRENT-STATUS:START -->
-CHECKPOINT CLASS: VERIFIED_INTERNAL_CROSSED_SUPPLEMENT_LIFT
+CHECKPOINT CLASS: VERIFIED_INTERNAL_COLLISION_CLASSIFICATION
 
 WORK MODE: MATH
 
-INSPECTED PREDECESSOR: d86440e039d68e3e48adbe62d26d08ba5b66033e.
+INSPECTED PREDECESSOR: b7ce7b47b05e1e5d43b23e83d10ea336131b3ff7.
 
 LAST VERIFIED RESULT: Internal strict residual closure now extends through r=12, supporting the edge bound through S<=14 because every strict counterexample has S>=r+2. The coverage manifest finds 81 saved r=12 source survivors across supports 6--10; all 81 are helper-aware infeasible with zero unknowns. Fresh replay covers all 6,386 support-ten case-1 kernels. Equality remains supported only through S<=8; this is not external verification, graph realizability, a full-strip theorem, or a lower threshold.
 
 ACTIVE SESSION: Scheduled trigger 2026-09-23T06:00:38+01:00; actual start 06:03:18; research cutoff 06:53:38; hard close 06:59:38; 40-minute target applies. Trigger attribution uses the current invocation title and supplied hourly schedule; immutable delivery identity is UNVERIFIED.
 
-VERIFIED FORWARD INTERVALS: 06:05:04--06:06:57; 06:08:45--06:09:47; 06:19:43--06:20:37; 06:23:00--06:24:23; 06:25:48--06:27:38; 06:30:28--06:31:39; 06:34:30--06:34:54; 06:38:09--06:40:50 BST.
+VERIFIED FORWARD INTERVALS: 06:05:04--06:06:57; 06:08:45--06:09:47; 06:19:43--06:20:37; 06:23:00--06:24:23; 06:25:48--06:27:38; 06:30:28--06:31:39; 06:34:30--06:34:54; 06:38:09--06:40:50; 06:43:20--06:46:31 BST.
 
-VERIFIED FORWARD SPAN: 11m18s.
+VERIFIED FORWARD SPAN: 14m29s.
 
-SUBSTANTIVE UNITS: 8 complete. Proved the crossed-supplement residual lift for co-selected F-edges. In 200 actual-D2C fixtures, all 228 such occurrences passed and no repeated label-pair/supplement-pair image occurred across sources; global injectivity remains unproved.
+SUBSTANTIVE UNITS: 9 complete. Unrestricted cross-source injectivity is false: full certificate reconstruction on 41 actual-D2C graph/root states found six collision images and an explicit legal selection. None can make both collided labels demand-positive under any local certificate choice; the demand-restricted version remains open.
 
 CANONICAL RECORD: project/research/session_logs/2026-09-23/2026-09-23T06-00-38+01-00-canonical.json.
 
@@ -27,7 +27,7 @@ UNPRESERVED WORK: None after this checkpoint.
 
 DEFERRED ADMIN: Correct prior audit prose/PDF from 42 to 32; audit launch coverage separately.
 
-NEXT ACTION: Prove or refute cross-source injectivity of the crossed-supplement image for a fixed F-edge; if collisions exist, classify and charge their extra residual structure. Do not promote the zero-collision sample.
+NEXT ACTION: Prove or refute demand-restricted collision exclusion. Use the exact collision motif and positive-demand inequalities; charge any collision multiplicity to forced crossed residual degree rather than asserting unrestricted injectivity.
 
 FOCUSED-SESSION COUNT: 3/24 before this session.
 

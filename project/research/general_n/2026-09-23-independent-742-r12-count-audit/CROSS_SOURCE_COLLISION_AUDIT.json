@@ -1,0 +1,372 @@
+{
+  "status": "UNRESTRICTED_INJECTIVITY_REFUTED; DEMAND_RESTRICTED_VERSION_SURVIVES_BOUNDED_CHECK",
+  "candidate_space": {
+    "unique_graph_root_states": 41,
+    "B_edges": 204,
+    "B_edges_without_endpoint_label_certificate": 0,
+    "saved_triples_not_reconstructed": 0,
+    "all_local_candidate_pairs": 339,
+    "F_edge_candidate_pairs": 151,
+    "crossed_residual_violations": 0,
+    "cross_source_collision_pattern_count": 6,
+    "first_collision": {
+      "n": 16,
+      "seed": 55,
+      "root": 7,
+      "key": "10,13|0,14",
+      "sources": [
+        3,
+        12
+      ],
+      "occurrences": [
+        {
+          "u": 3,
+          "i": 10,
+          "wi": 0,
+          "k": 13,
+          "wk": 14
+        },
+        {
+          "u": 12,
+          "i": 10,
+          "wi": 0,
+          "k": 13,
+          "wk": 14
+        }
+      ]
+    }
+  },
+  "explicit_legal_selection": {
+    "graph": {
+      "n": 16,
+      "seed": 55,
+      "root": 7,
+      "A": [
+        1,
+        4,
+        6,
+        8,
+        9,
+        10,
+        13,
+        15
+      ],
+      "B": [
+        0,
+        2,
+        3,
+        5,
+        11,
+        12,
+        14
+      ]
+    },
+    "selection": [
+      [
+        3,
+        10,
+        0
+      ],
+      [
+        12,
+        10,
+        0
+      ],
+      [
+        14,
+        1,
+        0
+      ],
+      [
+        5,
+        10,
+        2
+      ],
+      [
+        3,
+        6,
+        11
+      ],
+      [
+        3,
+        13,
+        14
+      ],
+      [
+        12,
+        6,
+        5
+      ],
+      [
+        12,
+        13,
+        14
+      ]
+    ],
+    "profile_rows": [
+      {
+        "i": 1,
+        "x": 1,
+        "R": 5,
+        "d": 0,
+        "degF": 3
+      },
+      {
+        "i": 4,
+        "x": 0,
+        "R": 5,
+        "d": 0,
+        "degF": 1
+      },
+      {
+        "i": 6,
+        "x": 2,
+        "R": 3,
+        "d": 0,
+        "degF": 4
+      },
+      {
+        "i": 8,
+        "x": 0,
+        "R": 4,
+        "d": 0,
+        "degF": 2
+      },
+      {
+        "i": 9,
+        "x": 0,
+        "R": 6,
+        "d": 0,
+        "degF": 2
+      },
+      {
+        "i": 10,
+        "x": 3,
+        "R": 2,
+        "d": 1,
+        "degF": 3
+      },
+      {
+        "i": 13,
+        "x": 2,
+        "R": 4,
+        "d": 0,
+        "degF": 2
+      },
+      {
+        "i": 15,
+        "x": 0,
+        "R": 5,
+        "d": 0,
+        "degF": 3
+      }
+    ],
+    "S": 1,
+    "collision_images": [
+      {
+        "u": 3,
+        "labels": "10,13",
+        "supplements": "0,14"
+      },
+      {
+        "u": 3,
+        "labels": "6,13",
+        "supplements": "11,14"
+      },
+      {
+        "u": 12,
+        "labels": "10,13",
+        "supplements": "0,14"
+      },
+      {
+        "u": 12,
+        "labels": "6,13",
+        "supplements": "5,14"
+      }
+    ]
+  },
+  "demand_restricted_search": {
+    "unique_graph_root_states": 41,
+    "collision_images": 6,
+    "source_pair_tests": 6,
+    "both_labels_positive_demand_feasible": 0,
+    "witness": null
+  },
+  "collision_rows": [
+    {
+      "n": 16,
+      "seed": 55,
+      "root": 7,
+      "labels": [
+        10,
+        13
+      ],
+      "supp": [
+        0,
+        14
+      ],
+      "sources": [
+        3,
+        12
+      ],
+      "Hdeg": [
+        5,
+        6
+      ],
+      "max_select_individual": [
+        3,
+        2
+      ],
+      "max_demand_individual": [
+        1,
+        -2
+      ]
+    },
+    {
+      "n": 18,
+      "seed": 29,
+      "root": 1,
+      "labels": [
+        0,
+        7
+      ],
+      "supp": [
+        3,
+        16
+      ],
+      "sources": [
+        5,
+        12
+      ],
+      "Hdeg": [
+        5,
+        5
+      ],
+      "max_select_individual": [
+        2,
+        2
+      ],
+      "max_demand_individual": [
+        -1,
+        -1
+      ]
+    },
+    {
+      "n": 18,
+      "seed": 29,
+      "root": 1,
+      "labels": [
+        7,
+        14
+      ],
+      "supp": [
+        3,
+        16
+      ],
+      "sources": [
+        5,
+        12
+      ],
+      "Hdeg": [
+        5,
+        6
+      ],
+      "max_select_individual": [
+        2,
+        2
+      ],
+      "max_demand_individual": [
+        -1,
+        -2
+      ]
+    },
+    {
+      "n": 18,
+      "seed": 29,
+      "root": 1,
+      "labels": [
+        8,
+        11
+      ],
+      "supp": [
+        3,
+        16
+      ],
+      "sources": [
+        5,
+        12
+      ],
+      "Hdeg": [
+        6,
+        5
+      ],
+      "max_select_individual": [
+        2,
+        3
+      ],
+      "max_demand_individual": [
+        -2,
+        1
+      ]
+    },
+    {
+      "n": 18,
+      "seed": 29,
+      "root": 1,
+      "labels": [
+        8,
+        14
+      ],
+      "supp": [
+        3,
+        16
+      ],
+      "sources": [
+        5,
+        12
+      ],
+      "Hdeg": [
+        6,
+        6
+      ],
+      "max_select_individual": [
+        2,
+        2
+      ],
+      "max_demand_individual": [
+        -2,
+        -2
+      ]
+    },
+    {
+      "n": 18,
+      "seed": 29,
+      "root": 1,
+      "labels": [
+        0,
+        9
+      ],
+      "supp": [
+        3,
+        16
+      ],
+      "sources": [
+        5,
+        12
+      ],
+      "Hdeg": [
+        5,
+        5
+      ],
+      "max_select_individual": [
+        2,
+        2
+      ],
+      "max_demand_individual": [
+        -1,
+        -1
+      ]
+    }
+  ],
+  "scope_warning": "41 actual-D2C graph/root states from the 200 ranked fixtures; finite internal evidence only."
+}
