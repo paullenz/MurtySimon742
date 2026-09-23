@@ -5,35 +5,37 @@ Canonical repository: `paullenz/MurtySimon742`. Date: 23 September 2026.
 Active target: a genuinely independent proof of Erdős #742 / the Murty–Simon inequality e(G)<=floor(n^2/4), preferably with the equality characterization. Forward priority is the project’s own complement / residual / Hall / profile / realizability route, not a reconstruction of the external e+disj+X proof. The first focused session produced the internally checked candidate threshold `Delta>=250n/429`, shrinking the live strip to `n/2<Delta<250n/429`. The theorem and its inherited graph-to-profile spine remain candidate/internal-review mathematics. A 24-focused-session go/no-go gate applies. Prior eventual-D2C work remains preserved but is no longer the active forward objective.
 
 <!-- CURRENT-STATUS:START -->
-CHECKPOINT CLASS: SCHEDULED_RESEARCH_STARTED
+CHECKPOINT CLASS: WIP_HELPER_SCREEN_RUNNING
 
 WORK MODE: MATH
 
-INSPECTED PREDECESSOR: b7d83c248dcdfbda5990cced51562626577ceb68.
+INSPECTED PREDECESSOR: 6d48f4d8c0406e2db91a34052c710acc5a6599ca.
 
-LAST VERIFIED RESULT: Mathematical status unchanged at launch. The corrected r=12 support-ten source count is 32 saved survivors across 6,386 kernels, not 42. The accounting discrepancy is resolved, but the helper-aware supplement screen and fresh source replay remain incomplete; no r=12/S<=14 claim is authorized.
+LAST VERIFIED RESULT: The corrected r=12 support-ten input contains 32 saved source survivors across 6,386 strict kernels. The helper-aware supplement MILP syntax check passed and executor session 70308 is actively screening all 32 with residual-free helpers admitted under the audit's optimistic semantics. No solver result or S<=14 consequence is claimed while it runs.
 
-ACTIVE SESSION: Scheduled trigger 2026-09-23T02:00:38+01:00; actual start 2026-09-23T02:01:19+01:00; lateness 41s; research cutoff 02:53:38; hard close 02:59:38; 40-minute target applies. Trigger attribution uses the current invocation title and supplied hourly schedule; immutable delivery identity is UNVERIFIED.
+ACTIVE SESSION: Scheduled trigger 2026-09-23T02:00:38+01:00; actual start 02:01:19; STARTED published 02:02:32; research cutoff 02:53:38; hard close 02:59:38; 40-minute target applies.
 
-VERIFIED FORWARD INTERVALS: None yet; launch administration excluded.
+VERIFIED FORWARD INTERVALS: 02:03:44--02:06:06 BST (syntax replay and active helper-aware computation through durable run checkpoint).
 
-VERIFIED FORWARD SPAN: 0m00s.
+VERIFIED FORWARD SPAN: 2m22s.
 
-SUBSTANTIVE UNITS: 0.
+SUBSTANTIVE UNITS: 1 in progress.
+
+ACTIVE RUN: Local executor session 70308; launched 02:03:44 BST; 32 corrected source survivors; nine workers; status RUNNING; no output yet at 02:06:06.
 
 CANONICAL RECORD: project/research/session_logs/2026-09-23/2026-09-23T02-00-38+01-00-canonical.json.
 
-UNPRESERVED WORK: None at launch.
+UNPRESERVED WORK: None before launch; active computation has no uncheckpointed result.
 
-DEFERRED ADMIN: Correct prior daily-audit prose/PDF from 42 to 32; verify post-cutover launch coverage at the next audit.
+DEFERRED ADMIN: Correct prior audit prose/PDF from 42 to 32; audit launch coverage separately.
 
-NEXT ACTION: Run `screen_support10_case1_helpers.py` on the corrected 32 saved survivors. Infeasibility may close this abstract profile layer; feasibility is only a survivor and not graph realizability.
+NEXT ACTION: Collect executor session 70308. Preserve either full infeasibility, explicit feasible survivors, or solver-unknown rows; do not infer a conclusion from elapsed time.
 
-FOCUSED-SESSION COUNT: 1/24 before this session; credit pending a complete evidenced >=40-minute focused record.
+FOCUSED-SESSION COUNT: 1/24 before this session; credit pending a complete evidenced >=40-minute record.
 
-TARGET RESULT: PENDING. Session STARTED; preservation completion PENDING; compliance pending finalization.
+TARGET RESULT: PENDING. Session RAN; preservation and target result pending finalization.
 
-MANDATORY CONSTRAINTS: Finite profile feasibility is not graph realizability; equality only through S<=8; 250/429 threshold internal candidate; balanced complete bipartite graphs and X_3 remain controls; no external e+disj+X core; general theorem open.
+MANDATORY CONSTRAINTS: Profile infeasibility is internal necessary-condition evidence, not external proof; feasibility is not graph realizability; no S<=14 until source replay and bridge gates also pass.
 <!-- CURRENT-STATUS:END -->
 
 ## Latest adversarial audit - 23 September 2026
