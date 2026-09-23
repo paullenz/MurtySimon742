@@ -1,0 +1,15 @@
+{
+  "partition": [2, 2, 1, 1, 1, 1, 1, 1, 1, 1],
+  "selected_shards": [0, 1],
+  "strict_kernels_replayed": 1596,
+  "source_feasible_by_shard": {"0": 10, "1": 11},
+  "source_feasible_total": 21,
+  "solver_unknown_total": 0,
+  "distinct_kernel_identities": 21,
+  "feasible_identity_sha256": "c59d6ac18db30ce1e80f0ec94f29636badd8a28bce0142f0966bcede03a0bc13",
+  "matches_saved_feasible_identities": true,
+  "execution_start": "2026-09-23T03:11:07+01:00",
+  "executor_measured_seconds": 544,
+  "exit_code": 0,
+  "scope": "Fresh execution of the 1,596 committed per-kernel source MILPs in shards 0 and 1. Reuses the committed encoding; not an independent reimplementation or graph-realizability result."
+}
