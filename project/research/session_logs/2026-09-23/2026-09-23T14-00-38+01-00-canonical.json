@@ -41,6 +41,12 @@
       "stop": "2026-09-23T14:16:46+01:00",
       "seconds": 82,
       "unit": "Exhaustively screened the relevant dense eight-witness graphs and excluded the remaining D=16 equality case, closing the n=18 tuple d=(8,7),x=h=(8,7)."
+    },
+    {
+      "start": "2026-09-23T14:18:30+01:00",
+      "stop": "2026-09-23T14:23:09+01:00",
+      "seconds": 279,
+      "unit": "Excluded the second n=18 tuple by nested source geometry, strengthened the abstract MILP with finite certificate floors and delta_i<=h_i, and eliminated the next two tuples at deficits 17 and 18."
     }
   ],
   "forward_research_stop": "PENDING",
@@ -48,9 +54,9 @@
   "preservation_complete": "PENDING",
   "final_report_time": "PENDING",
   "wall_clock_span_to_preservation_complete": "PENDING",
-  "verified_forward_research_span": "00:08:00",
+  "verified_forward_research_span": "00:12:39",
   "preservation_span": "PENDING",
-  "substantive_unit_count": 3,
+  "substantive_unit_count": 4,
   "timestamped_unit_ledger": [
     {
       "unit": 1,
@@ -72,6 +78,13 @@
       "complete": "2026-09-23T14:16:46+01:00",
       "result": "Every eight-vertex witness graph compatible with star slack<=34 has at most six missing edges. Exhaustively extending all seven-vertex atlas representatives tested 1,264 labeled forms; exact certificate cover with |Z|<=5 or 6 has minimum slack 40. The forced D=16 tuple supplies at most 34, so d=(8,7),x=h=(8,7) is graph-infeasible for all D<=16.",
       "evidence": "project/research/general_n/2026-09-23-independent-742-r14-near-equality/STAR8_DENSE_CERTIFICATE_COVER.md"
+    },
+    {
+      "unit": 4,
+      "start": "2026-09-23T14:18:30+01:00",
+      "complete": "2026-09-23T14:23:09+01:00",
+      "result": "For d=(8,7),x=(8,8), certificate bounds force centre deficits (8,8), zero endpoint deficits and identical witness sets. Their complements satisfy C_j subset C_i with unique p in C_i\\C_j; shared-source uniqueness makes p miss all eight witnesses and j, so degree(p)<=8, contradicting delta_p=0. With certified n18 star floors and delta_i<=h_i encoded, tuples (8,6,1)/(8,6,1) and (8,5,2)/(8,5,2) have minima 17 and 18 >Dmax16. A broader row replay was stopped at 850 scalar passes for immediate preservation and receives no completion credit.",
+      "evidence": "project/research/general_n/2026-09-23-independent-742-r14-near-equality/N18_SECOND_TUPLE_AND_STRENGTHENED_MILP.md"
     }
   ],
   "early_stop_check_time": "PENDING",
@@ -89,8 +102,9 @@
   "commit_shas": [
     "e376569636b7917bd58a92fd5a81cb1275d42cb0",
     "2d3ee9fab2fe8bba8891d5c66c06d9734df43bd3",
-    "5988761a65dc054ee7d2ce6e53a74a116fb5b1d7"
+    "5988761a65dc054ee7d2ce6e53a74a116fb5b1d7",
+    "470d88367322ca49af313fd16258120afbde5506"
   ],
-  "live_unfinished_line": "Continue the complete n=18,Delta=10 abstract row past the excluded d=(8,7),x=(8,7) tuple; preserve the next survivor and apply exact certificate-cover bounds, or close the row.",
+  "live_unfinished_line": "Resume the strengthened complete n=18,Delta=10 row replay after the four excluded tuples; preserve the next survivor or close the row.",
   "historical_fragments": []
 }
