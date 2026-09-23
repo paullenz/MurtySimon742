@@ -1,0 +1,52 @@
+{
+  "session_id": "2026-09-23T16:00:38+01:00",
+  "run_kind": "SCHEDULED_RESEARCH_RECOVERY",
+  "scheduled_trigger": "2026-09-23T16:00:38+01:00",
+  "next_scheduled_trigger": "2026-09-23T17:00:38+01:00",
+  "research_cutoff": "2026-09-23T16:53:38+01:00",
+  "hard_close_deadline": "2026-09-23T16:59:38+01:00",
+  "earliest_actual_start": "2026-09-23T16:06:11+01:00",
+  "lateness_vs_trigger": "00:05:33",
+  "attribution_method": "secondary_launch_recovery_watchdog",
+  "trigger_attribution": "WATCHDOG_SAME_HOUR_RULE",
+  "trigger_attribution_ambiguity": "NONE_OBSERVED",
+  "launch_status": "RECOVERED_SECONDARY_WATCHDOG",
+  "launch_failure_note": "No durable STARTED record existed for the exact 16:00:38 trigger when checked after both earlier launch opportunities; recovery attached to the same scheduled session identity. This is not duplicate credit and does not prove scheduler reliability.",
+  "started_record_published_at": "PENDING_REMOTE_VERIFY",
+  "segments": [
+    {
+      "segment_id": "secondary-watchdog-recovery-1",
+      "actual_start": "2026-09-23T16:06:11+01:00",
+      "actual_stop": "PENDING",
+      "role": "forward_research",
+      "notes": "Secondary launch-recovery watchdog; primary launch and earlier watchdog had no durable STARTED evidence at recovery check."
+    }
+  ],
+  "forward_research_intervals": [],
+  "forward_research_stop": "PENDING",
+  "preservation_start": "PENDING",
+  "preservation_complete": "PENDING",
+  "final_report_time": "PENDING",
+  "wall_clock_span_to_preservation_complete": "PENDING",
+  "verified_forward_research_span": "00:00:00",
+  "preservation_span": "PENDING",
+  "substantive_unit_count": 0,
+  "timestamped_unit_ledger": [],
+  "early_stop_check_time": "PENDING",
+  "early_stop_check_result": "PENDING",
+  "stop_reason": "PENDING",
+  "research_target_minutes": 40,
+  "target_40m_applies": "YES",
+  "target_40m_met": "PENDING",
+  "session_result": "STARTED",
+  "compliance_status": "ACTIVE_RECOVERY",
+  "infrastructure_failures": [
+    "Primary scheduled launch missing durable STARTED evidence at secondary-watchdog recovery check.",
+    "Earlier recovery watchdog also lacked durable STARTED evidence at secondary-watchdog recovery check."
+  ],
+  "commit_shas": [],
+  "live_unfinished_line": "Resume exact stable-index shards 18,901-20,900, 22,901-24,900 and 24,901-26,900; stop at the next live survivor for graph-level realizability.",
+  "historical_fragments": [],
+  "duplicate_credit": false,
+  "focused_session_credit": "PENDING_FINALIZATION"
+}
