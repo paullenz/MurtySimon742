@@ -1,6 +1,6 @@
-# n=18 realizability attack: exact D2C formulation and supplement-endpoint cap
+# n=18 realizability attack: exact D2C formulation; mistaken supplement-cap route invalidated
 
-23 September 2026. Status: internal research checkpoint. The exact MILP formulation below has not yet closed the row; the supplement-endpoint cap is a direct graph-level necessary condition at the already audited assigned-witness interface.
+23 September 2026. Status: internal research checkpoint. The exact MILP formulation below remains a valid fallback. The initially proposed `x_i<=n-Delta-1` supplement-endpoint cap was **incorrect and is explicitly invalidated here**; it arose from swapping the project notation for the root-neighbour and root-nonneighbour sides.
 
 ## 1. Exact D2C feasibility formulation: first bounded attempt
 
@@ -14,38 +14,27 @@ For an edge ij in a diameter-two graph, deletion of ij destroys diameter two iff
 2. there is z nonadjacent to i and adjacent to j such that N(i) intersect N(z) = {j};
 3. symmetrically, there is z nonadjacent to j and adjacent to i such that N(j) intersect N(z) = {i}.
 
-This characterization is exact because a length-at-most-two path using ij has i or j as an endpoint. Binary witness variables encode these alternatives, together with degree <=10 and a symmetry-fixed degree-10 root 0 with neighbours 1,...,10. (For the strict n=18 counterexample search, e>=82 forces average degree >9, hence some degree-10 vertex exists, so this root normalization is WLOG.)
+This characterization is exact because a length-at-most-two path using ij has i or j as an endpoint. Binary witness variables encode these alternatives, together with degree <=10 and a symmetry-fixed degree-10 root 0 with neighbours 1,...,10. For an n=18 strict counterexample with e>=82, average degree exceeds 9, so a degree-10 vertex exists and this root normalization is WLOG.
 
 The first optimization model had 7,650 variables and 27,575 constraints; HiGHS presolved it to 5,237 binary variables and 17,940 rows. A bounded ~40-second optimization run found only a 49-edge incumbent with bound 90 before termination. This is inconclusive: it neither realizes nor excludes an 82-edge D2C graph. The exact formulation is retained as a fallback feasibility route; the next run should impose e>=82 directly rather than optimize from a weak incumbent.
 
-## 2. New graph-level supplement-endpoint capacity
+## 2. Invalidated route: the supposed supplement-endpoint cap
 
-In the assigned-witness construction, the right part of W* is exactly
+The first checkpoint mistakenly read the right part of the assigned-witness graph as the root-nonneighbour side of size `n-Delta-1`. The project's actual notation in `STAR_CRITICALITY_SLACK.md` is:
 
-    B = V(G) \ (N(v) union {v}),
+- `B=N(v)`, so `|B|=Delta`;
+- `A=V\(B union {v})`, so `|A|=n-Delta-1`;
+- demand-positive labels lie in `A`;
+- witness endpoints `T_i=N_{W*}(i)` lie in `B`.
 
-for a maximum-degree root v. Therefore
+Therefore simplicity of `W*` yields only
 
-    |B| = n - Delta - 1.
+    x_i <= |B| = Delta,
 
-The construction already proves W* is simple and deg_W*(i)=x_i for every assigned label i. Consequently every graph-level assignment satisfies the additional necessary condition
+which is weaker than the already known `x_i<=h_i<=Delta-1` for a positive assigned label. It does **not** rule out the n=18, Delta=10 survivor `x=(8,7)`.
 
-    x_i <= |B| = n - Delta - 1.          (SUPPLEMENT CAP)
+A bounded rerun with the incorrect cap `x_i<=7` was also diagnostic only and must not be used: it found several nominal survivors, but the screen itself was based on the invalid cap. No mathematical conclusion is taken from that rerun.
 
-This is independent of the earlier source-capacity inequality
+## 3. Trust boundary and next step
 
-    x_i <= (Delta-h_i)(Delta-2).
-
-### Immediate effect on the first n=18, Delta=10 abstract survivor
-
-Here |B|=18-10-1=7. The first corrected abstract survivor from the preceding session has
-
-    d=(8,7), x=(8,7), h=(8,7).
-
-Its first label requires x_0=8 distinct supplement endpoints in B, but B has only seven vertices. Hence this particular survivor is **not graph-realizable**.
-
-This does not by itself close the entire n=18, Delta=10 row: the abstract screen stopped after its first survivor. The next exact step is to rerun the complete row with x_i<=7 added and determine whether another abstract survivor exists.
-
-## Trust boundary
-
-The supplement cap is a direct consequence of the already preserved graph-level assigned-witness construction. It does not strengthen the upstream strict-counterexample-to-interface bridge, does not establish actual graph realizability of any surviving abstract point, and does not alter the existing equality scope (currently through S<=8).
+The n=18, Delta=10 abstract survivor remains open for actual graph realizability. The next useful step is to retain the exact source and witness geometry from `STAR_CRITICALITY_SLACK.md` and either derive an additional graph-level obstruction for the specific `d=(8,7), x=(8,7), h=(8,7)` configuration or solve the exact `e>=82` D2C feasibility model. The invalidated cap is preserved here as a failed route rather than silently deleted.
