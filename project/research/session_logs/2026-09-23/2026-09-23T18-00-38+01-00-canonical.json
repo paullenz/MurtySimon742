@@ -29,6 +29,12 @@
       "stop": "2026-09-23T18:11:48+01:00",
       "seconds": 82,
       "unit": "Exact stable-index tail 20,852-20,900 closed with zero abstract survivors; closest gap 11."
+    },
+    {
+      "start": "2026-09-23T18:13:33+01:00",
+      "stop": "2026-09-23T18:14:56+01:00",
+      "seconds": 83,
+      "unit": "Exact stable-index tail 24,851-24,900 closed with zero abstract survivors; closest gap 11."
     }
   ],
   "forward_research_stop": "PENDING",
@@ -36,9 +42,9 @@
   "preservation_complete": "PENDING",
   "final_report_time": "PENDING",
   "wall_clock_span_to_preservation_complete": "PENDING",
-  "verified_forward_research_span": "00:01:22",
+  "verified_forward_research_span": "00:02:45",
   "preservation_span": "PENDING",
-  "substantive_unit_count": 1,
+  "substantive_unit_count": 2,
   "timestamped_unit_ledger": [
     {
       "unit": 1,
@@ -46,6 +52,13 @@
       "complete": "2026-09-23T18:11:48+01:00",
       "result": "Closed exact stable-index tail 20,852-20,900 with zero abstract survivors. Closest pattern d=(5,4,2,1,1,1,1), x=(6,5,4,2,2,2,1) has exact minimum deficit 27, eleven above Dmax=16. Combined with preserved coverage through 20,850 and the separately audited structural exclusion at 20,851, range 18,901-20,900 is resolved.",
       "evidence": "project/research/general_n/2026-09-23-independent-742-r18-row-closure/N18_TAIL_20852_20900.md"
+    },
+    {
+      "unit": 2,
+      "start": "2026-09-23T18:13:33+01:00",
+      "complete": "2026-09-23T18:14:56+01:00",
+      "result": "Closed exact stable-index tail 24,851-24,900 with zero abstract survivors. Closest exact deficit 27 exceeds Dmax 16 by eleven. Together with preserved progress through 24,850, range 22,901-24,900 is closed.",
+      "evidence": "project/research/general_n/2026-09-23-independent-742-r18-row-closure/N18_TAIL_24851_24900.md"
     }
   ],
   "early_stop_check_time": "PENDING",
@@ -61,8 +74,9 @@
     "STARTED publication completed at 18:06:13, 35 seconds after the five-minute target."
   ],
   "commit_shas": [
-    "89bdc07ee65a69f5e6732f15fd0fe6ab0c2caa57"
+    "89bdc07ee65a69f5e6732f15fd0fe6ab0c2caa57",
+    "07715606f568934524ea202d18b3452e71635986"
   ],
-  "live_unfinished_line": "Close tails 22,901-24,900 and 24,901-26,900 from preserved partial boundaries, then continue upward.",
+  "live_unfinished_line": "Close exact tail 26,851-26,900, then continue upward from 26,901; stop at next distinct survivor.",
   "historical_fragments": []
 }
