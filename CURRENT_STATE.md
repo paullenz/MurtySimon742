@@ -5,23 +5,23 @@ Canonical repository: `paullenz/MurtySimon742`. Date: 23 September 2026.
 Active target: a genuinely independent proof of Erdős #742 / the Murty–Simon inequality e(G)<=floor(n^2/4), preferably with the equality characterization. Forward priority is the project’s own complement / residual / Hall / profile / realizability route, not a reconstruction of the external e+disj+X proof. The first focused session produced the internally checked candidate threshold `Delta>=250n/429`, shrinking the live strip to `n/2<Delta<250n/429`. The theorem and its inherited graph-to-profile spine remain candidate/internal-review mathematics. A 24-focused-session go/no-go gate applies. Prior eventual-D2C work remains preserved but is no longer the active forward objective.
 
 <!-- CURRENT-STATUS:START -->
-CHECKPOINT CLASS: VERIFIED_INTERNAL_R12_CLOSURE_S14_PROMOTED_FINAL
+CHECKPOINT CLASS: MISSED_04_TRIGGER_LATE_NO_RESEARCH
 
 WORK MODE: MATH
 
-INSPECTED PREDECESSOR: 1a0e0579314382976a3392ce3fb3ab66bdc036ac.
+INSPECTED PREDECESSOR: b83b564ced33f8b2cbd07e3f14ffef1cbf2f753c.
 
 LAST VERIFIED RESULT: Internal strict residual closure now extends through r=12, supporting the edge bound through S<=14 because every strict counterexample has S>=r+2. The coverage manifest finds 81 saved r=12 source survivors across supports 6--10; all 81 are helper-aware infeasible with zero unknowns. Fresh replay covers all 6,386 support-ten case-1 kernels. Equality remains supported only through S<=8; this is not external verification, graph realizability, a full-strip theorem, or a lower threshold.
 
-ACTIVE SESSION: Scheduled trigger 2026-09-23T03:00:38+01:00; actual start 03:02:45; research cutoff 03:53:38; hard close 03:59:38; 40-minute target applies. Trigger attribution uses the current invocation title and supplied hourly schedule; immutable delivery identity is UNVERIFIED.
+ACTIVE SESSION: Scheduled trigger 2026-09-23T04:00:38+01:00; actual entry 04:59:32; research cutoff 04:53:38 and hard close 04:59:38 were already reached. Trigger attribution uses the current invocation title and supplied hourly schedule; immutable delivery identity is UNVERIFIED.
 
-VERIFIED FORWARD INTERVALS: 03:04:23--03:08:56; 03:11:07--03:20:11; 03:22:18--03:30:39; 03:32:57--03:36:06; 03:38:24--03:53:13; 03:53:23--03:53:29 BST.
+VERIFIED FORWARD INTERVALS: None.
 
-VERIFIED FORWARD SPAN: 40m02s.
+VERIFIED FORWARD SPAN: 0m00s.
 
-SUBSTANTIVE UNITS: 5 complete; failed/terminated source-replay attempts are preserved without result credit.
+SUBSTANTIVE UNITS: 0; no mathematics was started after the cutoff.
 
-CANONICAL RECORD: project/research/session_logs/2026-09-23/2026-09-23T03-00-38+01-00-canonical.json.
+CANONICAL RECORD: project/research/session_logs/2026-09-23/2026-09-23T04-00-38+01-00-canonical.json.
 
 UNPRESERVED WORK: None.
 
@@ -29,9 +29,9 @@ DEFERRED ADMIN: Correct prior audit prose/PDF from 42 to 32; audit launch covera
 
 NEXT ACTION: Build a shardable fresh replay of the r=12 support-seven source stage and compare its two survivor identities; any mismatch freezes S<=14. Then proceed to the audit's graph-level positive-demand stress.
 
-FOCUSED-SESSION COUNT: 3/24 including this complete evidenced 40m02s session.
+FOCUSED-SESSION COUNT: 3/24; this no-research delivery receives no credit.
 
-TARGET RESULT: MET. Session RAN; 40m02s verified. Substantive result preservation completed at 03:58:11 BST, before hard close; final telemetry closed late after 03:59:38.
+TARGET RESULT: N/A because actual entry followed the research cutoff. Session NO_RESEARCH / MISSED; telemetry itself was also finalized after the hard close.
 
 MANDATORY CONSTRAINTS: S<=14 is internal/computer-assisted and conditional on the audited bridge; profile feasibility is not graph realizability; equality only through S<=8; balanced complete bipartite graphs and X_3 remain controls; no external e+disj+X core; general theorem open.
 <!-- CURRENT-STATUS:END -->
