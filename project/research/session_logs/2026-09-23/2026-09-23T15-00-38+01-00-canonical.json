@@ -53,6 +53,12 @@
       "stop": "2026-09-23T15:32:25+01:00",
       "seconds": 17,
       "unit": "Encoded exact diameter-two and edge-criticality constraints for the rigid (5,5,5) geometry; Z3 returned UNSAT."
+    },
+    {
+      "start": "2026-09-23T15:35:25+01:00",
+      "stop": "2026-09-23T15:35:48+01:00",
+      "seconds": 23,
+      "unit": "Staged the SAT model and independently validated its local edge-criticality criterion against brute-force edge deletion on the Graph Atlas."
     }
   ],
   "forward_research_stop": "PENDING",
@@ -60,9 +66,9 @@
   "preservation_complete": "PENDING",
   "final_report_time": "PENDING",
   "wall_clock_span_to_preservation_complete": "PENDING",
-  "verified_forward_research_span": "00:21:10",
+  "verified_forward_research_span": "00:21:33",
   "preservation_span": "PENDING",
-  "substantive_unit_count": 5,
+  "substantive_unit_count": 6,
   "timestamped_unit_ledger": [
     {
       "unit": 1,
@@ -98,6 +104,13 @@
       "complete": "2026-09-23T15:32:25+01:00",
       "result": "Under the graph identities forced by the survivor—three degree-5 labels with common C-neighbourhood, exact-source injection giving a T-C perfect matching, four degree-10 witnesses, one degree-9 witness, and every remaining vertex degree 10—an exact Boolean model of diameter <=2 and deletion-criticality is UNSAT. This internally excludes the scalar-14,440 tuple, subject to audit of the source-injection-to-matching reduction and SAT encoding.",
       "evidence": "project/research/general_n/2026-09-23-independent-742-r15-near-equality/N18_555_D2C_REALIZABILITY.md"
+    },
+    {
+      "unit": 6,
+      "start": "2026-09-23T15:35:25+01:00",
+      "complete": "2026-09-23T15:35:48+01:00",
+      "result": "Degree-only and degree+diameter stages are SAT; full D2C remains UNSAT, isolating criticality as the obstruction rather than a degree/diameter overconstraint. Direct replay of a diameter-stage model confirmed all exact degrees, fixed source geometry, 82 edges and diameter 2; it had 61 noncritical edges. The local deletion-criticality predicate agreed with brute-force edge deletion on all 5,553 edges of 457 connected Graph Atlas graphs of diameter at most 2 (zero mismatches).",
+      "evidence": "project/research/general_n/2026-09-23-independent-742-r15-near-equality/N18_555_D2C_ENCODING_AUDIT.md"
     }
   ],
   "early_stop_check_time": "PENDING",
@@ -116,8 +129,9 @@
     "144be889a06db5f1e139ddb61dc0f20bc1571704",
     "da5274d735b79abab53205b9c5acd259cb4eba5c",
     "0fa2b2cf2fac2dae4547e27c12d1cc3d2937513a",
-    "PENDING_UNIT5_COMMIT"
+    "2b8c16212849b8f329db14d82072ac1267cf0a3c",
+    "PENDING_UNIT6_COMMIT"
   ],
-  "live_unfinished_line": "Audit the exact source-injection-to-perfect-matching reduction and independently validate the D2C UNSAT encoding before treating scalar 14,440 as graph-infeasible; then continue the row.",
+  "live_unfinished_line": "The d=x=h=(5,5,5) tuple is internally graph-infeasible with staged and independently replayed encoding. Resume abstract enumeration after scalar 14,440, skipping this separately excluded tuple; preserve the next survivor.",
   "historical_fragments": []
 }

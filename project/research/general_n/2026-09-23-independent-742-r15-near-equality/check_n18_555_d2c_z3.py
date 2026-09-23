@@ -7,9 +7,11 @@ perfect matching; four witnesses have degree ten and one degree nine; every
 other vertex has degree ten.  Remaining adjacencies are solved exactly.
 """
 import json
+import sys
 from z3 import Bool, If, Implies, Or, And, Not, Solver, Sum, sat
 
 N = 18
+MODE = sys.argv[sys.argv.index("--mode") + 1] if "--mode" in sys.argv else "d2c"
 L = range(0, 3)
 T = range(3, 8)
 C = range(8, 13)
@@ -53,26 +55,28 @@ for k, t in enumerate(T):
         s.add(edge(t, c) if j == k else Not(edge(t, c)))
 
 # Diameter at most two.
-for i in range(N):
-    for j in range(i + 1, N):
-        s.add(Or(edge(i, j), *[And(edge(i, w), edge(j, w))
-                               for w in range(N) if w not in (i, j)]))
+if MODE in ("diameter", "d2c"):
+    for i in range(N):
+        for j in range(i + 1, N):
+            s.add(Or(edge(i, j), *[And(edge(i, w), edge(j, w))
+                                   for w in range(N) if w not in (i, j)]))
 
 # Exact edge-criticality criterion.  Deleting ij can only destroy a length <=2
 # path for ij itself, or for x-j through i, or for i-y through j.
-for i in range(N):
-    for j in range(i + 1, N):
-        endpoint = And(*[Not(And(edge(i, w), edge(j, w)))
-                         for w in range(N) if w not in (i, j)])
-        certs = [endpoint]
-        for x in range(N):
-            if x not in (i, j):
-                certs.append(And(Not(edge(x, j)), unique_common(x, j, i)))
-                certs.append(And(Not(edge(i, x)), unique_common(i, x, j)))
-        s.add(Implies(edge(i, j), Or(*certs)))
+if MODE == "d2c":
+    for i in range(N):
+        for j in range(i + 1, N):
+            endpoint = And(*[Not(And(edge(i, w), edge(j, w)))
+                             for w in range(N) if w not in (i, j)])
+            certs = [endpoint]
+            for x in range(N):
+                if x not in (i, j):
+                    certs.append(And(Not(edge(x, j)), unique_common(x, j, i)))
+                    certs.append(And(Not(edge(i, x)), unique_common(i, x, j)))
+            s.add(Implies(edge(i, j), Or(*certs)))
 
 status = s.check()
-out = {"status": str(status), "n": N, "degrees": degrees,
+out = {"status": str(status), "mode": MODE, "n": N, "degrees": degrees,
        "fixed_partition": {"L": list(L), "T": list(T), "C": list(C), "U": list(U)}}
 if status == sat:
     m = s.model()
