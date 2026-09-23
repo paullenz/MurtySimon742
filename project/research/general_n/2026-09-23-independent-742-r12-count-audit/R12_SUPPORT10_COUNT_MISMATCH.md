@@ -24,3 +24,13 @@ over the reconciled survivor set.
 
 Evidence: `check_support10_case1_aggregate.py`.  This checker validates the
 saved shard ranges and payloads; it does not independently rerun their MILPs.
+
+## First fresh replay attempt
+
+A fresh full-stage replay was launched with 16 worker processes.  At the
+observed five-minute boundary it had completed 800 of 6,386 kernels, finding 10
+feasible rows and no solver-unknown rows.  Its measured rate projected too close
+to the research cutoff to finish and preserve safely, so it was interrupted at
+that exact progress checkpoint.  This partial result is not used to certify the
+aggregate count.  The bounded pivot is to replay the four survivor-bearing
+saved shards first, then the four zero-survivor shards, preserving each group.

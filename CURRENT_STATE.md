@@ -5,31 +5,31 @@ Canonical repository: `paullenz/MurtySimon742`. Date: 23 September 2026.
 Active target: a genuinely independent proof of Erdős #742 / the Murty–Simon inequality e(G)<=floor(n^2/4), preferably with the equality characterization. Forward priority is the project’s own complement / residual / Hall / profile / realizability route, not a reconstruction of the external e+disj+X proof. The first focused session produced the internally checked candidate threshold `Delta>=250n/429`, shrinking the live strip to `n/2<Delta<250n/429`. The theorem and its inherited graph-to-profile spine remain candidate/internal-review mathematics. A 24-focused-session go/no-go gate applies. Prior eventual-D2C work remains preserved but is no longer the active forward objective.
 
 <!-- CURRENT-STATUS:START -->
-CHECKPOINT CLASS: WIP_FULL_SOURCE_REPLAY_RUNNING
+CHECKPOINT CLASS: FAILED_ROUTE_BOUNDED_REPLAY_PIVOT
 
 WORK MODE: MATH
 
 INSPECTED PREDECESSOR: f2f951e538c297243b4dbb02140fc8f96df97f5b.
 
-LAST VERIFIED RESULT: The eight committed r=12 support-ten `(2,2,1^8)` source shards cover all 6,386 saved strict kernels but contain 32 distinct feasible rows, with counts `[10,11,0,0,6,5,0,0]`, not the reported 42. This is a load-bearing count mismatch: freeze the r=12 supplement conclusion and any `S<=14` consequence pending independent source-stage reconciliation. The prior internally audited edge bound through `S<=13` and equality through `S<=8` are not changed by this mismatch.
+LAST VERIFIED RESULT: The eight committed r=12 support-ten `(2,2,1^8)` source shards cover all 6,386 saved strict kernels but contain 32 distinct feasible rows, with counts `[10,11,0,0,6,5,0,0]`, not the reported 42. A fresh replay attempt completed 800 kernels with 10 feasible and zero unknown before a bounded performance pivot; this partial result does not reconcile the total. Freeze the r=12 supplement conclusion and any `S<=14` consequence pending source-stage reconciliation. The prior internally audited edge bound through `S<=13` and equality through `S<=8` are not changed.
 
 ACTIVE SESSION: Scheduled trigger 2026-09-23T01:00:38+01:00; actual start 2026-09-23T01:01:57+01:00; lateness 1m19s; research cutoff 01:53:38; hard close 01:59:38; 40-minute target applies. Trigger attribution uses the current invocation title and supplied hourly schedule; immutable delivery identity is UNVERIFIED.
 
-VERIFIED FORWARD INTERVALS: 01:06:53--01:08:48 BST (independent saved-shard aggregate audit).
+VERIFIED FORWARD INTERVALS: 01:06:53--01:08:48 BST (independent saved-shard aggregate audit); 01:14:11--01:19:11 BST (fresh replay attempt and bounded performance pivot).
 
-VERIFIED FORWARD SPAN: 1m55s.
+VERIFIED FORWARD SPAN: 6m55s.
 
-SUBSTANTIVE UNITS: 1.
+SUBSTANTIVE UNITS: 2.
 
 CANONICAL RECORD: project/research/session_logs/2026-09-23/2026-09-23T01-00-38+01-00-canonical.json.
 
-ACTIVE RUN: Local executor session 12718, launched 2026-09-23T01:14:11+01:00. It is freshly executing all 6,386 per-kernel source MILPs with 16 workers; no result is claimed while it is active.
+LAST RUN: Local executor session 12718 ran 01:14:11--01:19:11 BST and was interrupted at an exact progress checkpoint: 800/6,386 kernels, 10 feasible, zero unknown. No aggregate conclusion is drawn from the partial run.
 
 UNPRESERVED WORK: None before launch; active computation has not yet produced a result.
 
 DEFERRED ADMIN: Verify the first three post-cutover launches at the next audit; no settings claim substitutes for observed telemetry.
 
-NEXT ACTION: Collect executor session 12718. Compare its survivor identity digest to the saved 32-row set; only then run the supplement screen on the reconciled set.
+NEXT ACTION: Replay the four saved survivor-bearing shards (0,1,4,5) as a bounded group and compare their identities/counts `[10,11,6,5]`; then replay the four zero-survivor shards. Only after reconciliation run the helper-aware supplement screen.
 
 FOCUSED-SESSION COUNT: 1/24 before this session; credit pending a complete evidenced >=40-minute focused record.
 
