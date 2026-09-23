@@ -1,0 +1,395 @@
+{
+  "status": "DEMAND_RESTRICTED_INJECTIVITY_REFUTED_OUTSIDE_LIVE_STRIP",
+  "expansion": {
+    "generator": "deterministic greedy edge deletion from K_n; independent all-edge deletion BFS certification",
+    "range": {
+      "n": [
+        17,
+        28
+      ],
+      "seeds": 40
+    },
+    "graphs": 480,
+    "certified": 480,
+    "maximum_degree_root_states": 711,
+    "candidate_F_edge_pairs": 3293,
+    "collision_images": 94,
+    "max_collision_source_multiplicity": 3,
+    "max_single_label_supplement_fiber": 5,
+    "examples": [
+      {
+        "n": 18,
+        "seed": 13,
+        "root": 1,
+        "p": "6,12|10,14",
+        "sources": [
+          2,
+          8,
+          16
+        ]
+      },
+      {
+        "n": 28,
+        "seed": 30,
+        "root": 25,
+        "p": "3,17|4,23",
+        "sources": [
+          2,
+          21,
+          22
+        ]
+      }
+    ]
+  },
+  "explicit_counterexample": {
+    "graph": {
+      "n": 18,
+      "seed": 13,
+      "root": 1,
+      "edges": [
+        [
+          1,
+          2
+        ],
+        [
+          1,
+          5
+        ],
+        [
+          1,
+          8
+        ],
+        [
+          2,
+          10
+        ],
+        [
+          1,
+          7
+        ],
+        [
+          6,
+          15
+        ],
+        [
+          10,
+          12
+        ],
+        [
+          2,
+          14
+        ],
+        [
+          7,
+          14
+        ],
+        [
+          5,
+          17
+        ],
+        [
+          11,
+          15
+        ],
+        [
+          1,
+          4
+        ],
+        [
+          14,
+          17
+        ],
+        [
+          0,
+          5
+        ],
+        [
+          1,
+          3
+        ],
+        [
+          9,
+          12
+        ],
+        [
+          1,
+          9
+        ],
+        [
+          14,
+          16
+        ],
+        [
+          1,
+          10
+        ],
+        [
+          4,
+          17
+        ],
+        [
+          6,
+          12
+        ],
+        [
+          13,
+          15
+        ],
+        [
+          0,
+          6
+        ],
+        [
+          5,
+          10
+        ],
+        [
+          8,
+          14
+        ],
+        [
+          1,
+          11
+        ],
+        [
+          6,
+          14
+        ],
+        [
+          15,
+          17
+        ],
+        [
+          7,
+          9
+        ],
+        [
+          12,
+          15
+        ],
+        [
+          3,
+          15
+        ],
+        [
+          1,
+          13
+        ],
+        [
+          1,
+          14
+        ],
+        [
+          10,
+          16
+        ],
+        [
+          4,
+          9
+        ],
+        [
+          1,
+          15
+        ],
+        [
+          0,
+          4
+        ],
+        [
+          0,
+          1
+        ],
+        [
+          1,
+          16
+        ],
+        [
+          8,
+          10
+        ]
+      ],
+      "A": [
+        6,
+        12,
+        17
+      ],
+      "B": [
+        0,
+        2,
+        3,
+        4,
+        5,
+        7,
+        8,
+        9,
+        10,
+        11,
+        13,
+        14,
+        15,
+        16
+      ]
+    },
+    "collision": {
+      "labels": [
+        6,
+        12
+      ],
+      "supp": [
+        10,
+        14
+      ],
+      "sources": [
+        2,
+        8,
+        16
+      ],
+      "required": [
+        [
+          2,
+          12,
+          10
+        ],
+        [
+          2,
+          6,
+          14
+        ],
+        [
+          8,
+          12,
+          10
+        ],
+        [
+          8,
+          6,
+          14
+        ],
+        [
+          16,
+          12,
+          10
+        ],
+        [
+          16,
+          6,
+          14
+        ]
+      ]
+    },
+    "H_degrees": [
+      11,
+      11
+    ],
+    "best_selected_counts": [
+      8,
+      7
+    ],
+    "best_signed_demands": [
+      5,
+      3
+    ],
+    "both_positive": true,
+    "legal_selection": [
+      [
+        2,
+        12,
+        10
+      ],
+      [
+        2,
+        6,
+        14
+      ],
+      [
+        8,
+        12,
+        10
+      ],
+      [
+        8,
+        6,
+        14
+      ],
+      [
+        16,
+        12,
+        10
+      ],
+      [
+        16,
+        6,
+        14
+      ],
+      [
+        4,
+        6,
+        0
+      ],
+      [
+        5,
+        6,
+        0
+      ],
+      [
+        3,
+        6,
+        15
+      ],
+      [
+        4,
+        12,
+        9
+      ],
+      [
+        5,
+        12,
+        10
+      ],
+      [
+        7,
+        12,
+        9
+      ],
+      [
+        7,
+        6,
+        14
+      ],
+      [
+        11,
+        6,
+        15
+      ],
+      [
+        13,
+        12,
+        15
+      ]
+    ],
+    "profile_rows": [
+      {
+        "i": 6,
+        "x": 8,
+        "R": 3,
+        "d": 5
+      },
+      {
+        "i": 12,
+        "x": 7,
+        "R": 4,
+        "d": 3
+      },
+      {
+        "i": 17,
+        "x": 0,
+        "R": 10,
+        "d": 0
+      }
+    ],
+    "S": 8,
+    "Delta": 14,
+    "Delta_over_n": 0.7777777777777778
+  },
+  "trust_limit": "Counterexample has Delta/n=7/9, outside n/2<Delta<250n/429; it refutes global categorical claims but not a strip-restricted weighted bound."
+}
