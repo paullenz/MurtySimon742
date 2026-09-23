@@ -5,16 +5,16 @@ Canonical repository: `paullenz/MurtySimon742`. Date: 23 September 2026.
 Active target: a genuinely independent proof of Erdős #742 / the Murty–Simon inequality e(G)<=floor(n^2/4), preferably with the equality characterization. Forward priority is the project’s own complement / residual / Hall / profile / realizability route, not a reconstruction of the external e+disj+X proof. The first focused session produced the internally checked candidate threshold `Delta>=250n/429`, shrinking the live strip to `n/2<Delta<250n/429`. The theorem and its inherited graph-to-profile spine remain candidate/internal-review mathematics. A 24-focused-session go/no-go gate applies. Prior eventual-D2C work remains preserved but is no longer the active forward objective.
 
 <!-- CURRENT-STATUS:START -->
-CHECKPOINT CLASS: VERIFIED_INTERNAL_N18_PREFIX_33400_SESSION_FINAL
+CHECKPOINT CLASS: STARTED_RECOVERY_N18_PREFIX_33400
 WORK MODE: MATH
-INSPECTED PREDECESSOR: 1dc6f1fb86c3d9a996631e40675c8871509a0025.
-LAST VERIFIED RESULT: Exact n=18, Delta=10 range 32,601-33,400 is complete with zero abstract survivors. Closest exact deficit 25 versus Dmax 16, gap 9. Stable-index closure extends through 33,400 apart from index 20,851 separately graph-excluded. Across this session 2,900 candidates produced zero survivors; closest session gap 3. Internal evidence only; full row closure remains open.
-ACTIVE SESSION: Scheduled 20:00:38; actual entry 20:01:26; STARTED 20:02:19; first substantive checkpoint 20:05:22; same-trigger re-entry 20:33:55 continued the active writer; research stopped 20:48:14 before cutoff 20:53:38; hard close 20:59:38. Immutable delivery identity UNVERIFIED.
-VERIFIED FORWARD SPAN: 41m00s.
-SESSION RESULT: RAN; 40-minute target MET.
-SUBSTANTIVE UNITS: 5. Focused-session counter advances to 6/24.
-CANONICAL RECORD: project/research/session_logs/2026-09-23/2026-09-23T20-00-38+01-00-canonical.json.
-UNPRESERVED WORK: None.
+INSPECTED PREDECESSOR: 7e07bb1f36135458bd18cb4be654dacfaeb3313a.
+LAST VERIFIED RESULT: Exact n=18, Delta=10 range 32,601-33,400 is complete with zero abstract survivors. Closest exact deficit 25 versus Dmax 16, gap 9. Stable-index closure extends through 33,400 apart from index 20,851 separately graph-excluded. Internal evidence only; full row closure remains open.
+ACTIVE SESSION: Scheduled 21:00:38; recovery actual entry 21:09:54; attribution launch_recovery_watchdog because the primary scheduled launch had no durable STARTED record; STARTED publication timestamp 21:10:09; first substantive checkpoint PENDING; cutoff 21:53:38; hard close 21:59:38. Immutable delivery identity UNVERIFIED.
+VERIFIED FORWARD SPAN: 0m00s.
+SESSION RESULT: ACTIVE_RECOVERED; 40-minute target APPLIES and PENDING; +5-minute launch target MISSED.
+SUBSTANTIVE UNITS: 0. Focused-session counter remains 6/24 pending completion.
+CANONICAL RECORD: project/research/session_logs/2026-09-23/2026-09-23T21-00-38+01-00-canonical.json.
+UNPRESERVED WORK: None before mathematics.
 DEFERRED ADMIN: Stale telemetry and audit prose/PDF count correction.
 NEXT ACTION: Continue exact stable-index enumeration from 33,401 in bounded shards; stop at the next distinct live abstract survivor. Full n=18 row closure is not claimed.
 MANDATORY CONSTRAINTS: Internal evidence only; abstract feasibility is not graph realizability; S<=14 conditional; equality only through S<=8; controls retained; general theorem open.
