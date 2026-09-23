@@ -29,6 +29,12 @@
       "stop": "2026-09-23T12:07:14+01:00",
       "seconds": 79,
       "unit": "Derived the multiplicity-compressed multi-star slack inequality for a demand-15/16 assigned-witness obstruction."
+    },
+    {
+      "start": "2026-09-23T12:09:09+01:00",
+      "stop": "2026-09-23T12:14:42+01:00",
+      "seconds": 333,
+      "unit": "Built an exact integer witness-deficit MILP retaining endpoint reuse, collision degrees, pair deficits and every quadratic star inequality; tested the strongest first scalar survivor."
     }
   ],
   "forward_research_stop": "PENDING",
@@ -36,9 +42,9 @@
   "preservation_complete": "PENDING",
   "final_report_time": "PENDING",
   "wall_clock_span_to_preservation_complete": "PENDING",
-  "verified_forward_research_span": "00:01:19",
+  "verified_forward_research_span": "00:06:52",
   "preservation_span": "PENDING",
-  "substantive_unit_count": 1,
+  "substantive_unit_count": 2,
   "timestamped_unit_ledger": [
     {
       "unit": 1,
@@ -46,6 +52,13 @@
       "complete": "2026-09-23T12:07:14+01:00",
       "result": "If q=max(max_i x_i,max_t r_t), X=sum_i x_i, then qD>=X(rho+1)+sum_i binom(x_i,2). Since q<=h_max=max_i(2x_i-d_i), every 15/16 normal-form obstruction satisfies the corresponding scalar inequality; in particular max x_i<4D+1.",
       "evidence": "project/research/general_n/2026-09-23-independent-742-r12-count-audit/MULTISTAR_MULTIPLICITY_COMPRESSION.md"
+    },
+    {
+      "unit": 2,
+      "start": "2026-09-23T12:09:09+01:00",
+      "complete": "2026-09-23T12:14:42+01:00",
+      "result": "The compressed scalar screen first permits n=14, Delta=8. Its best-margin pattern d=(6,3,2,2,2), x=(7,3,2,2,2) has exact abstract witness-deficit minimum D=21 by MILP, exceeding strict-counterexample Dmax=12; thus that apparent survivor is eliminated. Other patterns in the row remain unscreened.",
+      "evidence": "project/research/general_n/2026-09-23-independent-742-r12-count-audit/WITNESS_DEFICIT_MILP_FIRST_SCREEN.md"
     }
   ],
   "early_stop_check_time": "PENDING",
@@ -61,6 +74,6 @@
     "11:00 predecessor missed final canonical closure before its hard deadline; its durable math commits were retained and its stale ACTIVE telemetry was not rewritten."
   ],
   "commit_shas": [],
-  "live_unfinished_line": "Enumerate the finite 15/16 demand patterns against the compressed multi-star inequality and exact strict-counterexample deficit budget; identify the first surviving rows.",
+  "live_unfinished_line": "Enumerate all n=14 demand-15/16 witness-count patterns through the exact deficit MILP; identify whether the entire first scalar-survivor row closes.",
   "historical_fragments": []
 }
