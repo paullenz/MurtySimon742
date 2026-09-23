@@ -42,6 +42,12 @@
       "stop": "2026-09-23T01:22:16+01:00",
       "seconds": 49,
       "unit": "Implement and syntax-check deterministic shard-group replay with survivor-identity comparison."
+    },
+    {
+      "start": "2026-09-23T01:23:26+01:00",
+      "stop": "2026-09-23T01:24:56+01:00",
+      "seconds": 90,
+      "unit": "Implement and syntax-check r=12 helper-aware supplement MILP with residual-free helper semantics while shard replay runs."
     }
   ],
   "forward_research_stop": "PENDING",
@@ -49,9 +55,9 @@
   "preservation_complete": "PENDING",
   "final_report_time": "PENDING",
   "wall_clock_span_to_preservation_complete": "PENDING",
-  "verified_forward_research_span": "00:07:44",
+  "verified_forward_research_span": "00:09:14",
   "preservation_span": "PENDING",
-  "substantive_unit_count": 3,
+  "substantive_unit_count": 4,
   "timestamped_unit_ledger": [
     {
       "unit": 1,
@@ -73,6 +79,13 @@
       "complete": "2026-09-23T01:22:16+01:00",
       "result": "Replay driver now supports deterministic shard groups, per-shard counts, identity digests and direct saved-identity comparison; syntax check passed.",
       "evidence": "project/research/general_n/2026-09-23-independent-742-r12-count-audit/replay_support10_case1_sources.py"
+    },
+    {
+      "unit": 4,
+      "start": "2026-09-23T01:23:26+01:00",
+      "complete": "2026-09-23T01:24:56+01:00",
+      "result": "Implemented a helper-aware r=12 supplement MILP that admits residual-free helper types under the audit's optimistic semantics; syntax check passed. Infeasibility is meaningful at the abstract profile layer, while feasibility remains only a survivor.",
+      "evidence": "project/research/general_n/2026-09-23-independent-742-r12-count-audit/screen_support10_case1_helpers.py"
     }
   ],
   "early_stop_check_time": "PENDING",
@@ -99,7 +112,7 @@
       "published_at": "2026-09-23T01:06:05+01:00"
     }
   ],
-  "active_run": {
+  "prior_run": {
     "kind": "fresh full source-stage replay",
     "executor_session_id": 12718,
     "launched_at": "2026-09-23T01:14:11+01:00",
@@ -108,7 +121,14 @@
     "progress": "800/6386 kernels; 10 feasible; 0 unknown",
     "exit_code": 130
   },
-  "live_unfinished_line": "Collect full source-stage replay session 12718, reconcile the survivor set, then screen the reconciled survivors.",
+  "active_run": {
+    "kind": "fresh survivor-bearing shard replay",
+    "executor_session_id": 84454,
+    "launched_at": "2026-09-23T01:23:26+01:00",
+    "selected_shards": [0, 1, 4, 5],
+    "status": "RUNNING"
+  },
+  "live_unfinished_line": "Collect survivor-bearing shard replay session 84454, compare counts and identities, then run the preserved helper-aware supplement screen.",
   "historical_fragments": [],
   "research_units": [
     {
@@ -125,6 +145,11 @@
       "unit": 3,
       "status": "COMPLETE_REPLAY_DRIVER_SHARDING",
       "evidence": "project/research/general_n/2026-09-23-independent-742-r12-count-audit/replay_support10_case1_sources.py"
+    },
+    {
+      "unit": 4,
+      "status": "COMPLETE_HELPER_SCREEN_IMPLEMENTATION",
+      "evidence": "project/research/general_n/2026-09-23-independent-742-r12-count-audit/screen_support10_case1_helpers.py"
     }
   ]
 }

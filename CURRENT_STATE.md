@@ -5,7 +5,7 @@ Canonical repository: `paullenz/MurtySimon742`. Date: 23 September 2026.
 Active target: a genuinely independent proof of Erdős #742 / the Murty–Simon inequality e(G)<=floor(n^2/4), preferably with the equality characterization. Forward priority is the project’s own complement / residual / Hall / profile / realizability route, not a reconstruction of the external e+disj+X proof. The first focused session produced the internally checked candidate threshold `Delta>=250n/429`, shrinking the live strip to `n/2<Delta<250n/429`. The theorem and its inherited graph-to-profile spine remain candidate/internal-review mathematics. A 24-focused-session go/no-go gate applies. Prior eventual-D2C work remains preserved but is no longer the active forward objective.
 
 <!-- CURRENT-STATUS:START -->
-CHECKPOINT CLASS: WIP_SHARD_REPLAY_READY
+CHECKPOINT CLASS: WIP_SURVIVOR_SHARDS_RUNNING_HELPER_SCREEN_READY
 
 WORK MODE: MATH
 
@@ -15,21 +15,23 @@ LAST VERIFIED RESULT: The eight committed r=12 support-ten `(2,2,1^8)` source sh
 
 ACTIVE SESSION: Scheduled trigger 2026-09-23T01:00:38+01:00; actual start 2026-09-23T01:01:57+01:00; lateness 1m19s; research cutoff 01:53:38; hard close 01:59:38; 40-minute target applies. Trigger attribution uses the current invocation title and supplied hourly schedule; immutable delivery identity is UNVERIFIED.
 
-VERIFIED FORWARD INTERVALS: 01:06:53--01:08:48 BST (independent saved-shard aggregate audit); 01:14:11--01:19:11 BST (fresh replay attempt and bounded performance pivot); 01:21:27--01:22:16 BST (deterministic shard-group replay driver).
+VERIFIED FORWARD INTERVALS: 01:06:53--01:08:48 BST (independent saved-shard aggregate audit); 01:14:11--01:19:11 BST (fresh replay attempt and bounded performance pivot); 01:21:27--01:22:16 BST (deterministic shard-group replay driver); 01:23:26--01:24:56 BST (helper-aware supplement screen implementation while shard replay runs).
 
-VERIFIED FORWARD SPAN: 7m44s.
+VERIFIED FORWARD SPAN: 9m14s.
 
-SUBSTANTIVE UNITS: 3.
+SUBSTANTIVE UNITS: 4.
 
 CANONICAL RECORD: project/research/session_logs/2026-09-23/2026-09-23T01-00-38+01-00-canonical.json.
 
 LAST RUN: Local executor session 12718 ran 01:14:11--01:19:11 BST and was interrupted at an exact progress checkpoint: 800/6,386 kernels, 10 feasible, zero unknown. No aggregate conclusion is drawn from the partial run.
 
+ACTIVE RUN: Local executor session 84454 launched at 01:23:26 BST on survivor-bearing shards 0,1,4,5. The preserved helper-aware supplement screen now includes residual-free helpers under the audit's optimistic semantics; it has not yet been executed.
+
 UNPRESERVED WORK: None before launch; active computation has not yet produced a result.
 
 DEFERRED ADMIN: Verify the first three post-cutover launches at the next audit; no settings claim substitutes for observed telemetry.
 
-NEXT ACTION: Run the preserved driver on survivor-bearing shards `0,1,4,5` with nine workers and compare their identities/counts `[10,11,6,5]`; then replay the zero-survivor shards. Only after reconciliation run the helper-aware supplement screen.
+NEXT ACTION: Collect executor session 84454 and compare its identities/counts with `[10,11,6,5]`; then execute the preserved helper-aware supplement screen on the reconciled saved survivors.
 
 FOCUSED-SESSION COUNT: 1/24 before this session; credit pending a complete evidenced >=40-minute focused record.
 
