@@ -48,6 +48,12 @@
       "stop": "2026-09-23T01:24:56+01:00",
       "seconds": 90,
       "unit": "Implement and syntax-check r=12 helper-aware supplement MILP with residual-free helper semantics while shard replay runs."
+    },
+    {
+      "start": "2026-09-23T01:24:56+01:00",
+      "stop": "2026-09-23T01:31:52+01:00",
+      "seconds": 416,
+      "unit": "Survivor-bearing shard replay through the 1,200/3,192 durable progress checkpoint."
     }
   ],
   "forward_research_stop": "PENDING",
@@ -55,9 +61,9 @@
   "preservation_complete": "PENDING",
   "final_report_time": "PENDING",
   "wall_clock_span_to_preservation_complete": "PENDING",
-  "verified_forward_research_span": "00:09:14",
+  "verified_forward_research_span": "00:16:10",
   "preservation_span": "PENDING",
-  "substantive_unit_count": 4,
+  "substantive_unit_count": 5,
   "timestamped_unit_ledger": [
     {
       "unit": 1,
@@ -86,6 +92,13 @@
       "complete": "2026-09-23T01:24:56+01:00",
       "result": "Implemented a helper-aware r=12 supplement MILP that admits residual-free helper types under the audit's optimistic semantics; syntax check passed. Infeasibility is meaningful at the abstract profile layer, while feasibility remains only a survivor.",
       "evidence": "project/research/general_n/2026-09-23-independent-742-r12-count-audit/screen_support10_case1_helpers.py"
+    },
+    {
+      "unit": 5,
+      "start": "2026-09-23T01:24:56+01:00",
+      "complete": "IN_PROGRESS",
+      "result": "DURABLE_PROGRESS: survivor-bearing replay completed 1,200/3,192 kernels with 11 feasible and zero solver-unknown; no shard conclusion yet.",
+      "evidence": "project/research/general_n/2026-09-23-independent-742-r12-count-audit/R12_SUPPORT10_COUNT_MISMATCH.md"
     }
   ],
   "early_stop_check_time": "PENDING",
@@ -126,7 +139,8 @@
     "executor_session_id": 84454,
     "launched_at": "2026-09-23T01:23:26+01:00",
     "selected_shards": [0, 1, 4, 5],
-    "status": "RUNNING"
+    "status": "RUNNING",
+    "progress_at_2026-09-23T01:31:52+01:00": "1200/3192 kernels; 11 feasible; 0 unknown"
   },
   "live_unfinished_line": "Collect survivor-bearing shard replay session 84454, compare counts and identities, then run the preserved helper-aware supplement screen.",
   "historical_fragments": [],
@@ -150,6 +164,11 @@
       "unit": 4,
       "status": "COMPLETE_HELPER_SCREEN_IMPLEMENTATION",
       "evidence": "project/research/general_n/2026-09-23-independent-742-r12-count-audit/screen_support10_case1_helpers.py"
+    },
+    {
+      "unit": 5,
+      "status": "IN_PROGRESS_SURVIVOR_SHARD_REPLAY",
+      "evidence": "project/research/general_n/2026-09-23-independent-742-r12-count-audit/R12_SUPPORT10_COUNT_MISMATCH.md"
     }
   ]
 }

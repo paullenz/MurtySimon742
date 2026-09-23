@@ -34,3 +34,8 @@ to the research cutoff to finish and preserve safely, so it was interrupted at
 that exact progress checkpoint.  This partial result is not used to certify the
 aggregate count.  The bounded pivot is to replay the four survivor-bearing
 saved shards first, then the four zero-survivor shards, preserving each group.
+
+The survivor-bearing replay of shards 0, 1, 4 and 5 subsequently reached a
+durable in-progress checkpoint at 1,200 of 3,192 kernels: 11 feasible and zero
+solver-unknown.  This is an execution heartbeat, not a completed-shard claim;
+the same run continues toward the exact identity comparison.

@@ -5,7 +5,7 @@ Canonical repository: `paullenz/MurtySimon742`. Date: 23 September 2026.
 Active target: a genuinely independent proof of Erdős #742 / the Murty–Simon inequality e(G)<=floor(n^2/4), preferably with the equality characterization. Forward priority is the project’s own complement / residual / Hall / profile / realizability route, not a reconstruction of the external e+disj+X proof. The first focused session produced the internally checked candidate threshold `Delta>=250n/429`, shrinking the live strip to `n/2<Delta<250n/429`. The theorem and its inherited graph-to-profile spine remain candidate/internal-review mathematics. A 24-focused-session go/no-go gate applies. Prior eventual-D2C work remains preserved but is no longer the active forward objective.
 
 <!-- CURRENT-STATUS:START -->
-CHECKPOINT CLASS: WIP_SURVIVOR_SHARDS_RUNNING_HELPER_SCREEN_READY
+CHECKPOINT CLASS: WIP_SURVIVOR_SHARDS_1200_PROGRESS
 
 WORK MODE: MATH
 
@@ -15,17 +15,17 @@ LAST VERIFIED RESULT: The eight committed r=12 support-ten `(2,2,1^8)` source sh
 
 ACTIVE SESSION: Scheduled trigger 2026-09-23T01:00:38+01:00; actual start 2026-09-23T01:01:57+01:00; lateness 1m19s; research cutoff 01:53:38; hard close 01:59:38; 40-minute target applies. Trigger attribution uses the current invocation title and supplied hourly schedule; immutable delivery identity is UNVERIFIED.
 
-VERIFIED FORWARD INTERVALS: 01:06:53--01:08:48 BST (independent saved-shard aggregate audit); 01:14:11--01:19:11 BST (fresh replay attempt and bounded performance pivot); 01:21:27--01:22:16 BST (deterministic shard-group replay driver); 01:23:26--01:24:56 BST (helper-aware supplement screen implementation while shard replay runs).
+VERIFIED FORWARD INTERVALS: 01:06:53--01:08:48 BST; 01:14:11--01:19:11 BST; 01:21:27--01:22:16 BST; 01:23:26--01:31:52 BST. The last interval covers helper-screen implementation followed by continuous survivor-bearing replay through its durable progress checkpoint.
 
-VERIFIED FORWARD SPAN: 9m14s.
+VERIFIED FORWARD SPAN: 16m10s.
 
-SUBSTANTIVE UNITS: 4.
+SUBSTANTIVE UNITS: 5, with unit 5 still in progress.
 
 CANONICAL RECORD: project/research/session_logs/2026-09-23/2026-09-23T01-00-38+01-00-canonical.json.
 
 LAST RUN: Local executor session 12718 ran 01:14:11--01:19:11 BST and was interrupted at an exact progress checkpoint: 800/6,386 kernels, 10 feasible, zero unknown. No aggregate conclusion is drawn from the partial run.
 
-ACTIVE RUN: Local executor session 84454 launched at 01:23:26 BST on survivor-bearing shards 0,1,4,5. The preserved helper-aware supplement screen now includes residual-free helpers under the audit's optimistic semantics; it has not yet been executed.
+ACTIVE RUN: Local executor session 84454 launched at 01:23:26 BST on survivor-bearing shards 0,1,4,5. At 01:31:52 it had completed 1,200/3,192 kernels with 11 feasible and zero unknown. This is an in-progress heartbeat, not a completed-shard result. The preserved helper-aware supplement screen includes residual-free helpers under the audit's optimistic semantics; it has not yet been executed.
 
 UNPRESERVED WORK: None before launch; active computation has not yet produced a result.
 
