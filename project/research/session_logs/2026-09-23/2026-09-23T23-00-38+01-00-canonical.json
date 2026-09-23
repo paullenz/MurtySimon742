@@ -1,0 +1,48 @@
+{
+  "session_id": "2026-09-23T23:00:38+01:00",
+  "scheduled_trigger": "2026-09-23T23:00:38+01:00",
+  "next_scheduled_trigger": "2026-09-24T00:00:38+01:00",
+  "research_cutoff": "2026-09-23T23:53:38+01:00",
+  "hard_close_deadline": "2026-09-23T23:59:38+01:00",
+  "earliest_actual_start": "2026-09-23T23:04:21.680010+01:00",
+  "lateness_vs_trigger": "PT3M43.680010S",
+  "attribution_method": "launch_recovery_watchdog",
+  "attribution_status": "VERIFIED_FROM_CURRENT_HOUR_RECOVERY_AUTOMATION_AND_EXACT_CANONICAL_PATH",
+  "launch_status": "RECOVERED_PRIMARY_START_MISSING",
+  "started_record_published_at": "PENDING_REMOTE_COMMIT_TIMESTAMP",
+  "first_substantive_checkpoint_at": null,
+  "segments": [
+    {
+      "segment_id": "recovery-1",
+      "actual_start": "2026-09-23T23:04:21.680010+01:00",
+      "actual_stop": "UNVERIFIED",
+      "role": "forward_research",
+      "notes": "Launch-recovery watchdog found no durable STARTED record for the exact 23:00:38 trigger. Primary scheduled launch was missing. This is recovery of the same trigger, not a second session. Mathematics has not yet begun at this STARTED checkpoint."
+    }
+  ],
+  "forward_research_intervals": [],
+  "forward_research_stop": null,
+  "preservation_start": null,
+  "preservation_complete": null,
+  "final_report_time": null,
+  "wall_clock_span_to_preservation_complete": null,
+  "verified_forward_research_span": "PT0S",
+  "preservation_span": null,
+  "substantive_unit_count": 0,
+  "timestamped_unit_ledger": [],
+  "early_stop_check_time": null,
+  "early_stop_check_result": null,
+  "stop_reason": null,
+  "research_target_minutes": 40,
+  "target_40m_applies": "YES",
+  "target_40m_met": "UNVERIFIED",
+  "compliance_status": "ACTIVE_RECOVERED",
+  "infrastructure_failures": [
+    "Primary scheduled launch produced no durable STARTED record before watchdog recovery. Durable STARTED publication exceeded the trigger+5-minute aim; exact publication time will be reconciled from the commit."
+  ],
+  "commit_shas": [],
+  "live_unfinished_line": "Continue exact n=18, Delta=10 stable-index enumeration from 39,251; stop at the next distinct live abstract survivor and test it against the audited graph-level realization model.",
+  "historical_fragments": [],
+  "primary_launch_missing": true,
+  "duplicate_session_credit": false
+}

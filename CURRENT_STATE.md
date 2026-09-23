@@ -5,17 +5,17 @@ Canonical repository: `paullenz/MurtySimon742`. Date: 23 September 2026.
 Active target: a genuinely independent proof of Erdős #742 / the Murty–Simon inequality e(G)<=floor(n^2/4), preferably with the equality characterization. Forward priority is the project’s own complement / residual / Hall / profile / realizability route, not a reconstruction of the external e+disj+X proof. The first focused session produced the internally checked candidate threshold `Delta>=250n/429`, shrinking the live strip to `n/2<Delta<250n/429`. The theorem and its inherited graph-to-profile spine remain candidate/internal-review mathematics. A 24-focused-session go/no-go gate applies. Prior eventual-D2C work remains preserved but is no longer the active forward objective.
 
 <!-- CURRENT-STATUS:START -->
-CHECKPOINT CLASS: VERIFIED_INTERNAL_N18_PREFIX_39250_FINAL
+CHECKPOINT CLASS: STARTED_RECOVERY_2026-09-23T23-00-38
 WORK MODE: MATH
-INSPECTED PREDECESSOR: b24f9afadc2382676e4fe3aadb497de5abf6dd9e.
+INSPECTED PREDECESSOR: 81756343d24d121930219f17edaabd435e955318.
 LAST VERIFIED RESULT: Exact n=18, Delta=10 stable-index closure extends through 39,250 with no new abstract survivors, apart from index 20,851 separately excluded by the audited graph-level 555 model. The last shard's closest exact deficit was 27 versus Dmax 16, gap 11. Internal evidence only; full row closure remains open.
-SESSION: Scheduled 22:00:38; actual entry 22:01:42; STARTED 22:03:16; first substantive checkpoint 22:07:17; same-trigger re-entries 22:11:09 and 22:45:57; research stopped 22:50:01; preservation complete 22:51:35. Immutable delivery identity UNVERIFIED.
-VERIFIED FORWARD SPAN: 32m05s.
-SESSION RESULT: RAN; 40-minute target NOT MET.
-SUBSTANTIVE UNITS: 4. Focused-session counter remains 6/24.
-CANONICAL RECORD: project/research/session_logs/2026-09-23/2026-09-23T22-00-38+01-00-canonical.json.
+SESSION: Scheduled 23:00:38; launch-recovery actual entry 23:04:21.680010; primary scheduled launch had no durable STARTED record. Durable STARTED publication occurred via this recovery checkpoint and exceeded the trigger+5-minute aim; exact commit time to be reconciled at finalization.
+VERIFIED FORWARD SPAN: 0m00s at STARTED checkpoint.
+SESSION RESULT: ACTIVE_RECOVERED; 40-minute target applies; no duplicate credit.
+SUBSTANTIVE UNITS: 0. Focused-session counter remains 6/24 pending completed evidenced work.
+CANONICAL RECORD: project/research/session_logs/2026-09-23/2026-09-23T23-00-38+01-00-canonical.json.
 UNPRESERVED WORK: None.
-FAILURES: One executor-session transport loss and one deliberately stopped oversized shard were not credited. No abstract-profile result is treated as graph realizability.
+FAILURES: Primary scheduled launch missing; durable STARTED publication missed the +5-minute aim. No mathematics has yet been credited in this recovered segment.
 DEFERRED ADMIN: Reconcile incomplete 21:00 telemetry; other stale telemetry and audit count correction.
 NEXT ACTION: Continue exact stable-index enumeration from 39,251; stop at the next distinct live abstract survivor, then subject any survivor to the audited graph-level realization model.
 MANDATORY CONSTRAINTS: Internal evidence only; abstract feasibility is not graph realizability; S<=14 conditional; equality only through S<=8; balanced-bipartite and X_3 controls retained; general theorem open.
