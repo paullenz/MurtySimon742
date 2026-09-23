@@ -5,11 +5,11 @@ Canonical repository: `paullenz/MurtySimon742`. Date: 23 September 2026.
 Active target: a genuinely independent proof of Erdős #742 / the Murty–Simon inequality e(G)<=floor(n^2/4), preferably with the equality characterization. Forward priority is the project’s own complement / residual / Hall / profile / realizability route, not a reconstruction of the external e+disj+X proof. The first focused session produced the internally checked candidate threshold `Delta>=250n/429`, shrinking the live strip to `n/2<Delta<250n/429`. The theorem and its inherited graph-to-profile spine remain candidate/internal-review mathematics. A 24-focused-session go/no-go gate applies. Prior eventual-D2C work remains preserved but is no longer the active forward objective.
 
 <!-- CURRENT-STATUS:START -->
-CHECKPOINT CLASS: VERIFIED_INTERNAL_R12_CLOSURE_S14_PROMOTED_FINALIZING
+CHECKPOINT CLASS: VERIFIED_INTERNAL_R12_CLOSURE_S14_PROMOTED_FINAL
 
 WORK MODE: MATH
 
-INSPECTED PREDECESSOR: 0ca5d94b3e07eb3bb43acfcd3aed2e51b9b99071.
+INSPECTED PREDECESSOR: 1a0e0579314382976a3392ce3fb3ab66bdc036ac.
 
 LAST VERIFIED RESULT: Internal strict residual closure now extends through r=12, supporting the edge bound through S<=14 because every strict counterexample has S>=r+2. The coverage manifest finds 81 saved r=12 source survivors across supports 6--10; all 81 are helper-aware infeasible with zero unknowns. Fresh replay covers all 6,386 support-ten case-1 kernels. Equality remains supported only through S<=8; this is not external verification, graph realizability, a full-strip theorem, or a lower threshold.
 
@@ -23,15 +23,15 @@ SUBSTANTIVE UNITS: 5 complete; failed/terminated source-replay attempts are pres
 
 CANONICAL RECORD: project/research/session_logs/2026-09-23/2026-09-23T03-00-38+01-00-canonical.json.
 
-UNPRESERVED WORK: Final remote preservation confirmation pending.
+UNPRESERVED WORK: None.
 
 DEFERRED ADMIN: Correct prior audit prose/PDF from 42 to 32; audit launch coverage separately.
 
 NEXT ACTION: Build a shardable fresh replay of the r=12 support-seven source stage and compare its two survivor identities; any mismatch freezes S<=14. Then proceed to the audit's graph-level positive-demand stress.
 
-FOCUSED-SESSION COUNT: 3/24 including this complete evidenced 40m02s session, subject only to final remote preservation confirmation.
+FOCUSED-SESSION COUNT: 3/24 including this complete evidenced 40m02s session.
 
-TARGET RESULT: MET. Session RAN; 40m02s verified; preservation finalizing.
+TARGET RESULT: MET. Session RAN; 40m02s verified. Substantive result preservation completed at 03:58:11 BST, before hard close; final telemetry closed late after 03:59:38.
 
 MANDATORY CONSTRAINTS: S<=14 is internal/computer-assisted and conditional on the audited bridge; profile feasibility is not graph realizability; equality only through S<=8; balanced complete bipartite graphs and X_3 remain controls; no external e+disj+X core; general theorem open.
 <!-- CURRENT-STATUS:END -->
