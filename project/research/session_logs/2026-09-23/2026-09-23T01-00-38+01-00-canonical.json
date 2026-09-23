@@ -14,7 +14,7 @@
   "started_record_prepared_at": "2026-09-23T01:03:17+01:00",
   "started_record_published_at": "2026-09-23T01:06:05+01:00",
   "launch_target_result": "MISSED_BY_00:00:27",
-  "first_substantive_checkpoint_time": "PENDING_REMOTE_CONFIRMATION",
+  "first_substantive_checkpoint_time": "2026-09-23T01:11:39+01:00",
   "segments": [
     {
       "segment_id": "segment-1",
@@ -73,7 +73,13 @@
       "published_at": "2026-09-23T01:06:05+01:00"
     }
   ],
-  "live_unfinished_line": "Reconcile the saved 32-row source survivor set against the reported count 42 before any r=12 supplement closure; independently replay the source stage, then screen the reconciled survivors.",
+  "active_run": {
+    "kind": "fresh full source-stage replay",
+    "executor_session_id": 12718,
+    "launched_at": "2026-09-23T01:14:11+01:00",
+    "status": "RUNNING"
+  },
+  "live_unfinished_line": "Collect full source-stage replay session 12718, reconcile the survivor set, then screen the reconciled survivors.",
   "historical_fragments": [],
   "research_units": [
     {
