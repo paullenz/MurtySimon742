@@ -1,73 +1,70 @@
-# n=18, Delta=10: first abstract survivor excluded by star-equality rigidity
+# n=18, Delta=10: minimum-deficit optimizer excluded; star-slack is strict for x>=3
 
-23 September 2026. Status: **internal graph-level obstruction**, conditional on the already preserved assigned-witness interface and `STAR_CRITICALITY_SLACK.md`. It excludes the specific first abstract survivor from `WITNESS_DEFICIT_ROWS_17_18.md`; it does not yet close the entire n=18, Delta=10 row.
+23 September 2026. Status: **internal graph-level refinement**, conditional on the already preserved assigned-witness interface and `STAR_CRITICALITY_SLACK.md`.
 
-## Survivor data
+Important correction: the argument below excludes the **13-deficit optimizer** of the first abstract tuple; it does **not** exclude the whole tuple `d=(8,7), x=(8,7), h=(8,7)`. After adding the strict star refinement to the abstract MILP, the same tuple remains feasible with minimum total deficit 14, still below the strict-counterexample budget 16. The earlier broader wording is therefore superseded here.
 
-The first abstract survivor has
+## The 13-deficit optimizer
+
+The preceding minimum-deficit realization has
 
     demand d=(8,7),
-    assigned witness counts x=(8,7),
-    missed-root-neighbour counts h=(8,7),
+    x=(8,7),
+    h=(8,7),
     centre deficits (7,6),
 
-and its minimum-deficit realization has seven witness endpoints shared by both labels plus one endpoint used only by the first label, all with endpoint deficit zero.
+with seven witness endpoints shared by both labels plus one endpoint used only by the first label, all endpoint deficits zero.
 
-Use the project notation of `STAR_CRITICALITY_SLACK.md`: for a maximum-degree root v, `B=N(v)` has size Delta=10 and the demand-positive labels lie in `A=V\(B union {v})`, where |A|=7.
+Use the project notation of `STAR_CRITICALITY_SLACK.md`: for a maximum-degree root v, `B=N(v)` has size Delta=10 and demand-positive labels lie in `A=V\(B union {v})`, where |A|=7.
 
-Focus on the second label i. Here
+For the second label i,
 
-    x=h=7, delta_i=6, rho=2.
+    x=h=7, delta_i=6, rho=2,
 
-Its witness set T has seven vertices. Every t in T has delta_t=0 in the minimum-deficit survivor. Hence every pair-deficit slack is
+and every t in its witness set T has delta_t=0. Hence
 
-    epsilon_t = delta_i + delta_t - (rho+1) = 6-3 = 3,
+    epsilon_t = delta_i + delta_t - (rho+1) = 3,
+    sum epsilon_t = 21 = binom(7,2).
 
-so
+### Equality contradiction
 
-    sum_{t in T} epsilon_t = 21 = binom(7,2).
+Write C=binom(7,2), e=e(G[T]), alpha=2(C-e), and beta=sum_z l_z as in the star-slack proof. Then
 
-Thus the quadratic star-slack theorem is attained with equality.
+    C = sum epsilon_t >= alpha+beta >= 2C-e >= C.
 
-## Equality consequences
+Thus equality holds throughout: `G[T]=K_7`, `beta=e=C`, and total Z-certificate capacity is used with no slack.
 
-Write C=binom(7,2)=21, e=e(G[T]),
+For any `z in Z`, let `S_z=N(z) intersect T`, `k_z=|S_z|`, `l_z=x-k_z`. In a clique T, a vertex t outside S_z is adjacent to every member of S_z. Therefore z can certify an oriented T-edge from t only when `k_z=1`; `k_z=0` has no adjacent endpoint, while `k_z=x` has `l_z=0`.
 
-    alpha = 2(C-e)
+If equality capacity is fully used, each positive-capacity z must therefore have a singleton S_z and must use all x-1 star edges incident with its singleton centre. Since total certificate capacity equals the number of T-edges, these singleton stars would have to partition E(K_x): every edge would need exactly one endpoint among the chosen singleton centres. For x>=3 this is impossible, because either the chosen-centre set or its complement contains an internal edge (indeed both cannot have size at most one).
 
-for the ordered missing incidences inside T, and
+Hence equality in the quadratic star-slack theorem is impossible for every x>=3.
 
-    beta = sum_{z in Z} l_z,
+## Strict star-slack corollary
 
-where `S_z=N(z) intersect T`, `k_z=|S_z|`, and `l_z=7-k_z`.
+Because all quantities are integral, for any assigned-witness star with x>=3,
 
-The proof of the star-slack theorem gives
+    sum_{t in T} epsilon_t >= binom(x,2)+1.
 
-    sum epsilon_t >= alpha+beta,
-    e <= beta.
+Equivalently,
 
-Therefore
+    x delta_i + sum_{t in T} delta_t
+      >= x(rho+1) + binom(x,2) + 1.      (STRICT-STAR)
 
-    21 >= 2(21-e)+beta >= 42-e >= 21.
+This is a genuine graph-realizability strengthening of the existing quadratic star-slack inequality, still conditional on the same assigned-witness interface.
 
-Every inequality is equality. In particular
+## Effect on the first tuple
 
-1. `e=21`, so `G[T]=K_7`;
-2. `beta=e=21`;
-3. the total Z-certificate capacity is used with no slack.
+Re-solving the preserved aggregated incidence model with `+1` in each star inequality for x>=3 gives for `d=(8,7), x=(8,7), h=(8,7)`:
 
-For this label, `|R|=h-delta_i=1`, so `|Z|=|A|-1-|R|=5`.
+    minimum total deficit = 14,
+    centre deficits = (7,6),
+    right types = one label-0-only endpoint of deficit 0,
+                  six shared endpoints of deficit 0,
+                  one shared endpoint of deficit 1.
 
-## Certificate-capacity contradiction
+Thus STRICT-STAR invalidates the old 13-deficit optimizer but **does not yet close** this tuple under Dmax=16.
 
-Fix `z in Z`. If `0<k_z<7`, then every `t in T minus S_z` is adjacent in the clique `G[T]` to **all** `k_z` vertices of `S_z`. For z to certify an oriented T-edge with nonadjacent endpoint t, the adjacent endpoint must be the **unique** common neighbour of t and z inside T. Hence z can certify a T-edge only when `k_z=1` (the cases `k_z=0` and `k_z=7` certify none).
+## Next action
 
-But equality `e=beta=21` means the total upper capacity `sum l_z` is completely used to certify all 21 T-edges. Consequently every z with `l_z>0` must actually realize its full `l_z` capacity. The only possible positive-capacity type is therefore `k_z=1`, giving `l_z=6`; vertices with `k_z=7` contribute `l_z=0`.
-
-Thus `beta=sum l_z` must be a multiple of 6. It cannot equal 21. Contradiction.
-
-Hence the first `d=(8,7), x=(8,7), h=(8,7)` abstract survivor is **not realizable by a diameter-two-critical graph** at the assigned-witness interface.
-
-## Scope and next action
-
-This is a realizability exclusion of one optimizer, not a proof that the full n=18, Delta=10 abstract row is empty. The next step is to continue the row search past this survivor and test subsequent minimum-deficit configurations against the same equality/near-equality certificate geometry, or encode the certificate-capacity refinement directly in the abstract optimizer.
+Use the resulting near-equality structure together with the exact source geometry (`x=h` for both labels, so every missed root-neighbour is an assigned witness) or test it directly in the exact n=18 D2C feasibility model. Do not promote the tuple exclusion until every realization with total deficit at most 16 is ruled out.
