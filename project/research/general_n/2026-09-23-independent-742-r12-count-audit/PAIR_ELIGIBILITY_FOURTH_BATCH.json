@@ -1,0 +1,23 @@
+{
+  "generator": "disjoint BigInt greedy-deletion batch with full every-edge D2C certification",
+  "range": {
+    "n": [
+      17,
+      40
+    ],
+    "seeds": [
+      300,
+      449
+    ]
+  },
+  "graphs": 3600,
+  "certified": 3600,
+  "live_strip_max_root_states": 260,
+  "roots_E_ge_15": 1,
+  "max_E": 16,
+  "collision_images": 81,
+  "PAIR_ELIG_collision_images": 0,
+  "E_ge_15_PAIR_ELIG_collision_images": 0,
+  "max_collision_multiplicity": 4,
+  "examples": []
+}

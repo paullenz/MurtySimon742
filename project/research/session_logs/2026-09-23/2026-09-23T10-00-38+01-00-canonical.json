@@ -48,6 +48,12 @@
       "stop": "2026-09-23T10:10:13+01:00",
       "seconds": 65,
       "unit": "Solved all forced collision completions and derived the pair-level certificate-edge Hall eligibility condition."
+    },
+    {
+      "start": "2026-09-23T10:11:53+01:00",
+      "stop": "2026-09-23T10:14:39+01:00",
+      "seconds": 166,
+      "unit": "Generated and fully certified a disjoint 3,600-graph batch; screened 260 live-strip maximum roots with the new PAIR-ELIG filter."
     }
   ],
   "forward_research_stop": "PENDING",
@@ -55,9 +61,9 @@
   "preservation_complete": "PENDING",
   "final_report_time": "PENDING",
   "wall_clock_span_to_preservation_complete": "PENDING",
-  "verified_forward_research_span": "00:03:31",
+  "verified_forward_research_span": "00:06:17",
   "preservation_span": "PENDING",
-  "substantive_unit_count": 2,
+  "substantive_unit_count": 3,
   "timestamped_unit_ledger": [
     {
       "unit": 1,
@@ -72,6 +78,13 @@
       "complete": "2026-09-23T10:10:13+01:00",
       "result": "Proved PAIR-ELIG: simultaneous positive demand requires |C_i union C_k|>=tau_i+tau_k. The only third-batch scalar-eligible collision fails because 9<10; its 18 forced completions have maximum S=2.",
       "evidence": "project/research/general_n/2026-09-23-independent-742-r12-count-audit/PAIR_ELIGIBILITY_HALL_FILTER.md"
+    },
+    {
+      "unit": 3,
+      "start": "2026-09-23T10:11:53+01:00",
+      "complete": "2026-09-23T10:14:39+01:00",
+      "result": "3,600/3,600 graphs certified; 260 live-strip roots, one E>=15 root (max 16), 81 collisions, zero PAIR-ELIG collisions, maximum collision multiplicity 4.",
+      "evidence": "project/research/general_n/2026-09-23-independent-742-r12-count-audit/PAIR_ELIGIBILITY_FOURTH_BATCH.md"
     }
   ],
   "early_stop_check_time": "PENDING",
@@ -88,6 +101,6 @@
     "09:00 predecessor telemetry remains PENDING after hard close; reconciliation deferred."
   ],
   "commit_shas": [],
-  "live_unfinished_line": "Search E>=15 live-strip collisions passing PAIR-ELIG; couple envelope with certificate-edge Hall overlap.",
+  "live_unfinished_line": "Reconstruct the fourth-batch E=16 root and quantify why its collisions fail pair Hall.",
   "historical_fragments": []
 }
