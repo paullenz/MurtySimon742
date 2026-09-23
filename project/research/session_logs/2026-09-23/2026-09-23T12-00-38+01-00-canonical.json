@@ -44,7 +44,7 @@
   "wall_clock_span_to_preservation_complete": "PENDING",
   "verified_forward_research_span": "00:06:52",
   "preservation_span": "PENDING",
-  "substantive_unit_count": 2,
+  "substantive_unit_count": 3,
   "timestamped_unit_ledger": [
     {
       "unit": 1,
@@ -59,6 +59,13 @@
       "complete": "2026-09-23T12:14:42+01:00",
       "result": "The compressed scalar screen first permits n=14, Delta=8. Its best-margin pattern d=(6,3,2,2,2), x=(7,3,2,2,2) has exact abstract witness-deficit minimum D=21 by MILP, exceeding strict-counterexample Dmax=12; thus that apparent survivor is eliminated. Other patterns in the row remain unscreened.",
       "evidence": "project/research/general_n/2026-09-23-independent-742-r12-count-audit/WITNESS_DEFICIT_MILP_FIRST_SCREEN.md"
+    },
+    {
+      "unit": 3,
+      "start": "UNVERIFIED",
+      "complete": "2026-09-23T12:19:49+01:00",
+      "result": "Exhaustive n=14, Delta=8 abstract assigned-witness screen: 5,334 symmetry-reduced demand/witness patterns; 878 passed the compressed scalar filter; zero passed the exact deficit MILP. Closest pattern d=(8,7), x=(8,7) needs D=13 versus Dmax=12.",
+      "evidence": "project/research/general_n/2026-09-23-independent-742-r12-count-audit/WITNESS_DEFICIT_ROW_14_8.md"
     }
   ],
   "early_stop_check_time": "PENDING",
@@ -71,9 +78,10 @@
   "focused_session_credit": "PENDING",
   "compliance_status": "STARTED_WITH_STALE_PREDECESSOR_TELEMETRY",
   "infrastructure_failures": [
-    "11:00 predecessor missed final canonical closure before its hard deadline; its durable math commits were retained and its stale ACTIVE telemetry was not rewritten."
+    "11:00 predecessor missed final canonical closure before its hard deadline; its durable math commits were retained and its stale ACTIVE telemetry was not rewritten.",
+    "Unit 3 start boundary was not authoritatively timestamped after preservation; its result is durable but its elapsed research time is excluded from verified duration."
   ],
   "commit_shas": [],
-  "live_unfinished_line": "Enumerate all n=14 demand-15/16 witness-count patterns through the exact deficit MILP; identify whether the entire first scalar-survivor row closes.",
+  "live_unfinished_line": "Start a timestamped exact MILP screen of the n=15, Delta=8 row; preserve any abstract witness survivor, otherwise continue in increasing n.",
   "historical_fragments": []
 }

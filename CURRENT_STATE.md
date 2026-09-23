@@ -5,19 +5,19 @@ Canonical repository: `paullenz/MurtySimon742`. Date: 23 September 2026.
 Active target: a genuinely independent proof of Erdős #742 / the Murty–Simon inequality e(G)<=floor(n^2/4), preferably with the equality characterization. Forward priority is the project’s own complement / residual / Hall / profile / realizability route, not a reconstruction of the external e+disj+X proof. The first focused session produced the internally checked candidate threshold `Delta>=250n/429`, shrinking the live strip to `n/2<Delta<250n/429`. The theorem and its inherited graph-to-profile spine remain candidate/internal-review mathematics. A 24-focused-session go/no-go gate applies. Prior eventual-D2C work remains preserved but is no longer the active forward objective.
 
 <!-- CURRENT-STATUS:START -->
-CHECKPOINT CLASS: VERIFIED_INTERNAL_WITNESS_DEFICIT_MILP
+CHECKPOINT CLASS: VERIFIED_INTERNAL_WITNESS_ROW_14_8_CLOSED
 WORK MODE: MATH
 INSPECTED PREDECESSOR: 2fe23cf62d5cd7abffb7bf74c372a6cae407c86f.
-LAST VERIFIED RESULT: An exact integer MILP now retains the assigned-witness incidence graph, endpoint reuse, collision constraint r_t<=h_i, every pair-deficit inequality, and every quadratic star-slack inequality while minimizing total degree deficit. The compressed scalar screen first permits n=14, Delta=8, but its strongest-margin pattern d=(6,3,2,2,2), x=(7,3,2,2,2) has exact abstract minimum D=21, exceeding the strict-counterexample budget Dmax=12. That false survivor is eliminated; the remaining n=14 patterns are not yet screened.
+LAST VERIFIED RESULT: The entire first scalar-survivor row n=14, Delta=8 is closed at the abstract assigned-witness level. Exhaustive symmetry-reduced enumeration tested 5,334 demand/witness-count patterns; 878 passed the compressed scalar filter and all 878 failed the exact integer witness-deficit MILP. The closest pattern d=(8,7), x=(8,7) needs D=13 while strict-counterexample Dmax=12. This is abstract-interface exclusion, not an actual-graph theorem beyond the audited bridge.
 ACTIVE SESSION: Scheduled trigger 2026-09-23T12:00:38+01:00; actual start 12:02:29; STARTED published 12:05:35; cutoff 12:53:38; hard close 12:59:38. Immutable delivery identity is UNVERIFIED.
-VERIFIED FORWARD SPAN: 6m52s.
+VERIFIED FORWARD SPAN: 6m52s. Unit 3 elapsed time excluded because its post-preservation start boundary was not authoritatively timestamped.
 SESSION RESULT: RAN/ACTIVE; 40-minute target applies.
-SUBSTANTIVE UNITS: 2. Focused-session counter remains 3/24 pending finalization.
+SUBSTANTIVE UNITS: 3. Focused-session counter remains 3/24 pending finalization.
 CANONICAL RECORD: project/research/session_logs/2026-09-23/2026-09-23T12-00-38+01-00-canonical.json.
 UNPRESERVED WORK: None.
 DEFERRED ADMIN: Audit/finalize stale 09:00 and 11:00 telemetry; correct prior audit prose/PDF from 42 to 32.
-NEXT ACTION: Enumerate every n=14 demand-15/16 witness-count pattern through the exact deficit MILP and determine whether the whole first scalar-survivor row closes.
-MANDATORY CONSTRAINTS: This MILP is abstract assigned-witness feasibility, not graph realizability; S<=14 remains conditional on the audited bridge; equality only through S<=8; balanced complete bipartite graphs and X_3 remain controls; no external e+disj+X core; general theorem open.
+NEXT ACTION: Start a timestamped exact MILP screen of n=15, Delta=8; preserve any abstract survivor, otherwise continue in increasing n.
+MANDATORY CONSTRAINTS: The MILP is abstract assigned-witness feasibility, not graph realizability; S<=14 remains conditional on the audited bridge; equality only through S<=8; balanced complete bipartite graphs and X_3 remain controls; no external e+disj+X core; general theorem open.
 <!-- CURRENT-STATUS:END -->
 
 ## Latest adversarial audit - 23 September 2026

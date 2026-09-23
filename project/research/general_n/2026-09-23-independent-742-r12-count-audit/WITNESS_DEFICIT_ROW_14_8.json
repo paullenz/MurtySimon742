@@ -1,0 +1,48 @@
+{
+  "schema": "witness-deficit-row-screen-v1",
+  "n": 14,
+  "Delta": 8,
+  "rho": 2,
+  "Dmax": 12,
+  "a": 5,
+  "patterns_tested": 5334,
+  "scalar_pass": 878,
+  "abstract_survivor_count": 0,
+  "closest_result": {
+    "demands": [
+      8,
+      7
+    ],
+    "x": [
+      8,
+      7
+    ],
+    "h": [
+      8,
+      7
+    ],
+    "minimum_deficit": 13,
+    "gap_vs_Dmax": 1,
+    "centre_deficits": [
+      7,
+      6
+    ],
+    "right_types": [
+      {
+        "labels": [
+          0
+        ],
+        "deficit": 0,
+        "multiplicity": 1
+      },
+      {
+        "labels": [
+          0,
+          1
+        ],
+        "deficit": 0,
+        "multiplicity": 7
+      }
+    ]
+  }
+}
