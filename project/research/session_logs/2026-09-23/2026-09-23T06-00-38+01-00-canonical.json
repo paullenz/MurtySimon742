@@ -41,6 +41,12 @@
       "stop": "2026-09-23T06:20:37+01:00",
       "seconds": 54,
       "unit": "Audited all 12 saved actual-graph positive-demand examples at selected-pair/codegree level; derived that S=1 forces an empty high-load set J."
+    },
+    {
+      "start": "2026-09-23T06:23:00+01:00",
+      "stop": "2026-09-23T06:24:23+01:00",
+      "seconds": 83,
+      "unit": "Fresh in-memory actual-D2C generation and selected-pair stress: 990 graphs, 13,746 selections, 1,677 positive-demand, 14 high-load, zero positive-surplus; extracted an exhaustive local-exclusion counterexample."
     }
   ],
   "forward_research_stop": "PENDING",
@@ -48,9 +54,9 @@
   "preservation_complete": "PENDING",
   "final_report_time": "PENDING",
   "wall_clock_span_to_preservation_complete": "PENDING",
-  "verified_forward_research_span": "00:03:49",
+  "verified_forward_research_span": "00:05:12",
   "preservation_span": "PENDING",
-  "substantive_unit_count": 3,
+  "substantive_unit_count": 4,
   "timestamped_unit_ledger": [
     {
       "unit": 1,
@@ -72,6 +78,13 @@
       "complete": "2026-09-23T06:20:37+01:00",
       "result": "Saved-witness stress: all 12 have S=1 and t<0; 7 selected-pair occurrences, 2 meeting c_F>=a/5, no high-load instance. S=1 rigorously forces J empty.",
       "evidence": "project/research/general_n/2026-09-23-independent-742-r12-count-audit/POSITIVE_DEMAND_SAVED_WITNESS_AUDIT.json"
+    },
+    {
+      "unit": 4,
+      "start": "2026-09-23T06:23:00+01:00",
+      "complete": "2026-09-23T06:24:23+01:00",
+      "result": "Fresh actual-D2C stress found 14 high-load selections. Exhaustive n=15 witness has two high-load sources co-selecting a label pair with c_F=2>=a/5, so local pair exclusion is false; t=-21 and plateau density remains absent.",
+      "evidence": "project/research/general_n/2026-09-23-independent-742-r12-count-audit/POSITIVE_DEMAND_HIGH_LOAD_STRESS.md"
     }
   ],
   "early_stop_check_time": "PENDING",
@@ -103,6 +116,6 @@
       "published_at": "2026-09-23T06:11:40+01:00"
     }
   ],
-  "live_unfinished_line": "Extract or freshly generate the two known high-load threshold witnesses, then audit selected-pair codegrees and exact plateau hypotheses.",
+  "live_unfinished_line": "Validate fresh generator with BFS deletion checks and balanced-K/X_3 controls; expand n=17--22 and record exact plateau-hypothesis deficits.",
   "historical_fragments": []
 }
