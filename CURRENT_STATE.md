@@ -5,19 +5,19 @@ Canonical repository: `paullenz/MurtySimon742`. Date: 23 September 2026.
 Active target: a genuinely independent proof of Erdős #742 / the Murty–Simon inequality e(G)<=floor(n^2/4), preferably with the equality characterization. Forward priority is the project’s own complement / residual / Hall / profile / realizability route, not a reconstruction of the external e+disj+X proof. The first focused session produced the internally checked candidate threshold `Delta>=250n/429`, shrinking the live strip to `n/2<Delta<250n/429`. The theorem and its inherited graph-to-profile spine remain candidate/internal-review mathematics. A 24-focused-session go/no-go gate applies. Prior eventual-D2C work remains preserved but is no longer the active forward objective.
 
 <!-- CURRENT-STATUS:START -->
-CHECKPOINT CLASS: VERIFIED_INTERNAL_N18_FIRST_STRENGTHENED_ABSTRACT_SURVIVOR
+CHECKPOINT CLASS: VERIFIED_INTERNAL_N18_555_D2C_UNSAT_PENDING_AUDIT
 WORK MODE: MATH
-INSPECTED PREDECESSOR: da5274d735b79abab53205b9c5acd259cb4eba5c.
-LAST VERIFIED RESULT: Exact disjoint sharding found the first strengthened abstract survivor at scalar 14,440: d=x=h=(5,5,5), centre deficits (5,5,5), five endpoints common to all three labels, four with deficit 0 and one with deficit 1, total deficit 16=Dmax. Separately, shards 8,901-10,900, 14,901-16,900 and 16,901-18,900 closed with zero survivors. Incomplete shards receive no closure credit.
+INSPECTED PREDECESSOR: 0fa2b2cf2fac2dae4547e27c12d1cc3d2937513a.
+LAST VERIFIED RESULT: The first strengthened abstract survivor d=x=h=(5,5,5) was encoded at graph level. Equality forces three degree-5 labels with common five-set C, five common witnesses T, source injection as a T-C perfect matching, four degree-10 witnesses, one degree-9 witness, and all ten remaining vertices degree 10. An exact Boolean diameter-two plus edge-criticality model returned UNSAT. This is internal exclusion pending independent encoding/reduction audit.
 ACTIVE SESSION: Scheduled trigger 2026-09-23T15:00:38+01:00; actual entry 15:00:47; STARTED verified 15:02:43; cutoff 15:53:38; hard close 15:59:38. Immutable delivery identity is UNVERIFIED.
-VERIFIED FORWARD SPAN: 20m53s.
+VERIFIED FORWARD SPAN: 21m10s.
 SESSION RESULT: RAN/ACTIVE; 40-minute target applies.
-SUBSTANTIVE UNITS: 4. Focused-session counter remains 4/24 pending finalization.
+SUBSTANTIVE UNITS: 5. Focused-session counter remains 4/24 pending finalization.
 CANONICAL RECORD: project/research/session_logs/2026-09-23/2026-09-23T15-00-38+01-00-canonical.json.
 UNPRESERVED WORK: None after this checkpoint.
 DEFERRED ADMIN: Audit/finalize stale 09:00, 11:00 and 13:00 telemetry; correct prior audit prose/PDF from 42 to 32.
-NEXT ACTION: Test actual D2C/source-geometry realizability of the rigid d=x=h=(5,5,5) survivor; do not continue abstract row enumeration until this tuple is resolved or sharply reduced.
-MANDATORY CONSTRAINTS: Abstract feasibility is not graph realizability; zero-survivor shards do not close the row; S<=14 remains conditional on the audited bridge; equality only through S<=8; balanced complete bipartite graphs and X_3 remain controls; no external e+disj+X core; general theorem open.
+NEXT ACTION: Independently validate the source-matching reduction and the exact edge-criticality encoding, preferably by staged SAT (degree+diameter then criticality) and direct checker replay; only then mark the tuple graph-infeasible and resume enumeration.
+MANDATORY CONSTRAINTS: SAT UNSAT is internal verification, not external acceptance; abstract feasibility is not graph realizability; zero-survivor shards do not close the row; S<=14 remains conditional on the audited bridge; equality only through S<=8; balanced complete bipartite graphs and X_3 remain controls; no external e+disj+X core; general theorem open.
 <!-- CURRENT-STATUS:END -->
 
 ## Latest adversarial audit - 23 September 2026

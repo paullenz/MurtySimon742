@@ -47,6 +47,12 @@
       "stop": "2026-09-23T15:28:18+01:00",
       "seconds": 894,
       "unit": "Ran six disjoint exact row shards, closed three zero-survivor ranges, and found the first strengthened abstract survivor at scalar 14,440."
+    },
+    {
+      "start": "2026-09-23T15:32:08+01:00",
+      "stop": "2026-09-23T15:32:25+01:00",
+      "seconds": 17,
+      "unit": "Encoded exact diameter-two and edge-criticality constraints for the rigid (5,5,5) geometry; Z3 returned UNSAT."
     }
   ],
   "forward_research_stop": "PENDING",
@@ -54,9 +60,9 @@
   "preservation_complete": "PENDING",
   "final_report_time": "PENDING",
   "wall_clock_span_to_preservation_complete": "PENDING",
-  "verified_forward_research_span": "00:20:53",
+  "verified_forward_research_span": "00:21:10",
   "preservation_span": "PENDING",
-  "substantive_unit_count": 4,
+  "substantive_unit_count": 5,
   "timestamped_unit_ledger": [
     {
       "unit": 1,
@@ -85,6 +91,13 @@
       "complete": "2026-09-23T15:28:18+01:00",
       "result": "Closed zero-survivor shards 8,901-10,900, 14,901-16,900 and 16,901-18,900. The 12,901-14,900 shard found the first strengthened abstract survivor at scalar 14,440 and stopped: d=x=h=(5,5,5), centre deficits (5,5,5), four shared triple endpoints of deficit 0 and one shared triple endpoint of deficit 1, total deficit 16=Dmax. Incomplete shards 10,901-12,900 and 18,901-20,900 were interrupted and receive no closure credit.",
       "evidence": "project/research/general_n/2026-09-23-independent-742-r15-near-equality/N18_FIRST_STRENGTHENED_ABSTRACT_SURVIVOR.md"
+    },
+    {
+      "unit": 5,
+      "start": "2026-09-23T15:32:08+01:00",
+      "complete": "2026-09-23T15:32:25+01:00",
+      "result": "Under the graph identities forced by the survivor—three degree-5 labels with common C-neighbourhood, exact-source injection giving a T-C perfect matching, four degree-10 witnesses, one degree-9 witness, and every remaining vertex degree 10—an exact Boolean model of diameter <=2 and deletion-criticality is UNSAT. This internally excludes the scalar-14,440 tuple, subject to audit of the source-injection-to-matching reduction and SAT encoding.",
+      "evidence": "project/research/general_n/2026-09-23-independent-742-r15-near-equality/N18_555_D2C_REALIZABILITY.md"
     }
   ],
   "early_stop_check_time": "PENDING",
@@ -102,8 +115,9 @@
     "54562f7d8195144f6d0b255e985d9752cb8c2ce0",
     "144be889a06db5f1e139ddb61dc0f20bc1571704",
     "da5274d735b79abab53205b9c5acd259cb4eba5c",
-    "PENDING_UNIT4_COMMIT"
+    "0fa2b2cf2fac2dae4547e27c12d1cc3d2937513a",
+    "PENDING_UNIT5_COMMIT"
   ],
-  "live_unfinished_line": "Test graph-level realizability of the scalar-14,440 tuple d=x=h=(5,5,5) with five common witnesses and deficit allocation (5,5,5;0,0,0,0,1). Abstract feasibility is not graph realizability.",
+  "live_unfinished_line": "Audit the exact source-injection-to-perfect-matching reduction and independently validate the D2C UNSAT encoding before treating scalar 14,440 as graph-infeasible; then continue the row.",
   "historical_fragments": []
 }
