@@ -69,11 +69,11 @@
   ],
   "forward_research_stop": "2026-09-23T15:53:38+01:00",
   "preservation_start": "2026-09-23T15:54:13+01:00",
-  "preservation_complete": "2026-09-23T15:55:00+01:00",
-  "final_report_time": "PENDING",
-  "wall_clock_span_to_preservation_complete": "00:54:13",
+  "preservation_complete": "2026-09-23T15:56:19+01:00",
+  "final_report_time": "2026-09-23T15:56:19+01:00",
+  "wall_clock_span_to_preservation_complete": "00:55:32",
   "verified_forward_research_span": "00:37:43",
-  "preservation_span": "00:00:47",
+  "preservation_span": "00:02:06",
   "substantive_unit_count": 7,
   "timestamped_unit_ledger": [
     {
@@ -146,7 +146,7 @@
     "0fa2b2cf2fac2dae4547e27c12d1cc3d2937513a",
     "2b8c16212849b8f329db14d82072ac1267cf0a3c",
     "6fe4e082d44b16f8cb9566b1b5e8ba0f6591b8e4",
-    "PENDING_FINAL_ATOMIC_COMMIT"
+    "74cdf34a1bbe5a64409d0110f901972915d075d9"
   ],
   "live_unfinished_line": "Stable-index row status: prefix 1-18,900 is resolved with only the graph-excluded scalar-14,440 tuple. Range 18,901-20,900 reached observed scalar 20,850 but did not close; 20,901-22,900 closed; 22,901-24,900 reached 24,850; 24,901-26,900 reached 26,850. Resume exact gaps/partials; no full-row closure.",
   "historical_fragments": []
