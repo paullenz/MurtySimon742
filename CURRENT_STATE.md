@@ -5,33 +5,33 @@ Canonical repository: `paullenz/MurtySimon742`. Date: 23 September 2026.
 Active target: a genuinely independent proof of Erdős #742 / the Murty–Simon inequality e(G)<=floor(n^2/4), preferably with the equality characterization. Forward priority is the project’s own complement / residual / Hall / profile / realizability route, not a reconstruction of the external e+disj+X proof. The first focused session produced the internally checked candidate threshold `Delta>=250n/429`, shrinking the live strip to `n/2<Delta<250n/429`. The theorem and its inherited graph-to-profile spine remain candidate/internal-review mathematics. A 24-focused-session go/no-go gate applies. Prior eventual-D2C work remains preserved but is no longer the active forward objective.
 
 <!-- CURRENT-STATUS:START -->
-CHECKPOINT CLASS: SCHEDULED_RESEARCH_STARTED
+CHECKPOINT CLASS: VERIFIED_INTERNAL_SOURCE_SHARD7_COMPLETE
 
 WORK MODE: MATH
 
-INSPECTED PREDECESSOR: 90dde26b4016d7f9e8521a9dbe886076efe4cd44.
+INSPECTED PREDECESSOR: 7999a87dccae58b74126edf4a64ef8a092fd5023.
 
-LAST VERIFIED RESULT: The helper-aware supplement MILP rejects all 32 corrected saved source survivors. Fresh source-stage replays now also verify shards 2,3,6: 2,395 strict kernels, zero feasible rows, zero solver-unknown rows, and exact identity agreement with their saved empty sets. A broader replay was terminated at 2,400/3,194 and is not credited. Five shards remain, so no S<=14 claim is authorized.
+LAST VERIFIED RESULT: Fresh source-stage replays now verify all four saved zero-survivor shards 2,3,6,7: 3,194 strict kernels, zero feasible rows, zero solver-unknown rows, and exact saved-identity agreement. The helper-aware screen also rejects all 32 saved survivors. Shards 0,1,4,5 remain, so no S<=14 claim is authorized.
 
 ACTIVE SESSION: Scheduled trigger 2026-09-23T03:00:38+01:00; actual start 03:02:45; research cutoff 03:53:38; hard close 03:59:38; 40-minute target applies. Trigger attribution uses the current invocation title and supplied hourly schedule; immutable delivery identity is UNVERIFIED.
 
-VERIFIED FORWARD INTERVALS: None yet; launch administration excluded.
+VERIFIED FORWARD INTERVALS: 03:04:23--03:08:56 BST (fresh source replay of shard 7; 273 executor-measured seconds).
 
-VERIFIED FORWARD SPAN: 0m00s.
+VERIFIED FORWARD SPAN: 4m33s.
 
-SUBSTANTIVE UNITS: 0.
+SUBSTANTIVE UNITS: 1 complete.
 
 CANONICAL RECORD: project/research/session_logs/2026-09-23/2026-09-23T03-00-38+01-00-canonical.json.
 
-UNPRESERVED WORK: None.
+UNPRESERVED WORK: None after this checkpoint.
 
 DEFERRED ADMIN: Correct prior audit prose/PDF from 42 to 32; audit launch coverage separately.
 
-NEXT ACTION: Freshly replay source shard 7, then the survivor-bearing shards 0,1,4,5, requiring exact saved-identity agreement before reconsidering S<=14.
+NEXT ACTION: Freshly replay survivor-bearing source shards 0 and 1 together, requiring exact identities for their saved 21 survivors.
 
 FOCUSED-SESSION COUNT: 2/24 before this session; new credit pending a complete evidenced >=40-minute record.
 
-TARGET RESULT: PENDING. Session STARTED; preservation and compliance pending finalization.
+TARGET RESULT: PENDING. Session RAN; 4m33s verified; 40-minute target and finalization pending.
 
 MANDATORY CONSTRAINTS: Profile infeasibility is internal necessary-condition evidence, not external proof; graph realizability remains separate; equality only through S<=8; balanced complete bipartite graphs and X_3 remain controls; no external e+disj+X core.
 <!-- CURRENT-STATUS:END -->
