@@ -5,18 +5,18 @@ Canonical repository: `paullenz/MurtySimon742`. Date: 23 September 2026.
 Active target: a genuinely independent proof of Erdős #742 / the Murty–Simon inequality e(G)<=floor(n^2/4), preferably with the equality characterization. Forward priority is the project’s own complement / residual / Hall / profile / realizability route, not a reconstruction of the external e+disj+X proof. The first focused session produced the internally checked candidate threshold `Delta>=250n/429`, shrinking the live strip to `n/2<Delta<250n/429`. The theorem and its inherited graph-to-profile spine remain candidate/internal-review mathematics. A 24-focused-session go/no-go gate applies. Prior eventual-D2C work remains preserved but is no longer the active forward objective.
 
 <!-- CURRENT-STATUS:START -->
-CHECKPOINT CLASS: RECOVERED_13_START
+CHECKPOINT CLASS: STARTED_14_INDEPENDENT
 WORK MODE: MATH
-INSPECTED PREDECESSOR: 307807137a670f34d55b497f287394f2ff315047.
-LAST VERIFIED RESULT: The graph-source constraint x_i <= (Delta-h_i)(Delta-2) closes corrected abstract witness rows n=15,Delta=8; n=16,Delta=9; and n=17,Delta=9. At n=18,Delta=10 the first corrected abstract survivor is d=(8,7), x=(8,7), h=(8,7), with exact minimum deficit 13 <= Dmax=16. It uses seven shared right endpoints and one label-0-only endpoint. This is abstract-interface feasibility only; actual D2C graph realizability is open.
-ACTIVE SESSION: Scheduled trigger 2026-09-23T13:00:38+01:00; no durable STARTED record existed at secondary-watchdog inspection. Recovery began at 13:08:53, 8m15s late; cutoff 13:53:38; hard close 13:59:38. Trigger attribution uses the secondary launch-recovery watchdog runtime metadata; immutable primary delivery identity remains UNVERIFIED.
+INSPECTED PREDECESSOR: 9e4125140e232db54fa073f086f23f145764b183.
+LAST VERIFIED RESULT: The 13-deficit optimizer for n=18,Delta=10 is excluded, and the strict star-slack refinement sum epsilon_t >= binom(x,2)+1 holds for every assigned-witness star with x>=3. The tuple d=(8,7),x=(8,7),h=(8,7) remains abstractly feasible at deficit 14<=16; actual D2C realizability remains open.
+ACTIVE SESSION: Scheduled trigger 2026-09-23T14:00:38+01:00; actual entry 14:00:30; cutoff 14:53:38; hard close 14:59:38. Immutable delivery identity is UNVERIFIED.
 VERIFIED FORWARD SPAN: 0m00s at STARTED publication.
-SESSION RESULT: ACTIVE/RECOVERED; 40-minute target applies because more than 40 minutes remained at actual recovery start.
-SUBSTANTIVE UNITS: 0 at STARTED publication. Focused-session counter remains 3/24 pending completion.
-CANONICAL RECORD: project/research/session_logs/2026-09-23/2026-09-23T13-00-38+01-00-canonical.json.
+SESSION RESULT: STARTED; 40-minute target applies.
+SUBSTANTIVE UNITS: 0. Focused-session counter remains 3/24 pending finalization.
+CANONICAL RECORD: project/research/session_logs/2026-09-23/2026-09-23T14-00-38+01-00-canonical.json.
 UNPRESERVED WORK: None.
-DEFERRED ADMIN: Audit/finalize stale 09:00 and 11:00 telemetry; correct prior audit prose/PDF from 42 to 32.
-NEXT ACTION: Test actual graph realizability of the n=18,Delta=10 survivor d=(8,7), x=(8,7), h=(8,7), preserving either a certified D2C realization or an explicit graph-level obstruction.
+DEFERRED ADMIN: Audit/finalize stale 09:00, 11:00 and 13:00 telemetry; correct prior audit prose/PDF from 42 to 32.
+NEXT ACTION: Use STRICT-STAR and exact source geometry to test the n=18,Delta=10 tuple d=(8,7),x=(8,7),h=(8,7); preserve either a full exclusion or an actual D2C realization.
 MANDATORY CONSTRAINTS: Abstract witness feasibility is not graph realizability; S<=14 remains conditional on the audited bridge; equality only through S<=8; balanced complete bipartite graphs and X_3 remain controls; no external e+disj+X core; general theorem open.
 <!-- CURRENT-STATUS:END -->
 
