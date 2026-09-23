@@ -12,8 +12,8 @@
   "lateness_vs_trigger": "00:07:20",
   "launch_status": "STARTED_RECOVERY",
   "started_record_prepared_at": "2026-09-23T17:07:58+01:00",
-  "started_record_published_at": "2026-09-23T17:07:58+01:00",
-  "first_substantive_checkpoint_time": "PENDING",
+  "started_record_published_at": "2026-09-23T17:08:04+01:00",
+  "first_substantive_checkpoint_time": "2026-09-23T17:14:22+01:00",
   "segments": [
     {
       "segment_id": "segment-1-recovery",
@@ -23,29 +23,48 @@
       "notes": "Primary scheduled launch was missing; this watchdog recovered the same trigger. No duplicate session or credit."
     }
   ],
-  "forward_research_intervals": [],
+  "forward_research_intervals": [
+    {
+      "start": "2026-09-23T17:09:29+01:00",
+      "end": "2026-09-23T17:14:25+01:00",
+      "duration_seconds": 296,
+      "evidence": "Identified stable index 20851 as the already-audited d=x=h=(5,5,5) structural tuple and transferred the existing bounded graph-level realizability exclusion without equating the distinct deficit quantities."
+    }
+  ],
   "forward_research_stop": "PENDING",
   "preservation_start": "PENDING",
   "preservation_complete": "PENDING",
   "final_report_time": "PENDING",
   "wall_clock_span_to_preservation_complete": "PENDING",
-  "verified_forward_research_span": "00:00:00",
+  "verified_forward_research_span": "00:04:56",
   "preservation_span": "PENDING",
-  "substantive_unit_count": 0,
-  "timestamped_unit_ledger": [],
+  "substantive_unit_count": 1,
+  "timestamped_unit_ledger": [
+    {
+      "unit": 1,
+      "closed_at": "2026-09-23T17:14:25+01:00",
+      "result": "Stable index 20851 does not reopen graph-level realizability: its d=x=h=(5,5,5) structural tuple is exactly the bounded 555 case already excluded by the audited exact D2C model. Transfer is by tuple/geometry only; stable witness_min_deficit=15 is not identified with the graph-model sum(delta)=16.",
+      "artifact": "project/research/general_n/2026-09-23-independent-742-r15-shard-continuation/STABLE_20851_REALIZABILITY_TRANSFER.md",
+      "commit": "4561fc3f76b84d9a2d97f2d70fea9de8d8f42e6c"
+    }
+  ],
   "early_stop_check_time": "PENDING",
   "early_stop_check_result": "PENDING",
   "stop_reason": "PENDING",
   "research_target_minutes": 40,
   "target_40m_applies": true,
   "target_40m_met": "PENDING",
-  "session_run_status": "STARTED",
+  "session_run_status": "STARTED_SUBSTANTIVE",
   "focused_session_credit": "PENDING; this is recovery of the original 17:00 trigger only",
-  "compliance_status": "STARTED_RECOVERY; launch target missed because primary launch had no durable STARTED evidence by watchdog entry",
+  "compliance_status": "RECOVERED_AND_SUBSTANTIVE; primary +5-minute launch target missed; first substantive checkpoint was durable before 10 minutes from recovery entry",
   "infrastructure_failures": [
     "Primary scheduled launch for 17:00:38 had no durable STARTED record when recovery watchdog checked."
   ],
-  "commit_shas": [],
-  "live_unfinished_line": "Resume the repository's exact n=18 stable-index row closure from the latest preserved boundary; stop at the next live abstract survivor for graph-level realizability.",
+  "commit_shas": [
+    "476e55cd97332ff7d2879b583b63b96543360eac",
+    "e05bc85663f7067e8002fabbe57f4fdb288007fc",
+    "4561fc3f76b84d9a2d97f2d70fea9de8d8f42e6c"
+  ],
+  "live_unfinished_line": "Continue the stable-index scan strictly above 20,900. Stop at the next distinct abstract survivor for graph-level realizability; do not treat abstract feasibility as graph existence.",
   "historical_fragments": []
 }
