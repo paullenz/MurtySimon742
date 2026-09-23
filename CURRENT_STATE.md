@@ -5,18 +5,18 @@ Canonical repository: `paullenz/MurtySimon742`. Date: 23 September 2026.
 Active target: a genuinely independent proof of Erdős #742 / the Murty–Simon inequality e(G)<=floor(n^2/4), preferably with the equality characterization. Forward priority is the project’s own complement / residual / Hall / profile / realizability route, not a reconstruction of the external e+disj+X proof. The first focused session produced the internally checked candidate threshold `Delta>=250n/429`, shrinking the live strip to `n/2<Delta<250n/429`. The theorem and its inherited graph-to-profile spine remain candidate/internal-review mathematics. A 24-focused-session go/no-go gate applies. Prior eventual-D2C work remains preserved but is no longer the active forward objective.
 
 <!-- CURRENT-STATUS:START -->
-CHECKPOINT CLASS: VERIFIED_INTERNAL_N18_RANGE_26901_27400_CLOSED
+CHECKPOINT CLASS: VERIFIED_INTERNAL_N18_RANGE_27401_27900_CLOSED
 WORK MODE: MATH
-INSPECTED PREDECESSOR: 4ded9beebebd0c0a55fa2f8b68f07c9758161302.
-LAST VERIFIED RESULT: Exact stable-index range 26,901-27,400 is closed with zero abstract survivors; closest deficit 25 versus Dmax 16. All formerly incomplete ranges below 26,901 are also closed, with stable index 20,851 handled by the separately audited structural 555 exclusion. These are internal abstract assigned-witness results, not graph realizability or external acceptance.
-ACTIVE SESSION: Scheduled trigger 2026-09-23T18:00:38+01:00; actual entry 18:03:44; STARTED published 18:06:13, 35 seconds beyond the five-minute target; first substantive checkpoint 18:13:03; cutoff 18:53:38; hard close 18:59:38. Immutable delivery identity is UNVERIFIED.
-VERIFIED FORWARD SPAN: 14m49s.
+INSPECTED PREDECESSOR: d7b40ec9367a7541b6359eff5a3b155b06bca0cc.
+LAST VERIFIED RESULT: Exact stable-index range 27,401-27,900 is closed with zero abstract survivors; closest deficit 25 versus Dmax 16. Exact closure now extends continuously through 27,900 apart from stable index 20,851, which is separately discharged by the audited structural 555 graph model. This remains internal abstract assigned-witness evidence, not a graph-realizability or external theorem.
+ACTIVE SESSION: Scheduled trigger 2026-09-23T18:00:38+01:00; actual entry 18:03:44; STARTED published 18:06:13, 35 seconds beyond the five-minute target; first substantive checkpoint 18:13:03; cutoff 18:53:38; hard close 18:59:38. Same-trigger re-entry at 18:35:47 continued this writer without duplicate credit. Immutable delivery identity is UNVERIFIED.
+VERIFIED FORWARD SPAN: 24m31s.
 SESSION RESULT: RAN/ACTIVE; 40-minute target applies and is pending.
-SUBSTANTIVE UNITS: 4. Focused-session counter remains 4/24 pending completed evidenced duration.
+SUBSTANTIVE UNITS: 5. Focused-session counter remains 4/24 pending completed evidenced duration.
 CANONICAL RECORD: project/research/session_logs/2026-09-23/2026-09-23T18-00-38+01-00-canonical.json.
 UNPRESERVED WORK: None.
 DEFERRED ADMIN: Finalize stale 09:00, 11:00, 13:00, 16:00 and 17:00 telemetry; correct prior audit prose/PDF from 42 to 32.
-NEXT ACTION: Continue exact stable-index enumeration from 27,401 in a bounded shard that can finish before cutoff; stop at the next distinct live abstract survivor for graph-level realizability.
+NEXT ACTION: Use the remaining research window for one bounded exact shard from 27,901; stop before cutoff and preserve, with no full-row claim unless the declared shard completes.
 MANDATORY CONSTRAINTS: SAT evidence is internal, not external acceptance; abstract feasibility is not graph realizability; S<=14 remains conditional on the audited bridge; equality only through S<=8; balanced complete bipartite graphs and X_3 remain controls; no external e+disj+X core; general theorem open.
 <!-- CURRENT-STATUS:END -->
 
