@@ -5,34 +5,20 @@ Canonical repository: `paullenz/MurtySimon742`. Date: 23 September 2026.
 Active target: a genuinely independent proof of Erdős #742 / the Murty–Simon inequality e(G)<=floor(n^2/4), preferably with the equality characterization. Forward priority is the project’s own complement / residual / Hall / profile / realizability route, not a reconstruction of the external e+disj+X proof. The first focused session produced the internally checked candidate threshold `Delta>=250n/429`, shrinking the live strip to `n/2<Delta<250n/429`. The theorem and its inherited graph-to-profile spine remain candidate/internal-review mathematics. A 24-focused-session go/no-go gate applies. Prior eventual-D2C work remains preserved but is no longer the active forward objective.
 
 <!-- CURRENT-STATUS:START -->
-CHECKPOINT CLASS: SESSION_MISSED_LATE_ENTRY
-
-WORK MODE: STATUS
-
-INSPECTED PREDECESSOR: 7d3f1b9c56692d48f101c3dc5148efb12f6732ff.
-
-LAST VERIFIED RESULT: Mathematical status unchanged from the completed 06:00 session: internal strict residual closure supports the edge bound through S<=14; equality only through S<=8; the live strip remains n/2<Delta<250n/429. No mathematics was performed in this missed session.
-
-COMPLETED SESSION: Scheduled trigger 2026-09-23T08:00:38+01:00; actual entry 08:58:34; research cutoff 08:53:38 was already past. Telemetry was begun before the 08:59:38 hard close. Trigger attribution uses the current invocation title and supplied hourly schedule; immutable delivery identity is UNVERIFIED.
-
-VERIFIED FORWARD INTERVALS: None.
-
+CHECKPOINT CLASS: STARTED_LIVE_STRIP_ELIG_COLLISION
+WORK MODE: MATH
+INSPECTED PREDECESSOR: b67d73be41214916c90ac31c23838061a3825d51.
+LAST VERIFIED RESULT: The recovered 09:00 session proved the graph-level eligibility condition 2s_i>h_i for positive demand and added a graph-level surplus envelope. Fresh actual-D2C live-strip searches refute unrestricted injectivity but have not found an ELIG--ELIG collision in the large-surplus regime. The 09:00 telemetry is still administratively stale; its mathematical artifacts are durable.
+ACTIVE SESSION: Scheduled trigger 2026-09-23T10:00:38+01:00; actual start 10:00:51; research cutoff 10:53:38; hard close 10:59:38; 40-minute target applies. Trigger attribution uses the current invocation title and supplied hourly schedule; immutable delivery identity is UNVERIFIED.
+VERIFIED FORWARD INTERVALS: None yet.
 VERIFIED FORWARD SPAN: 0m00s.
-
 SUBSTANTIVE UNITS: 0.
-
-CANONICAL RECORD: project/research/session_logs/2026-09-23/2026-09-23T08-00-38+01-00-canonical.json.
-
+CANONICAL RECORD: project/research/session_logs/2026-09-23/2026-09-23T10-00-38+01-00-canonical.json.
 UNPRESERVED WORK: None.
-
-DEFERRED ADMIN: Correct prior audit prose/PDF from 42 to 32; audit launch coverage separately.
-
-NEXT ACTION: At the next independently delivered trigger, resume the live-strip collision-multiplicity search and weighted-charge analysis. Do not catch up this missed slot.
-
-FOCUSED-SESSION COUNT: 3/24; unchanged.
-
-TARGET RESULT: N/A because actual entry occurred after the research cutoff. Session NO_RESEARCH/MISSED; telemetry finalized 8 seconds after hard close and is NONCOMPLIANT.
-
+DEFERRED ADMIN: Finalize stale 09:00 telemetry in the audit; correct prior audit prose/PDF from 42 to 32.
+NEXT ACTION: Attack ELIG--ELIG crossed-supplement collisions in the live strip using the new graph-level surplus envelope; prove impossibility or derive a quantitative residual/degree charge sufficient to reduce the 5.65 pair-lift gap.
+FOCUSED-SESSION COUNT: 3/24 before this session.
+TARGET RESULT: PENDING.
 MANDATORY CONSTRAINTS: S<=14 is internal/computer-assisted and conditional on the audited bridge; profile feasibility is not graph realizability; equality only through S<=8; balanced complete bipartite graphs and X_3 remain controls; no external e+disj+X core; general theorem open.
 <!-- CURRENT-STATUS:END -->
 
