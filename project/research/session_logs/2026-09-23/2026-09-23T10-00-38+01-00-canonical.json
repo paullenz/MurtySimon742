@@ -18,9 +18,16 @@
     {
       "segment_id": "segment-1",
       "actual_start": "2026-09-23T10:00:51+01:00",
-      "actual_stop": "PENDING",
+      "actual_stop": "2026-09-23T10:08:28+01:00",
       "role": "forward_research",
       "notes": "Launch administration excluded from research intervals."
+    },
+    {
+      "segment_id": "segment-2-watchdog-reentry",
+      "actual_start": "2026-09-23T10:09:08+01:00",
+      "actual_stop": "PENDING",
+      "role": "forward_research",
+      "notes": "Same 10:00 trigger; watchdog found the session active and continued it without duplicate credit."
     }
   ],
   "forward_research_intervals": [
@@ -29,6 +36,18 @@
       "stop": "2026-09-23T10:06:58+01:00",
       "seconds": 130,
       "unit": "Generated and fully edge-deletion-certified a disjoint 1,800-graph batch; screened all live-strip maximum roots for surplus envelope and crossed-supplement collisions."
+    },
+    {
+      "start": "2026-09-23T10:08:12+01:00",
+      "stop": "2026-09-23T10:08:28+01:00",
+      "seconds": 16,
+      "unit": "Located and reconstructed the third-batch ELIG--ELIG collision before watchdog re-entry."
+    },
+    {
+      "start": "2026-09-23T10:09:08+01:00",
+      "stop": "2026-09-23T10:10:13+01:00",
+      "seconds": 65,
+      "unit": "Solved all forced collision completions and derived the pair-level certificate-edge Hall eligibility condition."
     }
   ],
   "forward_research_stop": "PENDING",
@@ -36,9 +55,9 @@
   "preservation_complete": "PENDING",
   "final_report_time": "PENDING",
   "wall_clock_span_to_preservation_complete": "PENDING",
-  "verified_forward_research_span": "00:02:10",
+  "verified_forward_research_span": "00:03:31",
   "preservation_span": "PENDING",
-  "substantive_unit_count": 1,
+  "substantive_unit_count": 2,
   "timestamped_unit_ledger": [
     {
       "unit": 1,
@@ -46,6 +65,13 @@
       "complete": "2026-09-23T10:06:58+01:00",
       "result": "1,800/1,800 graphs certified; 103 live-strip maximum-root states, max E=11, no E>=15 root, 56 collision images, one ELIG--ELIG collision, maximum multiplicity 3.",
       "evidence": "project/research/general_n/2026-09-23-independent-742-r12-count-audit/ENVELOPE_COLLISION_THIRD_BATCH.md"
+    },
+    {
+      "unit": 2,
+      "start": "2026-09-23T10:08:12+01:00",
+      "complete": "2026-09-23T10:10:13+01:00",
+      "result": "Proved PAIR-ELIG: simultaneous positive demand requires |C_i union C_k|>=tau_i+tau_k. The only third-batch scalar-eligible collision fails because 9<10; its 18 forced completions have maximum S=2.",
+      "evidence": "project/research/general_n/2026-09-23-independent-742-r12-count-audit/PAIR_ELIGIBILITY_HALL_FILTER.md"
     }
   ],
   "early_stop_check_time": "PENDING",
@@ -62,6 +88,6 @@
     "09:00 predecessor telemetry remains PENDING after hard close; reconciliation deferred."
   ],
   "commit_shas": [],
-  "live_unfinished_line": "Inspect the third-batch ELIG--ELIG collision and maximize demand under forced collision certificates.",
+  "live_unfinished_line": "Search E>=15 live-strip collisions passing PAIR-ELIG; couple envelope with certificate-edge Hall overlap.",
   "historical_fragments": []
 }

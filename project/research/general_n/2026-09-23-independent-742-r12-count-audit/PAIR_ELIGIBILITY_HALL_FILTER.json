@@ -1,0 +1,155 @@
+{
+  "status": "PROVED_INTERNAL_PAIR_HALL_NECESSARY_CONDITION",
+  "definition": {
+    "tau_i": "floor(h_i/2)+1",
+    "condition": "|C_i union C_k| >= tau_i+tau_k, with individual |C_i|>=tau_i and |C_k|>=tau_k"
+  },
+  "witness": {
+    "graph": {
+      "n": 20,
+      "seed": 228,
+      "root": 13,
+      "Delta": 11,
+      "A": [
+        1,
+        2,
+        3,
+        4,
+        6,
+        8,
+        9,
+        15
+      ],
+      "B": [
+        0,
+        5,
+        7,
+        10,
+        11,
+        12,
+        14,
+        16,
+        17,
+        18,
+        19
+      ],
+      "E": 4
+    },
+    "pattern": "2,4|14,18",
+    "forced_occurrences": [
+      {
+        "u": 0,
+        "p": {
+          "u": 0,
+          "i": 2,
+          "t": 18,
+          "edge": "0,18"
+        },
+        "q": {
+          "u": 0,
+          "i": 4,
+          "t": 14,
+          "edge": "0,14"
+        }
+      },
+      {
+        "u": 19,
+        "p": {
+          "u": 19,
+          "i": 2,
+          "t": 18,
+          "edge": "18,19"
+        },
+        "q": {
+          "u": 19,
+          "i": 4,
+          "t": 14,
+          "edge": "14,19"
+        }
+      }
+    ],
+    "conflict": false,
+    "legal_completions": 18,
+    "demand_distribution": {
+      "0": 13,
+      "2": 5
+    },
+    "maximum_total_demand": {
+      "S": 2,
+      "ds": {
+        "1": 0,
+        "2": 2,
+        "3": 0,
+        "4": 0,
+        "6": 0,
+        "8": 0,
+        "9": 0,
+        "15": 0
+      },
+      "selection": [
+        [
+          0,
+          1,
+          7
+        ],
+        [
+          0,
+          4,
+          14
+        ],
+        [
+          0,
+          2,
+          18
+        ],
+        [
+          0,
+          15,
+          19
+        ],
+        [
+          7,
+          2,
+          11
+        ],
+        [
+          10,
+          4,
+          16
+        ],
+        [
+          12,
+          4,
+          16
+        ],
+        [
+          12,
+          2,
+          18
+        ],
+        [
+          19,
+          4,
+          14
+        ],
+        [
+          17,
+          2,
+          18
+        ],
+        [
+          19,
+          2,
+          18
+        ]
+      ],
+      "x": {
+        "1": 1,
+        "2": 5,
+        "4": 4,
+        "15": 1
+      }
+    },
+    "maximum_total_demand_both_collided_labels_positive": null
+  }
+}
