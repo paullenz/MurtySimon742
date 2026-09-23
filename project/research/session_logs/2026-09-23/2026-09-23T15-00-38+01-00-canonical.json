@@ -18,7 +18,7 @@
     {
       "segment_id": "segment-1",
       "actual_start": "2026-09-23T15:00:47+01:00",
-      "actual_stop": "PENDING",
+      "actual_stop": "2026-09-23T15:54:13+01:00",
       "role": "forward_research",
       "notes": "14:00 predecessor finalized at commit 838658ff before this trigger; no overlap."
     }
@@ -59,16 +59,22 @@
       "stop": "2026-09-23T15:35:48+01:00",
       "seconds": 23,
       "unit": "Staged the SAT model and independently validated its local edge-criticality criterion against brute-force edge deletion on the Graph Atlas."
+    },
+    {
+      "start": "2026-09-23T15:37:28+01:00",
+      "stop": "2026-09-23T15:53:38+01:00",
+      "seconds": 970,
+      "unit": "Continued exact sharded enumeration past the audited (5,5,5) survivor; closed bounded ranges and extended three partial ranges until the forward cutoff."
     }
   ],
-  "forward_research_stop": "PENDING",
-  "preservation_start": "PENDING",
-  "preservation_complete": "PENDING",
+  "forward_research_stop": "2026-09-23T15:53:38+01:00",
+  "preservation_start": "2026-09-23T15:54:13+01:00",
+  "preservation_complete": "2026-09-23T15:55:00+01:00",
   "final_report_time": "PENDING",
-  "wall_clock_span_to_preservation_complete": "PENDING",
-  "verified_forward_research_span": "00:21:33",
-  "preservation_span": "PENDING",
-  "substantive_unit_count": 6,
+  "wall_clock_span_to_preservation_complete": "00:54:13",
+  "verified_forward_research_span": "00:37:43",
+  "preservation_span": "00:00:47",
+  "substantive_unit_count": 7,
   "timestamped_unit_ledger": [
     {
       "unit": 1,
@@ -111,18 +117,27 @@
       "complete": "2026-09-23T15:35:48+01:00",
       "result": "Degree-only and degree+diameter stages are SAT; full D2C remains UNSAT, isolating criticality as the obstruction rather than a degree/diameter overconstraint. Direct replay of a diameter-stage model confirmed all exact degrees, fixed source geometry, 82 edges and diameter 2; it had 61 noncritical edges. The local deletion-criticality predicate agreed with brute-force edge deletion on all 5,553 edges of 457 connected Graph Atlas graphs of diameter at most 2 (zero mismatches).",
       "evidence": "project/research/general_n/2026-09-23-independent-742-r15-near-equality/N18_555_D2C_ENCODING_AUDIT.md"
+    },
+    {
+      "unit": 7,
+      "start": "2026-09-23T15:37:28+01:00",
+      "complete": "2026-09-23T15:53:38+01:00",
+      "result": "Added a stable-index --continue-past-555 path, preserving scalar indices while treating only the separately audited (5,5,5) tuple as graph-excluded. Exact ranges 12,901-14,900 (one graph-excluded abstract survivor, no live survivor) and 20,901-22,900 closed. Range 10,901-12,900 also emitted range_complete, but its terminal observation occurred after cutoff and is recorded separately rather than used for target time. Interrupted ranges reached exact observed partial boundaries 20,850, 24,850 and 26,850 with zero live survivors; no closure beyond completed shards is claimed.",
+      "evidence": "project/research/general_n/2026-09-23-independent-742-r15-near-equality/N18_POST_555_SHARDED_REPLAY.md"
     }
   ],
-  "early_stop_check_time": "PENDING",
-  "early_stop_check_result": "PENDING",
-  "stop_reason": "PENDING",
+  "early_stop_check_time": "2026-09-23T15:53:38+01:00",
+  "early_stop_check_result": "NOT_EARLY: useful research continued to the cutoff, but verified intervals total only 37m43s because administration/checkpoint gaps are excluded.",
+  "stop_reason": "Reached the forward-research cutoff during active bounded shards; workers were terminated when the overrun was observed at 15:54:13.",
   "research_target_minutes": 40,
   "target_40m_applies": true,
-  "target_40m_met": "PENDING",
-  "session_run_status": "RAN_ACTIVE",
-  "focused_session_credit": "PENDING; focused counter remains 4/24.",
-  "compliance_status": "STARTED_ON_TIME",
-  "infrastructure_failures": [],
+  "target_40m_met": false,
+  "session_run_status": "RAN",
+  "focused_session_credit": "DOES NOT QUALIFY; verified research 37m43s is below 40 minutes. Counter remains 4/24.",
+  "compliance_status": "NONCOMPLIANT: three research workers were terminated at 15:54:13, 35 seconds after the 15:53:38 cutoff; no post-cutoff time is credited.",
+  "infrastructure_failures": [
+    "Research worker wait returned after the cutoff; three live workers were stopped 35 seconds late. Their post-cutoff execution time is excluded."
+  ],
   "commit_shas": [
     "17500411b9e6ccb72552f5a305436ffb5b721e34",
     "54562f7d8195144f6d0b255e985d9752cb8c2ce0",
@@ -130,8 +145,9 @@
     "da5274d735b79abab53205b9c5acd259cb4eba5c",
     "0fa2b2cf2fac2dae4547e27c12d1cc3d2937513a",
     "2b8c16212849b8f329db14d82072ac1267cf0a3c",
-    "PENDING_UNIT6_COMMIT"
+    "6fe4e082d44b16f8cb9566b1b5e8ba0f6591b8e4",
+    "PENDING_FINAL_ATOMIC_COMMIT"
   ],
-  "live_unfinished_line": "The d=x=h=(5,5,5) tuple is internally graph-infeasible with staged and independently replayed encoding. Resume abstract enumeration after scalar 14,440, skipping this separately excluded tuple; preserve the next survivor.",
+  "live_unfinished_line": "Stable-index row status: prefix 1-18,900 is resolved with only the graph-excluded scalar-14,440 tuple. Range 18,901-20,900 reached observed scalar 20,850 but did not close; 20,901-22,900 closed; 22,901-24,900 reached 24,850; 24,901-26,900 reached 26,850. Resume exact gaps/partials; no full-row closure.",
   "historical_fragments": []
 }

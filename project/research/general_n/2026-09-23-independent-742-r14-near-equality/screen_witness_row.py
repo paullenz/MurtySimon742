@@ -13,6 +13,7 @@ def main(n, Delta, stop_first=False, skip_tuples=None,
     a = n - 1 - Delta
     tested = scalar_pass = 0
     abstract_survivors = []
+    graph_excluded_survivors = 0
     best_excluded = None
     for total in (15, 16):
         for p in partitions(total):
@@ -54,6 +55,7 @@ def main(n, Delta, stop_first=False, skip_tuples=None,
                         "range_stop": stop_scalar,
                         "range_complete": True,
                         "abstract_survivor_count": len(abstract_survivors),
+                        "graph_excluded_survivor_count": graph_excluded_survivors,
                         "abstract_survivors": abstract_survivors,
                         "closest_result": best_excluded,
                     }
@@ -65,9 +67,16 @@ def main(n, Delta, stop_first=False, skip_tuples=None,
                     gap = out["minimum_deficit"] - Dmax
                     out["gap_vs_Dmax"] = gap
                     if gap <= 0:
-                        abstract_survivors.append(out)
-                        print("SURVIVOR "+json.dumps(out), flush=True)
-                        if stop_first:
+                        key = (tuple(p), tuple(xs))
+                        if ("--continue-past-555" in sys.argv and
+                                key == ((5, 5, 5), (5, 5, 5))):
+                            graph_excluded_survivors += 1
+                            print("GRAPH_EXCLUDED_SURVIVOR "+json.dumps(out),
+                                  flush=True)
+                        else:
+                            abstract_survivors.append(out)
+                            print("SURVIVOR "+json.dumps(out), flush=True)
+                        if stop_first and abstract_survivors:
                             result = {
                                 "n": n, "Delta": Delta, "rho": rho,
                                 "Dmax": Dmax, "a": a,
@@ -93,6 +102,7 @@ def main(n, Delta, stop_first=False, skip_tuples=None,
         "n": n, "Delta": Delta, "rho": rho, "Dmax": Dmax, "a": a,
         "patterns_tested": tested, "scalar_pass": scalar_pass,
         "abstract_survivor_count": len(abstract_survivors),
+        "graph_excluded_survivor_count": graph_excluded_survivors,
         "abstract_survivors": abstract_survivors,
         "closest_result": best_excluded,
     }

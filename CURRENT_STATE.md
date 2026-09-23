@@ -5,19 +5,19 @@ Canonical repository: `paullenz/MurtySimon742`. Date: 23 September 2026.
 Active target: a genuinely independent proof of Erdős #742 / the Murty–Simon inequality e(G)<=floor(n^2/4), preferably with the equality characterization. Forward priority is the project’s own complement / residual / Hall / profile / realizability route, not a reconstruction of the external e+disj+X proof. The first focused session produced the internally checked candidate threshold `Delta>=250n/429`, shrinking the live strip to `n/2<Delta<250n/429`. The theorem and its inherited graph-to-profile spine remain candidate/internal-review mathematics. A 24-focused-session go/no-go gate applies. Prior eventual-D2C work remains preserved but is no longer the active forward objective.
 
 <!-- CURRENT-STATUS:START -->
-CHECKPOINT CLASS: VERIFIED_INTERNAL_N18_555_D2C_UNSAT_AUDITED
-WORK MODE: MATH
-INSPECTED PREDECESSOR: 2b8c16212849b8f329db14d82072ac1267cf0a3c.
-LAST VERIFIED RESULT: The d=x=h=(5,5,5) survivor is internally graph-infeasible. Degree-only and diameter-two stages are SAT; full D2C is UNSAT. A direct checker confirmed a diameter-stage model's exact degrees, fixed source geometry, 82 edges and diameter 2 but found 61 noncritical edges. The local criticality criterion matched brute edge deletion on 5,553 edges across 457 Graph Atlas diameter-two graphs with zero mismatches.
-ACTIVE SESSION: Scheduled trigger 2026-09-23T15:00:38+01:00; actual entry 15:00:47; STARTED verified 15:02:43; cutoff 15:53:38; hard close 15:59:38. Immutable delivery identity is UNVERIFIED.
-VERIFIED FORWARD SPAN: 21m33s.
-SESSION RESULT: RAN/ACTIVE; 40-minute target applies.
-SUBSTANTIVE UNITS: 6. Focused-session counter remains 4/24 pending finalization.
+CHECKPOINT CLASS: VERIFIED_INTERNAL_N18_555_EXCLUDED_AND_SHARDED_PARTIAL
+WORK MODE: PRESERVED
+INSPECTED PREDECESSOR: 6fe4e082d44b16f8cb9566b1b5e8ba0f6591b8e4.
+LAST VERIFIED RESULT: The d=x=h=(5,5,5) abstract survivor is internally graph-infeasible by staged exact D2C SAT plus an independent 5,553-edge criterion replay. Stable-index sharding then closes prefix 1-18,900 (with only that separately excluded tuple) and exact range 20,901-22,900. Partial zero-survivor observations reach 20,850, 24,850 and 26,850; these are not range closures. No full-row claim.
+ACTIVE SESSION: Scheduled trigger 2026-09-23T15:00:38+01:00; actual entry 15:00:47; STARTED verified 15:02:43; forward research cutoff 15:53:38; workers stopped 15:54:13, 35 seconds late; hard close 15:59:38. Immutable delivery identity is UNVERIFIED.
+VERIFIED FORWARD SPAN: 37m43s.
+SESSION RESULT: RAN; 40-minute target NOT MET.
+SUBSTANTIVE UNITS: 7. Focused-session counter remains 4/24.
 CANONICAL RECORD: project/research/session_logs/2026-09-23/2026-09-23T15-00-38+01-00-canonical.json.
 UNPRESERVED WORK: None after this checkpoint.
 DEFERRED ADMIN: Audit/finalize stale 09:00, 11:00 and 13:00 telemetry; correct prior audit prose/PDF from 42 to 32.
-NEXT ACTION: Resume exact abstract enumeration after scalar 14,440 while separately skipping the audited (5,5,5) tuple; preserve the next survivor and test graph realizability, or close bounded shards.
-MANDATORY CONSTRAINTS: SAT evidence is internal, not external acceptance; abstract feasibility is not graph realizability; zero-survivor shards do not close the row; S<=14 remains conditional on the audited bridge; equality only through S<=8; balanced complete bipartite graphs and X_3 remain controls; no external e+disj+X core; general theorem open.
+NEXT ACTION: Resume exact stable-index shards to close 18,901-20,900, 22,901-24,900 and 24,901-26,900, then continue upward; stop at the next live survivor for graph-level realizability.
+MANDATORY CONSTRAINTS: SAT evidence is internal, not external acceptance; partial shard boundaries are not closures; abstract feasibility is not graph realizability; S<=14 remains conditional on the audited bridge; equality only through S<=8; balanced complete bipartite graphs and X_3 remain controls; no external e+disj+X core; general theorem open.
 <!-- CURRENT-STATUS:END -->
 
 ## Latest adversarial audit - 23 September 2026
