@@ -21,6 +21,13 @@
       "actual_stop": "2026-09-23T06:51:31+01:00",
       "role": "forward_research",
       "notes": "Launch administration excluded from verified research intervals."
+    },
+    {
+      "segment_id": "segment-2-reentry",
+      "actual_start": "2026-09-23T06:58:29+01:00",
+      "actual_stop": "2026-09-23T06:58:29+01:00",
+      "role": "finalization_reentry",
+      "notes": "Same-trigger re-entry after research cutoff; repository already finalized. Zero research; no duplicate session or credit."
     }
   ],
   "forward_research_intervals": [
@@ -201,6 +208,7 @@
   ],
   "live_unfinished_line": "Restrict collision multiplicity to the live degree strip and derive a weighted collision charge.",
   "historical_fragments": [
-    "Focused-session counter remains 3/24; this substantive RAN session does not qualify for prospective 40-minute credit."
+    "Focused-session counter remains 3/24; this substantive RAN session does not qualify for prospective 40-minute credit.",
+    "Same-trigger re-entry at 06:58:29 BST after cutoff; zero research and no change to the 17m13s total or target result."
   ]
 }

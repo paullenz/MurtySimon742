@@ -13,7 +13,7 @@ INSPECTED PREDECESSOR: 59f87d961d6b3c7a1fca627b7851a4e7ac372ad4.
 
 LAST VERIFIED RESULT: Internal strict residual closure now extends through r=12, supporting the edge bound through S<=14 because every strict counterexample has S>=r+2. The coverage manifest finds 81 saved r=12 source survivors across supports 6--10; all 81 are helper-aware infeasible with zero unknowns. Fresh replay covers all 6,386 support-ten case-1 kernels. Equality remains supported only through S<=8; this is not external verification, graph realizability, a full-strip theorem, or a lower threshold.
 
-COMPLETED SESSION: Scheduled trigger 2026-09-23T06:00:38+01:00; actual start 06:03:18; forward research stopped 06:51:31; substantive preservation verified 06:53:06; 40-minute target NOT MET. Trigger attribution uses the current invocation title and supplied hourly schedule; immutable delivery identity is UNVERIFIED.
+COMPLETED SESSION: Scheduled trigger 2026-09-23T06:00:38+01:00; actual start 06:03:18; forward research stopped 06:51:31; substantive preservation verified 06:53:06; same-trigger finalization re-entry 06:58:29 with zero research; 40-minute target NOT MET. Trigger attribution uses the current invocation title and supplied hourly schedule; immutable delivery identity is UNVERIFIED.
 
 VERIFIED FORWARD INTERVALS: 06:05:04--06:06:57; 06:08:45--06:09:47; 06:19:43--06:20:37; 06:23:00--06:24:23; 06:25:48--06:27:38; 06:30:28--06:31:39; 06:34:30--06:34:54; 06:38:09--06:40:50; 06:43:20--06:46:31; 06:48:47--06:51:31 BST.
 
