@@ -9,7 +9,7 @@
   "attribution_method": "launch_recovery_watchdog",
   "attribution_status": "VERIFIED_FROM_CURRENT_HOUR_RECOVERY_AUTOMATION_AND_EXACT_CANONICAL_PATH",
   "launch_status": "RECOVERED_PRIMARY_START_MISSING",
-  "started_record_published_at": "PENDING_REMOTE_COMMIT_TIMESTAMP",
+  "started_record_published_at": "2026-09-23T23:07:06+01:00",
   "first_substantive_checkpoint_at": null,
   "segments": [
     {
@@ -18,31 +18,49 @@
       "actual_stop": "UNVERIFIED",
       "role": "forward_research",
       "notes": "Launch-recovery watchdog found no durable STARTED record for the exact 23:00:38 trigger. Primary scheduled launch was missing. This is recovery of the same trigger, not a second session. Mathematics has not yet begun at this STARTED checkpoint."
+    },
+    {
+      "segment_id": "late-reentry-2",
+      "actual_start": "2026-09-24T00:58:36+01:00",
+      "actual_stop": "2026-09-24T00:58:36+01:00",
+      "role": "administrative_reconciliation",
+      "notes": "Invocation arrived after the 23:00 hard close and after the midnight audit. No mathematics was reopened and no duplicate session credit was created."
     }
   ],
   "forward_research_intervals": [],
-  "forward_research_stop": null,
-  "preservation_start": null,
-  "preservation_complete": null,
-  "final_report_time": null,
-  "wall_clock_span_to_preservation_complete": null,
+  "forward_research_stop": "UNVERIFIED_NO_RESEARCH_INTERVAL",
+  "preservation_start": "2026-09-24T00:58:36+01:00",
+  "preservation_complete": "UNVERIFIED_ORIGINAL_WRITER_DID_NOT_FINALIZE",
+  "final_report_time": "2026-09-24T00:58:36+01:00",
+  "wall_clock_span_to_preservation_complete": "UNVERIFIED",
   "verified_forward_research_span": "PT0S",
-  "preservation_span": null,
+  "preservation_span": "UNVERIFIED",
   "substantive_unit_count": 0,
   "timestamped_unit_ledger": [],
-  "early_stop_check_time": null,
-  "early_stop_check_result": null,
-  "stop_reason": null,
+  "early_stop_check_time": "2026-09-24T00:58:36+01:00",
+  "early_stop_check_result": "Hard close had passed by 58m58s; no forward research was permitted.",
+  "stop_reason": "Late administrative reconciliation only; no evidenced mathematical interval or substantive checkpoint existed.",
   "research_target_minutes": 40,
   "target_40m_applies": "YES",
-  "target_40m_met": "UNVERIFIED",
-  "compliance_status": "ACTIVE_RECOVERED",
+  "target_40m_met": false,
+  "compliance_status": "NO_RESEARCH_LATE_RECONCILIATION; durable STARTED missed trigger+5, first substantive checkpoint absent, original finalization absent.",
   "infrastructure_failures": [
-    "Primary scheduled launch produced no durable STARTED record before watchdog recovery. Durable STARTED publication exceeded the trigger+5-minute aim; exact publication time will be reconciled from the commit."
+    "Primary scheduled launch produced no durable STARTED record before watchdog recovery. Durable STARTED publication exceeded the trigger+5-minute aim; exact publication time will be reconciled from the commit.",
+    "Original recovery writer did not publish a substantive checkpoint or final canonical closure before hard close."
   ],
-  "commit_shas": [],
+  "commit_shas": [
+    "083dc162be599fe102274c4ce23f4f99ba5c7476"
+  ],
   "live_unfinished_line": "Continue exact n=18, Delta=10 stable-index enumeration from 39,251; stop at the next distinct live abstract survivor and test it against the audited graph-level realization model.",
-  "historical_fragments": [],
+  "historical_fragments": [
+    {
+      "observed_at": "2026-09-24T00:58:36+01:00",
+      "kind": "late_same_trigger_reentry",
+      "effect": "Canonical reconciliation only; zero research and no duplicate credit."
+    }
+  ],
   "primary_launch_missing": true,
-  "duplicate_session_credit": false
+  "duplicate_session_credit": false,
+  "session_run_status": "NO_RESEARCH",
+  "focused_session_credit": "No credit; counter remains 6/24."
 }
