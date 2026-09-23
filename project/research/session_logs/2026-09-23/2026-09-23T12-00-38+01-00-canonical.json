@@ -21,6 +21,13 @@
       "actual_stop": "2026-09-23T12:50:27+01:00",
       "role": "forward_research",
       "notes": "11:00 writer's slot had expired; its canonical remained stale ACTIVE, but latest mathematical commits were inspected and no overlap with its closed slot was possible."
+    },
+    {
+      "segment_id": "segment-2",
+      "actual_start": "2026-09-23T12:58:39+01:00",
+      "actual_stop": "2026-09-23T12:58:39+01:00",
+      "role": "late_reentry_finalization_only",
+      "notes": "Re-entry arrived after the 12:53:38 research cutoff and after finalization; zero research and zero duplicate credit."
     }
   ],
   "forward_research_intervals": [
@@ -115,7 +122,7 @@
   "target_40m_met": "NO",
   "session_run_status": "RAN",
   "focused_session_credit": "NO: 31m37s verified, below 40m",
-  "compliance_status": "FINALIZED_ON_TIME_TARGET_SHORTFALL_UNIT3_START_UNVERIFIED_PREDECESSOR_TELEMETRY_STALE",
+  "compliance_status": "FINALIZED_ON_TIME_TARGET_SHORTFALL_LATE_REENTRY_AFTER_CUTOFF_UNIT3_START_UNVERIFIED_PREDECESSOR_TELEMETRY_STALE",
   "infrastructure_failures": [
     "11:00 predecessor missed final canonical closure before its hard deadline; its durable math commits were retained and its stale ACTIVE telemetry was not rewritten.",
     "Unit 3 start boundary was not authoritatively timestamped after preservation; its result is durable but its elapsed research time is excluded from verified duration."
@@ -129,5 +136,12 @@
     "0de0ee6cc0e34d64a60c685440d207c77fae1cb6"
   ],
   "live_unfinished_line": "Test actual graph realizability of the n=18, Delta=10 abstract survivor d=(8,7), x=(8,7), h=(8,7), preserving either a certified D2C realization or an explicit graph-level obstruction.",
-  "historical_fragments": []
+  "historical_fragments": [
+    {
+      "observed_at": "2026-09-23T12:58:39+01:00",
+      "kind": "same_trigger_late_reentry",
+      "research_seconds": 0,
+      "action": "Canonical telemetry append only; session result unchanged."
+    }
+  ]
 }
