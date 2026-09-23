@@ -5,18 +5,18 @@ Canonical repository: `paullenz/MurtySimon742`. Date: 23 September 2026.
 Active target: a genuinely independent proof of Erdős #742 / the Murty–Simon inequality e(G)<=floor(n^2/4), preferably with the equality characterization. Forward priority is the project’s own complement / residual / Hall / profile / realizability route, not a reconstruction of the external e+disj+X proof. The first focused session produced the internally checked candidate threshold `Delta>=250n/429`, shrinking the live strip to `n/2<Delta<250n/429`. The theorem and its inherited graph-to-profile spine remain candidate/internal-review mathematics. A 24-focused-session go/no-go gate applies. Prior eventual-D2C work remains preserved but is no longer the active forward objective.
 
 <!-- CURRENT-STATUS:START -->
-CHECKPOINT CLASS: VERIFIED_INTERNAL_SUBSET_UNION_HALL_ENVELOPE
+CHECKPOINT CLASS: VERIFIED_INTERNAL_SUBSET_UNION_HALL_BATCH_TWO
 WORK MODE: MATH
 INSPECTED PREDECESSOR: b67d73be41214916c90ac31c23838061a3825d51.
-LAST VERIFIED RESULT: For any legal certificate assignment, if P is its positive-demand label set, distinctness of selected physical B-edges gives S<=2|union_{i in P} C_i|-sum_{i in P}h_i. Hence S<=H:=max_L(2|union_{i in L}C_i|-sum_{i in L}h_i). This is an actual-graph necessary condition, not an abstract-profile promotion. A fresh disjoint screen certified all 2,600 generated D2C graphs: among 169 live-strip maximum roots, two have scalar E>=15 (maximum 19), but none has H>=15 (maximum H=7).
+LAST VERIFIED RESULT: The graph-level subset-union envelope H was screened on a second disjoint batch of 5,200 independently every-edge-certified D2C graphs. Its 350 live-strip maximum roots include one scalar false positive E=17, but no H>=15 root; maximum H is 10. Exact certificate assignment on the E=17 root has maximum S=6 across 227 reachable count vectors, equal to H for that root.
 ACTIVE SESSION: Scheduled trigger 2026-09-23T10:00:38+01:00; actual start 10:00:51; research cutoff 10:53:38; hard close 10:59:38; 40-minute target applies. Trigger attribution uses the current invocation title and supplied hourly schedule; immutable delivery identity is UNVERIFIED.
-VERIFIED FORWARD INTERVALS: 10:04:48--10:06:58; 10:08:12--10:08:28; 10:09:08--10:10:13; 10:11:53--10:14:39; 10:15:48--10:19:47; 10:21:45--10:25:05 BST.
-VERIFIED FORWARD SPAN: 13m36s.
-SUBSTANTIVE UNITS: 5 complete. The new subset-union envelope collapses two fresh scalar false positives from E=15,19 to H=5,7.
+VERIFIED FORWARD INTERVALS: 10:04:48--10:06:58; 10:08:12--10:08:28; 10:09:08--10:10:13; 10:11:53--10:14:39; 10:15:48--10:19:47; 10:21:45--10:25:05; 10:26:39--10:29:50 BST.
+VERIFIED FORWARD SPAN: 16m47s.
+SUBSTANTIVE UNITS: 6 complete. Across the two new Hall-envelope batches: 7,800 certified graphs, 519 live-strip roots, three scalar E>=15 roots, zero H>=15 roots.
 CANONICAL RECORD: project/research/session_logs/2026-09-23/2026-09-23T10-00-38+01-00-canonical.json.
 UNPRESERVED WORK: None.
 DEFERRED ADMIN: Finalize stale 09:00 telemetry in the audit; correct prior audit prose/PDF from 42 to 32.
-NEXT ACTION: Run a larger disjoint actual-D2C H-screen and independently compare H with exact assignment DP on every scalar E>=15 root.
+NEXT ACTION: Compute exact assignment maxima for the two first-batch scalar false positives, then extend the H screen at larger n.
 FOCUSED-SESSION COUNT: 3/24 before this session.
 TARGET RESULT: PENDING.
 MANDATORY CONSTRAINTS: S<=14 is internal/computer-assisted and conditional on the audited bridge; H is a graph-level necessary envelope, not a theorem of abstract profiles; equality only through S<=8; balanced complete bipartite graphs and X_3 remain controls; no external e+disj+X core; general theorem open.

@@ -66,6 +66,12 @@
       "stop": "2026-09-23T10:25:05+01:00",
       "seconds": 200,
       "unit": "Proved the subset-union Hall envelope and screened a fresh disjoint batch of 2,600 fully certified actual-D2C graphs."
+    },
+    {
+      "start": "2026-09-23T10:26:39+01:00",
+      "stop": "2026-09-23T10:29:50+01:00",
+      "seconds": 191,
+      "unit": "Ran a larger disjoint 5,200-graph fully certified Hall-envelope screen and exact assignment DP on its scalar false positive."
     }
   ],
   "forward_research_stop": "PENDING",
@@ -73,9 +79,9 @@
   "preservation_complete": "PENDING",
   "final_report_time": "PENDING",
   "wall_clock_span_to_preservation_complete": "PENDING",
-  "verified_forward_research_span": "00:13:36",
+  "verified_forward_research_span": "00:16:47",
   "preservation_span": "PENDING",
-  "substantive_unit_count": 5,
+  "substantive_unit_count": 6,
   "timestamped_unit_ledger": [
     {
       "unit": 1,
@@ -111,6 +117,13 @@
       "complete": "2026-09-23T10:25:05+01:00",
       "result": "Proved S<=H=max_L(2|union C_i|-sum h_i). Fresh batch: 2,600/2,600 D2C-certified graphs, 169 live-strip maximum roots, two scalar E>=15 roots (max E=19), zero H>=15 roots (max H=7).",
       "evidence": "project/research/general_n/2026-09-23-independent-742-r12-count-audit/SUBSET_UNION_HALL_ENVELOPE.md"
+    },
+    {
+      "unit": 6,
+      "start": "2026-09-23T10:26:39+01:00",
+      "complete": "2026-09-23T10:29:50+01:00",
+      "result": "5,200/5,200 graphs certified; 350 live-strip roots; one E>=15 root (E=17), zero H>=15 roots (max H=10). Exact assignment on the E=17 root equals H=6 across 227 count vectors.",
+      "evidence": "project/research/general_n/2026-09-23-independent-742-r12-count-audit/SUBSET_UNION_HALL_BATCH_TWO.json"
     }
   ],
   "early_stop_check_time": "PENDING",
@@ -127,6 +140,6 @@
     "09:00 predecessor telemetry remains PENDING after hard close; reconciliation deferred."
   ],
   "commit_shas": [],
-  "live_unfinished_line": "Run a larger disjoint actual-D2C screen for H>=15 and independently validate H against exact assignment DP on all scalar E>=15 roots.",
+  "live_unfinished_line": "Independently compute exact assignment maxima for the two first-batch scalar E>=15 roots; then extend the fresh H screen toward larger n.",
   "historical_fragments": []
 }
