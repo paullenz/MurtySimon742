@@ -65,6 +65,12 @@
       "stop": "2026-09-23T06:34:54+01:00",
       "seconds": 24,
       "unit": "Combined robust codegree lower bound with pair-lift marginal upper bound; exact leading coefficients expose a 5.6479 asymptotic closure gap."
+    },
+    {
+      "start": "2026-09-23T06:38:09+01:00",
+      "stop": "2026-09-23T06:40:50+01:00",
+      "seconds": 161,
+      "unit": "Proved the crossed-supplement residual lift for same-source co-selected F-edges; audited 200 actual-D2C fixtures, finding 228/228 local lifts and zero repeated cross-source images, with global injectivity explicitly unproved."
     }
   ],
   "forward_research_stop": "PENDING",
@@ -72,9 +78,9 @@
   "preservation_complete": "PENDING",
   "final_report_time": "PENDING",
   "wall_clock_span_to_preservation_complete": "PENDING",
-  "verified_forward_research_span": "00:08:37",
+  "verified_forward_research_span": "00:11:18",
   "preservation_span": "PENDING",
-  "substantive_unit_count": 7,
+  "substantive_unit_count": 8,
   "timestamped_unit_ledger": [
     {
       "unit": 1,
@@ -124,6 +130,13 @@
       "complete": "2026-09-23T06:34:54+01:00",
       "result": "Exact coefficient accounting: pair-lift sourcewise upper 32304441/1024000000 versus robust lower 31640625/5664582488, a factor-5.6479 gap; required retained capacity <=17.706%.",
       "evidence": "project/research/general_n/2026-09-23-independent-742-r12-count-audit/PAIR_LIFT_CLOSURE_GAP.md"
+    },
+    {
+      "unit": 8,
+      "start": "2026-09-23T06:38:09+01:00",
+      "complete": "2026-09-23T06:40:50+01:00",
+      "result": "Crossed-supplement lift proved locally. 200-fixture audit: 431 co-selected pair occurrences, 228 F-edges, zero crossed-residual violations, zero repeated label-pair/supplement-pair image; cross-source injectivity remains a conjectural next step.",
+      "evidence": "project/research/general_n/2026-09-23-independent-742-r12-count-audit/CROSSED_SUPPLEMENT_LIFT.md"
     }
   ],
   "early_stop_check_time": "PENDING",
@@ -155,6 +168,6 @@
       "published_at": "2026-09-23T06:11:40+01:00"
     }
   ],
-  "live_unfinished_line": "Seek a cross-source reuse injection saving >5.65; reject any factorized sourcewise bound.",
+  "live_unfinished_line": "Prove/refute cross-source injectivity of crossed-supplement images; classify collisions if present.",
   "historical_fragments": []
 }

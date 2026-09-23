@@ -1,0 +1,219 @@
+{
+  "scope": {
+    "fixture_count": 200,
+    "provenance": "200 highest-ranked fresh actual-D2C fixtures retained in stress1/stress2"
+  },
+  "totals": {
+    "total_co_selected_pairs": 431,
+    "F_edge_occurrences": 228,
+    "crossed_residual_violations": 0,
+    "collision_groups": 0,
+    "max_same_pair_and_supplement_pair_multiplicity": 1
+  },
+  "top_rows": [
+    {
+      "n": 17,
+      "seed": 75,
+      "root": 11,
+      "occ": 4,
+      "fedge_occ": 4,
+      "cross_bad": 0,
+      "collision_groups": 0,
+      "max_map_mult": 1
+    },
+    {
+      "n": 13,
+      "seed": 99,
+      "root": 8,
+      "occ": 4,
+      "fedge_occ": 3,
+      "cross_bad": 0,
+      "collision_groups": 0,
+      "max_map_mult": 1
+    },
+    {
+      "n": 13,
+      "seed": 99,
+      "root": 8,
+      "occ": 4,
+      "fedge_occ": 3,
+      "cross_bad": 0,
+      "collision_groups": 0,
+      "max_map_mult": 1
+    },
+    {
+      "n": 13,
+      "seed": 99,
+      "root": 8,
+      "occ": 4,
+      "fedge_occ": 3,
+      "cross_bad": 0,
+      "collision_groups": 0,
+      "max_map_mult": 1
+    },
+    {
+      "n": 13,
+      "seed": 99,
+      "root": 8,
+      "occ": 4,
+      "fedge_occ": 3,
+      "cross_bad": 0,
+      "collision_groups": 0,
+      "max_map_mult": 1
+    },
+    {
+      "n": 13,
+      "seed": 99,
+      "root": 8,
+      "occ": 4,
+      "fedge_occ": 3,
+      "cross_bad": 0,
+      "collision_groups": 0,
+      "max_map_mult": 1
+    },
+    {
+      "n": 13,
+      "seed": 99,
+      "root": 8,
+      "occ": 4,
+      "fedge_occ": 3,
+      "cross_bad": 0,
+      "collision_groups": 0,
+      "max_map_mult": 1
+    },
+    {
+      "n": 13,
+      "seed": 99,
+      "root": 8,
+      "occ": 4,
+      "fedge_occ": 3,
+      "cross_bad": 0,
+      "collision_groups": 0,
+      "max_map_mult": 1
+    },
+    {
+      "n": 13,
+      "seed": 99,
+      "root": 8,
+      "occ": 4,
+      "fedge_occ": 3,
+      "cross_bad": 0,
+      "collision_groups": 0,
+      "max_map_mult": 1
+    },
+    {
+      "n": 13,
+      "seed": 99,
+      "root": 8,
+      "occ": 4,
+      "fedge_occ": 3,
+      "cross_bad": 0,
+      "collision_groups": 0,
+      "max_map_mult": 1
+    },
+    {
+      "n": 13,
+      "seed": 99,
+      "root": 8,
+      "occ": 4,
+      "fedge_occ": 3,
+      "cross_bad": 0,
+      "collision_groups": 0,
+      "max_map_mult": 1
+    },
+    {
+      "n": 13,
+      "seed": 99,
+      "root": 8,
+      "occ": 4,
+      "fedge_occ": 3,
+      "cross_bad": 0,
+      "collision_groups": 0,
+      "max_map_mult": 1
+    },
+    {
+      "n": 13,
+      "seed": 99,
+      "root": 8,
+      "occ": 4,
+      "fedge_occ": 3,
+      "cross_bad": 0,
+      "collision_groups": 0,
+      "max_map_mult": 1
+    },
+    {
+      "n": 13,
+      "seed": 99,
+      "root": 8,
+      "occ": 4,
+      "fedge_occ": 3,
+      "cross_bad": 0,
+      "collision_groups": 0,
+      "max_map_mult": 1
+    },
+    {
+      "n": 13,
+      "seed": 99,
+      "root": 8,
+      "occ": 4,
+      "fedge_occ": 3,
+      "cross_bad": 0,
+      "collision_groups": 0,
+      "max_map_mult": 1
+    },
+    {
+      "n": 13,
+      "seed": 99,
+      "root": 8,
+      "occ": 4,
+      "fedge_occ": 3,
+      "cross_bad": 0,
+      "collision_groups": 0,
+      "max_map_mult": 1
+    },
+    {
+      "n": 13,
+      "seed": 99,
+      "root": 8,
+      "occ": 4,
+      "fedge_occ": 3,
+      "cross_bad": 0,
+      "collision_groups": 0,
+      "max_map_mult": 1
+    },
+    {
+      "n": 13,
+      "seed": 99,
+      "root": 8,
+      "occ": 4,
+      "fedge_occ": 3,
+      "cross_bad": 0,
+      "collision_groups": 0,
+      "max_map_mult": 1
+    },
+    {
+      "n": 13,
+      "seed": 99,
+      "root": 8,
+      "occ": 4,
+      "fedge_occ": 3,
+      "cross_bad": 0,
+      "collision_groups": 0,
+      "max_map_mult": 1
+    },
+    {
+      "n": 13,
+      "seed": 99,
+      "root": 8,
+      "occ": 4,
+      "fedge_occ": 3,
+      "cross_bad": 0,
+      "collision_groups": 0,
+      "max_map_mult": 1
+    }
+  ],
+  "status": "EMPIRICAL_SUPPORT_ONLY_FOR_CROSS_SOURCE_INJECTIVITY",
+  "proved_component": "For a same-source co-selected F-edge {i,k}, the two selected supplements cross to residual incidences.",
+  "unproved_component": "Distinct physical sources cannot produce the same label-pair/supplement-pair image.",
+  "false_start": "An initial complement convention for F produced 91 violations and was rejected; F is the original G[A] graph."
+}
