@@ -10,7 +10,7 @@
   "trigger_attribution_ambiguity": "UNVERIFIED: runtime supplied no immutable delivery identifier",
   "earliest_actual_start": "2026-09-23T12:02:29+01:00",
   "lateness_vs_trigger": "00:01:51",
-  "launch_status": "STARTED",
+  "launch_status": "FINALIZED",
   "started_record_prepared_at": "2026-09-23T12:04:28+01:00",
   "started_record_published_at": "2026-09-23T12:05:35+01:00",
   "first_substantive_checkpoint_time": "2026-09-23T12:07:14+01:00",
@@ -18,7 +18,7 @@
     {
       "segment_id": "segment-1",
       "actual_start": "2026-09-23T12:02:29+01:00",
-      "actual_stop": "PENDING",
+      "actual_stop": "2026-09-23T12:50:27+01:00",
       "role": "forward_research",
       "notes": "11:00 writer's slot had expired; its canonical remained stale ACTIVE, but latest mathematical commits were inspected and no overlap with its closed slot was possible."
     }
@@ -56,12 +56,12 @@
     }
   ],
   "forward_research_stop": "2026-09-23T12:48:37+01:00",
-  "preservation_start": "PENDING",
-  "preservation_complete": "PENDING",
-  "final_report_time": "PENDING",
-  "wall_clock_span_to_preservation_complete": "PENDING",
+  "preservation_start": "2026-09-23T12:48:37+01:00",
+  "preservation_complete": "2026-09-23T12:50:12+01:00",
+  "final_report_time": "2026-09-23T12:50:27+01:00",
+  "wall_clock_span_to_preservation_complete": "00:47:43",
   "verified_forward_research_span": "00:31:37",
-  "preservation_span": "PENDING",
+  "preservation_span": "00:01:35",
   "substantive_unit_count": 6,
   "timestamped_unit_ledger": [
     {
@@ -107,15 +107,15 @@
       "evidence": "project/research/general_n/2026-09-23-independent-742-r12-count-audit/WITNESS_DEFICIT_ROWS_17_18.md"
     }
   ],
-  "early_stop_check_time": "PENDING",
-  "early_stop_check_result": "PENDING",
-  "stop_reason": "PENDING",
+  "early_stop_check_time": "2026-09-23T12:48:37+01:00",
+  "early_stop_check_result": "Only 00:05:01 remained to cutoff while 00:08:23 more verified research was needed; the 40-minute target had become mathematically unattainable within the slot.",
+  "stop_reason": "Stopped at the first corrected n=18 abstract survivor, a natural graph-realizability handoff, after the 40-minute target became unattainable and preserved before cutoff.",
   "research_target_minutes": 40,
   "target_40m_applies": "YES",
-  "target_40m_met": "PENDING",
-  "session_run_status": "STARTED",
-  "focused_session_credit": "PENDING",
-  "compliance_status": "STARTED_WITH_STALE_PREDECESSOR_TELEMETRY",
+  "target_40m_met": "NO",
+  "session_run_status": "RAN",
+  "focused_session_credit": "NO: 31m37s verified, below 40m",
+  "compliance_status": "FINALIZED_ON_TIME_TARGET_SHORTFALL_UNIT3_START_UNVERIFIED_PREDECESSOR_TELEMETRY_STALE",
   "infrastructure_failures": [
     "11:00 predecessor missed final canonical closure before its hard deadline; its durable math commits were retained and its stale ACTIVE telemetry was not rewritten.",
     "Unit 3 start boundary was not authoritatively timestamped after preservation; its result is durable but its elapsed research time is excluded from verified duration."
@@ -125,7 +125,8 @@
     "8f33cc9e2397c010ca785382ebdc8ae36b20948a",
     "08786f119fdef58b336c49945db62f1e2f50b986",
     "a79bcbd22a63ed4c7b7e764797232010ead528c9",
-    "c1ad0a83caf4f9ddf8e855c7ca8369aa7af46122"
+    "c1ad0a83caf4f9ddf8e855c7ca8369aa7af46122",
+    "0de0ee6cc0e34d64a60c685440d207c77fae1cb6"
   ],
   "live_unfinished_line": "Test actual graph realizability of the n=18, Delta=10 abstract survivor d=(8,7), x=(8,7), h=(8,7), preserving either a certified D2C realization or an explicit graph-level obstruction.",
   "historical_fragments": []
