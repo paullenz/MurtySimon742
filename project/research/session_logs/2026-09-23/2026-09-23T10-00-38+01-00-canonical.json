@@ -84,6 +84,12 @@
       "stop": "2026-09-23T10:40:21+01:00",
       "seconds": 297,
       "unit": "Extended the exact-H actual-D2C screen to n=50 on a third disjoint 5,100-graph batch."
+    },
+    {
+      "start": "2026-09-23T10:41:52+01:00",
+      "stop": "2026-09-23T10:45:18+01:00",
+      "seconds": 206,
+      "unit": "Derived the private-edge decomposition of an inclusion-minimal H-maximizer and inspected the twelve highest-H roots of the second fresh batch."
     }
   ],
   "forward_research_stop": "PENDING",
@@ -91,9 +97,9 @@
   "preservation_complete": "PENDING",
   "final_report_time": "PENDING",
   "wall_clock_span_to_preservation_complete": "PENDING",
-  "verified_forward_research_span": "00:24:08",
+  "verified_forward_research_span": "00:27:34",
   "preservation_span": "PENDING",
-  "substantive_unit_count": 8,
+  "substantive_unit_count": 9,
   "timestamped_unit_ledger": [
     {
       "unit": 1,
@@ -150,6 +156,13 @@
       "complete": "2026-09-23T10:40:21+01:00",
       "result": "5,100/5,100 graphs certified over n=17..50; 228 live-strip maximum roots; max E=14, max exact H=9; no H>=15 root.",
       "evidence": "project/research/general_n/2026-09-23-independent-742-r12-count-audit/EXACT_HALL_BATCH_THREE.json"
+    },
+    {
+      "unit": 9,
+      "start": "2026-09-23T10:41:52+01:00",
+      "complete": "2026-09-23T10:45:18+01:00",
+      "result": "For minimal maximizing L, private counts p_i satisfy 2p_i-h_i>=1 and H=sum_i(2p_i-h_i)+2q, where q counts shared union edges. Thus H>=15 forces either large private surplus or quantified overlap. Top-root replay: max H=10 at n=40 with private surpluses 6,2 and q=1.",
+      "evidence": "project/research/general_n/2026-09-23-independent-742-r12-count-audit/MINIMAL_HALL_MAXIMIZER_GEOMETRY.md"
     }
   ],
   "early_stop_check_time": "PENDING",
@@ -166,6 +179,12 @@
     "09:00 predecessor telemetry remains PENDING after hard close; reconciliation deferred."
   ],
   "commit_shas": [],
-  "live_unfinished_line": "Derive structural consequences of an H>=15 inclusion-minimal maximizer, especially private-certificate lower bounds and their collision/degree implications.",
-  "historical_fragments": []
+  "live_unfinished_line": "Exploit the unique-common-neighbor injection behind each private edge to relate H>=15 to B-edge and degree budgets; test the resulting inequality on hostile top-H roots.",
+  "historical_fragments": [],
+  "same_trigger_reentries": [
+    {
+      "observed_at": "2026-09-23T10:43:00+01:00",
+      "disposition": "Primary session already active with eight durable checkpoints; continued same canonical session, no duplicate credit."
+    }
+  ]
 }

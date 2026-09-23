@@ -5,18 +5,18 @@ Canonical repository: `paullenz/MurtySimon742`. Date: 23 September 2026.
 Active target: a genuinely independent proof of Erdős #742 / the Murty–Simon inequality e(G)<=floor(n^2/4), preferably with the equality characterization. Forward priority is the project’s own complement / residual / Hall / profile / realizability route, not a reconstruction of the external e+disj+X proof. The first focused session produced the internally checked candidate threshold `Delta>=250n/429`, shrinking the live strip to `n/2<Delta<250n/429`. The theorem and its inherited graph-to-profile spine remain candidate/internal-review mathematics. A 24-focused-session go/no-go gate applies. Prior eventual-D2C work remains preserved but is no longer the active forward objective.
 
 <!-- CURRENT-STATUS:START -->
-CHECKPOINT CLASS: VERIFIED_INTERNAL_EXACT_HALL_BATCH_THREE
+CHECKPOINT CLASS: VERIFIED_INTERNAL_MINIMAL_HALL_GEOMETRY
 WORK MODE: MATH
 INSPECTED PREDECESSOR: b67d73be41214916c90ac31c23838061a3825d51.
-LAST VERIFIED RESULT: A third disjoint exact-H screen extended to n=50. All 5,100 generated graphs passed independent every-edge D2C certification. Among 228 live-strip maximum roots, maximum scalar E was 14 and maximum exact H was 9; there was no H>=15 root.
-ACTIVE SESSION: Scheduled trigger 2026-09-23T10:00:38+01:00; actual start 10:00:51; research cutoff 10:53:38; hard close 10:59:38; 40-minute target applies. Trigger attribution uses the current invocation title and supplied hourly schedule; immutable delivery identity is UNVERIFIED.
-VERIFIED FORWARD INTERVALS: 10:04:48--10:06:58; 10:08:12--10:08:28; 10:09:08--10:10:13; 10:11:53--10:14:39; 10:15:48--10:19:47; 10:21:45--10:25:05; 10:26:39--10:29:50; 10:31:12--10:33:36; 10:35:24--10:40:21 BST.
-VERIFIED FORWARD SPAN: 24m08s.
-SUBSTANTIVE UNITS: 8 complete. The three new exact-H batches total 12,900 certified graphs and 747 live-strip maximum roots, with no H>=15 root.
+LAST VERIFIED RESULT: If L is inclusion-minimal among exact-H maximizers, let P_i be certificate edges private to i within L and q the number of union edges shared by at least two labels. Then 2|P_i|-h_i>=1 for every i and H=sum_i(2|P_i|-h_i)+2q. Thus any H>=15 obstruction must carry at least fifteen units of private surplus plus twice its overlap. In the second-batch top-root replay, maximum H=10 occurs at n=40 with two labels, private surpluses 6 and 2, and one shared union edge.
+ACTIVE SESSION: Scheduled trigger 2026-09-23T10:00:38+01:00; actual start 10:00:51; research cutoff 10:53:38; hard close 10:59:38; 40-minute target applies. A same-trigger watchdog re-entry at 10:43 found the primary run active and received no duplicate credit. Trigger attribution uses the current invocation title and supplied hourly schedule; immutable delivery identity is UNVERIFIED.
+VERIFIED FORWARD INTERVALS: 10:04:48--10:06:58; 10:08:12--10:08:28; 10:09:08--10:10:13; 10:11:53--10:14:39; 10:15:48--10:19:47; 10:21:45--10:25:05; 10:26:39--10:29:50; 10:31:12--10:33:36; 10:35:24--10:40:21; 10:41:52--10:45:18 BST.
+VERIFIED FORWARD SPAN: 27m34s.
+SUBSTANTIVE UNITS: 9 complete. The exact-H obstruction now has an explicit private/shared decomposition; no H>=15 root has been observed.
 CANONICAL RECORD: project/research/session_logs/2026-09-23/2026-09-23T10-00-38+01-00-canonical.json.
 UNPRESERVED WORK: None.
 DEFERRED ADMIN: Finalize stale 09:00 telemetry in the audit; correct prior audit prose/PDF from 42 to 32.
-NEXT ACTION: Derive structural consequences of an H>=15 inclusion-minimal maximizer, especially private-certificate lower bounds and their collision/degree implications.
+NEXT ACTION: Use the unique-common-neighbor injection behind private edges to relate H>=15 to B-edge and degree budgets, then test the inequality on hostile top-H roots.
 FOCUSED-SESSION COUNT: 3/24 before this session.
 TARGET RESULT: PENDING.
 MANDATORY CONSTRAINTS: S<=14 is internal/computer-assisted and conditional on the audited bridge; H is exact only for the defined graph-level certificate-choice interface; equality only through S<=8; balanced complete bipartite graphs and X_3 remain controls; no external e+disj+X core; general theorem open.
