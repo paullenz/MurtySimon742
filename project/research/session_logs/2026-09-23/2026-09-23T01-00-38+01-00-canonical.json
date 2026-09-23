@@ -12,8 +12,9 @@
   "lateness_vs_trigger": "00:01:19",
   "launch_status": "STARTED",
   "started_record_prepared_at": "2026-09-23T01:03:17+01:00",
-  "started_record_published_at": "PENDING_REMOTE_CONFIRMATION",
-  "first_substantive_checkpoint_time": "PENDING",
+  "started_record_published_at": "2026-09-23T01:06:05+01:00",
+  "launch_target_result": "MISSED_BY_00:00:27",
+  "first_substantive_checkpoint_time": "PENDING_REMOTE_CONFIRMATION",
   "segments": [
     {
       "segment_id": "segment-1",
@@ -23,16 +24,31 @@
       "notes": "Launch and continuity initialization; administration excluded from research intervals."
     }
   ],
-  "forward_research_intervals": [],
+  "forward_research_intervals": [
+    {
+      "start": "2026-09-23T01:06:53+01:00",
+      "stop": "2026-09-23T01:08:48+01:00",
+      "seconds": 115,
+      "unit": "Independent aggregate audit of the eight saved r=12 support-ten source shards."
+    }
+  ],
   "forward_research_stop": "PENDING",
   "preservation_start": "PENDING",
   "preservation_complete": "PENDING",
   "final_report_time": "PENDING",
   "wall_clock_span_to_preservation_complete": "PENDING",
-  "verified_forward_research_span": "00:00:00",
+  "verified_forward_research_span": "00:01:55",
   "preservation_span": "PENDING",
-  "substantive_unit_count": 0,
-  "timestamped_unit_ledger": [],
+  "substantive_unit_count": 1,
+  "timestamped_unit_ledger": [
+    {
+      "unit": 1,
+      "start": "2026-09-23T01:06:53+01:00",
+      "complete": "2026-09-23T01:08:48+01:00",
+      "result": "COUNT_MISMATCH_FREEZE: the eight saved source shards cover 6,386 kernels but contain 32 distinct feasible rows, not the reported 42; shard counts are [10,11,0,0,6,5,0,0].",
+      "evidence": "project/research/general_n/2026-09-23-independent-742-r12-count-audit/R12_SUPPORT10_COUNT_MISMATCH.md"
+    }
+  ],
   "early_stop_check_time": "PENDING",
   "early_stop_check_result": "PENDING",
   "stop_reason": "PENDING",
@@ -42,9 +58,28 @@
   "session_run_status": "STARTED",
   "focused_session_credit": "PENDING",
   "compliance_status": "STARTED_PENDING_FINALIZATION",
-  "infrastructure_failures": [],
-  "commit_shas": [],
-  "live_unfinished_line": "Exact helper-aware supplement screen on the 42 r=12 support-ten (2,2,1^8) kernels.",
+  "infrastructure_failures": [
+    {
+      "time": "2026-09-23T01:03:35+01:00",
+      "operation": "initial local git push",
+      "error": "HTTPS credentials unavailable to git CLI",
+      "pivot": "Used the requested authenticated GitHub connector to create one atomic tree/commit and fast-forward main; remote confirmation completed at 01:06:17."
+    }
+  ],
+  "commit_shas": [
+    {
+      "kind": "STARTED",
+      "sha": "28f01aea1f1de1f215e47d7bfb36d5bb3f1417ca",
+      "published_at": "2026-09-23T01:06:05+01:00"
+    }
+  ],
+  "live_unfinished_line": "Reconcile the saved 32-row source survivor set against the reported count 42 before any r=12 supplement closure; independently replay the source stage, then screen the reconciled survivors.",
   "historical_fragments": [],
-  "research_units": []
+  "research_units": [
+    {
+      "unit": 1,
+      "status": "COMPLETE_COUNT_MISMATCH_FREEZE",
+      "evidence": "project/research/general_n/2026-09-23-independent-742-r12-count-audit/R12_SUPPORT10_COUNT_MISMATCH.md"
+    }
+  ]
 }

@@ -5,33 +5,33 @@ Canonical repository: `paullenz/MurtySimon742`. Date: 23 September 2026.
 Active target: a genuinely independent proof of Erdős #742 / the Murty–Simon inequality e(G)<=floor(n^2/4), preferably with the equality characterization. Forward priority is the project’s own complement / residual / Hall / profile / realizability route, not a reconstruction of the external e+disj+X proof. The first focused session produced the internally checked candidate threshold `Delta>=250n/429`, shrinking the live strip to `n/2<Delta<250n/429`. The theorem and its inherited graph-to-profile spine remain candidate/internal-review mathematics. A 24-focused-session go/no-go gate applies. Prior eventual-D2C work remains preserved but is no longer the active forward objective.
 
 <!-- CURRENT-STATUS:START -->
-CHECKPOINT CLASS: SCHEDULED_RESEARCH_STARTED
+CHECKPOINT CLASS: WIP_UNVERIFIED_COUNT_MISMATCH_FREEZE
 
 WORK MODE: MATH
 
 INSPECTED PREDECESSOR: f2f951e538c297243b4dbb02140fc8f96df97f5b.
 
-LAST VERIFIED RESULT: Mathematical status unchanged at launch. The independently reconstructed graph-to-profile bridge replays on 757 actual D2C graphs, 1,256 maximum-degree roots and 2,722 legal selections; the internal finite pipeline retains the edge bound through S<=13 and balanced-complete-bipartite equality through S<=8. These remain internal candidate/computer-assisted results, not external verification or a full proof.
+LAST VERIFIED RESULT: The eight committed r=12 support-ten `(2,2,1^8)` source shards cover all 6,386 saved strict kernels but contain 32 distinct feasible rows, with counts `[10,11,0,0,6,5,0,0]`, not the reported 42. This is a load-bearing count mismatch: freeze the r=12 supplement conclusion and any `S<=14` consequence pending independent source-stage reconciliation. The prior internally audited edge bound through `S<=13` and equality through `S<=8` are not changed by this mismatch.
 
 ACTIVE SESSION: Scheduled trigger 2026-09-23T01:00:38+01:00; actual start 2026-09-23T01:01:57+01:00; lateness 1m19s; research cutoff 01:53:38; hard close 01:59:38; 40-minute target applies. Trigger attribution uses the current invocation title and supplied hourly schedule; immutable delivery identity is UNVERIFIED.
 
-VERIFIED FORWARD INTERVALS: None yet; launch administration is excluded.
+VERIFIED FORWARD INTERVALS: 01:06:53--01:08:48 BST (independent saved-shard aggregate audit).
 
-VERIFIED FORWARD SPAN: 0m00s.
+VERIFIED FORWARD SPAN: 1m55s.
 
-SUBSTANTIVE UNITS: 0.
+SUBSTANTIVE UNITS: 1.
 
 CANONICAL RECORD: project/research/session_logs/2026-09-23/2026-09-23T01-00-38+01-00-canonical.json.
 
-UNPRESERVED WORK: None at launch.
+UNPRESERVED WORK: None after this checkpoint.
 
 DEFERRED ADMIN: Verify the first three post-cutover launches at the next audit; no settings claim substitutes for observed telemetry.
 
-NEXT ACTION: Finish the exact helper-aware supplement screen on the 42 r=12 support-ten (2,2,1^8) kernels. Then independently reimplement one load-bearing r=11 orbit/source stage before extending demand or returning to threshold work.
+NEXT ACTION: Independently replay or reimplement the r=12 support-ten source stage to reconcile 32 saved survivors against the reported 42; only then run the helper-aware supplement screen on the reconciled set.
 
 FOCUSED-SESSION COUNT: 1/24 before this session; credit pending a complete evidenced >=40-minute focused record.
 
-TARGET RESULT: PENDING. Session status STARTED; preservation completion PENDING; compliance STARTED_PENDING_FINALIZATION.
+TARGET RESULT: PENDING. STARTED checkpoint published at 01:06:05 BST, 27 seconds outside the five-minute launch target after a local git authentication failure and successful GitHub-connector fallback. Session status RAN; preservation completion PENDING; compliance pending finalization.
 
 MANDATORY CONSTRAINTS: The unfinished r=12 solver is not evidence; finite profile feasibility is not graph realizability; equality is characterized only through S<=8; the 250/429 threshold is internal candidate mathematics; balanced complete bipartite graphs and X_3 remain mandatory controls; no use of the external e+disj+X core; the general theorem remains open. Freeze a finite conclusion on any independent count mismatch.
 <!-- CURRENT-STATUS:END -->
