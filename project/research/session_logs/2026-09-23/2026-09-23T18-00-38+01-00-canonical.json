@@ -60,6 +60,12 @@
       "stop": "2026-09-23T18:40:31+01:00",
       "seconds": 582,
       "unit": "Exact stable-index range 27,401-27,900 closed with zero abstract survivors; closest gap 9."
+    },
+    {
+      "start": "2026-09-23T18:41:50+01:00",
+      "stop": "2026-09-23T18:46:40+01:00",
+      "seconds": 290,
+      "unit": "Exact stable-index range 27,901-28,200 closed with zero abstract survivors; closest gap 10."
     }
   ],
   "forward_research_stop": "PENDING",
@@ -67,9 +73,9 @@
   "preservation_complete": "PENDING",
   "final_report_time": "PENDING",
   "wall_clock_span_to_preservation_complete": "PENDING",
-  "verified_forward_research_span": "00:24:31",
+  "verified_forward_research_span": "00:29:21",
   "preservation_span": "PENDING",
-  "substantive_unit_count": 5,
+  "substantive_unit_count": 6,
   "timestamped_unit_ledger": [
     {
       "unit": 1,
@@ -105,6 +111,13 @@
       "complete": "2026-09-23T18:40:31+01:00",
       "result": "Closed exact stable-index range 27,401-27,900 with zero abstract survivors. Closest tuple d=(5,3,2,2,1,1,1), x=(6,4,2,2,2,2,2) has exact minimum deficit 25, nine above Dmax=16.",
       "evidence": "project/research/general_n/2026-09-23-independent-742-r18-row-closure/N18_RANGE_27401_27900.md"
+    },
+    {
+      "unit": 6,
+      "start": "2026-09-23T18:41:50+01:00",
+      "complete": "2026-09-23T18:46:40+01:00",
+      "result": "Closed exact stable-index range 27,901-28,200 with zero abstract survivors. Closest tuple d=(5,3,2,2,1,1,1), x=(6,6,2,2,2,2,2) has exact minimum deficit 26, ten above Dmax=16.",
+      "evidence": "project/research/general_n/2026-09-23-independent-742-r18-row-closure/N18_RANGE_27901_28200.md"
     }
   ],
   "early_stop_check_time": "PENDING",
@@ -124,8 +137,9 @@
     "07715606f568934524ea202d18b3452e71635986",
     "f72224a721857c0feee97b2efee770c7ca3e8860",
     "4ded9beebebd0c0a55fa2f8b68f07c9758161302",
-    "d7b40ec9367a7541b6359eff5a3b155b06bca0cc"
+    "d7b40ec9367a7541b6359eff5a3b155b06bca0cc",
+    "3bd67e4c1fd97375918e891b3c3fe4c2d00b24fa"
   ],
-  "live_unfinished_line": "Use remaining research window for one bounded exact shard from 27,901; preserve any completion or partial boundary.",
+  "live_unfinished_line": "If more than five minutes remain before cutoff, run one final small bounded shard from 28,201; otherwise finalize.",
   "historical_fragments": []
 }
