@@ -5,15 +5,15 @@ Canonical repository: `paullenz/MurtySimon742`. Date: 23 September 2026.
 Active target: a genuinely independent proof of Erdős #742 / the Murty–Simon inequality e(G)<=floor(n^2/4), preferably with the equality characterization. Forward priority is the project’s own complement / residual / Hall / profile / realizability route, not a reconstruction of the external e+disj+X proof. The first focused session produced the internally checked candidate threshold `Delta>=250n/429`, shrinking the live strip to `n/2<Delta<250n/429`. The theorem and its inherited graph-to-profile spine remain candidate/internal-review mathematics. A 24-focused-session go/no-go gate applies. Prior eventual-D2C work remains preserved but is no longer the active forward objective.
 
 <!-- CURRENT-STATUS:START -->
-CHECKPOINT CLASS: VERIFIED_INTERNAL_ROWS_14_17_CLOSED_FIRST_ROW18_SURVIVOR
-WORK MODE: FINALIZED
-INSPECTED PREDECESSOR: 2fe23cf62d5cd7abffb7bf74c372a6cae407c86f.
+CHECKPOINT CLASS: RECOVERED_13_START
+WORK MODE: MATH
+INSPECTED PREDECESSOR: 307807137a670f34d55b497f287394f2ff315047.
 LAST VERIFIED RESULT: The graph-source constraint x_i <= (Delta-h_i)(Delta-2) closes corrected abstract witness rows n=15,Delta=8; n=16,Delta=9; and n=17,Delta=9. At n=18,Delta=10 the first corrected abstract survivor is d=(8,7), x=(8,7), h=(8,7), with exact minimum deficit 13 <= Dmax=16. It uses seven shared right endpoints and one label-0-only endpoint. This is abstract-interface feasibility only; actual D2C graph realizability is open.
-COMPLETED SESSION: Scheduled trigger 2026-09-23T12:00:38+01:00; actual start 12:02:29; STARTED published 12:05:35; forward research stopped 12:48:37; preservation completed 12:50:12, before cutoff 12:53:38 and hard close 12:59:38. Immutable delivery identity is UNVERIFIED.
-VERIFIED FORWARD SPAN: 31m37s. Unit 3 elapsed time remains excluded because its start boundary was UNVERIFIED.
-SESSION RESULT: RAN/FINALIZED; 40-minute target NOT MET. The target became unattainable at the final natural checkpoint: 5m01s remained to cutoff but 8m23s more verified research was required.
-SUBSTANTIVE UNITS: 6. Focused-session counter remains 3/24.
-CANONICAL RECORD: project/research/session_logs/2026-09-23/2026-09-23T12-00-38+01-00-canonical.json.
+ACTIVE SESSION: Scheduled trigger 2026-09-23T13:00:38+01:00; no durable STARTED record existed at secondary-watchdog inspection. Recovery began at 13:08:53, 8m15s late; cutoff 13:53:38; hard close 13:59:38. Trigger attribution uses the secondary launch-recovery watchdog runtime metadata; immutable primary delivery identity remains UNVERIFIED.
+VERIFIED FORWARD SPAN: 0m00s at STARTED publication.
+SESSION RESULT: ACTIVE/RECOVERED; 40-minute target applies because more than 40 minutes remained at actual recovery start.
+SUBSTANTIVE UNITS: 0 at STARTED publication. Focused-session counter remains 3/24 pending completion.
+CANONICAL RECORD: project/research/session_logs/2026-09-23/2026-09-23T13-00-38+01-00-canonical.json.
 UNPRESERVED WORK: None.
 DEFERRED ADMIN: Audit/finalize stale 09:00 and 11:00 telemetry; correct prior audit prose/PDF from 42 to 32.
 NEXT ACTION: Test actual graph realizability of the n=18,Delta=10 survivor d=(8,7), x=(8,7), h=(8,7), preserving either a certified D2C realization or an explicit graph-level obstruction.
