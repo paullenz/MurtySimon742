@@ -25,9 +25,16 @@
     {
       "segment_id": "segment-2",
       "actual_start": "2026-09-23T22:11:09+01:00",
-      "actual_stop": "UNVERIFIED",
+      "actual_stop": "2026-09-23T22:45:57+01:00",
       "role": "forward_research",
       "notes": "Same-trigger re-entry continued the 22:00 session after an executor-session transport interruption; no duplicate session credit."
+    },
+    {
+      "segment_id": "segment-3",
+      "actual_start": "2026-09-23T22:45:57+01:00",
+      "actual_stop": "2026-09-23T22:50:01+01:00",
+      "role": "forward_research",
+      "notes": "Same-trigger re-entry arrived while the bounded 39,001-39,250 process was already running; it continued the same session and created no duplicate credit."
     }
   ],
   "forward_research_intervals": [
@@ -48,16 +55,22 @@
       "stop": "2026-09-23T22:44:08+01:00",
       "seconds": 838,
       "unit": "Exact stable-index range 38,301-39,000 closed with zero abstract survivors; closest gap 10."
+    },
+    {
+      "start": "2026-09-23T22:45:28+01:00",
+      "stop": "2026-09-23T22:50:01+01:00",
+      "seconds": 273,
+      "unit": "Exact stable-index range 39,001-39,250 closed with zero abstract survivors; closest gap 11."
     }
   ],
-  "forward_research_stop": "PENDING",
-  "preservation_start": "PENDING",
+  "forward_research_stop": "2026-09-23T22:50:01+01:00",
+  "preservation_start": "2026-09-23T22:50:17+01:00",
   "preservation_complete": "PENDING",
   "final_report_time": "PENDING",
   "wall_clock_span_to_preservation_complete": "PENDING",
-  "verified_forward_research_span": "00:27:32",
+  "verified_forward_research_span": "00:32:05",
   "preservation_span": "PENDING",
-  "substantive_unit_count": 3,
+  "substantive_unit_count": 4,
   "timestamped_unit_ledger": [
     {
       "unit": 1,
@@ -79,17 +92,24 @@
       "complete": "2026-09-23T22:44:08+01:00",
       "result": "Closed exact stable-index range 38,301-39,000 with zero abstract survivors. Closest tuple d=(4,3,3,2,1,1,1), x=(4,3,3,4,2,2,2), h=(4,3,3,6,3,3,3) has minimum deficit 26, ten above Dmax=16.",
       "evidence": "project/research/general_n/2026-09-23-independent-742-r22-row-closure/N18_RANGE_38301_39000.md"
+    },
+    {
+      "unit": 4,
+      "start": "2026-09-23T22:45:28+01:00",
+      "complete": "2026-09-23T22:50:01+01:00",
+      "result": "Closed exact stable-index range 39,001-39,250 with zero abstract survivors. Closest tuple d=(4,3,3,2,1,1,1), x=(4,5,5,2,2,2,2), h=(4,7,7,2,3,3,3) has minimum deficit 27, eleven above Dmax=16.",
+      "evidence": "project/research/general_n/2026-09-23-independent-742-r22-row-closure/N18_RANGE_39001_39250.md"
     }
   ],
-  "early_stop_check_time": "PENDING",
-  "early_stop_check_result": "PENDING",
-  "stop_reason": "PENDING",
+  "early_stop_check_time": "2026-09-23T22:50:17+01:00",
+  "early_stop_check_result": "Only 3m21s remained to the forward-research cutoff, below the five-minute continuation threshold; stopped at the completed bounded shard.",
+  "stop_reason": "Stopped at a natural completed shard with fewer than five minutes remaining to the forward-research cutoff; preserved rather than risk an unfinishable unit.",
   "research_target_minutes": 40,
   "target_40m_applies": true,
-  "target_40m_met": "PENDING",
-  "session_run_status": "ACTIVE",
-  "focused_session_credit": "PENDING; counter remains 6/24.",
-  "compliance_status": "PENDING",
+  "target_40m_met": false,
+  "session_run_status": "RAN",
+  "focused_session_credit": "No new gate credit; counter remains 6/24 because verified research was below 40 minutes.",
+  "compliance_status": "SUBSTANTIVE_BUT_TARGET_NOT_MET; STARTED and first checkpoint targets met; exact closed intervals only; preservation finalization pending.",
   "infrastructure_failures": [
     "Executor-session key changed during the attempted 37,501-38,500 run; the process terminated without a completion boundary, so no time or result from that attempt was credited.",
     "Oversized attempted range 38,301-40,300 was stopped after observed progress through 38,650 because it could not safely finish before cutoff; its time and partial result were not credited. The completed bounded replay supersedes its prefix."
@@ -97,8 +117,9 @@
   "commit_shas": [
     "d3c9e6f453759654ea5554993bca04bc85575fb9",
     "6ee1629235eaff61d4dd4d626b9eea934c322f79",
-    "af62f04551dd6e5c39d6437f98fc660f615a9c74"
+    "af62f04551dd6e5c39d6437f98fc660f615a9c74",
+    "de1b5d81e294d052e1ec0ff116d0f66e315245cd"
   ],
-  "live_unfinished_line": "Continue exact stable-index enumeration from 39,001; full n=18 row closure remains open.",
+  "live_unfinished_line": "Continue exact stable-index enumeration from 39,251; full n=18 row closure remains open.",
   "historical_fragments": []
 }
