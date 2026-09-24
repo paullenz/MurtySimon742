@@ -5,19 +5,19 @@ Canonical repository: `paullenz/MurtySimon742`. Date: 24 September 2026.
 Active target: a genuinely independent proof of Erdős #742 / the Murty–Simon inequality e(G)<=floor(n^2/4), preferably with the equality characterization. Forward priority is the project’s own complement / residual / Hall / profile / realizability route, not a reconstruction of the external e+disj+X proof. The first focused session produced the internally checked candidate threshold `Delta>=250n/429`, shrinking the live strip to `n/2<Delta<250n/429`. The theorem and its inherited graph-to-profile spine remain candidate/internal-review mathematics. A 24-focused-session go/no-go gate applies. Prior eventual-D2C work remains preserved but is no longer the active forward objective.
 
 <!-- CURRENT-STATUS:START -->
-CHECKPOINT CLASS: LAUNCH_RECOVERY_STARTED
+CHECKPOINT CLASS: DEMAND15_EXACT_87_B_SKELETON_ACTIVE
 WORK MODE: MATH
-INSPECTED PREDECESSOR: 023cfd6fa7f562ed1d901580d5f83fe4032d46ee.
-LAST VERIFIED RESULT: Mathematical state unchanged at STARTED publication. Prior verified result excludes audited n=18 profile d=(8,7), x=(8,8), h=(8,9) via the corrected C_i convention and singleton-source saturation; four leading profiles remain feasible in the necessary-condition joint B-vertex model.
-SESSION: Scheduled 05:00:38; launch-recovery watchdog actual entry 05:06:47; STARTED publication timestamp 05:08:00; primary launch had no durable STARTED record when checked. Same trigger only; immutable scheduler attribution UNVERIFIED.
-VERIFIED FORWARD SPAN: 0m00s at STARTED publication.
+INSPECTED PREDECESSOR: 35c7805d2c2eb576fb48a03344694ec75fe8f550.
+LAST VERIFIED RESULT: The latest durable mathematical artifact already eliminated saturated `(8,6,1)` and `(8,5,2)` via the membership-step obstruction, correcting the stale four-profile wording in the preceding handoff. New bounded work sharpens the surviving saturated `(8,7)` profile: its B-membership counts force an exact cross-type skeleton with six `p-E` edges, six `E-(q or r)` edges, `s-p/s-q/s-r`, no `s-E` or `p-q/p-r` edges, and the two active labels nonadjacent. Vertex `p` has nine forced full-graph neighbours and at most one further inactive-A neighbour. This is graph-interface structure, not yet a contradiction.
+SESSION: Scheduled 05:00:38; launch-recovery watchdog actual entry 05:06:47; STARTED publication timestamp 05:08:00; first substantive checkpoint 05:11:06; primary launch had no durable STARTED record when checked. Same trigger only; immutable scheduler attribution UNVERIFIED.
+VERIFIED FORWARD SPAN: 0m41s.
 SESSION RESULT: ACTIVE_RECOVERED; +5-minute STARTED target MISSED; 40-minute target pending; no duplicate credit.
-SUBSTANTIVE UNITS: 0.
+SUBSTANTIVE UNITS: 1. Focused-session counter remains 6/24 pending completion.
 CANONICAL RECORD: project/research/session_logs/2026-09-24/2026-09-24T05-00-38+01-00-canonical.json.
-UNPRESERVED WORK: None.
+UNPRESERVED WORK: None after this checkpoint.
 DEFERRED ADMIN: None.
-NEXT ACTION: Attack simple-graph/self-incidence and shared source-capacity restrictions on the four remaining audited dense n18 profiles `(8,7)`, `(8,6,1)`, `(8,5,2)`, `(5,5,5)` using the corrected joint B-vertex model; do not return to scalar-only enumeration.
-MANDATORY CONSTRAINTS: Internal evidence only; S<=14 remains computer-assisted; equality only through S<=8; corrected joint model is necessary not sufficient; n16 range 1-200 and suffix beyond 3200 remain open; balanced-bipartite/X3 controls unchanged; general theorem open.
+NEXT ACTION: Exploit the exact `(8,7)` B-skeleton with full edge-criticality and A-side unique-common-neighbour exclusions; do not return to scalar-only enumeration.
+MANDATORY CONSTRAINTS: Internal evidence only; S<=14 remains computer-assisted; equality only through S<=8; corrected joint model and this local skeleton are necessary graph-interface structure, not a complete realizability theorem; n16 range 1-200 and suffix beyond 3200 remain open; balanced-bipartite/X3 controls unchanged; general theorem open.
 <!-- CURRENT-STATUS:END -->
 
 ## Latest adversarial audit - 24 September 2026

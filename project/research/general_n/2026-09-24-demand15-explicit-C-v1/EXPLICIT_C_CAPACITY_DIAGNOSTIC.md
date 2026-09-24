@@ -104,6 +104,31 @@ For the saturated `(8,7)` profile, `|C_0|=2`, `|C_1|=3`. The same upward-closure
 
 Hence the unique type-0 vertex must source all six empty-type endpoints for label 0, the two type-1 vertices collectively source all six empty-type endpoints for label 1, and the unique type-01 vertex supplies the required source edge to the type-0 vertex and to both type-1 vertices. This is a rigid local geometry, but it is not yet a contradiction.
 
+### Exact B-skeleton forced by unique-common-neighbour witnesses
+
+Write the six empty-type vertices as `E`, the unique type-0 vertex as `p`, the two type-1 vertices as `q,r`, and the unique type-01 vertex as `s`.
+
+The saturated witness assignments force more than the membership counts:
+
+- for every `e in E`, the label-0 witness source is `p`, so `pe` is an edge and `se` is not;
+- for every `e in E`, the label-1 witness source is exactly one of `q,r`; hence `e` is adjacent to exactly one of `q,r` and is nonadjacent to the other as well as to `s`;
+- `p` is an endpoint for label 1 with unique source `s`, so `ps` is an edge and `pq,pr` are nonedges;
+- `q` and `r` are endpoints for label 0 with unique source `s`, so `sq,sr` are edges and again `pq,pr` are nonedges.
+
+Thus, apart from edges internal to `E` and the optional edge `qr`, the entire induced graph on `B` is fixed: six edges `pE`, six edges from `E` split between `q` and `r`, and the three edges `sp,sq,sr`. In particular
+
+    d_B(p)=7,     d_B(s)=3,
+
+and if `k` of the six empty vertices use `q` as their label-1 source then
+
+    d_B(q)=1+k+epsilon,     d_B(r)=1+(6-k)+epsilon,
+
+where `epsilon=1` iff `qr` is present.
+
+The same unique-common-neighbour condition also forces the two active labels to be nonadjacent. For example `p` is adjacent to label 0 but has label 1 as a nonneighbor with unique common neighbor `s`; an edge between labels 0 and 1 would make label 0 a second common neighbor of `p` and label 1. Hence `01` is a nonedge.
+
+Since `p` is adjacent to the root, label 0, all six vertices of `E`, and `s`, it already has nine forced neighbours in the full graph. Therefore `p` has at most one further neighbour in the five inactive `A`-vertices. This does not yet contradict `Delta=10`, but it sharply reduces the remaining realization problem and exposes the next place where full edge-criticality or A-side common-neighbour constraints must act.
+
 ## Remaining live geometry
 
 At this stage the corrected graph-interface route has eliminated the `(8,8)` two-label profile and the two three-label profiles with a two-point `C_0`. The `(8,7)` local geometry survives and `(5,5,5)` is not excluded by upward closure alone. The repository already contains a separately audited staged exact D2C exclusion of the fixed `(5,5,5)` geometry; that result is not rederived here and should not be conflated with this independent local route.

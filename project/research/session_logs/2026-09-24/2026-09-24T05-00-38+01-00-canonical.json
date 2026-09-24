@@ -10,7 +10,7 @@
   "trigger_attribution": "same-hour scheduled Independent #742 Research trigger; immutable scheduler attribution UNVERIFIED",
   "launch_status": "RECOVERED_PRIMARY_MISSING_START",
   "started_record_published_at": "2026-09-24T05:08:00+01:00",
-  "first_substantive_checkpoint_at": "PENDING",
+  "first_substantive_checkpoint_at": "2026-09-24T05:11:06+01:00",
   "segments": [
     {
       "segment_id": "launch-recovery-watchdog-1",
@@ -20,16 +20,20 @@
       "notes": "Primary scheduled launch had no durable STARTED record when checked at recovery invocation. This is recovery of the SAME 05:00:38 trigger only, not an additional session or duplicate credit."
     }
   ],
-  "forward_research_intervals": [],
+  "forward_research_intervals": [
+    {"start":"2026-09-24T05:10:25+01:00","stop":"2026-09-24T05:11:06+01:00","seconds":41,"unit":"derive exact forced B-skeleton and active-label nonedge for surviving saturated (8,7) profile"}
+  ],
   "forward_research_stop": "PENDING",
   "preservation_start": "PENDING",
   "preservation_complete": "PENDING",
   "final_report_time": "PENDING",
   "wall_clock_span_to_preservation_complete": "PENDING",
-  "verified_forward_research_span": "0m00s",
+  "verified_forward_research_span": "0m41s",
   "preservation_span": "PENDING",
-  "substantive_unit_count": 0,
-  "timestamped_unit_ledger": [],
+  "substantive_unit_count": 1,
+  "timestamped_unit_ledger": [
+    {"completed_at":"2026-09-24T05:11:06+01:00","unit":"Exact B-skeleton lemma for (8,7): forced p-E, split q/r-E, s-p/q/r edges; s-E and p-q/r nonedges; active labels forced nonadjacent; p has nine forced full-graph neighbours."}
+  ],
   "early_stop_check_time": "PENDING",
   "early_stop_check_result": "PENDING",
   "stop_reason": "PENDING",
@@ -41,8 +45,8 @@
     "Primary scheduled launch missing durable STARTED record at recovery check.",
     "STARTED recovery publication missed trigger+5-minute aim because watchdog actual entry was after that boundary."
   ],
-  "commit_shas": [],
-  "live_unfinished_line": "Attack simple-graph/self-incidence and shared source-capacity restrictions on the four remaining audited dense n=18 profiles using the corrected joint B-vertex model.",
+  "commit_shas": ["35c7805d2c2eb576fb48a03344694ec75fe8f550"],
+  "live_unfinished_line": "Exploit the exact (8,7) B-skeleton with full edge-criticality and A-side unique-common-neighbour exclusions; do not return to scalar-only enumeration.",
   "historical_fragments": [],
   "research_credit": "same original scheduled trigger only; no duplicate credit"
 }
