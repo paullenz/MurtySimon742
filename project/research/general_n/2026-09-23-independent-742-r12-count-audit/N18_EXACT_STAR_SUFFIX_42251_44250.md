@@ -16,3 +16,9 @@ index 20,851 independently excluded by exact star-five.  This is a bounded
 necessary-condition computation, not full row closure, graph realizability,
 equality, or a proof of the general theorem.  The next suffix begins at
 44,251.
+
+## Cutoff-adjacent bounded continuation
+
+Four further 25-candidate shards emitted `FINAL` with zero survivors on
+44,251--44,350.  Their closest gaps were +15,+13,+13,+13.  The preserved
+contiguous endpoint is therefore 44,350; the next suffix begins at 44,351.
