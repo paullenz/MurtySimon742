@@ -26,6 +26,12 @@
       "stop": "2026-09-24T08:02:33+01:00",
       "seconds": 39,
       "unit": "replay missing n16 Delta9 exact-star prefix1--200 to FINAL with zero survivors"
+    },
+    {
+      "start": "2026-09-24T08:03:31+01:00",
+      "stop": "2026-09-24T08:06:11+01:00",
+      "seconds": 160,
+      "unit": "close n16 Delta9 exact-star stable indices3,201 through5,200 in four exact shards"
     }
   ],
   "forward_research_stop": "PENDING",
@@ -33,13 +39,17 @@
   "preservation_complete": "PENDING",
   "final_report_time": "PENDING",
   "wall_clock_span_to_preservation_complete": "PENDING",
-  "verified_forward_research_span": "0m39s",
+  "verified_forward_research_span": "3m19s",
   "preservation_span": "PENDING",
-  "substantive_unit_count": 1,
+  "substantive_unit_count": 2,
   "timestamped_unit_ledger": [
     {
       "completed_at": "2026-09-24T08:02:33+01:00",
       "unit": "Exact v4 replay closed stable indices1--200 with zero survivors; closest gap +5 overDmax14. Together with earlier durable 201--3,200, contiguous prefix reaches3,200."
+    },
+    {
+      "completed_at": "2026-09-24T08:06:11+01:00",
+      "unit": "Four v4 shards closed stable indices3,201--5,200 with zero survivors; closest gaps +8,+7,+9,+10."
     }
   ],
   "early_stop_check_time": "PENDING",
@@ -51,8 +61,9 @@
   "compliance_status": "ACTIVE",
   "infrastructure_failures": [],
   "commit_shas": [
-    "3dcb6e7d931382bb034201cbe28d426414bbe2fc"
+    "3dcb6e7d931382bb034201cbe28d426414bbe2fc",
+    "5d2bf8ffa7f37ef3d868bea8d60b218bc1bb5a56"
   ],
-  "live_unfinished_line": "Continue n16, Delta9 exact-star row from stable index3,201; require FINAL and graph-analyse any survivor.",
+  "live_unfinished_line": "Continue n16, Delta9 exact-star row from stable index5,201; require FINAL and graph-analyse any survivor.",
   "historical_fragments": []
 }
