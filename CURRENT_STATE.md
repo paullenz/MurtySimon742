@@ -5,20 +5,20 @@ Canonical repository: `paullenz/MurtySimon742`. Date: 24 September 2026.
 Active target: a genuinely independent proof of Erdős #742 / the Murty–Simon inequality e(G)<=floor(n^2/4), preferably with the equality characterization. Forward priority is the project’s own complement / residual / Hall / profile / realizability route, not a reconstruction of the external e+disj+X proof. The first focused session produced the internally checked candidate threshold `Delta>=250n/429`, shrinking the live strip to `n/2<Delta<250n/429`. The theorem and its inherited graph-to-profile spine remain candidate/internal-review mathematics. A 24-focused-session go/no-go gate applies. Prior eventual-D2C work remains preserved but is no longer the active forward objective.
 
 <!-- CURRENT-STATUS:START -->
-CHECKPOINT CLASS: N18_EXACT_STAR_PREFIX_42250
-WORK MODE: MATH
-INSPECTED PREDECESSOR: 011d9e92764426aa32405eb6e61a16ed65fadf15.
-LAST VERIFIED RESULT: Exact-small-star v4 closed n=18, Delta=10 stable indices 40,251--42,250 in four disjoint shards with zero survivors; closest gaps were +11,+11,+8,+9 over Dmax16. Combined internal contiguous prefix reaches 42,250, except historical index20,851 independently excluded by star-five.
+CHECKPOINT CLASS: N18_EXACT_STAR_PREFIX_44250
+WORK MODE: PRESERVATION
+INSPECTED PREDECESSOR: 6244d353f0c290984042368d6087d0b4e0b54fcb.
+LAST VERIFIED RESULT: Exact-small-star v4 closed n=18, Delta=10 stable indices 42,251--44,250 in four disjoint shards with zero survivors; closest gaps were +10,+10,+12,+11 over Dmax16. Combined internal contiguous prefix reaches 44,250, except historical index20,851 independently excluded by star-five.
 SESSION: Scheduled trigger 2026-09-24T06:00:38+01:00; actual entry 06:00:55; STARTED published 06:03:58; first substantive checkpoint 06:07:15; cutoff 06:53:38; hard close 06:59:38. Immutable scheduler attribution UNVERIFIED.
-VERIFIED FORWARD INTERVALS: 06:06:26--06:07:15; 06:08:41--06:10:43; 06:13:14--06:14:40; 06:16:52--06:18:17; 06:18:17--06:19:25; 06:20:09--06:21:17; 06:21:17--06:22:08; 06:23:39--06:24:54; 06:26:23--06:30:53; 06:31:47--06:39:09 BST.
-VERIFIED FORWARD SPAN: 21m56s.
-SESSION RESULT: ACTIVE; launch target MET; 40-minute target pending.
-SUBSTANTIVE UNITS: 10. Focused-session counter remains 6/24 pending completion.
+VERIFIED FORWARD INTERVALS: 06:06:26--06:07:15; 06:08:41--06:10:43; 06:13:14--06:14:40; 06:16:52--06:18:17; 06:18:17--06:19:25; 06:20:09--06:21:17; 06:21:17--06:22:08; 06:23:39--06:24:54; 06:26:23--06:30:53; 06:31:47--06:39:09; 06:39:56--06:47:31 BST.
+VERIFIED FORWARD SPAN: 29m31s.
+SESSION RESULT: PRESERVING; launch target MET; 40-minute target cannot be reached before cutoff from closed intervals.
+SUBSTANTIVE UNITS: 11. Focused-session counter remains 6/24.
 CANONICAL RECORD: project/research/session_logs/2026-09-24/2026-09-24T06-00-38+01-00-canonical.json.
 UNPRESERVED WORK: None after this checkpoint.
 DEFERRED ADMIN: Stable-index JSON/prose discrepancy remains historical metadata for audit; it is superseded for tuple555 but not rewritten.
-NEXT ACTION: Continue exact-small-star n18, Delta10 stable-index suffix from 42,251 in bounded shards; stop for preservation at 06:53:38.
-MANDATORY CONSTRAINTS: Internal finite verification only; prefix42,250 is not full n18 row closure. S<=14 remains computer-assisted; equality only through S<=8; balanced-bipartite/X3 controls unchanged; general theorem open.
+NEXT ACTION: Continue exact-small-star n18, Delta10 stable-index suffix from 44,251.
+MANDATORY CONSTRAINTS: Internal finite verification only; prefix44,250 is not full n18 row closure. S<=14 remains computer-assisted; equality only through S<=8; balanced-bipartite/X3 controls unchanged; general theorem open.
 <!-- CURRENT-STATUS:END -->
 
 ## Latest adversarial audit - 24 September 2026
