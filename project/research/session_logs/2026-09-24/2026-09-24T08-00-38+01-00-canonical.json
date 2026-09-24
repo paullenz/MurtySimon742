@@ -10,7 +10,7 @@
   "launch_status": "STARTED",
   "started_record_prepared_at": "2026-09-24T08:01:11+01:00",
   "started_record_published_at": "2026-09-24T08:01:11+01:00",
-  "first_substantive_checkpoint_time": "PENDING",
+  "first_substantive_checkpoint_time": "2026-09-24T08:02:33+01:00",
   "segments": [
     {
       "segment_id": "primary-2026-09-24T08:00:52+01:00",
@@ -20,16 +20,28 @@
       "notes": "Primary invocation; STARTED atomically published before mathematics."
     }
   ],
-  "forward_research_intervals": [],
+  "forward_research_intervals": [
+    {
+      "start": "2026-09-24T08:01:54+01:00",
+      "stop": "2026-09-24T08:02:33+01:00",
+      "seconds": 39,
+      "unit": "replay missing n16 Delta9 exact-star prefix1--200 to FINAL with zero survivors"
+    }
+  ],
   "forward_research_stop": "PENDING",
   "preservation_start": "PENDING",
   "preservation_complete": "PENDING",
   "final_report_time": "PENDING",
   "wall_clock_span_to_preservation_complete": "PENDING",
-  "verified_forward_research_span": "0m00s",
+  "verified_forward_research_span": "0m39s",
   "preservation_span": "PENDING",
-  "substantive_unit_count": 0,
-  "timestamped_unit_ledger": [],
+  "substantive_unit_count": 1,
+  "timestamped_unit_ledger": [
+    {
+      "completed_at": "2026-09-24T08:02:33+01:00",
+      "unit": "Exact v4 replay closed stable indices1--200 with zero survivors; closest gap +5 overDmax14. Together with earlier durable 201--3,200, contiguous prefix reaches3,200."
+    }
+  ],
   "early_stop_check_time": "PENDING",
   "early_stop_check_result": "PENDING",
   "stop_reason": "PENDING",
@@ -41,6 +53,6 @@
   "commit_shas": [
     "3dcb6e7d931382bb034201cbe28d426414bbe2fc"
   ],
-  "live_unfinished_line": "Close the missing n16, Delta9 exact-star prefix1--200, then resume from3,201; require FINAL records and graph-analyse any survivor.",
+  "live_unfinished_line": "Continue n16, Delta9 exact-star row from stable index3,201; require FINAL and graph-analyse any survivor.",
   "historical_fragments": []
 }

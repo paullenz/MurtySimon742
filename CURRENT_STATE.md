@@ -5,19 +5,19 @@ Canonical repository: `paullenz/MurtySimon742`. Date: 24 September 2026.
 Active target: a genuinely independent proof of Erdős #742 / the Murty–Simon inequality e(G)<=floor(n^2/4), preferably with the equality characterization. Forward priority is the project’s own complement / residual / Hall / profile / realizability route, not a reconstruction of the external e+disj+X proof. The first focused session produced the internally checked candidate threshold `Delta>=250n/429`, shrinking the live strip to `n/2<Delta<250n/429`. The theorem and its inherited graph-to-profile spine remain candidate/internal-review mathematics. A 24-focused-session go/no-go gate applies. Prior eventual-D2C work remains preserved but is no longer the active forward objective.
 
 <!-- CURRENT-STATUS:START -->
-CHECKPOINT CLASS: SESSION_STARTED
+CHECKPOINT CLASS: N16_PREFIX_3200
 WORK MODE: MATH
-INSPECTED PREDECESSOR: 3dcb6e7d931382bb034201cbe28d426414bbe2fc.
-LAST VERIFIED RESULT: Mathematical status unchanged from predecessor: the conditional finite n18, Delta10 exact-star row closure remains current.
-SESSION: Scheduled trigger08:00:38; actual entry08:00:52; STARTED prepared/published08:01:11; cutoff08:53:38; hard close08:59:38. Immutable scheduler attribution UNVERIFIED.
-VERIFIED FORWARD INTERVALS: None yet.
-VERIFIED FORWARD SPAN: 0m00s.
+INSPECTED PREDECESSOR: 53080f9b876292d132dddf1468090e16d42d6dea.
+LAST VERIFIED RESULT: Missing n16, Delta9 exact-star prefix1--200 replayed to FINAL with zero survivors and closest gap +5 over Dmax14. Combined with earlier durable indices201--3,200, the contiguous v4 prefix reaches3,200.
+SESSION: Scheduled trigger08:00:38; actual entry08:00:52; STARTED published08:01:11; first checkpoint08:02:33; cutoff08:53:38; hard close08:59:38. Immutable scheduler attribution UNVERIFIED.
+VERIFIED FORWARD INTERVALS: 08:01:54--08:02:33 BST.
+VERIFIED FORWARD SPAN: 0m39s.
 SESSION RESULT: ACTIVE; 40-minute target pending.
-SUBSTANTIVE UNITS: 0. Focused-session counter remains7/24 pending completion.
+SUBSTANTIVE UNITS: 1. Focused-session counter remains7/24 pending completion.
 CANONICAL RECORD: project/research/session_logs/2026-09-24/2026-09-24T08-00-38+01-00-canonical.json.
 UNPRESERVED WORK: None.
 DEFERRED ADMIN: Stable-index JSON/prose discrepancy remains historical audit metadata and is not blocking.
-NEXT ACTION: Close the missing n16, Delta9 exact-star prefix1--200, then resume from3,201; require FINAL records and graph-analyse any survivor.
+NEXT ACTION: Continue n16, Delta9 exact-star row from stable index3,201; require FINAL and graph-analyse any survivor.
 MANDATORY CONSTRAINTS: Internal fixed-row evidence only; S<=14 remains computer-assisted; equality only throughS<=8; balanced-bipartite/X3 controls unchanged.
 <!-- CURRENT-STATUS:END -->
 
