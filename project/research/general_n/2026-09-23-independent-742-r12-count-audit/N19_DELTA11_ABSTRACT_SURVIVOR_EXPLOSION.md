@@ -19,3 +19,19 @@ scalar shards at this row cannot supply a graph theorem. The bounded pivot is
 to retain actual source sets `C_i`, private-source incomparability, and edge
 criticality, beginning with the extremal two-label profile at index 3. No
 prefix-closure claim is made.
+
+## Exact graph-level test of leading index 3
+
+`realize_n19_delta11_index3_z3.py` fixes the profile
+
+    d=(9,6), x=(9,8), h=(9,10), D<=27,
+
+retains all 19 graph vertices, degree at most 11 with a degree-11 root,
+distinct one-use physical source edges, diameter at most two, and deletion
+criticality for every present edge. B-symmetry normalizes the forced disjoint
+source sets to `C0={1,2}` and `C1={3}`. Z3 returns `unsat`.
+
+This is internal exact computer-assisted evidence for one fixed profile. The
+criticality encoding and normalization still require an independent replay
+before the exclusion is promoted; no claim is made for the other prefix
+survivors.

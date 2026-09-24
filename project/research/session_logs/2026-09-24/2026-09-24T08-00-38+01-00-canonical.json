@@ -56,6 +56,12 @@
       "stop": "2026-09-24T08:15:38+01:00",
       "seconds": 21,
       "unit": "test first200 n19 Delta11 profiles and identify abstract-survivor explosion requiring graph-level pivot"
+    },
+    {
+      "start": "2026-09-24T08:16:35+01:00",
+      "stop": "2026-09-24T08:19:23+01:00",
+      "seconds": 168,
+      "unit": "derive and run exact Z3 graph-realizability model for n19 Delta11 stable index3"
     }
   ],
   "forward_research_stop": "PENDING",
@@ -63,9 +69,9 @@
   "preservation_complete": "PENDING",
   "final_report_time": "PENDING",
   "wall_clock_span_to_preservation_complete": "PENDING",
-  "verified_forward_research_span": "9m04s",
+  "verified_forward_research_span": "11m52s",
   "preservation_span": "PENDING",
-  "substantive_unit_count": 6,
+  "substantive_unit_count": 7,
   "timestamped_unit_ledger": [
     {
       "completed_at": "2026-09-24T08:02:33+01:00",
@@ -90,6 +96,10 @@
     {
       "completed_at": "2026-09-24T08:15:38+01:00",
       "unit": "n19 Delta11 v4 prefix immediately produced many abstract survivors; leading index3 d=(9,6),x=(9,8),h=(9,10) has deficit17 versusDmax27. Scalar extension retired in favour of graph-level source geometry."
+    },
+    {
+      "completed_at": "2026-09-24T08:19:23+01:00",
+      "unit": "Exact fixed-profile graph model for index3 d=(9,6),x=(9,8),h=(9,10),D<=27 returned UNSAT with actual graph, one-use sources, diameter2 and every-edge criticality; promotion awaits independent encoding replay."
     }
   ],
   "early_stop_check_time": "PENDING",
@@ -106,8 +116,9 @@
     "55a743986384d64bf585fe8ee6478e802f882a1a",
     "ebef1e47cb5f2aaead0ca43dd6cd8cf333d2bd31",
     "8a8167f53e65c938a183905600f8b005f5bc1228",
-    "6a5bd71171955fcaede6fb58c455784674729dc0"
+    "6a5bd71171955fcaede6fb58c455784674729dc0",
+    "8cfdcbb5a58e77ebb29b96b853f937eded4d90f5"
   ],
-  "live_unfinished_line": "Analyse stable index3 of n19, Delta11 with explicit C_i source sets, private-source incomparability and deletion-criticality; do not extend scalar shards blindly.",
+  "live_unfinished_line": "Independently validate the index3 Z3 criticality/source encoding on known D2C controls and via direct exhaustive model replay before promoting UNSAT.",
   "historical_fragments": []
 }

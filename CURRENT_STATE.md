@@ -5,20 +5,20 @@ Canonical repository: `paullenz/MurtySimon742`. Date: 24 September 2026.
 Active target: a genuinely independent proof of Erdős #742 / the Murty–Simon inequality e(G)<=floor(n^2/4), preferably with the equality characterization. Forward priority is the project’s own complement / residual / Hall / profile / realizability route, not a reconstruction of the external e+disj+X proof. The first focused session produced the internally checked candidate threshold `Delta>=250n/429`, shrinking the live strip to `n/2<Delta<250n/429`. The theorem and its inherited graph-to-profile spine remain candidate/internal-review mathematics. A 24-focused-session go/no-go gate applies. Prior eventual-D2C work remains preserved but is no longer the active forward objective.
 
 <!-- CURRENT-STATUS:START -->
-CHECKPOINT CLASS: N19_DELTA11_SCALAR_ROUTE_FAILED
+CHECKPOINT CLASS: N19_DELTA11_INDEX3_UNSAT_UNPROMOTED
 WORK MODE: MATH
-INSPECTED PREDECESSOR: 6a5bd71171955fcaede6fb58c455784674729dc0.
-LAST VERIFIED RESULT: n19, Delta11 exact-small-star prefix produced an immediate abstract-survivor explosion. Leading index3 has d=(9,6),x=(9,8),h=(9,10), exact deficit17 versusDmax27. Further scalar sharding is not a graph proof and is paused for explicit source-set/criticality analysis.
+INSPECTED PREDECESSOR: 8cfdcbb5a58e77ebb29b96b853f937eded4d90f5.
+LAST VERIFIED RESULT: An exact Z3 graph model for n19,Delta11 stable index3 d=(9,6),x=(9,8),h=(9,10),D<=27 returned UNSAT while retaining one-use physical sources, diameter2 and every-edge criticality. This is internal fixed-profile evidence and remains unpromoted pending independent encoding replay.
 SESSION: Scheduled trigger08:00:38; actual entry08:00:52; STARTED published08:01:11; first checkpoint08:02:33; cutoff08:53:38; hard close08:59:38. Immutable scheduler attribution UNVERIFIED.
-VERIFIED FORWARD INTERVALS: 08:01:54--08:02:33; 08:03:31--08:06:11; 08:06:59--08:09:56; 08:11:04--08:11:21; 08:12:13--08:14:23; 08:15:17--08:15:38 BST.
-VERIFIED FORWARD SPAN: 9m04s.
+VERIFIED FORWARD INTERVALS: 08:01:54--08:02:33; 08:03:31--08:06:11; 08:06:59--08:09:56; 08:11:04--08:11:21; 08:12:13--08:14:23; 08:15:17--08:15:38; 08:16:35--08:19:23 BST.
+VERIFIED FORWARD SPAN: 11m52s.
 SESSION RESULT: ACTIVE; 40-minute target pending.
-SUBSTANTIVE UNITS: 6. Focused-session counter remains7/24 pending completion.
+SUBSTANTIVE UNITS: 7. Focused-session counter remains7/24 pending completion.
 CANONICAL RECORD: project/research/session_logs/2026-09-24/2026-09-24T08-00-38+01-00-canonical.json.
 UNPRESERVED WORK: None.
 DEFERRED ADMIN: Stable-index JSON/prose discrepancy remains historical audit metadata and is not blocking.
-NEXT ACTION: Analyse n19, Delta11 stable index3 with explicit C_i source sets, private-source incomparability and deletion-criticality.
-MANDATORY CONSTRAINTS: Abstract survivor is not graph realizability. S<=14 remains computer-assisted; equality only throughS<=8; balanced-bipartite/X3 controls unchanged.
+NEXT ACTION: Independently validate the index3 Z3 criticality/source encoding on known D2C controls and via direct replay before promoting UNSAT.
+MANDATORY CONSTRAINTS: One fixed-profile UNSAT is not row closure or general theorem. S<=14 remains computer-assisted; equality only throughS<=8; balanced-bipartite/X3 controls unchanged.
 <!-- CURRENT-STATUS:END -->
 
 ## Latest adversarial audit - 24 September 2026
