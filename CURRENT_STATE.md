@@ -5,20 +5,20 @@ Canonical repository: `paullenz/MurtySimon742`. Date: 24 September 2026.
 Active target: a genuinely independent proof of Erdős #742 / the Murty–Simon inequality e(G)<=floor(n^2/4), preferably with the equality characterization. Forward priority is the project’s own complement / residual / Hall / profile / realizability route, not a reconstruction of the external e+disj+X proof. The first focused session produced the internally checked candidate threshold `Delta>=250n/429`, shrinking the live strip to `n/2<Delta<250n/429`. The theorem and its inherited graph-to-profile spine remain candidate/internal-review mathematics. A 24-focused-session go/no-go gate applies. Prior eventual-D2C work remains preserved but is no longer the active forward objective.
 
 <!-- CURRENT-STATUS:START -->
-CHECKPOINT CLASS: COMMON_C_555_DIRECT_EXCLUSION_TRANSFER_SCOPE
+CHECKPOINT CLASS: SATURATED_555_ONE_USE_DEGREE_EXCLUDED
 WORK MODE: MATH
-INSPECTED PREDECESSOR: 56bf3a87fd48203b7568ab109f3baff1d177417d.
-LAST VERIFIED RESULT: The specific recorded n=18 (5,5,5) survivor with five common right endpoints and hence identical C-sets is excluded directly at the exact-H interface: two labels at a shared endpoint need distinct assigned physical sources, but identical C-sets make both sources common neighbours, contradicting uniqueness. However the bare tuple does not force common C; five alternative saturated membership vectors survive necessary conditions. The stable-index JSON currently reports zero survivors and a different closest tuple, conflicting with transfer prose that calls index 20,851 a unique 555 survivor.
+INSPECTED PREDECESSOR: 0237f0a777597da2513f6698923d02848f7b5ff7.
+LAST VERIFIED RESULT: The exact-H one-use n=18, Delta=10 saturated (5,5,5) tuple is excluded without full D2C SAT. A strict star-slack +1 lemma and D<=16 force centre deficits (5,5,5), one common right endpoint of deficit 1, and zero deficit elsewhere. Upward membership leaves four geometries. Exact enumeration gives 8 source skeletons each; every skeleton permits only 17 B-edges. Degree sums force all 17, complete U-B and independent U, but the empty-type vertex then lacks one required B-neighbour in every geometry.
 SESSION: Scheduled trigger 2026-09-24T06:00:38+01:00; actual entry 06:00:55; STARTED published 06:03:58; first substantive checkpoint 06:07:15; cutoff 06:53:38; hard close 06:59:38. Immutable scheduler attribution UNVERIFIED.
-VERIFIED FORWARD INTERVALS: 06:06:26--06:07:15; 06:08:41--06:10:43; 06:13:14--06:14:40 BST.
-VERIFIED FORWARD SPAN: 4m17s.
+VERIFIED FORWARD INTERVALS: 06:06:26--06:07:15; 06:08:41--06:10:43; 06:13:14--06:14:40; 06:16:52--06:18:17; 06:18:17--06:19:25 BST.
+VERIFIED FORWARD SPAN: 6m50s.
 SESSION RESULT: ACTIVE; launch target MET; 40-minute target pending.
-SUBSTANTIVE UNITS: 3. Focused-session counter remains 6/24 pending completion.
+SUBSTANTIVE UNITS: 5. Focused-session counter remains 6/24 pending completion.
 CANONICAL RECORD: project/research/session_logs/2026-09-24/2026-09-24T06-00-38+01-00-canonical.json.
 UNPRESERVED WORK: None after this checkpoint.
-DEFERRED ADMIN: Do not rewrite the conflicting stable-index history until generator/equality evidence is inspected.
-NEXT ACTION: Inspect the canonical stable-index generator/output equality conditions. Prove common right types if forced; otherwise keep tuple-only transfer UNVERIFIED and test the five alternative saturated geometries.
-MANDATORY CONSTRAINTS: The direct private-source contradiction applies only to common-C geometry; do not infer it from the tuple alone. Internal evidence only; S<=14 computer-assisted; equality only through S<=8; balanced-bipartite/X3 controls unchanged; general theorem open.
+DEFERRED ADMIN: Stable-index JSON/prose discrepancy remains recorded; do not rewrite history without generator evidence.
+NEXT ACTION: Independently replay the strict +1/equality derivation and four-geometry edge counts, then extract the reusable saturated-profile criterion for other demand-15/16 survivors.
+MANDATORY CONSTRAINTS: Internal finite verification only; this excludes the fixed exact-H 555 tuple, not every n18 profile. S<=14 remains computer-assisted; equality only through S<=8; balanced-bipartite/X3 controls unchanged; general theorem open.
 <!-- CURRENT-STATUS:END -->
 
 ## Latest adversarial audit - 24 September 2026
