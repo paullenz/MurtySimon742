@@ -68,6 +68,12 @@
       "stop": "2026-09-24T06:24:54+01:00",
       "seconds": 75,
       "unit": "implement exact-small-star v4 model, replay five leading n18 profiles, and combine with graph-level singleton-source saturation"
+    },
+    {
+      "start": "2026-09-24T06:26:23+01:00",
+      "stop": "2026-09-24T06:30:53+01:00",
+      "seconds": 270,
+      "unit": "implement stable-index exact-star screen and close n18 suffix 39,251 through 40,250 in four exact shards"
     }
   ],
   "forward_research_stop": "PENDING",
@@ -75,9 +81,9 @@
   "preservation_complete": "PENDING",
   "final_report_time": "PENDING",
   "wall_clock_span_to_preservation_complete": "PENDING",
-  "verified_forward_research_span": "10m04s",
+  "verified_forward_research_span": "14m34s",
   "preservation_span": "PENDING",
-  "substantive_unit_count": 8,
+  "substantive_unit_count": 9,
   "timestamped_unit_ledger": [
     {
       "completed_at": "2026-09-24T06:07:15+01:00",
@@ -110,6 +116,10 @@
     {
       "completed_at": "2026-09-24T06:24:54+01:00",
       "unit": "Exact-small-star v4 replay raises the three low-star profiles and 555 above Dmax; only (d,x)=((8,7),(8,8)) remains at deficit16, and the existing graph-level singleton-source saturation lemma excludes it. All five audited leading profiles are closed, but the n18 row is not."
+    },
+    {
+      "completed_at": "2026-09-24T06:30:53+01:00",
+      "unit": "Exact v4 replay closed stable indices 39,251--40,250 with zero survivors; closest certified gaps over Dmax16 were +12,+10,+11,+12. Contiguous internal prefix now reaches 40,250, with historical 20,851 independently excluded by star-five."
     }
   ],
   "early_stop_check_time": "PENDING",
@@ -133,8 +143,10 @@
     "2a632b17665047e788e75442435592f9b41c9c4c",
     "163bb64d4879c91e47f49d915fb0b23b26b30af0",
     "22050973d8ffbdf86cfb6db4df7bae11dcd9f5a3",
-    "d7e4ed593cb69e1c72e46ecf766924dd80d6a352"
+    "d7e4ed593cb69e1c72e46ecf766924dd80d6a352",
+    "90a4324a63f44baa9a6714be39b4adccd0503e2a",
+    "0df76c3145f58ea7c49b7e1bc74de648f8be8259"
   ],
-  "live_unfinished_line": "Run the exact-small-star v4 screen on the unresolved n=18, Delta=10 stable-index suffix beginning at 39,251; preserve any survivor and its graph-realizability interface.",
+  "live_unfinished_line": "Continue the exact-small-star n18, Delta10 stable-index suffix from 40,251 in bounded sharded replays; preserve the next contiguous endpoint and any survivor.",
   "historical_fragments": []
 }
