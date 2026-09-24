@@ -17,6 +17,13 @@
       "actual_stop": "UNVERIFIED",
       "role": "forward_research",
       "notes": "Launch-recovery watchdog recovered the SAME 01:00:38 trigger. No durable canonical STARTED record existed on main at recovery inspection; primary scheduled launch therefore lacked durable STARTED evidence. This is not a second session and grants no duplicate credit."
+    },
+    {
+      "segment_id": "late-reconciliation-2",
+      "actual_start": "2026-09-24T01:59:19+01:00",
+      "actual_stop": "2026-09-24T01:59:19+01:00",
+      "role": "administrative_reconciliation",
+      "notes": "Invocation arrived after research cutoff with the recovery writer stale. Only pre-existing closed intervals were credited; no mathematics reopened and no duplicate credit."
     }
   ],
   "forward_research_intervals": [
@@ -49,13 +56,13 @@
       "evidence": "project/research/general_n/2026-09-24-r12-support10-lp-relaxation-v1/HELPER_LP_ALL32_PASS1.md; project/research/general_n/2026-09-24-r12-support10-lp-relaxation-v1/SOURCE_EXACT32_REPLAY.md"
     }
   ],
-  "forward_research_stop": "PENDING",
-  "preservation_start": "PENDING",
-  "preservation_complete": "PENDING",
-  "final_report_time": "PENDING",
-  "wall_clock_span_to_preservation_complete": "PENDING",
+  "forward_research_stop": "2026-09-24T01:24:54+01:00",
+  "preservation_start": "2026-09-24T01:59:19+01:00",
+  "preservation_complete": "UNVERIFIED_LATE_RECONCILIATION_AFTER_HARD_CLOSE",
+  "final_report_time": "2026-09-24T01:59:19+01:00",
+  "wall_clock_span_to_preservation_complete": "UNVERIFIED",
   "verified_forward_research_span": "PT6M12S",
-  "preservation_span": "PENDING",
+  "preservation_span": "UNVERIFIED",
   "substantive_unit_count": 5,
   "timestamped_unit_ledger": [
     {
@@ -94,17 +101,18 @@
       "commit": "b240d4301ced04f5bc33bc1cdb63265303d6c7c7"
     }
   ],
-  "early_stop_check_time": "PENDING",
-  "early_stop_check_result": "PENDING",
-  "stop_reason": "PENDING",
+  "early_stop_check_time": "2026-09-24T01:59:19+01:00",
+  "early_stop_check_result": "Research cutoff had passed; stale active writer had no checkpoint after 01:24:54. No additional work inferred.",
+  "stop_reason": "Late reconciliation of five already preserved units; original writer did not finalize before hard close.",
   "research_target_minutes": 40,
   "target_40m_applies": "YES",
-  "target_40m_met": "PENDING",
-  "compliance_status": "ACTIVE_RECOVERED_LATE",
+  "target_40m_met": false,
+  "compliance_status": "RAN_SHORT_NONCOMPLIANT; primary launch missing, recovered STARTED late, 6m12s closed research, original finalization missing.",
   "infrastructure_failures": [
     "Primary scheduled launch had no durable canonical STARTED record when inspected by the launch-recovery watchdog at 2026-09-24T01:07:17+01:00.",
     "STARTED publication occurred after the trigger+5-minute target.",
-    "Canonical STARTED and CURRENT_STATE could not be published atomically with the available GitHub connector; canonical STARTED was preserved first, so synchronized CURRENT_STATE lag is being reported rather than hidden."
+    "Canonical STARTED and CURRENT_STATE could not be published atomically with the available GitHub connector; canonical STARTED was preserved first, so synchronized CURRENT_STATE lag is being reported rather than hidden.",
+    "Original recovery writer remained ACTIVE without finalization through hard close; stop boundary after the last durable checkpoint is UNVERIFIED."
   ],
   "commit_shas": [
     "0e140d5b86d9d9ed27aa242432660020f90bcc6d",
@@ -115,7 +123,15 @@
     "b240d4301ced04f5bc33bc1cdb63265303d6c7c7"
   ],
   "live_unfinished_line": "Resolve the 13 helper-LP timeout rows with alternative continuous-LP methods/longer limits or independently checkable certificates; keep S<=14 frozen until all load-bearing helper rows are decisive.",
-  "historical_fragments": [],
+  "historical_fragments": [
+    {
+      "observed_at": "2026-09-24T01:59:19+01:00",
+      "kind": "late_same_trigger_reconciliation",
+      "effect": "Closed using only 6m12s of existing non-overlapping intervals; no new research."
+    }
+  ],
   "run_kind": "SCHEDULED_RESEARCH_RECOVERY",
-  "duplicate_credit": false
+  "duplicate_credit": false,
+  "session_run_status": "RAN",
+  "focused_session_credit": "No gate credit; counter remains 6/24."
 }
