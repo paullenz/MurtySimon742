@@ -1,42 +1,77 @@
 # Explicit C-overlap/private-source capacity diagnostic
 
-24 September 2026. Status: internal necessary-condition test only; not a graph-realizability theorem.
+24 September 2026. Status: internal graph-level necessary-condition work; not a complete realizability theorem.
 
-## Joint set-count model
+## Correction to the first checkpoint
 
-For the demand-15/16 witness model, introduce an integer variable `c_K` for every nonempty label membership type `K`: `c_K` is the number of physical vertices of `B=N(v)` which belong to exactly the neighbourhood sets `C_i` with `i in K` among the active labels. Then
+The first coarse set-count experiment in this file used the wrong cardinality convention, setting `|C_i|=h_i`. The proved source-union lemma defines
 
-- `sum_{K: i in K} c_K = h_i` for every label `i`;
-- `sum_K c_K <= Delta`;
-- for a right-incidence label set `J` and `i in J`, the number of source vertices private to `i` relative to `J` is
-  `P_i(J)=sum_{K: i in K, K cap (J\{i}) empty} c_K`.
+    C_i = N(i) intersect B,     |C_i| = Delta - h_i.
 
-The proved private-source capacity lemma therefore gives the valid joint constraint
+Therefore the first five-profile feasibility output was an invalid model and is retained only as a failed-route record. It must not be used as mathematical evidence.
 
-    sum_z n_{J,z} <= (Delta-2) P_i(J)     for every i in J.
+A corrected model was then built from the graph-level assigned-witness interface.
 
-This links the witness-pattern multiplicities to one globally consistent family of actual `C_i` overlaps instead of allowing each pattern to consume an unrelated abstract source budget. It is stronger than the preceding source-union floor/right-vertex budget model, but is still only a necessary condition because it does not encode all graph adjacencies or exact degree-weighted source capacities.
+## Corrected joint vertex-type model
 
-## First exact test: five audited n=18, Delta=10, rho=2 survivors
+Each physical vertex `u in B=N(v)` is assigned a joint type `(K,L,z)` where
 
-A direct integer MILP reconstruction of the preceding v3 model plus the `c_K` variables and the coarse private-source capacities was solved on the five audited leading profiles. All five remain feasible and their minimum deficits are unchanged:
+- `K` is the active-label membership set: `i in K` iff `u in C_i`;
+- `L` is the exact assigned-witness endpoint-incidence set `I_u`;
+- `z=Delta-d(u)` is its degree deficit.
 
-- `d=x=(8,7)`, `h=(8,7)`: minimum deficit 17;
-- `d=(8,7), x=(8,8)`, `h=(8,9)`: minimum deficit 16;
-- `d=x=(8,6,1)`, `h=(8,6,1)`: minimum deficit 17;
-- `d=x=(8,5,2)`, `h=(8,5,2)`: minimum deficit 18;
-- `d=x=(5,5,5)`, `h=(5,5,5)`: minimum deficit 16.
+The following are necessary graph conditions:
 
-Representative feasible `C_i` membership decompositions returned by the model were:
+1. `K cap L` is empty, because an assigned incidence `i--u` has `i` nonadjacent to `u`.
+2. `sum_{u: i in K_u} 1 = |C_i| = Delta-h_i`.
+3. `sum_{u: i in L_u} 1 = x_i`.
+4. Distinct incidences at endpoint `u` have distinct B-sources, so
 
-- `(8,7)`: `c_{0}=3, c_{1}=2, c_{01}=5`;
-- `(8,8)` on demands `(8,7)`: `c_{0}=1, c_{1}=2, c_{01}=7`;
-- `(8,6,1)`: `c_{0}=3, c_{1}=2, c_{01}=4, c_{02}=1`;
-- `(8,5,2)`: `c_{0}=4, c_{1}=1, c_{2}=1, c_{01}=3, c_{012}=1`;
-- `(5,5,5)`: `c_{0}=3, c_{1}=1, c_{2}=1, c_{01}=1, c_{02}=1, c_{12}=3`.
+       d(u) >= 1 + |K| + |L|,
 
-## Consequence
+   accounting for the root edge, all known active-label neighbours, and the `|L|` distinct incoming assigned source edges.
+5. A source vertex of type `(K,L,z)` has at most
 
-The coarse explicit-overlap/private-source-capacity formulation is **not** the missing realizability obstruction: even after forcing a single globally consistent set system for the `C_i`, the leading dense abstract profiles survive at the same objective values. This is a useful negative result. The next bounded strengthening should therefore use the *exact degree-weighted* capacity `sum_{u in P_i(J)}(d(u)-2)` or directly encode source-to-endpoint incidence/degree consistency, rather than adding more scalar profile inequalities.
+       Delta - z - 1 - |K| - |L|
 
-Balanced complete-bipartite equality controls and the `X_3` negative control are not altered by this diagnostic. General theorem and equality characterization remain open.
+   additional physical B-edges available to serve as sources elsewhere. Source-edge capacity is shared globally across labels and target endpoint classes; a physical edge is never double-assigned.
+6. A source used for label `i` at an endpoint with incidence set `J` must lie in `C_i` and in no `C_j` for `j in J\{i}`.
+7. The preceding endpoint-deficit/source-union and demand constraints are retained.
+
+This is still a necessary-condition model rather than a full graph realization: it aggregates vertices of identical joint type and does not yet encode every simple-graph/self-loop exclusion or every non-witness adjacency.
+
+## Corrected test on the five audited n=18, Delta=10, rho=2 profiles
+
+With `|C_i|=Delta-h_i`, four leading profiles remain feasible at the previous deficit objective, but one is eliminated:
+
+- `d=x=(8,7)`, `h=(8,7)`, `|C|=(2,3)`: feasible, minimum deficit 17;
+- `d=(8,7), x=(8,8)`, `h=(8,9)`, `|C|=(2,1)`: **INFEASIBLE**;
+- `d=x=(8,6,1)`, `h=(8,6,1)`, `|C|=(2,4,9)`: feasible, minimum deficit 17;
+- `d=x=(8,5,2)`, `h=(8,5,2)`, `|C|=(2,5,8)`: feasible, minimum deficit 18;
+- `d=x=(5,5,5)`, `h=(5,5,5)`, `|C|=(5,5,5)`: feasible, minimum deficit 16.
+
+The infeasible `(d,x)=((8,7),(8,8))` profile has a direct graph explanation.
+
+## Singleton-source saturation obstruction
+
+Let the two active labels be `0,1`. Here `|C_0|=2`, `|C_1|=1`, and `x_0=x_1=8` with `Delta=10`.
+
+Because each assigned endpoint for label `i` is a non-neighbour of `i`, the `x_0=8` incidences exhaust `B\C_0`, which also has size 8. The two endpoint sets both have size 8 in a 10-set, so they share an endpoint. At a shared endpoint the unique source for label 1 must be private to `C_1`, hence the unique vertex `u in C_1` is not in `C_0`. Therefore `u` lies in `B\C_0`, so saturation forces `u` itself to be an assigned endpoint for label 0.
+
+All eight label-1 incidences must use the same unique source `u`, giving eight distinct B-edges incident with `u`, all assigned to label 1. In addition `u` is adjacent to the root and to label 1. Since `u` is also an assigned endpoint for label 0, it has a further incoming assigned source edge. That edge cannot coincide with any of the eight label-1 edges because a physical edge is assigned only once. Hence
+
+    d(u) >= 8 + 1 + 1 + 1 = 11 > Delta=10,
+
+contradiction.
+
+This closes that dense abstract profile at the graph interface without reconstructing the external e+disj+X proof.
+
+## Reusable lemma form
+
+If an active label `j` has `|C_j|=1` with unique source vertex `u`, then all `x_j` assigned incidences use distinct physical edges from `u`. Thus `d(u)>=x_j+2` from those edges plus the root and label `j`. If `u` is also an assigned right endpoint for another label, the endpoint's incoming assigned source edge is an additional physical edge, so `d(u)>=x_j+3`. Consequently, when `x_j>=Delta-2`, the unique `C_j` vertex cannot be an assigned endpoint of another label. Combined with endpoint-set saturation for a second label, this can force a contradiction exactly as above.
+
+## Remaining live profiles
+
+The corrected joint model still leaves `(8,7)`, `(8,6,1)`, `(8,5,2)` and `(5,5,5)` at their previous minimum deficits. The next bounded step is to exploit simple-graph/self-incidence restrictions and source-capacity sharing on those four actual joint geometries, rather than return to scalar enumeration.
+
+Balanced complete-bipartite equality controls and the `X_3` negative control are unchanged. General theorem and equality characterization remain open.
