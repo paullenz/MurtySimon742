@@ -5,19 +5,19 @@ Canonical repository: `paullenz/MurtySimon742`. Date: 24 September 2026.
 Active target: a genuinely independent proof of Erdős #742 / the Murty–Simon inequality e(G)<=floor(n^2/4), preferably with the equality characterization. Forward priority is the project’s own complement / residual / Hall / profile / realizability route, not a reconstruction of the external e+disj+X proof. The first focused session produced the internally checked candidate threshold `Delta>=250n/429`, shrinking the live strip to `n/2<Delta<250n/429`. The theorem and its inherited graph-to-profile spine remain candidate/internal-review mathematics. A 24-focused-session go/no-go gate applies. Prior eventual-D2C work remains preserved but is no longer the active forward objective.
 
 <!-- CURRENT-STATUS:START -->
-CHECKPOINT CLASS: SESSION_2026-09-24T03-00-38_STARTED
+CHECKPOINT CLASS: R12_SUPPORT10_ROW362_INDEPENDENT_REPLAY_ACTIVE
 WORK MODE: MATH
-INSPECTED PREDECESSOR: 8ae17da3dc130a11ed2c7d05bf526bf0ec6887fa.
-LAST VERIFIED RESULT: The r=12 support-ten universe independently regenerates to 6,386 strict kernels; source filtering leaves 32 exact source-feasible rows. Fresh helper-LP work decisively excludes 19 rows and leaves 13 timeout/UNKNOWN. A later report says the 13 were excluded, but its fresh implementation/certificates are not preserved. S<=14 remains frozen.
-SESSION: Scheduled 03:00:38; actual entry 03:02:57; STARTED prepared 03:03:11; cutoff 03:53:38; hard close 03:59:38. Immutable delivery identity UNVERIFIED.
-VERIFIED FORWARD SPAN: 0m00s at launch.
+INSPECTED PREDECESSOR: f068738ca357969edded1fd2ae7930d9be06d362.
+LAST VERIFIED RESULT: A newly committed standalone scipy.optimize.linprog reconstruction reproduces former-timeout row 362 / [5179456,0,11,81] as LP-infeasible with 3,589 patterns, one residual-free type, zero free discharges, and 4,624 helper constraints. This supplies replayable code absent from the earlier COMPLETE report. It uses the same HiGHS backend, so it is internal reproduction rather than an independent-solver certificate.
+ACTIVE SESSION: Scheduled 03:00:38; actual entry 03:02:57; STARTED 03:03:11; first substantive checkpoint 03:07:18; cutoff 03:53:38; hard close 03:59:38. Immutable delivery identity UNVERIFIED.
+VERIFIED FORWARD SPAN: 0m57s.
 SESSION RESULT: ACTIVE; 40-minute target PENDING.
-SUBSTANTIVE UNITS: 0. Focused-session counter remains 6/24 pending completion.
+SUBSTANTIVE UNITS: 1. Focused-session counter remains 6/24 pending completion.
 CANONICAL RECORD: project/research/session_logs/2026-09-24/2026-09-24T03-00-38+01-00-canonical.json.
-UNPRESERVED WORK: None.
-DEFERRED ADMIN: Finalize stale 02:00 telemetry after current forward work; do not infer its missing boundaries.
-NEXT ACTION: Independently reconstruct and replay the helper-LP constraints for the 13 former timeout rows, or produce independently checkable infeasibility certificates.
-MANDATORY CONSTRAINTS: Internal evidence only; S<=14 frozen until all 13 rows are decisive; retained finite bound S<=13 and equality only through S<=8; abstract/profile feasibility is not graph realizability; unrestricted crossed-supplement injectivity and x_i<=n-Delta-1 forbidden; balanced complete-bipartite and X_3 controls retained; external e+disj+X core not imported; general theorem open.
+UNPRESERVED WORK: None after this checkpoint.
+DEFERRED ADMIN: Finalize stale 02:00 telemetry after current forward work.
+NEXT ACTION: Run the committed independent linprog replay on the remaining 12 former-timeout rows; keep S<=14 frozen until all 13 are decisive.
+MANDATORY CONSTRAINTS: Internal evidence only; same-backend replay is not an independent-solver certificate; S<=14 frozen until all 13 rows are decisive; retained finite bound S<=13 and equality only through S<=8; abstract/profile feasibility is not graph realizability; forbidden claims and controls unchanged.
 <!-- CURRENT-STATUS:END -->
 
 ## Latest adversarial audit - 24 September 2026

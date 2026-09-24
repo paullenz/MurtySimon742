@@ -13,7 +13,7 @@
   "launch_status": "STARTED",
   "started_record_prepared_at": "2026-09-24T03:03:11+01:00",
   "started_record_published_at": "2026-09-24T03:03:11+01:00",
-  "first_substantive_checkpoint_time": "PENDING",
+  "first_substantive_checkpoint_time": "2026-09-24T03:07:18+01:00",
   "segments": [
     {
       "segment_id": "segment-1",
@@ -23,16 +23,32 @@
       "notes": "02:00 predecessor had no heartbeat after 02:27 and its hard-close deadline passed; no overlap. Its stale finalization is deferred."
     }
   ],
-  "forward_research_intervals": [],
+  "forward_research_intervals": [
+    {
+      "start": "2026-09-24T03:05:49+01:00",
+      "stop": "2026-09-24T03:06:46+01:00",
+      "seconds": 57,
+      "unit": "Independent continuous helper-LP matrix reconstruction and highs-ipm replay excludes former-timeout row 362."
+    }
+  ],
   "forward_research_stop": "PENDING",
   "preservation_start": "PENDING",
   "preservation_complete": "PENDING",
   "final_report_time": "PENDING",
   "wall_clock_span_to_preservation_complete": "PENDING",
-  "verified_forward_research_span": "00:00:00",
+  "verified_forward_research_span": "00:00:57",
   "preservation_span": "PENDING",
-  "substantive_unit_count": 0,
-  "timestamped_unit_ledger": [],
+  "substantive_unit_count": 1,
+  "timestamped_unit_ledger": [
+    {
+      "unit": 1,
+      "start": "2026-09-24T03:05:49+01:00",
+      "complete": "2026-09-24T03:06:46+01:00",
+      "result": "Committed a standalone scipy.optimize.linprog reconstruction of the helper LP. Row 362 / identity [5179456,0,11,81] has 3,589 patterns, one residual-free type, 4,624 helper constraints, and is LP-infeasible (HiGHS status 2). Twelve former-timeout rows remain unresolved under this preserved replay.",
+      "evidence": "project/research/general_n/2026-09-24-r12-support10-lp-relaxation-v1/INDEPENDENT_REPLAY_ROW362.md",
+      "code": "project/research/general_n/2026-09-24-r12-support10-lp-relaxation-v1/helper_lp_replay_13.py"
+    }
+  ],
   "early_stop_check_time": "PENDING",
   "early_stop_check_result": "PENDING",
   "stop_reason": "PENDING",
@@ -44,6 +60,6 @@
   "compliance_status": "PENDING",
   "infrastructure_failures": [],
   "commit_shas": [],
-  "live_unfinished_line": "Independently reconstruct and replay the helper-LP constraints for the 13 former timeout rows, or produce independently checkable infeasibility certificates; keep S<=14 frozen until decisive.",
+  "live_unfinished_line": "Run the committed independent linprog replay on the remaining 12 former-timeout rows; keep S<=14 frozen until all 13 are decisively reproduced or certificate-backed.",
   "historical_fragments": []
 }
