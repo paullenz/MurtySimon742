@@ -47,6 +47,12 @@
       "stop": "2026-09-24T03:28:58+01:00",
       "seconds": 391,
       "unit": "Full independent replay of all 32 source-feasible support-ten helper LPs with explicit identity mapping and six workers: 32 LP-infeasible, 0 feasible, 0 unknown."
+    },
+    {
+      "start": "2026-09-24T03:32:23+01:00",
+      "stop": "2026-09-24T03:34:15+01:00",
+      "seconds": 112,
+      "unit": "Derived the assigned-witness source-union endpoint-deficit lemma and regressed every locally assignable subset of up to eight labels on 575 actual D2C controls."
     }
   ],
   "forward_research_stop": "PENDING",
@@ -54,9 +60,9 @@
   "preservation_complete": "PENDING",
   "final_report_time": "PENDING",
   "wall_clock_span_to_preservation_complete": "PENDING",
-  "verified_forward_research_span": "00:20:18",
+  "verified_forward_research_span": "00:22:10",
   "preservation_span": "PENDING",
-  "substantive_unit_count": 4,
+  "substantive_unit_count": 5,
   "timestamped_unit_ledger": [
     {
       "unit": 1,
@@ -89,6 +95,14 @@
       "result": "Replayed the complete 32-row source-feasible universe with the preserved standalone matrix reconstruction. Every row returned HiGHS status 2 (LP-infeasible); zero feasible and zero unknown. This confirms that the earlier 19+13 split was entirely solver-completion, not a surviving helper profile.",
       "evidence": "project/research/general_n/2026-09-24-r12-support10-lp-relaxation-v1/INDEPENDENT_REPLAY_ALL32.md",
       "code": "project/research/general_n/2026-09-24-r12-support10-lp-relaxation-v1/helper_lp_replay_13.py"
+    },
+    {
+      "unit": 5,
+      "start": "2026-09-24T03:32:23+01:00",
+      "complete": "2026-09-24T03:34:15+01:00",
+      "result": "Proved that distinct physical certificate sources at a shared supplement endpoint are private points of their label B-neighbourhoods, yielding delta_t >= |union C_i|-a and the profile-only corollary delta_t >= rho+r_t-min h_i. Regression checked 15,957 locally assignable subsets on 575 independently certified D2C graphs (921 maximum-degree roots), including both balanced-complete-bipartite parities and X3: zero violations; 779 cases strictly beat the best pairwise bound, by up to 5.",
+      "evidence": "project/research/general_n/2026-09-24-demand15-source-union-v1/SOURCE_UNION_ENDPOINT_CHARGE.md",
+      "code": "project/research/general_n/2026-09-24-demand15-source-union-v1/check_source_union_charge.py"
     }
   ],
   "early_stop_check_time": "PENDING",
@@ -104,8 +118,9 @@
   "commit_shas": [
     "f068738ca357969edded1fd2ae7930d9be06d362",
     "f807cb5e4f3fe9c73b8e89570e45e92fc4bded04",
-    "b4ab79dbae42b5c3046b47c3bf9d9e36c73e8cbc"
+    "b4ab79dbae42b5c3046b47c3bf9d9e36c73e8cbc",
+    "f771ccec24e1fea353e09969361cc0eb52477825"
   ],
-  "live_unfinished_line": "The complete 32-row source-feasible r=12 support-ten universe is now reproducibly LP-infeasible under preserved second-encoding code, so the internal finite edge bound through S<=14 is restored at computer-assisted scope. Next: theorem-facing demand-15/16 graph-realizability analysis; do not substitute abstract profiles.",
+  "live_unfinished_line": "Add the proved source-union floor g(J)=max(0,rho+|J|-min_{i in J}h_i) to the demand-15/16 witness-deficit MILP and measure which abstract survivors it closes. This is graph-realizability-derived but remains a necessary-condition screen.",
   "historical_fragments": []
 }
