@@ -26,6 +26,12 @@
       "stop": "2026-09-24T07:03:56+01:00",
       "seconds": 51,
       "unit": "close n18 exact-small-star stable indices 44,351 through44,450 in four exact shards"
+    },
+    {
+      "start": "2026-09-24T07:05:00+01:00",
+      "stop": "2026-09-24T07:15:01+01:00",
+      "seconds": 601,
+      "unit": "close n18 exact-small-star stable indices44,451 through46,450 in four exact shards"
     }
   ],
   "forward_research_stop": "PENDING",
@@ -33,13 +39,17 @@
   "preservation_complete": "PENDING",
   "final_report_time": "PENDING",
   "wall_clock_span_to_preservation_complete": "PENDING",
-  "verified_forward_research_span": "0m51s",
+  "verified_forward_research_span": "10m52s",
   "preservation_span": "PENDING",
-  "substantive_unit_count": 1,
+  "substantive_unit_count": 2,
   "timestamped_unit_ledger": [
     {
       "completed_at": "2026-09-24T07:03:56+01:00",
       "unit": "Four v4 shards closed stable indices44,351--44,450 with zero survivors; closest gaps were +15,+14,+15,+16 overDmax16."
+    },
+    {
+      "completed_at": "2026-09-24T07:15:01+01:00",
+      "unit": "Four 500-candidate v4 shards closed stable indices44,451--46,450 with zero survivors; closest gaps +10,+7,+9,+10."
     }
   ],
   "early_stop_check_time": "PENDING",
@@ -51,8 +61,9 @@
   "compliance_status": "ACTIVE",
   "infrastructure_failures": [],
   "commit_shas": [
-    "c3094e0d9206281b3783755427633099d9ce4869"
+    "c3094e0d9206281b3783755427633099d9ce4869",
+    "5c03b1ecf48376f4e43ecc6abf707e8824ef2ce8"
   ],
-  "live_unfinished_line": "Continue exact-small-star n18, Delta10 stable-index suffix from44,451 in bounded shards.",
+  "live_unfinished_line": "Continue exact-small-star n18, Delta10 stable-index suffix from46,451.",
   "historical_fragments": []
 }
