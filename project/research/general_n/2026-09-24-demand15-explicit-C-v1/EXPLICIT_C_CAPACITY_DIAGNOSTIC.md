@@ -46,8 +46,8 @@ With `|C_i|=Delta-h_i`, four leading profiles remain feasible at the previous de
 
 - `d=x=(8,7)`, `h=(8,7)`, `|C|=(2,3)`: feasible, minimum deficit 17;
 - `d=(8,7), x=(8,8)`, `h=(8,9)`, `|C|=(2,1)`: **INFEASIBLE**;
-- `d=x=(8,6,1)`, `h=(8,6,1)`, `|C|=(2,4,9)`: feasible, minimum deficit 17;
-- `d=x=(8,5,2)`, `h=(8,5,2)`, `|C|=(2,5,8)`: feasible, minimum deficit 18;
+- `d=x=(8,6,1)`, `h=(8,6,1)`, `|C|=(2,4,9)`: feasible in this coarse model;
+- `d=x=(8,5,2)`, `h=(8,5,2)`, `|C|=(2,5,8)`: feasible in this coarse model;
 - `d=x=(5,5,5)`, `h=(5,5,5)`, `|C|=(5,5,5)`: feasible, minimum deficit 16.
 
 The infeasible `(d,x)=((8,7),(8,8))` profile has a direct graph explanation.
@@ -64,14 +64,48 @@ All eight label-1 incidences must use the same unique source `u`, giving eight d
 
 contradiction.
 
-This closes that dense abstract profile at the graph interface without reconstructing the external e+disj+X proof.
+## Saturated membership-step lemma
 
-## Reusable lemma form
+There is a stronger purely combinatorial consequence when every active label is saturated, meaning
 
-If an active label `j` has `|C_j|=1` with unique source vertex `u`, then all `x_j` assigned incidences use distinct physical edges from `u`. Thus `d(u)>=x_j+2` from those edges plus the root and label `j`. If `u` is also an assigned right endpoint for another label, the endpoint's incoming assigned source edge is an additional physical edge, so `d(u)>=x_j+3`. Consequently, when `x_j>=Delta-2`, the unique `C_j` vertex cannot be an assigned endpoint of another label. Combined with endpoint-set saturation for a second label, this can force a contradiction exactly as above.
+    x_i = |B\C_i|.
 
-## Remaining live profiles
+For `t in B`, write `K(t)={i:t in C_i}`. If `i` is not in `K(t)`, saturation makes `t` an assigned endpoint for label `i`; let `u_i t` be its assigned physical source edge. Then
 
-The corrected joint model still leaves `(8,7)`, `(8,6,1)`, `(8,5,2)` and `(5,5,5)` at their previous minimum deficits. The next bounded step is to exploit simple-graph/self-incidence restrictions and source-capacity sharing on those four actual joint geometries, rather than return to scalar enumeration.
+    K(u_i) = K(t) union {i}.
+
+Indeed `u_i in C_i`. If `j in K(t)` but `u_i` were not in `C_j`, saturation would make `u_i` an endpoint for `j`; the edge `t u_i`, with `t in C_j`, would then be the unique common-neighbour source edge for `j--u_i`, but it is already assigned to `i--t`, violating one-use of a physical edge. Conversely, if `j` is not in `K(t)` and `j!=i` but `u_i in C_j`, then `u_i t` is the unique common-neighbour source edge for `j--t` as well as for `i--t`, again impossible. Thus the source type is exactly one Boolean-lattice step upward.
+
+Consequently the support of the membership counts `c_K=|{t:K(t)=K}|` is upward closed: whenever `c_K>0` and `i notin K`, also `c_{K union {i}}>0`.
+
+### Two-point C obstruction for three saturated labels
+
+For three saturated labels `0,1,2`, suppose `|C_0|=2` and both `C_1,C_2` are proper subsets of `B`. Upward closure is impossible.
+
+The top type `012` must occur. Since the total mass in types containing label 0 is exactly two, either:
+
+- `c_012=2` and no other 0-containing type occurs. Then the only possible type outside label 0 is `12`, so every vertex lies in both `C_1` and `C_2`, contrary to both being proper; or
+- `c_012=1` and exactly one of `c_0,c_01,c_02` equals one. Type `0` is impossible because upward closure requires both `01` and `02`. If type `01` is the extra type, every possible occurring type contains label 1, so `C_1=B`; if type `02` is the extra type, similarly `C_2=B`.
+
+Thus no such three-label saturated configuration exists.
+
+This immediately excludes, at the graph interface, both audited n=18 saturated profiles
+
+- `d=x=(8,6,1)`, where `|C|=(2,4,9)`;
+- `d=x=(8,5,2)`, where `|C|=(2,5,8)`.
+
+An independently built individual-B-vertex MILP imposing simple physical B-edges, exact `C_i` cardinalities, source-edge one-use, endpoint nonadjacency, unique common B-neighbour and degree consistency also returned both profiles infeasible and retained `(8,7)` feasible; the proof above is preferable because it isolates the exact graph mechanism without relying on that computation. The attempted code-file publication for this diagnostic was blocked by the connector, so no claim of preserved executable code is made.
+
+## Rigid surviving two-label geometry
+
+For the saturated `(8,7)` profile, `|C_0|=2`, `|C_1|=3`. The same upward-closure lemma forces the four membership-type counts uniquely:
+
+    c_empty=6, c_0=1, c_1=2, c_01=1.
+
+Hence the unique type-0 vertex must source all six empty-type endpoints for label 0, the two type-1 vertices collectively source all six empty-type endpoints for label 1, and the unique type-01 vertex supplies the required source edge to the type-0 vertex and to both type-1 vertices. This is a rigid local geometry, but it is not yet a contradiction.
+
+## Remaining live geometry
+
+At this stage the corrected graph-interface route has eliminated the `(8,8)` two-label profile and the two three-label profiles with a two-point `C_0`. The `(8,7)` local geometry survives and `(5,5,5)` is not excluded by upward closure alone. The repository already contains a separately audited staged exact D2C exclusion of the fixed `(5,5,5)` geometry; that result is not rederived here and should not be conflated with this independent local route.
 
 Balanced complete-bipartite equality controls and the `X_3` negative control are unchanged. General theorem and equality characterization remain open.
