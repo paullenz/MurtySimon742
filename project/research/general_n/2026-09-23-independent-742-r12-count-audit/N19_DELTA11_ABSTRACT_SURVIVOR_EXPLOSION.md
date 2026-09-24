@@ -118,3 +118,10 @@ remained UNKNOWN after 180 seconds.  Thus the reduction to `0--2` is durable,
 but none of its three leaves is an exclusion.  Increasing the same encoding's
 timeout again is not a justified proof step; an independent literal-deletion
 model or a new structural consequence is required.
+
+The generalized literal edge-deletion encoding was then run on the whole
+remaining index-1 deficit range `0--2`.  It also returned UNKNOWN at 300
+seconds.  The timeout output landed fractionally after the research cutoff;
+that post-cutoff fraction is not credited.  Agreement of two encodings on a
+timeout is not mathematical evidence of infeasibility, so index 1 remains
+open precisely in this low-deficit intersection-one branch.

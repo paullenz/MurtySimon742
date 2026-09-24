@@ -5,20 +5,20 @@ Canonical repository: `paullenz/MurtySimon742`. Date: 24 September 2026.
 Active target: a genuinely independent proof of Erdős #742 / the Murty–Simon inequality e(G)<=floor(n^2/4), preferably with the equality characterization. Forward priority is the project’s own complement / residual / Hall / profile / realizability route, not a reconstruction of the external e+disj+X proof. The first focused session produced the internally checked candidate threshold `Delta>=250n/429`, shrinking the live strip to `n/2<Delta<250n/429`. The theorem and its inherited graph-to-profile spine remain candidate/internal-review mathematics. A 24-focused-session go/no-go gate applies. Prior eventual-D2C work remains preserved but is no longer the active forward objective.
 
 <!-- CURRENT-STATUS:START -->
-CHECKPOINT CLASS: N19_DELTA11_INDEX1_LOW_DEFICIT_SINGLETON_TIMEOUTS
+CHECKPOINT CLASS: FINAL_2026_09_24T08_00_38
 WORK MODE: MATH
-INSPECTED PREDECESSOR: 21d2c1006c4ae7cb2baf4eee4bb7ceb02c99eaa6.
-LAST VERIFIED RESULT: Index1 intersection-one is internally UNSAT for common-source deficit3--10. Singleton shards at deficits0,1,2 each timed out after180s and remain UNKNOWN; this is a reduction, not an exclusion.
-SESSION: Scheduled trigger08:00:38; actual entry08:00:52; STARTED published08:01:11; first checkpoint08:02:33; cutoff08:53:38; hard close08:59:38. Immutable scheduler attribution UNVERIFIED.
-VERIFIED FORWARD INTERVALS: 08:01:54--08:02:33; 08:03:31--08:06:11; 08:06:59--08:09:56; 08:11:04--08:11:21; 08:12:13--08:14:23; 08:15:17--08:15:38; 08:16:35--08:19:23; 08:20:27--08:21:08; 08:22:01--08:23:38; 08:24:47--08:30:55; 08:32:35--08:38:13; 08:40:06--08:42:18; 08:43:07--08:46:36 BST.
-VERIFIED FORWARD SPAN: 31m37s.
-SESSION RESULT: ACTIVE; 40-minute target pending.
-SUBSTANTIVE UNITS: 13. Focused-session counter remains7/24 pending completion.
+INSPECTED PREDECESSOR: 3ad6aa3c83ae27b37f210904854d651c50fecc4d.
+LAST VERIFIED RESULT: n16,Delta9 and n19,Delta10 exact-star finite rows are conditionally closed. At n19,Delta11, exact graph models exclude the leading disjoint profiles and index3. For index1 intersection-one, common-source deficit3--10 is UNSAT; deficits0--2 remain UNKNOWN under both unique-common-neighbour and literal-deletion encodings. Timeout is not exclusion.
+SESSION: Scheduled trigger08:00:38; actual entry08:00:52; STARTED published08:01:11; first substantive checkpoint08:02:33; research cutoff08:53:38; hard close08:59:38. Trigger attribution used current invocation title plus supplied schedule; immutable delivery identity UNVERIFIED.
+VERIFIED FORWARD INTERVALS: 08:01:54--08:02:33; 08:03:31--08:06:11; 08:06:59--08:09:56; 08:11:04--08:11:21; 08:12:13--08:14:23; 08:15:17--08:15:38; 08:16:35--08:19:23; 08:20:27--08:21:08; 08:22:01--08:23:38; 08:24:47--08:30:55; 08:32:35--08:38:13; 08:40:06--08:42:18; 08:43:07--08:46:36; 08:47:25--08:53:38 BST.
+VERIFIED FORWARD SPAN: 37m50s. The final solver output landed0.568s after cutoff; that fraction is uncredited.
+SESSION RESULT: RAN; 40-minute target NOT MET. Useful work continued to cutoff; focused-session counter remains7/24.
+SUBSTANTIVE UNITS: 14.
 CANONICAL RECORD: project/research/session_logs/2026-09-24/2026-09-24T08-00-38+01-00-canonical.json.
-UNPRESERVED WORK: None.
+PRESERVATION: Final compact artifact/telemetry/state prepared08:54:09 before hard close.
 DEFERRED ADMIN: Stable-index JSON/prose discrepancy remains historical audit metadata and is not blocking.
-NEXT ACTION: Independently replay index1 intersection-one deficit0--2 with literal edge deletion or derive a new structural obstruction.
-MANDATORY CONSTRAINTS: UNKNOWN is not UNSAT; no n19,Delta11 row closure. S<=14 remains computer-assisted; equality only throughS<=8; balanced-bipartite/X3 controls unchanged.
+NEXT ACTION: Derive a new graph-level obstruction for index1 intersection-one common-source deficit0--2 (or split by remaining endpoint degrees), then resolve index2 intersection-one. Do not extend scalar shards.
+MANDATORY CONSTRAINTS: UNKNOWN is not UNSAT; n19,Delta11 row and general theorem remain open. Finite row closures are conditional on the audited profile bridge. S<=14 remains computer-assisted; equality only throughS<=8; balanced-bipartite/X3 controls unchanged; internal verification is not external acceptance.
 <!-- CURRENT-STATUS:END -->
 
 ## Latest adversarial audit - 24 September 2026

@@ -15,7 +15,7 @@
     {
       "segment_id": "primary-2026-09-24T08:00:52+01:00",
       "actual_start": "2026-09-24T08:00:52+01:00",
-      "actual_stop": "PENDING",
+      "actual_stop": "2026-09-24T08:53:39+01:00",
       "role": "forward_research",
       "notes": "Primary invocation; STARTED atomically published before mathematics."
     }
@@ -98,16 +98,22 @@
       "stop": "2026-09-24T08:46:36+01:00",
       "seconds": 209,
       "unit": "resolve index1 intersection-one low common-source deficit range via exact singleton shards"
+    },
+    {
+      "start": "2026-09-24T08:47:25+01:00",
+      "stop": "2026-09-24T08:53:38+01:00",
+      "seconds": 373,
+      "unit": "generalize literal-deletion criticality encoding and test n19 Delta11 index1 intersection-one deficit0--2; output completed0.568s after cutoff and that fraction is uncredited"
     }
   ],
-  "forward_research_stop": "PENDING",
-  "preservation_start": "PENDING",
-  "preservation_complete": "PENDING",
-  "final_report_time": "PENDING",
-  "wall_clock_span_to_preservation_complete": "PENDING",
-  "verified_forward_research_span": "31m37s",
-  "preservation_span": "PENDING",
-  "substantive_unit_count": 13,
+  "forward_research_stop": "2026-09-24T08:53:38+01:00",
+  "preservation_start": "2026-09-24T08:54:02+01:00",
+  "preservation_complete": "2026-09-24T08:54:09+01:00",
+  "final_report_time": "2026-09-24T08:54:09+01:00",
+  "wall_clock_span_to_preservation_complete": "53m17s",
+  "verified_forward_research_span": "37m50s",
+  "preservation_span": "0m07s",
+  "substantive_unit_count": 14,
   "timestamped_unit_ledger": [
     {
       "completed_at": "2026-09-24T08:02:33+01:00",
@@ -160,15 +166,19 @@
     {
       "completed_at": "2026-09-24T08:46:36+01:00",
       "unit": "Exact index1 intersection-one common-source deficits0,1,2 each remained UNKNOWN after180s; low-deficit remainder is reduced but not excluded."
+    },
+    {
+      "completed_at": "2026-09-24T08:53:39+01:00",
+      "unit": "Independent literal-deletion encoding for index1 intersection-one deficit0--2 also timed out at300s. Output completed0.568s after cutoff; post-cutoff fraction uncredited. UNKNOWN remains non-exclusion."
     }
   ],
-  "early_stop_check_time": "PENDING",
-  "early_stop_check_result": "PENDING",
-  "stop_reason": "PENDING",
+  "early_stop_check_time": "2026-09-24T08:53:38+01:00",
+  "early_stop_check_result": "NOT_EARLY_STOP: useful work continued to the policy cutoff; 40 minutes became unattainable within the slot after required atomic preservation gaps",
+  "stop_reason": "Reached the fixed forward-research cutoff while bounded independent literal-deletion replay was completing.",
   "research_target_minutes": 40,
   "target_40m_applies": "YES",
-  "target_40m_met": "PENDING",
-  "compliance_status": "ACTIVE",
+  "target_40m_met": "NO",
+  "compliance_status": "FINALIZED_RAN_TARGET_NOT_MET",
   "infrastructure_failures": [],
   "commit_shas": [
     "3dcb6e7d931382bb034201cbe28d426414bbe2fc",
@@ -183,8 +193,9 @@
     "131b7e9cad97ba5f9f59287942ddec80ca96262e",
     "647cc4f3335b87dad3ae4319dd7440bcd3d39206",
     "b7347a5dbb0f5df78b91e92c4284c88b3fd69332",
-    "21d2c1006c4ae7cb2baf4eee4bb7ceb02c99eaa6"
+    "21d2c1006c4ae7cb2baf4eee4bb7ceb02c99eaa6",
+    "3ad6aa3c83ae27b37f210904854d651c50fecc4d"
   ],
-  "live_unfinished_line": "Build independent literal-deletion replay for the n19 Delta11 index1 intersection-one low-deficit branch; all three singleton deficits0,1,2 remain UNKNOWN.",
+  "live_unfinished_line": "For n19 Delta11 index1 intersection-one, common-source deficit3--10 is UNSAT, while deficits0--2 remain UNKNOWN under both criticality encodings. Derive a new low-deficit structural consequence or split by the remaining endpoint degrees; then address index2 intersection-one.",
   "historical_fragments": []
 }

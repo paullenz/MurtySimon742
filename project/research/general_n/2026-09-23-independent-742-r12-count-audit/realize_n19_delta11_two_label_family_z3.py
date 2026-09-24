@@ -12,7 +12,7 @@ L0, L1 = 12, 13
 
 
 def solve_profile(x1, h1, intersection, deficit1_lo=0, deficit1_hi=10,
-                  timeout_ms=300_000):
+                  timeout_ms=300_000, direct_deletion=False):
     E = {(u, v): Bool(f"e_{u}_{v}")
          for u in range(N) for v in range(u + 1, N)}
 
@@ -25,6 +25,11 @@ def solve_profile(x1, h1, intersection, deficit1_lo=0, deficit1_hi=10,
         return And(Not(edge(a, z)), edge(a, w), edge(z, w),
                    *[Not(And(edge(a, q), edge(z, q)))
                      for q in range(N) if q not in (a, z, w)])
+
+    def deleted(u, v, a, b):
+        if u == v:
+            return False
+        return False if {u, v} == {a, b} else edge(u, v)
 
     q = Solver()
     q.set(timeout=timeout_ms)
@@ -107,16 +112,30 @@ def solve_profile(x1, h1, intersection, deficit1_lo=0, deficit1_hi=10,
                                   for w in range(N) if w not in (u, v)]))
     for x in range(N):
         for y in range(x + 1, N):
-            witnesses = [And(*[Not(And(edge(x, w), edge(y, w)))
-                               for w in range(N) if w not in (x, y)])]
-            for z in range(N):
-                if z not in (x, y):
-                    witnesses += [unique_common(x, z, y), unique_common(y, z, x)]
-            q.add(Implies(edge(x, y), Or(*witnesses)))
+            if direct_deletion:
+                far_pairs = []
+                for u in range(N):
+                    for v in range(u + 1, N):
+                        far_pairs.append(And(
+                            Not(deleted(u, v, x, y)),
+                            *[Not(And(deleted(u, w, x, y),
+                                      deleted(w, v, x, y)))
+                              for w in range(N) if w not in (u, v)]))
+                q.add(Implies(edge(x, y), Or(*far_pairs)))
+            else:
+                witnesses = [And(*[Not(And(edge(x, w), edge(y, w)))
+                                   for w in range(N) if w not in (x, y)])]
+                for z in range(N):
+                    if z not in (x, y):
+                        witnesses += [unique_common(x, z, y),
+                                      unique_common(y, z, x)]
+                q.add(Implies(edge(x, y), Or(*witnesses)))
     result = q.check()
     out = {"x": [9, x1], "h": [9, h1], "C0": sorted(C0),
            "C1": sorted(C1), "intersection": intersection,
            "deficit1_range": [deficit1_lo, deficit1_hi],
+           "criticality_encoding": ("literal-deletion" if direct_deletion
+                                     else "unique-common-neighbour"),
            "status": str(result)}
     if result == sat:
         m = q.model()
@@ -136,10 +155,11 @@ def main():
     p.add_argument("--deficit1-lo", type=int, default=0)
     p.add_argument("--deficit1-hi", type=int, default=10)
     p.add_argument("--timeout-ms", type=int, default=300_000)
+    p.add_argument("--direct-deletion", action="store_true")
     a = p.parse_args()
     print(json.dumps(solve_profile(a.x1, a.h1, a.intersection,
                                    a.deficit1_lo, a.deficit1_hi,
-                                   a.timeout_ms),
+                                   a.timeout_ms, a.direct_deletion),
                      indent=2, sort_keys=True))
 
 
