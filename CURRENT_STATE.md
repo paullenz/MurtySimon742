@@ -5,20 +5,20 @@ Canonical repository: `paullenz/MurtySimon742`. Date: 24 September 2026.
 Active target: a genuinely independent proof of Erdős #742 / the Murty–Simon inequality e(G)<=floor(n^2/4), preferably with the equality characterization. Forward priority is the project’s own complement / residual / Hall / profile / realizability route, not a reconstruction of the external e+disj+X proof. The first focused session produced the internally checked candidate threshold `Delta>=250n/429`, shrinking the live strip to `n/2<Delta<250n/429`. The theorem and its inherited graph-to-profile spine remain candidate/internal-review mathematics. A 24-focused-session go/no-go gate applies. Prior eventual-D2C work remains preserved but is no longer the active forward objective.
 
 <!-- CURRENT-STATUS:START -->
-CHECKPOINT CLASS: SATURATED_555_ROOT_CHARGE_NEGATIVE_CONTROL
+CHECKPOINT CLASS: COMMON_C_555_DIRECT_EXCLUSION_TRANSFER_SCOPE
 WORK MODE: MATH
-INSPECTED PREDECESSOR: c02a4db8c81dfd78e9aaf53226238456e34df701.
-LAST VERIFIED RESULT: The saturated n=18 (5,5,5) membership-step system has exactly five labelled membership-count vectors. Exhaustion of all one-use forced source skeletons plus the root-certificate charge finds one vector forcing singleton deficit 3, but four vectors route every forced root edge through zero-charge B-witnesses. This is a preserved negative control: root-certificate disjunction alone does not replace the existing staged SAT exclusion.
+INSPECTED PREDECESSOR: 56bf3a87fd48203b7568ab109f3baff1d177417d.
+LAST VERIFIED RESULT: The specific recorded n=18 (5,5,5) survivor with five common right endpoints and hence identical C-sets is excluded directly at the exact-H interface: two labels at a shared endpoint need distinct assigned physical sources, but identical C-sets make both sources common neighbours, contradicting uniqueness. However the bare tuple does not force common C; five alternative saturated membership vectors survive necessary conditions. The stable-index JSON currently reports zero survivors and a different closest tuple, conflicting with transfer prose that calls index 20,851 a unique 555 survivor.
 SESSION: Scheduled trigger 2026-09-24T06:00:38+01:00; actual entry 06:00:55; STARTED published 06:03:58; first substantive checkpoint 06:07:15; cutoff 06:53:38; hard close 06:59:38. Immutable scheduler attribution UNVERIFIED.
-VERIFIED FORWARD INTERVALS: 06:06:26--06:07:15; 06:08:41--06:10:43 BST.
-VERIFIED FORWARD SPAN: 2m51s.
+VERIFIED FORWARD INTERVALS: 06:06:26--06:07:15; 06:08:41--06:10:43; 06:13:14--06:14:40 BST.
+VERIFIED FORWARD SPAN: 4m17s.
 SESSION RESULT: ACTIVE; launch target MET; 40-minute target pending.
-SUBSTANTIVE UNITS: 2. Focused-session counter remains 6/24 pending completion.
+SUBSTANTIVE UNITS: 3. Focused-session counter remains 6/24 pending completion.
 CANONICAL RECORD: project/research/session_logs/2026-09-24/2026-09-24T06-00-38+01-00-canonical.json.
 UNPRESERVED WORK: None after this checkpoint.
-DEFERRED ADMIN: None.
-NEXT ACTION: Use the four zero-charge (5,5,5) controls to isolate the missing full-graph adjacency/common-neighbour constraint and test it as a bounded graph-realizability strengthening.
-MANDATORY CONSTRAINTS: Internal necessary-condition evidence only; the staged exact D2C model, not this coarse screen, excludes (5,5,5); S<=14 remains computer-assisted; equality only through S<=8; balanced-bipartite/X3 controls unchanged; general theorem open.
+DEFERRED ADMIN: Do not rewrite the conflicting stable-index history until generator/equality evidence is inspected.
+NEXT ACTION: Inspect the canonical stable-index generator/output equality conditions. Prove common right types if forced; otherwise keep tuple-only transfer UNVERIFIED and test the five alternative saturated geometries.
+MANDATORY CONSTRAINTS: The direct private-source contradiction applies only to common-C geometry; do not infer it from the tuple alone. Internal evidence only; S<=14 computer-assisted; equality only through S<=8; balanced-bipartite/X3 controls unchanged; general theorem open.
 <!-- CURRENT-STATUS:END -->
 
 ## Latest adversarial audit - 24 September 2026
