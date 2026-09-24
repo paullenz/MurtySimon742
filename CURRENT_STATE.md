@@ -5,19 +5,19 @@ Canonical repository: `paullenz/MurtySimon742`. Date: 24 September 2026.
 Active target: a genuinely independent proof of Erdős #742 / the Murty–Simon inequality e(G)<=floor(n^2/4), preferably with the equality characterization. Forward priority is the project’s own complement / residual / Hall / profile / realizability route, not a reconstruction of the external e+disj+X proof. The first focused session produced the internally checked candidate threshold `Delta>=250n/429`, shrinking the live strip to `n/2<Delta<250n/429`. The theorem and its inherited graph-to-profile spine remain candidate/internal-review mathematics. A 24-focused-session go/no-go gate applies. Prior eventual-D2C work remains preserved but is no longer the active forward objective.
 
 <!-- CURRENT-STATUS:START -->
-CHECKPOINT CLASS: DEMAND15_SOURCE_UNION_CHARGE_ACTIVE
+CHECKPOINT CLASS: DEMAND15_SOURCE_UNION_MILP_ACTIVE
 WORK MODE: MATH
-INSPECTED PREDECESSOR: f771ccec24e1fea353e09969361cc0eb52477825.
-LAST VERIFIED RESULT: The complete 32-row r=12 support-ten universe remains reproducibly LP-infeasible, restoring internal S<=14. A new graph-level assigned-witness lemma proves delta_t >= |union C_i|-a >= rho+r_t-min h_i at every shared supplement endpoint. Regression: 575 independently certified D2C graphs, 921 maximum roots, 15,957 locally assignable subsets, zero violations; both balanced-bipartite parities and X3 retained.
+INSPECTED PREDECESSOR: c549a6d93ac5117c17a1bb08c00cc052fd994d01.
+LAST VERIFIED RESULT: Internal S<=14 is restored by complete 32-row replay. The new graph-level source-union lemma is proved and regressed. Its profile floor g(J) has now been added to the demand-15/16 witness MILP. It leaves all five leading n=18 profiles unchanged, so it is not a realizability closure. Bounded strengthened replays close n=14,Delta=8 and scalar range 201-400 of n=16,Delta=9; no claim is made for the interrupted n16 prefix.
 ACTIVE SESSION: Scheduled 03:00:38; actual entry 03:02:57; STARTED 03:03:11; first substantive checkpoint 03:07:18; cutoff 03:53:38; hard close 03:59:38. Immutable delivery identity UNVERIFIED.
-VERIFIED FORWARD SPAN: 22m10s.
+VERIFIED FORWARD SPAN: 26m10s.
 SESSION RESULT: ACTIVE; 40-minute target PENDING.
-SUBSTANTIVE UNITS: 5. Focused-session counter remains 6/24 pending completion.
+SUBSTANTIVE UNITS: 6. Focused-session counter remains 6/24 pending completion.
 CANONICAL RECORD: project/research/session_logs/2026-09-24/2026-09-24T03-00-38+01-00-canonical.json.
 UNPRESERVED WORK: None after this checkpoint.
 DEFERRED ADMIN: Finalize stale 02:00 telemetry after current forward work.
-NEXT ACTION: Add g(J)=max(0,rho+|J|-min h_i) to the demand-15/16 witness-deficit MILP and measure survivor closure.
-MANDATORY CONSTRAINTS: Internal evidence only; S<=14 remains computer-assisted; new charge is necessary not sufficient for graph realizability; equality only through S<=8; forbidden claims and balanced-bipartite/X3 controls unchanged; general theorem open.
+NEXT ACTION: Derive or test a companion source-capacity/union interaction; the zero floor on dense survivors shows that exact graph realizability remains essential.
+MANDATORY CONSTRAINTS: Internal evidence only; S<=14 remains computer-assisted; source-union MILP is necessary not sufficient; equality only through S<=8; no n16 prefix-closure claim; forbidden claims and balanced-bipartite/X3 controls unchanged; general theorem open.
 <!-- CURRENT-STATUS:END -->
 
 ## Latest adversarial audit - 24 September 2026
