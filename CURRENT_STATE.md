@@ -5,17 +5,17 @@ Canonical repository: `paullenz/MurtySimon742`. Date: 24 September 2026.
 Active target: a genuinely independent proof of Erdős #742 / the Murty–Simon inequality e(G)<=floor(n^2/4), preferably with the equality characterization. Forward priority is the project’s own complement / residual / Hall / profile / realizability route, not a reconstruction of the external e+disj+X proof. The first focused session produced the internally checked candidate threshold `Delta>=250n/429`, shrinking the live strip to `n/2<Delta<250n/429`. The theorem and its inherited graph-to-profile spine remain candidate/internal-review mathematics. A 24-focused-session go/no-go gate applies. Prior eventual-D2C work remains preserved but is no longer the active forward objective.
 
 <!-- CURRENT-STATUS:START -->
-CHECKPOINT CLASS: N19_DELTA11_INDEX1_ROOT_EDGE_WITNESS_OBSTRUCTION
+CHECKPOINT CLASS: SESSION_STARTED_RECOVERED_10
 WORK MODE: MATH
-INSPECTED PREDECESSOR: 660aa904a27d47e61a209503bac75cf5f220d4a6.
-LAST VERIFIED RESULT: Stable index1 with source-set intersection one is internally excluded. One-use forces a rigid B-edge pattern; criticality of root edges01 and02 forces two distinct singleton-B-neighbour A witnesses of deficit at least4 each; the two exact-star inequalities force at least23 further deficit, hence D>=31>27. This is conditional on the audited bridge/source/star premises and is not external acceptance.
-SESSION: Scheduled trigger09:00:38; primary launch missing; watchdog recovery actual entry09:06:55; STARTED published09:10:06; first substantive artifact commit09:16:27; cutoff09:53:38; hard close09:59:38. Attribution launch_recovery_watchdog; same trigger only; no duplicate credit.
-VERIFIED FORWARD INTERVALS: 09:15:09--09:15:44 BST.
-VERIFIED FORWARD SPAN: 0m35s.
+INSPECTED PREDECESSOR: 763adddcbc7a4dd13cee1988460603d5923e95ea.
+LAST VERIFIED RESULT: Mathematical state unchanged at launch: stable index1 with source-set intersection one is internally excluded by the root-edge witness/deficit obstruction. No new mathematical claim is made by this STARTED checkpoint.
+SESSION: Scheduled trigger10:00:38; primary launch missing; watchdog recovery actual entry10:04:02; STARTED publication target10:06:48; cutoff10:53:38; hard close10:59:38. Attribution launch_recovery_watchdog; same trigger only; no duplicate credit.
+VERIFIED FORWARD INTERVALS: None yet.
+VERIFIED FORWARD SPAN: 0m00s.
 SESSION RESULT: ACTIVE_RECOVERED; 40-minute target applies and is not yet met.
-SUBSTANTIVE UNITS: 1.
-CANONICAL RECORD: project/research/session_logs/2026-09-24/2026-09-24T09-00-38+01-00-canonical.json.
-PRESERVATION: First substantive unit durably preserved at commit188c56f04a30a757e4bc5982b945f4b638f894b7; initial artifact commit omitted same-commit status synchronization and the defect is now recorded/repaired.
+SUBSTANTIVE UNITS: 0.
+CANONICAL RECORD: project/research/session_logs/2026-09-24/2026-09-24T10-00-38+01-00-canonical.json.
+PRESERVATION: Canonical STARTED record plus synchronized CURRENT-STATUS published before mathematics.
 UNPRESERVED WORK: None.
 DEFERRED ADMIN: Stable-index JSON/prose discrepancy remains historical audit metadata and is not blocking.
 NEXT ACTION: Attack stable index2 source-set intersection-one by separating the unique unassigned T1 endpoint and deriving the corresponding root-edge witness/deficit obstruction; UNKNOWN remains non-exclusion.
