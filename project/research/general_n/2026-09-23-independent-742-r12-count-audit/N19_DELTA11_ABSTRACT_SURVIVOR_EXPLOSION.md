@@ -87,3 +87,21 @@ The two UNKNOWN cases are not exclusions. They are the exact remaining
 leading geometries and should be attacked by symmetry breaking or a direct
 human degree/criticality argument; no additional scalar sharding is useful
 until this graph-level fork is resolved.
+
+### Strengthened intersection-one replay
+
+The two timeout cases were replayed after adding only consequences of the
+encoded graph model: degree ordering among the five inactive A-vertices,
+pair-deficit lower bounds for assigned incidences, and the audited exact-star
+inequalities (73 for the nine-set label; 45 and 58 for the six- and seven-set
+labels).  Both cases again returned `UNKNOWN` at 300 seconds:
+
+| stable index | `(x0,x1)` | `(h0,h1)` | C-intersection | strengthened result |
+|---:|---|---|---:|---|
+| 1 | `(9,6)` | `(9,6)` | 1 | UNKNOWN (300s timeout) |
+| 2 | `(9,7)` | `(9,8)` | 1 | UNKNOWN (300s timeout) |
+
+This is a useful negative solver result, not an exclusion.  The redundant
+star constraints did not resolve the hard branch, so the next bounded step is
+to split an intersection-one case by the shared source edge's endpoint
+degrees or rebuild it with the independent literal-deletion encoding.

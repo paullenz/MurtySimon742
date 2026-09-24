@@ -80,6 +80,12 @@
       "stop": "2026-09-24T08:30:55+01:00",
       "seconds": 368,
       "unit": "generalize exact graph model across first three n19 Delta11 two-label profiles and source-set intersections"
+    },
+    {
+      "start": "2026-09-24T08:32:35+01:00",
+      "stop": "2026-09-24T08:38:13+01:00",
+      "seconds": 338,
+      "unit": "strengthen and replay both n19 Delta11 intersection-one exact graph models with safe symmetry and exact-star consequences"
     }
   ],
   "forward_research_stop": "PENDING",
@@ -87,9 +93,9 @@
   "preservation_complete": "PENDING",
   "final_report_time": "PENDING",
   "wall_clock_span_to_preservation_complete": "PENDING",
-  "verified_forward_research_span": "20m18s",
+  "verified_forward_research_span": "25m56s",
   "preservation_span": "PENDING",
-  "substantive_unit_count": 10,
+  "substantive_unit_count": 11,
   "timestamped_unit_ledger": [
     {
       "completed_at": "2026-09-24T08:02:33+01:00",
@@ -130,6 +136,10 @@
     {
       "completed_at": "2026-09-24T08:30:55+01:00",
       "unit": "Leading two-label family: index1 intersection0 UNSAT/intersection1 timeout; index2 intersection0 UNSAT/intersection1 timeout; index3 disjoint UNSAT. Two UNKNOWN geometries remain and are not exclusions."
+    },
+    {
+      "completed_at": "2026-09-24T08:38:13+01:00",
+      "unit": "Added inactive-A degree symmetry, assigned-pair deficit floors, and exact-star consequences to both remaining intersection-one models; each still returned UNKNOWN after300s. Timeout is preserved as non-exclusion."
     }
   ],
   "early_stop_check_time": "PENDING",
@@ -150,8 +160,9 @@
     "8cfdcbb5a58e77ebb29b96b853f937eded4d90f5",
     "8d145a5a0148f1efc8e5a41f6dc0828ab619c9cc",
     "7c9e58453872c297ccea6cf060f3de583553625f",
-    "131b7e9cad97ba5f9f59287942ddec80ca96262e"
+    "131b7e9cad97ba5f9f59287942ddec80ca96262e",
+    "647cc4f3335b87dad3ae4319dd7440bcd3d39206"
   ],
-  "live_unfinished_line": "Resolve the two intersection-one UNKNOWN cases for n19 Delta11 indices1 and2 using symmetry breaking, direct deletion, or a human degree/criticality obstruction; do not count timeout as exclusion.",
+  "live_unfinished_line": "Split an intersection-one case by the shared source edge endpoint degrees or rebuild it with the independent literal-deletion encoding; both strengthened300s timeouts remain UNKNOWN.",
   "historical_fragments": []
 }

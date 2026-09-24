@@ -37,6 +37,11 @@ def solve_profile(x1, h1, intersection):
         deg.append(du)
         q.add(du <= DELTA)
     q.add(Sum([DELTA - du for du in deg]) <= 27)
+    deficit = [DELTA - du for du in deg]
+    # Safe symmetry breaking among the five structurally interchangeable
+    # inactive A-vertices.
+    for u in range(14, 18):
+        q.add(deg[u] >= deg[u + 1])
 
     C0 = {1, 2}
     c1_size = DELTA - h1
@@ -68,6 +73,18 @@ def solve_profile(x1, h1, intersection):
             for z in range(N):
                 if z not in B and z not in (i, t):
                     q.add(Implies(ai, Not(And(edge(i, z), edge(t, z)))))
+            # Redundant graph-level pair-deficit inequality, retained here to
+            # prune the exact search without weakening it.
+            q.add(Implies(ai, deficit[i] + deficit[t] >= 4))
+
+    # Redundant exact/strict star inequalities. These are consequences of the
+    # encoded D2C/source premises and substantially tighten the search.
+    q.add(9 * deficit[L0]
+          + Sum([deficit[t] for t in B if t not in C0]) >= 73)
+    slack = {6: 21, 7: 30, 8: 29}[x1]
+    q.add(x1 * deficit[L1]
+          + Sum([If(a1[t], deficit[t], 0) for t in B])
+          >= 4 * x1 + slack)
 
     for u in B:
         for t in B:

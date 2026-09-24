@@ -5,20 +5,20 @@ Canonical repository: `paullenz/MurtySimon742`. Date: 24 September 2026.
 Active target: a genuinely independent proof of Erdős #742 / the Murty–Simon inequality e(G)<=floor(n^2/4), preferably with the equality characterization. Forward priority is the project’s own complement / residual / Hall / profile / realizability route, not a reconstruction of the external e+disj+X proof. The first focused session produced the internally checked candidate threshold `Delta>=250n/429`, shrinking the live strip to `n/2<Delta<250n/429`. The theorem and its inherited graph-to-profile spine remain candidate/internal-review mathematics. A 24-focused-session go/no-go gate applies. Prior eventual-D2C work remains preserved but is no longer the active forward objective.
 
 <!-- CURRENT-STATUS:START -->
-CHECKPOINT CLASS: N19_DELTA11_TWO_LABEL_PARTIAL
+CHECKPOINT CLASS: N19_DELTA11_INTERSECTION_ONE_STRENGTHENED_TIMEOUT
 WORK MODE: MATH
-INSPECTED PREDECESSOR: 131b7e9cad97ba5f9f59287942ddec80ca96262e.
-LAST VERIFIED RESULT: Exact graph models exclude n19,Delta11 indices1 and2 when C0,C1 are disjoint, and independently exclude index3. The intersection-one geometries of indices1 and2 timed out after300s and remain UNKNOWN; they are not exclusions. Scalar sharding remains retired at this survivor-rich row.
+INSPECTED PREDECESSOR: 647cc4f3335b87dad3ae4319dd7440bcd3d39206.
+LAST VERIFIED RESULT: Safe degree symmetry, assigned-pair deficit floors, and exact-star consequences were added to both remaining n19,Delta11 intersection-one graph models. Both again timed out after300s and remain UNKNOWN; timeout is not exclusion. Disjoint indices1/2 and index3 remain internally excluded.
 SESSION: Scheduled trigger08:00:38; actual entry08:00:52; STARTED published08:01:11; first checkpoint08:02:33; cutoff08:53:38; hard close08:59:38. Immutable scheduler attribution UNVERIFIED.
-VERIFIED FORWARD INTERVALS: 08:01:54--08:02:33; 08:03:31--08:06:11; 08:06:59--08:09:56; 08:11:04--08:11:21; 08:12:13--08:14:23; 08:15:17--08:15:38; 08:16:35--08:19:23; 08:20:27--08:21:08; 08:22:01--08:23:38; 08:24:47--08:30:55 BST.
-VERIFIED FORWARD SPAN: 20m18s.
+VERIFIED FORWARD INTERVALS: 08:01:54--08:02:33; 08:03:31--08:06:11; 08:06:59--08:09:56; 08:11:04--08:11:21; 08:12:13--08:14:23; 08:15:17--08:15:38; 08:16:35--08:19:23; 08:20:27--08:21:08; 08:22:01--08:23:38; 08:24:47--08:30:55; 08:32:35--08:38:13 BST.
+VERIFIED FORWARD SPAN: 25m56s.
 SESSION RESULT: ACTIVE; 40-minute target pending.
-SUBSTANTIVE UNITS: 10. Focused-session counter remains7/24 pending completion.
+SUBSTANTIVE UNITS: 11. Focused-session counter remains7/24 pending completion.
 CANONICAL RECORD: project/research/session_logs/2026-09-24/2026-09-24T08-00-38+01-00-canonical.json.
 UNPRESERVED WORK: None.
 DEFERRED ADMIN: Stable-index JSON/prose discrepancy remains historical audit metadata and is not blocking.
-NEXT ACTION: Resolve the two index1/index2 intersection-one UNKNOWN cases; preserve timeout truthfully and seek bounded graph-level obstruction.
-MANDATORY CONSTRAINTS: UNKNOWN is not UNSAT; no row closure. S<=14 remains computer-assisted; equality only throughS<=8; balanced-bipartite/X3 controls unchanged.
+NEXT ACTION: Split one intersection-one model by shared-source endpoint degrees or independently replay it with literal deletion; preserve UNKNOWN honestly.
+MANDATORY CONSTRAINTS: UNKNOWN is not UNSAT; no n19,Delta11 row closure. S<=14 remains computer-assisted; equality only throughS<=8; balanced-bipartite/X3 controls unchanged.
 <!-- CURRENT-STATUS:END -->
 
 ## Latest adversarial audit - 24 September 2026
