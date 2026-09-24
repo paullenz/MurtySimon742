@@ -5,20 +5,20 @@ Canonical repository: `paullenz/MurtySimon742`. Date: 24 September 2026.
 Active target: a genuinely independent proof of Erdős #742 / the Murty–Simon inequality e(G)<=floor(n^2/4), preferably with the equality characterization. Forward priority is the project’s own complement / residual / Hall / profile / realizability route, not a reconstruction of the external e+disj+X proof. The first focused session produced the internally checked candidate threshold `Delta>=250n/429`, shrinking the live strip to `n/2<Delta<250n/429`. The theorem and its inherited graph-to-profile spine remain candidate/internal-review mathematics. A 24-focused-session go/no-go gate applies. Prior eventual-D2C work remains preserved but is no longer the active forward objective.
 
 <!-- CURRENT-STATUS:START -->
-CHECKPOINT CLASS: STAR5_EXACT_SLACK_555_CLOSED
+CHECKPOINT CLASS: EXACT_STAR_LEADING_PROFILES_CLOSED
 WORK MODE: MATH
-INSPECTED PREDECESSOR: 7525a10c0258f58cc18773a73fb80db67f92e345.
-LAST VERIFIED RESULT: Independent exact labelled set-cover replay gives minimum star slack 4,8,14 for x=3,4,5 (and an independent Atlas/MILP replay gives 21,30 for x=6,7). For the n=18 tuple d=x=h=(5,5,5), the x=5 floor 14 yields 87<=3D+2C, while D<=16 and C<=15 give at most78. Thus the tuple itself is excluded at the assigned-witness interface, without common-C assumptions, membership classification or full D2C SAT.
+INSPECTED PREDECESSOR: d7e4ed593cb69e1c72e46ecf766924dd80d6a352.
+LAST VERIFIED RESULT: A forward source-union/right-budget MILP using exact star slack 4,8,14,21,30 for x=3..7 replays the five leading n=18, Delta=10 profiles. Four have minimum deficit 17,19,19,19>Dmax16. The sole abstract optimum, (d,x)=((8,7),(8,8)) at deficit16, is excluded by the already proved graph-level singleton-source saturation obstruction. Thus all five audited leading profiles are closed; this is not full row closure.
 SESSION: Scheduled trigger 2026-09-24T06:00:38+01:00; actual entry 06:00:55; STARTED published 06:03:58; first substantive checkpoint 06:07:15; cutoff 06:53:38; hard close 06:59:38. Immutable scheduler attribution UNVERIFIED.
-VERIFIED FORWARD INTERVALS: 06:06:26--06:07:15; 06:08:41--06:10:43; 06:13:14--06:14:40; 06:16:52--06:18:17; 06:18:17--06:19:25; 06:20:09--06:21:17; 06:21:17--06:22:08 BST.
-VERIFIED FORWARD SPAN: 8m49s.
+VERIFIED FORWARD INTERVALS: 06:06:26--06:07:15; 06:08:41--06:10:43; 06:13:14--06:14:40; 06:16:52--06:18:17; 06:18:17--06:19:25; 06:20:09--06:21:17; 06:21:17--06:22:08; 06:23:39--06:24:54 BST.
+VERIFIED FORWARD SPAN: 10m04s.
 SESSION RESULT: ACTIVE; launch target MET; 40-minute target pending.
-SUBSTANTIVE UNITS: 7. Focused-session counter remains 6/24 pending completion.
+SUBSTANTIVE UNITS: 8. Focused-session counter remains 6/24 pending completion.
 CANONICAL RECORD: project/research/session_logs/2026-09-24/2026-09-24T06-00-38+01-00-canonical.json.
 UNPRESERVED WORK: None after this checkpoint.
-DEFERRED ADMIN: Stable-index JSON/prose discrepancy is superseded mathematically for tuple 555 but remains historical metadata to reconcile in audit.
-NEXT ACTION: Insert the exact small-star slack table (x=3..7) into the bounded demand-15/16 screen and measure which abstract survivors disappear; preserve the first remaining geometry.
-MANDATORY CONSTRAINTS: Internal finite verification only; this closes tuple 555, not the n18 row. S<=14 remains computer-assisted; equality only through S<=8; balanced-bipartite/X3 controls unchanged; general theorem open.
+DEFERRED ADMIN: Stable-index JSON/prose discrepancy remains historical metadata for audit; it is not needed for the new tuple exclusions.
+NEXT ACTION: Run exact-small-star v4 on the unresolved n=18, Delta=10 stable-index suffix beginning at 39,251; preserve any survivor and its graph-realizability interface.
+MANDATORY CONSTRAINTS: Internal finite verification only; five leading profiles closed, not the n18 row. S<=14 remains computer-assisted; equality only through S<=8; balanced-bipartite/X3 controls unchanged; general theorem open.
 <!-- CURRENT-STATUS:END -->
 
 ## Latest adversarial audit - 24 September 2026
