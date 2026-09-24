@@ -38,6 +38,12 @@
       "stop": "2026-09-24T08:09:56+01:00",
       "seconds": 177,
       "unit": "exhaust n16 Delta9 exact-star stable indices5,201 through7,008 in four exact shards"
+    },
+    {
+      "start": "2026-09-24T08:11:04+01:00",
+      "stop": "2026-09-24T08:11:21+01:00",
+      "seconds": 17,
+      "unit": "screen n19 Delta10 exact-star stable indices1 through200"
     }
   ],
   "forward_research_stop": "PENDING",
@@ -45,9 +51,9 @@
   "preservation_complete": "PENDING",
   "final_report_time": "PENDING",
   "wall_clock_span_to_preservation_complete": "PENDING",
-  "verified_forward_research_span": "6m16s",
+  "verified_forward_research_span": "6m33s",
   "preservation_span": "PENDING",
-  "substantive_unit_count": 3,
+  "substantive_unit_count": 4,
   "timestamped_unit_ledger": [
     {
       "completed_at": "2026-09-24T08:02:33+01:00",
@@ -60,6 +66,10 @@
     {
       "completed_at": "2026-09-24T08:09:56+01:00",
       "unit": "Final four v4 shards exhausted n16 Delta9 at stable index7,008 with zero survivors; full scalar loop inspected14,413 patterns and exact model excluded all7,008 scalar-pass profiles."
+    },
+    {
+      "completed_at": "2026-09-24T08:11:21+01:00",
+      "unit": "First n19 Delta10 v4 shard closed stable indices1--200 with zero survivors; closest gap +6 overDmax8."
     }
   ],
   "early_stop_check_time": "PENDING",
@@ -73,8 +83,9 @@
   "commit_shas": [
     "3dcb6e7d931382bb034201cbe28d426414bbe2fc",
     "5d2bf8ffa7f37ef3d868bea8d60b218bc1bb5a56",
-    "55a743986384d64bf585fe8ee6478e802f882a1a"
+    "55a743986384d64bf585fe8ee6478e802f882a1a",
+    "ebef1e47cb5f2aaead0ca43dd6cd8cf333d2bd31"
   ],
-  "live_unfinished_line": "Promote the conditional n16 Delta9 row closure into the finite-row ledger, then attack the next unresolved live-strip row using the same exact-star interface.",
+  "live_unfinished_line": "Continue n19, Delta10 exact-star row from stable index201; any survivor requires graph-interface analysis.",
   "historical_fragments": []
 }
