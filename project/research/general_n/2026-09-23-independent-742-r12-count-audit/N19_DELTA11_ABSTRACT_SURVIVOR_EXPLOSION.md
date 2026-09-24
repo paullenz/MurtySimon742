@@ -112,3 +112,9 @@ UNKNOWN branch sharply.  With 80-second exact checks, deficit ranges `3--5`,
 ranges exhaust the possible deficit `0--10`, so no omitted range is being
 treated as excluded.  The surviving low-deficit shard still requires exact
 resolution.
+
+Exact follow-up shards at common-source deficits `0`, `1`, and `2` each
+remained UNKNOWN after 180 seconds.  Thus the reduction to `0--2` is durable,
+but none of its three leaves is an exclusion.  Increasing the same encoding's
+timeout again is not a justified proof step; an independent literal-deletion
+model or a new structural consequence is required.
