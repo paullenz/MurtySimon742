@@ -86,6 +86,12 @@
       "stop": "2026-09-24T08:38:13+01:00",
       "seconds": 338,
       "unit": "strengthen and replay both n19 Delta11 intersection-one exact graph models with safe symmetry and exact-star consequences"
+    },
+    {
+      "start": "2026-09-24T08:40:06+01:00",
+      "stop": "2026-09-24T08:42:18+01:00",
+      "seconds": 132,
+      "unit": "split n19 Delta11 index1 intersection-one branch by common-source deficit"
     }
   ],
   "forward_research_stop": "PENDING",
@@ -93,9 +99,9 @@
   "preservation_complete": "PENDING",
   "final_report_time": "PENDING",
   "wall_clock_span_to_preservation_complete": "PENDING",
-  "verified_forward_research_span": "25m56s",
+  "verified_forward_research_span": "28m08s",
   "preservation_span": "PENDING",
-  "substantive_unit_count": 11,
+  "substantive_unit_count": 12,
   "timestamped_unit_ledger": [
     {
       "completed_at": "2026-09-24T08:02:33+01:00",
@@ -140,6 +146,10 @@
     {
       "completed_at": "2026-09-24T08:38:13+01:00",
       "unit": "Added inactive-A degree symmetry, assigned-pair deficit floors, and exact-star consequences to both remaining intersection-one models; each still returned UNKNOWN after300s. Timeout is preserved as non-exclusion."
+    },
+    {
+      "completed_at": "2026-09-24T08:42:18+01:00",
+      "unit": "Index1 intersection-one deficit split: ranges3--5,6--8,9--10 UNSAT; only0--2 remains UNKNOWN after80s. Four shards exhaust deficit0--10."
     }
   ],
   "early_stop_check_time": "PENDING",
@@ -161,8 +171,9 @@
     "8d145a5a0148f1efc8e5a41f6dc0828ab619c9cc",
     "7c9e58453872c297ccea6cf060f3de583553625f",
     "131b7e9cad97ba5f9f59287942ddec80ca96262e",
-    "647cc4f3335b87dad3ae4319dd7440bcd3d39206"
+    "647cc4f3335b87dad3ae4319dd7440bcd3d39206",
+    "b7347a5dbb0f5df78b91e92c4284c88b3fd69332"
   ],
-  "live_unfinished_line": "Split an intersection-one case by the shared source edge endpoint degrees or rebuild it with the independent literal-deletion encoding; both strengthened300s timeouts remain UNKNOWN.",
+  "live_unfinished_line": "Resolve the remaining n19 Delta11 index1 intersection-one common-source deficit0--2 shard, then return to index2 intersection-one; UNKNOWN remains non-exclusion.",
   "historical_fragments": []
 }

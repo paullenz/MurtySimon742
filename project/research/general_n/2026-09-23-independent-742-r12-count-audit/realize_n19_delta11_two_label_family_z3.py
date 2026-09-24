@@ -11,7 +11,8 @@ A = tuple(range(12, 19))
 L0, L1 = 12, 13
 
 
-def solve_profile(x1, h1, intersection):
+def solve_profile(x1, h1, intersection, deficit1_lo=0, deficit1_hi=10,
+                  timeout_ms=300_000):
     E = {(u, v): Bool(f"e_{u}_{v}")
          for u in range(N) for v in range(u + 1, N)}
 
@@ -26,7 +27,7 @@ def solve_profile(x1, h1, intersection):
                      for q in range(N) if q not in (a, z, w)])
 
     q = Solver()
-    q.set(timeout=300_000)
+    q.set(timeout=timeout_ms)
     for b in B:
         q.add(edge(ROOT, b))
     for a in A:
@@ -38,6 +39,7 @@ def solve_profile(x1, h1, intersection):
         q.add(du <= DELTA)
     q.add(Sum([DELTA - du for du in deg]) <= 27)
     deficit = [DELTA - du for du in deg]
+    q.add(deficit[1] >= deficit1_lo, deficit[1] <= deficit1_hi)
     # Safe symmetry breaking among the five structurally interchangeable
     # inactive A-vertices.
     for u in range(14, 18):
@@ -114,6 +116,7 @@ def solve_profile(x1, h1, intersection):
     result = q.check()
     out = {"x": [9, x1], "h": [9, h1], "C0": sorted(C0),
            "C1": sorted(C1), "intersection": intersection,
+           "deficit1_range": [deficit1_lo, deficit1_hi],
            "status": str(result)}
     if result == sat:
         m = q.model()
@@ -130,8 +133,13 @@ def main():
     p.add_argument("--x1", type=int, required=True)
     p.add_argument("--h1", type=int, required=True)
     p.add_argument("--intersection", type=int, required=True)
+    p.add_argument("--deficit1-lo", type=int, default=0)
+    p.add_argument("--deficit1-hi", type=int, default=10)
+    p.add_argument("--timeout-ms", type=int, default=300_000)
     a = p.parse_args()
-    print(json.dumps(solve_profile(a.x1, a.h1, a.intersection),
+    print(json.dumps(solve_profile(a.x1, a.h1, a.intersection,
+                                   a.deficit1_lo, a.deficit1_hi,
+                                   a.timeout_ms),
                      indent=2, sort_keys=True))
 
 

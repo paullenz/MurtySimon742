@@ -105,3 +105,10 @@ This is a useful negative solver result, not an exclusion.  The redundant
 star constraints did not resolve the hard branch, so the next bounded step is
 to split an intersection-one case by the shared source edge's endpoint
 degrees or rebuild it with the independent literal-deletion encoding.
+
+Splitting index 1 by the deficit of the common source vertex reduces that
+UNKNOWN branch sharply.  With 80-second exact checks, deficit ranges `3--5`,
+`6--8`, and `9--10` are UNSAT; only `0--2` remains UNKNOWN.  These four
+ranges exhaust the possible deficit `0--10`, so no omitted range is being
+treated as excluded.  The surviving low-deficit shard still requires exact
+resolution.
