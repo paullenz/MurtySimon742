@@ -62,6 +62,12 @@
       "stop": "2026-09-24T06:22:08+01:00",
       "seconds": 51,
       "unit": "implement labelled set-cover DP and derive direct star-five exclusion of 555"
+    },
+    {
+      "start": "2026-09-24T06:23:39+01:00",
+      "stop": "2026-09-24T06:24:54+01:00",
+      "seconds": 75,
+      "unit": "implement exact-small-star v4 model, replay five leading n18 profiles, and combine with graph-level singleton-source saturation"
     }
   ],
   "forward_research_stop": "PENDING",
@@ -69,9 +75,9 @@
   "preservation_complete": "PENDING",
   "final_report_time": "PENDING",
   "wall_clock_span_to_preservation_complete": "PENDING",
-  "verified_forward_research_span": "8m49s",
+  "verified_forward_research_span": "10m04s",
   "preservation_span": "PENDING",
-  "substantive_unit_count": 7,
+  "substantive_unit_count": 8,
   "timestamped_unit_ledger": [
     {
       "completed_at": "2026-09-24T06:07:15+01:00",
@@ -100,6 +106,10 @@
     {
       "completed_at": "2026-09-24T06:22:08+01:00",
       "unit": "Independent labelled DP replay over all 1,024 five-vertex witness graphs confirmed minimum slack 14; summing three star-five inequalities gives 87<=3D+2C<=78, excluding tuple 555 without geometry or full D2C SAT."
+    },
+    {
+      "completed_at": "2026-09-24T06:24:54+01:00",
+      "unit": "Exact-small-star v4 replay raises the three low-star profiles and 555 above Dmax; only (d,x)=((8,7),(8,8)) remains at deficit16, and the existing graph-level singleton-source saturation lemma excludes it. All five audited leading profiles are closed, but the n18 row is not."
     }
   ],
   "early_stop_check_time": "PENDING",
@@ -120,8 +130,11 @@
     "bfc46371495a3a44db7def236af1a7022981e281",
     "4bba3a25e1658965850b6b3233e0cf1c8616d1af",
     "aa57180c581da303634f5247f579301b386ff3e3",
-    "2a632b17665047e788e75442435592f9b41c9c4c"
+    "2a632b17665047e788e75442435592f9b41c9c4c",
+    "163bb64d4879c91e47f49d915fb0b23b26b30af0",
+    "22050973d8ffbdf86cfb6db4df7bae11dcd9f5a3",
+    "d7e4ed593cb69e1c72e46ecf766924dd80d6a352"
   ],
-  "live_unfinished_line": "Use exact small-star slack values 4,8,14,21,30 to rescreen the bounded demand-15/16 rows and identify which abstract survivors disappear.",
+  "live_unfinished_line": "Run the exact-small-star v4 screen on the unresolved n=18, Delta=10 stable-index suffix beginning at 39,251; preserve any survivor and its graph-realizability interface.",
   "historical_fragments": []
 }
