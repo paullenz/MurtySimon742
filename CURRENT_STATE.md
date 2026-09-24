@@ -5,19 +5,19 @@ Canonical repository: `paullenz/MurtySimon742`. Date: 24 September 2026.
 Active target: a genuinely independent proof of Erdős #742 / the Murty–Simon inequality e(G)<=floor(n^2/4), preferably with the equality characterization. Forward priority is the project’s own complement / residual / Hall / profile / realizability route, not a reconstruction of the external e+disj+X proof. The first focused session produced the internally checked candidate threshold `Delta>=250n/429`, shrinking the live strip to `n/2<Delta<250n/429`. The theorem and its inherited graph-to-profile spine remain candidate/internal-review mathematics. A 24-focused-session go/no-go gate applies. Prior eventual-D2C work remains preserved but is no longer the active forward objective.
 
 <!-- CURRENT-STATUS:START -->
-CHECKPOINT CLASS: SCHEDULED_RESEARCH_STARTED_RECOVERED
+CHECKPOINT CLASS: DEMAND15_EXPLICIT_C_CAPACITY_ACTIVE
 WORK MODE: MATH
-INSPECTED PREDECESSOR: 78ebcfd9f80ec8774d8999a08cdd8f7fd3840468.
-LAST VERIFIED RESULT: Mathematical state unchanged at recovery start: complete 32-row replay supports internal computer-assisted S<=14; source-union endpoint charge/private-source capacity survived regression; corrected demand-15/16 realizability model still leaves leading dense n18 survivors feasible. General theorem open.
-SESSION: Scheduled 04:00:38; launch-recovery watchdog actual entry 04:05:48; STARTED publication timestamp 04:06:51; primary launch had no durable STARTED record when checked. Same trigger only; immutable scheduler attribution UNVERIFIED.
-VERIFIED FORWARD SPAN: 0m00s at STARTED publication.
-SESSION RESULT: ACTIVE_RECOVERED; +5-minute STARTED target MISSED; no duplicate credit.
-SUBSTANTIVE UNITS: 0.
+INSPECTED PREDECESSOR: b87956568a0df11a48dbddee6d14c22619220aa9.
+LAST VERIFIED RESULT: Added one globally consistent integer C_i-overlap set system to the demand-15/16 witness model and imposed the proved coarse private-source capacity on each right-incidence label set. All five audited n=18,Delta=10 dense survivors remain feasible with unchanged minimum deficits 17,16,17,18,16. Thus coarse explicit-overlap capacity is a preserved negative result, not a realizability closure.
+SESSION: Scheduled 04:00:38; launch-recovery watchdog actual entry 04:05:48; STARTED publication timestamp 04:06:51; first substantive checkpoint 04:10:14; primary launch had no durable STARTED record when checked. Same trigger only; immutable scheduler attribution UNVERIFIED.
+VERIFIED FORWARD SPAN: 0m25s.
+SESSION RESULT: ACTIVE_RECOVERED; +5-minute STARTED target MISSED; 40-minute target pending; no duplicate credit.
+SUBSTANTIVE UNITS: 1.
 CANONICAL RECORD: project/research/session_logs/2026-09-24/2026-09-24T04-00-38+01-00-canonical.json.
 UNPRESERVED WORK: None.
 DEFERRED ADMIN: None.
-NEXT ACTION: Add explicit C_i overlap/private-source variables to the demand-15/16 realizability model and attack leading dense survivors; do not substitute further scalar enumeration for graph realizability.
-MANDATORY CONSTRAINTS: Internal evidence only; S<=14 remains computer-assisted; equality only through S<=8; n16 range 1-200 and suffix beyond 3200 remain open; forbidden claims and balanced-bipartite/X3 controls unchanged; general theorem open.
+NEXT ACTION: Strengthen the explicit C_i model with exact degree-weighted source capacity or direct source-to-endpoint incidence/degree consistency; do not return to scalar-only enumeration.
+MANDATORY CONSTRAINTS: Internal evidence only; S<=14 remains computer-assisted; equality only through S<=8; explicit-C model is necessary not sufficient; n16 range 1-200 and suffix beyond 3200 remain open; balanced-bipartite/X3 controls unchanged; general theorem open.
 <!-- CURRENT-STATUS:END -->
 
 ## Latest adversarial audit - 24 September 2026
