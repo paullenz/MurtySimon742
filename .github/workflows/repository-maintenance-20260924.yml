@@ -1,0 +1,68 @@
+name: One-off repository maintenance snapshot 2026-09-24
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - '.github/workflows/repository-maintenance-20260924.yml'
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  inventory:
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 2
+          persist-credentials: false
+      - name: Read-only tracked-file inventory and syntax checks
+        shell: bash
+        run: |
+          mkdir -p /tmp/repository-maintenance
+          python3 - <<'PY'
+          import ast, collections, hashlib, json, pathlib, subprocess, zipfile
+          root = pathlib.Path('.')
+          paths = subprocess.check_output(['git','ls-files','-z']).decode().split('\0')
+          paths = [p for p in paths if p]
+          report = {'head': subprocess.check_output(['git','rev-parse','HEAD']).decode().strip(), 'tracked_files': len(paths), 'extensions': dict(collections.Counter(pathlib.Path(p).suffix for p in paths)), 'json_errors': [], 'python_syntax_errors': [], 'snapshot_skipped': [], 'manifest': []}
+          with zipfile.ZipFile('/tmp/repository-maintenance/tracked-text.zip','w',zipfile.ZIP_DEFLATED) as archive:
+              for name in paths:
+                  p = root / name
+                  if not p.is_file():
+                      report['snapshot_skipped'].append({'path': name, 'reason': 'not a regular file'})
+                      continue
+                  b = p.read_bytes()
+                  report['manifest'].append({'path': name, 'bytes': len(b), 'sha256': hashlib.sha256(b).hexdigest()})
+                  try:
+                      text = b.decode('utf-8')
+                  except UnicodeDecodeError:
+                      report['snapshot_skipped'].append({'path': name, 'reason': 'binary'})
+                      continue
+                  if '\0' in text or len(b) > 10000000:
+                      report['snapshot_skipped'].append({'path': name, 'reason': 'NUL or over 10 MB'})
+                      continue
+                  archive.writestr(name,b)
+                  if p.suffix == '.json':
+                      try: json.loads(text)
+                      except (ValueError, RecursionError) as e: report['json_errors'].append({'path': name, 'error': str(e)})
+                  if p.suffix == '.py':
+                      try: ast.parse(text, filename=name)
+                      except (SyntaxError, ValueError, RecursionError) as e: report['python_syntax_errors'].append({'path': name, 'error': str(e)})
+          pathlib.Path('/tmp/repository-maintenance/inventory.json').write_text(json.dumps(report,indent=2)+'\n')
+          print(json.dumps({k:v for k,v in report.items() if k != 'manifest'},indent=2))
+          PY
+      - name: Existing process guards (diagnostic only)
+        run: |
+          python3 scripts/check_status_sync.py > /tmp/repository-maintenance/status-guard.txt 2>&1 || true
+          python3 tools/check_readme_review_materials.py > /tmp/repository-maintenance/reviewer-guard.txt 2>&1 || true
+          cat /tmp/repository-maintenance/status-guard.txt /tmp/repository-maintenance/reviewer-guard.txt
+      - uses: actions/upload-artifact@v4
+        with:
+          name: repository-maintenance-20260924
+          path: /tmp/repository-maintenance/
+          retention-days: 7
+          if-no-files-found: error
