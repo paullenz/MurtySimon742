@@ -25,6 +25,12 @@
       "stop": "2026-09-24T02:11:48+01:00",
       "duration": "00:03:18",
       "work": "Independent row-identity/provenance reconciliation of the 13 r=12 support-ten helper-LP timeout rows against durable COMPLETE/IPM artifacts; no retro-credit and no solver-optimality claim."
+    },
+    {
+      "start": "2026-09-24T02:22:15+01:00",
+      "stop": "2026-09-24T02:25:07+01:00",
+      "duration": "00:02:52",
+      "work": "Replayability/trust audit of the later helper-LP COMPLETE artifact and its commit provenance; corrected solver interpretation and tested whether current audit gate can safely be promoted."
     }
   ],
   "forward_research_stop": "PENDING",
@@ -32,19 +38,26 @@
   "preservation_complete": "PENDING",
   "final_report_time": "PENDING",
   "wall_clock_span_to_preservation_complete": "PENDING",
-  "verified_forward_research_span": "00:03:18",
+  "verified_forward_research_span": "00:06:10",
   "preservation_span": "PENDING",
-  "substantive_unit_count": 1,
+  "substantive_unit_count": 2,
   "timestamped_unit_ledger": [
     {
       "unit": 1,
       "start": "2026-09-24T02:08:30+01:00",
       "stop": "2026-09-24T02:11:48+01:00",
-      "result": "The launch-time UNKNOWN set is exactly indices 362,363,437,438,451,455,1494,3755,3758,4663,4664,4665,4682; all 13 occur in durable HELPER_LP_ALL32_COMPLETE as later trust-constr exclusions with reported objective >1. Provenance is after the prior credited boundary, so S<=14 remains frozen pending independent solver/constraint revalidation in this session.",
+      "result": "The launch-time UNKNOWN set is exactly indices 362,363,437,438,451,455,1494,3755,3758,4663,4664,4665,4682; all 13 occur in durable HELPER_LP_ALL32_COMPLETE as later solver exclusions. Provenance is after the prior credited boundary, so no retro-credit and no immediate S<=14 promotion.",
       "artifact": "project/research/general_n/2026-09-24-r12-support10-lp-relaxation-v1/RECOVERY_RECONCILIATION_02.md"
+    },
+    {
+      "unit": 2,
+      "start": "2026-09-24T02:22:15+01:00",
+      "stop": "2026-09-24T02:25:07+01:00",
+      "result": "Commit b52a447 changed only the COMPLETE Markdown report; the fresh second-pass implementation/certificates are not preserved there. The report used SciPy/HiGHS interior-point and status=2 denotes infeasible, correcting the earlier trust-constr label. Under the audit gate, S<=14 remains frozen until the 13 rows are independently replayed or certificate-backed.",
+      "artifact": "project/research/general_n/2026-09-24-r12-support10-lp-relaxation-v1/RECOVERY_REPLAY_AUDIT_02.md"
     }
   ],
-  "first_substantive_checkpoint_time": "PENDING_REMOTE_COMMIT_TIMESTAMP",
+  "first_substantive_checkpoint_time": "2026-09-24T02:12:55+01:00",
   "early_stop_check_time": "PENDING",
   "early_stop_check_result": "PENDING",
   "stop_reason": "PENDING",
@@ -58,8 +71,9 @@
   ],
   "commit_shas": [
     "9159e637ac20c6efb9fa41f52ce141f55f1859d5",
-    "75ad60fe977a476eaf7f9a17e8fa5fc34846b814"
+    "75ad60fe977a476eaf7f9a17e8fa5fc34846b814",
+    "ff1b2e765aac0a44847f7b0cabf8c0a2b5fdcab0"
   ],
-  "live_unfinished_line": "Independently reconstruct/check the helper-LP constraints for the 13 trust-constr-resolved rows; keep S<=14 frozen until solver/encoding validity is decisive.",
+  "live_unfinished_line": "Independently reconstruct and replay the helper-LP constraints for the 13 former timeout rows, or produce independently checkable infeasibility certificates; keep S<=14 frozen until decisive.",
   "historical_fragments": []
 }
