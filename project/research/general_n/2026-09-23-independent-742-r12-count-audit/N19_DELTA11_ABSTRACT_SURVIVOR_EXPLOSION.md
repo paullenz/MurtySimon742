@@ -67,3 +67,23 @@ graph-realizable, and the generic characterization has an independent
 5,553-edge regression. This promotes the fixed-profile exclusion to internal
 computer-assisted status. It still excludes only index 3, not the many other
 abstract survivors or the full row.
+
+## Leading two-label family
+
+`realize_n19_delta11_two_label_family_z3.py` generalizes the validated
+criticality model to the first three `(9,6)` demand profiles and exhausts the
+incomparable source-set intersection types (`|C0 intersect C1|=0,1`) up to B
+symmetry.
+
+| stable index | `(x0,x1)` | `(h0,h1)` | C-intersection | result |
+|---:|---|---|---:|---|
+| 1 | `(9,6)` | `(9,6)` | 0 | UNSAT |
+| 1 | `(9,6)` | `(9,6)` | 1 | UNKNOWN (300s timeout) |
+| 2 | `(9,7)` | `(9,8)` | 0 | UNSAT |
+| 2 | `(9,7)` | `(9,8)` | 1 | UNKNOWN (300s timeout) |
+| 3 | `(9,8)` | `(9,10)` | 0 | UNSAT |
+
+The two UNKNOWN cases are not exclusions. They are the exact remaining
+leading geometries and should be attacked by symmetry breaking or a direct
+human degree/criticality argument; no additional scalar sharding is useful
+until this graph-level fork is resolved.

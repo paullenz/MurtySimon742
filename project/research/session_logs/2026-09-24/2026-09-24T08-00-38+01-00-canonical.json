@@ -74,6 +74,12 @@
       "stop": "2026-09-24T08:23:38+01:00",
       "seconds": 97,
       "unit": "independently rebuild index3 graph model with literal edge-deletion criticality and replay UNSAT"
+    },
+    {
+      "start": "2026-09-24T08:24:47+01:00",
+      "stop": "2026-09-24T08:30:55+01:00",
+      "seconds": 368,
+      "unit": "generalize exact graph model across first three n19 Delta11 two-label profiles and source-set intersections"
     }
   ],
   "forward_research_stop": "PENDING",
@@ -81,9 +87,9 @@
   "preservation_complete": "PENDING",
   "final_report_time": "PENDING",
   "wall_clock_span_to_preservation_complete": "PENDING",
-  "verified_forward_research_span": "14m10s",
+  "verified_forward_research_span": "20m18s",
   "preservation_span": "PENDING",
-  "substantive_unit_count": 9,
+  "substantive_unit_count": 10,
   "timestamped_unit_ledger": [
     {
       "completed_at": "2026-09-24T08:02:33+01:00",
@@ -120,6 +126,10 @@
     {
       "completed_at": "2026-09-24T08:23:38+01:00",
       "unit": "Independent direct-deletion Z3 model also returned UNSAT for n19 Delta11 index3; together with characterization-model UNSAT and Graph Atlas regression, fixed-profile exclusion promoted to internal computer-assisted status."
+    },
+    {
+      "completed_at": "2026-09-24T08:30:55+01:00",
+      "unit": "Leading two-label family: index1 intersection0 UNSAT/intersection1 timeout; index2 intersection0 UNSAT/intersection1 timeout; index3 disjoint UNSAT. Two UNKNOWN geometries remain and are not exclusions."
     }
   ],
   "early_stop_check_time": "PENDING",
@@ -139,8 +149,9 @@
     "6a5bd71171955fcaede6fb58c455784674729dc0",
     "8cfdcbb5a58e77ebb29b96b853f937eded4d90f5",
     "8d145a5a0148f1efc8e5a41f6dc0828ab619c9cc",
-    "7c9e58453872c297ccea6cf060f3de583553625f"
+    "7c9e58453872c297ccea6cf060f3de583553625f",
+    "131b7e9cad97ba5f9f59287942ddec80ca96262e"
   ],
-  "live_unfinished_line": "Generalize the exact graph model across the leading n19 Delta11 survivor family, grouping profiles by (d,x,h) and source-set sizes; preserve SAT/UNSAT separately.",
+  "live_unfinished_line": "Resolve the two intersection-one UNKNOWN cases for n19 Delta11 indices1 and2 using symmetry breaking, direct deletion, or a human degree/criticality obstruction; do not count timeout as exclusion.",
   "historical_fragments": []
 }
