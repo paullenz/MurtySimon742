@@ -1,0 +1,43 @@
+{
+  "r11_support6.json": [
+    {
+      "commit": "2ff383498ee08f607aa958181f6dbc4e36d136a1",
+      "date": "2026-09-24T09:42:14Z",
+      "message": "admin: reconcile paused research state, preserve records and repair repository integrity",
+      "bytes": 1222,
+      "sha256": "3ac4b78516a0b8b712e775788198891b5c533e8d81a79634ed7381bdf1549cc9"
+    },
+    {
+      "commit": "d5641ea6024631127362e8a7a6f97fdb32fcd73a",
+      "date": "2026-09-22T15:25:41Z",
+      "message": "Screen r=11 residual support six",
+      "bytes": 120,
+      "sha256": "a405e97141eecd1f25d351b6495dfc19dea3637c75497932233625cbb9980b0e"
+    }
+  ],
+  "N18_STABLE_20851.json": [
+    {
+      "commit": "85632ae0e59c2884841c7de0718e7d1fe1d4fd2a",
+      "date": "2026-09-23T15:14:00Z",
+      "message": "research: preserve n18 stable-index 20851 check",
+      "bytes": 784,
+      "sha256": "126209fa37dd98b165ce7812c15a35a459c05efb5fea8eba0ea2e46dc663d6e6"
+    }
+  ],
+  "audit_r9_support8_orbits.py": [
+    {
+      "commit": "2ff383498ee08f607aa958181f6dbc4e36d136a1",
+      "date": "2026-09-24T09:42:14Z",
+      "message": "admin: reconcile paused research state, preserve records and repair repository integrity",
+      "bytes": 475,
+      "sha256": "c0dd6eb83c0e4432472c7333d134aa47d0648d18453a2d8701ad90bb1f129c96"
+    },
+    {
+      "commit": "6d476ae08dd3971713d4a7ca4ac925c2cf92bba1",
+      "date": "2026-09-22T14:24:09Z",
+      "message": "Independently replay strict r=9 finite closure",
+      "bytes": 26,
+      "sha256": "926b3be1ab604eff6f265426a698afe62270d4fa79754cf06f24745725e4be37"
+    }
+  ]
+}

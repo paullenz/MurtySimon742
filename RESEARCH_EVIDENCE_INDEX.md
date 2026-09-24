@@ -1,5 +1,7 @@
 # Research evidence index — current navigation 24 September 2026
 
+> **24 September substantive review supersedes earlier housekeeping status.** [Executed review](project/reviews/substantive/2026-09-24/REPORT.md): PR #2 is changes-required; replay and solver-status failures have supported repairs. Fresh complete numerical replays retain conditional n16/Delta9 and n19/Delta10 results. **n18/Delta10 full-row certification is suspended pending complete safe replay**, while local proofs and corrected identities are preserved. R9/R11 evidence is fresh reconstruction/replay, not recovered historical completion. The regular cadence stays paused.
+
 ## Latest independent-#742 evidence and pause
 
 The user has paused the regular cadence. [CURRENT_STATE.md](CURRENT_STATE.md) now separates current evidence from historical snapshots, including the internal all-32 S<=14 replay, finite-row ledgers, the open n19/Delta11 row and the unresolved general theorem. [The housekeeping report](project/maintenance/2026-09-24/REPORT.md) records code/data repairs, session reconciliation and remaining provenance gaps. No new mathematics or promotion was performed in this cleanup.

@@ -1,0 +1,4 @@
+project/research/post_ms/2026-09-17-stronger-pivot-v1/check_minimum_defect_d7_d8_lopsided_boundary.py:13: SyntaxWarning: invalid escape sequence '\{'
+  open neighbourhoods among Q=E\{r}; enumerate every seven-vertex Q graph
+project/research/post_ms/2026-09-20-rigid-interface-direct-audit-v1/check_exact_ray_score_closure.py:8: SyntaxWarning: invalid escape sequence '\B'
+  parameters b=|B0| and C=e(B0,U\B0).  The isolation term uses the real Cauchy

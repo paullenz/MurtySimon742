@@ -3,9 +3,12 @@
 <!-- Keep the live overview and status tables here. Put dated updates below them, never above them. -->
 <!-- CURRENT-STATUS:START -->
 
+**24 September substantive review — cadence remains paused:** [Executed review and repairs](project/reviews/substantive/2026-09-24/REPORT.md) reject PR #2 as submitted, fix a demonstrated empty/truncated-stream false PASS and unsafe MILP status handling, and retain conditional `(n,Delta)=(16,9)` and `(19,10)` row exclusions after complete status-safe replays (7,008 and 1,752 cases, including two separately resolved n16 timeouts). **The n18/Delta10 full-row certification is suspended pending complete safe replay**; this is not a counterexample. Its local star-five and 50,740 exclusions remain at their stated premises, with a corrected deficit argument. Scalar regeneration identifies (5,5,5) as index14,444 and resolves index20,851 against its saved JSON. Fresh R9/R11 evidence is explicitly new reconstruction/replay, not historical recovery. General proof and full equality remain open.
+
+
 **24 September post-audit frontier — research paused:** The regular cadence was stopped at the user's request. Later saved evidence supersedes the midnight S<=14 freeze: the [preserved second-encoding replay of all 32 helper LPs](project/research/general_n/2026-09-24-r12-support10-lp-relaxation-v1/INDEPENDENT_REPLAY_ALL32.md) records 32 infeasibilities and no UNKNOWN rows, restoring the edge bound through total demand `S<=14` at internal computer-assisted scope. This uses the same HiGHS backend, not rational certificates or external verification. Equality remains supported only through `S<=8`; the general independent proof and n=19, Delta=11 row remain open.
 
-The latest finite-row ledgers record conditional closures at (n,Delta)=(16,9), (18,10), and (19,10). The n=18 (5,5,5) tuple is now excluded by the [exact star-five argument](project/research/general_n/2026-09-23-independent-742-r12-count-audit/STAR5_EXACT_SLACK_AND_555_CLOSURE.md), independently of the older common-C transfer. The old index 20,851 JSON/prose identity conflict remains explicitly flagged rather than guessed away. See [the current evidence map](CURRENT_STATE.md#current-evidence-map) and [the maintenance report](project/maintenance/2026-09-24/REPORT.md).
+Earlier ledgers recorded conditional closures at (16,9), (18,10) and (19,10). The substantive review retains the first and third at fresh internal numerical scope, but does not freshly certify the n18 full row. Use [the current evidence map](CURRENT_STATE.md#current-evidence-map), [the substantive review](project/reviews/substantive/2026-09-24/REPORT.md), and the historical [maintenance report](project/maintenance/2026-09-24/REPORT.md) with their explicit dates.
 
 ## Current status
 

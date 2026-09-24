@@ -1,0 +1,17 @@
+{
+  "burnside_counts": {
+    "unit_graphs": 1044,
+    "rooted_graphs": 79264
+  },
+  "r9_masks": {
+    "checked": 69,
+    "colour_inequivalent": 69,
+    "t_upper_counts": {
+      "1": 60,
+      "2": 9
+    },
+    "mask_digest_encoding": "ascending decimal masks, one per line, final newline",
+    "mask_sha256": "bf889973fc0abaa013cae424c0d2d609eca97193ad92dc2ea7724622b9de8966"
+  },
+  "implementation_status": "FRESH_RECONSTRUCTION_2026_09_24_NOT_HISTORICAL_RECOVERY"
+}

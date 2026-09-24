@@ -1,5 +1,7 @@
 # n=19, Delta=10 exact-small-star v4 row ledger
 
+> **Fresh substantive review, 24 September 2026:** the status-safe driver now accounts for all 1,752 stable indices with zero remaining unresolved cases or abstract survivors. All cases resolved on the initial scan. This retains only a conditional internal numerical row exclusion; it is not a rational solver certificate, fresh proof of the graph bridge or external acceptance. See [full accounting](../../../reviews/substantive/2026-09-24/FINITE_ROW_REPLAY_SUMMARY.json) and [review](../../../reviews/substantive/2026-09-24/REPORT.md). Earlier descriptions below are historical.
+
 24 September 2026, 08:00 scheduled session. This advances the next
 unresolved finite live-strip row after closing `n=16, Delta=9`. It is
 internal necessary-condition evidence, not a graph-realizability theorem.

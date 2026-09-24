@@ -1,0 +1,10 @@
+{
+  "test_status_sync.py": {
+    "exit": 0,
+    "output": "Status guard regression PASS: 11 checks.\n"
+  },
+  "test_status_modes.py": {
+    "exit": 0,
+    "output": "..\n----------------------------------------------------------------------\nRan 2 tests in 0.000s\n\nOK\n"
+  }
+}

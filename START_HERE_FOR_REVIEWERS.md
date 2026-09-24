@@ -1,5 +1,7 @@
 # Start here for reviewers
 
+> **24 September substantive review supersedes earlier housekeeping status.** [Executed review](project/reviews/substantive/2026-09-24/REPORT.md): PR #2 is changes-required; replay and solver-status failures have supported repairs. Fresh complete numerical replays retain conditional n16/Delta9 and n19/Delta10 results. **n18/Delta10 full-row certification is suspended pending complete safe replay**, while local proofs and corrected identities are preserved. R9/R11 evidence is fresh reconstruction/replay, not recovered historical completion. The regular cadence stays paused.
+
 **Current navigation updated 24 September 2026.** The research cadence is paused. Begin with [CURRENT_STATE.md](CURRENT_STATE.md) for the latest independent-#742 evidence map and [the maintenance report](project/maintenance/2026-09-24/REPORT.md) for repairs and unresolved provenance issues. The fixed-order material below remains the preserved reviewer programme; its mathematical status is not upgraded by housekeeping. The earlier navigation checkpoint was 13 September 2026.
 
 ## What this repository is

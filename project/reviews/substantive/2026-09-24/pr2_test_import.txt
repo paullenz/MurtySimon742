@@ -1,0 +1,4 @@
+Traceback (most recent call last):
+  File "/mnt/data/substantive_review/latest/pr2/files/scripts/test_status_modes.py", line 3, in <module>
+    from check_status_sync import VALID_MODES, work_mode
+ImportError: cannot import name 'work_mode' from 'check_status_sync' (/mnt/data/substantive_review/latest/main/scripts/check_status_sync.py)

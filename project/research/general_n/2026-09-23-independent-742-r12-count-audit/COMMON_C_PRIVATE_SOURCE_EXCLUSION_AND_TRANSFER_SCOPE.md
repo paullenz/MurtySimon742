@@ -1,5 +1,8 @@
 # Common-C exclusion and the exact scope of the (5,5,5) transfer
 
+> **Substantive review — 24 September 2026:** Substantive 24 September regeneration resolves, rather than merely labels, the index issue: (5,5,5)/(5,5,5) is index 14,444. Index 20,851 has demand (5,4,2,1,1,1,1) and selected x=(6,5,3,5,2,1,1). The tuple-level star-five argument remains separate; see the dated substantive review for exact identities and current row-certification limits.
+
+
 > **Later resolution, linked 24 September:** [STAR5_EXACT_SLACK_AND_555_CLOSURE.md](STAR5_EXACT_SLACK_AND_555_CLOSURE.md) excludes the complete (5,5,5) tuple without common-C assumptions. The scope warning below remains correct for the older transfer proof; the old index 20,851 identity discrepancy remains historical metadata, not repaired evidence.
 
 

@@ -1,5 +1,8 @@
 # n=18 exact-star continuation from stable index 44,351
 
+> **Substantive review — 24 September 2026:** The full-row closure label is suspended pending a status-safe, complete per-case replay. The old driver could treat non-optimal incumbents as minima and silently omit cases without incumbents; this demonstrates a certification hazard, not a counterexample to the mathematical row. Fresh exact enumeration resolves the identity discrepancy: (5,5,5)/(5,5,5) is index 14,444, while index 20,851 agrees with the previously disputed JSON. V4 also has a known abstract survivor at index 2, separately addressed by the singleton-source argument. The statement above that v4 has only survivors 20,851 and 50,740 must not be used. Fresh checks support the small-star and 50,740 local arguments but do not certify all 54,820 MILPs.
+
+
 24 September 2026, 07:00 scheduled session.  The first four bounded v4 shards
 tested stable indices 44,351--44,450.
 

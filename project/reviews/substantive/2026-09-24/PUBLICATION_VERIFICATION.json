@@ -1,0 +1,91 @@
+{
+  "status": "PASS_SUBSTANTIVE_REVIEW_AND_PROCESS_CHECKS",
+  "review_predecessor": "cc8bc00cf07010e6823f84cee015e9531883af5d",
+  "payload_sha256": "248c252ddb99ddab5cee23bccc7fbe9b810cd95555d42717a7b796d78a25e498",
+  "versions": {
+    "python": "3.13.15 (main, Aug  6 2026, 02:15:18) [GCC 13.3.0]",
+    "numpy": "2.3.5",
+    "scipy": "1.17.0",
+    "networkx": "3.6.1"
+  },
+  "checks": [
+    {
+      "name": "legacy_status",
+      "command": [
+        "/opt/hostedtoolcache/Python/3.13.15/x64/bin/python",
+        "scripts/test_status_sync.py"
+      ],
+      "exit": 0,
+      "seconds": 0.68
+    },
+    {
+      "name": "mode_status",
+      "command": [
+        "/opt/hostedtoolcache/Python/3.13.15/x64/bin/python",
+        "scripts/test_status_modes.py"
+      ],
+      "exit": 0,
+      "seconds": 0.511
+    },
+    {
+      "name": "integrity_controls",
+      "command": [
+        "/opt/hostedtoolcache/Python/3.13.15/x64/bin/python",
+        "/home/runner/work/MurtySimon742/MurtySimon742/project/reviews/substantive/2026-09-24/test_integrity_repairs.py"
+      ],
+      "exit": 0,
+      "seconds": 14.657
+    },
+    {
+      "name": "finite_evidence",
+      "command": [
+        "/opt/hostedtoolcache/Python/3.13.15/x64/bin/python",
+        "/home/runner/work/MurtySimon742/MurtySimon742/project/reviews/substantive/2026-09-24/check_finite_evidence.py"
+      ],
+      "exit": 0,
+      "seconds": 1.55
+    },
+    {
+      "name": "r9_reconstruction",
+      "command": [
+        "/opt/hostedtoolcache/Python/3.13.15/x64/bin/python",
+        "project/research/general_n/2026-09-22-r9-quotient-v1/audit_r9_support8_orbits.py"
+      ],
+      "exit": 0,
+      "seconds": 0.415
+    },
+    {
+      "name": "reviewer_navigation",
+      "command": [
+        "/opt/hostedtoolcache/Python/3.13.15/x64/bin/python",
+        "tools/check_readme_review_materials.py"
+      ],
+      "exit": 0,
+      "seconds": 0.022
+    },
+    {
+      "name": "repository_text_integrity",
+      "command": [
+        "/opt/hostedtoolcache/Python/3.13.15/x64/bin/python",
+        "scripts/check_repository_text_integrity.py"
+      ],
+      "exit": 0,
+      "seconds": 1.507
+    }
+  ],
+  "text_integrity": {
+    "counts": {
+      "python": 981,
+      "json": 1022,
+      "preserved_invalid_json": 1
+    },
+    "errors": [],
+    "known_incomplete_artifacts": [
+      "project/research/general_n/2026-09-22-r11-quotient-v1/r11_support6.json"
+    ],
+    "scope": "Syntax and preserved-file integrity only, not mathematical acceptance"
+  },
+  "full_row_replays": "Executed locally; complete per-case decision ledgers and source hashes preserved. CI reruns hostile controls, not the 8760-case numerical census.",
+  "research_cadence": "PAUSED",
+  "scope": "Internal review; numerical results are not rational certificates or external acceptance."
+}

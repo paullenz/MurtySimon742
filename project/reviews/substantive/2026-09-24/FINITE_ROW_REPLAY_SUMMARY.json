@@ -1,0 +1,265 @@
+{
+  "n16d9": {
+    "initial_run": {
+      "model": "exact-small-star-v4-status-safe",
+      "n": 16,
+      "Delta": 9,
+      "rho": 2,
+      "Dmax": 14,
+      "range": [
+        1,
+        7008
+      ],
+      "cases_resolved": 7006,
+      "solver_status_counts": {
+        "0": 6915,
+        "2": 91,
+        "UNRESOLVED": 2
+      },
+      "unresolved_count": 2,
+      "unresolved": [
+        {
+          "stable_index": 2200,
+          "total_demand": 15,
+          "demands": [
+            6,
+            2,
+            2,
+            2,
+            2,
+            1
+          ],
+          "x": [
+            7,
+            3,
+            3,
+            3,
+            3,
+            3
+          ],
+          "status": "UNRESOLVED",
+          "error": "UNRESOLVED_MILP: status=1; Time limit reached. (HiGHS Status 13: Time limit reached)",
+          "minimum_deficit": null
+        },
+        {
+          "stable_index": 6289,
+          "total_demand": 16,
+          "demands": [
+            6,
+            2,
+            2,
+            2,
+            2,
+            2
+          ],
+          "x": [
+            7,
+            3,
+            3,
+            3,
+            3,
+            3
+          ],
+          "status": "UNRESOLVED",
+          "error": "UNRESOLVED_MILP: status=1; Time limit reached. (HiGHS Status 13: Time limit reached)",
+          "minimum_deficit": null
+        }
+      ],
+      "survivor_count": 0,
+      "survivors": [],
+      "closest": {
+        "model": "source-union-right-budget-exact-small-star-v4",
+        "demands": [
+          7,
+          7,
+          1
+        ],
+        "x": [
+          7,
+          7,
+          1
+        ],
+        "h": [
+          7,
+          7,
+          1
+        ],
+        "rho": 2,
+        "Delta": 9,
+        "star_slack": [
+          30,
+          30,
+          0
+        ],
+        "status": 0,
+        "message": "Optimization terminated successfully. (HiGHS Status 7: Optimal)",
+        "minimum_deficit": 19,
+        "centre_deficits": [
+          7,
+          7,
+          0
+        ],
+        "right_types": [
+          {
+            "labels": [
+              2
+            ],
+            "deficit": 3,
+            "source_union_floor": 2,
+            "multiplicity": 1
+          },
+          {
+            "labels": [
+              0,
+              1
+            ],
+            "deficit": 0,
+            "source_union_floor": 0,
+            "multiplicity": 5
+          },
+          {
+            "labels": [
+              0,
+              1
+            ],
+            "deficit": 1,
+            "source_union_floor": 0,
+            "multiplicity": 2
+          }
+        ],
+        "stable_index": 1,
+        "total_demand": 15,
+        "gap_vs_Dmax": 5
+      },
+      "enumeration_exhausted": true,
+      "range_complete": false,
+      "case_records_sha256": "6c8652e0b6ae7dfa4482c2b598627b277d061e27770cba64695ce9df1f93a7c7",
+      "abstract_full_row_excluded": false,
+      "scope": "Numerical solver status plus exact primal checks; not rational infeasibility certificates or graph realizability"
+    },
+    "initial_case_time_limit_seconds": 2,
+    "retries": [
+      {
+        "index": 2200,
+        "time_limit_seconds": 30,
+        "minimum_deficit": 26
+      },
+      {
+        "index": 6289,
+        "time_limit_seconds": 30,
+        "minimum_deficit": 26
+      }
+    ],
+    "reconciled": {
+      "cases": 7008,
+      "status_counts": {
+        "0": 6917,
+        "2": 91
+      },
+      "unresolved": 0,
+      "survivors": 0,
+      "conditional_internal_row_excluded": true
+    },
+    "full_records_xz": "n16d9_safe.jsonl.xz",
+    "full_records_uncompressed_sha256": "6c8652e0b6ae7dfa4482c2b598627b277d061e27770cba64695ce9df1f93a7c7",
+    "raw_record_storage": "Delivered substantive-review archive, not repository checkout. Compact complete decision table is committed."
+  },
+  "n19d10": {
+    "initial_run": {
+      "model": "exact-small-star-v4-status-safe",
+      "n": 19,
+      "Delta": 10,
+      "rho": 1,
+      "Dmax": 8,
+      "range": [
+        1,
+        1752
+      ],
+      "cases_resolved": 1752,
+      "solver_status_counts": {
+        "2": 219,
+        "0": 1533
+      },
+      "unresolved_count": 0,
+      "unresolved": [],
+      "survivor_count": 0,
+      "survivors": [],
+      "closest": {
+        "model": "source-union-right-budget-exact-small-star-v4",
+        "demands": [
+          7,
+          4,
+          4
+        ],
+        "x": [
+          8,
+          4,
+          4
+        ],
+        "h": [
+          9,
+          4,
+          4
+        ],
+        "rho": 1,
+        "Delta": 10,
+        "star_slack": [
+          29,
+          8,
+          8
+        ],
+        "status": 0,
+        "message": "Optimization terminated successfully. (HiGHS Status 7: Optimal)",
+        "minimum_deficit": 14,
+        "centre_deficits": [
+          6,
+          4,
+          4
+        ],
+        "right_types": [
+          {
+            "labels": [
+              0
+            ],
+            "deficit": 0,
+            "source_union_floor": 0,
+            "multiplicity": 4
+          },
+          {
+            "labels": [
+              0,
+              1,
+              2
+            ],
+            "deficit": 0,
+            "source_union_floor": 0,
+            "multiplicity": 4
+          }
+        ],
+        "stable_index": 20,
+        "total_demand": 15,
+        "gap_vs_Dmax": 6
+      },
+      "enumeration_exhausted": true,
+      "range_complete": true,
+      "case_records_sha256": "0dff198c946b660c8a00ded985dee0625d5b7b8b0eca9f9ba21704cce38758bb",
+      "abstract_full_row_excluded": true,
+      "scope": "Numerical solver status plus exact primal checks; not rational infeasibility certificates or graph realizability"
+    },
+    "initial_case_time_limit_seconds": 2,
+    "retries": [],
+    "reconciled": {
+      "cases": 1752,
+      "status_counts": {
+        "2": 219,
+        "0": 1533
+      },
+      "unresolved": 0,
+      "survivors": 0,
+      "conditional_internal_row_excluded": true
+    },
+    "full_records_xz": "n19d10_safe.jsonl.xz",
+    "full_records_uncompressed_sha256": "0dff198c946b660c8a00ded985dee0625d5b7b8b0eca9f9ba21704cce38758bb",
+    "raw_record_storage": "Delivered substantive-review archive, not repository checkout. Compact complete decision table is committed."
+  }
+}

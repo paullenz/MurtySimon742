@@ -1,0 +1,263 @@
+{
+  "fresh_generation_records": 11357,
+  "input_sha256": "ab9ed63d9caa99b5fbd237fc6b238f77b69a8dc893ff17a764f96ff5cc9ab4bb",
+  "decision_sha256": "c4859538b56444860b26fdc46e40f68bf21b4c65b68dce2e394b531c621ba82a",
+  "transport_controls": [
+    {
+      "case": "complete",
+      "exit": 0,
+      "expected": 0
+    },
+    {
+      "case": "empty",
+      "exit": 2,
+      "expected": 2
+    },
+    {
+      "case": "one_record",
+      "exit": 2,
+      "expected": 2
+    },
+    {
+      "case": "changed_input",
+      "exit": 2,
+      "expected": 2
+    },
+    {
+      "case": "changed_decisions",
+      "exit": 2,
+      "expected": 2
+    },
+    {
+      "case": "changed_summary",
+      "exit": 2,
+      "expected": 2
+    },
+    {
+      "case": "changed_sidecar",
+      "exit": 2,
+      "expected": 2
+    },
+    {
+      "case": "gzip_only",
+      "exit": 0,
+      "expected": 0
+    },
+    {
+      "case": "optimized",
+      "exit": 2,
+      "expected": 2
+    },
+    {
+      "case": "changed_source",
+      "exit": 2,
+      "expected": 2
+    },
+    {
+      "case": "locked",
+      "exit": 2,
+      "expected": 2
+    }
+  ],
+  "solver_controls": [
+    {
+      "model": "project/research/general_n/2026-09-23-independent-742-r12-count-audit/witness_deficit_exact_star_milp.py",
+      "status": 1,
+      "primal": null,
+      "accepted": false
+    },
+    {
+      "model": "project/research/general_n/2026-09-23-independent-742-r12-count-audit/witness_deficit_exact_star_milp.py",
+      "status": 1,
+      "primal": null,
+      "accepted": false
+    },
+    {
+      "model": "project/research/general_n/2026-09-23-independent-742-r12-count-audit/witness_deficit_exact_star_milp.py",
+      "status": 0,
+      "primal": null,
+      "accepted": false
+    },
+    {
+      "model": "project/research/general_n/2026-09-23-independent-742-r12-count-audit/witness_deficit_exact_star_milp.py",
+      "status": 0,
+      "primal": [
+        0.5
+      ],
+      "accepted": false
+    },
+    {
+      "model": "project/research/general_n/2026-09-23-independent-742-r12-count-audit/witness_deficit_exact_star_milp.py",
+      "status": 0,
+      "primal": [
+        0
+      ],
+      "accepted": false
+    },
+    {
+      "model": "project/research/general_n/2026-09-23-independent-742-r12-count-audit/witness_deficit_exact_star_milp.py",
+      "status": 0,
+      "primal": [
+        1
+      ],
+      "accepted": true
+    },
+    {
+      "model": "project/research/general_n/2026-09-23-independent-742-r12-count-audit/witness_deficit_exact_star_milp.py",
+      "status": 2,
+      "primal": null,
+      "accepted": true
+    },
+    {
+      "model": "project/research/general_n/2026-09-23-independent-742-r12-count-audit/witness_deficit_milp.py",
+      "status": 1,
+      "primal": null,
+      "accepted": false
+    },
+    {
+      "model": "project/research/general_n/2026-09-23-independent-742-r12-count-audit/witness_deficit_milp.py",
+      "status": 1,
+      "primal": null,
+      "accepted": false
+    },
+    {
+      "model": "project/research/general_n/2026-09-23-independent-742-r12-count-audit/witness_deficit_milp.py",
+      "status": 0,
+      "primal": null,
+      "accepted": false
+    },
+    {
+      "model": "project/research/general_n/2026-09-23-independent-742-r12-count-audit/witness_deficit_milp.py",
+      "status": 0,
+      "primal": [
+        0.5
+      ],
+      "accepted": false
+    },
+    {
+      "model": "project/research/general_n/2026-09-23-independent-742-r12-count-audit/witness_deficit_milp.py",
+      "status": 0,
+      "primal": [
+        0
+      ],
+      "accepted": false
+    },
+    {
+      "model": "project/research/general_n/2026-09-23-independent-742-r12-count-audit/witness_deficit_milp.py",
+      "status": 0,
+      "primal": [
+        1
+      ],
+      "accepted": true
+    },
+    {
+      "model": "project/research/general_n/2026-09-23-independent-742-r12-count-audit/witness_deficit_milp.py",
+      "status": 2,
+      "primal": null,
+      "accepted": true
+    },
+    {
+      "model": "project/research/general_n/2026-09-23-independent-742-r14-near-equality/witness_deficit_milp.py",
+      "status": 1,
+      "primal": null,
+      "accepted": false
+    },
+    {
+      "model": "project/research/general_n/2026-09-23-independent-742-r14-near-equality/witness_deficit_milp.py",
+      "status": 1,
+      "primal": null,
+      "accepted": false
+    },
+    {
+      "model": "project/research/general_n/2026-09-23-independent-742-r14-near-equality/witness_deficit_milp.py",
+      "status": 0,
+      "primal": null,
+      "accepted": false
+    },
+    {
+      "model": "project/research/general_n/2026-09-23-independent-742-r14-near-equality/witness_deficit_milp.py",
+      "status": 0,
+      "primal": [
+        0.5
+      ],
+      "accepted": false
+    },
+    {
+      "model": "project/research/general_n/2026-09-23-independent-742-r14-near-equality/witness_deficit_milp.py",
+      "status": 0,
+      "primal": [
+        0
+      ],
+      "accepted": false
+    },
+    {
+      "model": "project/research/general_n/2026-09-23-independent-742-r14-near-equality/witness_deficit_milp.py",
+      "status": 0,
+      "primal": [
+        1
+      ],
+      "accepted": true
+    },
+    {
+      "model": "project/research/general_n/2026-09-23-independent-742-r14-near-equality/witness_deficit_milp.py",
+      "status": 2,
+      "primal": null,
+      "accepted": true
+    },
+    {
+      "model": "project/research/general_n/2026-09-24-demand15-source-union-v1/witness_deficit_union_milp.py",
+      "status": 1,
+      "primal": null,
+      "accepted": false
+    },
+    {
+      "model": "project/research/general_n/2026-09-24-demand15-source-union-v1/witness_deficit_union_milp.py",
+      "status": 1,
+      "primal": null,
+      "accepted": false
+    },
+    {
+      "model": "project/research/general_n/2026-09-24-demand15-source-union-v1/witness_deficit_union_milp.py",
+      "status": 0,
+      "primal": null,
+      "accepted": false
+    },
+    {
+      "model": "project/research/general_n/2026-09-24-demand15-source-union-v1/witness_deficit_union_milp.py",
+      "status": 0,
+      "primal": [
+        0.5
+      ],
+      "accepted": false
+    },
+    {
+      "model": "project/research/general_n/2026-09-24-demand15-source-union-v1/witness_deficit_union_milp.py",
+      "status": 0,
+      "primal": [
+        0
+      ],
+      "accepted": false
+    },
+    {
+      "model": "project/research/general_n/2026-09-24-demand15-source-union-v1/witness_deficit_union_milp.py",
+      "status": 0,
+      "primal": [
+        1
+      ],
+      "accepted": true
+    },
+    {
+      "model": "project/research/general_n/2026-09-24-demand15-source-union-v1/witness_deficit_union_milp.py",
+      "status": 2,
+      "primal": null,
+      "accepted": true
+    }
+  ],
+  "unresolved_driver_control": {
+    "exit": 2,
+    "unresolved_count": 1,
+    "range_complete": false
+  },
+  "status": "PASS_POSITIVE_AND_HOSTILE_CONTROLS",
+  "scope": "Stream/process/model-result handling; not external mathematical acceptance"
+}

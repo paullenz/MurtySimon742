@@ -34,6 +34,21 @@ REQUIRED_FIELDS = (
 VALID_MODES = ('MATH', 'ADMIN', 'AUDIT', 'STATUS', 'RECOVERY')
 
 
+def work_mode(text: str) -> str | None:
+    """Extract one complete mode token; never accept MATH2 as MATH.
+
+    Both plain and bold labels and optional closed code quotes are supported.
+    Missing, duplicated, malformed or unsupported fields fail closed.
+    """
+    matches = list(re.finditer(
+        r"(?:\*\*)?WORK MODE:(?:\*\*)?\s*"
+        r"(?:`([A-Za-z0-9_-]+)`|([A-Za-z0-9_-]+))(?=$|[\s.])", text))
+    if len(matches) != 1 or text.count('WORK MODE:') != 1:
+        return None
+    value = matches[0].group(1) or matches[0].group(2)
+    return value if value in VALID_MODES else None
+
+
 def git(*args: str, optional: bool = False) -> str:
     p = subprocess.run(['git', *args], text=True, stdout=subprocess.PIPE,
                        stderr=subprocess.PIPE, check=False)
@@ -92,8 +107,7 @@ def check_v2(commit: str, parent: str | None, prior_policy: str) -> list[str]:
             # CURRENT_STATE historically uses either plain fields or Markdown-bold
             # fields such as **WORK MODE:** `AUDIT`. Accept both presentations while
             # retaining the same closed set of semantic values.
-            mode_match = re.search(r'WORK MODE:(?:\*\*)?\s*`?([A-Z]+)`?', new_current)
-            if not mode_match or mode_match.group(1) not in VALID_MODES:
+            if work_mode(new_current) is None:
                 failures.append(
                     f'{commit[:12]}: {CURRENT} WORK MODE must be one of '
                     + ', '.join(VALID_MODES)
@@ -111,6 +125,8 @@ def check_v2(commit: str, parent: str | None, prior_policy: str) -> list[str]:
 
 
 def check_legacy(commit: str, parent: str | None, policy: str, prior_policy: str) -> list[str]:
+    if LEGACY_RULE in prior_policy and LEGACY_RULE not in policy:
+        return [f'{commit[:12]}: legacy paired-status policy removed without replacement']
     if LEGACY_RULE not in policy and LEGACY_RULE not in prior_policy:
         return []
     failures: list[str] = []

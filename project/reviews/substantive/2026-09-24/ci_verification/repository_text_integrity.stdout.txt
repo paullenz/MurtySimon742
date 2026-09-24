@@ -1,0 +1,12 @@
+{
+  "counts": {
+    "python": 981,
+    "json": 1022,
+    "preserved_invalid_json": 1
+  },
+  "errors": [],
+  "known_incomplete_artifacts": [
+    "project/research/general_n/2026-09-22-r11-quotient-v1/r11_support6.json"
+  ],
+  "scope": "Syntax and preserved-file integrity only, not mathematical acceptance"
+}

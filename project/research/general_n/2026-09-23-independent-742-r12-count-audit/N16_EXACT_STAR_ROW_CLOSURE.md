@@ -1,5 +1,7 @@
 # n=16, Delta=9 exact-small-star v4 row ledger
 
+> **Fresh substantive review, 24 September 2026:** the status-safe driver now accounts for all 7,008 stable indices with zero remaining unresolved cases or abstract survivors. The initial two-second n16 scan had two timeouts (2,200 and 6,289); both are separately replayed optimal at deficit26 with 30-second limits, and their initial UNKNOWN records are preserved. This retains only a conditional internal numerical row exclusion; it is not a rational solver certificate, fresh proof of the graph bridge or external acceptance. See [full accounting](../../../reviews/substantive/2026-09-24/FINITE_ROW_REPLAY_SUMMARY.json) and [review](../../../reviews/substantive/2026-09-24/REPORT.md). Earlier descriptions below are historical.
+
 24 September 2026, 08:00 scheduled session. This is an incremental finite
 necessary-condition ledger. It is not a graph-realizability theorem or a
 proof of the general Murty--Simon conjecture.

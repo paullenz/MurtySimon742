@@ -1,0 +1,24 @@
+{
+  "model": "source-union-right-budget-exact-small-star-v4",
+  "demands": [
+    8,
+    7
+  ],
+  "x": [
+    8,
+    8
+  ],
+  "h": [
+    8,
+    9
+  ],
+  "rho": 2,
+  "Delta": 10,
+  "star_slack": [
+    35,
+    35
+  ],
+  "status": 1,
+  "message": "controlled non-optimal incumbent: time limit",
+  "minimum_deficit": 17
+}

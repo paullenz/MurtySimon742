@@ -1,5 +1,8 @@
 # Stable-index 20,851: bounded realizability transfer
 
+> **Substantive review — 24 September 2026:** Fresh regeneration of all 54,820 scalar indices fixes the identity: (5,5,5)/(5,5,5) is index 14,444, not 20,851. Index 20,851 is exactly the tuple in N18_STABLE_20851.json. Its new v4 optimal deficit is 33; the historical JSON reports 30 for its earlier model. Different model optima are not a reason to change the old bytes. This note's old index-to-(5,5,5) transfer must not be cited as evidence.
+
+
 > **24 September source correction:** The adjacent `N18_STABLE_20851.json` reports zero abstract survivors and a different closest tuple, so the index identification asserted below is not verified. The earlier tuple-to-common-C transfer is not sufficient by itself. The subsequent [exact star-five proof](../2026-09-23-independent-742-r12-count-audit/STAR5_EXACT_SLACK_AND_555_CLOSURE.md) excludes the entire (5,5,5) tuple independently of common-right-type geometry or index numbering. The original text below is retained as historical evidence, not the current dependency justification.
 
 

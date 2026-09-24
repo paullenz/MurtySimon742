@@ -7,7 +7,14 @@
     }
   ],
   "known_incomplete_artifacts": [
-    "project/research/general_n/2026-09-22-r9-quotient-v1/audit_r9_support8_orbits.py",
     "project/research/general_n/2026-09-22-r11-quotient-v1/r11_support6.json"
+  ],
+  "fresh_reconstructions_not_historical_recovery": [
+    {
+      "path": "project/research/general_n/2026-09-22-r9-quotient-v1/audit_r9_support8_orbits.py",
+      "date": "2026-09-24",
+      "evidence": "project/reviews/substantive/2026-09-24/REPORT.md",
+      "original_bytes": "archive/maintenance/2026-09-24/project/research/general_n/2026-09-22-r9-quotient-v1/audit_r9_support8_orbits.py.original.txt"
+    }
   ]
 }

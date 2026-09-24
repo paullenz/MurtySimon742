@@ -22,6 +22,44 @@ def star_slack(x, rho, Delta):
     return x * (x - 1) // 2 + (1 if x >= 3 else 0)
 
 
+def validate_optimal_result(result, objective, lower, upper, rows, lows, highs):
+    """Gate solver status and exactly validate the rounded integral witness.
+
+    A time-limit incumbent is an upper bound, never a proved minimum. Unknown
+    results raise instead of letting legacy drivers silently skip a case.
+    Optimality/infeasibility still relies on the numerical solver, not a
+    rational dual certificate; the exact checks below certify only the primal.
+    """
+    status = int(result.status)
+    if status == 2:
+        if result.x is not None or result.fun is not None:
+            raise RuntimeError('UNRESOLVED_MILP: infeasible status with incumbent')
+        return None
+    if status != 0:
+        raise RuntimeError(f'UNRESOLVED_MILP: status={status}; {result.message}')
+    if result.x is None or result.fun is None or not np.isfinite(result.fun):
+        raise RuntimeError('UNRESOLVED_MILP: optimal status lacks finite witness/objective')
+    if len(result.x) != len(objective) or not np.all(np.isfinite(result.x)):
+        raise RuntimeError('UNRESOLVED_MILP: malformed primal vector')
+    rounded = [int(round(value)) for value in result.x]
+    if any(abs(value-integer) > 1e-6 for value, integer in zip(result.x, rounded)):
+        raise RuntimeError('UNRESOLVED_MILP: nonintegral primal vector')
+    if any(not lo <= value <= hi for value, lo, hi in zip(rounded, lower, upper)):
+        raise RuntimeError('UNRESOLVED_MILP: rounded primal violates bounds')
+    for items, lo, hi in zip(rows, lows, highs):
+        if any(float(coefficient) != int(coefficient) for _, coefficient in items):
+            raise RuntimeError('UNRESOLVED_MILP: nonintegral model coefficient')
+        value = sum(int(coefficient)*rounded[j] for j, coefficient in items)
+        if not lo <= value <= hi:
+            raise RuntimeError('UNRESOLVED_MILP: rounded primal violates a row')
+    if any(float(c) != int(c) for c in objective):
+        raise RuntimeError('UNRESOLVED_MILP: nonintegral objective coefficient')
+    value = sum(int(c)*x for c, x in zip(objective, rounded))
+    if abs(value-float(result.fun)) > 1e-6:
+        raise RuntimeError('UNRESOLVED_MILP: objective disagrees with exact primal')
+    return value
+
+
 def solve_aggregated(demands, xs, rho, Delta, time_limit=20):
     k = len(xs)
     h = [2 * xs[i] - demands[i] for i in range(k)]
@@ -93,14 +131,15 @@ def solve_aggregated(demands, xs, rho, Delta, time_limit=20):
     result = milp(
         objective, integrality=integrality, bounds=Bounds(lower, upper),
         constraints=LinearConstraint(A.tocsr(), np.array(lows), np.array(highs)),
-        options={"time_limit": time_limit, "presolve": True},
+        options={"time_limit": time_limit, "presolve": True, "mip_rel_gap": 0.0},
     )
+    verified_minimum = validate_optimal_result(result, objective, lower, upper, rows, lows, highs)
     payload = {
         "model": "source-union-right-budget-exact-small-star-v4",
         "demands": demands, "x": xs, "h": h, "rho": rho,
         "Delta": Delta, "star_slack": [star_slack(x, rho, Delta) for x in xs],
         "status": int(result.status), "message": result.message,
-        "minimum_deficit": None if result.fun is None else round(result.fun),
+        "minimum_deficit": verified_minimum,
     }
     if result.x is not None:
         payload["centre_deficits"] = [

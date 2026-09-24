@@ -1,0 +1,315 @@
+[
+  {
+    "model": "source-union-right-budget-exact-small-star-v4",
+    "demands": [
+      8,
+      7
+    ],
+    "x": [
+      8,
+      7
+    ],
+    "h": [
+      8,
+      7
+    ],
+    "rho": 2,
+    "Delta": 10,
+    "star_slack": [
+      35,
+      30
+    ],
+    "status": 0,
+    "message": "Optimization terminated successfully. (HiGHS Status 7: Optimal)",
+    "minimum_deficit": 17,
+    "centre_deficits": [
+      7,
+      7
+    ],
+    "right_types": [
+      {
+        "labels": [
+          0
+        ],
+        "deficit": 1,
+        "source_union_floor": 0,
+        "multiplicity": 1
+      },
+      {
+        "labels": [
+          0,
+          1
+        ],
+        "deficit": 0,
+        "source_union_floor": 0,
+        "multiplicity": 5
+      },
+      {
+        "labels": [
+          0,
+          1
+        ],
+        "deficit": 1,
+        "source_union_floor": 0,
+        "multiplicity": 2
+      }
+    ],
+    "elapsed_seconds": 0.011829198999976143
+  },
+  {
+    "model": "source-union-right-budget-exact-small-star-v4",
+    "demands": [
+      8,
+      7
+    ],
+    "x": [
+      8,
+      8
+    ],
+    "h": [
+      8,
+      9
+    ],
+    "rho": 2,
+    "Delta": 10,
+    "star_slack": [
+      35,
+      35
+    ],
+    "status": 0,
+    "message": "Optimization terminated successfully. (HiGHS Status 7: Optimal)",
+    "minimum_deficit": 16,
+    "centre_deficits": [
+      8,
+      8
+    ],
+    "right_types": [
+      {
+        "labels": [
+          0,
+          1
+        ],
+        "deficit": 0,
+        "source_union_floor": 0,
+        "multiplicity": 8
+      }
+    ],
+    "elapsed_seconds": 0.003893504999950892
+  },
+  {
+    "model": "source-union-right-budget-exact-small-star-v4",
+    "demands": [
+      5,
+      5,
+      5
+    ],
+    "x": [
+      5,
+      5,
+      5
+    ],
+    "h": [
+      5,
+      5,
+      5
+    ],
+    "rho": 2,
+    "Delta": 10,
+    "star_slack": [
+      14,
+      14,
+      14
+    ],
+    "status": 0,
+    "message": "Optimization terminated successfully. (HiGHS Status 7: Optimal)",
+    "minimum_deficit": 19,
+    "centre_deficits": [
+      5,
+      5,
+      5
+    ],
+    "right_types": [
+      {
+        "labels": [
+          0,
+          1,
+          2
+        ],
+        "deficit": 0,
+        "source_union_floor": 0,
+        "multiplicity": 3
+      },
+      {
+        "labels": [
+          0,
+          1,
+          2
+        ],
+        "deficit": 2,
+        "source_union_floor": 0,
+        "multiplicity": 2
+      }
+    ],
+    "elapsed_seconds": 0.005502707999994527
+  },
+  {
+    "model": "source-union-right-budget-exact-small-star-v4",
+    "demands": [
+      8,
+      8
+    ],
+    "x": [
+      8,
+      8
+    ],
+    "h": [
+      8,
+      8
+    ],
+    "rho": 2,
+    "Delta": 10,
+    "star_slack": [
+      35,
+      35
+    ],
+    "status": 0,
+    "message": "Optimization terminated successfully. (HiGHS Status 7: Optimal)",
+    "minimum_deficit": 16,
+    "centre_deficits": [
+      8,
+      8
+    ],
+    "right_types": [
+      {
+        "labels": [
+          0,
+          1
+        ],
+        "deficit": 0,
+        "source_union_floor": 0,
+        "multiplicity": 8
+      }
+    ],
+    "elapsed_seconds": 0.0029615910000302392
+  },
+  {
+    "model": "source-union-right-budget-exact-small-star-v4",
+    "demands": [
+      5,
+      4,
+      2,
+      1,
+      1,
+      1,
+      1
+    ],
+    "x": [
+      6,
+      5,
+      3,
+      5,
+      2,
+      1,
+      1
+    ],
+    "h": [
+      7,
+      6,
+      4,
+      9,
+      3,
+      1,
+      1
+    ],
+    "rho": 2,
+    "Delta": 10,
+    "star_slack": [
+      21,
+      14,
+      4,
+      14,
+      1,
+      0,
+      0
+    ],
+    "status": 0,
+    "message": "Optimization terminated successfully. (HiGHS Status 7: Optimal)",
+    "minimum_deficit": 33,
+    "centre_deficits": [
+      6,
+      5,
+      3,
+      6,
+      0,
+      0,
+      0
+    ],
+    "right_types": [
+      {
+        "labels": [
+          5
+        ],
+        "deficit": 3,
+        "source_union_floor": 2,
+        "multiplicity": 1
+      },
+      {
+        "labels": [
+          6
+        ],
+        "deficit": 3,
+        "source_union_floor": 2,
+        "multiplicity": 1
+      },
+      {
+        "labels": [
+          0,
+          3
+        ],
+        "deficit": 0,
+        "source_union_floor": 0,
+        "multiplicity": 2
+      },
+      {
+        "labels": [
+          1,
+          2
+        ],
+        "deficit": 0,
+        "source_union_floor": 0,
+        "multiplicity": 1
+      },
+      {
+        "labels": [
+          0,
+          1,
+          3
+        ],
+        "deficit": 0,
+        "source_union_floor": 0,
+        "multiplicity": 3
+      },
+      {
+        "labels": [
+          0,
+          2,
+          4
+        ],
+        "deficit": 3,
+        "source_union_floor": 2,
+        "multiplicity": 1
+      },
+      {
+        "labels": [
+          1,
+          2,
+          4
+        ],
+        "deficit": 4,
+        "source_union_floor": 2,
+        "multiplicity": 1
+      }
+    ],
+    "elapsed_seconds": 0.3705837259999498
+  }
+]

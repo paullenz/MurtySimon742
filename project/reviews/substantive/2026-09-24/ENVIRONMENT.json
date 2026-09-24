@@ -1,0 +1,12 @@
+{
+  "python": "3.13.5 (main, Jul 15 2026, 20:25:40) [GCC 14.2.0]",
+  "platform": "Linux-6.18.44-x86_64-with-glibc2.41",
+  "numpy": "2.3.5",
+  "scipy": "1.17.0",
+  "networkx": "3.6.1",
+  "snapshot_commit": "90b5fd21a90f88aec1ba6445a5ab385559eea999",
+  "reviewed_main": "2ff383498ee08f607aa958181f6dbc4e36d136a1",
+  "pr2_head": "bdd46c59365757d373bd359867d9fe47cde0d70f",
+  "solver_threads": 1,
+  "numerical_optimality_is_not_rational_certificate": true
+}

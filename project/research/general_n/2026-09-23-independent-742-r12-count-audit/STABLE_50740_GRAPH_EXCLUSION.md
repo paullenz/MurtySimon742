@@ -19,8 +19,20 @@ satisfy `delta_i<=h_i=8`, and each exact star inequality says
 
     8 delta_i + sum_{t in B\C_i} delta_t >= 8*3+35=59.
 
-If some `delta_i<=7`, the noncentre deficit is at least three.  Even allowing
-the other centre its maximum deficit eight gives `D>=7+8+3=18`.  Thus
+**24 September substantive-review correction.** The earlier paragraph used
+the other centre's *maximum* as if it were a lower bound. That inference is
+invalid; the following argument uses both exact-star inequalities instead.
+
+Write `p=delta_0`, `q=delta_1`, and let `R` be the total noncentre deficit.
+Each star endpoint sum is at most `R`, hence
+
+    p+q+R<=16,  8p+R>=59,  8q+R>=59,  0<=p,q<=8.
+
+Eliminating R gives `7p-q>=43` and `7q-p>=43`. Adding and using integrality
+gives `p+q>=15`. If p<=7, then q>=15-p and
+`7p-q<=8p-15<=41<43`, a contradiction. The same reasoning applies to q.
+Thus p=q=8 and R=0. The independently executed integer check finds only
+this pair. Consequently
 
     delta_0=delta_1=8
 

@@ -1,0 +1,3 @@
+README_REVIEW_GUARD_OK
+protected_review_links=40
+protected_redteam_links=17
