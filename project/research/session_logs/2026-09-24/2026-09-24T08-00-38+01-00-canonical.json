@@ -50,6 +50,12 @@
       "stop": "2026-09-24T08:14:23+01:00",
       "seconds": 130,
       "unit": "exhaust n19 Delta10 exact-star stable indices201 through1,752 in four exact shards"
+    },
+    {
+      "start": "2026-09-24T08:15:17+01:00",
+      "stop": "2026-09-24T08:15:38+01:00",
+      "seconds": 21,
+      "unit": "test first200 n19 Delta11 profiles and identify abstract-survivor explosion requiring graph-level pivot"
     }
   ],
   "forward_research_stop": "PENDING",
@@ -57,9 +63,9 @@
   "preservation_complete": "PENDING",
   "final_report_time": "PENDING",
   "wall_clock_span_to_preservation_complete": "PENDING",
-  "verified_forward_research_span": "8m43s",
+  "verified_forward_research_span": "9m04s",
   "preservation_span": "PENDING",
-  "substantive_unit_count": 5,
+  "substantive_unit_count": 6,
   "timestamped_unit_ledger": [
     {
       "completed_at": "2026-09-24T08:02:33+01:00",
@@ -80,6 +86,10 @@
     {
       "completed_at": "2026-09-24T08:14:23+01:00",
       "unit": "Final four v4 shards exhausted n19 Delta10 at stable index1,752 with zero survivors; full scalar loop inspected124,915 patterns."
+    },
+    {
+      "completed_at": "2026-09-24T08:15:38+01:00",
+      "unit": "n19 Delta11 v4 prefix immediately produced many abstract survivors; leading index3 d=(9,6),x=(9,8),h=(9,10) has deficit17 versusDmax27. Scalar extension retired in favour of graph-level source geometry."
     }
   ],
   "early_stop_check_time": "PENDING",
@@ -95,8 +105,9 @@
     "5d2bf8ffa7f37ef3d868bea8d60b218bc1bb5a56",
     "55a743986384d64bf585fe8ee6478e802f882a1a",
     "ebef1e47cb5f2aaead0ca43dd6cd8cf333d2bd31",
-    "8a8167f53e65c938a183905600f8b005f5bc1228"
+    "8a8167f53e65c938a183905600f8b005f5bc1228",
+    "6a5bd71171955fcaede6fb58c455784674729dc0"
   ],
-  "live_unfinished_line": "Attack the next unresolved live-strip row n19, Delta11 at the exact-star interface; graph-analyse any survivor.",
+  "live_unfinished_line": "Analyse stable index3 of n19, Delta11 with explicit C_i source sets, private-source incomparability and deletion-criticality; do not extend scalar shards blindly.",
   "historical_fragments": []
 }
