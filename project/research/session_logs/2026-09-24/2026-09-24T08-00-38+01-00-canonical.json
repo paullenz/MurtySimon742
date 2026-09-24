@@ -62,6 +62,12 @@
       "stop": "2026-09-24T08:19:23+01:00",
       "seconds": 168,
       "unit": "derive and run exact Z3 graph-realizability model for n19 Delta11 stable index3"
+    },
+    {
+      "start": "2026-09-24T08:20:27+01:00",
+      "stop": "2026-09-24T08:21:08+01:00",
+      "seconds": 41,
+      "unit": "prove source-set normalization for index3 and independently regress the D2C criticality characterization"
     }
   ],
   "forward_research_stop": "PENDING",
@@ -69,9 +75,9 @@
   "preservation_complete": "PENDING",
   "final_report_time": "PENDING",
   "wall_clock_span_to_preservation_complete": "PENDING",
-  "verified_forward_research_span": "11m52s",
+  "verified_forward_research_span": "12m33s",
   "preservation_span": "PENDING",
-  "substantive_unit_count": 7,
+  "substantive_unit_count": 8,
   "timestamped_unit_ledger": [
     {
       "completed_at": "2026-09-24T08:02:33+01:00",
@@ -100,6 +106,10 @@
     {
       "completed_at": "2026-09-24T08:19:23+01:00",
       "unit": "Exact fixed-profile graph model for index3 d=(9,6),x=(9,8),h=(9,10),D<=27 returned UNSAT with actual graph, one-use sources, diameter2 and every-edge criticality; promotion awaits independent encoding replay."
+    },
+    {
+      "completed_at": "2026-09-24T08:21:08+01:00",
+      "unit": "Proved C0,C1 disjoint normalization for index3 via common endpoints and private-source incomparability; Graph Atlas replay checked criticality characterization on5,553 edges/457 diameter-two graphs with zero mismatches."
     }
   ],
   "early_stop_check_time": "PENDING",
@@ -117,8 +127,9 @@
     "ebef1e47cb5f2aaead0ca43dd6cd8cf333d2bd31",
     "8a8167f53e65c938a183905600f8b005f5bc1228",
     "6a5bd71171955fcaede6fb58c455784674729dc0",
-    "8cfdcbb5a58e77ebb29b96b853f937eded4d90f5"
+    "8cfdcbb5a58e77ebb29b96b853f937eded4d90f5",
+    "8d145a5a0148f1efc8e5a41f6dc0828ab619c9cc"
   ],
-  "live_unfinished_line": "Independently validate the index3 Z3 criticality/source encoding on known D2C controls and via direct exhaustive model replay before promoting UNSAT.",
+  "live_unfinished_line": "Build an independent direct edge-deletion Z3 encoding for index3 or isolate a human graph-level contradiction; retain UNSAT as unpromoted until then.",
   "historical_fragments": []
 }

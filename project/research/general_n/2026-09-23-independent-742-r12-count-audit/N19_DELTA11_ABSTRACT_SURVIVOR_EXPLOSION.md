@@ -35,3 +35,22 @@ This is internal exact computer-assisted evidence for one fixed profile. The
 criticality encoding and normalization still require an independent replay
 before the exclusion is promoted; no claim is made for the other prefix
 survivors.
+
+### Normalization and encoding checks
+
+The source-set normalization does not discard a case. Here `|C0|=2`,
+`|C1|=1`, `|T0|=9`, and `|T1|=8`. Since `T0=B\\C0`, the two endpoint sets
+meet. At any common endpoint the private-source lemma makes `C0,C1`
+incomparable. If their intersection were nonempty, singleton `C1` would be a
+subset of `C0`; hence they are disjoint and B-symmetry permits
+`C0={1,2}, C1={3}`.
+
+The one-use constraints count both orientations of each physical B-edge, so
+an edge cannot be reused with its former source as a later endpoint. Unique
+common-neighbour constraints range over all graph vertices, not just B.
+
+`validate_d2c_criticality_characterization.py` independently compared the
+criticality formula with literal edge deletion on every diameter-two Graph
+Atlas graph. It checked 5,553 edges in 457 graphs (22 D2C graphs), with zero
+mismatches. This validates the generic criticality equivalence but is still
+not an independent second encoding of the full fixed-profile UNSAT result.
