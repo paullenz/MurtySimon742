@@ -82,3 +82,27 @@ survivor. The preserved internal prefix now reaches 54,450, except historical
 index 20,851 and index 50,740, both separately excluded at graph level. This
 remains finite necessary-condition evidence, not full row closure or a general
 proof. The next suffix begins at 54,451.
+
+
+## Stable indices 54,451--54,820: row exhaustion
+
+| stable-index range | survivors | closest deficit gap over `Dmax=16` |
+|---|---:|---:|
+| 54,451--54,550 | 0 | +11 |
+| 54,551--54,650 | 0 | +12 |
+| 54,651--54,750 | 0 | +12 |
+| 54,751--54,820 | 0 | +14 |
+
+The fourth requested shard ended naturally at stable index 54,820. An
+independent exhaustion invocation from 54,821 returned total
+`scalar_pass=54,820` and the empty range `[54821,54820]`. Thus the v4
+enumeration has exhausted all 54,820 symmetry-reduced scalar-pass profiles
+for the audited `n=18, Delta=10`, demand-15/irreducible-demand-16 row.
+
+Across the full row, the only abstract v4 survivors are stable indices 20,851
+and 50,740. The former is independently excluded by exact star-five; the
+latter is excluded by `STABLE_50740_GRAPH_EXCLUSION.md`. Conditional on the
+audited normal-form and graph-to-profile bridge, this closes this finite row.
+It is not a proof of the general theorem, a proof of unrestricted graph
+realizability, or a strengthening of equality beyond the retained `S<=8`
+result.
