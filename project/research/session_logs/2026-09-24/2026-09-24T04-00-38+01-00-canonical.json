@@ -1,0 +1,59 @@
+{
+  "session_id": "2026-09-24T04:00:38+01:00",
+  "run_kind": "SCHEDULED_RESEARCH_RECOVERY",
+  "scheduled_trigger": "2026-09-24T04:00:38+01:00",
+  "next_scheduled_trigger": "2026-09-24T05:00:38+01:00",
+  "research_cutoff": "2026-09-24T04:53:38+01:00",
+  "hard_close_deadline": "2026-09-24T04:59:38+01:00",
+  "earliest_actual_start": "2026-09-24T04:05:48+01:00",
+  "lateness_vs_trigger": "PT5M10S",
+  "attribution_method": "launch_recovery_watchdog",
+  "trigger_attribution": "same-hour 04:00:38 Europe/London trigger; primary scheduled launch had no durable canonical STARTED record when checked at 04:05:48 and again immediately before recovery publication",
+  "attribution_ambiguity": "UNVERIFIED immutable scheduler identity; same-hour trigger attribution follows watchdog contract",
+  "launch_status": "RECOVERED_PRIMARY_MISSING_STARTED",
+  "started_record_published_at": "2026-09-24T04:06:51+01:00",
+  "first_substantive_checkpoint_time": "PENDING",
+  "segments": [
+    {
+      "segment_id": "launch_recovery_watchdog-1",
+      "actual_start": "2026-09-24T04:05:48+01:00",
+      "actual_stop": "UNVERIFIED",
+      "role": "forward_research",
+      "notes": "Recovered the SAME 04:00:38 trigger after no durable STARTED evidence for the primary launch. No duplicate session or credit."
+    }
+  ],
+  "forward_research_intervals": [],
+  "forward_research_stop": "PENDING",
+  "preservation_start": "PENDING",
+  "preservation_complete": "PENDING",
+  "final_report_time": "PENDING",
+  "wall_clock_span_to_preservation_complete": "PENDING",
+  "verified_forward_research_span": "PT0S",
+  "preservation_span": "PENDING",
+  "substantive_unit_count": 0,
+  "timestamped_unit_ledger": [],
+  "early_stop_check_time": "PENDING",
+  "early_stop_check_result": "PENDING",
+  "stop_reason": "PENDING",
+  "research_target_minutes": 40,
+  "target_40m_applies": "YES",
+  "target_40m_met": "PENDING",
+  "session_result": "ACTIVE_RECOVERED",
+  "focused_session_credit": "PENDING",
+  "compliance_status": "ACTIVE_RECOVERED_LATE_START",
+  "infrastructure_failures": [
+    "Primary scheduled launch missing durable STARTED record by watchdog entry.",
+    "STARTED publication target trigger+5m was missed: recovery actual start was 5m10s after trigger; STARTED publication timestamp 6m13s after trigger."
+  ],
+  "commit_shas": [],
+  "live_unfinished_line": "NEXT ACTION from predecessor: add explicit C_i overlap/private-source variables to demand-15/16 realizability model and attack leading dense survivors; preserve graph-realizability trust boundary.",
+  "historical_fragments": [],
+  "research_target": "Independent Erdős #742 / Murty–Simon proof via complement/residual/Hall/profile/realizability route; external e+disj+X proof is benchmark only.",
+  "trust_limits": [
+    "Internal evidence only; external mathematical acceptance absent.",
+    "S<=14 is computer-assisted; equality only through S<=8.",
+    "Do not substitute abstract profile/source feasibility for actual graph realizability.",
+    "Keep balanced complete-bipartite equality controls for both parities and X_3 negative control.",
+    "General theorem remains open."
+  ]
+}
