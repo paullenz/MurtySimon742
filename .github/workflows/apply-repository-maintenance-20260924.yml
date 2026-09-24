@@ -1,0 +1,80 @@
+name: One-off apply repository housekeeping 2026-09-24
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - '.github/workflows/apply-repository-maintenance-20260924.yml'
+      - 'project/maintenance/2026-09-24/bootstrap/**'
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: dated-repository-housekeeping-20260924
+  cancel-in-progress: false
+
+jobs:
+  repair:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 2
+      - name: Apply source-pinned housekeeping and check preservation
+        shell: bash
+        run: |
+          set -euo pipefail
+          cat project/maintenance/2026-09-24/bootstrap/repair-source.xz.part00 project/maintenance/2026-09-24/bootstrap/repair-source.xz.part01 > /tmp/repair-source.xz
+          echo '26156d56b5e22daf3e131c94aed359576509612778a4cfa8c54bbcc21ff4381c  /tmp/repair-source.xz' | sha256sum -c -
+          python3 - <<'PY'
+          from pathlib import Path
+          import lzma
+          Path('/tmp/repository_cleanup_20260924.py').write_bytes(lzma.decompress(Path('/tmp/repair-source.xz').read_bytes()))
+          PY
+          python3 /tmp/repository_cleanup_20260924.py
+          if [ ! -f /tmp/cleanup-expected-paths.json ]; then
+            echo 'Dated maintenance already applied; no commit or research performed.'
+            exit 0
+          fi
+          python3 - <<'PY'
+          from pathlib import Path
+          import json, subprocess
+          expected=set(json.loads(Path('/tmp/cleanup-expected-paths.json').read_text()))
+          modified=set(filter(None,subprocess.check_output(['git','diff','--name-only','-z']).decode().split('\0')))
+          untracked=set(filter(None,subprocess.check_output(['git','ls-files','--others','--exclude-standard','-z']).decode().split('\0')))
+          assert modified|untracked == expected, {'unexpected':sorted((modified|untracked)-expected),'absent':sorted(expected-(modified|untracked))}
+          count=0
+          for old in Path('archive/maintenance/2026-09-24/project/research/session_logs').rglob('*.original.txt'):
+              relative=old.relative_to('archive/maintenance/2026-09-24').as_posix().removesuffix('.original.txt')
+              before=json.loads(old.read_text()); after=json.loads(Path(relative).read_text())
+              assert before.get('forward_research_intervals') == after.get('forward_research_intervals'),relative
+              assert before.get('verified_forward_research_span') == after.get('verified_forward_research_span'),relative
+              assert before.get('substantive_unit_count') == after.get('substantive_unit_count'),relative
+              count+=1
+          assert count == 11,count
+          print('Preserved interval/span/unit checks PASS:',count,'canonical records; no research time added.')
+          subprocess.run(['git','add','--',*sorted(expected)],check=True)
+          print('Exact staged change scope PASS:',len(expected),'paths')
+          PY
+          python3 scripts/check_repository_text_integrity.py | tee /tmp/repository-text-integrity.txt
+          python3 tools/check_readme_review_materials.py | tee /tmp/reviewer-navigation.txt
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git commit -m 'admin: reconcile paused research state, preserve records and repair repository integrity'
+          python3 scripts/check_status_sync.py | tee /tmp/status-synchronization.txt
+          git push origin HEAD:main
+          echo "PUBLISHED_MAINTENANCE_COMMIT=$(git rev-parse HEAD)"
+      - name: Preserve verification logs
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: repository-housekeeping-verification-20260924
+          path: |
+            /tmp/repository-text-integrity.txt
+            /tmp/reviewer-navigation.txt
+            /tmp/status-synchronization.txt
+          if-no-files-found: warn
+          retention-days: 14

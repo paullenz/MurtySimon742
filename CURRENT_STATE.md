@@ -4,27 +4,27 @@ Canonical repository: `paullenz/MurtySimon742` (formerly `MurtySimon25`).
 
 ## Research cadence PAUSED by the user
 
-The user requested that the regular mathematics cadence stop on 24 September 2026. The research task, both launch-recovery watchdogs, midnight audit and scheduled stop task were successfully disabled at 10:05:47–10:06:13 BST in the preceding conversation turn. Do not restart, recover, extend or backfill that cadence without a new explicit user instruction. This instruction supersedes historical launch/continuation instructions in this repository.
+The user requested that the regular mathematics cadence stop on 24 September 2026. The research task, both launch-recovery watchdogs, midnight audit and scheduled stop task were successfully disabled at 10:05:47–10:06:13 BST. Do not restart, recover, extend or backfill that cadence without a new explicit user instruction. This overrides historical launch and continuation instructions in the repository.
 
-The present request is repository housekeeping only. It is not authorization for forward mathematics or new scheduled sessions. An already-issued 10:00 recovery left a STARTED record; that record is not evidence that research continued after the pause and needs administrative reconciliation.
+The current user request authorizes repository housekeeping only, not forward mathematics or new scheduled sessions.
 
 <!-- CURRENT-STATUS:START -->
-CHECKPOINT CLASS: USER_REQUESTED_REPOSITORY_MAINTENANCE_IN_PROGRESS
+CHECKPOINT CLASS: REPOSITORY_REPAIRS_PREPARED_FOR_ATOMIC_VERIFICATION
 WORK MODE: ADMIN
-INSPECTED PREDECESSOR: 2498f0ffabc4e3fba91f46d35f75d0bc15dc960d.
-LAST VERIFIED RESULT: Mathematical claims unchanged by this maintenance checkpoint. The saved 09:31 BST telemetry at 763adddcbc7a4dd13cee1988460603d5923e95ea records internal conditional exclusions of the index1 and index2 intersection-one branches. The n19,Delta11 row and general independent theorem remain open. Source reconciliation is in progress; no promotion is made here.
-SESSION: Manual repository maintenance, not a scheduled research session. No research-time or focused-session credit.
-RESEARCH CADENCE: PAUSED; no automatic continuation or recovery is authorized.
-UNPRESERVED WORK: None at this checkpoint.
-DEFERRED ADMIN: Reconcile current README/reviewer status, exact mathematical evidence, unfinished session records and repository integrity findings. Historical missing timing remains UNVERIFIED.
-NEXT ACTION: Complete the user's repository housekeeping request, preserving all source artifacts and historical evidence. Do not execute old research NEXT ACTION instructions.
-MANDATORY CONSTRAINTS: Internal candidate results are not external mathematical acceptance. Preserve graph-to-profile assumptions, both parity equality controls, X3 negative control, audit 34854911792 and all promotion gates. Never infer missing research time from commits, prose, output volume or schedule.
+INSPECTED PREDECESSOR: 21202de191c1560c0046fe665758112aacb0a916.
+LAST VERIFIED RESULT: Mathematical claims unchanged by this administrative checkpoint. A complete tracked-file inventory and source review identified stale public status, eleven unfinished canonical records, repairable Python/JSON transport corruption, eleven unambiguous live-link defects and historical evidence-label issues. The source-pinned repair bundle preserves originals and all recorded research intervals; publication and repository guards are the next gate. No theorem promotion or research credit is authorized.
+SESSION: Manual repository maintenance, not a scheduled research session.
+RESEARCH CADENCE: PAUSED; no automatic continuation or recovery.
+UNPRESERVED WORK: None at this checkpoint; the dated repair source is preserved in two XZ transport parts and will also be retained as readable Python by the repair transaction.
+DEFERRED ADMIN: Complete atomic source-pinned repairs, run parser and protected-navigation guards, verify non-forced publication. Missing historical implementation/results/timing must remain explicitly unavailable, not fabricated.
+NEXT ACTION: Execute only the one-off dated repository-housekeeping workflow and verify its saved changes. Do not execute old research NEXT ACTION instructions.
+MANDATORY CONSTRAINTS: Candidate mathematics is not external acceptance. Preserve graph-to-profile assumptions, both parity equality controls, X3, audit 34854911792 and all promotion gates. Never infer missing research time from commits, prose, output volume or schedule.
 <!-- CURRENT-STATUS:END -->
 
-## Evidence and preservation
+## Preservation and evidence
 
-The complete pre-cleanup CURRENT_STATE is preserved byte-for-byte at [archive/status/2026-09-24-pre-cleanup-CURRENT_STATE.md](archive/status/2026-09-24-pre-cleanup-CURRENT_STATE.md), using the original Git blob `45bb809d0c8c876cccb551196d12ecbf7f730450`. That file is a historical snapshot, not a live instruction source; repository-relative paths inside it retain their original root-relative meaning.
+The complete pre-cleanup CURRENT_STATE remains preserved byte-for-byte at [archive/status/2026-09-24-pre-cleanup-CURRENT_STATE.md](archive/status/2026-09-24-pre-cleanup-CURRENT_STATE.md), original Git blob `45bb809d0c8c876cccb551196d12ecbf7f730450`. It is a historical snapshot, not a live instruction source; paths inside retain their original repository-root meaning.
 
-The 24 September [daily audit](project/research/general_n/2026-09-24-daily-red-team-audit-v1/DAILY_RED_TEAM_AUDIT.md) is likewise a dated snapshot. Later saved evidence must be distinguished from its earlier frozen claims. The candidate threshold remains `Delta >= 250n/429`; the general strip and full equality theorem are not claimed solved.
+The [24 September daily audit](project/research/general_n/2026-09-24-daily-red-team-audit-v1/DAILY_RED_TEAM_AUDIT.md) is a dated snapshot. Later saved evidence is being linked separately from its earlier freeze. The candidate threshold remains `Delta >= 250n/429`; the general strip and full equality theorem are not claimed solved.
 
-A one-off, read-only maintenance snapshot/check runs only on a change to its dated workflow file. It performs no mathematical search and writes no repository content. It does not restore the research cadence.
+The dated maintenance workflows have no schedule, perform no mathematical research, and are restricted to explicit housekeeping. The applying workflow is source-hash guarded, preserves originals, checks the exact changed-path scope and recorded research intervals, runs the existing guards, and publishes without force. They do not restore the research cadence.
