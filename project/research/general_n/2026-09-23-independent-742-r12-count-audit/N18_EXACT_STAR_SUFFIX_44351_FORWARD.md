@@ -31,3 +31,15 @@ All four 500-candidate shards emitted `FINAL`, with no timeout and no
 survivor.  The closest case was stable index 45,226, demand and selected
 degree `(3,3,3,3,3)` and `(4,3,3,3,3)`, at minimum deficit 23.  The preserved
 contiguous endpoint is 46,450; the next suffix begins at 46,451.
+
+## Stable indices 46,451--48,450
+
+| stable-index range | survivors | closest deficit gap over `Dmax=16` |
+|---|---:|---:|
+| 46,451--46,950 | 0 | +8 |
+| 46,951--47,450 | 0 | +10 |
+| 47,451--47,950 | 0 | +11 |
+| 47,951--48,450 | 0 | +12 |
+
+All shards emitted `FINAL`, with no timeout and no survivor.  The preserved
+contiguous endpoint is 48,450; the next suffix begins at 48,451.
