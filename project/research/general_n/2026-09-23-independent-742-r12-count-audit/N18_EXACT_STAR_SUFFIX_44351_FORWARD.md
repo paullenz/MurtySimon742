@@ -66,3 +66,19 @@ The singleton-source saturation obstruction using a unique one-point `C_i`
 therefore does not transfer.  Prefix closure stops at 50,739 pending an actual
 graph-realizability analysis of this new equality-budget geometry.  The other
 three shards closed normally; no timeout occurred.
+
+
+## Stable indices 52,451--54,450
+
+| stable-index range | survivors | closest deficit gap over `Dmax=16` |
+|---|---:|---:|
+| 52,451--52,950 | 0 | +8 |
+| 52,951--53,450 | 0 | +5 |
+| 53,451--53,950 | 0 | +8 |
+| 53,951--54,450 | 0 | +9 |
+
+All four 500-candidate shards emitted `FINAL`, with no timeout and no
+survivor. The preserved internal prefix now reaches 54,450, except historical
+index 20,851 and index 50,740, both separately excluded at graph level. This
+remains finite necessary-condition evidence, not full row closure or a general
+proof. The next suffix begins at 54,451.

@@ -5,20 +5,20 @@ Canonical repository: `paullenz/MurtySimon742`. Date: 24 September 2026.
 Active target: a genuinely independent proof of Erdős #742 / the Murty–Simon inequality e(G)<=floor(n^2/4), preferably with the equality characterization. Forward priority is the project’s own complement / residual / Hall / profile / realizability route, not a reconstruction of the external e+disj+X proof. The first focused session produced the internally checked candidate threshold `Delta>=250n/429`, shrinking the live strip to `n/2<Delta<250n/429`. The theorem and its inherited graph-to-profile spine remain candidate/internal-review mathematics. A 24-focused-session go/no-go gate applies. Prior eventual-D2C work remains preserved but is no longer the active forward objective.
 
 <!-- CURRENT-STATUS:START -->
-CHECKPOINT CLASS: N18_STABLE_50740_GRAPH_EXCLUDED
+CHECKPOINT CLASS: N18_PREFIX_54450
 WORK MODE: MATH
-INSPECTED PREDECESSOR: a3ee64063603af34fd2f35aa29fae3f30f1620c7.
-LAST VERIFIED RESULT: Stable index50,740, d=x=h=(8,8), is not graph-realizable. Equal two-point C-sets violate private-source uniqueness; disjoint C-sets violate one-use; intersection one forces C0={c,p}, C1={c,q}, p/q full, c adjacent all five inactive A vertices, and every inactive vertex adjacent at least five shared endpoints. Then root edge vc has no deletion witness and is noncritical. Internal prefix passes this isolated survivor through52,450.
+INSPECTED PREDECESSOR: b0c34860f31dd6db2e7fa9015366ebe814f3d7e8.
+LAST VERIFIED RESULT: Stable indices52,451--54,450 closed in four exact v4 shards with zero abstract survivors and closest gaps +8,+5,+8,+9 over Dmax16. Internal prefix reaches54,450 except indices20,851 and50,740, both separately excluded at graph level.
 SESSION: Scheduled trigger07:00:38; actual entry07:00:38; STARTED published07:02:39; first checkpoint07:03:56; cutoff07:53:38; hard close07:59:38. Immutable scheduler attribution UNVERIFIED.
-VERIFIED FORWARD INTERVALS: 07:03:05--07:03:56; 07:05:00--07:15:01; 07:16:01--07:23:04; 07:24:00--07:37:14; 07:38:10--07:40:03 BST.
-VERIFIED FORWARD SPAN: 33m02s.
+VERIFIED FORWARD INTERVALS: 07:03:05--07:03:56; 07:05:00--07:15:01; 07:16:01--07:23:04; 07:24:00--07:37:14; 07:38:10--07:40:03; 07:40:38--07:45:48 BST.
+VERIFIED FORWARD SPAN: 38m12s.
 SESSION RESULT: ACTIVE; 40-minute target pending.
-SUBSTANTIVE UNITS: 5. Focused-session counter remains6/24 pending completion.
+SUBSTANTIVE UNITS: 6. Focused-session counter remains6/24 pending completion.
 CANONICAL RECORD: project/research/session_logs/2026-09-24/2026-09-24T07-00-38+01-00-canonical.json.
 UNPRESERVED WORK: None after this checkpoint.
 DEFERRED ADMIN: Stable-index JSON/prose discrepancy remains historical audit metadata and is not blocking.
-NEXT ACTION: Continue exact-small-star n18, Delta10 stable-index suffix from52,451; inspect any survivor at actual graph level.
-MANDATORY CONSTRAINTS: Internal graph-interface proof for fixed profile only; prefix52,450 is not full row closure or general theorem. S<=14 remains computer-assisted; equality only throughS<=8; balanced-bipartite/X3 controls unchanged.
+NEXT ACTION: Continue exact-small-star n18, Delta10 stable-index suffix from54,451; inspect any survivor at actual graph level.
+MANDATORY CONSTRAINTS: Internal fixed-profile evidence only; prefix54,450 is not full row closure or general theorem. S<=14 remains computer-assisted; equality only throughS<=8; balanced-bipartite/X3 controls unchanged.
 <!-- CURRENT-STATUS:END -->
 
 ## Latest adversarial audit - 24 September 2026

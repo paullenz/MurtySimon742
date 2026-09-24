@@ -50,6 +50,12 @@
       "stop": "2026-09-24T07:40:03+01:00",
       "seconds": 113,
       "unit": "derive graph-level exclusion of stable-index survivor50,740 via forced C-set intersection, degree completion and noncritical root edge vc"
+    },
+    {
+      "start": "2026-09-24T07:40:38+01:00",
+      "stop": "2026-09-24T07:45:48+01:00",
+      "seconds": 310,
+      "unit": "close n18 exact-small-star stable indices52,451 through54,450 in four exact shards"
     }
   ],
   "forward_research_stop": "PENDING",
@@ -57,9 +63,9 @@
   "preservation_complete": "PENDING",
   "final_report_time": "PENDING",
   "wall_clock_span_to_preservation_complete": "PENDING",
-  "verified_forward_research_span": "33m02s",
+  "verified_forward_research_span": "38m12s",
   "preservation_span": "PENDING",
-  "substantive_unit_count": 5,
+  "substantive_unit_count": 6,
   "timestamped_unit_ledger": [
     {
       "completed_at": "2026-09-24T07:03:56+01:00",
@@ -80,6 +86,10 @@
     {
       "completed_at": "2026-09-24T07:40:03+01:00",
       "unit": "Excluded stable index50,740 at graph level: equal C-sets violate private-source uniqueness; disjoint C-sets violate one-use; one-point intersection forces a full B-skeleton in which root edge vc is noncritical."
+    },
+    {
+      "completed_at": "2026-09-24T07:45:48+01:00",
+      "unit": "Four 500-candidate v4 shards closed stable indices52,451--54,450 with zero survivors; closest gaps +8,+5,+8,+9."
     }
   ],
   "early_stop_check_time": "PENDING",
@@ -95,8 +105,9 @@
     "5c03b1ecf48376f4e43ecc6abf707e8824ef2ce8",
     "a6945e4233ff147f812176578a72699cf7e7644f",
     "b9955c0d86d380f9edc4b1c5b022b9e43fe30ebb",
-    "a3ee64063603af34fd2f35aa29fae3f30f1620c7"
+    "a3ee64063603af34fd2f35aa29fae3f30f1620c7",
+    "b0c34860f31dd6db2e7fa9015366ebe814f3d7e8"
   ],
-  "live_unfinished_line": "Continue exact-small-star n18, Delta10 stable-index suffix from52,451; any survivor requires actual graph-interface analysis.",
+  "live_unfinished_line": "Continue exact-small-star n18, Delta10 stable-index suffix from54,451; any survivor requires actual graph-interface analysis.",
   "historical_fragments": []
 }
