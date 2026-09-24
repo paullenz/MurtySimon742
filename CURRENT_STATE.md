@@ -5,20 +5,20 @@ Canonical repository: `paullenz/MurtySimon742`. Date: 24 September 2026.
 Active target: a genuinely independent proof of Erdős #742 / the Murty–Simon inequality e(G)<=floor(n^2/4), preferably with the equality characterization. Forward priority is the project’s own complement / residual / Hall / profile / realizability route, not a reconstruction of the external e+disj+X proof. The first focused session produced the internally checked candidate threshold `Delta>=250n/429`, shrinking the live strip to `n/2<Delta<250n/429`. The theorem and its inherited graph-to-profile spine remain candidate/internal-review mathematics. A 24-focused-session go/no-go gate applies. Prior eventual-D2C work remains preserved but is no longer the active forward objective.
 
 <!-- CURRENT-STATUS:START -->
-CHECKPOINT CLASS: ROOT_EDGE_CERTIFICATE_CHARGE_PROVED
+CHECKPOINT CLASS: SATURATED_555_ROOT_CHARGE_NEGATIVE_CONTROL
 WORK MODE: MATH
-INSPECTED PREDECESSOR: bd150431536e9b3996adb66aa58a8673ba1b5393.
-LAST VERIFIED RESULT: At every assigned-witness right endpoint, root-edge criticality gives either a distinct singleton A-witness with deficit at least rho+1+r_t, or a B-witness whose deficit is bounded by the exact union of all endpoints and assigned physical sources routed to it. This packages the fixed-profile singleton mechanism without falsely forcing every endpoint into that branch; profile-only compression remains too weak.
+INSPECTED PREDECESSOR: c02a4db8c81dfd78e9aaf53226238456e34df701.
+LAST VERIFIED RESULT: The saturated n=18 (5,5,5) membership-step system has exactly five labelled membership-count vectors. Exhaustion of all one-use forced source skeletons plus the root-certificate charge finds one vector forcing singleton deficit 3, but four vectors route every forced root edge through zero-charge B-witnesses. This is a preserved negative control: root-certificate disjunction alone does not replace the existing staged SAT exclusion.
 SESSION: Scheduled trigger 2026-09-24T06:00:38+01:00; actual entry 06:00:55; STARTED published 06:03:58; first substantive checkpoint 06:07:15; cutoff 06:53:38; hard close 06:59:38. Immutable scheduler attribution UNVERIFIED.
-VERIFIED FORWARD INTERVALS: 06:06:26--06:07:15 BST.
-VERIFIED FORWARD SPAN: 0m49s.
+VERIFIED FORWARD INTERVALS: 06:06:26--06:07:15; 06:08:41--06:10:43 BST.
+VERIFIED FORWARD SPAN: 2m51s.
 SESSION RESULT: ACTIVE; launch target MET; 40-minute target pending.
-SUBSTANTIVE UNITS: 1. Focused-session counter remains 6/24 pending completion.
+SUBSTANTIVE UNITS: 2. Focused-session counter remains 6/24 pending completion.
 CANONICAL RECORD: project/research/session_logs/2026-09-24/2026-09-24T06-00-38+01-00-canonical.json.
 UNPRESERVED WORK: None after this checkpoint.
 DEFERRED ADMIN: None.
-NEXT ACTION: Insert root-certificate choice variables and exact B-witness source unions into the explicit-source demand-15/16 realizability model; test the surviving leading profiles.
-MANDATORY CONSTRAINTS: Internal necessary condition only; do not force the singleton branch; S<=14 remains computer-assisted; equality only through S<=8; fixed (8,7) closure is not the whole n18 strip; balanced-bipartite/X3 controls unchanged; general theorem open.
+NEXT ACTION: Use the four zero-charge (5,5,5) controls to isolate the missing full-graph adjacency/common-neighbour constraint and test it as a bounded graph-realizability strengthening.
+MANDATORY CONSTRAINTS: Internal necessary-condition evidence only; the staged exact D2C model, not this coarse screen, excludes (5,5,5); S<=14 remains computer-assisted; equality only through S<=8; balanced-bipartite/X3 controls unchanged; general theorem open.
 <!-- CURRENT-STATUS:END -->
 
 ## Latest adversarial audit - 24 September 2026
