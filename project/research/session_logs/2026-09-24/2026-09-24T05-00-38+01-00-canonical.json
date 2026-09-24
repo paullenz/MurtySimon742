@@ -21,18 +21,20 @@
     }
   ],
   "forward_research_intervals": [
-    {"start":"2026-09-24T05:10:25+01:00","stop":"2026-09-24T05:11:06+01:00","seconds":41,"unit":"derive exact forced B-skeleton and active-label nonedge for surviving saturated (8,7) profile"}
+    {"start":"2026-09-24T05:10:25+01:00","stop":"2026-09-24T05:11:06+01:00","seconds":41,"unit":"derive exact forced B-skeleton and active-label nonedge for surviving saturated (8,7) profile"},
+    {"start":"2026-09-24T05:13:18+01:00","stop":"2026-09-24T05:16:51+01:00","seconds":213,"unit":"derive root-edge singleton-C witnesses at p and s and full-degree saturation of p"}
   ],
   "forward_research_stop": "PENDING",
   "preservation_start": "PENDING",
   "preservation_complete": "PENDING",
   "final_report_time": "PENDING",
   "wall_clock_span_to_preservation_complete": "PENDING",
-  "verified_forward_research_span": "0m41s",
+  "verified_forward_research_span": "4m14s",
   "preservation_span": "PENDING",
-  "substantive_unit_count": 1,
+  "substantive_unit_count": 2,
   "timestamped_unit_ledger": [
-    {"completed_at":"2026-09-24T05:11:06+01:00","unit":"Exact B-skeleton lemma for (8,7): forced p-E, split q/r-E, s-p/q/r edges; s-E and p-q/r nonedges; active labels forced nonadjacent; p has nine forced full-graph neighbours."}
+    {"completed_at":"2026-09-24T05:11:06+01:00","unit":"Exact B-skeleton lemma for (8,7): forced p-E, split q/r-E, s-p/q/r edges; s-E and p-q/r nonedges; active labels forced nonadjacent; p has nine forced full-graph neighbours."},
+    {"completed_at":"2026-09-24T05:16:51+01:00","unit":"Root-edge criticality forces distinct inactive singleton-C witnesses x_p and x_s; p is thereby forced to full degree Delta=10 and has no other inactive-A neighbour."}
   ],
   "early_stop_check_time": "PENDING",
   "early_stop_check_result": "PENDING",
@@ -45,8 +47,8 @@
     "Primary scheduled launch missing durable STARTED record at recovery check.",
     "STARTED recovery publication missed trigger+5-minute aim because watchdog actual entry was after that boundary."
   ],
-  "commit_shas": ["35c7805d2c2eb576fb48a03344694ec75fe8f550"],
-  "live_unfinished_line": "Exploit the exact (8,7) B-skeleton with full edge-criticality and A-side unique-common-neighbour exclusions; do not return to scalar-only enumeration.",
+  "commit_shas": ["35c7805d2c2eb576fb48a03344694ec75fe8f550", "4d8c8082e303b89c9232cb704af736e5759bf6d3"],
+  "live_unfinished_line": "Classify root-edge witnesses for q,r and E; test optional qr and E-cross edges against the five inactive singleton-C slots.",
   "historical_fragments": [],
   "research_credit": "same original scheduled trigger only; no duplicate credit"
 }
