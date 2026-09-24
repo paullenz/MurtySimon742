@@ -43,3 +43,26 @@ contiguous endpoint is 46,450; the next suffix begins at 46,451.
 
 All shards emitted `FINAL`, with no timeout and no survivor.  The preserved
 contiguous endpoint is 48,450; the next suffix begins at 48,451.
+
+## Stable indices 48,451--52,450: first new survivor
+
+| stable-index range | survivors | closest deficit gap over `Dmax=16` |
+|---|---:|---:|
+| 48,451--49,450 | 0 | +10 |
+| 49,451--50,450 | 0 | +11 |
+| 50,451--51,450 | 1 | 0 |
+| 51,451--52,450 | 0 | +5 |
+
+Stable index **50,740** is the first new v4 abstract survivor after 20,851:
+
+    demand d=(8,8), selected degrees x=(8,8), h=(8,8),
+    centre deficits=(8,8),
+    eight common right endpoints, each of deficit zero,
+    total minimum deficit D=16.
+
+This is not the previously excluded `(d,x)=((8,7),(8,8))` case: both demand
+entries are now eight and both complement sizes are `|C_i|=Delta-h_i=2`.
+The singleton-source saturation obstruction using a unique one-point `C_i`
+therefore does not transfer.  Prefix closure stops at 50,739 pending an actual
+graph-realizability analysis of this new equality-budget geometry.  The other
+three shards closed normally; no timeout occurred.

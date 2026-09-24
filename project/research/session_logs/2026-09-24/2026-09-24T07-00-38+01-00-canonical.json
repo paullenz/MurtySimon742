@@ -38,6 +38,12 @@
       "stop": "2026-09-24T07:23:04+01:00",
       "seconds": 423,
       "unit": "close n18 exact-small-star stable indices46,451 through48,450 in four exact shards"
+    },
+    {
+      "start": "2026-09-24T07:24:00+01:00",
+      "stop": "2026-09-24T07:37:14+01:00",
+      "seconds": 794,
+      "unit": "screen stable indices48,451 through52,450 and isolate new equality-budget abstract survivor at50,740"
     }
   ],
   "forward_research_stop": "PENDING",
@@ -45,9 +51,9 @@
   "preservation_complete": "PENDING",
   "final_report_time": "PENDING",
   "wall_clock_span_to_preservation_complete": "PENDING",
-  "verified_forward_research_span": "17m55s",
+  "verified_forward_research_span": "31m09s",
   "preservation_span": "PENDING",
-  "substantive_unit_count": 3,
+  "substantive_unit_count": 4,
   "timestamped_unit_ledger": [
     {
       "completed_at": "2026-09-24T07:03:56+01:00",
@@ -60,6 +66,10 @@
     {
       "completed_at": "2026-09-24T07:23:04+01:00",
       "unit": "Four v4 shards closed stable indices46,451--48,450 with zero survivors; closest gaps +8,+10,+11,+12."
+    },
+    {
+      "completed_at": "2026-09-24T07:37:14+01:00",
+      "unit": "Screened4,000 candidates: unique new v4 abstract survivor at stable index50,740 with d=x=h=(8,8), D=16 and eight shared zero-deficit endpoints; prior one-point-C saturation obstruction does not transfer."
     }
   ],
   "early_stop_check_time": "PENDING",
@@ -73,8 +83,9 @@
   "commit_shas": [
     "c3094e0d9206281b3783755427633099d9ce4869",
     "5c03b1ecf48376f4e43ecc6abf707e8824ef2ce8",
-    "a6945e4233ff147f812176578a72699cf7e7644f"
+    "a6945e4233ff147f812176578a72699cf7e7644f",
+    "b9955c0d86d380f9edc4b1c5b022b9e43fe30ebb"
   ],
-  "live_unfinished_line": "Continue exact-small-star n18, Delta10 stable-index suffix from48,451.",
+  "live_unfinished_line": "Analyze actual graph realizability of stable index50,740: d=x=h=(8,8), two active labels with |C0|=|C1|=2 and eight shared assigned endpoints.",
   "historical_fragments": []
 }

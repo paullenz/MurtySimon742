@@ -5,20 +5,20 @@ Canonical repository: `paullenz/MurtySimon742`. Date: 24 September 2026.
 Active target: a genuinely independent proof of Erdős #742 / the Murty–Simon inequality e(G)<=floor(n^2/4), preferably with the equality characterization. Forward priority is the project’s own complement / residual / Hall / profile / realizability route, not a reconstruction of the external e+disj+X proof. The first focused session produced the internally checked candidate threshold `Delta>=250n/429`, shrinking the live strip to `n/2<Delta<250n/429`. The theorem and its inherited graph-to-profile spine remain candidate/internal-review mathematics. A 24-focused-session go/no-go gate applies. Prior eventual-D2C work remains preserved but is no longer the active forward objective.
 
 <!-- CURRENT-STATUS:START -->
-CHECKPOINT CLASS: N18_EXACT_STAR_PREFIX_48450
+CHECKPOINT CLASS: N18_SURVIVOR_50740_ISOLATED
 WORK MODE: MATH
-INSPECTED PREDECESSOR: a6945e4233ff147f812176578a72699cf7e7644f.
-LAST VERIFIED RESULT: Exact-small-star v4 closed n18, Delta10 stable indices46,451--48,450 in four 500-candidate shards with zero survivors; closest gaps +8,+10,+11,+12 overDmax16. Combined internal prefix reaches48,450, except historical index20,851 independently excluded by star-five.
-SESSION: Scheduled trigger07:00:38; actual entry07:00:38; STARTED published07:02:39 (target MET); first checkpoint07:03:56 (target MET); cutoff07:53:38; hard close07:59:38. Immutable scheduler attribution UNVERIFIED.
-VERIFIED FORWARD INTERVALS: 07:03:05--07:03:56; 07:05:00--07:15:01; 07:16:01--07:23:04 BST.
-VERIFIED FORWARD SPAN: 17m55s.
+INSPECTED PREDECESSOR: b9955c0d86d380f9edc4b1c5b022b9e43fe30ebb.
+LAST VERIFIED RESULT: Exact-small-star v4 screened stable indices48,451--52,450 and found one new abstract survivor at index50,740: d=x=h=(8,8), D=16, centre deficits(8,8), eight shared zero-deficit right endpoints. The prior (8,7)/(8,8) singleton-source obstruction does not transfer because both complement sets now have size2. Other tested candidates had no survivors.
+SESSION: Scheduled trigger07:00:38; actual entry07:00:38; STARTED published07:02:39; first checkpoint07:03:56; cutoff07:53:38; hard close07:59:38. Immutable scheduler attribution UNVERIFIED.
+VERIFIED FORWARD INTERVALS: 07:03:05--07:03:56; 07:05:00--07:15:01; 07:16:01--07:23:04; 07:24:00--07:37:14 BST.
+VERIFIED FORWARD SPAN: 31m09s.
 SESSION RESULT: ACTIVE; 40-minute target pending.
-SUBSTANTIVE UNITS: 3. Focused-session counter remains6/24 pending completion.
+SUBSTANTIVE UNITS: 4. Focused-session counter remains6/24 pending completion.
 CANONICAL RECORD: project/research/session_logs/2026-09-24/2026-09-24T07-00-38+01-00-canonical.json.
 UNPRESERVED WORK: None after this checkpoint.
 DEFERRED ADMIN: Stable-index JSON/prose discrepancy remains historical audit metadata and is not blocking.
-NEXT ACTION: Continue exact-small-star n18, Delta10 stable-index suffix from48,451.
-MANDATORY CONSTRAINTS: Internal finite verification only; prefix48,450 is not full row closure or the general theorem. S<=14 remains computer-assisted; equality only throughS<=8; balanced-bipartite/X3 controls unchanged.
+NEXT ACTION: Analyze actual graph realizability of stable index50,740: d=x=h=(8,8), two active labels with |C0|=|C1|=2 and eight shared assigned endpoints.
+MANDATORY CONSTRAINTS: Abstract profile feasibility is not graph realizability; prefix closure stops at50,739 pending this analysis. S<=14 remains computer-assisted; equality only throughS<=8; balanced-bipartite/X3 controls unchanged; general theorem open.
 <!-- CURRENT-STATUS:END -->
 
 ## Latest adversarial audit - 24 September 2026
