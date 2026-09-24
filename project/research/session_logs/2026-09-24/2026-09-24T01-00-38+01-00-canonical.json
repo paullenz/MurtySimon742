@@ -26,6 +26,27 @@
       "seconds": 64,
       "kind": "mathematical_review_and_independent_LP_test",
       "evidence": "project/research/general_n/2026-09-24-r12-support10-lp-relaxation-v1/ROW0_LP_RELAXATION_CHECK.md"
+    },
+    {
+      "start": "2026-09-24T01:14:30+01:00",
+      "stop": "2026-09-24T01:14:42+01:00",
+      "seconds": 12,
+      "kind": "exact_strict_kernel_regeneration",
+      "evidence": "project/research/general_n/2026-09-24-r12-support10-lp-relaxation-v1/ORBIT_REGENERATION_CHECK.md"
+    },
+    {
+      "start": "2026-09-24T01:19:17+01:00",
+      "stop": "2026-09-24T01:20:51+01:00",
+      "seconds": 94,
+      "kind": "complete_source_LP_prefilter",
+      "evidence": "project/research/general_n/2026-09-24-r12-support10-lp-relaxation-v1/SOURCE_LP_PREFILTER_RESULT.md"
+    },
+    {
+      "start": "2026-09-24T01:21:32+01:00",
+      "stop": "2026-09-24T01:24:54+01:00",
+      "seconds": 202,
+      "kind": "helper_LP_all32_pass_with_overlapping_exact_source32_replay",
+      "evidence": "project/research/general_n/2026-09-24-r12-support10-lp-relaxation-v1/HELPER_LP_ALL32_PASS1.md; project/research/general_n/2026-09-24-r12-support10-lp-relaxation-v1/SOURCE_EXACT32_REPLAY.md"
     }
   ],
   "forward_research_stop": "PENDING",
@@ -33,16 +54,44 @@
   "preservation_complete": "PENDING",
   "final_report_time": "PENDING",
   "wall_clock_span_to_preservation_complete": "PENDING",
-  "verified_forward_research_span": "PT1M4S",
+  "verified_forward_research_span": "PT6M12S",
   "preservation_span": "PENDING",
-  "substantive_unit_count": 1,
+  "substantive_unit_count": 5,
   "timestamped_unit_ledger": [
     {
       "unit": 1,
       "start": "2026-09-24T01:12:36+01:00",
       "stop": "2026-09-24T01:13:40+01:00",
-      "result": "Independently rebuilt the first r=12 support-ten helper system and observed that its continuous LP relaxation is infeasible in about 2 seconds, while the source-only LP is feasible. This points to an LP-relaxation reproduction route for all 32 helper timeouts. Internal evidence only; same HiGHS backend; S<=14 remains frozen.",
+      "result": "Independently rebuilt the first r=12 support-ten helper system and observed that its continuous LP relaxation is infeasible, while the source-only LP is feasible. Internal evidence only; same HiGHS backend; S<=14 remains frozen.",
       "commit": "3c1c38698bfd88480993e5b66b44701522cefc1b"
+    },
+    {
+      "unit": 2,
+      "start": "2026-09-24T01:14:30+01:00",
+      "stop": "2026-09-24T01:14:42+01:00",
+      "result": "Recompiled and reran the support-ten orbit generator: 12,346 unlabelled 8-vertex graphs, 46 max-degree-2 unit cores, 104,981 coloured cases, and exactly 6,386 strict kernels, matching the audited universe.",
+      "commit": "49cb731c54f95632b03ea52f8b909236f0a679b0"
+    },
+    {
+      "unit": 3,
+      "start": "2026-09-24T01:19:17+01:00",
+      "stop": "2026-09-24T01:20:51+01:00",
+      "result": "Independent continuous source-LP prefilter over the survivor-bearing shards left exactly 32 kernels with shard counts 10,11,6,5 and preserved their identities.",
+      "commit": "150d1cd82ca49e3441d6af91f1be89f59907f9a4"
+    },
+    {
+      "unit": 4,
+      "start": "2026-09-24T01:21:49+01:00",
+      "stop": "2026-09-24T01:22:53+01:00",
+      "result": "Fresh exact integer source solve on all 32 independently regenerated LP survivors: 32 feasible, 0 infeasible, 0 unknown. Together with the complete LP prefilter this independently reproduces the 32-row source stage internally.",
+      "commit": "b9fb42da263a0c87efb649c2d0be14cff69487fc"
+    },
+    {
+      "unit": 5,
+      "start": "2026-09-24T01:21:32+01:00",
+      "stop": "2026-09-24T01:24:54+01:00",
+      "result": "Independent continuous helper-LP pass over all 32 source survivors: 19 LP-infeasible, 0 LP-feasible, 13 timeout/unknown. This improves the fresh red-team state from 32 helper unknowns to 13; the 13 remain unresolved, not survivors.",
+      "commit": "b240d4301ced04f5bc33bc1cdb63265303d6c7c7"
     }
   ],
   "early_stop_check_time": "PENDING",
@@ -59,9 +108,13 @@
   ],
   "commit_shas": [
     "0e140d5b86d9d9ed27aa242432660020f90bcc6d",
-    "3c1c38698bfd88480993e5b66b44701522cefc1b"
+    "3c1c38698bfd88480993e5b66b44701522cefc1b",
+    "49cb731c54f95632b03ea52f8b909236f0a679b0",
+    "150d1cd82ca49e3441d6af91f1be89f59907f9a4",
+    "b9fb42da263a0c87efb649c2d0be14cff69487fc",
+    "b240d4301ced04f5bc33bc1cdb63265303d6c7c7"
   ],
-  "live_unfinished_line": "Regenerate all strict support-ten kernels from the committed orbit generator, recover the 32 source survivors, and test the independently encoded continuous helper LP across all 32; preserve rowwise outcomes and keep S<=14 frozen pending decisive reproducibility/certificates.",
+  "live_unfinished_line": "Resolve the 13 helper-LP timeout rows with alternative continuous-LP methods/longer limits or independently checkable certificates; keep S<=14 frozen until all load-bearing helper rows are decisive.",
   "historical_fragments": [],
   "run_kind": "SCHEDULED_RESEARCH_RECOVERY",
   "duplicate_credit": false
