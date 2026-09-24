@@ -30,3 +30,22 @@ contiguous v4 prefix now reaches 3,200. The next untested suffix begins at
 All four 500-candidate shards emitted `FINAL`, with no timeout and no
 survivor. The contiguous v4 prefix now reaches 5,200; the next suffix begins
 at 5,201.
+
+## Stable indices 5,201--7,008: row exhaustion
+
+| stable-index range | survivors | closest deficit gap over `Dmax=14` |
+|---|---:|---:|
+| 5,201--5,700 | 0 | +11 |
+| 5,701--6,200 | 0 | +6 |
+| 6,201--6,700 | 0 | +7 |
+| 6,701--7,008 | 0 | +10 |
+
+The fourth shard ended naturally at stable index 7,008. Across the entire
+row the scalar loop inspected 14,413 symmetry-reduced demand/witness patterns,
+of which 7,008 passed the scalar filters and entered the exact-small-star v4
+model. Every one has exact minimum deficit above `Dmax=14`; there are no
+abstract survivors.
+
+Conditional on the audited demand-15/irreducible-demand-16 normal form and
+graph-to-profile bridge, this closes the finite `n=16, Delta=9` row. It does
+not by itself prove the bridge, equality, or the general theorem.

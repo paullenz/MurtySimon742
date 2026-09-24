@@ -5,20 +5,20 @@ Canonical repository: `paullenz/MurtySimon742`. Date: 24 September 2026.
 Active target: a genuinely independent proof of Erdős #742 / the Murty–Simon inequality e(G)<=floor(n^2/4), preferably with the equality characterization. Forward priority is the project’s own complement / residual / Hall / profile / realizability route, not a reconstruction of the external e+disj+X proof. The first focused session produced the internally checked candidate threshold `Delta>=250n/429`, shrinking the live strip to `n/2<Delta<250n/429`. The theorem and its inherited graph-to-profile spine remain candidate/internal-review mathematics. A 24-focused-session go/no-go gate applies. Prior eventual-D2C work remains preserved but is no longer the active forward objective.
 
 <!-- CURRENT-STATUS:START -->
-CHECKPOINT CLASS: N16_PREFIX_5200
+CHECKPOINT CLASS: N16_DELTA9_EXACT_STAR_ROW_CLOSED
 WORK MODE: MATH
-INSPECTED PREDECESSOR: 5d2bf8ffa7f37ef3d868bea8d60b218bc1bb5a56.
-LAST VERIFIED RESULT: Four exact v4 shards closed n16, Delta9 stable indices3,201--5,200 with zero survivors and closest gaps +8,+7,+9,+10 overDmax14. Contiguous prefix reaches5,200.
+INSPECTED PREDECESSOR: 55a743986384d64bf585fe8ee6478e802f882a1a.
+LAST VERIFIED RESULT: The n16, Delta9 exact-small-star v4 enumeration exhausted at stable index7,008. All14,413 symmetry-reduced patterns were scalar-screened and all7,008 scalar-pass profiles have exact minimum deficit aboveDmax14; zero abstract survivors. Conditional on the audited normal form and bridge, the finite row is closed.
 SESSION: Scheduled trigger08:00:38; actual entry08:00:52; STARTED published08:01:11; first checkpoint08:02:33; cutoff08:53:38; hard close08:59:38. Immutable scheduler attribution UNVERIFIED.
-VERIFIED FORWARD INTERVALS: 08:01:54--08:02:33; 08:03:31--08:06:11 BST.
-VERIFIED FORWARD SPAN: 3m19s.
+VERIFIED FORWARD INTERVALS: 08:01:54--08:02:33; 08:03:31--08:06:11; 08:06:59--08:09:56 BST.
+VERIFIED FORWARD SPAN: 6m16s.
 SESSION RESULT: ACTIVE; 40-minute target pending.
-SUBSTANTIVE UNITS: 2. Focused-session counter remains7/24 pending completion.
+SUBSTANTIVE UNITS: 3. Focused-session counter remains7/24 pending completion.
 CANONICAL RECORD: project/research/session_logs/2026-09-24/2026-09-24T08-00-38+01-00-canonical.json.
 UNPRESERVED WORK: None.
 DEFERRED ADMIN: Stable-index JSON/prose discrepancy remains historical audit metadata and is not blocking.
-NEXT ACTION: Continue n16, Delta9 exact-star row from stable index5,201; require FINAL and graph-analyse any survivor.
-MANDATORY CONSTRAINTS: Internal fixed-row evidence only; S<=14 remains computer-assisted; equality only throughS<=8; balanced-bipartite/X3 controls unchanged.
+NEXT ACTION: Identify and run the next unresolved live-strip finite row at the exact-star interface; graph-analyse any survivor.
+MANDATORY CONSTRAINTS: This is conditional finite-row closure, not the general theorem. S<=14 remains computer-assisted; equality only throughS<=8; balanced-bipartite/X3 controls unchanged.
 <!-- CURRENT-STATUS:END -->
 
 ## Latest adversarial audit - 24 September 2026
