@@ -18,7 +18,7 @@
     {
       "segment_id": "segment-1",
       "actual_start": "2026-09-24T03:02:57+01:00",
-      "actual_stop": "UNVERIFIED",
+      "actual_stop": "2026-09-24T03:53:22+01:00",
       "role": "forward_research",
       "notes": "02:00 predecessor had no heartbeat after 02:27 and its hard-close deadline passed; no overlap. Its stale finalization is deferred."
     }
@@ -59,16 +59,28 @@
       "stop": "2026-09-24T03:39:06+01:00",
       "seconds": 240,
       "unit": "Linearized the source-union endpoint floor in the demand-15/16 witness MILP, tested audited n=18 profiles, and completed bounded row replays."
+    },
+    {
+      "start": "2026-09-24T03:40:21+01:00",
+      "stop": "2026-09-24T03:41:46+01:00",
+      "seconds": 85,
+      "unit": "Derived the private-source antichain/common-endpoint capacity lemma and regressed it on 575 certified D2C controls."
+    },
+    {
+      "start": "2026-09-24T03:41:46+01:00",
+      "stop": "2026-09-24T03:53:22+01:00",
+      "seconds": 696,
+      "unit": "Added the physical right-vertex budget, rechecked leading profiles, and completed source-union-v3 n=16 scalar shards 401-3200 with zero survivors."
     }
   ],
-  "forward_research_stop": "PENDING",
-  "preservation_start": "PENDING",
-  "preservation_complete": "PENDING",
-  "final_report_time": "PENDING",
-  "wall_clock_span_to_preservation_complete": "PENDING",
-  "verified_forward_research_span": "00:26:10",
-  "preservation_span": "PENDING",
-  "substantive_unit_count": 6,
+  "forward_research_stop": "2026-09-24T03:53:22+01:00",
+  "preservation_start": "2026-09-24T03:53:22+01:00",
+  "preservation_complete": "2026-09-24T03:54:59+01:00",
+  "final_report_time": "2026-09-24T03:54:59+01:00",
+  "wall_clock_span_to_preservation_complete": "00:52:02",
+  "verified_forward_research_span": "00:39:11",
+  "preservation_span": "00:01:37",
+  "substantive_unit_count": 8,
   "timestamped_unit_ledger": [
     {
       "unit": 1,
@@ -117,25 +129,43 @@
       "result": "Implemented g(J)=max(0,rho+|J|-min h_i) as a per-right-type deficit floor. It does not improve the five audited leading n=18 profiles (including 555), identifying a real limitation rather than claiming closure. Full n=14,Delta=8 replay closed 150 scalar candidates with no survivors; n=15,Delta=8 has no scalar candidates; explicit n=16,Delta=9 shard 201-400 had no survivors and closest gap +6. The initially attempted n16 prefix process ended after progress through 200 without a FINAL record and is not used for a range-closure claim.",
       "evidence": "project/research/general_n/2026-09-24-demand15-source-union-v1/SOURCE_UNION_MILP_DIAGNOSTIC.md",
       "code": "project/research/general_n/2026-09-24-demand15-source-union-v1/witness_deficit_union_milp.py"
+    },
+    {
+      "unit": 7,
+      "start": "2026-09-24T03:40:21+01:00",
+      "complete": "2026-09-24T03:41:46+01:00",
+      "result": "Proved that labels sharing an assigned endpoint have incomparable B-neighbourhoods, and |R_J| is at most min_i sum_{u in P_i(J)}(d(u)-2), hence at most (Delta-2)min_i|P_i(J)|. Regression inspected 2,685,701 label subsets, 6,245 nonempty common-endpoint families, and 6,944 common endpoints on 575 certified D2C graphs: zero violations; exact degree capacity attained 80 times.",
+      "evidence": "project/research/general_n/2026-09-24-demand15-source-union-v1/PRIVATE_SOURCE_CAPACITY_AND_V3_RESULTS.md",
+      "code": "project/research/general_n/2026-09-24-demand15-source-union-v1/check_private_source_capacity.py"
+    },
+    {
+      "unit": 8,
+      "start": "2026-09-24T03:41:46+01:00",
+      "complete": "2026-09-24T03:53:22+01:00",
+      "result": "Added the missing physical right-vertex budget sum n_{J,z}<=Delta to the strengthened witness model. Five leading n18 minimum deficits remain unchanged, so dense realizability remains open. Explicit n16,Delta9 source-union-v3 shards 401-3200 contain zero survivors; together with the earlier finalized 201-400 shard, range 201-3200 is closed. Range 1-200 is not claimed because its attempt lacked a FINAL record.",
+      "evidence": "project/research/general_n/2026-09-24-demand15-source-union-v1/PRIVATE_SOURCE_CAPACITY_AND_V3_RESULTS.md",
+      "code": "project/research/general_n/2026-09-24-demand15-source-union-v1/witness_deficit_union_milp.py"
     }
   ],
-  "early_stop_check_time": "PENDING",
-  "early_stop_check_result": "PENDING",
-  "stop_reason": "PENDING",
+  "early_stop_check_time": "2026-09-24T03:53:22+01:00",
+  "early_stop_check_result": "Forward cutoff reached at a completed scalar shard; no further exploration started.",
+  "stop_reason": "Reached the forward-research cutoff and stopped at the completed n=16 scalar-3200 checkpoint for preservation.",
   "research_target_minutes": 40,
   "target_40m_applies": true,
-  "target_40m_met": "PENDING",
-  "session_run_status": "ACTIVE",
-  "focused_session_credit": "PENDING; counter remains 6/24.",
-  "compliance_status": "PENDING",
+  "target_40m_met": false,
+  "session_run_status": "RAN",
+  "focused_session_credit": "NOT EARNED; verified span 39m11s is 49 seconds short of 40 minutes; counter remains 6/24.",
+  "compliance_status": "TARGET_40M_NOT_MET; substantive durable work preserved, no time inferred.",
   "infrastructure_failures": [],
   "commit_shas": [
     "f068738ca357969edded1fd2ae7930d9be06d362",
     "f807cb5e4f3fe9c73b8e89570e45e92fc4bded04",
     "b4ab79dbae42b5c3046b47c3bf9d9e36c73e8cbc",
     "f771ccec24e1fea353e09969361cc0eb52477825",
-    "c549a6d93ac5117c17a1bb08c00cc052fd994d01"
+    "c549a6d93ac5117c17a1bb08c00cc052fd994d01",
+    "92324c37d8c665d41584f0ad7d1ce67c34825eb4",
+    "2a37baeabf15bd20661ccf1f6f9d285abaffd999"
   ],
-  "live_unfinished_line": "The source-union endpoint floor is proved and linearized but is zero on the leading dense n=18 survivors, so it does not replace graph-level realizability. Next derive or test a companion source-capacity/union interaction; do not claim n16 prefix 1-200 closure from the interrupted attempt.",
+  "live_unfinished_line": "Use the proved incomparability/private-source capacity with explicit C_i set variables on leading demand-15/16 survivors. Source-union/right-budget scalar v3 leaves dense profiles feasible; n16 scalar range 201-3200 is closed but range 1-200 and the row suffix are not.",
   "historical_fragments": []
 }
