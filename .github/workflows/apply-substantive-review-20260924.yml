@@ -1,0 +1,124 @@
+name: One-off apply substantive review 2026-09-24
+on:
+  push:
+    branches: [main]
+    paths:
+      - '.github/workflows/apply-substantive-review-20260924.yml'
+      - 'project/reviews/substantive/2026-09-24/publication/**'
+  workflow_dispatch:
+permissions:
+  contents: write
+concurrency:
+  group: substantive-review-publication-20260924
+  cancel-in-progress: false
+jobs:
+  verify-and-publish:
+    runs-on: ubuntu-latest
+    timeout-minutes: 12
+    env:
+      PYTHONDONTWRITEBYTECODE: '1'
+      OPENBLAS_NUM_THREADS: '1'
+      OMP_NUM_THREADS: '1'
+      MKL_NUM_THREADS: '1'
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 3
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.13'
+      - name: Install matching review dependencies
+        run: python -m pip install numpy==2.3.5 scipy==1.17.0 networkx==3.6.1
+      - name: Apply pinned review and verify substantive controls
+        shell: bash
+        run: |
+          set -euo pipefail
+          python - <<'PY'
+          from pathlib import Path
+          import hashlib,json,lzma,subprocess,sys,time
+          root=Path.cwd();review=root/'project/reviews/substantive/2026-09-24'
+          verification=review/'PUBLICATION_VERIFICATION.json'
+          if verification.exists():
+              print('Dated review already published; no write or research performed.');sys.exit(0)
+          subprocess.run(['git','diff','--exit-code','HEAD'],check=True)
+          head=subprocess.check_output(['git','rev-parse','HEAD']).decode().strip()
+          raw=b''.join((review/f'publication/payload.part{i:02d}').read_bytes() for i in [0,2,3,4,5,6,7,8,9])
+          pin='248c252ddb99ddab5cee23bccc7fbe9b810cd95555d42717a7b796d78a25e498'
+          assert hashlib.sha256(raw).hexdigest()==pin,'Capsule digest mismatch'
+          payload=json.loads(lzma.decompress(raw))
+          subprocess.run(['git','merge-base','--is-ancestor',payload['baseline_parent'],head],check=True)
+          before={}
+          for name,digest in payload['before'].items():
+              path=Path(name)
+              assert not path.is_absolute() and '..' not in path.parts,name
+              if digest is None:assert not path.exists(),name
+              else:assert hashlib.sha256(path.read_bytes()).hexdigest()==digest,name
+              before[name]=digest
+          before['CURRENT_STATE.md']=hashlib.sha256(Path('CURRENT_STATE.md').read_bytes()).hexdigest()
+          patch=Path('/tmp/substantive-review.patch');patch.write_text(payload['patch'])
+          subprocess.run(['git','apply','--check',str(patch)],check=True)
+          subprocess.run(['git','apply',str(patch)],check=True)
+          current=payload['current_state'].replace('INSPECTED PREDECESSOR: '+payload['baseline_parent'],'INSPECTED PREDECESSOR: '+head,1)
+          Path('CURRENT_STATE.md').write_text(current)
+          expected=set(payload['expected_paths'])
+          ledger_name='project/maintenance/2026-09-24/INTEGRITY_EXCEPTIONS.json'
+          ledger_path=Path(ledger_name);old=ledger_path.read_bytes()
+          assert hashlib.sha256(old).hexdigest()=='59d899b94e81aecadf3b5847ac2c505a105b68e417adc3e0b5292b267f2acb81'
+          before[ledger_name]=hashlib.sha256(old).hexdigest();ledger=json.loads(old)
+          r9='project/research/general_n/2026-09-22-r9-quotient-v1/audit_r9_support8_orbits.py'
+          ledger['known_incomplete_artifacts'].remove(r9)
+          ledger['fresh_reconstructions_not_historical_recovery']=[{'path':r9,'date':'2026-09-24','evidence':'project/reviews/substantive/2026-09-24/REPORT.md','original_bytes':'archive/maintenance/2026-09-24/'+r9+'.original.txt'}]
+          ledger_path.write_text(json.dumps(ledger,indent=2)+'\n');expected.add(ledger_name)
+          def changed():
+              modified=set(filter(None,subprocess.check_output(['git','diff','HEAD','--name-only','-z']).decode().split('\0')))
+              untracked=set(filter(None,subprocess.check_output(['git','ls-files','--others','--exclude-standard','-z']).decode().split('\0')))
+              return modified|untracked
+          def scope_check():
+              actual=changed()
+              assert actual==expected,{'unexpected':sorted(actual-expected),'absent':sorted(expected-actual)}
+          scope_check()
+          checks=[];ci=review/'ci_verification';ci.mkdir()
+          commands=[('legacy_status',[sys.executable,'scripts/test_status_sync.py'],60),('mode_status',[sys.executable,'scripts/test_status_modes.py'],60),('integrity_controls',[sys.executable,str(review/'test_integrity_repairs.py')],300),('finite_evidence',[sys.executable,str(review/'check_finite_evidence.py')],180),('r9_reconstruction',[sys.executable,r9],90),('reviewer_navigation',[sys.executable,'tools/check_readme_review_materials.py'],60)]
+          def execute(name,command,limit):
+              start=time.monotonic();p=subprocess.run(command,capture_output=True,text=True,timeout=limit)
+              for suffix,text in [('stdout',p.stdout),('stderr',p.stderr)]:
+                  path=ci/f'{name}.{suffix}.txt';path.write_text(text);expected.add(path.relative_to(root).as_posix())
+              checks.append({'name':name,'command':command,'exit':p.returncode,'seconds':round(time.monotonic()-start,3)})
+              print(name,'exit',p.returncode,p.stdout[-2000:],p.stderr[-1000:],flush=True)
+              assert p.returncode==0,name
+              return p.stdout
+          for name,command,limit in commands:
+              text=execute(name,command,limit)
+              if name=='integrity_controls':assert json.loads(text)['status']=='PASS_POSITIVE_AND_HOSTILE_CONTROLS'
+              if name=='finite_evidence':assert not json.loads(text)['index2_skeleton_casecheck']['uncovered_skeletons']
+          scope_check()
+          subprocess.run(['git','add','--',*sorted(expected)],check=True)
+          text=execute('repository_text_integrity',[sys.executable,'scripts/check_repository_text_integrity.py'],90)
+          import numpy,scipy,networkx
+          verification.write_text(json.dumps({'status':'PASS_SUBSTANTIVE_REVIEW_AND_PROCESS_CHECKS','review_predecessor':head,'payload_sha256':pin,'versions':{'python':sys.version,'numpy':numpy.__version__,'scipy':scipy.__version__,'networkx':networkx.__version__},'checks':checks,'text_integrity':json.loads(text),'full_row_replays':'Executed locally; complete per-case decision ledgers and source hashes preserved. CI reruns hostile controls, not the 8760-case numerical census.','research_cadence':'PAUSED','scope':'Internal review; numerical results are not rational certificates or external acceptance.'},indent=2)+'\n')
+          expected.add(verification.relative_to(root).as_posix())
+          manifest_path=review/'REVIEW_CHANGE_MANIFEST.json';manifest=json.loads(manifest_path.read_text())
+          for name in expected:
+              if name==manifest_path.relative_to(root).as_posix():continue
+              manifest['files'][name]={'before_sha256':before.get(name),'after_sha256':hashlib.sha256(Path(name).read_bytes()).hexdigest()}
+          manifest['publication_predecessor']=head;manifest['payload_sha256']=pin
+          manifest_path.write_text(json.dumps(manifest,indent=2)+'\n')
+          scope_check()
+          subprocess.run(['git','add','--',*sorted(expected)],check=True)
+          subprocess.run(['git','config','user.name','github-actions[bot]'],check=True)
+          subprocess.run(['git','config','user.email','41898282+github-actions[bot]@users.noreply.github.com'],check=True)
+          subprocess.run(['git','commit','-m','audit: repair replay and solver integrity; preserve substantive review and revised finite evidence'],check=True)
+          subprocess.run([sys.executable,'scripts/check_status_sync.py'],check=True)
+          subprocess.run(['git','push','origin','HEAD:main'],check=True)
+          print('PUBLISHED_SUBSTANTIVE_REVIEW_COMMIT='+subprocess.check_output(['git','rev-parse','HEAD']).decode().strip())
+          PY
+      - name: Preserve verification logs even if publication is blocked
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: substantive-review-verification-20260924
+          path: |
+            project/reviews/substantive/2026-09-24/ci_verification/
+            project/reviews/substantive/2026-09-24/PUBLICATION_VERIFICATION.json
+          if-no-files-found: warn
+          retention-days: 14

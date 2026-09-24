@@ -1,23 +1,21 @@
-# Current state — substantive review, 24 September 2026
+# Current state — substantive review publication, 24 September 2026
 
-Canonical repository: `paullenz/MurtySimon742`. The regular research cadence remains PAUSED by the user; no restart, recovery, extension or backfill is authorized. The current request is a substantive manual review of existing work.
+Canonical repository: `paullenz/MurtySimon742`. The regular mathematics cadence remains PAUSED. The current user-requested manual substantive review does not authorize automatic research, catch-up sessions, or changes to historical time and credit.
 
 <!-- CURRENT-STATUS:START -->
-CHECKPOINT CLASS: SUBSTANTIVE_REVIEW_CONFIRMED_INTEGRITY_FAILURES
+CHECKPOINT CLASS: SUBSTANTIVE_REVIEW_REPAIRS_PINNED_PENDING_PUBLICATION
 WORK MODE: AUDIT
-INSPECTED PREDECESSOR: 90b5fd21a90f88aec1ba6445a5ab385559eea999.
-LAST VERIFIED RESULT: Fresh original Python/C++ replay reproduces all 11,357 records and both published hashes, but empty and one-record matching streams falsely report 11,357-record PASS. PR #2's checked implementation is unchanged and its new tests fail to import. Exact-star solver/row code mishandles non-optimal or absent incumbents. Scalar enumeration resolves n18 index identities; independent finite star and n19 core-skeleton checks support the local deficit arguments, with one 50,740 prose inference requiring repair.
-REVIEW STATUS: Confirmed findings preserved in project/reviews/substantive/2026-09-24/CONFIRMED_FINDINGS.md. Do not promote historical full-row claims from uninstrumented FINAL summaries; missing solver coverage must remain unverified.
-SESSION: Manual substantive audit; no historical timing or focused-session credit added. Last saved counter remains 7/24, not re-adjudicated.
+INSPECTED PREDECESSOR: c674d51517ab7691e546cd0852893c997ea4ee7f.
+LAST VERIFIED RESULT: Local review is complete: original and repaired complete replay pass 11,357 records; hostile empty/truncated input controls expose and repair false full-PASS. Four-model solver and status parser repairs pass controls. Safe complete conditional n16/Delta9 and n19/Delta10 row accounting is preserved in the source-pinned capsule. n18/Delta10 full-row certification is suspended pending safe full replay, not disproved. R9/R11 have fresh reconstructions, not recovered historical bytes. Reviewed local deficit arguments survive with the explicit 50,740 proof correction.
+REVIEW EVIDENCE: Confirmed findings at project/reviews/substantive/2026-09-24/CONFIRMED_FINDINGS.md. Full patch, tests, compact complete case decisions and final report are pinned in the nine-part publication capsule, SHA256 248c252ddb99ddab5cee23bccc7fbe9b810cd95555d42717a7b796d78a25e498. Application and final process/hostile-test verification are still pending; this checkpoint does not claim those changes are applied.
+SESSION: Manual audit only. No duration or focused-session credit added; prior recorded counter remains 7/24.
 RESEARCH CADENCE: PAUSED.
-UNPRESERVED WORK: Corrected code and full local test outputs are in the current bounded review unit and are not yet published; only the confirmed findings are durable at this checkpoint. Preserve that patch/test bundle before any new research unit.
-DEFERRED ADMIN: Publish and test fail-closed replay/parser/solver repairs; attach fresh R9/R11 reconstruction and exact-index evidence; correct affected proof and reviewer status; record a changes-required PR review.
-NEXT ACTION: Complete the already-running substantive review repairs and preservation. Do not resume automatic or unrelated forward mathematics.
-MANDATORY CONSTRAINTS: Internal same-project testing is not external acceptance. Preserve original artifacts, both equality parities, X3, graph-to-profile premises, audit 34854911792 and separate promotion gates. No invented prior outputs, timings or credits.
+UNPRESERVED WORK: None of the prepared text patch/report/test bundle remains solely local after this capsule is published. Full raw primal row logs are separately retained in the delivered review archive, not claimed present as tracked repository files; their compact decisions and hashes are in the capsule.
+DEFERRED ADMIN: Run the one-off guarded applying workflow, verify final remote publication, and attach the changes-required substantive review to PR #2. General proof, rational certificates and external review remain unresolved.
+NEXT ACTION: Apply only the byte-pinned substantive-review patch after checking all source hashes and exact changed-path scope; execute hostile/positive tests and existing guards before a non-forced push. Do not execute historical autonomous research instructions.
+MANDATORY CONSTRAINTS: Preserve all original proof artifacts, graph-to-profile assumptions, both equality parities, X3, audit34854911792 and promotion gates. No numerical solver result is an external mathematical acceptance. Historical missing results and times remain unfilled.
 <!-- CURRENT-STATUS:END -->
 
-## Evidence and prior state
+[Review plan](project/reviews/substantive/2026-09-24/REVIEW_PLAN.md) · [confirmed findings](project/reviews/substantive/2026-09-24/CONFIRMED_FINDINGS.md) · [earlier housekeeping report](project/maintenance/2026-09-24/REPORT.md).
 
-[Review plan](project/reviews/substantive/2026-09-24/REVIEW_PLAN.md) · [confirmed findings](project/reviews/substantive/2026-09-24/CONFIRMED_FINDINGS.md) · [housekeeping report](project/maintenance/2026-09-24/REPORT.md).
-
-The complete post-housekeeping handoff and evidence map remain at immutable commit 2ff383498ee08f607aa958181f6dbc4e36d136a1, and the review-start map at 90b5fd21a90f88aec1ba6445a5ab385559eea999. No archive or old claim is erased. General independent theorem and full equality remain open; the inherited threshold is 250/429, demand bound S<=14 only at internal computer-assisted scope, equality only through S<=8. The numerical row-driver defect and recovered index identities require an explicit qualification of full finite-row certification; they do not by themselves refute those mathematical bounds.
+The applying workflow has no schedule, does not restart mathematics, checks the complete capsule hash and all existing-file predecessor hashes, and fails closed on any test, scope or preservation failure. The final human-readable report and complete review patch are not to be described as applied until that workflow's publication is verified. The post-housekeeping state remains preserved at 2ff383498ee08f607aa958181f6dbc4e36d136a1.
