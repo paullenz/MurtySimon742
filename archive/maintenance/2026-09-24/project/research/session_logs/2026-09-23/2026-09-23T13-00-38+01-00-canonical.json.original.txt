@@ -1,0 +1,84 @@
+{
+  "schema_version": "launch-first-v1",
+  "run_kind": "SCHEDULED_RESEARCH",
+  "session_id": "2026-09-23T13:00:38+01:00",
+  "scheduled_trigger": "2026-09-23T13:00:38+01:00",
+  "next_scheduled_trigger": "2026-09-23T14:00:38+01:00",
+  "research_cutoff": "2026-09-23T13:53:38+01:00",
+  "hard_close_deadline": "2026-09-23T13:59:38+01:00",
+  "trigger_attribution_method": "secondary_launch_recovery_watchdog runtime metadata; same-hour 13:00:38 Europe/London trigger selected after canonical absence check",
+  "trigger_attribution_ambiguity": "UNVERIFIED: runtime supplied no immutable primary-delivery identifier",
+  "earliest_actual_start": "2026-09-23T13:08:53+01:00",
+  "lateness_vs_trigger": "00:08:15",
+  "launch_status": "STARTED_RECOVERED_SECONDARY_WATCHDOG",
+  "started_record_prepared_at": "2026-09-23T13:08:53+01:00",
+  "started_record_published_at": "2026-09-23T13:09:25+01:00",
+  "first_substantive_checkpoint_time": "2026-09-23T13:15:16+01:00",
+  "segments": [
+    {
+      "segment_id": "segment-1",
+      "actual_start": "2026-09-23T13:08:53+01:00",
+      "actual_stop": "PENDING",
+      "role": "forward_research",
+      "notes": "Secondary watchdog recovery. No durable STARTED record existed for the 13:00:38 trigger when checked; primary and first watchdog launch opportunities therefore lacked durable start evidence."
+    }
+  ],
+  "forward_research_intervals": [
+    {
+      "start": "2026-09-23T13:12:10+01:00",
+      "stop": "2026-09-23T13:12:50+01:00",
+      "seconds": 40,
+      "unit": "Derived and launched an exact n=18, Delta<=10 D2C MILP with a WLOG degree-10 root; bounded HiGHS run was inconclusive (49-edge incumbent, bound 90)."
+    },
+    {
+      "start": "2026-09-23T13:14:49+01:00",
+      "stop": "2026-09-23T13:15:16+01:00",
+      "seconds": 27,
+      "unit": "Derived graph-level supplement-endpoint capacity x_i<=n-Delta-1 from simplicity of W* with right part B; this excludes the first n=18,Delta=10 abstract survivor because x_0=8>|B|=7."
+    }
+  ],
+  "forward_research_stop": "PENDING",
+  "preservation_start": "PENDING",
+  "preservation_complete": "PENDING",
+  "final_report_time": "PENDING",
+  "wall_clock_span_to_preservation_complete": "PENDING",
+  "verified_forward_research_span": "00:01:07",
+  "preservation_span": "PENDING",
+  "substantive_unit_count": 2,
+  "timestamped_unit_ledger": [
+    {
+      "unit": 1,
+      "start": "2026-09-23T13:12:10+01:00",
+      "complete": "2026-09-23T13:12:50+01:00",
+      "result": "Exact D2C MILP formulation built for n=18, maximum degree <=10 with WLOG degree-10 root. First bounded optimization attempt remained inconclusive: 7,650 variables, 27,575 constraints; presolve to 5,237 binaries/17,940 rows; incumbent 49 edges, bound 90 before bounded termination.",
+      "evidence": "project/research/general_n/2026-09-23-independent-742-r13-realizability/EXACT_D2C18_AND_SUPPLEMENT_CAP.md"
+    },
+    {
+      "unit": 2,
+      "start": "2026-09-23T13:14:49+01:00",
+      "complete": "2026-09-23T13:15:16+01:00",
+      "result": "Since W* is simple with right part B, deg_W*(i)=x_i<=|B|=n-Delta-1. For n=18,Delta=10 this gives x_i<=7, so the preceding first abstract survivor x=(8,7) is not graph-realizable.",
+      "evidence": "project/research/general_n/2026-09-23-independent-742-r13-realizability/EXACT_D2C18_AND_SUPPLEMENT_CAP.md"
+    }
+  ],
+  "early_stop_check_time": "PENDING",
+  "early_stop_check_result": "PENDING",
+  "stop_reason": "PENDING",
+  "research_target_minutes": 40,
+  "target_40m_applies": "YES",
+  "target_40m_met": "PENDING",
+  "session_run_status": "RAN_ACTIVE_RECOVERED",
+  "focused_session_credit": "PENDING",
+  "compliance_status": "ACTIVE_RECOVERED_LATE_START_FIRST_CHECKPOINT_ON_TIME_RELATIVE_TO_ACTUAL_ENTRY",
+  "infrastructure_failures": [
+    "No durable canonical STARTED record existed for the 13:00:38 trigger at secondary-watchdog inspection; recovery began at 13:08:53 BST.",
+    "The first exact general n=18 D2C MILP optimization was too weak to close the 82-edge feasibility question within its bounded run."
+  ],
+  "commit_shas": [
+    "cb3278eded48d67a8eff1a37d2753661a60f5d60",
+    "c4e487a948c6dd2669eadfad06c4716172af8ba5",
+    "832d518f98d77156ac4db2da54e8c466c174e450"
+  ],
+  "live_unfinished_line": "Rerun the complete n=18,Delta=10 abstract witness row with the new graph-level supplement cap x_i<=7; preserve the next survivor or close the row.",
+  "historical_fragments": []
+}

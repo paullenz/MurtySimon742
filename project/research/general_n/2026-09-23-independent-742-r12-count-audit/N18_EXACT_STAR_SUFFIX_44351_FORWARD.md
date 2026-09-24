@@ -99,9 +99,14 @@ independent exhaustion invocation from 54,821 returned total
 enumeration has exhausted all 54,820 symmetry-reduced scalar-pass profiles
 for the audited `n=18, Delta=10`, demand-15/irreducible-demand-16 row.
 
-Across the full row, the only abstract v4 survivors are stable indices 20,851
-and 50,740. The former is independently excluded by exact star-five; the
-latter is excluded by `STABLE_50740_GRAPH_EXCLUSION.md`. Conditional on the
+The continuation records a historical (5,5,5) exception under the label
+20,851 and the v4 (8,8) profile at 50,740. The old 20,851 label is not a
+verified v4 survivor identity: the separately saved JSON reports no survivor
+at that index and uses a different closest tuple. Do not use that index label
+as proof of identity or coverage. The whole (5,5,5) tuple is independently
+excluded by [exact star-five](STAR5_EXACT_SLACK_AND_555_CLOSURE.md), without
+the old common-C transfer; the (8,8) profile is excluded by
+[the graph argument](STABLE_50740_GRAPH_EXCLUSION.md). Conditional on the
 audited normal-form and graph-to-profile bridge, this closes this finite row.
 It is not a proof of the general theorem, a proof of unrestricted graph
 realizability, or a strengthening of equality beyond the retained `S<=8`

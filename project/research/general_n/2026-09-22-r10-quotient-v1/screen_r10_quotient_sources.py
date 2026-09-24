@@ -1,4 +1,3 @@
-2026-09-22T15:29:10+01:00
 #!/usr/bin/env python3
 """Exact r=10 optimistic core/source quotient for support at most seven.
 

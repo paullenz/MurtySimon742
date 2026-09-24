@@ -1,0 +1,68 @@
+{
+  "session_id": "2026-09-23T11:00:38+01:00",
+  "scheduled_trigger": "2026-09-23T11:00:38+01:00",
+  "next_scheduled_trigger": "2026-09-23T12:00:38+01:00",
+  "research_cutoff": "2026-09-23T11:53:38+01:00",
+  "hard_close_deadline": "2026-09-23T11:59:38+01:00",
+  "earliest_actual_start": "2026-09-23T11:04:13+01:00",
+  "lateness_vs_trigger": "3m35s",
+  "attribution_method": "launch_recovery_watchdog_same_hour_trigger",
+  "attribution_ambiguity": "UNVERIFIED_IMMUTABLE_DELIVERY_IDENTITY",
+  "launch_status": "RECOVERED_MISSING_PRIMARY_START",
+  "started_record_published_at": "2026-09-23T11:05:39+01:00",
+  "first_substantive_checkpoint_time": "2026-09-23T11:12:30+01:00",
+  "segments": [
+    {
+      "segment_id": "recovery-1",
+      "actual_start": "2026-09-23T11:04:13+01:00",
+      "actual_stop": "UNVERIFIED",
+      "role": "forward_research",
+      "notes": "Launch-recovery watchdog found no canonical STARTED record for the 11:00:38 trigger and took over the same session identity. Primary scheduled launch missing at watchdog entry; no duplicate session credit."
+    }
+  ],
+  "forward_research_intervals": [
+    {
+      "start": "2026-09-23T11:08:03+01:00",
+      "stop": "2026-09-23T11:11:11+01:00",
+      "duration": "00:03:08",
+      "unit": "Private-witness collision-degree and cover-square derivation"
+    }
+  ],
+  "forward_research_stop": "PENDING",
+  "preservation_start": "PENDING",
+  "preservation_complete": "PENDING",
+  "final_report_time": "PENDING",
+  "wall_clock_span_to_preservation_complete": "PENDING",
+  "verified_forward_research_span": "00:03:08",
+  "preservation_span": "PENDING",
+  "substantive_unit_count": 1,
+  "timestamped_unit_ledger": [
+    {
+      "research_start": "2026-09-23T11:08:03+01:00",
+      "research_stop": "2026-09-23T11:11:11+01:00",
+      "checkpoint_published": "2026-09-23T11:12:30+01:00",
+      "unit": "Proved collision-degree charge h_i>=deg_W(t) on every private-witness incidence and the aggregate uncovered private-surplus bound sum_{i in L\\X}(2p_i-h_i)<=|Y|^2 for any witness-graph vertex cover X union Y.",
+      "evidence": "project/research/general_n/2026-09-23-independent-742-r12-count-audit/PRIVATE_WITNESS_COVER_SQUARE_BOUND.md",
+      "commit": "88833d102b2f23e1356cd2d19855588d3ae2d2b0"
+    }
+  ],
+  "early_stop_check_time": "PENDING",
+  "early_stop_check_result": "PENDING",
+  "stop_reason": "PENDING",
+  "research_target_minutes": 40,
+  "target_40m_applies": "YES",
+  "target_40m_met": "PENDING",
+  "compliance_status": "ACTIVE_RECOVERY_FIRST_CHECKPOINT_ON_TIME_LAUNCH_TARGET_MISSED_BY_1S",
+  "infrastructure_failures": [
+    "Primary launch produced no durable canonical STARTED record before watchdog entry.",
+    "STARTED and CURRENT-STATUS could not be published in one atomic commit during recovery; STARTED commit was published first to minimize launch delay, followed by synchronized CURRENT_STATE.",
+    "Canonical STARTED publication at 11:05:39 was one second after the trigger+5m target."
+  ],
+  "commit_shas": [
+    "c764fd3946ca41277bbd1c69c3807a9037f3b7b1",
+    "eb8082f658308380095390d3b7810f5a20396405",
+    "88833d102b2f23e1356cd2d19855588d3ae2d2b0"
+  ],
+  "live_unfinished_line": "Bound the concentrated remainder sum_{i in X}(2p_i-h_i)+2|Q| using strict-counterexample deficits and shared-edge collision structure; the uncovered remainder is now <=|Y|^2.",
+  "historical_fragments": []
+}

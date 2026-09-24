@@ -1,5 +1,68 @@
-(6, 1, 1, 1, 1, 1) 18 0
-(5, 2, 1, 1, 1, 1) 72 0
-(4, 3, 1, 1, 1, 1) 15 0
-(4, 2, 2, 1, 1, 1) 39 0
-(3, 3, 2, 1, 1, 1) 13 0
+{
+  "artifact_status": "INCOMPLETE_PROGRESS_LOG_ONLY",
+  "complete": false,
+  "scope": "Five preserved console rows, not a complete support-six enumeration or certificate. No missing rows inferred.",
+  "original_log": "archive/maintenance/2026-09-24/project/research/general_n/2026-09-22-r11-quotient-v1/r11_support6.json.original.txt",
+  "records": [
+    {
+      "partition": [
+        6,
+        1,
+        1,
+        1,
+        1,
+        1
+      ],
+      "reported_orbits": 18,
+      "reported_source_feasible": 0
+    },
+    {
+      "partition": [
+        5,
+        2,
+        1,
+        1,
+        1,
+        1
+      ],
+      "reported_orbits": 72,
+      "reported_source_feasible": 0
+    },
+    {
+      "partition": [
+        4,
+        3,
+        1,
+        1,
+        1,
+        1
+      ],
+      "reported_orbits": 15,
+      "reported_source_feasible": 0
+    },
+    {
+      "partition": [
+        4,
+        2,
+        2,
+        1,
+        1,
+        1
+      ],
+      "reported_orbits": 39,
+      "reported_source_feasible": 0
+    },
+    {
+      "partition": [
+        3,
+        3,
+        2,
+        1,
+        1,
+        1
+      ],
+      "reported_orbits": 13,
+      "reported_source_feasible": 0
+    }
+  ]
+}

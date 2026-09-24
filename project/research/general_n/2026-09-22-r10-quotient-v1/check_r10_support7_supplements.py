@@ -1,4 +1,3 @@
-2026-09-22T15:31:16+01:00
 #!/usr/bin/env python3
 """Exact source populations/supplement forcing for two r=10 support<=7 kernels."""
 import itertools,json

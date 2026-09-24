@@ -1,0 +1,45 @@
+{
+  "session_id": "2026-09-24T10:00:38+01:00",
+  "scheduled_trigger": "2026-09-24T10:00:38+01:00",
+  "next_scheduled_trigger": "2026-09-24T11:00:38+01:00",
+  "research_cutoff": "2026-09-24T10:53:38+01:00",
+  "hard_close_deadline": "2026-09-24T10:59:38+01:00",
+  "earliest_actual_start": "2026-09-24T10:04:02+01:00",
+  "lateness_vs_trigger": "PT3M24S",
+  "attribution_method": "launch_recovery_watchdog",
+  "launch_status": "STARTED_RECOVERED_PRIMARY_LAUNCH_MISSING",
+  "started_record_published_at": "2026-09-24T10:06:48+01:00",
+  "first_substantive_checkpoint_time": "PENDING",
+  "segments": [
+    {
+      "segment_id": "watchdog-recovery-1",
+      "actual_start": "2026-09-24T10:04:02+01:00",
+      "actual_stop": "UNVERIFIED",
+      "role": "forward_research",
+      "notes": "Primary scheduled launch was missing. Launch-recovery watchdog recovered the SAME 10:00:38 trigger; no duplicate session or credit. STARTED/status publication precedes mathematics."
+    }
+  ],
+  "forward_research_intervals": [],
+  "forward_research_stop": "PENDING",
+  "preservation_start": "PENDING",
+  "preservation_complete": "PENDING",
+  "final_report_time": "PENDING",
+  "wall_clock_span_to_preservation_complete": "PENDING",
+  "verified_forward_research_span": "PT0S",
+  "preservation_span": "PENDING",
+  "substantive_unit_count": 0,
+  "timestamped_unit_ledger": [],
+  "early_stop_check_time": "PENDING",
+  "early_stop_check_result": "PENDING",
+  "stop_reason": "PENDING",
+  "research_target_minutes": 40,
+  "target_40m_applies": "YES",
+  "target_40m_met": "PENDING",
+  "compliance_status": "ACTIVE_RECOVERED",
+  "infrastructure_failures": [
+    "Primary scheduled launch missing; watchdog recovery began within the same slot."
+  ],
+  "commit_shas": [],
+  "live_unfinished_line": "Attack stable index2 source-set intersection-one by separating the unique unassigned T1 endpoint and deriving the corresponding root-edge witness/deficit obstruction; UNKNOWN remains non-exclusion.",
+  "historical_fragments": []
+}

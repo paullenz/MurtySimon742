@@ -1,0 +1,56 @@
+{
+  "session_id": "2026-09-24T05:00:38+01:00",
+  "scheduled_trigger": "2026-09-24T05:00:38+01:00",
+  "next_scheduled_trigger": "2026-09-24T06:00:38+01:00",
+  "research_cutoff": "2026-09-24T05:53:38+01:00",
+  "hard_close_deadline": "2026-09-24T05:59:38+01:00",
+  "earliest_actual_start": "2026-09-24T05:06:47+01:00",
+  "lateness_vs_trigger": "6m09s",
+  "attribution_method": "launch_recovery_watchdog",
+  "trigger_attribution": "same-hour scheduled Independent #742 Research trigger; immutable scheduler attribution UNVERIFIED",
+  "launch_status": "RECOVERED_PRIMARY_MISSING_START",
+  "started_record_published_at": "2026-09-24T05:08:00+01:00",
+  "first_substantive_checkpoint_at": "2026-09-24T05:11:06+01:00",
+  "segments": [
+    {
+      "segment_id": "launch-recovery-watchdog-1",
+      "actual_start": "2026-09-24T05:06:47+01:00",
+      "actual_stop": "UNVERIFIED",
+      "role": "forward_research",
+      "notes": "Primary scheduled launch had no durable STARTED record when checked at recovery invocation. This is recovery of the SAME 05:00:38 trigger only, not an additional session or duplicate credit."
+    }
+  ],
+  "forward_research_intervals": [
+    {"start":"2026-09-24T05:10:25+01:00","stop":"2026-09-24T05:11:06+01:00","seconds":41,"unit":"derive exact forced B-skeleton and active-label nonedge for surviving saturated (8,7) profile"},
+    {"start":"2026-09-24T05:13:18+01:00","stop":"2026-09-24T05:16:51+01:00","seconds":213,"unit":"derive root-edge singleton-C witnesses at p and s and full-degree saturation of p"},
+    {"start":"2026-09-24T05:21:16+01:00","stop":"2026-09-24T05:26:26+01:00","seconds":310,"unit":"close saturated (8,7) profile using singleton-witness deficit charges, root-edge witness classification, E-partition degree bounds and deficit parity"}
+  ],
+  "forward_research_stop": "PENDING",
+  "preservation_start": "PENDING",
+  "preservation_complete": "PENDING",
+  "final_report_time": "PENDING",
+  "wall_clock_span_to_preservation_complete": "PENDING",
+  "verified_forward_research_span": "9m24s",
+  "preservation_span": "PENDING",
+  "substantive_unit_count": 3,
+  "timestamped_unit_ledger": [
+    {"completed_at":"2026-09-24T05:11:06+01:00","unit":"Exact B-skeleton lemma for (8,7): forced p-E, split q/r-E, s-p/q/r edges; s-E and p-q/r nonedges; active labels forced nonadjacent; p has nine forced full-graph neighbours."},
+    {"completed_at":"2026-09-24T05:16:51+01:00","unit":"Root-edge criticality forces distinct inactive singleton-C witnesses x_p and x_s; p is thereby forced to full degree Delta=10 and has no other inactive-A neighbour."},
+    {"completed_at":"2026-09-24T05:26:26+01:00","unit":"Fixed-profile closure: either an additional singleton root witness forces total deficit >=18 directly, or no additional singleton forces qr absent, nonempty Q,R and no Q-R edges; E then contributes >=4 deficit on top of baseline 13, and parity gives total deficit >=18, hence e<=81."}
+  ],
+  "early_stop_check_time": "PENDING",
+  "early_stop_check_result": "PENDING",
+  "stop_reason": "PENDING",
+  "research_target_minutes": 40,
+  "target_40m_applies": "YES",
+  "target_40m_met": "PENDING",
+  "compliance_status": "ACTIVE_RECOVERED",
+  "infrastructure_failures": [
+    "Primary scheduled launch missing durable STARTED record at recovery check.",
+    "STARTED recovery publication missed trigger+5-minute aim because watchdog actual entry was after that boundary."
+  ],
+  "commit_shas": ["35c7805d2c2eb576fb48a03344694ec75fe8f550", "4d8c8082e303b89c9232cb704af736e5759bf6d3", "b939aecbd3e92243d6ff37ff83452ab722bb69ff"],
+  "live_unfinished_line": "Extract the reusable root-singleton witness deficit charge from the fixed n18 closure and test how it strengthens theorem-facing demand-15/16 realizability constraints.",
+  "historical_fragments": [],
+  "research_credit": "same original scheduled trigger only; no duplicate credit"
+}

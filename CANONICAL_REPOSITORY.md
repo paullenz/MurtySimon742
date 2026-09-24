@@ -1,5 +1,7 @@
 # Canonical repository
 
+**24 September 2026: research cadence paused by the user.** Repository restart/recovery instructions below mean recover context, not restart mathematical execution. Follow [CURRENT_STATE.md](CURRENT_STATE.md); a new explicit user instruction is required to resume research.
+
 Current project repository: `paullenz/MurtySimon742`
 
 GitHub repository ID: `1359206057`

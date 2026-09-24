@@ -1,0 +1,13 @@
+{
+  "intentional_invalid_json": [
+    {
+      "path": "project/research/general_n/2026-09-22-zero-demand-equality-v1/R8_EQUALITY_CORE_SCREEN.corrupted-at-320ff91.json",
+      "sha256": "a3f41b9368900bc524eeb9e0ffa66e98f32e6215016e590cb9647162a78bf48b",
+      "reason": "Explicitly named preserved historical corruption. Use the regenerated sibling R8_EQUALITY_CORE_SCREEN.json; never treat this file as active evidence."
+    }
+  ],
+  "known_incomplete_artifacts": [
+    "project/research/general_n/2026-09-22-r9-quotient-v1/audit_r9_support8_orbits.py",
+    "project/research/general_n/2026-09-22-r11-quotient-v1/r11_support6.json"
+  ]
+}

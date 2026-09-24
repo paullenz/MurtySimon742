@@ -15,10 +15,10 @@ Reviewer order:
 
 1. [`PROOF.md`](PROOF.md) — complete fixed-order assembly.
 2. [`HOSTILE_AUDIT.md`](HOSTILE_AUDIT.md) — same-assistant hostile audit; no blocking flaw found, external review still required.
-3. [`../../research/n32/2026-09-12-equality-v1/CERTIFICATION_LEDGER.md`](../../research/n32/2026-09-12-equality-v1/CERTIFICATION_LEDGER.md) — exact t=1 finite accounting.
-4. [`../../research/n32/2026-09-12-equality-v1/HAND_EXCEPTION.md`](../../research/n32/2026-09-12-equality-v1/HAND_EXCEPTION.md) — hand contradiction for the sole full-RX equality survivor.
-5. [`../../research/n32/2026-09-12-t2-frontier-v1/N32_T2_RECTANGLE_POTENTIAL.md`](../../research/n32/2026-09-12-t2-frontier-v1/N32_T2_RECTANGLE_POTENTIAL.md) — exact 257-edge closure.
-6. [`../../research/n32/2026-09-11-hand-route-v1/`](../../research/n32/2026-09-11-hand-route-v1/) — 258-edge hand closure and fourteen-label theorem application.
+3. [`../../../research/n32/2026-09-12-equality-v1/CERTIFICATION_LEDGER.md`](../../../research/n32/2026-09-12-equality-v1/CERTIFICATION_LEDGER.md) — exact t=1 finite accounting.
+4. [`../../../research/n32/2026-09-12-equality-v1/HAND_EXCEPTION.md`](../../../research/n32/2026-09-12-equality-v1/HAND_EXCEPTION.md) — hand contradiction for the sole full-RX equality survivor.
+5. [`../../../research/n32/2026-09-12-t2-frontier-v1/N32_T2_RECTANGLE_POTENTIAL.md`](../../../research/n32/2026-09-12-t2-frontier-v1/N32_T2_RECTANGLE_POTENTIAL.md) — exact 257-edge closure.
+6. [`../../../research/n32/2026-09-11-hand-route-v1/`](../../../research/n32/2026-09-11-hand-route-v1/) — 258-edge hand closure and fourteen-label theorem application.
 
 Replay the equality layer from repository root with:
 

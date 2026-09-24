@@ -1,4 +1,10 @@
-# Research evidence index — 14 September 2026
+# Research evidence index — current navigation 24 September 2026
+
+## Latest independent-#742 evidence and pause
+
+The user has paused the regular cadence. [CURRENT_STATE.md](CURRENT_STATE.md) now separates current evidence from historical snapshots, including the internal all-32 S<=14 replay, finite-row ledgers, the open n19/Delta11 row and the unresolved general theorem. [The housekeeping report](project/maintenance/2026-09-24/REPORT.md) records code/data repairs, session reconciliation and remaining provenance gaps. No new mathematics or promotion was performed in this cleanup.
+
+## Preserved 14–15 September evidence index
 
 This index distinguishes derivation, finite verification, preservation and external acceptance. The fully audited 2,655-key relational family has now passed the separate reviewed-ledger step and is promoted. The canonical finite frontier is 4,626 exclusions / 952 survivors / 3,632 whole-state closures. Fixed-order reviewer packages retain their separate status in [the reviewer index](releases/REVIEW_READY_INDEX.md).
 

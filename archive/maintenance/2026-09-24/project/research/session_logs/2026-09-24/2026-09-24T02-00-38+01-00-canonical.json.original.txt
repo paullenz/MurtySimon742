@@ -1,0 +1,79 @@
+{
+  "session_id": "2026-09-24T02:00:38+01:00",
+  "scheduled_trigger": "2026-09-24T02:00:38+01:00",
+  "next_scheduled_trigger": "2026-09-24T03:00:38+01:00",
+  "research_cutoff": "2026-09-24T02:53:38+01:00",
+  "hard_close_deadline": "2026-09-24T02:59:38+01:00",
+  "earliest_actual_start": "2026-09-24T02:04:44+01:00",
+  "lateness_vs_trigger": "00:04:06",
+  "attribution_method": "launch_recovery_watchdog",
+  "launch_status": "STARTED_RECOVERED",
+  "started_record_published_at": "2026-09-24T02:05:43+01:00",
+  "primary_launch_evidence": "MISSING at watchdog inspection; no durable canonical STARTED record existed for this exact trigger.",
+  "segments": [
+    {
+      "segment_id": "launch_recovery_watchdog-1",
+      "actual_start": "2026-09-24T02:04:44+01:00",
+      "actual_stop": "UNVERIFIED",
+      "role": "forward_research",
+      "notes": "Recovery of the same scheduled trigger. Primary scheduled launch lacked durable STARTED evidence; no duplicate session or extra credit created."
+    }
+  ],
+  "forward_research_intervals": [
+    {
+      "start": "2026-09-24T02:08:30+01:00",
+      "stop": "2026-09-24T02:11:48+01:00",
+      "duration": "00:03:18",
+      "work": "Independent row-identity/provenance reconciliation of the 13 r=12 support-ten helper-LP timeout rows against durable COMPLETE/IPM artifacts; no retro-credit and no solver-optimality claim."
+    },
+    {
+      "start": "2026-09-24T02:22:15+01:00",
+      "stop": "2026-09-24T02:25:07+01:00",
+      "duration": "00:02:52",
+      "work": "Replayability/trust audit of the later helper-LP COMPLETE artifact and its commit provenance; corrected solver interpretation and tested whether current audit gate can safely be promoted."
+    }
+  ],
+  "forward_research_stop": "PENDING",
+  "preservation_start": "PENDING",
+  "preservation_complete": "PENDING",
+  "final_report_time": "PENDING",
+  "wall_clock_span_to_preservation_complete": "PENDING",
+  "verified_forward_research_span": "00:06:10",
+  "preservation_span": "PENDING",
+  "substantive_unit_count": 2,
+  "timestamped_unit_ledger": [
+    {
+      "unit": 1,
+      "start": "2026-09-24T02:08:30+01:00",
+      "stop": "2026-09-24T02:11:48+01:00",
+      "result": "The launch-time UNKNOWN set is exactly indices 362,363,437,438,451,455,1494,3755,3758,4663,4664,4665,4682; all 13 occur in durable HELPER_LP_ALL32_COMPLETE as later solver exclusions. Provenance is after the prior credited boundary, so no retro-credit and no immediate S<=14 promotion.",
+      "artifact": "project/research/general_n/2026-09-24-r12-support10-lp-relaxation-v1/RECOVERY_RECONCILIATION_02.md"
+    },
+    {
+      "unit": 2,
+      "start": "2026-09-24T02:22:15+01:00",
+      "stop": "2026-09-24T02:25:07+01:00",
+      "result": "Commit b52a447 changed only the COMPLETE Markdown report; the fresh second-pass implementation/certificates are not preserved there. The report used SciPy/HiGHS interior-point and status=2 denotes infeasible, correcting the earlier trust-constr label. Under the audit gate, S<=14 remains frozen until the 13 rows are independently replayed or certificate-backed.",
+      "artifact": "project/research/general_n/2026-09-24-r12-support10-lp-relaxation-v1/RECOVERY_REPLAY_AUDIT_02.md"
+    }
+  ],
+  "first_substantive_checkpoint_time": "2026-09-24T02:12:55+01:00",
+  "early_stop_check_time": "PENDING",
+  "early_stop_check_result": "PENDING",
+  "stop_reason": "PENDING",
+  "research_target_minutes": 40,
+  "target_40m_applies": "YES",
+  "target_40m_met": "PENDING",
+  "compliance_status": "IN_PROGRESS",
+  "infrastructure_failures": [
+    "Primary scheduled launch did not establish a durable canonical STARTED record before watchdog recovery.",
+    "Recovered canonical STARTED publication at 02:05:43 was 5 seconds outside the +5-minute publication aim."
+  ],
+  "commit_shas": [
+    "9159e637ac20c6efb9fa41f52ce141f55f1859d5",
+    "75ad60fe977a476eaf7f9a17e8fa5fc34846b814",
+    "ff1b2e765aac0a44847f7b0cabf8c0a2b5fdcab0"
+  ],
+  "live_unfinished_line": "Independently reconstruct and replay the helper-LP constraints for the 13 former timeout rows, or produce independently checkable infeasibility certificates; keep S<=14 frozen until decisive.",
+  "historical_fragments": []
+}

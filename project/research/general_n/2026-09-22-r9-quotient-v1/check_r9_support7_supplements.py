@@ -1,4 +1,3 @@
-2026-09-22T15:14:02+01:00
 #!/usr/bin/env python3
 """Exact source populations and supplement forcing for two r=9 kernels."""
 import itertools, json

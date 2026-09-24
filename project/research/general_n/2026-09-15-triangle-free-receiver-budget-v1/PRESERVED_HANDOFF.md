@@ -28,11 +28,11 @@
 
 ## Sources and preserved work
 
-- [Disjoint-destination lemma D1-D3 and |M|=2d boundary proof](project/research/general_n/2026-09-15-disjoint-receiver-boundary-v1/PRESERVED_HANDOFF.md).
-- [Multi-spare rigidity and residual-union proof](project/research/general_n/2026-09-15-spare-receiver-rigidity-v1/PRESERVED_HANDOFF.md).
-- [Canonical selected/residual bridge](project/research/general_n/2026-09-11-canonical-bridge-v1/CANONICAL_BRIDGE.md).
+- [Disjoint-destination lemma D1-D3 and |M|=2d boundary proof](../2026-09-15-disjoint-receiver-boundary-v1/PRESERVED_HANDOFF.md).
+- [Multi-spare rigidity and residual-union proof](../2026-09-15-spare-receiver-rigidity-v1/PRESERVED_HANDOFF.md).
+- [Canonical selected/residual bridge](../2026-09-11-canonical-bridge-v1/CANONICAL_BRIDGE.md).
 - [README layout checkpoint and preservation record](https://github.com/paullenz/MurtySimon742/blob/03aba3e5070661052b591450a6c924b132fee305/CURRENT_STATE.md).
-- [Complete original README before layout repair](archive/status-snapshots/2026-09-15/README_before_status_first.md).
+- [Complete original README before layout repair](../../../../archive/status-snapshots/2026-09-15/README_before_status_first.md).
 - [One-spare review](https://github.com/paullenz/MurtySimon742/blob/43dc689300eb20efa30e2b848a5326f3c5dcbd6f/CURRENT_STATE.md).
 - [Original candidate and transport history](https://github.com/paullenz/MurtySimon742/blob/219ba7043c8a8b7152ba42715ab8767e667fb75d/CURRENT_STATE.md).
 

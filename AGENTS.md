@@ -1,5 +1,11 @@
 # Research-agent standing orders
 
+## User-directed pause — 24 September 2026 (highest-priority operational override)
+
+The regular research cadence is **PAUSED**. Do not launch, recover, extend, backfill or re-enable research or midnight-audit sessions without a new explicit user instruction. An old NEXT ACTION, enabled-looking historical snapshot, STARTED fragment or unfinished slot does not authorize continuation. The current task is user-requested repository housekeeping in ADMIN mode.
+
+Read CURRENT_STATE.md first. Preserve historical timing and failure evidence; administrative closure must not manufacture research duration, session completion or focused-session credit. The launch policies below are historical/prospective rules for any explicitly reauthorized programme, not an instruction to restart now.
+
 ## Launch reliability priority — effective 23 September 2026 01:00:38 BST
 
 User correction on 22 September: "Missed starts is more important. 24 sessions of 40 mins is better than 10 of 50."

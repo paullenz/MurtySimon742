@@ -1,6 +1,6 @@
 # Murty–Simon / Erdős #742 — live current state
 
-> **Operational source of truth.** Read this file first after every timeout, new chat, takeover, or resumed session. `README.md` is the lower-frequency reviewer-facing summary and may lag routine WIP/status checkpoints. The complete pre-transaction-protocol handoff remains at [`archive/status-snapshots/2026-09-15/CURRENT_STATE_pre_transaction_protocol.md`](archive/status-snapshots/2026-09-15/CURRENT_STATE_pre_transaction_protocol.md).
+> **Operational source of truth.** Read this file first after every timeout, new chat, takeover, or resumed session. `README.md` is the lower-frequency reviewer-facing summary and may lag routine WIP/status checkpoints. The complete pre-transaction-protocol handoff remains at [`archive/status-snapshots/2026-09-15/CURRENT_STATE_pre_transaction_protocol.md`](../../../../archive/status-snapshots/2026-09-15/CURRENT_STATE_pre_transaction_protocol.md).
 
 <!-- CURRENT-STATUS:START -->
 **CHECKPOINT CLASS:** `WIP_INTERNAL_PROOF_NOT_PROMOTED`. Third bounded mathematical unit: a general disjoint-destination restriction for extra high-source selections, and a quadratic extra-selection budget at |M|=2d. Full proof and finite set-family checks are below; external review remains OPEN.

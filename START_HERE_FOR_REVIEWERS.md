@@ -1,6 +1,6 @@
 # Start here for reviewers
 
-**Updated 13 September 2026.** Research checkpoint includes the shared residual-budget continuation of 13 September; see [CURRENT_STATE.md](CURRENT_STATE.md) for the restart handoff.
+**Current navigation updated 24 September 2026.** The research cadence is paused. Begin with [CURRENT_STATE.md](CURRENT_STATE.md) for the latest independent-#742 evidence map and [the maintenance report](project/maintenance/2026-09-24/REPORT.md) for repairs and unresolved provenance issues. The fixed-order material below remains the preserved reviewer programme; its mathematical status is not upgraded by housekeeping. The earlier navigation checkpoint was 13 September 2026.
 
 ## What this repository is
 

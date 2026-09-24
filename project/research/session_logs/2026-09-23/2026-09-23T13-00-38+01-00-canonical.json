@@ -18,9 +18,16 @@
     {
       "segment_id": "segment-1",
       "actual_start": "2026-09-23T13:08:53+01:00",
-      "actual_stop": "PENDING",
+      "actual_stop": "UNVERIFIED",
       "role": "forward_research",
       "notes": "Secondary watchdog recovery. No durable STARTED record existed for the 13:00:38 trigger when checked; primary and first watchdog launch opportunities therefore lacked durable start evidence."
+    },
+    {
+      "segment_id": "repository_housekeeping_20260924",
+      "actual_start": "2026-09-24T10:42:12+01:00",
+      "actual_stop": "2026-09-24T10:42:12+01:00",
+      "role": "reconciliation",
+      "notes": "Point-in-time administrative annotation; zero research credit. Original execution boundaries are not reconstructed."
     }
   ],
   "forward_research_intervals": [
@@ -37,13 +44,13 @@
       "unit": "Derived graph-level supplement-endpoint capacity x_i<=n-Delta-1 from simplicity of W* with right part B; this excludes the first n=18,Delta=10 abstract survivor because x_0=8>|B|=7."
     }
   ],
-  "forward_research_stop": "PENDING",
-  "preservation_start": "PENDING",
-  "preservation_complete": "PENDING",
-  "final_report_time": "PENDING",
-  "wall_clock_span_to_preservation_complete": "PENDING",
+  "forward_research_stop": "UNVERIFIED",
+  "preservation_start": "UNVERIFIED",
+  "preservation_complete": "UNVERIFIED",
+  "final_report_time": "UNVERIFIED",
+  "wall_clock_span_to_preservation_complete": "UNVERIFIED",
   "verified_forward_research_span": "00:01:07",
-  "preservation_span": "PENDING",
+  "preservation_span": "UNVERIFIED",
   "substantive_unit_count": 2,
   "timestamped_unit_ledger": [
     {
@@ -61,15 +68,15 @@
       "evidence": "project/research/general_n/2026-09-23-independent-742-r13-realizability/EXACT_D2C18_AND_SUPPLEMENT_CAP.md"
     }
   ],
-  "early_stop_check_time": "PENDING",
-  "early_stop_check_result": "PENDING",
-  "stop_reason": "PENDING",
+  "early_stop_check_time": "UNVERIFIED",
+  "early_stop_check_result": "UNVERIFIED",
+  "stop_reason": "Historical session stop and cause UNVERIFIED; record administratively closed after user paused cadence. No research resumed.",
   "research_target_minutes": 40,
   "target_40m_applies": "YES",
-  "target_40m_met": "PENDING",
+  "target_40m_met": "UNVERIFIED",
   "session_run_status": "RAN_ACTIVE_RECOVERED",
-  "focused_session_credit": "PENDING",
-  "compliance_status": "ACTIVE_RECOVERED_LATE_START_FIRST_CHECKPOINT_ON_TIME_RELATIVE_TO_ACTUAL_ENTRY",
+  "focused_session_credit": "UNVERIFIED_HISTORICAL_CREDIT; no credit added by administrative reconciliation",
+  "compliance_status": "ADMINISTRATIVELY_CLOSED_UNVERIFIED_NONCOMPLIANT",
   "infrastructure_failures": [
     "No durable canonical STARTED record existed for the 13:00:38 trigger at secondary-watchdog inspection; recovery began at 13:08:53 BST.",
     "The first exact general n=18 D2C MILP optimization was too weak to close the 82-edge feasibility question within its bounded run."
@@ -79,6 +86,29 @@
     "c4e487a948c6dd2669eadfad06c4716172af8ba5",
     "832d518f98d77156ac4db2da54e8c466c174e450"
   ],
-  "live_unfinished_line": "Rerun the complete n=18,Delta=10 abstract witness row with the new graph-level supplement cap x_i<=7; preserve the next survivor or close the row.",
-  "historical_fragments": []
+  "live_unfinished_line": "PAUSED BY USER: the pre-cleanup mathematical handoff is preserved in the original snapshot; it is not an instruction to restart.",
+  "historical_fragments": [],
+  "administrative_reconciliation": {
+    "record_closed_at": "2026-09-24T10:42:12+01:00",
+    "reason": "User-requested repository cleanup after cadence pause; historical execution/finalization not inferred.",
+    "original_snapshot": "archive/maintenance/2026-09-24/project/research/session_logs/2026-09-23/2026-09-23T13-00-38+01-00-canonical.json.original.txt",
+    "original_pending_fields": [
+      "forward_research_stop",
+      "preservation_start",
+      "preservation_complete",
+      "final_report_time",
+      "wall_clock_span_to_preservation_complete",
+      "preservation_span",
+      "early_stop_check_time",
+      "early_stop_check_result",
+      "stop_reason",
+      "target_40m_met",
+      "focused_session_credit"
+    ],
+    "original_compliance_status": "ACTIVE_RECOVERED_LATE_START_FIRST_CHECKPOINT_ON_TIME_RELATIVE_TO_ACTUAL_ENTRY",
+    "research_credit_added_seconds": 0,
+    "focused_session_credit_added": 0,
+    "reported_research_outcome": "RAN_RECORDED_SUBSTANTIVE_WORK",
+    "historical_timing_status": "Incomplete historical boundaries remain UNVERIFIED. Current administrative timestamp is not the old research stop or preservation time."
+  }
 }

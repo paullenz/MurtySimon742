@@ -1,0 +1,77 @@
+{
+  "session_id": "2026-09-23T16:00:38+01:00",
+  "run_kind": "SCHEDULED_RESEARCH_RECOVERY",
+  "scheduled_trigger": "2026-09-23T16:00:38+01:00",
+  "next_scheduled_trigger": "2026-09-23T17:00:38+01:00",
+  "research_cutoff": "2026-09-23T16:53:38+01:00",
+  "hard_close_deadline": "2026-09-23T16:59:38+01:00",
+  "earliest_actual_start": "2026-09-23T16:06:11+01:00",
+  "lateness_vs_trigger": "00:05:33",
+  "attribution_method": "secondary_launch_recovery_watchdog",
+  "trigger_attribution": "WATCHDOG_SAME_HOUR_RULE",
+  "trigger_attribution_ambiguity": "NONE_OBSERVED",
+  "launch_status": "RECOVERED_SECONDARY_WATCHDOG",
+  "launch_failure_note": "No durable STARTED record existed for the exact 16:00:38 trigger when checked after both earlier launch opportunities; recovery attached to the same scheduled session identity. This is not duplicate credit and does not prove scheduler reliability.",
+  "started_record_published_at": "2026-09-23T16:08:13+01:00",
+  "started_target_within_5m": "NOT_MET",
+  "segments": [
+    {
+      "segment_id": "secondary-watchdog-recovery-1",
+      "actual_start": "2026-09-23T16:06:11+01:00",
+      "actual_stop": "PENDING",
+      "role": "forward_research",
+      "notes": "Secondary launch-recovery watchdog; primary launch and earlier watchdog had no durable STARTED evidence at recovery check."
+    }
+  ],
+  "forward_research_intervals": [
+    {
+      "start": "2026-09-23T16:12:38.514602+01:00",
+      "stop": "2026-09-23T16:13:28.824857+01:00",
+      "kind": "exact_stable_index_replay_and_code_review",
+      "evidence": "project/research/general_n/2026-09-23-independent-742-r15-shard-continuation/N18_STABLE_20851.json"
+    }
+  ],
+  "forward_research_stop": "PENDING",
+  "preservation_start": "PENDING",
+  "preservation_complete": "PENDING",
+  "final_report_time": "PENDING",
+  "wall_clock_span_to_preservation_complete": "PENDING",
+  "verified_forward_research_span": "00:00:50.310255",
+  "preservation_span": "PENDING",
+  "substantive_unit_count": 1,
+  "timestamped_unit_ledger": [
+    {
+      "unit": 1,
+      "start": "2026-09-23T16:12:38.514602+01:00",
+      "complete": "2026-09-23T16:13:28.824857+01:00",
+      "result": "Exact stable-index 20,851 of the n=18, Delta=10 strengthened assigned-witness row has no abstract survivor; minimum deficit 30 versus Dmax 16 for the checked tuple. This single-index result does not close the surrounding shard.",
+      "evidence": "project/research/general_n/2026-09-23-independent-742-r15-shard-continuation/N18_STABLE_20851.json",
+      "commit": "85632ae0e59c2884841c7de0718e7d1fe1d4fd2a"
+    }
+  ],
+  "first_substantive_checkpoint": "2026-09-23T16:14:00+01:00",
+  "first_checkpoint_within_10m_actual_entry": "MET",
+  "early_stop_check_time": "PENDING",
+  "early_stop_check_result": "PENDING",
+  "stop_reason": "PENDING",
+  "research_target_minutes": 40,
+  "target_40m_applies": "YES",
+  "target_40m_met": "PENDING",
+  "session_result": "RAN_ACTIVE",
+  "compliance_status": "ACTIVE_RECOVERY_WITH_LATE_STARTED_PUBLICATION",
+  "infrastructure_failures": [
+    "Primary scheduled launch missing durable STARTED evidence at secondary-watchdog recovery check.",
+    "Earlier recovery watchdog also lacked durable STARTED evidence at secondary-watchdog recovery check.",
+    "STARTED publication occurred 7m35s after the scheduled trigger, missing the five-minute publication target.",
+    "Direct raw GitHub download from the local compute container failed DNS resolution; repository source was instead obtained through the GitHub connector before local replay."
+  ],
+  "commit_shas": [
+    "bd8c427897b0d1cbd794e20b2c2e262d41ad108a",
+    "725b6f61f3a21c30474720b8efb80af985601fba",
+    "85632ae0e59c2884841c7de0718e7d1fe1d4fd2a"
+  ],
+  "live_unfinished_line": "Continue exact stable-index work from 20,852 toward 20,900, then address the remaining incomplete 22,901-24,900 and 24,901-26,900 ranges; do not claim shard closure from partial observations.",
+  "historical_fragments": [],
+  "duplicate_credit": false,
+  "focused_session_credit": "PENDING_FINALIZATION"
+}

@@ -1,5 +1,8 @@
 # Common-C exclusion and the exact scope of the (5,5,5) transfer
 
+> **Later resolution, linked 24 September:** [STAR5_EXACT_SLACK_AND_555_CLOSURE.md](STAR5_EXACT_SLACK_AND_555_CLOSURE.md) excludes the complete (5,5,5) tuple without common-C assumptions. The scope warning below remains correct for the older transfer proof; the old index 20,851 identity discrepancy remains historical metadata, not repaired evidence.
+
+
 24 September 2026. Status: internal graph-interface proof plus a trust-boundary correction. It does not close every abstract realization of the tuple `d=x=h=(5,5,5)`.
 
 ## Direct exclusion of the recorded common-witness geometry

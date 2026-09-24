@@ -1,41 +1,125 @@
 {
-  "session_id":"2026-09-23T21:00:38+01:00",
-  "scheduled_trigger":"2026-09-23T21:00:38+01:00",
-  "next_scheduled_trigger":"2026-09-23T22:00:38+01:00",
-  "research_cutoff":"2026-09-23T21:53:38+01:00",
-  "hard_close_deadline":"2026-09-23T21:59:38+01:00",
-  "earliest_actual_start":"2026-09-23T21:09:54+01:00",
-  "lateness_vs_trigger":"00:09:16",
-  "attribution_method":"launch_recovery_watchdog",
-  "attribution_confidence":"UNVERIFIED",
-  "launch_status":"RECOVERED_PRIMARY_MISSING",
-  "started_record_published_at":"2026-09-23T21:10:09+01:00",
-  "first_substantive_checkpoint_time":"2026-09-23T21:15:16+01:00",
-  "segments":[{"segment_id":"segment-1-launch-recovery-watchdog","actual_start":"2026-09-23T21:09:54+01:00","actual_stop":"UNVERIFIED","role":"forward_research","notes":"Primary scheduled launch had no durable STARTED record when checked after 21:06 BST. This segment recovers the SAME 21:00:38 trigger; no duplicate session or credit."}],
-  "forward_research_intervals":[
-    {"start":"2026-09-23T21:13:01+01:00","stop":"2026-09-23T21:14:01+01:00","duration_seconds":60,"evidence":"Exact stable-index replay 33401-33600 plus complete JSON parse."},
-    {"start":"2026-09-23T21:16:35+01:00","stop":"2026-09-23T21:18:28+01:00","duration_seconds":113,"evidence":"Exact continuation 33601-33900 plus bounded failed larger attempt; successful results retained."},
-    {"start":"2026-09-23T21:19:26+01:00","stop":"2026-09-23T21:23:30+01:00","duration_seconds":244,"evidence":"Exact continuation through 35300; one failed large attempt subsequently covered exactly by smaller shards."},
-    {"start":"2026-09-23T21:24:26+01:00","stop":"2026-09-23T21:29:59+01:00","duration_seconds":333,"evidence":"Consecutive exact shards cover stable indices 35301-37300; attempted larger suffix wrapper failed before output and is not claimed."}
+  "session_id": "2026-09-23T21:00:38+01:00",
+  "scheduled_trigger": "2026-09-23T21:00:38+01:00",
+  "next_scheduled_trigger": "2026-09-23T22:00:38+01:00",
+  "research_cutoff": "2026-09-23T21:53:38+01:00",
+  "hard_close_deadline": "2026-09-23T21:59:38+01:00",
+  "earliest_actual_start": "2026-09-23T21:09:54+01:00",
+  "lateness_vs_trigger": "00:09:16",
+  "attribution_method": "launch_recovery_watchdog",
+  "attribution_confidence": "UNVERIFIED",
+  "launch_status": "RECOVERED_PRIMARY_MISSING",
+  "started_record_published_at": "2026-09-23T21:10:09+01:00",
+  "first_substantive_checkpoint_time": "2026-09-23T21:15:16+01:00",
+  "segments": [
+    {
+      "segment_id": "segment-1-launch-recovery-watchdog",
+      "actual_start": "2026-09-23T21:09:54+01:00",
+      "actual_stop": "UNVERIFIED",
+      "role": "forward_research",
+      "notes": "Primary scheduled launch had no durable STARTED record when checked after 21:06 BST. This segment recovers the SAME 21:00:38 trigger; no duplicate session or credit."
+    },
+    {
+      "segment_id": "repository_housekeeping_20260924",
+      "actual_start": "2026-09-24T10:42:12+01:00",
+      "actual_stop": "2026-09-24T10:42:12+01:00",
+      "role": "reconciliation",
+      "notes": "Point-in-time administrative annotation; zero research credit. Original execution boundaries are not reconstructed."
+    }
   ],
-  "forward_research_stop":"PENDING",
-  "preservation_start":"PENDING",
-  "preservation_complete":"PENDING",
-  "final_report_time":"PENDING",
-  "wall_clock_span_to_preservation_complete":"PENDING",
-  "verified_forward_research_span":"00:12:30",
-  "preservation_span":"PENDING",
-  "substantive_unit_count":3,
-  "timestamped_unit_ledger":[
-    {"unit":1,"result":"Stable 33401-33600 complete; 200 candidates; zero new survivors; closest gap +9.","artifact":"project/research/general_n/2026-09-23-independent-742-r21-row-closure/N18_RANGE_33401_33600.md"},
-    {"unit":2,"result":"Stable 33601-35300 complete; 1700 candidates; zero new survivors; closest gap +6.","artifact":"project/research/general_n/2026-09-23-independent-742-r21-row-closure/N18_RANGE_33601_35300.md"},
-    {"unit":3,"interval":"2026-09-23T21:24:26+01:00/2026-09-23T21:29:59+01:00","result":"Stable 35301-37300 complete; 2000 candidates; zero new abstract survivors; closest deficit 21 vs Dmax 16, gap +5; next 37301. Failed oversized suffix wrapper not used as evidence.","artifact":"project/research/general_n/2026-09-23-independent-742-r21-row-closure/N18_RANGE_35301_37300.md"}
+  "forward_research_intervals": [
+    {
+      "start": "2026-09-23T21:13:01+01:00",
+      "stop": "2026-09-23T21:14:01+01:00",
+      "duration_seconds": 60,
+      "evidence": "Exact stable-index replay 33401-33600 plus complete JSON parse."
+    },
+    {
+      "start": "2026-09-23T21:16:35+01:00",
+      "stop": "2026-09-23T21:18:28+01:00",
+      "duration_seconds": 113,
+      "evidence": "Exact continuation 33601-33900 plus bounded failed larger attempt; successful results retained."
+    },
+    {
+      "start": "2026-09-23T21:19:26+01:00",
+      "stop": "2026-09-23T21:23:30+01:00",
+      "duration_seconds": 244,
+      "evidence": "Exact continuation through 35300; one failed large attempt subsequently covered exactly by smaller shards."
+    },
+    {
+      "start": "2026-09-23T21:24:26+01:00",
+      "stop": "2026-09-23T21:29:59+01:00",
+      "duration_seconds": 333,
+      "evidence": "Consecutive exact shards cover stable indices 35301-37300; attempted larger suffix wrapper failed before output and is not claimed."
+    }
   ],
-  "early_stop_check_time":"PENDING","early_stop_check_result":"PENDING","stop_reason":"PENDING",
-  "research_target_minutes":40,"target_40m_applies":true,"target_40m_met":"PENDING",
-  "session_run_status":"ACTIVE_RECOVERED","focused_session_credit":"PENDING; counter remains 6/24.",
-  "compliance_status":"NONCOMPLIANT_LATE_START: primary launch missing; recovery STARTED after +5-minute target. First substantive checkpoint met the +10-minute-from-entry target.",
-  "infrastructure_failures":["Primary scheduled launch lacked durable STARTED evidence before recovery.","Oversized local shard wrappers were killed before useful completion; every claimed range is backed only by completed smaller shards."],
-  "commit_shas":["e2cbcd575491f976335e6c4f1bbdd39602dddbcb","f1ff7181786039324ff05e50b346dd56ae833098","92459b0310ac36c944ddd9998519872b40da53b5","cd846fbcd1c81181f944bb2993ba9d38358a9119"],
-  "live_unfinished_line":"Continue exact stable-index enumeration from 37,301; full n=18 row closure remains open.","historical_fragments":[]
+  "forward_research_stop": "UNVERIFIED",
+  "preservation_start": "UNVERIFIED",
+  "preservation_complete": "UNVERIFIED",
+  "final_report_time": "UNVERIFIED",
+  "wall_clock_span_to_preservation_complete": "UNVERIFIED",
+  "verified_forward_research_span": "00:12:30",
+  "preservation_span": "UNVERIFIED",
+  "substantive_unit_count": 3,
+  "timestamped_unit_ledger": [
+    {
+      "unit": 1,
+      "result": "Stable 33401-33600 complete; 200 candidates; zero new survivors; closest gap +9.",
+      "artifact": "project/research/general_n/2026-09-23-independent-742-r21-row-closure/N18_RANGE_33401_33600.md"
+    },
+    {
+      "unit": 2,
+      "result": "Stable 33601-35300 complete; 1700 candidates; zero new survivors; closest gap +6.",
+      "artifact": "project/research/general_n/2026-09-23-independent-742-r21-row-closure/N18_RANGE_33601_35300.md"
+    },
+    {
+      "unit": 3,
+      "interval": "2026-09-23T21:24:26+01:00/2026-09-23T21:29:59+01:00",
+      "result": "Stable 35301-37300 complete; 2000 candidates; zero new abstract survivors; closest deficit 21 vs Dmax 16, gap +5; next 37301. Failed oversized suffix wrapper not used as evidence.",
+      "artifact": "project/research/general_n/2026-09-23-independent-742-r21-row-closure/N18_RANGE_35301_37300.md"
+    }
+  ],
+  "early_stop_check_time": "UNVERIFIED",
+  "early_stop_check_result": "UNVERIFIED",
+  "stop_reason": "Historical session stop and cause UNVERIFIED; record administratively closed after user paused cadence. No research resumed.",
+  "research_target_minutes": 40,
+  "target_40m_applies": true,
+  "target_40m_met": "UNVERIFIED",
+  "session_run_status": "ACTIVE_RECOVERED",
+  "focused_session_credit": "PENDING; counter remains 6/24.",
+  "compliance_status": "ADMINISTRATIVELY_CLOSED_UNVERIFIED_NONCOMPLIANT",
+  "infrastructure_failures": [
+    "Primary scheduled launch lacked durable STARTED evidence before recovery.",
+    "Oversized local shard wrappers were killed before useful completion; every claimed range is backed only by completed smaller shards."
+  ],
+  "commit_shas": [
+    "e2cbcd575491f976335e6c4f1bbdd39602dddbcb",
+    "f1ff7181786039324ff05e50b346dd56ae833098",
+    "92459b0310ac36c944ddd9998519872b40da53b5",
+    "cd846fbcd1c81181f944bb2993ba9d38358a9119"
+  ],
+  "live_unfinished_line": "PAUSED BY USER: the pre-cleanup mathematical handoff is preserved in the original snapshot; it is not an instruction to restart.",
+  "historical_fragments": [],
+  "administrative_reconciliation": {
+    "record_closed_at": "2026-09-24T10:42:12+01:00",
+    "reason": "User-requested repository cleanup after cadence pause; historical execution/finalization not inferred.",
+    "original_snapshot": "archive/maintenance/2026-09-24/project/research/session_logs/2026-09-23/2026-09-23T21-00-38+01-00-canonical.json.original.txt",
+    "original_pending_fields": [
+      "forward_research_stop",
+      "preservation_start",
+      "preservation_complete",
+      "final_report_time",
+      "wall_clock_span_to_preservation_complete",
+      "preservation_span",
+      "early_stop_check_time",
+      "early_stop_check_result",
+      "stop_reason",
+      "target_40m_met"
+    ],
+    "original_compliance_status": "NONCOMPLIANT_LATE_START: primary launch missing; recovery STARTED after +5-minute target. First substantive checkpoint met the +10-minute-from-entry target.",
+    "research_credit_added_seconds": 0,
+    "focused_session_credit_added": 0,
+    "reported_research_outcome": "RAN_RECORDED_SUBSTANTIVE_WORK",
+    "historical_timing_status": "Incomplete historical boundaries remain UNVERIFIED. Current administrative timestamp is not the old research stop or preservation time."
+  }
 }

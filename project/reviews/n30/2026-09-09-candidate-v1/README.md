@@ -37,7 +37,7 @@ At 226 edges the same exclusions apply beginning at `Delta=16`.
 Parameterization / source:
 
 - [`project/research/n30/2026-09-08-minimal-kernel-recon-v1/N30_PARAMETERIZATION_AUDIT.md`](../../../research/n30/2026-09-08-minimal-kernel-recon-v1/N30_PARAMETERIZATION_AUDIT.md)
-- [`project/research/n30/2026-09-08-minimal-kernel-recon-v1/ISOLATED_C_PARAMETERIC_LEMMA.md`](../../../research/n30/2026-09-08-minimal-kernel-recon-v1/ISOLATED_C_PARAMETERIC_LEMMA.md)
+- [`project/research/n30/2026-09-08-minimal-kernel-recon-v1/ISOLATED_C_PARAMETERIC_LEMMA.md`](../../n29/2026-09-09-bridge-standalone-v1/ISOLATED_C_LEMMA.md)
 - [`project/research/n30/2026-09-08-minimal-kernel-recon-v1/n30_prepare.py`](../../../research/n30/2026-09-08-minimal-kernel-recon-v1/n30_prepare.py)
 - [`project/research/n30/2026-09-08-minimal-kernel-recon-v1/n30_rows.cpp`](../../../research/n30/2026-09-08-minimal-kernel-recon-v1/n30_rows.cpp)
 - [`project/research/n30/2026-09-08-minimal-kernel-recon-v1/n30_row_threshold.py`](../../../research/n30/2026-09-08-minimal-kernel-recon-v1/n30_row_threshold.py)

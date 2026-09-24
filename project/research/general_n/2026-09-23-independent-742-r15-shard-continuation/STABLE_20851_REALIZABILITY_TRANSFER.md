@@ -1,5 +1,8 @@
 # Stable-index 20,851: bounded realizability transfer
 
+> **24 September source correction:** The adjacent `N18_STABLE_20851.json` reports zero abstract survivors and a different closest tuple, so the index identification asserted below is not verified. The earlier tuple-to-common-C transfer is not sufficient by itself. The subsequent [exact star-five proof](../2026-09-23-independent-742-r12-count-audit/STAR5_EXACT_SLACK_AND_555_CLOSURE.md) excludes the entire (5,5,5) tuple independently of common-right-type geometry or index numbering. The original text below is retained as historical evidence, not the current dependency justification.
+
+
 Date: 23 September 2026
 
 Scope: internal project evidence only. This note does **not** promote abstract profile/source feasibility to graph realizability and does not establish the general Murty–Simon theorem.
