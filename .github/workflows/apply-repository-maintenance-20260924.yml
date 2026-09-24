@@ -27,6 +27,20 @@ jobs:
         shell: bash
         run: |
           set -euo pipefail
+          git diff --exit-code
+          git diff --cached --exit-code
+          python3 - <<'PY'
+          from pathlib import Path
+          import hashlib,re,subprocess
+          note=Path('project/maintenance/2026-09-24/ARCHIVE_STORAGE_REPAIR.md').read_text()
+          entries=re.findall(r'\| `([^`]+)` \| `([0-9a-f]{64})` \|',note)
+          assert len(entries)==9,len(entries)
+          for name,digest in entries:
+              stored=subprocess.check_output(['git','cat-file','blob','HEAD:'+name])
+              assert stored==Path(name).read_bytes(),name
+              assert hashlib.sha256(stored).hexdigest()==digest,name
+          print('Clean checkout and nine preserved archive digests PASS')
+          PY
           cat project/maintenance/2026-09-24/bootstrap/repair-source.xz.part00 project/maintenance/2026-09-24/bootstrap/repair-source.xz.part01 > /tmp/repair-source.xz
           echo '26156d56b5e22daf3e131c94aed359576509612778a4cfa8c54bbcc21ff4381c  /tmp/repair-source.xz' | sha256sum -c -
           python3 - <<'PY'
@@ -42,6 +56,12 @@ jobs:
           python3 - <<'PY'
           from pathlib import Path
           import json, subprocess
+          report=Path('project/maintenance/2026-09-24/REPORT.md')
+          with report.open('a') as f:
+              f.write('\n## Final storage and open-review checks\n\nThe first application stopped safely on a Git LFS attribute mismatch before publication. Exact-path attributes now preserve nine historical archives as their existing ordinary Git blobs; the clean checkout and all nine original SHA-256 values passed. See [storage correction and preserved failure](ARCHIVE_STORAGE_REPAIR.md).\n\nDraft PR #2 remains open for substantive source/test review and must not restore its obsolete CURRENT_STATE handoff. See [outstanding draft review](OPEN_PULL_REQUEST_REVIEW.md).\n')
+          current=Path('CURRENT_STATE.md')
+          s=current.read_text().replace('DEFERRED ADMIN: Missing historical','DEFERRED ADMIN: Draft PR #2 still requires source/test review without restoring its obsolete handoff. Missing historical',1)
+          current.write_text(s)
           expected=set(json.loads(Path('/tmp/cleanup-expected-paths.json').read_text()))
           modified=set(filter(None,subprocess.check_output(['git','diff','--name-only','-z']).decode().split('\0')))
           untracked=set(filter(None,subprocess.check_output(['git','ls-files','--others','--exclude-standard','-z']).decode().split('\0')))

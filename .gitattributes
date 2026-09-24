@@ -7,3 +7,16 @@
 
 # Small, self-contained reviewer download; keep its bytes in ordinary Git.
 releases/n30-reviewer-v3/N30_Reviewer_Package_v3.zip -filter -diff -merge -text
+
+# These historical archives are already ordinary Git blobs, not LFS pointers.
+# Exact-path exceptions prevent false dirty checkouts without migrating any bytes.
+# See project/maintenance/2026-09-24/ARCHIVE_STORAGE_REPAIR.md.
+MurtySimon_GeneralN_ColumnPropagation_v5.zip -filter -diff -merge -text
+project/research/general_n/2026-09-07-column-propagation-v5/MurtySimon_GeneralN_ColumnPropagation_v5.zip -filter -diff -merge -text
+project/research/general_n/2026-09-07-direct-197-v8/MurtySimon_N28_197_Direct_v8.zip -filter -diff -merge -text
+project/research/general_n/2026-09-07-local-incidence-v7/MurtySimon_GeneralN_LocalIncidence_v7.zip -filter -diff -merge -text
+project/research/general_n/2026-09-07-shared-adjacency-v6/MurtySimon_GeneralN_SharedAdjacency_v6.zip -filter -diff -merge -text
+project/research/general_n/2026-09-22-independent-742-r12-quotient/r12_support10_case1_masks.txt.gz -filter -diff -merge -text
+project/research/general_n/2026-09-22-independent-742-r12-quotient/r12_support9_masks.txt.gz -filter -diff -merge -text
+project/reviews/delta14/2026-09-06-document-review-v1/N25_Delta14_Document_Review_Evidence_2026-09-06.zip -filter -diff -merge -text
+project/reviews/n25/2026-09-06-redteam-v1/N25_Red_Team_Evidence_2026-09-06_v1.zip -filter -diff -merge -text
