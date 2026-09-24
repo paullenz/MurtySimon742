@@ -8,19 +8,43 @@
   "lateness_vs_trigger": "00:04:06",
   "attribution_method": "launch_recovery_watchdog",
   "launch_status": "STARTED_RECOVERED",
-  "started_record_published_at": "PENDING_REMOTE_COMMIT_TIMESTAMP",
-  "segments": [{"segment_id":"launch_recovery_watchdog-1","actual_start":"2026-09-24T02:04:44+01:00","actual_stop":"UNVERIFIED","role":"forward_research","notes":"Recovery of this same scheduled trigger; primary launch had no durable STARTED evidence. No duplicate session or extra credit."}],
-  "forward_research_intervals": [],
+  "started_record_published_at": "2026-09-24T02:05:43+01:00",
+  "primary_launch_evidence": "MISSING at watchdog inspection; no durable canonical STARTED record existed for this exact trigger.",
+  "segments": [
+    {
+      "segment_id": "launch_recovery_watchdog-1",
+      "actual_start": "2026-09-24T02:04:44+01:00",
+      "actual_stop": "UNVERIFIED",
+      "role": "forward_research",
+      "notes": "Recovery of the same scheduled trigger. Primary scheduled launch lacked durable STARTED evidence; no duplicate session or extra credit created."
+    }
+  ],
+  "forward_research_intervals": [
+    {
+      "start": "2026-09-24T02:08:30+01:00",
+      "stop": "2026-09-24T02:11:48+01:00",
+      "duration": "00:03:18",
+      "work": "Independent row-identity/provenance reconciliation of the 13 r=12 support-ten helper-LP timeout rows against durable COMPLETE/IPM artifacts; no retro-credit and no solver-optimality claim."
+    }
+  ],
   "forward_research_stop": "PENDING",
   "preservation_start": "PENDING",
   "preservation_complete": "PENDING",
   "final_report_time": "PENDING",
   "wall_clock_span_to_preservation_complete": "PENDING",
-  "verified_forward_research_span": "00:00:00",
+  "verified_forward_research_span": "00:03:18",
   "preservation_span": "PENDING",
-  "substantive_unit_count": 0,
-  "timestamped_unit_ledger": [],
-  "first_substantive_checkpoint_time": "PENDING",
+  "substantive_unit_count": 1,
+  "timestamped_unit_ledger": [
+    {
+      "unit": 1,
+      "start": "2026-09-24T02:08:30+01:00",
+      "stop": "2026-09-24T02:11:48+01:00",
+      "result": "The launch-time UNKNOWN set is exactly indices 362,363,437,438,451,455,1494,3755,3758,4663,4664,4665,4682; all 13 occur in durable HELPER_LP_ALL32_COMPLETE as later trust-constr exclusions with reported objective >1. Provenance is after the prior credited boundary, so S<=14 remains frozen pending independent solver/constraint revalidation in this session.",
+      "artifact": "project/research/general_n/2026-09-24-r12-support10-lp-relaxation-v1/RECOVERY_RECONCILIATION_02.md"
+    }
+  ],
+  "first_substantive_checkpoint_time": "PENDING_REMOTE_COMMIT_TIMESTAMP",
   "early_stop_check_time": "PENDING",
   "early_stop_check_result": "PENDING",
   "stop_reason": "PENDING",
@@ -28,8 +52,14 @@
   "target_40m_applies": "YES",
   "target_40m_met": "PENDING",
   "compliance_status": "IN_PROGRESS",
-  "infrastructure_failures": ["Primary scheduled launch had no durable STARTED record at watchdog inspection."],
-  "commit_shas": [],
-  "live_unfinished_line": "Resolve the 13 helper-LP timeout rows independently; keep S<=14 frozen until all 13 are decisive.",
+  "infrastructure_failures": [
+    "Primary scheduled launch did not establish a durable canonical STARTED record before watchdog recovery.",
+    "Recovered canonical STARTED publication at 02:05:43 was 5 seconds outside the +5-minute publication aim."
+  ],
+  "commit_shas": [
+    "9159e637ac20c6efb9fa41f52ce141f55f1859d5",
+    "75ad60fe977a476eaf7f9a17e8fa5fc34846b814"
+  ],
+  "live_unfinished_line": "Independently reconstruct/check the helper-LP constraints for the 13 trust-constr-resolved rows; keep S<=14 frozen until solver/encoding validity is decisive.",
   "historical_fragments": []
 }
