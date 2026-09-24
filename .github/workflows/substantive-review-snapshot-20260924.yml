@@ -1,0 +1,65 @@
+name: One-off substantive review evidence 2026-09-24
+on:
+  push:
+    branches: [main]
+    paths: ['.github/workflows/substantive-review-snapshot-20260924.yml']
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  snapshot:
+    runs-on: ubuntu-latest
+    timeout-minutes: 8
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 2
+          persist-credentials: false
+      - name: Export pinned source and targeted file histories, read only
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          python3 - <<'PY'
+          import base64,hashlib,json,os,pathlib,subprocess,urllib.request,urllib.parse,zipfile
+          out=pathlib.Path('/tmp/substantive-review');out.mkdir()
+          api='https://api.github.com/repos/paullenz/MurtySimon742/'
+          def get(path):
+              req=urllib.request.Request(api+path,headers={'Authorization':'Bearer '+os.environ['GH_TOKEN'],'Accept':'application/vnd.github+json'})
+              with urllib.request.urlopen(req,timeout=45) as r:return json.load(r)
+          names=[s for s in subprocess.check_output(['git','ls-files','-z']).decode().split('\0') if s]
+          manifest=[]
+          with zipfile.ZipFile(out/'source.zip','w',zipfile.ZIP_DEFLATED) as z:
+              for name in names:
+                  p=pathlib.Path(name)
+                  if not p.is_file():continue
+                  b=p.read_bytes()
+                  manifest.append({'path':name,'bytes':len(b),'sha256':hashlib.sha256(b).hexdigest()})
+                  try:b.decode('utf-8')
+                  except UnicodeDecodeError:continue
+                  if b'\0' not in b and len(b)<=10000000:z.writestr('main/'+name,b)
+              pr=get('pulls/2');z.writestr('pr2/metadata.json',json.dumps(pr,indent=2))
+              changed=get('pulls/2/files?per_page=100')
+              assert len(changed)==pr['changed_files'],'PR file pagination required'
+              z.writestr('pr2/changed_files.json',json.dumps(changed,indent=2))
+              for row in changed:
+                  name=row['filename']; ref=pr['head']['sha']
+                  blob=get('contents/'+urllib.parse.quote(name,safe='/')+'?ref='+ref)
+                  assert blob['encoding']=='base64'
+                  z.writestr('pr2/files/'+name,base64.b64decode(blob['content']))
+              for name in ['project/research/general_n/2026-09-22-r9-quotient-v1/audit_r9_support8_orbits.py','project/research/general_n/2026-09-22-r11-quotient-v1/r11_support6.json','project/research/general_n/2026-09-23-independent-742-r15-shard-continuation/N18_STABLE_20851.json']:
+                  history=get('commits?path='+urllib.parse.quote(name,safe='')+'&per_page=100')
+                  assert len(history)<100,'History pagination required'
+                  stem='histories/'+pathlib.Path(name).name
+                  z.writestr(stem+'/history.json',json.dumps(history,indent=2))
+                  for c in history:
+                      blob=get('contents/'+urllib.parse.quote(name,safe='/')+'?ref='+c['sha'])
+                      assert blob['encoding']=='base64'
+                      z.writestr(stem+'/'+c['sha']+'.txt',base64.b64decode(blob['content']))
+          (out/'manifest.json').write_text(json.dumps({'head':subprocess.check_output(['git','rev-parse','HEAD']).decode().strip(),'files':manifest},indent=2))
+          print('Source snapshot complete:',len(names),'tracked paths; PR #2 and three complete path histories exported. No research or repository write performed.')
+          PY
+      - uses: actions/upload-artifact@v4
+        with:
+          name: substantive-review-source-20260924
+          path: /tmp/substantive-review/
+          retention-days: 7
