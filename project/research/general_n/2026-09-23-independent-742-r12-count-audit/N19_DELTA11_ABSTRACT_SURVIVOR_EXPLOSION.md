@@ -125,3 +125,61 @@ seconds.  The timeout output landed fractionally after the research cutoff;
 that post-cutoff fraction is not credited.  Agreement of two encodings on a
 timeout is not mathematical evidence of infeasibility, so index 1 remains
 open precisely in this low-deficit intersection-one branch.
+
+## 09:00 recovery: root-edge witness obstruction closes index 1 / intersection 1
+
+A direct graph argument removes the timeout branch without using additional
+solver time.  In stable index 1 with `|C0 intersect C1|=1`, normalize
+`C0={1,2}` and `C1={1,3,4,5,6}`.  Since `x=(9,6)`, every element of
+`T0={3,...,11}` and `T1={2,7,...,11}` is assigned.
+
+One-use of physical source edges now forces the B-geometry.  For each
+`t=7,...,11`, an edge `1t` would be the source for both assigned pairs
+`(L0,t)` and `(L1,t)`, so `1t` is absent; the L0 assignment then forces
+`2t`, and the L1 assignment forces exactly one edge from `t` to
+`{3,4,5,6}`.  For the assigned pair `(L1,2)`, using any source
+`j in {3,4,5,6}` would reuse the same physical edge `2j` for `(L0,j)`.
+Hence its source is 1.  Therefore `12` is present, every `2j` with
+`j=3,...,6` is absent, and the L0 assignments force every `1j` with
+`j=3,...,6` to be present.
+
+Criticality of the root edge `01` then forces an A-vertex `r` with
+`N_B(r)={1}`.  Indeed, `0` and `1` retain two-step paths through
+`2,3,4,5,6`; and if deletion of `01` were witnessed on the 1-side by a
+B-vertex `t`, then `t` must be one of `7,...,11`, but `1` and `t` already
+share the B-neighbour 2.  Thus the only possible lost two-step path is
+`0-r` with 1 its unique common neighbour, exactly `N_B(r)={1}`.
+The same argument for root edge `02` gives a distinct A-vertex `s` with
+`N_B(s)={2}`: the only B non-neighbours of 2 forced here are `3,...,6`,
+and each shares B-neighbour 1 with 2.
+
+Neither `r` nor `s` is adjacent to the root, and each has only one B-neighbour,
+so each has degree at most `1+6=7` and deficit at least 4.  Thus these two
+root-edge witnesses contribute at least 8 to the global deficit.
+
+It remains to combine this with the already-audited exact-star inequalities.
+Write `p=def(L0)`, `q=def(L1)`, and
+`U=def(2)+sum_{t=3}^{11} def(t)`.  The two star inequalities give
+
+    U >= 73 - 9p,
+    U >= 45 - 6q.
+
+Also `0<=p<=9` because `L0` has its two forced B-neighbours, and `0<=q<=6`
+because `L1` has its five forced B-neighbours.  Therefore
+
+    p + q + U >= 23.
+
+For completeness: if `p<=6`, the first inequality gives at least 25; if
+`p>=7` and `q<=5`, the second gives at least 27; and if `p>=7,q=6`, the
+three possibilities `p=7,8,9` give lower bounds 23,23,24 respectively.
+
+The total degree deficit is therefore at least `23+8=31`, even before adding
+the nonnegative deficit of vertex 1 and the other inactive A-vertices.  A
+strict counterexample at `n=19, Delta=11` has
+`D=19*11-2e <= 209-2*91 = 27`.  Contradiction.
+
+Hence stable index 1 with source-set intersection one is excluded at graph
+level.  This argument is conditional on the audited source assignment,
+one-use, root-edge criticality, and exact-star premises; it is an internal
+proof step, not external acceptance.  The next bounded target is stable index
+2 with source-set intersection one.
