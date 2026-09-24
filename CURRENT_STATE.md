@@ -5,15 +5,15 @@ Canonical repository: `paullenz/MurtySimon742`. Date: 24 September 2026.
 Active target: a genuinely independent proof of Erdős #742 / the Murty–Simon inequality e(G)<=floor(n^2/4), preferably with the equality characterization. Forward priority is the project’s own complement / residual / Hall / profile / realizability route, not a reconstruction of the external e+disj+X proof. The first focused session produced the internally checked candidate threshold `Delta>=250n/429`, shrinking the live strip to `n/2<Delta<250n/429`. The theorem and its inherited graph-to-profile spine remain candidate/internal-review mathematics. A 24-focused-session go/no-go gate applies. Prior eventual-D2C work remains preserved but is no longer the active forward objective.
 
 <!-- CURRENT-STATUS:START -->
-CHECKPOINT CLASS: DEMAND15_SINGLETON_SOURCE_OBSTRUCTION_ACTIVE
+CHECKPOINT CLASS: LAUNCH_RECOVERY_STARTED
 WORK MODE: MATH
-INSPECTED PREDECESSOR: fd2a9b1da444e5dca32bb10ec112596632cdc6b0.
-LAST VERIFIED RESULT: Corrected the explicit C_i model to the proved convention |C_i|=Delta-h_i and coupled C-membership, assigned endpoint incidence, deficit and globally shared source-edge capacity on physical B vertices. The audited n=18 profile d=(8,7), x=(8,8), h=(8,9) is now excluded. A direct singleton-source saturation proof is preserved: the unique C_1 source would need eight label-1 assigned edges and is forced to be a label-0 endpoint, whose extra incoming assigned edge gives degree at least 11>Delta=10. Four leading profiles remain feasible in this necessary-condition model. The earlier |C_i|=h_i experiment is explicitly invalidated as a failed route.
-SESSION: Scheduled 04:00:38; launch-recovery watchdog actual entry 04:05:48; STARTED publication timestamp 04:06:51; first substantive checkpoint 04:10:14; primary launch had no durable STARTED record when checked. Same trigger only; immutable scheduler attribution UNVERIFIED.
-VERIFIED FORWARD SPAN: 5m09s.
+INSPECTED PREDECESSOR: 023cfd6fa7f562ed1d901580d5f83fe4032d46ee.
+LAST VERIFIED RESULT: Mathematical state unchanged at STARTED publication. Prior verified result excludes audited n=18 profile d=(8,7), x=(8,8), h=(8,9) via the corrected C_i convention and singleton-source saturation; four leading profiles remain feasible in the necessary-condition joint B-vertex model.
+SESSION: Scheduled 05:00:38; launch-recovery watchdog actual entry 05:06:47; STARTED publication timestamp 05:08:00; primary launch had no durable STARTED record when checked. Same trigger only; immutable scheduler attribution UNVERIFIED.
+VERIFIED FORWARD SPAN: 0m00s at STARTED publication.
 SESSION RESULT: ACTIVE_RECOVERED; +5-minute STARTED target MISSED; 40-minute target pending; no duplicate credit.
-SUBSTANTIVE UNITS: 2.
-CANONICAL RECORD: project/research/session_logs/2026-09-24/2026-09-24T04-00-38+01-00-canonical.json.
+SUBSTANTIVE UNITS: 0.
+CANONICAL RECORD: project/research/session_logs/2026-09-24/2026-09-24T05-00-38+01-00-canonical.json.
 UNPRESERVED WORK: None.
 DEFERRED ADMIN: None.
 NEXT ACTION: Attack simple-graph/self-incidence and shared source-capacity restrictions on the four remaining audited dense n18 profiles `(8,7)`, `(8,6,1)`, `(8,5,2)`, `(5,5,5)` using the corrected joint B-vertex model; do not return to scalar-only enumeration.
