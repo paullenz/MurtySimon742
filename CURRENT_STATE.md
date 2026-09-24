@@ -5,19 +5,19 @@ Canonical repository: `paullenz/MurtySimon742`. Date: 24 September 2026.
 Active target: a genuinely independent proof of Erdős #742 / the Murty–Simon inequality e(G)<=floor(n^2/4), preferably with the equality characterization. Forward priority is the project’s own complement / residual / Hall / profile / realizability route, not a reconstruction of the external e+disj+X proof. The first focused session produced the internally checked candidate threshold `Delta>=250n/429`, shrinking the live strip to `n/2<Delta<250n/429`. The theorem and its inherited graph-to-profile spine remain candidate/internal-review mathematics. A 24-focused-session go/no-go gate applies. Prior eventual-D2C work remains preserved but is no longer the active forward objective.
 
 <!-- CURRENT-STATUS:START -->
-CHECKPOINT CLASS: N19_DELTA10_PREFIX_200
+CHECKPOINT CLASS: N19_DELTA10_EXACT_STAR_ROW_CLOSED
 WORK MODE: MATH
-INSPECTED PREDECESSOR: ebef1e47cb5f2aaead0ca43dd6cd8cf333d2bd31.
-LAST VERIFIED RESULT: After conditionally closing n16, Delta9, the next finite live-strip row n19, Delta10 was started. Exact v4 stable indices1--200 closed with zero survivors; closest exact deficit14 is +6 overDmax8.
+INSPECTED PREDECESSOR: 8a8167f53e65c938a183905600f8b005f5bc1228.
+LAST VERIFIED RESULT: The n19, Delta10 v4 enumeration exhausted at stable index1,752. It scalar-screened124,915 symmetry-reduced patterns; all1,752 scalar-pass profiles have exact deficit aboveDmax8, with zero abstract survivors. Conditional on the audited normal form and bridge, the finite row is closed.
 SESSION: Scheduled trigger08:00:38; actual entry08:00:52; STARTED published08:01:11; first checkpoint08:02:33; cutoff08:53:38; hard close08:59:38. Immutable scheduler attribution UNVERIFIED.
-VERIFIED FORWARD INTERVALS: 08:01:54--08:02:33; 08:03:31--08:06:11; 08:06:59--08:09:56; 08:11:04--08:11:21 BST.
-VERIFIED FORWARD SPAN: 6m33s.
+VERIFIED FORWARD INTERVALS: 08:01:54--08:02:33; 08:03:31--08:06:11; 08:06:59--08:09:56; 08:11:04--08:11:21; 08:12:13--08:14:23 BST.
+VERIFIED FORWARD SPAN: 8m43s.
 SESSION RESULT: ACTIVE; 40-minute target pending.
-SUBSTANTIVE UNITS: 4. Focused-session counter remains7/24 pending completion.
+SUBSTANTIVE UNITS: 5. Focused-session counter remains7/24 pending completion.
 CANONICAL RECORD: project/research/session_logs/2026-09-24/2026-09-24T08-00-38+01-00-canonical.json.
 UNPRESERVED WORK: None.
 DEFERRED ADMIN: Stable-index JSON/prose discrepancy remains historical audit metadata and is not blocking.
-NEXT ACTION: Continue n19, Delta10 exact-star row from stable index201; graph-analyse any survivor.
+NEXT ACTION: Attack n19, Delta11 at the exact-star interface; graph-analyse any survivor.
 MANDATORY CONSTRAINTS: Internal fixed-row evidence only; S<=14 remains computer-assisted; equality only throughS<=8; balanced-bipartite/X3 controls unchanged.
 <!-- CURRENT-STATUS:END -->
 
