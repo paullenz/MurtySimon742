@@ -10,8 +10,8 @@
   "attribution_method": "launch_recovery_watchdog",
   "attribution_status": "VERIFIED_SAME_HOUR_TRIGGER_FROM_WATCHDOG_PROMPT",
   "launch_status": "RECOVERED_STARTED",
-  "started_record_published_at": "UNVERIFIED_PENDING_REMOTE_CONFIRMATION",
-  "first_substantive_checkpoint_time": "PENDING",
+  "started_record_published_at": "2026-09-24T09:10:06+01:00",
+  "first_substantive_checkpoint_time": "2026-09-24T09:16:27+01:00",
   "segments": [
     {
       "segment_id": "launch_recovery_watchdog_1",
@@ -21,28 +21,45 @@
       "notes": "Primary scheduled launch for the exact 09:00:38 trigger was missing from main when checked. Watchdog recovered the SAME trigger; this is not a second session and creates no duplicate credit."
     }
   ],
-  "forward_research_intervals": [],
+  "forward_research_intervals": [
+    {
+      "start": "2026-09-24T09:15:09+01:00",
+      "stop": "2026-09-24T09:15:44+01:00",
+      "seconds": 35,
+      "unit": "derive root-edge singleton-witness and deficit obstruction excluding n19 Delta11 stable index1 intersection-one"
+    }
+  ],
   "forward_research_stop": "PENDING",
   "preservation_start": "PENDING",
   "preservation_complete": "PENDING",
   "final_report_time": "PENDING",
   "wall_clock_span_to_preservation_complete": "PENDING",
-  "verified_forward_research_span": "00:00:00",
+  "verified_forward_research_span": "00:00:35",
   "preservation_span": "PENDING",
-  "substantive_unit_count": 0,
-  "timestamped_unit_ledger": [],
+  "substantive_unit_count": 1,
+  "timestamped_unit_ledger": [
+    {
+      "completed_at": "2026-09-24T09:15:44+01:00",
+      "unit": "Stable index1 intersection-one is excluded: one-use forces a rigid B pattern; criticality of root edges 01 and 02 forces distinct A vertices with singleton B-neighbourhoods and deficit at least4 each; exact-star inequalities force at least23 additional deficit, giving D>=31>27. Internal proof conditional on audited bridge/star premises."
+    }
+  ],
   "early_stop_check_time": "PENDING",
   "early_stop_check_result": "PENDING",
   "stop_reason": "PENDING",
   "research_target_minutes": 40,
   "target_40m_applies": "YES",
-  "target_40m_met": "UNVERIFIED",
+  "target_40m_met": "NO",
   "compliance_status": "ACTIVE_RECOVERY",
   "infrastructure_failures": [
-    "Primary scheduled launch had no durable STARTED record by watchdog invocation at 09:06:55 BST."
+    "Primary scheduled launch had no durable STARTED record by watchdog invocation at 09:06:55 BST.",
+    "The first substantive artifact commit did not include CURRENT_STATE in the same commit; synchronization is being repaired immediately and no mathematical claim is promoted on that process defect."
   ],
-  "commit_shas": [],
-  "live_unfinished_line": "Recovery STARTED; mathematics not yet begun pending durable STARTED publication and one remote verification.",
+  "commit_shas": [
+    "cb0d16429c6c68f4e49bb7bf1aa5f0b4d0e4c591",
+    "c729b59c8afb0bee0af8367d28dcbab57640f1f1",
+    "188c56f04a30a757e4bc5982b945f4b638f894b7"
+  ],
+  "live_unfinished_line": "Stable index1 intersection-one is internally excluded by the root-edge witness deficit obstruction. Next bounded target: stable index2 intersection-one; preserve UNKNOWN honestly if no obstruction is found.",
   "historical_fragments": [],
   "run_kind": "SCHEDULED_RESEARCH_RECOVERED",
   "duplicate_credit": false
