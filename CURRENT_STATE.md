@@ -5,14 +5,14 @@ Canonical repository: `paullenz/MurtySimon742`. Date: 24 September 2026.
 Active target: a genuinely independent proof of Erdős #742 / the Murty–Simon inequality e(G)<=floor(n^2/4), preferably with the equality characterization. Forward priority is the project’s own complement / residual / Hall / profile / realizability route, not a reconstruction of the external e+disj+X proof. The first focused session produced the internally checked candidate threshold `Delta>=250n/429`, shrinking the live strip to `n/2<Delta<250n/429`. The theorem and its inherited graph-to-profile spine remain candidate/internal-review mathematics. A 24-focused-session go/no-go gate applies. Prior eventual-D2C work remains preserved but is no longer the active forward objective.
 
 <!-- CURRENT-STATUS:START -->
-CHECKPOINT CLASS: R12_SUPPORT10_ALL13_REPRODUCED_ACTIVE
+CHECKPOINT CLASS: R12_SUPPORT10_ALL32_REPRODUCED_ACTIVE
 WORK MODE: MATH
-INSPECTED PREDECESSOR: f807cb5e4f3fe9c73b8e89570e45e92fc4bded04.
-LAST VERIFIED RESULT: Preserved standalone scipy.optimize.linprog code independently reconstructs all 13 former-timeout helper LPs and returns LP-infeasible for all 13, with zero unknowns. Explicit identity mapping corrected a local-order swap of labels 4663/4664; corrected pattern/helper counts match the durable table. This satisfies the audit's second-encoding reproducibility gate at internal-computation scope, restoring the finite edge bound through S<=14. Same HiGHS backend, no rational certificates, no external acceptance.
+INSPECTED PREDECESSOR: b4ab79dbae42b5c3046b47c3bf9d9e36c73e8cbc.
+LAST VERIFIED RESULT: Preserved standalone scipy.optimize.linprog code now independently reconstructs the complete 32-row source-feasible r=12 support-ten helper universe. All 32 return LP-infeasible, with 0 feasible and 0 UNKNOWN. Explicit stable-index identity mapping is used. This meets the audit's second-encoding reproducibility gate at internal-computation scope and restores the finite edge bound through S<=14. Same HiGHS backend, no rational certificates, no external acceptance.
 ACTIVE SESSION: Scheduled 03:00:38; actual entry 03:02:57; STARTED 03:03:11; first substantive checkpoint 03:07:18; cutoff 03:53:38; hard close 03:59:38. Immutable delivery identity UNVERIFIED.
-VERIFIED FORWARD SPAN: 13m47s.
+VERIFIED FORWARD SPAN: 20m18s.
 SESSION RESULT: ACTIVE; 40-minute target PENDING.
-SUBSTANTIVE UNITS: 3. Focused-session counter remains 6/24 pending completion.
+SUBSTANTIVE UNITS: 4. Focused-session counter remains 6/24 pending completion.
 CANONICAL RECORD: project/research/session_logs/2026-09-24/2026-09-24T03-00-38+01-00-canonical.json.
 UNPRESERVED WORK: None after this checkpoint.
 DEFERRED ADMIN: Finalize stale 02:00 telemetry after current forward work.

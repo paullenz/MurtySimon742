@@ -41,6 +41,12 @@
       "stop": "2026-09-24T03:21:04+01:00",
       "seconds": 135,
       "unit": "Corrected index-to-identity mapping and reran rows 4663/4664; both identities LP-infeasible with exact structural counts."
+    },
+    {
+      "start": "2026-09-24T03:22:27+01:00",
+      "stop": "2026-09-24T03:28:58+01:00",
+      "seconds": 391,
+      "unit": "Full independent replay of all 32 source-feasible support-ten helper LPs with explicit identity mapping and six workers: 32 LP-infeasible, 0 feasible, 0 unknown."
     }
   ],
   "forward_research_stop": "PENDING",
@@ -48,9 +54,9 @@
   "preservation_complete": "PENDING",
   "final_report_time": "PENDING",
   "wall_clock_span_to_preservation_complete": "PENDING",
-  "verified_forward_research_span": "00:13:47",
+  "verified_forward_research_span": "00:20:18",
   "preservation_span": "PENDING",
-  "substantive_unit_count": 3,
+  "substantive_unit_count": 4,
   "timestamped_unit_ledger": [
     {
       "unit": 1,
@@ -75,6 +81,14 @@
       "result": "Replaced positional labelling by explicit identity mapping and reran 4663=[48373761,0,7,11] and 4664=[48373761,0,7,19]. Both are LP-infeasible and their pattern/helper counts match the durable table.",
       "evidence": "project/research/general_n/2026-09-24-r12-support10-lp-relaxation-v1/INDEPENDENT_REPLAY_ALL13.md",
       "code": "project/research/general_n/2026-09-24-r12-support10-lp-relaxation-v1/helper_lp_replay_13.py"
+    },
+    {
+      "unit": 4,
+      "start": "2026-09-24T03:22:27+01:00",
+      "complete": "2026-09-24T03:28:58+01:00",
+      "result": "Replayed the complete 32-row source-feasible universe with the preserved standalone matrix reconstruction. Every row returned HiGHS status 2 (LP-infeasible); zero feasible and zero unknown. This confirms that the earlier 19+13 split was entirely solver-completion, not a surviving helper profile.",
+      "evidence": "project/research/general_n/2026-09-24-r12-support10-lp-relaxation-v1/INDEPENDENT_REPLAY_ALL32.md",
+      "code": "project/research/general_n/2026-09-24-r12-support10-lp-relaxation-v1/helper_lp_replay_13.py"
     }
   ],
   "early_stop_check_time": "PENDING",
@@ -87,7 +101,11 @@
   "focused_session_credit": "PENDING; counter remains 6/24.",
   "compliance_status": "PENDING",
   "infrastructure_failures": [],
-  "commit_shas": [],
-  "live_unfinished_line": "With the 13 former timeout rows reproducibly classified under preserved second-encoding code, treat the internal finite edge bound through S<=14 as restored. Resume theorem-facing demand-15/16 graph-realizability work; the n=18 stable-index diagnostic remains open from 39,251.",
+  "commit_shas": [
+    "f068738ca357969edded1fd2ae7930d9be06d362",
+    "f807cb5e4f3fe9c73b8e89570e45e92fc4bded04",
+    "b4ab79dbae42b5c3046b47c3bf9d9e36c73e8cbc"
+  ],
+  "live_unfinished_line": "The complete 32-row source-feasible r=12 support-ten universe is now reproducibly LP-infeasible under preserved second-encoding code, so the internal finite edge bound through S<=14 is restored at computer-assisted scope. Next: theorem-facing demand-15/16 graph-realizability analysis; do not substitute abstract profiles.",
   "historical_fragments": []
 }

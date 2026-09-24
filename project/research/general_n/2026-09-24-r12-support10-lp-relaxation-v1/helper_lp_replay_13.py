@@ -8,6 +8,7 @@ rebuilds the pattern and helper matrices and calls scipy.optimize.linprog.
 import argparse
 import itertools
 import json
+import multiprocessing as mp
 from pathlib import Path
 
 import numpy as np
@@ -133,16 +134,23 @@ def main():
     parser.add_argument("--indices", default=",".join(map(str, sorted(TARGETS))))
     parser.add_argument("--method", default="highs-ipm")
     parser.add_argument("--time-limit", type=float, default=120.0)
+    parser.add_argument("--workers", type=int, default=1)
     args = parser.parse_args()
-    wanted = [int(x) for x in args.indices.split(",") if x]
+    wanted = (sorted(SOURCE_IDENTITIES) if args.indices == "all" else
+              [int(x) for x in args.indices.split(",") if x])
     rows = input_rows()
-    output = []
-    for index in wanted:
-        result = solve(index, rows[index], args.method, args.time_limit)
-        output.append(result); print(json.dumps(result), flush=True)
+    jobs = [(index, rows[index], args.method, args.time_limit) for index in wanted]
+    if args.workers == 1:
+        output = [solve(*job) for job in jobs]
+    else:
+        with mp.Pool(args.workers) as pool:
+            output = pool.starmap(solve, jobs)
+    for result in output:
+        print(json.dumps(result), flush=True)
     print("FINAL " + json.dumps({"method": args.method, "rows": output,
           "infeasible": sum(r["status"] == 2 for r in output),
           "unknown": sum(r["status"] not in (0, 2) for r in output)}))
 
 
 if __name__ == "__main__": main()
+
