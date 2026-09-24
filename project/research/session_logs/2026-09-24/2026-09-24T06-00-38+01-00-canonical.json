@@ -15,7 +15,7 @@
     {
       "segment_id": "primary-2026-09-24T06:00:55+01:00",
       "actual_start": "2026-09-24T06:00:55+01:00",
-      "actual_stop": "PENDING",
+      "actual_stop": "2026-09-24T06:49:15+01:00",
       "role": "forward_research",
       "notes": "Primary invocation; STARTED published before mathematics."
     }
@@ -86,16 +86,22 @@
       "stop": "2026-09-24T06:47:31+01:00",
       "seconds": 455,
       "unit": "close n18 exact-small-star stable-index suffix 42,251 through 44,250 in four exact shards"
+    },
+    {
+      "start": "2026-09-24T06:48:24+01:00",
+      "stop": "2026-09-24T06:49:15+01:00",
+      "seconds": 51,
+      "unit": "bounded cutoff-adjacent replay of n18 exact-small-star stable indices 44,251 through 44,350"
     }
   ],
-  "forward_research_stop": "PENDING",
-  "preservation_start": "PENDING",
-  "preservation_complete": "PENDING",
-  "final_report_time": "PENDING",
-  "wall_clock_span_to_preservation_complete": "PENDING",
-  "verified_forward_research_span": "29m31s",
-  "preservation_span": "PENDING",
-  "substantive_unit_count": 11,
+  "forward_research_stop": "2026-09-24T06:49:15+01:00",
+  "preservation_start": "2026-09-24T06:49:15+01:00",
+  "preservation_complete": "2026-09-24T06:49:37+01:00",
+  "final_report_time": "2026-09-24T06:49:37+01:00",
+  "wall_clock_span_to_preservation_complete": "48m42s",
+  "verified_forward_research_span": "30m22s",
+  "preservation_span": "0m22s",
+  "substantive_unit_count": 12,
   "timestamped_unit_ledger": [
     {
       "completed_at": "2026-09-24T06:07:15+01:00",
@@ -140,15 +146,19 @@
     {
       "completed_at": "2026-09-24T06:47:31+01:00",
       "unit": "Four exact shards tested stable indices 42,251--44,250 with zero survivors; closest gaps were +10,+10,+12,+11. Internal contiguous prefix now reaches 44,250."
+    },
+    {
+      "completed_at": "2026-09-24T06:49:15+01:00",
+      "unit": "Four cutoff-adjacent 25-candidate shards closed stable indices 44,251--44,350 with zero survivors; closest gaps were +15,+13,+13,+13."
     }
   ],
-  "early_stop_check_time": "PENDING",
-  "early_stop_check_result": "PENDING",
-  "stop_reason": "PENDING",
+  "early_stop_check_time": "2026-09-24T06:49:15+01:00",
+  "early_stop_check_result": "Under five minutes remained to the 06:53:38 research cutoff after the last bounded unit; stopped for preservation.",
+  "stop_reason": "Reached a natural exact-shard checkpoint with 4m23s remaining to research cutoff, below the continuation threshold; preserved before hard close.",
   "research_target_minutes": 40,
   "target_40m_applies": "YES",
-  "target_40m_met": "PENDING",
-  "compliance_status": "ACTIVE",
+  "target_40m_met": "NO",
+  "compliance_status": "RAN_FINALIZED_TARGET_NOT_MET",
   "infrastructure_failures": [
     "Direct git push fallback failed because no interactive GitHub credentials were available; connector publication used."
   ],
@@ -167,8 +177,16 @@
     "90a4324a63f44baa9a6714be39b4adccd0503e2a",
     "0df76c3145f58ea7c49b7e1bc74de648f8be8259",
     "011d9e92764426aa32405eb6e61a16ed65fadf15",
-    "6244d353f0c290984042368d6087d0b4e0b54fcb"
+    "6244d353f0c290984042368d6087d0b4e0b54fcb",
+    "a939b54c583207783b620d4f4a29da48295a5928"
   ],
-  "live_unfinished_line": "Continue exact-small-star n18, Delta10 stable-index suffix from 44,251; current slot has under five minutes to research cutoff after immediate preservation.",
-  "historical_fragments": []
+  "live_unfinished_line": "Resume exact-small-star n18, Delta10 stable-index suffix at 44,351; retain finite-profile trust limits and inspect any survivor at actual graph level.",
+  "historical_fragments": [],
+  "preservation_evidence": {
+    "mathematical_artifact": "project/research/general_n/2026-09-23-independent-742-r12-count-audit/EXACT_SMALL_STAR_PROFILE_REPLAY.md",
+    "latest_suffix_artifact": "project/research/general_n/2026-09-23-independent-742-r12-count-audit/N18_EXACT_STAR_SUFFIX_42251_44250.md",
+    "latest_contiguous_prefix": 44350,
+    "historical_exception": 20851,
+    "historical_exception_status": "independently excluded by exact star-five assigned-witness inequality"
+  }
 }
