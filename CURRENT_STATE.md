@@ -5,16 +5,17 @@ Canonical repository: `paullenz/MurtySimon742`. Date: 24 September 2026.
 Active target: a genuinely independent proof of Erdős #742 / the Murty–Simon inequality e(G)<=floor(n^2/4), preferably with the equality characterization. Forward priority is the project’s own complement / residual / Hall / profile / realizability route, not a reconstruction of the external e+disj+X proof. The first focused session produced the internally checked candidate threshold `Delta>=250n/429`, shrinking the live strip to `n/2<Delta<250n/429`. The theorem and its inherited graph-to-profile spine remain candidate/internal-review mathematics. A 24-focused-session go/no-go gate applies. Prior eventual-D2C work remains preserved but is no longer the active forward objective.
 
 <!-- CURRENT-STATUS:START -->
-CHECKPOINT CLASS: DEMAND15_PRIVATE_SOURCE_CAPACITY_FINAL
-WORK MODE: PRESERVED
-INSPECTED PREDECESSOR: 92324c37d8c665d41584f0ad7d1ce67c34825eb4.
-LAST VERIFIED RESULT: Complete 32-row replay restores internal S<=14. New graph-level lemmas give the source-union endpoint charge and the private-source antichain/capacity bound. Regression on 575 certified D2C graphs found zero violations across 2,685,701 label subsets. A corrected right-vertex-budget/source-union MILP leaves the leading dense n18 survivors feasible; n16,Delta9 scalar range 201-3200 has zero survivors, but no prefix or full-row closure is claimed.
-SESSION: Scheduled 03:00:38; actual entry 03:02:57; STARTED 03:03:11; forward stop 03:53:22; preservation complete 2026-09-24T03:54:59+01:00; immutable delivery identity UNVERIFIED.
-VERIFIED FORWARD SPAN: 39m11s.
-SESSION RESULT: RAN; 40-minute target NOT MET by 49 seconds; focused-session counter remains 6/24.
-SUBSTANTIVE UNITS: 8.
-CANONICAL RECORD: project/research/session_logs/2026-09-24/2026-09-24T03-00-38+01-00-canonical.json.
+CHECKPOINT CLASS: SCHEDULED_RESEARCH_STARTED_RECOVERED
+WORK MODE: MATH
+INSPECTED PREDECESSOR: 78ebcfd9f80ec8774d8999a08cdd8f7fd3840468.
+LAST VERIFIED RESULT: Mathematical state unchanged at recovery start: complete 32-row replay supports internal computer-assisted S<=14; source-union endpoint charge/private-source capacity survived regression; corrected demand-15/16 realizability model still leaves leading dense n18 survivors feasible. General theorem open.
+SESSION: Scheduled 04:00:38; launch-recovery watchdog actual entry 04:05:48; STARTED publication timestamp 04:06:51; primary launch had no durable STARTED record when checked. Same trigger only; immutable scheduler attribution UNVERIFIED.
+VERIFIED FORWARD SPAN: 0m00s at STARTED publication.
+SESSION RESULT: ACTIVE_RECOVERED; +5-minute STARTED target MISSED; no duplicate credit.
+SUBSTANTIVE UNITS: 0.
+CANONICAL RECORD: project/research/session_logs/2026-09-24/2026-09-24T04-00-38+01-00-canonical.json.
 UNPRESERVED WORK: None.
+DEFERRED ADMIN: None.
 NEXT ACTION: Add explicit C_i overlap/private-source variables to the demand-15/16 realizability model and attack leading dense survivors; do not substitute further scalar enumeration for graph realizability.
 MANDATORY CONSTRAINTS: Internal evidence only; S<=14 remains computer-assisted; equality only through S<=8; n16 range 1-200 and suffix beyond 3200 remain open; forbidden claims and balanced-bipartite/X3 controls unchanged; general theorem open.
 <!-- CURRENT-STATUS:END -->
