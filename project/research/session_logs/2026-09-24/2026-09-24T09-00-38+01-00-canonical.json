@@ -27,6 +27,12 @@
       "stop": "2026-09-24T09:15:44+01:00",
       "seconds": 35,
       "unit": "derive root-edge singleton-witness and deficit obstruction excluding n19 Delta11 stable index1 intersection-one"
+    },
+    {
+      "start": "2026-09-24T09:28:04+01:00",
+      "stop": "2026-09-24T09:29:53+01:00",
+      "seconds": 109,
+      "unit": "derive and adversarially case-check graph-level root-witness obstruction excluding n19 Delta11 stable index2 intersection-one"
     }
   ],
   "forward_research_stop": "PENDING",
@@ -34,13 +40,17 @@
   "preservation_complete": "PENDING",
   "final_report_time": "PENDING",
   "wall_clock_span_to_preservation_complete": "PENDING",
-  "verified_forward_research_span": "00:00:35",
+  "verified_forward_research_span": "00:02:24",
   "preservation_span": "PENDING",
-  "substantive_unit_count": 1,
+  "substantive_unit_count": 2,
   "timestamped_unit_ledger": [
     {
       "completed_at": "2026-09-24T09:15:44+01:00",
       "unit": "Stable index1 intersection-one is excluded: one-use forces a rigid B pattern; criticality of root edges 01 and 02 forces distinct A vertices with singleton B-neighbourhoods and deficit at least4 each; exact-star inequalities force at least23 additional deficit, giving D>=31>27. Internal proof conditional on audited bridge/star premises."
+    },
+    {
+      "completed_at": "2026-09-24T09:29:53+01:00",
+      "unit": "Stable index2 intersection-one is excluded by exhaustive human case split on the unique omitted T1 endpoint and root-edge criticality. Most branches force two singleton-B A witnesses, whose capacity plus exact-star bounds gives D>=29; the sole one-singleton hard subcase has forced B sparsity and gives D>=28. Internal proof conditional on audited bridge/source/star premises."
     }
   ],
   "early_stop_check_time": "PENDING",
@@ -52,14 +62,17 @@
   "compliance_status": "ACTIVE_RECOVERY",
   "infrastructure_failures": [
     "Primary scheduled launch had no durable STARTED record by watchdog invocation at 09:06:55 BST.",
-    "The first substantive artifact commit did not include CURRENT_STATE in the same commit; synchronization is being repaired immediately and no mathematical claim is promoted on that process defect."
+    "Substantive artifact commits could not be made atomically with CURRENT_STATE through the available single-file contents action; synchronization follows immediately and this process defect is retained rather than hidden."
   ],
   "commit_shas": [
     "cb0d16429c6c68f4e49bb7bf1aa5f0b4d0e4c591",
     "c729b59c8afb0bee0af8367d28dcbab57640f1f1",
-    "188c56f04a30a757e4bc5982b945f4b638f894b7"
+    "188c56f04a30a757e4bc5982b945f4b638f894b7",
+    "660aa904a27d47e61a209503bac75cf5f220d4a6",
+    "f7f62079cd4e00497014d47b392412de089f3df1",
+    "63d0845eb8409e4542868a580e9db6a993b4a9ca"
   ],
-  "live_unfinished_line": "Stable index1 intersection-one is internally excluded by the root-edge witness deficit obstruction. Next bounded target: stable index2 intersection-one; preserve UNKNOWN honestly if no obstruction is found.",
+  "live_unfinished_line": "Stable indices1 and2 intersection-one are now internally excluded; together with prior disjoint/index3 results the first three leading two-label survivors are eliminated. Next inspect the next abstract survivor for generalization of the root-edge singleton-witness mechanism; do not claim n19 Delta11 row closure.",
   "historical_fragments": [],
   "run_kind": "SCHEDULED_RESEARCH_RECOVERED",
   "duplicate_credit": false
