@@ -38,6 +38,18 @@
       "stop": "2026-09-24T06:14:40+01:00",
       "seconds": 86,
       "unit": "connect private-source antichain to common-C 555 survivor and audit tuple-only transfer scope"
+    },
+    {
+      "start": "2026-09-24T06:16:52+01:00",
+      "stop": "2026-09-24T06:18:17+01:00",
+      "seconds": 85,
+      "unit": "derive 555 deficit-budget rigidity and degree-completion contradiction"
+    },
+    {
+      "start": "2026-09-24T06:18:17+01:00",
+      "stop": "2026-09-24T06:19:25+01:00",
+      "seconds": 68,
+      "unit": "implement and replay exact four-geometry one-use degree-budget checker"
     }
   ],
   "forward_research_stop": "PENDING",
@@ -45,9 +57,9 @@
   "preservation_complete": "PENDING",
   "final_report_time": "PENDING",
   "wall_clock_span_to_preservation_complete": "PENDING",
-  "verified_forward_research_span": "4m17s",
+  "verified_forward_research_span": "6m50s",
   "preservation_span": "PENDING",
-  "substantive_unit_count": 3,
+  "substantive_unit_count": 5,
   "timestamped_unit_ledger": [
     {
       "completed_at": "2026-09-24T06:07:15+01:00",
@@ -60,6 +72,14 @@
     {
       "completed_at": "2026-09-24T06:14:40+01:00",
       "unit": "Directly excluded the recorded common-T/common-C (5,5,5) geometry by distinct physical-edge sources plus unique common neighbours; found that the tuple alone does not force this geometry and recorded a stable-index JSON/prose discrepancy."
+    },
+    {
+      "completed_at": "2026-09-24T06:18:17+01:00",
+      "unit": "Derived strict star +1 lemma and budget rigidity: D=16, all three centre deficits 5, one common right endpoint has deficit 1, all other vertices deficit 0; reduced 555 to four one-use membership geometries."
+    },
+    {
+      "completed_at": "2026-09-24T06:19:25+01:00",
+      "unit": "Exact checker found 8 source skeletons per remaining geometry; all allow only 17 B-edges, forcing complete U-B and exposing an empty-type B-degree shortfall. All four geometries excluded."
     }
   ],
   "early_stop_check_time": "PENDING",
@@ -76,8 +96,10 @@
     "ec69966755c3d2ca3b209f9ef34c91bc28594f80",
     "c3216d402358b573fb9d3e560c259be6a8f8edad",
     "b41b53d4f84f325af72d280b30985a808ce6081e",
-    "1d69178bf1f5ca33cf91f7f668581d470942e7ac"
+    "1d69178bf1f5ca33cf91f7f668581d470942e7ac",
+    "bfc46371495a3a44db7def236af1a7022981e281",
+    "4bba3a25e1658965850b6b3233e0cf1c8616d1af"
   ],
-  "live_unfinished_line": "Check the canonical stable-index generator and equality conditions: either prove common right types are forced or leave tuple-only transfer unverified and test the five alternative geometries.",
+  "live_unfinished_line": "Independently replay the strict +1/equality derivation and the four-geometry edge counts; then extract the theorem-facing reusable saturated-profile criterion.",
   "historical_fragments": []
 }
