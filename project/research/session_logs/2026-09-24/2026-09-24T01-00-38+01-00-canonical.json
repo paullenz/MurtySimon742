@@ -8,8 +8,8 @@
   "lateness_vs_trigger": "PT8M24S",
   "attribution_method": "launch_recovery_watchdog",
   "launch_status": "RECOVERED_LATE_PRIMARY_MISSING",
-  "started_record_published_at": "PENDING_REMOTE_CONFIRMATION",
-  "first_substantive_checkpoint_time": "PENDING",
+  "started_record_published_at": "2026-09-24T01:09:02+01:00 (commit 0e140d5b86d9d9ed27aa242432660020f90bcc6d; exact remote commit timestamp not independently extracted)",
+  "first_substantive_checkpoint_time": "2026-09-24T01:13:40+01:00",
   "segments": [
     {
       "segment_id": "recovery-1",
@@ -19,16 +19,32 @@
       "notes": "Launch-recovery watchdog recovered the SAME 01:00:38 trigger. No durable canonical STARTED record existed on main at recovery inspection; primary scheduled launch therefore lacked durable STARTED evidence. This is not a second session and grants no duplicate credit."
     }
   ],
-  "forward_research_intervals": [],
+  "forward_research_intervals": [
+    {
+      "start": "2026-09-24T01:12:36+01:00",
+      "stop": "2026-09-24T01:13:40+01:00",
+      "seconds": 64,
+      "kind": "mathematical_review_and_independent_LP_test",
+      "evidence": "project/research/general_n/2026-09-24-r12-support10-lp-relaxation-v1/ROW0_LP_RELAXATION_CHECK.md"
+    }
+  ],
   "forward_research_stop": "PENDING",
   "preservation_start": "PENDING",
   "preservation_complete": "PENDING",
   "final_report_time": "PENDING",
   "wall_clock_span_to_preservation_complete": "PENDING",
-  "verified_forward_research_span": "PT0S",
+  "verified_forward_research_span": "PT1M4S",
   "preservation_span": "PENDING",
-  "substantive_unit_count": 0,
-  "timestamped_unit_ledger": [],
+  "substantive_unit_count": 1,
+  "timestamped_unit_ledger": [
+    {
+      "unit": 1,
+      "start": "2026-09-24T01:12:36+01:00",
+      "stop": "2026-09-24T01:13:40+01:00",
+      "result": "Independently rebuilt the first r=12 support-ten helper system and observed that its continuous LP relaxation is infeasible in about 2 seconds, while the source-only LP is feasible. This points to an LP-relaxation reproduction route for all 32 helper timeouts. Internal evidence only; same HiGHS backend; S<=14 remains frozen.",
+      "commit": "3c1c38698bfd88480993e5b66b44701522cefc1b"
+    }
+  ],
   "early_stop_check_time": "PENDING",
   "early_stop_check_result": "PENDING",
   "stop_reason": "PENDING",
@@ -38,10 +54,14 @@
   "compliance_status": "ACTIVE_RECOVERED_LATE",
   "infrastructure_failures": [
     "Primary scheduled launch had no durable canonical STARTED record when inspected by the launch-recovery watchdog at 2026-09-24T01:07:17+01:00.",
-    "STARTED publication occurred after the trigger+5-minute target."
+    "STARTED publication occurred after the trigger+5-minute target.",
+    "Canonical STARTED and CURRENT_STATE could not be published atomically with the available GitHub connector; canonical STARTED was preserved first, so synchronized CURRENT_STATE lag is being reported rather than hidden."
   ],
-  "commit_shas": [],
-  "live_unfinished_line": "Resolve the 32 r=12 support-ten helper UNKNOWN/timeouts with a second solver/encoding or independently checkable infeasibility certificates; keep S<=14 frozen until decisive reproduction.",
+  "commit_shas": [
+    "0e140d5b86d9d9ed27aa242432660020f90bcc6d",
+    "3c1c38698bfd88480993e5b66b44701522cefc1b"
+  ],
+  "live_unfinished_line": "Regenerate all strict support-ten kernels from the committed orbit generator, recover the 32 source survivors, and test the independently encoded continuous helper LP across all 32; preserve rowwise outcomes and keep S<=14 frozen pending decisive reproducibility/certificates.",
   "historical_fragments": [],
   "run_kind": "SCHEDULED_RESEARCH_RECOVERY",
   "duplicate_credit": false
