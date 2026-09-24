@@ -27,6 +27,11 @@ def solve_aggregated(demands, xs, rho, Delta, time_limit=20):
     for i in range(k):
         add([(n_idx[p, z], 1) for p, J in enumerate(patterns)
              if i in J for z in levels], xs[i], xs[i])
+    # Each nonzero incidence pattern represents one physical endpoint t in
+    # B=N(v).  Distinct pattern copies are distinct vertices, so their total
+    # multiplicity cannot exceed |B|=Delta.
+    add([(n_idx[p, z], 1) for p in range(len(patterns)) for z in levels],
+        hi=Delta)
     max_count = max(xs)
     for p, J in enumerate(patterns):
         for z in levels:
@@ -77,7 +82,7 @@ def solve_aggregated(demands, xs, rho, Delta, time_limit=20):
         options={"time_limit": time_limit, "presolve": True},
     )
     payload = {
-        "model": "aggregated-incidence-pattern-source-union-v2",
+        "model": "aggregated-incidence-pattern-source-union-right-budget-v3",
         "demands": demands, "x": xs, "h": h, "rho": rho,
         "Delta": Delta, "status": int(result.status),
         "message": result.message,
