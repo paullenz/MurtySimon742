@@ -10,7 +10,7 @@
   "launch_status": "STARTED",
   "started_record_prepared_at": "2026-09-24T06:02:37+01:00",
   "started_record_published_at": "2026-09-24T06:03:58+01:00",
-  "first_substantive_checkpoint_time": "PENDING",
+  "first_substantive_checkpoint_time": "2026-09-24T06:07:15+01:00",
   "segments": [
     {
       "segment_id": "primary-2026-09-24T06:00:55+01:00",
@@ -20,16 +20,28 @@
       "notes": "Primary invocation; STARTED published before mathematics."
     }
   ],
-  "forward_research_intervals": [],
+  "forward_research_intervals": [
+    {
+      "start": "2026-09-24T06:06:26+01:00",
+      "stop": "2026-09-24T06:07:15+01:00",
+      "seconds": 49,
+      "unit": "derive root-edge certificate dichotomy and exact singleton/B-witness deficit charge"
+    }
+  ],
   "forward_research_stop": "PENDING",
   "preservation_start": "PENDING",
   "preservation_complete": "PENDING",
   "final_report_time": "PENDING",
   "wall_clock_span_to_preservation_complete": "PENDING",
-  "verified_forward_research_span": "0m00s",
+  "verified_forward_research_span": "0m49s",
   "preservation_span": "PENDING",
-  "substantive_unit_count": 0,
-  "timestamped_unit_ledger": [],
+  "substantive_unit_count": 1,
+  "timestamped_unit_ledger": [
+    {
+      "completed_at": "2026-09-24T06:07:15+01:00",
+      "unit": "Proved root-edge certificate charge: singleton A-witness costs rho+1+r_t; reused B-witness costs the exact union of its endpoint class and physical assigned sources beyond a."
+    }
+  ],
   "early_stop_check_time": "PENDING",
   "early_stop_check_result": "PENDING",
   "stop_reason": "PENDING",
@@ -40,7 +52,9 @@
   "infrastructure_failures": [
     "Direct git push fallback failed because no interactive GitHub credentials were available; connector publication used."
   ],
-  "commit_shas": [],
-  "live_unfinished_line": "Extract and test a reusable root-singleton witness deficit charge for demand-15/16 realizability.",
+  "commit_shas": [
+    "ec69966755c3d2ca3b209f9ef34c91bc28594f80"
+  ],
+  "live_unfinished_line": "Insert root-certificate branches into the explicit-source realizability model and test remaining leading profiles.",
   "historical_fragments": []
 }
