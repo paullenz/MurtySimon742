@@ -27,7 +27,13 @@
       "start": "2026-09-24T04:09:13+01:00",
       "stop": "2026-09-24T04:09:38+01:00",
       "seconds": 25,
-      "unit": "Built a joint explicit C_i membership-count/private-source-capacity MILP and tested the five audited n=18 dense survivors; all five remain feasible with unchanged minimum deficits."
+      "unit": "FAILED_ROUTE: first explicit C_i set-count experiment used the wrong cardinality convention |C_i|=h_i; preserved then explicitly invalidated after checking the proved source-union lemma."
+    },
+    {
+      "start": "2026-09-24T04:12:03+01:00",
+      "stop": "2026-09-24T04:16:47+01:00",
+      "seconds": 284,
+      "unit": "Corrected to |C_i|=Delta-h_i, coupled C-membership, endpoint incidence and degree/source capacity in a joint B-vertex model, and isolated a direct singleton-source saturation contradiction eliminating the n=18 profile d=(8,7), x=(8,8)."
     }
   ],
   "forward_research_stop": "PENDING",
@@ -35,15 +41,22 @@
   "preservation_complete": "PENDING",
   "final_report_time": "PENDING",
   "wall_clock_span_to_preservation_complete": "PENDING",
-  "verified_forward_research_span": "PT25S",
+  "verified_forward_research_span": "PT5M9S",
   "preservation_span": "PENDING",
-  "substantive_unit_count": 1,
+  "substantive_unit_count": 2,
   "timestamped_unit_ledger": [
     {
       "unit": 1,
       "start": "2026-09-24T04:09:13+01:00",
       "complete": "2026-09-24T04:09:38+01:00",
-      "result": "Introduced global integer membership counts c_K for the C_i subsets of B and enforced sum_z n_{J,z} <= (Delta-2) P_i(J) using private-to-J source counts. The five audited n=18,Delta=10 profiles remain feasible at deficits 17,16,17,18,16 respectively, so coarse explicit-overlap capacity is not the missing graph-realizability obstruction.",
+      "result": "FAILED_ROUTE: initial explicit set-count model incorrectly used |C_i|=h_i. It is preserved for audit only and supplies no mathematical evidence.",
+      "evidence": "project/research/general_n/2026-09-24-demand15-explicit-C-v1/EXPLICIT_C_CAPACITY_DIAGNOSTIC.md"
+    },
+    {
+      "unit": 2,
+      "start": "2026-09-24T04:12:03+01:00",
+      "complete": "2026-09-24T04:16:47+01:00",
+      "result": "Using the correct |C_i|=Delta-h_i and the graph facts K cap I_t=empty, distinct incoming assigned sources, globally shared source-edge capacity and one-use physical edges, the joint necessary-condition MILP makes d=(8,7),x=(8,8),h=(8,9) infeasible while the other four audited leading n18 profiles remain feasible. A direct proof is extracted: |C_1|=1 and x_1=Delta-2 force the unique source to use eight assigned edges; shared-endpoint privacy puts it outside C_0, x_0=|B\\C_0| forces it to be a label-0 endpoint, and its extra incoming assigned edge yields degree at least 11>Delta=10.",
       "evidence": "project/research/general_n/2026-09-24-demand15-explicit-C-v1/EXPLICIT_C_CAPACITY_DIAGNOSTIC.md"
     }
   ],
@@ -63,9 +76,12 @@
   "commit_shas": [
     "fc7bcacaad89ee733b8a5e7523e3182f16820652",
     "b87956568a0df11a48dbddee6d14c22619220aa9",
-    "bc7fd5dec9519cdf9da89b289ec41b41c2633389"
+    "bc7fd5dec9519cdf9da89b289ec41b41c2633389",
+    "ee26400de892b55ba269148e8f971717c0a0dd98",
+    "fd2a9b1da444e5dca32bb10ec112596632cdc6b0",
+    "c1b67164065cf3b1cf26f54c7cd6eb9878c34976"
   ],
-  "live_unfinished_line": "Coarse global C_i-overlap/private-source capacity leaves all five leading dense n18 profiles feasible. Next bounded strengthening: degree-weighted source capacities or explicit source-to-endpoint incidence/degree consistency.",
+  "live_unfinished_line": "Corrected explicit-C joint graph model closes one of five audited dense n18 profiles by a direct singleton-source saturation lemma. Four profiles remain: (8,7), (8,6,1), (8,5,2), (5,5,5). Next attack simple-graph/self-incidence and shared source-capacity restrictions on their joint geometries.",
   "historical_fragments": [],
   "research_target": "Independent Erdős #742 / Murty–Simon proof via complement/residual/Hall/profile/realizability route; external e+disj+X proof is benchmark only.",
   "trust_limits": [
