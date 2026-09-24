@@ -18,10 +18,19 @@ from scipy.sparse import csc_matrix, vstack
 ROOT = Path(__file__).resolve().parent / "repo06"
 PACKAGE = ROOT / "project/research/general_n/2026-09-22-independent-742-r12-quotient"
 TARGETS = {362, 363, 437, 438, 451, 455, 1494, 3755, 3758, 4663, 4664, 4665, 4682}
-SOURCE_INDICES = [355, 359, 362, 363, 434, 437, 438, 451, 452, 455,
-                  1196, 1202, 1208, 1209, 1390, 1393, 1396, 1397, 1493,
-                  1494, 1497, 3753, 3755, 3758, 3759, 3790, 3791, 4663,
-                  4664, 4665, 4682, 4683]
+SOURCE_IDENTITIES = {
+    355:(5179456,0,11,19), 359:(5179456,0,11,67), 362:(5179456,0,11,81),
+    363:(5179456,0,11,82), 434:(5179456,0,67,131), 437:(5179456,0,67,137),
+    438:(5179456,0,67,138), 451:(5179456,0,73,145), 452:(5179456,0,73,146),
+    455:(5179456,0,74,145), 1196:(5670976,0,19,35), 1202:(5670976,0,19,67),
+    1208:(5670976,0,19,97), 1209:(5670976,0,19,98), 1390:(5670976,0,67,131),
+    1393:(5670976,0,67,137), 1396:(5670976,0,67,145), 1397:(5670976,0,67,146),
+    1493:(5670976,0,97,145), 1494:(5670976,0,97,146), 1497:(5670976,0,98,145),
+    3753:(15400961,0,7,11), 3755:(15400961,0,7,35), 3758:(15400961,0,7,67),
+    3759:(15400961,0,7,73), 3790:(15400961,0,37,73), 3791:(15400961,0,37,74),
+    4663:(48373761,0,7,11), 4664:(48373761,0,7,19), 4665:(48373761,0,7,25),
+    4682:(48373761,0,21,41), 4683:(48373761,0,21,42),
+}
 
 
 def input_rows():
@@ -30,8 +39,10 @@ def input_rows():
         path = PACKAGE / f"r12_support10_case1_source_chunk{shard}.json"
         for row in json.loads(path.read_text())["feasible_rows"]:
             rows.append(dict(row, shard=shard))
-    assert len(rows) == len(SOURCE_INDICES)
-    return {index: row for index, row in zip(SOURCE_INDICES, rows)}
+    by_identity = {(r["unit_graph"], r["heavy_edge"], r["a_mask"], r["b_mask"]): r
+                   for r in rows}
+    assert len(rows) == len(SOURCE_IDENTITIES) == len(by_identity)
+    return {index: by_identity[identity] for index, identity in SOURCE_IDENTITIES.items()}
 
 
 def build(row):
