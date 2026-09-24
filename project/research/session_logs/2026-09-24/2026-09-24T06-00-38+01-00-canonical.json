@@ -74,6 +74,12 @@
       "stop": "2026-09-24T06:30:53+01:00",
       "seconds": 270,
       "unit": "implement stable-index exact-star screen and close n18 suffix 39,251 through 40,250 in four exact shards"
+    },
+    {
+      "start": "2026-09-24T06:31:47+01:00",
+      "stop": "2026-09-24T06:39:09+01:00",
+      "seconds": 442,
+      "unit": "close n18 exact-small-star stable-index suffix 40,251 through 42,250 in four exact shards"
     }
   ],
   "forward_research_stop": "PENDING",
@@ -81,9 +87,9 @@
   "preservation_complete": "PENDING",
   "final_report_time": "PENDING",
   "wall_clock_span_to_preservation_complete": "PENDING",
-  "verified_forward_research_span": "14m34s",
+  "verified_forward_research_span": "21m56s",
   "preservation_span": "PENDING",
-  "substantive_unit_count": 9,
+  "substantive_unit_count": 10,
   "timestamped_unit_ledger": [
     {
       "completed_at": "2026-09-24T06:07:15+01:00",
@@ -120,6 +126,10 @@
     {
       "completed_at": "2026-09-24T06:30:53+01:00",
       "unit": "Exact v4 replay closed stable indices 39,251--40,250 with zero survivors; closest certified gaps over Dmax16 were +12,+10,+11,+12. Contiguous internal prefix now reaches 40,250, with historical 20,851 independently excluded by star-five."
+    },
+    {
+      "completed_at": "2026-09-24T06:39:09+01:00",
+      "unit": "Four exact shards tested stable indices 40,251--42,250 with zero survivors; closest gaps were +11,+11,+8,+9. The internal contiguous prefix now reaches 42,250."
     }
   ],
   "early_stop_check_time": "PENDING",
@@ -145,8 +155,9 @@
     "22050973d8ffbdf86cfb6db4df7bae11dcd9f5a3",
     "d7e4ed593cb69e1c72e46ecf766924dd80d6a352",
     "90a4324a63f44baa9a6714be39b4adccd0503e2a",
-    "0df76c3145f58ea7c49b7e1bc74de648f8be8259"
+    "0df76c3145f58ea7c49b7e1bc74de648f8be8259",
+    "011d9e92764426aa32405eb6e61a16ed65fadf15"
   ],
-  "live_unfinished_line": "Continue the exact-small-star n18, Delta10 stable-index suffix from 40,251 in bounded sharded replays; preserve the next contiguous endpoint and any survivor.",
+  "live_unfinished_line": "Continue exact-small-star n18, Delta10 stable-index suffix from 42,251 in bounded shards; stop for preservation at 06:53:38.",
   "historical_fragments": []
 }
