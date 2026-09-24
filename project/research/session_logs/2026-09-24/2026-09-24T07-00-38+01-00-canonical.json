@@ -9,27 +9,39 @@
   "trigger_attribution": "current invocation title plus supplied hourly schedule; immutable delivery identity UNVERIFIED",
   "launch_status": "STARTED",
   "started_record_prepared_at": "2026-09-24T07:02:36+01:00",
-  "started_record_published_at": "PENDING_REMOTE_VERIFICATION",
-  "first_substantive_checkpoint_time": "PENDING",
+  "started_record_published_at": "2026-09-24T07:02:39+01:00",
+  "first_substantive_checkpoint_time": "2026-09-24T07:03:56+01:00",
   "segments": [
     {
       "segment_id": "primary-2026-09-24T07:00:38+01:00",
       "actual_start": "2026-09-24T07:00:38+01:00",
       "actual_stop": "PENDING",
       "role": "forward_research",
-      "notes": "Primary invocation; STARTED prepared before mathematics."
+      "notes": "Primary invocation; STARTED atomically published before mathematics."
     }
   ],
-  "forward_research_intervals": [],
+  "forward_research_intervals": [
+    {
+      "start": "2026-09-24T07:03:05+01:00",
+      "stop": "2026-09-24T07:03:56+01:00",
+      "seconds": 51,
+      "unit": "close n18 exact-small-star stable indices 44,351 through44,450 in four exact shards"
+    }
+  ],
   "forward_research_stop": "PENDING",
   "preservation_start": "PENDING",
   "preservation_complete": "PENDING",
   "final_report_time": "PENDING",
   "wall_clock_span_to_preservation_complete": "PENDING",
-  "verified_forward_research_span": "0m00s",
+  "verified_forward_research_span": "0m51s",
   "preservation_span": "PENDING",
-  "substantive_unit_count": 0,
-  "timestamped_unit_ledger": [],
+  "substantive_unit_count": 1,
+  "timestamped_unit_ledger": [
+    {
+      "completed_at": "2026-09-24T07:03:56+01:00",
+      "unit": "Four v4 shards closed stable indices44,351--44,450 with zero survivors; closest gaps were +15,+14,+15,+16 overDmax16."
+    }
+  ],
   "early_stop_check_time": "PENDING",
   "early_stop_check_result": "PENDING",
   "stop_reason": "PENDING",
@@ -38,7 +50,9 @@
   "target_40m_met": "PENDING",
   "compliance_status": "ACTIVE",
   "infrastructure_failures": [],
-  "commit_shas": [],
-  "live_unfinished_line": "Resume exact-small-star n18, Delta10 stable-index suffix at 44,351; preserve any survivor and inspect its actual graph-realizability interface.",
+  "commit_shas": [
+    "c3094e0d9206281b3783755427633099d9ce4869"
+  ],
+  "live_unfinished_line": "Continue exact-small-star n18, Delta10 stable-index suffix from44,451 in bounded shards.",
   "historical_fragments": []
 }
