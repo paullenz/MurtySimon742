@@ -5,20 +5,19 @@ Canonical repository: `paullenz/MurtySimon742`. Date: 24 September 2026.
 Active target: a genuinely independent proof of Erdős #742 / the Murty–Simon inequality e(G)<=floor(n^2/4), preferably with the equality characterization. Forward priority is the project’s own complement / residual / Hall / profile / realizability route, not a reconstruction of the external e+disj+X proof. The first focused session produced the internally checked candidate threshold `Delta>=250n/429`, shrinking the live strip to `n/2<Delta<250n/429`. The theorem and its inherited graph-to-profile spine remain candidate/internal-review mathematics. A 24-focused-session go/no-go gate applies. Prior eventual-D2C work remains preserved but is no longer the active forward objective.
 
 <!-- CURRENT-STATUS:START -->
-CHECKPOINT CLASS: SESSION_2026-09-24T02-00-38_STARTED_RECOVERY
+CHECKPOINT CLASS: SESSION_2026-09-24T03-00-38_STARTED
 WORK MODE: MATH
-INSPECTED PREDECESSOR: 7d9e54865856b2924af70264bf7b2f9e63b7e086.
-LAST VERIFIED RESULT: Mathematical state unchanged at launch: the r=12 support-ten universe independently regenerates to 6,386 strict kernels; source filtering leaves 32 exact source-feasible rows; helper-LP checks exclude 19 and leave 13 timeout/UNKNOWN. S<=14 remains frozen and the retained audited finite bound remains S<=13.
-SESSION: Scheduled 02:00:38; primary durable STARTED evidence was absent at watchdog inspection; same-trigger recovery actual start 02:04:44; canonical STARTED published 02:05:43, missing the +5-minute publication target by 5 seconds. Attribution method launch_recovery_watchdog. No duplicate session or extra credit.
-VERIFIED FORWARD SPAN: 0m00s at launch checkpoint; mathematics not yet begun.
-SESSION RESULT: ACTIVE_RECOVERED; target pending.
-SUBSTANTIVE UNITS: 0. Focused-session counter remains 6/24 pending a complete qualifying session.
-CANONICAL RECORD: project/research/session_logs/2026-09-24/2026-09-24T02-00-38+01-00-canonical.json.
+INSPECTED PREDECESSOR: 8ae17da3dc130a11ed2c7d05bf526bf0ec6887fa.
+LAST VERIFIED RESULT: The r=12 support-ten universe independently regenerates to 6,386 strict kernels; source filtering leaves 32 exact source-feasible rows. Fresh helper-LP work decisively excludes 19 rows and leaves 13 timeout/UNKNOWN. A later report says the 13 were excluded, but its fresh implementation/certificates are not preserved. S<=14 remains frozen.
+SESSION: Scheduled 03:00:38; actual entry 03:02:57; STARTED prepared 03:03:11; cutoff 03:53:38; hard close 03:59:38. Immutable delivery identity UNVERIFIED.
+VERIFIED FORWARD SPAN: 0m00s at launch.
+SESSION RESULT: ACTIVE; 40-minute target PENDING.
+SUBSTANTIVE UNITS: 0. Focused-session counter remains 6/24 pending completion.
+CANONICAL RECORD: project/research/session_logs/2026-09-24/2026-09-24T03-00-38+01-00-canonical.json.
 UNPRESERVED WORK: None.
-DEFERRED ADMIN: None.
-FAILURES: Primary scheduled launch had no durable STARTED record; recovered STARTED publication was 5 seconds outside the +5-minute aim.
-NEXT ACTION: Resolve the 13 helper-LP timeout rows with an independent solver/encoding or independently checkable infeasibility certificates. Keep S<=14 frozen until all 13 are decisive.
-MANDATORY CONSTRAINTS: Internal evidence only; abstract/profile feasibility is not graph realizability; retained finite bound S<=13 and equality only through S<=8; unrestricted crossed-supplement injectivity and x_i<=n-Delta-1 forbidden; balanced complete-bipartite and X_3 controls retained; external e+disj+X core not imported; general theorem open.
+DEFERRED ADMIN: Finalize stale 02:00 telemetry after current forward work; do not infer its missing boundaries.
+NEXT ACTION: Independently reconstruct and replay the helper-LP constraints for the 13 former timeout rows, or produce independently checkable infeasibility certificates.
+MANDATORY CONSTRAINTS: Internal evidence only; S<=14 frozen until all 13 rows are decisive; retained finite bound S<=13 and equality only through S<=8; abstract/profile feasibility is not graph realizability; unrestricted crossed-supplement injectivity and x_i<=n-Delta-1 forbidden; balanced complete-bipartite and X_3 controls retained; external e+disj+X core not imported; general theorem open.
 <!-- CURRENT-STATUS:END -->
 
 ## Latest adversarial audit - 24 September 2026
