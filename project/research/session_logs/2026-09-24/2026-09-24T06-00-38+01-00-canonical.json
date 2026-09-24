@@ -32,6 +32,12 @@
       "stop": "2026-09-24T06:10:43+01:00",
       "seconds": 122,
       "unit": "classify saturated 555 membership vectors and exhaust forced-skeleton root-certificate charges"
+    },
+    {
+      "start": "2026-09-24T06:13:14+01:00",
+      "stop": "2026-09-24T06:14:40+01:00",
+      "seconds": 86,
+      "unit": "connect private-source antichain to common-C 555 survivor and audit tuple-only transfer scope"
     }
   ],
   "forward_research_stop": "PENDING",
@@ -39,9 +45,9 @@
   "preservation_complete": "PENDING",
   "final_report_time": "PENDING",
   "wall_clock_span_to_preservation_complete": "PENDING",
-  "verified_forward_research_span": "2m51s",
+  "verified_forward_research_span": "4m17s",
   "preservation_span": "PENDING",
-  "substantive_unit_count": 2,
+  "substantive_unit_count": 3,
   "timestamped_unit_ledger": [
     {
       "completed_at": "2026-09-24T06:07:15+01:00",
@@ -50,6 +56,10 @@
     {
       "completed_at": "2026-09-24T06:10:43+01:00",
       "unit": "Exact saturated (5,5,5) classification: five membership vectors; one forces singleton charge 3, while four admit zero-charge B-witness routing, proving the root-charge lemma alone does not rederive the audited SAT exclusion."
+    },
+    {
+      "completed_at": "2026-09-24T06:14:40+01:00",
+      "unit": "Directly excluded the recorded common-T/common-C (5,5,5) geometry by distinct physical-edge sources plus unique common neighbours; found that the tuple alone does not force this geometry and recorded a stable-index JSON/prose discrepancy."
     }
   ],
   "early_stop_check_time": "PENDING",
@@ -65,8 +75,9 @@
   "commit_shas": [
     "ec69966755c3d2ca3b209f9ef34c91bc28594f80",
     "c3216d402358b573fb9d3e560c259be6a8f8edad",
-    "b41b53d4f84f325af72d280b30985a808ce6081e"
+    "b41b53d4f84f325af72d280b30985a808ce6081e",
+    "1d69178bf1f5ca33cf91f7f668581d470942e7ac"
   ],
-  "live_unfinished_line": "Use the four zero-charge 555 controls to identify the missing full-graph adjacency/common-neighbour constraint, then test it as a bounded strengthening.",
+  "live_unfinished_line": "Check the canonical stable-index generator and equality conditions: either prove common right types are forced or leave tuple-only transfer unverified and test the five alternative geometries.",
   "historical_fragments": []
 }
