@@ -12,7 +12,7 @@
   "attribution_ambiguity": "UNVERIFIED immutable scheduler identity; same-hour trigger attribution follows watchdog contract",
   "launch_status": "RECOVERED_PRIMARY_MISSING_STARTED",
   "started_record_published_at": "2026-09-24T04:06:51+01:00",
-  "first_substantive_checkpoint_time": "PENDING",
+  "first_substantive_checkpoint_time": "2026-09-24T04:10:14+01:00",
   "segments": [
     {
       "segment_id": "launch_recovery_watchdog-1",
@@ -22,16 +22,31 @@
       "notes": "Recovered the SAME 04:00:38 trigger after no durable STARTED evidence for the primary launch. No duplicate session or credit."
     }
   ],
-  "forward_research_intervals": [],
+  "forward_research_intervals": [
+    {
+      "start": "2026-09-24T04:09:13+01:00",
+      "stop": "2026-09-24T04:09:38+01:00",
+      "seconds": 25,
+      "unit": "Built a joint explicit C_i membership-count/private-source-capacity MILP and tested the five audited n=18 dense survivors; all five remain feasible with unchanged minimum deficits."
+    }
+  ],
   "forward_research_stop": "PENDING",
   "preservation_start": "PENDING",
   "preservation_complete": "PENDING",
   "final_report_time": "PENDING",
   "wall_clock_span_to_preservation_complete": "PENDING",
-  "verified_forward_research_span": "PT0S",
+  "verified_forward_research_span": "PT25S",
   "preservation_span": "PENDING",
-  "substantive_unit_count": 0,
-  "timestamped_unit_ledger": [],
+  "substantive_unit_count": 1,
+  "timestamped_unit_ledger": [
+    {
+      "unit": 1,
+      "start": "2026-09-24T04:09:13+01:00",
+      "complete": "2026-09-24T04:09:38+01:00",
+      "result": "Introduced global integer membership counts c_K for the C_i subsets of B and enforced sum_z n_{J,z} <= (Delta-2) P_i(J) using private-to-J source counts. The five audited n=18,Delta=10 profiles remain feasible at deficits 17,16,17,18,16 respectively, so coarse explicit-overlap capacity is not the missing graph-realizability obstruction.",
+      "evidence": "project/research/general_n/2026-09-24-demand15-explicit-C-v1/EXPLICIT_C_CAPACITY_DIAGNOSTIC.md"
+    }
+  ],
   "early_stop_check_time": "PENDING",
   "early_stop_check_result": "PENDING",
   "stop_reason": "PENDING",
@@ -45,8 +60,12 @@
     "Primary scheduled launch missing durable STARTED record by watchdog entry.",
     "STARTED publication target trigger+5m was missed: recovery actual start was 5m10s after trigger; STARTED publication timestamp 6m13s after trigger."
   ],
-  "commit_shas": [],
-  "live_unfinished_line": "NEXT ACTION from predecessor: add explicit C_i overlap/private-source variables to demand-15/16 realizability model and attack leading dense survivors; preserve graph-realizability trust boundary.",
+  "commit_shas": [
+    "fc7bcacaad89ee733b8a5e7523e3182f16820652",
+    "b87956568a0df11a48dbddee6d14c22619220aa9",
+    "bc7fd5dec9519cdf9da89b289ec41b41c2633389"
+  ],
+  "live_unfinished_line": "Coarse global C_i-overlap/private-source capacity leaves all five leading dense n18 profiles feasible. Next bounded strengthening: degree-weighted source capacities or explicit source-to-endpoint incidence/degree consistency.",
   "historical_fragments": [],
   "research_target": "Independent Erdős #742 / Murty–Simon proof via complement/residual/Hall/profile/realizability route; external e+disj+X proof is benchmark only.",
   "trust_limits": [
