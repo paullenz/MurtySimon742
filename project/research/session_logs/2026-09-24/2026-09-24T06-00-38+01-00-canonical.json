@@ -50,6 +50,18 @@
       "stop": "2026-09-24T06:19:25+01:00",
       "seconds": 68,
       "unit": "implement and replay exact four-geometry one-use degree-budget checker"
+    },
+    {
+      "start": "2026-09-24T06:20:09+01:00",
+      "stop": "2026-09-24T06:21:17+01:00",
+      "seconds": 68,
+      "unit": "independently enumerate exact star-certificate slack for witness sets of sizes 3 through 7"
+    },
+    {
+      "start": "2026-09-24T06:21:17+01:00",
+      "stop": "2026-09-24T06:22:08+01:00",
+      "seconds": 51,
+      "unit": "implement labelled set-cover DP and derive direct star-five exclusion of 555"
     }
   ],
   "forward_research_stop": "PENDING",
@@ -57,9 +69,9 @@
   "preservation_complete": "PENDING",
   "final_report_time": "PENDING",
   "wall_clock_span_to_preservation_complete": "PENDING",
-  "verified_forward_research_span": "6m50s",
+  "verified_forward_research_span": "8m49s",
   "preservation_span": "PENDING",
-  "substantive_unit_count": 5,
+  "substantive_unit_count": 7,
   "timestamped_unit_ledger": [
     {
       "completed_at": "2026-09-24T06:07:15+01:00",
@@ -80,6 +92,14 @@
     {
       "completed_at": "2026-09-24T06:19:25+01:00",
       "unit": "Exact checker found 8 source skeletons per remaining geometry; all allow only 17 B-edges, forcing complete U-B and exposing an empty-type B-degree shortfall. All four geometries excluded."
+    },
+    {
+      "completed_at": "2026-09-24T06:21:17+01:00",
+      "unit": "Independent Graph Atlas/MILP replay found exact minimum star slack 4,8,14,21,30 for x=3..7; x=5 floor 14 is three stronger than the generic +1 bound."
+    },
+    {
+      "completed_at": "2026-09-24T06:22:08+01:00",
+      "unit": "Independent labelled DP replay over all 1,024 five-vertex witness graphs confirmed minimum slack 14; summing three star-five inequalities gives 87<=3D+2C<=78, excluding tuple 555 without geometry or full D2C SAT."
     }
   ],
   "early_stop_check_time": "PENDING",
@@ -98,8 +118,10 @@
     "b41b53d4f84f325af72d280b30985a808ce6081e",
     "1d69178bf1f5ca33cf91f7f668581d470942e7ac",
     "bfc46371495a3a44db7def236af1a7022981e281",
-    "4bba3a25e1658965850b6b3233e0cf1c8616d1af"
+    "4bba3a25e1658965850b6b3233e0cf1c8616d1af",
+    "aa57180c581da303634f5247f579301b386ff3e3",
+    "2a632b17665047e788e75442435592f9b41c9c4c"
   ],
-  "live_unfinished_line": "Independently replay the strict +1/equality derivation and the four-geometry edge counts; then extract the theorem-facing reusable saturated-profile criterion.",
+  "live_unfinished_line": "Use exact small-star slack values 4,8,14,21,30 to rescreen the bounded demand-15/16 rows and identify which abstract survivors disappear.",
   "historical_fragments": []
 }
