@@ -54,3 +54,16 @@ criticality formula with literal edge deletion on every diameter-two Graph
 Atlas graph. It checked 5,553 edges in 457 graphs (22 D2C graphs), with zero
 mismatches. This validates the generic criticality equivalence but is still
 not an independent second encoding of the full fixed-profile UNSAT result.
+
+### Independent direct-deletion replay
+
+`realize_n19_delta11_index3_direct_z3.py` rebuilds the graph and source model
+with separate variables and replaces the criticality characterization by its
+literal definition: after deleting each present edge, some vertex pair has
+neither a direct edge nor any two-step path. It also returns `unsat`.
+
+Thus two distinct criticality encodings agree that stable index 3 is not
+graph-realizable, and the generic characterization has an independent
+5,553-edge regression. This promotes the fixed-profile exclusion to internal
+computer-assisted status. It still excludes only index 3, not the many other
+abstract survivors or the full row.

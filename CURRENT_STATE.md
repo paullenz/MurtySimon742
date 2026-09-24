@@ -5,20 +5,20 @@ Canonical repository: `paullenz/MurtySimon742`. Date: 24 September 2026.
 Active target: a genuinely independent proof of Erdős #742 / the Murty–Simon inequality e(G)<=floor(n^2/4), preferably with the equality characterization. Forward priority is the project’s own complement / residual / Hall / profile / realizability route, not a reconstruction of the external e+disj+X proof. The first focused session produced the internally checked candidate threshold `Delta>=250n/429`, shrinking the live strip to `n/2<Delta<250n/429`. The theorem and its inherited graph-to-profile spine remain candidate/internal-review mathematics. A 24-focused-session go/no-go gate applies. Prior eventual-D2C work remains preserved but is no longer the active forward objective.
 
 <!-- CURRENT-STATUS:START -->
-CHECKPOINT CLASS: N19_DELTA11_INDEX3_ENCODING_VALIDATED_PARTIAL
+CHECKPOINT CLASS: N19_DELTA11_INDEX3_DUAL_UNSAT
 WORK MODE: MATH
-INSPECTED PREDECESSOR: 8d145a5a0148f1efc8e5a41f6dc0828ab619c9cc.
-LAST VERIFIED RESULT: Index3 source-set normalization is proved: common assigned endpoints plus private-source incomparability force the size2 and singleton C-sets disjoint. The D2C criticality characterization matched literal edge deletion on5,553 edges across457 diameter-two Graph Atlas graphs, zero mismatches. Fixed-profile Z3 UNSAT remains internal/unpromoted pending an independent full encoding.
+INSPECTED PREDECESSOR: 7c9e58453872c297ccea6cf060f3de583553625f.
+LAST VERIFIED RESULT: n19,Delta11 stable index3 d=(9,6),x=(9,8),h=(9,10),D<=27 is UNSAT in two exact graph models: one uses the unique-common criticality characterization, the other literal edge deletion. The characterization also has zero mismatches on5,553 Graph Atlas edges. Fixed-profile exclusion is internal computer-assisted; other row survivors remain open.
 SESSION: Scheduled trigger08:00:38; actual entry08:00:52; STARTED published08:01:11; first checkpoint08:02:33; cutoff08:53:38; hard close08:59:38. Immutable scheduler attribution UNVERIFIED.
-VERIFIED FORWARD INTERVALS: 08:01:54--08:02:33; 08:03:31--08:06:11; 08:06:59--08:09:56; 08:11:04--08:11:21; 08:12:13--08:14:23; 08:15:17--08:15:38; 08:16:35--08:19:23; 08:20:27--08:21:08 BST.
-VERIFIED FORWARD SPAN: 12m33s.
+VERIFIED FORWARD INTERVALS: 08:01:54--08:02:33; 08:03:31--08:06:11; 08:06:59--08:09:56; 08:11:04--08:11:21; 08:12:13--08:14:23; 08:15:17--08:15:38; 08:16:35--08:19:23; 08:20:27--08:21:08; 08:22:01--08:23:38 BST.
+VERIFIED FORWARD SPAN: 14m10s.
 SESSION RESULT: ACTIVE; 40-minute target pending.
-SUBSTANTIVE UNITS: 8. Focused-session counter remains7/24 pending completion.
+SUBSTANTIVE UNITS: 9. Focused-session counter remains7/24 pending completion.
 CANONICAL RECORD: project/research/session_logs/2026-09-24/2026-09-24T08-00-38+01-00-canonical.json.
 UNPRESERVED WORK: None.
 DEFERRED ADMIN: Stable-index JSON/prose discrepancy remains historical audit metadata and is not blocking.
-NEXT ACTION: Independently encode direct edge deletion for index3 or isolate a human contradiction; do not promote one-model UNSAT.
-MANDATORY CONSTRAINTS: One fixed-profile UNSAT is not row closure or general theorem. S<=14 remains computer-assisted; equality only throughS<=8; balanced-bipartite/X3 controls unchanged.
+NEXT ACTION: Generalize exact graph realizability across leading n19,Delta11 survivors, grouped by fixed profile; do not infer row closure.
+MANDATORY CONSTRAINTS: One fixed-profile exclusion is not row closure or general theorem. S<=14 remains computer-assisted; equality only throughS<=8; balanced-bipartite/X3 controls unchanged.
 <!-- CURRENT-STATUS:END -->
 
 ## Latest adversarial audit - 24 September 2026
