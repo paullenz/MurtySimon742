@@ -3,10 +3,10 @@
 Canonical repository: `paullenz/MurtySimon742`. User-requested in-chat mathematics. Old research/recovery/audit schedules remain PAUSED; the local subscription worker is NOT DEPLOYED. Financial and health alerts are untouched. No services, paid computation or model/API execution lane were enabled.
 
 <!-- CURRENT-STATUS:START -->
-CHECKPOINT CLASS: RESIDUAL_PATH_AND_SCC_BLOCK_INTERNAL_PRE_EXHAUSTIVE
+CHECKPOINT CLASS: RESIDUAL_CERTIFICATE_FOCUSED_CHECKS_INTERNAL
 WORK MODE: MATH
-INSPECTED PREDECESSOR: b4a9a5196fc94d2930668eb6ba354fab37842782; first read at b61a0b59d3960b6a48c2c0e869667a843ef6b18c.
-LAST VERIFIED RESULT: Exact rational verifier accepts the frozen residual-path example, returning {1,2} at margin zero. A further internal hand proof extends persistence, confluence and the greatest-tight certificate to neutral deletion of full source projections of residual SCCs. The group-loss argument handles real quotas. Rule B subsumes P; neither is claimed complete. Exhaustive testing is pending at this checkpoint.
+INSPECTED PREDECESSOR: 0da29abf427cb43b8b187a77aa986002790f10e1; first read at b61a0b59d3960b6a48c2c0e869667a843ef6b18c.
+LAST VERIFIED RESULT: Path and full residual source-SCC block persistence/confluence proofs and exact verifier are implemented. Focused tests cover the frozen example, fractional quotas, multiple cut completions, and four independent path deletions (all 16 states / 32 transitions of that construction). All 4,112 source subsets of the four examples were calculated independently; 96 full cuts were compared on the three small examples. All 24 deliberately corrupt certificates were rejected. Full n=3 exhaustive replay has not yet run.
 EVIDENCE: project/papers/stratified-hall-mincut/residual-certificate-2026-09-27/PROOF.md. Predecessor handoff preserved at archive/status/2026-09-27-pre-residual-certificate-CURRENT_STATE.md; all prior evidence remains unchanged.
 UNPRESERVED WORK: None after this checkpoint is published.
 DEFERRED ADMIN: Reviewer-facing README refresh until tested result; unrelated repository administration.
