@@ -3,16 +3,16 @@
 Canonical repository: `paullenz/MurtySimon742`. User-requested in-chat mathematics. Old research/recovery/audit schedules remain PAUSED; the local subscription worker is NOT DEPLOYED. Financial and health alerts are untouched. No services, paid computation or model/API execution lane were enabled.
 
 <!-- CURRENT-STATUS:START -->
-CHECKPOINT CLASS: RESIDUAL_PATH_SCC_CERTIFICATES_INTERNAL_AND_SHARP_BOUNDARY
+CHECKPOINT CLASS: FORCED_COUNT_V3_FOCUSED_INTERNAL_PRE_EXHAUSTIVE
 WORK MODE: MATH
-INSPECTED PREDECESSOR: 29f7acb13003abeb5587c6448fa9721209a9f7fd; first read at b61a0b59d3960b6a48c2c0e869667a843ef6b18c.
-LAST VERIFIED RESULT: Path and residual SCC block rules have internal soundness, persistence and confluence proofs. Two overlapping exhaustive n=3 regimes of 46,656 instances each give old/path/block acceptances 33309/33609/33609 (integer) and 32292/32292/32430 (half-integer). Each regime checks all 373,248 source subsets and 2,985,984 full cuts, all reachable moves and exact-minimum restrictions. Zero discrepancies. Blocks still fail despite a greatest tight minimum on 552/126 instances: completeness is FALSE. A seeded 500-instance n=4..6 sample, 27 rejected corrupt certificates and an unsafe low-guard step are saved. A three-vertex SCC-only gain and a directional-dependence obstruction are diagnosed. A residual forced-count alternative is hand-proved sufficient but NOT implemented or included in these totals.
-EVIDENCE: project/papers/stratified-hall-mincut/residual-certificate-2026-09-27/README.md, PROOF.md, RESULTS.md, verify_residual.py, test_residual.py, diagnose_residual.py, VERIFICATION.json, SOURCE_HASHES.json and EVIDENCE.json.gz. Predecessor handoff preserved at archive/status/2026-09-27-pre-residual-certificate-CURRENT_STATE.md; all prior evidence remains unchanged.
-UNPRESERVED WORK: None after this checkpoint is published.
-DEFERRED ADMIN: Unrelated repository administration and literature comparison; no current mathematical evidence omitted.
-NEXT ACTION: Implement PROOF.md Section 9 in a new certificate version: permit the residual forced-source incoming count q_x(a)>P_x as an alternative to the deleted-block low-incidence guard; keep other conditions, replay identical independent domains, preserve the first remaining obstruction.
-TRUST BOUNDARY: Internal hand proof only; not external verification, formal verification, novelty clearance or a general Murty–Simon proof. No completeness claim. Chen full 1992 main condition remains uninspected.
-CONTROLS: X3, audit34854911792, equality and inherited certification controls unchanged. Schedules remain paused. No deployment, purchase, paid execution, financial/health alert changes, background-work promise or research-hour credit.
+INSPECTED PREDECESSOR: fc5d692113f62a55c91dacbca3a5b1a499f65cb1; main unchanged. CURRENT_STATE.md read first.
+LAST VERIFIED RESULT: Schema-3 exact verifier implements the disjunctive forced-count safeguard with a recomputed contributing-source set and strict count>P_x check. Full persistence, confluence and greatest-tight soundness proof is supplied. It repairs the saved three-vertex obstruction while rejecting the unsafe equality case. Focused checks cover 544 source subsets across five examples, 256 full cuts, and all 27 states/54 transitions of three independent two-step forced chains. Fifteen corrupt certificates and one unsafe nonstrict step are rejected. New exhaustive comparison pending.
+EVIDENCE: project/papers/stratified-hall-mincut/forced-count-2026-09-27/PROOF.md, verify_forced.py, test_forced.py and EVIDENCE.json.gz. Version 2 and earlier evidence remain unchanged; predecessor handoff archived at archive/status/2026-09-27-pre-forced-count-CURRENT_STATE.md.
+UNPRESERVED WORK: None after publication of this checkpoint.
+DEFERRED ADMIN: Reviewer-facing summary until exhaustive result; unrelated administration and literature comparison.
+NEXT ACTION: Run schema-3 comparisons on the same two exhaustive 46,656-instance n=3 domains and seeded 500-instance n=4..6 sample; preserve and diagnose the first remaining obstruction.
+TRUST BOUNDARY: Internal proofs and checks only; not external/formal verification, novelty clearance or a general Murty–Simon proof. No completeness claim. Chen full main condition remains uninspected.
+CONTROLS: X3, audit34854911792, equality and certification controls unchanged. No schedules, deployments, spending, paid execution, alert changes, background promises or research-hour credit.
 <!-- CURRENT-STATUS:END -->
 
 ## Preservation and inherited status
