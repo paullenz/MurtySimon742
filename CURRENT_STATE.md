@@ -1,19 +1,19 @@
-# Current state — local subscription-only worker prepared, 27 September 2026
+# Current state — Hall/min-cut reductions and saddle checkpoint, 27 September 2026
 
-Canonical repository: `paullenz/MurtySimon742`. The user authorised building a replacement worker, then explicitly ruled out additional spending. A bounded local Codex prototype has been prepared and tested offline. **It is not deployed or running.** The old hourly research, recovery and midnight-audit tasks remain paused. Financial and health alerts are untouched.
+Canonical repository: `paullenz/MurtySimon742`. This checkpoint is a user-requested in-chat mathematical continuation. The old hourly research, recovery and midnight-audit tasks remain paused. The offline subscription worker is not deployed or running. Financial and health alerts are untouched.
 
 <!-- CURRENT-STATUS:START -->
-CHECKPOINT CLASS: SUBSCRIPTION_ONLY_WORKER_PREPARED_OFFLINE_NOT_DEPLOYED
-WORK MODE: ADMIN
-INSPECTED PREDECESSOR: 1631a5f558dc7c4202bac91f7bee96c35c8de004.
-LAST VERIFIED RESULT: Mathematical status unchanged. Thirty offline tests pass for the local three-job Hall/min-cut reasoning pilot, including duplicate exclusion, supervisor-crash recovery, stop/timeout handling, stream integrity, API/credit rejection and restart revalidation. Worker and test source blobs match the tested hashes. No authenticated Codex request, live mathematical run, paid hosting, top-up or schedule was started.
-REVIEW EVIDENCE: project/operations/subscription_worker/README.md, worker.py, test_worker.py and ACCEPTANCE.json. All tests use a fake Codex backend; live account/client compatibility, sustained reliability and mathematical correctness are unverified.
-SESSION: User-requested infrastructure implementation only. No mathematical session duration, historical credit or focused-session credit added; inherited focused counter remains 7/24, not re-adjudicated.
-RESEARCH CADENCE: Old hourly programme PAUSED. Local pilot NOT DEPLOYED; generated settings default to disabled.
-UNPRESERVED WORK: None for the source, tests and structured acceptance evidence in this checkpoint after successful publication. The expanded instructions/full test logs are also supplied in the downloadable coordinating-chat bundle.
-DEFERRED ADMIN: Local installation, ChatGPT sign-in and account-owner verification of no auto-reload/no paid credits are required before activation. Missing credit metadata blocks launch. No cloud/API deployment or paid fallback is authorised. This first pilot has no shell, browsing, checker execution or automatic Git publication.
-NEXT ACTION: Do not revive the old schedules. Use the local setup instructions only on an existing user-controlled computer with a verified no-additional-charge path. Run the account preflight before any model turn. If billing or compatibility cannot be established, keep the pilot disabled.
-MANDATORY CONSTRAINTS: Budget for new services/credits is zero. Preserve all existing mathematical trust boundaries, equality controls, X3 and audit34854911792. Local candidate output is not a proof, external review or remote backup. Unknown/failed attempts are not silently retried or credited. Do not alter unrelated financial or health alerts.
+CHECKPOINT CLASS: HALL_REDUCTION_SADDLE_INTERNAL_PROOF_AND_EXACT_CHECKS
+WORK MODE: MATHEMATICS
+INSPECTED PREDECESSOR: e00989f1b47c78bfb8a133ef89ffc06cc73ba9fb.
+LAST VERIFIED RESULT: Internal consequences of the strengthened Hall closure theorem: capacity-permutation envelope and pure saddle; universal-dummy reduction from feasibility sufficiency to full deficit identity; explicit fixed-support exact-margin matrix reduction. A seven-vertex integral counterexample defeats unrestricted minimax even when every capacity placement is flow-optimal; disjoint copies give unbounded additive gaps. A solver-independent instance certificate and verifier are saved. No general Murty-Simon claim is promoted.
+REVIEW EVIDENCE: project/papers/stratified-hall-mincut/reduction-2026-09-27/REPORT.md, THEOREM_A.md, check_reductions.py, verify_certificate.py, RESULTS.json, PADDING_RESULTS.json, FANO_COMPACT.json, PROPER_CUT_CERTIFICATE.json and SHA256SUMS. Fresh checks: 33,552 eligible labelled instances; 52,056 instance-placement pairs; 416,448 payoff entries; 2,592 dummy instances; 764 matrix thresholds; 19 rejected certificate corruptions. Exact domains and non-additivity to earlier coverage are documented.
+SESSION: One user-triggered continuation. No uninterrupted-duration or human-hour claim; no historical session credit added. Inherited focused counter 7/24 is not re-adjudicated.
+RESEARCH CADENCE: Old hourly programme PAUSED. Local pilot NOT DEPLOYED. No schedule or service was activated; publication requests skip CI.
+PRESERVATION: Prior root handoff is archived byte-for-byte. The preceding closure proof is preserved byte-for-byte as THEOREM_A.md; its full earlier replay bundle remains in the coordinating chat, not wholly republished here. This session's reproducible source, result records and compact complete seven-vertex table are saved in the named checkpoint; expanded files and the prior bundle accompany the downloadable package.
+REMAINING LIMIT: Fulkerson-Chen-type complete-support criteria were compared through Berger's full text. Anstee 1983 was inspected at abstract level; Anstee 1982 and William Y. C. Chen 1992 only at extract/abstract level. Their specialised structural conditions have not been checked. Do not infer novelty or impossibility of an indirect reduction.
+NEXT MATHEMATICAL ACTION: Obtain the full main condition and sufficiency theorem from William Y. C. Chen 1992 (DOI 10.1016/0097-3165(92)90015-M), or the corresponding Anstee 1982 covering-matrix criterion. Map every hypothesis and derive U-feasibility sufficiency for the integer loopless pair-excluding nested class, or exhibit a specific failed hypothesis of that proposed reduction. The universal-dummy lemma then supplies the full deficit identity. Do not replace this with generic max-flow citations or more tiny-graph enumeration.
+MANDATORY CONSTRAINTS: Budget for new services/credits is zero. Do not revive schedules or deploy the worker. Preserve all existing mathematical trust boundaries, equality controls, X3 and audit34854911792. Internal proof and instance certificates are not external review or a general theorem for Murty-Simon. Unknown/failed work is not silently credited. Do not alter financial or health alerts.
 <!-- CURRENT-STATUS:END -->
 
 ## Inherited mathematical evidence map — unchanged from the 24 September review
@@ -30,6 +30,6 @@ MANDATORY CONSTRAINTS: Budget for new services/credits is zero. Preserve all exi
 
 ## Preservation and reports
 
-[Local worker source and setup](project/operations/subscription_worker/README.md) · [Offline acceptance record](project/operations/subscription_worker/ACCEPTANCE.json) · [24 September substantive review](project/reviews/substantive/2026-09-24/REPORT.md).
+[Current mathematical report](project/papers/stratified-hall-mincut/reduction-2026-09-27/REPORT.md) · [Checkpoint index](project/papers/stratified-hall-mincut/reduction-2026-09-27/README.md) · [Preceding root handoff](archive/status/2026-09-27-pre-hall-reduction-CURRENT_STATE.md) · [24 September substantive review](project/reviews/substantive/2026-09-24/REPORT.md).
 
-The full preceding live handoff is [byte-preserved](archive/status/2026-09-27-pre-local-worker-CURRENT_STATE.md). Its audit history, immutable checkpoints, preservation caveats and outstanding obligations remain available there and in the substantive review. PR #2 remains a changes-required draft, not merged by this task. n18 full-row replay, inherited universal premises, exact certificates and specialist review remain substantive obligations.
+The offline worker remains [prepared but disabled](project/operations/subscription_worker/README.md). Its 30 fake-backend tests are operational evidence only, not mathematical progress. PR #2 remains a changes-required draft, not merged by this task. n18 full-row replay, inherited universal premises, exact certificates and external specialist review remain substantive obligations. The Hall/min-cut side-result does not discharge those obligations.

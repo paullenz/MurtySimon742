@@ -1,0 +1,146 @@
+{
+  "certificate_result": {
+    "H": 1,
+    "U": 1,
+    "cut_size": 3,
+    "flow_value": 1,
+    "minimum_margin": -1,
+    "scope": "this labelled instance and its within-layer capacity permutations",
+    "status": "PASS"
+  },
+  "domain": {
+    "P_and_d_values": [
+      0,
+      1,
+      2
+    ],
+    "graphs": "all 64 labelled loopless directed supports; all Theorem A eligible instances",
+    "layers": [
+      [
+        0,
+        0,
+        0
+      ],
+      [
+        0,
+        0,
+        1
+      ]
+    ],
+    "n": 3
+  },
+  "dummy": {
+    "augmented_instances": 2592,
+    "hypothesis_preservations": 2160,
+    "source_subset_entries": 38880
+  },
+  "fano": {
+    "max_min_margin": -1,
+    "min_max_margin": 0,
+    "placements": 21,
+    "subsets_per_placement": 128
+  },
+  "ordered_record_sha256": "1fd72577bf8356f7a4ae9b6c0875be10250a9fb8436c1178a3062db1838c382b",
+  "prefix_counterexample": {
+    "P": [
+      1,
+      1,
+      1,
+      1
+    ],
+    "arcs": [
+      [
+        0,
+        1
+      ],
+      [
+        0,
+        2
+      ],
+      [
+        0,
+        3
+      ],
+      [
+        1,
+        0
+      ],
+      [
+        2,
+        0
+      ],
+      [
+        3,
+        0
+      ]
+    ],
+    "complete_off_diagonal_flow": 4,
+    "d": [
+      1,
+      1,
+      1,
+      1
+    ],
+    "fixed_support_flow": 2,
+    "layers": [
+      0,
+      0,
+      0,
+      0
+    ],
+    "obstruction_margin": -2,
+    "obstruction_source_set": [
+      1,
+      2,
+      3
+    ],
+    "prefix_H_margins": [
+      2,
+      2,
+      1,
+      0
+    ]
+  },
+  "proper_cut_example": {
+    "common_cut": [
+      2
+    ],
+    "original_flow": 3,
+    "original_margin": -1,
+    "swapped_flow": 2,
+    "swapped_margin_at_common_cut": -2
+  },
+  "rejected_corruptions": [
+    "wrong_value",
+    "duplicate_arc",
+    "duplicate_flow",
+    "forbidden_loop",
+    "boolean_capacity",
+    "negative_demand",
+    "dimension",
+    "unknown_schema",
+    "unknown_field",
+    "missing_field",
+    "bad_cut_index",
+    "wrong_cut",
+    "out_of_range_edge",
+    "flow_removed",
+    "duplicate_source",
+    "source_capacity_exceeded",
+    "receiver_capacity_exceeded",
+    "flow_outside_support",
+    "optimal_cut_but_positive_rearrangement_gap"
+  ],
+  "saddle_checks": {
+    "capacity_placements": 52056,
+    "deletions": 324,
+    "instances": 33552,
+    "nontrivial_flow_deficiencies": 18925,
+    "payoff_entries": 416448
+  },
+  "source_sha256": {
+    "check_reductions.py": "075b7fefa9aab9be6f7e3cc2e733dd0935a391089f409f16057825c39beae88e",
+    "verify_certificate.py": "84e10753e45d08928718914ed0afc4436631f0c8c267925ad338ba2ce5564600"
+  },
+  "status": "PASS"
+}

@@ -1,0 +1,12 @@
+{
+  "padding": {
+    "feasible_thresholds": 468,
+    "padded_matrices_examined": 711632,
+    "threshold_instances": 764
+  },
+  "source_sha256": {
+    "check_reductions.py": "075b7fefa9aab9be6f7e3cc2e733dd0935a391089f409f16057825c39beae88e",
+    "verify_certificate.py": "84e10753e45d08928718914ed0afc4436631f0c8c267925ad338ba2ce5564600"
+  },
+  "status": "PASS"
+}
