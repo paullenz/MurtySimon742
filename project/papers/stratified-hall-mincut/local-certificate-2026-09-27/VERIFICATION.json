@@ -1,0 +1,45 @@
+{
+  "accepted_terminal_oracle_discrepancies": 0,
+  "all_choice_terminal_discrepancies": 0,
+  "base_commit": "0321ba26f56442f57eb09d0c8c1c29fddcf04921",
+  "base_state_blob": "bd2510c150763bc2dc0c775b4f40618964632444",
+  "certificate_scope": "arbitrary loopless unit-support instances with successful local sequence; no general completeness claim",
+  "constraints": "No schedules, services, paid requests or financial/health alerts changed",
+  "final_source_replay": {
+    "scope": "full integer, rational, hostile, orders and limits modes; no partial timeouts",
+    "six_result_files_byte_identical": true
+  },
+  "hostile_rejections": 16,
+  "literature": "Chen full main condition not obtained; actual condition not adjudicated",
+  "python": "3.13.5",
+  "regimes": {
+    "INTEGER_RESULTS.json": {
+      "certificates_checked": 33309,
+      "certified_instances": 33309,
+      "certified_outside_wcd_rd": 24057,
+      "greatest_tight_exists_but_no_local_certificate": 852,
+      "instances": 46656,
+      "instances_with_nonempty_certificate": 5190,
+      "states": 55902,
+      "stuck_states": 13347,
+      "subset_records": 373248,
+      "transitions": 12594,
+      "wcd_rd_instances": 9252
+    },
+    "RATIONAL_RESULTS.json": {
+      "certificates_checked": 32292,
+      "certified_instances": 32292,
+      "certified_outside_wcd_rd": 23958,
+      "greatest_tight_exists_but_no_local_certificate": 264,
+      "instances": 46656,
+      "instances_with_nonempty_certificate": 6501,
+      "states": 59220,
+      "stuck_states": 14364,
+      "subset_records": 373248,
+      "transitions": 18168,
+      "wcd_rd_instances": 8334
+    }
+  },
+  "remote_stored_evidence": "EVIDENCE.json.gz preserves every named individual evidence file byte-for-byte as UTF-8 contents",
+  "trust_boundary": "same-programme exact tests and hand proofs; not external review, formal verification or novelty determination"
+}

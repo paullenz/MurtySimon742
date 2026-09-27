@@ -1,0 +1,21 @@
+{
+  "algorithm": "sha256",
+  "extracted_evidence": {
+    "DEMO_CERTIFICATE.json": "7d405bbe7a2336a5ef0535bd7539001db5fdd5f3ae94acd17fd56b1b14ea13b6",
+    "HOSTILE_RESULTS.json": "683fdae28c721a55f220c105bec5cdfb5b62b5fe1d3cfe3988137454bdb42909",
+    "INCOMPLETENESS.json": "9bf8e06f95a6c6fd4dfb8528e2a557daae00dbd18109705d6b60c201f3c45e90",
+    "INHERITED_SIX_VERTEX.json": "0291de5cda6b2fb8f130d70c83db9ecd52bbd957ced50717fa3fd558f13301c3",
+    "INTEGER_RESULTS.json": "fce98b0fa69afa631db2573d8c183b291fc29d37ba28ccbeacb44c382dde2f04",
+    "ORDER_RESULTS.json": "36e86f41b07e38fdc0114aa9a5f52225d8ea67c5ac22f3ce1cc121296e938a65",
+    "RATIONAL_RESULTS.json": "cbc3083d18f39b9b008b6874192c782a54802b7d2720a45feb202ef0e495eaaa"
+  },
+  "stored_files": {
+    "COMPARISON.md": "130b1a69417e58412dfe4ed2cec3cb0538cbbd089768430b2b9ea52a71df6b00",
+    "EVIDENCE.json.gz": "25b2696a318f6b6163a7329a938dc4bfd838279128d1e892704989016d9d479c",
+    "PROOF.md": "63fb157f0f0e911f6daa233a7f00248027f854f92399e039db62c48b8ca75a69",
+    "README.md": "ea0052ee704154abe417533890b09d7e3811fc8faf88d9003753deed21f754ec",
+    "VERIFICATION.json": "a38ee77cdad3a86ec60b6bcdc9db5a06a507eec0c5838cbded68b4f59c0d50df",
+    "test_local.py": "bd43d4376ad7615cf22bf5613c2c3362580aa66d52b74015e5018caaf76f0d43",
+    "verify_local.py": "2a5ff0a5e85a2b4f46d8dcd58754b24268c64594983a75f10164270c891df080"
+  }
+}
