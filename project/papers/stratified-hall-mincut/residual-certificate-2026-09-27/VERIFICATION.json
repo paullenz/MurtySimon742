@@ -1,0 +1,87 @@
+{
+  "base_commit": "b61a0b59d3960b6a48c2c0e869667a843ef6b18c",
+  "controls": "X3, audit34854911792, equality and certification controls unchanged; no automation/deployment/spending/alert changes",
+  "discrepancies": 0,
+  "executed_modes": [
+    "integer",
+    "rational",
+    "focused",
+    "sample",
+    "diagnosis"
+  ],
+  "exhaustive_regime_overlap": 4096,
+  "final_source_replay": "all five generation modes executed from stored source; full repeat not claimed",
+  "forced_count_guard": "internal sufficient-condition proof and explicit hand/oracle trace; not implemented or exhaustively tested",
+  "hostile_complete_certificates_rejected": 27,
+  "old_rule_reproduced_counts": {
+    "INTEGER": {
+      "certified_instances": 33309,
+      "greatest_tight_exists_but_no_local_certificate": 852,
+      "instances": 46656,
+      "instances_with_nonempty_certificate": 5190,
+      "states": 55902,
+      "transitions": 12594
+    },
+    "RATIONAL": {
+      "certified_instances": 32292,
+      "greatest_tight_exists_but_no_local_certificate": 264,
+      "instances": 46656,
+      "instances_with_nonempty_certificate": 6501,
+      "states": 59220,
+      "transitions": 18168
+    }
+  },
+  "python": "3.12.14",
+  "regimes": {
+    "INTEGER": {
+      "block_accepted": 33609,
+      "block_missing_greatest": 552,
+      "block_nonempty": 5490,
+      "block_persistence_checks": 22134,
+      "block_states": 56736,
+      "block_witness_transitions": 15396,
+      "complete_cuts": 2985984,
+      "instances": 46656,
+      "local_accepted": 33309,
+      "local_missing_greatest": 852,
+      "local_nonempty": 5190,
+      "local_persistence_checks": 18744,
+      "local_states": 55902,
+      "local_witness_transitions": 12594,
+      "path_accepted": 33609,
+      "path_gain": 300,
+      "path_missing_greatest": 552,
+      "path_nonempty": 5490,
+      "path_persistence_checks": 22134,
+      "path_states": 56736,
+      "path_witness_transitions": 15396,
+      "source_subsets": 373248
+    },
+    "RATIONAL": {
+      "block_accepted": 32430,
+      "block_gain": 138,
+      "block_missing_greatest": 126,
+      "block_nonempty": 6639,
+      "block_persistence_checks": 27864,
+      "block_states": 59406,
+      "block_witness_transitions": 20184,
+      "complete_cuts": 2985984,
+      "instances": 46656,
+      "local_accepted": 32292,
+      "local_missing_greatest": 264,
+      "local_nonempty": 6501,
+      "local_persistence_checks": 25542,
+      "local_states": 59220,
+      "local_witness_transitions": 18168,
+      "path_accepted": 32292,
+      "path_missing_greatest": 264,
+      "path_nonempty": 6501,
+      "path_persistence_checks": 27582,
+      "path_states": 59220,
+      "path_witness_transitions": 19932,
+      "source_subsets": 373248
+    }
+  },
+  "scope": "exact rational path and SCC-block certificates; not general completeness, formal/external verification or novelty clearance",
+  "unsafe_low_guard_step_rejected": 1
+}

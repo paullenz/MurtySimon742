@@ -148,3 +148,84 @@ an unsound mixture of overlapping singleton and block moves.
 The proofs do not assert completeness. A fixed SCC need not be neutrally
 removable: selected sources in predecessor SCCs can force it. Nor does a
 crossing guarantee the selected incoming containment assumed by both rules.
+
+## 7. Strict block gain and a sharp remaining obstruction
+
+The following exact examples use the SAME support
+R={0->1,0->2,1->2}, one receiver block, and gamma=0.
+DIAGNOSIS_RESULTS.json gives every source subset and complete minimum cut.
+
+**Blocks strictly extend paths.** Set P=(1/2,0,1), d=(1/2,1/2,0).
+The flow sends 1/2 from each of 0,1 to receiver 2. Its residual SCC contains
+0_L,1_L,2_R, with source projection K={0,1}. The exact minima are empty,
+{2}, {0,1}, and V; the tight ones are empty and {2}. No singleton in K can
+be neutrally deleted: the other singleton alone has margin 1/2. Block K
+is neutral, and x=1,y=0,a=b=0 gives a crossing (0<1/2), selected incoming
+containment, and k_x=1. Rule B deletes K and certifies {2}. This proves a
+strict B-over-P gain, not just a change in search order.
+
+**Even B is incomplete.** Set P=(1,0,1), d=(1,0,0). Use unit flow 0->2.
+All residual source SCCs are singletons, but 1_L->2_R->0_L forces 1=>0.
+The exact minima are empty, {0}, {0,1}, {2}, {0,2}, V; the tight minima are
+only empty and {2}. Thus a greatest tight minimum exists. The only positive
+crossing at V is x=1,y=0, and only source 0 enters its low receiver. Deleting
+0 alone is not neutral (F({1,2})=1). Deleting 1 is neutral but it does not
+enter receiver 1. Neither P nor B has a move. The unique terminal V is not
+tight. No change of deletion order, or enlargement to single SCC blocks,
+fixes this example. This refutes general completeness of both extensions.
+
+The obstruction is directional dependence rather than a nontrivial SCC:
+source 1 forces the bad row 0, but must be removed first to make 0 removable.
+This identifies the deleted-block/low-receiver incidence requirement as the
+specific obstacle here.
+
+## 8. Removing the low-receiver safeguard without replacement is UNSOUND
+
+Use blocks {0,1},{2}, P=(1,2,1), d=(0,2,0), and arcs
+0->2, 1->0, 1->2, 2->0. A maximum flow sends one from 1 to each of 0 and 2.
+At S=V, F=0 and the pair x=0,y=1 crosses: counts 2,0 and capacities 1,2.
+Source a=0 residually forces strict source b=1 through 0_L->2_R->1_L.
+Selected incoming containment holds, and deleting 0 is neutral. However
+0 does not enter receiver x=0. The set T={0,1} is a tight exact minimum:
+its first-block counts 1,0 attain H=U=1, and the singleton block contributes
+one, exactly equal to total demand two. In fact T is the greatest tight
+minimum. Deleting source 0 would lose T. Its low count has fallen to P_x.
+Thus the low incidence condition cannot simply be dropped while keeping
+only neutrality, the crossing, and the residual strict-row implication.
+The present verifier rejects this step. Separately, even an isolated zero-
+quota vertex shows that neutrality alone can delete a tight greatest minimum.
+
+## 9. A proved sufficient next guard, NOT implemented in P/B
+
+For a left anchor a let C_a be the LEFT vertices reachable from a_L in the
+fixed full residual network, and set
+
+    q_x(a) = |{u in C_a : u R x}|.
+
+Every exact minimum containing a contains C_a, hence y_x(T)>=q_x(a).
+Therefore the following alternative to the low incidence safeguard is sound:
+
+    q_x(a) > P_x.                                        (FC)
+
+Keep the neutral singleton/SCC removal, the same strict-row residual path,
+selected incoming containment and crossing. Allow either the old condition
+(k_x>0, whose persistence is supplied by marginal-loss equality) OR (FC).
+For any exact-minimum restriction retaining the removed block, its anchor
+persists, so (FC) directly gives y_x(T)>P_x. The old strict-row/high-slack
+argument proves the crossing. The guard is fixed and remains valid under
+restriction; neutrality persists by intersection. Thus the SAME persistence,
+disjoint-block commutation and greatest-tight certificate proofs apply to
+this enlarged rule. This is a short internal sufficient-condition proof,
+not an implemented or exhaustively tested certificate class in this checkpoint.
+
+In Section 7's incomplete instance, first delete a=1 using its forced row 0:
+q_1(1)=1>P_1=0. Then delete 0 from {0,2} using the old rule. Both removals
+are neutral and yield {2}. DIAGNOSIS_RESULTS.json records this hand/oracle
+trace, separately labelled; verify_residual.py still deliberately rejects
+the first step under its narrower P/B rules. In Section 8's unsound attempt,
+q_0(0)=1=P_0, so the new guard correctly does not apply.
+
+**Highest-value next step:** implement this disjunctive forced-count guard
+in a new certificate version, rerun the existing independent comparison on
+identical domains, and preserve its first remaining obstruction. Do not
+silently relabel current P/B acceptance counts as results for the new guard.
