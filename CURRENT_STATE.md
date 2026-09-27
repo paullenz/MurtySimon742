@@ -1,35 +1,35 @@
-# Current state — local subscription-only worker prepared, 27 September 2026
+# Current state — substantive Hall/min-cut closure, 27 September 2026
 
-Canonical repository: `paullenz/MurtySimon742`. The user authorised building a replacement worker, then explicitly ruled out additional spending. A bounded local Codex prototype has been prepared and tested offline. **It is not deployed or running.** The old hourly research, recovery and midnight-audit tasks remain paused. Financial and health alerts are untouched.
+Canonical repository: `paullenz/MurtySimon742`. This is a user-requested in-chat mathematical continuation. **Old research/recovery/audit schedules remain PAUSED; the local subscription worker remains NOT DEPLOYED.** No service, paid computation or model/API execution lane was enabled. Financial and health alerts are untouched.
 
 <!-- CURRENT-STATUS:START -->
-CHECKPOINT CLASS: SUBSCRIPTION_ONLY_WORKER_PREPARED_OFFLINE_NOT_DEPLOYED
-WORK MODE: ADMIN
-INSPECTED PREDECESSOR: 1631a5f558dc7c4202bac91f7bee96c35c8de004.
-LAST VERIFIED RESULT: Mathematical status unchanged. Thirty offline tests pass for the local three-job Hall/min-cut reasoning pilot, including duplicate exclusion, supervisor-crash recovery, stop/timeout handling, stream integrity, API/credit rejection and restart revalidation. Worker and test source blobs match the tested hashes. No authenticated Codex request, live mathematical run, paid hosting, top-up or schedule was started.
-REVIEW EVIDENCE: project/operations/subscription_worker/README.md, worker.py, test_worker.py and ACCEPTANCE.json. All tests use a fake Codex backend; live account/client compatibility, sustained reliability and mathematical correctness are unverified.
-SESSION: User-requested infrastructure implementation only. No mathematical session duration, historical credit or focused-session credit added; inherited focused counter remains 7/24, not re-adjudicated.
-RESEARCH CADENCE: Old hourly programme PAUSED. Local pilot NOT DEPLOYED; generated settings default to disabled.
-UNPRESERVED WORK: None for the source, tests and structured acceptance evidence in this checkpoint after successful publication. The expanded instructions/full test logs are also supplied in the downloadable coordinating-chat bundle.
-DEFERRED ADMIN: Local installation, ChatGPT sign-in and account-owner verification of no auto-reload/no paid credits are required before activation. Missing credit metadata blocks launch. No cloud/API deployment or paid fallback is authorised. This first pilot has no shell, browsing, checker execution or automatic Git publication.
-NEXT ACTION: Do not revive the old schedules. Use the local setup instructions only on an existing user-controlled computer with a verified no-additional-charge path. Run the account preflight before any model turn. If billing or compatibility cannot be established, keep the pilot disabled.
-MANDATORY CONSTRAINTS: Budget for new services/credits is zero. Preserve all existing mathematical trust boundaries, equality controls, X3 and audit34854911792. Local candidate output is not a proof, external review or remote backup. Unknown/failed attempts are not silently retried or credited. Do not alter unrelated financial or health alerts.
+CHECKPOINT CLASS: HALL_CANONICAL_CLOSURE_INTERNAL_CANDIDATE_WITH_EXACT_REPLAY
+WORK MODE: MATH
+INSPECTED PREDECESSOR: e00989f1b47c78bfb8a133ef89ffc06cc73ba9fb. CURRENT_STATE.md was read first.
+LAST VERIFIED RESULT: Original stratified Hall proof reconstructed. New hand proofs give the unique greatest rearrangement-tight minimum witness, order-independent neutral deletion, union closure (not intersection closure), weaker pair compatibility, real receiver capacities and the sharp uniform rounded-demand condition d_y<=floor(d_x) for same-block P_x<P_y. A general counterexample family handles every violating demand pair. These are INTERNAL CANDIDATES, not externally reviewed or novelty-cleared results.
+REPLAY RESULT: The original abstract checker exhausted demand generators and actually visited only 3/9 demand instances. Its bytes and output are preserved. A minimal repair plus coverage invariant reproduces all historical numeric counters at 39,636/172,080 instances. A separately written checker verifies these and broader regimes: 2,306,226 exhaustive checks across seven OVERLAPPING regimes, plus 1,500 structured larger systems, boundary/hostile examples and all 64 states/192 transitions of a six-deletion example. Arithmetic is exact integer/rational; finite totals do not prove the theorems.
+REVIEW EVIDENCE: project/papers/stratified-hall-mincut/2026-09-27-closure/README.md, CANONICAL_CLOSURE.md, VERIFICATION.json, SOURCE_HASHES.json, EXECUTION_RECORDS.json.gz and the preserved checker sources. The compressed record contains all eleven detailed outputs as JSON values; the coordinating-chat ZIP additionally preserves individual output bytes.
+SESSION: Substantive mathematics and executed checking in this user-requested response. No claim of continuous hourly work, human-equivalent hours or new scheduled-session credit. Inherited focused counter 7/24 is not re-adjudicated.
+RESEARCH CADENCE: PAUSED. Local pilot NOT DEPLOYED. No activation authorised by this checkpoint.
+UNPRESERVED WORK: No load-bearing proof, tested source or recorded test result omitted from the checkpoint. All original result values are retained; separate original-formatted output files are also supplied in the coordinating-chat bundle.
+NEXT ACTION: Read the full Marmulla–Brandes threshold/Ferrers paper (DOI 10.7155/jgaa.v30i1.3099) and original minimum-cut-lattice literature. Test whether they imply Theorems B/C: greatest tight minimizer, order-independent deletion and sharp rounded-demand boundary. Save an explicit implication proof or separation example, not just related citations. This comparison has NOT been completed. Then decide the precise standalone contribution before any novelty or D2C promotion.
+MANDATORY CONSTRAINTS: No additional spending, schedules or deployment. Preserve X3, audit34854911792, equality controls and all inherited certification limits. Same-programme proof/checker work is not external expert review or formal verification. Minimum-margin exactness and canonical extraction do not imply nonnegative Hall margin for every D2C system. No new Murty–Simon bound or full general proof is claimed.
 <!-- CURRENT-STATUS:END -->
 
-## Inherited mathematical evidence map — unchanged from the 24 September review
+## Inherited mathematical evidence map — not promoted by this session
 
 | Scope | Supported position |
 |---|---|
-| Universal-core local fixture | Fresh 11,357-record replay reproduced published hashes; stream-integrity defect repaired without changing original mathematics. |
-| n16,Delta9 | Fresh complete conditional internal exclusion: 7,008 cases, zero remaining unknowns; two initial timeouts retained with separate optimal rechecks. |
-| n19,Delta10 | Fresh complete conditional internal exclusion: 1,752 cases, zero unknowns or abstract survivors. |
-| n18,Delta10 | Full-row certification remains **suspended** pending complete status-safe replay; 54,820 scalar identities reproduced; local exclusions retained with the explicit 50,740 deficit-proof correction. |
-| n19,Delta11 | Local index1/index2 arguments survived targeted arithmetic/core-skeleton checks at their stated premises. Full row remains open. |
-| R9 and R11 | Fresh reconstruction/replay gives 69 R9 masks and 189 R11 strict cores/four source-feasible cores. Historical missing bytes are not claimed recovered. |
-| General threshold/equality | Inherited candidate threshold250/429; S<=14 internal computer-assisted edge bound; equality only throughS<=8. Dependencies were not fully rederived by the substantive review and are not reviewed by this infrastructure task. General independent theorem/full equality remain open. |
+| Universal-core local fixture | Fresh 24 September 11,357-record replay reproduced published hashes; stream-integrity defect repaired without changing original mathematics. |
+| n16,Delta9 | Inherited complete conditional internal exclusion: 7,008 cases, zero remaining unknowns; two initial timeouts retained with separate optimal rechecks. |
+| n19,Delta10 | Inherited complete conditional internal exclusion: 1,752 cases, zero unknowns or abstract survivors. |
+| n18,Delta10 | Full-row certification remains **suspended** pending complete status-safe replay; 54,820 scalar identities reproduced in the preceding review; local exclusions retain the explicit 50,740 deficit-proof correction. |
+| n19,Delta11 | Local index1/index2 arguments survived prior targeted checks at their stated premises. Full row remains open. |
+| R9 and R11 | Prior reconstruction/replay gives 69 R9 masks and 189 R11 strict cores/four source-feasible cores. Historical missing bytes are not claimed recovered. |
+| General threshold/equality | Inherited candidate threshold250/429; S<=14 internal computer-assisted edge bound; equality only throughS<=8. These dependencies were not rederived here. General independent theorem/full equality remain open. |
 
 ## Preservation and reports
 
-[Local worker source and setup](project/operations/subscription_worker/README.md) · [Offline acceptance record](project/operations/subscription_worker/ACCEPTANCE.json) · [24 September substantive review](project/reviews/substantive/2026-09-24/REPORT.md).
+[This Hall/min-cut checkpoint](project/papers/stratified-hall-mincut/2026-09-27-closure/README.md) · [Full candidate proofs](project/papers/stratified-hall-mincut/2026-09-27-closure/CANONICAL_CLOSURE.md) · [Execution summary](project/papers/stratified-hall-mincut/2026-09-27-closure/VERIFICATION.json).
 
-The full preceding live handoff is [byte-preserved](archive/status/2026-09-27-pre-local-worker-CURRENT_STATE.md). Its audit history, immutable checkpoints, preservation caveats and outstanding obligations remain available there and in the substantive review. PR #2 remains a changes-required draft, not merged by this task. n18 full-row replay, inherited universal premises, exact certificates and specialist review remain substantive obligations.
+The immediate preceding state is [byte-preserved](archive/status/2026-09-27-pre-hall-closure-CURRENT_STATE.md). The earlier substantive-review handoff remains [preserved](archive/status/2026-09-27-pre-local-worker-CURRENT_STATE.md). See also the [24 September substantive review](project/reviews/substantive/2026-09-24/REPORT.md) and [disabled local worker](project/operations/subscription_worker/README.md). PR #2 remains a changes-required draft; this session does not merge or promote it. The older manuscript/claim ledger remain the pre-extension candidates, with this dated note recording the additional proofs and audit correction.

@@ -1,0 +1,251 @@
+{
+  "base_commit": "e00989f1b47c78bfb8a133ef89ffc06cc73ba9fb",
+  "commands": [
+    "python verify_crossing_dominance.original.py",
+    "python verify_crossing_dominance.py",
+    "python verify_closure.py --regime all --output CLOSURE_VERIFICATION.json",
+    "python verify_real_capacities.py --regime unit --output REAL_UNIT.json",
+    "python verify_real_capacities.py --regime one --output REAL_ONE.json",
+    "python verify_real_capacities.py --regime two --output REAL_TWO.json",
+    "python verify_rounded_demands.py"
+  ],
+  "date": "2026-09-27",
+  "distinct_global_instances_claimed": false,
+  "environment": {
+    "platform": "Linux-6.18.44-x86_64-with-glibc2.41",
+    "python": "3.13.5 (main, Jul 15 2026, 20:25:40) [GCC 14.2.0]"
+  },
+  "executed_integer_regimes": "one, two, weak, adversarial and random were run separately with the same final source, rather than via the all wrapper",
+  "exhaustive_instance_checks_overlapping_regimes": 2306226,
+  "original_verifier_defect": {
+    "actual_one_layer_demands": 3,
+    "actual_two_layer_demands": 9,
+    "all_historical_numeric_counters_reproduced": true,
+    "git_blob": "6e00699b453b2b76b954c2ff32c12f9211b20a20",
+    "repaired_one_layer_demands": 39636,
+    "repaired_two_layer_demands": 172080
+  },
+  "regimes": [
+    {
+      "all_branch_states": 40148,
+      "all_branch_transitions": 1536,
+      "blocks": [
+        [
+          0,
+          1,
+          2,
+          3
+        ]
+      ],
+      "capacities": [
+        0,
+        1,
+        2
+      ],
+      "demand_instances": 39636,
+      "flow_and_maximal_cut_checks": 39636,
+      "max_deletion_depth": 1,
+      "maximal_minimizer_gap_instances": 512,
+      "minimum_mismatches": 0,
+      "mode": "strict",
+      "n": 4,
+      "name": "original_one_layer_independent",
+      "pointwise_gap_instances": 2760,
+      "pointwise_gap_source_sets": 7080,
+      "record": "INDEPENDENT_ONE.json",
+      "stream_sha256": "a1ac21dd3d5d28ec274cde49ce01ee201ac2cc8410b8e2780c0274a88f1eef43",
+      "unequal_antitone_demands": false,
+      "unequal_within_block_instances": 0,
+      "valid_profiles": 13212,
+      "weak_not_strict_instances": 0
+    },
+    {
+      "all_branch_states": 174164,
+      "all_branch_transitions": 2088,
+      "blocks": [
+        [
+          0,
+          1
+        ],
+        [
+          2,
+          3
+        ]
+      ],
+      "capacities": [
+        0,
+        1
+      ],
+      "demand_instances": 172080,
+      "flow_and_maximal_cut_checks": 172080,
+      "max_deletion_depth": 2,
+      "maximal_minimizer_gap_instances": 2076,
+      "minimum_mismatches": 0,
+      "mode": "strict",
+      "n": 4,
+      "name": "original_two_layer_independent",
+      "pointwise_gap_instances": 24624,
+      "pointwise_gap_source_sets": 46188,
+      "record": "TWO_CHECKS.json",
+      "stream_sha256": "a45afc4421474155e2aa69153fb481c29d3a818d261733e52d709879378b01c2",
+      "unequal_antitone_demands": false,
+      "unequal_within_block_instances": 0,
+      "valid_profiles": 19120,
+      "weak_not_strict_instances": 0
+    },
+    {
+      "all_branch_states": 9423,
+      "all_branch_transitions": 198,
+      "blocks": [
+        [
+          0,
+          1,
+          2
+        ]
+      ],
+      "capacities": [
+        0,
+        1,
+        2
+      ],
+      "demand_instances": 9252,
+      "flow_and_maximal_cut_checks": 9252,
+      "max_deletion_depth": 2,
+      "maximal_minimizer_gap_instances": 165,
+      "minimum_mismatches": 0,
+      "mode": "weak",
+      "n": 3,
+      "name": "weakened_unequal_one_layer",
+      "pointwise_gap_instances": 1752,
+      "pointwise_gap_source_sets": 2580,
+      "record": "WEAK_CHECKS.json",
+      "stream_sha256": "c52a43772e16979002d53fbf0d650efc5b0cc92e472b356baa9237eefca1bab7",
+      "unequal_antitone_demands": true,
+      "unequal_within_block_instances": 7758,
+      "valid_profiles": 498,
+      "weak_not_strict_instances": 3378
+    },
+    {
+      "all_branch_states": 1799420,
+      "all_branch_transitions": 5760,
+      "blocks": [
+        [
+          0,
+          1
+        ],
+        [
+          2,
+          3
+        ]
+      ],
+      "capacities": [
+        0,
+        1
+      ],
+      "demand_instances": 1793664,
+      "flow_and_maximal_cut_checks": 1793664,
+      "max_deletion_depth": 2,
+      "maximal_minimizer_gap_instances": 5748,
+      "minimum_mismatches": 0,
+      "mode": "weak",
+      "n": 4,
+      "name": "weakened_unequal_two_layer",
+      "pointwise_gap_instances": 165888,
+      "pointwise_gap_source_sets": 305712,
+      "record": "WEAK_CHECKS.json",
+      "stream_sha256": "b8cc33e7e6e79fea38c4db4898eaf94ef3b05eb3f7e9d8a3f4aa9e13bea088aa",
+      "unequal_antitone_demands": true,
+      "unequal_within_block_instances": 1564560,
+      "valid_profiles": 25456,
+      "weak_not_strict_instances": 321408
+    },
+    {
+      "all_branch_states": 26223,
+      "all_branch_transitions": 480,
+      "blocks": [
+        [
+          0,
+          1,
+          2
+        ]
+      ],
+      "capacities": [
+        "0",
+        "1/2",
+        "1",
+        "3/2",
+        "2"
+      ],
+      "demand_instances": 25800,
+      "flow_checks": 25800,
+      "fractional_minimum_instances": 4588,
+      "maximal_minimizer_gap_instances": 405,
+      "minimum_or_canonical_mismatches": 0,
+      "n": 3,
+      "name": "half_integer_one_block",
+      "profiles": 1700,
+      "record": "REAL_ONE.json",
+      "stream_sha256": "9bbd05540a01a72ee40d6f7be0d1d770fc111d1915bd845f348970e46775a4a0",
+      "unequal_antitone_demands": true
+    },
+    {
+      "all_branch_states": 229272,
+      "all_branch_transitions": 168,
+      "blocks": [
+        [
+          0,
+          1
+        ],
+        [
+          2,
+          3
+        ]
+      ],
+      "capacities": [
+        "1/2",
+        "3/2"
+      ],
+      "demand_instances": 229104,
+      "flow_checks": 229104,
+      "fractional_minimum_instances": 75456,
+      "maximal_minimizer_gap_instances": 168,
+      "minimum_or_canonical_mismatches": 0,
+      "n": 4,
+      "name": "half_integer_two_blocks",
+      "profiles": 25456,
+      "record": "REAL_TWO.json",
+      "stream_sha256": "091c8884d0952884d0e80dc55c44924e8e3ea73c1e7eb6067dd3edc44f174dfc",
+      "unequal_antitone_demands": false
+    },
+    {
+      "demand_instances": 36690,
+      "dependency_sha256": "de7185edca2a04253c4a6a92b8afe9f24e7968d899eb15bc5ec0ebaebdf6730a",
+      "flow_and_canonical_checks": 36690,
+      "fractional_demand_instances": 27438,
+      "instances_with_deletions": 336,
+      "profiles": 498,
+      "result": "PASS",
+      "scope": "Real capacities and rounded-order real demands",
+      "source_sha256": "13584ccb6ce1e3548484811fc28dc2e3f210f2c90e79913a08e58ec55d200c8c",
+      "stream_sha256": "f3c63198c5b206a604c7b6556a80c35bbcb27534df61dcd2fef20899ebf4e469"
+    }
+  ],
+  "scope_limits": [
+    "Finite checks are not a proof",
+    "Same research programme; not independent expert review",
+    "No novelty claim",
+    "No new Murty-Simon bound or global closure",
+    "No schedules, services or paid model/computation calls were used"
+  ],
+  "sharp_demand_family_rational_checks": 24,
+  "six_deletion_example": {
+    "canonical_terminal_mask": 4096,
+    "crossing_choice_transitions": 192,
+    "deletion_orders": 720,
+    "exact_minimum": -1,
+    "reachable_states": 64,
+    "vertices": 13
+  },
+  "status": "PASS_INTERNAL_CANDIDATE_NOT_EXTERNAL_REVIEW",
+  "structured_larger_cases": 1500
+}
