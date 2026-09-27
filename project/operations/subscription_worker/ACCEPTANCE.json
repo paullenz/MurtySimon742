@@ -1,0 +1,116 @@
+{
+  "status": "OFFLINE_ACCEPTANCE_PASSED_NOT_LIVE_VALIDATED",
+  "test_count": 30,
+  "failures": 0,
+  "errors": 0,
+  "model_requests": 0,
+  "paid_services_started": false,
+  "deployment": "NOT_DEPLOYED_OR_RUNNING",
+  "source_sha256": {
+    "worker.py": "e3490962549723b6be21ce7d68ad05ec753fd8a8b64e99145e908ac1895e8a2f",
+    "test_worker.py": "256327ed4198597661509c7a20c233a79e92f57e0c9e0b1f0aa455768b0b703e"
+  },
+  "scope": "Three-job local subscription-only Hall/min-cut reasoning pilot",
+  "batches": [
+    {
+      "batch": 1,
+      "started_unix": 1790502912.817802,
+      "ended_unix": 1790502935.2458088,
+      "tests": [
+        "test_ambiguous_crash_never_silently_relaunches",
+        "test_api_auth_rejected",
+        "test_attempt_ceiling_stops_next_job",
+        "test_completed_queue_is_revalidated_on_restart",
+        "test_config_drift_rejected",
+        "test_custom_endpoint_rejected",
+        "test_disabled_is_default",
+        "test_duplicate_launch_is_rejected",
+        "test_empty_stream_rejected_even_with_zero_exit",
+        "test_explicit_retry_preserves_failed_attempt"
+      ],
+      "tests_run": 10,
+      "failures": 0,
+      "errors": 0,
+      "skipped": 0,
+      "success": true,
+      "environment": "Linux-6.18.44-x86_64-with-glibc2.41",
+      "python": "3.13.5",
+      "backend": "OFFLINE FAKE; no authenticated Codex/model/network calls",
+      "source_sha256": {
+        "worker.py": "e3490962549723b6be21ce7d68ad05ec753fd8a8b64e99145e908ac1895e8a2f",
+        "test_worker.py": "256327ed4198597661509c7a20c233a79e92f57e0c9e0b1f0aa455768b0b703e"
+      }
+    },
+    {
+      "batch": 2,
+      "started_unix": 1790502988.9077787,
+      "ended_unix": 1790503002.8143702,
+      "tests": [
+        "test_full_pilot_and_idempotent_restart",
+        "test_matching_truncated_stream_rejected",
+        "test_missing_credit_data_is_unknown_not_zero",
+        "test_missing_or_bad_usage_window_rejected",
+        "test_no_api_environment_fallback",
+        "test_nonzero_exit_preserved_not_retried",
+        "test_paid_workspace_or_unknown_plan_rejected",
+        "test_reject_paid_credits_before_model_launch",
+        "test_result_structure_is_not_theorem_validation",
+        "test_schema_drift_rejected"
+      ],
+      "tests_run": 10,
+      "failures": 0,
+      "errors": 0,
+      "skipped": 0,
+      "success": true,
+      "environment": "Linux-6.18.44-x86_64-with-glibc2.41",
+      "python": "3.13.5",
+      "backend": "OFFLINE FAKE; no authenticated Codex/model/network calls",
+      "source_sha256": {
+        "worker.py": "e3490962549723b6be21ce7d68ad05ec753fd8a8b64e99145e908ac1895e8a2f",
+        "test_worker.py": "256327ed4198597661509c7a20c233a79e92f57e0c9e0b1f0aa455768b0b703e"
+      }
+    },
+    {
+      "batch": 3,
+      "started_unix": 1790503067.2865558,
+      "ended_unix": 1790503092.133634,
+      "tests": [
+        "test_source_corruption_rejected",
+        "test_stale_billing_confirmation_blocks",
+        "test_state_cannot_live_inside_repository",
+        "test_status_and_preflight_do_not_launch_models",
+        "test_stop_terminates_current_job_and_leaves_queue",
+        "test_supervisor_kill_completed_child_is_recovered_without_duplicate",
+        "test_tampering_after_receipt_rejected",
+        "test_timeout_terminates_and_preserves_partial_attempt",
+        "test_usage_limit_pauses_without_retries",
+        "test_wrong_job_output_rejected"
+      ],
+      "tests_run": 10,
+      "failures": 0,
+      "errors": 0,
+      "skipped": 0,
+      "success": true,
+      "environment": "Linux-6.18.44-x86_64-with-glibc2.41",
+      "python": "3.13.5",
+      "backend": "OFFLINE FAKE; no authenticated Codex/model/network calls",
+      "source_sha256": {
+        "worker.py": "e3490962549723b6be21ce7d68ad05ec753fd8a8b64e99145e908ac1895e8a2f",
+        "test_worker.py": "256327ed4198597661509c7a20c233a79e92f57e0c9e0b1f0aa455768b0b703e"
+      }
+    }
+  ],
+  "limitations": [
+    "Fake Codex used in tests; no authenticated live CLI run.",
+    "Automatic reload state requires local account-owner confirmation.",
+    "Missing credit metadata blocks launch.",
+    "Reasoning-only; no shell, mathematical checker execution, browsing or automatic Git publication.",
+    "Ambiguous crashed attempts require explicit inspection/retry.",
+    "Not an uptime guarantee, proof certificate, novelty finding or external mathematical review."
+  ],
+  "execution_notes": [
+    "Initial monolithic test call hit the 45-second tool deadline; not counted as a complete suite.",
+    "Final-source acceptance completed as three disjoint 10-test batches.",
+    "Attempt to obtain an unauthenticated CLI for compatibility probing timed out; no live-client validation claimed."
+  ]
+}
