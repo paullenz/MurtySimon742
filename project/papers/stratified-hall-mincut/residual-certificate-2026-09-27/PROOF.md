@@ -107,3 +107,44 @@ The preceding proofs have been checked internally by direct derivation.
 Implementation and exhaustive replay are the next unit; no new executed test
 coverage is claimed at this first checkpoint. All-or-none residual blocks are
 an unimplemented prospective strengthening here.
+
+## 6. All-or-none residual source blocks (subsequent extension)
+
+Fix the same full residual network. Its strongly connected components (SCCs)
+partition network vertices. The nonempty LEFT projections K of SCCs partition
+sources. Every exact minimum contains all or none of each K, because any
+complete cut containing one SCC vertex contains the entire SCC. We do NOT
+identify K with the full SCC: it may also contain right vertices, s or t.
+Those vertices are not source demands and are not removed from the network.
+
+**Block rule B.** Replace singleton removal in rule P by removal of one such K.
+Require K subset S, F(S-K)=gamma, k_x=|{u in K:uRx}|>0, an anchor a in K,
+and a residual path a_L -> b_L, with b the strict row from rule P. Keep the
+same receiver crossing and selected-row containment. K must be the full left
+projection of an SCC, not an arbitrary strongly connected selection.
+
+**Persistence theorem B.** For an exact minimum T subset S that meets K,
+all of K lies in T. Then T-K=T intersect (S-K) is a minimum. Set
+k_w=|{u in K:uRw}| and
+L_w(W)=min(P_w,y_w(W))-min(P_w,y_w(W)-k_w), for W containing K.
+For fixed k_w>=0 this is nonincreasing in y_w(W); thus L_w(T)>=L_w(S).
+Both sums equal D(K), so equality holds receiver by receiver. Since k_x>0
+and y_x(S)>P_x, L_x(S)<k_x. Thus L_x(T)<k_x, forcing y_x(T)>P_x.
+The anchor is in T, hence b is in T. Containment and b give y_x(T)>y_y(T),
+while y_y(T)<P_y. The crossing, neutrality and every rule condition persist.
+In particular no tight exact minimum meets K. QED.
+
+**Confluence and certificate theorems B.** Distinct fixed source blocks are
+disjoint. If two deletions are available, each remains available after the
+other by persistence. The same finite diamond induction proves a unique
+terminal for every maximal block sequence. Tight termination certifies the
+greatest tight minimum and minimum-margin exactness as before.
+
+Rule B subsumes rule P: a neutrally deletable singleton a cannot share a
+residual SCC with another source in S, since S-a is a minimum. All sources
+in a's SCC were already in S. Thus its source block must be {a}. This avoids
+an unsound mixture of overlapping singleton and block moves.
+
+The proofs do not assert completeness. A fixed SCC need not be neutrally
+removable: selected sources in predecessor SCCs can force it. Nor does a
+crossing guarantee the selected incoming containment assumed by both rules.

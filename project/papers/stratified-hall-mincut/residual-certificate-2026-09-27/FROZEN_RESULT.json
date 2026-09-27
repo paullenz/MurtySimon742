@@ -1,0 +1,44 @@
+{
+  "greatest_exact_minimum": [
+    0,
+    1,
+    2
+  ],
+  "greatest_tight_minimum": [
+    1,
+    2
+  ],
+  "margin": "0",
+  "maximum_flow": "2",
+  "neutral_steps": 1,
+  "rule": "path",
+  "scope": "internal instance certificate, no completeness/novelty/general proof claim",
+  "status": "ACCEPT",
+  "trace": [
+    {
+      "after": [
+        1,
+        2
+      ],
+      "anchor": 0,
+      "before": [
+        0,
+        1,
+        2
+      ],
+      "high_count": 1,
+      "low_count": 2,
+      "path": [
+        0,
+        5,
+        1
+      ],
+      "remove": [
+        0
+      ],
+      "strict": 1,
+      "x": 2,
+      "y": 1
+    }
+  ]
+}

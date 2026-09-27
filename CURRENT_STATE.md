@@ -3,14 +3,14 @@
 Canonical repository: `paullenz/MurtySimon742`. User-requested in-chat mathematics. Old research/recovery/audit schedules remain PAUSED; the local subscription worker is NOT DEPLOYED. Financial and health alerts are untouched. No services, paid computation or model/API execution lane were enabled.
 
 <!-- CURRENT-STATUS:START -->
-CHECKPOINT CLASS: RESIDUAL_PATH_HAND_PROOF_INTERNAL_IMPLEMENTATION_PENDING
+CHECKPOINT CLASS: RESIDUAL_PATH_AND_SCC_BLOCK_INTERNAL_PRE_EXHAUSTIVE
 WORK MODE: MATH
-INSPECTED PREDECESSOR: b61a0b59d3960b6a48c2c0e869667a843ef6b18c; main unchanged at inspection. CURRENT_STATE.md read first.
-LAST VERIFIED RESULT: Internal proof of the residual-path deletion extension: a neutrally deleted source a reaches low receiver x and residually forces a possibly different strict incoming row b. Soundness, persistence on exact-minimum subsets, commutation and unique terminal are proved. The frozen three-vertex obstruction is resolved by the hand calculation. No implementation or new exhaustive coverage yet at this checkpoint.
+INSPECTED PREDECESSOR: b4a9a5196fc94d2930668eb6ba354fab37842782; first read at b61a0b59d3960b6a48c2c0e869667a843ef6b18c.
+LAST VERIFIED RESULT: Exact rational verifier accepts the frozen residual-path example, returning {1,2} at margin zero. A further internal hand proof extends persistence, confluence and the greatest-tight certificate to neutral deletion of full source projections of residual SCCs. The group-loss argument handles real quotas. Rule B subsumes P; neither is claimed complete. Exhaustive testing is pending at this checkpoint.
 EVIDENCE: project/papers/stratified-hall-mincut/residual-certificate-2026-09-27/PROOF.md. Predecessor handoff preserved at archive/status/2026-09-27-pre-residual-certificate-CURRENT_STATE.md; all prior evidence remains unchanged.
 UNPRESERVED WORK: None after this checkpoint is published.
 DEFERRED ADMIN: Reviewer-facing README refresh until tested result; unrelated repository administration.
-NEXT ACTION: Implement exact residual-path certificate verification and compare every deletion choice with independent exhaustive subset minima; then test all-or-none residual blocks.
+NEXT ACTION: Compare all local/path/block deletion choices with independent exhaustive source-subset and full-cut calculations, test corrupted certificates, and preserve remaining obstructions.
 TRUST BOUNDARY: Internal hand proof only; not external verification, formal verification, novelty clearance or a general Murty–Simon proof. No completeness claim. Chen full 1992 main condition remains uninspected.
 CONTROLS: X3, audit34854911792, equality and inherited certification controls unchanged. Schedules remain paused. No deployment, purchase, paid execution, financial/health alert changes, background-work promise or research-hour credit.
 <!-- CURRENT-STATUS:END -->
