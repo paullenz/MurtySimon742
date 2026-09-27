@@ -128,3 +128,52 @@ removes just {1}, yielding the greatest tight minimum {0,2}.
 This is compensation by a mandatory incoming row, not pairwise row nesting.
 No general certificate-completeness claim is made. Executed coverage and any
 remaining obstruction are reported separately.
+
+## 6. Executed incompleteness boundary: two crossing pairs are necessary
+
+One block, P=(2,1,0), d=(1,0,1), R={0->1,0->2,1->2,2->0}. The flow sends
+one along 0->1 and one along 2->0. ALL eight source subsets are exact minima,
+with F=0. The tight minima are exactly empty, {2}, {0,2}. Thus {0,2} is
+the greatest tight minimum and source 1 can safely be excluded.
+
+Nevertheless schema 4 is stuck at V. Sources 0 and 2 occur in a tight minimum,
+so no sound uniform exclusion can remove either. For a=1 the possible
+capacity-ordered pairs are (x,y)=(1,0),(2,0),(2,1). Every pair has a failure:
+
+- (1,0) does not cross at {1}; its low count is zero, not above P_1=1.
+- (2,0) does not cross at {1,2}; both counts are one.
+- (2,1) does not cross at {0,1}; its high count is one, equal to P_1.
+
+These are exact minima containing 1, so no stronger optimizer or better
+auxiliary flow can repair a single-pair certificate here. This is a genuine
+mathematical obstruction, not a failed implementation or deletion order.
+
+**Two-case exclusion proof.** Let T be any exact minimum containing 1.
+If 0 is absent, T is {1} or {1,2}; pair (2,1) crosses because y_2=1>P_2=0
+and y_1=0<P_1=1. If 0 is present, T is {0,1} or V; pair (2,0) crosses
+because y_2=2, y_0<=1, P_2=0 and P_0=2. Thus no tight minimum contains 1.
+Deleting 1 from V yields {0,2}, the greatest tight minimum.
+
+The partition is a proof by cases; it does NOT license deletion of source 0
+from the actual current state. A source may be present in some tight minima
+and still be useful as a branching variable.
+
+BRANCHING_OBSTRUCTION.json records every source subset, all complete minimum
+cuts, the two branches, and explicit witnesses against every single pair.
+Its branching proof is hand/oracle checked, not accepted by the schema-4
+verifier. This example is among the twelve remaining n=3 integer failures.
+
+## 7. Exact next mathematical step
+
+Implement a branch-certificate extension of the signed closure verifier,
+starting with Section 6's two-leaf proof. A node partitions anchored exact
+minima by presence/absence of a source. Each leaf must either certify its
+conditional domain is empty or supply a uniform crossing with explicitly
+checked inclusion/exclusion constraints. Condition the low and high count
+bounds on those constraints, and construct the signed auxiliary flow network
+from them. Verify that both branches cover the parent domain. Reprove
+same-certificate persistence and confluence of actual predecessor deletions;
+branch assumptions must never be confused with deletions of actual state.
+Then replay the same bounded domains and preserve a counterexample to any
+stronger claim. No branching implementation or general completeness theorem
+is included in this checkpoint.

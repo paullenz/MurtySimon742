@@ -1,0 +1,33 @@
+{
+  "dependencies": {
+    "../residual-certificate-2026-09-27/test_residual.py": "107be36bd963b0aa0c1e499102b537bb18d335c69f4a5c2fb34167be6e7a08fe",
+    "../residual-certificate-2026-09-27/verify_residual.py": "1abaeb08033027f07780143d2b5d4bf5d8a36d83dc0618175972e14a8e831763"
+  },
+  "extracted_evidence": {
+    "BRANCHING_OBSTRUCTION.json": "f55f9a1f66368af8d8ace03d99b2b86b624a2b8f0de789791d57a227477cffd3",
+    "CLOSURE_DEMO.json": "d0607cbe08784ed81588c2847fe2acd162d65e565b525af52eb4fcfa1e80d42e",
+    "CLOSURE_DEMO_RESULT.json": "cbdbd533f9c9706a857fd7cc8ec248e8ef7ba84c711e38069fd624d8c1322894",
+    "CLOSURE_FOCUSED.json": "bff8e641d5fde6ea80966008037a1b83df68e2abb1f09996b57ab16def0d5f10",
+    "CLOSURE_INTEGER.json": "3395feb6b24dc91042fe163e719bc19ba2d3b31d0de462885d96a3616f6048a2",
+    "CLOSURE_RATIONAL.json": "b963bb83ece752d9fc91d63ba3e0932c2abefc3924d60f9fff3fc8005d392556",
+    "CLOSURE_SAMPLE.json": "216d5b34ee30864801e396e2633f3f724b9c16f3a148d548de09e68b27d59f5d",
+    "DEMO_CERTIFICATE.json": "2f79bf36f7d20004eccf01ebf38f60c70b4c30dd2a3a393e87950be3ec32a27f",
+    "DEMO_RESULT.json": "b03378068c59fd72aaa567e45f104d6d0a2afe265fe1806fce2551fad847c268",
+    "FOCUSED_RESULTS.json": "0e7389bcbc56456c678b65416bb1e700993d6533e17b3cf61c8e1b66a88dbb09",
+    "INTEGER_RESULTS.json": "abeef9591a89e762d640608d71024cb3819b629910192b5a2b74021a4ca924a7",
+    "RATIONAL_RESULTS.json": "7d6bd0e1470cd8501bcdb0c73b354c6e7f52b04a61c6cb7aed2d7cc034cfb23e",
+    "SAMPLE_RESULTS.json": "29adf0568e4b46fe69561e1b3ddefd05841c7c597ff821c7ff50d73fab9e2865"
+  },
+  "files": {
+    "CLOSURE_PROOF.md": "faed85f86a235dea333032392832cd4d337675772fda1754a4f7c962d2f38b2a",
+    "EVIDENCE.json.gz": "dbc0b4671072ddfc0d75cf5f2def968f892b89713ba9305412f6bf57bd2491d6",
+    "PROOF.md": "69d712ff186d84c8789a069312c7ff0796e931fd928737ae8dc8d570be11e69a",
+    "README.md": "423fe731503bede6daf8f040ac9dbc46ab820dd7e90cd7d1321639c8c2165baa",
+    "VERIFICATION.json": "9290d985a34ed0da4929e0c2937eaf90c1afd469608987efeff41780efd563d4",
+    "diagnose_closure.py": "51b1a45826444a6250980dbbfb48098ee8ef1cc9b3ccb6f4c693135474d213ab",
+    "test_closure.py": "649b1247c69352ce32c618a79e2d64c94ee24d0ae16638de40ed27d47bbebfe7",
+    "test_forced.py": "257e88ff097ea3b515022ae542988c00dc2e0daf5eb421babd3b41e384ce7bb7",
+    "verify_closure.py": "e2f53ec49d583abf1b2d69b7430d3195f85f0ca0d9f08f43adcafaca3091e3d0",
+    "verify_forced.py": "eb6088b69291578c94029754981f2546e1414d71c1ee15c61f48e9b2fa97cc17"
+  }
+}
