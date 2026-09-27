@@ -3,14 +3,14 @@
 Canonical repository: `paullenz/MurtySimon742`. User-requested in-chat mathematics. Old research/recovery/audit schedules remain PAUSED; the local subscription worker is NOT DEPLOYED. Financial and health alerts are untouched. No services, paid computation or model/API execution lane were enabled.
 
 <!-- CURRENT-STATUS:START -->
-CHECKPOINT CLASS: FORCED_COUNT_V3_EXHAUSTIVE_INTERNAL_INCOMPLETE
+CHECKPOINT CLASS: SIGNED_CLOSURE_V4_FOCUSED_INTERNAL_PRE_EXHAUSTIVE
 WORK MODE: MATH
-INSPECTED PREDECESSOR: ce53dee6d3d898fa2c6073a9207fb88208169c4e; first read at fc5d692113f62a55c91dacbca3a5b1a499f65cb1.
-LAST VERIFIED RESULT: Schema-3 forced-count guard has internal soundness/persistence/confluence proofs and exact verification. Two overlapping exhaustive n=3 regimes of 46,656 instances each check all source subsets, full cuts, reachable moves and retaining minimum restrictions. Path/block acceptances: 33657/33657 integer, 32418/32556 half-integer; gains over schema 2: 48 and 126 respectively for each mode. Zero discrepancies. Block-rule misses with a greatest tight minimum: 504 integer, zero in this bounded half-integer domain. Seeded sample n=4..6 accepts 198/200, still misses six greatest-tight instances in block mode. Focused rejection evidence preserved. Completeness is FALSE.
-EVIDENCE: project/papers/stratified-hall-mincut/forced-count-2026-09-27/PROOF.md, verify_forced.py, test_forced.py and EVIDENCE.json.gz. Version 2 and earlier evidence remain unchanged; predecessor handoff archived at archive/status/2026-09-27-pre-forced-count-CURRENT_STATE.md.
+INSPECTED PREDECESSOR: 8040273719e0bfccd4cc2c7134b9e424c0674007; first read at fc5d692113f62a55c91dacbca3a5b1a499f65cb1.
+LAST VERIFIED RESULT: Schema-3 results are preserved. A new schema-4 signed residual-closure certificate replaces row containment by a checked auxiliary feasible-flow lower bound on y_x-y_y over all anchored exact minima. Mandatory sources give the exact low-count lower bound. Deleting all source predecessors preserves minimality; proofs establish same-flow persistence and confluence even for overlapping removals. It subsumes schema 3 and resolves its frozen integer obstruction. Focused checks: 536 subsets, 192 complete cuts, 116 signed optimizations against independent source-subset minima, 230 same-flow restrictions, four accepted constructions and nine corrupt-certificate rejections. Full schema-4 comparison pending.
+EVIDENCE: project/papers/stratified-hall-mincut/forced-count-2026-09-27/PROOF.md, CLOSURE_PROOF.md, verify_forced.py, verify_closure.py, test_forced.py, test_closure.py and EVIDENCE.json.gz. Version 2 and earlier evidence remain unchanged; predecessor handoff archived at archive/status/2026-09-27-pre-forced-count-CURRENT_STATE.md.
 UNPRESERVED WORK: None after publication of this checkpoint.
 DEFERRED ADMIN: Reviewer-facing summary until exhaustive result; unrelated administration and literature comparison.
-NEXT ACTION: Diagnose P=(0,2,0), d=(1,0,1), R={0->1,1->0,2->0}: its only tight minimum is {0,2}; mandatory source 2 compensates the high-only incoming row that defeats row containment. Investigate a residual-closure certificate for that signed incoming-count difference.
+NEXT ACTION: Run schema-4 comparison on the existing bounded integer/rational domains and seeded sample; preserve any obstruction to uniform-pair completeness rather than infer general completeness.
 TRUST BOUNDARY: Internal proofs and checks only; not external/formal verification, novelty clearance or a general Murty–Simon proof. No completeness claim. Chen full main condition remains uninspected.
 CONTROLS: X3, audit34854911792, equality and certification controls unchanged. No schedules, deployments, spending, paid execution, alert changes, background promises or research-hour credit.
 <!-- CURRENT-STATUS:END -->
